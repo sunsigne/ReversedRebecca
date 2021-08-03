@@ -15,8 +15,8 @@ public class HandlerObject implements ITick, IRender {
 	////////// SIGNELTON ////////////
 
 	private HandlerObject() {
-		HandlerTick.getInstance().addObject(this);
-		HandlerRender.getInstance().addObject(this);
+		activateT();
+		activateR();
 	}
 	
 	private static HandlerObject instance = null;
@@ -43,9 +43,9 @@ public class HandlerObject implements ITick, IRender {
 		}
 	}
 
-	public void clear() {
-		handler_object_list.clear();
-	}
+//	public void clear() {
+//		handler_object_list.clear();
+//	}
 
 	public GameObject getObjectAtPos(int x, int y) {
 		for (GameObject tempObject : handler_object_list) {

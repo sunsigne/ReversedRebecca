@@ -4,11 +4,9 @@ import java.awt.Graphics;
 
 public interface IRender {
 	
-//	boolean isCameraDependant();
+	public default void activateR() {
+		HandlerRender.getInstance().addObject(this);
+	}
 
-	/**
-	 * WARNING ! To actually call this method, the object whose the class implements
-	 * IRender must, somehow, be add to one of two lists in HandlerRender class
-	 */
 	void render(Graphics g);
 }
