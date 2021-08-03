@@ -6,9 +6,11 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
+import com.sunsigne.reversedrebecca.system.main.Game;
+
 public class Window {
 
-	protected static final String NAME = "Reversed Rebecca";
+	public static final String NAME = "Reversed Rebecca";
 
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;

@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import com.sunsigne.reversedrebecca.game.Test;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
-import com.sunsigne.reversedrebecca.system.handler.HandlerObject;
+import com.sunsigne.reversedrebecca.system.main.Game;
 
 public class Conductor {
 
@@ -28,7 +28,11 @@ public class Conductor {
 
 	////////// START & STOP ////////////
 	
-	protected static void start() {
+	private static boolean running;
+	
+	public static void startApp() {
+		if (running)
+			return;
 		
 		setState(STATE.LOADING);
 			
@@ -44,10 +48,10 @@ public class Conductor {
 		Game.getInstance().start();
 		setState(STATE.READY);
 		
-		HandlerObject.getInstance().addObject(new Test());
+		new Test().start();
 	}
 
-	public static void stop() {
+	public static void stopApp() {
 		System.exit(1);
 	}
 

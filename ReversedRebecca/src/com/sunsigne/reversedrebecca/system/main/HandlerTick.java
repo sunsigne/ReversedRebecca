@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.system.handler;
+package com.sunsigne.reversedrebecca.system.main;
 
 import java.util.LinkedList;
 
@@ -14,24 +14,28 @@ public class HandlerTick implements ITick {
 
 	private static HandlerTick instance = null;
 
-	public static HandlerTick getInstance() {
+	protected static HandlerTick getInstance() {
 		if (instance == null)
 			instance = new HandlerTick();
 		return instance;
 	}
-	
+
 	////////// MAP OR LIST ////////////
 
 	private LinkedList<ITick> handler_tick_list = new LinkedList<>();
 
-	public void addObject(ITick tickable) {
-		if (tickable != null)
-			handler_tick_list.add(tickable);
+	protected void addObject(ITick tickable) {
+		if (tickable == null)
+			return;
+
+		handler_tick_list.add(tickable);
 	}
 
-	public void removeObject(ITick tickable) {
-		if (tickable != null)
-			handler_tick_list.remove(tickable);
+	protected void removeObject(ITick tickable) {
+		if (tickable == null)
+			return;
+
+		handler_tick_list.remove(tickable);
 	}
 
 	////////// TICK ////////////

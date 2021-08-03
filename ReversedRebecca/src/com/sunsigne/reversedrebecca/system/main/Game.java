@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.system;
+package com.sunsigne.reversedrebecca.system.main;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -8,9 +8,9 @@ import java.awt.Point;
 import java.awt.image.BufferStrategy;
 import java.util.ConcurrentModificationException;
 
+import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
-import com.sunsigne.reversedrebecca.system.handler.HandlerRender;
-import com.sunsigne.reversedrebecca.system.handler.HandlerTick;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
 
 @Singleton
@@ -22,7 +22,7 @@ public class Game extends Canvas implements Runnable {
 
 	public static void main(String args[]) {
 		instance = new Game();
-		Conductor.start();
+		Conductor.startApp();
 	}
 
 	////////// SIGNELTON ////////////

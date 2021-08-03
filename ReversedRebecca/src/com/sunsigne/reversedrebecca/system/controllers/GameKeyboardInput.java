@@ -14,7 +14,7 @@ public class GameKeyboardInput extends KeyAdapter {
 		cheatKey(key);
 
 		if (key == KeyEvent.VK_ESCAPE) {
-			Conductor.stop();
+			Conductor.stopApp();
 		}
 	}
 

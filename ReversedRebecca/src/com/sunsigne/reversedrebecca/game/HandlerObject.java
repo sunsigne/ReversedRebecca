@@ -1,12 +1,13 @@
-package com.sunsigne.reversedrebecca.system.handler;
+package com.sunsigne.reversedrebecca.game;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.LinkedList;
 
-import com.sunsigne.reversedrebecca.game.GameObject;
 import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.main.IRender;
+import com.sunsigne.reversedrebecca.system.main.ITick;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
 
 @Singleton
@@ -15,10 +16,10 @@ public class HandlerObject implements ITick, IRender {
 	////////// SIGNELTON ////////////
 
 	private HandlerObject() {
-		activateT();
-		activateR();
+		startTick();
+		startRender();
 	}
-	
+
 	private static HandlerObject instance = null;
 
 	public static HandlerObject getInstance() {
@@ -27,20 +28,22 @@ public class HandlerObject implements ITick, IRender {
 		return instance;
 	}
 
-	//////////MAP OR LIST ////////////
-		
+	////////// MAP OR LIST ////////////
+
 	private LinkedList<GameObject> handler_object_list = new LinkedList<>();
-	
-	public void addObject(GameObject object) {
-		if (object != null) {
-			handler_object_list.add(object);
-		}
+
+	protected void addObject(GameObject object) {
+		if (object == null)
+			return;
+
+		handler_object_list.add(object);
 	}
 
-	public void removeObject(GameObject object) {
-		if (object != null) {
-			handler_object_list.remove(object);
-		}
+	protected void removeObject(GameObject object) {
+		if (object == null)
+			return;
+
+		handler_object_list.remove(object);
 	}
 
 //	public void clear() {
@@ -57,7 +60,7 @@ public class HandlerObject implements ITick, IRender {
 	}
 
 	////////// TICK ////////////
-	
+
 	@Override
 	public void tick() {
 		for (GameObject tempObject : handler_object_list) {
@@ -70,9 +73,9 @@ public class HandlerObject implements ITick, IRender {
 		tempObject.setX(tempObject.getX() + tempObject.getVelX());
 		tempObject.setY(tempObject.getY() + tempObject.getVelY());
 	}
-	
+
 	////////// RENDER ////////////
-	
+
 	@Override
 	public void render(Graphics g) {
 
@@ -84,12 +87,14 @@ public class HandlerObject implements ITick, IRender {
 				drawHitbox(tempObject, g);
 		}
 	}
-	
+
 	private void drawHitbox(GameObject tempObject, Graphics g) {
+		if (tempObject.getBounds() == null)
+			return;
+
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.white);
-		if (tempObject.getBounds() != null)
-			g2d.draw(tempObject.getBounds());
+		g2d.draw(tempObject.getBounds());
 	}
 
 }

@@ -2,9 +2,8 @@ package com.sunsigne.reversedrebecca.game;
 
 import java.awt.Rectangle;
 
-import com.sunsigne.reversedrebecca.system.handler.HandlerObject;
-import com.sunsigne.reversedrebecca.system.handler.IRender;
-import com.sunsigne.reversedrebecca.system.handler.ITick;
+import com.sunsigne.reversedrebecca.system.main.IRender;
+import com.sunsigne.reversedrebecca.system.main.ITick;
 
 public abstract class GameObject implements ITick, IRender {
 
@@ -21,11 +20,12 @@ public abstract class GameObject implements ITick, IRender {
 
 	////////// HANDLER ////////////
 
-	public void activateO() {
+	public void start()
+	{
 		HandlerObject.getInstance().addObject(this);
 	}
-
-	public void desactivateO() {
+	
+	public void stop() {
 		HandlerObject.getInstance().removeObject(this);
 	}
 
