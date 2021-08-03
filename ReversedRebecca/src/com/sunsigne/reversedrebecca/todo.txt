@@ -1,0 +1,15 @@
+
+////////// IMPORTANT ////////////
+
+
+
+////////// FACILE ////////////
+
+Conducteur - la fonction Game.getInstance().start(); dans la method start() doit être utilisé plus tôt également,
+	pour lancer l'écran de chargement (les ticks ne se lance qu'après l'avoir invoqué)
+
+
+///////// A TRIER ////////////
+
+
+	 
