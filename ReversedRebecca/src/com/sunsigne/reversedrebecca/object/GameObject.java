@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.game;
+package com.sunsigne.reversedrebecca.object;
 
 import java.awt.Rectangle;
 

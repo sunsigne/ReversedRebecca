@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.game;
+package com.sunsigne.reversedrebecca.object;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -50,6 +50,12 @@ public class HandlerObject implements ITick, IRender {
 //		handler_object_list.clear();
 //	}
 
+	////////// UTIL ////////////
+
+	protected boolean isPlayerExisting() {
+		return handler_object_list.contains(Player.get());
+	}
+
 	public GameObject getObjectAtPos(int x, int y) {
 		for (GameObject tempObject : handler_object_list) {
 			if (tempObject.getX() == x && tempObject.getY() == y) {
@@ -82,7 +88,7 @@ public class HandlerObject implements ITick, IRender {
 		for (GameObject tempObject : handler_object_list)
 			tempObject.render(g);
 
-		if (Conductor.getDebugMode().getHitboxMode().getState()) {
+		if (Conductor.DEBUG_MODE.getHitboxMode().getState()) {
 			for (GameObject tempObject : handler_object_list)
 				drawHitbox(tempObject, g);
 		}
