@@ -34,7 +34,7 @@ public class Player extends GameObject {
 	public void tick() {
 	}
 
-	////////// COLLISION ////////////
+	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {

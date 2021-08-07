@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.system;
 
 import com.sunsigne.reversedrebecca.object.Player;
+import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
 import com.sunsigne.reversedrebecca.system.main.Game;
 
@@ -28,11 +29,14 @@ public class Conductor {
 	public static void startApp() {
 		if (running)
 			return;
-
+		
+		running = true;
 		setState(STATE.LOADING);
 
 		new Window(Game.getInstance());
 
+		Game.getInstance().start();
+		
 		Game.getInstance().addKeyListener(KEYBOARD);
 		Game.getInstance().requestFocus();
 
@@ -49,10 +53,10 @@ public class Conductor {
 	private static void loadLevel() {
 
 		Player.get().start();
-		// WARNING !!!!!!! cette fonction doit être utilisé plus tôt également, pour
-		// lancer l'écran de chargement
-		// (les ticks ne se lance qu'après l'avoir invoqué)
-		Game.getInstance().start();
+		new Wall(500, 300).start();
+		new Wall(900, 600).start();
+		
+		Game.getInstance().forceLoop();
 		setState(STATE.READY);
 
 	}

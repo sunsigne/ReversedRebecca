@@ -42,14 +42,12 @@ public class Game extends Canvas implements Runnable {
 	private boolean running;
 
 	public synchronized void start() {
-		forceLoop();
 		if (running)
 			return;
 
 		running = true;
 		thread = new Thread(this, Window.NAME + "_main");
 		thread.start();
-		forceLoop();
 	}
 
 	public synchronized void stop() {
@@ -120,7 +118,7 @@ public class Game extends Canvas implements Runnable {
 		stop();
 	}
 
-	private void forceLoop() {
+	public void forceLoop() {
 		try {
 			tick();
 			render();
