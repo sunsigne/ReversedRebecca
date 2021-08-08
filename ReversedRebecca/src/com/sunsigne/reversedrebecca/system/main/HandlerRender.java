@@ -44,14 +44,6 @@ public class HandlerRender implements IRender {
 		var list = getList(renderable.isCameraDependant(), renderable.isLayerAbove());
 		list.add(renderable);
 	}
-	
-	protected void addObject(IRender renderable, boolean cameraDependant, boolean layerAbove) {
-		if (renderable == null)
-			return;
-
-		var list = getList(cameraDependant, layerAbove);
-		list.add(renderable);
-	}
 
 	protected void removeObject(IRender renderable) {
 		if (renderable == null)
