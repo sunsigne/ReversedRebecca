@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.main;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.image.BufferStrategy;
@@ -12,6 +13,7 @@ import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
+import com.sunsigne.reversedrebecca.util.Camera;
 
 @Singleton
 public class Game extends Canvas implements Runnable {
@@ -140,6 +142,8 @@ public class Game extends Canvas implements Runnable {
 
 	////////// RENDER ////////////
 
+	private static final Camera CAMERA = new Camera();
+
 	private void render() {
 
 		BufferStrategy bs = this.getBufferStrategy();
@@ -153,10 +157,23 @@ public class Game extends Canvas implements Runnable {
 		g.setColor(new Color(0, 0, 0));
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
 
-		HandlerRender.getInstance().render(g);
+		renderDependency(g, true);
+		renderDependency(g, false);
 
 		g.dispose();
 		bs.show();
 	}
 
+	private void renderDependency(Graphics g, boolean cameraDependant) {
+		Graphics2D g2d = (Graphics2D) g;
+
+		int cameraDependency = cameraDependant ? 1 : -1;
+		g2d.translate(cameraDependency * CAMERA.getX(), cameraDependency * CAMERA.getY());
+
+		HandlerRender.getInstance().setLayerAbove(false);
+		HandlerRender.getInstance().render(g);
+		HandlerRender.getInstance().setLayerAbove(true);
+		HandlerRender.getInstance().render(g);
+		HandlerRender.getInstance().setCameraDependant(!cameraDependant);
+	}
 }

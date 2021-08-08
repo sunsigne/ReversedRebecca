@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.Wall;
+import com.sunsigne.reversedrebecca.object.gui.GUIHealth;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
 import com.sunsigne.reversedrebecca.system.main.Game;
 
@@ -53,8 +54,11 @@ public class Conductor {
 	private static void loadLevel() {
 
 		Player.get().start();
+		new GUIHealth().start();
+		
 		new Wall(500, 300).start();
 		new Wall(900, 600).start();
+		
 		
 		Game.getInstance().forceLoop();
 		setState(STATE.READY);

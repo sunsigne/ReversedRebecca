@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import java.util.LinkedList;
 
 import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.main.HandlerRender;
 import com.sunsigne.reversedrebecca.system.main.IRender;
 import com.sunsigne.reversedrebecca.system.main.ITick;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
@@ -16,7 +17,27 @@ public class HandlerObject implements ITick, IRender {
 	////////// SIGNELTON ////////////
 
 	private HandlerObject() {
+		for (int layer = 0; layer < 2; layer++) {
+			handler_object_list[0][layer] = new LinkedList<GameObject>();
+			handler_object_list[1][layer] = new LinkedList<GameObject>();
+		}
+
 		startTick();
+
+		HandlerRender.getInstance().setCameraDependant(true);
+		HandlerRender.getInstance().setLayerAbove(false);
+		startRender();
+
+		HandlerRender.getInstance().setCameraDependant(true);
+		HandlerRender.getInstance().setLayerAbove(true);
+		startRender();
+
+		HandlerRender.getInstance().setCameraDependant(false);
+		HandlerRender.getInstance().setLayerAbove(false);
+		startRender();
+
+		HandlerRender.getInstance().setCameraDependant(false);
+		HandlerRender.getInstance().setLayerAbove(true);
 		startRender();
 	}
 
@@ -30,20 +51,29 @@ public class HandlerObject implements ITick, IRender {
 
 	////////// MAP OR LIST ////////////
 
-	private LinkedList<GameObject> handler_object_list = new LinkedList<>();
+	@SuppressWarnings("unchecked")
+	private LinkedList<GameObject>[][] handler_object_list = new LinkedList[2][2]; // - cameraDependency - layerAbove
+
+	private LinkedList<GameObject> getList(boolean cameraDependant, boolean layerAbove) {
+		int cameraDependency = cameraDependant ? 1 : 0;
+		int layerAboveness = layerAbove ? 1 : 0;
+		return handler_object_list[cameraDependency][layerAboveness];
+	}
 
 	protected void addObject(GameObject object) {
 		if (object == null)
 			return;
 
-		handler_object_list.add(object);
+		var list = getList(object.isCameraDependant(), object.isLayerAbove());
+		list.add(object);
 	}
 
 	protected void removeObject(GameObject object) {
 		if (object == null)
 			return;
 
-		handler_object_list.remove(object);
+		var list = getList(object.isCameraDependant(), object.isLayerAbove());
+		list.remove(object);
 	}
 
 //	public void clear() {
@@ -53,11 +83,18 @@ public class HandlerObject implements ITick, IRender {
 	////////// UTIL ////////////
 
 	protected boolean isPlayerExisting() {
-		return handler_object_list.contains(Player.get());
+
+		if (getList(true, false).contains(Player.get()))
+			return true;
+
+		if (getList(true, true).contains(Player.get()))
+			return true;
+
+		return false;
 	}
 
-	public GameObject getObjectAtPos(int x, int y) {
-		for (GameObject tempObject : handler_object_list) {
+	public GameObject getObjectAtPos(boolean cameraDependant, boolean layerAbove, int x, int y) {
+		for (GameObject tempObject : getList(cameraDependant, layerAbove)) {
 			if (tempObject.getX() == x && tempObject.getY() == y) {
 				return tempObject;
 			}
@@ -69,7 +106,17 @@ public class HandlerObject implements ITick, IRender {
 
 	@Override
 	public void tick() {
-		for (GameObject tempObject : handler_object_list) {
+
+		tickDependency(true, false);
+		tickDependency(true, true);
+		tickDependency(false, false);
+		tickDependency(false, true);
+	}
+
+	private void tickDependency(boolean cameraDependant, boolean layerAbove) {
+
+		var list = getList(cameraDependant, layerAbove);
+		for (GameObject tempObject : list) {
 			tempObject.tick();
 			velocity(tempObject);
 		}
@@ -83,13 +130,25 @@ public class HandlerObject implements ITick, IRender {
 	////////// RENDER ////////////
 
 	@Override
+	public boolean isCameraDependant() {
+		return HandlerRender.getInstance().isCameraDependant();
+	}
+
+	@Override
+	public boolean isLayerAbove() {
+		return HandlerRender.getInstance().isLayerAbove();
+	}
+
+	@Override
 	public void render(Graphics g) {
 
-		for (GameObject tempObject : handler_object_list)
+		var list = getList(isCameraDependant(), isLayerAbove());
+
+		for (GameObject tempObject : list)
 			tempObject.render(g);
 
 		if (Conductor.DEBUG_MODE.getHitboxMode().getState()) {
-			for (GameObject tempObject : handler_object_list)
+			for (GameObject tempObject : list)
 				drawHitbox(tempObject, g);
 		}
 	}

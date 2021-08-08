@@ -8,7 +8,7 @@ public class Player extends GameObject {
 	public static final int SPEED = 32 / 3;
 	
 	private Player(int x, int y) {
-		super(x, y);
+		super(true, false, x, y);
 
 	}
 

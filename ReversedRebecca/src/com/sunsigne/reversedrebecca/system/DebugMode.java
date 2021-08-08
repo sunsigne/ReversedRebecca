@@ -7,7 +7,7 @@ public class DebugMode {
 	private final Cycloid<Boolean> multiToolMode = new Cycloid<>(false, true);
 	private final Cycloid<Boolean> wallPassMode = new Cycloid<>(false, true);
 	private final Cycloid<Boolean> skipMode = new Cycloid<>(false, true);
-	private final Cycloid<Boolean> hitboxMode = new Cycloid<>(false, true);
+	private final Cycloid<Boolean> hitboxMode = new Cycloid<>(true, false);
 	private final Cycloid<Boolean> fastMode = new Cycloid<>(false, true);
 
 	public Cycloid<Boolean> getMultiToolMode() {
