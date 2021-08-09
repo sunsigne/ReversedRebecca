@@ -24,20 +24,15 @@ public class HandlerObject implements ITick, IRender {
 
 		startTick();
 
-		HandlerRender.getInstance().setCameraDependant(true);
-		HandlerRender.getInstance().setLayerAbove(false);
-		startRender();
+		startRenderDependency(true, false);
+		startRenderDependency(true, true);
+		startRenderDependency(false, false);
+		startRenderDependency(false, true);
+	}
 
-		HandlerRender.getInstance().setCameraDependant(true);
-		HandlerRender.getInstance().setLayerAbove(true);
-		startRender();
-
-		HandlerRender.getInstance().setCameraDependant(false);
-		HandlerRender.getInstance().setLayerAbove(false);
-		startRender();
-
-		HandlerRender.getInstance().setCameraDependant(false);
-		HandlerRender.getInstance().setLayerAbove(true);
+	private void startRenderDependency(boolean cameraDependant, boolean layerAbove) {
+		HandlerRender.getInstance().setCameraDependant(cameraDependant);
+		HandlerRender.getInstance().setLayerAbove(layerAbove);
 		startRender();
 	}
 

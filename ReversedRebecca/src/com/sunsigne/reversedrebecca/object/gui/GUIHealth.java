@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.gui;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -24,6 +25,12 @@ public class GUIHealth extends GameObject {
 	public void render(Graphics g) {
 		g.setColor(Color.BLUE);
 		g.fillRect(x, y, w, h);
+		
+		Font font = new Font("arial", 1, 50);
+		String text = "hp";
+		g.setFont(font);
+		g.setColor(Color.white);
+		g.drawString(text, x + 20, y + 60);
 	}
 	
 }
