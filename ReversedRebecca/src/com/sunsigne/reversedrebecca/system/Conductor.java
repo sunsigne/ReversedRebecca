@@ -4,12 +4,15 @@ import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.gui.GUIHealth;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.main.Game;
+import com.sunsigne.reversedrebecca.util.Camera;
 
 public class Conductor {
 
 	public static final DebugMode DEBUG_MODE = new DebugMode();
 	public static final GameKeyboardInput KEYBOARD = new GameKeyboardInput();
+	private static final GameCursor GAMECURSOR = new GameCursor();
 	
 	////////// STATE ////////////
 
@@ -41,6 +44,8 @@ public class Conductor {
 		Game.getInstance().addKeyListener(KEYBOARD);
 		Game.getInstance().requestFocus();
 
+		GAMECURSOR.startTick();
+		
 		loadLevel();
 
 	}

@@ -1,17 +1,25 @@
 package com.sunsigne.reversedrebecca.system.controllers.mouse;
 
+import java.awt.MouseInfo;
 import java.awt.Point;
 
-public class GameCursor {
+import com.sunsigne.reversedrebecca.system.main.ITick;
 
-	private static Point pos;
+public class GameCursor implements ITick {
+
+	////////// POSITION ////////////
+
+	private Point pos;
 
 	public Point getPos() {
 		return pos;
 	}
 
-	public void setPos(Point pos) {
-		GameCursor.pos = pos;
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		pos = MouseInfo.getPointerInfo().getLocation();
 	}
 
 }

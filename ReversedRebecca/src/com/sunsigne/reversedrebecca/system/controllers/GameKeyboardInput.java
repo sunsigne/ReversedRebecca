@@ -108,11 +108,11 @@ public class GameKeyboardInput extends KeyAdapter {
 	private void movePlayer() {
 
 		int speedMultiplicator = Conductor.DEBUG_MODE.getFastMode().getState() ? 3 : 1;
-		moveplayerbyX(speedMultiplicator);
-		moveplayerbyY(speedMultiplicator);
+		movePlayerbyX(speedMultiplicator);
+		movePlayerbyY(speedMultiplicator);
 	}
 
-	private void moveplayerbyX(int speedMultiplicator) {
+	private void movePlayerbyX(int speedMultiplicator) {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			Player.get().setVelX(-Player.SPEED * speedMultiplicator);
@@ -124,7 +124,7 @@ public class GameKeyboardInput extends KeyAdapter {
 			Player.get().setVelX(0);
 	}
 
-	private void moveplayerbyY(int speedMultiplicator) {
+	private void movePlayerbyY(int speedMultiplicator) {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			Player.get().setVelY(-Player.SPEED * speedMultiplicator);

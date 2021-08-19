@@ -4,14 +4,11 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.MouseInfo;
-import java.awt.Point;
 import java.awt.image.BufferStrategy;
 import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
 import com.sunsigne.reversedrebecca.util.Camera;
 
@@ -134,8 +131,6 @@ public class Game extends Canvas implements Runnable {
 	////////// TICK ////////////
 
 	private void tick() {
-		Point pos = MouseInfo.getPointerInfo().getLocation();
-		new GameCursor().setPos(pos);
 
 		HandlerTick.getInstance().tick();
 	}
