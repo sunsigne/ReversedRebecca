@@ -9,7 +9,6 @@ public class Player extends GameObject {
 	
 	private Player(int x, int y) {
 		super(true, false, x, y);
-
 	}
 
 	////////// EXISTING ////////////

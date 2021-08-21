@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Wall extends GameObject {
@@ -19,6 +20,9 @@ public class Wall extends GameObject {
 
 	@Override
 	public void render(Graphics g) {
+		
+		g.setColor(Color.BLUE);
+		g.fillRect(x, y, w, h);
 	}
 	
 }

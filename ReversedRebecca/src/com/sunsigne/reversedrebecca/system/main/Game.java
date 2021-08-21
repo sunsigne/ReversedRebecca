@@ -27,6 +27,7 @@ public class Game extends Canvas implements Runnable {
 	////////// SIGNELTON ////////////
 
 	private Game() {
+
 	}
 
 	private static Game instance = null;
@@ -84,7 +85,6 @@ public class Game extends Canvas implements Runnable {
 //				ticks++;
 				try {
 					tick();
-
 				} catch (ConcurrentModificationException | NullPointerException e) {
 					// some list are sometimes changed during a tick instead of between
 					// two ticks, which may cause crash. As the next tick repair the problem,

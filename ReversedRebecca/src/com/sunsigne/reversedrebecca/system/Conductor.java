@@ -44,7 +44,7 @@ public class Conductor {
 		Game.getInstance().addKeyListener(KEYBOARD);
 		Game.getInstance().requestFocus();
 
-		GAMECURSOR.startTick();
+		new GameCursor().startTick();
 		
 		loadLevel();
 

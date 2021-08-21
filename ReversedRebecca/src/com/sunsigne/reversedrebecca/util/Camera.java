@@ -39,7 +39,7 @@ public class Camera implements ITick {
 			return;
 
 		GameObject player = Player.get();
-		x = -player.getX() + (Window.WIDHT - player.getWitdh()) / 2;
+		x = -player.getX() + (Window.WIDHT - player.getWidth()) / 2;
 		y = -player.getY() + (Window.HEIGHT - player.getHeight()) / 2;
 	}
 

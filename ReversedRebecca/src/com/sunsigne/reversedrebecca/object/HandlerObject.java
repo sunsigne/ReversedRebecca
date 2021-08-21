@@ -17,9 +17,10 @@ public class HandlerObject implements ITick, IRender {
 	////////// SIGNELTON ////////////
 
 	private HandlerObject() {
-		for (int layer = 0; layer < 2; layer++) {
-			handler_object_list[0][layer] = new LinkedList<GameObject>();
-			handler_object_list[1][layer] = new LinkedList<GameObject>();
+		for (int camera = 0; camera < 2; camera++) {
+			for (int layer = 0; layer < 2; layer++) {
+				handler_object_list[camera][layer] = new LinkedList<GameObject>();
+			}
 		}
 
 		startTick();

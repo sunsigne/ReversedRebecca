@@ -6,10 +6,10 @@ import java.awt.Point;
 import com.sunsigne.reversedrebecca.system.main.ITick;
 
 public class GameCursor implements ITick {
-
+	
 	////////// POSITION ////////////
 
-	private Point pos;
+	private static Point pos;
 
 	public Point getPos() {
 		return pos;

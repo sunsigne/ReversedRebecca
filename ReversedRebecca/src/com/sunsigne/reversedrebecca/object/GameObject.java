@@ -56,7 +56,7 @@ public abstract class GameObject implements ITick, IRender {
 
 	protected int w, h;
 
-	public int getWitdh() {
+	public int getWidth() {
 		return w;
 	}
 
