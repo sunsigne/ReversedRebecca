@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.object;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.collision.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;

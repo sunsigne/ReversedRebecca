@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.system.main.HandlerRender;
 import com.sunsigne.reversedrebecca.system.main.IRender;
 import com.sunsigne.reversedrebecca.system.main.ITick;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
+import com.sunsigne.reversedrebecca.util.Facing.DIRECTION;
 
 @Singleton
 public class HandlerObject implements ITick, IRender {
@@ -51,7 +52,7 @@ public class HandlerObject implements ITick, IRender {
 	@SuppressWarnings("unchecked")
 	private LinkedList<GameObject>[][] handler_object_list = new LinkedList[2][2]; // - cameraDependency - layerAbove
 
-	private LinkedList<GameObject> getList(boolean cameraDependant, boolean layerAbove) {
+	public LinkedList<GameObject> getList(boolean cameraDependant, boolean layerAbove) {
 		int cameraDependency = cameraDependant ? 1 : 0;
 		int layerAboveness = layerAbove ? 1 : 0;
 		return handler_object_list[cameraDependency][layerAboveness];
@@ -85,6 +86,22 @@ public class HandlerObject implements ITick, IRender {
 			return true;
 
 		if (getList(true, true).contains(Player.get()))
+			return true;
+
+		return false;
+	}
+
+	public boolean isObjectExisting(GameObject gameObject) {
+		if (getList(true, false).contains(gameObject))
+			return true;
+
+		if (getList(true, true).contains(gameObject))
+			return true;
+
+		if (getList(false, false).contains(gameObject))
+			return true;
+
+		if (getList(false, true).contains(gameObject))
 			return true;
 
 		return false;
@@ -160,10 +177,10 @@ public class HandlerObject implements ITick, IRender {
 
 		if (tempObject instanceof ICollisionDetection) {
 			ICollisionDetection collidingObject = (ICollisionDetection) tempObject;
-			g2d.draw(collidingObject.getBoundsLeft(tempObject));
-			g2d.draw(collidingObject.getBoundsRight(tempObject));
-			g2d.draw(collidingObject.getBoundsTop(tempObject));
-			g2d.draw(collidingObject.getBoundsDown(tempObject));
+			g2d.draw(collidingObject.getBounds(DIRECTION.LEFT, tempObject));
+			g2d.draw(collidingObject.getBounds(DIRECTION.RIGHT, tempObject));
+			g2d.draw(collidingObject.getBounds(DIRECTION.UP, tempObject));
+			g2d.draw(collidingObject.getBounds(DIRECTION.DOWN, tempObject));
 		}
 	}
 
