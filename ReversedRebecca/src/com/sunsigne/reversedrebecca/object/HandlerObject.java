@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.LinkedList;
 
+import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.main.HandlerRender;
 import com.sunsigne.reversedrebecca.system.main.IRender;
@@ -156,6 +157,14 @@ public class HandlerObject implements ITick, IRender {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.white);
 		g2d.draw(tempObject.getBounds());
+
+		if (tempObject instanceof ICollisionDetection) {
+			ICollisionDetection collidingObject = (ICollisionDetection) tempObject;
+			g2d.draw(collidingObject.getBoundsLeft(tempObject));
+			g2d.draw(collidingObject.getBoundsRight(tempObject));
+			g2d.draw(collidingObject.getBoundsTop(tempObject));
+			g2d.draw(collidingObject.getBoundsDown(tempObject));
+		}
 	}
 
 }
