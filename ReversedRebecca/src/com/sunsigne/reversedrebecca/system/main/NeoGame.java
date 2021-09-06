@@ -13,26 +13,26 @@ import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
 import com.sunsigne.reversedrebecca.util.Camera;
 
 @Singleton
-public class Game extends Canvas implements Runnable {
+public class NeoGame extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
 
 	////////// MAIN ////////////
 
 	public static void main(String args[]) {
-		instance = new Game();
+		instance = new NeoGame();
 		Conductor.startApp();
 	}
 
 	////////// SIGNELTON ////////////
 
-	private Game() {
+	private NeoGame() {
 
 	}
 
-	private static Game instance = null;
+	private static NeoGame instance = null;
 
-	public static Game getInstance() {
+	public static NeoGame getInstance() {
 		return instance;
 	}
 

@@ -6,7 +6,7 @@ import com.sunsigne.reversedrebecca.object.gui.GUIDebug;
 import com.sunsigne.reversedrebecca.object.gui.GUIHealth;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
-import com.sunsigne.reversedrebecca.system.main.Game;
+import com.sunsigne.reversedrebecca.system.main.NeoGame;
 import com.sunsigne.reversedrebecca.util.Camera;
 
 public class Conductor {
@@ -38,12 +38,12 @@ public class Conductor {
 		running = true;
 		setState(STATE.LOADING);
 
-		new Window(Game.getInstance());
+		new Window(NeoGame.getInstance());
 
-		Game.getInstance().start();
+		NeoGame.getInstance().start();
 		
-		Game.getInstance().addKeyListener(KEYBOARD);
-		Game.getInstance().requestFocus();
+		NeoGame.getInstance().addKeyListener(KEYBOARD);
+		NeoGame.getInstance().requestFocus();
 
 		new GameCursor().startTick();
 		
@@ -67,7 +67,7 @@ public class Conductor {
 		new Wall(900, 600).start();
 		
 		
-		Game.getInstance().forceLoop();
+		NeoGame.getInstance().forceLoop();
 		setState(STATE.READY);
 
 	}

@@ -6,7 +6,7 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import com.sunsigne.reversedrebecca.system.main.Game;
+import com.sunsigne.reversedrebecca.system.main.NeoGame;
 
 public class Window {
 
@@ -15,7 +15,7 @@ public class Window {
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
 
-	protected Window(Game game) {
+	protected Window(NeoGame game) {
 
 		game.setMinimumSize(new Dimension(WIDHT, HEIGHT));
 		game.setMaximumSize(new Dimension(WIDHT, HEIGHT));
