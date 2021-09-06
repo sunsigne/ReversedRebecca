@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.system;
 
+import com.sunsigne.reversedrebecca.object.Foe;
 import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.gui.GUIDebug;
@@ -65,6 +66,9 @@ public class Conductor {
 		
 		new Wall(500, 300).start();
 		new Wall(900, 600).start();
+		
+		new Foe(1500, 100).start();
+		new Foe(1500, 500).start();
 		
 		
 		NeoGame.getInstance().forceLoop();

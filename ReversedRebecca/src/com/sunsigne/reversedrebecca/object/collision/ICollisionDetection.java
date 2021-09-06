@@ -9,51 +9,51 @@ public interface ICollisionDetection {
 
 	public CollisionDetector getCollisionDetector();
 
-	public default Rectangle getBounds(DIRECTION direction, GameObject cDetectorObject) {
+	public default Rectangle getBounds(DIRECTION direction, GameObject clnDetectorObject) {
 		switch (direction) {
 		case LEFT:
-			return getBoundsLeft(cDetectorObject);
+			return getBoundsLeft(clnDetectorObject);
 		case RIGHT:
-			return getBoundsRight(cDetectorObject);
+			return getBoundsRight(clnDetectorObject);
 		case UP:
-			return getBoundsUp(cDetectorObject);
+			return getBoundsUp(clnDetectorObject);
 		case DOWN:
-			return getBoundsDown(cDetectorObject);
+			return getBoundsDown(clnDetectorObject);
 		case NULL:
 			return null;
 		}
 		return null;
 	}
 
-	private Rectangle getBoundsLeft(GameObject cDetectorObject) {
-		int x = cDetectorObject.getX();
-		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 8;
-		int w = cDetectorObject.getWidth() / 6;
-		int h = 6 * cDetectorObject.getHeight() / 8;
+	private Rectangle getBoundsLeft(GameObject clnDetectorObject) {
+		int x = clnDetectorObject.getX();
+		int y = clnDetectorObject.getY() + clnDetectorObject.getHeight() / 8;
+		int w = clnDetectorObject.getWidth() / 6;
+		int h = 6 * clnDetectorObject.getHeight() / 8;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsRight(GameObject cDetectorObject) {
-		int x = cDetectorObject.getX() + 5 * cDetectorObject.getWidth() / 6;
-		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 8;
-		int w = cDetectorObject.getWidth() / 6;
-		int h = 6 * cDetectorObject.getHeight() / 8;
+	private Rectangle getBoundsRight(GameObject clnDetectorObject) {
+		int x = clnDetectorObject.getX() + 5 * clnDetectorObject.getWidth() / 6;
+		int y = clnDetectorObject.getY() + clnDetectorObject.getHeight() / 8;
+		int w = clnDetectorObject.getWidth() / 6;
+		int h = 6 * clnDetectorObject.getHeight() / 8;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsUp(GameObject cDetectorObject) {
-		int x = cDetectorObject.getX() + cDetectorObject.getWidth() / 4;
-		int y = cDetectorObject.getY();
-		int w = cDetectorObject.getWidth() / 2;
-		int h = cDetectorObject.getHeight() / 2;
+	private Rectangle getBoundsUp(GameObject clnDetectorObject) {
+		int x = clnDetectorObject.getX() + clnDetectorObject.getWidth() / 4;
+		int y = clnDetectorObject.getY();
+		int w = clnDetectorObject.getWidth() / 2;
+		int h = clnDetectorObject.getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsDown(GameObject cDetectorObject) {
-		int x = cDetectorObject.getX() + cDetectorObject.getWidth() / 4;
-		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 2;
-		int w = cDetectorObject.getWidth() / 2;
-		int h = cDetectorObject.getHeight() / 2;
+	private Rectangle getBoundsDown(GameObject clnDetectorObject) {
+		int x = clnDetectorObject.getX() + clnDetectorObject.getWidth() / 4;
+		int y = clnDetectorObject.getY() + clnDetectorObject.getHeight() / 2;
+		int w = clnDetectorObject.getWidth() / 2;
+		int h = clnDetectorObject.getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
 

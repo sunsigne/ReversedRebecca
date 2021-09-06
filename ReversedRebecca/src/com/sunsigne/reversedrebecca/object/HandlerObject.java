@@ -145,8 +145,8 @@ public class HandlerObject implements ITick, IRender {
 
 	private void collision(GameObject tempObject) {
 		if (tempObject instanceof ICollisionDetection) {
-			ICollisionDetection cDetectorObject = (ICollisionDetection) tempObject;
-			cDetectorObject.getCollisionDetector().tick();
+			ICollisionDetection clnDetectorObject = (ICollisionDetection) tempObject;
+			clnDetectorObject.getCollisionDetector().tick();
 		}
 	}
 

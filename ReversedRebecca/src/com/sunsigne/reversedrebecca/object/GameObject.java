@@ -132,16 +132,16 @@ public abstract class GameObject implements ITick, IRender {
 
 	public Rectangle getBounds() {
 		if (this instanceof ICollisionReaction) {
-			ICollisionReaction cReactorObject = (ICollisionReaction) this;
-			return cReactorObject.getBounds(this);
+			ICollisionReaction clnReactorObject = (ICollisionReaction) this;
+			return clnReactorObject.getBounds(this);
 		}
 		return null;
 	}
 
 	public Rectangle getBounds(DIRECTION direction) {
 		if (this instanceof ICollisionDetection) {
-			ICollisionDetection cDetectorObject = (ICollisionDetection) this;
-			return cDetectorObject.getBounds(direction, this);
+			ICollisionDetection clnDetectorObject = (ICollisionDetection) this;
+			return clnDetectorObject.getBounds(direction, this);
 
 		}
 		return null;

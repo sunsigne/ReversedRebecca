@@ -30,8 +30,8 @@ public class Wall extends GameObject implements ICollisionReaction {
 	////////// COLLISION ////////////
 
 	@Override
-	public void collidingReaction(GameObject collidingObject) {
-//		blockPass(collidingObject, this);
+	public void collidingReaction(GameObject clnDetectorObject) {
+		blockPass(clnDetectorObject, this);
 	}
 	
 }

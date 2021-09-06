@@ -9,10 +9,10 @@ import com.sunsigne.reversedrebecca.util.Facing.DIRECTION;
 
 public class CollisionDetector implements ITick {
 
-	private GameObject cDetectorObject;
+	private GameObject clnDetectorObject;
 
-	public CollisionDetector(GameObject cDetectorObject) {
-		this.cDetectorObject = cDetectorObject;
+	public CollisionDetector(GameObject clnDetectorObject) {
+		this.clnDetectorObject = clnDetectorObject;
 	}
 
 	////////// TICK ////////////
@@ -20,40 +20,40 @@ public class CollisionDetector implements ITick {
 	@Override
 	public void tick() {
 
-		boolean cameraDependant = cDetectorObject.isCameraDependant();
-		boolean layerAbove = cDetectorObject.isLayerAbove();
+		boolean cameraDependant = clnDetectorObject.isCameraDependant();
+		boolean layerAbove = clnDetectorObject.isLayerAbove();
 		var list = HandlerObject.getInstance().getList(cameraDependant, layerAbove);
 
-		for (GameObject cReactorObject : list) {
+		for (GameObject clnReactorObject : list) {
 
-			if (cDetectorObject == cReactorObject)
+			if (clnDetectorObject == clnReactorObject)
 				continue;
 
-			if (cDetectorObjectIsCollinding(cReactorObject)) {
-				ICollisionReaction cReactorObject0 = (ICollisionReaction) cReactorObject;
-				cReactorObject0.collidingReaction(cDetectorObject);
+			if (clnDetectorObjectIsCollinding(clnReactorObject)) {
+				ICollisionReaction clnReactorObject0 = (ICollisionReaction) clnReactorObject;
+				clnReactorObject0.collidingReaction(clnDetectorObject);
 			}
 		}
 	}
 
-	private boolean cDetectorObjectIsCollinding(GameObject cReactorObject) {
+	private boolean clnDetectorObjectIsCollinding(GameObject clnReactorObject) {
 
-		if (cReactorObject instanceof ICollisionReaction == false)
+		if (clnReactorObject instanceof ICollisionReaction == false)
 			return false;
 
-		if (cDetectorObject instanceof Player && Conductor.DEBUG_MODE.getWallPassMode().getState())
+		if (clnDetectorObject instanceof Player && Conductor.DEBUG_MODE.getWallPassMode().getState())
 			return false;
 
-		if (cDetectorObject.getBounds(DIRECTION.LEFT).intersects(cReactorObject.getBounds()))
+		if (clnDetectorObject.getBounds(DIRECTION.LEFT).intersects(clnReactorObject.getBounds()))
 			return true;
 
-		if (cDetectorObject.getBounds(DIRECTION.RIGHT).intersects(cReactorObject.getBounds()))
+		if (clnDetectorObject.getBounds(DIRECTION.RIGHT).intersects(clnReactorObject.getBounds()))
 			return true;
 
-		if (cDetectorObject.getBounds(DIRECTION.UP).intersects(cReactorObject.getBounds()))
+		if (clnDetectorObject.getBounds(DIRECTION.UP).intersects(clnReactorObject.getBounds()))
 			return true;
 
-		if (cDetectorObject.getBounds(DIRECTION.DOWN).intersects(cReactorObject.getBounds()))
+		if (clnDetectorObject.getBounds(DIRECTION.DOWN).intersects(clnReactorObject.getBounds()))
 			return true;
 
 		// should NOT occur
