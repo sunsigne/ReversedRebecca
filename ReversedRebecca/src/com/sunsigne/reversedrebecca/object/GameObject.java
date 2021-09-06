@@ -2,8 +2,11 @@ package com.sunsigne.reversedrebecca.object;
 
 import java.awt.Rectangle;
 
+import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
+import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
 import com.sunsigne.reversedrebecca.system.main.IRender;
 import com.sunsigne.reversedrebecca.system.main.ITick;
+import com.sunsigne.reversedrebecca.util.Facing.DIRECTION;
 
 public abstract class GameObject implements ITick, IRender {
 
@@ -64,19 +67,6 @@ public abstract class GameObject implements ITick, IRender {
 		return h;
 	}
 
-	public int[] getRect() {
-		int[] rect = new int[4];
-		rect[0] = getBounds().x;
-		rect[1] = getBounds().y;
-		rect[2] = getBounds().width;
-		rect[3] = getBounds().height;
-		return rect;
-	}
-
-	public Rectangle getBounds() {
-		return new Rectangle(x, y, w, h);
-	}
-
 	////////// VELOCICY ////////////
 
 	protected int velX, velY;
@@ -127,6 +117,34 @@ public abstract class GameObject implements ITick, IRender {
 	@Override
 	public boolean isLayerAbove() {
 		return layerAbove;
+	}
+
+	////////// COLLISION ////////////
+
+	public int[] getRect() {
+		int[] rect = new int[4];
+		rect[0] = getBounds().x;
+		rect[1] = getBounds().y;
+		rect[2] = getBounds().width;
+		rect[3] = getBounds().height;
+		return rect;
+	}
+
+	public Rectangle getBounds() {
+		if (this instanceof ICollisionReaction) {
+			ICollisionReaction cReactorObject = (ICollisionReaction) this;
+			return cReactorObject.getBounds(this);
+		}
+		return null;
+	}
+
+	public Rectangle getBounds(DIRECTION direction) {
+		if (this instanceof ICollisionDetection) {
+			ICollisionDetection cDetectorObject = (ICollisionDetection) this;
+			return cDetectorObject.getBounds(direction, this);
+
+		}
+		return null;
 	}
 
 }

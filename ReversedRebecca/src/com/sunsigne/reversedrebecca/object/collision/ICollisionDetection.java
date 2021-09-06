@@ -9,51 +9,51 @@ public interface ICollisionDetection {
 
 	public CollisionDetector getCollisionDetector();
 
-	public default Rectangle getBounds(DIRECTION direction, GameObject collidingObject) {
+	public default Rectangle getBounds(DIRECTION direction, GameObject cDetectorObject) {
 		switch (direction) {
 		case LEFT:
-			return getBoundsLeft(collidingObject);
+			return getBoundsLeft(cDetectorObject);
 		case RIGHT:
-			return getBoundsRight(collidingObject);
+			return getBoundsRight(cDetectorObject);
 		case UP:
-			return getBoundsUp(collidingObject);
+			return getBoundsUp(cDetectorObject);
 		case DOWN:
-			return getBoundsDown(collidingObject);
+			return getBoundsDown(cDetectorObject);
 		case NULL:
-			return collidingObject.getBounds();
+			return null;
 		}
-		return collidingObject.getBounds();
+		return null;
 	}
 
-	private Rectangle getBoundsLeft(GameObject collidingObject) {
-		int x = collidingObject.getX();
-		int y = collidingObject.getY() + collidingObject.getHeight() / 8;
-		int w = collidingObject.getWidth() / 6;
-		int h = 6 * collidingObject.getHeight() / 8;
+	private Rectangle getBoundsLeft(GameObject cDetectorObject) {
+		int x = cDetectorObject.getX();
+		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 8;
+		int w = cDetectorObject.getWidth() / 6;
+		int h = 6 * cDetectorObject.getHeight() / 8;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsRight(GameObject collidingObject) {
-		int x = collidingObject.getX() + 5 * collidingObject.getWidth() / 6;
-		int y = collidingObject.getY() + collidingObject.getHeight() / 8;
-		int w = collidingObject.getWidth() / 6;
-		int h = 6 * collidingObject.getHeight() / 8;
+	private Rectangle getBoundsRight(GameObject cDetectorObject) {
+		int x = cDetectorObject.getX() + 5 * cDetectorObject.getWidth() / 6;
+		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 8;
+		int w = cDetectorObject.getWidth() / 6;
+		int h = 6 * cDetectorObject.getHeight() / 8;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsUp(GameObject collidingObject) {
-		int x = collidingObject.getX() + collidingObject.getWidth() / 4;
-		int y = collidingObject.getY();
-		int w = collidingObject.getWidth() / 2;
-		int h = collidingObject.getHeight() / 2;
+	private Rectangle getBoundsUp(GameObject cDetectorObject) {
+		int x = cDetectorObject.getX() + cDetectorObject.getWidth() / 4;
+		int y = cDetectorObject.getY();
+		int w = cDetectorObject.getWidth() / 2;
+		int h = cDetectorObject.getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
 
-	private Rectangle getBoundsDown(GameObject collidingObject) {
-		int x = collidingObject.getX() + collidingObject.getWidth() / 4;
-		int y = collidingObject.getY() + collidingObject.getHeight() / 2;
-		int w = collidingObject.getWidth() / 2;
-		int h = collidingObject.getHeight() / 2;
+	private Rectangle getBoundsDown(GameObject cDetectorObject) {
+		int x = cDetectorObject.getX() + cDetectorObject.getWidth() / 4;
+		int y = cDetectorObject.getY() + cDetectorObject.getHeight() / 2;
+		int w = cDetectorObject.getWidth() / 2;
+		int h = cDetectorObject.getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
 

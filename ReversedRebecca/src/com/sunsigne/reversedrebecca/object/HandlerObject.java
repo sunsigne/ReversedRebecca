@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import java.util.LinkedList;
 
 import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
+import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.main.HandlerRender;
 import com.sunsigne.reversedrebecca.system.main.IRender;
@@ -133,12 +134,20 @@ public class HandlerObject implements ITick, IRender {
 		for (GameObject tempObject : list) {
 			tempObject.tick();
 			velocity(tempObject);
+			collision(tempObject);
 		}
 	}
 
 	private void velocity(GameObject tempObject) {
 		tempObject.setX(tempObject.getX() + tempObject.getVelX());
 		tempObject.setY(tempObject.getY() + tempObject.getVelY());
+	}
+
+	private void collision(GameObject tempObject) {
+		if (tempObject instanceof ICollisionDetection) {
+			ICollisionDetection cDetectorObject = (ICollisionDetection) tempObject;
+			cDetectorObject.getCollisionDetector().tick();
+		}
 	}
 
 	////////// RENDER ////////////
@@ -168,19 +177,17 @@ public class HandlerObject implements ITick, IRender {
 	}
 
 	private void drawHitbox(GameObject tempObject, Graphics g) {
-		if (tempObject.getBounds() == null)
-			return;
-
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setColor(Color.white);
-		g2d.draw(tempObject.getBounds());
+
+		if (tempObject instanceof ICollisionReaction)
+			g2d.draw(tempObject.getBounds());
 
 		if (tempObject instanceof ICollisionDetection) {
-			ICollisionDetection collidingObject = (ICollisionDetection) tempObject;
-			g2d.draw(collidingObject.getBounds(DIRECTION.LEFT, tempObject));
-			g2d.draw(collidingObject.getBounds(DIRECTION.RIGHT, tempObject));
-			g2d.draw(collidingObject.getBounds(DIRECTION.UP, tempObject));
-			g2d.draw(collidingObject.getBounds(DIRECTION.DOWN, tempObject));
+			g2d.draw(tempObject.getBounds(DIRECTION.LEFT));
+			g2d.draw(tempObject.getBounds(DIRECTION.RIGHT));
+			g2d.draw(tempObject.getBounds(DIRECTION.UP));
+			g2d.draw(tempObject.getBounds(DIRECTION.DOWN));
 		}
 	}
 

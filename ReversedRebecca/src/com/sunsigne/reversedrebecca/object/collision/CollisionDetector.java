@@ -9,63 +9,51 @@ import com.sunsigne.reversedrebecca.util.Facing.DIRECTION;
 
 public class CollisionDetector implements ITick {
 
-	private GameObject collidingObject;
+	private GameObject cDetectorObject;
 
-	public CollisionDetector(GameObject collidingObject) {
-		this.collidingObject = collidingObject;
-		startTick();
-	}
-
-	////////// EXISTING ////////////
-
-	private boolean isObjectExisting() {
-		return HandlerObject.getInstance().isObjectExisting(collidingObject);
+	public CollisionDetector(GameObject cDetectorObject) {
+		this.cDetectorObject = cDetectorObject;
 	}
 
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
-		if (!isObjectExisting())
-			stopTick();
 
-		boolean cameraDependant = collidingObject.isCameraDependant();
-		boolean layerAbove = collidingObject.isLayerAbove();
+		boolean cameraDependant = cDetectorObject.isCameraDependant();
+		boolean layerAbove = cDetectorObject.isLayerAbove();
 		var list = HandlerObject.getInstance().getList(cameraDependant, layerAbove);
 
-		for (GameObject tempObject : list) {
+		for (GameObject cReactorObject : list) {
 
-			if (collidingObject == tempObject)
+			if (cDetectorObject == cReactorObject)
 				continue;
 
-			if (collidingObjectIsCollinding(tempObject)) {
-				ICollisionReaction collidedObject = (ICollisionReaction) tempObject;
-				collidedObject.collidingReaction(collidingObject);
+			if (cDetectorObjectIsCollinding(cReactorObject)) {
+				ICollisionReaction cReactorObject0 = (ICollisionReaction) cReactorObject;
+				cReactorObject0.collidingReaction(cDetectorObject);
 			}
-
 		}
 	}
 
-	private boolean collidingObjectIsCollinding(GameObject tempObject) {
+	private boolean cDetectorObjectIsCollinding(GameObject cReactorObject) {
 
-		if (tempObject instanceof ICollisionReaction == false)
+		if (cReactorObject instanceof ICollisionReaction == false)
 			return false;
 
-		if (tempObject instanceof Player && Conductor.DEBUG_MODE.getWallPassMode().getState())
+		if (cDetectorObject instanceof Player && Conductor.DEBUG_MODE.getWallPassMode().getState())
 			return false;
 
-		ICollisionDetection iCollidingObject = (ICollisionDetection) collidingObject;
-
-		if (iCollidingObject.getBounds(DIRECTION.LEFT, collidingObject).intersects(tempObject.getBounds()))
+		if (cDetectorObject.getBounds(DIRECTION.LEFT).intersects(cReactorObject.getBounds()))
 			return true;
 
-		if (iCollidingObject.getBounds(DIRECTION.RIGHT, collidingObject).intersects(tempObject.getBounds()))
+		if (cDetectorObject.getBounds(DIRECTION.RIGHT).intersects(cReactorObject.getBounds()))
 			return true;
 
-		if (iCollidingObject.getBounds(DIRECTION.UP, collidingObject).intersects(tempObject.getBounds()))
+		if (cDetectorObject.getBounds(DIRECTION.UP).intersects(cReactorObject.getBounds()))
 			return true;
 
-		if (iCollidingObject.getBounds(DIRECTION.DOWN, collidingObject).intersects(tempObject.getBounds()))
+		if (cDetectorObject.getBounds(DIRECTION.DOWN).intersects(cReactorObject.getBounds()))
 			return true;
 
 		// should NOT occur
