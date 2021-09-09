@@ -74,11 +74,4 @@ public class GUIDebug extends GameObject {
 		}
 	}
 
-	////////// COLLISION ////////////
-
-	@Override
-	public Rectangle getBounds() {
-		return null;
-	}
-
 }
