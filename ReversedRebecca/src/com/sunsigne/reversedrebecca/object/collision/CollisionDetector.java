@@ -29,14 +29,14 @@ public class CollisionDetector implements ITick {
 			if (clnDetectorObject == clnReactorObject)
 				continue;
 
-			if (clnDetectorObjectIsCollinding(clnReactorObject)) {
+			if (clnDetectorObjectIsColliding(clnReactorObject)) {
 				ICollisionReaction clnReactorObject0 = (ICollisionReaction) clnReactorObject;
 				clnReactorObject0.collidingReaction(clnDetectorObject);
 			}
 		}
 	}
 
-	private boolean clnDetectorObjectIsCollinding(GameObject clnReactorObject) {
+	private boolean clnDetectorObjectIsColliding(GameObject clnReactorObject) {
 
 		if (clnReactorObject instanceof ICollisionReaction == false)
 			return false;
@@ -56,7 +56,6 @@ public class CollisionDetector implements ITick {
 		if (clnDetectorObject.getBounds(DIRECTION.DOWN).intersects(clnReactorObject.getBounds()))
 			return true;
 
-		// should NOT occur
 		return false;
 	}
 }
