@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.STATE;
 import com.sunsigne.reversedrebecca.util.Facing.DIRECTION;
 
 public class GameKeyboardInput extends KeyAdapter {
@@ -23,6 +24,9 @@ public class GameKeyboardInput extends KeyAdapter {
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 
+		if (Conductor.getState() == STATE.LOADING)
+			return;
+
 		debugKey(key);
 		exitKey(key);
 		directionKey(key, true);
@@ -32,6 +36,9 @@ public class GameKeyboardInput extends KeyAdapter {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
+
+		if (Conductor.getState() == STATE.LOADING)
+			return;
 
 		directionKey(key, false);
 	}
