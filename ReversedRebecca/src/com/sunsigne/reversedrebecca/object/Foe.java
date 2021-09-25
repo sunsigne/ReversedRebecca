@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.collision.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
 import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 
 public class Foe extends GameObject implements ICollisionDetection, ICollisionReaction {
 
@@ -19,7 +20,7 @@ public class Foe extends GameObject implements ICollisionDetection, ICollisionRe
 
 	@Override
 	public void tick() {
-		movingtoPlayer();
+//		movingtoPlayer();
 	}
 
 	private void movingtoPlayer() {
@@ -34,6 +35,11 @@ public class Foe extends GameObject implements ICollisionDetection, ICollisionRe
 	
 	////////// RENDER ////////////
 
+	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.MAGENTA);

@@ -28,21 +28,42 @@ public class HandlerRessources implements IRessources {
 		if (ressources == null)
 			return;
 
+		if (isObjectAlreadyInList(ressources))
+			return;
+
 		handler_ressources_list.add(ressources);
+	}
+
+	private boolean isObjectAlreadyInList(IRessources ressources) {
+
+		Object obj = ressources.getClass();
+
+		for (IRessources tempRessources : handler_ressources_list) {
+			Object tempObj = tempRessources.getClass();
+			if (obj == tempObj)
+				return true;
+		}
+		return false;
+	}
+
+	////////// MINIMAL RESSOURCES ////////////
+
+	@Override
+	public void loadMinimalRessources() {
+
+		for (IRessources tempRessources : handler_ressources_list) {
+			tempRessources.loadMinimalRessources();
+		}
+
 	}
 
 	////////// RESSOURCES ////////////
 
 	@Override
-	public void loadMinimalRessources() {
-		for (IRessources tempRessources : handler_ressources_list)
-			tempRessources.loadMinimalRessources();
-	}
-
-	@Override
 	public void loadRessources() {
-		for (IRessources tempRessources : handler_ressources_list)
+		for (IRessources tempRessources : handler_ressources_list) {
 			tempRessources.loadRessources();
+		}
 	}
 
 }

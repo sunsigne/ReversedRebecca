@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 
 public class Wall extends GameObject implements ICollisionReaction {
 
@@ -20,6 +21,11 @@ public class Wall extends GameObject implements ICollisionReaction {
 
 	////////// RENDER ////////////
 
+	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 		

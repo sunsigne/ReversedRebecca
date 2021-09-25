@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
 import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.main.HandlerRender;
 import com.sunsigne.reversedrebecca.system.main.IRender;
@@ -162,6 +163,11 @@ public class HandlerObject implements ITick, IRender {
 		return HandlerRender.getInstance().isLayerAbove();
 	}
 
+	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 

@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class LoadingScreen extends GameObject {
@@ -18,6 +19,11 @@ public class LoadingScreen extends GameObject {
 	}
 
 	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
+	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
@@ -28,5 +34,6 @@ public class LoadingScreen extends GameObject {
 		String text = "LOADING";
 		g.drawString(text, 1180, 1000);
 	}
+
 
 }

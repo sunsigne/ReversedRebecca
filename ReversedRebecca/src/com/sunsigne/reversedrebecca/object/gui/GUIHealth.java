@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 
 public class GUIHealth extends GameObject {
 
@@ -21,6 +22,11 @@ public class GUIHealth extends GameObject {
 
 	////////// RENDER ////////////
 
+	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.BLUE);

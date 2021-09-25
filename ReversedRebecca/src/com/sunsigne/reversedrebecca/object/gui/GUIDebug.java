@@ -1,11 +1,9 @@
 package com.sunsigne.reversedrebecca.object.gui;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DebugMode;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -31,47 +29,29 @@ public class GUIDebug extends GameObject {
 	////////// RENDER ////////////
 
 	@Override
+	public ImageBank getImageBank(int... index) {
+		return ImageBank.TOOL[index[0]][0];
+	}
+
+	@Override
 	public void render(Graphics g) {
 
 		DebugMode debugmode = Conductor.DEBUG_MODE;
 
-		Font font = new Font("arial", 1, 20);
-		g.setFont(font);
+		if (debugmode.getMultiToolMode().getState())
+			g.drawImage(getImage(1), x, y, w, h, null);
 
-		if (debugmode.getMultiToolMode().getState()) {
-			g.setColor(Color.GREEN);
-			g.fillRect(x, y, w, h);
-			g.setColor(Color.WHITE);
-			g.drawString("multitool", x + 20, y + 60);
-		}
+		if (debugmode.getWallPassMode().getState())
+			g.drawImage(getImage(2), x, y - h, w, h, null);
 
-		if (debugmode.getWallPassMode().getState()) {
-			g.setColor(Color.GREEN);
-			g.fillRect(x, y - h, w, h);
-			g.setColor(Color.WHITE);
-			g.drawString("wallpass", x + 20, y + 60 - h);
-		}
+		if (debugmode.getSkipMode().getState())
+			g.drawImage(getImage(3), x, y - 2 * h, w, h, null);
 
-		if (debugmode.getSkipMode().getState()) {
-			g.setColor(Color.GREEN);
-			g.fillRect(x, y - 2 * h, w, h);
-			g.setColor(Color.WHITE);
-			g.drawString("skip", x + 20, y + 60 - 2 * h);
-		}
+		if (debugmode.getHitboxMode().getState())
+			g.drawImage(getImage(4), x, y - 3 * h, w, h, null);
 
-		if (debugmode.getHitboxMode().getState()) {
-			g.setColor(Color.GREEN);
-			g.fillRect(x, y - 3 * h, w, h);
-			g.setColor(Color.WHITE);
-			g.drawString("hitbox", x + 20, y + 60 - 3 * h);
-		}
-
-		if (debugmode.getFastMode().getState()) {
-			g.setColor(Color.GREEN);
-			g.fillRect(x, y - 4 * h, w, h);
-			g.setColor(Color.WHITE);
-			g.drawString("fast", x + 20, y + 60 - 4 * h);
-		}
+		if (debugmode.getFastMode().getState())
+			g.drawImage(getImage(5), x, y - 4 * h, w, h, null);
 	}
 
 }

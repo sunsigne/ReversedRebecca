@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.main;
 import java.awt.Graphics;
 import java.util.LinkedList;
 
+import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 import com.sunsigne.reversedrebecca.util.AnnotationBank.Singleton;
 
 @Singleton
@@ -76,6 +77,11 @@ public class HandlerRender implements IRender {
 		this.layerAbove = layerAbove;
 	}
 
+	@Override
+	public ImageBank getImageBank(int... index) {
+		return null;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 		var list = getList(cameraDependant, layerAbove);
