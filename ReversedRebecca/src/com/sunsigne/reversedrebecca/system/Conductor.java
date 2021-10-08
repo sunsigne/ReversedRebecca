@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.gui.GUIDebug;
 import com.sunsigne.reversedrebecca.object.gui.GUIHealth;
-import com.sunsigne.reversedrebecca.ressources.HandlerRessources;
 import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
 import com.sunsigne.reversedrebecca.ressources.images.SheetBank;
 import com.sunsigne.reversedrebecca.system.controllers.GameKeyboardInput;
@@ -59,14 +58,12 @@ public class Conductor {
 		NeoGame.getInstance().forceLoop();
 
 		// LOADING OF MINIMAL RESSOURCES
-		forceInit();
-		HandlerRessources.getInstance().loadMinimalRessources();
 		NeoGame.getInstance().addKeyListener(KEYBOARD);
 		NeoGame.getInstance().requestFocus();
 //		new GameCursor().startTick();
 
 		// LOADING OF RESSOURCES
-		HandlerRessources.getInstance().loadRessources();
+		loadRessources();
 		NeoGame.getInstance().forceLoop();
 
 		loadLevel();
@@ -80,10 +77,11 @@ public class Conductor {
 
 	////////// RESSOURCES ////////////
 
-	private static void forceInit() {
+	private static void loadRessources() {
 
 		new ForceInit().forceInit(SheetBank.class);
 		new ForceInit().forceInit(ImageBank.class);
+		ImageBank.loadRessources();
 	}
 
 	////////// LOAD LEVEL ////////////

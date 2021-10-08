@@ -4,11 +4,13 @@ import java.awt.image.BufferedImage;
 
 public class SpriteSheet {
 
-	private BufferedImage image;
-
 	public SpriteSheet(SheetBank sheetBank) {
-		this.image = SheetBank.getImage(sheetBank);
+		this.image = sheetBank.getImage();
 	}
+
+	////////// IMAGE ////////////
+
+	private BufferedImage image;
 
 	public BufferedImage grabImage(int col, int row, int width, int height) {
 

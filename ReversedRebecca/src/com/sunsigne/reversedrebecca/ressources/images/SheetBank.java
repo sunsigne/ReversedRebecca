@@ -1,49 +1,25 @@
 package com.sunsigne.reversedrebecca.ressources.images;
 
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.sunsigne.reversedrebecca.ressources.IRessources;
+public class SheetBank {
 
-public class SheetBank implements IRessources {
-
-	public SheetBank() {
-		startRessources();
+	private SheetBank(BufferedImage bufferedImage) {
+		this.bufferedImage = bufferedImage;
 	}
 
-	////////// MAP OR LIST ////////////
+	////////// IMAGE ////////////
 
-	private static Map<SheetBank, BufferedImage> sheets = new HashMap<>();
+	private BufferedImage bufferedImage;
 
-	// public for devs
-	public static void addImage(SheetBank sheetBank, BufferedImage bufferedImage) {
-
-		if (bufferedImage != null)
-			sheets.put(sheetBank, bufferedImage);
-	}
-
-	public static BufferedImage getImage(SheetBank sheetBank) {
-		return sheets.get(sheetBank);
-	}
-
-	////////// MINIMAL RESSOURCES ////////////
-
-	@Override
-	public void loadMinimalRessources() {
-
+	public BufferedImage getImage() {
+		return bufferedImage;
 	}
 
 	////////// RESSOURCES ////////////
 
-	protected static final SheetBank TOOL_SHEET = new SheetBank();
+	private static ImageTask imageTask = new ImageTask();
 
-	@Override
-	public void loadRessources() {
-
-		ImageTask imageTask = new ImageTask();
-
-		addImage(TOOL_SHEET, imageTask.loadImage("textures\\tool_sheet.png"));
-	}
+	protected static final SheetBank TOOL_SHEET = new SheetBank(imageTask.loadImage("textures\\tool_sheet.png"));
 
 }
