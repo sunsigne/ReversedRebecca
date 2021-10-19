@@ -4,5 +4,8 @@ public class AnnotationBank {
 
 	public @interface Singleton {
 	}
+
+	public @interface Ressources {
+	}
 	
 }
