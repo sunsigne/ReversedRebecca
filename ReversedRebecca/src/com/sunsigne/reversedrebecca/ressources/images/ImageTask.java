@@ -8,19 +8,18 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
-import com.sunsigne.reversedrebecca.system.main.NeoGame;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ImageTask {
 
-	private final URL loc = NeoGame.class.getProtectionDomain().getCodeSource().getLocation();
+	private final URL loc = Game.class.getProtectionDomain().getCodeSource().getLocation();
 
-	// WARNING !!! All paths in this methods must have their / replaced by double \\
 	public BufferedImage loadImage(String path) {
 
 		BufferedImage image = null;
 
 		try {
-			String path0 = "\\ressources\\" + path;
+			String path0 = "/ressources/" + path;
 			URL url = new File((new File(loc.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
 		} catch (Exception e) {

@@ -1,0 +1,80 @@
+package com.sunsigne.reversedrebecca.physic.debug;
+
+import java.awt.AlphaComposite;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
+
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.debug.WallPassObject;
+import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.Layer;
+
+public class WallPassMode extends DebugMode {
+
+	private static WallPassMode debugMode = new WallPassMode();
+
+	static {
+		PhysicList.getList().addObject(debugMode);
+		Layer.DEBUG.addObject(new WallPassObject(debugMode));
+	}
+
+	////////// DEBUG MODE ////////////
+
+	@Override
+	public int getIndex() {
+		return 3;
+	}
+
+	@Override
+	protected void actionWhenTurnedOn() {
+		PhysicList.getList().removeObject(new CollisionLaw());
+	}
+
+	@Override
+	protected void actionWhenTurnedOff() {
+		PhysicList.getList().addObject(new CollisionLaw());
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick(Updatable object) {
+
+	}
+
+	////////// RENDER ////////////
+
+	private boolean isDetectorObject(Updatable object) {
+		if (object == null)
+			return false;
+
+		if (object instanceof CollisionDetector)
+			return true;
+
+		return false;
+	}
+
+	@Override
+	public void beforeObjectRender(Graphics g, Updatable object) {
+		
+		Graphics2D g2d = (Graphics2D) g;
+		float alpha = getState() & isDetectorObject(object) ? 0.4f : 1f;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
+	}
+
+	@Override
+	public void afterObjectRender(Graphics g, Updatable object) {
+
+	}
+
+	////////// KEYBOARD ////////////
+
+	@Override
+	public int getKeyEvent() {
+		return KeyEvent.VK_F3;
+	}
+
+}

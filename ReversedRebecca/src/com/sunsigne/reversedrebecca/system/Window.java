@@ -6,23 +6,22 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
-import com.sunsigne.reversedrebecca.system.main.NeoGame;
+import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class Window {
-
-	public static final String NAME = "Reversed Rebecca";
 
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
 
-	protected Window(NeoGame game) {
+	public Window(Game game) {
 
 		game.setMinimumSize(new Dimension(WIDHT, HEIGHT));
 		game.setMaximumSize(new Dimension(WIDHT, HEIGHT));
 		game.setPreferredSize(new Dimension(WIDHT, HEIGHT));
 
-		ImageIcon icon = new ImageIcon("ressources/icon.png");
-		JFrame frame = new JFrame(NAME);
+		ImageIcon icon = Infos.ICON;
+		JFrame frame = new JFrame(Infos.NAME);
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);

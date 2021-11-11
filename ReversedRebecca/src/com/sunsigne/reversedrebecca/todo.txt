@@ -7,6 +7,16 @@
 texture manquante pour Player, Wall, Foe, GUIHealth & LoadingScreen
 SpiteSheet constructeur pas fini
 
+
+
+passer le constructeur Window en protected
+pas fini : ExempleHP / Player / Foe / Wall / MapCreator
+
+
+
+////////// DIFFICILE ////////////
+animation de tourbillon de vent de temps en temps ?
+
 ///////// A TRIER ////////////
 
 

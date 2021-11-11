@@ -3,41 +3,36 @@ package com.sunsigne.reversedrebecca.object;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.collision.ICollisionReaction;
-import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 
-public class Wall extends GameObject implements ICollisionReaction {
+public class Wall extends GameObject implements CollisionReactor {
 
 	public Wall(int x, int y) {
-		super(true, false, x, y);
-
+		super(x, y);
 	}
 
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
+
 	}
 
 	////////// RENDER ////////////
 
 	@Override
-	public ImageBank getImageBank(int... index) {
-		return null;
-	}
-	
-	@Override
 	public void render(Graphics g) {
-		
-		g.setColor(Color.BLUE);
-		g.fillRect(x, y, w, h);
-	}
-	
-	////////// COLLISION ////////////
 
-	@Override
-	public void collidingReaction(GameObject clnDetectorObject) {
-		blockPass(clnDetectorObject, this);
+		g.setColor(Color.GREEN);
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
+
+	////////// COLLISION ////////////
 	
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		blockPass(detectorObject);
+	}
+
 }

@@ -1,61 +1,41 @@
 package com.sunsigne.reversedrebecca.object;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import com.sunsigne.reversedrebecca.object.behaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.behaviors.CameraFollowing;
+import com.sunsigne.reversedrebecca.object.behaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.behaviors.UserCanKeyMove;
+import com.sunsigne.reversedrebecca.object.behaviors.WalkingRender;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 
-import com.sunsigne.reversedrebecca.object.collision.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.collision.ICollisionDetection;
-import com.sunsigne.reversedrebecca.ressources.images.ImageBank;
+public class Player extends ExtraBehaviorsObject implements CollisionDetector, CollisionReactor {
 
-public class Player extends GameObject implements ICollisionDetection {
-
-	public static final int SPEED = 32 / 3;
-
-	private Player(int x, int y) {
-		super(true, false, x, y);
-	}
-
-	////////// EXISTING ////////////
-
-	private static Player player = new Player(0, 0);
-
-	public static boolean isExisting() {
-		return HandlerObject.getInstance().isPlayerExisting();
-	}
-
-	public static Player get() {
-		return player;
-	}
-
-	public static void reset() {
-		player = new Player(0, 0);
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public ImageBank getImageBank(int... index) {
-		return null;
+	public Player(int x, int y) {
+		this("Rebecca", x, y);
 	}
 	
-	@Override
-	public void render(Graphics g) {
-		g.setColor(Color.RED);
-		g.fillRect(x, y, w, h);
+	public Player(String name, int x, int y) {
+		super(name, x, y);
+		addBasicBehaviors();
 	}
 
+	////////// BEHAVIOR ////////////
+	
+	public Behavior userCanKeyMove = new UserCanKeyMove(this);
+	public Behavior cameraFollowing = new CameraFollowing(this);
+	public Behavior walkingRender = new WalkingRender(this);
+		
+	private void addBasicBehaviors() {
+		addBehavior(userCanKeyMove);
+		addBehavior(cameraFollowing);
+		addBehavior(walkingRender);
+	}
+	
 	////////// COLLISION ////////////
-
-	private CollisionDetector collisionDetector = new CollisionDetector(this);
-
+	
 	@Override
-	public CollisionDetector getCollisionDetector() {
-		return collisionDetector;
+	public void collidingReaction(CollisionDetector detectorObject) {
+		blockPass(detectorObject);
 	}
+		
 }
