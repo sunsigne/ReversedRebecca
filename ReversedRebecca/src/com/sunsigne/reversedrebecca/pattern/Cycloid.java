@@ -24,6 +24,14 @@ public class Cycloid<T> {
 		this.state = state;
 		synchroniseIndex();
 	}
+	
+	public void setState(int index) {
+		if (index > size)
+			index = size - 1;
+		
+		this.index = index;
+		state = objects[index];
+	}
 
 	// WARNING ! If several states are identical in objects,
 	// this method will automatically select the index of the last one.

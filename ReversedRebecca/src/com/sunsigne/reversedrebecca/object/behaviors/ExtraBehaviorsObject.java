@@ -4,11 +4,12 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 
-public abstract class ExtraBehaviorsObject extends GameObject implements Behavior {
+public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, Facing {
 
 	public ExtraBehaviorsObject(String name, int x, int y) {
 		super(x, y);
@@ -42,7 +43,21 @@ public abstract class ExtraBehaviorsObject extends GameObject implements Behavio
 	
 	public String getName() {
 		return name;
+	}	
+	
+	//////////FACING ////////////
+	
+	private DIRECTION facing = DIRECTION.DOWN;
+	
+	@Override
+	public DIRECTION getFacing() {
+		return facing;
 	}
+	
+	@Override
+	public void setFacing(DIRECTION facing) {
+		this.facing = facing;
+	}	
 
 	////////// TICK ////////////
 

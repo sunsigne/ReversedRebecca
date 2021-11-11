@@ -3,14 +3,13 @@ package com.sunsigne.reversedrebecca.object.behaviors;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 
-public class WatchingDirection implements Behavior {
+public class WatchingDirection implements Behavior, Facing {
 
 	public WatchingDirection(ExtraBehaviorsObject object) {
 		this.object = object;
-		watching[DIRECTION.DOWN.getNum()] = true;
-		facing = DIRECTION.DOWN;
+		watching[object.getFacing().getNum()] = true;
 	}
 
 	////////// BEHAVIOR ////////////
@@ -24,18 +23,19 @@ public class WatchingDirection implements Behavior {
 
 	////////// FACING ////////////
 
-	private DIRECTION facing;
 	protected boolean[] watching = new boolean[4];
 	private boolean flagX, flagY;
 
+	@Override
 	public DIRECTION getFacing() {
-		return facing;
+		return object.getFacing();
 	}
 
+	@Override
 	public void setFacing(DIRECTION facing) {
 		resetWatchingDirection();
 		watching[facing.getNum()] = true;
-		this.facing = facing;
+		object.setFacing(facing);
 	}
 
 	private void resetWatchingDirection() {
@@ -60,28 +60,20 @@ public class WatchingDirection implements Behavior {
 			flagY = false;
 
 		if (!flagY && object.getVelX() < 0) {
-			resetWatchingDirection();
-			watching[DIRECTION.LEFT.getNum()] = true;
-			facing = DIRECTION.LEFT;
+			setFacing(DIRECTION.LEFT);
 			flagX = true;
 		}
 		if (!flagY && object.getVelX() > 0) {
-			resetWatchingDirection();
-			watching[DIRECTION.RIGHT.getNum()] = true;
-			facing = DIRECTION.RIGHT;
+			setFacing(DIRECTION.RIGHT);
 			flagX = true;
 		}
 
 		if (!flagX && object.getVelY() < 0) {
-			resetWatchingDirection();
-			watching[DIRECTION.UP.getNum()] = true;
-			facing = DIRECTION.UP;
+			setFacing(DIRECTION.UP);
 			flagY = true;
 		}
 		if (!flagX && object.getVelY() > 0) {
-			resetWatchingDirection();
-			watching[DIRECTION.DOWN.getNum()] = true;
-			facing = DIRECTION.DOWN;
+			setFacing(DIRECTION.DOWN);
 			flagY = true;
 		}
 	}
@@ -97,12 +89,12 @@ public class WatchingDirection implements Behavior {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
+
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		int key = e.getKeyCode();
+
 	}
 
 }

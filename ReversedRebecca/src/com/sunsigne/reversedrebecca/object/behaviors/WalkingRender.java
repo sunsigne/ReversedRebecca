@@ -12,6 +12,7 @@ public class WalkingRender implements Behavior {
 
 	public WalkingRender(ExtraBehaviorsObject object) {
 		this.object = object;
+		initAnimations();
 	}
 
 	////////// BEHAVIOR ////////////
@@ -25,31 +26,57 @@ public class WalkingRender implements Behavior {
 
 	////////// TICK ////////////
 
+	private final int ANIMATION_TIME = 10;
+	private int time = ANIMATION_TIME;
+
 	@Override
 	public void tick() {
+		if (object.isMotionless())
+			freezeAnimation();
+		else
+			runAnimation();
+	}
 
+	private void freezeAnimation() {
+		for (int i = 0; i < walking.length; i++) {
+			walking[i].setState(0);
+		}
+	}
+
+	private void runAnimation() {
+		time--;
+		if (time < 0) {
+			time = ANIMATION_TIME;
+			for (int i = 0; i < walking.length; i++) {
+				walking[i].cycle();
+			}
+		}
 	}
 
 	////////// TEXTURE ////////////
 
-	private Cycloid<BufferedImage> walking_left = new Cycloid(getImages(DIRECTION.LEFT));
-	private Cycloid<BufferedImage> walking_right = new Cycloid(getImages(DIRECTION.RIGHT));
-	private Cycloid<BufferedImage> walking_up = new Cycloid(getImages(DIRECTION.UP));
-	private Cycloid<BufferedImage> walking_down = new Cycloid(getImages(DIRECTION.DOWN));
-	private BufferedImage walking_ground = getImage("ground");
+	@SuppressWarnings("unchecked")
+	private Cycloid<BufferedImage>[] walking = new Cycloid[4];
+
+	private void initAnimations() {
+		walking[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.LEFT));
+		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.RIGHT));
+		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.UP));
+		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.DOWN));
+	}
 
 	private BufferedImage getImage(String imageName) {
-		return new ImageTask().loadImage("textures/characters/" + object.getName() + "/walking_" + imageName);
+		return new ImageTask().loadImage("textures/characters/" + object.getName() + "/walking_" + imageName + ".png");
 	}
-	
+
 	private BufferedImage[] getImages(DIRECTION direction) {
-		
+
 		BufferedImage img0 = getImage(direction.getName() + "_1");
 		BufferedImage img1 = getImage(direction.getName() + "_0");
 		BufferedImage img2 = getImage(direction.getName() + "_1");
 		BufferedImage img3 = getImage(direction.getName() + "_2");
-		
-		return new BufferedImage[] {img0, img1, img2, img3};
+
+		return new BufferedImage[] { img0, img1, img2, img3 };
 	}
 
 	////////// RENDER ////////////
@@ -57,6 +84,9 @@ public class WalkingRender implements Behavior {
 	@Override
 	public void render(Graphics g) {
 
+		int facing = object.getFacing().getNum();
+		BufferedImage img = facing > -1 ? walking[facing].getState() : getImage("ground");
+		g.drawImage(img, object.getX(), object.getY(), object.getWidth(), object.getHeight(), null);
 	}
 
 	////////// KEYBOARD ////////////

@@ -1,7 +1,13 @@
 package com.sunsigne.reversedrebecca.object.characteristics;
 
-public class Facing {
+public interface Facing {
 
+	////////// DIRECTION ////////////
+	
+	public DIRECTION getFacing();
+
+	public void setFacing(DIRECTION facing);
+	
 	////////// DIRECTION ////////////
 
 	public enum DIRECTION {

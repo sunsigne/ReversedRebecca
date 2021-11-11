@@ -12,6 +12,8 @@ SpiteSheet constructeur pas fini
 passer le constructeur Window en protected
 pas fini : ExempleHP / Player / Foe / Wall / MapCreator
 
+WatchingDirection tick (if is pushed)
+
 
 
 ////////// DIFFICILE ////////////
