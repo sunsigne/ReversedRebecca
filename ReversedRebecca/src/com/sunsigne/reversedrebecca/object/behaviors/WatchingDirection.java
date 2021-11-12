@@ -4,12 +4,12 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 
-public class WatchingDirection implements Behavior, Facing {
+public class WatchingDirection implements Behavior {
 
 	public WatchingDirection(ExtraBehaviorsObject object) {
 		this.object = object;
-		watching[object.getFacing().getNum()] = true;
 	}
 
 	////////// BEHAVIOR ////////////
@@ -21,38 +21,16 @@ public class WatchingDirection implements Behavior, Facing {
 		return object;
 	}
 
-	////////// FACING ////////////
-
-	protected boolean[] watching = new boolean[4];
-	private boolean flagX, flagY;
-
-	@Override
-	public DIRECTION getFacing() {
-		return object.getFacing();
-	}
-
-	@Override
-	public void setFacing(DIRECTION facing) {
-		resetWatchingDirection();
-		watching[facing.getNum()] = true;
-		object.setFacing(facing);
-	}
-
-	private void resetWatchingDirection() {
-		watching[DIRECTION.LEFT.getNum()] = false;
-		watching[DIRECTION.RIGHT.getNum()] = false;
-		watching[DIRECTION.UP.getNum()] = false;
-		watching[DIRECTION.DOWN.getNum()] = false;
-	}
-
 	////////// TICK ////////////
 
+	private boolean flagX, flagY;
+	
 	@Override
 	public void tick() {
 		// if(!object.isPushed())
 		updateWatchingDirection();
 	}
-
+	
 	private void updateWatchingDirection() {
 		if (object.isMotionlessbyX())
 			flagX = false;
@@ -60,20 +38,20 @@ public class WatchingDirection implements Behavior, Facing {
 			flagY = false;
 
 		if (!flagY && object.getVelX() < 0) {
-			setFacing(DIRECTION.LEFT);
+			object.setFacing(DIRECTION.LEFT);
 			flagX = true;
 		}
 		if (!flagY && object.getVelX() > 0) {
-			setFacing(DIRECTION.RIGHT);
+			object.setFacing(DIRECTION.RIGHT);
 			flagX = true;
 		}
 
 		if (!flagX && object.getVelY() < 0) {
-			setFacing(DIRECTION.UP);
+			object.setFacing(DIRECTION.UP);
 			flagY = true;
 		}
 		if (!flagX && object.getVelY() > 0) {
-			setFacing(DIRECTION.DOWN);
+			object.setFacing(DIRECTION.DOWN);
 			flagY = true;
 		}
 	}
