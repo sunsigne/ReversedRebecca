@@ -12,7 +12,7 @@ SpiteSheet constructeur pas fini
 passer le constructeur Window en protected
 pas fini : ExempleHP / Player / Foe / Wall / MapCreator
 
-WatchingDirection tick (if is pushed)
+WatchingDirection tick (if is pushed) + boolean watching[] sont-ils utiles quand on est pushed ?
 
 
 
