@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.object.behaviors;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 
 public class WatchingDirection implements Behavior {
