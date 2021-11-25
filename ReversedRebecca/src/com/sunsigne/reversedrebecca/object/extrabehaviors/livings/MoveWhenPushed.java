@@ -50,21 +50,21 @@ public class MoveWhenPushed implements Behavior {
 
 	private void removeControls() {
 		living.removeBehavior(living.watchingDirection);
-		if(living instanceof Player)
-		living.removeBehavior(((Player) living).userCanKeyMove);
+//		if(living instanceof Player)
+//		living.removeBehavior(((Player) living).userCanKeyMove);
 	}
 
 	private void pushed(DIRECTION facing) {
 		if (isPushed())
 			return;		
 		if (facing == DIRECTION.LEFT)
-			living.setVelX(-speed);
+			living.setSurVelX(-speed);
 		if (facing == DIRECTION.RIGHT)
-			living.setVelX(speed);
+			living.setSurVelX(speed);
 		if (facing == DIRECTION.UP)
-			living.setVelY(-speed);
+			living.setSurVelY(-speed);
 		if (facing == DIRECTION.DOWN)
-			living.setVelY(speed);
+			living.setSurVelY(speed);
 	}
 
 	////////// TICK ////////////
@@ -83,8 +83,8 @@ public class MoveWhenPushed implements Behavior {
 		setPushed(false);
 		living.setMotionless();
 		living.addBehavior(living.watchingDirection);
-		if(living instanceof Player)
-		living.addBehavior(((Player) living).userCanKeyMove);
+//		if(living instanceof Player)
+//		living.addBehavior(((Player) living).userCanKeyMove);
 	}
 
 	////////// RENDER ////////////
