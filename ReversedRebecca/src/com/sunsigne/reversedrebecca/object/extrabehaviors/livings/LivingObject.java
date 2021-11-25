@@ -21,12 +21,5 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		addBehavior(watchingDirection);
 		addBehavior(walkingRender);
 	}
-	
-	////////// COLLISION ////////////
-	
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPass(detectorObject);
-	}
-		
+
 }

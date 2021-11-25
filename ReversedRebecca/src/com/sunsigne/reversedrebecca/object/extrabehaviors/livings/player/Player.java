@@ -1,11 +1,10 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
-public class Player extends LivingObject implements CollisionDetector, CollisionReactor {
+public class Player extends LivingObject {
 
 	public int speed = 10;
 	
@@ -27,5 +26,12 @@ public class Player extends LivingObject implements CollisionDetector, Collision
 		addBehavior(userCanKeyMove);
 		addBehavior(cameraFollowing);
 	}
+	
+	////////// COLLISION ////////////
+	
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
 
+	}
+	
 }
