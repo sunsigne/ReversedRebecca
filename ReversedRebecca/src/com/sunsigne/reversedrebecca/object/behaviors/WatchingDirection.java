@@ -9,7 +9,6 @@ public class WatchingDirection implements Behavior, Facing {
 
 	public WatchingDirection(ExtraBehaviorsObject object) {
 		this.object = object;
-//		watching[object.getFacing().getNum()] = true;
 	}
 
 	////////// BEHAVIOR ////////////
@@ -23,7 +22,6 @@ public class WatchingDirection implements Behavior, Facing {
 
 	////////// FACING ////////////
 
-//	private boolean[] watching = new boolean[4];
 	private boolean flagX, flagY;
 
 	@Override
@@ -33,23 +31,13 @@ public class WatchingDirection implements Behavior, Facing {
 
 	@Override
 	public void setFacing(DIRECTION facing) {
-//		resetWatchingDirection();
-//		watching[facing.getNum()] = true;
 		object.setFacing(facing);
 	}
-/*
-	private void resetWatchingDirection() {
-		watching[DIRECTION.LEFT.getNum()] = false;
-		watching[DIRECTION.RIGHT.getNum()] = false;
-		watching[DIRECTION.UP.getNum()] = false;
-		watching[DIRECTION.DOWN.getNum()] = false;
-	}
-*/
+
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
-		// if(!object.isPushed())
 		updateWatchingDirection();
 	}
 
