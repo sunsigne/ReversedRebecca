@@ -1,12 +1,8 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 
-import java.awt.Color;
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 
 public class Foe extends LivingObject {
 
@@ -14,35 +10,15 @@ public class Foe extends LivingObject {
 	
 	public Foe(String name, int x, int y) {
 		super(name ,x, y);
+		addFoeBehaviors();
 	}
 
-	////////// TICK ////////////
+	////////// BEHAVIOR ////////////
 
-	@Override
-	public void tick() {
-		movingtoPlayer();
-	}
-
-	private void movingtoPlayer() {
-		Player player = new PlayerFinder().getPlayer();
-		if(player == null)
-			return;
+	public Behavior movingToPlayer = new MovingToPlayer(this);
 		
-		float diffX = getX() - player.getX();
-		float diffY = getY() - player.getY();
-		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-
-		setVelX(speed * Math.round((-1 / distance) * diffX));
-		setVelY(speed * Math.round((-1 / distance) * diffY));
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
-		g.setColor(Color.MAGENTA);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
+	private void addFoeBehaviors() {
+		addBehavior(movingToPlayer);
 	}
 
 	////////// COLLISION ////////////
