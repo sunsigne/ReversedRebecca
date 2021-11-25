@@ -11,6 +11,7 @@ SpiteSheet constructeur pas fini
 
 passer le constructeur Window en protected
 pas fini : ExempleHP / Player / Foe / Wall / MapCreator
+create default caracter when name is incorrect
 
 WatchingDirection tick (if is pushed) + boolean watching[] sont-ils utiles quand on est pushed ?
 
