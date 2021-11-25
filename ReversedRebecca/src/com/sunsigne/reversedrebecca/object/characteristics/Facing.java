@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 
 public interface Facing {
 
-	////////// DIRECTION ////////////
+	////////// FACING ////////////
 	
 	public DIRECTION getFacing();
 
