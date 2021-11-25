@@ -24,33 +24,33 @@ public interface CollisionDetector extends Position {
 
 	private Rectangle getBoundsLeft() {
 		int x = getX();
-		int y = getY() + getHeight() / 8;
-		int w = getWidth() / 6;
-		int h = 6 * getHeight() / 8;
+		int y = getY() + getHeight() / 3;
+		int w = getWidth() / 3;
+		int h = getHeight() / 3;
 		return new Rectangle(x, y, w, h);
 	}
 
 	private Rectangle getBoundsRight() {
-		int x = getX() + 5 * getWidth() / 6;
-		int y = getY() + getHeight() / 8;
-		int w = getWidth() / 6;
-		int h = 6 * getHeight() / 8;
+		int x = getX() + 2 * getWidth() / 3;
+		int y = getY() + getHeight() / 3;
+		int w = getWidth() / 3;
+		int h = getHeight() / 3;
 		return new Rectangle(x, y, w, h);
 	}
 
 	private Rectangle getBoundsUp() {
-		int x = getX() + getWidth() / 4;
+		int x = getX() + getWidth() / 3;
 		int y = getY();
-		int w = getWidth() / 2;
-		int h = getHeight() / 2;
+		int w = getWidth() / 3;
+		int h = getHeight() / 3;
 		return new Rectangle(x, y, w, h);
 	}
 
 	private Rectangle getBoundsDown() {
-		int x = getX() + getWidth() / 4;
-		int y = getY() + getHeight() / 2;
-		int w = getWidth() / 2;
-		int h = getHeight() / 2;
+		int x = getX() + getWidth() / 3;
+		int y = getY() + 2 * getHeight() / 3;
+		int w = getWidth() / 3;
+		int h = getHeight() / 3;
 		return new Rectangle(x, y, w, h);
 	}
 }
