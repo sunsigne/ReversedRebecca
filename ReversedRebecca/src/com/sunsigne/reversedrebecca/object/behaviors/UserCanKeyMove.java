@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.behaviors;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 
 public class UserCanKeyMove implements Behavior {
@@ -23,8 +24,6 @@ public class UserCanKeyMove implements Behavior {
 
 	////////// TICK ////////////
 
-	public static int speed = 10;
-
 	@Override
 	public void tick() {
 		movePlayerbyX();
@@ -34,11 +33,11 @@ public class UserCanKeyMove implements Behavior {
 	private void movePlayerbyX() {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(-speed);
+			object.setVelX(-((Player) object).speed);
 		else if (directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			object.setVelX(0);
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(speed);
+			object.setVelX(((Player) object).speed);
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			object.setVelX(0);
 	}
@@ -46,11 +45,11 @@ public class UserCanKeyMove implements Behavior {
 	private void movePlayerbyY() {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(-speed);
+			object.setVelY(-((Player) object).speed);
 		else if (directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
 			object.setVelY(0);
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(speed);
+			object.setVelY(((Player) object).speed);
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			object.setVelY(0);
 	}

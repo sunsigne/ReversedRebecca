@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 
 public class Foe extends GameObject implements CollisionDetector, CollisionReactor {
 
-	public static int speed = 6;
+	public int speed = 6;
 	private Player player;
 	
 	public Foe(Player player, int x, int y) {

@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 
 public class Player extends LivingObject implements CollisionDetector, CollisionReactor {
 
+	public int speed = 10;
+	
 	public Player(int x, int y) {
 		this("Rebecca", x, y);
 	}

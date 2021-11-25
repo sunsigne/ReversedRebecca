@@ -3,8 +3,9 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.behaviors.UserCanKeyMove;
+import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.debug.FastPlayerObject;
+import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.LAYER;
@@ -24,25 +25,17 @@ public class FastPlayerMode extends DebugMode {
 	public int getIndex() {
 		return 1;
 	}
-	
-	private static int player_walking_speed = 0;
 
-	private int getPlayerWalkingSpeed() {
-		if (player_walking_speed == 0)
-			player_walking_speed = UserCanKeyMove.speed;
-		return player_walking_speed;
-	}
-	
 	@Override
 	protected void actionWhenTurnedOn() {
-		int speed = getPlayerWalkingSpeed();
-		UserCanKeyMove.speed = 3 * speed;
+		Player player = new PlayerFinder().getPlayer();
+		if(player != null) player.speed = 3 * player.speed;
 	}
 
 	@Override
 	protected void actionWhenTurnedOff() {
-		int speed = getPlayerWalkingSpeed();
-		UserCanKeyMove.speed = speed;
+		Player player = new PlayerFinder().getPlayer();
+		if(player != null) player.speed = player.speed / 3;
 	}
 
 	////////// TICK ////////////
