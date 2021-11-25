@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.object.behaviors.UserCanKeyMove;
 import com.sunsigne.reversedrebecca.object.debug.FastPlayerObject;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.Layer;
+import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class FastPlayerMode extends DebugMode {
 
@@ -15,7 +15,7 @@ public class FastPlayerMode extends DebugMode {
 
 	static {
 		PhysicList.getList().addObject(debugMode);
-		Layer.DEBUG.addObject(new FastPlayerObject(debugMode));
+		LAYER.DEBUG.addObject(new FastPlayerObject(debugMode));
 	}
 
 	////////// DEBUG MODE ////////////

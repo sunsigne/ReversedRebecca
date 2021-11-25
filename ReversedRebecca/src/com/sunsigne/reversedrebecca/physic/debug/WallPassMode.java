@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.object.debug.WallPassObject;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.Layer;
+import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class WallPassMode extends DebugMode {
 
@@ -18,7 +18,7 @@ public class WallPassMode extends DebugMode {
 
 	static {
 		PhysicList.getList().addObject(debugMode);
-		Layer.DEBUG.addObject(new WallPassObject(debugMode));
+		LAYER.DEBUG.addObject(new WallPassObject(debugMode));
 	}
 
 	////////// DEBUG MODE ////////////

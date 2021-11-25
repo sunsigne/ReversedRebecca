@@ -12,7 +12,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.unchecked.system.OldConductor;
-import com.sunsigne.reversedrebecca.world.Layer;
+import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class MapCreator implements KeyboardEvent {
 
@@ -29,17 +29,17 @@ public class MapCreator implements KeyboardEvent {
 
 		Player player = new Player(Window.WIDHT/2 - 50, Window.HEIGHT/2 - 50);
 		
-		Layer.WORLD.addObject(new Wall(50, 50));		
-		Layer.WORLD.addObject(new Wall(Window.WIDHT - 150, 50));		
-		Layer.WORLD.addObject(new Wall(Window.WIDHT - 150, Window.HEIGHT - 150));		
-		Layer.WORLD.addObject(new Wall(50, Window.HEIGHT - 150));
+		LAYER.WORLD.addObject(new Wall(50, 50));		
+		LAYER.WORLD.addObject(new Wall(Window.WIDHT - 150, 50));		
+		LAYER.WORLD.addObject(new Wall(Window.WIDHT - 150, Window.HEIGHT - 150));		
+		LAYER.WORLD.addObject(new Wall(50, Window.HEIGHT - 150));
 		
-		Layer.WORLD.addObject(new Foe(player, 700, 700));
-		Layer.WORLD.addObject(new Foe(player, 1200, 800));
+		LAYER.WORLD.addObject(new Foe(player, 700, 700));
+		LAYER.WORLD.addObject(new Foe(player, 1200, 800));
 		
-		Layer.WORLD.addObject(player);
+		LAYER.WORLD.addObject(player);
 		
-		Layer.GUI.addObject(new ExempleHP());
+		LAYER.GUI.addObject(new ExempleHP());
 		
 
 		
@@ -65,7 +65,7 @@ public class MapCreator implements KeyboardEvent {
 			new OldConductor().stopApp();
 
 		if (key == KeyEvent.VK_R) {
-			Layer.WORLD.clear();
+			LAYER.WORLD.getHandler().clear();
 			loadLevel();
 		}			
 	}

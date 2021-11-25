@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.debug.VisibleHitboxObject;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.Layer;
+import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class VisibleHitboxMode extends DebugMode {
 
@@ -19,7 +19,7 @@ public class VisibleHitboxMode extends DebugMode {
 
 	static {
 		PhysicList.getList().addObject(debugMode);
-		Layer.DEBUG.addObject(new VisibleHitboxObject(debugMode));
+		LAYER.DEBUG.addObject(new VisibleHitboxObject(debugMode));
 	}
 
 	////////// DEBUG MODE ////////////
