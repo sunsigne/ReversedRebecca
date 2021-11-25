@@ -1,10 +1,12 @@
-package com.sunsigne.reversedrebecca.object;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 
 public class Foe extends GameObject implements CollisionDetector, CollisionReactor {
 

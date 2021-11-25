@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;

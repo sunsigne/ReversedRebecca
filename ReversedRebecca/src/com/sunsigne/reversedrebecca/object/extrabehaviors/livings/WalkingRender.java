@@ -1,27 +1,28 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class WalkingRender implements Behavior {
 
-	public WalkingRender(ExtraBehaviorsObject object) {
-		this.object = object;
+	public WalkingRender(LivingObject living) {
+		this.living = living;
 		initAnimations();
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private ExtraBehaviorsObject object;
+	private LivingObject living;
 
 	@Override
-	public ExtraBehaviorsObject getExtraBehaviorsObject() {
-		return object;
+	public LivingObject getExtraBehaviorsObject() {
+		return living;
 	}
 
 	////////// TICK ////////////
@@ -31,7 +32,7 @@ public class WalkingRender implements Behavior {
 
 	@Override
 	public void tick() {
-		if (object.isMotionless())
+		if (living.isMotionless())
 			freezeAnimation();
 		else
 			runAnimation();
@@ -66,7 +67,7 @@ public class WalkingRender implements Behavior {
 	}
 
 	private BufferedImage getImage(String imageName) {
-		return new ImageTask().loadImage("textures/characters/" + object.getName() + "/walking_" + imageName + ".png");
+		return new ImageTask().loadImage("textures/characters/" + living.getName() + "/walking_" + imageName + ".png");
 	}
 
 	private BufferedImage[] getImages(DIRECTION direction) {
@@ -84,9 +85,9 @@ public class WalkingRender implements Behavior {
 	@Override
 	public void render(Graphics g) {
 
-		int facing = object.getFacing().getNum();
+		int facing = living.getFacing().getNum();
 		BufferedImage img = facing > -1 ? walking[facing].getState() : getImage("ground");
-		g.drawImage(img, object.getX(), object.getY(), object.getWidth(), object.getHeight(), null);
+		g.drawImage(img, living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
 	}
 
 	////////// KEYBOARD ////////////

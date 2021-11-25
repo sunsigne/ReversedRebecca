@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;

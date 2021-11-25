@@ -1,24 +1,25 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class CameraFollowing implements Behavior, CameraDependency {
 
-	public CameraFollowing(ExtraBehaviorsObject object) {
-		CameraFollowing.object = object;
+	public CameraFollowing(Player player) {
+		CameraFollowing.player = player;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private static ExtraBehaviorsObject object;
+	private static Player player;
 
 	@Override
-	public ExtraBehaviorsObject getExtraBehaviorsObject() {
-		return object;
+	public Player getExtraBehaviorsObject() {
+		return player;
 	}
 	
 	////////// CAMERA ////////////
@@ -37,11 +38,11 @@ public class CameraFollowing implements Behavior, CameraDependency {
 	}
 
 	private void moveCameraByX() {
-		CAMERA.setX(-object.getX() + (Window.WIDHT - object.getWidth()) / 2);
+		CAMERA.setX(-player.getX() + (Window.WIDHT - player.getWidth()) / 2);
 	}
 	
 	private void moveCameraByY() {
-		CAMERA.setY(-object.getY() + (Window.HEIGHT - object.getHeight()) / 2);
+		CAMERA.setY(-player.getY() + (Window.HEIGHT - player.getHeight()) / 2);
 	}
 
 	////////// RENDER ////////////

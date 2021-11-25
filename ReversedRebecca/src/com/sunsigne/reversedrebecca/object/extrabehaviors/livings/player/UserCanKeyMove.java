@@ -1,25 +1,25 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 
 public class UserCanKeyMove implements Behavior {
 
-	public UserCanKeyMove(ExtraBehaviorsObject object) {
-		this.object = object;
+	public UserCanKeyMove(Player player) {
+		this.player = player;
 		initDirectionKeys();
 	}
 
 	////////// BEHAVIOR ////////////
 	
-	private ExtraBehaviorsObject object;
+	private Player player;
 	
 	@Override
-	public ExtraBehaviorsObject getExtraBehaviorsObject() {
-		return object;
+	public Player getExtraBehaviorsObject() {
+		return player;
 	}
 
 	////////// TICK ////////////
@@ -33,25 +33,25 @@ public class UserCanKeyMove implements Behavior {
 	private void movePlayerbyX() {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(-((Player) object).speed);
+			player.setVelX(-player.speed);
 		else if (directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(0);
+			player.setVelX(0);
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(((Player) object).speed);
+			player.setVelX(player.speed);
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			object.setVelX(0);
+			player.setVelX(0);
 	}
 
 	private void movePlayerbyY() {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(-((Player) object).speed);
+			player.setVelY(-player.speed);
 		else if (directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(0);
+			player.setVelY(0);
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(((Player) object).speed);
+			player.setVelY(player.speed);
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
-			object.setVelY(0);
+			player.setVelY(0);
 	}
 
 	////////// RENDER ////////////

@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.pattern;
 
-import com.sunsigne.reversedrebecca.object.Player;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.LAYER;
 

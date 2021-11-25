@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.Player;
 import com.sunsigne.reversedrebecca.object.debug.FastPlayerObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;

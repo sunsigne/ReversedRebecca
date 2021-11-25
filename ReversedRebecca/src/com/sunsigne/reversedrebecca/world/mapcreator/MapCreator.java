@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.world.mapcreator;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.Wall;
-import com.sunsigne.reversedrebecca.object.Foe;
-import com.sunsigne.reversedrebecca.object.Player;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.gui.ExempleHP;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;

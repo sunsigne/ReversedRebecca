@@ -1,23 +1,24 @@
-package com.sunsigne.reversedrebecca.object.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 
 public class WatchingDirection implements Behavior, Facing {
 
-	public WatchingDirection(ExtraBehaviorsObject object) {
-		this.object = object;
+	public WatchingDirection(LivingObject living) {
+		this.living = living;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private ExtraBehaviorsObject object;
+	private LivingObject living;
 
 	@Override
-	public ExtraBehaviorsObject getExtraBehaviorsObject() {
-		return object;
+	public LivingObject getExtraBehaviorsObject() {
+		return living;
 	}
 
 	////////// FACING ////////////
@@ -26,12 +27,12 @@ public class WatchingDirection implements Behavior, Facing {
 
 	@Override
 	public DIRECTION getFacing() {
-		return object.getFacing();
+		return living.getFacing();
 	}
 
 	@Override
 	public void setFacing(DIRECTION facing) {
-		object.setFacing(facing);
+		living.setFacing(facing);
 	}
 
 	////////// TICK ////////////
@@ -42,25 +43,25 @@ public class WatchingDirection implements Behavior, Facing {
 	}
 
 	private void updateWatchingDirection() {
-		if (object.isMotionlessbyX())
+		if (living.isMotionlessbyX())
 			flagX = false;
-		if (object.isMotionlessbyY())
+		if (living.isMotionlessbyY())
 			flagY = false;
 
-		if (!flagY && object.getVelX() < 0) {
+		if (!flagY && living.getVelX() < 0) {
 			setFacing(DIRECTION.LEFT);
 			flagX = true;
 		}
-		if (!flagY && object.getVelX() > 0) {
+		if (!flagY && living.getVelX() > 0) {
 			setFacing(DIRECTION.RIGHT);
 			flagX = true;
 		}
 
-		if (!flagX && object.getVelY() < 0) {
+		if (!flagX && living.getVelY() < 0) {
 			setFacing(DIRECTION.UP);
 			flagY = true;
 		}
-		if (!flagX && object.getVelY() > 0) {
+		if (!flagX && living.getVelY() > 0) {
 			setFacing(DIRECTION.DOWN);
 			flagY = true;
 		}
