@@ -29,8 +29,7 @@ public class Foe extends LivingObject {
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (detectorObject instanceof Player)
 			pushPlayer(detectorObject);
-		else
-			blockPass(detectorObject);
+		blockPass(detectorObject);
 	}
 
 	private void pushPlayer(CollisionDetector detectorObject) {
