@@ -5,11 +5,12 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 
-public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, Facing {
+public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, SurVelocity, Facing {
 
 	public ExtraBehaviorsObject(String name, int x, int y) {
 		super(x, y);
@@ -43,9 +44,33 @@ public abstract class ExtraBehaviorsObject extends GameObject implements Behavio
 	
 	public String getName() {
 		return name;
-	}	
+	}
 	
-	//////////FACING ////////////
+	////////// SURVELOCICY ////////////
+
+	private int surVelX, surVelY;
+
+	@Override
+	public int getSurVelX() {
+		return surVelX;
+	}
+
+	@Override
+	public int getSurVelY() {
+		return surVelY;
+	}
+
+	@Override
+	public void setSurVelX(int surVelX) {
+		this.surVelX = surVelX;
+	}
+
+	@Override
+	public void setSurVelY(int surVelY) {
+		this.surVelY = surVelY;
+	}
+	
+	////////// FACING ////////////
 	
 	private DIRECTION facing = DIRECTION.DOWN;
 	

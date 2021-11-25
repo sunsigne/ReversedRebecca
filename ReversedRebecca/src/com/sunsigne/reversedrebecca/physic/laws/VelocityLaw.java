@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -11,7 +12,7 @@ public class VelocityLaw implements PhysicLaw {
 	static {
 		PhysicList.getList().getList().add(0, new VelocityLaw());
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -19,15 +20,26 @@ public class VelocityLaw implements PhysicLaw {
 		if (object == null)
 			return;
 
-		Velocity velicityObject = null;
+		SurVelocity surVelocityObject = object instanceof SurVelocity ? (SurVelocity) object : null;
+		Velocity velocityObject = object instanceof Velocity ? (Velocity) object : null;
 
-		if (object instanceof Velocity)
-			velicityObject = (Velocity) object;
-		else
-			return;
+		if (surVelocityObject != null)
+			SurVelocityEffect(surVelocityObject);
+		else if (velocityObject != null)
+			velocityEffect(velocityObject);
+	}
 
-		velicityObject.setX(velicityObject.getX() + velicityObject.getVelX());
-		velicityObject.setY(velicityObject.getY() + velicityObject.getVelY());
+	private void SurVelocityEffect(SurVelocity surVelocityObject) {
+		if (surVelocityObject.isSurMotionless())
+			velocityEffect(surVelocityObject);
+
+		surVelocityObject.setX(surVelocityObject.getX() + surVelocityObject.getSurVelX());
+		surVelocityObject.setY(surVelocityObject.getY() + surVelocityObject.getSurVelY());
+	}
+
+	private void velocityEffect(Velocity velocityObject) {
+		velocityObject.setX(velocityObject.getX() + velocityObject.getVelX());
+		velocityObject.setY(velocityObject.getY() + velocityObject.getVelY());
 	}
 
 	////////// RENDER ////////////
