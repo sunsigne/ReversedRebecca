@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 
 public class MoveWhenPushed implements Behavior {
 
@@ -49,6 +50,8 @@ public class MoveWhenPushed implements Behavior {
 
 	private void removeControls() {
 		living.removeBehavior(living.watchingDirection);
+		if(living instanceof Player)
+		living.removeBehavior(((Player) living).userCanKeyMove);
 	}
 
 	private void pushed(DIRECTION facing) {
@@ -80,6 +83,8 @@ public class MoveWhenPushed implements Behavior {
 		setPushed(false);
 		living.setMotionless();
 		living.addBehavior(living.watchingDirection);
+		if(living instanceof Player)
+		living.addBehavior(((Player) living).userCanKeyMove);
 	}
 
 	////////// RENDER ////////////
