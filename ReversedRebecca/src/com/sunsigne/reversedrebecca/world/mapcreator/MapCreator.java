@@ -34,8 +34,8 @@ public class MapCreator implements KeyboardEvent {
 		LAYER.WORLD.addObject(new Wall(Window.WIDHT - 150, Window.HEIGHT - 150));		
 		LAYER.WORLD.addObject(new Wall(50, Window.HEIGHT - 150));
 		
-		LAYER.WORLD.addObject(new Foe(player, 700, 700));
-		LAYER.WORLD.addObject(new Foe(player, 1200, 800));
+		LAYER.WORLD.addObject(new Foe("Gamma", 700, 700));
+		LAYER.WORLD.addObject(new Foe("Gamma", 1200, 800));
 		
 		LAYER.WORLD.addObject(player);
 		

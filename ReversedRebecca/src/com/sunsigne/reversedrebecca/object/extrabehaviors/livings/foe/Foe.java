@@ -3,19 +3,17 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 
-public class Foe extends GameObject implements CollisionDetector, CollisionReactor {
+public class Foe extends LivingObject {
 
 	public int speed = 6;
-	private Player player;
 	
-	public Foe(Player player, int x, int y) {
-		super(x, y);
-		this.player = player;
+	public Foe(String name, int x, int y) {
+		super(name ,x, y);
 	}
 
 	////////// TICK ////////////
@@ -26,6 +24,10 @@ public class Foe extends GameObject implements CollisionDetector, CollisionReact
 	}
 
 	private void movingtoPlayer() {
+		Player player = new PlayerFinder().getPlayer();
+		if(player == null)
+			return;
+		
 		float diffX = getX() - player.getX();
 		float diffY = getY() - player.getY();
 		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
