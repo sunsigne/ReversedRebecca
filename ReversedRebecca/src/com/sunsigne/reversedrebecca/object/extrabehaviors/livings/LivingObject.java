@@ -16,10 +16,12 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	
 	public Behavior watchingDirection = new WatchingDirection(this);
 	public Behavior walkingRender = new WalkingRender(this);
+	public Behavior moveWhenPushed = new MoveWhenPushed(this);
 		
 	private void addLivingBehaviors() {
 		addBehavior(watchingDirection);
 		addBehavior(walkingRender);
+		addBehavior(moveWhenPushed);
 	}
 
 }
