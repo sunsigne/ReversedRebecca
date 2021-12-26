@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.MoveWhenPushed;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 
 public class Foe extends LivingObject {
@@ -27,16 +28,22 @@ public class Foe extends LivingObject {
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof Player)
+		if (detectorObject instanceof Player) {
 			pushPlayer(detectorObject);
+			stunFoe();
+		}
 		blockPass(detectorObject);
 	}
 
 	private void pushPlayer(CollisionDetector detectorObject) {
 		Player player = (Player) detectorObject;
-		// stun();
 		var moveWhenPushed = (MoveWhenPushed) player.moveWhenPushed;
 		moveWhenPushed.pushToward(getFacing());
+	}
+	
+	private void stunFoe() {
+		Behavior stunned = new Stunned(this, movingToPlayer);
+		addBehavior(stunned);
 	}
 
 }
