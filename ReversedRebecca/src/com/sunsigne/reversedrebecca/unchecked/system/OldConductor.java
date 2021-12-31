@@ -1,11 +1,17 @@
 package com.sunsigne.reversedrebecca.unchecked.system;
 
+import java.awt.image.BufferedImage;
+
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
+import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class OldConductor {
 
@@ -32,8 +38,7 @@ public class OldConductor {
 		// LOADING OF RESSOURCES
 		loadRessources();
 
-		MapCreator map = new MapCreator();
-		map.loadLevel();
+		new World().run();
 		
 	}
 
@@ -56,6 +61,8 @@ public class OldConductor {
 		
 		new ForceInit().loadAllClassesInPackage(PhysicLaw.class.getPackageName());
 		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());		
+		
+		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
 		
 		Game.getInstance().forceLoop();
 	}

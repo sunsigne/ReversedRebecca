@@ -1,78 +1,60 @@
 package com.sunsigne.reversedrebecca.world.mapcreator;
 
-import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.Wall;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.object.gui.ExempleHP;
-import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
+import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.unchecked.system.OldConductor;
 import com.sunsigne.reversedrebecca.world.LAYER;
+import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MapCreator implements KeyboardEvent {
+public class MapCreator {
 
-	////////// ??? ////////////
+	public static GameLimitedList<Mappable> mappable_list = new GameLimitedList<Mappable>(LISTTYPE.ARRAY);
 
-	public void loadLevel() {
-		/*
-		 * Player.get().start(); new GUIHealth().start(); new GUIDebug().start();
-		 * 
-		 * new Wall(500, 300).start(); new Wall(900, 600).start();
-		 * 
-		 * new Foe(1500, 100).start(); new Foe(1500, 500).start();
-		 */
+	public void loadLevel(BufferedImage image) {
+		
+		image = new ImageTask().loadImage("maps/$working/lvl001_mapping.png");
+		
+		int w = image.getWidth();
+		int h = image.getHeight();
+		int STEP = 1;
+		
+		for (int xx = 0; xx < h; xx += STEP) 
+		{
+			for (int yy = 0; yy < w; yy += STEP)
+			{
+				int pixel = image.getRGB(xx, yy);
+				int red = (pixel >> 16) & 0xff;
+				int green = (pixel >> 8) & 0xff;
+				int blue = (pixel) & 0xff;
 
-		Player player = new Player(Window.WIDHT/2 - 50, Window.HEIGHT/2 - 50);
-		
-		LAYER.WORLD.addObject(new Wall(50, 50));		
-		LAYER.WORLD.addObject(new Wall(Window.WIDHT - 150, 50));		
-		LAYER.WORLD.addObject(new Wall(Window.WIDHT - 150, Window.HEIGHT - 150));		
-		LAYER.WORLD.addObject(new Wall(50, Window.HEIGHT - 150));
-		
-		LAYER.WORLD.addObject(new Foe("Gamma", 700, 700));
-		LAYER.WORLD.addObject(new Foe("Gamma", 1200, 800));
-		
-		LAYER.WORLD.addObject(player);
-		
-		LAYER.GUI.addObject(new ExempleHP());
-		
-
-		
-		
-	
-
+				int x0 = xx * Size.M / STEP;
+				int y0 = yy * Size.M / STEP;
+				
+				for(Mappable tempMappable : mappable_list.getList())
+				{
+					int tempRed = tempMappable.getRedCode();
+					int tempGreen = tempMappable.getGreenCode();
+					int tempBlue = tempMappable.getBlueCode();
+					
+					if (red == tempRed && green == tempGreen && blue == tempBlue)
+					{					
+						GameObject obj = tempMappable.getObject();
+						obj.setX(x0);
+						obj.setY(y0);
+						
+						Handler handler = LAYER.WORLD.getHandler();
+						handler.addObject(obj);						
+					}
+				}
+			}
+		}
 		Game.getInstance().forceLoop();
 	}
-
-	////////// KEYBOARD ////////////
-
-	KeyboardController keyboardController = new KeyboardController(this);
-
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == KeyEvent.VK_ESCAPE)
-			new OldConductor().stopApp();
-
-		if (key == KeyEvent.VK_R) {
-			LAYER.WORLD.getHandler().clear();
-			loadLevel();
-		}			
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
-	}
-
+		
 }
