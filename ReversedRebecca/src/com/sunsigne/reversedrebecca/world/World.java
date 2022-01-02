@@ -32,7 +32,7 @@ public class World implements KeyboardEvent {
 	////////// ??? ////////////
 
 	public void run() {
-		BufferedImage lvl001 = new ImageTask().loadImage("levels/lvl001/lvl001_mapping.png");
+		BufferedImage lvl001 = new ImageTask().loadImage("levels/lvl001/rgb_ground.png");
 		new MapCreator().loadLevel(lvl001);
 	}
 		
