@@ -17,9 +17,7 @@ public class MapCreator {
 	public static GameLimitedList<Mappable> mappable_list = new GameLimitedList<Mappable>(LISTTYPE.ARRAY);
 
 	public void loadLevel(BufferedImage image) {
-		
-		image = new ImageTask().loadImage("maps/$working/lvl001_mapping.png");
-		
+
 		int w = image.getWidth();
 		int h = image.getHeight();
 		int STEP = 1;
