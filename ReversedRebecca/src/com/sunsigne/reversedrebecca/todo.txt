@@ -6,6 +6,9 @@
 ////////// FACILE ////////////
 texture manquante pour Player, Wall, Foe, GUIHealth & LoadingScreen
 
+World devrait peut-être avoir un meilleur nom de classe ?
+
+
 passer le constructeur Window en protected
 pas fini : ExempleHP / Player / Foe / Wall / MapCreator
 create default caracter when name is incorrect
@@ -17,6 +20,7 @@ MapCreator mappable_list pourrait être en protected
 
 ////////// DIFFICILE ////////////
 animation de tourbillon de vent de temps en temps ?
+Faire en sorte que les Visible Hitbox soient + visibles
 
 ///////// A TRIER ////////////
 

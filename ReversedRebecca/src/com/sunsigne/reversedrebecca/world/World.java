@@ -4,21 +4,19 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.unchecked.system.OldConductor;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
-public class World implements KeyboardEvent {
+public class World implements Updatable, KeyboardEvent {
 
 	////////// SIGNELTON ////////////
 
 	private World() {
-
+		LAYER.GROUND.addObject(this);
 	}
 
 	private static World instance = null;
@@ -34,8 +32,27 @@ public class World implements KeyboardEvent {
 	public void run() {
 		BufferedImage lvl001 = new ImageTask().loadImage("levels/lvl001/rgb_ground.png");
 		new MapCreator().loadLevel(lvl001);
-	}
 		
+		map = new ImageTask().loadImage("levels/lvl001/map_ground.png");
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
+	}
+
+	////////// RENDER ////////////
+
+	private BufferedImage map;
+
+	@Override
+	public void render(Graphics g) {
+		if (map != null)
+			g.drawImage(map, 0, 0, map.getWidth() * 6, map.getHeight() * 6, null);
+	}
+
 	////////// KEYBOARD ////////////
 
 	KeyboardController keyboardController = new KeyboardController(this);

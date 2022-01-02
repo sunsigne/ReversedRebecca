@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public enum LAYER {
 	
+	GROUND(new Handler(true)),
 	WORLD(new Handler(true)),
 	GUI(new Handler(false)),
 	DEBUG (new Handler(false));
