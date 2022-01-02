@@ -15,6 +15,20 @@ import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
 public class World implements KeyboardEvent {
 
+	////////// SIGNELTON ////////////
+
+	private World() {
+
+	}
+
+	private static World instance = null;
+
+	public static World getInstance() {
+		if (instance == null)
+			instance = new World();
+		return instance;
+	}
+
 	////////// ??? ////////////
 
 	public void run() {

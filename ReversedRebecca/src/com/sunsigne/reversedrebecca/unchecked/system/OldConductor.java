@@ -38,7 +38,7 @@ public class OldConductor {
 		// LOADING OF RESSOURCES
 		loadRessources();
 
-		new World().run();
+		World.getInstance().run();
 		
 	}
 
