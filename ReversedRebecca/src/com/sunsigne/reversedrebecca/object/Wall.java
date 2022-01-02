@@ -24,8 +24,6 @@ public class Wall extends GameObject implements CollisionReactor {
 	@Override
 	public void render(Graphics g) {
 
-		g.setColor(Color.GREEN);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 	////////// COLLISION ////////////
