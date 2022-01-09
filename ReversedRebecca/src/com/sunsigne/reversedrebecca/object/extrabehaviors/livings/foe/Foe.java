@@ -11,6 +11,10 @@ public class Foe extends LivingObject {
 
 	public int speed = 6;
 
+	public Foe(int x, int y) {
+		this("Gamma", x, y);
+	}
+	
 	public Foe(String name, int x, int y) {
 		super(name, x, y);
 		addFoeBehaviors();
