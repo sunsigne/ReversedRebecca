@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.object;
 
-import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
