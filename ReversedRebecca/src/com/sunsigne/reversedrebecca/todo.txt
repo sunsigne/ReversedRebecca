@@ -20,7 +20,6 @@ MapCreator mappable_list pourrait être en protected
 
 ////////// DIFFICILE ////////////
 animation de tourbillon de vent de temps en temps ?
-Faire en sorte que les Visible Hitbox soient + visibles
 
 ///////// A TRIER ////////////
 

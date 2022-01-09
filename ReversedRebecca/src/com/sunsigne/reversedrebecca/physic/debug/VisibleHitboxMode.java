@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.physic.debug;
 
+import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -62,7 +63,6 @@ public class VisibleHitboxMode extends DebugMode {
 			return;
 		
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.white);
 
 		collisionDetectorRender(g2d, object);
 		collisionReactorRender(g2d, object);
@@ -77,6 +77,7 @@ public class VisibleHitboxMode extends DebugMode {
 		else
 			return;
 
+		g2d.setColor(Color.WHITE);
 		g2d.draw(detectorObject.getBounds(DIRECTION.LEFT));
 		g2d.draw(detectorObject.getBounds(DIRECTION.RIGHT));
 		g2d.draw(detectorObject.getBounds(DIRECTION.UP));
@@ -92,9 +93,15 @@ public class VisibleHitboxMode extends DebugMode {
 		else
 			return;
 
+		g2d.setColor(Color.WHITE);
 		g2d.draw(reactorObject.getBounds());
+		
+		g2d.setColor(Color.RED);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.4f));
+		g2d.fill(reactorObject.getBounds());
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
-
+	
 	////////// KEYBOARD ////////////
 
 	@Override
