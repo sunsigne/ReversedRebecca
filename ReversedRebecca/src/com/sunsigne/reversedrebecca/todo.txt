@@ -1,10 +1,15 @@
 
 ////////// IMPORTANT ////////////
-
+La souris est nulle : 
+	- toutes les couches sont actives en même temps
+	- aucun moyen de la désactiver
+	- les fonctions hautes n'ont pas assez de responsabilités
 
 
 ////////// FACILE ////////////
 texture manquante pour GUIHealth & LoadingScreen
+vérifier si l'interface Texture dans Ressource-image est utile
+MapCreator -> la GUI est ajouté de façon dégeulasse
 
 World devrait peut-être avoir un meilleur nom de classe ?
 

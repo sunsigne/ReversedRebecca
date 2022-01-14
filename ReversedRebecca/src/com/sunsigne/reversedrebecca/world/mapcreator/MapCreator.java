@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.world.mapcreator;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.gui.ExempleHP;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -52,6 +53,7 @@ public class MapCreator {
 				}
 			}
 		}
+		LAYER.GUI.addObject(new ExempleHP());
 		Game.getInstance().forceLoop();
 	}
 		
