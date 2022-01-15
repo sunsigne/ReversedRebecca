@@ -1,15 +1,14 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors;
 
-import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.KeyboardBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public class UserCanKeyMove implements Behavior, KeyboardEvent {
+public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 
 	public UserCanKeyMove(Player player) {
 		this.player = player;
@@ -25,40 +24,6 @@ public class UserCanKeyMove implements Behavior, KeyboardEvent {
 		return player;
 	}
 	
-	////////// POSITION ////////////
-	
-	@Override
-	public int getX() {
-		return getExtraBehaviorsObject().getX();
-	}
-	
-	@Override
-	public int getY() {
-		return getExtraBehaviorsObject().getY();
-	}
-	
-	@Override
-	public void setX(int x) {
-		getExtraBehaviorsObject().setX(x);
-	}
-	
-	@Override
-	public void setY(int y) {
-		getExtraBehaviorsObject().setY(y);
-	}
-	
-	////////// SIZE ////////////
-	
-	@Override
-	public int getWidth() {
-		return getExtraBehaviorsObject().getWidth();
-	}
-	
-	@Override
-	public int getHeight() {
-		return getExtraBehaviorsObject().getHeight();
-	}
-
 	////////// TICK ////////////
 
 	@Override
@@ -91,31 +56,27 @@ public class UserCanKeyMove implements Behavior, KeyboardEvent {
 			player.setVelY(0);
 	}
 
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
-	}
-	
-	//////////COLLISION ////////////
-	
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-
-	}
-
 	////////// KEYBOARD ////////////
-
-	private KeyboardController keyboardController = new KeyboardController(this);
-
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
 	
 	private int[] directionKeyEvent = new int[4];
 	private boolean[] directionKeyPressed = new boolean[4];
+	
+	@Override
+	public KeyboardController getKeyBoardController() {
+		return player.getKeyBoardController();
+	}
+	
+	@Override
+	public void keyPressed(KeyEvent e) {
+		int key = e.getKeyCode();
+		directionKey(key, true);
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		int key = e.getKeyCode();
+		directionKey(key, false);
+	}	
 
 	private void initDirectionKeys() {
 		setDirectionKeyEvent(DIRECTION.LEFT, KeyEvent.VK_Q);
@@ -141,18 +102,6 @@ public class UserCanKeyMove implements Behavior, KeyboardEvent {
 
 		if (key == directionKeyEvent[DIRECTION.DOWN.getNum()] || key == KeyEvent.VK_DOWN)
 			directionKeyPressed[DIRECTION.DOWN.getNum()] = pressed;
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		directionKey(key, true);
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		int key = e.getKeyCode();
-		directionKey(key, false);
 	}
 
 }

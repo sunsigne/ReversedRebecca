@@ -1,14 +1,14 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
-
-import java.awt.Graphics;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.MoveWhenPushed;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.Stunned;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.MoveWhenPushed;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Stunned;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 
-public class PushingPlayer implements Behavior {
+public class PushingPlayer implements CollisionBehavior {
 
 	public PushingPlayer(Foe foe) {
 		this.foe = foe;
@@ -55,20 +55,6 @@ public class PushingPlayer implements Behavior {
 	@Override
 	public int getHeight() {
 		return getExtraBehaviorsObject().getHeight();
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 	////////// COLLISION ////////////

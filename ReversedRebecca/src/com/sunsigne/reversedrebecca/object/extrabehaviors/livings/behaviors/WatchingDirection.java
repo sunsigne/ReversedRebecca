@@ -1,12 +1,10 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors;
 
-import java.awt.Graphics;
-
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
-public class WatchingDirection implements Behavior, Facing {
+public class WatchingDirection implements TickBehavior, Facing {
 
 	public WatchingDirection(LivingObject living) {
 		this.living = living;
@@ -19,40 +17,6 @@ public class WatchingDirection implements Behavior, Facing {
 	@Override
 	public LivingObject getExtraBehaviorsObject() {
 		return living;
-	}
-	
-	////////// POSITION ////////////
-	
-	@Override
-	public int getX() {
-		return getExtraBehaviorsObject().getX();
-	}
-	
-	@Override
-	public int getY() {
-		return getExtraBehaviorsObject().getY();
-	}
-	
-	@Override
-	public void setX(int x) {
-		getExtraBehaviorsObject().setX(x);
-	}
-	
-	@Override
-	public void setY(int y) {
-		getExtraBehaviorsObject().setY(y);
-	}
-	
-	////////// SIZE ////////////
-	
-	@Override
-	public int getWidth() {
-		return getExtraBehaviorsObject().getWidth();
-	}
-	
-	@Override
-	public int getHeight() {
-		return getExtraBehaviorsObject().getHeight();
 	}
 
 	////////// FACING ////////////
@@ -100,19 +64,5 @@ public class WatchingDirection implements Behavior, Facing {
 			flagY = true;
 		}
 	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
-	}
 	
-	//////////COLLISION ////////////
-	
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-
-	}
-
 }

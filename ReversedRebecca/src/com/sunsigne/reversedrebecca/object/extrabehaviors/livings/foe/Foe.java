@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.MovingToPlayer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.PushingPlayer;
 
 public class Foe extends LivingObject {
 

@@ -7,6 +7,10 @@ La souris est nulle :
 
 
 ////////// FACILE ////////////
+Dans SuperExtraBehaviorsObject, faire descendre le nom jusqu'à LivingObject
+
+Keyboard controller - créer une fonction qui RETIRE le listener (à appeler lorsqu'un objet est retiré de l'handler)
+
 texture manquante pour GUIHealth & LoadingScreen
 vérifier si l'interface Texture dans Ressource-image est utile
 MapCreator -> la GUI est ajouté de façon dégeulasse

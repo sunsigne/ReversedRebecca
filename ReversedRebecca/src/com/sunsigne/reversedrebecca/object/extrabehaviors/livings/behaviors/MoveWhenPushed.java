@@ -1,12 +1,10 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors;
 
-import java.awt.Graphics;
-
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
-public class MoveWhenPushed implements Behavior {
+public class MoveWhenPushed implements TickBehavior {
 
 	public int speed = 20;
 
@@ -23,40 +21,6 @@ public class MoveWhenPushed implements Behavior {
 		return living;
 	}
 	
-	////////// POSITION ////////////
-	
-	@Override
-	public int getX() {
-		return getExtraBehaviorsObject().getX();
-	}
-	
-	@Override
-	public int getY() {
-		return getExtraBehaviorsObject().getY();
-	}
-	
-	@Override
-	public void setX(int x) {
-		getExtraBehaviorsObject().setX(x);
-	}
-	
-	@Override
-	public void setY(int y) {
-		getExtraBehaviorsObject().setY(y);
-	}
-	
-	////////// SIZE ////////////
-	
-	@Override
-	public int getWidth() {
-		return getExtraBehaviorsObject().getWidth();
-	}
-	
-	@Override
-	public int getHeight() {
-		return getExtraBehaviorsObject().getHeight();
-	}
-
 	////////// PUSHING ////////////
 
 	private boolean isPushed;
@@ -109,19 +73,5 @@ public class MoveWhenPushed implements Behavior {
 		setPushed(false);
 		living.setMotionless();
 	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
-	}
 	
-	//////////COLLISION ////////////
-	
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-
-	}
-
 }

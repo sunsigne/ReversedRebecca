@@ -1,8 +1,9 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CameraFollowing;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.UserCanKeyMove;
 
 public class Player extends LivingObject {
 
@@ -25,13 +26,6 @@ public class Player extends LivingObject {
 	private void addPlayerBehaviors() {
 		addBehavior(userCanKeyMove);
 		addBehavior(cameraFollowing);
-	}
-	
-	////////// COLLISION ////////////
-	
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-
 	}
 	
 }
