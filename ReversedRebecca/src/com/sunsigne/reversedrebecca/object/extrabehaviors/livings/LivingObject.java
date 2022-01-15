@@ -1,11 +1,10 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
-public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector, CollisionReactor {
+public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector {
 
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);

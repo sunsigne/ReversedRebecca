@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -22,6 +23,40 @@ public class UserCanKeyMove implements Behavior, KeyboardEvent {
 	@Override
 	public Player getExtraBehaviorsObject() {
 		return player;
+	}
+	
+	////////// POSITION ////////////
+	
+	@Override
+	public int getX() {
+		return getExtraBehaviorsObject().getX();
+	}
+	
+	@Override
+	public int getY() {
+		return getExtraBehaviorsObject().getY();
+	}
+	
+	@Override
+	public void setX(int x) {
+		getExtraBehaviorsObject().setX(x);
+	}
+	
+	@Override
+	public void setY(int y) {
+		getExtraBehaviorsObject().setY(y);
+	}
+	
+	////////// SIZE ////////////
+	
+	@Override
+	public int getWidth() {
+		return getExtraBehaviorsObject().getWidth();
+	}
+	
+	@Override
+	public int getHeight() {
+		return getExtraBehaviorsObject().getHeight();
 	}
 
 	////////// TICK ////////////
@@ -60,6 +95,13 @@ public class UserCanKeyMove implements Behavior, KeyboardEvent {
 
 	@Override
 	public void render(Graphics g) {
+
+	}
+	
+	//////////COLLISION ////////////
+	
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
 
 	}
 

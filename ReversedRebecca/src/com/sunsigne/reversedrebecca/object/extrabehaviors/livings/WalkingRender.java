@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
@@ -22,6 +23,40 @@ public class WalkingRender implements Behavior {
 	@Override
 	public LivingObject getExtraBehaviorsObject() {
 		return living;
+	}
+	
+	////////// POSITION ////////////
+	
+	@Override
+	public int getX() {
+		return getExtraBehaviorsObject().getX();
+	}
+	
+	@Override
+	public int getY() {
+		return getExtraBehaviorsObject().getY();
+	}
+	
+	@Override
+	public void setX(int x) {
+		getExtraBehaviorsObject().setX(x);
+	}
+	
+	@Override
+	public void setY(int y) {
+		getExtraBehaviorsObject().setY(y);
+	}
+	
+	////////// SIZE ////////////
+	
+	@Override
+	public int getWidth() {
+		return getExtraBehaviorsObject().getWidth();
+	}
+	
+	@Override
+	public int getHeight() {
+		return getExtraBehaviorsObject().getHeight();
 	}
 
 	////////// TICK ////////////
@@ -87,6 +122,13 @@ public class WalkingRender implements Behavior {
 		int facing = living.getFacing().getNum();
 		BufferedImage img = facing > -1 ? walking[facing].getState() : getImage("ground");
 		g.drawImage(img, living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
+	}
+	
+	//////////COLLISION ////////////
+	
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+
 	}
 
 }

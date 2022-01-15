@@ -3,12 +3,14 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
-public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, SurVelocity, Facing {
+public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, CollisionReactor, SurVelocity, Facing  {
 
 	public ExtraBehaviorsObject(String name, int x, int y) {
 		super(x, y);
@@ -99,6 +101,16 @@ public abstract class ExtraBehaviorsObject extends GameObject implements Behavio
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
 			if (tempBehavior != null)
 				tempBehavior.render(g);
+		}
+	}
+	
+	////////// COLLISION ////////////
+	
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		for (Behavior tempBehavior : getBehaviorList().getList()) {
+			if (tempBehavior != null)
+				tempBehavior.collidingReaction(detectorObject);
 		}
 	}
 
