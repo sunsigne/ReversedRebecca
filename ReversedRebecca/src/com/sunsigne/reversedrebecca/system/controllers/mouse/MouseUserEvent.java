@@ -12,7 +12,10 @@ public interface MouseUserEvent {
 
 	void mouseReleased(MouseEvent e);
 	
-	default boolean mouseOver(int mx, int my, int x, int y, int width, int height) {
+	default boolean mouseOver(MouseEvent e, int x, int y, int width, int height) {
+		int mx = e.getX();
+		int my = e.getY();
+		
 		if (mx > x && mx < x + width) {
 			if (my > y && my < y + height) {
 				return true;
@@ -22,9 +25,9 @@ public interface MouseUserEvent {
 			return false;
 	}
 
-	default boolean mouseOver(int mx, int my, int[] rect) {
+	default boolean mouseOver(MouseEvent e, int mx, int my, int[] rect) {
 		if (rect.length == 4)
-			return mouseOver(mx, my, rect[0], rect[1], rect[2], rect[3]);
+			return mouseOver(e, rect[0], rect[1], rect[2], rect[3]);
 		else
 			System.err.println("the array rect in method mouseOver should be 4 int long");
 		return false;
