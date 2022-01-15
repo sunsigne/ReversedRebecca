@@ -55,7 +55,7 @@ public class World implements Updatable, KeyboardEvent {
 
 	////////// KEYBOARD ////////////
 
-	KeyboardController keyboardController = new KeyboardController(this);
+	private KeyboardController keyboardController = new KeyboardController(this);
 
 	@Override
 	public KeyboardController getKeyBoardController() {

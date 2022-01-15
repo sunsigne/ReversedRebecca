@@ -106,7 +106,7 @@ public abstract class ExtraBehaviorsObject extends GameObject implements Behavio
 
 	////////// KEYBOARD ////////////
 
-	KeyboardController keyboardController = new KeyboardController(this);
+	private KeyboardController keyboardController = new KeyboardController(this);
 
 	@Override
 	public KeyboardController getKeyBoardController() {

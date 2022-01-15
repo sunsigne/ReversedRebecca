@@ -23,7 +23,7 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 
 	////////// KEYBOARD ////////////
 
-	KeyboardController keyboardController = new KeyboardController(this);
+	private KeyboardController keyboardController = new KeyboardController(this);
 
 	@Override
 	public KeyboardController getKeyBoardController() {
