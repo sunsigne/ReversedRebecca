@@ -20,11 +20,15 @@ public class Player extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
-	public Behavior userCanKeyMove = new UserCanKeyMove(this);
-	public Behavior cameraFollowing = new CameraFollowing(this);
-		
+	public Behavior userCanKeyMove;
+	public Behavior cameraFollowing;	
+	
 	private void addPlayerBehaviors() {
+		
+		userCanKeyMove = new UserCanKeyMove(this);
 		addBehavior(userCanKeyMove);
+		
+		cameraFollowing = new CameraFollowing(this);
 		addBehavior(cameraFollowing);
 	}
 	

@@ -20,11 +20,15 @@ public class Foe extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
-	public Behavior movingToPlayer = new MovingToPlayer(this);
-	public Behavior pushingPlayer = new PushingPlayer(this);
+	public Behavior movingToPlayer;
+	public Behavior pushingPlayer;
 
 	private void addFoeBehaviors() {
+		
+		movingToPlayer = new MovingToPlayer(this);
 		addBehavior(movingToPlayer);
+		
+		pushingPlayer = new PushingPlayer(this);
 		addBehavior(pushingPlayer);
 	}
 

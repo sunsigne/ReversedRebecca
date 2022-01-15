@@ -17,13 +17,19 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Facin
 
 	////////// BEHAVIOR ////////////
 	
-	public Behavior watchingDirection = new WatchingDirection(this);
-	public Behavior walkingRender = new WalkingRender(this);
-	public Behavior moveWhenPushed = new MoveWhenPushed(this);
+	public Behavior watchingDirection;
+	public Behavior walkingRender;
+	public Behavior moveWhenPushed;
 		
 	private void addLivingBehaviors() {
+		
+		watchingDirection = new WatchingDirection(this);
 		addBehavior(watchingDirection);
+		
+		walkingRender = new WalkingRender(this);
 		addBehavior(walkingRender);
+		
+		moveWhenPushed = new MoveWhenPushed(this);
 		addBehavior(moveWhenPushed);
 	}	
 
