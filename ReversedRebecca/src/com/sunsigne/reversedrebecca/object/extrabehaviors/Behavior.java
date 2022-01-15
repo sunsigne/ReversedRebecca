@@ -1,21 +1,11 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Facing;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public interface Behavior extends Updatable, KeyboardEvent {
+public interface Behavior extends Updatable {
 
 	////////// BEHAVIOR ////////////
 	
 	ExtraBehaviorsObject getExtraBehaviorsObject();
-
-	////////// KEYBOARD ////////////
-	
-	@Override
-	default KeyboardController getKeyBoardController() {
-		return getExtraBehaviorsObject().getKeyBoardController();
-	}
 
 }

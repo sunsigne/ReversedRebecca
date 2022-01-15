@@ -5,8 +5,10 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public class UserCanKeyMove implements Behavior {
+public class UserCanKeyMove implements Behavior, KeyboardEvent {
 
 	public UserCanKeyMove(Player player) {
 		this.player = player;
@@ -63,6 +65,13 @@ public class UserCanKeyMove implements Behavior {
 
 	////////// KEYBOARD ////////////
 
+	private KeyboardController keyboardController = new KeyboardController(this);
+
+	@Override
+	public KeyboardController getKeyBoardController() {
+		return keyboardController;
+	}
+	
 	private int[] directionKeyEvent = new int[4];
 	private boolean[] directionKeyPressed = new boolean[4];
 

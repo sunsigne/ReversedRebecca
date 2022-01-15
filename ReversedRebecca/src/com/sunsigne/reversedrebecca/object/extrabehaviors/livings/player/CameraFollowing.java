@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -49,18 +48,6 @@ public class CameraFollowing implements Behavior, CameraDependency {
 
 	@Override
 	public void render(Graphics g) {
-
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
 
 	}
 

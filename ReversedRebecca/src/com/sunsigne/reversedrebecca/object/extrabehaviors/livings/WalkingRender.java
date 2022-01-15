@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
@@ -88,18 +87,6 @@ public class WalkingRender implements Behavior {
 		int facing = living.getFacing().getNum();
 		BufferedImage img = facing > -1 ? walking[facing].getState() : getImage("ground");
 		g.drawImage(img, living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
 	}
 
 }

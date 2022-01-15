@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
@@ -52,17 +51,5 @@ public class MovingToPlayer implements Behavior {
 	public void render(Graphics g) {
 
 	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
-	}
-
+	
 }

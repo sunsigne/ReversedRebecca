@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.Behavior;
 
@@ -60,18 +59,6 @@ public class Stunned implements Behavior {
 
 	@Override
 	public void render(Graphics g) {
-
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
 
 	}
 

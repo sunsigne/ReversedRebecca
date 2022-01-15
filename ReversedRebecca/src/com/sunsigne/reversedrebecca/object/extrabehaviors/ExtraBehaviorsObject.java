@@ -1,14 +1,12 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 
 public abstract class ExtraBehaviorsObject extends GameObject implements Behavior, SurVelocity, Facing {
 
@@ -101,31 +99,6 @@ public abstract class ExtraBehaviorsObject extends GameObject implements Behavio
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
 			if (tempBehavior != null)
 				tempBehavior.render(g);
-		}
-	}
-
-	////////// KEYBOARD ////////////
-
-	private KeyboardController keyboardController = new KeyboardController(this);
-
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
-	
-	@Override
-	public void keyPressed(KeyEvent e) {
-		for (Behavior tempBehavior : getBehaviorList().getList()) {
-			if (tempBehavior != null)
-				tempBehavior.keyPressed(e);
-		}
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		for (Behavior tempBehavior : getBehaviorList().getList()) {
-			if (tempBehavior != null)
-				tempBehavior.keyReleased(e);
 		}
 	}
 
