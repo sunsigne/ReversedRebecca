@@ -8,10 +8,10 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.Texture;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseClickEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
-public class ExempleHP extends GameObject implements Texture, MouseClickEvent {
+public class ExempleHP extends GameObject implements Texture, MouseUserEvent {
 
 	public ExempleHP() {
 		super(0, 0);

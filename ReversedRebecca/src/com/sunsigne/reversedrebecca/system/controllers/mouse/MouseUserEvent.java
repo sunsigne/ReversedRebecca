@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.system.controllers.mouse;
 
 import java.awt.event.MouseEvent;
 
-public interface MouseClickEvent {
+public interface MouseUserEvent {
 
 	////////// MOUSE ////////////
 	
