@@ -25,7 +25,7 @@ public interface MouseUserEvent {
 			return false;
 	}
 
-	default boolean mouseOver(MouseEvent e, int mx, int my, int[] rect) {
+	default boolean mouseOver(MouseEvent e, int[] rect) {
 		if (rect.length == 4)
 			return mouseOver(e, rect[0], rect[1], rect[2], rect[3]);
 		else
