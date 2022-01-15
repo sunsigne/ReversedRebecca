@@ -7,9 +7,9 @@ La souris est nulle :
 
 
 ////////// FACILE ////////////
-Dans SuperExtraBehaviorsObject, faire descendre le nom jusqu'à LivingObject
+Le fonctionnement du ButtonObject est Inutillement compliqué : remonter le behavior DANS le bouton
 
-Keyboard controller - créer une fonction qui RETIRE le listener (à appeler lorsqu'un objet est retiré de l'handler)
+Keyboard controller & mouse - créer une fonction qui RETIRE le listener (à appeler lorsqu'un objet est retiré de l'handler)
 
 texture manquante pour GUIHealth & LoadingScreen
 vérifier si l'interface Texture dans Ressource-image est utile

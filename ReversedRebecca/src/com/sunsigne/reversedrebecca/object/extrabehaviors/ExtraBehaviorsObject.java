@@ -2,20 +2,23 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.KeyboardBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.MouseBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.RenderBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
 public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
-		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior {
+		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior, MouseBehavior {
 
 	public ExtraBehaviorsObject(int x, int y) {
 		this(x, y, Size.M, Size.M);			
@@ -123,4 +126,37 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		}
 	}
 	
+	//////////MOUSE ////////////
+		
+	private MouseController mouseController = new MouseController(this);
+	
+	@Override
+	public MouseController getMouseController() {
+		return  mouseController;
+	}
+	
+	@Override
+	public void mousePressed(MouseEvent e) {
+		for (Behavior tempBehavior : getBehaviorList().getList()) {
+			if (tempBehavior != null) {
+				if (tempBehavior instanceof MouseBehavior) {
+					MouseBehavior tempMouseBehavior = (MouseBehavior) tempBehavior;
+					tempMouseBehavior.mousePressed(e);
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		for (Behavior tempBehavior : getBehaviorList().getList()) {
+			if (tempBehavior != null) {
+				if (tempBehavior instanceof MouseBehavior) {
+					MouseBehavior tempMouseBehavior = (MouseBehavior) tempBehavior;
+					tempMouseBehavior.mouseReleased(e);
+				}
+			}
+		}
+	}
+
 }
