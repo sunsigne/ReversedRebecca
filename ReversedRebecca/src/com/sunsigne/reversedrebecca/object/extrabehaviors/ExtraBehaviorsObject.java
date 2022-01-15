@@ -16,8 +16,8 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior {
 
-	public ExtraBehaviorsObject(String name, int x, int y) {
-		super(name, x, y);
+	public ExtraBehaviorsObject(int x, int y) {
+		super(x, y);
 	}
 
 	////////// MAP OR LIST ////////////

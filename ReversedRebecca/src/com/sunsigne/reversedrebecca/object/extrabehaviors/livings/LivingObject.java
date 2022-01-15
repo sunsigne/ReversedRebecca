@@ -11,8 +11,17 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Watc
 public abstract class LivingObject extends ExtraBehaviorsObject implements Facing, CollisionDetector {
 
 	public LivingObject(String name, int x, int y) {
-		super(name, x, y);
+		super(x, y);
+		this.name = name.toLowerCase();
 		addLivingBehaviors();
+	}
+	
+	////////// NAME ////////////
+
+	private String name;
+
+	public String getName() {
+		return name;
 	}
 
 	////////// BEHAVIOR ////////////

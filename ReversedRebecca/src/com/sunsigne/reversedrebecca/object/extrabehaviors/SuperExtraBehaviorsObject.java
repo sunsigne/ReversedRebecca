@@ -6,19 +6,11 @@ import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 
 public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing {
 
-		public SuperExtraBehaviorsObject(String name, int x, int y) {
+		public SuperExtraBehaviorsObject(int x, int y) {
 			super(x, y);
-			this.name = name.toLowerCase();
+			
 		}
-
-		////////// NAME ////////////
-
-		private String name;
-
-		public String getName() {
-			return name;
-		}
-
+		
 		////////// SURVELOCICY ////////////
 
 		private int surVelX, surVelY;
