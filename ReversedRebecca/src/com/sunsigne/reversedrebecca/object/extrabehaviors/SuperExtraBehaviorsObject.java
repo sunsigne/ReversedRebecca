@@ -3,12 +3,16 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing {
 
 		public SuperExtraBehaviorsObject(int x, int y) {
-			super(x, y);
-			
+			this(x, y, Size.M, Size.M);			
+		}
+		
+		public SuperExtraBehaviorsObject(int x, int y, int w, int h) {
+			super(x, y);			
 		}
 		
 		////////// SURVELOCICY ////////////

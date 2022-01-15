@@ -11,13 +11,18 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.RenderBehavi
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 
 public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior {
 
 	public ExtraBehaviorsObject(int x, int y) {
-		super(x, y);
+		this(x, y, Size.M, Size.M);			
+	}
+	
+	public ExtraBehaviorsObject(int x, int y, int w, int h) {
+		super(x, y);			
 	}
 
 	////////// MAP OR LIST ////////////
@@ -117,5 +122,5 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 			}
 		}
 	}
-
+	
 }
