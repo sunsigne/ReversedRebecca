@@ -1,14 +1,18 @@
 
 ////////// IMPORTANT ////////////
+TitleScreen, OldCOnstructor, Wolrd and Button -> to finish
+
+
 La souris est pas top : 
 	- toutes les couches sont actives en même temps
 
 ////////// FACILE ////////////
 Le ButtonObject a un render pas fini !
+MapCreator -> la GUI est ajouté de façon dégeulasse
+
 
 texture manquante pour GUIHealth & LoadingScreen
 vérifier si l'interface Texture dans Ressource-image est utile
-MapCreator -> la GUI est ajouté de façon dégeulasse
 
 World devrait peut-être avoir un meilleur nom de classe ?
 

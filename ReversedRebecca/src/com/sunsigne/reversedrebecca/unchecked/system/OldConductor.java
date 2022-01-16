@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.unchecked.system;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
@@ -38,7 +39,7 @@ public class OldConductor {
 		// LOADING OF RESSOURCES
 		loadRessources();
 
-		World.getInstance().run();
+		new TitleScreen();
 		
 	}
 
