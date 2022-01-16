@@ -12,9 +12,13 @@ public class KeyboardController extends KeyAdapter {
 		Game.getInstance().addKeyListener(this);
 		Game.getInstance().requestFocus();
 	}
-	
+
 	////////// KEYBOARD ////////////
-	
+		
+	public void removeKeyListener() {
+		Game.getInstance().removeKeyListener(this);
+	}
+		
 	private KeyboardEvent keyboardEvent;
 		
 	@Override
@@ -27,4 +31,5 @@ public class KeyboardController extends KeyAdapter {
 		keyboardEvent.keyReleased(e);
 	}
 	
+
 }

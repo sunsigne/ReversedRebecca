@@ -34,6 +34,35 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		return null;
 	}
 
+	public void softRemoveObject(Updatable object) {
+		if (object == null || !cointainsObject(object))
+			return;
+
+		getList().remove(object);
+	}
+
+	@Override
+	public void removeObject(Updatable object) {
+		if (object == null || !cointainsObject(object))
+			return;
+
+		if ((object instanceof GameObject)) {
+			GameObject gameObject = (GameObject) object;
+			gameObject.destroyControls();
+		}
+
+		getList().remove(object);
+	}
+
+	@Override
+	public void clear() {
+		for (Updatable tempUpdatable : getList()) {
+			removeObject(tempUpdatable);
+		}
+		
+		getList().clear();
+	}
+
 	////////// CAMERA ////////////
 
 	private boolean cameraDependant;

@@ -14,14 +14,15 @@ public class MouseController extends MouseAdapter {
 	}
 	
 	////////// MOUSE ////////////
-
+	
+	public void removeMouseListener() {
+		Game.getInstance().removeMouseListener(this);
+	}
+		
 	private MouseUserEvent mouseUserEvent;
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
-		int mx = e.getX();
-		int my = e.getY();
-
 		mouseUserEvent.mousePressed(e);
 	}
 
