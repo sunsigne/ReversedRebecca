@@ -56,7 +56,6 @@ public class MapCreator {
 			}
 		}
 		LAYER.GUI.addObject(new ExempleHP());
-		LAYER.GUI.addObject(new ButtonObject(0, 0, 100, 100));
 		Game.getInstance().forceLoop();
 	}
 		
