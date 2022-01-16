@@ -25,7 +25,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 	}
 	
 	public ExtraBehaviorsObject(int x, int y, int w, int h) {
-		super(x, y);			
+		super(x, y, w, h);			
 	}
 
 	////////// MAP OR LIST ////////////

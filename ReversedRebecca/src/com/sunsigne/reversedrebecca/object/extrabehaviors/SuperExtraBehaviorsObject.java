@@ -12,7 +12,7 @@ public abstract class SuperExtraBehaviorsObject extends GameObject implements Su
 		}
 		
 		public SuperExtraBehaviorsObject(int x, int y, int w, int h) {
-			super(x, y);			
+			super(x, y, w, h);			
 		}
 		
 		////////// SURVELOCICY ////////////
