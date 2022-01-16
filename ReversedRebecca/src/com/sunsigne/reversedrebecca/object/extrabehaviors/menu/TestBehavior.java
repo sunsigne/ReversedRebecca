@@ -8,16 +8,16 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
 public class TestBehavior implements MouseBehavior {
 
-	public TestBehavior(ButtonObject clickable) {
+	public TestBehavior(TestObject clickable) {
 		this.clickable = clickable;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private ButtonObject clickable;
+	private TestObject clickable;
 
 	@Override
-	public ButtonObject getExtraBehaviorsObject() {
+	public TestObject getExtraBehaviorsObject() {
 		return clickable;
 	}
 
