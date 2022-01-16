@@ -4,6 +4,8 @@ La souris est pas top :
 	- toutes les couches sont actives en même temps
 
 ////////// FACILE ////////////
+Le ButtonObject a un render pas fini !
+
 texture manquante pour GUIHealth & LoadingScreen
 vérifier si l'interface Texture dans Ressource-image est utile
 MapCreator -> la GUI est ajouté de façon dégeulasse
