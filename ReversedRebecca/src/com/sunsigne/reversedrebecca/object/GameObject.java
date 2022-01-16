@@ -3,8 +3,6 @@ package com.sunsigne.reversedrebecca.object;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public abstract class GameObject implements Velocity {
 
@@ -20,21 +18,6 @@ public abstract class GameObject implements Velocity {
 		this.h = h;
 		initX = x;
 		initY = y;
-	}
-	
-	////////// DESTRUCTION ////////////
-	
-	public void destroyControls() {
-		
-		if(this instanceof KeyboardEvent) {
-			KeyboardEvent keyboard = (KeyboardEvent) this;
-			keyboard.getKeyBoardController().removeKeyListener();
-		}
-		
-		if(this instanceof MouseUserEvent) {
-			MouseUserEvent mouse = (MouseUserEvent) this;
-			mouse.getMouseController().removeMouseListener();
-		}
 	}
 
 	////////// POSITION ////////////

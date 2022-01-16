@@ -46,20 +46,18 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		if (object == null || !cointainsObject(object))
 			return;
 
-		if ((object instanceof GameObject)) {
-			GameObject gameObject = (GameObject) object;
-			gameObject.destroyControls();
-		}
-
+		object.destroyControls();
 		getList().remove(object);
 	}
 
 	@Override
 	public void clear() {
-		for (Updatable tempUpdatable : getList()) {
-			removeObject(tempUpdatable);
-		}
-		
+		if(getList().size() > 0)
+		{
+			for (Updatable tempUpdatable : getList()) {
+				tempUpdatable.destroyControls();
+			}
+		}		
 		getList().clear();
 	}
 
