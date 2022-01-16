@@ -1,16 +1,9 @@
 
 ////////// IMPORTANT ////////////
-La souris est nulle : 
+La souris est pas top : 
 	- toutes les couches sont actives en même temps
-	- aucun moyen de la désactiver
-	- les fonctions hautes n'ont pas assez de responsabilités
-
 
 ////////// FACILE ////////////
-Le fonctionnement du ButtonObject est Inutillement compliqué : remonter le behavior DANS le bouton
-
-Keyboard controller & mouse - créer une fonction qui RETIRE le listener (à appeler lorsqu'un objet est retiré de l'handler)
-
 texture manquante pour GUIHealth & LoadingScreen
 vérifier si l'interface Texture dans Ressource-image est utile
 MapCreator -> la GUI est ajouté de façon dégeulasse
@@ -19,7 +12,6 @@ World devrait peut-être avoir un meilleur nom de classe ?
 
 
 passer le constructeur Window en protected
-pas fini : ExempleHP / Player / Foe / MapCreator
 
 implement default caracter when name is incorrect
 
