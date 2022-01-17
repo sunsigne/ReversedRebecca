@@ -14,7 +14,7 @@ public class Window {
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
 
-	public Window(Game game) {
+	protected Window(Game game) {
 
 		game.setMinimumSize(new Dimension(WIDHT, HEIGHT));
 		game.setMaximumSize(new Dimension(WIDHT, HEIGHT));
