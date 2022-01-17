@@ -7,8 +7,8 @@ import java.awt.image.BufferStrategy;
 import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.system.OldConductor;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.unchecked.system.OldConductor;
 
 public class Game extends Canvas implements Runnable {
 
