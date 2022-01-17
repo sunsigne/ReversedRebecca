@@ -13,18 +13,26 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 public class ImageTask {
 
 	private final URL loc = Game.class.getProtectionDomain().getCodeSource().getLocation();
-
+	
 	public BufferedImage loadImage(String path) {
+		return loadImage(path, null);
+	}
+	
+	public BufferedImage loadImage(String path, String backupPath) {
 
 		BufferedImage image = null;
 
+		if(path == null) 
+			return drawMissingTexture();
+		
 		try {
 			String path0 = "/ressources/" + path;
+			path = null;
 			URL url = new File((new File(loc.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
 		} catch (Exception e) {
 			e.printStackTrace();
-			image = drawMissingTexture();
+			image = loadImage(backupPath, path);
 		}
 
 		return image;

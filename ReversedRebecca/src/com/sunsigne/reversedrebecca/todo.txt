@@ -7,6 +7,10 @@ La souris est pas top :
 	- toutes les couches sont actives en même temps
 
 ////////// FACILE ////////////
+Mappable -> réorganiser les dossiers si nombreux ?
+
+Est-ce que GameCusror a vraiment besoin d'une pos ? MouseEvent e fait déjà ce travail ...
+
 Le ButtonObject a un render pas fini !
 MapCreator -> la GUI est ajouté de façon dégeulasse
 
@@ -19,12 +23,12 @@ World devrait peut-être avoir un meilleur nom de classe ?
 
 passer le constructeur Window en protected
 
-implement default caracter when name is incorrect
-
 MapCreator mappable_list pourrait être en protected
 
 
 ////////// DIFFICILE ////////////
+changer le MapCreator de sorte qu'il ajoute les objets dans des handlers différents en fonction de l'image chargée
+
 animation de tourbillon de vent de temps en temps ?
 
 ///////// A TRIER ////////////
