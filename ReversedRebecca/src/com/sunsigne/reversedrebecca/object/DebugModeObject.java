@@ -1,14 +1,12 @@
-package com.sunsigne.reversedrebecca.object.debug;
+package com.sunsigne.reversedrebecca.object;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public abstract class DebugModeObject extends GameObject implements Texture {
+public class DebugModeObject extends GameObject {
 
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
@@ -31,7 +29,7 @@ public abstract class DebugModeObject extends GameObject implements Texture {
 	@Override
 	public void render(Graphics g) {
 		if (debugMode.getState())
-			g.drawImage(getImage(), getX(), getY() - (debugMode.getIndex() - 1) * getHeight(), getWidth(), getHeight(),
+			g.drawImage(debugMode.getImage(), getX(), getY() - (debugMode.getIndex()) * getHeight(), getWidth(), getHeight(),
 					null);
 	}
 

@@ -5,31 +5,25 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.debug.VisibleHitboxObject;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class VisibleHitboxMode extends DebugMode {
 
-	private static VisibleHitboxMode debugMode = new VisibleHitboxMode();
-
-	static {
-		PhysicList.getList().addObject(debugMode);
-		LAYER.DEBUG.addObject(new VisibleHitboxObject(debugMode));
-	}
-
 	////////// DEBUG MODE ////////////
 
-	@Override
-	public int getIndex() {
-		return 2;
-	}
+	private static DebugMode debugMode = new VisibleHitboxMode();
 	
+	@Override
+	public DebugMode getDebugMode() {
+		return debugMode;
+	}
+
 	@Override
 	protected void actionWhenTurnedOn() {
 
@@ -46,7 +40,16 @@ public class VisibleHitboxMode extends DebugMode {
 	public void tick(Updatable object) {
 
 	}
+	
+	////////// TEXTURE ////////////
 
+	private BufferedImage img = new ImageTask().loadImage("textures/debug_visible_hitbox_mode.png");
+	
+	@Override
+	public BufferedImage getImage() {
+		return img;
+	}
+		
 	////////// RENDER ////////////
 
 	@Override
@@ -101,11 +104,11 @@ public class VisibleHitboxMode extends DebugMode {
 		g2d.fill(reactorObject.getBounds());
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
-	
+
 	////////// KEYBOARD ////////////
 
 	@Override
-	public int getKeyEvent() {
+	protected int getKeyEvent() {
 		return KeyEvent.VK_F2;
 	}
 

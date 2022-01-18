@@ -4,28 +4,23 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.debug.WallPassObject;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class WallPassMode extends DebugMode {
 
-	private static WallPassMode debugMode = new WallPassMode();
-
-	static {
-		PhysicList.getList().addObject(debugMode);
-		LAYER.DEBUG.addObject(new WallPassObject(debugMode));
-	}
-
 	////////// DEBUG MODE ////////////
 
+	private static DebugMode debugMode = new WallPassMode();
+	
 	@Override
-	public int getIndex() {
-		return 3;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	@Override
@@ -44,6 +39,15 @@ public class WallPassMode extends DebugMode {
 	public void tick(Updatable object) {
 
 	}
+	
+	////////// TEXTURE ////////////
+
+	private BufferedImage img = new ImageTask().loadImage("textures/debug_wall_pass_mode.png");
+	
+	@Override
+	public BufferedImage getImage() {
+		return img;
+	}	
 
 	////////// RENDER ////////////
 
@@ -73,7 +77,7 @@ public class WallPassMode extends DebugMode {
 	////////// KEYBOARD ////////////
 
 	@Override
-	public int getKeyEvent() {
+	protected int getKeyEvent() {
 		return KeyEvent.VK_F3;
 	}
 

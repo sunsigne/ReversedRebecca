@@ -7,6 +7,8 @@ La souris est pas top :
 	- toutes les couches sont actives en même temps
 
 ////////// FACILE ////////////
+FastMode -> quand il n'y a pas de joueur, risque de REDUIRE la vitesse de ce dernier
+
 Mappable -> réorganiser les dossiers si nombreux ?
 
 Est-ce que GameCusror a vraiment besoin d'une pos ? MouseEvent e fait déjà ce travail ...
