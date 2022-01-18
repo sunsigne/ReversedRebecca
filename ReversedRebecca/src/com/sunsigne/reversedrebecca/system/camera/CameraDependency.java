@@ -11,6 +11,8 @@ public interface CameraDependency {
 	
 	boolean isCameraDependant();
 	
+	////////// RENDER ////////////
+	
 	default void renderDependency(Graphics g, boolean active) {
 		if (!isCameraDependant())
 			return;

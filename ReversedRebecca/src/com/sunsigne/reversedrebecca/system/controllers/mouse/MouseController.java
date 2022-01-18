@@ -10,15 +10,14 @@ public class MouseController extends MouseAdapter {
 	public MouseController(MouseUserEvent mouseUserEvent) {
 		this.mouseUserEvent = mouseUserEvent;
 		Game.getInstance().addMouseListener(this);
-		Game.getInstance().requestFocus();
 	}
-	
-	////////// MOUSE ////////////
 	
 	public void removeMouseListener() {
 		Game.getInstance().removeMouseListener(this);
 	}
-		
+			
+	////////// MOUSE ////////////
+	
 	private MouseUserEvent mouseUserEvent;
 	
 	@Override

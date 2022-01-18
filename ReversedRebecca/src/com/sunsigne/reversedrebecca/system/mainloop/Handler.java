@@ -16,9 +16,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		this.cameraDependant = cameraDependant;
 		SuperHandler.getGameList().addObject(this);
 	}
-
-	////////// MAP OR LIST ////////////
-
+	
+	////////// USEFULL ////////////
+	
 	public static GameObject getObjectAtPos(Handler layer, int x, int y) {
 
 		for (Updatable tempUpdatable : layer.getList()) {
@@ -33,6 +33,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		}
 		return null;
 	}
+
+	////////// MAP OR LIST ////////////
 
 	public void softRemoveObject(Updatable object) {
 		if (object == null || !cointainsObject(object))

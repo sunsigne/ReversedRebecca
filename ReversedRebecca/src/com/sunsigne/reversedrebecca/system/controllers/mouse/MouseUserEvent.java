@@ -29,7 +29,7 @@ public interface MouseUserEvent {
 		if (rect.length == 4)
 			return mouseOver(e, rect[0], rect[1], rect[2], rect[3]);
 		else
-			System.err.println("the array rect in method mouseOver should be 4 int long");
+			System.err.println("the method mouseOver(e, rect) is not used correcly");
 		return false;
 	}
 }

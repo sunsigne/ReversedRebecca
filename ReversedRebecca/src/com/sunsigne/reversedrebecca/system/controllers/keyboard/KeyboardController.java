@@ -12,13 +12,13 @@ public class KeyboardController extends KeyAdapter {
 		Game.getInstance().addKeyListener(this);
 		Game.getInstance().requestFocus();
 	}
-
-	////////// KEYBOARD ////////////
-		
+	
 	public void removeKeyListener() {
 		Game.getInstance().removeKeyListener(this);
 	}
 		
+	////////// KEYBOARD ////////////
+	
 	private KeyboardEvent keyboardEvent;
 		
 	@Override
