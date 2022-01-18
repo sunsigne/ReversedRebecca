@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.OldConductor;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -66,7 +67,12 @@ public class World implements Updatable, KeyboardEvent {
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		if (key == KeyEvent.VK_ESCAPE)
-			new OldConductor().stopApp();
+		{
+			LAYER.GROUND.getHandler().clear();
+			LAYER.WORLD.getHandler().clear();
+			new TitleScreen();
+		}
+			
 
 		if (key == KeyEvent.VK_R) {
 			LAYER.WORLD.getHandler().clear();
