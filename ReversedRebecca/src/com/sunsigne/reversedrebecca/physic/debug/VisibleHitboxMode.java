@@ -5,12 +5,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VisibleHitboxMode extends DebugMode {
@@ -22,6 +20,11 @@ public class VisibleHitboxMode extends DebugMode {
 	@Override
 	public DebugMode getDebugMode() {
 		return debugMode;
+	}
+		
+	@Override
+	public String getName() {
+		return "debug_visible_hitbox_mode";
 	}
 
 	@Override
@@ -40,16 +43,7 @@ public class VisibleHitboxMode extends DebugMode {
 	public void tick(Updatable object) {
 
 	}
-	
-	////////// TEXTURE ////////////
 
-	private BufferedImage img = new ImageTask().loadImage("textures/debug_visible_hitbox_mode.png");
-	
-	@Override
-	public BufferedImage getImage() {
-		return img;
-	}
-		
 	////////// RENDER ////////////
 
 	@Override

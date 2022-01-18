@@ -24,6 +24,11 @@ public class ExempleHP extends GameObject implements Texture {
 	////////// TEXTURE ////////////
 
 	@Override
+	public void createTexture() {
+
+	}
+	
+	@Override
 	public BufferedImage getImage() {
 		return null;
 	}

@@ -8,5 +8,7 @@ public interface Texture extends Position {
 	
 	////////// TEXTURE ////////////
 	
+	void createTexture();
+	
 	BufferedImage getImage();
 }

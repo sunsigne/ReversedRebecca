@@ -4,12 +4,10 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WallPassMode extends DebugMode {
@@ -21,6 +19,11 @@ public class WallPassMode extends DebugMode {
 	@Override
 	public DebugMode getDebugMode() {
 		return debugMode;
+	}
+		
+	@Override
+	public String getName() {
+		return "debug_wall_pass_mode";
 	}
 
 	@Override
@@ -40,15 +43,6 @@ public class WallPassMode extends DebugMode {
 
 	}
 	
-	////////// TEXTURE ////////////
-
-	private BufferedImage img = new ImageTask().loadImage("textures/debug_wall_pass_mode.png");
-	
-	@Override
-	public BufferedImage getImage() {
-		return img;
-	}	
-
 	////////// RENDER ////////////
 
 	private boolean isDetectorObject(Updatable object) {

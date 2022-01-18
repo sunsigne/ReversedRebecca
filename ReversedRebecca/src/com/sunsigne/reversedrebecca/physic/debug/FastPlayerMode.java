@@ -2,11 +2,9 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FastPlayerMode extends DebugMode {
@@ -18,6 +16,11 @@ public class FastPlayerMode extends DebugMode {
 	@Override
 	public DebugMode getDebugMode() {
 		return debugMode;
+	}
+	
+	@Override
+	public String getName() {
+		return "debug_fast_player_mode";
 	}
 
 	@Override
@@ -37,15 +40,6 @@ public class FastPlayerMode extends DebugMode {
 	@Override
 	public void tick(Updatable object) {
 
-	}
-		
-	////////// TEXTURE ////////////
-	
-	private BufferedImage img = new ImageTask().loadImage("textures/debug_fast_player_mode.png");
-	
-	@Override
-	public BufferedImage getImage() {
-		return img;
 	}
 		
 	////////// RENDER ////////////

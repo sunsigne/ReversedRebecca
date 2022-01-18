@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.DebugModeObject;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
@@ -31,14 +30,12 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 
 	public abstract DebugMode getDebugMode();
 
+	public abstract String getName();
+	
 	protected abstract void actionWhenTurnedOn();
 
 	protected abstract void actionWhenTurnedOff();
 	
-	////////// TEXTURE ////////////
-	
-	public abstract BufferedImage getImage();
-
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
