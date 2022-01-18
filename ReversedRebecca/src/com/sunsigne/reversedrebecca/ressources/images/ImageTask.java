@@ -8,12 +8,10 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.Infos;
 
 public class ImageTask {
 
-	private final URL loc = Game.class.getProtectionDomain().getCodeSource().getLocation();
-	
 	public BufferedImage loadImage(String path) {
 		return loadImage(path, null);
 	}
@@ -28,7 +26,7 @@ public class ImageTask {
 		try {
 			String path0 = "/ressources/" + path;
 			path = null;
-			URL url = new File((new File(loc.toURI())).getParent() + path0).toURI().toURL();
+			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
 		} catch (Exception e) {
 			e.printStackTrace();
