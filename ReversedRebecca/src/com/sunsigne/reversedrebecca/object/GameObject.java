@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class GameObject implements Velocity {
