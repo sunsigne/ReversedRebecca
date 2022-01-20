@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 public class MappableFoe implements Mappable {
 
 	static {
-		MapCreator.mappable_list.addObject(new MappableFoe());
+		new MapCreator().getList().addObject(new MappableFoe());
 	}
 	
 	////////// MAPPABLE ////////////

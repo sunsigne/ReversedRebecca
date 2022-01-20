@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.menu.ButtonObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.menu.TestObject;
 import com.sunsigne.reversedrebecca.object.gui.ExempleHP;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -17,8 +18,16 @@ import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class MapCreator {
 
-	public static GameLimitedList<Mappable> mappable_list = new GameLimitedList<Mappable>(LISTTYPE.ARRAY);
+	////////// MAP OR LIST ////////////
+	
+	private static GameLimitedList<Mappable> mappable_list = new GameLimitedList<Mappable>(LISTTYPE.ARRAY);
 
+	public GameLimitedList<Mappable> getList() {
+		return mappable_list;
+	}
+	
+	////////// LEVEL CREATOR ////////////
+	
 	public void loadLevel(BufferedImage image) {
 
 		int w = image.getWidth();

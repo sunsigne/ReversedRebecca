@@ -21,12 +21,6 @@ vérifier si l'interface Texture dans Ressource-image est utile, et si oui l'util
 
 World devrait peut-être avoir un meilleur nom de classe ?
 
-
-passer le constructeur Window en protected
-
-MapCreator mappable_list pourrait être en protected
-
-
 ////////// DIFFICILE ////////////
 changer le MapCreator de sorte qu'il ajoute les objets dans des handlers différents en fonction de l'image chargée
 
