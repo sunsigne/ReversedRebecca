@@ -9,19 +9,22 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VisibleHitboxMode extends DebugMode {
 
-	////////// DEBUG MODE ////////////
-
-	private static DebugMode debugMode = new VisibleHitboxMode();
+	////////// PHYSIC LAW ////////////
+	
+	private static PhysicLaw physicLaw = new VisibleHitboxMode();
 	
 	@Override
-	public DebugMode getDebugMode() {
-		return debugMode;
+	public PhysicLaw getPhysicLaw() {
+		return physicLaw;
 	}
-		
+	
+	////////// DEBUG MODE ////////////
+
 	@Override
 	public String getName() {
 		return "debug_visible_hitbox_mode";

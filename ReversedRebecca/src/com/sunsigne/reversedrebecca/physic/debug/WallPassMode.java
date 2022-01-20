@@ -8,19 +8,22 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
+import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WallPassMode extends DebugMode {
 
+	////////// PHYSIC LAW ////////////
+
+	private static PhysicLaw physicLaw = new WallPassMode();
+
+	@Override
+	public PhysicLaw getPhysicLaw() {
+		return physicLaw;
+	}
+
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new WallPassMode();
-	
-	@Override
-	public DebugMode getDebugMode() {
-		return debugMode;
-	}
-		
 	@Override
 	public String getName() {
 		return "debug_wall_pass_mode";
@@ -28,12 +31,12 @@ public class WallPassMode extends DebugMode {
 
 	@Override
 	protected void actionWhenTurnedOn() {
-		PhysicList.getList().removeObject(new CollisionLaw());
+		PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
 	}
 
 	@Override
 	protected void actionWhenTurnedOff() {
-		PhysicList.getList().addObject(new CollisionLaw());
+		PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
 	}
 
 	////////// TICK ////////////

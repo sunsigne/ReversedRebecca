@@ -11,10 +11,19 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class CollisionLaw implements PhysicLaw {
 
-	static {
-		PhysicList.getList().addObject(new CollisionLaw());
+	////////// PHYSIC LAW ////////////
+	
+	public CollisionLaw() {
+		PhysicList.getList().addObject(this);
 	}
-
+	
+	private static PhysicLaw physicLaw = new CollisionLaw();
+	
+	@Override
+	public PhysicLaw getPhysicLaw() {
+		return physicLaw;
+	}
+	
 	////////// TICK ////////////
 
 	@Override

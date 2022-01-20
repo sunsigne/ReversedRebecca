@@ -28,8 +28,6 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 	
 	////////// DEBUG MODE ////////////
 
-	public abstract DebugMode getDebugMode();
-
 	public abstract String getName();
 	
 	protected abstract void actionWhenTurnedOn();

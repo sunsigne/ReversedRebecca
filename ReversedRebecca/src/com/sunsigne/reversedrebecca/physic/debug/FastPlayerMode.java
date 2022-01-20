@@ -5,19 +5,22 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FastPlayerMode extends DebugMode {
 
+	////////// PHYSIC LAW ////////////
+
+	private static PhysicLaw physicLaw = new FastPlayerMode();
+
+	@Override
+	public PhysicLaw getPhysicLaw() {
+		return physicLaw;
+	}
+
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new FastPlayerMode();
-	
-	@Override
-	public DebugMode getDebugMode() {
-		return debugMode;
-	}
-	
 	@Override
 	public String getName() {
 		return "debug_fast_player_mode";
@@ -26,13 +29,15 @@ public class FastPlayerMode extends DebugMode {
 	@Override
 	protected void actionWhenTurnedOn() {
 		Player player = new PlayerFinder().getPlayer();
-		if(player != null) player.speed = 3 * player.speed;
+		if (player != null)
+			player.speed = 3 * player.speed;
 	}
 
 	@Override
 	protected void actionWhenTurnedOff() {
 		Player player = new PlayerFinder().getPlayer();
-		if(player != null) player.speed = player.speed / 3;
+		if (player != null)
+			player.speed = player.speed / 3;
 	}
 
 	////////// TICK ////////////
@@ -41,9 +46,9 @@ public class FastPlayerMode extends DebugMode {
 	public void tick(Updatable object) {
 
 	}
-		
+
 	////////// RENDER ////////////
-	
+
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
 
