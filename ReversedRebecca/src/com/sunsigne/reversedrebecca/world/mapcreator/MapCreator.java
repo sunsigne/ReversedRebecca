@@ -55,14 +55,17 @@ public class MapCreator {
 					if (red == tempRed && green == tempGreen && blue == tempBlue)
 					{					
 						GameObject obj = tempMappable.createObject(x0, y0);
-						Handler handler = LAYER.WORLD.getHandler();
+						Handler handler = getHandler(image);
 						handler.addObject(obj);						
 					}
 				}
 			}
-		}
-		LAYER.GUI.addObject(new ExempleHP());
+		}		
 		Game.getInstance().forceLoop();
+	}
+	
+	private Handler getHandler(BufferedImage image) {
+		return LAYER.WORLD.getHandler();
 	}
 		
 }

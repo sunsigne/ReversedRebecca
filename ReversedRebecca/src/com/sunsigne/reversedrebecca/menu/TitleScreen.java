@@ -29,7 +29,7 @@ public class TitleScreen implements Updatable, KeyboardEvent {
 		onRelease = () -> 
 		{
 			LAYER.GUI.getHandler().clear();
-			World.getInstance().run();
+			new World("lvl001").run();
 		};
 		
 		quitButton = new ButtonObject(500, 300, 500, 100, onPress, onRelease);
