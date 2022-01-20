@@ -60,6 +60,7 @@ public class OldConductor {
 //		ImageBank.loadRessources();
 		
 		new ForceInit().loadAllClassesInPackage(PhysicLaw.class.getPackageName());
+		// because Debug Modes are alterned Physic Laws, they have to be loaded AFTER
 		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());		
 		
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
