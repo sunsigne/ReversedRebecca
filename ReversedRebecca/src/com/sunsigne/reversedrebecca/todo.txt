@@ -17,7 +17,6 @@ MapCreator -> la GUI est ajouté de façon dégeulasse
 
 
 texture manquante pour GUIHealth & LoadingScreen
-vérifier si l'interface Texture dans Ressource-image est utile, et si oui l'utiliser + souvent
 
 World devrait peut-être avoir un meilleur nom de classe ?
 

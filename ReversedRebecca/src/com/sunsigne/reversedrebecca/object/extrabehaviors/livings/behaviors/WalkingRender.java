@@ -9,12 +9,13 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.Texture;
 
-public class WalkingRender implements TickBehavior, RenderBehavior {
+public class WalkingRender implements TickBehavior, RenderBehavior, Texture {
 
 	public WalkingRender(LivingObject living) {
 		this.living = living;
-		initAnimations();
+		createTexture();
 	}
 
 	////////// BEHAVIOR ////////////
@@ -25,7 +26,7 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 	public LivingObject getExtraBehaviorsObject() {
 		return living;
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ANIMATION_TIME = 10;
@@ -59,39 +60,49 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 
 	@SuppressWarnings("unchecked")
 	private Cycloid<BufferedImage>[] walking = new Cycloid[4];
+	private BufferedImage ground;
 
-	private void initAnimations() {
-		walking[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.LEFT));
-		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.RIGHT));
-		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.UP));
-		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(getImages(DIRECTION.DOWN));
+	@Override
+	public void createTexture() {
+		walking[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.LEFT));
+		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.RIGHT));
+		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.UP));
+		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.DOWN));
+		ground = loadImage("ground");
 	}
+	
+	private BufferedImage[] getAnimation(DIRECTION direction) {
 
-	private BufferedImage getImage(String imageName) {
+		BufferedImage img0 = loadImage(direction.getName() + "_1");
+		BufferedImage img1 = loadImage(direction.getName() + "_0");
+		BufferedImage img2 = loadImage(direction.getName() + "_1");
+		BufferedImage img3 = loadImage(direction.getName() + "_2");
+
+		return new BufferedImage[] { img0, img1, img2, img3 };
+	}
+	
+	private BufferedImage loadImage(String imageName) {
 		String imagePath = "textures/characters/" + living.getName() + "/walking_" + imageName + ".png";
 		String backupImagePath = "textures/characters/" + "error" + "/walking_" + imageName + ".png";
-		
+
 		return new ImageTask().loadImage(imagePath, backupImagePath);
 	}
 
-	private BufferedImage[] getImages(DIRECTION direction) {
-
-		BufferedImage img0 = getImage(direction.getName() + "_1");
-		BufferedImage img1 = getImage(direction.getName() + "_0");
-		BufferedImage img2 = getImage(direction.getName() + "_1");
-		BufferedImage img3 = getImage(direction.getName() + "_2");
-
-		return new BufferedImage[] { img0, img1, img2, img3 };
+	@Override
+	public BufferedImage getImage() {
+		int facing = living.getFacing().getNum();
+		
+		if (facing > -1)
+			return walking[facing].getState();
+		else
+			return ground;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-
-		int facing = living.getFacing().getNum();
-		BufferedImage img = facing > -1 ? walking[facing].getState() : getImage("ground");
-		g.drawImage(img, living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
+		g.drawImage(getImage(), living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
 	}
-	
+
 }
