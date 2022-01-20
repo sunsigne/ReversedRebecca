@@ -7,13 +7,12 @@ La souris est pas top :
 	- toutes les couches sont actives en même temps
 
 ////////// FACILE ////////////
-GamoObject il y a un problème avec InitX et les Mappables : il ne sera pas au bon endroit
 
 FastMode -> quand il n'y a pas de joueur, risque de REDUIRE la vitesse de ce dernier
 
 World : quitter le monde et revenir dedans fait tout planter
 
-Mappable -> réorganiser les dossiers si nombreux ?
+Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 
 Le ButtonObject a un render pas fini !
 MapCreator -> la GUI est ajouté de façon dégeulasse

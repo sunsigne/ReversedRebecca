@@ -6,7 +6,7 @@ public interface Mappable {
 
 	////////// MAPPABLE ////////////
 	
-	GameObject getObject();
+	GameObject createObject(int x, int y);
 		
 	int[] rgbCode();
 	

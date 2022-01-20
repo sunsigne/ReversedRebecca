@@ -45,10 +45,7 @@ public class MapCreator {
 					
 					if (red == tempRed && green == tempGreen && blue == tempBlue)
 					{					
-						GameObject obj = tempMappable.getObject();
-						obj.setX(x0);
-						obj.setY(y0);
-						
+						GameObject obj = tempMappable.createObject(x0, y0);
 						Handler handler = LAYER.WORLD.getHandler();
 						handler.addObject(obj);						
 					}

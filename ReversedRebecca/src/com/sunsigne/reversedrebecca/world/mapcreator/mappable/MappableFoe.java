@@ -13,8 +13,8 @@ public class MappableFoe implements Mappable {
 	////////// MAPPABLE ////////////
 	
 	@Override
-	public GameObject getObject() {
-		return new Foe(0, 0);
+	public GameObject createObject(int x, int y) {
+		return new Foe(x, y);
 	}
 	
 	@Override
