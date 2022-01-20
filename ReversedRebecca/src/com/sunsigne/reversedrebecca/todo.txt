@@ -8,8 +8,6 @@ La souris est pas top :
 
 ////////// FACILE ////////////
 
-FastMode -> quand il n'y a pas de joueur, risque de REDUIRE la vitesse de ce dernier
-
 World : quitter le monde et revenir dedans fait tout planter
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws

@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
+// do the trick, but does NOT handler retroaction
 public class FastPlayerMode extends DebugMode {
 
 	////////// PHYSIC LAW ////////////
