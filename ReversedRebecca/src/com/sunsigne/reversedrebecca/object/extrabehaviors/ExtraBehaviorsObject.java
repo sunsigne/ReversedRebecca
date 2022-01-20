@@ -126,7 +126,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		}
 	}
 	
-	//////////MOUSE ////////////
+	////////// MOUSE ////////////
 		
 	private MouseController mouseController = new MouseController(this);
 	
