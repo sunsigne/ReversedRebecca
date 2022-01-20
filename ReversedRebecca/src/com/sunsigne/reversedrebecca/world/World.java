@@ -19,6 +19,7 @@ public class World implements Updatable, KeyboardEvent {
 
 	public World(String level_name) {
 		this.level_name = level_name;
+		createTexture();
 		LAYER.GROUND.addObject(this);
 	}
 
