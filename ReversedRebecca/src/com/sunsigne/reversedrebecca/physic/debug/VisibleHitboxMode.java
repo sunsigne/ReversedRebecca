@@ -106,7 +106,7 @@ public class VisibleHitboxMode extends DebugMode {
 
 	@Override
 	protected int getKeyEvent() {
-		return KeyEvent.VK_F2;
+		return KeyEvent.VK_F3;
 	}
 
 }

@@ -64,7 +64,7 @@ public class FastPlayerMode extends DebugMode {
 
 	@Override
 	protected int getKeyEvent() {
-		return KeyEvent.VK_F1;
+		return KeyEvent.VK_F2;
 	}
 
 }

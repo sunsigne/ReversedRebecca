@@ -75,7 +75,7 @@ public class WallPassMode extends DebugMode {
 
 	@Override
 	protected int getKeyEvent() {
-		return KeyEvent.VK_F3;
+		return KeyEvent.VK_F4;
 	}
 
 }
