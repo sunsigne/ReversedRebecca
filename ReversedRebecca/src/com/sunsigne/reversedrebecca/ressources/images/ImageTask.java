@@ -13,24 +13,29 @@ import com.sunsigne.reversedrebecca.Infos;
 public class ImageTask {
 
 	public BufferedImage loadImage(String path) {
-		return loadImage(path, null);
+		return loadImage(path, null, true);
 	}
-	
-	public BufferedImage loadImage(String path, String backupPath) {
+
+	public BufferedImage loadImage(String path, boolean showError) {
+		return loadImage(path, null, showError);
+	}
+
+	public BufferedImage loadImage(String path, String backupPath, boolean showError) {
 
 		BufferedImage image = null;
 
-		if(path == null) 
+		if (path == null)
 			return drawMissingTexture();
-		
+
 		try {
 			String path0 = "/ressources/" + path;
 			path = null;
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
 		} catch (Exception e) {
-			e.printStackTrace();
-			image = loadImage(backupPath, path);
+			if (showError)
+				e.printStackTrace();
+			image = loadImage(backupPath, path, showError);
 		}
 
 		return image;
