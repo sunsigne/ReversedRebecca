@@ -18,7 +18,8 @@ MapCreator -> la GUI est ajouté de façon dégeulasse
 
 texture manquante pour GUIHealth & LoadingScreen
 
-World devrait peut-être avoir un meilleur nom de classe ?
+WorldHolder devrait prendre les paramètre de clavier de qq part pour les appliquer à World,
+La fonction run() est dégeulasse (augmenter son abstraction)
 
 ////////// DIFFICILE ////////////
 changer le MapCreator de sorte qu'il ajoute les objets dans des handlers différents en fonction de l'image chargée

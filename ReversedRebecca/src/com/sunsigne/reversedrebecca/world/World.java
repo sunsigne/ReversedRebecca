@@ -15,20 +15,18 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
-public class World implements Updatable, KeyboardEvent {
+public class World extends WorldHolder implements KeyboardEvent {
 
 	public World(String level_name) {
-		this.level_name = level_name;
-		createTexture();
+		super(level_name);
 		LAYER.GROUND.addObject(this);
 	}
 
-	private String level_name;
 
 	////////// ??? ////////////
 
 	public void run() {
-		new MapCreator().loadLevel(world_image);
+		new MapCreator().loadLevel(getGameMap(LAYER.WORLD));
 
 		LAYER.GUI.addObject(new ExempleHP());
 	}
@@ -38,22 +36,6 @@ public class World implements Updatable, KeyboardEvent {
 	@Override
 	public void tick() {
 
-	}
-
-	////////// TEXTURE ////////////
-
-	private BufferedImage ground_image;
-	private BufferedImage world_image;
-
-
-	public void createTexture() {
-		ground_image = new ImageTask().loadImage("maps/" + level_name + "/ground" + ".png");
-		world_image = new ImageTask().loadImage("maps/" + level_name + "/world" + ".png");
-	}
-
-
-	public BufferedImage getImage() {
-		return ground_image;
 	}
 
 	////////// RENDER ////////////
