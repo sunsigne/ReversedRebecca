@@ -2,17 +2,12 @@ package com.sunsigne.reversedrebecca.world;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
-import com.sunsigne.reversedrebecca.system.OldConductor;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
 public class World extends WorldHolder implements KeyboardEvent {

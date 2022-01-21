@@ -5,16 +5,15 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class DebugModeObject extends GameObject implements Texture {
+public class DebugModeObject extends GameObject {
 
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
 		this.debugMode = debugMode;
-		createTexture();
+		loadImage();
 	}
 
 	////////// DEBUG MODE ////////////
@@ -32,25 +31,17 @@ public class DebugModeObject extends GameObject implements Texture {
 	
 	private BufferedImage img;
 	
-	@Override
-	public void createTexture() {
+	private void loadImage() {
 		img = new ImageTask().loadImage("textures/" + debugMode.getName() + ".png");
 	}
 	
-	@Override
-	public BufferedImage getImage() {
-		return img;
-	}
-
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
 		if (debugMode.getState())
-			g.drawImage(getImage(), getX(), getY() - (debugMode.getIndex()) * getHeight(), getWidth(), getHeight(),
+			g.drawImage(img, getX(), getY() - (debugMode.getIndex()) * getHeight(), getWidth(), getHeight(),
 					null);
 	}
-
-
 
 }

@@ -1,20 +1,17 @@
 package com.sunsigne.reversedrebecca.object.gui;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class GuiHealth extends GameObject implements Texture {
+public class GuiHealth extends GameObject {
 
 	public GuiHealth() {
 		super(0, 0);
-		createTexture();
+		loadImages();
 	}
 
 	////////// TICK ////////////
@@ -29,13 +26,11 @@ public class GuiHealth extends GameObject implements Texture {
 	private BufferedImage heart_empty_img;
 	private BufferedImage heart_full_img;
 	
-	@Override
-	public void createTexture() {
+	private void loadImages() {
 		heart_empty_img = new ImageTask().loadImage("textures/" + "gui_heart_empty" + ".png");
 		heart_full_img = new ImageTask().loadImage("textures/" + "gui_heart_full" + ".png");
 	}
 	
-	@Override
 	public BufferedImage getImage() {
 		return heart_full_img;
 	}

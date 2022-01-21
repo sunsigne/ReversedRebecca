@@ -9,13 +9,12 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.images.Texture;
 
-public class WalkingRender implements TickBehavior, RenderBehavior, Texture {
+public class WalkingRender implements TickBehavior, RenderBehavior {
 
 	public WalkingRender(LivingObject living) {
 		this.living = living;
-		createTexture();
+		loadAnimations();
 	}
 
 	////////// BEHAVIOR ////////////
@@ -62,16 +61,15 @@ public class WalkingRender implements TickBehavior, RenderBehavior, Texture {
 	private Cycloid<BufferedImage>[] walking = new Cycloid[4];
 	private BufferedImage ground;
 
-	@Override
-	public void createTexture() {
-		walking[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.LEFT));
-		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.RIGHT));
-		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.UP));
-		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(getAnimation(DIRECTION.DOWN));
+	private void loadAnimations() {
+		walking[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.LEFT));
+		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.RIGHT));
+		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.UP));
+		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.DOWN));
 		ground = loadImage("ground");
 	}
 	
-	private BufferedImage[] getAnimation(DIRECTION direction) {
+	private BufferedImage[] loadAnimation(DIRECTION direction) {
 
 		BufferedImage img0 = loadImage(direction.getName() + "_1");
 		BufferedImage img1 = loadImage(direction.getName() + "_0");
@@ -88,21 +86,20 @@ public class WalkingRender implements TickBehavior, RenderBehavior, Texture {
 		return new ImageTask().loadImage(imagePath, backupImagePath, true);
 	}
 
+	////////// RENDER ////////////
+
 	@Override
-	public BufferedImage getImage() {
+	public void render(Graphics g) {
+		g.drawImage(getImage(), living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
+	}
+	
+	private BufferedImage getImage() {
 		int facing = living.getFacing().getNum();
 		
 		if (facing > -1)
 			return walking[facing].getState();
 		else
 			return ground;
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		g.drawImage(getImage(), living.getX(), living.getY(), living.getWidth(), living.getHeight(), null);
 	}
 
 }

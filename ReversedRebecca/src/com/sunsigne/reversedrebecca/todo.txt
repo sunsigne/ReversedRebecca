@@ -17,7 +17,6 @@ MapCreator -> la GUI est ajouté de façon dégeulasse
 
 Textures (dossier des textures à ranger)
 GuiHealth getImage ne retourne QUE le coeur plein
-Texture (peut-être faire comme pour le clavier : un truc qui instancifie directement createTexture()
 
 WorldHolder devrait prendre les paramètre de clavier de qq part pour les appliquer à World,
 La fonction run() est dégeulasse (augmenter son abstraction)
