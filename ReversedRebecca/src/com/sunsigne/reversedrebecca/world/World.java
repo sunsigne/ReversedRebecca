@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.world;
 
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
@@ -40,6 +42,10 @@ public class World extends WorldHolder implements KeyboardEvent {
 		int pixel = 16;
 		g.drawImage(getImage(), 0, 0, getImage().getWidth() * Size.M / pixel, getImage().getHeight() * Size.M / pixel,
 				null);
+	}
+
+	private BufferedImage getImage() {
+		return getGameMap(LAYER.GROUND).getImage();
 	}
 
 	////////// KEYBOARD ////////////

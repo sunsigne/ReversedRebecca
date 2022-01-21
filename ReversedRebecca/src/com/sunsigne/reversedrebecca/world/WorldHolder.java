@@ -39,12 +39,4 @@ public abstract class WorldHolder implements Updatable {
 		return null;
 	}
 
-	public BufferedImage getImage() {
-		for (GameMap tempMap : gameMap_data_list.getList()) {
-			if (tempMap.getLayer().getHandler() == getHandler())
-				return tempMap.getImage();
-		}
-		return new ImageTask().drawMissingTexture();
-	}
-
 }
