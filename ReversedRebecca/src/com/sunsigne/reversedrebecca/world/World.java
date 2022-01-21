@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.object.gui.ExempleHP;
+import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.Texture;
 import com.sunsigne.reversedrebecca.system.OldConductor;
@@ -28,7 +28,7 @@ public class World extends WorldHolder implements KeyboardEvent {
 	public void run() {
 		new MapCreator().loadLevel(getGameMap(LAYER.WORLD));
 
-		LAYER.GUI.addObject(new ExempleHP());
+		LAYER.GUI.addObject(new GuiHealth());
 	}
 
 	////////// TICK ////////////
