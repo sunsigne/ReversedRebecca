@@ -23,7 +23,7 @@ public class World extends WorldHolder implements KeyboardEvent {
 	////////// ??? ////////////
 
 	public void run() {
-		new MapCreator().loadLevel(getGameMap(LAYER.WORLD));
+		new MapCreator().loadLevel(getGameMap(LAYER.WORLD_CONTENT));
 
 		LAYER.GUI.addObject(new GuiHealth());
 	}
@@ -62,13 +62,13 @@ public class World extends WorldHolder implements KeyboardEvent {
 		int key = e.getKeyCode();
 		if (key == KeyEvent.VK_ESCAPE) {
 			LAYER.GROUND.getHandler().clear();
-			LAYER.WORLD.getHandler().clear();
+			LAYER.WORLD_CONTENT.getHandler().clear();
 			destroyControls();
 			new TitleScreen();
 		}
 
 		if (key == KeyEvent.VK_R) {
-			LAYER.WORLD.getHandler().clear();
+			LAYER.WORLD_CONTENT.getHandler().clear();
 			run();
 		}
 	}
