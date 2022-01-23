@@ -2,8 +2,7 @@
 ////////// IMPORTANT ////////////
 TitleScreen, OldCOnstructor, Wolrd and Button -> to finish
 
-World : changer de layer = catastrophe pour le moment)
-ElevatorMode (dégueulasse !)
+World : changer de layer = pas de sauvegarde du monde effacé ...)
 LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 
 La souris est pas top : 
