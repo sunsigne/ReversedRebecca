@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.world;
+package com.sunsigne.reversedrebecca.ressources.layers;
 
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;

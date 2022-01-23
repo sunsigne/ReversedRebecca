@@ -5,20 +5,20 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
-public abstract class WorldHolder implements Updatable {
-
-	public WorldHolder(String level_name) {
+public class LevelData {
+	
+	public LevelData(String level_name) {
 		this.level_name = level_name;
 		loadGameMaps();
 	}
 
 	private String level_name;
 
-	////////// TEXTURE ////////////
+	////////// MAP OR LIST ////////////
 
-	private GameList<GameMap> gameMap_data_list = new GameList<GameMap>(LISTTYPE.ARRAY);
+	private GameList<ImageMap> gameMap_data_list = new GameList<ImageMap>(LISTTYPE.ARRAY);
 
 	private void loadGameMaps() {
 		for (LAYER tempLayer : LAYER.values()) {
@@ -26,13 +26,13 @@ public abstract class WorldHolder implements Updatable {
 				continue;
 			
 			BufferedImage img = new ImageTask().loadImage("maps/" + level_name + "/" + tempLayer.getName() + ".png", false);
-			GameMap tempGameMap = new GameMap(tempLayer, img);
+			ImageMap tempGameMap = new ImageMap(tempLayer, img);
 			gameMap_data_list.addObject(tempGameMap);
 		}
 	}
 	
-	public GameMap getGameMap(LAYER layer) {
-		for (GameMap tempMap : gameMap_data_list.getList()) {
+	public ImageMap getGameMap(LAYER layer) {
+		for (ImageMap tempMap : gameMap_data_list.getList()) {
 			if (tempMap.getLayer() == layer)
 				return tempMap;
 		}

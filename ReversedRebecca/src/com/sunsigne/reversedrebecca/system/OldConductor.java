@@ -8,8 +8,9 @@ import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
-import com.sunsigne.reversedrebecca.world.World;
+import com.sunsigne.reversedrebecca.world.ExtraBehaviorsWorld;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -59,11 +60,15 @@ public class OldConductor {
 //		new ForceInit().loadClass(ImageBank.class);
 //		ImageBank.loadRessources();
 		
+		new LayerDualizer().dualizeSameFloorLayers();
+		
 		new ForceInit().loadAllClassesInPackage(PhysicLaw.class.getPackageName());
 		// because Debug Modes are alterned Physic Laws, they have to be loaded AFTER
 		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());		
 		
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
+		
+		
 		
 		Game.getInstance().forceLoop();
 	}

@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.pattern;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.LAYER;
 
 public class PlayerFinder {
 

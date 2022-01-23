@@ -8,6 +8,8 @@ La souris est pas top :
 
 ////////// FACILE ////////////
 
+Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
+
 World : quitter le monde et revenir dedans fait tout planter
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws

@@ -1,95 +1,57 @@
 package com.sunsigne.reversedrebecca.world;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.world.behaviors.WorldBehavior;
+import com.sunsigne.reversedrebecca.world.keyboard.UseCanKeyQuit;
+import com.sunsigne.reversedrebecca.world.updatable.GroundRendering;
+import com.sunsigne.reversedrebecca.world.updatable.UpdateLayer;
 
-import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
+public class World extends ExtraBehaviorsWorld {
 
-public class World extends WorldHolder implements KeyboardEvent {
+	////////// SELF-CONTAINED ////////////
 
-	public World(String level_name) {
-		super(level_name);
-		setLayer(layer);
+	private static World instance = null;
+
+	public static World get() {
+		return instance;
+	}
+	
+	private void redefineInstance() {
+		if (instance != null)
+			instance.getHandler().removeObject(instance);
+		instance = this;
 	}
 
-	private LAYER layer = LAYER.GROUND;
+	////////// WORLD ////////////
 
-	private LAYER getLayer() {
-		return layer;
+	public World(String levelName) {
+		this(levelName, LAYER.GROUND);
 	}
 
-	public void setLayer(LAYER layer) {
-		this.layer = layer;
-		getHandler().softRemoveObject(this);
-		layer.addObject(this);
-	}
-
-	////////// ??? ////////////
-
-	public void run() {
-		new MapCreator().loadLevel(getGameMap(LAYER.WORLD_CONTENT));
-
-		LAYER.GUI.addObject(new GuiHealth());
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		int pixel = 16;
-		BufferedImage img = null;
-
-		if (getLayer() == LAYER.UP_GROUND) {
-			img = getGameMap(LAYER.GROUND).getImage();
-			g.drawImage(img, 0, 0, img.getWidth() * Size.M / pixel, img.getHeight() * Size.M / pixel, null);
-		}
+	public World(String levelName, LAYER layer) {
+		super(levelName, layer);
+		redefineInstance();
+		addWorldBehaviors();
 		
-		img = getGameMap(getLayer()).getImage();
-		g.drawImage(img, 0, 0, img.getWidth() * Size.M / pixel, img.getHeight() * Size.M / pixel, null);
+		((UpdateLayer) updateLayer).createNewWorld();
 	}
 
-	////////// KEYBOARD ////////////
+	////////// BEHAVIOR ////////////
 
-	private KeyboardController keyboardController = new KeyboardController(this);
+	public WorldBehavior groundRendering;
+	public WorldBehavior updateLayer;
+	public WorldBehavior usecCanKeyQuit;
 
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
+	private void addWorldBehaviors() {
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == KeyEvent.VK_ESCAPE) {
-			LAYER.GROUND.getHandler().clear();
-			LAYER.WORLD_CONTENT.getHandler().clear();
-			destroyControls();
-			new TitleScreen();
-		}
+		groundRendering = new GroundRendering(this);
+		addBehavior(groundRendering);
 
-		if (key == KeyEvent.VK_R) {
-			LAYER.WORLD_CONTENT.getHandler().clear();
-			run();
-		}
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
+		updateLayer = new UpdateLayer(this);
+		addBehavior(updateLayer);
+		
+		usecCanKeyQuit = new UseCanKeyQuit(this);
+		addBehavior(usecCanKeyQuit);
 	}
 
 }

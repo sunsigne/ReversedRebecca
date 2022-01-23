@@ -6,12 +6,13 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.menu.ButtonObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.OldConductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.LAYER;
+import com.sunsigne.reversedrebecca.world.ExtraBehaviorsWorld;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen implements Updatable, KeyboardEvent {
@@ -29,7 +30,7 @@ public class TitleScreen implements Updatable, KeyboardEvent {
 		onRelease = () -> 
 		{
 			LAYER.GUI.getHandler().clear();
-			new World("lvl001").run();
+			new World("lvl001");
 		};
 		
 		quitButton = new ButtonObject(500, 300, 500, 100, onPress, onRelease);

@@ -2,20 +2,23 @@ package com.sunsigne.reversedrebecca.world;
 
 import java.awt.image.BufferedImage;
 
-public class GameMap {
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
-	public GameMap(LAYER layer, BufferedImage image) {
+public class ImageMap {
+
+	public ImageMap(LAYER layer, BufferedImage image) {
 		this.layer = layer;
 		this.image = image;
 	}
 	
 	private LAYER layer;
-	private BufferedImage image;
-	
+
 	public LAYER getLayer() {
 		return layer;
 	}
-
+	
+	private BufferedImage image;
+		
 	public BufferedImage getImage() {
 		return image;
 	}
