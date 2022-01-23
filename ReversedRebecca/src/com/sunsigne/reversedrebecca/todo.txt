@@ -2,6 +2,9 @@
 ////////// IMPORTANT ////////////
 TitleScreen, OldCOnstructor, Wolrd and Button -> to finish
 
+World : changer de layer = catastrophe pour le moment)
+ElevatorMode (dégueulasse !)
+LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 
 La souris est pas top : 
 	- toutes les couches sont actives en même temps
@@ -10,7 +13,8 @@ La souris est pas top :
 
 Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
 
-World : quitter le monde et revenir dedans fait tout planter
+
+
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 
