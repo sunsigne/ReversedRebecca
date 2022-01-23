@@ -66,10 +66,8 @@ public class PlayerLayerChanger {
 
 		int size = list.getList().size();
 
-		for (int index = 1; index < size; index++) {
+		for (int index = 3; index < size; index++) {
 			if (player.getHandler() == list.getList().get(index).getHandler()) {
-				if (index - 3 == -2)
-					return;
 				goes(list.getList().get(index - 3));
 				return;
 			}
