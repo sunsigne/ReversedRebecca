@@ -33,7 +33,7 @@ public class World extends ExtraBehaviorsWorld {
 		redefineInstance();
 		addWorldBehaviors();
 		
-		((UpdateLayer) updateLayer).createNewWorld();
+		((UpdateLayer) updateLayer).createNewWorld(true);
 	}
 
 	////////// BEHAVIOR ////////////

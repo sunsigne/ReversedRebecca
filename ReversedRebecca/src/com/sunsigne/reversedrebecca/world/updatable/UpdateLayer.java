@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.world.updatable;
 
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.world.ImageMap;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.behaviors.WorldTickBehavior;
@@ -43,20 +44,21 @@ public class UpdateLayer implements WorldTickBehavior {
 			return;
 		
 		removeOldWorld();
-		createNewWorld();
+		createNewWorld(false);
 	}
 
 	private void removeOldWorld() {
+		new LayerDualizer().getMap().get(getLayer()).getHandler().clear();
 		getLayer().getHandler().removeObject(getExtraBehaviorsWorld());
 	}
 	
-	public void createNewWorld() {
+	public void createNewWorld(boolean createPlayer) {
 		setLayer(getExtraBehaviorsWorld().getLayer(false));
 		getLayer().addObject(getExtraBehaviorsWorld());
 		
 		LAYER content_layer = getExtraBehaviorsWorld().getLayer(true);
 		ImageMap imageMap = getExtraBehaviorsWorld().getImageMap(content_layer);
-		new MapCreator().loadLevel(imageMap);
+		new MapCreator().loadLevel(imageMap, createPlayer);
 		LAYER.GUI.addObject(new GuiHealth());
 	}
 

@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.ImageMap;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
+import com.sunsigne.reversedrebecca.world.mapcreator.mappable.MappablePlayer;
 
 public class MapCreator {
 
@@ -23,7 +24,7 @@ public class MapCreator {
 
 	////////// LEVEL CREATOR ////////////
 
-	public void loadLevel(ImageMap gameMap) {
+	public void loadLevel(ImageMap gameMap, boolean createPlayer) {
 		LAYER layer = gameMap.getLayer();
 		BufferedImage image = gameMap.getImage();
 
@@ -42,6 +43,9 @@ public class MapCreator {
 				int y0 = yy * Size.M / STEP;
 
 				for (Mappable tempMappable : mappable_list.getList()) {
+					if(!createPlayer && tempMappable instanceof MappablePlayer)
+						continue;
+					
 					int tempRed = tempMappable.getRedCode();
 					int tempGreen = tempMappable.getGreenCode();
 					int tempBlue = tempMappable.getBlueCode();
