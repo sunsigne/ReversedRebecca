@@ -15,11 +15,11 @@ public class SuperExtraBehaviorsWorld {
 		setLayer(layer);
 		loadImageMap();
 	}
-	
+
 	////////// NAME ////////////
-	
+
 	private String levelName;
-	
+
 	public String getLevelName() {
 		return levelName;
 	}
@@ -36,27 +36,27 @@ public class SuperExtraBehaviorsWorld {
 		layers[0] = layer;
 		layers[1] = new LayerDualizer().getMap().get(layer);
 	}
-	
+
 	////////// MAP OR LIST ////////////
 
 	private GameList<ImageMap> imageMap_list = new GameList<ImageMap>(LISTTYPE.ARRAY);
 
-	
 	private void loadImageMap() {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer.getHandler().isCameraDependant() == false)
 				break;
-			
-			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName() + ".png", false);
-			ImageMap tempGameMap = new ImageMap(tempLayer, img);
-			imageMap_list.addObject(tempGameMap);
+
+			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName() + ".png",
+					false);
+			ImageMap tempImageMap = new ImageMap(tempLayer, img);
+			imageMap_list.addObject(tempImageMap);
 		}
 	}
-	
+
 	public ImageMap getImageMap(LAYER layer) {
-		for (ImageMap tempMap : imageMap_list.getList()) {
-			if (tempMap.getLayer() == layer)
-				return tempMap;
+		for (ImageMap tempImageMap : imageMap_list.getList()) {
+			if (tempImageMap.getLayer() == layer)
+				return tempImageMap;
 		}
 		return null;
 	}
