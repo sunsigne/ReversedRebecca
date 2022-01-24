@@ -36,6 +36,9 @@ public class GroundRendering implements WorldRenderBehavior {
 			if (!tempLayer.getHandler().isCameraDependant())
 				return;
 
+			if (tempLayer.getName().contains("content"))
+				continue;
+			
 			ImageMap imageMap = getExtraBehaviorsWorld().getImageMap(tempLayer);
 			BufferedImage img = imageMap.getImage();
 
