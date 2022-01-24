@@ -61,6 +61,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			}
 		}		
 		getList().clear();
+		hideRendering = false;
 	}
 
 	////////// CAMERA ////////////
@@ -88,8 +89,16 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// RENDER ////////////
 
+	private boolean hideRendering;
+	
+	public void setHideRendering(boolean hideRendering) {
+		this.hideRendering = hideRendering;
+	}
+	
 	protected void render(Graphics g) {
-
+		if(hideRendering)
+			return;		
+		
 		for (Updatable tempObject : getList()) {
 
 			renderDependency(g, true);
@@ -107,5 +116,6 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			renderDependency(g, false);
 		}
 	}
+
 
 }
