@@ -1,12 +1,21 @@
 package com.sunsigne.reversedrebecca.world;
 
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.world.behaviors.WorldBehavior;
-import com.sunsigne.reversedrebecca.world.keyboard.UseCanKeyQuit;
-import com.sunsigne.reversedrebecca.world.updatable.GroundRendering;
-import com.sunsigne.reversedrebecca.world.updatable.UpdateLayer;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
-public class World extends ExtraBehaviorsWorld {
+import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
+import com.sunsigne.reversedrebecca.pattern.ForceInit;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
+import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
+
+public class World implements Updatable {
 
 	////////// SELF-CONTAINED ////////////
 
@@ -15,10 +24,10 @@ public class World extends ExtraBehaviorsWorld {
 	public static World get() {
 		return instance;
 	}
-	
-	private void redefineInstance() {
+
+	private void updateInstance() {
 		if (instance != null)
-			instance.getHandler().removeObject(instance);
+			destroy();
 		instance = this;
 	}
 
@@ -29,29 +38,114 @@ public class World extends ExtraBehaviorsWorld {
 	}
 
 	public World(String levelName, LAYER layer) {
-		super(levelName, layer);
-		redefineInstance();
-		addWorldBehaviors();
-		
-		((UpdateLayer) updateLayer).createNewWorld(true);
+		initParameters(levelName, layer);
+		createMap();
+		addControlers();
+		start();
+
 	}
 
-	////////// BEHAVIOR ////////////
+	private void initParameters(String levelName, LAYER layer) {
+		updateInstance();
+		this.levelName = levelName;
+		setLayer(layer);
+	}
 
-	public WorldBehavior groundRendering;
-	public WorldBehavior updateLayer;
-	public WorldBehavior usecCanKeyQuit;
+	private void createMap() {
+		loadImageMap();
+		new MapCreator().loadAllLevels(this);
+		LAYER.GUI.addObject(new GuiHealth());
+	}
 
-	private void addWorldBehaviors() {
+	private void addControlers() {
+		addKeyboardListener();
+	}
 
-		groundRendering = new GroundRendering(this);
-		addBehavior(groundRendering);
+	private void start() {
+		getLayer(false).addObject(this);
+		Game.getInstance().forceLoop();
+	}
 
-		updateLayer = new UpdateLayer(this);
-		addBehavior(updateLayer);
-		
-		usecCanKeyQuit = new UseCanKeyQuit(this);
-		addBehavior(usecCanKeyQuit);
+	////////// NAME ////////////
+
+	private String levelName;
+
+	public String getLevelName() {
+		return levelName;
+	}
+
+	////////// LAYER ////////////
+
+	private LAYER[] layers = new LAYER[2];
+
+	public LAYER getLayer(boolean contentType) {
+		return contentType ? layers[1] : layers[0];
+	}
+
+	public void setLayer(LAYER layer) {
+		layers[0] = layer;
+		layers[1] = new LayerDualizer().getMap().get(layer);
+	}
+
+	////////// MAP OR LIST ////////////
+
+	private GameList<BufferedImage> map_list = new GameList<BufferedImage>(LISTTYPE.ARRAY);
+
+	private void loadImageMap() {
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer.getHandler().isCameraDependant() == false)
+				break;
+
+			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName() + ".png",
+					false);
+			map_list.addObject(img);
+		}
+	}
+
+	public BufferedImage getImageMap(LAYER layer) {
+		int index = 0;
+
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer == layer)
+				return map_list.getList().get(index);
+			index++;
+		}
+		return new ImageTask().drawMissingTexture();
+	}
+
+	////////// USEFULL ////////////
+
+	public void destroy() {
+		for (LAYER tempLayer : LAYER.values()) {
+			if (!tempLayer.getHandler().isCameraDependant() && !tempLayer.getName().contains("gui"))
+				continue;
+
+			tempLayer.getHandler().clear();
+		}
+		instance = null;
+		Game.getInstance().forceLoop();
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+
+	}
+
+	////////// KEYBOARD ////////////
+
+	@SuppressWarnings("rawtypes")
+	private void addKeyboardListener() {
+		Class[] keyboards = new ForceInit().loadAllClassesInPackage(WorldKeyboard.class.getPackageName());
+		new ForceInit().createInstanceOf(keyboards);
 	}
 
 }

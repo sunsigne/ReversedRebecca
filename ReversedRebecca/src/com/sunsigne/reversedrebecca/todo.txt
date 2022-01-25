@@ -1,12 +1,13 @@
 
 ////////// IMPORTANT ////////////
-TitleScreen, OldCOnstructor, Wolrd and Button -> to finish
+TitleScreen, OldCOnstructor, Button -> to finish
 
-World : changer de layer = pas de sauvegarde du monde effacé ...)
 LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 
 La souris est pas top : 
 	- toutes les couches sont actives en même temps
+
+Foe peut éjecter le joueur hors du mur en se collant dans un coin en haut à droite
 
 ////////// FACILE ////////////
 

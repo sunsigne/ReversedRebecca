@@ -12,7 +12,6 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.ExtraBehaviorsWorld;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen implements Updatable, KeyboardEvent {

@@ -8,9 +8,8 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
-import com.sunsigne.reversedrebecca.world.ImageMap;
+import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
-import com.sunsigne.reversedrebecca.world.mapcreator.mappable.MappablePlayer;
 
 public class MapCreator {
 
@@ -24,9 +23,29 @@ public class MapCreator {
 
 	////////// LEVEL CREATOR ////////////
 
-	public void loadLevel(ImageMap gameMap, boolean createPlayer) {
-		LAYER layer = gameMap.getLayer();
-		BufferedImage image = gameMap.getImage();
+	public void loadAllLevels(World world) {
+		boolean hideRendering = false;
+		
+		for(LAYER tempLayer : LAYER.values())
+		{
+			if(!tempLayer.getHandler().isCameraDependant())
+				continue;
+
+			if(tempLayer.getName().contains("ground"))
+			{
+				tempLayer.addObject(new GroundRendering(world, tempLayer));
+				continue;
+			}				
+			
+			loadLevel(tempLayer, world.getImageMap(tempLayer));
+			tempLayer.getHandler().setHideRendering(hideRendering);
+						
+			if(world.getLayer(true) == tempLayer)
+				hideRendering = true;
+		}
+	}
+	
+	private void loadLevel(LAYER layer, BufferedImage image) {
 
 		int w = image.getWidth();
 		int h = image.getHeight();
@@ -43,9 +62,7 @@ public class MapCreator {
 				int y0 = yy * Size.M / STEP;
 
 				for (Mappable tempMappable : mappable_list.getList()) {
-					if(!createPlayer && tempMappable instanceof MappablePlayer)
-						continue;
-					
+
 					int tempRed = tempMappable.getRedCode();
 					int tempGreen = tempMappable.getGreenCode();
 					int tempBlue = tempMappable.getBlueCode();
