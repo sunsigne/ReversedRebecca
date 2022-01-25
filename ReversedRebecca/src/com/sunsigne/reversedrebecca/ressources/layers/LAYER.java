@@ -17,6 +17,7 @@ public enum LAYER {
 	//UPPER_GROUND("upper_ground", new Handler(true)),
 	
 	GUI("gui", new Handler(false)),
+	MENU("menu", new Handler(false)),
 	DEBUG ("debug", new Handler(false));
 	
 	

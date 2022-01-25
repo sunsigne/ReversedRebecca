@@ -17,23 +17,23 @@ import com.sunsigne.reversedrebecca.world.World;
 public class TitleScreen implements Updatable, KeyboardEvent {
 
 	public TitleScreen() {
-		LAYER.GUI.addObject(this);
+		LAYER.MENU.addObject(this);
 		
 		GenericListener onPress = () -> {};
 		GenericListener onRelease = () -> new OldConductor().stopApp();
 		
 		quitButton = new ButtonObject("quit", 500, 500, 500, 100, onPress, onRelease);
-		LAYER.GUI.addObject(quitButton);
+		LAYER.MENU.addObject(quitButton);
 		
 		onPress = () -> {};
 		onRelease = () -> 
 		{
-			LAYER.GUI.getHandler().clear();
+			LAYER.MENU.getHandler().clear();
 			new World("lvl001");
 		};
 		
 		quitButton = new ButtonObject("start", 500, 300, 500, 100, onPress, onRelease);
-		LAYER.GUI.addObject(quitButton);
+		LAYER.MENU.addObject(quitButton);
 	}
 	
 	////////// BUTTONS ////////////
