@@ -2,7 +2,9 @@ package com.sunsigne.reversedrebecca.system.controllers.mouse;
 
 import java.awt.event.MouseEvent;
 
-public interface MouseUserEvent {
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
+
+public interface MouseUserEvent extends Position {
 
 	////////// MOUSE ////////////
 	
