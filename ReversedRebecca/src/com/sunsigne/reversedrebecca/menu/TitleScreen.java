@@ -14,7 +14,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class TitleScreen implements Updatable, KeyboardEvent {
+public class TitleScreen implements Updatable {
 
 	public TitleScreen() {
 		LAYER.MENU.addObject(this);
@@ -54,27 +54,6 @@ public class TitleScreen implements Updatable, KeyboardEvent {
 	public void render(Graphics g) {
 		g.setColor(Color.BLUE);
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
-	}
-
-	////////// KEYBOARD ////////////
-
-	private KeyboardController keyboardController = new KeyboardController(this);
-
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == KeyEvent.VK_ESCAPE)
-			new OldConductor().stopApp();		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-
 	}
 
 }
