@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 
 public class ButtonObject extends ExtraBehaviorsObject {
 
@@ -27,9 +28,11 @@ public class ButtonObject extends ExtraBehaviorsObject {
 	
 	private String text;
 	
+	private Font font = new FontTask().createNewFont("dogicabold.ttf", 66f);
+	
 	@Override
 	public void render(Graphics g) {
-		Font font = new Font("arial", 1, getHeight());
+//		Font font = new Font("arial", 1, getHeight());
 		g.setFont(font);
 		g.setColor(Color.white);
 		g.drawString(text, getX(), getY() + getHeight());
