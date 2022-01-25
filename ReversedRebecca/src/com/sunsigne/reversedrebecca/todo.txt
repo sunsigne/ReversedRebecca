@@ -1,15 +1,19 @@
 
 ////////// IMPORTANT ////////////
-TitleScreen, OldCOnstructor, Button -> to finish
+OldCOnstructor -> to finish
 
 LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 
 La souris est pas top : 
 	- toutes les couches sont actives en même temps
 
-Foe peut éjecter le joueur hors du mur en se collant dans un coin en haut à droite
+Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
+
+LoadingScreen (c'est tj à créer)
 
 ////////// FACILE ////////////
+
+TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 
 Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
 
@@ -18,7 +22,7 @@ DoorObject -> object test à dévelloper ! Faire une class PuzzleObject pour réuni
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 
-Le ButtonObject a un render pas fini ! + Text à importer
+Le ButtonObject doit importer le text d'un fichier et non l'écrire en dur
 MapCreator -> la GUI est ajouté de façon dégeulasse
 
 Textures (dossier des textures à ranger)

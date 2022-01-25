@@ -1,15 +1,13 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.buttons;
+package com.sunsigne.reversedrebecca.object.buttons;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class ButtonObject extends ExtraBehaviorsObject {
+public abstract class ButtonObject extends GameObject implements MouseUserEvent {
 
 	public ButtonObject(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(x, y, w, h);
@@ -17,28 +15,37 @@ public class ButtonObject extends ExtraBehaviorsObject {
 		
 		this.onPress = onPress;
 		this.onRelease = onRelease;
-	}
+	}	
 
 	////////// BEHAVIOR ////////////
 
 	private GenericListener onPress;
 	private GenericListener onRelease;
-	
-	////////// RENDER ////////////
+
+		
+	////////// TEXT ////////////
 	
 	private String text;
-	
-	private Font font = new FontTask().createNewFont("dogicabold.ttf", 66f);
-	
-	@Override
-	public void render(Graphics g) {
-//		Font font = new Font("arial", 1, getHeight());
-		g.setFont(font);
-		g.setColor(Color.white);
-		g.drawString(text, getX(), getY() + getHeight());
+
+	public String getText() {
+		return text;
 	}
 
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
+	}
+	
 	////////// MOUSE ////////////
+
+	private MouseController mouseController = new MouseController(this);
+	
+	@Override
+	public MouseController getMouseController() {
+		return  mouseController;
+	}	
 	
 	@Override
 	public void mousePressed(MouseEvent e) {

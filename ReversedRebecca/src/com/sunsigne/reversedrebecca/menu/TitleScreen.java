@@ -3,7 +3,8 @@ package com.sunsigne.reversedrebecca.menu;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.OldConductor;
@@ -17,6 +18,7 @@ public class TitleScreen implements Updatable {
 		LAYER.MENU.addObject(this);
 		
 		createPlayButton();
+		createOptionsButton();		
 		createQuitButton();
 	}
 
@@ -26,7 +28,7 @@ public class TitleScreen implements Updatable {
 		GenericListener onPress = () -> startWorld();
 		GenericListener onRelease = null;
 
-		ButtonObject playButton = new ButtonObject("start", 500, 300, 500, 90, onPress, onRelease);
+		ButtonObject playButton = new TitleScreenButton("START", 710, 570, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(playButton);
 	}	
 	
@@ -35,11 +37,19 @@ public class TitleScreen implements Updatable {
 		new World("lvl001");
 	}
 
+	private void createOptionsButton() {
+		GenericListener onPress = null;
+		GenericListener onRelease = null;
+
+		ButtonObject optionsButton = new TitleScreenButton("OPTIONS", 710, 740, 500, 90, onPress, onRelease);
+		LAYER.MENU.addObject(optionsButton);
+	}
+	
 	private void createQuitButton() {
 		GenericListener onPress = () -> new OldConductor().stopApp();
 		GenericListener onRelease = null;
 
-		ButtonObject quitButton = new ButtonObject("quit", 500, 500, 500, 90, onPress, onRelease);
+		ButtonObject quitButton = new TitleScreenButton("QUIT", 710, 920, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(quitButton);
 	}
 
