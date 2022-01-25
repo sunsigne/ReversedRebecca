@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.menu;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.buttons;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;

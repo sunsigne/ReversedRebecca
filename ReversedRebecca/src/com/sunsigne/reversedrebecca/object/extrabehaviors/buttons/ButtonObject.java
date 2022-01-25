@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.menu;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.buttons;
 
 import java.awt.Color;
 import java.awt.Font;
