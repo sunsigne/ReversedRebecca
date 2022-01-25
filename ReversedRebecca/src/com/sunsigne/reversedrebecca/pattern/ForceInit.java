@@ -16,6 +16,8 @@ public class ForceInit {
 			getClassObject(object).getDeclaredConstructor().newInstance();
 		} catch (NoSuchMethodException e) {
 			// Not really a problem, still working
+		} catch (InstantiationException e) {
+			// Can occur when the class is absract			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
