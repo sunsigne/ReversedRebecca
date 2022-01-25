@@ -11,7 +11,7 @@ public class ForceInit {
 
 	////////// CLASS ////////////
 
-	public <T> void loadClass(Class<T> object) {
+	public <T> void createInstanceOf(Class<T> object) {
 		try {
 			getClassObject(object).getDeclaredConstructor().newInstance();
 		} catch (NoSuchMethodException e) {
@@ -31,6 +31,14 @@ public class ForceInit {
 	}
 
 	////////// PACKAGE ////////////
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public void createInstanceOf(Class[] classes) {
+		int size = classes.length;
+		for(int index = 0; index < size; index++ ) {
+			createInstanceOf(classes[index]);
+		}
+	}
 	
 	@SuppressWarnings("rawtypes")
 	public Class[] loadAllClassesInPackage(String packageName) {

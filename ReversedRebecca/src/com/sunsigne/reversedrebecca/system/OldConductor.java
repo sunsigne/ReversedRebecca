@@ -56,8 +56,8 @@ public class OldConductor {
 	
 	private void loadRessources() {
 
-//		new ForceInit().loadClass(SheetBank.class);
-//		new ForceInit().loadClass(ImageBank.class);
+//		new ForceInit().createInstanceOf(SheetBank.class);
+//		new ForceInit().createInstanceOf(ImageBank.class);
 //		ImageBank.loadRessources();
 		
 		new LayerDualizer().dualizeSameFloorLayers();
