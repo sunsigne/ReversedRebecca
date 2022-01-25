@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.menu;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
@@ -9,8 +10,9 @@ import com.sunsigne.reversedrebecca.pattern.GenericListener;
 
 public class ButtonObject extends ExtraBehaviorsObject {
 
-	public ButtonObject(int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
+	public ButtonObject(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(x, y, w, h);
+		this.text = text;
 		
 		this.onPress = onPress;
 		this.onRelease = onRelease;
@@ -23,12 +25,19 @@ public class ButtonObject extends ExtraBehaviorsObject {
 	
 	////////// RENDER ////////////
 	
+	private String text;
+	
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.RED);
 		g.fillRect(getX(), getY(), getWidth(), getHeight());
+		
+		Font font = new Font("arial", 1, getHeight());
+		g.setFont(font);
+		g.setColor(Color.white);
+		g.drawString(text, getX(), getY() + getHeight());
 	}
-	
+
 	////////// MOUSE ////////////
 	
 	@Override

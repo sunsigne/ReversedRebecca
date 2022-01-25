@@ -22,7 +22,7 @@ public class TitleScreen implements Updatable, KeyboardEvent {
 		GenericListener onPress = () -> {};
 		GenericListener onRelease = () -> new OldConductor().stopApp();
 		
-		quitButton = new ButtonObject(500, 500, 500, 100, onPress, onRelease);
+		quitButton = new ButtonObject("quit", 500, 500, 500, 100, onPress, onRelease);
 		LAYER.GUI.addObject(quitButton);
 		
 		onPress = () -> {};
@@ -32,7 +32,7 @@ public class TitleScreen implements Updatable, KeyboardEvent {
 			new World("lvl001");
 		};
 		
-		quitButton = new ButtonObject(500, 300, 500, 100, onPress, onRelease);
+		quitButton = new ButtonObject("start", 500, 300, 500, 100, onPress, onRelease);
 		LAYER.GUI.addObject(quitButton);
 	}
 	
