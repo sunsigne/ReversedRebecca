@@ -29,9 +29,6 @@ public class ButtonObject extends ExtraBehaviorsObject {
 	
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.RED);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
-		
 		Font font = new Font("arial", 1, getHeight());
 		g.setFont(font);
 		g.setColor(Color.white);
@@ -51,7 +48,7 @@ public class ButtonObject extends ExtraBehaviorsObject {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		if (mouseOver(e, getRect())) {
-			if(onPress != null)
+			if(onRelease != null)
 				onRelease.doAction();
 		}
 	}	
