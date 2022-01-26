@@ -27,10 +27,7 @@ public class OldConductor {
 
 		new Window(Game.getInstance());
 		Game.getInstance().start();
-
-		// DUAL CHECKING
-//		new DualChecker().start();
-//		Game.getInstance().forceLoop(); ??
+		new DualChecker();
 
 		// LOADING OF MINIMAL RESSOURCES
 		loadMinimalRessources();
@@ -43,7 +40,6 @@ public class OldConductor {
 	}
 
 	public void stopApp() {
-//		new DualChecker().stop();
 		System.exit(1);
 	}
 

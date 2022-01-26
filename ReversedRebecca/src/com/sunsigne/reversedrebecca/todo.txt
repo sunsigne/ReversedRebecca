@@ -1,3 +1,9 @@
+vidéo sur  :
+- écran titre
+- le rangement de la souris
+- le fileTask
+- le dual checker
+
 
 ////////// IMPORTANT ////////////
 OldCOnstructor -> to finish
