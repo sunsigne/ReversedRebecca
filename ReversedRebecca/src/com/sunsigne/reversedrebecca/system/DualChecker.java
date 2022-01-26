@@ -33,7 +33,7 @@ public class DualChecker implements Updatable {
 			return;
 
 		// create a verification file
-		new FileTask().write(file, "verification");
+		new FileTask().write(file, "userdata/verification");
 
 		// wait more than one tick
 		try {
@@ -43,7 +43,7 @@ public class DualChecker implements Updatable {
 		}
 
 		// close the game if different
-		if (!new FileTask().read(file).contains("verification")) {
+		if (!new FileTask().read(file).contains("userdata/verification")) {
 			stopApp();
 		}
 
