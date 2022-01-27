@@ -3,6 +3,7 @@ vidéo sur  :
 - le rangement de la souris
 - le fileTask
 - le dual checker
+- traduction de text
 
 
 ////////// IMPORTANT ////////////
@@ -28,7 +29,6 @@ DoorObject -> object test à dévelloper ! Faire une class PuzzleObject pour réuni
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 
-Le ButtonObject doit importer le text d'un fichier et non l'écrire en dur
 MapCreator -> la GUI est ajouté de façon dégeulasse
 
 Textures (dossier des textures à ranger)
