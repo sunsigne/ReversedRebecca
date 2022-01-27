@@ -13,10 +13,10 @@ public class FileTask {
 
 	public String read(String path) {
 
-		return read(path, 0);
+		return read(0, path);
 	}
 
-	public String read(String path, int lineToRead) {
+	public String read(int lineToRead, String path) {
 
 		File file = new File("ressources/" + path);
 		Scanner scan = null;
@@ -59,10 +59,10 @@ public class FileTask {
 	}
 
 	public void write(String path, String text) {
-		write(path, text, 0);
+		write(0, path, text);
 	}
 
-	public void write(String path, String text, int lineToReplace) {
+	public void write(int lineToReplace, String path, String text) {
 		File file = new File("ressources/" + path);
 		String fileContent = read(path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
