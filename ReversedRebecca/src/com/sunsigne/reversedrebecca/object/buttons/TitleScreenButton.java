@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 
 public class TitleScreenButton extends ButtonObject {
@@ -20,16 +21,11 @@ public class TitleScreenButton extends ButtonObject {
 
 	@Override
 	public void render(Graphics g) {
-		int x = getX() + 15;
-		int y = getY() + 72;
-		
-		g.setColor(new Color(255, 163, 0, 80));
-		g.setFont(font);
-		g.drawString(getText(), x + 4, y + 4);
 
-		g.setColor(new Color(255, 204, 0));
-		g.setFont(font);
-		g.drawString(getText(), x, y);
-	}
+		Color text_color = new Color(255, 204, 0);
+		Color shadow_color = new Color(255, 163, 0, 80);
+
+		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, getRect());
+	}	
 
 }
