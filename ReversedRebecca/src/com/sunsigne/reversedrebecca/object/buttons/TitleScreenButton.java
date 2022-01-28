@@ -13,7 +13,7 @@ public class TitleScreenButton extends ButtonObject {
 
 	public TitleScreenButton(String text, int x, int y, int w, int h, GenericListener onPress,
 			GenericListener onRelease) {
-		super(text, x, y, w, h, onPress, onRelease);
+		super(text.toUpperCase(), x, y, w, h, onPress, onRelease);
 	}
 
 	////////// RENDER ////////////

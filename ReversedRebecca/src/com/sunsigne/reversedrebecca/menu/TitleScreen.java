@@ -41,7 +41,7 @@ public class TitleScreen implements Updatable, Translatable {
 	}
 
 	private void createOptionsButton() {
-		GenericListener onPress = () -> new LanguageScreen();
+		GenericListener onPress = null;
 		GenericListener onRelease = null;
 
 		String text = getTranslatedText("OPTIONS", "menu.csv", 2);
