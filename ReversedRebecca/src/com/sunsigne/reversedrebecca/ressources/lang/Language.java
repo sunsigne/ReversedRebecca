@@ -20,7 +20,7 @@ public class Language {
 		return instance;
 	}
 	
-	////////// String ////////////
+	////////// LANGUAGE ////////////
 
 	private String lang;
 		
