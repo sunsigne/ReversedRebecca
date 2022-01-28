@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class GuiHealth extends GameObject {
 
 	public GuiHealth() {
-		super(0, 0);
+		super(0, 0, Size.L, Size.L);
 		loadImages();
 	}
 
@@ -49,7 +49,7 @@ public class GuiHealth extends GameObject {
 //		g.setColor(Color.white);
 //		g.drawString(text, getX() + 20, getY() + 60);
 		
-		g.drawImage(getImage(), getX(), getY(), Size.L, Size.L, null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 	
 }
