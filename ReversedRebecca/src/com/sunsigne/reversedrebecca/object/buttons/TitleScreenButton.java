@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.MousePos;
 import com.sunsigne.reversedrebecca.pattern.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 
@@ -14,9 +15,9 @@ public class TitleScreenButton extends ButtonObject {
 			GenericListener onRelease) {
 		super(text, x, y, w, h, onPress, onRelease);
 	}
-	
+
 	////////// RENDER ////////////
-	
+
 	private Font font = new FontTask().createNewFont("dogicabold.ttf", 66f);
 
 	@Override
@@ -24,8 +25,15 @@ public class TitleScreenButton extends ButtonObject {
 
 		Color text_color = new Color(255, 204, 0);
 		Color shadow_color = new Color(255, 163, 0, 80);
+		int[] rect = getRect();
+		
+		if (mouseOver(new MousePos().get(), getRect()))
+		{
+			text_color = new Color(255, 232, 170);
+			rect = new int[]{getX(), getY() - 3, getWidth(), getHeight()};
+		}
 
-		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, getRect());
-	}	
+		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, rect);
+	}
 
 }
