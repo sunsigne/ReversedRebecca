@@ -30,7 +30,7 @@ public class TitleScreenButton extends ButtonObject {
 		if (mouseOver(new MousePos().get(), getRect()))
 		{
 			text_color = new Color(255, 232, 170);
-			rect = new int[]{getX(), getY() - 3, getWidth(), getHeight()};
+			rect = new int[] {getX(), getY() - 3, getWidth(), getHeight()};
 		}
 
 		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, rect);
