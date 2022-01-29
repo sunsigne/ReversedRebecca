@@ -63,7 +63,7 @@ public class LanguageScreen implements Updatable, Translatable {
 
 		String text = getTranslatedText("BACK", "menu.csv", 4);
 
-		int widht = 500;
+		int widht = 420;
 		int height = 90;
 
 		ButtonObject backButton = new TitleScreenButton(text, Window.WIDHT - widht, Window.HEIGHT - height, widht,

@@ -43,5 +43,19 @@ public class FlagLangageButton extends ButtonObject {
 			g.fillRect(getX(), getY(), getWidth(), getHeight());
 		}
 	}
+/*	
+	@Override
+	public void render(Graphics g) {
+
+		int pix = 8;
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+
+		if (mouseOver(new MousePos().get(), getRect()) && isClickable()) {
+			Color light = new Color(192, 192, 192, 80);
+			g.setColor(light);
+			g.fillRect(getX() + pix, getY() + pix, getWidth() - 2*pix, getHeight() - 2*pix);
+		}
+	}
+*/
 
 }

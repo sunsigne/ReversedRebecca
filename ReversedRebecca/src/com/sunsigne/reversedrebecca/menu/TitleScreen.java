@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.menu;
 
 import java.awt.Color;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
@@ -68,7 +70,11 @@ public class TitleScreen implements Updatable, Translatable {
 
 	private void openLangScreen() {
 		for (Updatable tempUpdatable : LAYER.MENU.getHandler().getList()) {
+			
 			tempUpdatable.destroyControls();
+			
+			if (tempUpdatable instanceof FlagLangageButton)
+				LAYER.MENU.getHandler().removeObject(tempUpdatable);
 		}
 		new LanguageScreen();
 	}
@@ -96,8 +102,10 @@ public class TitleScreen implements Updatable, Translatable {
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.BLUE);
-		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
+		Graphics2D g2d = (Graphics2D) g;
+		GradientPaint paint = new GradientPaint(0, 0, new Color(220, 220, 255), 0, Window.HEIGHT, new Color(0, 0, 200));
+		g2d.setPaint(paint);
+		g2d.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
 	}
 
 }
