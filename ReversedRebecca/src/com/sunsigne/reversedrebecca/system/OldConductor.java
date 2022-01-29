@@ -1,17 +1,14 @@
 package com.sunsigne.reversedrebecca.system;
 
-import java.awt.image.BufferedImage;
-
+import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
-import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class OldConductor {
@@ -20,6 +17,7 @@ public class OldConductor {
 
 	public void startApp() {
 
+		LAYER.LOADING.addObject(new LoadingScreen());
 		new Window(Game.getInstance());
 		Game.getInstance().start();
 		new DualChecker();
@@ -31,6 +29,7 @@ public class OldConductor {
 		loadRessources();
 
 		new TitleScreen();
+		LAYER.LOADING.getHandler().clear();
 		
 	}
 

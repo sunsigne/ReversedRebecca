@@ -4,6 +4,7 @@ vidéo sur  :
 - le fileTask
 - le dual checker
 - traduction de text
+- écran de chargement
 
 
 ////////// IMPORTANT ////////////
@@ -13,8 +14,6 @@ OldCOnstructor -> to finish
 LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 
 Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
-
-LoadingScreen (c'est tj à créer)
 
 ////////// FACILE ////////////
 
@@ -35,6 +34,8 @@ Textures (dossier des textures à ranger)
 GuiHealth getImage ne retourne QUE le coeur plein
 
 faire des noms marrant pour l'écran titre qui apparaisse .. 10% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
+
+LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
 
 ////////// DIFFICILE ////////////
 
