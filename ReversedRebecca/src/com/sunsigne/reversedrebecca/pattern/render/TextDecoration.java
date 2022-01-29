@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.pattern;
+package com.sunsigne.reversedrebecca.pattern.render;
 
 import java.awt.Color;
 import java.awt.Font;

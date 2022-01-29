@@ -6,7 +6,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.MousePos;
-import com.sunsigne.reversedrebecca.pattern.TextDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 
 public class TitleScreenButton extends ButtonObject {
