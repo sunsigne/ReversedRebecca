@@ -18,7 +18,8 @@ public enum LAYER {
 	
 	GUI("gui", new Handler(false)),
 	MENU("menu", new Handler(false)),
-	DEBUG ("debug", new Handler(false));
+	DEBUG ("debug", new Handler(false)),
+	LOADING ("loading", new Handler(false));
 	
 	
 	private String name;
