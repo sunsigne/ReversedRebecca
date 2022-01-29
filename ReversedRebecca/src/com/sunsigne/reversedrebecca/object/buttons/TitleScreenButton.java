@@ -27,7 +27,7 @@ public class TitleScreenButton extends ButtonObject {
 		Color shadow_color = new Color(255, 163, 0, 80);
 		int[] rect = getRect();
 		
-		if (mouseOver(new MousePos().get(), getRect()))
+		if (mouseOver(new MousePos().get(), getRect()) && isClickable())
 		{
 			text_color = new Color(255, 232, 170);
 			rect = new int[] {getX(), getY() - 3, getWidth(), getHeight()};
