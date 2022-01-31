@@ -1,13 +1,14 @@
-package com.sunsigne.reversedrebecca.object.puzzler;
+package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
 import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class PuzzlerObject extends GameObject implements CollisionReactor {
+public abstract class PuzzlerObject extends InteractiveControlObject implements CollisionReactor {
 
 	public PuzzlerObject(DIFFICULTY difficulty, int x, int y) {
 		super(x, y);
@@ -37,6 +38,13 @@ public abstract class PuzzlerObject extends GameObject implements CollisionReact
 
 	public BufferedImage getImage() {
 		return image;
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		blockPass(detectorObject);
 	}
 
 }

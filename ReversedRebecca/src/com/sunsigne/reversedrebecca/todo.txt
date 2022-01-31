@@ -17,6 +17,8 @@ Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
 
 ////////// FACILE ////////////
 
+InteractiveControlObject -> la police est tout bonnement dégeulasse
+
 LanguageScreen -> graphisme à changer
 
 TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
@@ -24,6 +26,9 @@ TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne
 Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
 
 DoorObject -> object test à dévelloper ! 
+
+NullDoorObject -> est remove au lieu de se cacher
+InteractiveControlObject -> le texte en anglais est un peu trop décalé
 
 Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 
