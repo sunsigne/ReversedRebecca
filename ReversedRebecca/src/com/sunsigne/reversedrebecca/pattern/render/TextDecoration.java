@@ -35,7 +35,7 @@ public class TextDecoration {
 	public void drawOutlinesString(Graphics g, String text, Font font, Color text_color, Color outlines_color,
 			int[] rect) {
 
-		int gap = 4;
+		int gap = 2;
 		int[] up_left_rect = { rect[0] - gap, rect[1] - gap, rect[2], rect[3] };
 		int[] up_right_rect = { rect[0] + gap, rect[1] - gap, rect[2], rect[3] };
 		int[] down_left_rect = { rect[0] - gap, rect[1] + gap, rect[2], rect[3] };
