@@ -1,51 +1,51 @@
-vidéo sur  :
-- écran titre
-- le rangement de la souris
-- le fileTask
-- le dual checker
-- traduction de text
-- écran de chargement
-
-
-////////// IMPORTANT ////////////
-
-OldCOnstructor -> to finish
-
-LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
-
-Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
-
-////////// FACILE ////////////
-
-InteractiveControlObject -> la police est tout bonnement dégeulasse
-
-LanguageScreen -> graphisme à changer
-
-TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
-
-Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
-
-DoorObject -> object test à dévelloper ! 
-
-NullDoorObject -> est remove au lieu de se cacher
-InteractiveControlObject -> le texte en anglais est un peu trop décalé
-
-Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
-
-MapCreator -> la GUI est ajouté de façon dégeulasse
-
-Textures (dossier des textures à ranger)
-GuiHealth getImage ne retourne QUE le coeur plein
-
-faire des noms marrant pour l'écran titre qui apparaisse .. 10% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
-
-LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
-
-////////// DIFFICILE ////////////
-
-animation de tourbillon de vent de temps en temps ?
-
-///////// A TRIER ////////////
+	vidéo sur  :
+	- écran titre
+	- le rangement de la souris
+	- le fileTask
+	- le dual checker
+	- traduction de text
+	- écran de chargement
+	
+	
+	////////// IMPORTANT ////////////
+	
+	OldCOnstructor -> to finish
+	
+	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
+	
+	Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
+	
+	////////// FACILE ////////////
+	
+	InteractiveControlObject -> la police est tout bonnement dégeulasse
+	
+	LanguageScreen -> graphisme à changer
+	
+	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
+	
+	Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
+	
+	DoorObject -> object test à dévelloper ! 
+	
+	NullDoorObject -> est remove au lieu de se cacher
+	InteractiveControlObject -> le texte en anglais est un peu trop décalé
+	
+	Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
+	
+	MapCreator -> la GUI est ajouté de façon dégeulasse
+	
+	Textures (dossier des textures à ranger)
+	GuiHealth getImage ne retourne QUE le coeur plein
+	
+	faire des noms marrant pour l'écran titre qui apparaisse .. 10% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
+	
+	LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
+	
+	////////// DIFFICILE ////////////
+	
+	animation de tourbillon de vent de temps en temps ?
+	
+	///////// A TRIER ////////////
 
 
 	 
