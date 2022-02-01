@@ -36,15 +36,23 @@ public class TextDecoration {
 			int[] rect) {
 
 		int gap = 2;
+		int[] left_rect = { rect[0] - gap, rect[1], rect[2], rect[3] };
 		int[] up_left_rect = { rect[0] - gap, rect[1] - gap, rect[2], rect[3] };
+		int[] up_rect = { rect[0], rect[1] - gap, rect[2], rect[3] };
 		int[] up_right_rect = { rect[0] + gap, rect[1] - gap, rect[2], rect[3] };
-		int[] down_left_rect = { rect[0] - gap, rect[1] + gap, rect[2], rect[3] };
+		int[] right_rect = { rect[0] + gap, rect[1], rect[2], rect[3] };
 		int[] down_right_rect = { rect[0] + gap, rect[1] + gap, rect[2], rect[3] };
+		int[] down_rect = { rect[0], rect[1] + gap, rect[2], rect[3] };
+		int[] down_left_rect = { rect[0] - gap, rect[1] + gap, rect[2], rect[3] };
 
+		new TextDecoration().drawCenteredString(g, text, font, outlines_color, left_rect);
 		new TextDecoration().drawCenteredString(g, text, font, outlines_color, up_left_rect);
+		new TextDecoration().drawCenteredString(g, text, font, outlines_color, up_rect);
 		new TextDecoration().drawCenteredString(g, text, font, outlines_color, up_right_rect);
-		new TextDecoration().drawCenteredString(g, text, font, outlines_color, down_left_rect);
+		new TextDecoration().drawCenteredString(g, text, font, outlines_color, right_rect);
 		new TextDecoration().drawCenteredString(g, text, font, outlines_color, down_right_rect);
+		new TextDecoration().drawCenteredString(g, text, font, outlines_color, down_rect);
+		new TextDecoration().drawCenteredString(g, text, font, outlines_color, down_left_rect);		
 
 		new TextDecoration().drawCenteredString(g, text, font, text_color, rect);
 	}
