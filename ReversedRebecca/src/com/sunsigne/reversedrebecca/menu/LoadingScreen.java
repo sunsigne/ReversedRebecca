@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class LoadingScreen implements Updatable, Translatable {
+public class LoadingScreen implements Updatable {
 
 	public LoadingScreen() {
 
@@ -28,7 +28,7 @@ public class LoadingScreen implements Updatable, Translatable {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
 		
-		String text = getTranslatedText("loading", "loading.csv", 1);
+		String text = new Translatable().getTranslatedText("loading", "loading.csv", 1);
 		Font font = new Font("arial", 1, 70);
 		g.setFont(font);
 		g.setColor(Color.WHITE);

@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class DoorObject extends PuzzlerObject {
 
@@ -41,7 +42,7 @@ public class DoorObject extends PuzzlerObject {
 
 			@Override
 			public String getName() {
-				return getTranslatedText("OPEN", "actions.csv", 1);
+				return new Translatable().getTranslatedText("OPEN", "actions.csv", 1);
 			}
 
 			@Override

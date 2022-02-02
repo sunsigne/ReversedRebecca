@@ -17,7 +17,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class LanguageScreen implements Updatable, Translatable {
+public class LanguageScreen implements Updatable {
 
 	public LanguageScreen() {
 		LAYER.MENU.addObject(this);
@@ -61,7 +61,7 @@ public class LanguageScreen implements Updatable, Translatable {
 		GenericListener onPress = () -> openTitleScreen();
 		GenericListener onRelease = null;
 
-		String text = getTranslatedText("BACK", "menu.csv", 4);
+		String text = new Translatable().getTranslatedText("BACK", "menu.csv", 4);
 
 		int widht = 420;
 		int height = 90;

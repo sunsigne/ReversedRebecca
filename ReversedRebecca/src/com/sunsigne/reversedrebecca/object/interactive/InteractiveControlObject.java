@@ -10,12 +10,11 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CannotInteract;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public abstract class InteractiveControlObject extends GameObject implements KeyboardEvent, Translatable {
+public abstract class InteractiveControlObject extends GameObject implements KeyboardEvent {
 
 	public InteractiveControlObject(int x, int y) {
 		super(x, y);
