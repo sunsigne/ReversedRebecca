@@ -11,19 +11,38 @@ public class NullDoorObject extends DoorObject {
 		super(DIFFICULTY.NULL, x, y);
 		setDisabled(true);
 	}
-	
+
+	////////// TICK ////////////
+
+	private boolean isOpened;
+	private boolean tryClosing;
+
+	@Override
+	public void tick() {
+		if (tryClosing)
+			isOpened = false;
+
+		tryClosing = true;
+	}
+
 	////////// RENDER ////////////
-	
+
 	@Override
 	public void render(Graphics g) {
+		if (isOpened)
+			return;
+
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
-	
+
 	////////// COLLISION ////////////
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		collidingReaction(detectorObject, false, () -> getHandler().removeObject(this));
+		collidingReaction(detectorObject, false, () -> {
+			isOpened = true;
+			tryClosing = false;
+		});
 	}
 
 }
