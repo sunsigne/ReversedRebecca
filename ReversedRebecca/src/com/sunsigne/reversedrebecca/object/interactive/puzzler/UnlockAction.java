@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class UnlockAction extends Action {
 
 	public UnlockAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject, new Translatable().getTranslatedText("UNLOCK", "actions.csv", 1), unlockAction(interactiveControlObject),
+		super(interactiveControlObject, new Translatable().getTranslatedText("UNLOCK", "actions.csv", 2), unlockAction(interactiveControlObject),
 				KeyEvent.VK_E);
 	}
 
