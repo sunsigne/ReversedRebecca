@@ -28,7 +28,7 @@
 	DoorObject -> object test à dévelloper ! 
 	
 	NullDoorObject -> est remove au lieu de se cacher
-	InteractiveControlObject -> le texte en anglais est un peu trop décalé
+	InteractiveControlObject -> les textes trop courts ou trop long sont décalés !
 	
 	Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
 	

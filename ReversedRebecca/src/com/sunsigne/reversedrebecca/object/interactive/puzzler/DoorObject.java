@@ -1,12 +1,10 @@
 package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class DoorObject extends PuzzlerObject {
 
@@ -24,7 +22,6 @@ public class DoorObject extends PuzzlerObject {
 
 	////////// INTERACTION ////////////
 
-	private Action open;
 	private TripleAction tripleAction;
 
 	@Override
@@ -33,28 +30,8 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	private void loadTripleAction() {
-		loadOpenAction();
-		tripleAction = new TripleAction(open, null, null);
-	}
-
-	private void loadOpenAction() {
-		open = new Action() {
-
-			@Override
-			public String getName() {
-				return new Translatable().getTranslatedText("OPEN", "actions.csv", 1);
-			}
-
-			@Override
-			public int getKeyEvent() {
-				return KeyEvent.VK_E;
-			}
-
-			@Override
-			public void doAction() {
-//				getHandler().removeObject(this);
-			}
-		};
+		Action unlockAction = new UnlockAction(this);
+		tripleAction = new TripleAction(unlockAction, null, null);
 	}
 
 	////////// TICK ////////////
