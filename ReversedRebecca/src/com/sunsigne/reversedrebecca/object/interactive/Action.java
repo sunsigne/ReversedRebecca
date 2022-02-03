@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.interactive;
 
 import com.sunsigne.reversedrebecca.characteristics.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 
 public class Action {
@@ -52,24 +53,28 @@ public class Action {
 		this.listener = listener;
 	}
 
+	public boolean canUseTool() {
+		if (getInteractiveControlObject() instanceof Difficulty == false) {
+			System.err.println(
+					"the InteractiveControlObject need to implements Difficulty if a ToolPlayer stands in the constructor of an Action");
+			return false;
+		}
+
+		Difficulty difficultyObject = (Difficulty) getInteractiveControlObject();
+		boolean canUseTool = new DifficultyComparator().canUseTool(difficultyObject.getDifficulty(),
+				toolPlayer.getDifficulty());
+
+		return canUseTool;
+	}
+
 	public void doAction() {
 		if (listener == null)
 			return;
 
-		if (toolPlayer == null) {
+		if (toolPlayer == null)
 			listener.doAction();
-			return;
-		}
 
-		if (getInteractiveControlObject() instanceof Difficulty == false) {
-			System.err.println(
-					"the InteractiveControlObject need to implements Difficulty if a ToolPlayer stands in the constructor of an Action");
-			return;
-		}
-
-		Difficulty difficultyObject = (Difficulty) getInteractiveControlObject();
-
-		if (difficultyObject.getDifficulty() == toolPlayer.getDifficulty())
+		else if (canUseTool())
 			listener.doAction();
 	}
 
