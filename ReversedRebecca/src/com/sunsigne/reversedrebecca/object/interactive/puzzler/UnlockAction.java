@@ -11,13 +11,17 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class UnlockAction extends Action {
 
 	public UnlockAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject, new Translatable().getTranslatedText("UNLOCK", "actions/door.csv", 2),
-				new KeyToolPlayer(), unlockAction(interactiveControlObject), KeyEvent.VK_E);
+		super(interactiveControlObject, null, null, null, 0);
+
+		setName(new Translatable().getTranslatedText("UNLOCK", "actions/door.csv", 2));
+		setToolPlayer(new KeyToolPlayer());
+		setListener(unlockAction(interactiveControlObject));
+		setKeyEvent(KeyEvent.VK_E);
 	}
 
 	////////// INTERACTION ////////////
 
-	private static GenericListener unlockAction(InteractiveControlObject interactiveControlObject) {
+	private GenericListener unlockAction(InteractiveControlObject interactiveControlObject) {
 		GenericListener listener = () -> {
 			NullDoorObject nullDoor = new NullDoorObject(interactiveControlObject.getX(),
 					interactiveControlObject.getY());

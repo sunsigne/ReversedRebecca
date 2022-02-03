@@ -34,10 +34,23 @@ public class Action {
 		return name;
 	}
 
+	protected void setName(String name) {
+		this.name = name;
+	}
+
 	////////// INTERACTION ////////////
 
 	private ToolPlayer toolPlayer;
+
+	protected void setToolPlayer(ToolPlayer toolPlayer) {
+		this.toolPlayer = toolPlayer;
+	}
+
 	private GenericListener listener;
+
+	protected void setListener(GenericListener listener) {
+		this.listener = listener;
+	}
 
 	public void doAction() {
 		if (listener == null)
@@ -66,6 +79,10 @@ public class Action {
 
 	public int getKeyEvent() {
 		return keyEvent;
+	}
+
+	protected void setKeyEvent(int keyEvent) {
+		this.keyEvent = keyEvent;
 	}
 
 }
