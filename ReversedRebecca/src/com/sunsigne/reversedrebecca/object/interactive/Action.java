@@ -27,7 +27,7 @@ public class Action {
 
 	////////// INTERACTION ////////////
 
-	private GenericListener listener;
+	protected GenericListener listener;
 
 	public void doAction() {
 		if (listener == null)
