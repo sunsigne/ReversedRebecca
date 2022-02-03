@@ -19,7 +19,8 @@
 	
 	renomer DIFFICULTY en LVL ?
 	
-	KeyToolObject (rien n'est bon ici !)
+	ToolObject (collisionReaction pas fini !)
+	Key & Bomb -> pas encore de vraie texture
 	
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	

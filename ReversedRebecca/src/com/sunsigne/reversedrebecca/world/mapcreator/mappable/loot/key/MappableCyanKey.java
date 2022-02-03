@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.loot.key;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.loot.KeyToolObject;
+import com.sunsigne.reversedrebecca.object.loot.tools.KeyToolObject;
 import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
