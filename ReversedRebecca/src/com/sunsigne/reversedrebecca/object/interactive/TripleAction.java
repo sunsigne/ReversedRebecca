@@ -22,4 +22,22 @@ public class TripleAction {
 		return null;
 	}
 
+	public boolean canUseTool() {
+		boolean canAction1 = false;
+		boolean canAction2 = false;
+		boolean canAction3 = false;
+
+		if (action1 == null & action2 == null & action3 == null)
+			return true;
+
+		if (action1 != null)
+			canAction1 = action1.canUseTool();
+		if (action2 != null)
+			canAction2 = action2.canUseTool();
+		if (action3 != null)
+			canAction3 = action3.canUseTool();
+
+		return (canAction1 | canAction2 | canAction3);
+	}
+
 }

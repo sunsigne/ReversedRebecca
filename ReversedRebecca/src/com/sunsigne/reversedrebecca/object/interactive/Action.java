@@ -54,12 +54,17 @@ public class Action {
 	}
 
 	public boolean canUseTool() {
+		
+		// no tool is required
+		if (toolPlayer == null)
+			return true;
+
+		// the object has no difficulty registered
 		if (getInteractiveControlObject() instanceof Difficulty == false) {
-			System.err.println(
-					"the InteractiveControlObject need to implements Difficulty if a ToolPlayer stands in the constructor of an Action");
-			return false;
+			return true;
 		}
 
+		// comparaison between the object's level and the tool's level
 		Difficulty difficultyObject = (Difficulty) getInteractiveControlObject();
 		boolean canUseTool = new DifficultyComparator().canUseTool(difficultyObject.getDifficulty(),
 				toolPlayer.getDifficulty());
@@ -71,10 +76,7 @@ public class Action {
 		if (listener == null)
 			return;
 
-		if (toolPlayer == null)
-			listener.doAction();
-
-		else if (canUseTool())
+		if (canUseTool())
 			listener.doAction();
 	}
 
