@@ -25,8 +25,8 @@
 	Les tool loots ne devraient-ils pas être des lvl up au lieu d'avoir une difficulté fixe ?
 	
 	ToolLoot -> remet au niveau du loot au lieu de s'adapter ...
-	tools - manquant : texture, gui, pickup efficace (vérifier le lvl actuel), checking pour puzzle (actuellement, lvl egal au lieu de égal ou inférieur)
-	
+	tools - manquant : texture, gui, pickup efficace (vérifier le lvl actuel), checking pour puzzle
+		
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	
 	LanguageScreen -> graphisme à changer

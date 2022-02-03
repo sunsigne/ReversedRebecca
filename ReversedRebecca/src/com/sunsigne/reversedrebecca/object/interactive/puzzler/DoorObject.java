@@ -16,11 +16,6 @@ public class DoorObject extends PuzzlerObject {
 
 	////////// NAME ////////////
 
-	@Override
-	public String getName() {
-		return "door";
-	}
-
 	private String noToolText;
 
 	@Override
@@ -28,6 +23,11 @@ public class DoorObject extends PuzzlerObject {
 		return noToolText;
 	}
 
+	@Override
+	public String getName() {
+		return "door";
+	}
+	
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;
