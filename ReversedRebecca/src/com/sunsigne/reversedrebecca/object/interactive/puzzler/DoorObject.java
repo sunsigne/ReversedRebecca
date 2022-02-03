@@ -4,12 +4,14 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class DoorObject extends PuzzlerObject {
 
 	public DoorObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 		loadTripleAction();
+		noToolText = new Translatable().getTranslatedText("LOCKED", "actions/door.csv", 1);
 	}
 
 	////////// NAME ////////////
@@ -17,6 +19,13 @@ public class DoorObject extends PuzzlerObject {
 	@Override
 	public String getName() {
 		return "door";
+	}
+
+	private String noToolText;
+
+	@Override
+	protected String getNoToolText() {
+		return noToolText;
 	}
 
 	////////// INTERACTION ////////////

@@ -106,12 +106,21 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 
 	////////// RENDER ////////////
 
+	protected abstract String getNoToolText();
+	
 	public void drawTripleActionText(Graphics g) {
 		if (!canPlayerInterfact())
 			return;
 
 		Player player = new PlayerFinder().getPlayer();
 
+		// if cannot use any tool, draw the notool text
+		if (!getTripleAction().canUseTool()) {
+			drawFacingText(g, player.getFacing(), getNoToolText());
+			return;
+		}
+
+		// if no action, draw nothing ? don't forget to put actions anyway
 		if (getTripleAction().getAction(0) == null)
 			return;
 
@@ -137,31 +146,32 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 	}
 
 	private void drawFacingActionText(Graphics g, DIRECTION facing, Action action) {
+		String text = "[" + KeyEvent.getKeyText(action.getKeyEvent()) + "]" + " " + action.getName();
+		drawFacingText(g, facing, text);
+	}
 
+	private void drawFacingText(Graphics g, DIRECTION facing, String text) {
 		Font font = new Font("arial", 1, 25);
-		String text = "[" + KeyEvent.getKeyText(action.getKeyEvent()) + "]" + " " + action.getName().toUpperCase();
+		String text0 = text.toUpperCase();
+		int[] rect = getFacingRect(facing);
 
-		int[] rect;
+		new TextDecoration().drawOutlinesString(g, text0, font, rect);
+	}
+
+	private int[] getFacingRect(DIRECTION facing) {
 
 		switch (facing) {
 		case LEFT:
-			rect = new int[] { getX() - (int)(1.5*Size.M), getY(), getWidth(), getHeight() };
-			break;
+			return new int[] { getX() - (int) (1.5 * Size.M), getY(), getWidth(), getHeight() };
 		case RIGHT:
-			rect = new int[] { getX() + (int)(1.5*Size.M), getY(), getWidth(), getHeight() };
-			break;
+			return new int[] { getX() + (int) (1.5 * Size.M), getY(), getWidth(), getHeight() };
 		case UP:
-			rect = new int[] { getX(), getY() - Size.M, getWidth(), getHeight() };
-			break;
+			return new int[] { getX(), getY() - Size.M, getWidth(), getHeight() };
 		case DOWN:
-			rect = new int[] { getX(), getY() + Size.M, getWidth(), getHeight() };
-			break;
+			return new int[] { getX(), getY() + Size.M, getWidth(), getHeight() };
 		default:
-			rect = getRect();
-			break;
+			return getRect();
 		}
-
-		new TextDecoration().drawOutlinesString(g, text, font, rect);
 	}
 
 	////////// KEYBOARD ////////////
