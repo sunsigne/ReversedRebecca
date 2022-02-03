@@ -12,7 +12,6 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 
 	public LootObject(int x, int y) {
 		super(x, y);
-		loadImage();
 	}
 
 	////////// NAME ////////////
@@ -28,13 +27,7 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 
 	////////// TEXTURE ////////////
 
-	protected BufferedImage image;
-
-	protected abstract void loadImage();
-
-	public BufferedImage getImage() {
-		return image;
-	}
+	public abstract BufferedImage getImage();
 
 	////////// RENDER ////////////
 
@@ -49,7 +42,7 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (!(detectorObject instanceof Player))
 			return;
-		
+
 		collidingReaction(detectorObject, false, () -> {
 			getHandler().removeObject(this);
 			actionWhenLooted();

@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.loot.tools;
 
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.object.loot.LootObject;
 import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -26,11 +28,17 @@ public abstract class ToolObject extends LootObject {
 
 	////////// TEXTURE ////////////
 
-	@Override
-	protected void loadImage() {
+	protected BufferedImage image;
+
+	private void loadImage() {
 		image = new ImageTask().loadImage("textures/" + getPuzzlerName() + "/" + getName() + "_" + difficulty.getName() + ".png");
 	}
-
+	
+	@Override
+	public BufferedImage getImage() {
+		return image;
+	}
+	
 	////////// COLLISION ////////////
 
 	@Override

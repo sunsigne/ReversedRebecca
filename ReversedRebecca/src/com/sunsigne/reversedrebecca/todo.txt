@@ -21,6 +21,7 @@
 	
 	ToolObject (collisionReaction pas fini !)
 	Key & Bomb -> pas encore de vraie texture
+	Mappable Key & Bomb -> pas les bonnes couleurs (je crois)
 	
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	
