@@ -4,11 +4,10 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
-import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 
 public class DoorObject extends PuzzlerObject {
 
-	public DoorObject(DIFFICULTY difficulty, int x, int y) {
+	public DoorObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 		loadTripleAction();
 	}

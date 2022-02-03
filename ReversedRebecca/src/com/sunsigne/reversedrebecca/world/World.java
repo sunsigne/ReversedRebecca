@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.characteristics.ToolPlayerList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
@@ -40,12 +41,12 @@ public class World implements Updatable {
 
 	public World(String levelName, LAYER layer) {
 		LAYER.LOADING.addObject(new LoadingScreen());
-		
+
 		initParameters(levelName, layer);
 		createMap();
 		addControlers();
 		start();
-		
+
 		LAYER.LOADING.getHandler().clear();
 
 	}
@@ -128,6 +129,7 @@ public class World implements Updatable {
 			tempLayer.getHandler().clear();
 		}
 		instance = null;
+		ToolPlayerList.getList().clear();
 		Game.getInstance().forceLoop();
 	}
 

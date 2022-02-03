@@ -1,0 +1,29 @@
+package com.sunsigne.reversedrebecca.object.characteristics;
+
+public interface Difficulty {
+
+	////////// DIFFICULTY ////////////
+
+	public LVL getDifficulty();
+
+	public void setDifficulty(LVL difficulty);
+
+	////////// LVL ////////////
+
+	public enum LVL {
+		NULL("null"), CYAN("cyan"), GREEN("green"), YELLOW("yellow"), ORANGE("orange"),
+		RED("red")/* , PURPLE("purple") */;
+		// purple is special difficulty, for boss or senario only
+
+		private String name;
+
+		LVL(String name) {
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+	}
+
+}

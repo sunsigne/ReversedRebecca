@@ -22,6 +22,10 @@
 	ToolObject (collisionReaction pas fini !)
 	Key & Bomb -> pas encore de vraie texture
 	Mappable Key & Bomb -> pas les bonnes couleurs (je crois)
+	Les tool loots ne devraient-ils pas être des lvl up au lieu d'avoir une difficulté fixe ?
+	
+	ToolLoot -> remet au niveau du loot au lieu de s'adapter ...
+	tools - manquant : texture, gui, pickup efficace (vérifier le lvl actuel), checking pour puzzle (actuellement, lvl egal au lieu de égal ou inférieur)
 	
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	
@@ -32,6 +36,7 @@
 	Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
 	
 	DoorObject -> object test à dévelloper un peu 
+	+ le text s'affiche sur le même layer que la porte (donc SOUS les objects ajouté après ...)
 
 	InteractiveControlObject -> les textes trop courts ou trop long sont décalés !
 	

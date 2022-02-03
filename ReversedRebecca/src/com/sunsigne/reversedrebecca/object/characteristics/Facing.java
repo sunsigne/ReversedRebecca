@@ -3,11 +3,11 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 public interface Facing {
 
 	////////// FACING ////////////
-	
+
 	public DIRECTION getFacing();
 
 	public void setFacing(DIRECTION facing);
-	
+
 	////////// DIRECTION ////////////
 
 	public enum DIRECTION {
@@ -25,7 +25,7 @@ public interface Facing {
 		public String getName() {
 			return name;
 		}
-		
+
 		public int getNum() {
 			return num;
 		}

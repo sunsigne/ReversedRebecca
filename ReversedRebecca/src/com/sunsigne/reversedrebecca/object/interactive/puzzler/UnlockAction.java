@@ -2,15 +2,16 @@ package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.interactive.Action;
+import com.sunsigne.reversedrebecca.characteristics.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
+import com.sunsigne.reversedrebecca.object.interactive.ToolAction;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
-public class UnlockAction extends Action {
+public class UnlockAction extends ToolAction {
 
 	public UnlockAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject, new Translatable().getTranslatedText("UNLOCK", "actions/door.csv", 2), unlockAction(interactiveControlObject),
+		super(interactiveControlObject, new Translatable().getTranslatedText("UNLOCK", "actions/door.csv", 2), new KeyToolPlayer(), unlockAction(interactiveControlObject),
 				KeyEvent.VK_E);
 	}
 

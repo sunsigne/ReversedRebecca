@@ -2,13 +2,13 @@ package com.sunsigne.reversedrebecca.object.loot.tools;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.loot.LootObject;
-import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class ToolObject extends LootObject {
+public abstract class ToolObject extends LootObject implements Difficulty {
 
-	public ToolObject(DIFFICULTY difficulty, int x, int y) {
+	public ToolObject(LVL difficulty, int x, int y) {
 		super(x, y);
 		this.difficulty = difficulty;
 		loadImage();
@@ -20,10 +20,16 @@ public abstract class ToolObject extends LootObject {
 
 	////////// DIFFICULTY ////////////
 
-	private DIFFICULTY difficulty;
+	private LVL difficulty;
 
-	public DIFFICULTY getDifficulty() {
+	@Override
+	public LVL getDifficulty() {
 		return difficulty;
+	}
+
+	@Override
+	public void setDifficulty(LVL difficulty) {
+		this.difficulty = difficulty;
 	}
 
 	////////// TEXTURE ////////////
@@ -39,11 +45,4 @@ public abstract class ToolObject extends LootObject {
 		return image;
 	}
 	
-	////////// COLLISION ////////////
-
-	@Override
-	public void actionWhenLooted() {
-
-	}
-
 }

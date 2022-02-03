@@ -1,10 +1,10 @@
 package com.sunsigne.reversedrebecca.object.loot.tools;
 
-import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
+import com.sunsigne.reversedrebecca.characteristics.KeyToolPlayer;
 
 public class KeyToolObject extends ToolObject {
 
-	public KeyToolObject(DIFFICULTY difficulty, int x, int y) {
+	public KeyToolObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 	}
 
@@ -16,6 +16,11 @@ public class KeyToolObject extends ToolObject {
 	@Override
 	public String getName() {
 		return "key";
+	}
+	
+	@Override
+	public void actionWhenLooted() {
+		new KeyToolPlayer().setDifficulty(getDifficulty());
 	}
 
 }

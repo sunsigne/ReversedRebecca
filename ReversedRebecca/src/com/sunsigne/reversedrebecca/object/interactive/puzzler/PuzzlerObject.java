@@ -4,13 +4,13 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
-import com.sunsigne.reversedrebecca.ressources.DIFFICULTY;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class PuzzlerObject extends InteractiveControlObject implements CollisionReactor {
+public abstract class PuzzlerObject extends InteractiveControlObject implements Difficulty, CollisionReactor {
 
-	public PuzzlerObject(DIFFICULTY difficulty, int x, int y) {
+	public PuzzlerObject(LVL difficulty, int x, int y) {
 		super(x, y);
 		this.difficulty = difficulty;
 		loadImage();
@@ -22,10 +22,16 @@ public abstract class PuzzlerObject extends InteractiveControlObject implements 
 
 	////////// DIFFICULTY ////////////
 
-	private DIFFICULTY difficulty;
+	private LVL difficulty;
 
-	public DIFFICULTY getDifficulty() {
+	@Override
+	public LVL getDifficulty() {
 		return difficulty;
+	}
+
+	@Override
+	public void setDifficulty(LVL difficulty) {
+		this.difficulty = difficulty;
 	}
 
 	////////// TEXTURE ////////////
@@ -33,7 +39,8 @@ public abstract class PuzzlerObject extends InteractiveControlObject implements 
 	private BufferedImage image;
 
 	private void loadImage() {
-		image = new ImageTask().loadImage("textures/" + getName() + "/" + getName() + "_" + difficulty.getName() + ".png");
+		image = new ImageTask()
+				.loadImage("textures/" + getName() + "/" + getName() + "_" + difficulty.getName() + ".png");
 	}
 
 	public BufferedImage getImage() {
