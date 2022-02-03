@@ -37,7 +37,8 @@
 	
 	DoorObject -> object test à dévelloper un peu 
 	+ le text s'affiche sur le même layer que la porte (donc SOUS les objects ajouté après ...)
-
+	+ afficher "vérouillé" quand aucune action n'est possible
+	
 	InteractiveControlObject -> les textes trop courts ou trop long sont décalés !
 	
 	Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
