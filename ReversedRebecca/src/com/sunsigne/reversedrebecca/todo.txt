@@ -17,6 +17,10 @@
 	
 	////////// FACILE ////////////
 	
+	renomer DIFFICULTY en LVL ?
+	
+	KeyToolObject (rien n'est bon ici !)
+	
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	
 	LanguageScreen -> graphisme à changer
@@ -25,7 +29,7 @@
 	
 	Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
 	
-	DoorObject -> object test à dévelloper ! 
+	DoorObject -> object test à dévelloper un peu 
 
 	InteractiveControlObject -> les textes trop courts ou trop long sont décalés !
 	
