@@ -7,9 +7,9 @@ public enum DIFFICULTY {
 	GREEN("green"),
 	YELLOW("yellow"),
 	ORANGE("orange"),
-	RED("red"),
+	RED("red");
 	// special difficulty, for boss or senario only
-	PURPLE("purple");
+//	PURPLE("purple");
 	
 	
 	private String name;
