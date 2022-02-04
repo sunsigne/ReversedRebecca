@@ -17,6 +17,8 @@
 	
 	////////// FACILE ////////////
 	
+	déplacer les textures de debug (dans un dossier gui ?)
+	
 	renomer DIFFICULTY en LVL ?
 	
 	ToolObject (collisionReaction pas fini !)
