@@ -34,7 +34,7 @@ public class TitleScreenButton extends ButtonObject {
 			rect = new int[] {getX(), getY() - 3, getWidth(), getHeight()};
 		}
 
-		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, DIRECTION.NULL, rect);
+		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, getFacing(), rect);
 	}
 
 }

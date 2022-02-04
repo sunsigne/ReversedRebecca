@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -61,13 +62,14 @@ public class LanguageScreen implements Updatable {
 		GenericListener onPress = () -> openTitleScreen();
 		GenericListener onRelease = null;
 
-		String text = new Translatable().getTranslatedText("BACK", "menu.csv", 4);
+		String text = "< " + new Translatable().getTranslatedText("BACK", "menu.csv", 4);
 
 		int widht = 420;
 		int height = 90;
 
-		ButtonObject backButton = new TitleScreenButton(text, Window.WIDHT - widht, Window.HEIGHT - height, widht,
+		ButtonObject backButton = new TitleScreenButton(text, Window.WIDHT - widht - 20, Window.HEIGHT - height - 10, widht,
 				height, onPress, onRelease);
+		backButton.setFacing(DIRECTION.RIGHT);
 		LAYER.MENU.addObject(backButton);
 	}
 
