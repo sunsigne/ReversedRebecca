@@ -16,7 +16,7 @@ public enum LAYER {
 	UP_WORLD_CONTENT("up_world_content", new Handler(true)),
 	//UPPER_GROUND("upper_ground", new Handler(true)),
 	
-//	WORLD_TEXT("world_text", new Handler(true)),
+	WORLD_TEXT("world_text", new Handler(true)),
 	
 	GUI("gui", new Handler(false)),
 	MENU("menu", new Handler(false)),
