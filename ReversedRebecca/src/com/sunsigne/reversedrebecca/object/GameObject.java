@@ -15,8 +15,6 @@ public abstract class GameObject implements Velocity {
 		this.y = y;
 		this.w = w;
 		this.h = h;
-		initX = x;
-		initY = y;
 	}
 
 	////////// POSITION ////////////
@@ -41,16 +39,6 @@ public abstract class GameObject implements Velocity {
 	@Override
 	public void setY(int y) {
 		this.y = y;
-	}
-
-	private int initX, initY;
-
-	public int getInitX() {
-		return initX;
-	}
-
-	public int getInitY() {
-		return initY;
 	}
 
 	////////// SIZE ////////////
