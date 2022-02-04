@@ -27,7 +27,6 @@ public class TextDecoration {
 		default:
 			horizontal = (rect[2] - metrics.stringWidth(text)) / 2;
 			break;
-
 		}
 
 		int x = rect[0] + horizontal;
