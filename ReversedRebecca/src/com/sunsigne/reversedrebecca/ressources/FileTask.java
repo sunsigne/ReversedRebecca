@@ -6,13 +6,23 @@ import java.util.Scanner;
 
 public class FileTask {
 
+	////////// USEFUL ////////////
+	
 	public boolean doesExist(String path) {
 		File file = new File("ressources/" + path);
 		return file.exists();
 	}
+	
 
+	public void delete(String path) {
+		File file = new File("ressources/" + path);
+		if (file.exists())
+			file.delete();
+	}
+
+	////////// READ ////////////
+	
 	public String read(String path) {
-
 		return read(0, path);
 	}
 
@@ -58,6 +68,8 @@ public class FileTask {
 		return content;
 	}
 
+	////////// WRITE ////////////
+	
 	public void write(String path, String text) {
 		write(0, path, text);
 	}
@@ -93,12 +105,6 @@ public class FileTask {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void delete(String path) {
-		File file = new File("ressources/" + path);
-		if (file.exists())
-			file.delete();
 	}
 
 }
