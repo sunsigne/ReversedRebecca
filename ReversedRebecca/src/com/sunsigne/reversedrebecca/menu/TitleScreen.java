@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.OldConductor;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -82,7 +82,7 @@ public class TitleScreen implements Updatable {
 	///// quit /////
 
 	private void createQuitButton() {
-		GenericListener onPress = () -> new OldConductor().stopApp();
+		GenericListener onPress = () -> new Conductor().stopApp();
 		GenericListener onRelease = null;
 
 		String text = new Translatable().getTranslatedText("QUIT", "menu.csv", 3);

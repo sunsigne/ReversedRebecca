@@ -7,7 +7,7 @@ import java.awt.image.BufferStrategy;
 import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.Infos;
-import com.sunsigne.reversedrebecca.system.OldConductor;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class Game extends Canvas implements Runnable {
@@ -18,7 +18,7 @@ public class Game extends Canvas implements Runnable {
 
 	public static void main(String args[]) {
 		instance = new Game();
-		new OldConductor().startApp();
+		new Conductor().startApp();
 	}
 
 	////////// SIGNELTON ////////////

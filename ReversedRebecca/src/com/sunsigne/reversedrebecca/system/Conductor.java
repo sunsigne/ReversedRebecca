@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class OldConductor {
+public class Conductor {
 
 	////////// START & STOP ////////////
 
@@ -24,10 +24,12 @@ public class OldConductor {
 
 		// LOADING OF MINIMAL RESSOURCES
 		loadMinimalRessources();
-
+		Game.getInstance().forceLoop();
+		
 		// LOADING OF RESSOURCES
 		loadRessources();
-
+		Game.getInstance().forceLoop();
+		
 		new TitleScreen();
 		LAYER.LOADING.getHandler().clear();
 		
@@ -45,21 +47,13 @@ public class OldConductor {
 	
 	private void loadRessources() {
 
-//		new ForceInit().createInstanceOf(SheetBank.class);
-//		new ForceInit().createInstanceOf(ImageBank.class);
-//		ImageBank.loadRessources();
-		
 		new LayerDualizer().dualizeSameFloorLayers();
 		
 		new ForceInit().loadAllClassesInPackage(PhysicLaw.class.getPackageName());
 		// because Debug Modes are alterned Physic Laws, they have to be loaded AFTER
-		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());		
+		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());	
 		
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
-		
-		
-		
-		Game.getInstance().forceLoop();
 	}
 
 }

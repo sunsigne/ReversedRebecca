@@ -57,7 +57,7 @@ public class DualChecker implements Updatable {
 	private void stopApp() {
 //		new SoundTask().playSound(SoundBank.ERROR);
 		JOptionPane.showMessageDialog(null, "The game is already running.");
-		new OldConductor().stopApp();
+		new Conductor().stopApp();
 	}
 
 	////////// RENDER ////////////

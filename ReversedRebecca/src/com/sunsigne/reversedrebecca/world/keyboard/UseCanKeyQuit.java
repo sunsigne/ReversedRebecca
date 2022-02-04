@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.world.keyboard;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.system.OldConductor;
+import com.sunsigne.reversedrebecca.system.Conductor;
 
 public class UseCanKeyQuit extends WorldKeyboard {
 
@@ -10,7 +10,7 @@ public class UseCanKeyQuit extends WorldKeyboard {
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		if (key == KeyEvent.VK_ESCAPE)
-			new OldConductor().stopApp();
+			new Conductor().stopApp();
 	}
 
 	@Override
