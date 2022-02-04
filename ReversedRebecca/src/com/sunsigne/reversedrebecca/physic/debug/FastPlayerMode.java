@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
@@ -52,12 +51,5 @@ public class FastPlayerMode extends DebugMode {
 	public void afterObjectRender(Graphics g, Updatable object) {
 
 	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	protected int getKeyEvent() {
-		return KeyEvent.VK_F2;
-	}
-
+	
 }

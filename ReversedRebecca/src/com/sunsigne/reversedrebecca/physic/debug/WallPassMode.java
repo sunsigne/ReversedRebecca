@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
@@ -34,18 +33,18 @@ public class WallPassMode extends DebugMode {
 	@Override
 	public void tick(Updatable object) {
 		if (getState()) {
-			if(object instanceof Player)
+			if (object instanceof Player)
 				PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
-			else 
+			else
 				PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
 		}
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
-		
+
 		Graphics2D g2d = (Graphics2D) g;
 		float alpha = getState() & object instanceof Player ? 0.4f : 1f;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
@@ -54,13 +53,6 @@ public class WallPassMode extends DebugMode {
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
 
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	protected int getKeyEvent() {
-		return KeyEvent.VK_F4;
 	}
 
 }

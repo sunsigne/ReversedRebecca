@@ -49,11 +49,6 @@ public class ElevatorMode extends DebugMode {
 	////////// KEYBOARD ////////////
 
 	@Override
-	protected int getKeyEvent() {
-		return KeyEvent.VK_F1;
-	}
-
-	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		if (key == getKeyEvent()) {

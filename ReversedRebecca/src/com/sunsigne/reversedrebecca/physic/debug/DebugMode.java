@@ -39,7 +39,10 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 		return keyboardController;
 	}
 
-	protected abstract int getKeyEvent();
+	// those are the keyx F1, F2, etc.
+	protected int getKeyEvent() {
+		return 0x70 + local_index;
+	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {

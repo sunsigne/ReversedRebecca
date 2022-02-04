@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
@@ -112,13 +111,6 @@ public class VisibleHitboxMode extends DebugMode {
 				mouseObject.getHeight());
 		
 		redHitboxRender(g2d, bounds);
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	protected int getKeyEvent() {
-		return KeyEvent.VK_F3;
 	}
 
 }
