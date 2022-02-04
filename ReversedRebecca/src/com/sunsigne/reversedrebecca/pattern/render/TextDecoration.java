@@ -7,6 +7,8 @@ import java.awt.Graphics;
 
 public class TextDecoration {
 
+	///// center /////
+	
 	public void drawCenteredString(Graphics g, String text, Font font, Color text_color, int[] rect) {
 
 		FontMetrics metrics = g.getFontMetrics(font);
@@ -17,6 +19,8 @@ public class TextDecoration {
 		g.drawString(text, x, y);
 	}
 
+	///// shadow /////
+	
 	public void drawShadowedString(Graphics g, String text, Font font, Color text_color, Color shadow_color,
 			int[] rect) {
 
@@ -27,6 +31,8 @@ public class TextDecoration {
 		new TextDecoration().drawCenteredString(g, text, font, text_color, rect);
 	}
 
+	///// outlines /////
+	
 	public void drawOutlinesString(Graphics g, String text, Font font, int[] rect) {
 
 		drawOutlinesString(g, text, font, Color.WHITE, Color.BLACK, rect);
