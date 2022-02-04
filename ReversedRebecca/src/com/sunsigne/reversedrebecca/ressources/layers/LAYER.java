@@ -16,13 +16,16 @@ public enum LAYER {
 	UP_WORLD_CONTENT("up_world_content", new Handler(true)),
 	//UPPER_GROUND("upper_ground", new Handler(true)),
 	
-	WORLD_TEXT("world_text", new Handler(true)),
+//	WORLD_TEXT("world_text", new Handler(true)),
 	
 	GUI("gui", new Handler(false)),
 	MENU("menu", new Handler(false)),
 	DEBUG ("debug", new Handler(false)),
 	LOADING ("loading", new Handler(false));
 	
+	public boolean isMapLayer() {
+		return getName().contains("ground") | getName().contains("content");
+	}
 	
 	private String name;
 	private Handler handler;

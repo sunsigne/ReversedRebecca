@@ -19,8 +19,8 @@ public class PlayerLayerChanger {
 
 	private void createList() {
 		for (LAYER tempLayer : LAYER.values()) {
-			if (!tempLayer.getHandler().isCameraDependant())
-				break;
+			if (!tempLayer.isMapLayer())
+				continue;
 
 			list.addObject(tempLayer);
 		}

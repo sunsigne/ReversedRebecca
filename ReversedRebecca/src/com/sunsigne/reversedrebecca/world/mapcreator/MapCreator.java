@@ -28,7 +28,7 @@ public class MapCreator {
 		
 		for(LAYER tempLayer : LAYER.values())
 		{
-			if(!tempLayer.getHandler().isCameraDependant())
+			if (!tempLayer.isMapLayer())
 				continue;
 
 			if(tempLayer.getName().contains("ground"))

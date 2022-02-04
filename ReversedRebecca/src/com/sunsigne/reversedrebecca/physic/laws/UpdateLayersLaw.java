@@ -49,10 +49,7 @@ public class UpdateLayersLaw implements PhysicLaw {
 		boolean hideRendering = false;
 
 		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer == LAYER.WORLD_TEXT)
-				continue;
-
-			if (!tempLayer.getHandler().isCameraDependant())
+			if (!tempLayer.isMapLayer())
 				continue;
 
 			tempLayer.getHandler().setHideRendering(hideRendering);
