@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -20,25 +19,11 @@ public class FastPlayerMode extends DebugMode {
 		return physicLaw;
 	}
 
-	////////// DEBUG MODE ////////////
+	////////// NAME ////////////
 
 	@Override
 	public String getName() {
 		return "debug_fast_player_mode";
-	}
-
-	@Override
-	protected void actionWhenTurnedOn() {
-//		Player player = new PlayerFinder().getPlayer();
-//		if (player != null)
-//			player.speed = 3 * player.speed;
-	}
-
-	@Override
-	protected void actionWhenTurnedOff() {
-//		Player player = new PlayerFinder().getPlayer();
-//		if (player != null)
-//			player.speed = player.speed / 3;
 	}
 
 	////////// TICK ////////////

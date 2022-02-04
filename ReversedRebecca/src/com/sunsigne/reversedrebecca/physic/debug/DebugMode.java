@@ -21,19 +21,15 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 
 	private static int index = 0;
 	private int local_index = index;
-	
+
 	public int getIndex() {
 		return local_index;
 	}
-	
-	////////// DEBUG MODE ////////////
+
+	////////// NAME ////////////
 
 	public abstract String getName();
-	
-	protected abstract void actionWhenTurnedOn();
 
-	protected abstract void actionWhenTurnedOff();
-	
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
@@ -48,13 +44,8 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		if (key == getKeyEvent()) {
+		if (key == getKeyEvent())
 			cycle();
-			if (getState())
-				actionWhenTurnedOn();
-			else
-				actionWhenTurnedOff();
-		}
 	}
 
 	@Override

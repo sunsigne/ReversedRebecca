@@ -25,21 +25,11 @@ public class VisibleHitboxMode extends DebugMode {
 		return physicLaw;
 	}
 
-	////////// DEBUG MODE ////////////
+	////////// NAME ////////////
 
 	@Override
 	public String getName() {
 		return "debug_visible_hitbox_mode";
-	}
-
-	@Override
-	protected void actionWhenTurnedOn() {
-
-	}
-
-	@Override
-	protected void actionWhenTurnedOff() {
-
 	}
 
 	////////// TICK ////////////
@@ -71,14 +61,25 @@ public class VisibleHitboxMode extends DebugMode {
 		mouseUserEventRender(g2d, object);
 	}
 
+	///// useful /////
+	
+	private void redHitboxRender(Graphics2D g2d, Rectangle bounds) {
+		g2d.setColor(Color.WHITE);
+		g2d.draw(bounds);
+
+		g2d.setColor(Color.RED);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.4f));
+		g2d.fill(bounds);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+	}
+
+	///// detector /////
+	
 	private void collisionDetectorRender(Graphics2D g2d, Updatable object) {
-
-		CollisionDetector detectorObject = null;
-
-		if (object instanceof CollisionDetector)
-			detectorObject = (CollisionDetector) object;
-		else
+		if (object instanceof CollisionDetector == false)
 			return;
+
+		CollisionDetector detectorObject = (CollisionDetector) object;
 
 		g2d.setColor(Color.WHITE);
 		g2d.draw(detectorObject.getBounds(DIRECTION.LEFT));
@@ -87,43 +88,30 @@ public class VisibleHitboxMode extends DebugMode {
 		g2d.draw(detectorObject.getBounds(DIRECTION.DOWN));
 	}
 
+	///// reactor /////
+	
 	private void collisionReactorRender(Graphics2D g2d, Updatable object) {
-
-		CollisionReactor reactorObject = null;
-
-		if (object instanceof CollisionReactor)
-			reactorObject = (CollisionReactor) object;
-		else
+		if (object instanceof CollisionReactor == false)
 			return;
 
-		g2d.setColor(Color.WHITE);
-		g2d.draw(reactorObject.getBounds());
-
-		g2d.setColor(Color.RED);
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.4f));
-		g2d.fill(reactorObject.getBounds());
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+		CollisionReactor reactorObject = (CollisionReactor) object;
+		redHitboxRender(g2d, reactorObject.getBounds());
 	}
 
+	///// mouse /////
+	
 	private void mouseUserEventRender(Graphics2D g2d, Updatable object) {
-
-		MouseUserEvent mouseObject = null;
-
-		if (object instanceof MouseUserEvent)
-			mouseObject = (MouseUserEvent) object;
-		else
+		if (object instanceof CollisionReactor)
+			return;
+		
+		if (object instanceof MouseUserEvent == false)
 			return;
 
+		MouseUserEvent mouseObject = (MouseUserEvent) object;
 		Rectangle bounds = new Rectangle(mouseObject.getX(), mouseObject.getY(), mouseObject.getWidth(),
 				mouseObject.getHeight());
-
-		g2d.setColor(Color.WHITE);
-		g2d.draw(bounds);
-
-		g2d.setColor(Color.RED);
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.4f));
-		g2d.fill(bounds);
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+		
+		redHitboxRender(g2d, bounds);
 	}
 
 	////////// KEYBOARD ////////////

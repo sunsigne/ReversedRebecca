@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
@@ -23,21 +22,11 @@ public class WallPassMode extends DebugMode {
 		return physicLaw;
 	}
 
-	////////// DEBUG MODE ////////////
+	////////// NAME ////////////
 
 	@Override
 	public String getName() {
 		return "debug_wall_pass_mode";
-	}
-
-	@Override
-	protected void actionWhenTurnedOn() {
-//		PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
-	}
-
-	@Override
-	protected void actionWhenTurnedOff() {
-//		PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
 	}
 
 	////////// TICK ////////////

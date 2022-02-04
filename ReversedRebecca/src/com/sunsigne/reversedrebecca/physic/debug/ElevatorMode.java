@@ -20,21 +20,11 @@ public class ElevatorMode extends DebugMode {
 		return physicLaw;
 	}
 
-	////////// DEBUG MODE ////////////
+	////////// NAME ////////////
 
 	@Override
 	public String getName() {
 		return "debug_elevator_mode";
-	}
-
-	@Override
-	protected void actionWhenTurnedOn() {
-
-	}
-
-	@Override
-	protected void actionWhenTurnedOff() {
-
 	}
 
 	////////// TICK ////////////
