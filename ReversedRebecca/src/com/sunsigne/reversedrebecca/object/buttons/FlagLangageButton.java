@@ -6,8 +6,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.MousePos;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Language;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
@@ -23,7 +22,7 @@ public class FlagLangageButton extends ButtonObject {
 	private BufferedImage flag_img;
 
 	private void loadImage() {
-		flag_img = new ImageTask().loadImage("texts/" + Language.getInstance().getLang() + "/lang" + "/flag" + ".png");
+		flag_img = new Translatable().getTranslatedFlagImage();
 	}
 
 	public BufferedImage getImage() {
