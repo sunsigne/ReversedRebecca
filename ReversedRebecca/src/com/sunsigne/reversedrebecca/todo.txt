@@ -21,6 +21,8 @@
 	
 	renomer DIFFICULTY en LVL ?
 	
+	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
+	
 	ToolObject (collisionReaction pas fini !)
 	Key & Bomb -> pas encore de vraie texture
 	Mappable Key & Bomb -> pas les bonnes couleurs (je crois)

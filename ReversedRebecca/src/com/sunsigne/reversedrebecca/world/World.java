@@ -35,14 +35,14 @@ public class World implements Updatable {
 
 	////////// WORLD ////////////
 
-	public World(String levelName) {
-		this(levelName, LAYER.GROUND);
+	public World(String mapName) {
+		this(mapName, LAYER.GROUND);
 	}
 
-	public World(String levelName, LAYER layer) {
+	public World(String mapName, LAYER layer) {
 		LAYER.LOADING.addObject(new LoadingScreen());
 
-		initParameters(levelName, layer);
+		initParameters(mapName, layer);
 		createMap();
 		addControlers();
 		start();
@@ -51,9 +51,9 @@ public class World implements Updatable {
 
 	}
 
-	private void initParameters(String levelName, LAYER layer) {
+	private void initParameters(String mapName, LAYER layer) {
 		updateInstance();
-		this.levelName = levelName;
+		this.mapName = mapName;
 		setLayer(layer);
 	}
 
@@ -74,11 +74,7 @@ public class World implements Updatable {
 
 	////////// NAME ////////////
 
-	private String levelName;
-
-	public String getLevelName() {
-		return levelName;
-	}
+	private String mapName;
 
 	////////// LAYER ////////////
 
@@ -88,9 +84,9 @@ public class World implements Updatable {
 		return contentType ? layers[1] : layers[0];
 	}
 
-	public void setLayer(LAYER layer) {
-		layers[0] = layer;
-		layers[1] = new LayerDualizer().getContentFromGround(layer);
+	public void setLayer(LAYER ground_layer) {
+		layers[0] = ground_layer;
+		layers[1] = new LayerDualizer().getContentFromGround(ground_layer);
 	}
 
 	////////// MAP OR LIST ////////////
@@ -99,11 +95,10 @@ public class World implements Updatable {
 
 	private void loadImageMap() {
 		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.getHandler().isCameraDependant() == false)
-				break;
+			if (!tempLayer.isMapLayer())
+				continue;
 
-			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName(),
-					false);
+			BufferedImage img = new ImageTask().loadImage("maps/" + mapName + "/" + tempLayer.getName(), false);
 			map_list.addObject(img);
 		}
 	}
