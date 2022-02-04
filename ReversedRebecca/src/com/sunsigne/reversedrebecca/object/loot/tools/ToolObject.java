@@ -37,7 +37,7 @@ public abstract class ToolObject extends LootObject implements Difficulty {
 	protected BufferedImage image;
 
 	private void loadImage() {
-		image = new ImageTask().loadImage("textures/" + getPuzzlerName() + "/" + getName() + "_" + difficulty.getName() + ".png");
+		image = new ImageTask().loadImage("textures/" + getPuzzlerName() + "/" + getName() + "_" + difficulty.getName());
 	}
 	
 	@Override

@@ -13,7 +13,7 @@ public class Translatable {
 	}
 
 	public BufferedImage getTranslatedFlagImage() {
-		BufferedImage img = new ImageTask().loadImage("texts/" + Language.getInstance().getLang() + "/lang" + "/flag" + ".png");
+		BufferedImage img = new ImageTask().loadImage("texts/" + Language.getInstance().getLang() + "/" + "lang/flag");
 		return img;
 	}
 }

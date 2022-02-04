@@ -28,7 +28,7 @@ public class ImageTask {
 			return drawMissingTexture();
 
 		try {
-			String path0 = "/ressources/" + path;
+			String path0 = "/ressources/" + path + ".png";
 			path = null;
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);

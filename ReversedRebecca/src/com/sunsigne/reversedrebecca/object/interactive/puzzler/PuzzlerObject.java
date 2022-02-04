@@ -39,8 +39,7 @@ public abstract class PuzzlerObject extends InteractiveControlObject implements 
 	private BufferedImage image;
 
 	private void loadImage() {
-		image = new ImageTask()
-				.loadImage("textures/" + getName() + "/" + getName() + "_" + difficulty.getName() + ".png");
+		image = new ImageTask().loadImage("textures/" + getName() + "/" + getName() + "_" + difficulty.getName());
 	}
 
 	public BufferedImage getImage() {

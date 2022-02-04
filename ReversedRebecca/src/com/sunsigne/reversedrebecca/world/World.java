@@ -102,7 +102,7 @@ public class World implements Updatable {
 			if (tempLayer.getHandler().isCameraDependant() == false)
 				break;
 
-			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName() + ".png",
+			BufferedImage img = new ImageTask().loadImage("maps/" + getLevelName() + "/" + tempLayer.getName(),
 					false);
 			map_list.addObject(img);
 		}
