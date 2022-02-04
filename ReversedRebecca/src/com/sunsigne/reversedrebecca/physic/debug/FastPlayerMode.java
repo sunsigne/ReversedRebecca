@@ -29,23 +29,31 @@ public class FastPlayerMode extends DebugMode {
 
 	@Override
 	protected void actionWhenTurnedOn() {
-		Player player = new PlayerFinder().getPlayer();
-		if (player != null)
-			player.speed = 3 * player.speed;
+//		Player player = new PlayerFinder().getPlayer();
+//		if (player != null)
+//			player.speed = 3 * player.speed;
 	}
 
 	@Override
 	protected void actionWhenTurnedOff() {
-		Player player = new PlayerFinder().getPlayer();
-		if (player != null)
-			player.speed = player.speed / 3;
+//		Player player = new PlayerFinder().getPlayer();
+//		if (player != null)
+//			player.speed = player.speed / 3;
 	}
 
 	////////// TICK ////////////
 
+	private int basic_player_speed = new Player(0, 0).speed; 
+	
 	@Override
 	public void tick(Updatable object) {
+		if (object instanceof Player == false)
+			return;
 
+		Player player = (Player) object;
+
+		int modified_speed = getState() ? 3 * basic_player_speed : basic_player_speed;
+		player.speed = modified_speed;
 	}
 
 	////////// RENDER ////////////
