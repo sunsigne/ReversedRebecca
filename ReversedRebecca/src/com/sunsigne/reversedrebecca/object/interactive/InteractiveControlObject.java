@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CannotInteract;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
@@ -106,6 +107,8 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 
 	////////// RENDER ////////////
 
+	private Font font = new FontTask().createNewFont("square_sans_serif_7", 20f);
+	
 	protected abstract String getNoToolText();
 	
 	public void drawTripleActionText(Graphics g) {
@@ -151,7 +154,6 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 	}
 
 	private void drawFacingText(Graphics g, DIRECTION facing, String text) {
-		Font font = new Font("arial", 1, 25);
 		String text0 = text.toUpperCase();
 		int[] rect = getFacingRect(facing);
 
