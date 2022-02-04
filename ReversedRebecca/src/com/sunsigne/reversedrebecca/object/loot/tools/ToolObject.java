@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.loot.tools;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
@@ -39,10 +40,16 @@ public abstract class ToolObject extends LootObject implements Difficulty {
 	private void loadImage() {
 		image = new ImageTask().loadImage("textures/" + getPuzzlerName() + "/" + getName() + "_" + difficulty.getName());
 	}
-	
-	@Override
+
 	public BufferedImage getImage() {
 		return image;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 	
 }

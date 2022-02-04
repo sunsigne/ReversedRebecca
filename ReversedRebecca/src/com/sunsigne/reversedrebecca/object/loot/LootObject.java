@@ -1,8 +1,5 @@
 package com.sunsigne.reversedrebecca.object.loot;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
@@ -23,17 +20,6 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 	@Override
 	public void tick() {
 
-	}
-
-	////////// TEXTURE ////////////
-
-	public abstract BufferedImage getImage();
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// COLLISION ////////////
