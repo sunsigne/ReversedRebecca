@@ -5,15 +5,15 @@ import java.util.HashMap;
 public class LayerDualizer {
 
 	////////// MAP OR LIST ////////////
-	
+
 	private static HashMap<LAYER, LAYER> map = new HashMap<>();
 
-	public HashMap<LAYER, LAYER> getMap() {
-		return map;
+	public LAYER getContentFromGround(LAYER ground_layer) {
+		return map.get(ground_layer);
 	}
-	
+
 	////////// USEFULL ////////////
-	
+
 	public void dualizeSameFloorLayers() {
 		LAYER ground = null;
 		LAYER content = null;

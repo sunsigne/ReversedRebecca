@@ -34,7 +34,7 @@ public class PlayerLayerChanger {
 		if (player == null)
 			return;
 
-		LAYER content_layer = new LayerDualizer().getMap().get(ground_layer);
+		LAYER content_layer = new LayerDualizer().getContentFromGround(ground_layer);
 
 		player.getHandler().softRemoveObject(player);
 		content_layer.addObject(player);

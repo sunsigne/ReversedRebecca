@@ -90,7 +90,7 @@ public class World implements Updatable {
 
 	public void setLayer(LAYER layer) {
 		layers[0] = layer;
-		layers[1] = new LayerDualizer().getMap().get(layer);
+		layers[1] = new LayerDualizer().getContentFromGround(layer);
 	}
 
 	////////// MAP OR LIST ////////////
