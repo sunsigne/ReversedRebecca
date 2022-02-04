@@ -157,7 +157,7 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 		String text0 = text.toUpperCase();
 		int[] rect = getFacingRect(facing);
 
-		new TextDecoration().drawOutlinesString(g, text0, font, rect);
+		new TextDecoration().drawOutlinesString(g, text0, font, DIRECTION.NULL, rect);
 	}
 
 	private int[] getFacingRect(DIRECTION facing) {

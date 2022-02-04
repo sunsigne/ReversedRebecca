@@ -33,7 +33,7 @@
 		
 	InteractiveControlObject -> la police est tout bonnement dégeulasse
 	
-	LanguageScreen -> graphisme à changer
+	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)
 	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	

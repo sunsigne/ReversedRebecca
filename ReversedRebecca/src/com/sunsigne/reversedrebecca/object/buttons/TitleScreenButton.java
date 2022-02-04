@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.MousePos;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -33,7 +34,7 @@ public class TitleScreenButton extends ButtonObject {
 			rect = new int[] {getX(), getY() - 3, getWidth(), getHeight()};
 		}
 
-		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, rect);
+		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, DIRECTION.NULL, rect);
 	}
 
 }
