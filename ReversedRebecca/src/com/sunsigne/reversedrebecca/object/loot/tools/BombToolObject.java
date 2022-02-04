@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.loot.tools;
 
 import com.sunsigne.reversedrebecca.characteristics.BombToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.ToolPlayer;
 
 public class BombToolObject extends ToolObject {
 
@@ -19,9 +20,8 @@ public class BombToolObject extends ToolObject {
 	}
 
 	@Override
-	public void actionWhenLooted() {
-		new BombToolPlayer().setDifficulty(getDifficulty());
+	public ToolPlayer getToolPlayer() {
+		return new BombToolPlayer();
 	}
 
 }
-
