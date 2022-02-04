@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
@@ -31,38 +32,33 @@ public class WallPassMode extends DebugMode {
 
 	@Override
 	protected void actionWhenTurnedOn() {
-		PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
+//		PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
 	}
 
 	@Override
 	protected void actionWhenTurnedOff() {
-		PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
+//		PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
 	}
 
 	////////// TICK ////////////
 
 	@Override
 	public void tick(Updatable object) {
-
+		if (getState()) {
+			if(object instanceof Player)
+				PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
+			else 
+				PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
+		}
 	}
 	
 	////////// RENDER ////////////
-
-	private boolean isDetectorObject(Updatable object) {
-		if (object == null)
-			return false;
-
-		if (object instanceof CollisionDetector)
-			return true;
-
-		return false;
-	}
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
 		
 		Graphics2D g2d = (Graphics2D) g;
-		float alpha = getState() & isDetectorObject(object) ? 0.4f : 1f;
+		float alpha = getState() & object instanceof Player ? 0.4f : 1f;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 	}
 
