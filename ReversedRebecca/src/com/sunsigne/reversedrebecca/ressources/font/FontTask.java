@@ -11,7 +11,7 @@ public class FontTask {
 		Font font = null;
 
 		try {
-			File file = new File("ressources/font/" + path);
+			File file = new File("ressources/font/" + path + ".ttf");
 			font = Font.createFont(Font.TRUETYPE_FONT, file).deriveFont(size);
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);
