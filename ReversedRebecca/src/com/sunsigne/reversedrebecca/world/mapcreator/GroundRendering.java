@@ -1,9 +1,6 @@
 package com.sunsigne.reversedrebecca.world.mapcreator;
 
-import java.awt.AlphaComposite;
-import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;

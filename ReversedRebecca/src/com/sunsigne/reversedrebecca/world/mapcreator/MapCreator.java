@@ -23,29 +23,30 @@ public class MapCreator {
 
 	////////// LEVEL CREATOR ////////////
 
-	public void loadAllLevels(World world) {
+	public void loadAllLayers(World world) {
 		boolean hideRendering = false;
-		
-		for(LAYER tempLayer : LAYER.values())
-		{
-			if (!tempLayer.isMapLayer())
-				continue;
 
-			if(tempLayer.getName().contains("ground"))
-			{
+		for (LAYER tempLayer : LAYER.values()) {
+
+			// load ground
+			if (tempLayer.getName().contains("ground")) {
 				tempLayer.addObject(new GroundRendering(world, tempLayer));
 				continue;
-			}				
+			}
 			
-			loadLevel(tempLayer, world.getImageMap(tempLayer));
-			tempLayer.getHandler().setHideRendering(hideRendering);
-						
-			if(world.getLayer(true) == tempLayer)
-				hideRendering = true;
+			// load content
+			if (tempLayer.getName().contains("content")) {
+				loadLayer(tempLayer, world.getImageMap(tempLayer));
+				tempLayer.getHandler().setHideRendering(hideRendering);
+
+				// hide content from upper layer
+				if (world.getLayer(true) == tempLayer)
+					hideRendering = true;
+			}
 		}
 	}
-	
-	private void loadLevel(LAYER layer, BufferedImage image) {
+
+	private void loadLayer(LAYER layer, BufferedImage image) {
 
 		int w = image.getWidth();
 		int h = image.getHeight();

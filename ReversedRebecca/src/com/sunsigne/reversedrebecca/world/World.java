@@ -59,7 +59,7 @@ public class World implements Updatable {
 
 	private void createMap() {
 		loadImageMap();
-		new MapCreator().loadAllLevels(this);
+		new MapCreator().loadAllLayers(this);
 		LAYER.GUI.addObject(new GuiHealth());
 	}
 
