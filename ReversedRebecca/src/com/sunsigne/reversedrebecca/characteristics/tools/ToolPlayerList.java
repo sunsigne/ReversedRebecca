@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.characteristics;
+package com.sunsigne.reversedrebecca.characteristics.tools;
 
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;

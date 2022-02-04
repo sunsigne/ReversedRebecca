@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.loot.tools;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.characteristics.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.loot.LootObject;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;

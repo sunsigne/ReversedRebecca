@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.object.interactive;
 
-import com.sunsigne.reversedrebecca.characteristics.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;

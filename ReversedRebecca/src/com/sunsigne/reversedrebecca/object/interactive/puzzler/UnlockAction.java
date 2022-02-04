@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.characteristics.KeyToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;

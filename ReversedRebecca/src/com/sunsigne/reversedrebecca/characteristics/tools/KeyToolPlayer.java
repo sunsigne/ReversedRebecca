@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.characteristics;
+package com.sunsigne.reversedrebecca.characteristics.tools;
 
 public class KeyToolPlayer extends ToolPlayer {
 

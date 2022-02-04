@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.loot.tools;
 
-import com.sunsigne.reversedrebecca.characteristics.KeyToolPlayer;
-import com.sunsigne.reversedrebecca.characteristics.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 
 public class KeyToolObject extends ToolObject {
 

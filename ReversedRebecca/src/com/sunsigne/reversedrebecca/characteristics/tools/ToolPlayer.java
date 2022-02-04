@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.characteristics;
+package com.sunsigne.reversedrebecca.characteristics.tools;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.ressources.FileTask;

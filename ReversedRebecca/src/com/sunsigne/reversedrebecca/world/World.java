@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.characteristics.ToolPlayerList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
