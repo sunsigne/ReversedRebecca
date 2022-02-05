@@ -4,10 +4,11 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CameraFollowing;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.UserCanKeyMove;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class Player extends LivingObject {
 
-	public int speed = 10;
+	public int speed = Size.XS/3;
 	
 	public Player(int x, int y) {
 		this("Rebecca", x, y);

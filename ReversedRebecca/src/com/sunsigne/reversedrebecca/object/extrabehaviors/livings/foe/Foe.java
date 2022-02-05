@@ -4,10 +4,11 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.MovingToPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.PushingPlayer;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class Foe extends LivingObject {
 
-	public int speed = 6;
+	public int speed = Size.XS/5;
 
 	public Foe(int x, int y) {
 		this("Gamma", x, y);
