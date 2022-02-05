@@ -4,11 +4,12 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LootObject extends GameObject implements CollisionReactor {
 
 	public LootObject(int x, int y) {
-		super(x, y);
+		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
 	}
 
 	////////// NAME ////////////
