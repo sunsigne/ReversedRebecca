@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
+import com.sunsigne.reversedrebecca.object.gui.GuiTools;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -61,6 +62,7 @@ public class World implements Updatable {
 		loadImageMap();
 		new MapCreator().loadAllLayers(this);
 		LAYER.GUI.addObject(new GuiHealth());
+		LAYER.GUI.addObject(new GuiTools());
 	}
 
 	private void addControlers() {

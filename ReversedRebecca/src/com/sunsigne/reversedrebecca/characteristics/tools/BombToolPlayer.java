@@ -9,6 +9,11 @@ public class BombToolPlayer extends ToolPlayer {
 	////////// NAME ////////////
 
 	@Override
+	public String getPuzzlerName() {
+		return "rubble";
+	}
+
+	@Override
 	public String getName() {
 		return "bomb";
 	}

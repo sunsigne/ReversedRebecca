@@ -9,6 +9,11 @@ public class KeyToolPlayer extends ToolPlayer {
 	////////// NAME ////////////
 
 	@Override
+	public String getPuzzlerName() {
+		return "door";
+	}
+
+	@Override
 	public String getName() {
 		return "key";
 	}

@@ -12,6 +12,8 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// NAME ////////////
 
+	public abstract String getPuzzlerName();
+
 	public abstract String getName();
 
 	////////// DIFFICULTY ////////////
