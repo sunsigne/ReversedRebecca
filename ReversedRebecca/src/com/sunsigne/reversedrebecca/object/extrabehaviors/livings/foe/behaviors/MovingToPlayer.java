@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class MovingToPlayer implements TickBehavior {
 

@@ -51,7 +51,7 @@
 	MapCreator -> la GUI est ajouté de façon dégeulasse
 	
 	Textures (dossier des textures à ranger)
-	GuiHealth getImage ne retourne QUE le coeur plein
+	GuiHealth -> class text à dévelloper
 	
 	faire des noms marrant pour l'écran titre qui apparaisse .. 10% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	

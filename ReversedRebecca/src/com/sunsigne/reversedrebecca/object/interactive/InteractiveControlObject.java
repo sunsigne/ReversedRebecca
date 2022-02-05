@@ -6,7 +6,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CannotInteract;
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;

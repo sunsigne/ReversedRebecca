@@ -1,6 +1,6 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
+package com.sunsigne.reversedrebecca.pattern.player;
 
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

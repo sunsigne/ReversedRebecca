@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.system.Size;

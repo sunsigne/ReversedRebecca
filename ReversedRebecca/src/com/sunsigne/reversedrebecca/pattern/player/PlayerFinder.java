@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.pattern;
+package com.sunsigne.reversedrebecca.pattern.player;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
