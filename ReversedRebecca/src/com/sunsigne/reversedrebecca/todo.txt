@@ -10,49 +10,30 @@
 	
 	////////// IMPORTANT ////////////
 	
-	OldCOnstructor -> to finish
+	Faire la GUI pour informer du lvl actuel des outils du joueur
 	
-	NullDoorObject -> should play a sound when opened
-	LootObject -> should play a sound when pickup
-	Buttons -> should play a sound too
-	
+	Faire le debug mode des outils !
+
 	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 	
 	Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
 	
 	////////// FACILE ////////////
 	
-	DualChecker - doit jouer un son lors de l'erreur
-	
 	DebugModeObject - déplacer les textures (dans un dossier gui ?)
 
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
-	
-	ToolObject (collisionReaction pas fini !)
-	Key & Bomb -> pas encore de vraie texture
+
+	Key -> pas encore de vraie texture
 	Mappable Key & Bomb -> pas les bonnes couleurs (je crois)
-	Les tool loots ne devraient-ils pas être des lvl up au lieu d'avoir une difficulté fixe ?
-	
-	ToolLoot -> remet au niveau du loot au lieu de s'adapter ...
-	tools - manquant : texture, gui, pickup efficace (vérifier le lvl actuel), checking pour puzzle
-		
-	InteractiveControlObject -> la police est tout bonnement dégeulasse
-	
+
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)
 	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	
 	Foe -> ont toujours besoin d'une range max de suivi, ainsi que d'arrêter de suivre quand le joueur est sur une autre couche
-	
-	DoorObject -> object test à dévelloper un peu 
-	+ le text s'affiche sur le même layer que la porte (donc SOUS les objects ajouté après ...)
-	+ afficher "vérouillé" quand aucune action n'est possible
-	
-	InteractiveControlObject -> les textes trop courts ou trop long sont décalés !
-	
+
 	Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
-	
-	MapCreator -> la GUI est ajouté de façon dégeulasse
 	
 	Textures (dossier des textures à ranger)
 	GuiHealth -> class text à dévelloper
@@ -61,6 +42,13 @@
 	
 	LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
 	
+	////////// SONS ////////////
+		
+	DualChecker - doit jouer un son lors de l'erreur
+	NullDoorObject -> should play a sound when opened
+	LootObject -> should play a sound when pickup
+	Buttons -> should play a sound too
+		
 	////////// DIFFICILE ////////////
 	
 	animation de tourbillon de vent de temps en temps ?
