@@ -51,13 +51,6 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 		this.isDisabled = isDisabled;
 	}
 
-	private boolean isPlayerNearby(int diffX, int diffY) {
-		float playerDistance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-		float maxDistance = Size.M + Size.XS;
-
-		return playerDistance < maxDistance;
-	}
-
 	protected boolean canPlayerInterfact() {
 
 		// object is disabled
@@ -121,6 +114,13 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 		}
 	}
 
+	private boolean isPlayerNearby(int diffX, int diffY) {
+		float playerDistance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+		float maxDistance = Size.M + Size.XS;
+
+		return playerDistance < maxDistance;
+	}
+
 	////////// TICK ////////////
 
 	private boolean flag;
@@ -167,7 +167,7 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 			tempAction = getTripleAction().getAction(index);
 
 			if (tempAction == null)
-				return;
+				continue;
 
 			if (key == tempAction.getKeyEvent()) {
 				tempAction.doAction();
