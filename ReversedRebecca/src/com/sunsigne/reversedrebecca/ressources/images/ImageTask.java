@@ -9,6 +9,7 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class ImageTask {
 
@@ -42,7 +43,7 @@ public class ImageTask {
 	}
 
 	public BufferedImage drawMissingTexture() {
-		return drawMissingTexture(32, 32);
+		return drawMissingTexture(Size.XS, Size.XS);
 	}
 
 	public BufferedImage drawMissingTexture(int width, int height) {
