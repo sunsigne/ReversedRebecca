@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-// do the trick, but does NOT handler retroaction
 public class FastPlayerMode extends DebugMode {
 
 	////////// PHYSIC LAW ////////////
