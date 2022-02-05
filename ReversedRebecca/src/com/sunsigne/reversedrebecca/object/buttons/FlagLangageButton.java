@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.system.Window;
 public class FlagLangageButton extends ButtonObject {
 
 	public FlagLangageButton(GenericListener onPress, GenericListener onRelease) {
-		super("", Window.WIDHT - Size.L, Window.HEIGHT - Size.M, Size.L, Size.M, onPress, onRelease);
+		super(null, Window.WIDHT - Size.L, Window.HEIGHT - Size.M, Size.L, Size.M, onPress, onRelease);
 		loadImage();
 	}
 
@@ -34,15 +34,14 @@ public class FlagLangageButton extends ButtonObject {
 	@Override
 	public void render(Graphics g) {
 
-		int pix = 8;
+		int pix = Size.XS / 4;
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
 		if (mouseOver(new MousePos().get(), getRect()) && isClickable()) {
 			Color light = new Color(192, 192, 192, 80);
 			g.setColor(light);
-			g.fillRect(getX() + pix, getY() + pix, getWidth() - 2*pix, getHeight() - 2*pix);
+			g.fillRect(getX() + pix, getY() + pix, getWidth() - 2 * pix, getHeight() - 2 * pix);
 		}
 	}
-
 
 }

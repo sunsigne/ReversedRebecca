@@ -12,6 +12,10 @@
 	
 	OldCOnstructor -> to finish
 	
+	NullDoorObject -> should play a sound when opened
+	LootObject -> should play a sound when pickup
+	Buttons -> should play a sound too
+	
 	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 	
 	Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
