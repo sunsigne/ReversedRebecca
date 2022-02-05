@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class GuiHealth extends GameObject {
 
 	public GuiHealth() {
-		super(0, 0, Size.L, Size.L);
+		super(0, 0, Size.M, Size.M);
 		loadImages();
 	}
 
