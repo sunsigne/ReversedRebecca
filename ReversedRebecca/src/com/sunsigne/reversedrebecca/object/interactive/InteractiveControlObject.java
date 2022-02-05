@@ -1,24 +1,40 @@
 package com.sunsigne.reversedrebecca.object.interactive;
 
-import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CannotInteract;
 import com.sunsigne.reversedrebecca.pattern.PlayerFinder;
-import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
-import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public abstract class InteractiveControlObject extends GameObject implements KeyboardEvent {
+public abstract class InteractiveControlObject extends GameObject implements Difficulty, KeyboardEvent {
 
 	public InteractiveControlObject(int x, int y) {
+		this(LVL.NULL, x, y);
+	}
+
+	public InteractiveControlObject(LVL difficulty, int x, int y) {
 		super(x, y);
+		this.difficulty = difficulty;
+	}
+
+	////////// DIFFICULTY ////////////
+
+	private LVL difficulty;
+
+	@Override
+	public LVL getDifficulty() {
+		return difficulty;
+	}
+
+	@Override
+	public void setDifficulty(LVL difficulty) {
+		this.difficulty = difficulty;
 	}
 
 	////////// INTERACTION ////////////
@@ -42,7 +58,7 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 		return playerDistance < maxDistance;
 	}
 
-	private boolean canPlayerInterfact() {
+	protected boolean canPlayerInterfact() {
 
 		// object is disabled
 		if (isDisabled())
@@ -105,75 +121,24 @@ public abstract class InteractiveControlObject extends GameObject implements Key
 		}
 	}
 
-	////////// RENDER ////////////
+	////////// TICK ////////////
 
-	private Font font = new FontTask().createNewFont("square_sans_serif_7", 20f);
-	
-	protected abstract String getNoToolText();
-	
-	public void drawTripleActionText(Graphics g) {
-		if (!canPlayerInterfact())
-			return;
+	private boolean flag;
 
-		Player player = new PlayerFinder().getPlayer();
-
-		// if cannot use any tool, draw the notool text
-		if (!getTripleAction().canUseTool()) {
-			drawFacingText(g, player.getFacing(), getNoToolText());
-			return;
-		}
-
-		// if no action, draw nothing ? don't forget to put actions anyway
-		if (getTripleAction().getAction(0) == null)
-			return;
-
-		// if ONE action, draw it in front of the player
-		if (getTripleAction().getAction(1) == null) {
-			drawFacingActionText(g, player.getFacing(), getTripleAction().getAction(0));
-			return;
-		}
-
-		// if TWO actions, draw them perpendicularly to the player
-		if (player.getFacing() == DIRECTION.UP || player.getFacing() == DIRECTION.DOWN) {
-			drawFacingActionText(g, DIRECTION.LEFT, getTripleAction().getAction(0));
-			drawFacingActionText(g, DIRECTION.RIGHT, getTripleAction().getAction(1));
-		} else {
-			drawFacingActionText(g, DIRECTION.UP, getTripleAction().getAction(0));
-			drawFacingActionText(g, DIRECTION.DOWN, getTripleAction().getAction(1));
-		}
-
-		// if THREE actions, draw the third in front of the player
-		if (getTripleAction().getAction(2) != null)
-			drawFacingActionText(g, player.getFacing(), getTripleAction().getAction(2));
-
+	@Override
+	public void tick() {
+		createTextAction();
 	}
 
-	private void drawFacingActionText(Graphics g, DIRECTION facing, Action action) {
-		String text = "[" + KeyEvent.getKeyText(action.getKeyEvent()) + "]" + " " + action.getName();
-		drawFacingText(g, facing, text);
-	}
+	protected void createTextAction() {
+		if (flag)
+			return;
 
-	private void drawFacingText(Graphics g, DIRECTION facing, String text) {
-		String text0 = text.toUpperCase();
-		int[] rect = getFacingRect(facing);
+		if (getHandler() == null)
+			return;
 
-		new TextDecoration().drawOutlinesString(g, text0, font, DIRECTION.NULL, rect);
-	}
-
-	private int[] getFacingRect(DIRECTION facing) {
-
-		switch (facing) {
-		case LEFT:
-			return new int[] { getX() - (int) (1.5 * Size.M), getY(), getWidth(), getHeight() };
-		case RIGHT:
-			return new int[] { getX() + (int) (1.5 * Size.M), getY(), getWidth(), getHeight() };
-		case UP:
-			return new int[] { getX(), getY() - Size.M, getWidth(), getHeight() };
-		case DOWN:
-			return new int[] { getX(), getY() + Size.M, getWidth(), getHeight() };
-		default:
-			return getRect();
-		}
+		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
+		flag = true;
 	}
 
 	////////// KEYBOARD ////////////

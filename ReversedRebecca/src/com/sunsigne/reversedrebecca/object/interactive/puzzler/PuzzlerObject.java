@@ -11,8 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 public abstract class PuzzlerObject extends InteractiveControlObject implements Difficulty, CollisionReactor {
 
 	public PuzzlerObject(LVL difficulty, int x, int y) {
-		super(x, y);
-		this.difficulty = difficulty;
+		super(difficulty, x, y);
 		loadImage();
 	}
 
@@ -20,26 +19,12 @@ public abstract class PuzzlerObject extends InteractiveControlObject implements 
 
 	public abstract String getName();
 
-	////////// DIFFICULTY ////////////
-
-	private LVL difficulty;
-
-	@Override
-	public LVL getDifficulty() {
-		return difficulty;
-	}
-
-	@Override
-	public void setDifficulty(LVL difficulty) {
-		this.difficulty = difficulty;
-	}
-
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
 
 	private void loadImage() {
-		image = new ImageTask().loadImage("textures/" + getName() + "/" + getName() + "_" + difficulty.getName());
+		image = new ImageTask().loadImage("textures/" + getName() + "/" + getName() + "_" + getDifficulty().getName());
 	}
 
 	public BufferedImage getImage() {

@@ -11,23 +11,15 @@ public class DoorObject extends PuzzlerObject {
 	public DoorObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 		loadTripleAction();
-		noToolText = new Translatable().getTranslatedText("LOCKED", "actions/door.csv", 1);
 	}
 
 	////////// NAME ////////////
-
-	private String noToolText;
-
-	@Override
-	protected String getNoToolText() {
-		return noToolText;
-	}
 
 	@Override
 	public String getName() {
 		return "door";
 	}
-	
+
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;
@@ -38,15 +30,9 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	private void loadTripleAction() {
+		String noActionText = new Translatable().getTranslatedText("LOCKED", "actions/door.csv", 1);
 		Action unlockAction = new UnlockAction(this);
-		tripleAction = new TripleAction(unlockAction, null, null);
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
+		tripleAction = new TripleAction(noActionText, unlockAction, null, null);
 	}
 
 	////////// RENDER ////////////
@@ -54,7 +40,6 @@ public class DoorObject extends PuzzlerObject {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		drawTripleActionText(g);
 	}
 
 }

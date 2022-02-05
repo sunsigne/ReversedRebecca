@@ -1,4 +1,5 @@
 	vidéo sur  :
+	- n'utilisez pas if ... else
 	- écran titre
 	- le rangement de la souris
 	- le fileTask

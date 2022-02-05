@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.interactive;
 
+import java.awt.event.KeyEvent;
+
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
@@ -31,10 +33,6 @@ public class Action {
 
 	private String name;
 
-	public String getName() {
-		return name;
-	}
-
 	protected void setName(String name) {
 		this.name = name;
 	}
@@ -53,7 +51,7 @@ public class Action {
 		this.listener = listener;
 	}
 
-	public boolean canUseTool() {
+	public boolean canDoAction() {
 		
 		// no tool is required
 		if (toolPlayer == null)
@@ -76,10 +74,16 @@ public class Action {
 		if (listener == null)
 			return;
 
-		if (canUseTool())
+		if (canDoAction())
 			listener.doAction();
 	}
+	
+	////////// RENDER ////////////
 
+	public String getDisplayedText() {
+		return "[" + KeyEvent.getKeyText(getKeyEvent()) + "]" + " " + name.toUpperCase();
+	}
+	
 	////////// KEYBOARD ////////////
 
 	private int keyEvent;
