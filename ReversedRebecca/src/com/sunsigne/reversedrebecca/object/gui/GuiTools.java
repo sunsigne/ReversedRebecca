@@ -40,7 +40,7 @@ public class GuiTools extends GameObject {
 			g.drawImage(tool_image, getX() + 2 * index * getWidth(), getY(), getWidth(), getHeight(), null);
 
 			BufferedImage battery_image = new ImageTask()
-					.loadImage("textures/" + "gui/" + "battery_" + tempTool.getDifficulty().getName());
+					.loadImage("textures/" + "gui/" + "battery_" + tempTool.getDifficulty().getName(), false);
 			g.drawImage(battery_image, getX() + (1 + 2 * index) * getWidth(), getY(), getWidth(), getHeight(), null);
 			index++;
 		}
