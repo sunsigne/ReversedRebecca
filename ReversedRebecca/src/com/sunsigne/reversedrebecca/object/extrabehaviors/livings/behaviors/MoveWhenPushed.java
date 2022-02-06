@@ -3,10 +3,11 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class MoveWhenPushed implements TickBehavior {
 
-	public int speed = 20;
+	public int speed = Size.S / 3;
 
 	public MoveWhenPushed(LivingObject living) {
 		this.living = living;
@@ -20,7 +21,7 @@ public class MoveWhenPushed implements TickBehavior {
 	public LivingObject getExtraBehaviorsObject() {
 		return living;
 	}
-	
+
 	////////// PUSHING ////////////
 
 	private boolean isPushed;
@@ -31,8 +32,8 @@ public class MoveWhenPushed implements TickBehavior {
 
 	public void setPushed(boolean isPushed) {
 		this.isPushed = isPushed;
-	}		
-	
+	}
+
 	public void pushToward(DIRECTION facing) {
 		paralyse();
 		pushed(facing);
@@ -46,7 +47,7 @@ public class MoveWhenPushed implements TickBehavior {
 
 	private void pushed(DIRECTION facing) {
 		if (isPushed())
-			return;		
+			return;
 		if (facing == DIRECTION.LEFT)
 			living.setSurVelX(-speed);
 		if (facing == DIRECTION.RIGHT)
@@ -64,8 +65,10 @@ public class MoveWhenPushed implements TickBehavior {
 
 	@Override
 	public void tick() {
-		if (isPushed()) time--;
-		if (time < 0) stabilize();
+		if (isPushed())
+			time--;
+		if (time < 0)
+			stabilize();
 	}
 
 	private void stabilize() {
@@ -73,5 +76,5 @@ public class MoveWhenPushed implements TickBehavior {
 		setPushed(false);
 		living.setMotionless();
 	}
-	
+
 }
