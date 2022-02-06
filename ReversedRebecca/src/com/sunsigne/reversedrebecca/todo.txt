@@ -20,6 +20,8 @@
 	
 	////////// FACILE ////////////
 	
+	MultiToolMode -> efface la progression des tools quand désactivé
+	
 	afficher un text bonus quand on ramasse un loot
 	
 	DebugModeObject - déplacer les textures (dans un dossier gui ?)
