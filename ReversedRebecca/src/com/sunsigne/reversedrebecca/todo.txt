@@ -6,6 +6,7 @@
 	- le dual checker
 	- traduction de text
 	- écran de chargement
+	- téléportation accidentelle
 	
 	
 	////////// IMPORTANT ////////////
@@ -13,9 +14,7 @@
 	Faire la GUI pour informer du lvl actuel des outils du joueur
 
 	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
-	
-	Foe peut (parfois) éjecter le joueur hors du mur en se collant dans un coin
-	
+
 	////////// FACILE ////////////
 	
 	MultiToolMode -> efface la progression des tools quand désactivé
