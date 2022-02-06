@@ -75,7 +75,7 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 		int diffY = getY() - player.getY();
 
 		// player is too far
-		if (!isPlayerNearby(diffX, diffY))
+		if (new PlayerFinder().isPlayerFutherThan(this, Size.M + Size.XS))
 			return false;
 
 		// player is watching the object
@@ -112,13 +112,6 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 		default:
 			return false;
 		}
-	}
-
-	private boolean isPlayerNearby(int diffX, int diffY) {
-		float playerDistance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-		float maxDistance = Size.M + Size.XS;
-
-		return playerDistance < maxDistance;
 	}
 
 	////////// TICK ////////////
