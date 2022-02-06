@@ -1,26 +1,24 @@
-package com.sunsigne.reversedrebecca.object.loot.tools;
+package com.sunsigne.reversedrebecca.object.loot;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
-import com.sunsigne.reversedrebecca.object.loot.LootObject;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class ToolObject extends LootObject implements Difficulty {
+public class ToolObject extends LootObject implements Difficulty {
 
-	public ToolObject(LVL difficulty, int x, int y) {
+	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
+		this.toolPlayer = toolPlayer;
 		this.difficulty = difficulty;
 		loadImage();
 	}
 
-	////////// NAME ////////////
-
-	public abstract String getPuzzlerName();
-
+	private ToolPlayer toolPlayer;
+	
 	////////// DIFFICULTY ////////////
 
 	private LVL difficulty;
@@ -41,7 +39,7 @@ public abstract class ToolObject extends LootObject implements Difficulty {
 
 	private void loadImage() {
 		image = new ImageTask()
-				.loadImage("textures/" + getPuzzlerName() + "/" + getName() + "_" + difficulty.getName());
+				.loadImage("textures/" + toolPlayer.getPuzzlerName() + "/" + toolPlayer.getName() + "_" + difficulty.getName());
 	}
 
 	public BufferedImage getImage() {
@@ -57,12 +55,9 @@ public abstract class ToolObject extends LootObject implements Difficulty {
 
 	////////// COLLISION ////////////
 
-	public abstract ToolPlayer getToolPlayer();
-
 	@Override
 	public void actionWhenLooted() {
 
-		ToolPlayer toolPlayer = getToolPlayer();
 		boolean shouldUpgrade = new DifficultyComparator().canUseTool(toolPlayer.getDifficulty(), getDifficulty());
 
 		if (shouldUpgrade)

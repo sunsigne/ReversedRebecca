@@ -11,8 +11,6 @@
 	////////// IMPORTANT ////////////
 	
 	Faire la GUI pour informer du lvl actuel des outils du joueur
-	
-	Faire le debug mode des outils !
 
 	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
 	

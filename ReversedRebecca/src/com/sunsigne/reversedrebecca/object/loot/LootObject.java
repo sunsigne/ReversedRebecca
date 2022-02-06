@@ -12,10 +12,6 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
 	}
 
-	////////// NAME ////////////
-
-	public abstract String getName();
-
 	////////// TICK ////////////
 
 	@Override
