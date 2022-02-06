@@ -3,9 +3,11 @@ package com.sunsigne.reversedrebecca.world.mapcreator.mappable;
 import com.sunsigne.reversedrebecca.object.GameObject;
 
 public interface Mappable {
-
-	////////// MAPPABLE ////////////
 	
+	Mappable getMappable();
+		
+	////////// MAPPABLE ////////////
+
 	GameObject createObject(int x, int y);
 		
 	int[] rgbCode();

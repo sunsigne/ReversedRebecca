@@ -8,20 +8,28 @@ import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class MappableCyanDoor implements Mappable {
 
-	static {
-		new MapCreator().getList().addObject(new MappableCyanDoor());
+	private MappableCyanDoor() {
+		new MapCreator().getList().addObject(this);
 	}
-	
+
+	private static Mappable mappable = new MappableCyanDoor();
+
+	@Override
+	public Mappable getMappable() {
+		return mappable;
+	}
+
 	////////// MAPPABLE ////////////
-	
+
 	@Override
 	public GameObject createObject(int x, int y) {
 		return new DoorObject(LVL.CYAN, x, y);
 	}
-	
+
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = {0, 255, 1};
+		int[] rgb = { 0, 255, 1 };
 		return rgb;
-	}	
+	}
+	
 }

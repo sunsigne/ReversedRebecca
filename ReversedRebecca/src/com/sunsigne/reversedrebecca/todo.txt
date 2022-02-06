@@ -29,8 +29,6 @@
 	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 
-	Mappable -> réorganiser les dossiers si nombreux ? + changer le bloc static comme pour les physic laws
-	
 	Textures (dossier des textures à ranger)
 	GuiHealth -> class text à dévelloper
 	

@@ -7,20 +7,28 @@ import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class MappableNullDoor implements Mappable {
 
-	static {
-		new MapCreator().getList().addObject(new MappableNullDoor());
+	private MappableNullDoor() {
+		new MapCreator().getList().addObject(this);
 	}
-	
+
+	private static Mappable mappable = new MappableNullDoor();
+
+	@Override
+	public Mappable getMappable() {
+		return mappable;
+	}
+
 	////////// MAPPABLE ////////////
-	
+
 	@Override
 	public GameObject createObject(int x, int y) {
 		return new NullDoorObject(x, y);
 	}
-	
+
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = {0, 255, 0};
+		int[] rgb = { 0, 255, 0 };
 		return rgb;
-	}	
+	}
+	
 }

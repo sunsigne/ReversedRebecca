@@ -9,8 +9,15 @@ import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class MappableYellowKey implements Mappable {
 
-	static {
-		new MapCreator().getList().addObject(new MappableYellowKey());
+	private MappableYellowKey() {
+		new MapCreator().getList().addObject(this);
+	}
+
+	private static Mappable mappable = new MappableYellowKey();
+
+	@Override
+	public Mappable getMappable() {
+		return mappable;
 	}
 
 	////////// MAPPABLE ////////////
@@ -25,4 +32,5 @@ public class MappableYellowKey implements Mappable {
 		int[] rgb = { 0, 2, 255 };
 		return rgb;
 	}
+
 }

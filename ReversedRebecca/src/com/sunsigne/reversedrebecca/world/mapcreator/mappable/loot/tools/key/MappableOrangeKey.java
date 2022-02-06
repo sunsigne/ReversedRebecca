@@ -9,8 +9,15 @@ import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class MappableOrangeKey implements Mappable {
 
-	static {
-		new MapCreator().getList().addObject(new MappableOrangeKey());
+	private MappableOrangeKey() {
+		new MapCreator().getList().addObject(this);
+	}
+
+	private static Mappable mappable = new MappableOrangeKey();
+
+	@Override
+	public Mappable getMappable() {
+		return mappable;
 	}
 
 	////////// MAPPABLE ////////////
@@ -25,4 +32,5 @@ public class MappableOrangeKey implements Mappable {
 		int[] rgb = { 0, 3, 255 };
 		return rgb;
 	}
+
 }
