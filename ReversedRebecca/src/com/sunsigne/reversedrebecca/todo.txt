@@ -13,12 +13,8 @@
 	
 	Faire la GUI pour informer du lvl actuel des outils du joueur
 
-	LayerDualizer (pas convaincu de la façon dont il est appelé dans Constructor
-
 	////////// FACILE ////////////
-	
-	MultiToolMode -> efface la progression des tools quand désactivé
-	
+
 	afficher un text bonus quand on ramasse un loot
 	
 	DebugModeObject - déplacer les textures (dans un dossier gui ?)
@@ -44,7 +40,9 @@
 	Buttons -> should play a sound too
 		
 	////////// DIFFICILE ////////////
-	
+			
+	MultiToolMode -> efface la progression des tools quand désactivé
+		
 	animation de tourbillon de vent de temps en temps ?
 	
 	///////// A TRIER ////////////
