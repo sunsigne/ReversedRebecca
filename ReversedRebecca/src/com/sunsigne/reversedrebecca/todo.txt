@@ -15,8 +15,6 @@
 
 	////////// FACILE ////////////
 
-	afficher un text bonus quand on ramasse un loot
-	
 	DebugModeObject - déplacer les textures (dans un dossier gui ?)
 
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement

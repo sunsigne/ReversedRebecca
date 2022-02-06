@@ -1,9 +1,11 @@
 package com.sunsigne.reversedrebecca.object.loot;
 
+import com.sunsigne.reversedrebecca.object.BonusText;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LootObject extends GameObject implements CollisionReactor {
@@ -28,9 +30,12 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 
 		collidingReaction(detectorObject, false, () -> {
 			getHandler().removeObject(this);
+			LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
 			actionWhenLooted();
 		});
 	}
+
+	public abstract String getTextWhenLooted();
 
 	public abstract void actionWhenLooted();
 

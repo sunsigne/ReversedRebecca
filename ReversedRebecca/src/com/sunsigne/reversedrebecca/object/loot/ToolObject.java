@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ToolObject extends LootObject implements Difficulty {
 
@@ -55,6 +56,11 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	////////// COLLISION ////////////
 
+	@Override
+	public String getTextWhenLooted() {
+		return new Translatable().getTranslatedText("TOOL LVL", "tools/" + toolPlayer.getName() + "/" + difficulty.getName() + ".csv", 1);
+	}
+	
 	@Override
 	public void actionWhenLooted() {
 
