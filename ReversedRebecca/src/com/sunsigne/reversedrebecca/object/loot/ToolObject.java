@@ -19,7 +19,7 @@ public class ToolObject extends LootObject implements Difficulty {
 	}
 
 	private ToolPlayer toolPlayer;
-	
+
 	////////// DIFFICULTY ////////////
 
 	private LVL difficulty;
@@ -39,8 +39,8 @@ public class ToolObject extends LootObject implements Difficulty {
 	protected BufferedImage image;
 
 	private void loadImage() {
-		image = new ImageTask()
-				.loadImage("textures/" + toolPlayer.getPuzzlerName() + "/" + toolPlayer.getName() + "_" + difficulty.getName());
+		image = new ImageTask().loadImage(
+				"textures/" + toolPlayer.getPuzzlerName() + "/" + toolPlayer.getName() + "_" + difficulty.getName());
 	}
 
 	public BufferedImage getImage() {
@@ -58,16 +58,19 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public String getTextWhenLooted() {
-		return new Translatable().getTranslatedText("TOOL LVL", "tools/" + toolPlayer.getName() + "/" + difficulty.getName() + ".csv", 1);
+		return new Translatable().getTranslatedText("TOOL LVL",
+				"tools/" + toolPlayer.getName() + "/" + difficulty.getName() + ".csv", 1);
 	}
-	
+
 	@Override
 	public void actionWhenLooted() {
-
-		boolean shouldUpgrade = new DifficultyComparator().canUseTool(toolPlayer.getDifficulty(), getDifficulty());
-
-		if (shouldUpgrade)
+		// prevent loots to downgrade your current lvl
+		if (isPositiveUpgade(toolPlayer.getDifficulty(), getDifficulty()))
 			toolPlayer.setDifficulty(getDifficulty());
+	}
+
+	private boolean isPositiveUpgade(LVL tool_player_lvl, LVL tool_lvl) {
+		return new DifficultyComparator().canUseTool(toolPlayer.getDifficulty(), getDifficulty());
 	}
 
 }
