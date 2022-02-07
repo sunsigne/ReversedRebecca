@@ -47,9 +47,11 @@ public class MovingToPlayer implements TickBehavior {
 		if (new PlayerFinder().isPlayerFutherThan(foe, 19 * Size.XS))
 			return false;
 		
-		if(new PlayerFinder().getPlayerHealth().getHp() <= 0)
-			return false;
-
+		if(new PlayerFinder().getPlayerHealth() != null) {
+			if(new PlayerFinder().getPlayerHealth().getHp() <= 0)
+				return false;
+		}
+		
 		return true;
 	}
 
