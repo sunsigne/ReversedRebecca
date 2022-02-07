@@ -61,6 +61,14 @@ public class PushingPlayer implements CollisionBehavior {
 
 	////////// COLLISION ////////////
 
+	private boolean isStunned() {
+		for (Behavior tempBehavior : foe.getBehaviorList().getList()) {
+			if (tempBehavior instanceof Stunned)
+				return true;
+		}
+		return false;
+	}
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (!isStunned())
@@ -70,14 +78,6 @@ public class PushingPlayer implements CollisionBehavior {
 				stunFoe();
 			}
 		blockPass(detectorObject);
-	}
-
-	private boolean isStunned() {
-		for (Behavior tempBehavior : foe.getBehaviorList().getList()) {
-			if (tempBehavior instanceof Stunned)
-				return true;
-		}
-		return false;
 	}
 
 	private void pushPlayer(CollisionDetector detectorObject) {
