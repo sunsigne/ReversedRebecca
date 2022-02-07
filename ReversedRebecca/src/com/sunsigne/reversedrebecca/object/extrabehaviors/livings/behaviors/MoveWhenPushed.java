@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class MoveWhenPushed implements TickBehavior {
@@ -43,6 +44,12 @@ public class MoveWhenPushed implements TickBehavior {
 	private void paralyse() {
 		if (isPushed())
 			living.setMotionless();
+
+		if (living instanceof Player == false)
+			return;
+
+		Player player = (Player) living;
+		living.addBehavior(new Stunned(player, PUSHING_TIME, player.canInteract));
 	}
 
 	private void pushed(DIRECTION facing) {
