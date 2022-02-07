@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Blinking;
@@ -109,19 +110,20 @@ public class PlayerHealth implements TickBehavior {
 		time--;
 
 		if (time == RECOVERING_TIME - 1) {
-			blinking = new Blinking(player);
+			blinking = new Blinking(player, time);
 			player.addBehavior(blinking);
 		}
 
 		if (time <= 0) {
 			setRecovering(false);
 			time = RECOVERING_TIME;
-			player.removeBehavior(blinking);
 		}
 	}
 
 	private void kill() {
-		player.getHandler().removeObject(player);
+		player.removeBehavior(player.canInteract);
+		player.removeBehavior(player.userCanKeyMove);
+		player.setFacing(DIRECTION.NULL);
 	}
 
 }
