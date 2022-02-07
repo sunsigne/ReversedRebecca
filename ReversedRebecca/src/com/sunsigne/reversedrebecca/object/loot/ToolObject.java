@@ -64,13 +64,8 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public void actionWhenLooted() {
-		// prevent loots to downgrade your current lvl
-		if (isPositiveUpgade(toolPlayer.getDifficulty(), getDifficulty()))
+		if (new DifficultyComparator().isPositiveUpgade(toolPlayer.getDifficulty(), getDifficulty()))
 			toolPlayer.setDifficulty(getDifficulty());
-	}
-
-	private boolean isPositiveUpgade(LVL tool_player_lvl, LVL tool_lvl) {
-		return new DifficultyComparator().canUseTool(toolPlayer.getDifficulty(), getDifficulty());
 	}
 
 }

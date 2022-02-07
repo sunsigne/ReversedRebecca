@@ -4,30 +4,34 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 
 public class DifficultyComparator {
 
-	public boolean canUseTool(LVL tested_difficulty, LVL tool_lvl) {
+	public boolean canUseTool(LVL puzzle_lvl, LVL tool_lvl) {
 
 		switch (tool_lvl) {
 
 		case RED:
-			if (tested_difficulty == LVL.RED)
+			if (puzzle_lvl == LVL.RED)
 				return true;
 		case ORANGE:
-			if (tested_difficulty == LVL.ORANGE)
+			if (puzzle_lvl == LVL.ORANGE)
 				return true;
 		case YELLOW:
-			if (tested_difficulty == LVL.YELLOW)
+			if (puzzle_lvl == LVL.YELLOW)
 				return true;
 		case GREEN:
-			if (tested_difficulty == LVL.GREEN)
+			if (puzzle_lvl == LVL.GREEN)
 				return true;
 		case CYAN:
-			if (tested_difficulty == LVL.CYAN)
+			if (puzzle_lvl == LVL.CYAN)
 				return true;
 		case NULL:
-			return tested_difficulty == LVL.NULL;
+			return puzzle_lvl == LVL.NULL;
 
 		}
 		return false;
+	}
+	
+	public boolean isPositiveUpgade(LVL tool_player_lvl, LVL tool_lvl) {
+		return new DifficultyComparator().canUseTool(tool_player_lvl, tool_lvl);
 	}
 	
 }
