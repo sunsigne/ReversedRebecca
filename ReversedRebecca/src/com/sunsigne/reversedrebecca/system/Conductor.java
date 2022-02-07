@@ -15,6 +15,12 @@ public class Conductor {
 
 	////////// START & STOP ////////////
 
+	private static boolean appIsReady;
+
+	public static boolean isAppReady() {
+		return appIsReady;
+	}
+
 	public void startApp() {
 
 		LAYER.LOADING.addObject(new LoadingScreen());
@@ -25,14 +31,14 @@ public class Conductor {
 		// LOADING OF MINIMAL RESSOURCES
 		loadMinimalRessources();
 		Game.getInstance().forceLoop();
-		
+
 		// LOADING OF RESSOURCES
 		loadRessources();
 		Game.getInstance().forceLoop();
-		
+
 		new TitleScreen();
 		LAYER.LOADING.getHandler().clear();
-		
+		appIsReady = true;
 	}
 
 	public void stopApp() {
@@ -40,19 +46,19 @@ public class Conductor {
 	}
 
 	////////// RESSOURCES ////////////
-	
+
 	private void loadMinimalRessources() {
 		Language.getInstance();
 	}
-	
+
 	private void loadRessources() {
 
 		new LayerDualizer().dualizeSameFloorLayers();
-		
+
 		new ForceInit().loadAllClassesInPackage(PhysicLaw.class.getPackageName());
 		// because Debug Modes are alterned Physic Laws, they have to be loaded AFTER
-		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());	
-		
+		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());
+
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
 	}
 
