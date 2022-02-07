@@ -36,11 +36,13 @@ public class CameraFollowing implements TickBehavior, CameraDependency {
 	}
 
 	private void moveCameraByX() {
-		CAMERA.setX(-player.getX() - player.getVelX() - player.getSurVelX() + (Window.WIDHT - player.getWidth()) / 2);
+		int velX = player.isSurMotionless() ? player.getVelX() : player.getSurVelX();
+		CAMERA.setX(-player.getX() - velX + (Window.WIDHT - player.getWidth()) / 2);
 	}
 	
 	private void moveCameraByY() {
-		CAMERA.setY(-player.getY() - player.getVelY() - player.getSurVelY() + (Window.HEIGHT - player.getHeight()) / 2);
+		int velY = player.isSurMotionless() ? player.getVelY() : player.getSurVelY();
+		CAMERA.setY(-player.getY() - velY + (Window.HEIGHT - player.getHeight()) / 2);
 	}
 	
 }
