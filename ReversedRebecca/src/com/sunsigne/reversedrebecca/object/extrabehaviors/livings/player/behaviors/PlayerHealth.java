@@ -5,12 +5,13 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Blinking;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class PlayerHealth implements TickBehavior {
 
 	public PlayerHealth(Player player) {
 		this.player = player;
-		maxhp = 3;
+		maxhp = Integer.parseInt(new FileTask().read(1, "userdata/characteristics/maxhp" + ".csv"));
 		hp = maxhp;
 	}
 
