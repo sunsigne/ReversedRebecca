@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CannotInteract;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -64,7 +64,7 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 			return false;
 
 		// player specifically can't interact
-		if (player.getBehaviorList().cointainsObject(new CannotInteract(player)))
+		if (!player.getBehaviorList().cointainsObject(new CanInteract(player)))
 			return false;
 
 		// player is not on the same layer

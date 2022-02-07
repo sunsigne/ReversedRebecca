@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CameraFollowing;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.UserCanKeyMove;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -22,12 +23,16 @@ public class Player extends LivingObject {
 	////////// BEHAVIOR ////////////
 
 	public Behavior userCanKeyMove;
+	public Behavior canInteract;
 	public Behavior cameraFollowing;	
 	
 	private void addPlayerBehaviors() {
 		
 		userCanKeyMove = new UserCanKeyMove(this);
 		addBehavior(userCanKeyMove);
+		
+		canInteract = new CanInteract(this);
+		addBehavior(canInteract);
 		
 		cameraFollowing = new CameraFollowing(this);
 		addBehavior(cameraFollowing);

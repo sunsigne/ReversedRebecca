@@ -3,9 +3,9 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behavi
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 
-public class CannotInteract implements TickBehavior {
+public class CanInteract implements TickBehavior {
 
-	public CannotInteract(Player player) {
+	public CanInteract(Player player) {
 		this.player = player;
 	}
 
