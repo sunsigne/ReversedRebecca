@@ -95,9 +95,9 @@ public class PlayerHealth implements TickBehavior {
 
 	@Override
 	public void tick() {
-		recoveringProcess();
-
-		if (hp <= 0)
+		if (hp > 0)
+			recoveringProcess();
+		else
 			kill();
 	}
 
