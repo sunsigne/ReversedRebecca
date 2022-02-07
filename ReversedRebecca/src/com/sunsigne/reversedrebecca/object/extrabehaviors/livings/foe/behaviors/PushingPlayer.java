@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Move
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.PlayerHealth;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PushingPlayer implements CollisionBehavior {
 
@@ -64,6 +66,7 @@ public class PushingPlayer implements CollisionBehavior {
 		if (!isStunned())
 			if (detectorObject instanceof Player) {
 				pushPlayer(detectorObject);
+				hurtPlayer();
 				stunFoe();
 			}
 		blockPass(detectorObject);
@@ -81,6 +84,15 @@ public class PushingPlayer implements CollisionBehavior {
 		Player player = (Player) detectorObject;
 		var moveWhenPushed = (MoveWhenPushed) player.moveWhenPushed;
 		moveWhenPushed.pushToward(foe.getFacing());
+	}
+
+	private void hurtPlayer() {
+		PlayerHealth playerHealth = new PlayerFinder().getPlayerHealth();
+
+		if (playerHealth == null)
+			return;
+
+		playerHealth.removeHp();
 	}
 
 	private void stunFoe() {

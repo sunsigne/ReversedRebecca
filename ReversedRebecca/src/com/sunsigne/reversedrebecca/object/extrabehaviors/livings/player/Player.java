@@ -40,7 +40,7 @@ public class Player extends LivingObject {
 		addBehavior(cameraFollowing);
 		
 		playerHealth = new PlayerHealth(this);
-
+		addBehavior(playerHealth);
 	}
 	
 }
