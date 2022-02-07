@@ -25,7 +25,7 @@ public class WallPassMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "debug_wall_pass_mode";
+		return "wall_pass_mode";
 	}
 
 	////////// TICK ////////////

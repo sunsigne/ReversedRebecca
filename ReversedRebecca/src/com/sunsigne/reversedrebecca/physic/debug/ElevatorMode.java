@@ -24,7 +24,7 @@ public class ElevatorMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "debug_elevator_mode";
+		return "elevator_mode";
 	}
 
 	////////// TICK ////////////

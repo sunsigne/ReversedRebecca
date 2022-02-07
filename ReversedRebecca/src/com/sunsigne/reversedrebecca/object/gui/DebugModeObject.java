@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.object;
+package com.sunsigne.reversedrebecca.object.gui;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -32,7 +33,7 @@ public class DebugModeObject extends GameObject {
 	private BufferedImage img;
 	
 	private void loadImage() {
-		img = new ImageTask().loadImage("textures/" + debugMode.getName());
+		img = new ImageTask().loadImage("textures/gui/debug/" + debugMode.getName());
 	}
 	
 	////////// RENDER ////////////

@@ -21,7 +21,7 @@ public class FastPlayerMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "debug_fast_player_mode";
+		return "fast_player_mode";
 	}
 
 	////////// TICK ////////////

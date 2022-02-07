@@ -14,8 +14,6 @@
 
 	////////// FACILE ////////////
 
-	DebugModeObject - déplacer les textures (dans un dossier gui ?)
-
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
 
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)
@@ -25,7 +23,7 @@
 	Textures (dossier des textures à ranger)
 	GuiHealth -> class text à dévelloper
 	
-	faire des noms marrant pour l'écran titre qui apparaisse .. 10% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
+	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	
 	LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
 	
@@ -39,6 +37,7 @@
 	////////// DIFFICILE ////////////
 			
 	MultiToolMode -> efface la progression des tools quand désactivé
+	MultiToolMode -> ne met "que" au niveau max "autorisé" au lieu de max tout court
 		
 	animation de tourbillon de vent de temps en temps ?
 	
