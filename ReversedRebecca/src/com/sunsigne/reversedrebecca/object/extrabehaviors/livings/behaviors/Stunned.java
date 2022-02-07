@@ -7,7 +7,12 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 public class Stunned implements TickBehavior {
 
 	public Stunned(LivingObject living, Behavior... behaviorsToPause) {
+		this(living, 30, behaviorsToPause);
+	}
+	
+	public Stunned(LivingObject living, int stun_time, Behavior... behaviorsToPause) {
 		this.living = living;
+		this.time = stun_time;
 		this.behaviorsToPause = behaviorsToPause;
 
 		breakBehaviors(behaviorsToPause);
@@ -40,13 +45,12 @@ public class Stunned implements TickBehavior {
 	
 	////////// TICK ////////////
 
-	private final int STUNNING_TIME = 30;
-	private int time = STUNNING_TIME;
+	private int time;
 
 	@Override
 	public void tick() {
 		time--;
-		if (time < 0)
+		if (time <= 0)
 			wakeUp();
 	}
 
