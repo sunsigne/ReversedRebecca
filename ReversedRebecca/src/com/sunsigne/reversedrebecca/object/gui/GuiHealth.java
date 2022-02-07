@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -23,33 +24,32 @@ public class GuiHealth extends GameObject {
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage heart_empty_img;
-	private BufferedImage heart_full_img;
-	
+	private BufferedImage empty_img;
+	private BufferedImage full_img;
+
 	private void loadImages() {
-		heart_empty_img = new ImageTask().loadImage("textures/" + "gui_heart_empty");
-		heart_full_img = new ImageTask().loadImage("textures/" + "gui_heart_full");
-	}
-	
-	public BufferedImage getImage() {
-		return heart_full_img;
+		empty_img = new ImageTask().loadImage("textures/" + "gui/heart/empty");
+		full_img = new ImageTask().loadImage("textures/" + "gui/heart/full");
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
+		if (new PlayerFinder().getPlayerHealth() == null)
+			return;
 
-//		g.setColor(Color.BLUE);
-//		g.fillRect(getX(), getY(), getWidth(), getHeight());
+		// drawing maxHp empty heart
+		int maxHp = new PlayerFinder().getPlayerHealth().getMaxHp();
+		for (int index = 0; index < maxHp; index++) {
+			g.drawImage(empty_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
+		}
 
-//		Font font = new Font("arial", 1, 50);
-//		String text = "hp";
-//		g.setFont(font);
-//		g.setColor(Color.white);
-//		g.drawString(text, getX() + 20, getY() + 60);
-		
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		// drawing hp full heart above
+		int hp = new PlayerFinder().getPlayerHealth().getHp();
+		for (int index = 0; index < hp; index++) {
+			g.drawImage(full_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
+		}
 	}
-	
+
 }
