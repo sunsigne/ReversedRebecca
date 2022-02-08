@@ -9,7 +9,7 @@ public class Language {
 	////////// SIGNELTON ////////////
 
 	private Language() {
-		lang = new FileTask().read(file);
+		lang = new FileTask().read("LANGUAGE", file);
 	}
 
 	private static Language instance = null;
@@ -29,7 +29,7 @@ public class Language {
 	}
 
 	public void setLang(String lang) {
-		new FileTask().write(file, lang);
+		new FileTask().write("LANGUAGE", file, lang);
 		this.lang = lang;
 	}
 

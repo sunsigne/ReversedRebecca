@@ -7,12 +7,11 @@ import java.util.Scanner;
 public class FileTask {
 
 	////////// USEFUL ////////////
-	
+
 	public boolean doesExist(String path) {
 		File file = new File("ressources/" + path);
 		return file.exists();
 	}
-	
 
 	public void delete(String path) {
 		File file = new File("ressources/" + path);
@@ -21,9 +20,49 @@ public class FileTask {
 	}
 
 	////////// READ ////////////
-	
+
 	public String read(String path) {
-		return read(0, path);
+		return read(null, path);
+	}
+
+	public String read(String valueToRead, String path) {
+
+		File file = new File("ressources/" + path);
+		Scanner scan = null;
+		String content = "";
+
+		try {
+			if (file.exists()) {
+				scan = new Scanner(file, "UTF-8");
+				boolean flag = false;
+
+				// read the whole file
+				if (valueToRead == null) {
+					while (scan.hasNextLine()) {
+						if (!flag) {
+							content = content.concat(scan.nextLine());
+							flag = true;
+						} else
+							content = content.concat(String.format("%n" + scan.nextLine()));
+					}
+				}
+
+				// read one specific value
+				else {
+					while (scan.hasNextLine()) {
+						String line = scan.nextLine();
+						if (line.split("=")[0].equalsIgnoreCase(valueToRead))
+							content = line.split("=")[1];
+					}
+				}
+
+				scan.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return content;
 	}
 
 	public String read(int lineToRead, String path) {
@@ -69,12 +108,12 @@ public class FileTask {
 	}
 
 	////////// WRITE ////////////
-	
+
 	public void write(String path, String text) {
-		write(0, path, text);
+		write(null, path, text);
 	}
 
-	public void write(int lineToReplace, String path, String text) {
+	public void write(String valueToReplace, String path, String text) {
 		File file = new File("ressources/" + path);
 		String fileContent = read(path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
@@ -86,17 +125,18 @@ public class FileTask {
 			writer = new FileWriter(file);
 
 			// write the whole file
-			if (lineToReplace == 0) {
+			if (valueToReplace == null) {
 				writer.write(text);
 			}
 
-			// write one specific line
+			// write one specific value
 			else {
 				for (int i = 0; i < size; i++) {
-					if (i != lineToReplace)
-						writer.write(String.format(alllines[i] + "%n"));
+					if (alllines[i].split("=")[0].equalsIgnoreCase(valueToReplace))
+						writer.write(String.format(alllines[i].split("=")[0] + "=" + text + "%n"));
 					else
-						writer.write(String.format(text + "%n"));
+						writer.write(String.format(alllines[i] + "%n"));
+
 				}
 			}
 
