@@ -13,7 +13,14 @@
 	
 	Blinking -> le monde entier blink .........
 
+	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
+
+	
+
 	////////// FACILE ////////////
+
+	voir s'il existe un moyen de simplifier les ToolPlayer -> classes inutiles ?
+	guiTool -> voir s'il existe un moyen d'accelerer le render
 
 	PlayerHealth -> kill() prévoir un restart
 
@@ -50,5 +57,6 @@
 	Comme les soul heart dans binding of isaac
 	nourriture pour regen
 	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
+	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
 
 	 

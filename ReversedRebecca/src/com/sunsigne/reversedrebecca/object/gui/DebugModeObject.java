@@ -33,7 +33,7 @@ public class DebugModeObject extends GameObject {
 	private BufferedImage img;
 	
 	private void loadImage() {
-		img = new ImageTask().loadImage("textures/gui/debug/" + debugMode.getName());
+		img = new ImageTask().loadImage("textures/gui/" + debugMode.getName());
 	}
 	
 	////////// RENDER ////////////

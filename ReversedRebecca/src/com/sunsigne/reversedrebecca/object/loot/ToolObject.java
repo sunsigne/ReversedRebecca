@@ -40,7 +40,7 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	private void loadImage() {
 		image = new ImageTask().loadImage(
-				"textures/" + toolPlayer.getPuzzlerName() + "/" + toolPlayer.getName() + "_" + difficulty.getName());
+				"textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
 	}
 
 	public BufferedImage getImage() {

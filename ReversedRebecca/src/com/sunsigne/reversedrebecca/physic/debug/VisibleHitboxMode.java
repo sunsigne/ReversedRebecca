@@ -28,7 +28,7 @@ public class VisibleHitboxMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "visible_hitbox_mode";
+		return "debugmode_visible_hitbox";
 	}
 
 	////////// TICK ////////////

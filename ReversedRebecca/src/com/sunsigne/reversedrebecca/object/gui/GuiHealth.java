@@ -28,8 +28,8 @@ public class GuiHealth extends GameObject {
 	private BufferedImage full_img;
 
 	private void loadImages() {
-		empty_img = new ImageTask().loadImage("textures/" + "gui/heart/empty");
-		full_img = new ImageTask().loadImage("textures/" + "gui/heart/full");
+		empty_img = new ImageTask().loadImage("textures/gui/" + "heart_empty");
+		full_img = new ImageTask().loadImage("textures/gui/" + "heart_full");
 	}
 
 	////////// RENDER ////////////

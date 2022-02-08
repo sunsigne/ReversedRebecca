@@ -23,7 +23,7 @@ public class MultiToolMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "multitool_mode";
+		return "debugmode_multitool";
 	}
 
 	////////// TICK ////////////
