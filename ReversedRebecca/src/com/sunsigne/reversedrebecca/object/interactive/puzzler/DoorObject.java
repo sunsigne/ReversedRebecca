@@ -30,7 +30,7 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	private void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("LOCKED", "actions/door.csv", 1);
+		String noActionText = new Translatable().getTranslatedText("DoorLocked", file);
 		Action unlockAction = new UnlockAction(this);
 		tripleAction = new TripleAction(noActionText, unlockAction, null, null);
 	}

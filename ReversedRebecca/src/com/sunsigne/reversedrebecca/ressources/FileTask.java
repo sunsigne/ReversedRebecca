@@ -65,48 +65,6 @@ public class FileTask {
 		return content;
 	}
 
-	public String read(int lineToRead, String path) {
-
-		File file = new File("ressources/" + path);
-		Scanner scan = null;
-		String content = "";
-		int count = 0;
-
-		try {
-			if (file.exists()) {
-				scan = new Scanner(file, "UTF-8");
-				boolean flag = false;
-
-				// read the whole file
-				if (lineToRead == 0) {
-					while (scan.hasNextLine()) {
-						if (!flag) {
-							content = content.concat(scan.nextLine());
-							flag = true;
-						} else
-							content = content.concat(String.format("%n" + scan.nextLine()));
-					}
-				}
-
-				// read one specific line
-				else {
-					while (count != lineToRead) {
-						if (lineToRead < 0)
-							break;
-						content = scan.nextLine();
-						count++;
-					}
-				}
-
-				scan.close();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return content;
-	}
-
 	////////// WRITE ////////////
 
 	public void write(String path, String text) {

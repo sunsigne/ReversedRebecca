@@ -20,6 +20,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LanguageScreen implements Updatable {
 
+	private String file = "menu.csv";
+	
 	public LanguageScreen() {
 		LAYER.MENU.addObject(this);
 
@@ -42,7 +44,7 @@ public class LanguageScreen implements Updatable {
 			GenericListener onPress = () -> chooseLanguage(tempLang);
 			GenericListener onRelease = null;
 
-			String text = new FileTask().read("/texts" + "/" + tempLang + "/lang" + "/name" + ".txt");
+			String text = new FileTask().read("/texts/" + tempLang + "/lang/name" + ".txt");
 
 			ButtonObject languageButton = new TitleScreenButton(text, 410 + x, 300, 500, 90, onPress, onRelease);
 			LAYER.MENU.addObject(languageButton);
@@ -62,7 +64,7 @@ public class LanguageScreen implements Updatable {
 		GenericListener onPress = () -> openTitleScreen();
 		GenericListener onRelease = null;
 
-		String text = "< " + new Translatable().getTranslatedText("BACK", "menu.csv", 4);
+		String text = "< " + new Translatable().getTranslatedText("BackButton", file);
 
 		int widht = 420;
 		int height = 90;

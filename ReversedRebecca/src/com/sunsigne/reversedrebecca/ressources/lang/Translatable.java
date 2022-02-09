@@ -7,8 +7,8 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class Translatable {
 
-	public String getTranslatedText(String info, String path, int lineToRead) {
-		String text = new FileTask().read(lineToRead, "texts/" + Language.getInstance().getLang() + "/" + path);
+	public String getTranslatedText(String valueToRead, String path) {
+		String text = new FileTask().read(valueToRead, "texts/" + Language.getInstance().getLang() + "/" + path);
 		return text;
 	}
 

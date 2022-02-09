@@ -4,12 +4,12 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Language {
 
-	private String file = "userdata/lang.csv";
+	private String file = "userdata/options.csv";
 	
 	////////// SIGNELTON ////////////
 
 	private Language() {
-		lang = new FileTask().read("LANGUAGE", file);
+		lang = new FileTask().read("Language", file);
 	}
 
 	private static Language instance = null;

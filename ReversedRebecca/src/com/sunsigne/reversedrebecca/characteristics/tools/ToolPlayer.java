@@ -6,6 +6,8 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class ToolPlayer implements Difficulty {
 
+	private String file = "userdata/characteristics.csv";
+	
 	public ToolPlayer() {
 		ToolPlayerList.getList().addObject(this);
 		loadMaxDifficulty();
@@ -28,7 +30,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 	private void loadMaxDifficulty() {
 		if (getMaxDifficulty() == LVL.NULL) {
-			String txtDifficulty = new FileTask().read(1, "userdata/characteristics/" + getName() + ".csv");
+			String txtDifficulty = new FileTask().read(getName() + "MaxLvl", file);
 			ToolPlayerList.getList().getObject(this).max_difficulty = LVL.valueOf(txtDifficulty);
 		}
 	}
@@ -52,7 +54,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 	private void loadDifficulty() {
 		if (getDifficulty() == LVL.NULL) {
-			String txtDifficulty = new FileTask().read(2, "userdata/characteristics/" + getName() + ".csv");
+			String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);
 			setDifficulty(LVL.valueOf(txtDifficulty));
 		}
 	}

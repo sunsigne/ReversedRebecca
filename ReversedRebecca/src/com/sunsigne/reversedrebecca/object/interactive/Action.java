@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.pattern.GenericListener;
 
 public class Action {
 
+	protected String file = "actions.csv";
+	
 	public Action(InteractiveControlObject interactiveControlObject, String name, GenericListener listener,
 			int keyEvent) {
 		this(interactiveControlObject, name, null, listener, keyEvent);

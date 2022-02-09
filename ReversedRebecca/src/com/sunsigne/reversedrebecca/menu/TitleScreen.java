@@ -18,6 +18,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen implements Updatable {
 
+	private String file = "menu.csv";
+	
 	public TitleScreen() {
 		LAYER.MENU.addObject(this);
 
@@ -35,7 +37,7 @@ public class TitleScreen implements Updatable {
 		GenericListener onPress = () -> startWorld();
 		GenericListener onRelease = null;
 
-		String text = new Translatable().getTranslatedText("START", "menu.csv", 1);
+		String text = new Translatable().getTranslatedText("PlayButton", file);
 
 		ButtonObject playButton = new TitleScreenButton(text, 710, 570, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(playButton);
@@ -52,7 +54,7 @@ public class TitleScreen implements Updatable {
 		GenericListener onPress = null;
 		GenericListener onRelease = null;
 
-		String text = new Translatable().getTranslatedText("OPTIONS", "menu.csv", 2);
+		String text = new Translatable().getTranslatedText("OptionsButton", file);
 
 		ButtonObject optionsButton = new TitleScreenButton(text, 710, 740, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(optionsButton);
@@ -85,7 +87,7 @@ public class TitleScreen implements Updatable {
 		GenericListener onPress = () -> new Conductor().stopApp();
 		GenericListener onRelease = null;
 
-		String text = new Translatable().getTranslatedText("QUIT", "menu.csv", 3);
+		String text = new Translatable().getTranslatedText("QuitButton", file);
 
 		ButtonObject quitButton = new TitleScreenButton(text, 710, 920, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(quitButton);

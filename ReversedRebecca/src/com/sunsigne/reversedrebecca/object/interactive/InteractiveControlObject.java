@@ -14,6 +14,8 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
 public abstract class InteractiveControlObject extends GameObject implements Difficulty, KeyboardEvent {
 
+	protected String file = "actions.csv";
+	
 	public InteractiveControlObject(int x, int y) {
 		this(LVL.NULL, x, y);
 	}

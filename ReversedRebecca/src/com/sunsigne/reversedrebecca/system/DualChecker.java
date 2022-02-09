@@ -16,7 +16,7 @@ public class DualChecker implements Updatable {
 		Game.getInstance().forceLoop();
 	}
 
-	private String file = "userdata/dualcheck.csv";
+	private String file = "dualcheck.csv";
 
 	////////// TICK ////////////
 

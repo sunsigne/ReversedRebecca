@@ -11,7 +11,7 @@ public class PlayerHealth implements TickBehavior {
 
 	public PlayerHealth(Player player) {
 		this.player = player;
-		maxhp = Integer.parseInt(new FileTask().read(1, "userdata/characteristics/maxhp" + ".csv"));
+		maxhp = Integer.parseInt(new FileTask().read("MaxHp", "userdata/characteristics" + ".csv"));
 		hp = maxhp;
 	}
 

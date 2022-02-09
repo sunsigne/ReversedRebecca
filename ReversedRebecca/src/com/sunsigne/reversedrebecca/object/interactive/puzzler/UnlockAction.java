@@ -13,7 +13,7 @@ public class UnlockAction extends Action {
 	public UnlockAction(InteractiveControlObject interactiveControlObject) {
 		super(interactiveControlObject, null, null, null, 0);
 
-		setName(new Translatable().getTranslatedText("UNLOCK", "actions/door.csv", 2));
+		setName(new Translatable().getTranslatedText("DoorUnlock", file));
 		setToolPlayer(new KeyToolPlayer());
 		setListener(unlockAction(interactiveControlObject));
 		setKeyEvent(KeyEvent.VK_E);

@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ToolObject extends LootObject implements Difficulty {
 
+	private String file = "tools.csv";
+	
 	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
 		this.toolPlayer = toolPlayer;
@@ -58,8 +60,7 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public String getTextWhenLooted() {
-		return new Translatable().getTranslatedText("TOOL LVL",
-				"tools/" + toolPlayer.getName() + "/" + difficulty.getName() + ".csv", 1);
+		return new Translatable().getTranslatedText(toolPlayer.getName() + difficulty.getName(), file);
 	}
 
 	@Override

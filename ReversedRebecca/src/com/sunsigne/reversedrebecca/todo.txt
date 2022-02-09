@@ -11,9 +11,9 @@
 	
 	////////// IMPORTANT ////////////
 
-	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
+	Une caractéristique devrait exister pour les HP
 
-	FileTask a besoin d'utiliser sa nouvelle method partout
+	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 
 	////////// FACILE ////////////
 

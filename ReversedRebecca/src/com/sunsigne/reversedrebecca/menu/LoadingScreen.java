@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LoadingScreen implements Updatable {
 
+	private String file = "menu.csv";
+	
 	public LoadingScreen() {
 
 	}
@@ -28,7 +30,7 @@ public class LoadingScreen implements Updatable {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
 		
-		String text = new Translatable().getTranslatedText("loading", "loading.csv", 1);
+		String text = new Translatable().getTranslatedText("Loading", file);
 		Font font = new Font("arial", 1, 70);
 		g.setFont(font);
 		g.setColor(Color.WHITE);
