@@ -23,16 +23,23 @@ public class Blinking implements TickBehavior {
 
 	private int time;
 
+	public boolean isLivingHidden() {
+		return time % 4 == 0;
+	}
+
 	@Override
 	public void tick() {
 		time--;
 
 		living.getHandler().setHideRendering(false);
-		if (time % 4 == 0)
-			living.getHandler().setHideRendering(true);
+
+		if (isLivingHidden())
+			living.setInvisible(true);
+		else
+			living.setInvisible(false);
 
 		if (time <= 0) {
-			living.getHandler().setHideRendering(false);
+			living.setInvisible(false);
 			living.removeBehavior(this);
 		}
 	}

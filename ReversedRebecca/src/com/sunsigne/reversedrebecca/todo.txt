@@ -10,8 +10,6 @@
 	
 	
 	////////// IMPORTANT ////////////
-	
-	Blinking -> le monde entier blink .........
 
 	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 

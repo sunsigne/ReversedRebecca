@@ -21,11 +21,11 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior, MouseBehavior {
 
 	public ExtraBehaviorsObject(int x, int y) {
-		this(x, y, Size.M, Size.M);			
+		this(x, y, Size.M, Size.M);
 	}
-	
+
 	public ExtraBehaviorsObject(int x, int y, int w, int h) {
-		super(x, y, w, h);			
+		super(x, y, w, h);
 	}
 
 	////////// MAP OR LIST ////////////
@@ -69,6 +69,9 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 
 	@Override
 	public void render(Graphics g) {
+		if (isInvisible())
+			return;
+
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
 			if (tempBehavior != null) {
 				if (tempBehavior instanceof RenderBehavior) {
@@ -92,7 +95,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 			}
 		}
 	}
-	
+
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
@@ -101,7 +104,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 	public KeyboardController getKeyBoardController() {
 		return keyboardController;
 	}
-	
+
 	@Override
 	public void keyPressed(KeyEvent e) {
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
@@ -125,16 +128,16 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 			}
 		}
 	}
-	
+
 	////////// MOUSE ////////////
-		
+
 	private MouseController mouseController = new MouseController(this);
-	
+
 	@Override
 	public MouseController getMouseController() {
-		return  mouseController;
+		return mouseController;
 	}
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
@@ -146,7 +149,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 			}
 		}
 	}
-	
+
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
