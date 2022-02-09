@@ -10,18 +10,21 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public class VelocityLaw implements PhysicLaw {
 
 	////////// PHYSIC LAW ////////////
-	
+
 	public VelocityLaw() {
+		if (PhysicList.getList().cointainsObject(physicLaw))
+			return;
+		
 		PhysicList.getList().getList().add(0, this);
 	}
-	
+
 	private static PhysicLaw physicLaw = new VelocityLaw();
-	
+
 	@Override
 	public PhysicLaw getPhysicLaw() {
 		return physicLaw;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
