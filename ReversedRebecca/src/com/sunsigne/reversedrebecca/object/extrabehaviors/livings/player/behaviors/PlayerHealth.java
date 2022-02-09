@@ -111,7 +111,7 @@ public class PlayerHealth implements TickBehavior {
 		time--;
 
 		if (time == RECOVERING_TIME - 1) {
-			blinking = new Blinking(player, time);
+			blinking = new Blinking(player, RECOVERING_TIME);
 			player.addBehavior(blinking);
 		}
 
