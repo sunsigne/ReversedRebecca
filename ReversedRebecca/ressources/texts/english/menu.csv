@@ -1,4 +1,6 @@
-play
-options
-quit
-back
+Loading=Loading
+
+PlayButton=play
+OptionsButton=options
+QuitButton=quit
+BackButton=back
