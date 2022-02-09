@@ -15,12 +15,6 @@ public class Conductor {
 
 	////////// START & STOP ////////////
 
-	private static boolean appIsReady;
-
-	public static boolean isAppReady() {
-		return appIsReady;
-	}
-
 	public void startApp() {
 
 		LAYER.LOADING.addObject(new LoadingScreen());
@@ -38,7 +32,6 @@ public class Conductor {
 
 		new TitleScreen();
 		LAYER.LOADING.getHandler().clear();
-		appIsReady = true;
 	}
 
 	public void stopApp() {

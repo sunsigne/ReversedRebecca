@@ -13,6 +13,10 @@ public class PlayerFinder {
 		for (LAYER tempLayer : LAYER.values()) {
 			var list = tempLayer.getHandler().getList();
 
+			// can sometimes occur at the start of the game
+			if (list.isEmpty())
+				return null;
+
 			for (Updatable tempUpdatable : list) {
 				if (tempUpdatable instanceof Player)
 					return (Player) tempUpdatable;
@@ -20,7 +24,7 @@ public class PlayerFinder {
 		}
 		return null;
 	}
-	
+
 	public PlayerHealth getPlayerHealth() {
 		if (getPlayer() == null)
 			return null;
@@ -32,7 +36,7 @@ public class PlayerFinder {
 
 		return (PlayerHealth) getPlayer().getBehaviorList().getObject(playerHealth);
 	}
-	
+
 	public boolean isPlayerFutherThan(GameObject object, int distance) {
 		int diffX = object.getX() - getPlayer().getX();
 		int diffY = object.getY() - getPlayer().getY();

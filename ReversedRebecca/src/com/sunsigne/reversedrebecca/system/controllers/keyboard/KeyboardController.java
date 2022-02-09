@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.system.controllers.keyboard;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class KeyboardController extends KeyAdapter {
@@ -24,14 +23,12 @@ public class KeyboardController extends KeyAdapter {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (Conductor.isAppReady())
-			keyboardEvent.keyPressed(e);
+		keyboardEvent.keyPressed(e);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if (Conductor.isAppReady())
-			keyboardEvent.keyReleased(e);
+		keyboardEvent.keyReleased(e);
 	}
 
 }
