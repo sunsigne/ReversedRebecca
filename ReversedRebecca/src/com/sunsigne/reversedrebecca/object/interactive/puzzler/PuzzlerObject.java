@@ -4,11 +4,10 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class PuzzlerObject extends InteractiveControlObject implements Difficulty, CollisionReactor {
+public abstract class PuzzlerObject extends InteractiveControlObject implements CollisionReactor {
 
 	public PuzzlerObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
