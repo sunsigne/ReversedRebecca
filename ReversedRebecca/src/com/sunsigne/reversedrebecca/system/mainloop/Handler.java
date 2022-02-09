@@ -16,9 +16,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		this.cameraDependant = cameraDependant;
 		SuperHandler.getGameList().addObject(this);
 	}
-	
+
 	////////// USEFULL ////////////
-	
+
 	public static GameObject getObjectAtPos(Handler layer, int x, int y) {
 
 		for (Updatable tempUpdatable : layer.getList()) {
@@ -54,12 +54,11 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	@Override
 	public void clear() {
-		if(getList().size() > 0)
-		{
+		if (getList().size() > 0) {
 			for (Updatable tempUpdatable : getList()) {
 				tempUpdatable.destroyControls();
 			}
-		}		
+		}
 		getList().clear();
 		hideRendering = false;
 	}
@@ -75,7 +74,15 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// TICK ////////////
 
+	private boolean freezeTicking;
+
+	public void setFreezeTicking(boolean freezeTicking) {
+		this.freezeTicking = freezeTicking;
+	}
+
 	protected void tick() {
+		if (freezeTicking)
+			return;
 
 		for (Updatable tempObject : getList()) {
 
@@ -90,15 +97,15 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	////////// RENDER ////////////
 
 	private boolean hideRendering;
-	
+
 	public void setHideRendering(boolean hideRendering) {
 		this.hideRendering = hideRendering;
 	}
-	
+
 	protected void render(Graphics g) {
-		if(hideRendering)
-			return;		
-		
+		if (hideRendering)
+			return;
+
 		for (Updatable tempObject : getList()) {
 
 			renderDependency(g, true);
@@ -116,6 +123,5 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			renderDependency(g, false);
 		}
 	}
-
 
 }

@@ -15,8 +15,6 @@
 
 	////////// FACILE ////////////
 
-	voir s'il existe un moyen de simplifier les ToolPlayer -> classes inutiles ?
-	
 	guiTool -> voir s'il existe un moyen d'accelerer le render
 
 	DieWhenNoHp -> kill() prévoir un restart

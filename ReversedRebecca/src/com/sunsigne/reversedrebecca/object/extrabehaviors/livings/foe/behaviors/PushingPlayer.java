@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.PlayerHealth;
+import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;

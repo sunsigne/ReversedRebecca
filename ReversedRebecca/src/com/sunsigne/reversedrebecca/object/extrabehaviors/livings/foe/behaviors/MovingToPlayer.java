@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.PlayerHealth;
+import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
