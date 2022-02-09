@@ -11,24 +11,21 @@
 	
 	////////// IMPORTANT ////////////
 
-	Une caractéristique devrait exister pour les HP
-
 	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 
 	////////// FACILE ////////////
 
 	voir s'il existe un moyen de simplifier les ToolPlayer -> classes inutiles ?
+	
 	guiTool -> voir s'il existe un moyen d'accelerer le render
 
-	PlayerHealth -> kill() prévoir un restart
+	DieWhenNoHp -> kill() prévoir un restart
 
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
 
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)
 	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
-
-	Textures (dossier des textures à ranger)
 
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	

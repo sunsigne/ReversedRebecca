@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.object.gui;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -36,17 +36,17 @@ public class GuiHealth extends GameObject {
 
 	@Override
 	public void render(Graphics g) {
-		if (new PlayerFinder().getPlayerHealth() == null)
+		if (PlayerHealth.getInstance().isInvulnerable())
 			return;
 
 		// drawing maxHp empty heart
-		int maxHp = new PlayerFinder().getPlayerHealth().getMaxHp();
+		int maxHp = PlayerHealth.getInstance().getMaxHp();
 		for (int index = 0; index < maxHp; index++) {
 			g.drawImage(empty_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
 		}
 
 		// drawing hp full heart above
-		int hp = new PlayerFinder().getPlayerHealth().getHp();
+		int hp = PlayerHealth.getInstance().getHp();
 		for (int index = 0; index < hp; index++) {
 			g.drawImage(full_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
 		}

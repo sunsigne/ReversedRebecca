@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
@@ -7,8 +8,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Move
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.PlayerHealth;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PushingPlayer implements CollisionBehavior {
 
@@ -87,12 +86,7 @@ public class PushingPlayer implements CollisionBehavior {
 	}
 
 	private void hurtPlayer() {
-		PlayerHealth playerHealth = new PlayerFinder().getPlayerHealth();
-
-		if (playerHealth == null)
-			return;
-
-		playerHealth.removeHp();
+		PlayerHealth.getInstance().removeHp();
 	}
 
 	private void stunFoe() {

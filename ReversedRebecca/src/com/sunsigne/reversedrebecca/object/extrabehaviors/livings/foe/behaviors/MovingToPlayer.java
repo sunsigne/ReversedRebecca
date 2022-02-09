@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
@@ -46,12 +47,10 @@ public class MovingToPlayer implements TickBehavior {
 		// player is too far
 		if (new PlayerFinder().isPlayerFutherThan(foe, 19 * Size.XS))
 			return false;
-		
-		if(new PlayerFinder().getPlayerHealth() != null) {
-			if(new PlayerFinder().getPlayerHealth().getHp() <= 0)
-				return false;
-		}
-		
+
+		if (PlayerHealth.getInstance().getHp() <= 0)
+			return false;
+
 		return true;
 	}
 
