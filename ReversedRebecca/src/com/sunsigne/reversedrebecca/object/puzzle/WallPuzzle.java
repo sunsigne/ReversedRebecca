@@ -3,14 +3,14 @@ package com.sunsigne.reversedrebecca.object.puzzle;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.system.Size;
 
-public class WallPuzzle extends PuzzleObject {
+public class WallPuzzle extends GameObject {
 
-	public WallPuzzle(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
-		loadImage();
+	public WallPuzzle(BufferedImage img, int x, int y) {
+		super(x, y, Size.L, Size.L);
+		this.img = img;
 	}
 
 	////////// TICK ////////////
@@ -20,15 +20,9 @@ public class WallPuzzle extends PuzzleObject {
 
 	}
 
-	////////// TEXTURE ////////////
+	////////// RENDER ////////////
 
 	private BufferedImage img;
-
-	private void loadImage() {
-		img = new ImageTask().loadImage("textures/puzzle/wall_" + getPuzzle().getName());
-	}
-
-	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {

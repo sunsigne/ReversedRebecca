@@ -19,8 +19,8 @@ public class LockPuzzleObject extends PuzzleObject implements CollisionReactor {
 
 	////////// TICK ////////////
 
-	private final int ymin = getPuzzle().getRow(1);
-	private final int ymax = getPuzzle().getRow(6);
+	protected final int ymin = getPuzzle().getRow(1);
+	protected final int ymax = getPuzzle().getRow(6);
 
 	@Override
 	public void tick() {

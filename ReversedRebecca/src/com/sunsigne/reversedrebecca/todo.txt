@@ -49,6 +49,8 @@
 	Buttons -> should play a sound too
 	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
 		
+	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe)
+		
 	////////// DIFFICILE ////////////
 			
 	Moyen de déplacer le joueur de façon + propre ?		
@@ -66,4 +68,5 @@
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
+	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
 	 

@@ -1,10 +1,12 @@
 package com.sunsigne.reversedrebecca.object.puzzle.key;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -23,6 +25,18 @@ public class KeyPuzzleObject extends PuzzleObject implements MouseUserEvent, Col
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 
+	////////// SIZE ////////////
+	
+	// smaller hitbox : the game is easier
+	@Override
+	public Rectangle getBounds(DIRECTION direction) {
+		int x = getX() + getWidth() / 4;
+		int y = getY() + getHeight() / 4;
+		int w = getWidth() / 2;
+		int h = getHeight() / 2;
+		return new Rectangle(x, y, w, h);
+	}
+	
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);

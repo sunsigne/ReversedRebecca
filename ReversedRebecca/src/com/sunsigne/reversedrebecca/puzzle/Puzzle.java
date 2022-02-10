@@ -1,8 +1,11 @@
 package com.sunsigne.reversedrebecca.puzzle;
 
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
@@ -16,6 +19,8 @@ public abstract class Puzzle implements Updatable, Difficulty {
 		this.actionOnWinning = actionOnWinning;
 	}
 
+	////////// USEFULL ////////////
+
 	public int getCol(int col) {
 		return 2 * Size.XS + col * Size.L;
 	}
@@ -27,6 +32,10 @@ public abstract class Puzzle implements Updatable, Difficulty {
 	////////// NAME ////////////
 
 	public abstract String getName();
+
+	////////// PUZZLE ////////////
+
+	public abstract void createPuzzle();
 
 	////////// DIFFICULTY ////////////
 
@@ -41,11 +50,38 @@ public abstract class Puzzle implements Updatable, Difficulty {
 	public void setDifficulty(LVL difficulty) {
 		this.difficulty = difficulty;
 	}
-	
-	////////// PUZZLE ////////////
-	
-	public abstract void createPuzzle();
-	
+
+	private void createDifficultyModification() {
+		switch (difficulty) {
+		case NULL:
+		case CYAN:
+			createCyanPuzzle();
+			break;
+		case GREEN:
+			createGreenPuzzle();
+			break;
+		case YELLOW:
+			createYellowPuzzle();
+			break;
+		case ORANGE:
+			createOrangePuzzle();
+			break;
+		case RED:
+			createRedPuzzle();
+			break;
+		}
+	}
+
+	public abstract void createCyanPuzzle();
+
+	public abstract void createGreenPuzzle();
+
+	public abstract void createYellowPuzzle();
+
+	public abstract void createOrangePuzzle();
+
+	public abstract void createRedPuzzle();
+
 	////////// TICK ////////////
 
 	@Override
@@ -65,19 +101,25 @@ public abstract class Puzzle implements Updatable, Difficulty {
 
 		createWallBorder();
 		createPuzzle();
+		createDifficultyModification();
+	}
+
+	protected BufferedImage getWallTexture() {
+		return new ImageTask().loadImage("textures/puzzle/wall_" + getName());
 	}
 
 	private void createWallBorder() {
 
 		Handler handler = LAYER.PUZZLE.getHandler();
+		BufferedImage img = getWallTexture();
 
 		for (int col = 0; col < 13; col++) {
-			handler.addObject(new WallPuzzle(this, getCol(col), getRow(0)));
-			handler.addObject(new WallPuzzle(this, getCol(col), getRow(7)));
+			handler.addObject(new WallPuzzle(img, getCol(col), getRow(0)));
+			handler.addObject(new WallPuzzle(img, getCol(col), getRow(7)));
 		}
 		for (int row = 0; row < 8; row++) {
-			handler.addObject(new WallPuzzle(this, getCol(0), getRow(row)));
-			handler.addObject(new WallPuzzle(this, getCol(13), getRow(row)));
+			handler.addObject(new WallPuzzle(img, getCol(0), getRow(row)));
+			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
 		}
 	}
 
