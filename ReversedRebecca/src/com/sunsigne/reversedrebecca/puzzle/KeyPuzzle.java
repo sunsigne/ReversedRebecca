@@ -4,8 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 
 public class KeyPuzzle extends Puzzle {
 
@@ -19,7 +18,7 @@ public class KeyPuzzle extends Puzzle {
 	public String getName() {
 		return "key";
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -32,8 +31,7 @@ public class KeyPuzzle extends Puzzle {
 	@Override
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
-		g.setColor(green);
-		g.fillRect(Size.L, Size.L, Window.WIDHT - 2 * Size.L, Window.HEIGHT - 2 * Size.L);
+		new TransluantLayer().drawPuzzle(g, green);
 	}
 
 }
