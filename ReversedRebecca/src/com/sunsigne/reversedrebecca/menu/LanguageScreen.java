@@ -91,7 +91,7 @@ public class LanguageScreen implements Updatable {
 
 	@Override
 	public void render(Graphics g) {
-		new TransluantLayer().draw(g, Window.WIDHT, Window.HEIGHT);
+		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
 
 		g.setColor(Color.BLUE);
 		g.fillRect(380, 280, 1200, 150);

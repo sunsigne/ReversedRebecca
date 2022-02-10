@@ -35,6 +35,7 @@
 	NullDoorObject -> should play a sound when opened
 	LootObject -> should play a sound when pickup
 	Buttons -> should play a sound too
+	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
 		
 	////////// DIFFICILE ////////////
 			

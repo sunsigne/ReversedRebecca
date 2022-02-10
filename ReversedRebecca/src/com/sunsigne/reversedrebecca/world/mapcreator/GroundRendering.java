@@ -37,7 +37,7 @@ public class GroundRendering implements Updatable {
 		int width = img.getWidth() * Size.M / pixel;
 		int height = img.getHeight() * Size.M / pixel;
 
-		new TransluantLayer().draw(g, width, height);
+		new TransluantLayer().drawGray(g, width, height);
 		g.drawImage(img, 0, 0, width, height, null);
 	}
 	
