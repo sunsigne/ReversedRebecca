@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -15,11 +16,11 @@ public abstract class Puzzle implements Updatable, Difficulty {
 		this.actionOnWinning = actionOnWinning;
 	}
 
-	protected int getCol(int col) {
+	public int getCol(int col) {
 		return 2 * Size.XS + col * Size.L;
 	}
 
-	protected int getRow(int row) {
+	public int getRow(int row) {
 		return Size.XS + row * Size.L;
 	}
 
@@ -40,6 +41,17 @@ public abstract class Puzzle implements Updatable, Difficulty {
 	public void setDifficulty(LVL difficulty) {
 		this.difficulty = difficulty;
 	}
+	
+	////////// PUZZLE ////////////
+	
+	public abstract void createPuzzle();
+	
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
+	}
 
 	////////// OPEN ////////////
 
@@ -51,10 +63,11 @@ public abstract class Puzzle implements Updatable, Difficulty {
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 
-		createWalls();
+		createWallBorder();
+		createPuzzle();
 	}
 
-	private void createWalls() {
+	private void createWallBorder() {
 
 		Handler handler = LAYER.PUZZLE.getHandler();
 
@@ -77,7 +90,8 @@ public abstract class Puzzle implements Updatable, Difficulty {
 			if (tempLayer.isMapLayer())
 				tempLayer.getHandler().setFreezeTicking(false);
 		}
-		getHandler().removeObject(this);
+		LAYER.PUZZLE.getHandler().clear();
+		new GameCursor().setVisible(true);
 		if (isPuzzleWon)
 			actionOnWinning.doAction();
 	}

@@ -22,13 +22,13 @@ public class TransluantLayer {
 		Color light_gray = new Color(64, 64, 64, 128);
 		g.setColor(light_gray);
 		// up
-		g.fillRect(Size.L, 0, Window.WIDHT - 2 * Size.L, Size.L);
+//		g.fillRect(Size.L, 0, Window.WIDHT - 2 * Size.L, Size.L);
 		// right
-		g.fillRect(Window.WIDHT - Size.L, 0, Size.L, Window.HEIGHT);
+//		g.fillRect(Window.WIDHT - Size.L, 0, Size.L, Window.HEIGHT);
 		// down
-		g.fillRect(Size.L, Window.HEIGHT - Size.L, Window.WIDHT - 2 * Size.L, Size.L);
+//		g.fillRect(Size.L, Window.HEIGHT - Size.L, Window.WIDHT - 2 * Size.L, Size.L);
 		// left
-		g.fillRect(0, 0, Size.L, Window.HEIGHT);
+//		g.fillRect(0, 0, Size.L, Window.HEIGHT);
 	}
 
 }

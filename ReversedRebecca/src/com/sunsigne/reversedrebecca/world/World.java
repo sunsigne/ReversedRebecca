@@ -120,7 +120,7 @@ public class World implements Updatable {
 
 	public void destroy() {
 		for (LAYER tempLayer : LAYER.values()) {
-			if (!tempLayer.getHandler().isCameraDependant() && !tempLayer.getName().contains("gui"))
+			if (!tempLayer.getHandler().isCameraDependant() && !tempLayer.getName().contains("gui") && !tempLayer.getName().contains("puzzle"))
 				continue;
 
 			tempLayer.getHandler().clear();

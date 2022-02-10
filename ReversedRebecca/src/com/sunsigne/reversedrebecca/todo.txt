@@ -13,7 +13,19 @@
 
 	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 
+	demander à ophélie pour le fond gris des puzzle
+
+	la fonction destroy dans World pourrait être un poil mieux
+
+	UserCanKeyRestart -> à supprimer quand les tests sont fini
+
+	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
+
 	////////// FACILE ////////////
+
+	faire un cursor spécial pour la souris
+
+	LockPuzzleObject -> texture pas fini
 
 	guiTool -> voir s'il existe un moyen d'accelerer le render
 
@@ -52,5 +64,6 @@
 	nourriture pour regen
 	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
-
+	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
+	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	 
