@@ -105,7 +105,7 @@ public abstract class Puzzle implements Updatable, Difficulty {
 	}
 
 	protected BufferedImage getWallTexture() {
-		return new ImageTask().loadImage("textures/puzzle/wall_" + getName());
+		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall");
 	}
 
 	private void createWallBorder() {

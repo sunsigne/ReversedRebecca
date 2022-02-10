@@ -21,6 +21,8 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
+	tj ko quand on reset
+
 	////////// FACILE ////////////
 
 	faire un cursor spécial pour la souris

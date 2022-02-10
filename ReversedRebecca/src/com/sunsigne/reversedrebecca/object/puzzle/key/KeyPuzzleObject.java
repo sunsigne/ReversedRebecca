@@ -63,8 +63,7 @@ public class KeyPuzzleObject extends PuzzleObject implements MouseUserEvent, Col
 	private BufferedImage img;
 
 	private void loadImage() {
-//		img = new ImageTask().loadImage("textures/puzzle/wall_" + getPuzzle().getName());
-		img = new ImageTask().loadImage("textures/gui/heart_full");
+		img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_key");
 	}
 
 	////////// RENDER ////////////

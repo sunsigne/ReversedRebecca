@@ -39,8 +39,7 @@ public class LockPuzzleObject extends PuzzleObject implements CollisionReactor {
 	private BufferedImage img;
 
 	private void loadImage() {
-//		img = new ImageTask().loadImage("textures/puzzle/wall_" + getPuzzle().getName());
-		img = new ImageTask().loadImage("textures/gui/heart_empty");
+		img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_lock");
 	}
 
 	////////// RENDER ////////////
