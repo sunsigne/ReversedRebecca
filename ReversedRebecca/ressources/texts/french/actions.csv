@@ -2,3 +2,8 @@
 
 DoorLocked=fermé
 DoorUnlock=ouvrir
+
+///// RUBBLE /////
+
+RubbleBlocked=bloqué
+RubbleExplode=exploser

@@ -23,7 +23,13 @@
 
 	tj ko quand on reset
 
+	quand on clique sur play, génère parfois un null point exception sans référence (probablement une liste null) -> à corriger
+
 	////////// FACILE ////////////
+
+	ExplodeRubbleAction -> ouvre pour l'instant le puzzle de la clef
+
+	OpenPuzzleAction -> danger : tous les puzzle sur la même touche ! faire en sorte que les actions ne dépendant d'une touche que parce u'elle sont dans un odre précis dans TripleAction !
 
 	faire un cursor spécial pour la souris
 
