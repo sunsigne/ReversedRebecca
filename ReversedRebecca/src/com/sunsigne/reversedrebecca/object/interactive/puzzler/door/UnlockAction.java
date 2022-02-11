@@ -1,47 +1,43 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler;
-
-import java.awt.event.KeyEvent;
+package com.sunsigne.reversedrebecca.object.interactive.puzzler.door;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.interactive.Action;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.object.interactive.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.puzzle.KeyPuzzle;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
-public class UnlockAction extends Action {
+public class UnlockAction extends OpenPuzzleAction {
 
 	public UnlockAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject, null, null, null, 0);
-
-		setName(new Translatable().getTranslatedText("DoorUnlock", file));
-		setToolPlayer(new KeyToolPlayer());
-		setListener(openPuzzle(interactiveControlObject));
-		setKeyEvent(KeyEvent.VK_E);
+		super(interactiveControlObject);
 	}
 
-	////////// INTERACTION ////////////
+	////////// NAME ////////////
 
-	private GenericListener openPuzzle(InteractiveControlObject interactiveControlObject) {
-
-		LVL difficulty = interactiveControlObject.getDifficulty();
-		GenericListener actionOnWinning = actionOnWinning(interactiveControlObject);
-
-		GenericListener openPuzzle = () -> new KeyPuzzle(difficulty, actionOnWinning).openPuzzle();
-		return openPuzzle;
+	@Override
+	public String getName() {
+		return "DoorUnlock";
 	}
 
-	private GenericListener actionOnWinning(InteractiveControlObject interactiveControlObject) {
+	////////// TOOL ////////////
 
-		GenericListener actionOnWinning = () -> {
-			NullDoorObject nullDoor = new NullDoorObject(interactiveControlObject.getX(),
-					interactiveControlObject.getY());
-			interactiveControlObject.getHandler().addObject(nullDoor);
-			interactiveControlObject.getHandler().removeObject(interactiveControlObject);
-		};
+	@Override
+	public ToolPlayer getToolPlayer() {
+		return new KeyToolPlayer();
+	}
 
-		return actionOnWinning;
+	////////// PUZZLE ////////////
+
+	@Override
+	public Puzzle getPuzzle(InteractiveControlObject ICO) {
+		return new KeyPuzzle(ICO.getDifficulty(), actionOnWinning(ICO));
+	}
+
+	@Override
+	public PuzzlerObject getNullObject() {
+		return new NullDoorObject(0, 0);
 	}
 
 }

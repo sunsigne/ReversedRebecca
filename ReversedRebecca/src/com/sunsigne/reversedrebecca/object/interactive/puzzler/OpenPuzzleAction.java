@@ -1,0 +1,49 @@
+package com.sunsigne.reversedrebecca.object.interactive.puzzler;
+
+import java.awt.event.KeyEvent;
+
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.interactive.Action;
+import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
+import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+
+public abstract class OpenPuzzleAction extends Action {
+
+	public OpenPuzzleAction(InteractiveControlObject interactiveControlObject) {
+		super(interactiveControlObject, null, null, null, 0);
+
+		setName(new Translatable().getTranslatedText(getName(), file));
+		setToolPlayer(getToolPlayer());
+		setListener(() -> getPuzzle(interactiveControlObject).openPuzzle());
+		setKeyEvent(KeyEvent.VK_E);
+	}
+
+	////////// NAME ////////////
+
+	public abstract String getName();
+
+	////////// TOOL ////////////
+
+	public abstract ToolPlayer getToolPlayer();
+
+	////////// PUZZLE ////////////
+
+	public abstract Puzzle getPuzzle(InteractiveControlObject ICO);
+
+	public abstract PuzzlerObject getNullObject();
+
+	protected GenericListener actionOnWinning(InteractiveControlObject interactiveControlObject) {
+
+		GenericListener actionOnWinning = () -> {
+			PuzzlerObject nullObject = getNullObject();
+			nullObject.setX(interactiveControlObject.getX());
+			nullObject.setX(interactiveControlObject.getY());
+			interactiveControlObject.getHandler().addObject(nullObject);
+			interactiveControlObject.getHandler().removeObject(interactiveControlObject);
+		};
+		return actionOnWinning;
+	}
+
+}

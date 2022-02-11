@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler;
+package com.sunsigne.reversedrebecca.object.interactive.puzzler.door;
 
 import java.awt.Graphics;
 

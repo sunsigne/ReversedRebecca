@@ -1,9 +1,10 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler;
+package com.sunsigne.reversedrebecca.object.interactive.puzzler.door;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class DoorObject extends PuzzlerObject {
