@@ -36,8 +36,8 @@ public class UnlockAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public PuzzlerObject getNullObject() {
-		return new NullDoorObject(0, 0);
+	public PuzzlerObject getNullObject(int x, int y) {
+		return new NullDoorObject(x, y);
 	}
 
 }

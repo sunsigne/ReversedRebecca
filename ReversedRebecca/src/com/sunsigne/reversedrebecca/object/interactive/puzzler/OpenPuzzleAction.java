@@ -32,15 +32,14 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract Puzzle getPuzzle(InteractiveControlObject ICO);
 
-	public abstract PuzzlerObject getNullObject();
+	public abstract PuzzlerObject getNullObject(int x, int y);
 
 	protected GenericListener actionOnWinning(InteractiveControlObject interactiveControlObject) {
 
 		GenericListener actionOnWinning = () -> {
-			PuzzlerObject nullObject = getNullObject();
-			nullObject.setX(interactiveControlObject.getX());
-			nullObject.setX(interactiveControlObject.getY());
-			interactiveControlObject.getHandler().addObject(nullObject);
+			PuzzlerObject nullObject = getNullObject(interactiveControlObject.getX(), interactiveControlObject.getY());
+			if (nullObject != null)
+				interactiveControlObject.getHandler().addObject(nullObject);
 			interactiveControlObject.getHandler().removeObject(interactiveControlObject);
 		};
 		return actionOnWinning;
