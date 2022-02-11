@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.interactive.Action;
 import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
@@ -16,7 +17,10 @@ public abstract class OpenPuzzleAction extends Action {
 
 		setName(new Translatable().getTranslatedText(getName(), file));
 		setToolPlayer(getToolPlayer());
-		setListener(() -> getPuzzle(interactiveControlObject).openPuzzle());
+		setListener(() -> {
+			Puzzle puzzle = getPuzzle(interactiveControlObject.getDifficulty(), actionOnWinning(interactiveControlObject));
+			puzzle.openPuzzle();
+		});				
 		setKeyEvent(KeyEvent.VK_E);
 	}
 
@@ -30,7 +34,7 @@ public abstract class OpenPuzzleAction extends Action {
 
 	////////// PUZZLE ////////////
 
-	public abstract Puzzle getPuzzle(InteractiveControlObject ICO);
+	public abstract Puzzle getPuzzle(LVL difficulty, GenericListener actionOnWinning);
 
 	public abstract PuzzlerObject getNullObject(int x, int y);
 
