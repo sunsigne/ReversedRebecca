@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.interactive.puzzler.rubble;
 
+import java.awt.event.KeyEvent;
+
 import com.sunsigne.reversedrebecca.characteristics.tools.BombToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
@@ -42,4 +44,11 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 		return null;
 	}
 
+	////////// KEYBOARD ////////////
+
+	@Override
+	public int getKeyEvent() {
+		return KeyEvent.VK_E;
+	}
+	
 }

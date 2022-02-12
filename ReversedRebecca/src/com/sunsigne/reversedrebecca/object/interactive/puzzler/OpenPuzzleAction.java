@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.object.interactive.puzzler;
 
-import java.awt.event.KeyEvent;
-
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.interactive.Action;
@@ -18,10 +16,11 @@ public abstract class OpenPuzzleAction extends Action {
 		setName(new Translatable().getTranslatedText(getName(), file));
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
-			Puzzle puzzle = getPuzzle(interactiveControlObject.getDifficulty(), actionOnWinning(interactiveControlObject));
+			Puzzle puzzle = getPuzzle(interactiveControlObject.getDifficulty(),
+					actionOnWinning(interactiveControlObject));
 			puzzle.openPuzzle();
-		});				
-		setKeyEvent(KeyEvent.VK_E);
+		});
+		setKeyEvent(getKeyEvent());
 	}
 
 	////////// NAME ////////////
@@ -48,5 +47,9 @@ public abstract class OpenPuzzleAction extends Action {
 		};
 		return actionOnWinning;
 	}
+
+	////////// KEYBOARD ////////////
+
+	public abstract int getKeyEvent();
 
 }

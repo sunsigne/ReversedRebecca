@@ -25,8 +25,6 @@
 
 	ExplodeRubbleAction -> ouvre pour l'instant le puzzle de la clef
 
-	OpenPuzzleAction -> danger : tous les puzzle sur la même touche ! faire en sorte que les actions ne dépendant d'une touche que parce u'elle sont dans un odre précis dans TripleAction !
-
 	faire un cursor spécial pour la souris
 
 	LockPuzzleObject -> texture pas fini
