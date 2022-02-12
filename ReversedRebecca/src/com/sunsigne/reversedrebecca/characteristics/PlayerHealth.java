@@ -2,15 +2,15 @@ package com.sunsigne.reversedrebecca.characteristics;
 
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
-public class PlayerHealth {
+public class PlayerHealth extends Characteristic {
 
 	private String file = "userdata/characteristics.csv";
 	
 	////////// SIGNELTON ////////////
 
 	private PlayerHealth() {
-		maxhp = Integer.parseInt(new FileTask().read("MaxHp", file));
-		hp = maxhp;
+		super();
+		reset();
 	}
 
 	private static PlayerHealth instance;
@@ -21,6 +21,14 @@ public class PlayerHealth {
 		return instance;
 	}
 
+	////////// CHARACTERISTICS ////////////
+
+	@Override
+	public void reset() {
+		maxhp = Integer.parseInt(new FileTask().read("MaxHp", file));
+		hp = maxhp;
+	}
+	
 	////////// INVULNERABILITY ////////////
 
 	private boolean invulnerable;

@@ -19,7 +19,7 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
-	tj ko quand on reset
+	bug quand reset sur puzzle
 
 	////////// FACILE ////////////
 
@@ -74,4 +74,6 @@
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
+	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
+	
 	 

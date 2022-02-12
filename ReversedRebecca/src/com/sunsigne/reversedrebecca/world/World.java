@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
+import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GuiHealth;
 import com.sunsigne.reversedrebecca.object.gui.GuiTools;
@@ -120,13 +120,13 @@ public class World implements Updatable {
 
 	public void destroy() {
 		for (LAYER tempLayer : LAYER.values()) {
-			if (!tempLayer.getHandler().isCameraDependant() && !tempLayer.getName().contains("gui") && !tempLayer.getName().contains("puzzle"))
-				continue;
+			if (tempLayer == LAYER.DEBUG)
+				break;
 
 			tempLayer.getHandler().clear();
 		}
 		instance = null;
-		ToolPlayerList.getList().clear();
+		new CharacteristicList().reset();
 		Game.getInstance().forceLoop();
 	}
 
