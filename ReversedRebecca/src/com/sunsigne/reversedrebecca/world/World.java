@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.gui.GuiTools;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
@@ -119,15 +120,30 @@ public class World implements Updatable {
 	////////// USEFULL ////////////
 
 	public void destroy() {
+		closePuzzle();
+		resetLayers();
+		instance = null;
+		new CharacteristicList().reset();
+		Game.getInstance().forceLoop();
+	}
+
+	private void closePuzzle() {
+		for (Updatable tempObject : LAYER.PUZZLE.getHandler().getList()) {
+			if (tempObject instanceof Puzzle == false)
+				continue;
+
+			Puzzle puzzleObject = (Puzzle) tempObject;
+			puzzleObject.closePuzzle(false);
+		}
+	}
+
+	private void resetLayers() {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer == LAYER.DEBUG)
 				break;
 
 			tempLayer.getHandler().clear();
 		}
-		instance = null;
-		new CharacteristicList().reset();
-		Game.getInstance().forceLoop();
 	}
 
 	////////// TICK ////////////

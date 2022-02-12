@@ -19,8 +19,6 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
-	bug quand reset sur puzzle
-
 	////////// FACILE ////////////
 
 	ExplodeRubbleAction -> ouvre pour l'instant le puzzle de la clef
