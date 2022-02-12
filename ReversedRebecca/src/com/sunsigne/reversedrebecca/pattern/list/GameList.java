@@ -24,7 +24,8 @@ public class GameList<T> {
 		case LINKED:
 			return linked_list;
 		}
-		return null;
+		// this should theorically not occurs, but it does ... Better not return null
+		return array_list;
 	}	
 
 	public boolean cointainsObject(T object) {

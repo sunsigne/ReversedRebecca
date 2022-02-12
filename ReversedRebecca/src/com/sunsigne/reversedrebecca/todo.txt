@@ -13,8 +13,6 @@
 
 	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 
-	demander à ophélie pour le fond gris des puzzle
-
 	la fonction destroy dans World pourrait être un poil mieux
 
 	UserCanKeyRestart -> à supprimer quand les tests sont fini
@@ -22,8 +20,6 @@
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
 	tj ko quand on reset
-
-	quand on clique sur play, génère parfois un null point exception sans référence (probablement une liste null) -> à corriger
 
 	////////// FACILE ////////////
 
@@ -48,6 +44,8 @@
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	
 	LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
+	
+	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")
 	
 	////////// SONS ////////////
 		
@@ -77,4 +75,5 @@
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
+	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	 
