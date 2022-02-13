@@ -10,9 +10,9 @@ import com.sunsigne.reversedrebecca.pattern.MousePos;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public class LockPuzzleObject extends PuzzleObject implements CollisionReactor {
+public class LockObject extends PuzzleObject implements CollisionReactor {
 
-	public LockPuzzleObject(Puzzle puzzle, int x, int y) {
+	public LockObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
 		loadImage();
 	}

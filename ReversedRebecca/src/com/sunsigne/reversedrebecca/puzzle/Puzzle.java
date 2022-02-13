@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.puzzle;
 
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -12,10 +11,9 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public abstract class Puzzle implements Updatable, Difficulty {
+public abstract class Puzzle implements Updatable {
 
-	public Puzzle(LVL difficulty, GenericListener actionOnWinning) {
-		this.difficulty = difficulty;
+	public Puzzle(GenericListener actionOnWinning) {
 		this.actionOnWinning = actionOnWinning;
 	}
 
@@ -37,58 +35,6 @@ public abstract class Puzzle implements Updatable, Difficulty {
 
 	public abstract void createPuzzle();
 
-	////////// DIFFICULTY ////////////
-
-	private LVL difficulty;
-
-	@Override
-	public LVL getDifficulty() {
-		return difficulty;
-	}
-
-	@Override
-	public void setDifficulty(LVL difficulty) {
-		this.difficulty = difficulty;
-	}
-
-	private void createDifficultyModification() {
-		switch (difficulty) {
-		case NULL:
-		case CYAN:
-			createCyanPuzzle();
-			break;
-		case GREEN:
-			createGreenPuzzle();
-			break;
-		case YELLOW:
-			createYellowPuzzle();
-			break;
-		case ORANGE:
-			createOrangePuzzle();
-			break;
-		case RED:
-			createRedPuzzle();
-			break;
-		}
-	}
-
-	public abstract void createCyanPuzzle();
-
-	public abstract void createGreenPuzzle();
-
-	public abstract void createYellowPuzzle();
-
-	public abstract void createOrangePuzzle();
-
-	public abstract void createRedPuzzle();
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
 	////////// OPEN ////////////
 
 	public void openPuzzle() {
@@ -101,7 +47,6 @@ public abstract class Puzzle implements Updatable, Difficulty {
 
 		createWallBorder();
 		createPuzzle();
-		createDifficultyModification();
 	}
 
 	protected BufferedImage getWallTexture() {

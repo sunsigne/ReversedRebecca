@@ -15,11 +15,11 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class KeyPuzzleObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
+public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
 
 	public int speed = Size.XS / 4;
 
-	public KeyPuzzleObject(Puzzle puzzle, int x, int y) {
+	public KeyObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
 		loadImage();
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);

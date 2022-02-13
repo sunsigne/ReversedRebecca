@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.key;
 import com.sunsigne.reversedrebecca.pattern.MousePos;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
-public class UpsideDownLockObject extends LockPuzzleObject {
+public class UpsideDownLockObject extends LockObject {
 
 	public UpsideDownLockObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
