@@ -162,10 +162,8 @@ public class World implements Updatable {
 
 	////////// KEYBOARD ////////////
 
-	@SuppressWarnings("rawtypes")
 	private void addKeyboardListener() {
-		Class[] keyboards = new ForceInit().loadAllClassesInPackage(WorldKeyboard.class.getPackageName());
-		new ForceInit().createInstanceOf(keyboards);
+		new ForceInit().loadAllClassesInPackage(WorldKeyboard.class.getPackageName());
 	}
 
 }

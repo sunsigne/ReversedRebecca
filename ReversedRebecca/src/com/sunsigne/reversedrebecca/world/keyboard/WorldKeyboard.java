@@ -1,50 +1,24 @@
 package com.sunsigne.reversedrebecca.world.keyboard;
 
-import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class WorldKeyboard implements Updatable, KeyboardEvent {
+public abstract class WorldKeyboard implements KeyboardEvent {
 
-	public WorldKeyboard() {
-		layer = LAYER.DEBUG;
-		layer.addObject(this);
-	}
-
-	////////// TICK ////////////
+	public abstract WorldKeyboard getWorldKeyboard();
 
 	private World world;
-	private LAYER layer;
 
-	@Override
-	public void tick() {
+	private boolean worldIsNull() {
 		if (world == null) {
 			world = World.get();
-			if (world == null) {
-				getHandler().removeObject(this);
-				return;
-			}
+			if (world == null)
+				return true;
 		}
-
-		if (layer != world.getLayer(false))
-			registerNewLayer();
-	}
-
-	private void registerNewLayer() {
-		getHandler().softRemoveObject(this);
-		layer = world.getLayer(false);
-		layer.addObject(this);
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
+		return false;
 	}
 
 	////////// KEYBOARD ////////////
@@ -55,5 +29,34 @@ public abstract class WorldKeyboard implements Updatable, KeyboardEvent {
 	public KeyboardController getKeyBoardController() {
 		return keyboardController;
 	}
+
+	public abstract void keyPressed(int key);
+
+	public abstract void keyReleased(int key);
+
+	private boolean pressed;
 	
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if (worldIsNull())
+			return;
+
+		if (pressed)
+			return;
+		
+		int key = e.getKeyCode();
+		keyPressed(key);
+		pressed = true;
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		if (worldIsNull())
+			return;
+
+		int key = e.getKeyCode();
+		keyReleased(key);
+		pressed = false;
+	}
+
 }

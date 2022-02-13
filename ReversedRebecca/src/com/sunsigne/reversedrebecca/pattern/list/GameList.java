@@ -16,7 +16,7 @@ public class GameList<T> {
 	private LinkedList<T> linked_list = new LinkedList<>();
 
 	private LISTTYPE listType;
-	
+
 	public List<T> getList() {
 		switch (listType) {
 		case ARRAY:
@@ -24,9 +24,8 @@ public class GameList<T> {
 		case LINKED:
 			return linked_list;
 		}
-		System.err.println("Something really bad happened ! Problem source in GameList class");
 		return null;
-	}	
+	}
 
 	public boolean cointainsObject(T object) {
 		if (object == null)
@@ -48,7 +47,7 @@ public class GameList<T> {
 
 		getList().remove(object);
 	}
-	
+
 	public void clear() {
 		getList().clear();
 	}

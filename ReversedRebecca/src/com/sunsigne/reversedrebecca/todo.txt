@@ -21,6 +21,8 @@
 
 	il y a tj au moment ou on clique sur play, un rare bug de 4 ligne de null pointException (mais sans + de précision)
 
+	on peut cliquer sur "jouer" pendant le chargement pour avoir un bug bizarre ...
+
 	////////// FACILE ////////////
 
 	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?

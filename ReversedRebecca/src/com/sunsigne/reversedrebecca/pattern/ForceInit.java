@@ -33,16 +33,7 @@ public class ForceInit {
 	}
 
 	////////// PACKAGE ////////////
-	
-	// WARNING !!! Each class constructor must ask for NO argument to work properly
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void createInstanceOf(Class[] classes) {
-		int size = classes.length;
-		for(int index = 0; index < size; index++ ) {
-			createInstanceOf(classes[index]);
-		}
-	}
-	
+
 	@SuppressWarnings("rawtypes")
 	public Class[] loadAllClassesInPackage(String packageName) {
 		try {

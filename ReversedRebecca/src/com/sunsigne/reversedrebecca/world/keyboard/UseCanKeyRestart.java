@@ -2,20 +2,27 @@ package com.sunsigne.reversedrebecca.world.keyboard;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class UseCanKeyRestart extends WorldKeyboard {
 
+	private static WorldKeyboard worldKeyboard = new UseCanKeyRestart();
+
 	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
+	public WorldKeyboard getWorldKeyboard() {
+		return worldKeyboard;
+	}
+
+	////////// KEYBOARD ////////////
+
+	@Override
+	public void keyPressed(int key) {
 		if (key == KeyEvent.VK_R)
 			new World("lvl001");
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(int key) {
 
 	}
 

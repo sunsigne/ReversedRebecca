@@ -12,10 +12,6 @@ public class PlayerFinder {
 		for (LAYER tempLayer : LAYER.values()) {
 			var list = tempLayer.getHandler().getList();
 
-			// can sometimes occur at the start of the game
-			if (list.isEmpty())
-				return null;
-
 			for (Updatable tempUpdatable : list) {
 				if (tempUpdatable instanceof Player)
 					return (Player) tempUpdatable;

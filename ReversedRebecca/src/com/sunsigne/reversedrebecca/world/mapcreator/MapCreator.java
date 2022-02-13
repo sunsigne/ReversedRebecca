@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -33,7 +32,7 @@ public class MapCreator {
 				tempLayer.addObject(new GroundRendering(world, tempLayer));
 				continue;
 			}
-			
+
 			// load content
 			if (tempLayer.getName().contains("content")) {
 				loadLayer(tempLayer, world.getImageMap(tempLayer));
@@ -75,7 +74,6 @@ public class MapCreator {
 				}
 			}
 		}
-		Game.getInstance().forceLoop();
 	}
 
 }

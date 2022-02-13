@@ -6,15 +6,23 @@ import com.sunsigne.reversedrebecca.system.Conductor;
 
 public class UseCanKeyQuit extends WorldKeyboard {
 
+	private static WorldKeyboard worldKeyboard = new UseCanKeyQuit();
+
 	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
+	public WorldKeyboard getWorldKeyboard() {
+		return worldKeyboard;
+	}
+
+	////////// KEYBOARD ////////////
+
+	@Override
+	public void keyPressed(int key) {
 		if (key == KeyEvent.VK_ESCAPE)
 			new Conductor().stopApp();
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(int key) {
 
 	}
 
