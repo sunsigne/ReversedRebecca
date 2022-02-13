@@ -19,7 +19,11 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
+	il y a tj au moment ou on clique sur play, un rare bug de 4 ligne de null pointException (mais sans + de précision)
+
 	////////// FACILE ////////////
+
+	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
 
 	ExplodeRubbleAction -> ouvre pour l'instant le puzzle de la clef
 
@@ -50,11 +54,11 @@
 	LootObject -> should play a sound when pickup
 	Buttons -> should play a sound too
 	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
-		
-	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe)
-		
+
 	////////// DIFFICILE ////////////
 			
+	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe) + constructeur minimalistes (données déjà stockées si possible)
+				
 	Moyen de déplacer le joueur de façon + propre ?		
 			
 	MultiToolMode -> efface la progression des tools quand désactivé
