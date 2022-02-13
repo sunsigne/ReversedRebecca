@@ -24,8 +24,8 @@ public class GameList<T> {
 		case LINKED:
 			return linked_list;
 		}
-		// this should theorically not occurs, but it does ... Better not return null
-		return array_list;
+		System.err.println("Something really bad happened ! Problem source in GameList class");
+		return null;
 	}	
 
 	public boolean cointainsObject(T object) {
