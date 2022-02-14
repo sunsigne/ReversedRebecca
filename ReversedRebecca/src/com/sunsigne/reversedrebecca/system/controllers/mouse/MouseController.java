@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.controllers.mouse;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class MouseController extends MouseAdapter {
@@ -22,11 +23,14 @@ public class MouseController extends MouseAdapter {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		mouseUserEvent.mousePressed(e);
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			mouseUserEvent.mousePressed(e);
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		mouseUserEvent.mouseReleased(e);
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			mouseUserEvent.mouseReleased(e);
 	}
+	
 }

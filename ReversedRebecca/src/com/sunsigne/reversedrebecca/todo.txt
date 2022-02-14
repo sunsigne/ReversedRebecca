@@ -6,22 +6,15 @@
 	- le dual checker
 	- traduction de text
 	- écran de chargement
-	- téléportation accidentelle
 	
 	
 	////////// IMPORTANT ////////////
 
 	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
 
-	la fonction destroy dans World pourrait être un poil mieux
-
 	UserCanKeyRestart -> à supprimer quand les tests sont fini
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
-
-	il y a tj au moment ou on clique sur play, un rare bug de 4 ligne de null pointException (mais sans + de précision)
-
-	on peut cliquer sur "jouer" pendant le chargement pour avoir un bug bizarre ...
 
 	////////// FACILE ////////////
 
