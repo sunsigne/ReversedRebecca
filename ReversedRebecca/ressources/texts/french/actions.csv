@@ -1,3 +1,7 @@
+///// NPC /////
+
+NPCTalk=parler
+
 ///// DOOR /////
 
 DoorLocked=fermé

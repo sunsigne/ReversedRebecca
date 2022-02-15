@@ -18,6 +18,13 @@
 
 	////////// FACILE ////////////
 
+	MappableNPC -> ils sont tous les même pour l'instant
+	
+	NPC -> class pas encore fini
+	
+	
+	
+
 	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
 
 	faire un cursor spécial pour la souris
