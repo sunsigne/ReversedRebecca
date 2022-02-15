@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.object.interactive.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzleFactory;
 
 public class ExplodeRubbleAction extends OpenPuzzleAction {
 
@@ -36,7 +36,7 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(LVL difficulty, GenericListener actionOnWinning) {
-		return new KeyPuzzleFactory().createPuzzle(difficulty, actionOnWinning);
+		return new BombPuzzleFactory().createPuzzle(difficulty, actionOnWinning);
 	}
 
 	@Override

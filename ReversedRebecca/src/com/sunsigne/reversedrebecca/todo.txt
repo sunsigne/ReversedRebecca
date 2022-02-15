@@ -20,13 +20,9 @@
 
 	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
 
-	ExplodeRubbleAction -> ouvre pour l'instant le puzzle de la clef
-
 	faire un cursor spécial pour la souris
 
 	LockPuzzleObject -> texture pas fini
-
-	guiTool -> voir s'il existe un moyen d'accelerer le render
 
 	DieWhenNoHp -> kill() prévoir un restart
 
