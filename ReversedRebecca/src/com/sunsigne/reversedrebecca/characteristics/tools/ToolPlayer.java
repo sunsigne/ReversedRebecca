@@ -27,6 +27,10 @@ public abstract class ToolPlayer implements Difficulty {
 	public LVL getMaxDifficulty() {
 		return ToolPlayerList.getList().getObject(this).max_difficulty;
 	}
+	
+	public void setMaxDifficulty(LVL max_difficulty) {
+			ToolPlayerList.getList().getObject(this).max_difficulty = max_difficulty;
+	}
 
 	private void loadMaxDifficulty() {
 		if (getMaxDifficulty() == LVL.NULL) {

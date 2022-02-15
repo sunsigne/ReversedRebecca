@@ -22,8 +22,6 @@
 
 	faire un cursor spécial pour la souris
 
-	LockPuzzleObject -> texture pas fini
-
 	DieWhenNoHp -> kill() prévoir un restart
 
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
@@ -52,9 +50,6 @@
 				
 	Moyen de déplacer le joueur de façon + propre ?		
 			
-	MultiToolMode -> efface la progression des tools quand désactivé
-	MultiToolMode -> ne met "que" au niveau max "autorisé" au lieu de max tout court
-		
 	animation de tourbillon de vent de temps en temps ?
 	
 	///////// IDEE ////////////
