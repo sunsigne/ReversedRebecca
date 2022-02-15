@@ -31,13 +31,6 @@ public class MultiToolMode extends DebugMode {
 
 	@Override
 	public void tick(Updatable object) {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void beforeObjectRender(Graphics g, Updatable object) {
 		if (!getState())
 			return;
 
@@ -51,6 +44,13 @@ public class MultiToolMode extends DebugMode {
 			return;
 
 		ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.RED));
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void beforeObjectRender(Graphics g, Updatable object) {
+
 	}
 
 	@Override
