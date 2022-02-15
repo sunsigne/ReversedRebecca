@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.door;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.door.DoorObject;
+import com.sunsigne.reversedrebecca.object.puzzler.door.DoorObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 

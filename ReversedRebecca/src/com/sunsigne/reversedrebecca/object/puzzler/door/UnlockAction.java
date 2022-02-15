@@ -1,21 +1,20 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler.door;
+package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.OpenPuzzleAction;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzleFactory;
 
 public class UnlockAction extends OpenPuzzleAction {
 
-	public UnlockAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject);
+	public UnlockAction(PuzzlerObject puzzlerObject) {
+		super(puzzlerObject);
 	}
 
 	////////// NAME ////////////

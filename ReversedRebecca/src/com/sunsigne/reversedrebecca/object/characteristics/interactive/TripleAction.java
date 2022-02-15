@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.interactive;
+package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 public class TripleAction {
 

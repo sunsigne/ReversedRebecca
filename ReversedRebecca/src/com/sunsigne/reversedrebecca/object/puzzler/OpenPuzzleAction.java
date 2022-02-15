@@ -1,23 +1,21 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler;
+package com.sunsigne.reversedrebecca.object.puzzler;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.interactive.Action;
-import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public abstract class OpenPuzzleAction extends Action {
 
-	public OpenPuzzleAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject, null, null, null, 0);
+	public OpenPuzzleAction(PuzzlerObject puzzlerObject) {
+		super(puzzlerObject, null, null, null, 0);
 
-		setName(new Translatable().getTranslatedText(getName(), file));
+		setName(new Translatable().getTranslatedText(getName(), puzzlerObject.getFile()));
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
-			Puzzle puzzle = getPuzzle(interactiveControlObject.getDifficulty(),
-					actionOnWinning(interactiveControlObject));
+			Puzzle puzzle = getPuzzle(puzzlerObject.getDifficulty(), actionOnWinning(puzzlerObject));
 			puzzle.openPuzzle();
 		});
 		setKeyEvent(getKeyEvent());
@@ -37,13 +35,13 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract PuzzlerObject getNullObject(int x, int y);
 
-	protected GenericListener actionOnWinning(InteractiveControlObject interactiveControlObject) {
+	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
 		GenericListener actionOnWinning = () -> {
-			PuzzlerObject nullObject = getNullObject(interactiveControlObject.getX(), interactiveControlObject.getY());
+			PuzzlerObject nullObject = getNullObject(puzzlerObject.getX(), puzzlerObject.getY());
 			if (nullObject != null)
-				interactiveControlObject.getHandler().addObject(nullObject);
-			interactiveControlObject.getHandler().removeObject(interactiveControlObject);
+				puzzlerObject.getHandler().addObject(nullObject);
+			puzzlerObject.getHandler().removeObject(puzzlerObject);
 		};
 		return actionOnWinning;
 	}

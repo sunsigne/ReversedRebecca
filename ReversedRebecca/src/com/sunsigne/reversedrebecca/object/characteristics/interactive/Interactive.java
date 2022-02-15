@@ -1,59 +1,34 @@
-package com.sunsigne.reversedrebecca.object.interactive;
+package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public abstract class InteractiveControlObject extends GameObject implements Difficulty, KeyboardEvent {
+public interface Interactive extends Velocity, KeyboardEvent {
 
-	protected String file = "actions.csv";
-	
-	public InteractiveControlObject(int x, int y) {
-		this(LVL.NULL, x, y);
+	public default void createTextAction() {
+		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
 	}
 
-	public InteractiveControlObject(LVL difficulty, int x, int y) {
-		super(x, y);
-		this.difficulty = difficulty;
+	////////// INTERACTIVE ////////////
+
+	public default String getFile() {
+		return "actions.csv";
 	}
 
-	////////// DIFFICULTY ////////////
+	public TripleAction getTripleAction();
 
-	private LVL difficulty;
+	public boolean isDisabled();
 
-	@Override
-	public LVL getDifficulty() {
-		return difficulty;
-	}
+	public void setDisabled(boolean isDisabled);
 
-	@Override
-	public void setDifficulty(LVL difficulty) {
-		this.difficulty = difficulty;
-	}
-
-	////////// INTERACTION ////////////
-
-	public abstract TripleAction getTripleAction();
-
-	private boolean isDisabled;
-
-	public boolean isDisabled() {
-		return isDisabled;
-	}
-
-	public void setDisabled(boolean isDisabled) {
-		this.isDisabled = isDisabled;
-	}
-
-	protected boolean canPlayerInterfact() {
+	public default boolean canPlayerInterfact() {
 
 		// object is disabled
 		if (isDisabled())
@@ -116,37 +91,10 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 		}
 	}
 
-	////////// TICK ////////////
-
-	private boolean flag;
-
-	@Override
-	public void tick() {
-		createTextAction();
-	}
-
-	protected void createTextAction() {
-		if (flag)
-			return;
-
-		if (getHandler() == null)
-			return;
-
-		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
-		flag = true;
-	}
-
 	////////// KEYBOARD ////////////
 
-	private KeyboardController keyboardController = new KeyboardController(this);
-
 	@Override
-	public KeyboardController getKeyBoardController() {
-		return keyboardController;
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
+	public default void keyPressed(KeyEvent e) {
 
 		if (!canPlayerInterfact())
 			return;
@@ -172,7 +120,7 @@ public abstract class InteractiveControlObject extends GameObject implements Dif
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public default void keyReleased(KeyEvent e) {
 
 	}
 

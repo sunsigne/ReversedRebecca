@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.interactive;
+package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import java.awt.Font;
 import java.awt.Graphics;
@@ -13,12 +13,12 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TextAction implements Updatable {
 
-	public TextAction(InteractiveControlObject object, TripleAction tripleAction) {
-		this.object = object;
+	public TextAction(Interactive interactive, TripleAction tripleAction) {
+		this.interactive = interactive;
 		this.tripleAction = tripleAction;
 	}
 
-	private InteractiveControlObject object;
+	private Interactive interactive;
 	private TripleAction tripleAction;
 
 	////////// TICK ////////////
@@ -60,7 +60,7 @@ public class TextAction implements Updatable {
 			return;
 
 		// player can't interact
-		if (!object.canPlayerInterfact())
+		if (!interactive.canPlayerInterfact())
 			return;
 
 		Player player = new PlayerFinder().getPlayer();
@@ -98,17 +98,19 @@ public class TextAction implements Updatable {
 
 		switch (facing) {
 		case LEFT:
-			return new int[] { object.getX() - (Size.M + Size.XS / 2), object.getY(), object.getWidth(),
-					object.getHeight() };
+			return new int[] { interactive.getX() - (Size.M + Size.XS / 2), interactive.getY(), interactive.getWidth(),
+					interactive.getHeight() };
 		case RIGHT:
-			return new int[] { object.getX() + Size.M + Size.XS / 2, object.getY(), object.getWidth(),
-					object.getHeight() };
+			return new int[] { interactive.getX() + Size.M + Size.XS / 2, interactive.getY(), interactive.getWidth(),
+					interactive.getHeight() };
 		case UP:
-			return new int[] { object.getX(), object.getY() - Size.XL / 2, object.getWidth(), object.getHeight() };
+			return new int[] { interactive.getX(), interactive.getY() - Size.XL / 2, interactive.getWidth(),
+					interactive.getHeight() };
 		case DOWN:
-			return new int[] { object.getX(), object.getY() + Size.XL / 2, object.getWidth(), object.getHeight() };
+			return new int[] { interactive.getX(), interactive.getY() + Size.XL / 2, interactive.getWidth(),
+					interactive.getHeight() };
 		default:
-			return object.getRect();
+			return interactive.getRect();
 		}
 	}
 

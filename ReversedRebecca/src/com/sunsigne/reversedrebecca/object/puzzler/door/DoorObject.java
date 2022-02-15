@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler.door;
+package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.interactive.Action;
-import com.sunsigne.reversedrebecca.object.interactive.TripleAction;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class DoorObject extends PuzzlerObject {
@@ -12,6 +12,7 @@ public class DoorObject extends PuzzlerObject {
 	public DoorObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 		loadTripleAction();
+		createTextAction();
 	}
 
 	////////// NAME ////////////
@@ -31,7 +32,7 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	private void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("DoorLocked", file);
+		String noActionText = new Translatable().getTranslatedText("DoorLocked", getFile());
 		Action unlockAction = new UnlockAction(this);
 		tripleAction = new TripleAction(noActionText, unlockAction, null, null);
 	}

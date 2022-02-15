@@ -1,21 +1,20 @@
-package com.sunsigne.reversedrebecca.object.interactive.puzzler.rubble;
+package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.BombToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.interactive.InteractiveControlObject;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.OpenPuzzleAction;
-import com.sunsigne.reversedrebecca.object.interactive.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzleFactory;
 
 public class ExplodeRubbleAction extends OpenPuzzleAction {
 
-	public ExplodeRubbleAction(InteractiveControlObject interactiveControlObject) {
-		super(interactiveControlObject);
+	public ExplodeRubbleAction(PuzzlerObject puzzlerObject) {
+		super(puzzlerObject);
 	}
 
 	////////// NAME ////////////

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.interactive;
+package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import java.awt.event.KeyEvent;
 
@@ -9,26 +9,24 @@ import com.sunsigne.reversedrebecca.pattern.GenericListener;
 
 public class Action {
 
-	protected String file = "actions.csv";
-	
-	public Action(InteractiveControlObject interactiveControlObject, String name, GenericListener listener,
+	public Action(Interactive interactive, String name, GenericListener listener,
 			int keyEvent) {
-		this(interactiveControlObject, name, null, listener, keyEvent);
+		this(interactive, name, null, listener, keyEvent);
 	}
 
-	public Action(InteractiveControlObject interactiveControlObject, String name, ToolPlayer toolPlayer,
+	public Action(Interactive interactive, String name, ToolPlayer toolPlayer,
 			GenericListener listener, int keyEvent) {
-		this.interactiveControlObject = interactiveControlObject;
+		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
 		this.keyEvent = keyEvent;
 		this.listener = listener;
 	}
 
-	private InteractiveControlObject interactiveControlObject;
+	private Interactive interactive;
 
-	public InteractiveControlObject getInteractiveControlObject() {
-		return interactiveControlObject;
+	public Interactive getInteractive() {
+		return interactive;
 	}
 
 	////////// NAME ////////////
@@ -60,12 +58,12 @@ public class Action {
 			return true;
 
 		// the object has no difficulty registered
-		if (getInteractiveControlObject() instanceof Difficulty == false) {
+		if (getInteractive() instanceof Difficulty == false) {
 			return true;
 		}
 
 		// comparaison between the object's level and the tool's level
-		Difficulty difficultyObject = (Difficulty) getInteractiveControlObject();
+		Difficulty difficultyObject = (Difficulty) getInteractive();
 		boolean canUseTool = new DifficultyComparator().canUseTool(difficultyObject.getDifficulty(),
 				toolPlayer.getDifficulty());
 
