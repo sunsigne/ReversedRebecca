@@ -67,7 +67,8 @@ public class TextAction implements Updatable {
 
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {
-			drawFacingText(g, player.getFacing(), tripleAction.getNoActionText());
+			if (tripleAction.getNoActionText() != null)
+				drawFacingText(g, player.getFacing(), tripleAction.getNoActionText());
 			return;
 		}
 
