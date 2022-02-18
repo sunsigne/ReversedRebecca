@@ -29,13 +29,13 @@
 	
 	////////// FACILE ////////////
 
+	velocityLaw create a way to check if the player is against a wall (and preventing him to move)
+
+	PathFinder -> tous les blockpath ne sont pas compté : npc, puzzlers ... 
+
 	MovingToPlayer -> nom de class périmé en sens où il ne s'agit plus d'un pathfinding, mais d'une mise à jour de "goal"
 	
 	PushingPlayer -> vérifier s'il n'y a pas moyen de mettre en pause des behavior d'une façon plus globale (dans Stunned par exemple)
-	
-	PreventingAccidentalTeleportation -> dégager ce truc pour mettre en place une vitesse max
-
-	un canard très déterminé peut m'éjecter du mur en forçant sur une dizaine de pv
 
 	faire en sorte que les npc et foe se passent au travers l'un de l'autre (pour éviter de se bloquer comme des idiots les uns contre les autres)
 
@@ -45,8 +45,6 @@
 	
 	movingToGoal des foe devrait être arrêter quand le Player est mort
 	
-	suprimer la method teleport dans Living, faire un preventteleportation simple (capter la vitesse max)
-
 	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
 
 	faire un cursor spécial pour la souris
