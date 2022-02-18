@@ -26,18 +26,18 @@ public class MovingToPlayer implements TickBehavior {
 
 	@Override
 	public void tick() {
+		if(foe.getGoal() != null)
+			return;
+		
 		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
 
-		if (canFollowPlayer(player))
-			FollowPlayer(player);
-
-		else
-			foe.setMotionless();
+		foe.setGoal(player);
 	}
 
+	@Deprecated
 	private boolean canFollowPlayer(Player player) {
 
 		// foe and player are not not on the same layer
@@ -54,6 +54,7 @@ public class MovingToPlayer implements TickBehavior {
 		return true;
 	}
 
+	@Deprecated
 	private void FollowPlayer(Player player) {
 		float diffX = foe.getX() - player.getX();
 		float diffY = foe.getY() - player.getY();

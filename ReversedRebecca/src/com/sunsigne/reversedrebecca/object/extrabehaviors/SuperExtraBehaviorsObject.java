@@ -2,10 +2,12 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing {
+public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing, PathSearcher {
 
 	public SuperExtraBehaviorsObject(int x, int y) {
 		this(x, y, Size.M, Size.M);
@@ -53,7 +55,33 @@ public abstract class SuperExtraBehaviorsObject extends GameObject implements Su
 		this.facing = facing;
 	}
 
-	////////// REDNER ////////////
+	////////// PATH FINDER ////////////
+
+	private Position goal;
+
+	@Override
+	public void setGoal(Position goal) {
+		this.goal = goal;
+	}
+
+	@Override
+	public Position getGoal() {
+		return goal;
+	}
+
+	private DIRECTION path;
+
+	@Override
+	public void setPath(DIRECTION path) {
+		this.path = path;
+	}
+
+	@Override
+	public DIRECTION getPath() {
+		return path;
+	}
+
+	////////// RENDER ////////////
 
 	private boolean invisible;
 

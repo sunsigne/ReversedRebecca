@@ -8,14 +8,13 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class Foe extends LivingObject {
 
-	public int speed = Size.XS / 5;
-
 	public Foe(int x, int y) {
 		this("Gamma", x, y);
 	}
 
 	public Foe(String name, int x, int y) {
-		super(name, x, y);
+		super(name, x, y, Size.XS / 5);
+
 		addFoeBehaviors();
 	}
 

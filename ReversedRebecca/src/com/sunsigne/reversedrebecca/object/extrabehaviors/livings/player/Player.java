@@ -11,14 +11,13 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class Player extends LivingObject {
 
-	public int speed = Size.XS / 3;
-
 	public Player(int x, int y) {
 		this("Rebecca", x, y);
 	}
 
 	public Player(String name, int x, int y) {
-		super(name, x, y);
+		super(name, x, y, Size.XS / 3);
+
 		addPlayerBehaviors();
 	}
 

@@ -6,6 +6,7 @@
 	- le dual checker
 	- traduction de text
 	- écran de chargement
+	- pathfinding !!!
 	
 	
 	////////// IMPORTANT ////////////
@@ -16,14 +17,35 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
+	////////// DIFFICILE ////////////
+			
+	améliorer le pathfinding des oes (s'inspirer des npc)
+			
+	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe) + constructeur minimalistes (données déjà stockées si possible)
+				
+	Moyen de déplacer le joueur de façon + propre ?		
+			
+	animation de tourbillon de vent de temps en temps ?
+	
 	////////// FACILE ////////////
+
+	MovingToPlayer -> nom de class périmé en sens où il ne s'agit plus d'un pathfinding, mais d'une mise à jour de "goal"
+	
+	PushingPlayer -> vérifier s'il n'y a pas moyen de mettre en pause des behavior d'une façon plus globale (dans Stunned par exemple)
+	
+	PreventingAccidentalTeleportation -> dégager ce truc pour mettre en place une vitesse max
+
+	un canard très déterminé peut m'éjecter du mur en forçant sur une dizaine de pv
+
+	faire en sorte que les npc et foe se passent au travers l'un de l'autre (pour éviter de se bloquer comme des idiots les uns contre les autres)
 
 	MappableNPC -> ils sont tous les même pour l'instant
 	
 	NPC -> class pas encore fini
 	
+	movingToGoal des foe devrait être arrêter quand le Player est mort
 	
-	
+	suprimer la method teleport dans Living, faire un preventteleportation simple (capter la vitesse max)
 
 	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
 
@@ -51,13 +73,6 @@
 	Buttons -> should play a sound too
 	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
 
-	////////// DIFFICILE ////////////
-			
-	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe) + constructeur minimalistes (données déjà stockées si possible)
-				
-	Moyen de déplacer le joueur de façon + propre ?		
-			
-	animation de tourbillon de vent de temps en temps ?
 	
 	///////// IDEE ////////////
 
@@ -70,5 +85,6 @@
 	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
+	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 	
 	 
