@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -62,12 +63,8 @@ public class PathFinder implements Position {
 		calculDistance();
 	}
 
-	// round numbers to the closest Size.M
 	private int getTilePos(int pos) {
-		int modulus = pos % Size.M;
-
-		int tilePos = modulus < Size.M / 2 ? pos - modulus : pos - modulus + Size.M;
-		return tilePos;
+		return new TilePos().getTilePos(pos, Size.M);
 	}
 
 	////////// SIZE ////////////
