@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Move
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.pattern.TilePos;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class PushingPlayer implements CollisionBehavior {
 
@@ -91,25 +93,8 @@ public class PushingPlayer implements CollisionBehavior {
 	}
 
 	private void shiftFoe() {
-
-		int step = 6;
-
-		switch (foe.getFacing()) {
-		case NULL:
-			break;
-		case LEFT:
-			setX(getX() + step);
-			break;
-		case RIGHT:
-			setX(getX() - step);
-			break;
-		case UP:
-			setY(getY() + step);
-			break;
-		case DOWN:
-			setY(getY() - step);
-			break;
-		}
+		setX(new TilePos().getTilePos(getX(), Size.M));
+		setY(new TilePos().getTilePos(getY(), Size.M));
 	}
 
 	private void stunFoe() {
