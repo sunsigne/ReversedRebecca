@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 public class PlayerHealth extends Characteristic {
 
 	private String file = "userdata/characteristics.csv";
-	
+
 	////////// SIGNELTON ////////////
 
 	private PlayerHealth() {
@@ -28,7 +28,7 @@ public class PlayerHealth extends Characteristic {
 		maxhp = Integer.parseInt(new FileTask().read("MaxHp", file));
 		hp = maxhp;
 	}
-	
+
 	////////// INVULNERABILITY ////////////
 
 	private boolean invulnerable;
@@ -92,6 +92,10 @@ public class PlayerHealth extends Characteristic {
 	public void removeHp(int amount) {
 		if (!isInvulnerable())
 			hp = hp - amount;
+	}
+
+	public boolean isDead() {
+		return hp <= 0;
 	}
 
 }
