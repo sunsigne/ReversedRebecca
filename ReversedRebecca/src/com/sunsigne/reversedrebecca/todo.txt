@@ -16,10 +16,6 @@
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
 	////////// DIFFICILE ////////////
-			
-	dans PathFinding -> transorfemer wall en BlockingPath
-			
-	améliorer le pathfinding des oes (s'inspirer des npc)
 
 	////////// FACILE ////////////
 
