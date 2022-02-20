@@ -4,6 +4,8 @@ import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.TilePos;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public interface CollisionReactor extends Position {
 
@@ -27,29 +29,32 @@ public interface CollisionReactor extends Position {
 
 	default void collidingReaction(CollisionDetector detectorObject, boolean blockPass, GenericListener listener) {
 
+		TilePos tilePos = new TilePos();
+		int size = Size.M;
+		
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setX((getX()/* + getMiniX() */ + getBounds().width));
+				detectorObject.setX(tilePos.getTilePos(getX()/* + getMiniX() */ + getBounds().width, size));
 			if (listener != null)
 				listener.doAction();
 		}
 
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setX((getX() /* + getMiniX() */ - detectorObject.getWidth()));
+				detectorObject.setX(tilePos.getTilePos(getX() /* + getMiniX() */ - detectorObject.getWidth(), size));
 			if (listener != null)
 				listener.doAction();
 		}
 
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setY((getY()/* + getMiniY() */ + getBounds().height));
+				detectorObject.setY(tilePos.getTilePos(getY()/* + getMiniY() */ + getBounds().height, size));
 			if (listener != null)
 				listener.doAction();
 		}
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setY((getY() /* + getMiniY() */ - detectorObject.getHeight()));
+				detectorObject.setY(tilePos.getTilePos(getY() /* + getMiniY() */ - detectorObject.getHeight(), size));
 			if (listener != null)
 				listener.doAction();
 
