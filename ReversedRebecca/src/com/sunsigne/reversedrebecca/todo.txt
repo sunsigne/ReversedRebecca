@@ -11,21 +11,19 @@
 	
 	////////// IMPORTANT ////////////
 
-	PreventAccidentalTeleportation devrait également s'assurer que le jouer ne render pas de l'autre coté d'un mur
-
 	UserCanKeyRestart -> à supprimer quand les tests sont fini
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
 	////////// DIFFICILE ////////////
 			
+	dans PathFinding -> transorfemer wall en BlockingPath
+			
 	améliorer le pathfinding des oes (s'inspirer des npc)
 			
 	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe) + constructeur minimalistes (données déjà stockées si possible)
-				
-	Moyen de déplacer le joueur de façon + propre ?		
-			
-	animation de tourbillon de vent de temps en temps ?
+
+	
 	
 	////////// FACILE ////////////
 
@@ -43,9 +41,7 @@
 	
 	NPC -> class pas encore fini
 	
-	movingToGoal des foe devrait être arrêter quand le Player est mort
-	
-	Handler -> la method getObjectAtPos est-elle vraiment néessaire ?
+	MovingToPlayer des foes devrait s'adapter à la distance
 
 	faire un cursor spécial pour la souris
 
@@ -74,6 +70,7 @@
 	
 	///////// IDEE ////////////
 
+	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
 	nourriture pour regen
 	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)

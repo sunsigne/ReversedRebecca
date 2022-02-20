@@ -26,29 +26,34 @@ public class MovingToPlayer implements TickBehavior {
 
 	@Override
 	public void tick() {
-		if(foe.getGoal() != null)
+		if (!canFollowPlayer()) {
+			foe.setGoal(null);
 			return;
-		
+		}
+
 		Player player = new PlayerFinder().getPlayer();
-
-		if (player == null)
-			return;
-
 		foe.setGoal(player);
+
+	}
+
+	private boolean canFollowPlayer() {
+
+		// player is dead
+		if (PlayerHealth.getInstance().isDead())
+			return false;
+
+		// foe and player are not not on the same layer
+		if (foe.getHandler() != new PlayerFinder().getPlayer().getHandler())
+			return false;
+
+		return true;
 	}
 
 	@Deprecated
 	private boolean canFollowPlayer(Player player) {
 
-		// foe and player are not not on the same layer
-		if (foe.getHandler() != player.getHandler())
-			return false;
-
 		// player is too far
 		if (new PlayerFinder().isPlayerFutherThan(foe, 19 * Size.XS))
-			return false;
-
-		if (PlayerHealth.getInstance().getHp() <= 0)
 			return false;
 
 		return true;
