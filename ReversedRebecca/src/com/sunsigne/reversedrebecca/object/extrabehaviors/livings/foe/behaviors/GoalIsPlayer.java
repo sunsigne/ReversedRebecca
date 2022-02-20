@@ -7,9 +7,9 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class MovingToPlayer implements TickBehavior {
+public class GoalIsPlayer implements TickBehavior {
 
-	public MovingToPlayer(Foe foe) {
+	public GoalIsPlayer(Foe foe) {
 		this.foe = foe;
 	}
 

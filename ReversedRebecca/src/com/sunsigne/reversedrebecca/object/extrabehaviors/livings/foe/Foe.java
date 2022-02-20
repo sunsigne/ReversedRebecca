@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.MovingToPlayer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.GoalIsPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.foe.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -20,13 +20,13 @@ public class Foe extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
-	public Behavior movingToPlayer;
+	public Behavior goalIsPlayer;
 	public Behavior pushingPlayer;
 
 	private void addFoeBehaviors() {
 
-		movingToPlayer = new MovingToPlayer(this);
-		addBehavior(movingToPlayer);
+		goalIsPlayer = new GoalIsPlayer(this);
+		addBehavior(goalIsPlayer);
 
 		pushingPlayer = new PushingPlayer(this);
 		addBehavior(pushingPlayer);
