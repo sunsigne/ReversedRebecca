@@ -74,6 +74,7 @@ public class PushingPlayer implements CollisionBehavior {
 			if (detectorObject instanceof Player) {
 				pushPlayer(detectorObject);
 				hurtPlayer();
+				shiftFoe();
 				stunFoe();
 			}
 		blockPass(detectorObject);
@@ -89,7 +90,30 @@ public class PushingPlayer implements CollisionBehavior {
 		PlayerHealth.getInstance().removeHp();
 	}
 
+	private void shiftFoe() {
+
+		int step = 6;
+
+		switch (foe.getFacing()) {
+		case NULL:
+			break;
+		case LEFT:
+			setX(getX() + step);
+			break;
+		case RIGHT:
+			setX(getX() - step);
+			break;
+		case UP:
+			setY(getY() + step);
+			break;
+		case DOWN:
+			setY(getY() - step);
+			break;
+		}
+	}
+
 	private void stunFoe() {
+
 		Behavior stunned = new Stunned(foe, foe.movingToPlayer, foe.movingToGoal);
 		foe.addBehavior(stunned);
 	}
