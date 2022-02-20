@@ -79,7 +79,7 @@ public class PushingPlayer implements CollisionBehavior {
 				shiftFoe();
 				stunFoe();
 			}
-		blockPass(detectorObject);
+		blockPath(detectorObject);
 	}
 
 	private void pushPlayer(CollisionDetector detectorObject) {

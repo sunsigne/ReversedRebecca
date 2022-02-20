@@ -19,7 +19,7 @@ public interface CollisionReactor extends Position {
 
 	void collidingReaction(CollisionDetector detectorObject);
 
-	default void blockPass(CollisionDetector detectorObject) {
+	default void blockPath(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, true, null);
 	}
 

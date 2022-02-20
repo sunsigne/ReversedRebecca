@@ -77,7 +77,7 @@ public abstract class PuzzlerObject extends GameObject implements Difficulty, In
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPass(detectorObject);
+		blockPath(detectorObject);
 	}
 
 	////////// KEYBOARD ////////////

@@ -55,7 +55,7 @@ public class BlockingPath implements CollisionBehavior {
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPass(detectorObject);
+		blockPath(detectorObject);
 	}
 
 }

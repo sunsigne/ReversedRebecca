@@ -29,7 +29,7 @@ public class Wall extends GameObject implements CollisionReactor {
 	
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPass(detectorObject);
+		blockPath(detectorObject);
 	}
 
 }
