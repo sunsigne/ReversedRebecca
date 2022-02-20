@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
@@ -39,8 +40,10 @@ public class PathFindingLaw implements PhysicLaw {
 			return;
 
 		// searcher has no goal
-		if (searcher.getGoal() == searcher | searcher.getGoal() == null)
+		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
+			searcher.setPath(DIRECTION.NULL);
 			return;
+		}
 
 		// search path
 		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true);
