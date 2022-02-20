@@ -52,7 +52,14 @@ public class BlockingPath implements CollisionBehavior {
 	public int getHeight() {
 		return getExtraBehaviorsObject().getHeight();
 	}
-
+	
+	////////// COLLISION ////////////
+	
+	@Override
+	public boolean isBlockingPath() {
+		return getExtraBehaviorsObject().isBlockingPath();
+	}
+	
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		blockPath(detectorObject);

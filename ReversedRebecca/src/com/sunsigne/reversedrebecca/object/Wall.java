@@ -26,7 +26,12 @@ public class Wall extends GameObject implements CollisionReactor {
 	}
 
 	////////// COLLISION ////////////
-	
+
+	@Override
+	public boolean isBlockingPath() {
+		return true;
+	}
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		blockPath(detectorObject);

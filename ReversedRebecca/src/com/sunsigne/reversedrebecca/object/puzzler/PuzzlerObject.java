@@ -76,6 +76,11 @@ public abstract class PuzzlerObject extends GameObject implements Difficulty, In
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingPath() {
+		return true;
+	}
+
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		blockPath(detectorObject);
 	}

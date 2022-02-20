@@ -37,6 +37,11 @@ public class NullDoorObject extends DoorObject {
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> {
 			isOpened = true;

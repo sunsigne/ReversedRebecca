@@ -71,6 +71,11 @@ public class PushingPlayer implements CollisionBehavior {
 	}
 
 	@Override
+	public boolean isBlockingPath() {
+		return getExtraBehaviorsObject().isBlockingPath();
+	}
+
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (!isStunned())
 			if (detectorObject instanceof Player) {

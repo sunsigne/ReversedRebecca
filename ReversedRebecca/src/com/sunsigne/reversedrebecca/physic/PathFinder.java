@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.PathPointObject;
-import com.sunsigne.reversedrebecca.object.Wall;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
@@ -186,8 +186,12 @@ public class PathFinder implements Position {
 			else
 				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + from, getY() + range);
 
-			if (object instanceof Wall)
-				return true;
+			if (object instanceof CollisionReactor) {
+				CollisionReactor wall = (CollisionReactor) object;
+				if (wall.isBlockingPath() && wall != goal)
+					return true;
+			}
+
 			if (range > 0)
 				range = range - Size.M;
 			if (range < 0)

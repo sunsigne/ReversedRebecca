@@ -29,6 +29,11 @@ public class KillPuzzleObject extends PuzzleObject implements CollisionReactor {
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> getPuzzle().closePuzzle(false));
 	}

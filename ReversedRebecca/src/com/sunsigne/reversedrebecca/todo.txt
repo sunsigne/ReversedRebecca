@@ -22,17 +22,11 @@
 	améliorer le pathfinding des oes (s'inspirer des npc)
 			
 	s'assurer de l'optimisation : vitesse de chargement pendant le jeu (fichier externe) + constructeur minimalistes (données déjà stockées si possible)
-
-	
 	
 	////////// FACILE ////////////
 
-	velocityLaw create a way to check if the player is against a wall (and preventing him to move)
+	faire en sorte de stun tous les foes quand on prend un coup + au moins, les tiliser (pour éviter les bugs) !
 
-	PathFinder -> tous les blockpath ne sont pas compté : npc, puzzlers ... 
-
-	MovingToPlayer -> nom de class périmé en sens où il ne s'agit plus d'un pathfinding, mais d'une mise à jour de "goal"
-	
 	PushingPlayer -> vérifier s'il n'y a pas moyen de mettre en pause des behavior d'une façon plus globale (dans Stunned par exemple)
 
 	faire en sorte que les npc et foe se passent au travers l'un de l'autre (pour éviter de se bloquer comme des idiots les uns contre les autres)

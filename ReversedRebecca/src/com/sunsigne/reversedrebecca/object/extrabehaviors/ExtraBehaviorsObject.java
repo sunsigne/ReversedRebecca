@@ -85,6 +85,11 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingPath() {
+		return true;
+	}
+
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		for (Behavior tempBehavior : getBehaviorList().getList()) {
 			if (tempBehavior != null) {

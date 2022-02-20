@@ -19,6 +19,8 @@ public interface CollisionReactor extends Position {
 
 	void collidingReaction(CollisionDetector detectorObject);
 
+	boolean isBlockingPath();
+	
 	default void blockPath(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, true, null);
 	}
