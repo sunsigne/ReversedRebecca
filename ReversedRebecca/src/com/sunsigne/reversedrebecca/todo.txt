@@ -6,7 +6,7 @@
 	- le dual checker
 	- traduction de text
 	- écran de chargement
-	- pathfinding !!!
+	- pathfinding !!! 3 cas + collision et poussée
 	
 	
 	////////// IMPORTANT ////////////
