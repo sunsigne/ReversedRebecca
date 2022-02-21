@@ -84,6 +84,10 @@ public class World implements Updatable {
 
 	private String mapName;
 
+	public String getMapName() {
+		return mapName;
+	}
+
 	////////// LAYER ////////////
 
 	private LAYER[] layers = new LAYER[2];

@@ -17,6 +17,8 @@
 
 	////////// DIFFICILE ////////////
 
+	faire en sorte de pouvoir avoir des NPC "anynome" dont le nom est attribué après (que dans mappable)
+
 	////////// FACILE ////////////
 
 	MappableNPC -> ils sont tous les même pour l'instant

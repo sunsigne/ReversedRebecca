@@ -4,6 +4,8 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.BlockingPath;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.InteractWithPlayer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.LoadMapBehaviors;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.SpawningAction;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class NPC extends LivingObject {
@@ -19,11 +21,11 @@ public class NPC extends LivingObject {
 		super(name, x, y, walking_speed);
 		addNPCBehaviors();
 	}
-	
+
 	////////// USEFUL ////////////
-	
+
 	public void setRunning(boolean running) {
-		if(running)
+		if (running)
 			this.speed = running_speed;
 		else
 			this.speed = walking_speed;
@@ -31,10 +33,25 @@ public class NPC extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
+	private String actionMap;
+
+	public String getActionMap() {
+		return actionMap;
+	}
+
+	public void setActionMap(String actionMap) {
+		this.actionMap = actionMap;
+	}
+
+	public Behavior loadMapBehavior;
 	public Behavior blockingPath;
 	public Behavior interactWithPlayer;
+	public Behavior spawningAction;
 
 	private void addNPCBehaviors() {
+
+		loadMapBehavior = new LoadMapBehaviors(this);
+		addBehavior(loadMapBehavior);
 
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
@@ -42,10 +59,13 @@ public class NPC extends LivingObject {
 		interactWithPlayer = new InteractWithPlayer(this);
 		addBehavior(interactWithPlayer);
 
+		spawningAction = new SpawningAction(this);
+		addBehavior(spawningAction);
+
 		// aller à / se tourner vers le joueur quand se dernier lui parle / sauter
 		// (living ?)
 		// marcher sur place (pour avoir l'air humain) -> vérifier the escapist, faire
-		// ça même qand ils travaillent sur un bureau ?
+		// ça même quand ils travaillent sur un bureau ?
 		// faire une blague meta sur le fait précédent "tu n'a jamais remarqué qu'on
 		// donnait tous l'impression de marcher sur place ? Weird ..."
 	}
@@ -54,5 +74,5 @@ public class NPC extends LivingObject {
 	public Behavior[] behaviorToPauseIfStunned() {
 		return new Behavior[] { movingToGoal, interactWithPlayer };
 	}
-	
+
 }
