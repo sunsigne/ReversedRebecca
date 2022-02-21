@@ -34,9 +34,7 @@
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
-	
-	LoadingScreen -> à rendre + jolie, voir interactif !!!!!! (un mini jeu ça serait dingue)
-	
+
 	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")
 	
 	////////// SONS ////////////
