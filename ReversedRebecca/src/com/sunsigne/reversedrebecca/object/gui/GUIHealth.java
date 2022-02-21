@@ -8,11 +8,21 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class GuiHealth extends GameObject {
+public class GUIHealth extends GameObject implements GUI {
 
-	public GuiHealth() {
+	private GUIHealth() {
 		super(0, 0, Size.M, Size.M);
+		GUIList.getList().addObject(this);
 		loadImages();
+	}
+
+	////////// GUI ////////////
+
+	private static GUI gui = new GUIHealth();
+
+	@Override
+	public GUI getGUI() {
+		return gui;
 	}
 
 	////////// TICK ////////////

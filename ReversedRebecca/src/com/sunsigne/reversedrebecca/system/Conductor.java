@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
+import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
@@ -55,6 +56,7 @@ public class Conductor {
 		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());
 
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
+		new ForceInit().loadAllClassesInPackage(GUI.class.getPackageName());
 	}
 
 }

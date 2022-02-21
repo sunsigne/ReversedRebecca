@@ -11,10 +11,20 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class GuiTools extends GameObject {
+public class GUITools extends GameObject implements GUI {
 
-	public GuiTools() {
+	private GUITools() {
 		super(0, Window.HEIGHT - Size.M, Size.M, Size.M);
+		GUIList.getList().addObject(this);
+	}
+
+	////////// GUI ////////////
+
+	private static GUI gui = new GUITools();
+
+	@Override
+	public GUI getGUI() {
+		return gui;
 	}
 
 	////////// TICK ////////////
@@ -35,12 +45,11 @@ public class GuiTools extends GameObject {
 			if (tempTool.getDifficulty() == LVL.NULL)
 				continue;
 
-			BufferedImage tool_image = new ImageTask()
-					.loadImage("textures/tools/" + tempTool.getName() + "_null");
+			BufferedImage tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_null");
 			g.drawImage(tool_image, getX() + 2 * index * getWidth(), getY(), getWidth(), getHeight(), null);
 
-			BufferedImage battery_image = new ImageTask()
-					.loadImage("textures/" + "gui/battery_max_" + tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName(), false);
+			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "gui/battery_max_"
+					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName(), false);
 			g.drawImage(battery_image, getX() + (1 + 2 * index) * getWidth(), getY(), getWidth(), getHeight(), null);
 			index++;
 		}
