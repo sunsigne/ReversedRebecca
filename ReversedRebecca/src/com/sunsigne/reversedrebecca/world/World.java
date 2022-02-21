@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.MassiveInstruction;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
@@ -78,6 +79,7 @@ public class World implements Updatable {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
+		new MassiveInstruction("SPAWNING");
 	}
 
 	////////// NAME ////////////

@@ -4,8 +4,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.BlockingPath;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.InteractWithPlayer;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.LoadMapBehaviors;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.SpawningAction;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.LoadInstructionMap;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class NPC extends LivingObject {
@@ -33,34 +32,34 @@ public class NPC extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
-	private String actionMap;
+	///// instructions /////
 
-	public String getActionMap() {
-		return actionMap;
+	private String instructionMap;
+
+	public String getInstructionMap() {
+		return instructionMap;
 	}
 
-	public void setActionMap(String actionMap) {
-		this.actionMap = actionMap;
+	public void setInstructionMap(String instructionMap) {
+		this.instructionMap = instructionMap;
 	}
 
-	public Behavior loadMapBehavior;
+	///// behavior /////
+
+	public Behavior loadInstructionMap;
 	public Behavior blockingPath;
 	public Behavior interactWithPlayer;
-	public Behavior spawningAction;
 
 	private void addNPCBehaviors() {
 
-		loadMapBehavior = new LoadMapBehaviors(this);
-		addBehavior(loadMapBehavior);
+		loadInstructionMap = new LoadInstructionMap(this);
+		addBehavior(loadInstructionMap);
 
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
 
 		interactWithPlayer = new InteractWithPlayer(this);
 		addBehavior(interactWithPlayer);
-
-		spawningAction = new SpawningAction(this);
-		addBehavior(spawningAction);
 
 		// aller à / se tourner vers le joueur quand se dernier lui parle / sauter
 		// (living ?)

@@ -6,8 +6,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class GoalObject extends GameObject {
 
-	public GoalObject(int x, int y) {
-		super(x * Size.M, y * Size.M);
+	public GoalObject(int x, int y, boolean reversed) {
+		super(reversed ? x / Size.M : x * Size.M, reversed ? y / Size.M : y * Size.M);
 
 	}
 

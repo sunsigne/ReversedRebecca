@@ -3,15 +3,15 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
-public class NPCAction {
+public class Instruction {
 
-	public NPCAction(NPC npc, String valueToRead) {
+	public Instruction(NPC npc, String valueToRead) {
 		this.npc = npc;
 		if (npc.getName() == "error")
 			return;
 
-		action = new FileTask().read(valueToRead.toUpperCase(), npc.getActionMap());
-		readAction();
+		action = new FileTask().read(valueToRead.toUpperCase(), npc.getInstructionMap());
+		readInstruction();
 	}
 
 	////////// ACTION ////////////
@@ -19,19 +19,19 @@ public class NPCAction {
 	private NPC npc;
 	private String action;
 
-	private void readAction() {
+	private void readInstruction() {
 		if (action.contains("GOTO")) {
 			String pos = action.substring(6, action.length());
-			gotoAction(pos);
+			gotoInstruction(pos);
+			return;
 		}
-
 	}
 
-	private void gotoAction(String pos) {
+	private void gotoInstruction(String pos) {
 		int x = Integer.parseInt(pos.split(",")[0]);
 		int y = Integer.parseInt(pos.split(",")[1]);
 
-		GoalObject goal = new GoalObject(x, y);
+		GoalObject goal = new GoalObject(x, y, false);
 		npc.setGoal(goal);
 	}
 

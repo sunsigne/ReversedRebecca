@@ -21,6 +21,8 @@
 
 	////////// FACILE ////////////
 
+	ATTENTION ! quand les npc se déplace, risque d'envoyer balader le jouer + régler leurs vitesse
+
 	MappableNPC -> ils sont tous les même pour l'instant
 	
 	NPC -> class pas encore fini
