@@ -34,27 +34,27 @@ public interface CollisionReactor extends Position {
 		
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setX(tilePos.getTilePos(getX()/* + getMiniX() */ + getBounds().width, size));
+				detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, size));
 			if (listener != null)
 				listener.doAction();
 		}
 
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setX(tilePos.getTilePos(getX() /* + getMiniX() */ - detectorObject.getWidth(), size));
+				detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), size));
 			if (listener != null)
 				listener.doAction();
 		}
 
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setY(tilePos.getTilePos(getY()/* + getMiniY() */ + getBounds().height, size));
+				detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, size));
 			if (listener != null)
 				listener.doAction();
 		}
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass)
-				detectorObject.setY(tilePos.getTilePos(getY() /* + getMiniY() */ - detectorObject.getHeight(), size));
+				detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), size));
 			if (listener != null)
 				listener.doAction();
 
