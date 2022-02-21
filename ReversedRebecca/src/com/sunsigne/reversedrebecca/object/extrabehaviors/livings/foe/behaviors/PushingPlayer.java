@@ -104,7 +104,7 @@ public class PushingPlayer implements CollisionBehavior {
 
 	private void stunFoe() {
 
-		Behavior stunned = new Stunned(foe, foe.goalIsPlayer, foe.movingToGoal);
+		Behavior stunned = new Stunned(foe);
 		foe.addBehavior(stunned);
 	}
 

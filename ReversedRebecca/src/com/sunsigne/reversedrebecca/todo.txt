@@ -19,8 +19,6 @@
 
 	////////// FACILE ////////////
 
-	PushingPlayer -> vérifier s'il n'y a pas moyen de mettre en pause des behavior d'une façon plus globale (dans Stunned par exemple)
-
 	MappableNPC -> ils sont tous les même pour l'instant
 	
 	NPC -> class pas encore fini

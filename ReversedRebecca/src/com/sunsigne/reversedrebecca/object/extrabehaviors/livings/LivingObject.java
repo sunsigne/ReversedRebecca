@@ -49,4 +49,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		addBehavior(moveWhenPushed);
 	}
 
+	public abstract Behavior[] behaviorToPauseIfStunned();
+	
 }

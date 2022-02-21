@@ -49,7 +49,7 @@ public class MoveWhenPushed implements TickBehavior {
 			return;
 
 		Player player = (Player) living;
-		living.addBehavior(new Stunned(player, PUSHING_TIME, player.canInteract));
+		living.addBehavior(new Stunned(player, PUSHING_TIME));
 	}
 
 	private void pushed(DIRECTION facing) {

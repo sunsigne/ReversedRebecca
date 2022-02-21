@@ -32,4 +32,9 @@ public class Foe extends LivingObject {
 		addBehavior(pushingPlayer);
 	}
 
+	@Override
+	public Behavior[] behaviorToPauseIfStunned() {
+		return new Behavior[] { movingToGoal };
+	}
+	
 }

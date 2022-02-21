@@ -6,14 +6,14 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
 public class Stunned implements TickBehavior {
 
-	public Stunned(LivingObject living, Behavior... behaviorsToPause) {
-		this(living, 30, behaviorsToPause);
+	public Stunned(LivingObject living) {
+		this(living, 30);
 	}
-	
-	public Stunned(LivingObject living, int stun_time, Behavior... behaviorsToPause) {
+
+	public Stunned(LivingObject living, int stun_time) {
 		this.living = living;
 		this.time = stun_time;
-		this.behaviorsToPause = behaviorsToPause;
+		this.behaviorsToPause = living.behaviorToPauseIfStunned();
 
 		breakBehaviors(behaviorsToPause);
 		living.setMotionless();
@@ -42,7 +42,7 @@ public class Stunned implements TickBehavior {
 			living.addBehavior(behaviorsToRetablish[index]);
 		}
 	}
-	
+
 	////////// TICK ////////////
 
 	private int time;
@@ -58,5 +58,5 @@ public class Stunned implements TickBehavior {
 		retablishBehaviors(behaviorsToPause);
 		living.removeBehavior(this);
 	}
-	
+
 }

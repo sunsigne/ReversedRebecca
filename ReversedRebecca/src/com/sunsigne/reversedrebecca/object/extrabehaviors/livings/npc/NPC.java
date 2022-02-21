@@ -50,4 +50,9 @@ public class NPC extends LivingObject {
 		// donnait tous l'impression de marcher sur place ? Weird ..."
 	}
 
+	@Override
+	public Behavior[] behaviorToPauseIfStunned() {
+		return new Behavior[] { movingToGoal, interactWithPlayer };
+	}
+	
 }
