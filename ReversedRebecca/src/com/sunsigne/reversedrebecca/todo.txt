@@ -25,8 +25,6 @@
 	
 	MovingToPlayer des foes devrait s'adapter à la distance
 
-	faire un cursor spécial pour la souris
-
 	DieWhenNoHp -> kill() prévoir un restart
 
 	World - la GUI est ajouté de façon dégueulasse, devrait appeler des characteristics dirrectement
