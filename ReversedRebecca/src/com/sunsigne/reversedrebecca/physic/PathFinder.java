@@ -1,11 +1,14 @@
 package com.sunsigne.reversedrebecca.physic;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.Instruction;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -109,8 +112,15 @@ public class PathFinder implements Position {
 
 	private DIRECTION findPath(boolean allow_complex_path) {
 
-		if (isGoalReached())
+		if (isGoalReached()) {
+			searcher.setGoal(null);
+
+			if (searcher instanceof NPC) {
+				GoalObject pos = new GoalObject(goal.getX(), goal.getY(), true);
+				new Instruction((NPC) searcher, "GOAL" + "->" + pos.getX() + "," + pos.getY());
+			}
 			return DIRECTION.NULL;
+		}
 
 		boolean WOH = wallOnTheWay(0, true); // wall from origin to goal moving horizontally
 		boolean WOV = wallOnTheWay(0, false); // wall from origin to goal moving vertically
