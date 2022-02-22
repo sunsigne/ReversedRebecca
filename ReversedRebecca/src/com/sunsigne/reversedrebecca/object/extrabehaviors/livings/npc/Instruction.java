@@ -25,6 +25,12 @@ public class Instruction {
 			gotoInstruction(pos);
 			return;
 		}
+
+		if (action.contains("INSTRUCTION")) {
+			String instructions = action.substring(13, action.length());
+			processInstruction(instructions);
+			return;
+		}
 	}
 
 	private void gotoInstruction(String pos) {
@@ -33,6 +39,16 @@ public class Instruction {
 
 		GoalObject goal = new GoalObject(x, y, false);
 		npc.setGoal(goal);
+	}
+
+	private void processInstruction(String instructions) {
+
+		String[] split_instructions = instructions.split(",");
+
+		for (String tempInstruction : split_instructions) {
+			String instruction = "INSTRUCTION->" + tempInstruction;
+			new Instruction(npc, instruction);
+		}
 	}
 
 }

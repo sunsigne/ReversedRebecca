@@ -19,6 +19,8 @@
 
 	faire en sorte de pouvoir avoir des NPC "anynome" dont le nom est attribué après (que dans mappable)
 
+	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
+
 	////////// FACILE ////////////
 
 	ATTENTION ! quand les npc se déplace, risque d'envoyer balader le jouer + régler leurs vitesse
