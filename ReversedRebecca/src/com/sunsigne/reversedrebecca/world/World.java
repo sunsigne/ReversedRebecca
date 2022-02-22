@@ -79,7 +79,7 @@ public class World implements Updatable {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
-		new MassiveInstruction("SPAWNING");
+		new MassiveInstruction("TIME->0");
 	}
 
 	////////// NAME ////////////
@@ -159,9 +159,19 @@ public class World implements Updatable {
 
 	////////// TICK ////////////
 
+	private final int SEC = 60;
+	private int frame = SEC;
+	private int time;
+
 	@Override
 	public void tick() {
-
+		frame--;
+		
+		if (frame <= 0) {
+			frame = SEC;
+			time++;
+			new MassiveInstruction("TIME->" + time);
+		}
 	}
 
 	////////// RENDER ////////////
