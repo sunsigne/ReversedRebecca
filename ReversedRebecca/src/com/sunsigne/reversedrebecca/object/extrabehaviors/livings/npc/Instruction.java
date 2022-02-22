@@ -7,43 +7,80 @@ public class Instruction {
 
 	public Instruction(NPC npc, String valueToRead) {
 		this.npc = npc;
-		if (npc.getName() == "error")
+		if (npc.getInstructionMap().contains("error"))
 			return;
 
-		action = new FileTask().read(valueToRead.toUpperCase(), npc.getInstructionMap());
+		instruction = new FileTask().read(valueToRead.toUpperCase(), npc.getInstructionMap());
 		readInstruction();
 	}
 
 	////////// ACTION ////////////
 
 	private NPC npc;
-	private String action;
+	private String instruction;
 
-	private void readInstruction() {
-		if (action.contains("GOTO")) {
-			String pos = action.substring(6, action.length());
-			gotoInstruction(pos);
-			return;
+	private String getInstructionType() {
+
+		String instructionType = "";
+
+		int size = instruction.length();
+		if (size == 0)
+			return null;
+
+		for (int index = 0; index < size; index++) {
+			char c = instruction.charAt(index);
+			if (c == '-')
+				return instructionType;
+			instructionType = instructionType.concat(Character.toString(c));
 		}
 
-		if (action.contains("INSTRUCTION")) {
-			String instructions = action.substring(13, action.length());
-			processInstruction(instructions);
-			return;
+		System.err.println("Syntax Error in file " + npc.getInstructionMap());
+		System.err.println("An instruction should always have a -> target");
+		return instructionType;
+	}
+
+	// facing x 2 / goal est une fin en soit / lost puzzle
+	private void readInstruction() {
+
+		String instructionType = getInstructionType();
+		String target = instruction.replace(instructionType + "->", "");
+
+		switch (instructionType) {
+		case "NAME":
+			npc.setName(target);
+			break;
+
+		case "GOTO":
+			movingInstruction(target, false);
+			break;
+
+		case "TP":
+		case "TELEPORT":
+			movingInstruction(target, true);
+			break;
+
+		case "INSTRUCTION":
+			processInstruction(target);
+			break;
 		}
 	}
 
-	private void gotoInstruction(String pos) {
-		int x = Integer.parseInt(pos.split(",")[0]);
-		int y = Integer.parseInt(pos.split(",")[1]);
+	private void movingInstruction(String target, boolean teleport) {
+		int x = Integer.parseInt(target.split(",")[0]);
+		int y = Integer.parseInt(target.split(",")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
-		npc.setGoal(goal);
+
+		if (teleport) {
+			npc.setX(goal.getX());
+			npc.setY(goal.getY());
+		} else
+			npc.setGoal(goal);
 	}
 
-	private void processInstruction(String instructions) {
+	private void processInstruction(String target) {
 
-		String[] split_instructions = instructions.split(",");
+		String[] split_instructions = target.split(",");
 
 		for (String tempInstruction : split_instructions) {
 			String instruction = "INSTRUCTION->" + tempInstruction;

@@ -26,6 +26,13 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	public String getName() {
 		return name;
 	}
+	
+	public void setName(String name){
+		this.name = name.toLowerCase();
+		removeBehavior(walkingRender);		
+		walkingRender = new WalkingRender(this);
+		addBehavior(walkingRender);
+	}
 
 	////////// BEHAVIOR ////////////
 

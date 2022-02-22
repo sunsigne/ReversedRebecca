@@ -22,7 +22,7 @@ public class MappableNPC09 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new NPC(x, y);
+		return new NPC("NPC-09", x, y);
 	}
 
 	@Override

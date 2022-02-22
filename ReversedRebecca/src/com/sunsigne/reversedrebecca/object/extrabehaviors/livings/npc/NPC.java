@@ -4,20 +4,17 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.BlockingPath;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.InteractWithPlayer;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.LoadInstructionMap;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class NPC extends LivingObject {
 
 	private static final int walking_speed = Size.XS / 5;
 	private static final int running_speed = Size.XS / 2;
 
-	public NPC(int x, int y) {
-		this("error", x, y);
-	}
-
 	public NPC(String name, int x, int y) {
 		super(name, x, y, walking_speed);
+		instructionMap = ("maps/" + World.get().getMapName() + "/" + name + ".csv");
 		addNPCBehaviors();
 	}
 
@@ -40,20 +37,12 @@ public class NPC extends LivingObject {
 		return instructionMap;
 	}
 
-	public void setInstructionMap(String instructionMap) {
-		this.instructionMap = instructionMap;
-	}
-
 	///// behavior /////
 
-	public Behavior loadInstructionMap;
 	public Behavior blockingPath;
 	public Behavior interactWithPlayer;
 
 	private void addNPCBehaviors() {
-
-		loadInstructionMap = new LoadInstructionMap(this);
-		addBehavior(loadInstructionMap);
 
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
