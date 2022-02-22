@@ -1,13 +1,14 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Instruction {
 
 	public Instruction(NPC npc, String valueToRead) {
 		this.npc = npc;
-		if (npc.getInstructionMap().contains("error"))
+		if (new FileTask().doesExist(npc.getInstructionMap()) == false)
 			return;
 
 		instruction = new FileTask().read(valueToRead.toUpperCase(), npc.getInstructionMap());
@@ -50,6 +51,10 @@ public class Instruction {
 			npc.setName(target);
 			break;
 
+		case "FACING":
+			setFacing(target);
+			break;
+
 		case "GOTO":
 			movingInstruction(target, false);
 			break;
@@ -62,6 +67,13 @@ public class Instruction {
 		case "INSTRUCTION":
 			processInstruction(target);
 			break;
+		}
+	}
+
+	private void setFacing(String target) {
+		for (DIRECTION tempFacing : DIRECTION.values()) {
+			if (tempFacing.getName().equalsIgnoreCase(target))
+				npc.setFacing(tempFacing);
 		}
 	}
 
