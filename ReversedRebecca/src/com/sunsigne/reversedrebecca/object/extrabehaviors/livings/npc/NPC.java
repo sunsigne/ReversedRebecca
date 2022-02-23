@@ -50,6 +50,7 @@ public class NPC extends LivingObject {
 		interactWithPlayer = new InteractWithPlayer(this);
 		addBehavior(interactWithPlayer);
 
+		// faire l'annimation de saut sur placve (rend les dialogues + vivants)
 		// aller à / se tourner vers le joueur quand se dernier lui parle / sauter
 		// (living ?)
 		// marcher sur place (pour avoir l'air humain) -> vérifier the escapist, faire

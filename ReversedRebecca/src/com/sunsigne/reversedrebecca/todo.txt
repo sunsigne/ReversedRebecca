@@ -62,6 +62,7 @@
 	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
+	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 	
 	 

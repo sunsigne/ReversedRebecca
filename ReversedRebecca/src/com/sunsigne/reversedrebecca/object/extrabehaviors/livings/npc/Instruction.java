@@ -43,6 +43,10 @@ public class Instruction {
 	// facing x 2 / goal est une fin en soit / lost puzzle
 	private void readInstruction() {
 
+		if (instruction.isBlank()) {
+			return;
+		}
+
 		String instructionType = getInstructionType();
 		String target = instruction.replace(instructionType + "->", "");
 
@@ -73,6 +77,7 @@ public class Instruction {
 	private void setFacing(String target) {
 		for (DIRECTION tempFacing : DIRECTION.values()) {
 			if (tempFacing.getName().equalsIgnoreCase(target))
+				npc.setMotionless();
 				npc.setFacing(tempFacing);
 		}
 	}
