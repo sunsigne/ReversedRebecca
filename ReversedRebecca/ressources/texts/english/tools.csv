@@ -1,15 +1,15 @@
 ///// KEY /////
 
-KeyCyan=cyan key
-KeyGreen=green key
-KeyYellow=yellow key
-KeyOrange=orange key
-KeyRed=red key
+KeyCyan = cyan#key
+KeyGreen = green#key
+KeyYellow = yellow#key
+KeyOrange = orange#key
+KeyRed = red#key
 
 ///// BOMB /////
 
-BombCyan=cyan bomb
-BombGreen=green bomb
-BombYellow=yellow bomb
-BombOrange=orange bomb
-BombRed=red bomb
+BombCyan = cyan#bomb
+BombGreen = green#bomb
+BombYellow = yellow#bomb
+BombOrange = orange#bomb
+BombRed = red#bomb

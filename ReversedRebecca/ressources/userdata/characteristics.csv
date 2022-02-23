@@ -1,10 +1,10 @@
 ///// HP /////
 
-MaxHp=3
+MaxHp = 3
 
 ///// Tools /////
 
-KeyMaxLvl=GREEN
-KeyStartLvl=NULL
-BombMaxLvl=CYAN
-BombStartLvl=NULL
+KeyMaxLvl = GREEN
+KeyStartLvl = NULL
+BombMaxLvl = CYAN
+BombStartLvl = NULL

@@ -1,13 +1,13 @@
 ///// NPC /////
 
-NPCTalk=parler
+NPCTalk = parler
 
 ///// DOOR /////
 
-DoorLocked=fermé
-DoorUnlock=ouvrir
+DoorLocked = fermé
+DoorUnlock = ouvrir
 
 ///// RUBBLE /////
 
-RubbleBlocked=bloqué
-RubbleExplode=exploser
+RubbleBlocked = bloqué
+RubbleExplode = exploser

@@ -40,17 +40,17 @@ public class FileTask {
 				if (valueToRead == null) {
 					while (scan.hasNextLine()) {
 						if (!flag) {
-							content = content.concat(scan.nextLine());
+							content = content.concat(getFormattedSpace(scan.nextLine()));
 							flag = true;
 						} else
-							content = content.concat(String.format("%n" + scan.nextLine()));
+							content = content.concat(String.format("%n" + getFormattedSpace(scan.nextLine())));
 					}
 				}
 
 				// read one specific value
 				else {
 					while (scan.hasNextLine()) {
-						String line = scan.nextLine();
+						String line = getFormattedSpace(scan.nextLine());
 						if (line.split("=")[0].equalsIgnoreCase(valueToRead))
 							content = line.split("=")[1];
 					}
@@ -64,6 +64,11 @@ public class FileTask {
 
 		return content;
 	}
+	
+	private String getFormattedSpace(String text) {
+		String formattedText = text.replace(" ", "");
+		return formattedText.replace("#", " ");
+	}
 
 	////////// WRITE ////////////
 
@@ -71,6 +76,7 @@ public class FileTask {
 		write(null, path, text);
 	}
 
+	// WARNING ! To write something, keep in mind that "readable space" must be writted "#"
 	public void write(String valueToReplace, String path, String text) {
 		File file = new File("ressources/" + path);
 		String fileContent = read(path);
