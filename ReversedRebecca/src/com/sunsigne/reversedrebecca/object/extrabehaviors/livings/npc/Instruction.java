@@ -1,8 +1,14 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
 
+import java.awt.event.KeyEvent;
+
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class Instruction {
 
@@ -40,7 +46,6 @@ public class Instruction {
 		return instructionType;
 	}
 
-	// facing x 2 / goal est une fin en soit / lost puzzle
 	private void readInstruction() {
 
 		if (instruction.isBlank()) {
@@ -68,6 +73,10 @@ public class Instruction {
 			movingInstruction(target, true);
 			break;
 
+		case "TIPLE_ACTION":
+			tripleActionInstruction(target);
+			break;
+
 		case "INSTRUCTION":
 			processInstruction(target);
 			break;
@@ -78,7 +87,7 @@ public class Instruction {
 		for (DIRECTION tempFacing : DIRECTION.values()) {
 			if (tempFacing.getName().equalsIgnoreCase(target))
 				npc.setMotionless();
-				npc.setFacing(tempFacing);
+			npc.setFacing(tempFacing);
 		}
 	}
 
@@ -93,6 +102,29 @@ public class Instruction {
 			npc.setY(goal.getY());
 		} else
 			npc.setGoal(goal);
+	}
+	
+
+
+	private void tripleActionInstruction(String target) {
+		String noActionText = null;
+		
+		TripleAction tripleAction = new TripleAction(noActionText, getTalkAction(target), null, null);
+		npc.setTripleAction(tripleAction);
+		npc.createTextAction();
+
+	}
+
+	private Action getTalkAction(String target) {
+
+		String name = new Translatable().getTranslatedText("NPCTalk", npc.getFile());
+		GenericListener listener = () -> {
+			String text = new Translatable().getTranslatedText(target, npc.getInstructionMap());
+			System.out.println(text);
+		};
+		Action action = new Action(npc, name, listener, KeyEvent.VK_E);
+
+		return action;
 	}
 
 	private void processInstruction(String target) {

@@ -1,58 +1,27 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
 
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.BlockingPath;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.InteractWithPlayer;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.world.World;
 
-public class NPC extends LivingObject {
-
-	private static final int walking_speed = Size.XS / 5;
-	private static final int running_speed = Size.XS / 2;
+public class NPC extends SuperNPC implements Interactive {
 
 	public NPC(String name, int x, int y) {
-		super(name, x, y, walking_speed);
-		instructionMap = ("maps/" + World.get().getMapName() + "/" + name + ".csv");
+		super(name, x, y);
 		addNPCBehaviors();
-	}
-
-	////////// USEFUL ////////////
-
-	public void setRunning(boolean running) {
-		if (running)
-			this.speed = running_speed;
-		else
-			this.speed = walking_speed;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	///// instructions /////
-
-	private String instructionMap;
-
-	public String getInstructionMap() {
-		return instructionMap;
-	}
-
-	///// behavior /////
-
 	public Behavior blockingPath;
-	public Behavior interactWithPlayer;
 
 	private void addNPCBehaviors() {
 
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
 
-		interactWithPlayer = new InteractWithPlayer(this);
-		addBehavior(interactWithPlayer);
-
 		// faire l'annimation de saut sur placve (rend les dialogues + vivants)
-		// aller à / se tourner vers le joueur quand se dernier lui parle / sauter
-		// (living ?)
+		// aller à / se tourner vers le joueur quand se dernier lui parle
 		// marcher sur place (pour avoir l'air humain) -> vérifier the escapist, faire
 		// ça même quand ils travaillent sur un bureau ?
 		// faire une blague meta sur le fait précédent "tu n'a jamais remarqué qu'on
@@ -61,7 +30,7 @@ public class NPC extends LivingObject {
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { movingToGoal, interactWithPlayer };
+		return new Behavior[] { movingToGoal };
 	}
 
 }
