@@ -1,10 +1,9 @@
 package com.sunsigne.reversedrebecca.object.puzzler;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.instructions.Statement;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.MassiveInstruction;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -44,9 +43,8 @@ public abstract class OpenPuzzleAction extends Action {
 			if (nullObject != null)
 				puzzlerObject.getHandler().addObject(nullObject);
 			puzzlerObject.getHandler().removeObject(puzzlerObject);
-			
-			GoalObject puzzlerPos = new GoalObject(puzzlerObject.getX(), puzzlerObject.getY(), true);
-			new MassiveInstruction("WONPUZZLE"+ "->" + puzzlerPos.getX() + "," + puzzlerPos.getY());
+
+			new Statement().puzzleWon(puzzlerObject);
 		};
 		return actionOnWinning;
 	}

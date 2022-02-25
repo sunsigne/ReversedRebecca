@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.system;
 
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
@@ -56,6 +57,7 @@ public class Conductor {
 		new ForceInit().loadAllClassesInPackage(DebugMode.class.getPackageName());
 
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
+		new ForceInit().loadAllClassesInPackage(Instruction.class.getPackageName());
 		new ForceInit().loadAllClassesInPackage(GUI.class.getPackageName());
 	}
 

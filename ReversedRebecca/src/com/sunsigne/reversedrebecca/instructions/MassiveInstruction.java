@@ -1,5 +1,6 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
+package com.sunsigne.reversedrebecca.instructions;
 
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -7,14 +8,14 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class MassiveInstruction {
 
-	public MassiveInstruction(String valueToRead) {
+	protected MassiveInstruction(String value) {
 		loadAllNPC();
-		addActionToAllNPC(valueToRead);
+		createInstructionAnalyzerForAllNPC(value);
 	}
 
-	private void addActionToAllNPC(String valueToRead) {
+	private void createInstructionAnalyzerForAllNPC(String value) {
 		for (NPC tempNPC : npc_list.getList())
-			new Instruction(tempNPC, valueToRead);
+			new InstructionAnalyzer(tempNPC, value);
 	}
 
 	////////// MAP OR LIST ////////////
