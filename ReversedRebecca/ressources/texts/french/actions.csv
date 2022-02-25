@@ -1,6 +1,7 @@
 ///// NPC /////
 
 NPCTalk = parler
+NPCTrip = croche#pied
 
 ///// DOOR /////
 

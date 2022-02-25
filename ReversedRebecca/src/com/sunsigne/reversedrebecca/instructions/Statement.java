@@ -18,14 +18,6 @@ public class Statement {
 		new MassiveInstruction(statement + value);
 	}
 
-	////////// GOTO ////////////
-
-	public void got0(NPC npc, String value) {
-		String statement = "$->";
-
-		new InstructionAnalyzer(npc, statement + value);
-	}
-
 	////////// GOAL ////////////
 
 	public void goalReached(PathSearcher searcher, Position goal) {
