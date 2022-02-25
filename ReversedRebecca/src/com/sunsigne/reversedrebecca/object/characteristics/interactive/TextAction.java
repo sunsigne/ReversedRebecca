@@ -30,30 +30,6 @@ public class TextAction implements Updatable {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("square_sans_serif_7", 20f);
-
-	private void drawFacingText(Graphics g, DIRECTION facing, String text) {
-		int[] rect = getShiftedRect(facing);
-
-		DIRECTION centeredText = DIRECTION.NULL;
-		if (facing == DIRECTION.LEFT)
-			centeredText = DIRECTION.RIGHT;
-		if (facing == DIRECTION.RIGHT)
-			centeredText = DIRECTION.LEFT;
-
-		new TextDecoration().drawOutlinesString(g, text, font, centeredText, rect);
-	}
-
-	private void drawDualActionsText(Graphics g, Player player, Action action1, Action action2) {
-		if (player.getFacing() == DIRECTION.UP || player.getFacing() == DIRECTION.DOWN) {
-			drawFacingText(g, DIRECTION.LEFT, action1.getDisplayedText());
-			drawFacingText(g, DIRECTION.RIGHT, action2.getDisplayedText());
-		} else {
-			drawFacingText(g, DIRECTION.UP, action1.getDisplayedText());
-			drawFacingText(g, DIRECTION.DOWN, action2.getDisplayedText());
-		}
-	}
-
 	@Override
 	public void render(Graphics g) {
 		if (tripleAction == null)
@@ -68,34 +44,51 @@ public class TextAction implements Updatable {
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {
 			if (tripleAction.getNoActionText() != null)
-				drawFacingText(g, player.getFacing(), tripleAction.getNoActionText());
+				drawNoActionText(g, player, tripleAction.getNoActionText());
 			return;
 		}
 
 		// if ONE action can be performed, draw it in front of the player
 		if (tripleAction.canDoExactlyOneAction()) {
 			Action action = tripleAction.getTheOnlyOnePerformableAction();
-			drawFacingText(g, player.getFacing(), action.getDisplayedText());
+			drawChoiceText(g, player, action.getDisplayedText(), 0);
 			return;
 		}
 
 		// if TWO actions can be performed, draw them perpendicularly to the player
 		if (tripleAction.canDoExactlyTwoActions()) {
 			Action[] action = tripleAction.getTheOnlyTwoPerformableActions();
-			drawDualActionsText(g, player, action[0], action[1]);
+			drawChoiceText(g, player, action[0].getDisplayedText(), -12);
+			drawChoiceText(g, player, action[1].getDisplayedText(), +12);
 			return;
 		}
 
 		// if THREE actions, draw the second in front of the player
 		if (tripleAction.canDoExactlyThreeActions()) {
-			Action action = tripleAction.getAction(1);
-			drawFacingText(g, player.getFacing(), action.getDisplayedText());
-			drawDualActionsText(g, player, tripleAction.getAction(0), tripleAction.getAction(2));
+			drawChoiceText(g, player, tripleAction.getAction(0).getDisplayedText(), -24);
+			drawChoiceText(g, player, tripleAction.getAction(1).getDisplayedText(), 0);
+			drawChoiceText(g, player, tripleAction.getAction(2).getDisplayedText(), +24);
 			return;
 		}
 	}
 
-	private int[] getShiftedRect(DIRECTION facing) {
+	///// no action text /////
+
+	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7", 20f);
+
+	private void drawNoActionText(Graphics g, Player player, String text) {
+		int[] rect = getNoActionRect(player.getFacing());
+
+		DIRECTION centeredText = DIRECTION.NULL;
+		if (player.getFacing() == DIRECTION.LEFT)
+			centeredText = DIRECTION.RIGHT;
+		if (player.getFacing() == DIRECTION.RIGHT)
+			centeredText = DIRECTION.LEFT;
+
+		new TextDecoration().drawOutlinesString(g, text, no_action_font, centeredText, rect);
+	}
+
+	private int[] getNoActionRect(DIRECTION facing) {
 
 		switch (facing) {
 		case LEFT:
@@ -112,6 +105,30 @@ public class TextAction implements Updatable {
 					interactive.getHeight() };
 		default:
 			return interactive.getRect();
+		}
+	}
+
+	///// choice text /////
+
+	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7", 17f);
+
+	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
+		int[] rect = getChoiceRect(player, gap);
+
+		DIRECTION centeredText = DIRECTION.LEFT;
+		if (player.getFacing() == DIRECTION.RIGHT)
+			centeredText = DIRECTION.RIGHT;
+
+		new TextDecoration().drawOutlinesString(g, text, choice_font, centeredText, rect);
+	}
+
+	private int[] getChoiceRect(Player player, int gap) {
+
+		switch (player.getFacing()) {
+		case RIGHT:
+			return new int[] { player.getX() - Size.M, player.getY() + gap, Size.M, Size.M };
+		default:
+			return new int[] { player.getX() + Size.M, player.getY() + gap, Size.M, Size.M };
 		}
 	}
 
