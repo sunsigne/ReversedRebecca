@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.action.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionAnalyzer;
 
 public class TripleActionInstruction implements Instruction {
 

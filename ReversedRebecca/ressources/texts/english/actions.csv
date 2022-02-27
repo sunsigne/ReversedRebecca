@@ -1,7 +1,7 @@
 ///// NPC /////
 
-NPCTalk = talk
-NPCTrip = trip#up
+TALK = talk
+TRIP = trip#up
 
 ///// DOOR /////
 
