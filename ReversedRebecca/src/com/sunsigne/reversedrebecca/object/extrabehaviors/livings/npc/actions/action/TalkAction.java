@@ -24,12 +24,14 @@ public class TalkAction extends NPCAction {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "TALK";
 	}
 	
 	////////// LISTENER ////////////
 
+	@Override
 	public GenericListener getListener(NPC npc, String target) {
 		GenericListener listener = () -> {
 			String text = new Translatable().getTranslatedText(target, npc.getInstructionMap());
@@ -41,6 +43,7 @@ public class TalkAction extends NPCAction {
 
 	////////// KEYBOARD ////////////
 
+	@Override
 	public int getKeyEvent() {
 		return KeyEvent.VK_E;
 	}
