@@ -23,7 +23,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 		for (Updatable tempUpdatable : layer.getList()) {
 
-			if (!(tempUpdatable instanceof GameObject))
+			if (tempUpdatable instanceof GameObject == false)
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
