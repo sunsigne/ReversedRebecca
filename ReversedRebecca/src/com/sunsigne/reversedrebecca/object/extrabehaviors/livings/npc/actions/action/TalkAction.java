@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.a
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionList;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
@@ -39,7 +40,7 @@ public class TalkAction extends NPCAction {
 			path = path.concat(target + ".csv");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 
-			ChatBox chatbox = new ChatBox(dialogue);
+			ChatBox chatbox = new ChatBox(npc, dialogue);
 			chatbox.openChat();
 		};
 

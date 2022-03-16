@@ -4,6 +4,10 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -14,7 +18,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChatBox implements Updatable, KeyboardEvent {
 
-	public ChatBox(String dialogue) {
+	public ChatBox(LivingObject living, String dialogue) {
+		this.living = living;
 		loadImage();
 
 		// register the whole dialogue as an array of lines
@@ -49,10 +54,17 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 	////////// OPEN ////////////
 
+	private LivingObject living;
+	private DIRECTION registeredFacing;
+
 	public void openChat() {
 		World world = World.get();
 		if (world != null)
 			world.freeze(true);
+
+		registeredFacing = living.getFacing();
+		DIRECTION playerFacing = new PlayerFinder().getPlayer().getFacing();
+		living.setFacing(Facing.getOppositeOf(playerFacing));
 
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
@@ -82,6 +94,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		if (world != null)
 			world.freeze(false);
 
+		living.setFacing(registeredFacing);
 		LAYER.PUZZLE.getHandler().clear();
 	}
 
