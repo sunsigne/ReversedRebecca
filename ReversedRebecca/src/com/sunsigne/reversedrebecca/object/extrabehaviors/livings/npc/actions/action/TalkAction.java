@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.a
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionList;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
