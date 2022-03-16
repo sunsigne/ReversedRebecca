@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.a
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionList;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
@@ -28,16 +29,20 @@ public class TalkAction extends NPCAction {
 	public String getName() {
 		return "TALK";
 	}
-	
+
 	////////// LISTENER ////////////
 
 	@Override
 	public GenericListener getListener(NPC npc, String target) {
 		GenericListener listener = () -> {
-			String text = new Translatable().getTranslatedText(target, npc.getInstructionMap());
-			System.out.println(text);
+			String path = npc.getInstructionMap().split("NPC-")[0];
+			path = path.concat(target + ".csv");
+			String dialogue = new Translatable().getTranslatedText(null, path);
+
+			ChatBox chatbox = new ChatBox(dialogue);
+			chatbox.openChat();
 		};
-		
+
 		return listener;
 	}
 

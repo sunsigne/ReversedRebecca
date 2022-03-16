@@ -19,7 +19,15 @@
 
 	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
 
+	creer un system de log pour revoir les conversations
+
 	////////// FACILE ////////////
+
+	changer le volume de la musique quand le joueurs est en plein dialogue
+	
+	changer le visuel de la boite de dialogue (surtout la touche [E])
+	
+	ajouter un son quand les joueurs parlent
 
 	Le PJ ne devrait jamais être un obstacle pour les NPC et les foe
 	
