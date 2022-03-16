@@ -43,4 +43,12 @@ public class Statement {
 		new MassiveInstruction(statement + value);
 	}
 
+	////////// CHAT ////////////
+
+	public void chatFinished(String value) {
+		String statement = "TALK->";
+
+		new MassiveInstruction(statement + value);
+	}
+
 }

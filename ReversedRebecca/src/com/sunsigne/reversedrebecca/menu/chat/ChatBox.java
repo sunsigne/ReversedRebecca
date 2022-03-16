@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.instructions.Statement;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
@@ -18,8 +19,9 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChatBox implements Updatable, KeyboardEvent {
 
-	public ChatBox(LivingObject living, String dialogue) {
+	public ChatBox(LivingObject living, String target, String dialogue) {
 		this.living = living;
+		this.value = target;
 		loadImage();
 
 		// register the whole dialogue as an array of lines
@@ -89,6 +91,8 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 	////////// CLOSE ////////////
 
+	private String value;
+	
 	public void closeChat() {
 		World world = World.get();
 		if (world != null)
@@ -96,6 +100,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 		living.setFacing(registeredFacing);
 		LAYER.PUZZLE.getHandler().clear();
+		new Statement().chatFinished(value);
 	}
 
 	////////// KEYBOARD ////////////

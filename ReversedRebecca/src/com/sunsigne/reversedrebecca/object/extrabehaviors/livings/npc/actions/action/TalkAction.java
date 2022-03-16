@@ -39,7 +39,7 @@ public class TalkAction extends NPCAction {
 			path = path.concat(target + ".csv");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 
-			ChatBox chatbox = new ChatBox(npc, dialogue);
+			ChatBox chatbox = new ChatBox(npc, target, dialogue);
 			chatbox.openChat();
 		};
 
