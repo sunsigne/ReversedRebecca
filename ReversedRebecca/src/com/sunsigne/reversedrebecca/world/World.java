@@ -130,6 +130,13 @@ public class World implements Updatable {
 
 	////////// USEFULL ////////////
 
+	public void freeze(boolean freeze) {
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer.isMapLayer())
+				tempLayer.getHandler().setFreezeTicking(freeze);
+		}
+	}
+
 	public void destroy() {
 		closePuzzle();
 		resetLayers();

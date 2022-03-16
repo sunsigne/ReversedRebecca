@@ -66,5 +66,6 @@
 	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
+	un mini jeu où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	
 	 

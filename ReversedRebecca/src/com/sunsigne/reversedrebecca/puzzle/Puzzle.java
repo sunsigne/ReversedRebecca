@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class Puzzle implements Updatable {
 
@@ -38,10 +39,10 @@ public abstract class Puzzle implements Updatable {
 	////////// OPEN ////////////
 
 	public void openPuzzle() {
-		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer())
-				tempLayer.getHandler().setFreezeTicking(true);
-		}
+		World world = World.get();
+		if (world != null)
+			world.freeze(true);
+		
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 
@@ -73,10 +74,10 @@ public abstract class Puzzle implements Updatable {
 	private GenericListener actionOnWinning;
 
 	public void closePuzzle(boolean isPuzzleWon) {
-		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer())
-				tempLayer.getHandler().setFreezeTicking(false);
-		}
+		World world = World.get();
+		if (world != null)
+			world.freeze(false);
+		
 		LAYER.PUZZLE.getHandler().clear();
 		new GameCursor().setVisible(true);
 		if (isPuzzleWon)
