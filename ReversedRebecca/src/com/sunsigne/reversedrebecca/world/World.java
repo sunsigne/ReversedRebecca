@@ -6,11 +6,13 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.instructions.Statement;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -135,6 +137,15 @@ public class World implements Updatable {
 			if (tempLayer.isMapLayer())
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
+
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return;
+
+		if (freeze)
+			player.removeBehavior(player.canInteract);
+		else
+			player.addBehavior(player.canInteract);
 	}
 
 	public void destroy() {
