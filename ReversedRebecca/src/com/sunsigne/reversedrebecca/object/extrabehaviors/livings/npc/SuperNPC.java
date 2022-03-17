@@ -10,8 +10,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class SuperNPC extends LivingObject implements Interactive {
 
-	private static final int walking_speed = Size.XS / 5;
-	private static final int running_speed = Size.XS / 2;
+	private static final int walking_speed = Size.XS / 10;
+	private static final int running_speed = Size.XS / 5;
 
 	public SuperNPC(String name, int x, int y) {
 		super(name, x, y, walking_speed);

@@ -82,7 +82,7 @@ public class ChatContent implements Updatable {
 	}
 
 	private void pause() {
-		pausetime = 25;
+		pausetime = 15;
 	}
 
 	private void readSentence(int sentenceNum) {

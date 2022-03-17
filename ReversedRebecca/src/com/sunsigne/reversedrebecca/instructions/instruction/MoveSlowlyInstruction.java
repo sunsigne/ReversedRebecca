@@ -4,15 +4,15 @@ import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 
-public class MoveInstruction implements Instruction {
+public class MoveSlowlyInstruction implements Instruction {
 
 	////////// INSTRUCTION ////////////
 
-	public MoveInstruction() {
+	public MoveSlowlyInstruction() {
 		InstructionList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new MoveInstruction();
+	private static Instruction instruction = new MoveSlowlyInstruction();
 
 	@Override
 	public Instruction getInstruction() {
@@ -21,7 +21,7 @@ public class MoveInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "MOVE";
+		return "MSLOWLY";
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class MoveInstruction implements Instruction {
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		npc.setRunning(true);
+		npc.setRunning(false);
 		npc.setGoal(goal);
 	}
 

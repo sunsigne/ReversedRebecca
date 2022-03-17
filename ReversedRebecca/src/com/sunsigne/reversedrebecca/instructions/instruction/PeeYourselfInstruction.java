@@ -1,18 +1,18 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.other.PeePuddle;
 
-public class MoveInstruction implements Instruction {
+public class PeeYourselfInstruction implements Instruction {
 
 	////////// INSTRUCTION ////////////
 
-	public MoveInstruction() {
+	public PeeYourselfInstruction() {
 		InstructionList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new MoveInstruction();
+	private static Instruction instruction = new PeeYourselfInstruction();
 
 	@Override
 	public Instruction getInstruction() {
@@ -21,18 +21,15 @@ public class MoveInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "MOVE";
+		return "PEE";
 	}
 
 	@Override
 	public void doAction(NPC npc, String target) {
-		int x = Integer.parseInt(target.split(",")[0]);
-		int y = Integer.parseInt(target.split(",")[1]);
+		int x = npc.getX();
+		int y = npc.getY();
 
-		GoalObject goal = new GoalObject(x, y, false);
-
-		npc.setRunning(true);
-		npc.setGoal(goal);
+		npc.getHandler().getList().add(0, new PeePuddle(x, y));
 	}
 
 }

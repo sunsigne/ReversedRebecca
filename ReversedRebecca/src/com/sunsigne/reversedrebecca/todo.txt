@@ -11,6 +11,8 @@
 	
 	////////// IMPORTANT ////////////
 
+	FINIR LE PNG QUI SE PISSE DESSUS
+
 	UserCanKeyRestart -> à supprimer quand les tests sont fini
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
