@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.other.PeePuddle;
 
 public class PeeYourselfInstruction implements Instruction {
@@ -25,11 +25,11 @@ public class PeeYourselfInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(NPC npc, String target) {
-		int x = npc.getX();
-		int y = npc.getY();
+	public void doAction(LivingObject living, String target) {
+		int x = living.getX();
+		int y = living.getY();
 
-		npc.getHandler().getList().add(0, new PeePuddle(x, y));
+		living.getHandler().getList().add(0, new PeePuddle(x, y));
 	}
 
 }

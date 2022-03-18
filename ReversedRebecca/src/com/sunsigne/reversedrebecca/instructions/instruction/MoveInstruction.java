@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 
 public class MoveInstruction implements Instruction {
@@ -25,14 +26,15 @@ public class MoveInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(NPC npc, String target) {
+	public void doAction(LivingObject living, String target) {
 		int x = Integer.parseInt(target.split(",")[0]);
 		int y = Integer.parseInt(target.split(",")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		npc.setRunning(true);
-		npc.setGoal(goal);
+		if (living instanceof NPC)
+			((NPC) living).setRunning(true);
+		living.setGoal(goal);
 	}
 
 }

@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
 public class NameInstruction implements Instruction {
 
@@ -24,8 +24,8 @@ public class NameInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(NPC npc, String target) {
-		npc.setName(target);
+	public void doAction(LivingObject living, String target) {
+		living.setName(target);
 	}
 
 }

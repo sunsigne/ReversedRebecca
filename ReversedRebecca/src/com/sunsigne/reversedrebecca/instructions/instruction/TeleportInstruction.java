@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
 public class TeleportInstruction implements Instruction {
 
@@ -25,14 +25,14 @@ public class TeleportInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(NPC npc, String target) {
+	public void doAction(LivingObject living, String target) {
 		int x = Integer.parseInt(target.split(",")[0]);
 		int y = Integer.parseInt(target.split(",")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		npc.setX(goal.getX());
-		npc.setY(goal.getY());
+		living.setX(goal.getX());
+		living.setY(goal.getY());
 	}
 
 }

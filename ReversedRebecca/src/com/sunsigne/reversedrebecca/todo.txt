@@ -12,6 +12,7 @@
 	////////// IMPORTANT ////////////
 
 	FINIR LE PNG QUI SE PISSE DESSUS
+	faire en sorte que GotoInstruction et TalkInstruction soit compatible avec les livingObject
 
 	UserCanKeyRestart -> à supprimer quand les tests sont fini
 

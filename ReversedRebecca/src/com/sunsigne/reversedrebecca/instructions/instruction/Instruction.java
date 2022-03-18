@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 
 public interface Instruction {
 
@@ -10,6 +10,6 @@ public interface Instruction {
 
 	String getType();
 
-	void doAction(NPC npc, String target);
+	void doAction(LivingObject living, String target);
 
 }

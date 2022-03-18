@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionAnalyzer;
 
@@ -27,7 +28,12 @@ public class TripleActionInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(NPC npc, String target) {
+	public void doAction(LivingObject living, String target) {
+		if (living instanceof NPC == false)
+			return;
+
+		NPC npc = (NPC) living;
+
 		String[] values = target.split(",");
 
 		String actionInstruction1 = values.length > 0 ? values[0] : null;
