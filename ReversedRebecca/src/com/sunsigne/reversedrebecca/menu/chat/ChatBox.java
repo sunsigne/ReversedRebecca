@@ -4,11 +4,11 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.Statement;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.instructions.instruction.FacingInstruction;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -57,16 +57,11 @@ public class ChatBox implements Updatable, KeyboardEvent {
 	////////// OPEN ////////////
 
 	private LivingObject living;
-	private DIRECTION registeredFacing;
 
 	public void openChat() {
 		World world = World.get();
 		if (world != null)
 			world.freeze(true);
-
-		registeredFacing = living.getFacing();
-		DIRECTION playerFacing = new PlayerFinder().getPlayer().getFacing();
-		living.setFacing(Facing.getOppositeOf(playerFacing));
 
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
@@ -82,23 +77,36 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 		String line = all_lines[count - 1];
 		String living_name = line.split("=")[0];
-		String mood = line.split("=")[1];
-		String text = line.split("=")[2];
+		String facing = line.split("=")[1];
+		String mood = line.split("=")[2];
+		String text = line.split("=")[3];
 
 		content = new ChatContent(living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);
+
+		Instruction instruction = InstructionList.getList().getObject(new FacingInstruction());
+
+		for (Updatable tempUpdatable : living.getHandler().getList()) {
+			if (tempUpdatable instanceof LivingObject == false)
+				continue;
+
+			LivingObject tempLiving = (LivingObject) tempUpdatable;
+
+			if (tempLiving.getName().equalsIgnoreCase(living_name)) {
+				instruction.doAction(tempLiving, facing);
+			}
+		}
 	}
 
 	////////// CLOSE ////////////
 
 	private String value;
-	
+
 	public void closeChat() {
 		World world = World.get();
 		if (world != null)
 			world.freeze(false);
 
-		living.setFacing(registeredFacing);
 		LAYER.PUZZLE.getHandler().clear();
 		new Statement().chatFinished(value);
 	}
