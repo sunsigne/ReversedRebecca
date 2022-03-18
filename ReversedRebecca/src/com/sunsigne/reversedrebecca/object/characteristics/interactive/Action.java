@@ -47,7 +47,7 @@ public class Action {
 
 	private GenericListener listener;
 
-	protected void setListener(GenericListener listener) {
+	public void setListener(GenericListener listener) {
 		this.listener = listener;
 	}
 
