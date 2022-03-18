@@ -56,6 +56,11 @@ public class BlockingPath implements CollisionBehavior {
 	////////// COLLISION ////////////
 	
 	@Override
+	public boolean isBlockingSight() {
+		return getExtraBehaviorsObject().isBlockingSight();
+	}
+	
+	@Override
 	public boolean isBlockingPath() {
 		return getExtraBehaviorsObject().isBlockingPath();
 	}

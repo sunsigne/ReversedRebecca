@@ -26,6 +26,11 @@ public class Wall extends GameObject implements CollisionReactor {
 	}
 
 	////////// COLLISION ////////////
+	
+	@Override
+	public boolean isBlockingSight() {
+		return true;
+	}
 
 	@Override
 	public boolean isBlockingPath() {

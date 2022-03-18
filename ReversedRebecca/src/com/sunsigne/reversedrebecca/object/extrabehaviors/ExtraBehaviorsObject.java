@@ -83,6 +83,11 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 	}
 
 	////////// COLLISION ////////////
+	
+	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
 
 	@Override
 	public boolean isBlockingPath() {

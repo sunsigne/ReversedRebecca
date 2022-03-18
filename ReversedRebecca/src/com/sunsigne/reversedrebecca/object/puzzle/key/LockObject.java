@@ -52,6 +52,11 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
+
+	@Override
 	public boolean isBlockingPath() {
 		return false;
 	}

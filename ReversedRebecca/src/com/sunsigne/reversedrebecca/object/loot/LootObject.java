@@ -22,6 +22,16 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 	}
 
 	////////// COLLISION ////////////
+	
+	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
+
+	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {

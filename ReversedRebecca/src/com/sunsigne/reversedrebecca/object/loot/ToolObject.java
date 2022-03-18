@@ -59,11 +59,6 @@ public class ToolObject extends LootObject implements Difficulty {
 	////////// COLLISION ////////////
 
 	@Override
-	public boolean isBlockingPath() {
-		return false;
-	}
-
-	@Override
 	public String getTextWhenLooted() {
 		return new Translatable().getTranslatedText(toolPlayer.getName() + difficulty.getName(), file);
 	}

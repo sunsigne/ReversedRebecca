@@ -71,6 +71,11 @@ public class PushingPlayer implements CollisionBehavior {
 	}
 
 	@Override
+	public boolean isBlockingSight() {
+		return getExtraBehaviorsObject().isBlockingSight();
+	}
+
+	@Override
 	public boolean isBlockingPath() {
 		return getExtraBehaviorsObject().isBlockingPath();
 	}
