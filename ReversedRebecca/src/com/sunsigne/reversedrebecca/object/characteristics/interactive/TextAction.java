@@ -25,7 +25,8 @@ public class TextAction implements Updatable {
 
 	@Override
 	public void tick() {
-
+		if (tripleAction != interactive.getTripleAction())
+			getHandler().removeObject(this);
 	}
 
 	////////// RENDER ////////////
