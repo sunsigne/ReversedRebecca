@@ -12,6 +12,9 @@ public class ActionAnalyzer {
 		if (actionInstruction == null)
 			return null;
 
+		if (actionInstruction.equalsIgnoreCase("null"))
+			return null;
+		
 		String actionType = actionInstruction.split(":")[0];
 		String target = actionInstruction.split(":")[1];
 
