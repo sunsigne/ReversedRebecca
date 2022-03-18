@@ -1,2 +1,2 @@
-error = neutral = Le#chemin#est#complètement#bloqué#...@Je#crois#qu'il#y#a#des#explosifs#dans#la#réserve.
-rebecca = determinated = Ok#!#Je#vais#aller#chercher#ça.
+error = rebecca = neutral = Le#chemin#est#complètement#bloqué#...@Je#crois#qu'il#y#a#des#explosifs#dans#la#réserve.
+rebecca = error = determinated = Ok#!#Je#vais#aller#chercher#ça.
