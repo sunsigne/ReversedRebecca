@@ -12,7 +12,7 @@ public interface Difficulty {
 
 	public enum LVL {
 		NULL("null"), CYAN("cyan"), GREEN("green"), YELLOW("yellow"), ORANGE("orange"),
-		RED("red")/* , PURPLE("purple") */;
+		RED("red"), PURPLE("purple");
 		// purple is special difficulty, for boss or senario only
 
 		private String name;

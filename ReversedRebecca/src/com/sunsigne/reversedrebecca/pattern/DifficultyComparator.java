@@ -8,6 +8,9 @@ public class DifficultyComparator {
 
 		switch (tool_lvl) {
 
+		case PURPLE:
+			if (puzzle_lvl == LVL.PURPLE)
+				return true;		
 		case RED:
 			if (puzzle_lvl == LVL.RED)
 				return true;
@@ -55,6 +58,9 @@ public class DifficultyComparator {
 				return false;
 		case RED:
 			if (max_lvl == LVL.RED)
+				return false;
+		case PURPLE:
+			if (max_lvl == LVL.PURPLE)
 				return false;
 
 		}

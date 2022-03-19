@@ -28,6 +28,9 @@
 
 	////////// FACILE ////////////
 
+	Les Purple Puzzle ne sont pas créé (ce qui est normal pour le moment)
+	!! MultiToolMode ne va que jusqu'à RED
+
 	changer le volume de la musique quand le joueurs est en plein dialogue
 	
 	changer le visuel de la boite de dialogue (surtout la touche [E])
