@@ -67,6 +67,7 @@ public class FacingInstruction implements Instruction {
 
 			if (tempLiving.getName().equalsIgnoreCase(target)) {
 				PathFinder pathFinder = new PathFinder(living, tempLiving, true);
+				living.setMotionless();
 				living.setFacing(pathFinder.getPath());
 				return;
 			}
