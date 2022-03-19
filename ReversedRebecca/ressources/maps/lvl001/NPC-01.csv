@@ -1,3 +1,1 @@
-TIME -> 0 = GOTO -> NAME
-
-$ -> NAME = NAME -> SARAH
+TIME -> 0 = GOTO -> NAME:SARAH
