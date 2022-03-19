@@ -21,8 +21,16 @@ public class PlayerFinder {
 	}
 
 	public boolean isPlayerFutherThan(Velocity object, int distance) {
-		int diffX = object.getX() - getPlayer().getX();
-		int diffY = object.getY() - getPlayer().getY();
+		Player player = getPlayer();
+
+		if (player == null)
+			return true;
+
+		if (player.getHandler() != object.getHandler())
+			return true;
+
+		int diffX = object.getX() - player.getX();
+		int diffY = object.getY() - player.getY();
 		float playerDistance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
 
 		return playerDistance > distance;
