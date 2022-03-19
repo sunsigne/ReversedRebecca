@@ -30,7 +30,7 @@ public class SightInstruction implements Instruction {
 	@Override
 	public void doAction(LivingObject living, String target) {
 
-		ConditionAnalyser condition = new ConditionAnalyser(target);
+		ConditionAnalyser condition = ConditionAnalyser.create(target);
 	
 		for (Updatable tempUpdatable : living.getHandler().getList()) {
 			if (tempUpdatable instanceof LivingObject == false)

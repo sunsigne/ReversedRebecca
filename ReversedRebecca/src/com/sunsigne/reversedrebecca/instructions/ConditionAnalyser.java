@@ -2,7 +2,14 @@ package com.sunsigne.reversedrebecca.instructions;
 
 public class ConditionAnalyser {
 
-	public ConditionAnalyser(String target) {
+	public static ConditionAnalyser create(String target) {
+		if (target.contains("?"))
+			return new ConditionAnalyser(target);
+		else
+			return null;
+	}
+
+	private ConditionAnalyser(String target) {
 		valueToCheck = String.valueOf(target.split("\\?")[0]);
 
 		trueAction = String.valueOf(String.valueOf(target.split("\\?")[1])).split(":")[0];
