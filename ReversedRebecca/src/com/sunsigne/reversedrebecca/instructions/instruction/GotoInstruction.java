@@ -49,7 +49,9 @@ public class GotoInstruction implements Instruction {
 				if (tempValue.contains(tempInstruction.getType()))
 					tempInstruction.doAction(living, tempValue.split(":")[1]);
 			}
-			new InstructionAnalyzer(npc, statement + tempValue);
+
+			if (!tempValue.equalsIgnoreCase("null"))
+				new InstructionAnalyzer(npc, statement + tempValue);
 		}
 	}
 

@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.instructions.Statement;
+import com.sunsigne.reversedrebecca.instructions.TagList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
@@ -153,6 +154,7 @@ public class World implements Updatable {
 		resetLayers();
 		instance = null;
 		new CharacteristicList().reset();
+		TagList.getList().clear();
 		Game.getInstance().forceLoop();
 	}
 
