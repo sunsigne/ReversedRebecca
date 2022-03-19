@@ -21,7 +21,7 @@ public class TeleportInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "TELEPORT";
+		return "TP";
 	}
 	
 	@Override

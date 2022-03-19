@@ -12,8 +12,9 @@ public class ConditionAnalyser {
 	private ConditionAnalyser(String target) {
 		valueToCheck = String.valueOf(target.split("\\?")[0]);
 
-		trueAction = String.valueOf(String.valueOf(target.split("\\?")[1])).split(":")[0];
-		falseAction = String.valueOf(String.valueOf(target.split("\\?")[1])).split(":")[1];
+		String action = String.valueOf(target.split("\\?")[1]);		
+		trueAction = String.valueOf(action.split("\\/")[0]);
+		falseAction = String.valueOf(action.split("\\/")[1]);
 	}
 
 	////////// VALUE ////////////

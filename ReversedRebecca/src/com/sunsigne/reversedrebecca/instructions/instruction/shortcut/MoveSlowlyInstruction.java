@@ -1,6 +1,7 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
@@ -22,18 +23,18 @@ public class MoveSlowlyInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "MSLOWLY";
+		return "SLOW";
 	}
 	
 	@Override
 	public boolean isShortcut() {
-		return false;
+		return true;
 	}
 	
 	@Override
 	public void doAction(LivingObject living, String target) {
-		int x = Integer.parseInt(target.split(",")[0]);
-		int y = Integer.parseInt(target.split(",")[1]);
+		int x = Integer.parseInt(target.split("-")[0]);
+		int y = Integer.parseInt(target.split("-")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 

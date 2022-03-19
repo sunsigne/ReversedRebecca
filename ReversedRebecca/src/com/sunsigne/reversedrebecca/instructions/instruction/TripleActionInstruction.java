@@ -26,12 +26,12 @@ public class TripleActionInstruction implements Instruction {
 	public String getType() {
 		return "TRIPLE_ACTION";
 	}
-	
+
 	@Override
 	public boolean isShortcut() {
 		return false;
 	}
-	
+
 	@Override
 	public void doAction(LivingObject living, String target) {
 		if (living instanceof NPC == false)
@@ -39,7 +39,9 @@ public class TripleActionInstruction implements Instruction {
 
 		NPC npc = (NPC) living;
 
-		String[] values = target.split(",");
+		String[] values = new String[] {};
+		if (target != null)
+			values = target.split(",");
 
 		String actionInstruction1 = values.length > 0 ? values[0] : null;
 		String actionInstruction2 = values.length > 1 ? values[1] : null;

@@ -28,6 +28,10 @@
 
 	////////// FACILE ////////////
 
+	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
+	
+	MoveSlowlyInstruction -> à merge avec MoveInstruction + incompatible avec tous les living
+	
 	Les Purple Puzzle ne sont pas créé (ce qui est normal pour le moment)
 	!! MultiToolMode ne va que jusqu'à RED
 

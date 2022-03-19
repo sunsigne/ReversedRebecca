@@ -34,9 +34,11 @@ public class LockInstruction implements Instruction {
 
 	@Override
 	public void doAction(LivingObject living, String target) {
-		int x = Integer.parseInt(target.split(",")[0]);
-		int y = Integer.parseInt(target.split(",")[1]);
-		LVL lvl = LVL.valueOf(target.split(",")[2]);
+		
+		String pos = String.valueOf(target.split(":")[0]);
+		int x = Integer.parseInt(pos.split("-")[0]);
+		int y = Integer.parseInt(pos.split("-")[1]);
+		LVL lvl = LVL.valueOf(target.split(":")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);		
 		Handler handler = living.getHandler();

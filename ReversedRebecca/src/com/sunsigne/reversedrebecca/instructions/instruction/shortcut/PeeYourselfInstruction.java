@@ -1,6 +1,7 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.other.PeePuddle;
 
@@ -21,12 +22,12 @@ public class PeeYourselfInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "PEE";
+		return "PEEING";
 	}
 	
 	@Override
 	public boolean isShortcut() {
-		return false;
+		return true;
 	}
 	
 	@Override

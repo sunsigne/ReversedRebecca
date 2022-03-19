@@ -35,10 +35,10 @@ public class WaitforInstruction implements Instruction {
 	@Override
 	public void doAction(LivingObject living, String target) {
 
-		String scanner = String.valueOf(target.split(",")[0]);
+		String condition = String.valueOf(target.split(",")[0]);
 
-		String type = String.valueOf(scanner.split(":")[0]);
-		String value = String.valueOf(scanner.split(":")[1]);
+		String type = String.valueOf(condition.split(":")[0]);
+		String value = String.valueOf(condition.split(":")[1]);
 		String action = String.valueOf(target.split(",")[1]);
 
 		GenericListener generic = new GenericListener() {

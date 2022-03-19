@@ -2,6 +2,9 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.a
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
+import com.sunsigne.reversedrebecca.instructions.instruction.TripleActionInstruction;
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionList;
@@ -41,6 +44,9 @@ public class TalkAction extends NPCAction {
 
 			ChatBox chatbox = new ChatBox(npc, target, dialogue);
 			chatbox.openChat();
+
+			Instruction instruction = InstructionList.getList().getObject(new TripleActionInstruction());
+			instruction.doAction(npc, null);
 		};
 
 		return listener;

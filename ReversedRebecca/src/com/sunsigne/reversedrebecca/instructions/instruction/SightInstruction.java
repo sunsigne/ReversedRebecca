@@ -24,7 +24,7 @@ public class SightInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "SIGHT";
+		return "SEE";
 	}
 	
 	@Override

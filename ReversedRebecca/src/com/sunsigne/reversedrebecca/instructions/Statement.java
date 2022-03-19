@@ -27,7 +27,7 @@ public class Statement {
 		String statement = "GOAL->";
 
 		GoalObject pos = new GoalObject(goal.getX(), goal.getY(), true);
-		String value = pos.getX() + "," + pos.getY();
+		String value = pos.getX() + "-" + pos.getY();
 
 		new InstructionAnalyzer((NPC) searcher, statement + value);
 	}
@@ -38,7 +38,7 @@ public class Statement {
 		String statement = "WONPUZZLE->";
 
 		GoalObject puzzlerPos = new GoalObject(puzzlerObject.getX(), puzzlerObject.getY(), true);
-		String value = puzzlerPos.getX() + "," + puzzlerPos.getY();
+		String value = puzzlerPos.getX() + "-" + puzzlerPos.getY();
 
 		new MassiveInstruction(statement + value);
 	}
