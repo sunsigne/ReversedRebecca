@@ -9,7 +9,11 @@ public interface Instruction {
 	Instruction getInstruction();
 
 	String getType();
-
+	
+	boolean isShortcut();
+	
 	void doAction(LivingObject living, String target);
+	
+
 
 }

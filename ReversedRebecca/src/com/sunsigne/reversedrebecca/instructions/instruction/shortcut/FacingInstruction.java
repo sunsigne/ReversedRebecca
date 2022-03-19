@@ -1,7 +1,9 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.ConditionAnalyser;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.GotoInstruction;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
@@ -27,6 +29,11 @@ public class FacingInstruction implements Instruction {
 		return "FACING";
 	}
 
+	@Override
+	public boolean isShortcut() {
+		return true;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 

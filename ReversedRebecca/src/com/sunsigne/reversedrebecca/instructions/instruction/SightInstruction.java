@@ -26,7 +26,12 @@ public class SightInstruction implements Instruction {
 	public String getType() {
 		return "SIGHT";
 	}
-
+	
+	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 

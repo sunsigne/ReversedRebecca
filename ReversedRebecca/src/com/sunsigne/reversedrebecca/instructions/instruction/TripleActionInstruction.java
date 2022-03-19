@@ -26,7 +26,12 @@ public class TripleActionInstruction implements Instruction {
 	public String getType() {
 		return "TRIPLE_ACTION";
 	}
-
+	
+	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 		if (living instanceof NPC == false)

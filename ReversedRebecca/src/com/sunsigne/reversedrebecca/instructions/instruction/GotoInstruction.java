@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionAnalyzer;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.shortcut.NameInstruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 
@@ -27,6 +26,11 @@ public class GotoInstruction implements Instruction {
 	}
 
 	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+
+	@Override
 	public void doAction(LivingObject living, String target) {
 		if (living instanceof NPC == false)
 			return;
@@ -37,14 +41,14 @@ public class GotoInstruction implements Instruction {
 		String statement = "$->";
 
 		for (String tempValue : values) {
-			
-			if (tempValue.contains("NAME")) {
-				Instruction instruction = InstructionList.getList().getObject(new NameInstruction());
-				String name = tempValue.split(":")[1];
-				instruction.doAction(living, name);
-				continue;
+
+			for (Instruction tempInstruction : InstructionList.getList().getList()) {
+				if (!tempInstruction.isShortcut())
+					continue;
+
+				if (tempValue.contains(tempInstruction.getType()))
+					tempInstruction.doAction(living, tempValue.split(":")[1]);
 			}
-			
 			new InstructionAnalyzer(npc, statement + tempValue);
 		}
 	}

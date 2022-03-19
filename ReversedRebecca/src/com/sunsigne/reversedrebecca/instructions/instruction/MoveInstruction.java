@@ -24,7 +24,12 @@ public class MoveInstruction implements Instruction {
 	public String getType() {
 		return "MOVE";
 	}
-
+	
+	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 		int x = Integer.parseInt(target.split(",")[0]);

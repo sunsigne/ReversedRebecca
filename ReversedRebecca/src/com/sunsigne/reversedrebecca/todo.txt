@@ -20,6 +20,8 @@
 
 	////////// DIFFICILE ////////////
 
+	les NPC ont parfois le pieds en l'air en plus dialogues (pas naturel)
+
 	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
 
 	creer un system de log pour revoir les conversations

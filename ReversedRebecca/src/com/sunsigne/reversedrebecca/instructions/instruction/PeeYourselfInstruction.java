@@ -23,7 +23,12 @@ public class PeeYourselfInstruction implements Instruction {
 	public String getType() {
 		return "PEE";
 	}
-
+	
+	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 		int x = living.getX();

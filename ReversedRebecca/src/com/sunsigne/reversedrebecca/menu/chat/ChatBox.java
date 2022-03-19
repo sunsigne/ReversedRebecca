@@ -6,8 +6,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.Statement;
-import com.sunsigne.reversedrebecca.instructions.instruction.FacingInstruction;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
+import com.sunsigne.reversedrebecca.instructions.instruction.shortcut.FacingInstruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

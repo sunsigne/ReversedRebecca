@@ -25,7 +25,12 @@ public class TalkInstruction implements Instruction {
 	public String getType() {
 		return "TALK";
 	}
-
+	
+	@Override
+	public boolean isShortcut() {
+		return false;
+	}
+	
 	@Override
 	public void doAction(LivingObject living, String target) {
 		if (living instanceof NPC == false)

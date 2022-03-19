@@ -23,10 +23,16 @@ public class NameInstruction implements Instruction {
 	public String getType() {
 		return "NAME";
 	}
+	
+	@Override
+	public boolean isShortcut() {
+		return true;
+	}
 
 	@Override
 	public void doAction(LivingObject living, String target) {
 		living.setName(target);
 	}
+
 
 }
