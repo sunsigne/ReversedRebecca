@@ -28,7 +28,7 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 
 	////////// TICK ////////////
 
-	private final int ANIMATION_TIME = 10;
+	private final int ANIMATION_TIME = 15;
 	private int time = ANIMATION_TIME;
 
 	@Override
@@ -43,6 +43,7 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 		for (int i = 0; i < walking.length; i++) {
 			walking[i].setState(0);
 		}
+		time = ANIMATION_TIME;
 	}
 
 	private void runAnimation() {
@@ -59,6 +60,7 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 
 	@SuppressWarnings("unchecked")
 	private Cycloid<BufferedImage>[] walking = new Cycloid[4];
+	private BufferedImage[] standing = new BufferedImage[4];
 	private BufferedImage ground;
 
 	private void loadAnimations() {
@@ -66,22 +68,26 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 		walking[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.RIGHT));
 		walking[DIRECTION.UP.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.UP));
 		walking[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.DOWN));
+		
+		standing[DIRECTION.LEFT.getNum()] = loadImage("standing_" + DIRECTION.LEFT.getName());
+		standing[DIRECTION.RIGHT.getNum()] = loadImage("standing_" + DIRECTION.RIGHT.getName());
+		standing[DIRECTION.UP.getNum()] = loadImage("standing_" + DIRECTION.UP.getName());
+		standing[DIRECTION.DOWN.getNum()] = loadImage("standing_" + DIRECTION.DOWN.getName());
+		
 		ground = loadImage("ground");
 	}
 	
 	private BufferedImage[] loadAnimation(DIRECTION direction) {
 
-		BufferedImage img0 = loadImage(direction.getName() + "_1");
-		BufferedImage img1 = loadImage(direction.getName() + "_0");
-		BufferedImage img2 = loadImage(direction.getName() + "_1");
-		BufferedImage img3 = loadImage(direction.getName() + "_2");
+		BufferedImage img0 = loadImage("walking_" + direction.getName() + "_0");
+		BufferedImage img1 = loadImage("walking_" + direction.getName() + "_1");
 
-		return new BufferedImage[] { img0, img1, img2, img3 };
+		return new BufferedImage[] { img0, img1 };
 	}
 	
 	private BufferedImage loadImage(String imageName) {
-		String imagePath = "textures/characters/" + living.getName() + "/walking_" + imageName;
-		String backupImagePath = "textures/characters/" + "error" + "/walking_" + imageName;
+		String imagePath = "textures/characters/" + living.getName() + "/" + imageName;
+		String backupImagePath = "textures/characters/" + "error" + "/" + imageName;
 
 		return new ImageTask().loadImage(imagePath, backupImagePath, false);
 	}
@@ -95,11 +101,14 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 	
 	private BufferedImage getImage() {
 		int facing = living.getFacing().getNum();
-		
-		if (facing > -1)
-			return walking[facing].getState();
-		else
+
+		if (facing == -1)
 			return ground;
+
+		if (living.isMotionless())
+			return standing[facing];
+
+		return walking[facing].getState();
 	}
 
 }
