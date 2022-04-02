@@ -37,7 +37,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	////////// MAP OR LIST ////////////
 
 	public void softRemoveObject(Updatable object) {
-		if (object == null || !cointainsObject(object))
+		if (object == null || !containsObject(object))
 			return;
 
 		getList().remove(object);
@@ -45,7 +45,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	@Override
 	public void removeObject(Updatable object) {
-		if (object == null || !cointainsObject(object))
+		if (object == null || !containsObject(object))
 			return;
 
 		object.destroyControls();

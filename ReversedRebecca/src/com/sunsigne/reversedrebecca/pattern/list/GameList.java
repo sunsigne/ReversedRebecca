@@ -27,7 +27,7 @@ public class GameList<T> {
 		return null;
 	}
 
-	public boolean cointainsObject(T object) {
+	public boolean containsObject(T object) {
 		if (object == null)
 			return false;
 
@@ -35,14 +35,14 @@ public class GameList<T> {
 	}
 
 	public void addObject(T object) {
-		if (object == null || cointainsObject(object))
+		if (object == null || containsObject(object))
 			return;
 
 		getList().add(object);
 	}
 
 	public void removeObject(T object) {
-		if (object == null || !cointainsObject(object))
+		if (object == null || !containsObject(object))
 			return;
 
 		getList().remove(object);

@@ -12,7 +12,7 @@ public class VelocityLaw implements PhysicLaw {
 	////////// PHYSIC LAW ////////////
 
 	public VelocityLaw() {
-		if (PhysicList.getList().cointainsObject(physicLaw))
+		if (PhysicList.getList().containsObject(physicLaw))
 			return;
 		
 		PhysicList.getList().getList().add(0, this);

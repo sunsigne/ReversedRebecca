@@ -41,7 +41,7 @@ public interface Interactive extends Velocity, KeyboardEvent {
 			return false;
 
 		// player specifically can't interact
-		if (!player.getBehaviorList().cointainsObject(new CanInteract(player)))
+		if (!player.getBehaviorList().containsObject(new CanInteract(player)))
 			return false;
 
 		// player is not on the same layer

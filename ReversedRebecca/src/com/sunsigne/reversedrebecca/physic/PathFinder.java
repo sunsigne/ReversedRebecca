@@ -250,7 +250,7 @@ public class PathFinder implements Position {
 
 			PathPointObject tempPassPoint = (PathPointObject) tempUpdatable;
 
-			if (valid_path_point_list.cointainsObject(tempPassPoint))
+			if (valid_path_point_list.containsObject(tempPassPoint))
 				continue;
 
 			for (PathPointObject previousPassPoint : copy_list.getList()) {

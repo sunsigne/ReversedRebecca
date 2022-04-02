@@ -9,7 +9,7 @@ public interface Updatable {
 
 	default Handler getHandler() {
 		for (Handler tempHandler : SuperHandler.getGameList().getList()) {
-			if (tempHandler.cointainsObject(this))
+			if (tempHandler.containsObject(this))
 				return tempHandler;
 		}
 		return null;

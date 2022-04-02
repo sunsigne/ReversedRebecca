@@ -9,7 +9,7 @@ public class GameLimitedList<T> extends GameList<T> {
 	////////// MAP OR LIST ////////////
 	
 	@Override
-	public boolean cointainsObject(T object) {
+	public boolean containsObject(T object) {
 		if (object == null)
 			return false;
 
@@ -38,7 +38,7 @@ public class GameLimitedList<T> extends GameList<T> {
 	
 	@Override
 	public void removeObject(T object) {
-		if (object == null || !cointainsObject(object))
+		if (object == null || !containsObject(object))
 			return;
 
 		getList().remove(getObject(object));
