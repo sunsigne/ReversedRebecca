@@ -9,6 +9,9 @@
 	
 	////////// IMPORTANT ////////////
 
+	Les png error ne se tournent pas ?
+	Le dialogue error du png error se répète en boucle ... ?
+	
 	FINIR LE PNG QUI SE PISSE DESSUS
 	faire en sorte que GotoInstruction et TalkInstruction soit compatible avec les livingObject
 
