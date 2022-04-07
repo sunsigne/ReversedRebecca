@@ -2,15 +2,15 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.a
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionList;
 
-public class WatchAction extends TalkAction {
+public class ReadAction extends WatchAction {
 
 	////////// NPC ACTION ////////////
 
-	public WatchAction() {
+	public ReadAction() {
 		ActionList.getList().addObject(this);
 	}
 
-	private static ObjectAction action = new WatchAction();
+	private static ObjectAction action = new ReadAction();
 
 	@Override
 	public ObjectAction getAction() {
@@ -21,14 +21,7 @@ public class WatchAction extends TalkAction {
 
 	@Override
 	public String getName() {
-		return "WATCH";
-	}
-
-	////////// LISTENER ////////////
-
-	@Override
-	public String getType() {
-		return "object-";
+		return "READ";
 	}
 
 }

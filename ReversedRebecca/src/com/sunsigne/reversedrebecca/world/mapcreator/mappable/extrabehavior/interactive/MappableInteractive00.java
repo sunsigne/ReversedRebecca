@@ -27,7 +27,7 @@ public class MappableInteractive00 implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 255, 255 };
+		int[] rgb = { 128, 128, 255 };
 		return rgb;
 	}
 

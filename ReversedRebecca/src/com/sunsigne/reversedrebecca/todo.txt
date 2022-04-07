@@ -29,7 +29,7 @@
 
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
 
-	les NPC ont parfois le pieds en l'air en plus dialogues (pas naturel)
+	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 
 	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
 
@@ -39,7 +39,6 @@
 
 	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
 
-	Les Purple Puzzle ne sont pas créé (ce qui est normal pour le moment)
 	!! MultiToolMode ne va que jusqu'à RED
 
 	changer le volume de la musique quand le joueurs est en plein dialogue
@@ -54,8 +53,6 @@
 
 	ATTENTION ! quand les npc se déplace, risque d'envoyer balader le jouer + régler leurs vitesse
 
-	MappableNPC -> ils sont tous les même pour l'instant
-	
 	NPC -> class pas encore fini
 	
 	MovingToPlayer des foes devrait s'adapter à la distance
