@@ -1,4 +1,8 @@
-///// NPC /////
+///// OBJECT /////
+
+WATCH = regarder
+
+///// LIVING /////
 
 TALK = parler
 TRIP = croche#pied
