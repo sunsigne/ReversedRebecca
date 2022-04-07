@@ -9,6 +9,9 @@
 	
 	////////// IMPORTANT ////////////
 
+	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
+
+	La plante jaune n'est pas finie
 	faire une vitesse de course DNAS livingObject ?
 
 	faire en sorte que lorsqu'un text n'est pas disponible dans une langue, ne plante pas
@@ -32,6 +35,8 @@
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
+
+	Mappable, interactive ne devrait il pas être rangé avec les npc ? (ou plutot le contraire)
 
 	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
 	
