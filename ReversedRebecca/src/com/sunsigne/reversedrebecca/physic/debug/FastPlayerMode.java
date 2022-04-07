@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.player.Player;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 

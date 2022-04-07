@@ -1,19 +1,19 @@
 package com.sunsigne.reversedrebecca.instructions;
 
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class InstructionAnalyzer {
 
-	public InstructionAnalyzer(NPC npc, String value) {
-		this.npc = npc;
+	public InstructionAnalyzer(ExtraBehaviorsObject object, String value) {
+		this.object = object;
 
 		// if NPC has no InstructionMap
-		if (new FileTask().doesExist(npc.getInstructionMap()) == false)
+		if (new FileTask().doesExist(object.getInstructionMap()) == false)
 			return;
 
-		instruction = new FileTask().read(value.toUpperCase(), npc.getInstructionMap());
+		instruction = new FileTask().read(value.toUpperCase(), object.getInstructionMap());
 
 		// if Statement has no correlated Instruction
 		if (instruction.isBlank())
@@ -22,7 +22,7 @@ public class InstructionAnalyzer {
 		processInstruction();
 	}
 
-	private NPC npc;
+	private ExtraBehaviorsObject object;
 	private String instruction;
 
 	private void processInstruction() {
@@ -31,7 +31,7 @@ public class InstructionAnalyzer {
 
 		for (Instruction tempInstruction : InstructionList.getList().getList()) {
 			if (instructionType.equalsIgnoreCase(tempInstruction.getType())) {
-				tempInstruction.doAction(npc, target);
+				tempInstruction.doAction(object, target);
 			}
 		}
 	}

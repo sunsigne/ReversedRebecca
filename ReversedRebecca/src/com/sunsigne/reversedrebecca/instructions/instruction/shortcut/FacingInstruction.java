@@ -5,7 +5,8 @@ import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.instruction.GotoInstruction;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -33,49 +34,49 @@ public class FacingInstruction implements Instruction {
 	public boolean isShortcut() {
 		return true;
 	}
-	
+
 	@Override
-	public void doAction(LivingObject living, String target) {
+	public void doAction(ExtraBehaviorsObject object, String target) {
 
 		ConditionAnalyser condition = ConditionAnalyser.create(target);
 
 		if (condition != null)
-			checkFacing(condition, living, target);
+			checkFacing(condition, object, target);
 		else
-			doFacing(living, target);
+			doFacing(object, target);
 	}
 
-	private void checkFacing(ConditionAnalyser condition, LivingObject living, String target) {
+	private void checkFacing(ConditionAnalyser condition, ExtraBehaviorsObject object, String target) {
 
-		if (living.getFacing().getName().equalsIgnoreCase(condition.getValueToCheck()))
+		if (object.getFacing().getName().equalsIgnoreCase(condition.getValueToCheck()))
 			condition.setMet(true);
 
 		Instruction instruction = InstructionList.getList().getObject(new GotoInstruction());
-		instruction.doAction(living, condition.getAction());
+		instruction.doAction(object, condition.getAction());
 	}
 
-	private void doFacing(LivingObject living, String target) {
+	private void doFacing(ExtraBehaviorsObject object, String target) {
 
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {
 			if (tempFacing.getName().equalsIgnoreCase(target)) {
-				living.setMotionless();
-				living.setFacing(tempFacing);
+				object.setMotionless();
+				object.setFacing(tempFacing);
 				return;
 			}
 		}
 
 		// if facing is a character
-		for (Updatable tempUpdatable : living.getHandler().getList()) {
+		for (Updatable tempUpdatable : object.getHandler().getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 
 			LivingObject tempLiving = (LivingObject) tempUpdatable;
 
 			if (tempLiving.getName().equalsIgnoreCase(target)) {
-				PathFinder pathFinder = new PathFinder(living, tempLiving, true);
-				living.setMotionless();
-				living.setFacing(pathFinder.getPath());
+				PathFinder pathFinder = new PathFinder(object, tempLiving, true);
+				object.setMotionless();
+				object.setFacing(pathFinder.getPath());
 				return;
 			}
 		}

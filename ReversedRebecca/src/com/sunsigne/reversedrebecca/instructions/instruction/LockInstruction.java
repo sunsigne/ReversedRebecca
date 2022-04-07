@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.puzzler.door.DoorObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -33,15 +33,15 @@ public class LockInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
-		
+	public void doAction(ExtraBehaviorsObject object, String target) {
+
 		String pos = String.valueOf(target.split(":")[0]);
 		int x = Integer.parseInt(pos.split("-")[0]);
 		int y = Integer.parseInt(pos.split("-")[1]);
 		LVL lvl = LVL.valueOf(target.split(":")[1]);
 
-		GoalObject goal = new GoalObject(x, y, false);		
-		Handler handler = living.getHandler();
+		GoalObject goal = new GoalObject(x, y, false);
+		Handler handler = object.getHandler();
 
 		handler.removeObject(Handler.getObjectAtPos(handler, goal.getX(), goal.getY()));
 		handler.addObject(new DoorObject(lvl, goal.getX(), goal.getY()));

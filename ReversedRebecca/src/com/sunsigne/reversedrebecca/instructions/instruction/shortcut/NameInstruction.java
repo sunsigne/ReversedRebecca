@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
 public class NameInstruction implements Instruction {
 
@@ -23,16 +23,15 @@ public class NameInstruction implements Instruction {
 	public String getType() {
 		return "NAME";
 	}
-	
+
 	@Override
 	public boolean isShortcut() {
 		return true;
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
-		living.setName(target);
+	public void doAction(ExtraBehaviorsObject object, String target) {
+		object.setName(target);
 	}
-
 
 }

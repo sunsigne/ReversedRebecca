@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
 public interface Instruction {
 
@@ -9,11 +9,9 @@ public interface Instruction {
 	Instruction getInstruction();
 
 	String getType();
-	
-	boolean isShortcut();
-	
-	void doAction(LivingObject living, String target);
-	
 
+	boolean isShortcut();
+
+	void doAction(ExtraBehaviorsObject object, String target);
 
 }

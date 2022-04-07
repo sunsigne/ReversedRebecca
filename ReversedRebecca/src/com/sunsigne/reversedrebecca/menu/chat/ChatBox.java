@@ -8,7 +8,8 @@ import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.Statement;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.instructions.instruction.shortcut.FacingInstruction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -19,8 +20,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChatBox implements Updatable, KeyboardEvent {
 
-	public ChatBox(LivingObject living, String target, String dialogue) {
-		this.living = living;
+	public ChatBox(ExtraBehaviorsObject object, String target, String dialogue) {
+		this.object = object;
 		this.value = target;
 		loadImage();
 
@@ -56,7 +57,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 	////////// OPEN ////////////
 
-	private LivingObject living;
+	private ExtraBehaviorsObject object;
 
 	public void openChat() {
 		World world = World.get();
@@ -86,7 +87,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 		Instruction instruction = InstructionList.getList().getObject(new FacingInstruction());
 
-		for (Updatable tempUpdatable : living.getHandler().getList()) {
+		for (Updatable tempUpdatable : object.getHandler().getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 

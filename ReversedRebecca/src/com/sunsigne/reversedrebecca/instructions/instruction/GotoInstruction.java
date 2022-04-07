@@ -2,8 +2,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionAnalyzer;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
 public class GotoInstruction implements Instruction {
 
@@ -31,11 +30,7 @@ public class GotoInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
-		if (living instanceof NPC == false)
-			return;
-
-		NPC npc = (NPC) living;
+	public void doAction(ExtraBehaviorsObject object, String target) {
 
 		String[] values = target.split(",");
 		String statement = "$->";
@@ -47,11 +42,11 @@ public class GotoInstruction implements Instruction {
 					continue;
 
 				if (tempValue.contains(tempInstruction.getType()))
-					tempInstruction.doAction(living, tempValue.split(":")[1]);
+					tempInstruction.doAction(object, tempValue.split(":")[1]);
 			}
 
 			if (!tempValue.equalsIgnoreCase("null"))
-				new InstructionAnalyzer(npc, statement + tempValue);
+				new InstructionAnalyzer(object, statement + tempValue);
 		}
 	}
 

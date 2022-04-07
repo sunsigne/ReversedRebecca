@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
 public class TeleportInstruction implements Instruction {
 
@@ -23,21 +23,21 @@ public class TeleportInstruction implements Instruction {
 	public String getType() {
 		return "TP";
 	}
-	
+
 	@Override
 	public boolean isShortcut() {
 		return false;
 	}
-	
+
 	@Override
-	public void doAction(LivingObject living, String target) {
+	public void doAction(ExtraBehaviorsObject object, String target) {
 		int x = Integer.parseInt(target.split(",")[0]);
 		int y = Integer.parseInt(target.split(",")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		living.setX(goal.getX());
-		living.setY(goal.getY());
+		object.setX(goal.getX());
+		object.setY(goal.getY());
 	}
 
 }

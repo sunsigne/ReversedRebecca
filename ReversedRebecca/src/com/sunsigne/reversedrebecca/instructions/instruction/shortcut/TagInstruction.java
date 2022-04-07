@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.TagList;
 import com.sunsigne.reversedrebecca.instructions.instruction.GotoInstruction;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
 public class TagInstruction implements Instruction {
 
@@ -33,24 +33,24 @@ public class TagInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
+	public void doAction(ExtraBehaviorsObject object, String target) {
 		ConditionAnalyser condition = ConditionAnalyser.create(target);
 
 		if (condition != null)
-			checkTag(condition, living, target);
+			checkTag(condition, object, target);
 		else
 			// register tag
 			TagList.getList().addObject(target);
 	}
 
-	private void checkTag(ConditionAnalyser condition, LivingObject living, String target) {
+	private void checkTag(ConditionAnalyser condition, ExtraBehaviorsObject object, String target) {
 		for (String tempTag : TagList.getList().getList()) {
 			if (tempTag.equalsIgnoreCase(condition.getValueToCheck()))
 				condition.setMet(true);
 		}
 
 		Instruction instruction = InstructionList.getList().getObject(new GotoInstruction());
-		instruction.doAction(living, condition.getAction());
+		instruction.doAction(object, condition.getAction());
 	}
 
 }

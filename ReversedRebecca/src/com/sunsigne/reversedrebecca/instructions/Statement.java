@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.instructions;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 
 public class Statement {
@@ -21,7 +21,7 @@ public class Statement {
 	////////// GOAL ////////////
 
 	public void goalReached(PathSearcher searcher, Position goal) {
-		if (searcher instanceof NPC == false)
+		if (searcher instanceof ExtraBehaviorsObject == false)
 			return;
 
 		String statement = "GOAL->";
@@ -29,7 +29,7 @@ public class Statement {
 		GoalObject pos = new GoalObject(goal.getX(), goal.getY(), true);
 		String value = pos.getX() + "-" + pos.getY();
 
-		new InstructionAnalyzer((NPC) searcher, statement + value);
+		new InstructionAnalyzer((ExtraBehaviorsObject) searcher, statement + value);
 	}
 
 	////////// PUZZLE ////////////

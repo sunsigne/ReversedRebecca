@@ -1,10 +1,9 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.action.NPCAction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.action.TalkAction;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.ObjectAction;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.TalkAction;
 
 public class TalkInstruction implements Instruction {
 
@@ -25,20 +24,16 @@ public class TalkInstruction implements Instruction {
 	public String getType() {
 		return "TALK";
 	}
-	
+
 	@Override
 	public boolean isShortcut() {
 		return false;
 	}
-	
-	@Override
-	public void doAction(LivingObject living, String target) {
-		if (living instanceof NPC == false)
-			return;
 
-		NPC npc = (NPC) living;
-		NPCAction action = new TalkAction();
-		action.setListener(action.getListener(npc, target));
+	@Override
+	public void doAction(ExtraBehaviorsObject object, String target) {
+		ObjectAction action = new TalkAction();
+		action.setListener(action.getListener(object, target));
 		action.doAction();
 	}
 

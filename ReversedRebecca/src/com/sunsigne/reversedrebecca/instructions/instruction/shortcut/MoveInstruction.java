@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.npc.NPC;
 
 public class MoveInstruction implements Instruction {
 
@@ -25,22 +25,22 @@ public class MoveInstruction implements Instruction {
 	public String getType() {
 		return "MOVE";
 	}
-	
+
 	@Override
 	public boolean isShortcut() {
 		return true;
 	}
-	
+
 	@Override
-	public void doAction(LivingObject living, String target) {
+	public void doAction(ExtraBehaviorsObject object, String target) {
 		int x = Integer.parseInt(target.split("-")[0]);
 		int y = Integer.parseInt(target.split("-")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		if (living instanceof NPC)
-			((NPC) living).setRunning(true);
-		living.setGoal(goal);
+		if (object instanceof NPC)
+			((NPC) object).setRunning(true);
+		object.setGoal(goal);
 	}
 
 }

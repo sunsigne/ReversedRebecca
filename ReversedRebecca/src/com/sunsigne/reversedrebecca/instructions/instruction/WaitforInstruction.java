@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.instructions.instruction;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.WaitforBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WaitforBehavior;
 import com.sunsigne.reversedrebecca.pattern.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -33,7 +33,7 @@ public class WaitforInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
+	public void doAction(ExtraBehaviorsObject object, String target) {
 
 		String condition = String.valueOf(target.split(",")[0]);
 
@@ -46,7 +46,7 @@ public class WaitforInstruction implements Instruction {
 			@Override
 			public void doAction() {
 				Instruction instruction = InstructionList.getList().getObject(new GotoInstruction());
-				instruction.doAction(living, action);
+				instruction.doAction(object, action);
 			}
 		};
 
@@ -54,21 +54,22 @@ public class WaitforInstruction implements Instruction {
 		ConditionalListener listener = null;
 
 		if (type.equalsIgnoreCase("PLAYER_DISTANCE"))
-			listener = getPlayerDistanceListener(generic, living, Integer.parseInt(value));
+			listener = getPlayerDistanceListener(generic, object, Integer.parseInt(value));
 
 		if (listener != null)
-			living.addBehavior(new WaitforBehavior(living, listener));
+			object.addBehavior(new WaitforBehavior(object, listener));
 	}
 
 	////////// INSTRUCTION ////////////
 
-	private ConditionalListener getPlayerDistanceListener(GenericListener generic, LivingObject living, int distance) {
+	private ConditionalListener getPlayerDistanceListener(GenericListener generic, ExtraBehaviorsObject object,
+			int distance) {
 
 		return new ConditionalListener() {
 
 			@Override
 			public boolean canDoAction() {
-				return new PlayerFinder().isPlayerFutherThan(living, distance);
+				return new PlayerFinder().isPlayerFutherThan(object, distance);
 			}
 
 			@Override

@@ -3,9 +3,8 @@ package com.sunsigne.reversedrebecca.instructions.instruction;
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.actions.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionAnalyzer;
 
 public class TripleActionInstruction implements Instruction {
 
@@ -33,11 +32,7 @@ public class TripleActionInstruction implements Instruction {
 	}
 
 	@Override
-	public void doAction(LivingObject living, String target) {
-		if (living instanceof NPC == false)
-			return;
-
-		NPC npc = (NPC) living;
+	public void doAction(ExtraBehaviorsObject object, String target) {
 
 		String[] values = new String[] {};
 		if (target != null)
@@ -48,14 +43,14 @@ public class TripleActionInstruction implements Instruction {
 		String actionInstruction3 = values.length > 2 ? values[2] : null;
 
 		String noActionText = null;
-		Action action1 = new ActionAnalyzer().getAction(npc, actionInstruction1);
-		Action action2 = new ActionAnalyzer().getAction(npc, actionInstruction2);
-		Action action3 = new ActionAnalyzer().getAction(npc, actionInstruction3);
+		Action action1 = new ActionAnalyzer().getAction(object, actionInstruction1);
+		Action action2 = new ActionAnalyzer().getAction(object, actionInstruction2);
+		Action action3 = new ActionAnalyzer().getAction(object, actionInstruction3);
 
 		TripleAction tripleAction = new TripleAction(noActionText, action1, action2, action3);
 
-		npc.setTripleAction(tripleAction);
-		npc.createTextAction();
+		object.setTripleAction(tripleAction);
+		object.createTextAction();
 	}
 
 }
