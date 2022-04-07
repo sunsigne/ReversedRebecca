@@ -1,17 +1,17 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.livings.npc;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.extrabehavior.living;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.npc.NPC;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableNPC10 implements Mappable {
+public class MappableFoe implements Mappable {
 
-	private MappableNPC10() {
+	private MappableFoe() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableNPC10();
+	private static Mappable mappable = new MappableFoe();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,13 +22,13 @@ public class MappableNPC10 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new NPC("NPC-10", x, y);
+		return new Foe(x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 255, 10, 0 };
+		int[] rgb = { 255, 255, 0 };
 		return rgb;
 	}
-
+	
 }
