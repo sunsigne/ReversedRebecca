@@ -1,22 +1,22 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.NPC;
 
 public class BlockingPath implements CollisionBehavior {
 
-	public BlockingPath(NPC npc) {
-		this.npc = npc;
+	public BlockingPath(ExtraBehaviorsObject object) {
+		this.object = object;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private NPC npc;
+	private ExtraBehaviorsObject object;
 
 	@Override
-	public NPC getExtraBehaviorsObject() {
-		return npc;
+	public ExtraBehaviorsObject getExtraBehaviorsObject() {
+		return object;
 	}
 
 	////////// POSITION ////////////
@@ -52,19 +52,19 @@ public class BlockingPath implements CollisionBehavior {
 	public int getHeight() {
 		return getExtraBehaviorsObject().getHeight();
 	}
-	
+
 	////////// COLLISION ////////////
-	
+
 	@Override
 	public boolean isBlockingSight() {
 		return getExtraBehaviorsObject().isBlockingSight();
 	}
-	
+
 	@Override
 	public boolean isBlockingPath() {
 		return getExtraBehaviorsObject().isBlockingPath();
 	}
-	
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		blockPath(detectorObject);
