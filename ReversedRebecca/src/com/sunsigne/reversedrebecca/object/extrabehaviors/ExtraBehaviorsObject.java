@@ -125,6 +125,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 				}
 			}
 		}
+		super.keyPressed(e);
 	}
 
 	@Override
@@ -137,6 +138,7 @@ public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 				}
 			}
 		}
+		super.keyReleased(e);
 	}
 
 	////////// MOUSE ////////////

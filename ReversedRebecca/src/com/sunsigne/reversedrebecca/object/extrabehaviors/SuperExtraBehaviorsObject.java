@@ -5,9 +5,13 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing, PathSearcher {
+public abstract class SuperExtraBehaviorsObject extends GameObject
+		implements SurVelocity, Facing, PathSearcher, Interactive {
 
 	public SuperExtraBehaviorsObject(String name, int x, int y) {
 		this(name, x, y, Size.M, Size.M);
@@ -16,6 +20,8 @@ public abstract class SuperExtraBehaviorsObject extends GameObject implements Su
 	public SuperExtraBehaviorsObject(String name, int x, int y, int w, int h) {
 		super(x, y, w, h);
 		setName(name);
+		if (World.get() != null)
+			instructionMap = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
 	}
 
 	////////// NAME ////////////
@@ -67,6 +73,39 @@ public abstract class SuperExtraBehaviorsObject extends GameObject implements Su
 	@Override
 	public void setFacing(DIRECTION facing) {
 		this.facing = facing;
+	}
+
+	////////// INSTRUCTION ////////////
+
+	private String instructionMap;
+
+	public String getInstructionMap() {
+		return instructionMap;
+	}
+
+	////////// INTERACTIVE ////////////
+
+	private boolean isDisabled;
+
+	@Override
+	public boolean isDisabled() {
+		return isDisabled;
+	}
+
+	@Override
+	public void setDisabled(boolean isDisabled) {
+		this.isDisabled = isDisabled;
+	}
+
+	private TripleAction tripleAction;
+
+	@Override
+	public TripleAction getTripleAction() {
+		return tripleAction;
+	}
+
+	public void setTripleAction(TripleAction tripleAction) {
+		this.tripleAction = tripleAction;
 	}
 
 	////////// PATH FINDER ////////////

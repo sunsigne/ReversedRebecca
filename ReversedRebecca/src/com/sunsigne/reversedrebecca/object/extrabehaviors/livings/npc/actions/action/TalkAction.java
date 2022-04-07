@@ -38,7 +38,7 @@ public class TalkAction extends NPCAction {
 	@Override
 	public GenericListener getListener(NPC npc, String target) {
 		GenericListener listener = () -> {
-			String path = npc.getInstructionMap().split("NPC-")[0];
+			String path = npc.getInstructionMap().split("npc-")[0];
 			path = path.concat(target + ".csv");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 

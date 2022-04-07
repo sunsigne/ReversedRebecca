@@ -9,6 +9,7 @@
 	
 	////////// IMPORTANT ////////////
 
+	faire en sorte que lorsqu'un text n'est pas disponible dans une langue, ne plante pas
 	Les png error ne se tournent pas ?
 	Le dialogue error du png error se répète en boucle ... ?
 	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
