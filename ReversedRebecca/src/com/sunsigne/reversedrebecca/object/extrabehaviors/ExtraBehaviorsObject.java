@@ -20,12 +20,12 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 public abstract class ExtraBehaviorsObject extends SuperExtraBehaviorsObject
 		implements Behavior, TickBehavior, RenderBehavior, CollisionBehavior, KeyboardBehavior, MouseBehavior {
 
-	public ExtraBehaviorsObject(int x, int y) {
-		this(x, y, Size.M, Size.M);
+	public ExtraBehaviorsObject(String name, int x, int y) {
+		this(name, x, y, Size.M, Size.M);
 	}
 
-	public ExtraBehaviorsObject(int x, int y, int w, int h) {
-		super(x, y, w, h);
+	public ExtraBehaviorsObject(String name, int x, int y, int w, int h) {
+		super(name, x, y, w, h);
 	}
 
 	////////// MAP OR LIST ////////////

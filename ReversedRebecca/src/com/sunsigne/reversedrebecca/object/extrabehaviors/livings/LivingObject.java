@@ -11,9 +11,8 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.behaviors.Watc
 public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector {
 
 	public LivingObject(String name, int x, int y, int speed) {
-		super(x, y);
+		super(name, x, y);
 		this.speed = speed;
-		this.name = name.toLowerCase();
 		addLivingBehaviors();
 	}
 
@@ -21,15 +20,12 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 
 	////////// NAME ////////////
 
-	private String name;
-
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name){
-		this.name = name.toLowerCase();
-		removeBehavior(walkingRender);		
+	@Override
+	public void setName(String name) {
+		super.setName(name);
+		if (walkingRender == null)
+			return;
+		removeBehavior(walkingRender);
 		walkingRender = new WalkingRender(this);
 		addBehavior(walkingRender);
 	}
@@ -57,5 +53,5 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	}
 
 	public abstract Behavior[] behaviorToPauseIfStunned();
-	
+
 }

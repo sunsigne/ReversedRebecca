@@ -9,12 +9,26 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class SuperExtraBehaviorsObject extends GameObject implements SurVelocity, Facing, PathSearcher {
 
-	public SuperExtraBehaviorsObject(int x, int y) {
-		this(x, y, Size.M, Size.M);
+	public SuperExtraBehaviorsObject(String name, int x, int y) {
+		this(name, x, y, Size.M, Size.M);
 	}
 
-	public SuperExtraBehaviorsObject(int x, int y, int w, int h) {
+	public SuperExtraBehaviorsObject(String name, int x, int y, int w, int h) {
 		super(x, y, w, h);
+		setName(name);
+	}
+
+	////////// NAME ////////////
+
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		if (name != null)
+			this.name = name.toLowerCase();
 	}
 
 	////////// SURVELOCICY ////////////
