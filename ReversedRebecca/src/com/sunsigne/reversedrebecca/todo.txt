@@ -11,6 +11,7 @@
 
 	Les png error ne se tournent pas ?
 	Le dialogue error du png error se répète en boucle ... ?
+	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
 	
 	FINIR LE PNG QUI SE PISSE DESSUS
 	faire en sorte que GotoInstruction et TalkInstruction soit compatible avec les livingObject
