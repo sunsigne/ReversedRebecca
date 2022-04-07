@@ -1,12 +1,11 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc;
 
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.livings.npc.behaviors.BlockingPath;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class NPC extends LivingObject implements Interactive {
+public class NPC extends LivingObject {
 
 	private static final int walking_speed = Size.XS / 10;
 	private static final int running_speed = Size.XS / 5;
