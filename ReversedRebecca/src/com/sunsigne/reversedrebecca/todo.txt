@@ -20,13 +20,14 @@
 	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
 	
 	FINIR LE PNG QUI SE PISSE DESSUS
-	faire en sorte que GotoInstruction et TalkInstruction soit compatible avec les livingObject
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
 	////////// DIFFICILE ////////////
+
+	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
 
 	les NPC ont parfois le pieds en l'air en plus dialogues (pas naturel)
 
@@ -36,12 +37,8 @@
 
 	////////// FACILE ////////////
 
-	Mappable, interactive ne devrait il pas être rangé avec les npc ? (ou plutot le contraire)
-
 	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
-	
-	MoveSlowlyInstruction -> à merge avec MoveInstruction + incompatible avec tous les living
-	
+
 	Les Purple Puzzle ne sont pas créé (ce qui est normal pour le moment)
 	!! MultiToolMode ne va que jusqu'à RED
 

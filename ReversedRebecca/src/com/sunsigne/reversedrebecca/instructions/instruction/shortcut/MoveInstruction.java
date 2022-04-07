@@ -30,6 +30,10 @@ public class MoveInstruction implements Instruction {
 	public boolean isShortcut() {
 		return true;
 	}
+	
+	public boolean isRunning() {
+		return true;
+	}
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
@@ -39,7 +43,7 @@ public class MoveInstruction implements Instruction {
 		GoalObject goal = new GoalObject(x, y, false);
 
 		if (object instanceof NPC)
-			((NPC) object).setRunning(true);
+			((NPC) object).setRunning(isRunning());
 		object.setGoal(goal);
 	}
 
