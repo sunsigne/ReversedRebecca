@@ -31,8 +31,8 @@ public class TeleportInstruction implements Instruction {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		int x = Integer.parseInt(target.split(",")[0]);
-		int y = Integer.parseInt(target.split(",")[1]);
+		int x = Integer.parseInt(target.split("-")[0]);
+		int y = Integer.parseInt(target.split("-")[1]);
 
 		GoalObject goal = new GoalObject(x, y, false);
 
