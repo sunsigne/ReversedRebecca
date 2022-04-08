@@ -24,11 +24,4 @@ public class WatchAction extends TalkAction {
 		return "WATCH";
 	}
 
-	////////// LISTENER ////////////
-
-	@Override
-	public String getType() {
-		return "object-";
-	}
-
 }

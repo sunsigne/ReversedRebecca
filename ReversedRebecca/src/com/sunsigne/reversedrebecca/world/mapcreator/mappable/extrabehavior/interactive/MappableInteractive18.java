@@ -22,7 +22,7 @@ public class MappableInteractive18 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new InteractiveObject("OBJECT-18", x, y);
+		return new InteractiveObject("OBJ-18", x, y);
 	}
 
 	@Override

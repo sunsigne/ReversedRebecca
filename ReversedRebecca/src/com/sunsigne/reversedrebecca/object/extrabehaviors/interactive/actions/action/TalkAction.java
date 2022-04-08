@@ -35,14 +35,10 @@ public class TalkAction extends ObjectAction {
 
 	////////// LISTENER ////////////
 
-	public String getType() {
-		return "npc-";
-	}
-	
 	@Override
 	public GenericListener getListener(ExtraBehaviorsObject object, String target) {
 		GenericListener listener = () -> {
-			String path = object.getInstructionMap().split(getType())[0];
+			String path = object.getInstructionMap().substring(0, object.getInstructionMap().length() - 10);
 			path = path.concat(target + ".csv");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 

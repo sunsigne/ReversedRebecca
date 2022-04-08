@@ -2,6 +2,7 @@
 
 WATCH = regarder
 READ = lire
+TURN_OFF_WITHOUT_SAVING = éteindre#sans#sauvegarder
 
 ///// LIVING /////
 

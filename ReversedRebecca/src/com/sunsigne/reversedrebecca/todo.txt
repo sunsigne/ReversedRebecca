@@ -10,6 +10,8 @@
 	////////// IMPORTANT ////////////
 
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
+	finir l'ordinateur saboté (action en soi + vérification de la traduction, mini cinématique)
+
 
 	La plante jaune n'est pas finie
 	faire une vitesse de course DNAS livingObject ?
@@ -19,7 +21,7 @@
 	Le dialogue error du png error se répète en boucle ... ?
 	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
 	
-	FINIR LE PNG QUI SE PISSE DESSUS
+	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (parce que difficile de se concentrer quand il bouge + TOUTE la partie après l'ouverture de la porte)
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 
