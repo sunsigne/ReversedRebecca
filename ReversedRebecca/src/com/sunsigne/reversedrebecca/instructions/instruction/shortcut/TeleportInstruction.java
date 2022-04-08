@@ -1,6 +1,7 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 
@@ -26,7 +27,7 @@ public class TeleportInstruction implements Instruction {
 
 	@Override
 	public boolean isShortcut() {
-		return false;
+		return true;
 	}
 
 	@Override
