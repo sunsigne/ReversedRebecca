@@ -179,8 +179,7 @@ public class World implements Updatable {
 
 	////////// TICK ////////////
 
-	private final int SEC = 60;
-	private int frame = SEC;
+	private int frame = Game.SEC;
 	private int time;
 
 	@Override
@@ -188,7 +187,7 @@ public class World implements Updatable {
 		frame--;
 
 		if (frame <= 0) {
-			frame = SEC;
+			frame = Game.SEC;
 			time++;
 			new Statement().time(time);
 		}

@@ -59,11 +59,13 @@ public class Game extends Canvas implements Runnable {
 
 	////////// MAIN LOOP ////////////
 
+	public static final int SEC = 60;
+	
 	@Override
 	public void run() {
 
 		long lastTime = System.nanoTime();
-		double amountOfTicks = 60.0;
+		double amountOfTicks = SEC;
 		double ns = 1000000000 / amountOfTicks;
 
 //		int ticks = 0;
