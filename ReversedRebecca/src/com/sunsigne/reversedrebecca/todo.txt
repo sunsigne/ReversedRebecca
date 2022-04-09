@@ -9,6 +9,11 @@
 	
 	////////// IMPORTANT ////////////
 
+	! deux object côte à côte peuvent être actionner en même temps (ça ne devrait pas)
+
+faire en sorte que le nom de base du joueur soit "player", pour ensuiote le changer avec le language 
+	le raccourcie talk: et le comportement dans tiple_action apparraissent comme étant les même : confus. En fait, d'une manière générale le language est confus, devrait créer un système de variables local et globales avec goto et les tags
+
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
 	finir l'ordinateur saboté (action en soi + vérification de la traduction, mini cinématique)
 
@@ -27,6 +32,14 @@
 
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
+	////////// PIRA ////////////
+	
+	faire la doc sur Talk
+	faire la doc sur Tag et changer de nom ?
+	Vérifier les noms et les fichiers :	Utiliser la bonne nommenclature pour les fichiers 
+
+	faire la doc de toutes les types actions à écriture non condensées
+
 	////////// DIFFICILE ////////////
 
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
@@ -38,6 +51,10 @@
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
+
+	vérifier les couleurs de la map (surtout le peepuddle)
+
+	L'image PAR DEFAULT d'un pnj devrait être error et non missing
 
 	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
 

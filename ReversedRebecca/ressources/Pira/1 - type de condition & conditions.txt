@@ -1,0 +1,63 @@
+////// TIME //////
+
+
+Le Type de Condition TIME est vérifiée à chaque seconde !
+ex : TIME -> 6 = "Action"
+"Action" se produira après exactement 6 secondes.
+
+Cette fonction est très utile juste après la génération d'une map : TIME -> 0 pour initier l'état de base d'un objet.
+
+
+////// GOAL //////
+
+
+Le Type de Condition GOAL est vérifiée lorsque l'objet a atteint son objectif.
+ex : GOAL -> 37-43 = "Action"
+"Action" se produira si l'objet avait pour objectif 37-43 et y est finalement arrivé.
+
+Pour établir un objectif, il faut utiliser les type d'action MOVE ou SLOW
+
+Attention ! La Condition GOAL n'est vérifiée que lorsque la condition est bien l'objectif de l'objet ! S'il y passe où s'y arrête, mais qu'il cherchait à se rendre ailleurs, celà ne comptera pas.
+exemple dans notre monde : si Bernard est en France et que son objectif est en Chine. Même si Bernard passe par la Russie, la condition "GOAL -> RUSSIE" ne sera pas atteint puisqu'elle n'est pas son objectif (son "GOAL").
+
+
+
+////// WONPUZZLE //////
+
+
+Le Type de Condition WONPUZZLE est vérifiée lorsque le puzzle aux coordonnées indiqué est résolu.
+exemple : WONPUZZLE -> 34-31 = "Action"
+
+
+////// TALK //////
+
+
+Le Type de Condition TALK est vérifiée lorsqu'un dialogue est terminé.
+exemple : TALK -> COMPUTER = "Action"
+"Action" se produira au moment où le joueur sort de la boite de dialogue.
+
+Couplé au type d'action TRIPLE_ACTION, elle est très pratique pour initier les possibilités suivantes de dialogues ou les actions déverrouillées.
+
+
+////// GOTO //////
+
+
+Le Type de Condition "$" est une sorte de relai d'un autre état.
+exemple : $ -> MY_NAME = "Action"
+"Action" se produira dès lors qu'un type d'action (par exemple GOTO) appellera sa cible "MY_NAME".
+
+Pour dire les choses plus simplement, il s'agit en quelque sorte d'une variable. Son intérêt est qu'il n'est pas possible en Pita d'avoir deux États identiques !
+exemple :
+TIME -> 0 = NAME -> BOB
+TIME -> 0 = FACING -> DOWN
+ne marchera pas !
+
+Il est en revanche possible pour certains Types d'Actions (comme GOTO) de créer autant de cibles que l'on souhaite en les séparant par des virgules, ce qui permet de pallier le problème de façon à la fois efficace et élégante !
+exemple :
+TIME -> 0 = GOTO -> MY_NAME, MY_FACING
+$ -> MY_NAME = NAME -> BOB
+$ -> MY_FACING = FACING -> DOWN
+marchera !
+
+
+

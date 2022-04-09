@@ -1,0 +1,28 @@
+////// ÉCRITURE CONDENSÉE //////
+
+L'écriture condensée est une écriture permettant d'aérer le code en éliminant des instructions "triviales".
+Elle est souvent possible lorsqu'un type d'Action n'aura jamais qu'une seule Cible .
+
+Prenons l'exemple à la fin du chapitre précédent : 
+TIME -> 0 = GOTO -> MY_NAME, MY_FACING
+$ -> MY_NAME = NAME -> BOB
+$ -> MY_FACING = FACING -> DOWN
+
+L'Instruction en 1ère ligne demande à ce qu'on execute les Instructions en ligne 2 et 3.
+L'Instruction en 2ème ligne n'a qu'une seule Cible : "BOB"
+L'Instruction en 3ème ligne n'a qu'un seule Cible "DOWN"
+
+Dans la mesure où le type d'action "NAME" n'aura jamais qu'une seule cible (un nom), l'écriture suivante est tout a fait autorisée:
+TIME -> 0 = GOTO -> NAME:BOB
+
+Ici, NAME est à la fois la Cible de GOTO, et un Type d'Action dont la Cible est "BOB" !
+
+En faisant la même chose avec FACING, nous obtenons ceci :
+TIME -> 0 = GOTO -> NAME:BOB, FACING:DOWN
+
+Cette seule ligne fait le même travail que les 3 Instructions de l'exemple en haut de la page !
+Nous avons donc éliminé 2 Instructions "triviales" de notre code !
+
+
+Attention ! Tous les types d'actions n'autorisent pas l'écriture condensée. C'est pourquoi il sera précisé pour chacun d'eux si elle est possible ou non.
+Pour vous aider, dîtes que lorsque qu'elle "simplifierait le code", elle est probablement possible. Inversement, si elle le rendrait dur à écrire et à lire, elle ne l'est probablement pas.
