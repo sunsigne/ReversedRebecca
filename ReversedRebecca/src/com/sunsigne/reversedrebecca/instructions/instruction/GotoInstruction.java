@@ -41,7 +41,7 @@ public class GotoInstruction implements Instruction {
 				if (!tempInstruction.isShortcut())
 					continue;
 
-				if (tempValue.contains(tempInstruction.getType()))
+				if (tempValue.contains(tempInstruction.getType() + ":"))
 					tempInstruction.doAction(object, tempValue.split(":")[1]);
 			}
 

@@ -5,15 +5,15 @@ import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.other.PeePuddle;
 
-public class PeeYourselfInstruction implements Instruction {
+public class PeeInstruction implements Instruction {
 
 	////////// INSTRUCTION ////////////
 
-	public PeeYourselfInstruction() {
+	public PeeInstruction() {
 		InstructionList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new PeeYourselfInstruction();
+	private static Instruction instruction = new PeeInstruction();
 
 	@Override
 	public Instruction getInstruction() {
@@ -22,7 +22,7 @@ public class PeeYourselfInstruction implements Instruction {
 
 	@Override
 	public String getType() {
-		return "PEEING";
+		return "PEE";
 	}
 
 	@Override
