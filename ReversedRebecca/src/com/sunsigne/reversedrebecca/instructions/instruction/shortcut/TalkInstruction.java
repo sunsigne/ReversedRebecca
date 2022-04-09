@@ -1,6 +1,7 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
 
 import com.sunsigne.reversedrebecca.instructions.InstructionList;
+import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.ObjectAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.TalkAction;
@@ -27,7 +28,7 @@ public class TalkInstruction implements Instruction {
 
 	@Override
 	public boolean isShortcut() {
-		return false;
+		return true;
 	}
 
 	@Override
