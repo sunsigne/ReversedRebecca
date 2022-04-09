@@ -46,7 +46,7 @@ TIME -> 0 = GOTO -> MOVE:33-35
 
 Lorsque l'état sera vérifié, l'objet cherchera à sen rendre en 33 35
 
-Attention ! Les coordonnées négatives sont impossibles en Pira. Veillez à bien choisir l'origine (en haut à gauche par exemple)
+Attention ! Les coordonnées négatives sont impossibles en Piranha. Veillez à bien choisir l'origine (en haut à gauche par exemple)
 
 
 ////// SLOW //////

@@ -1,21 +1,21 @@
 ////// Introduction //////
 
 
-Pira est un langage de programmation inventé par Florian Murcia en 2022 pour le jeu vidéo Reversed Rebecca.
-Pira vient de l'animal Piranha, sans raison autre que le mot sonnait bien, mais était plus court.
+Piranha est un langage de programmation inventé par Florian Murcia en 2022 pour le jeu vidéo Reversed Rebecca.
+Piranha vient de l'animal, sans raison autre que le mot sonnait bien et qu'on le retenait facilement.
 
-Le Pira a pour principal objectif de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus facilement éditable qu'en Java.
+Le Piranha a pour principal objectif de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus facilement éditable qu'en Java.
 
-L'avantage du Pira est qu'il peut très facilement être lu, écrit et édité en remplaçant l'extension des fichiers .pira par .txt
+L'avantage du Piranha est qu'il peut très facilement être lu, écrit et édité en remplaçant l'extension des fichiers .piranha par .txt
 
-Les éditeurs de code actuels ne reconnaissant pas encore le Pira comme langage, c'est pourquoi nous vous conseillons, afin de gagner en visibilité, de configurer vous-même la colorisation syntaxique.
+Les éditeurs de code actuels ne reconnaissant pas encore le Piranha comme langage, c'est pourquoi nous vous conseillons, afin de gagner en visibilité, de configurer vous-même la colorisation syntaxique.
 Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv et définir l'espace (" ") comme élément séparateur.
 
 
 ////// Fichier //////
 
 
-Les fichiers .pira éditables avec un éditeur de texte, exactement comme pour des fichiers .txt ou .csv
+Les fichiers .piranha éditables avec un éditeur de texte, exactement comme pour des fichiers .txt ou .csv
 La seule règle importante à retenir est qu'en dehors de l'extension, ils doivent avoir un nom qui fait exactement 6 caractères !
 ex : NPC-18 (valide) / OBJ-42 (valide) / PLAYER (valide) / ENNEMI-12 (invalide)
 
@@ -23,11 +23,11 @@ ex : NPC-18 (valide) / OBJ-42 (valide) / PLAYER (valide) / ENNEMI-12 (invalide)
 ////// Syntaxe //////
 
 
-Le Pira n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
+Le Piranha n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
 En Pita, si ça n'est pas obligatoire, il est conseillé d'écrire les instructions en lettres capitales (par convention).
 Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=", le code risquerait de mal les interpréter.
 
-Le Pira est basé sur un système très simple d'Instructions : État = Action.
+Le Piranha est basé sur un système très simple d'Instructions : État = Action.
 L'État est composé d'un "Type de Condition" et d'une "Condition", séparés entre eux par une flèche "->".
 L'action est composé d'un "Type d'Action" et d'une "Cible", séparés entre eux par une flèche "->".
 
