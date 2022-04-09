@@ -16,8 +16,10 @@ Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv 
 
 
 Les fichiers .piranha éditables avec un éditeur de texte, exactement comme pour des fichiers .txt ou .csv
-La seule règle importante à retenir est qu'en dehors de l'extension, ils doivent avoir un nom qui fait exactement 6 caractères !
+La seule règle importante à retenir est qu'en dehors de l'extension, ils doivent avoir un nom qui fait exactement 6 caractères, et être dans un dossier de map !
 ex : NPC-18 (valide) / OBJ-42 (valide) / PLAYER (valide) / ENNEMI-12 (invalide)
+
+Actuellement, les fichiers .piranha lus et traités par Java sont tous les fichiers allant de NPC-01 à NPC30, ou de OBJ-01 à OBJ-50.
 
 
 ////// Syntaxe //////
