@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.instructions;
+package com.sunsigne.reversedrebecca.piranha;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -6,16 +6,16 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class MassiveInstruction {
+public class MassiveInstruction extends InstructionAnalyzer {
 
-	protected MassiveInstruction(String value) {
+	protected void analyse(String condition) {
 		loadAllExtra();
-		createInstructionAnalyzerForAllNPC(value);
+		createInstructionAnalyzerForAllObject(condition);
 	}
 
-	private void createInstructionAnalyzerForAllNPC(String value) {
+	private void createInstructionAnalyzerForAllObject(String condition) {
 		for (ExtraBehaviorsObject tempObject : object_list.getList())
-			new InstructionAnalyzer(tempObject, value);
+			analyse(tempObject, condition);
 	}
 
 	////////// MAP OR LIST ////////////

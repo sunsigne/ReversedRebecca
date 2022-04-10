@@ -1,0 +1,84 @@
+////// TIME //////
+
+
+Le Type de Condition TIME est vérifiée à chaque seconde !
+ex : TIME -> 6 = "Requête"
+"Requête" sera appelé après exactement 6 secondes.
+
+Cette fonction est très utile juste après la génération d'une map : TIME -> 0 pour initier l'état de base d'un objet.
+
+
+////// WONPUZZLE //////
+
+
+Le Type de Condition WONPUZZLE est vérifiée lorsque le puzzle aux coordonnées indiquées est résolu.
+exemple : WONPUZZLE -> 34-31 = "Requête"
+
+
+////// TALKED //////
+
+
+Le Type de Condition TALKED est vérifiée lorsqu'un dialogue est terminé.
+exemple : TALKED -> COMPUTER = "Requête"
+"Requête" sera appelé au moment où le joueur sort de la boite de dialogue dont le fichier de référence était COMPUTER.csv.
+
+Couplé au type d'action TRIPLE_ACTION, elle est très pratique pour initier les possibilités suivantes de dialogues ou les actions déverrouillées.
+exemple :
+TALK -> PEEBOY_URGE = TRIPLE_ACTION -> TALK:PEEBOY_HOLDING
+TALK -> PEEBOY_HOLDING = TRIPLE_ACTION -> TALK:PEEBOY_HOLDING_AGAIN
+TALK -> PEEBOY_HOLDING_AGAIN = TRIPLE_ACTION -> TALK:PEEBOY_HOLDING_AGAIN_AGAIN 
+
+
+////// GOAL //////
+
+
+Le Type de Condition GOAL est vérifiée lorsque l'objet a atteint son Objectif.
+ex : GOAL -> 37-43 = "Requête"
+"Requête" sera appelé si l'objet avait pour Objectif 37-43 et y est finalement arrivé.
+
+Pour établir un Objectif, il faut utiliser les types d'actions MOVE ou SLOW
+
+Attention ! La Condition n'est vérifiée que lorsque la Valeur est bien l'Objectif de l'objet ! S'il y passe où s'y arrête, mais qu'il cherchait à se rendre ailleurs, cela ne comptera pas !
+exemple dans notre monde : si Bernard est en France et que son Objectif est la Chine. Même si Bernard passe par la Russie, la Condition "GOAL -> RUSSIE" ne sera pas atteint puisqu'elle n'est pas son Objectif (son "GOAL").
+
+Attention ! Contrairement aux autres conditions, GOAL n'a qu'une portée locale : TIME est vérifié partout, WONPUZZLE est vérifié partout, mais pour GOAL, c'est la position de l'objet en question qui est vérifiée.
+
+
+////// GOTO //////
+
+
+GOTO est un Type de Requête permettant de créer des Conditions.
+
+Pour rappel, il est impossible en Piranha d'avoir deux Conditions identiques.
+exemple :
+TIME -> 0 = NAME -> BOB
+TIME -> 0 = FACING -> DOWN
+ne marchera pas !
+
+Si l'on veut plusieurs Instructions avec la même Condition, il faut passer par GOTO
+exemple :
+TIME -> 0 = GOTO -> MY_NAME, MY_FACING
+$ -> MY_NAME = NAME -> BOB
+$ -> MY_FACING = FACING -> DOWN
+
+Ici, Ces 3 Requêtes seront effectuée aussitôt que TIME aura pour valeur 0.
+Le Type de Condition "$" est donc une sorte de relai d'une autre Condition.
+
+
+GOTO créé des Conditions à portée locale, aucun risque de valider la Condition d'un autre fichier par accident !
+
+
+////// ACTIVATE //////
+
+
+ACTIVATE est en quelque sorte la variante à cible unitaire et globale de GOTO.
+
+Il a plusieurs différences notables avec ce dernier :
+
+GOTO autorise plusieurs Cibles, ACTIVATE n'en autorise qu'une seule.
+Une écriture compacte lorsque ACTIVATE est le Type de Requete n'aurait pas de sens, elle est donc impossible.
+L'utilisation de l'écriture compacte lorsque qu'ACTIVATE est la Cible est possible (puisque très pratique !)
+Le Type de Condition "$" est remplacé par "!" afin de mieux faire la différence avec GOTO.
+ex : 
+(file 1) GOAL -> 33-33 = ACTIVE -> BOB_REACHED_GOAL
+(file 2) ! -> BOB_REACHED_GOAL = FACING -> BOB

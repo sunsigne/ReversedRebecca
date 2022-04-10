@@ -4,12 +4,12 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.Statement;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
-import com.sunsigne.reversedrebecca.instructions.instruction.shortcut.FacingInstruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.condition.TalkedCondition;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.compact.FacingRequest;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -85,7 +85,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		content = new ChatContent(living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);
 
-		Instruction instruction = InstructionList.getList().getObject(new FacingInstruction());
+		Request instruction = RequestList.getList().getObject(new FacingRequest());
 
 		for (Updatable tempUpdatable : object.getHandler().getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
@@ -109,7 +109,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 			world.freeze(false);
 
 		LAYER.PUZZLE.getHandler().clear();
-		new Statement().chatFinished(value);
+		new TalkedCondition().registerValue(value);
 	}
 
 	////////// KEYBOARD ////////////

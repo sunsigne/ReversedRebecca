@@ -2,13 +2,13 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.a
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
-import com.sunsigne.reversedrebecca.instructions.instruction.TripleActionInstruction;
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionList;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.TripleActionRequest;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class TalkAction extends ObjectAction {
@@ -38,14 +38,14 @@ public class TalkAction extends ObjectAction {
 	@Override
 	public GenericListener getListener(ExtraBehaviorsObject object, String target) {
 		GenericListener listener = () -> {
-			String path = object.getInstructionMap().substring(0, object.getInstructionMap().length() - 10);
+			String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
 			path = path.concat(target + ".csv");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 
 			ChatBox chatbox = new ChatBox(object, target, dialogue);
 			chatbox.openChat();
 
-			Instruction instruction = InstructionList.getList().getObject(new TripleActionInstruction());
+			Request instruction = RequestList.getList().getObject(new TripleActionRequest());
 			instruction.doAction(object, null);
 		};
 

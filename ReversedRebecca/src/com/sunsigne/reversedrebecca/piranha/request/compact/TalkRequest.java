@@ -1,24 +1,24 @@
-package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
+package com.sunsigne.reversedrebecca.piranha.request.compact;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.ObjectAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action.TalkAction;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
 
-public class TalkInstruction implements Instruction {
+public class TalkRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public TalkInstruction() {
-		InstructionList.getList().addObject(this);
+	public TalkRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new TalkInstruction();
+	private static Request request = new TalkRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class TalkInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return true;
 	}
 

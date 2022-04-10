@@ -1,0 +1,27 @@
+////// ÉCRITURE COMPACTE //////
+
+L'écriture compacte est une écriture permettant d'aérer le code en éliminant des instructions "triviales".
+Elle est souvent possible lorsqu'un Type de Requête n'aura jamais qu'une seule Cible .
+
+Prenons l'exemple à la fin du chapitre précédent : 
+TIME -> 0 = GOTO -> MY_NAME, MY_FACING
+$ -> MY_NAME = NAME -> BOB
+$ -> MY_FACING = FACING -> DOWN
+
+L'Instruction en 1ère ligne demande à ce qu'on exécute les Instructions en ligne 2 et 3.
+L'Instruction en 2ème ligne n'a qu'une seule Cible : "BOB"
+L'Instruction en 3ème ligne n'a qu'une seule Cible "DOWN"
+
+Dans la mesure où le Type de Requête "NAME" n'aura jamais qu'une seule Cible (un nom), l'écriture suivante est tout à fait autorisée :
+TIME -> 0 = GOTO -> NAME:BOB
+
+Ici, NAME est à la fois la Cible de GOTO, et un Type de Requête dont la Cible est "BOB" !
+
+En faisant la même chose avec FACING, nous obtenons ceci :
+TIME -> 0 = GOTO -> NAME:BOB, FACING:DOWN
+
+Cette seule ligne fait le même travail que les 3 Instructions de notre exemple ! Nous avons donc éliminé 2 Instructions "triviales" de notre code !
+
+
+Attention ! Tous les Types de Requête n'autorisent pas l'écriture compacte. Il sera précisé pour chacun d'eux si elle est possible ou non.
+Pour vous aider, dîtes que lorsque qu'elle "simplifierait le code", elle est probablement possible. Inversement, si elle le rendrait dur à écrire et à lire, elle ne l'est probablement pas.

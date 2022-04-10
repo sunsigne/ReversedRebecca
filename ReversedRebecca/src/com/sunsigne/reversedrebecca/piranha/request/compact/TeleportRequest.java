@@ -1,23 +1,23 @@
-package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
+package com.sunsigne.reversedrebecca.piranha.request.compact;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
 
-public class TeleportInstruction implements Instruction {
+public class TeleportRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public TeleportInstruction() {
-		InstructionList.getList().addObject(this);
+	public TeleportRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new TeleportInstruction();
+	private static Request request = new TeleportRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class TeleportInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return true;
 	}
 

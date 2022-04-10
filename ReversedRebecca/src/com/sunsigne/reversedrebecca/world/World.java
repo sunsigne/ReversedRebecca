@@ -4,8 +4,6 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
-import com.sunsigne.reversedrebecca.instructions.Statement;
-import com.sunsigne.reversedrebecca.instructions.TagList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
@@ -14,6 +12,8 @@ import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.MemoryList;
+import com.sunsigne.reversedrebecca.piranha.condition.TimeCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -82,7 +82,7 @@ public class World implements Updatable {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
-		new Statement().time(0);
+		new TimeCondition().registerValue(0);
 	}
 
 	////////// NAME ////////////
@@ -154,7 +154,7 @@ public class World implements Updatable {
 		resetLayers();
 		instance = null;
 		new CharacteristicList().reset();
-		TagList.getList().clear();
+		MemoryList.getList().clear();
 		Game.getInstance().forceLoop();
 	}
 
@@ -189,7 +189,7 @@ public class World implements Updatable {
 		if (frame <= 0) {
 			frame = Game.SEC;
 			time++;
-			new Statement().time(time);
+			new TimeCondition().registerValue(time);
 		}
 	}
 

@@ -1,26 +1,26 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.piranha.request;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WaitforBehavior;
 import com.sunsigne.reversedrebecca.pattern.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
 
-public class WaitforInstruction implements Instruction {
+public class WaitforRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public WaitforInstruction() {
-		InstructionList.getList().addObject(this);
+	public WaitforRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new WaitforInstruction();
+	private static Request request = new WaitforRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class WaitforInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return false;
 	}
 
@@ -38,7 +38,7 @@ public class WaitforInstruction implements Instruction {
 
 		String condition = String.valueOf(target.split(",")[0]);
 
-		String type = String.valueOf(condition.split(":")[0]);
+		String conditionType = String.valueOf(condition.split(":")[0]);
 		String value = String.valueOf(condition.split(":")[1]);
 		String action = String.valueOf(target.split(",")[1]);
 
@@ -46,30 +46,34 @@ public class WaitforInstruction implements Instruction {
 
 			@Override
 			public void doAction() {
-				Instruction instruction = InstructionList.getList().getObject(new GotoInstruction());
-				instruction.doAction(object, action);
+				Request request = RequestList.getList().getObject(new GotoRequest());
+				request.doAction(object, action);
 			}
 		};
 
 		// search for listener
-		ConditionalListener listener = null;
-
-		switch (type) {
-
-		case "TIMER":
-			listener = getTimeListener(generic, Integer.parseInt(value));
-			break;
-
-		case "PLAYER_DISTANCE":
-			listener = getPlayerDistanceListener(generic, object, Integer.parseInt(value));
-			break;
-		}
+		ConditionalListener listener = getListener(object, generic, conditionType, value);
 
 		if (listener != null)
 			object.addBehavior(new WaitforBehavior(object, listener));
 	}
 
-	////////// INSTRUCTION ////////////
+	////////// LISTENER ////////////
+
+	private ConditionalListener getListener(ExtraBehaviorsObject object, GenericListener generic, String conditionType,
+			String condition) {
+
+		switch (conditionType) {
+
+		case "TIMER":
+			return getTimeListener(generic, Integer.parseInt(condition));
+
+		case "PLAYER_DISTANCE":
+			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition));
+		}
+
+		return null;
+	}
 
 	private ConditionalListener getTimeListener(GenericListener generic, int time) {
 

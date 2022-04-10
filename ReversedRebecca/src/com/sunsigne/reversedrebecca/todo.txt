@@ -34,6 +34,16 @@ faire en sorte que le nom de base du joueur soit "player", pour ensuiote le chan
 
 	////////// PIRA ////////////
 	
+	faire un dictionnaire pour la creation des objets ?
+	
+	SeeRequest -> bien vérifier si tout est ok (+ s'en inspirer pour utiliser "player" partout)
+	
+	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
+	
+	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ...
+	
+	prévenir dans la doc que les mémory sont lourd, ne pas faire de conflit de nom !!!
+	
 	faire la doc sur Talk
 	faire la doc sur Tag et changer de nom ?
 	Vérifier les noms et les fichiers :	Utiliser la bonne nommenclature pour les fichiers 
@@ -51,6 +61,10 @@ faire en sorte que le nom de base du joueur soit "player", pour ensuiote le chan
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
+
+	TalkPiranhaAction -> à vérifier le doAction, rentre prive ce qui doit l'être
+
+	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
 	vérifier les couleurs de la map (surtout le peepuddle)
 

@@ -1,28 +1,28 @@
-package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
+package com.sunsigne.reversedrebecca.piranha.request.compact;
 
-import com.sunsigne.reversedrebecca.instructions.ConditionAnalyser;
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.GotoInstruction;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
+import com.sunsigne.reversedrebecca.piranha.ConditionalAnalyser;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.GotoRequest;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class FacingInstruction implements Instruction {
+public class FacingRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public FacingInstruction() {
-		InstructionList.getList().addObject(this);
+	public FacingRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new FacingInstruction();
+	private static Request request = new FacingRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -31,28 +31,28 @@ public class FacingInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return true;
 	}
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
 
-		ConditionAnalyser condition = ConditionAnalyser.create(target);
+		ConditionalAnalyser conditional = ConditionalAnalyser.create(target);
 
-		if (condition != null)
-			checkFacing(condition, object, target);
+		if (conditional != null)
+			checkFacing(conditional, object, target);
 		else
 			doFacing(object, target);
 	}
 
-	private void checkFacing(ConditionAnalyser condition, ExtraBehaviorsObject object, String target) {
+	private void checkFacing(ConditionalAnalyser conditional, ExtraBehaviorsObject object, String target) {
 
-		if (object.getFacing().getName().equalsIgnoreCase(condition.getValueToCheck()))
-			condition.setMet(true);
+		if (object.getFacing().getName().equalsIgnoreCase(conditional.getValueToCheck()))
+			conditional.setMet(true);
 
-		Instruction instruction = InstructionList.getList().getObject(new GotoInstruction());
-		instruction.doAction(object, condition.getAction());
+		Request instruction = RequestList.getList().getObject(new GotoRequest());
+		instruction.doAction(object, conditional.getAction());
 	}
 
 	private void doFacing(ExtraBehaviorsObject object, String target) {

@@ -1,25 +1,25 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.piranha.request;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class CreateInstruction implements Instruction {
+public class CreateRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public CreateInstruction() {
-		InstructionList.getList().addObject(this);
+	public CreateRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new CreateInstruction();
+	private static Request request = new CreateRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class CreateInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return false;
 	}
 
@@ -70,7 +70,6 @@ public class CreateInstruction implements Instruction {
 				return tempMappable.createObject(x, y);
 			}
 		}
-
 		return null;
 	}
 

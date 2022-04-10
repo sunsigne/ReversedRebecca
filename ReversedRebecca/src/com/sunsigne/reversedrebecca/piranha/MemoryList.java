@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.instructions;
+package com.sunsigne.reversedrebecca.piranha;
 
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
-public class TagList {
+public class MemoryList {
 
 	////////// MAP OR LIST ////////////
 

@@ -1,24 +1,24 @@
-package com.sunsigne.reversedrebecca.instructions.instruction;
+package com.sunsigne.reversedrebecca.piranha.request;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
 
-public class TripleActionInstruction implements Instruction {
+public class TripleActionRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public TripleActionInstruction() {
-		InstructionList.getList().addObject(this);
+	public TripleActionRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new TripleActionInstruction();
+	private static Request request = new TripleActionRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -27,20 +27,20 @@ public class TripleActionInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return false;
 	}
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
 
-		String[] values = new String[] {};
+		String[] targets = new String[] {};
 		if (target != null)
-			values = target.split(",");
+			targets = target.split(",");
 
-		String actionInstruction1 = values.length > 0 ? values[0] : null;
-		String actionInstruction2 = values.length > 1 ? values[1] : null;
-		String actionInstruction3 = values.length > 2 ? values[2] : null;
+		String actionInstruction1 = targets.length > 0 ? targets[0] : null;
+		String actionInstruction2 = targets.length > 1 ? targets[1] : null;
+		String actionInstruction3 = targets.length > 2 ? targets[2] : null;
 
 		String noActionText = null;
 		Action action1 = new ActionAnalyzer().getAction(object, actionInstruction1);

@@ -21,7 +21,7 @@ public abstract class SuperExtraBehaviorsObject extends GameObject
 		super(x, y, w, h);
 		setName(name);
 		if (World.get() != null)
-			instructionMap = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
+			piranhaFile = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
 	}
 
 	////////// NAME ////////////
@@ -75,12 +75,12 @@ public abstract class SuperExtraBehaviorsObject extends GameObject
 		this.facing = facing;
 	}
 
-	////////// INSTRUCTION ////////////
+	////////// PIRANHA ////////////
 
-	private String instructionMap;
+	private String piranhaFile;
 
-	public String getInstructionMap() {
-		return instructionMap;
+	public String getPiranhaFile() {
+		return piranhaFile;
 	}
 
 	////////// INTERACTIVE ////////////

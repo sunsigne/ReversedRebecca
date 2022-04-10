@@ -1,15 +1,15 @@
-package com.sunsigne.reversedrebecca.instructions;
+package com.sunsigne.reversedrebecca.piranha;
 
-public class ConditionAnalyser {
+public class ConditionalAnalyser {
 
-	public static ConditionAnalyser create(String target) {
+	public static ConditionalAnalyser create(String target) {
 		if (target.contains("?"))
-			return new ConditionAnalyser(target);
+			return new ConditionalAnalyser(target);
 		else
 			return null;
 	}
 
-	private ConditionAnalyser(String target) {
+	private ConditionalAnalyser(String target) {
 		valueToCheck = String.valueOf(target.split("\\?")[0]);
 
 		String action = String.valueOf(target.split("\\?")[1]);		

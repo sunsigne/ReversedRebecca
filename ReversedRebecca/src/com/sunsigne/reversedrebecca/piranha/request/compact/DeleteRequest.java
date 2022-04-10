@@ -1,24 +1,24 @@
-package com.sunsigne.reversedrebecca.instructions.instruction.shortcut;
+package com.sunsigne.reversedrebecca.piranha.request.compact;
 
-import com.sunsigne.reversedrebecca.instructions.InstructionList;
-import com.sunsigne.reversedrebecca.instructions.instruction.Instruction;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class DeleteInstruction implements Instruction {
+public class DeleteRequest implements Request {
 
-	////////// INSTRUCTION ////////////
+	////////// REQUEST ////////////
 
-	public DeleteInstruction() {
-		InstructionList.getList().addObject(this);
+	public DeleteRequest() {
+		RequestList.getList().addObject(this);
 	}
 
-	private static Instruction instruction = new DeleteInstruction();
+	private static Request request = new DeleteRequest();
 
 	@Override
-	public Instruction getInstruction() {
-		return instruction;
+	public Request getRequest() {
+		return request;
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class DeleteInstruction implements Instruction {
 	}
 
 	@Override
-	public boolean isShortcut() {
+	public boolean hasCompactWriting() {
 		return true;
 	}
 

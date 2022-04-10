@@ -6,7 +6,7 @@ Piranha vient de l'animal, sans raison autre que le mot sonnait bien et qu'on le
 
 Le Piranha a pour principal objectif de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus facilement éditable qu'en Java.
 
-L'avantage du Piranha est qu'il peut très facilement être lu, écrit et édité en remplaçant l'extension des fichiers .piranha par .txt
+L'avantage du Piranha est qu'il peut très facilement être lu, écrit et édité en remplaçant par un éditeur de texte ou de contenu csv
 
 Les éditeurs de code actuels ne reconnaissant pas encore le Piranha comme langage, c'est pourquoi nous vous conseillons, afin de gagner en visibilité, de configurer vous-même la colorisation syntaxique.
 Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv et définir l'espace (" ") comme élément séparateur.
@@ -15,26 +15,38 @@ Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv 
 ////// Fichier //////
 
 
-Les fichiers .piranha éditables avec un éditeur de texte, exactement comme pour des fichiers .txt ou .csv
 La seule règle importante à retenir est qu'en dehors de l'extension, ils doivent avoir un nom qui fait exactement 6 caractères, et être dans un dossier de map !
 ex : NPC-18 (valide) / OBJ-42 (valide) / PLAYER (valide) / ENNEMI-12 (invalide)
 
-Actuellement, les fichiers .piranha lus et traités par Java sont tous les fichiers allant de NPC-01 à NPC30, ou de OBJ-01 à OBJ-50.
+Actuellement, les fichiers en Piranha lus et traités par Java sont tous les fichiers dont les noms vont de NPC-01 à NPC-30, ou de OBJ-01 à OBJ-50; et dont l'extension est .csv.
+
+
+////// Nomenclature //////
+
+
+Prenons l'exemple suivant : GOAL -> 33-33 = FACING -> LEFT
+Ce que cette ligne fait n'a aucune importance ici.
+
+Un telle ligne de code est appelée une "Instruction".
+L'ensemble "GOAL -> 33-33" est appelé la "Condition" de l'Instruction.
+L'ensemble "FACING -> LEFT" est appelé la "Requête" de l'Instruction.
+
+GOAL est le "Type de Condition".
+33-35 est la "Valeur".
+FACING est le "Type de Requête".
+LEFT est la "Cible".
 
 
 ////// Syntaxe //////
 
 
 Le Piranha n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
-En Pita, si ça n'est pas obligatoire, il est conseillé d'écrire les instructions en lettres capitales (par convention).
+En Pita, si ça n'est pas obligatoire, il est conseillé d'écrire les Instructions en lettres capitales (par convention).
+Attention ! Les coordonnées négatives sont impossibles en Piranha. Veillez à bien choisir l'origine en haut à gauche par exemple de votre map.
 Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=", le code risquerait de mal les interpréter.
 
-Le Piranha est basé sur un système très simple d'Instructions : État = Action.
-L'État est composé d'un "Type de Condition" et d'une "Condition", séparés entre eux par une flèche "->".
-L'action est composé d'un "Type d'Action" et d'une "Cible", séparés entre eux par une flèche "->".
+Une Instruction s'écrit de la façon suivante : WONPUZZLE -> 34-31 = TP -> 37-42
+Ici, il faut comprendre : "si le puzzle en 34-31 est résolu, alors se téléporter en 37-42"
 
-exemple : WONPUZZLE -> 34-31 = MOVE -> 37-42
-Ici, il faut comprendre : "si le puzzle en 34-31 est résolu, alors se déplacer en 37-42"
-
-ATTENTION ! Il n'est pas possible d'avoir deux États identiques (c'est-à-dire "Type de Condition -> Condition"). 
-Si vous avez besoin d'effectuer plusieurs actions à la suite d'un même état, utiliser le Type d'Action GOTO.
+ATTENTION ! Il n'est pas possible d'avoir deux Conditions identiques ("Type de Condition -> Valeur") dans un même fichier; seule la première sera traitée. L'utilisation de Conditions identiques dans des fichiers indépendants les uns des autres ne pose aucun problème.
+Si vous avez besoin d'effectuer plusieurs Insctructions vérifiant la même Condition, utiliser le Type d'Action GOTO !
