@@ -52,7 +52,7 @@ public interface Interactive extends Velocity, KeyboardEvent {
 		int diffY = getY() - player.getY();
 
 		// player is too far
-		if (new PlayerFinder().isPlayerFutherThan(this, Size.M + Size.XS))
+		if (new PlayerFinder().isPlayerFutherThan(this, 1))
 			return false;
 
 		// player is watching the object

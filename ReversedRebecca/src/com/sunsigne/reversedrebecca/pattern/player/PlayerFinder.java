@@ -2,7 +2,9 @@ package com.sunsigne.reversedrebecca.pattern.player;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PlayerFinder {
@@ -20,7 +22,7 @@ public class PlayerFinder {
 		return null;
 	}
 
-	public boolean isPlayerFutherThan(Velocity object, int distance) {
+	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {
 		Player player = getPlayer();
 
 		if (player == null)
@@ -29,11 +31,15 @@ public class PlayerFinder {
 		if (player.getHandler() != object.getHandler())
 			return true;
 
-		int diffX = object.getX() - player.getX();
-		int diffY = object.getY() - player.getY();
-		float playerDistance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+		int diffX = getTilePos(object.getX()) - getTilePos(player.getX());
+		int diffY = getTilePos(object.getY()) - getTilePos(player.getY());
+		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / Size.M;
 
-		return playerDistance > distance;
+		return playerDistance > distanceInTiles;
+	}
+
+	private int getTilePos(int pos) {
+		return new TilePos().getTilePos(pos, Size.M);
 	}
 
 }
