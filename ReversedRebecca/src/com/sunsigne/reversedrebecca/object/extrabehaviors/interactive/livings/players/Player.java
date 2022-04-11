@@ -12,11 +12,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class Player extends LivingObject {
 
 	public Player(int x, int y) {
-		this("Rebecca", x, y);
-	}
-
-	public Player(String name, int x, int y) {
-		super(name, x, y, Size.XS / 3);
+		super("PLAYER", x, y, Size.XS / 3);
 
 		addPlayerBehaviors();
 	}

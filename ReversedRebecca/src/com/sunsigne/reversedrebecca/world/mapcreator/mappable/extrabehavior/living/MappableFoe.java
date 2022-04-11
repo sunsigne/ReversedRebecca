@@ -22,7 +22,7 @@ public class MappableFoe implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new Foe(x, y);
+		return new Foe("Gamma", x, y);
 	}
 
 	@Override

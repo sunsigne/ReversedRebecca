@@ -9,11 +9,6 @@
 	
 	////////// IMPORTANT ////////////
 
-	! deux object côte à côte peuvent être actionner en même temps (ça ne devrait pas)
-
-faire en sorte que le nom de base du joueur soit "player", pour ensuiote le changer avec le language 
-	le raccourcie talk: et le comportement dans tiple_action apparraissent comme étant les même : confus. En fait, d'une manière générale le language est confus, devrait créer un système de variables local et globales avec goto et les tags
-
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
 	finir l'ordinateur saboté (action en soi + vérification de la traduction, mini cinématique)
 
