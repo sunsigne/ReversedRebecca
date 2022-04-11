@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChatContent implements Updatable {
@@ -153,6 +154,7 @@ public class ChatContent implements Updatable {
 	public void render(Graphics g) {
 		drawFacial(g);
 		drawText(g);
+		drawActionKey(g);
 	}
 
 	private void drawFacial(Graphics g) {
@@ -172,6 +174,13 @@ public class ChatContent implements Updatable {
 		g.drawString(currentText[0], x0, y + 80);
 		if (sentence[1] != null)
 			g.drawString(currentText[1], x0, y + 170);
+	}
+	
+
+	private String registeredKey = "[" + new ActionOneKey().getRegisteredKey() + "]";
+	
+	private void drawActionKey(Graphics g) {
+		g.drawString(registeredKey, x + 1385, y + 205);
 	}
 
 }

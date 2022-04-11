@@ -63,9 +63,7 @@
 	!! MultiToolMode ne va que jusqu'à RED
 
 	changer le volume de la musique quand le joueurs est en plein dialogue
-	
-	changer le visuel de la boite de dialogue (surtout la touche [E])
-	
+
 	ajouter un son quand les joueurs parlent
 
 	Le PJ ne devrait jamais être un obstacle pour les NPC et les foe

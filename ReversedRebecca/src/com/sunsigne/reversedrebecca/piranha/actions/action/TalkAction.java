@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.piranha.actions.action;
 
-import java.awt.event.KeyEvent;
-
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
@@ -11,6 +9,7 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.uncompact.TripleActionRequest;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
 public class TalkAction extends ExtraBehaviorsObjectAction {
 
@@ -57,7 +56,7 @@ public class TalkAction extends ExtraBehaviorsObjectAction {
 
 	@Override
 	public int getKeyEvent() {
-		return KeyEvent.VK_E;
+		return ActionOneKey.getKey();
 	}
 
 }
