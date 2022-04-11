@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.pl
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
 public interface Interactive extends Velocity, KeyboardEvent {
