@@ -1,17 +1,17 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action;
+package com.sunsigne.reversedrebecca.piranha.actions;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
-public abstract class ObjectAction extends Action {
+public abstract class ExtraBehaviorsObjectAction extends Action {
 
-	public ObjectAction() {
+	public ExtraBehaviorsObjectAction() {
 		super(null, null, null, 0);
 	}
 
-	public abstract ObjectAction getAction();
+	public abstract ExtraBehaviorsObjectAction getAction();
 
 	public void create(ExtraBehaviorsObject object, String target) {
 		setName(new Translatable().getTranslatedText(getName(), object.getFile()));

@@ -1,13 +1,14 @@
-package com.sunsigne.reversedrebecca.piranha.request;
+package com.sunsigne.reversedrebecca.piranha.request.uncompact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.SightFinder;
-import com.sunsigne.reversedrebecca.piranha.ConditionalAnalyser;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class SeeRequest implements Request {
+public class SeeRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -34,8 +35,18 @@ public class SeeRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
+		doConditionalAction(object, target);
+	}
 
-		ConditionalAnalyser conditional = ConditionalAnalyser.create(target);
+	@Override
+	protected String getConditionToCheck(ExtraBehaviorsObject object) {
+		return object.getName();
+	}
+
+	@Override
+	protected boolean analyseCondition(ExtraBehaviorsObject object, String target) {
+
+		String valueToCheck = String.valueOf(target.split("\\?")[0]);
 
 		for (Updatable tempUpdatable : object.getHandler().getList()) {
 			if (tempUpdatable instanceof ExtraBehaviorsObject == false)
@@ -43,19 +54,13 @@ public class SeeRequest implements Request {
 
 			ExtraBehaviorsObject tempObject = (ExtraBehaviorsObject) tempUpdatable;
 
-			if (conditional.getValueToCheck().equalsIgnoreCase("PLAYER")) {
-				conditional.setMet(new SightFinder(object, new PlayerFinder().getPlayer()).isGoalInSight());
-				break;
-			}
+			if (getConditionToCheck(tempObject).equalsIgnoreCase(valueToCheck))
+				return new SightFinder(object, tempObject).isGoalInSight();
 
-			if (tempObject.getName().equalsIgnoreCase(conditional.getValueToCheck())) {
-				conditional.setMet(new SightFinder(object, tempObject).isGoalInSight());
-				break;
-			}
+			if (valueToCheck.equalsIgnoreCase("PLAYER"))
+				return new SightFinder(object, new PlayerFinder().getPlayer()).isGoalInSight();
 		}
-
-		Request instruction = RequestList.getList().getObject(new GotoRequest());
-		instruction.doAction(object, conditional.getAction());
+		return false;
 	}
 
 }

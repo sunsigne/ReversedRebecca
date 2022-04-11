@@ -1,10 +1,11 @@
-package com.sunsigne.reversedrebecca.piranha.request;
+package com.sunsigne.reversedrebecca.piranha.request.uncompact;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionAnalyzer;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.actions.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
 public class TripleActionRequest implements Request {
 

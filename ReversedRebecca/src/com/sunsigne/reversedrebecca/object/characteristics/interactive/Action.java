@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 
-public class Action {
+public abstract class Action {
 
 	public Action(Interactive interactive, String name, GenericListener listener,
 			int keyEvent) {

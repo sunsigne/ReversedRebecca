@@ -1,13 +1,11 @@
 package com.sunsigne.reversedrebecca.piranha.request.compact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.ConditionalAnalyser;
-import com.sunsigne.reversedrebecca.piranha.MemoryList;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.GotoRequest;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class MemoryRequest implements Request {
+public class MemoryRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -34,28 +32,30 @@ public class MemoryRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		ConditionalAnalyser conditional = ConditionalAnalyser.create(target);
-
-		if (conditional != null)
-			checkTag(conditional, object, target);
+		if (isConditional(target))
+			doConditionalAction(object, target);
 		else
 			registerMemory(object, target);
 	}
 
-
-	private void checkTag(ConditionalAnalyser conditional, ExtraBehaviorsObject object, String target) {
-		for (String tempMemory : MemoryList.getList().getList()) {
-			if (tempMemory.equalsIgnoreCase(conditional.getValueToCheck()))
-				conditional.setMet(true);
-		}
-
-		Request request = RequestList.getList().getObject(new GotoRequest());
-		request.doAction(object, conditional.getAction());
+	@Override
+	protected String getConditionToCheck(ExtraBehaviorsObject object) {
+		return null;
 	}
+	
+	@Override
+	protected boolean analyseCondition(ExtraBehaviorsObject object, String target) {
+		String valueToCheck = String.valueOf(target.split("\\?")[0]);
 
-
+		for (String tempMemory : MemoryList.getList().getList()) {
+			if (valueToCheck.equalsIgnoreCase(tempMemory))
+				return true;
+		}
+		return false;
+	}
+	
 	private void registerMemory(ExtraBehaviorsObject object, String target) {
 		MemoryList.getList().addObject(target);
 	}
-	
+
 }

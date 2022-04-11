@@ -1,17 +1,18 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.action;
+package com.sunsigne.reversedrebecca.piranha.actions.action;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.actions.ActionList;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
+import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
+import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
-import com.sunsigne.reversedrebecca.piranha.request.TripleActionRequest;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.uncompact.TripleActionRequest;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
-public class TalkAction extends ObjectAction {
+public class TalkAction extends ExtraBehaviorsObjectAction {
 
 	////////// NPC ACTION ////////////
 
@@ -19,10 +20,10 @@ public class TalkAction extends ObjectAction {
 		ActionList.getList().addObject(this);
 	}
 
-	private static ObjectAction action = new TalkAction();
+	private static ExtraBehaviorsObjectAction action = new TalkAction();
 
 	@Override
-	public ObjectAction getAction() {
+	public ExtraBehaviorsObjectAction getAction() {
 		return action;
 	}
 

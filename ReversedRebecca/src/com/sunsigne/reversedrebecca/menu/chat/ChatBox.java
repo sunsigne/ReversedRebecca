@@ -6,9 +6,9 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
-import com.sunsigne.reversedrebecca.piranha.condition.TalkedCondition;
+import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.compact.FacingRequest;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

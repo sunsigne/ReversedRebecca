@@ -1,10 +1,11 @@
-package com.sunsigne.reversedrebecca.piranha;
+package com.sunsigne.reversedrebecca.piranha.condition;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
-public class InstructionAnalyzer {
+public abstract class LocalInstruction {
 
 	protected void analyse(ExtraBehaviorsObject object, String condition) {
 		this.object = object;

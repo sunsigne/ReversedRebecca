@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.piranha.request.compact;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
 public class TeleportRequest implements Request {
 

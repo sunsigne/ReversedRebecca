@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.piranha.request;
+package com.sunsigne.reversedrebecca.piranha.request.uncompact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GotoCondition;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
 public class GotoRequest implements Request {
 

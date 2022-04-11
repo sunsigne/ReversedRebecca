@@ -4,13 +4,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
-import com.sunsigne.reversedrebecca.piranha.ConditionalAnalyser;
-import com.sunsigne.reversedrebecca.piranha.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.GotoRequest;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class FacingRequest implements Request {
+public class FacingRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -37,22 +36,15 @@ public class FacingRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-
-		ConditionalAnalyser conditional = ConditionalAnalyser.create(target);
-
-		if (conditional != null)
-			checkFacing(conditional, object, target);
+		if (isConditional(target))
+			doConditionalAction(object, target);
 		else
 			doFacing(object, target);
 	}
 
-	private void checkFacing(ConditionalAnalyser conditional, ExtraBehaviorsObject object, String target) {
-
-		if (object.getFacing().getName().equalsIgnoreCase(conditional.getValueToCheck()))
-			conditional.setMet(true);
-
-		Request instruction = RequestList.getList().getObject(new GotoRequest());
-		instruction.doAction(object, conditional.getAction());
+	@Override
+	protected String getConditionToCheck(ExtraBehaviorsObject object) {
+		return object.getFacing().getName();
 	}
 
 	private void doFacing(ExtraBehaviorsObject object, String target) {
