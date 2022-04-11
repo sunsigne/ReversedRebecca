@@ -37,13 +37,10 @@
 	
 	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ...
 	
-	prévenir dans la doc que les mémory sont lourd, ne pas faire de conflit de nom !!!
+	prévenir dans la doc que les mémory sont lourdes, ne pas faire de conflit de nom !!!	
+	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 	
-	faire la doc sur Talk
-	faire la doc sur Tag et changer de nom ?
-	Vérifier les noms et les fichiers :	Utiliser la bonne nommenclature pour les fichiers 
-
-	faire la doc de toutes les types actions à écriture non condensées
+	finir la cod
 
 	////////// DIFFICILE ////////////
 
@@ -56,10 +53,6 @@
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
-
-	TalkPiranhaAction -> à vérifier le doAction, rentre prive ce qui doit l'être
-
-	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
 	vérifier les couleurs de la map (surtout le peepuddle)
 

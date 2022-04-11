@@ -7,6 +7,10 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.KeyboardBeha
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 
 public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 
@@ -79,10 +83,10 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 	}	
 
 	private void initDirectionKeys() {
-		setDirectionKeyEvent(DIRECTION.LEFT, KeyEvent.VK_Q);
-		setDirectionKeyEvent(DIRECTION.RIGHT, KeyEvent.VK_D);
-		setDirectionKeyEvent(DIRECTION.UP, KeyEvent.VK_Z);
-		setDirectionKeyEvent(DIRECTION.DOWN, KeyEvent.VK_S);
+		setDirectionKeyEvent(DIRECTION.LEFT, LeftKey.getKey());
+		setDirectionKeyEvent(DIRECTION.RIGHT, RightKey.getKey());
+		setDirectionKeyEvent(DIRECTION.UP, UpKey.getKey());
+		setDirectionKeyEvent(DIRECTION.DOWN, DownKey.getKey());
 	}
 
 	private void setDirectionKeyEvent(DIRECTION direction, int directionKeyEvent) {
