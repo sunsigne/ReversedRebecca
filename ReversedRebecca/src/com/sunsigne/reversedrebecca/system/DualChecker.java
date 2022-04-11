@@ -37,7 +37,7 @@ public class DualChecker implements Updatable {
 
 		// wait more than one tick
 		try {
-			Thread.sleep(30);
+			Thread.sleep(20);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
