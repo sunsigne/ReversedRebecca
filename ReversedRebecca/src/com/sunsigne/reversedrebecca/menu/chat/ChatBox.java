@@ -78,10 +78,10 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
-		String living_name = line.split("=")[0];
-		String facing = line.split("=")[1];
-		String mood = line.split("=")[2];
-		String text = line.split("=")[3];
+		String living_name = line.contains("=") ? line.split("=")[0] : "error";
+		String facing = line.contains("=") ? line.split("=")[1] : "down";
+		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
+		String text = line.contains("=") ? line.split("=")[3] : line;
 
 		content = new ChatContent(living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);

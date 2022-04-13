@@ -9,6 +9,8 @@ public class Translatable {
 
 	public String getTranslatedText(String valueToRead, String path) {
 		String text = new FileTask().read(valueToRead, "texts/" + Language.getInstance().getLang() + "/" + path);
+		if(text.isEmpty())
+			text = new FileTask().read("texts/" + Language.getInstance().getLang() + "/lang/error.txt");
 		return text;
 	}
 

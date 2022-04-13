@@ -16,7 +16,6 @@
 	La plante jaune n'est pas finie
 	faire une vitesse de course DNAS livingObject ?
 
-	faire en sorte que lorsqu'un text n'est pas disponible dans une langue, ne plante pas
 	Les png error ne se tournent pas ?
 	Le dialogue error du png error se répète en boucle ... ?
 	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
@@ -66,18 +65,10 @@
 
 	!! MultiToolMode ne va que jusqu'à RED
 
-	changer le volume de la musique quand le joueurs est en plein dialogue
-
-	ajouter un son quand les joueurs parlent
-
 	Le PJ ne devrait jamais être un obstacle pour les NPC et les foe
-	
-	Les Actions dans les NPC est loin d'être terminé !
 
 	ATTENTION ! quand les npc se déplace, risque d'envoyer balader le jouer + régler leurs vitesse
 
-	NPC -> class pas encore fini
-	
 	MovingToPlayer des foes devrait s'adapter à la distance
 
 	DieWhenNoHp -> kill() prévoir un restart
@@ -90,6 +81,8 @@
 
 	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")
 	
+	OptionScreen - Installer le système pour changer les touches du clavier
+	
 	////////// SONS ////////////
 		
 	DualChecker - doit jouer un son lors de l'erreur
@@ -97,7 +90,9 @@
 	LootObject -> should play a sound when pickup
 	Buttons -> should play a sound too
 	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
-
+	
+	Ajouter un son quand les joueurs parlent
+	Changer le volume de la musique quand le joueurs est en plein dialogue
 	
 	///////// IDEE ////////////
 
