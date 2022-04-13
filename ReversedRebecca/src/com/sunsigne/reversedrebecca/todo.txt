@@ -7,6 +7,10 @@
 	- traduction de text
 	- écran de chargement	
 	
+	////////// A CREER ////////////
+	
+	faire en sorte que le joueur veuille utiliser la souris pour les puzzle : créer un lvl 000 
+
 	////////// IMPORTANT ////////////
 
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
@@ -18,22 +22,17 @@
 
 	Les png error ne se tournent pas ?
 	Le dialogue error du png error se répète en boucle ... ?
-	devrait utiliser le mot clef "self" dans les dialogues de npc plutot que leur nom, ainsi que player
-	
+
 	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (parce que difficile de se concentrer quand il bouge + TOUTE la partie après l'ouverture de la porte)
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
-
-	faire en sorte que le joueur veuille utiliser la souris pour les puzzle !
 
 	////////// PIRA ////////////
 	
 	rebaptisé Condition en Evenement
 	
 	faire un dictionnaire pour la creation des objets ?
-	
-	SeeRequest -> bien vérifier si tout est ok (+ s'en inspirer pour utiliser "player" partout)
-	
+
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
 	
 	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ...

@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -78,12 +79,17 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
+		
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
+		// authorize words like "player" or "object"
+		String formated_living_name = new FormatedName().getName(object, living_name);
+		String formated_facing = new FormatedName().getName(object, facing);
+		
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
 		String text = line.contains("=") ? line.split("=")[3] : line;
 
-		content = new ChatContent(living_name, mood, text);
+		content = new ChatContent(formated_living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);
 
 		Request instruction = RequestList.getList().getObject(new FacingRequest());
@@ -94,8 +100,8 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 			LivingObject tempLiving = (LivingObject) tempUpdatable;
 
-			if (tempLiving.getName().equalsIgnoreCase(living_name)) {
-				instruction.doAction(tempLiving, facing);
+			if (tempLiving.getName().equalsIgnoreCase(formated_living_name)) {
+				instruction.doAction(tempLiving, formated_facing);
 			}
 		}
 	}

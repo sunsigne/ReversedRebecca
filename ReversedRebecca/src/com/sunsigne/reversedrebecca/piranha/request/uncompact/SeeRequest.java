@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.uncompact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.physic.SightFinder;
 import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -53,12 +53,10 @@ public class SeeRequest extends ConditionalRequest {
 				continue;
 
 			ExtraBehaviorsObject tempObject = (ExtraBehaviorsObject) tempUpdatable;
+			String formated_valueToCheck = new FormatedName().getName(tempObject, valueToCheck);
 
-			if (getConditionToCheck(tempObject).equalsIgnoreCase(valueToCheck))
+			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))
 				return new SightFinder(object, tempObject).isGoalInSight();
-
-			if (valueToCheck.equalsIgnoreCase("PLAYER"))
-				return new SightFinder(object, new PlayerFinder().getPlayer()).isGoalInSight();
 		}
 		return false;
 	}
