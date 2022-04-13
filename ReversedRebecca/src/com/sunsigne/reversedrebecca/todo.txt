@@ -46,6 +46,8 @@
 
 	////////// DIFFICILE ////////////
 
+	faire une animation de saut sur place (pour erendre les diagloues + vivants)
+
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
 
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)

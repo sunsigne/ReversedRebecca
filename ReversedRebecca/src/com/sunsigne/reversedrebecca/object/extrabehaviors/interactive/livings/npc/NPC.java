@@ -21,12 +21,6 @@ public class NPC extends LivingObject {
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
 
-		// faire l'annimation de saut sur placve (rend les dialogues + vivants)
-		// aller à / se tourner vers le joueur quand se dernier lui parle
-		// marcher sur place (pour avoir l'air humain) -> vérifier the escapist, faire
-		// ça même quand ils travaillent sur un bureau ?
-		// faire une blague meta sur le fait précédent "tu n'a jamais remarqué qu'on
-		// donnait tous l'impression de marcher sur place ? Weird ..."
 	}
 
 	@Override
