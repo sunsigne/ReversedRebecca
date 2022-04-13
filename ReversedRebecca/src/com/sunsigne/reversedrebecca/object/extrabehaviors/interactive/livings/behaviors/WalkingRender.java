@@ -111,9 +111,8 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 	private BufferedImage loadImage(String imageName) {
 		String hd = WalkingRender.hd ? "hd/" : "";
 		String imagePath = "textures/characters/" + living.getName() + "/" + hd + imageName;
-		String backupImagePath = "textures/characters/" + "error" + "/" + hd + imageName;
 
-		return new ImageTask().loadImage(imagePath, backupImagePath, false);
+		return new ImageTask().loadImage(imagePath);
 	}
 
 	////////// RENDER ////////////

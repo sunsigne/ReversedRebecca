@@ -14,29 +14,26 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class ImageTask {
 
 	public BufferedImage loadImage(String path) {
-		return loadImage(path, null, true);
+		return loadImage(path, true);
 	}
 
+	// use "showError = false" only if you know what you're doing
 	public BufferedImage loadImage(String path, boolean showError) {
-		return loadImage(path, null, showError);
-	}
-
-	public BufferedImage loadImage(String path, String backupPath, boolean showError) {
 
 		BufferedImage image = null;
-
-		if (path == null)
-			return drawMissingTexture();
+		String path0 = "/ressources/" + path + ".png";
 
 		try {
-			String path0 = "/ressources/" + path + ".png";
-			path = null;
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
 		} catch (Exception e) {
 			if (showError)
 				e.printStackTrace();
-			image = loadImage(backupPath, path, showError);
+
+			if (path.contains("/characters/") && path.contains("/error/") == false)
+				image = loadMissingCharacter(path);
+			else
+				image = drawMissingTexture();
 		}
 
 		return image;
@@ -59,6 +56,25 @@ public class ImageTask {
 		g2d.dispose();
 
 		return img;
+	}
+
+	private BufferedImage loadMissingCharacter(String wrongPath) {
+
+		String[] wrongPathArray = wrongPath.split("/");
+
+		// change the element directly after /characters
+		for (int index = 0; index < wrongPathArray.length; index++) {
+
+			if (wrongPathArray[index].contains("characters") == false)
+				continue;
+
+			wrongPathArray[index + 1] = "error";
+			break;
+		}
+
+		String fixedPath = String.join("/", wrongPathArray);
+
+		return loadImage(fixedPath, false);
 	}
 
 }
