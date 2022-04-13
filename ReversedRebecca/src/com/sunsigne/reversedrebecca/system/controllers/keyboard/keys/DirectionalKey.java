@@ -11,7 +11,9 @@ public interface DirectionalKey extends Key {
 		if (player == null)
 			return;
 
+		player.removeBehavior(player.userCanKeyMove);
 		player.userCanKeyMove = new UserCanKeyMove(player);
+		player.addBehavior(player.userCanKeyMove);
 	}
 
 }
