@@ -7,21 +7,9 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class NPC extends LivingObject {
 
-	private static final int walking_speed = Size.XS / 10;
-	private static final int running_speed = Size.XS / 5;
-
 	public NPC(String name, int x, int y) {
-		super(name, x, y, walking_speed);
+		super(name, x, y, Size.XS / 10, Size.XS / 5);
 		addNPCBehaviors();
-	}
-
-	////////// USEFUL ////////////
-
-	public void setRunning(boolean running) {
-		if (running)
-			this.speed = running_speed;
-		else
-			this.speed = walking_speed;
 	}
 
 	////////// BEHAVIOR ////////////

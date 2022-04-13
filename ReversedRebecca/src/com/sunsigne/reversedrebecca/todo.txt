@@ -29,6 +29,8 @@
 
 	////////// PIRA ////////////
 	
+	rebaptisé Condition en Evenement
+	
 	faire un dictionnaire pour la creation des objets ?
 	
 	SeeRequest -> bien vérifier si tout est ok (+ s'en inspirer pour utiliser "player" partout)

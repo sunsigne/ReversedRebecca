@@ -4,12 +4,11 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors.GoalIsPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors.PushingPlayer;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public class Foe extends LivingObject {
 
 	public Foe(String name, int x, int y) {
-		super(name, x, y, Size.XS / 5);
+		super(name, x, y);
 		addFoeBehaviors();
 	}
 
@@ -31,5 +30,5 @@ public class Foe extends LivingObject {
 	public Behavior[] behaviorToPauseIfStunned() {
 		return new Behavior[] { movingToGoal };
 	}
-	
+
 }

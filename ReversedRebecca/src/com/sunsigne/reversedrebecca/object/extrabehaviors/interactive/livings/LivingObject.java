@@ -7,16 +7,21 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WalkingRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector {
 
-	public LivingObject(String name, int x, int y, int speed) {
+	public LivingObject(String name, int x, int y) {
+		this(name, x, y, Size.XS / 10, Size.XS / 5);
+	}
+	
+	public LivingObject(String name, int x, int y, int walking_speed, int running_speed) {
 		super(name, x, y);
-		this.speed = speed;
+		this.running = true;
+		this.walking_speed = walking_speed;
+		this.running_speed = running_speed;
 		addLivingBehaviors();
 	}
-
-	public int speed;
 
 	////////// NAME ////////////
 
@@ -28,6 +33,24 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		removeBehavior(walkingRender);
 		walkingRender = new WalkingRender(this);
 		addBehavior(walkingRender);
+	}
+
+	////////// SPEED ////////////
+
+	private int walking_speed;
+	private int running_speed;
+
+	private boolean running;
+
+	public void setRunning(boolean running) {
+		this.running = running;
+	}
+
+	public int getSpeed() {
+		if (running)
+			return running_speed;
+		else
+			return walking_speed;
 	}
 
 	////////// BEHAVIOR ////////////

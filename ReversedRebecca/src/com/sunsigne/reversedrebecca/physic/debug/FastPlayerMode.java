@@ -26,8 +26,6 @@ public class FastPlayerMode extends DebugMode {
 
 	////////// TICK ////////////
 
-	private int basic_player_speed = new Player(0, 0).speed; 
-	
 	@Override
 	public void tick(Updatable object) {
 		if (object instanceof Player == false)
@@ -35,8 +33,10 @@ public class FastPlayerMode extends DebugMode {
 
 		Player player = (Player) object;
 
-		int modified_speed = getState() ? 3 * basic_player_speed : basic_player_speed;
-		player.speed = modified_speed;
+		if (getState())
+			player.setRunning(true);
+		else
+			player.setRunning(false);
 	}
 
 	////////// RENDER ////////////
@@ -50,5 +50,5 @@ public class FastPlayerMode extends DebugMode {
 	public void afterObjectRender(Graphics g, Updatable object) {
 
 	}
-	
+
 }

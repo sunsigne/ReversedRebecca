@@ -20,14 +20,14 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 	}
 
 	////////// BEHAVIOR ////////////
-	
+
 	private Player player;
-	
+
 	@Override
 	public Player getExtraBehaviorsObject() {
 		return player;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -39,11 +39,11 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 	private void movePlayerbyX() {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			player.setVelX(-player.speed);
+			player.setVelX(-player.getSpeed());
 		else if (directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			player.setVelX(0);
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && directionKeyPressed[DIRECTION.RIGHT.getNum()])
-			player.setVelX(player.speed);
+			player.setVelX(player.getSpeed());
 		else if (!directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			player.setVelX(0);
 	}
@@ -51,25 +51,25 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 	private void movePlayerbyY() {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
-			player.setVelY(-player.speed);
+			player.setVelY(-player.getSpeed());
 		else if (directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
 			player.setVelY(0);
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && directionKeyPressed[DIRECTION.DOWN.getNum()])
-			player.setVelY(player.speed);
+			player.setVelY(player.getSpeed());
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			player.setVelY(0);
 	}
 
 	////////// KEYBOARD ////////////
-	
+
 	private int[] directionKeyEvent = new int[4];
 	private boolean[] directionKeyPressed = new boolean[4];
-	
+
 	@Override
 	public KeyboardController getKeyBoardController() {
 		return player.getKeyBoardController();
 	}
-	
+
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
@@ -80,7 +80,7 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		directionKey(key, false);
-	}	
+	}
 
 	private void initDirectionKeys() {
 		setDirectionKeyEvent(DIRECTION.LEFT, LeftKey.getKey());

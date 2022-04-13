@@ -118,16 +118,16 @@ public class MovingToGoal implements PathSearcher, TickBehavior {
 			setMotionless();
 			break;
 		case LEFT:
-			setVelX(-living.speed);
+			setVelX(-living.getSpeed());
 			break;
 		case RIGHT:
-			setVelX(living.speed);
+			setVelX(living.getSpeed());
 			break;
 		case UP:
-			setVelY(-living.speed);
+			setVelY(-living.getSpeed());
 			break;
 		case DOWN:
-			setVelY(living.speed);
+			setVelY(living.getSpeed());
 			break;
 		}
 	}

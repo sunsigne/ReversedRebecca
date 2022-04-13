@@ -65,8 +65,8 @@ public class GoalIsPlayer implements TickBehavior {
 		float diffY = foe.getY() - player.getY();
 		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
 
-		foe.setVelX(foe.speed * Math.round((-1 / distance) * diffX));
-		foe.setVelY(foe.speed * Math.round((-1 / distance) * diffY));
+		foe.setVelX(foe.getSpeed() * Math.round((-1 / distance) * diffX));
+		foe.setVelY(foe.getSpeed() * Math.round((-1 / distance) * diffY));
 	}
 
 }
