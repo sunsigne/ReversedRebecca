@@ -69,7 +69,7 @@ public class WaitforRequest implements Request {
 		case "TIMER":
 			return getTimeListener(generic, Integer.parseInt(condition));
 
-		case "PLAYER_DISTANCE":
+		case "PLAYER_FUTHER_THAN":
 			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition));
 		}
 
