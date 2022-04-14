@@ -79,13 +79,13 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
-		
+
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
 		// authorize words like "player" or "object"
 		String formated_living_name = new FormatedName().getName(object, living_name);
 		String formated_facing = new FormatedName().getName(object, facing);
-		
+
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
 		String text = line.contains("=") ? line.split("=")[3] : line;
 
@@ -98,10 +98,12 @@ public class ChatBox implements Updatable, KeyboardEvent {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 
-			LivingObject tempLiving = (LivingObject) tempUpdatable;
+			ExtraBehaviorsObject tempObject = (LivingObject) tempUpdatable;
 
-			if (tempLiving.getName().equalsIgnoreCase(formated_living_name)) {
-				instruction.doAction(tempLiving, formated_facing);
+			if (tempObject.getName().equalsIgnoreCase(formated_living_name)) {
+				// just in case severeal object have the same name
+				if (tempObject == object)
+					instruction.doAction(tempObject, formated_facing);
 			}
 		}
 	}

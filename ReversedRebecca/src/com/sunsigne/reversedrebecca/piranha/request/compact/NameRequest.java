@@ -29,6 +29,7 @@ public class NameRequest implements Request {
 		return true;
 	}
 
+	// WARNING ! Each name should be different in a same folder
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
 		object.setName(target);
