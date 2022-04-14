@@ -8,6 +8,21 @@ public interface Facing {
 
 	public void setFacing(DIRECTION facing);
 
+	public default DIRECTION getOppositeFacing() {
+		switch (getFacing()) {
+		case LEFT:
+			return DIRECTION.RIGHT;
+		case RIGHT:
+			return DIRECTION.LEFT;
+		case UP:
+			return DIRECTION.DOWN;
+		case DOWN:
+			return DIRECTION.UP;
+		default:
+			return DIRECTION.NULL;
+		}
+	}
+
 	////////// DIRECTION ////////////
 
 	public enum DIRECTION {
