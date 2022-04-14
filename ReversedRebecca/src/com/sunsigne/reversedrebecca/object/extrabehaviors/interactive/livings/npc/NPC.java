@@ -24,7 +24,7 @@ public class NPC extends LivingObject {
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] {};
+		return new Behavior[] { movingToGoal };
 	}
 
 }

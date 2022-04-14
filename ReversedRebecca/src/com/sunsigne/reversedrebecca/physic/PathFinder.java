@@ -4,6 +4,8 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
@@ -192,8 +194,12 @@ public class PathFinder implements Position {
 
 			if (object instanceof CollisionReactor) {
 				CollisionReactor wall = (CollisionReactor) object;
-				if (wall.isBlockingPath() && wall != goal)
-					return true;
+				if (wall != goal) {
+					if (wall instanceof Player)
+						return isPlayerBlocking();
+					if (wall.isBlockingPath())
+						return true;
+				}
 			}
 
 			if (range > 0)
@@ -202,6 +208,25 @@ public class PathFinder implements Position {
 				range = range + Size.M;
 		}
 		return false;
+	}
+
+	private boolean isPlayerBlocking() {
+		if (searcher instanceof LivingObject == false)
+			return true;
+
+		LivingObject living = (LivingObject) searcher;
+
+		switch (living.getCollisionType()) {
+		case AROUND:
+			return true;
+		case PUSH:
+			return false;
+		case PUSH_HURT:
+			return false;
+		case STOP:
+			return false;
+		}		
+		return true;
 	}
 
 	private GameList<PathPointObject> createValidPathPointList() {

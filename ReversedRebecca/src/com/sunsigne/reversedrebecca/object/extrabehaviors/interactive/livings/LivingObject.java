@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WalkingRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -21,7 +22,7 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		this.running = true;
 		this.walking_speed = walking_speed;
 		this.running_speed = running_speed;
-		this.collisionType = collisionType;
+		setCollisionType(collisionType);
 		addLivingBehaviors();
 	}
 
@@ -91,15 +92,16 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 
 	@Override
 	public void setCollisionType(COLLISIONTYPE collisionType) {
+		if (collisionType == null)
+			collisionType = COLLISIONTYPE.AROUND;
+
 		this.collisionType = collisionType;
 		removeBehavior(collisionWithPlayer);
 
-		if (collisionType == null)
-			return;
-
 		switch (collisionType) {
 		case AROUND:
-			collisionWithPlayer = null;
+			// default pathFinder case
+			collisionWithPlayer = new StopWhenMeetPlayer(this);
 			break;
 		case PUSH:
 			collisionWithPlayer = new PushingPlayer(this, false);
@@ -108,9 +110,8 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 			collisionWithPlayer = new PushingPlayer(this, true);
 			break;
 		case STOP:
-			break;
-		default:
-			collisionWithPlayer = null;
+			// ignore player for path
+			collisionWithPlayer = new StopWhenMeetPlayer(this);
 			break;
 		}
 		addBehavior(collisionWithPlayer);

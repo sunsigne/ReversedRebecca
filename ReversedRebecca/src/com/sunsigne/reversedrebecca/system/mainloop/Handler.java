@@ -3,10 +3,13 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -27,11 +30,21 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
-			if (tempObject.getX() == x && tempObject.getY() == y) {
+			if (tempObject.getX() == x && tempObject.getY() == y)
 				return tempObject;
-			}
+			
+			if(tempObject instanceof Player == false)
+				continue;
+			
+			Player player = (Player) tempObject;
+			if (getTilePos(player.getX()) == x && getTilePos(player.getY()) == y)
+				return tempObject;
 		}
 		return null;
+	}
+	
+	private static int getTilePos(int pos) {
+		return new TilePos().getTilePos(pos, Size.M);
 	}
 
 	////////// MAP OR LIST ////////////
