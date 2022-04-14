@@ -3,23 +3,25 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WalkingRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector {
+public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector, CollisionWithPlayer {
 
-	public LivingObject(String name, int x, int y) {
-		this(name, x, y, Size.XS / 10, Size.XS / 5);
+	public LivingObject(String name, int x, int y, COLLISIONTYPE collisionType) {
+		this(name, x, y, Size.XS / 10, Size.XS / 5, collisionType);
 	}
-	
-	public LivingObject(String name, int x, int y, int walking_speed, int running_speed) {
+
+	public LivingObject(String name, int x, int y, int walking_speed, int running_speed, COLLISIONTYPE collisionType) {
 		super(name, x, y);
 		this.running = true;
 		this.walking_speed = walking_speed;
 		this.running_speed = running_speed;
+		this.collisionType = collisionType;
 		addLivingBehaviors();
 	}
 
@@ -59,6 +61,7 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	public Behavior walkingRender;
 	public Behavior movingToGoal;
 	public Behavior moveWhenPushed;
+	public Behavior collisionWithPlayer;
 
 	private void addLivingBehaviors() {
 
@@ -76,5 +79,41 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	}
 
 	public abstract Behavior[] behaviorToPauseIfStunned();
+
+	////////// COLLISION ////////////
+
+	private COLLISIONTYPE collisionType;
+
+	@Override
+	public COLLISIONTYPE getCollisionType() {
+		return collisionType;
+	}
+
+	@Override
+	public void setCollisionType(COLLISIONTYPE collisionType) {
+		this.collisionType = collisionType;
+		removeBehavior(collisionWithPlayer);
+
+		if (collisionType == null)
+			return;
+
+		switch (collisionType) {
+		case AROUND:
+			collisionWithPlayer = null;
+			break;
+		case PUSH:
+			collisionWithPlayer = new PushingPlayer(this, false);
+			break;
+		case PUSH_HURT:
+			collisionWithPlayer = new PushingPlayer(this, true);
+			break;
+		case STOP:
+			break;
+		default:
+			collisionWithPlayer = null;
+			break;
+		}
+		addBehavior(collisionWithPlayer);
+	}
 
 }

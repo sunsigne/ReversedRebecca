@@ -21,6 +21,8 @@
 
 	////////// PIRA ////////////
 	
+	étendre CollisionRequest à LivingObject
+	
 	rebaptisé Condition en Evenement	
 	faire un dictionnaire pour la creation des objets ?
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)

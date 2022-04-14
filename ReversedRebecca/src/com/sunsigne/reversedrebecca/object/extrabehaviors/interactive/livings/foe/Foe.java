@@ -1,29 +1,24 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors.GoalIsPlayer;
 
 public class Foe extends LivingObject {
 
 	public Foe(String name, int x, int y) {
-		super(name, x, y);
+		super(name, x, y, COLLISIONTYPE.PUSH_HURT);
 		addFoeBehaviors();
 	}
 
 	////////// BEHAVIOR ////////////
 
 	public Behavior goalIsPlayer;
-	public Behavior pushingPlayer;
 
 	private void addFoeBehaviors() {
 
 		goalIsPlayer = new GoalIsPlayer(this);
 		addBehavior(goalIsPlayer);
-
-		pushingPlayer = new PushingPlayer(this, false);
-		addBehavior(pushingPlayer);
 	}
 
 	@Override
