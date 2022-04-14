@@ -6,85 +6,54 @@
 	- le dual checker
 	- traduction de text
 	- écran de chargement	
-	
-	////////// A CREER ////////////
-	
-	faire en sorte que le joueur veuille utiliser la souris pour les puzzle : créer un lvl 000 
 
-	////////// IMPORTANT ////////////
 
-	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
-	finir l'ordinateur saboté (action en soi + vérification de la traduction, mini cinématique)
-
+	////////// A FINIR ////////////
 
 	La plante jaune n'est pas finie
-	faire une vitesse de course DNAS livingObject ?
-
-	Les png error ne se tournent pas ?
-	Le dialogue error du png error se répète en boucle ... ?
-
-	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (parce que difficile de se concentrer quand il bouge + TOUTE la partie après l'ouverture de la porte)
-
-	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
+	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
+	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
+	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
+	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (TOUTE la partie après l'ouverture de la porte)
+	
 
 	////////// PIRA ////////////
 	
-	rebaptisé Condition en Evenement
-	
+	rebaptisé Condition en Evenement	
 	faire un dictionnaire pour la creation des objets ?
-
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
-	
 	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ...
-	
 	prévenir dans la doc que les mémory sont lourdes, ne pas faire de conflit de nom !!!	
 	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
-	
-	finir la cod
+	finir la doc
+
 
 	////////// DIFFICILE ////////////
 
 	finir les textures du personnage "error"
-	
-	s'assurer que l'expression de "e
-
 	faire une animation de saut sur place (pour erendre les diagloues + vivants)
-
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
-
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
-
 	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
-
 	creer un system de log pour revoir les conversations
+
 
 	////////// FACILE ////////////
 
+	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	vérifier les couleurs de la map (surtout le peepuddle)
-
 	L'image PAR DEFAULT d'un pnj devrait être error et non missing
-
 	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
-
 	!! MultiToolMode ne va que jusqu'à RED
-
 	Le PJ ne devrait jamais être un obstacle pour les NPC et les foe
-
 	ATTENTION ! quand les npc se déplace, risque d'envoyer balader le jouer + régler leurs vitesse
-
 	MovingToPlayer des foes devrait s'adapter à la distance
-
 	DieWhenNoHp -> kill() prévoir un restart
-
-	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)
-	
+	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
-
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
-
-	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")
-	
 	OptionScreen - Installer le système pour changer les touches du clavier
+	
 	
 	////////// SONS ////////////
 		
@@ -92,25 +61,31 @@
 	NullDoorObject -> should play a sound when opened
 	LootObject -> should play a sound when pickup
 	Buttons -> should play a sound too
-	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué
-	
+	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué	
 	Ajouter un son quand les joueurs parlent
 	Changer le volume de la musique quand le joueurs est en plein dialogue
-	
-	///////// IDEE ////////////
 
+
+	////////// A CREER PLUS TARD ////////////
+	
+	créer un lvl 000 
+	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
-	nourriture pour regen
+	nourriture pour regen (ou autre solution)
 	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
+	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
+	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
+
+
+	///////// IDEE ////////////
+
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
-	le personnage qui doit aller aux toilette fait pipi par terre si le joueur met trop de temps
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
-	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
-	un mini jeu où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
+
 	
 	 
