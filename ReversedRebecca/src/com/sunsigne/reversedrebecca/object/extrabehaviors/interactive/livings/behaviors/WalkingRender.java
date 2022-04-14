@@ -112,7 +112,13 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 		String hd = WalkingRender.hd ? "hd/" : "";
 		String imagePath = "textures/characters/" + living.getName() + "/" + hd + imageName;
 
-		return new ImageTask().loadImage(imagePath);
+		BufferedImage img = new ImageTask().loadImage(imagePath, true);
+
+		// load error character instead of missing texture
+		if (img == null)
+			img = new ImageTask().loadImage(imagePath.replace(living.getName(), "error"));
+
+		return img;
 	}
 
 	////////// RENDER ////////////

@@ -44,6 +44,10 @@
 
 	////////// DIFFICILE ////////////
 
+	finir les textures du personnage "error"
+	
+	s'assurer que l'expression de "e
+
 	faire une animation de saut sur place (pour erendre les diagloues + vivants)
 
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)

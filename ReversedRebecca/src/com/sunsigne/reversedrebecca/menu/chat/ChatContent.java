@@ -138,7 +138,13 @@ public class ChatContent implements Updatable {
 
 	private void loadImage(String living_name, String mood) {
 		String imagePath = "textures/characters/" + living_name + "/mood_" + mood;
-		image = new ImageTask().loadImage(imagePath);
+		image = new ImageTask().loadImage(imagePath, true);
+
+		// load error character instead of missing texture
+		if (image == null) {
+			String fixedPath = "textures/characters/" + "error" + "/mood_" + "neutral";
+			image = new ImageTask().loadImage(fixedPath);
+		}
 	}
 
 	public BufferedImage getImage() {
@@ -175,10 +181,9 @@ public class ChatContent implements Updatable {
 		if (sentence[1] != null)
 			g.drawString(currentText[1], x0, y + 170);
 	}
-	
 
 	private String registeredKey = "[" + new ActionOneKey().getRegisteredKey() + "]";
-	
+
 	private void drawActionKey(Graphics g) {
 		g.drawString(registeredKey, x + 1385, y + 205);
 	}

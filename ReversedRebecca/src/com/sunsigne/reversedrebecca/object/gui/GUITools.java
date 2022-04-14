@@ -49,8 +49,10 @@ public class GUITools extends GameObject implements GUI {
 			g.drawImage(tool_image, getX() + 2 * index * getWidth(), getY(), getWidth(), getHeight(), null);
 
 			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "gui/battery_max_"
-					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName(), false);
-			g.drawImage(battery_image, getX() + (1 + 2 * index) * getWidth(), getY(), getWidth(), getHeight(), null);
+					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName(), true);
+			if (battery_image != null)
+				g.drawImage(battery_image, getX() + (1 + 2 * index) * getWidth(), getY(), getWidth(), getHeight(),
+						null);
 			index++;
 		}
 
