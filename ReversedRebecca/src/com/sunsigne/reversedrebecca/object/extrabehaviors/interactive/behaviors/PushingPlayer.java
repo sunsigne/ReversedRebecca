@@ -1,29 +1,31 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.Stunned;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.Foe;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class PushingPlayer implements CollisionBehavior {
 
-	public PushingPlayer(Foe foe) {
-		this.foe = foe;
+	public PushingPlayer(ExtraBehaviorsObject object, boolean hurtPlayer) {
+		this.object = object;
+		this.hurtPlayer = hurtPlayer;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private Foe foe;
+	private ExtraBehaviorsObject object;
 
 	@Override
-	public Foe getExtraBehaviorsObject() {
-		return foe;
+	public ExtraBehaviorsObject getExtraBehaviorsObject() {
+		return object;
 	}
 
 	////////// POSITION ////////////
@@ -62,14 +64,6 @@ public class PushingPlayer implements CollisionBehavior {
 
 	////////// COLLISION ////////////
 
-	private boolean isStunned() {
-		for (Behavior tempBehavior : foe.getBehaviorList().getList()) {
-			if (tempBehavior instanceof Stunned)
-				return true;
-		}
-		return false;
-	}
-
 	@Override
 	public boolean isBlockingSight() {
 		return getExtraBehaviorsObject().isBlockingSight();
@@ -80,14 +74,22 @@ public class PushingPlayer implements CollisionBehavior {
 		return getExtraBehaviorsObject().isBlockingPath();
 	}
 
+	private boolean isStunned() {
+		for (Behavior tempBehavior : object.getBehaviorList().getList()) {
+			if (tempBehavior instanceof Stunned)
+				return true;
+		}
+		return false;
+	}
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (!isStunned())
 			if (detectorObject instanceof Player) {
 				pushPlayer(detectorObject);
+				shiftObject();
 				hurtPlayer();
-				shiftFoe();
-				stunFoe();
+				stunObject();
 			}
 		blockPath(detectorObject);
 	}
@@ -95,22 +97,32 @@ public class PushingPlayer implements CollisionBehavior {
 	private void pushPlayer(CollisionDetector detectorObject) {
 		Player player = (Player) detectorObject;
 		var moveWhenPushed = (MoveWhenPushed) player.moveWhenPushed;
-		moveWhenPushed.pushToward(foe.getFacing());
+
+		if (object instanceof LivingObject)
+			moveWhenPushed.pushToward(object.getFacing());
+		else
+			moveWhenPushed.pushToward(player.getOppositeFacing());
 	}
 
-	private void hurtPlayer() {
-		PlayerHealth.getInstance().removeHp();
-	}
-
-	private void shiftFoe() {
+	private void shiftObject() {
 		setX(new TilePos().getTilePos(getX(), Size.M));
 		setY(new TilePos().getTilePos(getY(), Size.M));
 	}
 
-	private void stunFoe() {
+	private boolean hurtPlayer;
 
-		Behavior stunned = new Stunned(foe);
-		foe.addBehavior(stunned);
+	private void hurtPlayer() {
+		if (hurtPlayer)
+			PlayerHealth.getInstance().removeHp();
+	}
+
+	private void stunObject() {
+		if (object instanceof LivingObject == false)
+			return;
+
+		LivingObject living = (LivingObject) object;
+		Behavior stunned = new Stunned(living);
+		object.addBehavior(stunned);
 	}
 
 }

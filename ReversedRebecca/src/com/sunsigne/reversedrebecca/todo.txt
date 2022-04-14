@@ -12,7 +12,9 @@
 
 	La plante jaune n'est pas finie
 	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
+	finir les textures du personnage "error"
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
+	faire une animation de saut sur place (pour erendre les diagloues + vivants)
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
 	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (TOUTE la partie après l'ouverture de la porte)
 	
@@ -27,16 +29,12 @@
 	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 	finir la doc
 
-
 	////////// DIFFICILE ////////////
 
-	finir les textures du personnage "error"
-	faire une animation de saut sur place (pour erendre les diagloues + vivants)
 	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
 	creer un system de log pour revoir les conversations
-
 
 	////////// FACILE ////////////
 

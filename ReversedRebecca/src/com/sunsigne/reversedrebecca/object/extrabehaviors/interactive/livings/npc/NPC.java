@@ -15,17 +15,17 @@ public class NPC extends LivingObject {
 	////////// BEHAVIOR ////////////
 
 	public Behavior blockingPath;
+	public Behavior pushingPlayer;
 
 	private void addNPCBehaviors() {
 
 		blockingPath = new BlockingPath(this);
 		addBehavior(blockingPath);
-
 	}
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { movingToGoal };
+		return new Behavior[] { pushingPlayer };
 	}
 
 }

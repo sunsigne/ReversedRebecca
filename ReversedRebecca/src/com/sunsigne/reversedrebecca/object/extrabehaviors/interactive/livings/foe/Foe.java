@@ -1,9 +1,9 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors.GoalIsPlayer;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.foe.behaviors.PushingPlayer;
 
 public class Foe extends LivingObject {
 
@@ -22,7 +22,7 @@ public class Foe extends LivingObject {
 		goalIsPlayer = new GoalIsPlayer(this);
 		addBehavior(goalIsPlayer);
 
-		pushingPlayer = new PushingPlayer(this);
+		pushingPlayer = new PushingPlayer(this, false);
 		addBehavior(pushingPlayer);
 	}
 
