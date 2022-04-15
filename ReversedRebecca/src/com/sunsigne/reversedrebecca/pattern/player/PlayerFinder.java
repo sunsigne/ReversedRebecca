@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PlayerFinder {
 
+	////////// PLAYER ////////////
+	
 	public Player getPlayer() {
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -24,21 +26,49 @@ public class PlayerFinder {
 		return null;
 	}
 
+	////////// DISTANCE ////////////
+	
+	private int getTilePos(int pos) {
+		return new TilePos().getTilePos(pos, Size.M);
+	}
+	
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {
+		int[] distance = getDistance(object, distanceInTiles);
+
+		if (distance == null)
+			return true;
+
+		else
+			return distance[0] > distance[1];
+	}
+
+	public boolean isPlayerCloserThan(Velocity object, int distanceInTiles) {
+		int[] distance = getDistance(object, distanceInTiles);
+
+		if (distance == null)
+			return true;
+
+		else
+			return distance[0] < distance[1];
+	}
+
+	private int[] getDistance(Velocity object, int distanceInTiles) {
 		Player player = getPlayer();
 
 		if (player == null)
-			return true;
+			return null;
 
 		if (player.getHandler() != object.getHandler())
-			return true;
+			return null;
 
 		int diffX = getTilePos(object.getX()) - getTilePos(player.getX());
 		int diffY = getTilePos(object.getY()) - getTilePos(player.getY());
 		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / Size.M;
 
-		return playerDistance > distanceInTiles;
+		return new int[] { playerDistance, distanceInTiles };
 	}
+
+	////////// BEHAVIOR ////////////
 	
 	public boolean isPlayerInvolved(CollisionDetector detectorObject) {
 		if (detectorObject instanceof Player)
@@ -50,10 +80,6 @@ public class PlayerFinder {
 				return true;
 		}
 		return false;
-	}
-
-	private int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, Size.M);
 	}
 
 }

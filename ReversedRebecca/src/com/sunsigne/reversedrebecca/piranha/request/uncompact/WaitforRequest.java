@@ -70,7 +70,10 @@ public class WaitforRequest implements Request {
 			return getTimeListener(generic, Integer.parseInt(condition));
 
 		case "PLAYER_FUTHER_THAN":
-			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition));
+			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition), true);
+
+		case "PLAYER_CLOSER_THAN":
+			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition), false);
 		}
 
 		return null;
@@ -95,13 +98,16 @@ public class WaitforRequest implements Request {
 	}
 
 	private ConditionalListener getPlayerDistanceListener(GenericListener generic, ExtraBehaviorsObject object,
-			int distance) {
+			int distance, boolean futherType) {
 
 		return new ConditionalListener() {
 
 			@Override
 			public boolean canDoAction() {
-				return new PlayerFinder().isPlayerFutherThan(object, distance);
+				if (futherType)
+					return new PlayerFinder().isPlayerFutherThan(object, distance);
+				else
+					return new PlayerFinder().isPlayerCloserThan(object, distance);
 			}
 
 			@Override
