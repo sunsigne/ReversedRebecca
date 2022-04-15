@@ -20,9 +20,7 @@
 	
 
 	////////// PIRA ////////////
-	
-	étendre CollisionRequest à LivingObject
-	
+
 	rebaptisé Condition en Evenement	
 	faire un dictionnaire pour la creation des objets ?
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
@@ -33,9 +31,7 @@
 
 	////////// DIFFICILE ////////////
 
-	revoir la collision des png entre eux et avec le joeur (+ pathfinding)
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
-	les NPC ont tendence à ne pas considérer le PJ comme un obstacle (il lui rentre dedans)
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
