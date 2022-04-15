@@ -219,7 +219,7 @@ public class PathFinder implements Position {
 		if (living.isPlayerBlockingPath() == false)
 			return false;
 
-		if (new PlayerFinder().isPlayerFutherThan(living, 2))
+		if (new PlayerFinder().isPlayerFutherThan(living, 3))
 			return false;
 
 		return true;
