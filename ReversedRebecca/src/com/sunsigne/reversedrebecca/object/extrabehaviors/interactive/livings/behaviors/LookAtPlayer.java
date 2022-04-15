@@ -2,14 +2,13 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.b
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.compact.FacingRequest;
 
-public class LookAtThePlayer implements TickBehavior {
+public class LookAtPlayer implements TickBehavior {
 
-	public LookAtThePlayer(LivingObject living) {
+	public LookAtPlayer(LivingObject living) {
 		this.living = living;
 	}
 
@@ -26,9 +25,6 @@ public class LookAtThePlayer implements TickBehavior {
 
 	@Override
 	public void tick() {
-		if (new PlayerFinder().getPlayer() == null)
-			return;
-
 		Request request = RequestList.getList().getObject(new FacingRequest());
 		request.doAction(living, "player");
 	}
