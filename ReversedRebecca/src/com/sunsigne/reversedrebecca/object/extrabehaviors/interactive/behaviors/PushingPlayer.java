@@ -138,6 +138,9 @@ public class PushingPlayer implements CollisionBehavior {
 		if (object instanceof LivingObject == false)
 			return;
 
+		if (!hurtPlayer)
+			return;
+
 		LivingObject living = (LivingObject) object;
 		Behavior stunned = new Stunned(living);
 		object.addBehavior(stunned);
