@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -39,8 +40,10 @@ public class CreateRequest implements Request {
 		// determinate the position
 
 		String pos = String.valueOf(target.split(":")[1]);
-		int x = Integer.parseInt(pos.split("-")[0]);
-		int y = Integer.parseInt(pos.split("-")[1]);
+		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
+		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
+		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+
 		GoalObject goal = new GoalObject(x, y, false);
 
 		// determinate the type of object
