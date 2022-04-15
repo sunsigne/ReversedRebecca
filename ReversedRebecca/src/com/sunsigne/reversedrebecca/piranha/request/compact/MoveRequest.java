@@ -39,6 +39,11 @@ public class MoveRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
+		if (target.equalsIgnoreCase("stop")) {
+			object.setGoal(null);
+			return;
+		}
+
 		int x = Integer.parseInt(target.split("-")[0]);
 		int y = Integer.parseInt(target.split("-")[1]);
 
