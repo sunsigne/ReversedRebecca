@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.compact;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -43,8 +44,12 @@ public class MoveRequest implements Request {
 
 		GoalObject goal = new GoalObject(x, y, false);
 
-		if (object instanceof LivingObject && object instanceof Player == false)
-			((LivingObject) object).setRunning(isRunning());
+		if (object instanceof LivingObject && object instanceof Player == false) {
+			LivingObject living = (LivingObject) object;
+			living.setRunning(isRunning());
+			living.removeBehavior(living.getBehaviorList().getObject(new LookAtPlayer(living)));
+		}
+
 		object.setGoal(goal);
 	}
 
