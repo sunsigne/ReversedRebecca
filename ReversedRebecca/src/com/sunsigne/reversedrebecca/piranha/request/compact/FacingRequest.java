@@ -68,9 +68,10 @@ public class FacingRequest extends ConditionalRequest {
 			String formated_valueToCheck = new FormatedName().getName(object, target);
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
-				PathFinder pathFinder = new PathFinder(object, tempLiving, true);
+				PathFinder pathFinder = new PathFinder(object, tempLiving, false);
 				object.setMotionless();
-				object.setFacing(pathFinder.getPath());
+				if (pathFinder.getPath() != DIRECTION.NULL)
+					object.setFacing(pathFinder.getPath());
 				return;
 			}
 		}
