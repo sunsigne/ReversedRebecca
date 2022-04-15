@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
@@ -36,8 +37,16 @@ public class PathFindingLaw implements PhysicLaw {
 
 		PathSearcher searcher = (PathSearcher) object;
 
-		if (searcher.getX() % Size.M != 0 | searcher.getY() % Size.M != 0)
-			return;
+		// update only when centered on a tile ...
+		if (searcher.getX() % Size.M != 0 | searcher.getY() % Size.M != 0) {
+			if (searcher instanceof Facing == false)
+				return;
+
+			Facing facing = (Facing) searcher;
+			// ... except if facing something else than the path
+			if (facing.getFacing() == searcher.getPath())
+				return;
+		}
 
 		// searcher has no goal
 		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
