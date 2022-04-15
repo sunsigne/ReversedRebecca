@@ -85,14 +85,16 @@ public class PushingPlayer implements CollisionBehavior {
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (!isStunned())
-			if (new PlayerFinder().isPlayerInvolved(detectorObject)) {
-				pushPlayer(detectorObject);
-				shiftObject();
-				hurtPlayer();
-				stunObject();
-			}
-		blockPath(detectorObject);
+		if (isStunned())
+			return;
+
+		if (new PlayerFinder().isPlayerInvolved(detectorObject) == false)
+			return;
+
+		pushPlayer(detectorObject);
+		shiftObject();
+		hurtPlayer();
+		stunObject();
 	}
 
 	private void pushPlayer(CollisionDetector detectorObject) {
