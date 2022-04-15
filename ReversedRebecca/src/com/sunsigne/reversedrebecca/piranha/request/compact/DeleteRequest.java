@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class DeleteRequest implements Request {
@@ -44,7 +45,7 @@ public class DeleteRequest implements Request {
 		// remove the object
 
 		Handler handler = object.getHandler();
-		handler.removeObject(Handler.getObjectAtPos(handler, goal.getX(), goal.getY()));
+		handler.removeObject(Handler.getObjectAtPos(handler, goal.getX(), goal.getY(), Size.M));
 	}
 
 }

@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.pl
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GoalCondition;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -188,9 +189,9 @@ public class PathFinder implements Position {
 			GameObject object;
 
 			if (horizontal)
-				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + range, getY() + from);
+				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M);
 			else
-				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + from, getY() + range);
+				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M);
 
 			if (object instanceof CollisionReactor) {
 				CollisionReactor wall = (CollisionReactor) object;
@@ -215,7 +216,13 @@ public class PathFinder implements Position {
 			return true;
 
 		LivingObject living = (LivingObject) searcher;
-		return living.isPlayerBlockingPath();
+		if (living.isPlayerBlockingPath() == false)
+			return false;
+
+		if (new PlayerFinder().isPlayerFutherThan(living, 2))
+			return false;
+
+		return true;
 	}
 
 	private GameList<PathPointObject> createValidPathPointList() {

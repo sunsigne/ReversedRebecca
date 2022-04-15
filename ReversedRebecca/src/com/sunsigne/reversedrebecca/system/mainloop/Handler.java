@@ -4,12 +4,10 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
-import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -22,7 +20,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// USEFULL ////////////
 
-	public static GameObject getObjectAtPos(Handler layer, int x, int y) {
+	public static GameObject getObjectAtPos(Handler layer, int x, int y, int size) {
 
 		for (Updatable tempUpdatable : layer.getList()) {
 
@@ -32,19 +30,20 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			GameObject tempObject = (GameObject) tempUpdatable;
 			if (tempObject.getX() == x && tempObject.getY() == y)
 				return tempObject;
-			
-			if(tempObject instanceof Player == false)
+
+			if (tempObject instanceof Player == false)
 				continue;
-			
+
+			// player is counted "at pos" as soon as 1 pixel is on the tile
 			Player player = (Player) tempObject;
-			if (getTilePos(player.getX()) == x && getTilePos(player.getY()) == y)
-				return tempObject;
+			for (int xx = x - size + 1; xx < x + size - 1; xx++) {
+				for (int yy = y - size + 1; yy < y + size - 1; yy++) {
+					if (player.getX() == xx && player.getY() == yy)
+						return player;
+				}
+			}
 		}
 		return null;
-	}
-	
-	private static int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, Size.M);
 	}
 
 	////////// MAP OR LIST ////////////

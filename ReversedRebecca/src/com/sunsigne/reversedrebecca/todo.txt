@@ -31,8 +31,6 @@
 
 	////////// DIFFICILE ////////////
 
-	Quand le joeur rentre dans un NPC en mode stop, il s'arrête, mais du coup ça bloque le joeur devant la porte !!
-	
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 	creer un system de log pour revoir les conversations
 

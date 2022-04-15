@@ -83,7 +83,7 @@ public class SightFinder implements Position {
 			setY(getY() + Math.round((-1 / distance) * diffY));
 
 			// if a "wall" (blocking sight object) is on the way, return false
-			GameObject wall = Handler.getObjectAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()));
+			GameObject wall = Handler.getObjectAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()), Size.M);
 
 			if (wall == null)
 				continue;
