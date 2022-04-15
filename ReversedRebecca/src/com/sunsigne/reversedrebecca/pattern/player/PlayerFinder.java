@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -36,6 +38,18 @@ public class PlayerFinder {
 		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / Size.M;
 
 		return playerDistance > distanceInTiles;
+	}
+	
+	public boolean isPlayerInvolved(CollisionDetector detectorObject) {
+		if (detectorObject instanceof Player)
+			return true;
+
+		if (detectorObject instanceof Behavior) {
+			Behavior behavior = (Behavior) detectorObject;
+			if (behavior.getExtraBehaviorsObject() instanceof Player)
+				return true;
+		}
+		return false;
 	}
 
 	private int getTilePos(int pos) {

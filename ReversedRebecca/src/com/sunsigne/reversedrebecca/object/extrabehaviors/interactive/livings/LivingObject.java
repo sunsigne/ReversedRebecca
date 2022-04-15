@@ -11,18 +11,19 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector, CollisionWithPlayer {
+public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector, PlayerAvoider {
 
-	public LivingObject(String name, int x, int y, COLLISIONTYPE collisionType) {
-		this(name, x, y, Size.XS / 10, Size.XS / 5, collisionType);
+	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
+		this(name, x, y, Size.XS / 10, Size.XS / 5, playerAvoiderType);
 	}
 
-	public LivingObject(String name, int x, int y, int walking_speed, int running_speed, COLLISIONTYPE collisionType) {
+	public LivingObject(String name, int x, int y, int walking_speed, int running_speed,
+			AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
 		this.running = true;
 		this.walking_speed = walking_speed;
 		this.running_speed = running_speed;
-		setCollisionType(collisionType);
+		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
 	}
 
@@ -62,7 +63,7 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 	public Behavior walkingRender;
 	public Behavior movingToGoal;
 	public Behavior moveWhenPushed;
-	public Behavior collisionWithPlayer;
+	public Behavior avoidingPlayer;
 
 	private void addLivingBehaviors() {
 
@@ -83,38 +84,36 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 
 	////////// COLLISION ////////////
 
-	private COLLISIONTYPE collisionType;
+	private AVOIDERTYPE playerAvoiderType;
 
 	@Override
-	public COLLISIONTYPE getCollisionType() {
-		return collisionType;
+	public AVOIDERTYPE getPlayerAvoiderType() {
+		return playerAvoiderType;
 	}
 
 	@Override
-	public void setCollisionType(COLLISIONTYPE collisionType) {
-		if (collisionType == null)
-			collisionType = COLLISIONTYPE.AROUND;
+	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
+		if (playerAvoiderType == null)
+			playerAvoiderType = AVOIDERTYPE.AROUND;
 
-		this.collisionType = collisionType;
-		removeBehavior(collisionWithPlayer);
+		this.playerAvoiderType = playerAvoiderType;
+		removeBehavior(avoidingPlayer);
 
-		switch (collisionType) {
+		switch (playerAvoiderType) {
 		case AROUND:
-			// default pathFinder case
-			collisionWithPlayer = new StopWhenMeetPlayer(this);
+			avoidingPlayer = new StopWhenMeetPlayer(this);
 			break;
 		case PUSH:
-			collisionWithPlayer = new PushingPlayer(this, false);
+			avoidingPlayer = new PushingPlayer(this, false);
 			break;
 		case PUSH_HURT:
-			collisionWithPlayer = new PushingPlayer(this, true);
+			avoidingPlayer = new PushingPlayer(this, true);
 			break;
 		case STOP:
-			// ignore player for path
-			collisionWithPlayer = new StopWhenMeetPlayer(this);
+			avoidingPlayer = new StopWhenMeetPlayer(this);
 			break;
 		}
-		addBehavior(collisionWithPlayer);
+		addBehavior(avoidingPlayer);
 	}
 
 }

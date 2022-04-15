@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class NPC extends LivingObject {
 
 	public NPC(String name, int x, int y) {
-		super(name, x, y, Size.XS / 10, Size.XS / 5, COLLISIONTYPE.AROUND);
+		super(name, x, y, Size.XS / 10, Size.XS / 5, AVOIDERTYPE.AROUND);
 		addNPCBehaviors();
 	}
 
@@ -24,7 +24,7 @@ public class NPC extends LivingObject {
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { movingToGoal };
+		return new Behavior[] {};
 	}
 
 }

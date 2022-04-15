@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.fo
 public class Foe extends LivingObject {
 
 	public Foe(String name, int x, int y) {
-		super(name, x, y, COLLISIONTYPE.PUSH_HURT);
+		super(name, x, y, AVOIDERTYPE.PUSH_HURT);
 		addFoeBehaviors();
 	}
 

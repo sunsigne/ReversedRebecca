@@ -1,21 +1,21 @@
 package com.sunsigne.reversedrebecca.piranha.request.compact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.CollisionWithPlayer.COLLISIONTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class CollisionWithPlayerRequest implements Request {
+public class PlayerAvoiderRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public CollisionWithPlayerRequest() {
+	public PlayerAvoiderRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request action = new CollisionWithPlayerRequest();
+	private static Request action = new PlayerAvoiderRequest();
 
 	@Override
 	public Request getRequest() {
@@ -24,7 +24,7 @@ public class CollisionWithPlayerRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "COLLISION_WITH_PLAYER";
+		return "PLAYER_AVOIDER_TYPE";
 	}
 
 	@Override
@@ -38,15 +38,15 @@ public class CollisionWithPlayerRequest implements Request {
 			return;
 
 		NPC living = (NPC) object;
+		AVOIDERTYPE avoider = AVOIDERTYPE.AROUND;
 
-		for (COLLISIONTYPE tempCollision : COLLISIONTYPE.values()) {
-			if (tempCollision.getName().equalsIgnoreCase(target) == false)
+		for (AVOIDERTYPE tempAvoider : AVOIDERTYPE.values()) {
+			if (tempAvoider.getName().equalsIgnoreCase(target) == false)
 				continue;
 
-			living.setCollisionType(tempCollision);
-			return;
+			avoider = tempAvoider;
 		}
-		living.setCollisionType(COLLISIONTYPE.AROUND);
+		living.setPlayerAvoiderType(avoider);
 	}
 
 }

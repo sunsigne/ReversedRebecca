@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class PushingPlayer implements CollisionBehavior {
@@ -85,7 +86,7 @@ public class PushingPlayer implements CollisionBehavior {
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (!isStunned())
-			if (detectorObject instanceof Player) {
+			if (new PlayerFinder().isPlayerInvolved(detectorObject)) {
 				pushPlayer(detectorObject);
 				shiftObject();
 				hurtPlayer();
