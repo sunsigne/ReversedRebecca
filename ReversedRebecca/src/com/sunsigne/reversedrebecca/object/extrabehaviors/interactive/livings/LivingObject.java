@@ -101,6 +101,9 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 
 		switch (playerAvoiderType) {
 		case AROUND:
+			avoidingPlayer = null;
+			break;
+		case STOP:
 			avoidingPlayer = new StopWhenMeetPlayer(this);
 			break;
 		case PUSH:
@@ -109,8 +112,17 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		case PUSH_HURT:
 			avoidingPlayer = new PushingPlayer(this, true);
 			break;
-		case STOP:
-			avoidingPlayer = new StopWhenMeetPlayer(this);
+		case PUSH_LEFT:
+			avoidingPlayer = new PushingPlayer(this, DIRECTION.LEFT);
+			break;
+		case PUSH_RIGHT:
+			avoidingPlayer = new PushingPlayer(this, DIRECTION.RIGHT);
+			break;
+		case PUSH_UP:
+			avoidingPlayer = new PushingPlayer(this, DIRECTION.UP);
+			break;
+		case PUSH_DOWN:
+			avoidingPlayer = new PushingPlayer(this, DIRECTION.DOWN);
 			break;
 		}
 		addBehavior(avoidingPlayer);

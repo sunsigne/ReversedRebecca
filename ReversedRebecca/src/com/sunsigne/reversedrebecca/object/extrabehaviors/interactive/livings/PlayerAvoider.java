@@ -10,20 +10,16 @@ public interface PlayerAvoider {
 		switch (getPlayerAvoiderType()) {
 		case AROUND:
 			return true;
-		case PUSH:
-			return false;
-		case PUSH_HURT:
-			return false;
-		case STOP:
+		default:
 			return false;
 		}
-		return true;
 	}
 
 	////////// AVOIDER TYPE ////////////
 
 	public enum AVOIDERTYPE {
-		AROUND("around"), PUSH("push"), PUSH_HURT("push_hurt"), STOP("stop");
+		AROUND("around"), STOP("stop"), PUSH("push"), PUSH_HURT("push_hurt"), PUSH_LEFT("push_left"),
+		PUSH_RIGHT("push_right"), PUSH_UP("push_up"), PUSH_DOWN("push_downp");
 
 		private String name;
 

@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
@@ -15,8 +16,15 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class PushingPlayer implements CollisionBehavior {
 
+	public PushingPlayer(ExtraBehaviorsObject object, DIRECTION direction) {
+		this.object = object;
+		this.direction = direction;
+		this.hurtPlayer = false;
+	}
+
 	public PushingPlayer(ExtraBehaviorsObject object, boolean hurtPlayer) {
 		this.object = object;
+		this.direction = DIRECTION.NULL;
 		this.hurtPlayer = hurtPlayer;
 	}
 
@@ -97,9 +105,16 @@ public class PushingPlayer implements CollisionBehavior {
 		stunObject();
 	}
 
+	private DIRECTION direction;
+
 	private void pushPlayer(CollisionDetector detectorObject) {
 		Player player = (Player) detectorObject;
 		var moveWhenPushed = (MoveWhenPushed) player.moveWhenPushed;
+
+		if (direction != DIRECTION.NULL) {
+			moveWhenPushed.pushToward(direction);
+			return;
+		}
 
 		if (object instanceof LivingObject)
 			moveWhenPushed.pushToward(object.getFacing());

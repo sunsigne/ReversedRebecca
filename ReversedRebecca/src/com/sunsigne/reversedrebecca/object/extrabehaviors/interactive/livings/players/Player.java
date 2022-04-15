@@ -13,7 +13,6 @@ public class Player extends LivingObject {
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y, Size.XS / 3, Size.XS, null);
-		avoidingPlayer = null;
 		addPlayerBehaviors();
 	}
 
