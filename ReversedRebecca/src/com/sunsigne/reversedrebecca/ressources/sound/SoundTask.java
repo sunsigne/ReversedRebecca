@@ -20,7 +20,9 @@ public class SoundTask {
 
 	// use this very function only if you want to display an error message
 	public void playSound(double volume, String path) {
-
+		if(path == null)
+			return;
+		
 		String path0 = "/ressources/audio/" + path + ".wav";
 		Clip soundclip;
 

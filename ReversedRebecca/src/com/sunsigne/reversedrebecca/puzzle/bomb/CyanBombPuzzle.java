@@ -22,4 +22,9 @@ public class CyanBombPuzzle extends BombPuzzle {
 		setRandomMaxCountBetween(1, 3);
 	}
 
+	@Override
+	public String getVictorySound() {
+		return "sound/explosion_large";
+	}
+
 }

@@ -27,4 +27,9 @@ public class RedKeyPuzzle extends KeyPuzzle {
 		createRandompWalls(25);
 	}
 
+	@Override
+	public String getVictorySound() {
+		return "sound/door_unlock";
+	}
+
 }

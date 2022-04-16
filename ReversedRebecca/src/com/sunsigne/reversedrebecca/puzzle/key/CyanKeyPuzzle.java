@@ -25,4 +25,9 @@ public class CyanKeyPuzzle extends KeyPuzzle {
 		createRandompWalls(1);
 	}
 
+	@Override
+	public String getVictorySound() {
+		return "sound/door_unlock";
+	}
+
 }

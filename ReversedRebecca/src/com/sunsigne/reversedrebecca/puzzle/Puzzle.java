@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -42,7 +43,7 @@ public abstract class Puzzle implements Updatable {
 		World world = World.get();
 		if (world != null)
 			world.freeze(true);
-		
+
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 
@@ -77,10 +78,19 @@ public abstract class Puzzle implements Updatable {
 		World world = World.get();
 		if (world != null)
 			world.freeze(false);
-		
+
 		LAYER.PUZZLE.getHandler().clear();
 		new GameCursor().setVisible(true);
-		if (isPuzzleWon)
+
+		if (isPuzzleWon) {
+			new SoundTask().playSound(getVictorySound());
 			actionOnWinning.doAction();
+		} else
+			new SoundTask().playSound("sound/fail");
 	}
+
+	////////// SOUND ////////////
+
+	public abstract String getVictorySound();
+	
 }

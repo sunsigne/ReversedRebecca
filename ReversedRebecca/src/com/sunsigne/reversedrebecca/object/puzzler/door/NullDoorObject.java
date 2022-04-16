@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.door;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 
 public class NullDoorObject extends DoorObject {
 
@@ -19,7 +20,12 @@ public class NullDoorObject extends DoorObject {
 	@Override
 	public void tick() {
 		if (tryClosing)
+		{
+			if(isOpened)
+				new SoundTask().playSound("sound/door_close");
 			isOpened = false;
+		}
+
 
 		tryClosing = true;
 	}
@@ -44,6 +50,8 @@ public class NullDoorObject extends DoorObject {
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> {
+			if(!isOpened)
+				new SoundTask().playSound("sound/door_open");
 			isOpened = true;
 			tryClosing = false;
 		});

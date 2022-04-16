@@ -23,4 +23,9 @@ public class YellowBombPuzzle extends BombPuzzle {
 		setRandomMaxCountBetween(2, 5);
 	}
 
+	@Override
+	public String getVictorySound() {
+		return "sound/explosion_large";
+	}
+	
 }

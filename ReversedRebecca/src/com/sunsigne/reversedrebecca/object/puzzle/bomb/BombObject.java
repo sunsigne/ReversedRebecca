@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -38,6 +39,8 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	public void setExploded(boolean exploded) {
 		this.exploded = exploded;
+		if(exploded)
+			new SoundTask().playSound("sound/explosion_medium");
 	}
 
 	////////// MAX COUNT ////////////
@@ -83,6 +86,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	public void removeCount() {
 		setCount(getCount() - 1);
+		new SoundTask().playSound("sound/explosion_small");
 	}
 
 	////////// TICK ////////////
@@ -94,11 +98,13 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	public void tick() {
 
 		// explode
-		if (count <= 0)
-			setExploded(true);
-
 		if (hasExploded())
 			runAnimation();
+
+		else {
+			if (count <= 0)
+				setExploded(true);
+		}
 	}
 
 	private int frame;
