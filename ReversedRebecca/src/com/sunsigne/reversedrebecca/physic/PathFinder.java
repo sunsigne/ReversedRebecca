@@ -26,6 +26,7 @@ public class PathFinder implements Position {
 
 		setX(searcher.getX());
 		setY(searcher.getY());
+		calculDistance();
 
 		path = findPath(allow_complex_path);
 	}
@@ -58,13 +59,11 @@ public class PathFinder implements Position {
 	@Override
 	public void setX(int x) {
 		this.x = getTilePos(x);
-		calculDistance();
 	}
 
 	@Override
 	public void setY(int y) {
 		this.y = getTilePos(y);
-		calculDistance();
 	}
 
 	private int getTilePos(int pos) {
