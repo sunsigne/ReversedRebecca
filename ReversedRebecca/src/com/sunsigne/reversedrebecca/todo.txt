@@ -55,13 +55,9 @@
 	
 	SountTask pas fini !
 	SoundVolume & Volume : réfléchir au système le + efficace PUIS créer la GUI		
-	NullDoorObject -> should play a sound when opened
-	LootObject -> should play a sound when pickup
 	Buttons -> should play a sound too
-	Puzzle & Action -> quand la porte s'ouvre, quand l epuzzle est réussi ou échoué	
 	Ajouter un son quand les joueurs parlent
 	Changer le volume de la musique quand le joueurs est en plein dialogue
-
 
 	////////// A CREER PLUS TARD ////////////
 	
