@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
 
-public interface SpeedVariator {
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+
+public interface SpeedVariator extends Velocity {
 
 	////////// SPEED VARIATOR ////////////
 
