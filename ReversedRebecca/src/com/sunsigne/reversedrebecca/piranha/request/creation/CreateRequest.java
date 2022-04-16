@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.uncompact;
+package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;

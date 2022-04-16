@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
-import com.sunsigne.reversedrebecca.piranha.request.compact.MemoryList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.MemoryList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.uncompact;
+package com.sunsigne.reversedrebecca.piranha.request.gotoo;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GotoCondition;

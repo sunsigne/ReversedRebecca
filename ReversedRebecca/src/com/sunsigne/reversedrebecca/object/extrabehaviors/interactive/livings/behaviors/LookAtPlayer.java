@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.compact.FacingRequest;
+import com.sunsigne.reversedrebecca.piranha.request.other.FacingRequest;
 
 public class LookAtPlayer implements TickBehavior {
 

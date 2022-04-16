@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.move;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
 import com.sunsigne.reversedrebecca.piranha.request.Request;

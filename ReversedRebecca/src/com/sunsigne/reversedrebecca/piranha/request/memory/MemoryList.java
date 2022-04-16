@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.memory;
 
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;

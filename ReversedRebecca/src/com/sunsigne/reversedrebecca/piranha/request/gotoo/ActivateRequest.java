@@ -1,27 +1,28 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.gotoo;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.piranha.condition.global.ActivateCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class NameRequest implements Request {
+public class ActivateRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public NameRequest() {
+	public ActivateRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request action = new NameRequest();
+	private static Request request = new ActivateRequest();
 
 	@Override
 	public Request getRequest() {
-		return action;
+		return request;
 	}
 
 	@Override
 	public String getType() {
-		return "NAME";
+		return "ACTIVATE";
 	}
 
 	@Override
@@ -29,10 +30,10 @@ public class NameRequest implements Request {
 		return true;
 	}
 
-	// WARNING ! Each name should be different in a same folder
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		object.setName(target);
+
+		new ActivateCondition().registerValue(target);
 	}
 
 }

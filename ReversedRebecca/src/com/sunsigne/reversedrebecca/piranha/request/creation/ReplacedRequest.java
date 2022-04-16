@@ -1,19 +1,18 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.creation;
 
-import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class CutsceneRequest implements Request {
+public class ReplacedRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public CutsceneRequest() {
+	public ReplacedRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new CutsceneRequest();
+	private static Request request = new ReplacedRequest();
 
 	@Override
 	public Request getRequest() {
@@ -22,24 +21,22 @@ public class CutsceneRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "CUTSCENE";
+		return "REPLACE";
 	}
 
 	@Override
 	public boolean hasCompactWriting() {
-		return true;
+		return false;
 	}
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		switch (target.toLowerCase()) {
-		case "start":
-			new Cutscene().start();
-			break;
-		case "stop":
-			new Cutscene().stop();
-			break;
-		}
+
+		Request deleteRequest = RequestList.getList().getObject(new DeleteRequest());
+		Request createRequest = RequestList.getList().getObject(new CreateRequest());
+
+		deleteRequest.doAction(object, target.split(":")[1]);
+		createRequest.doAction(object, target);
 	}
 
 }

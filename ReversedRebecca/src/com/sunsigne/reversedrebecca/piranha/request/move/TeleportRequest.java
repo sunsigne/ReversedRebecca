@@ -1,21 +1,19 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.move;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class DeleteRequest implements Request {
+public class TeleportRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public DeleteRequest() {
+	public TeleportRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new DeleteRequest();
+	private static Request request = new TeleportRequest();
 
 	@Override
 	public Request getRequest() {
@@ -24,7 +22,7 @@ public class DeleteRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "DELETE";
+		return "TP";
 	}
 
 	@Override
@@ -34,18 +32,13 @@ public class DeleteRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
+		int x = Integer.parseInt(target.split("-")[0]);
+		int y = Integer.parseInt(target.split("-")[1]);
 
-		// determinate the position
-
-		String pos = String.valueOf(target);
-		int x = Integer.parseInt(pos.split("-")[0]);
-		int y = Integer.parseInt(pos.split("-")[1]);
 		GoalObject goal = new GoalObject(x, y, false);
 
-		// remove the object
-
-		Handler handler = object.getHandler();
-		handler.removeObject(Handler.getObjectAtPos(handler, goal.getX(), goal.getY(), Size.M));
+		object.setX(goal.getX());
+		object.setY(goal.getY());
 	}
 
 }

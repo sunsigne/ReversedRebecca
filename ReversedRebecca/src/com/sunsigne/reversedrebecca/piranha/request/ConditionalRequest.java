@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.request.uncompact.GotoRequest;
+import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 
 public abstract class ConditionalRequest implements Request {
 

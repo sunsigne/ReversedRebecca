@@ -1,19 +1,19 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.other;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.condition.global.ActivateCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class ActivateRequest implements Request {
+public class CutsceneRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public ActivateRequest() {
+	public CutsceneRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new ActivateRequest();
+	private static Request request = new CutsceneRequest();
 
 	@Override
 	public Request getRequest() {
@@ -22,7 +22,7 @@ public class ActivateRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "ACTIVATE";
+		return "CUTSCENE";
 	}
 
 	@Override
@@ -32,8 +32,14 @@ public class ActivateRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-
-		new ActivateCondition().registerValue(target);
+		switch (target.toLowerCase()) {
+		case "start":
+			new Cutscene().start();
+			break;
+		case "stop":
+			new Cutscene().stop();
+			break;
+		}
 	}
 
 }

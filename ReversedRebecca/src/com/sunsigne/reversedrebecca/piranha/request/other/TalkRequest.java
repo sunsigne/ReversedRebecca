@@ -1,19 +1,20 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
+import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class TeleportRequest implements Request {
+public class TalkRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public TeleportRequest() {
+	public TalkRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new TeleportRequest();
+	private static Request request = new TalkRequest();
 
 	@Override
 	public Request getRequest() {
@@ -22,7 +23,7 @@ public class TeleportRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "TP";
+		return "TALK";
 	}
 
 	@Override
@@ -32,13 +33,9 @@ public class TeleportRequest implements Request {
 
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		int x = Integer.parseInt(target.split("-")[0]);
-		int y = Integer.parseInt(target.split("-")[1]);
-
-		GoalObject goal = new GoalObject(x, y, false);
-
-		object.setX(goal.getX());
-		object.setY(goal.getY());
+		ExtraBehaviorsObjectAction action = new TalkAction();
+		action.setListener(action.getListener(object, target));
+		action.doAction();
 	}
 
 }

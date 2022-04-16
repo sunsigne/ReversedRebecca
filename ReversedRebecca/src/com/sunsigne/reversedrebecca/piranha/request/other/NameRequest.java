@@ -1,29 +1,27 @@
-package com.sunsigne.reversedrebecca.piranha.request.compact;
+package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
-import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class TalkRequest implements Request {
+public class NameRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public TalkRequest() {
+	public NameRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new TalkRequest();
+	private static Request action = new NameRequest();
 
 	@Override
 	public Request getRequest() {
-		return request;
+		return action;
 	}
 
 	@Override
 	public String getType() {
-		return "TALK";
+		return "NAME";
 	}
 
 	@Override
@@ -31,11 +29,10 @@ public class TalkRequest implements Request {
 		return true;
 	}
 
+	// WARNING ! Each name should be different in a same folder
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
-		ExtraBehaviorsObjectAction action = new TalkAction();
-		action.setListener(action.getListener(object, target));
-		action.doAction();
+		object.setName(target);
 	}
 
 }
