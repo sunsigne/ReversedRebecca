@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
 
 public interface PlayerAvoider {
 

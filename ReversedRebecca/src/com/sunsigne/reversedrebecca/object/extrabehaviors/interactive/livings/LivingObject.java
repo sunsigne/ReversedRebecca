@@ -4,6 +4,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
@@ -11,18 +13,16 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class LivingObject extends ExtraBehaviorsObject implements CollisionDetector, PlayerAvoider {
+public abstract class LivingObject extends ExtraBehaviorsObject
+		implements CollisionDetector, PlayerAvoider, SpeedVariator {
 
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
-		this(name, x, y, Size.XS / 10, Size.XS / 5, playerAvoiderType);
+		this(name, x, y, Size.XS / 5, playerAvoiderType);
 	}
 
-	public LivingObject(String name, int x, int y, int walking_speed, int running_speed,
-			AVOIDERTYPE playerAvoiderType) {
+	public LivingObject(String name, int x, int y, int speed, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
-		this.running = true;
-		this.walking_speed = walking_speed;
-		this.running_speed = running_speed;
+		this.intrinsic_speed = speed;
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
 	}
@@ -39,22 +39,27 @@ public abstract class LivingObject extends ExtraBehaviorsObject implements Colli
 		addBehavior(walkingRender);
 	}
 
-	////////// SPEED ////////////
+	////////// SPEEDNESS ////////////
 
-	private int walking_speed;
-	private int running_speed;
-
-	private boolean running;
-
-	public void setRunning(boolean running) {
-		this.running = running;
-	}
+	private int intrinsic_speed;
+	private int speed;
 
 	public int getSpeed() {
-		if (running)
-			return running_speed;
-		else
-			return walking_speed;
+		return speed;
+	}
+
+	public void setSpeed(SPEEDTYPE speedType) {
+		switch (speedType) {
+		case SLOW:
+			speed = intrinsic_speed / 2;
+			break;
+		case FAST:
+			speed = intrinsic_speed * 3;
+			break;
+		default:
+			speed = intrinsic_speed;
+			break;
+		}
 	}
 
 	////////// BEHAVIOR ////////////

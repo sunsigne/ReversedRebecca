@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.compact;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.npc.NPC;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;

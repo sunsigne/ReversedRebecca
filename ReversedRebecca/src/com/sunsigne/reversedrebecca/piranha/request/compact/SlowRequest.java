@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.compact;
 
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -24,8 +25,9 @@ public class SlowRequest extends MoveRequest {
 	}
 
 	@Override
-	public boolean isRunning() {
-		return false;
+	public SPEEDTYPE getSpeedType() {
+		return SPEEDTYPE.SLOW;
 	}
+
 
 }
