@@ -32,6 +32,8 @@ public interface CollisionReactor extends Position {
 
 	default void collidingReaction(CollisionDetector detectorObject, boolean blockPass, GenericListener listener) {
 
+		boolean actionDone = false;
+
 		TilePos tilePos = new TilePos();
 		PlayerFinder playerFinder = new PlayerFinder();
 		int size = Size.M;
@@ -43,8 +45,11 @@ public interface CollisionReactor extends Position {
 				else
 					detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, size));
 			}
-			if (listener != null)
+			if (listener != null && !actionDone) {
+				actionDone = true;
 				listener.doAction();
+			}
+
 		}
 
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
@@ -55,8 +60,10 @@ public interface CollisionReactor extends Position {
 					detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), size));
 			}
 
-			if (listener != null)
+			if (listener != null && !actionDone) {
+				actionDone = true;
 				listener.doAction();
+			}
 		}
 
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds())) {
@@ -67,8 +74,10 @@ public interface CollisionReactor extends Position {
 					detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, size));
 			}
 
-			if (listener != null)
+			if (listener != null && !actionDone) {
+				actionDone = true;
 				listener.doAction();
+			}
 		}
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass) {
@@ -78,8 +87,10 @@ public interface CollisionReactor extends Position {
 					detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), size));
 			}
 
-			if (listener != null)
+			if (listener != null && !actionDone) {
+				actionDone = true;
 				listener.doAction();
+			}
 		}
 	}
 
