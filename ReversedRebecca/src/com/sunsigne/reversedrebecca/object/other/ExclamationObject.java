@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.object;
+package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
