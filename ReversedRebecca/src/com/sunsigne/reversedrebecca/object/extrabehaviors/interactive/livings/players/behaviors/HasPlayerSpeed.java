@@ -23,7 +23,7 @@ public class HasPlayerSpeed implements TickBehavior {
 
 	@Override
 	public void tick() {
-		player.setSpeed(SPEEDTYPE.PLAYER_SPEED);
+		player.setSpeedType(SPEEDTYPE.PLAYER_SPEED);
 	}
 
 }

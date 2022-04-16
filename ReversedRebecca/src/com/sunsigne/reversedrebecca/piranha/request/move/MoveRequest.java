@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.move;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
@@ -50,9 +51,13 @@ public class MoveRequest implements Request {
 
 		GoalObject goal = new GoalObject(x, y, false);
 
+		if (object instanceof SpeedVariator) {
+			SpeedVariator variator = (SpeedVariator) object;
+			variator.setSpeedType(getSpeedType());
+		}
+
 		if (object instanceof LivingObject) {
 			LivingObject living = (LivingObject) object;
-			living.setSpeed(getSpeedType());
 			if (object instanceof Player == false)
 				living.removeBehavior(living.getBehaviorList().getObject(new LookAtPlayer(living)));
 		}

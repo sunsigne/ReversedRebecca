@@ -11,14 +11,13 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WalkingRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, PlayerAvoider, SpeedVariator {
 
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
-		setSpeed(SPEEDTYPE.NORMAL);
+		setSpeedType(SPEEDTYPE.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
 	}
@@ -37,29 +36,16 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	////////// SPEEDNESS ////////////
 
-	private int speed;
+	private SPEEDTYPE speedType;
 
-	public int getSpeed() {
-		return speed;
+	@Override
+	public SPEEDTYPE getSpeedType() {
+		return speedType;
 	}
 
-	// it looks random, but each speed must be a multiple of Size.M
-	// not to corrupt pathfinding (except for player outside cutscene)
-	public void setSpeed(SPEEDTYPE speedType) {
-		switch (speedType) {
-		case SLOW:
-			speed = Size.M / Size.XS; // 3
-			break;
-		case NORMAL:
-			speed = (Size.M / Size.XS) * 2; // 6
-			break;
-		case FAST:
-			speed = Size.M / 6; // 16
-			break;
-		case PLAYER_SPEED:
-			speed = Size.XL / 16; // 10
-			break;
-		}
+	@Override
+	public void setSpeedType(SPEEDTYPE speedType) {
+		this.speedType = speedType;
 	}
 
 	////////// BEHAVIOR ////////////
