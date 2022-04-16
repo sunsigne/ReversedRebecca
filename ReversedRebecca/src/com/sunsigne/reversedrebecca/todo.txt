@@ -32,7 +32,6 @@
 
 	////////// DIFFICILE ////////////
 
-	revoir le PathFinding (prévoir une sécurité dans le cas où on n'est pas sur la case + passer la vitesse dans living à speedness)
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 	creer un system de log pour revoir les conversations
 
