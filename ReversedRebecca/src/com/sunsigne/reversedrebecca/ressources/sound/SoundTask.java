@@ -14,9 +14,10 @@ public class SoundTask {
 
 	////////// SOUND ////////////
 
-	public void playSound(double volume, String path) {
+	public void playSound(String path) {
 
 		String path0 = "/ressources/audio/" + path + ".wav";
+		double volume = SoundVolume.getVolume();
 		Clip soundclip;
 
 		try {
@@ -28,16 +29,16 @@ public class SoundTask {
 			soundclip.start();
 		} catch (Exception e) {
 			e.printStackTrace();
-			playSound(1.0, "sound/nope");
+			playSound("sound/nope");
 		}
 	}
 
-	// volume between 0.0 and 1.0
+	// volume between 0.0 and 2.0
 	private void setVol(double volume, Clip clip, boolean delay) {
 		try {
 			int pos = clip.getFramePosition();
 			FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-			float dB = (float) (Math.log(volume) / Math.log(10) * 20);
+			float dB = (float) (Math.log(volume / 2) / Math.log(10) * 20);
 			gain.setValue(dB);
 			if (!delay)
 				clip.setFramePosition(pos);
