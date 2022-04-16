@@ -17,12 +17,8 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, PlayerAvoider, SpeedVariator {
 
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
-		this(name, x, y, Size.XS / 5, playerAvoiderType);
-	}
-
-	public LivingObject(String name, int x, int y, int speed, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
-		this.intrinsic_speed = speed;
+		setSpeed(SPEEDTYPE.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
 	}
@@ -41,23 +37,27 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	////////// SPEEDNESS ////////////
 
-	private int intrinsic_speed;
 	private int speed;
 
 	public int getSpeed() {
 		return speed;
 	}
 
+	// it looks random, but each speed must be a multiple of Size.M
+	// not to corrupt pathfinding (except for player outside cutscene)
 	public void setSpeed(SPEEDTYPE speedType) {
 		switch (speedType) {
 		case SLOW:
-			speed = intrinsic_speed / 2;
+			speed = Size.M / Size.XS; // 3
+			break;
+		case NORMAL:
+			speed = (Size.M / Size.XS) * 2; // 6
 			break;
 		case FAST:
-			speed = intrinsic_speed * 3;
+			speed = Size.M / 6; // 16
 			break;
-		default:
-			speed = intrinsic_speed;
+		case PLAYER_SPEED:
+			speed = Size.XL / 16; // 10
 			break;
 		}
 	}

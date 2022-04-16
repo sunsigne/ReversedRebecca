@@ -10,8 +10,6 @@
 
 	////////// A FINIR ////////////
 
-	faire en sorte que Peeboy RUSH pour passer (avec RushRequest, LivingObject.rushspeed, etc.)
-
 	La plante jaune n'est pas finie
 	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
 	finir les textures du personnage "error"

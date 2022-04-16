@@ -31,10 +31,15 @@ public class Cutscene implements Updatable {
 		if (player == null)
 			return;
 
-		if (playerCanKeyMove)
+		if (playerCanKeyMove) {
 			player.addBehavior(player.userCanKeyMove);
-		else
+			player.addBehavior(player.hasPlayerSpeed);
+		}
+
+		else {
 			player.removeBehavior(player.userCanKeyMove);
+			player.removeBehavior(player.hasPlayerSpeed);
+		}
 	}
 
 	////////// TICK ////////////
@@ -42,7 +47,7 @@ public class Cutscene implements Updatable {
 	private int blacking;
 	private final int MAX_BLACKING = 90;
 	private final int BLACKING_SPEED = 4;
-	
+
 	@Override
 	public void tick() {
 		if (running)
@@ -59,7 +64,7 @@ public class Cutscene implements Updatable {
 	private void shrinkBlacking() {
 		if (blacking > 0)
 			blacking -= BLACKING_SPEED;
-		
+
 		if (blacking <= 0)
 			realStop();
 	}

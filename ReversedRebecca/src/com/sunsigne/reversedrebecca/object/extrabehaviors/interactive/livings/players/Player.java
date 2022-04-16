@@ -6,13 +6,13 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.pl
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.DieWhenNoHp;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasInvulnerabilityFrame;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasPlayerSpeed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.UserCanKeyMove;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public class Player extends LivingObject {
 
 	public Player(int x, int y) {
-		super("PLAYER", x, y, Size.XS / 3, null);
+		super("PLAYER", x, y, null);
 		addPlayerBehaviors();
 	}
 
@@ -22,6 +22,7 @@ public class Player extends LivingObject {
 	public Behavior hasInvulnerabilityFrame;
 	public Behavior dieWhenNoHp;
 	public Behavior userCanKeyMove;
+	public Behavior hasPlayerSpeed;
 	public Behavior canInteract;
 
 	private void addPlayerBehaviors() {
@@ -38,6 +39,9 @@ public class Player extends LivingObject {
 		userCanKeyMove = new UserCanKeyMove(this);
 		addBehavior(userCanKeyMove);
 
+		hasPlayerSpeed = new HasPlayerSpeed(this);
+		addBehavior(hasPlayerSpeed);
+		
 		canInteract = new CanInteract(this);
 		addBehavior(canInteract);
 	}

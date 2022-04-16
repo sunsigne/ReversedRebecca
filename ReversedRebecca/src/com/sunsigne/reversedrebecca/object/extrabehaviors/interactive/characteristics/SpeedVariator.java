@@ -13,7 +13,7 @@ public interface SpeedVariator extends Velocity {
 	////////// SPEED ////////////
 
 	public enum SPEEDTYPE {
-		SLOW("slow"), NORMAL("move"), FAST("fast");
+		SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player");
 
 		private String name;
 

@@ -36,8 +36,6 @@ public class FastPlayerMode extends DebugMode {
 
 		if (getState())
 			player.setSpeed(SPEEDTYPE.FAST);
-		else
-			player.setSpeed(SPEEDTYPE.NORMAL);
 	}
 
 	////////// RENDER ////////////
