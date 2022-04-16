@@ -15,9 +15,13 @@ public class SoundTask {
 	////////// SOUND ////////////
 
 	public void playSound(String path) {
+		playSound(SoundVolume.getVolume(), path);
+	}
+
+	// use this very function only if you want to display an error message
+	public void playSound(double volume, String path) {
 
 		String path0 = "/ressources/audio/" + path + ".wav";
-		double volume = SoundVolume.getVolume();
 		Clip soundclip;
 
 		try {
@@ -46,7 +50,7 @@ public class SoundTask {
 			e.printStackTrace();
 		}
 	}
-/*
+	/*
 	////////// MUSIC ////////////
 
 	private static Clip musicclip;
