@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.world;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
@@ -115,9 +117,20 @@ public class World implements Updatable {
 			if (!tempLayer.isMapLayer())
 				continue;
 
-			BufferedImage img = new ImageTask().loadImage("maps/" + mapName + "/" + tempLayer.getName(), false);
+			BufferedImage img = new ImageTask().loadImage("maps/" + mapName + "/" + tempLayer.getName(), true);
+			if (img == null)
+				img = drawBlackSquare();
 			map_list.addObject(img);
 		}
+	}
+
+	private BufferedImage drawBlackSquare() {
+		BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+		Graphics2D g2d = img.createGraphics();
+		g2d.setColor(Color.black);
+		g2d.fillRect(0, 0, 1, 1);
+		g2d.dispose();
+		return img;
 	}
 
 	public BufferedImage getImageMap(LAYER layer) {
