@@ -182,6 +182,7 @@ public class PathFinder implements Position {
 	private boolean wallOnTheWay(int from, boolean horizontal) {
 
 		int range = horizontal ? tileX : tileY;
+		Player player = null;
 
 		while (range != 0) {
 
@@ -195,10 +196,10 @@ public class PathFinder implements Position {
 			if (object instanceof CollisionReactor) {
 				CollisionReactor wall = (CollisionReactor) object;
 				if (wall != goal) {
-					if (wall instanceof Player)
-						return isPlayerBlockingPath();
 					if (wall.isBlockingPath())
 						return true;
+					if (wall instanceof Player)
+						player = (Player) wall;
 				}
 			}
 
@@ -207,6 +208,10 @@ public class PathFinder implements Position {
 			if (range < 0)
 				range = range + Size.M;
 		}
+
+		if (player != null)
+			return isPlayerBlockingPath();
+
 		return false;
 	}
 
