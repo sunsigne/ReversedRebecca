@@ -10,6 +10,8 @@
 
 	////////// A FINIR ////////////
 
+	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
+	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
 	Animation pour le point d'exclamation
 	La plante jaune n'est pas finie
 	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
@@ -22,6 +24,7 @@
 
 	////////// PIRA ////////////
 
+	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
 	faire un dictionnaire pour la creation des objets ?
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
@@ -32,6 +35,7 @@
 
 	////////// DIFFICILE ////////////
 
+	Faire en sorte que la caméra fonctionne avec un léger delay
 	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 	creer un system de log pour revoir les conversations
 
@@ -39,8 +43,7 @@
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	vérifier les couleurs de la map (surtout le peepuddle)
-	L'image PAR DEFAULT d'un pnj devrait être error et non missing
-	Peeboy regarde à droite dans la cryroom, est-ce que c'est le choix définitif ou doit-il regarder en haut ?
+	Peeboy doit pleurer dans la cryroom (animation ou quoi)
 	!! MultiToolMode ne va que jusqu'à RED
 	MovingToPlayer des foes devrait s'adapter à la distance
 	DieWhenNoHp -> kill() prévoir un restart
@@ -59,8 +62,7 @@
 	Changer le volume de la musique quand le joueurs est en plein dialogue
 
 	////////// A CREER PLUS TARD ////////////
-	
-	créer un lvl 000 
+
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
