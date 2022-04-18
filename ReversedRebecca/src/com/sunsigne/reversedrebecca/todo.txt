@@ -10,12 +10,12 @@
 
 	////////// A FINIR ////////////
 
+	changer les cheveux du peeboy lorqu'il va vers le haut ?
 	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
 	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
 	Animation pour le point d'exclamation
 	La plante jaune n'est pas finie
 	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
-	finir les textures du personnage "error"
 	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
 	faire une animation de saut sur place (pour erendre les diagloues + vivants)
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
@@ -44,7 +44,7 @@
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	vérifier les couleurs de la map (surtout le peepuddle)
 	Peeboy doit pleurer dans la cryroom (animation ou quoi)
-	!! MultiToolMode ne va que jusqu'à RED
+	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec)
 	MovingToPlayer des foes devrait s'adapter à la distance
 	DieWhenNoHp -> kill() prévoir un restart
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)	
