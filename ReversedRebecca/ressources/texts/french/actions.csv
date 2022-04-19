@@ -18,3 +18,8 @@ DoorUnlock = ouvrir
 
 RubbleBlocked = bloqué
 RubbleExplode = exploser
+
+///// COMPUTER /////
+
+ComputerProtected = protégé
+ComputerHack = pirater
