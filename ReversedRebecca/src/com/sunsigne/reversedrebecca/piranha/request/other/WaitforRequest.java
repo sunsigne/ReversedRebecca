@@ -35,8 +35,15 @@ public class WaitforRequest implements Request {
 		return false;
 	}
 
+	// WARNING ! Only ONE waitfor can be active on the same time.
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
+
+		// removal of the previous waitfor (even if unaccomplished)
+		object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, null)));
+
+		if (target.equalsIgnoreCase("null"))
+			return;
 
 		String condition = String.valueOf(target.split(",")[0]);
 
@@ -55,11 +62,7 @@ public class WaitforRequest implements Request {
 
 		// search for listener
 		ConditionalListener listener = getListener(object, generic, conditionType, value);
-
-		if (listener != null) {
-			object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, listener)));
-			object.addBehavior(new WaitforBehavior(object, listener));
-		}
+		object.addBehavior(new WaitforBehavior(object, listener));
 	}
 
 	////////// LISTENER ////////////

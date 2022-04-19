@@ -7,6 +7,11 @@ import com.sunsigne.reversedrebecca.pattern.ConditionalListener;
 public class WaitforBehavior implements TickBehavior {
 
 	public WaitforBehavior(ExtraBehaviorsObject object, ConditionalListener listener) {
+		if (listener == null) {
+			object.getBehaviorList().removeObject(this);
+			return;
+		}
+
 		this.object = object;
 		this.listener = listener;
 	}
