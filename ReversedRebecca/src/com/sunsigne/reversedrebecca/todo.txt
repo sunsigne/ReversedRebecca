@@ -10,6 +10,7 @@
 
 	////////// A FINIR ////////////
 
+	la flaque de pipi doit pouvoir être commen,té, sernti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
 	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
