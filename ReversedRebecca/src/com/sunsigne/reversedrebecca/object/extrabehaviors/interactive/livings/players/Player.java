@@ -41,7 +41,7 @@ public class Player extends LivingObject {
 
 		hasPlayerSpeed = new HasPlayerSpeed(this);
 		addBehavior(hasPlayerSpeed);
-		
+
 		canInteract = new CanInteract(this);
 		addBehavior(canInteract);
 	}
@@ -50,6 +50,14 @@ public class Player extends LivingObject {
 	public Behavior[] behaviorToPauseIfStunned() {
 		return new Behavior[] { canInteract };
 		// userCanKeyMove is already "paused" due to the surVelocity
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public boolean isBlockingPath() {
+		return false;
+		// it depends on context ! But "true" corrupts PathFinding.
 	}
 
 }
