@@ -8,11 +8,11 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class ExclamationObject extends GameObject {
+public class ExpressionObject extends GameObject {
 
-	public ExclamationObject(ExtraBehaviorsObject object) {
+	public ExpressionObject(ExtraBehaviorsObject object, String name) {
 		super(object.getX(), object.getY() - Size.M);
-		loadImage();
+		loadImage(name);
 	}
 
 	////////// TICK ////////////
@@ -33,8 +33,8 @@ public class ExclamationObject extends GameObject {
 
 	private BufferedImage image;
 
-	private void loadImage() {
-		image = new ImageTask().loadImage("textures/other/" + "exclamation");
+	private void loadImage(String name) {
+		image = new ImageTask().loadImage("textures/other/" + "expression_" + name);
 	}
 
 	public BufferedImage getImage() {
