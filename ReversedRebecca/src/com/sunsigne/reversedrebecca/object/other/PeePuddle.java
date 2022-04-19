@@ -8,9 +8,9 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class PeePuddle extends GameObject {
 
-	public PeePuddle(int x, int y) {
+	public PeePuddle(int x, int y, String name) {
 		super(x, y);
-		loadImage();
+		loadImage(name);
 	}
 
 	////////// TICK ////////////
@@ -24,8 +24,8 @@ public class PeePuddle extends GameObject {
 
 	private BufferedImage image;
 
-	private void loadImage() {
-		image = new ImageTask().loadImage("textures/other/" + "pee_puddle");
+	private void loadImage(String name) {
+		image = new ImageTask().loadImage("textures/other/" + "pee_puddle_" + name);
 	}
 
 	public BufferedImage getImage() {

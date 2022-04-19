@@ -10,6 +10,8 @@
 
 	////////// A FINIR ////////////
 
+	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
+	+ faire en sorte qu'il se pisse dessus après un certain temps
 	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
 	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
 	Animation pour le point d'exclamation
@@ -23,6 +25,7 @@
 
 	////////// PIRA ////////////
 
+
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
 	faire un dictionnaire pour la creation des objets ?
@@ -31,6 +34,7 @@
 	prévenir dans la doc que les mémory sont lourdes, ne pas faire de conflit de nom !!!	
 	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 	finir la doc
+	!! Prévenir qu'un seul WAITFOR peut être actif en même temps (dans la doc)
 
 	////////// DIFFICILE ////////////
 
