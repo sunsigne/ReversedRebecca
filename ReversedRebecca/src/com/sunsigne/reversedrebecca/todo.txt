@@ -59,6 +59,8 @@
 	////////// SONS ////////////
 	
 	SountTask pas fini !
+	son pour le puzzle door !
+	sons pour le hack puzzle !
 	SoundVolume & Volume : réfléchir au système le + efficace PUIS créer la GUI		
 	Buttons -> should play a sound too
 	Ajouter un son quand les joueurs parlent

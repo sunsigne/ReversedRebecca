@@ -33,7 +33,7 @@ public class ComputerObject extends PuzzlerObject {
 
 	private void loadTripleAction() {
 		String noActionText = new Translatable().getTranslatedText("ComputerProtected", getFile());
-		Action hackingAction = null;
+		Action hackingAction = new HackingAction(this);
 		tripleAction = new TripleAction(noActionText, hackingAction, null, null);
 	}
 
