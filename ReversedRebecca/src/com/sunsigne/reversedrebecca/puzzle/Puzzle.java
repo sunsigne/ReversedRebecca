@@ -55,7 +55,7 @@ public abstract class Puzzle implements Updatable {
 		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall");
 	}
 
-	private void createWallBorder() {
+	protected void createWallBorder() {
 
 		Handler handler = LAYER.PUZZLE.getHandler();
 		BufferedImage img = getWallTexture();
