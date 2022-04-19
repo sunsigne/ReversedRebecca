@@ -6,5 +6,9 @@ MaxHp = 3
 
 KeyMaxLvl = GREEN
 KeyStartLvl = NULL
+
 BombMaxLvl = CYAN
 BombStartLvl = NULL
+
+MicrochipMaxLvl = CYAN
+MicrochipStartLvl = NULL
