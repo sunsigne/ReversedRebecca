@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -17,12 +18,18 @@ public class Cutscene implements Updatable {
 
 	public void start() {
 		running = true;
+		timer = null;
 		LAYER.GUI.addObject(this);
 		playerCanKeyMove(false);
 	}
 
-	public void stop() {
-		running = false;
+	private static GameTimer timer;
+
+	public void stop(boolean delay) {
+		if (delay)
+			timer = new GameTimer(1);
+		else
+			timer = new GameTimer(0);
 	}
 
 	private void playerCanKeyMove(boolean playerCanKeyMove) {
@@ -51,6 +58,11 @@ public class Cutscene implements Updatable {
 
 	@Override
 	public void tick() {
+		if (timer != null) {
+			if (timer.isReady())
+				running = false;
+		}
+
 		if (running)
 			growBlacking();
 		else

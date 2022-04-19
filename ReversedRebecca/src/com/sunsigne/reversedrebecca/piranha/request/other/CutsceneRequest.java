@@ -37,7 +37,10 @@ public class CutsceneRequest implements Request {
 			new Cutscene().start();
 			break;
 		case "stop":
-			new Cutscene().stop();
+			new Cutscene().stop(false);
+			break;
+		case "stop_with_delay":
+			new Cutscene().stop(true);
 			break;
 		}
 	}
