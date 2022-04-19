@@ -66,6 +66,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 		if (world != null)
 			world.freeze(true);
 
+		object.setMotionless();
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 		goToNextLine();

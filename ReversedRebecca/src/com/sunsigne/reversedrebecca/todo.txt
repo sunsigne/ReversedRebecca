@@ -10,7 +10,6 @@
 
 	////////// A FINIR ////////////
 
-	changer les cheveux du peeboy lorqu'il va vers le haut ?
 	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
 	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
 	Animation pour le point d'exclamation
@@ -36,7 +35,6 @@
 	////////// DIFFICILE ////////////
 
 	Faire en sorte que la caméra fonctionne avec un léger delay
-	les NPC ont parfois le pieds en l'air en plein dialogues (pas naturel)
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
@@ -63,6 +61,7 @@
 
 	////////// A CREER PLUS TARD ////////////
 
+	Animation de saut sur place, de pleur dans un coin, de douche
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
