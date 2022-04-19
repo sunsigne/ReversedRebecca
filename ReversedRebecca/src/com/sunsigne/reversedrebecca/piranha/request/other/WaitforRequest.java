@@ -56,8 +56,10 @@ public class WaitforRequest implements Request {
 		// search for listener
 		ConditionalListener listener = getListener(object, generic, conditionType, value);
 
-		if (listener != null)
+		if (listener != null) {
+			object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, listener)));
 			object.addBehavior(new WaitforBehavior(object, listener));
+		}
 	}
 
 	////////// LISTENER ////////////
