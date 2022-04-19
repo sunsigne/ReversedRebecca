@@ -68,17 +68,17 @@ Le Type de Condition "$" est donc une sorte de relai d'une autre Condition.
 GOTO créé des Conditions à portée locale, aucun risque de valider la Condition d'un autre fichier par accident !
 
 
-////// ACTIVATE //////
+////// AFFECTING //////
 
 
-ACTIVATE est en quelque sorte la variante à cible unitaire et globale de GOTO.
+AFFECTING est en quelque sorte la variante à cible unitaire et globale de GOTO.
 
 Il a plusieurs différences notables avec ce dernier :
 
-GOTO autorise plusieurs Cibles, ACTIVATE n'en autorise qu'une seule.
-Une écriture compacte lorsque ACTIVATE est le Type de Requete n'aurait pas de sens, elle est donc impossible.
-L'utilisation de l'écriture compacte lorsque qu'ACTIVATE est la Cible est possible (puisque très pratique !)
+GOTO autorise plusieurs Cibles, AFFECTING n'en autorise qu'une seule.
+Une écriture compacte lorsque AFFECTING est le Type de Requete n'aurait pas de sens, elle est donc impossible.
+L'utilisation de l'écriture compacte lorsque qu'AFFECTING est la Cible est possible (puisque très pratique !)
 Le Type de Condition "$" est remplacé par "!" afin de mieux faire la différence avec GOTO.
 ex : 
-(file 1) GOAL -> 33-33 = ACTIVE -> BOB_REACHED_GOAL
+(file 1) GOAL -> 33-33 = INFLUENCE -> BOB_REACHED_GOAL
 (file 2) ! -> BOB_REACHED_GOAL = FACING -> BOB

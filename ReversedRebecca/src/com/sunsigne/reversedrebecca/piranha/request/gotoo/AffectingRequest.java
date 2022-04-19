@@ -1,19 +1,19 @@
 package com.sunsigne.reversedrebecca.piranha.request.gotoo;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.condition.global.ActivateCondition;
+import com.sunsigne.reversedrebecca.piranha.condition.global.AffectingCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class ActivateRequest implements Request {
+public class AffectingRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public ActivateRequest() {
+	public AffectingRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new ActivateRequest();
+	private static Request request = new AffectingRequest();
 
 	@Override
 	public Request getRequest() {
@@ -22,7 +22,7 @@ public class ActivateRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "ACTIVATE";
+		return "AFFECTING";
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class ActivateRequest implements Request {
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
 
-		new ActivateCondition().registerValue(target);
+		new AffectingCondition().registerValue(target);
 	}
 
 }
