@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.p
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CameraFollowing;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.DieWhenNoHp;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasInvulnerabilityFrame;
@@ -18,7 +17,6 @@ public class Player extends LivingObject {
 
 	////////// BEHAVIOR ////////////
 
-	public Behavior cameraFollowing;
 	public Behavior hasInvulnerabilityFrame;
 	public Behavior dieWhenNoHp;
 	public Behavior userCanKeyMove;
@@ -26,9 +24,6 @@ public class Player extends LivingObject {
 	public Behavior canInteract;
 
 	private void addPlayerBehaviors() {
-
-		cameraFollowing = new CameraFollowing(this);
-		addBehavior(cameraFollowing);
 
 		hasInvulnerabilityFrame = new HasInvulnerabilityFrame(this);
 		addBehavior(hasInvulnerabilityFrame);

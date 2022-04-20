@@ -9,7 +9,9 @@ public interface CameraDependency {
 	
 	final Camera CAMERA = new Camera();
 	
-	boolean isCameraDependant();
+	default boolean isCameraDependant() {
+		return false;
+	}
 	
 	////////// RENDER ////////////
 	
