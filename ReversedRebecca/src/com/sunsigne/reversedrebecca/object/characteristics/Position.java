@@ -14,6 +14,10 @@ public interface Position {
 
 	////////// SIZE ////////////
 
+	default int getSize() {
+		return Math.min(getWidth(), getHeight());
+	}
+
 	int getWidth();
 
 	int getHeight();

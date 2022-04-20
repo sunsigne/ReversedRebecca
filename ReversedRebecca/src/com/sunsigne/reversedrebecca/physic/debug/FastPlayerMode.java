@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -34,7 +34,7 @@ public class FastPlayerMode extends DebugMode {
 		Player player = (Player) object;
 
 		if (getState())
-			player.setSpeedType(SPEEDTYPE.FAST);
+			player.setSpeedness(SPEEDNESS.FAST);
 	}
 
 	////////// RENDER ////////////

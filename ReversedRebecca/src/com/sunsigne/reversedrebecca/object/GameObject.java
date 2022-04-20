@@ -57,10 +57,6 @@ public abstract class GameObject implements Velocity {
 
 	////////// VELOCICY ////////////
 
-	public int getSpeed() {
-		return Math.min(w, h) / 16;
-	}
-
 	private int velX, velY;
 
 	@Override
@@ -82,5 +78,5 @@ public abstract class GameObject implements Velocity {
 	public void setVelY(int velY) {
 		this.velY = velY;
 	}
-
+	
 }

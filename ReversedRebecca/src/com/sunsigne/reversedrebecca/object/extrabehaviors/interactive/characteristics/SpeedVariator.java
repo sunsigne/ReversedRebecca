@@ -1,40 +1,44 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
 
-import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 
-public interface SpeedVariator extends PathSearcher {
+public interface SpeedVariator extends Velocity {
 
 	////////// SPEED VARIATOR ////////////
 
-	SPEEDTYPE getSpeedType();
+	SPEEDNESS getSpeedness();
 
-	void setSpeedType(SPEEDTYPE speedType);
+	void setSpeedness(SPEEDNESS speedType);
 
 	default int getSpeed() {
-		return getSpeedType().getSpeed();
+		switch (getSpeedness()) {
+		case SLOW:
+			return getSize() / 32;
+		case NORMAL:
+			return getSize() / 16;
+		case FAST:
+			return getSize() / 8;
+		case PLAYER_SPEED:
+			return 10;
+		}
+		return getSize() / 16;
 	}
 
 	////////// SPEED ////////////
 
 	// it looks random, but each speed must be a multiple of Size.M
 	// not to corrupt pathfinding (except for player outside cutscene)
-	public enum SPEEDTYPE {
-		SLOW("slow", 3), NORMAL("move", 6), FAST("fast", 16), PLAYER_SPEED("move_player", 10);
+	public enum SPEEDNESS {
+		SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player");
 
 		private String name;
-		private int speed;
 
-		SPEEDTYPE(String name, int speed) {
+		SPEEDNESS(String name) {
 			this.name = name;
-			this.speed = speed;
 		}
 
 		public String getName() {
 			return name;
-		}
-
-		public int getSpeed() {
-			return speed;
 		}
 	}
 

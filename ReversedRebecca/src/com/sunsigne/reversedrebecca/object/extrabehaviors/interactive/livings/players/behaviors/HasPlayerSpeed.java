@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 
 public class HasPlayerSpeed implements TickBehavior {
@@ -23,7 +23,7 @@ public class HasPlayerSpeed implements TickBehavior {
 
 	@Override
 	public void tick() {
-		player.setSpeedType(SPEEDTYPE.PLAYER_SPEED);
+		player.setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 
 }

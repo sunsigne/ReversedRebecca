@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.move;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
@@ -35,8 +35,8 @@ public class MoveRequest implements Request {
 		return true;
 	}
 
-	public SPEEDTYPE getSpeedType() {
-		return SPEEDTYPE.NORMAL;
+	public SPEEDNESS getSpeedness() {
+		return SPEEDNESS.NORMAL;
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class MoveRequest implements Request {
 
 		if (object instanceof SpeedVariator) {
 			SpeedVariator variator = (SpeedVariator) object;
-			variator.setSpeedType(getSpeedType());
+			variator.setSpeedness(getSpeedness());
 		}
 
 		if (object instanceof LivingObject) {

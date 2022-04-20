@@ -18,7 +18,7 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
 		setCondition(CONDITION.GOOD);
-		setSpeedType(SPEEDTYPE.NORMAL);
+		setSpeedness(SPEEDNESS.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
 	}
@@ -33,16 +33,16 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	////////// SPEEDNESS ////////////
 
-	private SPEEDTYPE speedType;
+	private SPEEDNESS speedness;
 
 	@Override
-	public SPEEDTYPE getSpeedType() {
-		return speedType;
+	public SPEEDNESS getSpeedness() {
+		return speedness;
 	}
 
 	@Override
-	public void setSpeedType(SPEEDTYPE speedType) {
-		this.speedType = speedType;
+	public void setSpeedness(SPEEDNESS speedness) {
+		this.speedness = speedness;
 	}
 
 	////////// BEHAVIOR ////////////
