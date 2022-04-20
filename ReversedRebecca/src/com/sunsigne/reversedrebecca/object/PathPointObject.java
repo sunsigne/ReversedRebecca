@@ -53,4 +53,16 @@ public class PathPointObject extends GameObject implements PathSearcher {
 
 	}
 
+	@Override
+	public boolean mustFollowPath() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public void setFollowPath(boolean mustFollowingPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

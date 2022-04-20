@@ -21,4 +21,16 @@ public class InteractiveObject extends ExtraBehaviorsObject {
 		addBehavior(blockingPath);
 	}
 
+	@Override
+	public boolean mustFollowPath() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public void setFollowPath(boolean mustFollowingPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

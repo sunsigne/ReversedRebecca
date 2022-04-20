@@ -60,4 +60,16 @@ public class Player extends LivingObject {
 		// it depends on context ! But "true" corrupts PathFinding.
 	}
 
+	@Override
+	public boolean mustFollowPath() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public void setFollowPath(boolean mustFollowingPath) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

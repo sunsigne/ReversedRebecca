@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.SickRender;
@@ -52,16 +51,12 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	public Behavior avoidingPlayer;
 
 	public Behavior watchingDirection;
-	public Behavior movingToGoal;
 	public Behavior moveWhenPushed;
 
 	private void addLivingBehaviors() {
 
 		watchingDirection = new WatchingDirection(this);
 		addBehavior(watchingDirection);
-
-		movingToGoal = new MovingToGoal(this);
-		addBehavior(movingToGoal);
 
 		moveWhenPushed = new MoveWhenPushed(this);
 		addBehavior(moveWhenPushed);

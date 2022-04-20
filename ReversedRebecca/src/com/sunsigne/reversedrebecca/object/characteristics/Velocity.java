@@ -6,6 +6,8 @@ public interface Velocity extends Position, Updatable {
 
 	////////// VELOCICY ////////////
 
+	int getSpeed();
+	
 	int getVelX();
 
 	int getVelY();
