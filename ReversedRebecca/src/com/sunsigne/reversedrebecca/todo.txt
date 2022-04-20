@@ -10,6 +10,7 @@
 
 	////////// A FINIR ////////////
 
+	créer un resque pour changer le Feeling et la condition d'un living
 	Creer un type de déplacement dans LivingObject (moveToGoal or userCanKeyMove) comme pour la Condition et le PlayerAvioderType ?
 	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
@@ -28,7 +29,7 @@
 
 	////////// PIRA ////////////
 
-
+	changer create_onthespot ?
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
 	faire un dictionnaire pour la creation des objets ?
