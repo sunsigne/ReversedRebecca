@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors;
+package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -9,8 +9,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WalkingRender implements TickBehavior, RenderBehavior {
 
@@ -60,27 +58,6 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 
 	////////// TEXTURE ////////////
 
-	private static boolean hd;
-
-	public static void setHD(boolean hd) {
-		WalkingRender.hd = hd;
-
-		for (LAYER tempLayer : LAYER.values()) {
-
-			if (tempLayer.getName().contains("content") == false)
-				continue;
-
-			for (Updatable tempUpdatable : tempLayer.getHandler().getList()) {
-
-				if (tempUpdatable instanceof LivingObject == false)
-					continue;
-
-				LivingObject tempLiving = (LivingObject) tempUpdatable;
-				((WalkingRender) tempLiving.walkingRender).loadAnimations();
-			}
-		}
-	}
-
 	@SuppressWarnings("unchecked")
 	private Cycloid<BufferedImage>[] walking = new Cycloid[4];
 	private BufferedImage[] standing = new BufferedImage[4];
@@ -109,8 +86,7 @@ public class WalkingRender implements TickBehavior, RenderBehavior {
 	}
 
 	private BufferedImage loadImage(String imageName) {
-		String hd = WalkingRender.hd ? "hd/" : "";
-		String imagePath = "textures/characters/" + living.getName() + "/" + hd + imageName;
+		String imagePath = "textures/characters/" + living.getName() + "/" + imageName;
 
 		BufferedImage img = new ImageTask().loadImage(imagePath, true);
 

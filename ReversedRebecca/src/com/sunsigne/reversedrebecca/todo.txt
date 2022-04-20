@@ -10,7 +10,9 @@
 
 	////////// A FINIR ////////////
 
-	la flaque de pipi doit pouvoir être commen,té, sernti, nettoyée, etc.
+	Creer un type de déplacement dans LivingObject (moveToGoal or userCanKeyMove) comme pour la Condition et le PlayerAvioderType ?
+	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder
+	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
 	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
@@ -68,6 +70,7 @@
 
 	////////// A CREER PLUS TARD ////////////
 
+	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de saut sur place, de pleur dans un coin, de douche
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	animation de tourbillon de vent de temps en temps ?

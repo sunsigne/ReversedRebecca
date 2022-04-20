@@ -9,14 +9,16 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteri
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MovingToGoal;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WalkingRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WatchingDirection;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.SickRender;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.WalkingRender;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
-		implements CollisionDetector, PlayerAvoider, SpeedVariator {
+		implements CollisionDetector, Feeling, PlayerAvoider, SpeedVariator {
 
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
+		setCondition(CONDITION.GOOD);
 		setSpeedType(SPEEDTYPE.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
@@ -27,11 +29,7 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	@Override
 	public void setName(String name) {
 		super.setName(name);
-		if (walkingRender == null)
-			return;
-		removeBehavior(walkingRender);
-		walkingRender = new WalkingRender(this);
-		addBehavior(walkingRender);
+		setCondition(getCondition());
 	}
 
 	////////// SPEEDNESS ////////////
@@ -50,19 +48,17 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	////////// BEHAVIOR ////////////
 
+	public Behavior livingRender;
+	public Behavior avoidingPlayer;
+
 	public Behavior watchingDirection;
-	public Behavior walkingRender;
 	public Behavior movingToGoal;
 	public Behavior moveWhenPushed;
-	public Behavior avoidingPlayer;
 
 	private void addLivingBehaviors() {
 
 		watchingDirection = new WatchingDirection(this);
 		addBehavior(watchingDirection);
-
-		walkingRender = new WalkingRender(this);
-		addBehavior(walkingRender);
 
 		movingToGoal = new MovingToGoal(this);
 		addBehavior(movingToGoal);
@@ -72,6 +68,35 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	}
 
 	public abstract Behavior[] behaviorToPauseIfStunned();
+
+	////////// RENDER ////////////
+
+	private CONDITION condition;
+
+	@Override
+	public CONDITION getCondition() {
+		return condition;
+	}
+
+	@Override
+	public void setCondition(CONDITION condition) {
+		if (condition == null)
+			condition = CONDITION.GOOD;
+
+		this.condition = condition;
+		removeBehavior(livingRender);
+
+		switch (condition) {
+		case GOOD:
+			livingRender = new WalkingRender(this);
+			break;
+		case SICK:
+			livingRender = new SickRender(this);
+			break;
+		}
+
+		addBehavior(livingRender);
+	}
 
 	////////// COLLISION ////////////
 

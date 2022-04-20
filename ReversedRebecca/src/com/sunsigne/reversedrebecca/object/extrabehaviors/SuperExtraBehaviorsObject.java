@@ -19,7 +19,10 @@ public abstract class SuperExtraBehaviorsObject extends GameObject
 
 	public SuperExtraBehaviorsObject(String name, int x, int y, int w, int h) {
 		super(x, y, w, h);
-		setName(name);
+
+		if (name != null)
+			this.name = name.toLowerCase();
+
 		if (World.get() != null)
 			piranhaFile = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
 	}
