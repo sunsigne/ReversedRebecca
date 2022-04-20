@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.Li
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.DieWhenNoHp;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasInvulnerabilityFrame;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasPlayerSpeed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.UserCanKeyMove;
 
 public class Player extends LivingObject {
@@ -20,7 +19,6 @@ public class Player extends LivingObject {
 	public Behavior hasInvulnerabilityFrame;
 	public Behavior dieWhenNoHp;
 	public Behavior userCanKeyMove;
-	public Behavior hasPlayerSpeed;
 	public Behavior canInteract;
 
 	private void addPlayerBehaviors() {
@@ -33,9 +31,6 @@ public class Player extends LivingObject {
 
 		userCanKeyMove = new UserCanKeyMove(this);
 		addBehavior(userCanKeyMove);
-
-		hasPlayerSpeed = new HasPlayerSpeed(this);
-		addBehavior(hasPlayerSpeed);
 
 		canInteract = new CanInteract(this);
 		addBehavior(canInteract);

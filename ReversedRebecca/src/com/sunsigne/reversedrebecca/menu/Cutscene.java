@@ -40,13 +40,11 @@ public class Cutscene implements Updatable {
 
 		if (playerCanKeyMove) {
 			player.addBehavior(player.userCanKeyMove);
-			player.addBehavior(player.hasPlayerSpeed);
 		}
 
 		else {
 			player.setMotionless();
 			player.removeBehavior(player.userCanKeyMove);
-			player.removeBehavior(player.hasPlayerSpeed);
 		}
 	}
 
