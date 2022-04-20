@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.UserCanKeyMove;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.UserKeyMovePlayer;
 
 public interface DirectionalKey extends Key {
 
@@ -11,9 +11,7 @@ public interface DirectionalKey extends Key {
 		if (player == null)
 			return;
 
-		player.removeBehavior(player.userCanKeyMove);
-		player.userCanKeyMove = new UserCanKeyMove(player);
-		player.addBehavior(player.userCanKeyMove);
+		UserKeyMovePlayer.getInstance().refreshDirectionKeys();
 	}
 
 }

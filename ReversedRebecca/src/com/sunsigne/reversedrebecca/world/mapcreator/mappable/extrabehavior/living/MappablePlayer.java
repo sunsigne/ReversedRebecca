@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.extrabehavior.living;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -22,7 +22,7 @@ public class MappablePlayer implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new Player(x, y);
+		return new PiranhaPlayer(x, y);
 	}
 
 	@Override

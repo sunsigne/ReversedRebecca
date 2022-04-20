@@ -1,14 +1,26 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.UserKeyMovePlayer;
 
 public class PiranhaPlayer extends PiranhaObject {
 
 	public PiranhaPlayer(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
+		userCanKeyMove = true;
+	}
+
+	////////// SPEED ////////////
+
+	private void updateSpeed() {
+		if (getPath() != DIRECTION.NULL)
+			return;
+
+		setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 
 	////////// TICK ////////////
@@ -16,16 +28,9 @@ public class PiranhaPlayer extends PiranhaObject {
 	@Override
 	public void tick() {
 		updateSpeed();
-	}
 
-	private void updateSpeed() {
-		if (getPath() == null)
-			return;
-
-		if (getPath() == DIRECTION.NULL)
-			return;
-
-		setSpeedness(SPEEDNESS.PLAYER_SPEED);
+		if (canUserKeyMove())
+			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
 	}
 
 	////////// RENDER ////////////
@@ -33,6 +38,34 @@ public class PiranhaPlayer extends PiranhaObject {
 	@Override
 	public void render(Graphics g) {
 
+	}
+
+	////////// KEYBOARD ////////////
+
+	private boolean userCanKeyMove;
+
+	private boolean canUserKeyMove() {
+		if (getPath() != null & getPath() != DIRECTION.NULL)
+			return false;
+
+		else
+			return userCanKeyMove;
+	}
+
+	public void setUserCanKeyMove(boolean userCanKeyMove) {
+		this.userCanKeyMove = userCanKeyMove;
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		int key = e.getKeyCode();
+		UserKeyMovePlayer.getInstance().directionKey(this, key, true);
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		int key = e.getKeyCode();
+		UserKeyMovePlayer.getInstance().directionKey(this, key, false);
 	}
 
 	////////// COLLISION ////////////
@@ -44,7 +77,7 @@ public class PiranhaPlayer extends PiranhaObject {
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPath(detectorObject);
+
 	}
 
 }

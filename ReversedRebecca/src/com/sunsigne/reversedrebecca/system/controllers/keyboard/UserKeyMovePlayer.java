@@ -1,42 +1,38 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors;
+package com.sunsigne.reversedrebecca.system.controllers.keyboard;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.KeyboardBehavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 
-public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
+public class UserKeyMovePlayer {
 
-	public UserCanKeyMove(Player player) {
-		this.player = player;
-		initDirectionKeys();
+	////////// SIGNELTON ////////////
+
+	private UserKeyMovePlayer() {
+		refreshDirectionKeys();
 	}
 
-	////////// BEHAVIOR ////////////
+	private static UserKeyMovePlayer instance;
 
-	private Player player;
-
-	@Override
-	public Player getExtraBehaviorsObject() {
-		return player;
+	public static UserKeyMovePlayer getInstance() {
+		if (instance == null)
+			instance = new UserKeyMovePlayer();
+		return instance;
 	}
 
 	////////// TICK ////////////
 
-	@Override
-	public void tick() {
-		movePlayerbyX();
-		movePlayerbyY();
+	public void movePlayerByKey(PiranhaPlayer player) {
+		movePlayerbyX(player);
+		movePlayerbyY(player);
 	}
-
-	private void movePlayerbyX() {
+	
+	private void movePlayerbyX(PiranhaPlayer player) {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			player.setVelX(-player.getSpeed());
@@ -48,7 +44,7 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 			player.setVelX(0);
 	}
 
-	private void movePlayerbyY() {
+	private void movePlayerbyY(PiranhaPlayer player) {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			player.setVelY(-player.getSpeed());
@@ -59,30 +55,13 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 		else if (!directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			player.setVelY(0);
 	}
-
+	
 	////////// KEYBOARD ////////////
 
 	private int[] directionKeyEvent = new int[4];
 	private boolean[] directionKeyPressed = new boolean[4];
 
-	@Override
-	public KeyboardController getKeyBoardController() {
-		return player.getKeyBoardController();
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		directionKey(key, true);
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		int key = e.getKeyCode();
-		directionKey(key, false);
-	}
-
-	private void initDirectionKeys() {
+	public void refreshDirectionKeys() {
 		setDirectionKeyEvent(DIRECTION.LEFT, LeftKey.getKey());
 		setDirectionKeyEvent(DIRECTION.RIGHT, RightKey.getKey());
 		setDirectionKeyEvent(DIRECTION.UP, UpKey.getKey());
@@ -93,7 +72,9 @@ public class UserCanKeyMove implements TickBehavior, KeyboardBehavior {
 		this.directionKeyEvent[direction.getNum()] = directionKeyEvent;
 	}
 
-	private void directionKey(int key, boolean pressed) {
+	public void directionKey(PiranhaPlayer player, int key, boolean pressed) {
+		if (player == null)
+			return;
 
 		if (key == directionKeyEvent[DIRECTION.LEFT.getNum()] || key == KeyEvent.VK_LEFT)
 			directionKeyPressed[DIRECTION.LEFT.getNum()] = pressed;
