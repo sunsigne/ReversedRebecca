@@ -49,6 +49,7 @@ public class Conductor {
 	}
 
 	private void loadRessources() {
+		
 		new LayerDualizer().dualizeSameFloorLayers();
 		new ForceInit().loadAllClassesInPackage(GUI.class.getPackageName());
 
