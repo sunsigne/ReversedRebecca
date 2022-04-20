@@ -4,18 +4,17 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDTYPE;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FastPlayerMode extends DebugMode {
 
-	////////// PHYSIC LAW ////////////
+	////////// DEBUG MODE ////////////
 
-	private static PhysicLaw physicLaw = new FastPlayerMode();
+	private static DebugMode debugMode = new FastPlayerMode();
 
 	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	////////// NAME ////////////

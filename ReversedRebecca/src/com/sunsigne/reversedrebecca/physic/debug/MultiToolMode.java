@@ -6,18 +6,17 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class MultiToolMode extends DebugMode {
 
-	////////// PHYSIC LAW ////////////
+	////////// DEBUG MODE ////////////
 
-	private static PhysicLaw physicLaw = new MultiToolMode();
+	private static DebugMode debugMode = new MultiToolMode();
 
 	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	////////// NAME ////////////

@@ -26,6 +26,8 @@ public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEven
 		return local_index;
 	}
 
+	public abstract DebugMode getDebugMode();
+	
 	////////// NAME ////////////
 
 	public abstract String getName();

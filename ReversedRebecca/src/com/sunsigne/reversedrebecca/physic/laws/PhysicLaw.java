@@ -6,10 +6,6 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public interface PhysicLaw {
 
-	////////// PHYSIC LAW ////////////
-	
-	PhysicLaw getPhysicLaw();
-	
 	////////// TICK ////////////
 	
 	void tick(Updatable object);

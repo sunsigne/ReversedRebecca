@@ -2,25 +2,11 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class UpdateLayersLaw implements PhysicLaw {
-
-	////////// PHYSIC LAW ////////////
-
-	public UpdateLayersLaw() {
-		PhysicList.getList().addObject(this);
-	}
-
-	private static PhysicLaw physicLaw = new UpdateLayersLaw();
-
-	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
-	}
 
 	////////// TICK ////////////
 

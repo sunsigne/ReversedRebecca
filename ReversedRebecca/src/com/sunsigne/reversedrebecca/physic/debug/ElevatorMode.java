@@ -6,18 +6,17 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerLayerChanger;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ElevatorMode extends DebugMode {
 
-	////////// PHYSIC LAW ////////////
+	////////// DEBUG MODE ////////////
 
-	private static PhysicLaw physicLaw = new ElevatorMode();
+	private static DebugMode debugMode = new ElevatorMode();
 
 	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	////////// NAME ////////////
@@ -64,7 +63,7 @@ public class ElevatorMode extends DebugMode {
 		Player player = new PlayerFinder().getPlayer();
 		if (player == null)
 			return;
-		
+
 		if (key == KeyEvent.VK_NUMPAD8)
 			new PlayerLayerChanger().goesUp();
 

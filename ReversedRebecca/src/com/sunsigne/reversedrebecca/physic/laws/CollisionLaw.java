@@ -5,25 +5,11 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class CollisionLaw implements PhysicLaw {
 
-	////////// PHYSIC LAW ////////////
-	
-	public CollisionLaw() {
-		PhysicList.getList().addObject(this);
-	}
-	
-	private static PhysicLaw physicLaw = new CollisionLaw();
-	
-	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
-	}
-	
 	////////// TICK ////////////
 
 	@Override
@@ -55,7 +41,7 @@ public class CollisionLaw implements PhysicLaw {
 				reactorObject.collidingReaction(detectorObject);
 		}
 	}
-	
+
 	private boolean objectAreColliding(CollisionDetector detectorObject, CollisionReactor reactorObject) {
 
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObject.getBounds()))

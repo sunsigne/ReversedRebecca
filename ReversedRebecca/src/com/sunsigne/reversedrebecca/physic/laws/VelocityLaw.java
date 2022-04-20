@@ -4,26 +4,9 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VelocityLaw implements PhysicLaw {
-
-	////////// PHYSIC LAW ////////////
-
-	public VelocityLaw() {
-		if (PhysicList.getList().containsObject(physicLaw))
-			return;
-		
-		PhysicList.getList().getList().add(0, this);
-	}
-
-	private static PhysicLaw physicLaw = new VelocityLaw();
-
-	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
-	}
 
 	////////// TICK ////////////
 

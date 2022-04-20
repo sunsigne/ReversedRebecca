@@ -9,19 +9,18 @@ import java.awt.Rectangle;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VisibleHitboxMode extends DebugMode {
 
-	////////// PHYSIC LAW ////////////
+	////////// DEBUG MODE ////////////
 
-	private static PhysicLaw physicLaw = new VisibleHitboxMode();
+	private static DebugMode debugMode = new VisibleHitboxMode();
 
 	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	////////// NAME ////////////
@@ -61,7 +60,7 @@ public class VisibleHitboxMode extends DebugMode {
 	}
 
 	///// useful /////
-	
+
 	private void redHitboxRender(Graphics2D g2d, Rectangle bounds) {
 		g2d.setColor(Color.WHITE);
 		g2d.draw(bounds);
@@ -73,7 +72,7 @@ public class VisibleHitboxMode extends DebugMode {
 	}
 
 	///// detector /////
-	
+
 	private void collisionDetectorRender(Graphics2D g2d, Updatable object) {
 		if (object instanceof CollisionDetector == false)
 			return;
@@ -88,7 +87,7 @@ public class VisibleHitboxMode extends DebugMode {
 	}
 
 	///// reactor /////
-	
+
 	private void collisionReactorRender(Graphics2D g2d, Updatable object) {
 		if (object instanceof CollisionReactor == false)
 			return;
@@ -98,18 +97,18 @@ public class VisibleHitboxMode extends DebugMode {
 	}
 
 	///// mouse /////
-	
+
 	private void mouseUserEventRender(Graphics2D g2d, Updatable object) {
 		if (object instanceof CollisionReactor)
 			return;
-		
+
 		if (object instanceof MouseUserEvent == false)
 			return;
 
 		MouseUserEvent mouseObject = (MouseUserEvent) object;
 		Rectangle bounds = new Rectangle(mouseObject.getX(), mouseObject.getY(), mouseObject.getWidth(),
 				mouseObject.getHeight());
-		
+
 		redHitboxRender(g2d, bounds);
 	}
 

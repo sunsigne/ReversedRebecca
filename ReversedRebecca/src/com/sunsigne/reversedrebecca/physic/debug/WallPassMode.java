@@ -7,18 +7,17 @@ import java.awt.Graphics2D;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WallPassMode extends DebugMode {
 
-	////////// PHYSIC LAW ////////////
+	////////// DEBUG MODE ////////////
 
-	private static PhysicLaw physicLaw = new WallPassMode();
+	private static DebugMode debugMode = new WallPassMode();
 
 	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
+	public DebugMode getDebugMode() {
+		return debugMode;
 	}
 
 	////////// NAME ////////////
@@ -34,9 +33,9 @@ public class WallPassMode extends DebugMode {
 	public void tick(Updatable object) {
 		if (getState()) {
 			if (object instanceof Player)
-				PhysicList.getList().removeObject(new CollisionLaw().getPhysicLaw());
+				PhysicList.getList().removeObject(new CollisionLaw());
 			else
-				PhysicList.getList().addObject(new CollisionLaw().getPhysicLaw());
+				PhysicList.getList().addObject(new CollisionLaw());
 		}
 	}
 

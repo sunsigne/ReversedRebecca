@@ -6,24 +6,10 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PathFindingLaw implements PhysicLaw {
-
-	////////// PHYSIC LAW ////////////
-
-	public PathFindingLaw() {
-		PhysicList.getList().addObject(this);
-	}
-
-	private static PhysicLaw physicLaw = new PathFindingLaw();
-
-	@Override
-	public PhysicLaw getPhysicLaw() {
-		return physicLaw;
-	}
 
 	////////// TICK ////////////
 
