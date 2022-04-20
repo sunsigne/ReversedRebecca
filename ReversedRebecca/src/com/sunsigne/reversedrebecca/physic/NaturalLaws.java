@@ -31,8 +31,8 @@ public class NaturalLaws {
 
 		// Calculating path of the object for its next move.
 		load(new PathFindingLaw());
-		
-		// Calculating the definitive position for Camera for this tick.
+
+		// Calculating the "definitive" position for Camera (for the tick).
 		load(new CameraMovingLaw());
 	}
 

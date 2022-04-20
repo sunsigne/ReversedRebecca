@@ -8,7 +8,7 @@ public interface SpeedVariator extends Velocity {
 
 	SPEEDNESS getSpeedness();
 
-	void setSpeedness(SPEEDNESS speedType);
+	void setSpeedness(SPEEDNESS speedness);
 
 	default int getSpeed() {
 		switch (getSpeedness()) {
