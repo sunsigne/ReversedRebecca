@@ -7,9 +7,9 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -152,14 +152,11 @@ public class World implements Updatable {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		Player player = new PlayerFinder().getPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
 		if (player == null)
 			return;
 
-		if (freeze)
-			player.removeBehavior(player.canInteract);
-		else
-			player.addBehavior(player.canInteract);
+		player.setCanInterract(!freeze);
 	}
 
 	public void destroy() {

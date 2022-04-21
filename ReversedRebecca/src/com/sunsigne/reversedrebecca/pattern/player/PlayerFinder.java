@@ -67,7 +67,7 @@ public class PlayerFinder {
 	}
 
 	private int[] getDistance(Velocity object, int distanceInTiles) {
-		Player player = getPlayer();
+		PiranhaPlayer player = getPiranhaPlayer();
 
 		if (player == null)
 			return null;

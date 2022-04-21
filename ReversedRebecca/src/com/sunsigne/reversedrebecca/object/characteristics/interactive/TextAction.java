@@ -4,7 +4,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
@@ -40,7 +40,7 @@ public class TextAction implements Updatable {
 		if (!interactive.canPlayerInterfact())
 			return;
 
-		Player player = new PlayerFinder().getPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
 
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {
@@ -77,7 +77,7 @@ public class TextAction implements Updatable {
 
 	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7", 20f);
 
-	private void drawNoActionText(Graphics g, Player player, String text) {
+	private void drawNoActionText(Graphics g, PiranhaPlayer player, String text) {
 		int[] rect = getNoActionRect(player.getFacing());
 
 		DIRECTION centeredText = DIRECTION.NULL;
@@ -113,7 +113,7 @@ public class TextAction implements Updatable {
 
 	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7", 17f);
 
-	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
+	private void drawChoiceText(Graphics g, PiranhaPlayer player, String text, int gap) {
 		int[] rect = getChoiceRect(player, gap);
 
 		DIRECTION centeredText = DIRECTION.LEFT;
@@ -123,7 +123,7 @@ public class TextAction implements Updatable {
 		new TextDecoration().drawOutlinesString(g, text, choice_font, centeredText, rect);
 	}
 
-	private int[] getChoiceRect(Player player, int gap) {
+	private int[] getChoiceRect(PiranhaPlayer player, int gap) {
 
 		switch (player.getFacing()) {
 		case RIGHT:

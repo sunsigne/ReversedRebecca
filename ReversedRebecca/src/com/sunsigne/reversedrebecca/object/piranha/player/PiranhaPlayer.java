@@ -12,7 +12,8 @@ public class PiranhaPlayer extends LivingObject {
 	public PiranhaPlayer(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
-		setUserAllowedToMovePlayer(true);
+		isUserAllowedToMovePlayer = true;
+		canInterract = true;
 	}
 
 	////////// SPEED ////////////
@@ -22,6 +23,18 @@ public class PiranhaPlayer extends LivingObject {
 			return;
 
 		setSpeedness(SPEEDNESS.PLAYER_SPEED);
+	}
+
+	////////// INTERACTIVE ////////////
+
+	private boolean canInterract;
+
+	public boolean canInterract() {
+		return canInterract;
+	}
+
+	public void setCanInterract(boolean canInterract) {
+		this.canInterract = canInterract;
 	}
 
 	////////// TICK ////////////
