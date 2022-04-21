@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.menu;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -20,7 +20,7 @@ public class Cutscene implements Updatable {
 		running = true;
 		timer = null;
 		LAYER.GUI.addObject(this);
-		playerCanKeyMove(false);
+		setUserAllowedToMovePlayer(false);
 	}
 
 	private static GameTimer timer;
@@ -32,20 +32,13 @@ public class Cutscene implements Updatable {
 			timer = new GameTimer(0);
 	}
 
-	private void playerCanKeyMove(boolean playerCanKeyMove) {
-		Player player = new PlayerFinder().getPlayer();
+	private void setUserAllowedToMovePlayer(boolean isUserAllowedToMovePlayer) {
+		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
 
 		if (player == null)
 			return;
 
-		if (playerCanKeyMove) {
-//			player.addBehavior(player.userCanKeyMove);
-		}
-
-		else {
-			player.setMotionless();
-//			player.removeBehavior(player.userCanKeyMove);
-		}
+		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
 	}
 
 	////////// TICK ////////////
@@ -85,7 +78,7 @@ public class Cutscene implements Updatable {
 			if (tempUpdatable instanceof Cutscene)
 				LAYER.GUI.getHandler().removeObject(tempUpdatable);
 		}
-		playerCanKeyMove(true);
+		setUserAllowedToMovePlayer(true);
 	}
 
 	////////// RENDER ////////////
