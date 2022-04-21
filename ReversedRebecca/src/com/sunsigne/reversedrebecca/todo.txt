@@ -8,19 +8,18 @@
 	- écran de chargement	
 
 
-	////////// A FINIR ////////////
+	////////// EN COURS (URGENT) ////////////
 
 	! C'est actuellement Sarah (npc-01) qui met la camera sur le joueur, car il est maitnenant Piranha
 	!! CameraRequest ne rétablie pas naturellement le CameraMovingLaw si on reset, d'ailleurs ce dernier est par défaut sur false avec FollowingPlayer, il faudrait créer un genre de fichier "SETUP" (mais avec 6 lettres) dans chaque dossier de lvl pour établir des règles comme l'invincibilité du joueur au quoi, et nottamment le placement de la caméra
-	
 	! ExpressionRequest ne stun plus, s'inspirer du timer dans Pusher (très facile quand on a compris) 
-	! Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
-	pusher pas fini : ne pousse que dans 1 direction, stunne pour une seconde totue entière, est incompatible avec Piranha
+	pusher pas fini : tous les (Piranha)Living sont actuellement des Pushers entre eux ... Besoin de PlayerAvoider
+
+
+	////////// A FINIR ////////////
 
 	KOAnimation dans les 4 direction ?
-
-	créer un resque pour changer le Feeling et la condition d'un living
-	Creer un type de déplacement dans LivingObject (moveToGoal or userCanKeyMove) comme pour la Condition et le PlayerAvioderType ?
+	Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
 	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
