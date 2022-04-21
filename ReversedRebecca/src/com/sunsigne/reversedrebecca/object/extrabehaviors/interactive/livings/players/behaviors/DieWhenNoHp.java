@@ -31,7 +31,7 @@ public class DieWhenNoHp implements TickBehavior {
 	}
 
 	private void kill() {
-		player.removeBehavior(player.canInteract);
+//		player.removeBehavior(player.canInteract);
 //		player.removeBehavior(player.userCanKeyMove);
 		player.setFacing(DIRECTION.NULL);
 	}

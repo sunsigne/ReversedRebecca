@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.p
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.CanInteract;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.DieWhenNoHp;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasInvulnerabilityFrame;
 
@@ -17,7 +16,6 @@ public class Player extends LivingObject {
 
 	public Behavior hasInvulnerabilityFrame;
 	public Behavior dieWhenNoHp;
-	public Behavior canInteract;
 
 	private void addPlayerBehaviors() {
 
@@ -27,13 +25,11 @@ public class Player extends LivingObject {
 		dieWhenNoHp = new DieWhenNoHp(this);
 		addBehavior(dieWhenNoHp);
 
-		canInteract = new CanInteract(this);
-		addBehavior(canInteract);
 	}
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { canInteract };
+		return new Behavior[] { /*canInteract*/ };
 		// userCanKeyMove is already "paused" due to the surVelocity
 	}
 
