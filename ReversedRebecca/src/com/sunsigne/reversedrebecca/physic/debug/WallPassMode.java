@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -32,9 +33,12 @@ public class WallPassMode extends DebugMode {
 	@Override
 	public void tick(Updatable object) {
 		if (getState()) {
-			if (object instanceof Player)
+			if (object instanceof PiranhaPlayer)
 				PhysicList.getList().removeObject(new CollisionLaw());
 			else
+				// Yes, this does NOT add the law to the right place, which
+				// could cause pathfinding and camera issues.
+				// As it's a dev tool, it's not that important anyway.
 				PhysicList.getList().addObject(new CollisionLaw());
 		}
 	}

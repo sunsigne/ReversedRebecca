@@ -41,10 +41,10 @@ public class PiranhaPlayer extends LivingObject {
 
 	@Override
 	public void tick() {
-		updateSpeed();
-
 		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
+		
+		updateSpeed();
 	}
 
 	////////// RENDER ////////////

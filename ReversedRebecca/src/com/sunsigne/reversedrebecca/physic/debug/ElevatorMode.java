@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerLayerChanger;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -60,7 +60,7 @@ public class ElevatorMode extends DebugMode {
 		if (!getState())
 			return;
 
-		Player player = new PlayerFinder().getPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
 		if (player == null)
 			return;
 

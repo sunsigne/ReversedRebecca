@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDNESS;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -23,7 +23,7 @@ public class RoundToTileLaw implements PhysicLaw {
 		SpeedVariator variator = (SpeedVariator) object;
 
 		// player has a special "bypass" speed
-		if (variator.getSpeedness() == SPEEDNESS.PLAYER_SPEED)
+		if (variator instanceof PiranhaPlayer)
 			return;
 
 		int miniX = variator.getX() % Size.M;
