@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 

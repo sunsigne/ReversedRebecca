@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.piranha;
+package com.sunsigne.reversedrebecca.object.piranha.characteristics;
 
 public interface Feeling {
 

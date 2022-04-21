@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.be
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.SickRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.WalkingRender;
-import com.sunsigne.reversedrebecca.object.piranha.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, Feeling, PlayerAvoider, SpeedVariator {
