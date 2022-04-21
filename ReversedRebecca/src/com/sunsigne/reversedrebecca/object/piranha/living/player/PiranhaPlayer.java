@@ -34,7 +34,7 @@ public class PiranhaPlayer extends LivingObject {
 
 	@Override
 	public boolean mustFollowPath() {
-		return isPathNull();
+		return !isPathNull();
 	}
 	
 	////////// INTERACTIVE ////////////
