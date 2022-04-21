@@ -20,7 +20,7 @@ public interface SpeedVariator extends Velocity {
 			return getSize() / 8;
 		case PLAYER_SPEED:
 			return getSize() / 10;
-		case DEBUG:
+		case SWIFT:
 			return getSize() / 4;
 		}
 		return getSize() / 16;
@@ -31,7 +31,7 @@ public interface SpeedVariator extends Velocity {
 	// it looks random, but each speed must be a multiple of Size.M
 	// not to corrupt pathfinding (except for player outside cutscene)
 	public enum SPEEDNESS {
-		SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player"), DEBUG("debug");
+		SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player"), SWIFT("swift");
 
 		private String name;
 

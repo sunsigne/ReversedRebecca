@@ -1,34 +1,33 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator.SPEEDNESS;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 
-public interface Pusher extends CollisionReactor {
+public interface Pusher extends Stunnable, CollisionReactor {
 
 	boolean hurtWhenPushing();
 
 	default int getPushingTime() {
-		return 1; // supposed to be 10 ticks
-	}
-
-	default void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof Pushable)
-			push((Pushable) detectorObject);
+		return 10;
 	}
 
 	default void push(Pushable pushable) {
-		shiftPusher();
-//		stunPusher();
+		if (isStunned())
+			return;
 
-		pushObject(pushable);
-		hurtObject(pushable);
+		shiftPusher();
+		stunPusher();
+
+		stunPushable(pushable);
+		pushPushable(pushable);
+		hurtPushable(pushable);
 	}
 
 	private void shiftPusher() {
@@ -36,18 +35,32 @@ public interface Pusher extends CollisionReactor {
 		setY(new TilePos().getTilePos(getY(), getSize()));
 	}
 
-	private void pushObject(Pushable pushable) {
-		
-		// paralyse
-		pushable.setStunned(true);
-		pushable.setMotionless();
-		pushable.setSpeedness(SPEEDNESS.FAST);
+	private void stunPusher() {
+		if (!hurtWhenPushing())
+			return;
 
-		// push
+		setStunned(true);
+		new GameTimer(30, () -> setStunned(false));
+	}
+
+	private void stunPushable(Pushable pushable) {
+		pushable.setStunned(true);
+	}
+
+	private void pushPushable(Pushable pushable) {
+		pushable.setSpeedness(SPEEDNESS.SWIFT);
 		pushingToward(pushable, DIRECTION.DOWN);
 		prepareForStop(pushable);
 	}
 
+	private void hurtPushable(Pushable pushable) {
+		if (!hurtWhenPushing())
+			return;
+
+		if (pushable instanceof PiranhaPlayer)
+			PlayerHealth.getInstance().removeHp();
+	}
+	
 	private void pushingToward(Pushable pushable, DIRECTION facing) {
 		if (facing == DIRECTION.LEFT)
 			pushable.setVelX(-pushable.getSpeed());
@@ -60,22 +73,10 @@ public interface Pusher extends CollisionReactor {
 	}
 
 	private void prepareForStop(Pushable pushable) {
-		@SuppressWarnings("unused")
-		GameTimer timer = new GameTimer(getPushingTime(), () -> {
-			
-			// stabilize
-			pushable.setStunned(false);
-			pushable.setMotionless();
+		new GameTimer(getPushingTime(), () -> {
 			pushable.setSpeedness(SPEEDNESS.NORMAL);
+			pushable.setStunned(false);
 		});
-	}
-
-	private void hurtObject(Pushable pushable) {
-		if (!hurtWhenPushing())
-			return;
-
-		if (pushable instanceof PiranhaPlayer)
-			PlayerHealth.getInstance().removeHp();
 	}
 
 }

@@ -4,4 +4,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 
 public interface Pushable extends CollisionDetector, Stunnable, SpeedVariator {
 
+	default void setStunned(boolean stunned) {
+		setMotionless();
+	}
+	
 }

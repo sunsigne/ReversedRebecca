@@ -83,7 +83,7 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 		return getExtraBehaviorsObject().isBlockingPath();
 	}
 
-	private boolean isStunned() {
+	public boolean isStunned() {
 //		for (Behavior tempBehavior : object.getBehaviorList().getList()) {
 //			if (tempBehavior instanceof Stunned)
 //				return true;
@@ -139,6 +139,18 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 		object.addBehavior(stunned);
 	}
 */
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		if(detectorObject instanceof Pushable)
+			push((Pushable)detectorObject);
+	}
+
+	@Override
+	public void setStunned(boolean stunned) {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 }

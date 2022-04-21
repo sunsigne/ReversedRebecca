@@ -19,6 +19,8 @@
 
 	KOAnimation dans les 4 direction ?
 
+	Vérifier s'il y a moyen d'utiliser GameTimer + souvent dans les objets 
+	
 	créer un resque pour changer le Feeling et la condition d'un living
 	Creer un type de déplacement dans LivingObject (moveToGoal or userCanKeyMove) comme pour la Condition et le PlayerAvioderType ?
 	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder

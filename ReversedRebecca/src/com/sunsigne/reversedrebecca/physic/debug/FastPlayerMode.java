@@ -34,7 +34,7 @@ public class FastPlayerMode extends DebugMode {
 		PiranhaPlayer player = (PiranhaPlayer) object;
 
 		if (getState())
-			player.setSpeedness(SPEEDNESS.DEBUG);
+			player.setSpeedness(SPEEDNESS.SWIFT);
 	}
 
 	////////// RENDER ////////////

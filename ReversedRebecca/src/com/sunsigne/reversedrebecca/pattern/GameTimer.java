@@ -3,22 +3,21 @@ package com.sunsigne.reversedrebecca.pattern;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class GameTimer implements Updatable {
 
-	public GameTimer(int timeInSec) {
-		this(timeInSec, null);
+	public GameTimer(int timeInTicks) {
+		this(timeInTicks, null);
 	}
-	
-	public GameTimer(int timeInSec, GenericListener listener) {
+
+	public GameTimer(int timeInTicks, GenericListener listener) {
 		if (World.get() == null)
 			return;
 
 		World.get().getHandler().addObject(this);
-		this.time = timeInSec;
+		this.time = timeInTicks;
 		this.listener = listener;
 	}
 
@@ -32,19 +31,13 @@ public class GameTimer implements Updatable {
 
 	////////// TICK ////////////
 
-	private int frame = Game.SEC;
 	private int time;
 
 	private GenericListener listener;
 
 	@Override
 	public void tick() {
-		frame--;
-
-		if (frame <= 0) {
-			frame = Game.SEC;
-			time--;
-		}
+		time--;
 
 		if (time <= 0) {
 			getHandler().removeObject(this);

@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class WaitforRequest implements Request {
 
@@ -89,7 +90,7 @@ public class WaitforRequest implements Request {
 
 		return new ConditionalListener() {
 
-			GameTimer timer = new GameTimer(time);
+			GameTimer timer = new GameTimer(time * Game.SEC);
 
 			@Override
 			public boolean canDoAction() {

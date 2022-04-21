@@ -15,7 +15,8 @@ import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class PiranhaObject extends GameObject implements Facing, Feeling, Pushable, PathSearcher, Interactive, CollisionReactor {
+public abstract class PiranhaObject extends GameObject
+		implements Facing, Feeling, Pushable, PathSearcher, Interactive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -77,6 +78,7 @@ public abstract class PiranhaObject extends GameObject implements Facing, Feelin
 
 	@Override
 	public void setStunned(boolean stunned) {
+		setMotionless();
 		this.stunned = stunned;
 	}
 
