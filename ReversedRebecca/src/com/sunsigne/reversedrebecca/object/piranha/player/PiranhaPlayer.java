@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha.player;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
@@ -37,7 +38,8 @@ public class PiranhaPlayer extends LivingObject {
 
 	@Override
 	public void render(Graphics g) {
-
+		g.setColor(Color.BLACK);
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 	////////// KEYBOARD ////////////
