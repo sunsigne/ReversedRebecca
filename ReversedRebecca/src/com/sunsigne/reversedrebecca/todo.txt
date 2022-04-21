@@ -12,7 +12,9 @@
 
 	! C'est actuellement Sarah (npc-01) qui met la camera sur le joueur, car il est maitnenant Piranha
 	!! CameraRequest ne rétablie pas naturellement le CameraMovingLaw si on reset, d'ailleurs ce dernier est par défaut sur false avec FollowingPlayer, il faudrait créer un genre de fichier "SETUP" (mais avec 6 lettres) dans chaque dossier de lvl pour établir des règles comme l'invincibilité du joueur au quoi, et nottamment le placement de la caméra
-	! Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propore!)
+	
+	! Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
+	pusher pas fini : ne pousse que dans 1 direction, stunne pour une seconde totue entière, est incompatible avec Piranha
 
 	KOAnimation dans les 4 direction ?
 
