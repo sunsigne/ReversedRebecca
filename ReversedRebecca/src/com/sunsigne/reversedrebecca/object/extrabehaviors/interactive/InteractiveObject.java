@@ -28,7 +28,7 @@ public class InteractiveObject extends ExtraBehaviorsObject {
 	}
 
 	@Override
-	public void setFollowPath(boolean mustFollowingPath) {
+	public void setMustFollowPath(boolean mustFollowPath) {
 		// TODO Auto-generated method stub
 		
 	}

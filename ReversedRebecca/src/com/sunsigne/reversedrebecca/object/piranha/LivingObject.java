@@ -12,7 +12,7 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 	// That's it.
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
-		setFollowPath(true);
+		setMustFollowPath(true);
 	}
 
 	////////// FACING ////////////

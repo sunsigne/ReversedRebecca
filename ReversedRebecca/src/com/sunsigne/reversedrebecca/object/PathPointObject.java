@@ -21,7 +21,7 @@ public class PathPointObject extends GameObject implements PathSearcher {
 	}
 
 	@Override
-	public void setFollowPath(boolean mustFollowingPath) {
+	public void setMustFollowPath(boolean mustFollowingPath) {
 
 	}
 

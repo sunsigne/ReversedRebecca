@@ -33,7 +33,7 @@ public class NPC extends LivingObject {
 	}
 
 	@Override
-	public void setFollowPath(boolean mustFollowingPath) {
+	public void setMustFollowPath(boolean mustFollowPath) {
 		// TODO Auto-generated method stub
 		
 	}

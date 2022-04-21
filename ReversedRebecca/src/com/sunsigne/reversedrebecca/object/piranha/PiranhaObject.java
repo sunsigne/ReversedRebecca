@@ -109,7 +109,7 @@ public abstract class PiranhaObject extends GameObject
 		return mustFollowPath;
 	}
 
-	public void setFollowPath(boolean mustFollowPath) {
+	public void setMustFollowPath(boolean mustFollowPath) {
 		this.mustFollowPath = mustFollowPath;
 	}
 
