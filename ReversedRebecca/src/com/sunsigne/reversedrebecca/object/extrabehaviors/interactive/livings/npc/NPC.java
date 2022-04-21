@@ -21,9 +21,4 @@ public class NPC extends LivingObject {
 		addBehavior(blockingPath);
 	}
 
-	@Override
-	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { /* movingToGoal */ };
-	}
-
 }

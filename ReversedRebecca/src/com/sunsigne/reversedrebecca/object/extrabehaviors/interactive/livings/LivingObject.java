@@ -8,9 +8,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
@@ -20,7 +18,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 		super(name, x, y);
 		setSpeedness(SPEEDNESS.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
-		addLivingBehaviors();
 	}
 
 	////////// NAME ////////////
@@ -47,16 +44,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	////////// BEHAVIOR ////////////
 
 	public Behavior avoidingPlayer;
-
-	public Behavior moveWhenPushed;
-
-	private void addLivingBehaviors() {
-
-		moveWhenPushed = new MoveWhenPushed(this);
-		addBehavior(moveWhenPushed);
-	}
-
-	public abstract Behavior[] behaviorToPauseIfStunned();
 
 	////////// COLLISION ////////////
 

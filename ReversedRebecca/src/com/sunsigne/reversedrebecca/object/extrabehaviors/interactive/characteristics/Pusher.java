@@ -15,7 +15,7 @@ public interface Pusher extends CollisionReactor {
 	boolean hurtWhenPushing();
 
 	default int getPushingTime() {
-		return 1;
+		return 1; // supposed to be 10 ticks
 	}
 
 	default void collidingReaction(CollisionDetector detectorObject) {
@@ -37,17 +37,14 @@ public interface Pusher extends CollisionReactor {
 	}
 
 	private void pushObject(Pushable pushable) {
-		pushable.setStunned(true);
 		
-		if(pushable instanceof PiranhaPlayer)
-			((PiranhaPlayer) pushable).setUserAllowedToMovePlayer(false);
-			
+		// paralyse
+		pushable.setStunned(true);
 		pushable.setMotionless();
 		pushable.setSpeedness(SPEEDNESS.FAST);
 
-		// stun pushable
+		// push
 		pushingToward(pushable, DIRECTION.DOWN);
-
 		prepareForStop(pushable);
 	}
 
@@ -65,11 +62,9 @@ public interface Pusher extends CollisionReactor {
 	private void prepareForStop(Pushable pushable) {
 		@SuppressWarnings("unused")
 		GameTimer timer = new GameTimer(getPushingTime(), () -> {
+			
+			// stabilize
 			pushable.setStunned(false);
-			
-			if(pushable instanceof PiranhaPlayer)
-				((PiranhaPlayer) pushable).setUserAllowedToMovePlayer(true);
-			
 			pushable.setMotionless();
 			pushable.setSpeedness(SPEEDNESS.NORMAL);
 		});

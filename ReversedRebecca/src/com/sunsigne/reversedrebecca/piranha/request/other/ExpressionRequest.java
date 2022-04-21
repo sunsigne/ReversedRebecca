@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.other.ExpressionObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -36,10 +35,10 @@ public class ExpressionRequest implements Request {
 	@Override
 	public void doAction(ExtraBehaviorsObject object, String target) {
 
-		if (object instanceof LivingObject) {
-			LivingObject living = (LivingObject) object;
-			living.addBehavior(new Stunned(living, 1 * Game.SEC));
-		}
+//		if (object instanceof LivingObject) {
+//			LivingObject living = (LivingObject) object;
+//			living.addBehavior(new Stunned(living, 1 * Game.SEC));
+//		}
 
 		ExpressionObject expression = new ExpressionObject(object, target.toLowerCase());
 		object.getHandler().addObject(expression);

@@ -8,8 +8,6 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
@@ -21,13 +19,13 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 	public PushingPlayer(ExtraBehaviorsObject object, DIRECTION direction) {
 		this.object = object;
 		this.direction = direction;
-		this.hurtPlayer = false;
+//		this.hurtPlayer = false;
 	}
 
 	public PushingPlayer(ExtraBehaviorsObject object, boolean hurtPlayer) {
 		this.object = object;
 		this.direction = DIRECTION.NULL;
-		this.hurtPlayer = hurtPlayer;
+//		this.hurtPlayer = hurtPlayer;
 	}
 
 	////////// BEHAVIOR ////////////
@@ -86,10 +84,10 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 	}
 
 	private boolean isStunned() {
-		for (Behavior tempBehavior : object.getBehaviorList().getList()) {
-			if (tempBehavior instanceof Stunned)
-				return true;
-		}
+//		for (Behavior tempBehavior : object.getBehaviorList().getList()) {
+//			if (tempBehavior instanceof Stunned)
+//				return true;
+//		}
 		return false;
 	}
 
@@ -113,7 +111,7 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 	}
 	*/
 	private DIRECTION direction;
-
+/*
 	private void pushPlayer(CollisionDetector detectorObject) {
 		Player player = (Player) detectorObject;
 		var moveWhenPushed = (MoveWhenPushed) player.moveWhenPushed;
@@ -129,18 +127,6 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 			moveWhenPushed.pushToward(player.getOppositeFacing());
 	}
 
-	private void shiftObject() {
-		setX(new TilePos().getTilePos(getX(), Size.M));
-		setY(new TilePos().getTilePos(getY(), Size.M));
-	}
-
-	private boolean hurtPlayer;
-
-	private void hurtPlayer() {
-		if (hurtPlayer)
-			PlayerHealth.getInstance().removeHp();
-	}
-
 	private void stunObject() {
 		if (object instanceof LivingObject == false)
 			return;
@@ -152,7 +138,7 @@ public class PushingPlayer implements CollisionBehavior, Pusher {
 		Behavior stunned = new Stunned(living);
 		object.addBehavior(stunned);
 	}
-
+*/
 
 
 }

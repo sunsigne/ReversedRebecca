@@ -26,9 +26,4 @@ public class Foe extends LivingObject {
 		addBehavior(goalIsPlayer);
 	}
 
-	@Override
-	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { /* movingToGoal */ };
-	}
-
 }

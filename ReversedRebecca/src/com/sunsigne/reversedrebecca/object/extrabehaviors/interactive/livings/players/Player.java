@@ -27,12 +27,6 @@ public class Player extends LivingObject {
 
 	}
 
-	@Override
-	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] {};
-		// userCanKeyMove is already "paused" due to the surVelocity
-	}
-
 	////////// COLLISION ////////////
 
 	@Override
