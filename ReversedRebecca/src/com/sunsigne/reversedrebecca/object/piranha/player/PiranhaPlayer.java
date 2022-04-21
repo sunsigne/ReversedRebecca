@@ -44,6 +44,7 @@ public class PiranhaPlayer extends LivingObject {
 		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
 		
+		updateWatchingDirection();		
 		updateSpeed();
 	}
 
