@@ -37,6 +37,7 @@
 
 	////////// PIRA ////////////
 
+	create une resquet pour la condition (feeling)
 	changer create_onthespot ?
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
