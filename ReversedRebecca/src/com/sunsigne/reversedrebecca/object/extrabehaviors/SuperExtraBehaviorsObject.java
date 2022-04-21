@@ -4,14 +4,13 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.characteristics.SurVelocity;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class SuperExtraBehaviorsObject extends GameObject
-		implements SurVelocity, Facing, PathSearcher, Interactive {
+		implements Facing, PathSearcher, Interactive {
 
 	public SuperExtraBehaviorsObject(String name, int x, int y) {
 		this(name, x, y, Size.M, Size.M);
@@ -38,30 +37,6 @@ public abstract class SuperExtraBehaviorsObject extends GameObject
 	public void setName(String name) {
 		if (name != null)
 			this.name = name.toLowerCase();
-	}
-
-	////////// SURVELOCICY ////////////
-
-	private int surVelX, surVelY;
-
-	@Override
-	public int getSurVelX() {
-		return surVelX;
-	}
-
-	@Override
-	public int getSurVelY() {
-		return surVelY;
-	}
-
-	@Override
-	public void setSurVelX(int surVelX) {
-		this.surVelX = surVelX;
-	}
-
-	@Override
-	public void setSurVelY(int surVelY) {
-		this.surVelY = surVelY;
 	}
 
 	////////// FACING ////////////
