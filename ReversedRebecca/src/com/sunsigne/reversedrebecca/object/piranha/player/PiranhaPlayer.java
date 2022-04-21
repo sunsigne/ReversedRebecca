@@ -11,7 +11,7 @@ public class PiranhaPlayer extends PiranhaObject {
 	public PiranhaPlayer(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
-		userCanKeyMove = true;
+		setUserAllowedToMovePlayer(true);
 	}
 
 	////////// SPEED ////////////
@@ -29,7 +29,7 @@ public class PiranhaPlayer extends PiranhaObject {
 	public void tick() {
 		updateSpeed();
 
-		if (canUserKeyMove())
+		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
 	}
 
@@ -42,18 +42,18 @@ public class PiranhaPlayer extends PiranhaObject {
 
 	////////// KEYBOARD ////////////
 
-	private boolean userCanKeyMove;
+	private boolean isUserAllowedToMovePlayer;
 
-	private boolean canUserKeyMove() {
+	private boolean isUserAllowedToMovePlayer() {
 		if (getPath() != null & getPath() != DIRECTION.NULL)
 			return false;
 
 		else
-			return userCanKeyMove;
+			return isUserAllowedToMovePlayer;
 	}
 
-	public void setUserCanKeyMove(boolean userCanKeyMove) {
-		this.userCanKeyMove = userCanKeyMove;
+	public void setUserAllowedToMovePlayer(boolean isUserAllowedToMovePlayer) {
+		this.isUserAllowedToMovePlayer = isUserAllowedToMovePlayer;
 	}
 
 	@Override
