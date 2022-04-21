@@ -76,14 +76,14 @@ public abstract class PiranhaObject extends GameObject
 
 	////////// PATH FINDER ////////////
 
-	private boolean moveTowardGoal = true;
+	private boolean mustFollowPath;
 
 	public boolean mustFollowPath() {
-		return moveTowardGoal;
+		return mustFollowPath;
 	}
 
-	public void setFollowPath(boolean moveTowardGoal) {
-		this.moveTowardGoal = moveTowardGoal;
+	public void setFollowPath(boolean mustFollowPath) {
+		this.mustFollowPath = mustFollowPath;
 	}
 
 	private Position goal;
