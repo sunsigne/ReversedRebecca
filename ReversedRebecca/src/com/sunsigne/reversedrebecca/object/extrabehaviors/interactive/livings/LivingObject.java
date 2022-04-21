@@ -6,7 +6,6 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
@@ -76,22 +75,22 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 			avoidingPlayer = new StopWhenMeetPlayer(this);
 			break;
 		case PUSH:
-			avoidingPlayer = new PushingPlayer(this, false);
+//			avoidingPlayer = new PushingPlayer(this, false);
 			break;
 		case PUSH_HURT:
-			avoidingPlayer = new PushingPlayer(this, true);
+//			avoidingPlayer = new PushingPlayer(this, true);
 			break;
 		case PUSH_LEFT:
-			avoidingPlayer = new PushingPlayer(this, DIRECTION.LEFT);
+//			avoidingPlayer = new PushingPlayer(this, DIRECTION.LEFT);
 			break;
 		case PUSH_RIGHT:
-			avoidingPlayer = new PushingPlayer(this, DIRECTION.RIGHT);
+//			avoidingPlayer = new PushingPlayer(this, DIRECTION.RIGHT);
 			break;
 		case PUSH_UP:
-			avoidingPlayer = new PushingPlayer(this, DIRECTION.UP);
+//			avoidingPlayer = new PushingPlayer(this, DIRECTION.UP);
 			break;
 		case PUSH_DOWN:
-			avoidingPlayer = new PushingPlayer(this, DIRECTION.DOWN);
+//			avoidingPlayer = new PushingPlayer(this, DIRECTION.DOWN);
 			break;
 		}
 		addBehavior(avoidingPlayer);

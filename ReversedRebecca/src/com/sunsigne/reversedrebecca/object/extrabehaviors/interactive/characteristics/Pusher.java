@@ -12,11 +12,17 @@ import com.sunsigne.reversedrebecca.pattern.TilePos;
 
 public interface Pusher extends Stunnable, CollisionReactor {
 
+	////////// PUSHER ////////////
+	
 	boolean hurtWhenPushing();
 
 	default int getPushingTime() {
 		return 10;
 	}
+
+	DIRECTION getPushingDirection();
+
+	void setPushingDirection();
 
 	default void push(Pushable pushable) {
 		if (isStunned())
@@ -49,7 +55,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 
 	private void pushPushable(Pushable pushable) {
 		pushable.setSpeedness(SPEEDNESS.SWIFT);
-		pushingToward(pushable, DIRECTION.DOWN);
+		pushingToward(pushable, getPushingDirection());
 		prepareForStop(pushable);
 	}
 
@@ -60,7 +66,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 		if (pushable instanceof PiranhaPlayer)
 			PlayerHealth.getInstance().removeHp();
 	}
-	
+
 	private void pushingToward(Pushable pushable, DIRECTION facing) {
 		if (facing == DIRECTION.LEFT)
 			pushable.setVelX(-pushable.getSpeed());
