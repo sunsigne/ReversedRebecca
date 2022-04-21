@@ -1,5 +1,8 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
@@ -7,17 +10,14 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.SickRender;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.WalkingRender;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
-		implements CollisionDetector, Feeling, PlayerAvoider, SpeedVariator {
+		implements CollisionDetector, PlayerAvoider, SpeedVariator {
 
 	public LivingObject(String name, int x, int y, AVOIDERTYPE playerAvoiderType) {
 		super(name, x, y);
-		setCondition(CONDITION.GOOD);
 		setSpeedness(SPEEDNESS.NORMAL);
 		setPlayerAvoiderType(playerAvoiderType);
 		addLivingBehaviors();
@@ -28,7 +28,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	@Override
 	public void setName(String name) {
 		super.setName(name);
-		setCondition(getCondition());
 	}
 
 	////////// SPEEDNESS ////////////
@@ -47,7 +46,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	////////// BEHAVIOR ////////////
 
-	public Behavior livingRender;
 	public Behavior avoidingPlayer;
 
 	public Behavior moveWhenPushed;
@@ -60,35 +58,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 
 	public abstract Behavior[] behaviorToPauseIfStunned();
 
-	////////// RENDER ////////////
-
-	private CONDITION condition;
-
-	@Override
-	public CONDITION getCondition() {
-		return condition;
-	}
-
-	@Override
-	public void setCondition(CONDITION condition) {
-		if (condition == null)
-			condition = CONDITION.GOOD;
-
-		this.condition = condition;
-		removeBehavior(livingRender);
-
-		switch (condition) {
-		case GOOD:
-			livingRender = new WalkingRender(this);
-			break;
-		case SICK:
-			livingRender = new SickRender(this);
-			break;
-		}
-
-		addBehavior(livingRender);
-	}
-
 	////////// COLLISION ////////////
 
 	private AVOIDERTYPE playerAvoiderType;
@@ -96,6 +65,12 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 	@Override
 	public AVOIDERTYPE getPlayerAvoiderType() {
 		return playerAvoiderType;
+	}
+	
+	@Override
+	public void render(Graphics g) {
+		g.setColor(Color.BLACK);
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 	@Override
@@ -133,12 +108,6 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 			break;
 		}
 		addBehavior(avoidingPlayer);
-	}
-
-	@Override
-	public void setStunned(boolean stunned) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }
