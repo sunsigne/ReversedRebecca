@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;

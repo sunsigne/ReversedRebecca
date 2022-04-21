@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
-import com.sunsigne.reversedrebecca.object.piranha.player.UserKeyMovePlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.UserKeyMovePlayer;
 
 public interface DirectionalKey extends Key {
 

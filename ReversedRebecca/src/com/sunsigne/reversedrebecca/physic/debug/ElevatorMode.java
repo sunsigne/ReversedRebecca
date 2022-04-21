@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerLayerChanger;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;

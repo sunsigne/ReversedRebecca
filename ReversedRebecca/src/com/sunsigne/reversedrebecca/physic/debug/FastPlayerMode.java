@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator.SPEEDNESS;
-import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FastPlayerMode extends DebugMode {

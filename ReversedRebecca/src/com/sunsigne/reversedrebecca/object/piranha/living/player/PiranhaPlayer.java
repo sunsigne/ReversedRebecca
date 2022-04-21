@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.object.piranha.player;
+package com.sunsigne.reversedrebecca.object.piranha.living.player;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.piranha.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 
 public class PiranhaPlayer extends LivingObject {
 

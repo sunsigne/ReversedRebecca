@@ -1,9 +1,10 @@
-package com.sunsigne.reversedrebecca.object.piranha;
+package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 
 public abstract class LivingObject extends PiranhaObject implements CollisionDetector {
 
