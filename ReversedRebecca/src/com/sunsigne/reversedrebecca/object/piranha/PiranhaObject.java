@@ -75,6 +75,18 @@ public abstract class PiranhaObject extends GameObject
 		this.condition = condition;
 	}
 
+	////////// PUSHABLE ////////////
+
+	private boolean isBeingPushed;
+
+	public boolean isBeingPushed() {
+		return isBeingPushed;
+	}
+
+	public void setIsBeingPushed(boolean isBeingPushed) {
+		this.isBeingPushed = isBeingPushed;
+	}
+
 	////////// SPEED ////////////
 
 	private SPEEDNESS speedness = SPEEDNESS.NORMAL;
