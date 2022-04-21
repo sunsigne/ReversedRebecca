@@ -1,7 +1,12 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
 
-public interface PlayerAvoider {
+import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 
+public interface PlayerAvoider extends Pusher, PathSearcher {
+
+	////////// PLAYER AVOIDER ////////////
+	
 	public AVOIDERTYPE getPlayerAvoiderType();
 
 	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType);
@@ -19,7 +24,7 @@ public interface PlayerAvoider {
 
 	public enum AVOIDERTYPE {
 		AROUND("around"), STOP("stop"), PUSH("push"), PUSH_HURT("push_hurt"), PUSH_LEFT("push_left"),
-		PUSH_RIGHT("push_right"), PUSH_UP("push_up"), PUSH_DOWN("push_downp");
+		PUSH_RIGHT("push_right"), PUSH_UP("push_up"), PUSH_DOWN("push_down");
 
 		private String name;
 

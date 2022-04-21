@@ -10,13 +10,13 @@ import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Facing, Feeling, Pushable, PathSearcher, Interactive, CollisionReactor {
+		implements Facing, Stunnable, Pushable, PathSearcher, Interactive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -70,30 +70,13 @@ public abstract class PiranhaObject extends GameObject
 
 	@Override
 	public boolean isStunned() {
-		if (getCondition() == CONDITION.KO)
-			return true;
-		else
-			return stunned;
+		return stunned;
 	}
 
 	@Override
 	public void setStunned(boolean stunned) {
 		setMotionless();
 		this.stunned = stunned;
-	}
-
-	////////// CONDITION ////////////
-
-	private CONDITION condition = CONDITION.GOOD;
-
-	@Override
-	public CONDITION getCondition() {
-		return condition;
-	}
-
-	@Override
-	public void setCondition(CONDITION condition) {
-		this.condition = condition;
 	}
 
 	////////// SPEED ////////////

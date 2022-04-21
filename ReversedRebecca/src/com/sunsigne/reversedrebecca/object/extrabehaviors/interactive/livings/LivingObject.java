@@ -4,11 +4,13 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher.PUSHING_DIRECTION;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, PlayerAvoider, SpeedVariator {
@@ -94,6 +96,38 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 			break;
 		}
 		addBehavior(avoidingPlayer);
+	}
+	
+
+	@Override
+	public boolean hurtWhenPushing() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+	@Override
+	public PUSHING_DIRECTION getPushingDirection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setPushingDirection(PUSHING_DIRECTION pushingDirection) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isStunned() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void setStunned(boolean stunned) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

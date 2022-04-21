@@ -4,9 +4,12 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 
-public abstract class LivingObject extends PiranhaObject implements CollisionDetector {
+public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, Pusher {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -53,6 +56,30 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 		}
 	}
 
+	////////// STUNNABLE ////////////
+
+	@Override
+	public boolean isStunned() {
+		if (getCondition() == CONDITION.KO)
+			return true;
+		else
+			return super.isStunned();
+	}
+
+	////////// CONDITION ////////////
+
+	private CONDITION condition = CONDITION.GOOD;
+
+	@Override
+	public CONDITION getCondition() {
+		return condition;
+	}
+
+	@Override
+	public void setCondition(CONDITION condition) {
+		this.condition = condition;
+	}
+
 	////////// PATH FINDER ////////////
 
 	@Override
@@ -66,7 +93,7 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 	public void tick() {
 		if (!isStunned())
 			updateWatchingDirection();
-		
+
 		animation.run();
 	}
 
@@ -83,6 +110,38 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(animation.getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	}
+
+	////////// PUSHER ////////////
+
+	@Override
+	public boolean hurtWhenPushing() {
+		return false;
+	}
+
+	private PUSHING_DIRECTION pushingDirection = PUSHING_DIRECTION.FACING_OF_PUSHER;
+
+	@Override
+	public PUSHING_DIRECTION getPushingDirection() {
+		return pushingDirection;
+	}
+
+	@Override
+	public void setPushingDirection(PUSHING_DIRECTION pushingDirection) {
+		this.pushingDirection = pushingDirection;
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		if (detectorObject instanceof Pushable == false) {
+			super.collidingReaction(detectorObject);
+			return;
+		}
+
+		Pushable pushable = (Pushable) detectorObject;
+		push(pushable);
 	}
 
 }
