@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
 import com.sunsigne.reversedrebecca.physic.laws.MoveTowardGoalLaw;
 import com.sunsigne.reversedrebecca.physic.laws.PathFindingLaw;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.laws.PushingLaw;
 import com.sunsigne.reversedrebecca.physic.laws.RoundToTileLaw;
 import com.sunsigne.reversedrebecca.physic.laws.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.physic.laws.VelocityLaw;
@@ -23,6 +24,9 @@ public class NaturalLaws {
 		// An object can move by itself, following path.
 		load(new MoveTowardGoalLaw());
 
+		// An object change its path if it is pushed.
+		load(new PushingLaw());
+		
 		// Moving, an object that meets an obstacle is shifted.
 		load(new CollisionLaw());
 

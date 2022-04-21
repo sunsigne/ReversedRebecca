@@ -16,7 +16,7 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 	}
 
 	////////// FACING ////////////
-	
+
 	private boolean flagX, flagY;
 
 	protected void updateWatchingDirection() {
@@ -43,14 +43,15 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 			flagY = true;
 		}
 	}
-	
+
 	////////// TICK ////////////
-	
+
 	@Override
 	public void tick() {
-		updateWatchingDirection();
+		if (!isBeingPushed())
+			updateWatchingDirection();
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override

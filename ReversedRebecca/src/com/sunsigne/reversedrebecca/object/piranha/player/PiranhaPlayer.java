@@ -41,8 +41,10 @@ public class PiranhaPlayer extends LivingObject {
 	public void tick() {
 		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
-
-		updateWatchingDirection();
+		
+		if (!isBeingPushed())
+			updateWatchingDirection();
+		
 		updateSpeed();
 	}
 
