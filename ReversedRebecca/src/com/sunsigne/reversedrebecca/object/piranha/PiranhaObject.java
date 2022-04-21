@@ -15,8 +15,11 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Facing, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
+		implements Facing, Feeling, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
 
+	// the only difference between PiranhaObject and LivingObject is that
+	// PiranhaObject are not supposed to move by themself.
+	// That's it.
 	public PiranhaObject(String name, int x, int y) {
 		super(x, y);
 		this.name = name.toLowerCase();
@@ -58,6 +61,18 @@ public abstract class PiranhaObject extends GameObject
 	@Override
 	public void setFacing(DIRECTION facing) {
 		this.facing = facing;
+	}
+
+	////////// CONDITION ////////////
+
+	private CONDITION condition = CONDITION.GOOD;
+
+	public CONDITION getCondition() {
+		return condition;
+	}
+
+	public void setCondition(CONDITION condition) {
+		this.condition = condition;
 	}
 
 	////////// SPEED ////////////

@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.object.piranha.player;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
@@ -43,17 +41,9 @@ public class PiranhaPlayer extends LivingObject {
 	public void tick() {
 		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
-		
-		updateWatchingDirection();		
+
+		updateWatchingDirection();
 		updateSpeed();
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		g.setColor(Color.BLACK);
-		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 	////////// KEYBOARD ////////////

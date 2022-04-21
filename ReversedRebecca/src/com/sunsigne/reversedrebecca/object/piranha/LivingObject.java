@@ -1,9 +1,15 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 
 public abstract class LivingObject extends PiranhaObject implements CollisionDetector {
 
+	// the only difference between PiranhaObject and LivingObject is that
+	// PiranhaObject are not supposed to move by themself.
+	// That's it.
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		setFollowPath(true);
@@ -43,6 +49,14 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 	@Override
 	public void tick() {
 		updateWatchingDirection();
+	}
+	
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		g.setColor(Color.BLACK);
+		g.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
 }

@@ -1,7 +1,9 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings;
+package com.sunsigne.reversedrebecca.object.piranha;
 
 public interface Feeling {
 
+	////////// FEELING ////////////
+	
 	public CONDITION getCondition();
 
 	public void setCondition(CONDITION condition);
