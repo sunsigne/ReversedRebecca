@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -182,7 +182,7 @@ public class PathFinder implements Position {
 	private boolean wallOnTheWay(int from, boolean horizontal) {
 
 		int range = horizontal ? tileX : tileY;
-		Player player = null;
+		PiranhaPlayer player = null;
 
 		while (range != 0) {
 
@@ -198,8 +198,8 @@ public class PathFinder implements Position {
 				if (wall != goal) {
 					if (wall.isBlockingPath())
 						return true;
-					if (wall instanceof Player)
-						player = (Player) wall;
+					if (wall instanceof PiranhaPlayer)
+						player = (PiranhaPlayer) wall;
 				}
 			}
 

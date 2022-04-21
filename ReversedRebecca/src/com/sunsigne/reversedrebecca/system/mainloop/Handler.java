@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
@@ -31,11 +31,11 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			if (tempObject.getX() == x && tempObject.getY() == y)
 				return tempObject;
 
-			if (tempObject instanceof Player == false)
+			if (tempObject instanceof PiranhaPlayer == false)
 				continue;
 
 			// player is counted "at pos" as soon as 1 pixel is on the tile
-			Player player = (Player) tempObject;
+			PiranhaPlayer player = (PiranhaPlayer) tempObject;
 			for (int xx = x - size + 1; xx < x + size - 1; xx++) {
 				for (int yy = y - size + 1; yy < y + size - 1; yy++) {
 					if (player.getX() == xx && player.getY() == yy)

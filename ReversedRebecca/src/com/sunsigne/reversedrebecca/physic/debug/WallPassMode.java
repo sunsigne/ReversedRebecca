@@ -4,7 +4,6 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.CollisionLaw;
@@ -49,7 +48,7 @@ public class WallPassMode extends DebugMode {
 	public void beforeObjectRender(Graphics g, Updatable object) {
 
 		Graphics2D g2d = (Graphics2D) g;
-		float alpha = getState() & object instanceof Player ? 0.4f : 1f;
+		float alpha = getState() & object instanceof PiranhaPlayer ? 0.4f : 1f;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 	}
 

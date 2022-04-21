@@ -90,6 +90,7 @@ public class PiranhaPlayer extends LivingObject {
 	@Override
 	public boolean isBlockingPath() {
 		return false;
+		// it depends on context ! But "true" corrupts PathFinding.
 	}
 
 	@Override

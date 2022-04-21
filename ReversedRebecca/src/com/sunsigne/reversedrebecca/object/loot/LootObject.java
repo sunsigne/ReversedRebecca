@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.object.BonusText;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -23,7 +23,7 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 	}
 
 	////////// COLLISION ////////////
-	
+
 	@Override
 	public boolean isBlockingSight() {
 		return false;
@@ -36,7 +36,7 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (!(detectorObject instanceof Player))
+		if (!(detectorObject instanceof PiranhaPlayer))
 			return;
 
 		collidingReaction(detectorObject, false, () -> {
