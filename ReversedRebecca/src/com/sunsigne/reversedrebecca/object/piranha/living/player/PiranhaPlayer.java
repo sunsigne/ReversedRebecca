@@ -49,7 +49,10 @@ public class PiranhaPlayer extends LivingObject {
 	private boolean canInterract;
 
 	public boolean canInterract() {
-		return canInterract;
+		if (isStunned())
+			return false;
+		else
+			return canInterract;
 	}
 
 	public void setCanInterract(boolean canInterract) {
