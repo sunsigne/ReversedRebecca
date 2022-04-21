@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.pattern;
+package com.sunsigne.reversedrebecca.pattern.listener;
 
 public interface GenericListener {
 

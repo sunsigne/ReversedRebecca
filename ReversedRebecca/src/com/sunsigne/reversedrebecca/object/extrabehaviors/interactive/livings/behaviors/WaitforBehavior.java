@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.b
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
-import com.sunsigne.reversedrebecca.pattern.ConditionalListener;
+import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 
 public class WaitforBehavior implements TickBehavior {
 

@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.bomb;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public class BombPuzzleFactory {
 

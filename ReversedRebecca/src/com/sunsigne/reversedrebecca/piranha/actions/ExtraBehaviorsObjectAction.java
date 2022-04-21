@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.actions;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public abstract class ExtraBehaviorsObjectAction extends Action {

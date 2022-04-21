@@ -6,8 +6,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.KillPuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;

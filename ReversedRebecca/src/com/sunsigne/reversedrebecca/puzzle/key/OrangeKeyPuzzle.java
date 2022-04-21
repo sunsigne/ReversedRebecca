@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.puzzle.key;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.KeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.LockObject;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class OrangeKeyPuzzle extends KeyPuzzle {

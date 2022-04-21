@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.actions.action;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.pattern.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
 import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
