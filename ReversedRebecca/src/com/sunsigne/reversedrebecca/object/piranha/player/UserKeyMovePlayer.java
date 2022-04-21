@@ -1,9 +1,8 @@
-package com.sunsigne.reversedrebecca.system.controllers.keyboard;
+package com.sunsigne.reversedrebecca.object.piranha.player;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.piranha.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;

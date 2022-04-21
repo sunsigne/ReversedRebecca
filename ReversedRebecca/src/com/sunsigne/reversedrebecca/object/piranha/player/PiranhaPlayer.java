@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.object.piranha;
+package com.sunsigne.reversedrebecca.object.piranha.player;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.UserKeyMovePlayer;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 
 public class PiranhaPlayer extends PiranhaObject {
 

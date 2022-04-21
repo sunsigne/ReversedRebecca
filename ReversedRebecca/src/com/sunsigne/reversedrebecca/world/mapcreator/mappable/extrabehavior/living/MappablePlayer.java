@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.extrabehavior.living;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.piranha.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
