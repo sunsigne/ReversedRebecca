@@ -88,6 +88,9 @@ public class PlayerFinder {
 		if (detectorObject instanceof Player)
 			return true;
 
+		if (detectorObject instanceof PiranhaPlayer)
+			return true;
+		
 		if (detectorObject instanceof Behavior) {
 			Behavior behavior = (Behavior) detectorObject;
 			if (behavior.getExtraBehaviorsObject() instanceof Player)
