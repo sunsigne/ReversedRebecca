@@ -24,8 +24,6 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 
 		if (searcher.mustFollowPath())
 			followPath(searcher);
-		else
-			searcher.setMotionless();
 	}
 
 	private void followPath(PathSearcher searcher) {

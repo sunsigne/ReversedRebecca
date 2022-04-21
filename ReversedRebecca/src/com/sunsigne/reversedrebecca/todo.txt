@@ -13,6 +13,8 @@
 	! C'est actuellement Sarah (npc-01) qui met la camera sur le joueur, car il est maitnenant Piranha
 	!! CameraRequest ne rétablie pas naturellement le CameraMovingLaw si on reset, d'ailleurs ce dernier est par défaut sur false avec FollowingPlayer, il faudrait créer un genre de fichier "SETUP" (mais avec 6 lettres) dans chaque dossier de lvl pour établir des règles comme l'invincibilité du joueur au quoi, et nottamment le placement de la caméra
 
+	créer dans livingObject un boolean qui vérifie le KO (et change le render)
+
 	créer un resque pour changer le Feeling et la condition d'un living
 	Creer un type de déplacement dans LivingObject (moveToGoal or userCanKeyMove) comme pour la Condition et le PlayerAvioderType ?
 	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder

@@ -29,7 +29,7 @@ public class Player extends LivingObject {
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { /*canInteract*/ };
+		return new Behavior[] { /* canInteract */ };
 		// userCanKeyMove is already "paused" due to the surVelocity
 	}
 
@@ -39,18 +39,6 @@ public class Player extends LivingObject {
 	public boolean isBlockingPath() {
 		return false;
 		// it depends on context ! But "true" corrupts PathFinding.
-	}
-
-	@Override
-	public boolean mustFollowPath() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public void setMustFollowPath(boolean mustFollowPath) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

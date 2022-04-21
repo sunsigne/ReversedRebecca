@@ -23,19 +23,7 @@ public class NPC extends LivingObject {
 
 	@Override
 	public Behavior[] behaviorToPauseIfStunned() {
-		return new Behavior[] { /*movingToGoal*/ };
-	}
-
-	@Override
-	public boolean mustFollowPath() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public void setMustFollowPath(boolean mustFollowPath) {
-		// TODO Auto-generated method stub
-		
+		return new Behavior[] { /* movingToGoal */ };
 	}
 
 }

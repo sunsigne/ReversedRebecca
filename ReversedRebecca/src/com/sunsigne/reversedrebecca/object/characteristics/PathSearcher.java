@@ -6,10 +6,10 @@ public interface PathSearcher extends Velocity {
 
 	////////// PATH FINDER ////////////
 
-	public boolean mustFollowPath();
-	
-	public void setMustFollowPath(boolean mustFollowPath);
-	
+	public default boolean mustFollowPath() {
+		return true;
+	}
+
 	public Position getGoal();
 
 	public void setGoal(Position goal);

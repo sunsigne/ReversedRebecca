@@ -17,12 +17,26 @@ public class PiranhaPlayer extends LivingObject {
 	////////// SPEED ////////////
 
 	private void updateSpeed() {
-		if (getPath() != DIRECTION.NULL)
-			return;
-
-		setSpeedness(SPEEDNESS.PLAYER_SPEED);
+		if (isPathNull())
+			setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 
+	////////// PATH FINDER ////////////
+
+	private boolean isPathNull() {
+		if (getPath() == null)
+			return true;
+		if (getPath() == DIRECTION.NULL)
+			return true;
+		else
+			return false;
+	}
+
+	@Override
+	public boolean mustFollowPath() {
+		return isPathNull();
+	}
+	
 	////////// INTERACTIVE ////////////
 
 	private boolean canInterract;
@@ -41,10 +55,9 @@ public class PiranhaPlayer extends LivingObject {
 	public void tick() {
 		if (isUserAllowedToMovePlayer())
 			UserKeyMovePlayer.getInstance().movePlayerByKey(this);
-		
-		if (!isBeingPushed())
-			updateWatchingDirection();
-		
+
+		super.tick();
+
 		updateSpeed();
 	}
 
@@ -53,7 +66,7 @@ public class PiranhaPlayer extends LivingObject {
 	private boolean isUserAllowedToMovePlayer;
 
 	private boolean isUserAllowedToMovePlayer() {
-		if (getPath() != null & getPath() != DIRECTION.NULL)
+		if(!isPathNull())
 			return false;
 
 		else

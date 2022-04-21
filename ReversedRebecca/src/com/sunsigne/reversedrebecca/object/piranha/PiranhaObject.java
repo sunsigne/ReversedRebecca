@@ -12,11 +12,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interacti
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Facing, Feeling, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
+		implements Facing, Feeling, Pushable, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -68,10 +69,12 @@ public abstract class PiranhaObject extends GameObject
 
 	private CONDITION condition = CONDITION.GOOD;
 
+	@Override
 	public CONDITION getCondition() {
 		return condition;
 	}
 
+	@Override
 	public void setCondition(CONDITION condition) {
 		this.condition = condition;
 	}
@@ -80,10 +83,12 @@ public abstract class PiranhaObject extends GameObject
 
 	private boolean isBeingPushed;
 
+	@Override
 	public boolean isBeingPushed() {
 		return isBeingPushed;
 	}
 
+	@Override
 	public void setIsBeingPushed(boolean isBeingPushed) {
 		this.isBeingPushed = isBeingPushed;
 	}
@@ -104,14 +109,9 @@ public abstract class PiranhaObject extends GameObject
 
 	////////// PATH FINDER ////////////
 
-	private boolean mustFollowPath;
-
+	@Override
 	public boolean mustFollowPath() {
-		return mustFollowPath;
-	}
-
-	public void setMustFollowPath(boolean mustFollowPath) {
-		this.mustFollowPath = mustFollowPath;
+		return false;
 	}
 
 	private Position goal;

@@ -24,6 +24,9 @@ public class NaturalLaws {
 		// An object can move by itself, following path.
 		load(new MoveTowardGoalLaw());
 
+		// An stunned object won't move by itself
+//		load(new StunningLaw());
+		
 		// An object change its path if it is pushed.
 		load(new PushingLaw());
 		
