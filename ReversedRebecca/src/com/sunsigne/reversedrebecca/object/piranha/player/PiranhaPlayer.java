@@ -53,6 +53,7 @@ public class PiranhaPlayer extends LivingObject {
 	}
 
 	public void setUserAllowedToMovePlayer(boolean isUserAllowedToMovePlayer) {
+		setMotionless();
 		this.isUserAllowedToMovePlayer = isUserAllowedToMovePlayer;
 	}
 
