@@ -34,9 +34,16 @@ public class PiranhaPlayer extends LivingObject {
 
 	@Override
 	public boolean mustFollowPath() {
-		return !isPathNull();
+		if (isStunned())
+			return false;
+
+		if (isPathNull())
+			return false;
+
+		else
+			return true;
 	}
-	
+
 	////////// INTERACTIVE ////////////
 
 	private boolean canInterract;
@@ -66,7 +73,10 @@ public class PiranhaPlayer extends LivingObject {
 	private boolean isUserAllowedToMovePlayer;
 
 	private boolean isUserAllowedToMovePlayer() {
-		if(!isPathNull())
+		if (!isPathNull())
+			return false;
+
+		if (isStunned())
 			return false;
 
 		else

@@ -64,7 +64,7 @@ public abstract class LivingObject extends PiranhaObject implements CollisionDet
 
 	@Override
 	public void tick() {
-		if (!isBeingPushed())
+		if (!isStunned())
 			updateWatchingDirection();
 		
 		animation.run();

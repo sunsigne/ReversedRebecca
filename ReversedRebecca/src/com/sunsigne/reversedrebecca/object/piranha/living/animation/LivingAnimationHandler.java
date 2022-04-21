@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.KOAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.StandingAnimation;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
@@ -32,6 +34,8 @@ public class LivingAnimationHandler {
 	////////// TEXTURE ////////////
 
 	private LivingAnimation standingAnimation;
+	private LivingAnimation koAnimation;
+
 	private LivingAnimation walkingAnimation;
 	private LivingAnimation sickAnimation;
 
@@ -39,6 +43,9 @@ public class LivingAnimationHandler {
 
 		standingAnimation = new StandingAnimation(living);
 		list.addObject(standingAnimation);
+
+		koAnimation = new KOAnimation(living);
+		list.addObject(koAnimation);
 
 		walkingAnimation = new WalkingAnimation(living);
 		list.addObject(walkingAnimation);
@@ -54,16 +61,23 @@ public class LivingAnimationHandler {
 		switch (living.getCondition()) {
 
 		case GOOD:
-			if (living.isMotionless())
-				return standingAnimation;
-			else
-				return walkingAnimation;
+			return getGoodAnimation();
 
 		case SICK:
 			return sickAnimation;
+
+		case KO:
+			return koAnimation;
 		}
 
 		return standingAnimation;
+	}
+
+	private LivingAnimation getGoodAnimation() {
+		if (living.isMotionless() || living.isStunned())
+			return standingAnimation;
+		else
+			return walkingAnimation;
 	}
 
 	public BufferedImage getImage() {

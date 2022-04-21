@@ -1,26 +1,27 @@
-package com.sunsigne.reversedrebecca.object.piranha.living.animation;
+package com.sunsigne.reversedrebecca.object.piranha.living.animation.constant;
 
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
 
-public class StandingAnimation extends LivingAnimation {
+public abstract class ConstantAnimation extends LivingAnimation {
 
-	public StandingAnimation(LivingObject living) {
+	public ConstantAnimation(LivingObject living) {
 		super(living);
-	}
-
-	////////// NAME ////////////
-
-	public String getName() {
-		return "standing";
 	}
 
 	////////// TICK ////////////
 
+	@Override
 	public int getAnimationTime() {
-		return 60;
+		return -1;
+	}
+
+	@Override
+	public void freeze() {
+
 	}
 
 	////////// TEXTURE ////////////

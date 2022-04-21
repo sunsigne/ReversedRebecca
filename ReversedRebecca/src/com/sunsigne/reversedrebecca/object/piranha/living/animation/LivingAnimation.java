@@ -29,6 +29,9 @@ public abstract class LivingAnimation {
 	private int time = getAnimationTime();
 
 	public void run() {
+		if (getAnimationTime() == -1)
+			return;
+
 		time--;
 		if (time < 0) {
 			time = getAnimationTime();

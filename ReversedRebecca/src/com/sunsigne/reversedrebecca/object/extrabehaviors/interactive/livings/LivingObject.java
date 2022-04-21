@@ -5,12 +5,12 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.behaviors.PushingPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.SickRender;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.render.WalkingRender;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, Feeling, PlayerAvoider, SpeedVariator {
@@ -135,4 +135,10 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 		addBehavior(avoidingPlayer);
 	}
 
+	@Override
+	public void setStunned(boolean stunned) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

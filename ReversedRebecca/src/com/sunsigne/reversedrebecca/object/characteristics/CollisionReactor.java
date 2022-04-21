@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public interface CollisionReactor extends Position {
 
@@ -36,14 +35,13 @@ public interface CollisionReactor extends Position {
 
 		TilePos tilePos = new TilePos();
 		PlayerFinder playerFinder = new PlayerFinder();
-		int size = Size.M;
 
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds())) {
 			if (blockPass) {
 				if (playerFinder.isPlayerInvolved(detectorObject))
 					detectorObject.setX(getX() + getBounds().width);
 				else
-					detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, size));
+					detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, getSize()));
 			}
 			if (listener != null && !actionDone) {
 				actionDone = true;
@@ -57,7 +55,7 @@ public interface CollisionReactor extends Position {
 				if (playerFinder.isPlayerInvolved(detectorObject))
 					detectorObject.setX(getX() - detectorObject.getWidth());
 				else
-					detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), size));
+					detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), getSize()));
 			}
 
 			if (listener != null && !actionDone) {
@@ -71,7 +69,7 @@ public interface CollisionReactor extends Position {
 				if (playerFinder.isPlayerInvolved(detectorObject))
 					detectorObject.setY(getY() + getBounds().height);
 				else
-					detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, size));
+					detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, getSize()));
 			}
 
 			if (listener != null && !actionDone) {
@@ -84,7 +82,7 @@ public interface CollisionReactor extends Position {
 				if (playerFinder.isPlayerInvolved(detectorObject))
 					detectorObject.setY(getY() - detectorObject.getHeight());
 				else
-					detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), size));
+					detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), getSize()));
 			}
 
 			if (listener != null && !actionDone) {

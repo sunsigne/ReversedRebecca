@@ -1,9 +1,15 @@
 package com.sunsigne.reversedrebecca.object.piranha.characteristics;
 
-public interface Feeling {
+public interface Feeling extends Stunnable {
+
+	////////// STUNNABLE ////////////
+
+	default boolean isStunned() {
+		return getCondition() == CONDITION.KO;
+	}
 
 	////////// FEELING ////////////
-	
+
 	public CONDITION getCondition();
 
 	public void setCondition(CONDITION condition);
@@ -11,7 +17,7 @@ public interface Feeling {
 	////////// CONDITION ////////////
 
 	public enum CONDITION {
-		GOOD("good"), SICK("sick");
+		GOOD("good"), SICK("sick"), KO("ko");
 
 		private String name;
 

@@ -6,15 +6,17 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.MoveWhenPushed;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.Stunned;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class PushingPlayer implements CollisionBehavior {
+public class PushingPlayer implements CollisionBehavior, Pusher {
 
 	public PushingPlayer(ExtraBehaviorsObject object, DIRECTION direction) {
 		this.object = object;
@@ -92,6 +94,11 @@ public class PushingPlayer implements CollisionBehavior {
 	}
 
 	@Override
+	public boolean hurtWhenPushing() {
+		return false;
+	}
+	/*
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (isStunned())
 			return;
@@ -104,7 +111,7 @@ public class PushingPlayer implements CollisionBehavior {
 		hurtPlayer();
 		stunObject();
 	}
-
+	*/
 	private DIRECTION direction;
 
 	private void pushPlayer(CollisionDetector detectorObject) {
@@ -145,5 +152,7 @@ public class PushingPlayer implements CollisionBehavior {
 		Behavior stunned = new Stunned(living);
 		object.addBehavior(stunned);
 	}
+
+
 
 }

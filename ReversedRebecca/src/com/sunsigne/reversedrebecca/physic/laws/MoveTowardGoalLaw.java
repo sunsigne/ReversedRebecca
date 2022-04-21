@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class MoveTowardGoalLaw implements PhysicLaw {
@@ -14,16 +15,28 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 		if (object == null)
 			return;
 
+		// object does not have a PathFinding
 		if (object instanceof PathSearcher == false)
 			return;
 
 		PathSearcher searcher = (PathSearcher) object;
 
+		// object does not have an objective
 		if (searcher.getPath() == null)
 			return;
 
-		if (searcher.mustFollowPath())
-			followPath(searcher);
+		// object is not supposed to move
+		if (searcher.mustFollowPath() == false)
+			return;
+
+		// object is currently stunned
+		if (object instanceof Stunnable) {
+			Stunnable stunnable = (Stunnable) object;
+			if (stunnable.isStunned())
+				return;
+		}
+
+		followPath(searcher);
 	}
 
 	private void followPath(PathSearcher searcher) {

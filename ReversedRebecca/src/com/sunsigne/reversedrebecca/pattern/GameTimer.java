@@ -2,18 +2,24 @@ package com.sunsigne.reversedrebecca.pattern;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class GameTimer implements Updatable {
 
-	public GameTimer(int time) {
+	public GameTimer(int timeInSec) {
+		this(timeInSec, null);
+	}
+	
+	public GameTimer(int timeInSec, GenericListener listener) {
 		if (World.get() == null)
 			return;
 
 		World.get().getHandler().addObject(this);
-		this.time = time;
+		this.time = timeInSec;
+		this.listener = listener;
 	}
 
 	////////// TIMER ////////////
@@ -29,6 +35,8 @@ public class GameTimer implements Updatable {
 	private int frame = Game.SEC;
 	private int time;
 
+	private GenericListener listener;
+
 	@Override
 	public void tick() {
 		frame--;
@@ -41,6 +49,8 @@ public class GameTimer implements Updatable {
 		if (time <= 0) {
 			getHandler().removeObject(this);
 			ready = true;
+			if (listener != null)
+				listener.doAction();
 		}
 	}
 

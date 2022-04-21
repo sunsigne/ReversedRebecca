@@ -10,12 +10,14 @@ public class WalkingAnimation extends LivingAnimation {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "walking";
 	}
 
 	////////// TICK ////////////
 
+	@Override
 	public int getAnimationTime() {
 		return 15;
 	}
