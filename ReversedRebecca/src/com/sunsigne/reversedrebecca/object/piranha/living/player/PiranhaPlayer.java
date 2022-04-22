@@ -108,23 +108,6 @@ public class PiranhaPlayer extends LivingObject {
 	////////// COLLISION ////////////
 
 	@Override
-	public boolean isBlockingPath() {
-		return false;
-		// it depends on context ! But "true" corrupts PathFinding.
-	}
-
-	public boolean isBlockingPath(PlayerAvoider playerAvoider) {
-
-		switch (playerAvoider.getPlayerAvoiderType()) {
-		case AROUND:
-			// depends on distance
-			return new PlayerFinder().isPlayerFutherThan(playerAvoider, 3) == false;
-		default:
-			return false;
-		}
-	}
-	
-	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 
 	}

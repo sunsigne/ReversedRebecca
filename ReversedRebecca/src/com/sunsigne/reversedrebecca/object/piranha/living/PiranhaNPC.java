@@ -30,6 +30,7 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 			time = 90;
 			setX(initX);
 			setY(initY);
+			setGoal(new GoalObject(25, 45, false));
 		}
 	}
 	// TEMP CODE //

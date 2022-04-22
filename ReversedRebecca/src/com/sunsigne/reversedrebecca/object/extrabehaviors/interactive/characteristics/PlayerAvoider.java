@@ -7,18 +7,9 @@ public interface PlayerAvoider extends Pusher, PathSearcher {
 
 	////////// PLAYER AVOIDER ////////////
 	
-	public AVOIDERTYPE getPlayerAvoiderType();
+	AVOIDERTYPE getPlayerAvoiderType();
 
-	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType);
-
-	public default boolean isPlayerBlockingPath() {
-		switch (getPlayerAvoiderType()) {
-		case AROUND:
-			return true;
-		default:
-			return false;
-		}
-	}
+	void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType);
 
 	////////// AVOIDER TYPE ////////////
 
