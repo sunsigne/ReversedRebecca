@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
-import com.sunsigne.reversedrebecca.pattern.TilePos;
 
 public interface Pusher extends Stunnable, CollisionReactor {
 
@@ -22,7 +21,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	boolean hurtWhenPushing();
 
 	void setHurtWhenPushing(boolean hurtWhenPushing);
-	
+
 	default int getPushingTime() {
 		return 10;
 	}
@@ -32,25 +31,22 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	void setPushingDirection(PUSHING_DIRECTION pushingDirection);
 
 	default void push(Pushable pushable) {
-		if (isStunned() | getPushingDirection() == null)
+		if (isStunned()) {
+			blockPath(pushable);
 			return;
+		}
 
-		shiftPusher();
+		if (getPushingDirection() == null) {
+			return;
+		}
+
 		stunPusher();
-
 		stunPushable(pushable);
 		pushPushable(pushable);
 		hurtPushable(pushable);
 	}
 
-	private void shiftPusher() {
-		setX(new TilePos().getTilePos(getX(), getSize()));
-		setY(new TilePos().getTilePos(getY(), getSize()));
-	}
-
 	private void stunPusher() {
-		if (!hurtWhenPushing())
-			return;
 
 		setStunned(true);
 		new GameTimer(30, () -> setStunned(false));
