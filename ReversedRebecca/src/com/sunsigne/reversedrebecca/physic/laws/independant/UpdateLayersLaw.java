@@ -1,7 +1,8 @@
-package com.sunsigne.reversedrebecca.physic.laws;
+package com.sunsigne.reversedrebecca.physic.laws.independant;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
