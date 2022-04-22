@@ -40,7 +40,7 @@ public class TextAction implements Updatable {
 		if (!interactive.canPlayerInterfact())
 			return;
 
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {

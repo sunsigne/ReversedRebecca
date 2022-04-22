@@ -60,7 +60,7 @@ public class ElevatorMode extends DebugMode {
 		if (!getState())
 			return;
 
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 		if (player == null)
 			return;
 

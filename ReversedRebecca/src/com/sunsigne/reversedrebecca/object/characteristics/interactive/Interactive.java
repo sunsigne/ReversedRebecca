@@ -32,7 +32,7 @@ public interface Interactive extends Velocity, KeyboardEvent {
 		if (isDisabled())
 			return false;
 
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		// player is null
 		if (player == null)

@@ -31,7 +31,7 @@ public class Cutscene implements Updatable {
 	}
 
 	private void setUserAllowedToMovePlayer(boolean isUserAllowedToMovePlayer) {
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;

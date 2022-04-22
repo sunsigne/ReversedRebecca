@@ -18,7 +18,7 @@ public class PiranhaFoe extends LivingObject {
 	public void tick() {
 		super.tick();
 
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		if (!canFollowPlayer(player)) {
 			setGoal(null);

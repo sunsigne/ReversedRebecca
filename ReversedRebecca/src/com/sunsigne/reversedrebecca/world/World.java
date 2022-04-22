@@ -152,7 +152,7 @@ public class World implements Updatable {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 		if (player == null)
 			return;
 

@@ -29,7 +29,7 @@ public class PlayerLayerChanger {
 	////////// LAYER ////////////
 
 	public void goes(LAYER ground_layer) {
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
@@ -42,7 +42,7 @@ public class PlayerLayerChanger {
 	}
 
 	public void goesUp() {
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
@@ -59,7 +59,7 @@ public class PlayerLayerChanger {
 	}
 
 	public void goesDown() {
-		PiranhaPlayer player = new PlayerFinder().getPiranhaPlayer();
+		PiranhaPlayer player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
