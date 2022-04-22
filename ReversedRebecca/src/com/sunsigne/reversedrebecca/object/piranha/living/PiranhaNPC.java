@@ -34,31 +34,5 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 		}
 	}
 	// TEMP CODE //
-
-	////////// PLAYER AVOIDER ////////////
-
-	private boolean playerBlockingAvoider;
-	
-	@Override
-	public boolean isPlayerBlockingAvoider() {
-		return playerBlockingAvoider;
-	}
-
-	@Override
-	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
-		this.playerBlockingAvoider = playerBlockingAvoider;		
-	}
-	
-	private AVOIDERTYPE avoiderType = AVOIDERTYPE.AROUND;
-	
-	@Override
-	public AVOIDERTYPE getPlayerAvoiderType() {
-		return avoiderType;
-	}
-
-	@Override
-	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
-		this.avoiderType = playerAvoiderType;
-	}
 	
 }

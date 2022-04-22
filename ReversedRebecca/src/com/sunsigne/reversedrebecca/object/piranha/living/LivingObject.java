@@ -3,13 +3,13 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 
-public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, Pusher {
+public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, PlayerAvoider {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -112,6 +112,32 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 		g.drawImage(animation.getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
+	////////// PLAYER AVOIDER ////////////
+
+	private boolean playerBlockingAvoider;
+	
+	@Override
+	public boolean isPlayerBlockingAvoider() {
+		return playerBlockingAvoider;
+	}
+
+	@Override
+	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
+		this.playerBlockingAvoider = playerBlockingAvoider;		
+	}
+	
+	private AVOIDERTYPE avoiderType = AVOIDERTYPE.AROUND;
+	
+	@Override
+	public AVOIDERTYPE getPlayerAvoiderType() {
+		return avoiderType;
+	}
+
+	@Override
+	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
+		this.avoiderType = playerAvoiderType;
+	}
+	
 	////////// PUSHER ////////////
 
 	@Override
