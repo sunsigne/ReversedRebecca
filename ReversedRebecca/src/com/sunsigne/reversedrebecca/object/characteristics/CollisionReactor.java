@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -34,11 +35,10 @@ public interface CollisionReactor extends Position {
 		boolean actionDone = false;
 
 		TilePos tilePos = new TilePos();
-		PlayerFinder playerFinder = new PlayerFinder();
 
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds())) {
 			if (blockPass) {
-				if (playerFinder.isPlayerInvolved(detectorObject))
+				if (detectorObject instanceof PiranhaPlayer)
 					detectorObject.setX(getX() + getBounds().width);
 				else
 					detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, getSize()));
@@ -52,7 +52,7 @@ public interface CollisionReactor extends Position {
 
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
 			if (blockPass) {
-				if (playerFinder.isPlayerInvolved(detectorObject))
+				if (detectorObject instanceof PiranhaPlayer)
 					detectorObject.setX(getX() - detectorObject.getWidth());
 				else
 					detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), getSize()));
@@ -66,7 +66,7 @@ public interface CollisionReactor extends Position {
 
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds())) {
 			if (blockPass) {
-				if (playerFinder.isPlayerInvolved(detectorObject))
+				if (detectorObject instanceof PiranhaPlayer)
 					detectorObject.setY(getY() + getBounds().height);
 				else
 					detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, getSize()));
@@ -79,7 +79,7 @@ public interface CollisionReactor extends Position {
 		}
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass) {
-				if (playerFinder.isPlayerInvolved(detectorObject))
+				if (detectorObject instanceof PiranhaPlayer)
 					detectorObject.setY(getY() - detectorObject.getHeight());
 				else
 					detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), getSize()));

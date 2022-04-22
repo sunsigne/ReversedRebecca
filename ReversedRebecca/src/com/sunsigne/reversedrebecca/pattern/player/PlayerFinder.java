@@ -1,8 +1,6 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
@@ -13,7 +11,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public class PlayerFinder {
 
 	////////// PLAYER ////////////
-	
+
 	public Player getPlayer() {
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -26,7 +24,7 @@ public class PlayerFinder {
 		}
 		return null;
 	}
-	
+
 	public PiranhaPlayer getPiranhaPlayer() {
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -41,11 +39,11 @@ public class PlayerFinder {
 	}
 
 	////////// DISTANCE ////////////
-	
+
 	private int getTilePos(int pos) {
 		return new TilePos().getTilePos(pos, Size.M);
 	}
-	
+
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {
 		int[] distance = getDistance(object, distanceInTiles);
 
@@ -80,23 +78,6 @@ public class PlayerFinder {
 		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / Size.M;
 
 		return new int[] { playerDistance, distanceInTiles };
-	}
-
-	////////// BEHAVIOR ////////////
-	
-	public boolean isPlayerInvolved(CollisionDetector detectorObject) {
-		if (detectorObject instanceof Player)
-			return true;
-
-		if (detectorObject instanceof PiranhaPlayer)
-			return true;
-		
-		if (detectorObject instanceof Behavior) {
-			Behavior behavior = (Behavior) detectorObject;
-			if (behavior.getExtraBehaviorsObject() instanceof Player)
-				return true;
-		}
-		return false;
 	}
 
 }

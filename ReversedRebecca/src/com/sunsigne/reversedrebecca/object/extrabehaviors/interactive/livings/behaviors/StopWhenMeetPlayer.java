@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.CollisionBehavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
@@ -72,7 +73,7 @@ public class StopWhenMeetPlayer implements CollisionBehavior {
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (new PlayerFinder().isPlayerInvolved(detectorObject)) {
+		if (detectorObject instanceof PiranhaPlayer) {
 			paralyseObject();
 			lookAtThePlayer();
 		}
