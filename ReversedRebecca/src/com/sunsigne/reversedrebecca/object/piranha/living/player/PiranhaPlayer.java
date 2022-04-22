@@ -10,7 +10,6 @@ public class PiranhaPlayer extends LivingObject {
 	public PiranhaPlayer(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
-		setPlayerAvoiderType(null);
 		setUserAllowedToMovePlayer(true);
 		setCanInterract(true);
 	}

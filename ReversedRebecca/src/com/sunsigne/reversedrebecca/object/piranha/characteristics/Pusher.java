@@ -21,6 +21,8 @@ public interface Pusher extends Stunnable, CollisionReactor {
 
 	boolean hurtWhenPushing();
 
+	void setHurtWhenPushing(boolean hurtWhenPushing);
+	
 	default int getPushingTime() {
 		return 10;
 	}

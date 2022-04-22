@@ -105,6 +105,10 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 		return false;
 	}
 
+	@Override
+	public void setHurtWhenPushing(boolean hurtWhenPushing) {
+
+	}
 	
 	@Override
 	public PUSHING_DIRECTION getPushingDirection() {

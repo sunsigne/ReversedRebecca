@@ -115,7 +115,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	////////// PLAYER AVOIDER ////////////
 
 	private boolean playerBlockingAvoider;
-	
+
 	@Override
 	public boolean isPlayerBlockingAvoider() {
 		return playerBlockingAvoider;
@@ -123,11 +123,11 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 
 	@Override
 	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
-		this.playerBlockingAvoider = playerBlockingAvoider;		
+		this.playerBlockingAvoider = playerBlockingAvoider;
 	}
-	
+
 	private AVOIDERTYPE avoiderType = AVOIDERTYPE.AROUND;
-	
+
 	@Override
 	public AVOIDERTYPE getPlayerAvoiderType() {
 		return avoiderType;
@@ -135,14 +135,22 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 
 	@Override
 	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
+		PlayerAvoider.super.setPlayerAvoiderType(playerAvoiderType);
 		this.avoiderType = playerAvoiderType;
 	}
-	
+
 	////////// PUSHER ////////////
+
+	private boolean hurtWhenPushing = false;
 
 	@Override
 	public boolean hurtWhenPushing() {
-		return false;
+		return hurtWhenPushing;
+	}
+
+	@Override
+	public void setHurtWhenPushing(boolean hurtWhenPushing) {
+		this.hurtWhenPushing = hurtWhenPushing;
 	}
 
 	private PUSHING_DIRECTION pushingDirection = PUSHING_DIRECTION.FACING_OF_PUSHER;

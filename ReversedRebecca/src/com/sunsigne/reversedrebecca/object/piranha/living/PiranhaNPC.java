@@ -11,6 +11,7 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 		initX = getX();
 		initY = getY();
 		setGoal(new GoalObject(25, 45, false));
+		setPlayerAvoiderType(AVOIDERTYPE.PUSH);
 		// TEMP CODE //
 	}
 

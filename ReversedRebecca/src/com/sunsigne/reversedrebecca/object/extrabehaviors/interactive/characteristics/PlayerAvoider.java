@@ -2,18 +2,55 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.character
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 
 public interface PlayerAvoider extends Pusher, PathSearcher {
 
 	////////// PLAYER AVOIDER ////////////
 
 	boolean isPlayerBlockingAvoider();
-	
+
 	void setPlayerBlockingAvoider(boolean playerBlockingAvoider);
-	
+
 	AVOIDERTYPE getPlayerAvoiderType();
 
-	void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType);
+	default void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
+
+		if (playerAvoiderType == AVOIDERTYPE.PUSH_HURT)
+			setHurtWhenPushing(true);
+		else
+			setHurtWhenPushing(false);
+
+		switch (playerAvoiderType) {
+
+		case AROUND:
+		case STOP:
+			setPushingDirection(null);
+		case PUSH:
+		case PUSH_HURT:
+			getImpliedPushingDirection(this);
+			break;
+		case PUSH_LEFT:
+			setPushingDirection(PUSHING_DIRECTION.LEFT);
+			break;
+		case PUSH_RIGHT:
+			setPushingDirection(PUSHING_DIRECTION.RIGHT);
+			break;
+		case PUSH_UP:
+			setPushingDirection(PUSHING_DIRECTION.UP);
+			break;
+		case PUSH_DOWN:
+			setPushingDirection(PUSHING_DIRECTION.DOWN);
+			break;
+		}
+	}
+
+	private PUSHING_DIRECTION getImpliedPushingDirection(Pusher pusher) {
+		if (pusher instanceof LivingObject)
+			return PUSHING_DIRECTION.FACING_OF_PUSHER;
+		else
+			return PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE;
+	}
 
 	////////// AVOIDER TYPE ////////////
 
