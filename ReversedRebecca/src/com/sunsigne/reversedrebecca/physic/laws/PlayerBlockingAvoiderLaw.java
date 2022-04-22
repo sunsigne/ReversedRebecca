@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider.AVOIDERTYPE;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 

@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PiranhaNPC extends LivingObject implements PlayerAvoider {

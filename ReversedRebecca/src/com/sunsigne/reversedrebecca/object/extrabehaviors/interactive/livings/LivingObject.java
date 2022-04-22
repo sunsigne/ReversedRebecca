@@ -7,10 +7,10 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.StopWhenMeetPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher.PUSHING_DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 
 public abstract class LivingObject extends ExtraBehaviorsObject
 		implements CollisionDetector, PlayerAvoider, SpeedVariator {

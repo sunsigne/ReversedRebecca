@@ -3,12 +3,12 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;

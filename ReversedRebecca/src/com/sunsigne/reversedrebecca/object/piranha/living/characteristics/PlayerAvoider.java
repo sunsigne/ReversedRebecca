@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics;
+package com.sunsigne.reversedrebecca.object.piranha.living.characteristics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
