@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 
@@ -10,7 +11,8 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 		// TEMP CODE //
 		initX = getX();
 		initY = getY();
-		setGoal(new GoalObject(25, 45, false));
+		setGoal(new PlayerFinder().getPiranhaPlayer());
+		setPlayerAvoiderType(AVOIDERTYPE.STOP);
 		// TEMP CODE //
 	}
 
@@ -23,9 +25,7 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 	public void tick() {
 		super.tick();
 
-		time--;
-		
-		if(time <= 0)
+		if(time < 0)
 		{
 			time = 200;
 			setX(initX);

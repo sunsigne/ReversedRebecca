@@ -21,7 +21,7 @@ public abstract class PiranhaObject extends GameObject
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
-	// That's it.
+	// That's it. A homing rolling pin is then a "LivingObject".
 	public PiranhaObject(String name, int x, int y) {
 		super(x, y);
 		this.name = name.toLowerCase();
@@ -54,6 +54,8 @@ public abstract class PiranhaObject extends GameObject
 
 	@Override
 	public void setWaitfor(ConditionalListener listener) {
+		if (listener == null)
+			setStunned(false);
 		this.waitfor = listener;
 	}
 

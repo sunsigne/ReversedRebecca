@@ -9,12 +9,15 @@ import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, PlayerAvoider {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
-	// That's it.
+	// That's it. A homing rolling pin is then a "LivingObject".
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
@@ -191,14 +194,34 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	}
 
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
-//		if(getPlayerAvoiderType() == AVOIDERTYPE.STOP)
-//		{
-//			setMotionless();
-//			setGoal(null);
-//		}
+		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
+			if (detectorObject instanceof PiranhaPlayer)
+				paralyseObject();
+		}
 
-		
 		blockPath(detectorObject);
+	}
+
+	private void paralyseObject() {
+		setStunned(true);
+		ConditionalListener listener = getPlayerDistanceListener(this, 3);
+		setWaitfor(listener);
+	}
+
+	private ConditionalListener getPlayerDistanceListener(LivingObject object, int distance) {
+
+		return new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				return new PlayerFinder().isPlayerFutherThan(object, distance);
+			}
+
+			@Override
+			public void doAction() {
+				setStunned(false); // already happens because of WaitforLaw and LivingObject
+			}
+		};
 	}
 
 }
