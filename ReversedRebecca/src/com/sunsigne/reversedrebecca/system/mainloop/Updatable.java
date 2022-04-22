@@ -14,25 +14,27 @@ public interface Updatable {
 		}
 		return null;
 	}
-	
+
 	default void destroyControls() {
-		
-		if(this instanceof KeyboardEvent) {
+
+		if (this instanceof KeyboardEvent) {
 			KeyboardEvent keyboard = (KeyboardEvent) this;
-			keyboard.getKeyBoardController().removeKeyListener();
+			if (keyboard.getKeyBoardController() != null)
+				keyboard.getKeyBoardController().removeKeyListener();
 		}
-		
-		if(this instanceof MouseUserEvent) {
+
+		if (this instanceof MouseUserEvent) {
 			MouseUserEvent mouse = (MouseUserEvent) this;
-			mouse.getMouseController().removeMouseListener();
+			if (mouse.getMouseController() != null)
+				mouse.getMouseController().removeMouseListener();
 		}
 	}
-	
+
 	////////// TICK ////////////
-	
+
 	void tick();
-	
+
 	////////// RENDER ////////////
-	
+
 	void render(Graphics g);
 }
