@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.physic;
 
-import com.sunsigne.reversedrebecca.physic.laws.InvulnerabilityFrameLaw;
 import com.sunsigne.reversedrebecca.physic.laws.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.UpdateLayersLaw;
@@ -48,7 +47,7 @@ public class NaturalLaws {
 	////////// OTHER ////////////
 	
 	private void loadOtherOrderedLaws() {
-		load(new InvulnerabilityFrameLaw());
+//		load(new InvulnerabilityFrameLaw());
 		load(new LifeAndDeathLaw());
 	}
 
