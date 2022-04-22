@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.laws;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -27,6 +28,12 @@ public class RoundToTileLaw implements PhysicLaw {
 
 		int miniX = variator.getX() % variator.getSize();
 		int miniY = variator.getY() % variator.getSize();
+
+		// if the object is stunned
+		if (variator instanceof Stunnable) {
+			if (((Stunnable) variator).isStunned())
+				return;
+		}
 
 		// if miniX is not possible to reach with known speed
 		// OR if object is not moving in this axe
