@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public interface CollisionReactor extends Position {
 
