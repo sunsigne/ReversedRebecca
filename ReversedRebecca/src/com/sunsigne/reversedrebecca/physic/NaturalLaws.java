@@ -9,12 +9,15 @@ import com.sunsigne.reversedrebecca.physic.laws.PlayerBlockingAvoiderLaw;
 import com.sunsigne.reversedrebecca.physic.laws.RoundToTileLaw;
 import com.sunsigne.reversedrebecca.physic.laws.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.physic.laws.VelocityLaw;
+import com.sunsigne.reversedrebecca.physic.laws.WaitforLaw;
 
 public class NaturalLaws {
 
 	public void loadRessources() {
-		// This law as nothing to do close or far with movement
+		// Those laws have nothing to do close or far with movement
 		load(new UpdateLayersLaw());
+		
+		load(new WaitforLaw());
 
 		// (following rules CANNOT be added in another order)
 

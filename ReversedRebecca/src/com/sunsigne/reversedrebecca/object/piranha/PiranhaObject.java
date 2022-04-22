@@ -7,15 +7,17 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Facing, Stunnable, Pushable, PathSearcher, Interactive, CollisionReactor {
+		implements Waitfor, Facing, Stunnable, Pushable, PathSearcher, Interactive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -39,6 +41,20 @@ public abstract class PiranhaObject extends GameObject
 	public void setName(String name) {
 		if (name != null)
 			this.name = name.toLowerCase();
+	}
+
+	////////// WAITFOR ////////////
+
+	private ConditionalListener waitfor;
+
+	@Override
+	public ConditionalListener getWaitfor() {
+		return waitfor;
+	}
+
+	@Override
+	public void setWaitfor(ConditionalListener listener) {
+		this.waitfor = listener;
 	}
 
 	////////// PIRANHA ////////////
