@@ -5,9 +5,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
-public class PiranhaFoe extends LivingObject {
+public class Foe extends LivingObject {
 
-	public PiranhaFoe(String name, int x, int y) {
+	public Foe(String name, int x, int y) {
 		super(name, x, y);
 		setPlayerAvoiderType(AVOIDERTYPE.PUSH_HURT);
 	}
