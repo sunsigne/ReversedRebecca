@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.object.piranha;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
@@ -178,11 +177,6 @@ public abstract class PiranhaObject extends GameObject
 	@Override
 	public boolean isBlockingPath() {
 		return true;
-	}
-
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPath(detectorObject);
 	}
 
 }

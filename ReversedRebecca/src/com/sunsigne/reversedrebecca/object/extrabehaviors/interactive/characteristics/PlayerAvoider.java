@@ -26,9 +26,10 @@ public interface PlayerAvoider extends Pusher, PathSearcher {
 		case AROUND:
 		case STOP:
 			setPushingDirection(null);
+			break;
 		case PUSH:
 		case PUSH_HURT:
-			getImpliedPushingDirection(this);
+			setPushingDirection(getImpliedPushingDirection(this));
 			break;
 		case PUSH_LEFT:
 			setPushingDirection(PUSHING_DIRECTION.LEFT);

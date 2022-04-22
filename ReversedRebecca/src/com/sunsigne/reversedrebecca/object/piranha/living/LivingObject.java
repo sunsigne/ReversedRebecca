@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteri
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
+import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 
 public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, PlayerAvoider {
@@ -17,6 +18,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
+		setPlayerAvoiderType(AVOIDERTYPE.STOP);
 	}
 
 	////////// NAME ////////////
@@ -126,7 +128,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 		this.playerBlockingAvoider = playerBlockingAvoider;
 	}
 
-	private AVOIDERTYPE avoiderType = AVOIDERTYPE.AROUND;
+	private AVOIDERTYPE avoiderType;
 
 	@Override
 	public AVOIDERTYPE getPlayerAvoiderType() {
@@ -135,8 +137,8 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 
 	@Override
 	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
-		PlayerAvoider.super.setPlayerAvoiderType(playerAvoiderType);
 		this.avoiderType = playerAvoiderType;
+		PlayerAvoider.super.setPlayerAvoiderType(playerAvoiderType);
 	}
 
 	////////// PUSHER ////////////
@@ -153,7 +155,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 		this.hurtWhenPushing = hurtWhenPushing;
 	}
 
-	private PUSHING_DIRECTION pushingDirection = PUSHING_DIRECTION.FACING_OF_PUSHER;
+	private PUSHING_DIRECTION pushingDirection;
 
 	@Override
 	public PUSHING_DIRECTION getPushingDirection() {
@@ -169,13 +171,27 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		super.collidingReaction(detectorObject);
-
-		if (detectorObject instanceof Pushable == false)
+		if (detectorObject instanceof Pushable == false) {
+			defaultCollindingReaction(detectorObject);
 			return;
+		}
+
+		if (getPushingDirection() == null) {
+			if (detectorObject instanceof Pusher == false) {
+				defaultCollindingReaction(detectorObject);
+				return;
+			} else if (((Pusher) detectorObject).getPushingDirection() == null) {
+				defaultCollindingReaction(detectorObject);
+				return;
+			}
+		}
 
 		Pushable pushable = (Pushable) detectorObject;
 		push(pushable);
+	}
+
+	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
+		blockPath(detectorObject);
 	}
 
 }

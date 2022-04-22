@@ -12,6 +12,7 @@ public class PiranhaPlayer extends LivingObject {
 		setDisabled(true);
 		setUserAllowedToMovePlayer(true);
 		setCanInterract(true);
+		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
 	}
 
 	////////// SPEED ////////////
@@ -106,7 +107,7 @@ public class PiranhaPlayer extends LivingObject {
 	////////// COLLISION ////////////
 
 	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
+	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 
 	}
 

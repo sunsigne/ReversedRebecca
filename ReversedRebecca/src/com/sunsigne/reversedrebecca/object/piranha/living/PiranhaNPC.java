@@ -23,7 +23,7 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 	@Override
 	public void tick() {
 		super.tick();
-		
+
 		time--;
 		
 		if(time <= 0)
