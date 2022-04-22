@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.laws.PlayerBlockingAvoiderLaw;
 import com.sunsigne.reversedrebecca.physic.laws.RoundToTileLaw;
 import com.sunsigne.reversedrebecca.physic.laws.VelocityLaw;
+import com.sunsigne.reversedrebecca.physic.laws.independant.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.WaitforLaw;
 
@@ -21,6 +22,7 @@ public class NaturalLaws {
 	private void loadIndependantLaws() {
 		load(new UpdateLayersLaw());
 		load(new WaitforLaw());
+		load(new LifeAndDeathLaw());
 	}
 
 	private void loadSpecificOrderLaws() {

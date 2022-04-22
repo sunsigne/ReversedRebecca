@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.p
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.Behavior;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.DieWhenNoHp;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.behaviors.HasInvulnerabilityFrame;
 
 public class Player extends LivingObject {
@@ -15,15 +14,11 @@ public class Player extends LivingObject {
 	////////// BEHAVIOR ////////////
 
 	public Behavior hasInvulnerabilityFrame;
-	public Behavior dieWhenNoHp;
 
 	private void addPlayerBehaviors() {
 
 		hasInvulnerabilityFrame = new HasInvulnerabilityFrame(this);
 		addBehavior(hasInvulnerabilityFrame);
-
-		dieWhenNoHp = new DieWhenNoHp(this);
-		addBehavior(dieWhenNoHp);
 
 	}
 
