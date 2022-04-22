@@ -3,9 +3,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PiranhaPlayer extends LivingObject {
 
