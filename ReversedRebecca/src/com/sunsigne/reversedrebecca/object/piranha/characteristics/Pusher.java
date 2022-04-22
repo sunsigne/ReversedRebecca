@@ -47,6 +47,8 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void stunPusher() {
+		if (!hurtWhenPushing())
+			return;
 
 		setStunned(true);
 		new GameTimer(30, () -> setStunned(false));
