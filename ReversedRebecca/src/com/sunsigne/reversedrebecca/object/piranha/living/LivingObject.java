@@ -135,10 +135,10 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof Pushable == false) {
-			super.collidingReaction(detectorObject);
+		super.collidingReaction(detectorObject);
+
+		if (detectorObject instanceof Pushable == false)
 			return;
-		}
 
 		Pushable pushable = (Pushable) detectorObject;
 		push(pushable);

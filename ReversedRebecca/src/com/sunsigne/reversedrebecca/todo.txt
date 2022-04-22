@@ -18,6 +18,7 @@
 
 	////////// A FINIR ////////////
 
+	faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
 	Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
 	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder

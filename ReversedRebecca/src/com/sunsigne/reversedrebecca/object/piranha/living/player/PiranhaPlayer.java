@@ -3,7 +3,9 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class PiranhaPlayer extends LivingObject {
 
@@ -111,6 +113,17 @@ public class PiranhaPlayer extends LivingObject {
 		// it depends on context ! But "true" corrupts PathFinding.
 	}
 
+	public boolean isBlockingPath(PlayerAvoider playerAvoider) {
+
+		switch (playerAvoider.getPlayerAvoiderType()) {
+		case AROUND:
+			// depends on distance
+			return new PlayerFinder().isPlayerFutherThan(playerAvoider, 3) == false;
+		default:
+			return false;
+		}
+	}
+	
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 

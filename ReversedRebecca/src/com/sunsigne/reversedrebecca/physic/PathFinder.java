@@ -6,12 +6,11 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GoalCondition;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -209,24 +208,13 @@ public class PathFinder implements Position {
 				range = range + Size.M;
 		}
 
-		if (player != null)
-			return isPlayerBlockingPath();
-
+		if (player != null) {
+			if (searcher instanceof PlayerAvoider)
+				return player.isBlockingPath((PlayerAvoider) searcher);
+			else
+				return player.isBlockingPath();
+		}
 		return false;
-	}
-
-	private boolean isPlayerBlockingPath() {
-		if (searcher instanceof LivingObject == false)
-			return true;
-
-		LivingObject living = (LivingObject) searcher;
-		if (living.isPlayerBlockingPath() == false)
-			return false;
-
-		if (new PlayerFinder().isPlayerFutherThan(living, 3))
-			return false;
-
-		return true;
 	}
 
 	private GameList<PathPointObject> createValidPathPointList() {
