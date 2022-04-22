@@ -18,7 +18,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
-		setPlayerAvoiderType(AVOIDERTYPE.STOP);
+		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
 	}
 
 	////////// NAME ////////////
@@ -191,6 +191,13 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	}
 
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
+//		if(getPlayerAvoiderType() == AVOIDERTYPE.STOP)
+//		{
+//			setMotionless();
+//			setGoal(null);
+//		}
+
+		
 		blockPath(detectorObject);
 	}
 
