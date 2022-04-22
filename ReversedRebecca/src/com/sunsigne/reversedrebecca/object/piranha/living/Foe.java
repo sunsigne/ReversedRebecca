@@ -9,7 +9,8 @@ public class Foe extends LivingObject {
 
 	public Foe(String name, int x, int y) {
 		super(name, x, y);
-		setPlayerAvoiderType(AVOIDERTYPE.PUSH_HURT);
+		setPushingDirection(PUSHING_DIRECTION.FACING_OF_PUSHER);
+		setHurtWhenPushing(true);
 	}
 
 	////////// TICK ////////////

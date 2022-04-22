@@ -3,17 +3,14 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling;
-import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
-import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
-public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, PlayerAvoider {
+public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, Pusher, PathSearcher {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -21,7 +18,6 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
-		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
 	}
 
 	////////// NAME ////////////
@@ -117,33 +113,6 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 		g.drawImage(animation.getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
-	////////// PLAYER AVOIDER ////////////
-
-	private boolean playerBlockingAvoider;
-
-	@Override
-	public boolean isPlayerBlockingAvoider() {
-		return playerBlockingAvoider;
-	}
-
-	@Override
-	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
-		this.playerBlockingAvoider = playerBlockingAvoider;
-	}
-
-	private AVOIDERTYPE avoiderType;
-
-	@Override
-	public AVOIDERTYPE getPlayerAvoiderType() {
-		return avoiderType;
-	}
-
-	@Override
-	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
-		this.avoiderType = playerAvoiderType;
-		PlayerAvoider.super.setPlayerAvoiderType(playerAvoiderType);
-	}
-
 	////////// PUSHER ////////////
 
 	private boolean hurtWhenPushing = false;
@@ -194,34 +163,7 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	}
 
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
-		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
-			if (detectorObject instanceof PiranhaPlayer)
-				paralyseObject();
-		}
-
 		blockPath(detectorObject);
-	}
-
-	private void paralyseObject() {
-		setStunned(true);
-		ConditionalListener listener = getPlayerDistanceListener(this, 3);
-		setWaitfor(listener);
-	}
-
-	private ConditionalListener getPlayerDistanceListener(LivingObject object, int distance) {
-
-		return new ConditionalListener() {
-
-			@Override
-			public boolean canDoAction() {
-				return new PlayerFinder().isPlayerFutherThan(object, distance);
-			}
-
-			@Override
-			public void doAction() {
-				setStunned(false); // already happens because of WaitforLaw and LivingObject
-			}
-		};
 	}
 
 }
