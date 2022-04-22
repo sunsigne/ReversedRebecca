@@ -6,6 +6,10 @@ import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
 public interface PlayerAvoider extends Pusher, PathSearcher {
 
 	////////// PLAYER AVOIDER ////////////
+
+	boolean isPlayerBlockingAvoider();
+	
+	void setPlayerBlockingAvoider(boolean playerBlockingAvoider);
 	
 	AVOIDERTYPE getPlayerAvoiderType();
 

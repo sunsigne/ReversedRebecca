@@ -27,7 +27,7 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 		
 		if(time <= 0)
 		{
-			time = 90;
+			time = 200;
 			setX(initX);
 			setY(initY);
 			setGoal(new GoalObject(25, 45, false));
@@ -35,15 +35,30 @@ public class PiranhaNPC extends LivingObject implements PlayerAvoider {
 	}
 	// TEMP CODE //
 
+	////////// PLAYER AVOIDER ////////////
+
+	private boolean playerBlockingAvoider;
+	
+	@Override
+	public boolean isPlayerBlockingAvoider() {
+		return playerBlockingAvoider;
+	}
+
+	@Override
+	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
+		this.playerBlockingAvoider = playerBlockingAvoider;		
+	}
+	
+	private AVOIDERTYPE avoiderType = AVOIDERTYPE.AROUND;
+	
 	@Override
 	public AVOIDERTYPE getPlayerAvoiderType() {
-		return AVOIDERTYPE.AROUND;
+		return avoiderType;
 	}
 
 	@Override
 	public void setPlayerAvoiderType(AVOIDERTYPE playerAvoiderType) {
-		// TODO Auto-generated method stub
-		
+		this.avoiderType = playerAvoiderType;
 	}
 	
 }

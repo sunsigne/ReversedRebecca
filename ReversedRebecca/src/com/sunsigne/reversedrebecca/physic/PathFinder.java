@@ -11,7 +11,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GoalCondition;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -211,22 +210,11 @@ public class PathFinder implements Position {
 
 		if (player != null) {
 			if (searcher instanceof PlayerAvoider)
-				return isPlayerBlockingAvoider((PlayerAvoider) searcher);
+				return ((PlayerAvoider) searcher).isPlayerBlockingAvoider();
 			else
 				return player.isBlockingPath();
 		}
 		return false;
-	}
-
-	private boolean isPlayerBlockingAvoider(PlayerAvoider avoider) {
-
-		switch (avoider.getPlayerAvoiderType()) {
-
-		case AROUND:
-			return new PlayerFinder().isPlayerFutherThan(avoider, 3) == false;
-		default:
-			return false;
-		}
 	}
 
 	private GameList<PathPointObject> createValidPathPointList() {

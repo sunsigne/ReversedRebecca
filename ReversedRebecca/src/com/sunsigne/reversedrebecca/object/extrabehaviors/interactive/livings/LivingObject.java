@@ -117,7 +117,17 @@ public abstract class LivingObject extends ExtraBehaviorsObject
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public boolean isPlayerBlockingAvoider() {
+		return false;
+	}
 
+	@Override
+	public void setPlayerBlockingAvoider(boolean playerBlockingAvoider) {
+	
+	}
+	
 	@Override
 	public boolean isStunned() {
 		// TODO Auto-generated method stub
