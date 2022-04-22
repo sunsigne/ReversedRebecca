@@ -1,11 +1,10 @@
-package com.sunsigne.reversedrebecca.physic.laws.independant;
+package com.sunsigne.reversedrebecca.physic.laws;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LifeAndDeathLaw implements PhysicLaw {
