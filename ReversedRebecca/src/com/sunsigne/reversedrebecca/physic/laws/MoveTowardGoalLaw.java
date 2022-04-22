@@ -36,6 +36,7 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 				return;
 		}
 
+		searcher.setMotionless();
 		followPath(searcher);
 	}
 
