@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.pattern;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class FormatedName {
@@ -13,7 +13,7 @@ public class FormatedName {
 		switch (lower_name) {
 
 		case "player":
-			PiranhaPlayer player = new PlayerFinder().getPlayer();
+			Player player = new PlayerFinder().getPlayer();
 			if (player == null)
 				return "error";
 			else

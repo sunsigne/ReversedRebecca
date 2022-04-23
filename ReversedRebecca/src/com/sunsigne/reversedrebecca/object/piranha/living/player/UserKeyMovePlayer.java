@@ -26,12 +26,12 @@ public class UserKeyMovePlayer {
 
 	////////// TICK ////////////
 
-	public void movePlayerByKey(PiranhaPlayer player) {
+	public void movePlayerByKey(Player player) {
 		movePlayerbyX(player);
 		movePlayerbyY(player);
 	}
 	
-	private void movePlayerbyX(PiranhaPlayer player) {
+	private void movePlayerbyX(Player player) {
 
 		if (directionKeyPressed[DIRECTION.LEFT.getNum()] && !directionKeyPressed[DIRECTION.RIGHT.getNum()])
 			player.setVelX(-player.getSpeed());
@@ -43,7 +43,7 @@ public class UserKeyMovePlayer {
 			player.setVelX(0);
 	}
 
-	private void movePlayerbyY(PiranhaPlayer player) {
+	private void movePlayerbyY(Player player) {
 
 		if (directionKeyPressed[DIRECTION.UP.getNum()] && !directionKeyPressed[DIRECTION.DOWN.getNum()])
 			player.setVelY(-player.getSpeed());
@@ -71,7 +71,7 @@ public class UserKeyMovePlayer {
 		this.directionKeyEvent[direction.getNum()] = directionKeyEvent;
 	}
 
-	public void directionKey(PiranhaPlayer player, int key, boolean pressed) {
+	public void directionKey(Player player, int key, boolean pressed) {
 		if (player == null)
 			return;
 

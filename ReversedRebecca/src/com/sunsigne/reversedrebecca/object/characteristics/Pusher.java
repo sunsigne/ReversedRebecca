@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 
 public interface Pusher extends Stunnable, CollisionReactor {
@@ -66,7 +66,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 		if (!hurtWhenPushing())
 			return;
 
-		if (pushable instanceof PiranhaPlayer)
+		if (pushable instanceof Player)
 			PlayerHealth.getInstance().removeHp();
 	}
 

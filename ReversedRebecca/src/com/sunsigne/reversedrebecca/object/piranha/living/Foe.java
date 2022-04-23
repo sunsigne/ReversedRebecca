@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class Foe extends LivingObject {
@@ -19,7 +19,7 @@ public class Foe extends LivingObject {
 	public void tick() {
 		super.tick();
 
-		PiranhaPlayer player = new PlayerFinder().getPlayer();
+		Player player = new PlayerFinder().getPlayer();
 
 		if (!canFollowPlayer(player)) {
 			setGoal(null);
@@ -29,7 +29,7 @@ public class Foe extends LivingObject {
 		setGoal(player);
 	}
 
-	private boolean canFollowPlayer(PiranhaPlayer player) {
+	private boolean canFollowPlayer(Player player) {
 
 		// player is dead
 		if (PlayerHealth.getInstance().isDead())
@@ -46,7 +46,7 @@ public class Foe extends LivingObject {
 	
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof PiranhaPlayer)
+		if (detectorObject instanceof Player)
 			super.collidingReaction(detectorObject);
 		else
 			defaultCollindingReaction(detectorObject);

@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -11,14 +11,14 @@ public class PlayerFinder {
 
 	////////// PLAYER ////////////
 
-	public PiranhaPlayer getPlayer() {
+	public Player getPlayer() {
 
 		for (LAYER tempLayer : LAYER.values()) {
 			var list = tempLayer.getHandler().getList();
 
 			for (Updatable tempUpdatable : list) {
-				if (tempUpdatable instanceof PiranhaPlayer)
-					return (PiranhaPlayer) tempUpdatable;
+				if (tempUpdatable instanceof Player)
+					return (Player) tempUpdatable;
 			}
 		}
 		return null;
@@ -51,7 +51,7 @@ public class PlayerFinder {
 	}
 
 	private int[] getDistance(Velocity object, int distanceInTiles) {
-		PiranhaPlayer player = getPlayer();
+		Player player = getPlayer();
 
 		if (player == null)
 			return null;

@@ -6,7 +6,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNE
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -58,7 +58,7 @@ public class MoveRequest implements Request {
 
 		if (object instanceof LivingObject) {
 			LivingObject living = (LivingObject) object;
-			if (object instanceof PiranhaPlayer == false)
+			if (object instanceof Player == false)
 			System.err.println("moveRequest unfinished");
 //				living.removeBehavior(living.getBehaviorList().getObject(new LookAtPlayer(living)));
 		}

@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
@@ -45,7 +45,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	@Override
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
-			if (detectorObject instanceof PiranhaPlayer)
+			if (detectorObject instanceof Player)
 				paralyseObject();
 		}
 

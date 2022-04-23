@@ -4,7 +4,7 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.motion.CollisionLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -32,7 +32,7 @@ public class WallPassMode extends DebugMode {
 	@Override
 	public void tick(Updatable object) {
 		if (getState()) {
-			if (object instanceof PiranhaPlayer)
+			if (object instanceof Player)
 				PhysicList.getList().removeObject(new CollisionLaw());
 			else
 				// Yes, this does NOT add the law to the right place, which
@@ -48,7 +48,7 @@ public class WallPassMode extends DebugMode {
 	public void beforeObjectRender(Graphics g, Updatable object) {
 
 		Graphics2D g2d = (Graphics2D) g;
-		float alpha = getState() & object instanceof PiranhaPlayer ? 0.4f : 1f;
+		float alpha = getState() & object instanceof Player ? 0.4f : 1f;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 	}
 

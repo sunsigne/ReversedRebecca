@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FastPlayerMode extends DebugMode {
@@ -28,10 +28,10 @@ public class FastPlayerMode extends DebugMode {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object instanceof PiranhaPlayer == false)
+		if (object instanceof Player == false)
 			return;
 
-		PiranhaPlayer player = (PiranhaPlayer) object;
+		Player player = (Player) object;
 
 		if (getState())
 			player.setSpeedness(SPEEDNESS.SWIFT);

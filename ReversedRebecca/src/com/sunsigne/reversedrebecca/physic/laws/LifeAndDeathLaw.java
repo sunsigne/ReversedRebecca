@@ -4,7 +4,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LifeAndDeathLaw implements PhysicLaw {
@@ -16,10 +16,10 @@ public class LifeAndDeathLaw implements PhysicLaw {
 		if (object == null)
 			return;
 
-		if (object instanceof PiranhaPlayer == false)
+		if (object instanceof Player == false)
 			return;
 
-		PiranhaPlayer player = (PiranhaPlayer) object;
+		Player player = (Player) object;
 
 		if (PlayerHealth.getInstance().isDead())
 			player.setCondition(CONDITION.KO);

@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -29,7 +29,7 @@ public class PlayerLayerChanger {
 	////////// LAYER ////////////
 
 	public void goes(LAYER ground_layer) {
-		PiranhaPlayer player = new PlayerFinder().getPlayer();
+		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
@@ -42,7 +42,7 @@ public class PlayerLayerChanger {
 	}
 
 	public void goesUp() {
-		PiranhaPlayer player = new PlayerFinder().getPlayer();
+		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
@@ -59,7 +59,7 @@ public class PlayerLayerChanger {
 	}
 
 	public void goesDown() {
-		PiranhaPlayer player = new PlayerFinder().getPlayer();
+		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;

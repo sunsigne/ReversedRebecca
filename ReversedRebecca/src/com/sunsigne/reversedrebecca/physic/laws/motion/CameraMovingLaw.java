@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic.laws.motion;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -26,20 +26,20 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		if (object == null)
 			return;
 
-		if (object instanceof PiranhaPlayer == false)
+		if (object instanceof Player == false)
 			return;
 
-		PiranhaPlayer player = (PiranhaPlayer) object;
+		Player player = (Player) object;
 
 		moveCameraByX(player);
 		moveCameraByY(player);
 	}
 
-	private void moveCameraByX(PiranhaPlayer player) {
+	private void moveCameraByX(Player player) {
 		CAMERA.setX(-player.getX() + (Window.WIDHT - player.getWidth()) / 2);
 	}
 
-	private void moveCameraByY(PiranhaPlayer player) {
+	private void moveCameraByY(Player player) {
 		CAMERA.setY(-player.getY() + (Window.HEIGHT - player.getHeight()) / 2);
 	}
 

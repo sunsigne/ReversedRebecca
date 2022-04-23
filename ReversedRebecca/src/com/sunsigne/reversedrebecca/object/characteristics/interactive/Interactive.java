@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
@@ -32,7 +32,7 @@ public interface Interactive extends Velocity, KeyboardEvent {
 		if (isDisabled())
 			return false;
 
-		PiranhaPlayer player = new PlayerFinder().getPlayer();
+		Player player = new PlayerFinder().getPlayer();
 
 		// player is null
 		if (player == null)

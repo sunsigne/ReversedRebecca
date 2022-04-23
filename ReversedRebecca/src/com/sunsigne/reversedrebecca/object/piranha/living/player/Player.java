@@ -5,9 +5,9 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 
-public class PiranhaPlayer extends LivingObject {
+public class Player extends LivingObject {
 
-	public PiranhaPlayer(int x, int y) {
+	public Player(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
 		setUserAllowedToMovePlayer(true);
