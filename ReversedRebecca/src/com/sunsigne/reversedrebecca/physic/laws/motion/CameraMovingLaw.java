@@ -12,7 +12,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 	////////// TICK ////////////
 
-	private boolean followingPlayer = true;
+	private boolean followingPlayer;
 
 	public void setFollowingPlayer(boolean followingPlayer) {
 		this.followingPlayer = followingPlayer;
