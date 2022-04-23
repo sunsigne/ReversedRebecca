@@ -5,6 +5,9 @@ import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Player
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.other.FacingRequest;
 
 public class NPC extends LivingObject implements PlayerAvoider {
 
@@ -46,24 +49,30 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
 			if (detectorObject instanceof Player)
-				paralyseObject();
+				stopAndLookAtPlayer();
 		}
 
 		blockPath(detectorObject);
 	}
 
-	private void paralyseObject() {
+	private void stopAndLookAtPlayer() {
 		setStunned(true);
 		ConditionalListener listener = getPlayerDistanceListener(this, 3);
 		setWaitfor(listener);
 	}
 
+	private void lookAtPlayer() {
+		Request request = RequestList.getList().getObject(new FacingRequest());
+		request.doAction(this, "player");
+	}
+	
 	private ConditionalListener getPlayerDistanceListener(LivingObject object, int distance) {
 
 		return new ConditionalListener() {
 
 			@Override
 			public boolean canDoAction() {
+				lookAtPlayer();
 				return new PlayerFinder().isPlayerFutherThan(object, distance);
 			}
 

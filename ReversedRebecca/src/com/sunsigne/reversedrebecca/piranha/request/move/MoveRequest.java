@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.piranha.request.move;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
