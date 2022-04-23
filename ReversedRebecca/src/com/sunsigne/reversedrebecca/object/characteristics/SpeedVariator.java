@@ -1,6 +1,4 @@
-package com.sunsigne.reversedrebecca.object.piranha.characteristics;
-
-import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+package com.sunsigne.reversedrebecca.object.characteristics;
 
 public interface SpeedVariator extends Velocity {
 

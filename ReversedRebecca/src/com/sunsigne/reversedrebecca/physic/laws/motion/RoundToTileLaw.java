@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.physic.laws.motion;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.piranha.characteristics;
+package com.sunsigne.reversedrebecca.object.characteristics;
 
 public interface Stunnable {
 

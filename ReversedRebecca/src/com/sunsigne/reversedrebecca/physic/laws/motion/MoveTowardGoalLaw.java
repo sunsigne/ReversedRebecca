@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.laws.motion;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 

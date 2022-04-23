@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.characteristics;
 
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 
 public interface Feeling extends Stunnable {
 

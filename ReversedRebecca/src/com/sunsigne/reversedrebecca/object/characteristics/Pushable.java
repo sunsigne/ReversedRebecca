@@ -1,6 +1,4 @@
-package com.sunsigne.reversedrebecca.object.piranha.characteristics;
-
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+package com.sunsigne.reversedrebecca.object.characteristics;
 
 public interface Pushable extends CollisionDetector, Stunnable, SpeedVariator {
 

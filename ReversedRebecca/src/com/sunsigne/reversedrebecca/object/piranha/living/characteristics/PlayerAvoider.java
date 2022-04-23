@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.characteristics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.Pusher;
+import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 
 public interface PlayerAvoider extends Pusher, PathSearcher {

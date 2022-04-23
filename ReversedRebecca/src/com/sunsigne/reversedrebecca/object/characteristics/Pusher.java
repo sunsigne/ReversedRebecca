@@ -1,10 +1,8 @@
-package com.sunsigne.reversedrebecca.object.piranha.characteristics;
+package com.sunsigne.reversedrebecca.object.characteristics;
 
 import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator.SPEEDNESS;
+import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 
