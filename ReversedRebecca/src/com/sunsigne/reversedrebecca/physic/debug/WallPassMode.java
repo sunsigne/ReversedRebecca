@@ -46,15 +46,27 @@ public class WallPassMode extends DebugMode {
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
-
-		Graphics2D g2d = (Graphics2D) g;
-		float alpha = getState() & object instanceof Player ? 0.4f : 1f;
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
+		setPlayerTransluant(g, object, true);
 	}
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
+		setPlayerTransluant(g, object, false);
+	}
 
+	private void setPlayerTransluant(Graphics g, Updatable object, boolean transluant) {
+		if (object == null)
+			return;
+
+		if (object instanceof Player == false)
+			return;
+
+		if (getState() == false)
+			return;
+
+		Graphics2D g2d = (Graphics2D) g;
+		float alpha = transluant ? 0.4f : 1f;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 	}
 
 }
