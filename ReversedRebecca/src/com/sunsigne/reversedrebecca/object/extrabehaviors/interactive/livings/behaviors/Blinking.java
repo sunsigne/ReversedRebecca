@@ -1,21 +1,21 @@
 package com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors;
 
+import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.behaviors.TickBehavior;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 
 public class Blinking implements TickBehavior {
 
-	public Blinking(LivingObject living, int time) {
-		this.living = living;
+	public Blinking(/*LivingObject living, */int time) {
+//		this.living = living;
 		this.time = time;
 	}
 
 	////////// BEHAVIOR ////////////
 
-	private LivingObject living;
+	private ExtraBehaviorsObject living;
 
 	@Override
-	public LivingObject getExtraBehaviorsObject() {
+	public ExtraBehaviorsObject getExtraBehaviorsObject() {
 		return living;
 	}
 
