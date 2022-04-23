@@ -15,7 +15,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 
 	public NPC(String name, int x, int y) {
 		super(name, x, y);
-		setPlayerAvoiderType(AVOIDERTYPE.STOP);
+		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
 	}
 
 	////////// PLAYER AVOIDER ////////////
