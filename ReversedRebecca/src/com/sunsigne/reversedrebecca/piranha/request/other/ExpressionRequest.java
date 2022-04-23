@@ -32,14 +32,8 @@ public class ExpressionRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-
-//		if (object instanceof LivingObject) {
-//			LivingObject living = (LivingObject) object;
-//			living.addBehavior(new Stunned(living, 1 * Game.SEC));
-//		}
-
-//		ExpressionObject expression = new ExpressionObject(object, target.toLowerCase());
-//		object.getHandler().addObject(expression);
+		ExpressionObject expression = new ExpressionObject(object, target.toLowerCase());
+		object.getHandler().addObject(expression);
 	}
 
 }

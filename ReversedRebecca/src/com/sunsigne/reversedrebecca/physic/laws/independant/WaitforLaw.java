@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.laws.independant;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -26,8 +27,9 @@ public class WaitforLaw implements PhysicLaw {
 		if (waitfor.getWaitfor().canDoAction() == false)
 			return;
 
-		waitfor.getWaitfor().doAction();
+		GenericListener action = waitfor.getWaitfor().getAction();
 		waitfor.setWaitfor(null);
+		action.doAction();
 	}
 
 	////////// RENDER ////////////

@@ -4,15 +4,28 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ExpressionObject extends GameObject {
 
-	public ExpressionObject(ExtraBehaviorsObject object, String name) {
+	public ExpressionObject(PiranhaObject object, String name) {
 		super(object.getX(), object.getY() - Size.M);
+		stunObject(object);
 		loadImage(name);
+	}
+
+	private void stunObject(PiranhaObject object) {
+		if (object instanceof Stunnable == false)
+			return;
+
+		Stunnable stunnable = (Stunnable) object;
+		stunnable.setStunned(true);
+		new GameTimer(1 * Game.SEC, () -> stunnable.setStunned(false));
 	}
 
 	////////// TICK ////////////

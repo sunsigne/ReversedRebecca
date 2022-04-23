@@ -1,9 +1,11 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -13,7 +15,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 
 	public NPC(String name, int x, int y) {
 		super(name, x, y);
-		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
+		setPlayerAvoiderType(AVOIDERTYPE.STOP);
 	}
 
 	////////// PLAYER AVOIDER ////////////
@@ -48,7 +50,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	@Override
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
-			if (detectorObject instanceof Player)
+			if (detectorObject instanceof Player & !isMotionless())
 				stopAndLookAtPlayer();
 		}
 
@@ -57,7 +59,8 @@ public class NPC extends LivingObject implements PlayerAvoider {
 
 	private void stopAndLookAtPlayer() {
 		setStunned(true);
-		ConditionalListener listener = getPlayerDistanceListener(this, 3);
+		ConditionalListener registeredWaitfor = getWaitfor();
+		ConditionalListener listener = continue_walking_if_player_far_enough(this, registeredWaitfor);
 		setWaitfor(listener);
 	}
 
@@ -65,20 +68,29 @@ public class NPC extends LivingObject implements PlayerAvoider {
 		Request request = RequestList.getList().getObject(new FacingRequest());
 		request.doAction(this, "player");
 	}
-	
-	private ConditionalListener getPlayerDistanceListener(LivingObject object, int distance) {
+
+	private ConditionalListener continue_walking_if_player_far_enough(LivingObject object, ConditionalListener registeredWaitfor) {
 
 		return new ConditionalListener() {
 
+			Position registeredGoal = getGoal();
+			
 			@Override
 			public boolean canDoAction() {
 				lookAtPlayer();
-				return new PlayerFinder().isPlayerFutherThan(object, distance);
+				boolean playerFarEnough = new PlayerFinder().isPlayerFutherThan(object, 3);
+				boolean newGoalEtablished = getGoal() != registeredGoal;
+				return playerFarEnough | newGoalEtablished;
 			}
 
-			@Override
-			public void doAction() {
+			GenericListener action = () -> {
 				setStunned(false); // already happens because of WaitforLaw and LivingObject
+				setWaitfor(registeredWaitfor); // waitfor usualy replaces previous one, but not in this case
+			};
+
+			@Override
+			public GenericListener getAction() {
+				return action;
 			}
 		};
 	}

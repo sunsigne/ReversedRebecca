@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WaitforBehavior;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
@@ -42,7 +40,7 @@ public class WaitforRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 
 		// removal of the previous waitfor (even if unaccomplished)
-/*		object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, null)));
+		object.setWaitfor(null);
 
 		if (target.equalsIgnoreCase("null"))
 			return;
@@ -64,8 +62,8 @@ public class WaitforRequest implements Request {
 
 		// search for listener
 		ConditionalListener listener = getListener(object, generic, conditionType, value);
-		object.addBehavior(new WaitforBehavior(object, listener));
-*/	}
+		object.setWaitfor(listener);
+	}
 
 	////////// LISTENER ////////////
 
@@ -99,14 +97,16 @@ public class WaitforRequest implements Request {
 			}
 
 			@Override
-			public void doAction() {
-				generic.doAction();
+			public GenericListener getAction() {
+				return generic;
 			}
 		};
+		
+		
 	}
 
-	private ConditionalListener getPlayerDistanceListener(GenericListener generic, PiranhaObject object,
-			int distance, boolean futherType) {
+	private ConditionalListener getPlayerDistanceListener(GenericListener generic, PiranhaObject object, int distance,
+			boolean futherType) {
 
 		return new ConditionalListener() {
 
@@ -119,8 +119,8 @@ public class WaitforRequest implements Request {
 			}
 
 			@Override
-			public void doAction() {
-				generic.doAction();
+			public GenericListener getAction() {
+				return generic;
 			}
 		};
 	}
