@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.physic.SightFinder;
 import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
@@ -34,25 +34,25 @@ public class SeeRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 		doConditionalAction(object, target);
 	}
 
 	@Override
-	protected String getConditionToCheck(ExtraBehaviorsObject object) {
+	protected String getConditionToCheck(PiranhaObject object) {
 		return object.getName();
 	}
 
 	@Override
-	protected boolean analyseCondition(ExtraBehaviorsObject object, String target) {
+	protected boolean analyseCondition(PiranhaObject object, String target) {
 
 		String valueToCheck = String.valueOf(target.split("\\?")[0]);
 
 		for (Updatable tempUpdatable : object.getHandler().getList()) {
-			if (tempUpdatable instanceof ExtraBehaviorsObject == false)
+			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 
-			ExtraBehaviorsObject tempObject = (ExtraBehaviorsObject) tempUpdatable;
+			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
 			String formated_valueToCheck = new FormatedName().getName(tempObject, valueToCheck);
 
 			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))

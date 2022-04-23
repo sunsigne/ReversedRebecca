@@ -3,11 +3,11 @@ package com.sunsigne.reversedrebecca.piranha.actions;
 import java.lang.reflect.InvocationTargetException;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 
 public class ActionAnalyzer {
 
-	public Action getAction(ExtraBehaviorsObject object, String actionInstruction) {
+	public Action getAction(PiranhaObject object, String actionInstruction) {
 		if (actionInstruction == null)
 			return null;
 
@@ -17,8 +17,8 @@ public class ActionAnalyzer {
 		String actionType = actionInstruction.split(":")[0];
 		String target = actionInstruction.split(":")[1];
 
-		ExtraBehaviorsObjectAction genericAction = getExtraBehaviorsObjectAction(actionType);
-		ExtraBehaviorsObjectAction objectAction = null;
+		PiranhaObjectAction genericAction = getPiranhaObjectAction(actionType);
+		PiranhaObjectAction objectAction = null;
 
 		if (genericAction == null)
 			return null;
@@ -36,9 +36,9 @@ public class ActionAnalyzer {
 		return objectAction;
 	}
 
-	private ExtraBehaviorsObjectAction getExtraBehaviorsObjectAction(String actionType) {
+	private PiranhaObjectAction getPiranhaObjectAction(String actionType) {
 
-		for (ExtraBehaviorsObjectAction tempAction : ActionList.getList().getList()) {
+		for (PiranhaObjectAction tempAction : ActionList.getList().getList()) {
 			if (actionType.equalsIgnoreCase(tempAction.getName())) {
 				return tempAction;
 			}

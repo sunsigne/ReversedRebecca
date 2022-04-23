@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 
 public interface Request {
 
@@ -12,6 +12,6 @@ public interface Request {
 
 	boolean hasCompactWriting();
 
-	void doAction(ExtraBehaviorsObject object, String target);
+	void doAction(PiranhaObject object, String target);
 
 }

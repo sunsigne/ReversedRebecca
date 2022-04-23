@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.laws.motion.CameraMovingLaw;
@@ -35,7 +35,7 @@ public class CameraRequest implements Request, CameraDependency {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 		PhysicLaw law = PhysicList.getList().getObject(new CameraMovingLaw());
 		CameraMovingLaw camera = (CameraMovingLaw) law;
 

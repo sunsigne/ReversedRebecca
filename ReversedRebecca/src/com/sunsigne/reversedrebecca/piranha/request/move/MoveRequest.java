@@ -2,11 +2,13 @@ package com.sunsigne.reversedrebecca.piranha.request.move;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.LookAtPlayer;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.players.Player;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.piranha.characteristics.SpeedVariator.SPEEDNESS;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -40,7 +42,7 @@ public class MoveRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 		if (target.equalsIgnoreCase("stop")) {
 			object.setGoal(null);
 			return;
@@ -58,8 +60,9 @@ public class MoveRequest implements Request {
 
 		if (object instanceof LivingObject) {
 			LivingObject living = (LivingObject) object;
-			if (object instanceof Player == false)
-				living.removeBehavior(living.getBehaviorList().getObject(new LookAtPlayer(living)));
+			if (object instanceof PiranhaPlayer == false)
+			System.err.println("moveRequest unfinished");
+//				living.removeBehavior(living.getBehaviorList().getObject(new LookAtPlayer(living)));
 		}
 
 		object.setGoal(goal);

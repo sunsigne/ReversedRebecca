@@ -1,17 +1,17 @@
 package com.sunsigne.reversedrebecca.piranha.actions.action;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
-import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
+import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.other.TripleActionRequest;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
-public class TalkAction extends ExtraBehaviorsObjectAction {
+public class TalkAction extends PiranhaObjectAction {
 
 	////////// NPC ACTION ////////////
 
@@ -19,10 +19,10 @@ public class TalkAction extends ExtraBehaviorsObjectAction {
 		ActionList.getList().addObject(this);
 	}
 
-	private static ExtraBehaviorsObjectAction action = new TalkAction();
+	private static PiranhaObjectAction action = new TalkAction();
 
 	@Override
-	public ExtraBehaviorsObjectAction getAction() {
+	public PiranhaObjectAction getAction() {
 		return action;
 	}
 
@@ -36,7 +36,7 @@ public class TalkAction extends ExtraBehaviorsObjectAction {
 	////////// LISTENER ////////////
 
 	@Override
-	public GenericListener getListener(ExtraBehaviorsObject object, String target) {
+	public GenericListener getListener(PiranhaObject object, String target) {
 		GenericListener listener = () -> {
 			String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
 			path = path.concat(target + ".csv");

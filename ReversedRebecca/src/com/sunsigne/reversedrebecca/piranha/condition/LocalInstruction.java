@@ -1,13 +1,13 @@
 package com.sunsigne.reversedrebecca.piranha.condition;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class LocalInstruction {
 
-	protected void analyse(ExtraBehaviorsObject object, String condition) {
+	protected void analyse(PiranhaObject object, String condition) {
 		this.object = object;
 
 		// if NPC has no PiranhaFile
@@ -23,7 +23,7 @@ public abstract class LocalInstruction {
 		processAction();
 	}
 
-	private ExtraBehaviorsObject object;
+	private PiranhaObject object;
 	private String request;
 
 	private void processAction() {

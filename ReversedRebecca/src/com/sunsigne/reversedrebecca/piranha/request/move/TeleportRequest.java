@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.move;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -31,7 +31,7 @@ public class TeleportRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 		int x = Integer.parseInt(target.split("-")[0]);
 		int y = Integer.parseInt(target.split("-")[1]);
 

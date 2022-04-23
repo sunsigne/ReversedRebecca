@@ -2,7 +2,9 @@ package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -33,8 +35,8 @@ public class PlayerAvoiderRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
-		if (object instanceof LivingObject == false)
+	public void doAction(PiranhaObject object, String target) {
+		if (object instanceof PlayerAvoider == false)
 			return;
 
 //		PiranhaNPC npc = (PiranhaNPC) object;

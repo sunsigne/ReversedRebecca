@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionAnalyzer;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -33,7 +33,7 @@ public class TripleActionRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 
 		String[] targets = new String[] {};
 		if (target != null)

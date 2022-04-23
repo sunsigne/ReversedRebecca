@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.physic.PathFinder;
 import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
@@ -36,7 +36,7 @@ public class FacingRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 		if (isConditional(target))
 			doConditionalAction(object, target);
 		else
@@ -44,11 +44,11 @@ public class FacingRequest extends ConditionalRequest {
 	}
 
 	@Override
-	protected String getConditionToCheck(ExtraBehaviorsObject object) {
+	protected String getConditionToCheck(PiranhaObject object) {
 		return object.getFacing().getName();
 	}
 
-	private void doFacing(ExtraBehaviorsObject object, String target) {
+	private void doFacing(PiranhaObject object, String target) {
 
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {

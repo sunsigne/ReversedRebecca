@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -30,7 +30,7 @@ public class ReplacedRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 
 		Request deleteRequest = RequestList.getList().getObject(new DeleteRequest());
 		Request createRequest = RequestList.getList().getObject(new CreateRequest());

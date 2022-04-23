@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -33,7 +33,7 @@ public class DeleteRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 
 		// determinate the position
 

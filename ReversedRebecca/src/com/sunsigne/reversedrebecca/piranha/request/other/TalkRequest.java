@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -32,8 +32,8 @@ public class TalkRequest implements Request {
 	}
 
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
-		ExtraBehaviorsObjectAction action = new TalkAction();
+	public void doAction(PiranhaObject object, String target) {
+		PiranhaObjectAction action = new TalkAction();
 		action.setListener(action.getListener(object, target));
 		action.doAction();
 	}

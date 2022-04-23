@@ -1,12 +1,12 @@
 package com.sunsigne.reversedrebecca.pattern;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.PiranhaPlayer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class FormatedName {
 
-	public String getName(ExtraBehaviorsObject object, String name) {
+	public String getName(PiranhaObject object, String name) {
 
 		String lower_name = name.toLowerCase();
 

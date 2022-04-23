@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
-import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -22,7 +22,7 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChatBox implements Updatable, KeyboardEvent {
 
-	public ChatBox(ExtraBehaviorsObject object, String target, String dialogue) {
+	public ChatBox(PiranhaObject object, String target, String dialogue) {
 		this.object = object;
 		this.value = target;
 		loadImage();
@@ -59,7 +59,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 	////////// OPEN ////////////
 
-	private ExtraBehaviorsObject object;
+	private PiranhaObject object;
 
 	public void openChat() {
 		World world = World.get();
@@ -99,7 +99,7 @@ public class ChatBox implements Updatable, KeyboardEvent {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 
-			ExtraBehaviorsObject tempObject = (LivingObject) tempUpdatable;
+			PiranhaObject tempObject = (LivingObject) tempUpdatable;
 
 			if (tempObject.getName().equalsIgnoreCase(formated_living_name)) {
 				// just in case severeal object have the same name

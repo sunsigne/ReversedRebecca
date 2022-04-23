@@ -25,8 +25,8 @@ public class LookAtPlayer implements TickBehavior {
 
 	@Override
 	public void tick() {
-		Request request = RequestList.getList().getObject(new FacingRequest());
-		request.doAction(living, "player");
+//		Request request = RequestList.getList().getObject(new FacingRequest());
+//		request.doAction(living, "player");
 	}
 
 }

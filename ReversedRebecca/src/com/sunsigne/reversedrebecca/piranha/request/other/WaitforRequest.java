@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.extrabehaviors.ExtraBehaviorsObject;
 import com.sunsigne.reversedrebecca.object.extrabehaviors.interactive.livings.behaviors.WaitforBehavior;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -38,10 +39,10 @@ public class WaitforRequest implements Request {
 
 	// WARNING ! Only ONE waitfor can be active on the same time.
 	@Override
-	public void doAction(ExtraBehaviorsObject object, String target) {
+	public void doAction(PiranhaObject object, String target) {
 
 		// removal of the previous waitfor (even if unaccomplished)
-		object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, null)));
+/*		object.removeBehavior(object.getBehaviorList().getObject(new WaitforBehavior(object, null)));
 
 		if (target.equalsIgnoreCase("null"))
 			return;
@@ -64,11 +65,11 @@ public class WaitforRequest implements Request {
 		// search for listener
 		ConditionalListener listener = getListener(object, generic, conditionType, value);
 		object.addBehavior(new WaitforBehavior(object, listener));
-	}
+*/	}
 
 	////////// LISTENER ////////////
 
-	private ConditionalListener getListener(ExtraBehaviorsObject object, GenericListener generic, String conditionType,
+	private ConditionalListener getListener(PiranhaObject object, GenericListener generic, String conditionType,
 			String condition) {
 
 		switch (conditionType) {
@@ -104,7 +105,7 @@ public class WaitforRequest implements Request {
 		};
 	}
 
-	private ConditionalListener getPlayerDistanceListener(GenericListener generic, ExtraBehaviorsObject object,
+	private ConditionalListener getPlayerDistanceListener(GenericListener generic, PiranhaObject object,
 			int distance, boolean futherType) {
 
 		return new ConditionalListener() {

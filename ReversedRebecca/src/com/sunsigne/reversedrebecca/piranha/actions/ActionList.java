@@ -7,9 +7,9 @@ public class ActionList {
 
 	////////// MAP OR LIST ////////////
 
-	private static GameLimitedList<ExtraBehaviorsObjectAction> list = new GameLimitedList<>(LISTTYPE.ARRAY);
+	private static GameLimitedList<PiranhaObjectAction> list = new GameLimitedList<>(LISTTYPE.ARRAY);
 
-	public static GameLimitedList<ExtraBehaviorsObjectAction> getList() {
+	public static GameLimitedList<PiranhaObjectAction> getList() {
 		return list;
 	}
 

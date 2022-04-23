@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.actions.action;
 
 import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
-import com.sunsigne.reversedrebecca.piranha.actions.ExtraBehaviorsObjectAction;
+import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 
 public class ReadAction extends WatchAction {
 
@@ -11,10 +11,10 @@ public class ReadAction extends WatchAction {
 		ActionList.getList().addObject(this);
 	}
 
-	private static ExtraBehaviorsObjectAction action = new ReadAction();
+	private static PiranhaObjectAction action = new ReadAction();
 
 	@Override
-	public ExtraBehaviorsObjectAction getAction() {
+	public PiranhaObjectAction getAction() {
 		return action;
 	}
 
