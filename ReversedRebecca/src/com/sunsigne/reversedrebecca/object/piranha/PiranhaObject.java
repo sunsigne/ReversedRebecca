@@ -112,11 +112,6 @@ public abstract class PiranhaObject extends GameObject
 
 	////////// PATH FINDER ////////////
 
-	@Override
-	public boolean mustFollowPath() {
-		return false;
-	}
-
 	private Position goal;
 
 	@Override
