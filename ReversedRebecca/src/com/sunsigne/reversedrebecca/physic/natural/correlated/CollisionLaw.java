@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
@@ -15,15 +16,10 @@ public class CollisionLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
+		if (object instanceof CollisionDetector == false)
 			return;
 
-		CollisionDetector detectorObject = null;
-
-		if (object instanceof CollisionDetector)
-			detectorObject = (CollisionDetector) object;
-		else
-			return;
+		CollisionDetector detectorObject = (CollisionDetector) object;
 
 		Handler layer = object.getHandler();
 
@@ -31,12 +27,10 @@ public class CollisionLaw implements PhysicLaw {
 			if (object == tempObject)
 				continue;
 
-			CollisionReactor reactorObject = null;
-
-			if (tempObject instanceof CollisionReactor)
-				reactorObject = (CollisionReactor) tempObject;
-			else
+			if (tempObject instanceof CollisionReactor == false)
 				continue;
+
+			CollisionReactor reactorObject = (CollisionReactor) tempObject;
 
 			if (objectAreColliding(detectorObject, reactorObject))
 				reactorObject.collidingReaction(detectorObject);
@@ -45,16 +39,18 @@ public class CollisionLaw implements PhysicLaw {
 
 	private boolean objectAreColliding(CollisionDetector detectorObject, CollisionReactor reactorObject) {
 
-		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObject.getBounds()))
+		Rectangle reactorObjectBounds = reactorObject.getBounds();
+
+		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObjectBounds))
 			return true;
 
-		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(reactorObject.getBounds()))
+		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(reactorObjectBounds))
 			return true;
 
-		if (detectorObject.getBounds(DIRECTION.UP).intersects(reactorObject.getBounds()))
+		if (detectorObject.getBounds(DIRECTION.UP).intersects(reactorObjectBounds))
 			return true;
 
-		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(reactorObject.getBounds()))
+		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(reactorObjectBounds))
 			return true;
 
 		return false;

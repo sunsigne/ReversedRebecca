@@ -12,9 +12,6 @@ public class VelocityLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof Velocity == false)
 			return;
 

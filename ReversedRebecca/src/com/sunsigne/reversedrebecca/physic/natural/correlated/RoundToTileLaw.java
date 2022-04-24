@@ -15,9 +15,6 @@ public class RoundToTileLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof SpeedVariator == false)
 			return;
 
@@ -27,14 +24,14 @@ public class RoundToTileLaw implements PhysicLaw {
 		if (variator instanceof Player)
 			return;
 
-		int miniX = variator.getX() % variator.getSize();
-		int miniY = variator.getY() % variator.getSize();
-
 		// if the object is stunned
 		if (variator instanceof Stunnable) {
 			if (((Stunnable) variator).isStunned())
 				return;
 		}
+
+		int miniX = variator.getX() % variator.getSize();
+		int miniY = variator.getY() % variator.getSize();
 
 		// if miniX is not possible to reach with known speed
 		// OR if object is not moving in this axe
