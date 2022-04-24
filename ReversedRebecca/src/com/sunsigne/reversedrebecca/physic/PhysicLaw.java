@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.physic.laws;
+package com.sunsigne.reversedrebecca.physic;
 
 import java.awt.Graphics;
 
@@ -15,4 +15,5 @@ public interface PhysicLaw {
 	void beforeObjectRender(Graphics g, Updatable object);
 	
 	void afterObjectRender(Graphics g, Updatable object);
+	
 }

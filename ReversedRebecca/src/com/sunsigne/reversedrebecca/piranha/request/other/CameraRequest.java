@@ -2,9 +2,9 @@ package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
-import com.sunsigne.reversedrebecca.physic.laws.motion.CameraMovingLaw;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraMovingLaw;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;

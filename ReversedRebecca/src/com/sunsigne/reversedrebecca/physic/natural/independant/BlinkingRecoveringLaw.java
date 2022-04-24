@@ -1,11 +1,11 @@
-package com.sunsigne.reversedrebecca.physic.laws.independant;
+package com.sunsigne.reversedrebecca.physic.natural.independant;
 
 import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;

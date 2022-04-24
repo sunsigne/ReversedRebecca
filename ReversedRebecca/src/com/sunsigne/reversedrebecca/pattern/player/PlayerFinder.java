@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.pattern.player;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
-import com.sunsigne.reversedrebecca.physic.laws.independant.PlayerFinderLaw;
+import com.sunsigne.reversedrebecca.physic.natural.independant.PlayerFinderLaw;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class PlayerFinder {

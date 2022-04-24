@@ -1,12 +1,12 @@
-package com.sunsigne.reversedrebecca.physic.laws.motion;
+package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
-import com.sunsigne.reversedrebecca.physic.PathFinder;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 

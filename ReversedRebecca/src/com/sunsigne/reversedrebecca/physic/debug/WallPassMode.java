@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
-import com.sunsigne.reversedrebecca.physic.laws.motion.CollisionLaw;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CollisionLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WallPassMode extends DebugMode {

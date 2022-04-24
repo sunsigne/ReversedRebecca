@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.physic;
+package com.sunsigne.reversedrebecca.physic.finder;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;

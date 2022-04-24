@@ -4,13 +4,13 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.gui.DebugModeObject;
 import com.sunsigne.reversedrebecca.pattern.Cycloid;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public abstract class DebugMode extends Cycloid<Boolean> implements KeyboardEvent, PhysicLaw {
+public abstract class DebugMode extends Cycloid<Boolean> implements PhysicLaw, KeyboardEvent {
 
 	public DebugMode() {
 		super(false, true);

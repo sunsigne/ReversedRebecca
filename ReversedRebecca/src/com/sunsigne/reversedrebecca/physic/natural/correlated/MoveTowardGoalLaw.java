@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.physic.laws.motion;
+package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class MoveTowardGoalLaw implements PhysicLaw {

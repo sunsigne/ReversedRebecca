@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.physic.laws.independant;
+package com.sunsigne.reversedrebecca.physic.natural.independant;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WaitforLaw implements PhysicLaw {

@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.physic.laws.motion;
+package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
-import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VelocityLaw implements PhysicLaw {

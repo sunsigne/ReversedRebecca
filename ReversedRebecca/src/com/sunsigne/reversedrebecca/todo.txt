@@ -10,6 +10,9 @@
 
 	////////// EN COURS (URGENT) ////////////
 
+	reorganiser tous les folders (sauf system et physic)
+	optimiser tous les folders (sauf system)
+
 	pas fini : le Blinking
 	! C'est actuellement Sarah (npc-01) qui met la camera sur le joueur, car il est maitnenant Piranha
 	!! CameraRequest ne rétablie pas naturellement le CameraMovingLaw si on reset, il faudrait créer un genre de fichier "SETUP" (mais avec 6 lettres) dans chaque dossier de lvl pour établir des règles comme l'invincibilité du joueur au quoi, et nottamment le placement de la caméra
