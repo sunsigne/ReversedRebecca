@@ -29,6 +29,8 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 		if (object instanceof World) // to happens ONCE a tick
 			time--;
 
+
+		
 		if (time <= 0)
 			time = Game.SEC - 1;
 	}
@@ -41,15 +43,15 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
-		setObjectVisible(g, object, false);
+		setObjectVisible(g, object, true);
 	}
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		setObjectVisible(g, object, true);
+		setObjectVisible(g, object, false);
 	}
 
-	private void setObjectVisible(Graphics g, Updatable object, boolean visible) {
+	private void setObjectVisible(Graphics g, Updatable object, boolean shouldBlink) {
 		if (object instanceof Health == false)
 			return;
 
@@ -58,9 +60,7 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 		if (!health.isRecovering())
 			return;
 
-		float alpha = visible ? 1 : 0;
-		if (alpha == 0 & shouldBlink() == false)
-			alpha = 1;
+		float alpha = shouldBlink & shouldBlink() ? 0 : 1;
 
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
