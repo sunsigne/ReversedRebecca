@@ -8,9 +8,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
-import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 
-public abstract class LivingObject extends PiranhaObject implements Feeling, CollisionDetector, Pusher, PathSearcher {
+public abstract class LivingObject extends PiranhaObject implements Health, CollisionDetector, Pusher, PathSearcher {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -18,6 +18,8 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
+		setMaxHp(3);
+		setFullHp();
 	}
 
 	////////// NAME ////////////
@@ -79,6 +81,60 @@ public abstract class LivingObject extends PiranhaObject implements Feeling, Col
 	@Override
 	public void setCondition(CONDITION condition) {
 		this.condition = condition;
+	}
+
+	////////// INVULNERABILITY ////////////
+
+	private boolean invulnerable;
+
+	@Override
+	public boolean isInvulnerable() {
+		return invulnerable;
+	}
+
+	@Override
+	public void setInvulnerable(boolean invulnerable) {
+		this.invulnerable = invulnerable;
+	}
+
+	private boolean recovering;
+
+	@Override
+	public boolean isRecovering() {
+		return recovering;
+	}
+
+	@Override
+	public void setRecovering(boolean recovering) {
+		this.recovering = recovering;
+	}
+
+	////////// MAX HP ////////////
+
+	private int maxhp;
+
+	@Override
+	public int getMaxHp() {
+		return maxhp;
+	}
+
+	@Override
+	public void setMaxHp(int maxhp) {
+		this.maxhp = maxhp;
+	}
+
+	////////// HP ////////////
+
+	private int hp;
+
+	@Override
+	public int getHp() {
+		return hp;
+	}
+
+	@Override
+	public void setHp(int hp) {
+		this.hp = hp;
 	}
 
 	////////// PATH FINDER ////////////

@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.physic.laws;
+package com.sunsigne.reversedrebecca.physic.laws.independant;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LifeAndDeathLaw implements PhysicLaw {
@@ -16,13 +16,13 @@ public class LifeAndDeathLaw implements PhysicLaw {
 		if (object == null)
 			return;
 
-		if (object instanceof Player == false)
+		if (object instanceof Health == false)
 			return;
 
-		Player player = (Player) object;
+		Health health = (Health) object;
 
-		if (PlayerHealth.getInstance().isDead())
-			player.setCondition(CONDITION.KO);
+		if (health.isDead())
+			health.setCondition(CONDITION.KO);
 	}
 
 	////////// RENDER ////////////

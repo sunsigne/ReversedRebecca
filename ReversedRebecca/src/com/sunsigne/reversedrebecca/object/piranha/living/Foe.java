@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
-import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -32,7 +31,7 @@ public class Foe extends LivingObject {
 	private boolean canFollowPlayer(Player player) {
 
 		// player is dead
-		if (PlayerHealth.getInstance().isDead())
+		if (player.isDead())
 			return false;
 
 		// foe and player are not not on the same layer

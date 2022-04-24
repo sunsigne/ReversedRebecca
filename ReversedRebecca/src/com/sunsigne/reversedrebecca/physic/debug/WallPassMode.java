@@ -55,9 +55,6 @@ public class WallPassMode extends DebugMode {
 	}
 
 	private void setPlayerTransluant(Graphics g, Updatable object, boolean transluant) {
-		if (object == null)
-			return;
-
 		if (object instanceof Player == false)
 			return;
 

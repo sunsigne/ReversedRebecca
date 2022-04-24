@@ -45,21 +45,8 @@ public class PlayerHealth extends Characteristic {
 
 	private int maxhp;
 
-	public int getMaxHp() {
-		return maxhp;
-	}
 
-	public void setMaxHp(int maxhp) {
-		this.maxhp = maxhp;
-	}
 
-	public boolean isFullHp() {
-		return hp == maxhp;
-	}
-
-	public void setFullHp() {
-		hp = maxhp;
-	}
 
 	////////// HP ////////////
 
@@ -73,29 +60,7 @@ public class PlayerHealth extends Characteristic {
 		this.hp = hp;
 	}
 
-	public void addHp() {
-		addHp(1);
-	}
 
-	public void addHp(int amount) {
-		if (hp + amount > maxhp)
-			setFullHp();
-		else
-			hp = hp + amount;
-	}
 
-	public void removeHp() {
-		if (!isInvulnerable())
-			removeHp(1);
-	}
-
-	public void removeHp(int amount) {
-		if (!isInvulnerable())
-			hp = hp - amount;
-	}
-
-	public boolean isDead() {
-		return hp <= 0;
-	}
 
 }

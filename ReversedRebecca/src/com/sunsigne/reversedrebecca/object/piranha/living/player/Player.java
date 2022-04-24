@@ -4,14 +4,18 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Player extends LivingObject {
+
+	private String file = "userdata/characteristics.csv";
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y);
 		setDisabled(true);
 		setUserAllowedToMovePlayer(true);
 		setCanInterract(true);
+		loadHealth();
 	}
 
 	////////// SPEED ////////////
@@ -19,6 +23,13 @@ public class Player extends LivingObject {
 	private void updateSpeed() {
 		if (isPathNull())
 			setSpeedness(SPEEDNESS.PLAYER_SPEED);
+	}
+
+	////////// HP ////////////
+
+	private void loadHealth() {
+		setMaxHp(Integer.parseInt(new FileTask().read("MaxHp", file)));
+		setFullHp();
 	}
 
 	////////// PATH FINDER ////////////
