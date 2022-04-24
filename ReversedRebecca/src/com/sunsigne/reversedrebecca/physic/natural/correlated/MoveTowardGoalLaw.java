@@ -13,8 +13,6 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
 
 		// object does not have a PathFinding
 		if (object instanceof PathSearcher == false)
@@ -22,12 +20,12 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 
 		PathSearcher searcher = (PathSearcher) object;
 
-		// object does not have an objective
-		if (searcher.getPath() == null)
-			return;
-
 		// object is not supposed to move
 		if (searcher.mustFollowPath() == false)
+			return;
+		
+		// object does not have an objective
+		if (searcher.getPath() == null)
 			return;
 
 		// object is currently stunned

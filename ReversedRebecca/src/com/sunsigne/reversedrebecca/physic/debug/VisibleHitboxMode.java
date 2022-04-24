@@ -46,10 +46,10 @@ public class VisibleHitboxMode extends DebugMode {
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (object == null)
+		if (getState() == false)
 			return;
-
-		if (!getState())
+		
+		if (object == null)
 			return;
 
 		Graphics2D g2d = (Graphics2D) g;

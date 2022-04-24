@@ -28,13 +28,14 @@ public class SwiftPlayerMode extends DebugMode {
 
 	@Override
 	public void tick(Updatable object) {
+		if (getState() == false)
+			return;
+		
 		if (object instanceof Player == false)
 			return;
 
 		Player player = (Player) object;
-
-		if (getState())
-			player.setSpeedness(SPEEDNESS.SWIFT);
+		player.setSpeedness(SPEEDNESS.SWIFT);
 	}
 
 	////////// RENDER ////////////

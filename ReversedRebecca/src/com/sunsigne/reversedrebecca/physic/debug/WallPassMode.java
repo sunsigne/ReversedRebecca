@@ -33,11 +33,13 @@ public class WallPassMode extends DebugMode {
 	public void tick(Updatable object) {
 		if (getState()) {
 			if (object instanceof Player)
+				// For a weird reason, this tends to "pause" the game, but
+				// as it's a dev tool, it's not that important anyway.
 				PhysicList.getList().removeObject(new CollisionLaw());
 			else
 				// Yes, this does NOT add the law to the right place, which
 				// could cause pathfinding and camera issues.
-				// As it's a dev tool, it's not that important anyway.
+				// As it's still a dev tool, it's still not important.
 				PhysicList.getList().addObject(new CollisionLaw());
 		}
 	}
@@ -55,10 +57,10 @@ public class WallPassMode extends DebugMode {
 	}
 
 	private void setPlayerTransluant(Graphics g, Updatable object, boolean transluant) {
-		if (object instanceof Player == false)
+		if (getState() == false)
 			return;
 
-		if (getState() == false)
+		if (object instanceof Player == false)
 			return;
 
 		Graphics2D g2d = (Graphics2D) g;

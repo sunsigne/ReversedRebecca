@@ -57,7 +57,7 @@ public class ElevatorMode extends DebugMode {
 	}
 
 	private void elevatorKey(int key) {
-		if (!getState())
+		if (getState() == false)
 			return;
 
 		Player player = new PlayerFinder().getPlayer();
