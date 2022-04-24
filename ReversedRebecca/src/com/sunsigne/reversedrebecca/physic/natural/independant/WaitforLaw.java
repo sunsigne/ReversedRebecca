@@ -21,9 +21,6 @@ public class WaitforLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof Waitfor == false)
 			return;
 

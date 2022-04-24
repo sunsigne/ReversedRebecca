@@ -21,9 +21,6 @@ public class LifeAndDeathLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof Health == false)
 			return;
 

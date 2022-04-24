@@ -26,11 +26,11 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object instanceof World) // to happens ONCE a tick
-			time--;
+		if (object instanceof World == false) // to happens ONCE a tick
+			return;
 
+		time--;
 
-		
 		if (time <= 0)
 			time = Game.SEC - 1;
 	}
