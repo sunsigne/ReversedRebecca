@@ -6,11 +6,11 @@ import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNE
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class FastPlayerMode extends DebugMode {
+public class SwiftPlayerMode extends DebugMode {
 
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new FastPlayerMode();
+	private static DebugMode debugMode = new SwiftPlayerMode();
 
 	@Override
 	public DebugMode getDebugMode() {
@@ -21,7 +21,7 @@ public class FastPlayerMode extends DebugMode {
 
 	@Override
 	public String getName() {
-		return "debugmode_fast_player";
+		return "debugmode_swift_player";
 	}
 
 	////////// TICK ////////////
