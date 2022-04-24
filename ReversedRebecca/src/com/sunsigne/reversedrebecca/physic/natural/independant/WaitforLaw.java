@@ -4,10 +4,18 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class WaitforLaw implements PhysicLaw {
+public class WaitforLaw extends IndependantLaw {
+
+	////////// INDEPENDANT LAW ////////////
+
+	private static IndependantLaw independantLaw = new WaitforLaw();
+
+	@Override
+	public IndependantLaw getIndependantLaw() {
+		return independantLaw;
+	}
 
 	////////// TICK ////////////
 

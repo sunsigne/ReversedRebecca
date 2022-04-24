@@ -8,4 +8,7 @@ public abstract class IndependantLaw implements PhysicLaw {
 	public IndependantLaw() {
 		PhysicList.getList().addObject(this);
 	}
+	
+	public abstract IndependantLaw getIndependantLaw();
+	
 }

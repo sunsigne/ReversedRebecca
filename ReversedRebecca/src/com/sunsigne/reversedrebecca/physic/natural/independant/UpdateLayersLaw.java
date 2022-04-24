@@ -2,12 +2,20 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class UpdateLayersLaw implements PhysicLaw {
+public class UpdateLayersLaw extends IndependantLaw {
+
+	////////// INDEPENDANT LAW ////////////
+
+	private static IndependantLaw independantLaw = new UpdateLayersLaw();
+
+	@Override
+	public IndependantLaw getIndependantLaw() {
+		return independantLaw;
+	}
 
 	////////// TICK ////////////
 

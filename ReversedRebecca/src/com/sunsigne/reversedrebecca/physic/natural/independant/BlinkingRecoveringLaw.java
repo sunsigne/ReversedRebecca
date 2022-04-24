@@ -5,12 +5,20 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class BlinkingRecoveringLaw implements PhysicLaw {
+public class BlinkingRecoveringLaw extends IndependantLaw {
+
+	////////// INDEPENDANT LAW ////////////
+
+	private static IndependantLaw independantLaw = new BlinkingRecoveringLaw();
+
+	@Override
+	public IndependantLaw getIndependantLaw() {
+		return independantLaw;
+	}
 
 	////////// TICK ////////////
 
@@ -18,8 +26,8 @@ public class BlinkingRecoveringLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if(object instanceof World) // to happens ONCE a tick
-		time--;
+		if (object instanceof World) // to happens ONCE a tick
+			time--;
 
 		if (time <= 0)
 			time = Game.SEC - 1;
@@ -53,7 +61,7 @@ public class BlinkingRecoveringLaw implements PhysicLaw {
 		float alpha = visible ? 1 : 0;
 		if (alpha == 0 & shouldBlink() == false)
 			alpha = 1;
-		
+
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 	}

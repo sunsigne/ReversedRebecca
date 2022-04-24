@@ -3,11 +3,19 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class LifeAndDeathLaw implements PhysicLaw {
+public class LifeAndDeathLaw extends IndependantLaw {
+
+	////////// INDEPENDANT LAW ////////////
+
+	private static IndependantLaw independantLaw = new LifeAndDeathLaw();
+
+	@Override
+	public IndependantLaw getIndependantLaw() {
+		return independantLaw;
+	}
 
 	////////// TICK ////////////
 
