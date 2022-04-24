@@ -14,9 +14,6 @@ public class PlayerBlockingAvoiderLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof PlayerAvoider == false)
 			return;
 
@@ -35,9 +32,8 @@ public class PlayerBlockingAvoiderLaw implements PhysicLaw {
 		if (registeredBlocking == false)
 			return new PlayerFinder().isPlayerFutherThan(avoider, 2) == false;
 
-		else {
+		else
 			return new PlayerFinder().isPlayerCloserThan(avoider, 5);
-		}
 	}
 
 	////////// RENDER ////////////

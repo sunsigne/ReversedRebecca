@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 
-public abstract class LivingObject extends PiranhaObject implements Health, CollisionDetector, Pusher, PathSearcher {
+public abstract class LivingObject extends PiranhaObject implements Health, Pusher, PathSearcher {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.

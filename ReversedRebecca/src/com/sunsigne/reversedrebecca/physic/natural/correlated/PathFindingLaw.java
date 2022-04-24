@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PathFindingLaw implements PhysicLaw {
@@ -16,16 +15,19 @@ public class PathFindingLaw implements PhysicLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object == null)
-			return;
-
 		if (object instanceof PathSearcher == false)
 			return;
 
 		PathSearcher searcher = (PathSearcher) object;
 
+		// searcher has no goal
+		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
+			searcher.setPath(DIRECTION.NULL);
+			return;
+		}
+
 		// update only when centered on a tile ...
-		if (searcher.getX() % Size.M != 0 | searcher.getY() % Size.M != 0) {
+		if (searcher.getX() % searcher.getSize() != 0 | searcher.getY() % searcher.getSize() != 0) {
 			if (searcher instanceof Facing == false)
 				return;
 
@@ -33,12 +35,6 @@ public class PathFindingLaw implements PhysicLaw {
 			// ... except if facing something else than the path
 			if (facing.getFacing() == searcher.getPath())
 				return;
-		}
-
-		// searcher has no goal
-		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
-			searcher.setPath(DIRECTION.NULL);
-			return;
 		}
 
 		// search path

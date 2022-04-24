@@ -8,6 +8,7 @@ public class InteractiveObject extends PiranhaObject {
 
 	public InteractiveObject(String name, int x, int y) {
 		super(name, x, y);
+		setStunned(true); // looks stupid, but allow to bypass the RoundToTileLaw
 	}
 
 	////////// PATH FINDER ////////////

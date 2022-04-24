@@ -4,7 +4,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.physic.natural.independant.PlayerFinderLaw;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public class PlayerFinder {
 
@@ -17,7 +16,8 @@ public class PlayerFinder {
 	////////// DISTANCE ////////////
 
 	private int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, Size.M);
+		Player player = getPlayer();
+		return new TilePos().getTilePos(pos, player.getSize());
 	}
 
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {
@@ -34,7 +34,7 @@ public class PlayerFinder {
 		int[] distance = getDistance(object, distanceInTiles);
 
 		if (distance == null)
-			return true;
+			return false;
 
 		else
 			return distance[0] < distance[1];
@@ -51,7 +51,7 @@ public class PlayerFinder {
 
 		int diffX = getTilePos(object.getX()) - getTilePos(player.getX());
 		int diffY = getTilePos(object.getY()) - getTilePos(player.getY());
-		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / Size.M;
+		int playerDistance = (Math.abs(diffX) + Math.abs(diffY)) / player.getSize();
 
 		return new int[] { playerDistance, distanceInTiles };
 	}

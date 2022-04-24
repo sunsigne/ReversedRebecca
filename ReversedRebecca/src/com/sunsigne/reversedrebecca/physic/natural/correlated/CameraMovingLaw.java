@@ -23,9 +23,6 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		if (!followingPlayer)
 			return;
 
-		if (object == null)
-			return;
-
 		if (object instanceof Player == false)
 			return;
 
