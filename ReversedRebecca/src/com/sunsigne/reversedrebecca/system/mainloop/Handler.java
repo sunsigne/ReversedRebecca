@@ -15,7 +15,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	public Handler(boolean cameraDependant) {
 		super(LISTTYPE.LINKED);
 		this.cameraDependant = cameraDependant;
-		SuperHandler.getGameList().addObject(this);
+		SuperHandler.getList().addObject(this);
 	}
 
 	////////// USEFULL ////////////

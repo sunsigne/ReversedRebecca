@@ -4,13 +4,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.puzzle.KillPuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
-import com.sunsigne.reversedrebecca.object.puzzle.key.KeyObject;
-import com.sunsigne.reversedrebecca.object.puzzle.key.LockObject;
-import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -24,8 +20,8 @@ public abstract class HackPuzzle extends Puzzle {
 
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
-		new GameCursor().setVisible(false);
-		
+		new GameCursor().setCursor(null);
+
 		createVirus();
 	}
 
@@ -37,37 +33,31 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	////////// PUZZLE ////////////
-	
-	private void createVirus() {		
+
+	private void createVirus() {
 		PuzzleObject virus = new VirusObject(this, getCol(3), getRow(6));
 		LAYER.PUZZLE.addObject(virus);
 	}
 
-/*
-	protected void createRandompWalls(int numOfWalls) {
-		if (numOfWalls <= 0)
-			return;
-
-		Handler handler = LAYER.PUZZLE.getHandler();
-		BufferedImage img = getWallTexture();
-		int safeRow = getRow(new RandomGenerator().getIntBetween(1, 6));
-
-		int count = 0;
-
-		while (count < numOfWalls) {
-			count++;
-
-			int radCol = getCol(new RandomGenerator().getIntBetween(2, 11));
-			int radRow;
-			do {
-				radRow = getRow(new RandomGenerator().getIntBetween(1, 6));
-			} while (radRow == safeRow);
-
-			handler.addObject(new WallPuzzle(img, radCol, radRow));
-			handler.addObject(new KillPuzzleObject(this, radCol, radRow));
-		}
-	}
-*/
+	/*
+	 * protected void createRandompWalls(int numOfWalls) { if (numOfWalls <= 0)
+	 * return;
+	 * 
+	 * Handler handler = LAYER.PUZZLE.getHandler(); BufferedImage img =
+	 * getWallTexture(); int safeRow = getRow(new RandomGenerator().getIntBetween(1,
+	 * 6));
+	 * 
+	 * int count = 0;
+	 * 
+	 * while (count < numOfWalls) { count++;
+	 * 
+	 * int radCol = getCol(new RandomGenerator().getIntBetween(2, 11)); int radRow;
+	 * do { radRow = getRow(new RandomGenerator().getIntBetween(1, 6)); } while
+	 * (radRow == safeRow);
+	 * 
+	 * handler.addObject(new WallPuzzle(img, radCol, radRow)); handler.addObject(new
+	 * KillPuzzleObject(this, radCol, radRow)); } }
+	 */
 	////////// OPEN ////////////
 
 	@Override

@@ -54,6 +54,7 @@
 
 	////////// DIFFICILE ////////////
 
+	Afficher le texte par défault trouvé (peut importe la langue) si texte non trouvé, avant d'afficher un message d'erreur
 	Faire en sorte que la caméra fonctionne avec un léger delay
 	creer un system de log pour revoir les conversations
 

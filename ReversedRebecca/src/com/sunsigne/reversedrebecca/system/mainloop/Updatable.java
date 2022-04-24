@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 public interface Updatable {
 
 	default Handler getHandler() {
-		for (Handler tempHandler : SuperHandler.getGameList().getList()) {
+		for (Handler tempHandler : SuperHandler.getList().getList()) {
 			if (tempHandler.containsObject(this))
 				return tempHandler;
 		}

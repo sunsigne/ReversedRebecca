@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 public interface KeyboardEvent {
 
 	////////// KEYBOARD ////////////
-	
+
 	KeyboardController getKeyBoardController();
 
 	void keyPressed(KeyEvent e);

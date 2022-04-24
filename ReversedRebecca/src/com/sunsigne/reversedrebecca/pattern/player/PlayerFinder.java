@@ -3,25 +3,15 @@ package com.sunsigne.reversedrebecca.pattern.player;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.physic.laws.independant.PlayerFinderLaw;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PlayerFinder {
 
 	////////// PLAYER ////////////
 
 	public Player getPlayer() {
-
-		for (LAYER tempLayer : LAYER.values()) {
-			var list = tempLayer.getHandler().getList();
-
-			for (Updatable tempUpdatable : list) {
-				if (tempUpdatable instanceof Player)
-					return (Player) tempUpdatable;
-			}
-		}
-		return null;
+		return PlayerFinderLaw.getPlayer();
 	}
 
 	////////// DISTANCE ////////////

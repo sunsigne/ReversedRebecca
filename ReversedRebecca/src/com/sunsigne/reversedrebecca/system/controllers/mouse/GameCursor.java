@@ -10,34 +10,28 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class GameCursor {
 
-	public Cursor getDefaultCursor() {
-		return Cursor.getDefaultCursor();
+	public void setCursor(CURSOR_TYPE cursorType) {
+		if (cursorType == null)
+			cursorType = CURSOR_TYPE.NULL;
+
+		Game.getInstance().setCursor(cursorType.getCursor());
 	}
 
-	public void setVisible(boolean visible) {
+	////////// CURSOR TYPE ////////////
 
-		Cursor cursor = getEmptyCursor();
+	public enum CURSOR_TYPE {
+		NULL("null_cursor"), NORMAL("game_cursor");
 
-		if (visible)
-			cursor = getGameCursor();
+		private Cursor cursor;
 
-		Game.getInstance().setCursor(cursor);
-	}
+		CURSOR_TYPE(String name) {
+			BufferedImage img = new ImageTask().loadImage("textures/cursor/" + name);
+			cursor = Toolkit.getDefaultToolkit().createCustomCursor(img, new Point(0, 0), name);
+		}
 
-	public Cursor getGameCursor() {
-
-		BufferedImage gameCursorImg = new ImageTask().loadImage("game_cursor");
-		Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(gameCursorImg, new Point(0, 0), "game cursor");
-
-		return cursor;
-	}
-
-	private Cursor getEmptyCursor() {
-
-		BufferedImage emptyImg = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
-		Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(emptyImg, new Point(0, 0), "empty cursor");
-
-		return cursor;
+		private Cursor getCursor() {
+			return cursor;
+		}
 	}
 
 }

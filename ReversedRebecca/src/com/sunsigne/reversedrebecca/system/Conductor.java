@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -21,7 +22,7 @@ public class Conductor {
 	public void startApp() {
 
 		LAYER.LOADING.addObject(new LoadingScreen());
-		new GameCursor().setVisible(true);
+		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new Window(Game.getInstance());
 		Game.getInstance().start();
 		new DualChecker();

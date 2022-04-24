@@ -19,8 +19,8 @@ public abstract class KeyPuzzle extends Puzzle {
 
 	public KeyPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
-		new GameCursor().setVisible(false);
-		
+		new GameCursor().setCursor(null);
+
 		createDeathWall();
 	}
 
@@ -32,14 +32,15 @@ public abstract class KeyPuzzle extends Puzzle {
 	}
 
 	////////// PUZZLE ////////////
-	
+
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
-			// it is almost invisible in VisibleHitboxMode because this is added before Walls
+			// it is almost invisible in VisibleHitboxMode because this is added before
+			// Walls
 			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, getCol(0), getRow(row)));
 		}
 	}
-	
+
 	protected void createRandompWalls(int numOfWalls) {
 		if (numOfWalls <= 0)
 			return;

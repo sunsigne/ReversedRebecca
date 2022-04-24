@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic;
 import com.sunsigne.reversedrebecca.physic.laws.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.BlinkingRecoveringLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.LifeAndDeathLaw;
+import com.sunsigne.reversedrebecca.physic.laws.independant.PlayerFinderLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.physic.laws.independant.WaitforLaw;
 import com.sunsigne.reversedrebecca.physic.laws.motion.CameraMovingLaw;
@@ -25,8 +26,9 @@ public class NaturalLaws {
 	}
 
 	////////// INDEPENDANT ////////////
-	
+
 	private void loadIndependantLaws() {
+		load(new PlayerFinderLaw());
 		load(new UpdateLayersLaw());
 		load(new WaitforLaw());
 		load(new BlinkingRecoveringLaw());
@@ -34,7 +36,7 @@ public class NaturalLaws {
 	}
 
 	////////// MOTION ////////////
-	
+
 	// must be added in this very specific order
 	private void loadMotionLaws() {
 		load(new VelocityLaw());

@@ -27,7 +27,7 @@ public class Game extends Canvas implements Runnable {
 
 	}
 
-	private static Game instance = null;
+	private static Game instance;
 
 	public static Game getInstance() {
 		return instance;
@@ -60,7 +60,7 @@ public class Game extends Canvas implements Runnable {
 	////////// MAIN LOOP ////////////
 
 	public static final int SEC = 60;
-	
+
 	@Override
 	public void run() {
 
@@ -85,8 +85,7 @@ public class Game extends Canvas implements Runnable {
 				try {
 					tick();
 				} catch (ConcurrentModificationException | NullPointerException e) {
-					// some list are sometimes changed during a tick instead of between
-					// two ticks, which may cause crash. As the next tick repair the problem,
+					// some ticks may be compromised. As the next tick repair the problem,
 					// no need to proccess this exception.
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -153,5 +152,5 @@ public class Game extends Canvas implements Runnable {
 
 		g.dispose();
 		bs.show();
-	}	
+	}
 }

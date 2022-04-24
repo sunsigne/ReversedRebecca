@@ -9,23 +9,23 @@ public class SuperHandler {
 
 	////////// MAP OR LIST ////////////
 
-	private static GameList<Handler> super_handler_gameList = new GameList<>(LISTTYPE.ARRAY);
+	private static GameList<Handler> list = new GameList<>(LISTTYPE.ARRAY);
 
-	protected static GameList<Handler> getGameList() {
-		return super_handler_gameList;
+	protected static GameList<Handler> getList() {
+		return list;
 	}
 
 	////////// TICK ////////////
 
 	protected static void tick() {
-		for (Handler tempObject : getGameList().getList())
+		for (Handler tempObject : getList().getList())
 			tempObject.tick();
 	}
 
 	////////// RENDER ////////////
 
 	protected static void render(Graphics g) {
-		for (Handler tempObject : getGameList().getList())
+		for (Handler tempObject : getList().getList())
 			tempObject.render(g);
 	}
 }

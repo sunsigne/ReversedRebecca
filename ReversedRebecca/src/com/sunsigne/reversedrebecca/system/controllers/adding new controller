@@ -1,0 +1,1 @@
+When adding any new Controller, don't forget to update the method "destroyControls()" in Updatable

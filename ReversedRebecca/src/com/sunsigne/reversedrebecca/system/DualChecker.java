@@ -38,7 +38,8 @@ public class DualChecker implements Updatable {
 
 		// wait more than one tick
 		try {
-			Thread.sleep(20);
+			int tickTime = 1000 / Game.SEC;
+			Thread.sleep(tickTime + 5);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -58,7 +59,6 @@ public class DualChecker implements Updatable {
 	private void stopApp() {
 		new SoundTask().playSound("sound/error");
 		JOptionPane.showMessageDialog(null, "The game is already running.");
-
 		new Conductor().stopApp();
 	}
 
