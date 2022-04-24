@@ -16,6 +16,7 @@
 
 	////////// A FINIR ////////////
 
+	Il y a comme un mini lag quand un son est lancé
 	Foe est une vielle classe pas nécessairement adaptée, à utiliser ou update.
 	Quand on fonce dans un Pusher de dos, on est poussé à trazvers le mur à côté de ce dernier
 	faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
@@ -38,6 +39,7 @@
 
 	////////// PIRA ////////////
 
+	remplacer invulnérable player request par invulnerable tout court
 	create une resquet pour la condition (feeling)
 	changer create_onthespot ?
 	CameraRequest -> rendre possible le fait de suivre un autre object ?

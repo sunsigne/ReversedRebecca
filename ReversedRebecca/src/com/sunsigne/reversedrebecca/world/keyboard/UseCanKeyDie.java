@@ -2,7 +2,8 @@ package com.sunsigne.reversedrebecca.world.keyboard;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class UseCanKeyDie extends WorldKeyboard {
 
@@ -18,7 +19,11 @@ public class UseCanKeyDie extends WorldKeyboard {
 	@Override
 	public void keyPressed(int key) {
 		if (key == KeyEvent.VK_EXCLAMATION_MARK)
-			PlayerHealth.getInstance().setHp(0);
+		{
+			Player player = new PlayerFinder().getPlayer();
+			player.removeHp(player.getMaxHp());
+		}
+
 	}
 
 	@Override

@@ -1,7 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.characteristics.PlayerHealth;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -33,7 +34,8 @@ public class InvulnerablePlayerRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		boolean invulnerable = Boolean.parseBoolean(target);
-		PlayerHealth.getInstance().setInvulnerable(invulnerable);
+		Player player = new PlayerFinder().getPlayer();
+		player.setInvulnerable(invulnerable);
 	}
 
 }
