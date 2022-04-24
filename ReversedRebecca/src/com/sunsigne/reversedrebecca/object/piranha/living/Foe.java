@@ -29,7 +29,10 @@ public class Foe extends LivingObject {
 	}
 
 	private boolean canFollowPlayer(Player player) {
-
+		// no player found
+		if (player == null)
+			return false;
+		
 		// player is dead
 		if (player.isDead())
 			return false;
@@ -42,7 +45,7 @@ public class Foe extends LivingObject {
 	}
 
 	////////// COLLISION ////////////
-	
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (detectorObject instanceof Player)
