@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.util.List;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
@@ -30,15 +31,17 @@ public class MultiToolMode extends DebugMode {
 
 	@Override
 	public void tick(Updatable object) {
-		if (!getState())
+		if (getState() == false)
 			return;
 
 		if (ToolPlayerList.getList().getList().isEmpty())
 			return;
 
-		ToolPlayer tool = ToolPlayerList.getList().getList().get(0);
+		List<ToolPlayer> list = ToolPlayerList.getList().getList();
 
-		// one tool is enough, no need to check for all
+		ToolPlayer tool = list.get(list.size() - 1);
+
+		// last tool is enough, no need to check for all
 		if (tool.getDifficulty() != LVL.NULL)
 			return;
 
@@ -65,16 +68,12 @@ public class MultiToolMode extends DebugMode {
 		if (key == getKeyEvent()) {
 			cycle();
 
-			if (getState())
-				ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.RED));
-			else
+			if (getState() == false)
 				ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.NULL));
-
 		}
 	}
 
 	private void setToolToDifficulty(ToolPlayer tool, LVL difficulty) {
-
 		if (difficulty != LVL.NULL)
 			tool.setMaxDifficulty(difficulty);
 		tool.setDifficulty(difficulty);
