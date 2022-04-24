@@ -4,7 +4,6 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class SightFinder implements Position {
@@ -45,7 +44,7 @@ public class SightFinder implements Position {
 	}
 
 	private int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, Size.M);
+		return new TilePos().getTilePos(pos, observer.getSize());
 	}
 
 	////////// SIZE ////////////
@@ -64,9 +63,9 @@ public class SightFinder implements Position {
 
 	public boolean isGoalInSight() {
 
-		if(goal == null)
+		if (goal == null)
 			return false;
-		
+
 		// false if not the same layer
 		if (observer.getHandler() != goal.getHandler())
 			return false;
@@ -83,7 +82,8 @@ public class SightFinder implements Position {
 			setY(getY() + Math.round((-1 / distance) * diffY));
 
 			// if a "wall" (blocking sight object) is on the way, return false
-			GameObject wall = Handler.getObjectAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()), Size.M);
+			GameObject wall = Handler.getObjectAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()),
+					observer.getSize());
 
 			if (wall == null)
 				continue;

@@ -66,7 +66,7 @@ public class PathFinder implements Position {
 	}
 
 	private int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, Size.M);
+		return new TilePos().getTilePos(pos, searcher.getSize());
 	}
 
 	////////// SIZE ////////////
@@ -252,7 +252,7 @@ public class PathFinder implements Position {
 
 		boolean there_are_more_paths = false;
 
-		// creation of a copy list, to avoir currentModification
+		// creation of a copy list, to avoid concurrentModification
 		GameList<PathPointObject> copy_list = new GameList<PathPointObject>(LISTTYPE.ARRAY);
 		copy_list.getList().addAll(valid_path_point_list.getList());
 
