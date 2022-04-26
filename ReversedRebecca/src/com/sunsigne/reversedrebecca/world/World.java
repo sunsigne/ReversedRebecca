@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
+import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -52,6 +53,7 @@ public class World implements Updatable {
 
 		initParameters(mapName, layer);
 		createMap();
+		addSetup();
 		addGUI();
 		addControlers();
 		start();
@@ -75,6 +77,10 @@ public class World implements Updatable {
 		for (GUI tempGUI : GUIList.getList().getList()) {
 			LAYER.GUI.addObject(tempGUI);
 		}
+	}
+
+	private void addSetup() {
+		LAYER.DEBUG.addObject(new SetupObject());
 	}
 
 	private void addControlers() {
