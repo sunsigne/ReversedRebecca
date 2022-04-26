@@ -20,14 +20,20 @@ public class KOAnimation extends ConstantAnimation {
 
 	////////// TEXTURE ////////////
 
+	private static boolean erreurAlreadyDisplayed;
+
 	@Override
 	protected BufferedImage[] loadAnimation(DIRECTION direction) {
 
-		System.err.println("ko animation in only 1 direction");
+		if (!erreurAlreadyDisplayed) {
+			System.err.println("ko animation in only 1 direction");
+			erreurAlreadyDisplayed = true;
+		}
+
 		String path = getName();
 		BufferedImage img0 = loadImage(path);
 
 		return new BufferedImage[] { img0 };
 	}
-	
+
 }
