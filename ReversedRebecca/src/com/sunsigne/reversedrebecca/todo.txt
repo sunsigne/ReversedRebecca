@@ -17,7 +17,7 @@
 
 	////////// A FINIR ////////////
 
-	faire en sorte que els magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
+	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
 	Il y a comme un mini lag quand un son est lancé
 	Foe est une vielle classe pas nécessairement adaptée, à utiliser ou update.
 	Quand on fonce dans un Pusher de dos, on est poussé à trazvers le mur à côté de ce dernier
