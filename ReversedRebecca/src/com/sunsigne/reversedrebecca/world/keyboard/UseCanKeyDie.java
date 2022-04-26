@@ -18,8 +18,7 @@ public class UseCanKeyDie extends WorldKeyboard {
 
 	@Override
 	public void keyPressed(int key) {
-		if (key == KeyEvent.VK_EXCLAMATION_MARK)
-		{
+		if (key == KeyEvent.VK_EXCLAMATION_MARK) {
 			Player player = new PlayerFinder().getPlayer();
 			player.removeHp(player.getMaxHp());
 		}

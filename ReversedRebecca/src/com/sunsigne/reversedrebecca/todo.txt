@@ -10,8 +10,8 @@
 
 	////////// EN COURS (URGENT) ////////////
 
-	reorganiser tous les folders (sauf system et physic)
-	optimiser tous les folders (sauf system et physic)
+	reorganiser tous les folders (sauf system, physic et world (sauf mappable))
+	optimiser tous les folders (sauf system, physic et world (sauf mappable))
 	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure vitesse)
 	Même logique pour les Piranha object qui sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 

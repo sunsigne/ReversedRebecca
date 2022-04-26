@@ -17,10 +17,8 @@ public class UseCanKeyRestart extends WorldKeyboard {
 
 	@Override
 	public void keyPressed(int key) {
-		if (key == KeyEvent.VK_R)
-		{
+		if (key == KeyEvent.VK_R) {
 			new World("lvl001");
-			World.get().freeze(false);
 		}
 	}
 

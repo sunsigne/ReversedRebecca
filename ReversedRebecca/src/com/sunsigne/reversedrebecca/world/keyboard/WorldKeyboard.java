@@ -10,17 +10,6 @@ public abstract class WorldKeyboard implements KeyboardEvent {
 
 	public abstract WorldKeyboard getWorldKeyboard();
 
-	private World world;
-
-	private boolean worldIsNull() {
-		if (world == null) {
-			world = World.get();
-			if (world == null)
-				return true;
-		}
-		return false;
-	}
-
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
@@ -38,7 +27,7 @@ public abstract class WorldKeyboard implements KeyboardEvent {
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (worldIsNull())
+		if (World.get() == null)
 			return;
 
 		if (pressed)
@@ -51,7 +40,7 @@ public abstract class WorldKeyboard implements KeyboardEvent {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if (worldIsNull())
+		if (World.get() == null)
 			return;
 
 		int key = e.getKeyCode();

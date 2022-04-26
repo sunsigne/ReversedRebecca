@@ -147,7 +147,7 @@ public class World implements Updatable {
 				return map_list.getList().get(index);
 			index++;
 		}
-		return new ImageTask().drawMissingTexture();
+		return drawBlackSquare();
 	}
 
 	////////// USEFULL ////////////
@@ -168,6 +168,7 @@ public class World implements Updatable {
 	public void destroy() {
 		closePuzzle();
 		resetLayers();
+		freeze(false);
 		instance = null;
 		new CharacteristicList().reset();
 		MemoryList.getList().clear();
