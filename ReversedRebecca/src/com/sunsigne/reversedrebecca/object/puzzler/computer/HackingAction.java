@@ -39,9 +39,7 @@ public class HackingAction extends OpenPuzzleAction {
 
 	@Override
 	public PuzzlerObject getNullObject(int x, int y) {
-		ComputerObject nullComputer = new ComputerObject(LVL.NULL, x, y);
-		nullComputer.setDisabled(true);
-		return nullComputer;
+		return new NullComputerObject(x, y);
 	}
 
 	////////// KEYBOARD ////////////

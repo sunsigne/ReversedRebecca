@@ -3,6 +3,7 @@
 
 
 Le Type de Requête NAME permet de renommer un objet.
+Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut essayer d'éviter d'utiliser plusieurs fois le même nom.
 
 exemple :
 TIME -> 0 = NAME -> BOB

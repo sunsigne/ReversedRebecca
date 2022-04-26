@@ -37,6 +37,8 @@ public class CreateRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
+		System.out.println("creation");
+		
 		// determinate the position
 
 		String pos = String.valueOf(target.split(":")[1]);
@@ -54,6 +56,9 @@ public class CreateRequest implements Request {
 
 		// creation of the object
 
+		System.out.println("x : " + x + " / y : " + y);
+		System.out.println(object);
+		
 		if (creation != null)
 			object.getHandler().getList().add(0, creation);
 	}
