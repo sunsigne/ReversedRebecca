@@ -29,7 +29,7 @@ public class MappablePurpleKey implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 5, 255 };
+		int[] rgb = { 1, 6, 255 };
 		return rgb;
 	}
 

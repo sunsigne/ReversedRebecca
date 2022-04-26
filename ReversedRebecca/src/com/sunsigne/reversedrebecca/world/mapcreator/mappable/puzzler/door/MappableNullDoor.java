@@ -27,7 +27,7 @@ public class MappableNullDoor implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 255, 0 };
+		int[] rgb = { 1, 255, 0 };
 		return rgb;
 	}
 	

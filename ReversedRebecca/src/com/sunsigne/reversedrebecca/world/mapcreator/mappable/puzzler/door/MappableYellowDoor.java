@@ -28,7 +28,7 @@ public class MappableYellowDoor implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 255, 3 };
+		int[] rgb = { 1, 255, 3 };
 		return rgb;
 	}
 	

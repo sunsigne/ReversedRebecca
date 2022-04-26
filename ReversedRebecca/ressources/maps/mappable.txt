@@ -1,0 +1,115 @@
+Les mappables sont des classes Java programmées pour créer des objets à partir de pastilles de couleurs sur un fichier _content.png
+Le mot apparaissant devant _content ne peut être choisi que parmi les suivants : downiest, down, world, up, upper, uppiest
+Il est important de noter que le fichier _content.png DOIT être un carré : si l'image fait 57 pixel de large, elle doit faire 57 pixel de haut.
+
+Chaque pastille, par sa couleur RGB exacte, créera un objet précis sur la map. Voici la bibliothèque référençant ces pastilles.
+
+
+
+The mappables are Java classes programmed to create objects from color chips on a file _content.png
+The word before _content can only be one of those : downest, down, world, up, upper, uppest
+It is important to note that the file _content.png MUST be a scare : if the image is 57 pixel wide, it must be 57 pixel high.
+
+Each chip, by its exact RGB color, will create a specific object on the map. Here is the chip SEO library. 
+
+
+////// NIVEAU / LEVEL //////
+
+Null -> 0 (pas toujours autorisé / not always allowed)
+Cyan / Cyan -> 1
+Verte / Green -> 2
+Jaune / Yellow -> 3
+Orange / Orange -> 4
+Rouge / Red -> 5
+Violette / Purple -> 6
+
+
+////// OUTILS / TOOLS //////
+
+Red = dépend de l'outil / depends on the tool
+Green = voir niveau / see level
+Blue = 255
+
+Clef / Key -> 1
+Bombe / Bomb -> 2
+
+exemple : 
+Bombe Verte / Green Bomb : 2-2-255
+Clef Rouge / Red Key : 1-5-255
+
+
+////// PUZZLER //////
+
+Red = dépend du puzzler / depends on the puzzler
+Green = 255
+Blue = voir niveau / see level
+
+Porte / Door -> 1
+Gravas / Rubble -> 2
+Ordinateur / Computer -> 3
+
+exemple : 
+Porte Null / Null Door : 1-255-0
+Gravas Jaune / Yellw Rubble : 2-255-3
+
+
+////// VIVANTS / LIVING //////
+
+Red = 255
+Green = dépend du vivant / depends on the living
+Blue = 0
+
+Joueur / Player -> 0
+Ennemi / Foe -> 255
+
+Les PNJ peuvent être customisés grâce à des fichiers csv dans les dossiers de niveau. Voir la documentation Piranha.
+NPC can be customized thank to csv files in the level's folder. See the Piranha documentation. 
+
+PNJ-01 / NPC-01 -> 1
+PNJ-02 / NPC-02 -> 2
+PNJ-03 / NPC-03 -> 3
+...
+PNJ-29 / NPC-29 -> 29
+PNJ-30 / NPC-30 -> 30
+
+exemple : 
+Joueur / Player : 255-0-0
+PNJ-17 / NPC-17 : 255-17-0
+
+
+////// INTERACTIFS / INTERACTIVE //////
+
+Red = dépend de l'objet / depends on the object
+Green = 255
+Blue = 255
+
+Les objets peuvent être customisé exactement de la même façon que les vivants.
+The objets can be customized exactly the same way than the living. 
+
+OBJ-01 -> 1
+OBJ-02 -> 2
+OBJ-03 -> 3
+...
+OBJ-49 -> 49
+OBJ-50 -> 50
+
+
+////// DECORATION //////
+
+
+à compléter
+
+
+////// AUTRE / OTHER //////
+
+Rien / Nothing : 0-0-0
+Mur / Wall : 255-255-255
+
+Les points de passages sont des repères pour les PNJ lorsque leur objectif (là où ils veulent aller) est inatteignable par un "simple coude".
+Ils sont gourmands en ressource, n'en mettre que là où c'est nécessaire.
+
+Path Points are landmarks for NPC when its goal (where it wants to go) is unreachable with a "single bend".
+It is resource intensive, put it only where it needs to.
+
+Point de passage / Path Point : 48-48-48
+

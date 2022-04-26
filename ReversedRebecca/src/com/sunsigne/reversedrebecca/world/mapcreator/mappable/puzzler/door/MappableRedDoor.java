@@ -28,7 +28,7 @@ public class MappableRedDoor implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 255, 5 };
+		int[] rgb = { 1, 255, 5 };
 		return rgb;
 	}
 	

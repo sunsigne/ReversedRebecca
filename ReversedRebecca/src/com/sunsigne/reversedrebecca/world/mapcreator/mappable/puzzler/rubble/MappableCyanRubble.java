@@ -28,7 +28,7 @@ public class MappableCyanRubble implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 1, 255, 1 };
+		int[] rgb = { 2, 255, 1 };
 		return rgb;
 	}
 	

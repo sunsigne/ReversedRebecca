@@ -28,7 +28,7 @@ public class MappableGreenComputer implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 2, 255, 2 };
+		int[] rgb = { 3, 255, 2 };
 		return rgb;
 	}
 

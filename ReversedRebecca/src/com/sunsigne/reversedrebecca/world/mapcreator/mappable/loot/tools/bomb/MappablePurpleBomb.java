@@ -29,7 +29,7 @@ public class MappablePurpleBomb implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 1, 5, 255 };
+		int[] rgb = { 2, 6, 255 };
 		return rgb;
 	}
 

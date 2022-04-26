@@ -28,7 +28,7 @@ public class MappableOrangeComputer implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 2, 255, 4 };
+		int[] rgb = { 3, 255, 4 };
 		return rgb;
 	}
 

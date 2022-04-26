@@ -17,6 +17,7 @@
 
 	////////// A FINIR ////////////
 
+	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
 	Il y a comme un mini lag quand un son est lancé
 	Foe est une vielle classe pas nécessairement adaptée, à utiliser ou update.

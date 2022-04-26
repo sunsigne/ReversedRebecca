@@ -29,7 +29,7 @@ public class MappableYellowKey implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 0, 2, 255 };
+		int[] rgb = { 1, 3, 255 };
 		return rgb;
 	}
 
