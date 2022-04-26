@@ -101,11 +101,8 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 			PiranhaObject tempObject = (LivingObject) tempUpdatable;
 
-			if (tempObject.getName().equalsIgnoreCase(formated_living_name)) {
-				// just in case severeal object have the same name
-				if (tempObject == object)
-					instruction.doAction(tempObject, formated_facing);
-			}
+			if (tempObject.getName().equalsIgnoreCase(formated_living_name))
+				instruction.doAction(tempObject, formated_facing);
 		}
 	}
 
