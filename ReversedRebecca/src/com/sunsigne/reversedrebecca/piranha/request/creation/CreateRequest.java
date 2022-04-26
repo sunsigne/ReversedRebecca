@@ -37,10 +37,8 @@ public class CreateRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
-		System.out.println("creation");
-		
 		// determinate the position
-
+		
 		String pos = String.valueOf(target.split(":")[1]);
 		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
@@ -55,9 +53,6 @@ public class CreateRequest implements Request {
 		GameObject creation = determinateCreation(type, goal.getX(), goal.getY());
 
 		// creation of the object
-
-		System.out.println("x : " + x + " / y : " + y);
-		System.out.println(object);
 		
 		if (creation != null)
 			object.getHandler().getList().add(0, creation);
