@@ -13,37 +13,32 @@
 	reorganiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
 	optimiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
 
-	simplifier le system WaitRequest (créer un shortcut ?)
-	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure vitesse)
+	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure performances)
 	Même logique pour les Piranha object qui sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
 
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
-	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
-	Il y a comme un mini lag quand un son est lancé
+	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
 	Foe est une vielle classe pas nécessairement adaptée, à utiliser ou update.
-	Quand on fonce dans un Pusher de dos, on est poussé à trazvers le mur à côté de ce dernier
-	faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
+	Quand on fonce dans un Pusher de dos, on est poussé à trazvers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
-	Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
-	! movingToGoal de living a tendance à donner un faux positif isMotionLess pour les behavior
 	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
-	Animation pour le point d'exclamation
+	Animation pour le point d'exclamation ?
 	La plante jaune n'est pas finie
-	finir l'ordinateur saboté (action en soi + vérification de la traduction + mini cinématique)
-	finir le design des personnages (seuls sarah et rebecca sont finie, et encore l'option "dialgoue" n'est pas faite)
-	faire une animation de saut sur place (pour erendre les diagloues + vivants)
+	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialgoue" n'est pas faite)
+	faire une animation de saut sur place (pour rendre les diagloues + vivants) ?
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
-	FINIR LE PNG QUI SE PISSE DESSUS (traces de pas + temporairement immobile (TOUTE la partie après l'ouverture de la porte)
+	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place)
 	
 
 	////////// PIRA ////////////
 
+	simplifier le system WaitRequest (créer un shortcut ?)
 	creer une music request !!!!!
 	remplacer invulnérable player request par invulnerable tout court
 	create une resquet pour la condition (feeling)
@@ -51,9 +46,8 @@
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
-	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ...
-	prévenir dans la doc que les mémory sont lourdes, ne pas faire de conflit de nom !!!	
-	choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
+	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ... créer un register Request qui ferait le travail ?
+	prévenir dans la doc que les memory et registers sont lourds, ne pas faire de conflit de nom !!! choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 	finir la doc
 	!! Prévenir qu'un seul WAITFOR peut être actif en même temps (dans la doc)
 
@@ -67,8 +61,8 @@
 	////////// FACILE ////////////
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
-	vérifier les couleurs de la map (surtout le peepuddle)
-	Peeboy doit pleurer dans la cryroom (animation ou quoi)
+	changer les couleurs Mappable de peepuddle
+	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec)
 	MovingToPlayer des foes devrait s'adapter à la distance
 	DieWhenNoHp -> kill() prévoir un restart
@@ -80,6 +74,7 @@
 	
 	////////// SONS ////////////
 	
+	Ajouter un son quand les joueurs parlent
 	crer le système de volume de musique
 	bruit de poussage
 	SountTask pas fini !
@@ -87,13 +82,12 @@
 	sons pour le hack puzzle !
 	SoundVolume & Volume : réfléchir au système le + efficace PUIS créer la GUI		
 	Buttons -> should play a sound too
-	Ajouter un son quand les joueurs parlent
 	Changer le volume de la musique quand le joueurs est en plein dialogue
 
 	////////// A CREER PLUS TARD ////////////
 
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
-	Animation de saut sur place, de pleur dans un coin, de douche
+	Animation de douche ?
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
@@ -109,7 +103,7 @@
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
-	un pouvoir qui consiste à dépasser de 1 un des outils de 1 (le premier qu'on dépasse par exemple)
+	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 
 	
