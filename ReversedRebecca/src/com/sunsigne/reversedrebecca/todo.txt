@@ -55,7 +55,6 @@
 
 	ToolGui fait du loadImage DANS le render, ce qui est gourmand en performances
 	Afficher le texte par défault trouvé (peut importe la langue) si texte non trouvé, avant d'afficher un message d'erreur
-	Faire en sorte que la caméra fonctionne avec un léger delay
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
@@ -86,6 +85,7 @@
 
 	////////// A CREER PLUS TARD ////////////
 
+	des options pour chanbger les touches, la langue, le volume, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
