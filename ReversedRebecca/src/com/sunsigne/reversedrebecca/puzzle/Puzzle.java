@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
@@ -84,10 +85,10 @@ public abstract class Puzzle implements Updatable {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 
 		if (isPuzzleWon) {
-			new SoundTask().playSound(getVictorySound());
+			new SoundTask().play(SOUNDTYPE.SOUND, getVictorySound());
 			actionOnWinning.doAction();
 		} else
-			new SoundTask().playSound("sound/fail");
+			new SoundTask().play(SOUNDTYPE.SOUND, "sound/fail");
 	}
 
 	////////// SOUND ////////////

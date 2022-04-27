@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -57,7 +58,7 @@ public class DualChecker implements Updatable {
 	}
 
 	private void stopApp() {
-		new SoundTask().playSound("sound/error");
+		new SoundTask().play(SOUNDTYPE.ERROR, "sound/error");
 		JOptionPane.showMessageDialog(null, "The game is already running.");
 		new Conductor().stopApp();
 	}

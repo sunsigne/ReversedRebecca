@@ -18,4 +18,5 @@ public class Translatable {
 		BufferedImage img = new ImageTask().loadImage("texts/" + Language.getInstance().getLang() + "/" + "lang/flag");
 		return img;
 	}
+	
 }

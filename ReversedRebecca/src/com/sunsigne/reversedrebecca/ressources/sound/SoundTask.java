@@ -12,20 +12,22 @@ import com.sunsigne.reversedrebecca.Infos;
 
 public class SoundTask {
 
+	////////// SOUNDTYPE ////////////
+	
+	public enum SOUNDTYPE {
+		SOUND, VOICE, MUSIC, ERROR;
+	}
+	
 	////////// SOUND ////////////
 
-	public void playSound(String path) {
-		playSound(SoundVolume.getVolume(), path);
-	}
-
-	// use this very function only if you want to display an error message
-	public void playSound(double volume, String path) {
+	public void play(SOUNDTYPE soundType, String path) {
 		if(path == null)
 			return;
 		
 		String path0 = "/ressources/audio/" + path + ".wav";
 		Clip soundclip;
-
+		double volume = getVolume(soundType);
+		
 		try {
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
@@ -35,8 +37,23 @@ public class SoundTask {
 			soundclip.start();
 		} catch (Exception e) {
 			e.printStackTrace();
-			playSound("sound/nope");
+			play(SOUNDTYPE.ERROR, "sound/nope");
 		}
+	}
+
+	private double getVolume(SOUNDTYPE soundType) {
+		switch(soundType) {
+		case SOUND:
+			return SoundVolume.getVolume();			
+		case VOICE:
+			break;
+		case MUSIC:
+			break;
+		case ERROR:
+			return 1;		
+		}
+		
+		return 1;
 	}
 
 	// volume between 0.0 and 2.0

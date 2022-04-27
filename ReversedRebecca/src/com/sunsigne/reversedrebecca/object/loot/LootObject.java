@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LootObject extends GameObject implements CollisionReactor {
@@ -42,7 +43,7 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 		collidingReaction(detectorObject, false, () -> {
 			getHandler().removeObject(this);
 			LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
-			new SoundTask().playSound("sound/loot");
+			new SoundTask().play(SOUNDTYPE.SOUND, "sound/loot");
 			actionWhenLooted();
 		});
 	}

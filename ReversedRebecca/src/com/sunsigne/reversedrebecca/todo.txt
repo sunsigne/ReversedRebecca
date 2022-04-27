@@ -10,12 +10,9 @@
 
 	////////// EN COURS ////////////
 
-	Dégeu : les actions sont caotiques : walk, read, talk, turn off ... trouver un moyen de demander le nom d'une action en piranha (2 target par exemple)
-	créer une requete de son (pour objet 3)
-	simplifier le system d'attente (créer un shortcut ?)
-
-	reorganiser tous les folders (sauf system, physic et world (sauf mappable-other))
-	optimiser tous les folders (sauf system, physic et world (sauf mappable-other))
+	simplifier le system WaitRequest (créer un shortcut ?)
+	reorganiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
+	optimiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
 	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure vitesse)
 	Même logique pour les Piranha object qui sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
@@ -47,6 +44,7 @@
 
 	////////// PIRA ////////////
 
+	creer une music request !!!!!
 	remplacer invulnérable player request par invulnerable tout court
 	create une resquet pour la condition (feeling)
 	changer create_onthespot ?
@@ -61,6 +59,7 @@
 
 	////////// DIFFICILE ////////////
 
+	ToolGui fait du loadImage DANS le render, ce qui est gourmand en performances
 	Afficher le texte par défault trouvé (peut importe la langue) si texte non trouvé, avant d'afficher un message d'erreur
 	Faire en sorte que la caméra fonctionne avec un léger delay
 	creer un system de log pour revoir les conversations
@@ -81,6 +80,7 @@
 	
 	////////// SONS ////////////
 	
+	crer le système de volume de musique
 	bruit de poussage
 	SountTask pas fini !
 	son pour le puzzle door !

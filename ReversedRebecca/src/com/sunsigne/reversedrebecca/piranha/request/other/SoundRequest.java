@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class SoundRequest implements Request {
 
@@ -33,7 +34,7 @@ public class SoundRequest implements Request {
 	// WARNING ! Each name should be different in a same folder
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		new SoundTask().playSound("sound/" + target.toLowerCase());
+		new SoundTask().play(SOUNDTYPE.SOUND, "sound/" + target.toLowerCase());
 	}
 
 }
