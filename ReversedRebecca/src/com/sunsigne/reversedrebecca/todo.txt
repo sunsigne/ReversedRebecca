@@ -21,7 +21,7 @@
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
 	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
-	Foe est une vielle classe pas nécessairement adaptée, à utiliser ou update.
+
 	Quand on fonce dans un Pusher de dos, on est poussé à trazvers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
@@ -53,12 +53,14 @@
 
 	////////// DIFFICILE ////////////
 
+	créer un 3ème type de camera "smooth"
 	ToolGui fait du loadImage DANS le render, ce qui est gourmand en performances
 	Afficher le texte par défault trouvé (peut importe la langue) si texte non trouvé, avant d'afficher un message d'erreur
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
 
+	Le debugTool a les graphismes qui plantes si lancé AVANT un world
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle
 	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
@@ -85,6 +87,7 @@
 
 	////////// A CREER PLUS TARD ////////////
 
+	Faire des boss et des Foes avec armes et/ou Puzzle
 	des options pour chanbger les touches, la langue, le volume, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?

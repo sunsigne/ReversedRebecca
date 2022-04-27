@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
+import com.sunsigne.reversedrebecca.object.other.ExclamationObject;
 import com.sunsigne.reversedrebecca.object.other.ExpressionObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -32,7 +33,13 @@ public class ExpressionRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		ExpressionObject expression = new ExpressionObject(object, target.toLowerCase());
+		ExpressionObject expression;
+
+		if (target.equalsIgnoreCase("exclamation"))
+			expression = new ExclamationObject(object, target);
+		else
+			expression = new ExpressionObject(object, target);
+
 		object.getHandler().addObject(expression);
 	}
 
