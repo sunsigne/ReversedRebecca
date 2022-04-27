@@ -28,7 +28,6 @@
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
 	Lorsqu'aucun sous sol ou étage n'est chargé, le debug mode étage fonctionne de façon étrange
-	Animation pour le point d'exclamation ?
 	La plante jaune n'est pas finie
 	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialgoue" n'est pas faite)
 	faire une animation de saut sur place (pour rendre les diagloues + vivants) ?
