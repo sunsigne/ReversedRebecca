@@ -1,0 +1,39 @@
+package com.sunsigne.reversedrebecca.piranha.request.other;
+
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+
+public class SoundRequest implements Request {
+
+	////////// REQUEST ////////////
+
+	public SoundRequest() {
+		RequestList.getList().addObject(this);
+	}
+
+	private static Request action = new SoundRequest();
+
+	@Override
+	public Request getRequest() {
+		return action;
+	}
+
+	@Override
+	public String getType() {
+		return "SOUND";
+	}
+
+	@Override
+	public boolean hasCompactWriting() {
+		return true;
+	}
+
+	// WARNING ! Each name should be different in a same folder
+	@Override
+	public void doAction(PiranhaObject object, String target) {
+		new SoundTask().playSound("sound/" + target.toLowerCase());
+	}
+
+}
