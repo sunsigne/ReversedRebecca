@@ -10,9 +10,10 @@
 
 	////////// EN COURS ////////////
 
-	simplifier le system WaitRequest (créer un shortcut ?)
 	reorganiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
 	optimiser tous les folders (sauf system, physic, ressources (java) et world (sauf mappable-other))
+
+	simplifier le system WaitRequest (créer un shortcut ?)
 	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure vitesse)
 	Même logique pour les Piranha object qui sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
@@ -27,7 +28,6 @@
 	faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
 	Dans pusher, hurtObject ne peut pour l'isntant QUE blesser le joueur (code pas propre!)
-	Lorsqu'un NPC passe sur une dalle "goal", il s'arrête pendant 1 frame et c'est dégeu à regarder
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps

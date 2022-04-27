@@ -111,11 +111,8 @@ public class PathFinder implements Position {
 
 	private DIRECTION findPath(boolean allow_complex_path) {
 
-		if (isGoalReached()) {
-			searcher.setGoal(null);
-			new GoalCondition().registerValue(searcher, goal);
-			return path;
-		}
+		if (isGoalReached())
+			return potentialNewPath();
 
 		boolean WOH = wallOnTheWay(0, true); // wall from origin to goal moving horizontally
 		boolean WOV = wallOnTheWay(0, false); // wall from origin to goal moving vertically
@@ -139,6 +136,17 @@ public class PathFinder implements Position {
 			return DIRECTION.NULL;
 
 		return findComplexePath();
+	}
+
+	private DIRECTION potentialNewPath() {
+		searcher.setGoal(null);
+		new GoalCondition().registerValue(searcher, goal);
+
+		if (searcher.getGoal() == null)
+			return path;
+
+		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true);
+		return pathFinder.getPath();
 	}
 
 	private DIRECTION findComplexePath() {

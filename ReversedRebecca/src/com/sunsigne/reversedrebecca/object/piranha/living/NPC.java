@@ -18,6 +18,13 @@ public class NPC extends LivingObject implements PlayerAvoider {
 		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
 	}
 
+	@Override
+	public void tick() {
+		super.tick();
+		if(getName().equalsIgnoreCase("peeboy"))
+			System.out.println(isMotionless());
+	}
+	
 	////////// PLAYER AVOIDER ////////////
 
 	private boolean playerBlockingAvoider;
