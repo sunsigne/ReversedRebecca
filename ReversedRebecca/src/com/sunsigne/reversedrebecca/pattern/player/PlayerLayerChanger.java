@@ -1,11 +1,14 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.world.World;
+import com.sunsigne.reversedrebecca.world.mapcreator.GroundRendering;
 
 public class PlayerLayerChanger {
 
@@ -28,6 +31,14 @@ public class PlayerLayerChanger {
 
 	////////// LAYER ////////////
 
+	private boolean layerDoesNotExist(LAYER ground_layer) {
+		GroundRendering groundRedering = (GroundRendering) ground_layer.getHandler().getList().get(0);
+		BufferedImage img = groundRedering.getWorld().getImageMap(ground_layer);
+		// this happens when no image for the Layer exist in the lvl folder, a "fake
+		// image" of 1 pixel is generated
+		return img.getWidth() == 1;
+	}
+
 	public void goes(LAYER ground_layer) {
 		Player player = new PlayerFinder().getPlayer();
 
@@ -35,6 +46,9 @@ public class PlayerLayerChanger {
 			return;
 
 		LAYER content_layer = new LayerDualizer().getContentFromGround(ground_layer);
+
+		if (layerDoesNotExist(ground_layer))
+			return;
 
 		player.getHandler().softRemoveObject(player);
 		content_layer.addObject(player);

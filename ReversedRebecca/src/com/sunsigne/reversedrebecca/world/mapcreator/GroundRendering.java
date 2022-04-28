@@ -15,6 +15,12 @@ public class GroundRendering implements Updatable {
 		this.world = world;
 		this.layer = layer;
 	}
+	
+	private World world;
+	
+	public World getWorld() {
+		return world;
+	}
 
 	////////// TICK ////////////
 	
@@ -25,7 +31,6 @@ public class GroundRendering implements Updatable {
 
 	////////// RENDER ////////////
 
-	private World world;
 	private LAYER layer;
 	
 	@Override
