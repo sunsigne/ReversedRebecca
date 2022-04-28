@@ -8,10 +8,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.KillPuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -77,8 +76,7 @@ public abstract class KeyPuzzle extends Puzzle {
 	@Override
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
-		g.setColor(green);
-		g.fillRect(Size.L, Size.L, Window.WIDHT - 2 * Size.L, Window.HEIGHT - 2 * Size.L);
+		new TransluantLayer().drawPuzzle(g, green);
 	}
 
 }

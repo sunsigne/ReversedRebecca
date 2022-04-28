@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.pattern;
+package com.sunsigne.reversedrebecca.system.controllers.mouse;
 
 import java.awt.MouseInfo;
 import java.awt.Point;

@@ -6,16 +6,16 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.Window;
 
 public abstract class BombPuzzle extends Puzzle {
 
 	public BombPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
-		
+
 		createBombs();
 	}
 
@@ -31,7 +31,7 @@ public abstract class BombPuzzle extends Puzzle {
 	private BombObject[] bomb = new BombObject[4];
 
 	public abstract BombObject getBomb(Puzzle puzzle, int x, int y);
-	
+
 	protected void createBombs() {
 		for (int index = 0; index < 4; index++) {
 
@@ -70,8 +70,7 @@ public abstract class BombPuzzle extends Puzzle {
 	@Override
 	public void render(Graphics g) {
 		Color red = new Color(50, 10, 10, 240);
-		g.setColor(red);
-		g.fillRect(Size.L, Size.L, Window.WIDHT - 2 * Size.L, Window.HEIGHT - 2 * Size.L);
+		new TransluantLayer().drawPuzzle(g, red);
 	}
 
 }

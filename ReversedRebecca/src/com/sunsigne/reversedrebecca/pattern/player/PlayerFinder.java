@@ -15,10 +15,6 @@ public class PlayerFinder {
 
 	////////// DISTANCE ////////////
 
-	private int getTilePos(int pos) {
-		return new TilePos().getTilePos(pos, getPlayer().getSize());
-	}
-
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {
 		int[] distance = getDistance(object, distanceInTiles);
 
@@ -35,6 +31,10 @@ public class PlayerFinder {
 			return false;
 
 		return distance[0] < distance[1];
+	}
+
+	private int getTilePos(int pos) {
+		return new TilePos().getTilePos(pos, getPlayer().getSize());
 	}
 
 	private int[] getDistance(Velocity object, int distanceInTiles) {

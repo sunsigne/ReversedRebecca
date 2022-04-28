@@ -7,11 +7,9 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 public class FormatedName {
 
 	public String getName(PiranhaObject object, String name) {
-
 		String lower_name = name.toLowerCase();
 
 		switch (lower_name) {
-
 		case "player":
 			Player player = new PlayerFinder().getPlayer();
 			if (player == null)
@@ -22,7 +20,6 @@ public class FormatedName {
 		case "object":
 			return object.getName();
 		}
-
 		return lower_name;
 	}
 

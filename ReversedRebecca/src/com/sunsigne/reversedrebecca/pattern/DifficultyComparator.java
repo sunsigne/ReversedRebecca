@@ -34,7 +34,7 @@ public class DifficultyComparator {
 	}
 
 	public boolean isPositiveUpgade(LVL tool_player_lvl, LVL tool_lvl) {
-		return new DifficultyComparator().canUseTool(tool_player_lvl, tool_lvl);
+		return canUseTool(tool_player_lvl, tool_lvl);
 	}
 
 	public boolean isForbiddenUpgrade(LVL max_lvl, LVL lvl) {
