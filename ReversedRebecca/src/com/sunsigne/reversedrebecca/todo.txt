@@ -10,8 +10,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser tous les folders (sauf system, physic, ressources (java), pattern (sauf TextDecoration) et world (sauf mappable-other))
-	optimiser tous les folders (sauf system, physic, ressources (java), pattern (sauf TextDecoration)  et world (sauf mappable-other))
+	reorganiser (menu, object, piranha, puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
+	optimiser (menu, object, piranha, puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
@@ -50,8 +50,6 @@
 	////////// DIFFICILE ////////////
 
 	creer le type "violet" dans la gui
-	créer un 3ème type de camera "smooth"
-	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
 

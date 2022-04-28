@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -37,12 +38,16 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	private void moveCameraByX(Player player) {
 		float targetX = -player.getX() + (Window.WIDHT - player.getWidth()) / 2;
 		float cameraX = CAMERA.getX();
-
 		float delay = 1.0f;
-		if (CameraOption.getType() == CAMERA_TYPE.DYNAMIC)
-			delay = 0.1f;
 
-		CAMERA.setX(cameraX + (targetX - cameraX) * delay);
+		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
+			CAMERA.setX(targetX); // == CAMERA.setX(cameraX + (targetX - cameraX) * delay);
+			return;
+		}
+
+		delay = 0.15f;
+		if (isPlayerFutherThan(CAMERA.getX(), targetX, 0.3f))
+			CAMERA.setX(cameraX + (targetX - cameraX) * delay);
 	}
 
 	private void moveCameraByY(Player player) {
@@ -50,10 +55,27 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		float cameraY = CAMERA.getY();
 
 		float delay = 1.0f;
-		if (CameraOption.getType() == CAMERA_TYPE.DYNAMIC)
-			delay = 0.2f;
 
-		CAMERA.setY(cameraY + (targetY - cameraY) * delay);
+		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
+			CAMERA.setY(targetY); // == CAMERA.setY(cameraY + (targetY - cameraY) * delay);
+			return;
+		}
+
+		delay = 0.2f;
+		if (isPlayerFutherThan(CAMERA.getY(), targetY, 0.3f))
+			CAMERA.setY(cameraY + (targetY - cameraY) * delay);
+	}
+
+	public boolean isPlayerFutherThan(float cameraPos, float target, float distanceInTiles) {
+		Player player = new PlayerFinder().getPlayer();
+
+		if (player == null)
+			return true;
+
+		float diffX = cameraPos - target;
+		float playerDistance = (Math.abs(diffX)) / player.getSize();
+
+		return playerDistance > distanceInTiles;
 	}
 
 	////////// RENDER ////////////
