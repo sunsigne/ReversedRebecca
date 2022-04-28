@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -16,6 +18,7 @@ public class GUITools extends GameObject implements GUI {
 	private GUITools() {
 		super(0, Window.HEIGHT - Size.M, Size.M, Size.M);
 		GUIList.getList().addObject(this);
+		loadImage();
 	}
 
 	////////// GUI ////////////
@@ -34,24 +37,39 @@ public class GUITools extends GameObject implements GUI {
 
 	}
 
-	////////// RENDER ////////////
+	////////// TEXTURE ////////////
 
-	@Override
-	public void render(Graphics g) {
+	private GameList<BufferedImage> images = new GameList<>(LISTTYPE.ARRAY);
+
+	public void loadImage() {
+		images.clear();
+
 		var list = ToolPlayerList.getList();
-		int index = 0;
 
 		for (ToolPlayer tempTool : list.getList()) {
 			if (tempTool.getDifficulty() == LVL.NULL)
 				continue;
 
 			BufferedImage tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_null");
-			g.drawImage(tool_image, getX() + 2 * index * getWidth(), getY(), getWidth(), getHeight(), null);
-
 			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "gui/battery_max_"
 					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName());
-			g.drawImage(battery_image, getX() + (1 + 2 * index) * getWidth(), getY(), getWidth(), getHeight(), null);
-			index++;
+
+			images.addObject(tool_image);
+			images.addObject(battery_image);
+		}
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		int size = images.getList().size();
+
+		for (int index = 0; index < size; index += 2) {
+			g.drawImage(images.getList().get(index), getX() + index * getWidth(), getY(), getWidth(), getHeight(),
+					null);
+			g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth(), getY(), getWidth(),
+					getHeight(), null);
 		}
 	}
 

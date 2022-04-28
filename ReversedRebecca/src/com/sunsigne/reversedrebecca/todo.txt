@@ -49,8 +49,8 @@
 
 	////////// DIFFICILE ////////////
 
+	creer le type "violet" dans la gui
 	créer un 3ème type de camera "smooth"
-	ToolGui fait du loadImage DANS le render, ce qui est gourmand en performances
 	creer un system de log pour revoir les conversations
 
 	////////// FACILE ////////////
