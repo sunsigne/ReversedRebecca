@@ -12,9 +12,7 @@
 
 	reorganiser tous les folders (sauf system, physic, ressources (java), pattern (sauf TextDecoration) et world (sauf mappable-other))
 	optimiser tous les folders (sauf system, physic, ressources (java), pattern (sauf TextDecoration)  et world (sauf mappable-other))
-
-	!!!! Les PiranhaObject sont TOUS des detectors, seuls les livings devraient l'être (meilleure performances)
-	Même logique pour les Piranha object qui sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
+	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
 
@@ -57,6 +55,7 @@
 
 	////////// FACILE ////////////
 
+	faire en sorte que le Layer par défaut du World soit celui où est le joueur
 	Le debugTool a les graphismes qui plantes si lancé AVANT un world
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle

@@ -7,7 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
+import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
@@ -16,7 +17,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Waitfor, Facing, Pushable, PathSearcher, Interactive, CollisionReactor {
+		implements Waitfor, Facing, Stunnable, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
