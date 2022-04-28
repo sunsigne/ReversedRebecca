@@ -53,6 +53,7 @@
 
 	////////// FACILE ////////////
 
+	Language pas fini (s'affiche bizarrement à partir de 3
 	faire en sorte que le Layer par défaut du World soit celui où est le joueur
 	Le debugTool a les graphismes qui plantes si lancé AVANT un world
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
