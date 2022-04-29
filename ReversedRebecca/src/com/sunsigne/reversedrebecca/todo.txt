@@ -16,6 +16,7 @@
 
 	////////// A FINIR ////////////
 
+	rendre le PNG enfermé + vivant
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
 	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
@@ -82,22 +83,21 @@
 
 	////////// A CREER PLUS TARD ////////////
 
-	Faire des boss et des Foes avec armes et/ou Puzzle
 	des options pour chanbger les touches, la langue, le volume, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
+
+	///////// IDEE ////////////
+
+	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
 	nourriture pour regen (ou autre solution)
 	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
-	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
-
-
-	///////// IDEE ////////////
-
+	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)

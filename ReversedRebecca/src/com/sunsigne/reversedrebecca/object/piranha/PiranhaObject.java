@@ -25,6 +25,7 @@ public abstract class PiranhaObject extends GameObject
 	public PiranhaObject(String name, int x, int y) {
 		super(x, y);
 		this.name = name.toLowerCase();
+		setBlockingPath(true);
 
 		if (World.get() != null)
 			piranhaFile = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
@@ -187,9 +188,15 @@ public abstract class PiranhaObject extends GameObject
 		return false;
 	}
 
+	private boolean blockingPath;
+	
 	@Override
 	public boolean isBlockingPath() {
-		return true;
+		return blockingPath;
+	}
+	
+	public void setBlockingPath(boolean blockingPath) {
+		this.blockingPath = blockingPath;
 	}
 
 }
