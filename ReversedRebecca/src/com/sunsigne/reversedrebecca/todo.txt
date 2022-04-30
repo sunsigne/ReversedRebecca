@@ -38,7 +38,6 @@
 	simplifier le system WaitRequest (créer un shortcut ?)
 	creer une music request !!!!!
 	remplacer invulnérable player request par invulnerable tout court
-	create une resquet pour la condition (feeling)
 	changer create_onthespot ?
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
 	rebaptisé Condition en Evenement ?
