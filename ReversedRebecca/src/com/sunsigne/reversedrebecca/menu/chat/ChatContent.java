@@ -6,13 +6,18 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChatContent implements Updatable {
 
+	private String living_name;
+
 	public ChatContent(String living_name, String mood, String text) {
-		loadImage(living_name, mood);
+		this.living_name = living_name;
+		loadImage(mood);
 
 		// WARNING ! you should NOT use more than one "@" by line
 		this.sentence[0] = text.split("@")[0];
@@ -64,7 +69,6 @@ public class ChatContent implements Updatable {
 
 	////////// TICK ////////////
 
-	private int speed = 1;
 	private int pausetime;
 	private int count, index;
 
@@ -76,8 +80,11 @@ public class ChatContent implements Updatable {
 			return;
 		}
 
-		if (!stop[0])
+		if (!stop[0]) {
 			readSentence(0);
+			return;
+		}
+
 		if (stop[0] && !stop[1])
 			readSentence(1);
 	}
@@ -88,7 +95,13 @@ public class ChatContent implements Updatable {
 
 	private void readSentence(int sentenceNum) {
 		index++;
-		if (index > speed) {
+		playTalkingSound();
+
+		if (index == 1) {
+			nextChar(sentenceNum);
+		}
+
+		if (index == 2) {
 			index = 0;
 			nextChar(sentenceNum);
 		}
@@ -104,12 +117,11 @@ public class ChatContent implements Updatable {
 			if (count == i) {
 				newchar = letter[line][i];
 				newletter = String.valueOf(newchar);
-				boolean isPauseChar = ":,.!?…".contains(Character.toString(letter[line][i]));
+				boolean isPauseChar = ".!?…".contains(Character.toString(letter[line][i]));
 				if (isPauseChar)
 					pause();
 
 				currentText[line] = currentText[line].concat(newletter);
-				playTalkingSound();
 			}
 		}
 		count++;
@@ -124,19 +136,24 @@ public class ChatContent implements Updatable {
 		}
 	}
 
-	private void playTalkingSound() {
+	private boolean talkingSoundPause;
 
-//		if (characterBank == CharacterBank.rebecca)
-//			new SoundTask().playSound(0.2, SoundBank.TALKING_REBECCA);
-//		if (characterBank == CharacterBank.sarah)
-//			new SoundTask().playSound(0.2, SoundBank.TALKING_SARAH);
+	// talking sound played once every two ticks
+	private void playTalkingSound() {
+		if (talkingSoundPause) {
+			talkingSoundPause = false;
+			return;
+		}
+
+		new SoundTask().play(SOUNDTYPE.VOICE, "sound/voice/" + living_name);
+		talkingSoundPause = true;
 	}
 
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
 
-	private void loadImage(String living_name, String mood) {
+	private void loadImage(String mood) {
 		String imagePath = "textures/characters/" + living_name + "/mood_" + mood;
 		image = new ImageTask().loadImage(imagePath, true);
 

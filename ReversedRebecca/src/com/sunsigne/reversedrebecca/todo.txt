@@ -70,7 +70,7 @@
 	
 	////////// SONS ////////////
 	
-	Ajouter un son quand les joueurs parlent
+	Ajouter des voix aux personnages (son quand ils parlent)
 	crer le système de volume de musique
 	bruit de poussage
 	SountTask pas fini !
