@@ -13,21 +13,21 @@ import com.sunsigne.reversedrebecca.Infos;
 public class SoundTask {
 
 	////////// SOUNDTYPE ////////////
-	
+
 	public enum SOUNDTYPE {
 		SOUND, VOICE, MUSIC, ERROR;
 	}
-	
+
 	////////// SOUND ////////////
 
 	public void play(SOUNDTYPE soundType, String path) {
-		if(path == null)
+		if (path == null)
 			return;
-		
+
 		String path0 = "/ressources/audio/" + path + ".wav";
 		Clip soundclip;
 		double volume = getVolume(soundType);
-		
+
 		try {
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
@@ -37,22 +37,25 @@ public class SoundTask {
 			soundclip.start();
 		} catch (Exception e) {
 			e.printStackTrace();
-			play(SOUNDTYPE.ERROR, "sound/nope");
+			if (soundType == SOUNDTYPE.VOICE)
+				play(SOUNDTYPE.VOICE, "sound/voice/error");
+			else
+				play(SOUNDTYPE.ERROR, "sound/nope");
 		}
 	}
 
 	private double getVolume(SOUNDTYPE soundType) {
-		switch(soundType) {
+		switch (soundType) {
 		case SOUND:
-			return SoundVolume.getVolume();			
+			return SoundVolume.getVolume();
 		case VOICE:
 			break;
 		case MUSIC:
 			break;
 		case ERROR:
-			return 1;		
+			return 1;
 		}
-		
+
 		return 1;
 	}
 
@@ -70,35 +73,26 @@ public class SoundTask {
 		}
 	}
 	/*
-	////////// MUSIC ////////////
-
-	private static Clip musicclip;
-
-	public void changeMusicVol(double newvolume) {
-		setVol(newvolume, musicclip, true);
-	}
-
-	public void stopMusic() {
-		if (musicclip != null)
-			musicclip.close();
-	}
-
-	public void playMusic(double volume, String path) {
-
-		stopMusic();
-		String path0 = "/ressources/audio/music/" + "" + path + ".wav";
-
-		try {
-			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
-			AudioInputStream music = AudioSystem.getAudioInputStream(url);
-			musicclip = AudioSystem.getClip();
-			musicclip.open(music);
-			setVol(volume, musicclip, true);
-			musicclip.loop(Clip.LOOP_CONTINUOUSLY);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-	}
-*/
+	 * ////////// MUSIC ////////////
+	 * 
+	 * private static Clip musicclip;
+	 * 
+	 * public void changeMusicVol(double newvolume) { setVol(newvolume, musicclip,
+	 * true); }
+	 * 
+	 * public void stopMusic() { if (musicclip != null) musicclip.close(); }
+	 * 
+	 * public void playMusic(double volume, String path) {
+	 * 
+	 * stopMusic(); String path0 = "/ressources/audio/music/" + "" + path + ".wav";
+	 * 
+	 * try { URL url = new File((new File(Infos.LOC.toURI())).getParent() +
+	 * path0).toURI().toURL(); AudioInputStream music =
+	 * AudioSystem.getAudioInputStream(url); musicclip = AudioSystem.getClip();
+	 * musicclip.open(music); setVol(volume, musicclip, true);
+	 * musicclip.loop(Clip.LOOP_CONTINUOUSLY); } catch (Exception e) {
+	 * e.printStackTrace(); }
+	 * 
+	 * }
+	 */
 }
