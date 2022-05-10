@@ -1,0 +1,34 @@
+////// MOVE //////
+
+
+Le Type de Requête MOVE permet définir un GOAL à un objet. Si le GOAL est atteignable et que l'objet peut se déplacer, il se déplacera dans sa direction.
+
+exemple :
+TIME -> 0 = MOVE -> 33-35
+TIME -> 0 = GOTO -> MOVE:33-35
+
+Lorsque la Condition sera vérifiée, l'objet cherchera à sen rendre en x=33 y=35
+
+
+////// SLOW //////
+
+
+Même chose que pour MOVE, mais demande en plus à l'objet de se déplacer lentement.
+
+
+////// FAST //////
+
+
+Même principe, mais rapidement.
+
+
+////// TP //////
+
+
+Le Type de Requête TP téléporte un objet aux coordonnées indiquées.
+
+exemple :
+TIME -> 0 = TP -> 33-35
+TIME -> 0 = GOTO -> TP:33-35
+
+Lorsque la Condition sera vérifiée, l'objet se téléportera en x=33 y=35.

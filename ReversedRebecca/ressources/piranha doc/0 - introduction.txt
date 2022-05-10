@@ -14,11 +14,13 @@ Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv 
 
 ////// Fichier //////
 
+Un fichier Piranha est le "cerveau" d'un objet Piranha. Si l'objet n'est pas présent dans le niveau, son cerveau seul ne fera rien du tout.
+Pour qu'un objet Piranha soit dans le niveau, il suffit soit de l'introduire sur la map (voir "mappable" dans le dossier "maps"), soit qu'un autre objet Piranha l'ait créé (voir "requêtes de création")
+Seule exception, l'objet SET-UP qui est créé automatiquement lors du chargement d'une map.
 
-La seule règle importante à retenir est qu'en dehors de l'extension, ils doivent avoir un nom qui fait exactement 6 caractères, et être dans un dossier de map !
-ex : NPC-18 (valide) / OBJ-42 (valide) / PLAYER (valide) / ENNEMI-12 (invalide)
+Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers dont l'extension est .csv, et dont les noms sont PLAYER, SET-UP, compris entre NPC-01 et NPC-30, ou compris entre OBJ-01 à OBJ-50.
 
-Actuellement, les fichiers en Piranha lus et traités par Java sont tous les fichiers dont les noms vont de NPC-01 à NPC-30, ou de OBJ-01 à OBJ-50; et dont l'extension est .csv.
+Note : les fichiers Piranha ont tous un nom qui fait exactement 6 caractères. Cette règle ne peut pas être transgressée.
 
 
 ////// Nomenclature //////
@@ -31,22 +33,22 @@ Un telle ligne de code est appelée une "Instruction".
 L'ensemble "GOAL -> 33-33" est appelé la "Condition" de l'Instruction.
 L'ensemble "FACING -> LEFT" est appelé la "Requête" de l'Instruction.
 
-GOAL est le "Type de Condition".
-33-35 est la "Valeur".
-FACING est le "Type de Requête".
-LEFT est la "Cible".
+GOAL est le "Type de Condition" de l'Instruction.
+33-35 est la "Valeur" de l'Instruction.
+FACING est le "Type de Requête" de l'Instruction.
+LEFT est la "Cible" de l'Instruction.
 
 
 ////// Syntaxe //////
 
 
 Le Piranha n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
-En Pita, si ça n'est pas obligatoire, il est conseillé d'écrire les Instructions en lettres capitales (par convention).
-Attention ! Les coordonnées négatives sont impossibles en Piranha. Veillez à bien choisir l'origine en haut à gauche par exemple de votre map.
-Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=", le code risquerait de mal les interpréter.
+En Piranha, si ça n'est pas obligatoire, il est conseillé d'écrire les Instructions en lettres capitales.
+Attention ! Les coordonnées négatives sont impossibles en Piranha. Le point 0-0 se situe en haut à gauche de votre map.
+Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=" dans un commentaire, votre fichier risquerait d'être invalide.
 
 Une Instruction s'écrit de la façon suivante : WONPUZZLE -> 34-31 = TP -> 37-42
 Ici, il faut comprendre : "si le puzzle en 34-31 est résolu, alors se téléporter en 37-42"
 
-ATTENTION ! Il n'est pas possible d'avoir deux Conditions identiques ("Type de Condition -> Valeur") dans un même fichier; seule la première sera traitée. L'utilisation de Conditions identiques dans des fichiers indépendants les uns des autres ne pose aucun problème.
-Si vous avez besoin d'effectuer plusieurs Insctructions vérifiant la même Condition, utiliser le Type d'Action GOTO !
+ATTENTION ! Il n'est pas possible d'avoir deux Conditions identiques ("Type de Condition -> Valeur") dans un même fichier Piranha ; seule la première sera traitée. L'utilisation de Conditions identiques dans des fichiers indépendants les uns des autres ne pose aucun problème.
+Si vous avez besoin d'effectuer plusieurs Instructions vérifiant la même Condition, utiliser le Type d'Action GOTO.

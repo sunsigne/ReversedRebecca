@@ -1,0 +1,56 @@
+////// CREATE //////
+
+
+
+Le Type de Requête CREATE permet de créer un objet à partir de coordonnées et d'une pastille RGB (voir "mappable" dans le dossier "maps")
+
+exemple :
+TIME -> 0 = CREATE -> 10-20:1-255-0
+
+Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée aux coordonnées x=10 y=20.
+
+Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
+
+
+////// CREATE_ONTHESPOT //////
+
+
+Fait exactement la même chose que CREATE, à la différence que les coordonnées sont automatiquement celles de l'objet Piranha qui demande l'action.
+CREATE_ONTHESPOT ne disposant que d'une seule cible, l'écriture compacte devient possible
+
+exemples :
+TIME -> 0 = CREATE_ONTHESPOT -> 255-255-3
+TIME -> 0 = GOTO -> CREATE_ONTHESPOT:255-255-3
+
+Lorsque la Condition sera vérifiée, un OBJ-03 (255-255-3) sera créée là où se trouve l'objet Piranha.
+
+Note : techniquement, CREATE_ONTHESPOT appele la requête CREATE avec "onthespot" comme coordonnées,
+il est tout à fait possible (bien qu'inutile) d'écrire :
+TIME -> 0 = CREATE -> onthespot:255-255-3
+
+
+////// DELETE //////
+
+
+Le Type de Requête DELETE permet de supprimer l'objet qui se trouve aux coordonnées indiquée.
+Attention ! Si plusieurs objets se trouvent aux coordonnées indiquée, un seul d'entre eux sera supprimé.
+
+exemple :
+TIME -> 0 = DELETE -> 10-20
+exemple d'écriture compacte :
+TIME -> 0 = GOTO -> DELETE:10-20
+
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 sera supprimé.
+
+Attention ! DELETE est une requête puissante, les NPC et le joueur se déplaçant en permanence, ne les supprimez pas par accident !
+
+
+////// REPLACE //////
+
+
+Le Type de Requête REPLACE n'est ni plus ni moins qu'une requête DELETE suivi d'une requête CREATE.
+
+exemple :
+TIME -> 0 = REPLACE -> 10-20:1-255-0
+
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 sera supprimé, et une porte basique (1-255-0) prendra sa place. 

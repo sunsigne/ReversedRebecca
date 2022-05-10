@@ -33,38 +33,3 @@ TALKED -> COMPUTER = FACING -> BOB
 À la fin du dialogue "COMPUTER", l'objet se tournera vers BOB.
 
 Attention ! Il est facile de se tromper : c'est seulement l'orientation de l'objet dans lequel est écrite cette Instruction qui change ! Si on veut changer le facing du player ou d'un npc, il faut écrire cette Instruction dans LEURS fichiers.
-
-
-////// MOVE //////
-
-
-Le Type de Requête MOVE permet définir un GOAL à un objet. S'il peut se déplacer, il se déplacera dans sa direction.
-
-exemple :
-TIME -> 0 = MOVE -> 33-35
-exemple d'écriture compacte :
-TIME -> 0 = GOTO -> MOVE:33-35
-
-Lorsque l'état sera vérifié, l'objet cherchera à sen rendre en 33 35
-
-
-////// SLOW //////
-
-
-Le Type de Requête SLOW fait exactement la même chose que MOVE, mais si l'objet est un NPC, il se déplacera plus lentement.
-
-exemple :
-TIME -> 0 = SLOW -> 33-35
-exemple d'écriture compacte :
-TIME -> 0 = GOTO -> SLOW:33-35
-
-
-////// TP //////
-
-
-Le Type de Requête TP téléporte un objet aux coordonnées indiquées.
-
-exemple :
-TIME -> 0 = TP -> 33-35
-exemple d'écriture compacte :
-TIME -> 0 = GOTO -> TP:33-35

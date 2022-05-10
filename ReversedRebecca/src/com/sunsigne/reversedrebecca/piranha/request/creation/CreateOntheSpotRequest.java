@@ -31,7 +31,7 @@ public class CreateOntheSpotRequest extends CreateRequest {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		super.doAction(object, target + ":onthespot");
+		super.doAction(object, "onthespot:" + target);
 	}
 
 }

@@ -35,7 +35,7 @@ public class ReplacedRequest implements Request {
 		Request deleteRequest = RequestList.getList().getObject(new DeleteRequest());
 		Request createRequest = RequestList.getList().getObject(new CreateRequest());
 
-		deleteRequest.doAction(object, target.split(":")[1]);
+		deleteRequest.doAction(object, target.split(":")[0]);
 		createRequest.doAction(object, target);
 	}
 

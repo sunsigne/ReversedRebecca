@@ -39,7 +39,7 @@ public class CreateRequest implements Request {
 
 		// determinate the position
 		
-		String pos = String.valueOf(target.split(":")[1]);
+		String pos = String.valueOf(target.split(":")[0]);
 		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
 		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
@@ -48,7 +48,7 @@ public class CreateRequest implements Request {
 
 		// determinate the type of object
 
-		String type = String.valueOf(target.split(":")[0]);
+		String type = String.valueOf(target.split(":")[1]);
 
 		GameObject creation = determinateCreation(type, goal.getX(), goal.getY());
 

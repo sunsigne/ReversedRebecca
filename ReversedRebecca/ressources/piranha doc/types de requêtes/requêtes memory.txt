@@ -1,0 +1,16 @@
+////// MEMORY //////
+
+
+Le Type de Requête MEMORY a deux rôles différents en fonction de son écriture.
+lorsqu'elle est classique, elle permet d'enregistrer une balise.
+lorsqu'elle est conditionnelle, elle permet de vérifier si une balise est enregistrée et de choisir la cible en fonction.
+
+exemple :
+TIME -> 60 = GOTO -> PEEBOY_PEE_ITS_PANTS, MEMORY:TOO_LATE
+WONPUZZLE -> 10-20 = MEMORY -> TOO_LATE ? NULL / GO_BATHROOM
+
+
+Ici, voilà ce qu'il faut comprendre :
+PEEBOY veut aller aux toilettes, mais ne peut pas, car le puzzle en x=10 y=20 lui barre la route
+Après 60 secondes de jeux, PEEBOY va se pisser dessus et enregistrer cette information.
+Lorsque le puzzle en x=34 y=31 est résolu, le chemin n'est plus bloqué ! PEEBOY peut donc aller aux toilettes, mais SEULEMENT si ça n'est pas déjà trop tard…

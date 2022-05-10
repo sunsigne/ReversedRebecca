@@ -10,8 +10,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object, piranha, puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
-	optimiser (menu, object, piranha, puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
+	reorganiser (menu, object, piranha (sauf request, sauf other), puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
+	optimiser (menu, object, piranha (sauf request, sauf other), puzzle, (pattern : sauf TextDecoration), (world : mappable-other)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
@@ -38,9 +38,7 @@
 	simplifier le system WaitRequest (créer un shortcut ?)
 	creer une music request !!!!!
 	remplacer invulnérable player request par invulnerable tout court
-	changer create_onthespot ?
 	CameraRequest -> rendre possible le fait de suivre un autre object ?
-	rebaptisé Condition en Evenement ?
 	MoveRequest -> rendre possible l'ajout d'un nom pour cible ? (+ player)
 	faire en sorte d'enregister les memory de façon + peofonde (conséquences sur les autres lvl), enregistrer la liste en fichier csv peut être une idée ... créer un register Request qui ferait le travail ?
 	prévenir dans la doc que les memory et registers sont lourds, ne pas faire de conflit de nom !!! choisir des noms de mémory certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
