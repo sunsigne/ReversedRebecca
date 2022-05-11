@@ -1,0 +1,49 @@
+////// NAME //////
+
+
+Le Type de Requête NAME permet de renommer un objet.
+Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom.
+
+exemple :
+TIME -> 0 = NAME -> BOB
+TIME -> 0 = GOTO -> NAME:BOB
+
+Lorsque la Condition sera vérifiée, l'objet sera renommé Bob.
+
+Cette Requête est très utile juste après la génération d'une map afin d'établir le nom d'un personnage (et ainsi d'afficher les bonnes textures).
+Note : le nom générique OBJECT fait référence à l'objet Piranha en cours. Le nom PLAYER est également possible pour faire référence au joueur.
+
+
+////// FACING //////
+
+
+Le Type de Requête FACING permet de changer l'orientation d'un objet. L'écriture conditionnelle est possible et aura donc un but conditionnel (voir "requêtes conditionnelles")
+
+exemple :
+TIME -> 0 = FACING -> RIGHT
+TIME -> 0 = GOTO -> FACING:RIGHT
+
+Lorsque la Condition sera vérifiée, l'objet regardera à droite.
+
+Il est tout à fait possible, au lieu d'écrire une direction, d'écrire le nom d'un autre objet, pour que l'objet se tourne vers direction.
+ex : 
+TALKED -> COMPUTER = FACING -> BOB
+À la fin du dialogue "COMPUTER", l'objet se tournera vers BOB.
+
+Attention ! Lorsqu'un nom est utilisé à la place d'une direction, un PathFinder est déclenché. Si un mur, une porte fermée, etc. fait obstacle, l'objet ne trouvera pas de chemin et ne changera donc pas son facing.
+Attention ! Il est facile de se tromper : c'est seulement l'orientation de l'objet dans lequel est écrite cette Instruction qui change ! Si on veut changer le facing du player ou d'un npc, il faut écrire cette Instruction dans LEURS fichiers.
+
+
+////// BLOCKING_PATH //////
+
+
+Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d'un objet.
+Note : changer cette propriété change également les chemins valides du PathFinder.
+
+exemple :
+TIME -> 0 = BLOCKIN_PATH -> FALSE
+TIME -> 0 = GOTO -> BLOCKIN_PATH:FALSE
+
+Lorsque la Condition sera vérifiée, l'objet sera franchissable.
+
+Note : par défaut, les objets Piranha sont bloquants.

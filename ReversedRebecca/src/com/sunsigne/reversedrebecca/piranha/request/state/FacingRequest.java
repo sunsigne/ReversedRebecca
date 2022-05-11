@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;

@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.other.FacingRequest;
+import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
 
 public class NPC extends LivingObject implements PlayerAvoider {
 

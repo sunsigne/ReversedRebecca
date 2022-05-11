@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;

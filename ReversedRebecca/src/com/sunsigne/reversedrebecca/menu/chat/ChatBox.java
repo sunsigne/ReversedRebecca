@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.FormatedName;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.other.FacingRequest;
+import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
