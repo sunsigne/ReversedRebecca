@@ -36,19 +36,7 @@ public class FacingRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
-		if (isConditional(target))
-			doConditionalAction(object, target);
-		else
-			doFacing(object, target);
-	}
-
-	@Override
-	protected String getConditionToCheck(PiranhaObject object) {
-		return object.getFacing().getName();
-	}
-
-	private void doFacing(PiranhaObject object, String target) {
+	public void doClassicAction(PiranhaObject object, String target) {
 
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {
@@ -75,6 +63,11 @@ public class FacingRequest extends ConditionalRequest {
 				return;
 			}
 		}
+	}
+
+	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		return object.getFacing().getName();
 	}
 
 }

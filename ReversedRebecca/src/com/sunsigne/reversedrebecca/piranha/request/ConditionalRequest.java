@@ -5,6 +5,18 @@ import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 
 public abstract class ConditionalRequest implements Request {
 
+	////////// REQUEST ////////////
+	
+	@Override
+	public void doAction(PiranhaObject object, String target) {
+		if (isConditional(target))
+			doConditionalAction(object, target);
+		else
+			doClassicAction(object, target);
+	}
+	
+	public abstract void doClassicAction(PiranhaObject object, String target);
+
 	////////// CONDITIONAL ////////////
 
 	protected boolean isConditional(String target) {

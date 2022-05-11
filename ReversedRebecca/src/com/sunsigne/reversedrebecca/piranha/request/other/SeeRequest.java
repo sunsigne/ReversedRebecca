@@ -34,10 +34,10 @@ public class SeeRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
-		doConditionalAction(object, target);
-	}
+	public void doClassicAction(PiranhaObject object, String target) {
 
+	}
+	
 	@Override
 	protected String getConditionToCheck(PiranhaObject object) {
 		return object.getName();

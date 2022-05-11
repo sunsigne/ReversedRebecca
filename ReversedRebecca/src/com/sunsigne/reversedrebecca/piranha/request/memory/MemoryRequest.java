@@ -31,11 +31,8 @@ public class MemoryRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
-		if (isConditional(target))
-			doConditionalAction(object, target);
-		else
-			registerMemory(object, target);
+	public void doClassicAction(PiranhaObject object, String target) {
+		MemoryList.getList().addObject(target);
 	}
 
 	@Override
@@ -52,10 +49,6 @@ public class MemoryRequest extends ConditionalRequest {
 				return true;
 		}
 		return false;
-	}
-
-	private void registerMemory(PiranhaObject object, String target) {
-		MemoryList.getList().addObject(target);
 	}
 
 }
