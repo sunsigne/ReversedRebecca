@@ -1,3 +1,5 @@
+L'écriture conditionnelle pour tous ces Type de Requêtes est possible (voir "requêtes conditionnelles")
+
 ////// DISABLE //////
 
 
@@ -16,4 +18,4 @@ Note : on peut se demander, à première vue, à quoi une telle Requête pourrai
 
 
 A EXACTEMENT le même fonctionnement que DISABLE, mais pour réactiver les Actions que ce dernier avait gelées.
-Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.
+Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu, sauf dans un cas Conditionnel.

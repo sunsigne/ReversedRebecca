@@ -4,11 +4,12 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class EnableRequest implements Request {
+public class EnableRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -39,21 +40,46 @@ public class EnableRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+		if (isConditional(target))
+			doConditionalAction(object, target);
+		else
+			doEnable(object, target);
+	}
 
-		// determinate the position
+	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		return String.valueOf(object.isDisabled());
+	}
 
-		int x = Integer.parseInt(target.split("-")[0]);
-		int y = Integer.parseInt(target.split("-")[1]);
-		GoalObject goal = new GoalObject(x, y, false);
+	@Override
+	protected boolean analyseCondition(PiranhaObject object, String target) {
 
-		// determinate the type of object
+		String valueToCheck = String.valueOf(target.split("\\?")[0]);
+		GameObject gameOject = getGameObject(object, valueToCheck);
+		if (gameOject instanceof Interactive == false)
+			return false;
 
-		GameObject gameOject = Handler.getObjectAtPos(object.getHandler(), goal.getX(), goal.getY(), object.getSize());
+		Interactive interactive = (Interactive) gameOject;
+		return interactive.isDisabled() != disable();
+	}
+
+	private void doEnable(PiranhaObject object, String target) {
+
+		GameObject gameOject = getGameObject(object, target);
 		if (gameOject instanceof Interactive == false)
 			return;
 
 		Interactive interactive = (Interactive) gameOject;
 		interactive.setDisabled(disable());
+	}
+
+	private GameObject getGameObject(PiranhaObject object, String target) {
+
+		int x = Integer.parseInt(target.split("-")[0]);
+		int y = Integer.parseInt(target.split("-")[1]);
+		GoalObject goal = new GoalObject(x, y, false);
+
+		return Handler.getObjectAtPos(object.getHandler(), goal.getX(), goal.getY(), object.getSize());
 	}
 
 }

@@ -31,3 +31,4 @@ Dans le second exemple, lorsque la Condition sera vérifiée, Si l'objet regard 
 
 
 Attention ! Tous les Types de Requête ne peuvent pas avoir un caractère conditionnel ! C'est pourquoi cela sera précisé systématiquement lorsque c'est possible.
+Note : TOUTES les requêtes conditionnelles ou à caractère conditionnel ont leur 2 cibles renvoyées chacune à un GOTO à cible unitaire, l'écriture compacte est donc possible.
