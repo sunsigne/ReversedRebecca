@@ -63,7 +63,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	@Override
 	public boolean isStunned() {
-		if (getCondition() == CONDITION.KO)
+		if (getCondition() == CONDITION.KO | getCondition() == CONDITION.SLEEP)
 			return true;
 		else
 			return super.isStunned();

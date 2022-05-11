@@ -66,6 +66,9 @@ public class LivingAnimationHandler {
 		case SICK:
 			return sickAnimation;
 
+		case SLEEP :
+			return koAnimation;
+			
 		case KO:
 			return koAnimation;
 		}

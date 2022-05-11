@@ -1,12 +1,13 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class ConditionRequest implements Request {
+public class ConditionRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -32,7 +33,7 @@ public class ConditionRequest implements Request {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
+	public void doClassicAction(PiranhaObject object, String target) {
 		if (object instanceof Feeling == false)
 			return;
 
@@ -46,6 +47,15 @@ public class ConditionRequest implements Request {
 			condition = tempCondition;
 		}
 		feeling.setCondition(condition);
+	}
+
+	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		if (object instanceof Feeling == false)
+			return "false";
+
+		Feeling feeling = (Feeling) object;
+		return feeling.getCondition().getName();
 	}
 
 }

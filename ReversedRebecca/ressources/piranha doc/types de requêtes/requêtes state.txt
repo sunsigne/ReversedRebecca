@@ -69,4 +69,24 @@ Note : lorsque le joueur est invulnérable, ses PV ne sont plus affichés.
 
 
 Fait exactement la même chose que INVULNERABLE, à la différence près que ce Type de Requête cible spécifiquement le joueur. L'écriture conditionnelle est possible.
+Note : il est tout à fait possible d'utiliser INVULNERABLE dans le fichier Player, l'avantage d'INVULNERABLE_PLAYER est qu'il est utilisable dans n'importe quel fichier.
 Ce Type de Requête est très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
+
+
+
+////// CONDITION //////
+
+
+Le Type de Requête CONDITION n'a rien à voir avec une requête Conditionnelle ! (même si cette dernière reste possible). Elle permet de changer la "condition" de l'objet courant.
+
+exemple :
+TIME -> 0 = CONDITION -> GOOD
+TIME -> 0 = GOTO -> CONDITION:GOOD
+
+Lorsque la Condition sera vérifiée, l'objet adoptera la condition par défaut.
+
+La condition permet d'altérer à la fois le visuel d'un personnage et son comportement. Il en existe 4 :
+- GOOD, condition par défaut
+- SICK, le personnage a l'air malade
+- SLEEP, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
+- KO, le personnage a l'air KO et ne peut plus rien faire.

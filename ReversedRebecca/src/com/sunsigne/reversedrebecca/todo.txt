@@ -15,6 +15,7 @@
 
 	////////// A FINIR ////////////
 
+	LivingAnimationHandler utiliser la même animation pour sleep & ko
 	rendre le PNG enfermé + vivant
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)

@@ -60,7 +60,7 @@ public class Player extends LivingObject {
 	private boolean canInterract;
 
 	public boolean canInterract() {
-		if (isStunned())
+		if (isStunned() && getCondition() != CONDITION.SLEEP)
 			return false;
 		else
 			return canInterract;
