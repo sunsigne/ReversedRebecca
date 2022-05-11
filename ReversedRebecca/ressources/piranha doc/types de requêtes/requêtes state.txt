@@ -37,7 +37,7 @@ Attention ! Il est facile de se tromper : c'est seulement l'orientation de l'obj
 ////// BLOCKING_PATH //////
 
 
-Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d'un objet. L'écriture conditionnelle pour BLOCKING_PATH est possible
+Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d'un objet.
 Note : changer cette propriété change également les chemins valides du PathFinder.
 
 exemple :
@@ -47,3 +47,26 @@ TIME -> 0 = GOTO -> BLOCKIN_PATH:FALSE
 Lorsque la Condition sera vérifiée, l'objet sera franchissable.
 
 Note : par défaut, les objets Piranha sont bloquants.
+
+
+////// INVULNERABLE //////
+
+
+Le Type de Requête INVULNERABLE permet de changer la propriété "vulnérable" de l'objet courant. L'écriture conditionnelle est possible.
+Note : les objets "obj" ne peuvent pas devenir vulnérable, cette propriété ne concerne que les objets vivants ("npc", "player", etc.).
+
+exemple :
+TIME -> 0 = INVULNERABLE -> TRUE
+TIME -> 0 = GOTO -> INVULNERABLE:TRUE
+
+Lorsque la Condition sera vérifiée, l'objet deviendra invulnérable.
+
+Note : par défaut, les objets vivant sont vulnérables.
+Note : lorsque le joueur est invulnérable, ses PV ne sont plus affichés.
+
+
+////// INVULNERABLE_PLAYER //////
+
+
+Fait exactement la même chose que INVULNERABLE, à la différence près que ce Type de Requête cible spécifiquement le joueur. L'écriture conditionnelle est possible.
+Ce Type de Requête est très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.

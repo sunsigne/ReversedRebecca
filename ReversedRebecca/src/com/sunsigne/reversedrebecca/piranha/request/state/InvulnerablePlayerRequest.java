@@ -1,12 +1,13 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class InvulnerablePlayerRequest implements Request {
+public class InvulnerablePlayerRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -23,7 +24,7 @@ public class InvulnerablePlayerRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "PLAYER_INVULNERABLE";
+		return "INVULNERABLE_PLAYER";
 	}
 
 	@Override
@@ -32,10 +33,16 @@ public class InvulnerablePlayerRequest implements Request {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
+	public void doClassicAction(PiranhaObject object, String target) {
 		boolean invulnerable = Boolean.parseBoolean(target);
 		Player player = new PlayerFinder().getPlayer();
 		player.setInvulnerable(invulnerable);
+	}
+
+	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		Player player = new PlayerFinder().getPlayer();
+		return String.valueOf(player.isInvulnerable());
 	}
 
 }
