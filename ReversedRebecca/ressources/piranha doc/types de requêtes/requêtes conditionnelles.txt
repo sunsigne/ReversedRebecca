@@ -1,4 +1,4 @@
-Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire qu'ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
+Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que contrairement aux Types de Requêtes "classiques", ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
 
 ////// SEE //////
 

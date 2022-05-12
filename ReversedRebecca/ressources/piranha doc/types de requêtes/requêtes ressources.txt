@@ -1,5 +1,7 @@
 Les Types de requêtes suivants ont pour Cibles le nom d'un fichier dans le dossier "ressources" du jeu, vous pouvez donc créer vos propres Cibles !
 
+Note : d'un point de vue technique, le Type de Requête NAME est partiellement de type ressources dans la mesure où sa cible sert d'ID, mais charge également la texture d'un personnage en cherchant parmi les fichiers dans le dossier "ressources/textures/characters/(nom de la cible)".
+
 ////// EXPRESSION //////
 
 
@@ -32,3 +34,31 @@ TIME -> 0 = SOUND -> EXEMPLE_SOUND
 TIME -> 0 = GOTO -> SOUND:EXEMPLE_SOUND
 
 Lorsque la Condition sera vérifiée, le son "exemple_sound.wav" sera joué.
+
+
+
+////// TALK //////
+
+
+Le Type de Requête TALK permet de lancer un dialogue.
+La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)".
+
+exemple :
+TIME -> 0 = TALK -> PEEBOY_PEE_ITS_PANTS
+TIME -> 0 = GOTO -> TALK:PEEBOY_PEE_ITS_PANTS
+
+Lorsque la Condition sera vérifiée, le dialogue "peeboy_pee_its_pants.csv" sera lancé.
+
+L'écriture des fichiers dialogues est un peu particulière, expliquons l'exemple suivant :
+
+object = player = urge_sad = C'est#trop#tard…
+player = object = sad = Ha…
+object = player = urge_happy = T'inquiète#pas.@Je#n'ai#plus#qu'à#aller#pleurer#dans#un#coin…
+
+La première partie définie la personne qui parle à partir de son NAME, et affichera son visage dans la boite de dialogue. Le mot "objet" est autorisé pour pointer l'objet Piranha qui a lancé la requête de dialogue.
+La seconde partie désigne la direction vers laquelle cette personne doit se tourner à partir d'une requête FACING, elle accepte donc les mêmes cibles que cette dernière, en plus du mot "objet".
+Le troisième partie désigne l'expression que la personne qui parle doit adopter. Cette dernière est directement disponible dans le dossier de texture du personnage en question.
+La quatrième partie est le dialogue qui doit s'afficher.
+
+Les espaces permettent de gagner en lisibilité dans le code, mais ils sont ignorés par le programme ; c'est pourquoi des '#' sont introduits dans le texte et seront comptés comme des espaces à l'affichage.
+De la même façon, le caractère "saut de ligne" dans le dialogue est le symbole "@". Il peut y en avoir aucun, mais il ne doit pas y en avoir plus d'un par ligne de texte !

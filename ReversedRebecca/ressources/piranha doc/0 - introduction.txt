@@ -22,6 +22,9 @@ Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers
 
 Note : les fichiers Piranha ont tous un nom qui fait exactement 6 caractères. Cette règle ne peut pas être transgressée.
 
+Le mot "objet" sera parfois utilisé de façon générique alors que le Type de Requête ne s'applique qu'aux personnages.
+En effet, certains objets sont des objets, d'autre des personnages. Pour l'expliquer simplement, plus de requêtes sont possibles sur les personnages : INVULNERABLE, MOVE, etc. (oui, les objets sont immobiles).
+
 
 ////// Nomenclature //////
 

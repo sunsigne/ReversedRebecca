@@ -36,49 +36,54 @@ Le Type de Requête CUTSCENE accepte 3 cibles :
 Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur.
 
 
-////// INVULNERABLE_PLAYER //////
+////// WAITFOR //////
 
 
-Fait exactement la même chose que INVULNERABLE, à la différence près que ce Type de Requête cible spécifiquement le joueur. L'écriture conditionnelle est possible.
-Note : il est tout à fait possible d'utiliser INVULNERABLE dans le fichier Player, l'avantage d'INVULNERABLE_PLAYER est qu'il est utilisable dans n'importe quel fichier.
-Ce Type de Requête est très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
+Le Type de Requête WAITFOR est à la fois l'un des plus utiles et le plus compliqué à utiliser correctement !
+Il accepte exactement 2 Cibles. La première permet de définir une Condition (en plus de la Condition de l'Instruction), la seconde est la Requête à exécuter lorsque la condition est vérifiée.
+Note : la seconde cible du WAITFOR est renvoyé à un GOTO à cible unitaire, l'écriture compacte y est donc possible.
+Attention ! Il ne peut y avoir qu'un seul waitfor actif en même temps par objet Piranha. En effet, le Type de Requête WAITFOR écrase les waitfor précédents ! Soyez donc précis lorsque vous voulez enchainer plusieurs actions : la seconde cible du waitfor est tout indiquée pour créer une balise GOTO qui exécutera votre action et lancera un autre waitfor.
+
+exemple en situation :
+
+TALKED -> PEEBOY_FIND_A_ROOM = GOTO -> WAITING_BEFORE_CONFESSING, CUTSCENE:START, MEMORY:TOO_LATE
+$ -> WAITING_BEFORE_CONFESSING = WAITFOR -> TIMER:1, IS_ASHAMED
+$ -> IS_ASHAMED = GOTO -> AVOID_LOOKING, EXPRESSION:SUSPENSION, WAITING_BEFORE_CONFESSING_AGAIN
+$ -> AVOID_LOOKING = FACING -> DOWN ? FACING:LEFT / FACING:DOWN
+$ -> WAITING_BEFORE_CONFESSING_AGAIN = WAITFOR -> TIMER:2, TALK:PEEBOY_PEE_ITS_PANTS
+TALKED -> PEEBOY_PEE_ITS_PANTS = FACING -> DOWN ? CREATE_HORIZONTAL_PEE_PUDDLES / CREATE_VERTICAL_PEE_PUDDLES
+
+L'exemple ici est une cinématique où PEEBOY confesse qu'il s'est accidentellement fait pipi dessus. Les WAITFOR ici permettent de marquer des temps de pause entre les dialogues afin de rendre la "confession" crédible. Voyez comme les 2 WAITFOR n'ont pas été créé en même temps dès le départ, c'est bien le premier qui créé le second dans sa cible.
+
+Le Type de Requête WAITFOR accepte 3 cibles :
+- TIMER:X (remplacer "X" par un nombre), attend X secondes avant d'effectuer la requête.
+- PLAYER_FUTHER_THAN:X (remplacer "X" par un nombre), n'exécute requête que lorsque le joueur est plus loin que X cases.
+- PLAYER_CLOSER_THAN:X (remplacer "X" par un nombre), n'exécute requête que lorsque le joueur est plus près que X cases.
+
+Note : dans la mesure où un WAITFOR écrase les waitfor précédents, si l'on a besoin d'annuler un waitfor existant, il suffit d'écrire la requête "WAITFOR -> TIMER:0, NULL".
 
 
-////// CONDITION //////
+////// TRIPLE_ACTION //////
 
 
-Le Type de Requête CONDITION n'a rien à voir avec une requête Conditionnelle (même si cette dernière reste possible) ! Elle permet de changer la "condition" de l'objet courant.
+Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions d'interactivités possibles avec l'objet.
+Une "action d'interactivité" est une action qui est lancé lorsque le joueur clique sur la touche action du clavier lorsqu'il est à proximité de l'objet.
+Pour écrire plusieurs Cibles, procédés comme avec GOTO : séparez les par des vigules ",".
 
 exemple :
-TIME -> 0 = CONDITION -> GOOD
-TIME -> 0 = GOTO -> CONDITION:GOOD
+$ -> TA_INIT = TRIPLE_ACTION -> TALK:PEEBOY_INIT
 
-Lorsque la Condition sera vérifiée, l'objet adoptera la condition par défaut.
-
-La condition permet d'altérer à la fois le visuel d'un personnage et son comportement. Il en existe 4 types :
-- GOOD, condition par défaut
-- SICK, le personnage a l'air malade
-- SLEEP, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
-- KO, le personnage a l'air KO et ne peut plus rien faire.
+Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
 
 
-////// PLAYER_AVOIRDER_TYPE //////
+Il est tout à fait possible de créer ses propres actions !
 
+par exemple :
+TIME -> 0 = TRIPLE_ACTION -> WATCH:YELLOW_PLANT_ACTION
+$ -> YELLOW_PLANT_ACTION = TALK -> YELLOW_PLANT_THIRSTY
 
-Le Type de Requête PLAYER_AVOIRDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
+Ici, WATCH ne correspond à aucune action connue par le programme. Il va donc :
+- chercher le nom à afficher à l'écran, dans le fichier "ressources/texts/(la langue)/actions".
+- créer une balise GOTO dont la valeur est YELLOW_PLANT_ACTION.
 
-exemple :
-TIME -> 0 = PLAYER_AVOIRDER_TYPE -> AROUND
-TIME -> 0 = GOTO -> PLAYER_AVOIRDER_TYPE:AROUND
-
-Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement par défaut.
-
-
-Les types d'évitement sont au nombre de 5 et voici leurs fonctionnements :
-- AROUND est le seul type d'évitement où le joueur est compté comme un obstacle pour le pathfinder : le personnage va donc tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendre que ce dernier se décale. Dans le cas où une collision survient malgré tout, le personnage va "faire glisser" le joueur afin de forcer le passage. 
-
-Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
-- STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 
-- PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
-- PUSH_DIRECTION (il faut replacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
-- PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
+La seconde instruction récupère cette balise, et sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")
