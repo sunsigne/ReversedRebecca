@@ -1,15 +1,13 @@
-L'écriture conditionnelle pour tous ces Type de Requêtes est possible (voir "requêtes conditionnelles")
-
 ////// DISABLE //////
 
 
 Le Type de Requête DISABLE permet de "désactiver" l'objet aux coordonnées indiquées : l'objet est toujours présent, mais les Actions de son TRIPLE_ACTION ne sont plus accessibles.
+Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, une seconde cible correspondant à l'index doit être établie (voir "index")
 
 exemple :
-TIME -> 0 = DISABLE -> 10-20
-TIME -> 0 = GOTO -> DISABLE:10-20
+TIME -> 0 = DISABLE -> 10-20,1
 
-Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 verra ses Actions gelées jusqu'à Instruction contraire.
+Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=20 verra ses Actions gelées jusqu'à Instruction contraire.
 
 Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
 
@@ -18,4 +16,4 @@ Note : on peut se demander, à première vue, à quoi une telle Requête pourrai
 
 
 A EXACTEMENT le même fonctionnement que DISABLE, mais pour réactiver les Actions que ce dernier avait gelées.
-Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu, sauf dans un cas Conditionnel.
+Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.

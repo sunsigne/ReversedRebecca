@@ -193,20 +193,22 @@ public class PathFinder implements Position {
 
 		while (range != 0) {
 
-			GameObject object;
+			GameList<GameObject> object_list;
 
 			if (horizontal)
-				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M);
 			else
-				object = Handler.getObjectAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M);
 
-			if (object instanceof CollisionReactor) {
-				CollisionReactor wall = (CollisionReactor) object;
-				if (wall != goal) {
-					if (wall instanceof Player)
-						player = (Player) wall;
-					else if (wall.isBlockingPath())
-						return true;
+			for(GameObject tempObject : object_list.getList()) {
+				if (tempObject instanceof CollisionReactor) {
+					CollisionReactor wall = (CollisionReactor) tempObject;
+					if (wall != goal) {
+						if (wall instanceof Player)
+							player = (Player) wall;
+						else if (wall.isBlockingPath())
+							return true;
+					}
 				}
 			}
 

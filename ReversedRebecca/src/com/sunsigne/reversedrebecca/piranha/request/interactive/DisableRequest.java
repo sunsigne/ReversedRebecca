@@ -24,11 +24,6 @@ public class DisableRequest extends EnableRequest {
 	}
 
 	@Override
-	public boolean hasCompactWriting() {
-		return true;
-	}
-
-	@Override
 	public boolean disable() {
 		return true;
 	}

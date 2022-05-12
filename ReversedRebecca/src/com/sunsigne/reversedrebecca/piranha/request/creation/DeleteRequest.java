@@ -1,13 +1,13 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
-import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class DeleteRequest implements Request {
+public class DeleteRequest implements IndexRequest {
 
 	////////// REQUEST ////////////
 
@@ -29,23 +29,15 @@ public class DeleteRequest implements Request {
 
 	@Override
 	public boolean hasCompactWriting() {
-		return true;
+		return false;
 	}
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
-		// determinate the position
-
-		String pos = String.valueOf(target);
-		int x = Integer.parseInt(pos.split("-")[0]);
-		int y = Integer.parseInt(pos.split("-")[1]);
-		GoalObject goal = new GoalObject(x, y, false);
-
-		// remove the object
-
+		GameObject gameOject = getGameObject(object, target);
 		Handler handler = object.getHandler();
-		handler.removeObject(Handler.getObjectAtPos(handler, goal.getX(), goal.getY(), Size.M));
+		handler.removeObject(gameOject);
 	}
 
 }

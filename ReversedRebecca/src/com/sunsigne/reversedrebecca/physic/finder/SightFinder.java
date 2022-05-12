@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class SightFinder implements Position {
@@ -82,15 +83,15 @@ public class SightFinder implements Position {
 			setY(getY() + Math.round((-1 / distance) * diffY));
 
 			// if a "wall" (blocking sight object) is on the way, return false
-			GameObject wall = Handler.getObjectAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()),
+			GameList<GameObject> wall_list = Handler.getObjectsAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()),
 					observer.getSize());
 
-			if (wall == null)
-				continue;
-			if (wall instanceof CollisionReactor == false)
-				continue;
-			if (((CollisionReactor) wall).isBlockingSight()) {
-				return false;
+			for(GameObject tempWall : wall_list.getList()) {
+				if (tempWall instanceof CollisionReactor == false)
+					continue;
+				if (((CollisionReactor) tempWall).isBlockingSight()) {
+					return false;
+				}
 			}
 
 		} while (distance != 0);
