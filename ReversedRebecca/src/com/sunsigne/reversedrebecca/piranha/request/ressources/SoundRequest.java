@@ -31,7 +31,6 @@ public class SoundRequest implements Request {
 		return true;
 	}
 
-	// WARNING ! Each name should be different in a same folder
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		new SoundTask().play(SOUNDTYPE.SOUND, "sound/" + target.toLowerCase());

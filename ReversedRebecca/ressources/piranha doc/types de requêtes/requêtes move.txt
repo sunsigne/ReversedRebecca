@@ -8,6 +8,7 @@ TIME -> 0 = MOVE -> 33-35
 TIME -> 0 = GOTO -> MOVE:33-35
 
 Lorsque la Condition sera vérifiée, l'objet cherchera à sen rendre en x=33 y=35
+Note : la Cible "STOP" est autorisé. Le nouveau GOAL se l'objet sera alors défini comme null. Ni le NAME d'un objet, ni la Cible "Player" ne sont autorisés pour ce Type de Requête.
 
 
 ////// SLOW //////
