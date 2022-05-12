@@ -1,12 +1,13 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
+import com.sunsigne.reversedrebecca.piranha.request.ConditionalRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class PlayerAvoiderRequest implements Request {
+public class PlayerAvoiderRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -32,7 +33,7 @@ public class PlayerAvoiderRequest implements Request {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
+	public void doClassicAction(PiranhaObject object, String target) {
 		if (object instanceof PlayerAvoider == false)
 			return;
 
@@ -46,6 +47,15 @@ public class PlayerAvoiderRequest implements Request {
 			avoider = tempAvoider;
 		}
 		avoiderObject.setPlayerAvoiderType(avoider);
+	}
+
+	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		if (object instanceof PlayerAvoider == false)
+			return "false";
+
+		PlayerAvoider avoiderObject = (PlayerAvoider) object;
+		return avoiderObject.getPlayerAvoiderType().getName();
 	}
 
 }
