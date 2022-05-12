@@ -3,7 +3,9 @@
 WATCH = regarder
 READ = lire
 TAKE = prendre
-CLEAN = ranger
+CLEAN_CLOTHES = ranger#les#vêtements
+LIGHT_CANDLE = allumer#la#bougie
+EXTINGUISH_CANDLE = éteindre#la#bougie
 TURN_OFF_WITHOUT_SAVING = éteindre#sans#sauvegarder
 
 ///// LIVING /////

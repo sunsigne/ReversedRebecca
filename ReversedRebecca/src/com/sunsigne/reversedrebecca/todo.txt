@@ -58,6 +58,7 @@
 
 	////////// SONS ////////////
 	
+	son pour quand on range les vêtements + quand on allume la bougie
 	Ajouter des voix aux personnages (son quand ils parlent)
 	crer le système de volume de musique
 	bruit de poussage
@@ -78,6 +79,7 @@
 	///////// IDEE ////////////
 
 	possibilité d'allumer la bougie parfumée dans le lvl000. Déclanche un incendit si on part en la laissant !!!
+	faire en sorte que lorsque le joueur reste immobile devant la bougie pendant un moment, la musiquer et le décors change progressivement en quelque chose d'onirique
 
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?

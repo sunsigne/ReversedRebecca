@@ -1,7 +1,7 @@
 ////// NAME //////
 
 
-Le Type de Requête NAME permet de renommer un objet.
+Le Type de Requête NAME permet de renommer un objet. L'écriture conditionnelle est possible et aura donc un but conditionnel (voir "requêtes conditionnelles")
 Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom.
 
 exemple :
@@ -17,7 +17,7 @@ Note : le nom générique OBJECT fait référence à l'objet Piranha en cours. L
 ////// FACING //////
 
 
-Le Type de Requête FACING permet de changer l'orientation d'un objet. L'écriture conditionnelle est possible et aura donc un but conditionnel (voir "requêtes conditionnelles")
+Le Type de Requête FACING permet de changer l'orientation d'un objet. L'écriture conditionnelle est possible.
 
 exemple :
 TIME -> 0 = FACING -> RIGHT

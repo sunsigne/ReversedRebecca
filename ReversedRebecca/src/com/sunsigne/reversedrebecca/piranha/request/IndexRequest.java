@@ -12,14 +12,14 @@ public interface IndexRequest extends Request {
 
 		// determinate the position
 
-		String pos = String.valueOf(target.split(",")[0]);
+		String pos = String.valueOf(target.split(":")[0]);
 		int x = Integer.parseInt(pos.split("-")[0]);
 		int y = Integer.parseInt(pos.split("-")[1]);
 		GoalObject goal = new GoalObject(x, y, false);
 
 		// determinate the object from the index 
 
-		int index = Integer.parseInt(target.split(",")[1]) - 1;
+		int index = Integer.parseInt(target.split(":")[1]) - 1;
 
 		GameList<GameObject> object_list = Handler.getObjectsAtPos(object.getHandler(), goal.getX(), goal.getY(),
 				object.getSize());
