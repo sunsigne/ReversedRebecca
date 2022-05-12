@@ -1,0 +1,14 @@
+Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire qu'ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
+
+////// SEE //////
+
+
+Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
+Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas.
+
+exemple :
+TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il dans le champ de vision de l'objet ?
+- si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
+- si non, définir le GOAL comme étant en x=37 y=42

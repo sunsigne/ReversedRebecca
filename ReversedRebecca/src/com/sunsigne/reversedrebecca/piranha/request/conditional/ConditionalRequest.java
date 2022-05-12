@@ -1,6 +1,8 @@
-package com.sunsigne.reversedrebecca.piranha.request;
+package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 
 public abstract class ConditionalRequest implements Request {

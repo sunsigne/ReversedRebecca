@@ -1,7 +1,7 @@
 ////// Requête conditionnelle //////
 
 
-Certains Types de Requête sont Conditionnels. C'est-à-dire qu'ils vérifient une Valeur supplémentaire (en plus de celle de la Condition) avant de choisir entre deux Cibles.
+Certains Types de Requête sont strictement Conditionnels. C'est-à-dire qu'ils vérifient une Valeur supplémentaire (en plus de celle de la Condition) avant de choisir entre deux Cibles.
 Leur écriture est différente des requêtes classiques, afin de s'adapter à leur statut particulier.
 
 exemple :
@@ -11,7 +11,7 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
 - si non, définir le GOAL comme étant en x=37 y=42
 
-Note : le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets Piranha ne le sont pas.
+Pour en savoir plus sur le Type de Requête SEE, voir "types de requêtes/requêtes conditionnelles".
 
 
 ////// Requête classique à caractère conditionnelle //////
@@ -23,12 +23,12 @@ Certains Types de Requête "classiques" peuvent également s'écrire sous la for
 exemple de requête classique :
 TALKED -> PEEBOY_YOU_HERE = FACING -> UP
 
-exemple de requête classique à caractère conditionnelle :
+exemple de requête classique écrite sous forme conditionnelle :
 TALKED -> PEEBOY_YOU_HERE = FACING -> UP ? SLOW:38-44 / NULL
 
 Dans le premier exemple, lorsque la Condition sera vérifiée, l'objet regardera en haut.
 Dans le second exemple, lorsque la Condition sera vérifiée, Si l'objet regard en haut, alors il aura pour GOAL x=38 y=44 et devra s'y rendre lentement. Sinon, il ne fera rien.
 
 
-Attention ! Tous les Types de Requête ne peuvent pas avoir un caractère conditionnel ! C'est pourquoi cela sera précisé systématiquement lorsque c'est possible.
-Note : TOUTES les requêtes conditionnelles ou à caractère conditionnel ont leur 2 cibles renvoyées chacune à un GOTO à cible unitaire, l'écriture compacte est donc possible.
+Attention ! Tous les Types de Requête ne peuvent pas avoir une écriture conditionnelle ! C'est pourquoi cela sera précisé systématiquement lorsque c'est possible.
+Note : TOUTES les requêtes conditionnelles ou à écriture conditionnelle ont leur 2 cibles renvoyées chacune à un GOTO à cible unitaire, l'écriture compacte y est donc possible.

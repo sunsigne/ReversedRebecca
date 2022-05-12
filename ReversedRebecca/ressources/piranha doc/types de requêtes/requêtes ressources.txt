@@ -1,0 +1,34 @@
+Les Types de requêtes suivants ont pour Cibles le nom d'un fichier dans le dossier "ressources" du jeu, vous pouvez donc créer vos propres Cibles !
+
+////// EXPRESSION //////
+
+
+Le Type de Requête EXPRESSION permet d'afficher une bulle expressive au-dessus d'un objet.
+La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/textures/other".
+
+exemple :
+TIME -> 0 = EXPRESSION -> SUSPENSION
+TIME -> 0 = GOTO -> EXPRESSION:SUSPENSION
+
+Lorsque la Condition sera vérifiée, une bulle avec des points de suspensions apparaitra au-dessus de l'objet.
+
+Ces bulles disparaissent en peu de temps. Leur but est avant tout "d'habiller" une cinématique.
+
+Officiellement, il en existe 2 :
+- SUSPENSION, qui affiche des points de suspensions.
+- EXLAMATION, qui affiche un point d'exclamation.
+
+Note : l'expression "exclamation" a une animation supplémentaire par rapport aux autres, semblable à un "petit saut".
+
+
+////// SOUND //////
+
+
+Le Type de Requête SOUND permet de jouer un son.
+La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/sound".
+
+exemple :
+TIME -> 0 = SOUND -> EXEMPLE_SOUND
+TIME -> 0 = GOTO -> SOUND:EXEMPLE_SOUND
+
+Lorsque la Condition sera vérifiée, le son "exemple_sound.wav" sera joué.

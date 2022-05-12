@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.object.other.ExclamationObject;
 import com.sunsigne.reversedrebecca.object.other.ExpressionObject;

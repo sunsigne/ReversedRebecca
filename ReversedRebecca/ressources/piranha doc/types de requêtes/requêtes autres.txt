@@ -1,0 +1,84 @@
+////// CAMERA //////
+
+
+Le Type de Requête CAMERA permet de déterminer l'emplacement de la Caméra.
+
+exemple :
+TIME -> 0 = CAMERA -> 0-0
+TIME -> 0 = GOTO -> CAMERA:0-0
+
+Lorsque la Condition sera vérifiée, la Caméra se placera en x=0 y=0.
+
+Note : il est tout à fait autorisé d'entrer "PLAYER" comme Cible à la place de coordonnées afin de demander à la Caméra suivre ce dernier.
+Note : le comportement par défaut de la Caméra n'est pas de suivre le joueur, mais de se placer en 0-0. Il faudra donc configurer le fichier SET-UP à chaque fois.
+
+
+////// CUTSCENE //////
+
+
+Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.
+
+exemple :
+TIME -> 0 = CUTSCENE -> START
+TIME -> 0 = GOTO -> CUTSCENE:START
+
+Lorsque la Condition sera vérifiée, une scène cinématique sera lancée.
+
+Les deux "seules choses" que font une scène cinématique sont :
+- d'afficher des bandes noires en haut et en bas de l'écran.
+- d'interdire à l'utilisateur de contrôler le joueur avec le clavier.
+
+Le Type de Requête CUTSCENE accepte 3 cibles :
+- START, pour lancer une scène cinématique.
+- STOP, pour arrêter une scène cinématique.
+- STOP_WITH_DELAY, pour arrêter une scène cinématique après un court délais (1 secondes). On ne sait jamais, ça peut servir ¯\_(ツ)_/¯
+
+Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur.
+
+
+////// INVULNERABLE_PLAYER //////
+
+
+Fait exactement la même chose que INVULNERABLE, à la différence près que ce Type de Requête cible spécifiquement le joueur. L'écriture conditionnelle est possible.
+Note : il est tout à fait possible d'utiliser INVULNERABLE dans le fichier Player, l'avantage d'INVULNERABLE_PLAYER est qu'il est utilisable dans n'importe quel fichier.
+Ce Type de Requête est très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
+
+
+////// CONDITION //////
+
+
+Le Type de Requête CONDITION n'a rien à voir avec une requête Conditionnelle (même si cette dernière reste possible) ! Elle permet de changer la "condition" de l'objet courant.
+
+exemple :
+TIME -> 0 = CONDITION -> GOOD
+TIME -> 0 = GOTO -> CONDITION:GOOD
+
+Lorsque la Condition sera vérifiée, l'objet adoptera la condition par défaut.
+
+La condition permet d'altérer à la fois le visuel d'un personnage et son comportement. Il en existe 4 types :
+- GOOD, condition par défaut
+- SICK, le personnage a l'air malade
+- SLEEP, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
+- KO, le personnage a l'air KO et ne peut plus rien faire.
+
+
+////// PLAYER_AVOIRDER_TYPE //////
+
+
+Le Type de Requête PLAYER_AVOIRDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
+
+exemple :
+TIME -> 0 = PLAYER_AVOIRDER_TYPE -> AROUND
+TIME -> 0 = GOTO -> PLAYER_AVOIRDER_TYPE:AROUND
+
+Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement par défaut.
+
+
+Les types d'évitement sont au nombre de 5 et voici leurs fonctionnements :
+- AROUND est le seul type d'évitement où le joueur est compté comme un obstacle pour le pathfinder : le personnage va donc tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendre que ce dernier se décale. Dans le cas où une collision survient malgré tout, le personnage va "faire glisser" le joueur afin de forcer le passage. 
+
+Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
+- STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 
+- PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
+- PUSH_DIRECTION (il faut replacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
+- PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
