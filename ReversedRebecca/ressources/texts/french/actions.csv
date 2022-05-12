@@ -2,6 +2,8 @@
 
 WATCH = regarder
 READ = lire
+TAKE = prendre
+CLEAN = ranger
 TURN_OFF_WITHOUT_SAVING = éteindre#sans#sauvegarder
 
 ///// LIVING /////

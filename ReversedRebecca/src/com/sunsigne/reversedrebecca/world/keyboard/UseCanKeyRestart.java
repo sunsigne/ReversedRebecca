@@ -18,7 +18,7 @@ public class UseCanKeyRestart extends WorldKeyboard {
 	@Override
 	public void keyPressed(int key) {
 		if (key == KeyEvent.VK_BACK_SPACE) {
-			new World("lvl001");
+			new World("lvl000");
 		}
 	}
 

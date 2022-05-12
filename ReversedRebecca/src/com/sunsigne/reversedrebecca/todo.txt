@@ -27,7 +27,7 @@
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
 	La plante jaune n'est pas finie
-	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialgoue" n'est pas faite)
+	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialogue" n'est pas faite)
 	faire une animation de saut sur place (pour rendre les diagloues + vivants) ?
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
@@ -45,8 +45,8 @@
 
 	////////// FACILE ////////////
 
+	Le bouton "quitter" est encore clickable lors du choix de la langue
 	Language pas fini (s'affiche bizarrement à partir de 3)
-	Le debugTool a les graphismes qui plantes si lancé AVANT un world
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle
 	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
@@ -55,9 +55,7 @@
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
-	OptionScreen - Installer le système pour changer les touches du clavier
-	
-	
+
 	////////// SONS ////////////
 	
 	Ajouter des voix aux personnages (son quand ils parlent)
@@ -72,12 +70,14 @@
 
 	////////// A CREER PLUS TARD ////////////
 
-	des options pour chanbger les touches, la langue, le volume, le type de camera
+	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 
 	///////// IDEE ////////////
+
+	possibilité d'allumer la bougie parfumée dans le lvl000. Déclanche un incendit si on part en la laissant !!!
 
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?

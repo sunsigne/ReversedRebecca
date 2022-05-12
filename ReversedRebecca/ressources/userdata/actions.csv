@@ -4,5 +4,8 @@ TALK = Action1
 WATCH = Action1
 READ = Action1
 
-TRIP = Action2
-TURN_OFF_WITHOUT_SAVING = Action2
+TAKE = Action2
+CLEAN = Action2
+
+TRIP = Action3
+TURN_OFF_WITHOUT_SAVING = Action3

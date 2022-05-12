@@ -33,7 +33,7 @@ TIME -> 0 = CREATE -> onthespot:255-255-3
 
 
 Le Type de Requête DELETE permet de supprimer l'objet qui se trouve aux coordonnées indiquée.
-Attention ! Si plusieurs objets se trouvent aux coordonnées indiquée, un seul d'entre eux sera supprimé.
+Attention ! Si plusieurs objets se trouvent aux coordonnées indiquée, un seul d'entre eux sera supprimé (le plus récent).
 
 exemple :
 TIME -> 0 = DELETE -> 10-20
@@ -43,6 +43,7 @@ TIME -> 0 = GOTO -> DELETE:10-20
 Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 sera supprimé.
 
 Attention ! DELETE est une requête puissante, les NPC et le joueur se déplaçant en permanence, ne les supprimez pas par accident !
+Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si DELETE concerne l'objet en cours, toute requête après DELETE sera ignorée. Assurez-vous d'avoir utilisé AFFECTION (voir GOTO) avant la suppression afin de prendre le relais depuis un autre objet.
 
 
 ////// REPLACE //////
