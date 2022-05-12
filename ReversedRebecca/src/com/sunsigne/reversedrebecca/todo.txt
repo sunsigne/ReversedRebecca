@@ -9,8 +9,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object, piranha (sauf request), puzzle, pattern, (world : mappable-other)
-	optimiser (menu, object, piranha (sauf request), puzzle, pattern, (world : mappable-other)
+	reorganiser (menu, object, puzzle, pattern, (world : mappable-other)
+	optimiser (menu, object, puzzle, pattern, (world : mappable-other)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
@@ -21,7 +21,6 @@
 	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
 	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
 
-	faire un croche pied à Peeboy (TRIP)
 	Quand on fonce dans un Pusher de dos, on est poussé à travers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
@@ -31,23 +30,22 @@
 	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialgoue" n'est pas faite)
 	faire une animation de saut sur place (pour rendre les diagloues + vivants) ?
 	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
-	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place)
+	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
 	
 
 	////////// PIRA ////////////
 
 	creer une music request !!!!!
-	créer des deep_memory, enregistrer la liste en fichier csv peut être une idée ... + prévenir dans la doc que les deep_memory et registers sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
+	créer des deep_memory, enregistrer la liste en fichier csv ? + prévenir dans la doc que les deep_memory sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
 	////////// DIFFICILE ////////////
 
-	creer le type "violet" dans la gui
+	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 
 	////////// FACILE ////////////
 
-	Language pas fini (s'affiche bizarrement à partir de 3
-	faire en sorte que le Layer par défaut du World soit celui où est le joueur
+	Language pas fini (s'affiche bizarrement à partir de 3)
 	Le debugTool a les graphismes qui plantes si lancé AVANT un world
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle

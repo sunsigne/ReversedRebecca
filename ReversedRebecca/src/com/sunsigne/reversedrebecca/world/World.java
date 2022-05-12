@@ -45,14 +45,11 @@ public class World implements Updatable {
 	////////// WORLD ////////////
 
 	public World(String mapName) {
-		this(mapName, LAYER.GROUND);
-	}
-
-	public World(String mapName, LAYER layer) {
 		LAYER.LOADING.addObject(new LoadingScreen());
 
-		initParameters(mapName, layer);
+		initParameters(mapName);
 		createMap();
+		updateLayer();
 		addSetup();
 		addGUI();
 		addControlers();
@@ -62,10 +59,10 @@ public class World implements Updatable {
 
 	}
 
-	private void initParameters(String mapName, LAYER layer) {
+	private void initParameters(String mapName) {
 		updateInstance();
 		this.mapName = mapName;
-		setLayer(layer);
+		setLayer(LAYER.GROUND);
 	}
 
 	private void createMap() {
@@ -73,14 +70,39 @@ public class World implements Updatable {
 		new MapCreator().loadAllLayers(this);
 	}
 
-	private void addGUI() {
-		for (GUI tempGUI : GUIList.getList().getList()) {
-			LAYER.GUI.addObject(tempGUI);
+	private void updateLayer() {
+		Game.getInstance().forceLoop();
+
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return;
+
+		// determine ground of the player layer
+		LAYER ground_player_layer = LAYER.GROUND;
+		for (LAYER tempLayer : LAYER.values()) {
+			if (player.getHandler() != tempLayer.getHandler())
+				ground_player_layer = tempLayer;
+
+			else
+				break;
 		}
+
+		// if player and world are on the same layer
+		if (ground_player_layer == getLayer(false))
+			return;
+
+		// set the world to the layer where the player stands
+		setLayer(ground_player_layer);
 	}
 
 	private void addSetup() {
 		LAYER.DEBUG.addObject(new SetupObject());
+	}
+
+	private void addGUI() {
+		for (GUI tempGUI : GUIList.getList().getList()) {
+			LAYER.GUI.addObject(tempGUI);
+		}
 	}
 
 	private void addControlers() {
