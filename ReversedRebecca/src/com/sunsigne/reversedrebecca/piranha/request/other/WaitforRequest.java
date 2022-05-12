@@ -45,11 +45,11 @@ public class WaitforRequest implements Request {
 		if (target.equalsIgnoreCase("null"))
 			return;
 
-		String condition = String.valueOf(target.split(",")[0]);
+		String condition = String.valueOf(target.split("\\?")[0]);
 
 		String conditionType = String.valueOf(condition.split(":")[0]);
 		String value = String.valueOf(condition.split(":")[1]);
-		String action = String.valueOf(target.split(",")[1]);
+		String action = String.valueOf(target.split("\\?")[1]);
 
 		GenericListener generic = new GenericListener() {
 
