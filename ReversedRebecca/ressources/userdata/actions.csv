@@ -1,0 +1,8 @@
+/////ACTIONS/////
+
+TALK = Action1
+WATCH = Action1
+READ = Action1
+
+TRIP = Action2
+TURN_OFF_WITHOUT_SAVING = Action2

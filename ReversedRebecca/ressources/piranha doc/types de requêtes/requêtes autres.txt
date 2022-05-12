@@ -84,6 +84,7 @@ $ -> YELLOW_PLANT_ACTION = TALK -> YELLOW_PLANT_THIRSTY
 
 Ici, WATCH ne correspond à aucune action connue par le programme. Il va donc :
 - chercher le nom à afficher à l'écran, dans le fichier "ressources/texts/(la langue)/actions".
+- chercher la touche du clavier pour déclancher l'action dans le fichier "ressources/userdata/actions".
 - créer une balise GOTO dont la valeur est YELLOW_PLANT_ACTION.
 
 La seconde instruction récupère cette balise, et sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")

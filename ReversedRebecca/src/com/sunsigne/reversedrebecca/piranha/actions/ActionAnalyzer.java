@@ -9,7 +9,6 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 import com.sunsigne.reversedrebecca.piranha.request.other.TripleActionRequest;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
 public class ActionAnalyzer {
 
@@ -78,11 +77,6 @@ public class ActionAnalyzer {
 					request.doAction(object, target);
 				};
 				return listener;
-			}
-
-			@Override
-			public int getKeyEvent() {
-				return ActionOneKey.getKey();
 			}
 		};
 
