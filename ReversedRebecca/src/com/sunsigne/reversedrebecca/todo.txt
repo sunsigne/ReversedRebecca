@@ -9,8 +9,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object, puzzle, pattern, (world : mappable-other)
-	optimiser (menu, object, puzzle, pattern, (world : mappable-other)
+	reorganiser (menu, object, puzzle, pattern
+	optimiser (menu, object, puzzle, pattern
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
@@ -18,8 +18,6 @@
 	LivingAnimationHandler utiliser la même animation pour sleep & ko
 	rendre le PNG enfermé + vivant
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
-	faire en sorte que les magenta mappable soit ajoutés SOUS les objets précédants (c'est de la déco de sol)
-	le dossier mappable (dans maps) n'est pas terminé, également les décoration (peepuddle) n'est pas encore revu
 
 	Quand on fonce dans un Pusher de dos, on est poussé à travers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?

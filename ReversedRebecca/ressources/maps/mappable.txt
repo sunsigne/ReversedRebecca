@@ -97,7 +97,18 @@ OBJ-50 -> 50
 ////// DECORATION //////
 
 
-à compléter
+Red = dépend du type de décoration / depends on the type of decoration
+Green = 0
+Blue = dépend de "l'état" de la décoration, si elle en a plusieurs (part de 255) / depends on the "state" of the decoration, if it has severeal ones (start from 255)
+
+Flaque d'urine / PeePuddle -> 254
+Vêtements / Clothes -> 253
+Bougie / Candle -> 252
+Serviette / Towel -> 251
+
+exemple : 
+Chemise froisé et chausettes / crumpled jacket and socks : 253-0-255
+Pantalon froisé / crumpled pants : 253-0-254
 
 
 ////// AUTRE / OTHER //////

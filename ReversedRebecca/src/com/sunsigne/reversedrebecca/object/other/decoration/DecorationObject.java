@@ -1,18 +1,23 @@
-package com.sunsigne.reversedrebecca.object.other;
+package com.sunsigne.reversedrebecca.object.other.decoration;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.Size;
 
-public class PeePuddle extends GameObject {
+public class DecorationObject extends GameObject {
 
-	public PeePuddle(int x, int y, String name) {
-		super(x, y);
+	public DecorationObject(int x, int y, String name) {
+		this(x, y, Size.M, Size.M, name);
+	}
+	
+	protected DecorationObject(int x, int y, int w, int h, String name) {
+		super(x, y, w, h);
 		loadImage(name);
 	}
-
+	
 	////////// TICK ////////////
 
 	@Override
@@ -25,7 +30,7 @@ public class PeePuddle extends GameObject {
 	private BufferedImage image;
 
 	private void loadImage(String name) {
-		image = new ImageTask().loadImage("textures/other/" + "pee_puddle_" + name);
+		image = new ImageTask().loadImage("textures/other/decoration/" + name);
 	}
 
 	public BufferedImage getImage() {

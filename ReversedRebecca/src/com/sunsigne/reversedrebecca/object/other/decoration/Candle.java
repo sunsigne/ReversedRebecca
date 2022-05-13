@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.other;
+package com.sunsigne.reversedrebecca.object.other.decoration;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -38,11 +38,11 @@ public class Candle extends GameObject {
 
 	private void loadImage() {
 
-		String path = "textures/other/candle_";
+		String path = "textures/other/decoration/candle_";
 		ImageTask loader = new ImageTask();
 
-		BufferedImage i0 = loader.loadImage(path + "0");
-		BufferedImage i1 = loader.loadImage(path + "1");
+		BufferedImage i0 = loader.loadImage(path + "00");
+		BufferedImage i1 = loader.loadImage(path + "01");
 
 		image = new Cycloid<BufferedImage>(i0, i1);
 	}

@@ -1,17 +1,17 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other.peddpuddle;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.other.PeePuddle;
+import com.sunsigne.reversedrebecca.object.other.decoration.DecorationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappablePeePuddle11 implements Mappable {
+public class MappableTowel implements Mappable {
 
-	private MappablePeePuddle11() {
+	private MappableTowel() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappablePeePuddle11();
+	private static Mappable mappable = new MappableTowel();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,12 +22,12 @@ public class MappablePeePuddle11 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new PeePuddle(x, y, "1_1");
+		return new DecorationObject(x, y, "towel");
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 254, 0, 254 };
+		int[] rgb = { 251, 0, 255 };
 		return rgb;
 	}
 

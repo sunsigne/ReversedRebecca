@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.other.Candle;
+import com.sunsigne.reversedrebecca.object.other.decoration.Candle;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -27,7 +27,7 @@ public class MappableCandle implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 251, 0, 255 };
+		int[] rgb = { 252, 0, 255 };
 		return rgb;
 	}
 
