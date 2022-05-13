@@ -154,7 +154,7 @@ public class ChatContent implements Updatable {
 	private BufferedImage image;
 
 	private void loadImage(String mood) {
-		String imagePath = "textures/characters/" + living_name + "/mood_" + mood;
+		String imagePath = "textures/characters/" + living_name + "/chat/" + mood;
 		image = new ImageTask().loadImage(imagePath, true);
 
 		// load error character instead of missing texture
