@@ -1,18 +1,17 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.other.decoration.ResizedDecorationObject;
-import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.object.other.decoration.Bath;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableClothes01 implements Mappable {
+public class MappableBath implements Mappable {
 
-	private MappableClothes01() {
+	private MappableBath() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableClothes01();
+	private static Mappable mappable = new MappableBath();
 
 	@Override
 	public Mappable getMappable() {
@@ -23,12 +22,12 @@ public class MappableClothes01 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new ResizedDecorationObject(x, y, 2 * Size.M, 2 * Size.M, "clothes_01");
+		return new Bath(x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 253, 0, 254 };
+		int[] rgb = { 250, 0, 255 };
 		return rgb;
 	}
 

@@ -1,12 +1,12 @@
-package com.sunsigne.reversedrebecca.pattern;
+package com.sunsigne.reversedrebecca.pattern.cycloid;
 
 public class Cycloid<T> {
 
-	private T[] objects;
-	private T state;
+	protected T[] objects;
+	protected T state;
 
-	private int size;
-	private int index;
+	protected int size;
+	protected int index;
 
 	@SuppressWarnings("unchecked")
 	public Cycloid(T... objects) {

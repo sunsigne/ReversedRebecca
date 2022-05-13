@@ -5,6 +5,7 @@ WATCH = Action1
 READ = Action1
 
 TAKE = Action2
+TAKE_SHOWER = Action2
 CLEAN_CLOTHES = Action2
 LIGHT_CANDLE = Action2
 EXTINGUISH_CANDLE = Action2

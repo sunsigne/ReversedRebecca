@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.gui.DebugModeObject;
-import com.sunsigne.reversedrebecca.pattern.Cycloid;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

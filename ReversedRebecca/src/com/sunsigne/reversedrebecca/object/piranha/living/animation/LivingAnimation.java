@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.pattern.Cycloid;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public abstract class LivingAnimation {

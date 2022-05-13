@@ -105,6 +105,7 @@ Flaque d'urine / PeePuddle -> 254
 Vêtements / Clothes -> 253
 Bougie / Candle -> 252
 Serviette / Towel -> 251
+Bain / Bath -> 250
 
 exemple : 
 Chemise froisé et chausettes / crumpled jacket and socks : 253-0-255

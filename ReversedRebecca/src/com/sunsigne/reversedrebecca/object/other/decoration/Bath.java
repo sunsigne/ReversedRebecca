@@ -4,19 +4,20 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.Size;
 
-public class Candle extends GameObject {
+public class Bath extends GameObject {
 
-	public Candle(int x, int y) {
-		super(x, y);
+	public Bath(int x, int y) {
+		super(x, y, Size.M, 2 * Size.M);
 		loadImage();
 	}
 
 	////////// TICK ////////////
 
-	private final int ANIMATION_TIME = 16;
+	private final int ANIMATION_TIME = 90;
 	private int time = ANIMATION_TIME;
 
 	@Override
@@ -34,17 +35,18 @@ public class Candle extends GameObject {
 
 	////////// TEXTURE ////////////
 
-	protected Cycloid<BufferedImage> image;
+	protected LimitedCycloid<BufferedImage> image;
 
 	private void loadImage() {
 
-		String path = "textures/other/decoration/candle_";
+		String path = "textures/other/decoration/bath_";
 		ImageTask loader = new ImageTask();
 
 		BufferedImage i0 = loader.loadImage(path + "00");
 		BufferedImage i1 = loader.loadImage(path + "01");
+		BufferedImage i2 = loader.loadImage(path + "02");
 
-		image = new Cycloid<BufferedImage>(i0, i1);
+		image = new LimitedCycloid<BufferedImage>(i0, i1, i2);
 	}
 
 	////////// RENDER ////////////
