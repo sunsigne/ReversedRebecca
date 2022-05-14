@@ -20,7 +20,7 @@ public abstract class PiranhaObjectAction extends Action {
 	public void create(PiranhaObject object, String target) {
 		setName(new Translatable().getTranslatedText(getName(), object.getFile()));
 		setListener(getListener(object, target));
-		setKeyEvent(getKeyEvent());
+		setKeyEvent(getRegisteredKeyEvent());
 	}
 
 	////////// NAME ////////////
@@ -35,8 +35,7 @@ public abstract class PiranhaObjectAction extends Action {
 
 	String file = "userdata/actions.csv";
 
-	@Override
-	public int getKeyEvent() {
+	private int getRegisteredKeyEvent() {
 		String registeredAction = new FileTask().read(getName(), file);
 		switch (registeredAction) {
 		case "Action1":
