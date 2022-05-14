@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.object;
+package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.Font;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
