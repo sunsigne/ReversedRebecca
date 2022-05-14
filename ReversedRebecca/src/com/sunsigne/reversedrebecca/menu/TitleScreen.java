@@ -46,7 +46,7 @@ public class TitleScreen implements Updatable, TickFree {
 
 	private void startWorld() {
 		LAYER.MENU.getHandler().clear();
-		new World("lvl001");
+		new World("lvl000");
 	}
 
 	///// options /////

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.other.decoration;
+package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -10,15 +10,19 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class DecorationObject extends GameObject implements TickFree {
 
-	private String name;
-
 	public DecorationObject(int x, int y, String name) {
 		this(x, y, Size.M, Size.M, name);
 	}
 
-	protected DecorationObject(int x, int y, int w, int h, String name) {
+	public DecorationObject(int x, int y, int w, int h, String name) {
 		super(x, y, w, h);
 		this.name = name;
+	}
+
+	private String name;
+
+	public String getName() {
+		return name;
 	}
 
 	////////// TEXTURE ////////////
@@ -27,7 +31,7 @@ public class DecorationObject extends GameObject implements TickFree {
 
 	public BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/other/decoration/" + name);
+			image = new ImageTask().loadImage("textures/other/decoration/" + getName());
 		return image;
 	}
 

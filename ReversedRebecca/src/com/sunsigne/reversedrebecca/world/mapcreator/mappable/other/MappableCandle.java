@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.other.decoration.Candle;
+import com.sunsigne.reversedrebecca.object.other.AnimatedDecorationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -22,7 +22,7 @@ public class MappableCandle implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new Candle(x, y);
+		return new AnimatedDecorationObject(x, y, "candle", 16, 2, true);
 	}
 
 	@Override
