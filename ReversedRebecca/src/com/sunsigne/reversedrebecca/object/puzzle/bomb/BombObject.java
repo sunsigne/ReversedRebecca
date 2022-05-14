@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
@@ -40,7 +40,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	public void setExploded(boolean exploded) {
 		this.exploded = exploded;
-		if(exploded)
+		if (exploded)
 			new SoundTask().play(SOUNDTYPE.SOUND, "sound/explosion_medium");
 	}
 
@@ -108,23 +108,17 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		}
 	}
 
-	private int frame;
-
 	private void runAnimation() {
 		time--;
-		if (time < 0 && frame < 9) {
+		if (time < 0) {
 			time = ANIMATION_TIME;
 			animation.cycle();
-			frame++;
 		}
 	}
 
 	////////// TEXTURE ////////////
 
-	
-	////////// TEXTURE ////////////
-
-	private Cycloid<BufferedImage> animation;
+	private LimitedCycloid<BufferedImage> animation;
 
 	private void loadAnimation() {
 
@@ -142,7 +136,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		BufferedImage i8 = loader.loadImage(path + "8");
 		BufferedImage i9 = loader.loadImage(path + "9");
 
-		animation = new Cycloid<BufferedImage>(i0, i1, i2, i3, i4, i5, i6, i7, i8, i9);
+		animation = new LimitedCycloid<BufferedImage>(i0, i1, i2, i3, i4, i5, i6, i7, i8, i9);
 	}
 
 	public BufferedImage getImage() {
