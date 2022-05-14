@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public abstract class LivingObject extends PiranhaObject implements Health, Pusher, Pushable, PathSearcher {
 
@@ -163,7 +162,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	private void loadAnimation() {
 		animation = new LivingAnimationHandler(this);
 	}
-	
+
 	public BufferedImage getImage() {
 		return animation.getImage();
 	}

@@ -9,10 +9,9 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object, puzzle, pattern
-	optimiser (menu, object, puzzle, pattern
+	reorganiser (menu, object, puzzle, pattern)
+	optimiser (menu, object, puzzle, pattern)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
-	optimiser les classes qui utilisent cycloid en limitedcycloid lorsque c'est pratique
 
 	////////// A FINIR ////////////
 
@@ -57,8 +56,6 @@
 
 	////////// SONS ////////////
 	
-	faire un son pour le bain
-	son pour quand on range les vêtements + quand on allume la bougie
 	Ajouter des voix aux personnages (son quand ils parlent)
 	crer le système de volume de musique
 	bruit de poussage
