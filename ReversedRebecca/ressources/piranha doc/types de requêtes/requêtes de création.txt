@@ -24,10 +24,6 @@ TIME -> 0 = GOTO -> CREATE_ONTHESPOT:255-255-3
 
 Lorsque la Condition sera vérifiée, un OBJ-03 (255-255-3) sera créée là où se trouve l'objet Piranha.
 
-Note : techniquement, CREATE_ONTHESPOT appele la requête CREATE avec "onthespot" comme coordonnées,
-il est tout à fait possible (bien qu'inutile) d'écrire :
-TIME -> 0 = CREATE -> onthespot:255-255-3
-
 
 ////// DELETE //////
 
@@ -44,6 +40,12 @@ Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 sera su
 
 Attention ! DELETE est une requête puissante, les NPC et le joueur se déplaçant en permanence, ne les supprimez pas par accident !
 Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si DELETE concerne l'objet en cours, toute requête après DELETE sera ignorée. Assurez-vous d'avoir utilisé AFFECTION (voir GOTO) avant la suppression afin de prendre le relais depuis un autre objet.
+
+
+////// DELETE_ONTHESPOT //////
+
+
+De la même façon que CREATE_ONTHESPOT a permis à CREATE d'avoir une écriture compacte en entrant qu'une seule cible, Le Type de Requête DELETE_ONTHESPOT a exactement le même objectif et la cible unitaire devient donc l'index.
 
 
 ////// REPLACE //////
