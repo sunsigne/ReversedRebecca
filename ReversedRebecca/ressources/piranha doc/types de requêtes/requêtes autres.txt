@@ -88,3 +88,12 @@ Ici, WATCH ne correspond à aucune action connue par le programme. Il va donc :
 - créer une balise GOTO dont la valeur est YELLOW_PLANT_ACTION.
 
 La seconde instruction récupère cette balise, et sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")
+
+
+Lorsqu'une des actions disponibles est perpétrée, le TRIPLE_ACTION de l'objet est nullifié par défaut. Il existe cependant une exception à cette règle : lorsque plusieurs objets différents sur la map partage un même fichier Piranha, cette propriété ne fonctionnera que pour l'objet courant (cela peut arriver pour les gros objets, qui sont sur deux cases).
+Afin de nullifier le TRIPLE_ACTION dans ce cas précis, il convient d'utiliser le Type de Requête AFFECTING de façon "locale" comme dans l'exemple suivant :
+
+$ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES:CLEAN_CLOTHES
+$ -> CLEAN_CLOTHES = GOTO -> AFFECTING:CLOTHES_CLEANED, DELETE_CLOTHES
+! -> CLOTHES_CLEANED = TRIPLE_ACTION -> NULL
+$ -> DELETE_CLOTHES = DELETE -> 5-7:1
