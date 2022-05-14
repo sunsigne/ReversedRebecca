@@ -6,13 +6,13 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableBath implements Mappable {
+public class MappableBathFilling implements Mappable {
 
-	private MappableBath() {
+	private MappableBathFilling() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableBath();
+	private static Mappable mappable = new MappableBathFilling();
 
 	@Override
 	public Mappable getMappable() {
@@ -23,7 +23,7 @@ public class MappableBath implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new AnimatedDecorationObject(x, y, Size.M, 2 * Size.M, "bath", 90, 3, false);
+		return new AnimatedDecorationObject(x, y, Size.M, 2 * Size.M, "bath_filling", 90, 3, false);
 	}
 
 	@Override

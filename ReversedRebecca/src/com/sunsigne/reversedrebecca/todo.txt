@@ -18,6 +18,7 @@
 	LivingAnimationHandler utiliser la même animation pour sleep & ko
 	rendre le PNG enfermé + vivant
 	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
+	mettre à jour la doc des mappables
 
 	Quand on fonce dans un Pusher de dos, on est poussé à travers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
@@ -38,6 +39,7 @@
 
 	////////// DIFFICILE ////////////
 
+	faire un nouveau type de debug : active les boutons clickable à droite plutot que d'utiliser F1, F2, etc.
 	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 
