@@ -22,11 +22,12 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
-public class World implements Updatable {
+public class World implements Updatable, RenderFree {
 
 	////////// SELF-CONTAINED ////////////
 
@@ -230,13 +231,6 @@ public class World implements Updatable {
 			time++;
 			new TimeCondition().registerValue(time);
 		}
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 	////////// KEYBOARD ////////////

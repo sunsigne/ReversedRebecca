@@ -85,13 +85,6 @@ public abstract class HackPuzzle extends Puzzle {
 		}
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
 	////////// RENDER ////////////
 
 	@Override

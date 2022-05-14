@@ -6,10 +6,11 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class GroundRendering implements Updatable {
+public class GroundRendering implements Updatable, TickFree {
 
 	public GroundRendering(World world, LAYER layer) {
 		this.world = world;
@@ -20,13 +21,6 @@ public class GroundRendering implements Updatable {
 	
 	public World getWorld() {
 		return world;
-	}
-
-	////////// TICK ////////////
-	
-	@Override
-	public void tick() {
-	
 	}
 
 	////////// RENDER ////////////

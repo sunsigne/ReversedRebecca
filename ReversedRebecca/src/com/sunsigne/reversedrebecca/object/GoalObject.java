@@ -1,27 +1,13 @@
 package com.sunsigne.reversedrebecca.object;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class GoalObject extends GameObject {
+public class GoalObject extends GameObject implements TickFree, RenderFree {
 
 	public GoalObject(int x, int y, boolean reversed) {
 		super(reversed ? x / Size.M : x * Size.M, reversed ? y / Size.M : y * Size.M);
-
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
 
 	}
 

@@ -1,29 +1,15 @@
 package com.sunsigne.reversedrebecca.object.puzzle;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class KillPuzzleObject extends PuzzleObject implements CollisionReactor {
+public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFree, CollisionReactor {
 
 	public KillPuzzleObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 	////////// COLLISION ////////////

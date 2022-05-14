@@ -64,13 +64,6 @@ public abstract class KeyPuzzle extends Puzzle {
 		}
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
 	////////// RENDER ////////////
 
 	@Override

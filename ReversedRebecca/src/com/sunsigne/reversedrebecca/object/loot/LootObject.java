@@ -9,18 +9,12 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class LootObject extends GameObject implements CollisionReactor {
+public abstract class LootObject extends GameObject implements TickFree, CollisionReactor {
 
 	public LootObject(int x, int y) {
 		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// COLLISION ////////////

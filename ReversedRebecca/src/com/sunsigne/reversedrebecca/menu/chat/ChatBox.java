@@ -17,10 +17,11 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, KeyboardEvent {
+public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue) {
 		this.object = object;
@@ -29,13 +30,6 @@ public class ChatBox implements Updatable, KeyboardEvent {
 
 		// register the whole dialogue as an array of lines
 		all_lines = dialogue.split(System.getProperty("line.separator"));
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// TEXTURE ////////////

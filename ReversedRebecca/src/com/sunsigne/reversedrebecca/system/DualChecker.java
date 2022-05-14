@@ -9,9 +9,10 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class DualChecker implements Updatable {
+public class DualChecker implements Updatable, RenderFree {
 
 	protected DualChecker() {
 		LAYER.DEBUG.addObject(this);
@@ -61,13 +62,6 @@ public class DualChecker implements Updatable {
 		new SoundTask().play(SOUNDTYPE.ERROR, "sound/error");
 		JOptionPane.showMessageDialog(null, "The game is already running.");
 		new Conductor().stopApp();
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 }

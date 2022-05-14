@@ -26,13 +26,6 @@ public class GUIHealth extends GameObject implements GUI {
 		return gui;
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
 	////////// TEXTURE ////////////
 
 	private BufferedImage empty_img;

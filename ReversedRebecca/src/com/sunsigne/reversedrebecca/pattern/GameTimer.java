@@ -3,10 +3,11 @@ package com.sunsigne.reversedrebecca.pattern;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class GameTimer implements Updatable {
+public class GameTimer implements Updatable, RenderFree {
 
 	public GameTimer(int timeInTicks) {
 		this(timeInTicks, null);
@@ -45,13 +46,6 @@ public class GameTimer implements Updatable {
 			if (listener != null)
 				listener.doAction();
 		}
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 }

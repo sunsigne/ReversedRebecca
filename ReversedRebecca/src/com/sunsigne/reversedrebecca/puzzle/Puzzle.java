@@ -12,10 +12,11 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class Puzzle implements Updatable {
+public abstract class Puzzle implements Updatable, TickFree {
 
 	public Puzzle(GenericListener actionOnWinning) {
 		this.actionOnWinning = actionOnWinning;

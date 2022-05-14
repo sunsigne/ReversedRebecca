@@ -37,4 +37,5 @@ public interface Updatable {
 	////////// RENDER ////////////
 
 	void render(Graphics g);
+	
 }

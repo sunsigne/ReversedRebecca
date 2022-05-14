@@ -13,10 +13,11 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class TitleScreen implements Updatable {
+public class TitleScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 	
@@ -91,13 +92,6 @@ public class TitleScreen implements Updatable {
 
 		ButtonObject quitButton = new TitleScreenButton(text, 710, 920, 500, 90, onPress, onRelease);
 		LAYER.MENU.addObject(quitButton);
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// RENDER ////////////

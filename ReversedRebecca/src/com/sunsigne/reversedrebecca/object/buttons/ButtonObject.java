@@ -7,8 +7,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class ButtonObject extends GameObject implements Facing, MouseUserEvent {
+public abstract class ButtonObject extends GameObject implements TickFree, Facing, MouseUserEvent {
 
 	public ButtonObject(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(x, y, w, h);
@@ -45,13 +46,6 @@ public abstract class ButtonObject extends GameObject implements Facing, MouseUs
 		return text;
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-	
 	////////// MOUSE ////////////
 
 	private MouseController mouseController = new MouseController(this);

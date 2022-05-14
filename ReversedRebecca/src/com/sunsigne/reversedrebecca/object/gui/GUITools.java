@@ -30,13 +30,6 @@ public class GUITools extends GameObject implements GUI {
 		return gui;
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
 	////////// TEXTURE ////////////
 
 	private GameList<BufferedImage> images = new GameList<>(LISTTYPE.ARRAY);

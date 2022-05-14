@@ -6,8 +6,9 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DecorationObject extends GameObject {
+public class DecorationObject extends GameObject implements TickFree {
 
 	public DecorationObject(int x, int y, String name) {
 		this(x, y, Size.M, Size.M, name);
@@ -16,13 +17,6 @@ public class DecorationObject extends GameObject {
 	protected DecorationObject(int x, int y, int w, int h, String name) {
 		super(x, y, w, h);
 		loadImage(name);
-	}
-	
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// TEXTURE ////////////

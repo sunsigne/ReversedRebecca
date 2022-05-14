@@ -18,9 +18,10 @@ import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class LanguageScreen implements Updatable {
+public class LanguageScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 
@@ -101,13 +102,6 @@ public class LanguageScreen implements Updatable {
 	private void openTitleScreen() {
 		getHandler().clear();
 		new TitleScreen();
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// RENDER ////////////

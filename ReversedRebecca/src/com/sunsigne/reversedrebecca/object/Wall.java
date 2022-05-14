@@ -1,32 +1,18 @@
 package com.sunsigne.reversedrebecca.object;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class Wall extends GameObject implements CollisionReactor {
+public class Wall extends GameObject implements TickFree, RenderFree, CollisionReactor {
 
 	public Wall(int x, int y) {
 		super(x, y);
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
-	}
-
 	////////// COLLISION ////////////
-	
+
 	@Override
 	public boolean isBlockingSight() {
 		return true;

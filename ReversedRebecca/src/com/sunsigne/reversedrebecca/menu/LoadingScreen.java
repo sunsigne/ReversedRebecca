@@ -7,20 +7,14 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class LoadingScreen implements Updatable {
+public class LoadingScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 	
 	public LoadingScreen() {
-
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
 
 	}
 

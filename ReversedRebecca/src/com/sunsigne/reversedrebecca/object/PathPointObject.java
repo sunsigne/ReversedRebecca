@@ -1,12 +1,12 @@
 package com.sunsigne.reversedrebecca.object;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class PathPointObject extends GameObject implements PathSearcher {
+public class PathPointObject extends GameObject implements TickFree, RenderFree, PathSearcher {
 
 	public PathPointObject(int x, int y) {
 		super(x, y);
@@ -42,20 +42,6 @@ public class PathPointObject extends GameObject implements PathSearcher {
 	@Override
 	public void setPath(DIRECTION path) {
 		this.path = path;
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 }

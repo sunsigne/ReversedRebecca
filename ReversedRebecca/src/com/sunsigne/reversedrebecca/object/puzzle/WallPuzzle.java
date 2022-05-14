@@ -5,19 +5,13 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class WallPuzzle extends GameObject {
+public class WallPuzzle extends GameObject implements TickFree {
 
 	public WallPuzzle(BufferedImage img, int x, int y) {
 		super(x, y, Size.L, Size.L);
 		this.img = img;
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// RENDER ////////////

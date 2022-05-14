@@ -9,8 +9,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class PuzzlerObject extends GameObject implements Difficulty, Interactive, CollisionReactor {
+public abstract class PuzzlerObject extends GameObject implements TickFree, Difficulty, Interactive, CollisionReactor {
 
 	public PuzzlerObject(int x, int y) {
 		this(LVL.NULL, x, y);
@@ -52,13 +53,6 @@ public abstract class PuzzlerObject extends GameObject implements Difficulty, In
 	@Override
 	public void setDisabled(boolean isDisabled) {
 		this.isDisabled = isDisabled;
-	}
-	
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
 	}
 
 	////////// TEXTURE ////////////

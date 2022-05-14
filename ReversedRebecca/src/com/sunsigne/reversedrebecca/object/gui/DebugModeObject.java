@@ -8,8 +8,9 @@ import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DebugModeObject extends GameObject {
+public class DebugModeObject extends GameObject implements TickFree {
 
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
@@ -21,13 +22,6 @@ public class DebugModeObject extends GameObject {
 
 	private DebugMode debugMode;
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-	
 	////////// TEXTURE ////////////
 	
 	private BufferedImage img;
