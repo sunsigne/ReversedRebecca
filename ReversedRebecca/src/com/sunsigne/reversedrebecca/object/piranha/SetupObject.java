@@ -1,11 +1,11 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class SetupObject extends PiranhaObject {
+public class SetupObject extends PiranhaObject implements TickFree, RenderFree {
 
 	public SetupObject() {
 		super("set-up", -Size.M, -Size.M);
@@ -17,20 +17,6 @@ public class SetupObject extends PiranhaObject {
 	@Override
 	public boolean mustFollowPath() {
 		return false;
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-
 	}
 
 	////////// COLLISION ////////////
