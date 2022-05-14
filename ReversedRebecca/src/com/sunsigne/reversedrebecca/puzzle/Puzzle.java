@@ -61,15 +61,15 @@ public abstract class Puzzle implements Updatable, TickFree {
 	protected void createWallBorder() {
 
 		Handler handler = LAYER.PUZZLE.getHandler();
-		BufferedImage img = getWallTexture();
+		BufferedImage image = getWallTexture();
 
 		for (int col = 0; col < 13; col++) {
-			handler.addObject(new WallPuzzle(img, getCol(col), getRow(0)));
-			handler.addObject(new WallPuzzle(img, getCol(col), getRow(7)));
+			handler.addObject(new WallPuzzle(image, getCol(col), getRow(0)));
+			handler.addObject(new WallPuzzle(image, getCol(col), getRow(7)));
 		}
 		for (int row = 0; row < 8; row++) {
-			handler.addObject(new WallPuzzle(img, getCol(0), getRow(row)));
-			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
+			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
+			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
 		}
 	}
 

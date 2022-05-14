@@ -15,7 +15,6 @@ public class DebugModeObject extends GameObject implements TickFree {
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
 		this.debugMode = debugMode;
-		loadImage();
 	}
 
 	////////// DEBUG MODE ////////////
@@ -24,10 +23,12 @@ public class DebugModeObject extends GameObject implements TickFree {
 
 	////////// TEXTURE ////////////
 	
-	private BufferedImage img;
-	
-	private void loadImage() {
-		img = new ImageTask().loadImage("textures/gui/" + debugMode.getName());
+	private BufferedImage image;
+
+	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/gui/" + debugMode.getName());
+		return image;
 	}
 	
 	////////// RENDER ////////////
@@ -35,7 +36,7 @@ public class DebugModeObject extends GameObject implements TickFree {
 	@Override
 	public void render(Graphics g) {
 		if (debugMode.getState())
-			g.drawImage(img, getX(), getY() - (debugMode.getIndex()) * getHeight(), getWidth(), getHeight(),
+			g.drawImage(getImage(), getX(), getY() - (debugMode.getIndex()) * getHeight(), getWidth(), getHeight(),
 					null);
 	}
 

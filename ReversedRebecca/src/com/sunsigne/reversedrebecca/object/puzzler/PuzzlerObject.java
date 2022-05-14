@@ -16,11 +16,10 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	public PuzzlerObject(int x, int y) {
 		this(LVL.NULL, x, y);
 	}
-	
+
 	public PuzzlerObject(LVL difficulty, int x, int y) {
 		super(x, y);
 		this.difficulty = difficulty;
-		loadImage();
 	}
 
 	////////// NAME ////////////
@@ -59,21 +58,19 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 
 	private BufferedImage image;
 
-	private void loadImage() {
-		image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName());
-	}
-
 	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName());
 		return image;
 	}
 
 	////////// COLLISION ////////////
-	
+
 	@Override
 	public boolean isBlockingSight() {
 		return true;
 	}
-	
+
 	@Override
 	public boolean isBlockingPath() {
 		return true;

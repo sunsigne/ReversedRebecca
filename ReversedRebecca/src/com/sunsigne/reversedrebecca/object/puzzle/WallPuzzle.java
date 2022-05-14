@@ -9,18 +9,18 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class WallPuzzle extends GameObject implements TickFree {
 
-	public WallPuzzle(BufferedImage img, int x, int y) {
+	public WallPuzzle(BufferedImage image, int x, int y) {
 		super(x, y, Size.L, Size.L);
-		this.img = img;
+		this.image = image;
 	}
 
 	////////// RENDER ////////////
 
-	private BufferedImage img;
+	private BufferedImage image;
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(img, getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 }

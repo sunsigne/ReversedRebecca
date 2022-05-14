@@ -16,7 +16,7 @@ public class VirusObject extends PuzzleObject implements CollisionReactor {
 
 	public VirusObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
-		loadImage();
+		loadAnimation();
 	}
 
 	////////// TICK ////////////
@@ -62,26 +62,34 @@ public class VirusObject extends PuzzleObject implements CollisionReactor {
 		time--;
 		if (time < 0) {
 			time = ANIMATION_TIME;
-			img.cycle();
+			animation.cycle();
 		}
 	}
 
 	////////// TEXTURE ////////////
 
-	private Cycloid<BufferedImage> img;
+	private Cycloid<BufferedImage> animation;
 
-	private void loadImage() {
+	private void loadAnimation() {
+		
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_virus";
-		BufferedImage img0 = new ImageTask().loadImage(path + "_0");
-		BufferedImage img1 = new ImageTask().loadImage(path + "_1");
-		img = new Cycloid<BufferedImage>(img0, img1);
+		ImageTask loader = new ImageTask();
+		
+		BufferedImage img0 = loader.loadImage(path + "_0");
+		BufferedImage img1 = loader.loadImage(path + "_1");
+		
+		animation = new Cycloid<BufferedImage>(img0, img1);
+	}
+
+	public BufferedImage getImage() {
+		return animation.getState();
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(img.getState(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// COLLISION ////////////

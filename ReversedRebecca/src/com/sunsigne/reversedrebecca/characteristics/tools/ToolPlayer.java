@@ -98,7 +98,7 @@ public abstract class ToolPlayer implements Difficulty {
 		if (guiTool == null)
 			return;
 
-		guiTool.loadImage();
+		guiTool.loadImages();
 	}
 
 }

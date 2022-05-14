@@ -12,7 +12,7 @@ public class Bath extends GameObject {
 
 	public Bath(int x, int y) {
 		super(x, y, Size.M, 2 * Size.M);
-		loadImage();
+		loadAnimation();
 	}
 
 	////////// TICK ////////////
@@ -29,15 +29,15 @@ public class Bath extends GameObject {
 		time--;
 		if (time < 0) {
 			time = ANIMATION_TIME;
-			image.cycle();
+			animation.cycle();
 		}
 	}
 
 	////////// TEXTURE ////////////
 
-	protected LimitedCycloid<BufferedImage> image;
+	protected LimitedCycloid<BufferedImage> animation;
 
-	private void loadImage() {
+	private void loadAnimation() {
 
 		String path = "textures/other/decoration/bath_";
 		ImageTask loader = new ImageTask();
@@ -46,14 +46,18 @@ public class Bath extends GameObject {
 		BufferedImage i1 = loader.loadImage(path + "01");
 		BufferedImage i2 = loader.loadImage(path + "02");
 
-		image = new LimitedCycloid<BufferedImage>(i0, i1, i2);
+		animation = new LimitedCycloid<BufferedImage>(i0, i1, i2);
+	}
+	
+	public BufferedImage getImage() {
+		return animation.getState();
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(image.getState(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 }

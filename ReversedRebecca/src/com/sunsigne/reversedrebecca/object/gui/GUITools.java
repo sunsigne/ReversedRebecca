@@ -18,7 +18,7 @@ public class GUITools extends GameObject implements GUI {
 	private GUITools() {
 		super(0, Window.HEIGHT - Size.M, Size.M, Size.M);
 		GUIList.getList().addObject(this);
-		loadImage();
+		loadImages();
 	}
 
 	////////// GUI ////////////
@@ -34,7 +34,7 @@ public class GUITools extends GameObject implements GUI {
 
 	private GameList<BufferedImage> images = new GameList<>(LISTTYPE.ARRAY);
 
-	public void loadImage() {
+	public void loadImages() {
 		images.clear();
 
 		var list = ToolPlayerList.getList();

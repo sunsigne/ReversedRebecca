@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
@@ -9,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public abstract class LivingObject extends PiranhaObject implements Health, Pusher, Pushable, PathSearcher {
 
@@ -161,12 +163,16 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	private void loadAnimation() {
 		animation = new LivingAnimationHandler(this);
 	}
+	
+	public BufferedImage getImage() {
+		return animation.getImage();
+	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(animation.getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// PUSHER ////////////

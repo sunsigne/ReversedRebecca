@@ -21,12 +21,11 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	public KeyObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
-		loadImage();
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 
 	////////// SIZE ////////////
-	
+
 	// smaller hitbox : the game is easier
 	@Override
 	public Rectangle getBounds(DIRECTION direction) {
@@ -36,7 +35,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 		int h = getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);
@@ -44,7 +43,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	@Override
 	public void tick() {
-		
+
 		// goes up and down
 		if (getY() >= ymax)
 			setVelY(-speed);
@@ -60,17 +59,19 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage img;
+	private BufferedImage image;
 
-	private void loadImage() {
-		img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_key");
+	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_key");
+		return image;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(img, getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// MOUSE ////////////

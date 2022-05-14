@@ -10,24 +10,24 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class DecorationObject extends GameObject implements TickFree {
 
+	private String name;
+
 	public DecorationObject(int x, int y, String name) {
 		this(x, y, Size.M, Size.M, name);
 	}
-	
+
 	protected DecorationObject(int x, int y, int w, int h, String name) {
 		super(x, y, w, h);
-		loadImage(name);
+		this.name = name;
 	}
 
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
 
-	private void loadImage(String name) {
-		image = new ImageTask().loadImage("textures/other/decoration/" + name);
-	}
-
 	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/other/decoration/" + name);
 		return image;
 	}
 

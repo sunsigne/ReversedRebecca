@@ -14,10 +14,11 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public class ChatContent implements Updatable {
 
 	private String living_name;
+	private String mood;
 
 	public ChatContent(String living_name, String mood, String text) {
 		this.living_name = living_name;
-		loadImage(mood);
+		this.mood = mood;
 
 		// WARNING ! you should NOT use more than one "@" by line
 		this.sentence[0] = text.split("@")[0];
@@ -153,7 +154,7 @@ public class ChatContent implements Updatable {
 
 	private BufferedImage image;
 
-	private void loadImage(String mood) {
+	private void loadImage() {
 		String imagePath = "textures/characters/" + living_name + "/chat/" + mood;
 		image = new ImageTask().loadImage(imagePath, true);
 
@@ -165,6 +166,8 @@ public class ChatContent implements Updatable {
 	}
 
 	public BufferedImage getImage() {
+		if (image == null)
+			loadImage();
 		return image;
 	}
 

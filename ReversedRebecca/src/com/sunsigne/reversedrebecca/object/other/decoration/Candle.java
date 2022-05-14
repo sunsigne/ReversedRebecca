@@ -11,7 +11,7 @@ public class Candle extends GameObject {
 
 	public Candle(int x, int y) {
 		super(x, y);
-		loadImage();
+		loadAnimation();
 	}
 
 	////////// TICK ////////////
@@ -28,30 +28,34 @@ public class Candle extends GameObject {
 		time--;
 		if (time < 0) {
 			time = ANIMATION_TIME;
-			image.cycle();
+			animation.cycle();
 		}
 	}
 
 	////////// TEXTURE ////////////
 
-	protected Cycloid<BufferedImage> image;
+	protected Cycloid<BufferedImage> animation;
 
-	private void loadImage() {
-
+	private void loadAnimation() {
+		
 		String path = "textures/other/decoration/candle_";
 		ImageTask loader = new ImageTask();
-
+		
 		BufferedImage i0 = loader.loadImage(path + "00");
 		BufferedImage i1 = loader.loadImage(path + "01");
-
-		image = new Cycloid<BufferedImage>(i0, i1);
+		
+		animation = new Cycloid<BufferedImage>(i0, i1);
+	}
+	
+	public BufferedImage getImage() {
+		return animation.getState();
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(image.getState(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 }

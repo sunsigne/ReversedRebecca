@@ -12,12 +12,11 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class ToolObject extends LootObject implements Difficulty {
 
 	private String file = "tools.csv";
-	
+
 	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
 		this.toolPlayer = toolPlayer;
 		this.difficulty = difficulty;
-		loadImage();
 	}
 
 	private ToolPlayer toolPlayer;
@@ -40,12 +39,9 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	protected BufferedImage image;
 
-	private void loadImage() {
-		image = new ImageTask().loadImage(
-				"textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
-	}
-
 	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
 		return image;
 	}
 

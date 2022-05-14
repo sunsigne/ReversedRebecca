@@ -14,7 +14,6 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 
 	public LockObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
-		loadImage();
 	}
 
 	////////// TICK ////////////
@@ -36,17 +35,19 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage img;
+	private BufferedImage image;
 
-	private void loadImage() {
-		img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_lock");
+	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_lock");
+		return image;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(img, getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// COLLISION ////////////

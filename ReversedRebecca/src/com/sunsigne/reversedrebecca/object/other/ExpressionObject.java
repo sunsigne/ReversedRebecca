@@ -13,10 +13,12 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ExpressionObject extends GameObject {
 
+	private String name;
+	
 	public ExpressionObject(PiranhaObject object, String name) {
 		super(object.getX(), object.getY() - Size.M);
+		this.name = name;
 		stunObject(object);
-		loadImage(name);
 	}
 
 	private void stunObject(PiranhaObject object) {
@@ -46,11 +48,9 @@ public class ExpressionObject extends GameObject {
 
 	private BufferedImage image;
 
-	private void loadImage(String name) {
-		image = new ImageTask().loadImage("textures/other/" + "expression_" + name);
-	}
-
 	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/other/" + "expression_" + name);
 		return image;
 	}
 

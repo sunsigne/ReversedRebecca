@@ -72,7 +72,7 @@ public class ShrinkBombObject extends MovingBombObject {
 	@Override
 	// WARNING ! VisibleHitboxMode does't show correctly this hitbox
 	public void render(Graphics g) {
-		g.drawImage(exploding.getState(), getX() - 2 * size, getY() - 2 * size, getWidth() + 4 * size,
+		g.drawImage(getImage(), getX() - 2 * size, getY() - 2 * size, getWidth() + 4 * size,
 				getHeight() + 4 * size, null);
 
 		Font font = new FontTask().createNewFont("DigitalNumbers-Regular", 32f + 2 * size);

@@ -26,7 +26,6 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 	public ChatBox(PiranhaObject object, String target, String dialogue) {
 		this.object = object;
 		this.value = target;
-		loadImage();
 
 		// register the whole dialogue as an array of lines
 		all_lines = dialogue.split(System.getProperty("line.separator"));
@@ -36,11 +35,9 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 
 	private BufferedImage image;
 
-	private void loadImage() {
-		image = new ImageTask().loadImage("textures/menu/" + "chatbox");
-	}
-
 	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask().loadImage("textures/menu/" + "chatbox");
 		return image;
 	}
 

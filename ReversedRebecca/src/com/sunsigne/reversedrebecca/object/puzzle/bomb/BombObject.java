@@ -23,7 +23,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	protected BombObject(Puzzle puzzle, int x, int y, int w, int h) {
 		super(puzzle, x, y, w, h);
-		loadImage();
+		loadAnimation();
 		maxcount = 1;
 		count = maxcount;
 	}
@@ -114,16 +114,19 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		time--;
 		if (time < 0 && frame < 9) {
 			time = ANIMATION_TIME;
-			exploding.cycle();
+			animation.cycle();
 			frame++;
 		}
 	}
 
 	////////// TEXTURE ////////////
 
-	protected Cycloid<BufferedImage> exploding;
+	
+	////////// TEXTURE ////////////
 
-	private void loadImage() {
+	private Cycloid<BufferedImage> animation;
+
+	private void loadAnimation() {
 
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_bomb_";
 		ImageTask loader = new ImageTask();
@@ -139,7 +142,11 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		BufferedImage i8 = loader.loadImage(path + "8");
 		BufferedImage i9 = loader.loadImage(path + "9");
 
-		exploding = new Cycloid<BufferedImage>(i0, i1, i2, i3, i4, i5, i6, i7, i8, i9);
+		animation = new Cycloid<BufferedImage>(i0, i1, i2, i3, i4, i5, i6, i7, i8, i9);
+	}
+
+	public BufferedImage getImage() {
+		return animation.getState();
 	}
 
 	////////// RENDER ////////////
@@ -148,7 +155,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(exploding.getState(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
 		if (count > 0)
 			drawCount(font, g);

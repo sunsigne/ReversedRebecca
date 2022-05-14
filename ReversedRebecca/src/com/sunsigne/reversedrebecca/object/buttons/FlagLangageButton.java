@@ -14,19 +14,16 @@ public class FlagLangageButton extends ButtonObject {
 
 	public FlagLangageButton(GenericListener onPress, GenericListener onRelease) {
 		super(null, Window.WIDHT - Size.L, Window.HEIGHT - Size.M, Size.L, Size.M, onPress, onRelease);
-		loadImage();
 	}
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage flag_img;
-
-	private void loadImage() {
-		flag_img = new Translatable().getTranslatedFlagImage();
-	}
+	private BufferedImage image;
 
 	public BufferedImage getImage() {
-		return flag_img;
+		if (image == null)
+			image = new Translatable().getTranslatedFlagImage();
+		return image;
 	}
 
 	////////// RENDER ////////////
