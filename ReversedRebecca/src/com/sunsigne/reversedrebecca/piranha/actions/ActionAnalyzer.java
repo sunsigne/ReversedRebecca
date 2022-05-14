@@ -9,6 +9,11 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 import com.sunsigne.reversedrebecca.piranha.request.other.TripleActionRequest;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class ActionAnalyzer {
 
@@ -35,6 +40,8 @@ public class ActionAnalyzer {
 			if (objectAction == null)
 				objectAction = genericAction.getAction().getClass().getDeclaredConstructor().newInstance();
 			objectAction.create(object, target);
+			// reattribution of the name
+			objectAction.setName(new Translatable().getTranslatedText(objectAction.getName(), "maps/" + World.get().getMapName() + "/" + object.getFile()));
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
@@ -74,10 +81,24 @@ public class ActionAnalyzer {
 					instruction.doAction(object, null);
 
 					Request request = RequestList.getList().getObject(new GotoRequest());
-					request.doAction(object, target);
+					request.doAction(object, target.split("-")[1]);
 				};
 				return listener;
 			}
+
+			@Override
+			public int getRegisteredKeyEvent() {
+				switch (target.split("-")[0]) {
+				case "1":
+					return ActionOneKey.getKey();
+				case "2":
+					return ActionTwoKey.getKey();
+				case "3":
+					return ActionThreeKey.getKey();
+				}
+				return ActionOneKey.getKey();
+			}
+
 		};
 
 		return defaultAction;

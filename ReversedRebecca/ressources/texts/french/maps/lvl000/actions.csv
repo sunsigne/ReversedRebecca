@@ -1,0 +1,13 @@
+TALK = parler
+WATCH = regarder
+READ = lire
+
+CLEAN_CLOTHES = ranger#les#vêtements
+CLEAN_HAIR = nettoyer#les#cheveux
+
+CANDLE_LIGHT = allumer#la#bougie
+CANDLE_EXTINGUISH = éteindre#la#bougie
+
+EMPTY = vider
+FILL = remplir
+TAKE_SHOWER = se#laver

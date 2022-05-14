@@ -79,15 +79,20 @@ Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera 
 Il est tout à fait possible de créer ses propres actions !
 
 par exemple :
-TIME -> 0 = TRIPLE_ACTION -> WATCH:YELLOW_PLANT_ACTION
+TIME -> 0 = TRIPLE_ACTION -> WATCH:1-YELLOW_PLANT_ACTION
 $ -> YELLOW_PLANT_ACTION = TALK -> YELLOW_PLANT_THIRSTY
 
 Ici, WATCH ne correspond à aucune action connue par le programme. Il va donc :
-- chercher le nom à afficher à l'écran, dans le fichier "ressources/texts/(la langue)/actions".
-- chercher la touche du clavier pour déclancher l'action dans le fichier "ressources/userdata/actions".
+- chercher le nom à afficher à l'écran, dans le fichier "ressources/texts/(la langue)/(le niveau)/actions".
+- définir la touche du clavier pour déclencher l'action à partir du nombre rentré (1 = Action1, 2 = Action2, 3 = Action3).
 - créer une balise GOTO dont la valeur est YELLOW_PLANT_ACTION.
 
 La seconde instruction récupère cette balise, et sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")
+
+Attention ! Il ne faut pas indiquer de touche pour des actions déjà enregistrées !
+Attention ! Même pour des actions déjà enregistrées, il faut pour chaque niveau les traduire dans le fichier "actions.csv" correspondant.
+Les actions enregistrées sont les suivantes :
+- TALK
 
 
 Lorsqu'une des actions disponibles est perpétrée, le TRIPLE_ACTION de l'objet est nullifié par défaut. Il existe cependant une exception à cette règle : lorsque plusieurs objets différents sur la map partage un même fichier Piranha, cette propriété ne fonctionnera que pour l'objet courant (cela peut arriver pour les gros objets, qui sont sur deux cases).
