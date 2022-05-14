@@ -4,17 +4,18 @@ WATCH = regarder
 READ = lire
 TAKE = prendre
 CLEAN_CLOTHES = ranger#les#vêtements
+CLEAN_HAIR = nettoyer#les#cheveux
 LIGHT_CANDLE = allumer#la#bougie
 EMPTY = vider
 FILL = remplir
 TAKE_SHOWER = se#laver
 EXTINGUISH_CANDLE = éteindre#la#bougie
 TURN_OFF_WITHOUT_SAVING = éteindre#sans#sauvegarder
+TRIP = croche#pied
 
 ///// LIVING /////
 
 TALK = parler
-TRIP = croche#pied
 
 ///// DOOR /////
 
