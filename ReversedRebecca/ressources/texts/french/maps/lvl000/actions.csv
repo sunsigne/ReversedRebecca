@@ -1,14 +1,18 @@
-WAKE_UP = Action 1 % se#réveiller
-WATCH = Action1 % regarder
-READ = Action1 % lire
+WAKE_UP = Key1 % se#réveiller
+TALK = Key1 % parler
+WATCH = Key1 % regarder
 
-CLEAN_CLOTHES = Action2 % ranger#les#vêtements
-CLEAN_HAIR = Action2 % nettoyer#les#cheveux
+CLEAN_CLOTHES = Key2 % ranger#les#vêtements
+CLEAN_HAIR = Key2 % nettoyer#les#cheveux
 
-CANDLE_LIGHT = Action2 % allumer#la#bougie
-CANDLE_EXTINGUISH = Action2 % éteindre#la#bougie
+CANDLE_LIGHT = Key2 % allumer#la#bougie
+CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
 
-FILL = Action2 % remplir
-EMPTY = Action2 % vider
-WASH = Action1 % se#laver
-LEAVE = Action1 % sortir
+FILL = Key2 % remplir
+EMPTY = Key2 % vider
+WASH = Key1 % se#laver
+LEAVE = Key1 % sortir
+
+TAKE_WATER = Key1 % prendre#de#l'eau
+EMPTY_WATER = Key1 % vider#l'eau
+WATER_PLANT = Key2 % arroser

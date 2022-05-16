@@ -1,6 +1,6 @@
-TALK = Action 1 % parler
+TALK = Key1 % parler
 
-WATCH = Action 1 % regarder
-READ = Action 1 % lire
-TURN_OFF_WITHOUT_SAVING = Action 3 % éteindre#sans#sauvegarder
-TRIP = Action 3 % croche#pied
+WATCH = Key1 % regarder
+READ = Key1 % lire
+TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
+TRIP = Key3 % croche#pied

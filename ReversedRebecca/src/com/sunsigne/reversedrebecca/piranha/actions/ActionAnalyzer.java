@@ -105,11 +105,11 @@ public class ActionAnalyzer {
 
 	private int getKey(String keyANDname) {
 		switch (keyANDname.split("%")[0]) {
-		case "Action1":
+		case "Key1":
 			return ActionOneKey.getKey();
-		case "Action2":
+		case "Key2":
 			return ActionTwoKey.getKey();
-		case "Action3":
+		case "Key3":
 			return ActionThreeKey.getKey();
 		}
 		return ActionOneKey.getKey();
