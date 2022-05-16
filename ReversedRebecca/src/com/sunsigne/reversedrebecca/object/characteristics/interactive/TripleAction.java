@@ -34,6 +34,17 @@ public class TripleAction {
 
 	////////// USEFUL ////////////
 
+	public TripleAction removeAction(Action action) {
+		if (action == action1)
+			return new TripleAction(noActionText, null, action2, action3);
+		if (action == action2)
+			return new TripleAction(noActionText, action1, null, action3);
+		if (action == action3)
+			return new TripleAction(noActionText, action1, action2, null);
+		
+		return new TripleAction(noActionText, action1, action2, action3);
+	}
+
 	///// no action /////
 
 	public boolean cannotDoAnyAction() {

@@ -9,6 +9,12 @@
 
 	////////// EN COURS ////////////
 
+	faire un son quand on se sert un verre dans l'écier
+	le text de l'évier dépasse
+	créer une action spécifique (comme talk) pour prendre de l'eau
+	ralentir le lancement des dialogues afin qu'il démarrent au bon moement (ils ont tendance à commencer en milieu de phrase à cause du chargement)
+	!!! ReplacedRequest n'est plus d'actualié (conflie avec le nouveau DELETE)
+
 	reorganiser (menu, object, puzzle, pattern)
 	optimiser (menu, object, puzzle, pattern)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
@@ -34,8 +40,6 @@
 
 	////////// PIRA ////////////
 
-	Le texte "prendre de l'eau" dépasse de l'écran, l'afficher au dessus
-	!!! ReplacedRequest n'est plus d'actualié (conflie avec le nouveau DELETE)
 	creer une music request !!!!!
 	créer des deep_memory, enregistrer la liste en fichier csv ? + prévenir dans la doc que les deep_memory sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
@@ -47,8 +51,7 @@
 
 	////////// FACILE ////////////
 
-	ralentir le lancement des dialogues afin qu'il démarrent au bon moement (ils ont tendance à commencer en milieu de phrase à cause du chargement)
-	Le bouton "quitter" est encore clickable lors du choix de la langue
+Le bouton "quitter" est encore clickable lors du choix de la langue
 	Language pas fini (s'affiche bizarrement à partir de 3)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle
