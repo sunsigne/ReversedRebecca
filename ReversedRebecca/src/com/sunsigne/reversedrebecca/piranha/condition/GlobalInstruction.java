@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public abstract class GlobalInstruction extends LocalInstruction {
 
 	protected void analyse(String condition) {
-		loadAllExtra();
+		loadAllPiranha();
 		createInstructionAnalyzerForAllObject(condition);
 	}
 
@@ -22,7 +22,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 
 	private GameList<PiranhaObject> object_list = new GameList<PiranhaObject>(LISTTYPE.LINKED);
 
-	private void loadAllExtra() {
+	private void loadAllPiranha() {
 		for (LAYER tempLayer : LAYER.values()) {
 			var list = tempLayer.getHandler().getList();
 
