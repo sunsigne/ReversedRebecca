@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.other;
+package com.sunsigne.reversedrebecca.piranha.request.action;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;

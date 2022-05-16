@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
 import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.other.TripleActionRequest;
+import com.sunsigne.reversedrebecca.piranha.request.action.TripleActionRequest;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
