@@ -1,5 +1,8 @@
-Les Types de Requêtes suivant sont particuliers : ils n'execute pas directement leurs Cibles, ils la sauvegarde sur une touche Action; elle sera executé seulement si la touche est pressée.
+Les Types de Requêtes d'actions sont sans conteste les plus compliquées à comprendre, mais elles sont au coeur même du gameplay ! Il vous faudra donc prendre un temps pour bien les comprendre.
+
+Les Types de Requêtes d'actions sont particuliers : ils n'execute pas directement leurs Cibles, ils la sauvegarde sur une touche Action; elle sera executé seulement si la touche est pressée.
 Les touches Actions sont au nombre de 3, et se trouvent dans le fichier "userdata/options". On peut donc stocker 3 Actions en même temps sur un même objet.
+Par défault, lorsqu'une Action est perpétrée, elle se supprime des Actions disponibles tout en laissant les autres (s'il y en a).
 
 Il existe 2 types d'Actions : les actions enregistrées et les actions custom.
 Les actions custom sont des Actions créées sur mesure pour répondre à un besoin, vous verrez comme procéder un peu plus loin.
@@ -13,43 +16,46 @@ Le Type de Requête ACTION permet de définir une Action sur un objet.
 
 exemple : 
 TIME -> 0 = ACTION -> 1,TALK:PEEBOY_INIT
+autre écriture acceptée :
+TIME -> 0 = ACTION_ONE -> TALK:PEEBOY_INIT
 
 Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
-Attention : il ne faut pas confondre cette Cible avec de l'écriture condensée ! 
+Attention : il ne faut pas confondre cette écriture avec de l'écriture condensée ! Même si TALK est effectivement le nom d'un Type de Requête, il s'agit ici EXCLUSIVEMENT d'une action dont le nom se trouve être le même qu'une requête par simple hasard.
 
-Le chiffre 1 en première Cible indique que cette action doit remplacer la première action du TRIPLE_ACTION, ce chiffre peut donc aller jusqu'à 3.
-Il existe également les Type de Requête ACTION_ONE, ACTION_TWO et ACTION_THREE, qui font exactement la même chose que le Type de Requête ACTION, mais avec la première Cible devenue "Type de Requête", ce qui leurs autorisent l'écriture condensée.
+Le 1 en cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action du TRIPLE_ACTION (en plus de le créer s'il n'existe pas), ce chiffre peut donc aller jusqu'à 3.
 
+Note : si vous avez besoin de nullifier une action disponible, procédez simplement de la façon suivante :
+(Condition) = ACTION_ONE -> NULL
+Rappel : une Action se nullifie d'elle-même lorsqu'elle est perpétrée, cette méthode ne vous servira donc probablement que de façon situationnelle.
+il est possible de nullifier toutes les actions disponibles en une seule fois en écrivant :
+(Condition) = TRIPLE_ACTION -> NULL
 
 exemple d'action custom :
 TIME -> 0 = ACTION -> WATCH:YELLOW_PLANT_ACTION
 $ -> YELLOW_PLANT_ACTION = TALK -> YELLOW_PLANT_THIRSTY
 
-Ici, WATCH ne correspond à aucune action enregistrée. Ce dernier va donc :
+Ici, WATCH ne correspond à aucune action enregistrée. Le programme va donc :
 - chercher le nom à afficher à l'écran, dans le fichier "ressources/texts/(la langue)/(le niveau)/actions".
 - définir la touche du clavier pour déclencher l'action à partir de ce même répertoire (et de "userdata/options")
 - créer une balise GOTO dont la valeur est YELLOW_PLANT_ACTION.
+La seconde instruction récupère cette balise, puis sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")
 
-La seconde instruction récupère cette balise, et sa requête stipule qu'une boite de dialogue doit s'ouvrir (voir TALK dans "requêtes ressources")
-
-Attention ! Même pour des actions déjà enregistrées, il faut pour chaque niveau les traduire dans le fichier "actions.csv" correspondant et préciser la touche du clavier à utiliser.
+Attention ! Même pour des actions déjà enregistrées, il faut impérativement pour chaque niveau les traduire dans le fichier "actions.csv" et préciser la touche du clavier à utiliser (ça peut parraître pénible au début, mais vous vous rendrez vite compte à quel point ça peut être pratique dans certains cas bien précis).
 
 
 ////// TRIPLE_ACTION //////
 
 
-Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions possibles avec l'objet.
-Pour écrire plusieurs Cibles, procédés comme avec GOTO : séparez les par des vigules ",".
+Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions possibles avec l'objet (pour écrire plusieurs Cibles, procédés comme avec GOTO : séparez les par des virgules ",").
 
-exemple d'action enregistrée :
+exemple :
 $ -> TA_INIT = TRIPLE_ACTION -> TALK:PEEBOY_INIT
 
 Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
-Attention : il ne faut pas confondre cette Cible avec de l'écriture condensée ! 
+Attention ! Même si une seule action est mise en place avec le TripleAction, ce dernier écrase les 3 actions précédemment disponibles. 
 
 
-Lorsqu'une des actions disponibles est perpétrée, le TRIPLE_ACTION de l'objet est nullifié par défaut. Il existe cependant une exception à cette règle : lorsque plusieurs objets différents sur la map partage un même fichier Piranha, cette propriété ne fonctionnera que pour l'objet courant (cela peut arriver pour les gros objets, qui sont sur deux cases).
-Afin de nullifier le TRIPLE_ACTION dans ce cas précis, il convient d'utiliser le Type de Requête AFFECTING de façon "locale" comme dans l'exemple suivant :
+Attention : Les Types de Requêtes ACTION et TRIPLE_ACTION n'affecte que l'objet courant ! Lorsque plusieurs objets différents sur la map partage un même fichier Piranha (par exemple, pour les gros objets, qui sont sur deux cases). Vous aurez besoin d'utiliser le Type de Requête AFFECTING de façon "locale" comme dans l'exemple suivant :
 
 ! -> TA_NULL_CLOTHES = TRIPLE_ACTION -> NULL
 $ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES:CLEAN_CLOTHES
