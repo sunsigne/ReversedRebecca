@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -35,7 +36,15 @@ public class DeleteRequest implements IndexRequest {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
-		GameObject gameOject = getGameObject(object, target);
+		// formating the "onthespot" value
+		
+		String formatedTarget = target;
+		if (target.toLowerCase().contains("onthespot")) {
+			GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
+			formatedTarget = goal.getX() + "-" + goal.getY() + ":" + target.toLowerCase().split("onthespot:")[1];
+		}
+
+		GameObject gameOject = getGameObject(object, formatedTarget);
 		Handler handler = object.getHandler();
 		handler.removeObject(gameOject);
 	}

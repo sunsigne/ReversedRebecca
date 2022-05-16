@@ -24,6 +24,9 @@ TIME -> 0 = GOTO -> CREATE_ONTHESPOT:255-255-3
 
 Lorsque la Condition sera vérifiée, un OBJ-03 (255-255-3) sera créée là où se trouve l'objet Piranha.
 
+Note : CREATE_ONTHESPOT est une modification du Type de Requête CREATE. Il est donc possible (quoique curieux), d'écrire l'instruction suivante :
+TIME -> 0 = CREATE -> ONTHESPOT:255-255-3
+
 
 ////// DELETE //////
 
@@ -46,14 +49,4 @@ Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si
 
 
 De la même façon que CREATE_ONTHESPOT a permis à CREATE d'avoir une écriture compacte en entrant qu'une seule cible, Le Type de Requête DELETE_ONTHESPOT a exactement le même objectif et la cible unitaire devient donc l'index.
-
-
-////// REPLACE //////
-
-
-Le Type de Requête REPLACE n'est ni plus ni moins qu'une requête DELETE suivi d'une requête CREATE.
-
-exemple :
-TIME -> 0 = REPLACE -> 10-20:1-255-0
-
-Lorsque la Condition sera vérifiée, l'objet aux coordonnées x=10 y=20 sera supprimé, et une porte basique (1-255-0) prendra sa place. 
+Il est également possible d'écrire DELETE avec ONTHESPOT comme première cible.

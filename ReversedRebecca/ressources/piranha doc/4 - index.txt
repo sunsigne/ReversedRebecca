@@ -1,3 +1,19 @@
+////// POSITION //////
+
+La position d'un objet en Piranha est la "case" la plus proche de laquelle il se trouve.
+Lorsqu'on créer un objet, il est créé sur la case exacte demandée.
+Lorsqu'on cherche implicitement la position d'un objet (par exemple avec DISABLE, DELETE, etc.), l'objet est considéré sur la "case" seulement s'il est majoritairement sur cette dernière.
+Ainsi, un objet n'est considéré sur "une case" que lorsqu'il est majoritairement dessus. S'il y dépasse "un peu", ça ne compte pas.
+
+Il existe une exception à cette règle : Le Joueur.
+Afin d'avoir un pathfinding efficace, le Joueur est considéré sur une case même si un seul pixel touche cette dernière.
+Il est donc le seul objet qui peut se trouver sur plusieurs cases à la fois.
+
+Lorsque plusieurs objets se trouve sur une même case, il faut faire intervenir la notion d'index pour les différencier.
+
+
+////// INDEX //////
+
 Certains Types de Requêtes se base sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.
 L'index fonctionne de la façon suivant :
 

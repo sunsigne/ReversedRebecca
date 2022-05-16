@@ -12,7 +12,6 @@
 	reorganiser (menu, object, puzzle, pattern)
 	optimiser (menu, object, puzzle, pattern)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
-	la façon dont les actions "enregistrée" du TIPLE8ACTION piranha est étrange : pourquoi éditer leurs touches est impossible ?
 
 	////////// A FINIR ////////////
 
@@ -35,7 +34,7 @@
 
 	////////// PIRA ////////////
 
-	!!! ReplacedRequest n'est plus d'actualié (conflie avec le nouveau DELETE
+	!!! ReplacedRequest n'est plus d'actualié (conflie avec le nouveau DELETE)
 	creer une music request !!!!!
 	créer des deep_memory, enregistrer la liste en fichier csv ? + prévenir dans la doc que les deep_memory sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 

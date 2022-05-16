@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
-import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -32,9 +31,7 @@ public class DeleteOntheSpotRequest extends DeleteRequest {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
-		String formatedTarget = goal.getX() + "-" + goal.getY() + ":" + target;
-		super.doAction(object, formatedTarget);
+		super.doAction(object, "onthespot:" + target);
 	}
 
 }
