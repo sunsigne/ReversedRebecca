@@ -3,8 +3,10 @@ package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.KOAnimation;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.StandingAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.BathAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.BedAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.KOAnimation;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
@@ -32,26 +34,44 @@ public class LivingAnimationHandler {
 	}
 
 	////////// TEXTURE ////////////
-
-	private LivingAnimation standingAnimation;
-	private LivingAnimation koAnimation;
-
+	
+	///// animation /////
+	
 	private LivingAnimation walkingAnimation;
 	private LivingAnimation sickAnimation;
+	
+	///// constant /////
+	
+	private LivingAnimation standingAnimation;
+	
+	///// fixed /////
+	
+	private LivingAnimation bathAnimation;
+	private LivingAnimation bedAnimation;
+	private LivingAnimation koAnimation;
 
 	private void loadAnimations() {
 
-		standingAnimation = new StandingAnimation(living);
-		list.addObject(standingAnimation);
-
-		koAnimation = new KOAnimation(living);
-		list.addObject(koAnimation);
-
+		///// animation /////
+		
 		walkingAnimation = new WalkingAnimation(living);
 		list.addObject(walkingAnimation);
-
 		sickAnimation = new SickAnimation(living);
-		list.addObject(sickAnimation);
+		list.addObject(sickAnimation);		
+		
+		///// constant /////
+		
+		standingAnimation = new StandingAnimation(living);
+		list.addObject(standingAnimation);
+		
+		///// fixed /////
+		
+		bathAnimation = new BathAnimation(living);
+		list.addObject(bathAnimation);		
+		bedAnimation = new BedAnimation(living);
+		list.addObject(bedAnimation);		
+		koAnimation = new KOAnimation(living);
+		list.addObject(koAnimation);
 	}
 
 	////////// RENDER ////////////
@@ -66,8 +86,11 @@ public class LivingAnimationHandler {
 		case SICK:
 			return sickAnimation;
 
-		case SLEEP :
-			return koAnimation;
+		case BATH :
+			return bathAnimation;
+			
+		case BED:
+			return bedAnimation;
 			
 		case KO:
 			return koAnimation;

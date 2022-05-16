@@ -1,7 +1,6 @@
-TALK = Action 1 % parler
+WAKE_UP = Action 1 % se#réveiller
 WATCH = Action1 % regarder
 READ = Action1 % lire
-LEAVE = Action1 % sortir
 
 CLEAN_CLOTHES = Action2 % ranger#les#vêtements
 CLEAN_HAIR = Action2 % nettoyer#les#cheveux
@@ -12,3 +11,4 @@ CANDLE_EXTINGUISH = Action2 % éteindre#la#bougie
 FILL = Action2 % remplir
 EMPTY = Action2 % vider
 WASH = Action1 % se#laver
+LEAVE = Action1 % sortir

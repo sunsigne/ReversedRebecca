@@ -64,10 +64,16 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	@Override
 	public boolean isStunned() {
-		if (getCondition() == CONDITION.KO | getCondition() == CONDITION.SLEEP)
-			return true;
-		else
+		switch (getCondition()) {
+		case GOOD:
+		case SICK:
 			return super.isStunned();
+		case BATH:
+		case BED:
+		case KO:
+			return true;
+		}
+		return false;
 	}
 
 	////////// CONDITION ////////////
@@ -171,7 +177,8 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		int sleep = getCondition() == CONDITION.BED ? 2 * getHeight() / 16 : 0; // when sleeping, raise the Living a bit
+		g.drawImage(getImage(), getX(), getY() - sleep, getWidth(), getHeight(), null);
 	}
 
 	////////// PUSHER ////////////
