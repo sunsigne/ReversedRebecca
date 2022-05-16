@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.pattern;
 
-import java.awt.Graphics;
-
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;

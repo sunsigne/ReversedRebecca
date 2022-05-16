@@ -3,10 +3,6 @@ package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.StandingAnimation;
-import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.BathAnimation;
-import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.BedAnimation;
-import com.sunsigne.reversedrebecca.object.piranha.living.animation.constant.fixed.KOAnimation;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
@@ -21,7 +17,7 @@ public class LivingAnimationHandler {
 
 	////////// TICK ////////////
 
-	private GameLimitedList<LivingAnimation> list = new GameLimitedList<>(LISTTYPE.ARRAY);
+	private GameLimitedList<NeoLivingAnimation> list = new GameLimitedList<>(LISTTYPE.ARRAY);
 
 	public void run() {
 
@@ -34,49 +30,55 @@ public class LivingAnimationHandler {
 	}
 
 	////////// TEXTURE ////////////
-	
-	///// animation /////
-	
-	private LivingAnimation walkingAnimation;
-	private LivingAnimation sickAnimation;
-	
-	///// constant /////
-	
-	private LivingAnimation standingAnimation;
-	
-	///// fixed /////
-	
-	private LivingAnimation bathAnimation;
-	private LivingAnimation bedAnimation;
-	private LivingAnimation koAnimation;
+
+	///// animated & orientable /////
+
+	private NeoLivingAnimation walkingAnimation;
+	private NeoLivingAnimation sickAnimation;
+
+	///// animated & not orientable /////
+
+	private NeoLivingAnimation bedAnimation;
+
+	///// not animated & orientable /////
+
+	private NeoLivingAnimation standingAnimation;
+
+	///// not animated & not orientable /////
+
+	private NeoLivingAnimation bathAnimation;
+	private NeoLivingAnimation koAnimation;
 
 	private void loadAnimations() {
 
-		///// animation /////
-		
-		walkingAnimation = new WalkingAnimation(living);
+		///// animated & orientable /////
+
+		walkingAnimation = new NeoLivingAnimation(living, "walking", 15, true);
 		list.addObject(walkingAnimation);
-		sickAnimation = new SickAnimation(living);
-		list.addObject(sickAnimation);		
-		
-		///// constant /////
-		
-		standingAnimation = new StandingAnimation(living);
+		sickAnimation = new NeoLivingAnimation(living, "sick", 30, true);
+		list.addObject(sickAnimation);
+
+		///// animated & not orientable /////
+
+		bathAnimation = new NeoLivingAnimation(living, "bath", -1, false);
+		list.addObject(bathAnimation);
+
+		///// not animated & orientable /////
+
+		standingAnimation = new NeoLivingAnimation(living, "standing", -1, true);
 		list.addObject(standingAnimation);
-		
-		///// fixed /////
-		
-		bathAnimation = new BathAnimation(living);
-		list.addObject(bathAnimation);		
-		bedAnimation = new BedAnimation(living);
-		list.addObject(bedAnimation);		
-		koAnimation = new KOAnimation(living);
+
+		///// not animated & not orientable /////
+
+		bedAnimation = new NeoLivingAnimation(living, "bed", 58, false);
+		list.addObject(bedAnimation);
+		koAnimation = new NeoLivingAnimation(living, "ko", -1, false);
 		list.addObject(koAnimation);
 	}
 
 	////////// RENDER ////////////
 
-	private LivingAnimation getAnimation() {
+	private NeoLivingAnimation getAnimation() {
 
 		switch (living.getCondition()) {
 
@@ -86,12 +88,12 @@ public class LivingAnimationHandler {
 		case SICK:
 			return sickAnimation;
 
-		case BATH :
+		case BATH:
 			return bathAnimation;
-			
+
 		case BED:
 			return bedAnimation;
-			
+
 		case KO:
 			return koAnimation;
 		}
@@ -99,7 +101,7 @@ public class LivingAnimationHandler {
 		return standingAnimation;
 	}
 
-	private LivingAnimation getGoodAnimation() {
+	private NeoLivingAnimation getGoodAnimation() {
 		if (living.isMotionless() || living.isStunned())
 			return standingAnimation;
 		else

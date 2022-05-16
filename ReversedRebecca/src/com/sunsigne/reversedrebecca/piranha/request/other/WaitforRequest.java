@@ -100,8 +100,7 @@ public class WaitforRequest implements Request {
 			public GenericListener getAction() {
 				return generic;
 			}
-		};
-		
+		};		
 		
 	}
 

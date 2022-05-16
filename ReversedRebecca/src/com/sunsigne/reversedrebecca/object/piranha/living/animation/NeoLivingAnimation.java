@@ -7,16 +7,19 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class LivingAnimation {
+public class NeoLivingAnimation {
 
-	public LivingAnimation(LivingObject living) {
+	public NeoLivingAnimation(LivingObject living, String name, int animation_time, boolean orientable) {
+		this.name = name;
 		this.living = living;
+		this.animation_time = animation_time; // -1 for no animation
+		this.orientable = orientable;
 		loadAnimations();
 	}
 
 	////////// NAME ////////////
 
-	public abstract String getName();
+	private String name;
 
 	////////// BEHAVIOR ////////////
 
@@ -24,17 +27,17 @@ public abstract class LivingAnimation {
 
 	////////// TICK ////////////
 
-	public abstract int getAnimationTime();
-
-	private int time = getAnimationTime();
+	private int animation_time;
+	private int time = animation_time;
 
 	public void run() {
-		if (getAnimationTime() == -1)
+		// no animation case
+		if (animation_time == -1)
 			return;
 
 		time--;
 		if (time < 0) {
-			time = getAnimationTime();
+			time = animation_time;
 			for (int i = 0; i < cycloid.length; i++) {
 				cycloid[i].cycle();
 			}
@@ -42,13 +45,19 @@ public abstract class LivingAnimation {
 	}
 
 	public void freeze() {
+		// no animation case
+		if (animation_time == -1)
+			return;
+
 		for (int i = 0; i < cycloid.length; i++) {
 			cycloid[i].setState(0);
 		}
-		time = getAnimationTime();
+		time = animation_time;
 	}
 
 	////////// TEXTURE ////////////
+
+	private boolean orientable;
 
 	@SuppressWarnings("unchecked")
 	private Cycloid<BufferedImage>[] cycloid = new Cycloid[4];
@@ -60,16 +69,24 @@ public abstract class LivingAnimation {
 		cycloid[DIRECTION.DOWN.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.DOWN));
 	}
 
-	protected BufferedImage[] loadAnimation(DIRECTION direction) {
+	private BufferedImage[] loadAnimation(DIRECTION direction) {
 
-		String path = getName() + "_" + direction.getName();
+		// no orientable case
+		String path = name + "_" + direction.getName();
+		if(!orientable)
+			path = "fixed_" + name;
+
+		// no animation case
+		if (animation_time == -1)
+			return new BufferedImage[] { loadImage(path) };
+		
 		BufferedImage img0 = loadImage(path + "_0");
 		BufferedImage img1 = loadImage(path + "_1");
 
 		return new BufferedImage[] { img0, img1 };
 	}
-
-	protected BufferedImage loadImage(String imageName) {
+	
+	private BufferedImage loadImage(String imageName) {
 		String imagePath = "textures/characters/" + living.getName() + "/" + imageName;
 
 		BufferedImage img = new ImageTask().loadImage(imagePath, true);
