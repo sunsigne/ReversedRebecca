@@ -6,7 +6,9 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.FormatedName;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -58,9 +60,18 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 			world.freeze(true);
 
 		object.setMotionless();
+		setPlayerCanInterract(false);
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 		goToNextLine();
+	}
+
+	private void setPlayerCanInterract(boolean canInterract) {
+		Player player = new PlayerFinder().getPlayer();
+		if(player == null)
+			return;
+		
+		player.setCanInterract(canInterract);
 	}
 
 	private String[] all_lines;
@@ -106,6 +117,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 		if (world != null)
 			world.freeze(false);
 
+		setPlayerCanInterract(true);
 		LAYER.PUZZLE.getHandler().clear();
 		new TalkedCondition().registerValue(value);
 	}
