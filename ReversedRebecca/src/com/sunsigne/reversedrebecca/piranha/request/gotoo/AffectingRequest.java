@@ -32,7 +32,6 @@ public class AffectingRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-
 		new AffectingCondition().registerValue(target);
 	}
 
