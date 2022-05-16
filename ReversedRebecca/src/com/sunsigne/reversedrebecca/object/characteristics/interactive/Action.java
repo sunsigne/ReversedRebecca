@@ -92,7 +92,7 @@ public abstract class Action {
 		return keyEvent;
 	}
 
-	protected void setKeyEvent(int keyEvent) {
+	public void setKeyEvent(int keyEvent) {
 		this.keyEvent = keyEvent;
 	}
 

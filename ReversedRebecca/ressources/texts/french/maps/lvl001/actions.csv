@@ -1,6 +1,6 @@
-TALK = parler
+TALK = Action 1 % parler
 
-WATCH = regarder
-READ = lire
-TURN_OFF_WITHOUT_SAVING = éteindre#sans#sauvegarder
-TRIP = croche#pied
+WATCH = Action 1 % regarder
+READ = Action 1 % lire
+TURN_OFF_WITHOUT_SAVING = Action 3 % éteindre#sans#sauvegarder
+TRIP = Action 3 % croche#pied

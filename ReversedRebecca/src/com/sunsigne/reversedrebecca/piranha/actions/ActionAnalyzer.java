@@ -17,6 +17,10 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ActionAnalyzer {
 
+	private String getFile(PiranhaObject object) {
+		return "maps/" + World.get().getMapName() + "/" + object.getFile();
+	}
+
 	public Action getAction(PiranhaObject object, String actionInstruction) {
 		if (actionInstruction == null)
 			return null;
@@ -40,12 +44,15 @@ public class ActionAnalyzer {
 			if (objectAction == null)
 				objectAction = genericAction.getAction().getClass().getDeclaredConstructor().newInstance();
 			objectAction.create(object, target);
-			// reattribution of the name
-			objectAction.setName(new Translatable().getTranslatedText(objectAction.getName(), "maps/" + World.get().getMapName() + "/" + object.getFile()));
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
 		}
+
+		// reattribution of key and name
+		String keyANDname = new Translatable().getTranslatedText(objectAction.getName(), getFile(object));
+		objectAction.setKeyEvent(getKey(keyANDname));
+		objectAction.setName(getName(keyANDname));
 
 		return objectAction;
 	}
@@ -81,27 +88,35 @@ public class ActionAnalyzer {
 					instruction.doAction(object, null);
 
 					Request request = RequestList.getList().getObject(new GotoRequest());
-					request.doAction(object, target.split("-")[1]);
+					request.doAction(object, target);
 				};
 				return listener;
 			}
 
 			@Override
 			public int getRegisteredKeyEvent() {
-				switch (target.split("-")[0]) {
-				case "1":
-					return ActionOneKey.getKey();
-				case "2":
-					return ActionTwoKey.getKey();
-				case "3":
-					return ActionThreeKey.getKey();
-				}
 				return ActionOneKey.getKey();
 			}
 
 		};
 
 		return defaultAction;
+	}
+
+	private int getKey(String keyANDname) {
+		switch (keyANDname.split("%")[0]) {
+		case "Action1":
+			return ActionOneKey.getKey();
+		case "Action2":
+			return ActionTwoKey.getKey();
+		case "Action3":
+			return ActionThreeKey.getKey();
+		}
+		return ActionOneKey.getKey();
+	}
+
+	private String getName(String keyANDname) {
+		return (keyANDname.split("%")[1]);
 	}
 
 }

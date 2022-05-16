@@ -1,13 +1,14 @@
-TALK = parler
-WATCH = regarder
-READ = lire
+TALK = Action 1 % parler
+WATCH = Action1 % regarder
+READ = Action1 % lire
 
-CLEAN_CLOTHES = ranger#les#vêtements
-CLEAN_HAIR = nettoyer#les#cheveux
+CLEAN_CLOTHES = Action2 % ranger#les#vêtements
+CLEAN_HAIR = Action2 % nettoyer#les#cheveux
 
-CANDLE_LIGHT = allumer#la#bougie
-CANDLE_EXTINGUISH = éteindre#la#bougie
+CANDLE_LIGHT = Action2 % allumer#la#bougie
+CANDLE_EXTINGUISH = Action2 % éteindre#la#bougie
 
-EMPTY = vider
-FILL = remplir
-TAKE_SHOWER = se#laver
+EMPTY = Action2 % vider
+FILL = Action2 % remplir
+TAKE_SHOWER = Action1 % se#laver
+LEAVE_BATH = Action1 % sortir#du#bain
