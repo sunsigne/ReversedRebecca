@@ -103,7 +103,7 @@ Les types d'évitement sont au nombre de 5 et voici leurs fonctionnements :
 Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
 - STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 
 - PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
-- PUSH_DIRECTION (il faut replacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
+- PUSH_DIRECTION (il faut remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
 - PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
 
 

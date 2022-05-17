@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -80,6 +82,9 @@ public class WaitforRequest implements Request {
 
 		case "PLAYER_CLOSER_THAN":
 			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition), false);
+
+		case "PLAYER_FACING":
+			return getPlayerFacingListener(generic, condition);
 		}
 
 		return null;
@@ -100,8 +105,8 @@ public class WaitforRequest implements Request {
 			public GenericListener getAction() {
 				return generic;
 			}
-		};		
-		
+		};
+
 	}
 
 	private ConditionalListener getPlayerDistanceListener(GenericListener generic, PiranhaObject object, int distance,
@@ -115,6 +120,41 @@ public class WaitforRequest implements Request {
 					return new PlayerFinder().isPlayerFutherThan(object, distance);
 				else
 					return new PlayerFinder().isPlayerCloserThan(object, distance);
+			}
+
+			@Override
+			public GenericListener getAction() {
+				return generic;
+			}
+		};
+	}
+
+	private ConditionalListener getPlayerFacingListener(GenericListener generic, String condition) {
+
+		boolean reversed = condition.contains("!");
+		if (reversed)
+			condition = condition.substring(1);
+
+		DIRECTION facing = DIRECTION.NULL;
+
+		for (DIRECTION tempFacing : DIRECTION.values()) {
+			if (tempFacing.getName().equalsIgnoreCase(condition)) {
+				facing = tempFacing;
+				break;
+			}
+		}
+
+		DIRECTION final_facing = facing;
+
+		return new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				Player player = new PlayerFinder().getPlayer();
+				if (reversed)
+					return player.getFacing() != final_facing;
+				else
+					return player.getFacing() == final_facing;
 			}
 
 			@Override
