@@ -68,10 +68,10 @@ public class LivingAnimationHandler {
 
 		///// orientable & not animated /////
 
-		standingGlassAnimation = new LivingAnimation(living, "standing_", -1, true);
-		list.addObject(standingGlassAnimation);
-		standingAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
+		standingAnimation = new LivingAnimation(living, "standing_", -1, true);
 		list.addObject(standingAnimation);
+		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
+		list.addObject(standingGlassAnimation);
 
 		///// not orientable & animated /////
 		
