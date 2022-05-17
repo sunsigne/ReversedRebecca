@@ -1,0 +1,22 @@
+Les Type de Requête player sont des Types de Requête state spéciales : elles ciblent spécifiquement le joueur.
+L'avantage de ces Types de Requête est qu'ils sont utilisables depuis n'importe quel fichier Piranha sans avoir à utiliser AFFECTING.
+L'écriture condensée leur est systématiquement permise, ainsi que l'écriture conditionnelle.
+
+Note : Le Type de Requête NAME n'a pas d'équivalant "player" car c'est un attribut important qui change la texture même d'un personnage.
+Il est donc préférable d'utiliser un AFFECTING lorsque l'on désire changer le nom du joueur, afin que tous les noms qu'il puisse adopter dans un niveau soit visibles depuis son fichier.
+
+
+////// FACING_PLAYER //////
+
+Équivalant au Type de Requête FACING.
+
+
+////// INVULNERABLE_PLAYER //////
+
+Équivalant au Type de Requête INVULNERABLE.
+Note : très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
+
+
+////// CONDITION_PLAYER //////
+
+Équivalant au Type de Requête CONDITION.

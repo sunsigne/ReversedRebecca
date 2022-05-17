@@ -1,13 +1,13 @@
-package com.sunsigne.reversedrebecca.piranha.request.state;
+package com.sunsigne.reversedrebecca.piranha.request.state.player;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
+import com.sunsigne.reversedrebecca.piranha.request.state.InvulnerableRequest;
 
-public class InvulnerablePlayerRequest extends ConditionalRequest {
+public class InvulnerablePlayerRequest extends InvulnerableRequest {
 
 	////////// REQUEST ////////////
 
@@ -28,21 +28,15 @@ public class InvulnerablePlayerRequest extends ConditionalRequest {
 	}
 
 	@Override
-	public boolean hasCompactWriting() {
-		return true;
-	}
-
-	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
-		boolean invulnerable = Boolean.parseBoolean(target);
 		Player player = new PlayerFinder().getPlayer();
-		player.setInvulnerable(invulnerable);
+		super.doClassicAction(player, target);
 	}
 
 	@Override
 	protected String getConditionToCheck(PiranhaObject object) {
 		Player player = new PlayerFinder().getPlayer();
-		return String.valueOf(player.isInvulnerable());
+		return super.getConditionToCheck(player);
 	}
 
 }

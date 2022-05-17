@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.world;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -97,7 +96,7 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void addSetup() {
-		LAYER.DEBUG.addObject(new SetupObject());
+		getLayer(true).addObject(new SetupObject());
 	}
 
 	private void addGUI() {

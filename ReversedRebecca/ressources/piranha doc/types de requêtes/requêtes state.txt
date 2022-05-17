@@ -65,14 +65,6 @@ Note : par défaut, les objets vivant sont vulnérables.
 Note : lorsque le joueur est invulnérable, ses PV ne sont plus affichés.
 
 
-////// INVULNERABLE_PLAYER //////
-
-
-Fait exactement la même chose que INVULNERABLE, à la différence près que ce Type de Requête cible spécifiquement le joueur. L'écriture conditionnelle est possible.
-Note : il est tout à fait possible d'utiliser INVULNERABLE dans le fichier Player, l'avantage d'INVULNERABLE_PLAYER est qu'il est utilisable dans n'importe quel fichier.
-Ce Type de Requête est très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
-
-
 ////// CONDITION //////
 
 
@@ -95,6 +87,7 @@ La condition permet d'altérer à la fois le visuel d'un personnage et son compo
 ////// PLAYER_AVOIRDER_TYPE //////
 
 
+Attention ! Cette requête N'EST PAS un Type de Requête player (voir "requêtes player.txt"). Ces dernières ont le mot "PLAYER" en fin et non en début de nom.
 Le Type de Requête PLAYER_AVOIRDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
 
 exemple :
@@ -112,3 +105,8 @@ Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans 
 - PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
 - PUSH_DIRECTION (il faut replacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
 - PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
+
+
+
+
+Il existe tout un autre panel de Type de Requête state, pour les connaître, voir le fichier "requêtes player.txt"
