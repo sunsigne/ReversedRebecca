@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	le text de l'évier dépasse
 	reorganiser (menu, object, puzzle, pattern)
 	optimiser (menu, object, puzzle, pattern)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
