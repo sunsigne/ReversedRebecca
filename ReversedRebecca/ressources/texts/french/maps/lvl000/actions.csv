@@ -13,6 +13,7 @@ EMPTY = Key2 % vider
 WASH = Key1 % se#laver
 LEAVE = Key1 % sortir
 
+TAKE = Key1 % prendre
 TAKE_WATER = Key1 % se#servir
 EMPTY_WATER = Key1 % vider#l'eau
 WATER_PLANT = Key2 % arroser
