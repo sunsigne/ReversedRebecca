@@ -29,7 +29,7 @@ public class ActionThreeRequest implements Request {
 
 	@Override
 	public boolean hasCompactWriting() {
-		return false;
+		return true;
 	}
 
 	@Override

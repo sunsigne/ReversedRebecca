@@ -12,6 +12,16 @@ Il est donc le seul objet qui peut se trouver sur plusieurs cases à la fois.
 Lorsque plusieurs objets se trouve sur une même case, il faut faire intervenir la notion d'index pour les différencier.
 
 
+////// COUCHES //////
+
+Une notion très importante à ne jamais oublier en Piranha et celle des LAYER - "couche" en français, mais il faut comprendre étage -.
+À CHAQUE FOIS qu'il est question d'une position en Piranha, la position en question est cherchée au même "étage" que l'objet faisant la demande.
+Par exemple, il n'est pas possible pour un objet d'utiliser le type de condition WONPUZZLE afin de vérifier si le Puzzle d'un autre étage est résolu ! Il faudra pour cela passer par un AFFECTING (qui est indépendant de la position, donc applicable partout).
+
+Cette information est d'autant plus importante à garder en tête avec le fichier SET-UP : "l'objet" SET-UP est construit lors du chargement de la map sur la couche où se trouve le joueur.
+Note : "l'objet" SET-UP ne "suit" pas le joueur si ce dernier change de couche, il reste là où il a été créé.
+
+
 ////// INDEX //////
 
 Certains Types de Requêtes se base sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.

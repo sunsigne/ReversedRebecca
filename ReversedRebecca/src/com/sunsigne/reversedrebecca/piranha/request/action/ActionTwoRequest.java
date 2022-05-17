@@ -29,7 +29,7 @@ public class ActionTwoRequest implements Request {
 
 	@Override
 	public boolean hasCompactWriting() {
-		return false;
+		return true;
 	}
 
 	@Override

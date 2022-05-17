@@ -27,8 +27,8 @@ public class ActionAnalyzer {
 		if (actionInstruction.equalsIgnoreCase("null"))
 			return null;
 
-		String actionType = actionInstruction.split(":")[0];
-		String target = actionInstruction.split(":")[1];
+		String actionType = actionInstruction.split("\\*")[0];
+		String target = actionInstruction.split("\\*")[1];
 
 		PiranhaObjectAction genericAction = getPiranhaObjectAction(actionType);
 		PiranhaObjectAction objectAction = null;
