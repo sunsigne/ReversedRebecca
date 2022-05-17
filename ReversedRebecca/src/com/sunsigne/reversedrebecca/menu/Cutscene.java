@@ -20,7 +20,7 @@ public class Cutscene implements Updatable {
 	public void start() {
 		running = true;
 		LAYER.GUI.addObject(this);
-		setUserAllowedToMovePlayer(false);
+		setUserAllowedToControlPlayer(false);
 	}
 
 	public void stop(boolean delay) {
@@ -30,13 +30,14 @@ public class Cutscene implements Updatable {
 			new GameTimer(0, () -> running = false);
 	}
 
-	private void setUserAllowedToMovePlayer(boolean isUserAllowedToMovePlayer) {
+	private void setUserAllowedToControlPlayer(boolean isUserAllowedToMovePlayer) {
 		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)
 			return;
 
 		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
+		player.setCanInterract(isUserAllowedToMovePlayer);
 	}
 
 	////////// TICK ////////////
@@ -71,7 +72,7 @@ public class Cutscene implements Updatable {
 			if (tempUpdatable instanceof Cutscene)
 				LAYER.GUI.getHandler().removeObject(tempUpdatable);
 		}
-		setUserAllowedToMovePlayer(true);
+		setUserAllowedToControlPlayer(true);
 	}
 
 	////////// RENDER ////////////
