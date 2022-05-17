@@ -72,9 +72,9 @@ public class LivingAnimation {
 	private BufferedImage[] loadAnimation(DIRECTION direction) {
 
 		// no orientable case
-		String path = name + "_" + direction.getName();
-		if(!orientable)
-			path = "fixed_" + name;
+		String path = name;
+		if(orientable)
+			path = path + direction.getName();
 
 		// no animation case
 		if (animation_time == -1)

@@ -66,6 +66,7 @@ public class Player extends LivingObject {
 		// if player is "stunned"
 		switch (getCondition()) {
 		case GOOD:
+		case GLASS:
 		case SICK:
 		case BATH:
 		case BED:

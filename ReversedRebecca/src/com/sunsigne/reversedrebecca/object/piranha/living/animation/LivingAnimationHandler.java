@@ -31,48 +31,58 @@ public class LivingAnimationHandler {
 
 	////////// TEXTURE ////////////
 
-	///// animated & orientable /////
+	///// orientable & animated/////
 
 	private LivingAnimation walkingAnimation;
-	private LivingAnimation sickAnimation;
+	private LivingAnimation walkingGlassAnimation;	
+	private LivingAnimation walkingSickAnimation;
+	private LivingAnimation standingSickAnimation;
 
-	///// animated & not orientable /////
+	///// orientable & not animated /////
+
+	private LivingAnimation standingAnimation;
+	private LivingAnimation standingGlassAnimation;
+
+	///// not orientable & animated /////
 
 	private LivingAnimation bedAnimation;
 
-	///// not animated & orientable /////
-
-	private LivingAnimation standingAnimation;
-
-	///// not animated & not orientable /////
+	///// not orientable & not animated /////
 
 	private LivingAnimation bathAnimation;
 	private LivingAnimation koAnimation;
 
 	private void loadAnimations() {
 
-		///// animated & orientable /////
+		///// orientable & animated/////
 
-		walkingAnimation = new LivingAnimation(living, "walking", 15, true);
+		walkingAnimation = new LivingAnimation(living, "walking_", 15, true);
 		list.addObject(walkingAnimation);
-		sickAnimation = new LivingAnimation(living, "sick", 30, true);
-		list.addObject(sickAnimation);
+		walkingGlassAnimation = new LivingAnimation(living, "var/glass/walking_", 15, true);
+		list.addObject(walkingGlassAnimation);
+//		walkingSickAnimation = new LivingAnimation(living, "var/sick/walking_", 15, true); // to create ?
+		walkingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
+		list.addObject(walkingSickAnimation);
+		standingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
+		list.addObject(standingSickAnimation);
 
-		///// animated & not orientable /////
+		///// orientable & not animated /////
 
-		bathAnimation = new LivingAnimation(living, "bath", -1, false);
-		list.addObject(bathAnimation);
-
-		///// not animated & orientable /////
-
-		standingAnimation = new LivingAnimation(living, "standing", -1, true);
+		standingGlassAnimation = new LivingAnimation(living, "standing_", -1, true);
+		list.addObject(standingGlassAnimation);
+		standingAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
 		list.addObject(standingAnimation);
 
-		///// not animated & not orientable /////
-
-		bedAnimation = new LivingAnimation(living, "bed", 58, false);
+		///// not orientable & animated /////
+		
+		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
 		list.addObject(bedAnimation);
-		koAnimation = new LivingAnimation(living, "ko", -1, false);
+
+		///// not orientable & not animated /////
+		
+		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
+		list.addObject(bathAnimation);
+		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
 		list.addObject(koAnimation);
 	}
 
@@ -85,8 +95,11 @@ public class LivingAnimationHandler {
 		case GOOD:
 			return getGoodAnimation();
 
+		case GLASS:
+			return getGlassAnimation();
+			
 		case SICK:
-			return sickAnimation;
+			return getSickAnimation();
 
 		case BATH:
 			return bathAnimation;
@@ -106,6 +119,20 @@ public class LivingAnimationHandler {
 			return standingAnimation;
 		else
 			return walkingAnimation;
+	}
+
+	private LivingAnimation getGlassAnimation() {
+		if (living.isMotionless() || living.isStunned())
+			return standingGlassAnimation;
+		else
+			return walkingGlassAnimation;
+	}
+
+	private LivingAnimation getSickAnimation() {
+		if (living.isMotionless() || living.isStunned())
+			return standingSickAnimation;
+		else
+			return walkingSickAnimation;
 	}
 
 	public BufferedImage getImage() {

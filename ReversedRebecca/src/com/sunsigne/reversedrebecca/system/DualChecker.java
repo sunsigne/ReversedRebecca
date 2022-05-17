@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.system;
 
-import java.awt.Graphics;
-
 import javax.swing.JOptionPane;
 
 import com.sunsigne.reversedrebecca.ressources.FileTask;

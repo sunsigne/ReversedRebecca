@@ -9,6 +9,7 @@ public interface Feeling extends Stunnable {
 	default boolean isStunned() {
 		switch (getCondition()) {
 		case GOOD:
+		case GLASS:
 		case SICK:
 			return false;
 		case BATH:
@@ -28,7 +29,7 @@ public interface Feeling extends Stunnable {
 	////////// CONDITION ////////////
 
 	public enum CONDITION {
-		GOOD("good"), SICK("sick"), BATH("bath"), BED("bed"), KO("ko");
+		GOOD("good"), GLASS("glass"), SICK("sick"), BATH("bath"), BED("bed"), KO("ko");
 
 		private String name;
 

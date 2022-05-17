@@ -49,7 +49,7 @@
 
 	////////// FACILE ////////////
 
-Le bouton "quitter" est encore clickable lors du choix de la langue
+	Le bouton "quitter" est encore clickable lors du choix de la langue
 	Language pas fini (s'affiche bizarrement à partir de 3)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	changer les couleurs Mappable de peepuddle
@@ -74,6 +74,7 @@ Le bouton "quitter" est encore clickable lors du choix de la langue
 
 	////////// A CREER PLUS TARD ////////////
 
+	créer une animation "sick" pour quand on marche
 	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?
