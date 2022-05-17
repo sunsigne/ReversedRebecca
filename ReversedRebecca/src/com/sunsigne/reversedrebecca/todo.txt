@@ -10,7 +10,6 @@
 	////////// EN COURS ////////////
 
 	le text de l'évier dépasse
-
 	reorganiser (menu, object, puzzle, pattern)
 	optimiser (menu, object, puzzle, pattern)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
@@ -41,7 +40,6 @@
 
 	////////// DIFFICILE ////////////
 
-	reconstruire le système de condition en liste (et les animations qui vont avec)
 	faire un nouveau type de debug : active les boutons clickable à droite plutot que d'utiliser F1, F2, etc.
 	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?

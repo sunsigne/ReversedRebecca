@@ -64,17 +64,10 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	@Override
 	public boolean isStunned() {
-		switch (getCondition()) {
-		case GOOD:
-		case GLASS:
-		case SICK:
-			return super.isStunned();
-		case BATH:
-		case BED:
-		case KO:
+		if (super.isStunned())
 			return true;
-		}
-		return false;
+		else
+			return Health.super.isStunned();
 	}
 
 	////////// CONDITION ////////////

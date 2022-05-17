@@ -33,14 +33,14 @@ public class LivingAnimationHandler {
 
 	///// orientable & animated/////
 
-	private LivingAnimation walkingAnimation;
-	private LivingAnimation walkingGlassAnimation;	
-	private LivingAnimation walkingSickAnimation;
+	private LivingAnimation walkingGoodAnimation;
+	private LivingAnimation walkingGlassAnimation;
 	private LivingAnimation standingSickAnimation;
+	private LivingAnimation walkingSickAnimation;
 
 	///// orientable & not animated /////
 
-	private LivingAnimation standingAnimation;
+	private LivingAnimation standingGoodAnimation;
 	private LivingAnimation standingGlassAnimation;
 
 	///// not orientable & animated /////
@@ -54,85 +54,61 @@ public class LivingAnimationHandler {
 
 	private void loadAnimations() {
 
-		///// orientable & animated/////
-
-		walkingAnimation = new LivingAnimation(living, "walking_", 15, true);
-		list.addObject(walkingAnimation);
+		walkingGoodAnimation = new LivingAnimation(living, "walking_", 15, true);
 		walkingGlassAnimation = new LivingAnimation(living, "var/glass/walking_", 15, true);
-		list.addObject(walkingGlassAnimation);
+		standingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
 //		walkingSickAnimation = new LivingAnimation(living, "var/sick/walking_", 15, true); // to create ?
 		walkingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
-		list.addObject(walkingSickAnimation);
-		standingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
-		list.addObject(standingSickAnimation);
 
-		///// orientable & not animated /////
-
-		standingAnimation = new LivingAnimation(living, "standing_", -1, true);
-		list.addObject(standingAnimation);
+		standingGoodAnimation = new LivingAnimation(living, "standing_", -1, true);
 		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
+
+		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
+
+		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
+		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
+
+		list.addObject(walkingGoodAnimation);
+		list.addObject(walkingGlassAnimation);
+		list.addObject(standingSickAnimation);
+		list.addObject(walkingSickAnimation);
+
+		list.addObject(standingGoodAnimation);
 		list.addObject(standingGlassAnimation);
 
-		///// not orientable & animated /////
-		
-		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
 		list.addObject(bedAnimation);
 
-		///// not orientable & not animated /////
-		
-		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
 		list.addObject(bathAnimation);
-		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
 		list.addObject(koAnimation);
 	}
 
 	////////// RENDER ////////////
 
 	private LivingAnimation getAnimation() {
-
 		switch (living.getCondition()) {
-
 		case GOOD:
-			return getGoodAnimation();
-
+			return getStandingWalkingAnimation(standingGoodAnimation, walkingGoodAnimation);
 		case GLASS:
-			return getGlassAnimation();
-			
+			return getStandingWalkingAnimation(standingGlassAnimation, walkingGlassAnimation);
 		case SICK:
-			return getSickAnimation();
-
+			return getStandingWalkingAnimation(standingSickAnimation, walkingSickAnimation);
 		case BATH:
 			return bathAnimation;
-
 		case BED:
 			return bedAnimation;
-
 		case KO:
 			return koAnimation;
 		}
 
-		return standingAnimation;
+		return standingGoodAnimation;
 	}
 
-	private LivingAnimation getGoodAnimation() {
+	private LivingAnimation getStandingWalkingAnimation(LivingAnimation standingAnimation,
+			LivingAnimation walkingAnimation) {
 		if (living.isMotionless() || living.isStunned())
 			return standingAnimation;
 		else
 			return walkingAnimation;
-	}
-
-	private LivingAnimation getGlassAnimation() {
-		if (living.isMotionless() || living.isStunned())
-			return standingGlassAnimation;
-		else
-			return walkingGlassAnimation;
-	}
-
-	private LivingAnimation getSickAnimation() {
-		if (living.isMotionless() || living.isStunned())
-			return standingSickAnimation;
-		else
-			return walkingSickAnimation;
 	}
 
 	public BufferedImage getImage() {
