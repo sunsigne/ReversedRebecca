@@ -12,8 +12,18 @@ Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=
 Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
 
 
+////// DISABLE_ONTHESPOT //////
+
+Fait exactement la même chose que DISABLE, à la différence que les coordonnées sont automatiquement celles de l'objet Piranha qui demande l'action.
+DISABLE_ONTHESPOT ne disposant que d'une seule cible, l'écriture compacte devient possible.
+
+Note : DISABLE_ONTHESPOT est une modification du Type de Requête DISABLE. Il est donc possible (quoique curieux), d'écrire l'instruction suivante :
+TIME -> 0 = DISABLE -> ONTHESPOT,1
+
+
 ////// ENABLE //////
 
 
 A EXACTEMENT le même fonctionnement que DISABLE, mais pour réactiver les Actions que ce dernier avait gelées.
 Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.
+Note : Le Type de Requête ENABLE_ONTHESPOT existe également. À ce stade, vous aurez déjà compris comment s'en servir, inutile donc de l'expliquer.

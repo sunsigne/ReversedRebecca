@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public interface IndexRequest extends Request {
@@ -13,8 +14,10 @@ public interface IndexRequest extends Request {
 		// determinate the position
 
 		String pos = String.valueOf(target.split(":")[0]);
-		int x = Integer.parseInt(pos.split("-")[0]);
-		int y = Integer.parseInt(pos.split("-")[1]);
+		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
+		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
+		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+		
 		GoalObject goal = new GoalObject(x, y, false);
 
 		// determinate the object from the index 
