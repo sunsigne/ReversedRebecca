@@ -9,12 +9,9 @@
 
 	////////// EN COURS ////////////
 
-	mettre à jour tous les fichiers Piranha avec le nouveau système d'action (nottamment le TipleAction qui ne s'efface plus)
 	faire un son quand on se sert un verre dans l'évier
 	le text de l'évier dépasse
 	créer une action spécifique (comme talk) pour prendre de l'eau
-	ralentir le lancement des dialogues afin qu'il démarrent au bon moment (ils ont tendance à commencer en milieu de phrase à cause du chargement)
-	!!! ReplacedRequest n'est plus d'actualié (conflie avec le nouveau DELETE)
 
 	reorganiser (menu, object, puzzle, pattern)
 	optimiser (menu, object, puzzle, pattern)

@@ -28,6 +28,7 @@ public class ChatContent implements Updatable {
 		this.currentText[1] = "";
 
 		lettersAttributionFromSentences();
+		pausetime = 10; // offset the loading delay
 	}
 
 	////////// TEXT ////////////
