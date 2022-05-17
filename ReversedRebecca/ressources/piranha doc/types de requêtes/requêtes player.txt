@@ -20,3 +20,10 @@ Note : très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un ni
 ////// CONDITION_PLAYER //////
 
 Équivalant au Type de Requête CONDITION.
+
+
+////// EXPRESSION_PLAYER //////
+
+Équivalant au Type de Requête EXPRESSION.
+Note : ce Type de Requête n'est pas "state" mais "ressource", mais il peut faciliter la vie lors des cinématiques; il a donc tout à fait sa place ici.
+Attention ! L'écriture conditionnelle est impossible avec ce Type de Requête (l'écriture condensée reste permise).

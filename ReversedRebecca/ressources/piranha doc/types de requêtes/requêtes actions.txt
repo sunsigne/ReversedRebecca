@@ -15,14 +15,15 @@ Les Actions enregistrées sont les suivantes :
 Le Type de Requête ACTION permet de définir une Action sur un objet.
 
 exemple : 
-TIME -> 0 = ACTION -> 1,TALK:PEEBOY_INIT
+TIME -> 0 = ACTION -> 1,TALK*PEEBOY_INIT
 autre écriture acceptée :
-TIME -> 0 = ACTION_ONE -> TALK:PEEBOY_INIT
+TIME -> 0 = ACTION_ONE -> TALK*PEEBOY_INIT
 
 Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
-Attention : il ne faut pas confondre cette écriture avec de l'écriture condensée ! Même si TALK est effectivement le nom d'un Type de Requête, il s'agit ici EXCLUSIVEMENT d'une action dont le nom se trouve être le même qu'une requête par simple hasard.
+Attention : il ne faut pas confondre une Action avec un Type de Requête ! Même si TALK est effectivement le nom d'un Type de Requête, il s'agit ici EXCLUSIVEMENT d'une action dont le nom se trouve être le même qu'une requête, par simple hasard.
 
 Le 1 en cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action du TRIPLE_ACTION (en plus de le créer s'il n'existe pas), ce chiffre peut donc aller jusqu'à 3.
+Vous pouvez utiliser l'écriture que vous préférez, notez cependant que l'écriture condensée n'est possible que dans le second cas (puisqu'une seule cible).
 
 Note : si vous avez besoin de nullifier une action disponible, procédez simplement de la façon suivante :
 (Condition) = ACTION_ONE -> NULL
@@ -31,7 +32,7 @@ il est possible de nullifier toutes les actions disponibles en une seule fois en
 (Condition) = TRIPLE_ACTION -> NULL
 
 exemple d'action custom :
-TIME -> 0 = ACTION -> WATCH:YELLOW_PLANT_ACTION
+TIME -> 0 = ACTION -> WATCH*YELLOW_PLANT_ACTION
 $ -> YELLOW_PLANT_ACTION = TALK -> YELLOW_PLANT_THIRSTY
 
 Ici, WATCH ne correspond à aucune action enregistrée. Le programme va donc :
@@ -49,7 +50,7 @@ Attention ! Même pour des actions déjà enregistrées, il faut impérativement
 Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions possibles avec l'objet (pour écrire plusieurs Cibles, procédés comme avec GOTO : séparez les par des virgules ",").
 
 exemple :
-$ -> TA_INIT = TRIPLE_ACTION -> TALK:PEEBOY_INIT
+$ -> TA_INIT = TRIPLE_ACTION -> TALK*PEEBOY_INIT
 
 Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
 Attention ! Même si une seule action est mise en place avec le TripleAction, ce dernier écrase les 3 actions précédemment disponibles. 
@@ -58,6 +59,6 @@ Attention ! Même si une seule action est mise en place avec le TripleAction, ce
 Attention : Les Types de Requêtes ACTION et TRIPLE_ACTION n'affecte que l'objet courant ! Lorsque plusieurs objets différents sur la map partage un même fichier Piranha (par exemple, pour les gros objets, qui sont sur deux cases). Vous aurez besoin d'utiliser le Type de Requête AFFECTING de façon "locale" comme dans l'exemple suivant :
 
 ! -> TA_NULL_CLOTHES = TRIPLE_ACTION -> NULL
-$ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES:CLEAN_CLOTHES
+$ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES*CLEAN_CLOTHES
 $ -> CLEAN_CLOTHES = GOTO -> AFFECTING:TA_NULL_CLOTHES, DELETE_CLOTHES
 $ -> DELETE_CLOTHES = DELETE -> 5-7:1
