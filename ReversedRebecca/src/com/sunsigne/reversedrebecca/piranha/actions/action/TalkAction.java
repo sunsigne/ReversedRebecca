@@ -42,7 +42,7 @@ public class TalkAction extends PiranhaObjectAction {
 			ChatBox chatbox = new ChatBox(object, target, dialogue);
 			chatbox.openChat();
 
-			object.setTripleAction(object.getTripleAction().removeAction(getAction()));
+			object.setTripleAction(object.getTripleAction().removeAction(this));
 			object.createTextAction();
 		};
 
