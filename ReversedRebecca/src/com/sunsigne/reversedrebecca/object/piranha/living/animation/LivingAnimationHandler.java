@@ -17,7 +17,7 @@ public class LivingAnimationHandler {
 
 	////////// TICK ////////////
 
-	private GameLimitedList<NeoLivingAnimation> list = new GameLimitedList<>(LISTTYPE.ARRAY);
+	private GameLimitedList<LivingAnimation> list = new GameLimitedList<>(LISTTYPE.ARRAY);
 
 	public void run() {
 
@@ -33,52 +33,52 @@ public class LivingAnimationHandler {
 
 	///// animated & orientable /////
 
-	private NeoLivingAnimation walkingAnimation;
-	private NeoLivingAnimation sickAnimation;
+	private LivingAnimation walkingAnimation;
+	private LivingAnimation sickAnimation;
 
 	///// animated & not orientable /////
 
-	private NeoLivingAnimation bedAnimation;
+	private LivingAnimation bedAnimation;
 
 	///// not animated & orientable /////
 
-	private NeoLivingAnimation standingAnimation;
+	private LivingAnimation standingAnimation;
 
 	///// not animated & not orientable /////
 
-	private NeoLivingAnimation bathAnimation;
-	private NeoLivingAnimation koAnimation;
+	private LivingAnimation bathAnimation;
+	private LivingAnimation koAnimation;
 
 	private void loadAnimations() {
 
 		///// animated & orientable /////
 
-		walkingAnimation = new NeoLivingAnimation(living, "walking", 15, true);
+		walkingAnimation = new LivingAnimation(living, "walking", 15, true);
 		list.addObject(walkingAnimation);
-		sickAnimation = new NeoLivingAnimation(living, "sick", 30, true);
+		sickAnimation = new LivingAnimation(living, "sick", 30, true);
 		list.addObject(sickAnimation);
 
 		///// animated & not orientable /////
 
-		bathAnimation = new NeoLivingAnimation(living, "bath", -1, false);
+		bathAnimation = new LivingAnimation(living, "bath", -1, false);
 		list.addObject(bathAnimation);
 
 		///// not animated & orientable /////
 
-		standingAnimation = new NeoLivingAnimation(living, "standing", -1, true);
+		standingAnimation = new LivingAnimation(living, "standing", -1, true);
 		list.addObject(standingAnimation);
 
 		///// not animated & not orientable /////
 
-		bedAnimation = new NeoLivingAnimation(living, "bed", 58, false);
+		bedAnimation = new LivingAnimation(living, "bed", 58, false);
 		list.addObject(bedAnimation);
-		koAnimation = new NeoLivingAnimation(living, "ko", -1, false);
+		koAnimation = new LivingAnimation(living, "ko", -1, false);
 		list.addObject(koAnimation);
 	}
 
 	////////// RENDER ////////////
 
-	private NeoLivingAnimation getAnimation() {
+	private LivingAnimation getAnimation() {
 
 		switch (living.getCondition()) {
 
@@ -101,7 +101,7 @@ public class LivingAnimationHandler {
 		return standingAnimation;
 	}
 
-	private NeoLivingAnimation getGoodAnimation() {
+	private LivingAnimation getGoodAnimation() {
 		if (living.isMotionless() || living.isStunned())
 			return standingAnimation;
 		else

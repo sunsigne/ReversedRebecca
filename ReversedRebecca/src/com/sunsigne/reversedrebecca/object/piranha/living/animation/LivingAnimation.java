@@ -7,9 +7,9 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public class NeoLivingAnimation {
+public class LivingAnimation {
 
-	public NeoLivingAnimation(LivingObject living, String name, int animation_time, boolean orientable) {
+	public LivingAnimation(LivingObject living, String name, int animation_time, boolean orientable) {
 		this.name = name;
 		this.living = living;
 		this.animation_time = animation_time; // -1 for no animation
