@@ -1,21 +1,27 @@
 WAKE_UP = Key1 % se#réveiller
 TALK = Key1 % parler
+TAKE = Key1 % prendre
 WATCH = Key1 % regarder
-DRESS_ONE = Key1 % s'habiller
-DRESS = Key3 % s'habiller
-
-CLEAN_CLOTHES = Key2 % ranger#les#vêtements
-CLEAN_HAIR = Key2 % nettoyer#les#cheveux
+LEAVE = Key1 % sortir
 
 CANDLE_LIGHT = Key2 % allumer#la#bougie
 CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
 
-FILL = Key2 % remplir
-EMPTY = Key2 % vider
-WASH = Key1 % se#laver
-LEAVE = Key1 % sortir
+CLEAN_CLOTHES = Key2 % ranger#les#vêtements
+CLEAN_HAIR = Key2 % nettoyer#les#cheveux
 
-TAKE = Key1 % prendre
-TAKE_WATER = Key1 % se#servir
-EMPTY_WATER = Key1 % vider#l'eau
+WASH = Key1 % se#laver
+EMPTY = Key2 % vider
+FILL = Key2 % remplir
+
+DRESS_ONE = Key1 % s'habiller
+DRESS = Key3 % s'habiller
+
+WATER_TAKE = Key1 % se#servir
+WATER_EMPTY = Key1 % vider#l'eau
 WATER_PLANT = Key2 % arroser
+
+
+
+
+
