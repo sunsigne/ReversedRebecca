@@ -1,6 +1,8 @@
 WAKE_UP = Key1 % se#réveiller
 TALK = Key1 % parler
 WATCH = Key1 % regarder
+DRESS_ONE = Key1 % s'habiller
+DRESS = Key3 % s'habiller
 
 CLEAN_CLOTHES = Key2 % ranger#les#vêtements
 CLEAN_HAIR = Key2 % nettoyer#les#cheveux
