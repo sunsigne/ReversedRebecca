@@ -86,7 +86,7 @@ public class TextAction implements Updatable {
 		if (player.getFacing() == DIRECTION.RIGHT)
 			centeredText = DIRECTION.LEFT;
 
-		new TextDecoration().drawOutlinesString(g, text, no_action_font, centeredText, rect);
+		new TextDecoration().drawOutlinesString(g, no_action_font, text, centeredText, rect);
 	}
 
 	private int[] getNoActionRect(DIRECTION facing) {
@@ -120,7 +120,7 @@ public class TextAction implements Updatable {
 		if (player.getFacing() == DIRECTION.RIGHT)
 			centeredText = DIRECTION.RIGHT;
 
-		new TextDecoration().drawOutlinesString(g, text, choice_font, centeredText, rect);
+		new TextDecoration().drawOutlinesString(g, choice_font, text, centeredText, rect);
 	}
 
 	private int[] getChoiceRect(Player player, int gap) {

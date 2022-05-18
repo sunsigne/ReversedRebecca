@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class FlagLangageButton extends ButtonObject {
 
@@ -34,7 +33,7 @@ public class FlagLangageButton extends ButtonObject {
 		int pix = Size.XS / 4;
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
-		if (mouseOver(new MousePos().get(), getRect()) && isClickable()) {
+		if (isSelected()) {
 			Color light = new Color(192, 192, 192, 80);
 			g.setColor(light);
 			g.fillRect(getX() + pix, getY() + pix, getWidth() - 2 * pix, getHeight() - 2 * pix);

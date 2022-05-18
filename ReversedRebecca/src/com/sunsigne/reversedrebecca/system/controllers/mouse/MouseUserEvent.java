@@ -16,6 +16,10 @@ public interface MouseUserEvent extends Position {
 
 	void mouseReleased(MouseEvent e);
 
+	default boolean isSelected() {
+		return mouseOver(new MousePos().get(), getRect()) && isClickable();
+	}
+	
 	default boolean isClickable() {
 		for (MouseListener listener : Game.getInstance().getMouseListeners()) {
 			if (listener == getMouseController())

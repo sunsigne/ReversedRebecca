@@ -9,28 +9,15 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object, puzzle, pattern)
-	optimiser (menu, object, puzzle, pattern)
+	reorganiser (menu, object (sauf buttons), puzzle)
+	optimiser (menu, object (sauf buttons), puzzle)
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
 
-	LivingAnimationHandler utiliser la même animation pour sleep & ko
-	rendre le PNG enfermé + vivant
-	Les actions par defaut dans ActionAnalyser on tous la même Key Action One ...
-	mettre à jour la doc des mappables
-
 	Quand on fonce dans un Pusher de dos, on est poussé à travers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
 	KOAnimation dans les 4 direction ?
-	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
-	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
-	+ faire en sorte qu'il se pisse dessus après un certain temps
-	La plante jaune n'est pas finie
 	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialogue" n'est pas faite)
-	faire une animation de saut sur place (pour rendre les diagloues + vivants) ?
-	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
-	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
-	
 
 	////////// PIRA ////////////
 
@@ -39,6 +26,7 @@
 
 	////////// DIFFICILE ////////////
 
+	mettre à jour la doc "mappable"
 	faire un nouveau type de debug : active les boutons clickable à droite plutot que d'utiliser F1, F2, etc.
 	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
@@ -55,7 +43,17 @@
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu)	
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
-
+	
+	////////// LVL001 ////////////
+	
+	rendre le PNG enfermé + vivant
+	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
+	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
+	+ faire en sorte qu'il se pisse dessus après un certain temps
+	La plante jaune n'est pas finie
+	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
+	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
+	
 	////////// SONS ////////////
 	
 	Ajouter des voix aux personnages (son quand ils parlent)
@@ -69,7 +67,8 @@
 	Changer le volume de la musique quand le joueurs est en plein dialogue
 
 	////////// A CREER PLUS TARD ////////////
-
+	
+	corriger les hitbox (choque le joeur d'être aussi loin de l'évier dans le lvl000)
 	créer une animation "sick" pour quand on marche
 	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
 	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle

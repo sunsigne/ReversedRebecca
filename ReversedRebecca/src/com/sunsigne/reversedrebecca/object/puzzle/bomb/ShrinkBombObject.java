@@ -88,7 +88,7 @@ public class ShrinkBombObject extends MovingBombObject {
 		if (getCount() == 1)
 			rect = new int[] { getX() - (8 + size / 2), getY() + (2 + size / 2), getWidth(), getHeight() };
 
-		new TextDecoration().drawOutlinesString(g, String.valueOf(getCount()), font, getTextColor(), Color.BLACK,
+		new TextDecoration().drawOutlinesString(g, font, String.valueOf(getCount()), getTextColor(), Color.BLACK,
 				DIRECTION.NULL, rect);
 	}
 

@@ -6,9 +6,9 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
-public class ClassicButton extends ButtonObject {
+public class TestButton extends ButtonObject {
 
-	public ClassicButton(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
+	public TestButton(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(text, x, y, w, h, onPress, onRelease);
 	}
 		

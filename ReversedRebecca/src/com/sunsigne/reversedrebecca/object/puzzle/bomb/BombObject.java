@@ -162,7 +162,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		if (count == 1)
 			rect = new int[] { getX() - 22, getY() + 20, getWidth(), getHeight() };
 
-		new TextDecoration().drawOutlinesString(g, String.valueOf(count), font, getTextColor(), Color.BLACK,
+		new TextDecoration().drawOutlinesString(g, font, String.valueOf(count), getTextColor(), Color.BLACK,
 				DIRECTION.NULL, rect);
 	}
 

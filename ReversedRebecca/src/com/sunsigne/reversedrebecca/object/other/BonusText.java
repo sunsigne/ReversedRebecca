@@ -38,7 +38,7 @@ public class BonusText extends GameObject {
 	public void render(Graphics g) {
 
 		int[] rect = new int[] { getX(), getY() - Size.S, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, text, font, DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, text, DIRECTION.NULL, rect);
 	}
 
 }
