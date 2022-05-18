@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 import java.util.List;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
@@ -28,6 +27,20 @@ public class MultiToolMode extends DebugMode {
 	}
 
 	////////// TICK ////////////
+
+	@Override
+	public void cycle() {
+		super.cycle();
+
+		if (getState() == false)
+			ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.NULL));
+	}
+
+	private void setToolToDifficulty(ToolPlayer tool, LVL difficulty) {
+		if (difficulty != LVL.NULL)
+			tool.setMaxDifficulty(difficulty);
+		tool.setDifficulty(difficulty);
+	}
 
 	@Override
 	public void tick(Updatable object) {
@@ -58,25 +71,6 @@ public class MultiToolMode extends DebugMode {
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
 
-	}
-
-	////////// KEYBOARD ////////////
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == getKeyEvent()) {
-			cycle();
-
-			if (getState() == false)
-				ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.NULL));
-		}
-	}
-
-	private void setToolToDifficulty(ToolPlayer tool, LVL difficulty) {
-		if (difficulty != LVL.NULL)
-			tool.setMaxDifficulty(difficulty);
-		tool.setDifficulty(difficulty);
 	}
 
 }

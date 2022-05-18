@@ -48,4 +48,5 @@ public class Cycloid<T> {
 			index = 0;
 		state = objects[index];
 	}
+	
 }

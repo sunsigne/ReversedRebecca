@@ -6,9 +6,11 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerLayerChanger;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class ElevatorMode extends DebugMode {
+public class ElevatorMode extends DebugMode implements KeyboardEvent {
 
 	////////// DEBUG MODE ////////////
 
@@ -47,12 +49,19 @@ public class ElevatorMode extends DebugMode {
 
 	////////// KEYBOARD ////////////
 
+	private KeyboardController keyboardController = new KeyboardController(this);
+
+	@Override
+	public KeyboardController getKeyBoardController() {
+		return keyboardController;
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == getKeyEvent()) {
-			cycle();
-		}
+		if (getState() == false)
+			return;
+		
+		int key = e.getKeyCode();		
 		elevatorKey(key);
 	}
 
@@ -70,5 +79,10 @@ public class ElevatorMode extends DebugMode {
 		else if (key == KeyEvent.VK_NUMPAD2)
 			new PlayerLayerChanger().goesDown();
 	}
+	
+	@Override
+	public void keyReleased(KeyEvent e) {
+
+	}	
 
 }
