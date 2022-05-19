@@ -73,4 +73,11 @@ public abstract class BombPuzzle extends Puzzle {
 		new TransluantLayer().drawPuzzle(g, red);
 	}
 
+	////////// SOUND ////////////
+
+	@Override
+	public String getVictorySound() {
+		return "sound/explosion_large";
+	}
+
 }

@@ -21,15 +21,10 @@ public class OrangeKeyPuzzle extends KeyPuzzle {
 		KeyObject key = new KeyObject(this, getCol(12), getRow(new RandomGenerator().getIntBetween(1, 6)));
 		key.speed = key.speed * 2;
 		key.setVelY(new RandomGenerator().getBoolean() ? key.speed : -key.speed);
-		
+
 		LAYER.PUZZLE.addObject(lock);
 		LAYER.PUZZLE.addObject(key);
 		createRandompWalls(25);
-	}
-
-	@Override
-	public String getVictorySound() {
-		return "sound/door_unlock";
 	}
 
 }

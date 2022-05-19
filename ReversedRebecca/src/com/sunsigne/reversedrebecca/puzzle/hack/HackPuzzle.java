@@ -38,25 +38,6 @@ public abstract class HackPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(virus);
 	}
 
-	/*
-	 * protected void createRandompWalls(int numOfWalls) { if (numOfWalls <= 0)
-	 * return;
-	 * 
-	 * Handler handler = LAYER.PUZZLE.getHandler(); BufferedImage img =
-	 * getWallTexture(); int safeRow = getRow(new RandomGenerator().getIntBetween(1,
-	 * 6));
-	 * 
-	 * int count = 0;
-	 * 
-	 * while (count < numOfWalls) { count++;
-	 * 
-	 * int radCol = getCol(new RandomGenerator().getIntBetween(2, 11)); int radRow;
-	 * do { radRow = getRow(new RandomGenerator().getIntBetween(1, 6)); } while
-	 * (radRow == safeRow);
-	 * 
-	 * handler.addObject(new WallPuzzle(img, radCol, radRow)); handler.addObject(new
-	 * KillPuzzleObject(this, radCol, radRow)); } }
-	 */
 	////////// OPEN ////////////
 
 	@Override
@@ -91,6 +72,13 @@ public abstract class HackPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color blue = new Color(10, 10, 50, 240);
 		new TransluantLayer().drawPuzzle(g, blue);
+	}
+
+	////////// SOUND ////////////
+
+	@Override
+	public String getVictorySound() {
+		return "sound/computer_crashes";
 	}
 
 }

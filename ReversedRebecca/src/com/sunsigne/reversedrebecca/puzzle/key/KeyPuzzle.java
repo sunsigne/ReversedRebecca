@@ -34,8 +34,7 @@ public abstract class KeyPuzzle extends Puzzle {
 
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
-			// it is almost invisible in VisibleHitboxMode because this is added before
-			// Walls
+			// Almost invisible in VisibleHitboxMode because added before Walls
 			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, getCol(0), getRow(row)));
 		}
 	}
@@ -70,6 +69,13 @@ public abstract class KeyPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
 		new TransluantLayer().drawPuzzle(g, green);
+	}
+
+	////////// SOUND ////////////
+
+	@Override
+	public String getVictorySound() {
+		return "sound/door_unlock";
 	}
 
 }

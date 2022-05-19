@@ -25,9 +25,4 @@ public class GreenKeyPuzzle extends KeyPuzzle {
 		createRandompWalls(4);
 	}
 
-	@Override
-	public String getVictorySound() {
-		return "sound/door_unlock";
-	}
-
 }

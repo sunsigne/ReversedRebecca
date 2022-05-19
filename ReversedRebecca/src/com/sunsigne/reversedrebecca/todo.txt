@@ -9,8 +9,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object (sauf buttons), puzzle)
-	optimiser (menu, object (sauf buttons), puzzle)
+	reorganiser (menu, object (sauf buttons & bombes))
+	optimiser (menu, object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// A FINIR ////////////
@@ -70,7 +70,7 @@
 	corriger les hitbox (choque le joeur d'être aussi loin de l'évier dans le lvl000)
 	créer une animation "sick" pour quand on marche
 	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
-	Finir HackPuzzle : VirusObject en ExtrabehaviorObject, HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
+	Finir HackPuzzle : VirusObject en HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 	Animation de douche ?
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 
