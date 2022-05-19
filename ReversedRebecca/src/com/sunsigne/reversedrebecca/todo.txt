@@ -1,23 +1,17 @@
-	vidéo sur  :
-	- écran titre
-	- le rangement de la souris
-	- le dual checker
-	- traduction de text
-	- écran de chargement	
-	- sons
+	////////// VIDEO ////////////
 
+	écran titre
+	le rangement de la souris
+	le dual checker
+	traduction de text
+	écran de chargement	
+	sons
 
 	////////// EN COURS ////////////
 
 	reorganiser (menu, object (sauf buttons & bombes))
 	optimiser (menu, object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
-
-	////////// A FINIR ////////////
-
-	Quand on fonce dans un Pusher de dos, on est poussé à travers le mur à côté de ce dernier : faire en sorte que le pusher pousse correctement dans le cas où le pushable approche le pusher de dos
-	KOAnimation dans les 4 direction ?
-	finir le design des personnages (seuls sarah, peeboy, error et rebecca sont finis, et encore l'option "dialogue" n'est pas faite)
 
 	////////// PIRA ////////////
 
@@ -26,6 +20,8 @@
 
 	////////// DIFFICILE ////////////
 
+	corriger les hitbox (choque le user d'être aussi loin de l'évier dans le lvl000)
+	finir le design des personnages
 	mettre à jour la doc "mappable"
 	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
 	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
@@ -36,16 +32,22 @@
 	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
-	changer les couleurs Mappable de peepuddle
-	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
 	DieWhenNoHp -> kill() prévoir un restart
-
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	
+	////////// LVL000 ////////////
+	
+	la bougie parfumée dans le lvl000 a fondu si on part en la laissant
+	panière à linge + lave-linge
+	Animation de douche ?
+	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
+	
 	////////// LVL001 ////////////
 	
-	rendre le PNG enfermé + vivant
+	KOAnimation dans les 4 direction ?
+	rendre le PNG enfermé + vivant (+ le finir)
+	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
 	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
 	+ faire en sorte qu'il se pisse dessus après un certain temps
@@ -62,28 +64,22 @@
 	son pour le puzzle door !
 	sons pour le hack puzzle !
 	SoundVolume & Volume : réfléchir au système le + efficace PUIS créer la GUI		
-	Buttons -> should play a sound too
+	Buttons -> devrait jouer un son ?
 	Changer le volume de la musique quand le joueurs est en plein dialogue
 
 	////////// A CREER PLUS TARD ////////////
 	
-	corriger les hitbox (choque le joeur d'être aussi loin de l'évier dans le lvl000)
 	créer une animation "sick" pour quand on marche
 	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
 	Finir HackPuzzle : VirusObject en HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
-	Animation de douche ?
-	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 
 	///////// IDEE ////////////
-
-	possibilité d'allumer la bougie parfumée dans le lvl000. Déclanche un incendit si on part en la laissant !!!
-	faire en sorte que lorsque le joueur reste immobile devant la bougie pendant un moment, la musiquer et le décors change progressivement en quelque chose d'onirique
 
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac
 	nourriture pour regen (ou autre solution)
-	une action "défoncer la portre" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
+	une action "défoncer la porte" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
 	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
 	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
@@ -94,4 +90,4 @@
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 
 	
-	 
+	
