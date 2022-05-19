@@ -17,11 +17,11 @@ public class TitleScreenButton extends ButtonObject {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("dogicabold", 66f);
+	private Font font = new FontTask().createNewFont("dogicabold", 45f);
 
 	@Override
 	public void render(Graphics g) {
-
+		
 		Color text_color = new Color(255, 204, 0);
 		Color shadow_color = new Color(255, 163, 0, 80);
 		int[] rect = getRect();
