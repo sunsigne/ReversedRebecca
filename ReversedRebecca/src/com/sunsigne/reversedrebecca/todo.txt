@@ -32,6 +32,7 @@
 
 	////////// FACILE ////////////
 
+	Le fading menu devrait jouer un son
 	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart

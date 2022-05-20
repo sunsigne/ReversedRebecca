@@ -9,7 +9,6 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
 import com.sunsigne.reversedrebecca.Infos;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class SoundTask {
 
@@ -23,9 +22,6 @@ public class SoundTask {
 
 	public void play(SOUNDTYPE soundType, String path) {
 		if (path == null)
-			return;
-
-		if (LAYER.LOADING.getHandler().getList().isEmpty() == false)
 			return;
 
 		String path0 = "/ressources/audio/" + path + ".wav";

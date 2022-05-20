@@ -9,19 +9,26 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class TitleScreen implements Updatable {
+public class TitleScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 
@@ -50,8 +57,31 @@ public class TitleScreen implements Updatable {
 	}
 
 	private void startWorld() {
+		String currentlvl = new Save().getLevel(false);
+
+		// if currentlvlmenu and currentlvl are the same
+		if (new Save().getLevel(true).equalsIgnoreCase(currentlvl)) {
+			fadeMenu();
+			userCanControlPlayer();
+			return;
+		}
+
+		// else do a classical loading
 		LAYER.MENU.getHandler().clear();
-		new World(new Save().getLevel(false));
+		new World(currentlvl);
+	}
+
+	private void fadeMenu() {
+		PhysicLaw law = PhysicList.getList().getObject(new FadeMenuLaw());
+		((FadeMenuLaw) law).setFading(true);
+	}
+
+	private void userCanControlPlayer() {
+		Player player = new PlayerFinder().getPlayer();
+		int time = player.getCondition() == CONDITION.BED ? 4 : 0;
+		
+		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
+		new GameTimer(time * Game.SEC, listener);
 	}
 
 	///// options /////
@@ -99,15 +129,6 @@ public class TitleScreen implements Updatable {
 		new LanguageScreen();
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-		Player player = new PlayerFinder().getPlayer();
-		if (player != null)
-			player.tick();
-	}
-
 	////////// TEXTURE ////////////
 
 	private BufferedImage title_img;
@@ -118,8 +139,8 @@ public class TitleScreen implements Updatable {
 	}
 
 	private void drawRebeccasRoom() {
-		World world = new World(new Save().getLevel(true));
-		world.freeze(true);
+		new World(new Save().getLevel(true));
+		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 
 	////////// RENDER ////////////

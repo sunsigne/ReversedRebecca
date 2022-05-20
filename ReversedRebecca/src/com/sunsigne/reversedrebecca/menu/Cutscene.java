@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.menu;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -20,7 +19,7 @@ public class Cutscene implements Updatable {
 	public void start() {
 		running = true;
 		LAYER.GUI.addObject(this);
-		setUserAllowedToControlPlayer(false);
+		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 
 	public void stop(boolean delay) {
@@ -28,16 +27,6 @@ public class Cutscene implements Updatable {
 			new GameTimer(1 * Game.SEC, () -> running = false);
 		else
 			new GameTimer(0, () -> running = false);
-	}
-
-	private void setUserAllowedToControlPlayer(boolean isUserAllowedToMovePlayer) {
-		Player player = new PlayerFinder().getPlayer();
-
-		if (player == null)
-			return;
-
-		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
-		player.setCanInterract(isUserAllowedToMovePlayer);
 	}
 
 	////////// TICK ////////////
@@ -72,7 +61,7 @@ public class Cutscene implements Updatable {
 			if (tempUpdatable instanceof Cutscene)
 				LAYER.GUI.getHandler().removeObject(tempUpdatable);
 		}
-		setUserAllowedToControlPlayer(true);
+		new PlayerFinder().setUserAllowedToControlPlayer(true);
 	}
 
 	////////// RENDER ////////////

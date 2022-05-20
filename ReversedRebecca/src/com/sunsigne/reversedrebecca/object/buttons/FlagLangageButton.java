@@ -9,10 +9,10 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class FlagLangageButton extends ButtonObject {
+public class FlagLangageButton extends TitleScreenButton {
 
 	public FlagLangageButton(GenericListener onPress, GenericListener onRelease) {
-		super(null, Window.WIDHT - Size.L, 0, Size.L, Size.M, onPress, onRelease);
+		super("", Window.WIDHT - Size.L, 0, Size.L, Size.M, onPress, onRelease);
 	}
 
 	////////// TEXTURE ////////////

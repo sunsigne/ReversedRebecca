@@ -6,6 +6,9 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 
 public class TitleScreenButton extends ButtonObject {
@@ -21,7 +24,7 @@ public class TitleScreenButton extends ButtonObject {
 
 	@Override
 	public void render(Graphics g) {
-		
+
 		Color text_color = new Color(255, 204, 0);
 		Color shadow_color = new Color(255, 163, 0, 80);
 		int[] rect = getRect();
@@ -32,6 +35,15 @@ public class TitleScreenButton extends ButtonObject {
 		}
 
 		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, getFacing(), rect);
+	}
+
+	////////// MOUSE ////////////
+
+	@Override
+	public boolean isClickable() {
+		// if the menu is fading, buttons are no longer clickable
+		PhysicLaw law = PhysicList.getList().getObject(new FadeMenuLaw());
+		return ((FadeMenuLaw) law).isFading() == false;
 	}
 
 }

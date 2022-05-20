@@ -13,6 +13,18 @@ public class PlayerFinder {
 		return PlayerFinderLaw.getPlayer();
 	}
 
+	////////// CONTROL ////////////
+	
+	public void setUserAllowedToControlPlayer(boolean isUserAllowedToMovePlayer) {
+		Player player = getPlayer();
+
+		if (player == null)
+			return;
+
+		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
+		player.setCanInterract(isUserAllowedToMovePlayer);
+	}
+	
 	////////// DISTANCE ////////////
 
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {

@@ -57,7 +57,7 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (mouseOver(e, getRect())) {
+		if (isClickable() && mouseOver(e, getRect())) {
 			if(onPress != null)
 				onPress.doAction();
 		}
@@ -65,7 +65,7 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		if (mouseOver(e, getRect())) {
+		if (isClickable() && mouseOver(e, getRect())) {
 			if(onRelease != null)
 				onRelease.doAction();
 		}
