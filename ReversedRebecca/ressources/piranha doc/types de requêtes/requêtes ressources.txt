@@ -35,6 +35,7 @@ TIME -> 0 = GOTO -> SOUND:EXEMPLE_SOUND
 
 Lorsque la Condition sera vérifiée, le son "exemple_sound.wav" sera joué.
 
+Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED, ce qui facilite grandement la tâche !
 
 
 ////// TALK //////

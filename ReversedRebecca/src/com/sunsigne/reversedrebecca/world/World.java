@@ -16,7 +16,10 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.MemoryList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
@@ -51,6 +54,7 @@ public class World implements Updatable, RenderFree {
 		createMap();
 		updateLayer();
 		addSetup();
+		new Save().loadSave();
 		addGUI();
 		addControlers();
 		start();
@@ -97,6 +101,8 @@ public class World implements Updatable, RenderFree {
 
 	private void addSetup() {
 		getLayer(true).addObject(new SetupObject());
+		new TimeCondition().registerValue(0);
+		Game.getInstance().forceLoop();
 	}
 
 	private void addGUI() {
@@ -112,7 +118,6 @@ public class World implements Updatable, RenderFree {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
-		new TimeCondition().registerValue(0);
 	}
 
 	////////// NAME ////////////
@@ -194,6 +199,8 @@ public class World implements Updatable, RenderFree {
 		instance = null;
 		new CharacteristicList().reset();
 		MemoryList.getList().clear();
+		SaveList.getList().clear();
+		SaveEraserList.getList().clear();
 		Game.getInstance().forceLoop();
 	}
 

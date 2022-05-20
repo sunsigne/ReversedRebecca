@@ -15,6 +15,7 @@
 
 	////////// PIRA ////////////
 
+	END_LVL pas encore dans la doc (prévenir de l'ordre des save)	
 	creer une music request !!!!!
 	créer des deep_memory, enregistrer la liste en fichier csv ? + prévenir dans la doc que les deep_memory sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
@@ -29,6 +30,7 @@
 
 	////////// FACILE ////////////
 
+	créer un objet (genre Flag) pour finir un level
 	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini

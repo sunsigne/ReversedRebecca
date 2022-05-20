@@ -8,6 +8,17 @@ ex : TIME -> 6 = "Requête"
 Cette fonction est très utile juste après la génération d'une map : TIME -> 0 pour initier l'état de base d'un objet.
 
 
+////// SAVED //////
+
+
+Le Type de Condition SAVED est lancé juste après le chargement de la map (et après le TIME -> 0, qui est un initiateur d'état)
+
+ex : SAVED -> REBECCAS_ROOM*NO_CLOTHES_ON_DRESSER = GOTO -> CLEAN_CLOTHES
+La Requête (GOTO -> CLEAN_CLOTHES) sera appelé si REBECCAS_ROOM*NO_CLOTHES_ON_DRESSER est une donnée qui a été sauvegardée (voir "requêtes memory.txt").
+
+Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED, ce qui facilite grandement la tâche !
+
+
 ////// WONPUZZLE //////
 
 
