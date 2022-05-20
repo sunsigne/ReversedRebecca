@@ -31,6 +31,7 @@ $ -> SAVE_NO_CLOTHES_ON_DRESSER = SAVE -> REGISTER, REBECCAS_ROOM*NO_CLOTHES_ON_
 
 Lorsque la Condition sera vérifiée, une demande de sauvegarde sera effectuer pour une donnée dont le nom exact est défini comme "REBECCAS_ROOM*NO_CLOTHES_ON_DRESSER". Cette donnée sera sauvegardée dans l'ordinateur lorsque le niveau sera terminée.
 Note : il est recommandé de bien réfléchir au nom de la donnée que vous souhaitez enregistrer, afin d'une part, d'éviter tout possible doublon, et d'autre part, de la retrouver facilement.
+Note : le mot "currentlvl" est interdit à l'interieur d'une donnée.
 
 Comme vous pouvez le voir, en plus du nom de la donnée que l'on souhaite sauvegarder, il existe une Cible supplémentaire qui déterminer l'action à effectuer avec cette donnée :
 
@@ -41,4 +42,5 @@ Note : il est tout à fait possible, pour un même nom de donnée, de faire d'ab
 - ERASE : faire une demande de suppression d'une donnée déjà sauvegardée par le passé (cette demande sera traitée à la fin du niveau).
 - CANCEL_ERASE : annuler la demande de suppression de la donnée (la donnée ne sera donc pas supprimée à la fin du niveau).
 
+Note : Dans 99% des cas, cette information vous sera inutile, mais sachez qu'à la fin d'un niveau, REGISTER s'applique avant ERASE.
 Note : pour rappel, afin de lire une donnée enregistrée, il faut utiliser la condition SAVED (voir "1 - conditions.txt).

@@ -62,3 +62,16 @@ Le Type de Requête WAITFOR accepte les "Conditions" suivantes :
 - PLAYER_FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), n'exécute la requête que lorsque le joueur regarde dans la direction choisie. (Note : il est possible de mettre un point d'exclamation "!" devant la direction pour obtenir l'inverse de la condition - càd toutes les directions sauf celle indiquée).
 
 Note : dans la mesure où un WAITFOR écrase les waitfor précédents, si l'on a besoin d'annuler un waitfor existant, il suffit d'écrire la requête "WAITFOR -> TIMER:0, NULL".
+
+
+////// END_LVL //////
+
+Le Type de Requête END_LVL permet de demander au programme de charger les nouveaux niveaux pour l'écran titre et pour le jeu en cours.
+Note : les demandes enregistrées par le Type de Requête SAVE (voir "requêtes memory.txt") sont traitées juste avant l'enregistrement des nouveaux niveaux.
+
+exemple :
+WONPUZZLE -> 6-0 = END_LVL -> REBECCAS_ROOM_1, LVL001
+
+Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1.
+
+Note : l'écran titre changeant est une mécanique très intéressante. Vous pouvez totalement l'ignorer, mais cela sera dommage de passer à côté de l'histoire qu'il peut raconter.

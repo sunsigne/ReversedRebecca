@@ -11,17 +11,31 @@ public class Save {
 
 	private String file = "userdata/save.csv";
 
+	////////// LEVEL ////////////
+
+	private String lvl0 = "rebeccas_room_0";
+
+	public String getLevel(boolean menu) {
+		if (menu)
+			return new FileTask().read("currentlvlmenu", file);
+		else
+			return new FileTask().read("currentlvl", file);
+	}
+
+	public void registerNextLevel(String lvlmenu, String lvl) {
+		new FileTask().write("currentlvlmenu", file, lvlmenu);
+		new FileTask().write("currentlvl", file, lvl);
+	}
+
 	////////// READ ////////////
 
 	public void loadSave() {
 
-		// if nothing to load
-		if (file.isEmpty())
-			return;
-
 		String[] data = new FileTask().read(file).split(System.getProperty("line.separator"));
 
 		for (String tempDatum : data) {
+			if (tempDatum.toLowerCase().contains("currentlvl"))
+				continue;
 			new SavedCondition().registerValue(tempDatum);
 		}
 	}
@@ -60,7 +74,11 @@ public class Save {
 	////////// DELETE ////////////
 
 	public void resetProgression() {
-		new FileTask().write(file, "");
+		String nextLine = System.getProperty("line.separator");
+		String lvlmenu = "currentlvlmenu=" + lvl0;
+		String lvl = "currentlvl=" + lvl0;
+
+		new FileTask().write(file, lvlmenu + nextLine + lvl);
 	}
 
 	// the name is alarming but it just erase some specific intended data

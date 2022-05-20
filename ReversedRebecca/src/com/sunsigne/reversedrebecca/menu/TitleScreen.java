@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -30,8 +31,8 @@ public class TitleScreen implements Updatable {
 
 		createPlayButton();
 		createOptionsButton();
-		createFlagLanguageButton();
 		createQuitButton();
+		createFlagLanguageButton();
 	}
 
 	////////// BUTTONS ////////////
@@ -50,7 +51,7 @@ public class TitleScreen implements Updatable {
 
 	private void startWorld() {
 		LAYER.MENU.getHandler().clear();
-		new World("lvl000");
+		new World(new Save().getLevel(false));
 	}
 
 	///// options /////
@@ -63,6 +64,18 @@ public class TitleScreen implements Updatable {
 
 		ButtonObject optionsButton = new TitleScreenButton(text, 700, 820, 500, 220, onPress, onRelease);
 		LAYER.MENU.addObject(optionsButton);
+	}
+
+	///// quit /////
+
+	private void createQuitButton() {
+		GenericListener onPress = () -> new Conductor().stopApp();
+		GenericListener onRelease = null;
+
+		String text = new Translatable().getTranslatedText("QuitButton", file);
+
+		ButtonObject quitButton = new TitleScreenButton(text, 1300, 820, 500, 220, onPress, onRelease);
+		LAYER.MENU.addObject(quitButton);
 	}
 
 	///// flag /////
@@ -86,18 +99,6 @@ public class TitleScreen implements Updatable {
 		new LanguageScreen();
 	}
 
-	///// quit /////
-
-	private void createQuitButton() {
-		GenericListener onPress = () -> new Conductor().stopApp();
-		GenericListener onRelease = null;
-
-		String text = new Translatable().getTranslatedText("QuitButton", file);
-
-		ButtonObject quitButton = new TitleScreenButton(text, 1300, 820, 500, 220, onPress, onRelease);
-		LAYER.MENU.addObject(quitButton);
-	}
-
 	////////// TICK ////////////
 
 	@Override
@@ -117,7 +118,7 @@ public class TitleScreen implements Updatable {
 	}
 
 	private void drawRebeccasRoom() {
-		World world = new World("lvl000");
+		World world = new World(new Save().getLevel(true));
 		world.freeze(true);
 	}
 

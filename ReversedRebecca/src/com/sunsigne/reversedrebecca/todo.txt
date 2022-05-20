@@ -9,40 +9,39 @@
 
 	////////// EN COURS ////////////
 
+	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
+	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
+	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
+	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
+		
 	reorganiser (menu, object (sauf buttons & bombes))
 	optimiser (menu, object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
 	////////// PIRA ////////////
 
-	EndLevelRequest est à la fois pas fini, et pas dans la doc (prévenir de l'ordre des saves)	
 	creer une music request !!!!!
-	créer des deep_memory, enregistrer la liste en fichier csv ? + prévenir dans la doc que les deep_memory sont lourds, ne pas faire de conflit de nom !!! choisir des noms certain de ne pas avoir des doublons (nom du lvl + numéro de la ligne ?)
 
 	////////// DIFFICILE ////////////
 
 	corriger les hitbox (choque le user d'être aussi loin de l'évier dans le lvl000)
 	finir le design des personnages
 	mettre à jour la doc "mappable"
-	creer le type "violet" dans la gui (mais avant ça, être sûr de savoir comment le type violet fonctionne)
-	!! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
+	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 
 	////////// FACILE ////////////
 
-	créer un objet (genre Flag) pour finir un level
-	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
-	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
+	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
-	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
-	faire des noms marrant pour l'écran titre qui apparaisse .. 1% du temps ? genre "Rebecca se Retourne" - "Retarded Rebecca"
 	
 	////////// LVL000 ////////////
 	
+	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
 	la bougie parfumée dans le lvl000 a fondu si on part en la laissant
 	panière à linge + lave-linge
-	Animation de douche ?
+	Animation de douche ? bulles
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	
 	////////// LVL001 ////////////
@@ -72,7 +71,6 @@
 	////////// A CREER PLUS TARD ////////////
 	
 	créer une animation "sick" pour quand on marche
-	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
 	Finir HackPuzzle : VirusObject en HackPuzzleFazctory, HackPuzzle, CyanHackPuzzle
 
 	///////// IDEE ////////////
