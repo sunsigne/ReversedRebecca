@@ -39,6 +39,7 @@
 	
 	////////// LVL000 ////////////
 	
+	devrait redesigner un peu le lvl pour rendre l'écran titre + jolie
 	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
 	la bougie parfumée dans le lvl000 a fondu si on part en la laissant
 	panière à linge + lave-linge

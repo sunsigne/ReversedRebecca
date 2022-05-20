@@ -52,7 +52,7 @@ public class TitleScreen implements Updatable, TickFree {
 
 		String text = new Translatable().getTranslatedText("PlayButton", file);
 
-		ButtonObject playButton = new TitleScreenButton(text, 100, 820, 500, 220, onPress, onRelease);
+		ButtonObject playButton = new TitleScreenButton(text, 140, 840, 420, 140, onPress, onRelease);
 		LAYER.MENU.addObject(playButton);
 	}
 
@@ -92,7 +92,7 @@ public class TitleScreen implements Updatable, TickFree {
 
 		String text = new Translatable().getTranslatedText("OptionsButton", file);
 
-		ButtonObject optionsButton = new TitleScreenButton(text, 700, 820, 500, 220, onPress, onRelease);
+		ButtonObject optionsButton = new TitleScreenButton(text, 740, 840, 420, 140, onPress, onRelease);
 		LAYER.MENU.addObject(optionsButton);
 	}
 
@@ -104,7 +104,7 @@ public class TitleScreen implements Updatable, TickFree {
 
 		String text = new Translatable().getTranslatedText("QuitButton", file);
 
-		ButtonObject quitButton = new TitleScreenButton(text, 1300, 820, 500, 220, onPress, onRelease);
+		ButtonObject quitButton = new TitleScreenButton(text, 1340, 840, 420, 140, onPress, onRelease);
 		LAYER.MENU.addObject(quitButton);
 	}
 
