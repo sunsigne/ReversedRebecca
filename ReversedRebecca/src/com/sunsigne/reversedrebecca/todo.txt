@@ -9,15 +9,18 @@
 
 	////////// EN COURS ////////////
 
+	reorganiser (menu, object (sauf buttons & bombes))
+	optimiser (menu, object (sauf buttons & bombes))
+	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
+	
+	////////// MENU ////////////
+
+	LanguageScreen -> les boutons du Title ont "l'air" clickable alors qu'ils ne devraient pas
 	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
 	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
 	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
 	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
-		
-	reorganiser (menu, object (sauf buttons & bombes))
-	optimiser (menu, object (sauf buttons & bombes))
-	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
-
+	
 	////////// PIRA ////////////
 
 	creer une music request !!!!!
@@ -61,7 +64,7 @@
 	////////// SONS ////////////
 	
 	Ajouter des voix aux personnages (son quand ils parlent)
-	crer le système de volume de musique
+	créer le système de volume de musique
 	bruit de poussage
 	SountTask pas fini !
 	son pour le puzzle door !
