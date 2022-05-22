@@ -32,6 +32,8 @@
 	mettre à jour la doc "mappable"
 	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+	la GUI s'affiche sur l'écran titre
+	Le système d'outils ne prend pas en comtpe le fait qu'un outis d'un puzzle qui n'existe pas et d'un outils qui n'existe pas puissent apparâitre dans le monde !
 
 	////////// FACILE ////////////
 
