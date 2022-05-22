@@ -30,6 +30,21 @@ public interface Updatable {
 		}
 	}
 
+	default void retablishControls() {
+
+		if (this instanceof KeyboardEvent) {
+			KeyboardEvent keyboard = (KeyboardEvent) this;
+			if (keyboard.getKeyBoardController() != null)
+				Game.getInstance().addKeyListener(keyboard.getKeyBoardController());
+		}
+
+		if (this instanceof MouseUserEvent) {
+			MouseUserEvent mouse = (MouseUserEvent) this;
+			if (mouse.getMouseController() != null)
+				Game.getInstance().addMouseListener(mouse.getMouseController());
+		}
+	}
+
 	////////// TICK ////////////
 
 	void tick();
@@ -37,5 +52,5 @@ public interface Updatable {
 	////////// RENDER ////////////
 
 	void render(Graphics g);
-	
+
 }

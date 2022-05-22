@@ -43,7 +43,7 @@ public class TitleScreenButton extends ButtonObject {
 	public boolean isClickable() {
 		// if the menu is fading, buttons are no longer clickable
 		PhysicLaw law = PhysicList.getList().getObject(new FadeMenuLaw());
-		return ((FadeMenuLaw) law).isFading() == false;
+		return ((FadeMenuLaw) law).isFading() == false && super.isClickable();
 	}
 
 }

@@ -7,6 +7,7 @@ public enum LAYER {
 	
 	//DOWNEST_GROUND("downiest_ground", new Handler(true)),
 	//DOWNER_GROUND("downer_ground", new Handler(true)),
+	/////////////////////////////////////////
 	DOWN_GROUND("down_ground", new Handler(true)),
 	DOWN_WORLD_CONTENT("down_world_content", new Handler(true)),	
 	/////////////////////////////////////////
@@ -15,6 +16,7 @@ public enum LAYER {
 	/////////////////////////////////////////
 	UP_GROUND("up_ground", new Handler(true)),
 	UP_WORLD_CONTENT("up_world_content", new Handler(true)),
+	/////////////////////////////////////////
 	//UPPER_GROUND("upper_ground", new Handler(true)),
 	//UPPEST_GROUND("uppiest_ground", new Handler(true)),
 	
@@ -23,7 +25,10 @@ public enum LAYER {
 	
 	PUZZLE("puzzle", new Handler(false)),
 	
-	MENU("menu", new Handler(false)),
+	MENU_MAIN("menu_main", new Handler(false)),
+	MENU_NAV("menu_nav", new Handler(false)),
+	MENU_BOX("menu_box", new Handler(false)),
+	/////////////////////////////////////////
 	DEBUG ("debug", new Handler(false)),
 	LOADING ("loading", new Handler(false));
 	

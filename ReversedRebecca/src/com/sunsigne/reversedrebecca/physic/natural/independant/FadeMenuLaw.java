@@ -4,6 +4,7 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -46,7 +47,7 @@ public class FadeMenuLaw extends IndependantLaw {
 		if (alpha < 0) {
 			alpha = 0;
 			setFading(false);
-			LAYER.MENU.getHandler().clear();
+			MenuScreen.clearAll();
 			return;
 		}
 	}
@@ -63,7 +64,7 @@ public class FadeMenuLaw extends IndependantLaw {
 		if (object == null)
 			return;
 
-		if (object.getHandler() != LAYER.MENU.getHandler())
+		if (object.getHandler() != LAYER.MENU_MAIN.getHandler())
 			return;
 
 		Graphics2D g2d = (Graphics2D) g;
