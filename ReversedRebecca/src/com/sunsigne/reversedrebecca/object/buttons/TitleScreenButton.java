@@ -28,7 +28,6 @@ public class TitleScreenButton extends ButtonObject {
 	
 	@Override
 	public void render(Graphics g) {
-
 		Color text_color = new Color(255, 204, 0);
 		Color shadow_color = new Color(255, 163, 0, 80);
 		int[] rect = getRect();
@@ -38,7 +37,7 @@ public class TitleScreenButton extends ButtonObject {
 			rect = new int[] { getX(), getY() - 3, getWidth(), getHeight() };
 		}
 
-		new TextDecoration().drawShadowedString(g, getText(), font, text_color, shadow_color, getFacing(), rect);
+		new TextDecoration().drawShadowedString(g, font, getText(), text_color, shadow_color, getFacing(), rect);
 	}
 
 	////////// MOUSE ////////////

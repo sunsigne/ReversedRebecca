@@ -38,7 +38,7 @@ public class TextDecoration {
 
 	///// shadow /////
 
-	public void drawShadowedString(Graphics g, String text, Font font, Color color, Color shadow_color,
+	public void drawShadowedString(Graphics g, Font font, String text, Color color, Color shadow_color,
 			DIRECTION facing, int[] rect) {
 
 		int gap = 4;
