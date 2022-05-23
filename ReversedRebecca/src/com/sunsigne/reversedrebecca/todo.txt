@@ -9,8 +9,8 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (menu, object (sauf buttons & bombes))
-	optimiser (menu, object (sauf buttons & bombes))
+	reorganiser (menu (seulement chat), object (sauf buttons & bombes))
+	optimiser (menu (seulement chat), object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 	
 	////////// MENU ////////////
@@ -37,7 +37,8 @@
 
 	////////// FACILE ////////////
 
-	Le fading menu devrait jouer un son
+	mettre à jour les miniatures dans les dossiers
+
 	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
@@ -65,6 +66,8 @@
 	
 	////////// SONS ////////////
 	
+	Le fading menu devrait jouer un son
+	les boutons et les menus devraient jouer un son
 	Ajouter des voix aux personnages (son quand ils parlent)
 	créer le système de volume de musique
 	bruit de poussage

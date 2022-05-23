@@ -23,6 +23,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen extends MenuScreen {
@@ -70,8 +71,8 @@ public class TitleScreen extends MenuScreen {
 		menu.getHandler().addObject(button);
 	}
 
-	private void createFlagLanguageButton() {
-		GenericListener onPress = () -> new LanguageScreen();
+	protected void createFlagLanguageButton() {
+		GenericListener onPress = () -> openLanguageScreen();
 		ButtonObject button = new FlagLangageButton(onPress, null);
 		menu.getHandler().addObject(button);
 	}
@@ -103,6 +104,17 @@ public class TitleScreen extends MenuScreen {
 		int time = player.getCondition() == CONDITION.BED ? 4 : 0; // if in bed, must awake first
 		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
 		new GameTimer(time * Game.SEC, listener);
+	}
+
+	private void openLanguageScreen() {
+		for (Updatable tempUpdatable : menu.getHandler().getList()) {
+			if (tempUpdatable instanceof FlagLangageButton == false)
+				continue;
+
+			tempUpdatable.getHandler().removeObject(tempUpdatable);
+			break;
+		}
+		new LanguageScreen();
 	}
 
 	////////// TEXTURE ////////////

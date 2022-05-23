@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public class LoadingScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
-	
+
 	public LoadingScreen() {
 
 	}
@@ -21,16 +21,17 @@ public class LoadingScreen implements Updatable, TickFree {
 	////////// RENDER ////////////
 
 	private Font font = new FontTask().createNewFont("dogicabold", 50f);
-	
+
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
-		
+
+		// for a weird reason, getting this text out systematically corrupts DualChecker
 		String text = new Translatable().getTranslatedText("Loading", file);
 		g.setFont(font);
 		g.setColor(Color.WHITE);
-		g.drawString(text.toUpperCase() + "...", 30, Window.HEIGHT - 40);		
+		g.drawString(text.toUpperCase() + "...", 30, Window.HEIGHT - 40);
 	}
 
 }

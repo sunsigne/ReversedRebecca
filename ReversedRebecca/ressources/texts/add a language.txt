@@ -1,0 +1,9 @@
+To add a new language, you can :
+1 - copy the folder of an existing language
+2 - paste it in in this very folder /texts (the game will automatically detect it)
+3 - rename that folder into the name of your language (optional)
+4 - translate every file contained within
+
+That's it.
+
+Note : the game cannot display more than 15 languages

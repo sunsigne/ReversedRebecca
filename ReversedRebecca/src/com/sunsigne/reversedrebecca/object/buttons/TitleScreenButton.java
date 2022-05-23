@@ -22,6 +22,10 @@ public class TitleScreenButton extends ButtonObject {
 
 	private Font font = new FontTask().createNewFont("dogicabold", 45f);
 
+	public void setFontSize(float size) {
+		font = new FontTask().createNewFont("dogicabold", size);
+	}
+	
 	@Override
 	public void render(Graphics g) {
 
