@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -55,8 +56,7 @@ public class AnimatedDecorationObject extends DecorationObject {
 		GameList<BufferedImage> list = new GameList<>(LISTTYPE.LINKED);
 
 		for (int index = 0; index < frames; index++) {
-			// put a "0" in front of each number below 10
-			String formated_index = index < 10 ? "0" + index : String.valueOf(index);
+			String formated_index = new FormatedString().getNumber(index);
 			list.addObject(loader.loadImage(path + formated_index));
 		}
 

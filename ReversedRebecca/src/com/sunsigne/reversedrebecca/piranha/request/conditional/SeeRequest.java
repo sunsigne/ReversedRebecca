@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.pattern.FormatedName;
+import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.physic.finder.SightFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -52,7 +52,7 @@ public class SeeRequest extends ConditionalRequest {
 				continue;
 
 			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-			String formated_valueToCheck = new FormatedName().getName(tempObject, valueToCheck);
+			String formated_valueToCheck = new FormatedString().getName(tempObject, valueToCheck);
 
 			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))
 				return new SightFinder(object, tempObject).isGoalInSight();

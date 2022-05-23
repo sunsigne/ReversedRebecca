@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.pattern.FormatedName;
+import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -86,8 +86,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
 		// authorize words like "player" or "object"
-		String formated_living_name = new FormatedName().getName(object, living_name);
-		String formated_facing = new FormatedName().getName(object, facing);
+		String formated_living_name = new FormatedString().getName(object, living_name);
+		String formated_facing = new FormatedString().getName(object, facing);
 
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
 		String text = line.contains("=") ? line.split("=")[3] : line;
