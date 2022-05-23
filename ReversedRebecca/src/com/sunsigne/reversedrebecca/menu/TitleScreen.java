@@ -1,11 +1,5 @@
 package com.sunsigne.reversedrebecca.menu;
 
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
@@ -18,25 +12,16 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
-import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen extends MenuScreen {
 
-	private static final MENU menu = MENU.MAIN;
-
 	public TitleScreen() {
-		super(menu);
-	}
-
-	@Override
-	protected void createNewMenu() {
-		loadImages();
+		super();
 
 		createPlayButton();
 		createOptionsButton();
@@ -47,34 +32,34 @@ public class TitleScreen extends MenuScreen {
 	////////// BUTTONS ////////////
 
 	private TitleScreenButton createTitleScreenButton(String text, int x, GenericListener onPress) {
-		return new TitleScreenButton(text, x, 840, 420, 140, onPress, null);
+		return new TitleScreenButton(text, x, 940, 420, 140, onPress, null);
 	}
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> startWorld();
 		String text = new Translatable().getTranslatedText("PlayButton", file);
 		ButtonObject button = createTitleScreenButton(text, 140, onPress);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.addObject(button);
 	}
 
 	private void createOptionsButton() {
 		GenericListener onPress = null;
 		String text = new Translatable().getTranslatedText("OptionsButton", file);
 		ButtonObject button = createTitleScreenButton(text, 740, onPress);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.addObject(button);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
 		String text = new Translatable().getTranslatedText("QuitButton", file);
 		ButtonObject button = createTitleScreenButton(text, 1340, onPress);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.addObject(button);
 	}
 
-	protected void createFlagLanguageButton() {
+	private void createFlagLanguageButton() {
 		GenericListener onPress = () -> openLanguageScreen();
 		ButtonObject button = new FlagLangageButton(onPress, null);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.addObject(button);
 	}
 
 	////////// WORLD ////////////
@@ -89,7 +74,7 @@ public class TitleScreen extends MenuScreen {
 		}
 
 		// else load classical level
-		clearAll();
+		LAYER.MENU.getHandler().clear();
 		new World(currentlvl);
 	}
 
@@ -107,64 +92,8 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void openLanguageScreen() {
-		for (Updatable tempUpdatable : menu.getHandler().getList()) {
-			if (tempUpdatable instanceof FlagLangageButton == false)
-				continue;
-
-			tempUpdatable.getHandler().removeObject(tempUpdatable);
-			break;
-		}
+		LAYER.MENU.getHandler().clear();
 		new LanguageScreen();
-	}
-
-	////////// TEXTURE ////////////
-
-	private BufferedImage title_img;
-
-	private void loadImages() {
-
-		if (World.get() == null)
-			drawRebeccasRoom();
-
-		if (title_img == null)
-			drawTitle();
-	}
-
-	private void drawRebeccasRoom() {
-		new World(new Save().getLevel(true));
-		new PlayerFinder().setUserAllowedToControlPlayer(false);
-	}
-
-	private void drawTitle() {
-		title_img = new ImageTask().loadImage("textures/menu/" + "title");
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		Graphics2D g2d = (Graphics2D) g;
-
-		drawTransluantLayer(g2d);
-		drawTitle(g);
-	}
-
-	private void drawTransluantLayer(Graphics2D g2d) {
-		int alpha = 155;
-		Color purple = new Color(0, 25, 195, alpha);
-		Color black = new Color(0, 0, 0, alpha);
-
-		GradientPaint up_paint = new GradientPaint(0, 0, purple, 0, Window.HEIGHT / 4, black);
-		g2d.setPaint(up_paint);
-		g2d.fillRect(0, 0, Window.WIDHT, Window.HEIGHT / 2);
-
-		GradientPaint down_paint = new GradientPaint(0, 3 * Window.HEIGHT / 4, black, 0, Window.HEIGHT, purple);
-		g2d.setPaint(down_paint);
-		g2d.fillRect(0, Window.HEIGHT / 2, Window.WIDHT, Window.HEIGHT / 2);
-	}
-
-	private void drawTitle(Graphics g) {
-		g.drawImage(title_img, 530, 80, 856, 380, null);
 	}
 
 }

@@ -1,93 +1,77 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.ressources.Save;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class MenuScreen implements Updatable, TickFree {
-
+public class MenuScreen implements Updatable, TickFree {
+	
 	protected String file = "menu.csv";
+	
+	public MenuScreen() {
+		LAYER.MENU.addObject(this);
+		loadImages();
+	}
+	
+	////////// TEXTURE ////////////
 
-	public MenuScreen(MENU menu) {
-		etablishHierarchy(menu);
+	private static BufferedImage title_img;
+
+	private void loadImages() {
+
+		if (World.get() == null)
+			drawRebeccasRoom();
+
+		if (title_img == null)
+			drawTitle();
 	}
 
-	protected abstract void createNewMenu();
-
-	////////// USEFUL ////////////
-
-	public static void clearAll() {
-		LAYER.MENU_MAIN.getHandler().clear();
-		LAYER.MENU_NAV.getHandler().clear();
-		LAYER.MENU_BOX.getHandler().clear();
+	private void drawRebeccasRoom() {
+		new World(new Save().getLevel(true));
+		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 
-	////////// MENU ////////////
-
-	public enum MENU {
-		MAIN(LAYER.MENU_MAIN.getHandler()),
-		NAV(LAYER.MENU_NAV.getHandler()),
-		BOX(LAYER.MENU_BOX.getHandler());
-
-		MENU(Handler handler) {
-			this.handler = handler;
-		}
-
-		private Handler handler;
-
-		public Handler getHandler() {
-			return handler;
-		}
+	private void drawTitle() {
+		title_img = new ImageTask().loadImage("textures/menu/" + "title");
 	}
 
-	// create a hierarchy between menus
-	private void etablishHierarchy(MENU menu) {
-		switch (menu) {
+	////////// RENDER ////////////
+	
+	@Override
+	public void render(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
 
-		case MAIN:
-			refresh(LAYER.MENU_MAIN);
-			LAYER.MENU_NAV.getHandler().clear();
-			LAYER.MENU_BOX.getHandler().clear();
-			break;
-
-		case NAV:
-			destroyControls(LAYER.MENU_MAIN);
-			refresh(LAYER.MENU_NAV);
-			LAYER.MENU_BOX.getHandler().clear();
-			break;
-
-		case BOX:
-			destroyControls(LAYER.MENU_MAIN);
-			destroyControls(LAYER.MENU_NAV);
-			refresh(LAYER.MENU_BOX);
-			break;
-
-		default:
-			break;
-		}
+		drawTransluantLayer(g2d);
+		drawTitle(g);
 	}
 
-	private void refresh(LAYER layer) {
-		if (layer.getHandler().getList().isEmpty()) {
-			layer.addObject(this);
-			createNewMenu();
-		}
+	private void drawTransluantLayer(Graphics2D g2d) {
+		int alpha = 155;
+		Color purple = new Color(0, 25, 195, alpha);
+		Color black = new Color(0, 0, 0, alpha);
 
-		else
-			retablishControls(layer);
+		GradientPaint up_paint = new GradientPaint(0, 0, purple, 0, Window.HEIGHT / 4, black);
+		g2d.setPaint(up_paint);
+		g2d.fillRect(0, 0, Window.WIDHT, Window.HEIGHT / 2);
+
+		GradientPaint down_paint = new GradientPaint(0, 3 * Window.HEIGHT / 4, black, 0, Window.HEIGHT, purple);
+		g2d.setPaint(down_paint);
+		g2d.fillRect(0, Window.HEIGHT / 2, Window.WIDHT, Window.HEIGHT / 2);
 	}
 
-	private void destroyControls(LAYER layer) {
-		for (Updatable tempUpdatable : layer.getHandler().getList()) {
-			tempUpdatable.destroyControls();
-		}
-	}
-
-	private void retablishControls(LAYER layer) {
-		for (Updatable tempUpdatable : layer.getHandler().getList()) {
-			tempUpdatable.retablishControls();
-		}
+	private void drawTitle(Graphics g) {
+		g.drawImage(title_img, 530, 80, 856, 380, null);
 	}
 
 }

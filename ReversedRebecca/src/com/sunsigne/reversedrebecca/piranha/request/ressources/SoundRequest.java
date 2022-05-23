@@ -43,7 +43,7 @@ public class SoundRequest implements Request {
 			return;
 
 		// request unavailable during menu, except if it is fading
-		if (LAYER.MENU_MAIN.getHandler().getList().isEmpty() == false && isMenuFading() == false)
+		if (LAYER.MENU.getHandler().getList().isEmpty() == false && isMenuFading() == false)
 			return;
 
 		new SoundTask().play(SOUNDTYPE.SOUND, "sound/" + target.toLowerCase());

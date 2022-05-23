@@ -13,7 +13,6 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
@@ -22,18 +21,11 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
-import com.sunsigne.reversedrebecca.system.Window;
 
 public class LanguageScreen extends MenuScreen {
 
-	private static final MENU menu = MENU.NAV;
-
 	public LanguageScreen() {
-		super(menu);
-	}
-
-	@Override
-	protected void createNewMenu() {
+		super();		
 		loadLangList();
 
 		createLangButtons();
@@ -73,7 +65,7 @@ public class LanguageScreen extends MenuScreen {
 		switch (lang_list.size()) {
 
 		case 2:
-			createButtonRow(0, 1, 235);
+			createButtonRow(0, 1, 395);
 			break;
 
 		case 3:
@@ -183,39 +175,35 @@ public class LanguageScreen extends MenuScreen {
 
 		ButtonObject button = new TitleScreenButton(text, x + 320, y + 271, 415, 80, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.getHandler().addObject(button);
 	}
 
 	private void createBackButton() {
 		GenericListener onPress = () -> openTitleScreen();
 		String text = new Translatable().getTranslatedText("BackButton", file);
 
-		int widht = 420;
-		int height = 90;
-
-		ButtonObject button = new TitleScreenButton(text, Window.WIDHT - widht - 30, 0, widht, height, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 650, 940, 420, 140, onPress, null);
 		button.setFacing(DIRECTION.RIGHT);
-		menu.getHandler().addObject(button);
+		LAYER.MENU.getHandler().addObject(button);
 	}
 
 	////////// USEFUL ////////////
 
 	private void chooseLanguage(String language) {
 		Language.getInstance().setLang(language);
-		LAYER.MENU_MAIN.getHandler().clear();
-		new TitleScreen();
+		openTitleScreen();
 	}
 
 	private void openTitleScreen() {
-		TitleScreen titleScreen = new TitleScreen();
-		titleScreen.createFlagLanguageButton();
+		LAYER.MENU.getHandler().clear();
+		new TitleScreen();
 	}
 
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
 
-	public BufferedImage getImage() {
+	private BufferedImage getImage() {
 		if (image == null)
 			image = new ImageTask().loadImage("textures/menu/lang/" + new FormatedString().getNumber(lang_list.size()));
 		return image;
@@ -225,10 +213,11 @@ public class LanguageScreen extends MenuScreen {
 
 	@Override
 	public void render(Graphics g) {
-		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
+		super.render(g);
+//		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
 		int width = 153;
 		int height = 59;
-		g.drawImage(getImage(), 420 - width, 290 - height, 1050 + 2 * width, 450 + 2 * height, null);
+		g.drawImage(getImage(), 420 - width, 290 - height + 160, 1050 + 2 * width, 450 + 2 * height, null);
 	}
 
 }

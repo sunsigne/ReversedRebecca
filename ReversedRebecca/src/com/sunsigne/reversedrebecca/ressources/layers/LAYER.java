@@ -25,10 +25,7 @@ public enum LAYER {
 	
 	PUZZLE("puzzle", new Handler(false)),
 	
-	MENU_MAIN("menu_main", new Handler(false)),
-	MENU_NAV("menu_nav", new Handler(false)),
-	MENU_BOX("menu_box", new Handler(false)),
-	/////////////////////////////////////////
+	MENU("menu", new Handler(false)),
 	DEBUG ("debug", new Handler(false)),
 	LOADING ("loading", new Handler(false));
 	
