@@ -1,0 +1,10 @@
+mode de camera
+
+volume principal
+volume son
+volume voix
+volume musiques
+
+touches
+réinitialiser paramètres
+réinitialiser progression

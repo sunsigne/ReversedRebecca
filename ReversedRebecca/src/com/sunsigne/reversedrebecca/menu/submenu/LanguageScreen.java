@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu;
+package com.sunsigne.reversedrebecca.menu.submenu;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+import com.sunsigne.reversedrebecca.menu.MenuScreen;
+import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;

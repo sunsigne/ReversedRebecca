@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.menu;
+package com.sunsigne.reversedrebecca.menu.submenu;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;

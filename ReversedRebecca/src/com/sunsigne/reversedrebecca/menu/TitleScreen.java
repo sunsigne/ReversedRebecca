@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
@@ -31,30 +33,27 @@ public class TitleScreen extends MenuScreen {
 
 	////////// BUTTONS ////////////
 
-	private TitleScreenButton createTitleScreenButton(String text, int x, GenericListener onPress) {
-		return new TitleScreenButton(text, x, 940, 420, 140, onPress, null);
+	private void createTitleScreenButton(String text, int x, GenericListener onPress) {
+		ButtonObject button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null);
+		LAYER.MENU.addObject(button);
 	}
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> startWorld();
 		String text = new Translatable().getTranslatedText("PlayButton", file);
-		ButtonObject button = createTitleScreenButton(text, 140, onPress);
-		LAYER.MENU.addObject(button);
+		createTitleScreenButton(text, 140, onPress);
 	}
 
 	private void createOptionsButton() {
-		GenericListener onPress = null;
-//		GenericListener onPress = () -> new OptionsScreen();
+		GenericListener onPress = () -> new OptionsScreen();
 		String text = new Translatable().getTranslatedText("OptionsButton", file);
-		ButtonObject button = createTitleScreenButton(text, 740, onPress);
-		LAYER.MENU.addObject(button);
+		createTitleScreenButton(text, 740, onPress);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
 		String text = new Translatable().getTranslatedText("QuitButton", file);
-		ButtonObject button = createTitleScreenButton(text, 1340, onPress);
-		LAYER.MENU.addObject(button);
+		createTitleScreenButton(text, 1340, onPress);
 	}
 
 	private void createFlagLanguageButton() {
