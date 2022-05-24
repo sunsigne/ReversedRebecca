@@ -65,107 +65,85 @@ public class LanguageScreen extends MenuScreen {
 		switch (lang_list.size()) {
 
 		case 2:
-			createButtonRow(0, 1, 395);
+			createLangButton(0, 416, 104);
+			createLangButton(1, 416, 208);
 			break;
 
 		case 3:
-			createButtonRow(0, 1, 2, 235);
+			createLangButton(0, 416, 51);
+			createLangButton(1, 416, 155);
+			createLangButton(2, 416, 259);
 			break;
 
 		case 4:
-			createButtonRow(0, 1, 160);
-			createButtonRow(2, 3, 261);
+			createButtonRow(0, 1, 104);
+			createButtonRow(2, 3, 208);
 			break;
 
 		case 5:
-			createButtonRow(0, 1, 100);
-			createButtonRow(2, 3, 201);
-			createLangButton(4, 415, 302);
+			createButtonRow(0, 1, 51);
+			createButtonRow(2, 3, 155);
+			createLangButton(4, 416, 259);
 			break;
 
 		case 6:
-			createButtonRow(0, 1, 100);
-			createButtonRow(2, 3, 201);
-			createButtonRow(4, 5, 302);
+			createButtonRow(0, 1, 51);
+			createButtonRow(2, 3, 155);
+			createButtonRow(4, 5, 259);
 			break;
 
 		case 7:
-			createButtonRow(0, 1, 60);
-			createButtonRow(2, 3, 161);
-			createButtonRow(4, 5, 262);
-			createLangButton(6, 415, 363);
+			createButtonRow(0, 1, 0);
+			createButtonRow(2, 3, 104);
+			createButtonRow(4, 5, 208);
+			createLangButton(6, 416, 312);
 			break;
 
 		case 8:
-			createButtonRow(0, 1, 60);
-			createButtonRow(2, 3, 161);
-			createButtonRow(4, 5, 262);
-			createButtonRow(6, 7, 363);
+			createButtonRow(0, 1, 0);
+			createButtonRow(2, 3, 104);
+			createButtonRow(4, 5, 208);
+			createButtonRow(6, 7, 312);
 			break;
 
 		case 9:
-			createButtonRow(0, 1, 2, 120);
-			createButtonRow(3, 4, 5, 221);
-			createButtonRow(6, 7, 8, 322);
+			createButtonRow(0, 1, 2, 51);
+			createButtonRow(3, 4, 5, 155);
+			createButtonRow(6, 7, 8, 259);
 			break;
 
 		case 10:
-			createButtonRow(0, 1, 0);
-			createButtonRow(2, 3, 101);
-			createButtonRow(4, 5, 202);
-			createButtonRow(6, 7, 303);
-			createButtonRow(8, 9, 404);
+			createButtonRow(0, 1, 2, 0);
+			createButtonRow(3, 4, 5, 104);
+			createButtonRow(6, 7, 8, 208);
+			createLangButton(9, 416, 312);
 			break;
 
 		case 11:
-			createButtonRow(0, 1, 2, 60);
-			createButtonRow(3, 4, 5, 161);
-			createButtonRow(6, 7, 8, 262);
-			createButtonRow(9, 10, 363);
+			createButtonRow(0, 1, 2, 0);
+			createButtonRow(3, 4, 5, 104);
+			createButtonRow(6, 7, 8, 208);
+			createButtonRow(9, 10, 312);
 			break;
 
 		case 12:
-			createButtonRow(0, 1, 2, 60);
-			createButtonRow(3, 4, 5, 161);
-			createButtonRow(6, 7, 8, 262);
-			createButtonRow(9, 10, 11, 363);
-			break;
-
-		case 13:
 			createButtonRow(0, 1, 2, 0);
-			createButtonRow(3, 4, 5, 101);
-			createButtonRow(6, 7, 8, 202);
-			createButtonRow(9, 10, 303);
-			createButtonRow(11, 12, 404);
-			break;
-
-		case 14:
-			createButtonRow(0, 1, 2, 0);
-			createButtonRow(3, 4, 5, 101);
-			createButtonRow(6, 7, 8, 202);
-			createButtonRow(9, 10, 11, 303);
-			createButtonRow(12, 13, 404);
-			break;
-
-		case 15:
-			createButtonRow(0, 1, 2, 0);
-			createButtonRow(3, 4, 5, 101);
-			createButtonRow(6, 7, 8, 202);
-			createButtonRow(9, 10, 11, 303);
-			createButtonRow(12, 13, 14, 404);
+			createButtonRow(3, 4, 5, 104);
+			createButtonRow(6, 7, 8, 208);
+			createButtonRow(9, 10, 11, 312);
 			break;
 		}
 	}
 
 	private void createButtonRow(int index1, int index2, int y) {
-		createLangButton(index1, 205, y);
-		createLangButton(index2, 625, y);
+		createLangButton(index1, 206, y);
+		createLangButton(index2, 623, y);
 	}
 
 	private void createButtonRow(int index1, int index2, int index3, int y) {
 		createLangButton(index1, 0, y);
-		createLangButton(index2, 415, y);
-		createLangButton(index3, 830, y);
+		createLangButton(index2, 416, y);
+		createLangButton(index3, 833, y);
 	}
 
 	private void createLangButton(int index, int x, int y) {
@@ -173,7 +151,7 @@ public class LanguageScreen extends MenuScreen {
 		GenericListener onPress = () -> chooseLanguage(name);
 		String text = new FileTask().read("/texts/" + name + "/lang/name" + ".txt");
 
-		ButtonObject button = new TitleScreenButton(text, x + 320, y + 271, 415, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, x + 325, y + 503, 415, 80, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		LAYER.MENU.getHandler().addObject(button);
 	}
@@ -182,7 +160,7 @@ public class LanguageScreen extends MenuScreen {
 		GenericListener onPress = () -> openTitleScreen();
 		String text = new Translatable().getTranslatedText("BackButton", file);
 
-		ButtonObject button = new TitleScreenButton(text, 650, 940, 420, 140, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 655, 940, 420, 140, onPress, null);
 		button.setFacing(DIRECTION.RIGHT);
 		LAYER.MENU.getHandler().addObject(button);
 	}
@@ -205,7 +183,7 @@ public class LanguageScreen extends MenuScreen {
 
 	private BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/menu/lang/" + new FormatedString().getNumber(lang_list.size()));
+			image = new ImageTask().loadImage("textures/menu/lang_" + new FormatedString().getNumber(lang_list.size()));
 		return image;
 	}
 
@@ -214,10 +192,7 @@ public class LanguageScreen extends MenuScreen {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-//		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
-		int width = 153;
-		int height = 59;
-		g.drawImage(getImage(), 420 - width, 290 - height + 160, 1050 + 2 * width, 450 + 2 * height, null);
+		g.drawImage(getImage(), 289, 465, 1324, 474, null);
 	}
 
 }

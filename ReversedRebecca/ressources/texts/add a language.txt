@@ -6,4 +6,4 @@ To add a new language, you can :
 
 That's it.
 
-Note : the game cannot display more than 15 languages
+Note : the game cannot display more than 12 languages
