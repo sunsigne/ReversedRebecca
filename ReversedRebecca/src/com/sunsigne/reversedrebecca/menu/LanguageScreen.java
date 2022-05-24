@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.menu;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,26 +8,34 @@ import javax.swing.JOptionPane;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 
-public class LanguageScreen extends MenuScreen {
+public class LanguageScreen extends SubMenuScreen {
 
 	public LanguageScreen() {
-		super();		
+		super();
 		loadLangList();
 
 		createLangButtons();
-		createBackButton();
+	}
+
+	////////// NAME ////////////
+
+	public String getName() {
+		return "lang_" + new FormatedString().getNumber(lang_list.size());
+	}
+
+	////////// SUB MENU ////////////
+
+	protected MenuScreen getPreviousMenu() {
+		return new TitleScreen();
 	}
 
 	////////// LANGUAGE ////////////
@@ -156,43 +162,11 @@ public class LanguageScreen extends MenuScreen {
 		LAYER.MENU.getHandler().addObject(button);
 	}
 
-	private void createBackButton() {
-		GenericListener onPress = () -> openTitleScreen();
-		String text = new Translatable().getTranslatedText("BackButton", file);
-
-		ButtonObject button = new TitleScreenButton(text, 655, 940, 420, 140, onPress, null);
-		button.setFacing(DIRECTION.RIGHT);
-		LAYER.MENU.getHandler().addObject(button);
-	}
-
-	////////// USEFUL ////////////
+	////////// BUTTON ACTION ////////////
 
 	private void chooseLanguage(String language) {
 		Language.getInstance().setLang(language);
-		openTitleScreen();
-	}
-
-	private void openTitleScreen() {
-		LAYER.MENU.getHandler().clear();
-		new TitleScreen();
-	}
-
-	////////// TEXTURE ////////////
-
-	private BufferedImage image;
-
-	private BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/menu/lang_" + new FormatedString().getNumber(lang_list.size()));
-		return image;
-	}
-
-	////////// RENDER ////////////
-
-	@Override
-	public void render(Graphics g) {
-		super.render(g);
-		g.drawImage(getImage(), 289, 465, 1324, 474, null);
+		getPreviousMenu();
 	}
 
 }

@@ -44,6 +44,7 @@ public class TitleScreen extends MenuScreen {
 
 	private void createOptionsButton() {
 		GenericListener onPress = null;
+//		GenericListener onPress = () -> new OptionsScreen();
 		String text = new Translatable().getTranslatedText("OptionsButton", file);
 		ButtonObject button = createTitleScreenButton(text, 740, onPress);
 		LAYER.MENU.addObject(button);
@@ -57,12 +58,12 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createFlagLanguageButton() {
-		GenericListener onPress = () -> openLanguageScreen();
+		GenericListener onPress = () -> new LanguageScreen();
 		ButtonObject button = new FlagLangageButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}
 
-	////////// WORLD ////////////
+	////////// BUTTON ACTION ////////////
 
 	private void startWorld() {
 		String currentlvl = new Save().getLevel(false);
@@ -89,11 +90,6 @@ public class TitleScreen extends MenuScreen {
 		int time = player.getCondition() == CONDITION.BED ? 4 : 0; // if in bed, must awake first
 		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
 		new GameTimer(time * Game.SEC, listener);
-	}
-
-	private void openLanguageScreen() {
-		LAYER.MENU.getHandler().clear();
-		new LanguageScreen();
 	}
 
 }

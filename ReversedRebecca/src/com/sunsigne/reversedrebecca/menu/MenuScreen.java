@@ -20,6 +20,7 @@ public class MenuScreen implements Updatable, TickFree {
 	protected String file = "menu.csv";
 	
 	public MenuScreen() {
+		LAYER.MENU.getHandler().clear();
 		LAYER.MENU.addObject(this);
 		loadImages();
 	}
