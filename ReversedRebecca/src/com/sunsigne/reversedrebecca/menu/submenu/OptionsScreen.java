@@ -13,10 +13,10 @@ public class OptionsScreen extends SubMenuScreen {
 	public OptionsScreen() {
 		super();
 
+		createGameButton();
+		createControlsButton();
 		createAudioButton();
 		createVideoButton();
-		createControlsButton();
-		createGameButton();
 	}
 
 	////////// NAME ////////////
@@ -38,27 +38,27 @@ public class OptionsScreen extends SubMenuScreen {
 		LAYER.MENU.addObject(button);
 	}
 
-	private void createAudioButton() {
-		GenericListener onPress = null;
-		String text = new Translatable().getTranslatedText("AudioButton", file);
-		createOptionScreenButton(text, 206, 104, onPress);
-	}
-	
-	private void createVideoButton() {
-		GenericListener onPress = () -> new VideoScreen();
-		String text = new Translatable().getTranslatedText("VideoButton", file);
-		createOptionScreenButton(text, 623, 104, onPress);
-	}
-	
-	private void createControlsButton() {
-		GenericListener onPress = null;
-		String text = new Translatable().getTranslatedText("ControlsButton", file);
-		createOptionScreenButton(text, 206, 208, onPress);
-	}
-	
 	private void createGameButton() {
 		GenericListener onPress = null;
 		String text = new Translatable().getTranslatedText("GameButton", file);
+		createOptionScreenButton(text, 206, 104, onPress);
+	}
+
+	private void createControlsButton() {
+		GenericListener onPress = null;
+		String text = new Translatable().getTranslatedText("ControlsButton", file);
+		createOptionScreenButton(text, 623, 104, onPress);
+	}
+
+	private void createAudioButton() {
+		GenericListener onPress = null;
+		String text = new Translatable().getTranslatedText("AudioButton", file);
+		createOptionScreenButton(text, 206, 208, onPress);
+	}
+
+	private void createVideoButton() {
+		GenericListener onPress = () -> new VideoScreen();
+		String text = new Translatable().getTranslatedText("VideoButton", file);
 		createOptionScreenButton(text, 623, 208, onPress);
 	}
 
