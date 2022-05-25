@@ -35,7 +35,6 @@ public class OptionsScreen extends SubMenuScreen {
 
 	private void createOptionScreenButton(String text, int x, int y, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
-		((TitleScreenButton) button).setFontSize(40f);
 		LAYER.MENU.addObject(button);
 	}
 
@@ -46,7 +45,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 	
 	private void createVideoButton() {
-		GenericListener onPress = null;
+		GenericListener onPress = () -> new VideoScreen();
 		String text = new Translatable().getTranslatedText("VideoButton", file);
 		createOptionScreenButton(text, 623, 104, onPress);
 	}

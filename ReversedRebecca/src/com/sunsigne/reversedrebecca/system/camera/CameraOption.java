@@ -50,6 +50,26 @@ public class CameraOption {
 		public String getName() {
 			return name;
 		}
+
+		public CAMERA_TYPE getPrevious() {
+			switch (name) {
+			case "dynamic":
+				return CAMERA_TYPE.STATIC;
+			case "static":
+				return CAMERA_TYPE.DYNAMIC;
+			}
+			return null;
+		}
+
+		public CAMERA_TYPE getNext() {
+			switch (name) {
+			case "static":
+				return CAMERA_TYPE.DYNAMIC;
+			case "dynamic":
+				return CAMERA_TYPE.STATIC;
+			}
+			return null;
+		}
 	}
 
 }

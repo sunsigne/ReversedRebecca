@@ -35,6 +35,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 
 		ButtonObject button = new TitleScreenButton(text, 740, 940, 420, 140, onPress, null);
 		button.setFacing(DIRECTION.NULL);
+		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.getHandler().addObject(button);
 	}
 

@@ -160,7 +160,6 @@ public class LanguageScreen extends SubMenuScreen {
 		String text = new FileTask().read("/texts/" + name + "/lang/name" + ".txt");
 
 		ButtonObject button = new TitleScreenButton(text, x + 325, y + 503, 415, 80, onPress, null);
-		((TitleScreenButton) button).setFontSize(40f);
 		LAYER.MENU.getHandler().addObject(button);
 	}
 

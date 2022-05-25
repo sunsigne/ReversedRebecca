@@ -1,6 +1,30 @@
 Loading = Chargement
 
+///// MAIN /////
+
 PlayButton = jouer
 OptionsButton = options
 QuitButton = quitter
 BackButton = retour
+
+///// AUDIO /////
+
+AudioButton = audio
+
+///// VIDEO /////
+
+VideoButton = video
+CameraButton = camera
+CameraStatic = statique
+CameraDynamic = dynamique
+CameraDetail = La#Camera#suit#le#joueur
+StaticDetail = au#pixel#pres
+DynamicDetail = de#façon#fluide
+
+///// CONTROLS /////
+
+ControlsButton = controles
+
+///// JEU /////
+
+GameButton = jeu

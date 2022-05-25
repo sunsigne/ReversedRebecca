@@ -85,6 +85,7 @@
 
 	///////// IDEE ////////////
 
+	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
 	Comme les soul heart dans binding of isaac

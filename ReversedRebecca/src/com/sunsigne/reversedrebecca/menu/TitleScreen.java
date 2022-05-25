@@ -35,6 +35,7 @@ public class TitleScreen extends MenuScreen {
 
 	private void createTitleScreenButton(String text, int x, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null);
+		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.addObject(button);
 	}
 

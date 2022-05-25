@@ -31,7 +31,7 @@ public class LivingAnimationHandler {
 
 	////////// TEXTURE ////////////
 
-	///// orientable & animated/////
+	///// orientable & animated /////
 
 	private LivingAnimation walkingGoodAnimation;
 	private LivingAnimation walkingGlassAnimation;
