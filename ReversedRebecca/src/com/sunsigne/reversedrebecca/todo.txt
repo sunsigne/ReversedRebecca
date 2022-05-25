@@ -15,11 +15,8 @@
 	
 	////////// MENU ////////////
 
-	LanguageScreen -> les boutons du Title ont "l'air" clickable alors qu'ils ne devraient pas
-	TitleScreen -> devrait charger le lvl avec le bouton start / le bouton option ne fait rien (pour le moment) / visuel tj dégueu
-	Le bouton "quitter" est encore clickable lors du choix de la langue (car flag est ajouté avant, donc son listenenr qui prend tous les objet ne prend pas les objets créés après)
-	LanguageScreen -> à peu près tout doit être revu (en terme de position et rendu) & (s'affiche bizarrement à partir de 3)
-	des options pour changer les touches, les volumes, reset des paramètres par défault, le type de camera
+	OptionsScreen, à faire : options pour changer les touches, les volumes, reset la sauvegarde
+	Save.resetProgression() ! Ne reset pas encore les caractéristiques
 	
 	////////// PIRA ////////////
 
