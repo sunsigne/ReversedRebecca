@@ -31,10 +31,21 @@ public class SoundTask {
 		try {
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
-			soundclip = AudioSystem.getClip();
-			soundclip.open(clip);
-			setVol(volume, soundclip, false);
-			soundclip.start();
+
+			if (soundType == SOUNDTYPE.MUSIC) {
+				musicclip = AudioSystem.getClip();
+				musicclip.open(clip);
+				setVol(volume, musicclip, true);
+				musicclip.loop(Clip.LOOP_CONTINUOUSLY);
+			}
+
+			else {
+				soundclip = AudioSystem.getClip();
+				soundclip.open(clip);
+				setVol(volume, soundclip, false);
+				soundclip.start();
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (soundType == SOUNDTYPE.VOICE)
@@ -59,7 +70,7 @@ public class SoundTask {
 		return 1;
 	}
 
-	// volume between 0.0 and 2.0
+	// volume between 0.0 and 2.0 (goes up to 4.0 because of VolumeMain)
 	private void setVol(double volume, Clip clip, boolean delay) {
 		try {
 			int pos = clip.getFramePosition();
@@ -72,27 +83,18 @@ public class SoundTask {
 			e.printStackTrace();
 		}
 	}
-	/*
-	 * ////////// MUSIC ////////////
-	 * 
-	 * private static Clip musicclip;
-	 * 
-	 * public void changeMusicVol(double newvolume) { setVol(newvolume, musicclip,
-	 * true); }
-	 * 
-	 * public void stopMusic() { if (musicclip != null) musicclip.close(); }
-	 * 
-	 * public void playMusic(double volume, String path) {
-	 * 
-	 * stopMusic(); String path0 = "/ressources/audio/music/" + "" + path + ".wav";
-	 * 
-	 * try { URL url = new File((new File(Infos.LOC.toURI())).getParent() +
-	 * path0).toURI().toURL(); AudioInputStream music =
-	 * AudioSystem.getAudioInputStream(url); musicclip = AudioSystem.getClip();
-	 * musicclip.open(music); setVol(volume, musicclip, true);
-	 * musicclip.loop(Clip.LOOP_CONTINUOUSLY); } catch (Exception e) {
-	 * e.printStackTrace(); }
-	 * 
-	 * }
-	 */
+
+	////////// MUSIC ////////////
+
+	private static Clip musicclip;
+
+	public void changeMusicVol(double newvolume) {
+		setVol(newvolume, musicclip, true);
+	}
+
+	public void stopMusic() {
+		if (musicclip != null)
+			musicclip.close();
+	}
+
 }
