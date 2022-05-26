@@ -7,24 +7,28 @@ OptionsButton = options
 QuitButton = quitter
 BackButton = retour
 
-///// AUDIO /////
+///// JEU /////
 
-AudioButton = audio
-
-///// VIDEO /////
-
-VideoButton = video
-CameraButton = camera
-CameraStatic = statique
-CameraDynamic = dynamique
-CameraDetail = La#Camera#suit#le#joueur
-StaticDetail = au#pixel#pres
-DynamicDetail = de#façon#fluide
+GameButton = jeu
 
 ///// CONTROLS /////
 
 ControlsButton = controles
 
-///// JEU /////
+///// AUDIO /////
 
-GameButton = jeu
+AudioButton = audio
+VolumeMain = principal
+VolumeMusic = musique
+VolumeSound = son
+VolumeVoice = voix
+
+///// VIDEO /////
+
+VideoButton = video
+Camera = camera
+CameraStatic = statique
+CameraDynamic = dynamique
+CameraDetail = La#Camera#suit#le#joueur
+StaticDetail = au#pixel#pres
+DynamicDetail = de#façon#fluide

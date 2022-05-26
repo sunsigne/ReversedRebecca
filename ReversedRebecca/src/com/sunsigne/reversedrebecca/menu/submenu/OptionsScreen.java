@@ -51,7 +51,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createAudioButton() {
-		GenericListener onPress = null;
+		GenericListener onPress = () -> new AudioScreen();
 		String text = new Translatable().getTranslatedText("AudioButton", file);
 		createOptionScreenButton(text, 206, 208, onPress);
 	}
