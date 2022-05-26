@@ -2,14 +2,17 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundVolume;
 
 public class AudioScreen extends SubMenuScreen {
 
 	public AudioScreen() {
 		super();
 		loadText();
+		createScaleButtons();
 	}
 
 	////////// NAME ////////////
@@ -26,10 +29,22 @@ public class AudioScreen extends SubMenuScreen {
 
 	////////// TEXT ////////////
 
+	private TitleScreenText volumeMainPct;
+	private TitleScreenText volumeMusicPct;
+	private TitleScreenText volumeSoundPct;
+	private TitleScreenText volumeVoicePct;
+
 	private void loadText() {
-		String text = null;
+
 		int x = 325 + 90;
 		int y = 503;
+
+		createVolumes(x, y);
+		createVolumePct(x + 790, y);
+	}
+
+	private void createVolumes(int x, int y) {
+		String text = null;
 
 		// volume main
 		text = new Translatable().getTranslatedText("VolumeMain", file);
@@ -50,6 +65,67 @@ public class AudioScreen extends SubMenuScreen {
 		text = new Translatable().getTranslatedText("VolumeVoice", file);
 		TitleScreenText volumeVoice = new TitleScreenText(text, x, y + 312);
 		LAYER.MENU.addObject(volumeVoice);
+	}
+
+	private void createVolumePct(int x, int y) {
+		String text = null;
+
+		// volume main
+		text = "X%";
+		volumeMainPct = new TitleScreenText(text, x, y);
+		LAYER.MENU.addObject(volumeMainPct);
+
+		// volume music
+		text = "X%";
+		volumeMusicPct = new TitleScreenText(text, x, y + 104);
+		LAYER.MENU.addObject(volumeMusicPct);
+
+		// volume sound
+		text = getPercentage(SoundVolume.getVolume()) + "%";
+		volumeSoundPct = new TitleScreenText(text, x, y + 208);
+		LAYER.MENU.addObject(volumeSoundPct);
+
+		// volume voice
+		text = "X%";
+		volumeVoicePct = new TitleScreenText(text, x, y + 312);
+		LAYER.MENU.addObject(volumeVoicePct);
+	}
+
+	private int getPercentage(double volume) {
+		return (int) (volume * 100);
+	}
+
+	////////// BUTTONS ////////////
+
+	private void createScaleButtons() {
+		VolumeScaleButton scale = null;
+
+		// volume main
+//		scale = new VolumeScaleButton(514, new SoundVolume());
+//		LAYER.MENU.addObject(scale);
+
+		// volume music
+//		scale = new VolumeScaleButton(618, new SoundVolume());
+//		LAYER.MENU.addObject(scale);
+
+		// volume sound
+		scale = new VolumeScaleButton(722, new SoundVolume());
+		LAYER.MENU.addObject(scale);
+
+		// volume voice
+//		scale = new VolumeScaleButton(826, new SoundVolume());
+//		LAYER.MENU.addObject(scale);
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		String text = null;
+
+		// volume sound
+		text = getPercentage(SoundVolume.getVolume()) + "%";
+		volumeSoundPct.setText(text);
 	}
 
 }

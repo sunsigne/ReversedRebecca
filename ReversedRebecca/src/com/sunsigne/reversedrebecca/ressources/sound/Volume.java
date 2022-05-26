@@ -20,9 +20,18 @@ public interface Volume {
 		return Double.parseDouble(getRegisteredVolume());
 	}
 
-	public default void registerVolume(String newVolume) {
-		new FileTask().write(getValueToRead(), file, newVolume);
+	public default void registerVolume(double newVolume) {
+		String value = String.valueOf(Math.round(getFormatedVolume(newVolume) * 100.0) / 100.0);
+		new FileTask().write(getValueToRead(), file, value);
 		refreshVolume();
+	}
+
+	private double getFormatedVolume(double volume) {
+		if (volume > 2.0)
+			return 2.0;
+		if (volume < 0)
+			return 0;
+		return volume;
 	}
 
 }
