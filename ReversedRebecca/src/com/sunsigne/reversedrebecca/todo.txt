@@ -15,7 +15,7 @@
 	
 	////////// MENU ////////////
 
-	OptionsScreen, à faire : options pour changer les touches, les volumes, reset la sauvegarde
+	OptionsScreen, à faire : options pour changer les touches, reset la sauvegarde
 	Save.resetProgression() ! Ne reset pas encore les caractéristiques
 	
 	////////// PIRA ////////////

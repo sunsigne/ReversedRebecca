@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import javax.swing.JOptionPane;
+
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -39,13 +41,13 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createGameButton() {
-		GenericListener onPress = null;
+		GenericListener onPress = () -> JOptionPane.showMessageDialog(null, "Pas encore disponible");
 		String text = new Translatable().getTranslatedText("GameButton", file);
 		createOptionScreenButton(text, 206, 104, onPress);
 	}
 
 	private void createControlsButton() {
-		GenericListener onPress = null;
+		GenericListener onPress = () -> JOptionPane.showMessageDialog(null, "Pas encore disponible");
 		String text = new Translatable().getTranslatedText("ControlsButton", file);
 		createOptionScreenButton(text, 623, 104, onPress);
 	}
