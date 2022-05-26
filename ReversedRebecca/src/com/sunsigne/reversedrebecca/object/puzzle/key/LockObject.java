@@ -27,10 +27,15 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 
 		setY(mouseY);
 
-		if (mouseY > ymax)
+		if (mouseY > ymax) {
 			setY(ymax);
-		if (mouseY < ymin)
+			new MousePos().setY(ymax);
+		}
+
+		if (mouseY < ymin) {
 			setY(ymin);
+			new MousePos().setY(ymin);
+		}
 	}
 
 	////////// TEXTURE ////////////
