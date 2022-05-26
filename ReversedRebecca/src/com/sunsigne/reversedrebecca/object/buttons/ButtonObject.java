@@ -40,7 +40,7 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 
 	////////// TEXT ////////////
 	
-	private String text;
+	protected String text;
 
 	public String getText() {
 		return text;

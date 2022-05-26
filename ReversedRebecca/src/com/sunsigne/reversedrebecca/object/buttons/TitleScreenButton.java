@@ -17,15 +17,17 @@ public class TitleScreenButton extends ButtonObject {
 			GenericListener onRelease) {
 		super(text.toUpperCase(), x, y, w, h, onPress, onRelease);
 	}
-
-	////////// RENDER ////////////
-
+	
+	////////// TEXT ////////////
+	
 	private Font font = new FontTask().createNewFont("dogicabold", 35f);
 
 	public void setFontSize(float size) {
 		font = new FontTask().createNewFont("dogicabold", size);
 	}
 	
+	////////// RENDER ////////////
+
 	@Override
 	public void render(Graphics g) {
 		Color text_color = new Color(255, 204, 0);
