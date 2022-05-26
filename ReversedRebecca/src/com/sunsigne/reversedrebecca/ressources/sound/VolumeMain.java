@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.ressources.sound;
 
-public class SoundVolume implements Volume {
+public class VolumeMain implements Volume {
 
 	////////// VOLUME ////////////
 
@@ -8,7 +8,7 @@ public class SoundVolume implements Volume {
 
 	public static double getVolume() {
 		if (volume < 0)
-			volume = new SoundVolume().loadVolume();
+			volume = new VolumeMain().loadVolume();
 		return volume;
 	}
 
@@ -19,7 +19,7 @@ public class SoundVolume implements Volume {
 
 	@Override
 	public String getValueToRead() {
-		return "Sound";
+		return "Main";
 	}
 
 }

@@ -15,7 +15,7 @@ public class SoundTask {
 	////////// SOUNDTYPE ////////////
 
 	public enum SOUNDTYPE {
-		SOUND, VOICE, MUSIC, ERROR;
+		MUSIC, SOUND, VOICE, ERROR;
 	}
 
 	////////// SOUND ////////////
@@ -46,12 +46,12 @@ public class SoundTask {
 
 	private double getVolume(SOUNDTYPE soundType) {
 		switch (soundType) {
-		case SOUND:
-			return SoundVolume.getVolume();
-		case VOICE:
-			break;
 		case MUSIC:
-			break;
+			return VolumeMusic.getVolume();
+		case SOUND:
+			return VolumeSound.getVolume();
+		case VOICE:
+			return VolumeVoice.getVolume();
 		case ERROR:
 			return 1;
 		}
@@ -64,7 +64,7 @@ public class SoundTask {
 		try {
 			int pos = clip.getFramePosition();
 			FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-			float dB = (float) (Math.log(volume / 2) / Math.log(10) * 20);
+			float dB = (float) (Math.log((volume * VolumeMain.getVolume()) / 2) / Math.log(10) * 20);
 			gain.setValue(dB);
 			if (!delay)
 				clip.setFramePosition(pos);

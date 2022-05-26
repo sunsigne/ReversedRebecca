@@ -64,16 +64,14 @@
 	////////// SONS ////////////
 	
 	Le fading menu devrait jouer un son
-	les boutons et les menus devraient jouer un son
+	les boutons et les menus devraient jouer un son (et particulièrement AudioScreen !)
 	Ajouter des voix aux personnages (son quand ils parlent)
-	créer le système de volume de musique
 	bruit de poussage
-	SountTask pas fini !
 	son pour le puzzle door !
 	sons pour le hack puzzle !
-	SoundVolume & Volume : réfléchir au système le + efficace PUIS créer la GUI		
 	Buttons -> devrait jouer un son ?
 	Changer le volume de la musique quand le joueurs est en plein dialogue
+	SountTask pas fini ! créer le system de musique !
 
 	////////// A CREER PLUS TARD ////////////
 	
