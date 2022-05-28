@@ -58,13 +58,13 @@ public class VideoScreen extends SubMenuScreen {
 		
 		// the camera follows the player ...
 		text = new Translatable().getTranslatedText("Camera" + "Detail", file);
-		cameraDetail[0] = new TitleScreenText(text, x, y + 250);
+		cameraDetail[0] = new TitleScreenText(text, x, y + 245);
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
 		
 		// ... to the nearest pixel / fluidly ...
 		text = new Translatable().getTranslatedText(typeName + "Detail", file);
-		cameraDetail[1] = new TitleScreenText(text, x, y + 285);
+		cameraDetail[1] = new TitleScreenText(text, x, y + 280);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
 	}

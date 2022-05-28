@@ -10,6 +10,13 @@ BackButton = retour
 ///// JEU /////
 
 GameButton = jeu
+Reset = reset
+
+///// RESET /////
+
+Confirm = confirmer
+ResetDetail1 = Votre#progression#sera
+ResetDetail2 = definitivement#perdue
 
 ///// CONTROLS /////
 

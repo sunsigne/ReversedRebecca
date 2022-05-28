@@ -41,7 +41,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createGameButton() {
-		GenericListener onPress = () -> JOptionPane.showMessageDialog(null, "Pas encore disponible");
+		GenericListener onPress = () -> new GameScreen();
 		String text = new Translatable().getTranslatedText("GameButton", file);
 		createOptionScreenButton(text, 206, 104, onPress);
 	}
