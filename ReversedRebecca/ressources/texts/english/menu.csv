@@ -1,6 +1,49 @@
 Loading = Loading
 
+///// MAIN /////
+
 PlayButton = play
 OptionsButton = options
 QuitButton = quit
 BackButton = back
+
+///// JEU /////
+
+GameButton = game
+Reset = reset
+
+///// RESET /////
+
+Confirm = confirm
+ResetDetail1 = your#progress#will#be
+ResetDetail2 = permanently#lost
+
+///// CONTROLS /////
+
+ControlsButton = controls
+Up = up
+Down = down
+Left = left
+Right = right
+Action1 = action#1
+Action2 = action#2
+Action3 = action#3
+Default = to#default
+
+///// AUDIO /////
+
+AudioButton = audio
+VolumeMain = main
+VolumeMusic = music
+VolumeSound = sound
+VolumeVoice = voice
+
+///// VIDEO /////
+
+VideoButton = video
+Camera = camera
+CameraStatic = static
+CameraDynamic = dynamic
+CameraDetail = The#camera#follows#the#player
+StaticDetail = to#the#nearest#pixel
+DynamicDetail = fluidly
