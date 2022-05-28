@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -21,7 +22,7 @@ public class Player extends LivingObject {
 	////////// SPEED ////////////
 
 	private void updateSpeed() {
-		if (isPathNull())
+		if (Cutscene.isRunning() == false)
 			setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 

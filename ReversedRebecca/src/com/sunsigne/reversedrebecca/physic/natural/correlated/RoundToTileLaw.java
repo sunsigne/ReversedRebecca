@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
+import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -21,7 +21,7 @@ public class RoundToTileLaw implements PhysicLaw {
 		SpeedVariator variator = (SpeedVariator) object;
 
 		// player has a special "bypass" speed
-		if (variator instanceof Player)
+		if (variator.getSpeedness() == SPEEDNESS.PLAYER_SPEED)
 			return;
 
 		// if the object is stunned

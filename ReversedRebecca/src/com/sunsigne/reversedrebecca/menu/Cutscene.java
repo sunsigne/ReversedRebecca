@@ -16,6 +16,10 @@ public class Cutscene implements Updatable {
 
 	private static boolean running;
 
+	public static boolean isRunning() {
+		return running;
+	}
+
 	public void start() {
 		running = true;
 		LAYER.GUI.addObject(this);
