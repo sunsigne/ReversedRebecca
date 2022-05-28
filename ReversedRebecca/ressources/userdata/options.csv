@@ -3,13 +3,13 @@ Camera=dynamic
 
 /////KEYS/////
 
-Left=Q
-Right=D
-Up=Z
-Down=S
-Action1=E
-Action2=R
-Action3=F
+Left=Q:81
+Right=D:68
+Up=Z:90
+Down=S:83
+Action1=E:69
+Action2=R:82
+Action3=F:70
 
 /////VOLUME/////
 
