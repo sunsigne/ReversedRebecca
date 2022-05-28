@@ -105,6 +105,8 @@ public class ControlsScreen extends SubMenuScreen {
 		createActionOneKeyButton();
 		createActionTwoKeyButton();
 		createActionThreeKeyButton();
+		
+		createDefaultButton();
 	}
 
 	private void createUpKeyButton() {
@@ -162,6 +164,13 @@ public class ControlsScreen extends SubMenuScreen {
 		actionThreeButton = getKeyboardButton(text, 625, 208, onPress);
 		LAYER.MENU.addObject(actionThreeButton);
 	}
+	
+	private void createDefaultButton() {
+		GenericListener onPress = () -> resetKeyboard();
+		String text = new Translatable().getTranslatedText("Default", file);
+		ButtonObject button = new TitleScreenButton(text, 1050, 503 + 312, 420, 80, onPress, null);
+		LAYER.MENU.addObject(button);
+	}
 
 	////////// BUTTON ACTION ////////////
 
@@ -169,6 +178,40 @@ public class ControlsScreen extends SubMenuScreen {
 		button.getHandler().removeObject(button);
 		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key);
 		LAYER.MENU.addObject(keyButton);
+	}
+
+	private void resetKeyboard() {
+		
+		// up
+		new UpKey().registerKey("Z", 90);
+		new UpKey().refreshKey();
+		
+		// down
+		new DownKey().registerKey("S", 83);
+		new DownKey().refreshKey();
+		
+		// left
+		new LeftKey().registerKey("Q", 81);
+		new LeftKey().refreshKey();
+		
+		// right
+		new RightKey().registerKey("D", 68);
+		new RightKey().refreshKey();
+		
+		// action 1
+		new ActionOneKey().registerKey("E", 69);
+		new ActionOneKey().refreshKey();
+		
+		// action 2
+		new ActionTwoKey().registerKey("R", 82);
+		new ActionTwoKey().refreshKey();
+		
+		// action 3
+		new ActionThreeKey().registerKey("F", 70);
+		new ActionThreeKey().refreshKey();
+		
+		// refresh Menu
+		new ControlsScreen();
 	}
 
 }

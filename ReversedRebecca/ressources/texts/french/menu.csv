@@ -28,6 +28,7 @@ Right = droite
 Action1 = action#1
 Action2 = action#2
 Action3 = action#3
+Default = par#defaut
 
 ///// AUDIO /////
 
