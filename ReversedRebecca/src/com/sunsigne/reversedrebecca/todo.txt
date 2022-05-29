@@ -9,6 +9,7 @@
 
 	////////// EN COURS ////////////
 
+	finir cette histoire de serviette dans le lvl000
 	reorganiser (menu, object (sauf les vieux buttons & bombes))
 	optimiser (menu (seulement chat), object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
@@ -30,6 +31,7 @@
 
 	////////// FACILE ////////////
 
+	replacer le dossier "voice" dans le dossier "audio" plutôt que "sound"
 	mettre à jour les miniatures dans les dossiers
 
 	créer un objet (genre Flag) pour finir un level ?
