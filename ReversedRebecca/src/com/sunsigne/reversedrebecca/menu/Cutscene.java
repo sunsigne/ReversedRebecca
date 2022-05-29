@@ -27,6 +27,7 @@ public class Cutscene implements Updatable {
 	}
 
 	public void stop(boolean delay) {
+		new PlayerFinder().getPlayer().setMotionless();
 		if (delay)
 			new GameTimer(1 * Game.SEC, () -> running = false);
 		else

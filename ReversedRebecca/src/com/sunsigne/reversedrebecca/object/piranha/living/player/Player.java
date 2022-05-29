@@ -22,7 +22,7 @@ public class Player extends LivingObject {
 	////////// SPEED ////////////
 
 	private void updateSpeed() {
-		if (Cutscene.isRunning() == false)
+		if (isPathNull())
 			setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 
@@ -36,9 +36,9 @@ public class Player extends LivingObject {
 	////////// PATH FINDER ////////////
 
 	private boolean isPathNull() {
-		if (getPath() == null)
+		if(Cutscene.isRunning() == false)
 			return true;
-		if (getPath() == DIRECTION.NULL)
+		if (getPath() == null)
 			return true;
 		else
 			return false;
