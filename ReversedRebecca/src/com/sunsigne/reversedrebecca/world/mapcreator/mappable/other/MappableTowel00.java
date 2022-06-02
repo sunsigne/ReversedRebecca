@@ -5,13 +5,13 @@ import com.sunsigne.reversedrebecca.object.other.DecorationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableTowel implements Mappable {
+public class MappableTowel00 implements Mappable {
 
-	private MappableTowel() {
+	private MappableTowel00() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableTowel();
+	private static Mappable mappable = new MappableTowel00();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,7 +22,7 @@ public class MappableTowel implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DecorationObject(x, y, "towel");
+		return new DecorationObject(x, y, "towel_00");
 	}
 
 	@Override

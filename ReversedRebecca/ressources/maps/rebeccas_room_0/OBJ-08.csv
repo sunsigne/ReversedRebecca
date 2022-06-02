@@ -1,4 +1,4 @@
-TIME -> 0 = GOTO -> TA_INIT
+TIME -> 0 = GOTO -> NAME:PLANT, TA_INIT
 
 
 //// TALK PLANT ////
