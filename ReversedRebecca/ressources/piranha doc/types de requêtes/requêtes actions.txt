@@ -62,3 +62,22 @@ Attention : Les Types de Requêtes ACTION et TRIPLE_ACTION n'affecte que l'objet
 $ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES*CLEAN_CLOTHES
 $ -> CLEAN_CLOTHES = GOTO -> AFFECTING:TA_NULL_CLOTHES, DELETE_CLOTHES
 $ -> DELETE_CLOTHES = DELETE -> 5-7:1
+
+
+////// CHOICE //////
+
+Le Type de Requête CHOICE est en quelque sorte un TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite executée et les autres choix ne sont plus disponible.
+
+exemple : 
+TALKED -> DOOR_MISSING_KEY = CHOICE -> SEARCH*SEARCH_KEY, CRY*CRY_PATHETICALLY
+
+Lorsque la Condition sera vérifiée, le joueur ne pourra plus bouger et devra choisir entre "chercher" (search) et "pleurer" (cry).
+
+Attention ! Il est très important de noter que si les ACTION et TRIPLE_ACTION utilisent GOTO pour déterminer une action custom, le Type de Requête CHOICE utilise AFFECTING à la place !
+Il faudra donc utiliser des "!" au lieu de "$" pour détailler les différents choix (ainsi que de faire attention aux noms utilisés, afin d'éviter des doublons inter-fichiers).
+ex : 
+! -> SEARCH_KEY = MOVE -> 6-6
+! -> CRY_PATHETICALLY = CONDITION_PLAYER -> SAD
+
+Si la raison technique de ce changement vous intéresse, la voici : ACTION et TRIPLE_ACTION affectent directement l'objet Piranha dont il est question. Lorsque c'est CHOICE qui est appelé, un "objet" temporaire est créé devant le joueur et c'est cet objet qui contient les actions possibles ; il y a donc deux objets : l'objet "choix" et l'objet Piranha l'ayant créé. Comme vous le savez déjà, GOTO est un type de Requête local, il ne peut donc pas affecter les autres objets Piranha ! Pour le dire simplement : GOTO ne permet pas de créer des actions custom car il s'écrit dans l'objet "créateur", et que les actions ont lieux dans l'objet "choix". AFFECTING étant à portée globale, cela redevient possible.
+PS : si vous aviez compris ça par vous-même, alors c'est que le Piranha n'a plus aucun secret pour vous !
