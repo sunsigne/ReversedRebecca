@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
@@ -193,6 +194,7 @@ public class World implements Updatable, RenderFree {
 	}
 
 	public void destroy() {
+		new Cutscene().stop(false);
 		closePuzzle();
 		resetLayers();
 		freeze(false);

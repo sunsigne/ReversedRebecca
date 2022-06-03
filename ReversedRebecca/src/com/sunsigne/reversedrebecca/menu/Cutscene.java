@@ -31,7 +31,7 @@ public class Cutscene implements Updatable {
 		if (delay)
 			new GameTimer(1 * Game.SEC, () -> running = false);
 		else
-			new GameTimer(0, () -> running = false);
+			running = false;
 	}
 
 	////////// TICK ////////////
