@@ -174,8 +174,8 @@ public class ChatContent implements Updatable {
 
 	////////// RENDER ////////////
 
-	private int x = 350;
-	private int y = 750;
+	private int x = 380;
+	private int y = 800;
 
 	@Override
 	public void render(Graphics g) {
@@ -185,12 +185,12 @@ public class ChatContent implements Updatable {
 	}
 
 	private void drawFacial(Graphics g) {
-		int size = 200;
+		int size = 144;
 
-		g.drawImage(getImage(), x, y, -size, size, null);
+		g.drawImage(getImage(), x, y + 30, -size, size, null);
 	}
 
-	private Font font = new Font("arial", 1, 55);
+	private Font font = new Font("arial", 1, 50);
 
 	private void drawText(Graphics g) {
 		g.setColor(Color.white);
@@ -198,15 +198,15 @@ public class ChatContent implements Updatable {
 
 		int x0 = x + 90;
 
-		g.drawString(currentText[0], x0, y + 80);
+		g.drawString(currentText[0], x0, y + 83);
 		if (sentence[1] != null)
-			g.drawString(currentText[1], x0, y + 170);
+			g.drawString(currentText[1], x0, y + 158);
 	}
 
 	private String registeredKey = "[" + new ActionOneKey().getRegisteredKey() + "]";
 
 	private void drawActionKey(Graphics g) {
-		g.drawString(registeredKey, x + 1385, y + 205);
+		g.drawString(registeredKey, x + 1290, y + 180);
 	}
 
 }
