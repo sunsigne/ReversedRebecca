@@ -32,6 +32,9 @@ public class AffectingRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+		if (target.equalsIgnoreCase("null"))
+			return;
+		
 		new AffectingCondition().registerValue(target);
 	}
 
