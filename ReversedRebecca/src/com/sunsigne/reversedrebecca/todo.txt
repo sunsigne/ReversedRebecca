@@ -41,9 +41,8 @@
 	
 	////////// LVL000 ////////////
 	
-	devrait redesigner un peu le lvl pour rendre l'écran titre + jolie
 	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
-	la bougie parfumée dans le lvl000 a fondu si on part en la laissant
+	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	panière à linge + lave-linge
 	Animation de douche ? bulles
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)

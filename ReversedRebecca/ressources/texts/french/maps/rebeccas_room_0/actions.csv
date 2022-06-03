@@ -25,5 +25,6 @@ WATER_PLANT = Key2 % arroser
 OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
+GO_TO_WORK = Key1 % aller#au#travail
 
 
