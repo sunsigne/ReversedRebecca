@@ -22,6 +22,11 @@ WATER_TAKE = Key1 % se#servir
 WATER_EMPTY = Key1 % vider#l'eau
 WATER_PLANT = Key2 % arroser
 
+EAT_COOKIE = Key1 % manger#un#biscuit
+DRINK_JUICE = Key2 % boire#du#jus
+WAIT_WHAT = Key3 % Hein#?!
+TAKE_KEY = Key3 % prendre#la#clé
+
 OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
