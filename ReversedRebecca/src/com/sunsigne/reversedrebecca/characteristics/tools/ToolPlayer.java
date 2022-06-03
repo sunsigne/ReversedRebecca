@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.gui.GUITools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -28,16 +29,20 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// DIFFICULTY ////////////
 
+	private ToolPlayer getTool() {
+		return ToolPlayerList.getList().getObject(this);
+	}
+
 	///// max /////
 
 	private LVL max_difficulty = LVL.NULL;
 
 	public LVL getMaxDifficulty() {
-		return ToolPlayerList.getList().getObject(this).max_difficulty;
+		return getTool().max_difficulty;
 	}
 
 	public void setMaxDifficulty(LVL max_difficulty) {
-		ToolPlayerList.getList().getObject(this).max_difficulty = max_difficulty;
+		getTool().max_difficulty = max_difficulty;
 		updateGUITools();
 	}
 
@@ -47,7 +52,7 @@ public abstract class ToolPlayer implements Difficulty {
 			if (txtDifficulty.isEmpty())
 				stopApp();
 
-			ToolPlayerList.getList().getObject(this).max_difficulty = LVL.valueOf(txtDifficulty);
+			getTool().max_difficulty = LVL.valueOf(txtDifficulty);
 			updateGUITools();
 		}
 	}
@@ -65,15 +70,17 @@ public abstract class ToolPlayer implements Difficulty {
 
 	@Override
 	public LVL getDifficulty() {
-		return ToolPlayerList.getList().getObject(this).difficulty;
+		return getTool().difficulty;
 	}
 
 	@Override
 	public void setDifficulty(LVL difficulty) {
 		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty))
-			ToolPlayerList.getList().getObject(this).difficulty = getMaxDifficulty();
+			getTool().difficulty = getMaxDifficulty();
 		else
-			ToolPlayerList.getList().getObject(this).difficulty = difficulty;
+			getTool().difficulty = difficulty;
+
+		new UnlockedToolCondition().registerValue(getTool(), getDifficulty());
 		updateGUITools();
 	}
 

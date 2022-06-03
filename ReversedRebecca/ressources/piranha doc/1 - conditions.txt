@@ -19,6 +19,20 @@ La Requête (GOTO -> CLEAN_CLOTHES) sera appelé si REBECCAS_ROOM*NO_CLOTHES_ON_
 Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED, ce qui facilite grandement la tâche !
 
 
+////// UNLOCKEDTOOL //////
+
+
+Le Type de Condition UNLOCKEDTOOL est vérifiée au moment où le joueur atteint (exactement) le niveau de l'outil en question.
+exemple : UNLOCKEDTOOL -> KEY:CYAN = "Requête"
+
+La "Requête" sera effectué aussitôt que le joueur atteindra le niveau CYAN dans l'outil KEY. 
+
+Note : Ce Type de Condition est désactivé lors du chargement de la map. Ainsi, lorsque le Joueur apparaît "de base" avec un niveau CYAN dans l'outil KEY, la Condition "UNLOCKEDTOOL -> KEY:CYAN" ne pourra pas être remplie.
+Attention : si le joueur ramasse l'objet "YELLOW KEY" mais ne peut QUE atteindre le niveau "GREEN" de l'outil "KEY", il atteindra naturellement le niveau "GREEN" en "KEY" au moment du ramassage. La condition qui sera validée sera donc : "UNLOCKEDTOOL -> KEY:GREEN" et non "UNLOCKEDTOOL -> KEY:YELLOW"
+
+Note : Tous les outils et niveaux sont détaillés dans le fichier "mappable" (dans le dossier "maps")
+
+
 ////// WONPUZZLE //////
 
 
