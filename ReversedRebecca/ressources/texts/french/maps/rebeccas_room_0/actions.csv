@@ -22,7 +22,8 @@ WATER_TAKE = Key1 % se#servir
 WATER_EMPTY = Key1 % vider#l'eau
 WATER_PLANT = Key2 % arroser
 
-
-
+OPEN = Key1 % ouvrir
+SEARCH = Key1 % chercher#par#soi-meme
+THINK = Key2 % réflechir#(solution)
 
 
