@@ -61,7 +61,7 @@
 	
 	////////// SONS ////////////
 	
-	Le fading menu devrait jouer un son
+	Le fading menu devrait jouer un son 
 	les boutons et les menus devraient jouer un son (et particulièrement AudioScreen !)
 	Ajouter des voix aux personnages (son quand ils parlent)
 	bruit de poussage
