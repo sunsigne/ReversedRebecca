@@ -19,8 +19,7 @@ public class OrangeKeyPuzzle extends KeyPuzzle {
 	public void createPuzzle() {
 		PuzzleObject lock = new LockObject(this, getCol(1), getRow(4));
 		KeyObject key = new KeyObject(this, getCol(12), getRow(new RandomGenerator().getIntBetween(1, 6)));
-		key.speed = key.speed * 2;
-		key.setVelY(new RandomGenerator().getBoolean() ? key.speed : -key.speed);
+		key.multiplySpeedBy(2);
 
 		LAYER.PUZZLE.addObject(lock);
 		LAYER.PUZZLE.addObject(key);

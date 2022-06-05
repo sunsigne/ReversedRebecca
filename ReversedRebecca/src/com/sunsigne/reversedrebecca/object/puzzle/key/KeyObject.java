@@ -17,11 +17,11 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
 
-	public int speed = Size.XS / 4;
+	private int speed = Size.XS / 4;
 
 	public KeyObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
-		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
+		multiplySpeedBy(1);
 	}
 
 	////////// SIZE ////////////
@@ -36,6 +36,18 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 		return new Rectangle(x, y, w, h);
 	}
 
+	////////// VELOCITY ////////////
+	
+	public void multiplySpeedBy(int multiplier) {
+		this.speed = speed * multiplier;
+		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
+	}
+	
+	public void divideSpeedBy(int divisor) {
+		this.speed = speed / divisor;
+		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
+	}
+	
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);
