@@ -48,7 +48,7 @@ public class VideoScreen extends SubMenuScreen {
 		camera = new TitleScreenText(text, x, y + 51);
 		LAYER.MENU.addObject(camera);
 		
-		// static / dynamic ...
+		// static / dynamic
 		String typeName = CameraOption.getType().getName();
 		text = new Translatable().getTranslatedText("Camera" + typeName, file);
 		cameraType = new TitleScreenText(text, x, y + 155);
@@ -62,7 +62,7 @@ public class VideoScreen extends SubMenuScreen {
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
 		
-		// ... to the nearest pixel / fluidly ...
+		// ... to the nearest pixel / fluidly
 		text = new Translatable().getTranslatedText(typeName + "Detail", file);
 		cameraDetail[1] = new TitleScreenText(text, x, y + 280);
 		cameraDetail[1].setFontSize(18f);

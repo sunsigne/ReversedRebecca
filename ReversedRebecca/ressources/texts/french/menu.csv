@@ -7,7 +7,19 @@ OptionsButton = options
 QuitButton = quitter
 BackButton = retour
 
-///// JEU /////
+///// PLAY /////
+
+DifficultyEasy = facile
+DifficultyNormal = normal
+DifficultyHard = difficile
+EasyDetail1 = double#XP
+EasyDetail2 = puzzle#plus#faciles
+NormalDetail1 = l'experience#du#jeu
+NormalDetail2 = original
+HardDetail1 = puzzle#plus#durs
+HardDetail2 = une#seule#vie
+
+///// GAME /////
 
 GameButton = jeu
 Reset = reset

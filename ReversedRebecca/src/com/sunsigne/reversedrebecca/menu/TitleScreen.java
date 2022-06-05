@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -40,7 +41,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createPlayButton() {
-		GenericListener onPress = () -> startWorld();
+		GenericListener onPress = () -> playRequest();
 		String text = new Translatable().getTranslatedText("PlayButton", file);
 		createTitleScreenButton(text, 140, onPress);
 	}
@@ -64,6 +65,17 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	////////// BUTTON ACTION ////////////
+
+	private void playRequest() {
+		String currentlvl = new Save().getLevel(false);
+		GenericListener startWorld = () -> startWorld();
+
+		if (currentlvl.equalsIgnoreCase("rebeccas_room_0"))
+			new DifficultyScreen(startWorld);
+
+		else
+			startWorld.doAction();
+	}
 
 	private void startWorld() {
 		String currentlvl = new Save().getLevel(false);
