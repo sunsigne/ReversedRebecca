@@ -2,11 +2,15 @@ package com.sunsigne.reversedrebecca.puzzle.bomb;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 
 public class BombPuzzleFactory implements PuzzleFactory {
 
-	public BombPuzzle createPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	////////// PUZZLE ////////////
+	
+	@Override
+	public Puzzle createPuzzle(LVL difficulty, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
