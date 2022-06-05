@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
@@ -29,6 +30,13 @@ public abstract class HackPuzzle extends Puzzle {
 	@Override
 	public String getName() {
 		return "hack";
+	}
+
+	////////// FACTORY ////////////
+
+	@Override
+	public PuzzleFactory getFactory() {
+		return new HackPuzzleFactory();
 	}
 
 	////////// PUZZLE ////////////
@@ -72,13 +80,6 @@ public abstract class HackPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color blue = new Color(10, 10, 50, 240);
 		new TransluantLayer().drawPuzzle(g, blue);
-	}
-
-	////////// SOUND ////////////
-
-	@Override
-	public String getVictorySound() {
-		return "sound/computer_crashes";
 	}
 
 }

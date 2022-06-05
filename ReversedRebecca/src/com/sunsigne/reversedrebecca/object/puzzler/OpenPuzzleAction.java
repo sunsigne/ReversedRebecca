@@ -17,7 +17,8 @@ public abstract class OpenPuzzleAction extends Action {
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
 			Puzzle puzzle = getPuzzle(puzzlerObject.getDifficulty(), actionOnWinning(puzzlerObject));
-			puzzle.openPuzzle();
+			if (puzzle != null)
+				puzzle.openPuzzle();
 		});
 		setKeyEvent(getKeyEvent());
 	}

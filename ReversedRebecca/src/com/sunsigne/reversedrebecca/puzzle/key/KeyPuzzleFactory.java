@@ -2,8 +2,9 @@ package com.sunsigne.reversedrebecca.puzzle.key;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 
-public class KeyPuzzleFactory {
+public class KeyPuzzleFactory implements PuzzleFactory {
 
 	public KeyPuzzle createPuzzle(LVL difficulty, GenericListener actionOnWinning) {
 		switch (difficulty) {
@@ -18,9 +19,20 @@ public class KeyPuzzleFactory {
 			return new OrangeKeyPuzzle(actionOnWinning);
 		case RED:
 			return new RedKeyPuzzle(actionOnWinning);
+		case PURPLE:
+			autoWin(actionOnWinning);
+			return null;
 		}
+
 		// should not occurs
-		return new CyanKeyPuzzle(actionOnWinning);
+		return null;
+	}
+
+	////////// SOUND ////////////
+
+	@Override
+	public String getVictorySound() {
+		return "sound/door_unlock";
 	}
 
 }

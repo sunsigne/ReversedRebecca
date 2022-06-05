@@ -36,6 +36,10 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 	public abstract String getName();
 
+	////////// FACTORY ////////////
+
+	public abstract PuzzleFactory getFactory();
+
 	////////// PUZZLE ////////////
 
 	public abstract void createPuzzle();
@@ -86,14 +90,10 @@ public abstract class Puzzle implements Updatable, TickFree {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 
 		if (isPuzzleWon) {
-			new SoundTask().play(SOUNDTYPE.SOUND, getVictorySound());
+			new SoundTask().play(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			actionOnWinning.doAction();
 		} else
 			new SoundTask().play(SOUNDTYPE.SOUND, "sound/fail");
 	}
 
-	////////// SOUND ////////////
-
-	public abstract String getVictorySound();
-	
 }

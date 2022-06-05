@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -28,6 +29,13 @@ public abstract class KeyPuzzle extends Puzzle {
 	@Override
 	public String getName() {
 		return "key";
+	}
+	
+	////////// FACTORY ////////////
+
+	@Override
+	public PuzzleFactory getFactory() {
+		return new KeyPuzzleFactory();
 	}
 
 	////////// PUZZLE ////////////
@@ -69,13 +77,6 @@ public abstract class KeyPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
 		new TransluantLayer().drawPuzzle(g, green);
-	}
-
-	////////// SOUND ////////////
-
-	@Override
-	public String getVictorySound() {
-		return "sound/door_unlock";
 	}
 
 }

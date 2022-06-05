@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -24,6 +25,13 @@ public abstract class BombPuzzle extends Puzzle {
 	@Override
 	public String getName() {
 		return "bomb";
+	}
+
+	////////// FACTORY ////////////
+
+	@Override
+	public PuzzleFactory getFactory() {
+		return new BombPuzzleFactory();
 	}
 
 	////////// PUZZLE ////////////
@@ -71,13 +79,6 @@ public abstract class BombPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color red = new Color(50, 10, 10, 240);
 		new TransluantLayer().drawPuzzle(g, red);
-	}
-
-	////////// SOUND ////////////
-
-	@Override
-	public String getVictorySound() {
-		return "sound/explosion_large";
 	}
 
 }
