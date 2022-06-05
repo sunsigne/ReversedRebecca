@@ -49,20 +49,20 @@ public class DifficultyScreen extends SubMenuScreen {
 		// easy / normal / hard
 		String difficultyName = DifficultyOption.getDifficulty().getName();
 		text = new Translatable().getTranslatedText("Difficulty" + difficultyName, file);
-		difficulty = new TitleScreenText(text, x, y + 155);
+		difficulty = new TitleScreenText(text, x, y + 51);
 		LAYER.MENU.addObject(difficulty);
 
 		difficultyDetail = new TitleScreenText[2];
 
 		// puzzle are ...
 		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 1, file);
-		difficultyDetail[0] = new TitleScreenText(text, x, y + 245);
+		difficultyDetail[0] = new TitleScreenText(text, x, y + 141);
 		difficultyDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(difficultyDetail[0]);
 
 		// ... and XP boost is ...
 		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 2, file);
-		difficultyDetail[1] = new TitleScreenText(text, x, y + 280);
+		difficultyDetail[1] = new TitleScreenText(text, x, y + 176);
 		difficultyDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(difficultyDetail[1]);
 	}
@@ -74,12 +74,12 @@ public class DifficultyScreen extends SubMenuScreen {
 		int y = 503;
 
 		String text = new Translatable().getTranslatedText("PlayButton", file);
-		ButtonObject button = new TitleScreenButton(text, x, y + 51, 415, 80, startWorld, null);
+		ButtonObject button = new TitleScreenButton(text, x, y + 259, 415, 80, startWorld, null);
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createArrowButton(String text, int x, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 710 + x, 670, 60, 60, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 710 + x, 566, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		LAYER.MENU.addObject(button);
 	}
