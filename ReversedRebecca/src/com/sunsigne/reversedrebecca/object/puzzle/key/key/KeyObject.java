@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzle.key;
+package com.sunsigne.reversedrebecca.object.puzzle.key.key;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -19,8 +19,8 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	private int speed = Size.XS / 4;
 
-	public KeyObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public KeyObject(Puzzle puzzle) {
+		super(puzzle, 0, 0);
 		multiplySpeedBy(1);
 	}
 
@@ -38,12 +38,12 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	////////// VELOCITY ////////////
 	
-	public void multiplySpeedBy(int multiplier) {
+	protected void multiplySpeedBy(int multiplier) {
 		this.speed = speed * multiplier;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 	
-	public void divideSpeedBy(int divisor) {
+	protected void divideSpeedBy(int divisor) {
 		this.speed = speed / divisor;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}

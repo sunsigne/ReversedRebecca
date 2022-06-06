@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzle.key;
+package com.sunsigne.reversedrebecca.object.puzzle.key.lock;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -12,8 +12,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class LockObject extends PuzzleObject implements CollisionReactor {
 
-	public LockObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public LockObject(Puzzle puzzle) {
+		super(puzzle, 0, 0);
 	}
 
 	////////// TICK ////////////

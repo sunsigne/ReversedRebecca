@@ -1,12 +1,12 @@
-package com.sunsigne.reversedrebecca.object.puzzle.key;
+package com.sunsigne.reversedrebecca.object.puzzle.key.lock;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class UpsideDownLockObject extends LockObject {
 
-	public UpsideDownLockObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public UpsideDownLockObject(Puzzle puzzle) {
+		super(puzzle);
 	}
 
 	////////// TICK ////////////

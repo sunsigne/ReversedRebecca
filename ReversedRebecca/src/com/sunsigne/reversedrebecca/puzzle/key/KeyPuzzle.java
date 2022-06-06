@@ -5,7 +5,11 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.KillPuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
+import com.sunsigne.reversedrebecca.object.puzzle.key.MovingWallPuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -30,7 +34,7 @@ public abstract class KeyPuzzle extends Puzzle {
 	public String getName() {
 		return "key";
 	}
-	
+
 	////////// FACTORY ////////////
 
 	@Override
@@ -40,14 +44,26 @@ public abstract class KeyPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private void createDeathWall() {
-		for (int row = 1; row <= 6; row++) {
-			// Almost invisible in VisibleHitboxMode because added before Walls
-			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, getCol(0), getRow(row)));
-		}
+	public abstract LockObject getLock();
+	public abstract KeyObject getKey();
+
+	protected void createLock() {
+		PuzzleObject lock = getLock();
+		lock.setX(getCol(1));
+		lock.setY(getRow(4));
+		
+		LAYER.PUZZLE.addObject(lock);
 	}
 
-	protected void createRandompWalls(int numOfWalls) {
+	protected void createKey() {		
+		PuzzleObject key = getKey();
+		key.setX(getCol(12));
+		key.setY(getRow(new RandomGenerator().getIntBetween(1, 6)));
+
+		LAYER.PUZZLE.addObject(key);
+	}
+
+	protected void createRandomWalls(int numOfWalls, boolean moving) {
 		if (numOfWalls <= 0)
 			return;
 
@@ -66,8 +82,20 @@ public abstract class KeyPuzzle extends Puzzle {
 				radRow = getRow(new RandomGenerator().getIntBetween(1, 6));
 			} while (radRow == safeRow);
 
-			handler.addObject(new WallPuzzle(img, radCol, radRow));
-			handler.addObject(new KillPuzzleObject(this, radCol, radRow));
+			if(moving)
+				handler.addObject(new MovingWallPuzzleObject(this, img, radCol, radRow));
+				
+			else {
+				handler.addObject(new WallPuzzle(img, radCol, radRow));
+				handler.addObject(new KillPuzzleObject(this, radCol, radRow));
+			}
+		}
+	}
+
+	private void createDeathWall() {
+		for (int row = 1; row <= 6; row++) {
+			// Almost invisible in VisibleHitboxMode because added before Walls
+			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, getCol(0), getRow(row)));
 		}
 	}
 
