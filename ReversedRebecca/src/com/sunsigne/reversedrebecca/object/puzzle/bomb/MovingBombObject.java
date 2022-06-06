@@ -6,15 +6,22 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class MovingBombObject extends BombObject {
 
-	public int speed = Size.XS / 5;
-
 	protected MovingBombObject(Puzzle puzzle, int x, int y, int w, int h) {
 		super(puzzle, x, y, w, h);
-		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
+		defineNewYSpeed(Size.XS / 5);
 	}
 	
 	public MovingBombObject(Puzzle puzzle, int x, int y) {
 		this(puzzle, x, y, 2 * Size.L, 2 * Size.L);
+	}
+	
+	////////// VELOCITY ////////////
+
+	private int speed = Size.XS / 5;
+	
+	protected void defineNewYSpeed(int speed) {
+		this.speed = speed;
+		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 
 	////////// TICK ////////////

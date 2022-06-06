@@ -1,12 +1,13 @@
-package com.sunsigne.reversedrebecca.puzzle.bomb;
+package com.sunsigne.reversedrebecca.puzzle.bomb.difficulty;
 
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzle;
 
-public class GreenBombPuzzle extends BombPuzzle {
+public class CyanBombPuzzle extends BombPuzzle {
 
-	public GreenBombPuzzle(GenericListener actionOnWinning) {
+	public CyanBombPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 	}
 
@@ -18,8 +19,14 @@ public class GreenBombPuzzle extends BombPuzzle {
 	}
 
 	@Override
+	public int getBombAmount() {
+		return 4;
+	}
+
+	@Override
 	public void createPuzzle() {
-		setRandomMaxCountBetween(2, 5);
+		createBombs();
+		setRandomMaxCountBetween(1, 3);
 	}
 
 }

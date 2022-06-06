@@ -17,8 +17,6 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
 
-	private int speed = Size.XS / 4;
-
 	public KeyObject(Puzzle puzzle) {
 		super(puzzle, 0, 0);
 		multiplySpeedBy(1);
@@ -37,6 +35,8 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	}
 
 	////////// VELOCITY ////////////
+
+	private int speed = Size.XS / 4;
 	
 	protected void multiplySpeedBy(int multiplier) {
 		this.speed = speed * multiplier;

@@ -11,16 +11,13 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class ShrinkBombObject extends MovingBombObject {
+public class ShrinkBombObject extends FastBombObject {
 
 	public ShrinkBombObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x + Size.S, y + Size.S, Size.S, Size.S);
 
 		ymin = getPuzzle().getRow(1) + Size.S;
 		ymax = getPuzzle().getRow(5) + 2 * Size.S;
-
-		speed = Size.XS / 3;
-		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 
 		growing = new RandomGenerator().getBoolean();
 		size = new RandomGenerator().getIntBetween(sizeMin, sizeMax);
@@ -40,7 +37,7 @@ public class ShrinkBombObject extends MovingBombObject {
 
 	////////// TICK ////////////
 
-	private final int sizeMin = 0;
+	private final int sizeMin = Size.XS / 3;
 	private final int sizeMax = Size.XS;
 	private int size;
 	private boolean growing;
@@ -70,7 +67,6 @@ public class ShrinkBombObject extends MovingBombObject {
 	////////// RENDER ////////////
 
 	@Override
-	// WARNING ! VisibleHitboxMode does't show correctly this hitbox
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX() - 2 * size, getY() - 2 * size, getWidth() + 4 * size,
 				getHeight() + 4 * size, null);

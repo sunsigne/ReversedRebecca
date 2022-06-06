@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.puzzle.bomb;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -11,13 +12,12 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombPuzzle extends Puzzle {
 
 	public BombPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
-
-		createBombs();
 	}
 
 	////////// NAME ////////////
@@ -36,15 +36,33 @@ public abstract class BombPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private BombObject[] bomb = new BombObject[4];
+	private BombObject[] bomb = new BombObject[getBombAmount()];
 
 	public abstract BombObject getBomb(Puzzle puzzle, int x, int y);
 
-	protected void createBombs() {
-		for (int index = 0; index < 4; index++) {
+	public abstract int getBombAmount(); // 3, 4 or 6
 
-			int col = Size.S + getCol(1 + index * 3);
-			int radRow = Size.S + getRow(new RandomGenerator().getIntBetween(1, 4));
+	private int getColGap() {
+		switch (getBombAmount()) {
+		case 3:
+			return Size.S;
+		case 4:
+			return 0;
+		case 6:
+			return -Size.L - Size.S / 4;
+		}
+
+		return 0;
+	}
+
+	protected void createBombs() {
+		int colGap = getColGap();
+		int maxRow = getBomb(this, 0, 0) instanceof BigBombObject ? 3 : 4;
+
+		for (int index = 0; index < getBombAmount(); index++) {
+
+			int col = Size.S + colGap * index + getCol(1 + index * 3);
+			int radRow = Size.S + getRow(new RandomGenerator().getIntBetween(1, maxRow));
 
 			bomb[index] = getBomb(this, col, radRow);
 			LAYER.PUZZLE.addObject(bomb[index]);
@@ -52,7 +70,7 @@ public abstract class BombPuzzle extends Puzzle {
 	}
 
 	protected void setRandomMaxCountBetween(int a, int b) {
-		for (int index = 0; index < 4; index++) {
+		for (int index = 0; index < getBombAmount(); index++) {
 			int count = new RandomGenerator().getIntBetween(a, b);
 			bomb[index].setMaxCount(count);
 			bomb[index].setCount(count);
@@ -63,13 +81,20 @@ public abstract class BombPuzzle extends Puzzle {
 
 	@Override
 	public void tick() {
-		for (int index = 0; index < 4; index++) {
-			if (bomb[index] == null)
-				return;
+		// prevent puzzle to close before bomb creation
+		if (bomb[0] == null)
+			return;
 
-			if (!bomb[index].hasExploded())
+		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+			if (tempUpdatable instanceof BombObject == false)
+				continue;
+
+			BombObject bomb = (BombObject) tempUpdatable;
+			if (bomb.hasExploded() == false)
 				return;
 		}
+
+		// happens when all bombs has exploded
 		closePuzzle(true);
 	}
 

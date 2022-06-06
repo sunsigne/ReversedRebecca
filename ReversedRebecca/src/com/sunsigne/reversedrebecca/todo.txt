@@ -21,7 +21,6 @@
 	////////// DIFFICILE ////////////
 	
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
-	les variantes "faciles" et "difficile" de la difficulité du jeu doivent être créés
 	Save.resetProgression() ! Ne reset pas encore les caractéristiques
 	corriger les hitbox (choque le user d'être aussi loin de l'évier dans le lvl000)
 	finir le design des personnages
