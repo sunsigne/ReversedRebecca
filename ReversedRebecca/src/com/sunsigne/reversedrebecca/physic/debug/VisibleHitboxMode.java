@@ -48,7 +48,7 @@ public class VisibleHitboxMode extends DebugMode {
 	public void afterObjectRender(Graphics g, Updatable object) {
 		if (getState() == false)
 			return;
-		
+
 		if (object == null)
 			return;
 
@@ -106,8 +106,8 @@ public class VisibleHitboxMode extends DebugMode {
 			return;
 
 		MouseUserEvent mouseObject = (MouseUserEvent) object;
-		Rectangle bounds = new Rectangle(mouseObject.getX(), mouseObject.getY(), mouseObject.getWidth(),
-				mouseObject.getHeight());
+		Rectangle bounds = new Rectangle(mouseObject.getRect()[0], mouseObject.getRect()[1], mouseObject.getRect()[2],
+				mouseObject.getRect()[3]);
 
 		redHitboxRender(g2d, bounds);
 	}
