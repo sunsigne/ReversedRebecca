@@ -16,21 +16,40 @@ public class TextDecoration {
 		FontMetrics metrics = g.getFontMetrics(font);
 
 		int horizontal = 0;
+		int vertical = 0;
 
 		switch (facing) {
 		case LEFT:
-			horizontal = 0; // align to the left
+			// left and centered
+			horizontal = 0;
+			vertical = ((rect[3] - metrics.getHeight()) / 2) + metrics.getAscent();
 			break;
 		case RIGHT:
-			horizontal = (rect[2] - metrics.stringWidth(text)); // align to the right
+			// right and centered
+			horizontal = rect[2] - metrics.stringWidth(text);
+			vertical = ((rect[3] - metrics.getHeight()) / 2) + metrics.getAscent();
 			break;
-		default:
-			horizontal = (rect[2] - metrics.stringWidth(text)) / 2;  // align to the center
+		case UP:
+			// centered and up
+			horizontal = (rect[2] - metrics.stringWidth(text)) / 2;
+			vertical = 0;
 			break;
+		case DOWN:
+			// centered and down
+			horizontal = (rect[2] - metrics.stringWidth(text)) / 2;
+			vertical = rect[3] - metrics.getHeight() + metrics.getAscent();
+			break;
+
+		case NULL :
+			// centered
+			horizontal = (rect[2] - metrics.stringWidth(text)) / 2;
+			vertical = ((rect[3] - metrics.getHeight()) / 2) + metrics.getAscent();
+			break;
+
 		}
 
 		int x = rect[0] + horizontal;
-		int y = rect[1] + ((rect[3] - metrics.getHeight()) / 2) + metrics.getAscent();
+		int y = rect[1] + vertical;
 		g.setColor(color);
 		g.setFont(font);
 		g.drawString(text, x, y);
