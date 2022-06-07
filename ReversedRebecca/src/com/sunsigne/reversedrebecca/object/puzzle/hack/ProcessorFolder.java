@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -39,19 +41,21 @@ public class ProcessorFolder extends ProcessorObject {
 
 	protected void hideOldFolder() {
 		Handler handler = LAYER.PUZZLE.getHandler();
+		var list = new GameList<Updatable>(LISTTYPE.LINKED);
 
-		// remove all processor objects from the handler
+		// remove all processor from the handler
 		for (Updatable tempUpdatable : handler.getList()) {
-			if (tempUpdatable instanceof ProcessorObject == false)
-				continue;
+			if (tempUpdatable instanceof ProcessorObject)
+				list.addObject(tempUpdatable);
+		}
 
+		for (Updatable tempUpdatable : list.getList()) {
 			handler.removeObject(tempUpdatable);
 		}
 	}
 
 	protected void displayNewFolder() {
-
-		// add to the handler all processors objects contained in the selected folder ...
+		// add to the handler all processors contained in the folder ...
 		for (int index = 0; index < size; index++) {
 			// ... only if still in the computer
 			if (getComputer().containsObject(processors[index]))
