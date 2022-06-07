@@ -3,8 +3,6 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -12,28 +10,28 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class VirusObject extends PuzzleObject implements CollisionReactor {
+public class VirusObject extends PuzzleObject {
 
 	public VirusObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+		super(puzzle, x, y, Size.M, Size.M);
 		loadAnimation();
 	}
 
 	////////// TICK ////////////
 
-	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.L / Size.XS);
-	protected final int ymax = getPuzzle().getRow(6) + 4 * (Size.L / Size.XS);
+	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);
+	protected final int ymax = getPuzzle().getRow(6) + 22 * (Size.S / Size.XS);
 
 	protected final int xmin = getPuzzle().getCol(1);
-	protected final int xmax = getPuzzle().getCol(12);
+	protected final int xmax = getPuzzle().getCol(12) + 16 * (Size.S / Size.XS);
 
 	private final int ANIMATION_TIME = 15;
 	private int time = ANIMATION_TIME;
 
 	@Override
 	public void tick() {
-		int mouseX = new MousePos().get()[0];
-		int mouseY = new MousePos().get()[1];
+		int mouseX = new MousePos().get()[0] - getWidth() / 2;
+		int mouseY = new MousePos().get()[1] - getHeight() / 2;
 
 		followMouse(mouseX, mouseY);
 		keepWithinPuzzleZone(mouseX, mouseY);
@@ -71,13 +69,13 @@ public class VirusObject extends PuzzleObject implements CollisionReactor {
 	private Cycloid<BufferedImage> animation;
 
 	private void loadAnimation() {
-		
+
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_virus";
 		ImageTask loader = new ImageTask();
-		
+
 		BufferedImage img0 = loader.loadImage(path + "_0");
 		BufferedImage img1 = loader.loadImage(path + "_1");
-		
+
 		animation = new Cycloid<BufferedImage>(img0, img1);
 	}
 
@@ -90,23 +88,6 @@ public class VirusObject extends PuzzleObject implements CollisionReactor {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-	}
-
-	////////// COLLISION ////////////
-
-	@Override
-	public boolean isBlockingSight() {
-		return false;
-	}
-
-	@Override
-	public boolean isBlockingPath() {
-		return false;
-	}
-
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-		collidingReaction(detectorObject, false, () -> getPuzzle().closePuzzle(true));
 	}
 
 }

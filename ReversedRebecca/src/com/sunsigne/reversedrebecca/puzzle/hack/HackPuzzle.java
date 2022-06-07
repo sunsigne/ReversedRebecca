@@ -21,8 +21,6 @@ public abstract class HackPuzzle extends Puzzle {
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 		new GameCursor().setCursor(null);
-
-		createVirus();
 	}
 
 	////////// NAME ////////////
@@ -41,7 +39,7 @@ public abstract class HackPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private void createVirus() {
+	protected void createVirus() {
 		PuzzleObject virus = new VirusObject(this, getCol(3), getRow(6));
 		LAYER.PUZZLE.addObject(virus);
 	}
