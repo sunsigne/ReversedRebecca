@@ -80,6 +80,7 @@
 
 	///////// IDEE ////////////
 
+	Dave, son pouvoir est de savoir ce qu'il est (un personnage de jeu vidéo). Souvent blasé, a des comportements (et phrases) différentes d'une session sur l'autre (% de chance)
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
