@@ -5,8 +5,9 @@ import java.awt.event.MouseListener;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public interface MouseUserEvent extends Position {
+public interface MouseUserEvent extends Position, Updatable {
 
 	////////// MOUSE ////////////
 
@@ -19,8 +20,11 @@ public interface MouseUserEvent extends Position {
 	default boolean isSelected() {
 		return mouseOver(new MousePos().get(), getRect()) && isClickable();
 	}
-	
+
 	default boolean isClickable() {
+		if (getHandler() == null)
+			return false;
+
 		for (MouseListener listener : Game.getInstance().getMouseListeners()) {
 			if (listener == getMouseController())
 				return true;
