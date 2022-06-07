@@ -9,6 +9,7 @@
 
 	////////// EN COURS ////////////
 
+	PuzzleHack -> créer un antivirus qui réduit la taille du virus à chaque action (jusqu'à le faire disparaitre, donc puzzle échoué)
 	finir cette histoire de serviette dans le lvl000
 	reorganiser (menu, object (sauf les vieux buttons & bombes))
 	optimiser (menu (seulement chat), object (sauf buttons & bombes))

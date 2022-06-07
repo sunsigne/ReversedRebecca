@@ -8,8 +8,10 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -26,6 +28,14 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 	////////// NAME ////////////
 
 	public abstract String getName();
+
+	////////// VIRUS ACTION ////////////
+
+	public GameList<ProcessorObject> getComputer() {
+		return ((HackPuzzle) getPuzzle()).getComputer();
+	}
+
+	public abstract void doVirusAction();
 
 	////////// TEXTURE ////////////
 
@@ -52,11 +62,11 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 		int[] rect = { getRect()[0], getRect()[1] + Size.XS + Size.XS / 2, getRect()[2], getRect()[3] };
 		new TextDecoration().drawCenteredString(g, font, text, Color.white, DIRECTION.DOWN, rect);
 	}
-	
+
 	////////// MOUSE ////////////
-	
-	private  MouseController mouseController = new MouseController(this);
-	
+
+	private MouseController mouseController = new MouseController(this);
+
 	@Override
 	public MouseController getMouseController() {
 		return mouseController;
@@ -64,12 +74,13 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-
+		if (isSelected())
+			doVirusAction();
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 
 	}
-	
+
 }

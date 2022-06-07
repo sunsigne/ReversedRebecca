@@ -6,7 +6,11 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -21,6 +25,7 @@ public abstract class HackPuzzle extends Puzzle {
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 		new GameCursor().setCursor(null);
+		createVirus();
 	}
 
 	////////// NAME ////////////
@@ -39,8 +44,14 @@ public abstract class HackPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	protected void createVirus() {
-		PuzzleObject virus = new VirusObject(this, getCol(3), getRow(6));
+	private GameList<ProcessorObject> computer = new GameList<>(LISTTYPE.LINKED);
+
+	public GameList<ProcessorObject> getComputer() {
+		return computer;
+	}
+
+	private void createVirus() {
+		PuzzleObject virus = new VirusObject(this);
 		LAYER.PUZZLE.addObject(virus);
 	}
 
@@ -70,6 +81,25 @@ public abstract class HackPuzzle extends Puzzle {
 			img = getWallTexture();
 			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
 		}
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		// prevent puzzle to close before CPU are ready
+		if (computer.getList().isEmpty())
+			return;
+
+		for (ProcessorObject tempProcessor : getComputer().getList()) {
+			if (tempProcessor instanceof ProcessorCPU == false)
+				continue;
+
+			return;
+		}
+
+		// happens when all CPU got eaten
+		closePuzzle(true);
 	}
 
 	////////// RENDER ////////////

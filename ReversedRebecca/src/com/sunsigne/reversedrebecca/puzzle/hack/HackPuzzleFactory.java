@@ -28,7 +28,7 @@ public class HackPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getVictorySound() {
-		return "sound/computer_crashes";
+		return "sound/short_circuit";
 	}
 
 }
