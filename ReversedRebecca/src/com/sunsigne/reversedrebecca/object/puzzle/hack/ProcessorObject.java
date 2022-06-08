@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -36,6 +38,8 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 	}
 
 	public abstract void doVirusAction();
+
+	public abstract String getVirusActionSound();
 
 	////////// TEXTURE ////////////
 
@@ -74,8 +78,10 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isSelected())
+		if (isSelected()) {
 			doVirusAction();
+			new SoundTask().play(SOUNDTYPE.SOUND, getVirusActionSound());
+		}
 	}
 
 	@Override

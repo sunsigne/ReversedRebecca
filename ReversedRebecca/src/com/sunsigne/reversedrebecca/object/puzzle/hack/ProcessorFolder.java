@@ -4,8 +4,6 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -25,6 +23,7 @@ public class ProcessorFolder extends ProcessorObject {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "folder";
 	}
@@ -38,7 +37,11 @@ public class ProcessorFolder extends ProcessorObject {
 	public void doVirusAction() {
 		hideOldFolder();
 		displayNewFolder();
-		new SoundTask().play(SOUNDTYPE.SOUND, "sound/virus_nav");
+	}
+
+	@Override
+	public String getVirusActionSound() {
+		return "sound/virus_nav";
 	}
 
 	protected void hideOldFolder() {
@@ -56,7 +59,7 @@ public class ProcessorFolder extends ProcessorObject {
 		}
 	}
 
-	private ProcessorBack myback;
+	protected ProcessorBack myback;
 	protected ProcessorBack previousback;
 
 	protected void displayNewFolder() {

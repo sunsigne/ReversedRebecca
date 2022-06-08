@@ -10,6 +10,7 @@ public class ProcessorDesktop extends ProcessorFolder {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "computer";
 	}
@@ -17,11 +18,10 @@ public class ProcessorDesktop extends ProcessorFolder {
 	////////// VIRUS ACTION ////////////
 
 	@Override
-	public void doVirusAction() {
-		hideOldFolder();
-		displayNewFolder();
+	public String getVirusActionSound() {
+		return null;
 	}
-
+	
 	////////// TICK ////////////
 
 	private boolean flag;
