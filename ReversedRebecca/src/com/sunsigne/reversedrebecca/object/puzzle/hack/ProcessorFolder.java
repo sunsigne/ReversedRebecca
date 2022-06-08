@@ -19,6 +19,8 @@ public class ProcessorFolder extends ProcessorObject {
 		for (int index = 0; index < size; index++) {
 			this.processors[index] = processors[index];
 		}
+
+		refreskBack();
 	}
 
 	////////// NAME ////////////
@@ -29,8 +31,8 @@ public class ProcessorFolder extends ProcessorObject {
 
 	////////// VIRUS ACTION ////////////
 
-	private ProcessorObject[] processors;
-	private int size;
+	protected ProcessorObject[] processors;
+	protected int size;
 
 	@Override
 	public void doVirusAction() {
@@ -54,13 +56,30 @@ public class ProcessorFolder extends ProcessorObject {
 		}
 	}
 
+	private ProcessorBack myback;
+	protected ProcessorBack previousback;
+
 	protected void displayNewFolder() {
 		// add to the handler all processors contained in the folder ...
 		for (int index = 0; index < size; index++) {
 			// ... only if still in the computer
-			if (getComputer().containsObject(processors[index]))
-				LAYER.PUZZLE.addObject(processors[index]);
+			if (getComputer().containsObject(processors[index]) == false)
+				continue;
+
+			// update back button
+			if (processors[index] instanceof ProcessorFolder) {
+				ProcessorFolder folder = (ProcessorFolder) processors[index];
+				folder.previousback = myback;
+				folder.refreskBack();
+			}
+
+			LAYER.PUZZLE.addObject(processors[index]);
 		}
+		LAYER.PUZZLE.addObject(previousback);
+	}
+
+	protected void refreskBack() {
+		myback = new ProcessorBack(getPuzzle(), previousback, processors);
 	}
 
 }

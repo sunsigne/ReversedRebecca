@@ -11,7 +11,7 @@ public class ProcessorDesktop extends ProcessorFolder {
 	////////// NAME ////////////
 
 	public String getName() {
-		return "desktop";
+		return "computer";
 	}
 
 	////////// VIRUS ACTION ////////////
