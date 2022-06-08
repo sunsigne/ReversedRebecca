@@ -7,7 +7,10 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -81,6 +84,34 @@ public abstract class HackPuzzle extends Puzzle {
 			img = getWallTexture();
 			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
 		}
+	}
+	
+	protected ProcessorCPU[] createCPU() {
+		ProcessorCPU[] cpu = new ProcessorCPU[3];
+		for (int index = 0; index < 3; index++) {
+			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1), getCol(3 + 2 * index), getRow(1));
+			getComputer().addObject(cpu[index]);
+		}
+		return cpu;
+	}
+
+	protected ProcessorFolder createFolder(String text, int x, int y, ProcessorObject... processors) {
+		ProcessorFolder folder = new ProcessorFolder(this, text, getCol(3), getRow(1), processors);
+		getComputer().addObject(folder);
+		return folder;
+	}
+
+	protected ProcessorSystem createSystem(ProcessorObject... processors) {
+		ProcessorSystem system = new ProcessorSystem(this, processors);
+		getComputer().addObject(system);
+		LAYER.PUZZLE.addObject(system); // prevent first click to select "system" then its back button
+		return system;
+	}
+
+	protected void createDesktop(ProcessorObject... processors) {
+		ProcessorDesktop desktop = new ProcessorDesktop(this, processors);
+		getComputer().addObject(desktop);
+		LAYER.PUZZLE.addObject(desktop);
 	}
 
 	////////// TICK ////////////
