@@ -8,6 +8,22 @@ public class ProcessorDesktop extends ProcessorFolder {
 		super(puzzle, "Desktop", puzzle.getCol(1), puzzle.getRow(1), processors);
 	}
 
+	////////// USEFULL ////////////
+	
+	@Override
+	protected void organizeProcessors() {
+		// no back button, processors start at top left
+		for (int index = 0; index < size; index++) {
+			processors[index].setX(getCase(index)[0]);
+			processors[index].setY(getCase(index)[1]);
+		}
+
+		// trash (last processor) is at the bottom right
+		processors[size - 1].setX(getCase(17)[0]);
+		processors[size - 1].setY(getCase(17)[1]);
+	}
+
+
 	////////// NAME ////////////
 
 	@Override
@@ -21,7 +37,7 @@ public class ProcessorDesktop extends ProcessorFolder {
 	public String getVirusActionSound() {
 		return null;
 	}
-	
+
 	////////// TICK ////////////
 
 	private boolean flag;

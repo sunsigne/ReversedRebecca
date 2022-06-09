@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -19,9 +20,12 @@ public class ProcessorFolder extends ProcessorObject {
 			this.processors[index] = processors[index];
 		}
 
+		organizeProcessors();
 		refreskBack();
 	}
 
+	////////// USEFULL ////////////
+	
 	// very handy when you need to add an AntivirusObject
 	public void push(ProcessorObject... processors) {
 		size = size + processors.length;
@@ -30,7 +34,36 @@ public class ProcessorFolder extends ProcessorObject {
 				processors);
 		this.processors = combinedProcessors;
 
+		organizeProcessors();
 		refreskBack();
+	}
+
+	private int[][] caze;
+
+	protected int[] getCase(int num) {
+		if (caze == null) {
+			Puzzle p = getPuzzle();
+			int gap = Size.XS + Size.XS / 2;
+			caze = new int[][] { { p.getCol(1) + gap, p.getRow(1) + gap }, { p.getCol(3) + gap, p.getRow(1) + gap },
+					{ p.getCol(5) + gap, p.getRow(1) + gap }, { p.getCol(7) + gap, p.getRow(1) + gap },
+					{ p.getCol(9) + gap, p.getRow(1) + gap }, { p.getCol(11) + gap, p.getRow(1) + gap },
+
+					{ p.getCol(1) + gap, p.getRow(3) + gap }, { p.getCol(3) + gap, p.getRow(3) + gap },
+					{ p.getCol(5) + gap, p.getRow(3) + gap }, { p.getCol(7) + gap, p.getRow(3) + gap },
+					{ p.getCol(9) + gap, p.getRow(3) + gap }, { p.getCol(11) + gap, p.getRow(3) + gap },
+
+					{ p.getCol(1) + gap, p.getRow(5) + gap }, { p.getCol(3) + gap, p.getRow(5) + gap },
+					{ p.getCol(5) + gap, p.getRow(5) + gap }, { p.getCol(7) + gap, p.getRow(5) + gap },
+					{ p.getCol(9) + gap, p.getRow(1) + gap }, { p.getCol(11) + gap, p.getRow(5) + gap }, };
+		}
+		return caze[num];
+	}
+
+	protected void organizeProcessors() {
+		for (int index = 0; index < size; index++) {
+			processors[index].setX(getCase(index + 1)[0]);
+			processors[index].setY(getCase(index + 1)[1]);
+		}
 	}
 
 	////////// NAME ////////////
