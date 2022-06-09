@@ -19,7 +19,6 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
 
@@ -57,20 +56,20 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 	////////// TICK ////////////
 
 	private boolean flag;
-	
+
 	@Override
 	public void tick() {
-		if(flag)
+		if (flag)
 			return;
-		
-		if(getComputer().hasKeyboard())
+
+		if (getComputer().hasKeyboard())
 			return;
-		
+
 		RandomGenerator rad = new RandomGenerator();
 		text = rad.getString(rad.getIntBetween(5, 8), "?#$%!@");
 		flag = true;
 	}
-	
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;

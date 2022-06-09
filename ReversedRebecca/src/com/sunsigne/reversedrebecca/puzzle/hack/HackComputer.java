@@ -50,39 +50,40 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 
 	////////// PERIPHERAL ////////////
 
-	private boolean mouse;
-
-	public boolean hasMouse() {
-		return mouse;
-	}
-	
 	private boolean keyboard;
 
 	public boolean hasKeyboard() {
 		return keyboard;
 	}
-	
+
 	private boolean screen;
 
 	public boolean hasScreen() {
 		return screen;
 	}
 
+	private boolean mouse;
+
+	public boolean hasMouse() {
+		return mouse;
+	}
+
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
-		mouse = false;
-		if (perif_list.containsObject(new PeripheralMouse(puzzle, 0, 0)))
-			mouse = true;
-		
 		keyboard = false;
 		if (perif_list.containsObject(new PeripheralKeyboard(puzzle, 0, 0)))
 			keyboard = true;
-		
+
 		screen = false;
 		if (perif_list.containsObject(new PeripheralScreen(puzzle, 0, 0)))
 			screen = true;
+
+		mouse = false;
+		if (perif_list.containsObject(new PeripheralMouse(puzzle, 0, 0)))
+			mouse = true;
+
 	}
 
 }
