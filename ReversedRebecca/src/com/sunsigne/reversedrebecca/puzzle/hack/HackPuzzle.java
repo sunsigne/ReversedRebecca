@@ -14,8 +14,6 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
-import com.sunsigne.reversedrebecca.pattern.list.GameList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -49,9 +47,11 @@ public abstract class HackPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private GameList<ProcessorObject> computer = new GameList<>(LISTTYPE.LINKED);
+	private HackComputer computer;
 
-	public GameList<ProcessorObject> getComputer() {
+	public HackComputer getComputer() {
+		if (computer == null)
+			computer = new HackComputer(this);
 		return computer;
 	}
 
@@ -150,6 +150,9 @@ public abstract class HackPuzzle extends Puzzle {
 
 	@Override
 	public void render(Graphics g) {
+		if (getComputer().hasScreen() == false)
+			return;
+
 		Color blue = new Color(10, 10, 50, 240);
 		new TransluantLayer().drawPuzzle(g, blue);
 	}

@@ -8,9 +8,9 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -45,7 +45,7 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	////////// VIRUS ACTION ////////////
 
-	public GameList<ProcessorObject> getComputer() {
+	public HackComputer getComputer() {
 		return ((HackPuzzle) getPuzzle()).getComputer();
 	}
 
