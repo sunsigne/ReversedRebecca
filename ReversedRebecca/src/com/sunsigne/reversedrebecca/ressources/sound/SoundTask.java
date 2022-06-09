@@ -21,12 +21,17 @@ public class SoundTask {
 	////////// SOUND ////////////
 
 	public void play(SOUNDTYPE soundType, String path) {
+		play(soundType, getVolume(soundType), path);
+	}
+
+	// prefere the method right above this one : the user must decide the volume,
+	// not you (unless you know what you're doing)
+	public void play(SOUNDTYPE soundType, double volume, String path) {
 		if (path == null)
 			return;
 
 		String path0 = "/ressources/audio/" + path + ".wav";
 		Clip soundclip;
-		double volume = getVolume(soundType);
 
 		try {
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();

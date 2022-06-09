@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -111,12 +112,22 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 			return;
 
 		if (isLocked()) {
-			new SoundTask().play(SOUNDTYPE.SOUND, "sound/fail");
+			playSound("sound/fail");
 			return;
 		}
 
 		doVirusAction();
-		new SoundTask().play(SOUNDTYPE.SOUND, getVirusActionSound());
+		playSound(getVirusActionSound());
+	}
+
+	private void playSound(String path) {
+		if (getComputer().hasAudio()) {
+			new SoundTask().play(SOUNDTYPE.SOUND, path);
+			return;
+		}
+			
+		double volume = VolumeSound.getVolume() / 6;
+		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);			
 	}
 
 	@Override

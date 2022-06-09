@@ -14,8 +14,12 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralCDPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralNetworkMap;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralPrinter;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScreen;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -107,16 +111,36 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected ProcessorFolder createPeripheralManager() {
-		PeripheralKeyboard keyboard = new PeripheralKeyboard(this, getCol(3), getRow(1));
+
+		PeripheralNetworkMap network = new PeripheralNetworkMap(this, getCol(3), getRow(1));
+		getComputer().addObject(network);
+
+		PeripheralKeyboard keyboard = new PeripheralKeyboard(this, getCol(5), getRow(1));
 		getComputer().addObject(keyboard);
 
-		PeripheralScreen screen = new PeripheralScreen(this, getCol(5), getRow(1));
+		PeripheralAudio audio = new PeripheralAudio(this, getCol(7), getRow(1));
+		getComputer().addObject(audio);
+
+		PeripheralPrinter printer = new PeripheralPrinter(this, getCol(9), getRow(1));
+		getComputer().addObject(printer);
+
+		PeripheralCDPlayer cd = new PeripheralCDPlayer(this, getCol(11), getRow(1));
+		getComputer().addObject(cd);
+
+		PeripheralScreen screen = new PeripheralScreen(this, getCol(1), getRow(3));
 		getComputer().addObject(screen);
 
-		PeripheralMouse mouse = new PeripheralMouse(this, getCol(7), getRow(1));
+		ProcessorCPU cpu = new ProcessorCPU(this, "Processor", getCol(3), getRow(3));
+//		getComputer().addObject(cpu);
+
+		PeripheralMouse mouse = new PeripheralMouse(this, getCol(5), getRow(3));
 		getComputer().addObject(mouse);
 
-		ProcessorFolder manager = new ProcessorFolder(this, "PCI", getCol(5), getRow(1), keyboard, screen, mouse);
+		ProcessorObject[] peripherals = new ProcessorObject[] { network, keyboard, audio, printer, cd, screen, cpu,
+				mouse };
+
+		ProcessorFolder manager = new ProcessorFolder(this, "PCI", getCol(5), getRow(1), peripherals);
+
 		getComputer().addObject(manager);
 		return manager;
 	}

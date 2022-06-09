@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralObject;
@@ -26,6 +27,12 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		return keyboard;
 	}
 
+	private boolean audio;
+
+	public boolean hasAudio() {
+		return audio;
+	}
+	
 	private boolean screen;
 
 	public boolean hasScreen() {
@@ -50,6 +57,9 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 
 			if (tempProcessor instanceof PeripheralKeyboard)
 				keyboard = true;
+			
+			if (tempProcessor instanceof PeripheralAudio)
+				audio = true;
 
 			if (tempProcessor instanceof PeripheralScreen)
 				screen = true;
@@ -61,6 +71,7 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 
 	private void resetPeripherals() {
 		keyboard = false;
+		audio = false;
 		screen = false;
 		mouse = false;
 	}
