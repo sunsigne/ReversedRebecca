@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
-import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -98,7 +98,7 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected ProcessorFolder createFolder(String text, int x, int y, ProcessorObject... processors) {
-		ProcessorFolder folder = new ProcessorFolder(this, text, getCol(3), getRow(1), processors);
+		ProcessorFolder folder = new ProcessorFolder(this, text, x, y, processors);
 		getComputer().addObject(folder);
 		return folder;
 	}
@@ -111,14 +111,20 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected void createDesktop(ProcessorObject... processors) {
+		ProcessorDesktop desktop = new ProcessorDesktop(this, processors);
+		getComputer().addObject(desktop);
+
 		ProcessorTrash trash = new ProcessorTrash(this);
 		getComputer().addObject(trash);
-		
-		ProcessorObject[] allProcessors = new ArrayCombiner<ProcessorObject>().combine(ProcessorObject.class, processors, trash);
-		
-		ProcessorDesktop desktop = new ProcessorDesktop(this, allProcessors);
-		getComputer().addObject(desktop);
+		desktop.push(trash);
+
 		LAYER.PUZZLE.addObject(desktop);
+	}
+
+	protected AntivirusLocker createLocker(int x, int y, ProcessorObject... processors) {
+		AntivirusLocker locker = new AntivirusLocker(this, x, y, processors);
+		getComputer().addObject(locker);
+		return locker;
 	}
 
 	////////// TICK ////////////

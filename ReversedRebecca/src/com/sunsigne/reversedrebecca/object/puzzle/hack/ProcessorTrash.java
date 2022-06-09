@@ -58,6 +58,7 @@ public class ProcessorTrash extends ProcessorObject {
 				.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "filled");
 	}
 
+	@Override
 	public BufferedImage getImage() {
 		if (isEmpty)
 			return empty_img;

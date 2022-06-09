@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.CyanHackPuzzle;
 
 public class HackPuzzleFactory implements PuzzleFactory {
 

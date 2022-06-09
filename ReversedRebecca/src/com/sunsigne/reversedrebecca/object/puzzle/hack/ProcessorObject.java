@@ -31,6 +31,18 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	public abstract String getName();
 
+	////////// PROCESSOR ////////////
+
+	private boolean locked;
+
+	public boolean isLocked() {
+		return locked;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
+
 	////////// VIRUS ACTION ////////////
 
 	public GameList<ProcessorObject> getComputer() {
@@ -78,10 +90,16 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isSelected()) {
-			doVirusAction();
-			new SoundTask().play(SOUNDTYPE.SOUND, getVirusActionSound());
+		if (isSelected() == false)
+			return;
+
+		if (isLocked()) {
+			new SoundTask().play(SOUNDTYPE.SOUND, "sound/fail");
+			return;
 		}
+
+		doVirusAction();
+		new SoundTask().play(SOUNDTYPE.SOUND, getVirusActionSound());
 	}
 
 	@Override

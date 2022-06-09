@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
+import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -17,6 +18,17 @@ public class ProcessorFolder extends ProcessorObject {
 		for (int index = 0; index < size; index++) {
 			this.processors[index] = processors[index];
 		}
+
+		refreskBack();
+	}
+
+	// very handy when you need to add an AntivirusObject
+	public void push(ProcessorObject... processors) {
+		size = size + processors.length;
+		ProcessorObject[] combinedProcessors = new ProcessorObject[size];
+		combinedProcessors = new ArrayCombiner<ProcessorObject>().combine(ProcessorObject.class, this.processors,
+				processors);
+		this.processors = combinedProcessors;
 
 		refreskBack();
 	}
