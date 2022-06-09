@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScreen;
@@ -55,6 +56,12 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		return mouse;
 	}
 	
+	private boolean keyboard;
+
+	public boolean hasKeyboard() {
+		return keyboard;
+	}
+	
 	private boolean screen;
 
 	public boolean hasScreen() {
@@ -68,6 +75,10 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		mouse = false;
 		if (perif_list.containsObject(new PeripheralMouse(puzzle, 0, 0)))
 			mouse = true;
+		
+		keyboard = false;
+		if (perif_list.containsObject(new PeripheralKeyboard(puzzle, 0, 0)))
+			keyboard = true;
 		
 		screen = false;
 		if (perif_list.containsObject(new PeripheralScreen(puzzle, 0, 0)))

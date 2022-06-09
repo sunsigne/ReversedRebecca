@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
@@ -20,7 +21,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class ProcessorObject extends PuzzleObject implements TickFree, MouseUserEvent {
+public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
 
 	public ProcessorObject(Puzzle puzzle, String text, int x, int y) {
 		super(puzzle, x + Size.XS + Size.XS / 2, y + Size.XS + Size.XS / 2, 5 * Size.XS, 5 * Size.XS);
@@ -53,6 +54,23 @@ public abstract class ProcessorObject extends PuzzleObject implements TickFree, 
 
 	public abstract String getVirusActionSound();
 
+	////////// TICK ////////////
+
+	private boolean flag;
+	
+	@Override
+	public void tick() {
+		if(flag)
+			return;
+		
+		if(getComputer().hasKeyboard())
+			return;
+		
+		RandomGenerator rad = new RandomGenerator();
+		text = rad.getString(rad.getIntBetween(5, 8), "?#$%!@");
+		flag = true;
+	}
+	
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
