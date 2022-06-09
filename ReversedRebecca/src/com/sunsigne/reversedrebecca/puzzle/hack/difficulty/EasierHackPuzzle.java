@@ -16,7 +16,8 @@ public class EasierHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
-
+		createPeripheralManager();
+		
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
 

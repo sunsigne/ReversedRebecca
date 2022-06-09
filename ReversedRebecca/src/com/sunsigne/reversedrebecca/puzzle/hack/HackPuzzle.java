@@ -14,6 +14,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScreen;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -51,7 +54,7 @@ public abstract class HackPuzzle extends Puzzle {
 
 	public HackComputer getComputer() {
 		if (computer == null)
-			computer = new HackComputer(this);
+			computer = new HackComputer();
 		return computer;
 	}
 
@@ -101,6 +104,21 @@ public abstract class HackPuzzle extends Puzzle {
 		ProcessorFolder folder = new ProcessorFolder(this, text, x, y, processors);
 		getComputer().addObject(folder);
 		return folder;
+	}
+
+	protected ProcessorFolder createPeripheralManager() {
+		PeripheralKeyboard keyboard = new PeripheralKeyboard(this, getCol(3), getRow(1));
+		getComputer().addObject(keyboard);
+
+		PeripheralScreen screen = new PeripheralScreen(this, getCol(5), getRow(1));
+		getComputer().addObject(screen);
+
+		PeripheralMouse mouse = new PeripheralMouse(this, getCol(7), getRow(1));
+		getComputer().addObject(mouse);
+
+		ProcessorFolder manager = new ProcessorFolder(this, "PCI", getCol(5), getRow(1), keyboard, screen, mouse);
+		getComputer().addObject(manager);
+		return manager;
 	}
 
 	protected ProcessorSystem createSystem(ProcessorObject... processors) {
