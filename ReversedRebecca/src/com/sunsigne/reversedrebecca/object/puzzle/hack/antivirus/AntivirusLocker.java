@@ -12,8 +12,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class AntivirusLocker extends AntivirusObject {
 
 	// WARNING, don't forget to add this Antivirus in the same folder than the target !
-	public AntivirusLocker(Puzzle puzzle, int x, int y, ProcessorObject... processors) {
-		super(puzzle, "Locker", x, y);
+	public AntivirusLocker(Puzzle puzzle, ProcessorObject... processors) {
+		super(puzzle, "Locker");
 
 		// chose ONE target between all processors
 		int size = processors.length;

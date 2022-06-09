@@ -11,8 +11,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ProcessorFolder extends ProcessorObject {
 
-	public ProcessorFolder(Puzzle puzzle, String text, int x, int y, ProcessorObject... processors) {
-		super(puzzle, text, x, y);
+	public ProcessorFolder(Puzzle puzzle, String text, ProcessorObject... processors) {
+		super(puzzle, text);
 
 		size = processors.length;
 		this.processors = new ProcessorObject[size];

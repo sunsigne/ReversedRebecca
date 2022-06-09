@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralScreen extends PeripheralObject {
 
-	public PeripheralScreen(Puzzle puzzle, int x, int y) {
-		super(puzzle, "Screen", x, y);
+	public PeripheralScreen(Puzzle puzzle) {
+		super(puzzle, "Screen");
 	}
 
 	////////// NAME ////////////

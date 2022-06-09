@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralCDPlayer extends PeripheralObject {
 
-	public PeripheralCDPlayer(Puzzle puzzle, int x, int y) {
-		super(puzzle, "CD Player", x, y);
+	public PeripheralCDPlayer(Puzzle puzzle) {
+		super(puzzle, "CD Player");
 	}
 
 	////////// NAME ////////////

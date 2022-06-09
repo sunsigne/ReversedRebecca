@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralMouse extends PeripheralObject {
 
-	public PeripheralMouse(Puzzle puzzle, int x, int y) {
-		super(puzzle, "Mouse", x, y);
+	public PeripheralMouse(Puzzle puzzle) {
+		super(puzzle, "Mouse");
 	}
 
 	////////// NAME ////////////

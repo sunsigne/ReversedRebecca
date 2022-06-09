@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralKeyboard extends PeripheralObject {
 
-	public PeripheralKeyboard(Puzzle puzzle, int x, int y) {
-		super(puzzle, "Keyboard", x, y);
+	public PeripheralKeyboard(Puzzle puzzle) {
+		super(puzzle, "Keyboard");
 	}
 
 	////////// NAME ////////////

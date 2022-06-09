@@ -22,10 +22,10 @@ public class EasierHackPuzzle extends HackPuzzle {
 		ProcessorCPU[] cpu = createCPU();
 
 		// windows content
-		ProcessorFolder system32 = createFolder("System32", getCol(3), getRow(1), cpu);
+		ProcessorFolder system32 = createFolder("System32", cpu);
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", getCol(3), getRow(1), system32);
+		ProcessorFolder windows = createFolder("Windows", system32);
 
 		// desktop content
 		ProcessorSystem system = createSystem(windows);

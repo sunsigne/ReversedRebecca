@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class ProcessorCPU extends ProcessorObject {
 
-	public ProcessorCPU(Puzzle puzzle, String text, int x, int y) {
-		super(puzzle, text, x, y);
+	public ProcessorCPU(Puzzle puzzle, String text) {
+		super(puzzle, text);
 	}
 
 	////////// NAME ////////////

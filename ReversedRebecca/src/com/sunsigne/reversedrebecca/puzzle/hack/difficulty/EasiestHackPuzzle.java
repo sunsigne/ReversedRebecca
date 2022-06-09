@@ -23,21 +23,11 @@ public class EasiestHackPuzzle extends HackPuzzle {
 		
 		// desktop content
 		ProcessorCPU[] cpu = createCPU();
-		AntivirusLocker locker = createLocker(getCol(7), getRow(1), cpu);
+		AntivirusLocker locker = createLocker(cpu);
 		ProcessorObject[] cpu_AND_locker = new ArrayCombiner<ProcessorObject>().combine(ProcessorObject.class, cpu, locker);
 		
 		// root content
 		createDesktop(cpu_AND_locker);
-	}
-
-	@Override
-	protected ProcessorCPU[] createCPU() {
-		ProcessorCPU[] cpu = new ProcessorCPU[3];
-		for (int index = 0; index < 3; index++) {
-			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1), getCol(1 + 2 * index), getRow(1));
-			getComputer().addObject(cpu[index]);
-		}
-		return cpu;
 	}
 
 	@Override

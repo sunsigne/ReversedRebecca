@@ -6,7 +6,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 public class ProcessorBack extends ProcessorFolder {
 
 	public ProcessorBack(Puzzle puzzle, ProcessorBack previousback, ProcessorObject... processors) {
-		super(puzzle, "back", puzzle.getCol(1), puzzle.getRow(1), processors);
+		super(puzzle, "back", processors);
 		this.previousback = previousback;
 		setX(getCase(0)[0]);
 		setY(getCase(0)[1]);

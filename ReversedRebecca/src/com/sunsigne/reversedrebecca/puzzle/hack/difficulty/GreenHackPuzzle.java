@@ -21,18 +21,18 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
-		AntivirusLocker cpu_locker = createLocker(getCol(9), getRow(1), cpu);
+		AntivirusLocker cpu_locker = createLocker(cpu);
 
 		// windows content
-		ProcessorFolder system32 = createFolder("System32", getCol(3), getRow(1), cpu);
+		ProcessorFolder system32 = createFolder("System32", cpu);
 		system32.push(cpu_locker);
 
 		// peripherals content
 		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", getCol(3), getRow(1), system32);
-		AntivirusLocker system_locker = createLocker(getCol(7), getRow(1), windows, peripherals);
+		ProcessorFolder windows = createFolder("Windows", system32);
+		AntivirusLocker system_locker = createLocker(windows, peripherals);
 		
 		// desktop content
 		ProcessorSystem system = createSystem(windows, peripherals, system_locker);

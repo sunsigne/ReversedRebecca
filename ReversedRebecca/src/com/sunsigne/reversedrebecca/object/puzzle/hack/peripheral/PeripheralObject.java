@@ -5,8 +5,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public abstract class PeripheralObject extends ProcessorObject {
 
-	public PeripheralObject(Puzzle puzzle, String text, int x, int y) {
-		super(puzzle, text, x, y);
+	public PeripheralObject(Puzzle puzzle, String text) {
+		super(puzzle, text);
 	}
 
 	////////// VIRUS ACTION ////////////

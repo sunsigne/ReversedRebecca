@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 public class ProcessorDesktop extends ProcessorFolder {
 
 	public ProcessorDesktop(Puzzle puzzle, ProcessorObject... processors) {
-		super(puzzle, "Desktop", puzzle.getCol(1), puzzle.getRow(1), processors);
+		super(puzzle, "Desktop", processors);
 	}
 
 	////////// USEFULL ////////////

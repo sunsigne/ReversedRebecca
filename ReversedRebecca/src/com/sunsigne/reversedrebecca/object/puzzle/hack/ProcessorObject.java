@@ -15,16 +15,17 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
 
-	public ProcessorObject(Puzzle puzzle, String text, int x, int y) {
-		super(puzzle, x + Size.XS + Size.XS / 2, y + Size.XS + Size.XS / 2, 5 * Size.XS, 5 * Size.XS);
+	public ProcessorObject(Puzzle puzzle, String text) {
+		super(puzzle, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2, 5 * Size.XS,
+				5 * Size.XS);
 		this.text = text;
 	}
 
@@ -125,9 +126,9 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 			new SoundTask().play(SOUNDTYPE.SOUND, path);
 			return;
 		}
-			
+
 		double volume = VolumeSound.getVolume() / 6;
-		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);			
+		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);
 	}
 
 	@Override

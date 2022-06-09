@@ -5,8 +5,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public abstract class AntivirusObject extends ProcessorObject {
 
-	public AntivirusObject(Puzzle puzzle, String text, int x, int y) {
-		super(puzzle, text, x, y);
+	public AntivirusObject(Puzzle puzzle, String text) {
+		super(puzzle, text);
 	}
 
 	////////// NAME ////////////

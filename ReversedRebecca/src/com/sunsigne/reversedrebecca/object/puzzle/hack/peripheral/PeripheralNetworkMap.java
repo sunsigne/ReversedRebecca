@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralNetworkMap extends PeripheralObject {
 
-	public PeripheralNetworkMap(Puzzle puzzle, int x, int y) {
-		super(puzzle, "Net-Map", x, y);
+	public PeripheralNetworkMap(Puzzle puzzle) {
+		super(puzzle, "Net-Map");
 	}
 
 	////////// NAME ////////////

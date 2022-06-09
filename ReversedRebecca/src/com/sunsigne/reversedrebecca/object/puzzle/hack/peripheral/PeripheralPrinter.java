@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class PeripheralPrinter extends PeripheralObject {
 
-	public PeripheralPrinter(Puzzle puzzle, int x, int y) {
-		super(puzzle, "Printer", x, y);
+	public PeripheralPrinter(Puzzle puzzle) {
+		super(puzzle, "Printer");
 	}
 
 	////////// NAME ////////////

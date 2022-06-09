@@ -21,15 +21,15 @@ public class CyanHackPuzzle extends HackPuzzle {
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
-		AntivirusLocker cpu_locker = createLocker(getCol(9), getRow(1), cpu);
+		AntivirusLocker cpu_locker = createLocker(cpu);
 
 		// windows content
-		ProcessorFolder system32 = createFolder("System32", getCol(3), getRow(1), cpu);
+		ProcessorFolder system32 = createFolder("System32", cpu);
 		system32.push(cpu_locker);
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", getCol(3), getRow(1), system32);
-		AntivirusLocker folder_locker = createLocker(getCol(5), getRow(1), system32, windows);
+		ProcessorFolder windows = createFolder("Windows", system32);
+		AntivirusLocker folder_locker = createLocker(system32, windows);
 		if (folder_locker.getTarget() == system32)
 			windows.push(folder_locker);
 

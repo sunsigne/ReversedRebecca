@@ -98,48 +98,48 @@ public abstract class HackPuzzle extends Puzzle {
 	protected ProcessorCPU[] createCPU() {
 		ProcessorCPU[] cpu = new ProcessorCPU[3];
 		for (int index = 0; index < 3; index++) {
-			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1), getCol(3 + 2 * index), getRow(1));
+			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1));
 			getComputer().addObject(cpu[index]);
 		}
 		return cpu;
 	}
 
-	protected ProcessorFolder createFolder(String text, int x, int y, ProcessorObject... processors) {
-		ProcessorFolder folder = new ProcessorFolder(this, text, x, y, processors);
+	protected ProcessorFolder createFolder(String text, ProcessorObject... processors) {
+		ProcessorFolder folder = new ProcessorFolder(this, text, processors);
 		getComputer().addObject(folder);
 		return folder;
 	}
 
 	protected ProcessorFolder createPeripheralManager() {
 
-		PeripheralNetworkMap network = new PeripheralNetworkMap(this, getCol(3), getRow(1));
+		PeripheralNetworkMap network = new PeripheralNetworkMap(this);
 		getComputer().addObject(network);
 
-		PeripheralKeyboard keyboard = new PeripheralKeyboard(this, getCol(5), getRow(1));
+		PeripheralKeyboard keyboard = new PeripheralKeyboard(this);
 		getComputer().addObject(keyboard);
 
-		PeripheralAudio audio = new PeripheralAudio(this, getCol(7), getRow(1));
+		PeripheralAudio audio = new PeripheralAudio(this);
 		getComputer().addObject(audio);
 
-		PeripheralPrinter printer = new PeripheralPrinter(this, getCol(9), getRow(1));
+		PeripheralPrinter printer = new PeripheralPrinter(this);
 		getComputer().addObject(printer);
 
-		PeripheralCDPlayer cd = new PeripheralCDPlayer(this, getCol(11), getRow(1));
+		PeripheralCDPlayer cd = new PeripheralCDPlayer(this);
 		getComputer().addObject(cd);
 
-		PeripheralScreen screen = new PeripheralScreen(this, getCol(1), getRow(3));
+		PeripheralScreen screen = new PeripheralScreen(this);
 		getComputer().addObject(screen);
 
-		ProcessorCPU cpu = new ProcessorCPU(this, "Processor", getCol(3), getRow(3));
+		ProcessorCPU cpu = new ProcessorCPU(this, "Processor");
 //		getComputer().addObject(cpu);
 
-		PeripheralMouse mouse = new PeripheralMouse(this, getCol(5), getRow(3));
+		PeripheralMouse mouse = new PeripheralMouse(this);
 		getComputer().addObject(mouse);
 
 		ProcessorObject[] peripherals = new ProcessorObject[] { network, keyboard, audio, printer, cd, screen, cpu,
 				mouse };
 
-		ProcessorFolder manager = new ProcessorFolder(this, "PCI", getCol(5), getRow(1), peripherals);
+		ProcessorFolder manager = new ProcessorFolder(this, "PCI", peripherals);
 
 		getComputer().addObject(manager);
 		return manager;
@@ -163,8 +163,8 @@ public abstract class HackPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(desktop);
 	}
 
-	protected AntivirusLocker createLocker(int x, int y, ProcessorObject... processors) {
-		AntivirusLocker locker = new AntivirusLocker(this, x, y, processors);
+	protected AntivirusLocker createLocker(ProcessorObject... processors) {
+		AntivirusLocker locker = new AntivirusLocker(this, processors);
 		getComputer().addObject(locker);
 		return locker;
 	}

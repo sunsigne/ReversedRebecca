@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 public class ProcessorTrash extends ProcessorObject {
 
 	public ProcessorTrash(Puzzle puzzle) {
-		super(puzzle, "trash", puzzle.getCol(11), puzzle.getRow(5));
+		super(puzzle, "trash");
 		loadImages();
 	}
 
