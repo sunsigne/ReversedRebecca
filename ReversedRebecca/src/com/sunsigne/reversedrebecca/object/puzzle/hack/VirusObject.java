@@ -4,8 +4,10 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
@@ -36,6 +38,10 @@ public class VirusObject extends PuzzleObject {
 		followMouse(mouseX, mouseY);
 		keepWithinPuzzleZone(mouseX, mouseY);
 
+		// if Mouse Peripheral has been destroyed
+		if (((HackPuzzle) getPuzzle()).getComputer().hasMouse() == false)
+			erraticMovements();
+
 		runAnimation();
 	}
 
@@ -54,6 +60,12 @@ public class VirusObject extends PuzzleObject {
 			setY(ymax);
 		if (mouseY < ymin)
 			setY(ymin);
+	}
+
+	private void erraticMovements() {
+		int range = 20;
+		setX(getX() + new RandomGenerator().getIntBetween(-range, range));
+		setY(getY() + new RandomGenerator().getIntBetween(-range, range));
 	}
 
 	private void runAnimation() {
