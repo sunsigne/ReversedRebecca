@@ -11,7 +11,6 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
@@ -193,8 +192,8 @@ public abstract class HackPuzzle extends Puzzle {
 		return folder;
 	}
 
-	protected ProcessorSystem createSystem(ProcessorObject... processors) {
-		ProcessorSystem system = new ProcessorSystem(this, processors);
+	protected ProcessorFolder createSystem(ProcessorObject... processors) {
+		ProcessorFolder system = createFolder("computer", "system", processors);
 		getComputer().addObject(system);
 		LAYER.PUZZLE.addObject(system); // prevent first click to select "system" then its back button
 		return system;

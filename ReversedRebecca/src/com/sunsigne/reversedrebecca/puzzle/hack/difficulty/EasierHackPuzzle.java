@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.puzzle.hack.difficulty;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
@@ -17,7 +16,7 @@ public class EasierHackPuzzle extends HackPuzzle {
 	@Override
 	public void createPuzzle() {
 		createPeripheralManager();
-		
+
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
 
@@ -28,7 +27,7 @@ public class EasierHackPuzzle extends HackPuzzle {
 		ProcessorFolder windows = createFolder("Windows", system32);
 
 		// desktop content
-		ProcessorSystem system = createSystem(windows);
+		ProcessorFolder system = createSystem(windows);
 
 		// root content
 		createDesktop(system);

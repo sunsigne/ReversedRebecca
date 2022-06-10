@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.puzzle.hack.difficulty;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
@@ -21,23 +20,23 @@ public class GreenHackPuzzle extends HackPuzzle {
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
 
-		// windows content
-		ProcessorFolder system32 = createFolder("System32", cpu);
-
 		// system content
-		ProcessorFolder windows = createFolder("Windows", system32);
+		ProcessorFolder windows = createFolder("Windows", cpu);
 
+		// music content
+		
+		
 		// desktop content
-		ProcessorSystem system = createSystem(windows, peripherals);
+		ProcessorFolder system = createSystem(windows, peripherals);
+		ProcessorFolder music = createFolder("music_0", "music", system);
 
 		// root content
 		createDesktop(system);
 
 		// antivirus
-		addLocker(system32);
-		addLocker(system32);
+		addLocker(windows);
+		addLocker(windows);
 		addLocker(system);
-		addShrinker(peripherals);
 	}
 
 }
