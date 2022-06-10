@@ -30,6 +30,7 @@ public class AntivirusShrinker extends AntivirusObject {
 		}
 		
 		virus.shrink();
+		playSound("sound/virus_shrink");
 	}
 
 	@Override
