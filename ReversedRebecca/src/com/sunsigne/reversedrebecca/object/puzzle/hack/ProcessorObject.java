@@ -78,7 +78,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 			return;
 
 		RandomGenerator rad = new RandomGenerator();
-		text = rad.getString(rad.getIntBetween(5, 8), "?#$%!@");
+		text = rad.getRandomLetters(rad.getIntBetween(5, 8), "?#$%!@");
 		flag = true;
 	}
 

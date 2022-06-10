@@ -12,7 +12,7 @@ public class RandomGenerator {
 		return new Random().nextBoolean();
 	}
 
-	public String getString(int lenght, String allowedChars) {
+	public String getRandomLetters(int lenght, String allowedChars) {
 		char[] char_array = allowedChars.toCharArray();
 		String word = "";
 
@@ -24,8 +24,12 @@ public class RandomGenerator {
 			// add this random letter to the word
 			word = word.concat(letter);
 		}
-		
+
 		return word;
+	}
+
+	public String getString(String... words) {
+		return words[getIntBetween(0, words.length - 1)];
 	}
 
 }

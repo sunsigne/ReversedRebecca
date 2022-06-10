@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.hack.difficulty;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
@@ -24,14 +25,14 @@ public class GreenHackPuzzle extends HackPuzzle {
 		ProcessorFolder windows = createFolder("Windows", cpu);
 
 		// music content
-		
+		ProcessorEatable[] mp3 = createMP3Files();
 		
 		// desktop content
 		ProcessorFolder system = createSystem(windows, peripherals);
-		ProcessorFolder music = createFolder("music_0", "music", system);
+		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
 
 		// root content
-		createDesktop(system);
+		createDesktop(system, music);
 
 		// antivirus
 		addLocker(windows);

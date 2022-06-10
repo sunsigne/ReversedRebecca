@@ -192,6 +192,30 @@ public abstract class HackPuzzle extends Puzzle {
 		return folder;
 	}
 
+	private String[] getMP3Names() {
+		String[] names = new String[] { "Jazz", "Classic", "Rock", "Rap", "RnB", "Metal", "Reggae", "Hip-Hop",
+				"Folk", "Electro" };
+		return names;
+	}
+
+	protected ProcessorEatable[] createMP3Files() {
+		RandomGenerator rad = new RandomGenerator();
+		int size = rad.getIntBetween(4, 10);
+		ProcessorEatable[] mp3 = new ProcessorEatable[size];
+
+		for (int index = 0; index < size; index++) {
+			mp3[index] = new ProcessorEatable(this, rad.getString(getMP3Names())) {
+				@Override
+				public String getName() {
+					int num = rad.getIntBetween(1, 3);
+					return "music_" + num;
+				}
+			};
+			getComputer().addObject(mp3[index]);
+		}
+		return mp3;
+	}
+
 	protected ProcessorFolder createSystem(ProcessorObject... processors) {
 		ProcessorFolder system = createFolder("computer", "system", processors);
 		getComputer().addObject(system);
