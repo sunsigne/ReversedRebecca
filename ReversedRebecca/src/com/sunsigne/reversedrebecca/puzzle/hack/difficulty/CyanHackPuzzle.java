@@ -31,6 +31,7 @@ public class CyanHackPuzzle extends HackPuzzle {
 
 		// antivirus
 		addLocker(windows);
+		addLocker(system);
 	}
 
 }

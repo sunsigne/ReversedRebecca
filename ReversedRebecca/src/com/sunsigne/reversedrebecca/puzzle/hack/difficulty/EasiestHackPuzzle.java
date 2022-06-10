@@ -31,9 +31,6 @@ public class EasiestHackPuzzle extends HackPuzzle {
 		ProcessorDesktop desktop = new ProcessorDesktop(this, processors);
 		getComputer().addObject(desktop);
 		LAYER.PUZZLE.addObject(desktop);
-
-		// antivirus
-		addLocker(desktop);
 	}
 
 }
