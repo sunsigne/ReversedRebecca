@@ -30,6 +30,8 @@ public class ProcessorBack extends ProcessorFolder {
 
 	@Override
 	protected void displayNewFolder() {
+		int size = processors.length;
+
 		// add to the handler all processors contained in the folder ...
 		for (int index = 0; index < size; index++) {
 			// ... only if still in the computer

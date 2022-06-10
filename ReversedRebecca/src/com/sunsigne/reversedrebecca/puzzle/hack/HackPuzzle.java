@@ -100,21 +100,6 @@ public abstract class HackPuzzle extends Puzzle {
 		}
 	}
 
-	protected ProcessorCPU[] createCPU() {
-		ProcessorCPU[] cpu = new ProcessorCPU[3];
-		for (int index = 0; index < 3; index++) {
-			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1));
-			getComputer().addObject(cpu[index]);
-		}
-		return cpu;
-	}
-
-	protected ProcessorFolder createFolder(String text, ProcessorObject... processors) {
-		ProcessorFolder folder = new ProcessorFolder(this, text, processors);
-		getComputer().addObject(folder);
-		return folder;
-	}
-
 	protected ProcessorFolder createPeripheralManager() {
 		RandomGenerator rad = new RandomGenerator();
 		var list = new GameList<ProcessorObject>(LISTTYPE.LINKED);
@@ -177,6 +162,21 @@ public abstract class HackPuzzle extends Puzzle {
 		return manager;
 	}
 
+	protected ProcessorCPU[] createCPU() {
+		ProcessorCPU[] cpu = new ProcessorCPU[3];
+		for (int index = 0; index < 3; index++) {
+			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1));
+			getComputer().addObject(cpu[index]);
+		}
+		return cpu;
+	}
+
+	protected ProcessorFolder createFolder(String text, ProcessorObject... processors) {
+		ProcessorFolder folder = new ProcessorFolder(this, text, processors);
+		getComputer().addObject(folder);
+		return folder;
+	}
+
 	protected ProcessorSystem createSystem(ProcessorObject... processors) {
 		ProcessorSystem system = new ProcessorSystem(this, processors);
 		getComputer().addObject(system);
@@ -195,18 +195,25 @@ public abstract class HackPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(desktop);
 	}
 
-	protected AntivirusLocker createLocker(ProcessorObject... processors) {
-		AntivirusLocker locker = new AntivirusLocker(this, processors);
+	///// antivirus /////
+
+	// each method add ONE ANTIVIRUS BETWEEN ALL POSSIBLE FOLDERS
+	// (unless cast severeal times)
+
+	protected void addLocker(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
+		AntivirusLocker locker = new AntivirusLocker(this, folders[rad]);
 		getComputer().addObject(locker);
-		return locker;
+		folders[rad].push(locker);
 	}
 
+	// WARNING, do not put more than ONE of this nightmare in your puzzle !
 	protected void addShrinker(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
 		AntivirusShrinker shrinker = new AntivirusShrinker(this);
 		getComputer().addObject(shrinker);
-
-		// add a shrinker in ONE of the folders
-		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
 		folders[rad].push(shrinker);
 	}
 
@@ -223,19 +230,20 @@ public abstract class HackPuzzle extends Puzzle {
 
 	@Override
 	public void tick() {
-		// prevent puzzle to close before CPU are ready
-		if (computer.getList().isEmpty())
-			return;
+		boolean flag = false;
 
 		for (ProcessorObject tempProcessor : getComputer().getList()) {
-			if (tempProcessor instanceof ProcessorCPU == false)
-				continue;
+			if (tempProcessor instanceof ProcessorCPU)
+				return;
 
-			return;
+			// prevent puzzle to close before puzzle is ready
+			if (tempProcessor instanceof ProcessorDesktop)
+				flag = true;
 		}
 
-		// happens when all CPU got eaten
-		closePuzzle(true);
+		if (flag)
+			// happens when all CPU got eaten
+			closePuzzle(true);
 	}
 
 	////////// RENDER ////////////

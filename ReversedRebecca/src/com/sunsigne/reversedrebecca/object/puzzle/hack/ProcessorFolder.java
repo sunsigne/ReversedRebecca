@@ -25,7 +25,7 @@ public class ProcessorFolder extends ProcessorObject {
 	}
 
 	////////// USEFULL ////////////
-	
+
 	// very handy when you need to add an AntivirusObject
 	public void push(ProcessorObject... processors) {
 		size = size + processors.length;
@@ -41,6 +41,9 @@ public class ProcessorFolder extends ProcessorObject {
 	private int[][] caze;
 
 	protected int[] getCase(int num) {
+		if (num > 17)
+			num = 17;
+
 		if (caze == null) {
 			Puzzle p = getPuzzle();
 			int gap = Size.XS + Size.XS / 2;
@@ -76,7 +79,11 @@ public class ProcessorFolder extends ProcessorObject {
 	////////// VIRUS ACTION ////////////
 
 	protected ProcessorObject[] processors;
-	protected int size;
+	private int size;
+
+	public ProcessorObject[] getProcessors() {
+		return processors;
+	}
 
 	@Override
 	public void doVirusAction() {
@@ -104,8 +111,8 @@ public class ProcessorFolder extends ProcessorObject {
 		}
 	}
 
-	protected ProcessorBack myback;
 	protected ProcessorBack previousback;
+	private ProcessorBack myback;
 
 	protected void displayNewFolder() {
 		// add to the handler all processors contained in the folder ...

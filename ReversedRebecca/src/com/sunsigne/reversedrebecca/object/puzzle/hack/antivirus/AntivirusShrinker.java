@@ -9,7 +9,6 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class AntivirusShrinker extends AntivirusObject {
 
-	// WARNING, do not put more than ONE of this nightmare in your puzzle !
 	public AntivirusShrinker(Puzzle puzzle) {
 		super(puzzle, "Shrinker");
 	}

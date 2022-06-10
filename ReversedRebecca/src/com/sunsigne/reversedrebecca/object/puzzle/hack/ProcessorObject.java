@@ -55,6 +55,16 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	public abstract String getVirusActionSound();
 
+	protected void playSound(String path) {
+		if (getComputer().hasAudio()) {
+			new SoundTask().play(SOUNDTYPE.SOUND, path);
+			return;
+		}
+
+		double volume = VolumeSound.getVolume() / 6;
+		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);
+	}
+
 	////////// TICK ////////////
 
 	private boolean flag;
@@ -119,16 +129,6 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 		doVirusAction();
 		playSound(getVirusActionSound());
-	}
-
-	private void playSound(String path) {
-		if (getComputer().hasAudio()) {
-			new SoundTask().play(SOUNDTYPE.SOUND, path);
-			return;
-		}
-
-		double volume = VolumeSound.getVolume() / 6;
-		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);
 	}
 
 	@Override

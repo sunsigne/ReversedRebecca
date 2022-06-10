@@ -9,20 +9,23 @@ public class ProcessorDesktop extends ProcessorFolder {
 	}
 
 	////////// USEFULL ////////////
-	
+
 	@Override
 	protected void organizeProcessors() {
+		int size = processors.length;
+
 		// no back button, processors start at top left
 		for (int index = 0; index < size; index++) {
 			processors[index].setX(getCase(index)[0]);
 			processors[index].setY(getCase(index)[1]);
+
+			// trash (last processor) is at the bottom right
+			if (processors[index] instanceof ProcessorTrash) {
+				processors[index].setX(getCase(17)[0]);
+				processors[index].setY(getCase(17)[1]);
+			}
 		}
-
-		// trash (last processor) is at the bottom right
-		processors[size - 1].setX(getCase(17)[0]);
-		processors[size - 1].setY(getCase(17)[1]);
 	}
-
 
 	////////// NAME ////////////
 

@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -11,16 +12,16 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class AntivirusLocker extends AntivirusObject {
 
-	// WARNING, don't forget to add this Antivirus in the same folder than the target !
-	public AntivirusLocker(Puzzle puzzle, ProcessorObject... processors) {
+	public AntivirusLocker(Puzzle puzzle, ProcessorFolder folder) {
 		super(puzzle, "Locker");
 
-		// chose ONE target between all processors
-		int size = processors.length;
-		int num = new RandomGenerator().getIntBetween(0, size - 1);
-		for (int index = 0; index < size; index++) {
-			this.target = processors[num];
-		}
+		do {
+			// chose ONE target between all processors of the folder
+			int num = new RandomGenerator().getIntBetween(0, folder.getProcessors().length - 1);
+			this.target = folder.getProcessors()[num];
+			// that is not already locked
+		} while (target.isLocked());
+		// (as lockers can lock other lockers, this loop can't be infinite)
 
 		antivirusAction();
 	}
@@ -32,7 +33,7 @@ public class AntivirusLocker extends AntivirusObject {
 	public ProcessorObject getTarget() {
 		return target;
 	}
-	
+
 	@Override
 	public void antivirusAction() {
 		target.setLocked(true);

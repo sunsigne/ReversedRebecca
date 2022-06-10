@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.puzzle.hack.difficulty;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
@@ -17,28 +16,28 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
-
+		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
-		AntivirusLocker cpu_locker = createLocker(cpu);
 
 		// windows content
 		ProcessorFolder system32 = createFolder("System32", cpu);
-		system32.push(cpu_locker);
-
-		// peripherals content
-		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system content
 		ProcessorFolder windows = createFolder("Windows", system32);
-		AntivirusLocker system_locker = createLocker(windows, peripherals);
-		
+
 		// desktop content
-		ProcessorSystem system = createSystem(windows, peripherals, system_locker);
+		ProcessorSystem system = createSystem(windows, peripherals);
 
 		// root content
 		createDesktop(system);
+
+		// antivirus
+		addLocker(system32);
+		addLocker(system32);
+		addLocker(system);
+		addShrinker(peripherals);
 	}
 
 }
