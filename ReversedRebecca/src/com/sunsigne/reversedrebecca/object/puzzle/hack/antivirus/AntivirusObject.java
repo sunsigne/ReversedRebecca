@@ -1,9 +1,9 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
-import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
-public abstract class AntivirusObject extends ProcessorObject {
+public abstract class AntivirusObject extends ProcessorEatable {
 
 	// Antivirus' tick when the HackComputer does, even when not in the Handler
 	public AntivirusObject(Puzzle puzzle, String text) {
@@ -21,14 +21,8 @@ public abstract class AntivirusObject extends ProcessorObject {
 
 	@Override
 	public void doVirusAction() {
-		getHandler().removeObject(this);
-		getComputer().removeObject(this);
+		super.doVirusAction();
 		destroyAntivirus();
-	}
-
-	@Override
-	public String getVirusActionSound() {
-		return "sound/virus_bite";
 	}
 
 	////////// ANTIVIRUS ////////////

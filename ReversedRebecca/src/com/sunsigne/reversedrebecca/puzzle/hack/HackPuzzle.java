@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
@@ -16,12 +17,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralCDPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralNetworkMap;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralPrinter;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralRAM;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScreen;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -100,6 +98,16 @@ public abstract class HackPuzzle extends Puzzle {
 		}
 	}
 
+	private PeripheralObject createPeripheralObject(String name, String text) {
+		PeripheralObject object = new PeripheralObject(this, text) {
+			@Override
+			public String getName() {
+				return name;
+			}
+		};
+		return object;
+	}
+
 	protected ProcessorFolder createPeripheralManager() {
 		RandomGenerator rad = new RandomGenerator();
 		var list = new GameList<ProcessorObject>(LISTTYPE.LINKED);
@@ -107,7 +115,7 @@ public abstract class HackPuzzle extends Puzzle {
 		// vitals peripherals are added to list,
 		// unnecessary ones sometimes are
 
-		PeripheralNetworkMap network = new PeripheralNetworkMap(this);
+		PeripheralObject network = createPeripheralObject("network_map", "Net-Map");
 		if (rad.getBoolean()) {
 			getComputer().addObject(network);
 			list.addObject(network);
@@ -121,13 +129,13 @@ public abstract class HackPuzzle extends Puzzle {
 		getComputer().addObject(audio);
 		list.addObject(audio);
 
-		PeripheralPrinter printer = new PeripheralPrinter(this);
+		PeripheralObject printer = createPeripheralObject("printer", "Printer");
 		if (rad.getBoolean()) {
 			getComputer().addObject(printer);
 			list.addObject(printer);
 		}
 
-		PeripheralCDPlayer cd = new PeripheralCDPlayer(this);
+		PeripheralObject cd = createPeripheralObject("CD_player", "CD Player");
 		if (rad.getBoolean()) {
 			getComputer().addObject(cd);
 			list.addObject(cd);
@@ -137,7 +145,7 @@ public abstract class HackPuzzle extends Puzzle {
 		getComputer().addObject(screen);
 		list.addObject(screen);
 
-		PeripheralRAM ram = new PeripheralRAM(this);
+		PeripheralObject ram = createPeripheralObject("cpu", "RAM");
 		if (rad.getBoolean()) {
 			getComputer().addObject(ram);
 			list.addObject(ram);
@@ -156,10 +164,7 @@ public abstract class HackPuzzle extends Puzzle {
 		}
 
 		// creation of the peripherals folder
-
-		ProcessorFolder manager = new ProcessorFolder(this, "PCI", peripherals);
-		getComputer().addObject(manager);
-		return manager;
+		return createFolder("peripherals", "PCI", peripherals);
 	}
 
 	protected ProcessorCPU[] createCPU() {
@@ -173,6 +178,17 @@ public abstract class HackPuzzle extends Puzzle {
 
 	protected ProcessorFolder createFolder(String text, ProcessorObject... processors) {
 		ProcessorFolder folder = new ProcessorFolder(this, text, processors);
+		getComputer().addObject(folder);
+		return folder;
+	}
+
+	protected ProcessorFolder createFolder(String name, String text, ProcessorObject... processors) {
+		ProcessorFolder folder = new ProcessorFolder(this, text, processors) {
+			@Override
+			public String getName() {
+				return name;
+			}
+		};
 		getComputer().addObject(folder);
 		return folder;
 	}
