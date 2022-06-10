@@ -19,6 +19,18 @@ public class VirusObject extends PuzzleObject {
 		loadAnimation();
 	}
 
+	////////// ANTIVIRUS ////////////
+	
+	private int shrink = 0;
+	
+	public void shrink() {
+		shrink = shrink + 6;
+	}
+	
+	public void cancelShrink() {
+		shrink = 0;
+	}
+	
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);
@@ -99,7 +111,7 @@ public class VirusObject extends PuzzleObject {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
 	}
 
 }

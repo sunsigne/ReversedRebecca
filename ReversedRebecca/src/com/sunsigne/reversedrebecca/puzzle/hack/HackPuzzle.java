@@ -14,13 +14,18 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorSystem;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralCDPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralNetworkMap;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralPrinter;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralRAM;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScreen;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -111,36 +116,63 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected ProcessorFolder createPeripheralManager() {
+		RandomGenerator rad = new RandomGenerator();
+		var list = new GameList<ProcessorObject>(LISTTYPE.LINKED);
+
+		// vitals peripherals are added to list,
+		// unnecessary ones sometimes are
 
 		PeripheralNetworkMap network = new PeripheralNetworkMap(this);
-		getComputer().addObject(network);
+		if (rad.getBoolean()) {
+			getComputer().addObject(network);
+			list.addObject(network);
+		}
 
 		PeripheralKeyboard keyboard = new PeripheralKeyboard(this);
 		getComputer().addObject(keyboard);
+		list.addObject(keyboard);
 
 		PeripheralAudio audio = new PeripheralAudio(this);
 		getComputer().addObject(audio);
+		list.addObject(audio);
 
 		PeripheralPrinter printer = new PeripheralPrinter(this);
-		getComputer().addObject(printer);
+		if (rad.getBoolean()) {
+			getComputer().addObject(printer);
+			list.addObject(printer);
+		}
 
 		PeripheralCDPlayer cd = new PeripheralCDPlayer(this);
-		getComputer().addObject(cd);
+		if (rad.getBoolean()) {
+			getComputer().addObject(cd);
+			list.addObject(cd);
+		}
 
 		PeripheralScreen screen = new PeripheralScreen(this);
 		getComputer().addObject(screen);
+		list.addObject(screen);
 
-		ProcessorCPU cpu = new ProcessorCPU(this, "Processor");
-//		getComputer().addObject(cpu);
+		PeripheralRAM ram = new PeripheralRAM(this);
+		if (rad.getBoolean()) {
+			getComputer().addObject(ram);
+			list.addObject(ram);
+		}
 
 		PeripheralMouse mouse = new PeripheralMouse(this);
 		getComputer().addObject(mouse);
+		list.addObject(mouse);
 
-		ProcessorObject[] peripherals = new ProcessorObject[] { network, keyboard, audio, printer, cd, screen, cpu,
-				mouse };
+		// conversion of the list into an Array
+
+		int size = list.getList().size();
+		ProcessorObject[] peripherals = new ProcessorObject[size];
+		for (int index = 0; index < size; index++) {
+			peripherals[index] = list.getList().get(index);
+		}
+
+		// creation of the peripherals folder
 
 		ProcessorFolder manager = new ProcessorFolder(this, "PCI", peripherals);
-
 		getComputer().addObject(manager);
 		return manager;
 	}
@@ -167,6 +199,24 @@ public abstract class HackPuzzle extends Puzzle {
 		AntivirusLocker locker = new AntivirusLocker(this, processors);
 		getComputer().addObject(locker);
 		return locker;
+	}
+
+	protected void addShrinker(ProcessorFolder... folders) {
+		AntivirusShrinker shrinker = new AntivirusShrinker(this);
+		getComputer().addObject(shrinker);
+
+		// add a shrinker in ONE of the folders
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+		folders[rad].push(shrinker);
+	}
+
+	////////// CLOSE ////////////
+
+	public void closePuzzle(boolean isPuzzleWon) {
+		// some Processors has controls "bypass" above Handler, they need this
+		getComputer().getList().forEach(tempUpdatable -> tempUpdatable.destroyControls());
+		getComputer().clear();
+		super.closePuzzle(isPuzzleWon);
 	}
 
 	////////// TICK ////////////

@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
@@ -32,7 +33,7 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 	public boolean hasAudio() {
 		return audio;
 	}
-	
+
 	private boolean screen;
 
 	public boolean hasScreen() {
@@ -52,20 +53,12 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		resetPeripherals();
 
 		for (ProcessorObject tempProcessor : getList()) {
-			if (tempProcessor instanceof PeripheralObject == false)
-				continue;
 
-			if (tempProcessor instanceof PeripheralKeyboard)
-				keyboard = true;
-			
-			if (tempProcessor instanceof PeripheralAudio)
-				audio = true;
+			if (tempProcessor instanceof PeripheralObject)
+				updatePeripherals((PeripheralObject) tempProcessor);
 
-			if (tempProcessor instanceof PeripheralScreen)
-				screen = true;
-
-			if (tempProcessor instanceof PeripheralMouse)
-				mouse = true;
+			if (tempProcessor instanceof AntivirusObject)
+				tempProcessor.tick();
 		}
 	}
 
@@ -74,6 +67,21 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		audio = false;
 		screen = false;
 		mouse = false;
+	}
+
+	private void updatePeripherals(PeripheralObject peripheral) {
+
+		if (peripheral instanceof PeripheralKeyboard)
+			keyboard = true;
+
+		if (peripheral instanceof PeripheralAudio)
+			audio = true;
+
+		if (peripheral instanceof PeripheralScreen)
+			screen = true;
+
+		if (peripheral instanceof PeripheralMouse)
+			mouse = true;
 	}
 
 }
