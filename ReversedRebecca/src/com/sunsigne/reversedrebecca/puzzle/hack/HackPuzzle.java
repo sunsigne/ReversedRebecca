@@ -16,6 +16,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
@@ -290,10 +291,14 @@ public abstract class HackPuzzle extends Puzzle {
 		getComputer().addObject(shrinker);
 		folders[rad].push(shrinker);
 	}
-	
-	// Don't forget to use createPNGFiles() to counter this Virus !
-	protected void addAntivirus(ProcessorFolder... folders) {
 
+	// Don't forget to use createPNGFiles() to counter this Virus !
+	protected void addTerminator(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+		
+		AntivirusTerminator terminator = new AntivirusTerminator(this);
+		getComputer().addObject(terminator);
+		folders[rad].push(terminator);
 	}
 
 	////////// CLOSE ////////////

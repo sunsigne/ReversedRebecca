@@ -6,9 +6,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
-public class GreenHackPuzzle extends HackPuzzle {
+public class YellowHackPuzzle extends HackPuzzle {
 
-	public GreenHackPuzzle(GenericListener actionOnWinning) {
+	public YellowHackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 	}
 
@@ -16,7 +16,7 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
-		createPeripheralManager();
+		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
@@ -29,7 +29,7 @@ public class GreenHackPuzzle extends HackPuzzle {
 		ProcessorEatable[] png = createPNGFiles();
 		
 		// desktop content
-		ProcessorFolder system = createSystem(windows);
+		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
 		ProcessorFolder image = createFolder("image_0", "Images", png);
 
