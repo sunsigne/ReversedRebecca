@@ -250,10 +250,8 @@ public abstract class HackPuzzle extends Puzzle {
 
 	@Override
 	public void render(Graphics g) {
-		if (getComputer().hasScreen() == false)
-			return;
-
-		Color blue = new Color(10, 10, 50, 240);
+		int alpha = getComputer().hasScreen() ? 240 : 100;
+		Color blue = new Color(10, 10, 50, alpha);
 		new TransluantLayer().drawPuzzle(g, blue);
 	}
 
