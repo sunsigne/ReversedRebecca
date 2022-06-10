@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralMouse;
@@ -18,6 +18,22 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 	public HackComputer() {
 		super(LISTTYPE.LINKED);
 		LAYER.PUZZLE.addObject(this);
+	}
+
+	////////// USEFULL ////////////
+
+	private VirusObject virus;
+
+	public VirusObject getVirus() {
+		if (virus == null) {
+			for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+				if (tempUpdatable instanceof VirusObject == false)
+					continue;
+
+				virus = (VirusObject) tempUpdatable;
+			}
+		}
+		return virus;
 	}
 
 	////////// PERIPHERAL ////////////
@@ -53,12 +69,8 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 		resetPeripherals();
 
 		for (ProcessorObject tempProcessor : getList()) {
-
 			if (tempProcessor instanceof PeripheralObject)
 				updatePeripherals((PeripheralObject) tempProcessor);
-
-			if (tempProcessor instanceof AntivirusObject)
-				tempProcessor.tick();
 		}
 	}
 

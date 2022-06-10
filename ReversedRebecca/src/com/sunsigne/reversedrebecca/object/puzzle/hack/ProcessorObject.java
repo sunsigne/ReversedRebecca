@@ -51,6 +51,10 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 		return ((HackPuzzle) getPuzzle()).getComputer();
 	}
 
+	public VirusObject getVirus() {
+		return getComputer().getVirus();
+	}
+
 	public abstract void doVirusAction();
 
 	public abstract String getVirusActionSound();

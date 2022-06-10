@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public abstract class AntivirusObject extends ProcessorEatable {
 
-	// Antivirus' tick when the HackComputer does, even when not in the Handler
 	public AntivirusObject(Puzzle puzzle, String text) {
 		super(puzzle, text);
 	}
