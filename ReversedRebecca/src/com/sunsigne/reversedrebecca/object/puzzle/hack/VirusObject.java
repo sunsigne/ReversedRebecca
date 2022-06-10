@@ -20,17 +20,27 @@ public class VirusObject extends PuzzleObject {
 	}
 
 	////////// ANTIVIRUS ////////////
-	
+
 	private int shrink = 0;
-	
+
 	public void shrink() {
 		shrink = shrink + 6;
 	}
-	
+
 	public void cancelShrink() {
 		shrink = 0;
 	}
-	
+
+	private boolean disguised;
+
+	public boolean isDisguised() {
+		return disguised;
+	}
+
+	public void setDisguised(boolean disguised) {
+		this.disguised = disguised;
+	}
+
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);
@@ -107,11 +117,26 @@ public class VirusObject extends PuzzleObject {
 		return animation.getState();
 	}
 
+	private BufferedImage disguise_image;
+
+	public BufferedImage getDisguiseImage() {
+		if (disguise_image == null)
+			disguise_image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_disguise");
+		return disguise_image;
+	}
+
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
+		dragImage(g, getImage());
+
+		if (isDisguised())
+			dragImage(g, getDisguiseImage());
+	}
+
+	private void dragImage(Graphics g, BufferedImage image) {
+		g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
 	}
 
 }

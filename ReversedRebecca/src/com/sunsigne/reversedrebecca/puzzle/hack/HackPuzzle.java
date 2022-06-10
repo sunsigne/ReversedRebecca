@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorHorse;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
@@ -192,10 +193,43 @@ public abstract class HackPuzzle extends Puzzle {
 		return folder;
 	}
 
-	private String[] getMP3Names() {
-		String[] names = new String[] { "Jazz", "Classic", "Rock", "Rap", "RnB", "Metal", "Reggae", "Hip-Hop",
-				"Folk", "Electro" };
+	private String[] getPNGNames() {
+		String[] names = new String[] { "Stars", "Forest", "Mountains", "River", "Desert", "Apple", "Banana", "Grapes",
+				"Potato", "Car", "Truck", "Cat", "Dog", "Snake", "Dolphin" };
 		return names;
+	}
+
+	private String[] getMP3Names() {
+		String[] names = new String[] { "Jazz", "Classic", "Rock", "Rap", "RnB", "Metal", "Reggae", "Hip-Hop", "Folk",
+				"Electro" };
+		return names;
+	}
+
+	protected ProcessorEatable[] createPNGFiles() {
+		RandomGenerator rad = new RandomGenerator();
+		int size = rad.getIntBetween(6, 10);
+		ProcessorEatable[] png = new ProcessorEatable[size];
+
+		int horse = rad.getIntBetween(0, size - 1);
+
+		// create "size" number of png files
+		for (int index = 0; index < size; index++) {
+			png[index] = new ProcessorEatable(this, rad.getString(getPNGNames())) {
+				@Override
+				public String getName() {
+					return "image_" + 1;
+				}
+			};
+			// number "horse" not added to computer yet
+			if (index != horse)
+				getComputer().addObject(png[index]);
+		}
+
+		// creation of the ProcessorHorse
+		png[horse] = new ProcessorHorse(this);
+		getComputer().addObject(png[horse]);
+
+		return png;
 	}
 
 	protected ProcessorEatable[] createMP3Files() {
@@ -203,6 +237,7 @@ public abstract class HackPuzzle extends Puzzle {
 		int size = rad.getIntBetween(4, 10);
 		ProcessorEatable[] mp3 = new ProcessorEatable[size];
 
+		// create "size" number of mp3 files
 		for (int index = 0; index < size; index++) {
 			mp3[index] = new ProcessorEatable(this, rad.getString(getMP3Names())) {
 				@Override
@@ -254,6 +289,11 @@ public abstract class HackPuzzle extends Puzzle {
 		AntivirusShrinker shrinker = new AntivirusShrinker(this);
 		getComputer().addObject(shrinker);
 		folders[rad].push(shrinker);
+	}
+	
+	// Don't forget to use createPNGFiles() to counter this Virus !
+	protected void addAntivirus(ProcessorFolder... folders) {
+
 	}
 
 	////////// CLOSE ////////////

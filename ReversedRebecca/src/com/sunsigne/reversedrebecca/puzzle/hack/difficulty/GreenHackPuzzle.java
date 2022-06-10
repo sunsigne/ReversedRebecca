@@ -26,13 +26,15 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 		// music content
 		ProcessorEatable[] mp3 = createMP3Files();
+		ProcessorEatable[] png = createPNGFiles();
 		
 		// desktop content
 		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
+		ProcessorFolder image = createFolder("image_0", "Images", png);
 
 		// root content
-		createDesktop(system, music);
+		createDesktop(system, image, music);
 
 		// antivirus
 		addLocker(windows);
