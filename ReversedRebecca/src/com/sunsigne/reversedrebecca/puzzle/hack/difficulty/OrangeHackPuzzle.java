@@ -39,16 +39,16 @@ public class OrangeHackPuzzle extends HackPuzzle {
 
 		// antivirus
 		addReverser(windows);
-		addLocker(3, 5, windows);
+		addLocker(3, 4, windows);
 		addTerminator(windows);
 
-		addShrinker(peripherals);
+//		addShrinker(peripherals);
 		
 		addLocker(1, 2, music);
 		addTerminator(image);
 		addReverser(music, image);
 		
-		addReverser(system);
+		addParalyzer(system);
 		addLocker(1, 2, system);		
 	}
 

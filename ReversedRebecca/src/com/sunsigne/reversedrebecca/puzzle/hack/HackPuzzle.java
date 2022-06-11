@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusParalyzer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusReverser;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
@@ -310,6 +311,14 @@ public abstract class HackPuzzle extends Puzzle {
 		folders[rad].push(terminator);
 	}
 
+	protected void addParalyzer(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
+		AntivirusParalyzer paralyzer = new AntivirusParalyzer(this);
+		getComputer().addObject(paralyzer);
+		folders[rad].push(paralyzer);
+	}
+	
 	// WARNING, do not put more than ONE of this nightmare in your puzzle !
 	protected void addShrinker(ProcessorFolder... folders) {
 		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
