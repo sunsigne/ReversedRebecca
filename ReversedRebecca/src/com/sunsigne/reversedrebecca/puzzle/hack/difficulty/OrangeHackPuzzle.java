@@ -16,6 +16,7 @@ public class OrangeHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createVirus();
 		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system32 content
@@ -37,19 +38,18 @@ public class OrangeHackPuzzle extends HackPuzzle {
 		createDesktop(system, image, music);
 
 		// antivirus
-		addLocker(system);
-		addLocker(windows);
-		addLocker(windows);
-		addLocker(windows);
+		addReverser(windows);
+		addLocker(3, 5, windows);
 		addTerminator(windows);
-		
+
 		addShrinker(peripherals);
-		addLocker(peripherals);
-		addLocker(peripherals);
 		
-		// for red, add a terminator in perif ?
-		
+		addLocker(1, 2, music);
 		addTerminator(image);
+		addReverser(music, image);
+		
+		addReverser(system);
+		addLocker(1, 2, system);		
 	}
 
 }
