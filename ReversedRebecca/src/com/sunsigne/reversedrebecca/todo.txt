@@ -100,5 +100,7 @@
 	////////// SUCCES ////////////
 		
 	5 fruits et légumes par jours : manger un fruit avec le Virus
+	TERMINATOR !!! : mourrir définitivement à cause d'un terminator
+	Fin secrète : finir le jeu en difficile
 		
 	

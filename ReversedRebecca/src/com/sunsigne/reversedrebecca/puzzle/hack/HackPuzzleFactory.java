@@ -8,10 +8,11 @@ import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.CyanHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.EasierHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.EasiestHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.GreenHackPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.YellowHackPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.HarderHackPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.HardestHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.OrangeHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.RedHackPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.OrangeHackPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.YellowHackPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class HackPuzzleFactory implements PuzzleFactory {
@@ -87,9 +88,9 @@ public class HackPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new RedHackPuzzle(actionOnWinning);
 		case ORANGE:
-//			return new HarderHackPuzzle(actionOnWinning);
+			return new HarderHackPuzzle(actionOnWinning);
 		case RED:
-//			return new HardestHackPuzzle(actionOnWinning);
+			return new HardestHackPuzzle(actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
