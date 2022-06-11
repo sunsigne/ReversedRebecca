@@ -6,9 +6,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
-public class YellowHackPuzzle extends HackPuzzle {
+public class RedHackPuzzle extends HackPuzzle {
 
-	public YellowHackPuzzle(GenericListener actionOnWinning) {
+	public RedHackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 	}
 
@@ -17,7 +17,7 @@ public class YellowHackPuzzle extends HackPuzzle {
 	@Override
 	public void createPuzzle() {
 		createVirus();
-		createPeripheralManager();
+		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
@@ -25,10 +25,12 @@ public class YellowHackPuzzle extends HackPuzzle {
 		// system content
 		ProcessorFolder windows = createFolder("Windows", cpu);
 
-		// desktop content
-		ProcessorFolder system = createSystem(windows);
+		// music content
 		ProcessorEatable[] mp3 = createMP3Files();
 		ProcessorEatable[] png = createPNGFiles();
+		
+		// desktop content
+		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
 		ProcessorFolder image = createFolder("image_0", "Images", png);
 
@@ -36,16 +38,19 @@ public class YellowHackPuzzle extends HackPuzzle {
 		createDesktop(system, image, music);
 
 		// antivirus
-		addLocker(3, 4, windows);
+		addParalyzer(windows);
+		addLocker(3, 5, windows);
 		addTerminator(windows);
 
-		addLocker(1, 2, image);
-		addReverser(windows, image);
-		
-		addLocker(1, 2, music);
+		addShrinker(peripherals);	
 
-		addReverser(system);
-		addLocker(system);
+		addTerminator(image);
+		addReverser(image);
+		
+		addLocker(1, 3, music);
+		addParalyzer(music);
+			
+		addLocker(1, 2, system);
 	}
 
 }

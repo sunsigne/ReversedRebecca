@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.EasiestHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.GreenHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.YellowHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.OrangeHackPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.RedHackPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.OrangeHackPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
@@ -66,7 +67,7 @@ public class HackPuzzleFactory implements PuzzleFactory {
 		case ORANGE:
 			return new OrangeHackPuzzle(actionOnWinning);
 		case RED:
-//			return new RedHackPuzzle(actionOnWinning);
+			return new RedHackPuzzle(actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -84,7 +85,7 @@ public class HackPuzzleFactory implements PuzzleFactory {
 		case GREEN:
 			return new OrangeHackPuzzle(actionOnWinning);
 		case YELLOW:
-//			return new RedHackPuzzle(actionOnWinning);
+			return new RedHackPuzzle(actionOnWinning);
 		case ORANGE:
 //			return new HarderHackPuzzle(actionOnWinning);
 		case RED:

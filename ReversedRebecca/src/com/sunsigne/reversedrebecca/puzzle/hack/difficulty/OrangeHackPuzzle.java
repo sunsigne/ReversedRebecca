@@ -38,15 +38,14 @@ public class OrangeHackPuzzle extends HackPuzzle {
 		createDesktop(system, image, music);
 
 		// antivirus
-		addReverser(windows);
 		addLocker(3, 4, windows);
 		addTerminator(windows);
 
-//		addShrinker(peripherals);
-		
-		addLocker(1, 2, music);
 		addTerminator(image);
-		addReverser(music, image);
+		addReverser(windows, image);
+		
+		addLocker(1, 3, music);
+		addParalyzer(music, peripherals);
 		
 		addParalyzer(system);
 		addLocker(1, 2, system);		
