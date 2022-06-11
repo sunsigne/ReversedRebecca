@@ -19,7 +19,7 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	@Override
 	public String getName() {
-		return "antivirus_terminator";
+		return super.getName() + "_" + "terminator";
 	}
 
 	////////// ANTIVIRUS ////////////

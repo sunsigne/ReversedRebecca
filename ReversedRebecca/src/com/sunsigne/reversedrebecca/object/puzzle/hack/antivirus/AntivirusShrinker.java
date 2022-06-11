@@ -9,6 +9,13 @@ public class AntivirusShrinker extends AntivirusObject {
 	public AntivirusShrinker(Puzzle puzzle) {
 		super(puzzle, "Shrinker");
 	}
+	
+	////////// NAME ////////////
+
+	@Override
+	public String getName() {
+		return super.getName() + "_" + "shrinker";
+	}
 
 	////////// ANTIVIRUS ////////////
 

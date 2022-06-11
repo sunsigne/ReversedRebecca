@@ -39,7 +39,12 @@ public class YellowHackPuzzle extends HackPuzzle {
 		// antivirus
 		addLocker(windows);
 		addLocker(windows);
+		addLocker(windows);
 		addTerminator(windows);
+		addShrinker(peripherals);
+		addLocker(peripherals);
+		addLocker(peripherals);
+		addTerminator(image);
 		addLocker(system);
 	}
 
