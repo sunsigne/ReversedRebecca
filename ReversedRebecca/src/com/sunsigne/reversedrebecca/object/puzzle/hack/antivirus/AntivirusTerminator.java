@@ -74,8 +74,10 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (isClickable() == false)
 			return;
 
-		if (getVirus().isDisguised())
+		if (getVirus().isDisguised()) {
 			super.mousePressed(e);
+			return;
+		}
 
 		// to threaten as soon as entering the Folder
 		if (flag == false)

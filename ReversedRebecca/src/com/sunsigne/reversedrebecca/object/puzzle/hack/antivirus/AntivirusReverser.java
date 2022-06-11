@@ -19,14 +19,23 @@ public class AntivirusReverser extends AntivirusObject {
 
 	////////// ANTIVIRUS ////////////
 
+	private boolean flag;
+	
 	@Override
 	public void antivirusAction() {
+		if(flag == false)
+			reversingSound();
 		getVirus().setReversed(true);
 	}
 
 	@Override
 	public void destroyAntivirus() {
 		getVirus().setReversed(false);
+	}
+
+	private void reversingSound() {
+		flag = true;
+		playSound("sound/antivirus_reverser");
 	}
 
 	////////// MOUSE ////////////
