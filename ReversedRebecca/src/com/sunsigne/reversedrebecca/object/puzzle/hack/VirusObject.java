@@ -24,7 +24,7 @@ public class VirusObject extends PuzzleObject {
 	private int shrink = 0;
 
 	public void shrink() {
-		shrink = shrink + 6;
+		shrink = shrink + 4;
 	}
 
 	public void cancelShrink() {

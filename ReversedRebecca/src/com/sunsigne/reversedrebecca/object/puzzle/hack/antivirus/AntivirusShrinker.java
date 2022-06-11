@@ -19,7 +19,7 @@ public class AntivirusShrinker extends AntivirusObject {
 
 	////////// ANTIVIRUS ////////////
 
-	private int attempt_before_death = 8;
+	private int attempt_before_death = 12;
 
 	@Override
 	public void antivirusAction() {

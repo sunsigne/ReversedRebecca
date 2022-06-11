@@ -55,7 +55,6 @@ public class HardestHackPuzzle extends HackPuzzle {
 		addReverser(image);
 
 		addLocker(2, 4, music);
-		addReverser(music);
 
 		addReverser(system);
 		addLocker(1, 2, system);
