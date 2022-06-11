@@ -16,6 +16,7 @@ public class YellowHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createVirus();
 		createPeripheralManager();
 
 		// system32 content
@@ -24,12 +25,10 @@ public class YellowHackPuzzle extends HackPuzzle {
 		// system content
 		ProcessorFolder windows = createFolder("Windows", cpu);
 
-		// music content
-		ProcessorEatable[] mp3 = createMP3Files();
-		ProcessorEatable[] png = createPNGFiles();
-		
 		// desktop content
 		ProcessorFolder system = createSystem(windows);
+		ProcessorEatable[] mp3 = createMP3Files();
+		ProcessorEatable[] png = createPNGFiles();
 		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
 		ProcessorFolder image = createFolder("image_0", "Images", png);
 
@@ -37,10 +36,15 @@ public class YellowHackPuzzle extends HackPuzzle {
 		createDesktop(system, image, music);
 
 		// antivirus
-		addLocker(system);
-		addLocker(windows);
-		addLocker(windows);
+		addLocker(3, 4, windows);
 		addTerminator(windows);
+
+		addLocker(1, 2, music);
+		addLocker(1, 2, image);
+		addReverser(music, image);
+
+		addReverser(system);
+		addLocker(system);
 	}
 
 }

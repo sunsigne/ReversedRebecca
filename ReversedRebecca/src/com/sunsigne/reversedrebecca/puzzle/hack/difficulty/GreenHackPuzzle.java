@@ -35,7 +35,7 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 		// antivirus
 		addLocker(2, 3, windows);		
-		addLocker(2, 3, music);
+		addLocker(1, 2, music);
 		
 		addReverser(system);
 		addLocker(system);
