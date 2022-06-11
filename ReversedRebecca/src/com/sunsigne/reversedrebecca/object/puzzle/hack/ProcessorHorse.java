@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class ProcessorHorse extends ProcessorEatable {
@@ -21,6 +22,12 @@ public class ProcessorHorse extends ProcessorEatable {
 	public void doVirusAction() {
 		super.doVirusAction();
 		getVirus().setDisguised(true);
+	}
+
+	@Override
+	public String getVirusActionSound() {
+		String sound = new RandomGenerator().getBoolean() ? "sound/horse_0" : "sound/horse_1";
+		return sound;
 	}
 
 }
