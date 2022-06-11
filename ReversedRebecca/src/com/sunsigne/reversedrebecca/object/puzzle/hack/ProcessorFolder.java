@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -107,6 +108,8 @@ public class ProcessorFolder extends ProcessorObject {
 		}
 
 		for (Updatable tempUpdatable : list.getList()) {
+			if (tempUpdatable instanceof AntivirusShrinker)
+				handler.softRemoveObject(tempUpdatable);
 			handler.removeObject(tempUpdatable);
 		}
 	}
