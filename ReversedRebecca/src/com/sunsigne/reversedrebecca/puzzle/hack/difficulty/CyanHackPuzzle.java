@@ -30,8 +30,8 @@ public class CyanHackPuzzle extends HackPuzzle {
 		createDesktop(system);
 
 		// antivirus
-		addLocker(windows);
 		addLocker(system);
+		addLocker(windows);
 	}
 
 }

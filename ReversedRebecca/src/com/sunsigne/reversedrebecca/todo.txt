@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	PuzzleHack -> créer un antivirus qui réduit la taille du virus à chaque action (jusqu'à le faire disparaitre, donc puzzle échoué)
 	finir cette histoire de serviette dans le lvl000
 	reorganiser (menu, object (sauf les vieux buttons & bombes))
 	optimiser (menu (seulement chat), object (sauf buttons & bombes))
@@ -98,5 +97,8 @@
 	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 
-	
+	////////// SUCCES ////////////
+		
+	5 fruits et légumes par jours : manger un fruit avec le Virus
+		
 	

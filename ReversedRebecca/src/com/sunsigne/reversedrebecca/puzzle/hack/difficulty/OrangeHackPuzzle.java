@@ -6,9 +6,9 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
-public class YellowHackPuzzle extends HackPuzzle {
+public class OrangeHackPuzzle extends HackPuzzle {
 
-	public YellowHackPuzzle(GenericListener actionOnWinning) {
+	public OrangeHackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 	}
 
@@ -16,7 +16,7 @@ public class YellowHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
-		createPeripheralManager();
+		ProcessorFolder peripherals = createPeripheralManager();
 
 		// system32 content
 		ProcessorCPU[] cpu = createCPU();
@@ -29,7 +29,7 @@ public class YellowHackPuzzle extends HackPuzzle {
 		ProcessorEatable[] png = createPNGFiles();
 		
 		// desktop content
-		ProcessorFolder system = createSystem(windows);
+		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
 		ProcessorFolder image = createFolder("image_0", "Images", png);
 
@@ -40,7 +40,16 @@ public class YellowHackPuzzle extends HackPuzzle {
 		addLocker(system);
 		addLocker(windows);
 		addLocker(windows);
+		addLocker(windows);
 		addTerminator(windows);
+		
+		addShrinker(peripherals);
+		addLocker(peripherals);
+		addLocker(peripherals);
+		
+		// for red, add a terminator in perif ?
+		
+		addTerminator(image);
 	}
 
 }
