@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorTrash;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusReverser;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
@@ -39,7 +40,6 @@ public abstract class HackPuzzle extends Puzzle {
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 		new GameCursor().setCursor(null);
-		createVirus();
 	}
 
 	////////// NAME ////////////
@@ -64,11 +64,6 @@ public abstract class HackPuzzle extends Puzzle {
 		if (computer == null)
 			computer = new HackComputer();
 		return computer;
-	}
-
-	private void createVirus() {
-		PuzzleObject virus = new VirusObject(this);
-		LAYER.PUZZLE.addObject(virus);
 	}
 
 	////////// OPEN ////////////
@@ -97,6 +92,11 @@ public abstract class HackPuzzle extends Puzzle {
 			img = getWallTexture();
 			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
 		}
+	}
+
+	protected void createVirus() {
+		PuzzleObject virus = new VirusObject(this);
+		LAYER.PUZZLE.addObject(virus);
 	}
 
 	private PeripheralObject createPeripheralObject(String name, String text) {
@@ -283,6 +283,33 @@ public abstract class HackPuzzle extends Puzzle {
 		folders[rad].push(locker);
 	}
 
+	// add a random num between min and max of lockers in a folder
+	protected void addLocker(int min, int max, ProcessorFolder folder) {
+		int num = new RandomGenerator().getIntBetween(min, max);
+		int count = 0;
+		while (count < num) {
+			addLocker(folder);
+			count++;
+		}
+	}
+
+	protected void addReverser(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
+		AntivirusReverser reverser = new AntivirusReverser(this);
+		getComputer().addObject(reverser);
+		folders[rad].push(reverser);
+	}
+
+	// Don't forget to use createPNGFiles() to counter this Virus !
+	protected void addTerminator(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
+		AntivirusTerminator terminator = new AntivirusTerminator(this);
+		getComputer().addObject(terminator);
+		folders[rad].push(terminator);
+	}
+
 	// WARNING, do not put more than ONE of this nightmare in your puzzle !
 	protected void addShrinker(ProcessorFolder... folders) {
 		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
@@ -290,15 +317,6 @@ public abstract class HackPuzzle extends Puzzle {
 		AntivirusShrinker shrinker = new AntivirusShrinker(this);
 		getComputer().addObject(shrinker);
 		folders[rad].push(shrinker);
-	}
-
-	// Don't forget to use createPNGFiles() to counter this Virus !
-	protected void addTerminator(ProcessorFolder... folders) {
-		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
-		
-		AntivirusTerminator terminator = new AntivirusTerminator(this);
-		getComputer().addObject(terminator);
-		folders[rad].push(terminator);
 	}
 
 	////////// CLOSE ////////////

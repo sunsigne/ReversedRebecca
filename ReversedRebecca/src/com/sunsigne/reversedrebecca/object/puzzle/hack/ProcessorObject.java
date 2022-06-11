@@ -122,6 +122,21 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 	}
 
 	@Override
+	public boolean mouseOver(int[] mousePos, int[] rect) {
+		VirusObject virus = getVirus();
+		int[] modified_rect = rect;
+
+		if (virus.isReversed()) {
+			// it's just maths, this match the pos of the reversed virus with Processor pos
+			int reversed_x = virus.xmax + virus.xmin - rect[0] - rect[2] / 2;
+			int reversed_y = virus.ymax + virus.ymin - rect[1] - rect[3] / 2;
+			modified_rect = new int[] { reversed_x, reversed_y, rect[2], rect[3] };
+		}
+
+		return MouseUserEvent.super.mouseOver(mousePos, modified_rect);
+	}
+
+	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)
 			return;

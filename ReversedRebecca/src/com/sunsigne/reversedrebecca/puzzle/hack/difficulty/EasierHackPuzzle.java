@@ -18,6 +18,7 @@ public class EasierHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createVirus();
 		createPeripheralManager();
 
 		// system32 content

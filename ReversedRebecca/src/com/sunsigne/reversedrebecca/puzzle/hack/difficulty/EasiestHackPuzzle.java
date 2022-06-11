@@ -17,6 +17,7 @@ public class EasiestHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createVirus();
 		createPeripheralManager();
 
 		// desktop content

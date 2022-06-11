@@ -15,6 +15,7 @@ public class CyanHackPuzzle extends HackPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createVirus();
 		createPeripheralManager();
 
 		// system32 content
@@ -30,8 +31,8 @@ public class CyanHackPuzzle extends HackPuzzle {
 		createDesktop(system);
 
 		// antivirus
-		addLocker(system);
 		addLocker(windows);
+		addLocker(system);
 	}
 
 }

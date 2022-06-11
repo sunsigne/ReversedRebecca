@@ -41,6 +41,16 @@ public class VirusObject extends PuzzleObject {
 		this.disguised = disguised;
 	}
 
+	private boolean reversed;
+
+	public boolean isReversed() {
+		return reversed;
+	}
+
+	public void setReversed(boolean reversed) {
+		this.reversed = reversed;
+	}
+
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);
@@ -56,6 +66,11 @@ public class VirusObject extends PuzzleObject {
 	public void tick() {
 		int mouseX = new MousePos().get()[0] - getWidth() / 2;
 		int mouseY = new MousePos().get()[1] - getHeight() / 2;
+
+		if (isReversed()) {
+			mouseX = xmax + xmin - mouseX;
+			mouseY = ymax + ymin - mouseY;
+		}
 
 		followMouse(mouseX, mouseY);
 		keepWithinPuzzleZone(mouseX, mouseY);

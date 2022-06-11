@@ -24,21 +24,16 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	////////// ANTIVIRUS ////////////
 
-	private boolean prepare_to_kill;
+	private boolean ready_to_kill;
 
 	@Override
 	public void antivirusAction() {
-		if (prepare_to_kill == false) {
-			threaten();
+		if (ready_to_kill == false) {
+			ready_to_kill = true;
 			return;
 		}
 
 		terminate();
-	}
-
-	private void threaten() {
-		prepare_to_kill = true;
-		playSound("sound/laser_aiming");
 	}
 
 	private void terminate() {
@@ -72,19 +67,39 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	////////// MOUSE ////////////
 
+	private boolean flag;
+
 	@Override
 	public void mousePressed(MouseEvent e) {
+		if (isClickable() == false)
+			return;
+
 		if (getVirus().isDisguised())
 			super.mousePressed(e);
+
+		// to threaten as soon as entering the Folder
+		if (flag == false)
+			threaten();
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+		if (isClickable() == false)
+			return;
+
 		if (getVirus().isDisguised())
 			return;
 
-		if (isClickable())
-			antivirusAction();
+		// just in case the game "missed" the threat
+		if (flag == false)
+			threaten();
+
+		antivirusAction();
+	}
+
+	private void threaten() {
+		flag = true;
+		playSound("sound/laser_aiming");
 	}
 
 }
