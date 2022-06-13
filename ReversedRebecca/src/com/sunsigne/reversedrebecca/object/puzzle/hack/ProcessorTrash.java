@@ -4,11 +4,12 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ProcessorTrash extends ProcessorEatable {
 
 	public ProcessorTrash(Puzzle puzzle) {
-		super(puzzle, "trash");
+		super(puzzle, new Translatable().getTranslatedText("ProcessorTrash", file));
 		loadImages();
 	}
 

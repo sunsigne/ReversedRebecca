@@ -25,7 +25,7 @@ public class EasierHackPuzzle extends HackPuzzle {
 		ProcessorCPU[] cpu = createCPU();
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", cpu);
+		ProcessorFolder windows = createFolder(translate("FolderWindows"), cpu);
 
 		// desktop content
 		ProcessorFolder system = createSystem(windows);

@@ -23,14 +23,14 @@ public class YellowHackPuzzle extends HackPuzzle {
 		ProcessorCPU[] cpu = createCPU();
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", cpu);
+		ProcessorFolder windows = createFolder(translate("FolderWindows"), cpu);
 
 		// desktop content
 		ProcessorFolder system = createSystem(windows);
 		ProcessorEatable[] mp3 = createMP3Files();
 		ProcessorEatable[] png = createPNGFiles();
-		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
-		ProcessorFolder image = createFolder("image_0", "Images", png);
+		ProcessorFolder music = createFolder("music_0", translate("FolderMusics"), mp3);
+		ProcessorFolder image = createFolder("image_0", translate("FolderImages"), png);
 
 		// root content
 		createDesktop(system, image, music);

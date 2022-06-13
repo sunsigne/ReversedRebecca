@@ -1,11 +1,12 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ProcessorDesktop extends ProcessorFolder {
 
 	public ProcessorDesktop(Puzzle puzzle, ProcessorObject... processors) {
-		super(puzzle, "Desktop", processors);
+		super(puzzle, new Translatable().getTranslatedText("ProcessorDesktop", file), processors);
 	}
 
 	////////// USEFULL ////////////

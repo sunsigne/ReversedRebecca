@@ -10,7 +10,7 @@
 	////////// EN COURS ////////////
 
 	finir cette histoire de serviette dans le lvl000
-	reorganiser (menu, object (sauf les vieux buttons & bombes))
+	reorganiser (menu, object (sauf les vieux buttons & bombes)) (utiliser translate() quand c'est pssobile
 	optimiser (menu (seulement chat), object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 
@@ -99,7 +99,7 @@
 
 	////////// SUCCES ////////////
 		
-	5 fruits et légumes par jours : manger un fruit avec le Virus
+	Manger 5 bits et légumes par jours : manger un fruit virtuel
 	TERMINATOR !!! : mourrir définitivement à cause d'un terminator
 	Fin secrète : finir le jeu en difficile
 		

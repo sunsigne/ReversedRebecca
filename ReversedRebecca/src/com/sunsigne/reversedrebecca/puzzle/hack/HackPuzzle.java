@@ -33,15 +33,24 @@ import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class HackPuzzle extends Puzzle {
 
+	private static String file = "puzzle.csv";
+
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 		new GameCursor().setCursor(null);
+	}
+
+	////////// USEFUL ////////////
+
+	protected String translate(String text) {
+		return new Translatable().getTranslatedText(text, file);
 	}
 
 	////////// NAME ////////////
@@ -102,7 +111,7 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	private PeripheralObject createPeripheralObject(String name, String text) {
-		PeripheralObject object = new PeripheralObject(this, text) {
+		PeripheralObject object = new PeripheralObject(this, translate("Peripheral" + text)) {
 			@Override
 			public String getName() {
 				return name;
@@ -118,7 +127,7 @@ public abstract class HackPuzzle extends Puzzle {
 		// vitals peripherals are added to list,
 		// unnecessary ones sometimes are
 
-		PeripheralObject network = createPeripheralObject("network_map", "Net-Map");
+		PeripheralObject network = createPeripheralObject("network_map", "NetMap");
 		if (rad.getBoolean()) {
 			getComputer().addObject(network);
 			list.addObject(network);
@@ -138,7 +147,7 @@ public abstract class HackPuzzle extends Puzzle {
 			list.addObject(printer);
 		}
 
-		PeripheralObject cd = createPeripheralObject("CD_player", "CD Player");
+		PeripheralObject cd = createPeripheralObject("CD_player", "CDplayer");
 		if (rad.getBoolean()) {
 			getComputer().addObject(cd);
 			list.addObject(cd);
@@ -167,13 +176,13 @@ public abstract class HackPuzzle extends Puzzle {
 		}
 
 		// creation of the peripherals folder
-		return createFolder("peripherals", "PCI", peripherals);
+		return createFolder("peripherals", translate("FolderPeripheral"), peripherals);
 	}
 
 	protected ProcessorCPU[] createCPU() {
 		ProcessorCPU[] cpu = new ProcessorCPU[3];
 		for (int index = 0; index < 3; index++) {
-			cpu[index] = new ProcessorCPU(this, "CPU-" + String.valueOf(index + 1));
+			cpu[index] = new ProcessorCPU(this, translate("ProcessorCPU") + "-" + String.valueOf(index + 1));
 			getComputer().addObject(cpu[index]);
 		}
 		return cpu;
@@ -196,16 +205,24 @@ public abstract class HackPuzzle extends Puzzle {
 		return folder;
 	}
 
+	private String[] png_names;
+	private String[] mp3_names;
+
 	private String[] getPNGNames() {
-		String[] names = new String[] { "Stars", "Forest", "Mountains", "River", "Desert", "Apple", "Banana", "Grapes",
-				"Potato", "Car", "Truck", "Cat", "Dog", "Snake", "Dolphin" };
-		return names;
+		if (png_names == null)
+			png_names = new String[] { translate("Stars"), translate("Forest"), translate("Mountains"),
+					translate("River"), translate("Desert"), translate("Apple"), translate("Banana"),
+					translate("Grapes"), translate("Potato"), translate("Car"), translate("Truck"), translate("Cat"),
+					translate("Dog"), translate("Snake"), translate("Dolphin") };
+		return png_names;
 	}
 
 	private String[] getMP3Names() {
-		String[] names = new String[] { "Jazz", "Classic", "Rock", "Rap", "RnB", "Metal", "Reggae", "Hip-Hop", "Folk",
-				"Electro" };
-		return names;
+		if (mp3_names == null)
+			mp3_names = new String[] { translate("Jazz"), translate("Classic"), translate("Rock"), translate("Rap"),
+					translate("RnB"), translate("Metal"), translate("Reggae"), translate("Hip-Hop"), translate("Folk"),
+					translate("Electro") };
+		return mp3_names;
 	}
 
 	protected ProcessorEatable[] createPNGFiles() {
@@ -255,7 +272,7 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected ProcessorFolder createSystem(ProcessorObject... processors) {
-		ProcessorFolder system = createFolder("computer", "system", processors);
+		ProcessorFolder system = createFolder("computer", translate("FolderSystem"), processors);
 		getComputer().addObject(system);
 		LAYER.PUZZLE.addObject(system); // prevent first click to select "system" then its back button
 		return system;

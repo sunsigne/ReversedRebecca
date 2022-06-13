@@ -23,12 +23,12 @@ public class GreenHackPuzzle extends HackPuzzle {
 		ProcessorCPU[] cpu = createCPU();
 
 		// system content
-		ProcessorFolder windows = createFolder("Windows", cpu);
+		ProcessorFolder windows = createFolder(translate("FolderWindows"), cpu);
 
 		// desktop content
 		ProcessorFolder system = createSystem(windows);
 		ProcessorEatable[] mp3 = createMP3Files();
-		ProcessorFolder music = createFolder("music_0", "Musics", mp3);
+		ProcessorFolder music = createFolder("music_0", translate("FolderMusics"), mp3);
 
 		// root content
 		createDesktop(system, music);
