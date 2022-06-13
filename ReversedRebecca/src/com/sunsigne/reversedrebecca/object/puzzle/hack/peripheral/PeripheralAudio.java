@@ -22,7 +22,7 @@ public class PeripheralAudio extends PeripheralObject {
 	@Override
 	public void doVirusAction() {
 		super.doVirusAction();
-		new SoundTask().play(SOUNDTYPE.SOUND, "sound/bip");
+		new SoundTask().play(SOUNDTYPE.SOUND, "sound/bip_long");
 	}
 
 	
