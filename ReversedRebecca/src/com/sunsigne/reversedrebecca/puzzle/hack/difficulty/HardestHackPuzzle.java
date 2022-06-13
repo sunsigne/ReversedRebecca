@@ -42,6 +42,7 @@ public class HardestHackPuzzle extends HackPuzzle {
 
 		// antivirus
 		addParalyzer(windows);
+		addSpawner(windows);
 		addReverser(windows);
 		addLocker(4, 6, windows);
 		addTerminator(windows);

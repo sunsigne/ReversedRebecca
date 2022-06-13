@@ -18,6 +18,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusParalyzer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusReverser;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusSpawner;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralAudio;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralKeyboard;
@@ -318,14 +319,22 @@ public abstract class HackPuzzle extends Puzzle {
 		getComputer().addObject(paralyzer);
 		folders[rad].push(paralyzer);
 	}
-	
-	// WARNING, do not put more than ONE of this nightmare in your puzzle !
+
+	// more than one of this in your puzzle will cause unexpected behavior
 	protected void addShrinker(ProcessorFolder... folders) {
 		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
 
 		AntivirusShrinker shrinker = new AntivirusShrinker(this);
 		getComputer().addObject(shrinker);
 		folders[rad].push(shrinker);
+	}
+
+	protected void addSpawner(ProcessorFolder... folders) {
+		int rad = new RandomGenerator().getIntBetween(0, folders.length - 1);
+
+		AntivirusSpawner spawner = new AntivirusSpawner(this, folders[rad]);
+		getComputer().addObject(spawner);
+		folders[rad].push(spawner);
 	}
 
 	////////// CLOSE ////////////

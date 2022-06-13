@@ -27,8 +27,20 @@ public class ProcessorFolder extends ProcessorObject {
 
 	////////// USEFULL ////////////
 
+	public boolean isFull() {
+		int count = 0;
+		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+			if (tempUpdatable instanceof ProcessorObject)
+				count++;
+		}
+		return count >= 18;
+	}
+
 	// very handy when you need to add an AntivirusObject
 	public void push(ProcessorObject... processors) {
+		if (isFull())
+			return;
+
 		size = size + processors.length;
 		ProcessorObject[] combinedProcessors = new ProcessorObject[size];
 		combinedProcessors = new ArrayCombiner<ProcessorObject>().combine(ProcessorObject.class, this.processors,
@@ -37,6 +49,41 @@ public class ProcessorFolder extends ProcessorObject {
 
 		organizeProcessors();
 		refreskBack();
+	}
+
+	public void push(boolean whileVirusWithin, ProcessorObject processors) {
+		if (whileVirusWithin == false)
+			push(processors);
+
+		else
+			pushWhileVirusWithin(processors);
+	}
+
+	private void pushWhileVirusWithin(ProcessorObject processor) {
+		if (isFull())
+			return;
+
+		getComputer().addObject(processor);
+
+		// search for free space to insert the processor
+		for (int index = 0; index < size; index++) {
+			if (getComputer().containsObject(this.processors[index]))
+				continue;
+
+			// if free space found, replaced the old processor by the new one
+			int x = processors[index].getX();
+			int y = processors[index].getY();
+			this.processors[index] = processor;
+			processor.setX(x);
+			processor.setY(y);
+			LAYER.PUZZLE.getHandler().addObject(processor);
+			refreskBack();
+			return;
+		}
+
+		// else do a classic push and an handler insertion
+		push(processor);
+		LAYER.PUZZLE.getHandler().addObject(processor);
 	}
 
 	private int[][] caze;
@@ -58,7 +105,7 @@ public class ProcessorFolder extends ProcessorObject {
 
 					{ p.getCol(1) + gap, p.getRow(5) + gap }, { p.getCol(3) + gap, p.getRow(5) + gap },
 					{ p.getCol(5) + gap, p.getRow(5) + gap }, { p.getCol(7) + gap, p.getRow(5) + gap },
-					{ p.getCol(9) + gap, p.getRow(1) + gap }, { p.getCol(11) + gap, p.getRow(5) + gap }, };
+					{ p.getCol(9) + gap, p.getRow(5) + gap }, { p.getCol(11) + gap, p.getRow(5) + gap }, };
 		}
 		return caze[num];
 	}
