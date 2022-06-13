@@ -161,7 +161,7 @@ public class ChatContent implements Updatable {
 
 		// load error character instead of missing texture
 		if (image == null) {
-			String fixedPath = "textures/characters/" + "error" + "/mood_" + "neutral";
+			String fixedPath = "textures/characters/" + "error" + "/chat/" + "neutral";
 			image = new ImageTask().loadImage(fixedPath);
 		}
 	}
@@ -186,7 +186,6 @@ public class ChatContent implements Updatable {
 
 	private void drawFacial(Graphics g) {
 		int size = 144;
-
 		g.drawImage(getImage(), x, y + 30, -size, size, null);
 	}
 
