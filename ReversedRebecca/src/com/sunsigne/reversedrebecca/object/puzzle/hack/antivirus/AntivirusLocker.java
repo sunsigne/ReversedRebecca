@@ -19,8 +19,8 @@ public class AntivirusLocker extends AntivirusObject {
 			// chose ONE target between all processors of the folder
 			int num = new RandomGenerator().getIntBetween(0, folder.getProcessors().length - 1);
 			this.target = folder.getProcessors()[num];
-			// that is not already locked
-		} while (target.isLocked());
+			// that is not already locked, or deleted
+		} while (target.isLocked() || getComputer().containsObject(target) == false);
 		// (as lockers can lock other lockers, this loop can't be infinite)
 
 		antivirusAction();
