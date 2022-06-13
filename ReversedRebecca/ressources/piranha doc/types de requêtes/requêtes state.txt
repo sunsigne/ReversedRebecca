@@ -49,6 +49,28 @@ Lorsque la Condition sera vérifiée, l'objet sera franchissable.
 Note : par défaut, les objets Piranha sont bloquants.
 
 
+////// HITBOX //////
+
+Le Type de Requête HITBOX permet de changer les dimensions de la hitbox d'un objet. L'intérêt est de rendre "propre" le chemin que peut emprunter le Joueur.
+ATTENTION : changer les dimensions de la hitbox n'influence aucun autre facteur : ni les chemins valides du PathFinder (même avec une hibox réduit à 0), ni la position officielle de l'objet, ni la règle qui défini si un objet est "à portée", ni son visuel, etc. Il est donc fortement déconseillé d'utiliser cette propriété pour créer des objets "à deux cases".
+
+Ce Type de Requête requiert 4 Cibles : une position horizontale initiale (x), verticale (y), une largeur (width), et une hauteur (height).
+L'échelle est de 16 pixels pour une taille de 1 case.
+
+exemple :
+TIME -> 0 = HITBOX -> 0, 0, 8, 16
+
+Lorsque la Condition sera vérifiée, l'objet aura une hitbox par rapport à l'objet défini comme suit : x=0, y=0, largeur=8, hauteur=16.
+Voici un petit schéma illustratif. À gauche, la hitbox d'origine. À droite, la nouvelle hitbox de l'objet :
+
+XX	XO
+XX	XO
+
+Les 4 lettres représentent une case en tout. Les X représente un obstacle infranchissable. Les O représentent une position autorisée pour le Joueur.
+Note : il est théoriquement possible de dépasser la taille d'origine d'un objet, et même d'entrée des valeurs négatives ! Tant que vous gardez à l'esprit que seule les dimensions de la hitbox change, cette pratique n'est pas déconseillée.
+Note : afin de "voir" vos hitbox, vous pouvez utiliser le debugMode "illumitati" (ressources/userdata/debugmod.txt)
+
+
 ////// INVULNERABLE //////
 
 

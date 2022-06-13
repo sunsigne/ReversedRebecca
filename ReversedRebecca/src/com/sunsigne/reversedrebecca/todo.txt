@@ -43,6 +43,7 @@
 	
 	////////// LVL000 ////////////
 	
+	faire de jolies hitbox
 	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	panière à linge + lave-linge

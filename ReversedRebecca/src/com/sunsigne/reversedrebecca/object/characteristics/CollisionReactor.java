@@ -38,7 +38,7 @@ public interface CollisionReactor extends Position {
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds())) {
 			if (blockPass) {
 				if (detectorObject instanceof Player)
-					detectorObject.setX(getX() + getBounds().width);
+					detectorObject.setX(getBounds().x + getBounds().width);
 				else
 					detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, getSize()));
 			}
@@ -52,7 +52,7 @@ public interface CollisionReactor extends Position {
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
 			if (blockPass) {
 				if (detectorObject instanceof Player)
-					detectorObject.setX(getX() - detectorObject.getWidth());
+					detectorObject.setX(getBounds().x - detectorObject.getWidth());
 				else
 					detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), getSize()));
 			}
@@ -66,7 +66,7 @@ public interface CollisionReactor extends Position {
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds())) {
 			if (blockPass) {
 				if (detectorObject instanceof Player)
-					detectorObject.setY(getY() + getBounds().height);
+					detectorObject.setY(getBounds().y + getBounds().height);
 				else
 					detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, getSize()));
 			}
@@ -79,7 +79,7 @@ public interface CollisionReactor extends Position {
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass) {
 				if (detectorObject instanceof Player)
-					detectorObject.setY(getY() - detectorObject.getHeight());
+					detectorObject.setY(getBounds().y - detectorObject.getHeight());
 				else
 					detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), getSize()));
 			}

@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -189,14 +190,35 @@ public abstract class PiranhaObject extends GameObject
 	}
 
 	private boolean blockingPath;
-	
+
 	@Override
 	public boolean isBlockingPath() {
 		return blockingPath;
 	}
-	
+
 	public void setBlockingPath(boolean blockingPath) {
 		this.blockingPath = blockingPath;
+	}
+
+	private int hitboxX, hitboxY;
+	private int hitboxW = getWidth();
+	private int hitboxH = getHeight();
+
+	// width and height should be between 0 and 16
+	public void setBounds(int x, int y, int width, int height) {
+		this.hitboxX = x * 6;
+		this.hitboxY = y * 6;
+		this.hitboxW = width * 6;
+		this.hitboxH = height * 6;
+	}
+
+	@Override
+	public Rectangle getBounds() {
+		int x = getX() + hitboxX;
+		int y = getY() + hitboxY;
+		int w = hitboxW;
+		int h = hitboxH;
+		return new Rectangle(x, y, w, h);
 	}
 
 }
