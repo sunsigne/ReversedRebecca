@@ -3,11 +3,12 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class AntivirusShrinker extends AntivirusObject {
 
 	public AntivirusShrinker(Puzzle puzzle) {
-		super(puzzle, "Shrinker");
+		super(puzzle, new Translatable().getTranslatedText("Antivirus"+ "Shrinker", file));
 	}
 	
 	////////// NAME ////////////

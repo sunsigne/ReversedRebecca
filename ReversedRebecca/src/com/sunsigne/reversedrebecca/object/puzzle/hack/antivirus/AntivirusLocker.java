@@ -8,12 +8,13 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class AntivirusLocker extends AntivirusObject {
 
 	public AntivirusLocker(Puzzle puzzle, ProcessorFolder folder) {
-		super(puzzle, "Locker");
+		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Locker", file));
 
 		do {
 			// chose ONE target between all processors of the folder

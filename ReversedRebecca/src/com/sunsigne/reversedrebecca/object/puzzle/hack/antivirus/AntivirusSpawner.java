@@ -2,11 +2,12 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class AntivirusSpawner extends AntivirusObject {
 
 	public AntivirusSpawner(Puzzle puzzle, ProcessorFolder folder) {
-		super(puzzle, "Spawner");
+		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Spawner", file));
 		this.folder = folder;
 	}
 
