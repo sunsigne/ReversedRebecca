@@ -41,7 +41,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	public void setExploded(boolean exploded) {
 		this.exploded = exploded;
 		if (exploded)
-			new SoundTask().play(SOUNDTYPE.SOUND, "sound/explosion_medium");
+			new SoundTask().play(SOUNDTYPE.SOUND, "explosion_medium");
 	}
 
 	////////// MAX COUNT ////////////
@@ -87,7 +87,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	public void removeCount() {
 		setCount(getCount() - 1);
-		new SoundTask().play(SOUNDTYPE.SOUND, "sound/explosion_small");
+		new SoundTask().play(SOUNDTYPE.SOUND, "explosion_small");
 	}
 
 	////////// TICK ////////////

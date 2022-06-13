@@ -37,7 +37,7 @@ public abstract class LootObject extends GameObject implements TickFree, Collisi
 		collidingReaction(detectorObject, false, () -> {
 			getHandler().removeObject(this);
 			LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
-			new SoundTask().play(SOUNDTYPE.SOUND, "sound/loot");
+			new SoundTask().play(SOUNDTYPE.SOUND, "loot");
 			actionWhenLooted();
 		});
 	}

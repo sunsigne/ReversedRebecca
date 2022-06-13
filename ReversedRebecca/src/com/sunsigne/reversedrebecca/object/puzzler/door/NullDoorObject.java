@@ -22,7 +22,7 @@ public class NullDoorObject extends DoorObject {
 	public void tick() {
 		if (tryClosing) {
 			if (isOpened)
-				new SoundTask().play(SOUNDTYPE.SOUND, "sound/door_close");
+				new SoundTask().play(SOUNDTYPE.SOUND, "door_close");
 			isOpened = false;
 		}
 
@@ -50,7 +50,7 @@ public class NullDoorObject extends DoorObject {
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> {
 			if (!isOpened)
-				new SoundTask().play(SOUNDTYPE.SOUND, "sound/door_open");
+				new SoundTask().play(SOUNDTYPE.SOUND, "door_open");
 			isOpened = true;
 			tryClosing = false;
 		});

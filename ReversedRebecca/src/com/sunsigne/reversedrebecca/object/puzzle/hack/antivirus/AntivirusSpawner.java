@@ -33,7 +33,7 @@ public class AntivirusSpawner extends AntivirusObject {
 	private void createLocker() {
 		AntivirusLocker locker = new AntivirusLocker(getPuzzle(), folder);
 		folder.push(true, locker);
-		playSound("sound/bip_short");
+		playSound("bip_short");
 	}
 
 	@Override

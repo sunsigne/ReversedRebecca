@@ -18,7 +18,7 @@ public abstract class ProcessorEatable extends ProcessorObject {
 
 	@Override
 	public String getVirusActionSound() {
-		return "sound/virus_bite";
+		return "virus_bite";
 	}
 	
 }

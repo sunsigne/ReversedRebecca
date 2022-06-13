@@ -186,11 +186,7 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		Player player = new PlayerFinder().getPlayer();
-		if (player == null)
-			return;
-
-		player.setCanInterract(!freeze);
+		new PlayerFinder().setPlayerCanInterract(!freeze);
 	}
 
 	public void destroy() {

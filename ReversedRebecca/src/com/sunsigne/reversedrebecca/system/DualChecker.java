@@ -57,7 +57,7 @@ public class DualChecker implements Updatable, RenderFree {
 	}
 
 	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "sound/error");
+		new SoundTask().play(SOUNDTYPE.ERROR, "error");
 		JOptionPane.showMessageDialog(null, "The game is already running.");
 		new Conductor().stopApp();
 	}

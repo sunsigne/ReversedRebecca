@@ -58,7 +58,7 @@ public abstract class ToolPlayer implements Difficulty {
 	}
 
 	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "sound/error");
+		new SoundTask().play(SOUNDTYPE.ERROR, "error");
 		JOptionPane.showMessageDialog(null,
 				"An existing or required tool in this level is undefined in ressources/userdata/characteristics.csv");
 		new Conductor().stopApp();

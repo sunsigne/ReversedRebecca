@@ -23,7 +23,7 @@ public class AntivirusParalyzer extends AntivirusObject {
 	public void antivirusAction() {
 		new MousePos().setX(Window.WIDHT / 2);
 		new MousePos().setY(Window.HEIGHT / 2);
-		playSound("sound/laser_little");
+		playSound("laser_little");
 	}
 
 	@Override

@@ -104,7 +104,7 @@ public class BombPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getVictorySound() {
-		return "sound/explosion_large";
+		return "explosion_large";
 	}
 
 }

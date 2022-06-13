@@ -35,7 +35,7 @@ public class AntivirusReverser extends AntivirusObject {
 
 	private void reversingSound() {
 		flag = true;
-		playSound("sound/antivirus_reverser");
+		playSound("antivirus_reverser");
 	}
 
 	////////// MOUSE ////////////

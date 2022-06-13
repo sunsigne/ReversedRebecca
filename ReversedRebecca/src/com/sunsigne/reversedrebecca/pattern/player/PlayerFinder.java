@@ -14,7 +14,16 @@ public class PlayerFinder {
 	}
 
 	////////// CONTROL ////////////
-	
+
+	public void setPlayerCanInterract(boolean canInterract) {
+		Player player = getPlayer();
+
+		if (player == null)
+			return;
+
+		player.setCanInterract(canInterract);
+	}
+
 	public void setUserAllowedToControlPlayer(boolean isUserAllowedToMovePlayer) {
 		Player player = getPlayer();
 
@@ -24,7 +33,7 @@ public class PlayerFinder {
 		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
 		player.setCanInterract(isUserAllowedToMovePlayer);
 	}
-	
+
 	////////// DISTANCE ////////////
 
 	public boolean isPlayerFutherThan(Velocity object, int distanceInTiles) {

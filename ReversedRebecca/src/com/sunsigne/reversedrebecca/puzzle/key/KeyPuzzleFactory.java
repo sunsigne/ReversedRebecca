@@ -104,7 +104,7 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getVictorySound() {
-		return "sound/door_unlock";
+		return "door_unlock";
 	}
 
 }

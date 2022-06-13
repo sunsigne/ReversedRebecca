@@ -147,7 +147,7 @@ public class ChatContent implements Updatable {
 			return;
 		}
 
-		new SoundTask().play(SOUNDTYPE.VOICE, "sound/voice/" + living_name);
+		new SoundTask().play(SOUNDTYPE.VOICE, living_name);
 		talkingSoundPause = true;
 	}
 

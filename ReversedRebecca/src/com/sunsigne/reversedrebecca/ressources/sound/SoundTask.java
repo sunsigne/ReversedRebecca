@@ -16,6 +16,19 @@ public class SoundTask {
 
 	public enum SOUNDTYPE {
 		MUSIC, SOUND, VOICE, ERROR;
+
+		private String getPath() {
+			switch (this) {
+			case MUSIC:
+				return "music/";
+			case SOUND:
+				return "sound/";
+			case VOICE:
+				return "voice/";
+			default:
+				return "";
+			}
+		}
 	}
 
 	////////// SOUND ////////////
@@ -30,7 +43,7 @@ public class SoundTask {
 		if (path == null)
 			return;
 
-		String path0 = "/ressources/audio/" + path + ".wav";
+		String path0 = "/ressources/audio/" + soundType.getPath() + path + ".wav";
 		Clip soundclip;
 
 		try {
@@ -54,9 +67,9 @@ public class SoundTask {
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (soundType == SOUNDTYPE.VOICE)
-				play(SOUNDTYPE.VOICE, "sound/voice/error");
+				play(SOUNDTYPE.VOICE, "error");
 			else
-				play(SOUNDTYPE.ERROR, "sound/nope");
+				play(SOUNDTYPE.ERROR, "nope");
 		}
 	}
 

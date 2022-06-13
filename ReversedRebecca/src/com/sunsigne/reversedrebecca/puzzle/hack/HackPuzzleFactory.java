@@ -104,7 +104,7 @@ public class HackPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getVictorySound() {
-		return "sound/short_circuit";
+		return "short_circuit";
 	}
 
 }

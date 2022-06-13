@@ -27,7 +27,7 @@ public class ProcessorHorse extends ProcessorEatable {
 
 	@Override
 	public String getVirusActionSound() {
-		String sound = new RandomGenerator().getBoolean() ? "sound/horse_0" : "sound/horse_1";
+		String sound = new RandomGenerator().getBoolean() ? "horse_0" : "horse_1";
 		return sound;
 	}
 

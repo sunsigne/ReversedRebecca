@@ -144,7 +144,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 			return;
 
 		if (isLocked()) {
-			playSound("sound/fail");
+			playSound("fail");
 			return;
 		}
 

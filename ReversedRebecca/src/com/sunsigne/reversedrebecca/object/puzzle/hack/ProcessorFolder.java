@@ -141,7 +141,7 @@ public class ProcessorFolder extends ProcessorObject {
 
 	@Override
 	public String getVirusActionSound() {
-		return "sound/virus_nav";
+		return "virus_nav";
 	}
 
 	protected void hideOldFolder() {
