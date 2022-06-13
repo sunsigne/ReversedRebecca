@@ -3,12 +3,12 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMain;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeVoice;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class AudioScreen extends SubMenuScreen {
 
@@ -16,6 +16,12 @@ public class AudioScreen extends SubMenuScreen {
 		super();
 		loadText();
 		createScaleButtons();
+	}
+
+	////////// USEFUL ////////////
+
+	protected void add(Updatable object) {
+		LAYER.MENU.addObject(object);
 	}
 
 	////////// NAME ////////////
@@ -47,27 +53,10 @@ public class AudioScreen extends SubMenuScreen {
 	}
 
 	private void createVolumes(int x, int y) {
-		String text = null;
-
-		// volume main
-		text = new Translatable().getTranslatedText("VolumeMain", file);
-		TitleScreenText volumeMain = new TitleScreenText(text, x, y);
-		LAYER.MENU.addObject(volumeMain);
-
-		// volume music
-		text = new Translatable().getTranslatedText("VolumeMusic", file);
-		TitleScreenText volumeMusic = new TitleScreenText(text, x, y + 104);
-		LAYER.MENU.addObject(volumeMusic);
-
-		// volume sound
-		text = new Translatable().getTranslatedText("VolumeSound", file);
-		TitleScreenText volumeSound = new TitleScreenText(text, x, y + 208);
-		LAYER.MENU.addObject(volumeSound);
-
-		// volume voice
-		text = new Translatable().getTranslatedText("VolumeVoice", file);
-		TitleScreenText volumeVoice = new TitleScreenText(text, x, y + 312);
-		LAYER.MENU.addObject(volumeVoice);
+		add(new TitleScreenText(translate("VolumeMain"), x, y));
+		add(new TitleScreenText(translate("VolumeMusic"), x, y + 104));
+		add(new TitleScreenText(translate("VolumeSound"), x, y + 208));
+		add(new TitleScreenText(translate("VolumeVoice"), x, y + 312));
 	}
 
 	private void createVolumePct(int x, int y) {
@@ -96,23 +85,10 @@ public class AudioScreen extends SubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createScaleButtons() {
-		VolumeScaleButton scale = null;
-
-		// volume main
-		scale = new VolumeScaleButton(514, new VolumeMain());
-		LAYER.MENU.addObject(scale);
-
-		// volume music
-		scale = new VolumeScaleButton(618, new VolumeMusic());
-		LAYER.MENU.addObject(scale);
-
-		// volume sound
-		scale = new VolumeScaleButton(722, new VolumeSound());
-		LAYER.MENU.addObject(scale);
-
-		// volume voice
-		scale = new VolumeScaleButton(826, new VolumeVoice());
-		LAYER.MENU.addObject(scale);
+		add(new VolumeScaleButton(514, new VolumeMain()));
+		add(new VolumeScaleButton(618, new VolumeMusic()));
+		add(new VolumeScaleButton(722, new VolumeSound()));
+		add(new VolumeScaleButton(826, new VolumeVoice()));
 	}
 
 	////////// TICK ////////////
@@ -124,15 +100,15 @@ public class AudioScreen extends SubMenuScreen {
 		// volume main
 		text = getPercentage(VolumeMain.getVolume()) + "%";
 		volumeMainPct.setText(text);
-				
+
 		// volume music
 		text = getPercentage(VolumeMusic.getVolume()) + "%";
 		volumeMusicPct.setText(text);
-				
+
 		// volume sound
 		text = getPercentage(VolumeSound.getVolume()) + "%";
 		volumeSoundPct.setText(text);
-		
+
 		// volume voice
 		text = getPercentage(VolumeVoice.getVolume()) + "%";
 		volumeVoicePct.setText(text);

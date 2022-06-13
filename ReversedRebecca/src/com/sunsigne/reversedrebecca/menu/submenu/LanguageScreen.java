@@ -54,10 +54,10 @@ public class LanguageScreen extends SubMenuScreen {
 				lang_list.add(tempfile);
 		});
 
-		while (lang_list.size() > 15)
-			lang_list.remove(14);
+		while (lang_list.size() > 12) // max size is 12
+			lang_list.remove(11);
 
-		if (lang_list.size() < 2)
+		if (lang_list.size() < 2) // less than 2 langs (which is not possible)
 			stopApp();
 	}
 

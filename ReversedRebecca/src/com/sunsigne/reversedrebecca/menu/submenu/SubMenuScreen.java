@@ -9,7 +9,6 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public abstract class SubMenuScreen extends MenuScreen {
@@ -31,9 +30,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 
 	private void createBackButton() {
 		GenericListener onPress = () -> getPreviousMenu();
-		String text = new Translatable().getTranslatedText("BackButton", file);
-
-		ButtonObject button = new TitleScreenButton(text, 740, 940, 420, 140, onPress, null);
+		ButtonObject button = new TitleScreenButton(translate("BackButton"), 740, 940, 420, 140, onPress, null);
 		button.setFacing(DIRECTION.NULL);
 		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.getHandler().addObject(button);

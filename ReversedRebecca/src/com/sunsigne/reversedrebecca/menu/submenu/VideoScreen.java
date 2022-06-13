@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
@@ -36,34 +35,33 @@ public class VideoScreen extends SubMenuScreen {
 
 	private TitleScreenText camera;
 	private TitleScreenText cameraType;
-	private TitleScreenText [] cameraDetail;
-	
+	private TitleScreenText[] cameraDetail;
+
 	private void loadText() {
 		String text = null;
 		int x = 325 + 416;
 		int y = 503;
-		
+
 		// camera
-		text = new Translatable().getTranslatedText("Camera", file);
-		camera = new TitleScreenText(text, x, y + 51);
+		camera = new TitleScreenText(translate("Camera"), x, y + 51);
 		LAYER.MENU.addObject(camera);
-		
+
 		// static / dynamic
 		String typeName = CameraOption.getType().getName();
-		text = new Translatable().getTranslatedText("Camera" + typeName, file);
-		cameraType = new TitleScreenText(text, x, y + 155);
+		text = translate("Camera" + typeName);
+		cameraType = new TitleScreenText(translate("Camera" + typeName), x, y + 155);
 		LAYER.MENU.addObject(cameraType);
-		
-		cameraDetail = new TitleScreenText [2];
-		
+
+		cameraDetail = new TitleScreenText[2];
+
 		// the camera follows the player ...
-		text = new Translatable().getTranslatedText("Camera" + "Detail", file);
+		text = translate("Camera" + "Detail");
 		cameraDetail[0] = new TitleScreenText(text, x, y + 245);
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
-		
+
 		// ... to the nearest pixel / fluidly
-		text = new Translatable().getTranslatedText(typeName + "Detail", file);
+		text = translate(typeName + "Detail");
 		cameraDetail[1] = new TitleScreenText(text, x, y + 280);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
@@ -94,7 +92,7 @@ public class VideoScreen extends SubMenuScreen {
 		new CameraOption().registerType(camera_type);
 		refresh();
 	}
-	
+
 	private void chooseNextCameraType() {
 		CAMERA_TYPE camera_type = CameraOption.getType().getNext();
 		new CameraOption().registerType(camera_type);
@@ -103,13 +101,8 @@ public class VideoScreen extends SubMenuScreen {
 
 	private void refresh() {
 		String typeName = CameraOption.getType().getName();
-		String text = null;
-		
-		text = new Translatable().getTranslatedText("Camera" + typeName, file);
-		cameraType.setText(text);
-		
-		text = new Translatable().getTranslatedText(typeName + "Detail", file);
-		cameraDetail[1].setText(text);
+		cameraType.setText(translate("Camera" + typeName));
+		cameraDetail[1].setText(translate(typeName + "Detail"));
 	}
 
 }

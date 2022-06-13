@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
@@ -16,7 +15,7 @@ public class DifficultyScreen extends SubMenuScreen {
 	public DifficultyScreen(GenericListener startWorld) {
 		super();
 		new DifficultyOption().registerDifficulty(GAME_DIFFICULTY.NORMAL);
-		
+
 		loadText();
 
 		createPlayButton(startWorld);
@@ -48,20 +47,20 @@ public class DifficultyScreen extends SubMenuScreen {
 
 		// easy / normal / hard
 		String difficultyName = DifficultyOption.getDifficulty().getName();
-		text = new Translatable().getTranslatedText("Difficulty" + difficultyName, file);
+		text = translate("Difficulty" + difficultyName);
 		difficulty = new TitleScreenText(text, x, y + 51);
 		LAYER.MENU.addObject(difficulty);
 
 		difficultyDetail = new TitleScreenText[2];
 
 		// puzzle are ...
-		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 1, file);
+		text = translate(difficultyName + "Detail" + "1");
 		difficultyDetail[0] = new TitleScreenText(text, x, y + 141);
 		difficultyDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(difficultyDetail[0]);
 
 		// ... and XP boost is ...
-		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 2, file);
+		text = translate(difficultyName + "Detail" + "2");
 		difficultyDetail[1] = new TitleScreenText(text, x, y + 176);
 		difficultyDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(difficultyDetail[1]);
@@ -73,8 +72,7 @@ public class DifficultyScreen extends SubMenuScreen {
 		int x = 325 + 416;
 		int y = 503;
 
-		String text = new Translatable().getTranslatedText("PlayButton", file);
-		ButtonObject button = new TitleScreenButton(text, x, y + 259, 415, 80, startWorld, null);
+		ButtonObject button = new TitleScreenButton(translate("PlayButton"), x, y + 259, 415, 80, startWorld, null);
 		LAYER.MENU.addObject(button);
 	}
 
@@ -112,13 +110,13 @@ public class DifficultyScreen extends SubMenuScreen {
 		String difficultyName = DifficultyOption.getDifficulty().getName();
 		String text = null;
 
-		text = new Translatable().getTranslatedText("Difficulty" + difficultyName, file);
+		text = translate("Difficulty" + difficultyName);
 		difficulty.setText(text);
 
-		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 1, file);
+		text = translate(difficultyName + "Detail" + "1");
 		difficultyDetail[0].setText(text);
 
-		text = new Translatable().getTranslatedText(difficultyName + "Detail" + 2, file);
+		text = translate(difficultyName + "Detail" + "2");
 		difficultyDetail[1].setText(text);
 	}
 

@@ -15,7 +15,6 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -42,20 +41,17 @@ public class TitleScreen extends MenuScreen {
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> playRequest();
-		String text = new Translatable().getTranslatedText("PlayButton", file);
-		createTitleScreenButton(text, 140, onPress);
+		createTitleScreenButton(translate("PlayButton"), 140, onPress);
 	}
 
 	private void createOptionsButton() {
 		GenericListener onPress = () -> new OptionsScreen();
-		String text = new Translatable().getTranslatedText("OptionsButton", file);
-		createTitleScreenButton(text, 740, onPress);
+		createTitleScreenButton(translate("OptionsButton"), 740, onPress);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
-		String text = new Translatable().getTranslatedText("QuitButton", file);
-		createTitleScreenButton(text, 1340, onPress);
+		createTitleScreenButton(translate("QuitButton"), 1340, onPress);
 	}
 
 	private void createFlagLanguageButton() {

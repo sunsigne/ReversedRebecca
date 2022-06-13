@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.buttons.EnterKeyButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -16,6 +15,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ControlsScreen extends SubMenuScreen {
 
@@ -23,6 +23,12 @@ public class ControlsScreen extends SubMenuScreen {
 		super();
 		loadText();
 		createButtons();
+	}
+
+	////////// USEFUL ////////////
+
+	protected void add(Updatable object) {
+		LAYER.MENU.addObject(object);
 	}
 
 	////////// NAME ////////////
@@ -40,45 +46,16 @@ public class ControlsScreen extends SubMenuScreen {
 	////////// TEXT ////////////
 
 	private void loadText() {
-		String text = null;
-		TitleScreenText textButton = null;
 		int x = 325;
 		int y = 503;
 
-		// up
-		text = new Translatable().getTranslatedText("Up", file);
-		textButton = new TitleScreenText(text, x, y);
-		LAYER.MENU.addObject(textButton);
-
-		// down
-		text = new Translatable().getTranslatedText("Down", file);
-		textButton = new TitleScreenText(text, x, y + 104);
-		LAYER.MENU.addObject(textButton);
-
-		// left
-		text = new Translatable().getTranslatedText("Left", file);
-		textButton = new TitleScreenText(text, x, y + 208);
-		LAYER.MENU.addObject(textButton);
-
-		// right
-		text = new Translatable().getTranslatedText("Right", file);
-		textButton = new TitleScreenText(text, x, y + 312);
-		LAYER.MENU.addObject(textButton);
-
-		// action 1
-		text = new Translatable().getTranslatedText("Action1", file);
-		textButton = new TitleScreenText(text, x + 625, y);
-		LAYER.MENU.addObject(textButton);
-
-		// action 2
-		text = new Translatable().getTranslatedText("Action2", file);
-		textButton = new TitleScreenText(text, x + 625, y + 104);
-		LAYER.MENU.addObject(textButton);
-
-		// action 3
-		text = new Translatable().getTranslatedText("Action3", file);
-		textButton = new TitleScreenText(text, x + 625, y + 208);
-		LAYER.MENU.addObject(textButton);
+		add(new TitleScreenText(translate("Up"), x, y));
+		add(new TitleScreenText(translate("Down"), x, y + 104));
+		add(new TitleScreenText(translate("Left"), x, y + 208));
+		add(new TitleScreenText(translate("Right"), x, y + 312));
+		add(new TitleScreenText(translate("Action1"), x + 625, y));
+		add(new TitleScreenText(translate("Action2"), x + 625, y + 104));
+		add(new TitleScreenText(translate("Action3"), x + 625, y + 208));
 	}
 
 	////////// BUTTONS ////////////
@@ -87,7 +64,6 @@ public class ControlsScreen extends SubMenuScreen {
 	private ButtonObject downButton;
 	private ButtonObject leftButton;
 	private ButtonObject rightButton;
-
 	private ButtonObject actionOneButton;
 	private ButtonObject actionTwoButton;
 	private ButtonObject actionThreeButton;
@@ -101,11 +77,10 @@ public class ControlsScreen extends SubMenuScreen {
 		createDownKeyButton();
 		createLeftKeyButton();
 		createRightKeyButton();
-
 		createActionOneKeyButton();
 		createActionTwoKeyButton();
 		createActionThreeKeyButton();
-		
+
 		createDefaultButton();
 	}
 
@@ -164,11 +139,10 @@ public class ControlsScreen extends SubMenuScreen {
 		actionThreeButton = getKeyboardButton(text, 625, 208, onPress);
 		LAYER.MENU.addObject(actionThreeButton);
 	}
-	
+
 	private void createDefaultButton() {
 		GenericListener onPress = () -> resetKeyboard();
-		String text = new Translatable().getTranslatedText("Default", file);
-		ButtonObject button = new TitleScreenButton(text, 1050, 503 + 312, 420, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(translate("Default"), 1050, 503 + 312, 420, 80, onPress, null);
 		LAYER.MENU.addObject(button);
 	}
 
@@ -181,36 +155,15 @@ public class ControlsScreen extends SubMenuScreen {
 	}
 
 	private void resetKeyboard() {
-		
-		// up
+
 		new UpKey().registerKey("Z", 90);
-		new UpKey().refreshKey();
-		
-		// down
 		new DownKey().registerKey("S", 83);
-		new DownKey().refreshKey();
-		
-		// left
 		new LeftKey().registerKey("Q", 81);
-		new LeftKey().refreshKey();
-		
-		// right
 		new RightKey().registerKey("D", 68);
-		new RightKey().refreshKey();
-		
-		// action 1
 		new ActionOneKey().registerKey("E", 69);
-		new ActionOneKey().refreshKey();
-		
-		// action 2
 		new ActionTwoKey().registerKey("R", 82);
-		new ActionTwoKey().refreshKey();
-		
-		// action 3
 		new ActionThreeKey().registerKey("F", 70);
-		new ActionThreeKey().refreshKey();
-		
-		// refresh Menu
+
 		new ControlsScreen();
 	}
 

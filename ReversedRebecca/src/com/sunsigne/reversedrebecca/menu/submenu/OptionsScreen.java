@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class OptionsScreen extends SubMenuScreen {
@@ -40,26 +39,22 @@ public class OptionsScreen extends SubMenuScreen {
 
 	private void createGameButton() {
 		GenericListener onPress = () -> new GameScreen();
-		String text = new Translatable().getTranslatedText("GameButton", file);
-		createOptionScreenButton(text, 206, 104, onPress);
+		createOptionScreenButton(translate("GameButton"), 206, 104, onPress);
 	}
 
 	private void createControlsButton() {
 		GenericListener onPress = () -> new ControlsScreen();
-		String text = new Translatable().getTranslatedText("ControlsButton", file);
-		createOptionScreenButton(text, 623, 104, onPress);
+		createOptionScreenButton(translate("ControlsButton"), 623, 104, onPress);
 	}
 
 	private void createAudioButton() {
 		GenericListener onPress = () -> new AudioScreen();
-		String text = new Translatable().getTranslatedText("AudioButton", file);
-		createOptionScreenButton(text, 206, 208, onPress);
+		createOptionScreenButton(translate("AudioButton"), 206, 208, onPress);
 	}
 
 	private void createVideoButton() {
 		GenericListener onPress = () -> new VideoScreen();
-		String text = new Translatable().getTranslatedText("VideoButton", file);
-		createOptionScreenButton(text, 623, 208, onPress);
+		createOptionScreenButton(translate("VideoButton"), 623, 208, onPress);
 	}
 
 }

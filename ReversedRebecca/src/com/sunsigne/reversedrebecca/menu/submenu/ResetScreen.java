@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.Save;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -42,13 +41,13 @@ public class ResetScreen extends SubMenuScreen {
 		int y = 503 + 104;
 
 		// your progress will be ...
-		text = new Translatable().getTranslatedText("ResetDetail" + "1", file);
+		text = translate("ResetDetail" + "1");
 		resetDetail = new TitleScreenText(text, x, y + 146 - 56);
 		resetDetail.setFontSize(18f);
 		LAYER.MENU.addObject(resetDetail);
 
 		// ... permanently lost
-		text = new Translatable().getTranslatedText("ResetDetail" + "2", file);
+		text = translate("ResetDetail" + "2");
 		resetDetail = new TitleScreenText(text, x, y + 181 - 56);
 		resetDetail.setFontSize(18f);
 		LAYER.MENU.addObject(resetDetail);
@@ -57,14 +56,13 @@ public class ResetScreen extends SubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createResetButton() {
-		GenericListener onPress = () -> resetProgression() ;
-		String text = new Translatable().getTranslatedText("Confirm", file);
-		ButtonObject button = new TitleScreenButton(text, 741, 607, 415, 80, onPress, null);
+		GenericListener onPress = () -> resetProgression();
+		ButtonObject button = new TitleScreenButton(translate("Confirm"), 741, 607, 415, 80, onPress, null);
 		LAYER.MENU.addObject(button);
 	}
 
 	////////// BUTTON ACTION ////////////
-	
+
 	private void resetProgression() {
 		LAYER.LOADING.addObject(new LoadingScreen());
 		new Save().resetProgression();
