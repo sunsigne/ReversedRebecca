@@ -220,7 +220,7 @@ public abstract class HackPuzzle extends Puzzle {
 	private String[] getMP3Names() {
 		if (mp3_names == null)
 			mp3_names = new String[] { translate("Jazz"), translate("Classic"), translate("Rock"), translate("Rap"),
-					translate("RnB"), translate("Metal"), translate("Reggae"), translate("Hip-Hop"), translate("Folk"),
+					translate("RnB"), translate("Metal"), translate("Reggae"), translate("HipHop"), translate("Folk"),
 					translate("Electro") };
 		return mp3_names;
 	}
