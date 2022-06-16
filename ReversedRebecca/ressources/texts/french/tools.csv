@@ -5,6 +5,7 @@ KeyGreen = clef#verte
 KeyYellow = clef#jaune
 KeyOrange = clef#orange
 KeyRed = clef#rouge
+KeyPurple = clef#violette
 
 ///// BOMB /////
 
@@ -13,3 +14,13 @@ BombGreen = bombe#verte
 BombYellow = bombe#jaune
 BombOrange = bombe#orange
 BombRed = bombe#rouge
+BombPurple = bombe#violette
+
+///// MICROCHIP /////
+
+MicrochipCyan = micropuce#cyan
+MicrochipGreen = micropuce#verte
+MicrochipYellow = micropuce#jaune
+MicrochipOrange = micropuce#orange
+MicrochipRed = micropuce#rouge
+MicrochipPurple = micropuce#violette

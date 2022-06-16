@@ -5,6 +5,7 @@ KeyGreen = green#key
 KeyYellow = yellow#key
 KeyOrange = orange#key
 KeyRed = red#key
+KeyPurple = purple#key
 
 ///// BOMB /////
 
@@ -13,3 +14,13 @@ BombGreen = green#bomb
 BombYellow = yellow#bomb
 BombOrange = orange#bomb
 BombRed = red#bomb
+BombPurple = purple#bomb
+
+///// MICROCHIP /////
+
+MicrochipCyan = cyan#microchip
+MicrochipGreen = green#microchip
+MicrochipYellow = yellow#microchip
+MicrochipOrange = orange#microchip
+MicrochipRed = red#microchip
+MicrochipPurple = purple#microchip
