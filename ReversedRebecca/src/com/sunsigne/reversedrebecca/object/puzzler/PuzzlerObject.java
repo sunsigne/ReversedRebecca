@@ -90,7 +90,7 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 
 	public BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName());
+			image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName(), true);
 		return image;
 	}
 
@@ -98,7 +98,8 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		if (getImage() != null)
+			g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// COLLISION ////////////
