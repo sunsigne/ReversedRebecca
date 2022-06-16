@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.puzzle.key.difficulty;
 
 import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
-import com.sunsigne.reversedrebecca.object.puzzle.key.lock.UpsideDownLockObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public class HardestKeyPuzzle extends CyanKeyPuzzle {
@@ -15,7 +14,7 @@ public class HardestKeyPuzzle extends CyanKeyPuzzle {
 
 	@Override
 	public LockObject getLock() {
-		return new UpsideDownLockObject(this);
+		return new LockObject(this);
 	}
 
 	@Override
