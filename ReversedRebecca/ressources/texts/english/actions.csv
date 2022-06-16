@@ -1,8 +1,3 @@
-///// NPC /////
-
-TALK = talk
-TRIP = trip#up
-
 ///// DOOR /////
 
 DoorLocked = locked
@@ -12,3 +7,13 @@ DoorUnlock = unlock
 
 RubbleBlocked = blocked
 RubbleExplode = explode
+
+///// COMPUTER /////
+
+ComputerProtected = protected
+ComputerHack = hack
+
+///// HOLE /////
+
+HoleLoose = loose
+HoleDig = dig

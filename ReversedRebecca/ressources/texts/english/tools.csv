@@ -18,9 +18,18 @@ BombPurple = purple#bomb
 
 ///// MICROCHIP /////
 
-MicrochipCyan = cyan#microchip
-MicrochipGreen = green#microchip
-MicrochipYellow = yellow#microchip
-MicrochipOrange = orange#microchip
-MicrochipRed = red#microchip
-MicrochipPurple = purple#microchip
+MicrochipCyan = cyan#chip
+MicrochipGreen = green#chip
+MicrochipYellow = yellow#chip
+MicrochipOrange = orange#chip
+MicrochipRed = red#chip
+MicrochipPurple = purple#chip
+
+///// SHOVEL /////
+
+ShovelCyan = cyan#shovel
+ShovelGreen = green#shovel
+ShovelYellow = yellow#shovel
+ShovelOrange = orange#shovel
+ShovelRed = red#shovel
+ShovelPurple = purple#shovel

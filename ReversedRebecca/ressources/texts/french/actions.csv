@@ -12,3 +12,8 @@ RubbleExplode = exploser
 
 ComputerProtected = protégé
 ComputerHack = pirater
+
+///// HOLE /////
+
+HoleLoose = meuble
+HoleDig = creuser

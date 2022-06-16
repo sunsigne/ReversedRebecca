@@ -16,7 +16,7 @@ import com.sunsigne.reversedrebecca.system.Window;
 public class GUITools extends GameObject implements GUI {
 
 	private GUITools() {
-		super(0, Window.HEIGHT - Size.M, Size.M, Size.M);
+		super(0, Window.HEIGHT - Size.M - 10, Size.M, Size.M);
 		GUIList.getList().addObject(this);
 		loadImages();
 	}

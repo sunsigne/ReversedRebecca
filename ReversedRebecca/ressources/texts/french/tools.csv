@@ -18,9 +18,18 @@ BombPurple = bombe#violette
 
 ///// MICROCHIP /////
 
-MicrochipCyan = micropuce#cyan
-MicrochipGreen = micropuce#verte
-MicrochipYellow = micropuce#jaune
-MicrochipOrange = micropuce#orange
-MicrochipRed = micropuce#rouge
-MicrochipPurple = micropuce#violette
+MicrochipCyan = puce#cyan
+MicrochipGreen = puce#verte
+MicrochipYellow = puce#jaune
+MicrochipOrange = puce#orange
+MicrochipRed = puce#rouge
+MicrochipPurple = puce#violette
+
+///// SHOVEL /////
+
+ShovelCyan = pelle#cyan
+ShovelGreen = pelle#verte
+ShovelYellow = pelle#jaune
+ShovelOrange = pelle#orange
+ShovelRed = pelle#rouge
+ShovelPurple = pelle#violette
