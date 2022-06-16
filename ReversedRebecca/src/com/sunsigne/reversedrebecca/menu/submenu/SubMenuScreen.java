@@ -42,7 +42,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 
 	private BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/menu/" + getName());
+			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
 		return image;
 	}
 
@@ -51,7 +51,8 @@ public abstract class SubMenuScreen extends MenuScreen {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		g.drawImage(getImage(), 289, 465, 1324, 474, null);
+		if (getImage() != null)
+			g.drawImage(getImage(), 289, 465, 1324, 474, null);
 	}
 
 }
