@@ -26,7 +26,7 @@ public class HardestKeyPuzzle extends CyanKeyPuzzle {
 	public void createPuzzle() {
 		createLock();
 		createKey();
-		createRandomWalls(8, true);
+		createRandomWalls(6, true);
 	}
 
 }

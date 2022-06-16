@@ -48,8 +48,16 @@ public class HoleObject extends PuzzlerObject implements Facing {
 
 	protected void loadTripleAction() {
 		String noActionText = new Translatable().getTranslatedText("HoleLoose", getFile());
-		Action digAction = new DigAction(this, getFacing());
+		Action digAction = new DigAction(this) {
+			public PuzzlerObject getNullObject(int x, int y) {
+				return getNullHole(x, y);
+			}
+		};
 		tripleAction = new TripleAction(noActionText, digAction, null, null);
+	}
+
+	private PuzzlerObject getNullHole(int x, int y) {
+		return new NullHoleObject(facing, x, y);
 	}
 
 	////////// COLLISION ////////////
