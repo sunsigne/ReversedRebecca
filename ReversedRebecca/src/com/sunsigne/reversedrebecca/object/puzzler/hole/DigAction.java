@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
 public abstract class DigAction extends OpenPuzzleAction {
@@ -35,7 +35,7 @@ public abstract class DigAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
-		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, actionOnWinning);
+		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, actionOnWinning);
 	}
 
 	////////// KEYBOARD ////////////

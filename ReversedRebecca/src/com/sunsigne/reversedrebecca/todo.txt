@@ -13,6 +13,7 @@
 	reorganiser (object (sauf les vieux buttons & bombes))
 	optimiser (object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
+	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
 	////////// PIRA ////////////
 
