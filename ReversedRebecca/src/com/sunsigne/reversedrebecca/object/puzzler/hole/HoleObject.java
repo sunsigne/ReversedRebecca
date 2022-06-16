@@ -22,7 +22,7 @@ public class HoleObject extends PuzzlerObject implements Facing {
 
 	@Override
 	public String getName() {
-		return getFacing().getName() + "_" + "hole";
+		return "hole" + "_" + getFacing().getName();
 	}
 
 	////////// FACING ////////////
