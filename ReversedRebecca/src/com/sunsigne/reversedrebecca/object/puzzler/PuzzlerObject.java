@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzler;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -13,18 +14,45 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public abstract class PuzzlerObject extends GameObject implements TickFree, Difficulty, Interactive, CollisionReactor {
 
-	public PuzzlerObject(int x, int y) {
-		this(LVL.NULL, x, y);
+	// you should NOT use it : this exist for test purposes only
+	public PuzzlerObject(DEV_LVL devDifficulty, int x, int y) {
+		super(x, y);
+		this.devDifficulty = devDifficulty;
+		this.difficulty = devDifficulty.isEasy() ? LVL.CYAN : LVL.RED;
+		init();
 	}
 
 	public PuzzlerObject(LVL difficulty, int x, int y) {
 		super(x, y);
+		this.devDifficulty = null;
 		this.difficulty = difficulty;
+		init();
+	}
+
+	private void init() {
+		loadTripleAction();
+		createTextAction();
 	}
 
 	////////// NAME ////////////
 
 	public abstract String getName();
+
+	////////// DEV LVL ////////////
+
+	private DEV_LVL devDifficulty;
+
+	public DEV_LVL getDevDifficulty() {
+		return devDifficulty;
+	}
+
+	public enum DEV_LVL {
+		EASIEST, EASIER, HARDER, HARDEST;
+
+		private boolean isEasy() {
+			return this == EASIEST | this == EASIER;
+		}
+	}
 
 	////////// DIFFICULTY ////////////
 
@@ -54,6 +82,8 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 		this.isDisabled = isDisabled;
 	}
 
+	protected abstract void loadTripleAction();
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
@@ -62,6 +92,13 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 		if (image == null)
 			image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName());
 		return image;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	////////// COLLISION ////////////

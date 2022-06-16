@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.rubble.dev;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.DevDifficulty.DEV_LVL;
-import com.sunsigne.reversedrebecca.object.puzzler.rubble.dev.DevRubbleObject;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
+import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -23,7 +23,7 @@ public class MappableEasierRubble implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DevRubbleObject(DEV_LVL.EASIER, x, y);
+		return new RubbleObject(DEV_LVL.EASIER, x, y);
 	}
 
 	@Override

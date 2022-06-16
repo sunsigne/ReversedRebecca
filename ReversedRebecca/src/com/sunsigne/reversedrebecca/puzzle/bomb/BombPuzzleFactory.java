@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.bomb;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
@@ -20,7 +21,10 @@ public class BombPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+		if (devDifficulty != null)
+			return createDevPuzzle(devDifficulty, actionOnWinning);
+
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
 			return createEasyPuzzle(difficulty, actionOnWinning);
@@ -28,6 +32,22 @@ public class BombPuzzleFactory implements PuzzleFactory {
 			return createNormalPuzzle(difficulty, actionOnWinning);
 		case HARD:
 			return createHardPuzzle(difficulty, actionOnWinning);
+		}
+
+		// should not occurs
+		return null;
+	}
+
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, GenericListener actionOnWinning) {
+		switch (devDifficulty) {
+		case EASIEST:
+			return new EasiestBombPuzzle(actionOnWinning);
+		case EASIER:
+			return new EasierBombPuzzle(actionOnWinning);
+		case HARDER:
+			return new HarderBombPuzzle(actionOnWinning);
+		case HARDEST:
+			return new HardestBombPuzzle(actionOnWinning);
 		}
 
 		// should not occurs

@@ -9,10 +9,12 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class RubbleObject extends PuzzlerObject {
 
+	public RubbleObject(DEV_LVL devDifficulty, int x, int y) {
+		super(devDifficulty, x, y);
+	}
+
 	public RubbleObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
-		loadTripleAction();
-		createTextAction();
 	}
 
 	////////// NAME ////////////

@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzleFactory;
@@ -33,8 +34,8 @@ public class UnlockAction extends OpenPuzzleAction {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle getPuzzle(LVL difficulty, GenericListener actionOnWinning) {
-		return new KeyPuzzleFactory().createPuzzle(difficulty, actionOnWinning);
+	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, actionOnWinning);
 	}
 
 	@Override
