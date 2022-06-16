@@ -12,3 +12,6 @@ BombStartLvl = NULL
 
 MicrochipMaxLvl = CYAN
 MicrochipStartLvl = NULL
+
+ShovelMaxLvl = CYAN
+ShovelStartLvl = NULL

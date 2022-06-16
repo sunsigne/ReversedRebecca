@@ -1,11 +1,13 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
 import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
@@ -17,6 +19,8 @@ import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -24,11 +28,12 @@ public class TitleScreen extends MenuScreen {
 
 	public TitleScreen() {
 		super();
-
 		createPlayButton();
 		createOptionsButton();
 		createQuitButton();
 		createFlagLanguageButton();
+
+		createTestMapButton();
 	}
 
 	////////// BUTTONS ////////////
@@ -58,6 +63,13 @@ public class TitleScreen extends MenuScreen {
 		GenericListener onPress = () -> new LanguageScreen();
 		ButtonObject button = new FlagLangageButton(onPress, null);
 		LAYER.MENU.addObject(button);
+	}
+
+	private void createTestMapButton() {
+		GenericListener onPress = () -> loadTestMap();
+		// placed exactly on the "hot water tap" in the kitchen
+		ButtonObject hidden_button = new TitleScreenButton("", 108, 252, 5, 5, onPress, null);
+		LAYER.MENU.addObject(hidden_button);
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -98,6 +110,13 @@ public class TitleScreen extends MenuScreen {
 		int time = player.getCondition() == CONDITION.BED ? 4 : 0; // if in bed, must awake first
 		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
 		new GameTimer(time * Game.SEC, listener);
+	}
+
+	private void loadTestMap() {
+		DifficultyOption.setDifficulty(GAME_DIFFICULTY.NORMAL);
+		LAYER.MENU.getHandler().clear();
+		new World("test");
+		ToolPlayerList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
 	}
 
 }

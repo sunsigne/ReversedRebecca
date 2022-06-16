@@ -47,10 +47,11 @@ Blue = voir niveau / see level
 Porte / Door -> 1
 Gravas / Rubble -> 2
 Ordinateur / Computer -> 3
+Trou / Hole -> 4
 
 exemple : 
 Porte Null / Null Door : 1-255-0
-Gravas Jaune / Yellw Rubble : 2-255-3
+Gravas Jaune / Yellow Rubble : 2-255-3
 
 
 ////// VIVANTS / LIVING //////

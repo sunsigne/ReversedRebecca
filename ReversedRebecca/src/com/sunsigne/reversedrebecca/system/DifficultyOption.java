@@ -16,6 +16,11 @@ public class DifficultyOption {
 		return difficulty;
 	}
 
+	// WARNING ! Do not register difficulty ! Only apply it for the current thread
+	public static void setDifficulty(GAME_DIFFICULTY difficulty) {
+		DifficultyOption.difficulty = difficulty;
+	}
+
 	private GAME_DIFFICULTY getRegisteredDifficulty() {
 		String registeredDifficulty = new FileTask().read(getValueToRead(), file);
 		for (GAME_DIFFICULTY tempDifficulty : GAME_DIFFICULTY.values()) {
