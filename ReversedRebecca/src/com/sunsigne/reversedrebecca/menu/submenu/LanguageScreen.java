@@ -31,6 +31,9 @@ public class LanguageScreen extends SubMenuScreen {
 	////////// NAME ////////////
 
 	public String getName() {
+		if (lang_list == null)
+			loadLangList();
+
 		return "lang_" + new FormatedString().getNumber(lang_list.size());
 	}
 
