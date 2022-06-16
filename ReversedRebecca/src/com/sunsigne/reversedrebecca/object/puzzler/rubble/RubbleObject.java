@@ -24,14 +24,14 @@ public class RubbleObject extends PuzzlerObject {
 
 	////////// INTERACTION ////////////
 
-	private TripleAction tripleAction;
+	protected TripleAction tripleAction;
 
 	@Override
 	public TripleAction getTripleAction() {
 		return tripleAction;
 	}
 
-	private void loadTripleAction() {
+	protected void loadTripleAction() {
 		String noActionText = new Translatable().getTranslatedText("RubbleBlocked", getFile());
 		Action explodeAction = new ExplodeRubbleAction(this);
 		tripleAction = new TripleAction(noActionText, explodeAction, null, null);

@@ -1,24 +1,24 @@
-package com.sunsigne.reversedrebecca.object.puzzler.door.dev;
+package com.sunsigne.reversedrebecca.object.puzzler.rubble.dev;
 
 import javax.swing.JOptionPane;
 
 import com.sunsigne.reversedrebecca.object.characteristics.DevDifficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.door.UnlockAction;
+import com.sunsigne.reversedrebecca.object.puzzler.rubble.ExplodeRubbleAction;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasierKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasiestKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HarderKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HardestKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.EasierBombPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.EasiestBombPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 
-public class DevUnlockAction extends UnlockAction {
+public class DevExplodeRubbleAction extends ExplodeRubbleAction {
 
-	public DevUnlockAction(PuzzlerObject puzzlerObject) {
+	public DevExplodeRubbleAction(PuzzlerObject puzzlerObject) {
 		super(puzzlerObject);
 	}
 
@@ -42,16 +42,16 @@ public class DevUnlockAction extends UnlockAction {
 
 		switch (getDevObject().getDevDifficulty()) {
 		case EASIEST:
-			puzzle = new EasiestKeyPuzzle(actionOnWinning);
+			puzzle = new EasiestBombPuzzle(actionOnWinning);
 			break;
 		case EASIER:
-			puzzle = new EasierKeyPuzzle(actionOnWinning);
+			puzzle = new EasierBombPuzzle(actionOnWinning);
 			break;
 		case HARDER:
-			puzzle = new HarderKeyPuzzle(actionOnWinning);
+			puzzle = new HarderBombPuzzle(actionOnWinning);
 			break;
 		case HARDEST:
-			puzzle = new HardestKeyPuzzle(actionOnWinning);
+			puzzle = new HardestBombPuzzle(actionOnWinning);
 			break;
 		}
 
