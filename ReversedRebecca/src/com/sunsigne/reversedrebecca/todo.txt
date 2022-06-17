@@ -9,7 +9,8 @@
 
 	////////// EN COURS ////////////
 
-	finir cette histoire de serviette dans le lvl000
+	finir les vêtements du lvl000 (par terre, machine et habillement)
+	
 	reorganiser (object (sauf les vieux buttons & bombes))
 	optimiser (object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
@@ -46,10 +47,8 @@
 	
 	////////// LVL000 ////////////
 	
-	faire de jolies hitbox
 	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
-	panière à linge + lave-linge
 	Animation de douche ? bulles
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	
@@ -67,6 +66,8 @@
 	
 	////////// SONS ////////////
 	
+	changer le son de l'arrosage de plant
+	ajouter un son quand on éteint la bougie
 	Le fading menu devrait jouer un son 
 	les boutons et les menus devraient jouer un son (et particulièrement AudioScreen !)
 	Ajouter des voix aux personnages (son quand ils parlent)

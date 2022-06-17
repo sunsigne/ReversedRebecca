@@ -21,11 +21,20 @@ Seule exception, l'objet SET-UP qui est créé automatiquement lors du chargemen
 Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers dont l'extension est .csv, et dont les noms sont PLAYER, SET-UP, compris entre NPC-01 et NPC-30, ou compris entre OBJ-01 à OBJ-50.
 
 Note : les fichiers Piranha ont tous un nom qui fait exactement 6 caractères. Cette règle ne peut pas être transgressée.
-Note : il est conseillé dans chaque dossier de map, bien que totalement facultatif, de créer un fichier codex.txt référençant les différents fichiers piranha présent dans ce même dossier, en y renseignant le nom des objets ou personnages qu'ils incarnent ; il devient plus facile de s'y retrouver à travers ces derniers.
 
 Le mot "objet" sera parfois utilisé de façon générique alors que le Type de Requête ne s'applique qu'aux personnages.
 En effet, certains objets sont des objets, d'autre des personnages. Pour l'expliquer simplement, plus de requêtes sont possibles sur les personnages : INVULNERABLE, MOVE, etc. (oui, les objets sont immobiles).
 
+Il est conseillé dans chaque dossier de map, bien que totalement facultatif, de créer un fichier codex.txt référençant les différents fichiers piranha présent dans ce même dossier, en y renseignant le nom des objets ou personnages qu'ils incarnent.
+On pourra également y noter toutes les cibles de chaque Instruction dont le Type de Requête est SAVE, afin de les retrouver plus facilement si besoin.
+
+exemple de codex : 
+REGISTER = REBECCAS_ROOM*CANDLE_ON
+REGISTER = REBECCAS_ROOM*WATERED_PLANT
+OBJ-01 = Bed
+OBJ-02 = Nightstand
+
+Cela signifie que dans cette map, les objets 1 et 2 correspondent respectivement à un lit et une table de nuit. Il sera également sauvegardé comme information à la fin du niveau si la bougie a été allumée et si la plante a été arrosée.
 
 ////// Nomenclature //////
 

@@ -1,4 +1,8 @@
-NPC-01 = Camille
+///// SAVE /////
+
+REGISTER = REBECCAS_ROOM*CANDLE_ON
+REGISTER = REBECCAS_ROOM*WATERED_PLANT
+REGISTER = REBECCAS_ROOM*GLASS_ON_SINK
 
 ///// BEDROOM /////
 
@@ -6,3 +10,12 @@ OBJ-01 = Bed & Bed Leaver
 OBJ-02 = Nightstand
 OBJ-03 = Candle
 OBJ-04 = Book
+OBJ-05 = Plant
+
+
+///// BATHROOM /////
+
+OBJ-06 = Dual Sink
+OBJ-07 = Bath
+OBJ-08 = Bath Leaver
+OBJ-09 = Ground Clothes

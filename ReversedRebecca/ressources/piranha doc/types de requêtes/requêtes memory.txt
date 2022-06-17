@@ -44,3 +44,4 @@ Note : il est tout à fait possible, pour un même nom de donnée, de faire d'ab
 
 Note : Dans 99% des cas, cette information vous sera inutile, mais sachez qu'à la fin d'un niveau, REGISTER s'applique avant ERASE.
 Note : pour rappel, afin de lire une donnée enregistrée, il faut utiliser la condition SAVED (voir "1 - conditions.txt).
+Note : il est conseillé de renseigner les différentes cibles utilisées par ce Type de Requête d'une même map dans son codex.txt
