@@ -1,0 +1,8 @@
+NPC-01 = Camille
+
+///// BEDROOM /////
+
+OBJ-01 = Bed & Bed Leaver
+OBJ-02 = Nightstand
+OBJ-03 = Candle
+OBJ-04 = Book
