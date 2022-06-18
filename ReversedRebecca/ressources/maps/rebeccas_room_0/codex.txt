@@ -25,3 +25,9 @@ OBJ-08 = Bath Leaver
 OBJ-09 = Ground Clothes
 OBJ-10 = Basket
 OBJ-11 = Washing Machine
+
+///// TOILET /////
+
+OBJ-12 = Toilet
+OBJ-13 = Trash
+OBJ-14 = Sink
