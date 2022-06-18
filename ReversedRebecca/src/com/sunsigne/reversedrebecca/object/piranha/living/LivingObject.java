@@ -171,8 +171,24 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	@Override
 	public void render(Graphics g) {
-		int sleep = getCondition() == CONDITION.BED ? 2 * getHeight() / 16 : 0; // when sleeping, raise the Living a bit
-		g.drawImage(getImage(), getX(), getY() - sleep, getWidth(), getHeight(), null);
+		int gap = getConditionGap();
+		g.drawImage(getImage(), getX(), getY() - gap, getWidth(), getHeight(), null);
+	}
+
+	private int getConditionGap() {
+		int pixel = getHeight() / 16;
+
+		if (getCondition() == CONDITION.BED)
+			return 2 * pixel;
+		if (getCondition() == CONDITION.TOILET) {
+			if (getFacing() == DIRECTION.UP)
+				return 4 * pixel;
+			if (getFacing() == DIRECTION.DOWN)
+				return 0;
+			else
+				return 2 * pixel;
+		}
+		return 0;
 	}
 
 	////////// PUSHER ////////////

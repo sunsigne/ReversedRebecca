@@ -42,6 +42,7 @@ public class LivingAnimationHandler {
 
 	private LivingAnimation standingGoodAnimation;
 	private LivingAnimation standingGlassAnimation;
+	private LivingAnimation sitToiletAnimation;
 
 	///// not orientable & animated /////
 
@@ -62,7 +63,8 @@ public class LivingAnimationHandler {
 
 		standingGoodAnimation = new LivingAnimation(living, "standing_", -1, true);
 		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
-
+		sitToiletAnimation = new LivingAnimation(living, "var/sit/toilet_", -1, true);
+		
 		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
 
 		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
@@ -96,6 +98,8 @@ public class LivingAnimationHandler {
 			return bathAnimation;
 		case BED:
 			return bedAnimation;
+		case TOILET:
+			return sitToiletAnimation;
 		case KO:
 			return koAnimation;
 		}
