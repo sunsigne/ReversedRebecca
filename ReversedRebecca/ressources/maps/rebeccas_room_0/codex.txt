@@ -4,6 +4,11 @@ REGISTER = REBECCAS_ROOM*CANDLE_ON
 REGISTER = REBECCAS_ROOM*WATERED_PLANT
 REGISTER = REBECCAS_ROOM*GLASS_ON_SINK
 
+clothes on ground
+water in bath
+hair in bath
+laundry
+
 ///// BEDROOM /////
 
 OBJ-01 = Bed & Bed Leaver
@@ -19,3 +24,5 @@ OBJ-06 = Dual Sink
 OBJ-07 = Bath
 OBJ-08 = Bath Leaver
 OBJ-09 = Ground Clothes
+OBJ-10 = Basket
+OBJ-11 = Washing Machine

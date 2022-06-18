@@ -9,6 +9,7 @@ CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
 
 CLEAN_CLOTHES = Key2 % ranger#les#vetements
 CLEAN_HAIR = Key2 % nettoyer#les#cheveux
+DO_LAUNDRY_SHORT = Key2 % lessive
 DO_LAUNDRY = Key2 % faire#la#lessive
 
 WASH = Key1 % se#laver
