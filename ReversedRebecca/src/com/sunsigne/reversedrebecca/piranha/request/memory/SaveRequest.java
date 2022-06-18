@@ -39,18 +39,22 @@ public class SaveRequest implements Request {
 		
 		case "REGISTER":
 			SaveList.getList().addObject(data);
+			System.out.println("REGISTER : " + data);
 			break;
 			
 		case "CANCEL_REGISTER":
 			SaveList.getList().removeObject(data);
+			System.out.println("CANCEL_REGISTER : " + data);
 			break;
 			
 		case "ERASE":
 			SaveEraserList.getList().addObject(data);
+			System.out.println("ERASE : " + data);
 			break;
 			
 		case "CANCEL_ERASE":
 			SaveEraserList.getList().removeObject(data);
+			System.out.println("CANCEL_ERASE : " + data);
 			break;
 		}
 	}
