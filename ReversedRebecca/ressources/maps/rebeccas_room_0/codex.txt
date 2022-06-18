@@ -6,7 +6,7 @@ REGISTER = REBECCAS_ROOM*WATERED_PLANT
 OBJ-01 = Bed & Bed Leaver
 OBJ-02 = Nightstand
 OBJ-03 = Candle
-OBJ-04 = Book
+OBJ-04 = Book & Dresser
 OBJ-05 = Plant
 	
 ///// BATHROOM /////

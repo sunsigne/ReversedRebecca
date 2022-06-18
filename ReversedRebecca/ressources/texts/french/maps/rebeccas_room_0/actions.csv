@@ -16,8 +16,7 @@ WASH = Key1 % se#laver
 EMPTY = Key2 % vider
 FILL = Key2 % remplir
 
-DRESS_ONE = Key1 % s'habiller
-DRESS = Key3 % s'habiller
+DRESS = Key2 % s'habiller
 
 WATER_TAKE = Key1 % se#servir
 WATER_EMPTY = Key1 % vider#l'eau
@@ -32,5 +31,3 @@ OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key1 % aller#au#travail
-
-
