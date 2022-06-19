@@ -5,13 +5,13 @@ import com.sunsigne.reversedrebecca.object.other.DecorationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableGlass implements Mappable {
+public class MappableGlass00 implements Mappable {
 
-	private MappableGlass() {
+	private MappableGlass00() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableGlass();
+	private static Mappable mappable = new MappableGlass00();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,12 +22,12 @@ public class MappableGlass implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DecorationObject(x, y, "glass");
+		return new DecorationObject(x, y, "glass_00");
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 251, 0, 254 };
+		int[] rgb = { 251, 0, 255 };
 		return rgb;
 	}
 
