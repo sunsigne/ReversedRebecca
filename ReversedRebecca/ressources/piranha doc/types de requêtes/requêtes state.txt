@@ -102,8 +102,9 @@ La condition permet d'altérer à la fois le visuel d'un personnage et son compo
 - GOOD, condition par défaut
 - GLASS, le personnage tient un verre d'eau
 - SICK, le personnage a l'air malade
-- BED, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
 - BATH, seul la tête du personnage est visible. Il a l'air de dormir et ne peut plus bouger (mais peut toujours interagir !)
+- BED, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
+- TOILET, le personnage a l'air sur des toilettes, et ne peut plus bouger (mais peut toujours interagir !)
 - KO, le personnage a l'air KO et ne peut plus rien faire.
 
 
