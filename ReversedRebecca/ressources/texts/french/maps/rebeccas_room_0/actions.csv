@@ -1,33 +1,38 @@
-WAKE_UP = Key1 % se#réveiller
-TALK = Key1 % parler
-TAKE = Key1 % prendre
-WATCH = Key1 % regarder
-LEAVE = Key1 % sortir
+///// BEDROOM /////
 
+WAKE_UP = Key1 % se#réveiller
+WATCH = Key1 % regarder
 CANDLE_LIGHT = Key2 % allumer#la#bougie
 CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
-
-CLEAN_CLOTHES = Key2 % ranger#les#vetements
-CLEAN_HAIR = Key2 % nettoyer#les#cheveux
-DO_LAUNDRY_SHORT = Key2 % lessive
-DO_LAUNDRY = Key2 % faire#la#lessive
-
-WASH = Key1 % se#laver
-EMPTY = Key2 % vider
-FILL = Key2 % remplir
-PEE = Key1 % ...
-
 DRESS = Key2 % s'habiller
+TALK = Key1 % parler
+WATER_PLANT = Key2 % arroser
+
+///// BATHROOM /////
 
 WATER_TAKE = Key1 % se#servir
 WATER_EMPTY = Key1 % vider#l'eau
-WATER_PLANT = Key2 % arroser
+FILL = Key2 % remplir
+EMPTY = Key2 % vider
+WASH = Key1 % se#laver
+CLEAN_HAIR = Key2 % nettoyer#les#cheveux
+TAKE = Key1 % prendre
+CLEAN_CLOTHES = Key2 % ranger#les#vetements
+DO_LAUNDRY = Key2 % faire#la#lessive
+DO_LAUNDRY_SHORT = Key2 % lessive
 
+///// TOILET /////
+
+PEE = Key1 % ...
+WATER_SHORT = Key1 % eau
+
+
+
+LEAVE = Key1 % sortir
 EAT_COOKIE = Key1 % manger#un#biscuit
 DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
 TAKE_KEY = Key3 % prendre#la#clé
-
 OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
