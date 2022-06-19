@@ -31,3 +31,14 @@ OBJ-11 = Washing Machine
 OBJ-12 = Toilet
 OBJ-13 = Trash
 OBJ-14 = Sink
+
+///// DESK /////
+
+REGISTER = REBECCAS_ROOM*UNWATERABLE_DESK_PLANT
+
+NPC-01 = Camille
+OBJ-15 = Big Furniture
+OBJ-16 = Trash
+OBJ-17 = Desk
+OBJ-18 = Plant
+OBJ-19 = Chair
