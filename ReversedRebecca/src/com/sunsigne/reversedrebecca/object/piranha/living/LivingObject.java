@@ -186,7 +186,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 		if (getCondition() == CONDITION.BED)
 			return 2 * pixel;
-		if (getCondition() == CONDITION.TOILET) {
+		if (getCondition() == CONDITION.SIT/*toilet*/) {
 			if (getFacing() == DIRECTION.UP)
 				return 4 * pixel;
 			if (getFacing() == DIRECTION.DOWN)

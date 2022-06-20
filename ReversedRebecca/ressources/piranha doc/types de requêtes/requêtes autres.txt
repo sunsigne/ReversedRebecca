@@ -41,7 +41,6 @@ Note : il est possible d'entrer des valeurs négatives.
 
 ////// DISPLAY UNE CIBLE //////
 
-Note : Ce Type de Requête DISPLAY est particulièrement complexe à utiliser et TRES situationnel; à utiliser à vos risques et périls.
 
 Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet "selon l'axe Z".
 ATTENTION : Ce Type de Requête DISPLAY influence l'index de l'objet (voir index.txt). Ce DISPLAY ne "change pas" le visuel d'un objet, mais change son emplacement dans le code même du jeu ! Ainsi, si vous utilisez une requête DISPLAY:FRONT, l'objet adoptera automatiquement l'index 1. À l'inverse, DISPLAY:BACK lui donnera un index élevé.
