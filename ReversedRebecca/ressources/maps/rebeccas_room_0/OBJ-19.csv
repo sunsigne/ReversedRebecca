@@ -1,0 +1,6 @@
+TIME -> 0 = GOTO -> BLOCKING_PATH:FALSE, HITBOX_INIT
+
+
+//// STATE ////
+
+$ -> HITBOX_INIT = HITBOX -> 2, 8, 12, 5
