@@ -72,7 +72,7 @@ XX	XO
 XX	XO
 
 Les 4 lettres représentent une case en tout. Les X représente un obstacle infranchissable. Les O représentent une position autorisée pour le Joueur.
-Note : il est théoriquement possible de dépasser la taille d'origine d'un objet, et même d'entrée des valeurs négatives ! Tant que vous gardez à l'esprit que seule les dimensions de la hitbox change, cette pratique n'est pas déconseillée.
+Note : il est théoriquement possible de dépasser la taille d'origine d'un objet, et même d'entrer des valeurs négatives ! Tant que vous gardez à l'esprit que seule les dimensions de la hitbox change, cette pratique n'est pas déconseillée.
 Note : afin de "voir" vos hitbox, vous pouvez utiliser le debugMode "illumitati" (ressources/userdata/debugmod.txt)
 
 

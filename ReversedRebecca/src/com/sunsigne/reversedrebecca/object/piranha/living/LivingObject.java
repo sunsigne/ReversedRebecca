@@ -169,10 +169,16 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	////////// RENDER ////////////
 
+	private int displayedX, displayedY;
+	
+	public void setDisplayXY(int x, int y) {
+		this.displayedX = x * 6;
+		this.displayedY = y * 6;
+	}
+
 	@Override
 	public void render(Graphics g) {
-		int gap = getConditionGap();
-		g.drawImage(getImage(), getX(), getY() - gap, getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX() + displayedX, getY() + displayedY, getWidth(), getHeight(), null);
 	}
 
 	private int getConditionGap() {
