@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -25,6 +26,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
@@ -73,6 +75,32 @@ public class World implements Updatable, RenderFree {
 	private void createMap() {
 		loadImageMap();
 		new MapCreator().loadAllLayers(this);
+		updateLivingAbove();
+	}
+
+	private void updateLivingAbove() {
+
+		// apply to all Layers
+		for (LAYER tempLayer : LAYER.values()) {
+
+			Handler handler = tempLayer.getHandler();
+			var list = new GameList<Updatable>(LISTTYPE.LINKED);
+
+			// search for LivingObject
+			for (Updatable tempUpdatable : handler.getList()) {
+				if (tempUpdatable instanceof LivingObject == false)
+					continue;
+
+				// add the LivingObject to a temp list
+				list.addObject(tempUpdatable);
+			}
+
+			// besure the LivingObjects are at the end of the list
+			for (Updatable tempUpdatable : list.getList()) {
+				handler.softRemoveObject(tempUpdatable);
+				handler.addObject(tempUpdatable);
+			}
+		}
 	}
 
 	private void updateLayer() {

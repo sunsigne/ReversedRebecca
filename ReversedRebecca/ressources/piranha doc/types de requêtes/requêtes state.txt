@@ -1,8 +1,11 @@
+Sauf mentions contraire, L'écriture conditionnelle est possible pour tous les Types de Requête suivants, ils auront alors un but conditionnel (voir "requêtes conditionnelles").
+
 ////// NAME //////
 
 
-Le Type de Requête NAME permet de renommer un objet. L'écriture conditionnelle est possible et aura donc un but conditionnel (voir "requêtes conditionnelles")
+Le Type de Requête NAME permet de renommer un objet.
 Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom.
+Note : lorsqu'un objet est "vivant", son visuel est automatiquement défini en fonction de son nom parmi les dossiers dans "textures/characters".
 
 exemple :
 TIME -> 0 = NAME -> BOB
@@ -17,7 +20,7 @@ Note : le nom générique OBJECT fait référence à l'objet Piranha en cours. L
 ////// FACING //////
 
 
-Le Type de Requête FACING permet de changer l'orientation d'un objet. L'écriture conditionnelle est possible.
+Le Type de Requête FACING permet de changer l'orientation d'un objet.
 
 exemple :
 TIME -> 0 = FACING -> RIGHT
@@ -51,8 +54,10 @@ Note : par défaut, les objets Piranha sont bloquants.
 
 ////// HITBOX //////
 
+
 Le Type de Requête HITBOX permet de changer les dimensions de la hitbox d'un objet. L'intérêt est de rendre "propre" le chemin que peut emprunter le Joueur.
 ATTENTION : changer les dimensions de la hitbox n'influence aucun autre facteur : ni les chemins valides du PathFinder (même avec une hibox réduit à 0), ni la position officielle de l'objet, ni la règle qui défini si un objet est "à portée", ni son visuel, etc. Il est donc fortement déconseillé d'utiliser cette propriété pour créer des objets "à deux cases".
+Note : L'écriture conditionnelle n'est possible pour ce Type de Requête.
 
 Ce Type de Requête requiert 4 Cibles : une position horizontale initiale (x), verticale (y), une largeur (width), et une hauteur (height).
 L'échelle est de 16 pixels pour une taille de 1 case.
@@ -74,7 +79,7 @@ Note : afin de "voir" vos hitbox, vous pouvez utiliser le debugMode "illumitati"
 ////// INVULNERABLE //////
 
 
-Le Type de Requête INVULNERABLE permet de changer la propriété "vulnérable" de l'objet courant. L'écriture conditionnelle est possible.
+Le Type de Requête INVULNERABLE permet de changer la propriété "vulnérable" de l'objet courant.
 Note : les objets "obj" ne peuvent pas devenir vulnérable, cette propriété ne concerne que les objets vivants ("npc", "player", etc.).
 
 exemple :
