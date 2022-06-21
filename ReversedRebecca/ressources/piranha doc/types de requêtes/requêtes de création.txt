@@ -1,3 +1,6 @@
+Attention ! Pour tous les Types de Requête suivants, leur effet s'applique sur la même "couche" que l'objet qui le demande ("voir "couches" dans "index.txt"). Pour rappel et au besoin, vous pouvez utiliser SET-UP, qui est un "objet virtuel" se trouvant sur la même couche que celle où le joueur a commencé.
+
+
 ////// CREATE //////
 
 
@@ -9,7 +12,6 @@ TIME -> 0 = CREATE -> 10-20:1-255-0
 Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée aux coordonnées x=10 y=20.
 
 Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
-Attention ! Le Type de Requête CREATE créé un objet sur la même "couche" que l'objet qui le demande. N'utilisez pas cette requête dans SET-UP (qui est sur une couche "spéciale")
 
 
 ////// CREATE_ONTHESPOT //////
@@ -26,6 +28,20 @@ Lorsque la Condition sera vérifiée, un OBJ-03 (255-255-3) sera créée là où
 
 Note : CREATE_ONTHESPOT est une modification du Type de Requête CREATE. Il est donc possible (quoique curieux), d'écrire l'instruction suivante :
 TIME -> 0 = CREATE -> ONTHESPOT:255-255-3
+
+
+////// CREATE_DECORATION //////
+
+
+Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration"
+
+exemple :
+TIME -> 0 = CREATE -> 10-20:1,2,BATH_HAIR
+
+Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un objet de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
+Note : remplacer les coordonnées par le mot clé ONTHESPOT est possible.
+
+Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez besoin que votre objet soit "interactif", il faudra créer un objet Piranha au même emplacement que ce dernier.
 
 
 ////// DELETE //////

@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.world.mapcreator.mappable.other;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.other.DecorationObject;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -22,7 +23,7 @@ public class MappableGlass00 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DecorationObject(x, y, "glass_00");
+		return new DecorationObject(x, y, Size.M, Size.M, "glass_00");
 	}
 
 	@Override
