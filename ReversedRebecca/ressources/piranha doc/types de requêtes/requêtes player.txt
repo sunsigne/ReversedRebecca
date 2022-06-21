@@ -27,3 +27,15 @@ Note : très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un ni
 Équivalant au Type de Requête EXPRESSION.
 Note : ce Type de Requête n'est pas "state" mais "ressource", mais il peut faciliter la vie lors des cinématiques; il a donc tout à fait sa place ici.
 Attention ! L'écriture conditionnelle est impossible avec ce Type de Requête (l'écriture condensée reste permise).
+
+
+////// STATE_PLAYER //////
+
+Le Type de Requête STATE_PLAYER est une requête affectant le joueur, mais une exception aux Types de Requête player "classique". Ni l'écriture conditionnelle, ni l'écriture condensée ne lui est permise.
+STATE_PLAYER permet d'affecter à la fois la position réelle du Joueur, sa position visuelle, son Facing, sa Condition, et accepter des Cibles supplémentaires à la manière de GOTO. C'est tout juste s'il ne fait pas le café.
+Pour faire simple, elle regroupe à la fois les Types de Requête TP, DISPLAY, FACING, CONDITION et GOTO.
+
+exemple :
+$ -> PLAYER_GO_ON_TOILET = STATE_PLAYER -> 18-9,0,-4,UP,SIT, MEMORY:PLAYER_TOILET, SOUND:JUMP
+
+Cette expression a l'air compliquée au premier abord, mais elle ne fait que se baser sur l'expression des différents Types de Requête qu'elle contient. Si elle vous semble floue, étudier chacun d'eux pour la comprendre.
