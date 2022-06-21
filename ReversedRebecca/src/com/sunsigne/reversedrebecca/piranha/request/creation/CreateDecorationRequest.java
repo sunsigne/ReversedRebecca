@@ -4,11 +4,13 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.other.DecorationObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class CreateDecorationRequest implements Request {
+public class CreateDecorationRequest implements IndexRequest {
 
 	////////// REQUEST ////////////
 
@@ -39,22 +41,35 @@ public class CreateDecorationRequest implements Request {
 		// determinate the position
 
 		String pos = String.valueOf(target.split(":")[0]);
-		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
+		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
-		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);		
-		GoalObject goal = new GoalObject(x, y, false);
+		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+
+		// determinate the index
+
+		Handler handler = object.getHandler();
+		int index = getIndex(handler, onTheSpot ? pos.split("-")[1] : pos.split("-")[2]);
 
 		// determinate the size and the name
 
 		String data = String.valueOf(target.split(":")[1]);
 		int width = Integer.parseInt(data.split(",")[0]);
 		int height = Integer.parseInt(data.split(",")[1]);
-		String name = String.valueOf(data.split(",")[2]).toLowerCase();
+		String name = String.valueOf(data.split(",")[2]);
+
+		// refine data
+
+		GoalObject goal = new GoalObject(x, y, false);
+		x = goal.getX();
+		y = goal.getY();
+		width = width * Size.M;
+		height = height * Size.M;
+		name = name.toLowerCase();
 
 		// creation of the object
 
-		GameObject creation = new DecorationObject(goal.getX(), goal.getY(), width * Size.M, height * Size.M, name);
-		object.getHandler().getList().add(0, creation);
+		GameObject creation = new DecorationObject(x, y, width, height, name);
+		object.getHandler().getList().add(index, creation);
 	}
 
 }

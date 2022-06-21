@@ -3,13 +3,15 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class CreateRequest implements Request {
+public class CreateRequest implements IndexRequest {
 
 	////////// REQUEST ////////////
 
@@ -38,24 +40,32 @@ public class CreateRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 
 		// determinate the position
-		
+
 		String pos = String.valueOf(target.split(":")[0]);
-		boolean onTheSpot = pos.equalsIgnoreCase("onthespot");
+		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
 		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
 
+		// determinate the index
+
+		Handler handler = object.getHandler();
+		int index = getIndex(handler, onTheSpot ? pos.split("-")[1] : pos.split("-")[2]);
+
+		// refine data
+
 		GoalObject goal = new GoalObject(x, y, false);
+		x = goal.getX();
+		y = goal.getY();
 
 		// determinate the type of object
 
 		String type = String.valueOf(target.split(":")[1]);
-
-		GameObject creation = determinateCreation(type, goal.getX(), goal.getY());
+		GameObject creation = determinateCreation(type, x, y);
 
 		// creation of the object
-		
+
 		if (creation != null)
-			object.getHandler().getList().add(0, creation);
+			object.getHandler().getList().add(index, creation);
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {

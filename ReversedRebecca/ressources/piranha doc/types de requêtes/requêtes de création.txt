@@ -1,33 +1,25 @@
 Attention ! Pour tous les Types de Requête suivants, leur effet s'applique sur la même "couche" que l'objet qui le demande ("voir "couches" dans "index.txt"). Pour rappel et au besoin, vous pouvez utiliser SET-UP, qui est un "objet virtuel" se trouvant sur la même couche que celle où le joueur a commencé.
-
+Également, en lieu et place du couple de coordonnées x-y, il est possible d'écrire le mot clef ONTHESPOT; les coordonnées seront dans ce cas automatiquement celles de l'objet Piranha qui demande l'action.
 
 ////// CREATE //////
 
 
-Le Type de Requête CREATE permet de créer un objet à partir de coordonnées et d'une pastille RGB (voir "mappable" dans le dossier "maps")
+Le Type de Requête CREATE permet de créer un objet à partir de coordonnées x, y et "z", d'une pastille RGB (voir "mappable" dans le dossier "maps").
+Si les coordonnées x et y sont des nombres, z ne peut prendre que deux valeurs : FRONT et BACK.
 
 exemple :
-TIME -> 0 = CREATE -> 10-20:1-255-0
+TIME -> 0 = CREATE -> 10-20-FRONT:1-255-0
+TIME -> 0 = CREATE -> ONTHESPOT-FRONT:1-255-0
 
-Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée aux coordonnées x=10 y=20.
+Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée aux coordonnées x=10 y=20 et apparaitra devant les objets se trouvant à la même position qu'elle.
 
 Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
+ATTENTION ! Ne confondait pas la coordonnée "z" avec la notion de LAYER (voir "index.txt"), il s'agit ici d'un comportement VISUEL de l'objet vis-à-vis des autres.
 
-
-////// CREATE_ONTHESPOT //////
-
-
-Fait exactement la même chose que CREATE, à la différence que les coordonnées sont automatiquement celles de l'objet Piranha qui demande l'action.
-CREATE_ONTHESPOT ne disposant que d'une seule cible, l'écriture compacte devient possible
-
-exemples :
-TIME -> 0 = CREATE_ONTHESPOT -> 255-255-3
-TIME -> 0 = GOTO -> CREATE_ONTHESPOT:255-255-3
-
-Lorsque la Condition sera vérifiée, un OBJ-03 (255-255-3) sera créée là où se trouve l'objet Piranha.
-
-Note : CREATE_ONTHESPOT est une modification du Type de Requête CREATE. Il est donc possible (quoique curieux), d'écrire l'instruction suivante :
-TIME -> 0 = CREATE -> ONTHESPOT:255-255-3
+Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Par défaut, définissez la comme BACK ou FRONT et tenez-vous-y :
+L'avantage de choisir BACK par défaut : l'objet le plus récent aura toujours un index de 1.
+L'avantage de choisir FRONT par défaut : les objets auront tendance à garder le même index.
+Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pareil.
 
 
 ////// CREATE_DECORATION //////
@@ -36,10 +28,9 @@ TIME -> 0 = CREATE -> ONTHESPOT:255-255-3
 Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
 
 exemple :
-TIME -> 0 = CREATE -> 10-20:1,2,BATH_HAIR
+TIME -> 0 = CREATE -> 10-20-BACK:1,2,BATH_HAIR
 
-Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un objet de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
-Note : remplacer les coordonnées par le mot clé ONTHESPOT est possible.
+Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un objet apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
 
 Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez besoin que votre objet soit "interactif", il faudra créer un objet Piranha au même emplacement que ce dernier.
 
@@ -54,10 +45,11 @@ En plus des mêmes Cibles que celles demandées par CREATE_DECORATION, CREATE_AN
 - si l'animation doit recommencer une fois terminée. Exemple : false, l'animation s'arrêtera sur la dernière image.
 
 exemple :
-! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8:1,2,BATH_FILLING,3,90,FALSE
+! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8-BACK:1,2,BATH_FILLING,3,90,FALSE
 
 Lorsque la Condition sera vérifiée, sera créé un objet animé :
 - dont les coordonnées sont x=1 et y=8,
+- apparaissant derrière les autres objets (cf le joueur)
 - de largeur 1 case, de hauteur 2 cases,
 - nécessitant exactement 3 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
 - où chaque image reste pendant 1 seconde et demi,
@@ -69,6 +61,7 @@ Lorsque la Condition sera vérifiée, sera créé un objet animé :
 
 Le Type de Requête DELETE permet de supprimer l'objet qui se trouve aux coordonnées indiquée.
 Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, une seconde cible correspondant à l'index doit être établie (voir "index")
+En effet, des Cibles telles que FRONT et BACK risquerait de ne pas suffire pour cibler précisémment un objet.
 
 exemple :
 TIME -> 0 = DELETE -> 10-20:1
@@ -82,5 +75,5 @@ Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si
 ////// DELETE_ONTHESPOT //////
 
 
-De la même façon que CREATE_ONTHESPOT a permis à CREATE d'avoir une écriture compacte en entrant qu'une seule cible, Le Type de Requête DELETE_ONTHESPOT a exactement le même objectif et la cible unitaire devient donc l'index.
-Il est également possible d'écrire DELETE avec ONTHESPOT comme première cible.
+Est un raccourci direct de DELETE, mais dont la cible "coordonnées" est incluse dans le Type de Requête.
+La cible "index" devenant unitaire, l'écriture compacte devient alors possible.

@@ -24,22 +24,21 @@ Note : "l'objet" SET-UP ne "suit" pas le joueur si ce dernier change de couche, 
 
 ////// INDEX //////
 
-Certains Types de Requêtes se base sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.
-L'index fonctionne de la façon suivant :
+Certains Types de Requêtes se basent sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.
+L'index fonctionne de la façon suivante :
 
 Lorsqu'il n'y a qu'un seul objet : l'index est de 1.
-Lorsqu'il y a plusieurs objets, le dernier objet créé aura l'index le plus bas* ! Ce qui signifie qu'un objet qui avait un index 1 pourra très bien avoir un index 2 dans le futur !
+Lorsqu'il y a plusieurs objets, le dernier objet créé aura l'index 1 si sa cible "z" était BACK (et "poussera" tous les autres objets vers des index plus élevé), et l'index le plus haut si sa cible "z" était FRONT. Ce qui signifie qu'un objet qui avait un index 1 pourra très bien avoir un index 2 dans le futur !
 Un index trop élevé sera ramené systématiquement à l'index le plus haut trouvé : s'il n'y a qu'un objet et que vous entrez comme index 3, l'index sera "lu" comme 1. Cette dernière propriété peut être très pratique pour conserver le même index pour un même objet.
-
-*Note : il existe des exceptions à cette règle : le Type de Requête DISPLAY influence l'index (voir types de requêtes/requêtes autre.txt).
 
 Exemple pratique :
 
 Nous avons besoin qu'un personnage parle à travers une porte, chose à-priori non autorisée "de base" par le jeu.
 Nous allons donc "désactiver" (DISABLE) la porte et créer un Piranha objet par-dessus cette dernière, qui se comporterait comme le PNJ le ferait, ce qui créera l'illusion de parler à ce dernier.
-Lorsque nous voulons désactiver la porte, nous pouvons indiquer l'index 2 (qui sera considéré comme 1), puis créer l'objet Piranha qui sera plus récent, donc qui prendra l'index 1 et "poussera" la porte en index 2.
+Lorsque nous voulons désactiver la porte, nous pouvons indiquer l'index 2 (qui sera considéré comme 1), puis créer l'objet Piranha qui en BACK, donc qui prendra l'index 1 et "poussera" la porte en index 2.
 Lorsque nous ferons référence à la porte par la suite, nous continuerons à utiliser l'index 2 (qui sera cette fois "officiellement" le bon).
 Nous avons donc utilisé le même index (2) tout au long de notre code pour désigner la porte.
+À noter qu'il était également possible de garder l'index 1 pour la porte et de créer l'objet en FRONT.
 
 Ç'est à l'air un peu technique, mais ne vous en fait pas ! La plupart du temps, vous n'aurez affaire qu'à un seul objet.
-Si un jour vous en avez plusieurs, faites des essais jusqu'à ce que ça passe et ça devrait aller ! Retenez simplement : index le plus bas = objet le plus récent.
+Si un jour vous en avez plusieurs, faites des essais jusqu'à ce que ça passe et ça devrait aller ! Retenez simplement : index = 1, sauf exception.

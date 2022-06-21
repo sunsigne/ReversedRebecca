@@ -16,25 +16,17 @@ Note : le comportement par défaut de la Caméra n'est pas de suivre le joueur, 
 ////// DISPLAY //////
 
 
-Ce Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x, y et z.
-De la même façon que le Type de Requête HITBOX ne changeait QUE les dimensions de la hitbox d'un objet (voir "requêtes state.txt"), DISPLAY ne change QUE le visuel d'un objet et aucune autre caractéristique (à part l'index, voir ATTENTION).
-
+Ce Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x et y.
+De la même façon que le Type de Requête HITBOX ne changeait QUE les dimensions de la hitbox d'un objet (voir "requêtes state.txt"), DISPLAY ne change QUE le visuel d'un objet et aucune autre caractéristique.
 Note : dans la mesure où seuls les objets Piranha "vivants" ont un visuel, le Type de Requête DISPLAY ne s'applique qu'à ces derniers. Il devient pratique lorsque l'un d'eux se trouve dans une situation particulaire comme dans un lit, sur une chaise, etc.
-ATTENTION : DISPLAY influence l'index de l'objet (voir index.txt). En effet, DISPLAY ne "change pas" le visuel d'un objet selon l'axe z, mais change son emplacement dans le code même du jeu ! Ainsi, si vous utilisez une cible BACK, l'objet adoptera automatiquement l'index 1. À l'inverse, une cible FRONT lui donnera l'index maximal.
 
-L'échelle est de 16 pixels pour une taille de 1 case (voir le Type de requête HITBOX pour mieux comprendre).
+L'échelle est de 16 pixels pour une taille de 1 case (voir le Type de requête HITBOX pour mieux comprendre ce point s'il est flou pour vous).
 
 exemple :
-! -> DISPLAY_PLAYER_BED = DISPLAY -> 0, -2, FRONT
+! -> DISPLAY_PLAYER_BED = DISPLAY -> 0, -2
 
-Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle, ainsi que visuellement au-dessus des autres.
+Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle.
 Comme vous le voyez, il est possible d'entrer des valeurs négatives pour ce Type de Requête.
-
-La troisième Cible du Type de Requête DISPLAY accepte les valeurs suivantes :
-- FRONT : place l'objet "devant" les autres.
-- BACK : place l'objet "derrière" les autres.
-
-ATTENTION : lors que la génération d'une map vient de se terminer, et avant le TIME -> 0, les objets "vivants" ont un code caché se lançant, équivalant à une requête DISPLAY -> 0, 0, FRONT.
 
 
 ////// CUTSCENE //////

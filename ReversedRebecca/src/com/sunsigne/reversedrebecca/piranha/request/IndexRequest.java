@@ -40,4 +40,18 @@ public interface IndexRequest extends Request {
 		return object_list.getList().get(index);
 	}
 	
+
+	public default int getIndex(Handler handler, String value) {
+
+		switch (value.toUpperCase()) {
+
+		case "FRONT":
+			return handler.getList().size() - 1;
+		case "BACK":
+			return 0;
+		}
+
+		return 0;
+	}
+	
 }
