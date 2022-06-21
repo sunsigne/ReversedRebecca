@@ -33,30 +33,20 @@ public class DisplayRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		if(object instanceof LivingObject == false)
+		if (object instanceof LivingObject == false)
 			return;
-		
-		LivingObject living = (LivingObject) object;
-		
-		if (target.contains(","))
-			doXYAction(living, target);
-		else
-			doZAction(living, target);
-	}
 
-	private void doXYAction(LivingObject living, String target) {
+		LivingObject living = (LivingObject) object;
+		Handler handler = living.getHandler();
+
 		String[] targets = target.split(",");
 		int x = Integer.valueOf(targets[0]);
 		int y = Integer.valueOf(targets[1]);
+		int z = getIndex(handler, targets[2].toUpperCase());
+
 		living.setDisplayXY(x, y);
-	}
-
-	private void doZAction(LivingObject living, String target) {
-		Handler handler = living.getHandler();
-		int pos = getIndex(handler, target.toUpperCase());
-
 		handler.softRemoveObject(living);
-		handler.getList().add(pos,living);
+		handler.getList().add(z, living);
 	}
 
 	private int getIndex(Handler handler, String value) {

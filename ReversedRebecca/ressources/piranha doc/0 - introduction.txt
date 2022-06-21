@@ -57,11 +57,11 @@ LEFT est la "Cible" de l'Instruction.
 
 Le Piranha n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
 En Piranha, si ça n'est pas obligatoire, il est conseillé d'écrire les Instructions en lettres capitales.
-Attention ! Les coordonnées négatives sont impossibles en Piranha. Le point 0-0 se situe en haut à gauche de votre map.
+Attention ! Les coordonnées négatives sont souvant impossibles en Piranha. Le point 0-0 se situe en haut à gauche de votre map.
 Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=" dans un commentaire, votre fichier risquerait d'être invalide.
 
 Une Instruction s'écrit de la façon suivante : WONPUZZLE -> 34-31 = TP -> 37-42
-Ici, il faut comprendre : "si le puzzle en 34-31 est résolu, alors se téléporter en 37-42"
+Ici, il faut comprendre : "si le puzzle en x=34 y=31 est résolu, alors se téléporter en x=37 y=42"
 
 ATTENTION ! Il n'est pas possible d'avoir deux Conditions identiques ("Type de Condition -> Valeur") dans un même fichier Piranha ; seule la première sera traitée. L'utilisation de Conditions identiques dans des fichiers indépendants les uns des autres ne pose aucun problème.
 Si vous avez besoin d'effectuer plusieurs Instructions vérifiant la même Condition, utiliser le Type d'Action GOTO.
