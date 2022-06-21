@@ -26,6 +26,14 @@ DO_LAUNDRY_SHORT = Key2 % lessive
 PEE = Key1 % ...
 WATER_SHORT = Key1 % eau
 
+///// DESK /////
+
+PLAY = Key1 % jouer
+PLAY_ANYWAY = Key1 % jouer#quand#meme
+JUST_ONE_GAME = Key1 % juste#une#partie...
+I_AM_WEAK = Key1 % je#suis#faible...
+TAKE_GLASS = Key2 % prendre
+
 
 
 LEAVE = Key1 % sortir
