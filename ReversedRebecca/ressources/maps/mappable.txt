@@ -95,22 +95,11 @@ OBJ-49 -> 49
 OBJ-50 -> 50
 
 
-////// DECORATION //////
+////// DECORATION & ANIMATION //////
 
 
-Red = dépend du type de décoration / depends on the type of decoration
-Green = 0
-Blue = dépend de "l'état" de la décoration, si elle en a plusieurs (part de 255) / depends on the "state" of the decoration, if it has severeal ones (start from 255)
-
-Flaque d'urine / PeePuddle -> 254
-Vêtements / Clothes -> 253
-Bougie / Candle -> 252
-Serviette / Towel -> 251
-Bain / Bath -> 250
-
-exemple : 
-Chemise froisé et chausettes / crumpled jacket and socks : 253-0-255
-Pantalon froisé / crumpled pants : 253-0-254
+Il n'existe aucune "pastille" pour créer ces objets. Ces derniers sont créés à partir d'Instructions Piranha bien précises (voir "ressources\piranha doc\types de requêtes\requêtes de création").
+There is no chip to create those objects. Those are created from specific Piranha Instruction (see "ressources\piranha doc\types de requêtes\requêtes de création").
 
 
 ////// AUTRE / OTHER //////

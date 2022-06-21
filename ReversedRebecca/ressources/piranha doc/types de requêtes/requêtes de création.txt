@@ -33,7 +33,7 @@ TIME -> 0 = CREATE -> ONTHESPOT:255-255-3
 ////// CREATE_DECORATION //////
 
 
-Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration"
+Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
 
 exemple :
 TIME -> 0 = CREATE -> 10-20:1,2,BATH_HAIR
@@ -42,6 +42,26 @@ Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un
 Note : remplacer les coordonnées par le mot clé ONTHESPOT est possible.
 
 Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez besoin que votre objet soit "interactif", il faudra créer un objet Piranha au même emplacement que ce dernier.
+
+
+////// CREATE_ANIMATION //////
+
+
+Le Type de Requête CREATE_ANIMATION est en quelque sorte une requête CREATE_DECORATION en plus complexe : elle permet de créer un objet "décoratif" ayant une animation, à partir de fichiers textures se trouvant dans le répertoire "textures\other\animation".
+En plus des mêmes Cibles que celles demandées par CREATE_DECORATION, CREATE_ANIMATION a besoin de 3 Cibles supplémentaires :
+- le nombre d'images constituant l'animation.
+- la "durée" d'animation en "tick" (60 ticks = 1 seconde). Exemple : 120 signifie que chaque image de l'animation restera pendent exactement 2 secondes.
+- si l'animation doit recommencer une fois terminée. Exemple : false, l'animation s'arrêtera sur la dernière image.
+
+exemple :
+! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8:1,2,BATH_FILLING,3,90,FALSE
+
+Lorsque la Condition sera vérifiée, sera créé un objet animé :
+- dont les coordonnées sont x=1 et y=8,
+- de largeur 1 case, de hauteur 2 cases,
+- nécessitant exactement 3 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
+- où chaque image reste pendant 1 seconde et demi,
+- qui s'arrête sur la dernière image (la baignoire est rempli).
 
 
 ////// DELETE //////
