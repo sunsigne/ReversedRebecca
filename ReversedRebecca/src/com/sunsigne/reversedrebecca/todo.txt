@@ -46,6 +46,7 @@
 	
 	////////// LVL000 ////////////
 	
+	demander à Camille si elle sait où sont ses clefs
 	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
