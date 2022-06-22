@@ -191,8 +191,10 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		if (hasExploded())
 			return;
 
-		if (mouseOver(e, getRect()))
-			removeCount();
+		if (isSelected() == false)
+			return;
+
+		removeCount();
 	}
 
 	@Override

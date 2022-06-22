@@ -14,10 +14,10 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	public ButtonObject(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(x, y, w, h);
 		this.text = text;
-		
+
 		this.onPress = onPress;
 		this.onRelease = onRelease;
-	}	
+	}
 
 	////////// BEHAVIOR ////////////
 
@@ -39,7 +39,7 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	}
 
 	////////// TEXT ////////////
-	
+
 	protected String text;
 
 	public String getText() {
@@ -49,26 +49,29 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	////////// MOUSE ////////////
 
 	private MouseController mouseController = new MouseController(this);
-	
+
 	@Override
 	public MouseController getMouseController() {
-		return  mouseController;
-	}	
-	
+		return mouseController;
+	}
+
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isClickable() && mouseOver(e, getRect())) {
-			if(onPress != null)
-				onPress.doAction();
-		}
+		if (isSelected() == false)
+			return;
+
+		if (onPress != null)
+			onPress.doAction();
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		if (isClickable() && mouseOver(e, getRect())) {
-			if(onRelease != null)
-				onRelease.doAction();
-		}
-	}	
+		if (isSelected() == false)
+			return;
+
+		if (onRelease != null)
+			onRelease.doAction();
+	}
 
 }

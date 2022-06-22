@@ -26,7 +26,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	private Volume volume;
 	private final int xmin = 864;
 	private final int xmax = 1284;
-	
+
 	// convert double between 0 and 2.0 to int between 0 and 420
 	private int getScale(double d) {
 		return (int) (d * ((xmax - xmin) / 2));
@@ -95,10 +95,11 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isClickable() && mouseOver(e, getRect())) {
-			holding = true;
-			new GameCursor().setCursor(null);
-		}
+		if (isSelected() == false)
+			return;
+
+		holding = true;
+		new GameCursor().setCursor(null);
 	}
 
 	@Override

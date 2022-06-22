@@ -32,15 +32,15 @@ public interface MouseUserEvent extends Position, Updatable {
 		return false;
 	}
 
-	default boolean mouseOver(MouseEvent e, int x, int y, int width, int height) {
-		int mx = e.getX();
-		int my = e.getY();
-		int[] mousePos = { mx, my };
-
-		return mouseOver(mousePos, x, y, width, height);
+	default boolean mouseOver(int[] mousePos, int[] rect) {
+		if (rect.length == 4)
+			return mouseOver(mousePos, rect[0], rect[1], rect[2], rect[3]);
+		else
+			System.err.println("the method mouseOver(mousePos, rect) is not used correcly");
+		return false;
 	}
 
-	default boolean mouseOver(int[] mousePos, int x, int y, int width, int height) {
+	private boolean mouseOver(int[] mousePos, int x, int y, int width, int height) {
 		int mx = mousePos[0];
 		int my = mousePos[1];
 
@@ -52,7 +52,10 @@ public interface MouseUserEvent extends Position, Updatable {
 		} else
 			return false;
 	}
-
+	
+	////////// DEPRECATED ////////////
+	
+	@Deprecated
 	default boolean mouseOver(MouseEvent e, int[] rect) {
 		if (rect.length == 4)
 			return mouseOver(e, rect[0], rect[1], rect[2], rect[3]);
@@ -61,12 +64,13 @@ public interface MouseUserEvent extends Position, Updatable {
 		return false;
 	}
 
-	default boolean mouseOver(int[] mousePos, int[] rect) {
-		if (rect.length == 4)
-			return mouseOver(mousePos, rect[0], rect[1], rect[2], rect[3]);
-		else
-			System.err.println("the method mouseOver(mousePos, rect) is not used correcly");
-		return false;
+	@Deprecated
+	private boolean mouseOver(MouseEvent e, int x, int y, int width, int height) {
+		int mx = e.getX();
+		int my = e.getY();
+		int[] mousePos = { mx, my };
+
+		return mouseOver(mousePos, x, y, width, height);
 	}
 
 }

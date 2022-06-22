@@ -41,7 +41,7 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
-		
+
 		if (debugMode.getState())
 			g.drawImage(active_image, getX(), getY(), getWidth(), getHeight(), null);
 	}
@@ -57,13 +57,15 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (mouseOver(e, getRect()))
-			debugMode.cycle();
+		if (isSelected() == false)
+			return;
+
+		debugMode.cycle();
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 
 	}
-	
+
 }
