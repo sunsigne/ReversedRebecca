@@ -1,6 +1,7 @@
 ///// BEDROOM /////
 
 WAKE_UP = Key1 % se#réveiller
+SEARCH_KEY = Key3 % fouiller#(clé?)
 WATCH = Key1 % regarder
 CANDLE_LIGHT = Key2 % allumer#la#bougie
 CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
@@ -20,6 +21,7 @@ TAKE = Key1 % prendre
 CLEAN_CLOTHES = Key2 % ranger#les#vetements
 DO_LAUNDRY = Key2 % faire#la#lessive
 DO_LAUNDRY_SHORT = Key2 % lessive
+SEARCH_KEY_SHORT = Key3 % fouiller
 
 ///// TOILET /////
 
@@ -35,13 +37,17 @@ I_AM_WEAK = Key1 % je#suis#faible...
 TAKE_GLASS = Key2 % prendre
 
 
+///// ENTRANCE /////
+
+OPEN = Key1 % ouvrir
+
 
 LEAVE = Key1 % sortir
 EAT_COOKIE = Key1 % manger#un#biscuit
 DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
 TAKE_KEY = Key3 % prendre#la#clé
-OPEN = Key1 % ouvrir
+
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key1 % aller#au#travail
