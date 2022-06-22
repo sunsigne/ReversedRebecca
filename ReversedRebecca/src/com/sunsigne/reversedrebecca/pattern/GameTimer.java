@@ -15,7 +15,7 @@ public class GameTimer implements Updatable, RenderFree {
 		if (World.get() == null)
 			return;
 
-		World.get().getHandler().addObject(this);
+		World.get().getLayer(false).addObject(this);
 		this.time = timeInTicks;
 		this.listener = listener;
 	}
