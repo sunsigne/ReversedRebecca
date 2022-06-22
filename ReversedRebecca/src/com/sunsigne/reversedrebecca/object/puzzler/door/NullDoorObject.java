@@ -36,7 +36,7 @@ public class NullDoorObject extends DoorObject {
 		if (isOpened)
 			return;
 
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		super.render(g);
 	}
 
 	////////// COLLISION ////////////

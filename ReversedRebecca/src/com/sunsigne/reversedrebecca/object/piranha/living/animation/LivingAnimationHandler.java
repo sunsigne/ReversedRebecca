@@ -3,8 +3,6 @@ package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
-import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
 public class LivingAnimationHandler {
 
@@ -17,16 +15,17 @@ public class LivingAnimationHandler {
 
 	////////// TICK ////////////
 
-	private GameLimitedList<LivingAnimation> list = new GameLimitedList<>(LISTTYPE.ARRAY);
+	private LivingAnimation registeredAnimation;
 
 	public void run() {
 
-		list.getList().forEach(animation -> {
-			if (animation != getAnimation())
-				animation.freeze();
-		});
+		if (registeredAnimation == getAnimation()) {
+			getAnimation().run();
+			return;
+		}
 
-		getAnimation().run();
+		registeredAnimation = getAnimation();
+		getAnimation().freeze();
 	}
 
 	////////// TEXTURE ////////////
@@ -64,25 +63,11 @@ public class LivingAnimationHandler {
 		standingGoodAnimation = new LivingAnimation(living, "standing_", -1, true);
 		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
 		sitAnimation = new LivingAnimation(living, "var/sit/", -1, true);
-		
+
 		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
 
 		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
 		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
-
-		list.addObject(walkingGoodAnimation);
-		list.addObject(walkingGlassAnimation);
-		list.addObject(standingSickAnimation);
-		list.addObject(walkingSickAnimation);
-
-		list.addObject(standingGoodAnimation);
-		list.addObject(standingGlassAnimation);
-		list.addObject(sitAnimation);
-
-		list.addObject(bedAnimation);
-
-		list.addObject(bathAnimation);
-		list.addObject(koAnimation);
 	}
 
 	////////// RENDER ////////////

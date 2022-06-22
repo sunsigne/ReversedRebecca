@@ -10,7 +10,6 @@ public class PathPointObject extends GameObject implements TickFree, RenderFree,
 
 	public PathPointObject(int x, int y) {
 		super(x, y);
-
 	}
 
 	////////// PATH FINDER ////////////

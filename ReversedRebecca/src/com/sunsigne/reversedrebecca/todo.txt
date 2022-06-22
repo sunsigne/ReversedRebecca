@@ -9,8 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	reorganiser (object (sauf les vieux buttons & bombes))
-	optimiser (object (sauf buttons & bombes))
 	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
@@ -20,6 +18,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	NullHoleObject et son puzzle ne sont pas du tout fini
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	trouver un moyen d'enregistrer le lvl des tools dans characteristiques de façon automatique ?
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI

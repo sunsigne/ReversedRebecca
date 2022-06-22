@@ -181,22 +181,6 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 		g.drawImage(getImage(), getX() + displayedX, getY() + displayedY, getWidth(), getHeight(), null);
 	}
 
-	private int getConditionGap() {
-		int pixel = getHeight() / 16;
-
-		if (getCondition() == CONDITION.BED)
-			return 2 * pixel;
-		if (getCondition() == CONDITION.SIT/*toilet*/) {
-			if (getFacing() == DIRECTION.UP)
-				return 4 * pixel;
-			if (getFacing() == DIRECTION.DOWN)
-				return 0;
-			else
-				return 2 * pixel;
-		}
-		return 0;
-	}
-
 	////////// PUSHER ////////////
 
 	private boolean hurtWhenPushing = false;
