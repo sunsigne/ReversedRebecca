@@ -32,6 +32,8 @@ Blue = 255
 
 Clef / Key -> 1
 Bombe / Bomb -> 2
+Puce / Chip -> 3
+Pelle / Shovel -> 4
 
 exemple : 
 Bombe Verte / Green Bomb : 2-2-255
@@ -41,8 +43,11 @@ Clef Rouge / Red Key : 1-5-255
 ////// PUZZLER //////
 
 Red = dépend du puzzler / depends on the puzzler
-Green = 255
+Green = 255*
 Blue = voir niveau / see level
+
+*Si l'objet a un FACING, retirer 1 pour GAUCHE, 2 pour DROITE, 3 pour HAUT et 4 pour BAS.
+*If the object has a FACING, substract 1 for LEFT, 2 for RIGHT, 3 for UP et 4 for DOWN.
 
 Porte / Door -> 1
 Gravas / Rubble -> 2
@@ -52,6 +57,7 @@ Trou / Hole -> 4
 exemple : 
 Porte Null / Null Door : 1-255-0
 Gravas Jaune / Yellow Rubble : 2-255-3
+Trou Droite Vert / Green Right Hole : 4-253-2
 
 
 ////// VIVANTS / LIVING //////
@@ -106,12 +112,13 @@ There is no chip to create those objects. Those are created from specific Piranh
 
 Rien / Nothing : 0-0-0
 Mur / Wall : 255-255-255
+Mur / Wall : 128-128-255 (peut servir pour le mobilier, pour faire la différence avec les "murs classique" sur la carte / can be used for the furniture, to make the difference with "classical walls" on the map).
 
-Les points de passages sont des repères pour les PNJ lorsque leur objectif (là où ils veulent aller) est inatteignable par un "simple coude".
-Ils sont gourmands en ressource, n'en mettre que là où c'est nécessaire.
+Les points de passages sont des repères pour les PNJ lorsque leur objectif (là où ils veulent aller) est inatteignable par plus d'un "simple coude".
+Leur consommation en ressource croit exponentiellement avec leur nombre, n'en mettre que là où c'est nécessaire.
 
-Path Points are landmarks for NPC when its goal (where it wants to go) is unreachable with a "single bend".
-It is resource intensive, put it only where it needs to.
+Path Points are landmarks for NPC when its goal (where it wants to go) is unreachable with more than a "single bend".
+Their resource consumption grows exponentially with their number, put them only where it needs to.
 
 Point de passage / Path Point : 48-48-48
 

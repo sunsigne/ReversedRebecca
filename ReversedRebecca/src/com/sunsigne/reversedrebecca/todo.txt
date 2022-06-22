@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	certains Piranha object sont juste des "murs", la vitesse est ralentie à cause des tonnes de données à générer (à causes des lois)
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
 	////////// PIRA ////////////
@@ -18,14 +17,12 @@
 
 	////////// DIFFICILE ////////////
 	
-	NullHoleObject et son puzzle ne sont pas du tout fini
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	trouver un moyen d'enregistrer le lvl des tools dans characteristiques de façon automatique ?
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
 	Save.resetProgression() ! Ne reset pas encore les caractéristiques
 	corriger les hitbox (choque le user d'être aussi loin de l'évier dans le lvl000)
 	finir le design des personnages
-	mettre à jour la doc "mappable"
 	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 	la GUI s'affiche sur l'écran titre

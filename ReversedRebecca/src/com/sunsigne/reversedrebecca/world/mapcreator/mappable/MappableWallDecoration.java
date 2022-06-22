@@ -1,17 +1,16 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.piranha.interactive;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.piranha.InteractiveObject;
+import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
-import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableInteractive00 implements Mappable {
+public class MappableWallDecoration implements Mappable {
 
-	private MappableInteractive00() {
+	private MappableWallDecoration() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableInteractive00();
+	private static Mappable mappable = new MappableWallDecoration();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,7 +21,7 @@ public class MappableInteractive00 implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new InteractiveObject("OBJ-00", x, y);
+		return new Wall(x, y);
 	}
 
 	@Override
