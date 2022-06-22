@@ -35,7 +35,6 @@
 	////////// FACILE ////////////
 
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
-	faire les traductions des fichiers du HackPuzzle
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
 	replacer le dossier "voice" dans le dossier "audio" plutôt que "sound"
 	mettre à jour les miniatures dans les dossiers
@@ -66,7 +65,6 @@
 	
 	////////// SONS ////////////
 	
-	ajouter un son quand on éteint la bougie
 	Le fading menu devrait jouer un son 
 	les boutons et les menus devraient jouer un son (et particulièrement AudioScreen !)
 	Ajouter des voix aux personnages (son quand ils parlent)
