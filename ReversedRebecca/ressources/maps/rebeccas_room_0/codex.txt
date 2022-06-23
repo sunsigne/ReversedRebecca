@@ -43,3 +43,8 @@ OBJ-16 = Trash
 OBJ-17 = Desk
 OBJ-18 = Plant
 OBJ-19 = Chair
+
+///// LIVING ROOM /////
+
+OBJ-20 = Vertical Couch
+OBJ-21 = Couch Leaver
