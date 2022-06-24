@@ -30,9 +30,6 @@
 
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
-	replacer le dossier "voice" dans le dossier "audio" plutôt que "sound"
-	mettre à jour les miniatures dans les dossiers
-
 	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
