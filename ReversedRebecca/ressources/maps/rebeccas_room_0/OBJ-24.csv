@@ -1,0 +1,10 @@
+TIME -> 0 = GOTO -> TA_INIT
+
+
+//// STATE ////
+
+$ -> TA_INIT = TRIPLE_ACTION -> WATCH_TV*WATCH_TV
+! -> TA_NULL_TV = TRIPLE_ACTION -> NULL
+
+
+//// WATCH TV ////
