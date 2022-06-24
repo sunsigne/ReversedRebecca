@@ -41,6 +41,8 @@ TAKE_GLASS = Key2 % prendre
 RELAX = Key1 % se#détendre
 FACE_REALITY = Key1 % affronter#la#réalité
 WATCH_TV = Key1 % regarder#la#TV
+SIT = Key1 % s'assoir
+EXIT = Key1 % sortir
 
 ///// ENTRANCE /////
 
