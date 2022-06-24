@@ -35,7 +35,6 @@ JUST_ONE_GAME = Key1 % juste#une#partie...
 I_AM_WEAK = Key1 % je#suis#faible...
 TAKE_GLASS = Key2 % prendre
 
-
 ///// LIVING ROOM /////
 
 RELAX = Key1 % se#détendre
@@ -43,6 +42,8 @@ FACE_REALITY = Key1 % affronter#la#réalité
 WATCH_TV = Key1 % regarder#la#TV
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
+
+///// KITCHEN /////
 
 ///// ENTRANCE /////
 

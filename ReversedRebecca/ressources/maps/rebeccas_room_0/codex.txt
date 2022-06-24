@@ -58,3 +58,8 @@ OBJ-28 = Chair Toward Down
 OBJ-29 = Chair Toward Left
 OBJ-30 = Chair Toward Right
 OBJ-31 = Chair Leaver
+
+///// KITCHEN /////
+
+OBJ-32 = Bar
+OBJ-33 = Trash
