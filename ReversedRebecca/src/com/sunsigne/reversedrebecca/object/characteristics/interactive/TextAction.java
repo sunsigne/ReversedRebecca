@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TextAction implements Updatable {
@@ -114,23 +115,38 @@ public class TextAction implements Updatable {
 	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7", 17f);
 
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
-		int[] rect = getChoiceRect(player, gap);
+		DIRECTION facing = player.getFacing();
+		
+		// this prevent text to protrude from the screen
+		if (tooCloseToRightBorder(player))
+			facing = DIRECTION.RIGHT;
+		
+		int[] rect = getChoiceRect(player, facing, gap);
 
 		DIRECTION centeredText = DIRECTION.LEFT;
-		if (player.getFacing() == DIRECTION.RIGHT)
+		if (facing == DIRECTION.RIGHT)
 			centeredText = DIRECTION.RIGHT;
 
 		new TextDecoration().drawOutlinesString(g, choice_font, text, centeredText, rect);
 	}
 
-	private int[] getChoiceRect(Player player, int gap) {
-
-		switch (player.getFacing()) {
+	private int[] getChoiceRect(Player player, DIRECTION facing, int gap) {
+		switch (facing) {
 		case RIGHT:
 			return new int[] { player.getX() - Size.M, player.getY() + gap, Size.M, Size.M };
 		default:
 			return new int[] { player.getX() + Size.M, player.getY() + gap, Size.M, Size.M };
 		}
+	}
+
+	private boolean tooCloseToRightBorder(Player player) {
+		if (CameraDependency.CAMERA.getX() != 0)
+			return false;
+
+		if (player.getX() < 1500)
+			return false;
+
+		return true;
 	}
 
 }

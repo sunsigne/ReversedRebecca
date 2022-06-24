@@ -25,8 +25,7 @@ SEARCH_KEY_SHORT = Key3 % fouiller
 
 ///// TOILET /////
 
-PEE = Key1 % ...
-WATER_SHORT = Key1 % eau
+USE = Key1 % utiliser
 
 ///// DESK /////
 
@@ -39,9 +38,9 @@ TAKE_GLASS = Key2 % prendre
 
 ///// LIVING ROOM /////
 
-RELAX = Key1 % zzz
+RELAX = Key1 % se#détendre
 FACE_REALITY = Key1 % affronter#la#réalité
-WATCH_TV = Key1 % TV
+WATCH_TV = Key1 % regarder#la#TV
 
 ///// ENTRANCE /////
 
