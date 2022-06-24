@@ -79,7 +79,7 @@ public class MenuScreen implements Updatable, TickFree {
 	}
 
 	private void drawTitle(Graphics g) {
-		g.drawImage(title_img, 530, 80, 856, 380, null);
+		g.drawImage(title_img, 525, 80, 856, 380, null);
 	}
 
 }
