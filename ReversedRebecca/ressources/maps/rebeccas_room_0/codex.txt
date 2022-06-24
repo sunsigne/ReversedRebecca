@@ -48,3 +48,5 @@ OBJ-19 = Chair
 
 OBJ-20 = Vertical Couch
 OBJ-21 = Couch Leaver
+OBJ-22 = Horizontal Couch
+OBJ-23 = TV

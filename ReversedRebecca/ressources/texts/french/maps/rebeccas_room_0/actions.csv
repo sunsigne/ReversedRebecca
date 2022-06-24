@@ -41,6 +41,7 @@ TAKE_GLASS = Key2 % prendre
 
 RELAX = Key1 % zzz
 FACE_REALITY = Key1 % affronter#la#réalité
+WATCH_TV = Key1 % TV
 
 ///// ENTRANCE /////
 
