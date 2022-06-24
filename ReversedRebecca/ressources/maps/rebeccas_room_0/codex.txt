@@ -51,3 +51,6 @@ OBJ-21 = Vertical Couch Leaver
 OBJ-22 = Horizontal Couch
 OBJ-23 = Horizontal Couch Leaver
 OBJ-24 = TV
+OBJ-25 = Bookshelf
+OBJ-26 = Table
+OBJ-27 = Chair Toward Up
