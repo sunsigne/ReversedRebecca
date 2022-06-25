@@ -16,6 +16,7 @@ WATER_EMPTY = Key1 % vider#l'eau
 FILL = Key2 % remplir
 EMPTY = Key2 % vider
 WASH = Key1 % se#laver
+LEAVE = Key1 % sortir
 CLEAN_HAIR = Key2 % nettoyer#les#cheveux
 TAKE = Key1 % prendre
 CLEAN_CLOTHES = Key2 % ranger#les#vetements
@@ -46,18 +47,14 @@ EXIT = Key1 % sortir
 ///// KITCHEN /////
 
 DO_PANCAKES = Key2 % faire#des#crepes
-
-///// ENTRANCE /////
-
-OPEN = Key1 % ouvrir
-
-
-LEAVE = Key1 % sortir
-EAT_COOKIE = Key1 % manger#un#biscuit
+EAT_COOKIE = Key1 % manger#un#cookie
 DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
 TAKE_KEY = Key3 % prendre#la#clé
 
+///// ENTRANCE /////
+
+OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key1 % aller#au#travail
