@@ -3,7 +3,7 @@ TIME -> 0 = GOTO -> HITBOX_INIT, TA_INIT
 
 //// STATE ////
 
-$ -> HITBOX_INIT = HITBOX -> 0, 0, 16, 11
+$ -> HITBOX_INIT = HITBOX -> 0, 0, 12, 16
 $ -> TA_INIT = GOTO -> TA_TAKE_WATER
 
 

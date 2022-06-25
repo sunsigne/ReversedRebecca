@@ -61,5 +61,16 @@ OBJ-31 = Chair Leaver
 
 ///// KITCHEN /////
 
+REGISTER = REBECCAS_ROOM*UNWATERABLE_KITCHEN_PLANT
+
 OBJ-32 = Bar
 OBJ-33 = Trash
+// from top right
+OBJ-34 = Plant
+OBJ-35 = Hotplates
+OBJ-36 = Bar
+OBJ-37 = Sink
+OBJ-38 = Bar
+// to bottom left
+OBJ-39 = Fridge
+OBJ-40 = Gaz Sound

@@ -28,6 +28,9 @@
 
 	////////// FACILE ////////////
 
+	afficher un message d'erreur lorsqu'un texte de chatbox est plus long que 64 charactéres
+	afficher un message d'erreur quand un triple action n'a pas de traduction dans la liste
+	
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
 	créer un objet (genre Flag) pour finir un level ?

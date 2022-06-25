@@ -45,6 +45,8 @@ EXIT = Key1 % sortir
 
 ///// KITCHEN /////
 
+DO_PANCAKES = Key2 % faire#des#crepes
+
 ///// ENTRANCE /////
 
 OPEN = Key1 % ouvrir
