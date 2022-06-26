@@ -54,8 +54,8 @@ public class CameraRequest implements Request, CameraDependency {
 		GoalObject goal = new GoalObject(x, y, false);
 
 		camera.setFollowingPlayer(false);
-		CAMERA.setX(goal.getX());
-		CAMERA.setY(goal.getY());
+		CAMERA.setX(-goal.getX());
+		CAMERA.setY(-goal.getY());
 	}
 
 	private void setCameraOnPlayer(CameraMovingLaw camera) {
