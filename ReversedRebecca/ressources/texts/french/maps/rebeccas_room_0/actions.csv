@@ -35,6 +35,7 @@ PLAY_ANYWAY = Key1 % jouer#quand#meme
 JUST_ONE_GAME = Key1 % juste#une#partie...
 I_AM_WEAK = Key1 % je#suis#faible...
 TAKE_GLASS = Key2 % prendre
+ASK_FOR_KEY = Key3 % où#sont#mes#clés#?
 
 ///// LIVING ROOM /////
 
