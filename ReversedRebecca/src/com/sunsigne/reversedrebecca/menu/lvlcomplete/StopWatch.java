@@ -31,6 +31,7 @@ public class StopWatch implements Updatable, RenderFree {
 	}
 
 	public float getTime() {
+		getHandler().removeObject(this);
 		return time / Game.SEC;
 	}
 

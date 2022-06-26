@@ -27,7 +27,6 @@ public enum LAYER {
 	
 	MENU("menu", new Handler(false)),
 	DEBUG ("debug", new Handler(false)),
-	STATS ("stats", new Handler(false)),
 	LOADING ("loading", new Handler(false));
 	
 	public boolean isMapLayer() {
