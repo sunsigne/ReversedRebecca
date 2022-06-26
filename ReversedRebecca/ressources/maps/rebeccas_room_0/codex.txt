@@ -75,3 +75,7 @@ OBJ-38 = Bar
 // to bottom left
 OBJ-39 = Fridge
 OBJ-40 = Gaz Sound
+
+///// ENTRANCE /////
+
+OBJ-41 = Special Exit Door
