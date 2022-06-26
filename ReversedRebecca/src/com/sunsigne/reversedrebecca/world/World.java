@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.menu.lvlcomplete.StopWatch;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
@@ -147,6 +148,8 @@ public class World implements Updatable, RenderFree {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
+		stopWatch = new StopWatch();
+		LAYER.DEBUG.addObject(stopWatch);
 	}
 
 	////////// NAME ////////////
@@ -247,6 +250,14 @@ public class World implements Updatable, RenderFree {
 
 			tempLayer.getHandler().clear();
 		}
+	}
+	
+	////////// STOPWATCH ////////////
+	
+	private StopWatch stopWatch;
+
+	public StopWatch getStopWatch() {
+		return stopWatch;
 	}
 
 	////////// TICK ////////////

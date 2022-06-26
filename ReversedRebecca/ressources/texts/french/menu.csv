@@ -2,7 +2,7 @@
 
 Loading = Chargement
 LevelCompleted = Niveau#Terminé
-LevelTime = Temps
+LevelTime = Temps#(sec)
 LevelPuzzle = Puzzle#Fini
 LevelBestDeed = Meilleure#Action
 LevelWorstDeed = Pire#Action

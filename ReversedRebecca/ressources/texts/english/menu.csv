@@ -1,8 +1,8 @@
 ///// LOADING /////
 
 Loading = Loading
-LevelCompleted = Level#Complete
-LevelTime = Time
+LevelCompleted = Level#Completed
+LevelTime = Time#(sec)
 LevelPuzzle = Puzzle#Finished
 LevelBestDeed = Best#Deed
 LevelWorstDeed = Worst#Deed

@@ -46,7 +46,8 @@ public class MenuScreen implements Updatable, TickFree {
 	}
 
 	private void drawRebeccasRoom() {
-		new World(new Save().getLevel(true));
+		World world = new World(new Save().getLevel(true));
+		world.getStopWatch().stop();
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 

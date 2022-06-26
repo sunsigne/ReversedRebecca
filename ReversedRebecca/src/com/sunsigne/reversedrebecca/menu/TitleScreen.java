@@ -104,6 +104,7 @@ public class TitleScreen extends MenuScreen {
 		// fade menu
 		PhysicLaw law = PhysicList.getList().getObject(new FadeMenuLaw());
 		((FadeMenuLaw) law).setFading(true);
+		World.get().getStopWatch().resume();
 
 		// user can control player
 		Player player = new PlayerFinder().getPlayer();
