@@ -18,7 +18,7 @@ Un fichier Piranha est le "cerveau" d'un objet Piranha. Si l'objet n'est pas pr�
 Pour qu'un objet Piranha soit dans le niveau, il suffit soit de l'introduire sur la map (voir "mappable" dans le dossier "maps"), soit qu'un autre objet Piranha l'ait créé (voir "requêtes de création")
 Seule exception, l'objet SET-UP qui est créé automatiquement lors du chargement d'une map (à des coordonnées négatives, donc impossible à atteindre avec du Piranha).
 
-Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers dont l'extension est .csv, et dont les noms sont PLAYER, SET-UP, compris entre NPC-01 et NPC-30, ou compris entre OBJ-01 à OBJ-50.
+Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers dont l'extension est .csv, et dont les noms sont PLAYER, SET-UP, compris entre NPC-01 et NPC-30, ou compris entre OBJ-01 à OBJ-99.
 
 Note : les fichiers Piranha ont tous un nom qui fait exactement 6 caractères. Cette règle ne peut pas être transgressée.
 

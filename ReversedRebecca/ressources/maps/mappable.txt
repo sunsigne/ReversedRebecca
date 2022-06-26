@@ -97,8 +97,8 @@ OBJ-01 -> 1
 OBJ-02 -> 2
 OBJ-03 -> 3
 ...
-OBJ-49 -> 49
-OBJ-50 -> 50
+OBJ-98 -> 98
+OBJ-99 -> 99
 
 
 ////// DECORATION & ANIMATION //////
