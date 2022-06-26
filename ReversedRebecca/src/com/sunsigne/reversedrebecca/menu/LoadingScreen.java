@@ -14,10 +14,6 @@ public class LoadingScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 
-	public LoadingScreen() {
-
-	}
-
 	////////// RENDER ////////////
 
 	private Font font = new FontTask().createNewFont("dogicabold", 50f);

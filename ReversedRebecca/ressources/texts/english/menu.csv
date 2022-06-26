@@ -1,4 +1,19 @@
+///// LOADING /////
+
 Loading = Loading
+LevelCompleted = Level#Complete
+LevelTime = Time
+LevelPuzzle = Puzzle#Finished
+LevelBestDeed = Best#Deed
+LevelWorstDeed = Worst#Deed
+LevelEndingAchieved = Ending#Achieved
+LevelYouArePragmatic = You#are#:#pragmatic
+LevelYouAreFast = You#are#:#fast
+LevelYouAreConscientious = You#are#:#conscientious
+LevelYouAreNice = You#are#:#nice
+LevelYouAreMean = You#are#:#mean
+LevelYouAreBipolar = You#are#:#bipolar
+LevelClickToContinue = Click#to#continue
 
 ///// MAIN /////
 
