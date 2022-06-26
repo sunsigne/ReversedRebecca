@@ -19,6 +19,8 @@ Lorsque le puzzle en x=34 y=31 est résolu, le chemin n'est plus bloqué ! PEEBO
 Dans la mesure où le Type de Requête MEMORY a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer.
 Pas d'inquiétude ! Les MEMORY ne dure que le temps du niveau : ils ne sont pas transportés sur les maps suivantes.
 Si vous devez créer des cycles, préférez une autre méthode (: un NAME changeant en cycle, une suite d'AFFECTING se renvoyant la balle, un WAITFOR qui se rappelle lui-même, etc.)
+En effet, il est tout à fait possible (et pratique) d'utiliser NAME de façon classique et conditionnelle afin d'imiter le comportement du Type de Requête MEMORY. L'avantage est qu'on ne peut pas effacer ni éditer un MEMORY, alors que NAME peut être changé à loisir.
+ATTENTION ! N'oubliez pas que MEMORY a une portée globale et NAME une portée LOCALE ! Soyez précis dans votre code pour qu'il fonctionne.
 
 
 ////// SAVE //////

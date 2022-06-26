@@ -4,8 +4,9 @@ Sauf mentions contraire, L'écriture conditionnelle est possible pour tous les T
 
 
 Le Type de Requête NAME permet de renommer un objet.
-Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom.
+Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom (en particulier pour les objets "vivants").
 Note : lorsqu'un objet est "vivant", son visuel est automatiquement défini en fonction de son nom parmi les dossiers dans "textures/characters".
+Note : il est tout à fait possible (et pratique) d'utiliser NAME de façon classique et conditionnelle afin d'imiter le comportement du Type de Requête MEMORY (voir "requêtes memory.txt).
 
 exemple :
 TIME -> 0 = NAME -> BOB
@@ -14,7 +15,7 @@ TIME -> 0 = GOTO -> NAME:BOB
 Lorsque la Condition sera vérifiée, l'objet sera renommé Bob.
 
 Cette Requête est très utile juste après la génération d'une map afin d'établir le nom d'un personnage (et ainsi d'afficher les bonnes textures).
-Note : le nom générique OBJECT fait référence à l'objet Piranha en cours. Le nom PLAYER est également possible pour faire référence au joueur.
+Note : le nom générique OBJECT (qu'on trouvera souvent dans les fichiers de dialogue) fait référence à l'objet Piranha en cours. Le nom PLAYER est également possible pour faire référence au joueur.
 
 
 ////// FACING //////
