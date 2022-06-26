@@ -28,11 +28,14 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	////////// DATA ////////////
 
 	private String time_stats;
+	private String puzzle_stats;
 	
 	private void loadStats() {
 		LevelEndStats stats = World.get().getLevelEndStats();		
-		time_stats = stats.getTime();
 	
+		time_stats = stats.getTime();
+		puzzle_stats = stats.getPuzzleCount();
+		
 //		you_are_text = new Translatable().getTranslatedText("LevelYouAre", file).toUpperCase() + " :";
 	}
 
@@ -80,6 +83,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		drawStats(g, time_stats, 0);
 		
 		drawText(g, puzzle_text, 60);
+		drawStats(g, puzzle_stats, 60);
+		
 		drawText(g, bestDeed_text, 120);
 		drawText(g, worstDeed_text, 180);
 		drawText(g, ending_text, 240);
