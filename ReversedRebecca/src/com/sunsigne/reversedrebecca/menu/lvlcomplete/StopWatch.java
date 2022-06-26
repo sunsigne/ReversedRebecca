@@ -20,19 +20,18 @@ public class StopWatch implements Updatable, RenderFree {
 
 	////////// TICK ////////////
 
-	private float time_in_tick;
+	private float time;
 
 	@Override
 	public void tick() {
 		if (running == false)
 			return;
 
-		time_in_tick++;
+		time++;
 	}
 
-	public String getTime() {
-		float time_in_sec = time_in_tick / Game.SEC;
-		return String.format("%.2f", time_in_sec);
+	public float getTime() {
+		return time / Game.SEC;
 	}
 
 }

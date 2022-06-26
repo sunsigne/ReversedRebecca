@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.LevelEndStats;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class LevelCompletedScreen implements Updatable, TickFree {
@@ -19,19 +20,18 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String file = "menu.csv";
 
 	public LevelCompletedScreen() {
-		loadData();
+		loadStats();
 		loadFont();
 		loadText();
 	}
 
 	////////// DATA ////////////
 
-	private String time_data;
+	private String time_stats;
 	
-	private void loadData() {
-		StopWatch stopWatch = World.get().getStopWatch();
-		stopWatch.getHandler().removeObject(World.get().getStopWatch());		
-		time_data = stopWatch.getTime();
+	private void loadStats() {
+		LevelEndStats stats = World.get().getLevelEndStats();		
+		time_stats = stats.getTime();
 	
 //		you_are_text = new Translatable().getTranslatedText("LevelYouAre", file).toUpperCase() + " :";
 	}
@@ -77,7 +77,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		drawTitle(g);
 		
 		drawText(g, time_text, 0);
-		drawData(g, time_data, 0);
+		drawStats(g, time_stats, 0);
 		
 		drawText(g, puzzle_text, 60);
 		drawText(g, bestDeed_text, 120);
@@ -101,7 +101,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		new TextDecoration().drawOutlinesString(g, text_font, text, DIRECTION.RIGHT, rect);
 	}
 	
-	private void drawData(Graphics g, String text, int y) {
+	private void drawStats(Graphics g, String text, int y) {
 		int[] rect = new int[] { Window.WIDHT / 2 + 50, 370 + y, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, text_font, text, Color.YELLOW, Color.BLACK, DIRECTION.LEFT,
 				rect);
