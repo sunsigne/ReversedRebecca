@@ -35,8 +35,9 @@ public class EndLevelRequest implements Request {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {		
-		LAYER.LOADING.addObject(new LevelCompletedScreen());
+	public void doAction(PiranhaObject object, String target) {
+		String ending = target.split(",")[0];
+		LAYER.LOADING.addObject(new LevelCompletedScreen(ending));
 	}
 	
 	public void temp(PiranhaObject object, String target) {		
