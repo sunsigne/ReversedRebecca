@@ -154,7 +154,7 @@ public class World implements Updatable, RenderFree {
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
-		levelStats = new LevelStats();
+		levelStats = new LevelStats(mapName);
 	}
 
 	////////// NAME ////////////

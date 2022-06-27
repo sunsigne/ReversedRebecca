@@ -1,12 +1,14 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LevelStats {
 
-	public LevelStats() {
-		createStopWatch();
+	public LevelStats(String mapName) {
+		createStopWatch(mapName);
 		createDeed();
 	}
 
@@ -27,10 +29,25 @@ public class LevelStats {
 		}
 	}
 
-	private void createStopWatch() {
+	private void createStopWatch(String mapName) {
 		removeExistingStopWatch();
-		stopWatch = new StopWatch();
+		int[] time = getTimes(mapName);
+		stopWatch = new StopWatch(time[0], time[1]);
 		LAYER.DEBUG.addObject(stopWatch);
+	}
+
+	private int[] getTimes(String mapName) {
+		int[] times = new int[] { 0, 0 };
+
+		String path = "maps/" + mapName + "/";
+		FileTask file = new FileTask();
+
+		if (file.doesExist(path + "FAST.txt"))
+			times[0] = Integer.parseInt(file.read(path + "FAST.txt"));
+		if (file.doesExist(path + "METICULOUS.txt"))
+			times[1] = Integer.parseInt(file.read(path + "METICULOUS.txt"));
+
+		return times;
 	}
 
 	public String getTime() {
@@ -67,6 +84,39 @@ public class LevelStats {
 
 	public String getBadDeed() {
 		return deed.getBadDeed();
+	}
+
+	////////// YOU ARE ////////////
+
+	private String file = "menu.csv";
+
+	private String translate(String text) {
+		return new Translatable().getTranslatedText("LevelYouAre" + text, file);
+	}
+
+	public String getYouAre() {
+
+		// is fast
+		if (stopWatch.isFast())
+			return translate("Fast");
+
+		// has good karma
+		if (deed.hasGoodKarma() && deed.hasBadKarma() == false)
+			return translate("Nice");
+
+		// has bad karma
+		if (deed.hasGoodKarma() == false && deed.hasBadKarma())
+			return translate("Mean");
+
+		// has both good & bad karma
+		if (deed.hasGoodKarma() && deed.hasBadKarma())
+			return translate("Bipolar");
+
+		// is slow
+		if (stopWatch.isMeticulous())
+			return translate("Meticulous");
+
+		return translate("Pragmatic");
 	}
 
 }

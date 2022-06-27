@@ -39,6 +39,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String goodDeed_stats;
 	private String badDeed_stats;
 	private String ending_stats;
+	private String you_are_stats;
 
 	private void loadStats(String ending_stats) {
 		LevelStats stats = World.get().getLevelStats();
@@ -50,9 +51,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		puzzle_stats = format(stats.getPuzzleCount());
 		goodDeed_stats = format(stats.getGoodDeed());
 		badDeed_stats = format(stats.getBadDeed());
+		you_are_stats = format(stats.getYouAre());
 		this.ending_stats = ending_stats;
-		
-//		you_are_text = new Translatable().getTranslatedText("LevelYouAre", file).toUpperCase() + " :";
 	}
 
 	////////// FONT ////////////
@@ -99,12 +99,11 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		drawText(g, puzzle_text, 60);
 		drawStats(g, puzzle_stats, 60);
 		drawText(g, goodDeed_text, 120);
-		drawStats(g, goodDeed_stats, 120);		
+		drawStats(g, goodDeed_stats, 120);
 		drawText(g, badDeed_text, 180);
-		drawStats(g, badDeed_stats, 180);			
+		drawStats(g, badDeed_stats, 180);
 		drawText(g, ending_text, 240);
-		drawStats(g, ending_stats, 240);	
-
+		drawStats(g, ending_stats, 240);
 		drawYouAre(g);
 		drawClickToContinue(g);
 	}
@@ -128,8 +127,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 
 	private void drawYouAre(Graphics g) {
 		int[] rect = new int[] { Window.WIDHT / 2, 820, 0, 0 };
-		// PRAGMATIQUE, RAPIDE, CONSCIENCIEUX, GENTIL, MECHANT
-		new TextDecoration().drawOutlinesString(g, you_are_font, "VOUS ETES : CONSCIENCIEUX", Color.ORANGE, Color.BLACK,
+		new TextDecoration().drawOutlinesString(g, you_are_font, you_are_stats, Color.ORANGE, Color.BLACK,
 				DIRECTION.NULL, rect);
 	}
 

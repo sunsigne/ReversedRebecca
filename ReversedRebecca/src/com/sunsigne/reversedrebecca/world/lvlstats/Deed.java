@@ -16,6 +16,10 @@ public class Deed {
 	private String goodDeed;
 	private int goodWeight;
 
+	public boolean hasGoodKarma() {
+		return goodWeight != 0;
+	}
+	
 	public String getGoodDeed() {
 		return goodDeed;
 	}
@@ -32,7 +36,11 @@ public class Deed {
 
 	private String badDeed;
 	private int badWeight;
-
+	
+	public boolean hasBadKarma() {
+		return badWeight != 0;
+	}
+	
 	public String getBadDeed() {
 		return badDeed;
 	}

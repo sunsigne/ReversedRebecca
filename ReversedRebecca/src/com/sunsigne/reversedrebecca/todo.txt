@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	créer un moyen de mesurer si un temps donné est bon ou non,
 	attention ! obj-01 et EndLevelRequest sont pour l'instant temporaires
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
@@ -19,6 +18,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	"You are" ne se sauvegarde pas encore, il devrait même avec une class à lui ?
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	trouver un moyen d'enregistrer le lvl des tools dans characteristiques de façon automatique ?
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
@@ -41,6 +41,7 @@
 	
 	////////// LVL000 ////////////
 	
+	temps "méticuleux" à vérifier
 	faire en sorte que Sarah réagisse à l'odeur des pancakes, voir aux pancakes s'ils sont tj là
 	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef)
 	faire en sote qu'il est possible d'enfermer sarah chez soi (quand elle fait la sieste ou qu'elle est aux toilettes)
