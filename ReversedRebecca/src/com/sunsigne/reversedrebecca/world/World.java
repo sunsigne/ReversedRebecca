@@ -30,7 +30,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
-import com.sunsigne.reversedrebecca.world.lvlstats.LevelEndStats;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
 public class World implements Updatable, RenderFree {
@@ -145,16 +145,16 @@ public class World implements Updatable, RenderFree {
 		addKeyboardListener();
 	}
 
-	private LevelEndStats levelStats;
+	private LevelStats levelStats;
 
-	public LevelEndStats getLevelEndStats() {
+	public LevelStats getLevelStats() {
 		return levelStats;
 	}
 
 	private void start() {
 		getLayer(false).addObject(this);
 		Game.getInstance().forceLoop();
-		levelStats = new LevelEndStats();
+		levelStats = new LevelStats();
 	}
 
 	////////// NAME ////////////

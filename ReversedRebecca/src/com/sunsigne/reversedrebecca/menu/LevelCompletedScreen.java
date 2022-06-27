@@ -14,7 +14,7 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
-import com.sunsigne.reversedrebecca.world.lvlstats.LevelEndStats;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 
 public class LevelCompletedScreen implements Updatable, TickFree {
 
@@ -38,7 +38,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String puzzle_stats;
 
 	private void loadStats() {
-		LevelEndStats stats = World.get().getLevelEndStats();
+		LevelStats stats = World.get().getLevelStats();
 
 		String time = format(stats.getTime());
 		String unit = format(new Translatable().getTranslatedText("LevelTimeUnit", file));
