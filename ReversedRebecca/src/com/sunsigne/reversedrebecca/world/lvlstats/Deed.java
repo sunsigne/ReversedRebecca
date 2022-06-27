@@ -13,15 +13,23 @@ public class Deed {
 
 	////////// GOOD ////////////
 
-	private String goodDeed;
-	private int goodWeight;
+	private String goodDeed, badDeed;
+	private int goodWeight, badWeight;
 
-	public boolean hasGoodKarma() {
-		return goodWeight != 0;
-	}
-	
 	public String getGoodDeed() {
 		return goodDeed;
+	}
+
+	public String getBadDeed() {
+		return badDeed;
+	}
+
+	public int getGoodWeight() {
+		return goodWeight;
+	}
+
+	public int getBadWeight() {
+		return badWeight;
 	}
 
 	public void setGoodDeed(int weight, String goodDeed) {
@@ -30,19 +38,6 @@ public class Deed {
 
 		this.goodWeight = weight;
 		this.goodDeed = goodDeed;
-	}
-
-	////////// BAD ////////////
-
-	private String badDeed;
-	private int badWeight;
-	
-	public boolean hasBadKarma() {
-		return badWeight != 0;
-	}
-	
-	public String getBadDeed() {
-		return badDeed;
 	}
 
 	public void setBadDeed(int weight, String badDeed) {

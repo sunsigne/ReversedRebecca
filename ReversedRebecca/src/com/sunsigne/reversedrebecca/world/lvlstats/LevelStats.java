@@ -1,15 +1,14 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
-import com.sunsigne.reversedrebecca.ressources.FileTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LevelStats {
 
 	public LevelStats(String mapName) {
-		createStopWatch(mapName);
+		createStopWatch();
 		createDeed();
+		createJudgment(mapName);
 	}
 
 	////////// STOPWATCH ////////////
@@ -29,25 +28,10 @@ public class LevelStats {
 		}
 	}
 
-	private void createStopWatch(String mapName) {
+	private void createStopWatch() {
 		removeExistingStopWatch();
-		int[] time = getTimes(mapName);
-		stopWatch = new StopWatch(time[0], time[1]);
+		stopWatch = new StopWatch();
 		LAYER.DEBUG.addObject(stopWatch);
-	}
-
-	private int[] getTimes(String mapName) {
-		int[] times = new int[] { 0, 0 };
-
-		String path = "maps/" + mapName + "/";
-		FileTask file = new FileTask();
-
-		if (file.doesExist(path + "FAST.txt"))
-			times[0] = Integer.parseInt(file.read(path + "FAST.txt"));
-		if (file.doesExist(path + "METICULOUS.txt"))
-			times[1] = Integer.parseInt(file.read(path + "METICULOUS.txt"));
-
-		return times;
 	}
 
 	public String getTime() {
@@ -88,35 +72,18 @@ public class LevelStats {
 
 	////////// YOU ARE ////////////
 
-	private String file = "menu.csv";
+	private Judgment judgement;
 
-	private String translate(String text) {
-		return new Translatable().getTranslatedText("LevelYouAre" + text, file);
+	public Judgment getJudgment() {
+		return judgement;
+	}
+
+	private void createJudgment(String mapName) {
+		judgement = new Judgment(mapName, stopWatch, deed);
 	}
 
 	public String getYouAre() {
-
-		// is fast
-		if (stopWatch.isFast())
-			return translate("Fast");
-
-		// has good karma
-		if (deed.hasGoodKarma() && deed.hasBadKarma() == false)
-			return translate("Nice");
-
-		// has bad karma
-		if (deed.hasGoodKarma() == false && deed.hasBadKarma())
-			return translate("Mean");
-
-		// has both good & bad karma
-		if (deed.hasGoodKarma() && deed.hasBadKarma())
-			return translate("Bipolar");
-
-		// is slow
-		if (stopWatch.isMeticulous())
-			return translate("Meticulous");
-
-		return translate("Pragmatic");
+		return judgement.getYouAre();
 	}
 
 }
