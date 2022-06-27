@@ -1,12 +1,14 @@
-///// LOADING /////
-
 Loading = Loading
+
+///// LEVEL STATS /////
+
 LevelCompleted = Level#Completed
 LevelTime = Time
 LevelTimeUnit = Sec
 LevelPuzzle = Puzzle#Finished
-LevelBestDeed = Best#Deed
-LevelWorstDeed = Worst#Deed
+LevelGoodDeed = Best#Deed
+LevelBadDeed = Worst#Deed
+LevelNoneDeed = None
 LevelEndingAchieved = Ending#Achieved
 LevelYouArePragmatic = You#are#:#pragmatic
 LevelYouAreFast = You#are#:#fast

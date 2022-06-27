@@ -2,8 +2,8 @@ Les Types de requêtes suivants ont pour Cibles le nom d'un fichier dans le doss
 
 Note : d'un point de vue technique, le Type de Requête NAME est partiellement de type ressources dans la mesure où sa cible sert d'ID, mais charge également la texture d'un personnage en cherchant parmi les fichiers dans le dossier "ressources/textures/characters/(nom de la cible)".
 
-////// EXPRESSION //////
 
+////// EXPRESSION //////
 
 Le Type de Requête EXPRESSION permet d'afficher une bulle expressive au-dessus d'un objet.
 La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/textures/other".
@@ -25,7 +25,6 @@ Note : l'expression "exclamation" a une animation supplémentaire par rapport au
 
 ////// SOUND //////
 
-
 Le Type de Requête SOUND permet de jouer un son.
 La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/sound".
 
@@ -39,7 +38,6 @@ Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SA
 
 
 ////// TALK //////
-
 
 Le Type de Requête TALK permet de lancer un dialogue.
 La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)".
@@ -63,3 +61,26 @@ La quatrième partie est le dialogue qui doit s'afficher.
 
 Les espaces permettent de gagner en lisibilité dans le code, mais ils sont ignorés par le programme ; c'est pourquoi des '#' sont introduits dans le texte et seront comptés comme des espaces à l'affichage.
 De la même façon, le caractère "saut de ligne" dans le dialogue est le symbole "@". Il peut y en avoir aucun, mais il ne doit pas y en avoir plus d'un par ligne de texte !
+
+
+////// DEED //////
+
+Le Type de Requête DEED permet de définir ce qui est une bonne ou une mauvaise action.
+Lorsqu'un niveau est terminé, un écran affiche un récapitulatif pour le joueur. Sur cet écran est mentionné la bonne et la mauvaise action ayant le plus grand "poids"
+Note : n'oubliez pas que les bonnes et les mauvaises actions influent sur la fin obtenue par le joueur ; ne négligez pas cet aspect.
+
+exemple :
+$ -> DEED_OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
+
+Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. Son nom et son "poids" seront déterminés par les valeurs trouvées dans le dossier mentionné ci-dessous :
+la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.csv".
+
+
+////// GOOD_DEED //////
+
+Est un raccourci direct de DEED, mais dont la cible GOOD est incluse dans le Type de Requête.
+La seconde cible devenant unitaire, l'écriture compacte devient alors possible.
+
+////// BAD_DEED //////
+
+Exactement le même principe qu'avec GOOD_DEED.

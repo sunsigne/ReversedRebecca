@@ -36,6 +36,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 
 	private String time_stats;
 	private String puzzle_stats;
+	private String goodDeed_stats;
+	private String badDeed_stats;
 
 	private void loadStats() {
 		LevelStats stats = World.get().getLevelStats();
@@ -44,8 +46,10 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		String unit = format(new Translatable().getTranslatedText("LevelTimeUnit", file));
 		time_stats = time + "  " + unit;
 
-		puzzle_stats = stats.getPuzzleCount();
-
+		puzzle_stats = format(stats.getPuzzleCount());
+		goodDeed_stats = format(stats.getGoodDeed());
+		badDeed_stats = format(stats.getBadDeed());
+		
 //		you_are_text = new Translatable().getTranslatedText("LevelYouAre", file).toUpperCase() + " :";
 	}
 
@@ -66,8 +70,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String title_text;
 	private String time_text;
 	private String puzzle_text;
-	private String bestDeed_text;
-	private String worstDeed_text;
+	private String goodDeed_text;
+	private String badDeed_text;
 	private String ending_text;
 	private String click_text;
 
@@ -75,8 +79,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		title_text = format(new Translatable().getTranslatedText("LevelCompleted", file));
 		time_text = format(new Translatable().getTranslatedText("LevelTime", file)) + " :";
 		puzzle_text = format(new Translatable().getTranslatedText("LevelPuzzle", file)) + " :";
-		bestDeed_text = format(new Translatable().getTranslatedText("LevelBestDeed", file)) + " :";
-		worstDeed_text = format(new Translatable().getTranslatedText("LevelWorstDeed", file)) + " :";
+		goodDeed_text = format(new Translatable().getTranslatedText("LevelGoodDeed", file)) + " :";
+		badDeed_text = format(new Translatable().getTranslatedText("LevelBadDeed", file)) + " :";
 		ending_text = format(new Translatable().getTranslatedText("LevelEndingAchieved", file)) + " :";
 		click_text = format(new Translatable().getTranslatedText("LevelClickToContinue", file));
 	}
@@ -88,15 +92,14 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		new TransluantLayer().drawDarkGray(g, Window.WIDHT, Window.HEIGHT);
 
 		drawTitle(g);
-
 		drawText(g, time_text, 0);
 		drawStats(g, time_stats, 0);
-
 		drawText(g, puzzle_text, 60);
 		drawStats(g, puzzle_stats, 60);
-
-		drawText(g, bestDeed_text, 120);
-		drawText(g, worstDeed_text, 180);
+		drawText(g, goodDeed_text, 120);
+		drawStats(g, goodDeed_stats, 120);		
+		drawText(g, badDeed_text, 180);
+		drawStats(g, badDeed_stats, 180);			
 		drawText(g, ending_text, 240);
 
 		drawYouAre(g);

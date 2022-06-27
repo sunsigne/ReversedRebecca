@@ -1,0 +1,7 @@
+///// GOOD /////
+
+OFFER_PANCAKES = 1 % offrir#des#crêpes
+
+///// BAD /////
+
+SEQUESTRATION = 1 % séquestration

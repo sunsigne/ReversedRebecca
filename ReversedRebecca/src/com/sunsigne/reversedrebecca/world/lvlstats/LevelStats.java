@@ -7,6 +7,7 @@ public class LevelStats {
 
 	public LevelStats() {
 		createStopWatch();
+		createDeed();
 	}
 
 	////////// STOPWATCH ////////////
@@ -39,13 +40,33 @@ public class LevelStats {
 	////////// PUZZLE COUNT ////////////
 
 	private int puzzleCount;
-	
+
 	public void addPuzzleCount() {
 		puzzleCount++;
 	}
 
 	public String getPuzzleCount() {
 		return String.valueOf(puzzleCount);
+	}
+
+	////////// DEED ////////////
+
+	private Deed deed;
+
+	public Deed getDeed() {
+		return deed;
+	}
+
+	private void createDeed() {
+		deed = new Deed();
+	}
+
+	public String getGoodDeed() {
+		return deed.getGoodDeed();
+	}
+
+	public String getBadDeed() {
+		return deed.getBadDeed();
 	}
 
 }

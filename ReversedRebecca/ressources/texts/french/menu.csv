@@ -1,12 +1,14 @@
-///// LOADING /////
-
 Loading = Chargement
-LevelCompleted = Niveau#Terminé
+
+///// LEVEL STATS /////
+
+LevelCompleted = Niveau#Termine
 LevelTime = Temps
 LevelTimeUnit = Sec
 LevelPuzzle = Puzzle#Fini
-LevelBestDeed = Bonne#Action
-LevelWorstDeed = Mauvaise#Action
+LevelGoodDeed = Bonne#Action
+LevelBadDeed = Mauvaise#Action
+LevelNoneDeed = Aucune
 LevelEndingAchieved = Fin#Obtenue
 LevelYouArePragmatic = Vous#êtes#:#pragmatique
 LevelYouAreFast = Vous#êtes#:#rapide
