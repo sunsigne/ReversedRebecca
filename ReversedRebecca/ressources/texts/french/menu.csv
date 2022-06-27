@@ -1,7 +1,7 @@
 ///// LOADING /////
 
 Loading = Chargement
-LevelCompleted = Niveau#Termine
+LevelCompleted = Niveau#Terminé
 LevelTime = Temps
 LevelTimeUnit = Sec
 LevelPuzzle = Puzzle#Fini

@@ -29,4 +29,9 @@ public class FormatedString {
 		return formated_number;
 	}
 
+	public String getNoSpecialCharacter(String text) {
+		String no_accent = text.replace("é", "e").replace("è", "e").replace("ê", "e");
+		return no_accent.replace(",", ".");
+	}
+
 }

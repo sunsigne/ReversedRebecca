@@ -10,7 +10,7 @@
 	////////// EN COURS ////////////
 
 	créer un moyen de mesurer si un temps donné est bon ou non,
-	créer un % pour les puzzle (en fonction du nombre de puzzle POSSIBLE à résoudre)
+	attention ! obj-01 et EndLevelRequest sont pour l'instant temporaires
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
 	////////// PIRA ////////////
