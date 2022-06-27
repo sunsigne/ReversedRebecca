@@ -20,12 +20,13 @@ public class LevelStats {
 	}
 
 	private void removeExistingStopWatch() {
-		for (Updatable tempUpdatable : LAYER.DEBUG.getHandler().getList()) {
-			if (tempUpdatable instanceof StopWatch == false)
-				continue;
+		Updatable stopWatch = null;
 
-			LAYER.DEBUG.getHandler().removeObject(tempUpdatable);
-		}
+		for (Updatable tempUpdatable : LAYER.DEBUG.getHandler().getList()) {
+			if (tempUpdatable instanceof StopWatch)
+				stopWatch = tempUpdatable;
+		}		
+		LAYER.DEBUG.getHandler().removeObject(stopWatch);
 	}
 
 	private void createStopWatch() {
