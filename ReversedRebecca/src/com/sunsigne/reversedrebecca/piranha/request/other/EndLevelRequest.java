@@ -34,6 +34,7 @@ public class EndLevelRequest implements Request {
 		return false;
 	}
 
+	// penser à mettre à jour la doc une fois terminé
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		String ending = target.split(",")[0];
