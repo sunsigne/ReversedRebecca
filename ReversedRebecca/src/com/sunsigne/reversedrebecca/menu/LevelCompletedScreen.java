@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu.lvlcomplete;
+package com.sunsigne.reversedrebecca.menu;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -12,8 +12,8 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.LevelEndStats;
 import com.sunsigne.reversedrebecca.world.World;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelEndStats;
 
 public class LevelCompletedScreen implements Updatable, TickFree {
 
@@ -33,7 +33,8 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private void loadStats() {
 		LevelEndStats stats = World.get().getLevelEndStats();		
 	
-		time_stats = stats.getTime();
+		String unit = new Translatable().getTranslatedText("LevelTimeUnit", file).toUpperCase();
+		time_stats = stats.getTime().replace(",", ".") + "  " + unit;
 		puzzle_stats = stats.getPuzzleCount();
 		
 //		you_are_text = new Translatable().getTranslatedText("LevelYouAre", file).toUpperCase() + " :";
@@ -46,9 +47,9 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private Font you_are_font;
 	
 	private void loadFont() {
-		title_font = new FontTask().createNewFont("square_sans_serif_7", 80f);
-		text_font = new FontTask().createNewFont("square_sans_serif_7", 40f);
-		you_are_font = new FontTask().createNewFont("square_sans_serif_7", 55f);
+		title_font = new FontTask().createNewFont("F5.6-Regular.otf", 80f);
+		text_font = new FontTask().createNewFont("F5.6-Regular.otf", 40f);
+		you_are_font = new FontTask().createNewFont("F5.6-Regular.otf", 55f);
 	}
 
 	////////// TEXT ////////////
@@ -75,7 +76,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 
 	@Override
 	public void render(Graphics g) {
-		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
+		new TransluantLayer().drawDarkGray(g, Window.WIDHT, Window.HEIGHT);
 
 		drawTitle(g);
 		
@@ -102,25 +103,26 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	}
 
 	private void drawText(Graphics g, String text, int y) {
-		int[] rect = new int[] { Window.WIDHT / 2 - 50, 370 + y, 0, 0 };
+		int[] rect = new int[] { Window.WIDHT / 2 - 50, 380 + y, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, text_font, text, DIRECTION.RIGHT, rect);
 	}
 	
 	private void drawStats(Graphics g, String text, int y) {
-		int[] rect = new int[] { Window.WIDHT / 2 + 50, 370 + y, 0, 0 };
-		new TextDecoration().drawOutlinesString(g, text_font, text, Color.YELLOW, Color.BLACK, DIRECTION.LEFT,
+		int[] rect = new int[] { Window.WIDHT / 2 + 20, 380 + y, 0, 0 };
+		Color yellow = new Color(235, 235, 100);
+		new TextDecoration().drawOutlinesString(g, text_font, text, yellow, Color.BLACK, DIRECTION.LEFT,
 				rect);
 	}
 
 	private void drawYouAre(Graphics g) {
 		int[] rect = new int[] { Window.WIDHT / 2, 820, 0, 0 };
 		// PRAGMATIQUE, RAPIDE, CONSCIENCIEUX, GENTIL, MECHANT
-		new TextDecoration().drawOutlinesString(g, you_are_font, "VOUS ÊTES : CONSCIENCIEUX", Color.ORANGE, Color.BLACK, DIRECTION.NULL,
+		new TextDecoration().drawOutlinesString(g, you_are_font, "VOUS ETES : CONSCIENCIEUX", Color.ORANGE, Color.BLACK, DIRECTION.NULL,
 				rect);
 	}
 	
 	private void drawClickToContinue(Graphics g) {
-		int[] rect = new int[] { Window.WIDHT / 2, 1000, 0, 0 };
+		int[] rect = new int[] { Window.WIDHT / 2, 1010, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, text_font, click_text, Color.LIGHT_GRAY, Color.BLACK, DIRECTION.NULL,
 				rect);
 	}

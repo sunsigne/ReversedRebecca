@@ -76,7 +76,7 @@ public class TextAction implements Updatable {
 
 	///// no action text /////
 
-	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7", 20f);
+	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 20f);
 
 	private void drawNoActionText(Graphics g, Player player, String text) {
 		int[] rect = getNoActionRect(player.getFacing());
@@ -112,7 +112,7 @@ public class TextAction implements Updatable {
 
 	///// choice text /////
 
-	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7", 17f);
+	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 17f);
 
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();

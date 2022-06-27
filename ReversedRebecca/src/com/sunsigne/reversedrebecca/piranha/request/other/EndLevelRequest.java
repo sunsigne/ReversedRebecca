@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
+import com.sunsigne.reversedrebecca.menu.LevelCompletedScreen;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -35,6 +36,10 @@ public class EndLevelRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {		
+		LAYER.LOADING.addObject(new LevelCompletedScreen());
+	}
+	
+	public void temp(PiranhaObject object, String target) {		
 		LAYER.LOADING.addObject(new LoadingScreen());
 		
 		// update save file
@@ -46,6 +51,6 @@ public class EndLevelRequest implements Request {
 		String lvl = target.split(",")[1].toLowerCase();
 		new Save().registerNextLevel(lvlmenu, lvl);
 		new World(lvl);
-	}
+	}	
 
 }

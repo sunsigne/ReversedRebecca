@@ -11,7 +11,7 @@ public class FontTask {
 		Font font = null;
 
 		try {
-			File file = new File("ressources/font/" + path + ".ttf");
+			File file = new File("ressources/font/" + path);
 			font = Font.createFont(Font.TRUETYPE_FONT, file).deriveFont(size);
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);
@@ -22,5 +22,5 @@ public class FontTask {
 		
 		return font;
 	}
-	
+
 }

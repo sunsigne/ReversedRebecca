@@ -20,10 +20,10 @@ public class TitleScreenButton extends ButtonObject {
 	
 	////////// TEXT ////////////
 	
-	private Font font = new FontTask().createNewFont("dogicabold", 35f);
+	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);
 
 	public void setFontSize(float size) {
-		font = new FontTask().createNewFont("dogicabold", size);
+		font = new FontTask().createNewFont("dogicabold.ttf", size);
 	}
 	
 	////////// RENDER ////////////

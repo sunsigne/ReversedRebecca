@@ -32,7 +32,7 @@ public class BonusText extends GameObject {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("square_sans_serif_7", 22f);
+	private Font font = new FontTask().createNewFont("square_sans_serif_7.ttf", 22f);
 
 	@Override
 	public void render(Graphics g) {

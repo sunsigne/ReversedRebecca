@@ -71,7 +71,7 @@ public class ShrinkBombObject extends FastBombObject {
 		g.drawImage(getImage(), getX() - 2 * size, getY() - 2 * size, getWidth() + 4 * size,
 				getHeight() + 4 * size, null);
 
-		Font font = new FontTask().createNewFont("DigitalNumbers-Regular", 32f + 2 * size);
+		Font font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 32f + 2 * size);
 
 		if (getCount() > 0)
 			drawCount(font, g);

@@ -145,7 +145,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("DigitalNumbers-Regular", 100f);
+	private Font font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 100f);
 
 	@Override
 	public void render(Graphics g) {

@@ -13,6 +13,12 @@ public class TransluantLayer {
 		g.setColor(gray);
 		g.fillRect(0, 0, width, height);
 	}
+	
+	public void drawDarkGray(Graphics g, int width, int height) {
+		Color gray = new Color(40, 40, 40, 224);
+		g.setColor(gray);
+		g.fillRect(0, 0, width, height);
+	}
 
 	public void drawPuzzle(Graphics g, Color color) {
 		g.setColor(color);

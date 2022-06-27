@@ -2,7 +2,8 @@
 
 Loading = Loading
 LevelCompleted = Level#Completed
-LevelTime = Time#(sec)
+LevelTime = Time
+LevelTimeUnit = Sec
 LevelPuzzle = Puzzle#Finished
 LevelBestDeed = Best#Deed
 LevelWorstDeed = Worst#Deed

@@ -30,6 +30,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelEndStats;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
 public class World implements Updatable, RenderFree {

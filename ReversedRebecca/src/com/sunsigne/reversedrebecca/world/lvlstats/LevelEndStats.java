@@ -1,15 +1,12 @@
-package com.sunsigne.reversedrebecca.world;
+package com.sunsigne.reversedrebecca.world.lvlstats;
 
-import com.sunsigne.reversedrebecca.menu.lvlcomplete.PuzzleCounter;
-import com.sunsigne.reversedrebecca.menu.lvlcomplete.StopWatch;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LevelEndStats {
 
-	protected LevelEndStats() {
+	public LevelEndStats() {
 		createStopWatch();
-		createPuzzleCounter();
 	}
 
 	////////// STOPWATCH ////////////
@@ -41,18 +38,14 @@ public class LevelEndStats {
 
 	////////// PUZZLE COUNT ////////////
 
-	private PuzzleCounter puzzleCounter;
-
-	public PuzzleCounter getPuzzleCounter() {
-		return puzzleCounter;
-	}
-
-	private void createPuzzleCounter() {
-		puzzleCounter = new PuzzleCounter();
+	private int puzzleCount;
+	
+	public void addPuzzleCount() {
+		puzzleCount++;
 	}
 
 	public String getPuzzleCount() {
-		return String.valueOf(puzzleCounter.getCount());
+		return String.valueOf(puzzleCount);
 	}
 
 }

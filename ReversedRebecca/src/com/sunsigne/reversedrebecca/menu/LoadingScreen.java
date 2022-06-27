@@ -16,7 +16,7 @@ public class LoadingScreen implements Updatable, TickFree {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("dogicabold", 50f);
+	private Font font = new FontTask().createNewFont("dogicabold.ttf", 50f);
 
 	@Override
 	public void render(Graphics g) {
