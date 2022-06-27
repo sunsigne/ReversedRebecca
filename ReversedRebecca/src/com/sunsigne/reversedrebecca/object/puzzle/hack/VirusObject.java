@@ -151,7 +151,10 @@ public class VirusObject extends PuzzleObject {
 	}
 
 	private void dragImage(Graphics g, BufferedImage image) {
-		g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
+		if(isReversed() == false)
+			g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
+		else
+			g.drawImage(image, getX() + shrink, getY() + getHeight() - shrink, getWidth() - 2 * shrink, - getHeight() + 2 * shrink, null);
 	}
 
 }
