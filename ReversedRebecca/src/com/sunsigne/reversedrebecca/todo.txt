@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	attention ! obj-01 et EndLevelRequest sont pour l'instant temporaires
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 
 	////////// PIRA ////////////
@@ -18,6 +17,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	creer un EndLevelRequest différent pour les lvl de choix de bonus !
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	trouver un moyen d'enregistrer le lvl des tools dans characteristiques de façon automatique ?
@@ -43,11 +43,12 @@
 	////////// LVL000 ////////////
 	
 	temps "méticuleux" à vérifier
-	faire en sorte que Sarah réagisse à l'odeur des pancakes, voir aux pancakes s'ils sont tj là
-	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef)
-	faire en sote qu'il est possible d'enfermer sarah chez soi (quand elle fait la sieste ou qu'elle est aux toilettes)
-	demander à Camille si elle sait où sont ses clefs
-	actuellement, le lvl000 n'est pas finissable (pas de requete END_LVL ni de flag)
+	petite animation de sortie avant la fin du lvl (+ dialogue ?)
+	sarah pas encore programmée
+	Sarah sent les pancakes (ou les voit)
+	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef) !
+	bibliothèque à faire ?
+	enfermer sarah chez soi (toilettes ou sieste)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
