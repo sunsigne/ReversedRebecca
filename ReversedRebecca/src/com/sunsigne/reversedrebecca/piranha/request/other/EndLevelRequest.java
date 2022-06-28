@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.menu.LevelCompletedScreen;
-import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -37,22 +36,20 @@ public class EndLevelRequest implements Request {
 	// penser à mettre à jour la doc une fois terminé
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		String ending = target.split(",")[0];
-		LAYER.LOADING.addObject(new LevelCompletedScreen(ending));
-	}
-	
-	public void temp(PiranhaObject object, String target) {		
-		LAYER.LOADING.addObject(new LoadingScreen());
+		World.get().freeze(true);
 		
 		// update save file
 		new Save().registerSave();
 		new Save().eraseSave(); // the name is alarming but it just erase some specific intended data
-		
-		// update level
-		String lvlmenu = target.split(",")[0].toLowerCase();
-		String lvl = target.split(",")[1].toLowerCase();
+
+		// update level saved
+		String lvlmenu = target.split(",")[1].toLowerCase();
+		String lvl = target.split(",")[2].toLowerCase();
 		new Save().registerNextLevel(lvlmenu, lvl);
-		new World(lvl);
-	}	
+
+		// load level completed screen
+		String ending = target.split(",")[0];
+		LAYER.MENU.addObject(new LevelCompletedScreen(ending, lvl));
+	}
 
 }

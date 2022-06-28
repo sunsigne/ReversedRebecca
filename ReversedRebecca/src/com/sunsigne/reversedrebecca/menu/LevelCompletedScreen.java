@@ -4,12 +4,15 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -20,10 +23,11 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 
 	private String file = "menu.csv";
 
-	public LevelCompletedScreen(String ending) {
+	public LevelCompletedScreen(String ending, String lvl) {
 		loadStats(ending);
 		loadFont();
 		loadText();
+		createContinueButton(lvl);
 	}
 
 	////////// USEFUL ////////////
@@ -60,11 +64,13 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private Font title_font;
 	private Font text_font;
 	private Font you_are_font;
+	private Font saved_font;
 
 	private void loadFont() {
 		title_font = new FontTask().createNewFont("F5.6-Regular.otf", 80f);
 		text_font = new FontTask().createNewFont("F5.6-Regular.otf", 40f);
 		you_are_font = new FontTask().createNewFont("F5.6-Regular.otf", 55f);
+		saved_font = new FontTask().createNewFont("F5.6-Regular.otf", 30f);
 	}
 
 	////////// TEXT ////////////
@@ -76,6 +82,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String badDeed_text;
 	private String ending_text;
 	private String click_text;
+	private String saved_text;
 
 	private void loadText() {
 		title_text = format(new Translatable().getTranslatedText("LevelCompleted", file));
@@ -85,6 +92,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		badDeed_text = format(new Translatable().getTranslatedText("LevelBadDeed", file)) + " :";
 		ending_text = format(new Translatable().getTranslatedText("LevelEndingAchieved", file)) + " :";
 		click_text = format(new Translatable().getTranslatedText("LevelClickToContinue", file));
+		saved_text = format(new Translatable().getTranslatedText("ProgressSaved", file));
 	}
 
 	////////// RENDER ////////////
@@ -106,6 +114,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		drawStats(g, ending_stats, 240);
 		drawYouAre(g);
 		drawClickToContinue(g);
+		drawProgressSaved(g);
 	}
 
 	private void drawTitle(Graphics g) {
@@ -135,6 +144,31 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		int[] rect = new int[] { Window.WIDHT / 2, 1010, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, text_font, click_text, Color.LIGHT_GRAY, Color.BLACK, DIRECTION.NULL,
 				rect);
+	}
+
+	private void drawProgressSaved(Graphics g) {
+		int[] rect = new int[] { 20, 30, 0, 0 };
+		new TextDecoration().drawOutlinesString(g, saved_font, saved_text, Color.LIGHT_GRAY, Color.BLACK,
+				DIRECTION.LEFT, rect);
+	}
+
+	////////// BUTTON ////////////
+
+	private void createContinueButton(String lvl) {
+		GenericListener onPress = () -> loadNextLvl(lvl);
+
+		ButtonObject button = new ButtonObject(null, 0, 0, Window.WIDHT, Window.HEIGHT, onPress, null) {
+			@Override
+			public void render(Graphics g) {
+
+			}
+		};
+		LAYER.MENU.addObject(button);
+	}
+
+	private void loadNextLvl(String lvl) {
+		LAYER.MENU.getHandler().clear();
+		new World(lvl);
 	}
 
 }
