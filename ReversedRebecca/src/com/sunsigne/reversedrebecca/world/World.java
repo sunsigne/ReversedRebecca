@@ -172,16 +172,38 @@ public class World implements Updatable, RenderFree {
 
 	public int getWidth() {
 		if (width == 0) {
-			if (map_list.getList().isEmpty() == false)
-				width = map_list.getList().get(0).getWidth() * Size.M / 16;
+			if (map_list.getList().isEmpty())
+				return 0;
+
+			int size = map_list.getList().size();
+			int tempWidth = 0;
+
+			for (int index = 0; index < size; index++) {
+				tempWidth = map_list.getList().get(index).getWidth();
+				if (tempWidth != 1)
+					break;
+			}
+
+			width = tempWidth * Size.M / 16;
 		}
 		return width;
 	}
 
 	public int getHeight() {
 		if (height == 0) {
-			if (map_list.getList().isEmpty() == false)
-				height = map_list.getList().get(0).getHeight() * Size.M / 16;
+			if (map_list.getList().isEmpty())
+				return 0;
+
+			int size = map_list.getList().size();
+			int tempHeight = 0;
+
+			for (int index = 0; index < size; index++) {
+				tempHeight = map_list.getList().get(index).getHeight();
+				if (tempHeight != 1)
+					break;
+			}
+
+			height = tempHeight * Size.M / 16;
 		}
 		return height;
 	}
