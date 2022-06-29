@@ -25,6 +25,7 @@ import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
@@ -163,6 +164,26 @@ public class World implements Updatable, RenderFree {
 
 	public String getMapName() {
 		return mapName;
+	}
+
+	////////// SIZE ////////////
+
+	private int width, height;
+
+	public int getWidth() {
+		if (width == 0) {
+			if (map_list.getList().isEmpty() == false)
+				width = map_list.getList().get(0).getWidth() * Size.M / 16;
+		}
+		return width;
+	}
+
+	public int getHeight() {
+		if (height == 0) {
+			if (map_list.getList().isEmpty() == false)
+				height = map_list.getList().get(0).getHeight() * Size.M / 16;
+		}
+		return height;
 	}
 
 	////////// LAYER ////////////

@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
@@ -40,6 +41,8 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		float cameraX = CAMERA.getX();
 		float delay = 1.0f;
 
+		targetX = getBorderedTarget(targetX, true);
+
 		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
 			CAMERA.setX(targetX); // == CAMERA.setX(cameraX + (targetX - cameraX) * delay);
 			return;
@@ -53,8 +56,9 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	private void moveCameraByY(Player player) {
 		float targetY = -player.getY() + (Window.HEIGHT - player.getHeight()) / 2;
 		float cameraY = CAMERA.getY();
-
 		float delay = 1.0f;
+
+		targetY = getBorderedTarget(targetY, false);
 
 		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
 			CAMERA.setY(targetY); // == CAMERA.setY(cameraY + (targetY - cameraY) * delay);
@@ -64,6 +68,26 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		delay = 0.2f;
 		if (isPlayerFutherThan(CAMERA.getY(), targetY, 0.3f))
 			CAMERA.setY(cameraY + (targetY - cameraY) * delay);
+	}
+
+	// prevent camera to protrude from the borders' map
+	private float getBorderedTarget(float target, boolean horizontal) {
+
+		// border left or up
+		if (target >= 0)
+			return 0;
+
+		// if no world found
+		World world = World.get();
+		if (world == null)
+			return target;
+
+		// border right or down
+		int maxBorder = horizontal ? Window.WIDHT - world.getWidth() : Window.HEIGHT - world.getHeight();
+		if (target <= maxBorder)
+			return maxBorder;
+
+		return target;
 	}
 
 	public boolean isPlayerFutherThan(float cameraPos, float target, float distanceInTiles) {
