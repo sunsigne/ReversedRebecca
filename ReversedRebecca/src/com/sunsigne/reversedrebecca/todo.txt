@@ -10,6 +10,7 @@
 	////////// EN COURS ////////////
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
+	cyan puzzle vertical : aucune couleur de faite, pas de mapaable, doc à update
 
 	////////// PIRA ////////////
 
@@ -30,8 +31,7 @@
 
 	////////// FACILE ////////////
 
-	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire
-	
+	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
 	créer un objet (genre Flag) pour finir un level ?
