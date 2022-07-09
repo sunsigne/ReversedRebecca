@@ -85,13 +85,13 @@ public class ActionAnalyzer {
 			@Override
 			public GenericListener getListener(PiranhaObject ignore, String ignore2) {
 				GenericListener listener = () -> {
-					
+
 					Request request;
 					if (object instanceof ChoiceObject)
 						request = RequestList.getList().getObject(new AffectingRequest());
 					else
 						request = RequestList.getList().getObject(new GotoRequest());
-					
+
 					request.doAction(object, target);
 
 					object.setTripleAction(object.getTripleAction().removeAction(getAction()));
@@ -123,7 +123,11 @@ public class ActionAnalyzer {
 	}
 
 	private String getName(String keyANDname) {
+		if (keyANDname.contains("%") == false)
+			return keyANDname;
+
 		return (keyANDname.split("%")[1]);
+
 	}
 
 }

@@ -30,7 +30,6 @@
 
 	////////// FACILE ////////////
 
-	afficher un message d'erreur quand un triple action n'a pas de traduction dans la liste
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire
 	
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
