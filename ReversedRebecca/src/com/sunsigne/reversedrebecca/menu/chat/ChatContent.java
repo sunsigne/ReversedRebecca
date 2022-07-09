@@ -34,9 +34,10 @@ public class ChatContent implements Updatable {
 	////////// TEXT ////////////
 
 	private static final int NUM_OF_SENTENCES = 2;
+	private static final int NUM_OF_CHARACTERS = 64;
 	private String[] sentence = new String[NUM_OF_SENTENCES];
 	private String[] currentText = new String[NUM_OF_SENTENCES];
-	private char[][] letter = new char[NUM_OF_SENTENCES][64];
+	private char[][] letter = new char[NUM_OF_SENTENCES][NUM_OF_CHARACTERS];
 
 	private boolean[] stop = new boolean[2];
 
@@ -46,6 +47,8 @@ public class ChatContent implements Updatable {
 		for (int sentenceNumber = 0; sentenceNumber < NUM_OF_SENTENCES; sentenceNumber++) {
 			if (sentence[sentenceNumber] != null) {
 				size = sentence[sentenceNumber].length();
+				if (size > NUM_OF_CHARACTERS)
+					size = NUM_OF_CHARACTERS;		
 				for (int i = 0; i < size; i++) {
 					letter[sentenceNumber][i] = sentence[sentenceNumber].charAt(i);
 				}
@@ -114,6 +117,8 @@ public class ChatContent implements Updatable {
 		String newletter;
 
 		int size = sentence[line].length();
+		if (size > NUM_OF_CHARACTERS)
+			size = NUM_OF_CHARACTERS;
 		for (int i = 0; i < size; i++) {
 
 			if (count == i) {
