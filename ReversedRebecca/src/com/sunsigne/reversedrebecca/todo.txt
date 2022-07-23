@@ -18,6 +18,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	créer un système qui enregistre les erreurs de la console dans un fichier text, et qui l'envoie par email (avec précisions éventuelles du user)
 	creer un EndLevelRequest différent pour les lvl de choix de bonus !
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
