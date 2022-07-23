@@ -11,6 +11,8 @@
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mapaable, doc à update
+	créer tous les types de murs verts (et puzzler)
+	faire des bruits quand on ouvre le coffre et qu'on selectionne un object dedans
 
 	////////// PIRA ////////////
 
@@ -32,6 +34,7 @@
 
 	////////// FACILE ////////////
 
+	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
@@ -51,6 +54,10 @@
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
 	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
+	
+	////////// LVL000-1 ////////////
+	
+	créer les dalles spéciales
 	
 	////////// LVL001 ////////////
 	
@@ -83,6 +90,7 @@
 
 	///////// IDEE ////////////
 
+	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	Dave, son pouvoir est de savoir ce qu'il est (un personnage de jeu vidéo). Souvent blasé, a des comportements (et phrases) différentes d'une session sur l'autre (% de chance)
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
 	Faire des boss et des Foes avec armes et/ou Puzzle

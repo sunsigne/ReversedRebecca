@@ -59,6 +59,19 @@ Porte Null / Null Door : 1-255-0
 Gravas Jaune / Yellow Rubble : 2-255-3
 Trou Droite Vert / Green Right Hole : 4-253-2
 
+////// COFFRE / CHEST //////
+
+Red = dépend du coffre / depends on the chest
+Green = 128
+Blue = 255
+
+Coffre Ouvert / Opened Chest -> 0
+CHEST-01 -> 1
+CHEST-02 -> 2
+...
+CHEST-09 -> 9
+
+Un fichier doit être présent dans le dossier de map pour définir le contenu du coffre / a file must be in the map folder to etablish the chest's content.
 
 ////// VIVANTS / LIVING //////
 
