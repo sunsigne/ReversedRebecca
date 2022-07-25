@@ -9,13 +9,12 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public abstract class Action {
 
-	public Action(Interactive interactive, String name, GenericListener listener,
-			int keyEvent) {
+	public Action(Interactive interactive, String name, GenericListener listener, int keyEvent) {
 		this(interactive, name, null, listener, keyEvent);
 	}
 
-	public Action(Interactive interactive, String name, ToolPlayer toolPlayer,
-			GenericListener listener, int keyEvent) {
+	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener,
+			int keyEvent) {
 		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
@@ -52,7 +51,7 @@ public abstract class Action {
 	}
 
 	public boolean canDoAction() {
-		
+
 		// no tool is required
 		if (toolPlayer == null)
 			return true;
@@ -77,13 +76,13 @@ public abstract class Action {
 		if (canDoAction())
 			listener.doAction();
 	}
-	
+
 	////////// RENDER ////////////
 
 	public String getDisplayedText() {
 		return "[" + KeyEvent.getKeyText(getKeyEvent()) + "]" + " " + name.toUpperCase();
 	}
-	
+
 	////////// KEYBOARD ////////////
 
 	private int keyEvent;

@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JOptionPane;
 
-import com.sunsigne.reversedrebecca.object.puzzle.chest.ChestLoot;
+import com.sunsigne.reversedrebecca.object.puzzle.chest.ChestCard;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -26,7 +26,7 @@ public class ChestPuzzle extends Puzzle {
 
 		this.lootFile = lootFile;
 		loadSize(); // 1, 2 or 3;
-		this.chestLoot = new ChestLoot[size];
+		this.chestCard = new ChestCard[size];
 	}
 
 	////////// NAME ////////////
@@ -65,7 +65,7 @@ public class ChestPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private ChestLoot[] chestLoot;
+	private ChestCard[] chestCard;
 
 	@Override
 	public void createPuzzle() {
@@ -74,7 +74,7 @@ public class ChestPuzzle extends Puzzle {
 		if (new FileTask().doesExist(lootFile) == false)
 			stopApp();
 
-		createChestLoots();
+		createChestCards();
 	}
 
 	private void stopApp() {
@@ -84,35 +84,35 @@ public class ChestPuzzle extends Puzzle {
 		new Conductor().stopApp();
 	}
 
-	private void createChestLoots() {
+	private void createChestCards() {
 
 		int gap = 0;
 		switch (size) {
 		case 1:
-			createLoot(0, Window.WIDHT / 2);
+			createCard(0, Window.WIDHT / 2);
 			break;
 		case 2:
 			gap = 375;
-			createLoot(0, Window.WIDHT / 2 - gap);
-			createLoot(1, Window.WIDHT / 2 + gap);
+			createCard(0, Window.WIDHT / 2 - gap);
+			createCard(1, Window.WIDHT / 2 + gap);
 			break;
 		case 3:
 			gap = 550;
-			createLoot(0, Window.WIDHT / 2 - gap);
-			createLoot(1, Window.WIDHT / 2);
-			createLoot(2, Window.WIDHT / 2 + gap);
+			createCard(0, Window.WIDHT / 2 - gap);
+			createCard(1, Window.WIDHT / 2);
+			createCard(2, Window.WIDHT / 2 + gap);
 			break;
 		}
 	}
 
-	private void createLoot(int num, int x) {
-		String loot = new FileTask().read("LOOT" + num, lootFile);
+	private void createCard(int num, int x) {
+		String lootData = new FileTask().read("LOOT" + (num + 1), lootFile);
 
-		chestLoot[num] = new ChestLoot(this, loot, x, 0);
-		chestLoot[num].setX(chestLoot[num].getX() - chestLoot[num].getWidth() / 2);
-		chestLoot[num].setY(- chestLoot[num].getHeight());
+		chestCard[num] = new ChestCard(this, lootData, x, 0);
+		chestCard[num].setX(chestCard[num].getX() - chestCard[num].getWidth() / 2);
+		chestCard[num].setY(- chestCard[num].getHeight());
 
-		LAYER.PUZZLE.addObject(chestLoot[num]);
+		LAYER.PUZZLE.addObject(chestCard[num]);
 	}
 
 	////////// OPEN ////////////
@@ -141,7 +141,7 @@ public class ChestPuzzle extends Puzzle {
 
 		if (time == 25)
 			for (int index = 0; index < size; index++)
-				chestLoot[index].setLeaving(true);
+				chestCard[index].setLeaving(true);
 
 		if (time <= 0)
 			closePuzzle(true);
@@ -158,18 +158,18 @@ public class ChestPuzzle extends Puzzle {
 			return;
 		}
 
-		// one loot
+		// one loot case
 		if (size == 1) {
-			if (chestLoot[0].isValidated())
+			if (chestCard[0].isPickedUp())
 				closing = true;
 			return;
 		}
 
-		// two or three loots
+		// two or three loots case
 		boolean flag = false;
 
 		for (int index = 0; index < size; index++) {
-			if (chestLoot[index].isValidated()) {
+			if (chestCard[index].isPickedUp()) {
 
 				// normal or hard mode case
 				if (DifficultyOption.getDifficulty() != GAME_DIFFICULTY.EASY) {

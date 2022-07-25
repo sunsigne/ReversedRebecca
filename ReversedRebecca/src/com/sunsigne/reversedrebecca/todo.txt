@@ -12,7 +12,10 @@
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mapaable, doc à update
 	créer tous les types de murs verts (et puzzler)
-	faire des bruits quand on ouvre le coffre et qu'on selectionne un object dedans
+	faire des bruits quand on ouvre le coffre
+	traductions des cartes du coffre pas fini
+	ChestLootToolStartLvl n'a pas de pickup action
+	ChestLootFactory pas fini : vérifier le lvl afin d'établir les conditions (multiples possibilités de loot)
 
 	////////// PIRA ////////////
 

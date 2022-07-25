@@ -5,7 +5,16 @@ public class MicrochipToolPlayer extends ToolPlayer {
 	public MicrochipToolPlayer() {
 		
 	}
-	
+
+	////////// TOOL ////////////
+
+	private static ToolPlayer instance = new MicrochipToolPlayer();
+
+	@Override
+	protected ToolPlayer getInstance() {
+		return instance;
+	}
+
 	////////// NAME ////////////
 
 	@Override

@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzler.hole;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ShovelToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.ShovelToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;

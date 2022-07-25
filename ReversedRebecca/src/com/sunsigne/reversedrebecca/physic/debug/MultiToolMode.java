@@ -1,12 +1,12 @@
 package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
-import java.util.List;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class MultiToolMode extends DebugMode {
 
@@ -32,8 +32,11 @@ public class MultiToolMode extends DebugMode {
 	public void cycle() {
 		super.cycle();
 
-		if (getState() == false)
-			ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.NULL));
+		if (getState())
+			return;
+
+		world = null;
+		ToolList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.NULL));
 	}
 
 	private void setToolToDifficulty(ToolPlayer tool, LVL difficulty) {
@@ -42,23 +45,25 @@ public class MultiToolMode extends DebugMode {
 		tool.setDifficulty(difficulty);
 	}
 
+	private World world;
+
 	@Override
 	public void tick(Updatable object) {
+
+		// doesn't update if desactivate
 		if (getState() == false)
 			return;
 
-		if (ToolPlayerList.getList().getList().isEmpty())
+		// doesn't update if no world
+		if (World.get() == null)
 			return;
 
-		List<ToolPlayer> list = ToolPlayerList.getList().getList();
-
-		ToolPlayer tool = list.get(list.size() - 1);
-
-		// last tool is enough, no need to check for all
-		if (tool.getDifficulty() != LVL.NULL)
+		// doesn't update if already did in current world
+		if (World.get() == world)
 			return;
 
-		ToolPlayerList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.RED));
+		world = World.get();
+		ToolList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.RED));
 	}
 
 	////////// RENDER ////////////

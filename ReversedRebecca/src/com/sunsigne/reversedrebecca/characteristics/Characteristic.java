@@ -7,6 +7,8 @@ public abstract class Characteristic {
 		CharacteristicList.getList().addObject(this);
 	}
 	
+	protected abstract Characteristic getInstance();
+	
 	public abstract void reset();
 	
 }

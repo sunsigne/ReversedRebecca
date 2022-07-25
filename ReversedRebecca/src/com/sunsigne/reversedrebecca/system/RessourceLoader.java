@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.system;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.Physic;
@@ -19,6 +20,7 @@ public class RessourceLoader {
 		new LayerDualizer().dualizeSameFloorLayers();
 		new ForceInit().loadAllClassesInPackage(GUI.class.getPackageName());
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
+		new ForceInit().loadAllClassesInPackage(ToolPlayer.class.getPackageName());
 
 		new Physic().loadRessources();
 		new Piranha().loadRessources();

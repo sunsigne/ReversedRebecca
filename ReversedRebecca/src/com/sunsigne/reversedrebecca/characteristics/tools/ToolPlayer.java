@@ -18,9 +18,24 @@ public abstract class ToolPlayer implements Difficulty {
 	private String file = "userdata/characteristics.csv";
 
 	public ToolPlayer() {
-		ToolPlayerList.getList().addObject(this);
+		ToolList.getList().addObject(this);
 		loadMaxDifficulty();
-		loadDifficulty();
+		loadStartDifficulty();
+	}
+
+	////////// USEFUL ////////////
+
+	public ToolPlayer getTool() {
+		return ToolList.getList().getObject(this);
+	}
+
+	protected abstract ToolPlayer getInstance();
+
+	private void stopApp() {
+		new SoundTask().play(SOUNDTYPE.ERROR, "error");
+		JOptionPane.showMessageDialog(null,
+				"An existing or required tool in this level is undefined in ressources/userdata/characteristics.csv");
+		new Conductor().stopApp();
 	}
 
 	////////// NAME ////////////
@@ -28,10 +43,6 @@ public abstract class ToolPlayer implements Difficulty {
 	public abstract String getName();
 
 	////////// DIFFICULTY ////////////
-
-	private ToolPlayer getTool() {
-		return ToolPlayerList.getList().getObject(this);
-	}
 
 	///// max /////
 
@@ -41,27 +52,58 @@ public abstract class ToolPlayer implements Difficulty {
 		return getTool().max_difficulty;
 	}
 
-	public void setMaxDifficulty(LVL max_difficulty) {
-		getTool().max_difficulty = max_difficulty;
-		updateGUITools();
+	public void setMaxDifficulty(LVL difficulty) {
+		getTool().max_difficulty = difficulty;
+
+		if (difficulty == LVL.NULL)
+			// reset case
+			loadMaxDifficulty();
+		else
+			// normal case
+			updateGUITools();
 	}
 
 	private void loadMaxDifficulty() {
-		if (getMaxDifficulty() == LVL.NULL) {
-			String txtDifficulty = new FileTask().read(getName() + "MaxLvl", file);
-			if (txtDifficulty.isEmpty())
-				stopApp();
+		if (getMaxDifficulty() != LVL.NULL)
+			return;
 
-			getTool().max_difficulty = LVL.valueOf(txtDifficulty);
-			updateGUITools();
-		}
+		String txtDifficulty = new FileTask().read(getName() + "MaxLvl", file);
+		if (txtDifficulty.isEmpty())
+			stopApp();
+
+		getTool().max_difficulty = LVL.valueOf(txtDifficulty);
+		updateGUITools();
 	}
 
-	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "error");
-		JOptionPane.showMessageDialog(null,
-				"An existing or required tool in this level is undefined in ressources/userdata/characteristics.csv");
-		new Conductor().stopApp();
+	///// start /////
+
+	private LVL start_difficulty = LVL.NULL;
+
+	public LVL getStartDifficulty() {
+		return getTool().start_difficulty;
+	}
+
+	public void setStartDifficulty(LVL difficulty) {
+		getTool().start_difficulty = difficulty;
+
+		if (difficulty == LVL.NULL)
+			// reset case
+			loadStartDifficulty();
+		else
+			// normal case
+			updateGUITools();
+	}
+
+	private void loadStartDifficulty() {
+		if (getStartDifficulty() != LVL.NULL)
+			return;
+
+		String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);
+		if (txtDifficulty.isEmpty())
+			stopApp();
+
+		getTool().start_difficulty = LVL.valueOf(txtDifficulty);
+		setDifficulty(LVL.valueOf(txtDifficulty));
 	}
 
 	///// current /////
@@ -80,15 +122,8 @@ public abstract class ToolPlayer implements Difficulty {
 		else
 			getTool().difficulty = difficulty;
 
-		new UnlockedToolCondition().registerValue(getTool(), getDifficulty());
+		new UnlockedToolCondition().registerValue(this, getDifficulty());
 		updateGUITools();
-	}
-
-	private void loadDifficulty() {
-		if (getDifficulty() == LVL.NULL) {
-			String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);
-			setDifficulty(LVL.valueOf(txtDifficulty));
-		}
 	}
 
 	private void updateGUITools() {

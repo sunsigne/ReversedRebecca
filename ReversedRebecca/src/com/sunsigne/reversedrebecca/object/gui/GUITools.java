@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -37,7 +37,7 @@ public class GUITools extends GameObject implements GUI {
 	public void loadImages() {
 		images.clear();
 
-		var list = ToolPlayerList.getList();
+		var list = ToolList.getList();
 
 		for (ToolPlayer tempTool : list.getList()) {
 			if (tempTool.getDifficulty() == LVL.NULL)
@@ -61,8 +61,12 @@ public class GUITools extends GameObject implements GUI {
 		for (int index = 0; index < size; index += 2) {
 			g.drawImage(images.getList().get(index), getX() + index * getWidth(), getY(), getWidth(), getHeight(),
 					null);
-			g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth(), getY(), getWidth(),
-					getHeight(), null);
+			try {
+				g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth(), getY(), getWidth(),
+						getHeight(), null);
+			} catch (IndexOutOfBoundsException e) {
+				// can occurs when MultiToolMode is used
+			}
 		}
 	}
 

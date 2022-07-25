@@ -1,6 +1,6 @@
 package com.sunsigne.reversedrebecca.menu;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayerList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
@@ -117,7 +117,7 @@ public class TitleScreen extends MenuScreen {
 		DifficultyOption.setDifficulty(GAME_DIFFICULTY.NORMAL);
 		LAYER.MENU.getHandler().clear();
 		new World("test");
-		ToolPlayerList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
+		ToolList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
 	}
 
 }
