@@ -68,7 +68,7 @@ public class TitleScreen extends MenuScreen {
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
 		// placed exactly on the "hot water tap" in the kitchen
-		ButtonObject hidden_button = new TitleScreenButton("", 108, 252, 5, 5, onPress, null);
+		ButtonObject hidden_button = new TitleScreenButton("", 105, 250, 10, 10, onPress, null);
 		LAYER.MENU.addObject(hidden_button);
 	}
 
