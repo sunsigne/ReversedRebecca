@@ -24,7 +24,7 @@ public class ChestLootFactory {
 
 			// upgrading max lvl
 			if (lootData.toLowerCase().contains("max"))
-				return new ChestLootToolStartLvl(card, tool);
+				return new ChestLootToolMaxLvl(card, tool);
 
 			// syntax error
 			else
