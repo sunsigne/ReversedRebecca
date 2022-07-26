@@ -1,17 +1,15 @@
-///// HP /////
 
-MaxHp = 3
+MaxHp=3
 
-///// Tools /////
 
-KeyMaxLvl = CYAN
-KeyStartLvl = NULL
+BombMaxLvl=CYAN
+BombStartLvl=NULL
 
-BombMaxLvl = CYAN
-BombStartLvl = NULL
+KeyMaxLvl=CYAN
+KeyStartLvl=NULL
 
-MicrochipMaxLvl = CYAN
-MicrochipStartLvl = NULL
+MicrochipMaxLvl=CYAN
+MicrochipStartLvl=NULL
 
-ShovelMaxLvl = CYAN
-ShovelStartLvl = NULL
+ShovelMaxLvl=CYAN
+ShovelStartLvl=NULL

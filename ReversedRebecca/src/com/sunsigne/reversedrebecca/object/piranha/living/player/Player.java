@@ -28,15 +28,29 @@ public class Player extends LivingObject {
 
 	////////// HP ////////////
 
+	private void createCharacteristic(String text, int num) {
+		String content = new FileTask().read(file);
+		String new_content = text + "=3" + System.getProperty("line.separator") + content;
+		new FileTask().write(file, new_content);
+	}
+
 	private void loadHealth() {
-		setMaxHp(Integer.parseInt(new FileTask().read("MaxHp", file)));
+		String txtMaxHp = new FileTask().read("MaxHp", file);
+
+		// if the file "characteristics" has no value for the hp, create one
+		if (txtMaxHp.isEmpty()) {
+			createCharacteristic(System.getProperty("line.separator") + "MaxHp", 3);
+			txtMaxHp = "3";
+		}
+
+		setMaxHp(Integer.parseInt(txtMaxHp));
 		setFullHp();
 	}
 
 	////////// PATH FINDER ////////////
 
 	private boolean isPathNull() {
-		if(Cutscene.isRunning() == false)
+		if (Cutscene.isRunning() == false)
 			return true;
 		if (getPath() == null)
 			return true;
@@ -66,7 +80,7 @@ public class Player extends LivingObject {
 
 		if (getCondition() == CONDITION.KO)
 			return false;
-		
+
 		return canInterract;
 	}
 

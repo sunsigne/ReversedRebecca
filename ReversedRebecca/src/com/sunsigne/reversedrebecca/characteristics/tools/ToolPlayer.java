@@ -1,17 +1,13 @@
 package com.sunsigne.reversedrebecca.characteristics.tools;
 
-import javax.swing.JOptionPane;
-
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.gui.GUITools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.Conductor;
 
 public abstract class ToolPlayer implements Difficulty {
 
@@ -31,11 +27,15 @@ public abstract class ToolPlayer implements Difficulty {
 
 	protected abstract ToolPlayer getInstance();
 
-	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "error");
-		JOptionPane.showMessageDialog(null,
-				"An existing or required tool in this level is undefined in ressources/userdata/characteristics.csv");
-		new Conductor().stopApp();
+	private void registerDefaultCharacteristic(String tool) {
+		String content = new FileTask().read(file);
+		String br = System.getProperty("line.separator");
+
+		String maxLine = tool + "MaxLvl=" + LVL.CYAN.getName().toUpperCase();
+		String startLine = tool + "StartLvl=" + LVL.NULL.getName().toUpperCase();
+		
+		String new_content = content + br + br + maxLine + br + startLine;
+		new FileTask().write(file, new_content);
 	}
 
 	////////// NAME ////////////
@@ -68,8 +68,12 @@ public abstract class ToolPlayer implements Difficulty {
 			return;
 
 		String txtDifficulty = new FileTask().read(getName() + "MaxLvl", file);
-		if (txtDifficulty.isEmpty())
-			stopApp();
+
+		// if the file "characteristics" has no value for the tool, create one
+		if (txtDifficulty.isEmpty()) {
+			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			txtDifficulty = "CYAN";
+		}
 
 		getTool().max_difficulty = LVL.valueOf(txtDifficulty);
 		updateGUITools();
@@ -99,8 +103,12 @@ public abstract class ToolPlayer implements Difficulty {
 			return;
 
 		String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);
-		if (txtDifficulty.isEmpty())
-			stopApp();
+
+		// if the file "characteristics" has no value for the tool, create one
+		if (txtDifficulty.isEmpty()) {
+			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			txtDifficulty = "NULL";
+		}
 
 		getTool().start_difficulty = LVL.valueOf(txtDifficulty);
 		setDifficulty(LVL.valueOf(txtDifficulty));

@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 public class Save {
 
 	private String file = "userdata/save.csv";
+	private String char_file = "userdata/characteristics.csv";
 
 	////////// LEVEL ////////////
 
@@ -79,6 +80,7 @@ public class Save {
 		String lvl = "currentlvl=" + lvl0;
 
 		new FileTask().write(file, lvlmenu + nextLine + lvl);
+		new FileTask().write(char_file, "");
 	}
 
 	// the name is alarming but it just erase some specific intended data
