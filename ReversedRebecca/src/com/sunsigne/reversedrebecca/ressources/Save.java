@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.ressources;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
@@ -45,6 +47,8 @@ public class Save {
 
 	public void registerSave() {
 
+		updateCharacteristics();
+		
 		// if nothing to save
 		var list = SaveList.getList();
 		if (list.getList().isEmpty())
@@ -70,6 +74,20 @@ public class Save {
 		mergedData = set.toArray(mergedData);
 		String fileContent = String.join(System.getProperty("line.separator"), mergedData);
 		new FileTask().write(file, fileContent);
+	}
+
+	private void updateCharacteristics() {
+		
+		FileTask task = new FileTask();
+		
+		// tools
+		var list = ToolList.getList();
+		for (ToolPlayer tempTool : list.getList()) {
+			// update the max lvl
+			task.write(tempTool.getName() + "MaxLvl", char_file, tempTool.getMaxDifficulty().getName().toUpperCase());
+			// update the start lvl
+			task.write(tempTool.getName() + "StartLvl", char_file, tempTool.getStartDifficulty().getName().toUpperCase());
+		}
 	}
 
 	////////// DELETE ////////////

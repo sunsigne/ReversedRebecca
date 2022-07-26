@@ -10,12 +10,11 @@
 	////////// EN COURS ////////////
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
-	cyan puzzle vertical : aucune couleur de faite, pas de mapaable, doc à update
+	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
 	créer tous les types de murs verts (et puzzler)
-	faire des bruits quand on ouvre le coffre
-	traductions des cartes du coffre pas fini
-	ChestLootToolStartLvl n'a pas de pickup action
-	ChestLootFactory pas fini : vérifier le lvl afin d'établir les conditions (multiples possibilités de loot)
+	faire le bon bruit quand on ouvre le coffre
+	créer une fin de niveau de workshop adaptée à ce dernier
+	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
 
 	////////// PIRA ////////////
 
@@ -24,23 +23,19 @@
 	////////// DIFFICILE ////////////
 	
 	créer un système qui enregistre les erreurs de la console dans un fichier text, et qui l'envoie par email (avec précisions éventuelles du user)
-	creer un EndLevelRequest différent pour les lvl de choix de bonus !
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
-	trouver un moyen d'enregistrer le lvl des tools dans characteristiques de façon automatique ?
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
-	Save.resetProgression() ! Ne reset pas encore les caractéristiques
 	finir le design des personnages
 	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
-	la GUI s'affiche sur l'écran titre
 
 	////////// FACILE ////////////
 
+	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
-	empêcher le User de quitter la map test sans quitter le jeu (car elle modifie le lvl max des tools)
-	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu
+	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
 	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart

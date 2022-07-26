@@ -81,7 +81,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 	///// start /////
 
-	private LVL start_difficulty = LVL.NULL;
+	private LVL start_difficulty;
 
 	public LVL getStartDifficulty() {
 		return getTool().start_difficulty;
@@ -90,7 +90,7 @@ public abstract class ToolPlayer implements Difficulty {
 	public void setStartDifficulty(LVL difficulty) {
 		getTool().start_difficulty = difficulty;
 
-		if (difficulty == LVL.NULL)
+		if (difficulty == null)
 			// reset case
 			loadStartDifficulty();
 		else
@@ -99,7 +99,7 @@ public abstract class ToolPlayer implements Difficulty {
 	}
 
 	private void loadStartDifficulty() {
-		if (getStartDifficulty() != LVL.NULL)
+		if (getStartDifficulty() != null)
 			return;
 
 		String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);

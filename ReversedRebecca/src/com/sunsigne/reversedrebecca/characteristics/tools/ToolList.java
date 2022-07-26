@@ -27,7 +27,7 @@ public class ToolList extends Characteristic {
 	@Override
 	public void reset() {
 		getList().getList().forEach(tempTool -> {
-			tempTool.setStartDifficulty(LVL.NULL);
+			tempTool.setStartDifficulty(null);
 			tempTool.setMaxDifficulty(LVL.NULL);
 		});
 	}
