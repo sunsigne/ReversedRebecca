@@ -8,6 +8,7 @@ import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Conductor;
+import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class Game extends Canvas implements Runnable {
@@ -24,7 +25,7 @@ public class Game extends Canvas implements Runnable {
 	////////// SIGNELTON ////////////
 
 	private Game() {
-
+		new Snitch().registerEntry(System.getProperty("line.separator") + "__________");
 	}
 
 	private static Game instance;

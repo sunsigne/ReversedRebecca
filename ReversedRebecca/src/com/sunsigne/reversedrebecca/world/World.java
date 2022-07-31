@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
+import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -26,6 +27,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
@@ -55,6 +57,7 @@ public class World implements Updatable, RenderFree {
 	public World(String mapName) {
 		LAYER.LOADING.addObject(new LoadingScreen());
 
+		new Snitch().registerEntry("WORLD:" + mapName.toUpperCase());
 		initParameters(mapName);
 		createMap();
 		updateLayer();
@@ -313,6 +316,7 @@ public class World implements Updatable, RenderFree {
 			frame = Game.SEC;
 			time++;
 			new TimeCondition().registerValue(time);
+			new Snitch().registerEntry(new FormatedString().getNumber(time));
 		}
 	}
 

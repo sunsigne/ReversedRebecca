@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
+import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class MemoryRequest extends ConditionalRequest {
 
@@ -33,6 +34,7 @@ public class MemoryRequest extends ConditionalRequest {
 	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
 		MemoryList.getList().addObject(target);
+		new Snitch().registerEntry("MEMORY:" + target);
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
+import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class Save {
 
@@ -99,6 +100,7 @@ public class Save {
 
 		new FileTask().write(file, lvlmenu + nextLine + lvl);
 		new FileTask().write(char_file, "");
+		new Snitch().registerEntry("RESET");
 	}
 
 	// the name is alarming but it just erase some specific intended data

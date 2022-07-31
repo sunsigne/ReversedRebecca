@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.system.Snitch;
 
 public abstract class Action {
 
@@ -13,8 +14,7 @@ public abstract class Action {
 		this(interactive, name, null, listener, keyEvent);
 	}
 
-	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener,
-			int keyEvent) {
+	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener, int keyEvent) {
 		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
@@ -73,8 +73,10 @@ public abstract class Action {
 		if (listener == null)
 			return;
 
-		if (canDoAction())
+		if (canDoAction()) {
 			listener.doAction();
+			new Snitch().registerEntry("ACTION:" + name);
+		}
 	}
 
 	////////// RENDER ////////////

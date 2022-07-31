@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.memory;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class SaveRequest implements Request {
 
@@ -34,6 +35,7 @@ public class SaveRequest implements Request {
 
 		String saveType = target.split(",")[0].toUpperCase();
 		String data = target.split(",")[1].toUpperCase();
+		new Snitch().registerEntry("SAVE:" + target);
 
 		switch (saveType) {
 		
