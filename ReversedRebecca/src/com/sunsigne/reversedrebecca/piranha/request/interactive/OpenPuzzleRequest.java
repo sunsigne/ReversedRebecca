@@ -78,7 +78,7 @@ public class OpenPuzzleRequest implements IndexRequest {
 				return (PuzzlerObject) tempObject;
 		}
 
-		// in no puzzler found in the list
+		// if no puzzler found in the list
 		return null;
 	}
 
