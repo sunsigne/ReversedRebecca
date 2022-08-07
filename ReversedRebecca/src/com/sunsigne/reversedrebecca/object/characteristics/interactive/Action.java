@@ -79,6 +79,14 @@ public abstract class Action {
 		}
 	}
 
+	public void forceAction() {
+		if (listener == null)
+			return;
+
+		listener.doAction();
+		new Snitch().registerEntry("ACTION:" + name);
+	}
+
 	////////// RENDER ////////////
 
 	public String getDisplayedText() {

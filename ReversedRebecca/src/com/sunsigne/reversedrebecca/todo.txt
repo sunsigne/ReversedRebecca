@@ -23,6 +23,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	mettre le jeu en pause lorsque la souris sort de l'écran (car le puzzle de la clef bloque la souris, ce qui est agaçant)
 	créer un système qui enregistre les erreurs de la console dans un fichier text, et qui l'envoie par email (avec précisions éventuelles du user)
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	

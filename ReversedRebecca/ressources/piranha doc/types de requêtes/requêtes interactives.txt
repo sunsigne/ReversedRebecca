@@ -27,3 +27,16 @@ TIME -> 0 = DISABLE -> ONTHESPOT:1
 A EXACTEMENT le même fonctionnement que DISABLE, mais pour réactiver les Actions que ce dernier avait gelées.
 Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.
 Note : Le Type de Requête ENABLE_ONTHESPOT existe également. À ce stade, vous aurez déjà compris comment s'en servir, inutile donc de l'expliquer.
+
+
+////// OPEN_PUZZLE //////
+
+Le Type de Requête OPEN_PUZZLE force l'activation d'une action d'un puzzler à distance.
+Les deux cibles sont les coordonnées du puzzler et le numéro de l'action à effectuer.
+Note : si plusieurs objets peuvent théoriquement se trouver au même endroit, plusieurs puzzler ne sont pas censés être superposé; l'index n'est donc pas demandé : le premier puzzler trouvé sera sélectionné.
+
+exemple :
+TALKED -> DOOR_RIGHT_HAND = OPEN_PUZZLE -> 6-1,1
+
+Lorsque la Condition sera vérifiée, le puzzler en 6-1 verra son action 1 se lancer.
+Note : Les coordonnées ONTHESPOT ne sont pas autorisées pour ce type de requête, il faut donc systématiquement renseigner les coordonnées. Il n'existe également aucun Type de Requête OPEN_PUZZLE_ONTHESPOT.
