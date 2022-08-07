@@ -6,6 +6,8 @@ import java.awt.Point;
 import java.awt.PointerInfo;
 import java.awt.Robot;
 
+import com.sunsigne.reversedrebecca.system.Window;
+
 public class MousePos {
 
 	public int[] get() {
@@ -21,7 +23,8 @@ public class MousePos {
 
 	public void setX(int x) {
 		try {
-			new Robot().mouseMove(x, get()[1]);
+			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT))
+				new Robot().mouseMove(x, get()[1]);
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
@@ -29,10 +32,24 @@ public class MousePos {
 
 	public void setY(int y) {
 		try {
-			new Robot().mouseMove(get()[0], y);
+			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT))
+				new Robot().mouseMove(get()[0], y);
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private boolean mouseOver(int[] mousePos, int x, int y, int width, int height) {
+		int mx = mousePos[0];
+		int my = mousePos[1];
+
+		if (mx > x && mx < x + width) {
+			if (my > y && my < y + height) {
+				return true;
+			} else
+				return false;
+		} else
+			return false;
 	}
 
 }

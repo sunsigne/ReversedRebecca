@@ -11,7 +11,6 @@
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
-	créer tous les types de murs verts (et puzzler)
 	faire le bon bruit quand on ouvre le coffre
 	créer une fin de niveau de workshop adaptée à ce dernier
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
@@ -23,7 +22,7 @@
 
 	////////// DIFFICILE ////////////
 	
-	mettre le jeu en pause lorsque la souris sort de l'écran (car le puzzle de la clef bloque la souris, ce qui est agaçant)
+	faire un GUI menu
 	créer un système qui enregistre les erreurs de la console dans un fichier text, et qui l'envoie par email (avec précisions éventuelles du user)
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
@@ -35,6 +34,7 @@
 	////////// FACILE ////////////
 
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
+	ranger tous les types de murs verts (et puzzler)
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
@@ -53,7 +53,6 @@
 	enfermer sarah chez soi (toilettes ou sieste)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
-	faire en sorte que le joueur veuille utiliser la souris pour les puzzle (lvl 000)
 	
 	////////// LVL000-1 ////////////
 	
@@ -109,8 +108,8 @@
 
 	////////// SUCCES ////////////
 		
-	Manger 5 bits et légumes par jours : manger un fruit virtuel
-	Vous êtes terminé : être tué définitivement par un terminator
+	5 fruits et légumes par jours : manger un fruit virtuel
+	Vous avez été terminé : être tué définitivement par un terminator
 	Fin secrète : finir le jeu en difficile
 		
 	
