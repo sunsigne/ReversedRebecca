@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.gui.GUI;
-import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -33,7 +32,7 @@ public class HideGUIDuringMenuLaw extends IndependantLaw {
 	public void beforeObjectRender(Graphics g, Updatable object) {
 		if (object instanceof GUI == false)
 			return;
-		
+
 		boolean menu = LAYER.MENU.getHandler().getList().isEmpty() == false;
 		if (menu)
 			setObjectVisible(g, object, false);
@@ -43,7 +42,7 @@ public class HideGUIDuringMenuLaw extends IndependantLaw {
 	public void afterObjectRender(Graphics g, Updatable object) {
 		if (object instanceof GUI == false)
 			return;
-		
+
 		setObjectVisible(g, object, true);
 	}
 
