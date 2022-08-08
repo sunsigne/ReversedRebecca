@@ -1,11 +1,18 @@
 package com.sunsigne.reversedrebecca.pattern;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.FileSystemNotFoundException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Enumeration;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 public class ForceInit {
 
@@ -17,12 +24,12 @@ public class ForceInit {
 		} catch (NoSuchMethodException e) {
 			// Not really a problem, still working
 		} catch (InstantiationException e) {
-			// Can occur when the class is absract			
+			// Can occur when the class is absract
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-		
+
 	private <T> Class<T> getClassObject(Class<T> object) {
 		try {
 			Class.forName(object.getName(), true, object.getClassLoader());
@@ -34,53 +41,45 @@ public class ForceInit {
 
 	////////// PACKAGE ////////////
 
-	@SuppressWarnings("rawtypes")
-	public Class[] loadAllClassesInPackage(String packageName) {
+	public void loadAllClassesInPackage(String packageName) {
 		try {
-			return getClasses(packageName);
-		} catch (ClassNotFoundException | IOException e) {
+			getClassesForPackage(packageName);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
-		return null;
 	}
 
-	@SuppressWarnings("rawtypes")
-	private Class[] getClasses(String packageName) throws ClassNotFoundException, IOException {
+	private List<Class<?>> getClassesForPackage(final String pkgName) throws IOException, URISyntaxException {
+		final String pkgPath = pkgName.replace('.', '/');
+		final URI pkg = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(pkgPath)).toURI();
+		final ArrayList<Class<?>> allClasses = new ArrayList<Class<?>>();
 
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		assert classLoader != null;
-		String path = packageName.replace('.', '/');
-		Enumeration<URL> resources = classLoader.getResources(path);
-		List<File> dirs = new ArrayList<File>();
-		while (resources.hasMoreElements()) {
-			URL resource = resources.nextElement();
-			dirs.add(new File(resource.getFile()));
-		}
-		ArrayList<Class> classes = new ArrayList<Class>();
-		for (File directory : dirs) {
-			classes.addAll(findClasses(directory, packageName));
-		}
-		return classes.toArray(new Class[classes.size()]);
-	}
-
-	@SuppressWarnings("rawtypes")
-	private List<Class> findClasses(File directory, String packageName) throws ClassNotFoundException {
-		List<Class> classes = new ArrayList<Class>();
-		if (!directory.exists()) {
-			return classes;
-		}
-		File[] files = directory.listFiles();
-		for (File file : files) {
-			if (file.isDirectory()) {
-				assert !file.getName().contains(".");
-				classes.addAll(findClasses(file, packageName + "." + file.getName()));
-			} else if (file.getName().endsWith(".class")) {
-				classes.add(
-						Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 6)));
+		Path root;
+		if (pkg.toString().startsWith("jar:")) {
+			try {
+				root = FileSystems.getFileSystem(pkg).getPath(pkgPath);
+			} catch (final FileSystemNotFoundException e) {
+				root = FileSystems.newFileSystem(pkg, Collections.emptyMap()).getPath(pkgPath);
 			}
+		} else {
+			root = Paths.get(pkg);
 		}
-		return classes;
+
+		final String extension = ".class";
+		try (final Stream<Path> allPaths = Files.walk(root)) {
+			allPaths.filter(Files::isRegularFile).forEach(file -> {
+				try {
+					// "/" occurs on JAR files, "\\" occurs in JVM
+					final String path = file.toString().replace('/', '.').replace('\\', '.');
+					final String name = path.substring(path.indexOf(pkgName), path.length() - extension.length());
+					allClasses.add(Class.forName(name));
+				} catch (final ClassNotFoundException | StringIndexOutOfBoundsException ignored) {
+				}
+			});
+		}
+		return allClasses;
 	}
-	
-	
+
 }
