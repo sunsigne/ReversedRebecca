@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Snitch {
 
-	private static boolean ACTIVATED = false;
+	private static boolean ACTIVATED = true;
 	private static final String file = "userdata/for_dev.csv";
 	private static final FileTask task = new FileTask();
 
