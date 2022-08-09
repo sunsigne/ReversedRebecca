@@ -8,13 +8,21 @@ public class FileTask {
 
 	////////// USEFUL ////////////
 
+	public String getRessourcesPath() {
+		File ressources = new File("ressources/");
+
+		if (ressources.exists())
+			return "ressources/";
+		return "";
+	}
+	
 	public boolean doesExist(String path) {
-		File file = new File("ressources/" + path);
+		File file = new File(getRessourcesPath() + path);
 		return file.exists();
 	}
 
 	public void delete(String path) {
-		File file = new File("ressources/" + path);
+		File file = new File(getRessourcesPath() + path);
 		if (file.exists())
 			file.delete();
 	}
@@ -27,7 +35,7 @@ public class FileTask {
 
 	public String read(String valueToRead, String path) {
 
-		File file = new File("ressources/" + path);
+		File file = new File(getRessourcesPath() + path);
 		Scanner scan = null;
 		String content = "";
 
@@ -78,7 +86,7 @@ public class FileTask {
 
 	// WARNING ! To write something, keep in mind that "readable space" must be writted "#"
 	public void write(String valueToReplace, String path, String text) {
-		File file = new File("ressources/" + path);
+		File file = new File(getRessourcesPath() + path);
 		String fileContent = read(path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
 		int size = alllines.length;

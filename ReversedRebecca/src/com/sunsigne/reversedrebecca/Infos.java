@@ -13,7 +13,7 @@ public class Infos {
 	// first is for release status - second is for the level - third is for the version
 	public static final String VERSION = "alpha.1.1";
 
-	public static final ImageIcon ICON = new ImageIcon("ressources/icon.png");
+	public static final ImageIcon ICON = new ImageIcon("icon.ico");
 	
 	public static final URL LOC = Game.class.getProtectionDomain().getCodeSource().getLocation();
 }

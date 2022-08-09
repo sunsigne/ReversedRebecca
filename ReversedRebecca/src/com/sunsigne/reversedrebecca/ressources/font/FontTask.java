@@ -4,6 +4,8 @@ import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+
 public class FontTask {
 
 	public Font createNewFont(String path, float size) {
@@ -11,7 +13,7 @@ public class FontTask {
 		Font font = null;
 
 		try {
-			File file = new File("ressources/font/" + path);
+			File file = new File(new FileTask().getRessourcesPath() + "font/" + path);
 			font = Font.createFont(Font.TRUETYPE_FONT, file).deriveFont(size);
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);

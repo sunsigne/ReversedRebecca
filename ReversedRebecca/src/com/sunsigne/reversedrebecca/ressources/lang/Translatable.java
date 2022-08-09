@@ -45,7 +45,7 @@ public class Translatable {
 			return text;
 
 		// search for any available language
-		File file = new File("ressources/texts");
+		File file = new File(new FileTask().getRessourcesPath() + "texts");
 		var lang_list = new ArrayList<String>(Arrays.asList(file.list()));
 
 		for (String tempLang : lang_list) {

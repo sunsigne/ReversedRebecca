@@ -9,6 +9,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class SoundTask {
 
@@ -43,10 +44,13 @@ public class SoundTask {
 		if (path == null)
 			return;
 
-		String path0 = "/ressources/audio/" + soundType.getPath() + path + ".wav";
+		String path0 = "/" + new FileTask().getRessourcesPath() + "audio/" + soundType.getPath() + path + ".wav";
 		Clip soundclip;
 
 		try {
+			// File file = new FileTask().getFile((new File(Infos.LOC.toURI())).getParent()
+			// + path0);
+			// URL url = file.toURI().toURL();
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
 
