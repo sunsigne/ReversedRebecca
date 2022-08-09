@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class ToolPlayer implements Difficulty {
 
-	private String file = "userdata/characteristics.csv";
+	private String file = new FileTask().getUserDataPath() + "characteristics.csv";
 
 	public ToolPlayer() {
 		ToolList.getList().addObject(this);

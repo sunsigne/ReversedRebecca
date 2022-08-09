@@ -17,7 +17,6 @@ public class Conductor {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new Window(Game.getInstance());
 		Game.getInstance().start();
-//		new DualChecker();
 
 		// LOADING OF MINIMAL RESSOURCES
 		new RessourceLoader().loadMinimalRessources();

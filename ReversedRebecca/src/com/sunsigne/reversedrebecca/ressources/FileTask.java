@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+import com.sunsigne.reversedrebecca.Infos;
+
 public class FileTask {
 
 	////////// USEFUL ////////////
@@ -11,9 +13,22 @@ public class FileTask {
 	public String getRessourcesPath() {
 		File ressources = new File("ressources/");
 
+		// occurs for dev app
 		if (ressources.exists())
 			return "ressources/";
+		
+		// occurs for player app
 		return "";
+	}
+	
+	public String getUserDataPath() {
+		// dev sav
+		if(getRessourcesPath().isBlank() == false)
+			return "userdata/";
+		
+		// player save
+		String userData = System.getenv("APPDATA") + "/" + Infos.NAME + "/";
+		return userData.replace("\\", "/");
 	}
 	
 	public boolean doesExist(String path) {

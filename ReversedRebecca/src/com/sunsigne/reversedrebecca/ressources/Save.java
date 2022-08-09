@@ -12,8 +12,8 @@ import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class Save {
 
-	private String file = "userdata/save.csv";
-	private String char_file = "userdata/characteristics.csv";
+	private String file = new FileTask().getUserDataPath() + "save.csv";
+	private String char_file = new FileTask().getUserDataPath() + "characteristics.csv";
 
 	////////// LEVEL ////////////
 

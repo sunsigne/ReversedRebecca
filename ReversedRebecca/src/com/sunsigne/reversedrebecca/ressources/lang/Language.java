@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Language {
 
-	private String file = "userdata/options.csv";
+	private String file = new FileTask().getUserDataPath() + "options.csv";
 	
 	////////// SIGNELTON ////////////
 

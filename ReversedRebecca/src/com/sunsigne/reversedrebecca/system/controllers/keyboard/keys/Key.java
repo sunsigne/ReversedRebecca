@@ -6,7 +6,7 @@ public interface Key {
 
 	////////// KEY ////////////
 
-	String file = "userdata/options.csv";
+	String file = new FileTask().getUserDataPath() + "options.csv";
 
 	void refreshKey();
 

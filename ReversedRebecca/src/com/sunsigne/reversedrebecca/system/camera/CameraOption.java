@@ -6,7 +6,7 @@ public class CameraOption {
 
 	////////// CAMERA OPTION ////////////
 
-	String file = "userdata/options.csv";
+	String file = new FileTask().getUserDataPath() + "options.csv";
 
 	private static CAMERA_TYPE type;
 

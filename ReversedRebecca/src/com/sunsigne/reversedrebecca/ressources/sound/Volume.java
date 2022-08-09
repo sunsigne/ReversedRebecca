@@ -6,7 +6,7 @@ public interface Volume {
 
 	////////// VOLUME ////////////
 
-	String file = "userdata/options.csv";
+	String file = new FileTask().getUserDataPath() + "options.csv";
 
 	void refreshVolume();
 

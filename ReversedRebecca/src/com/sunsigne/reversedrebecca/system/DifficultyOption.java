@@ -6,7 +6,7 @@ public class DifficultyOption {
 
 	////////// DIFFICULTY OPTION ////////////
 
-	String file = "userdata/options.csv";
+	String file = new FileTask().getUserDataPath() + "options.csv";
 
 	private static GAME_DIFFICULTY difficulty;
 

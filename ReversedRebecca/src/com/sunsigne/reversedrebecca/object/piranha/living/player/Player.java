@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Player extends LivingObject {
 
-	private String file = "userdata/characteristics.csv";
+	private String file = new FileTask().getUserDataPath() + "characteristics.csv";
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y);
