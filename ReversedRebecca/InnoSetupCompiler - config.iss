@@ -39,7 +39,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\ressources\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\ressources\userdata\*"; DestDir: "{userappdata}\Reversed Rebecca\"; Flags: ignoreversion createallsubdirs recursesubdirs comparetimestamp
+Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\userdata\*"; DestDir: "{userappdata}\Reversed Rebecca\"; Flags: ignoreversion createallsubdirs recursesubdirs comparetimestamp
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

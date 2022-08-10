@@ -1,12 +1,17 @@
 package com.sunsigne.reversedrebecca.system;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Snitch {
 
-	private static boolean ACTIVATED = true;
-	private static final String file = "for_dev.csv";
+	private static boolean ACTIVATED = start();
+	private static final String file = "logs.txt";
 	private boolean userData = true;
 	private static final FileTask task = new FileTask();
 
@@ -21,7 +26,23 @@ public class Snitch {
 			new FileTask().write(file, "");
 	}
 
-	////////// WORLD ////////////
+	////////// USEFUL ////////////
+
+	private static boolean start() {
+		if (Infos.IS_DEV_VERSION == false)
+			return false;
+
+		try {
+			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + file));
+			System.setOut(console);
+			System.setErr(console);
+			console.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		return true;
+	}
 
 	public void registerEntry(String text) {
 		if (ACTIVATED == false)
