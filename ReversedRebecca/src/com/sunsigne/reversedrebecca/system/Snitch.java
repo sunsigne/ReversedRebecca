@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 public class Snitch {
 
 	private static boolean ACTIVATED = start();
-	private static final String file = "logs.txt";
+	private static final String file = "dev_data.txt";
 	private boolean userData = true;
 	private static final FileTask task = new FileTask();
 
@@ -29,14 +29,12 @@ public class Snitch {
 	////////// USEFUL ////////////
 
 	private static boolean start() {
-		if (Infos.IS_DEV_VERSION == false)
+		if (Infos.IS_DEV_VERSION)
 			return false;
 
 		try {
-			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + file));
-			System.setOut(console);
+			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + "crash_repport.txt"));
 			System.setErr(console);
-			console.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
