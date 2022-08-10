@@ -15,6 +15,8 @@
 	créer une fin de niveau de workshop adaptée à ce dernier
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
 	Actuellement, le DualChecker est désactivé (trop de faux positif)
+	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask"
+	la version affiché sur l'écran titre est dans la class MenuScreen
 
 	////////// PIRA ////////////
 
@@ -22,6 +24,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	faire un GUI menu
 	créer un système d'envoie de données du user (crash et dev_data)
 	"You are" ne se sauvegarde pas encore

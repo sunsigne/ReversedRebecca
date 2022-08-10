@@ -10,10 +10,10 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Snitch {
 
-	private static boolean ACTIVATED = start();
-	private static final String file = "dev_data.txt";
-	private boolean userData = true;
 	private static final FileTask task = new FileTask();
+	private static final String file = "dev_data.txt";
+	private static boolean ACTIVATED = start();
+	private boolean userData = true;
 
 	public Snitch() {
 		if (ACTIVATED == false)
@@ -29,8 +29,21 @@ public class Snitch {
 		if (Infos.IS_DEV_VERSION)
 			return false;
 
+		boolean error = true;
+		int num = 1;
+		String path = null;
+
+		while (error) {
+			// create crash_repport_xx.txt in AppData/Roaming
+			path = "crash_repport_" + new FormatedString().getNumber(num) + ".txt";
+			error = task.doesExist(true, path);
+			if (error)
+				error = task.isEmptyFile(true, path);
+			num++;
+		}
+
 		try {
-			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + "crash_repport.txt"));
+			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + path));
 			System.setErr(console);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

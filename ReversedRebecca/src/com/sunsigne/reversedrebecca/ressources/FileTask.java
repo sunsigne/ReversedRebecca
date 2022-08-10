@@ -2,6 +2,10 @@ package com.sunsigne.reversedrebecca.ressources;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 import com.sunsigne.reversedrebecca.Infos;
@@ -14,6 +18,18 @@ public class FileTask {
 		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
 		File file = new File(folder + path);
 		return file.exists();
+	}
+
+	public boolean isEmptyFile(boolean userData, String path) {
+		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		Path path0 = Paths.get(folder + path);
+		try {
+			System.out.println(Files.size(path0));
+			return Files.size(path0) != 0L;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return true;
 	}
 
 	public void delete(boolean userData, String path) {
@@ -50,7 +66,8 @@ public class FileTask {
 							content = content.concat(getFormattedSpace(scan.nextLine()));
 							flag = true;
 						} else
-							content = content.concat(String.format("%n" + getFormattedSpace(scan.nextLine())));
+							content = content
+									.concat(System.getProperty("line.separator") + getFormattedSpace(scan.nextLine()));
 					}
 				}
 

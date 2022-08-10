@@ -1,11 +1,13 @@
 package com.sunsigne.reversedrebecca.menu;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -63,6 +65,7 @@ public class MenuScreen implements Updatable, TickFree {
 
 		drawTransluantLayer(g2d);
 		drawTitle(g);
+		drawVersion(g);
 	}
 
 	private void drawTransluantLayer(Graphics2D g2d) {
@@ -81,6 +84,17 @@ public class MenuScreen implements Updatable, TickFree {
 
 	private void drawTitle(Graphics g) {
 		g.drawImage(title_img, 525, 80, 856, 380, null);
+		Font font = new Font("arial", 1, 30);
+		g.setFont(font);
+		g.setColor(Color.white);
+		g.drawString(Infos.VERSION, 855, 460);
+	}
+	
+	private void drawVersion(Graphics g) {
+		Font font = new Font("arial", 1, 30);
+		g.setFont(font);
+		g.setColor(Color.white);
+		g.drawString(Infos.VERSION, 855, 460);
 	}
 
 }
