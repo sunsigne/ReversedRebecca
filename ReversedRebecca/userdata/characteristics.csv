@@ -1,0 +1,15 @@
+
+MaxHp=3
+
+
+BombMaxLvl=CYAN
+BombStartLvl=NULL
+
+KeyMaxLvl=CYAN
+KeyStartLvl=NULL
+
+MicrochipMaxLvl=CYAN
+MicrochipStartLvl=NULL
+
+ShovelMaxLvl=CYAN
+ShovelStartLvl=NULL

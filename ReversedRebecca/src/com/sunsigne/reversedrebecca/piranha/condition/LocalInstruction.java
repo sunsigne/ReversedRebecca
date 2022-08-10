@@ -7,14 +7,16 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class LocalInstruction {
 
+	private boolean userData = false;
+	
 	protected void analyse(PiranhaObject object, String condition) {
 		this.object = object;
 
 		// if NPC has no PiranhaFile
-		if (new FileTask().doesExist(object.getPiranhaFile()) == false)
+		if (new FileTask().doesExist(userData, object.getPiranhaFile()) == false)
 			return;
 
-		request = new FileTask().read(condition.toUpperCase(), object.getPiranhaFile());
+		request = new FileTask().read(userData, condition.toUpperCase(), object.getPiranhaFile());
 
 		// if Statement has no correlated Action
 		if (request.isBlank())

@@ -9,7 +9,6 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 
 import com.sunsigne.reversedrebecca.Infos;
-import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class ImageTask {
@@ -22,7 +21,7 @@ public class ImageTask {
 	public BufferedImage loadImage(String path, boolean nullIfError) {
 
 		BufferedImage image = null;
-		String path0 = "/" + new FileTask().getRessourcesPath() + path + ".png";
+		String path0 = "/" + Infos.RESSOURCES_PATH + path + ".png";
 
 		try {
 			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();

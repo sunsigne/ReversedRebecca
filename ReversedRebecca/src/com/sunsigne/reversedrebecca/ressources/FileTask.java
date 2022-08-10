@@ -10,47 +10,31 @@ public class FileTask {
 
 	////////// USEFUL ////////////
 
-	public String getRessourcesPath() {
-		File ressources = new File("ressources/");
-
-		// occurs for dev app
-		if (ressources.exists())
-			return "ressources/";
-		
-		// occurs for player app
-		return "";
-	}
-	
-	public String getUserDataPath() {
-		// dev sav
-		if(getRessourcesPath().isBlank() == false)
-			return "userdata/";
-		
-		// player save
-		String userData = System.getenv("APPDATA") + "/" + Infos.NAME + "/";
-		return userData.replace("\\", "/");
-	}
-	
-	public boolean doesExist(String path) {
-		File file = new File(getRessourcesPath() + path);
+	public boolean doesExist(boolean userData, String path) {
+		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		File file = new File(folder + path);
 		return file.exists();
 	}
 
-	public void delete(String path) {
-		File file = new File(getRessourcesPath() + path);
+	public void delete(boolean userData, String path) {
+		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		File file = new File(folder + path);
 		if (file.exists())
 			file.delete();
 	}
 
 	////////// READ ////////////
 
-	public String read(String path) {
-		return read(null, path);
+	// userData determine the folder to search :
+	// true -> Programme File / false -> AppData/Roaming
+	public String read(boolean userData, String path) {
+		return read(userData, null, path);
 	}
 
-	public String read(String valueToRead, String path) {
+	public String read(boolean userData, String valueToRead, String path) {
 
-		File file = new File(getRessourcesPath() + path);
+		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		File file = new File(folder + path);
 		Scanner scan = null;
 		String content = "";
 
@@ -87,7 +71,7 @@ public class FileTask {
 
 		return content;
 	}
-	
+
 	private String getFormattedSpace(String text) {
 		String formattedText = text.replace(" ", "");
 		return formattedText.replace("#", " ");
@@ -95,14 +79,15 @@ public class FileTask {
 
 	////////// WRITE ////////////
 
+	// it is impossible to write in Programmes Files -> userData is always true here
+	// to write something, keep in mind that "readable space" must be writted "#"
 	public void write(String path, String text) {
 		write(null, path, text);
 	}
 
-	// WARNING ! To write something, keep in mind that "readable space" must be writted "#"
 	public void write(String valueToReplace, String path, String text) {
-		File file = new File(getRessourcesPath() + path);
-		String fileContent = read(path);
+		File file = new File(Infos.USERDATA_PATH + path);
+		String fileContent = read(true, path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
 		int size = alllines.length;
 

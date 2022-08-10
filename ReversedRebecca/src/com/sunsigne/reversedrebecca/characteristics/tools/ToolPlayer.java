@@ -11,7 +11,8 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class ToolPlayer implements Difficulty {
 
-	private String file = new FileTask().getUserDataPath() + "characteristics.csv";
+	private String file = "characteristics.csv";
+	private boolean userData = true;
 
 	public ToolPlayer() {
 		ToolList.getList().addObject(this);
@@ -28,7 +29,7 @@ public abstract class ToolPlayer implements Difficulty {
 	protected abstract ToolPlayer getInstance();
 
 	private void registerDefaultCharacteristic(String tool) {
-		String content = new FileTask().read(file);
+		String content = new FileTask().read(userData, file);
 		String br = System.getProperty("line.separator");
 
 		String maxLine = tool + "MaxLvl=" + LVL.CYAN.getName().toUpperCase();
@@ -67,7 +68,7 @@ public abstract class ToolPlayer implements Difficulty {
 		if (getMaxDifficulty() != LVL.NULL)
 			return;
 
-		String txtDifficulty = new FileTask().read(getName() + "MaxLvl", file);
+		String txtDifficulty = new FileTask().read(userData, getName() + "MaxLvl", file);
 
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {
@@ -102,7 +103,7 @@ public abstract class ToolPlayer implements Difficulty {
 		if (getStartDifficulty() != null)
 			return;
 
-		String txtDifficulty = new FileTask().read(getName() + "StartLvl", file);
+		String txtDifficulty = new FileTask().read(userData, getName() + "StartLvl", file);
 
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {

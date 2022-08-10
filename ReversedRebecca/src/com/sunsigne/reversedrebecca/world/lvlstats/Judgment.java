@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class Judgment {
 
 	private String file = "menu.csv";
+	private boolean userData = false;
 
 	public Judgment(String mapName, StopWatch stopWatch, Deed deed) {
 		times = loadTimes(mapName);
@@ -25,10 +26,10 @@ public class Judgment {
 		String path = "maps/" + mapName + "/";
 		FileTask file = new FileTask();
 
-		if (file.doesExist(path + "FAST.txt"))
-			times[0] = Integer.parseInt(file.read(path + "FAST.txt"));
-		if (file.doesExist(path + "METICULOUS.txt"))
-			times[1] = Integer.parseInt(file.read(path + "METICULOUS.txt"));
+		if (file.doesExist(userData, path + "FAST.txt"))
+			times[0] = Integer.parseInt(file.read(userData, path + "FAST.txt"));
+		if (file.doesExist(userData, path + "METICULOUS.txt"))
+			times[1] = Integer.parseInt(file.read(userData, path + "METICULOUS.txt"));
 
 		return times;
 	}

@@ -6,14 +6,15 @@ public interface Volume {
 
 	////////// VOLUME ////////////
 
-	String file = new FileTask().getUserDataPath() + "options.csv";
+	String file = "options.csv";
+	boolean userData = true;
 
 	void refreshVolume();
 
 	String getValueToRead();
 
 	public default String getRegisteredVolume() {
-		return new FileTask().read(getValueToRead(), file);
+		return new FileTask().read(userData, getValueToRead(), file);
 	}
 
 	public default double loadVolume() {

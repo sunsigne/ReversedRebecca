@@ -6,7 +6,8 @@ public class CameraOption {
 
 	////////// CAMERA OPTION ////////////
 
-	String file = new FileTask().getUserDataPath() + "options.csv";
+	private String file = "options.csv";
+	private boolean userData = true;
 
 	private static CAMERA_TYPE type;
 
@@ -17,7 +18,7 @@ public class CameraOption {
 	}
 
 	private CAMERA_TYPE getRegisteredType() {
-		String registeredType = new FileTask().read(getValueToRead(), file);
+		String registeredType = new FileTask().read(userData, getValueToRead(), file);
 		for (CAMERA_TYPE tempType : CAMERA_TYPE.values()) {
 			if (tempType.getName().equalsIgnoreCase(registeredType))
 				return tempType;

@@ -9,7 +9,8 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Player extends LivingObject {
 
-	private String file = new FileTask().getUserDataPath() + "characteristics.csv";
+	private String file = "characteristics.csv";
+	private boolean userData = true;
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y);
@@ -29,13 +30,13 @@ public class Player extends LivingObject {
 	////////// HP ////////////
 
 	private void createCharacteristic(String text, int num) {
-		String content = new FileTask().read(file);
+		String content = new FileTask().read(userData, file);
 		String new_content = text + "=3" + System.getProperty("line.separator") + content;
 		new FileTask().write(file, new_content);
 	}
 
 	private void loadHealth() {
-		String txtMaxHp = new FileTask().read("MaxHp", file);
+		String txtMaxHp = new FileTask().read(userData, "MaxHp", file);
 
 		// if the file "characteristics" has no value for the hp, create one
 		if (txtMaxHp.isEmpty()) {

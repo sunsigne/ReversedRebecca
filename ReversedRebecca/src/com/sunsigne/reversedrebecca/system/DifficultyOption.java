@@ -6,7 +6,8 @@ public class DifficultyOption {
 
 	////////// DIFFICULTY OPTION ////////////
 
-	String file = new FileTask().getUserDataPath() + "options.csv";
+	String file = "options.csv";
+	private boolean userData = true;
 
 	private static GAME_DIFFICULTY difficulty;
 
@@ -22,7 +23,7 @@ public class DifficultyOption {
 	}
 
 	private GAME_DIFFICULTY getRegisteredDifficulty() {
-		String registeredDifficulty = new FileTask().read(getValueToRead(), file);
+		String registeredDifficulty = new FileTask().read(userData, getValueToRead(), file);
 		for (GAME_DIFFICULTY tempDifficulty : GAME_DIFFICULTY.values()) {
 			if (tempDifficulty.getName().equalsIgnoreCase(registeredDifficulty))
 				return tempDifficulty;

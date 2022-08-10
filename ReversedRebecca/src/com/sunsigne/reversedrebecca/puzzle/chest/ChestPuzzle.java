@@ -21,6 +21,8 @@ import com.sunsigne.reversedrebecca.system.Window;
 
 public class ChestPuzzle extends Puzzle {
 
+	private boolean userData = false;
+	
 	public ChestPuzzle(String lootFile, GenericListener actionOnWinning) {
 		super(actionOnWinning);
 
@@ -53,7 +55,7 @@ public class ChestPuzzle extends Puzzle {
 	}
 
 	private void loadSize() {
-		String content = new FileTask().read(lootFile).toUpperCase();
+		String content = new FileTask().read(userData, lootFile).toUpperCase();
 
 		if (content.contains("LOOT1"))
 			size = 1;
@@ -71,7 +73,7 @@ public class ChestPuzzle extends Puzzle {
 	public void createPuzzle() {
 
 		// check if file exist
-		if (new FileTask().doesExist(lootFile) == false)
+		if (new FileTask().doesExist(userData, lootFile) == false)
 			stopApp();
 
 		createChestCards();
@@ -106,7 +108,7 @@ public class ChestPuzzle extends Puzzle {
 	}
 
 	private void createCard(int num, int x) {
-		String lootData = new FileTask().read("LOOT" + (num + 1), lootFile);
+		String lootData = new FileTask().read(userData, "LOOT" + (num + 1), lootFile);
 
 		chestCard[num] = new ChestCard(this, lootData, x, 0);
 		chestCard[num].setX(chestCard[num].getX() - chestCard[num].getWidth() / 2);

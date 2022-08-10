@@ -160,7 +160,7 @@ public class LanguageScreen extends SubMenuScreen {
 	private void createLangButton(int index, int x, int y) {
 		String name = lang_list.get(index);
 		GenericListener onPress = () -> chooseLanguage(name);
-		String text = new FileTask().read("/texts/" + name + "/lang/name" + ".txt");
+		String text = new FileTask().read(false, "texts/" + name + "/lang/name" + ".txt");
 
 		ButtonObject button = new TitleScreenButton(text, x + 325, y + 503, 415, 80, onPress, null);
 		LAYER.MENU.getHandler().addObject(button);

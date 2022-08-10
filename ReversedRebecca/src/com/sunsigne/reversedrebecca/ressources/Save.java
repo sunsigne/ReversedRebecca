@@ -12,8 +12,9 @@ import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class Save {
 
-	private String file = new FileTask().getUserDataPath() + "save.csv";
-	private String char_file = new FileTask().getUserDataPath() + "characteristics.csv";
+	private String file = "save.csv";
+	private String char_file = "characteristics.csv";
+	private boolean userData = true;
 
 	////////// LEVEL ////////////
 
@@ -21,9 +22,9 @@ public class Save {
 
 	public String getLevel(boolean menu) {
 		if (menu)
-			return new FileTask().read("currentlvlmenu", file);
+			return new FileTask().read(userData, "currentlvlmenu", file);
 		else
-			return new FileTask().read("currentlvl", file);
+			return new FileTask().read(userData, "currentlvl", file);
 	}
 
 	public void registerNextLevel(String lvlmenu, String lvl) {
@@ -35,7 +36,7 @@ public class Save {
 
 	public void loadSave() {
 
-		String[] data = new FileTask().read(file).split(System.getProperty("line.separator"));
+		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 
 		for (String tempDatum : data) {
 			if (tempDatum.toLowerCase().contains("currentlvl"))
@@ -55,7 +56,7 @@ public class Save {
 		if (list.getList().isEmpty())
 			return;
 
-		String[] oldData = new FileTask().read(file).split(System.getProperty("line.separator"));
+		String[] oldData = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 
 		// regroupd all data into a non-duplicated sorted alphabetically structure (set)
 		Set<String> set = new TreeSet<>();
@@ -111,7 +112,7 @@ public class Save {
 		if (list.getList().isEmpty())
 			return;
 
-		String data = new FileTask().read(file);
+		String data = new FileTask().read(userData, file);
 
 		// removing targeted data
 		for (String tempString : list.getList()) {

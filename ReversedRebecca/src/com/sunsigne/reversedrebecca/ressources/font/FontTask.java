@@ -4,7 +4,7 @@ import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 
-import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.Infos;
 
 public class FontTask {
 
@@ -13,7 +13,7 @@ public class FontTask {
 		Font font = null;
 
 		try {
-			File file = new File(new FileTask().getRessourcesPath() + "font/" + path);
+			File file = new File(Infos.RESSOURCES_PATH + "font/" + path);
 			font = Font.createFont(Font.TRUETYPE_FONT, file).deriveFont(size);
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);
@@ -21,7 +21,7 @@ public class FontTask {
 			e.printStackTrace();
 			font = new Font("arial", 1, 55);
 		}
-		
+
 		return font;
 	}
 

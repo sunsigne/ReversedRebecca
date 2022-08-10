@@ -6,19 +6,20 @@ public interface Key {
 
 	////////// KEY ////////////
 
-	String file = new FileTask().getUserDataPath() + "options.csv";
+	String file = "options.csv";
+	boolean userData = true;
 
 	void refreshKey();
 
 	String getValueToRead();
 
 	public default String getRegisteredKey() {
-		String key = new FileTask().read(getValueToRead(), file);
+		String key = new FileTask().read(userData, getValueToRead(), file);
 		return key.split(":")[0];
 	}
 
 	public default int loadKey() {
-		String key = new FileTask().read(getValueToRead(), file);
+		String key = new FileTask().read(userData, getValueToRead(), file);
 		return Integer.decode(key.split(":")[1]);
 	}
 
