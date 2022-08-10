@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -31,7 +32,7 @@ public class LanguageScreen extends SubMenuScreen {
 	////////// NAME ////////////
 
 	public String getName() {
-		if (lang_list == null)
+		while (lang_list == null)
 			loadLangList();
 
 		return "lang_" + new FormatedString().getNumber(lang_list.size());
@@ -48,7 +49,7 @@ public class LanguageScreen extends SubMenuScreen {
 	private ArrayList<String> lang_list;
 
 	private void loadLangList() {
-		File file = new File("ressources/texts");
+		File file = new File(Infos.RESSOURCES_PATH + "texts");
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
 		lang_list = new ArrayList<String>();
 

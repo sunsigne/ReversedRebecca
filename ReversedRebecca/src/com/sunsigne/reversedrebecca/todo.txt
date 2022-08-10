@@ -23,8 +23,7 @@
 	////////// DIFFICILE ////////////
 	
 	faire un GUI menu
-	créer un système qui enregistre les erreurs de la console dans un fichier text, et qui l'envoie par email (avec précisions éventuelles du user) -> PrintStream out = new PrintStream(new FileOutputStream("output.txt")); System.setOut(out); System.setErr(out);
-System.setOut(out);
+	créer un système d'envoie de données du user (crash et dev_data)
 	"You are" ne se sauvegarde pas encore
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI

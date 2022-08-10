@@ -16,11 +16,8 @@ public class Snitch {
 	private static final FileTask task = new FileTask();
 
 	public Snitch() {
-		if (ACTIVATED == false) {
-			if (task.doesExist(userData, file))
-				task.delete(userData, file);
+		if (ACTIVATED == false)
 			return;
-		}
 
 		if (task.doesExist(userData, file) == false)
 			new FileTask().write(file, "");
