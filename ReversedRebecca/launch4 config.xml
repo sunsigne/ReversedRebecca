@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\Reversed Rebecca - v.a.1.1.jar</jar>
-  <outfile>C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\Reversed Rebecca - v.a.1.1.exe</outfile>
+  <jar>Reversed Rebecca - v.a.1.2.jar</jar>
+  <outfile>Reversed Rebecca - v.a.1.2.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,16 +13,16 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\icon.ico</icon>
+  <icon>icon.ico</icon>
   <singleInstance>
     <mutexName>ReversedRebeccaGameBySunsigne</mutexName>
     <windowTitle>Reversed Rebecca</windowTitle>
   </singleInstance>
   <jre>
-    <path>C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\JRE</path>
+    <path>JRE</path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
-    <minVersion></minVersion>
+    <minVersion>14.0.2</minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>

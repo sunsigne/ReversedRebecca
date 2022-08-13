@@ -114,5 +114,6 @@
 	5 fruits et légumes par jours : manger un fruit virtuel
 	Vous avez été terminé : être tué définitivement par un terminator
 	Fin secrète : finir le jeu en difficile
+	Tu es diabétique Becky : manger 100 cookies
 		
 	

@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Reversed Rebecca"
-#define MyAppVersion "a.1.1"
+#define MyAppVersion "a.1.2"
 #define MyAppPublisher "Sunsigne"
-#define MyAppExeName "Reversed Rebecca - v.a.1.1.exe"
+#define MyAppExeName "Reversed Rebecca - v.a.1.2.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -23,7 +23,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\Users\casqu\git\ReversedRebecca\ReversedRebecca
-OutputBaseFilename=Reversed Rebecca - v.a.1.1 - installer
+OutputBaseFilename=Reversed Rebecca - v.a.1.2 - installer
 SetupIconFile=C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\icon.ico
 Compression=lzma
 SolidCompression=yes
@@ -38,6 +38,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\JRE\*"; DestDir: "{app}\JRE"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\ressources\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\userdata\*"; DestDir: "{userappdata}\Reversed Rebecca\"; Flags: ignoreversion createallsubdirs recursesubdirs comparetimestamp
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
