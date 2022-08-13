@@ -24,6 +24,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	Size and Windows ont besoin d'être update de sorte à accepter les résolutions autres que les écrans 1920x1080
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	faire un GUI menu
 	créer un système d'envoie de données du user (crash et dev_data)

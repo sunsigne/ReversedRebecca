@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -11,8 +12,12 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class Window {
 
-	public static final int WIDHT = 1920;
+	public static final int WIDHT =  1920;
 	public static final int HEIGHT = 1080;
+	/*
+	public static final int WIDHT =  Toolkit.getDefaultToolkit().getScreenSize().width; // ex : 1920 px
+	public static final int HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height; // ex : 1080 px
+	*/
 
 	protected Window(Game game) {
 
