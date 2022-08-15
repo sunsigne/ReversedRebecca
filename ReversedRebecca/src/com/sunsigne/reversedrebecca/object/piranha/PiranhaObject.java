@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -206,10 +207,12 @@ public abstract class PiranhaObject extends GameObject
 
 	// width and height should be between 0 and 16
 	public void setBounds(int x, int y, int width, int height) {
-		this.hitboxX = x * 6;
-		this.hitboxY = y * 6;
-		this.hitboxW = width * 6;
-		this.hitboxH = height * 6;
+		int pixel = 16;
+		int ratio = Size.M / pixel;
+		this.hitboxX = x * ratio;
+		this.hitboxY = y * ratio;
+		this.hitboxW = width * ratio;
+		this.hitboxH = height * ratio;
 	}
 
 	@Override

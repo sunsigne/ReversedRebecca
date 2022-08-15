@@ -9,13 +9,12 @@
 
 	////////// EN COURS ////////////
 
+	-> corrigé la police d'écriture (en rapport avec la résolution - bonne taille mais moche)
+
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
-	faire le bon bruit quand on ouvre le coffre
-	créer une fin de niveau de workshop adaptée à ce dernier
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
-	Actuellement, le DualChecker est désactivé (trop de faux positif)
-	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask"
+	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
 	la version affiché sur l'écran titre est dans la class MenuScreen
 
 	////////// PIRA ////////////
@@ -61,6 +60,7 @@
 	////////// LVL000-1 ////////////
 	
 	créer les dalles spéciales
+	créer une fin de niveau de workshop adaptée à ce dernier
 	
 	////////// LVL001 ////////////
 	
@@ -76,6 +76,7 @@
 	
 	////////// SONS ////////////
 	
+	faire le bon bruit quand on ouvre le coffre
 	Le fading menu devrait jouer un son 
 	les boutons et les menus devraient jouer un son (et particulièrement AudioScreen !)
 	Ajouter des voix aux personnages (son quand ils parlent)

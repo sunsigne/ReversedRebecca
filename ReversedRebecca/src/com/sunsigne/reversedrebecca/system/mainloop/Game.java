@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 import java.util.ConcurrentModificationException;
 
@@ -148,6 +149,9 @@ public class Game extends Canvas implements Runnable {
 
 		g.setColor(new Color(0, 0, 0));
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
+
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.scale(Window.SCALE_X, Window.SCALE_Y);
 
 		SuperHandler.render(g);
 

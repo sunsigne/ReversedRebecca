@@ -12,12 +12,11 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class Window {
 
-	public static final int WIDHT =  1920;
+	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
-	/*
-	public static final int WIDHT =  Toolkit.getDefaultToolkit().getScreenSize().width; // ex : 1920 px
-	public static final int HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height; // ex : 1080 px
-	*/
+	
+	public static final float SCALE_X = (float) Toolkit.getDefaultToolkit().getScreenSize().width / WIDHT;
+	public static final float SCALE_Y = (float) Toolkit.getDefaultToolkit().getScreenSize().height / HEIGHT;
 
 	protected Window(Game game) {
 

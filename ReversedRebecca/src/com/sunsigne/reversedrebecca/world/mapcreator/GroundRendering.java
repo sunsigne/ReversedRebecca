@@ -33,8 +33,9 @@ public class GroundRendering implements Updatable, TickFree {
 		BufferedImage img = world.getImageMap(layer);
 		
 		int pixel = 16;
-		int width = img.getWidth() * Size.M / pixel;
-		int height = img.getHeight() * Size.M / pixel;
+		int ratio = Size.M / pixel;
+		int width = img.getWidth() * ratio;
+		int height = img.getHeight() * ratio;
 
 		// draw gray lawer UNDER current ground (for up layers)
 		new TransluantLayer().drawGray(g, width, height);

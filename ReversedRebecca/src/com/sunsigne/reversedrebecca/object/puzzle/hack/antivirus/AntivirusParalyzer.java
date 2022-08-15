@@ -22,7 +22,9 @@ public class AntivirusParalyzer extends AntivirusObject {
 
 	@Override
 	public void antivirusAction() {
-		new MousePos().setX(Window.WIDHT / 2);
+		// I have absolutly NO IDEA why i have to multiply by Window.SCALE_X
+		// on x and not on y ... But that's how I get the good result
+		new MousePos().setX((int) (Window.SCALE_X * (Window.WIDHT / 2)));
 		new MousePos().setY(Window.HEIGHT / 2);
 		playSound("laser_little");
 	}

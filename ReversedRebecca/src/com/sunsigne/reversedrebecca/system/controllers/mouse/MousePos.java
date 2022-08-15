@@ -14,8 +14,8 @@ public class MousePos {
 
 		PointerInfo a = MouseInfo.getPointerInfo();
 		Point b = a.getLocation();
-		int x = (int) b.getX();
-		int y = (int) b.getY();
+		int x = (int) (b.getX() / Window.SCALE_X);
+		int y = (int) (b.getY() / Window.SCALE_Y);
 		int[] mousePos = { x, y };
 
 		return mousePos;
@@ -24,7 +24,7 @@ public class MousePos {
 	public void setX(int x) {
 		try {
 			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT))
-				new Robot().mouseMove(x, get()[1]);
+				new Robot().mouseMove((int) (x  * Window.SCALE_X), get()[1]);
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
@@ -33,7 +33,7 @@ public class MousePos {
 	public void setY(int y) {
 		try {
 			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT))
-				new Robot().mouseMove(get()[0], y);
+				new Robot().mouseMove(get()[0], (int) (y  * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}

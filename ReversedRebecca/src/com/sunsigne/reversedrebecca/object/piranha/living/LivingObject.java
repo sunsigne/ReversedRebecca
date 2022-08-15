@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class LivingObject extends PiranhaObject implements Health, Pusher, Pushable, PathSearcher {
 
@@ -172,8 +173,10 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	private int displayedX, displayedY;
 	
 	public void setDisplayXY(int x, int y) {
-		this.displayedX = x * 6;
-		this.displayedY = y * 6;
+		int pixel = 16;
+		int ratio = Size.M / pixel;
+		this.displayedX = x * ratio;
+		this.displayedY = y * ratio;
 	}
 
 	@Override
