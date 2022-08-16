@@ -33,7 +33,6 @@ Quelle(s)#question(s)#ajouteriez-vous#à#ce#formulaire#?
 
 
 PS#:#vous#seriez#adorable#de#joindre#à#cet#email#tous#les#fichiers#crash_repport.txt#créés#par#le#jeu#qui#figurent#dans#le#dossier#C:/Users/votreNom/AppData/Roaming/Reversed#Rebecca
-(Un#seul#fichier#et#vide#=#pas#la#peine#;P)
 
 
 INFORMATION#POUR#LE#DEVELOPPEUR#:#(merci#de#ne#pas#toucher#à#cette#section)
