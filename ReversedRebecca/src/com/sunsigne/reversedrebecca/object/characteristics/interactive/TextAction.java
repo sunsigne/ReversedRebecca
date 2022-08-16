@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -112,7 +113,8 @@ public class TextAction implements Updatable {
 
 	///// choice text /////
 
-	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 17f);
+	private float font_size = 17f / (float) Math.sqrt(Window.SCALE_X);
+	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", font_size);
 
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();

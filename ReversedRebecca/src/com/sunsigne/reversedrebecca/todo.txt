@@ -9,7 +9,7 @@
 
 	////////// EN COURS ////////////
 
-	-> corrigé la police d'écriture (en rapport avec la résolution - bonne taille mais moche)
+	pas fini : english + regarder la tv + nombre de fins 
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
