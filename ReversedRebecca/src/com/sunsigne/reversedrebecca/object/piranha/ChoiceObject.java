@@ -11,6 +11,7 @@ public class ChoiceObject extends InteractiveObject {
 		super(name, x, y);
 
 		this.player = new PlayerFinder().getPlayer();
+		tick();
 	}
 
 	////////// INTERACTIVE ////////////

@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	Le joueur ne peut plus bouger s'il se déplace juste avant qu'un choice n'arrive !
 	pas fini : english + regarder la tv + nombre de fins 
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
