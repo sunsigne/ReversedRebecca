@@ -4,8 +4,9 @@ import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
 
-public class CutsceneRequest implements Request {
+public class CutsceneRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
@@ -31,7 +32,18 @@ public class CutsceneRequest implements Request {
 	}
 
 	@Override
-	public void doAction(PiranhaObject object, String target) {
+	protected String getConditionToCheck(PiranhaObject object) {
+		return null;
+	}
+
+	@Override
+	protected boolean analyseCondition(PiranhaObject object, String target) {
+		// target is not analysed in this very case, just write "running".
+		return Cutscene.isRunning();
+	}
+
+	@Override
+	public void doClassicAction(PiranhaObject object, String target) {
 		switch (target.toLowerCase()) {
 		case "start":
 			new Cutscene().start();

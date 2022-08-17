@@ -52,6 +52,22 @@ Le Type de Requête CUTSCENE accepte 3 cibles :
 Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur.
 
 
+L'écriture conditionnelle est possible, quoique légèrement différente de d'habitude.
+Lorsque cette dernière est utilisée, elle vérifie toujours si une cinématique est en cours; peu importe la cible écrite.
+
+ex : 
+TIME -> 150 = GOTO -> TRY_ARRIVING
+$ -> TRY_ARRIVING = CUTSCENE -> RUNNING ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
+$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+
+Lorsque la condition sera vérifiée, une nouvelle condition doit être vérifiée : une cinématique est-elle en cours ?
+- si oui, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
+- si non, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
+Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque la cinématique est finie (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+
+Rappel, le mot "RUNNING" n'est pas analysé ici. L'écriture conditionnelle du Type de Requête CUTSCENE vérifiera TOUJOURS si une cinématique est en cours ; peu importe le mot écrit. Il est bien sûr conseillé d'écrire "RUNNING" afin que la requête ait du sens à la lecture.
+
+
 ////// WAITFOR //////
 
 
