@@ -9,6 +9,7 @@
 
 	////////// EN COURS ////////////
 
+	Le joueur ne peut plus bouger s'il se déplace juste avant qu'un choice n'arrive !
 	pas fini : english + regarder la tv + nombre de fins 
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
@@ -51,8 +52,12 @@
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
 	petite animation de sortie avant la fin du lvl (+ dialogue ?)
-	sarah pas encore programmée
+	
+	sarah pas fini
+	Rebecca s'excuse d'avoir mis du temps pour ouvrir à Sarah
+	Sarah remarque la tenue de Rebecca
 	Sarah sent les pancakes (ou les voit)
+	
 	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef) !
 	bibliothèque à faire ?
 	enfermer sarah chez soi (toilettes ou sieste)

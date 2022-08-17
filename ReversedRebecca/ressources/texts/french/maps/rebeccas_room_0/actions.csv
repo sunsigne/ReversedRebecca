@@ -59,6 +59,6 @@ OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key1 % aller#au#travail
-
-
-END_LVL = Key1 % finir#le#niveau
+BRING_SARAH = Key2 % faire#venir#sarah
+JUST_A_MOMENT = Key1 % juste#une#seconde...
+WHOS_THERE = Key2 % c'est#qui#?
