@@ -1,0 +1,66 @@
+Salut#!#Comment#tu#vas#?
+Bien#merci.
+… (crêpes)
+Salut#!#Désolé,#j'ai#été#un#peu#longue.
+Pas#de#soucis,#je#te#connais.
+Dis,#tu#accueilles#souvent#les#gens#en#serviette#?
+Oops,#je#savais#que#j'avais#oublié#quelque#chose…
+T'inquiète,#c'est#pas#grave.@C'est#pas#comme#si#j'avais#été#un#in…
+T'inquiète,#c'est#pas#grave.@C'est#pas#comme#si#j'avais#été#un#inconnu.
+…
+Ho,#la#vâche#!#Ça#sent#super#bon#!
+Oui,#j'ai#fait#des#crêpes#ce#matin.
+
+
+GREET / NOTHING
+
+player = object = excited = Salut,#Sarah#!#Comment#tu#vas#?
+sarah = player = laugh = Bien,#merci.
+sarah = happy = Tu#es#prête#pour#le#travail#?@Je#me#suis#dit#qu'on#pourrait#y#aller#ensemble.
+
+GREET / TIME
+
+player = object = excited = Salut,#Sarah#!#Désolé,#j'ai#mis@un#peu#de#temps#à#ouvrir…
+sarah = player = laugh = Pas#de#soucis,#je#te#connais.
+sarah = happy = Tu#es#prête#pour#le#travail#?@Je#me#suis#dit#qu'on#pourrait#y#aller#ensemble.
+
+prête / pas prête
+
+
+
+GREET / TIME + TOWEL
+
+player = object = excited = Salut,#Sarah#!#Désolé,#j'ai#mis@un#peu#de#temps#à#ouvrir…
+sarah = player = laugh = Pas#de#soucis,#je#te#connais.
+sarah = player = you_silly = Dis,#tu#accueilles#souvent#les#gens#en#serviette#?
+player = object = blush = Oops,#je#savais#que#j'avais#oublié#quelque#chose…
+
+GREET / TIME + PANCAKES
+
+player = object = excited = Salut,#Sarah#!#Désolé,#j'ai#mis@un#peu#de#temps#à#ouvrir…
+sarah = player = laugh = Pas#de#soucis,#je#te#con…
+sarah = player = asleep = *sniff*#*sniff*
+sarah = player = dreaming = Ça#sent#super#bon#!
+player = object = happy = Oui,#j'ai#fait#des#crêpes#ce#matin.
+
+GREET / TOWEL + PANCAKES
+
+player = object = excited = Salut,#Sarah#!#Comment#tu#vas#?
+sarah = player = laugh = Bien,#merci.@Dis,#tu#accueilles#souvent#les#gens#en#serviette#?
+
+GREET / TIME + TOWEL + PANCAKES
+
+player = object = excited = Salut,#Sarah#!#Désolé,#j'ai#mis@un#peu#de#temps#à#ouvrir…
+sarah = player = laugh = Pas#de#soucis,#je#te#connais.
+sarah = player = you_silly = Dis,#tu#accueilles#souvent#les#gens#en#serviette#?
+player = object = blush = Oops,#je#savais#que#j'avais#oublié#quelque#chose…
+sarah = player = happy = T'inquiète,#c'est#pas#grave.@C'est#pas#comme#si#j'avais#été#un#in…
+sarah = player = asleep = *sniff*#*sniff*
+sarah = player = dreaming = Ça#sent#super#bon#!
+player = object = happy = Oui,#j'ai#fait#des#crêpes#ce#matin.
+
+
+
+
+
+

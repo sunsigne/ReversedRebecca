@@ -62,3 +62,8 @@ GO_TO_WORK = Key1 % aller#au#travail
 BRING_SARAH = Key2 % faire#venir#sarah
 JUST_A_MOMENT = Key1 % juste#une#seconde...
 WHOS_THERE = Key2 % c'est#qui#?
+
+///// SARAH /////
+
+GREET = Key1 % saluer
+HUG = Key2 % faire#un#calin
