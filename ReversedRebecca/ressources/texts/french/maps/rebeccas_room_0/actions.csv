@@ -67,3 +67,11 @@ WHOS_THERE = Key2 % c'est#qui#?
 
 GREET = Key1 % saluer
 HUG = Key2 % faire#un#calin
+GREAT_IDEA = Key2 % super#idée#!
+NO_THANKS = Key3 % non#merci
+YOU_CONVINCED_ME = Key2 % tu#m'as#convaincu
+ANOTHER_TIME = Key2 % une#autre#fois
+MAKE_SOME = Key1 % je#vais#t'en#faire
+WERE_TASTY = Key2 % elles#étaient#bonnes
+WE_SHARE = Key1 % on#partage
+DOESNT_IT = Key2 % n'est-ce#pas#?

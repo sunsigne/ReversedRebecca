@@ -10,6 +10,7 @@
 	////////// EN COURS ////////////
 
 	pas fini : english + regarder la tv + nombre de fins 
+	penser à supprimer l'inutile pour le test
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
@@ -23,6 +24,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	transformer les fichiers .txt et .csv en fichiers .pir
 	le cursor devient de + en + grand lorsque la résolution diminue
 	Size and Windows ont besoin d'être update de sorte à accepter les résolutions autres que les écrans 1920x1080
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
@@ -47,6 +49,11 @@
 	DieWhenNoHp -> kill() prévoir un restart
 	
 	////////// LVL000 ////////////
+	
+	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
+	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
+	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas auté sur l'occasion lorsqu'elle les a senti
+	finir les interactions "crêpes" de sarah
 	
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier

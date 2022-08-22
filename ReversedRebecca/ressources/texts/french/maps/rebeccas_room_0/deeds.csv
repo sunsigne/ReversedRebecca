@@ -4,4 +4,5 @@ OFFER_PANCAKES = 1 % offrir#des#crêpes
 
 ///// BAD /////
 
-SEQUESTRATION = 1 % séquestration
+GREEDNEES = 1 % appât#du#gain
+SEQUESTRATION = 2 % séquestration

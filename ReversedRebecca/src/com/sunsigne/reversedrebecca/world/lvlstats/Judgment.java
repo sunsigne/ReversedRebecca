@@ -42,16 +42,12 @@ public class Judgment {
 		return stopWatch.getTime() >= times[1] ? "Meticulous" : null;
 	}
 
-	private String getNice() {
-		return (deed.getGoodWeight() != 0 & deed.getBadWeight() == 0) ? "Nice" : null;
-	}
-
 	private String getMean() {
-		return (deed.getGoodWeight() == 0 & deed.getBadWeight() != 0) ? "Mean" : null;
+		return (deed.getBadWeight() != 0) ? "Mean" : null;
 	}
 
-	private String getBipolar() {
-		return (deed.getGoodWeight() != 0 & deed.getBadWeight() != 0) ? "Bipolar" : null;
+	private String getNice() {
+		return (deed.getGoodWeight() != 0) ? "Nice" : null;
 	}
 
 	private String getPragmatic() {
@@ -64,14 +60,11 @@ public class Judgment {
 		if (getFast() != null)
 			return getFast();
 
-		if (getNice() != null)
-			return getNice();
-
 		if (getMean() != null)
 			return getMean();
 
-		if (getBipolar() != null)
-			return getBipolar();
+		if (getNice() != null)
+			return getNice();
 
 		if (getMeticulous() != null)
 			return getMeticulous();

@@ -21,7 +21,7 @@ public class EmailTask {
 	public void sendRequest() {
 		Desktop desktop = Desktop.getDesktop();
 
-		String target = "mailto:" + "florian.murcia@hotmail.com";
+		String target = "mailto:" + "florian.murcia@hotmail.fr";
 		String subject = "subject=" + getValidUrl("Reversed Rebeca - Questionnaire");
 
 		String quiz = new FileTask().read(true, "quiz.txt");
