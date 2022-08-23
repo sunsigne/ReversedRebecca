@@ -9,12 +9,7 @@
 
 	////////// EN COURS ////////////
 
-	pas fini : english + regarder la tv + nombre de fins 
-	penser à supprimer l'inutile pour le test
-
-	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
-	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
-	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
+	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
 	la version affiché sur l'écran titre est dans la class MenuScreen
 
@@ -23,7 +18,8 @@
 	creer une music request !!!!!
 
 	////////// DIFFICILE ////////////
-	
+
+	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
 	transformer les fichiers .txt et .csv en fichiers .pir
 	le cursor devient de + en + grand lorsque la résolution diminue
 	Size and Windows ont besoin d'être update de sorte à accepter les résolutions autres que les écrans 1920x1080
@@ -39,6 +35,8 @@
 
 	////////// FACILE ////////////
 
+	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
+	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	ranger tous les types de murs verts (et puzzler)
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
@@ -54,15 +52,11 @@
 	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
 	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas auté sur l'occasion lorsqu'elle les a senti
 	finir les interactions "crêpes" de sarah
+	ne pas oublier d'ajouter le calin "dû" par rappoort à la serviette
 	
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
 	petite animation de sortie avant la fin du lvl (+ dialogue ?)
-	
-	sarah pas fini
-	Rebecca s'excuse d'avoir mis du temps pour ouvrir à Sarah
-	Sarah remarque la tenue de Rebecca
-	Sarah sent les pancakes (ou les voit)
 	
 	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef) !
 	bibliothèque à faire ?
