@@ -35,6 +35,7 @@
 
 	////////// FACILE ////////////
 
+	la voix de sarah est actuellement une copie de la voix "error"
 	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
@@ -48,10 +49,11 @@
 	
 	////////// LVL000 ////////////
 	
+	traduire "je t'en pris" pendant les crêpes par "my pleasure"
+	traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
 	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
 	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas auté sur l'occasion lorsqu'elle les a senti
-	finir les interactions "crêpes" de sarah
 	ne pas oublier d'ajouter le calin "dû" par rappoort à la serviette
 	
 	temps pour sarah : 150 secondes ?

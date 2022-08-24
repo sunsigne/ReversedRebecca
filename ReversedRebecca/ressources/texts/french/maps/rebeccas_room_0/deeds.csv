@@ -1,8 +1,8 @@
 ///// GOOD /////
 
+SHARE_PANCAKES = 1 % partager#ses#crêpes
 OFFER_PANCAKES = 1 % offrir#des#crêpes
 
 ///// BAD /////
 
-GREEDNEES = 1 % appât#du#gain
-SEQUESTRATION = 2 % séquestration
+SEQUESTRATION = 1 % séquestration

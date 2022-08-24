@@ -1,6 +1,6 @@
 player = object = excited = Salut,#Sarah#!#Comment#tu#vas#?
 sarah = player = laugh = Bien,#merci.
-sarah = player = worry = Dis,#tu#accueilles#souvent#les#gens#en#serviette#?
-player = object = blush = Oops,#je#savais#que#j'avais#oublié#quelque#chose…
-sarah = player = laugh = T'inquiète,#c'est#pas#grave.@C'est#pas#comme#si#j'avais#été#un#inconnu.
+sarah = player = worry = Dis,#tu#accueilles#souvent@les#gens#en#serviette#?
+player = object = blush = Oops,#je#savais#que#j'avais@oublié#quelque#chose…
+sarah = player = laugh = T'inquiète,#c'est#pas#grave.@C'est#pas#comme#si#j'avais#été#une#inconnue.
 sarah = player = happy = À#part#ça,#ça#te#dit#qu'on#aille@au#travail#ensemble#?
