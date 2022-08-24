@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -38,11 +39,14 @@ public class ChoiceObject extends InteractiveObject {
 		if (player == null)
 			return;
 
+		player.setCanInterract(true);
 		player.setUserAllowedToMovePlayer(false);
 	}
 
 	private void updateChoice() {
 		getHandler().removeObject(this);
+		boolean playerCanInterract = Cutscene.isRunning() == false;
+		player.setCanInterract(playerCanInterract);
 		player.setUserAllowedToMovePlayer(true);
 	}
 

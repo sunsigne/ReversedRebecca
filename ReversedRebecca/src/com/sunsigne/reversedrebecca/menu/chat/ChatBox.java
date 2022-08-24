@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JOptionPane;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
@@ -123,7 +124,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 		if (world != null)
 			world.freeze(false);
 
-		new PlayerFinder().setPlayerCanInterract(true);
+		boolean playerCanInterract = Cutscene.isRunning() == false;
+		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
 		LAYER.PUZZLE.getHandler().clear();
 		new TalkedCondition().registerValue(value);
 	}
