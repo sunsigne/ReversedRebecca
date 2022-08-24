@@ -48,7 +48,7 @@ public class ChatContent implements Updatable {
 			if (sentence[sentenceNumber] != null) {
 				size = sentence[sentenceNumber].length();
 				if (size > NUM_OF_CHARACTERS)
-					size = NUM_OF_CHARACTERS;		
+					size = NUM_OF_CHARACTERS;
 				for (int i = 0; i < size; i++) {
 					letter[sentenceNumber][i] = sentence[sentenceNumber].charAt(i);
 				}
@@ -202,9 +202,12 @@ public class ChatContent implements Updatable {
 
 		int x0 = x + 90;
 
-		g.drawString(currentText[0], x0, y + 83);
+		String text0 = stop[0] ? sentence[0] : currentText[0];
+		String text1 = stop[1] ? sentence[1] : currentText[1];
+
+		g.drawString(text0, x0, y + 83);
 		if (sentence[1] != null)
-			g.drawString(currentText[1], x0, y + 158);
+			g.drawString(text1, x0, y + 158);
 	}
 
 	private String registeredKey = "[" + new ActionOneKey().getRegisteredKey() + "]";

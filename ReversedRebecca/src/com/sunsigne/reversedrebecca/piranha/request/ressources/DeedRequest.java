@@ -57,10 +57,12 @@ public class DeedRequest implements Request {
 		switch (type) {
 
 		case "GOOD":
+			System.out.println("GOOD_DEED : " + text);
 			deed.setGoodDeed(weight, text);
 			break;
 
 		case "BAD":
+			System.out.println("BAD_DEED : " + text);
 			deed.setBadDeed(weight, text);
 			break;
 		}
