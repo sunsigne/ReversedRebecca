@@ -19,10 +19,14 @@ public class PlayerBlockingAvoiderLaw implements PhysicLaw {
 
 		PlayerAvoider avoider = (PlayerAvoider) object;
 
-		if (avoider.getPlayerAvoiderType() != AVOIDERTYPE.AROUND)
-			avoider.setPlayerBlockingAvoider(false);
-		else
+		if (avoider.getPlayerAvoiderType() == AVOIDERTYPE.AROUND)
 			avoider.setPlayerBlockingAvoider(isPlayerAtCriticalDistance(avoider));
+		
+		else if (avoider.getPlayerAvoiderType() == AVOIDERTYPE.CUTSCENE)
+			avoider.setPlayerBlockingAvoider(new PlayerFinder().isPlayerCloserThan(avoider, 2));
+		
+		else
+			avoider.setPlayerBlockingAvoider(false);
 	}
 
 	private boolean isPlayerAtCriticalDistance(PlayerAvoider avoider) {

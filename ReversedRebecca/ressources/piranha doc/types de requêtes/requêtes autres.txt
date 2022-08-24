@@ -23,7 +23,7 @@ Note : dans la mesure où seuls les objets Piranha "vivants" ont un visuel, le T
 L'échelle est de 16 pixels pour une taille de 1 case (voir le Type de requête HITBOX pour mieux comprendre ce point s'il est flou pour vous).
 
 exemple :
-! -> DISPLAY_PLAYER_BED = DISPLAY -> 0, -2
+$ -> DISPLAY_SIT = DISPLAY -> 0, -1
 
 Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle.
 Comme vous le voyez, il est possible d'entrer des valeurs négatives pour ce Type de Requête.
@@ -50,6 +50,7 @@ Le Type de Requête CUTSCENE accepte 3 cibles :
 - STOP_WITH_DELAY, pour arrêter une scène cinématique après un court délais (1 secondes). On ne sait jamais, ça peut servir ¯\_(ツ)_/¯
 
 Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur.
+Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cutscene suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
 
 
 L'écriture conditionnelle est possible, quoique légèrement différente de d'habitude.

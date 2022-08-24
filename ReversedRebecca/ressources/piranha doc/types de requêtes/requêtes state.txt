@@ -115,21 +115,23 @@ La condition permet d'altérer à la fois le visuel d'un personnage et son compo
 - KO, le personnage a l'air KO et ne peut plus rien faire.
 
 
-////// PLAYER_AVOIRDER_TYPE //////
+////// PLAYER_AVOIDER_TYPE //////
 
 
 Attention ! Cette requête N'EST PAS un Type de Requête player (voir "requêtes player.txt"). Ces dernières ont le mot "PLAYER" en fin et non en début de nom.
-Le Type de Requête PLAYER_AVOIRDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
+Le Type de Requête PLAYER_AVOIDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
 
 exemple :
-TIME -> 0 = PLAYER_AVOIRDER_TYPE -> AROUND
-TIME -> 0 = GOTO -> PLAYER_AVOIRDER_TYPE:AROUND
+TIME -> 0 = PLAYER_AVOIDER_TYPE -> AROUND
+TIME -> 0 = GOTO -> PLAYER_AVOIDER_TYPE:AROUND
 
-Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement par défaut.
+Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement AROUND (qui est celui défini par défaut pour les personnages).
 
 
-Les types d'évitement sont au nombre de 5 et voici leurs fonctionnements :
-- AROUND est le seul type d'évitement où le joueur est compté comme un obstacle pour le pathfinder : le personnage va donc tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendre que ce dernier se décale. Dans le cas où une collision survient malgré tout, le personnage va "faire glisser" le joueur afin de forcer le passage. 
+Les types d'évitement sont au nombre de 6 et voici leurs fonctionnements :
+- AROUND est le seul type d'évitement avec CUTSCENE où le joueur est compté comme un obstacle pour le pathfinder : le personnage va donc tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendra que ce dernier se décale. Dans le cas où le personnage est "en plein mouvement entre deux cases" et qu'une collision survient avec le joueur, il fera "glisser" ce dernier afin de finir son mouvement jusqu'à une case entière.
+- CUTSCENE a le même fonctionnement que AROUND à ceci près que AROUND semble plus "naturelle" lors des phases de gameplay. Avec AROUND, les personnages ne tentent pas de se déplacer si le joueur est trop près, car ce dernier est la plupart du temps en mouvement et qu'un risque de collision est fort : ils "attendent d'avoir plus de place". Lors des cinématiques, le joueur est la plupart du temps statique et proche des personnages : ces derniers ont plus de liberté de mouvement et ne devraient pas attendre que le joueur soit loin pour se déplacer.
+Attention ! le player avoider ne change pas "tout seul" lors des cinématiques : il reste le même que celui qu'on a défini en dernier. Même chose à la sortie de ces dernières.
 
 Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
 - STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 

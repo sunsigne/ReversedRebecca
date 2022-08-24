@@ -1,3 +1,5 @@
+Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cutscene suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
+
 ////// MOVE //////
 
 
