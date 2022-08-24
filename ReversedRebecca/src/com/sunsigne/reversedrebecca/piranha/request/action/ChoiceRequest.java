@@ -55,6 +55,7 @@ public class ChoiceRequest implements Request {
 		// create the object
 
 		player.getHandler().addObject(choice);
+		choice.tick();
 	}
 
 }

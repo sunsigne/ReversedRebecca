@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.physic.finder.SightFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class SeeRequest extends ConditionalRequest {
@@ -36,7 +37,7 @@ public class SeeRequest extends ConditionalRequest {
 	public void doClassicAction(PiranhaObject object, String target) {
 
 	}
-	
+
 	@Override
 	protected String getConditionToCheck(PiranhaObject object) {
 		return object.getName();
@@ -46,8 +47,9 @@ public class SeeRequest extends ConditionalRequest {
 	protected boolean analyseCondition(PiranhaObject object, String target) {
 
 		String valueToCheck = String.valueOf(target.split("\\?")[0]);
+		Handler handler = object.getHandler();
 
-		for (Updatable tempUpdatable : object.getHandler().getList()) {
+		for (Updatable tempUpdatable : handler.getList()) {
 			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 

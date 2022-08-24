@@ -57,7 +57,7 @@ L'écriture conditionnelle est possible, quoique légèrement différente de d'h
 Lorsque cette dernière est utilisée, elle vérifie toujours si une cinématique est en cours; peu importe la cible écrite.
 
 ex : 
-TIME -> 150 = GOTO -> TRY_ARRIVING
+TIME -> 100 = GOTO -> TRY_ARRIVING
 $ -> TRY_ARRIVING = CUTSCENE -> RUNNING ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
 $ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
 

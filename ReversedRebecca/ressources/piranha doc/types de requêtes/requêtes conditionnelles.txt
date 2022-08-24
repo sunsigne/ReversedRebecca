@@ -2,7 +2,6 @@ Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que c
 
 ////// SEE //////
 
-
 Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
 Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas.
 
@@ -12,3 +11,20 @@ TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il dans le champ de vision de l'objet ?
 - si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
 - si non, définir le GOAL comme étant en x=37 y=42
+
+
+////// CHOOSING //////
+
+Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir type de reqête CHOICE dans "requêtes actions".
+Cela peut nottament avoir un intérêt lors du déclanchement de certain évênements.
+
+exemple :
+TIME -> 100 = GOTO -> TRY_ARRIVING
+$ -> TRY_ARRIVING = CHOOSING -> TRUE ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
+$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il en train d'effectuer un choix ?
+- si oui, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
+- si non, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
+Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque le joueur ne sera plus face à un choix (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+
