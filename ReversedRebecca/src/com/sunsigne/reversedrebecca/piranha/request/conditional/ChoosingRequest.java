@@ -46,7 +46,6 @@ public class ChoosingRequest extends ConditionalRequest {
 	protected boolean analyseCondition(PiranhaObject object, String target) {
 		boolean valueToCheck = Boolean.parseBoolean(String.valueOf(target.split("\\?")[0]));
 		boolean isPlayerChoosing = isPlayerChoosing(object);
-		System.out.println(valueToCheck == isPlayerChoosing);
 		return valueToCheck == isPlayerChoosing;
 	}
 
