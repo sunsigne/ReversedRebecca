@@ -49,12 +49,14 @@
 	
 	////////// LVL000 ////////////
 	
+	ne pas oublié de gerer le verre quand on ouvre la porte
+	ajouter un deed "mal recu" ou un truc du genre quand refus de crêpes + va-t-en
 	traduire "je t'en pris" pendant les crêpes par "my pleasure"
 	traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
 	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
-	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas auté sur l'occasion lorsqu'elle les a senti
-	ne pas oublier d'ajouter le calin "dû" par rappoort à la serviette
+	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas sauté sur l'occasion lorsqu'elle les a senti
+	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
 	
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
