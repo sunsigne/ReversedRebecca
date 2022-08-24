@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
+import javax.swing.JOptionPane;
+
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
@@ -14,6 +16,9 @@ import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
@@ -60,7 +65,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 
 		object.setMotionless();
 		new PlayerFinder().setPlayerCanInterract(false);
-		
+
 		// added as first element to render behind chat content object
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 		goToNextLine();
@@ -74,6 +79,9 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
+
+		if (line.split("=").length != 4)
+			stopApp();
 
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
@@ -98,6 +106,12 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 			if (tempObject.getName().equalsIgnoreCase(formated_living_name))
 				instruction.doAction(tempObject, formated_facing);
 		}
+	}
+
+	private void stopApp() {
+		new SoundTask().play(SOUNDTYPE.ERROR, "error");
+		JOptionPane.showMessageDialog(null, "An error has occurred : file \"" + value + "\" incorrect format or missing");
+		new Conductor().stopApp();
 	}
 
 	////////// CLOSE ////////////
