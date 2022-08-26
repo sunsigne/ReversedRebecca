@@ -5,7 +5,9 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.Volume;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -40,6 +42,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	private void refreshVolume() {
 		double newVolume = getScale(getX() - xmin);
 		volume.registerVolume(newVolume);
+		new SoundTask().changeMusicVol(VolumeMusic.getVolume());
 	}
 
 	////////// TICK ////////////
