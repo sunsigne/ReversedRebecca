@@ -51,6 +51,11 @@ public class SoundTask {
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
 
 			if (soundType == SOUNDTYPE.MUSIC) {
+				if (musicName == path)
+					return;
+
+				stopMusic();
+				musicName = path;
 				musicclip = AudioSystem.getClip();
 				musicclip.open(clip);
 				setVol(volume, musicclip, true);
@@ -104,6 +109,7 @@ public class SoundTask {
 
 	////////// MUSIC ////////////
 
+	private static String musicName;
 	private static Clip musicclip;
 
 	public void changeMusicVol(double newvolume) {
@@ -111,8 +117,11 @@ public class SoundTask {
 	}
 
 	public void stopMusic() {
-		if (musicclip != null)
-			musicclip.close();
+		if (musicclip == null)
+			return;
+
+		musicName = null;
+		musicclip.close();
 	}
 
 }

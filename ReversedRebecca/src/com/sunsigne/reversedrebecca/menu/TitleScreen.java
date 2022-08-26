@@ -18,6 +18,8 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
@@ -30,6 +32,7 @@ public class TitleScreen extends MenuScreen {
 
 	public TitleScreen() {
 		super();
+		new SoundTask().play(SOUNDTYPE.MUSIC, "title_screen");
 		createPlayButton();
 		createOptionsButton();
 		createQuitButton();
