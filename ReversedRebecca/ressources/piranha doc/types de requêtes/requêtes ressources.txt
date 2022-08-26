@@ -23,6 +23,20 @@ Officiellement, il en existe 2 :
 Note : l'expression "exclamation" a une animation supplémentaire par rapport aux autres, semblable à un "petit saut".
 
 
+////// MUSIC //////
+
+Le Type de Requête MUSIC permet d'arrêter la musique qui se joue actuellement (il peut y en avoir aucune) et de lancer la musique en cible.
+La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/music".
+
+Note : pour arrêter une musique sans en lancer une autre, il suffit d'écrire "NULL" pour cible.
+Note : si la musique cible est déjà celle qui est en train d'être jouer, au lieu de la relancer, cette requête n'aura aucun effet.
+
+exemple :
+TIME -> 0 = SOUND -> EXEMPLE_MUSIC
+TIME -> 0 = GOTO -> MUSIC:EXEMPLE_MUSIC
+
+Lorsque la Condition sera vérifiée, la musique "exemple_music.wav" sera jouée.
+
 ////// SOUND //////
 
 Le Type de Requête SOUND permet de jouer un son.
