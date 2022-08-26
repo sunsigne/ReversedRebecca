@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Reversed Rebecca"
-#define MyAppVersion "a.1.2"
+#define MyAppVersion "a.1.3.0"
 #define MyAppPublisher "Sunsigne"
-#define MyAppExeName "Reversed Rebecca - v.a.1.2.exe"
+#define MyAppExeName "Reversed Rebecca - v.a.1.3.0.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -23,7 +23,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\Users\casqu\git\ReversedRebecca\ReversedRebecca
-OutputBaseFilename=Reversed Rebecca - v.a.1.2 - installer
+OutputBaseFilename={#MyAppName} - v.{#MyAppVersion} - installer
 SetupIconFile=C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\icon.ico
 Compression=lzma
 SolidCompression=yes
