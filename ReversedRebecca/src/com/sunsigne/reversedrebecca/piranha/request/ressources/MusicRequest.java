@@ -35,7 +35,8 @@ public class MusicRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		if (target.equalsIgnoreCase("null"))
 			new SoundTask().stopMusic();
-		new SoundTask().play(SOUNDTYPE.MUSIC, target.toLowerCase());
+		else
+			new SoundTask().play(SOUNDTYPE.MUSIC, target.toLowerCase());
 	}
 
 }
