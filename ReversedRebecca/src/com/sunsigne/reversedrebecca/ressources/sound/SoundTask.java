@@ -54,12 +54,13 @@ public class SoundTask {
 				if (musicName == path)
 					return;
 
-				stopMusic();
 				musicName = path;
-				musicclip = AudioSystem.getClip();
-				musicclip.open(clip);
-				setVol(volume, musicclip, true);
-				musicclip.loop(Clip.LOOP_CONTINUOUSLY);
+				Clip musicClip = AudioSystem.getClip();
+				musicClip.open(clip);
+				musicClip.loop(Clip.LOOP_CONTINUOUSLY);
+				setVol(0, musicClip, false);
+
+				new MusicTransition(musicClip);
 			}
 
 			else {
@@ -94,7 +95,10 @@ public class SoundTask {
 	}
 
 	// volume between 0.0 and 2.0 (goes up to 4.0 because of VolumeMain)
-	private void setVol(double volume, Clip clip, boolean delay) {
+	protected void setVol(double volume, Clip clip, boolean delay) {
+		if (clip == null)
+			return;
+
 		try {
 			int pos = clip.getFramePosition();
 			FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
@@ -109,19 +113,14 @@ public class SoundTask {
 
 	////////// MUSIC ////////////
 
-	private static String musicName;
-	private static Clip musicclip;
+	protected static String musicName;
 
 	public void changeMusicVol(double newvolume) {
-		setVol(newvolume, musicclip, true);
+		setVol(newvolume, MusicTransition.currentClip, true);
 	}
 
 	public void stopMusic() {
-		if (musicclip == null)
-			return;
-
-		musicName = null;
-		musicclip.close();
+		new MusicTransition(null);
 	}
 
 }
