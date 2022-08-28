@@ -29,18 +29,24 @@ Le Type de Requête MUSIC permet d'arrêter la musique qui se joue actuellement 
 La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/music".
 
 Note : pour arrêter une musique sans en lancer une autre, il suffit d'écrire "NULL" pour cible.
-Note : si la musique cible est déjà celle qui est en train d'être jouer, au lieu de la relancer, cette requête n'aura aucun effet.
+Note : si la musique cible est déjà celle qui est en train d'être jouée, au lieu de la relancer, cette requête n'aura aucun effet.
 
 exemple :
-TIME -> 0 = SOUND -> EXEMPLE_MUSIC
+TIME -> 0 = MUSIC -> EXEMPLE_MUSIC
 TIME -> 0 = GOTO -> MUSIC:EXEMPLE_MUSIC
 
 Lorsque la Condition sera vérifiée, la musique "exemple_music.wav" sera jouée.
 
-Note : Passer d'aucune musique à une musique se fait d'un seul coup. Arrêter une musique se fait par une transition vers le silence. Passer d'une musique à une autre se par une transition.
+Note : Cette requête change progressivement la musique, aussi bien en arrivée qu'en sortie (càd vers le silence si MUSIC:NULL est appelé). Si l'on veut la changer "soudainement", il faut utiliser le Type de Requête MUSIC_WITHOUT_TRANSITION.
 
 Attention ! Si une instruction contenant ce type de requête est appelé pendant l'écran titre (par exemple, pour les niveaux se passant chez Rebecca), elle sera "enregistrée"* et ne s'effectuera que lorsque le joueur lancera le niveau : la musique durant l'écran titre reste toujours la même.
 *l'enregistrement s'effectue via une Instruction cachée dont le Type de Requête est WAITFOR, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres"). Il est d'ailleurs conseillé d'effectuer une telle Instruction dans le fichier SETUP.
+
+
+////// MUSIC_WITHOUT_TRANSITION //////
+
+Le Type de Requête MUSIC_WITHOUT_TRANSITION a exactement le même effet et est soumis aux mêmes règles que le permet Type de Requête MUSIC.
+La seule différence avec cette dernière est que MUSIC_WITHOUT_TRANSITION change la musique "d'un seul coup". (utile lors des changements soudain d'ambience).
 
 
 ////// SOUND //////

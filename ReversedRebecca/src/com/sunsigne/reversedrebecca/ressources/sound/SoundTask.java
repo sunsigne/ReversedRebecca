@@ -34,12 +34,12 @@ public class SoundTask {
 	////////// SOUND ////////////
 
 	public void play(SOUNDTYPE soundType, String path) {
-		play(soundType, getVolume(soundType), path);
+		play(soundType, getVolume(soundType), path, false);
 	}
 
 	// prefere the method right above this one : the user must decide the volume,
 	// not you (unless you know what you're doing)
-	public void play(SOUNDTYPE soundType, double volume, String path) {
+	public void play(SOUNDTYPE soundType, double volume, String path, boolean transition) {
 		if (path == null)
 			return;
 
@@ -60,7 +60,7 @@ public class SoundTask {
 				musicClip.loop(Clip.LOOP_CONTINUOUSLY);
 				setVol(0, musicClip, false);
 
-				new MusicTransition(musicClip);
+				new MusicTransition(musicClip, transition);
 			}
 
 			else {
@@ -119,8 +119,8 @@ public class SoundTask {
 		setVol(newvolume, MusicTransition.currentClip, true);
 	}
 
-	public void stopMusic() {
-		new MusicTransition(null);
+	public void stopMusic(boolean transition) {
+		new MusicTransition(null, transition);
 	}
 
 }

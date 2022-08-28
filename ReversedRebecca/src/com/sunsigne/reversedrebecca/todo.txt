@@ -49,6 +49,7 @@
 	
 	////////// LVL000 ////////////
 	
+	enlever le dialogue des pancakes une fois sarah arrivée (même si on l'a écounduit)
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	ajouter un deed "mal recu" ou un truc du genre quand refus de crêpes + va-t-en
 	traduire "je t'en pris" pendant les crêpes par "my pleasure"

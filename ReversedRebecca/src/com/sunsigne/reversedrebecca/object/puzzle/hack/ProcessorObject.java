@@ -68,7 +68,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 		}
 
 		double volume = VolumeSound.getVolume() / 6;
-		new SoundTask().play(SOUNDTYPE.SOUND, volume, path);
+		new SoundTask().play(SOUNDTYPE.SOUND, volume, path, false);
 	}
 
 	////////// TICK ////////////

@@ -10,10 +10,12 @@ public class MusicTransition implements Updatable, RenderFree {
 
 	protected static Clip fadingClip;
 	protected static Clip currentClip;
+	private boolean transition;
 
-	protected MusicTransition(Clip newClip) {
+	protected MusicTransition(Clip newClip, boolean transition) {
 		MusicTransition.fadingClip = currentClip;
 		MusicTransition.currentClip = newClip;
+		this.transition = transition;
 
 		LAYER.DEBUG.addObject(this);
 	}
@@ -25,14 +27,16 @@ public class MusicTransition implements Updatable, RenderFree {
 	private double growingVolume = 0;
 
 	private void fadeVolume() {
+		if(transition == false)
+			fadingVolume = 0;
+			
 		fadingVolume = fadingVolume - 0.015d;
 		if (fadingVolume < 0)
 			fadingVolume = 0;
 	}
 
 	private void growVolume() {
-		// if no music before, start music at normal volume
-		if (fadingClip == null)
+		if (transition == false)
 			growingVolume = MAX_VOLUME;
 
 		growingVolume = growingVolume + 0.03d;
