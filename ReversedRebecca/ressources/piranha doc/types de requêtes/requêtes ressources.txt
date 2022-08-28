@@ -37,6 +37,12 @@ TIME -> 0 = GOTO -> MUSIC:EXEMPLE_MUSIC
 
 Lorsque la Condition sera vérifiée, la musique "exemple_music.wav" sera jouée.
 
+Note : Passer d'aucune musique à une musique se fait d'un seul coup. Arrêter une musique se fait par une transition vers le silence. Passer d'une musique à une autre se par une transition.
+
+Attention ! Si une instruction contenant ce type de requête est appelé pendant l'écran titre (par exemple, pour les niveaux se passant chez Rebecca), elle sera "enregistrée"* et ne s'effectuera que lorsque le joueur lancera le niveau : la musique durant l'écran titre reste toujours la même.
+*l'enregistrement s'effectue via une Instruction cachée dont le Type de Requête est WAITFOR, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres"). Il est d'ailleurs conseillé d'effectuer une telle Instruction dans le fichier SETUP.
+
+
 ////// SOUND //////
 
 Le Type de Requête SOUND permet de jouer un son.
