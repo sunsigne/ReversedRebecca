@@ -15,8 +15,6 @@
 
 	////////// PIRA ////////////
 
-	creer une music request !!!!!
-
 	////////// DIFFICILE ////////////
 
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
@@ -97,7 +95,6 @@
 	sons pour le hack puzzle !
 	Buttons -> devrait jouer un son ?
 	Changer le volume de la musique devrait changer quand le joueurs est en plein dialogue
-	SountTask : le système de musique est très rudimentaire : son volume ne baisse pas lors des dialogues, elle ne "fade" pas pour s'arrêter, etc
 
 	////////// A CREER PLUS TARD ////////////
 	
