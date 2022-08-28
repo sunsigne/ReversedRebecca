@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Reversed Rebecca"
-#define MyAppVersion "a.1.3.2"
+#define MyAppVersion "a.1.4.10"
 #define MyAppPublisher "Sunsigne"
-#define MyAppExeName "Reversed Rebecca - v.a.1.3.2.exe"
+#define MyAppExeName "Reversed Rebecca.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
