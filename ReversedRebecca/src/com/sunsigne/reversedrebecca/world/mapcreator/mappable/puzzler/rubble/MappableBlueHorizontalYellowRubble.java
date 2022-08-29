@@ -6,13 +6,13 @@ import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappablePurpleRubble implements Mappable {
+public class MappableBlueHorizontalYellowRubble implements Mappable {
 
-	private MappablePurpleRubble() {
+	private MappableBlueHorizontalYellowRubble() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappablePurpleRubble();
+	private static Mappable mappable = new MappableBlueHorizontalYellowRubble();
 
 	@Override
 	public Mappable getMappable() {
@@ -23,12 +23,12 @@ public class MappablePurpleRubble implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new RubbleObject(LVL.PURPLE, x, y);
+		return new RubbleObject(LVL.YELLOW, true, x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 2, 255, 6 };
+		int[] rgb = { 2, 255, 3 };
 		return rgb;
 	}
 	

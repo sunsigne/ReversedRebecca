@@ -22,7 +22,11 @@ public interface Facing {
 			return DIRECTION.NULL;
 		}
 	}
-
+	
+	public static String getAxisName(boolean horizontal) {
+		return horizontal ? "horizontal" : "vertical";
+	}
+	
 	////////// DIRECTION ////////////
 
 	public enum DIRECTION {

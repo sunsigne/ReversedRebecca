@@ -46,8 +46,10 @@ Red = dépend du puzzler / depends on the puzzler
 Green = 255*
 Blue = voir niveau / see level
 
-*Si l'objet a un FACING, retirer 1 pour GAUCHE, 2 pour DROITE, 3 pour HAUT et 4 pour BAS.
-*If the object has a FACING, substract 1 for LEFT, 2 for RIGHT, 3 for UP et 4 for DOWN.
+*Si l'objet a un FACING, retirer 0 pour HORIZONTAL, 1 pour GAUCHE, 2 pour DROITE, 3 pour HAUT, 4 pour BAS et 5 pour VERTICAL.
+*Si l'objet a une couleur (indépendante du niveau), retirez 10 pour l'en changer (répétable).
+*If the object has a FACING, subtract 0 for HORIZONTAL, 1 for LEFT, 2 for RIGHT, 3 for UP et 4 for DOWN and 5 for VERTICAL.
+*If the object has a color (independent of the level), subtract 10 to change it (repeatable).
 
 Porte / Door -> 1
 Gravas / Rubble -> 2
@@ -56,7 +58,7 @@ Trou / Hole -> 4
 
 exemple : 
 Porte Null / Null Door : 1-255-0
-Gravas Jaune / Yellow Rubble : 2-255-3
+Gravas (Bleu et Horizontal) Jaune / Yellow (Blue and Horizontal) Rubble : 2-255-3
 Trou Droite Vert / Green Right Hole : 4-253-2
 
 ////// COFFRE / CHEST //////

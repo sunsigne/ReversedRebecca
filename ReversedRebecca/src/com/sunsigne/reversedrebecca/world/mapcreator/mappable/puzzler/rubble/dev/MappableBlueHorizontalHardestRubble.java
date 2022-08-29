@@ -1,18 +1,18 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.rubble;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.rubble.dev;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableYellowRubble implements Mappable {
+public class MappableBlueHorizontalHardestRubble implements Mappable {
 
-	private MappableYellowRubble() {
+	private MappableBlueHorizontalHardestRubble() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableYellowRubble();
+	private static Mappable mappable = new MappableBlueHorizontalHardestRubble();
 
 	@Override
 	public Mappable getMappable() {
@@ -23,13 +23,13 @@ public class MappableYellowRubble implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new RubbleObject(LVL.YELLOW, x, y);
+		return new RubbleObject(DEV_LVL.HARDEST, true, x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 2, 255, 3 };
+		int[] rgb = { 2, 255, 10 };
 		return rgb;
 	}
-	
+
 }
