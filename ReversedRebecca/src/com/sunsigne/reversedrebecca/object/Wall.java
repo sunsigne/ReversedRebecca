@@ -11,6 +11,22 @@ public class Wall extends GameObject implements TickFree, RenderFree, CollisionR
 		super(x, y);
 	}
 
+	////////// COLOR ////////////
+
+	public enum COLOR {
+		BLUE("blue"), GREEN("green");
+
+		private String name;
+
+		COLOR(String name) {
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+	}
+
 	////////// COLLISION ////////////
 
 	@Override

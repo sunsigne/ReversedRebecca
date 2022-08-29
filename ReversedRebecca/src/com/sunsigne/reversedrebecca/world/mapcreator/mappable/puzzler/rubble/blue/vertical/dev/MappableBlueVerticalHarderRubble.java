@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.rubble.blue.vertical.dev;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
@@ -23,7 +24,7 @@ public class MappableBlueVerticalHarderRubble implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new RubbleObject(DEV_LVL.HARDER, false, x, y);
+		return new RubbleObject(DEV_LVL.HARDER, COLOR.BLUE, false, x, y);
 	}
 
 	@Override

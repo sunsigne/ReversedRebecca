@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
@@ -10,23 +11,26 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class RubbleObject extends PuzzlerObject {
 
-	public RubbleObject(DEV_LVL devDifficulty, boolean horizontal, int x, int y) {
+	public RubbleObject(DEV_LVL devDifficulty, COLOR color, boolean horizontal, int x, int y) {
 		super(devDifficulty, x, y);
 		this.horizontal = horizontal;
+		this.color = color;
 	}
 
-	public RubbleObject(LVL difficulty, boolean horizontal, int x, int y) {
+	public RubbleObject(LVL difficulty, COLOR color, boolean horizontal, int x, int y) {
 		super(difficulty, x, y);
 		this.horizontal = horizontal;
+		this.color = color;
 	}
 
 	////////// NAME ////////////
 
-	private boolean horizontal;
+	private boolean horizontal;		
+	private COLOR color;
 	
 	@Override
 	public String getName() {
-		return "rubble"  + "_blue_" + Facing.getAxisName(horizontal);
+		return "rubble"  + "_" + color + "_" + Facing.getAxisName(horizontal);
 	}
 
 	////////// INTERACTION ////////////
