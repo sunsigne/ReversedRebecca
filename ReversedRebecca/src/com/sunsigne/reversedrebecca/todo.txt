@@ -34,10 +34,8 @@
 	////////// FACILE ////////////
 
 	la voix de sarah est actuellement une copie de la voix "error"
-	cyan puzzle vertical : aucune couleur de faite, pas de mappable, doc à update
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
-	ranger tous les types de murs verts (et puzzler)
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
