@@ -50,7 +50,6 @@ public class LivingAnimationHandler {
 	///// not orientable & not animated /////
 
 	private LivingAnimation bathAnimation;
-	private LivingAnimation relaxAnimation;
 	private LivingAnimation koAnimation;
 
 	private void loadAnimations() {
@@ -68,7 +67,6 @@ public class LivingAnimationHandler {
 		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
 
 		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
-		relaxAnimation = new LivingAnimation(living, "var/fixed/relax", -1, false);
 		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
 	}
 
@@ -87,7 +85,7 @@ public class LivingAnimationHandler {
 		case BED:
 			return bedAnimation;
 		case RELAX:
-			return relaxAnimation;
+			return koAnimation; // yes, that's the same animation
 		case SIT:
 			return sitAnimation;
 		case KO:
