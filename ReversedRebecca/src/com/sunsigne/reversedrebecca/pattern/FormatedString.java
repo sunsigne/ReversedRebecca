@@ -30,8 +30,8 @@ public class FormatedString {
 	}
 
 	public String getNoSpecialCharacter(String text) {
-		String no_accent = text.replace("é", "e").replace("è", "e").replace("ê", "e");
-		return no_accent.replace(",", ".");
+		String no_accent = text.replace("é", "e").replace("è", "e").replace("ê", "e");		
+		return no_accent.replace(",", ".").replace("ç", "c");
 	}
 
 	public String capitalize(String text) {
