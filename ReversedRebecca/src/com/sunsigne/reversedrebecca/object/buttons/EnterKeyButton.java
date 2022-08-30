@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
@@ -21,10 +22,11 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
-	public EnterKeyButton(int x, int y, Key key) {
+	public EnterKeyButton(int x, int y, Key key, boolean actionKey) {
 		super("...", x, y, 150, 80);
 
 		this.key = key;
+		this.actionKey = actionKey;
 	}
 
 	////////// TICK ////////////
@@ -42,6 +44,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 	private KeyboardController keyboardController = new KeyboardController(this);
 	private Key key;
+	private boolean actionKey;
 
 	@Override
 	public KeyboardController getKeyBoardController() {
@@ -63,7 +66,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 		// refresh Menu
 		preventDuplicated();
-		new ControlsScreen();
+		new ControlsScreen(actionKey);
 	}
 
 	private GameLimitedList<Key> createList() {
@@ -73,6 +76,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 		list.addObject(new DownKey());
 		list.addObject(new LeftKey());
 		list.addObject(new RightKey());
+		list.addObject(new DialogueKey());
 		list.addObject(new ActionOneKey());
 		list.addObject(new ActionTwoKey());
 		list.addObject(new ActionThreeKey());
