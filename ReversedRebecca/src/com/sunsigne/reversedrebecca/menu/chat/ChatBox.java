@@ -23,7 +23,7 @@ import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -111,7 +111,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 
 	private void stopApp() {
 		new SoundTask().play(SOUNDTYPE.ERROR, "error");
-		JOptionPane.showMessageDialog(null, "An error has occurred : file \"" + value + "\" incorrect format or missing");
+		JOptionPane.showMessageDialog(null,
+				"An error has occurred : file \"" + value + "\" incorrect format or missing");
 		new Conductor().stopApp();
 	}
 
@@ -144,7 +145,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		if (key == ActionOneKey.getKey()) {
+		if (key == DialogueKey.getKey()) {
 
 			if (content != null) {
 				if (!content.isFulldisplayed()) {

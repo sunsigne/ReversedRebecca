@@ -5,10 +5,12 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChatContent implements Updatable {
@@ -210,10 +212,12 @@ public class ChatContent implements Updatable {
 			g.drawString(text1, x0, y + 158);
 	}
 
-	private String registeredKey = "[" + new ActionOneKey().getRegisteredKey() + "]";
-
+	private String registeredKey = "[" + new DialogueKey().getRegisteredKey() + "]";
+	private Font fontKey = new Font("arial", 1, 45);
+	
 	private void drawActionKey(Graphics g) {
-		g.drawString(registeredKey, x + 1290, y + 180);
+		int[] rect = { x + 1350, y + 160, 0, 0 };
+		new TextDecoration().drawCenteredString(g, fontKey, registeredKey, Color.WHITE, DIRECTION.RIGHT, rect);
 	}
 
 }
