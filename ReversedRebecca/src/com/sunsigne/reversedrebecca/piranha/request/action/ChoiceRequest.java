@@ -4,7 +4,6 @@ import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -42,18 +41,12 @@ public class ChoiceRequest implements Request {
 		if (player == null)
 			return;
 
-		// determinate the position
-
-		int[] pos = new InFrontOfFinder().getPos(player);
-		ChoiceObject choice = new ChoiceObject("CHOICE", pos[0], pos[1]);
-
 		// determinate the choice
-
+		ChoiceObject choice = new ChoiceObject();
 		Request request = RequestList.getList().getObject(new TripleActionRequest());
 		request.doAction(choice, target);
 
 		// create the object
-
 		player.getHandler().addObject(choice);
 		choice.tick();
 	}

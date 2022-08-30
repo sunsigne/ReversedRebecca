@@ -5,11 +5,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
 
 public class ChoiceObject extends InteractiveObject {
 
-	public ChoiceObject(String name, int x, int y) {
-		super(name, x, y);
+	public ChoiceObject() {
+		super("CHOICE", 0, 0);
 
 		this.player = new PlayerFinder().getPlayer();
 	}
@@ -40,7 +41,10 @@ public class ChoiceObject extends InteractiveObject {
 			return;
 
 		player.setCanInterract(true);
-		player.setUserAllowedToMovePlayer(false);
+		player.setUserAllowedToMovePlayer(false);		
+		int[] pos = new InFrontOfFinder().getPos(player);
+		setX(pos[0]);
+		setY(pos[1]);
 	}
 
 	private void updateChoice() {
