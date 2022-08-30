@@ -9,7 +9,6 @@
 
 	////////// EN COURS ////////////
 
-	BUG 1 : bloqué sur "aller en haut"
 	BUG 2 : disparu après avoir mangé les crêpes avec sarah en allant en haut
 	BUG 3 : téléporté de l'autre côté de la table quand sarah en sort (si on lui rentre dedans)
 	BUG 4 : lorsque pathfinding non trouvé, gros lags

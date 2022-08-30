@@ -14,9 +14,11 @@ public class Player extends LivingObject {
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y);
+		UserKeyMovePlayer.refreshInstance();
 		setDisabled(true);
 		setUserAllowedToMovePlayer(true);
 		setCanInterract(true);
+
 		loadHealth();
 	}
 

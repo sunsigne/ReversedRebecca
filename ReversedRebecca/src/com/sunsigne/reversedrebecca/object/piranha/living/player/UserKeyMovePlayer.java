@@ -23,6 +23,10 @@ public class UserKeyMovePlayer {
 			instance = new UserKeyMovePlayer();
 		return instance;
 	}
+	
+	protected static void refreshInstance() {
+		instance = null;
+	}
 
 	////////// TICK ////////////
 
