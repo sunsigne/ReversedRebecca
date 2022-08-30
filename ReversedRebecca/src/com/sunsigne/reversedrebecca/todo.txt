@@ -9,8 +9,7 @@
 
 	////////// EN COURS ////////////
 
-	BUG 3 : téléporté de l'autre côté de la table quand sarah en sort (si on lui rentre dedans)
-	BUG 4 : lorsque pathfinding non trouvé, gros lags
+	BUG 5 : paralysé lors d'un choix (encore ...)
 
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)

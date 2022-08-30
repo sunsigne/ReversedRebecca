@@ -20,14 +20,19 @@ public class PathFinder implements Position {
 
 	public PathFinder(PathSearcher searcher, Position goal, boolean allow_complex_path) {
 
+		PathFinderOptimizer optimizer = new PathFinderOptimizer();		
+		if (optimizer.mustWait(searcher, allow_complex_path))
+			return;
+		
 		this.searcher = searcher;
 		this.goal = goal;
 
 		setX(searcher.getX());
 		setY(searcher.getY());
 		calculDistance();
-
 		path = findPath(allow_complex_path);
+		
+		optimizer.updateSearcher(path, searcher, allow_complex_path);
 	}
 
 	private PathSearcher searcher;
@@ -196,11 +201,13 @@ public class PathFinder implements Position {
 			GameList<GameObject> object_list;
 
 			if (horizontal)
-				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M, false);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M,
+						false);
 			else
-				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M, false);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M,
+						false);
 
-			for(GameObject tempObject : object_list.getList()) {
+			for (GameObject tempObject : object_list.getList()) {
 				if (tempObject instanceof CollisionReactor) {
 					CollisionReactor wall = (CollisionReactor) tempObject;
 					if (wall != goal) {
