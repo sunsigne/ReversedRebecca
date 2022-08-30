@@ -9,6 +9,11 @@
 
 	////////// EN COURS ////////////
 
+	BUG 1 : bloqué sur "aller en haut"
+	BUG 2 : disparu après avoir mangé les crêpes avec sarah en allant en haut
+	BUG 3 : téléporté de l'autre côté de la table quand sarah en sort (si on lui rentre dedans)
+	BUG 4 : lorsque pathfinding non trouvé, gros lags
+
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
 	la version affiché sur l'écran titre est dans la class MenuScreen
@@ -46,7 +51,6 @@
 	////////// LVL000 ////////////
 	
 	ne pas oublié de gerer le verre quand on ouvre la porte
-	ajouter un deed "mal recu" ou un truc du genre quand refus de crêpes + va-t-en
 	traduire "je t'en pris" pendant les crêpes par "my pleasure" + traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
 	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
