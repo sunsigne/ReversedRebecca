@@ -49,6 +49,7 @@ OBJ-19 = Chair
 OBJ-20 = Vertical Couch
 OBJ-21 = Couch Leaver
 OBJ-22 = Horizontal Couch
+OBJ-44 = Horizontal Couch Left Part
 OBJ-23 = Couch Leaver
 OBJ-24 = TV
 OBJ-25 = Bookshelf
@@ -79,3 +80,5 @@ OBJ-40 = Gaz Sound
 ///// ENTRANCE /////
 
 OBJ-41 = Special Exit Door
+OBJ-42 = /hidden
+OBJ-43 = /hidden

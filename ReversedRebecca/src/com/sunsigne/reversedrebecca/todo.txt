@@ -59,7 +59,7 @@
 	temps "méticuleux" à vérifier
 	petite animation de sortie avant la fin du lvl (+ dialogue ?)
 	
-	"regarder la TV tj pas fait" + les canapés ne peuvent pas être fouillé (clef) !
+	"regarder la TV tj pas fait"
 	bibliothèque à faire ?
 	enfermer sarah chez soi (toilettes ou sieste)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
