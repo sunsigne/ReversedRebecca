@@ -45,13 +45,13 @@
 	
 	////////// LVL000 ////////////
 	
-	enlever le dialogue des pancakes une fois sarah arrivée (même si on l'a écounduit)
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	ajouter un deed "mal recu" ou un truc du genre quand refus de crêpes + va-t-en
-	traduire "je t'en pris" pendant les crêpes par "my pleasure"
-	traduire "on fait comme ça" lors de l'acceptation par "this is the way"
+	traduire "je t'en pris" pendant les crêpes par "my pleasure" + traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
 	-> action : je suis prete, parler, empêcher d'aller aux toilettes, ?
+	
+	ajouter des actions si sarah est là : lui faire des pancakes, prposer à boire, etc.
 	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas sauté sur l'occasion lorsqu'elle les a senti
 	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
 	
