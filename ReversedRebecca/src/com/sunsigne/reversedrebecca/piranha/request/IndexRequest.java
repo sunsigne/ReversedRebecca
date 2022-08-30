@@ -9,6 +9,10 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public interface IndexRequest extends Request {
 
+	public default boolean playerExcluded() {
+		return true;
+	}
+	
 	public default GameObject getGameObject(PiranhaObject object, String target) {
 
 		// determinate the position
@@ -25,7 +29,7 @@ public interface IndexRequest extends Request {
 		int index = Integer.parseInt(target.split(":")[1]) - 1;
 
 		GameList<GameObject> object_list = Handler.getObjectsAtPos(object.getHandler(), goal.getX(), goal.getY(),
-				object.getSize());
+				object.getSize(), playerExcluded());
 
 		// if no object found 
 		

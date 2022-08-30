@@ -84,7 +84,7 @@ public class SightFinder implements Position {
 
 			// if a "wall" (blocking sight object) is on the way, return false
 			GameList<GameObject> wall_list = Handler.getObjectsAtPos(observer.getHandler(), getTilePos(getX()), getTilePos(getY()),
-					observer.getSize());
+					observer.getSize(), false);
 
 			for(GameObject tempWall : wall_list.getList()) {
 				if (tempWall instanceof CollisionReactor == false)

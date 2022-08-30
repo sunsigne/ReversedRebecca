@@ -196,9 +196,9 @@ public class PathFinder implements Position {
 			GameList<GameObject> object_list;
 
 			if (horizontal)
-				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + range, getY() + from, Size.M, false);
 			else
-				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M);
+				object_list = Handler.getObjectsAtPos(searcher.getHandler(), getX() + from, getY() + range, Size.M, false);
 
 			for(GameObject tempObject : object_list.getList()) {
 				if (tempObject instanceof CollisionReactor) {

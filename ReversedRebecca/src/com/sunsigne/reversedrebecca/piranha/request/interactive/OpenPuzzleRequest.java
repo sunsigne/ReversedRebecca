@@ -62,7 +62,7 @@ public class OpenPuzzleRequest implements IndexRequest {
 		// determinate the objects
 
 		GameList<GameObject> object_list = Handler.getObjectsAtPos(object.getHandler(), goal.getX(), goal.getY(),
-				object.getSize());
+				object.getSize(), true);
 
 		// if no object found
 

@@ -8,6 +8,7 @@ Ainsi, un objet n'est considéré sur "une case" que lorsqu'il est majoritaireme
 Il existe une exception à cette règle : Le Joueur.
 Afin d'avoir un pathfinding efficace, le Joueur est considéré sur une case même si un seul pixel touche cette dernière.
 Il est donc le seul objet qui peut se trouver sur plusieurs cases à la fois.
+Note : cela n'impacte pas l'index puisqu'une sécurité empêche de sélectionner ce dernier à partir d'un index (il ne faudra pas l'effacer par accident...)
 
 Lorsque plusieurs objets se trouve sur une même case, il faut faire intervenir la notion d'index pour les différencier.
 

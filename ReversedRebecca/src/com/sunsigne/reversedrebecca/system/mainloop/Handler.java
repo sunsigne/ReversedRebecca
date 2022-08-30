@@ -20,7 +20,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// USEFULL ////////////
 
-	public static GameList<GameObject> getObjectsAtPos(Handler layer, int x, int y, int size) {
+	public static GameList<GameObject> getObjectsAtPos(Handler layer, int x, int y, int size, boolean playerExluded) {
 
 		GameList<GameObject> object_list = new GameList<GameObject>(LISTTYPE.LINKED);
 		
@@ -38,6 +38,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			if (tempObject instanceof Player == false)
 				continue;
 
+			if(playerExluded)
+				continue;
+			
 			// player is counted "at pos" as soon as 1 pixel is on the tile
 			Player player = (Player) tempObject;
 			for (int xx = x - size + 1; xx < x + size - 1; xx++) {
