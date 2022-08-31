@@ -126,7 +126,6 @@ public class FileTask {
 						writer.write(alllines[i].split("=")[0] + "=" + text + System.getProperty("line.separator"));
 					else
 						writer.write(alllines[i].replace(" ", "#") + System.getProperty("line.separator"));
-
 				}
 			}
 
