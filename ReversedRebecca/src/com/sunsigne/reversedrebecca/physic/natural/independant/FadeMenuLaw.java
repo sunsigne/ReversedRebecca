@@ -25,6 +25,11 @@ public class FadeMenuLaw extends IndependantLaw {
 
 	public void setFading(boolean fading) {
 		this.fading = fading;
+
+		if (!fading) {
+			alpha = 0;
+			LAYER.MENU.getHandler().clear();
+		}
 	}
 
 	public boolean isFading() {
@@ -43,12 +48,8 @@ public class FadeMenuLaw extends IndependantLaw {
 
 		alpha = alpha - 0.015f;
 
-		if (alpha < 0) {
-			alpha = 0;
+		if (alpha < 0)
 			setFading(false);
-			LAYER.MENU.getHandler().clear();
-			return;
-		}
 	}
 
 	////////// RENDER ////////////
