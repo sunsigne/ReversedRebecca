@@ -40,7 +40,6 @@
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
-	créer un objet (genre Flag) pour finir un level ?
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
 	
