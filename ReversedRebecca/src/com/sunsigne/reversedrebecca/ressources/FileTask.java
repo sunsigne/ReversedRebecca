@@ -103,6 +103,7 @@ public class FileTask {
 	}
 
 	public void write(String valueToReplace, String path, String text) {
+		System.out.println(text);
 		File file = new File(Infos.USERDATA_PATH + path);
 		String fileContent = read(true, path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
@@ -122,9 +123,9 @@ public class FileTask {
 			else {
 				for (int i = 0; i < size; i++) {
 					if (alllines[i].split("=")[0].equalsIgnoreCase(valueToReplace))
-						writer.write(String.format(alllines[i].split("=")[0] + "=" + text + "%n"));
+						writer.write(alllines[i].split("=")[0] + "=" + text + System.getProperty("line.separator"));
 					else
-						writer.write(String.format(alllines[i] + "%n"));
+						writer.write(alllines[i].replace(" ", "#") + System.getProperty("line.separator"));
 
 				}
 			}
