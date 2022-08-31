@@ -16,6 +16,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class ControlsScreen extends SubMenuScreen {
 
@@ -41,6 +42,7 @@ public class ControlsScreen extends SubMenuScreen {
 	////////// SUB MENU ////////////
 
 	protected MenuScreen getPreviousMenu() {
+		World.get().destroy();
 		return new OptionsScreen();
 	}
 

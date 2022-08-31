@@ -1,12 +1,11 @@
 package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
-import java.awt.event.KeyEvent;
-
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.Snitch;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 
 public abstract class Action {
 
@@ -90,7 +89,7 @@ public abstract class Action {
 	////////// RENDER ////////////
 
 	public String getDisplayedText() {
-		return "[" + KeyEvent.getKeyText(getKeyEvent()) + "]" + " " + name.toUpperCase();
+		return "[" + new KeyAnalyzer(keyEvent).getKeyText() + "]" + " " + name.toUpperCase();
 	}
 
 	////////// KEYBOARD ////////////

@@ -17,7 +17,7 @@ public interface Key {
 		String key = new FileTask().read(userData, getValueToRead(), file);
 		int key_code = Integer.parseInt(key.split(":")[1]);
 		var analyzer = new KeyAnalyzer(key_code);
-		return analyzer.getKeyText();
+		return analyzer.getKeyText().replace("#", " ");
 	}
 
 	public default int loadKey() {
