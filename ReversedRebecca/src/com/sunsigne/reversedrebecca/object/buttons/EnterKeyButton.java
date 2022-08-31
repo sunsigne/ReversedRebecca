@@ -5,6 +5,8 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.menu.submenu.ControlsScreen;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
@@ -13,6 +15,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKe
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
@@ -53,11 +56,15 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		var analyzer = new KeyAnalyzer(e);
+		if (analyzer.isAllowedKey() == false) {
+			new SoundTask().play(SOUNDTYPE.ERROR, "error");
+			return;
+		}
 
 		// registering new key
-		String newKeyText = KeyEvent.getKeyText(e.getKeyCode());
-		int newKeyCode = e.getKeyCode();
-		key.registerKey(newKeyText, newKeyCode);
+		String keyText = analyzer.getKeyText();
+		key.registerKey(keyText, e.getKeyCode());
 		key.refreshKey();
 
 		// destroy objet
