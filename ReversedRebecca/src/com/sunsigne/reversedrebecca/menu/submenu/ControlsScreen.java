@@ -41,8 +41,21 @@ public class ControlsScreen extends SubMenuScreen {
 
 	////////// SUB MENU ////////////
 
+	private static boolean reloadRequired;
+
+	@Override
+	protected String getBackButtonText() {
+		if (reloadRequired)
+			return translate("ApplyButton");
+		else
+			return super.getBackButtonText();
+	}
+
 	protected MenuScreen getPreviousMenu() {
-		World.get().destroy();
+		if (reloadRequired)
+			World.get().destroy();
+
+		reloadRequired = false;
 		return new OptionsScreen();
 	}
 
@@ -193,10 +206,11 @@ public class ControlsScreen extends SubMenuScreen {
 		button.getHandler().removeObject(button);
 		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey);
 		LAYER.MENU.addObject(keyButton);
+		reloadRequired = true;
 	}
 
 	private boolean actionKeyScreen;
-	
+
 	private void displayControlsKeys() {
 		actionKeyScreen = false;
 		firstLine.setText(translate("Up"));
@@ -247,6 +261,7 @@ public class ControlsScreen extends SubMenuScreen {
 		new ActionOneKey().registerKey("E", 69);
 		new ActionTwoKey().registerKey("R", 82);
 		new ActionThreeKey().registerKey("F", 70);
+		reloadRequired = true;
 
 		new ControlsScreen(actionKeyScreen);
 	}

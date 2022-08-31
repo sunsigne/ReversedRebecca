@@ -50,6 +50,7 @@ ResetDetail2 = definitivement#perdue
 
 ///// CONTROLS /////
 
+ApplyButton = appliquer
 ControlsButton = controles
 Up = haut
 Down = bas
