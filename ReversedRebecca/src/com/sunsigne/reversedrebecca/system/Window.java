@@ -23,6 +23,7 @@ public class Window {
 		game.setMinimumSize(new Dimension(WIDHT, HEIGHT));
 		game.setMaximumSize(new Dimension(WIDHT, HEIGHT));
 		game.setPreferredSize(new Dimension(WIDHT, HEIGHT));
+		game.setFocusTraversalKeysEnabled(false); // allow TAB as valid key
 
 		ImageIcon icon = Infos.ICON;
 		JFrame frame = new JFrame(Infos.NAME);
@@ -37,6 +38,7 @@ public class Window {
 		frame.setUndecorated(true);
 		frame.setVisible(true);
 		frame.pack();
+		
 	}
 
 }
