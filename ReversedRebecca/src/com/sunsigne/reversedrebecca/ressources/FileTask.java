@@ -103,7 +103,6 @@ public class FileTask {
 	}
 
 	public void write(String valueToReplace, String path, String text) {
-		System.out.println(text);
 		File file = new File(Infos.USERDATA_PATH + path);
 		String fileContent = read(true, path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));

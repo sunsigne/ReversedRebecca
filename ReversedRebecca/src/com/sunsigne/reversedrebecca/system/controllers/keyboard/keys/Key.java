@@ -15,7 +15,9 @@ public interface Key {
 
 	public default String getRegisteredKey() {
 		String key = new FileTask().read(userData, getValueToRead(), file);
-		return key.split(":")[0];
+		int key_code = Integer.parseInt(key.split(":")[1]);
+		var analyzer = new KeyAnalyzer(key_code);
+		return analyzer.getKeyText();
 	}
 
 	public default int loadKey() {

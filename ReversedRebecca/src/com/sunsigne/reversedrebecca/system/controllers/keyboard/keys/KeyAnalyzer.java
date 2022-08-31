@@ -7,15 +7,14 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class KeyAnalyzer {
 
 	private String file = "key.csv";
-	private KeyEvent e;
+	private int key; 
 
-	public KeyAnalyzer(KeyEvent e) {
-		this.e = e;
+	public KeyAnalyzer(int key) {
+		this.key = key;
 	}
 
 	public boolean isAllowedKey() {
-		int key = e.getKeyCode();
-
+		
 		if (key == KeyEvent.VK_BACK_SPACE || key == KeyEvent.VK_TAB || key == KeyEvent.VK_ENTER)
 			return true;
 
@@ -45,7 +44,6 @@ public class KeyAnalyzer {
 	}
 
 	public String getKeyText() {
-		int key = e.getKeyCode();
 
 		String java_text = KeyEvent.getKeyText(key);
 
@@ -64,6 +62,9 @@ public class KeyAnalyzer {
 		if (key >= 106 && key <= 111 && key != 108) // NUMPAD -> * + - . /
 			return java_text.substring(java_text.length() - 1);
 
+		if (key == 65535)
+			return "...";
+		
 		return new Translatable().getTranslatedText(java_text, file);
 	}
 
