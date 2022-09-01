@@ -77,6 +77,9 @@ public class WaitforRequest implements Request {
 		case "TIMER":
 			return getTimeListener(generic, Integer.parseInt(condition));
 
+		case "FACING":
+			return getFacingListener(generic, object, condition);
+			
 		case "PLAYER_FUTHER_THAN":
 			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition), true);
 
@@ -106,7 +109,22 @@ public class WaitforRequest implements Request {
 				return generic;
 			}
 		};
+	}
 
+	private ConditionalListener getFacingListener(GenericListener generic, PiranhaObject object, String condition) {
+
+		return new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				return object.getFacing().getName().equalsIgnoreCase(condition);
+			}
+
+			@Override
+			public GenericListener getAction() {
+				return generic;
+			}
+		};
 	}
 
 	private ConditionalListener getPlayerDistanceListener(GenericListener generic, PiranhaObject object, int distance,
