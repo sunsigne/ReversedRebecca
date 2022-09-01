@@ -213,11 +213,13 @@ public class ChatContent implements Updatable {
 	}
 
 	private String registeredKey = "[" + new DialogueKey().getRegisteredKey() + "]";
-	private Font fontKey = new Font("arial", 1, 45);
+	private Font fontKey = new Font("arial", 1, 35);
 	
 	private void drawActionKey(Graphics g) {
-		int[] rect = { x + 1350, y + 160, 0, 0 };
-		new TextDecoration().drawCenteredString(g, fontKey, registeredKey, Color.WHITE, DIRECTION.RIGHT, rect);
+		int[] rect = { x + 1365, y + 180, 0, 0 };
+		Color color = new Color(255, 255, 255, 180);
+		fontKey = new Font("arial", 1, 35);
+		new TextDecoration().drawCenteredString(g, fontKey, registeredKey, color, DIRECTION.RIGHT, rect);
 	}
 
 }
