@@ -42,6 +42,11 @@ public class NullDoorObject extends DoorObject {
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingSight() {
+		return isOpened == false;
+	}
+	
+	@Override
 	public boolean isBlockingPath() {
 		return false;
 	}
