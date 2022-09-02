@@ -139,7 +139,9 @@ Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans 
 - PUSH_DIRECTION (il faut remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
 - PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
 
+Note: si le PLAYER_AVOIDER_TYPE est défini par défaut sur AROUND, il ne faut pas hésiter à le mettre sur STOP dans les espaces étroits afin de ne pas avoir des lags à cause du PathFinder qui ne trouve pas de chemin valide.
 
+Attention : détail très technique, mais qu'il faut connaître : les mappable PathPoint (voir fichier "mappable.txt dans le dossier "ressources/maps") considère le Joueur comme bloquant, même si le PLAYER_AVOIDER_TYPE de l'objet cherchant son chemin le considère comme passant. Ainsi, si vous vous retrouvez dans le cas où un personnage n'avance pas à cause du joueur alors qu'il devrait, c'est car sa trajectoire est plus complexe qu'un code : elle a donc était relayée à un PathPoint qui LUI bloque sur le joueur. La solution dans ce cas très précis est simplement de diviser le trajet en plusieurs étapes.
 
 
 Il existe tout un autre panel de Type de Requête state, pour les connaître, voir le fichier "requêtes player.txt"

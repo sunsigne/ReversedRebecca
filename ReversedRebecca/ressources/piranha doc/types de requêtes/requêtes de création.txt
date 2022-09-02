@@ -16,7 +16,7 @@ Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée a
 Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
 ATTENTION ! Ne confondait pas la coordonnée "z" avec la notion de LAYER (voir "index.txt"), il s'agit ici d'un comportement VISUEL de l'objet vis-à-vis des autres.
 
-Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Par défaut, définissez la comme BACK ou FRONT et tenez-vous-y :
+Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Lorsque c'est le cas, définissez la par défaut comme BACK ou FRONT et tenez-vous-y :
 L'avantage de choisir BACK par défaut : l'objet le plus récent aura toujours un index de 1.
 L'avantage de choisir FRONT par défaut : les objets auront tendance à garder le même index.
 Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pareil.
