@@ -75,7 +75,9 @@ Rappel, le mot "RUNNING" n'est pas analysé ici. L'écriture conditionnelle du T
 Le Type de Requête WAITFOR est à la fois l'un des plus utiles et le plus compliqué à utiliser correctement !
 L'écriture d'un WAITFOR, même si elle est différente, ressemble un peu à l'écriture Conditionnelle : il accepte une cible de "Condition", suivi d'une ou de plusieurs Cibles séparées par des virgules (comme pour GOTO), exécutée(s) lorsque la condition est vérifiée.
 Note : s'il est autorisé d'écrire plusieurs Cibles "requêtes" dans un WAITFOR, il est recommandé de n'en écrire qu'une seule par soucis de lisibilité.
+
 Attention ! Il ne peut y avoir qu'un seul waitfor actif en même temps par objet Piranha. En effet, le Type de Requête WAITFOR écrase les waitfor précédents ! Soyez donc précis lorsque vous voulez enchainer plusieurs actions : la seconde cible du waitfor est tout indiquée pour créer une balise GOTO qui exécutera votre action et lancera un autre waitfor.
+Attention ! Plusieurs Types de Requête lance des Instructions "cachés" dont le Type de Requête est WAITFOR (cela est systématiquement précisé). Prenez bien garde en les utilisant à ne pas écraser le waitfor précédent.
 
 exemple en situation :
 

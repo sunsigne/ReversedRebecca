@@ -9,7 +9,7 @@ exemple :
 TIME -> 0 = MOVE -> 33-35
 TIME -> 0 = GOTO -> MOVE:33-35
 
-Lorsque la Condition sera vérifiée, l'objet cherchera à sen rendre en x=33 y=35
+Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en x=33 y=35
 Note : la Cible "STOP" est autorisé. Le nouveau GOAL se l'objet sera alors défini comme null. Ni le NAME d'un objet, ni la Cible "Player" ne sont autorisés pour ce Type de Requête.
 
 
@@ -23,6 +23,22 @@ Même chose que pour MOVE, mais demande en plus à l'objet de se déplacer lente
 
 
 Même principe, mais rapidement.
+
+
+////// MOVE_BACKUP //////
+
+Le Type de Requête MOVE_BACKUP permet de définir deux GOAL à un objet. Le GOAL visé sera celui atteignable par la cible.
+
+exemple :
+TIME -> 0 = MOVE_BACKUP -> 14-7, 15-6
+
+Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en x=14 y=7.
+Aussitôt que ce chemin sera considéré comme "bloqué", l'objet cherchera à se rendre en x=15 y=6 à la place.
+Aussitôt que ce chemin sera considéré comme "bloqué", l'objet cherchera à se rendre de nouveau en x=14 y=7.
+Etc.
+
+Attention ! Afin de définir quel goal est atteignable, une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres").
+Note : vous pouvez en deviner leurs fonctionnements, aussi, nous ne les détaillerons pas, mais il existe également les Types de Requête SLOW_BACKUP et FAST_BACKUP.
 
 
 ////// TP //////
