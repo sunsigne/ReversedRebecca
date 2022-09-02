@@ -46,7 +46,6 @@ Note : vous pouvez en deviner leurs fonctionnements, aussi, nous ne les détaill
 
 ////// TP //////
 
-
 Le Type de Requête TP téléporte un objet aux coordonnées indiquées.
 
 exemple :
@@ -54,3 +53,14 @@ TIME -> 0 = TP -> 33-35
 TIME -> 0 = GOTO -> TP:33-35
 
 Lorsque la Condition sera vérifiée, l'objet se téléportera en x=33 y=35.
+
+
+////// PUSH //////
+
+Le Type de Requête PUSH pousse un objet dans la direction définie en Cible. Il faut bien entendu que cet objet puisse être poussé (donc être vivant).
+
+exemple :
+! -> PUSH_PLAYER_UP = PUSH -> UP
+! -> PUSH_PLAYER_UP = GOTO -> PUSH:UP
+
+Lorsque la Condition sera vérifiée, l'objet sera poussé vers le haut.
