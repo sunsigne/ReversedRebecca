@@ -1,4 +1,5 @@
 Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cutscene suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
+Note : la plupart des Types de Requête suivants font intervenir un PathFinder qui, malgré son optimisation, est assez gourmand en ressources... Ce dernier le devient énormémant lorsque aucune trajectoire n'est trouvée (par exemple, lorsque le joueur bloque le chemin). Il est du devoir du programmeur Piranha de faire en sorte que cela arrive le moins souvent possible en empêchant le calcul de trajectoire lorsque cela n'est pas désiré, par exemple en utilisant un "WAITFOR -> PLAYER_FUTHER_THAN:2 ?" (voir "requêtes autres"), en privilegiant le Type de Requête MOVE_BACKUP (voir plus bas) qui est moins gourmand si un chemin est trouvé, que MOVE lorsque aucun ne l'est, ou en changeant le PLAYER_AVOIDER_TYPE (voir "requêtes states") pour en choisir un qui ignore le joueur lors du calcul de la trajectoire.
 
 ////// MOVE //////
 
@@ -38,6 +39,8 @@ Aussitôt que ce chemin sera considéré comme "bloqué", l'objet cherchera à s
 Etc.
 
 Attention ! Afin de définir quel goal est atteignable, une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres").
+Note : pour des raisons que vous comprendrez, ce Type de Requête est deux fois plus gourmand en ressource que le Type de Requête MOVE. Il vaut mieux donc se servir de MOVE pour les grands trajets, puis affiner l'arrivée avec MOVE_BACKUP.
+
 Note : vous pouvez en deviner leurs fonctionnements, aussi, nous ne les détaillerons pas, mais il existe également les Types de Requête SLOW_BACKUP et FAST_BACKUP.
 
 
