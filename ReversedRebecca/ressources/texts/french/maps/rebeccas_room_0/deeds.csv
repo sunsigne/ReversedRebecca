@@ -2,6 +2,7 @@
 
 SHARE_PANCAKES = 1 % partager#ses#crêpes
 OFFER_PANCAKES = 1 % offrir#des#crêpes
+MAKE_AMENDS = 2 % faire#amende#honorable
 
 ///// BAD /////
 

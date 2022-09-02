@@ -76,3 +76,5 @@ WERE_TASTY = Key2 % elles#étaient#bonnes
 WE_SHARE = Key1 % on#partage
 YES_I_KNOW = Key2 % oui#je#sais
 I_AM_READY = Key3 % je#suis#prête
+APOLOGIZE = Key1 % s'excuser
+PUSH = Key2 % pousser
