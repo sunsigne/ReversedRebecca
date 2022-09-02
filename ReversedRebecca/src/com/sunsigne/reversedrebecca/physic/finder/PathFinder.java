@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -18,25 +17,27 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PathFinder implements Position {
 
-	public PathFinder(PathSearcher searcher, Position goal, boolean allow_complex_path) {
+	public PathFinder(PathSearcher searcher, Position goal, boolean allow_complex_path, boolean isPlayerBlockingPath) {
 
-		PathFinderOptimizer optimizer = new PathFinderOptimizer();		
+		PathFinderOptimizer optimizer = new PathFinderOptimizer();
 		if (optimizer.mustWait(searcher, allow_complex_path))
 			return;
-		
+
 		this.searcher = searcher;
 		this.goal = goal;
+		this.isPlayerBlockingPath = isPlayerBlockingPath;
 
 		setX(searcher.getX());
 		setY(searcher.getY());
 		calculDistance();
 		path = findPath(allow_complex_path);
-		
+
 		optimizer.updateSearcher(path, searcher, allow_complex_path);
 	}
 
 	private PathSearcher searcher;
 	private Position goal;
+	private boolean isPlayerBlockingPath;
 
 	// WARNING ! This is not a pos ! This is the DISTANCE between searcher and goal
 	private int tileX, tileY;
@@ -150,7 +151,7 @@ public class PathFinder implements Position {
 		if (searcher.getGoal() == null)
 			return path;
 
-		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true);
+		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true, isPlayerBlockingPath);
 		return pathFinder.getPath();
 	}
 
@@ -226,10 +227,7 @@ public class PathFinder implements Position {
 		}
 
 		if (player != null) {
-			if (searcher instanceof PlayerAvoider)
-				return ((PlayerAvoider) searcher).isPlayerBlockingAvoider();
-			else
-				return player.isBlockingPath();
+			return isPlayerBlockingPath;
 		}
 		return false;
 	}
@@ -244,7 +242,7 @@ public class PathFinder implements Position {
 				continue;
 
 			PathPointObject tempPassPoint = (PathPointObject) tempUpdatable;
-			PathFinder tempPathFinder = new PathFinder(tempPassPoint, searcher.getGoal(), false);
+			PathFinder tempPathFinder = new PathFinder(tempPassPoint, searcher.getGoal(), false, isPlayerBlockingPath);
 
 			if (tempPathFinder.getPath() != DIRECTION.NULL)
 				valid_path_point_list.addObject(tempPassPoint);
@@ -257,7 +255,7 @@ public class PathFinder implements Position {
 		// searching if any valid path point is reachable by seacher
 		for (PathPointObject tempPassPoint : valid_path_point_list.getList()) {
 
-			PathFinder tempPathFinder = new PathFinder(searcher, tempPassPoint, false);
+			PathFinder tempPathFinder = new PathFinder(searcher, tempPassPoint, false, isPlayerBlockingPath);
 
 			if (tempPathFinder.getPath() != DIRECTION.NULL)
 				return tempPathFinder.getPath();
@@ -285,7 +283,8 @@ public class PathFinder implements Position {
 
 			for (PathPointObject previousPassPoint : copy_list.getList()) {
 
-				PathFinder tempPathFinder = new PathFinder(tempPassPoint, previousPassPoint, false);
+				PathFinder tempPathFinder = new PathFinder(tempPassPoint, previousPassPoint, false,
+						isPlayerBlockingPath);
 
 				if (tempPathFinder.getPath() != DIRECTION.NULL) {
 					valid_path_point_list.addObject(tempPassPoint);

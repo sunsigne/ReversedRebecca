@@ -8,9 +8,6 @@
 
 	////////// EN COURS ////////////
 
-	camille dialogue : l'intervention de sarah n'est pas bien sécurisée
-	retirer le "je suis prête" quand sarah va aux toilettes
-
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
 	la version affiché sur l'écran titre est dans la class MenuScreen
