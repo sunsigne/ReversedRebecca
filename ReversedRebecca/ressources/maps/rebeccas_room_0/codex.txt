@@ -82,3 +82,4 @@ OBJ-40 = Gaz Sound
 OBJ-41 = Special Exit Door
 OBJ-42 = /hidden
 OBJ-43 = /hidden
+OBJ-45 = Sarah Toilet Path Checker
