@@ -13,6 +13,18 @@ public class PlayerFinder {
 		return PlayerFinderLaw.getPlayer();
 	}
 
+	public void roundToTilePlayer() {
+		Player player = getPlayer();
+
+		if (player == null)
+			return;
+		
+		int x = getTilePos(player.getX());
+		int y = getTilePos(player.getY());
+		player.setX(x);
+		player.setY(y);
+	}
+	
 	////////// CONTROL ////////////
 
 	public void setPlayerCanInterract(boolean canInterract) {

@@ -24,6 +24,7 @@ public class Cutscene implements Updatable {
 		running = true;
 		LAYER.GUI.addObject(this);
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
+		new PlayerFinder().roundToTilePlayer();
 	}
 
 	public void stop(boolean delay) {
