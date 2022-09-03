@@ -4,6 +4,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
+import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 
 public interface Pusher extends Stunnable, CollisionReactor {
 
@@ -20,7 +23,9 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	void setHurtWhenPushing(boolean hurtWhenPushing);
 
 	default int getPushingTime() {
-		return 10;
+		// thrice the basic time if world speed thrice faster
+		DebugMode fastMode = (DebugMode) PhysicList.getList().getObject(new FastWorldMode());
+		return fastMode.getState() ? 30 : 10; 
 	}
 
 	PUSHING_DIRECTION getPushingDirection();

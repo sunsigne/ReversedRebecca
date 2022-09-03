@@ -8,7 +8,8 @@
 
 	////////// EN COURS ////////////
 
-	les toilettes poussage pas fini ! (petit bug de pas poussé assez loin + bordel sans nom après)
+	bug étrange : j'ai collide sarah au moment où elle arrivé dans le coin supérieur droit de ma chambre, et elle n'a plus voulu bouger du tout... à étudier et corriger
+	les toilettes poussage pas fini ! (bordel sans nom après)
 
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
