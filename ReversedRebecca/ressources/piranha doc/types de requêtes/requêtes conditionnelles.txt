@@ -13,6 +13,22 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si non, définir le GOAL comme étant en x=37 y=42
 
 
+////// STUNNED //////
+
+Le Type de Requête STUNNED permet de savoir si un objet est considéré comme "stun" ou non (en utilisant son NAME comme Cible).
+Note : même s'il peut encore interagir, un objet est considéré comme "stun" si sa Condition lui interdit de bouger (voir CONDITION dans "requête state").
+
+exemple :
+TIME -> 0 = GOTO -> PARSE_READY_PLAYER_DISPUTE
+$ -> PARSE_READY_PLAYER_DISPUTE = STUNNED -> PLAYER ? WAITING_BEFORE_START_DISPUTE / START_DISPUTE
+$ -> WAITING_BEFORE_START_DISPUTE = WAITFOR -> TIMER:1 ? PARSE_READY_PLAYER_DISPUTE
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il stun ?
+- si oui, effectuer l'action WAITING_BEFORE_START_DISPUTE (qui est une balise comme pour GOTO)
+- si non, effectuer l'action START_DISPUTE (qui est une balise comme pour GOTO)
+Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action START_DISPUTE s'effectuera lorsque le joueur ne sera plus stun (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+
+
 ////// CHOOSING //////
 
 Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir type de reqête CHOICE dans "requêtes actions".
