@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
@@ -50,7 +51,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	@Override
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
-			if (detectorObject instanceof Player & !isMotionless())
+			if (detectorObject instanceof Player & !isMotionless() & !Cutscene.isRunning())
 				stopAndLookAtPlayer();
 		}
 
@@ -80,7 +81,8 @@ public class NPC extends LivingObject implements PlayerAvoider {
 				lookAtPlayer();
 				boolean playerFarEnough = new PlayerFinder().isPlayerFutherThan(object, 3);
 				boolean newGoalEtablished = getGoal() != registeredGoal;
-				return playerFarEnough | newGoalEtablished;
+				boolean cutscene =  Cutscene.isRunning();
+				return playerFarEnough | newGoalEtablished | cutscene;
 			}
 
 			GenericListener action = () -> {

@@ -64,3 +64,4 @@ exemple :
 ! -> PUSH_PLAYER_UP = GOTO -> PUSH:UP
 
 Lorsque la Condition sera vérifiée, l'objet sera poussé vers le haut.
+Attention ! Une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet de poussée, il faut donc faire attention non seulement à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres"), mais également à ne pas interrompre la poussée !

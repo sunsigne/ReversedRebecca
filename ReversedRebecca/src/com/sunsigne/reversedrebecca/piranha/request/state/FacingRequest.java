@@ -41,7 +41,6 @@ public class FacingRequest extends ConditionalRequest {
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {
 			if (tempFacing.getName().equalsIgnoreCase(target)) {
-				object.setMotionless();
 				object.setFacing(tempFacing);
 				return;
 			}
@@ -57,7 +56,6 @@ public class FacingRequest extends ConditionalRequest {
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
 				PathFinder pathFinder = new PathFinder(object, tempLiving, false, false);
-				object.setMotionless();
 				if (pathFinder.getPath() != DIRECTION.NULL)
 					object.setFacing(pathFinder.getPath());
 				return;
