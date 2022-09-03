@@ -1,21 +1,21 @@
 package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
-import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class ChoosingRequest extends ConditionalRequest {
+public class ReadyPlayerRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
-	public ChoosingRequest() {
+	public ReadyPlayerRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new ChoosingRequest();
+	private static Request request = new ReadyPlayerRequest();
 
 	@Override
 	public Request getRequest() {
@@ -24,7 +24,7 @@ public class ChoosingRequest extends ConditionalRequest {
 
 	@Override
 	public String getType() {
-		return "CHOOSING";
+		return "READY_PLAYER";
 	}
 
 	@Override
@@ -44,17 +44,23 @@ public class ChoosingRequest extends ConditionalRequest {
 
 	@Override
 	protected boolean analyseCondition(PiranhaObject object, String target) {
+
 		boolean valueToCheck = Boolean.parseBoolean(String.valueOf(target.split("\\?")[0]));
-		boolean isPlayerChoosing = isPlayerChoosing(object);
-		return valueToCheck == isPlayerChoosing;
+
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return !valueToCheck;
+
+		if (Cutscene.isRunning())
+			return !valueToCheck;
+
+		if (new ChoosingRequest().isPlayerChoosing(object))
+			return !valueToCheck;
+
+		if (player.isStunned())
+			return !valueToCheck;
+
+		return valueToCheck;
 	}
 
-	protected boolean isPlayerChoosing(PiranhaObject object) {
-		Handler handler = object.getHandler();
-		for (Updatable tempUpdatable : handler.getList()) {
-			if (tempUpdatable instanceof ChoiceObject)
-				return true;
-		}
-		return false;
-	}
 }

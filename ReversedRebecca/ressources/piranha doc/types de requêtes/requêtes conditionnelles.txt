@@ -44,3 +44,25 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si non, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
 Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque le joueur ne sera plus face à un choix (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
 
+
+////// READY_PLAYER //////
+
+Le Type de Requête READY_PLAYER permet de savoir si le joueur est "prêt" ou non. Ce Type de Requête est très utile avant de lancer une cinématique (voir CUTSCENE dans "requêtes autres").
+
+Le joueur est considéré comme "prêt" s'il respecte 4 conditions :
+- il est présent sur la carte.
+- il n'est pas "stun" (voir STUNNED au dessus)
+- il n'est pas en train d'effectuer un choix (voir CHOOSING au-dessus)
+- une cinématique n'est pas en cours.
+
+exemple :
+TIME -> 100 = GOTO -> TRY_ARRIVING
+$ -> TRY_ARRIVING = READY_PLAYER -> FALSE ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
+$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il "prêt" ?
+- si non, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
+- si oui, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
+Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque le joueur sera prêt (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+
+

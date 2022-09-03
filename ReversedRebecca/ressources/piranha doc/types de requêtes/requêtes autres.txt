@@ -33,6 +33,7 @@ Comme vous le voyez, il est possible d'entrer des valeurs négatives pour ce Typ
 
 
 Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.
+Note : il peut parfois être utile de vérifier si le Joueur respecte certaines conditions avant de lancer une cinématique (voir READY_PLAYER dans "requêtes conditionnelles").
 
 exemple :
 TIME -> 0 = CUTSCENE -> START
