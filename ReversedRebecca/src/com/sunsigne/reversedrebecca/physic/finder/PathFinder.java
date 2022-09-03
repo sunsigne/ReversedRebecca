@@ -96,7 +96,7 @@ public class PathFinder implements Position {
 	}
 
 	private boolean isGoalReached() {
-		return tileX == 0 & tileY == 0;
+		return goal.getX() - getX() == 0 & goal.getY() - getY() == 0;
 	}
 
 	private boolean isPathStraightHorizontal(boolean WOH) {

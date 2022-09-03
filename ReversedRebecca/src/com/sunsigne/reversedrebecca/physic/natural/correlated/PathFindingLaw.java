@@ -4,9 +4,10 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
+import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -26,6 +27,13 @@ public class PathFindingLaw implements PhysicLaw {
 		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
 			searcher.setPath(DIRECTION.NULL);
 			return;
+		}
+
+		// searcher is stunned
+		if (searcher instanceof Stunnable) {
+			Stunnable stunnable = (Stunnable) searcher;
+			if (stunnable.isStunned())
+				return;
 		}
 
 		// update only when centered on a tile ...
