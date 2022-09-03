@@ -8,8 +8,6 @@
 
 	////////// EN COURS ////////////
 
-	les toilettes poussage pas fini ! (non respect du WAITFOR)
-
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
 	la version affiché sur l'écran titre est dans la class MenuScreen

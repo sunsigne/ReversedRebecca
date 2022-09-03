@@ -64,4 +64,13 @@ exemple :
 ! -> PUSH_PLAYER_UP = GOTO -> PUSH:UP
 
 Lorsque la Condition sera vérifiée, l'objet sera poussé vers le haut.
-Attention ! Une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet de poussée, il faut donc faire attention non seulement à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres"), mais également à ne pas interrompre la poussée !
+
+Attention ! Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun"; et donc immobilisé pendant 1 frame. Il faut donc éviter d'appeler le Type de Requête WAITFOR juste après avoir utilisé le Type de Requête PUSH, qui serait instantanément annulé.
+
+Pour le dire plus simplement, n'écrivez pas :
+TIME -> 0 = GOTO -> PUSH:UP, WAITING_BEFORE_STUFF
+$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
+
+Écrivez à la place :
+TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
+$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF

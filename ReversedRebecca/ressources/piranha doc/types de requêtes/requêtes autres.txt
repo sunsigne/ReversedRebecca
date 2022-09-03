@@ -98,8 +98,18 @@ Le Type de Requête WAITFOR accepte les "Conditions" suivantes :
 - PLAYER_CLOSER_THAN:X, même principe qu'avec FUTHER, mais on mesure cette fois la proximité au lieu de l'éloignement.
 - PLAYER_FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), n'exécute la requête que lorsque le joueur regarde dans la direction choisie. (Note : il est possible de mettre un point d'exclamation "!" devant la direction pour obtenir l'inverse de la condition - càd toutes les directions sauf celle indiquée).
 
-Note : dans la mesure où un WAITFOR écrase les waitfor précédents, si l'on a besoin d'annuler un waitfor existant, il suffit d'écrire la requête "WAITFOR -> TIMER:0, NULL".
+Note : dans la mesure où un WAITFOR écrase les waitfor précédents, si l'on a besoin d'annuler un waitfor existant, il suffit d'écrire la requête "WAITFOR -> TIMER:0 ? NULL".
 
+
+Attention ! Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun"; et donc immobilisé pendant 1 frame. Il faut donc éviter d'appeler ce Type de Requête juste après avoir utilisé le Type de Requête PUSH par exemple (voir "requêtes move") qui serait instantanément annulé.
+
+Pour le dire plus simplement, n'écrivez pas :
+TIME -> 0 = GOTO -> PUSH:UP, WAITING_BEFORE_STUFF
+$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
+
+Écrivez à la place :
+TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
+$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
 
 ////// END_LVL //////
 
