@@ -24,8 +24,6 @@ public abstract class KeyPuzzle extends Puzzle {
 	public KeyPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
 		new GameCursor().setCursor(null);
-
-		createDeathWall();
 	}
 
 	////////// NAME ////////////
@@ -92,6 +90,14 @@ public abstract class KeyPuzzle extends Puzzle {
 		}
 	}
 
+	////////// OPEN ////////////
+	
+	@Override
+	protected void createWallBorder() {
+		super.createWallBorder();
+		createDeathWall();
+	}
+	
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
 			// Almost invisible in VisibleHitboxMode because added before Walls

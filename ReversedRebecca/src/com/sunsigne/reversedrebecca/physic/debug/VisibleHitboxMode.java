@@ -61,11 +61,11 @@ public class VisibleHitboxMode extends DebugMode {
 
 	///// useful /////
 
-	private void redHitboxRender(Graphics2D g2d, Rectangle bounds) {
+	private void renderHitbox(Graphics2D g2d, Color color, Rectangle bounds) {
 		g2d.setColor(Color.WHITE);
 		g2d.draw(bounds);
 
-		g2d.setColor(Color.RED);
+		g2d.setColor(color);
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.4f));
 		g2d.fill(bounds);
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
@@ -93,7 +93,9 @@ public class VisibleHitboxMode extends DebugMode {
 			return;
 
 		CollisionReactor reactorObject = (CollisionReactor) object;
-		redHitboxRender(g2d, reactorObject.getBounds());
+
+		Color color = reactorObject.isBlockingPath() ? Color.RED : Color.GREEN;
+		renderHitbox(g2d, color, reactorObject.getBounds());
 	}
 
 	///// mouse /////
@@ -109,7 +111,7 @@ public class VisibleHitboxMode extends DebugMode {
 		Rectangle bounds = new Rectangle(mouseObject.getRect()[0], mouseObject.getRect()[1], mouseObject.getRect()[2],
 				mouseObject.getRect()[3]);
 
-		redHitboxRender(g2d, bounds);
+		renderHitbox(g2d, Color.BLUE, bounds);
 	}
 
 }

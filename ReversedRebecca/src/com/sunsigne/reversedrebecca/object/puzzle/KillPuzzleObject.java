@@ -16,12 +16,12 @@ public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFr
 
 	@Override
 	public boolean isBlockingSight() {
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isBlockingPath() {
-		return false;
+		return true;
 	}
 
 	@Override
