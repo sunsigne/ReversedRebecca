@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.piranha.request.state;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -36,12 +38,17 @@ public class FacingRequest extends ConditionalRequest {
 	}
 
 	@Override
+	protected String getConditionToCheck(PiranhaObject object) {
+		return object.getFacing().getName();
+	}
+
+	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
 
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {
 			if (tempFacing.getName().equalsIgnoreCase(target)) {
-				object.setMotionless();
+				paralyseObject(object);
 				object.setFacing(tempFacing);
 				return;
 			}
@@ -57,16 +64,23 @@ public class FacingRequest extends ConditionalRequest {
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
 				PathFinder pathFinder = new PathFinder(object, tempLiving, false, false);
-				if (pathFinder.getPath() != DIRECTION.NULL)
+				if (pathFinder.getPath() != DIRECTION.NULL) {
+					paralyseObject(object);
 					object.setFacing(pathFinder.getPath());
+				}
 				return;
 			}
 		}
 	}
 
-	@Override
-	protected String getConditionToCheck(PiranhaObject object) {
-		return object.getFacing().getName();
+	private void paralyseObject(PiranhaObject object) {
+		if (object instanceof PlayerAvoider) {
+			PlayerAvoider avoider = (PlayerAvoider) object;
+			if (avoider.getPlayerAvoiderType() == AVOIDERTYPE.STOP)
+				return;
+		}
+
+		object.setMotionless();
 	}
 
 }
