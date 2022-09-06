@@ -9,6 +9,8 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class SoundTask {
 
@@ -116,11 +118,23 @@ public class SoundTask {
 	protected static String musicName;
 
 	public void changeMusicVol(double newvolume) {
+		MusicTransition.currentClip.getMicrosecondLength();
 		setVol(newvolume, MusicTransition.currentClip, true);
 	}
 
 	public void stopMusic(boolean transition) {
 		new MusicTransition(null, transition);
+	}
+
+	public void stopMusicAfterWholeLoop() {
+		double length = MusicTransition.currentClip.getMicrosecondLength();
+		int time = Game.SEC * (int) (length / 1000000);
+		System.out.println(time);
+		new GameTimer(time, () -> {
+			System.out.println("hello");
+			new MusicTransition(null, false);
+
+		});
 	}
 
 }
