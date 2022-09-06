@@ -53,6 +53,40 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		return object_list;
 	}
 
+	public static GameList<GameObject> getObjectsAtPos(Handler layer, int pos, boolean pos_is_y_axis, int size,
+			boolean playerExluded) {
+
+		GameList<GameObject> object_list = new GameList<GameObject>(LISTTYPE.LINKED);
+
+		for (Updatable tempUpdatable : layer.getList()) {
+
+			if (tempUpdatable instanceof GameObject == false)
+				continue;
+
+			GameObject tempObject = (GameObject) tempUpdatable;
+
+			int tempPos = pos_is_y_axis ? tempObject.getY() : tempObject.getX();
+			if (tempPos == pos) {
+				object_list.addObject(tempObject);
+				continue;
+			}
+
+			if (tempObject instanceof Player == false)
+				continue;
+
+			if (playerExluded)
+				continue;
+
+			// player is counted "at pos" as soon as 1 pixel is on the tile
+			Player player = (Player) tempObject;
+			for (int ppos = pos - size + 1; ppos < pos + size - 1; ppos++) {
+				if (tempPos == ppos)
+					object_list.addObject(player);
+			}
+		}
+		return object_list;
+	}
+
 	////////// MAP OR LIST ////////////
 
 	public void softRemoveObject(Updatable object) {
