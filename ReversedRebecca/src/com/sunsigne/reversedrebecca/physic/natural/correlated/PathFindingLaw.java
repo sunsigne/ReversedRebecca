@@ -52,7 +52,7 @@ public class PathFindingLaw implements PhysicLaw {
 			isPlayerBlockingPath = ((PlayerAvoider) searcher).isPlayerBlockingAvoider();
 
 		// search path
-		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true, isPlayerBlockingPath);
+		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true, isPlayerBlockingPath, null);
 		searcher.setPath(pathFinder.getPath());
 	}
 
