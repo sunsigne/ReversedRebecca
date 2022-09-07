@@ -6,8 +6,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
-import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -47,12 +45,8 @@ public class PathFindingLaw implements PhysicLaw {
 				return;
 		}
 
-		boolean isPlayerBlockingPath = new PlayerFinder().getPlayer().isBlockingPath();
-		if (searcher instanceof PlayerAvoider)
-			isPlayerBlockingPath = ((PlayerAvoider) searcher).isPlayerBlockingAvoider();
-
 		// search path
-		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true, isPlayerBlockingPath, null);
+		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal());
 		searcher.setPath(pathFinder.getPath());
 	}
 

@@ -1,8 +1,9 @@
 package com.sunsigne.reversedrebecca.physic.finder;
 
+import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
-import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -11,19 +12,26 @@ public class PathFinderOptimizer implements Updatable, RenderFree {
 
 	////////// MAP OR LIST ////////////
 
-	private static GameLimitedList<PathSearcher> list = new GameLimitedList<>(LISTTYPE.LINKED);
+	private static GameList<PathSearcher> list = new GameList<>(LISTTYPE.LINKED);
 
-	////////// USEFUL ////////////
+	////////// OPTIMIZER ////////////
 
-	public boolean mustWait(PathSearcher searcher, boolean allow_complex_path) {
-		return list.containsObject(searcher) && allow_complex_path;
+	private boolean canBeOptimized(PathSearcher searcher) {
+		return searcher instanceof PathPointObject == false;
 	}
 
-	public void updateSearcher(DIRECTION path, PathSearcher searcher, boolean allow_complex_path) {
-		if (path != DIRECTION.NULL)
+	protected boolean mustWait(PathSearcher searcher) {
+		if (canBeOptimized(searcher))
+			return list.containsObject(searcher);
+		else
+			return false;
+	}
+
+	protected void updateSearcher(PathSearcher searcher, DIRECTION path) {
+		if (canBeOptimized(searcher) == false)
 			return;
 
-		if (allow_complex_path == false)
+		if (path != DIRECTION.NULL)
 			return;
 
 		list.addObject(searcher);

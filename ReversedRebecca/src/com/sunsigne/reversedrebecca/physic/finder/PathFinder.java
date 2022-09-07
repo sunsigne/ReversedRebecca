@@ -6,10 +6,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GoalCondition;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -17,17 +19,23 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class PathFinder implements Position {
 
-	public PathFinder(PathSearcher searcher, Position goal, boolean allow_complex_path, boolean isPlayerBlockingPath, Handler optional_handler) {
+	public PathFinder(PathSearcher searcher, Position goal) {
+		this(searcher, searcher, goal, true, null);
+	}
+
+	private PathFinder(PathSearcher initial_searcher, PathSearcher searcher, Position goal, boolean allow_complex_path,
+			Handler handler) {
 
 		PathFinderOptimizer optimizer = new PathFinderOptimizer();
-		if (optimizer.mustWait(searcher, allow_complex_path))
+		if (optimizer.mustWait(searcher))
 			return;
 
+		this.initial_searcher = initial_searcher;
+		this.searcher = searcher;
 		this.searcher = searcher;
 		this.goal = goal;
-		this.isPlayerBlockingPath = isPlayerBlockingPath;
-		this.handler = optional_handler;
-		if(handler == null)
+		this.handler = handler;
+		if (handler == null)
 			this.handler = searcher.getHandler();
 
 		setX(searcher.getX());
@@ -35,12 +43,12 @@ public class PathFinder implements Position {
 		calculDistance();
 		path = findPath(allow_complex_path);
 
-		optimizer.updateSearcher(path, searcher, allow_complex_path);
+		optimizer.updateSearcher(searcher, path);
 	}
 
+	private PathSearcher initial_searcher;
 	private PathSearcher searcher;
 	private Position goal;
-	private boolean isPlayerBlockingPath;
 	private Handler handler;
 
 	// WARNING ! This is not a pos ! This is the DISTANCE between searcher and goal
@@ -132,7 +140,6 @@ public class PathFinder implements Position {
 		if (isPathStraightHorizontal(WOH) | isPathStraightVertical(WOV))
 			return getStraightPath();
 
-		
 		// single curved path
 		boolean WGH = wallOnTheWay(tileY, true); // wall from gap to goal moving horizontally
 		boolean WGV = wallOnTheWay(tileX, false); // wall from gap to goal moving vertically
@@ -146,7 +153,7 @@ public class PathFinder implements Position {
 			tileX = 0;
 			return getStraightPath();
 		}
-		
+
 		// complexe path
 		if (!allow_complex_path)
 			return DIRECTION.NULL;
@@ -161,7 +168,7 @@ public class PathFinder implements Position {
 		if (searcher.getGoal() == null)
 			return path;
 
-		PathFinder pathFinder = new PathFinder(searcher, searcher.getGoal(), true, isPlayerBlockingPath, handler);
+		PathFinder pathFinder = new PathFinder(initial_searcher, searcher, searcher.getGoal(), true, handler);
 		return pathFinder.getPath();
 	}
 
@@ -189,12 +196,8 @@ public class PathFinder implements Position {
 
 		// get all objects along the searched axis
 		int pos = horizontal ? getY() : getX();
-		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, pos + from, horizontal,
-				Size.M, false);
-
-		// remove the searcher from this list (ofc)
-		if (searcher instanceof GameObject)
-			object_list.removeObject((GameObject) searcher);
+		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, pos + from, horizontal, Size.M, false);
+		removeSearcherAndGoalFromList(object_list);
 
 		// establish the first and last element encountered
 		Position firstElement = range > 0 ? this : goal;
@@ -207,15 +210,15 @@ public class PathFinder implements Position {
 				continue;
 
 			// object is outside the trajectory
-			boolean beforeElements = horizontal ? tempObject.getX() < firstElement.getX()
-					: tempObject.getY() < firstElement.getY();
-			boolean afterElements = horizontal ? tempObject.getX() > secondElement.getX()
-					: tempObject.getY() > secondElement.getY();
+			boolean beforeElements = horizontal ? tempObject.getX() + tempObject.getSize() - 1 < firstElement.getX()
+					: tempObject.getY() + tempObject.getSize() - 1 < firstElement.getY();
+			boolean afterElements = horizontal ? tempObject.getX() - tempObject.getSize() + 1 > secondElement.getX()
+					: tempObject.getY() - tempObject.getSize() + 1 > secondElement.getY();
 
 			if (beforeElements | afterElements)
 				continue;
 
-				// object is playet
+			// object is playet
 			if (tempObject instanceof Player) {
 				player = (Player) tempObject;
 				continue; // player is a specific case;
@@ -223,15 +226,32 @@ public class PathFinder implements Position {
 
 			CollisionReactor wall = (CollisionReactor) tempObject;
 
-				//object" is blocking path
+			// object" is blocking path
 			if (wall.isBlockingPath())
 				return true;
 		}
 
 		if (player != null) {
-			return isPlayerBlockingPath;
+			return isPlayerBlockingPath();
 		}
 		return false;
+	}
+
+	private void removeSearcherAndGoalFromList(GameList<GameObject> object_list) {
+		if (initial_searcher instanceof GameObject)
+			object_list.removeObject((GameObject) initial_searcher);
+
+		if (searcher instanceof GameObject)
+			object_list.removeObject((GameObject) searcher);
+
+		if (goal instanceof GameObject)
+			object_list.removeObject((GameObject) goal);
+	}
+
+	private boolean isPlayerBlockingPath() {
+		if (initial_searcher instanceof PlayerAvoider)
+			return ((PlayerAvoider) initial_searcher).isPlayerBlockingAvoider();
+		return new PlayerFinder().getPlayer().isBlockingPath();
 	}
 
 	private DIRECTION findComplexePath() {
@@ -267,7 +287,8 @@ public class PathFinder implements Position {
 				continue;
 
 			PathPointObject tempPassPoint = (PathPointObject) tempUpdatable;
-			PathFinder tempPathFinder = new PathFinder(tempPassPoint, searcher.getGoal(), false, isPlayerBlockingPath, handler);
+			PathFinder tempPathFinder = new PathFinder(initial_searcher, tempPassPoint, searcher.getGoal(), false,
+					handler);
 
 			if (tempPathFinder.getPath() != DIRECTION.NULL)
 				valid_path_point_list.addObject(tempPassPoint);
@@ -280,7 +301,7 @@ public class PathFinder implements Position {
 		// searching if any valid path point is reachable by seacher
 		for (PathPointObject tempPassPoint : valid_path_point_list.getList()) {
 
-			PathFinder tempPathFinder = new PathFinder(searcher, tempPassPoint, false, isPlayerBlockingPath, handler);
+			PathFinder tempPathFinder = new PathFinder(initial_searcher, searcher, tempPassPoint, false, handler);
 
 			if (tempPathFinder.getPath() != DIRECTION.NULL)
 				return tempPathFinder.getPath();
@@ -308,13 +329,13 @@ public class PathFinder implements Position {
 
 			for (PathPointObject previousPassPoint : copy_list.getList()) {
 
-				PathFinder tempPathFinder = new PathFinder(tempPassPoint, previousPassPoint, false,
-						isPlayerBlockingPath, handler);
+				PathFinder tempPathFinder = new PathFinder(initial_searcher, tempPassPoint, previousPassPoint, false,
+						handler);
 
 				if (tempPathFinder.getPath() != DIRECTION.NULL) {
 					valid_path_point_list.addObject(tempPassPoint);
 					there_are_more_paths = true;
-					continue;
+					break;
 				}
 			}
 		}
