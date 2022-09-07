@@ -32,7 +32,6 @@ public class PathFinder implements Position {
 
 		this.initial_searcher = initial_searcher;
 		this.searcher = searcher;
-		this.searcher = searcher;
 		this.goal = goal;
 		this.handler = handler;
 		if (handler == null)
@@ -287,8 +286,7 @@ public class PathFinder implements Position {
 				continue;
 
 			PathPointObject tempPassPoint = (PathPointObject) tempUpdatable;
-			PathFinder tempPathFinder = new PathFinder(initial_searcher, tempPassPoint, searcher.getGoal(), false,
-					handler);
+			PathFinder tempPathFinder = new PathFinder(initial_searcher, tempPassPoint, goal, false, handler);
 
 			if (tempPathFinder.getPath() != DIRECTION.NULL)
 				valid_path_point_list.addObject(tempPassPoint);

@@ -57,6 +57,11 @@ public class ChoiceObject extends InteractiveObject {
 	////////// COLLISION ////////////
 
 	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+	
+	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 
 	}
