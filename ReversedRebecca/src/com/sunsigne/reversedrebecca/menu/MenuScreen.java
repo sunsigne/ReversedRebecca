@@ -8,7 +8,9 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -84,17 +86,13 @@ public class MenuScreen implements Updatable, TickFree {
 
 	private void drawTitle(Graphics g) {
 		g.drawImage(title_img, 525, 80, 856, 380, null);
-		Font font = new Font("arial", 1, 30);
-		g.setFont(font);
-		g.setColor(Color.white);
-		g.drawString(Infos.VERSION, 855, 460);
 	}
-	
+
 	private void drawVersion(Graphics g) {
-		Font font = new Font("arial", 1, 30);
-		g.setFont(font);
-		g.setColor(Color.white);
-		g.drawString(Infos.VERSION, 855, 460);
+		var font = new Font("arial", 1, 30);
+		int[] rect = new int[] { 940, 460, 0, 0 };
+		
+		new TextDecoration().drawOutlinesString(g, font, Infos.VERSION, DIRECTION.NULL, rect);
 	}
 
 }
