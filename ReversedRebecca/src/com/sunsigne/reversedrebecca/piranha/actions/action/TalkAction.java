@@ -36,7 +36,7 @@ public class TalkAction extends PiranhaObjectAction {
 	public GenericListener getListener(PiranhaObject object, String target) {
 		GenericListener listener = () -> {
 			String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
-			path = path.concat(target + ".csv");
+			path = path.concat(target + ".txt");
 			String dialogue = new Translatable().getTranslatedText(null, path);
 
 			ChatBox chatbox = new ChatBox(object, target, dialogue);
