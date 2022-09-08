@@ -17,7 +17,7 @@ public interface SpeedVariator extends Velocity {
 		case FAST:
 			return getSize() / 8;
 		case PLAYER_SPEED:
-			return getSize() / 10;
+			return getSize() / 12;
 		case SWIFT:
 			return getSize() / 4;
 		}
