@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class HoleObject extends PuzzlerObject implements Facing {
@@ -47,7 +48,7 @@ public class HoleObject extends PuzzlerObject implements Facing {
 	}
 
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("HoleLoose", getFile());
+		String noActionText = new Translatable().getTranslatedText("HoleLoose", FilePath.ACTION);
 		Action digAction = new DigAction(this) {
 			public PuzzlerObject getNullObject(int x, int y) {
 				return getNullHole(x, y);

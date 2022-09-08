@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.AffectingRequest;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -19,7 +20,7 @@ import com.sunsigne.reversedrebecca.world.World;
 public class ActionAnalyzer {
 
 	private String getFile(PiranhaObject object) {
-		return "maps/" + World.get().getMapName() + "/" + object.getFile();
+		return "maps/" + World.get().getMapName() + "/" + FilePath.ACTION;
 	}
 
 	public Action getAction(PiranhaObject object, String actionInstruction) {

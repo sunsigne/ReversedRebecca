@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.actions;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public abstract class PiranhaObjectAction extends Action {
@@ -14,7 +15,7 @@ public abstract class PiranhaObjectAction extends Action {
 	public abstract PiranhaObjectAction getAction();
 
 	public void create(PiranhaObject object, String target) {
-		setName(new Translatable().getTranslatedText(getName(), object.getFile()));
+		setName(new Translatable().getTranslatedText(getName(), FilePath.ACTION));
 		setListener(getListener(object, target));
 		setKeyEvent(getRegisteredKeyEvent());
 	}

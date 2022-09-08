@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public abstract class OpenPuzzleAction extends Action {
@@ -14,7 +15,7 @@ public abstract class OpenPuzzleAction extends Action {
 	public OpenPuzzleAction(PuzzlerObject puzzlerObject) {
 		super(puzzlerObject, null, null, null, 0);
 
-		setName(new Translatable().getTranslatedText(getName(), puzzlerObject.getFile()));
+		setName(new Translatable().getTranslatedText(getName(), FilePath.ACTION));
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
 			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(),

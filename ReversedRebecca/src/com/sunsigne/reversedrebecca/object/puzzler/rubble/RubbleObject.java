@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class RubbleObject extends PuzzlerObject {
@@ -43,7 +44,7 @@ public class RubbleObject extends PuzzlerObject {
 	}
 
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("RubbleBlocked", getFile());
+		String noActionText = new Translatable().getTranslatedText("RubbleBlocked", FilePath.ACTION);
 		Action explodeAction = new ExplodeRubbleAction(this);
 		tripleAction = new TripleAction(noActionText, explodeAction, null, null);
 	}

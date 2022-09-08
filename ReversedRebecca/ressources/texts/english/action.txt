@@ -1,0 +1,23 @@
+///// CHEST /////
+
+Open = open
+
+///// DOOR /////
+
+DoorLocked = locked
+DoorUnlock = unlock
+
+///// RUBBLE /////
+
+RubbleBlocked = blocked
+RubbleExplode = explode
+
+///// COMPUTER /////
+
+ComputerProtected = protected
+ComputerHack = hack
+
+///// HOLE /////
+
+HoleLoose = soft#soil
+HoleDig = dig

@@ -16,10 +16,6 @@ public interface Interactive extends Velocity, KeyboardEvent {
 
 	////////// INTERACTIVE ////////////
 
-	public default String getFile() {
-		return "actions.csv";
-	}
-
 	public TripleAction getTripleAction();
 
 	public boolean isDisabled();

@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.computer;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ComputerObject extends PuzzlerObject {
@@ -32,7 +33,7 @@ public class ComputerObject extends PuzzlerObject {
 	}
 
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("ComputerProtected", getFile());
+		String noActionText = new Translatable().getTranslatedText("ComputerProtected", FilePath.ACTION);
 		Action hackingAction = new HackingAction(this);
 		tripleAction = new TripleAction(noActionText, hackingAction, null, null);
 	}
