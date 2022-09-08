@@ -23,8 +23,6 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
 
-	protected static String file = "puzzle.csv";
-	
 	public ProcessorObject(Puzzle puzzle, String text) {
 		super(puzzle, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2, 5 * Size.XS,
 				5 * Size.XS);

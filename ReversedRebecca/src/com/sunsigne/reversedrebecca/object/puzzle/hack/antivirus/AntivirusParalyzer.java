@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
@@ -8,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 public class AntivirusParalyzer extends AntivirusObject {
 
 	public AntivirusParalyzer(Puzzle puzzle) {
-		super(puzzle, new Translatable().getTranslatedText("AntivirusParalyzer", file));
+		super(puzzle, new Translatable().getTranslatedText("AntivirusParalyzer", FilePath.PUZZLE));
 	}
 
 	////////// NAME ////////////

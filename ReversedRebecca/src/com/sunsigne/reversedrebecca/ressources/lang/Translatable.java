@@ -13,15 +13,15 @@ public class Translatable {
 
 	private boolean userData = false;
 	
-	public String getTranslatedText(String valueToRead, String path) {
+	public String getTranslatedText(String valueToRead, String filePath) {
 		
 		// configured language
-		String text = new FileTask().read(userData, valueToRead, "texts/" + Language.getInstance().getLang() + "/" + path);
+		String text = new FileTask().read(userData, valueToRead, "texts/" + Language.getInstance().getLang() + "/" + filePath);
 		if (text.isEmpty() == false)
 			return text;
 
 		// if not available, search for another valid languague
-		text = searchAvailableLanguage(valueToRead, path);
+		text = searchAvailableLanguage(valueToRead, filePath);
 		if (text.isEmpty() == false)
 			return text;
 
@@ -29,7 +29,7 @@ public class Translatable {
 		text = new FileTask().read(userData, "texts/" + Language.getInstance().getLang() + "/lang/error.txt");
 		if (text.isEmpty() == false)
 			return text;
-		
+
 		// if not available, display an error message in english
 		text = new FileTask().read(userData, "texts/" + "english" + "/lang/error.txt");
 		return text;

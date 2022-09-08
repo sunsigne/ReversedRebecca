@@ -3,13 +3,14 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ProcessorTrash extends ProcessorEatable {
 
 	public ProcessorTrash(Puzzle puzzle) {
-		super(puzzle, new Translatable().getTranslatedText("ProcessorTrash", file));
+		super(puzzle, new Translatable().getTranslatedText("ProcessorTrash", FilePath.PUZZLE));
 		loadImages();
 	}
 

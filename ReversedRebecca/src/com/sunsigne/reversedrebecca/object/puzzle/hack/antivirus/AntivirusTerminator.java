@@ -4,6 +4,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -12,7 +13,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 public class AntivirusTerminator extends AntivirusObject {
 
 	public AntivirusTerminator(Puzzle puzzle) {
-		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Terminator", file));
+		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Terminator", FilePath.PUZZLE));
 		loadImages();
 	}
 

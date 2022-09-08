@@ -32,6 +32,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -39,8 +40,6 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class HackPuzzle extends Puzzle {
-
-	private static String file = "puzzle.csv";
 
 	public HackPuzzle(GenericListener actionOnWinning) {
 		super(actionOnWinning);
@@ -50,7 +49,7 @@ public abstract class HackPuzzle extends Puzzle {
 	////////// USEFUL ////////////
 
 	protected String translate(String text) {
-		return new Translatable().getTranslatedText(text, file);
+		return new Translatable().getTranslatedText(text, FilePath.PUZZLE);
 	}
 
 	////////// NAME ////////////

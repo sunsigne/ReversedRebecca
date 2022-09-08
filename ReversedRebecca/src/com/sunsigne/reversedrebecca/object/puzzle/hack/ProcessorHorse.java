@@ -2,12 +2,13 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ProcessorHorse extends ProcessorEatable {
 
 	public ProcessorHorse(Puzzle puzzle) {
-		super(puzzle, new Translatable().getTranslatedText("Horse", file));
+		super(puzzle, new Translatable().getTranslatedText("Horse", FilePath.PUZZLE));
 	}
 
 	////////// NAME ////////////
