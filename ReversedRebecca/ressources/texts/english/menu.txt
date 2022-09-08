@@ -1,0 +1,81 @@
+Loading = Loading
+ProgressSaved = Progress#saved
+
+///// LEVEL STATS /////
+
+LevelCompleted = Level#Completed
+LevelTime = Time
+LevelTimeUnit = Sec
+LevelPuzzle = Puzzle#Finished
+LevelGoodDeed = Good#Deed
+LevelBadDeed = Bad#Deed
+LevelNoneDeed = None
+LevelEndingAchieved = Ending#Achieved
+LevelYouArePragmatic = You#are#:#pragmatic
+LevelYouAreFast = You#are#:#fast
+LevelYouAreMeticulous = You#are#:#meticulous
+LevelYouAreNice = You#are#:#nice
+LevelYouAreMean = You#are#:#mean
+LevelClickToContinue = Click#to#continue
+
+///// MAIN /////
+
+PlayButton = play
+OptionsButton = options
+QuitButton = quit
+BackButton = back
+
+///// PLAY /////
+
+DifficultyEasy = easy
+DifficultyNormal = normal
+DifficultyHard = hard
+EasyDetail1 = double#XP
+EasyDetail2 = easier#puzzle
+NormalDetail1 = the#original#game
+NormalDetail2 = experience
+HardDetail1 = harder#puzzle
+HardDetail2 = only#one#life
+
+///// GAME /////
+
+GameButton = game
+Reset = reset
+
+///// RESET /////
+
+Confirm = confirm
+ResetDetail1 = your#progress#will#be
+ResetDetail2 = permanently#lost
+
+///// CONTROLS /////
+
+ApplyButton = apply
+ControlsButton = controls
+Up = up
+Down = down
+Left = left
+Right = right
+Dialogue = dialogue
+Action1 = action#1
+Action2 = action#2
+Action3 = action#3
+Default = to#default
+
+///// AUDIO /////
+
+AudioButton = audio
+VolumeMain = main
+VolumeMusic = music
+VolumeSound = sound
+VolumeVoice = voice
+
+///// VIDEO /////
+
+VideoButton = video
+Camera = camera
+CameraStatic = static
+CameraDynamic = dynamic
+CameraDetail = The#camera#follows#the#player
+StaticDetail = to#the#nearest#pixel
+DynamicDetail = fluidly
