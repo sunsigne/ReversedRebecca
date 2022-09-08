@@ -6,6 +6,7 @@ import java.io.PrintStream;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Snitch {
@@ -43,7 +44,7 @@ public class Snitch {
 		}
 
 		try {
-			PrintStream console = new PrintStream(new FileOutputStream(Infos.USERDATA_PATH + path));
+			PrintStream console = new PrintStream(new FileOutputStream(FilePath.USERDATA_PATH + path));
 			System.setErr(console);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

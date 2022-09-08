@@ -8,20 +8,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import com.sunsigne.reversedrebecca.Infos;
-
 public class FileTask {
 
 	////////// USEFUL ////////////
 
 	public boolean doesExist(boolean userData, String path) {
-		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
 		File file = new File(folder + path);
 		return file.exists();
 	}
 
 	public boolean isEmptyFile(boolean userData, String path) {
-		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
 		Path path0 = Paths.get(folder + path);
 		try {
 			System.out.println(Files.size(path0));
@@ -33,7 +31,7 @@ public class FileTask {
 	}
 
 	public void delete(boolean userData, String path) {
-		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
 		File file = new File(folder + path);
 		if (file.exists())
 			file.delete();
@@ -49,7 +47,7 @@ public class FileTask {
 
 	public String read(boolean userData, String valueToRead, String path) {
 
-		String folder = userData ? Infos.USERDATA_PATH : Infos.RESSOURCES_PATH;
+		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
 		File file = new File(folder + path);
 		Scanner scan = null;
 		String content = "";
@@ -103,7 +101,7 @@ public class FileTask {
 	}
 
 	public void write(String valueToReplace, String path, String text) {
-		File file = new File(Infos.USERDATA_PATH + path);
+		File file = new File(FilePath.USERDATA_PATH + path);
 		String fileContent = read(true, path);
 		String[] alllines = fileContent.split(System.getProperty("line.separator"));
 		int size = alllines.length;

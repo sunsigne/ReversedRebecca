@@ -5,18 +5,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class Translatable {
 
 	private boolean userData = false;
-	
+
 	public String getTranslatedText(String valueToRead, String filePath) {
-		
+
 		// configured language
-		String text = new FileTask().read(userData, valueToRead, "texts/" + Language.getInstance().getLang() + "/" + filePath);
+		String text = new FileTask().read(userData, valueToRead,
+				"texts/" + Language.getInstance().getLang() + "/" + filePath);
 		if (text.isEmpty() == false)
 			return text;
 
@@ -48,7 +49,7 @@ public class Translatable {
 			return text;
 
 		// search for any available language
-		File file = new File(Infos.RESSOURCES_PATH + "texts");
+		File file = new File(FilePath.RESSOURCES_PATH + "texts");
 		var lang_list = new ArrayList<String>(Arrays.asList(file.list()));
 
 		for (String tempLang : lang_list) {

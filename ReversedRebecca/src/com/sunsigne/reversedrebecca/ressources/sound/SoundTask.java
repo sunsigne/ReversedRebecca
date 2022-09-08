@@ -8,8 +8,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
-import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class SoundTask {
@@ -45,11 +45,11 @@ public class SoundTask {
 		if (path == null)
 			return;
 
-		String path0 = "/" + Infos.RESSOURCES_PATH + "audio/" + soundType.getPath() + path + ".wav";
+		String path0 = "/" + FilePath.RESSOURCES_PATH + "audio/" + soundType.getPath() + path + ".wav";
 		Clip soundclip;
 
 		try {
-			URL url = new File((new File(Infos.LOC.toURI())).getParent() + path0).toURI().toURL();
+			URL url = new File((new File(FilePath.LOC.toURI())).getParent() + path0).toURI().toURL();
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
 
 			if (soundType == SOUNDTYPE.MUSIC) {
