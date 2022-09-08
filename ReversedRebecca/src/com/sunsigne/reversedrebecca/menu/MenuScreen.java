@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -22,8 +23,6 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class MenuScreen implements Updatable, TickFree {
 	
-	protected String file = "menu.csv";
-	
 	public MenuScreen() {
 		LAYER.MENU.getHandler().clear();
 		LAYER.MENU.addObject(this);
@@ -33,7 +32,7 @@ public class MenuScreen implements Updatable, TickFree {
 	////////// USEFUL ////////////
 
 	protected String translate(String text) {
-		return new Translatable().getTranslatedText(text, file);
+		return new Translatable().getTranslatedText(text, FilePath.MENU);
 	}
 
 	////////// TEXTURE ////////////

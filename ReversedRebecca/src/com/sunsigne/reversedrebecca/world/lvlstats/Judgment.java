@@ -1,11 +1,11 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class Judgment {
 
-	private String file = "menu.csv";
 	private boolean userData = false;
 
 	public Judgment(String mapName, StopWatch stopWatch, Deed deed) {
@@ -74,7 +74,7 @@ public class Judgment {
 
 	public String getYouAre() {
 		youAre = loadYouAre();
-		return new Translatable().getTranslatedText("LevelYouAre" + youAre, file);
+		return new Translatable().getTranslatedText("LevelYouAre" + youAre, FilePath.MENU);
 	}
 
 }

@@ -1,8 +1,8 @@
-To add a new language, you can :
+To add a new language, proceed as follows :
 1 - copy the folder of an existing language
 2 - paste it in in this very folder (the game will automatically detect it)
 3 - rename that folder into the name of your language (optional)
-4 - translate every file contained within
+4 - for each file contained within, translate each value after the "=" symbole
 
 That's it.
 

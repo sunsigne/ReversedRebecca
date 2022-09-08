@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -23,8 +24,6 @@ import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 
 public class LevelCompletedScreen implements Updatable, TickFree {
-
-	private String file = "menu.csv";
 
 	public LevelCompletedScreen(String ending, String lvl) {
 		playVictoryMusic();
@@ -62,7 +61,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		LevelStats stats = World.get().getLevelStats();
 
 		String time = format(stats.getTime());
-		String unit = format(new Translatable().getTranslatedText("LevelTimeUnit", file));
+		String unit = format(new Translatable().getTranslatedText("LevelTimeUnit", FilePath.MENU));
 		time_stats = time + "  " + unit;
 
 		puzzle_stats = format(stats.getPuzzleCount());
@@ -98,14 +97,14 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private String saved_text;
 
 	private void loadText() {
-		title_text = format(new Translatable().getTranslatedText("LevelCompleted", file));
-		time_text = format(new Translatable().getTranslatedText("LevelTime", file)) + " :";
-		puzzle_text = format(new Translatable().getTranslatedText("LevelPuzzle", file)) + " :";
-		goodDeed_text = format(new Translatable().getTranslatedText("LevelGoodDeed", file)) + " :";
-		badDeed_text = format(new Translatable().getTranslatedText("LevelBadDeed", file)) + " :";
-		ending_text = format(new Translatable().getTranslatedText("LevelEndingAchieved", file)) + " :";
-		click_text = format(new Translatable().getTranslatedText("LevelClickToContinue", file));
-		saved_text = format(new Translatable().getTranslatedText("ProgressSaved", file));
+		title_text = format(new Translatable().getTranslatedText("LevelCompleted", FilePath.MENU));
+		time_text = format(new Translatable().getTranslatedText("LevelTime", FilePath.MENU)) + " :";
+		puzzle_text = format(new Translatable().getTranslatedText("LevelPuzzle", FilePath.MENU)) + " :";
+		goodDeed_text = format(new Translatable().getTranslatedText("LevelGoodDeed", FilePath.MENU)) + " :";
+		badDeed_text = format(new Translatable().getTranslatedText("LevelBadDeed", FilePath.MENU)) + " :";
+		ending_text = format(new Translatable().getTranslatedText("LevelEndingAchieved", FilePath.MENU)) + " :";
+		click_text = format(new Translatable().getTranslatedText("LevelClickToContinue", FilePath.MENU));
+		saved_text = format(new Translatable().getTranslatedText("ProgressSaved", FilePath.MENU));
 	}
 
 	////////// RENDER ////////////

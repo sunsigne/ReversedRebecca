@@ -1,14 +1,13 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class Deed {
 
-	private String file = "menu.csv";
-
 	public Deed() {
-		goodDeed = new Translatable().getTranslatedText("LevelNoneDeed", file);
-		badDeed = new Translatable().getTranslatedText("LevelNoneDeed", file);
+		goodDeed = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
+		badDeed = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
 	}
 
 	////////// GOOD ////////////

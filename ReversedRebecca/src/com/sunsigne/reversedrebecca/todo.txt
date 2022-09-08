@@ -17,7 +17,6 @@
 
 	////////// DIFFICILE ////////////
 
-	le debug mod fast devrai accelerer la vitesse des PNJ
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
 	transformer les fichiers .txt et .csv en fichiers .pir
 	le cursor devient de + en + grand lorsque la résolution diminue
