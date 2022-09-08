@@ -44,7 +44,7 @@ public class DeedRequest implements Request {
 
 		Deed deed = World.get().getLevelStats().getDeed();
 		String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
-		path = path.concat("deeds" + ".csv");
+		path = path.concat("deeds" + ".txt");
 		String lvl_deed = new Translatable().getTranslatedText(target_deed, path);
 
 		// analyse the deed
