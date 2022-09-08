@@ -2,11 +2,11 @@ package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class KeyAnalyzer {
 
-	private String file = "key.csv";
 	private int key; 
 
 	public KeyAnalyzer(int key) {
@@ -54,7 +54,7 @@ public class KeyAnalyzer {
 			return java_text;
 
 		if (key >= 96 && key <= 105) { // NUMPAD number
-			String numpad = new Translatable().getTranslatedText("NUMPAD", file);
+			String numpad = new Translatable().getTranslatedText("NUMPAD", FilePath.KEY);
 			String num = java_text.substring(java_text.length() - 1);
 			return numpad + "#" + num;
 		}
@@ -65,7 +65,7 @@ public class KeyAnalyzer {
 		if (key == 65535)
 			return "...";
 		
-		return new Translatable().getTranslatedText(java_text, file);
+		return new Translatable().getTranslatedText(java_text, FilePath.KEY);
 	}
 
 }
