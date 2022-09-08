@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
@@ -71,14 +72,14 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null)
-			firstLine = new Translatable().getTranslatedText("TOOLSTARTLVL1", "techtree.csv");
+			firstLine = new Translatable().getTranslatedText("TOOLSTARTLVL1", FilePath.TECHTREE);
 		return firstLine;
 	}
 
 	@Override
 	public String getSecondLine() {
 		if (secondLine == null) {
-			String line = new Translatable().getTranslatedText("TOOLSTARTLVL2", "techtree.csv");
+			String line = new Translatable().getTranslatedText("TOOLSTARTLVL2", FilePath.TECHTREE);
 			String card_tool = new Translatable().getTranslatedText(tool.getName() + getDifficulty().getName(),
 					"tools.csv");
 			secondLine = line + card_tool;
