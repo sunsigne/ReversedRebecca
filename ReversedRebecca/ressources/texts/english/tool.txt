@@ -1,0 +1,48 @@
+///// LEVEL /////
+
+Cyan = cyan
+Green = green
+Yellow = yellow
+Orange = orange
+Red = red
+Purple = purple
+
+///// KEY /////
+
+Key = key
+KeyCyan = cyan#key
+KeyGreen = green#key
+KeyYellow = yellow#key
+KeyOrange = orange#key
+KeyRed = red#key
+KeyPurple = purple#key
+
+///// BOMB /////
+
+Bomb = bomb
+BombCyan = cyan#bomb
+BombGreen = green#bomb
+BombYellow = yellow#bomb
+BombOrange = orange#bomb
+BombRed = red#bomb
+BombPurple = purple#bomb
+
+///// MICROCHIP /////
+
+Microchip = chip
+MicrochipCyan = cyan#chip
+MicrochipGreen = green#chip
+MicrochipYellow = yellow#chip
+MicrochipOrange = orange#chip
+MicrochipRed = red#chip
+MicrochipPurple = purple#chip
+
+///// SHOVEL /////
+
+Shovel = shovel
+ShovelCyan = cyan#shovel
+ShovelGreen = green#shovel
+ShovelYellow = yellow#shovel
+ShovelOrange = orange#shovel
+ShovelRed = red#shovel
+ShovelPurple = purple#shovel

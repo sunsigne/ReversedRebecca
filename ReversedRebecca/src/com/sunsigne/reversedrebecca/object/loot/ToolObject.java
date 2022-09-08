@@ -6,12 +6,11 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class ToolObject extends LootObject implements Difficulty {
-
-	private String file = "tools.csv";
 
 	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
@@ -56,7 +55,7 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public String getTextWhenLooted() {
-		return new Translatable().getTranslatedText(toolPlayer.getName() + difficulty.getName(), file);
+		return new Translatable().getTranslatedText(toolPlayer.getName() + difficulty.getName(), FilePath.TOOL);
 	}
 
 	@Override
