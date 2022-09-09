@@ -18,8 +18,6 @@ public class Save {
 
 	////////// LEVEL ////////////
 
-	private String lvl0 = "rebeccas_room_0";
-
 	public String getLevel(boolean menu) {
 		if (menu)
 			return new FileTask().read(userData, "currentlvlmenu", file);
@@ -96,8 +94,8 @@ public class Save {
 
 	public void resetProgression() {
 		String nextLine = System.getProperty("line.separator");
-		String lvlmenu = "currentlvlmenu=" + lvl0;
-		String lvl = "currentlvl=" + lvl0;
+		String lvlmenu = "currentlvlmenu=" + FilePath.LVL000;
+		String lvl = "currentlvl=" + FilePath.LVL000;
 
 		new FileTask().write(file, lvlmenu + nextLine + lvl);
 		new FileTask().write(char_file, "");

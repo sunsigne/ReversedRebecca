@@ -16,6 +16,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -91,7 +92,7 @@ public class TitleScreen extends MenuScreen {
 		String currentlvl = new Save().getLevel(false);
 		GenericListener startWorld = () -> startWorld();
 
-		if (currentlvl.equalsIgnoreCase("rebeccas_room_0"))
+		if (currentlvl.equalsIgnoreCase(FilePath.LVL000))
 			new DifficultyScreen(startWorld);
 
 		else

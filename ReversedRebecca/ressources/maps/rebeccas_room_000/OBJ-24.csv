@@ -1,0 +1,17 @@
+TIME -> 0 = GOTO -> TA_INIT
+
+
+//// STATE ////
+
+$ -> TA_INIT = TRIPLE_ACTION -> WATCH_TV*WATCH_TV
+
+
+//// WATCH TV ////
+
+! -> A1_TV_NULL = ACTION_ONE -> NULL
+
+
+
+
+$ -> WATCH_TV = TALK -> 0_WATCH_TV
+TALKED -> 0_WATCH_TV = AFFECTING -> A1_TV_NULL
