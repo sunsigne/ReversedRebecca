@@ -58,7 +58,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 	public void keyPressed(KeyEvent e) {
 		var analyzer = new KeyAnalyzer(e.getKeyCode());
 		if (analyzer.isAllowedKey() == false) {
-			new SoundTask().play(SOUNDTYPE.ERROR, "error");
+			new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
 			return;
 		}
 

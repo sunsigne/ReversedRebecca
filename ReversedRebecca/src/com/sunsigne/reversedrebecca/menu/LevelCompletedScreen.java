@@ -15,8 +15,6 @@ import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -26,20 +24,12 @@ import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 public class LevelCompletedScreen implements Updatable, TickFree {
 
 	public LevelCompletedScreen(String ending, String lvl) {
-		playVictoryMusic();
+		new SoundTask().playMusic("victory", false, false);
 
 		loadStats(ending);
 		loadFont();
 		loadText();
 		createContinueButton(lvl);
-	}
-
-	////////// MUSIC ////////////
-
-	private void playVictoryMusic() {
-		SoundTask task = new SoundTask();
-		task.play(SOUNDTYPE.MUSIC, VolumeMusic.getVolume(), "victory", false);
-		task.stopMusicAfterWholeLoop();
 	}
 
 	////////// USEFUL ////////////

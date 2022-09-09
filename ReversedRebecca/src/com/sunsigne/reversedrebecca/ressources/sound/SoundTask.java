@@ -8,9 +8,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 
-import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class SoundTask {
 
@@ -35,13 +33,12 @@ public class SoundTask {
 
 	////////// SOUND ////////////
 
-	public void play(SOUNDTYPE soundType, String path) {
-		play(soundType, getVolume(soundType), path, false);
+	public void playSound(SOUNDTYPE soundType, String path) {
+		play(soundType, getVolume(soundType), path, false, false);
 	}
 
-	// prefere the method right above this one : the user must decide the volume,
-	// not you (unless you know what you're doing)
-	public void play(SOUNDTYPE soundType, double volume, String path, boolean transition) {
+	// avoid to use this method unless you know what you're doing
+	public void play(SOUNDTYPE soundType, double volume, String path, boolean transition, boolean loop) {
 		if (path == null)
 			return;
 
@@ -59,7 +56,12 @@ public class SoundTask {
 				musicName = path;
 				Clip musicClip = AudioSystem.getClip();
 				musicClip.open(clip);
-				musicClip.loop(Clip.LOOP_CONTINUOUSLY);
+
+				if (loop)
+					musicClip.loop(Clip.LOOP_CONTINUOUSLY);
+				else
+					musicClip.start();
+
 				setVol(0, musicClip, false);
 
 				new MusicTransition(musicClip, transition);
@@ -75,9 +77,9 @@ public class SoundTask {
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (soundType == SOUNDTYPE.VOICE)
-				play(SOUNDTYPE.VOICE, "error");
+				playSound(SOUNDTYPE.VOICE, "error");
 			else
-				play(SOUNDTYPE.ERROR, "nope");
+				playSound(SOUNDTYPE.ERROR, "nope");
 		}
 	}
 
@@ -117,6 +119,10 @@ public class SoundTask {
 
 	protected static String musicName;
 
+	public void playMusic(String path, boolean transition, boolean loop) {
+		play(SOUNDTYPE.MUSIC, VolumeMusic.getVolume(), path, transition, loop);
+	}
+
 	public void changeMusicVol(double newvolume) {
 		MusicTransition.currentClip.getMicrosecondLength();
 		setVol(newvolume, MusicTransition.currentClip, true);
@@ -124,17 +130,6 @@ public class SoundTask {
 
 	public void stopMusic(boolean transition) {
 		new MusicTransition(null, transition);
-	}
-
-	public void stopMusicAfterWholeLoop() {
-		double length = MusicTransition.currentClip.getMicrosecondLength();
-		int time = Game.SEC * (int) (length / 1000000);
-		System.out.println(time);
-		new GameTimer(time, () -> {
-			System.out.println("hello");
-			new MusicTransition(null, false);
-
-		});
 	}
 
 }

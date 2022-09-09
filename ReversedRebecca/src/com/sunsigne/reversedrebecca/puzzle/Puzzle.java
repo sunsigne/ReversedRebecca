@@ -90,11 +90,11 @@ public abstract class Puzzle implements Updatable, TickFree {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 
 		if (isPuzzleWon) {
-			new SoundTask().play(SOUNDTYPE.SOUND, getFactory().getVictorySound());
+			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			world.getLevelStats().addPuzzleCount();
 			actionOnWinning.doAction();
 		} else
-			new SoundTask().play(SOUNDTYPE.SOUND, "fail");
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
 	}
 
 }

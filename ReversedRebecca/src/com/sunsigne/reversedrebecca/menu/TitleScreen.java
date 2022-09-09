@@ -19,7 +19,6 @@ import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
@@ -32,7 +31,8 @@ public class TitleScreen extends MenuScreen {
 
 	public TitleScreen() {
 		super();
-		new SoundTask().play(SOUNDTYPE.MUSIC, "title_screen");
+		new SoundTask().playMusic("title_screen", false, true);
+
 		createPlayButton();
 		createOptionsButton();
 		createQuitButton();
@@ -70,14 +70,13 @@ public class TitleScreen extends MenuScreen {
 		ButtonObject button = new FlagLangageButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}
-	
+
 	private void createCrashButton() {
 		GenericListener onPress = () -> new EmailTask().sendRequest();
 		ButtonObject button = new TitleScreenButton("Remplir le questionnaire", 175, -25, 420, 140, onPress, null);
 		((TitleScreenButton) button).setFontSize(30f);
 		LAYER.MENU.addObject(button);
 	}
-
 
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
@@ -104,7 +103,7 @@ public class TitleScreen extends MenuScreen {
 
 		new Snitch().registerEntry("START");
 		new Snitch().registerEntry("DIFFICULTY:" + DifficultyOption.getDifficulty().getName().toUpperCase());
-		
+
 		// if currentlvlmenu and currentlvl are the same
 		if (new Save().getLevel(true).equalsIgnoreCase(currentlvl)) {
 			loadLvlMenu();

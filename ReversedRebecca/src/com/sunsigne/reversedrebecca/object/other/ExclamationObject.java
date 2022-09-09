@@ -11,7 +11,7 @@ public class ExclamationObject extends ExpressionObject {
 		ymin = getY() - shift;
 		ymax = getY() + shift;
 		setVelY(-shift / 3);
-		new SoundTask().play(SOUNDTYPE.SOUND, "jump");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "jump");
 	}
 
 	////////// TICK ////////////

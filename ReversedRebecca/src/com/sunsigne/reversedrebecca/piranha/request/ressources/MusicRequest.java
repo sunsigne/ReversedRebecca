@@ -7,8 +7,6 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 
 public class MusicRequest implements Request {
 
@@ -47,8 +45,7 @@ public class MusicRequest implements Request {
 		if (target.equalsIgnoreCase("null"))
 			generic = () -> new SoundTask().stopMusic(getTransition());
 		else
-			generic = () -> new SoundTask().play(SOUNDTYPE.MUSIC, VolumeMusic.getVolume(), target.toLowerCase(),
-					getTransition());
+			generic = () -> new SoundTask().playMusic(target.toLowerCase(), getTransition(), true);
 
 		// request during menu or title screen is "registered" to be run later.
 		if (LAYER.MENU.getHandler().getList().isEmpty() == false) {

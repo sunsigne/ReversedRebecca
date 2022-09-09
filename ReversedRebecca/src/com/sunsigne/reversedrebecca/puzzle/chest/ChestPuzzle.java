@@ -80,7 +80,7 @@ public class ChestPuzzle extends Puzzle {
 	}
 
 	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "error");
+		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
 		String wrong_method = lootFile.contains("method") ? "" : " is missing";
 		JOptionPane.showMessageDialog(null, "An error has occurred : " + lootFile.concat(wrong_method));
 		new Conductor().stopApp();

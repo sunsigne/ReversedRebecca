@@ -40,7 +40,7 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	private void terminate() {
 		getPuzzle().closePuzzle(false);
-		new SoundTask().play(SOUNDTYPE.SOUND, "laser_shoot");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "laser_shoot");
 	}
 
 	@Override

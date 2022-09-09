@@ -36,7 +36,7 @@ public class ChestLootFactory {
 	}
 
 	private void stopApp(String lootData) {
-		new SoundTask().play(SOUNDTYPE.ERROR, "error");
+		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
 		JOptionPane.showMessageDialog(null,
 				"An error has occurred : " + lootData + " can't be resolved to an existing loot");
 		new Conductor().stopApp();

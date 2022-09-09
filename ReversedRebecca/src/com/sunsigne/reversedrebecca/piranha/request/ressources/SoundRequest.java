@@ -46,7 +46,7 @@ public class SoundRequest implements Request {
 		if (LAYER.MENU.getHandler().getList().isEmpty() == false && isMenuFading() == false)
 			return;
 
-		new SoundTask().play(SOUNDTYPE.SOUND, target.toLowerCase());
+		new SoundTask().playSound(SOUNDTYPE.SOUND, target.toLowerCase());
 	}
 
 	private boolean isMenuFading() {

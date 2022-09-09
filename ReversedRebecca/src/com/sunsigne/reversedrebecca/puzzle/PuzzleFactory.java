@@ -14,7 +14,7 @@ public interface PuzzleFactory {
 	
 	default void autoWin(GenericListener actionOnWinning) {
 		actionOnWinning.doAction();
-		new SoundTask().play(SOUNDTYPE.SOUND, getVictorySound());
+		new SoundTask().playSound(SOUNDTYPE.SOUND, getVictorySound());
 	}
 
 	////////// SOUND ////////////

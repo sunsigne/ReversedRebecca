@@ -66,7 +66,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void stopApp() {
-		new SoundTask().play(SOUNDTYPE.ERROR, "error");
+		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
 		JOptionPane.showMessageDialog(null, "An error has occurred, some languages files are missing");
 		new Conductor().stopApp();
 	}

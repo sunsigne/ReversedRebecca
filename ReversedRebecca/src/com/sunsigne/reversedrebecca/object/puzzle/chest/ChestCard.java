@@ -54,7 +54,7 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent {
 
 	public void pickUp() {
 		pickedUp = true;
-		new SoundTask().play(SOUNDTYPE.SOUND, "loot_chest");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "loot_chest");
 		chestLoot.pickUp();
 	}
 
