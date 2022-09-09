@@ -23,13 +23,14 @@ public class Judgment {
 	private int[] loadTimes(String mapName) {
 		int[] times = new int[] { 0, 0 };
 
-		String path = "maps/" + mapName + "/";
+		String path = "maps/" + mapName + "/" + "TIME.txt";
 		FileTask file = new FileTask();
 
-		if (file.doesExist(userData, path + "FAST.txt"))
-			times[0] = Integer.parseInt(file.read(userData, path + "FAST.txt"));
-		if (file.doesExist(userData, path + "METICULOUS.txt"))
-			times[1] = Integer.parseInt(file.read(userData, path + "METICULOUS.txt"));
+		if (file.doesExist(userData, path) == false)
+			return times;
+		
+		times[0] = Integer.parseInt(file.read(userData, "FAST", path));
+		times[1] = Integer.parseInt(file.read(userData, "METICULOUS", path));
 
 		return times;
 	}
