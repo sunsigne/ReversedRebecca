@@ -44,8 +44,8 @@
 	
 	////////// LVL000 ////////////
 	
-	refaire "se laver les mains" en allant + près de l'évier
-	redéfinit toues les touches action
+	manger des cookie et boire du jeu ne fait rien, trouver une idée.
+	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	traduire "je t'en pris" pendant les crêpes par "my pleasure" + traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
