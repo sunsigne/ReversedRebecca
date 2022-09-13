@@ -8,6 +8,9 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.Volume;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeVoice;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -109,6 +112,21 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	public void mouseReleased(MouseEvent e) {
 		holding = false;
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
+
+		if (isSelected()) {
+			new MousePos().setX(getX() + getWidth() / 2);
+			new MousePos().setY(getY() + getHeight() / 2);
+		}
+	}
+	
+	@Override
+	public int[] getRect() {
+		int[] rect = new int[4];
+		rect[0] = getX() - 1;
+		rect[1] = getY();
+		rect[2] = getWidth();
+		rect[3] = getHeight();
+		return rect;
 	}
 
 }
