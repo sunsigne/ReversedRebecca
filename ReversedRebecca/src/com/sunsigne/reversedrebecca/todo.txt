@@ -8,7 +8,6 @@
 
 	////////// EN COURS ////////////
 	
-	bug "freeze" lorsque sarah a senti les crêpes sur la table et revient ...
 	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
 	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
 	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
@@ -44,6 +43,7 @@
 	
 	////////// LVL000 ////////////
 	
+	sarah doit être + près de l'evier quand elle se lave les mains
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
 	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	ne pas oublié de gerer le verre quand on ouvre la porte
