@@ -31,10 +31,20 @@ public abstract class SubMenuScreen extends MenuScreen {
 	protected String getBackButtonText() {
 		return translate("BackButton");
 	}
-	
+
 	private void createBackButton() {
 		GenericListener onPress = () -> getPreviousMenu();
-		ButtonObject button = new TitleScreenButton(getBackButtonText(), 740, 940, 420, 140, onPress, null);
+		ButtonObject button = new TitleScreenButton(getBackButtonText(), 740, 940, 420, 140, onPress, null) {
+
+			@Override
+			public String getSound() {
+				if (getBackButtonText().equalsIgnoreCase(translate("ApplyButton")))
+					return "button_validate";
+				else
+					return "button_back";
+			}
+		};
+
 		button.setFacing(DIRECTION.NULL);
 		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.getHandler().addObject(button);
@@ -55,7 +65,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 	////////// RENDER ////////////
 
 	private boolean xl;
-	
+
 	@Override
 	public void render(Graphics g) {
 		super.render(g);

@@ -163,7 +163,14 @@ public class LanguageScreen extends SubMenuScreen {
 		GenericListener onPress = () -> chooseLanguage(name);
 		String text = new FileTask().read(false, "texts/" + name + "/lang/name" + ".txt");
 
-		ButtonObject button = new TitleScreenButton(text, x + 325, y + 503, 415, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, x + 325, y + 503, 415, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
 		LAYER.MENU.getHandler().addObject(button);
 	}
 

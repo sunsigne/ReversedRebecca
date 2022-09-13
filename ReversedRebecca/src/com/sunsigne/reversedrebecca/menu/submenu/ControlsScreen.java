@@ -176,7 +176,14 @@ public class ControlsScreen extends SubMenuScreen {
 
 	private void createDefaultButton() {
 		GenericListener onPress = () -> resetKeyboard();
-		ButtonObject button = new TitleScreenButton(translate("Default"), 750, 450 + 312, 420, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(translate("Default"), 750, 450 + 312, 420, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
 		LAYER.MENU.addObject(button);
 	}
 

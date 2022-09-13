@@ -29,7 +29,14 @@ public class GameScreen extends SubMenuScreen {
 
 	private void createResetButton() {
 		GenericListener onPress = () -> new ResetScreen();
-		ButtonObject button = new TitleScreenButton(translate("Reset"), 741, 658, 415, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(translate("Reset"), 741, 658, 415, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
 		LAYER.MENU.addObject(button);
 	}
 

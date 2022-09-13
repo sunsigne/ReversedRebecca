@@ -57,7 +57,14 @@ public class ResetScreen extends SubMenuScreen {
 
 	private void createResetButton() {
 		GenericListener onPress = () -> resetProgression();
-		ButtonObject button = new TitleScreenButton(translate("Confirm"), 741, 607, 415, 80, onPress, null);
+		ButtonObject button = new TitleScreenButton(translate("Confirm"), 741, 607, 415, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
 		LAYER.MENU.addObject(button);
 	}
 

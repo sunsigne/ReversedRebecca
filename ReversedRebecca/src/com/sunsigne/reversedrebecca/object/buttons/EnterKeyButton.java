@@ -62,6 +62,9 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 			return;
 		}
 
+		// play sound
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
+		
 		// registering new key
 		String keyText = analyzer.getKeyText();
 		key.registerKey(keyText, e.getKeyCode());

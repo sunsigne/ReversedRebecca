@@ -5,6 +5,8 @@ import java.awt.event.MouseEvent;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -14,7 +16,7 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	public ButtonObject(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
 		super(x, y, w, h);
 		this.text = text;
-
+		
 		this.onPress = onPress;
 		this.onRelease = onRelease;
 	}
@@ -45,6 +47,12 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	public String getText() {
 		return text;
 	}
+	
+	////////// SOUND ////////////
+
+	public String getSound() {
+		return "button";
+	}
 
 	////////// MOUSE ////////////
 
@@ -60,6 +68,8 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 		if (isSelected() == false)
 			return;
 
+		new SoundTask().playSound(SOUNDTYPE.SOUND, getSound());
+		
 		if (onPress != null)
 			onPress.doAction();
 
