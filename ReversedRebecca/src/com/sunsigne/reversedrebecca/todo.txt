@@ -84,11 +84,9 @@
 	////////// SONS ////////////
 	
 	faire le bon bruit quand on ouvre le coffre
-	Le fading menu devrait jouer un son ?
 	son pour le puzzle door !
 	sons pour le hack puzzle !
-	Buttons -> devrait jouer un son ?
-
+	
 	////////// A CREER PLUS TARD ////////////
 	
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)

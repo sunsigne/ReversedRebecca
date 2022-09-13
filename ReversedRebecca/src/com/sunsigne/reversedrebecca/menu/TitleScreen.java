@@ -45,12 +45,13 @@ public class TitleScreen extends MenuScreen {
 
 	////////// BUTTONS ////////////
 
-	private void createTitleScreenButton(String text, int x, GenericListener onPress) {
+	private void createTitleScreenButton(String text, boolean validate_sound, int x, GenericListener onPress) {
+		String sound = validate_sound ? "button_validate" : "button";
 		ButtonObject button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null) {
 
 			@Override
 			public String getSound() {
-				return "button_validate";
+				return sound;
 			}
 		};
 
@@ -60,17 +61,17 @@ public class TitleScreen extends MenuScreen {
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> playRequest();
-		createTitleScreenButton(translate("PlayButton"), 140, onPress);
+		createTitleScreenButton(translate("PlayButton"), true, 140, onPress);
 	}
 
 	private void createOptionsButton() {
 		GenericListener onPress = () -> new OptionsScreen();
-		createTitleScreenButton(translate("OptionsButton"), 740, onPress);
+		createTitleScreenButton(translate("OptionsButton"), false, 740, onPress);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
-		createTitleScreenButton(translate("QuitButton"), 1340, onPress);
+		createTitleScreenButton(translate("QuitButton"), true, 1340, onPress);
 	}
 
 	private void createFlagLanguageButton() {
