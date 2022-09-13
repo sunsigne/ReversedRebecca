@@ -71,6 +71,8 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			setX(xmin);
 			new MousePos().setX(xmin);
 		}
+		
+		new MousePos().setY(getY() + getHeight() / 2);
 	}
 
 	////////// RENDER ////////////
@@ -106,6 +108,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 		holding = true;
 		new GameCursor().setCursor(null);
+		new MousePos().setX(getX());
 	}
 
 	@Override
@@ -114,9 +117,20 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 
 		if (isSelected()) {
-			new MousePos().setX(getX() + getWidth() / 2);
+			new MousePos().setX(getX() + getGap());
 			new MousePos().setY(getY() + getHeight() / 2);
 		}
+	}
+	
+	private int getGap() {
+		int gap = getWidth() / 2;
+		
+		if(getX() <= xmin)
+			gap = 0;
+		if(getX() >= xmax)
+			gap = getWidth() - 2;
+		
+		return gap;
 	}
 	
 	@Override
