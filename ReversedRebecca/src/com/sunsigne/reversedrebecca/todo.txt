@@ -85,7 +85,6 @@
 	
 	faire le bon bruit quand on ouvre le coffre
 	Le fading menu devrait jouer un son ?
-	AudioScreen devrait jouer des sons !
 	son pour le puzzle door !
 	sons pour le hack puzzle !
 	Buttons -> devrait jouer un son ?

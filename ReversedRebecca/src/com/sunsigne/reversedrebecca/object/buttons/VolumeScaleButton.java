@@ -6,11 +6,11 @@ import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.Volume;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeVoice;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -57,6 +57,8 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		if (holding == false)
 			return;
 
+		playHelpingSound();
+
 		int mouseX = new MousePos().get()[0];
 
 		setX(mouseX);
@@ -71,8 +73,38 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			setX(xmin);
 			new MousePos().setX(xmin);
 		}
-		
+
 		new MousePos().setY(getY() + getHeight() / 2);
+	}
+
+	private void playHelpingSound() {
+		if (volume instanceof VolumeSound)
+			playSound();
+
+		if (volume instanceof VolumeVoice)
+			playVoice();
+	}
+
+	private int time;
+
+	private void playSound() {
+		if (time > 0) {
+			time--;
+			return;
+		}
+
+		time = 40;
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "jump");
+	}
+
+	private void playVoice() {
+		if (time > 0)
+			time--;
+		else
+			time = 40;
+
+		if (time > 30 && time % 2 == 0)
+			new SoundTask().playSound(SOUNDTYPE.VOICE, "rebecca");
 	}
 
 	////////// RENDER ////////////
@@ -121,18 +153,18 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			new MousePos().setY(getY() + getHeight() / 2);
 		}
 	}
-	
+
 	private int getGap() {
 		int gap = getWidth() / 2;
-		
-		if(getX() <= xmin)
+
+		if (getX() <= xmin)
 			gap = 0;
-		if(getX() >= xmax)
+		if (getX() >= xmax)
 			gap = getWidth() - 2;
-		
+
 		return gap;
 	}
-	
+
 	@Override
 	public int[] getRect() {
 		int[] rect = new int[4];
