@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -37,17 +39,17 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	////////// VELOCITY ////////////
 
 	private int speed = Size.XS / 4;
-	
+
 	protected void multiplySpeedBy(int multiplier) {
 		this.speed = speed * multiplier;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
-	
+
 	protected void divideSpeedBy(int divisor) {
 		this.speed = speed / divisor;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);
@@ -57,10 +59,17 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	public void tick() {
 
 		// goes up and down
-		if (getY() >= ymax)
+		if (getY() >= ymax) {
 			setVelY(-speed);
-		if (getY() <= ymin)
+			if ((getVelX() == 0))
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "bip_short");
+		}
+
+		if (getY() <= ymin) {
 			setVelY(speed);
+			if ((getVelX() == 0))
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "bip_short");
+		}
 
 		// when is throwing, continue faster
 		if (getVelX() != 0) {
@@ -97,8 +106,10 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (getVelX() == 0)
+		if (getVelX() == 0) {
 			setVelX(-1);
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
+		}
 	}
 
 	@Override

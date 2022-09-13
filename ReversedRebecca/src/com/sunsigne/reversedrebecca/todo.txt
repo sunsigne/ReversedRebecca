@@ -84,7 +84,6 @@
 	////////// SONS ////////////
 	
 	faire le bon bruit quand on ouvre le coffre
-	son pour le puzzle door !
 	sons pour le hack puzzle !
 	
 	////////// A CREER PLUS TARD ////////////
