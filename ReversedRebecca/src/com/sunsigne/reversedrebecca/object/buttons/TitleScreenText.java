@@ -10,6 +10,13 @@ public class TitleScreenText extends TitleScreenButton {
 		super(text, x, y, w, h, null, null);
 	}
 
+	////////// NAME ////////////
+	
+	public String toString() {
+		var clazz = "TEXT ";
+		return clazz + text.toUpperCase() + " : " + getX() + "-" + getY();
+	}
+	
 	////////// TEXT ////////////
 
 	public void setText(String text) {

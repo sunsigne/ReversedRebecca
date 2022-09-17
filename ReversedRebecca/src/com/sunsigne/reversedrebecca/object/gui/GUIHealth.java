@@ -17,6 +17,24 @@ public class GUIHealth extends GameObject implements GUI {
 		loadImages();
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		Player player = new PlayerFinder().getPlayer();
+		var clazz = "GUI HP";
+		
+		if (player != null)	{
+			if (player.isInvulnerable())
+				return clazz + " : " + "INVULNERABLE";
+		}
+
+		var maxhp = player == null ? "N/A" : player.getMaxHp();
+		var hp = player == null ? "N/A" : player.getHp();
+
+		return clazz + " : " + hp + "/" + maxhp;
+	}
+
 	////////// GUI ////////////
 
 	private static GUI gui = new GUIHealth();
@@ -41,6 +59,9 @@ public class GUIHealth extends GameObject implements GUI {
 	@Override
 	public void render(Graphics g) {
 		Player player = new PlayerFinder().getPlayer();
+
+		if (player == null)
+			return;
 
 		if (player.isInvulnerable())
 			return;

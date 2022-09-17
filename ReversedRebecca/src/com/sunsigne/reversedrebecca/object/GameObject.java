@@ -17,6 +17,11 @@ public abstract class GameObject implements Velocity {
 		this.h = h;
 	}
 
+	////////// NAME ////////////
+	
+	//public abstract String toString();
+	public String toString() { return "error";};
+	
 	////////// POSITION ////////////
 
 	private int x, y;

@@ -12,7 +12,7 @@ import com.sunsigne.reversedrebecca.system.Window;
 public class FlagLangageButton extends TitleScreenButton {
 
 	public FlagLangageButton(GenericListener onPress, GenericListener onRelease) {
-		super("", Window.WIDHT - Size.L - 10, 10, Size.L, Size.M, onPress, onRelease);
+		super("FLAG", Window.WIDHT - Size.L - 10, 10, Size.L, Size.M, onPress, onRelease);
 	}
 
 	////////// TEXTURE ////////////

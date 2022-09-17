@@ -19,8 +19,16 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 		
 		this.onPress = onPress;
 		this.onRelease = onRelease;
+		System.out.println(toString());
 	}
-
+	
+	////////// NAME ////////////
+	
+	public String toString() {
+		var clazz = "BUTTON ";
+		return clazz + text.toUpperCase() + " : " + getX() + "-" + getY();
+	}
+		
 	////////// BEHAVIOR ////////////
 
 	private GenericListener onPress;

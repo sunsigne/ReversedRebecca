@@ -17,7 +17,7 @@ public class TitleScreenButton extends ButtonObject {
 			GenericListener onRelease) {
 		super(text.toUpperCase(), x, y, w, h, onPress, onRelease);
 	}
-	
+
 	////////// TEXT ////////////
 	
 	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);

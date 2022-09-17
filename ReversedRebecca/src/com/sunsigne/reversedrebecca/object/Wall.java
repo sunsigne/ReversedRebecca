@@ -11,6 +11,15 @@ public class Wall extends GameObject implements TickFree, RenderFree, CollisionR
 		super(x, y);
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	public String toString() {
+		var clazz = "WALL";
+		var goal = new GoalObject(getX(), getY(), true);
+		return clazz + " : " + goal.getX() + "-" + goal.getY();
+	}
+	
 	////////// COLOR ////////////
 
 	public enum COLOR {

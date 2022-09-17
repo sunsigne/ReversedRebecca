@@ -8,10 +8,10 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public class TestButton extends ButtonObject {
 
-	public TestButton(String text, int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
-		super(text, x, y, w, h, onPress, onRelease);
+	public TestButton(int x, int y, int w, int h, GenericListener onPress, GenericListener onRelease) {
+		super("TEST", x, y, w, h, onPress, onRelease);
 	}
-		
+
 	////////// RENDER ////////////
 		
 	@Override

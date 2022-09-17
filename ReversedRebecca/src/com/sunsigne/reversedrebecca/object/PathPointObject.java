@@ -12,6 +12,15 @@ public class PathPointObject extends GameObject implements TickFree, RenderFree,
 		super(x, y);
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	public String toString() {
+		var clazz = "PATHPOINT";
+		var goal = new GoalObject(getX(), getY(), true);
+		return clazz + " : " + goal.getX() + "-" + goal.getY();
+	}
+		
 	////////// PATH FINDER ////////////
 
 	@Override

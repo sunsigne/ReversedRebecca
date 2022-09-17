@@ -26,6 +26,16 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		setX(getX() + getScale(volume.loadVolume()));
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	public String toString() {
+		var clazz = "BUTTON VOLUME SCALE";
+		var name = volume.getValueToRead().toUpperCase();
+		var currentVolume = volume.getRegisteredVolume();
+		return clazz + " : " + name + " = " + currentVolume;
+	}
+		
 	////////// VOLUME ////////////
 
 	private Volume volume;

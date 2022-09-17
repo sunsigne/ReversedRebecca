@@ -22,6 +22,15 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 		loadImages();
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "DEBUG GUI";
+		var name = debugMode.getName().split("debugmode_")[1].toUpperCase();
+		return clazz + " : " + name + " / " + " ACTIVE : " + debugMode.getState();
+	}
+
 	////////// DEBUG MODE ////////////
 
 	private DebugMode debugMode;
