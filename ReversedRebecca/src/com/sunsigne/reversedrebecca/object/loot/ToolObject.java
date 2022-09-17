@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -18,6 +19,18 @@ public class ToolObject extends LootObject implements Difficulty {
 		this.difficulty = difficulty;
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	public String toString() {
+		var clazz = "LOOT";
+		var name =  toolPlayer.getName().toUpperCase();
+		var lvl = difficulty.getName().toUpperCase();
+		var goal = new GoalObject(getX(), getY(), true);
+		return clazz + " : " + name + " " + lvl + " : " + goal.getX() + "-" + goal.getY();
+	}
+	
+	
 	private ToolPlayer toolPlayer;
 
 	////////// DIFFICULTY ////////////

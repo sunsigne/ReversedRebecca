@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
@@ -38,6 +39,15 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 
 	public abstract String getName();
 
+	@Override
+	public String toString() {
+		var clazz = "PUZZLER";
+		var name = getName().toUpperCase();
+		var lvl = devDifficulty == null ? difficulty.getName().toUpperCase() : devDifficulty;
+		var goal = new GoalObject(getX(), getY(), true);
+		return clazz + " : " + name + " " + lvl + " : " + goal.getX() + "-" + goal.getY();
+	}
+	
 	////////// DEV LVL ////////////
 
 	private DEV_LVL devDifficulty;
