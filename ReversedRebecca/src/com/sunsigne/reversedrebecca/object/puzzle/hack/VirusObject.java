@@ -19,6 +19,15 @@ public class VirusObject extends PuzzleObject {
 		loadAnimation();
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "PUZZLE : VIRUS";
+		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
+		return clazz + " : " + pos + " / " + "REVERSED : " + reversed + " / " + "DISGUISED : " + disguised + " / "+ "SHRINK : " + shrink;
+	}
+
 	////////// ANTIVIRUS ////////////
 
 	private int shrink = 0;

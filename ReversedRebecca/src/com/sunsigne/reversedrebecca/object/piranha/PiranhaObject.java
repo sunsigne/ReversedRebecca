@@ -4,6 +4,7 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
@@ -44,6 +45,31 @@ public abstract class PiranhaObject extends GameObject
 	public void setName(String name) {
 		if (name != null)
 			this.name = name.toLowerCase();
+	}
+
+	@Override
+	public String toString() {
+		var clazz = "PIRANHA";
+
+		var dirName = "NAME:" + getName().toUpperCase();
+		var goal = new GoalObject(getX(), getY(), true);
+		var dirPos = "POS:" + goal.getX() + "-" + goal.getY();
+		var dirBlockPath = "BLOCKPATH:" + isBlockingPath();
+		var result = clazz + " : " + dirName + " / " + dirPos + " / " + dirBlockPath;
+
+		if (getTripleAction() != null) {
+			if (getTripleAction().getAction(0) != null)
+				result = result
+						.concat(" / ACTION 1:" + getTripleAction().getAction(0).getDisplayedText().toUpperCase());
+			if (getTripleAction().getAction(1) != null)
+				result = result
+						.concat(" / ACTION 2:" + getTripleAction().getAction(1).getDisplayedText().toUpperCase());
+			if (getTripleAction().getAction(2) != null)
+				result = result
+						.concat(" / ACTION 3:" + getTripleAction().getAction(2).getDisplayedText().toUpperCase());
+		}
+
+		return result;
 	}
 
 	////////// WAITFOR ////////////

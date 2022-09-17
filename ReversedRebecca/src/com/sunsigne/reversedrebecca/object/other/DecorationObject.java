@@ -20,6 +20,14 @@ public class DecorationObject extends GameObject implements TickFree {
 		return name;
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "DECORACTION";
+		return clazz + " : " + name.toUpperCase();
+	}
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;

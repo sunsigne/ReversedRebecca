@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
 import com.sunsigne.reversedrebecca.menu.Cutscene;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
@@ -17,6 +18,27 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	public NPC(String name, int x, int y) {
 		super(name, x, y);
 		setPlayerAvoiderType(AVOIDERTYPE.AROUND);
+	}
+
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "PIRANHA : NPC";
+
+		var dirName = "NAME:" + getName().toUpperCase();
+		var dirAvoider = "AVOIDER:" + getPlayerAvoiderType();
+
+		GoalObject goal = null;
+		goal = new GoalObject(getX(), getY(), true);
+		var dirPos = "POS:" + goal.getX() + "-" + goal.getY();
+
+		goal = null;
+		if (getGoal() != null)
+			goal = new GoalObject(getGoal().getX(), getGoal().getY(), true);
+		var dirGoal = goal == null ? "N/A" : goal.getX() + "-" + goal.getY();
+
+		return clazz + " : " + dirName + " / " + dirAvoider + " / " + dirPos + " / " + "GOAL:"+ dirGoal;
 	}
 
 	////////// PLAYER AVOIDER ////////////
@@ -70,18 +92,19 @@ public class NPC extends LivingObject implements PlayerAvoider {
 		request.doAction(this, "player");
 	}
 
-	private ConditionalListener continue_walking_if_player_far_enough(LivingObject object, ConditionalListener registeredWaitfor) {
+	private ConditionalListener continue_walking_if_player_far_enough(LivingObject object,
+			ConditionalListener registeredWaitfor) {
 
 		return new ConditionalListener() {
 
 			Position registeredGoal = getGoal();
-			
+
 			@Override
 			public boolean canDoAction() {
 				lookAtPlayer();
 				boolean playerFarEnough = new PlayerFinder().isPlayerFutherThan(object, 3);
 				boolean newGoalEtablished = getGoal() != registeredGoal;
-				boolean cutscene =  Cutscene.isRunning();
+				boolean cutscene = Cutscene.isRunning();
 				return playerFarEnough | newGoalEtablished | cutscene;
 			}
 

@@ -26,13 +26,13 @@ public abstract class PuzzleObject extends GameObject {
 	}
 
 	////////// NAME ////////////
-/*
+
 	@Override
 	public String toString() {
 		var clazz = "PUZZLE : UNKOWNED";
 		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
-*/
+
 	////////// PUZZLE ////////////
 
 	private Puzzle puzzle;

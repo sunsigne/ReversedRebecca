@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.object.gui;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -19,6 +19,25 @@ public class GUITools extends GameObject implements GUI {
 		super(0, Window.HEIGHT - Size.M - 10, Size.M, Size.M);
 		GUIList.getList().addObject(this);
 		loadImages();
+	}
+
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "GUI TOOL : ";
+		var result = clazz;
+
+		var list = ToolList.getList();
+
+		for (ToolPlayer tempTool : list.getList()) {
+			var name = tempTool.getName().toUpperCase();
+			var lvl = tempTool.getDifficulty().getName().toUpperCase();
+			var maxlvl = tempTool.getMaxDifficulty().getName().toUpperCase();
+			result = result.concat(name + " : " + lvl + "/" + maxlvl + " - ");
+		}
+
+		return result;
 	}
 
 	////////// GUI ////////////

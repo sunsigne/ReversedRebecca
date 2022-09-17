@@ -31,6 +31,13 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	////////// NAME ////////////
 
+	@Override
+	public String toString() {
+		var clazz = "PUZZLE : PROCESSOR ";
+		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
+		return clazz + text.toUpperCase() + " : " + pos;
+	}
+	
 	public abstract String getName();
 
 	////////// PROCESSOR ////////////

@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.Cutscene;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -21,7 +22,28 @@ public class Player extends LivingObject {
 
 		loadHealth();
 	}
+	
+	////////// NAME ////////////
 
+	@Override
+	public String toString() {
+		var clazz = "PIRANHA : PLAYER";
+
+		var dirName = "NAME:" + getName().toUpperCase();
+		var dirCanInterract = "CAN INTERACT:" + canInterract();
+
+		GoalObject goal = null;
+		goal = new GoalObject(getX(), getY(), true);
+		var dirPos = "POS:" + goal.getX() + "-" + goal.getY();
+
+		goal = null;
+		if (getGoal() != null)
+			goal = new GoalObject(getGoal().getX(), getGoal().getY(), true);
+		var dirGoal = goal == null ? "N/A" : goal.getX() + "-" + goal.getY();
+
+		return clazz + " : " + dirName + " / " + dirCanInterract + " / " + dirPos + " / " + "GOAL:"+ dirGoal;
+	}
+	
 	////////// SPEED ////////////
 
 	private void updateSpeed() {

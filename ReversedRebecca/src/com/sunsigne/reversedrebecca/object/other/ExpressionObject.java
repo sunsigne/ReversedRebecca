@@ -30,6 +30,14 @@ public class ExpressionObject extends GameObject {
 		new GameTimer(1 * Game.SEC, () -> stunnable.setStunned(false));
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "EXPRESSION";
+		return clazz + " : " + name.toUpperCase();
+	}
+
 	////////// TICK ////////////
 
 	private int time;
