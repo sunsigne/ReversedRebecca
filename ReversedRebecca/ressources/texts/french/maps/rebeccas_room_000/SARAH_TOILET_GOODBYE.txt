@@ -1,0 +1,2 @@
+sarah = LEFT = angry = J'ai#changé#d'avis.#Je#pars#toute#seule.
+player = sarah = wrong_with_you = Je#ne#te#retiens#pas.
