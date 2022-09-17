@@ -9,4 +9,10 @@ public class FastKeyObject extends KeyObject {
 		multiplySpeedBy(2);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "KEY FAST";
+	}
+	
 }

@@ -44,6 +44,17 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "BOMB";
+	}
+	
+	@Override
+	public String toString() {
+		return "PUZZLE : " + getName() + " : " + getCount() + "/" + getMaxCount() + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+
 	////////// MAX COUNT ////////////
 
 	private int maxcount;

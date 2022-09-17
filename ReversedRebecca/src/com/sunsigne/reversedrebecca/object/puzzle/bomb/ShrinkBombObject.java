@@ -23,6 +23,13 @@ public class ShrinkBombObject extends FastBombObject {
 		size = new RandomGenerator().getIntBetween(sizeMin, sizeMax);
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB SHRINK";
+	}
+	
 	////////// SIZE ////////////
 
 	@Override

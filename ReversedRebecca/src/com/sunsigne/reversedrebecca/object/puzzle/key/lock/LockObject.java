@@ -16,6 +16,17 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 		super(puzzle, 0, 0);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "LOCK";
+	}
+	
+	@Override
+	public String toString() {
+		return "PUZZLE : " + getName() + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+	
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1);

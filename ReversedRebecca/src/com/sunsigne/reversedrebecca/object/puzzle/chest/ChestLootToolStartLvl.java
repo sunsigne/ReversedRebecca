@@ -15,6 +15,14 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 		this.tool = tool;
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "CHEST LOOT START";
+		return clazz + " : " + tool.getName().toUpperCase() + " = " + getDifficulty();
+	}
+
 	////////// PICK UP////////////
 
 	@Override

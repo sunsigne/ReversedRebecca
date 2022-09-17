@@ -14,4 +14,11 @@ public class FastBombObject extends MovingBombObject {
 		defineNewYSpeed(Size.XS / 3);
 	}
 	
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB FAST";
+	}
+
 }

@@ -15,7 +15,6 @@ public class BonusText extends GameObject {
 		super(x, y);
 		this.text = text;
 		setVelY(-1);
-		System.out.println(toString());
 	}
 
 	private String text;

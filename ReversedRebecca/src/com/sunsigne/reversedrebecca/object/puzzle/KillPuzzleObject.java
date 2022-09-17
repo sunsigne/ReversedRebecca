@@ -12,6 +12,14 @@ public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFr
 		super(puzzle, x, y);
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "PUZZLE : KILL";
+		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+
 	////////// COLLISION ////////////
 
 	@Override

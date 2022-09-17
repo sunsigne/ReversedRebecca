@@ -20,7 +20,12 @@ public abstract class GameObject implements Velocity {
 	////////// NAME ////////////
 	
 	//public abstract String toString();
-	public String toString() { return "error";};
+	
+	public String toString() { 
+		var clazz = "UNKOWN";
+		var goal = new GoalObject(getX(), getY(), true);
+		return clazz + " : " + goal.getX() + "-" + goal.getY();
+	}
 	
 	////////// POSITION ////////////
 

@@ -20,6 +20,14 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "PUZZLE : MOVING WALL";
+		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+	
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);

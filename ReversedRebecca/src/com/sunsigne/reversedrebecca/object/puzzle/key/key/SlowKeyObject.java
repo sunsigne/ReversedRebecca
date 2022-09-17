@@ -9,6 +9,12 @@ public class SlowKeyObject extends KeyObject {
 		divideSpeedBy(3);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "KEY SLOW";
+	}
+	
 	////////// TICK ////////////
 
 	int velXmax = -10;

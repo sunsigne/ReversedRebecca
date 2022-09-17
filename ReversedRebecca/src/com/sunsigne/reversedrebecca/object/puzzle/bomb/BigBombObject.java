@@ -9,4 +9,11 @@ public class BigBombObject extends BombObject {
 		super(puzzle, x + Size.S, y, 3 * Size.L, 3 * Size.L);
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB BIG";
+	}
+
 }

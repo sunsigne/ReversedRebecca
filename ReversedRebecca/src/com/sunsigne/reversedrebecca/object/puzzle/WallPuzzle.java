@@ -14,6 +14,24 @@ public class WallPuzzle extends GameObject implements TickFree {
 		this.image = image;
 	}
 
+	////////// USEFULL ////////////
+
+	private int getCol(int col) {
+		return (col / Size.L);
+	}
+
+	private int getRow(int row) {
+		return (row / Size.L);
+	}
+
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "PUZZLE : WALL";
+		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+
 	////////// RENDER ////////////
 
 	private BufferedImage image;

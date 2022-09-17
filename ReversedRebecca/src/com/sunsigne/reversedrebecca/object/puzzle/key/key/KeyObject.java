@@ -24,6 +24,21 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 		multiplySpeedBy(1);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "KEY";
+	}
+	
+	@Override
+	public String toString() {
+		var moving = "LEFT";
+		if ((getVelY() != 0))
+			moving = getVelY() > 0 ? "DOWN" : "UP";
+
+		return "PUZZLE : " + getName() + " : " + "MOVING:" + moving + " / " + getRow(getX()) + "-" + getCol(getY());
+	}
+
 	////////// SIZE ////////////
 
 	// smaller hitbox : the game is easier

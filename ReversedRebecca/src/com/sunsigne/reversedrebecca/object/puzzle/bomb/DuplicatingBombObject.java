@@ -12,7 +12,7 @@ public class DuplicatingBombObject extends CrazyBombObject {
 	public DuplicatingBombObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
 	}
-
+	
 	@Override
 	public void setExploded(boolean exploded) {
 		super.setExploded(exploded);
@@ -40,6 +40,13 @@ public class DuplicatingBombObject extends CrazyBombObject {
 			bomb[0].setVelX(-bomb[0].getVelX());
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB DUPLICATING";
+	}
+	
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;

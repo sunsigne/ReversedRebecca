@@ -11,6 +11,12 @@ public class UpsideDownLockObject extends LockObject {
 		super(puzzle);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "LOCK UPSIDEDOWN";
+	}
+	
 	////////// TICK ////////////
 
 	@Override

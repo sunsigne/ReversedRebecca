@@ -23,6 +23,14 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent {
 		loadImages();
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String toString() {
+		var clazz = "CHEST CARD";
+		return clazz + " : " + lootData;
+	}
+	
 	////////// LOOT ////////////
 
 	private boolean lootCreated;

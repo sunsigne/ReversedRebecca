@@ -15,6 +15,13 @@ public class MovingBombObject extends BombObject {
 		this(puzzle, x, y, 2 * Size.L, 2 * Size.L);
 	}
 	
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB MOVING";
+	}
+	
 	////////// VELOCITY ////////////
 
 	private int speed = Size.XS / 5;

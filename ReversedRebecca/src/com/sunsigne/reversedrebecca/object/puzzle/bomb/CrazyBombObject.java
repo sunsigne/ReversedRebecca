@@ -11,6 +11,13 @@ public class CrazyBombObject extends ShrinkBombObject {
 		defineNewXSpeed(Size.XS / 4);
 	}
 
+	////////// NAME ////////////
+	
+	@Override
+	protected String getName(){
+		return "BOMB CRAZY";
+	}
+	
 	////////// VELOCITY ////////////
 
 	private int speed = Size.XS / 4;
