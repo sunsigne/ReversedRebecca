@@ -26,10 +26,6 @@ public class PathFinder implements Position {
 	private PathFinder(PathSearcher initial_searcher, PathSearcher searcher, Position goal, boolean allow_complex_path,
 			Handler handler) {
 
-		PathFinderOptimizer optimizer = new PathFinderOptimizer();
-		if (optimizer.mustWait(searcher))
-			return;
-
 		this.initial_searcher = initial_searcher;
 		this.searcher = searcher;
 		this.goal = goal;
@@ -41,8 +37,7 @@ public class PathFinder implements Position {
 		setY(searcher.getY());
 		calculDistance();
 		path = findPath(allow_complex_path);
-
-		optimizer.updateSearcher(searcher, path);
+		
 	}
 
 	private PathSearcher initial_searcher;

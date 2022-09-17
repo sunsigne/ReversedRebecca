@@ -19,6 +19,7 @@ public abstract class GameObject implements Velocity {
 
 	////////// NAME ////////////
 
+	@Override
 	public String toString() { 
 		var clazz = "UNKOWN";
 		var goal = new GoalObject(getX(), getY(), true);
