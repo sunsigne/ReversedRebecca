@@ -1,0 +1,6 @@
+player = object = happy = Tu#regardes#mes#livres#?
+sarah = player = happy = J'étais#en#train#de#me#dire#que@ton#meuble#est#super#grand.
+sarah = player = laugh = Alors#que#tu#as,#genre…#Dix#livres.
+player = object = worry = Je#me#suis#promis#que#je#lirai@plus#de#livres#cette#année…
+sarah = player = laugh = Non,#ce#qui#me#fait#rire#c'est#que#j'ai#le#même@meuble,#alors#que#j'ai#encore#moins#de#livres#que#toi.
+player = object = laugh = Ha#!
