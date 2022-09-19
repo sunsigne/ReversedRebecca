@@ -100,6 +100,7 @@ $ -> DEED_OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
 
 Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. Son nom et son "poids" seront déterminés par les valeurs trouvées dans le dossier mentionné ci-dessous :
 la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.csv".
+Note : le "poids" détermine le nom de l'action à afficher sur l'écran de fin de niveau : le poids le plus fort l'emporte.
 
 
 ////// GOOD_DEED //////

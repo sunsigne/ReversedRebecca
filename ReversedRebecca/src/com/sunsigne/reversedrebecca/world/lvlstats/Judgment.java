@@ -44,11 +44,11 @@ public class Judgment {
 	}
 
 	private String getMean() {
-		return (deed.getBadWeight() != 0) ? "Mean" : null;
+		return (deed.getBadWeight() > deed.getGoodWeight()) ? "Mean" : null;
 	}
 
 	private String getNice() {
-		return (deed.getGoodWeight() != 0) ? "Nice" : null;
+		return (deed.getGoodWeight() > deed.getBadWeight()) ? "Nice" : null;
 	}
 
 	private String getPragmatic() {
