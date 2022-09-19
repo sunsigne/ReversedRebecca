@@ -6,5 +6,6 @@ MAKE_AMENDS = 2 % faire#amende#honorable
 
 ///// BAD /////
 
+INAPPROPRIATE_BEHAVIOR = 1% comportement#déplacé
 FRIEND_RECEIVED_BADLY = 1% amie#mal#reçue
 SEQUESTRATION = 2 % séquestration
