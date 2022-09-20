@@ -1,0 +1,11 @@
+sarah = player = happy = Au#fait,#comment#va#ta#coloc'#?
+player = object = no_sens = …#Quelle#coloc'#?
+sarah = player = surprised = Erika#!#Vous#n'êtes#pas#coloc'#?
+player = object = laugh = Ha#!#Non,#on#ne#vit#pas#ensemble.
+player = object = happy = Elle#vient#très souvent,#et#elle#a#les#clefs,@mais#c'est#juste#une#amie.
+sarah = player = wink = Et#il#n'y#a#rien#entre#vous#?
+player = object = happy_var = Non.#Je#suis#plutôt#garçons.
+player = object = excited = En#parlant#de#ça,#ça#avance#avec#Pierre#?
+sarah = player = akward = Ça#ne#te#regarde#pas… 
+sarah = player = wink = D'ailleurs,#tu#ne#devrais#pas@être#en#train#de#te#préparer#?
+player = object = laugh = Tu#as#raison.#Je#m'y#mets.

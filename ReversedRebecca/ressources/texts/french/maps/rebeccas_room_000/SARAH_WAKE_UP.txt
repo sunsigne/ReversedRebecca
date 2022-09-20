@@ -1,0 +1,2 @@
+player = object = you_silly_var = Tout#bien#réfléchi,#je#vais#la#laisser#dormir.
+player = object = you_silly = Inutile#de#la#réveiller#si#je#ne#suis#pas#prête.
