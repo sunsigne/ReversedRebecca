@@ -3,7 +3,7 @@ Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que c
 ////// SEE //////
 
 Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
-Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas.
+Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas par défaut (cela peut être en utilisant le Type de Requête BLOCKING_SIGHT, voir "requêtes state").
 
 exemple :
 TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42

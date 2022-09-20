@@ -53,6 +53,16 @@ Lorsque la Condition sera vérifiée, l'objet sera franchissable.
 Note : par défaut, les objets Piranha sont bloquants.
 
 
+////// BLOCKING_SIGHT //////
+
+
+Le Type de Requête BLOCKING_SIGHT permet de changer la propriété "opaque" d'un objet.
+Son utilité est très limitée, elle peut cependant s'avérer utile dans certaines situations, comme en utilisant le Type de Requête SEE par exemple (voir "requêtes conditionnelles").
+
+Son écriture fonctionne exactement de la même manière que pour le Type de Requête BLOCKING_PATH.
+Note : par défaut, les objets Piranha sont "non opaques". Dis autrement, par défaut, on voit au travers.
+
+
 ////// HITBOX //////
 
 

@@ -211,11 +211,17 @@ public abstract class PiranhaObject extends GameObject
 
 	////////// COLLISION ////////////
 
+	private boolean blockingSight;
+	
 	@Override
 	public boolean isBlockingSight() {
-		return false;
+		return blockingSight;
 	}
 
+	public void setBlockingSight(boolean blockingSight) {
+		this.blockingSight = blockingSight;
+	}
+	
 	private boolean blockingPath;
 
 	@Override
