@@ -40,6 +40,7 @@ public class MoveRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		if (target.equalsIgnoreCase("stop")) {
 			object.setGoal(null);
+			object.setMotionless();
 			return;
 		}
 
