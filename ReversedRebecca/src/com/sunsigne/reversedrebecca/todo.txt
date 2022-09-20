@@ -43,14 +43,12 @@
 	
 	////////// LVL000 ////////////
 	
-	gérer le save et deed des conséquence de coller sarah aux toilettes
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
 	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	traduire "je t'en pris" pendant les crêpes par "my pleasure" + traduire "on fait comme ça" lors de l'acceptation par "this is the way"
-	faire aller sarah regarder camille, puis s'installer sur le canapé, puis aller au toilette, puis le canapé
 
-	ajouter des actions si sarah est là : lui faire des pancakes, prposer à boire, etc.
+	ajouter des actions si sarah est là : lui faire des pancakes, prposer à boire, "blague" du verre d'eau, partir sans elle "toilette + canapé"
 	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas sauté sur l'occasion lorsqu'elle les a senti
 	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
 	
@@ -60,7 +58,6 @@
 	
 	"regarder la TV tj pas fait"
 	bibliothèque à faire ?
-	enfermer sarah chez soi (toilettes ou sieste)
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
 	
