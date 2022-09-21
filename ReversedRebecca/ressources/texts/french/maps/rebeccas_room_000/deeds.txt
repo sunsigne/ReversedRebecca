@@ -1,11 +1,12 @@
 ///// GOOD /////
 
-SHARE_PANCAKES = 1 % partager#ses#crêpes
-OFFER_PANCAKES = 1 % offrir#des#crêpes
-MAKE_AMENDS = 2 % faire#amende#honorable
+OFFER_A_JUICE = 1 % proposer#un#jus
+SHARE_PANCAKES = 2 % partager#ses#crêpes
+OFFER_PANCAKES = 2 % offrir#des#crêpes
+MAKE_AMENDS = 3 % faire#amende#honorable
 
 ///// BAD /////
 
-INAPPROPRIATE_BEHAVIOR = 1% comportement#déplacé
-FRIEND_RECEIVED_BADLY = 1% amie#mal#reçue
-SEQUESTRATION = 2 % séquestration
+INAPPROPRIATE_BEHAVIOR = 2% comportement#déplacé
+FRIEND_RECEIVED_BADLY = 2% amie#mal#reçue
+SEQUESTRATION = 4 % séquestration
