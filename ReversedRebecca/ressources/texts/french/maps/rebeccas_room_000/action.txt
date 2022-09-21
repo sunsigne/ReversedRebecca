@@ -53,6 +53,8 @@ DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
 TAKE_KEY = Key3 % prendre#la#clé
 OFFER_A_JUICE = Key3 % proposer#un#jus
+IT_WILL_BE_TASTY = Key1 % ça#va#être#bon#!
+SHARE_WITH_SARAH = Key2 % partager#avec#sarah
 
 ///// ENTRANCE /////
 
