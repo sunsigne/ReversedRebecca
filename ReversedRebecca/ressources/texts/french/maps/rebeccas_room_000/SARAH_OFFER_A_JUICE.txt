@@ -1,0 +1,3 @@
+player = RIGHT = excited = SARAH#!#TU#VEUX#UN#JUS#?
+sarah = LEFT = laugh = NON#MERCI#!
+player = LEFT = you_silly = Ben#moi,#j'en#prends#un.
