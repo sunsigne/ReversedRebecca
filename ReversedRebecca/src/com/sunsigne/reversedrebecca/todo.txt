@@ -57,6 +57,7 @@
 	petite animation de sortie avant la fin du lvl (+ dialogue ?)
 	
 	sarah doit réagir si quand on part il y a toujours des pancakes sur la table
+	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table
 	"regarder la TV tj pas fait"
 	bibliothèque à faire ?
 	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
