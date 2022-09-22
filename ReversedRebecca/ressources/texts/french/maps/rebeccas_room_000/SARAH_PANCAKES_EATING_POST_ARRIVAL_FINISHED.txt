@@ -1,0 +1,4 @@
+player = RIGHT = happy_var = Si#bonnes#que#j'en#ai#mangé#l'assiette#!
+sarah = DOWN = laugh = Oui,#j'ai#fait#pareil#!
+sarah = DOWN = happy = Si#ça#ne#t'embête#pas,#je#vais#faire@une#sieste#le#temps#que#tu#te#prépares.
+player = RIGHT = happy_var = D'accord,#je#te#réveillerai.

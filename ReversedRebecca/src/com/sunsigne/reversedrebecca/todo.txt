@@ -43,6 +43,7 @@
 	
 	////////// LVL000 ////////////
 	
+	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
 	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	ne pas oublié de gerer le verre quand on ouvre la porte

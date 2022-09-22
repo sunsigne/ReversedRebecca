@@ -53,8 +53,8 @@ DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
 TAKE_KEY = Key3 % prendre#la#clé
 OFFER_A_JUICE = Key3 % proposer#un#jus
-IT_WILL_BE_TASTY = Key1 % ça#va#être#bon#!
-SHARE_WITH_SARAH = Key2 % partager#avec#sarah
+ALL_FOR_ME = Key1 % tout#pour#moi#!
+SHARE = Key2 % partager
 
 ///// ENTRANCE /////
 
@@ -83,3 +83,4 @@ APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne#rien#dire
 TALK_VAR = Key1 % parler
 WAKE_UP = Key1 % réveiller
+I_MADE_PANCAKES = Key3 % j'ai#fait#des#crêpes
