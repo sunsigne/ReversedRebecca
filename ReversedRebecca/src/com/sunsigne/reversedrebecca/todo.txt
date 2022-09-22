@@ -42,26 +42,24 @@
 	DieWhenNoHp -> kill() prévoir un restart
 	
 	////////// LVL000 ////////////
-	
+		
+	gérer TOUS LES CAS de sieste : je "je suis prête", le réveille pour les crêpes, le dialogue de "je retrouve faire ma siest" quand fini de manger les crêpes
+	PS : gérer le verre d'eau quand on préviens sarah qu'il y a des crêpes
+	sarah doit réagir si quand on part il y a toujours des pancakes sur la table
 	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
+	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
+	"regarder la TV tj pas fait", attention au dodo de sarah
+	ajouter des actions si sarah est là : lui faire des pancakes, prposer à boire, "blague" du verre d'eau, partir sans elle "toilette + canapé"
+	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
+	
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
 	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	traduire "je t'en pris" pendant les crêpes par "my pleasure" + traduire "on fait comme ça" lors de l'acceptation par "this is the way"
 
-	ajouter des actions si sarah est là : lui faire des pancakes, prposer à boire, "blague" du verre d'eau, partir sans elle "toilette + canapé"
-	faire en sorte qu'on ne puisse pas cuire des crêpes à sarah si l'on a pas sauté sur l'occasion lorsqu'elle les a senti
-	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
-	
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
 	petite animation de sortie avant la fin du lvl (+ dialogue ?)
-	
-	sarah doit réagir si quand on part il y a toujours des pancakes sur la table
-	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table
-	"regarder la TV tj pas fait"
-	bibliothèque à faire ?
-	la bougie parfumée dans le lvl000 doit être fondu si on part en la laissant allumée
 	Animation de douche ? bulles
 	
 	////////// LVL000-1 ////////////
