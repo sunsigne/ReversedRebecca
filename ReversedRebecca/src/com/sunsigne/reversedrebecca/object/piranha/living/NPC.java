@@ -38,7 +38,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 			goal = new GoalObject(getGoal().getX(), getGoal().getY(), true);
 		var dirGoal = goal == null ? "N/A" : goal.getX() + "-" + goal.getY();
 
-		return clazz + " : " + dirName + " / " + dirAvoider + " / " + dirPos + " / " + "GOAL:"+ dirGoal;
+		return clazz + " : " + dirName + " / " + dirAvoider + " / " + dirPos + " / " + "GOAL:" + dirGoal;
 	}
 
 	////////// PLAYER AVOIDER ////////////
@@ -77,6 +77,9 @@ public class NPC extends LivingObject implements PlayerAvoider {
 				stopAndLookAtPlayer();
 		}
 
+		if (getPlayerAvoiderType() == AVOIDERTYPE.THROUGH && detectorObject instanceof Player)
+			return;
+		
 		blockPath(detectorObject);
 	}
 
