@@ -53,7 +53,6 @@
 	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
 	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	ajouter des actions si sarah est là : "blague" du verre d'eau, partir sans elle "toilette + canapé"
 	ne pas oublier d'ajouter le calin "dû" par rapport à la serviette
 	
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
