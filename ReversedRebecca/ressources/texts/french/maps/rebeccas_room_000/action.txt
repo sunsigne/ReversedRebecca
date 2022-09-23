@@ -83,4 +83,5 @@ APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne#rien#dire
 TALK_VAR = Key1 % parler
 WAKE_UP = Key1 % réveiller
+SOAK_SARAH = Key2 % tremper#Sarah
 I_MADE_PANCAKES = Key3 % j'ai#fait#des#crêpes

@@ -1,0 +1,5 @@
+sarah = player = angry = Mais#t'es#pas#bien#!@C'est#quoi#ton#problème#?
+player = sarah = excited = Ça#va#!@Je#voulais#voir#ce#que#ça#faisait.
+sarah = player = angry = Tu#t'attendais#à#quoi#?
+player = sarah = you_silly = Rien#de#précis.@Je#voulais#juste#essayer.
+sarah = player = angry = Mais#t'as#un#grain#!#Je#me#casse.

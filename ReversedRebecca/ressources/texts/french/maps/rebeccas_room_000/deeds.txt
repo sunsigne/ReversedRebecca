@@ -9,4 +9,5 @@ MAKE_AMENDS = 3 % faire#amende#honorable
 
 INAPPROPRIATE_BEHAVIOR = 2% comportement#déplacé
 FRIEND_RECEIVED_BADLY = 2% amie#mal#reçue
+BAD_JOKE = 3% blague#douteuse
 SEQUESTRATION = 4 % séquestration
