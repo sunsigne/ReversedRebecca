@@ -28,54 +28,42 @@ public class Judgment {
 
 		if (file.doesExist(userData, path) == false)
 			return times;
-		
+
 		times[0] = Integer.parseInt(file.read(userData, "FAST", path));
 		times[1] = Integer.parseInt(file.read(userData, "METICULOUS", path));
 
 		return times;
 	}
 
-	private String getFast() {
-		return stopWatch.getTime() < times[0] ? "Fast" : null;
+	private YOUARE youAre;
+
+	private YOUARE loadYouAre() {
+		if (stopWatch.getTime() < times[0])
+			return YOUARE.FAST;
+
+		if (deed.getBadWeight() >= 99)
+			return YOUARE.PSYCHOPATH;
+
+		if (deed.getBadWeight() > deed.getGoodWeight())
+			return YOUARE.MEAN;
+
+		if (deed.getGoodWeight() > deed.getBadWeight())
+			return YOUARE.NICE;
+
+		if (stopWatch.getTime() >= times[1])
+			return YOUARE.METICULOUS;
+
+		return YOUARE.PRAGMATIC;
 	}
 
-	private String getMeticulous() {
-		return stopWatch.getTime() >= times[1] ? "Meticulous" : null;
-	}
-
-	private String getMean() {
-		return (deed.getBadWeight() > deed.getGoodWeight()) ? "Mean" : null;
-	}
-
-	private String getNice() {
-		return (deed.getGoodWeight() > deed.getBadWeight()) ? "Nice" : null;
-	}
-
-	private String getPragmatic() {
-		return "Pragmatic";
-	}
-
-	private String youAre;
-
-	private String loadYouAre() {
-		if (getFast() != null)
-			return getFast();
-
-		if (getMean() != null)
-			return getMean();
-
-		if (getNice() != null)
-			return getNice();
-
-		if (getMeticulous() != null)
-			return getMeticulous();
-
-		return getPragmatic();
+	protected boolean isPsychoPath() {
+		youAre = loadYouAre();
+		return youAre == YOUARE.PSYCHOPATH;
 	}
 
 	public String getYouAre() {
 		youAre = loadYouAre();
-		return new Translatable().getTranslatedText("LevelYouAre" + youAre, FilePath.MENU);
+		return new Translatable().getTranslatedText("LevelYouAre" + youAre.getName(), FilePath.MENU);
 	}
 
 }

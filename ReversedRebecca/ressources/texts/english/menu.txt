@@ -11,11 +11,12 @@ LevelGoodDeed = Good#Deed
 LevelBadDeed = Bad#Deed
 LevelNoneDeed = None
 LevelEndingAchieved = Ending#Achieved
-LevelYouArePragmatic = You#are#:#pragmatic
 LevelYouAreFast = You#are#:#fast
+LevelYouArePragmatic = You#are#:#pragmatic
 LevelYouAreMeticulous = You#are#:#meticulous
 LevelYouAreNice = You#are#:#nice
 LevelYouAreMean = You#are#:#mean
+LevelYouArePsycopath = You#are#:#psycopath
 LevelClickToContinue = Click#to#continue
 
 ///// MAIN /////
