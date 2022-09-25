@@ -14,5 +14,5 @@ BEING_A_JERK = 4% être#une#ordure
 
 ///// PSYCHOPATH /////
 
-DIDN'T_KILL_ANYONE = 99% n'a#tué#personne
+NO_KILL = 99% aucun#meurtre
 SEQUESTRATION = 99% séquestration

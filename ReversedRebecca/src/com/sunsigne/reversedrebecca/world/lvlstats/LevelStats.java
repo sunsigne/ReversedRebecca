@@ -83,6 +83,11 @@ public class LevelStats {
 		judgement = new Judgment(mapName, stopWatch, deed);
 	}
 
+
+	public boolean isPsychoPath() {
+		return judgement.isPsychoPath();
+	}
+	
 	public String getYouAre() {
 		return judgement.getYouAre();
 	}

@@ -24,9 +24,8 @@ import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 public class LevelCompletedScreen implements Updatable, TickFree {
 
 	public LevelCompletedScreen(String ending, String lvl) {
-		new SoundTask().playMusic("victory", false, false);
-
 		loadStats(ending);
+		loadMusic();
 		loadFont();
 		loadText();
 		createContinueButton(lvl);
@@ -58,9 +57,17 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		goodDeed_stats = format(stats.getGoodDeed());
 		badDeed_stats = format(stats.getBadDeed());
 		you_are_stats = format(stats.getYouAre());
+		isPsychopath = stats.isPsychoPath();
 		this.ending_stats = ending_stats;
 	}
 
+	private boolean isPsychopath;
+	
+	private void loadMusic() {
+		var name = isPsychopath ? "absolute_evilness" : "victory";
+		new SoundTask().playMusic(name, false, false);
+	}
+	
 	////////// FONT ////////////
 
 	private Font title_font;

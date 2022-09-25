@@ -1,4 +1,3 @@
 player = DOWN = evil_var2 = Voilà#ma#chance,#elle#dort#!
-player = DOWN = you_silly = Je#vais#devoir#partir#sans#elle…
-player = DOWN = laugh = Je#me#demande#quelle#tête#elle#fera#quand@elle#se#rendra#compte#que#je#l'ai#enfermé
-player = DOWN = surprised = Ho#!#J'y#pense#!
+player = DOWN = laugh = Je#me#demande#quelle#tête#elle#fera#quand@elle#se#rendra#compte#que#je#l'ai#enfermé.
+player = DOWN = surprised = Ho#!#J'ai#une#idée#!

@@ -16,7 +16,7 @@ LevelYouArePragmatic = You#are#:#pragmatic
 LevelYouAreMeticulous = You#are#:#meticulous
 LevelYouAreNice = You#are#:#nice
 LevelYouAreMean = You#are#:#mean
-LevelYouArePsycopath = You#are#:#psycopath
+LevelYouArePsychopath = You#are#:#psycopath
 LevelClickToContinue = Click#to#continue
 
 ///// MAIN /////
