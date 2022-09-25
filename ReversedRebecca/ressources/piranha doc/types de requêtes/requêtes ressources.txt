@@ -102,6 +102,8 @@ Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. 
 la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.csv".
 Note : le "poids" détermine le nom de l'action à afficher sur l'écran de fin de niveau : le poids le plus fort l'emporte.
 
+Note : pour déclencher une route "psychopathe", il suffit de pointer vers un BAD DEED dont le poids est supérieur ou égal à 99. Il est facultatif mais conseillé de créer également un GOOD DEED de "psychopathe" pour coller au thème, comme "n'a tué qu'une seule personne" par exemple.
+
 
 ////// GOOD_DEED //////
 

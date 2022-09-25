@@ -11,4 +11,8 @@ FRIEND_RECEIVED_BADLY = 1% amie#mal#reçue
 INAPPROPRIATE_BEHAVIOR = 2% comportement#déplacé
 BAD_JOKE = 3% blague#douteuse
 BEING_A_JERK = 4% être#une#ordure
-SEQUESTRATION = 4% séquestration
+
+///// PSYCHOPATH /////
+
+DIDN'T_KILL_ANYONE = 99% n'a#tué#personne
+SEQUESTRATION = 99% séquestration
