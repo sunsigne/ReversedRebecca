@@ -45,6 +45,7 @@
 	
 	////////// LVL000 ////////////
 
+	bug -> si le joueur donne les crêpes à Sarah en étant en haut du canapé -> freeze car pas de chemin
 	gérer TOUS LES CAS de "je suis prête", incluant la sieste
 	PS : gérer le verre d'eau quand on préviens sarah qu'il y a des crêpes
 	ne pas oublié de gerer le verre quand on ouvre la porte

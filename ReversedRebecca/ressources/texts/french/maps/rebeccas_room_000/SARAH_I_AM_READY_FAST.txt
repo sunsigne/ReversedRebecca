@@ -1,0 +1,5 @@
+player = object = happy = Je#suis#prête#!#On#peut#y#aller#!
+sarah = player = laugh = Ha#!#Déjà#?#Ben,#allons-y.
+sarah = player = happy = Mais#avant,#passons#à#mon#atelier.@J'ai#un#truc#pour#toi.
+player = object = laugh = Je#m'en#doutais.#T'es#la#meilleure#!
+sarah = player = wink = Ne#l'oublie#jamais.
