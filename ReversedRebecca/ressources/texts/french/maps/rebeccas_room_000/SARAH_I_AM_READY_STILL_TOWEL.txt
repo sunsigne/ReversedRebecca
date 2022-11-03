@@ -1,1 +1,0 @@
-player = DOWN = no_sens = Je#suis#toujours#en#serviette.

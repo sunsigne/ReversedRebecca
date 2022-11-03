@@ -43,6 +43,8 @@ Note : pour des raisons que vous comprendrez, ce Type de Requête est deux fois 
 
 Note : vous pouvez en deviner leurs fonctionnements, aussi, nous ne les détaillerons pas, mais il existe également les Types de Requête SLOW_BACKUP et FAST_BACKUP.
 
+Attention ! Ce Type de requête est un peu instable : le trajet n'est pas trouvé losqu'il fait intervenir des PathPoint (voir ressources\maps\mappable.txt). À n'utiliser que sur des trajectoires simples) 
+
 
 ////// TP //////
 
