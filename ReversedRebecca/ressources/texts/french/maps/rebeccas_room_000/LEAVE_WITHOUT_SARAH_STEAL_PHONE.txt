@@ -1,2 +1,2 @@
 player = DOWN = surprised = Quel#malheur#!#Son#téléphone@est#tombé#dans#la#cuvette#!
-player = DOWN = laugh = Ha#ha#!
+player = DOWN = evil_var2 = Bonne#chance#pour#appeler#à#l'aide.
