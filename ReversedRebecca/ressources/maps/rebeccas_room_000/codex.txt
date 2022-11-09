@@ -90,3 +90,4 @@ OBJ-42 = /hidden
 OBJ-43 = /hidden
 OBJ-45 = Sarah Toilet Path Checker
 OBJ-46 = Wall
+OBJ-47 = Glasses of water
