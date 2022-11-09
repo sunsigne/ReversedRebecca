@@ -45,7 +45,6 @@
 	
 	////////// LVL000 ////////////
 
-	dans les "je suis prête", gérer les cas du calin dû
 	PS : gérer le verre d'eau quand on préviens sarah qu'il y a des crêpes
 	ne pas oublié de gerer le verre quand on ouvre la porte
 	gérer le verre d'eau sur les 3 fins différentes
@@ -110,7 +109,7 @@
 
 	////////// SUCCES ////////////
 		
-	5 fruits et légumes par jours : manger un fruit virtuel
+	5 bits et légumes par jours : manger un fruit virtuel
 	Vous avez été terminé : être tué définitivement par un terminator
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue
 	Fin secrète : finir le jeu en difficile
