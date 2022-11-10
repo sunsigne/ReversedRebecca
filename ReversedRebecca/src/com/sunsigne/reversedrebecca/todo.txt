@@ -45,7 +45,6 @@
 	
 	////////// LVL000 ////////////
 
-	retirer la possibilité de ramasser le verre d'eau lors du diabloge ready après le calin towel
 	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
 	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
 	"regarder la TV tj pas fait", attention au dodo de sarah
