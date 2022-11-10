@@ -45,8 +45,7 @@
 	
 	////////// LVL000 ////////////
 
-	ne pas oublié de gerer le verre quand on ouvre la porte -> leur récupération
-	gérer le verre d'eau sur les 3 fins différentes
+	gérer le verre d'eau sur les 2 fins après l'arrivée de Sarah
 	créer le cas spécifique du  : poser son verre d'eau à l'entrée, etre en serviette, faire un calin à sarah = sarah renverse le verre par accident
 	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
 	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
