@@ -45,7 +45,7 @@
 	
 	////////// LVL000 ////////////
 
-	créer le cas spécifique du  : poser son verre d'eau à l'entrée, etre en serviette, faire un calin à sarah = sarah renverse le verre par accident
+	sarah doit demander avec de partir pk il y avait (ou a) un verre d'eau à l'entrée
 	cas de figure très spécifique à gérer : attendre que sarah arrive, faire des crêpes puis "partager", se disputer avec elle et la laisser partir -> gérer les crêpes dans cette situation
 	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
 	"regarder la TV tj pas fait", attention au dodo de sarah
