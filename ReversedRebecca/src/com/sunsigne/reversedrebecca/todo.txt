@@ -8,7 +8,6 @@
 
 	////////// EN COURS ////////////
 	
-	ATTENTION ! être au dessus du canapé vertical freeze le jeu lors de la dispute des toilettes
 	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
 	des musiques qui restent alors qu'elles ne devraient pas ...
 	
