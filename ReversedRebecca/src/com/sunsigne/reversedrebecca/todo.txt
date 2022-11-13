@@ -34,6 +34,7 @@
 
 	////////// FACILE ////////////
 
+	l'icone principale a sauté ...
 	la voix de sarah est actuellement une copie de la voix "error"
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
