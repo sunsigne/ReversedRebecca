@@ -8,6 +8,7 @@
 
 	////////// EN COURS ////////////
 	
+	ATTENTION ! "j'ai fait des crêpes" semblent disponible durant la dispute si on manoeuvre bien
 	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
 	des musiques qui restent alors qu'elles ne devraient pas ...
 	
