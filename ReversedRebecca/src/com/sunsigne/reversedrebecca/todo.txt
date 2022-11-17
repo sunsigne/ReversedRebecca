@@ -34,7 +34,6 @@
 
 	////////// FACILE ////////////
 
-	la voix de sarah est actuellement une copie de la voix "error"
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
@@ -45,7 +44,6 @@
 	
 	////////// LVL000 ////////////
 
-	faire un truc du style "je vais pas lui laisser ça" si on sequestre avec des pancakes sur la table ?
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	
 	manger des cookie et boire du jeu ne fait rien, trouver une idée.
