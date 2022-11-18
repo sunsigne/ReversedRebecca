@@ -13,6 +13,7 @@ public class FilePath {
 			: System.getenv("APPDATA").replace("\\", "/") + "/" + Infos.NAME + "/";
 
 	public static final String ACTION = "action.txt";
+	public static final String BONUS_TEXT = "bonus_text.txt";
 	public static final String MENU = "menu.txt";
 	public static final String KEY = "key.txt";
 	public static final String PUZZLE = "puzzle.txt";

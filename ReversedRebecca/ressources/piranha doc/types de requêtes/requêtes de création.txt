@@ -56,8 +56,28 @@ Lorsque la Condition sera vérifiée, sera créé un objet animé :
 - qui s'arrête sur la dernière image (la baignoire est rempli).
 
 
-////// DELETE //////
+////// CREATE_BONUSTEXT //////
 
+Le Type de Requête CREATE_BONUSTEXT permet de créer un "bonus texte" à l'emplacement désigné.
+Ce texte aura les mêmes propriétés que les textes qui s'affichent lors de ramassage d'objets (c.-à-d. qu'ils vont lentement vers le haut et qu'ils disparaissent tous seuls en 0,6 seconde).
+Note : aucun index n'est à renseigner pour créer un tel objet. En effet, les "bonus textes" sont créés sur une "couche" spécialement dédiée.
+
+exemple :
+TIME -> 0 = CREATE_BONUSTEXT -> 10-20:YOLO
+
+Lorsque la Condition sera vérifiée, sera créé aux coordonnées x=10 et y=20 un objet "bonus texte" dont le contenu sera la valeur trouvée pour le terme "YOLO" dans le fichier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/bonus_text.txt".
+Attention ! Ce fichier doit disposer ses informations de la façon suivante :
+
+SLURP = SLURP
+CRUNCH = CRUNCH
+KNOCKKNOCK = TOC#TOC
+(etc.)
+
+À gauche se trouve le terme recherché par le système piranha, et à droite se trouve sa traduction dans la langue actuelle (donc, le texte qui sera affiché).
+Note : il n'existe aucun Type de Requête pour supprimer un "bonus texte", dans la mesure où ils disparaissent tous seuls naturellement en moins d'une seconde.
+
+
+////// DELETE //////
 
 Le Type de Requête DELETE permet de supprimer l'objet qui se trouve aux coordonnées indiquée.
 Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, une seconde cible correspondant à l'index doit être établie (voir "index")
