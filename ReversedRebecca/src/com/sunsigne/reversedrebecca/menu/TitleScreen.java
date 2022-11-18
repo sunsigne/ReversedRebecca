@@ -23,7 +23,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
-import com.sunsigne.reversedrebecca.system.EmailTask;
+import com.sunsigne.reversedrebecca.system.FormTask;
 import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.World;
@@ -81,7 +81,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createCrashButton() {
-		GenericListener onPress = () -> new EmailTask().sendRequest();
+		GenericListener onPress = () -> new FormTask().sendRequest();
 		ButtonObject button = new TitleScreenButton("Remplir le questionnaire", 175, -25, 420, 140, onPress, null);
 		((TitleScreenButton) button).setFontSize(30f);
 		LAYER.MENU.addObject(button);

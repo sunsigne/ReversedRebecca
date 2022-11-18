@@ -18,9 +18,9 @@
 
 	////////// DIFFICILE ////////////
 
+	créer un système pour editer des dialogues avec le visuel du jeu
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
-	transformer les fichiers .txt et .csv en fichiers .pir
 	le cursor devient de + en + grand lorsque la résolution diminue
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	faire un GUI menu
