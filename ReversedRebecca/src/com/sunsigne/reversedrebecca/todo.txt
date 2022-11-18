@@ -46,13 +46,11 @@
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	
-	manger des cookie et boire du jeu ne fait rien, trouver une idée.
-	le "toc toc" n'est pas assez evident en sens où les sourds et les joueur aillant mis le volume à 0 ne remarqueront rien
 	traduire "je t'en pris" pendant les crêpes par "my pleasure"
+	traduire "confiture aux cochons" par "cast pearls before swine"
 
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
-	petite animation de sortie avant la fin du lvl sans sarah (+ dialogue ?)
 	Animation de douche ? bulles
 	
 	////////// LVL000-1 ////////////
