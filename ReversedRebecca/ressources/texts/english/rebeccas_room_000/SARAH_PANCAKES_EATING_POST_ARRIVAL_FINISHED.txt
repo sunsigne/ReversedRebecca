@@ -1,0 +1,4 @@
+player = RIGHT = happy_var = So#good#that#I#ate#the#plate!
+sarah = DOWN = laugh = Yeah,#I#did#the#same#thing!
+sarah = DOWN = happy = If#you#don't#mind,#I#will#take#a#nap@while#you#get#prepared.
+player = RIGHT = happy_var = Sure!#I'll#wake#you#up.

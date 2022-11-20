@@ -1,6 +1,6 @@
 sarah = LEFT = sad = Ha…
 player = object = worry = C'est#pas#contre#toi…@Une#prochaine#fois,#d'accord#?
 sarah = player = happy = Oui,#pas#de#soucis.
-sarah = player = wink = Mais#si#ça#peut#te#faire#changer#d'avis,@Je#voulais#t'offrir#quelque#chose#en#chemin.
+sarah = player = wink = Mais#si#ça#peut#te#faire#changer#d'avis,@je#voulais#t'offrir#quelque#chose#en#chemin.
 
 

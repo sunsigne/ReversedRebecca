@@ -1,0 +1,8 @@
+sarah = player = angry = Wow,#what#are#you#doing?
+player = object = unhappy = I…#I#was#just…#hugging#you…
+sarah = player = akward = …#despite#being#half#naked?
+player = object = blush = Oops,#I#knew#I#forgot#something…
+sarah = player = happy_var = That's#okay.#You#just#took#me#by#surprise.
+sarah = player = wink = Put#some#clothes#on#and#we'll#talk#about#it.
+rebecca = object = laugh = Yes,#sorry.
+sarah = player = happy = Anyway,#How#about#we#go#to#work#together?

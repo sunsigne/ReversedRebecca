@@ -1,0 +1,2 @@
+player = DOWN = surprised = What#a#pity!#Her#phone#fell#in#the#toilet!
+player = DOWN = evil_var2 = Good#luck#calling#for#help.

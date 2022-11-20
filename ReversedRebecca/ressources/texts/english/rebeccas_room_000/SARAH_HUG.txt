@@ -1,0 +1,2 @@
+player = object = excited = Hi,#Sarah!#It's#nice#to#see#you.
+sarah = player = laugh = Yeah,#I'm#happy#too.

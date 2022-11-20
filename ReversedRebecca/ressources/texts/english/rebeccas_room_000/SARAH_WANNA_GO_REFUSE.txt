@@ -1,0 +1,6 @@
+sarah = LEFT = sad = Oh…
+player = object = worry = It's#not#against#you…@Next#time,#okay#?
+sarah = player = happy = Yeah…
+sarah = player = wink = But#if#it#might#change#your#mind,@I#wanted#to#get#you#something#on#the#way.
+
+

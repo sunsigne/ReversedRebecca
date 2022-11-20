@@ -1,0 +1,1 @@
+player = object = you_silly = It#was#definitely#a#good#idea.

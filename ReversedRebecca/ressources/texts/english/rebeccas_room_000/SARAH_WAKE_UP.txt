@@ -1,0 +1,2 @@
+player = object = you_silly_var = On#second#thought,#I'll#let#her#sleep.
+player = object = you_silly = No#need#to#wake#her#up#until#I'm#ready.

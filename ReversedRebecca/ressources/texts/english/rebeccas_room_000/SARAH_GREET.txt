@@ -1,0 +1,5 @@
+player = object = excited = Hi,#Sarah!#How#are#you?
+sarah = player = laugh = I'm#fine,#thank#you.
+sarah = player = happy = Are#you#ready#for#work#?@I#thought#we#could#go#together.
+
+

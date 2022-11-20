@@ -1,0 +1,11 @@
+player = object = happy = …
+sarah = UP = worry = ?
+player = object = worry = …
+sarah = player = happy = What's#the#matter?
+player = object = laugh = I#was#looking#at#your#hair!@They#are#very#long!
+sarah = player = happy_var = Yeah,#I've#let#them#grow#for#seven#years.
+player = object = excited = They#are#gorgeous!@It#must#take#a#long#time#to#maintain…
+sarah = player = laugh = Hell#yes!
+sarah = player = happy = I've#been#thinking#about#shortening#them@for#quite#a#while,#because#of#that.
+player = object = happy = Anyway,#it#fits#you#well.
+sarah = player = happy_var = Thank#you,#that's#sweet.

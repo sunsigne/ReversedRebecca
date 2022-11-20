@@ -1,0 +1,4 @@
+player = object = happy_var = Why#not?#I'll#let#you#know#when#I'm#ready.
+sarah = player = happy = Fine.#Let's#do#this.
+
+

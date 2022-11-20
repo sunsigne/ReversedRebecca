@@ -34,7 +34,9 @@
 
 	////////// FACILE ////////////
 
-	Rebecca onométopée : Heu... -> Uh... / Ben mince -> Dear me... / Zut -> Yikes
+	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
+	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
@@ -48,9 +50,6 @@
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	
-	traduire "je t'en pris" pendant les crêpes par "my pleasure"
-	traduire "confiture aux cochons" par "cast pearls before swine"
-
 	temps pour sarah : 150 secondes ?
 	temps "méticuleux" à vérifier
 	Animation de douche ? bulles

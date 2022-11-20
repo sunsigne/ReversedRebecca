@@ -1,0 +1,3 @@
+sarah = player = happy = Let's#go#to#my#workshop#first.@I#have#a#surprise#for#you.
+player = object = laugh = I#suspected#a#little.@You#are#the#best!
+sarah = player = wink = Don't#forget#it.

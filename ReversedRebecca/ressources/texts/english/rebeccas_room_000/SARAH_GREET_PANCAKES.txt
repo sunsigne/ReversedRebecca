@@ -1,0 +1,3 @@
+player = object = excited = Hi,#Sarah!#How#are#you?
+sarah = player = happy = I'm#fine,#thank#yo…
+sarah = player = asleep = *sniff*#*sniff*
