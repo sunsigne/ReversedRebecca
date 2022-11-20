@@ -1,2 +1,2 @@
 player = DOWN = you_silly = Bah…#Je#finirai#bien#par#tomber#dessus@en#cherchant#un#peu.
-player = DOWN = happy = Je#devrair#probablement#refaire#un#tour@de#la#maison.
+player = DOWN = happy = Je#devrais#probablement#refaire#un#tour@de#la#maison.

@@ -34,6 +34,8 @@
 
 	////////// FACILE ////////////
 
+	Rebecca onométopée : Heu... -> Uh... / Ben mince -> Dear me... / Zut -> Yikes
+
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
