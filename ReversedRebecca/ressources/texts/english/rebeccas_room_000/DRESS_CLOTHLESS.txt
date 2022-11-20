@@ -1,0 +1,2 @@
+player = object = unhappy = I#have#nothing#left#to#wear…
+player = object = you_silly_var = No#choice,#I'm#going#to#have#to#do#the#laundry.

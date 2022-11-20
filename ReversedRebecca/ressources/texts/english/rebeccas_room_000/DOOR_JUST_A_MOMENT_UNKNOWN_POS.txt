@@ -1,0 +1,2 @@
+player = UP = laugh = Just#a#second,#I'm#looking#for#my#keys!
+sarah = DOWN = laugh = This#is#so#Rebecca!@Ok,#I'm#waiting.

@@ -1,0 +1,3 @@
+player = UP = laugh = Who's#there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!

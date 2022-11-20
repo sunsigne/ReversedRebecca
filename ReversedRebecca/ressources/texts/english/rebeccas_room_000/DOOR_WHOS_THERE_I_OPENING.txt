@@ -1,0 +1,5 @@
+player = UP = laugh = Who's#there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!
+player = UP = happy = Just#a#second,#I'm#opening!
+sarah = DOWN = laugh = If#you#make#it.
