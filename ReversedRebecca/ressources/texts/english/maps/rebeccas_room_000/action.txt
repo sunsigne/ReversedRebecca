@@ -1,0 +1,88 @@
+///// BEDROOM /////
+
+WAKE_UP = Key1 % wake#up
+SEARCH_KEY = Key3 % search#(key?)
+WATCH = Key1 % watch
+CANDLE_LIGHT = Key2 % light#the#candle
+CANDLE_EXTINGUISH = Key2 % blow#out#the#candle
+DRESS = Key2 % get#dressed
+TALK = Key1 % talk
+WATER_PLANT = Key2 % water
+
+///// BATHROOM /////
+
+WATER_TAKE = Key1 % pour#water
+WATER_EMPTY = Key1 % empty#water
+FILL = Key2 % fill
+EMPTY = Key2 % empty
+WASH = Key1 % take#a#bath
+LEAVE = Key1 % get#out
+CLEAN_HAIR = Key2 % clean#the#hair
+TAKE = Key1 % take
+CLEAN_CLOTHES = Key2 % pick#up#clothes
+DO_LAUNDRY = Key2 % do#the#laundry
+DO_LAUNDRY_SHORT = Key2 % laundry
+SEARCH_KEY_SHORT = Key3 % search
+
+///// TOILET /////
+
+USE = Key1 % use
+
+///// DESK /////
+
+PLAY = Key1 % play
+PLAY_ANYWAY = Key1 % play#anyway
+JUST_ONE_GAME = Key1 % just#one#game...
+I_AM_WEAK = Key1 % I#am#weak...
+TAKE_GLASS = Key2 % take
+ASK_FOR_KEY = Key3 % where#are#my#keys?
+
+///// LIVING ROOM /////
+
+RELAX = Key1 % relax
+FACE_REALITY = Key1 % face#reality
+WATCH_TV = Key1 % watch#TV
+SIT = Key1 % sit
+EXIT = Key1 % get#up
+
+///// KITCHEN /////
+
+DO_PANCAKES = Key2 % make#pancakes
+EAT_COOKIE = Key1 % eat#a#cookie
+DRINK_JUICE = Key2 % drink#a#juice
+WAIT_WHAT = Key3 % What?!
+TAKE_KEY = Key3 % take#the#key
+OFFER_A_JUICE = Key3 % offer#a#juice
+ALL_FOR_ME = Key1 % all#for#me!
+SHARE = Key2 % share
+
+///// ENTRANCE /////
+
+OPEN = Key1 % open
+SEARCH = Key1 % search#alone
+THINK = Key2 % think#(solution)
+GO_TO_WORK = Key3 % go#to#work
+LEAVE_WITHOUT_SARAH = Key3 % leave#without#Sarah
+BRING_SARAH = Key2 % bring#Sarah
+JUST_A_MOMENT = Key1 % just#a#second...
+WHOS_THERE = Key2 % who's#there?
+
+///// SARAH /////
+
+GREET = Key1 % greet
+HUG = Key2 % hug
+GREAT_IDEA = Key1 % sure!
+NO_THANKS = Key2 % nah,#thank
+I_ACCEPT = Key1 % I#accept
+ANOTHER_TIME = Key2 % next#time
+MAKE_SOME = Key1 % I'll#make#you#some
+WERE_TASTY = Key2 % they#were#tastyzdd
+WE_SHARE = Key1 % let's#share
+YES_I_KNOW = Key2 % yes,#it#does
+I_AM_READY = Key3 % I#am#ready
+APOLOGIZE = Key1 % apologize
+SAY_NOTHING = Key2 % say#nothing
+TALK_VAR = Key1 % talk
+WAKE = Key1 % wake#up
+SOAK_SARAH = Key2 % soak#Sarah
+I_MADE_PANCAKES = Key3 % I#made#pancakes
