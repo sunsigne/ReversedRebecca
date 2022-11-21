@@ -10,14 +10,17 @@
 	
 	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
 	des musiques qui restent alors qu'elles ne devraient pas ...
-	pas fini : regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
-	le bouton "questionnaire" sur l'écran titre est pas terrible ...
-
+	s'assoir aux différentes chaises ne fait rien de spéciale. Une idée ?
+	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
+	son pour l'ouverture des puzzles ?
+	"regarder la TV tj pas fait", attention au dodo de sarah
+	Animation de douche ? bulles
+	
 	////////// PIRA ////////////
 
 	////////// DIFFICILE ////////////
 
-	créer un système pour editer des dialogues avec le visuel du jeu
+	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
 	le cursor devient de + en + grand lorsque la résolution diminue
@@ -45,13 +48,9 @@
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
-	
+
 	////////// LVL000 ////////////
 
-	"regarder la TV tj pas fait", attention au dodo de sarah
-	Animation de douche ? bulles
-	s'assoir aux différentes chaises ne fait rien de spéciale. Une idée ?
-	
 	////////// LVL000-1 ////////////
 	
 	créer les dalles spéciales
@@ -71,13 +70,14 @@
 	
 	////////// SONS ////////////
 	
-	faire le bon bruit quand on ouvre le coffre
-	son pour l'ouverture des puzzles ?
+	faire le bon bruit quand on ouvre le coffre	
 	
 	////////// A CREER PLUS TARD ////////////
 	
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
-	créer une animation "sick" pour quand on marche
+	créer une animation "sick" pour quand on marche	
+	le bouton "questionnaire" sur l'écran titre est pas terrible ...
+	
 
 	///////// IDEE ////////////
 
