@@ -1,1 +1,1 @@
-player = object = you_silly = It#was#definitely#a#good#idea.
+player = object = you_silly = It#definitely#was#a#good#idea.

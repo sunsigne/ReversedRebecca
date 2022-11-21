@@ -63,7 +63,7 @@ SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key3 % aller#au#travail
 LEAVE_WITHOUT_SARAH = Key3 % partir#sans#Sarah
-BRING_SARAH = Key2 % faire#venir#sarah
+BRING_SARAH = Key2 % faire#venir#Sarah
 JUST_A_MOMENT = Key1 % juste#une#seconde...
 WHOS_THERE = Key2 % c'est#qui#?
 
@@ -83,6 +83,6 @@ I_AM_READY = Key3 % je#suis#prête
 APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne#rien#dire
 TALK_VAR = Key1 % parler
-WAKE_UP = Key1 % réveiller
+WAKE = Key1 % réveiller
 SOAK_SARAH = Key2 % tremper#Sarah
 I_MADE_PANCAKES = Key3 % j'ai#fait#des#crêpes
