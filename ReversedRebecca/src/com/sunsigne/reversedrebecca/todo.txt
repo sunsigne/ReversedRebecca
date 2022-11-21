@@ -7,13 +7,7 @@
 	sons
 
 	////////// EN COURS ////////////
-	
-	s'assoir aux différentes chaises ne fait rien de spéciale. Une idée ?
-	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
-	son pour l'ouverture des puzzles ?
-	"regarder la TV tj pas fait", attention au dodo de sarah
-	Animation de douche ? bulles
-	
+
 	////////// PIRA ////////////
 
 	////////// DIFFICILE ////////////
@@ -38,6 +32,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
@@ -48,7 +43,10 @@
 	DieWhenNoHp -> kill() prévoir un restart
 
 	////////// LVL000 ////////////
-
+	
+	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
+	"regarder la TV tj pas fait", attention au dodo de sarah
+	
 	////////// LVL000-1 ////////////
 	
 	créer les dalles spéciales
