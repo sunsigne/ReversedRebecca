@@ -38,6 +38,9 @@ public class TextAction implements Updatable {
 		if (tripleAction == null)
 			return;
 
+		if (tripleAction != interactive.getTripleAction())
+			return;
+		
 		// player can't interact
 		if (!interactive.canPlayerInterfact())
 			return;

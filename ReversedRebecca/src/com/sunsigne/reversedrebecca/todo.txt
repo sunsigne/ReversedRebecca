@@ -10,10 +10,8 @@
 	
 	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
 	des musiques qui restent alors qu'elles ne devraient pas ...
-	l'affichage des actions devient bizarre qunad on les spam, par exemple avec l'évier
-	
-	pas fini : english + regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
-	le bouton "questionnaire" sur l'écran titre est pas terrible ... Pareil pour la classe "EmailTask" (et ne marche parfois pas ?)
+	pas fini : regarder la tv + nombre de fins -> penser à supprimer l'inutile pour le test
+	le bouton "questionnaire" sur l'écran titre est pas terrible ...
 
 	////////// PIRA ////////////
 
@@ -39,6 +37,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
@@ -50,10 +49,8 @@
 	////////// LVL000 ////////////
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	
-	temps pour sarah : 150 secondes ?
-	temps "méticuleux" à vérifier
 	Animation de douche ? bulles
+	s'assoir aux différentes chaises ne fait rien de spéciale. Une idée ?
 	
 	////////// LVL000-1 ////////////
 	
