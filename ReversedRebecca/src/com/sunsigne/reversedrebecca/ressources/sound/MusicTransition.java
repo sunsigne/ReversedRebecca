@@ -13,6 +13,7 @@ public class MusicTransition implements Updatable, RenderFree {
 	private boolean transition;
 
 	protected MusicTransition(Clip newClip, boolean transition) {
+		destroy();
 		MusicTransition.fadingClip = currentClip;
 		MusicTransition.currentClip = newClip;
 		this.transition = transition;

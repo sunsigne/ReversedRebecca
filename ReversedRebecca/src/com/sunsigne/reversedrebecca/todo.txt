@@ -8,8 +8,6 @@
 
 	////////// EN COURS ////////////
 	
-	bug de music transition (music du menu pendant le jeu ?! c'est arrivé durant le FastWorldMode)
-	des musiques qui restent alors qu'elles ne devraient pas ...
 	s'assoir aux différentes chaises ne fait rien de spéciale. Une idée ?
 	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
 	son pour l'ouverture des puzzles ?
