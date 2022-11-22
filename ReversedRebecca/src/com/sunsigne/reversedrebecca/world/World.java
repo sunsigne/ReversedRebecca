@@ -114,7 +114,7 @@ public class World implements Updatable, RenderFree {
 		Game.getInstance().forceLoop();
 
 		Player player = new PlayerFinder().getPlayer();
-		if (player == null)
+		if (player == null || player.getHandler() == null)
 			return;
 
 		// determine ground of the player layer
