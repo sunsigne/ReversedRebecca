@@ -61,6 +61,7 @@ SHARE = Key2 % share
 OPEN = Key1 % open
 SEARCH = Key1 % search#alone
 THINK = Key2 % think#(solution)
+GO_TO_WORK_HIDDEN = Key1 % go#to#work
 GO_TO_WORK = Key3 % go#to#work
 LEAVE_WITHOUT_SARAH = Key3 % leave#without#Sarah
 BRING_SARAH = Key2 % bring#Sarah
