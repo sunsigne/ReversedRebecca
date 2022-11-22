@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.menu;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -28,7 +29,10 @@ public class Cutscene implements Updatable {
 	}
 
 	public void stop(boolean delay) {
-		new PlayerFinder().getPlayer().setMotionless();
+		Player player = new PlayerFinder().getPlayer();
+		if (player != null)
+			player.setMotionless();
+
 		if (delay)
 			new GameTimer(1 * Game.SEC, () -> running = false);
 		else
