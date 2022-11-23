@@ -8,6 +8,8 @@
 
 	////////// EN COURS ////////////
 
+	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ...
+
 	////////// PIRA ////////////
 
 	////////// DIFFICILE ////////////
@@ -54,7 +56,7 @@
 	
 	////////// LVL001 ////////////
 	
-	Attention ! OBJ-04 a du code mort (inutilisé : tout le sit, peut-être que mtn ça l'est quand tu lis ça ?)
+	note : les npc01, npc02 jusqu'à npc?? seront dédiés aux cinématiques ;)
 	
 	////////// fake LVL001 ////////////
 	

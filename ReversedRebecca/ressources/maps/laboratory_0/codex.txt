@@ -1,5 +1,6 @@
 ///// REBECCA'S DESK /////
 
+NPC-01 = Cinematic Player when arrived before Sarah
 OBJ-01 = Left Desk
 OBJ-02 = Plant
 OBJ-03 = Trash
