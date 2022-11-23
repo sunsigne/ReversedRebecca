@@ -38,11 +38,11 @@ public class Judgment {
 	private YOUARE youAre;
 
 	private YOUARE loadYouAre() {
-		if (stopWatch.getTime() < times[0])
-			return YOUARE.FAST;
-
 		if (deed.getBadWeight() >= 99)
 			return YOUARE.PSYCHOPATH;
+
+		if (stopWatch.getTime() < times[0])
+			return YOUARE.FAST;
 
 		if (deed.getBadWeight() > deed.getGoodWeight())
 			return YOUARE.MEAN;

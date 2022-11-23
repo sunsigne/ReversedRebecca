@@ -61,6 +61,7 @@ SHARE = Key2 % partager
 OPEN = Key1 % ouvrir
 SEARCH = Key1 % chercher#par#soi-meme
 THINK = Key2 % réflechir#(solution)
+GO_TO_WORK_HIDDEN = Key1 % aller#au#travail
 GO_TO_WORK = Key3 % aller#au#travail
 LEAVE_WITHOUT_SARAH = Key3 % partir#sans#Sarah
 BRING_SARAH = Key2 % faire#venir#Sarah
