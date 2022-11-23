@@ -1,3 +1,11 @@
 ///// REBECCA'S DESK /////
 
-NPC-01 Sarah
+OBJ-01 = Left Desk
+OBJ-02 = Plant
+OBJ-03 = Trash
+OBJ-04 = Chair
+OBJ-05 = Bubble Colomn
+
+///// DOWN ENTRANCE /////
+
+NPC-01 = Sarah

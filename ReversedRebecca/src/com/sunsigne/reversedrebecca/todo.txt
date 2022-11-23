@@ -54,6 +54,10 @@
 	
 	////////// LVL001 ////////////
 	
+	Attention ! OBJ-04 a du code mort (inutilisé : tout le sit, peut-être que mtn ça l'est quand tu lis ça ?)
+	
+	////////// fake LVL001 ////////////
+	
 	KOAnimation dans les 4 direction ?
 	rendre le PNG enfermé + vivant (+ le finir)
 	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
