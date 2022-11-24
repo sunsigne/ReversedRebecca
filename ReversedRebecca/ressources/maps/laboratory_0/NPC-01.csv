@@ -7,7 +7,7 @@ $ -> DISPLAY_NORMAL = DISPLAY -> 0, 0
 $ -> DISPLAY_SIT = DISPLAY -> 0, -7
 
 
-//// ARRIVAL ////
+//// STARTING CUTSCENE ////
 
 TIME -> 1 = SOUND -> BUBBLES
 TIME -> 3 = MOVE -> 22-53
