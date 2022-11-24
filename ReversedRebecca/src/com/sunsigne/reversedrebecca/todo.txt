@@ -34,6 +34,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	prevenir qu'on ne doit choisir QU'UN (que deux) bonus
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
@@ -52,7 +53,6 @@
 	
 	////////// LVL000-1 ////////////
 	
-	créer les dalles spéciales
 	créer une fin de niveau de workshop adaptée à ce dernier
 	
 	////////// LVL001 ////////////
