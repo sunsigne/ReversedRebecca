@@ -31,7 +31,7 @@ public class RubbleObject extends PuzzlerObject {
 	
 	@Override
 	public String getName() {
-		return "rubble"  + "_" + color + "_" + Facing.getAxisName(horizontal);
+		return "rubble"  + "_" + color.getName() + "_" + Facing.getAxisName(horizontal);
 	}
 
 	////////// INTERACTION ////////////

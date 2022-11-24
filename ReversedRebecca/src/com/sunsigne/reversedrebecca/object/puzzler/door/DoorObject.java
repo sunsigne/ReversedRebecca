@@ -25,7 +25,7 @@ public class DoorObject extends PuzzlerObject {
 
 	@Override
 	public String getName() {
-		return "door" + "_" + color;
+		return "door" + "_" + color.getName();
 	}
 
 	////////// INTERACTION ////////////
