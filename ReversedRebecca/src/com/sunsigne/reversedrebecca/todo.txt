@@ -34,6 +34,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	digFactory and Puzzle Unfinished, NullHoleObject does not work yet

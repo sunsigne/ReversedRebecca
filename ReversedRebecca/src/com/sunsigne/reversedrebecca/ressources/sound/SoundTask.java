@@ -7,6 +7,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineUnavailableException;
 
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 
@@ -74,6 +75,8 @@ public class SoundTask {
 				soundclip.start();
 			}
 
+		} catch (LineUnavailableException e) {
+			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (soundType == SOUNDTYPE.VOICE)
