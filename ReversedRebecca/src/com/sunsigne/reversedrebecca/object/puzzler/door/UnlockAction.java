@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
@@ -39,8 +40,9 @@ public class UnlockAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public PuzzlerObject getNullObject(int x, int y) {
-		return new NullDoorObject(x, y);
+	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
+		COLOR color = ((DoorObject) puzzlerObject).color;
+		return new NullDoorObject(color, x, y);
 	}
 
 	////////// KEYBOARD ////////////

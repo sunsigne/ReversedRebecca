@@ -1,17 +1,18 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.door;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.door.blue;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.door.NullDoorObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableNullDoor implements Mappable {
+public class MappableBlueNullDoor implements Mappable {
 
-	private MappableNullDoor() {
+	private MappableBlueNullDoor() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableNullDoor();
+	private static Mappable mappable = new MappableBlueNullDoor();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,7 +23,7 @@ public class MappableNullDoor implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new NullDoorObject(x, y);
+		return new NullDoorObject(COLOR.BLUE, x, y);
 	}
 
 	@Override

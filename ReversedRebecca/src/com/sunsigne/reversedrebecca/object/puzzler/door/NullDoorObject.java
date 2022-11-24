@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -9,8 +10,8 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class NullDoorObject extends DoorObject {
 
-	public NullDoorObject(int x, int y) {
-		super(LVL.NULL, x, y);
+	public NullDoorObject(COLOR color, int x, int y) {
+		super(LVL.NULL, color, x, y);
 		setDisabled(true);
 	}
 

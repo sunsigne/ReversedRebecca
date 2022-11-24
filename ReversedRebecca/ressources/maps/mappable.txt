@@ -57,7 +57,7 @@ Ordinateur / Computer -> 3
 Trou / Hole -> 4
 
 exemple : 
-Porte Null / Null Door : 1-255-0
+Porte (Bleu) Null / Null (Blue) Door : 1-255-0
 Gravas (Bleu et Horizontal) Jaune / Yellow (Blue and Horizontal) Rubble : 2-255-3
 Trou Droite Vert / Green Right Hole : 4-253-2
 

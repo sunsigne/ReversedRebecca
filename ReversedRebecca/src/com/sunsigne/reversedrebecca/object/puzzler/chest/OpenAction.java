@@ -39,7 +39,7 @@ public class OpenAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public PuzzlerObject getNullObject(int x, int y) {
+	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new NullChestObject(x, y);
 	}
 

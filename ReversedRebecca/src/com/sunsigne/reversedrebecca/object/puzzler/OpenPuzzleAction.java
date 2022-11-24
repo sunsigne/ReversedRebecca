@@ -38,12 +38,12 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning);
 
-	public abstract PuzzlerObject getNullObject(int x, int y);
+	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
 	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
 		GenericListener actionOnWinning = () -> {
-			PuzzlerObject nullObject = getNullObject(puzzlerObject.getX(), puzzlerObject.getY());
+			PuzzlerObject nullObject = getNullObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			if (nullObject != null)
 				puzzlerObject.getHandler().addObject(nullObject);
 			puzzlerObject.getHandler().removeObject(puzzlerObject);

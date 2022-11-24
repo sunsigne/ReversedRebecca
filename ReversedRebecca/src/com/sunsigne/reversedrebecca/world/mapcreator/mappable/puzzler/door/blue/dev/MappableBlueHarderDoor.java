@@ -1,18 +1,19 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.door;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.door.blue.dev;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.door.DoorObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableGreenDoor implements Mappable {
+public class MappableBlueHarderDoor implements Mappable {
 
-	private MappableGreenDoor() {
+	private MappableBlueHarderDoor() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableGreenDoor();
+	private static Mappable mappable = new MappableBlueHarderDoor();
 
 	@Override
 	public Mappable getMappable() {
@@ -23,13 +24,13 @@ public class MappableGreenDoor implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DoorObject(LVL.GREEN, x, y);
+		return new DoorObject(DEV_LVL.HARDER, COLOR.BLUE, x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 1, 255, 2 };
+		int[] rgb = { 1, 255, 9 };
 		return rgb;
 	}
-	
+
 }
