@@ -1,0 +1,3 @@
+object = sarah = happy_var = Oui,#je#suis#une#lève-tôt.
+sarah = object = laugh = Pas#moi#!
+sarah = object = wink = Du#coup,#je#suis#passée#ce#matin#parce#que…@J'ai#quelque#chose#pour#toi.

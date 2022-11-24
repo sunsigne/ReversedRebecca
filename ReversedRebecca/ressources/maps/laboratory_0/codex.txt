@@ -1,5 +1,7 @@
 ///// REBECCA'S DESK /////
 
+UNREGISTER = REBECCAS*ATE_BREAKFAST
+
 NPC-01 = Cinematic Player when arrived before Sarah
 OBJ-01 = Left Desk
 OBJ-02 = Plant
@@ -9,4 +11,4 @@ OBJ-05 = Bubble Colomn
 
 ///// DOWN ENTRANCE /////
 
-NPC-01 = Sarah
+NPC-04 = Cinematic Sarah when Rebecca arrived before

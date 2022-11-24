@@ -1,0 +1,3 @@
+object = sarah = excited = Salut#Sarah#!#Tu#vas#bien#?
+sarah = object = laugh = Oui,#merci#!
+sarah = object = happy = Tu#es#venue#tôt#!#Je#suis#passée#chez#toi@ce#matin,#mais#il#n'y#avait#personne…
