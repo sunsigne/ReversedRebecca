@@ -57,9 +57,7 @@
 	
 	////////// LVL001 ////////////
 	
-	note : les npc01, npc02 jusqu'à npc?? seront dédiés aux cinématiques ;)
-	
-	////////// fake LVL001 ////////////
+	////////// WS01 ////////////
 	
 	KOAnimation dans les 4 direction ?
 	rendre le PNG enfermé + vivant (+ le finir)
