@@ -19,4 +19,11 @@ public class SimulationAnimatedObject extends AnimatedDecorationObject {
 		return clazz + " : " + getName().toUpperCase();
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	protected int getNumberOfTimesFirstImageIsRepeated() {
+		return 12;
+	}
+	
 }

@@ -60,20 +60,19 @@ Le Type de Requête CREATE_SIMULATION permet de gérer l'animation des "dalles d
 Il est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
 - L'index est fixé au minimum (càd que l'objet apparaitra en dessous de tous les autres)
 - Le nombre d'images requises est fixé à exactement 5.
-- Chaque image reste pendant 0.05 secondes.
-- L'animation s'arrête sur la dernière images.
-
+- La première image reste pendant 0.65 seconde.
+- Chaque image suivante reste pendant 0.05 seconde.
+- L'animation s'arrête sur la dernière image.
 
 exemple : 
 TIME -> 0 = CREATE_SIMULATION -> 0-0:9,11,000,0
 
 Lorsque la Condition sera vérifiée, sera créé un objet animé :
 - dont les coordonnées sont x=0 et y=0,
-- apparaissant derrière les autres objets (cf le joueur) -> non modifiable
 - de largeur 9 case, de hauteur 11 cases,
-- nécessitant exactement 5 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
-- où chaque image reste pendant 1 seconde et demi,
-- qui s'arrête sur la dernière image (la baignoire est rempli).
+- nécessitant exactement 5 fichiers texture se trouvant dans le dossier "textures\workshop\000" et de noms allant de "0_00.png" à "0_05.png".
+
+Comme vous le voyais, la cible "000" permet de déterminer le chemin d'accès des fichiers. La cible suivante "0" détermine le "nom" des fichiers à charger.
 
 
 ////// CREATE_BONUSTEXT //////

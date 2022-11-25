@@ -55,6 +55,10 @@ public class AnimatedDecorationObject extends DecorationObject {
 	protected Cycloid<BufferedImage> animation;
 	private int frames;
 
+	protected int getNumberOfTimesFirstImageIsRepeated() {
+		return 0;
+	}
+
 	private void loadAnimation(boolean cycle) {
 
 		String path = getPath() + getName() + "_";
@@ -65,6 +69,10 @@ public class AnimatedDecorationObject extends DecorationObject {
 		for (int index = 0; index < frames; index++) {
 			String formated_index = new FormatedString().getNumber(index);
 			list.addObject(loader.loadImage(path + formated_index));
+
+			if (index == 0)
+				for (int repeat = 0; repeat < getNumberOfTimesFirstImageIsRepeated(); repeat++)
+					list.addObject(loader.loadImage(path + formated_index));
 		}
 
 		// converting the list into an array
