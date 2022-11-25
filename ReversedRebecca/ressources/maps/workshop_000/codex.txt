@@ -1,0 +1,18 @@
+///// USELESS /////
+
+OBJ-01 = Bookshelf Up Part
+OBJ-02 = Furniture Shrinked On Left
+OBJ-03 = Furniture Shrinked On Left+
+OBJ-04 = Trash
+
+///// INTERACTIVE /////
+
+NPC-01 = Sarah
+OBJ-11 = Bookshelf
+OBJ-12 = Down Desk
+OBJ-13 = Poster
+OBJ-14 = Papers
+OBJ-15 = Blackboard
+OBJ-16 = Chair
+OBJ-17 = Computer
+OBJ-18 = Sarah Note
