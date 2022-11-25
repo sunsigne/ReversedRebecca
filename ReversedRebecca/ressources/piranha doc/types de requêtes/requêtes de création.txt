@@ -74,6 +74,8 @@ Lorsque la Condition sera vérifiée, sera créé un objet animé :
 
 Comme vous le voyais, la cible "000" permet de déterminer le chemin d'accès des fichiers. La cible suivante "0" détermine le "nom" des fichiers à charger.
 
+Note : un son spécifique est joué en même temps que la création de cet objet.
+
 
 ////// CREATE_BONUSTEXT //////
 
