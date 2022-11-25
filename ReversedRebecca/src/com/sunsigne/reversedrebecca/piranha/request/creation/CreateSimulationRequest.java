@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class CreateSimulationRequest implements IndexRequest {
@@ -62,6 +64,8 @@ public class CreateSimulationRequest implements IndexRequest {
 		// creation of the object
 		GameObject creation = new SimulationAnimatedObject(x, y, width, height, path, name);
 		object.getHandler().getList().add(0, creation);
+		
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "simulation_on");
 	}
 
 }
