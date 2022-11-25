@@ -14,18 +14,22 @@ public class DecorationObject extends GameObject implements TickFree {
 		this.name = name;
 	}
 
+	////////// NAME ////////////
+
 	private String name;
 
 	public String getName() {
 		return name;
 	}
-
-	////////// NAME ////////////
-
+	
+	protected String getPath() {
+		return "textures/other/decoration/";
+	}
+	
 	@Override
 	public String toString() {
 		var clazz = "DECORACTION";
-		return clazz + " : " + name.toUpperCase();
+		return clazz + " : " + getName().toUpperCase();
 	}
 
 	////////// TEXTURE ////////////
@@ -34,7 +38,7 @@ public class DecorationObject extends GameObject implements TickFree {
 
 	public BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/other/decoration/" + getName());
+			image = new ImageTask().loadImage(getPath() + getName());
 		return image;
 	}
 

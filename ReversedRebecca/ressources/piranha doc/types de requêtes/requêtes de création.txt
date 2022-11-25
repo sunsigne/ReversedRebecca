@@ -3,7 +3,6 @@ Attention ! Pour tous les Types de Requête suivants, leur effet s'applique sur 
 
 ////// CREATE //////
 
-
 Le Type de Requête CREATE permet de créer un objet à partir de coordonnées x, y et "z", d'une pastille RGB (voir "mappable" dans le dossier "maps").
 Si les coordonnées x et y sont des nombres, z ne peut prendre que deux valeurs : FRONT et BACK.
 
@@ -24,7 +23,6 @@ Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pa
 
 ////// CREATE_DECORATION //////
 
-
 Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
 
 exemple :
@@ -36,7 +34,6 @@ Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez be
 
 
 ////// CREATE_ANIMATION //////
-
 
 Le Type de Requête CREATE_ANIMATION est en quelque sorte une requête CREATE_DECORATION en plus complexe : elle permet de créer un objet "décoratif" ayant une animation, à partir de fichiers textures se trouvant dans le répertoire "textures\other\animation".
 En plus des mêmes Cibles que celles demandées par CREATE_DECORATION, CREATE_ANIMATION a besoin de 3 Cibles supplémentaires :
@@ -52,6 +49,29 @@ Lorsque la Condition sera vérifiée, sera créé un objet animé :
 - apparaissant derrière les autres objets (cf le joueur)
 - de largeur 1 case, de hauteur 2 cases,
 - nécessitant exactement 3 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
+- où chaque image reste pendant 1 seconde et demi,
+- qui s'arrête sur la dernière image (la baignoire est rempli).
+
+
+////// CREATE_SIMULATION //////
+
+Le Type de Requête CREATE_SIMULATION permet de gérer l'animation des "dalles de générations" qu'on retrouve dans les niveaux de l'atelier (workshop).
+
+Il est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
+- L'index est fixé au minimum (càd que l'objet apparaitra en dessous de tous les autres)
+- Le nombre d'images requises est fixé à exactement 5.
+- Chaque image reste pendant 0.05 secondes.
+- L'animation s'arrête sur la dernière images.
+
+
+exemple : 
+TIME -> 0 = CREATE_SIMULATION -> 0-0:9,11,000,0
+
+Lorsque la Condition sera vérifiée, sera créé un objet animé :
+- dont les coordonnées sont x=0 et y=0,
+- apparaissant derrière les autres objets (cf le joueur) -> non modifiable
+- de largeur 9 case, de hauteur 11 cases,
+- nécessitant exactement 5 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
 - où chaque image reste pendant 1 seconde et demi,
 - qui s'arrête sur la dernière image (la baignoire est rempli).
 
@@ -93,7 +113,6 @@ Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si
 
 
 ////// DELETE_ONTHESPOT //////
-
 
 Est un raccourci direct de DELETE, mais dont la cible "coordonnées" est incluse dans le Type de Requête.
 La cible "index" devenant unitaire, l'écriture compacte devient alors possible.

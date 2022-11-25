@@ -19,6 +19,19 @@ public class AnimatedDecorationObject extends DecorationObject {
 		loadAnimation(cycle);
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	protected String getPath() {
+		return "textures/other/animation/";
+	}
+
+	@Override
+	public String toString() {
+		var clazz = "ANIMATION";
+		return clazz + " : " + getName().toUpperCase();
+	}
+
 	////////// TICK ////////////
 
 	private int animation_time;
@@ -44,7 +57,7 @@ public class AnimatedDecorationObject extends DecorationObject {
 
 	private void loadAnimation(boolean cycle) {
 
-		String path = "textures/other/animation/" + getName() + "_";
+		String path = getPath() + getName() + "_";
 		ImageTask loader = new ImageTask();
 
 		GameList<BufferedImage> list = new GameList<>(LISTTYPE.LINKED);
