@@ -1,7 +1,6 @@
 ///// USELESS /////
 
 OBJ-01 = Bookshelf Up Part
-OBJ-02 = Furniture Shrinked On Left
 OBJ-03 = Furniture Shrinked On Left+
 OBJ-04 = Trash
 
@@ -11,6 +10,7 @@ ERASE = REBECCAS_ROOM*SARAH_TALKED_ABOUT_BOOKSHELF
 
 NPC-01 = Sarah
 OBJ-11 = Bookshelf
+OBJ-02 = Down Desk Left Part
 OBJ-12 = Down Desk
 OBJ-13 = Poster
 OBJ-14 = Papers
