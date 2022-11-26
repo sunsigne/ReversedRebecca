@@ -7,3 +7,4 @@ TIME -> 1 = SLOW -> 11-11
 GOAL -> 11-11 = SLOW -> 11-10
 GOAL -> 11-10 = SLOW -> 11-9
 GOAL -> 11-9 = SLOW -> 11-8
+GOAL -> 11-8 = TALK -> SARAH_WAIT_HERE

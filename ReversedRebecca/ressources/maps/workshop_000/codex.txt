@@ -7,6 +7,8 @@ OBJ-04 = Trash
 
 ///// INTERACTIVE /////
 
+ERASE = REBECCAS_ROOM*SARAH_TALKED_ABOUT_BOOKSHELF
+
 NPC-01 = Sarah
 OBJ-11 = Bookshelf
 OBJ-12 = Down Desk
