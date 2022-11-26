@@ -1,0 +1,7 @@
+TIME -> 0 = GOTO -> TA_INIT
+
+
+//// STATE ////
+
+$ -> TA_INIT = TRIPLE_ACTION -> WATCH*WATCH_DESK
+$ -> WATCH_DESK = TALK -> DESK
