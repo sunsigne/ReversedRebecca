@@ -67,11 +67,12 @@ public class Cutscene implements Updatable {
 	}
 
 	private void realStop() {
+		new PlayerFinder().setUserAllowedToControlPlayer(true);
+		
 		for (Updatable tempUpdatable : LAYER.GUI.getHandler().getList()) {
 			if (tempUpdatable instanceof Cutscene)
 				LAYER.GUI.getHandler().removeObject(tempUpdatable);
 		}
-		new PlayerFinder().setUserAllowedToControlPlayer(true);
 	}
 
 	////////// RENDER ////////////
