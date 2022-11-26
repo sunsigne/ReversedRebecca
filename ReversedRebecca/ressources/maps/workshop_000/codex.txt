@@ -18,3 +18,8 @@ OBJ-15 = Blackboard
 OBJ-16 = Chair
 OBJ-17 = Computer
 OBJ-18 = Sarah Note
+
+///// SIMULATION /////
+
+OBJ-21 = Simulation Slabs
+OBJ-22 = Fake Sarah

@@ -1,0 +1,7 @@
+player = sarah = happy = Il#est#sympa#ton#atelier#!
+sarah = player = akward = Tu#me#fais#quoi#?@Tu#ne#veux#pas#de#ta#surprise…#?
+player = sarah = laugh = Si,#si#!#Je#fai#juste#durer#le#plaisir.
+sarah = player = wink = Bien,#alors#dans#ce#cas…
+sarah = player = pervert = J'espère#que#tu#prends#beaucoup#de#plaisir.
+player = sarah = blush_var = Sarah#!!!
+sarah = player = laugh = Ha#ha#!#Pardon,#mais#tu#verrais#ta#tête.@Allez,#va#chercher#ton#cadeau.

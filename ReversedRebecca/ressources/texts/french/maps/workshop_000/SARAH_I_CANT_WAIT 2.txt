@@ -1,0 +1,5 @@
+player = sarah = worry = Je#me#demandais…#Tu#peux#créer#tout@ce#que#tu#veux#avec#ces#dalles#?
+player = sarah = laugh = Par#exemple,#de#la#nourriture#?
+sarah = player = you_silly_var = Je#te#l'ai#déjà#expliqué…@Non,#je#ne#peux#pas.
+sarah = player = happy = C'est#un#peu#comme…#une#imprimante.@Une#image#de#nourriture#restera#de#l'encre.
+player = sarah = you_silly_var = C'était#pour#être#sûre.
