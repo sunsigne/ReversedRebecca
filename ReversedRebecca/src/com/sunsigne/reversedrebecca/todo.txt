@@ -14,6 +14,7 @@
 
 	////////// DIFFICILE ////////////
 
+	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)

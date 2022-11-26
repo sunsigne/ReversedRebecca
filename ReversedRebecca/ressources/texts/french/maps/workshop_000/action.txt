@@ -1,2 +1,3 @@
 WATCH = Key1 % regarder
 GLANCE = Key1 % jeter#un#oeil
+READ = Key1 % lire
