@@ -1,0 +1,5 @@
+player = object = worry = Je#me#demandais…#Tu#peux#créer@tout#ce#que#tu#veux#avec#ce#système#?
+player = object = laugh = Par#exemple…#de#la#nourriture#?
+sarah = player = you_silly_var = Non,#je#ne#peux#pas.
+sarah = player = happy = C'est#un#peu#comme#une#imprimante.@Une#image#de#nourriture#restera#de#l'encre.
+player = object = you_silly_var = Dommage.
