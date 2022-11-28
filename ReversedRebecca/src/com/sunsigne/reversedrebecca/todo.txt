@@ -9,6 +9,8 @@
 	////////// EN COURS ////////////
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
+	refaire les textures workshop de "chevauchement"
+	creer la texture de "disparission" du puzzle
 
 	////////// PIRA ////////////
 
@@ -55,7 +57,6 @@
 	////////// LVL000-1 ////////////
 	
 	créer une fin de niveau de workshop adaptée à ce dernier
-	refaire les textures workshop de "chevauchement"
 	
 	////////// LVL001 ////////////
 	
