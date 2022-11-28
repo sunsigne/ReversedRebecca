@@ -56,6 +56,7 @@
 	////////// LVL000-1 ////////////
 	
 	créer une fin de niveau de workshop adaptée à ce dernier
+	refaire les textures workshop de "chevauchement"
 	
 	////////// LVL001 ////////////
 	
