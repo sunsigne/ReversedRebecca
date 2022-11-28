@@ -11,8 +11,6 @@
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	refaire les textures workshop de "chevauchement"
 	creer la texture de "disparission" du puzzle
-	subtil mais à corriger : le facing du dernier dialogue chie dans la colle à cause du fake sarah
-	le joueur est tp s'il arrive au nivaeau du coffre avant qu'il apparaisse
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 
 	////////// PIRA ////////////
