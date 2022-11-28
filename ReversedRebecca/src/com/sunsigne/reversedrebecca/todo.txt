@@ -9,7 +9,6 @@
 	////////// EN COURS ////////////
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
-	avoir ramassé un objet d'un certain niveau alterne le comportement de lvl up
 
 	////////// PIRA ////////////
 

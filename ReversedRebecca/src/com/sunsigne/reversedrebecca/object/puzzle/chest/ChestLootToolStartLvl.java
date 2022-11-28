@@ -38,7 +38,7 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public LVL getDifficulty() {
-		return tool.getDifficulty().getNext();
+		return tool.getStartDifficulty().getNext();
 	}
 
 	@Override
