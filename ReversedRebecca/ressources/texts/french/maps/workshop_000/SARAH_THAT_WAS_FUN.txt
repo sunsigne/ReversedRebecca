@@ -1,0 +1,4 @@
+player = object = happy_var = C'était#marrant#!
+sarah = player = determinated = Et#n'hésite#pas#à#repasser#souvent.@J'aurais#toujours#quelque#chose#pour#toi#!
+player = object = laugh = T'es#vraiment#la#meilleure#!
+sarah = player = wink = Je#sais.@Bon#!#Allons-y#avant#d'être#en#retard.
