@@ -33,6 +33,10 @@ Attention : si le joueur ramasse l'objet "YELLOW KEY" mais ne peut QUE atteindre
 Note : Tous les outils et niveaux sont détaillés dans le fichier "mappable" (dans le dossier "maps")
 
 
+////// UNLOCKEDTOOLMAXLEVEL //////
+
+Le Type de Condition UNLOCKEDTOOLMAXLEVEL fonctionne exactement de la même manière que le Type de Condition UNLOCKEDTOOL, à la différence près qu'il ne se déclenche par lorsque le joueur atteint le niveau de l'outil en question, mais lorsqu'il "débloque la possibilité" d'atteindre ce niveau en question avec cet outil ; ce qui arrive généralement après l'ouverture d'un coffre.
+
 ////// WONPUZZLE //////
 
 

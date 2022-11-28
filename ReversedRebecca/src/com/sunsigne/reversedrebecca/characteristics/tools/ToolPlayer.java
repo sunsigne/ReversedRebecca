@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.gui.GUITools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
+import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolMaxLevelCondition;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public abstract class ToolPlayer implements Difficulty {
@@ -62,6 +63,8 @@ public abstract class ToolPlayer implements Difficulty {
 		else
 			// normal case
 			updateGUITools();
+		
+		new UnlockedToolMaxLevelCondition().registerValue(this, getMaxDifficulty());
 	}
 
 	private void loadMaxDifficulty() {
