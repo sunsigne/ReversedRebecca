@@ -9,12 +9,12 @@
 	////////// EN COURS ////////////
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
-	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 
 	////////// PIRA ////////////
 
 	////////// DIFFICILE ////////////
-
+	
+	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
@@ -36,6 +36,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	prévenir de la sauvegarde de progression sur le Quiet end lvl
 	prevenir qu'on ne doit choisir QU'UN (que deux) bonus
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
@@ -57,6 +58,7 @@
 	
 	créer une fin de niveau de workshop adaptée à ce dernier
 	passage secret tj vide ...
+	faire la route physopath
 	
 	////////// LVL001 ////////////
 	
