@@ -2,10 +2,10 @@
 
 UNREGISTER = REBECCAS*ATE_BREAKFAST
 
-NPC-01 = Cinematic Rebecca when Rebecca arrived before Sarah
-NPC-02 = Cinematic Sarah when Rebecca arrived before Sarah
-NPC-03 = Cinematic Rebecca when Rebecca arrived after Sarah
-NPC-04 = Cinematic Sarah when Rebecca arrived after Sarah
+NPC-01 = Cinematic Rebecca in Laboratory
+NPC-02 = Cinematic Sarah in Laboratory
+NPC-03 = Cinematic Rebecca Arriving
+NPC-04 = Cinematic Sarah Arriving
 
 OBJ-01 = Left Desk
 OBJ-02 = Plant

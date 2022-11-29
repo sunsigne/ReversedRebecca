@@ -21,6 +21,8 @@ OBJ-18 = Sarah Note
 
 ///// SIMULATION /////
 
+REGISTER = LABORATORY*ARRIVED_WITH_SARAH
+
 OBJ-21 = Simulation Slabs
 OBJ-22 = Fake Sarah
 OBJ-23 = Fake Walls
