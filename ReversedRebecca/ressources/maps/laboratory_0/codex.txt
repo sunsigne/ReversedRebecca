@@ -1,17 +1,4 @@
 ///// REBECCA'S DESK /////
 
-UNREGISTER = REBECCAS*ATE_BREAKFAST
-
-NPC-01 = Cinematic Rebecca in Laboratory
-NPC-02 = Cinematic Sarah in Laboratory
-NPC-03 = Cinematic Rebecca Arriving
-NPC-04 = Cinematic Sarah Arriving
-
-OBJ-01 = Left Desk
-OBJ-02 = Plant
-OBJ-03 = Trash
-OBJ-04 = Chair
-OBJ-05 = Bubble Colomn
-
-///// DOWN ENTRANCE /////
-
+ERASE = REBECCAS*ATE_BREAKFAST
+ERASE = SARAH*TALKED_ABOUT_BOOKSHELF

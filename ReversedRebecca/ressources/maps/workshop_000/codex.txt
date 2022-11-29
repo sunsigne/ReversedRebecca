@@ -6,8 +6,6 @@ OBJ-04 = Trash
 
 ///// INTERACTIVE /////
 
-ERASE = REBECCAS_ROOM*SARAH_TALKED_ABOUT_BOOKSHELF
-
 NPC-01 = Sarah
 OBJ-11 = Bookshelf
 OBJ-02 = Down Desk Left Part
@@ -20,8 +18,6 @@ OBJ-17 = Computer
 OBJ-18 = Sarah Note
 
 ///// SIMULATION /////
-
-REGISTER = LABORATORY*ARRIVED_WITH_SARAH
 
 OBJ-21 = Simulation Slabs
 OBJ-22 = Fake Sarah
