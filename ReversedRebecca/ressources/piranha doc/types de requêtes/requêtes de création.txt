@@ -117,3 +117,18 @@ Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si
 
 Est un raccourci direct de DELETE, mais dont la cible "coordonnées" est incluse dans le Type de Requête.
 La cible "index" devenant unitaire, l'écriture compacte devient alors possible.
+
+
+////// DELETE_MYSELF //////
+
+Le Type de Requête DELETE_MYSELF permet de supprimer l'objet lançant l'Instruction dans laquelle il est contenu.
+L'avantage de ce Type de Requête sur le Type de Requête DELETE_ONTHESPOT est qu'il évite toute ambiguïté en cas de superposition d'objets !
+
+Attention : toute Requête écrite après ce Type de Requête ne se lancera pas (puisque l'objet sera supprimé avant qu'elles ne soient appelées)
+Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite pour respecter la syntaxe attendue.
+
+exemple :
+TIME -> 5 = DELETE_MYSELF -> BANANA
+TIME -> 5 = GOTO -> DELETE_MYSELF:YOLO
+
+Lorsque la Condition sera vérifiée, l'objet lançant cette Instruction sera supprimé.
