@@ -9,7 +9,6 @@
 	////////// EN COURS ////////////
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
-	rajouter un raccourci pour finir le ws000
 
 	////////// PIRA ////////////
 
@@ -57,7 +56,6 @@
 	
 	////////// LVL000-1 ////////////
 	
-	créer une fin de niveau de workshop adaptée à ce dernier
 	passage secret tj vide ...
 	faire la route physopath
 	
