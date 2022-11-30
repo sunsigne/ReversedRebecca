@@ -1,0 +1,4 @@
+object = DOWN = happy_var = Merci,#tu#es#adorable#!
+sarah = UP = wink = J'aurais#toujours#quelque#chose#pour#toi#!@Pense#à#venir#me#voir#à#l'atelier.
+object = DOWN = laugh = C'est#noté#!
+sarah = UP = happy = Bon#!#Il#serait#temps#que#je#m'y#mette.
