@@ -132,3 +132,5 @@ TIME -> 5 = DELETE_MYSELF -> BANANA
 TIME -> 5 = GOTO -> DELETE_MYSELF:YOLO
 
 Lorsque la Condition sera vérifiée, l'objet lançant cette Instruction sera supprimé.
+
+Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
