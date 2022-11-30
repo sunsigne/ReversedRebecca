@@ -56,6 +56,7 @@
 	
 	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
 	"regarder la TV tj pas fait", attention au dodo de sarah
+	toues les saved "world" ont été verifiées, pas les autres !
 	
 	////////// LVL000-1 ////////////
 	
