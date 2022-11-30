@@ -1,2 +1,6 @@
-currentlvlmenu=rebeccas_room_000
-currentlvl=rebeccas_room_000
+LABORATORY*REBECCA_ARRIVE_BEFORE_SARAH
+REBECCA*ATE_BREAKFAST
+REBECCAS_ROOM*BASKET_HALF_FULL
+REBECCAS_ROOM*FULL_DESK_TRASH
+currentlvl=laboratory_0
+currentlvlmenu=rebeccas_room_001
