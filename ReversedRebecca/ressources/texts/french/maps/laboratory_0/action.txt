@@ -1,0 +1,2 @@
+BEING_POLITE = Key1 % être#polie
+TELL_THE_TRUTH = Key2 % dire#la#vérité

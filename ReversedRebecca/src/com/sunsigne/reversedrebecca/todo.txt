@@ -10,7 +10,7 @@
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
-	note : c'est quand tu arrives AFTER que tous les cas diverges
+	note : le choice est buggé dans le lvl001 à cause du caractère NPC du joueur
 
 	////////// PIRA ////////////
 
