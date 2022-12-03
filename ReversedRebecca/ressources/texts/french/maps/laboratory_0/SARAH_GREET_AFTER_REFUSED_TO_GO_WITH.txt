@@ -1,0 +1,4 @@
+sarah = RIGHT = laugh = Rebonjour,#Rebecca#!
+rebecca = LEFT = laugh = Rebonjour,#Sarah#!
+sarah = RIGHT = wink = Au#fait#!#J'ai#ta#surprise#avec#moi.
+rebecca = LEFT = excited = Ho#!#Tu#es#la#meilleure#!
