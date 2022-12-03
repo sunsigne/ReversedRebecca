@@ -38,6 +38,8 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
+	vous êtes : exemplaire, gentil, neutre, méchant, sadique, psycopath
+
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
 	prevenir qu'on ne doit choisir QU'UN (que deux) bonus
 	les flêches pour le déplacement doit ête dit qq part
