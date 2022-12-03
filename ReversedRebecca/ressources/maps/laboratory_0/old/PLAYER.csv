@@ -1,6 +1,0 @@
-TIME -> 0 = GOTO -> NAME:REBECCA, FACING:UP
-
-
-//// MOVE ////
-
-! -> TP_PLAYER_OUT_OF_SIGHT = TP -> 24-68

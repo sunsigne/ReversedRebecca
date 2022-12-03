@@ -1,7 +1,7 @@
-rebecca = LEFT = happy = Salut#Rebecca#!#Comment#ça#va#?
-sarah = RIGHT = laugh = Bien,#merci#!
-sarah = RIGHT = worry = C'est#toi#qui#a#frappé#à#ma#porte#ce#matin#?
-sarah = RIGHT = surprised = Ha#!#Alors#tu#étais#là#?
-rebecca = LEFT = happy = Oui,#mais#je#suis#arrivée#trop#tard#pour#ouvrir…
+sarah = RIGHT = happy = Salut#Rebecca#!#Comment#ça#va#?
+rebecca = LEFT = laugh = Bien,#merci#!
+rebecca = LEFT  = worry = C'est#toi#qui#a#frappé#à#ma#porte#ce#matin#?
+sarah = RIGHT = surprised = Ha#!#Alors,#tu#étais#là#?
+rebecca = LEFT = worry = Oui,#mais#j'ai#ouvert#la#porte#trop#tard…
 sarah = RIGHT = laugh = Du#Rebecca#tout#craché#!
-sarah = RIGHT = happy = Bon,#laisse#tomber.@J'ai#quelque#chose#pour#toi.
+sarah = RIGHT = wink = Du#coup,#je#suis#passée#ce#matin#parce#que…@J'ai#quelque#chose#pour#toi.
