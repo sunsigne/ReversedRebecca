@@ -134,3 +134,25 @@ TIME -> 5 = GOTO -> DELETE_MYSELF:YOLO
 Lorsque la Condition sera vérifiée, l'objet lançant cette Instruction sera supprimé.
 
 Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
+
+
+////// LANDSLIDE //////
+
+Le Type de Requête LANDSLIDE permet de créer un "éboulement" à partir d'une direction de poussée, de coordonnées x, y et d'une pastille (R)GB (voir "mappable" dans le dossier "maps").
+Note : Contrairement au Type de Requête CREATE, la "coordonnée z" n'est pas demandée : elle est d'office définie comme étant BACK.
+Note : le "paramètre de couleur rouge" n'est pas non plus demandé ici : il est d'office défini sur 2 - ce qui correspond à un objet de type "gravas" -. 
+
+L'intérêt du "Type de Requête éboulement" réside dans le fait que ce dernier survient dans la durée :
+- un bruit d'éboulement est joué.
+- des "bulles de textes "éboulement"" apparaissent autour de la zone sur laquelle l'éboulement est en train d'avoir lieu.
+- un objet de type "gravas" est créé au bout de quelques secondes.
+
+Attention : comme vous le voyez dans l'exemple ci-dessous, le signe ":", commun pour les Types de Requêtes de creations, n'est pas utilisé pour ce Type de Requête LANDSLIDE. À la place, le signe "," reprend son rôle habituel de "séparateur de cibles".
+
+exemple :
+TIME -> 10 = LANDSLIDE -> UP,26-58,255-1
+
+Lorsque la Condition sera vérifiée :
+   - Un éboulement aura lieu aux coordonnées x=26 et y=58.
+   - Pendant cet éboulement, les objets poussables (ce qui inclut tous les vivants) se trouvant sur les lieux perdront 1PV (si cela est possible) et, s'ils ont survécu, seront poussés vers le haut.
+   - À l'issue de cet éboulement, un objet "gravas bleu, horizontal et de difficulté cyan" sera créé -> (2-)255-1. 

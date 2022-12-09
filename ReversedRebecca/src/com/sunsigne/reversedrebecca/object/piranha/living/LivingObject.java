@@ -138,7 +138,21 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
+	
+	////////// DEATH ////////////
 
+	private boolean registeredAsDead;
+	
+	@Override
+	public boolean isRegisteredAsDead() {
+		return registeredAsDead;
+	}
+	
+	@Override
+	public void registeredAsDead(boolean registeredAsDead) {
+		this.registeredAsDead = registeredAsDead;
+	}
+	
 	////////// PATH FINDER ////////////
 
 	@Override

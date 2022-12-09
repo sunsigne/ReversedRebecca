@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Pusher.PUSHING_DIRECTION;
 import com.sunsigne.reversedrebecca.object.other.LandslideObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
@@ -40,11 +42,9 @@ public class LandslideRequest implements IndexRequest {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
-		System.out.println("go");
-		
 		// determinate the position
-
-		String pos = String.valueOf(target.split(":")[0]);
+		
+		String pos = String.valueOf(target.split(",")[1]);
 		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
 		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
@@ -57,7 +57,8 @@ public class LandslideRequest implements IndexRequest {
 
 		// determinate the type of object
 
-		String type = String.valueOf(target.split(":")[1]);
+		PUSHING_DIRECTION pushingDirection = getPushingDirection(String.valueOf(target.split(",")[0]));
+		String type = String.valueOf(target.split(",")[2]);
 		GameObject rubble = determinateCreation(type, x, y);
 
 		// creation of the object
@@ -65,8 +66,31 @@ public class LandslideRequest implements IndexRequest {
 		if (rubble == null)
 			return;
 
-		LandslideObject landslide = new LandslideObject(x, y, (RubbleObject) rubble);
+		LandslideObject landslide = new LandslideObject(x, y, (RubbleObject) rubble, pushingDirection);
 		object.getHandler().addObject(landslide);
+	}
+
+	private DIRECTION getFacing(String target) {
+		for (DIRECTION tempFacing : DIRECTION.values()) {
+			if (tempFacing.getName().equalsIgnoreCase(target))
+				return tempFacing;
+		}
+		return null;
+	}
+
+	private PUSHING_DIRECTION getPushingDirection(String target) {
+		switch (getFacing(target)) {
+		case LEFT:
+			return PUSHING_DIRECTION.LEFT;
+		case RIGHT:
+			return PUSHING_DIRECTION.RIGHT;
+		case UP:
+			return PUSHING_DIRECTION.UP;
+		case DOWN:
+			return PUSHING_DIRECTION.DOWN;
+		default:
+			return null;
+		}
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {

@@ -58,8 +58,14 @@ public interface Health extends Feeling {
 		new GameTimer(30, () -> setRecovering(false));
 	}
 
+	////////// DEATH ////////////
+	
 	default boolean isDead() {
 		return getHp() <= 0;
 	}
+	
+	boolean isRegisteredAsDead();
+	
+	void registeredAsDead(boolean registeredAsDead);
 
 }

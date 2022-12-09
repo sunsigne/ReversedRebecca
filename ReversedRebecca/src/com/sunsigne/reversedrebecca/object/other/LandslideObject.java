@@ -3,7 +3,8 @@ package com.sunsigne.reversedrebecca.object.other;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
+import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -13,15 +14,17 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 
-public class LandslideObject extends GameObject implements RenderFree, CollisionReactor {
+public class LandslideObject extends GameObject implements RenderFree, Pusher {
 
-	public LandslideObject(int x, int y, RubbleObject rubble) {
+	public LandslideObject(int x, int y, RubbleObject rubble, PUSHING_DIRECTION pushingDirection) {
 		super(x, y);
 		this.rubble = rubble;
+		this.hurtWhenPushing = true;
+		this.pushingDirection = pushingDirection;
 	}
 
 	private RubbleObject rubble;
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -58,14 +61,14 @@ public class LandslideObject extends GameObject implements RenderFree, Collision
 
 	private String text = new Translatable().getTranslatedText("LANDSLIDE", FilePath.BONUS_TEXT);
 	private RandomGenerator rad = new RandomGenerator();
-	
+
 	private void displayText() {
 		if (time % 10 != 0)
 			return;
 
 		int radX = getX() + rad.getIntBetween(-getSize(), getSize());
 		int radY = getY() + getSize() + rad.getIntBetween(-getSize(), getSize());
-		
+
 		BonusText bonusText = new BonusText(text, radX, radY);
 		LAYER.WORLD_TEXT.addObject(bonusText);
 	}
@@ -74,17 +77,60 @@ public class LandslideObject extends GameObject implements RenderFree, Collision
 		if (time != 95)
 			return;
 
-		// hurt livings and push them if still alive
+		mustPush = true;
 	}
 
 	private void createRubble() {
 		if (time != 90)
 			return;
 
-		getHandler().addObject(rubble);
+		mustPush = false;
+		getHandler().getList().add(0, rubble);
+	}
+
+	////////// STUNNABLE ////////////
+
+	private boolean stunned;
+
+	@Override
+	public boolean isStunned() {
+		return stunned;
+	}
+
+	@Override
+	public void setStunned(boolean stunned) {
+		this.stunned = stunned;
+	}
+
+	////////// PUSHER ////////////
+
+	private boolean hurtWhenPushing;
+
+	@Override
+	public boolean hurtWhenPushing() {
+		return hurtWhenPushing;
+	}
+
+	@Override
+	public void setHurtWhenPushing(boolean hurtWhenPushing) {
+		this.hurtWhenPushing = hurtWhenPushing;
+	}
+
+	private PUSHING_DIRECTION pushingDirection;
+
+	@Override
+	public PUSHING_DIRECTION getPushingDirection() {
+		return pushingDirection;
+	}
+
+	@Override
+	public void setPushingDirection(PUSHING_DIRECTION pushingDirection) {
+		this.pushingDirection = pushingDirection;
 	}
 
 	////////// COLLISION ////////////
+
+	private boolean mustPush;
 
 	@Override
 	public boolean isBlockingSight() {
@@ -98,7 +144,14 @@ public class LandslideObject extends GameObject implements RenderFree, Collision
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		blockPath(detectorObject);
+		if (mustPush == false)
+			return;
+
+		if (detectorObject instanceof Pushable == false)
+			return;
+
+		Pushable pushable = (Pushable) detectorObject;
+		push(pushable);
 	}
 
 }
