@@ -1,2 +1,6 @@
+///// SARAH /////
+
 BEING_POLITE = Key1 % être#polie
 TELL_THE_TRUTH = Key2 % dire#la#vérité
+FINE_LETS_DO_THAT = Key1 % on#fait#comme#ça
+LETS_DO_THE_OPPOSITE = Key2 % on#fait#le#contraire

@@ -16,8 +16,6 @@ NPC-03 = Rebecca Cinematic when Rebecca Arrive With Sarah
 NPC-04 = Sarah Cinematic when Rebecca Arrive With Sarah
 NPC-05 = Rebecca Cinematic when Rebecca Arrive After Sarah
 NPC-06 = Sarah Cinematic when Rebecca Arrive After Sarah
-NPC-07 = Rebecca Cinematic once Vladimir Arrived
-NPC-08 = Sarah Cinematic once Vladimir Arrived
 OBJ-01 = Left Desk
 OBJ-02 = Plant
 OBJ-03 = Trash
@@ -26,4 +24,6 @@ OBJ-05 = Bubble Colomn
 
 ///// DOWN ENTRANCE /////
 
+NPC-08 = Sarah
 NPC-09 = Vladimir
+NPC-10 = Sam

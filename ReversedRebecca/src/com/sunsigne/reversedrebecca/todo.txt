@@ -10,6 +10,8 @@
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
+	
+	trouver un moyen de rendre "fluide" le déplacement de la camera VERS le joueur (lancer le lvl001 pour comprendre ce que je veux dire)
 
 	////////// PIRA ////////////
 
@@ -33,7 +35,7 @@
 
 	////////// FACILE ////////////
 
-	faire des bonus text + grand pour le knock knoc et le boom
+	faire des bonus text + grand pour le knock knoc et le boom !!
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
@@ -65,6 +67,11 @@
 	faire la route physopath
 	
 	////////// LVL001 ////////////
+	
+	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
+	rajouter des images d'explosion pour les explosions
+	rajouter les textures de Vlad et Sam
+	traduire "quel taré" par "what a freak"
 	
 	////////// WS01 ////////////
 	

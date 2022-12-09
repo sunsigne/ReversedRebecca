@@ -1,0 +1,7 @@
+rebecca = DOWN = no_sens = Qu'est-ce#qu'il#s'est#passé#?
+sam = UP = angry_var = Ce#mec…#Il#a#fait#exploser#le#mur@pour#rentrer#dans#le#laboratoire#!
+sam = DOWN = angry_var = Quel#taré...@Et#maintenant,#on#peut#même#plus#sortir.
+sarah = DOWN = surprised = Est-ce#qu'il#y#a#des#blessés#?
+sam = UP = angry_var = Je#suis#comme#vous#les#filles…@J'en#sais#pas#vraiment#plus…
+sarah = DOWN = determinated = Alors#on#va#enquêter#!
+sarah = RIGHT = determinated = Rebecca,#trouve#des#indices#sur#notre#invité.@Je#vais#tâcher#de#nous#trouver#une#sortie.
