@@ -31,3 +31,5 @@ OBJ-06 = Left Desk Up Part
 OBJ-07 = Chair
 OBJ-08 = Plant
 OBJ-09 = Letter
+OBJ-10 = Tim's Computer
+OBJ-11 = Bubble Colomn Sabotaged

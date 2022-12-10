@@ -9,3 +9,4 @@ LETS_DO_THE_OPPOSITE = Key2 % on#fait#le#contraire
 
 WATCH = Key1 % regarder
 READ = Key1 % lire
+TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
