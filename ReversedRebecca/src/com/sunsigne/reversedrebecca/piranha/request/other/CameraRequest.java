@@ -42,8 +42,10 @@ public class CameraRequest implements Request, CameraDependency {
 		PhysicLaw law = PhysicList.getList().getObject(new CameraMovingLaw());
 		CameraMovingLaw camera = (CameraMovingLaw) law;
 
-		if (target.equalsIgnoreCase("player")) {
-			setCameraOnPlayer(camera);
+		boolean player_fluid = target.equalsIgnoreCase("player_fluid");
+
+		if (target.equalsIgnoreCase("player") || player_fluid) {
+			setCameraOnPlayer(camera, player_fluid);
 			return;
 		}
 
@@ -58,8 +60,11 @@ public class CameraRequest implements Request, CameraDependency {
 		CAMERA.setY(-goal.getY());
 	}
 
-	private void setCameraOnPlayer(CameraMovingLaw camera) {
-		camera.setFollowingPlayer(true);
+	private void setCameraOnPlayer(CameraMovingLaw camera, boolean tempDynamic) {
+		camera.setFollowingPlayer(true, tempDynamic);
+
+		if (tempDynamic)
+			return;
 
 		Player player = new PlayerFinder().getPlayer();
 		if (player == null)

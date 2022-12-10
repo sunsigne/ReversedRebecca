@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -17,9 +18,19 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	////////// TICK ////////////
 
 	private boolean followingPlayer;
+	private boolean tempDynamic;
 
 	public void setFollowingPlayer(boolean followingPlayer) {
 		this.followingPlayer = followingPlayer;
+	}
+
+	public void setFollowingPlayer(boolean followingPlayer, boolean tempDynamic) {
+		this.followingPlayer = followingPlayer;
+
+		if (tempDynamic) {
+			this.tempDynamic = true;
+			new GameTimer(13, () -> this.tempDynamic = false);
+		}
 	}
 
 	@Override
@@ -43,7 +54,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 		targetX = getBorderedTarget(targetX, true);
 
-		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
+		if (CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false) {
 			CAMERA.setX(targetX); // == CAMERA.setX(cameraX + (targetX - cameraX) * delay);
 			return;
 		}
@@ -60,7 +71,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 		targetY = getBorderedTarget(targetY, false);
 
-		if (CameraOption.getType() == CAMERA_TYPE.STATIC) {
+		if (CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false) {
 			CAMERA.setY(targetY); // == CAMERA.setY(cameraY + (targetY - cameraY) * delay);
 			return;
 		}
