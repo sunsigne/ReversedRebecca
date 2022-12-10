@@ -22,8 +22,12 @@ OBJ-03 = Trash
 OBJ-04 = Chair
 OBJ-05 = Bubble Colomn
 
-///// DOWN ENTRANCE /////
+///// DOWN DESKS /////
 
 NPC-08 = Sarah
 NPC-09 = Vladimir
 NPC-10 = Sam
+OBJ-06 = Left Desk Up Part
+OBJ-07 = Chair
+OBJ-08 = Plant
+OBJ-09 = Letter

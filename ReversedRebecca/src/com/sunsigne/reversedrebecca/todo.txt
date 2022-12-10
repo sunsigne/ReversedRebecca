@@ -71,6 +71,11 @@
 	rajouter les textures de Vlad et Sam
 	traduire "quel taré" par "what a freak"
 	créer le PNG dans la salle de pause qui parle au joueur et pas à Rebecca, et qui sauvegarde l'info à CHAQUE phrase et entre deux reset
+	le bureau "vide" c'est 2 gars qui ont demissionné ensemble.
+	rebeccxa fait un comentaire sur la plante de la salle en bas à droite, interdit dans les bureau double, mais elle a eu droit à une dérogation pour sa plante en pot
+	la clef bleu peut se trouver soit en ouillant à côté de l'ordinateur, soit en parlant plusieurs fois au mec du bureau de droite
+	pour l'ordi allumé -> du pur David, il ferme sa porte au lieu de sauvegarder son travaille
+	Pour le mec qui fait des allez retour, il est sorti de son bureau à toutes vitesse parce qu'il a eu envie de se faire dessus
 	
 	////////// WS01 ////////////
 	
