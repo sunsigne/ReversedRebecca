@@ -29,7 +29,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 		if (tempDynamic) {
 			this.tempDynamic = true;
-			new GameTimer(13, () -> this.tempDynamic = false);
+			new GameTimer(30, () -> this.tempDynamic = false);
 		}
 	}
 
@@ -109,6 +109,9 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 		float diffX = cameraPos - target;
 		float playerDistance = (Math.abs(diffX)) / player.getSize();
+		
+		if(tempDynamic)
+			distanceInTiles = 0;
 
 		return playerDistance > distanceInTiles;
 	}

@@ -10,8 +10,6 @@
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
-	
-	trouver un moyen de rendre "fluide" le déplacement de la camera VERS le joueur (lancer le lvl001 pour comprendre ce que je veux dire)
 
 	////////// PIRA ////////////
 
@@ -72,6 +70,7 @@
 	rajouter des images d'explosion pour les explosions
 	rajouter les textures de Vlad et Sam
 	traduire "quel taré" par "what a freak"
+	créer le PNG dans la salle de pause qui parle au joueur et pas à Rebecca, et qui sauvegarde l'info à CHAQUE phrase et entre deux reset
 	
 	////////// WS01 ////////////
 	
