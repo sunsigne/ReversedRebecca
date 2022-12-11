@@ -33,6 +33,7 @@
 
 	////////// FACILE ////////////
 
+	ajouter les murs effrondrés et les ports dans les 2 images "murs de couleur" ?
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	faire des bonus text + grand pour le knock knoc et le boom !!
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
