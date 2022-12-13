@@ -122,7 +122,8 @@
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
 
 	////////// SUCCES ////////////
-		
+	
+	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
 	5 bits et légumes par jours : manger un fruit virtuel
 	Vous avez été terminé : être tué définitivement par un terminator
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue
