@@ -10,6 +10,7 @@
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
+	créer un éétat" de CRY au lieu d'une animation_decoration
 
 	////////// PIRA ////////////
 
@@ -42,7 +43,7 @@
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique    / psycopath
 
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
-	prevenir qu'on ne doit choisir QU'UN (que deux) bonus
+	prevenir qu'on ne doit choisir QU'UN (que deux) bonus (loot)
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
