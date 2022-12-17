@@ -40,7 +40,7 @@ public class CreateBonusTextRequest implements IndexRequest {
 	public void doAction(PiranhaObject object, String target) {
 
 		// determinate the position
-		String pos = String.valueOf(target.split(":")[0]);
+		String pos = String.valueOf(target.split(",")[0]);
 		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
 		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
 		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
@@ -51,13 +51,14 @@ public class CreateBonusTextRequest implements IndexRequest {
 		y = goal.getY();
 
 		// determinate the text
-		String dataText = String.valueOf(target.split(":")[1]);
+		String dataText = String.valueOf(target.split(",")[2]);
 		String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
 		path = path.concat(FilePath.BONUS_TEXT);
 		String text = new Translatable().getTranslatedText(dataText, path).toUpperCase();
+		boolean importante = target.split(",")[1].equalsIgnoreCase("important");
 
 		// creation of the object
-		BonusText creation = new BonusText(text, x, y);
+		BonusText creation = new BonusText(text, x, y, importante);
 		LAYER.WORLD_TEXT.addObject(creation);
 	}
 

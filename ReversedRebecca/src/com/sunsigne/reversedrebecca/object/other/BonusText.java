@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.other;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
@@ -12,12 +13,17 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class BonusText extends GameObject {
 
 	public BonusText(String text, int x, int y) {
+		this(text, x, y, false);
+	}
+	
+	public BonusText(String text, int x, int y, boolean importante) {
 		super(x, y);
 		this.text = text;
+
+		createFont(importante);
+		createColor(importante);
 		setVelY(-1);
 	}
-
-	private String text;
 
 	////////// NAME ////////////
 
@@ -25,6 +31,24 @@ public class BonusText extends GameObject {
 	public String toString() {
 		var clazz = "BONUS TEXT";
 		return clazz + " : " + text.toUpperCase();
+	}
+
+	////////// TEXT ////////////
+
+	private String text;
+	private Font font;
+	
+	private void createFont(boolean importante) {
+		float size = importante ? 44f: 22f;
+		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size);
+	}
+
+	private Color color;
+	private Color outlines_color;
+	
+	private void createColor(boolean importante) {
+		color = importante ? Color.BLACK : Color.WHITE;
+		outlines_color = importante ? Color.WHITE : Color.BLACK;
 	}
 
 	////////// TICK ////////////
@@ -40,13 +64,11 @@ public class BonusText extends GameObject {
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("square_sans_serif_7.ttf", 22f);
-
 	@Override
 	public void render(Graphics g) {
 
 		int[] rect = new int[] { getX(), getY() - Size.S, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, font, text, DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, text, color, outlines_color, DIRECTION.NULL, rect);
 	}
 
 }
