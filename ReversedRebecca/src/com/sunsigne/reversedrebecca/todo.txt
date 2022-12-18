@@ -11,22 +11,23 @@
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	créer un éétat" de CRY au lieu d'une animation_decoration
-	characters to finish : alicia, delta, erik, joseph, marie
+	characters to finish : delta, erik, joseph, marie
+	changer la coupe de cheveux de Alicia !
+	faire l'animation de "cry"
 
 	////////// PERSONNAGES à faire ////////////
 
+	characters to finish : alicia, delta, erik, (erika), gamma, policemen & women X, prisonners, stephan
 	policemen & women X
 	les prisonniers
 	stephan - l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
 	erika - la 'colloc' de rebecca
 	gamma
-	mister boom (trouver un meilleur pseudo) - l'un des 2 boss de l'embranchement lvl03
-	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS c
-	+es muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
+	D5 - l'un des 2 boss de l'embranchement lvl03
+	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 
 	////////// DIFFICILE ////////////
 	
-		characters to finish : alicia, delta, erik, (erika), gamma, policemen & women X, prisonners, stephan
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
