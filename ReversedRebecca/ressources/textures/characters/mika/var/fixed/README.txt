@@ -1,0 +1,1 @@
+Bed animation is inverted on purpose. For fun.
