@@ -13,7 +13,6 @@
 	créer un éétat" de CRY au lieu d'une animation_decoration
 	characters to finish : erik, joseph, marie
 	changer la coupe de cheveux de Alicia !
-	faire l'animation de "cry"
 
 	////////// PERSONNAGES à faire ////////////
 
