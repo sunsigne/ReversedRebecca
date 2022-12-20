@@ -11,7 +11,7 @@
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	créer un éétat" de CRY au lieu d'une animation_decoration
-	characters to finish : erik, joseph, marie
+	characters to finish : joseph, marie
 	changer la coupe de cheveux de Alicia !
 
 	////////// PERSONNAGES à faire ////////////
