@@ -11,12 +11,12 @@
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	créer un éétat" de CRY au lieu d'une animation_decoration
-	characters to finish : joseph, marie
+	characters to finish : joseph, marie (+1 png)
 	changer la coupe de cheveux de Alicia !
 
 	////////// PERSONNAGES à faire ////////////
 
-	characters to finish : alicia, erik, erika, gamma, policemen & women X, prisonners, stephan
+	characters to finish : erika, gamma, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
 	policemen & women X
 	les prisonniers
 	stephan - l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
