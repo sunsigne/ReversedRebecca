@@ -16,7 +16,7 @@
 
 	////////// PERSONNAGES à faire ////////////
 
-	characters to finish : erika, gamma, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
+	characters to finish : gamma, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
 	policemen & women X
 	les prisonniers
 	stephan - l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
@@ -72,13 +72,14 @@
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	toues les saved "world" ont été verifiées, pas les autres !
 	
-	////////// LVL000-1 ////////////
+	////////// WS000 ////////////
 	
 	passage secret tj vide ...
 	faire la route physopath
 	
 	////////// LVL001 ////////////
 	
+	idée : delta doit avoir un dialogue pour parler de son frère en taule ?
 	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
 	rajouter des images d'explosion pour les explosions
 	rajouter les textures de Vlad et Sam
@@ -90,7 +91,7 @@
 	pour l'ordi allumé -> du pur David, il ferme sa porte au lieu de sauvegarder son travaille
 	Pour le mec qui fait des allez retour, il est sorti de son bureau à toutes vitesse parce qu'il a eu envie de se faire dessus
 	
-	////////// WS01 ////////////
+	////////// old LVL001 ////////////
 	
 	KOAnimation dans les 4 direction ?
 	rendre le PNG enfermé + vivant (+ le finir)
