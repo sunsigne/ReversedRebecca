@@ -12,11 +12,12 @@
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	créer un éétat" de CRY au lieu d'une animation_decoration
 	characters to finish : joseph, marie (+1 png)
-	changer la coupe de cheveux de Alicia !
+	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
+	changer l'animation de CRY de Camille
 
 	////////// PERSONNAGES à faire ////////////
 
-	characters to finish : gamma, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
+	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
 	policemen & women X
 	les prisonniers
 	stephan - l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
@@ -45,14 +46,9 @@
 
 	////////// FACILE ////////////
 
-	ajouter les murs effrondrés et les ports dans les 2 images "murs de couleur" ?
+	changer "une seule vie" en "mort définitive"
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
-	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
-	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
-
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique    / psycopath
-
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
 	prevenir qu'on ne doit choisir QU'UN (que deux) bonus (loot)
 	les flêches pour le déplacement doit ête dit qq part
@@ -66,6 +62,12 @@
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
 
+	////////// TRADUCTION ////////////
+	
+	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
+	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	
 	////////// LVL000 ////////////
 	
 	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
