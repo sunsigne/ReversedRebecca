@@ -24,7 +24,7 @@ public class ChestPuzzle extends Puzzle {
 	private boolean userData = false;
 	
 	public ChestPuzzle(String lootFile, GenericListener actionOnWinning) {
-		super(actionOnWinning);
+		super(-1, actionOnWinning);
 
 		this.lootFile = lootFile;
 		loadSize(); // 1, 2 or 3;

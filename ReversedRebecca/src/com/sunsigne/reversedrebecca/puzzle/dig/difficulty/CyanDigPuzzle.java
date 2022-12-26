@@ -5,8 +5,8 @@ import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 
 public class CyanDigPuzzle extends DigPuzzle {
 
-	public CyanDigPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public CyanDigPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

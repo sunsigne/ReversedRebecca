@@ -33,7 +33,7 @@ public class OpenAction extends OpenPuzzleAction {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		ChestObject chest = (ChestObject) getInteractive();
 		return new ChestPuzzleFactory().createPuzzle(chest.getLootFile(), actionOnWinning);
 	}

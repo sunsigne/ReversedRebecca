@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class RedKeyPuzzle extends KeyPuzzle {
 
-	public RedKeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public RedKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

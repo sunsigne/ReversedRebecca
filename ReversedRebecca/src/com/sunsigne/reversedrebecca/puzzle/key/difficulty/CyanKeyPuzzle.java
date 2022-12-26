@@ -7,8 +7,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class CyanKeyPuzzle extends KeyPuzzle {
 
-	public CyanKeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public CyanKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

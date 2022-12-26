@@ -21,8 +21,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class KeyPuzzle extends Puzzle {
 
-	public KeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public KeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 		new GameCursor().setCursor(null);
 	}
 

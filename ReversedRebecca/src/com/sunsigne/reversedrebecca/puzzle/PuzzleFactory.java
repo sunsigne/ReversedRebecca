@@ -10,7 +10,7 @@ public interface PuzzleFactory {
 
 	////////// PUZZLE ////////////
 	
-	Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning);
+	Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning);
 	
 	default void autoWin(GenericListener actionOnWinning) {
 		actionOnWinning.doAction();

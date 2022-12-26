@@ -10,8 +10,8 @@ import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 
 public abstract class DigPuzzle extends Puzzle {
 
-	public DigPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public DigPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// NAME ////////////

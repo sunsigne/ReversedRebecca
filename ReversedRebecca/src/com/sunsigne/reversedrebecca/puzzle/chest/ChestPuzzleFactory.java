@@ -12,7 +12,7 @@ public class ChestPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	@Deprecated // use instead : createPuzzle(String file, GenericListener actionOnWinning)
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		// will stop the app
 		return new ChestPuzzle("wrong \"createPuzzle\" method used from ChestPuzzleFactory", actionOnWinning);
 	}

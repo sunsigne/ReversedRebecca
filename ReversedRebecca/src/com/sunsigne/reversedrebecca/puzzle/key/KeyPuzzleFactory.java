@@ -21,52 +21,52 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, actionOnWinning);
+			return createDevPuzzle(devDifficulty, criticalChance, actionOnWinning);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, actionOnWinning);
+			return createEasyPuzzle(difficulty, criticalChance, actionOnWinning);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, actionOnWinning);
+			return createNormalPuzzle(difficulty, criticalChance, actionOnWinning);
 		case HARD:
-			return createHardPuzzle(difficulty, actionOnWinning);
+			return createHardPuzzle(difficulty, criticalChance, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestKeyPuzzle(actionOnWinning);
+			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
 		case EASIER:
-			return new EasierKeyPuzzle(actionOnWinning);
+			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
 		case HARDER:
-			return new HarderKeyPuzzle(actionOnWinning);
+			return new HarderKeyPuzzle(criticalChance, actionOnWinning);
 		case HARDEST:
-			return new HardestKeyPuzzle(actionOnWinning);
+			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestKeyPuzzle(actionOnWinning);
+			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new EasierKeyPuzzle(actionOnWinning);
+			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new CyanKeyPuzzle(actionOnWinning);
+			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new GreenKeyPuzzle(actionOnWinning);
+			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new YellowKeyPuzzle(actionOnWinning);
+			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -76,19 +76,19 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanKeyPuzzle(actionOnWinning);
+			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new GreenKeyPuzzle(actionOnWinning);
+			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new YellowKeyPuzzle(actionOnWinning);
+			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new OrangeKeyPuzzle(actionOnWinning);
+			return new OrangeKeyPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new RedKeyPuzzle(actionOnWinning);
+			return new RedKeyPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -98,19 +98,19 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowKeyPuzzle(actionOnWinning);
+			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new OrangeKeyPuzzle(actionOnWinning);
+			return new OrangeKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new RedKeyPuzzle(actionOnWinning);
+			return new RedKeyPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new HarderKeyPuzzle(actionOnWinning);
+			return new HarderKeyPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new HardestKeyPuzzle(actionOnWinning);
+			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

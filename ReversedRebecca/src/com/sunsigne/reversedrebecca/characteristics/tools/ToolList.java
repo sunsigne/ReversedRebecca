@@ -29,6 +29,7 @@ public class ToolList extends Characteristic {
 		getList().getList().forEach(tempTool -> {
 			tempTool.setStartDifficulty(null);
 			tempTool.setMaxDifficulty(LVL.NULL);
+			tempTool.setCriticalChance(-1);
 		});
 	}
 

@@ -6,8 +6,8 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public class GreenKeyPuzzle extends CyanKeyPuzzle {
 
-	public GreenKeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public GreenKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

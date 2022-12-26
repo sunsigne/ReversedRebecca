@@ -7,10 +7,9 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
 public class HarderKeyPuzzle extends CyanKeyPuzzle {
 
-	public HarderKeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public HarderKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
-
 	////////// PUZZLE ////////////
 
 	@Override

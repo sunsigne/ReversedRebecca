@@ -8,8 +8,8 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class GreenHackPuzzle extends HackPuzzle {
 
-	public GreenHackPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public GreenHackPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

@@ -12,6 +12,11 @@ public class RandomGenerator {
 		return new Random().nextBoolean();
 	}
 
+	public boolean getBoolean(int pct_of_chance_for_true) {
+		int rad = getIntBetween(1, 100);
+		return rad <= pct_of_chance_for_true;
+	}
+
 	public String getRandomLetters(int lenght, String allowedChars) {
 		char[] char_array = allowedChars.toCharArray();
 		String word = "";

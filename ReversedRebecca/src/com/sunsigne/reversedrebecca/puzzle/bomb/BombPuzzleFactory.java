@@ -21,52 +21,52 @@ public class BombPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, actionOnWinning);
+			return createDevPuzzle(devDifficulty, criticalChance, actionOnWinning);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, actionOnWinning);
+			return createEasyPuzzle(difficulty, criticalChance, actionOnWinning);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, actionOnWinning);
+			return createNormalPuzzle(difficulty, criticalChance, actionOnWinning);
 		case HARD:
-			return createHardPuzzle(difficulty, actionOnWinning);
+			return createHardPuzzle(difficulty, criticalChance, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestBombPuzzle(actionOnWinning);
+			return new EasiestBombPuzzle(criticalChance, actionOnWinning);
 		case EASIER:
-			return new EasierBombPuzzle(actionOnWinning);
+			return new EasierBombPuzzle(criticalChance, actionOnWinning);
 		case HARDER:
-			return new HarderBombPuzzle(actionOnWinning);
+			return new HarderBombPuzzle(criticalChance, actionOnWinning);
 		case HARDEST:
-			return new HardestBombPuzzle(actionOnWinning);
+			return new HardestBombPuzzle(criticalChance, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestBombPuzzle(actionOnWinning);
+			return new EasiestBombPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new EasierBombPuzzle(actionOnWinning);
+			return new EasierBombPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new CyanBombPuzzle(actionOnWinning);
+			return new CyanBombPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new GreenBombPuzzle(actionOnWinning);
+			return new GreenBombPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new YellowBombPuzzle(actionOnWinning);
+			return new YellowBombPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -76,19 +76,19 @@ public class BombPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanBombPuzzle(actionOnWinning);
+			return new CyanBombPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new GreenBombPuzzle(actionOnWinning);
+			return new GreenBombPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new YellowBombPuzzle(actionOnWinning);
+			return new YellowBombPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new OrangeBombPuzzle(actionOnWinning);
+			return new OrangeBombPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new RedBombPuzzle(actionOnWinning);
+			return new RedBombPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -98,19 +98,19 @@ public class BombPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowBombPuzzle(actionOnWinning);
+			return new YellowBombPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new OrangeBombPuzzle(actionOnWinning);
+			return new OrangeBombPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new RedBombPuzzle(actionOnWinning);
+			return new RedBombPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new HarderBombPuzzle(actionOnWinning);
+			return new HarderBombPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new HardestBombPuzzle(actionOnWinning);
+			return new HardestBombPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

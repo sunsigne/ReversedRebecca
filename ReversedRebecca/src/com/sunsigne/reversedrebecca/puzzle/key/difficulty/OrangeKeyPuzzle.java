@@ -8,8 +8,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class OrangeKeyPuzzle extends KeyPuzzle {
 
-	public OrangeKeyPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public OrangeKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

@@ -8,8 +8,8 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzle;
 
 public class HardestBombPuzzle extends BombPuzzle {
 
-	public HardestBombPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public HardestBombPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

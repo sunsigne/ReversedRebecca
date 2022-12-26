@@ -18,7 +18,8 @@ public abstract class OpenPuzzleAction extends Action {
 		setName(new Translatable().getTranslatedText(getName(), FilePath.ACTION));
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
-			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(),
+			int criticalChance = getToolPlayer() != null ? getToolPlayer().getCriticalChance() : -1;
+			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(), criticalChance,
 					actionOnWinning(puzzlerObject));
 			if (puzzle != null)
 				puzzle.openPuzzle();
@@ -36,7 +37,8 @@ public abstract class OpenPuzzleAction extends Action {
 
 	////////// PUZZLE ////////////
 
-	public abstract Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning);
+	public abstract Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance,
+			GenericListener actionOnWinning);
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 

@@ -16,8 +16,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombPuzzle extends Puzzle {
 
-	public BombPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public BombPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 	}
 
 	////////// NAME ////////////
@@ -56,7 +56,7 @@ public abstract class BombPuzzle extends Puzzle {
 	}
 
 	protected void createBombs() {
-		int radCrit = new RandomGenerator().getIntBetween(0, getBombAmount() - 1);
+		int radCrit = isCritical ? new RandomGenerator().getIntBetween(0, getBombAmount() - 1) : -1;
 		int colGap = getColGap();
 		int maxRow = getBomb(this, false, 0, 0) instanceof BigBombObject ? 3 : 4;
 

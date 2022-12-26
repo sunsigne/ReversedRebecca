@@ -35,8 +35,8 @@ public class DigAction extends OpenPuzzleAction {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, GenericListener actionOnWinning) {
-		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, actionOnWinning);
+	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, criticalChance, actionOnWinning);
 	}
 
 	@Override

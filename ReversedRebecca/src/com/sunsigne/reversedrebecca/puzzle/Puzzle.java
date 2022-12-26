@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.puzzle;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -18,7 +19,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class Puzzle implements Updatable, TickFree {
 
-	public Puzzle(GenericListener actionOnWinning) {
+	public Puzzle(int criticalChance, GenericListener actionOnWinning) {
+		this.isCritical = new RandomGenerator().getBoolean(criticalChance);
 		this.actionOnWinning = actionOnWinning;
 	}
 
@@ -46,6 +48,8 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 	////////// OPEN ////////////
 
+	protected boolean isCritical;
+	
 	public void openPuzzle() {
 		World world = World.get();
 		if (world != null)

@@ -41,8 +41,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class HackPuzzle extends Puzzle {
 
-	public HackPuzzle(GenericListener actionOnWinning) {
-		super(actionOnWinning);
+	public HackPuzzle(int criticalChance, GenericListener actionOnWinning) {
+		super(criticalChance, actionOnWinning);
 		new GameCursor().setCursor(null);
 	}
 
