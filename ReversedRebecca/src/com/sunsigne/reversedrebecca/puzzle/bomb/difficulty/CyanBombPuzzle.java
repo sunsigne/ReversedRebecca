@@ -14,8 +14,8 @@ public class CyanBombPuzzle extends BombPuzzle {
 	////////// PUZZLE ////////////
 
 	@Override
-	public BombObject getBomb(Puzzle puzzle, int x, int y) {
-		return new BombObject(puzzle, x, y);
+	public BombObject getBomb(Puzzle puzzle, boolean critical, int x, int y) {
+		return new BombObject(puzzle, critical, x, y);
 	}
 
 	@Override

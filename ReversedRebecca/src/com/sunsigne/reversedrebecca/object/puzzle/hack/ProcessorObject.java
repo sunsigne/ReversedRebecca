@@ -24,8 +24,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
 
 	public ProcessorObject(Puzzle puzzle, String text) {
-		super(puzzle, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2, 5 * Size.XS,
-				5 * Size.XS);
+		super(puzzle, false, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2,
+				5 * Size.XS, 5 * Size.XS);
 		this.text = text;
 	}
 
@@ -37,7 +37,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
 		return clazz + text.toUpperCase() + " : " + pos;
 	}
-	
+
 	public abstract String getName();
 
 	////////// PROCESSOR ////////////

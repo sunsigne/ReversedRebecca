@@ -21,15 +21,15 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class BombObject extends PuzzleObject implements MouseUserEvent {
 
-	protected BombObject(Puzzle puzzle, int x, int y, int w, int h) {
-		super(puzzle, x, y, w, h);
+	protected BombObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
+		super(puzzle, critical, x, y, w, h);
 		loadAnimation();
 		maxcount = 1;
 		count = maxcount;
 	}
 
-	public BombObject(Puzzle puzzle, int x, int y) {
-		this(puzzle, x, y, 2 * Size.L, 2 * Size.L);
+	public BombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		this(puzzle, critical, x, y, 2 * Size.L, 2 * Size.L);
 	}
 
 	private boolean exploded;
@@ -40,8 +40,12 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	public void setExploded(boolean exploded) {
 		this.exploded = exploded;
-		if (exploded)
+
+		if (exploded) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
+			if (isCritical())
+				getPuzzle().closePuzzle(true);
+		}
 	}
 
 	////////// NAME ////////////
@@ -49,10 +53,15 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	protected String getName() {
 		return "BOMB";
 	}
-	
+
 	@Override
 	public String toString() {
-		return "PUZZLE : " + getName() + " : " + getCount() + "/" + getMaxCount() + " : " + getRow(getX()) + "-" + getCol(getY());
+
+		String critical = isCritical() ? " CRITICAL" : "";
+		String count = getCount() + "/" + getMaxCount();
+		String pos = getRow(getX()) + "-" + getCol(getY());
+
+		return "PUZZLE : " + getName() + critical + " : " + count + " : " + pos;
 	}
 
 	////////// MAX COUNT ////////////
@@ -64,7 +73,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	}
 
 	public void setMaxCount(int maxcount) {
-		if (maxcount > 1)
+		if (maxcount > 1 && isCritical() == false)
 			this.maxcount = maxcount;
 		else
 			this.maxcount = 1;
@@ -136,7 +145,8 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_bomb_";
 		ImageTask loader = new ImageTask();
 
-		BufferedImage i0 = loader.loadImage(path + "0");
+		String critical = isCritical() ? "critical" : "0";
+		BufferedImage i0 = loader.loadImage(path + critical);
 		BufferedImage i1 = loader.loadImage(path + "1");
 		BufferedImage i2 = loader.loadImage(path + "2");
 		BufferedImage i3 = loader.loadImage(path + "3");
@@ -162,7 +172,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
-		if (count > 0)
+		if (count > 0 && isCritical() == false)
 			drawCount(font, g);
 	}
 

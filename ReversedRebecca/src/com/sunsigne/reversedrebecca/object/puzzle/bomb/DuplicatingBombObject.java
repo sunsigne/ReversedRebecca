@@ -9,15 +9,15 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class DuplicatingBombObject extends CrazyBombObject {
 
-	public DuplicatingBombObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public DuplicatingBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x, y);
 	}
-	
+
 	@Override
 	public void setExploded(boolean exploded) {
 		super.setExploded(exploded);
 
-		if (exploded)
+		if (exploded && isCritical() == false)
 			createCrazyBombs();
 	}
 
@@ -26,7 +26,7 @@ public class DuplicatingBombObject extends CrazyBombObject {
 
 		for (int index = 0; index < 2; index++) {
 
-			bomb[index] = new CrazyBombObject(getPuzzle(), getX(), getY());
+			bomb[index] = new CrazyBombObject(getPuzzle(), false, getX(), getY());
 
 			int count = new RandomGenerator().getIntBetween(2, 5);
 			bomb[index].setMaxCount(count);
@@ -41,12 +41,12 @@ public class DuplicatingBombObject extends CrazyBombObject {
 	}
 
 	////////// NAME ////////////
-	
+
 	@Override
-	protected String getName(){
+	protected String getName() {
 		return "BOMB DUPLICATING";
 	}
-	
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
@@ -54,8 +54,11 @@ public class DuplicatingBombObject extends CrazyBombObject {
 	@Override
 	public BufferedImage getImage() {
 		if (hasExploded() == false) {
-			if (image == null)
-				image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_bomb_" + "dual");
+			if (image == null) {
+				String critical = isCritical() ? "_critical" : "";
+				image = new ImageTask()
+						.loadImage("textures/puzzle/" + getPuzzle().getName() + "_bomb_" + "dual" + critical);
+			}
 			return image;
 		}
 		return super.getImage();

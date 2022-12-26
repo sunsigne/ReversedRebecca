@@ -7,8 +7,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class EasiestBombObject extends BigBombObject {
 
-	public EasiestBombObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public EasiestBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x, y);
 	}
 
 	////////// TICK ////////////

@@ -15,7 +15,7 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 	private int speed = Size.XS / 8;
 
 	public MovingWallPuzzleObject(Puzzle puzzle, BufferedImage image, int x, int y) {
-		super(puzzle, x, y);
+		super(puzzle, false, x, y);
 		this.image = image;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}

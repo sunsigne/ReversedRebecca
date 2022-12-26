@@ -16,8 +16,8 @@ public class OrangeBombPuzzle extends BombPuzzle {
 	////////// PUZZLE ////////////
 
 	@Override
-	public BombObject getBomb(Puzzle puzzle, int x, int y) {
-		MovingBombObject bomb = new FastBombObject(puzzle, x, y);
+	public BombObject getBomb(Puzzle puzzle, boolean critical, int x, int y) {
+		MovingBombObject bomb = new FastBombObject(puzzle, critical, x, y);
 		return bomb;
 	}
 

@@ -38,7 +38,7 @@ public abstract class BombPuzzle extends Puzzle {
 
 	private BombObject[] bomb = new BombObject[getBombAmount()];
 
-	public abstract BombObject getBomb(Puzzle puzzle, int x, int y);
+	public abstract BombObject getBomb(Puzzle puzzle, boolean critical, int x, int y);
 
 	public abstract int getBombAmount(); // 3, 4 or 6
 
@@ -56,17 +56,17 @@ public abstract class BombPuzzle extends Puzzle {
 	}
 
 	protected void createBombs() {
+		int radCrit = new RandomGenerator().getIntBetween(0, getBombAmount() - 1);
 		int colGap = getColGap();
-		int maxRow = getBomb(this, 0, 0) instanceof BigBombObject ? 3 : 4;
+		int maxRow = getBomb(this, false, 0, 0) instanceof BigBombObject ? 3 : 4;
 
 		for (int index = 0; index < getBombAmount(); index++) {
-
 			int col = Size.S + colGap * index + getCol(1 + index * 3);
 			int radRow = Size.S + getRow(new RandomGenerator().getIntBetween(1, maxRow));
 
-			bomb[index] = getBomb(this, col, radRow);
+			bomb[index] = getBomb(this, index == radCrit, col, radRow);
 			LAYER.PUZZLE.addObject(bomb[index]);
-		}
+		}		
 	}
 
 	protected void setRandomMaxCountBetween(int a, int b) {

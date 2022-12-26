@@ -13,8 +13,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class ShrinkBombObject extends FastBombObject {
 
-	public ShrinkBombObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x + Size.S, y + Size.S, Size.S, Size.S);
+	public ShrinkBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x + Size.S, y + Size.S, Size.S, Size.S);
 
 		ymin = getPuzzle().getRow(1) + Size.S;
 		ymax = getPuzzle().getRow(5) + 2 * Size.S;
@@ -80,7 +80,7 @@ public class ShrinkBombObject extends FastBombObject {
 
 		Font font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 32f + 2 * size);
 
-		if (getCount() > 0)
+		if (getCount() > 0 && isCritical() == false)
 			drawCount(font, g);
 	}
 

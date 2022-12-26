@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 public class LockObject extends PuzzleObject implements CollisionReactor {
 
 	public LockObject(Puzzle puzzle) {
-		super(puzzle, 0, 0);
+		super(puzzle, false, 0, 0);
 	}
 
 	////////// NAME ////////////

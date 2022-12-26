@@ -16,7 +16,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public abstract class ChestLoot extends PuzzleObject {
 
 	protected ChestLoot(ChestCard card, boolean widerUpgradeImg) {
-		super(card.getPuzzle(), card.getX(), card.getY(), card.getWidth(), card.getHeight());
+		super(card.getPuzzle(), false, card.getX(), card.getY(), card.getWidth(), card.getHeight());
 		this.card = card;
 		this.widerUpgradeImg = widerUpgradeImg;
 	}

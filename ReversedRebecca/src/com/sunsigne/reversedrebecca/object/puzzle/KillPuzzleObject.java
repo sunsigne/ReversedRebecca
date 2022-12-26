@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFree, CollisionReactor {
 
 	public KillPuzzleObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+		super(puzzle, false, x, y);
 	}
 
 	////////// NAME ////////////

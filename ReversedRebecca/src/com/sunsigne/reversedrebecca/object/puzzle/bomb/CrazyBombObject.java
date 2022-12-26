@@ -6,8 +6,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class CrazyBombObject extends ShrinkBombObject {
 
-	public CrazyBombObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public CrazyBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x, y);
 		defineNewXSpeed(Size.XS / 4);
 	}
 

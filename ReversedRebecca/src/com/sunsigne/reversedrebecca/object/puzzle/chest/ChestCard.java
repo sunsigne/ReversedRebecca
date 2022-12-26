@@ -18,7 +18,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 public class ChestCard extends PuzzleObject implements MouseUserEvent {
 
 	public ChestCard(ChestPuzzle puzzle, String lootData, int x, int y) {
-		super(puzzle, x, y, 4 * Size.L, 5 * Size.L);
+		super(puzzle, false, x, y, 4 * Size.L, 5 * Size.L);
 		this.lootData = lootData;
 		loadImages();
 	}

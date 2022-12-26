@@ -6,13 +6,13 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class MovingBombObject extends BombObject {
 
-	protected MovingBombObject(Puzzle puzzle, int x, int y, int w, int h) {
-		super(puzzle, x, y, w, h);
+	protected MovingBombObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
+		super(puzzle, critical, x, y, w, h);
 		defineNewYSpeed(Size.XS / 5);
 	}
 	
-	public MovingBombObject(Puzzle puzzle, int x, int y) {
-		this(puzzle, x, y, 2 * Size.L, 2 * Size.L);
+	public MovingBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+		this(puzzle, critical, x, y, 2 * Size.L, 2 * Size.L);
 	}
 	
 	////////// NAME ////////////

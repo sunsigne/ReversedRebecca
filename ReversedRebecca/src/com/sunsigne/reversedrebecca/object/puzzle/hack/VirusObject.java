@@ -15,7 +15,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 public class VirusObject extends PuzzleObject {
 
 	public VirusObject(Puzzle puzzle) {
-		super(puzzle, 0, 0, Size.M, Size.M);
+		super(puzzle, false, 0, 0, Size.M, Size.M);
 		loadAnimation();
 	}
 

@@ -20,7 +20,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
 
 	public KeyObject(Puzzle puzzle) {
-		super(puzzle, 0, 0);
+		super(puzzle, false, 0, 0);
 		multiplySpeedBy(1);
 	}
 
