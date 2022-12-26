@@ -10,19 +10,12 @@
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
-	créer un éétat" de CRY au lieu d'une animation_decoration
-	characters to finish : (+1 png)
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
-	changer l'animation de CRY de Camille
 
 	////////// PERSONNAGES à faire ////////////
 
-	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 3 or 4 more prisonners, stephan
-	policemen & women X
-	les prisonniers
-	stephan - l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
-	erika - la 'colloc' de rebecca
-	gamma
+	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
+	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
 	D5 - l'un des 2 boss de l'embranchement lvl03
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 
@@ -68,7 +61,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
-	////////// LVL000 ////////////
+	////////// RR000 ////////////
 	
 	pas fini : nombre de fins -> penser à supprimer l'inutile pour le test
 	"regarder la TV tj pas fait", attention au dodo de sarah
@@ -81,16 +74,15 @@
 	
 	////////// LVL001 ////////////
 	
+	faire des personnages de remplissage dans les bureau en haut à droite
 	idée : delta doit avoir un dialogue pour parler de son frère en taule ?
 	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
 	rajouter des images d'explosion pour les explosions
-	rajouter les textures de Vlad et Sam
 	traduire "quel taré" par "what a freak"
-	créer le PNG dans la salle de pause qui parle au joueur et pas à Rebecca, et qui sauvegarde l'info à CHAQUE phrase et entre deux reset
-	le bureau "vide" c'est 2 gars qui ont demissionné ensemble.
-	rebeccxa fait un comentaire sur la plante de la salle en bas à droite, interdit dans les bureau double, mais elle a eu droit à une dérogation pour sa plante en pot
+	le bureau "vide" c'est 2 gars qui ont demissionné ensemble. (déjà fait ?)
+	rebecca fait un comentaire sur la plante de la salle en bas à droite, interdit dans les bureau double, mais elle a eu droit à une dérogation pour sa plante en pot (déjà fait ?)
 	la clef bleu peut se trouver soit en ouillant à côté de l'ordinateur, soit en parlant plusieurs fois au mec du bureau de droite
-	pour l'ordi allumé -> du pur David, il ferme sa porte au lieu de sauvegarder son travaille
+	pour l'ordi allumé -> du pur David, il ferme sa porte au lieu de sauvegarder son travaille (déjà fait ?)
 	Pour le mec qui fait des allez retour, il est sorti de son bureau à toutes vitesse parce qu'il a eu envie de se faire dessus
 	
 	////////// old LVL001 ////////////
