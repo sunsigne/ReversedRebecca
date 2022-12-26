@@ -48,7 +48,7 @@ public class Save {
 	public void registerSave() {
 
 		updateCharacteristics();
-		
+
 		// if nothing to save
 		var list = SaveList.getList();
 		if (list.getList().isEmpty())
@@ -77,9 +77,9 @@ public class Save {
 	}
 
 	private void updateCharacteristics() {
-		
+
 		FileTask task = new FileTask();
-		
+
 		// tools
 		var list = ToolList.getList();
 		for (ToolPlayer tempTool : list.getList()) {
@@ -87,6 +87,8 @@ public class Save {
 			task.write(tempTool.getName() + "MaxLvl", char_file, tempTool.getMaxDifficulty().getName().toUpperCase());
 			// update the start lvl
 			task.write(tempTool.getName() + "StartLvl", char_file, tempTool.getStartDifficulty().getName().toUpperCase());
+			// update critical chance
+			task.write(tempTool.getName() + "CriticalChance", char_file, String.valueOf(tempTool.getCriticalChance()));
 		}
 	}
 

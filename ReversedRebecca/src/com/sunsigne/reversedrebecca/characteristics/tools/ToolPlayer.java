@@ -19,6 +19,7 @@ public abstract class ToolPlayer implements Difficulty {
 		ToolList.getList().addObject(this);
 		loadMaxDifficulty();
 		loadStartDifficulty();
+		loadCriticalChance();
 	}
 
 	////////// USEFUL ////////////
@@ -35,8 +36,9 @@ public abstract class ToolPlayer implements Difficulty {
 
 		String maxLine = tool + "MaxLvl=" + LVL.CYAN.getName().toUpperCase();
 		String startLine = tool + "StartLvl=" + LVL.NULL.getName().toUpperCase();
-		
-		String new_content = content + br + br + maxLine + br + startLine;
+		String criticalLine = tool + "CriticalChance=" + "0";
+
+		String new_content = content + br + br + maxLine + br + startLine + br + criticalLine;
 		new FileTask().write(file, new_content);
 	}
 
@@ -63,7 +65,7 @@ public abstract class ToolPlayer implements Difficulty {
 		else
 			// normal case
 			updateGUITools();
-		
+
 		new UnlockedToolMaxLevelCondition().registerValue(this, getMaxDifficulty());
 	}
 
@@ -153,6 +155,33 @@ public abstract class ToolPlayer implements Difficulty {
 			return;
 
 		guiTool.loadImages();
+	}
+
+	////////// CRITICAL ////////////
+
+	private int criticalChance = -1;
+
+	public int getCriticalChance() {
+		return getTool().criticalChance;
+	}
+
+	public void setCriticalChance(int chance) {
+		getTool().criticalChance = chance;
+	}
+
+	private void loadCriticalChance() {
+		if (getCriticalChance() != -1)
+			return;
+
+		String txtCriticalChance = new FileTask().read(userData, getName() + "CriticalChance", file);
+
+		// if the file "characteristics" has no value for the tool, create one
+		if (txtCriticalChance.isEmpty()) {
+			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			txtCriticalChance = "0";
+		}
+
+		getTool().criticalChance = Integer.valueOf(txtCriticalChance);
 	}
 
 }
