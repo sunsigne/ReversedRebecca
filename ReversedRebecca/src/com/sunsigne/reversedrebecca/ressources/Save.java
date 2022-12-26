@@ -88,7 +88,7 @@ public class Save {
 			// update the start lvl
 			task.write(tempTool.getName() + "StartLvl", char_file, tempTool.getStartDifficulty().getName().toUpperCase());
 			// update critical chance
-			task.write(tempTool.getName() + "CriticalChance", char_file, String.valueOf(tempTool.getCriticalChance()));
+			task.write(tempTool.getName() + "CriticalChance", char_file, String.valueOf(tempTool.getCriticalChance() + "%"));
 		}
 	}
 

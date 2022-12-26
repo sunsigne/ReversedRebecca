@@ -36,7 +36,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		String maxLine = tool + "MaxLvl=" + LVL.CYAN.getName().toUpperCase();
 		String startLine = tool + "StartLvl=" + LVL.NULL.getName().toUpperCase();
-		String criticalLine = tool + "CriticalChance=" + "0";
+		String criticalLine = tool + "CriticalChance=" + "0%";
 
 		String new_content = content + br + br + maxLine + br + startLine + br + criticalLine;
 		new FileTask().write(file, new_content);
@@ -178,10 +178,10 @@ public abstract class ToolPlayer implements Difficulty {
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtCriticalChance.isEmpty()) {
 			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
-			txtCriticalChance = "0";
+			txtCriticalChance = "0%";
 		}
 
-		getTool().criticalChance = Integer.valueOf(txtCriticalChance);
+		getTool().criticalChance = Integer.valueOf(txtCriticalChance.replace("%", ""));
 	}
 
 }

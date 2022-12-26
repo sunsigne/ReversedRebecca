@@ -1,19 +1,18 @@
 
 MaxHp=3
 
-
 BombMaxLvl=CYAN
 BombStartLvl=NULL
-BombCriticalChance=0
+BombCriticalChance=0%
 
 KeyMaxLvl=CYAN
-KeyStartLvl=CYAN
-KeyCriticalChance=0
+KeyStartLvl=NULL
+KeyCriticalChance=0%
 
 MicrochipMaxLvl=CYAN
 MicrochipStartLvl=NULL
-MicrochipCriticalChance=0
+MicrochipCriticalChance=0%
 
 ShovelMaxLvl=CYAN
 ShovelStartLvl=NULL
-ShovelCriticalChance=0
+ShovelCriticalChance=0%
