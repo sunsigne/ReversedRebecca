@@ -11,6 +11,7 @@
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
+	puzzle : passer d'une relevée d'info sur l'outils (dans le constructeur des puzzle) à une récupération de l'outils lui-même
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -39,7 +40,7 @@
 
 	////////// FACILE ////////////
 
-	changer "une seule vie" en "mort définitive"
+	faire une piranha requete pour lire la difficulté (en conditionnel)
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique    / psycopath
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
@@ -74,6 +75,12 @@
 	
 	////////// LVL001 ////////////
 	
+	le déplacement de la camera sur le joueur (pendant la cinématique) est bizarre.... A Essayer : le faire AVANT le déplacement
+	texture : plante à gauche à refaire
+	dialogue : changer "notre invité" par "l'intru"
+	la pancarte devant les toilettes dit "merci de laisser les toilettes dans le même état que vous les avez trouvé"
+	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
+	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
 	idée : delta doit avoir un dialogue pour parler de son frère en taule ?
 	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
@@ -118,6 +125,7 @@
 
 	///////// IDEE ////////////
 
+	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile elle se casse, en difficile il y a un "court-jus" qui la fait marcher à 200% 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	Dave, son pouvoir est de savoir ce qu'il est (un personnage de jeu vidéo). Souvent blasé, a des comportements (et phrases) différentes d'une session sur l'autre (% de chance)
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
