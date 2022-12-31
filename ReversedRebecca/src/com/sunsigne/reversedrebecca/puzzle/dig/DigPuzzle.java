@@ -78,7 +78,7 @@ public abstract class DigPuzzle extends Puzzle {
 		dirt.setBuriedObject(exit, getSize());
 	}
 
-	private DIG_STATE state = DIG_STATE.HAND;
+	private DIG_STATE state = DIG_STATE.DIG;
 
 	public DIG_STATE getState() {
 		return state;
@@ -90,12 +90,12 @@ public abstract class DigPuzzle extends Puzzle {
 
 	private DigToolObject getTool(DIG_STATE dig_state) {
 		switch (dig_state) {
-		case DIG:
-			return new DigShovelToolObject(this);
-
 		case HAND:
-		default:
 			return new DigHandToolObject(this);
+			
+		case DIG:
+		default:
+			return new DigShovelToolObject(this);
 		}
 	}
 

@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.dig.difficulty;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -19,6 +20,9 @@ public class CyanDigPuzzle extends DigPuzzle {
 
 	@Override
 	public void createPuzzle() {
+		createTool(2, 2, DIG_STATE.HAND);
+		createTool(2, 4, DIG_STATE.DIG);
+		
 		createDirtGrid();
 		createExit();
 	}
