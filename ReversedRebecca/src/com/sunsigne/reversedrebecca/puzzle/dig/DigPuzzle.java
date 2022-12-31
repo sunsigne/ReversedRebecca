@@ -6,6 +6,10 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigHandToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigShovelToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -15,12 +19,16 @@ import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DigPuzzle extends Puzzle {
 
 	public DigPuzzle(int criticalChance, GenericListener actionOnWinning) {
 		super(criticalChance, actionOnWinning);
+		
+		new GameCursor().setCursor(null);
+		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize()));
 	}
 
 	////////// NAME ////////////
@@ -68,6 +76,34 @@ public abstract class DigPuzzle extends Puzzle {
 		BuriedExitObject exit = new BuriedExitObject(this, getSize());
 		DirtObject dirt = new RandomGenerator().getElementFromList(list);
 		dirt.setBuriedObject(exit, getSize());
+	}
+
+	private DIG_STATE state = DIG_STATE.HAND;
+
+	public DIG_STATE getState() {
+		return state;
+	}
+
+	public void setState(DIG_STATE state) {
+		this.state = state;
+	}
+
+	private DigToolObject getTool(DIG_STATE dig_state) {
+		switch (dig_state) {
+		case DIG:
+			return new DigShovelToolObject(this);
+
+		case HAND:
+		default:
+			return new DigHandToolObject(this);
+		}
+	}
+
+	protected void createTool(int col, int row, DIG_STATE dig_state) {
+		DigToolObject tool = getTool(dig_state);
+		tool.setX(getCol(col));
+		tool.setY(getRow(row));
+		LAYER.PUZZLE.addObject(tool);
 	}
 
 	////////// RENDER ////////////

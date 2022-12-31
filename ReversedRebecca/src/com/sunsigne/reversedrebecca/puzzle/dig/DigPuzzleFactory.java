@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.CyanDigPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.EasiestDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasierKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasiestKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.GreenKeyPuzzle;
@@ -42,7 +43,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, int criticalChance, GenericListener actionOnWinning) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasiestDigPuzzle(criticalChance, actionOnWinning);
 		case EASIER:
 			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
 		case HARDER:
@@ -59,7 +60,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasiestDigPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
 			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
