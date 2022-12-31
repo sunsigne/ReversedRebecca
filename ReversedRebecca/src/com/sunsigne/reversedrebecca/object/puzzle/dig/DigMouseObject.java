@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 public class DigMouseObject extends PuzzleObject {
 
 	public DigMouseObject(Puzzle puzzle, int size) {
-		super(puzzle, false, 0, 0, size / 2, size / 2);
+		super(puzzle, false, 0, 0, size * 3 / 4, size * 3 / 4);
 	}
 
 	////////// NAME ////////////

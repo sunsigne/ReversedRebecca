@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
+import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -102,18 +104,21 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 		if (isSelected() == false)
 			return;
 
+		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
+		if (puzzle.getState() != DIG_STATE.DIG)
+			return;
+
 		deleting = true;
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
-
 
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		if(deleting == false)
+		if (deleting == false)
 			return;
-		
+
 		buriedObject.setClickable(true);
 		LAYER.PUZZLE.getHandler().removeObject(this);
 	}

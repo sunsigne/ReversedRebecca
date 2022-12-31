@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
+import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -43,6 +45,10 @@ public class BuriedExitObject extends BuriedObject {
 		if (isSelected() == false)
 			return;
 
+		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
+		if (puzzle.getState() != DIG_STATE.DIG)
+			return;
+		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 
 		if (state.getState() == 3)

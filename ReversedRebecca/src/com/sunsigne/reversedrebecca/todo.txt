@@ -8,10 +8,11 @@
 
 	////////// EN COURS ////////////
 
+	les outils "main" et "pelle" du puzzle "dig" n'ont pas les bons sons, ni bon fonctionnement + ajouter des sons lorsque le mauvais outil est utilisé
+
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
-	puzzle : passer d'une relevée d'info sur l'outils (dans le constructeur des puzzle) à une récupération de l'outils lui-même
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -22,6 +23,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	pas sûr : puzzle : passer d'une relevée d'info sur l'outils (dans le constructeur des puzzle) à une récupération de l'outils lui-même
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
