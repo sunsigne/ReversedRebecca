@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.CyanKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.CyanDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasierKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasiestKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.GreenKeyPuzzle;
@@ -21,7 +21,8 @@ public class DigPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance,
+			GenericListener actionOnWinning) {
 		if (devDifficulty != null)
 			return createDevPuzzle(devDifficulty, criticalChance, actionOnWinning);
 
@@ -62,7 +63,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		case GREEN:
 			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
-			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
+			return new CyanDigPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
 			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
 		case RED:
@@ -80,7 +81,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
+			return new CyanDigPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
 			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
