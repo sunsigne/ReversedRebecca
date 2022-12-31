@@ -5,8 +5,11 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -28,7 +31,7 @@ public abstract class DigPuzzle extends Puzzle {
 	}
 
 	protected abstract int getSize();
-	
+
 	////////// FACTORY ////////////
 
 	@Override
@@ -50,12 +53,21 @@ public abstract class DigPuzzle extends Puzzle {
 			handler.addObject(new WallPuzzle(image, getCol(6), getRow(row)));
 		}
 	}
-	
-	protected void createDirt(int col, int row, BuriedObject buriedObject) {
-		DirtObject dirt = new DirtObject(this, buriedObject, getSize());
+
+	private GameList<DirtObject> list = new GameList<>(LISTTYPE.ARRAY);
+
+	protected void createDirt(int col, int row) {
+		DirtObject dirt = new DirtObject(this, getSize());
+		list.addObject(dirt);
 		dirt.setX(getCol(col));
 		dirt.setY(getRow(row));
 		LAYER.PUZZLE.addObject(dirt);
+	}
+
+	protected void createExit() {
+		BuriedExitObject exit = new BuriedExitObject(this, getSize());
+		DirtObject dirt = new RandomGenerator().getElementFromList(list);
+		dirt.setBuriedObject(exit, getSize());
 	}
 
 	////////// RENDER ////////////

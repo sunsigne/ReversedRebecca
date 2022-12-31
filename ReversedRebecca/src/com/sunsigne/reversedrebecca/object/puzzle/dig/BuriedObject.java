@@ -15,6 +15,7 @@ public abstract class BuriedObject extends PuzzleObject implements TickFree, Mou
 
 	public BuriedObject(Puzzle puzzle, int size) {
 		super(puzzle, false, 0, 0, size, size);
+		setClickable(false);
 	}
 
 	////////// NAME ////////////
@@ -65,6 +66,20 @@ public abstract class BuriedObject extends PuzzleObject implements TickFree, Mou
 	////////// MOUSE ////////////
 
 	private MouseController mouseController = new MouseController(this);
+
+	private boolean clickable;
+
+	public void setClickable(boolean clickable) {
+		this.clickable = clickable;
+	}
+
+	@Override
+	public boolean isClickable() {
+		if (clickable)
+			return MouseUserEvent.super.isClickable();
+		else
+			return false;
+	}
 
 	@Override
 	public MouseController getMouseController() {

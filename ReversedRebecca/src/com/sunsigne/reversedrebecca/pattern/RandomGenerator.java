@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.pattern;
 
 import java.util.Random;
 
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+
 public class RandomGenerator {
 
 	public int getIntBetween(int a, int b) {
@@ -35,6 +37,12 @@ public class RandomGenerator {
 
 	public String getString(String... words) {
 		return words[getIntBetween(0, words.length - 1)];
+	}
+
+	public <T> T getElementFromList(GameList<T> list) {
+		Random rad = new Random();
+		T element = list.getList().get(rad.nextInt(list.getList().size()));
+		return element;
 	}
 
 }

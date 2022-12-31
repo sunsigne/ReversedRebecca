@@ -17,10 +17,10 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent {
 
-	public DirtObject(Puzzle puzzle, BuriedObject buriedObject, int size) {
+	public DirtObject(Puzzle puzzle, int size) {
 		super(puzzle, false, 0, 0, size, size);
 
-		setBuriedObject(buriedObject, size);
+		setBuriedObject(null, size);
 	}
 
 	private BuriedObject buriedObject;
@@ -72,14 +72,17 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 
 	@Override
 	public void render(Graphics g) {
+		if (deleting)
+			return;
+
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		
+
 		g.setColor(Color.BLACK);
-		
-		if(getX() != getPuzzle().getCol(7))
+
+		if (getX() != getPuzzle().getCol(7))
 			g.drawLine(getX(), getY(), getX(), getY() + getHeight());
-		
-		if(getY() != getPuzzle().getRow(1))
+
+		if (getY() != getPuzzle().getRow(1))
 			g.drawLine(getX(), getY(), getX() + getWidth(), getY());
 	}
 
@@ -92,19 +95,27 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 		return mouseController;
 	}
 
+	private boolean deleting;
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)
 			return;
 
+		deleting = true;
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
-		LAYER.PUZZLE.getHandler().removeObject(this);
+
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-
+		if(deleting == false)
+			return;
+		
+		buriedObject.setClickable(true);
+		LAYER.PUZZLE.getHandler().removeObject(this);
 	}
 
 }
