@@ -14,9 +14,4 @@ public class DigHandToolObject extends DigToolObject {
 		return DIG_STATE.HAND;
 	}
 
-	@Override
-	public String getSound() {
-		return "sword";
-	}
-
 }

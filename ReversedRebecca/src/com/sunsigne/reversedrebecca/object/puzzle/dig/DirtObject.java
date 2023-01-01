@@ -105,8 +105,11 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 			return;
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		if (puzzle.getState() != DIG_STATE.DIG)
+		if (puzzle.getState() != DIG_STATE.DIG) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
 			return;
+		}
+
 
 		deleting = true;
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");

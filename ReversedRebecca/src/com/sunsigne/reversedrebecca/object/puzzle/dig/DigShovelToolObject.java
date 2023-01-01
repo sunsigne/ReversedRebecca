@@ -14,9 +14,4 @@ public class DigShovelToolObject extends DigToolObject {
 		return DIG_STATE.DIG;
 	}
 
-	@Override
-	public String getSound() {
-		return "sword";
-	}
-
 }

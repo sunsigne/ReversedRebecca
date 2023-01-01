@@ -23,8 +23,6 @@ public abstract class DigToolObject extends PuzzleObject implements TickFree, Mo
 
 	public abstract DIG_STATE getState();
 
-	public abstract String getSound();
-
 	////////// NAME ////////////
 
 	@Override
@@ -61,7 +59,7 @@ public abstract class DigToolObject extends PuzzleObject implements TickFree, Mo
 		if (isSelected() == false)
 			return;
 
-		new SoundTask().playSound(SOUNDTYPE.SOUND, getSound());
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "select_tool");
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
 		puzzle.setState(getState());
 	}
