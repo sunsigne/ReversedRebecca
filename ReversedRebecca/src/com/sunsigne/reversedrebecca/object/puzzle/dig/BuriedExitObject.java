@@ -13,8 +13,8 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class BuriedExitObject extends BuriedObject {
 
-	public BuriedExitObject(Puzzle puzzle, int size) {
-		super(puzzle, size);
+	public BuriedExitObject(Puzzle puzzle, int w, int h) {
+		super(puzzle, w, h);
 	}
 
 	////////// NAME ////////////

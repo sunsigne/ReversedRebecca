@@ -19,17 +19,17 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent {
 
-	public DirtObject(Puzzle puzzle, int size) {
-		super(puzzle, false, 0, 0, size, size);
+	public DirtObject(Puzzle puzzle, int w, int h) {
+		super(puzzle, false, 0, 0, w, h);
 
-		setBuriedObject(null, size);
+		setBuriedObject(null, w, h);
 	}
 
 	private BuriedObject buriedObject;
 
-	public void setBuriedObject(BuriedObject buriedObject, int size) {
+	public void setBuriedObject(BuriedObject buriedObject, int w, int h) {
 		if (buriedObject == null)
-			buriedObject = new BuriedNullObject(getPuzzle(), size);
+			buriedObject = new BuriedNullObject(getPuzzle(), w, h);
 
 		this.buriedObject = buriedObject;
 	}

@@ -7,8 +7,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class BuriedNullObject extends BuriedObject {
 
-	public BuriedNullObject(Puzzle puzzle, int size) {
-		super(puzzle, size);
+	public BuriedNullObject(Puzzle puzzle, int w, int h) {
+		super(puzzle, w, h);
 	}
 
 	////////// NAME ////////////

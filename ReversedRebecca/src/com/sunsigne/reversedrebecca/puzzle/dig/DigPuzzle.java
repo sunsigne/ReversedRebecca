@@ -28,7 +28,7 @@ public abstract class DigPuzzle extends Puzzle {
 		super(criticalChance, actionOnWinning);
 		
 		new GameCursor().setCursor(null);
-		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize()));
+		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));
 	}
 
 	////////// NAME ////////////
@@ -65,7 +65,7 @@ public abstract class DigPuzzle extends Puzzle {
 	private GameList<DirtObject> list = new GameList<>(LISTTYPE.ARRAY);
 
 	protected void createDirt(int col, int row) {
-		DirtObject dirt = new DirtObject(this, getSize());
+		DirtObject dirt = new DirtObject(this, getSize(), getSize());
 		list.addObject(dirt);
 		dirt.setX(getCol(col));
 		dirt.setY(getRow(row));
@@ -73,9 +73,9 @@ public abstract class DigPuzzle extends Puzzle {
 	}
 
 	protected void createExit() {
-		BuriedExitObject exit = new BuriedExitObject(this, getSize());
+		BuriedExitObject exit = new BuriedExitObject(this, getSize(), getSize());
 		DirtObject dirt = new RandomGenerator().getElementFromList(list);
-		dirt.setBuriedObject(exit, getSize());
+		dirt.setBuriedObject(exit, getSize(), getSize());
 	}
 
 	private DIG_STATE state = DIG_STATE.DIG;
