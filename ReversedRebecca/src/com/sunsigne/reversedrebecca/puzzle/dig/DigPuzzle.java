@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigShovelToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
@@ -92,6 +93,9 @@ public abstract class DigPuzzle extends Puzzle {
 		switch (dig_state) {
 		case HAND:
 			return new DigHandToolObject(this);
+			
+		case PICK:
+			return new DigPickaxeToolObject(this);
 			
 		case DIG:
 		default:

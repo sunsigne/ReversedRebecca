@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public enum DIG_STATE {
-	HAND("hand"), DIG("shovel");
+	HAND("hand"), DIG("shovel"), PICK("pickaxe");
 
 	private BufferedImage image;
 

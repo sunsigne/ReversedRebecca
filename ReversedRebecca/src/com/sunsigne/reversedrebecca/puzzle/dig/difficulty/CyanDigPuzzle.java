@@ -20,8 +20,8 @@ public class CyanDigPuzzle extends DigPuzzle {
 
 	@Override
 	public void createPuzzle() {
-		createTool(2, 2, DIG_STATE.HAND);
-		createTool(2, 4, DIG_STATE.DIG);
+		createTool(2, 2, DIG_STATE.DIG);
+		createTool(2, 4, DIG_STATE.PICK);
 		
 		createDirtGrid();
 		createExit();
