@@ -12,7 +12,7 @@ public class CyanDigPuzzle extends DigPuzzle {
 	}
 
 	@Override
-	protected int getSize() {
+	public int getSize() {
 		return 2 * Size.L;
 	}
 

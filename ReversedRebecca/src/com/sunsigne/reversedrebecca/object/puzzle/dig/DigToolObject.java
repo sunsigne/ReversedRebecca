@@ -19,7 +19,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 
 	public DigToolObject(Puzzle puzzle, int x_pos_in_menu, int y_pos_in_menu, int w, int h, boolean selectable) {
 		super(puzzle, selectable ? 2 * Size.L : w, selectable ? 2 * Size.L : h);
-		
+
 		this.x_pos_in_menu = x_pos_in_menu;
 		this.y_pos_in_menu = y_pos_in_menu;
 		setSelectable(selectable);
@@ -37,7 +37,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 
 	public void setSelectable(boolean selectable) {
 		this.selectable = selectable;
-		
+
 		if (selectable)
 			setClickable(true);
 	}
@@ -87,10 +87,17 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 		if (isSelected() == false)
 			return;
 
-		if (selectable)
+		if (selectable) {
 			selectTool();
+			return;
+		}
+
+		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
+
+		if (puzzle.getState() == DIG_STATE.HAND)
+			pickupTool(puzzle);
 		else
-			pickupTool();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "pick_fail");
 	}
 
 	@Override
@@ -103,19 +110,29 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
 		puzzle.setState(getState());
 	}
-	
+
+	private void pickupTool(DigPuzzle puzzle) {
+		createSelectable(puzzle);
+		createDirtBackground(puzzle);
+
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "loot");
+		LAYER.PUZZLE.getHandler().removeObject(this);
+	}
+
 	private int x_pos_in_menu, y_pos_in_menu;
-	
-	private void pickupTool() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "select_tool");	
-		
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();		
+
+	private void createSelectable(DigPuzzle puzzle) {
 		DigToolObject selectable = puzzle.getTool(getState(), x_pos_in_menu, y_pos_in_menu, true);
 		selectable.setX(x_pos_in_menu);
 		selectable.setY(y_pos_in_menu);
-		
 		LAYER.PUZZLE.addObject(selectable);
-		LAYER.PUZZLE.getHandler().removeObject(this);
+	}
+
+	private void createDirtBackground(DigPuzzle puzzle) {
+		BuriedNullObject background = new BuriedNullObject(puzzle, puzzle.getSize(), puzzle.getSize());
+		background.setX(getX());
+		background.setY(getY());
+		LAYER.PUZZLE.addObject(background);
 	}
 
 }

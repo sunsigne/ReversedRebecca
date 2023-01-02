@@ -12,7 +12,7 @@ public class EasiestDigPuzzle extends DigPuzzle {
 	}
 
 	@Override
-	protected int getSize() {
+	public int getSize() {
 		return 3 * Size.L;
 	}
 

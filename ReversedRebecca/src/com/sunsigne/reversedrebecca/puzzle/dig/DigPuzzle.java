@@ -41,7 +41,7 @@ public abstract class DigPuzzle extends Puzzle {
 		return "dig";
 	}
 
-	protected abstract int getSize();
+	public abstract int getSize();
 
 	////////// FACTORY ////////////
 

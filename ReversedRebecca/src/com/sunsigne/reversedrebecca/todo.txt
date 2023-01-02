@@ -9,6 +9,7 @@
 	////////// EN COURS ////////////
 
 	les trous passents "au dessus" des objets (et perso) une fois créés
+	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
