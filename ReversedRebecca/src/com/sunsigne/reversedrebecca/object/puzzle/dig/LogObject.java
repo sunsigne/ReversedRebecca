@@ -19,7 +19,7 @@ public class LogObject extends BuriedObstacleObject implements TickFree {
 	////////// MOUSE ////////////
 
 	@Override
-	protected DIG_STATE getRequieredState() {
+	public DIG_STATE getState() {
 		return DIG_STATE.CHOP;
 	}
 

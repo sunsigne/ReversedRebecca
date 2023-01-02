@@ -3,12 +3,15 @@ package com.sunsigne.reversedrebecca.puzzle.dig;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObstacleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.LogObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.RockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
@@ -45,7 +48,7 @@ public abstract class DigPuzzle extends Puzzle {
 	public int getRow(float row) {
 		return (int) (Size.XS + row * Size.L);
 	}
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -84,7 +87,7 @@ public abstract class DigPuzzle extends Puzzle {
 
 		case CHOP:
 			return new DigAxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
-			
+
 		case DIG:
 		default:
 			return new DigShovelToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
@@ -104,15 +107,15 @@ public abstract class DigPuzzle extends Puzzle {
 		}
 	}
 
-	private GameList<DirtObject> list = new GameList<>(LISTTYPE.ARRAY);
+	private GameList<DirtObject> dirt_list = new GameList<>(LISTTYPE.ARRAY);
 
 	protected void createDirt(int col, int row) {
 		createDirt((float) col, (float) row);
 	}
-	
+
 	protected void createDirt(float col, float row) {
 		DirtObject dirt = new DirtObject(this, getSize(), getSize());
-		list.addObject(dirt);
+		dirt_list.addObject(dirt);
 		dirt.setX(getCol(col));
 		dirt.setY(getRow(row));
 		LAYER.PUZZLE.addObject(dirt);
@@ -120,13 +123,25 @@ public abstract class DigPuzzle extends Puzzle {
 
 	protected void createRock(int amount) {
 		for (int index = 0; index < amount; index++) {
-			DirtObject dirt = new RandomGenerator().getElementFromList(list);
+			DirtObject dirt = new RandomGenerator().getElementFromList(dirt_list);
 
 			RockObject rock = new RockObject(this, getSize(), getSize());
 			rock.setX(dirt.getX());
 			rock.setY(dirt.getY());
 
 			dirt.setBuriedObject(rock, getSize(), getSize());
+		}
+	}
+	
+	protected void createLog(int amount) {
+		for (int index = 0; index < amount; index++) {
+			DirtObject dirt = new RandomGenerator().getElementFromList(dirt_list);
+
+			LogObject log = new LogObject(this, getSize(), getSize());
+			log.setX(dirt.getX());
+			log.setY(dirt.getY());
+
+			dirt.setBuriedObject(log, getSize(), getSize());
 		}
 	}
 
@@ -137,11 +152,41 @@ public abstract class DigPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(tool);
 	}
 
+	private HashMap<DIG_STATE, DIG_STATE> tool_map = new HashMap<>();
+
 	protected void createBuriedTool(int col, int row, DIG_STATE dig_state) {
 		DigToolObject tool = getTool(dig_state, getCol(col), getRow(row), false);
 
-		DirtObject dirt = new RandomGenerator().getElementFromList(list);
-		dirt.setBuriedObject(tool, getSize(), getSize());
+		DirtObject dirt;
+
+		do {
+			dirt = new RandomGenerator().getElementFromList(dirt_list);
+			BuriedObject buried = dirt.getBuriedObject();
+
+			if (buried instanceof BuriedObstacleObject == false) {
+				dirt.setBuriedObject(tool, getSize(), getSize());
+				return;
+			}
+			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
+
+			if (dig_state != obstacle.getState()) {
+
+				if (isImpossiblePuzzle(tool.getState(), obstacle.getState()) == false) {
+
+					obstacle.setBuriedObject(tool, getSize(), getSize());
+					tool_map.put(tool.getState(), obstacle.getState());
+					return;
+				}
+			}
+
+		} while (true);
+	}
+
+	private boolean isImpossiblePuzzle(DIG_STATE tool_state, DIG_STATE obstacle_state) {
+		if (tool_map.containsKey(obstacle_state))
+			return tool_map.get(obstacle_state) == tool_state;
+		else
+			return false;
 	}
 
 	protected void createExit() {
@@ -149,14 +194,14 @@ public abstract class DigPuzzle extends Puzzle {
 		DirtObject dirt;
 
 		do {
-			dirt = new RandomGenerator().getElementFromList(list);
+			dirt = new RandomGenerator().getElementFromList(dirt_list);
 		} while (dirt.getBuriedObject() instanceof DigToolObject);
 
 		BuriedObject buried = dirt.getBuriedObject();
 
-		if (buried instanceof RockObject) {
-			RockObject rock = (RockObject) buried;
-			rock.setBuriedObject(exit, getSize(), getSize());
+		if (buried instanceof BuriedObstacleObject) {
+			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
+			obstacle.setBuriedObject(exit, getSize(), getSize());
 		} else
 			dirt.setBuriedObject(exit, getSize(), getSize());
 	}

@@ -19,6 +19,8 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 		setBuriedObject(null, w, h);
 	}
 
+	public abstract DIG_STATE getState();
+	
 	private BuriedObject buriedObject;
 
 	public BuriedObject getBuriedObject() {
@@ -69,8 +71,6 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 	////////// MOUSE ////////////
 
 	private boolean deleting;
-
-	protected abstract DIG_STATE getRequieredState();
 	
 	protected abstract String getSuccessSound();
 	
@@ -82,7 +82,7 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 			return;
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		if (puzzle.getState() != getRequieredState()) {
+		if (puzzle.getState() != getState()) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFailSound());
 			return;
 		}

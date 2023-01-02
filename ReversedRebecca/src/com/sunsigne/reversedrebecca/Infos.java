@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 public class Infos {
 
 	public static final String NAME = "Reversed Rebecca";
-	public static final String VERSION = "v.alpha.2.10.17";
+	public static final String VERSION = "v.alpha.2.10.18";
 	public static final boolean IS_DEV_VERSION = System.getProperty("java.class.path").contains("\\git\\");
 	public static final ImageIcon ICON = new ImageIcon("icon.png");
 
