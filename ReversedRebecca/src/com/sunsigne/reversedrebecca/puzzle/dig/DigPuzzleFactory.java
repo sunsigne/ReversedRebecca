@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.CyanDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.EasierDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.EasiestDigPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.GreenKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.GreenDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HarderKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HardestKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.key.difficulty.OrangeKeyPuzzle;
@@ -65,7 +65,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new CyanDigPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:
-			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
+			return new GreenDigPuzzle(criticalChance, actionOnWinning);
 		case RED:
 			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
@@ -83,7 +83,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		case CYAN:
 			return new CyanDigPuzzle(criticalChance, actionOnWinning);
 		case GREEN:
-			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
+			return new GreenDigPuzzle(criticalChance, actionOnWinning);
 		case YELLOW:
 			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
 		case ORANGE:

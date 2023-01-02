@@ -5,8 +5,8 @@ import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 
 public class DigHandToolObject extends DigToolObject {
 
-	public DigHandToolObject(Puzzle puzzle) {
-		super(puzzle);
+	public DigHandToolObject(Puzzle puzzle, int x_pos_in_menu, int y_pos_in_menu, int w, int h, boolean selectable) {
+		super(puzzle, x_pos_in_menu, y_pos_in_menu, w, h,  selectable);
 	}
 
 	@Override

@@ -52,6 +52,30 @@ public abstract class DigPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
+	private DIG_STATE state = DIG_STATE.DIG;
+
+	public DIG_STATE getState() {
+		return state;
+	}
+
+	public void setState(DIG_STATE state) {
+		this.state = state;
+	}
+
+	public DigToolObject getTool(DIG_STATE dig_state, int x_pos_in_menu, int y_pos_in_menu, boolean selectable) {
+		switch (dig_state) {
+		case HAND:
+			return new DigHandToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+
+		case PICK:
+			return new DigPickaxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+
+		case DIG:
+		default:
+			return new DigShovelToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+		}
+	}
+
 	@Override
 	protected void createWallBorder() {
 		super.createWallBorder();
@@ -87,48 +111,35 @@ public abstract class DigPuzzle extends Puzzle {
 		}
 	}
 
-	protected void createExit() {
-		BuriedExitObject exit = new BuriedExitObject(this, getSize(), getSize());
-		DirtObject dirt = new RandomGenerator().getElementFromList(list);
-		BuriedObject buried = dirt.getBuriedObject();
-		
-		if(buried instanceof RockObject) {
-			RockObject rock = (RockObject) buried;
-			rock.setBuriedObject(exit, getSize(), getSize());
-		}		
-		else
-			dirt.setBuriedObject(exit, getSize(), getSize());
-	}
-
-	private DIG_STATE state = DIG_STATE.DIG;
-
-	public DIG_STATE getState() {
-		return state;
-	}
-
-	public void setState(DIG_STATE state) {
-		this.state = state;
-	}
-
-	private DigToolObject getTool(DIG_STATE dig_state) {
-		switch (dig_state) {
-		case HAND:
-			return new DigHandToolObject(this);
-
-		case PICK:
-			return new DigPickaxeToolObject(this);
-
-		case DIG:
-		default:
-			return new DigShovelToolObject(this);
-		}
-	}
-
 	protected void createTool(int col, int row, DIG_STATE dig_state) {
-		DigToolObject tool = getTool(dig_state);
+		DigToolObject tool = getTool(dig_state, getCol(col), getRow(row), true);
 		tool.setX(getCol(col));
 		tool.setY(getRow(row));
 		LAYER.PUZZLE.addObject(tool);
+	}
+
+	protected void createBuriedTool(int col, int row, DIG_STATE dig_state) {
+		DigToolObject tool = getTool(dig_state, getCol(col), getRow(row), false);
+
+		DirtObject dirt = new RandomGenerator().getElementFromList(list);
+		dirt.setBuriedObject(tool, getSize(), getSize());
+	}
+
+	protected void createExit() {
+		BuriedExitObject exit = new BuriedExitObject(this, getSize(), getSize());
+		DirtObject dirt;
+
+		do {
+			dirt = new RandomGenerator().getElementFromList(list);
+		} while (dirt.getBuriedObject() instanceof DigToolObject);
+
+		BuriedObject buried = dirt.getBuriedObject();
+
+		if (buried instanceof RockObject) {
+			RockObject rock = (RockObject) buried;
+			rock.setBuriedObject(exit, getSize(), getSize());
+		} else
+			dirt.setBuriedObject(exit, getSize(), getSize());
 	}
 
 	////////// RENDER ////////////
