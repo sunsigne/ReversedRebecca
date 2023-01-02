@@ -1,9 +1,11 @@
-package com.sunsigne.reversedrebecca.object.puzzle.dig;
+package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;

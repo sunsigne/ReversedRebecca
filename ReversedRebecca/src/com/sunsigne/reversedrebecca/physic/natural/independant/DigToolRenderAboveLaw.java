@@ -4,8 +4,8 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DigToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class DigToolRenderAboveLaw extends IndependantLaw {

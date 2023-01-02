@@ -7,13 +7,14 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DigPickaxeToolObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DigShovelToolObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DigToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.RockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -81,6 +82,9 @@ public abstract class DigPuzzle extends Puzzle {
 		case PICK:
 			return new DigPickaxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
+		case CHOP:
+			return new DigAxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+			
 		case DIG:
 		default:
 			return new DigShovelToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);

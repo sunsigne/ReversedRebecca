@@ -4,33 +4,33 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class RockObject extends BuriedObstacleObject implements TickFree {
+public class LogObject extends BuriedObstacleObject implements TickFree {
 
-	public RockObject(Puzzle puzzle, int w, int h) {
+	public LogObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, w, h);
 	}
 
 	////////// NAME ////////////
 
 	protected String getName() {
-		return "ROCK";
+		return "LOG";
 	}
 
 	////////// MOUSE ////////////
 
 	@Override
 	protected DIG_STATE getRequieredState() {
-		return DIG_STATE.PICK;
+		return DIG_STATE.CHOP;
 	}
 
 	@Override
 	protected String getSuccessSound() {
-		return "pick_rock";
+		return "chop_log";
 	}
 
 	@Override
 	protected String getFailSound() {
-		return "pick_fail";
+		return "chop_fail";
 	}
 
 }
