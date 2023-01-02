@@ -125,7 +125,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return "dig_long";
 	}
 
 }
