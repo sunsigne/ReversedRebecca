@@ -47,7 +47,7 @@ public class BuriedExitObject extends BuriedObject {
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
 		if (puzzle.getState() != DIG_STATE.DIG) {
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
 			return;
 		}
 		

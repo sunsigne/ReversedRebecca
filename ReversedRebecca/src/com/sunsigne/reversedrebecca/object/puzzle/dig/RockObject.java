@@ -79,7 +79,7 @@ public class RockObject extends BuriedObject implements TickFree {
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
 		if (puzzle.getState() != DIG_STATE.PICK) {
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "pick_fail");
 			return;
 		}
 
