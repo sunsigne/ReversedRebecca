@@ -1,10 +1,9 @@
-package com.sunsigne.reversedrebecca.object.puzzle.dig;
+package com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class LogObject extends BuriedObstacleObject implements TickFree {
+public class LogObject extends BuriedObstacleObject {
 
 	public LogObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, w, h);
@@ -12,7 +11,8 @@ public class LogObject extends BuriedObstacleObject implements TickFree {
 
 	////////// NAME ////////////
 
-	protected String getName() {
+	@Override
+	public String getName() {
 		return "LOG";
 	}
 

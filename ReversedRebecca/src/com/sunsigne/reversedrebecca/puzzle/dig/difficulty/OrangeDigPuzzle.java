@@ -22,8 +22,8 @@ public class OrangeDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(12);
-		createLog(7);
+		createRock(10);
+		createLog(5);
 
 		createTool(1, 2, DIG_STATE.HAND);
 		createTool(3, 2, DIG_STATE.DIG);

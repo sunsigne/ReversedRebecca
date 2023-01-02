@@ -20,7 +20,7 @@ public class BuriedExitObject extends BuriedObject {
 	////////// NAME ////////////
 
 	@Override
-	protected String getName() {
+	public String getName() {
 		return "EXIT";
 	}
 

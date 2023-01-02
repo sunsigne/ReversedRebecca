@@ -21,7 +21,7 @@ public class YellowDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(15);
+		createRock(10);
 		
 		createTool(2, 1, DIG_STATE.HAND);
 		createTool(2, 3, DIG_STATE.DIG);		

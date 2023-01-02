@@ -20,7 +20,7 @@ public abstract class BuriedObject extends PuzzleObject implements TickFree, Mou
 
 	////////// NAME ////////////
 
-	protected abstract String getName();
+	public abstract String getName();
 
 	@Override
 	public String toString() {

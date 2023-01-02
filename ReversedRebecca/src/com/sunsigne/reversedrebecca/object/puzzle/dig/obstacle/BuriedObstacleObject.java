@@ -1,17 +1,18 @@
-package com.sunsigne.reversedrebecca.object.puzzle.dig;
+package com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle;
 
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class BuriedObstacleObject extends BuriedObject implements TickFree {
+public abstract class BuriedObstacleObject extends BuriedObject {
 
 	public BuriedObstacleObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, w, h);
@@ -20,7 +21,7 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 	}
 
 	public abstract DIG_STATE getState();
-	
+
 	private BuriedObject buriedObject;
 
 	public BuriedObject getBuriedObject() {
@@ -35,8 +36,6 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 	}
 
 	////////// NAME ////////////
-
-	protected abstract String getName();
 
 	@Override
 	public String toString() {
@@ -71,11 +70,11 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 	////////// MOUSE ////////////
 
 	private boolean deleting;
-	
+
 	protected abstract String getSuccessSound();
-	
+
 	protected abstract String getFailSound();
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)
@@ -88,7 +87,9 @@ public abstract class BuriedObstacleObject extends BuriedObject implements TickF
 		}
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getSuccessSound());
+		System.out.println("is clicked : " + toString());
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
+		System.out.println("creation of the bured : " + buriedObject.toString());
 		deleting = true;
 
 	}

@@ -8,11 +8,11 @@ import java.util.HashMap;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObstacleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.LogObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.RockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.BuriedObstacleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.LogObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.RockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
@@ -132,7 +132,7 @@ public abstract class DigPuzzle extends Puzzle {
 			dirt.setBuriedObject(rock, getSize(), getSize());
 		}
 	}
-	
+
 	protected void createLog(int amount) {
 		for (int index = 0; index < amount; index++) {
 			DirtObject dirt = new RandomGenerator().getElementFromList(dirt_list);
@@ -164,6 +164,9 @@ public abstract class DigPuzzle extends Puzzle {
 			BuriedObject buried = dirt.getBuriedObject();
 
 			if (buried instanceof BuriedObstacleObject == false) {
+				if (buried instanceof DigToolObject)
+					continue;
+
 				dirt.setBuriedObject(tool, getSize(), getSize());
 				return;
 			}
@@ -201,6 +204,11 @@ public abstract class DigPuzzle extends Puzzle {
 
 		if (buried instanceof BuriedObstacleObject) {
 			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
+			
+			if (obstacle.getBuriedObject() instanceof DigToolObject) {
+				createExit();
+				return;
+			}
 			obstacle.setBuriedObject(exit, getSize(), getSize());
 		} else
 			dirt.setBuriedObject(exit, getSize(), getSize());
