@@ -22,6 +22,7 @@ import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -34,6 +35,16 @@ public abstract class DigPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));
 	}
 
+	////////// USEFULL ////////////
+
+	public int getCol(float col) {
+		return (int) (2 * Size.XS + col * Size.L);
+	}
+
+	public int getRow(float row) {
+		return (int) (Size.XS + row * Size.L);
+	}
+	
 	////////// NAME ////////////
 
 	@Override
@@ -92,6 +103,10 @@ public abstract class DigPuzzle extends Puzzle {
 	private GameList<DirtObject> list = new GameList<>(LISTTYPE.ARRAY);
 
 	protected void createDirt(int col, int row) {
+		createDirt((float) col, (float) row);
+	}
+	
+	protected void createDirt(float col, float row) {
 		DirtObject dirt = new DirtObject(this, getSize(), getSize());
 		list.addObject(dirt);
 		dirt.setX(getCol(col));
