@@ -24,6 +24,8 @@ public class CyanDigPuzzle extends DigPuzzle {
 		createTool(2, 4, DIG_STATE.PICK);
 		
 		createDirtGrid();
+		createRock(2);
+		
 		createExit();
 	}
 

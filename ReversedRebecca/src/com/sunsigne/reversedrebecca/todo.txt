@@ -8,7 +8,8 @@
 
 	////////// EN COURS ////////////
 
-	changer couleurs des Dig outils ?
+	? changer couleurs des Dig outils
+	? changer le son du "fail" dans le FigPuzzle
 	les trous passents "au dessus" des objets (et perso) une fois créés
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)

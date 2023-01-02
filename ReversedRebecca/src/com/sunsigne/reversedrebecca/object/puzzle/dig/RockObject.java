@@ -1,36 +1,30 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent {
+public class RockObject extends BuriedObject implements TickFree {
 
-	public DirtObject(Puzzle puzzle, int w, int h) {
-		super(puzzle, false, 0, 0, w, h);
+	public RockObject(Puzzle puzzle, int w, int h) {
+		super(puzzle, w, h);
 
 		setBuriedObject(null, w, h);
 	}
 
 	private BuriedObject buriedObject;
 
-	public BuriedObject getBuriedObject () {
+	public BuriedObject getBuriedObject() {
 		return buriedObject;
 	}
-	
+
 	public void setBuriedObject(BuriedObject buriedObject, int w, int h) {
 		if (buriedObject == null)
 			buriedObject = new BuriedNullObject(getPuzzle(), w, h);
@@ -41,7 +35,7 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 	////////// NAME ////////////
 
 	protected String getName() {
-		return "DIRT";
+		return "ROCK";
 	}
 
 	@Override
@@ -64,16 +58,6 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 		buriedObject.setY(y);
 	}
 
-	////////// TEXTURE ////////////
-
-	private BufferedImage image;
-
-	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_dirt");
-		return image;
-	}
-
 	////////// RENDER ////////////
 
 	@Override
@@ -81,25 +65,10 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 		if (deleting)
 			return;
 
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-
-		g.setColor(Color.BLACK);
-
-		if (getX() != getPuzzle().getCol(7))
-			g.drawLine(getX(), getY(), getX(), getY() + getHeight());
-
-		if (getY() != getPuzzle().getRow(1))
-			g.drawLine(getX(), getY(), getX() + getWidth(), getY());
+		super.render(g);
 	}
 
 	////////// MOUSE ////////////
-
-	private MouseController mouseController = new MouseController(this);
-
-	@Override
-	public MouseController getMouseController() {
-		return mouseController;
-	}
 
 	private boolean deleting;
 
@@ -109,13 +78,12 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 			return;
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		if (puzzle.getState() != DIG_STATE.DIG) {
+		if (puzzle.getState() != DIG_STATE.PICK) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
 			return;
 		}
 
-
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "pick_rock");
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
 		deleting = true;
 

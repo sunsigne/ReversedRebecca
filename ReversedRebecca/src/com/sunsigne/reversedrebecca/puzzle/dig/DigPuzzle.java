@@ -6,12 +6,14 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigShovelToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.RockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -27,7 +29,7 @@ public abstract class DigPuzzle extends Puzzle {
 
 	public DigPuzzle(int criticalChance, GenericListener actionOnWinning) {
 		super(criticalChance, actionOnWinning);
-		
+
 		new GameCursor().setCursor(null);
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));
 	}
@@ -73,10 +75,29 @@ public abstract class DigPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(dirt);
 	}
 
+	protected void createRock(int amount) {
+		for (int index = 0; index < amount; index++) {
+			DirtObject dirt = new RandomGenerator().getElementFromList(list);
+
+			RockObject rock = new RockObject(this, getSize(), getSize());
+			rock.setX(dirt.getX());
+			rock.setY(dirt.getY());
+
+			dirt.setBuriedObject(rock, getSize(), getSize());
+		}
+	}
+
 	protected void createExit() {
 		BuriedExitObject exit = new BuriedExitObject(this, getSize(), getSize());
 		DirtObject dirt = new RandomGenerator().getElementFromList(list);
-		dirt.setBuriedObject(exit, getSize(), getSize());
+		BuriedObject buried = dirt.getBuriedObject();
+		
+		if(buried instanceof RockObject) {
+			RockObject rock = (RockObject) buried;
+			rock.setBuriedObject(exit, getSize(), getSize());
+		}		
+		else
+			dirt.setBuriedObject(exit, getSize(), getSize());
 	}
 
 	private DIG_STATE state = DIG_STATE.DIG;
@@ -93,10 +114,10 @@ public abstract class DigPuzzle extends Puzzle {
 		switch (dig_state) {
 		case HAND:
 			return new DigHandToolObject(this);
-			
+
 		case PICK:
 			return new DigPickaxeToolObject(this);
-			
+
 		case DIG:
 		default:
 			return new DigShovelToolObject(this);
