@@ -14,7 +14,7 @@ public class RedDigPuzzle extends DigPuzzle {
 
 	@Override
 	public int getSize() {
-		return Size.L;
+		return 2* Size.M;
 	}
 
 	////////// PUZZLE ////////////
@@ -25,14 +25,13 @@ public class RedDigPuzzle extends DigPuzzle {
 		createRock(15);
 		createLog(10);
 
-		createTool(1, 2, DIG_STATE.HAND);
-		createTool(3, 2, DIG_STATE.DIG);
+		createTool(1, 2, DIG_STATE.DIG);
 
 		if (new RandomGenerator().getBoolean()) {
 			createBuriedTool(1, 4, DIG_STATE.PICK);
-			createBuriedTool(3, 4, DIG_STATE.CHOP);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
 		} else {
-			createBuriedTool(3, 4, DIG_STATE.CHOP);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
 			createBuriedTool(1, 4, DIG_STATE.PICK);
 		}
 
@@ -40,14 +39,25 @@ public class RedDigPuzzle extends DigPuzzle {
 	}
 
 	private void createDirtGrid() {
-		for (int row = 1; row <= 6; row++) {
-			createDirt(7, row);
-			createDirt(8, row);
-			createDirt(9, row);
-			createDirt(10, row);
-			createDirt(11, row);
-			createDirt(12, row);
-		}
+		createDirt(7, 1);
+		createDirt(8.5f, 1);
+		createDirt(10, 1);
+		createDirt(11.5f, 1);
+
+		createDirt(7, 2.5f);
+		createDirt(8.5f, 2.5f);
+		createDirt(10, 2.5f);
+		createDirt(11.5f, 2.5f);
+		
+		createDirt(7, 4);
+		createDirt(8.5f, 4);
+		createDirt(10, 4);
+		createDirt(11.5f, 4);
+		
+		createDirt(7, 5.5f);
+		createDirt(8.5f, 5.5f);
+		createDirt(10, 5.5f);
+		createDirt(11.5f, 5.5f);
 	}
 
 }

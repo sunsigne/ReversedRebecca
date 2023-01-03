@@ -22,8 +22,7 @@ public class EasierDigPuzzle extends DigPuzzle {
 	public void createPuzzle() {
 		createDirtGrid();
 		
-		createTool(2, 2, DIG_STATE.DIG);
-		createTool(2, 4, DIG_STATE.PICK);
+		createTool(2, 3, DIG_STATE.DIG);
 
 		createExit();
 	}

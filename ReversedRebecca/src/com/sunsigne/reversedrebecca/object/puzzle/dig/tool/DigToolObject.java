@@ -95,11 +95,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 		}
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-
-		if (puzzle.getState() == DIG_STATE.HAND)
-			pickupTool(puzzle);
-		else
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "pick_fail");
+		pickupTool(puzzle);
 	}
 
 	@Override

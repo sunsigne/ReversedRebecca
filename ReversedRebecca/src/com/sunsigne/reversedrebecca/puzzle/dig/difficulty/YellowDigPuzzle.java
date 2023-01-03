@@ -23,9 +23,8 @@ public class YellowDigPuzzle extends DigPuzzle {
 		createDirtGrid();
 		createRock(10);
 		
-		createTool(2, 1, DIG_STATE.HAND);
-		createTool(2, 3, DIG_STATE.DIG);		
-		createBuriedTool(2, 5, DIG_STATE.PICK);
+		createTool(2, 2, DIG_STATE.DIG);		
+		createBuriedTool(2, 4, DIG_STATE.PICK);
 		
 		createExit();
 	}

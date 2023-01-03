@@ -25,14 +25,13 @@ public class OrangeDigPuzzle extends DigPuzzle {
 		createRock(10);
 		createLog(5);
 
-		createTool(1, 2, DIG_STATE.HAND);
-		createTool(3, 2, DIG_STATE.DIG);
+		createTool(1, 2, DIG_STATE.DIG);
 
 		if (new RandomGenerator().getBoolean()) {
 			createBuriedTool(1, 4, DIG_STATE.PICK);
-			createBuriedTool(3, 4, DIG_STATE.CHOP);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
 		} else {
-			createBuriedTool(3, 4, DIG_STATE.CHOP);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
 			createBuriedTool(1, 4, DIG_STATE.PICK);
 		}
 

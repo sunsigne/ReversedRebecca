@@ -87,9 +87,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 		}
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getSuccessSound());
-		System.out.println("is clicked : " + toString());
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
-		System.out.println("creation of the bured : " + buriedObject.toString());
 		deleting = true;
 
 	}
