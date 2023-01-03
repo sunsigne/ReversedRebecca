@@ -1,16 +1,22 @@
 package com.sunsigne.reversedrebecca.puzzle.chest;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JOptionPane;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.chest.ChestCard;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -22,7 +28,7 @@ import com.sunsigne.reversedrebecca.system.Window;
 public class ChestPuzzle extends Puzzle {
 
 	private boolean userData = false;
-	
+
 	public ChestPuzzle(String lootFile, GenericListener actionOnWinning) {
 		super(-1, actionOnWinning);
 
@@ -112,7 +118,7 @@ public class ChestPuzzle extends Puzzle {
 
 		chestCard[num] = new ChestCard(this, lootData, x, 0);
 		chestCard[num].setX(chestCard[num].getX() - chestCard[num].getWidth() / 2);
-		chestCard[num].setY(- chestCard[num].getHeight());
+		chestCard[num].setY(-chestCard[num].getHeight());
 
 		LAYER.PUZZLE.addObject(chestCard[num]);
 	}
@@ -137,7 +143,7 @@ public class ChestPuzzle extends Puzzle {
 	public boolean isClosing() {
 		return closing;
 	}
-	
+
 	private void closeWithDelay() {
 		time--;
 
@@ -193,9 +199,45 @@ public class ChestPuzzle extends Puzzle {
 
 	////////// RENDER ////////////
 
+	private int text_time = 20;
+
 	@Override
 	public void render(Graphics g) {
 		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
+
+		if (text_time > 0)
+			text_time--;
+		else
+			displayText(g);
+	}
+
+	private String text;
+
+	private String getText() {
+		if (text == null)
+			text = new Translatable().getTranslatedText("REWARD" + getNumberOfRewards(), FilePath.TECHTREE);
+		return text;
+	}
+
+	private int getNumberOfRewards() {
+		// normal of hard difficulty
+		if (DifficultyOption.getDifficulty() != GAME_DIFFICULTY.EASY)
+			return 1;
+
+		// one loot case
+		else if (size == 1)
+			return 1;
+
+		// easy difficulty
+		else
+			return 2;
+	}
+
+	private Font font = new FontTask().createNewFont("AGENCYB.ttf", 56f);
+
+	private void displayText(Graphics g) {
+		int[] rect = new int[] { 0, 0, Window.WIDHT, Window.HEIGHT / 4 };
+		new TextDecoration().drawOutlinesString(g, font, getText(), DIRECTION.NULL, rect);
 	}
 
 }
