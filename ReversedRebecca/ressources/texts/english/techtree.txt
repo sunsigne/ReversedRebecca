@@ -1,3 +1,6 @@
+REWARD1 = Choose#a#reward
+REWARD2 = Choose#two#rewards
+
 TOOLSTARTLVL1 = Start#each#level
 TOOLSTARTLVL2 = with#a#
 

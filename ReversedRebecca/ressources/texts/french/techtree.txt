@@ -1,3 +1,6 @@
+REWARD1 = Choisissez#une#récompense
+REWARD2 = Choisissez#deux#récompenses
+
 TOOLSTARTLVL1 = Commence#chaque#niveau
 TOOLSTARTLVL2 = avec#une#
 
