@@ -8,9 +8,6 @@
 
 	////////// EN COURS ////////////
 
-	les trous passents "au dessus" des objets (et perso) une fois créés
-	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
@@ -43,6 +40,8 @@
 
 	////////// FACILE ////////////
 
+	reddigpuzzle -> créer 1 ou 2 bombes qui néttoie les alentours ?
+	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire une piranha requete pour lire la difficulté (en conditionnel)
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique    / psycopath
@@ -128,6 +127,7 @@
 
 	///////// IDEE ////////////
 
+	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile elle se casse, en difficile il y a un "court-jus" qui la fait marcher à 200% 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	Dave, son pouvoir est de savoir ce qu'il est (un personnage de jeu vidéo). Souvent blasé, a des comportements (et phrases) différentes d'une session sur l'autre (% de chance)
