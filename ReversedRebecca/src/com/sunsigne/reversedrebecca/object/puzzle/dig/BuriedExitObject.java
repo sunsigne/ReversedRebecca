@@ -24,10 +24,6 @@ public class BuriedExitObject extends BuriedObject {
 		return "EXIT";
 	}
 
-	////////// DIG ////////////
-
-	private Cycloid<Integer> state = new Cycloid<>(1, 2, 3);
-	
 	////////// TEXTURE ////////////
 
 	@Override
@@ -39,7 +35,9 @@ public class BuriedExitObject extends BuriedObject {
 	}
 
 	////////// MOUSE ////////////
-
+	
+	private Cycloid<Integer> state = new Cycloid<>(1, 2, 3);
+	
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)

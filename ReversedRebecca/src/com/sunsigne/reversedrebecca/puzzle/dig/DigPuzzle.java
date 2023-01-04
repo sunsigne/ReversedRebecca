@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
@@ -14,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.BuriedObstacleObj
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.LogObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.RockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
@@ -83,6 +85,9 @@ public abstract class DigPuzzle extends Puzzle {
 
 		case CHOP:
 			return new DigAxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+
+		case PUNCH:
+			return new DigHandToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
 		case DIG:
 		default:
@@ -179,6 +184,29 @@ public abstract class DigPuzzle extends Puzzle {
 			}
 
 		} while (true);
+	}
+
+	protected void createBuriedShovel(int col, int row) {
+		DigToolObject tool = getTool(DIG_STATE.DIG, getCol(col), getRow(row), false);
+
+		DirtObject dirt;
+
+		do {
+			dirt = new RandomGenerator().getElementFromList(dirt_list);
+			BuriedObject buried = dirt.getBuriedObject();
+
+			if (buried instanceof BuriedNullObject)
+				break;
+
+			if (buried instanceof BuriedObstacleObject) {
+				BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
+				if (obstacle.getBuriedObject() instanceof BuriedNullObject)
+					break;
+			}
+
+		} while (true);
+
+		dirt.setBuriedObject(tool, getSize(), getSize());
 	}
 
 	private boolean isImpossiblePuzzle(DIG_STATE tool_state, DIG_STATE obstacle_state) {

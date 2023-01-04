@@ -27,10 +27,10 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 
 	private BuriedObject buriedObject;
 
-	public BuriedObject getBuriedObject () {
+	public BuriedObject getBuriedObject() {
 		return buriedObject;
 	}
-	
+
 	public void setBuriedObject(BuriedObject buriedObject, int w, int h) {
 		if (buriedObject == null)
 			buriedObject = new BuriedNullObject(getPuzzle(), w, h);
@@ -69,8 +69,11 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 	private BufferedImage image;
 
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_dirt");
+		if (image == null) {
+			var punched = this.punched ? "_punched" : "";
+			image = new ImageTask()
+					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName().toLowerCase() + punched);
+		}
 		return image;
 	}
 
@@ -101,7 +104,7 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 		return mouseController;
 	}
 
-	private boolean deleting;
+	private boolean punched, deleting;
 
 	@Override
 	public void mousePressed(MouseEvent e) {
@@ -109,15 +112,24 @@ public class DirtObject extends PuzzleObject implements TickFree, MouseUserEvent
 			return;
 
 		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		if (puzzle.getState() != DIG_STATE.DIG) {
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
-			return;
+		boolean final_punch = false;
+
+		if (puzzle.getState() == DIG_STATE.PUNCH) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
+			if (punched)
+				final_punch = true;
+			punched = true;
+			image = null;
 		}
 
+		if (puzzle.getState() == DIG_STATE.DIG || final_punch) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
+			LAYER.PUZZLE.getHandler().addObject(buriedObject);
+			deleting = true;
+		}
 
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
-		LAYER.PUZZLE.getHandler().addObject(buriedObject);
-		deleting = true;
+		if (puzzle.getState() != DIG_STATE.PUNCH && puzzle.getState() != DIG_STATE.DIG)
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
 
 	}
 

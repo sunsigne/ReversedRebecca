@@ -25,7 +25,9 @@ public class RedDigPuzzle extends DigPuzzle {
 		createRock(15);
 		createLog(10);
 
-		createTool(1, 2, DIG_STATE.DIG);
+		createTool(1, 2, DIG_STATE.PUNCH);
+		createBuriedShovel(1, 2);
+		setState(DIG_STATE.PUNCH);
 
 		if (new RandomGenerator().getBoolean()) {
 			createBuriedTool(1, 4, DIG_STATE.PICK);

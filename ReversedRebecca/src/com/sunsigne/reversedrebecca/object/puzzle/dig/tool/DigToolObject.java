@@ -109,7 +109,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 		puzzle.setState(getState());
 	}
 
-	private void pickupTool(DigPuzzle puzzle) {
+	protected void pickupTool(DigPuzzle puzzle) {
 		createSelectable(puzzle);
 		createDirtBackground(puzzle);
 
