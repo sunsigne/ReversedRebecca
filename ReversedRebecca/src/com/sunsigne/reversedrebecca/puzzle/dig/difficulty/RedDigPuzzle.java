@@ -22,8 +22,8 @@ public class RedDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(15);
-		createLog(10);
+		createRock(10);
+		createLog(5);
 
 		createTool(1, 2, DIG_STATE.PUNCH);
 		createBuriedShovel(1, 2);
