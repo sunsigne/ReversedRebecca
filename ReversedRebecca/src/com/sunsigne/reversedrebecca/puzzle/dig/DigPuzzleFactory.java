@@ -10,10 +10,10 @@ import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.EasierDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.EasiestDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.GreenDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.HarderDigPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.HardestDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.OrangeDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.RedDigPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.YellowDigPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HardestKeyPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class DigPuzzleFactory implements PuzzleFactory {
@@ -48,7 +48,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		case HARDER:
 			return new HarderDigPuzzle(criticalChance, actionOnWinning);
 		case HARDEST:
-			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
+			return new HardestDigPuzzle(criticalChance, actionOnWinning);
 		}
 
 		// should not occurs
@@ -111,7 +111,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		case ORANGE:
 			return new HarderDigPuzzle(criticalChance, actionOnWinning);
 		case RED:
-			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
+			return new HardestDigPuzzle(criticalChance, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

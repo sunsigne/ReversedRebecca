@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.BuriedObstacleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.BushObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.LogObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.RockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
@@ -19,6 +20,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigSwordToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -90,6 +92,9 @@ public abstract class DigPuzzle extends Puzzle {
 		case PUNCH:
 			return new DigHandToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
+		case SLASH:
+			return new DigSwordToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+
 		case DIG:
 		default:
 			return new DigShovelToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
@@ -144,6 +149,18 @@ public abstract class DigPuzzle extends Puzzle {
 			log.setY(dirt.getY());
 
 			dirt.setBuriedObject(log, getSize(), getSize());
+		}
+	}
+
+	protected void createBush(int amount) {
+		for (int index = 0; index < amount; index++) {
+			DirtObject dirt = new RandomGenerator().getElementFromList(dirt_list);
+
+			BushObject bush = new BushObject(this, getSize(), getSize());
+			bush.setX(dirt.getX());
+			bush.setY(dirt.getY());
+
+			dirt.setBuriedObject(bush, getSize(), getSize());
 		}
 	}
 
@@ -211,6 +228,9 @@ public abstract class DigPuzzle extends Puzzle {
 	}
 
 	private boolean isImpossiblePuzzle(DIG_STATE tool_state, DIG_STATE obstacle_state) {
+		if (tool_map.size() >= 2)
+			return true;
+
 		if (tool_map.containsKey(obstacle_state))
 			return tool_map.get(obstacle_state) == tool_state;
 		else
