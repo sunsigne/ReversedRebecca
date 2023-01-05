@@ -14,7 +14,7 @@ public class HarderDigPuzzle extends DigPuzzle {
 
 	@Override
 	public int getSize() {
-		return 2* Size.M;
+		return 2 * Size.M;
 	}
 
 	////////// PUZZLE ////////////
@@ -39,7 +39,9 @@ public class HarderDigPuzzle extends DigPuzzle {
 
 		createExit();
 		createExit();
-		createExit();
+
+		if (new RandomGenerator().getBoolean())
+			createExit();
 	}
 
 	private void createDirtGrid() {
@@ -52,12 +54,12 @@ public class HarderDigPuzzle extends DigPuzzle {
 		createDirt(8.5f, 2.5f);
 		createDirt(10, 2.5f);
 		createDirt(11.5f, 2.5f);
-		
+
 		createDirt(7, 4);
 		createDirt(8.5f, 4);
 		createDirt(10, 4);
 		createDirt(11.5f, 4);
-		
+
 		createDirt(7, 5.5f);
 		createDirt(8.5f, 5.5f);
 		createDirt(10, 5.5f);
