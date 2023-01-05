@@ -35,7 +35,7 @@ public class BuriedExitObject extends BuriedObject {
 
 	////////// MOUSE ////////////
 
-	private Cycloid<Integer> state = new Cycloid<>(1, 2, 3);
+	private Cycloid<Integer> state = new Cycloid<>(1, 2, 3, 4);
 
 	@Override
 	public void mousePressed(MouseEvent e) {
@@ -49,8 +49,11 @@ public class BuriedExitObject extends BuriedObject {
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 
-		if (state.getState() == 3)
-			getPuzzle().closePuzzle(true);
+		if (state.getState() == 3) {
+			setClickable(false);
+			if (getPuzzle().stillContainsExit(this) == false)
+				getPuzzle().closePuzzle(true);
+		}
 
 		state.cycle();
 		image = null;

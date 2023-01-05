@@ -217,26 +217,38 @@ public abstract class DigPuzzle extends Puzzle {
 			return false;
 	}
 
+	private GameList<BuriedExitObject> exit_list = new GameList<>(LISTTYPE.ARRAY);
+
 	protected void createExit() {
 		BuriedExitObject exit = new BuriedExitObject(this, getSize(), getSize());
 		DirtObject dirt;
 
 		do {
 			dirt = new RandomGenerator().getElementFromList(dirt_list);
-		} while (dirt.getBuriedObject() instanceof DigToolObject);
+		} while (dirt.getBuriedObject() instanceof DigToolObject || dirt.getBuriedObject() instanceof BuriedExitObject);
 
 		BuriedObject buried = dirt.getBuriedObject();
 
 		if (buried instanceof BuriedObstacleObject) {
 			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
 
-			if (obstacle.getBuriedObject() instanceof DigToolObject) {
+			if (obstacle.getBuriedObject() instanceof DigToolObject
+					|| obstacle.getBuriedObject() instanceof BuriedExitObject) {
 				createExit();
 				return;
 			}
 			obstacle.setBuriedObject(exit, getSize(), getSize());
-		} else
+			exit_list.addObject(exit);
+		} else {
 			dirt.setBuriedObject(exit, getSize(), getSize());
+			exit_list.addObject(exit);
+		}
+
+	}
+
+	public boolean stillContainsExit(BuriedExitObject exitToRemove) {
+		exit_list.removeObject(exitToRemove);
+		return exit_list.getList().isEmpty() == false;
 	}
 
 	////////// RENDER ////////////
