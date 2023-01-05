@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
 
 public class DigAxeToolObject extends DigToolObject {
 

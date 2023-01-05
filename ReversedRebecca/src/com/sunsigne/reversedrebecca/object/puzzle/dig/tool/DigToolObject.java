@@ -7,8 +7,6 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
-import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -54,7 +52,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 	@Override
 	public String toString() {
 		var clazz = "PUZZLE : DIG ";
-		var pos = getRow(getX()) + "-" + getCol(getY());
+		var pos = getFloatRow(getX()) + "-" + getFloatCol(getY());
 		var selectable = this.selectable ? "SELECTABLE" : "BURIED";
 		return clazz + getName() + " : " + selectable + " : " + pos;
 	}
@@ -94,8 +92,7 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 			return;
 		}
 
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		pickupTool(puzzle);
+		pickupTool();
 	}
 
 	@Override
@@ -105,13 +102,12 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 
 	private void selectTool() {
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "select_tool");
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		puzzle.setState(getState());
+		getPuzzle().setState(getState());
 	}
 
-	protected void pickupTool(DigPuzzle puzzle) {
-		createSelectable(puzzle);
-		createDirtBackground(puzzle);
+	protected void pickupTool() {
+		createSelectable();
+		createDirtBackground();
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "loot");
 		LAYER.PUZZLE.getHandler().removeObject(this);
@@ -119,15 +115,15 @@ public abstract class DigToolObject extends BuriedObject implements TickFree, Mo
 
 	private int x_pos_in_menu, y_pos_in_menu;
 
-	private void createSelectable(DigPuzzle puzzle) {
-		DigToolObject selectable = puzzle.getTool(getState(), x_pos_in_menu, y_pos_in_menu, true);
+	private void createSelectable() {
+		DigToolObject selectable = getPuzzle().getTool(getState(), x_pos_in_menu, y_pos_in_menu, true);
 		selectable.setX(x_pos_in_menu);
 		selectable.setY(y_pos_in_menu);
 		LAYER.PUZZLE.addObject(selectable);
 	}
 
-	private void createDirtBackground(DigPuzzle puzzle) {
-		BuriedNullObject background = new BuriedNullObject(puzzle, puzzle.getSize(), puzzle.getSize());
+	private void createDirtBackground() {
+		BuriedNullObject background = new BuriedNullObject(getPuzzle(), getPuzzle().getSize(), getPuzzle().getSize());
 		background.setX(getX());
 		background.setY(getY());
 		LAYER.PUZZLE.addObject(background);

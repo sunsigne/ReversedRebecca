@@ -4,14 +4,13 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class BuriedObject extends PuzzleObject implements TickFree, MouseUserEvent {
+public abstract class BuriedObject extends DigPuzzleObject implements TickFree, MouseUserEvent {
 
 	public BuriedObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -25,7 +24,7 @@ public abstract class BuriedObject extends PuzzleObject implements TickFree, Mou
 	@Override
 	public String toString() {
 		var clazz = "PUZZLE : BURRIED ";
-		var pos = getRow(getX()) + "-" + getCol(getY());
+		var pos = getFloatRow(getX()) + "-" + getFloatCol(getY());
 		return clazz + getName() + " : " + pos;
 	}
 

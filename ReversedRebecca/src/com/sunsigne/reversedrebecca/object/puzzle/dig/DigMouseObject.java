@@ -3,12 +3,10 @@ package com.sunsigne.reversedrebecca.object.puzzle.dig;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class DigMouseObject extends PuzzleObject {
+public class DigMouseObject extends DigPuzzleObject {
 
 	public DigMouseObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -18,8 +16,7 @@ public class DigMouseObject extends PuzzleObject {
 
 	@Override
 	public String toString() {
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		return "PUZZLE : DIG HAND : " + puzzle.getState();
+		return "PUZZLE : DIG HAND : " + getPuzzle().getState();
 	}
 
 	////////// TICK ////////////
@@ -39,8 +36,7 @@ public class DigMouseObject extends PuzzleObject {
 	////////// TEXTURE ////////////
 
 	public BufferedImage getImage() {
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		return puzzle.getState().getImage();
+		return getPuzzle().getState().getImage();
 	}
 
 	////////// RENDER ////////////

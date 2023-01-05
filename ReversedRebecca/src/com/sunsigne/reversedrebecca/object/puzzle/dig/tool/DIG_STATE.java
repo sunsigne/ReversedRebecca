@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.puzzle.dig;
+package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
 import java.awt.image.BufferedImage;
 

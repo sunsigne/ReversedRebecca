@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.BuriedObstacleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.LogObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.RockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;

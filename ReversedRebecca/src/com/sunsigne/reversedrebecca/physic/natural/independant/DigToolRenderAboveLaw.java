@@ -2,10 +2,8 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.DigMouseObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.DirtObject;
-import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.DigPuzzleObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class DigToolRenderAboveLaw extends IndependantLaw {
@@ -38,7 +36,7 @@ public class DigToolRenderAboveLaw extends IndependantLaw {
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (object instanceof DigToolObject || object instanceof DirtObject || object instanceof BuriedObject)
+		if (object instanceof DigPuzzleObject)
 			tool.render(g);
 	}
 

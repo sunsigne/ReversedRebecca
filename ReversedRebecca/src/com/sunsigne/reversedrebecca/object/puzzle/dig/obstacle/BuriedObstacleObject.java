@@ -5,9 +5,8 @@ import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
-import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -39,8 +38,8 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 
 	@Override
 	public String toString() {
-		return "PUZZLE : " + getName() + " : " + "BURIED:" + buriedObject.getName() + " / " + getRow(getX()) + "-"
-				+ getCol(getY());
+		return "PUZZLE : " + getName() + " : " + "BURIED:" + buriedObject.getName() + " / " + getFloatRow(getX()) + "-"
+				+ getFloatCol(getY());
 	}
 
 	////////// POSITION ////////////
@@ -80,8 +79,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 		if (isSelected() == false)
 			return;
 
-		DigPuzzle puzzle = (DigPuzzle) getPuzzle();
-		if (puzzle.getState() != getState()) {
+		if (getPuzzle().getState() != getState()) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFailSound());
 			return;
 		}

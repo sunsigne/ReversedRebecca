@@ -1,8 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.dig.DIG_STATE;
-import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -20,13 +18,13 @@ public class DigShovelToolObject extends DigToolObject {
 	////////// MOUSE ////////////
 
 	@Override
-	protected void pickupTool(DigPuzzle puzzle) {
-		replaceHandByShovel(puzzle);
-		super.pickupTool(puzzle);
+	protected void pickupTool() {
+		replaceHandByShovel();
+		super.pickupTool();
 	}
 
-	private void replaceHandByShovel(DigPuzzle puzzle) {
-		puzzle.setState(getState());
+	private void replaceHandByShovel() {
+		getPuzzle().setState(getState());
 
 		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
 			if (tempUpdatable instanceof DigHandToolObject == false)
