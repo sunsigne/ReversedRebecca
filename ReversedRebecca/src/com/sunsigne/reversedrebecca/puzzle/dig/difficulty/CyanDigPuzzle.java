@@ -21,11 +21,8 @@ public class CyanDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(2);
-		
-		createTool(2, 2, DIG_STATE.DIG);
-		createTool(2, 4, DIG_STATE.PICK);	
-		
+		createObstacles();
+		createTools();
 		createExit();
 	}
 
@@ -42,5 +39,14 @@ public class CyanDigPuzzle extends DigPuzzle {
 		createDirt(9, 5);
 		createDirt(11, 5);
 	}
+	
+	private void createObstacles() {
+		createRock(2);
+	}
 
+	private void createTools() {
+		createTool(2, 2, DIG_STATE.DIG);
+		createTool(2, 4, DIG_STATE.PICK);	
+	}
+	
 }

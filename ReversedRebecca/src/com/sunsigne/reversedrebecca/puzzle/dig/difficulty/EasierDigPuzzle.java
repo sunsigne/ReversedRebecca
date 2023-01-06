@@ -21,9 +21,8 @@ public class EasierDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		
-		createTool(2, 3, DIG_STATE.DIG);
-
+		createObstacles();
+		createTools();
 		createExit();
 	}
 
@@ -39,6 +38,14 @@ public class EasierDigPuzzle extends DigPuzzle {
 		createDirt(7, 5);
 		createDirt(9, 5);
 		createDirt(11, 5);
+	}
+
+	private void createObstacles() {
+
+	}
+
+	private void createTools() {
+		createTool(2, 3, DIG_STATE.DIG);
 	}
 
 }

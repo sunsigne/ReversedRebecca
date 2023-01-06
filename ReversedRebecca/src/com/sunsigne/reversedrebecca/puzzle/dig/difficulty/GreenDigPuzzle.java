@@ -21,11 +21,8 @@ public class GreenDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(6);
-		
-		createTool(2, 2, DIG_STATE.DIG);		
-		createBuriedTool(2, 4, DIG_STATE.PICK);
-		
+		createObstacles();
+		createTools();
 		createExit();
 	}
 
@@ -41,6 +38,15 @@ public class GreenDigPuzzle extends DigPuzzle {
 		createDirt(7, 5);
 		createDirt(9, 5);
 		createDirt(11, 5);
+	}
+
+	private void createObstacles() {
+		createRock(6);
+	}
+
+	private void createTools() {
+		createTool(2, 2, DIG_STATE.DIG);
+		createBuriedTool(2, 4, DIG_STATE.PICK);
 	}
 
 }

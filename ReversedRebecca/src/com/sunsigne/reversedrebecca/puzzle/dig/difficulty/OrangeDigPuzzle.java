@@ -22,19 +22,8 @@ public class OrangeDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(10);
-		createLog(5);
-
-		createTool(1, 2, DIG_STATE.DIG);
-
-		if (new RandomGenerator().getBoolean()) {
-			createBuriedTool(1, 4, DIG_STATE.PICK);
-			createBuriedTool(3, 2, DIG_STATE.CHOP);
-		} else {
-			createBuriedTool(3, 2, DIG_STATE.CHOP);
-			createBuriedTool(1, 4, DIG_STATE.PICK);
-		}
-
+		createObstacles();
+		createTools();
 		createExit();
 	}
 
@@ -58,6 +47,23 @@ public class OrangeDigPuzzle extends DigPuzzle {
 		createDirt(8.5f, 5.5f);
 		createDirt(10, 5.5f);
 		createDirt(11.5f, 5.5f);
+	}
+
+	private void createObstacles() {
+		createRock(10);
+		createLog(5);
+	}
+
+	private void createTools() {
+		createTool(1, 2, DIG_STATE.DIG);
+
+		if (new RandomGenerator().getBoolean()) {
+			createBuriedTool(1, 4, DIG_STATE.PICK);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
+		} else {
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
+			createBuriedTool(1, 4, DIG_STATE.PICK);
+		}
 	}
 
 }

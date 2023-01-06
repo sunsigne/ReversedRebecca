@@ -8,6 +8,9 @@
 
 	////////// EN COURS ////////////
 
+	faire le critique du dig Puzzle
+	les trous ne marchent tj pas (pas encore quoi)
+
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
@@ -40,7 +43,6 @@
 
 	////////// FACILE ////////////
 
-	reddigpuzzle -> créer 1 ou 2 bombes qui néttoie les alentours ?
 	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire une piranha requete pour lire la difficulté (en conditionnel)
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
@@ -49,7 +51,6 @@
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
-	digFactory and Puzzle Unfinished, NullHoleObject does not work yet
 	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	

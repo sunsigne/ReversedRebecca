@@ -14,7 +14,7 @@ public class HardestDigPuzzle extends DigPuzzle {
 
 	@Override
 	public int getSize() {
-		return 2* Size.M;
+		return 2 * Size.M;
 	}
 
 	////////// PUZZLE ////////////
@@ -22,27 +22,11 @@ public class HardestDigPuzzle extends DigPuzzle {
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
-		createRock(11);
-		createLog(7);
-		createBush(5);
-
-		createTool(1, 2, DIG_STATE.PUNCH);
-		createBuriedShovel(1, 2);
-		setState(DIG_STATE.PUNCH);
-
-		createBuriedTool(3, 4, DIG_STATE.SLASH);
-		
-		if (new RandomGenerator().getBoolean()) {
-			createBuriedTool(1, 4, DIG_STATE.PICK);
-			createBuriedTool(3, 2, DIG_STATE.CHOP);
-		} else {
-			createBuriedTool(3, 2, DIG_STATE.CHOP);
-			createBuriedTool(1, 4, DIG_STATE.PICK);
-		}
+		createObstacles();
+		createTools();
 
 		createExit();
 		createExit();
-		
 		if (new RandomGenerator().getBoolean())
 			createExit();
 	}
@@ -57,16 +41,38 @@ public class HardestDigPuzzle extends DigPuzzle {
 		createDirt(8.5f, 2.5f);
 		createDirt(10, 2.5f);
 		createDirt(11.5f, 2.5f);
-		
+
 		createDirt(7, 4);
 		createDirt(8.5f, 4);
 		createDirt(10, 4);
 		createDirt(11.5f, 4);
-		
+
 		createDirt(7, 5.5f);
 		createDirt(8.5f, 5.5f);
 		createDirt(10, 5.5f);
 		createDirt(11.5f, 5.5f);
+	}
+
+	private void createObstacles() {
+		createRock(11);
+		createLog(7);
+		createBush(5);
+	}
+
+	private void createTools() {
+		createTool(1, 2, DIG_STATE.PUNCH);
+		createBuriedShovel(1, 2);
+		setState(DIG_STATE.PUNCH);
+
+		createBuriedTool(3, 4, DIG_STATE.SLASH);
+
+		if (new RandomGenerator().getBoolean()) {
+			createBuriedTool(1, 4, DIG_STATE.PICK);
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
+		} else {
+			createBuriedTool(3, 2, DIG_STATE.CHOP);
+			createBuriedTool(1, 4, DIG_STATE.PICK);
+		}
 	}
 
 }
