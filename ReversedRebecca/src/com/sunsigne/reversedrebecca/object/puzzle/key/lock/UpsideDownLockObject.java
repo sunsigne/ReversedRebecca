@@ -21,14 +21,14 @@ public class UpsideDownLockObject extends LockObject {
 
 	@Override
 	public void tick() {
+		int mouseX = new MousePos().get()[0];
 		int mouseY = new MousePos().get()[1];
+			
+		mouseX = xmax + xmin - mouseX;
+		mouseY = ymax + ymin - mouseY;
 
-		setY(ymax + ymin - mouseY);
-
-		if (mouseY > ymax)
-			setY(ymin);
-		if (mouseY < ymin)
-			setY(ymax);
+		followMouse(mouseX, mouseY);
+		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
 	}
 
 	@Override

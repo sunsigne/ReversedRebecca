@@ -2,15 +2,15 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
-import com.sunsigne.reversedrebecca.object.puzzle.hack.VirusObject;
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class VirusRenderAboveLaw extends IndependantLaw {
+public class MouseObjectRenderAboveLaw extends IndependantLaw {
 
 	////////// INDEPENDANT LAW ////////////
 
-	private static IndependantLaw independantLaw = new VirusRenderAboveLaw();
+	private static IndependantLaw independantLaw = new MouseObjectRenderAboveLaw();
 
 	@Override
 	public IndependantLaw getIndependantLaw() {
@@ -19,12 +19,12 @@ public class VirusRenderAboveLaw extends IndependantLaw {
 
 	////////// TICK ////////////
 
-	private static VirusObject virus;
+	private static MouseObject mouse;
 
 	@Override
 	public void tick(Updatable object) {
-		if (object instanceof VirusObject)
-			virus = (VirusObject) object;
+		if (object instanceof MouseObject)
+			mouse = (MouseObject) object;
 	}
 
 	////////// RENDER ////////////
@@ -36,8 +36,8 @@ public class VirusRenderAboveLaw extends IndependantLaw {
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (object instanceof ProcessorObject)
-			virus.render(g);
+		if (object instanceof PuzzleObject)
+			mouse.render(g);
 	}
 
 }

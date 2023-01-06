@@ -4,11 +4,12 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class DigMouseObject extends DigPuzzleObject {
+public class DigMouseObject extends DigPuzzleObject implements MouseObject {
 
 	public DigMouseObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -28,11 +29,6 @@ public class DigMouseObject extends DigPuzzleObject {
 		int mouseX = new MousePos().get()[0] - getWidth() / 2;
 		int mouseY = new MousePos().get()[1] - getHeight() / 2;
 		followMouse(mouseX, mouseY);
-	}
-
-	private void followMouse(int mouseX, int mouseY) {
-		setX(mouseX);
-		setY(mouseY);
 	}
 
 	////////// TEXTURE ////////////

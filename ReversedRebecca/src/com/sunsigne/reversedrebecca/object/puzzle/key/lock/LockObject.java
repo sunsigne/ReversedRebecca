@@ -5,12 +5,13 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class LockObject extends PuzzleObject implements CollisionReactor {
+public class LockObject extends PuzzleObject implements MouseObject, CollisionReactor {
 
 	public LockObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0);
@@ -21,32 +22,26 @@ public class LockObject extends PuzzleObject implements CollisionReactor {
 	protected String getName() {
 		return "LOCK";
 	}
-	
+
 	@Override
 	public String toString() {
 		return "PUZZLE : " + getName() + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
-	
+
 	////////// TICK ////////////
 
+	protected final int xmin = getPuzzle().getCol(1);
+	protected int xmax = getPuzzle().getCol(1);
 	protected final int ymin = getPuzzle().getRow(1);
 	protected final int ymax = getPuzzle().getRow(6);
 
 	@Override
 	public void tick() {
+		int mouseX = new MousePos().get()[0];
 		int mouseY = new MousePos().get()[1];
 
-		setY(mouseY);
-
-		if (mouseY > ymax) {
-			setY(ymax);
-			new MousePos().setY(ymax);
-		}
-
-		if (mouseY < ymin) {
-			setY(ymin);
-			new MousePos().setY(ymin);
-		}
+		followMouse(mouseX, mouseY);
+		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
 	}
 
 	////////// TEXTURE ////////////

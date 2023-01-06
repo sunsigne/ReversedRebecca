@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
@@ -12,7 +13,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class VirusObject extends PuzzleObject {
+public class VirusObject extends PuzzleObject implements MouseObject {
 
 	public VirusObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0, Size.M, Size.M);
@@ -82,30 +83,13 @@ public class VirusObject extends PuzzleObject {
 		}
 
 		followMouse(mouseX, mouseY);
-		keepWithinPuzzleZone(mouseX, mouseY);
+		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
 
 		// if Mouse Peripheral has been destroyed
 		if (((HackPuzzle) getPuzzle()).getComputer().hasMouse() == false)
 			erraticMovements();
 
 		runAnimation();
-	}
-
-	private void followMouse(int mouseX, int mouseY) {
-		setX(mouseX);
-		setY(mouseY);
-	}
-
-	private void keepWithinPuzzleZone(int mouseX, int mouseY) {
-		if (mouseX > xmax)
-			setX(xmax);
-		if (mouseX < xmin)
-			setX(xmin);
-
-		if (mouseY > ymax)
-			setY(ymax);
-		if (mouseY < ymin)
-			setY(ymin);
 	}
 
 	private void erraticMovements() {
