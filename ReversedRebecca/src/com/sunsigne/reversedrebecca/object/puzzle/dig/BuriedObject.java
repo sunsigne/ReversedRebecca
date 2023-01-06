@@ -7,10 +7,8 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class BuriedObject extends DigPuzzleObject implements TickFree, MouseUserEvent {
+public abstract class BuriedObject extends DigPuzzleObject {
 
 	public BuriedObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -75,7 +73,7 @@ public abstract class BuriedObject extends DigPuzzleObject implements TickFree, 
 	@Override
 	public boolean isClickable() {
 		if (clickable)
-			return MouseUserEvent.super.isClickable();
+			return super.isClickable();
 		else
 			return false;
 	}

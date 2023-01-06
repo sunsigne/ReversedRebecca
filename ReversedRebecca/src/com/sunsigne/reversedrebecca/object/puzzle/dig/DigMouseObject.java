@@ -1,9 +1,11 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig;
 
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class DigMouseObject extends DigPuzzleObject {
@@ -44,6 +46,23 @@ public class DigMouseObject extends DigPuzzleObject {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	}
+
+	////////// MOUSE ////////////
+
+	@Override
+	public MouseController getMouseController() {
+		return null;
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
 	}
 
 }

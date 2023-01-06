@@ -12,10 +12,8 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DirtObject extends DigPuzzleObject implements TickFree, MouseUserEvent {
+public class DirtObject extends DigPuzzleObject {
 
 	public DirtObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -119,7 +117,7 @@ public class DirtObject extends DigPuzzleObject implements TickFree, MouseUserEv
 			image = null;
 		}
 
-		if (getPuzzle().getState() == DIG_STATE.DIG || getPuzzle().getState() == DIG_STATE.CRITICAL || final_punch) {
+		if (getPuzzle().getState() == DIG_STATE.DIG || isCritical() || final_punch) {
 			if (final_punch == false)
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 			LAYER.PUZZLE.getHandler().addObject(buriedObject);

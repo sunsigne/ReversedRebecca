@@ -12,10 +12,8 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class DigToolObject extends BuriedObject implements TickFree, MouseUserEvent {
+public abstract class DigToolObject extends BuriedObject {
 
 	public DigToolObject(Puzzle puzzle, int x_pos_in_menu, int y_pos_in_menu, int w, int h, boolean selectable) {
 		super(puzzle, selectable ? 2 * Size.L : w, selectable ? 2 * Size.L : h);
