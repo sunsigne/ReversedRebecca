@@ -79,7 +79,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 		if (isSelected() == false)
 			return;
 
-		if (getPuzzle().getState() != getState()) {
+		if (getPuzzle().getState() != getState() && getPuzzle().getState() != DIG_STATE.CRITICAL) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFailSound());
 			return;
 		}

@@ -17,6 +17,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.LogObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle.RockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigCriticalToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
@@ -94,6 +95,9 @@ public abstract class DigPuzzle extends Puzzle {
 
 		case SLASH:
 			return new DigSwordToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+			
+		case CRITICAL:
+			return new DigCriticalToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
 		case DIG:
 		default:

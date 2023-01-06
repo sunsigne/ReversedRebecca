@@ -42,7 +42,7 @@ public class BuriedExitObject extends BuriedObject {
 		if (isSelected() == false)
 			return;
 
-		if (getPuzzle().getState() != DIG_STATE.DIG) {
+		if (getPuzzle().getState() != DIG_STATE.DIG && getPuzzle().getState() != DIG_STATE.CRITICAL) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
 			return;
 		}

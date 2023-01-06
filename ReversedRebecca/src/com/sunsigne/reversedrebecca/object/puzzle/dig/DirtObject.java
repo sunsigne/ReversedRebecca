@@ -119,7 +119,7 @@ public class DirtObject extends DigPuzzleObject implements TickFree, MouseUserEv
 			image = null;
 		}
 
-		if (getPuzzle().getState() == DIG_STATE.DIG || final_punch) {
+		if (getPuzzle().getState() == DIG_STATE.DIG || getPuzzle().getState() == DIG_STATE.CRITICAL || final_punch) {
 			if (final_punch == false)
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 			LAYER.PUZZLE.getHandler().addObject(buriedObject);

@@ -24,7 +24,7 @@ public class HardestDigPuzzle extends DigPuzzle {
 		createDirtGrid();
 		createObstacles();
 		createTools();
-
+		
 		createExit();
 		createExit();
 		if (new RandomGenerator().getBoolean())
@@ -60,6 +60,12 @@ public class HardestDigPuzzle extends DigPuzzle {
 	}
 
 	private void createTools() {
+		if (isCritical) {
+			createTool(2, 3, DIG_STATE.CRITICAL);
+			setState(DIG_STATE.CRITICAL);
+			return;
+		}
+		
 		createTool(1, 2, DIG_STATE.PUNCH);
 		createBuriedShovel(1, 2);
 		setState(DIG_STATE.PUNCH);

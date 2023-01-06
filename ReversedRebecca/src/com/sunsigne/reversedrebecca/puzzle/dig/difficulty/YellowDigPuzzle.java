@@ -22,7 +22,7 @@ public class YellowDigPuzzle extends DigPuzzle {
 	public void createPuzzle() {
 		createDirtGrid();
 		createObstacles();
-		createTools();
+		createTools();		
 		createExit();
 	}
 
@@ -53,6 +53,12 @@ public class YellowDigPuzzle extends DigPuzzle {
 	}
 
 	private void createTools() {
+		if (isCritical) {
+			createTool(2, 3, DIG_STATE.CRITICAL);
+			setState(DIG_STATE.CRITICAL);
+			return;
+		}
+		
 		createTool(2, 2, DIG_STATE.DIG);
 		createBuriedTool(2, 4, DIG_STATE.PICK);
 	}
