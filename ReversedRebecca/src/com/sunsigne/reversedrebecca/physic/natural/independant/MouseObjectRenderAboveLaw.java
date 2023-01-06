@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -23,8 +24,12 @@ public class MouseObjectRenderAboveLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
+		if (object instanceof Player)
+			mouse = null;
+
 		if (object instanceof MouseObject)
 			mouse = (MouseObject) object;
+
 	}
 
 	////////// RENDER ////////////
@@ -37,7 +42,8 @@ public class MouseObjectRenderAboveLaw extends IndependantLaw {
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
 		if (object instanceof PuzzleObject)
-			mouse.render(g);
+			if (mouse != null)
+				mouse.render(g);
 	}
 
 }
