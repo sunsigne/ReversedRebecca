@@ -74,6 +74,7 @@
 	
 	////////// LVL001 ////////////
 	
+	créer un parking pour l'entrée "public"
 	le déplacement de la camera sur le joueur (pendant la cinématique) est bizarre.... A Essayer : le faire AVANT le déplacement
 	texture : plante à gauche à refaire
 	dialogue : changer "notre invité" par "l'intru"
