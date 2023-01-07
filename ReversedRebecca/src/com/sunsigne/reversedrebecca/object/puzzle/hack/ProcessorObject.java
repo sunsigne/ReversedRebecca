@@ -40,6 +40,13 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	public abstract String getName();
 
+	////////// PUZZLE ////////////
+
+	@Override
+	public boolean isCritical() {
+		return getVirus().isCritical();
+	}
+
 	////////// PROCESSOR ////////////
 
 	private boolean locked;

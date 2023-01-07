@@ -22,12 +22,14 @@ public class AntivirusReverser extends AntivirusObject {
 	////////// ANTIVIRUS ////////////
 
 	private boolean flag;
-	
+
 	@Override
 	public void antivirusAction() {
-		if(flag == false)
+		if (flag == false)
 			reversingSound();
-		getVirus().setReversed(true);
+
+		if (isCritical() == false)
+			getVirus().setReversed(true);
 	}
 
 	@Override
@@ -50,7 +52,7 @@ public class AntivirusReverser extends AntivirusObject {
 		if (isClickable())
 			antivirusAction();
 	}
-	
+
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// just in case the game "missed" the activation

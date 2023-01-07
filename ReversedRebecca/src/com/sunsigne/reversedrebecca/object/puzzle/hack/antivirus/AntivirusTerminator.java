@@ -39,7 +39,9 @@ public class AntivirusTerminator extends AntivirusObject {
 	}
 
 	private void terminate() {
-		getPuzzle().closePuzzle(false);
+		if (isCritical() == false)
+			getPuzzle().closePuzzle(false);
+
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "laser_shoot");
 	}
 
@@ -76,7 +78,7 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (isClickable() == false)
 			return;
 
-		if (getVirus().isDisguised()) {
+		if (getVirus().isDisguised() || isCritical()) {
 			super.mousePressed(e);
 			return;
 		}

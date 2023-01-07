@@ -9,9 +9,9 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class AntivirusShrinker extends AntivirusObject {
 
 	public AntivirusShrinker(Puzzle puzzle) {
-		super(puzzle, new Translatable().getTranslatedText("Antivirus"+ "Shrinker", FilePath.PUZZLE));
+		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Shrinker", FilePath.PUZZLE));
 	}
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -25,13 +25,17 @@ public class AntivirusShrinker extends AntivirusObject {
 
 	@Override
 	public void antivirusAction() {
-		attempt_before_death--;
+		if (isCritical() == false)
+			attempt_before_death--;
+
 		if (attempt_before_death == 0) {
 			getPuzzle().closePuzzle(false);
 			return;
 		}
 
-		getVirus().shrink();
+		if (isCritical() == false)
+			getVirus().shrink();
+
 		playSound("virus_shrink");
 	}
 

@@ -105,7 +105,7 @@ public abstract class HackPuzzle extends Puzzle {
 	}
 
 	protected void createVirus() {
-		PuzzleObject virus = new VirusObject(this);
+		PuzzleObject virus = new VirusObject(this, isCritical);
 		LAYER.PUZZLE.addObject(virus);
 	}
 

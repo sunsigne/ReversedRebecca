@@ -15,8 +15,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class VirusObject extends PuzzleObject implements MouseObject {
 
-	public VirusObject(Puzzle puzzle) {
-		super(puzzle, false, 0, 0, Size.M, Size.M);
+	public VirusObject(Puzzle puzzle, boolean critical) {
+		super(puzzle, critical, 0, 0, Size.M, Size.M);
 		loadAnimation();
 	}
 
@@ -25,8 +25,10 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 	@Override
 	public String toString() {
 		var clazz = "PUZZLE : VIRUS";
+		String critical = isCritical() ? " CRITICAL" : "";
 		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
-		return clazz + " : " + pos + " / " + "REVERSED : " + reversed + " / " + "DISGUISED : " + disguised + " / "+ "SHRINK : " + shrink;
+		return clazz + critical + " : " + pos + " / " + "REVERSED : " + reversed + " / " + "DISGUISED : " + disguised
+				+ " / " + "SHRINK : " + shrink;
 	}
 
 	////////// ANTIVIRUS ////////////
@@ -114,9 +116,10 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_virus";
 		ImageTask loader = new ImageTask();
+		String critical = isCritical() ? "_critical" : "";
 
-		BufferedImage img0 = loader.loadImage(path + "_0");
-		BufferedImage img1 = loader.loadImage(path + "_1");
+		BufferedImage img0 = loader.loadImage(path + "_0" + critical);
+		BufferedImage img1 = loader.loadImage(path + "_1" + critical);
 
 		animation = new Cycloid<BufferedImage>(img0, img1);
 	}
@@ -144,10 +147,12 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 	}
 
 	private void dragImage(Graphics g, BufferedImage image) {
-		if(isReversed() == false)
-			g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink, null);
+		if (isReversed() == false)
+			g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink,
+					null);
 		else
-			g.drawImage(image, getX() + shrink, getY() + getHeight() - shrink, getWidth() - 2 * shrink, - getHeight() + 2 * shrink, null);
+			g.drawImage(image, getX() + shrink, getY() + getHeight() - shrink, getWidth() - 2 * shrink,
+					-getHeight() + 2 * shrink, null);
 	}
 
 }
