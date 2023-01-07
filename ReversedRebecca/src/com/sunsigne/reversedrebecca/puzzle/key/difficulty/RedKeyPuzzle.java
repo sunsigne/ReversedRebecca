@@ -17,7 +17,7 @@ public class RedKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public LockObject getLock() {
-		return new UpsideDownLockObject(this);
+		return new UpsideDownLockObject(this, isCritical);
 	}
 
 	@Override

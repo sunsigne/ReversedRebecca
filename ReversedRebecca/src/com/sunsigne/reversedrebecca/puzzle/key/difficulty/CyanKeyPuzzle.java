@@ -15,7 +15,7 @@ public class CyanKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public LockObject getLock() {
-		return new LockObject(this);
+		return new LockObject(this, isCritical);
 	}
 
 	@Override

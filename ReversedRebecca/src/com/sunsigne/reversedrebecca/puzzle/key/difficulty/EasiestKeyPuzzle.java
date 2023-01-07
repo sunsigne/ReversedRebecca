@@ -16,7 +16,7 @@ public class EasiestKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public LockObject getLock() {
-		return new LockObject(this);
+		return new LockObject(this, isCritical);
 	}
 
 	@Override

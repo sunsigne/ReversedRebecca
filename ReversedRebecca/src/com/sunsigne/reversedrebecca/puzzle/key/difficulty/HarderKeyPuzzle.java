@@ -14,7 +14,7 @@ public class HarderKeyPuzzle extends CyanKeyPuzzle {
 
 	@Override
 	public LockObject getLock() {
-		return new UpsideDownLockObject(this);
+		return new UpsideDownLockObject(this, isCritical);
 	}
 
 	@Override

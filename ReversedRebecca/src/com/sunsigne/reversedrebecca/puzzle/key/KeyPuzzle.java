@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -43,17 +44,18 @@ public abstract class KeyPuzzle extends Puzzle {
 	////////// PUZZLE ////////////
 
 	public abstract LockObject getLock();
+
 	public abstract KeyObject getKey();
 
 	protected void createLock() {
 		PuzzleObject lock = getLock();
 		lock.setX(getCol(1));
 		lock.setY(getRow(4));
-		
+
 		LAYER.PUZZLE.addObject(lock);
 	}
 
-	protected void createKey() {		
+	protected void createKey() {
 		PuzzleObject key = getKey();
 		key.setX(getCol(12));
 		key.setY(getRow(new RandomGenerator().getIntBetween(1, 6)));
@@ -61,6 +63,12 @@ public abstract class KeyPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(key);
 	}
 
+	@Override
+	protected BufferedImage getWallTexture() {
+		String critical = isCritical ? "_critical" : "";
+		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall" + critical);
+	}
+	
 	protected void createRandomWalls(int numOfWalls, boolean moving) {
 		if (numOfWalls <= 0)
 			return;
@@ -80,9 +88,9 @@ public abstract class KeyPuzzle extends Puzzle {
 				radRow = getRow(new RandomGenerator().getIntBetween(1, 6));
 			} while (radRow == safeRow);
 
-			if(moving)
+			if (moving)
 				handler.addObject(new MovingWallPuzzleObject(this, img, radCol, radRow));
-				
+
 			else {
 				handler.addObject(new WallPuzzle(img, radCol, radRow));
 				handler.addObject(new KillPuzzleObject(this, radCol, radRow));
@@ -91,13 +99,13 @@ public abstract class KeyPuzzle extends Puzzle {
 	}
 
 	////////// OPEN ////////////
-	
+
 	@Override
 	protected void createWallBorder() {
 		super.createWallBorder();
 		createDeathWall();
 	}
-	
+
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
 			// Almost invisible in VisibleHitboxMode because added before Walls

@@ -13,8 +13,11 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class LockObject extends PuzzleObject implements MouseObject, CollisionReactor {
 
-	public LockObject(Puzzle puzzle) {
-		super(puzzle, false, 0, 0);
+	public LockObject(Puzzle puzzle, boolean critical) {
+		super(puzzle, critical, 0, 0);
+
+		if (isCritical())
+			xmax = getPuzzle().getCol(11);
 	}
 
 	////////// NAME ////////////
@@ -25,7 +28,8 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 
 	@Override
 	public String toString() {
-		return "PUZZLE : " + getName() + " : " + getRow(getX()) + "-" + getCol(getY());
+		String critical = isCritical() ? " CRITICAL" : "";
+		return "PUZZLE : " + getName() + critical + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
 
 	////////// TICK ////////////

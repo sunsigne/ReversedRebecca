@@ -7,8 +7,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class UpsideDownLockObject extends LockObject {
 
-	public UpsideDownLockObject(Puzzle puzzle) {
-		super(puzzle);
+	public UpsideDownLockObject(Puzzle puzzle, boolean critical) {
+		super(puzzle, critical);
 	}
 
 	////////// NAME ////////////
