@@ -1,5 +1,22 @@
 Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que contrairement aux Types de Requêtes "classiques", ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
 
+////// DIFFICULTY //////
+
+Le Type de Requête DIFFICULTY permet de vérifier le mode de difficulté actuel.
+
+Les modes de difficulté est établi par le joueur lors de la création d'une nouvelle partie. Il peut prendre trois valeurs différentes :
+- EASY
+- NORMAL
+- HARD
+
+exemple :
+TIME -> 0 = DIFFICULTY -> EASY ? EASY_BOSS_IA / NORMAL_OR_HARD_BOSS_IA
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : la difficulté est-elle définie comme étant sur "EASY" (facile) ?
+- si oui, effectuer l'action EASY_BOSS_IA (qui est une balise comme pour GOTO)
+- si non, effectuer l'action NORMAL_OR_HARD_BOSS_IA (qui est une autre balise comme pour GOTO)
+
+
 ////// SEE //////
 
 Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
