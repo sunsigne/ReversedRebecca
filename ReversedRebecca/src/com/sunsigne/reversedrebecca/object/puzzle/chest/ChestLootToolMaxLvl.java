@@ -22,7 +22,7 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 		var clazz = "CHEST LOOT MAX";
 		return clazz + " : " + tool.getName().toUpperCase() + " = " + getDifficulty();
 	}
-	
+
 	////////// PICK UP////////////
 
 	@Override
@@ -89,10 +89,11 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	public String getSecondLine() {
 		if (secondLine == null) {
 			String line = new Translatable().getTranslatedText("TOOLMAXLVL2", FilePath.TECHTREE);
+			String tool_gender = new Translatable().getTranslatedText(tool.getName() + "gender" + "the", FilePath.TOOL);
 			String card_tool = new Translatable().getTranslatedText(tool.getName(), FilePath.TOOL);
 			String link_word = new Translatable().getTranslatedText("TOOLMAXLVL3", FilePath.TECHTREE);
 			String difficulty = new Translatable().getTranslatedText(getDifficulty().getName(), FilePath.TOOL);
-			secondLine = line + card_tool + link_word + difficulty;
+			secondLine = line + tool_gender + " " + card_tool + link_word + difficulty;
 		}
 		return secondLine;
 	}

@@ -2,8 +2,8 @@ REWARD1 = Choose#a#reward
 REWARD2 = Choose#two#rewards
 
 TOOLSTARTLVL1 = Start#each#level
-TOOLSTARTLVL2 = with#a#
+TOOLSTARTLVL2 = with#
 
 TOOLMAXLVL1 = Upgrade#the#max#level
-TOOLMAXLVL2 = of#the#
+TOOLMAXLVL2 = of#
 TOOLMAXLVL3 = #to#

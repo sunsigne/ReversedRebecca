@@ -88,9 +88,10 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	public String getSecondLine() {
 		if (secondLine == null) {
 			String line = new Translatable().getTranslatedText("TOOLSTARTLVL2", FilePath.TECHTREE);
+			String tool_gender = new Translatable().getTranslatedText(tool.getName() + "gender" + "a", FilePath.TOOL);
 			String card_tool = new Translatable().getTranslatedText(tool.getName() + getDifficulty().getName(),
 					FilePath.TOOL);
-			secondLine = line + card_tool;
+			secondLine = line + tool_gender + " " + card_tool;
 		}
 		return secondLine;
 	}

@@ -2,8 +2,8 @@ REWARD1 = Choisissez#une#récompense
 REWARD2 = Choisissez#deux#récompenses
 
 TOOLSTARTLVL1 = Commence#chaque#niveau
-TOOLSTARTLVL2 = avec#une#
+TOOLSTARTLVL2 = avec#
 
 TOOLMAXLVL1 = Augmente#le#niveau#max
-TOOLMAXLVL2 = de#la#
+TOOLMAXLVL2 = de#
 TOOLMAXLVL3 = #à#

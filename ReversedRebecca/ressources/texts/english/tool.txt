@@ -9,6 +9,8 @@ Purple = purple
 
 ///// KEY /////
 
+KeyGenderThe = the
+KeyGenderA = a
 Key = key
 KeyCyan = cyan#key
 KeyGreen = green#key
@@ -19,6 +21,8 @@ KeyPurple = purple#key
 
 ///// BOMB /////
 
+BombGenderThe = the
+BombGenderA = a
 Bomb = bomb
 BombCyan = cyan#bomb
 BombGreen = green#bomb
@@ -29,6 +33,8 @@ BombPurple = purple#bomb
 
 ///// MICROCHIP /////
 
+MicrochipGenderThe = the
+MicrochipGenderA = a
 Microchip = chip
 MicrochipCyan = cyan#chip
 MicrochipGreen = green#chip
@@ -39,6 +45,8 @@ MicrochipPurple = purple#chip
 
 ///// SHOVEL /////
 
+ShovelGenderThe = the
+ShovelGenderA = a
 Shovel = shovel
 ShovelCyan = cyan#shovel
 ShovelGreen = green#shovel

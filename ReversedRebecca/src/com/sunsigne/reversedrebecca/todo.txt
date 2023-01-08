@@ -8,6 +8,7 @@
 
 	////////// EN COURS ////////////
 
+	le lvl test fait un move bizarre au lancement avec la camera lorsqu'elle est dynamique
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
@@ -48,7 +49,6 @@
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
-	détail subtile, dans le fichier text/french/techtree, le déterminé est genré de base au féminin
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
