@@ -40,7 +40,6 @@
 	////////// FACILE ////////////
 
 	les trous passents "au dessus" des objets (et perso) une fois créés
-	faire une piranha requete pour lire la difficulté (en conditionnel)
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
