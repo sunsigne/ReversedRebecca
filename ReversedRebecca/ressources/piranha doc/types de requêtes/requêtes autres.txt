@@ -11,7 +11,7 @@ Lorsque la Condition sera vérifiée, la Caméra se placera en x=0 y=0.
 
 Note : il est tout à fait autorisé d'entrer "PLAYER" comme Cible à la place de coordonnées afin de demander à la Caméra suivre le joueur.
 Note : "PLAYER_FLUID" est également une Cible autorisée. La Caméra va alors se déplacer rapidement jusqu'au joueur au lieu de s'y "téléporter".
-Note : le comportement par défaut de la Caméra n'est pas de suivre le joueur, mais de se placer en 0-0. Il faudra donc configurer le fichier SET-UP à chaque fois.
+Note : le comportement par défaut de la Caméra n'est pas de suivre le joueur, ni de se placer en 0-0 ; mais conserver le dernier comportement retenu. Il faudra donc configurer le fichier SET-UP à chaque fois.
 
 
 ////// DISPLAY //////

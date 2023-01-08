@@ -48,13 +48,15 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	}
 
 	private void moveCameraByX(Player player) {
+		boolean staticCamera = CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false
+				|| isWorldSpawning();
 		float targetX = -player.getX() + (Window.WIDHT - player.getWidth()) / 2;
 		float cameraX = CAMERA.getX();
 		float delay = 1.0f;
 
-		targetX = getBorderedTarget(targetX, true);
+		targetX = getBorderedTarget(targetX, true, staticCamera);
 
-		if (CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false) {
+		if (staticCamera) {
 			CAMERA.setX(targetX); // == CAMERA.setX(cameraX + (targetX - cameraX) * delay);
 			return;
 		}
@@ -65,13 +67,15 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	}
 
 	private void moveCameraByY(Player player) {
+		boolean staticCamera = CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false
+				|| isWorldSpawning();
 		float targetY = -player.getY() + (Window.HEIGHT - player.getHeight()) / 2;
 		float cameraY = CAMERA.getY();
 		float delay = 1.0f;
 
-		targetY = getBorderedTarget(targetY, false);
+		targetY = getBorderedTarget(targetY, false, staticCamera);
 
-		if (CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false) {
+		if (staticCamera) {
 			CAMERA.setY(targetY); // == CAMERA.setY(cameraY + (targetY - cameraY) * delay);
 			return;
 		}
@@ -82,11 +86,11 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 	}
 
 	// prevent camera to protrude from the borders' map
-	private float getBorderedTarget(float target, boolean horizontal) {
+	private float getBorderedTarget(float target, boolean horizontal, boolean staticCamera) {
 
 		// border left or up
 		if (target >= 0)
-			return 0;
+			return staticCamera ? 0 : 26;
 
 		// if no world found
 		World world = World.get();
@@ -96,7 +100,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		// border right or down
 		int maxBorder = horizontal ? Window.WIDHT - world.getWidth() : Window.HEIGHT - world.getHeight();
 		if (target <= maxBorder)
-			return maxBorder;
+			return staticCamera ? maxBorder : maxBorder - 26;
 
 		return target;
 	}
@@ -109,11 +113,19 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 		float diffX = cameraPos - target;
 		float playerDistance = (Math.abs(diffX)) / player.getSize();
-		
-		if(tempDynamic)
+
+		if (tempDynamic)
 			distanceInTiles = 0;
 
 		return playerDistance > distanceInTiles;
+	}
+
+	private boolean isWorldSpawning() {
+		World world = World.get();
+		if (world == null)
+			return false;
+
+		return world.getTime() < 1;
 	}
 
 	////////// RENDER ////////////

@@ -313,6 +313,10 @@ public class World implements Updatable, RenderFree {
 	private int frame = Game.SEC;
 	private int time;
 
+	public int getTime() {
+		return time;
+	}
+	
 	@Override
 	public void tick() {
 		frame--;
