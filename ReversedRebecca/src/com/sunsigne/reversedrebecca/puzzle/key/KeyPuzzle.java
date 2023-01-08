@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.KillPuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
@@ -22,8 +23,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class KeyPuzzle extends Puzzle {
 
-	public KeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public KeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 		new GameCursor().setCursor(null);
 	}
 
@@ -68,7 +69,7 @@ public abstract class KeyPuzzle extends Puzzle {
 		String critical = isCritical ? "_critical" : "";
 		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall" + critical);
 	}
-	
+
 	protected void createRandomWalls(int numOfWalls, boolean moving) {
 		if (numOfWalls <= 0)
 			return;

@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.bomb.difficulty;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.FastBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.MovingBombObject;
@@ -9,8 +10,8 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzle;
 
 public class OrangeBombPuzzle extends BombPuzzle {
 
-	public OrangeBombPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public OrangeBombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

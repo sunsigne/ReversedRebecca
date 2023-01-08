@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.key.difficulty;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.key.SlowKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
@@ -8,8 +9,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class EasiestKeyPuzzle extends KeyPuzzle {
 
-	public EasiestKeyPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public EasiestKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

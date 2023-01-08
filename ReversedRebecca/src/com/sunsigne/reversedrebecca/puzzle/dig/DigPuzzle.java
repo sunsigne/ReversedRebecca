@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedExitObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
@@ -37,8 +38,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DigPuzzle extends Puzzle {
 
-	public DigPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public DigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 
 		new GameCursor().setCursor(null);
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));

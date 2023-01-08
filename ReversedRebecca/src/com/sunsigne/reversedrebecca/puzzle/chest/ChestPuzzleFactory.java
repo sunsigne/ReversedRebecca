@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.chest;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -11,8 +12,9 @@ public class ChestPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	@Deprecated // use instead : createPuzzle(String file, GenericListener actionOnWinning)
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	@Deprecated // use instead : createPuzzle(String lootFile, GenericListener actionOnWinning)
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
+			GenericListener actionOnWinning) {
 		// will stop the app
 		return new ChestPuzzle("wrong \"createPuzzle\" method used from ChestPuzzleFactory", actionOnWinning);
 	}

@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.hack.difficulty;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
@@ -10,8 +11,8 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class EasierHackPuzzle extends HackPuzzle {
 
-	public EasierHackPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public EasierHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 	}
 
 	////////// PUZZLE ////////////

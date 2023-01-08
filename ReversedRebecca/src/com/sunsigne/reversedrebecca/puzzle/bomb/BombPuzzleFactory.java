@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.bomb;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -21,52 +22,53 @@ public class BombPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
+			GenericListener actionOnWinning) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, criticalChance, actionOnWinning);
+			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning);
 		case HARD:
-			return createHardPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, int criticalChance, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestBombPuzzle(criticalChance, actionOnWinning);
+			return new EasiestBombPuzzle(toolPlayer, actionOnWinning);
 		case EASIER:
-			return new EasierBombPuzzle(criticalChance, actionOnWinning);
+			return new EasierBombPuzzle(toolPlayer, actionOnWinning);
 		case HARDER:
-			return new HarderBombPuzzle(criticalChance, actionOnWinning);
+			return new HarderBombPuzzle(toolPlayer, actionOnWinning);
 		case HARDEST:
-			return new HardestBombPuzzle(criticalChance, actionOnWinning);
+			return new HardestBombPuzzle(toolPlayer, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestBombPuzzle(criticalChance, actionOnWinning);
+			return new EasiestBombPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new EasierBombPuzzle(criticalChance, actionOnWinning);
+			return new EasierBombPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new CyanBombPuzzle(criticalChance, actionOnWinning);
+			return new CyanBombPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new GreenBombPuzzle(criticalChance, actionOnWinning);
+			return new GreenBombPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new YellowBombPuzzle(criticalChance, actionOnWinning);
+			return new YellowBombPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -76,19 +78,19 @@ public class BombPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanBombPuzzle(criticalChance, actionOnWinning);
+			return new CyanBombPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new GreenBombPuzzle(criticalChance, actionOnWinning);
+			return new GreenBombPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new YellowBombPuzzle(criticalChance, actionOnWinning);
+			return new YellowBombPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new OrangeBombPuzzle(criticalChance, actionOnWinning);
+			return new OrangeBombPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new RedBombPuzzle(criticalChance, actionOnWinning);
+			return new RedBombPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -98,19 +100,19 @@ public class BombPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowBombPuzzle(criticalChance, actionOnWinning);
+			return new YellowBombPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new OrangeBombPuzzle(criticalChance, actionOnWinning);
+			return new OrangeBombPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new RedBombPuzzle(criticalChance, actionOnWinning);
+			return new RedBombPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new HarderBombPuzzle(criticalChance, actionOnWinning);
+			return new HarderBombPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new HardestBombPuzzle(criticalChance, actionOnWinning);
+			return new HardestBombPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

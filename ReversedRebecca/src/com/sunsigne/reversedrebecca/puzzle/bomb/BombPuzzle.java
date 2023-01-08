@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.puzzle.bomb;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
@@ -16,8 +17,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombPuzzle extends Puzzle {
 
-	public BombPuzzle(int criticalChance, GenericListener actionOnWinning) {
-		super(criticalChance, actionOnWinning);
+	public BombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+		super(toolPlayer, actionOnWinning);
 	}
 
 	////////// NAME ////////////

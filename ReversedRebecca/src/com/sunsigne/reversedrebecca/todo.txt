@@ -21,7 +21,6 @@
 
 	////////// DIFFICILE ////////////
 	
-	pas sûr : puzzle : passer d'une relevée d'info sur l'outils (dans le constructeur des puzzle) à une récupération de l'outils lui-même
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
@@ -43,7 +42,7 @@
 	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire une piranha requete pour lire la difficulté (en conditionnel)
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
-	vous êtes : exemplaire, gentil, neutre, méchant, sadique    / psycopath
+	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?

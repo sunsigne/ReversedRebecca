@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.puzzle.key;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -21,52 +22,53 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 	////////// PUZZLE ////////////
 
 	@Override
-	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
+			GenericListener actionOnWinning) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, criticalChance, actionOnWinning);
+			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning);
 		case HARD:
-			return createHardPuzzle(difficulty, criticalChance, actionOnWinning);
+			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, int criticalChance, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasiestKeyPuzzle(toolPlayer, actionOnWinning);
 		case EASIER:
-			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasierKeyPuzzle(toolPlayer, actionOnWinning);
 		case HARDER:
-			return new HarderKeyPuzzle(criticalChance, actionOnWinning);
+			return new HarderKeyPuzzle(toolPlayer, actionOnWinning);
 		case HARDEST:
-			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
+			return new HardestKeyPuzzle(toolPlayer, actionOnWinning);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasiestKeyPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new EasierKeyPuzzle(criticalChance, actionOnWinning);
+			return new EasierKeyPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
+			return new CyanKeyPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
+			return new GreenKeyPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
+			return new YellowKeyPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -76,19 +78,19 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanKeyPuzzle(criticalChance, actionOnWinning);
+			return new CyanKeyPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new GreenKeyPuzzle(criticalChance, actionOnWinning);
+			return new GreenKeyPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
+			return new YellowKeyPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new OrangeKeyPuzzle(criticalChance, actionOnWinning);
+			return new OrangeKeyPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new RedKeyPuzzle(criticalChance, actionOnWinning);
+			return new RedKeyPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -98,19 +100,19 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, int criticalChance, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowKeyPuzzle(criticalChance, actionOnWinning);
+			return new YellowKeyPuzzle(toolPlayer, actionOnWinning);
 		case GREEN:
-			return new OrangeKeyPuzzle(criticalChance, actionOnWinning);
+			return new OrangeKeyPuzzle(toolPlayer, actionOnWinning);
 		case YELLOW:
-			return new RedKeyPuzzle(criticalChance, actionOnWinning);
+			return new RedKeyPuzzle(toolPlayer, actionOnWinning);
 		case ORANGE:
-			return new HarderKeyPuzzle(criticalChance, actionOnWinning);
+			return new HarderKeyPuzzle(toolPlayer, actionOnWinning);
 		case RED:
-			return new HardestKeyPuzzle(criticalChance, actionOnWinning);
+			return new HardestKeyPuzzle(toolPlayer, actionOnWinning);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
