@@ -23,6 +23,10 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent {
 		loadImages();
 	}
 
+	public boolean isValid() {
+		return new ChestLootFactory().createLoot(this, lootData).isValid();
+	}
+	
 	////////// NAME ////////////
 
 	@Override

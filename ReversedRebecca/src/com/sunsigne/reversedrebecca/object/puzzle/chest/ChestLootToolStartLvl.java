@@ -15,6 +15,11 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 		this.tool = tool;
 	}
 
+	@Override
+	public boolean isValid() {
+		return getDifficulty() != LVL.PURPLE;
+	}
+
 	////////// NAME ////////////
 
 	@Override

@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.object.puzzle.chest;
 
 import javax.swing.JOptionPane;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
@@ -38,11 +38,13 @@ public class ChestLootFactory {
 	private void stopApp(String lootData) {
 		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
 		JOptionPane.showMessageDialog(null,
-				"An error has occurred : " + lootData + " can't be resolved to an existing loot");
+				"An error has occurred : " + lootData + " can't be resolved as a valid loot");
 		new Conductor().stopApp();
 	}
 
 	private ToolPlayer getTool(String lootData) {
+		if (lootData == null)
+			return null;
 
 		var list = ToolList.getList();
 		for (ToolPlayer tempTool : list.getList()) {

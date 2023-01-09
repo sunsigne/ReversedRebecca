@@ -21,6 +21,8 @@ public abstract class ChestLoot extends PuzzleObject {
 		this.widerUpgradeImg = widerUpgradeImg;
 	}
 
+	public abstract boolean isValid();
+	
 	////////// CARD ////////////
 
 	private ChestCard card;

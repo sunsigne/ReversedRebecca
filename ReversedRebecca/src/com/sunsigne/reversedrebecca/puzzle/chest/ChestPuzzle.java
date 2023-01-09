@@ -114,9 +114,27 @@ public class ChestPuzzle extends Puzzle {
 	}
 
 	private void createCard(int num, int x) {
-		String lootData = new FileTask().read(userData, "LOOT" + (num + 1), lootFile);
+		try {
+			boolean searching = true;
+			int index = 0;
 
-		chestCard[num] = new ChestCard(this, lootData, x, 0);
+			do {
+				String lootDatas = new FileTask().read(userData, "LOOT" + (num + 1), lootFile);
+				String lootData = lootDatas.contains("/") ? lootDatas.split("/")[index] : lootDatas;
+				chestCard[num] = new ChestCard(this, lootData, x, 0);
+
+				index++;
+				if (chestCard[num].isValid())
+					searching = false;
+				else if (lootDatas.contains("/") == false)
+					throw new ArrayIndexOutOfBoundsException();
+
+			} while (searching);
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			chestCard[num] = new ChestCard(this, null, x, 0);
+		}
+
 		chestCard[num].setX(chestCard[num].getX() - chestCard[num].getWidth() / 2);
 		chestCard[num].setY(-chestCard[num].getHeight());
 

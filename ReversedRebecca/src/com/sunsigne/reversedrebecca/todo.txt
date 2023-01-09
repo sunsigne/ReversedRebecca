@@ -1,11 +1,3 @@
-	////////// VIDEO ////////////
-
-	écran titre
-	le rangement de la souris
-	traduction de text
-	écran de chargement	
-	sons
-
 	////////// EN COURS ////////////
 
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
@@ -21,16 +13,18 @@
 
 	////////// DIFFICILE ////////////
 	
+	créer une mécanique de "création d'objet piranha" sur la couche "world" lorsqu'un crops est transféré sur la couche sol (sera aussi utile pour les boss et les trous)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
-	ChestLootFactory pas fini : vérifier le lvl des outils existant AVANT de définir le loot (pour les multiples possibilités de loot)
+	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
 	le cursor devient de + en + grand lorsque la résolution diminue
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	faire un GUI menu
 	créer un système d'envoie de données du user (crash et dev_data)
 	"You are" ne se sauvegarde pas encore
+	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
 	finir le design des personnages
@@ -46,7 +40,6 @@
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
-	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
