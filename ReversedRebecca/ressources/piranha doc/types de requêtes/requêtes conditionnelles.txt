@@ -20,7 +20,7 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 ////// SEE //////
 
 Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
-Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas par défaut (cela peut être en utilisant le Type de Requête BLOCKING_SIGHT, voir "requêtes state").
+Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas par défaut (cela peut être modifié en utilisant le Type de Requête BLOCKING_SIGHT, voir "requêtes state").
 
 exemple :
 TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42
@@ -28,6 +28,23 @@ TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il dans le champ de vision de l'objet ?
 - si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
 - si non, définir le GOAL comme étant en x=37 y=42
+
+
+////// PLAYER_FUTHER_THAN //////
+
+Le Type de Requête PLAYER_FUTHER_THAN permet de savoir le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
+
+exemple :
+TIME -> 0 = PLAYER_FUTHER_THAN -> 6 ? GOCRYING / MOVE:37-42
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il plus loin que 6 cases ?
+- si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
+- si non, définir le GOAL comme étant en x=37 y=42
+
+
+////// PLAYER_CLOSER_THAN //////
+
+Le Type de Requête PLAYER_CLOSER_THAN fonctionne exactement de la même façon que le Type de Requête PLAYER_FUTHER_THAN, à la différence près qu'il vérifie si le joueur est "plus prêt" au lieu de "plus loin".
 
 
 ////// STUNNED //////
