@@ -64,9 +64,17 @@
 	
 	////////// LVL001 ////////////
 	
+	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
+	+ faire en sorte qu'il se pisse dessus après un certain temps
+	jean cryroom : gérer le cas où on est caché derrière le bureau	
+	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
+	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
+	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
+	
+	changer la voix de Mika
+	le "turn off without saving" ne se sauvegarde pas encore (c'est pourtant une action méchante)
 	créer un parking pour l'entrée "public"
-	le déplacement de la camera sur le joueur (pendant la cinématique) est bizarre.... A Essayer : le faire AVANT le déplacement
-	texture : plante à gauche à refaire
+	texture : plante de la salle de pause à refaire
 	dialogue : changer "notre invité" par "l'intru"
 	la pancarte devant les toilettes dit "merci de laisser les toilettes dans le même état que vous les avez trouvé"
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
@@ -86,13 +94,7 @@
 	
 	KOAnimation dans les 4 direction ?
 	rendre le PNG enfermé + vivant (+ le finir)
-	Peeboy doit pleurer dans la cryroom (animation ou quoi) ?
-	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
-	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
-	+ faire en sorte qu'il se pisse dessus après un certain temps
 	La plante jaune n'est pas finie
-	au mec qui veut faire pipi, rebecca dit "tu me stress" quand il va horizontalement
-	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
 	
 	////////// LVL002 ////////////
 	

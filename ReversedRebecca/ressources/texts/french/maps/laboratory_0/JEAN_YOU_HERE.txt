@@ -1,0 +1,3 @@
+object = player = cry = Ho#!#Tu#es#là#?
+player = object = unhappy = Tu#veux#que#je#m'en#aille#?
+object = player = cry = Oui,#s'il#te#plaît.

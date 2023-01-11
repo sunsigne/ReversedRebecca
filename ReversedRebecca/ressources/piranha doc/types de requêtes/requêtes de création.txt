@@ -26,7 +26,7 @@ Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pa
 Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
 
 exemple :
-TIME -> 0 = CREATE -> 10-20-BACK:1,2,BATH_HAIR
+TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:1,2,BATH_HAIR
 
 Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un objet apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
 

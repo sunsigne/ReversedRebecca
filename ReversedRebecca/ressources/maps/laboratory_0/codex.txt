@@ -27,6 +27,7 @@ OBJ-05 = Bubble Colomn
 NPC-08 = Sarah
 NPC-09 = Vladimir
 NPC-10 = Mika
+NPC-11 = Jean
 OBJ-06 = Left Desk Up Part
 OBJ-07 = Chair
 OBJ-08 = Plant

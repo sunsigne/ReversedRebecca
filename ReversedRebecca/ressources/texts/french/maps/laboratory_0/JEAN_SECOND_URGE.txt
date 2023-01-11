@@ -1,0 +1,2 @@
+object = player = urge = Je#t'en#pris#!#Dépêche-toi#!
+player = object = happy_var = Oui#oui.
