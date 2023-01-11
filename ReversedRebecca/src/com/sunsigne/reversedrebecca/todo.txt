@@ -64,12 +64,10 @@
 	
 	////////// LVL001 ////////////
 	
-	faire en sorte que le peeboy bouge sur place (a du mal à se retenir)
-	+ faire en sorte qu'il se pisse dessus après un certain temps
 	la flaque de pipi doit pouvoir être commenté, senti, nettoyée, etc.
-	finir peeboy (TOUTE la partie après l'ouverture de la porte + le fait de se pisser dessus seul & d'être malade sur place, le croche pied)
-	
+	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
 	changer la voix de Mika
+	ajouter des réactions des personnages dans quand (si) ils voient le pipi
 	le "turn off without saving" ne se sauvegarde pas encore (c'est pourtant une action méchante)
 	créer un parking pour l'entrée "public"
 	texture : plante de la salle de pause à refaire
