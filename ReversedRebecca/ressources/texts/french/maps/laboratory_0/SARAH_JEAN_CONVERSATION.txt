@@ -1,0 +1,3 @@
+sarah = LEFT = happy = Tu#sais#où#sont#les#clefs,#par#hasard#?
+jean = RIGHT = urge_happy = Je#crois#qu'il#y#en#a#dans@le#bureau#derrière#moi.
+sarah = LEFT = wink = Ok,#merci#Jean.

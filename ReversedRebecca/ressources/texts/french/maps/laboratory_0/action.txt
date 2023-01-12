@@ -10,4 +10,5 @@ LETS_DO_THE_OPPOSITE = Key2 % faisons#le#contraire
 WATCH = Key1 % regarder
 READ = Key1 % lire
 TALK = Key1 % parler
+LISTEN = Key1 % écouter
 TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
