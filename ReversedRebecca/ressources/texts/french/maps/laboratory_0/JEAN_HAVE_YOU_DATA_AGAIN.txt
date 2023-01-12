@@ -1,0 +1,4 @@
+player = object = unhappy = Tu#ne#sais#vraiment#rien#qui#pourrait#m'aider#?
+object = player = urge_happy = Je#sais#juste#qu'il#y#a#eu#une#explosion,#et#que@le#système#de#sécurité#a#verouillé#les#portes.
+object = player = urge_sad = D'où#mon#problème,#d'ailleurs…
+player = object = happy = D'accord.#Merci.
