@@ -4,4 +4,4 @@ mika = DOWN = angry_var = Quel#taré...@Et#maintenant,#on#peut#même#plus#sortir
 sarah = DOWN = surprised = Est-ce#qu'il#y#a#des#blessés#?
 mika = UP = serious = Je#suis#comme#vous#les#filles…@J'en#sais#pas#plus…
 sarah = DOWN = determinated = Alors,#on#va#enquêter#!
-sarah = RIGHT = determinated = Rebecca,#trouve#des#indices#sur#notre#invité.@Je#vais#tâcher#de#nous#trouver#une#sortie.
+sarah = RIGHT = determinated = Rebecca,#trouve#nous#une#sortie.@Je#vais#me#renseigner#sur#notre#invité.

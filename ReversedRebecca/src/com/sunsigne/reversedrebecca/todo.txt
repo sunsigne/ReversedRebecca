@@ -65,7 +65,6 @@
 	////////// LVL001 ////////////
 	
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
-	changer la voix de Mika
 	ajouter des réactions des personnages dans quand (si) ils voient le pipi
 	le "turn off without saving" ne se sauvegarde pas encore (c'est pourtant une action méchante)
 	créer un parking pour l'entrée "public"
