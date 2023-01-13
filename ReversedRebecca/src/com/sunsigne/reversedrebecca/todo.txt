@@ -1,5 +1,11 @@
 	////////// EN COURS ////////////
 
+	attention, plusieurs pb :
+	cas 1 : on est dedans mais bloqué au niveau de la porte en 24-44 - la scène ne se lance pas
+	cas 2 : la scène se lance lorsqu'on est dehors, derrière sarah en 25-44
+	incohérences de dialogues Jean-Rebecca-Sarah-Delta : les clefs + des clefs ... choisir un mot et s'y tenir
+	gérer le cas où on a déjà ouvert la porte
+
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !

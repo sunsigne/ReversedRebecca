@@ -35,3 +35,4 @@ OBJ-09 = Letter
 OBJ-10 = Tim's Computer
 OBJ-11 = Bubble Colomn Sabotaged
 OBJ-12 = Pee Puddle
+OBJ-13 = Sarah Desk Key Room Path Checker

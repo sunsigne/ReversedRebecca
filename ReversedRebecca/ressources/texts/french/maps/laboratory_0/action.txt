@@ -12,3 +12,5 @@ READ = Key1 % lire
 TALK = Key1 % parler
 LISTEN = Key1 % écouter
 TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
+YES = Key1 % oui
+LIE_NO = Key2 % (mentir)#non
