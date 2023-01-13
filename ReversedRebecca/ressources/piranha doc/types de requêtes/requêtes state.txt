@@ -145,6 +145,7 @@ Les types d'évitement sont au nombre de 6 et voici leurs fonctionnements :
 Attention ! le player avoider ne change pas "tout seul" lors des cinématiques : il reste le même que celui qu'on a défini en dernier. Même chose à la sortie de ces dernières.
 
 Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
+- FORCE, le personnage va "forcer le passage" en avançant comme si le joueur n'était pas là. Le joueur sera poussé dans le sens de la marche. (Attention, ce mouvement ne semble pas "naturel", mais certaines situations ne peuvent parfois pas être gérées autrement).
 - THROUGH, le personnage va ignorer purement et simplement le joueur : il lui passera au travers ! (cela peut être utile lors de cinématiques).
 - STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 
 - PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
