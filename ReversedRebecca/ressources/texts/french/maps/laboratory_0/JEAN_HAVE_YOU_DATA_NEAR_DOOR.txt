@@ -1,0 +1,8 @@
+player = object = happy = Salut#!#Tu#as#des#infos#sur#ce@qu'il#vient#de#se#passer#?
+object = player = urge_happy = Je#n'ai#rien#vu,#désolé.@J'étais#dans#mon#bureau.
+player = object = unhappy = Tu#as#l'air#pâle,#ça#va#?
+object = player = urge = Il#faut#vraiment#que#j'aille#aux#toilettes#…
+player = object = worry = Et,#tu#n'y#vas#pas#parce#que...#?
+object = player = urge_sad = La#porte#est#fermée#!
+object = player = urge_happy = Mais#tout#va#bien.#Sarah#est#allée#chercher#la#clef.
+player = object = laugh = Je#vois.

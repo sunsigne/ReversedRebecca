@@ -1,7 +1,5 @@
 	////////// EN COURS ////////////
 
-	gérer le cas où on a déjà ouvert la porte
-
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
@@ -66,6 +64,7 @@
 	
 	////////// LVL001 ////////////
 	
+	Sarah Inquiry gérer le cas où on a déjà ouvert la porte	
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
 	ajouter des réactions des personnages dans quand (si) ils voient le pipi
 	le "turn off without saving" ne se sauvegarde pas encore (c'est pourtant une action méchante)
