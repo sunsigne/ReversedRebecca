@@ -1,0 +1,7 @@
+rebecca = object = no_sens = C'est#quand#même#fou,#ce#type#qui#débarque,#comme#ça…
+delta = rebecca = happy_var = Ho#que#non#!#C'est#pas#nouveau#!
+delta = rebecca = worry = Tu#dis#ça#parce#que#t'as#pas#l'habitude.
+delta = rebecca = laugh = Mais#avec#mon#frère,#on#faisait@ce#genre#de#chose#sans#arrêt.
+rebecca = object = surprised = Quoi#?!
+delta = rebecca = worry = T'inquiète.#On#blessait#personne.
+delta = rebecca = happy_var = On#volait#juste#des#trucs#cool.

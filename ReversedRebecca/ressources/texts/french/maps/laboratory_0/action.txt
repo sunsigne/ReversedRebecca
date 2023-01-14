@@ -14,3 +14,5 @@ LISTEN = Key1 % écouter
 TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
 YES = Key1 % oui
 LIE_NO = Key2 % (mentir)#non
+SOUNDS_FUN = Key1 % ça#a#l'air#amusant
+THATS_NOT_COOL = Key2 % c'est#pas#cool

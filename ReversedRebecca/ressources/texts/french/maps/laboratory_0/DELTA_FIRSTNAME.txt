@@ -1,0 +1,11 @@
+delta = rebecca = happy = Oui#?
+rebecca = object = happy = J'étais#en#train#de#me#dire…@C'est#un#drôle#de#nom#"Delta",#non#?
+rebecca = object = worry = Sans#vouloir#te#vexer,#hein.
+delta = rebecca = laugh = Ya#pas#de#mal.#Oui,#c'est#pas#commun,#en#effet.@Mes#parents#ont#un#truc#avec#l'alphabet#grec.
+delta = rebecca = smile = Et#toi,#ça#vient#d'où#"Rebecca"#?
+rebecca = object = worry = En#vérité,#le#choix#de#mon#prénom@n'est#pas#une#histoire#intéressante…
+rebecca = object = excited = …#mais,#j'aime#imaginer#que#je#porte@le#même#nom#qu'une#étoile#!
+delta = rebecca = surprised = C'est#vrai#?#Il#y#a#une@étoile#qui#s'appelle#comme#toi ?
+rebecca = object = laugh = Non.#Mais#ça#pourrait.
+delta = rebecca = wink = Dans#ce#cas,#préviens-moi#si#demain,@ils#appellent#une#étoile#"Delta".
+rebecca = object = happy_var = C'est noté.

@@ -1,0 +1,5 @@
+delta = rebecca = worry = Chacun#son#passé…
+delta = rebecca = laugh = Et#puis…#Aujourd'hui,#j'y#suis#pour#rien.
+rebecca = object = you_silly_var = C'est#vrai.
+rebecca = object = worry = Bon,#je#ferais#mieux#d'aller@nous#trouver#une#sortie.
+delta = rebecca = wink = Bonne#chance,#ma#grande.
