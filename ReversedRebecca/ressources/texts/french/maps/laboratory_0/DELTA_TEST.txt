@@ -1,0 +1,4 @@
+rebecca = object = happy = Delta ?
+delta = rebecca = laugh = Alala ! Cette pauvre porte va rester fermée longtemps, on dirait !
+rebecca = object = happy_var = Il faut croire que je t'aime bien.
+// trouver un sujet

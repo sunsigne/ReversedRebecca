@@ -1,5 +1,9 @@
 	////////// EN COURS ////////////
 
+	delta devrait regarder en bas par défaut (ce qui n'est pas le cas à la suite d'un dialogue avec le joueur lorsqu'il était à droite)
+	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
+	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte, et dans le cas où on a pas déjà la clef.
+
 	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !

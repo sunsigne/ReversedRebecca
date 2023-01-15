@@ -1,5 +1,5 @@
 rebecca = object = laugh = Salut#Delta#!
 delta = rebecca = happy = Yo,#ma#grande#!@Comment#je#peux#t'aider#?
-rebecca = object = happy = Puisque#tu#le#demandes,#tu#saurais#où@sont#les#clés#de#la#porte#d'à#côté#?
+rebecca = object = happy = Tu#saurais#où#sont#les@clés#de#la#porte#d'à#côté#?
 delta = DOWN = excited = J'ai#un#double,#prends#les#miennes.
 rebecca = object = happy_var = Merci#!
