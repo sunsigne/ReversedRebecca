@@ -1,0 +1,14 @@
+rebecca = object = happy = Delta#?
+delta = rebecca = laugh = Alala#!#Cette#pauvre#porte#va#longtemps@rester#fermée,#on#dirait#!
+rebecca = object = happy_var = Il#faut#croire#que#je#t'aime#bien.
+rebecca = object = happy = Plus#sérieusement.#Tu#as#une#idée#de@comment#je#nous#trouve#une#sortie#?
+delta = rebecca = happy_var = Pas#en#restant#ici#à#me#parler,#déjà.
+rebecca = object = laugh = Je#m'en#doute,@mais#tu#as#une#suggestion#plus#générale#?
+delta = rebecca = no_sens = Hmm…#J'imagine#que#si#tu#demandes,@c'est#que#la#porte#d'entrée#est#bloquée.
+rebecca = object = no_sens = Le#mot#est#faible…#Elle#est#complètement@ensevelie#sous#les#rochers.
+delta = rebecca = laugh = Ha#ouais#!#Il#a#pas#fait#semblant#le#mec#!
+delta = rebecca = excited = Si#j'étais#toi,#je#passerais#simplement@par#l'entrée#des#visiteurs.
+rebecca = object = surprised = Ho#!#C'est#vrai#qu'on#a#ça#!
+rebecca = object = worry = Comme#on#a#jamais#de#visiteur,@j'avais#fini#par#oublier#cette#salle.
+delta = rebecca = laugh = Aller,#va#nous#sauver,#"madame#l'aventurière".
+rebecca = object = happy_var = Oui,#cette#fois,#je#m'y#mets#vraiment.

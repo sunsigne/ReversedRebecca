@@ -37,6 +37,7 @@
 
 	////////// FACILE ////////////
 
+	foncer la boite de dialogue (la conversation avec Delta est difficile à lire)
 	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
