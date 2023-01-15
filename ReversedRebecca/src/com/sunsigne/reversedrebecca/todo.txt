@@ -22,7 +22,6 @@
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
-	le cursor devient de + en + grand lorsque la résolution diminue
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	faire un GUI menu
 	créer un système d'envoie de données du user (crash et dev_data)
