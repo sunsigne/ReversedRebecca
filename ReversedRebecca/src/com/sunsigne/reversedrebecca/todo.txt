@@ -1,6 +1,5 @@
 	////////// EN COURS ////////////
 
-	delta devrait regarder en bas par défaut (ce qui n'est pas le cas à la suite d'un dialogue avec le joueur lorsqu'il était à droite)
 	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
 	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte, et dans le cas où on a pas déjà la clef.
 

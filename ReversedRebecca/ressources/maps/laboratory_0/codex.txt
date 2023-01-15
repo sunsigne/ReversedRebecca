@@ -38,3 +38,5 @@ OBJ-11 = Bubble Colomn Sabotaged
 OBJ-12 = Pee Puddle
 OBJ-13 = Cyan Key Computer
 OBJ-14 = Sarah Desk Key Room Path Checker
+OBJ-15 = Delta Special Chair
+OBJ-16 = Delta Player Distance Checker

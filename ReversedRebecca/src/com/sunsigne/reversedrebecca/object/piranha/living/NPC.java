@@ -73,7 +73,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	@Override
 	protected void defaultCollindingReaction(CollisionDetector detectorObject) {
 		if (getPlayerAvoiderType() == AVOIDERTYPE.STOP) {
-			if (detectorObject instanceof Player & !isMotionless() & !Cutscene.isRunning())
+			if (detectorObject instanceof Player & !isStunned() & !Cutscene.isRunning())
 				stopAndLookAtPlayer();
 		}
 
