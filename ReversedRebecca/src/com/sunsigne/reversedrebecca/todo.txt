@@ -24,11 +24,11 @@
 	créer un système d'envoie de données du user (crash et dev_data)
 	"You are" ne se sauvegarde pas encore
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
-	toilet down pas créé, animation de TOUS les personnage à vérifier du coup (de toilet down)	
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
 	finir le design des personnages
 	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+	KOAnimation dans les 4 direction ?
 
 	////////// FACILE ////////////
 
@@ -64,6 +64,7 @@
 	
 	////////// LVL001 ////////////
 	
+		rendre le PNG enfermé + vivant (+ le finir)
 	Sarah Inquiry gérer le cas où on a déjà ouvert la porte	
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
 	ajouter des réactions des personnages dans quand (si) ils voient le pipi
@@ -78,12 +79,6 @@
 	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
 	rajouter des images d'explosion pour les explosions
 	traduire "quel taré" par "what a freak"
-	
-	////////// old LVL001 ////////////
-	
-	KOAnimation dans les 4 direction ?
-	rendre le PNG enfermé + vivant (+ le finir)
-	La plante jaune n'est pas finie
 	
 	////////// LVL002 ////////////
 	
