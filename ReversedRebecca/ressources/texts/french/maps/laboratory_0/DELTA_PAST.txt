@@ -9,7 +9,7 @@ delta = rebecca = worry = Pour#nous,#ç'a#toujours#était#du#bric-à-brac.@On#n'
 rebecca = object = happy = Pourtant#aujourd'hui,#tu#es#ingénieur#!@Tu#devrais#comprendre#facilement.
 delta = rebecca = wink = Oui,#mais#entre-temps,#nos#vies@avec#mon#frère#se#sont#séparées.
 delta = rebecca = smile = Il#a#gardé#son#amour#des#"raids",@et#moi,#celui#pour#les#technologies.
-delta = rebecca = worry = Et#comme#il#n'y#a#que#moi#qui#me#suis#rangée,@c'était#logique#qu'il#garde#le#garage.
+delta = rebecca = worry = Et#comme#moi#je#me#suis#rangé,#et#lui#non,@c'était#logique#qu'il#garde#le#garage.
 delta = rebecca = happy_var = Mais#j'en#garde#un#bon#souvenir.#Et#si@c'était#à#refaire,#je#signe#tout#de#suite#!
 rebecca = object = laugh = Oui,#c'est#l'impression#que#tu#donnes.
 rebecca = object = happy = Bon,#j'y#vais.
