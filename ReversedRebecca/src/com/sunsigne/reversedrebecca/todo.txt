@@ -3,9 +3,7 @@
 	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
 	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.
 
-	le système de sauvegarde (requete save) semble ne pas marcher dans le laboratoire 1 ... (à vérifier)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
-	changer la coupe de cheveux de Alicia (seulement de face à changer ?) !
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -18,7 +16,6 @@
 	
 	créer une mécanique de "création d'objet piranha" sur la couche "world" lorsqu'un crops est transféré sur la couche sol (sera aussi utile pour les boss et les trous)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
-	CSN a parlé du fait que l'interaction avec le verre d'eau n'est pas naturel : trop prêt = pas d'interaction
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum

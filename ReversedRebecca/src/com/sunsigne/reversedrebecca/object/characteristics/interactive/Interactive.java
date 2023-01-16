@@ -48,6 +48,10 @@ public interface Interactive extends Velocity, KeyboardEvent {
 		// player is too far
 		if (new PlayerFinder().isPlayerFutherThan(this, 1))
 			return false;
+		
+		// player is superimposed on the object
+		if (new PlayerFinder().isPlayerCloserThan(this, 1))
+			return true;
 
 		// player is watching the object
 		switch (player.getFacing()) {
