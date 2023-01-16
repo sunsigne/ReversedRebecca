@@ -1,5 +1,18 @@
 Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que contrairement aux Types de Requêtes "classiques", ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
 
+////// UNLOCKEDTOOL //////
+
+Le Type de Requête UNLOCKEDTOOL permet de vérifier si le joueur atteint ou non le niveau de l'outil en question.
+Note : Tous les outils et niveaux sont détaillés dans le fichier "mappable" (dans le dossier "maps")
+
+exemple :
+TIME -> 20 = UNLOCKEDTOOL -> KEY:CYAN ? DOOR_CLOSED / DIALOGUE
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : l'outil KEY a-t-il été débloqué au moins au niveau CYAN ?
+- si oui, effectuer l'action DOOR_CLOSED (qui est une balise comme pour GOTO)
+- si non, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
+
+
 ////// DIFFICULTY //////
 
 Le Type de Requête DIFFICULTY permet de vérifier le mode de difficulté actuel.
