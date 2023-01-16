@@ -4,5 +4,5 @@ rebecca = object = happy = Pourquoi#tu#as#arrêté#?
 delta = rebecca = no_sens = Pour#la#faire#courte#:@mon#frère#est#un#addict.
 delta = rebecca = happy = On#a#fini#par#se#séparer,#et#je#me#voyais#pas@continuer#sans#lui.#Alors,#j'ai#arrêté.
 rebecca = object = you_silly_var = Je#vois.
-rebecca = object = happy = Bon,#je#ferais#mieux#d'aller@nous#trouver#une#sortie.
+rebecca = object = happy = Bon,#je#ferais#mieux#d'y#aller.
 delta = rebecca = wink = Bonne#chance,#ma#grande.
