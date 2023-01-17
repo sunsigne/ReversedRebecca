@@ -79,7 +79,10 @@ public class NPC extends LivingObject implements PlayerAvoider {
 
 		if (getPlayerAvoiderType() == AVOIDERTYPE.THROUGH && detectorObject instanceof Player)
 			return;
-		
+
+		if (getPlayerAvoiderType() == AVOIDERTYPE.FORCE && detectorObject instanceof Player)
+			((Player) detectorObject).setForcePushed(true);
+
 		blockPath(detectorObject);
 	}
 

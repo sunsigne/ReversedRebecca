@@ -46,6 +46,16 @@ public class Player extends LivingObject {
 	
 	////////// SPEED ////////////
 
+	private boolean forcePushed;
+
+	public boolean isForcePushed() {
+		return forcePushed;
+	}
+
+	public void setForcePushed(boolean forcePushed) {
+		this.forcePushed = forcePushed;
+	}
+
 	private void updateSpeed() {
 		if (isPathNull())
 			setSpeedness(SPEEDNESS.PLAYER_SPEED);
@@ -123,6 +133,7 @@ public class Player extends LivingObject {
 		super.tick();
 
 		updateSpeed();
+		setForcePushed(false);
 	}
 
 	////////// KEYBOARD ////////////
