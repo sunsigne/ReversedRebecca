@@ -1,0 +1,9 @@
+rebecca = object = happy = Qu'est-ce#qu'il#s'est#passé,#exactement#?
+mika = player = serious = Je#sortais#de#la#salle#de#pause,@quand#j'ai#entendu#une#détonation.
+mika = player = doubt = Je#n'ai#pas#vu#l'explosion,@mais#j'en#reconnais#le#bruit.
+mika = player = serious = Juste#après,#ce#mec#"venu#de#nulle#part",@sort#tranquillement#du#bureau#d'Alicia#!
+mika = player = serious = Je#lui#ai#couru#après.#La#suite,#tu#la#connais.
+rebecca = object = surprised = Attend#!#Mais#si#ça#se#trouve,#Alicia#est#blessée#!
+mika = player = surprised = ?!
+mika = player = serious = Je#n'y#avais#pas#pensé…
+mika = player = serious = Va#voir#comment#elle#va.@Je#dois#rester#pour#ici#dégager#le#chemin.
