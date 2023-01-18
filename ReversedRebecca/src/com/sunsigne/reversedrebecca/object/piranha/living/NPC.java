@@ -110,8 +110,9 @@ public class NPC extends LivingObject implements PlayerAvoider {
 				lookAtPlayer();
 				boolean playerFarEnough = new PlayerFinder().isPlayerFutherThan(object, 3);
 				boolean newGoalEtablished = getGoal() != registeredGoal;
+				boolean newPlayerAvoider = getPlayerAvoiderType() != AVOIDERTYPE.STOP;
 				boolean cutscene = Cutscene.isRunning();
-				return playerFarEnough | newGoalEtablished | cutscene;
+				return playerFarEnough | newGoalEtablished | newPlayerAvoider | cutscene;
 			}
 
 			GenericListener action = () -> {
