@@ -82,7 +82,7 @@ ex : PUSHED -> REBECCA = "Requête"
 "Requête" sera appelé si l'objet, dont le nom est défini comme étant "Rebecca", a été poussé.
 
 Attention ! Le Type de Condition PUSHED ne permet pas d'utiliser les mots PLAYER et OBJECT pour respectivement faire référence au joueur et à l'objet Piranha en cours.
-Attention ! Une Instruction comportant ce Type de Condition sera déclenché à chaque poussée de l'objet ! Soyez précis lors de son utilisation.
+Attention ! Une Instruction comportant ce Type de Condition sera déclenché à chaque poussée de l'objet ! Soyez précis lors de son utilisation, par exemple en l'encadrant de conditions supplémentaires. (voir "type de requêtes/requêtes conditionnelles.txt")
 
 
 ////// GOTO //////

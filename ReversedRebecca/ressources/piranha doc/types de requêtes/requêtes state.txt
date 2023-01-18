@@ -153,6 +153,7 @@ Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans 
 - PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
 
 Note: si le PLAYER_AVOIDER_TYPE est défini par défaut sur AROUND, il ne faut pas hésiter à le mettre sur STOP dans les espaces étroits afin de ne pas avoir des lags à cause du PathFinder qui ne trouve pas de chemin valide.
+Note: En ce qui concerne les comportements de PUSH, il est important de noter que le jeu dispose d'une sécurité pour éviter un paradoxe : si l'objet Piranha cherche à pousser un autre objet dans la direction qu'il bloque lui-même avec sa propre hitbox, il le poussera à la place dans la direction opposée.
 
 
 Il existe tout un autre panel de Type de Requête state, pour les connaître, voir le fichier "requêtes player.txt"
