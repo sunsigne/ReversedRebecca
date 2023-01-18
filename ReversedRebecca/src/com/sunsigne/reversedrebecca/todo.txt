@@ -6,6 +6,9 @@
 	attention ! gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
 	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.		
 	faire en sorte que si tu es à la recherche d'Alicia, le dialogue avec les PNG soient différents !
+	faire en sorte que Sarah puisse être témoin du poussage dans le scénario exit.
+	faire en sorte qu'on puisse aller engueuler Jean lorsqu'il nous a poussé dans le scénario exit.
+	
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 
 	////////// PERSONNAGES à faire ////////////
