@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
+import com.sunsigne.reversedrebecca.piranha.condition.global.PushedCondition;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
@@ -65,8 +66,11 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	private void pushPushable(Pushable pushable) {
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 		pushable.setSpeedness(SPEEDNESS.SWIFT);
+		
+		new PushedCondition().registerValue(pushable);
 		DIRECTION pushing_direction = getFilteredDirection(pushable, getDirection(this, pushable));
 		pushingToward(pushable, pushing_direction);
+		
 		prepareForStop(pushable);
 	}
 

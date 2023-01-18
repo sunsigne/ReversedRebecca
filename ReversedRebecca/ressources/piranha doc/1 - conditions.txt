@@ -74,6 +74,17 @@ exemple dans notre monde : si Bernard est en France et que son Objectif est la C
 Attention ! Contrairement aux autres conditions, GOAL n'a qu'une portée locale : TIME est vérifié partout, WONPUZZLE est vérifié partout, mais pour GOAL, c'est la position de l'objet en question qui est vérifiée.
 
 
+////// PUSHED //////
+
+
+Le Type de Condition PUSHED est vérifiée lorsque l'objet, dont le NAME correspond à la Valeur renseignée, a été poussé. (voir "type de requêtes/requêtes state.txt")
+ex : PUSHED -> REBECCA = "Requête"
+"Requête" sera appelé si l'objet, dont le nom est défini comme étant "Rebecca", a été poussé.
+
+Attention ! Le Type de Condition PUSHED ne permet pas d'utiliser les mots PLAYER et OBJECT pour respectivement faire référence au joueur et à l'objet Piranha en cours.
+Attention ! Une Instruction comportant ce Type de Condition sera déclenché à chaque poussée de l'objet ! Soyez précis lors de son utilisation.
+
+
 ////// GOTO //////
 
 
