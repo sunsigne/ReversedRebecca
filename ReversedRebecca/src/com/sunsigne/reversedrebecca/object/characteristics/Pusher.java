@@ -121,7 +121,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 			break;
 		case DOWN:
 			if (getY() > pushable.getY())
-				return DIRECTION.DOWN;
+				return DIRECTION.UP;
 			break;
 		default:
 			break;

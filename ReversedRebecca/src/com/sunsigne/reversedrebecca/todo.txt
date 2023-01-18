@@ -1,6 +1,6 @@
 	////////// EN COURS ////////////
 
-	Attetnion ! Gérer tous les types de poussées de Jean au niveau de la porte (inquiry scenario)
+	Attetnion ! Quand Jean pourrse Rebecca, Sarah devrait réagir !
 
 	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
 	attention ! gérer l'arrivée de Mika près de la porte lorsqu'elle n'est pas encore ouverte !
@@ -37,6 +37,7 @@
 
 	////////// FACILE ////////////
 
+	ajouter un popup message d'erreur pour rappeller qu'une map (content) doit être carrée
 	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
