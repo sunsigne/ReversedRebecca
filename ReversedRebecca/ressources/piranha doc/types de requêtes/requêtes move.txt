@@ -60,6 +60,7 @@ Lorsque la Condition sera vérifiée, l'objet se téléportera en x=33 y=35.
 ////// PUSH //////
 
 Le Type de Requête PUSH pousse un objet dans la direction définie en Cible. Il faut bien entendu que cet objet puisse être poussé (donc être vivant).
+La direction indiqué peut prendre comme valeur "LEFT", "RIGHT", "UP" ou "DOWN".
 
 exemple :
 ! -> PUSH_PLAYER_UP = PUSH -> UP
