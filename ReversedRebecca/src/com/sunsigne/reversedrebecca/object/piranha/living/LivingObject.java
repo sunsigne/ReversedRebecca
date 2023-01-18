@@ -36,6 +36,13 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	private boolean flagX, flagY;
 
+	@Override
+	public void setMotionless() {
+		flagX = true;
+		flagY = true;
+		super.setMotionless();
+	}
+
 	protected void updateWatchingDirection() {
 		if (isMotionlessbyX())
 			flagX = false;
@@ -138,21 +145,21 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
-	
+
 	////////// DEATH ////////////
 
 	private boolean registeredAsDead;
-	
+
 	@Override
 	public boolean isRegisteredAsDead() {
 		return registeredAsDead;
 	}
-	
+
 	@Override
 	public void registeredAsDead(boolean registeredAsDead) {
 		this.registeredAsDead = registeredAsDead;
 	}
-	
+
 	////////// PATH FINDER ////////////
 
 	@Override
@@ -185,7 +192,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	////////// RENDER ////////////
 
 	private int displayedX, displayedY;
-	
+
 	public void setDisplayXY(int x, int y) {
 		int pixel = 16;
 		int ratio = Size.M / pixel;
