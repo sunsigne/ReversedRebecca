@@ -1,11 +1,11 @@
 	////////// EN COURS ////////////
-	
-	changer la phrase "Est-ce#qu'il#y#a#des#blessés#?"
-	le Player avoider "force" ne marche pas pendant les cutscene
-	faire en sorte que si tu es à la recherche d'Alicia, le dialogue avec les PNG soient différents !
 
+	Bug : Jean qui nous a poussé moi et Sarah à droite nous a TP (Jean et Rebecca) dans la salle de Delta et nous y a bloqué (vu qu'il était à ma droite et me poussait vers la droite)
+	Attenion, la poussée de Jean qui court vers les toilettes + le slow_backup de sara ne sont pas compatible -> il existe un cas où le joueur se fait pousser en boucle contre sarah
 	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
-	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.
+	attention ! gérer l'arrivée de Mika près de la porte lorsqu'elle n'est pas encore ouverte !
+	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.		
+	faire en sorte que si tu es à la recherche d'Alicia, le dialogue avec les PNG soient différents !	
 
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 
@@ -17,7 +17,9 @@
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 
 	////////// DIFFICILE ////////////
-	
+		
+	mieux gérer eles règles de poussées (quand par exemple on arrive dans le dos d'un pusher qui doit nous pousser devant lui)
+	les sons ne devraient être audible que si la camera est dessus (exemple du peeboy qui va aux toilettes)
 	créer une mécanique de "création d'objet piranha" sur la couche "world" lorsqu'un crops est transféré sur la couche sol (sera aussi utile pour les boss et les trous)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle
@@ -67,6 +69,7 @@
 	
 	////////// LVL001 ////////////
 	
+	gérer le cas où Sarah a été poussée par Jean (enguelade dans les toilettes)
 	rendre le PNG enfermé + vivant (+ le finir)
 	Sarah Inquiry gérer le cas où on a déjà ouvert la porte	
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
