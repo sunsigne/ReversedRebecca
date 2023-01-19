@@ -1,1 +1,1 @@
-sarah = LEFT = angry = Mais#il#est#pas#bien,#lui#!
+sarah = jean = angry = Mais#il#est#pas#bien,#lui#!

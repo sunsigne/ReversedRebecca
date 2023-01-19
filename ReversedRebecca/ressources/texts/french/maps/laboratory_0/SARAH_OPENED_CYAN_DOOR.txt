@@ -1,0 +1,6 @@
+sarah = rebecca = happy_var = Je#vois#que#tu#t'es#servie#de#mon#cadeau.
+rebecca = sarah = laugh = Ha#!#Tu#as#remarqué#?
+sarah = rebecca = worry = Bien#sûr…#Pourquoi#tu#dis#ça#?
+rebecca = sarah = you_silly = Parce#que#la#porte#est#loin.@Comment#sais-tu#qu'elle#est#ouverte#?
+sarah = rebecca = wink = En#fait,#je#t'ai#entendu#faire#quand#@j'étais#dans#l'autre#pièce.
+rebecca = sarah = laugh = Ha#!

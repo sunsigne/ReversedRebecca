@@ -74,7 +74,7 @@ public class SightFinder implements Position {
 		float distance;
 
 		var handler = observer.getHandler();
-		
+
 		do {
 			int diffX = getX() - (goal.getX());
 			int diffY = getY() - (goal.getY());
@@ -87,8 +87,9 @@ public class SightFinder implements Position {
 			// if a "wall" (blocking sight object) is on the way, return false
 			GameList<GameObject> wall_list = Handler.getObjectsAtPos(handler, getTilePos(getX()), getTilePos(getY()),
 					observer.getSize(), false);
+			removeObserverAndGoalFromList(wall_list);
 
-			for(GameObject tempWall : wall_list.getList()) {
+			for (GameObject tempWall : wall_list.getList()) {
 				if (tempWall instanceof CollisionReactor == false)
 					continue;
 				if (((CollisionReactor) tempWall).isBlockingSight()) {
@@ -99,6 +100,11 @@ public class SightFinder implements Position {
 		} while (distance != 0);
 
 		return true;
+	}
+
+	private void removeObserverAndGoalFromList(GameList<GameObject> wall_list) {
+		wall_list.removeObject(observer);
+		wall_list.removeObject(goal);
 	}
 
 }

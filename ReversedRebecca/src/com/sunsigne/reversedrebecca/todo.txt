@@ -1,9 +1,8 @@
 	
 	////////// EN COURS ////////////
 
-	Attetnion ! Gérer le cas où en "inquiry", on a ouvert la porte (avec que Sarah regarde, pendant, après, rendre ça comptabile avec Mika, Jean, etc.)
+	Attetnion ! Gérer le cas où en "inquiry", on a ouvert la porte (gérer entièrement le cas de Mika)
 	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
-	attention ! gérer l'arrivée de Mika près de la porte, qu'elle soit ouverte ouverte, ou fermée
 	attention ! gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
 	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.
 			
