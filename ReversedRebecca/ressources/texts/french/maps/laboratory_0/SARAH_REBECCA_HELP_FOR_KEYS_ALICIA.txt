@@ -1,0 +1,4 @@
+sarah = LEFT = laugh = Tiens,#tu#es#là#?
+rebecca = RIGHT = happy = Oui,#je#cherche#Alicia.#Tu#l'aurais#vu#?
+sarah = LEFT = worry = Non,#désolé.
+sarah = LEFT = laugh = Et#toi#?#Tu#aurais#vu#des#clefs#ici,@par#hasard#?

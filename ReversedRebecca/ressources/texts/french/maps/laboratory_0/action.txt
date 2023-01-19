@@ -17,3 +17,4 @@ YES = Key1 % oui
 LIE_NO = Key2 % (mentir)#non
 SOUNDS_FUN = Key1 % ça#a#l'air#amusant
 THATS_NOT_COOL = Key2 % c'est#pas#cool
+ALICIA = Key3 % Alicia#?

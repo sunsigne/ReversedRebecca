@@ -1,0 +1,2 @@
+sarah = rebecca = worry = Désolé.#Je#ne#sais#pas#où#elle#est.
+jean = rebecca = urge_sad = Je#ne#l'ai#pas#vu#non#plus.
