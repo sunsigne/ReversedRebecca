@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.world.mapcreator;
 
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -47,6 +48,7 @@ public class MapCreator {
 
 	private void loadLayer(LAYER layer, BufferedImage image) {
 
+		image = rescaleImage(image);
 		int w = image.getWidth();
 		int h = image.getHeight();
 		int STEP = 1;
@@ -74,6 +76,26 @@ public class MapCreator {
 				}
 			}
 		}
+	}
+
+	private static BufferedImage rescaleImage(BufferedImage image) {
+
+		int w = image.getWidth();
+		int h = image.getHeight();
+
+		if (w == h)
+			return image;
+
+		w = w < h ? h : w;
+		h = h < w ? w : h;
+
+		BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g2d = img.createGraphics();
+
+		g2d.drawImage(image, 0, 0, null);
+		g2d.dispose();
+
+		return img;
 	}
 
 }
