@@ -55,6 +55,7 @@ Porte / Door -> 1
 Gravas / Rubble -> 2
 Ordinateur / Computer -> 3
 Trou / Hole -> 4
+Trou vers le haut / Hole Upward -> 5
 
 exemple : 
 Porte (Bleu) Null / Null (Blue) Door : 1-255-0
