@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
+import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.HoleObject;
+import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.NullHoleObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzleFactory;
