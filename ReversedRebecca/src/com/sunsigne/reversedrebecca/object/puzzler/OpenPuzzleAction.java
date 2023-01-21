@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class OpenPuzzleAction extends Action {
 
@@ -45,9 +46,11 @@ public abstract class OpenPuzzleAction extends Action {
 
 		GenericListener actionOnWinning = () -> {
 			PuzzlerObject nullObject = getNullObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
+			Handler handler = puzzlerObject.getHandler();
+
 			if (nullObject != null)
-				puzzlerObject.getHandler().addObject(nullObject);
-			puzzlerObject.getHandler().removeObject(puzzlerObject);
+				handler.addObject(nullObject);
+			handler.removeObject(puzzlerObject);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);
 		};

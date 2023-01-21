@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.DigAction;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class HoleObject extends PuzzlerObject implements Facing {
 
@@ -20,6 +22,23 @@ public class HoleObject extends PuzzlerObject implements Facing {
 		this.facing = facing;
 	}
 
+	public LAYER getExitLayer(Handler currentHandler) {
+		LAYER exit_layer = LAYER.WORLD_CONTENT;
+		
+		for (LAYER tempLayer : LAYER.values()) {
+			if(tempLayer.getName().contains("content") == false)
+				continue;
+			
+			if (currentHandler != tempLayer.getHandler())
+				exit_layer = tempLayer;
+
+			else
+				break;
+		}
+		
+		return exit_layer;
+	}
+	
 	////////// NAME ////////////
 
 	@Override
