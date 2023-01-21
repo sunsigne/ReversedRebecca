@@ -10,7 +10,7 @@
 
 	////////// DIFFICILE ////////////
 		
-	utiliser une mécanique de "création d'objet piranha" sur la couche "ground" pour les trous)
+	faire en sorte que les trous foncctionnent (point d'accès vers les tunnel)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
