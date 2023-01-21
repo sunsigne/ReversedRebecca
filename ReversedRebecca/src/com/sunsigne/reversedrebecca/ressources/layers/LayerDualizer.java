@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.ressources.layers;
 
 import java.util.HashMap;
 
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+
 public class LayerDualizer {
 
 	////////// MAP OR LIST ////////////
@@ -10,6 +12,20 @@ public class LayerDualizer {
 
 	public LAYER getContentFromGround(LAYER ground_layer) {
 		return map.get(ground_layer);
+	}
+
+	public LAYER getGroundFromContent(Handler handler) {
+		LAYER ground_layer = LAYER.GROUND;
+
+		for (LAYER tempLayer : LAYER.values()) {
+			if (handler != tempLayer.getHandler())
+				ground_layer = tempLayer;
+
+			else
+				break;
+		}
+
+		return ground_layer;
 	}
 
 	////////// USEFULL ////////////

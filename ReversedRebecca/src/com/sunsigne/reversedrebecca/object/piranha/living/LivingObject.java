@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class LivingObject extends PiranhaObject implements Health, Pusher, Pushable, PathSearcher {
 
@@ -20,7 +21,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
 		loadAnimation();
-		setMaxHp(3);
+		setMaxHp(1);
 		setFullHp();
 	}
 
@@ -158,6 +159,11 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	@Override
 	public void registeredAsDead(boolean registeredAsDead) {
 		this.registeredAsDead = registeredAsDead;
+	}
+
+	@Override
+	public Updatable getReplacementUpdatable() {
+		return null;
 	}
 
 	////////// PATH FINDER ////////////

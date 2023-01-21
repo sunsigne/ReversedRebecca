@@ -1,8 +1,9 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.characteristics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.GroundLayerSendable;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 
-public interface Health extends Feeling {
+public interface Health extends Feeling, GroundLayerSendable {
 
 	////////// INVULNERABILITY ////////////
 

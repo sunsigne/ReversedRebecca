@@ -10,7 +10,7 @@
 
 	////////// DIFFICILE ////////////
 		
-	créer une mécanique de "création d'objet piranha" sur la couche "world" lorsqu'un crops est transféré sur la couche sol (sera aussi utile pour les boss et les trous)
+	utiliser une mécanique de "création d'objet piranha" sur la couche "ground" pour les trous)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
@@ -28,7 +28,6 @@
 
 	////////// FACILE ////////////
 
-	les trous passents "au dessus" des objets (et perso) une fois créés
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
 	prévenir de la sauvegarde de progression sur le Quiet end lvl
