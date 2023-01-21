@@ -1,6 +1,8 @@
 	
 	////////// EN COURS ////////////
 
+	(penser à faire un backup de la nouvelle map test)
+
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners

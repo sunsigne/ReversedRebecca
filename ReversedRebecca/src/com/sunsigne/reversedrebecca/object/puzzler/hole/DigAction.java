@@ -87,15 +87,11 @@ public class DigAction extends OpenPuzzleAction {
 			if (tempObject instanceof HoleObject == false)
 				continue;
 
-			if (tempObject instanceof NullHoleObject)
+			if (tempObject instanceof NullHoleObject || tempObject instanceof NullHoleUpwardObject)
 				continue;
 
 			HoleObject hole = (HoleObject) tempObject;
 			Action action = hole.getTripleAction().getAction(0);
-
-			if (action instanceof DigAction == false)
-				continue;
-
 			DigAction digAction = (DigAction) action;
 			GenericListener listener = digAction.actionOnWinning(hole);
 			listener.doAction();
