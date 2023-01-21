@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
@@ -37,7 +36,7 @@ public abstract class LootObject extends GameObject implements TickFree, Collisi
 		collidingReaction(detectorObject, false, () -> {
 			getHandler().removeObject(this);
 			LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "loot");
+			new SoundTask().playSoundIfCamera(this, "loot");
 			actionWhenLooted();
 		});
 	}

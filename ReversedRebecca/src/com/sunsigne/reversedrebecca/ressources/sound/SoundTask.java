@@ -9,6 +9,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineUnavailableException;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 
 public class SoundTask {
@@ -34,6 +35,11 @@ public class SoundTask {
 
 	////////// SOUND ////////////
 
+	// play the sound only if the "object" is visible on the screen
+	public void playSoundIfCamera(Position position, String path) {
+		play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
+	}
+	
 	public void playSound(SOUNDTYPE soundType, String path) {
 		play(soundType, getVolume(soundType), path, false, false);
 	}

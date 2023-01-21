@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class NullDoorObject extends DoorObject {
 
@@ -25,7 +24,7 @@ public class NullDoorObject extends DoorObject {
 		if (tryClosing) {
 			if (isOpened)
 				if (LAYER.MENU.getHandler().getList().isEmpty())
-					new SoundTask().playSound(SOUNDTYPE.SOUND, "door_close");
+					new SoundTask().playSoundIfCamera(this, "door_close");
 			isOpened = false;
 		}
 
@@ -59,7 +58,7 @@ public class NullDoorObject extends DoorObject {
 		collidingReaction(detectorObject, false, () -> {
 			if (!isOpened)
 				if (LAYER.MENU.getHandler().getList().isEmpty())
-					new SoundTask().playSound(SOUNDTYPE.SOUND, "door_open");
+					new SoundTask().playSoundIfCamera(this, "door_open");
 			isOpened = true;
 			tryClosing = false;
 		});

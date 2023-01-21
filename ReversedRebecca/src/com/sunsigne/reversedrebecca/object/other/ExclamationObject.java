@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.object.other;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class ExclamationObject extends ExpressionObject {
 
@@ -11,7 +10,7 @@ public class ExclamationObject extends ExpressionObject {
 		ymin = getY() - shift;
 		ymax = getY() + shift;
 		setVelY(-shift / 3);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "jump");
+		new SoundTask().playSoundIfCamera(this, "jump");
 	}
 
 	////////// TICK ////////////
