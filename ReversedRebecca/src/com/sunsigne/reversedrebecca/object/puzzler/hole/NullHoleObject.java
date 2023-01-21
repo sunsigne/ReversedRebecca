@@ -29,6 +29,7 @@ public class NullHoleObject extends HoleObject implements GroundLayerSendable {
 		return tripleAction;
 	}
 
+	@Override
 	protected void loadTripleAction() {
 		Action goDownAction = new GoDownAction(this, "enter_hole");
 		tripleAction = new TripleAction(null, goDownAction, null, null);
@@ -72,4 +73,5 @@ public class NullHoleObject extends HoleObject implements GroundLayerSendable {
 
 		super.render(g);
 	}
+	
 }

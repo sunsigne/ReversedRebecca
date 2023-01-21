@@ -47,6 +47,7 @@ public class HoleObject extends PuzzlerObject implements Facing {
 		return tripleAction;
 	}
 
+	@Override
 	protected void loadTripleAction() {
 		String noActionText = new Translatable().getTranslatedText("HoleLoose", FilePath.ACTION);
 		Action digAction = new DigAction(this);

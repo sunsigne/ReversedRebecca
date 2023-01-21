@@ -10,7 +10,7 @@
 
 	////////// DIFFICILE ////////////
 		
-	faire en sorte que les trous foncctionnent (point d'accès vers les tunnel)
+	faire en sorte que les trous "upward" aient un genre de "clone" sur la couche "lumière (et créer cette couche)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
