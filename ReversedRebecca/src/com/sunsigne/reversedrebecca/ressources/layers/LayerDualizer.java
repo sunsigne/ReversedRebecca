@@ -28,6 +28,25 @@ public class LayerDualizer {
 		return ground_layer;
 	}
 
+	public LAYER getLightFromContent(Handler handler) {
+		LAYER light_layer = LAYER.LIGHT;
+		boolean flag = false;
+
+		for (LAYER tempLayer : LAYER.values()) {
+			if (handler == tempLayer.getHandler()) {
+				flag = true;
+				continue;
+			}
+
+			if (flag) {
+				light_layer = tempLayer;
+				break;
+			}
+		}
+
+		return light_layer;
+	}
+
 	////////// USEFULL ////////////
 
 	public void dualizeSameFloorLayers() {
@@ -39,6 +58,9 @@ public class LayerDualizer {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (!tempLayer.getHandler().isCameraDependant())
 				break;
+
+			if (tempLayer.getName().contains("light"))
+				continue;
 
 			index++;
 

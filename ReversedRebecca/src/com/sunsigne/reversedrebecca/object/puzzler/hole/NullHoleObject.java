@@ -3,13 +3,13 @@ package com.sunsigne.reversedrebecca.object.puzzler.hole;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.GroundLayerSendable;
+import com.sunsigne.reversedrebecca.object.characteristics.LayerSendable;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.GoDownAction;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class NullHoleObject extends HoleObject implements GroundLayerSendable {
+public class NullHoleObject extends HoleObject implements LayerSendable {
 
 	public NullHoleObject(DIRECTION facing, int x, int y) {
 		super(LVL.NULL, facing, x, y);

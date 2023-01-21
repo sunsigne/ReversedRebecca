@@ -49,7 +49,7 @@ public class UpdateLayersLaw extends IndependantLaw {
 
 			tempLayer.getHandler().setHideRendering(hideRendering);
 
-			if (world.getLayer(true) == tempLayer)
+			if (world.getLightLayer() == tempLayer)
 				hideRendering = true;
 		}
 	}

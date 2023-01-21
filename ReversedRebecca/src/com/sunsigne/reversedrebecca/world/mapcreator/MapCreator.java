@@ -43,6 +43,12 @@ public class MapCreator {
 				if (world.getLayer(true) == tempLayer)
 					hideRendering = true;
 			}
+			
+			// load light
+			if (tempLayer.getName().contains("light")) {
+				tempLayer.addObject(new LightRendering(world, tempLayer));
+				continue;
+			}
 		}
 	}
 

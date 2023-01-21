@@ -215,15 +215,20 @@ public class World implements Updatable, RenderFree {
 
 	////////// LAYER ////////////
 
-	private LAYER[] layers = new LAYER[2];
+	private LAYER[] layers = new LAYER[3];
 
 	public LAYER getLayer(boolean contentType) {
 		return contentType ? layers[1] : layers[0];
+	}
+	
+	public LAYER getLightLayer() {
+		return layers[2];
 	}
 
 	public void setLayer(LAYER ground_layer) {
 		layers[0] = ground_layer;
 		layers[1] = new LayerDualizer().getContentFromGround(ground_layer);
+		layers[2] = new LayerDualizer().getLightFromContent(layers[1].getHandler());
 	}
 
 	////////// MAP OR LIST ////////////
@@ -316,7 +321,7 @@ public class World implements Updatable, RenderFree {
 	public int getTime() {
 		return time;
 	}
-	
+
 	@Override
 	public void tick() {
 		frame--;
