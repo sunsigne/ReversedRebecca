@@ -10,7 +10,6 @@
 
 	////////// DIFFICILE ////////////
 		
-	les sons ne devraient être audible que si la camera est dessus (exemple du peeboy qui va aux toilettes)
 	créer une mécanique de "création d'objet piranha" sur la couche "world" lorsqu'un crops est transféré sur la couche sol (sera aussi utile pour les boss et les trous)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle

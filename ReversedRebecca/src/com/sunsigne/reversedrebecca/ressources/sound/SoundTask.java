@@ -11,8 +11,9 @@ import javax.sound.sampled.LineUnavailableException;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
-public class SoundTask {
+public class SoundTask implements CameraDependency {
 
 	////////// SOUNDTYPE ////////////
 
@@ -35,15 +36,15 @@ public class SoundTask {
 
 	////////// SOUND ////////////
 
+	public void playSoundIfCamera(Position position, String path) {
+		if (CAMERA.isObjectVisible(position))
+			play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
+	}
+
 	public void playSound(SOUNDTYPE soundType, String path) {
 		play(soundType, getVolume(soundType), path, false, false);
 	}
 
-	// play the sound only if the "object" is visible on the screen
-	public void playSoundIfCamera(Position position, String path) {
-		play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
-	}
-	
 	// avoid to use this method unless you know what you're doing
 	public void play(SOUNDTYPE soundType, double volume, String path, boolean transition, boolean loop) {
 		if (path == null)
