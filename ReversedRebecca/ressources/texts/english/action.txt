@@ -1,3 +1,8 @@
+///// STAIRS /////
+
+GoDown = go#down
+GoUp = go#up
+
 ///// CHEST /////
 
 Open = open
