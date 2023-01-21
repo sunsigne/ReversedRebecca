@@ -41,8 +41,9 @@ public class GotoRequest implements Request {
 				if (!tempAction.hasCompactWriting())
 					continue;
 
-				if (tempTarget.contains(tempAction.getType() + ":"))
-					tempAction.doAction(object, tempTarget.split(":")[1]);
+				if (tempTarget.contains(":"))
+					if (tempTarget.split(":")[0].equalsIgnoreCase(tempAction.getType()))
+						tempAction.doAction(object, tempTarget.split(":")[1]);
 			}
 
 			if (!tempTarget.equalsIgnoreCase("null"))

@@ -35,15 +35,15 @@ public class SoundTask {
 
 	////////// SOUND ////////////
 
+	public void playSound(SOUNDTYPE soundType, String path) {
+		play(soundType, getVolume(soundType), path, false, false);
+	}
+
 	// play the sound only if the "object" is visible on the screen
 	public void playSoundIfCamera(Position position, String path) {
 		play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
 	}
 	
-	public void playSound(SOUNDTYPE soundType, String path) {
-		play(soundType, getVolume(soundType), path, false, false);
-	}
-
 	// avoid to use this method unless you know what you're doing
 	public void play(SOUNDTYPE soundType, double volume, String path, boolean transition, boolean loop) {
 		if (path == null)

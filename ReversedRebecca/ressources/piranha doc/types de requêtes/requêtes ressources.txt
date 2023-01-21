@@ -63,6 +63,11 @@ Lorsque la Condition sera vérifiée, le son "exemple_sound.wav" sera joué.
 Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED, ce qui facilite grandement la tâche !
 
 
+////// SOUND_IF_CAMERA //////
+
+Le Type de Requête SOUND_IF_CAMERA fonctionne exactement de la même manière que le Type de Requête SOUND, à la différence près que le son n'est joué que si l'objet est visible sur l'écran au moment où la Requête est demandée.
+
+
 ////// TALK //////
 
 Le Type de Requête TALK permet de lancer un dialogue.

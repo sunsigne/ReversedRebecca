@@ -35,6 +35,10 @@ public class SoundRequest implements Request {
 		return true;
 	}
 
+	protected void playSound(PiranhaObject object, String path) {
+		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
+	}
+
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
@@ -46,7 +50,7 @@ public class SoundRequest implements Request {
 		if (LAYER.MENU.getHandler().getList().isEmpty() == false && isMenuFading() == false)
 			return;
 
-		new SoundTask().playSound(SOUNDTYPE.SOUND, target.toLowerCase());
+		playSound(object, target.toLowerCase());
 	}
 
 	private boolean isMenuFading() {
