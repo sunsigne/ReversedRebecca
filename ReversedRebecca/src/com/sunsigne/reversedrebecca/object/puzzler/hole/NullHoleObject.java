@@ -4,7 +4,9 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.GroundLayerSendable;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.GoDownAction;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class NullHoleObject extends HoleObject implements GroundLayerSendable {
@@ -28,9 +30,8 @@ public class NullHoleObject extends HoleObject implements GroundLayerSendable {
 	}
 
 	protected void loadTripleAction() {
-		//String noActionText = new Translatable().getTranslatedText("HoleLoose", FilePath.ACTION);
-		//Action digAction = new DigAction(this);
-		//tripleAction = new TripleAction(noActionText, digAction, null, null);
+		Action goDownAction = new GoDownAction(this, "enter_hole");
+		tripleAction = new TripleAction(null, goDownAction, null, null);
 	}
 
 	////////// GROUND LAYER SENDABLE ////////////
