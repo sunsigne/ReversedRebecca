@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	Le menu "resume" devient moche (sans raison ?) quand lancé depuis un Chat (mais pas depuis un puzzle) : trop bizarre !
 	(penser à faire un backup de la nouvelle map test)
 
 	////////// PERSONNAGES à faire ////////////
@@ -56,6 +55,7 @@
 	pas fini : nombre de fins
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	toues les saved "world" ont été verifiées, pas les autres !
+	traduction enlgih pas fini (les actionns)
 	
 	////////// WS000 ////////////
 	

@@ -2,8 +2,6 @@ package com.sunsigne.reversedrebecca.menu.ingame;
 
 import com.sunsigne.reversedrebecca.menu.ingame.submenu.ResumeScreen;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
-import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -33,16 +31,17 @@ public class MenuIngameController {
 	}
 
 	public void hardFreeze(boolean freeze) {
-		for (LAYER tempLayer : LAYER.values())
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer == LAYER.MENU)
+				break;
+
 			tempLayer.getHandler().setFreezeTicking(freeze);
-		
-		if(!freeze && World.get().isFrozen())
+		}
+
+		if (!freeze && World.get().isFrozen())
 			World.get().freeze(true);
 		else
 			new PlayerFinder().setPlayerCanInterract(!freeze);
-
-		if (freeze) // remove fading menu if froze before completed
-			((FadeMenuLaw) PhysicList.getList().getObject(new FadeMenuLaw())).setFading(false);
 	}
 
 }
