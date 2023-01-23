@@ -26,13 +26,22 @@ public class ResumeScreen extends MenuIngameScreen {
 	////////// BUTTONS ////////////
 
 	private void createOptionScreenButton(String text, int x, int y, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 325 + x, 343 + y, 415, 80, onPress, null);
+		this.createOptionScreenButton(text, x, y, onPress, "button");
+	}
+
+	private void createOptionScreenButton(String text, int x, int y, GenericListener onPress, String sound) {
+		ButtonObject button = new TitleScreenButton(text, 325 + x, 343 + y, 415, 80, onPress, null) {
+			public String getSound() {
+				return sound;
+			}
+		};
+		
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createResumeButton() {
-		 GenericListener onPress = () -> new MenuIngameController().unloadResumeScreen();
-		createOptionScreenButton(translate("ResumeButton"), 416, 51, onPress);
+		GenericListener onPress = () -> new MenuIngameController().unloadResumeScreen();
+		createOptionScreenButton(translate("ResumeButton"), 416, 51, onPress, null);
 	}
 
 	private void createOptionsButton() {
