@@ -1,7 +1,7 @@
 	
 	////////// EN COURS ////////////
 
-	(penser à faire un backup de la nouvelle map test)
+	le Menu Ingame ne marche pas avec les puzzle
 
 	////////// PERSONNAGES à faire ////////////
 
