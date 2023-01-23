@@ -22,6 +22,9 @@ LevelClickToContinue = Cliquez#pour#continuer
 ///// RESUME /////
 
 ResumeButton = reprendre
+Cancel = annuler
+QuitDetail1 = Le#jeu#sauvegarde
+QuitDetail2 = a#chaque#fin#de#niveau
 
 ///// MAIN /////
 

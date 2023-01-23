@@ -30,7 +30,7 @@ public class FormatedString {
 	}
 
 	public String getNoSpecialCharacter(String text) {
-		String no_accent = text.replace("é", "e").replace("è", "e").replace("ê", "e");		
+		String no_accent = text.replace("é", "e").replace("è", "e").replace("ê", "e").replace("à", "a");		
 		return no_accent.replace(",", ".").replace("ç", "c");
 	}
 

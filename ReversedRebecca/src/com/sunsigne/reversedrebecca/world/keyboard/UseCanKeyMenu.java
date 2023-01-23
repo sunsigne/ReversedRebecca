@@ -4,6 +4,8 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class UseCanKeyMenu extends WorldKeyboard {
 
@@ -20,19 +22,21 @@ public class UseCanKeyMenu extends WorldKeyboard {
 	public void keyPressed(int key) {
 		if (key != KeyEvent.VK_ESCAPE)
 			return;
-	
+
 		if (MenuIngameController.getMenu() == null) {
 			if (LAYER.MENU.getHandler().getList().isEmpty())
 				new MenuIngameController().loadResumeScreen();
 		}
-		
-		else
+
+		else {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "button_back");
 			new MenuIngameController().unloadResumeScreen();
+		}
 	}
-	
+
 	@Override
 	public void keyReleased(int key) {
-	
+
 	}
-	
+
 }

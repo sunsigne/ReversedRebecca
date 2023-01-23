@@ -22,6 +22,9 @@ LevelClickToContinue = Click#to#continue
 ///// RESUME /////
 
 ResumeButton = resume
+Cancel = cancel
+QuitDetail1 = The#gave#saves#at
+QuitDetail2 = the#end#of#each#level
 
 ///// MAIN /////
 

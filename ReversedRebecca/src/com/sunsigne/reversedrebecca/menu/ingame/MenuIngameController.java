@@ -25,7 +25,6 @@ public class MenuIngameController {
 
 	public void unloadResumeScreen() {
 		hardFreeze(false);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_back");
 		LAYER.MENU.getHandler().clear();
 		menu = null;
 	}

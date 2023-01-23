@@ -35,13 +35,13 @@ public class ResumeScreen extends MenuIngameScreen {
 				return sound;
 			}
 		};
-		
+
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createResumeButton() {
 		GenericListener onPress = () -> new MenuIngameController().unloadResumeScreen();
-		createOptionScreenButton(translate("ResumeButton"), 416, 51, onPress, null);
+		createOptionScreenButton(translate("ResumeButton"), 416, 51, onPress, "button_back");
 	}
 
 	private void createOptionsButton() {
@@ -52,9 +52,7 @@ public class ResumeScreen extends MenuIngameScreen {
 	}
 
 	private void createQuitButton() {
-		// GenericListener onPress = () -> new AudioScreen();
-		GenericListener onPress = () -> {
-		};
+		GenericListener onPress = () -> new QuitScreen();
 		createOptionScreenButton(translate("QuitButton"), 416, 259, onPress);
 	}
 
