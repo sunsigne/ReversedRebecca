@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu;
+package com.sunsigne.reversedrebecca.menu.ingame;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

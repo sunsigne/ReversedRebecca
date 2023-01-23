@@ -2,15 +2,8 @@ package com.sunsigne.reversedrebecca.world.keyboard;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.menu.LoadingScreen;
-import com.sunsigne.reversedrebecca.menu.MenuIngameScreen;
-import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.ingame.ResumeScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.Conductor;
-import com.sunsigne.reversedrebecca.world.World;
 
 public class UseCanKeyMenu extends WorldKeyboard {
 
@@ -28,13 +21,13 @@ public class UseCanKeyMenu extends WorldKeyboard {
 		if (key != KeyEvent.VK_ESCAPE)
 			return;
 	
-		if(menu == null) {
+		if (MenuIngameController.getMenu() == null) {
 			if (LAYER.MENU.getHandler().getList().isEmpty())
-				loadResumeScreen();
+				new MenuIngameController().loadResumeScreen();
 		}
 		
 		else
-			unloadResumeScreen();
+			new MenuIngameController().unloadResumeScreen();
 	}
 	
 	@Override
@@ -42,19 +35,4 @@ public class UseCanKeyMenu extends WorldKeyboard {
 	
 	}
 	
-	private MenuIngameScreen menu;
-		
-	private void loadResumeScreen() {
-		World.get().freeze(true);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
-		menu = new ResumeScreen();
-	}
-	
-	private void unloadResumeScreen() {
-		World.get().freeze(false);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_back");
-		LAYER.MENU.getHandler().clear();
-		menu = null;
-	}
-
 }

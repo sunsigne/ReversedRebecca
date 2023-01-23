@@ -1,6 +1,6 @@
-package com.sunsigne.reversedrebecca.menu.submenu.ingame;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu;
 
-import com.sunsigne.reversedrebecca.menu.MenuIngameScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
