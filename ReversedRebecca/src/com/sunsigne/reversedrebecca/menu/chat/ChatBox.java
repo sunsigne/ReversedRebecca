@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
 
 import com.sunsigne.reversedrebecca.menu.Cutscene;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormatedString;
@@ -145,7 +146,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
-		if (key == DialogueKey.getKey()) {
+		if (key == DialogueKey.getKey() && MenuIngameController.getMenu() == null) {
 
 			if (content != null) {
 				if (!content.isFulldisplayed()) {

@@ -1,6 +1,8 @@
 	
 	////////// EN COURS ////////////
 
+	le bouton "reprendre" faire 2 bruits en même temps.
+	Le menu "resume" devient moche (sans raison ?) quand lancé depuis un Chat (mais pas depuis un puzzle) : trop bizarre !
 	(penser à faire un backup de la nouvelle map test)
 
 	////////// PERSONNAGES à faire ////////////

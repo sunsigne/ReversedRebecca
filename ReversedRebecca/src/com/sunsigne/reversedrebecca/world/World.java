@@ -220,7 +220,7 @@ public class World implements Updatable, RenderFree {
 	public LAYER getLayer(boolean contentType) {
 		return contentType ? layers[1] : layers[0];
 	}
-	
+
 	public LAYER getLightLayer() {
 		return layers[2];
 	}
@@ -269,7 +269,15 @@ public class World implements Updatable, RenderFree {
 
 	////////// USEFULL ////////////
 
+	private boolean freeze;
+
+	public boolean isFrozen() {
+		return freeze;
+	}
+
 	public void freeze(boolean freeze) {
+		this.freeze = freeze;
+
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer.isMapLayer())
 				tempLayer.getHandler().setFreezeTicking(freeze);

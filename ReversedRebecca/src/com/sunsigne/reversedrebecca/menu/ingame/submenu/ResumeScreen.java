@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.menu.ingame.submenu;
 
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
@@ -30,9 +31,7 @@ public class ResumeScreen extends MenuIngameScreen {
 	}
 
 	private void createResumeButton() {
-		// GenericListener onPress = () -> new GameScreen();
-		GenericListener onPress = () -> {
-		};
+		 GenericListener onPress = () -> new MenuIngameController().unloadResumeScreen();
 		createOptionScreenButton(translate("ResumeButton"), 416, 51, onPress);
 	}
 
