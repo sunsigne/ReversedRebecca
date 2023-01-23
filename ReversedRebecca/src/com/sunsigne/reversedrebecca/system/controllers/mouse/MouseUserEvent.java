@@ -4,7 +4,9 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public interface MouseUserEvent extends Position, Updatable {
@@ -22,7 +24,12 @@ public interface MouseUserEvent extends Position, Updatable {
 	}
 
 	default boolean isClickable() {
-		if (getHandler() == null)
+		Handler handler = getHandler();
+		
+		if (handler == null)
+			return false;
+		
+		if(handler != LAYER.MENU.getHandler() && handler != LAYER.DEBUG.getHandler() && LAYER.MENU.getHandler().getList().isEmpty() == false)
 			return false;
 
 		for (MouseListener listener : Game.getInstance().getMouseListeners()) {

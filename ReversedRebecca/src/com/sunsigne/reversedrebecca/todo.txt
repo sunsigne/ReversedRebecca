@@ -1,8 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	le Menu Ingame ne marche pas avec les puzzle
-
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
