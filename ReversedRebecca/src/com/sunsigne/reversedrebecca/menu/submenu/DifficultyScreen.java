@@ -25,12 +25,14 @@ public class DifficultyScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "difficulty";
 	}
 
 	////////// SUB MENU ////////////
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new TitleScreen();
 	}

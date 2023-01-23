@@ -31,6 +31,7 @@ public class LanguageScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		while (lang_list == null)
 			loadLangList();
@@ -40,6 +41,7 @@ public class LanguageScreen extends SubMenuScreen {
 
 	////////// SUB MENU ////////////
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new TitleScreen();
 	}

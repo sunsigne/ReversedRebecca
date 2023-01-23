@@ -19,6 +19,10 @@ LevelYouAreMean = You#are#:#mean
 LevelYouArePsychopath = You#are#:#psycopath
 LevelClickToContinue = Click#to#continue
 
+///// RESUME /////
+
+ResumeButton = resume
+
 ///// MAIN /////
 
 PlayButton = play

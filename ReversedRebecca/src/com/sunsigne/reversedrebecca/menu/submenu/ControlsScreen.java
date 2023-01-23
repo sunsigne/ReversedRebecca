@@ -35,6 +35,7 @@ public class ControlsScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "controls_xl";
 	}
@@ -51,6 +52,7 @@ public class ControlsScreen extends SubMenuScreen {
 			return super.getBackButtonText();
 	}
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		if (reloadRequired)
 			World.get().destroy();

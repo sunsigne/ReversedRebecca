@@ -21,12 +21,14 @@ public class VideoScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "video";
 	}
 
 	////////// SUB MENU ////////////
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new OptionsScreen();
 	}

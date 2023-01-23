@@ -26,12 +26,14 @@ public class AudioScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "audio";
 	}
 
 	////////// SUB MENU ////////////
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new OptionsScreen();
 	}

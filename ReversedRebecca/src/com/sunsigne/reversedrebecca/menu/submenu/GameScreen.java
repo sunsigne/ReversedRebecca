@@ -15,12 +15,14 @@ public class GameScreen extends SubMenuScreen {
 
 	////////// NAME ////////////
 
+	@Override
 	public String getName() {
 		return "game";
 	}
 
 	////////// SUB MENU ////////////
 
+	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new OptionsScreen();
 	}

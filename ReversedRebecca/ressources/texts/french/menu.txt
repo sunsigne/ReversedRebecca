@@ -19,6 +19,10 @@ LevelYouAreMean = Vous#êtes#:#méchant
 LevelYouArePsychopath = Vous#êtes#:#psychopathe
 LevelClickToContinue = Cliquez#pour#continuer
 
+///// RESUME /////
+
+ResumeButton = reprendre
+
 ///// MAIN /////
 
 PlayButton = jouer
