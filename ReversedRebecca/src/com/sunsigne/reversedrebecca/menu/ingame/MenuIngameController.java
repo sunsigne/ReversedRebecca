@@ -38,8 +38,8 @@ public class MenuIngameController {
 		
 		if(!freeze && World.get().isFrozen())
 			World.get().freeze(true);
-
-		new PlayerFinder().setPlayerCanInterract(!freeze);
+		else
+			new PlayerFinder().setPlayerCanInterract(!freeze);
 
 		if (freeze) // remove fading menu if froze before completed
 			((FadeMenuLaw) PhysicList.getList().getObject(new FadeMenuLaw())).setFading(false);
