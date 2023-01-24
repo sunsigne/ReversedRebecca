@@ -1,10 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	delta regazrde de nouveau en haut une fois dans la pièce de Alicia, chercher pourquoi ...
-	changer le "je vais quand même la chercher" de inquiry scenarion (en parlant à mika)
-	si on est suffisemment rapide, sarah et delta se croise (ce qu'il faut éviter) (+ pareil si on joue avec le "sarah_can't_know_if_door_is_opened_memory))
-
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners

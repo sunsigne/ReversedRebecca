@@ -1,3 +1,1 @@
 player = DOWN = determinated = C'est#tellement#marrant#de#les#pousser#à#bout.
-player = DOWN = you_silly = Je#vais#quand#même#la#chercher. 
-player = DOWN = evil_var = Si#elle#est#blessée,#je#veux#voir#ça.
