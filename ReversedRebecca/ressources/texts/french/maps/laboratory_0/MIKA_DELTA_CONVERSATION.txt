@@ -1,0 +1,4 @@
+delta = DOWN = surprised = Quoi#?#Blessée,#tu#dis#?
+mika = UP = serious = C'est#possible.@Ça#s'est#passé#dans#son#bureau.
+delta = DOWN = no_sens = Rho,#c'est#pas#cool…
+delta = DOWN = worry = Enfin…#Si#ça#se#trouve,#elle#a#rien.@Je#viens#avec#toi.

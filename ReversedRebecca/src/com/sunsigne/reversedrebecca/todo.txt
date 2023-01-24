@@ -1,6 +1,10 @@
 	
 	////////// EN COURS ////////////
 
+	delta regazrde de nouveau en haut une fois dans la pièce de Alicia, chercher pourquoi ...
+	changer le "je vais quand même la chercher" de inquiry scenarion (en parlant à mika)
+	si on est suffisemment rapide, sarah et delta se croise (ce qu'il faut éviter) (+ pareil si on joue avec le "sarah_can't_know_if_door_is_opened_memory))
+
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
@@ -10,6 +14,7 @@
 
 	////////// DIFFICILE ////////////
 		
+	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre"
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
@@ -29,7 +34,7 @@
 
 	////////// FACILE ////////////
 
-	le design des trous "nulle et vers le haut" sera à vérifier à tête reposé
+	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
@@ -54,7 +59,7 @@
 	pas fini : nombre de fins
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	toues les saved "world" ont été verifiées, pas les autres !
-	traduction enlgih pas fini (les actionns)
+	traduction englih pas fini (les actionns)
 	
 	////////// WS000 ////////////
 	
@@ -136,11 +141,11 @@
 
 	////////// SUCCES ////////////
 	
-	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
-	5 bits et légumes par jours : manger un fruit virtuel
+	Toujours le noir qui meurt en premier : pousser Alicia sous un eboulement	
+	manger 5 bits et légumes par jours : manger un fruit virtuel
 	Vous avez été terminé : être tué définitivement par un terminator
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue
 	Fin secrète : finir le jeu en difficile
-	Tu es diabétique Becky : manger 100 cookies
+	(hidden ?) Tu es diabétique Becky : manger 100 cookies
 		
 	
