@@ -1,4 +1,4 @@
-rebecca = object = worry = Hey#Mika#!#On#peut#discuter,#maitenant#?
+rebecca = object = worry = Hey#Mika#!#On#peut#discuter,#maintenant#?
 mika = player = serious = Oui,#c'est#bon.#Qu'est-ce#que#tu#disais#?
 rebecca = object = happy = Qu'est-ce#qu'il#s'est#passé,#exactement#?
 mika = player = serious = Je#sortais#de#la#salle#de#pause,@quand#j'ai#entendu#une#détonation.

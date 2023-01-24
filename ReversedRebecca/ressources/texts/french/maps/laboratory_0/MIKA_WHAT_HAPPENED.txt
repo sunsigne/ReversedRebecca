@@ -3,5 +3,3 @@ mika = UP = angry_var = Ce#mec…#Il#a#fait#exploser#le#mur@pour#rentrer#dans#le
 mika = DOWN = angry_var = Quel#taré...@Et#maintenant,#on#peut#même#plus#sortir.
 sarah = DOWN = surprised = Qu'est-ce#qu'il#est#venu#faire#ici#?
 mika = UP = serious = Je#suis#comme#vous#les#filles…@J'en#sais#pas#plus…
-sarah = DOWN = determinated = Alors,#on#va#enquêter#!
-sarah = RIGHT = determinated = Rebecca,#trouve#nous#une#sortie.@Je#vais#me#renseigner#sur#notre#invité.

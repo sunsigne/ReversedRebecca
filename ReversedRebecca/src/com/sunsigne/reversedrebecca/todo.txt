@@ -1,6 +1,9 @@
 	
 	////////// EN COURS ////////////
 
+	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia
+	inquiry delta doit être faite + gérer le cas où Sarah va la voir pour les clefs
+
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
@@ -30,6 +33,7 @@
 
 	////////// FACILE ////////////
 
+	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
