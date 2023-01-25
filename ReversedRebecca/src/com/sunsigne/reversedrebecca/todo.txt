@@ -1,7 +1,7 @@
 	
 	////////// EN COURS ////////////
 
-	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia
+	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (également lorsque Mika sidestep pour delta avant de partir)
 	inquiry delta doit être faite + gérer le cas où Sarah va la voir pour les clefs
 
 	////////// PERSONNAGES à faire ////////////
