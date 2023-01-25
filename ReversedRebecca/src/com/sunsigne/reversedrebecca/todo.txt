@@ -1,9 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
-	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
-
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
@@ -58,8 +55,8 @@
 	
 	pas fini : nombre de fins
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	toues les saved "world" ont été verifiées, pas les autres !
-	traduction englih pas fini (les actionns)
+	toutes les saved "world" ont été verifiées, pas les autres !
+	traduction english pas fini (les actionns)
 	
 	////////// WS000 ////////////
 	
@@ -71,27 +68,22 @@
 	karma actions :
 	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
+	- mentir sans raison à Sarah sur l'emplacement de la clef
 
-	Attetnion ! Gérer le cas où en "inquiry", on a ouvert la porte (gérer entièrement le cas de Mika)
-	Attention : le fait ne ne pas pouvroir "écouter" Sarah et Delta sur Delta doit être corrigé.
-	attention ! gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
-	attention ! Les dialogues avec delta sont valable en "exit scénario", et avant que la porte cyan ne soit ouverte.			
-	faire en sorte que si tu es à la recherche d'Alicia, le dialogue avec les PNG soient différents ! (déjà fait, il manque seulement Delta)	
-	faire en sorte que Sarah puisse être témoin du poussage dans le scénario exit.
+	blanchir les murs
+	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
+	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
+	Delta reaction du "Alicia" n'est pas fini
+	gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
 	faire en sorte qu'on puisse aller engueuler Jean lorsqu'il nous a poussé dans le scénario exit.	
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
-
-	player = DOWN = evil_var = Ça serait terrible s'il lui était arrivé quelque chose.
-	gérer le cas où Sarah a été poussée par Jean (enguelade dans les toilettes)
-	rendre le PNG enfermé + vivant (+ le finir)
-	Sarah Inquiry gérer le cas où on a déjà ouvert la porte	
+	les différents karmas doivent affecter le scénario !
+	rendre le PNG enfermé + vivant
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
 	ajouter des réactions des personnages dans quand (si) ils voient le pipi
-	le "turn off without saving" ne se sauvegarde pas encore (c'est pourtant une action méchante)
-	mentir à sarah à propos de la clef ne se sauvegarde pas encore
-	créer un parking pour l'entrée "public"
+	créer un parking pour l'entrée "des visiteurs"
 	texture : plante de la salle de pause à refaire
-	la pancarte devant les toilettes dit "merci de laisser les toilettes dans le même état que vous les avez trouvé"
+	la pancarte devant les toilettes doit dire "merci de laisser les toilettes dans le même état que vous les avez trouvé"
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
@@ -117,7 +109,6 @@
 	créer une animation "sick" pour quand on marche	
 	le bouton "questionnaire" sur l'écran titre est pas terrible ...
 	
-
 	///////// IDEE ////////////
 
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
@@ -141,11 +132,11 @@
 
 	////////// SUCCES ////////////
 	
-	Toujours le noir qui meurt en premier : pousser Alicia sous un eboulement	
-	manger 5 bits et légumes par jours : manger un fruit virtuel
+	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
+	5 fruits et légumes par jours : manger un fruit virtuel
 	Vous avez été terminé : être tué définitivement par un terminator
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue
 	Fin secrète : finir le jeu en difficile
-	(hidden ?) Tu es diabétique Becky : manger 100 cookies
+	Tu es diabétique Becky : manger 100 cookies
 		
 	
