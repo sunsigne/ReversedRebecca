@@ -1,0 +1,4 @@
+rebecca = object = worry = Juste#pour#être#sûre...#C'est#pas@ton#frère@qui#a#fait#le#coup#aujourd'hui,#si#?
+delta = rebecca = laugh_var = Ha#ha#ha#ha#!
+delta = rebecca = wink = Non.#Il#sait#très#bien#où#je#travaille.@Crois-moi,#c'était#100%#pas#lui.
+rebecca = object = laugh = Ok,#si#tu#le#dis.
