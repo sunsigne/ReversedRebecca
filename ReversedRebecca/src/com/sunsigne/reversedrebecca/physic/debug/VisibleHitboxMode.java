@@ -108,6 +108,10 @@ public class VisibleHitboxMode extends DebugMode {
 			return;
 
 		MouseUserEvent mouseObject = (MouseUserEvent) object;
+
+		if (mouseObject.isClickable() == false)
+			return;
+
 		Rectangle bounds = new Rectangle(mouseObject.getRect()[0], mouseObject.getRect()[1], mouseObject.getRect()[2],
 				mouseObject.getRect()[3]);
 
