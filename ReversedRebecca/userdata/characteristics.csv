@@ -1,6 +1,7 @@
 
 MaxHp=3
 
+
 BombMaxLvl=CYAN
 BombStartLvl=NULL
 BombCriticalChance=0%
