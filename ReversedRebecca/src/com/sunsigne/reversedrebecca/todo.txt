@@ -1,6 +1,8 @@
 	
 	////////// EN COURS ////////////
 
+	pause pendant une récompense rend le texte dégeu (comme avant, durant un chat)
+
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
