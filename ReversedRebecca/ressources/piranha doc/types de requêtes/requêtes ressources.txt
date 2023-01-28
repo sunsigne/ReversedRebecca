@@ -118,3 +118,19 @@ La seconde cible devenant unitaire, l'écriture compacte devient alors possible.
 ////// BAD_DEED //////
 
 Exactement le même principe qu'avec GOOD_DEED.
+
+
+////// ACHIEVEMENT //////
+
+Le Type de Requête ACHIEVEMENT permet de déverrouiller un succès.
+Les succès existants se trouvent dans le dossier suivant : ressources/achievements. Chaque dossier est un succès déverrouillable.
+
+Lorsqu'un succès est déverrouillé : il s'affiche en haut de l'écran, un son est joué, et il sera désormais visible dans la fenêtre des succès (via le menu principal du jeu)
+
+exemple :
+WONPUZZLE -> 10-20 = ACHIEVEMENT -> FIRST_PUZZLE
+WONPUZZLE -> 10-20 = GOTO -> ACHIEVEMENT:FIRST_PUZZLE
+
+Lorsque la Condition sera vérifiée, le succès dont le dossier s'appelle "first_puzzle" sera déverrouillé.
+
+Note : vos succès custom ne seront pas liés au système de succès steam, seulement à celui intégré au jeu.
