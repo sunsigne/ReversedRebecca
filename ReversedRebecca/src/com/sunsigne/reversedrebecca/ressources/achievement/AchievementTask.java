@@ -32,6 +32,7 @@ public class AchievementTask {
 
 				// register as unlocked
 				tempAchievement.unlocked();
+				System.out.println("ACHIEVEMENT : " + tempAchievement.getName().toUpperCase());
 
 				// do the "popup" effect
 				AchievementObject object = new AchievementObject(tempAchievement);

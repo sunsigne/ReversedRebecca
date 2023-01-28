@@ -99,6 +99,7 @@ OBJ-38 = Bar
 // to bottom left
 OBJ-39 = Fridge
 OBJ-40 = Gaz Sound
+OBJ-48 = Cookie Counter
 
 ///// ENTRANCE /////
 

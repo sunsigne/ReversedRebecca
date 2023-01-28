@@ -136,7 +136,6 @@
 	////////// SUCCES ////////////
 	
 	TERMINATED -> condition à créer.
-	COOKIES -> condition à créer.
 		
 	on doit pouvoir reset les succès !
 	
