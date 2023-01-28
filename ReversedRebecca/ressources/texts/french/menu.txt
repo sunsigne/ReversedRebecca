@@ -32,6 +32,7 @@ PlayButton = jouer
 OptionsButton = options
 QuitButton = quitter
 BackButton = retour
+Achievement = succes
 
 ///// PLAY /////
 
