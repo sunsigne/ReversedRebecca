@@ -2,6 +2,7 @@
 	////////// EN COURS ////////////
 
 	pause pendant une récompense rend le texte dégeu (comme avant, durant un chat)
+	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -140,5 +141,6 @@
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue
 	Fin secrète : finir le jeu en difficile
 	Tu es diabétique Becky : manger 100 cookies
+	(hidden=true) débloquer le niveau test sur l'écran titre
 		
 	

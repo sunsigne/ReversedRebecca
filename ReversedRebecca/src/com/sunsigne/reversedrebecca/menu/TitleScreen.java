@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.menu;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
+import com.sunsigne.reversedrebecca.menu.submenu.AchievementsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
@@ -84,7 +85,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createAchievementsButton() {
-		GenericListener onPress = () -> new LanguageScreen();
+		GenericListener onPress = () -> new AchievementsScreen();
 		ButtonObject button = new AchievementButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}

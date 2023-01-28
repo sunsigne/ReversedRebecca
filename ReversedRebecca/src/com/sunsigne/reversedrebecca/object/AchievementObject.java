@@ -34,7 +34,7 @@ public class AchievementObject extends GameObject {
 	@Override
 	public String toString() {
 		var clazz = "ACHIEVEMENT";
-		return clazz + achievement.getName().toUpperCase() + " : " + getX() + "-" + getY();
+		return clazz + " " + achievement.getName().toUpperCase() + " : " + getX() + "-" + getY();
 	}
 
 	////////// TEXT ////////////
