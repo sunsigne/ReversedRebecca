@@ -29,17 +29,16 @@ public class AchievementTask {
 				if (tempAchievement.isUnlocked())
 					return;
 
+				// register as unlocked
 				tempAchievement.unlocked();
-				popupAchievement(tempAchievement);
+
+				// do the "popup" effect
+				AchievementObject object = new AchievementObject(tempAchievement);
+				LAYER.DEBUG.addObject(object);
+				object.popup();
 				return;
 			}
 		});
-	}
-
-	private void popupAchievement(Achievement achievement) {
-		AchievementObject object = new AchievementObject(achievement);
-		LAYER.DEBUG.addObject(object);
-		object.popup();
 	}
 
 	public void resetAchievements() {
