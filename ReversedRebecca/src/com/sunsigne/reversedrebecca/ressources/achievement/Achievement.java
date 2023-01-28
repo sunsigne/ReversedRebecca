@@ -2,13 +2,16 @@ package com.sunsigne.reversedrebecca.ressources.achievement;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+
 public class Achievement {
 
-	public Achievement(String name, int location, boolean hidden, boolean unlocked, BufferedImage image) {
+	private String file = "achievements.csv";
+
+	public Achievement(String name, int location, boolean hidden, BufferedImage image) {
 		this.name = name;
 		this.location = location;
 		this.hidden = hidden;
-		this.unlocked = unlocked;
 		this.image = image;
 	}
 
@@ -24,14 +27,12 @@ public class Achievement {
 		return hidden;
 	}
 
-	private boolean unlocked;
-
 	public boolean isUnlocked() {
-		return unlocked;
+		return Boolean.parseBoolean(new FileTask().read(true, name, file));
 	}
 
 	public void unlocked() {
-		this.unlocked = true;
+		new FileTask().write(name, file, "true");
 	}
 
 	////////// NAME ////////////

@@ -33,9 +33,8 @@ public class AchievementObject extends GameObject {
 
 	@Override
 	public String toString() {
-		var clazz = "WALL";
-		var goal = new GoalObject(getX(), getY(), true);
-		return clazz + " : " + goal.getX() + "-" + goal.getY();
+		var clazz = "ACHIEVEMENT";
+		return clazz + achievement.getName().toUpperCase() + " : " + getX() + "-" + getY();
 	}
 
 	////////// TEXT ////////////
