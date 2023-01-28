@@ -1,0 +1,17 @@
+///// CYAN /////
+
+CookiesTitle = Tu#es#diabetique,#Becky
+CookiesText = Manger#100#cookies
+
+///// GREEN /////
+
+TerminatedTitle = EXTERMINATION#!
+TerminatedText = Mort#definitive#par#un#terminator
+
+///// YELLOW /////
+
+///// ORANGE /////
+
+///// RED /////
+
+///// PURPLE /////

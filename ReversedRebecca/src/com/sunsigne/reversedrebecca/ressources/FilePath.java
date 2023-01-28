@@ -12,6 +12,7 @@ public class FilePath {
 	public static final String USERDATA_PATH = Infos.IS_DEV_VERSION ? "userdata/"
 			: System.getenv("APPDATA").replace("\\", "/") + "/" + Infos.NAME + "/";
 
+	public static final String ACHIEVEMENT = "achievement.txt";
 	public static final String ACTION = "action.txt";
 	public static final String BONUS_TEXT = "bonus_text.txt";
 	public static final String MENU = "menu.txt";

@@ -1,0 +1,12 @@
+To add a new achievement, proceed as follows :
+1 - copy the folder of an existing achievement
+2 - paste it in in this very folder (the game will automatically detect it)
+3 - rename that folder into a unique name (important for later)
+4 - change files within that folder as desired (your image, your parameters, etc.)
+5 - for every folder of "ressources/texts", open its "achievement.txt" file
+6 - write the text of your achievement as it should be displayed in each language (the word in the very left part is the exact word used when naming the folder)
+
+Congrats ! Your achievement is now a game achievement ! Now, you only need to create the unlocking condition in Piranha (see ACHIEVEMENT at "ressources/piranha doc/type de requêtes/requêtes ressources.txt").
+This might be intimidating, but it's the only way to proceed.
+
+Note : your custom achievements won't be licked to the steam achievement system. Only to the game's one.
