@@ -8,11 +8,12 @@ public class Achievement {
 
 	private String file = "achievements.csv";
 
-	public Achievement(String name, int location, boolean hidden, BufferedImage image) {
+	public Achievement(String name, int location, boolean hidden, BufferedImage image, BufferedImage image_locked) {
 		this.name = name;
 		this.location = location;
 		this.hidden = hidden;
 		this.image = image;
+		this.image_locked = image_locked;
 	}
 
 	private int location;
@@ -49,6 +50,12 @@ public class Achievement {
 
 	public BufferedImage getImage() {
 		return image;
+	}
+
+	private BufferedImage image_locked;
+
+	public BufferedImage getImageLocked() {
+		return image_locked;
 	}
 
 }

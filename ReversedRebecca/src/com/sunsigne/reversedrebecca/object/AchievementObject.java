@@ -25,9 +25,11 @@ public class AchievementObject extends GameObject {
 	public AchievementObject(Achievement achievement, int x, int y) {
 		super(x, y, 5 * Size.XL, Size.L);
 		this.achievement = achievement;
+		this.unlocked = achievement.isUnlocked();
 	}
 
 	private Achievement achievement;
+	private boolean unlocked;
 
 	////////// NAME ////////////
 
@@ -97,8 +99,12 @@ public class AchievementObject extends GameObject {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(achievement.getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		drawTitle(g);
+		var image = unlocked ? achievement.getImage() : achievement.getImageLocked();
+		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
+
+		if (unlocked)
+			drawTitle(g);
+
 		drawText(g);
 	}
 
@@ -114,7 +120,8 @@ public class AchievementObject extends GameObject {
 	private void drawText(Graphics g) {
 		Color text_color = Color.WHITE;
 		Color shadow_color = Color.BLACK;
-		int[] rect = new int[] { getX() + Size.XL + 2, getY() + getHeight() / 5, getWidth(), getHeight() };
+		int height = unlocked ? getHeight() / 5 : 0;
+		int[] rect = new int[] { getX() + Size.XL + 2, getY() + height, getWidth(), getHeight() };
 
 		new TextDecoration().drawShadowedString(g, fontText, getText(), text_color, shadow_color, DIRECTION.LEFT, rect);
 	}

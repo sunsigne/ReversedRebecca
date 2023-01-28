@@ -15,8 +15,9 @@ public class AchievementTask {
 		int location = Integer.parseInt(new FileTask().read(false, path + "location.txt"));
 		boolean hidden = Boolean.parseBoolean(new FileTask().read(false, path + "hidden.txt"));
 		BufferedImage image = new ImageTask().loadImage(path + "banner");
+		BufferedImage image_locked = new ImageTask().loadImage(path + "banner" + "_locked");
 
-		Achievement achievement = new Achievement(name, location, hidden, image);
+		Achievement achievement = new Achievement(name, location, hidden, image, image_locked);
 		var list = AchievementList.getList();
 		list.addObject(achievement);
 		list.getList().sort(Comparator.comparing(Achievement::getLocation));
