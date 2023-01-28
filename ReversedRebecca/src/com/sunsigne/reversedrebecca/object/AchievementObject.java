@@ -51,8 +51,13 @@ public class AchievementObject extends GameObject {
 	}
 
 	public String getText() {
-		if (text == null)
-			text = new Translatable().getTranslatedText(achievement.getName() + "text", FilePath.ACHIEVEMENT);
+		if (text == null) {
+			if (achievement.isHidden() && achievement.isUnlocked() == false)
+				text = "???";
+			else
+				text = new Translatable().getTranslatedText(achievement.getName() + "text", FilePath.ACHIEVEMENT);
+		}
+
 		return text;
 	}
 

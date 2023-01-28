@@ -6,7 +6,7 @@ CookiesText = Eat#100#cookies
 ///// GREEN /////
 
 TerminatedTitle = TERMINATED!
-TerminatedText = Permanent#death#by#a#terminator
+TerminatedText = Permanent#death#on#a#terminator
 
 ///// YELLOW /////
 
