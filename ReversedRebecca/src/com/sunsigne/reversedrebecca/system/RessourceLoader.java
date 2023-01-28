@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.Physic;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
+import com.sunsigne.reversedrebecca.ressources.achievement.Achievements;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
@@ -24,6 +25,7 @@ public class RessourceLoader {
 
 		new Physic().loadRessources();
 		new Piranha().loadRessources();
+		new Achievements().loadRessources();
 	}
 
 }

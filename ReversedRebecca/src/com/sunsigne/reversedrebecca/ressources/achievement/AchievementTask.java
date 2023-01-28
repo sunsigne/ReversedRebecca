@@ -1,0 +1,47 @@
+package com.sunsigne.reversedrebecca.ressources.achievement;
+
+import java.awt.image.BufferedImage;
+import java.util.Comparator;
+
+import com.sunsigne.reversedrebecca.object.AchievementObject;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+
+public class AchievementTask {
+
+	public void createAchivement(String name) {
+		String path = "achievements/" + name + "/";
+		int location = Integer.parseInt(new FileTask().read(false, path + "location.txt"));
+		boolean hidden = Boolean.parseBoolean(new FileTask().read(false, path + "hidden.txt"));
+		boolean unlocked = false;
+		BufferedImage image = new ImageTask().loadImage(path + "banner");
+
+		Achievement achievement = new Achievement(name, location, hidden, unlocked, image);
+		var list = AchievementList.getList();
+		list.addObject(achievement);
+		list.getList().sort(Comparator.comparing(Achievement::getLocation));
+	}
+
+	public void unlockAchievement(String name) {
+		var list = AchievementList.getList();
+		list.getList().forEach(tempAchievement -> {
+			if (tempAchievement.getName().equalsIgnoreCase(name)) {				
+				if (tempAchievement.isUnlocked())
+					return;
+				
+				tempAchievement.unlocked();
+				// registering unlock
+				popupAchievement(tempAchievement);
+				return;
+			}
+		});
+	}
+
+	private void popupAchievement(Achievement achievement) {
+		AchievementObject object = new AchievementObject(achievement);
+		LAYER.DEBUG.addObject(object);
+		object.popup();
+	}
+
+}
