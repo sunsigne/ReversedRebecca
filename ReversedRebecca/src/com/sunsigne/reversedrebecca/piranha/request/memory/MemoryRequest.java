@@ -33,7 +33,7 @@ public class MemoryRequest extends ConditionalRequest {
 
 	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
-		MemoryList.getList().addObject(target);
+		MemorySet.getSet().add(target.toUpperCase());
 		new Snitch().registerEntry("MEMORY:" + target);
 	}
 
@@ -44,13 +44,8 @@ public class MemoryRequest extends ConditionalRequest {
 
 	@Override
 	protected boolean analyseCondition(PiranhaObject object, String target) {
-		String valueToCheck = String.valueOf(target.split("\\?")[0]);
-
-		for (String tempMemory : MemoryList.getList().getList()) {
-			if (valueToCheck.equalsIgnoreCase(tempMemory))
-				return true;
-		}
-		return false;
+		String valueToCheck = String.valueOf(target.split("\\?")[0]).toUpperCase();
+		return MemorySet.getSet().contains(valueToCheck);
 	}
 
 }

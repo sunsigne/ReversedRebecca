@@ -20,7 +20,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
-import com.sunsigne.reversedrebecca.piranha.request.memory.MemoryList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -296,7 +296,7 @@ public class World implements Updatable, RenderFree {
 		freeze(false);
 		instance = null;
 		new CharacteristicList().reset();
-		MemoryList.getList().clear();
+		MemorySet.getSet().clear();
 		SaveList.getList().clear();
 		SaveEraserList.getList().clear();
 		Game.getInstance().forceLoop();
