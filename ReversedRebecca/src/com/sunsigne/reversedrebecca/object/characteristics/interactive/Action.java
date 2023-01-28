@@ -2,8 +2,11 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 
@@ -74,6 +77,7 @@ public abstract class Action {
 
 		if (canDoAction()) {
 			listener.doAction();
+			paralysePlayer();
 			new Snitch().registerEntry("ACTION:" + name);
 		}
 	}
@@ -84,6 +88,14 @@ public abstract class Action {
 
 		listener.doAction();
 		new Snitch().registerEntry("ACTION:" + name);
+	}
+
+	private void paralysePlayer() {
+		Player player = new PlayerFinder().getPlayer();
+		if (player != null) {
+			player.setCanInterract(false);
+			new GameTimer(2, () -> player.setCanInterract(true));
+		}
 	}
 
 	////////// RENDER ////////////
