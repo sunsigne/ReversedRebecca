@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -36,8 +37,16 @@ public class CreateBonusTextRequest implements IndexRequest {
 		return false;
 	}
 
+	private String registeredTarget;
+
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+
+		// optimization block
+		if (target.equalsIgnoreCase(registeredTarget))
+			return;
+		this.registeredTarget = target;
+		new GameTimer(5, () -> this.registeredTarget = null);
 
 		// determinate the position
 		String pos = String.valueOf(target.split(",")[0]);

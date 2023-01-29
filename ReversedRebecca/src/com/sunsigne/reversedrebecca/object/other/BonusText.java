@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class BonusText extends GameObject {
@@ -59,7 +60,7 @@ public class BonusText extends GameObject {
 	public void tick() {
 		--time;
 		if (time <= 0)
-			getHandler().removeObject(this);
+			LAYER.WORLD_TEXT.getHandler().removeObject(this);
 	}
 
 	////////// RENDER ////////////
