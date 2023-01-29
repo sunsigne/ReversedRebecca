@@ -40,12 +40,15 @@ public class TextAction implements Updatable {
 
 		if (tripleAction != interactive.getTripleAction())
 			return;
-		
-		// player can't interact
-		if (!interactive.canPlayerInterfact())
+
+		// player doesn't exist
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
 			return;
 
-		Player player = new PlayerFinder().getPlayer();
+		// player can't interact
+		if (!interactive.canPlayerInterfact(true))
+			return;
 
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {
@@ -121,11 +124,11 @@ public class TextAction implements Updatable {
 
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();
-		
+
 		// this prevent text to protrude from the screen
 		if (tooCloseToRightBorder(player))
 			facing = DIRECTION.RIGHT;
-		
+
 		int[] rect = getChoiceRect(player, facing, gap);
 
 		DIRECTION centeredText = DIRECTION.LEFT;

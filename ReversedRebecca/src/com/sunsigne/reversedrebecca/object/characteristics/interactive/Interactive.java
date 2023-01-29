@@ -23,6 +23,10 @@ public interface Interactive extends Velocity, KeyboardEvent {
 	public void setDisabled(boolean isDisabled);
 
 	public default boolean canPlayerInterfact() {
+		return canPlayerInterfact(false);
+	}
+
+	public default boolean canPlayerInterfact(boolean checkFakeInterract) {
 
 		// object is disabled
 		if (isDisabled())
@@ -35,8 +39,10 @@ public interface Interactive extends Velocity, KeyboardEvent {
 			return false;
 
 		// player specifically can't interact
-		if (player.canInterract() == false)
-			return false;
+		if (player.canInterract() == false) {
+			if (!checkFakeInterract || player.getFakingCanInterract() == false)
+				return false;
+		}
 
 		// player is not on the same layer
 		if (player.getHandler() != getHandler())
@@ -48,7 +54,7 @@ public interface Interactive extends Velocity, KeyboardEvent {
 		// player is too far
 		if (new PlayerFinder().isPlayerFutherThan(this, 1))
 			return false;
-		
+
 		// player is superimposed on the object
 		if (new PlayerFinder().isPlayerCloserThan(this, 1))
 			return true;

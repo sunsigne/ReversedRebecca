@@ -92,10 +92,15 @@ public abstract class Action {
 
 	private void paralysePlayer() {
 		Player player = new PlayerFinder().getPlayer();
-		if (player != null) {
-			player.setCanInterract(false);
-			new GameTimer(2, () -> player.setCanInterract(true));
-		}
+		if (player == null)
+			return;
+
+		if (player.canInterract() == false)
+			return;
+
+		player.setCanInterract(false, true);
+		new GameTimer(3, () -> player.setCanInterract(true));
+
 	}
 
 	////////// RENDER ////////////

@@ -22,7 +22,7 @@ public class Player extends LivingObject {
 
 		loadHealth();
 	}
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -41,9 +41,9 @@ public class Player extends LivingObject {
 			goal = new GoalObject(getGoal().getX(), getGoal().getY(), true);
 		var dirGoal = goal == null ? "N/A" : goal.getX() + "-" + goal.getY();
 
-		return clazz + " : " + dirName + " / " + dirCanInterract + " / " + dirPos + " / " + "GOAL:"+ dirGoal;
+		return clazz + " : " + dirName + " / " + dirCanInterract + " / " + dirPos + " / " + "GOAL:" + dirGoal;
 	}
-	
+
 	////////// SPEED ////////////
 
 	private boolean forcePushed;
@@ -108,6 +108,11 @@ public class Player extends LivingObject {
 	////////// INTERACTIVE ////////////
 
 	private boolean canInterract;
+	private boolean fakingCanInterract;
+
+	public boolean getFakingCanInterract() {
+		return canInterract() || fakingCanInterract;
+	}
 
 	public boolean canInterract() {
 		if (isStunned() == false)
@@ -120,7 +125,12 @@ public class Player extends LivingObject {
 	}
 
 	public void setCanInterract(boolean canInterract) {
+		setCanInterract(canInterract, false);
+	}
+
+	public void setCanInterract(boolean canInterract, boolean fakingCanInterract) {
 		this.canInterract = canInterract;
+		this.fakingCanInterract = fakingCanInterract;
 	}
 
 	////////// TICK ////////////
