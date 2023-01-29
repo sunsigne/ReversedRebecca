@@ -48,7 +48,8 @@ public class AntivirusShrinker extends AntivirusObject {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		antivirusAction();
+		if (isInPauseMenu() == false)
+			antivirusAction();
 	}
 
 }

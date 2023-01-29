@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzle;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class PuzzleObject extends GameObject {
@@ -41,7 +42,7 @@ public abstract class PuzzleObject extends GameObject {
 	public Puzzle getPuzzle() {
 		return puzzle;
 	}
-	
+
 	private boolean critical;
 
 	public boolean isCritical() {
@@ -50,6 +51,12 @@ public abstract class PuzzleObject extends GameObject {
 
 	public void setCritical(boolean critical) {
 		this.critical = critical;
+	}
+
+	////////// MOUSE ////////////
+
+	public boolean isInPauseMenu() {
+		return LAYER.MENU.getHandler().getList().isEmpty() == false;
 	}
 
 }

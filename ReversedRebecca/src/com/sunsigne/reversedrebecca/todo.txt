@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	une SoundRequest semble génerer du lag (ver d'eau + cookie) -> à vérifier
 	pause pendant une récompense rend le texte dégeu (comme avant, durant un chat)
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
@@ -13,6 +14,7 @@
 
 	////////// DIFFICILE ////////////
 		
+	optimiser la liste des requêtes
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre"
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)

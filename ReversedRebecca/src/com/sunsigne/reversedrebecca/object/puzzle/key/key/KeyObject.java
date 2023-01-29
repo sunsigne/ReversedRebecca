@@ -29,7 +29,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	protected String getName() {
 		return "KEY";
 	}
-	
+
 	@Override
 	public String toString() {
 		var moving = "LEFT";
@@ -121,6 +121,9 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	@Override
 	public void mousePressed(MouseEvent e) {
+		if (isInPauseMenu())
+			return;
+
 		if (getVelX() == 0) {
 			setVelX(-1);
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
