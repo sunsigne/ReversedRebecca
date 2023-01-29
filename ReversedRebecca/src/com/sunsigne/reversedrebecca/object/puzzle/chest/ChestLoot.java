@@ -80,12 +80,12 @@ public abstract class ChestLoot extends PuzzleObject {
 
 	private void drawText(Graphics g, Font font, int[] rect) {
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
+		g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 
 		drawLine(g, getFirstLine(), rect[0] + rect[2] / 2, rect[1] + 2 * Size.XL + Size.XS / 2);
 		drawLine(g, getSecondLine(), rect[0] + rect[2] / 2, rect[1] + 2 * Size.XL + Size.S);
 
-		g2d.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+		g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_OFF);
 	}
 
 	private void drawLine(Graphics g, String text, int x, int y) {
