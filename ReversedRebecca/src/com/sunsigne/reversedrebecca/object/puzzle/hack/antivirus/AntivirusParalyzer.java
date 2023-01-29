@@ -46,6 +46,8 @@ public class AntivirusParalyzer extends AntivirusObject {
 
 	@Override
 	public void tick() {
+		super.tick();
+		
 		time--;
 		if (time < 0) {
 			time = PARALYZING_TIME;

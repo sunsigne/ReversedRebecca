@@ -49,6 +49,8 @@ public class AntivirusSpawner extends AntivirusObject {
 
 	@Override
 	public void tick() {
+		super.tick();
+		
 		time--;
 		if (time < 0) {
 			time = SPAWNING_TIME;
