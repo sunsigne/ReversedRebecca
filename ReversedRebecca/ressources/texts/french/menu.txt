@@ -23,8 +23,10 @@ LevelClickToContinue = Cliquez#pour#continuer
 
 ResumeButton = reprendre
 Cancel = annuler
-QuitDetail1 = Le#jeu#sauvegarde
-QuitDetail2 = a#chaque#fin#de#niveau
+ResumeDetail1 = Le#jeu#sauvegarde
+ResumeDetail2 = a#chaque#fin#de#niveau
+QuitDetail1 = Voulez-vous#vraiment
+QuitDetail2 = quitter#le#jeu#?
 
 ///// MAIN /////
 

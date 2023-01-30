@@ -23,8 +23,10 @@ LevelClickToContinue = Click#to#continue
 
 ResumeButton = resume
 Cancel = cancel
-QuitDetail1 = The#gave#saves#at
-QuitDetail2 = the#end#of#each#level
+ResumeDetail1 = The#gave#saves#at
+ResumeDetail2 = the#end#of#each#level
+QuitDetail1 = do#you#really#want
+QuitDetail2 = to#quit#the#game?
 
 ///// MAIN /////
 

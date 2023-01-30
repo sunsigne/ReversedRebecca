@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	creer un system de soft et de hard reset ? au moins la possibilité de reset les succès
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -12,7 +13,6 @@
 
 	////////// DIFFICILE ////////////
 		
-	optimiser la liste des requêtes
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre"
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
@@ -33,7 +33,6 @@
 
 	////////// FACILE ////////////
 
-	prévenir que le jeu sauvegarde à chaque fin de niveau sur le menu pause (et PAS après avoir cliqué sur "quitter")
 	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !

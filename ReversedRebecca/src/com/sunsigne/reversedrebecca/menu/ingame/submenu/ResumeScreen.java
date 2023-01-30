@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
@@ -11,6 +12,8 @@ public class ResumeScreen extends MenuIngameScreen {
 
 	public ResumeScreen() {
 		super();
+		loadText();
+		
 		createResumeButton();
 		createOptionsButton();
 		createQuitButton();
@@ -21,6 +24,25 @@ public class ResumeScreen extends MenuIngameScreen {
 	@Override
 	public String getName() {
 		return "resume";
+	}
+	
+	////////// TEXT ////////////
+
+	private void loadText() {
+		String text = null;
+		TitleScreenText quitText;
+		int x = 325 + 416;
+		int y = 473;
+
+		text = translate("Resume" + "Detail" + "1");
+		quitText = new TitleScreenText(text, x, y + 245);
+		quitText.setFontSize(18f);
+		LAYER.MENU.addObject(quitText);
+
+		text = translate("Resume" + "Detail" + "2");
+		quitText = new TitleScreenText(text, x, y + 280);
+		quitText.setFontSize(18f);
+		LAYER.MENU.addObject(quitText);
 	}
 
 	////////// BUTTONS ////////////
