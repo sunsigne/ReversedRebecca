@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	une SoundRequest semble génerer du lag (ver d'eau + cookie) -> à vérifier
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -34,6 +33,7 @@
 
 	////////// FACILE ////////////
 
+	prévenir que le jeu sauvegarde à chaque fin de niveau sur le menu pause (et PAS après avoir cliqué sur "quitter")
 	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !
