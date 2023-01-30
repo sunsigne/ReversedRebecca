@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	creer un system de soft et de hard reset ? au moins la possibilité de reset les succès
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -136,9 +135,7 @@
 	////////// SUCCES ////////////
 	
 	TERMINATED -> condition à créer.
-		
-	on doit pouvoir reset les succès !
-	
+
 	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
 	5 fruits et légumes par jours : manger un fruit virtuel
 	C'était génant ... : enlacer quelqu'un en étant à moitié nue

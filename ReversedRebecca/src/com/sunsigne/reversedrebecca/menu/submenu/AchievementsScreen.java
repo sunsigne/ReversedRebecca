@@ -20,13 +20,14 @@ public class AchievementsScreen extends SubMenuScreen {
 		this(0);
 	}
 
-	public AchievementsScreen(int listStart) {
+	protected AchievementsScreen(int listStart) {
 		super();
 		this.listStart = listStart;
 
 		loadText();
 		loadAchievements();
 
+		createResetButton();
 		createLeftArrowButton();
 		createRightArrowButton();
 	}
@@ -54,7 +55,7 @@ public class AchievementsScreen extends SubMenuScreen {
 
 	////////// ACHIEVEMENTS ////////////
 
-	private int listStart;
+	protected int listStart;
 
 	private int getListEnd() {
 		return listStart + Math.min(10, AchievementList.getList().getList().size() - listStart);
@@ -81,7 +82,21 @@ public class AchievementsScreen extends SubMenuScreen {
 	}
 
 	////////// BUTTONS ////////////
-
+	
+	private void createResetButton() {
+		GenericListener onPress = () -> new ResetAchievementsScreen(listStart);
+		ButtonObject button = new TitleScreenButton(translate("Reset"), 1482, 940, 415, 140, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
+		((TitleScreenButton) button).setFontSize(40f);
+		LAYER.MENU.addObject(button);
+	}
+	
 	private void createArrowButton(String text, int x, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, Window.WIDHT / 2 + x - 75, 980, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
