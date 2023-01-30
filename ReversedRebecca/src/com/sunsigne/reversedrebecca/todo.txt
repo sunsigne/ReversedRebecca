@@ -134,11 +134,10 @@
 
 	////////// SUCCES ////////////
 	
-	TERMINATED -> condition à créer.
+	terminated -> condition à créer.
 
 	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
 	5 fruits et légumes par jours : manger un fruit virtuel
-	C'était génant ... : enlacer quelqu'un en étant à moitié nue
 	Fin secrète : finir le jeu en difficile
 	(hidden=true) débloquer le niveau test sur l'écran titre
 		
