@@ -45,6 +45,8 @@ public class AchievementTask {
 
 	public void resetAchievements() {
 		new FileTask().write("achievements.csv", "");
+		AchievementList.getList().clear();
+		new Achievements().loadRessources();
 	}
 
 }
