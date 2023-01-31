@@ -64,7 +64,7 @@ public class AnimatedDecorationObject extends DecorationObject {
 		String path = getPath() + getName() + "_";
 		ImageTask loader = new ImageTask();
 
-		GameList<BufferedImage> list = new GameList<>(LISTTYPE.LINKED);
+		GameList<BufferedImage> list = new GameList<>(LISTTYPE.ARRAY);
 
 		for (int index = 0; index < frames; index++) {
 			String formated_index = new FormatedString().getNumber(index);

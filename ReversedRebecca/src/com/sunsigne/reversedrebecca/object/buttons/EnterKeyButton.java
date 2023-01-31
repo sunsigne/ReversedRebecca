@@ -80,7 +80,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 	}
 
 	private GameLimitedList<Key> createList() {
-		var list = new GameLimitedList<Key>(LISTTYPE.LINKED);
+		var list = new GameLimitedList<Key>(LISTTYPE.ARRAY);
 
 		list.addObject(new UpKey());
 		list.addObject(new DownKey());
