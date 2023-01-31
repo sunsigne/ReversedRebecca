@@ -36,7 +36,7 @@ public class BonusText extends GameObject {
 
 	////////// TEXT ////////////
 
-	private String text;
+	protected String text;
 	private Font font;
 	
 	private void createFont(boolean importante) {
@@ -54,7 +54,7 @@ public class BonusText extends GameObject {
 
 	////////// TICK ////////////
 
-	private int time = 40;
+	protected int time = 40;
 
 	@Override
 	public void tick() {
