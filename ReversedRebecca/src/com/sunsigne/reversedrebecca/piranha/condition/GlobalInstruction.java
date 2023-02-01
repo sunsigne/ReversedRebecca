@@ -24,6 +24,9 @@ public abstract class GlobalInstruction extends LocalInstruction {
 
 	private void loadAllPiranha() {
 		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer.isMapLayer() == false)
+				return;
+
 			var list = tempLayer.getHandler().getList();
 
 			for (Updatable tempUpdatable : list) {
