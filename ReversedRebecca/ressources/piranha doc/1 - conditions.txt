@@ -127,3 +127,5 @@ TIME -> 0 = AFFECTING -> MOVE:10-20 (interdit, cela n'aurait aucun sens !)
 ex : 
 (file 1) GOAL -> 33-33 = AFFECTING -> BOB_REACHED_GOAL
 (file 2) ! -> BOB_REACHED_GOAL = FACING -> BOB
+
+Note : il existe également un Type de Requête SPAM_AFFECTING qui est une variante de AFFECTING, encadré par un système "anti-spam" : tant que cette requête est spammée, elle est "mise en attente" et ne se s'effectuera qu'à l'arrêt du spam.

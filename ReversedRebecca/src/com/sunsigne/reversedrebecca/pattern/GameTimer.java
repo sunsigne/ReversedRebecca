@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.pattern;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -15,11 +16,15 @@ public class GameTimer implements Updatable, RenderFree {
 		if (World.get() == null)
 			return;
 
-		World.get().getLayer(false).addObject(this);
+		this.handler = World.get().getLayer(false).getHandler();
+		handler.addObject(this);
+		
 		this.time = timeInTicks;
 		this.listener = listener;
 	}
 
+	private Handler handler;
+	
 	////////// TIMER ////////////
 
 	private boolean ready;
@@ -28,6 +33,10 @@ public class GameTimer implements Updatable, RenderFree {
 		return ready;
 	}
 
+	public void destroy() {
+		handler.removeObject(this);
+	}
+	
 	////////// TICK ////////////
 
 	private int time;
@@ -39,7 +48,7 @@ public class GameTimer implements Updatable, RenderFree {
 		time--;
 
 		if (time <= 0) {
-			getHandler().removeObject(this);
+			destroy();
 			ready = true;
 			if (listener != null)
 				listener.doAction();

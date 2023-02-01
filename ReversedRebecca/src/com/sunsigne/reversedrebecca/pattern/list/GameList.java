@@ -20,12 +20,10 @@ public class GameList<T> {
 	public List<T> getList() {
 		switch (listType) {
 		case ARRAY:
-			while (array_list.remove(null))
-				;
+			while (array_list.remove(null));
 			return array_list;
 		case LINKED:
-			while (linked_list.remove(null))
-				;
+			while (linked_list.remove(null));
 			return linked_list;
 		}
 		return null;
