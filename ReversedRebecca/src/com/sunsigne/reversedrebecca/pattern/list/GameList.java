@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.pattern.list;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Objects;
 
 public class GameList<T> {
 
@@ -21,10 +20,12 @@ public class GameList<T> {
 	public List<T> getList() {
 		switch (listType) {
 		case ARRAY:
-			array_list.removeIf(Objects::isNull);
+			while (array_list.remove(null))
+				;
 			return array_list;
 		case LINKED:
-			linked_list.removeIf(Objects::isNull);
+			while (linked_list.remove(null))
+				;
 			return linked_list;
 		}
 		return null;
