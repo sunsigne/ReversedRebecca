@@ -33,7 +33,6 @@
 
 	////////// FACILE ////////////
 
-	rebecca rouge comme une tomate en towel pas faite
 	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !
