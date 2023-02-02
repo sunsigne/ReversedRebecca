@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	-> ramasser les vêtement et vider la baignores sont 2 actions que l'ont peut faire en même temps ...
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -67,10 +68,21 @@
 	
 	////////// LVL001 ////////////
 	
+	pré-puzzle :
+	scénario : exit
+	- gérer le comportement de Sarah 
+	- gérer le compotement de Mika
+	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
+	
+	scénarion : inquery
+	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
+	
 	karma actions :
 	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef
+
+	post puzzle : tout à faire
 
 	blanchir les murs
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
