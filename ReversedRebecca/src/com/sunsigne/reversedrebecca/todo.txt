@@ -33,6 +33,7 @@
 
 	////////// FACILE ////////////
 
+	rebecca rouge comme une tomate en towel pas faite
 	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	faire en sorte que le "stop app" du chat missing ne ferme pas l'application, qu'elle continue (en activant le "TALKED")
 	il faut créer le design des couches de light et de sous sol des maps !
@@ -53,6 +54,8 @@
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	
+	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	
 	////////// RR000 ////////////
 	
