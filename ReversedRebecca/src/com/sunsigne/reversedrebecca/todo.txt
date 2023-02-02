@@ -56,6 +56,7 @@
 	
 	////////// RR000 ////////////
 	
+	- rajouter des zzz quand rebecca ronfle
 	pas fini : nombre de fins
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	toutes les saved "world" ont été verifiées, pas les autres !
@@ -68,6 +69,8 @@
 	
 	////////// LVL001 ////////////
 	
+	scénario sadique et psycophathe pas encore faits
+	
 	pré-puzzle :
 	scénario : exit
 	- gérer le comportement de Sarah 
@@ -77,12 +80,12 @@
 	scénarion : inquery
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
+	post puzzle : tout à faire
+	
 	karma actions :
 	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef
-
-	post puzzle : tout à faire
 
 	blanchir les murs
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
