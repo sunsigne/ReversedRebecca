@@ -22,3 +22,4 @@ ALICIA = Key3 % Alicia#?
 ///// LEFT AREA /////
 
 TAKE = Key2 % prendre
+KNOCK = Key1 % toc#toc#?
