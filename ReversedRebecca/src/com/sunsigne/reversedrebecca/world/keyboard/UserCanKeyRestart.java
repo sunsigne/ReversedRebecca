@@ -5,9 +5,9 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class UseCanKeyRestart extends WorldKeyboard {
+public class UserCanKeyRestart extends WorldKeyboard {
 
-	private static WorldKeyboard worldKeyboard = new UseCanKeyRestart();
+	private static WorldKeyboard worldKeyboard = new UserCanKeyRestart();
 
 	@Override
 	public WorldKeyboard getWorldKeyboard() {

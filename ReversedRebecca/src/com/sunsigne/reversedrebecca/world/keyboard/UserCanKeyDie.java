@@ -5,9 +5,9 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
-public class UseCanKeyDie extends WorldKeyboard {
+public class UserCanKeyDie extends WorldKeyboard {
 
-	private static WorldKeyboard worldKeyboard = new UseCanKeyDie();
+	private static WorldKeyboard worldKeyboard = new UserCanKeyDie();
 
 	@Override
 	public WorldKeyboard getWorldKeyboard() {

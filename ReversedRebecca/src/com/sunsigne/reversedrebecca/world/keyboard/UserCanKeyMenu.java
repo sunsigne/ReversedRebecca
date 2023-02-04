@@ -7,9 +7,9 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
-public class UseCanKeyMenu extends WorldKeyboard {
+public class UserCanKeyMenu extends WorldKeyboard {
 
-	private static WorldKeyboard worldKeyboard = new UseCanKeyMenu();
+	private static WorldKeyboard worldKeyboard = new UserCanKeyMenu();
 
 	@Override
 	public WorldKeyboard getWorldKeyboard() {
