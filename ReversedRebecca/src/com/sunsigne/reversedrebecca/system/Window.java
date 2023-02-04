@@ -33,11 +33,11 @@ public class Window {
 		frame.setLayout(new BorderLayout());
 		frame.add(game, BorderLayout.CENTER);
 		frame.setIconImage(icon.getImage());
-		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		frame.setUndecorated(true);
 		frame.setVisible(true);
 		frame.pack();
+		frame.setLocationRelativeTo(null);
 		
 	}
 

@@ -17,14 +17,14 @@ public class SuperHandler {
 
 	////////// TICK ////////////
 
-	protected static void tick() {
+	public static void tick() {
 		for (Handler tempObject : getList().getList())
 			tempObject.tick();
 	}
 
 	////////// RENDER ////////////
 
-	protected static void render(Graphics g) {
+	public static void render(Graphics g) {
 		for (Handler tempObject : getList().getList())
 			tempObject.render(g);
 	}
