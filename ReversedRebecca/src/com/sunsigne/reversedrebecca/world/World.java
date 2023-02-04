@@ -66,7 +66,7 @@ public class World implements Updatable, RenderFree {
 		addSetup();
 		new Save().loadSave();
 		addGUI();
-		addControlers();
+		addControllers();
 		start();
 
 		LAYER.LOADING.getHandler().clear();
@@ -147,7 +147,7 @@ public class World implements Updatable, RenderFree {
 		}
 	}
 
-	private void addControlers() {
+	private void addControllers() {
 		addKeyboardListener();
 	}
 
