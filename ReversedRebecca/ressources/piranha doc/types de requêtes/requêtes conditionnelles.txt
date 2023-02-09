@@ -43,6 +43,19 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si non, définir le GOAL comme étant en x=37 y=42
 
 
+////// RANDOM //////
+
+Le Type de Requête RANDOM permet de vérifier une condition supplémentaire, à caractère aléatoire.
+
+exemple :
+TIME -> 0 = RANDOM -> PERCENTAGE:30 ? FACING:LEFT / FACING:UP
+
+Lorsque la Condition sera vérifiée, l'objet à 30 % de chances de regarder à droite, et 70 % de chances de regarder en haut.
+
+Le Type de Requête RANDOM accepte les "Conditions" suivantes :
+- PERCENTAGE:X (remplacer "X" par un nombre), la première action à X % de chances de se produire. Dans le cas contraire, la seconde action se produira.
+
+
 ////// PLAYER_FUTHER_THAN //////
 
 Le Type de Requête PLAYER_FUTHER_THAN permet de savoir le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
