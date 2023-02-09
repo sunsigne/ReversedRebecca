@@ -23,3 +23,10 @@ ALICIA = Key3 % Alicia#?
 
 TAKE = Key2 % prendre
 KNOCK = Key1 % toc#toc#?
+ALICIA_HELP = Key3 % Alicia#!
+INSIST = Key3 % Insister
+KINDLY = Key1 % Gentiment
+BLAMING = Key2 % Culpabiliser
+SCOLDING = Key3 % Engueuler
+
+

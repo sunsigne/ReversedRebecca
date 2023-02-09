@@ -81,7 +81,12 @@
 	scénarion : inquery
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
-	post puzzle : tout à faire
+	post puzzle : 
+	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
+	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres)
+	- tout à faire
+	
+	
 	
 	karma actions :
 	- saboter l'ordinateur de bernard
