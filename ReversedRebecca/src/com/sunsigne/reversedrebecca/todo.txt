@@ -87,6 +87,7 @@
 	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef
+	- narguer Alicia dans le SAS
 
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)

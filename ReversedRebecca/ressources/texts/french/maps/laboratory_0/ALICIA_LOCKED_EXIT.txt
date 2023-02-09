@@ -1,5 +1,6 @@
 alicia = down = cry_var2 = Oui#!#Je#suis#là#!#Je#suis#enfermée#!
-rebecca = up = surprised = Alicia#?!#Ne#bouge#pas#!@Je#vais#te#sortir#de#là#!
-alicia = down = cry_var = Je#ne#risque#pas#de#bouger,#Rebecca
-rebecca = up = unhappy = Pardon, ce n'est pas ce que je voulais dire…
-alicia = down = cry_laugh = T'en#fait#pas,#j'ai#compris.#Je#suis@contente#que#tu#m'aies#trouvé.#Je#vais#attendre.
+rebecca = up = surprised = Alicia#?#Ne#bouge#pas#!@Je#vais#te#sortir#de#là#!
+alicia = down = cry_happy = Je#ne#risque#pas#de#bouger,#Rebecca.
+rebecca = up = unhappy = Pardon,#ce#n'est#pas#ce#que#je#voulais#dire…
+alicia = down = cry_happy = T'en#fait#pas,#j'ai#compris.
+alicia = down = cry_laugh = Je#suis#contente#que#tu#m'aies#trouvé.@Je#vais#attendre.
