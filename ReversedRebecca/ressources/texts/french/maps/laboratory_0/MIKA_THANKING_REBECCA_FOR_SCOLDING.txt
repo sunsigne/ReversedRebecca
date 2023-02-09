@@ -1,3 +1,3 @@
-mika = DOWN = serious = Merci#de#m'avoir#secoué.@J'en#oublié#ce#qui#était#vraiment#important.
+mika = DOWN = serious = Merci#de#m'avoir#secoué.@Tu#m'as#dit#ce#que#j'avais#besoin#d'entendre.
 player = UP = laugh = Pour#être#franche,#je#ne@pensais#pas#que#ça#marcherait.
 mika = DOWN = serious = Il#faut#croire#que#si.
