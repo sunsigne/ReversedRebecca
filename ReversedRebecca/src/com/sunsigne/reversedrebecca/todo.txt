@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	!! Il est mtn possible de sortir de la table de 2 façon différente lorsqu'on a mangé des crêpes avec Sarah. C'est probablement lié au même problème que le suivant, depuis que j'ai augmenté la distance d'interaction des objets
 	-> ramasser les vêtement et vider la baignores sont 2 actions que l'ont peut faire en même temps ...
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
@@ -83,7 +84,7 @@
 	
 	post puzzle : 
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
-	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres)
+	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
 	
 	
