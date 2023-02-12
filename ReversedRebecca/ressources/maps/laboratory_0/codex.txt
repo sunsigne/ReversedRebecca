@@ -44,6 +44,7 @@ OBJ-16 = Delta Player Distance Checker
 ///// LEFT AREA /////
 
 NPC-13 = Alicia
+NPC-14 = Joseph
 OBJ-17 = Down Desk
 OBJ-18 = Empty Vat
 OBJ-19 = Small Boxes Left

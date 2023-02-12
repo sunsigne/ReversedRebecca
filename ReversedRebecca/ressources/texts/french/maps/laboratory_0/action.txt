@@ -29,4 +29,3 @@ KINDLY = Key1 % Gentiment
 BLAMING = Key2 % Culpabiliser
 SCOLDING = Key3 % Engueuler
 
-

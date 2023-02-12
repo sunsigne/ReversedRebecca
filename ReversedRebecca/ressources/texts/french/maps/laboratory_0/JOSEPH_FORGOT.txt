@@ -1,0 +1,6 @@
+player = object = worry = Joseph…#Tu#pourrais#me#rappeler@ce#que#tu#m'as#demandé#s'il#te#plaît#?
+object = player = happy_var = Ha#!#Ces#jeunes#!
+object = player = doubt = En#fait,#je#t'avoue#que#je#ne#m'en#souviens#pas@non#plus.#Ma#mémoire#n'est#plus#ce#qu'elle#était…
+player = object = worry = Ha…
+object = player = happy = Si#ça#me#revient,#je#te#le#ferai#savoir.
+player = object = happy_var = C'est#noté.

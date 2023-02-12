@@ -1,0 +1,2 @@
+player = object = excited = Ton#petit#doigt#a#raison#!@Merci#Joseph#!
+object = player = happy_var = De#rien.
