@@ -13,6 +13,18 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si non, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
 
 
+////// UNLOCKEDTOOLMAXLEVEL //////
+
+Le Type de Requête UNLOCKEDTOOLMAXLEVEL fonctionne exactement de la même façon que le Type de Requête UNLOCKEDTOOL, à la différence près que ce premier vérifie si le joueur a atteint ou non la possibilité d'utiliser un outil de ce niveau (qu'il le possède ou non).
+
+exemple :
+TIME -> 20 = UNLOCKEDTOOLMAXLEVEL -> KEY:GREEN ? DOOR_CLOSED / DIALOGUE
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : si un outil KEY de couleur GREEN est ramassé, pourrait-il être stocké au seulement son niveau CYAN sera atteint ?
+- dans le premier cas, effectuer l'action DOOR_CLOSED (qui est une balise comme pour GOTO)
+- dans le cas contraire, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
+
+
 ////// DIFFICULTY //////
 
 Le Type de Requête DIFFICULTY permet de vérifier le mode de difficulté actuel.
