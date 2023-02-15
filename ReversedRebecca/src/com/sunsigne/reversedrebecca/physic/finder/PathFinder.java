@@ -212,7 +212,7 @@ public class PathFinder implements Position {
 			if (beforeElements | afterElements)
 				continue;
 
-			// object is playet
+			// object is player
 			if (tempObject instanceof Player) {
 				player = (Player) tempObject;
 				continue; // player is a specific case;
