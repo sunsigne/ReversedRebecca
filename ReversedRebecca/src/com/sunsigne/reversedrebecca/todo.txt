@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	mettre à jour la doc sur la possibilité de mettre le nom d'un objet pour les requetes de déplacement !
 	(la version JRE renseigné sur laucn4.config n'est pas bonne
 	si on revient sur l'écran titre alors qu'il n'y avait pas de musique (genre lvl labo), il n'y aura tj pas de musique

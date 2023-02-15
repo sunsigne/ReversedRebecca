@@ -14,6 +14,27 @@ Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en x=33 y=3
 Note : la Cible "STOP" est autorisé. Le nouveau GOAL se l'objet sera alors défini comme null. Ni le NAME d'un objet, ni la Cible "Player" ne sont autorisés pour ce Type de Requête.
 
 
+Utilisation "spéciale" :
+
+Il est possible de définir un GOAL à partir d'un NAME (voir "requêtes states.txt"). Dans ce cas, le GOAL sera défini comme étant la position valide la plus proche parmi les 4 emplacements autours de l'objet.
+
+exemple :
+TIME -> 20 = MOVE -> PLAYER
+
+Lorsque la Condition sera vérifiée, l'objet se rendra "à-côté" du joueur. L'endroit exact sera déterminé en fonction de la distance "à vol d'oiseau" la plus courte.
+
+Attention : le GOAL est défini au moment du lancement de la Requête et n'est pas recalculé "automatiquement" ! Dit autrement ; si le joueur s'est déplacé pendant le mouvement de l'objet, ce dernier ne changera pas sa destination.
+Attention : le point d'arrivée - dont les coordonnées sont "hasardeuses" - déclenchera un Type de Condition GOAL (voir "1 - conditions.txt") ! Soyez prudents et assurez-vous de gérer ce cas de figure en cas d'arrivée "par hasard" sur un point important (par exemple, grâce au Type de requête MEMORY et à son écriture conditionnelle, voir "requêtes memory.txt")
+
+Note : il n'est pas possible de vérifier une Condition du genre "GOAL -> PLAYER". L'écriture du Type de Condition GOAL ne peut pas s'adapter à l'utilisation "spéciale" du Type de Requête MOVE. Il faudra "ruser" afin de vérifier l'arrivée de votre objet, par exemple de la façon suivante :
+
+TIME -> 20 = GOTO -> SLOW:PLAYER, WAITFOR_REACHED_PLAYER
+$ -> WAITFOR_REACHED_PLAYER = WAITFOR -> PLAYER_CLOSER_THAN:3 ? WAITFOR_REAL_ARRIVING
+$ -> WAITFOR_REAL_ARRIVING = WAITFOR -> TIMER:1 ? YOUR_ACTION
+
+Dans cet exemple, la balise GOTO "YOUR_ACTION" sera déclenché à peu près au moment où l'objet arrivera devant le joueur.
+
+
 ////// SLOW //////
 
 
