@@ -34,6 +34,7 @@ public class LivingAnimationHandler {
 
 	private LivingAnimation walkingGoodAnimation;
 	private LivingAnimation walkingGlassAnimation;
+	private LivingAnimation walkingCupAnimation;
 	private LivingAnimation standingSickAnimation;
 	private LivingAnimation walkingSickAnimation;
 
@@ -41,6 +42,7 @@ public class LivingAnimationHandler {
 
 	private LivingAnimation standingGoodAnimation;
 	private LivingAnimation standingGlassAnimation;
+	private LivingAnimation standingCupAnimation;
 	private LivingAnimation sitAnimation;
 
 	///// not orientable & animated /////
@@ -57,12 +59,14 @@ public class LivingAnimationHandler {
 
 		walkingGoodAnimation = new LivingAnimation(living, "walking_", 15, true);
 		walkingGlassAnimation = new LivingAnimation(living, "var/glass/walking_", 15, true);
+		walkingCupAnimation = new LivingAnimation(living, "var/cup/walking_", 15, true);
 		standingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
 //		walkingSickAnimation = new LivingAnimation(living, "var/sick/walking_", 15, true); // to create ?
 		walkingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
 
 		standingGoodAnimation = new LivingAnimation(living, "standing_", -1, true);
 		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
+		standingCupAnimation = new LivingAnimation(living, "var/cup/standing_", -1, true);
 		sitAnimation = new LivingAnimation(living, "var/sit/", -1, true);
 
 		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
@@ -80,6 +84,8 @@ public class LivingAnimationHandler {
 			return getStandingWalkingAnimation(standingGoodAnimation, walkingGoodAnimation);
 		case GLASS:
 			return getStandingWalkingAnimation(standingGlassAnimation, walkingGlassAnimation);
+		case CUP:
+			return getStandingWalkingAnimation(standingCupAnimation, walkingCupAnimation);
 		case SICK:
 			return getStandingWalkingAnimation(standingSickAnimation, walkingSickAnimation);
 		case BATH:
