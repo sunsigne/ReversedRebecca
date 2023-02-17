@@ -24,6 +24,7 @@ public interface PlayerAvoider extends Pusher, PathSearcher {
 		switch (playerAvoiderType) {
 
 		case AROUND:
+		case AROUND_OMNISCIENT:
 		case CUTSCENE:
 		case FORCE:
 		case THROUGH:
@@ -59,7 +60,7 @@ public interface PlayerAvoider extends Pusher, PathSearcher {
 	////////// AVOIDER TYPE ////////////
 
 	public enum AVOIDERTYPE {
-		AROUND("around"), CUTSCENE("cutscene"), FORCE("force"), THROUGH("through"), STOP("stop"), PUSH("push"), PUSH_HURT("push_hurt"), PUSH_LEFT("push_left"),
+		AROUND("around"), AROUND_OMNISCIENT("around_omniscient"), CUTSCENE("cutscene"), FORCE("force"), THROUGH("through"), STOP("stop"), PUSH("push"), PUSH_HURT("push_hurt"), PUSH_LEFT("push_left"),
 		PUSH_RIGHT("push_right"), PUSH_UP("push_up"), PUSH_DOWN("push_down");
 
 		private String name;
