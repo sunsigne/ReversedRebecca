@@ -45,6 +45,7 @@ OBJ-16 = Delta Player Distance Checker
 
 NPC-13 = Alicia
 NPC-14 = Joseph
+NPC-15 = Marie
 OBJ-17 = Down Desk
 OBJ-18 = Empty Vat
 OBJ-19 = Small Boxes Left
@@ -66,3 +67,4 @@ OBJ-34 = Giant Plant
 OBJ-35 = Trash
 OBJ-36 = Vertical Couch Middle Part
 OBJ-37 = Coffee Machine
+OBJ-38 = Horizontal Couch Right Part

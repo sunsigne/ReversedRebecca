@@ -2,7 +2,6 @@
 	////////// EN COURS ////////////
 
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
-	mettre à jour la doc sur la possibilité de mettre le nom d'un objet pour les requetes de déplacement !
 	(la version JRE renseigné sur laucn4.config n'est pas bonne
 	si on revient sur l'écran titre alors qu'il n'y avait pas de musique (genre lvl labo), il n'y aura tj pas de musique
 	!! Il est mtn possible de sortir de la table de 2 façon différente lorsqu'on a mangé des crêpes avec Sarah. C'est probablement lié au même problème que le suivant, depuis que j'ai augmenté la distance d'interaction des objets
@@ -99,6 +98,7 @@
 	- mentir sans raison à Sarah sur l'emplacement de la clef
 	- narguer Alicia dans le SAS
 
+	possibilité de réparer ou saboter la porte des toilettes du bas ! Marie se retrouve enfermée et pleure
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
@@ -162,6 +162,7 @@
 	
 	terminated -> condition à créer.
 
+	3 personnes en pleurs en même temps dans le même niveau
 	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
 	5 fruits et légumes par jours : manger un fruit virtuel
 	Fin secrète : finir le jeu en difficile
