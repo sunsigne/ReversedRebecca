@@ -1,0 +1,9 @@
+TIME -> 0 = GOTO -> NAME:DAVE, TA_INIT
+
+
+//// STATE ////
+
+
+//// START IA ////
+
+$ -> TA_INIT = TRIPLE_ACTION -> TALK*DAVE_CHOSEN_ONE
