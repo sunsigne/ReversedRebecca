@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.memory;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.system.Snitch;
 
 public class SaveRequest implements Request {
@@ -57,6 +58,11 @@ public class SaveRequest implements Request {
 		case "CANCEL_ERASE":
 			SaveEraserList.getList().removeObject(data);
 			System.out.println("CANCEL_ERASE : " + data);
+			break;
+			
+		case "DAVE":
+			new Save().registerDave(data);
+			System.out.println("DAVE : " + data);
 			break;
 		}
 	}

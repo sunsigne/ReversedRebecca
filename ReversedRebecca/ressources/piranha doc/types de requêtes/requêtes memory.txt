@@ -26,7 +26,7 @@ ATTENTION ! N'oubliez pas que MEMORY a une portée globale et NAME une portée L
 ////// SAVE //////
 
 Le Type de Requête SAVE a un rôle majeur puisqu'elle permet de sauvegarder des informations à travers tout le jeu !
-Attention ! SAVE ne sauvegarde pas directement l'information dans l'ordinateur, elle ne fait qu'en faire la demande ; c'est finir le niveau qui valide cette demande.
+Attention ! SAVE (à l'exception d'une sauvegarde de Type DAVE) ne sauvegarde pas directement l'information dans l'ordinateur, elle ne fait qu'en faire la demande ; c'est finir le niveau qui valide cette demande.
 
 exemple : 
 $ -> SAVE_CANDLE_ON = SAVE -> REGISTER, REBECCAS_ROOM*CANDLE_ON
@@ -43,6 +43,8 @@ Note : il est tout à fait possible, pour un même nom de donnée, de faire d'ab
 
 - ERASE : faire une demande de suppression d'une donnée déjà sauvegardée par le passé (cette demande sera traitée à la fin du niveau).
 - CANCEL_ERASE : annuler la demande de suppression de la donnée (la donnée ne sera donc pas supprimée à la fin du niveau).
+
+- DAVE : faire une demande de sauvegarde IMMEDIATE et PERMMANENTE d'une donnée (non effacée lors d'un reset, ni d'une désinstallation). L'idée est de simuler dans le jeu un "souvenir de la vraie vie" (puisque dans la vraie vie, chaque évênement créé des souvenirs "immédiats" et "permanants"). Le personnage de Dave se sert de ces souvenirs pour interagir directement avec le joueur (celui devant son écran d'ordinateur, et non le personnage qu'il contrôle).
 
 Note : Dans 99% des cas, cette information vous sera inutile, mais sachez qu'à la fin d'un niveau, REGISTER s'applique avant ERASE.
 Note : pour rappel, afin de lire une donnée enregistrée, il faut utiliser la condition SAVED (voir "1 - conditions.txt).

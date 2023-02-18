@@ -5,6 +5,7 @@ import java.util.TreeSet;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
@@ -13,6 +14,7 @@ import com.sunsigne.reversedrebecca.system.Snitch;
 public class Save {
 
 	private String file = "save.csv";
+	private String dave_file = "dave.csv";
 	private String char_file = "characteristics.csv";
 	private boolean userData = true;
 
@@ -34,7 +36,9 @@ public class Save {
 
 	public void loadSave() {
 
-		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
+		String[] saved_data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
+		String[] dave_data = new FileTask().read(userData, dave_file).split(System.getProperty("line.separator"));
+		String[] data = new ArrayCombiner<String>().combine(String.class, saved_data, dave_data);
 
 		for (String tempDatum : data) {
 			if (tempDatum.toLowerCase().contains("currentlvl"))
@@ -76,6 +80,28 @@ public class Save {
 		new FileTask().write(file, fileContent);
 	}
 
+	public void registerDave(String data) {
+
+		String[] oldData = new FileTask().read(userData, dave_file).split(System.getProperty("line.separator"));
+
+		// regroupd all data into a non-duplicated sorted alphabetically structure (set)
+		Set<String> set = new TreeSet<>();
+
+		// adding oldData into set
+		for (String tempString : oldData) {
+			set.add(tempString);
+		}
+
+		// adding newData into set
+		set.add(data);
+
+		// registering the result
+		String[] mergedData = new String[set.size()];
+		mergedData = set.toArray(mergedData);
+		String fileContent = String.join(System.getProperty("line.separator"), mergedData);
+		new FileTask().write(dave_file, fileContent);
+	}
+
 	private void updateCharacteristics() {
 
 		FileTask task = new FileTask();
@@ -86,9 +112,11 @@ public class Save {
 			// update the max lvl
 			task.write(tempTool.getName() + "MaxLvl", char_file, tempTool.getMaxDifficulty().getName().toUpperCase());
 			// update the start lvl
-			task.write(tempTool.getName() + "StartLvl", char_file, tempTool.getStartDifficulty().getName().toUpperCase());
+			task.write(tempTool.getName() + "StartLvl", char_file,
+					tempTool.getStartDifficulty().getName().toUpperCase());
 			// update critical chance
-			task.write(tempTool.getName() + "CriticalChance", char_file, String.valueOf(tempTool.getCriticalChance() + "%"));
+			task.write(tempTool.getName() + "CriticalChance", char_file,
+					String.valueOf(tempTool.getCriticalChance() + "%"));
 		}
 	}
 
