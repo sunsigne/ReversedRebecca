@@ -73,3 +73,4 @@ OBJ-35 = Trash
 OBJ-36 = Vertical Couch Middle Part
 OBJ-37 = Coffee Machine
 OBJ-38 = Horizontal Couch Right Part
+OBJ-39 = Toilet Door
