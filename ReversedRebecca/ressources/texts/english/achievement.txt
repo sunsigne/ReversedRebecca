@@ -7,10 +7,13 @@ CookiesText = Eat#100#cookies
 
 ///// GREEN /////
 
-TerminatedTitle = TERMINATED!
-TerminatedText = Permanent#death#on#a#terminator
+CryingTitle = The#taste#of#your#tears
+CryingText = Three#in#tears#at#the#same#time
 
 ///// YELLOW /////
+
+TerminatedTitle = TERMINATED!
+TerminatedText = Permanent#death#on#a#terminator
 
 ///// ORANGE /////
 

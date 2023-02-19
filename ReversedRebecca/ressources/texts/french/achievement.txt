@@ -7,10 +7,13 @@ CookiesText = Manger#100#cookies
 
 ///// GREEN /////
 
-TerminatedTitle = EXTERMINATION#!
-TerminatedText = Mort#definitive#sur#un#terminator
+CryingTitle = Le#gout#de#vos#larmes
+CryingText = Trois#en#larmes#en#meme#temps
 
 ///// YELLOW /////
+
+TerminatedTitle = EXTERMINATION#!
+TerminatedText = Mort#definitive#sur#un#terminator
 
 ///// ORANGE /////
 
