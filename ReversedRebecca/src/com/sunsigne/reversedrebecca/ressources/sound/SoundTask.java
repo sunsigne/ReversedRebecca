@@ -139,6 +139,7 @@ public class SoundTask implements CameraDependency {
 	}
 
 	public void stopMusic(boolean transition) {
+		musicName = null;
 		new MusicTransition(null, transition);
 	}
 
