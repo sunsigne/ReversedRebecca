@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	ajouter le son du sabotage des toilettes
 	son quand joseph s'assoit / quand marie se lève -> faire un son quand elle commence à pleurer ? pareil pour jean ?
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	(la version JRE renseigné sur laucn4.config n'est pas bonne
