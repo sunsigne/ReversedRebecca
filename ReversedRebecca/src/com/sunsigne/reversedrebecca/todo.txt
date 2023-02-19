@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	son quand joseph s'assoit / quand marie se lève -> faire un son quand elle commence à pleurer ? pareil pour jean ?
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
