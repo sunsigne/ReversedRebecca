@@ -4,7 +4,6 @@
 	quand rebecca vide la baignoire san prendre de douche, elle regarde à gauche, ce qui est bizarre quand on est au dessus
 	son quand joseph s'assoit / quand marie se lève -> faire un son quand elle commence à pleurer ? pareil pour jean ?
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
-	(la version JRE renseigné sur laucn4.config n'est pas bonne
 	si on revient sur l'écran titre alors qu'il n'y avait pas de musique (genre lvl labo), il n'y aura tj pas de musique
 	!! Il est mtn possible de sortir de la table de 2 façon différente lorsqu'on a mangé des crêpes avec Sarah. C'est probablement lié au même problème que le suivant, depuis que j'ai augmenté la distance d'interaction des objets
 	-> ramasser les vêtement et vider la baignores sont 2 actions que l'ont peut faire en même temps ...
