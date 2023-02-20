@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzler.hole.upward;
 
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.LayerSendable;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
@@ -18,6 +17,7 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 	private NullHoleUpwardObject(DIRECTION facing, int x, int y, boolean onLight) {
 		super(LVL.NULL, facing, x, y);
 		this.onLight = onLight;
+		this.invisible = onLight;
 	}
 
 	////////// INTERACTION ////////////
@@ -54,21 +54,13 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 		sendToLight();
 	}
 
-	////////// TEXTURE ////////////
-
-	@Override
-	public BufferedImage getImage() {
-		if (onLight)
-			return super.getImage();
-		else
-			return null;
-	}
-
 	////////// RENDER ////////////
+
+	private boolean invisible;
 
 	@Override
 	public void render(Graphics g) {
-		if (onLight)
+		if (onLight && invisible == false)
 			super.render(g);
 	}
 
