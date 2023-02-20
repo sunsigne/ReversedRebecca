@@ -69,7 +69,7 @@ public class LivingAnimationHandler {
 		standingCupAnimation = new LivingAnimation(living, "var/cup/standing_", -1, true);
 		sitAnimation = new LivingAnimation(living, "var/sit/", -1, true);
 
-		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 58, false);
+		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 59, false);
 		cryAnimation = new LivingAnimation(living, "var/fixed/cry", 50, false);
 
 		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
