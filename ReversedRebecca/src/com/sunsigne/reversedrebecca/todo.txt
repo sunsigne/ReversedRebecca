@@ -33,17 +33,15 @@
 
 	////////// FACILE ////////////
 
-	lorsqu'on clique "qq part" au niveau du volume, le bouton de scale devrait s'y coller
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
-	prévenir de la sauvegarde de progression sur le Quiet end lvl
 	les flêches pour le déplacement doit ête dit qq part
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
-	préciser "sauvegarde" au lieu de "chargement" lorsque cette dernière a lieu (ou du moins rendre + claire celle de l'écran de fin)
+	supprimer "sauvegarde" sur l'écran de fin de niveau
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
 

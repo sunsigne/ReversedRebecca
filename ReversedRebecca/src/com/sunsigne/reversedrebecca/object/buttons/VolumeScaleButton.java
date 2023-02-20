@@ -27,7 +27,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	}
 
 	////////// NAME ////////////
-	
+
 	@Override
 	public String toString() {
 		var clazz = "BUTTON VOLUME SCALE";
@@ -35,7 +35,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		var currentVolume = volume.getRegisteredVolume();
 		return clazz + " : " + name + " = " + currentVolume;
 	}
-		
+
 	////////// VOLUME ////////////
 
 	private Volume volume;
@@ -145,12 +145,14 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isSelected() == false)
+		if (isExtendedSelected() == false)
 			return;
 
 		holding = true;
 		new GameCursor().setCursor(null);
-		new MousePos().setX(getX());
+
+		if (isSelected())
+			new MousePos().setX(getX());
 	}
 
 	@Override
@@ -176,11 +178,31 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	}
 
 	@Override
+	public boolean isSelected() {
+		return mouseOver(new MousePos().get(), getRect()) && isClickable();
+	}
+
+	public boolean isExtendedSelected() {
+		return mouseOver(new MousePos().get(), getExtendedRect()) && isClickable();
+	}
+
+	////////// SIZE ////////////
+
+	@Override
 	public int[] getRect() {
 		int[] rect = new int[4];
 		rect[0] = getX() - 1;
 		rect[1] = getY();
 		rect[2] = getWidth();
+		rect[3] = getHeight();
+		return rect;
+	}
+
+	public int[] getExtendedRect() {
+		int[] rect = new int[4];
+		rect[0] = xmin - 1;
+		rect[1] = getY();
+		rect[2] = xmax - (xmin - 1) + getWidth();
 		rect[3] = getHeight();
 		return rect;
 	}
