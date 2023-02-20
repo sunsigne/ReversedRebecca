@@ -24,6 +24,8 @@ public class GameList<T> {
 			return array_list;
 		case LINKED:
 			while (linked_list.remove(null));
+			if(linked_list.size() < 0)
+				return array_list;
 			return linked_list;
 		}
 		return null;
