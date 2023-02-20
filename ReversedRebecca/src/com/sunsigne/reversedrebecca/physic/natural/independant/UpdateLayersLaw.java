@@ -33,11 +33,12 @@ public class UpdateLayersLaw extends IndependantLaw {
 
 		World world = (World) object;
 
-		if (layer == world.getLayer(false))
+		var world_layer = world.getLayer(false);		
+		if (layer == world_layer)
 			return;
 
 		updateLayerVisibilities(world);
-		registerNewLayer(world);
+		registerNewLayer(world, world_layer);
 	}
 
 	public void updateLayerVisibilities(World world) {
@@ -54,9 +55,9 @@ public class UpdateLayersLaw extends IndependantLaw {
 		}
 	}
 
-	private void registerNewLayer(World world) {
+	private void registerNewLayer(World world, LAYER world_layer) {
 		layer.getHandler().removeObject(world);
-		layer = world.getLayer(false);
+		layer = world_layer;
 		layer.addObject(world);
 	}
 
