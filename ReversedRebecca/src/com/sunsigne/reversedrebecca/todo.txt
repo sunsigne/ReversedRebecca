@@ -59,7 +59,6 @@
 	
 	////////// RR000 ////////////
 	
-	- rajouter des zzz quand rebecca ronfle
 	pas fini : nombre de fins
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	toutes les saved "world" ont été verifiées, pas les autres !
