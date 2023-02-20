@@ -68,6 +68,20 @@ Le Type de Requête RANDOM accepte les "Conditions" suivantes :
 - PERCENTAGE:X (remplacer "X" par un nombre), la première action à X % de chances de se produire. Dans le cas contraire, la seconde action se produira.
 
 
+////// MENU //////
+
+Le Type de Requête MENU permet de savoir si le jeu est actuellement sur un écran de chargement ou sur un menu (par exemple, l'écran titre).
+
+exemple :
+TIME -> 0 = MENU -> TRUE ? NULL / CREATE_BONUSTEXT_ZZZ
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : un menu est-il ouvert ?
+- si oui, n'effectuer aucune action
+- sinon, effectuer l'action CREATE_BONUSTEXT_ZZZ (qui est une balise comme pour GOTO)
+
+Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
+
+
 ////// PLAYER_FUTHER_THAN //////
 
 Le Type de Requête PLAYER_FUTHER_THAN permet de savoir le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
@@ -103,7 +117,7 @@ Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde,
 
 ////// CHOOSING //////
 
-Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir type de reqête CHOICE dans "requêtes actions".
+Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir type de reqête CHOICE dans "requêtes actions").
 Cela peut nottament avoir un intérêt lors du déclanchement de certain évênements.
 
 exemple :
