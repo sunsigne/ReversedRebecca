@@ -96,7 +96,6 @@
 	- enfermer Marie dans les toilettes
 
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
-	possibilité de réparer ou saboter la porte des toilettes du bas ! Marie se retrouve enfermée et pleure
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
