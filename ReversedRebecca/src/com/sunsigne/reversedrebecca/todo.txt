@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -94,7 +93,9 @@
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef
 	- narguer Alicia dans le SAS
+	- enfermer Marie dans les toilettes
 
+	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	possibilité de réparer ou saboter la porte des toilettes du bas ! Marie se retrouve enfermée et pleure
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
@@ -107,8 +108,6 @@
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
 	ajouter des réactions des personnages dans quand (si) ils voient le pipi
 	créer un parking pour l'entrée "des visiteurs"
-	texture : plante de la salle de pause à refaire
-	la pancarte devant les toilettes doit dire "merci de laisser les toilettes dans le même état que vous les avez trouvé"
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
