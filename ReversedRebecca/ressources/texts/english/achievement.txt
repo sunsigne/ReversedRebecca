@@ -6,6 +6,8 @@ CookiesTitle = You're#a#diabetic,#Becky
 CookiesText = Eat#100#cookies
 FruitTitle = Cyber-Vegetarian
 FruitText = Eat#a#virtual#fruit
+FirstKillTitle = Meat#pancake
+FirstKillText = Eliminate#Alicia
 
 ///// GREEN /////
 

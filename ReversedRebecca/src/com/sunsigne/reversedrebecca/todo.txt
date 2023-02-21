@@ -155,9 +155,12 @@
 
 	////////// SUCCES ////////////
 	
-	terminated -> condition à créer.
+	vérifier la couleur de tous les succès
+	
+	akward -> en vert ?
+	terminated -> condition à créer + à redesigner
+	firstKill -> condition à créer
 
-	Le noir qui meurt en premier : pousser Alicia sous un eboulement	
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
