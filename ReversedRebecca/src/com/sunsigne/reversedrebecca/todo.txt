@@ -13,7 +13,7 @@
 
 	////////// DIFFICILE ////////////
 		
-	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre"
+	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
