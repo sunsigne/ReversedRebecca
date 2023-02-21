@@ -4,7 +4,7 @@ AwkwardTitle = That#was#awkward...
 AwkwardText = Being#denied#a#hug
 CookiesTitle = You're#a#diabetic,#Becky
 CookiesText = Eat#100#cookies
-FruitTitle = Vegetarian
+FruitTitle = Cyber-Vegetarian
 FruitText = Eat#a#virtual#fruit
 
 ///// GREEN /////
