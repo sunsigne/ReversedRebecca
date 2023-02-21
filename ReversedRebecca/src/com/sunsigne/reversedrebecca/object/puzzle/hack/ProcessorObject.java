@@ -112,7 +112,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	////////// RENDER ////////////
 
-	private String text;
+	protected String text;
 
 	@Override
 	public void render(Graphics g) {
