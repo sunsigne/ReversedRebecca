@@ -1,0 +1,5 @@
+rebecca = object = worry = C'est#un#sacré#éboulement…#Il@y#a#moyen#de#s'en#débarrasser#?
+mika = player = serious = L'huile#de#coude.
+rebecca = object = sad = Je#passe.
+rebecca = object = sad = Je#vais#voir#s'il#existe#une#autre#solution.
+mika = player = serious = Comme#tu#veux,#moi#j'y#vais#à#l'ancienne.

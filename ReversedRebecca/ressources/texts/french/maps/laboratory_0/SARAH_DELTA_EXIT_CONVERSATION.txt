@@ -1,0 +1,9 @@
+sarah = delta = wink = Delta,#tu#as#une#minute#?
+delta = sarah = wink = Bien#sûr#!#Comment#je#peux#t'aider#?
+sarah = delta = happy = Je#crois#me#souvenir#que@tu#t'y#connais#en#vol#industriel,#non#?
+delta = sarah = laugh_var = Ha#!#C'est#une#longue#histoire,#ça#!
+sarah = delta = wink = Je#ne#suis#pas#pressée.
+delta = sarah = happy = Ok.#Tu#te#souviens#de#ces#histoire#avec#mon#frère#?
+sarah = delta = laugh = Comment#oublier#?
+delta = sarah = surprised = Ho#!#Ça#me#fait#penser#que#je#ne#t'ai#pas#raconté@la#dernière#!#Figure-toi#que…
+rebecca = DOWN = you_silly = Je#pense#qu'elles#en#ont#pour#un#moment.@Je#ferais#mieux#de#nous#trouver#une#sortie.
