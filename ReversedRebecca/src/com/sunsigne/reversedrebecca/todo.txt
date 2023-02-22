@@ -163,7 +163,6 @@
 	terminated -> condition à créer + à redesigner
 	firstKill -> condition à créer
 
-	testosterone à créer (condition déjà établie)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
