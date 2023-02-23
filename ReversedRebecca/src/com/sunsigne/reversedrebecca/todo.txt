@@ -1,7 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	! gros gros lags dans inquery scenario, lorsqu'on se rapproche de camille APR7S que Sarah y soit passée
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -96,8 +95,7 @@
 	- narguer Alicia dans le SAS
 	- enfermer Marie dans les toilettes
 
-	mika exit : quand on ramasse les bobmes, dialogue différent + trouver un moyen pour faire en sorte que le joueur comrpenne que s'il doit recommencer les encouragement, c'est parce qu'il est parti + faire l'après bisou + SAVE le bisou
-
+	mika exit : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
@@ -128,6 +126,7 @@
 	////////// SONS ////////////
 	
 	faire le bon bruit quand on ouvre le coffre	
+	faire en sorte que toutes les musiques loop
 	
 	////////// A CREER PLUS TARD ////////////
 	
