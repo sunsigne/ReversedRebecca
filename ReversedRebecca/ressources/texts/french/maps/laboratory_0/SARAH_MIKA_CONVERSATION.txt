@@ -3,8 +3,7 @@ mika = sarah = serious = Je#sortais#de#la#salle#de#pause,@quand#j'ai#entendu#une
 mika = sarah = doubt = Je#n'ai#pas#vu#l'explosion,@mais#j'en#reconnais#le#bruit.
 mika = sarah = serious = Juste#après,#ce#mec#"venu#de#nulle#part",@sort#tranquillement#du#bureau#d'Alicia#!
 mika = sarah = serious = Je#lui#ai#couru#après.#La#suite,#tu#la#connais.
-sarah = mika = fine = Je#vois.#Je#pense#qu'il#s'agit#d'un#vol#industriel.
-sarah = mika = happy =  Mais…#Un#peu#musclé.@Tu#as#vu#s'il#avait#quelque#chose#entre#les#mains#?
-mika = sarah = serious = Non.#Je#n'est#pas#pensé#à#regarder.
+sarah = mika = fine = Je#vois.@Je#pense#qu'on#est#victime#d'un#vol#industriel.
+sarah = mika = happy =  Enfin…#Une#version#un#peu#musclé,#quoi.@Tu#as#vu#s'il#tenait#quelque#chose#?
+mika = sarah = serious = Non.#Je#n'ai#pas#pensé#à#regarder.
 sarah = mika = happy =  Ok.#Merci#pour#les#infos#!
-mika = sarah = doubt = Ouais,#ouais…

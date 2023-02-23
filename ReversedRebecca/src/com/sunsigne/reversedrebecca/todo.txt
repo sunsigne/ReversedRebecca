@@ -87,7 +87,7 @@
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
 	
-	
+	exit : ajouter dialogues entre sarah et delta 
 	
 	karma actions :
 	- saboter l'ordinateur de bernard
