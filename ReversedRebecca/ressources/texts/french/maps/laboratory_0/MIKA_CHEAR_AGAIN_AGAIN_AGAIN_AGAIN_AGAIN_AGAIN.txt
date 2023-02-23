@@ -1,2 +1,2 @@
-rebecca = object = excited = Allez#Mika#!#Tu#y#es#presque#!
-mika = DOWN = angry = OUAIS#!
+rebecca = object = laugh = Mika#!#Mika#!#Mika#!
+mika = DOWN = angry_var = JE#SUIS#REMONTÉ#À#BLOC#!
