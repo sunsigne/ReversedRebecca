@@ -57,9 +57,8 @@
 	
 	////////// RR000 ////////////
 	
-	pas fini : nombre de fins
+	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	toutes les saved "world" ont été verifiées, pas les autres !
 	traduction english pas fini (les actionns)
 	
 	////////// WS000 ////////////
@@ -70,6 +69,7 @@
 	////////// LVL001 ////////////
 	
 	scénario sadique et psycophathe pas encore faits
+	reduire le temps de Joseph devant la bibliothèque
 	
 	pré-puzzle :
 	scénario : exit
