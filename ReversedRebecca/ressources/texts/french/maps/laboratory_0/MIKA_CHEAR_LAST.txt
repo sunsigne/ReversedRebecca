@@ -1,2 +1,2 @@
-rebecca = object = laugh = MIKA#!MIKA#!MIKA#!
+rebecca = object = laugh = MIKA#!#MIKA#!#MIKA#!
 mika = DOWN = angry = RHAAAAA#!

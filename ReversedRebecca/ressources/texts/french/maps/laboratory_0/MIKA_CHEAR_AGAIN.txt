@@ -1,2 +1,2 @@
-rebecca = object = determinated = Allez#Mika#!#Je crois#en#toi#!
+rebecca = object = determinated = Allez#Mika#!#Je#crois#en#toi#!
 mika = DOWN = angry = C'est#lourd…#Mais#ça#m'aide#!
