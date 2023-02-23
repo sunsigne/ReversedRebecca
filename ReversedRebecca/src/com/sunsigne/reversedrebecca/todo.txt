@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	! gros gros lags dans inquery scenario, lorsqu'on se rapproche de camille APR7S que Sarah y soit passée
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
