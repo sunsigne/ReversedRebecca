@@ -74,8 +74,8 @@
 	
 	pré-puzzle :
 	scénario : exit
-	- gérer le comportement de Sarah 
-	- gérer le compotement de Mika
+	- Sarah et delta : ajouter dialogues
+	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
 	scénarion : inquery
@@ -85,9 +85,7 @@
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
-	
-	exit : ajouter dialogues entre sarah et delta 
-	
+
 	karma actions :
 	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
@@ -95,7 +93,6 @@
 	- narguer Alicia dans le SAS
 	- enfermer Marie dans les toilettes
 
-	mika exit : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
