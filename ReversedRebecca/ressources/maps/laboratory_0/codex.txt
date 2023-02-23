@@ -40,6 +40,8 @@ OBJ-13 = Cyan Key Computer
 OBJ-14 = Sarah Desk Key Room Path Checker
 OBJ-15 = Delta Special Chair
 OBJ-16 = Delta Player Distance Checker
+OBJ-40 = Jean Chair
+OBJ-41 = Delta Chair
 
 ///// LEFT AREA /////
 
