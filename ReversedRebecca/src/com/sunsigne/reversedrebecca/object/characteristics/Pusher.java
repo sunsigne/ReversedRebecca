@@ -111,19 +111,19 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	private DIRECTION getFilteredDirection(Pushable pushable, DIRECTION direction) {
 		switch (direction) {
 		case LEFT:
-			if (getX() < pushable.getX())
+			if (isBlockingPath() && getX() < pushable.getX())
 				return DIRECTION.RIGHT;
 			break;
 		case RIGHT:
-			if (getX() > pushable.getX())
+			if (isBlockingPath() && getX() > pushable.getX())
 				return DIRECTION.LEFT;
 			break;
 		case UP:
-			if (getY() < pushable.getY())
+			if (isBlockingPath() && getY() < pushable.getY())
 				return DIRECTION.DOWN;
 			break;
 		case DOWN:
-			if (getY() > pushable.getY())
+			if (isBlockingPath() && getY() > pushable.getY())
 				return DIRECTION.UP;
 			break;
 		default:
