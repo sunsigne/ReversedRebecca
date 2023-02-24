@@ -1,0 +1,5 @@
+alicia = player = happy = Du#coup,#c'est#par#où#la#sortie#?
+player = DOWN = no_sens = En#fait,#c'était#pas#là,#mais#ça#s'est#effondré.
+alicia = DOWN = surprised = Ha.
+player = alicia = worry = Mais#ne#t'en#fait#pas,#je#vais@nous#en#trouver#une#autre.
+alicia = player = happy = Ok,#je#te#suis.
