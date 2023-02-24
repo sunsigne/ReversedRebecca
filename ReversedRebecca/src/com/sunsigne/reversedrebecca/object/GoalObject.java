@@ -10,6 +10,10 @@ public class GoalObject extends GameObject implements TickFree, RenderFree {
 		super(reversed ? x / Size.M : x * Size.M, reversed ? y / Size.M : y * Size.M);
 	}
 	
+	public boolean doesTriggerGoalCondition() {
+		return true;
+	}
+	
 	////////// NAME ////////////
 
 	@Override

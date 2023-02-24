@@ -24,7 +24,12 @@ TIME -> 20 = MOVE -> PLAYER
 Lorsque la Condition sera vérifiée, l'objet se rendra "à-côté" du joueur. L'endroit exact sera déterminé en fonction de la distance "à vol d'oiseau" la plus courte.
 
 Attention : le GOAL est défini au moment du lancement de la Requête et n'est pas recalculé "automatiquement" ! Dit autrement ; si le joueur s'est déplacé pendant le mouvement de l'objet, ce dernier ne changera pas sa destination.
-Attention : le point d'arrivée - dont les coordonnées sont "hasardeuses" - déclenchera un Type de Condition GOAL (voir "1 - conditions.txt") ! Soyez prudents et assurez-vous de gérer ce cas de figure en cas d'arrivée "par hasard" sur un point important (par exemple, grâce au Type de requête MEMORY et à son écriture conditionnelle, voir "requêtes memory.txt")
+Note : Il est tout à fait possible de remédier à ce genre de problème en créant une boucle, par exemple comme ceci :
+
+$ -> FOLLOW_PLAYER = WAITFOR -> PLAYER_FUTHER_THAN:2 ? MOVE:PLAYER, FREEZE_FOLLOW_PLAYER
+$ -> FREEZE_FOLLOW_PLAYER = WAITFOR -> TIMER:1 ? FACING:PLAYER, FOLLOW_PLAYER
+
+Dans cet exemple, la position exacte du joueur sera recalculée toutes les secondes.
 
 Note : il n'est pas possible de vérifier une Condition du genre "GOAL -> PLAYER". L'écriture du Type de Condition GOAL ne peut pas s'adapter à l'utilisation "spéciale" du Type de Requête MOVE. Il faudra "ruser" afin de vérifier l'arrivée de votre objet, par exemple de la façon suivante :
 

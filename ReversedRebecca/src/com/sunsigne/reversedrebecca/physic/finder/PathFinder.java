@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.physic.finder;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
@@ -37,7 +38,7 @@ public class PathFinder implements Position {
 		setY(searcher.getY());
 		calculDistance();
 		path = findPath(allow_complex_path);
-		
+
 	}
 
 	private PathSearcher initial_searcher;
@@ -157,13 +158,18 @@ public class PathFinder implements Position {
 
 	private DIRECTION potentialNewPath() {
 		searcher.setGoal(null);
-		new GoalCondition().registerValue(searcher, goal);
+		registerGoalCondition();
 
 		if (searcher.getGoal() == null)
 			return path;
 
 		PathFinder pathFinder = new PathFinder(initial_searcher, searcher, searcher.getGoal(), true, handler);
 		return pathFinder.getPath();
+	}
+
+	private void registerGoalCondition() {
+		if (goal instanceof GoalObject == false || ((GoalObject) goal).doesTriggerGoalCondition())
+			new GoalCondition().registerValue(searcher, goal);
 	}
 
 	private DIRECTION getStraightPath() {

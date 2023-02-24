@@ -73,7 +73,13 @@ public class MoveRequest implements Request {
 			y = new GoalObject(0, pos.getY(), true).getY();
 		}
 
-		GoalObject goal = new GoalObject(x, y, false);
+		GoalObject goal = new GoalObject(x, y, false) {
+
+			@Override
+			public boolean doesTriggerGoalCondition() {
+				return target.contains("-");
+			}
+		};
 
 		if (object instanceof SpeedVariator) {
 			SpeedVariator variator = (SpeedVariator) object;
