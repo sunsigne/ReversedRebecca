@@ -73,7 +73,7 @@
 	
 	pré-puzzle :
 	scénario : exit
-	- Sarah et delta : ajouter dialogues
+	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jena pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
