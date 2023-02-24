@@ -1,6 +1,7 @@
 	
 	////////// EN COURS ////////////
 
+	creer une sécurité pour le type de move "joueur" ! de sorte que le pathfinder ne déclare pas le goal comme atteint
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
