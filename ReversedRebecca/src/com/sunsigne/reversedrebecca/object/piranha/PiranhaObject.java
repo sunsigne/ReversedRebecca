@@ -28,6 +28,7 @@ public abstract class PiranhaObject extends GameObject
 	public PiranhaObject(String name, int x, int y) {
 		super(x, y);
 		this.name = name.toLowerCase();
+		set_stun_at_waitfor_attribution(true);
 		setBlockingPath(true);
 
 		if (World.get() != null)
@@ -75,6 +76,15 @@ public abstract class PiranhaObject extends GameObject
 	////////// WAITFOR ////////////
 
 	private ConditionalListener waitfor;
+	private boolean stun_at_waitfor_attribution;
+
+	public boolean does_stun_at_waitfor_attribution() {
+		return stun_at_waitfor_attribution;
+	}
+
+	public void set_stun_at_waitfor_attribution(boolean stun_at_waitfor_attribution) {
+		this.stun_at_waitfor_attribution = stun_at_waitfor_attribution;
+	}
 
 	@Override
 	public ConditionalListener getWaitfor() {
@@ -83,7 +93,7 @@ public abstract class PiranhaObject extends GameObject
 
 	@Override
 	public void setWaitfor(ConditionalListener listener) {
-		if (listener == null)
+		if (listener == null && does_stun_at_waitfor_attribution())
 			setStunned(false);
 		this.waitfor = listener;
 	}
@@ -212,7 +222,7 @@ public abstract class PiranhaObject extends GameObject
 	////////// COLLISION ////////////
 
 	private boolean blockingSight;
-	
+
 	@Override
 	public boolean isBlockingSight() {
 		return blockingSight;
@@ -221,7 +231,7 @@ public abstract class PiranhaObject extends GameObject
 	public void setBlockingSight(boolean blockingSight) {
 		this.blockingSight = blockingSight;
 	}
-	
+
 	private boolean blockingPath;
 
 	@Override

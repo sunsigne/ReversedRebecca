@@ -38,6 +38,22 @@ Attention ! Lorsqu'un nom est utilisé à la place d'une direction, un PathFinde
 Attention ! Il est facile de se tromper : c'est seulement l'orientation de l'objet dans lequel est écrite cette Instruction qui change ! Si on veut changer le facing du player ou d'un npc, il faut écrire cette Instruction dans LEURS fichiers.
 
 
+////// WAITFOR_STUN //////
+
+Le Type de Requête WAITFOR_STUN permet de changer une propriété très spécifique de l'objet. Avant de la détailler, sachez que ce Type de Requête vous sera inutile 99,9% du temps.
+Lorsqu'un objet se voit attribuer un "waitfor" (voir "requêtes autres.txt"), il est "stun" pendant un très court instant. Ce "mini-stun" assure la cohérence du code et prévient certains bugs, mais a pour conséquence d'immobiliser l'objet (toujours pendant un très court instant).
+Il peut exister une situation spécifique où, par exemple, on construit une boucle "waitfor" se lançant à intervalles réguliers et recalculant le goal de l'objet (voir "requêtes move.txt"). Cette boucle va donc "immobiliser" l'objet à chaque itération, ce qui rendra le mouvement de l'objet saccadé. En désactivant la propriété WAITFOR_STUN de l'objet, nous nous assurons de conserver un mouvement fluide.
+
+ex : 
+TIME -> 0 = WAITFOR_STUN -> FALSE
+TIME -> 0 = GOTO -> WAITFOR_STUN:FALSE
+
+Lorsque la Condition sera vérifiée, l'objet ne sera plus stun au moment de l'attribution d'un "waitfor".
+
+Note : comme vous l'aurez déjà compris, par défaut WAITFOR_STUN est défini sur "TRUE" et doit le rester le plus souvent possible.
+Attention : pour rappel, un WAITFOR_STUN activé permet de se prémunir de certains bugs. Pensez à bien le réactiver lorsque vous n'êtes plus dans le cas particulier qui nécessitait sa désactivation.
+
+
 ////// BLOCKING_PATH //////
 
 
