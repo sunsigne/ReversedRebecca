@@ -59,7 +59,7 @@
 	
 	////////// RR000 ////////////
 	
-	dire "j'ai fait des crêpes" au momeent exact où sarah atteind la bibliothèque = bug !
+	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug !
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	traduction english pas fini (les actionns)
@@ -74,12 +74,11 @@
 	scénario sadique et psycophathe pas encore faits
 	reduire le temps de Joseph devant la bibliothèque
 	
-	pré-puzzle :
 	scénario : exit
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jena pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
-	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique"
+	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la prote du bas
 	
 	scénarion : inquery
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
