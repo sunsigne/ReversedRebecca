@@ -26,8 +26,10 @@ Lorsque la Condition sera vérifiée, l'objet se rendra "à-côté" du joueur. L
 Attention : le GOAL est défini au moment du lancement de la Requête et n'est pas recalculé "automatiquement" ! Dit autrement ; si le joueur s'est déplacé pendant le mouvement de l'objet, ce dernier ne changera pas sa destination.
 Note : Il est tout à fait possible de remédier à ce genre de problème en créant une boucle, par exemple comme ceci :
 
-$ -> FOLLOW_PLAYER = WAITFOR -> PLAYER_FUTHER_THAN:2 ? MOVE:PLAYER, FREEZE_FOLLOW_PLAYER
-$ -> FREEZE_FOLLOW_PLAYER = WAITFOR -> TIMER:1 ? FACING:PLAYER, FOLLOW_PLAYER
+$ -> START_FOLLOWING = GOTO -> PLAYER_AVOIDER_TYPE:THROUGH, WAITFOR_STUN:FALSE, FOLLOW_PLAYER
+$ -> FOLLOW_PLAYER = WAITFOR -> TIMER:1 ? PARSE_FOLLOW_PLAYER_FAR, PARSE_FOLLOW_PLAYER_CLOSE, FOLLOW_PLAYER
+$ -> PARSE_FOLLOW_PLAYER_FAR = PLAYER_FUTHER_THAN -> 2 ? MOVE:PLAYER / NULL
+$ -> PARSE_FOLLOW_PLAYER_CLOSE = PLAYER_CLOSER_THAN -> 3 ? FACING:PLAYER / NULL
 
 Dans cet exemple, la position exacte du joueur sera recalculée toutes les secondes.
 
