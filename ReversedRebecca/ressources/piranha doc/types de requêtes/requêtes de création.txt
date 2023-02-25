@@ -1,6 +1,8 @@
 Attention ! Pour tous les Types de Requête suivants, leur effet s'applique sur la même "couche" que l'objet qui le demande ("voir "couches" dans "index.txt"). Pour rappel et au besoin, vous pouvez utiliser SET-UP, qui est un "objet virtuel" se trouvant sur la même couche que celle où le joueur a commencé.
 Également, en lieu et place du couple de coordonnées x-y, il est possible d'écrire le mot clef ONTHESPOT; les coordonnées seront dans ce cas automatiquement celles de l'objet Piranha qui demande l'action.
 
+Attention : Pour les Types de Requête suivant, la syntaxe est particulièrement exigeante : le signe ":" est parfois utilisé en parallèle au signe habituel "," comme "séparateur de cibles". Soyez très attentif aux exemples donnés afin d'écrire une Requête correcte !
+
 ////// CREATE //////
 
 Le Type de Requête CREATE permet de créer un objet à partir de coordonnées x, y et "z", d'une pastille RGB (voir "mappable" dans le dossier "maps").
@@ -15,6 +17,7 @@ Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée a
 Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
 ATTENTION ! Ne confondait pas la coordonnée "z" avec la notion de LAYER (voir "index.txt"), il s'agit ici d'un comportement VISUEL de l'objet vis-à-vis des autres.
 
+Note : les objets devraient toujours être créés dans la sous-couche "world", c'est pourquoi ce paramètre n'est pas demandé pour ce Type de Requête.
 Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Lorsque c'est le cas, définissez la par défaut comme BACK ou FRONT et tenez-vous-y :
 L'avantage de choisir BACK par défaut : l'objet le plus récent aura toujours un index de 1.
 L'avantage de choisir FRONT par défaut : les objets auront tendance à garder le même index.
@@ -26,9 +29,9 @@ Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pa
 Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
 
 exemple :
-TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:1,2,BATH_HAIR
+TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,BATH_HAIR
 
-Lorsque la Condition sera vérifiée, sera créée aux coordonnées x=10 y=20 un objet apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
+Lorsque la Condition sera vérifiée, sera créée dans le monde aux coordonnées x=10 y=20 un objet apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
 
 Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez besoin que votre objet soit "interactif", il faudra créer un objet Piranha au même emplacement que ce dernier.
 
@@ -42,9 +45,10 @@ En plus des mêmes Cibles que celles demandées par CREATE_DECORATION, CREATE_AN
 - si l'animation doit recommencer une fois terminée. Exemple : false, l'animation s'arrêtera sur la dernière image.
 
 exemple :
-! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8-BACK:1,2,BATH_FILLING,3,90,FALSE
+! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8-BACK:WORLD,1,2,BATH_FILLING,3,90,FALSE
 
 Lorsque la Condition sera vérifiée, sera créé un objet animé :
+- dans la sous-couche "world",
 - dont les coordonnées sont x=1 et y=8,
 - apparaissant derrière les autres objets (cf le joueur)
 - de largeur 1 case, de hauteur 2 cases,
@@ -151,8 +155,6 @@ L'intérêt du "Type de Requête éboulement" réside dans le fait que ce dernie
 - un bruit d'éboulement est joué.
 - des "bulles de textes "éboulement"" apparaissent autour de la zone sur laquelle l'éboulement est en train d'avoir lieu.
 - un objet de type "gravas" est créé au bout de quelques secondes.
-
-Attention : comme vous le voyez dans l'exemple ci-dessous, le signe ":", commun pour les Types de Requêtes de creations, n'est pas utilisé pour ce Type de Requête . À la place, le signe "," reprend son rôle habituel de "séparateur de cibles".
 
 exemple :
 TIME -> 10 = LANDSLIDE -> UP,26-58,255-1

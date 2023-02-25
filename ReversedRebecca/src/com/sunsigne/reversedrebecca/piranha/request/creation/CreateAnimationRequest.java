@@ -47,21 +47,22 @@ public class CreateAnimationRequest implements IndexRequest {
 
 		// determinate the index
 
-		Handler handler = object.getHandler();
+		String data = String.valueOf(target.split(":")[1]);
+		String subLayer = String.valueOf(data.split(",")[0]);
+		Handler handler = getSubLayer(object, subLayer);
 		int index = getIndex(handler, onTheSpot ? pos.split("-")[1] : pos.split("-")[2]);
 
 		// determinate the size and the name
 
-		String data = String.valueOf(target.split(":")[1]);
-		int width = Integer.parseInt(data.split(",")[0]);
-		int height = Integer.parseInt(data.split(",")[1]);
-		String name = String.valueOf(data.split(",")[2]);
+		int width = Integer.parseInt(data.split(",")[1]);
+		int height = Integer.parseInt(data.split(",")[2]);
+		String name = String.valueOf(data.split(",")[3]);
 
 		// determine the animation characteristics
 
-		int frames = Integer.parseInt(data.split(",")[3]);
-		int animation_time = Integer.parseInt(data.split(",")[4]);
-		boolean cycle = Boolean.parseBoolean(data.split(",")[5]);
+		int frames = Integer.parseInt(data.split(",")[4]);
+		int animation_time = Integer.parseInt(data.split(",")[5]);
+		boolean cycle = Boolean.parseBoolean(data.split(",")[6]);
 
 		// refine data
 
@@ -75,7 +76,7 @@ public class CreateAnimationRequest implements IndexRequest {
 		// creation of the object
 
 		GameObject creation = new AnimatedDecorationObject(x, y, width, height, name, frames, animation_time, cycle);
-		object.getHandler().getList().add(index, creation);
+		handler.getList().add(index, creation);
 	}
 
 }

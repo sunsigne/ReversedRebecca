@@ -23,6 +23,18 @@ Cette information est d'autant plus importante à garder en tête avec le fichie
 Note : "l'objet" SET-UP ne "suit" pas le joueur si ce dernier change de couche, il reste là où il a été créé.
 
 
+////// SOUS-CHOUCHES //////
+
+Pour CHAQUE couche, il existe 3 sous-couches. Lorsque vous êtes amené à renseigner sur laquelle vous travaillez, retenez ceci :
+
+- GROUND : la couche "sol", qui est en dessous de world. Elle sert à stocker les objets qui doivent TOUJOURS être en dessous. Exemple : les flaques, les trous, etc.
+- WORLD : la couche du "monde" où se trouve tous les objets, les murs, les personnages, etc. Contient 95% des objets
+- LIGHT : la couche "lumière" ou "éclairage", qui est au-dessus de world. Elle contient les objets toujours au-dessus. Exemple : les ombres, les lumières, etc.
+
+Note : si vous avez un doute, préférez WORLD. Les autres couches sont situationnelles.
+Attention : la "carte" (c.-à-d. le sol) se trouve sur la couche GROUND. Ajouter un objet sur cette couche avec un index BACK créera l'objet derrière le sol (donc, il ne sera pas visible).
+
+
 ////// INDEX //////
 
 Certains Types de Requêtes se basent sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.

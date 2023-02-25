@@ -2,7 +2,7 @@
 	////////// EN COURS ////////////
 
 
-	Alicia fait des "bouge stop" bizzare lorsqu'elle suit le joueur (c'est à cause du WAITFOR qui "stun" automatiquement lorsqu'appelé)
+	créer les requêtes 'createGround/LightDecoration/Animation et delete qui va avec (et l'utiliser pour le "null rubble" du lvl001)
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -59,6 +59,7 @@
 	
 	////////// RR000 ////////////
 	
+	les chaises disparaisent pendant un court instant lorsqu'on descend
 	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug !
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
@@ -78,7 +79,7 @@
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jena pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
-	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la prote du bas
+	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la réaction après la porte du bas
 	
 	scénarion : inquery
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
@@ -94,8 +95,9 @@
 	- mentir sans raison à Sarah sur l'emplacement de la clef
 	- narguer Alicia dans le SAS
 	- enfermer Marie dans les toilettes
+	- libérer Alicia
 
-	landsslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
+	landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
 	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)

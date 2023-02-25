@@ -47,15 +47,16 @@ public class CreateDecorationRequest implements IndexRequest {
 
 		// determinate the index
 
-		Handler handler = object.getHandler();
+		String data = String.valueOf(target.split(":")[1]);
+		String subLayer = String.valueOf(data.split(",")[0]);
+		Handler handler = getSubLayer(object, subLayer);
 		int index = getIndex(handler, onTheSpot ? pos.split("-")[1] : pos.split("-")[2]);
 
 		// determinate the size and the name
 
-		String data = String.valueOf(target.split(":")[1]);
-		int width = Integer.parseInt(data.split(",")[0]);
-		int height = Integer.parseInt(data.split(",")[1]);
-		String name = String.valueOf(data.split(",")[2]);
+		int width = Integer.parseInt(data.split(",")[1]);
+		int height = Integer.parseInt(data.split(",")[2]);
+		String name = String.valueOf(data.split(",")[3]);
 
 		// refine data
 
@@ -69,7 +70,7 @@ public class CreateDecorationRequest implements IndexRequest {
 		// creation of the object
 
 		GameObject creation = new DecorationObject(x, y, width, height, name);
-		object.getHandler().getList().add(index, creation);
+		handler.getList().add(index, creation);
 	}
 
 }
