@@ -27,9 +27,12 @@ public interface IndexRequest extends Request {
 
 		// determinate the object from the index
 
-		int index = Integer.parseInt(target.split(":")[1]) - 1;
+		String data = String.valueOf(target.split(":")[1]);
+		Handler handler = getSubLayer(object, String.valueOf(data.contains(",") ? data.split(",")[0] : null));
+		int index = Integer.parseInt(data.contains(",") ? data.split(",")[1] : data) - 1;
+		
 
-		GameList<GameObject> object_list = Handler.getObjectsAtPos(object.getHandler(), goal.getX(), goal.getY(),
+		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, goal.getX(), goal.getY(),
 				object.getSize(), playerExcluded());
 
 		// if no object found
@@ -60,17 +63,19 @@ public interface IndexRequest extends Request {
 
 	public default Handler getSubLayer(PiranhaObject object, String value) {
 
+		Handler handler = object.getHandler();
+
 		switch (value.toUpperCase()) {
 
 		case "GROUND":
-			return new LayerDualizer().getGroundFromContent(object.getHandler()).getHandler();
+			return new LayerDualizer().getGroundFromContent(handler).getHandler();
 		case "WORLD":
-			return object.getHandler();
+			return handler;
 		case "LIGHT":
-			return new LayerDualizer().getLightFromContent(object.getHandler()).getHandler();
+			return new LayerDualizer().getLightFromContent(handler).getHandler();
 		}
 
-		return object.getHandler();
+		return handler;
 	}
 
 }

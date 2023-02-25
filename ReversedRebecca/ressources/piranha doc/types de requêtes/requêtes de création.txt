@@ -114,18 +114,25 @@ Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, 
 En effet, des Cibles telles que FRONT et BACK risquerait de ne pas suffire pour cibler précisémment un objet.
 
 exemple :
-TIME -> 0 = DELETE -> 10-20:1
+TIME -> 0 = DELETE -> 10-20:WORLD,1
 
-Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=20 sera supprimé.
+Lorsque la Condition sera vérifiée, l'objet contenu dans la sous-couche "world", d'index 1, et aux coordonnées x=10 y=20 sera supprimé.
 
-Attention ! DELETE est une requête puissante, les NPC et le joueur se déplaçant en permanence, ne les supprimez pas par accident !
+Attention ! DELETE est une requête puissante, les NPC se déplaçant en permanence, ne les supprimez pas par accident !
+Note : il est impossible de supprimer le joueur de cette façon : une sécurité empêche de le sélectionner à partir d'un index.
 Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si DELETE concerne l'objet en cours, toute requête après DELETE sera ignorée. Assurez-vous d'avoir utilisé AFFECTION (voir GOTO) avant la suppression afin de prendre le relais depuis un autre objet.
 
 
 ////// DELETE_ONTHESPOT //////
 
-Est un raccourci direct de DELETE, mais dont la cible "coordonnées" est incluse dans le Type de Requête.
-La cible "index" devenant unitaire, l'écriture compacte devient alors possible.
+Est un raccourci direct de DELETE. Les deux Instructions suivantes sont strictement équivalentes :
+
+TIME -> 0 = DELETE -> ONTHESPOT:WORLD,1
+TIME -> 0 = GOTO -> DELETE_ONTHESPOT:1
+
+Comme vous le constatez, les coordonnées sont définies en fonction de la position de l'objet, et la sous-couche est considérée comme étant "world".
+
+Note : la cible "index" devenant unitaire, l'écriture compacte devient alors possible. C'est d'ailleurs tout l'intérêt de ce Type de Requête.
 
 
 ////// DELETE_MYSELF //////

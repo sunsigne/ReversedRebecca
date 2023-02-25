@@ -31,7 +31,7 @@ public class DeleteOntheSpotRequest extends DeleteRequest {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		super.doAction(object, "onthespot:" + target);
+		super.doAction(object, "onthespot:world," + target);
 	}
 
 }

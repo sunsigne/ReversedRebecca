@@ -35,7 +35,11 @@ public class DeleteRequest implements IndexRequest {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		GameObject gameOject = getGameObject(object, target);
-		Handler handler = object.getHandler();
+
+		String data = String.valueOf(target.split(":")[1]);
+		String subLayer = String.valueOf(data.split(",")[0]);
+		Handler handler = getSubLayer(object, subLayer);
+
 		handler.removeObject(gameOject);
 	}
 
