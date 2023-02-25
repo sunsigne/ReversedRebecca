@@ -53,7 +53,7 @@ public interface IndexRequest extends Request {
 		switch (value.toUpperCase()) {
 
 		case "FRONT":
-			return handler.getList().size() - 1;
+			return handler.getList().size();
 		case "BACK":
 			return 0;
 		}
