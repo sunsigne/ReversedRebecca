@@ -1,8 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-
-	créer les requêtes 'createGround/LightDecoration/Animation et delete qui va avec (et l'utiliser pour le "null rubble" du lvl001)
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
