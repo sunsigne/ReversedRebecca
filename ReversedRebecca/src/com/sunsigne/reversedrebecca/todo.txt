@@ -96,6 +96,7 @@
 	- enfermer Marie dans les toilettes
 
 	landsslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
+	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)

@@ -30,4 +30,7 @@ KINDLY = Key1 % Gentiment
 BLAMING = Key2 % Culpabiliser
 SCOLDING = Key3 % Engueuler
 SABOTAGE = Key3 % Saboter
+COFFEE = Key1 % café
+TEA = Key2 % thé
+NO_THANKS = Key3 % non#merci
 
