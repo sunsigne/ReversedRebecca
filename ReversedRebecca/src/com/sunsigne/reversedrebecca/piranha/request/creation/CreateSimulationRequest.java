@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class CreateSimulationRequest implements IndexRequest {
 
@@ -61,9 +62,13 @@ public class CreateSimulationRequest implements IndexRequest {
 		path = path.toLowerCase();
 		name = name.toLowerCase();
 
+		// define the index
+		Handler handler = getSubLayer(object, "ground");
+		int index = getIndex(handler, "front");
+		
 		// creation of the object
 		GameObject creation = new SimulationAnimatedObject(x, y, width, height, path, name);
-		object.getHandler().getList().add(0, creation);
+		handler.getList().add(index, creation);
 		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "simulation_on");
 	}

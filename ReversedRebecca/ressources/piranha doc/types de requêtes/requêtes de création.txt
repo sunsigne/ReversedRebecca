@@ -62,11 +62,14 @@ Lorsque la Condition sera vérifiée, sera créé un objet animé :
 Le Type de Requête CREATE_SIMULATION permet de gérer l'animation des "dalles de générations" qu'on retrouve dans les niveaux de l'atelier (workshop).
 
 Il est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
-- L'index est fixé au minimum (càd que l'objet apparaitra en dessous de tous les autres)
+- La sous-couche est définie comme étant "GROUND"*
+- L'index est défini comme étant "FRONT"*
 - Le nombre d'images requises est fixé à exactement 5.
 - La première image reste pendant 0.65 seconde.
 - Chaque image suivante reste pendant 0.05 seconde.
 - L'animation s'arrête sur la dernière image.
+
+*Ces 2 propriétés s'assurent que l'objet apparaisse au niveau du sol, sans pour autant apparaitre "sous" la carte.
 
 exemple : 
 TIME -> 0 = CREATE_SIMULATION -> 0-0:9,11,000,0
