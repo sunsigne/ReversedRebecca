@@ -8,5 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="ressources"/>
 	<classpathentry kind="lib" path="userdata"/>
+	<classpathentry kind="lib" path="JInputNatives"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
