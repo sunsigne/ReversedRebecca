@@ -61,7 +61,7 @@
 	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug !
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	traduction english pas fini (les actionns)
+	traduction english pas fini (les actions)
 	
 	////////// WS000 ////////////
 	
@@ -112,7 +112,7 @@
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
-	rajouter un bruit de méche explosive avant la détonation d ela porte d'entrée
+	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée
 	rajouter des images d'explosion pour les explosions
 	traduire "quel taré" par "what a freak"
 	
