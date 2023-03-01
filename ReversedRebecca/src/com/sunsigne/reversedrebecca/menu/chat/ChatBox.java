@@ -22,6 +22,9 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
@@ -29,7 +32,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, TickFree, KeyboardEvent {
+public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue) {
 		this.object = object;
@@ -145,27 +148,53 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		int key = e.getKeyCode();
-		if (key == DialogueKey.getKey() && MenuIngameController.getMenu() == null) {
-
-			if (content != null) {
-				if (!content.isFulldisplayed()) {
-					content.setFulldisplayed(true);
-					return;
-				}
-			}
-
-			if (count < all_lines.length) {
-				count++;
-				goToNextLine();
-			} else
-				closeChat();
-		}
+		if (e.getKeyCode() == DialogueKey.getKey())
+			inputPressed();
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			inputPressed();
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
+	}
+
+	////////// INPUT ////////////
+
+	private void inputPressed() {
+		if (MenuIngameController.getMenu() != null)
+			return;
+
+		if (content != null) {
+			if (!content.isFulldisplayed()) {
+				content.setFulldisplayed(true);
+				return;
+			}
+		}
+
+		if (count < all_lines.length) {
+			count++;
+			goToNextLine();
+		} else
+			closeChat();
 	}
 
 }
