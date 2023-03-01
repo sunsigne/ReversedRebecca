@@ -1,30 +1,30 @@
-package com.sunsigne.reversedrebecca.world.keyboard;
+package com.sunsigne.reversedrebecca.world.controllers;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class UserCanKeyRestart extends WorldKeyboard {
+public class UserCanInputRestart extends WorldControllers {
 
-	private static WorldKeyboard worldKeyboard = new UserCanKeyRestart();
+	private static WorldControllers worldKeyboard = new UserCanInputRestart();
 
 	@Override
-	public WorldKeyboard getWorldKeyboard() {
+	public WorldControllers getWorldControllers() {
 		return worldKeyboard;
 	}
 
 	////////// KEYBOARD ////////////
 
 	@Override
-	public void keyPressed(int key) {
+	public void inputPressed(int key, int button) {
 		if (key == KeyEvent.VK_BACK_SPACE) {
 			new World(new Save().getLevel(false));
 		}
 	}
 
 	@Override
-	public void keyReleased(int key) {
+	public void inputReleased(int key, int button) {
 
 	}
 

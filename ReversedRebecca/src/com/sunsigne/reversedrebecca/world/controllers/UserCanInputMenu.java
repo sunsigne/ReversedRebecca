@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.world.keyboard;
+package com.sunsigne.reversedrebecca.world.controllers;
 
 import java.awt.event.KeyEvent;
 
@@ -6,21 +6,22 @@ import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
-public class UserCanKeyMenu extends WorldKeyboard {
+public class UserCanInputMenu extends WorldControllers {
 
-	private static WorldKeyboard worldKeyboard = new UserCanKeyMenu();
+	private static WorldControllers worldKeyboard = new UserCanInputMenu();
 
 	@Override
-	public WorldKeyboard getWorldKeyboard() {
+	public WorldControllers getWorldControllers() {
 		return worldKeyboard;
 	}
 
 	////////// KEYBOARD ////////////
 
 	@Override
-	public void keyPressed(int key) {
-		if (key != KeyEvent.VK_ESCAPE)
+	public void inputPressed(int key, int button) {
+		if (key != KeyEvent.VK_ESCAPE && button != ButtonEvent.START)
 			return;
 
 		if (MenuIngameController.getMenu() == null) {
@@ -35,7 +36,7 @@ public class UserCanKeyMenu extends WorldKeyboard {
 	}
 
 	@Override
-	public void keyReleased(int key) {
+	public void inputReleased(int key, int button) {
 
 	}
 

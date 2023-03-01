@@ -34,7 +34,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.keyboard.WorldKeyboard;
+import com.sunsigne.reversedrebecca.world.controllers.WorldControllers;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
@@ -148,7 +148,7 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void addControllers() {
-		addKeyboardListener();
+		new ForceInit().loadAllClassesInPackage(WorldControllers.class.getPackageName());
 	}
 
 	private LevelStats levelStats;
@@ -340,12 +340,6 @@ public class World implements Updatable, RenderFree {
 			new TimeCondition().registerValue(time);
 			new Snitch().registerEntry(new FormatedString().getNumber(time));
 		}
-	}
-
-	////////// KEYBOARD ////////////
-
-	private void addKeyboardListener() {
-		new ForceInit().loadAllClassesInPackage(WorldKeyboard.class.getPackageName());
 	}
 
 }

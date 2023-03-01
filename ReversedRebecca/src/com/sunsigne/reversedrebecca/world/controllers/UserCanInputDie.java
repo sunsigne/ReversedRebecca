@@ -1,23 +1,23 @@
-package com.sunsigne.reversedrebecca.world.keyboard;
+package com.sunsigne.reversedrebecca.world.controllers;
 
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
-public class UserCanKeyDie extends WorldKeyboard {
+public class UserCanInputDie extends WorldControllers {
 
-	private static WorldKeyboard worldKeyboard = new UserCanKeyDie();
+	private static WorldControllers worldKeyboard = new UserCanInputDie();
 
 	@Override
-	public WorldKeyboard getWorldKeyboard() {
+	public WorldControllers getWorldControllers() {
 		return worldKeyboard;
 	}
 
 	////////// KEYBOARD ////////////
 
 	@Override
-	public void keyPressed(int key) {
+	public void inputPressed(int key, int button) {
 		if (key == KeyEvent.VK_EXCLAMATION_MARK) {
 			Player player = new PlayerFinder().getPlayer();
 			player.removeHp(player.getMaxHp());
@@ -26,7 +26,7 @@ public class UserCanKeyDie extends WorldKeyboard {
 	}
 
 	@Override
-	public void keyReleased(int key) {
+	public void inputReleased(int key, int button) {
 
 	}
 

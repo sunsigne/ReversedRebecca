@@ -1,10 +1,9 @@
 	
 	////////// EN COURS ////////////
 
-	à tester : si on débranche la manette pendant uin movuement, est-ce que le personnage continue à avancer ?
-
 	le tchat et les options doivent afficher le bon bouton de manette
 	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
+	replacer la souris par des options manettes
 
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
