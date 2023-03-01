@@ -6,21 +6,39 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
-public class ControllerAnalyser {
+public class ControllerManager {
 
-	private static boolean usingGamepad;
-	
-	public static void setUsingGamepad(boolean usingGamepad) {
-		if(ControllerAnalyser.usingGamepad != usingGamepad)
-			updateGamepadDiplay(usingGamepad);
-		
-		ControllerAnalyser.usingGamepad = usingGamepad;
+	////////// SIGNELTON ////////////
+
+	private static ControllerManager instance;
+
+	public static ControllerManager getInstance() {
+		if (instance == null)
+			instance = new ControllerManager();
+		return instance;
 	}
+
+	////////// GAMEPAD ////////////
+
+	private boolean usingGamepad;
+
+	public boolean isUsingGamepad() {
+		return usingGamepad;
+	}
+
+	public void setUsingGamepad(boolean usingGamepad) {
+		if (this.usingGamepad != usingGamepad)
+			updateGamepadDiplay(usingGamepad);
+
+		this.usingGamepad = usingGamepad;
+	}
+
+	////////// ACTION ////////////
 
 	private static Cursor cursor;
 
 	private static void updateGamepadDiplay(boolean active) {
-		if(active)
+		if (active)
 			activeGamepadDisplay();
 		else
 			desactiveGamepadDisplay();
@@ -30,9 +48,9 @@ public class ControllerAnalyser {
 		cursor = Game.getInstance().getCursor();
 		new GameCursor().setCursor(CURSOR_TYPE.NULL);
 	}
-	
+
 	private static void desactiveGamepadDisplay() {
-		Game.getInstance().setCursor(cursor);		
+		Game.getInstance().setCursor(cursor);
 	}
 
 }
