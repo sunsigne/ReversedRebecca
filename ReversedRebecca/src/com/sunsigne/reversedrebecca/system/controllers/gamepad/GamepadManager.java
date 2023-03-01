@@ -52,21 +52,13 @@ public class GamepadManager {
 		while (eventQueue.getNextEvent(event)) {
 
 			Component comp = event.getComponent();
-
+			System.out.println(event.toString());
+			
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
-				if (event.getValue() == 1.0f)
-					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier()));
+				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
+					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
 			}
-
-			/*
-			  if (event.getValue() != 0) System.out.println(comp.getName());
-			  
-			  // Vérification que l'événement correspond à l'appui sur le bouton "A" if
-			  (comp.getName().equalsIgnoreCase("Bouton 0") && event.getValue() == 1.0f) {
-			  // Affichage d'un message dans la console
-			  System.out.println("Le bouton A de la manette a été appuyé."); }
-			 */
 		}
 
 		freeze();
