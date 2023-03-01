@@ -7,9 +7,11 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 
-public interface Interactive extends Velocity, KeyboardEvent {
+public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
 
 	public default void createTextAction() {
 		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
@@ -105,6 +107,29 @@ public interface Interactive extends Velocity, KeyboardEvent {
 
 	@Override
 	public default void keyPressed(KeyEvent e) {
+		inputPressed(e.getKeyCode(), -1);
+	}
+
+	@Override
+	public default void keyReleased(KeyEvent e) {
+
+	}
+
+	////////// GAMEPAD ////////////
+
+	@Override
+	public default void buttonPressed(ButtonEvent e) {
+		inputPressed(65535, e.getKey());
+	}
+
+	@Override
+	public default void buttonReleased(ButtonEvent e) {
+
+	}
+
+	////////// INPUT ////////////
+
+	private void inputPressed(int key, int button) {
 
 		if (!canPlayerInterfact())
 			return;
@@ -113,7 +138,6 @@ public interface Interactive extends Velocity, KeyboardEvent {
 			return;
 
 		Action tempAction;
-		int key = e.getKeyCode();
 
 		for (int index = 0; index < 3; index++) {
 
@@ -122,16 +146,11 @@ public interface Interactive extends Velocity, KeyboardEvent {
 			if (tempAction == null)
 				continue;
 
-			if (key == tempAction.getKeyEvent()) {
+			if (key == tempAction.getKeyEvent() || button == tempAction.getButtonEvent()) {
 				tempAction.doAction();
 				return;
 			}
 		}
-	}
-
-	@Override
-	public default void keyReleased(KeyEvent e) {
-
 	}
 
 }

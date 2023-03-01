@@ -16,6 +16,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interacti
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -217,6 +219,25 @@ public abstract class PiranhaObject extends GameObject
 	@Override
 	public void keyReleased(KeyEvent e) {
 		Interactive.super.keyReleased(e);
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		Interactive.super.buttonPressed(e);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		Interactive.super.buttonReleased(e);
 	}
 
 	////////// COLLISION ////////////

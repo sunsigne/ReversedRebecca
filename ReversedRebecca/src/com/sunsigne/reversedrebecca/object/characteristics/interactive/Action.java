@@ -8,6 +8,10 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Snitch;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 
 public abstract class Action {
@@ -20,8 +24,8 @@ public abstract class Action {
 		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
-		this.keyEvent = keyEvent;
 		this.listener = listener;
+		setKeyEvent(keyEvent);
 	}
 
 	private Interactive interactive;
@@ -119,6 +123,21 @@ public abstract class Action {
 
 	public void setKeyEvent(int keyEvent) {
 		this.keyEvent = keyEvent;
+
+		if (keyEvent == ActionOneKey.getKey())
+			buttonEvent = ButtonEvent.X;
+		if (keyEvent == ActionTwoKey.getKey())
+			buttonEvent = ButtonEvent.B;
+		if (keyEvent == ActionThreeKey.getKey())
+			buttonEvent = ButtonEvent.Y;
+	}
+
+	////////// GAMEPAD ////////////
+
+	private int buttonEvent;
+
+	public int getButtonEvent() {
+		return buttonEvent;
 	}
 
 }

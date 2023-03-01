@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
@@ -136,5 +137,14 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	public KeyboardController getKeyBoardController() {
 		return keyboardController;
 	}
+	
+	////////// GAMEPAD ////////////
 
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+	
 }
