@@ -23,5 +23,11 @@ public class GamepadController implements GamepadAdapter {
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			gamepadEvent.buttonPressed(e);
 	}
+	
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			gamepadEvent.buttonReleased(e);
+	}
 
 }

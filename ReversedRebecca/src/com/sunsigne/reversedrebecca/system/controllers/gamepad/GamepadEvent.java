@@ -7,5 +7,7 @@ public interface GamepadEvent {
 	GamepadController getGamepadController();
 
 	void buttonPressed(ButtonEvent e);
-
+	
+	void buttonReleased(ButtonEvent e);
+	
 }

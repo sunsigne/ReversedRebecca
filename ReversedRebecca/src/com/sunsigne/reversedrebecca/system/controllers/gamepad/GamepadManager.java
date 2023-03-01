@@ -52,12 +52,14 @@ public class GamepadManager {
 		while (eventQueue.getNextEvent(event)) {
 
 			Component comp = event.getComponent();
-			System.out.println(event.toString());
 			
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
 					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
+				
+				if(event.getValue() > -0.05f && event.getValue() < 0.05f)
+					tempAdapter.buttonReleased(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
 			}
 		}
 

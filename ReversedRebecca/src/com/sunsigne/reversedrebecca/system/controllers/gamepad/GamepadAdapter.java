@@ -6,4 +6,6 @@ public interface GamepadAdapter {
 
 	void buttonPressed(ButtonEvent e);
 
+	void buttonReleased(ButtonEvent e);
+	
 }
