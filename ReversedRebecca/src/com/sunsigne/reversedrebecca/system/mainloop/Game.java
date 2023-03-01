@@ -12,6 +12,8 @@ import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 
 public class Game extends Canvas implements Runnable {
 
@@ -67,6 +69,16 @@ public class Game extends Canvas implements Runnable {
 		}
 	}
 
+	////////// GAMEPAD ////////////
+
+	public void addGamepadListener(GamepadAdapter adapter) {
+		new GamepadManager().addGamepadListener(adapter);
+	}
+
+	public void removeGamepadListener(GamepadAdapter adapter) {
+		new GamepadManager().removeGamepadListener(adapter);
+	}
+
 	////////// MAIN LOOP ////////////
 
 	public static final int SEC = 60;
@@ -91,6 +103,7 @@ public class Game extends Canvas implements Runnable {
 			boolean shouldRender = false;
 
 			while (delta >= 1) {
+
 //				ticks++;
 				try {
 					tick();
@@ -139,7 +152,7 @@ public class Game extends Canvas implements Runnable {
 	////////// TICK ////////////
 
 	private void tick() {
-
+		GamepadManager.tick();
 		SuperHandler.tick();
 	}
 

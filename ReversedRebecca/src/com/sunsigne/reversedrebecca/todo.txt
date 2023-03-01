@@ -1,6 +1,9 @@
 	
 	////////// EN COURS ////////////
 
+	à tester : si on débranche la manette pendant uin movuement, est-ce que le personnage continue à avancer ?
+	creer le système de "boutton released"
+
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////

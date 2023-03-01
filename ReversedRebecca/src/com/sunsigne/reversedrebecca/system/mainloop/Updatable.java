@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
@@ -27,6 +28,12 @@ public interface Updatable {
 			MouseUserEvent mouse = (MouseUserEvent) this;
 			if (mouse.getMouseController() != null)
 				mouse.getMouseController().removeMouseListener();
+		}
+
+		if (this instanceof GamepadEvent) {
+			GamepadEvent gamepad = (GamepadEvent) this;
+			if (gamepad.getGamepadController() != null)
+				gamepad.getGamepadController().removeGamepadListener();
 		}
 	}
 
