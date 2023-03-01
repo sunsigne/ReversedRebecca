@@ -20,7 +20,8 @@ public class Game extends Canvas implements Runnable {
 	////////// NATIVES ////////////
 
 	static {
-		System.setProperty("net.java.games.input.librarypath", new File("JInputNatives").getAbsolutePath());
+		System.setProperty("net.java.games.input.librarypath",
+				new File("dependencies/JInput/natives").getAbsolutePath());
 	}
 
 	////////// MAIN ////////////
