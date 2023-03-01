@@ -23,6 +23,8 @@ public class ButtonEvent {
 	public static final int RIGHT = 11;
 	public static final int UP = 12;
 	public static final int DOWN = 13;
+	public static final int NULL_X = 14;
+	public static final int NULL_Y = 15;
 
 	////////// MAP OR LIST ////////////
 
@@ -46,28 +48,21 @@ public class ButtonEvent {
 			return button.get(identifier);
 
 		if (identifier == Identifier.Axis.X) {
-			if (value < 0)
+			if (value < -0.05f)
 				return new ButtonEvent(ButtonEvent.LEFT);
-			else
+			if (value > 0.05f)
 				return new ButtonEvent(ButtonEvent.RIGHT);
+			else
+				return new ButtonEvent(ButtonEvent.NULL_X);
 		}
 
 		if (identifier == Identifier.Axis.Y) {
-			if (value < 0)
+			if (value < -0.05f)
 				return new ButtonEvent(ButtonEvent.UP);
-			else
-				return new ButtonEvent(ButtonEvent.DOWN);
-		}
-
-		if (identifier == Identifier.Axis.POV) {
-			if (value > 0.20f && value < 0.30f)
-				return new ButtonEvent(ButtonEvent.UP);
-			if (value > 0.45f && value < 0.55f)
-				return new ButtonEvent(ButtonEvent.RIGHT);
-			if (value > 0.70f && value < 0.80f)
+			if (value > 0.05f)
 				return new ButtonEvent(ButtonEvent.DOWN);
 			else
-				return new ButtonEvent(ButtonEvent.LEFT);
+				return new ButtonEvent(ButtonEvent.NULL_Y);
 		}
 
 		return new ButtonEvent(ERROR);

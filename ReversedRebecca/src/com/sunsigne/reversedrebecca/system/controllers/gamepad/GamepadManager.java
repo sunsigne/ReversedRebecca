@@ -55,11 +55,13 @@ public class GamepadManager {
 
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
+				ButtonEvent button = ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue());
+
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
-					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
+					tempAdapter.buttonPressed(button);
 
 				if (event.getValue() > -0.05f && event.getValue() < 0.05f)
-					tempAdapter.buttonReleased(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
+					tempAdapter.buttonReleased(button);
 			}
 		}
 	}
