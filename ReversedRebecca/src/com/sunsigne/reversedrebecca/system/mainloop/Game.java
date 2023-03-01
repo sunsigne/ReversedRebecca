@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
+import java.io.File;
 import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.Infos;
@@ -15,6 +16,12 @@ import com.sunsigne.reversedrebecca.system.Window;
 public class Game extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
+
+	////////// NATIVES ////////////
+
+	static {
+		System.setProperty("net.java.games.input.librarypath", new File("JInputNatives").getAbsolutePath());
+	}
 
 	////////// MAIN ////////////
 
