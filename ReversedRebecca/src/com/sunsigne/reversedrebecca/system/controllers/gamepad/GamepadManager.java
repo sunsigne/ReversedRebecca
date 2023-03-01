@@ -43,7 +43,7 @@ public class GamepadManager {
 		Controller gamepad = getGamepad();
 		if (gamepad == null)
 			return;
- 
+
 		// Obtention de la file d'événements de la manette de jeu
 		EventQueue eventQueue = gamepad.getEventQueue();
 		Event event = new Event();
@@ -52,26 +52,15 @@ public class GamepadManager {
 		while (eventQueue.getNextEvent(event)) {
 
 			Component comp = event.getComponent();
-			
+
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
 					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
-				
-				if(event.getValue() > -0.05f && event.getValue() < 0.05f)
+
+				if (event.getValue() > -0.05f && event.getValue() < 0.05f)
 					tempAdapter.buttonReleased(ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue()));
 			}
-		}
-
-		freeze();
-	}
-
-	// Pause pour éviter une utilisation excessive du processeur
-	private static void freeze() {
-		try {
-			Thread.sleep(10);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
 		}
 	}
 
