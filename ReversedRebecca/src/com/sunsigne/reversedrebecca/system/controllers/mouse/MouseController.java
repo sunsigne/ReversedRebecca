@@ -12,16 +12,23 @@ public class MouseController extends MouseAdapter {
 	public MouseController(MouseUserEvent mouseUserEvent) {
 		this.mouseUserEvent = mouseUserEvent;
 		Game.getInstance().addMouseListener(this);
+		Game.getInstance().addMouseMotionListener(this);
 	}
 
 	public void removeMouseListener() {
 		Game.getInstance().removeMouseListener(this);
+		Game.getInstance().removeMouseMotionListener(this);
 	}
 
 	////////// MOUSE ////////////
 
 	private MouseUserEvent mouseUserEvent;
 
+	@Override
+	public void mouseMoved(MouseEvent e){
+		ControllerAnalyser.setUsingGamepad(false);
+	}
+	
 	@Override
 	public void mousePressed(MouseEvent e) {
 		ControllerAnalyser.setUsingGamepad(false);
