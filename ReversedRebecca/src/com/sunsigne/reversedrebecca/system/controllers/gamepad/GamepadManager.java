@@ -43,7 +43,7 @@ public class GamepadManager {
 		Controller gamepad = getGamepad();
 		if (gamepad == null)
 			return;
-
+ 
 		// Obtention de la file d'événements de la manette de jeu
 		EventQueue eventQueue = gamepad.getEventQueue();
 		Event event = new Event();
@@ -56,7 +56,7 @@ public class GamepadManager {
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
 				if (event.getValue() == 1.0f)
-					tempAdapter.buttonPressed(comp.getIdentifier());
+					tempAdapter.buttonPressed(ButtonEvent.getButtonEvent(comp.getIdentifier()));
 			}
 
 			/*
