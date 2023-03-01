@@ -33,7 +33,7 @@ public class ControllerManager {
 		this.usingGamepad = usingGamepad;
 	}
 
-	////////// ACTION ////////////
+	////////// UPDATE ////////////
 
 	private static Cursor cursor;
 
