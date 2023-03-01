@@ -125,9 +125,9 @@ public abstract class Action {
 		this.keyEvent = keyEvent;
 
 		if (keyEvent == ActionOneKey.getKey())
-			buttonEvent = ButtonEvent.X;
+			buttonEvent = ButtonEvent.A;
 		if (keyEvent == ActionTwoKey.getKey())
-			buttonEvent = ButtonEvent.B;
+			buttonEvent = ButtonEvent.X;
 		if (keyEvent == ActionThreeKey.getKey())
 			buttonEvent = ButtonEvent.Y;
 	}

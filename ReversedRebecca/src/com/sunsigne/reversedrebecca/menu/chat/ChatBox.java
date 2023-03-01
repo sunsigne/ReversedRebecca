@@ -168,7 +168,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (e.getKey() == ButtonEvent.B)
 			inputPressed();
 	}
 
