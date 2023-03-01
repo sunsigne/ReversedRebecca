@@ -4,6 +4,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerAnalyser;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class KeyboardController extends KeyAdapter {
@@ -24,12 +25,16 @@ public class KeyboardController extends KeyAdapter {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		ControllerAnalyser.setUsingGamepad(false);
+		
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			keyboardEvent.keyPressed(e);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+		ControllerAnalyser.setUsingGamepad(false);
+		
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			keyboardEvent.keyReleased(e);
 	}
