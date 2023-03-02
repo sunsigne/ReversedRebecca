@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.system.controllers;
 import java.awt.Cursor;
 
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ControllerManager {
@@ -46,7 +45,7 @@ public class ControllerManager {
 
 	private static void activeGamepadDisplay() {
 		cursor = Game.getInstance().getCursor();
-		new GameCursor().setCursor(CURSOR_TYPE.NULL);
+		new GameCursor().setCursor(null);
 	}
 
 	private static void desactiveGamepadDisplay() {

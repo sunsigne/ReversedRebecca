@@ -1,6 +1,10 @@
 	
 	////////// EN COURS ////////////
 
+	! attention ! il n'y a pas de "listener" à la sortie du mode "gamepad" (ControllerManager) qui rétablie le preset (TitleSceen) à "NULL"
+	! rendre évident le fait de sélectionner une option dans TitleScreen avec le gamepad
+	régler cette histoire de "bas droite" au niveau de "quitter"
+	
 	le tchat et les options doivent afficher le bon bouton de manette
 	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
 	replacer la souris par des options manettes

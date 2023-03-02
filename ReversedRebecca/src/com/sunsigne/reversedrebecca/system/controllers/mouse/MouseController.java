@@ -25,14 +25,15 @@ public class MouseController extends MouseAdapter {
 	private MouseUserEvent mouseUserEvent;
 
 	@Override
-	public void mouseMoved(MouseEvent e){
-		ControllerManager.getInstance().setUsingGamepad(false);
+	public void mouseMoved(MouseEvent e) {
+		if (PresetMousePos.usingPreset == false)
+			ControllerManager.getInstance().setUsingGamepad(false);
 	}
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		ControllerManager.getInstance().setUsingGamepad(false);
-		
+
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			mouseUserEvent.mousePressed(e);
 	}
@@ -40,9 +41,9 @@ public class MouseController extends MouseAdapter {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		ControllerManager.getInstance().setUsingGamepad(false);
-		
+
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			mouseUserEvent.mouseReleased(e);
 	}
-	
+
 }
