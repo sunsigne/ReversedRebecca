@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.submenu.AchievementsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
@@ -22,18 +24,26 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.FormTask;
 import com.sunsigne.reversedrebecca.system.Snitch;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class TitleScreen extends MenuScreen {
+public class TitleScreen extends MenuScreen implements GamepadEvent, MousePreseting {
 
 	public TitleScreen() {
 		super();
+		loadGamepadSetup();
 		new SoundTask().playMusic("title_screen", false, true);
 
 		createPlayButton();
@@ -49,7 +59,8 @@ public class TitleScreen extends MenuScreen {
 
 	////////// BUTTONS ////////////
 
-	private void createTitleScreenButton(String text, boolean validate_sound, int x, GenericListener onPress) {
+	private void createTitleScreenButton(String text, PresetMousePos preset, boolean validate_sound, int x,
+			GenericListener onPress) {
 		String sound = validate_sound ? "button_validate" : "button";
 		ButtonObject button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null) {
 
@@ -61,33 +72,36 @@ public class TitleScreen extends MenuScreen {
 
 		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.addObject(button);
+		buttons.put(preset, button);
 	}
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> playRequest();
-		createTitleScreenButton(translate("PlayButton"), true, 140, onPress);
+		createTitleScreenButton(translate("PlayButton"), PLAY, true, 140, onPress);
 	}
 
 	private void createOptionsButton() {
 		GenericListener onPress = () -> new OptionsScreen();
-		createTitleScreenButton(translate("OptionsButton"), false, 740, onPress);
+		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 740, onPress);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
-		createTitleScreenButton(translate("QuitButton"), true, 1340, onPress);
+		createTitleScreenButton(translate("QuitButton"), QUIT, true, 1340, onPress);
 	}
 
 	private void createFlagLanguageButton() {
 		GenericListener onPress = () -> new LanguageScreen();
 		ButtonObject button = new FlagLangageButton(onPress, null);
 		LAYER.MENU.addObject(button);
+		buttons.put(FLAG, button);
 	}
 
 	private void createAchievementsButton() {
 		GenericListener onPress = () -> new AchievementsScreen();
 		ButtonObject button = new AchievementButton(onPress, null);
 		LAYER.MENU.addObject(button);
+		buttons.put(ACHIEVEMENT, button);
 	}
 
 	private void createCrashButton() {
@@ -153,6 +167,137 @@ public class TitleScreen extends MenuScreen {
 		LAYER.MENU.getHandler().clear();
 		new World("test");
 		ToolList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	private static HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();
+
+	private final PresetMousePos PLAY = new PresetMousePos(326, 989);
+	private final PresetMousePos OPTION = new PresetMousePos(925, 989);
+	private final PresetMousePos QUIT = new PresetMousePos(1525, 989);
+	private final PresetMousePos FLAG = new PresetMousePos(1821, 32);
+	private final PresetMousePos ACHIEVEMENT = new PresetMousePos(1821, 170);
+
+	private PresetMousePos preset;
+
+	@Override
+	public PresetMousePos getPreset() {
+		return preset;
+	}
+
+	@Override
+	public void setPreset(PresetMousePos preset) {
+		this.preset = preset;
+		preset.moveMouse();
+
+		if (isPresetNull() == false)
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	private void loadGamepadSetup() {
+		if (ControllerManager.getInstance().isUsingGamepad())
+			setPreset(NULL);
+	}
+
+	private boolean pressingButton;
+
+	private boolean pressingButton() {
+		if (pressingButton)
+			return true;
+
+		pressingButton = true;
+		new GameTimer(5, () -> pressingButton = false);
+		return false;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+
+		if (isPresetNull())
+			setPreset(PLAY);
+		else if (getPreset() == PLAY)
+			playPressed(e);
+		else if (getPreset() == OPTION)
+			optionPressed(e);
+		else if (getPreset() == QUIT)
+			quitPressed(e);
+		else if (getPreset() == ACHIEVEMENT)
+			achievementPressed(e);
+		else if (getPreset() == FLAG)
+			flagPressed(e);
+	}
+
+	private void playPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.RIGHT)
+			setPreset(OPTION);
+		else if (e.getKey() == ButtonEvent.UP)
+			setPreset(FLAG);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(PLAY).mousePressed(null);
+	}
+
+	private void optionPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT)
+			setPreset(PLAY);
+		else if (e.getKey() == ButtonEvent.RIGHT)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.UP)
+			setPreset(FLAG);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(OPTION).mousePressed(null);
+	}
+
+	private void quitPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT)
+			setPreset(OPTION);
+		else if (e.getKey() == ButtonEvent.RIGHT)
+			setPreset(ACHIEVEMENT);
+		else if (e.getKey() == ButtonEvent.UP)
+			setPreset(FLAG);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(QUIT).mousePressed(null);
+	}
+
+	private void achievementPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.UP)
+			setPreset(FLAG);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(ACHIEVEMENT).mousePressed(null);
+	}
+
+	private void flagPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(ACHIEVEMENT);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(FLAG).mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
+	}
+
+	private void old(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
+			System.out.println("Le bouton A de la manette a été appuyé.");
 	}
 
 }

@@ -2,8 +2,7 @@
 	////////// EN COURS ////////////
 
 	le son "bouton" est temporaire dans TitleScreen setPreset()
-	! rendre évident le fait de sélectionner une option dans TitleScreen avec le gamepad
-	
+
 	le tchat et les options doivent afficher le bon bouton de manette
 	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
 	replacer la souris par des options manettes

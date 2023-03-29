@@ -6,8 +6,6 @@ public interface MousePreseting {
 
 	PresetMousePos getPreset();
 
-	PresetMousePos getDefaultPreset();
-
 	void setPreset(PresetMousePos preset);
 
 	default boolean isPresetNull() {
