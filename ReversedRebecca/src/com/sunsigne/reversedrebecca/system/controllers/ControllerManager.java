@@ -2,7 +2,11 @@ package com.sunsigne.reversedrebecca.system.controllers;
 
 import java.awt.Cursor;
 
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ControllerManager {
@@ -46,6 +50,24 @@ public class ControllerManager {
 	private static void activeGamepadDisplay() {
 		cursor = Game.getInstance().getCursor();
 		new GameCursor().setCursor(null);
+		
+		resetMousePresetings();		
+	}
+
+	private static void resetMousePresetings() {		
+		var list = GamepadManager.getList();
+		for (GamepadAdapter tempAdapter : list.getList()) {
+			
+			if(tempAdapter instanceof GamepadController == false)
+				continue;		
+			var tempEvent = ((GamepadController) tempAdapter).getGamepadEvent();
+			
+			if(tempEvent instanceof MousePreseting == false)
+				continue;
+			var tempPreset = (MousePreseting) tempEvent;
+			
+			tempPreset.setPreset(MousePreseting.NULL);
+		}	
 	}
 
 	private static void desactiveGamepadDisplay() {

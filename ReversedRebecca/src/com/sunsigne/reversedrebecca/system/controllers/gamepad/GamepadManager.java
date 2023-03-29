@@ -15,6 +15,10 @@ public class GamepadManager {
 
 	private static GameList<GamepadAdapter> list = new GameList<>(LISTTYPE.ARRAY);
 
+	public static GameList<GamepadAdapter> getList() {
+		return list;
+	}
+	
 	public void addGamepadListener(GamepadAdapter adapter) {
 		list.addObject(adapter);
 	}
