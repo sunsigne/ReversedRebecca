@@ -1,7 +1,5 @@
 package com.sunsigne.reversedrebecca.menu;
 
-import java.util.HashMap;
-
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.submenu.AchievementsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.DifficultyScreen;
@@ -24,26 +22,20 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.FormTask;
 import com.sunsigne.reversedrebecca.system.Snitch;
-import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class TitleScreen extends MenuScreen implements GamepadEvent, MousePreseting {
+public class TitleScreen extends MenuScreen {
 
 	public TitleScreen() {
 		super();
-		loadGamepadSetup();
 		new SoundTask().playMusic("title_screen", false, true);
 
 		createPlayButton();
@@ -171,54 +163,13 @@ public class TitleScreen extends MenuScreen implements GamepadEvent, MousePreset
 
 	////////// PRESET MOUSE POS ////////////
 
-	private static HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();
-
-	private final PresetMousePos PLAY = new PresetMousePos(326, 989);
-	private final PresetMousePos OPTION = new PresetMousePos(925, 989);
-	private final PresetMousePos QUIT = new PresetMousePos(1525, 989);
-	private final PresetMousePos FLAG = new PresetMousePos(1821, 32);
-	private final PresetMousePos ACHIEVEMENT = new PresetMousePos(1821, 170);
-
-	private PresetMousePos preset;
-
-	@Override
-	public PresetMousePos getPreset() {
-		return preset;
-	}
-
-	@Override
-	public void setPreset(PresetMousePos preset) {
-		this.preset = preset;
-		preset.moveMouse();
-
-		if (isPresetNull() == false)
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
-	}
+	private final PresetMousePos PLAY = new PresetMousePos(325, 1000);
+	private final PresetMousePos OPTION = new PresetMousePos(925, 1000);
+	private final PresetMousePos QUIT = new PresetMousePos(1525, 1000);
+	private final PresetMousePos FLAG = new PresetMousePos(1820, 30);
+	private final PresetMousePos ACHIEVEMENT = new PresetMousePos(1820, 170);
 
 	////////// GAMEPAD ////////////
-
-	private GamepadController gamepadController = new GamepadController(this);
-
-	@Override
-	public GamepadController getGamepadController() {
-		return gamepadController;
-	}
-
-	private void loadGamepadSetup() {
-		if (ControllerManager.getInstance().isUsingGamepad())
-			setPreset(NULL);
-	}
-
-	private boolean pressingButton;
-
-	private boolean pressingButton() {
-		if (pressingButton)
-			return true;
-
-		pressingButton = true;
-		new GameTimer(5, () -> pressingButton = false);
-		return false;
-	}
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {

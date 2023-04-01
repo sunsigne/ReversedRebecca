@@ -2,6 +2,7 @@
 	////////// EN COURS ////////////
 
 	le son "bouton" est temporaire dans TitleScreen setPreset()
+	régler le pb de preset(NULL) -> l'idée est que si la manette est branché et utilisée, on arrive directement sur une option. Pareil lorsqu'on detecte le branchement (au lancement du jeu !), mais qu'on en sorte si elle est débranchée ou non utilisée.
 
 	le tchat et les options doivent afficher le bon bouton de manette
 	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé

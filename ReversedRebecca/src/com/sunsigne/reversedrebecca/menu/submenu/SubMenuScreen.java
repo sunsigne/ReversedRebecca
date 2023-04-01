@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public abstract class SubMenuScreen extends MenuScreen {
 
@@ -48,6 +49,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 		button.setFacing(DIRECTION.NULL);
 		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.getHandler().addObject(button);
+		buttons.put(BACK, button);
 	}
 
 	////////// TEXTURE ////////////
@@ -73,5 +75,9 @@ public abstract class SubMenuScreen extends MenuScreen {
 		int height = xl ? 600 : 474;
 		g.drawImage(getImage(), 289, y, 1324, height, null);
 	}
+	
+	////////// PRESET MOUSE POS ////////////
 
+	protected final PresetMousePos BACK = new PresetMousePos(925, 1000);
+	
 }
