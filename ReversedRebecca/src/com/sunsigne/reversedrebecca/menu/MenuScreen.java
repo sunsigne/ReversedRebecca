@@ -23,6 +23,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
@@ -148,6 +149,11 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 		pressingButton = true;
 		new GameTimer(3, () -> pressingButton = false);
 		return false;
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		
 	}
 
 }

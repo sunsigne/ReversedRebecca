@@ -241,11 +241,6 @@ public class TitleScreen extends MenuScreen {
 			buttons.get(FLAG).mousePressed(null);
 	}
 
-	@Override
-	public void buttonReleased(ButtonEvent e) {
-
-	}
-
 	private void old(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.DOWN)
 			System.out.println("Le bouton A de la manette a été appuyé.");

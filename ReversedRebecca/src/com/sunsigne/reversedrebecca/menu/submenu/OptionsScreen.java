@@ -137,9 +137,4 @@ public class OptionsScreen extends SubMenuScreen {
 			buttons.get(BACK).mousePressed(null);
 	}
 
-	@Override
-	public void buttonReleased(ButtonEvent e) {
-
-	}
-
 }
