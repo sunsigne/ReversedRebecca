@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 import java.util.HashMap;
 
 import net.java.games.input.Component.Identifier;
+import net.java.games.input.Controller.Type;
 
 public class ButtonEvent {
 
@@ -30,20 +31,42 @@ public class ButtonEvent {
 
 	private static HashMap<Identifier, ButtonEvent> button = new HashMap<>();
 
-	public static void buttonAttribution() {
-		button.put(Identifier.Button._0, new ButtonEvent(A));
-		button.put(Identifier.Button._1, new ButtonEvent(B));
-		button.put(Identifier.Button._2, new ButtonEvent(X));
-		button.put(Identifier.Button._3, new ButtonEvent(Y));
-		button.put(Identifier.Button._4, new ButtonEvent(L1));
-		button.put(Identifier.Button._5, new ButtonEvent(R1));
-		button.put(Identifier.Button._6, new ButtonEvent(SELECT));
-		button.put(Identifier.Button._7, new ButtonEvent(START));
-		button.put(Identifier.Button._8, new ButtonEvent(LSTICK));
-		button.put(Identifier.Button._9, new ButtonEvent(RSTICK));
+	private static Type type;
+	
+	public static void buttonAttribution(Type type) {
+		if(type == Type.GAMEPAD) {		
+			button.put(Identifier.Button._0, new ButtonEvent(A));
+			button.put(Identifier.Button._1, new ButtonEvent(B));
+			button.put(Identifier.Button._2, new ButtonEvent(X));
+			button.put(Identifier.Button._3, new ButtonEvent(Y));
+			button.put(Identifier.Button._4, new ButtonEvent(L1));
+			button.put(Identifier.Button._5, new ButtonEvent(R1));				
+			button.put(Identifier.Button._6, new ButtonEvent(SELECT));
+			button.put(Identifier.Button._7, new ButtonEvent(START));
+			button.put(Identifier.Button._8, new ButtonEvent(LSTICK));
+			button.put(Identifier.Button._9, new ButtonEvent(RSTICK));
+		}
+				
+		if(type == Type.STICK) {
+			button.put(Identifier.Button._2, new ButtonEvent(A));
+			button.put(Identifier.Button._1, new ButtonEvent(B));
+			button.put(Identifier.Button._3, new ButtonEvent(X));
+			button.put(Identifier.Button._0, new ButtonEvent(Y));
+			button.put(Identifier.Button._4, new ButtonEvent(L1));
+			button.put(Identifier.Button._5, new ButtonEvent(R1));
+			button.put(Identifier.Button._8, new ButtonEvent(SELECT));
+			button.put(Identifier.Button._9, new ButtonEvent(START));			
+			button.put(Identifier.Button._10, new ButtonEvent(LSTICK));
+			button.put(Identifier.Button._11, new ButtonEvent(RSTICK));
+		}
+		
+		ButtonEvent.type = type;		
 	}
 
-	public static ButtonEvent getButtonEvent(Identifier identifier, float value) {
+	public static ButtonEvent getButtonEvent(Type type, Identifier identifier, float value) {
+		if(ButtonEvent.type != type)
+			buttonAttribution(type);
+		
 		if (identifier instanceof Identifier.Button)
 			return button.get(identifier);
 

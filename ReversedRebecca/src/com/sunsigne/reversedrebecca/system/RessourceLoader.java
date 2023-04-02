@@ -8,14 +8,12 @@ import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.ressources.achievement.Achievements;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class RessourceLoader {
 
 	protected void loadMinimalRessources() {
 		Language.getInstance();
-		ButtonEvent.buttonAttribution();
 	}
 
 	protected void loadRessources() {

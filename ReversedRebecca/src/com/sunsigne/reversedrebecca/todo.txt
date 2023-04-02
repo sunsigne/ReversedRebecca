@@ -145,6 +145,7 @@
 	
 	///////// IDEE ////////////
 
+	des outils de + en + élaborés (design) en fonction de leur lvl
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile elle se casse, en difficile il y a un "court-jus" qui la fait marcher à 200% 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level

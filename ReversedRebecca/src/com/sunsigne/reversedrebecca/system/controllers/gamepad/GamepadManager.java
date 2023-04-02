@@ -18,7 +18,7 @@ public class GamepadManager {
 	public static GameList<GamepadAdapter> getList() {
 		return list;
 	}
-	
+
 	public void addGamepadListener(GamepadAdapter adapter) {
 		list.addObject(adapter);
 	}
@@ -34,7 +34,7 @@ public class GamepadManager {
 		Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
 
 		for (Controller controller : controllers) {
-			if (controller.getType() == Controller.Type.GAMEPAD)
+			if (controller.getType() == Controller.Type.GAMEPAD || controller.getType() == Controller.Type.STICK)
 				return controller;
 		}
 		return null;
@@ -59,7 +59,8 @@ public class GamepadManager {
 
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
-				ButtonEvent button = ButtonEvent.getButtonEvent(comp.getIdentifier(), event.getValue());
+				ButtonEvent button = ButtonEvent.getButtonEvent(gamepad.getType(), comp.getIdentifier(),
+						event.getValue());
 
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
 					tempAdapter.buttonPressed(button);
