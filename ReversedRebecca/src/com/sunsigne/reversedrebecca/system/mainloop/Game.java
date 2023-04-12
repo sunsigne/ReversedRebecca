@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadUpdate;
 
 public class Game extends Canvas implements Runnable {
 
@@ -48,6 +49,7 @@ public class Game extends Canvas implements Runnable {
 	////////// THREAD ////////////
 
 	private Thread thread;
+	private GamepadUpdate gamepadUpdate;
 	private boolean running;
 
 	public synchronized void start() {
@@ -55,14 +57,19 @@ public class Game extends Canvas implements Runnable {
 			return;
 
 		running = true;
+		
 		thread = new Thread(this, Infos.NAME + "_main");
 		thread.start();
+		
+		gamepadUpdate = new GamepadUpdate();
+		gamepadUpdate.start();
 	}
 
 	public synchronized void stop() {
 		running = false;
 
 		try {
+			gamepadUpdate.stop();
 			thread.join();
 		} catch (Exception e) {
 			e.printStackTrace();

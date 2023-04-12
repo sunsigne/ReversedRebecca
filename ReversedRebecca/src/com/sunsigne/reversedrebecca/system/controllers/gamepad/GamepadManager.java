@@ -1,17 +1,12 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 import net.java.games.input.Component;
 import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
-import net.java.games.input.ControllerEnvironment;
 import net.java.games.input.Event;
 import net.java.games.input.EventQueue;
 
@@ -35,48 +30,19 @@ public class GamepadManager {
 
 	////////// GAMEPAD ////////////
 
-	private static int timer = 0;
-
-	private static boolean mustRefreshController() {
-		timer++;
-		if (timer < Game.SEC * 2)
-			return false;
-		timer = 0;
-		return true;
-	}
-
-	private static void refreshController() {
-		if (mustRefreshController() == false)
-			return;
-
-		var clazz = ControllerEnvironment.getDefaultEnvironment();
-		Field controller = null;
-		Field names = null;
-
-		System.err.println("reset of timer");
-
-		try {
-			controller = clazz.getClass().getDeclaredField("controllers");
-			controller.setAccessible(true);
-			controller.set(clazz, null);
-
-			names = clazz.getClass().getDeclaredField("loadedPluginNames");
-			names.setAccessible(true);
-			names.set(clazz, new ArrayList<>());
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	protected static Controller registeredControllers;
 
 	private static Controller getGamepad() {
+		if (registeredControllers != null)
+			return registeredControllers;
 
-		refreshController();
-		Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
+		Controller[] controllers = GamepadUpdate.getRegisteredGamepad();
 
 		for (Controller controller : controllers) {
-			if (controller.getType() == Controller.Type.GAMEPAD || controller.getType() == Controller.Type.STICK)
+			if (controller.getType() == Controller.Type.GAMEPAD || controller.getType() == Controller.Type.STICK) {
+				registeredControllers = controller;
 				return controller;
+			}
 		}
 		return null;
 	}
