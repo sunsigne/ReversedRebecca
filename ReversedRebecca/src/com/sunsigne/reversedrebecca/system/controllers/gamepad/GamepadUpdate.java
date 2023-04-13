@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
+
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 
@@ -54,7 +56,8 @@ public class GamepadUpdate implements Runnable {
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
 	public void start() {
-		executorService.scheduleAtFixedRate(this, 1000, 500, TimeUnit.MILLISECONDS);
+		Game.getInstance().forceLoop();
+		executorService.scheduleAtFixedRate(this, 500, 500, TimeUnit.MILLISECONDS);
 	}
 
 	public void stop() {
@@ -84,9 +87,9 @@ public class GamepadUpdate implements Runnable {
 			e.printStackTrace();
 		}
 				
-		ControllerEnvironment.getDefaultEnvironment().getControllers();		
+		var controllers = env.getControllers();		
 		running = false;
-		controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
+		GamepadUpdate.controllers = controllers;
 	}
 
 }
