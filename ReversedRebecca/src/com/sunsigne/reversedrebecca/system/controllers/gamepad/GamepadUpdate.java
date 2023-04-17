@@ -6,8 +6,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
-
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 
@@ -40,24 +38,24 @@ public class GamepadUpdate implements Runnable {
 	}
 
 	////////// GAMEPAD ////////////
-	
+
 	private static Controller[] controllers;
-	
+
 	protected static Controller[] getRegisteredGamepad() {
-		if(running)
+		if (running)
 			return controllers;
-		
+
 		controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
 		return controllers;
 	}
-	
+
 	////////// THREAD ////////////
 
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
 	public void start() {
-		Game.getInstance().forceLoop();
-		executorService.scheduleAtFixedRate(this, 500, 500, TimeUnit.MILLISECONDS);
+		run();
+		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
 	}
 
 	public void stop() {
@@ -66,12 +64,12 @@ public class GamepadUpdate implements Runnable {
 
 	////////// MAIN LOOP ////////////
 
-	private static boolean running;
-	
+	public static boolean running;
+
 	@Override
 	public void run() {
 		running = true;
-		
+
 		GamepadManager.registeredControllers = null;
 		Field field = null;
 
@@ -86,8 +84,8 @@ public class GamepadUpdate implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-				
-		var controllers = env.getControllers();		
+
+		var controllers = env.getControllers();
 		running = false;
 		GamepadUpdate.controllers = controllers;
 	}

@@ -7,6 +7,8 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 import java.io.File;
 import java.util.ConcurrentModificationException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Conductor;
@@ -57,23 +59,44 @@ public class Game extends Canvas implements Runnable {
 			return;
 
 		running = true;
+
+		gamepadUpdate = new GamepadUpdate();
+		gamepadUpdate.start();
 		
 		thread = new Thread(this, Infos.NAME + "_main");
 		thread.start();
-		
-		gamepadUpdate = new GamepadUpdate();
-		gamepadUpdate.start();
 	}
 
 	public synchronized void stop() {
+		while (GamepadUpdate.running) {
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 		running = false;
+		backupStop();
 
 		try {
 			gamepadUpdate.stop();
-			thread.join();
+			thread.join(5);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		System.exit(0);
+	}
+
+	private void backupStop() {
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			public void run() {
+				thread.interrupt();
+				System.exit(0);
+			}
+		}, 10);
 	}
 
 	////////// GAMEPAD ////////////

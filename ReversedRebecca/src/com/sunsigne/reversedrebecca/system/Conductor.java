@@ -31,7 +31,7 @@ public class Conductor {
 	}
 
 	public void stopApp() {
-		System.exit(1);
+		Game.getInstance().stop();
 	}
 
 }
