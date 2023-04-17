@@ -30,21 +30,28 @@ public class GamepadManager {
 
 	////////// GAMEPAD ////////////
 
-	protected static Controller registeredControllers;
+	private static Controller registeredControllers;
+	protected static Controller currentControllers;
 
 	private static Controller getGamepad() {
-		if (registeredControllers != null)
+		if (currentControllers != null)
 			return registeredControllers;
 
 		Controller[] controllers = GamepadUpdate.getRegisteredGamepad();
 
 		for (Controller controller : controllers) {
-			if (controller.getType() == Controller.Type.GAMEPAD || controller.getType() == Controller.Type.STICK) {
-				registeredControllers = controller;
-				return controller;
-			}
+			if (controller.getType() == Controller.Type.GAMEPAD || controller.getType() == Controller.Type.STICK)
+				return getRegisteredGamepad(controller);
 		}
 		return null;
+	}
+
+	private static Controller getRegisteredGamepad(Controller controller) {
+		if (registeredControllers == null || registeredControllers.getType() != controller.getType())
+			registeredControllers = controller;
+
+		currentControllers = controller;
+		return registeredControllers;
 	}
 
 	////////// TICK ////////////
@@ -79,7 +86,9 @@ public class GamepadManager {
 		EventQueue eventQueue = gamepad.getEventQueue();
 		Event event = new Event();
 
-		gamepad.poll();
+		if (gamepad.poll() == false)
+			registeredControllers = null;
+
 		while (eventQueue.getNextEvent(event)) {
 
 			Component comp = event.getComponent();

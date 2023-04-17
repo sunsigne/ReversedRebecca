@@ -70,7 +70,7 @@ public class GamepadUpdate implements Runnable {
 	public void run() {
 		running = true;
 
-		GamepadManager.registeredControllers = null;
+		GamepadManager.currentControllers = null;
 		Field field = null;
 
 		// System.out.println("Scanning USB ports (for Gamepad detection)");

@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.ConcurrentModificationException;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Conductor;
@@ -17,6 +18,8 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadUpdate;
+
+import net.java.games.input.ControllerEnvironment;
 
 public class Game extends Canvas implements Runnable {
 
@@ -27,6 +30,8 @@ public class Game extends Canvas implements Runnable {
 	static {
 		System.setProperty("net.java.games.input.librarypath",
 				new File("dependencies/JInput/natives").getAbsolutePath());
+		
+		Logger.getLogger(ControllerEnvironment.class.getPackage().getName()).setUseParentHandlers(false);
 	}
 
 	////////// MAIN ////////////
