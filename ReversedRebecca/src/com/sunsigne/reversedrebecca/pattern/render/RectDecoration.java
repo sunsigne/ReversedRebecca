@@ -10,27 +10,39 @@ public class RectDecoration {
 	private Color color = new Color(255, 232, 170);
 
 	public enum RECTSIZE {
-		SMALL, NORMAL, LARGE;
+		X_SMALL, SMALL, NORMAL, LARGE;
 	}
 
 	private int[] getRect(int[] rect, RECTSIZE rectType) {
 		int gap = 0;
+		int arc = 30;
 
+		if(rectType == null)
+			rectType = RECTSIZE.NORMAL;
+		
 		switch (rectType) {
+		case X_SMALL:
+			gap = rect[2] / 8;
+			arc = 10;
+			rect = new int[] { rect[0] + gap / 2 + 4, rect[1] + 8, rect[2] - gap, rect[3] - 11, arc};
+			break;
 		case SMALL:
 			gap = rect[3] / 3;
-			rect = new int[] { rect[0], rect[1] + gap / 2, rect[2], rect[3] - gap };
+			rect = new int[] { rect[0], rect[1] + gap / 2, rect[2], rect[3] - gap, arc };
 			break;
 		case NORMAL:
+			rect = new int[] { rect[0], rect[1], rect[2], rect[3], arc };
 			break;
 		case LARGE:
 			gap = rect[3] / 6;
-			rect = new int[] { rect[0] - gap / 2, rect[1] - gap / 2, rect[2] + gap, rect[3] + gap };
+			rect = new int[] { rect[0] - gap / 2, rect[1] - gap / 2, rect[2] + gap, rect[3] + gap, arc };
 			break;
 		default:
+			rect = new int[] { rect[0], rect[1], rect[2], rect[3], arc };
 			break;
 		}
 
+		
 		return rect;
 	}
 
@@ -40,7 +52,7 @@ public class RectDecoration {
 		g2d.setColor(color);
 
 		rect = getRect(rect, rectType);
-		g2d.drawRoundRect(rect[0], rect[1], rect[2], rect[3], 30, 30);
+		g2d.drawRoundRect(rect[0], rect[1], rect[2], rect[3], rect[4], rect[4]);
 	}
 
 }

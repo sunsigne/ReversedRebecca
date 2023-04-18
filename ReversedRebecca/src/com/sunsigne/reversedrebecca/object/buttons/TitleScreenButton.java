@@ -19,6 +19,7 @@ public class TitleScreenButton extends ButtonObject {
 	public TitleScreenButton(String text, int x, int y, int w, int h, GenericListener onPress,
 			GenericListener onRelease) {
 		super(text.toUpperCase(), x, y, w, h, onPress, onRelease);
+		rectsize = RECTSIZE.X_SMALL;
 	}
 
 	////////// TEXT ////////////
@@ -27,6 +28,9 @@ public class TitleScreenButton extends ButtonObject {
 
 	public void setFontSize(float size) {
 		font = new FontTask().createNewFont("dogicabold.ttf", size);
+		
+		if(size > 40f)
+			rectsize = RECTSIZE.SMALL;
 	}
 
 	////////// RENDER ////////////
@@ -39,7 +43,7 @@ public class TitleScreenButton extends ButtonObject {
 
 		if (isSelected()) {
 			if (ControllerManager.getInstance().isUsingGamepad())
-				new RectDecoration().drawRoundRect(g, rect, RECTSIZE.SMALL);
+				new RectDecoration().drawRoundRect(g, rect, rectsize);
 
 			text_color = new Color(255, 232, 170);
 			rect = new int[] { getX(), getY() - 3, getWidth(), getHeight() };

@@ -16,6 +16,7 @@ public class AchievementButton extends TitleScreenButton {
 	public AchievementButton(GenericListener onPress, GenericListener onRelease) {
 		super("ACHIEVEMENT", Window.WIDHT - Size.L - 12, Size.L + 15, Size.L, Size.M, onPress, onRelease);
 		loadImages();
+		rectsize = RECTSIZE.LARGE;
 	}
 
 	////////// TEXTURE ////////////
@@ -35,7 +36,7 @@ public class AchievementButton extends TitleScreenButton {
 		
 		if (isSelected()) {
 			if (ControllerManager.getInstance().isUsingGamepad())
-				new RectDecoration().drawRoundRect(g, getRect(), RECTSIZE.LARGE);
+				new RectDecoration().drawRoundRect(g, getRect(), rectsize);
 			
 			g.drawImage(image_over, getX(), getY() - 3, getWidth(), getHeight(), null);			
 		}

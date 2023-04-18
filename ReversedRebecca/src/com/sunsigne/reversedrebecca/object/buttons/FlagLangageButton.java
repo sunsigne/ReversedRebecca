@@ -16,6 +16,7 @@ public class FlagLangageButton extends TitleScreenButton {
 
 	public FlagLangageButton(GenericListener onPress, GenericListener onRelease) {
 		super("FLAG", Window.WIDHT - Size.L - 10, 10, Size.L, Size.M, onPress, onRelease);
+		rectsize = RECTSIZE.LARGE;
 	}
 
 	////////// TEXTURE ////////////
@@ -38,7 +39,7 @@ public class FlagLangageButton extends TitleScreenButton {
 
 		if (isSelected()) {
 			if (ControllerManager.getInstance().isUsingGamepad())
-				new RectDecoration().drawRoundRect(g, getRect(), RECTSIZE.LARGE);
+				new RectDecoration().drawRoundRect(g, getRect(), rectsize);
 			
 			Color light = new Color(192, 192, 192, 80);
 			g.setColor(light);
