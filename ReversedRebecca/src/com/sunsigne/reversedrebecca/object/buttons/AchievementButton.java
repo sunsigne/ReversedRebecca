@@ -4,9 +4,12 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 
 public class AchievementButton extends TitleScreenButton {
 
@@ -31,7 +34,10 @@ public class AchievementButton extends TitleScreenButton {
 	public void render(Graphics g) {
 		
 		if (isSelected()) {
-			g.drawImage(image_over, getX(), getY() - 3, getWidth(), getHeight(), null);
+			if (ControllerManager.getInstance().isUsingGamepad())
+				new RectDecoration().drawRoundRect(g, getRect(), RECTSIZE.LARGE);
+			
+			g.drawImage(image_over, getX(), getY() - 3, getWidth(), getHeight(), null);			
 		}
 
 		else {

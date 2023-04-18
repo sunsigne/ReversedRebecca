@@ -5,11 +5,14 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 
 public class TitleScreenButton extends ButtonObject {
 
@@ -19,13 +22,13 @@ public class TitleScreenButton extends ButtonObject {
 	}
 
 	////////// TEXT ////////////
-	
+
 	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);
 
 	public void setFontSize(float size) {
 		font = new FontTask().createNewFont("dogicabold.ttf", size);
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
@@ -35,6 +38,9 @@ public class TitleScreenButton extends ButtonObject {
 		int[] rect = getRect();
 
 		if (isSelected()) {
+			if (ControllerManager.getInstance().isUsingGamepad())
+				new RectDecoration().drawRoundRect(g, rect, RECTSIZE.SMALL);
+
 			text_color = new Color(255, 232, 170);
 			rect = new int[] { getX(), getY() - 3, getWidth(), getHeight() };
 		}
