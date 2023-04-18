@@ -26,7 +26,7 @@ public class Conductor {
 		new RessourceLoader().loadRessources();
 		Game.getInstance().forceLoop();
 
-		new TitleScreen();
+		new TitleScreen(TitleScreen.PLAY);
 		LAYER.LOADING.getHandler().clear();
 	}
 

@@ -34,11 +34,11 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, MousePreseting {
 
-	public MenuScreen() {
+	public MenuScreen(PresetMousePos defaultPreset) {
 		LAYER.MENU.getHandler().clear();
 		LAYER.MENU.addObject(this);
 		loadImages();
-		loadGamepadSetup();
+		loadGamepadSetup(defaultPreset);
 	}
 
 	////////// USEFUL ////////////
@@ -111,7 +111,13 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 	protected HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();
 
 	private PresetMousePos preset;
-
+	private PresetMousePos defaultPreset;
+	
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		return defaultPreset;
+	}
+	
 	@Override
 	public PresetMousePos getPreset() {
 		return preset;
@@ -119,13 +125,17 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 
 	@Override
 	public void setPreset(PresetMousePos preset) {
+		this.setPreset(preset, true);
+	}
+	
+	private void setPreset(PresetMousePos preset, boolean sound) {
 		this.preset = preset;
 		preset.moveMouse();
 
-		if (isPresetNull() == false)
+		if (isPresetNull() == false && sound)
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 	}
-
+		
 	////////// GAMEPAD ////////////
 
 	private GamepadController gamepadController = new GamepadController(this);
@@ -135,9 +145,11 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 		return gamepadController;
 	}
 
-	private void loadGamepadSetup() {
+	private void loadGamepadSetup(PresetMousePos defaultPreset) {
+		this.defaultPreset = defaultPreset;
+		
 		if (ControllerManager.getInstance().isUsingGamepad())
-			setPreset(NULL);
+			setPreset(defaultPreset, false);
 	}
 
 	private boolean pressingButton;

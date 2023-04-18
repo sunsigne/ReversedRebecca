@@ -14,8 +14,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public abstract class SubMenuScreen extends MenuScreen {
 
-	public SubMenuScreen() {
-		super();
+	public SubMenuScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 		createBackButton();
 	}
 
@@ -78,6 +78,6 @@ public abstract class SubMenuScreen extends MenuScreen {
 	
 	////////// PRESET MOUSE POS ////////////
 
-	protected final PresetMousePos BACK = new PresetMousePos(925, 1000);
+	public static final PresetMousePos BACK = new PresetMousePos(925, 1000);
 	
 }

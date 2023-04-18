@@ -6,11 +6,13 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class GameScreen extends SubMenuScreen {
 
-	public GameScreen() {
-		super();
+	public GameScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 		loadText();
 		
 		createResetButton();
@@ -48,13 +50,13 @@ public class GameScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new OptionsScreen();
+		return new OptionsScreen(BACK);
 	}
 
 	////////// BUTTONS ////////////
 
 	private void createResetButton() {
-		GenericListener onPress = () -> new ResetScreen();
+		GenericListener onPress = () -> new ResetScreen(ResetScreen.RESET);
 		ButtonObject button = new TitleScreenButton(translate("Reset"), 741, 607, 415, 80, onPress, null) {
 			
 			@Override
@@ -64,6 +66,40 @@ public class GameScreen extends SubMenuScreen {
 		};
 		
 		LAYER.MENU.addObject(button);
+		buttons.put(RESET, button);
 	}
 
+	////////// PRESET MOUSE POS ////////////
+	
+	public static final PresetMousePos RESET = new PresetMousePos(925, 650);
+	
+	////////// GAMEPAD ////////////
+	
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+	
+		if (isPresetNull())
+			setPreset(RESET);
+		else if (getPreset() == RESET)
+			resetPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+	
+	private void resetPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(RESET).mousePressed(null);
+	}
+	
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(RESET);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
+	}
+		
 }
