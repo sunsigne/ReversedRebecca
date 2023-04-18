@@ -35,7 +35,7 @@ public class MousePos {
 	}
 	
 	public void setY(int y) {
-		setX(y, false);
+		setY(y, false);
 	}
 	
 	public void setY(int y, boolean paramount) {
