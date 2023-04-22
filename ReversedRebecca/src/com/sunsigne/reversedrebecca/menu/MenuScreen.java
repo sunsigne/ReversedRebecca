@@ -145,7 +145,7 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 		return gamepadController;
 	}
 
-	private void loadGamepadSetup(PresetMousePos defaultPreset) {
+	protected void loadGamepadSetup(PresetMousePos defaultPreset) {
 		this.defaultPreset = defaultPreset;
 		
 		if (ControllerManager.getInstance().isUsingGamepad())

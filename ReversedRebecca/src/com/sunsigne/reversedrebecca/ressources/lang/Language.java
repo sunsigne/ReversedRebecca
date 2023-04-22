@@ -25,7 +25,7 @@ public class Language {
 
 	private String lang;
 		
-	protected String getLang() {
+	public String getLang() {
 		return lang;
 	}
 
