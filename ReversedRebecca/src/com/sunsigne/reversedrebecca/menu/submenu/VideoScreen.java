@@ -1,22 +1,30 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextDynamic;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class VideoScreen extends SubMenuScreen {
 
-	public VideoScreen() {
-		super();
+	public VideoScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 		loadText();
 
-		createLeftArrowButton();
-		createRightArrowButton();
+		createLeftArrowButton(DIRECTION.LEFT);
+		createRightArrowButton(DIRECTION.RIGHT);
 	}
 
 	////////// NAME ////////////
@@ -30,7 +38,7 @@ public class VideoScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new OptionsScreen();
+		return new OptionsScreen(BACK);
 	}
 
 	////////// TEXT ////////////
@@ -51,7 +59,7 @@ public class VideoScreen extends SubMenuScreen {
 		// static / dynamic
 		String typeName = CameraOption.getType().getName();
 		text = translate("Camera" + typeName);
-		cameraType = new TitleScreenText(translate("Camera" + typeName), x, y + 155);
+		cameraType = new TitleScreenTextDynamic(translate("Camera" + typeName), x, y + 155);
 		LAYER.MENU.addObject(cameraType);
 
 		cameraDetail = new TitleScreenText[2];
@@ -71,20 +79,21 @@ public class VideoScreen extends SubMenuScreen {
 
 	////////// BUTTONS ////////////
 
-	private void createArrowButton(String text, int x, GenericListener onPress) {
+	private void createArrowButton(String text, DIRECTION direction, int x, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, 710 + x, 670, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
+		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
 	}
 
-	private void createLeftArrowButton() {
+	private void createLeftArrowButton(DIRECTION direction) {
 		GenericListener onPress = () -> choosePreviousCameraType();
-		createArrowButton("<", 0, onPress);
+		createArrowButton("<", direction, 0, onPress);
 	}
 
-	private void createRightArrowButton() {
+	private void createRightArrowButton(DIRECTION direction) {
 		GenericListener onPress = () -> chooseNextCameraType();
-		createArrowButton(">", 420, onPress);
+		createArrowButton(">", direction, 420, onPress);
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -107,4 +116,50 @@ public class VideoScreen extends SubMenuScreen {
 		cameraDetail[1].setText(translate(typeName + "Detail"));
 	}
 
+	////////// PRESET MOUSE POS ////////////
+	
+	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
+	
+	public static final PresetMousePos CAMERA = new PresetMousePos(925, 700);
+	
+	////////// GAMEPAD ////////////
+	
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+	
+		if (isPresetNull())
+			setPreset(CAMERA);
+		else if (getPreset() == CAMERA)
+			cameraPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+	
+	private void cameraPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousCameraType();
+		}
+			
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextCameraType();
+		}
+		
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+	}
+
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(CAMERA);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
+	}
+
+	
 }

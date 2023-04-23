@@ -11,8 +11,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class OptionsScreen extends SubMenuScreen {
 
-	public OptionsScreen() {
-		super();
+	public OptionsScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 
 		createGameButton();
 		createControlsButton();
@@ -31,7 +31,7 @@ public class OptionsScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new TitleScreen();
+		return new TitleScreen(TitleScreen.OPTION);
 	}
 
 	////////// BUTTONS ////////////
@@ -43,7 +43,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createGameButton() {
-		GenericListener onPress = () -> new GameScreen();
+		GenericListener onPress = () -> new GameScreen(GameScreen.RESET);
 		createOptionScreenButton(translate("GameButton"), GAME, 206, 104, onPress);
 	}
 
@@ -58,16 +58,16 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createVideoButton() {
-		GenericListener onPress = () -> new VideoScreen();
+		GenericListener onPress = () -> new VideoScreen(VideoScreen.CAMERA);
 		createOptionScreenButton(translate("VideoButton"), VIDEO, 623, 208, onPress);
 	}
 
 	////////// PRESET MOUSE POS ////////////
 
-	private final PresetMousePos GAME = new PresetMousePos(730, 650);
-	private final PresetMousePos CONTROLS = new PresetMousePos(1150, 650);
-	private final PresetMousePos AUDIO = new PresetMousePos(730, 750);
-	private final PresetMousePos VIDEO = new PresetMousePos(1150, 750);
+	public static final PresetMousePos GAME = new PresetMousePos(730, 650);
+	public static final PresetMousePos CONTROLS = new PresetMousePos(1150, 650);
+	public static final PresetMousePos AUDIO = new PresetMousePos(730, 750);
+	public static final PresetMousePos VIDEO = new PresetMousePos(1150, 750);
 
 	////////// GAMEPAD ////////////
 
