@@ -10,21 +10,21 @@ public class RectDecoration {
 	private Color color = new Color(255, 232, 170);
 
 	public enum RECTSIZE {
-		X_SMALL, SMALL, NORMAL, LARGE;
+		X_SMALL, SMALL, NORMAL, LARGE, CUSTOM_BACK_BUTTON, CUSTOM_RESET_BUTTON;
 	}
 
 	private int[] getRect(int[] rect, RECTSIZE rectType) {
 		int gap = 0;
 		int arc = 30;
 
-		if(rectType == null)
+		if (rectType == null)
 			rectType = RECTSIZE.NORMAL;
-		
+
 		switch (rectType) {
 		case X_SMALL:
 			gap = rect[2] / 8;
 			arc = 10;
-			rect = new int[] { rect[0] + gap / 2 + 4, rect[1] + 8, rect[2] - gap, rect[3] - 11, arc};
+			rect = new int[] { rect[0] + gap / 2 + 4, rect[1] + 8, rect[2] - gap, rect[3] - 11, arc };
 			break;
 		case SMALL:
 			gap = rect[3] / 3;
@@ -37,12 +37,22 @@ public class RectDecoration {
 			gap = rect[3] / 6;
 			rect = new int[] { rect[0] - gap / 2, rect[1] - gap / 2, rect[2] + gap, rect[3] + gap, arc };
 			break;
+		//////////////////////////////////////////
+		case CUSTOM_BACK_BUTTON:
+			gap = rect[2] / 8;
+			arc = 10;
+			rect = new int[] { rect[0] + gap / 2 + 12, rect[1] + gap / 2 + 14, rect[2] - gap - 4, rect[3] - gap - 20, arc };
+			break;
+		case CUSTOM_RESET_BUTTON:
+			gap = rect[2] / 8;
+			arc = 10;
+			rect = new int[] { rect[0] + gap + 24, rect[1] + gap / 2 + 14, rect[2] - 3*gap + 2, rect[3] - gap - 20, arc };
+			break;
 		default:
 			rect = new int[] { rect[0], rect[1], rect[2], rect[3], arc };
 			break;
 		}
 
-		
 		return rect;
 	}
 

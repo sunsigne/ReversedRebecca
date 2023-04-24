@@ -66,6 +66,14 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 
 	protected RECTSIZE rectsize = RECTSIZE.NORMAL;
 	
+	public RECTSIZE getRectsize() {
+		return rectsize;
+	}
+	
+	public void setRectsize(RECTSIZE rectsize) {
+		this.rectsize = rectsize;
+	}
+	
 	////////// MOUSE ////////////
 
 	private MouseController mouseController = new MouseController(this);

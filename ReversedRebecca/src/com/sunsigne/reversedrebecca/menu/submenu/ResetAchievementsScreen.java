@@ -13,14 +13,16 @@ import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ResetAchievementsScreen extends AchievementsScreen {
 
 	public ResetAchievementsScreen(int listStart) {
-		super(listStart);
+		super(CONFIRM, listStart);
 		disablePreviousButtons();
 
 		loadText();
@@ -33,7 +35,7 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new AchievementsScreen(listStart);
+		return new AchievementsScreen(AchievementsScreen.RESET, listStart);
 	}
 
 	////////// TEXT ////////////
@@ -69,7 +71,7 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 		createRender();
 	}
 
-	private void createButton(String text, int x, int y, GenericListener onPress, String sound) {
+	private void createButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress, String sound) {
 		ButtonObject button = new TitleScreenButton(text, 325 + x, 343 + y, 415, 80, onPress, null) {
 			public String getSound() {
 				return sound;
@@ -77,16 +79,17 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 		};
 
 		LAYER.MENU.addObject(button);
+		buttons.put(preset, button);
 	}
 
 	private void createConfirmButton() {
 		GenericListener onPress = () -> resetAchievements();
-		createButton(translate("Confirm"), 416, 51, onPress, "button_validate");
+		createButton(translate("Confirm"), CONFIRM, 416, 51, onPress, "button_validate");
 	}
 
 	private void createBackButton() {
-		GenericListener onPress = () -> new AchievementsScreen();
-		createButton(translate("Cancel"), 416, 155, onPress, "button_back");
+		GenericListener onPress = () -> getPreviousMenu();
+		createButton(translate("Cancel"), BACK, 416, 155, onPress, "button_back");
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -119,6 +122,40 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 		};
 
 		LAYER.MENU.addObject(grayFilter);
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	public static final PresetMousePos CONFIRM = new PresetMousePos(925, 430);
+	public static final PresetMousePos BACK = new PresetMousePos(925, 530);
+
+	////////// GAMEPAD ////////////
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+
+		if (isPresetNull())
+			setPreset(CONFIRM);
+		else if (getPreset() == CONFIRM)
+			confirmPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+
+	private void confirmPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(CONFIRM).mousePressed(null);
+	}
+
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(CONFIRM);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
 	}
 
 }

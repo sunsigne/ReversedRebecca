@@ -194,6 +194,6 @@ public class DifficultyScreen extends SubMenuScreen {
 			setPreset(PLAY);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
-	}	
+	}
 	
 }
