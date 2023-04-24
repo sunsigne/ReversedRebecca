@@ -160,6 +160,5 @@ public class VideoScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
 	}
-
 	
 }

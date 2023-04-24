@@ -1,26 +1,34 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class DifficultyScreen extends SubMenuScreen {
 
 	public DifficultyScreen(GenericListener startWorld) {
-		super();
+		super(DIFFICULTY);
 		new DifficultyOption().registerDifficulty(GAME_DIFFICULTY.NORMAL);
 
 		loadText();
 
 		createPlayButton(startWorld);
-		createLeftArrowButton();
-		createRightArrowButton();
+		createLeftArrowButton(DIRECTION.LEFT);
+		createRightArrowButton(DIRECTION.RIGHT);
 	}
 
 	////////// NAME ////////////
@@ -34,7 +42,7 @@ public class DifficultyScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new TitleScreen();
+		return new TitleScreen(TitleScreen.PLAY);
 	}
 
 	////////// TEXT ////////////
@@ -50,7 +58,7 @@ public class DifficultyScreen extends SubMenuScreen {
 		// easy / normal / hard
 		String difficultyName = DifficultyOption.getDifficulty().getName();
 		text = translate("Difficulty" + difficultyName);
-		difficulty = new TitleScreenText(text, x, y + 51);
+		difficulty = new TitleScreenTextSelectable(text, x, y + 51);
 		LAYER.MENU.addObject(difficulty);
 
 		difficultyDetail = new TitleScreenText[2];
@@ -82,23 +90,25 @@ public class DifficultyScreen extends SubMenuScreen {
 			}
 		};
 		
+		buttons.put(PLAY, button);
 		LAYER.MENU.addObject(button);
 	}
 
-	private void createArrowButton(String text, int x, GenericListener onPress) {
+	private void createArrowButton(String text, DIRECTION direction, int x, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, 710 + x, 566, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
+		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
 	}
 
-	private void createLeftArrowButton() {
+	private void createLeftArrowButton(DIRECTION direction) {
 		GenericListener onPress = () -> choosePreviousGameDifficulty();
-		createArrowButton("<", 0, onPress);
+		createArrowButton("<", direction, 0, onPress);
 	}
 
-	private void createRightArrowButton() {
+	private void createRightArrowButton(DIRECTION direction) {
 		GenericListener onPress = () -> chooseNextGameDifficulty();
-		createArrowButton(">", 420, onPress);
+		createArrowButton(">", direction, 420, onPress);
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -129,4 +139,61 @@ public class DifficultyScreen extends SubMenuScreen {
 		difficultyDetail[1].setText(text);
 	}
 
+	////////// PRESET MOUSE POS ////////////
+	
+	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
+	
+	public static final PresetMousePos DIFFICULTY = new PresetMousePos(925, 600);
+	public static final PresetMousePos PLAY = new PresetMousePos(925, 800);
+	
+	////////// GAMEPAD ////////////
+	
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+	
+		if (isPresetNull())
+			setPreset(DIFFICULTY);
+		else if (getPreset() == DIFFICULTY)
+			difficultyPressed(e);
+		else if (getPreset() == PLAY)
+			playPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+	
+	private void difficultyPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousGameDifficulty();
+		}
+			
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextGameDifficulty();
+		}
+		
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(PLAY);
+	}
+
+	private void playPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(DIFFICULTY);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(PLAY).mousePressed(null);
+	}	
+	
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(PLAY);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
+	}	
+	
 }
