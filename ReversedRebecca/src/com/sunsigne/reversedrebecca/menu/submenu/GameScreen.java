@@ -11,8 +11,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class GameScreen extends SubMenuScreen {
 
-	public GameScreen(PresetMousePos defaultPreset) {
-		super(defaultPreset);
+	public GameScreen() {
+		super(RESET);
 		loadText();
 		
 		createResetButton();
@@ -56,7 +56,7 @@ public class GameScreen extends SubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createResetButton() {
-		GenericListener onPress = () -> new ResetScreen(ResetScreen.RESET);
+		GenericListener onPress = () -> new ResetScreen();
 		ButtonObject button = new TitleScreenButton(translate("Reset"), 741, 607, 415, 80, onPress, null) {
 			
 			@Override

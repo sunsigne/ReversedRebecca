@@ -6,7 +6,7 @@ import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextDynamic;
+import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -19,8 +19,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class VideoScreen extends SubMenuScreen {
 
-	public VideoScreen(PresetMousePos defaultPreset) {
-		super(defaultPreset);
+	public VideoScreen() {
+		super(CAMERA);
 		loadText();
 
 		createLeftArrowButton(DIRECTION.LEFT);
@@ -59,7 +59,7 @@ public class VideoScreen extends SubMenuScreen {
 		// static / dynamic
 		String typeName = CameraOption.getType().getName();
 		text = translate("Camera" + typeName);
-		cameraType = new TitleScreenTextDynamic(translate("Camera" + typeName), x, y + 155);
+		cameraType = new TitleScreenTextSelectable(translate("Camera" + typeName), x, y + 155);
 		LAYER.MENU.addObject(cameraType);
 
 		cameraDetail = new TitleScreenText[2];

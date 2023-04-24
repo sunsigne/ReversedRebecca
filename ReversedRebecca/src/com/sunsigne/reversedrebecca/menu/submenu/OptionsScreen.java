@@ -43,7 +43,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createGameButton() {
-		GenericListener onPress = () -> new GameScreen(GameScreen.RESET);
+		GenericListener onPress = () -> new GameScreen();
 		createOptionScreenButton(translate("GameButton"), GAME, 206, 104, onPress);
 	}
 
@@ -58,7 +58,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createVideoButton() {
-		GenericListener onPress = () -> new VideoScreen(VideoScreen.CAMERA);
+		GenericListener onPress = () -> new VideoScreen();
 		createOptionScreenButton(translate("VideoButton"), VIDEO, 623, 208, onPress);
 	}
 

@@ -34,8 +34,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class TitleScreen extends MenuScreen {
 
-	public TitleScreen() {
-		super();
+	public TitleScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 		new SoundTask().playMusic("title_screen", false, true);
 
 		createPlayButton();
@@ -73,7 +73,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createOptionsButton() {
-		GenericListener onPress = () -> new OptionsScreen();
+		GenericListener onPress = () -> new OptionsScreen(OptionsScreen.GAME);
 		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 740, onPress);
 	}
 
@@ -163,11 +163,11 @@ public class TitleScreen extends MenuScreen {
 
 	////////// PRESET MOUSE POS ////////////
 
-	private final PresetMousePos PLAY = new PresetMousePos(325, 1000);
-	private final PresetMousePos OPTION = new PresetMousePos(925, 1000);
-	private final PresetMousePos QUIT = new PresetMousePos(1525, 1000);
-	private final PresetMousePos FLAG = new PresetMousePos(1820, 30);
-	private final PresetMousePos ACHIEVEMENT = new PresetMousePos(1820, 170);
+	public static final PresetMousePos PLAY = new PresetMousePos(325, 1000);
+	public static final PresetMousePos OPTION = new PresetMousePos(925, 1000);
+	public static final PresetMousePos QUIT = new PresetMousePos(1525, 1000);
+	public static final PresetMousePos FLAG = new PresetMousePos(1820, 30);
+	public static final PresetMousePos ACHIEVEMENT = new PresetMousePos(1820, 170);
 
 	////////// GAMEPAD ////////////
 
@@ -239,11 +239,6 @@ public class TitleScreen extends MenuScreen {
 			setPreset(ACHIEVEMENT);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(FLAG).mousePressed(null);
-	}
-
-	private void old(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.DOWN)
-			System.out.println("Le bouton A de la manette a été appuyé.");
 	}
 
 }

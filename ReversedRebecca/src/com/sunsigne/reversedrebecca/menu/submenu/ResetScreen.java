@@ -15,8 +15,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ResetScreen extends SubMenuScreen {
 
-	public ResetScreen(PresetMousePos defaultPreset) {
-		super(defaultPreset);
+	public ResetScreen() {
+		super(RESET);
 		loadText();
 
 		createResetButton();

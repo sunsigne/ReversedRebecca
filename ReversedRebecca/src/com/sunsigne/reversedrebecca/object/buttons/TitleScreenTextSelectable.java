@@ -7,13 +7,13 @@ import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 
-public class TitleScreenTextDynamic extends TitleScreenText {
+public class TitleScreenTextSelectable extends TitleScreenText {
 
-	public TitleScreenTextDynamic(String text, int x, int y) {
+	public TitleScreenTextSelectable(String text, int x, int y) {
 		this(text, x, y, 415, 80);
 	}
 	
-	public TitleScreenTextDynamic(String text, int x, int y, int w, int h) {
+	public TitleScreenTextSelectable(String text, int x, int y, int w, int h) {
 		super(text, x, y, w, h);
 	}
 	
