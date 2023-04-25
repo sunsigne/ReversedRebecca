@@ -5,12 +5,15 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.Volume;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeVoice;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
@@ -58,15 +61,34 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		new SoundTask().changeMusicVol(VolumeMusic.getVolume());
 	}
 
+	private ButtonEvent request;
+
+	public void updateRequest(ButtonEvent e) {
+		if (e.getKey() != ButtonEvent.LEFT && e.getKey() != ButtonEvent.RIGHT)
+			gamepad_holding = false;
+
+		this.request = e;
+	}
+
 	////////// TICK ////////////
 
 	private boolean holding;
+	private boolean gamepad_holding;
 
 	@Override
 	public void tick() {
-		if (holding == false)
-			return;
+		gamepad_holding = false;
 
+		if (isExtendedSelected() && ControllerManager.getInstance().isUsingGamepad())
+			gamepad_holding = true;
+
+		if (holding)
+			tickHodling();
+		if (gamepad_holding)
+			tickGamepadHolding();
+	}
+
+	private void tickHodling() {
 		playHelpingSound();
 
 		int mouseX = new MousePos().get()[0];
@@ -85,6 +107,22 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		}
 
 		new MousePos().setY(getY() + getHeight() / 2);
+	}
+
+	private final int STEP = 2;
+
+	private void tickGamepadHolding() {
+		playHelpingSound();
+
+		if (request.getKey() == ButtonEvent.LEFT) {
+			setX(Math.max(getX() - STEP, xmin));
+			refreshVolume();
+		}
+
+		if (request.getKey() == ButtonEvent.RIGHT) {
+			setX(Math.min(getX() + STEP, xmax));
+			refreshVolume();
+		}
 	}
 
 	private void playHelpingSound() {
@@ -119,12 +157,14 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	////////// RENDER ////////////
 
+	private RectDecoration rect = new RectDecoration();
+
 	@Override
 	public void render(Graphics g) {
 		Color text_color = new Color(255, 204, 0);
 		Color shadow_color = new Color(255, 163, 0, 80);
 
-		if (isSelected() || holding)
+		if (isSelected() || holding || gamepad_holding)
 			text_color = new Color(255, 232, 170);
 
 		int gap = 4;
@@ -132,6 +172,9 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		g.fillRect(getX() + gap, getY() + gap, getWidth(), getHeight());
 		g.setColor(text_color);
 		g.fillRect(getX(), getY(), getWidth(), getHeight());
+
+		if (gamepad_holding)
+			rect.drawRoundRect(g, getExtendedRect(), null);
 	}
 
 	////////// MOUSE ////////////
@@ -200,10 +243,10 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	public int[] getExtendedRect() {
 		int[] rect = new int[4];
-		rect[0] = xmin - 1;
-		rect[1] = getY();
-		rect[2] = xmax - (xmin - 1) + getWidth();
-		rect[3] = getHeight();
+		rect[0] = xmin - 1 - 2;
+		rect[1] = getY() - 2;
+		rect[2] = xmax - (xmin - 1) + getWidth() + 10;
+		rect[3] = getHeight() + 4;
 		return rect;
 	}
 

@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
@@ -8,12 +10,14 @@ import com.sunsigne.reversedrebecca.ressources.sound.VolumeMain;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeVoice;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class AudioScreen extends SubMenuScreen {
 
 	public AudioScreen() {
-		super();
+		super(MAIN);
 		loadText();
 		createScaleButtons();
 	}
@@ -35,7 +39,7 @@ public class AudioScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new OptionsScreen();
+		return new OptionsScreen(BACK);
 	}
 
 	////////// TEXT ////////////
@@ -87,10 +91,23 @@ public class AudioScreen extends SubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createScaleButtons() {
-		add(new VolumeScaleButton(514, new VolumeMain()));
-		add(new VolumeScaleButton(618, new VolumeMusic()));
-		add(new VolumeScaleButton(722, new VolumeSound()));
-		add(new VolumeScaleButton(826, new VolumeVoice()));
+		VolumeScaleButton button = null;
+
+		button = new VolumeScaleButton(514, new VolumeMain());
+		scale_buttons.put(MAIN, button);
+		add(button);
+
+		button = new VolumeScaleButton(618, new VolumeMusic());
+		scale_buttons.put(MUSIC, button);
+		add(button);
+
+		button = new VolumeScaleButton(722, new VolumeSound());
+		scale_buttons.put(SOUND, button);
+		add(button);
+
+		button = new VolumeScaleButton(826, new VolumeVoice());
+		scale_buttons.put(VOICE, button);
+		add(button);
 	}
 
 	////////// TICK ////////////
@@ -114,6 +131,84 @@ public class AudioScreen extends SubMenuScreen {
 		// volume voice
 		text = getPercentage(VolumeVoice.getVolume()) + "%";
 		volumeVoicePct.setText(text);
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	protected HashMap<PresetMousePos, VolumeScaleButton> scale_buttons = new HashMap<>();
+
+	public static final PresetMousePos MAIN = new PresetMousePos(1090, 540);
+	public static final PresetMousePos MUSIC = new PresetMousePos(1090, 640);
+	public static final PresetMousePos SOUND = new PresetMousePos(1090, 740);
+	public static final PresetMousePos VOICE = new PresetMousePos(1090, 840);
+
+	////////// GAMEPAD ////////////
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+
+		if (isPresetNull())
+			setPreset(MAIN);
+		else if (getPreset() == MAIN)
+			mainPressed(e);
+		else if (getPreset() == MUSIC)
+			musicPressed(e);
+		else if (getPreset() == SOUND)
+			soundPressed(e);
+		else if (getPreset() == VOICE)
+			voicePressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+	
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		if(e.getKey() != ButtonEvent.NULL_X)
+			return;
+		
+		scale_buttons.get(MAIN).updateRequest(e);
+		scale_buttons.get(MUSIC).updateRequest(e);
+		scale_buttons.get(SOUND).updateRequest(e);
+		scale_buttons.get(VOICE).updateRequest(e);
+	}
+
+	private void mainPressed(ButtonEvent e) {
+		scale_buttons.get(MAIN).updateRequest(e);
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(MUSIC);
+	}
+
+	private void musicPressed(ButtonEvent e) {
+		scale_buttons.get(MUSIC).updateRequest(e);
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(MAIN);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(SOUND);
+	}
+
+	private void soundPressed(ButtonEvent e) {
+		scale_buttons.get(SOUND).updateRequest(e);
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(MUSIC);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(VOICE);
+	}
+
+	private void voicePressed(ButtonEvent e) {
+		scale_buttons.get(VOICE).updateRequest(e);
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(SOUND);
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+	}
+
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(VOICE);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
 	}
 
 }

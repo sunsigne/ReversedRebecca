@@ -17,9 +17,11 @@ public class RectDecoration {
 		int gap = 0;
 		int arc = 30;
 
-		if (rectType == null)
+		if(rectType == null) {
+			arc = 10;
 			rectType = RECTSIZE.NORMAL;
-
+		}
+		
 		switch (rectType) {
 		case X_SMALL:
 			gap = rect[2] / 8;
