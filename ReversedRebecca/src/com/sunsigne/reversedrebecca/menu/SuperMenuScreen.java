@@ -85,7 +85,7 @@ public abstract class SuperMenuScreen implements Updatable, TickFree, GamepadEve
 			return true;
 
 		pressingButton = true;
-		new GameTimer(3, () -> pressingButton = false);
+		new GameTimer(3, true, () -> pressingButton = false);
 		return false;
 	}
 
