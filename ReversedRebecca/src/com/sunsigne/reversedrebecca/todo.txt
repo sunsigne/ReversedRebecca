@@ -1,14 +1,6 @@
 	
 	////////// EN COURS ////////////
 
-	choisir une logique de navigation et s'y tenir (où est-ce qu'on atteri lorsqu'une option est validée / une langue est choisi ?)
-	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
-
-	le tchat et les options doivent afficher le bon bouton de manette
-	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
-	replacer la souris par des options manettes
-	les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
-
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// PERSONNAGES à faire ////////////
@@ -18,8 +10,20 @@
 	D5 - l'un des 2 boss de l'embranchement lvl03
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 
+	////////// GAMEPAD ////////////
+
+	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
+	ControlsScreen pas fini
+	Chatbox & Interactive must be adapted
+	Puzzles must be compatible
+	
+	le tchat et les options doivent afficher le bon bouton de manette
+	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
+	replacer la souris par des options manettes
+	les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
+
 	////////// DIFFICILE ////////////
-		
+	
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)

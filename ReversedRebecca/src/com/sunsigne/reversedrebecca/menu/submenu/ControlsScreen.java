@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
@@ -27,7 +28,7 @@ public class ControlsScreen extends SubMenuScreen {
 	}
 
 	public ControlsScreen() {
-		super();
+		super(BACK);
 		loadText();
 		createButtons();
 		displayControlsKeys();
@@ -58,7 +59,7 @@ public class ControlsScreen extends SubMenuScreen {
 			World.get().destroy();
 
 		reloadRequired = false;
-		return new OptionsScreen();
+		return new OptionsScreen(BACK);
 	}
 
 	////////// TEXT ////////////
@@ -179,13 +180,13 @@ public class ControlsScreen extends SubMenuScreen {
 	private void createDefaultButton() {
 		GenericListener onPress = () -> resetKeyboard();
 		ButtonObject button = new TitleScreenButton(translate("Default"), 750, 450 + 312, 420, 80, onPress, null) {
-			
+
 			@Override
 			public String getSound() {
 				return "button_validate";
 			}
 		};
-		
+
 		LAYER.MENU.addObject(button);
 	}
 
@@ -273,6 +274,28 @@ public class ControlsScreen extends SubMenuScreen {
 		reloadRequired = true;
 
 		new ControlsScreen(actionKeyScreen);
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	// public static final PresetMousePos EXEMPLE = new PresetMousePos(730, 650);
+
+	////////// GAMEPAD ////////////
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+
+		if (isPresetNull())
+			setPreset(BACK);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
 	}
 
 }
