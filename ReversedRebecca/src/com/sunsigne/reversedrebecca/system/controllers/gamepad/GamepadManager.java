@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 
 import net.java.games.input.Component;
 import net.java.games.input.Component.Identifier;
@@ -68,11 +69,27 @@ public class GamepadManager {
 		}
 
 		else {
-			if (usingGamepad == false) {
+			if (usingGamepad == false && gamepad.poll()) {
 				usingGamepad = true;
 				ControllerManager.getInstance().setUsingGamepad(true);
+				resetMousePresetings();
 			}
 			return false;
+		}
+	}
+
+	private static void resetMousePresetings() {
+		for (GamepadAdapter tempAdapter : list.getList()) {
+
+			if (tempAdapter instanceof GamepadController == false)
+				continue;
+			var tempEvent = ((GamepadController) tempAdapter).getGamepadEvent();
+
+			if (tempEvent instanceof MousePreseting == false)
+				continue;
+			var tempPreset = (MousePreseting) tempEvent;
+
+			tempPreset.setPreset(tempPreset.getDefaultPreset());
 		}
 	}
 
