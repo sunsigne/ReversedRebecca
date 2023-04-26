@@ -6,45 +6,22 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.Infos;
-import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, MousePreseting {
+public abstract class MenuScreen extends SuperMenuScreen {
 
 	public MenuScreen(PresetMousePos defaultPreset) {
-		LAYER.MENU.getHandler().clear();
-		LAYER.MENU.addObject(this);
+		super(defaultPreset);
 		loadImages();
-		loadGamepadSetup(defaultPreset);
-	}
-
-	////////// USEFUL ////////////
-
-	protected String translate(String text) {
-		return new Translatable().getTranslatedText(text, FilePath.MENU);
 	}
 
 	////////// TEXTURE ////////////
@@ -104,68 +81,6 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 		int[] rect = new int[] { 940, 460, 0, 0 };
 
 		new TextDecoration().drawOutlinesString(g, font, Infos.VERSION, DIRECTION.NULL, rect);
-	}
-
-	////////// PRESET MOUSE POS ////////////
-
-	protected HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();
-
-	private PresetMousePos preset;
-	private PresetMousePos defaultPreset;
-	
-	@Override
-	public PresetMousePos getDefaultPreset() {
-		return defaultPreset;
-	}
-	
-	@Override
-	public PresetMousePos getPreset() {
-		return preset;
-	}
-
-	@Override
-	public void setPreset(PresetMousePos preset) {
-		this.setPreset(preset, true);
-	}
-	
-	private void setPreset(PresetMousePos preset, boolean sound) {
-		this.preset = preset;
-		preset.moveMouse();
-
-		if (isPresetNull() == false && sound)
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
-	}
-		
-	////////// GAMEPAD ////////////
-
-	private GamepadController gamepadController = new GamepadController(this);
-
-	@Override
-	public GamepadController getGamepadController() {
-		return gamepadController;
-	}
-
-	protected void loadGamepadSetup(PresetMousePos defaultPreset) {
-		this.defaultPreset = defaultPreset;
-		
-		if (ControllerManager.getInstance().isUsingGamepad())
-			setPreset(defaultPreset, false);
-	}
-
-	private boolean pressingButton;
-
-	protected boolean pressingButton() {
-		if (pressingButton)
-			return true;
-
-		pressingButton = true;
-		new GameTimer(3, () -> pressingButton = false);
-		return false;
-	}
-
-	@Override
-	public void buttonReleased(ButtonEvent e) {
-		
 	}
 
 }
