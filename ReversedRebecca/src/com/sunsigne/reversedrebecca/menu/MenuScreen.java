@@ -133,7 +133,7 @@ public abstract class MenuScreen implements Updatable, TickFree, GamepadEvent, M
 		preset.moveMouse();
 
 		if (isPresetNull() == false && sound)
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
 	}
 		
 	////////// GAMEPAD ////////////

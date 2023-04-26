@@ -3,7 +3,6 @@
 
 	choisir une logique de navigation et s'y tenir (où est-ce qu'on atteri lorsqu'une option est validée / une langue est choisi ?)
 	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
-	le son "bouton" est temporaire dans TitleScreen setPreset()
 
 	le tchat et les options doivent afficher le bon bouton de manette
 	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
