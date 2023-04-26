@@ -21,7 +21,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 public class DifficultyScreen extends SubMenuScreen {
 
 	public DifficultyScreen(GenericListener startWorld) {
-		super(DIFFICULTY);
+		super(PLAY);
 		new DifficultyOption().registerDifficulty(GAME_DIFFICULTY.NORMAL);
 
 		loadText();
