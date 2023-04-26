@@ -3,31 +3,21 @@ package com.sunsigne.reversedrebecca.menu.ingame;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.menu.SuperMenuScreen;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public abstract class MenuIngameScreen implements Updatable, TickFree {
+public abstract class MenuIngameScreen extends SuperMenuScreen {
 
-	public MenuIngameScreen() {
-		LAYER.MENU.getHandler().clear();
-		LAYER.MENU.addObject(this);
+	public MenuIngameScreen(PresetMousePos defaultPreset) {
+		super(defaultPreset);
 	}
 
 	////////// NAME ////////////
 
 	public abstract String getName();
-
-	////////// USEFUL ////////////
-
-	protected String translate(String text) {
-		return new Translatable().getTranslatedText(text, FilePath.MENU);
-	}
 
 	////////// TEXTURE ////////////
 

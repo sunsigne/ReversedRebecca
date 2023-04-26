@@ -9,12 +9,14 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class QuitScreen extends MenuIngameScreen {
 
 	public QuitScreen() {
-		super();
+		super(QUIT);
 		loadText();
 
 		createQuitButton();
@@ -49,28 +51,29 @@ public class QuitScreen extends MenuIngameScreen {
 
 	////////// BUTTONS ////////////
 
-	private void createOptionScreenButton(String text, int x, int y, GenericListener onPress) {
-		this.createOptionScreenButton(text, x, y, onPress, "button");
+	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress) {
+		this.createOptionScreenButton(text, preset, x, y, onPress, "button");
 	}
 
-	private void createOptionScreenButton(String text, int x, int y, GenericListener onPress, String sound) {
+	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress, String sound) {
 		ButtonObject button = new TitleScreenButton(text, 325 + x, 343 + y, 415, 80, onPress, null) {
 			public String getSound() {
 				return sound;
 			}
 		};
 
+		buttons.put(preset, button);
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> loadTitleScreen();
-		createOptionScreenButton(translate("Confirm"), 416, 51, onPress);
+		createOptionScreenButton(translate("Confirm"), QUIT, 416, 51, onPress);
 	}
 
 	private void createBackButton() {
 		GenericListener onPress = () -> new ResumeScreen();
-		createOptionScreenButton(translate("Cancel"), 416, 155, onPress, "button_back");
+		createOptionScreenButton(translate("Cancel"), BACK, 416, 155, onPress, "button_back");
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -80,9 +83,43 @@ public class QuitScreen extends MenuIngameScreen {
 
 		new MenuIngameController().unloadResumeScreen();
 		World.get().destroy();
-		new TitleScreen();
+		new TitleScreen(TitleScreen.PLAY);
 
 		LAYER.LOADING.getHandler().clear();
+	}
+
+	////////// PRESET MOUSE POS ////////////
+	
+	public static final PresetMousePos QUIT = new PresetMousePos(945, 430);
+	public static final PresetMousePos BACK = new PresetMousePos(945, 535);
+	
+	////////// GAMEPAD ////////////
+	
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+	
+		if (isPresetNull())
+			setPreset(QUIT);
+		else if (getPreset() == QUIT)
+			quitPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
+	}
+	
+	private void quitPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(QUIT).mousePressed(null);
+	}
+	
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
 	}
 
 }
