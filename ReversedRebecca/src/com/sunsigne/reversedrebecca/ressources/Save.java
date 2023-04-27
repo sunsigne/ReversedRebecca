@@ -20,6 +20,10 @@ public class Save {
 	////////// LEVEL ////////////
 
 	public String getLevel(boolean menu) {
+		if (new FileTask().doesExist(true, file) == false)
+			new FileTask().write(file, "currentlvlmenu=" + FilePath.LVL000 + System.getProperty("line.separator")
+					+ "currentlvl=" + FilePath.LVL000);
+
 		if (menu)
 			return new FileTask().read(userData, "currentlvlmenu", file);
 		else

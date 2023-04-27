@@ -9,11 +9,11 @@
 	
 	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
-	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
+	faire le bon bruit quand on ouvre le coffre
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
-	faire le bon bruit quand on ouvre le coffre	
+	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 
 	////////// PERSONNAGES à faire ////////////
 
