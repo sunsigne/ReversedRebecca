@@ -8,7 +8,6 @@
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug ! (vérifié récemment, c'est tj le cas)
 	remplasser le questionnaire par un formulaire de bug
-	si une manette est branchée, la souris est "invisible" lors du lancement du jeu
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
 	créer un système d'envoie de données du user (crash et dev_data)

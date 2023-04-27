@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class Conductor {
@@ -28,6 +29,7 @@ public class Conductor {
 
 		new TitleScreen(TitleScreen.PLAY);
 		LAYER.LOADING.getHandler().clear();
+		PresetMousePos.usingPreset = false;
 	}
 
 	public void stopApp() {
