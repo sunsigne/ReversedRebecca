@@ -11,22 +11,9 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class Snitch {
 
-	private static final FileTask task = new FileTask();
-	private static final String file = "dev_data.txt";
-	private static boolean ACTIVATED = start();
-	private boolean userData = true;
+	private final FileTask task = new FileTask();
 
-	public Snitch() {
-		if (ACTIVATED == false)
-			return;
-
-		if (task.doesExist(userData, file) == false)
-			new FileTask().write(file, "");
-	}
-
-	////////// USEFUL ////////////
-
-	private static boolean start() {
+	protected boolean start() {
 		if (Infos.IS_DEV_VERSION)
 			return false;
 
@@ -51,16 +38,6 @@ public class Snitch {
 		}
 
 		return true;
-	}
-
-	public void registerEntry(String text) {
-		if (ACTIVATED == false)
-			return;
-
-		String content = new FileTask().read(userData, file);
-		String new_content = content + System.getProperty("line.separator")
-				+ new FormatedString().getNoSpecialCharacter(text);
-		task.write(file, new_content);
 	}
 
 }

@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Conductor;
-import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
@@ -30,7 +29,7 @@ public class Game extends Canvas implements Runnable {
 	static {
 		System.setProperty("net.java.games.input.librarypath",
 				new File("dependencies/JInput/natives").getAbsolutePath());
-		
+
 		Logger.getLogger(ControllerEnvironment.class.getPackage().getName()).setUseParentHandlers(false);
 	}
 
@@ -44,7 +43,7 @@ public class Game extends Canvas implements Runnable {
 	////////// SIGNELTON ////////////
 
 	private Game() {
-		new Snitch().registerEntry(System.getProperty("line.separator") + "__________");
+
 	}
 
 	private static Game instance;
@@ -67,7 +66,7 @@ public class Game extends Canvas implements Runnable {
 
 		gamepadUpdate = new GamepadUpdate();
 		gamepadUpdate.start();
-		
+
 		thread = new Thread(this, Infos.NAME + "_main");
 		thread.start();
 	}

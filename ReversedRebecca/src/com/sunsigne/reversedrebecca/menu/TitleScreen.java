@@ -26,7 +26,6 @@ import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.FormTask;
-import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -125,9 +124,6 @@ public class TitleScreen extends MenuScreen {
 
 	private void startWorld() {
 		String currentlvl = new Save().getLevel(false);
-
-		new Snitch().registerEntry("START");
-		new Snitch().registerEntry("DIFFICULTY:" + DifficultyOption.getDifficulty().getName().toUpperCase());
 
 		// if currentlvlmenu and currentlvl are the same
 		if (new Save().getLevel(true).equalsIgnoreCase(currentlvl)) {

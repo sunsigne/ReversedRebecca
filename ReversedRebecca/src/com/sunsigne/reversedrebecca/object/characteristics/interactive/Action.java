@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.system.Snitch;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -82,7 +81,6 @@ public abstract class Action {
 		if (canDoAction()) {
 			listener.doAction();
 			paralysePlayer();
-			new Snitch().registerEntry("ACTION:" + name);
 		}
 	}
 
@@ -91,7 +89,6 @@ public abstract class Action {
 			return;
 
 		listener.doAction();
-		new Snitch().registerEntry("ACTION:" + name);
 	}
 
 	private void paralysePlayer() {
