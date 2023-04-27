@@ -98,7 +98,7 @@ public class TitleScreen extends MenuScreen {
 
 	private void createCrashButton() {
 		GenericListener onPress = () -> new FormTask().sendRequest();
-		ButtonObject button = new TitleScreenButton("Remplir le questionnaire", 175, -25, 420, 140, onPress, null);
+		ButtonObject button = new TitleScreenButton("Signaler un bug", 50, -25, 420, 140, onPress, null);
 		((TitleScreenButton) button).setFontSize(30f);
 		LAYER.MENU.addObject(button);
 	}

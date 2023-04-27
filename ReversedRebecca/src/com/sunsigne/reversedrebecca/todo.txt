@@ -1,6 +1,10 @@
 	
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
-		
+
+	////////// VERSION PUBLIQUE ////////////
+
+	World - message d'erreur prévenant que le niveau du laboratoire n'est pas fini
+
 	////////// EN COURS ////////////
 	
 	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
@@ -13,7 +17,7 @@
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
-	le bouton "questionnaire" sur l'écran titre est pas terrible ...
+
 	faire le bon bruit quand on ouvre le coffre	
 
 	////////// PERSONNAGES à faire ////////////
@@ -36,6 +40,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)

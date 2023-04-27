@@ -10,7 +10,7 @@ import javax.swing.SwingConstants;
 
 public class FormTask {
 
-	private final String LINK = "https://form.dragnsurvey.com/survey/r/de5a2e37";
+	private final String LINK = "https://form.dragnsurvey.com/survey/r/04b4b3ff";
 
 	////////// EMAIL ////////////
 
