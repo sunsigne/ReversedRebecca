@@ -12,11 +12,11 @@ import com.sunsigne.reversedrebecca.pattern.FormatedString;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
-public class Snitch {
+public class BugFinder {
 
 	private final FileTask task = new FileTask();
 
-	protected boolean start() {
+	protected boolean run() {
 		if (Infos.IS_DEV_VERSION)
 			return false;
 
@@ -25,7 +25,7 @@ public class Snitch {
 		String path = null;
 
 		while (error) {
-			// create crash_repport_xx.txt in AppData/Roaming
+			// create crash_report_xx.txt in AppData/Roaming
 			path = "crash_report_" + new FormatedString().getNumber(num) + ".txt";
 			error = task.doesExist(true, path);
 			if (error)

@@ -29,7 +29,7 @@ public class FormTask {
 		message = message.concat("du ou de vos fichers \"crash_report.txt\", puis de les supprimer.");
 
 		// show message to inform
-		new Snitch().openUserData();
+		new BugFinder().openUserData();
 		JOptionPane.showMessageDialog(null, message);
 	}
 

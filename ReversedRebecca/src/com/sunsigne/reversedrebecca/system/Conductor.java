@@ -15,7 +15,7 @@ public class Conductor {
 	public void startApp() {
 
 		LAYER.LOADING.addObject(new LoadingScreen());
-		new Snitch().start();
+		new BugFinder().run();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new Window(Game.getInstance());
 		Game.getInstance().start();
