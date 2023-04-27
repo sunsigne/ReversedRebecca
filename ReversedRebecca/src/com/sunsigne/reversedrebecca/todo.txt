@@ -8,15 +8,11 @@
 	////////// EN COURS ////////////
 	
 	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
-	retravailler le snitch
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
-	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
-	créer un système d'envoie de données du user (crash et dev_data)
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
-
 	faire le bon bruit quand on ouvre le coffre	
 
 	////////// PERSONNAGES à faire ////////////

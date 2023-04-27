@@ -1,7 +1,10 @@
 package com.sunsigne.reversedrebecca.system;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import com.sunsigne.reversedrebecca.Infos;
@@ -23,7 +26,7 @@ public class Snitch {
 
 		while (error) {
 			// create crash_repport_xx.txt in AppData/Roaming
-			path = "crash_repport_" + new FormatedString().getNumber(num) + ".txt";
+			path = "crash_report_" + new FormatedString().getNumber(num) + ".txt";
 			error = task.doesExist(true, path);
 			if (error)
 				error = task.isEmptyFile(true, path);
@@ -38,6 +41,15 @@ public class Snitch {
 		}
 
 		return true;
+	}
+
+	public void openUserData() {
+		try {
+			File directory = new File(FilePath.USERDATA_PATH);
+			Desktop.getDesktop().open(directory);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
