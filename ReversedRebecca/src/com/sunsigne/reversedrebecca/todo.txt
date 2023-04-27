@@ -1,7 +1,22 @@
 	
-	////////// EN COURS ////////////
-
 	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
+		
+	////////// EN COURS ////////////
+	
+	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
+	retravailler le snitch
+	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
+	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug ! (vérifié récemment, c'est tj le cas)
+	remplasser le questionnaire par un formulaire de bug
+	si une manette est branchée, la souris est "invisible" lors du lancement du jeu
+	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
+	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
+	créer un système d'envoie de données du user (crash et dev_data)
+	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
+	supprimer les ressources non utilisées
+	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
+	le bouton "questionnaire" sur l'écran titre est pas terrible ...
+	faire le bon bruit quand on ouvre le coffre	
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -12,7 +27,6 @@
 
 	////////// GAMEPAD ////////////
 
-	configurer bouton B pour le retour dans les menus + gérer les "isPressetNull" dans les Menu
 	ControlsScreen pas fini
 	Chatbox & Interactive must be adapted
 	Puzzles must be compatible
@@ -29,11 +43,7 @@
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	faire une animation de résolution des puzzle
-	faire en sorte que le dossier dans "appdata" se reconstruise tt seul (lui et son contenu)
 	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
-	il faudra simplifier l'enregistrement et l'envoie d'erreur sur le Snitch
-	faire un GUI menu
-	créer un système d'envoie de données du user (crash et dev_data)
 	"You are" ne se sauvegarde pas encore
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
 	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
@@ -43,8 +53,7 @@
 
 	////////// FACILE ////////////
 
-	! rr000 Sarah nous pousse quand on est assis sur la chaise du bas
-	les achievement devrait être numéroté en 100, 200 etc. en fonction du niveau de difficulty
+	les achievement devrait être numéroté en 100, 200 etc. en fonction du niveau de difficulty (déjà le cas ?)
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
@@ -70,9 +79,7 @@
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	
 	////////// RR000 ////////////
-	
-	les chaises disparaisent pendant un court instant lorsqu'on descend
-	dire "j'ai fait des crêpes" au moment exact où sarah atteind la bibliothèque = bug !
+
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	traduction english pas fini (les actions)
@@ -88,7 +95,7 @@
 	reduire le temps de Joseph devant la bibliothèque
 	
 	scénario : exit
-	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jena pousse Rebecca devant elle
+	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la réaction après la porte du bas
@@ -139,9 +146,8 @@
 	Faire double Y (le pro du combat), et "mister boom"
 	
 	////////// SONS ////////////
-	
-	faire le bon bruit quand on ouvre le coffre	
-	faire en sorte que toutes les musiques loop
+
+	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
 	
 	////////// A CREER PLUS TARD ////////////
 	
