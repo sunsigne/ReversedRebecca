@@ -131,6 +131,11 @@ public class VideoScreen extends SubMenuScreen {
 	
 		if (isPresetNull())
 			setPreset(CAMERA);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == CAMERA)
 			cameraPressed(e);
 		else if (getPreset() == BACK)

@@ -97,6 +97,11 @@ public class ResumeScreen extends MenuIngameScreen {
 
 		if (isPresetNull())
 			setPreset(RESUME);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(RESUME, false);
+			buttons.get(RESUME).mousePressed(null);
+		}
+		
 		else if (getPreset() == RESUME)
 			resumePressed(e);
 		else if (getPreset() == OPTIONS)

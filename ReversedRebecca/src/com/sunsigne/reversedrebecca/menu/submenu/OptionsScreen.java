@@ -78,6 +78,11 @@ public class OptionsScreen extends SubMenuScreen {
 
 		if (isPresetNull())
 			setPreset(GAME);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+
 		else if (getPreset() == GAME)
 			gamePressed(e);
 		else if (getPreset() == CONTROLS)

@@ -82,14 +82,14 @@ public class DifficultyScreen extends SubMenuScreen {
 		int x = 325 + 416;
 		int y = 503;
 
-		ButtonObject button = new TitleScreenButton(translate("PlayButton"), x, y + 259, 415, 80, startWorld, null)  {
-			
+		ButtonObject button = new TitleScreenButton(translate("PlayButton"), x, y + 259, 415, 80, startWorld, null) {
+
 			@Override
 			public String getSound() {
 				return "button_validate";
 			}
 		};
-		
+
 		buttons.put(PLAY, button);
 		LAYER.MENU.addObject(button);
 	}
@@ -140,21 +140,26 @@ public class DifficultyScreen extends SubMenuScreen {
 	}
 
 	////////// PRESET MOUSE POS ////////////
-	
+
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
-	
+
 	public static final PresetMousePos DIFFICULTY = new PresetMousePos(925, 600);
 	public static final PresetMousePos PLAY = new PresetMousePos(925, 800);
-	
+
 	////////// GAMEPAD ////////////
-	
+
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		if (pressingButton())
 			return;
-	
+
 		if (isPresetNull())
 			setPreset(DIFFICULTY);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+
 		else if (getPreset() == DIFFICULTY)
 			difficultyPressed(e);
 		else if (getPreset() == PLAY)
@@ -162,20 +167,20 @@ public class DifficultyScreen extends SubMenuScreen {
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
-	
+
 	private void difficultyPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
 			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
 			choosePreviousGameDifficulty();
 		}
-			
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
 			chooseNextGameDifficulty();
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(PLAY);
 	}
@@ -187,13 +192,13 @@ public class DifficultyScreen extends SubMenuScreen {
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(PLAY).mousePressed(null);
-	}	
-	
+	}
+
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
 			setPreset(PLAY);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
 	}
-	
+
 }

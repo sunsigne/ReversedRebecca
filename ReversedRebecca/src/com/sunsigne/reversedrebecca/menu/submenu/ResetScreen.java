@@ -95,6 +95,11 @@ public class ResetScreen extends SubMenuScreen {
 	
 		if (isPresetNull())
 			setPreset(RESET);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == RESET)
 			resetPressed(e);
 		else if (getPreset() == BACK)

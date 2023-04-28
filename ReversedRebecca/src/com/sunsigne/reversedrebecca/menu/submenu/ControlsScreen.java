@@ -289,6 +289,11 @@ public class ControlsScreen extends SubMenuScreen {
 
 		if (isPresetNull())
 			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}

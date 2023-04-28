@@ -138,6 +138,11 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 
 		if (isPresetNull())
 			setPreset(CONFIRM);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == CONFIRM)
 			confirmPressed(e);
 		else if (getPreset() == BACK)

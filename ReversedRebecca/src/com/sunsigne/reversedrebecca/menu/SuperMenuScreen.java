@@ -54,7 +54,7 @@ public abstract class SuperMenuScreen implements Updatable, TickFree, GamepadEve
 		this.setPreset(preset, true);
 	}
 
-	private void setPreset(PresetMousePos preset, boolean sound) {
+	public void setPreset(PresetMousePos preset, boolean sound) {
 		this.preset = preset;
 		preset.moveMouse();
 

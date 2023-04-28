@@ -94,7 +94,7 @@ public class AchievementsScreen extends SubMenuScreen {
 	private void customBackButton() {
 		getBackButton().setRectsize(RECTSIZE.CUSTOM_BACK_BUTTON);
 	}
-	
+
 	private void createResetButton() {
 		GenericListener onPress = () -> new ResetAchievementsScreen(listStart);
 		ButtonObject button = new TitleScreenButton(translate("Reset"), 1482, 940, 415, 140, onPress, null) {
@@ -166,6 +166,11 @@ public class AchievementsScreen extends SubMenuScreen {
 
 		if (isPresetNull())
 			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+
 		else if (getPreset() == RESET)
 			resetPressed(e);
 		else if (getPreset() == BACK)
@@ -193,8 +198,7 @@ public class AchievementsScreen extends SubMenuScreen {
 				var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
 				showNextAchivements();
-			}
-			else
+			} else
 				setPreset(RESET);
 		}
 

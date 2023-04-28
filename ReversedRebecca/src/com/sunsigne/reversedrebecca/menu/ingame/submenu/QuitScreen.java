@@ -102,6 +102,11 @@ public class QuitScreen extends MenuIngameScreen {
 	
 		if (isPresetNull())
 			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == QUIT)
 			quitPressed(e);
 		else if (getPreset() == BACK)

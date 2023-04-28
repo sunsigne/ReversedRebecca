@@ -151,6 +151,11 @@ public class AudioScreen extends SubMenuScreen {
 
 		if (isPresetNull())
 			setPreset(MAIN);
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
+		
 		else if (getPreset() == MAIN)
 			mainPressed(e);
 		else if (getPreset() == MUSIC)

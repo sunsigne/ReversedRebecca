@@ -240,6 +240,10 @@ public class LanguageScreen extends SubMenuScreen {
 
 		if (isPresetNull())
 			setPreset(getDefaultPreset());
+		else if (e.getKey() == ButtonEvent.B) {
+			setPreset(BACK, false);
+			buttons.get(BACK).mousePressed(null);
+		}
 
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(getPreset()).mousePressed(null);
