@@ -8,7 +8,6 @@
 	////////// EN COURS ////////////
 	
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	la souris est redevenu bizarre lorsque le jeu se lance alors qu'un gamepad est branché ...
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées

@@ -15,12 +15,12 @@ public class Conductor {
 	public void startApp() {
 
 		// LOADING OF MINIMAL RESSOURCES
+		new BugFinder().run();
+		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new RessourceLoader().loadMinimalRessources();
 		Game.getInstance().forceLoop();
 
 		LAYER.LOADING.addObject(new LoadingScreen());
-		new BugFinder().run();
-		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new Window(Game.getInstance());
 		Game.getInstance().start();
 
