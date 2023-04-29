@@ -3,17 +3,22 @@
 
 	////////// VERSION PUBLIQUE ////////////
 
-	World - message d'erreur prévenant que le niveau du laboratoire n'est pas fini
-
-	////////// EN COURS ////////////
+	World - message d'erreur prévenant que le niveau du laboratoire n'est pas fini :
 	
-	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
+	start();
+
+	if(mapName.equalsIgnoreCase("laboratory_0"))
+		JOptionPane.showMessageDialog(null, "Le niveau auquel vous allez jouer n'est pas terminé en plus de contenir de nombreux bugs." + System.getProperty("line.separator") + "Je connais déjà ces bugs, merci de ne pas envoyer de rapport d'erreurs les concernants.");
+
+	LAYER.LOADING.getHandler().clear();
+	
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
-	faire le bon bruit quand on ouvre le coffre
-	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
-	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
+	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
+
+	////////// EN COURS ////////////
+
+	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 
 	////////// PERSONNAGES à faire ////////////
 
@@ -35,6 +40,8 @@
 
 	////////// DIFFICILE ////////////
 	
+	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	le bouton "option" du Menu Ingame ne fait rien
@@ -56,7 +63,7 @@
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
-	les flêches pour le déplacement doit ête dit qq part
+	les flêches pour le déplacement doit ête dit qq part (dans le tuto par exemple)
 	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
@@ -146,20 +153,19 @@
 	////////// SONS ////////////
 
 	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
+	faire le bon bruit quand on ouvre le coffreA
 	
 	////////// A CREER PLUS TARD ////////////
 	
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
-	créer une animation "sick" pour quand on marche	
-	le bouton "questionnaire" sur l'écran titre est pas terrible ...
+	créer une animation "sick" pour quand on marche	 ?
 	
 	///////// IDEE ////////////
 
 	des outils de + en + élaborés (design) en fonction de leur lvl
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile elle se casse, en difficile il y a un "court-jus" qui la fait marcher à 200% 
+	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
-	Dave, son pouvoir est de savoir ce qu'il est (un personnage de jeu vidéo). Souvent blasé, a des comportements (et phrases) différentes d'une session sur l'autre (% de chance)
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
