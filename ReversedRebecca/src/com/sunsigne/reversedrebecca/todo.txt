@@ -18,7 +18,6 @@
 
 	////////// EN COURS ////////////
 
-	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 
 	////////// PERSONNAGES à faire ////////////
@@ -97,9 +96,9 @@
 
 	////////// LVL001 ////////////
 
-	scénario psycophathe pas encore faits
-	psycopath -> créer flaque de sang animation
-	reduire le temps de Joseph devant la bibliothèque ! (testé récemment, c'est clairement trop long)	
+	scénario sadique pas encore faits
+	reduire le temps de Joseph devant la bibliothèque ! (testé récemment, c'est clairement trop long)
+	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
 
 	scénario : exit
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
