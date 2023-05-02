@@ -71,7 +71,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 		key.refreshKey();
 
 		// destroy objet
-		getHandler().removeObject(this);
+		removeObject();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 
 		// refresh Menu

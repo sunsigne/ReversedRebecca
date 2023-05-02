@@ -141,7 +141,7 @@ public class Game extends Canvas implements Runnable {
 //				ticks++;
 				try {
 					tick();
-				} catch (ConcurrentModificationException | NullPointerException e) {
+				} catch (ConcurrentModificationException e) {
 					// some ticks may be compromised. As the next tick repair the problem,
 					// no need to proccess this exception.
 				} catch (Exception e) {
@@ -155,7 +155,7 @@ public class Game extends Canvas implements Runnable {
 //				frames++;
 				try {
 					render();
-				} catch (ConcurrentModificationException | NullPointerException e) {
+				} catch (ConcurrentModificationException e) {
 					// same problem as above
 				} catch (Exception e) {
 					e.printStackTrace();

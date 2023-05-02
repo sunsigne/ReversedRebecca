@@ -14,7 +14,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 public class ExpressionObject extends GameObject {
 
 	private String name;
-	
+
 	public ExpressionObject(PiranhaObject object, String name) {
 		super(object.getX(), object.getY() - Size.M);
 		this.name = name;
@@ -49,7 +49,8 @@ public class ExpressionObject extends GameObject {
 			time++;
 
 		if (time >= MAX_TIME)
-			getHandler().removeObject(this);
+			removeObject();
+
 	}
 
 	////////// TEXTURE ////////////

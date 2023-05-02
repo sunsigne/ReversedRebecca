@@ -33,7 +33,8 @@ public class DeleteMyselfRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		Handler handler = object.getHandler();
-		handler.removeObject(object);
+		if (handler != null)
+			handler.removeObject(object);
 	}
 
 }

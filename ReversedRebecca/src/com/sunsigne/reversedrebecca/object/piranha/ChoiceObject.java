@@ -48,7 +48,7 @@ public class ChoiceObject extends InteractiveObject {
 	}
 
 	private void updateChoice() {
-		getHandler().removeObject(this);
+		removeObject();
 		boolean playerCanInterract = Cutscene.isRunning() == false;
 		player.setCanInterract(playerCanInterract);
 		player.setUserAllowedToMovePlayer(true);

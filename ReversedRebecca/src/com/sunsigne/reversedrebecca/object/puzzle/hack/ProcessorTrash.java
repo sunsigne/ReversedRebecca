@@ -39,7 +39,7 @@ public class ProcessorTrash extends ProcessorEatable {
 	}
 
 	private void destroyTrash() {
-		getHandler().removeObject(this);
+		removeObject();
 		getComputer().removeObject(this);
 	}
 

@@ -47,7 +47,11 @@ public class ChoiceRequest implements Request {
 		request.doAction(choice, target);
 
 		// create the object
-		player.getHandler().addObject(choice);
+		var handler = player.getHandler();
+		if (handler == null)
+			return;
+		
+		handler.addObject(choice);
 		choice.tick();
 	}
 

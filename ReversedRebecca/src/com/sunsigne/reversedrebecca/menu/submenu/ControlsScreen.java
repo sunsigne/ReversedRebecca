@@ -213,7 +213,10 @@ public class ControlsScreen extends SubMenuScreen {
 	////////// BUTTON ACTION ////////////
 
 	private void refresh(ButtonObject button, Key key, boolean actionKey) {
-		button.getHandler().removeObject(button);
+		var handler = button.getHandler();
+		if (handler != null)
+			handler.removeObject(button);
+
 		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey);
 		LAYER.MENU.addObject(keyButton);
 		reloadRequired = true;
@@ -293,7 +296,7 @@ public class ControlsScreen extends SubMenuScreen {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
-		
+
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}

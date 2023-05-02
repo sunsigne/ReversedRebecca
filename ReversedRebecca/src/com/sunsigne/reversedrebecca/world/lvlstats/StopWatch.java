@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -32,9 +31,7 @@ public class StopWatch implements Updatable, RenderFree {
 	}
 
 	protected float getTime() {
-		Handler handler = getHandler();
-		if (handler != null)
-			handler.removeObject(this);
+		removeObject();
 		return time / Game.SEC;
 	}
 

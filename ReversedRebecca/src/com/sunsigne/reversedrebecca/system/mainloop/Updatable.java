@@ -8,6 +8,12 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public interface Updatable {
 
+	default void removeObject() {
+		var handler = getHandler();
+		if (handler != null)
+			handler.removeObject(this);
+	}
+
 	default Handler getHandler() {
 		for (Handler tempHandler : SuperHandler.getList().getList()) {
 			if (tempHandler.containsObject(this))

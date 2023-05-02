@@ -90,7 +90,9 @@ public class MoveRequest implements Request {
 	}
 
 	private PiranhaObject getObject(PiranhaObject object, String target) {
-		for (Updatable tempUpdatable : object.getHandler().getList()) {
+		var handler = object.getHandler();
+		
+		for (Updatable tempUpdatable : handler.getList()) {
 			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 

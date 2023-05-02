@@ -48,9 +48,11 @@ public abstract class OpenPuzzleAction extends Action {
 			PuzzlerObject nullObject = getNullObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			Handler handler = puzzlerObject.getHandler();
 
-			if (nullObject != null)
-				handler.addObject(nullObject);
-			handler.removeObject(puzzlerObject);
+			if (handler != null) {
+				if (nullObject != null)
+					handler.addObject(nullObject);
+				handler.removeObject(puzzlerObject);
+			}
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);
 		};

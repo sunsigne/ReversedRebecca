@@ -53,9 +53,11 @@ public class FacingRequest extends ConditionalRequest {
 				return;
 			}
 		}
-
+		
 		// if facing is a character
-		for (Updatable tempUpdatable : object.getHandler().getList()) {
+		var handler = object.getHandler();
+		
+		for (Updatable tempUpdatable : handler.getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 

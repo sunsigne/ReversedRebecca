@@ -17,7 +17,7 @@ public abstract class LootObject extends GameObject implements TickFree, Collisi
 	}
 
 	public void pickup() {
-		getHandler().removeObject(this);
+		removeObject();
 		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
 		new SoundTask().playSoundIfCamera(this, "loot");
 		actionWhenLooted();

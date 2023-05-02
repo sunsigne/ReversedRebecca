@@ -15,7 +15,7 @@ public abstract class ProcessorEatable extends ProcessorObject {
 
 	@Override
 	public void doVirusAction() {
-		getHandler().removeObject(this);
+		removeObject();
 		getComputer().removeObject(this);
 		
 		if(isFruitFile())

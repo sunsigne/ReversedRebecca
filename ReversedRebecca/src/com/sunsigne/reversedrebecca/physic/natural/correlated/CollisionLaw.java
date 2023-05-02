@@ -22,6 +22,8 @@ public class CollisionLaw implements PhysicLaw {
 		CollisionDetector detectorObject = (CollisionDetector) object;
 
 		Handler layer = object.getHandler();
+		if (layer == null)
+			return;
 
 		for (Updatable tempObject : layer.getList()) {
 			if (object == tempObject)

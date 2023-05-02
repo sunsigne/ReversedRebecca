@@ -101,8 +101,9 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		LAYER.PUZZLE.addObject(content);
 
 		Request instruction = RequestList.getList().getObject(new FacingRequest());
-
-		for (Updatable tempUpdatable : object.getHandler().getList()) {
+		var handler = object.getHandler();
+		
+		for (Updatable tempUpdatable :  handler.getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 

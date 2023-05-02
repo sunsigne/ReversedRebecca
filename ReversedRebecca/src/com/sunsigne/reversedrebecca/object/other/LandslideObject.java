@@ -49,7 +49,7 @@ public class LandslideObject extends GameObject implements RenderFree, Pusher {
 		time--;
 
 		if (time <= 0)
-			getHandler().removeObject(this);
+			removeObject();
 	}
 
 	private void playSound() {
@@ -85,7 +85,9 @@ public class LandslideObject extends GameObject implements RenderFree, Pusher {
 			return;
 
 		mustPush = false;
-		getHandler().getList().add(0, rubble);
+		var handler = getHandler();
+		if (handler != null)
+			getHandler().getList().add(0, rubble);
 	}
 
 	////////// STUNNABLE ////////////
