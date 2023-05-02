@@ -1,0 +1,4 @@
+player = alicia = worry = Je#suis#désolé#que#ça#t'aie#déplu…@Mais#on#n'a#pas#besoin#d'aller#plus#loin.
+player = alicia = happy_var = Eric#a#fait#tomber#ses#clefs#en#partant.
+player = alicia = laugh = D'ailleurs,#tu#marches#dessus.
+alicia = player = surprised = Pardon.

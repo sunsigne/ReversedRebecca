@@ -34,3 +34,7 @@ COFFEE = Key1 % café
 TEA = Key2 % thé
 NO_THANKS = Key3 % non#merci
 
+///// RIGHT AREA /////
+
+NO_I_CONTINUE = Key1 % non,#je#continue
+OK_I_STOP = Key2 % ok,#j'arrête
