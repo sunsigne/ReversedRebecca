@@ -58,7 +58,6 @@
 
 	////////// FACILE ////////////
 
-	les achievement devrait être numéroté en 100, 200 etc. en fonction du niveau de difficulty (déjà le cas ?)
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
@@ -189,11 +188,10 @@
 
 	////////// SUCCES ////////////
 	
-	vérifier la couleur de tous les succès
+	vérifier la couleur de tous les succès (+ choisir leur position)
 	
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner
-	firstKill -> condition à créer
 
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
