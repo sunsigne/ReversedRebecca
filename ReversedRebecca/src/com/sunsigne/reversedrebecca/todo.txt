@@ -18,6 +18,15 @@
 
 	////////// EN COURS ////////////
 
+	La cinématique de quand on fait peur a Eric à tester : 
+	- sans Alicia et avec la possibilité d'avoir la clef verte (fait, testé et validé !)
+	- sans Alicia et sans la possibilité d'avoir la clef verte  (fait, testé et validé !)
+	- avec Alicia et avec la possibilité d'avoir la clef verte (refus + acceptation)
+	- avec Alicia et sans la possibilité d'avoir la clef verte (refus + acceptation)
+	- avec Alicia et quand on a déjà la clef verte (refus + acceptation)
+	- psycopath
+	(finir de coder le cas où Alicia prend les clefs pour nous)
+	
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 
 	////////// PERSONNAGES à faire ////////////
@@ -120,7 +129,10 @@
 	- narguer Alicia dans le SAS
 	- enfermer Marie dans les toilettes
 	- libérer Alicia
+	- tuer Alicia
 
+	sauvegarder le kill de Alicia
+	lorsqu'Eric s'enfuit, il doit parler à qqun et revenir
 	landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
 	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
