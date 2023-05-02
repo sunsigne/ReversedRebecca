@@ -15,6 +15,10 @@ public interface IndexRequest extends Request {
 	}
 
 	public default GameObject getGameObject(PiranhaObject object, String target) {
+		return getGameObject(object, target, 0);
+	}
+
+	public default GameObject getGameObject(PiranhaObject object, String target, int gap) {
 
 		// determinate the position
 
@@ -30,9 +34,8 @@ public interface IndexRequest extends Request {
 		String data = String.valueOf(target.split(":")[1]);
 		Handler handler = getSubLayer(object, String.valueOf(data.contains(",") ? data.split(",")[0] : null));
 		int index = Integer.parseInt(data.contains(",") ? data.split(",")[1] : data) - 1;
-		
 
-		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, goal.getX(), goal.getY(),
+		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, goal.getX() + gap, goal.getY() + gap,
 				object.getSize(), playerExcluded());
 
 		// if no object found

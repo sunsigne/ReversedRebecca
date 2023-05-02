@@ -40,3 +40,13 @@ TALKED -> DOOR_RIGHT_HAND = OPEN_PUZZLE -> 6-1,1
 
 Lorsque la Condition sera vérifiée, le puzzler en 6-1 verra son action 1 se lancer.
 Note : Les coordonnées ONTHESPOT ne sont pas autorisées pour ce type de requête, il faut donc systématiquement renseigner les coordonnées. Il n'existe également aucun Type de Requête OPEN_PUZZLE_ONTHESPOT.
+
+
+////// PICKUP //////
+
+Le Type de Requête PICKUP permet au joueur de ramasser un objet à distance.
+
+exemple :
+$ -> TAKE_KEY = PICKUP -> 10-20:1
+
+Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=20 sera ramassé (s'il s'agit d'un objet ramassable)

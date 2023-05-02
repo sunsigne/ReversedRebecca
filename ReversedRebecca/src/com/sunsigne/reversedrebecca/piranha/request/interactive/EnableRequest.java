@@ -39,11 +39,11 @@ public class EnableRequest implements IndexRequest {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 
-		GameObject gameOject = getGameObject(object, target);
-		if (gameOject instanceof Interactive == false)
+		GameObject gameObject = getGameObject(object, target);
+		if (gameObject instanceof Interactive == false)
 			return;
 
-		Interactive interactive = (Interactive) gameOject;
+		Interactive interactive = (Interactive) gameObject;
 		interactive.setDisabled(disable());
 	}
 

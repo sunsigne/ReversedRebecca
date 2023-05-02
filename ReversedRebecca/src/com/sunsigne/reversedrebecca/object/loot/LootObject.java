@@ -16,6 +16,13 @@ public abstract class LootObject extends GameObject implements TickFree, Collisi
 		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
 	}
 
+	public void pickup() {
+		getHandler().removeObject(this);
+		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
+		new SoundTask().playSoundIfCamera(this, "loot");
+		actionWhenLooted();
+	}
+
 	////////// COLLISION ////////////
 
 	@Override
@@ -33,12 +40,7 @@ public abstract class LootObject extends GameObject implements TickFree, Collisi
 		if (!(detectorObject instanceof Player))
 			return;
 
-		collidingReaction(detectorObject, false, () -> {
-			getHandler().removeObject(this);
-			LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
-			new SoundTask().playSoundIfCamera(this, "loot");
-			actionWhenLooted();
-		});
+		collidingReaction(detectorObject, false, () -> pickup());
 	}
 
 	public abstract String getTextWhenLooted();
