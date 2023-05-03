@@ -123,7 +123,12 @@ public class DigPuzzleFactory implements PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-
+	
+	@Override
+	public String getOpeningSound() {
+		return "dig_fail";
+	}
+	
 	@Override
 	public String getVictorySound() {
 		return "dig_long";
