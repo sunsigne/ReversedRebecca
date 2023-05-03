@@ -4,6 +4,7 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -26,15 +27,19 @@ public class ArrivingPuzzleLaw extends IndependantLaw {
 
 	private Updatable registeredPuzzle;
 	private Updatable puzzle;
+	private boolean flag2;
 
 	private final float SPEED = 0.12f;
 	private float alpha;
 
 	@Override
 	public void tick(Updatable object) {
+		updatePuzzle(object);
+
 		if (object instanceof Puzzle == false)
 			return;
 
+		flag2 = false;
 		puzzle = object;
 
 		if (puzzle != registeredPuzzle)
@@ -42,6 +47,19 @@ public class ArrivingPuzzleLaw extends IndependantLaw {
 
 		else
 			runPuzzle();
+	}
+
+	private void updatePuzzle(Updatable object) {
+		if (object instanceof Player == false)
+			return;
+
+		if (flag2 == false) {
+			flag2 = true;
+			return;
+		}
+
+		else
+			alpha = 0;
 	}
 
 	private void openPuzzle() {
