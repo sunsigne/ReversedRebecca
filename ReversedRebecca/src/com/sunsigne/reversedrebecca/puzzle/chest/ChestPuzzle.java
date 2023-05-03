@@ -186,7 +186,7 @@ public class ChestPuzzle extends Puzzle {
 
 		// one loot case
 		if (size == 1) {
-			if (chestCard[0].isPickedUp())
+			if (chestCard[0] != null && chestCard[0].isPickedUp())
 				closing = true;
 			return;
 		}
@@ -195,7 +195,7 @@ public class ChestPuzzle extends Puzzle {
 		boolean flag = false;
 
 		for (int index = 0; index < size; index++) {
-			if (chestCard[index].isPickedUp()) {
+			if (chestCard[index] != null && chestCard[index].isPickedUp()) {
 
 				// normal or hard mode case
 				if (DifficultyOption.getDifficulty() != GAME_DIFFICULTY.EASY) {

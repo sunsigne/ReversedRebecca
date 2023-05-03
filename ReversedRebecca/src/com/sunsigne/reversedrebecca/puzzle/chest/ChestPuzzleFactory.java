@@ -24,10 +24,15 @@ public class ChestPuzzleFactory implements PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-
+	
+	@Override
+	public String getOpeningSound() {
+		return "chest";
+	}
+	
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return "chest_open";
 	}
 
 }
