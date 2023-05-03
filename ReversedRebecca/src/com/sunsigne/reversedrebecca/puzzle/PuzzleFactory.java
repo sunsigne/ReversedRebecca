@@ -19,7 +19,9 @@ public interface PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-
+	
+	String getOpeningSound();
+	
 	String getVictorySound();
 
 }

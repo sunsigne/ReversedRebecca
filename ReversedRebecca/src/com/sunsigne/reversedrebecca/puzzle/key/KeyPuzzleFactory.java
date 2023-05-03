@@ -123,7 +123,12 @@ public class KeyPuzzleFactory implements PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-
+	
+	@Override
+	public String getOpeningSound() {
+		return "door_key";
+	}
+	
 	@Override
 	public String getVictorySound() {
 		return "door_unlock";

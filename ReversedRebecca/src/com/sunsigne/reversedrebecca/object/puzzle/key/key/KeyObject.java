@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -22,6 +23,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	public KeyObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0);
 		multiplySpeedBy(1);
+		new GameTimer(15, true, () -> sound = true);
 	}
 
 	////////// NAME ////////////
@@ -69,6 +71,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	private final int ymin = getPuzzle().getRow(1);
 	private final int ymax = getPuzzle().getRow(6);
+	private boolean sound;
 
 	@Override
 	public void tick() {
@@ -76,13 +79,13 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 		// goes up and down
 		if (getY() >= ymax) {
 			setVelY(-speed);
-			if ((getVelX() == 0))
+			if ((getVelX() == 0) && sound)
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "bip_short");
 		}
 
 		if (getY() <= ymin) {
 			setVelY(speed);
-			if ((getVelX() == 0))
+			if ((getVelX() == 0) && sound)
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "bip_short");
 		}
 

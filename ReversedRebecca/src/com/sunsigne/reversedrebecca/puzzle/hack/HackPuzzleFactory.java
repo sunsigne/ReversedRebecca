@@ -123,7 +123,12 @@ public class HackPuzzleFactory implements PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-
+	
+	@Override
+	public String getOpeningSound() {
+		return "virus";
+	}
+	
 	@Override
 	public String getVictorySound() {
 		return "short_circuit";

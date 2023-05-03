@@ -125,6 +125,11 @@ public class BombPuzzleFactory implements PuzzleFactory {
 	////////// SOUND ////////////
 
 	@Override
+	public String getOpeningSound() {
+		return "match_stick";
+	}
+
+	@Override
 	public String getVictorySound() {
 		return "explosion_large";
 	}
