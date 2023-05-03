@@ -70,6 +70,8 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 		createWallBorder();
 		createPuzzle();
+		
+		new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getOpeningSound());
 	}
 
 	protected BufferedImage getWallTexture() {

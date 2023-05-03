@@ -8,8 +8,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FadePuzzleLaw extends IndependantLaw {
@@ -63,8 +61,6 @@ public class FadePuzzleLaw extends IndependantLaw {
 	}
 
 	private void openPuzzle() {
-		String sound = ((Puzzle) puzzle).getFactory().getOpeningSound();
-		new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
 		registeredPuzzle = puzzle;
 		alpha = 0;
 	}
