@@ -12,11 +12,11 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class ArrivingPuzzleLaw extends IndependantLaw {
+public class FadePuzzleLaw extends IndependantLaw {
 
 	////////// INDEPENDANT LAW ////////////
 
-	private static IndependantLaw independantLaw = new ArrivingPuzzleLaw();
+	private static IndependantLaw independantLaw = new FadePuzzleLaw();
 
 	@Override
 	public IndependantLaw getIndependantLaw() {
@@ -27,7 +27,7 @@ public class ArrivingPuzzleLaw extends IndependantLaw {
 
 	private Updatable registeredPuzzle;
 	private Updatable puzzle;
-	private boolean flag2;
+	private boolean update;
 
 	private final float SPEED = 0.12f;
 	private float alpha;
@@ -39,7 +39,7 @@ public class ArrivingPuzzleLaw extends IndependantLaw {
 		if (object instanceof Puzzle == false)
 			return;
 
-		flag2 = false;
+		update = false;
 		puzzle = object;
 
 		if (puzzle != registeredPuzzle)
@@ -53,8 +53,8 @@ public class ArrivingPuzzleLaw extends IndependantLaw {
 		if (object instanceof Player == false)
 			return;
 
-		if (flag2 == false) {
-			flag2 = true;
+		if (update == false) {
+			update = true;
 			return;
 		}
 
