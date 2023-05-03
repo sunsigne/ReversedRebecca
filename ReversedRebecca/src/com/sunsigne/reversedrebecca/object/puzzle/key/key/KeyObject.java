@@ -23,7 +23,7 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 	public KeyObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0);
 		multiplySpeedBy(1);
-		new GameTimer(15, true, () -> sound = true);
+		new GameTimer(20, true, () -> sound = true);
 	}
 
 	////////// NAME ////////////
