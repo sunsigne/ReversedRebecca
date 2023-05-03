@@ -18,6 +18,11 @@
 
 	////////// EN COURS ////////////
 
+	faire une animation d'apparition pour les puzzle
+	faire une animation de résolution des puzzle
+	faire une animation spéciales d'animation et de résolution pour les puzzle critique !
+	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
+	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 
 	////////// PERSONNAGES à faire ////////////
@@ -47,7 +52,6 @@
 	le bouton "option" du Menu Ingame ne fait rien
 	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
-	faire une animation de résolution des puzzle
 	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
 	"You are" ne se sauvegarde pas encore
 	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
@@ -63,11 +67,9 @@
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
 	les flêches pour le déplacement doit ête dit qq part (dans le tuto par exemple)
-	son pour l'ouverture des puzzles ?
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	supprimer "sauvegarde" sur l'écran de fin de niveau
-	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	DieWhenNoHp -> kill() prévoir un restart
 
 	////////// TRADUCTION ////////////
@@ -158,7 +160,6 @@
 	////////// SONS ////////////
 
 	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
-	faire le bon bruit quand on ouvre le coffreA
 	
 	////////// A CREER PLUS TARD ////////////
 	
@@ -168,7 +169,6 @@
 	///////// IDEE ////////////
 
 	des outils de + en + élaborés (design) en fonction de leur lvl
-	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
@@ -178,7 +178,6 @@
 	nourriture pour regen (ou autre solution)
 	une action "défoncer la porte" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
-	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
 	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
