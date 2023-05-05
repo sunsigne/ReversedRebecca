@@ -12,6 +12,7 @@ import java.util.TimerTask;
 import java.util.logging.Logger;
 
 import com.sunsigne.reversedrebecca.Infos;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
@@ -116,6 +117,8 @@ public class Game extends Canvas implements Runnable {
 	////////// MAIN LOOP ////////////
 
 	public static final int SEC = 60;
+	private static boolean tickNullError;
+	private static boolean renderNullError;
 
 	@Override
 	public void run() {
@@ -144,6 +147,11 @@ public class Game extends Canvas implements Runnable {
 				} catch (ConcurrentModificationException e) {
 					// some ticks may be compromised. As the next tick repair the problem,
 					// no need to proccess this exception.
+				} catch (NullPointerException e) {
+					if (tickNullError)
+						e.printStackTrace();
+					tickNullError = true;
+					new GameTimer(3, true, () -> tickNullError = false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -157,6 +165,11 @@ public class Game extends Canvas implements Runnable {
 					render();
 				} catch (ConcurrentModificationException e) {
 					// same problem as above
+				} catch (NullPointerException e) {
+					if (renderNullError)
+						e.printStackTrace();
+					renderNullError = true;
+					new GameTimer(3, true, () -> renderNullError = false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
