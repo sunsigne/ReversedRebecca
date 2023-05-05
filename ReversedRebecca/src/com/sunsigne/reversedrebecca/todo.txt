@@ -18,11 +18,6 @@
 
 	////////// EN COURS ////////////
 
-	faire une animation d'apparition pour les puzzle
-	faire une animation de résolution des puzzle
-	faire une animation spéciales d'animation et de résolution pour les puzzle critique !
-	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	faire en sorte qu'un puzzle donne des indices réversibles (la clef qui "explose")	
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
 
 	////////// PERSONNAGES à faire ////////////
@@ -44,7 +39,10 @@
 	les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
 
 	////////// DIFFICILE ////////////
-	
+			
+	faire une animation de résolution des puzzle
+	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
+	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
