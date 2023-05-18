@@ -98,7 +98,7 @@ public class Game extends Canvas implements Runnable {
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 			public void run() {
-				thread.interrupt();
+				// thread.interrupt();
 				System.exit(0);
 			}
 		}, 10);

@@ -18,7 +18,7 @@
 
 	////////// EN COURS ////////////
 
-	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur
+	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
 	////////// PERSONNAGES à faire ////////////
 
