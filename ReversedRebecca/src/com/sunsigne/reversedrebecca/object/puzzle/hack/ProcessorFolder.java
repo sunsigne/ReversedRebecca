@@ -29,7 +29,9 @@ public class ProcessorFolder extends ProcessorObject {
 
 	public boolean isFull() {
 		int count = 0;
-		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+		var handler = LAYER.PUZZLE.getHandler();
+
+		for (Updatable tempUpdatable : handler.getList()) {
 			if (tempUpdatable instanceof ProcessorObject)
 				count++;
 		}
