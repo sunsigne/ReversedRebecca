@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
+import java.util.ConcurrentModificationException;
+
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -29,12 +31,16 @@ public class ProcessorFolder extends ProcessorObject {
 
 	public boolean isFull() {
 		int count = 0;
-		var handler = LAYER.PUZZLE.getHandler();
 
-		for (Updatable tempUpdatable : handler.getList()) {
-			if (tempUpdatable instanceof ProcessorObject)
-				count++;
+		try {
+			for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+				if (tempUpdatable instanceof ProcessorObject)
+					count++;
+			}
+		} catch (ConcurrentModificationException e) {
+			// nothing to see here
 		}
+
 		return count >= 18;
 	}
 
