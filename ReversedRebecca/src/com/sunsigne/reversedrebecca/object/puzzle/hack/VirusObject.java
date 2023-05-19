@@ -155,7 +155,7 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 		if (isReversed() == false)
 			g.drawImage(image, x, y, w, h, null);
 		else
-			g.drawImage(image, x, y + h, h, -h, null);
+			g.drawImage(image, x, y + h, w, -h, null);
 	}
 
 }
