@@ -28,20 +28,20 @@ public class MousePos {
 	public void setX(int x, boolean paramount) {
 		try {
 			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove((int) (x  * Window.SCALE_X), get()[1]);
+				new Robot().mouseMove((int) (x * Window.SCALE_X), (int) (get()[1] * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void setY(int y) {
 		setY(y, false);
 	}
-	
+
 	public void setY(int y, boolean paramount) {
 		try {
 			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove(get()[0], (int) (y  * Window.SCALE_Y));
+				new Robot().mouseMove((int) (get()[0]* Window.SCALE_X), (int) (y * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}

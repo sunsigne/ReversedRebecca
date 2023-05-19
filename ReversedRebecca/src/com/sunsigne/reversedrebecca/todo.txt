@@ -60,6 +60,7 @@
 
 	////////// FACILE ////////////
 
+	grossir la police d'écriture des interactions
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)

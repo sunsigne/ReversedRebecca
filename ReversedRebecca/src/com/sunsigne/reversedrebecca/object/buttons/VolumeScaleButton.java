@@ -44,6 +44,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	private Volume volume;
 	private final int xmin = 864;
 	private final int xmax = 1284;
+	private final int ymax = 450;
 
 	// convert double between 0 and 2.0 to int between 0 and 420
 	private int getScale(double d) {
@@ -92,6 +93,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		playHelpingSound();
 
 		int mouseX = new MousePos().get()[0];
+		int mouseY = new MousePos().get()[1];
 
 		setX(mouseX);
 		refreshVolume();
@@ -105,8 +107,9 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			setX(xmin);
 			new MousePos().setX(xmin);
 		}
-
-		new MousePos().setY(getY() + getHeight() / 2);
+		
+		if (mouseY > ymax)
+			new MousePos().setY(0);
 	}
 
 	private final int STEP = 2;
@@ -192,7 +195,8 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			return;
 
 		holding = true;
-		new GameCursor().setCursor(null);
+		new GameCursor().setCursor(null);		
+		new MousePos().setY(0);
 
 		if (isSelected())
 			new MousePos().setX(getX());
@@ -200,13 +204,13 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		holding = false;
-		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
-
-		if (isSelected()) {
+		if (holding) {
 			new MousePos().setX(getX() + getGap());
 			new MousePos().setY(getY() + getHeight() / 2);
 		}
+
+		holding = false;
+		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 	}
 
 	private int getGap() {
