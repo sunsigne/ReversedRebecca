@@ -120,7 +120,7 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 		drawText(g);
 	}
 
-	private void drawText(Graphics g) {
+	protected void drawText(Graphics g) {
 		Font font = new Font(Font.DIALOG_INPUT, 2, 45);
 		int[] rect = { getRect()[0], getRect()[1] + Size.XS + Size.XS / 2, getRect()[2], getRect()[3] };
 		new TextDecoration().drawCenteredString(g, font, text, Color.white, DIRECTION.DOWN, rect);
