@@ -106,8 +106,8 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 			setX(xmin);
 			new MousePos().setX(xmin);
 		}
-		
-		if(mouseY < getY() || mouseY > getY() + getHeight())
+
+		if (mouseY < getY() || mouseY > getY() + getHeight())
 			new MousePos().setY(getY() + getHeight() / 2);
 	}
 
@@ -115,6 +115,9 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	private void tickGamepadHolding() {
 		playHelpingSound();
+
+		if (request == null)
+			return;
 
 		if (request.getKey() == ButtonEvent.LEFT) {
 			setX(Math.max(getX() - STEP, xmin));
@@ -193,8 +196,8 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		if (isExtendedSelected() == false)
 			return;
 
-		holding = true;	
-		new GameCursor().setCursor(null);			
+		holding = true;
+		new GameCursor().setCursor(null);
 
 		if (isSelected())
 			new MousePos().setX(getX());
@@ -208,7 +211,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		}
 
 		holding = false;
-		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);		
+		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 	}
 
 	private int getGap() {
