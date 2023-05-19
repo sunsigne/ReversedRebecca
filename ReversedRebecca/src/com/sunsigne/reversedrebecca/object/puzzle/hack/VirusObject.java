@@ -147,12 +147,15 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 	}
 
 	private void dragImage(Graphics g, BufferedImage image) {
+		int x = getX() + shrink;
+		int y = getY() + shrink;
+		int w = getWidth() - 2 * (shrink);
+		int h = getHeight() - 2 * (shrink);
+
 		if (isReversed() == false)
-			g.drawImage(image, getX() + shrink, getY() + shrink, getWidth() - 2 * shrink, getHeight() - 2 * shrink,
-					null);
+			g.drawImage(image, x, y, w, h, null);
 		else
-			g.drawImage(image, getX() + shrink, getY() + getHeight() - shrink, getWidth() - 2 * shrink,
-					-getHeight() + 2 * shrink, null);
+			g.drawImage(image, x, y + h, h, -h, null);
 	}
 
 }
