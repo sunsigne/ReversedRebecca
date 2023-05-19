@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class ProcessorHorse extends ProcessorEatable {
@@ -48,6 +49,13 @@ public class ProcessorHorse extends ProcessorEatable {
 	public void doVirusAction() {
 		super.doVirusAction();
 		getVirus().setDisguised(true);
+		createDisguiseAnimation();
+	}
+
+	private void createDisguiseAnimation() {
+		VirusObject virus = getComputer().getVirus();
+		var animation = new VirusDisguiseAnimationObject(getPuzzle(), virus.getX(), virus.getY(), isCritical());
+		LAYER.PUZZLE.addObject(animation);
 	}
 
 	@Override

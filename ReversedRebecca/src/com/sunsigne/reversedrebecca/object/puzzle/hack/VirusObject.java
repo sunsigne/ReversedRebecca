@@ -146,7 +146,7 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 			dragImage(g, getDisguiseImage());
 	}
 
-	private void dragImage(Graphics g, BufferedImage image) {
+	protected void dragImage(Graphics g, BufferedImage image) {
 		int x = getX() + shrink;
 		int y = getY() + shrink;
 		int w = getWidth() - 2 * (shrink);
