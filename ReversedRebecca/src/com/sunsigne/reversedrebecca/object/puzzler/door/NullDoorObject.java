@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -14,23 +15,24 @@ public class NullDoorObject extends DoorObject {
 	public NullDoorObject(COLOR color, int x, int y) {
 		super(LVL.NULL, color, x, y);
 		setDisabled(true);
+		tryClosing = new Cycloid<>(false, false, true);
 	}
 
 	////////// TICK ////////////
 
 	private boolean isOpened;
-	private boolean tryClosing;
+	private Cycloid<Boolean> tryClosing;
 
 	@Override
 	public void tick() {
-		if (tryClosing) {
+		if (tryClosing.getState()) {
 			if (isOpened)
 				if (LAYER.MENU.getHandler().getList().isEmpty())
 					new SoundTask().playSoundIfCamera(this, "door_close");
 			isOpened = false;
 		}
 
-		tryClosing = true;
+		tryClosing.cycle();
 	}
 
 	////////// RENDER ////////////
@@ -62,7 +64,7 @@ public class NullDoorObject extends DoorObject {
 				if (LAYER.MENU.getHandler().getList().isEmpty())
 					new SoundTask().playSoundIfCamera(this, "door_open");
 			isOpened = true;
-			tryClosing = false;
+			tryClosing.setState(0);
 		});
 	}
 
