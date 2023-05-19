@@ -1,5 +1,5 @@
 sarah = RIGHT = surprised = Mais#?
 sarah = player = akward = Tu#vas#vraiment#partir#en#laissant@des#crêpes#sur#la#table#?
 player = object = wrong_with_you = De#quoi#je#me#mêle#?
-player = object = worry = Pardon,#c'était#un#peu#violant.@Oui,#je#les#mangerai#plus#tard.
+player = object = worry = Pardon,#c'était#un#peu#violent.@Oui,#je#les#mangerai#plus#tard.
 sarah = player = laugh = C'est#toi#qui#vois.
