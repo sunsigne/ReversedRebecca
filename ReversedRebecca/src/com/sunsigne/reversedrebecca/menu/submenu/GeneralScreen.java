@@ -9,9 +9,9 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class GameScreen extends SubMenuScreen {
+public class GeneralScreen extends SubMenuScreen {
 
-	public GameScreen() {
+	public GeneralScreen() {
 		super(RESET);
 		loadText();
 		
@@ -22,7 +22,7 @@ public class GameScreen extends SubMenuScreen {
 
 	@Override
 	public String getName() {
-		return "game";
+		return "general";
 	}
 
 	////////// TEXT ////////////

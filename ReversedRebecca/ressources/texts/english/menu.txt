@@ -48,9 +48,9 @@ NormalDetail2 = experience
 HardDetail1 = harder#puzzle
 HardDetail2 = only#one#life
 
-///// GAME /////
+///// SAVE /////
 
-GameButton = game
+GeneralButton = general
 Reset = reset
 
 ///// RESET /////

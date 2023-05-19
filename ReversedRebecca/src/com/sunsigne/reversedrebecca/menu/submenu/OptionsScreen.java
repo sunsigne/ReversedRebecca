@@ -14,7 +14,7 @@ public class OptionsScreen extends SubMenuScreen {
 	public OptionsScreen(PresetMousePos defaultPreset) {
 		super(defaultPreset);
 
-		createGameButton();
+		createGeneralButton();
 		createControlsButton();
 		createAudioButton();
 		createVideoButton();
@@ -42,9 +42,9 @@ public class OptionsScreen extends SubMenuScreen {
 		buttons.put(preset, button);
 	}
 
-	private void createGameButton() {
-		GenericListener onPress = () -> new GameScreen();
-		createOptionScreenButton(translate("GameButton"), GAME, 206, 104, onPress);
+	private void createGeneralButton() {
+		GenericListener onPress = () -> new GeneralScreen();
+		createOptionScreenButton(translate("GeneralButton"), GENERAL, 206, 104, onPress);
 	}
 
 	private void createControlsButton() {
@@ -64,7 +64,7 @@ public class OptionsScreen extends SubMenuScreen {
 
 	////////// PRESET MOUSE POS ////////////
 
-	public static final PresetMousePos GAME = new PresetMousePos(730, 650);
+	public static final PresetMousePos GENERAL = new PresetMousePos(730, 650);
 	public static final PresetMousePos CONTROLS = new PresetMousePos(1150, 650);
 	public static final PresetMousePos AUDIO = new PresetMousePos(730, 750);
 	public static final PresetMousePos VIDEO = new PresetMousePos(1150, 750);
@@ -77,13 +77,13 @@ public class OptionsScreen extends SubMenuScreen {
 			return;
 
 		if (isPresetNull())
-			setPreset(GAME);
+			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
 
-		else if (getPreset() == GAME)
+		else if (getPreset() == GENERAL)
 			gamePressed(e);
 		else if (getPreset() == CONTROLS)
 			controlsPressed(e);
@@ -101,12 +101,12 @@ public class OptionsScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(AUDIO);
 		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(GAME).mousePressed(null);
+			buttons.get(GENERAL).mousePressed(null);
 	}
 
 	private void controlsPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT)
-			setPreset(GAME);
+			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(VIDEO);
 		else if (e.getKey() == ButtonEvent.A)
@@ -117,7 +117,7 @@ public class OptionsScreen extends SubMenuScreen {
 		if (e.getKey() == ButtonEvent.RIGHT)
 			setPreset(VIDEO);
 		else if (e.getKey() == ButtonEvent.UP)
-			setPreset(GAME);
+			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)

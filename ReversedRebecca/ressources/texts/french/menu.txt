@@ -48,9 +48,9 @@ NormalDetail2 = original
 HardDetail1 = puzzle#plus#durs
 HardDetail2 = une#seule#vie
 
-///// GAME /////
+///// SAVE /////
 
-GameButton = jeu
+GeneralButton = general
 Reset = reset
 
 ///// RESET /////

@@ -72,7 +72,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createOptionsButton() {
-		GenericListener onPress = () -> new OptionsScreen(OptionsScreen.GAME);
+		GenericListener onPress = () -> new OptionsScreen(OptionsScreen.GENERAL);
 		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 740, onPress);
 	}
 
