@@ -30,6 +30,10 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
+			
+			if(tempObject instanceof Player && playerExluded)
+				continue;
+			
 			if (tempObject.getX() == x && tempObject.getY() == y) {
 				object_list.addObject(tempObject);
 				continue;
@@ -38,9 +42,6 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			if (tempObject instanceof Player == false)
 				continue;
 
-			if(playerExluded)
-				continue;
-			
 			// player is counted "at pos" as soon as 1 pixel is on the tile
 			Player player = (Player) tempObject;
 			for (int xx = x - size + 1; xx < x + size - 1; xx++) {
