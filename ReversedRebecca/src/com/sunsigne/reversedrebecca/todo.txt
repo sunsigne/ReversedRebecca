@@ -167,6 +167,8 @@
 	
 	///////// IDEE ////////////
 
+	mettre une banque avec l'option "braquer la banque"
+	faire un niveau de dance (c'est le film the emoji qui m'a donné envie)
 	des outils de + en + élaborés (design) en fonction de leur lvl
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
