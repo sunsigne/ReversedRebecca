@@ -34,8 +34,18 @@ public class AffectingRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		if (target.equalsIgnoreCase("null"))
 			return;
-		
-		new AffectingCondition().registerValue(target);
+
+		// global case
+		boolean restricted = target.contains("*");
+		if (restricted == false) {
+			new AffectingCondition().registerValue(target);
+			return;
+		}
+
+		// restricted case
+		String name = String.valueOf(target.split("\\*")[0]);
+		String value = String.valueOf(target.split("\\*")[1]);
+		new AffectingCondition().registerValue(name, value);
 	}
 
 }

@@ -13,7 +13,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		createInstructionAnalyzerForAllObject(condition);
 	}
 
-	private void createInstructionAnalyzerForAllObject(String condition) {
+	protected void createInstructionAnalyzerForAllObject(String condition) {
 		for (PiranhaObject tempObject : object_list.getList())
 			analyse(tempObject, condition);
 	}
@@ -22,6 +22,10 @@ public abstract class GlobalInstruction extends LocalInstruction {
 
 	private GameList<PiranhaObject> object_list = new GameList<PiranhaObject>(LISTTYPE.LINKED);
 
+	protected GameList<PiranhaObject> getList() {
+		return object_list;
+	}
+	
 	private void loadAllPiranha() {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer.isMapLayer() == false)

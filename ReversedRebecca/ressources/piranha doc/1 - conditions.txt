@@ -126,6 +126,16 @@ TIME -> 0 = AFFECTING -> MOVE:10-20 (interdit, cela n'aurait aucun sens !)
 - Le Type de Condition "$" est remplacé par "!" afin de mieux faire la différence avec GOTO.
 ex : 
 (file 1) GOAL -> 33-33 = AFFECTING -> BOB_REACHED_GOAL
-(file 2) ! -> BOB_REACHED_GOAL = FACING -> BOB
+(file 2) ! -> BOB_REACHED_GOAL = FACING -> UP
 
-Note : il existe également un Type de Requête SPAM_AFFECTING qui est une variante de AFFECTING, encadré par un système "anti-spam" : tant que cette requête est spammée, elle est "mise en attente" et ne se s'effectuera qu'à l'arrêt du spam.
+Il est également possible d'ajouter une cible supplémentaire - séparée de la cible principale par un symbole "*" - afin de cibler un objet spécifique via son nom (voir "type de requêtes/requêtes state.txt").
+
+exemple :
+(file 1) GOAL -> 33-33 = AFFECTING -> BOB*BOB_REACHED_GOAL
+(file 2) TIME -> 0 = NAME -> BOB
+(file 2) ! -> BOB_REACHED_GOAL = FACING -> UP
+(file 3) ! -> BOB_REACHED_GOAL = FACING -> UP
+
+Dans cet exemple, seul le deuxième objet - reptabtisé "BOB" - sera affecté par la Requête AFFECTING du premier fichier.
+
+Note : il existe également un Type de Requête SPAM_AFFECTING qui est une variante de AFFECTING, encadré par un système "anti-spam" : tant que cette requête est spammée (c.-à-d. appelée un grand nombre de fois en très peu de temps), elle est "mise en attente" et ne se s'effectuera qu'à l'arrêt du spam.
