@@ -18,6 +18,8 @@
 
 	////////// EN COURS ////////////
 
+	faire le dessin du virus à l'envers quand on prend le cheval (si on est à l'envers)
+	les yeux du terminator doivent avoir une animation de menace ! Le terminator doit également lancé des lazers pour tuer (le rendre plus menaçant quoi)
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
 	////////// PERSONNAGES à faire ////////////
@@ -60,6 +62,7 @@
 
 	////////// FACILE ////////////
 
+	Créer un bouton "refaire le niveau"
 	grossir la police d'écriture des interactions
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
@@ -123,6 +126,9 @@
 	- libérer Alicia
 	- tuer Alicia
 
+	On ne comprend pas bien que jean s'est pissé dessus si on ne l'a pas vu faire : augmenter le temps + dialogue explicite
+	On peut se faire enfermer dans les toilettes avec Marie...
+	Quand Mika défonce la porte, ne pas la faire réapparaître
 	finir de coder le cas où Alicia prend les clefs pour nous
 	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ?
 	sauvegarder le kill de Alicia

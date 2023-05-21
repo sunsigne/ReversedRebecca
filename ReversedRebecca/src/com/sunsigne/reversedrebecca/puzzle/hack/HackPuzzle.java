@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.AntivirusTerminatorEye;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
@@ -327,6 +328,14 @@ public abstract class HackPuzzle extends Puzzle {
 		AntivirusTerminator terminator = new AntivirusTerminator(this);
 		getComputer().addObject(terminator);
 		folders[rad].push(terminator);
+
+		AntivirusTerminatorEye left_eye = new AntivirusTerminatorEye(this, terminator, true);
+		getComputer().addObject(left_eye);
+		folders[rad].push(left_eye);
+
+		AntivirusTerminatorEye right_eye = new AntivirusTerminatorEye(this, terminator, false);
+		getComputer().addObject(right_eye);
+		folders[rad].push(right_eye);
 	}
 
 	protected void addParalyzer(ProcessorFolder... folders) {

@@ -35,7 +35,8 @@ public class ProcessorFolder extends ProcessorObject {
 		try {
 			for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
 				if (tempUpdatable instanceof ProcessorObject)
-					count++;
+					if (tempUpdatable instanceof AntivirusTerminatorEye == false)
+						count++;
 			}
 		} catch (ConcurrentModificationException e) {
 			// nothing to see here
@@ -119,9 +120,16 @@ public class ProcessorFolder extends ProcessorObject {
 	}
 
 	protected void organizeProcessors() {
+		int count = 0;
+
 		for (int index = 0; index < size; index++) {
-			processors[index].setX(getCase(index + 1)[0]);
-			processors[index].setY(getCase(index + 1)[1]);
+			if (processors[index] instanceof AntivirusTerminatorEye) {
+				count++;
+				continue;
+			}
+
+			processors[index].setX(getCase(index + 1 - count)[0]);
+			processors[index].setY(getCase(index + 1 - count)[1]);
 		}
 	}
 
