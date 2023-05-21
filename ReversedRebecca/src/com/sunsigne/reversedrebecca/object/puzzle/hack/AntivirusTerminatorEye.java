@@ -70,11 +70,11 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 
 	@Override
 	public void tick() {
-		if(getComputer().getList().contains(terminator) == false || getVirus().isDisguised())
+		if (getComputer().getList().contains(terminator) == false || getVirus().isDisguised())
 			removeObject();
-		
+
 		// eyeball sticks to mouse / virus
-		
+
 		int mouseX = getVirus().getX() - getVirus().getWidth() / 2 + 25;
 		int mouseY = getVirus().getY() - getVirus().getHeight() / 2 + 25;
 		followMouse(mouseX, mouseY);
@@ -101,10 +101,11 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 		int divX = Math.abs(getVirus().getY() - y0) / (1 + Math.abs(getVirus().getX() - x0));
 		int divY = Math.abs(getVirus().getX() - x0) / (1 + Math.abs(getVirus().getY() - y0));
 
-		if (Math.abs(getVirus().getX() - x0) > R * 6 || Math.abs(getVirus().getY() - y0) > R * 7) {
-			setX(x0 + ((getX() - x0) / (1 + divX)));
-			setY(y0 + ((getY() - y0) / (1 + divY)));
-		}			
+		if (Math.abs(divX - divY) > 1)
+			if (Math.abs(getVirus().getX() - x0) > R * 7 || Math.abs(getVirus().getY() - y0) > R * 7) {
+				setX(x0 + ((getX() - x0) / (1 + divX)));
+				setY(y0 + ((getY() - y0) / (1 + divY)));
+			}
 
 		keepWithinZone(getX(), getY(), x0 - R / 2, x0 + R / 2, y0 - R / 2, y0 + R / 2);
 	}
@@ -128,7 +129,7 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 	public boolean replaceMouse() {
 		return false;
 	}
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 
