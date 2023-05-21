@@ -3,11 +3,12 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class AntivirusTerminatorEye extends ProcessorObject {
+public class AntivirusTerminatorEye extends ProcessorObject implements MouseObject {
 
 	public AntivirusTerminatorEye(Puzzle puzzle, AntivirusTerminator terminator, boolean left_eye) {
 		super(puzzle, null);
@@ -108,23 +109,6 @@ public class AntivirusTerminatorEye extends ProcessorObject {
 		keepWithinZone(getX(), getY(), x0 - R / 2, x0 + R / 2, y0 - R / 2, y0 + R / 2);
 	}
 
-	private void followMouse(int mouseX, int mouseY) {
-		setX(mouseX);
-		setY(mouseY);
-	}
-
-	private void keepWithinZone(int mouseX, int mouseY, int xmin, int xmax, int ymin, int ymax) {
-		if (mouseX > xmax)
-			setX(xmax);
-		if (mouseX < xmin)
-			setX(xmin);
-
-		if (mouseY > ymax)
-			setY(ymax);
-		if (mouseY < ymin)
-			setY(ymin);
-	}
-
 	////////// RENDER ////////////
 
 	private boolean left_eye;
@@ -140,6 +124,11 @@ public class AntivirusTerminatorEye extends ProcessorObject {
 
 	////////// MOUSE ////////////
 
+	@Override
+	public boolean replaceMouse() {
+		return false;
+	}
+	
 	@Override
 	public void mousePressed(MouseEvent e) {
 
