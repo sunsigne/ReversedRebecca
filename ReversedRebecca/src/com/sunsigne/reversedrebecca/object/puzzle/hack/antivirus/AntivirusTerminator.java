@@ -1,5 +1,10 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Paint;
+import java.awt.RadialGradientPaint;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
@@ -67,6 +72,51 @@ public class AntivirusTerminator extends AntivirusObject {
 
 		else
 			return on_img;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		if (getVirus().isDisguised() == false)
+			drawArc(g);
+
+		super.render(g);
+	}
+
+	private void drawArc(Graphics g) {
+
+		// récupération des coordonées
+
+		int vX = getVirus().getX() + getVirus().getWidth() / 2;
+		int vY = getVirus().getY() + getVirus().getHeight() / 2;
+		int tX = getX() + getWidth() / 2;
+		int tY = getY() + getHeight() / 2 - getWidth() / 4;
+
+		// établissement des dimensions de l'arc
+
+		int size = 4000;
+		int x = tX - size / 2;
+		int y = tY - size / 2;
+		double divX = (double) (vX - tX);
+		double divY = (double) (tY - vY);
+		int angle = (int) (Math.atan2(divY, divX) * 180 / Math.PI);
+		int arc = (int) (60 - 0.02f * (Math.abs(divX) + Math.abs(divY)));
+
+		// création du dégradé
+
+		Color none = new Color(255, 0, 0, 0);
+		Color red = new Color(255, 0, 0, 120);
+		float radius = size / 3;
+		float[] fractions = { 0.0f, 1.0f };
+		Color[] colors = { red, none };
+		Paint paint2 = new RadialGradientPaint(tX, tY, radius, fractions, colors);
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setPaint(paint2);
+
+		// rendu final
+
+		g2d.fillArc(x, y, size, size, angle - arc / 2, arc);
 	}
 
 	////////// MOUSE ////////////
