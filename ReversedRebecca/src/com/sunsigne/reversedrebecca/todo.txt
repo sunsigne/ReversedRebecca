@@ -18,7 +18,6 @@
 
 	////////// EN COURS ////////////
 
-	le faiseaux du terminator doit si possible ne pas dépasser les dimmensions du puzzle (les carrés bleus et la map)
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
 	////////// PERSONNAGES à faire ////////////
