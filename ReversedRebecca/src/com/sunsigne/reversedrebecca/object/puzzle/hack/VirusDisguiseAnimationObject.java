@@ -20,10 +20,6 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 	public boolean isDisguised() {
 		return true;
 	}
-	
-	public boolean isReversed() {
-		return false;
-	}
 
 	////////// TICK ////////////
 
@@ -51,7 +47,10 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 
-		g.drawImage(image, x, y, w, h, null);
+		if (isReversed() == false)
+			g.drawImage(image, x, y, w, h, null);
+		else
+			g.drawImage(image, x, y + h, w, -h, null);
 
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}

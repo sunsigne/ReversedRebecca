@@ -55,6 +55,7 @@ public class ProcessorHorse extends ProcessorEatable {
 	private void createDisguiseAnimation() {
 		VirusObject virus = getComputer().getVirus();
 		var animation = new VirusDisguiseAnimationObject(getPuzzle(), virus.getX(), virus.getY(), isCritical());
+		animation.setReversed(getVirus().isReversed());
 		LAYER.PUZZLE.addObject(animation);
 	}
 
