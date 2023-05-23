@@ -1,2 +1,2 @@
-À cause d'une limitation de taille maximale (100Mo) sur Git, le dossier JRE n'est pas présent à la racine.
+À cause d'une limitation de taille maximale (100Mo) sur Git, le dossier JRE dans le dossier "dependencies" n'est pas présent.
 Il est nécessaire au bon fonctionnement de l'application et doit contenir tous les dossiers et fichiers de Java 14.0.2 ou d'une version ultérieur.

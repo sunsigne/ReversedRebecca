@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Reversed Rebecca"
-#define MyAppVersion "0.2.0.0"
+#define MyAppVersion "0.3.23.0"
 #define MyAppPublisher "Sunsigne"
 #define MyAppExeName "Reversed Rebecca.exe"
 #define MyAppAssocName MyAppName + " File"
@@ -40,7 +40,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\JRE\*"; DestDir: "{app}\JRE"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\dependencies\*"; DestDir: "{app}\dependencies"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\ressources\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\casqu\git\ReversedRebecca\ReversedRebecca\userdata\*"; DestDir: "{userappdata}\Reversed Rebecca\"; Flags: ignoreversion createallsubdirs recursesubdirs comparetimestamp
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
