@@ -20,7 +20,6 @@
 
 	faire le dessin du virus à l'envers quand on prend le cheval (si on est à l'envers)
 	le faiseaux du terminator doit si possible ne pas dépasser les dimmensions du puzzle (les carrés bleus et la map)
-	Le terminator doit lancer des lazers pour tuer (le rendre plus évident)
 	le terminator doit visuelement se désactivement en doirect si on arrive avec une moustache (il faut faire le lien entre lui et la moustache)
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 

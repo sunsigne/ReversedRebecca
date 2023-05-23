@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
 import java.awt.Graphics;
-import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
@@ -131,13 +130,8 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 	}
 
 	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
+	public boolean isClickable() {
+		return false;
 	}
 
 }

@@ -30,20 +30,20 @@ public class AntivirusTerminator extends AntivirusObject {
 	}
 
 	////////// ANTIVIRUS ////////////
-
-	private boolean ready_to_kill;
+	
+	private boolean virusJustArrived;
+	
+	public void virusJustArrived() {
+		if(getVirus().isDisguised())
+			return;
+		
+		virusJustArrived = true;
+		beam_color = new Color(255, 0, 0, 120);
+		playSound("laser_aiming");
+	}
 
 	@Override
 	public void antivirusAction() {
-		if (ready_to_kill == false) {
-			ready_to_kill = true;
-			return;
-		}
-
-		terminate();
-	}
-
-	private void terminate() {
 		if (isCritical() == false)
 			getPuzzle().closePuzzle(false);
 
@@ -84,6 +84,8 @@ public class AntivirusTerminator extends AntivirusObject {
 		super.render(g);
 	}
 
+	private Color beam_color;
+	
 	private void drawArc(Graphics g) {
 
 		// récupération des coordonées
@@ -106,10 +108,9 @@ public class AntivirusTerminator extends AntivirusObject {
 		// création du dégradé
 
 		Color none = new Color(255, 0, 0, 0);
-		Color red = new Color(255, 0, 0, 120);
 		float radius = size / 3;
 		float[] fractions = { 0.0f, 1.0f };
-		Color[] colors = { red, none };
+		Color[] colors = { beam_color, none };
 		Paint paint2 = new RadialGradientPaint(tX, tY, radius, fractions, colors);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setPaint(paint2);
@@ -121,8 +122,6 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	////////// MOUSE ////////////
 
-	private boolean flag;
-
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isClickable() == false)
@@ -132,10 +131,9 @@ public class AntivirusTerminator extends AntivirusObject {
 			super.mousePressed(e);
 			return;
 		}
-
-		// to threaten as soon as entering the Folder
-		if (flag == false)
-			threaten();
+		
+		if(virusJustArrived == false)
+			beam_color = new Color(255, 255, 0, 120);
 	}
 
 	@Override
@@ -146,16 +144,10 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (getVirus().isDisguised())
 			return;
 
-		// just in case the game "missed" the threat
-		if (flag == false)
-			threaten();
-
-		antivirusAction();
-	}
-
-	private void threaten() {
-		flag = true;
-		playSound("laser_aiming");
+		if(virusJustArrived == false)
+			antivirusAction();
+		
+		virusJustArrived = false;		
 	}
 
 }

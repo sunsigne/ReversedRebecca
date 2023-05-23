@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusShrinker;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -181,6 +182,8 @@ public class ProcessorFolder extends ProcessorObject {
 	private ProcessorBack myback;
 
 	protected void displayNewFolder() {
+		var list = new GameList<ProcessorObject>(LISTTYPE.ARRAY);
+
 		// add to the handler all processors contained in the folder ...
 		for (int index = 0; index < size; index++) {
 			// ... only if still in the computer
@@ -193,9 +196,18 @@ public class ProcessorFolder extends ProcessorObject {
 				folder.previousback = myback;
 				folder.refreskBack();
 			}
-
-			LAYER.PUZZLE.addObject(processors[index]);
+			if (processors[index].getName().contains("terminator") == false)
+				LAYER.PUZZLE.addObject(processors[index]);
+			else
+				list.addObject(processors[index]);
 		}
+
+		for (ProcessorObject tempTerminator : list.getList()) {
+			if(tempTerminator instanceof AntivirusTerminator)
+				((AntivirusTerminator) tempTerminator).virusJustArrived();
+			LAYER.PUZZLE.addObject(tempTerminator);
+		}
+
 		LAYER.PUZZLE.addObject(previousback);
 	}
 
