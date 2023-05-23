@@ -39,7 +39,7 @@ public class AntivirusParalyzer extends AntivirusObject {
 
 	////////// TICK ////////////
 
-	private final int PARALYZING_TIME = 35;
+	private final int PARALYZING_TIME = 40;
 	private int time = 0;
 
 	@Override
