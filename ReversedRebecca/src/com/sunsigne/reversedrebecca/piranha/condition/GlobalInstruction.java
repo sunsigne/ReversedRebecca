@@ -8,14 +8,26 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class GlobalInstruction extends LocalInstruction {
 
+	////////// GLOBAL INSTRUCTION ////////////
+
+	public abstract GlobalInstruction getGlobalInstruction();
+
+	public abstract String getConditionType();
+
 	protected void analyse(String condition) {
 		loadAllPiranha();
 		createInstructionAnalyzerForAllObject(condition);
 	}
 
 	protected void createInstructionAnalyzerForAllObject(String condition) {
-		for (PiranhaObject tempObject : object_list.getList())
+		for (PiranhaObject tempObject : getExceptionsList().getList()) {
+			if (object_list.getList().contains(tempObject))
+				object_list.removeObject(tempObject);
+		}
+
+		for (PiranhaObject tempObject : object_list.getList()) {
 			analyse(tempObject, condition);
+		}
 	}
 
 	////////// MAP OR LIST ////////////
@@ -25,7 +37,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 	protected GameList<PiranhaObject> getList() {
 		return object_list;
 	}
-	
+
 	private void loadAllPiranha() {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer.isMapLayer() == false)
@@ -38,6 +50,19 @@ public abstract class GlobalInstruction extends LocalInstruction {
 					object_list.addObject((PiranhaObject) tempUpdatable);
 			}
 		}
+	}
+
+	////////// OPTIMIZATION ////////////
+
+	public abstract GameList<PiranhaObject> getExceptionsList();
+
+	protected void resetExceptions() {
+		getExceptionsList().clear();
+	}
+
+	protected void optimize(PiranhaObject object, String content) {
+		if (content.contains(getConditionType()) == false)
+			getExceptionsList().addObject(object);
 	}
 
 }

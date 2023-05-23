@@ -18,6 +18,7 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
+import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
@@ -79,6 +80,7 @@ public class World implements Updatable, RenderFree {
 	private void createMap() {
 		loadImageMap();
 		new MapCreator().loadAllLayers(this);
+		new Piranha().optimize();
 		updateLivingAbove();
 	}
 
