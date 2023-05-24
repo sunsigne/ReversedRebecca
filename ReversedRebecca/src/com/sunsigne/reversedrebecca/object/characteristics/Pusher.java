@@ -134,6 +134,9 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void pushingToward(Pushable pushable, DIRECTION facing) {
+		if(pushable.isStunned())
+			return;
+		
 		if (facing == DIRECTION.LEFT)
 			pushable.setVelX(-pushable.getSpeed());
 		if (facing == DIRECTION.RIGHT)
