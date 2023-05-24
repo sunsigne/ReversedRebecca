@@ -60,7 +60,19 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 	}
 
 	public void setReversed(boolean reversed) {
+		if (isReversed() != reversed)
+			updateMouse();
+
 		this.reversed = reversed;
+	}
+
+	protected void updateMouse() {
+		int mouseX = new MousePos().get()[0] - getWidth();
+		int mouseY = new MousePos().get()[1] - getHeight();
+		mouseX = xmax + xmin - mouseX;
+		mouseY = ymax + ymin - mouseY;
+		new MousePos().setX(mouseX);
+		new MousePos().setY(mouseY);
 	}
 
 	////////// TICK ////////////

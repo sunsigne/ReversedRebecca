@@ -21,6 +21,11 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 		return true;
 	}
 
+	@Override
+	protected void updateMouse() {
+
+	}
+
 	////////// TICK ////////////
 
 	private int growing;
