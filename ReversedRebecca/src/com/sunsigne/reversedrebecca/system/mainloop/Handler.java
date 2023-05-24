@@ -23,17 +23,17 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	public static GameList<GameObject> getObjectsAtPos(Handler layer, int x, int y, int size, boolean playerExluded) {
 
 		GameList<GameObject> object_list = new GameList<GameObject>(LISTTYPE.LINKED);
-		
+
 		for (Updatable tempUpdatable : layer.getList()) {
 
 			if (tempUpdatable instanceof GameObject == false)
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
-			
-			if(tempObject instanceof Player && playerExluded)
+
+			if (tempObject instanceof Player && playerExluded)
 				continue;
-			
+
 			if (tempObject.getX() == x && tempObject.getY() == y) {
 				object_list.addObject(tempObject);
 				continue;
@@ -145,6 +145,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {
 				tempPhysicLaw.tick(tempObject);
 			}
+
+			if (getList().iterator().hasNext() == false)
+				break;
 		}
 	}
 
@@ -175,6 +178,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			}
 
 			renderDependency(g, false);
+
+			if (getList().iterator().hasNext() == false)
+				break;
 		}
 	}
 

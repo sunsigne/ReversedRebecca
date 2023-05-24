@@ -56,9 +56,14 @@ public class GlobalInstructionList {
 
 			Handler handler = tempLayer.getHandler();
 
-			for (Updatable tempUpdatable : handler.getList())
+			for (Updatable tempUpdatable : handler.getList()) {
+
 				if (tempUpdatable instanceof PiranhaObject)
 					list.addObject((PiranhaObject) tempUpdatable);
+
+				if(handler.getList().iterator().hasNext() == false)
+					break;
+			}
 		}
 
 		return list;
