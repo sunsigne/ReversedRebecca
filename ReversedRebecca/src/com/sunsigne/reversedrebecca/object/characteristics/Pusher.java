@@ -35,7 +35,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	void setPushingDirection(PUSHING_DIRECTION pushingDirection);
 
 	default void push(Pushable pushable) {
-		if (isStunned()) {
+		if (isStunned() || pushable.isStunned()) {
 			blockPath(pushable);
 			return;
 		}
@@ -134,9 +134,6 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void pushingToward(Pushable pushable, DIRECTION facing) {
-		if(pushable.isStunned())
-			return;
-		
 		if (facing == DIRECTION.LEFT)
 			pushable.setVelX(-pushable.getSpeed());
 		if (facing == DIRECTION.RIGHT)
