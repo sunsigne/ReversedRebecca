@@ -69,8 +69,10 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 
 	@Override
 	public void tick() {
-		if (getComputer().getList().contains(terminator) == false || getVirus().isDisguised())
+		if (getComputer().getList().contains(terminator) == false || getVirus().isDisguised()) {
 			removeObject();
+			getComputer().removeObject(this);
+		}			
 
 		// eyeball sticks to mouse / virus
 
