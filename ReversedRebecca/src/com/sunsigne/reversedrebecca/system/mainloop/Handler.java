@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.system.mainloop;
 
 import java.awt.Graphics;
+import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -146,8 +147,11 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				tempPhysicLaw.tick(tempObject);
 			}
 
-			if (getList().iterator().hasNext() == false)
+			try {
+				getList().iterator().next();
+			} catch (NoSuchElementException e) {
 				break;
+			}
 		}
 	}
 
@@ -179,8 +183,11 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			renderDependency(g, false);
 
-			if (getList().iterator().hasNext() == false)
+			try {
+				getList().iterator().next();
+			} catch (NoSuchElementException e) {
 				break;
+			}
 		}
 	}
 

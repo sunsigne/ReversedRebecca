@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.condition;
 
+import java.util.NoSuchElementException;
+
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -27,7 +29,7 @@ public class GlobalInstructionList {
 		for (GlobalInstruction tempInstruction : list.getList()) {
 			tempInstruction.resetExceptions();
 		}
-		
+
 		GameList<PiranhaObject> allObject = getAllPiranhaObjects();
 
 		for (PiranhaObject tempObject : allObject.getList()) {
@@ -61,8 +63,11 @@ public class GlobalInstructionList {
 				if (tempUpdatable instanceof PiranhaObject)
 					list.addObject((PiranhaObject) tempUpdatable);
 
-				if(handler.getList().iterator().hasNext() == false)
+				try {
+					handler.getList().iterator().next();
+				} catch (NoSuchElementException e) {
 					break;
+				}
 			}
 		}
 
