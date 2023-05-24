@@ -177,6 +177,23 @@ public abstract class PiranhaObject extends GameObject
 		return path;
 	}
 
+	private boolean pathFinderDisabled;
+
+	@Override
+	public boolean isPathFinderDisabled() {
+		return pathFinderDisabled;
+	}
+
+	@Override
+	public void enablePathFinder() {
+		pathFinderDisabled = false;
+	}
+
+	@Override
+	public void disabledPathFinder() {
+		pathFinderDisabled = true;
+	}
+
 	////////// INTERACTIVE ////////////
 
 	private boolean isDisabled;

@@ -52,4 +52,19 @@ public class PathPointObject extends GameObject implements TickFree, RenderFree,
 		this.path = path;
 	}
 
+	@Override
+	public boolean isPathFinderDisabled() {
+		return false;
+	}
+
+	@Override
+	public void enablePathFinder() {
+
+	}
+
+	@Override
+	public void disabledPathFinder() {
+
+	}
+
 }

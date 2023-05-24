@@ -21,6 +21,10 @@ public class PathFindingLaw implements PhysicLaw {
 
 		PathSearcher searcher = (PathSearcher) object;
 
+		// searcher is "path searcher disabled"
+		if(searcher.isPathFinderDisabled())
+			return;
+		
 		// searcher has no goal
 		if (searcher.getGoal() == searcher | searcher.getGoal() == null) {
 			searcher.setPath(DIRECTION.NULL);

@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.local.GoalCondition;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -274,6 +275,7 @@ public class PathFinder implements Position {
 		}
 
 		// occurs when there is definitively no existing path between searcher and goal
+		initial_searcher.disabledPathFinder(Game.SEC);
 		return DIRECTION.NULL;
 	}
 
