@@ -1,0 +1,3 @@
+sarah = RIGHT = happy_var = Ok.#Dans#ce#cas,#je#pars#nous#trouver#une#sortie.
+sarah = RIGHT = wink = On#fera#un#point#à#l'atelier,#tout#à#l'heure.
+rebecca = LEFT = happy = Ça#marche.
