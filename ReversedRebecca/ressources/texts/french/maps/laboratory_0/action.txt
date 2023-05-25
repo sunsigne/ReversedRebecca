@@ -34,8 +34,8 @@ COFFEE = Key1 % café
 TEA = Key2 % thé
 NO_THANKS = Key3 % non#merci
 OFFER_A_TEA = Key1 % proposer#un#thé
-POLITELY_TAKE_LEAVE = Key1 % prendre#congé#poliment
-BLOW_HIM_OFF = Key2 % envoyer#chier
+I_HAVE_TO_GO = Key1 % Je#dois#y#aller...
+SHUT_UP = Key2 % Ta#gueule#!
 
 ///// RIGHT AREA /////
 
