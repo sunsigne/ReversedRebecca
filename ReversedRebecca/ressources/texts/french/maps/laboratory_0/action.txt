@@ -33,6 +33,9 @@ SABOTAGE = Key3 % Saboter
 COFFEE = Key1 % café
 TEA = Key2 % thé
 NO_THANKS = Key3 % non#merci
+OFFER_A_TEA = Key1 % proposer#un#thé
+POLITELY_TAKE_LEAVE = Key1 % prendre#congé#poliment
+BLOW_HIM_OFF = Key2 % envoyer#chier
 
 ///// RIGHT AREA /////
 

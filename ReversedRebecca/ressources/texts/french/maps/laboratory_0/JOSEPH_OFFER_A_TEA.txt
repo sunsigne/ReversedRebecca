@@ -1,0 +1,4 @@
+player = object = worry = Je#peux#t'offrir#un#thé#?
+object = player = happy_var = C'est#très#gentil#à#toi,#Rebecca.@Mais,#non#merci.
+object = player = happy = Figure-toi#qu'il#y#a#30#ans,#j'ai#appris@une#histoire#incroyable#sur#le#thé…
+object = player = doubt = Est-ce#que#tu#savais#que…#Bla#bla#bla.

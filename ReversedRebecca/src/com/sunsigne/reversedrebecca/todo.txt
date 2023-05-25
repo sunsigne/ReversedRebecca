@@ -18,6 +18,9 @@
 
 	////////// EN COURS ////////////
 
+	transformer 3 en pleurs en même temps en 4
+	crier sur Joseph doit succiter la réaction de Marie, Jean ou Sarah en fonction de qui est présent dans la pièce.
+	tester Joseph + construire les TA de l'écoute de Marie qui discute avec lui.
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
 	////////// PERSONNAGES à faire ////////////
@@ -83,6 +86,7 @@
 	////////// DAVE ////////////
 	
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
+	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
 	
 	////////// RR000 ////////////
 
@@ -97,6 +101,7 @@
 
 	////////// LVL001 ////////////
 
+	faire du décors à l'exterieur, et dans la salle de droite
 	scénario sadique pas encore faits
 	reduire le temps de Joseph devant la bibliothèque ! (testé récemment, c'est clairement trop long)
 	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
@@ -123,6 +128,7 @@
 	- enfermer Marie dans les toilettes
 	- libérer Alicia
 	- tuer Alicia
+	- envoyer chier joseph ou non
 
 	On ne comprend pas bien que jean s'est pissé dessus si on ne l'a pas vu faire : augmenter le temps + dialogue explicite
 	On peut se faire enfermer dans les toilettes avec Marie...
@@ -151,6 +157,7 @@
 	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée
 	rajouter des images d'explosion pour les explosions
 	traduire "quel taré" par "what a freak"
+	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	
 	////////// LVL002 ////////////
 	
@@ -197,6 +204,7 @@
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner
 
+	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
