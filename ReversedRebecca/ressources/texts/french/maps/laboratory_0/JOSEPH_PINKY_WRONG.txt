@@ -1,2 +1,1 @@
 player = object = worry = C'est#gentil.#Merci#Joseph.
-object = player = happy_var = De#rien.
