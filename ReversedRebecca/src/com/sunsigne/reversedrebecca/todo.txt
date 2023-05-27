@@ -23,6 +23,11 @@
 	2 déplacement / IA de Marie, Sarah, Alicia ou Jean
 	3 Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs
 
+	Marie IA pas fini
+	Marie reste bloquée si elle passe en dessous de la table basse ...
+	
+	lvl001 -> lorsque le joueur se tient en 14-30, Marie fait un aller-retour infini chelou au nivea du canapé (une fois qu'elle a bu son café)
+
 	transformer 3 en pleurs en même temps en 4
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
@@ -45,7 +50,7 @@
 	les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
 
 	////////// DIFFICILE ////////////
-			
+	
 	faire une animation de résolution des puzzle
 	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
@@ -66,6 +71,7 @@
 
 	////////// FACILE ////////////
 
+	Les outils doivent clignoter lorsqu'ils apparaissent !
 	Créer un bouton "refaire le niveau"
 	grossir la police d'écriture des interactions
 	il faut créer le design des couches de light et de sous sol des maps !

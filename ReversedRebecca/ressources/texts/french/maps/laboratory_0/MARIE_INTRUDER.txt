@@ -1,0 +1,9 @@
+object = DOWN = laugh = Au#fait,#c'est#qui#qui#a#cassé#la#porte#?
+rebecca = object = worry = Un#individu#s'est#introduit#dans#le#labo,@et#l'a#fait#exploser#en#sortant.
+object = DOWN = surprised = Alors#c'était#ça,#ce#bruit#!
+object = DOWN = unhappy = Et,#qu'est-ce#qu'il#voulait#?
+rebecca = object = laugh = Aucune#idée.
+rebecca = object = happy = Moi,#je#dois#nous#trouver#une#sortie.@C'est#Sarah#qui#mène#l'enquête. 
+object = DOWN = worry = Zut…#Du#coup,#j'ai#envie#d'en#savoir#plus…
+object = DOWN = happy = Je#vais#aller#lui#demander#directement.
+rebecca = object = happy_var = Ok.
