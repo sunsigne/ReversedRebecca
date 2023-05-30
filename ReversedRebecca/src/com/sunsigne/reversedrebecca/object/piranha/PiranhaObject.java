@@ -12,7 +12,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -22,7 +22,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class PiranhaObject extends GameObject
-		implements Waitfor, Facing, Stunnable, SpeedVariator, PathSearcher, Interactive, CollisionReactor {
+		implements Waitfor, Facing, Stunnable, SpeedVariator, PathSearcher, RegistrableInteractive, CollisionReactor {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
@@ -219,6 +219,17 @@ public abstract class PiranhaObject extends GameObject
 		this.tripleAction = tripleAction;
 	}
 
+	private TripleAction registeredTripleAction;
+
+	@Override
+	public TripleAction getRegisteredTripleAction() {
+		return registeredTripleAction;
+	}
+
+	public void setRegisteredTripleAction(TripleAction tripleAction) {
+		this.registeredTripleAction = tripleAction;
+	}
+
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
@@ -230,12 +241,12 @@ public abstract class PiranhaObject extends GameObject
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		Interactive.super.keyPressed(e);
+		RegistrableInteractive.super.keyPressed(e);
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		Interactive.super.keyReleased(e);
+		RegistrableInteractive.super.keyReleased(e);
 	}
 
 	////////// GAMEPAD ////////////
@@ -249,12 +260,12 @@ public abstract class PiranhaObject extends GameObject
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		Interactive.super.buttonPressed(e);
+		RegistrableInteractive.super.buttonPressed(e);
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-		Interactive.super.buttonReleased(e);
+		RegistrableInteractive.super.buttonReleased(e);
 	}
 
 	////////// COLLISION ////////////

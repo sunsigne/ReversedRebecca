@@ -70,6 +70,40 @@ $ -> CLEAN_CLOTHES = GOTO -> AFFECTING:TA_NULL_CLOTHES, DELETE_CLOTHES
 $ -> DELETE_CLOTHES = DELETE -> 5-7:1
 
 
+////// SAVED_TRIPLE_ACTION //////
+
+
+Le Type de Requête SAVED_TRIPLE_ACTION permet d'enregistrer ou de remplacer les actions actuelles d'un objet.
+
+La cible unitaire de ce Type de Requête défini l'action à effectuer :
+- SAVE, enregistre les actions actuelles de l'objet. 
+- LOAD, remplace les actions actuelles d'un objet par les actions enregistrées.
+- RESET, efface les actions enregistrées.
+
+Note : par objet, un seul "ensemble d'actions" peut être stocké à la fois. Dit autrement, un enregistrement remplace toujours le précédent.
+Note : charger des actions ne supprime pas l'enregistrement.
+
+exemple situationnel :
+Il est possible de parler avec un personnage. Quand celui-ci discute avec une autre personne, on peut écouter leur conversation. Lorsqu'il est de nouveau seul, la conversation de départ repend là où elle s'était arrêtée.
+
+TIME -> 0 = TRIPLE_ACTION -> TALK*HELLO
+TIME -> 20 = GOTO -> SAVED_TRIPLE_ACTION:SAVE, TA_IS_TALKING_WITH_SOMEONE
+$ -> TA_IS_TALKING_WITH_SOMEONE = TRIPLE_ACTION -> LISTEN*IS_TALKING_WITH_SOMEONE
+$ -> IS_TALKING_WITH_SOMEONE = TALK -> IS_TALKING_WITH_SOMEONE
+TIME -> 40 = SAVED_TRIPLE_ACTION -> LOAD
+
+Dans cet exemple :
+
+- (ligne 1) Le personnage propose une action de conversation "HELLO".
+Rappel : une Action se nullifie d'elle-même lorsqu'elle est perpétrée, cela signifie que l'action de conversation est remplacée par une action nulle si elle a lieu.
+
+- (ligne 2) Au bout de 20 seconde, les actions actuellement disponibles sont enregistrées...
+- (ligne 3 & 4) ... puis remplacées par d'autres.
+Attention : si l'action de conversation avait eu lieu, c'est une action nulle qui est enregistrée !
+
+- (ligne 5) Après 40 secondes, ces nouvelles actions sont remplacées par les actions précédemment enregistrées.
+
+
 ////// CHOICE //////
 
 Le Type de Requête CHOICE est en quelque sorte un TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite executée et les autres choix ne sont plus disponible.
