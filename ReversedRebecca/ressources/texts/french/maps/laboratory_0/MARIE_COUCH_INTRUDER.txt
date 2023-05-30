@@ -1,4 +1,4 @@
-object = DOWN = laugh = Au#fait,#c'est#qui#qui#a#cassé#la#porte#?
+object = DOWN = laugh = Au#fait,#c'est#qui#qui#a#cassé#la#porte#d'entrée#?
 rebecca = object = worry = Un#individu#s'est#introduit#dans#le#labo,@et#l'a#fait#exploser#en#sortant.
 object = DOWN = surprised = Alors#c'était#ça,#ce#bruit#!
 object = DOWN = unhappy = Et,#qu'est-ce#qu'il#voulait#?
