@@ -18,7 +18,6 @@
 
 	////////// EN COURS ////////////
 	
-	Un bug rare a eu lieu : hardest dig puzzle était impossible, il va falloir étudier la question pour comprendre ce qu'il s'est passé !
 	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
 
 	////////// PERSONNAGES à faire ////////////

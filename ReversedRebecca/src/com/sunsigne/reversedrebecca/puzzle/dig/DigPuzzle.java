@@ -96,7 +96,7 @@ public abstract class DigPuzzle extends Puzzle {
 
 		case SLASH:
 			return new DigSwordToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
-			
+
 		case CRITICAL:
 			return new DigCriticalToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
@@ -195,6 +195,9 @@ public abstract class DigPuzzle extends Puzzle {
 				return;
 			}
 			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
+
+			if (obstacle.getBuriedObject() instanceof DigToolObject)
+				continue;
 
 			if (dig_state != obstacle.getState()) {
 
