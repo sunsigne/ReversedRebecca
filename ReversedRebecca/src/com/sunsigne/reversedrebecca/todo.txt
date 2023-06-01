@@ -18,6 +18,7 @@
 
 	////////// EN COURS ////////////
 	
+	Jean : les TA à partir des toilettes doivent être créées
 	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se reance jamais)
 	
 	////////// PERSONNAGES à faire ////////////
@@ -81,7 +82,9 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
+	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
+	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	
 	////////// DAVE ////////////
 	
@@ -102,6 +105,8 @@
 
 	////////// LVL001 ////////////
 
+	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
+
 	jean doit pouvoir être grondé par Sarah et Rebecca normalement (là, c'est la cinématique des toilettes qui se lance tj)	
 	faire du décors à l'exterieur, et dans la salle de droite
 	scénario sadique pas encore faits
@@ -109,6 +114,7 @@
 	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
 
 	scénario : exit
+	- Jean : les TA à partir des toilettes doivent être créées
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
@@ -134,6 +140,7 @@
 	- tuer Alicia
 	- envoyer chier joseph ou non
 	- se faire pisser dessus (pas angélique)
+	- crier sur jean (pas angélique)
 
 	A enregistrer : jean qui pisse sur rebecca
 	On peut se faire enfermer dans les toilettes avec Marie...
@@ -162,6 +169,7 @@
 	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée
 	rajouter des images d'explosion pour les explosions
 	traduire "quel taré" par "what a freak"
+	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	
 	////////// LVL002 ////////////

@@ -42,6 +42,8 @@ OBJ-15 = Delta Special Chair
 OBJ-16 = Delta Player Distance Checker
 OBJ-40 = Jean Chair
 OBJ-41 = Delta Chair
+OBJ-47 = Fred & George Chair
+OBJ-48 = Fake Jean
 
 ///// LEFT AREA /////
 
