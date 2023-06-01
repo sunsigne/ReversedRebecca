@@ -209,6 +209,7 @@
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner
 
+	golden shower : se faire uriner dessus
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
