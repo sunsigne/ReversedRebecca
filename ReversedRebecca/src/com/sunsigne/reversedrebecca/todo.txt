@@ -18,8 +18,8 @@
 
 	////////// EN COURS ////////////
 	
-	s'assurer de correctement installer et supprimer tous les fichiers de l'installeur (càd installer les dépendances et le JRE dans un fichier commun)
-
+	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se reance jamais)
+	
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
@@ -136,7 +136,6 @@
 	- se faire pisser dessus (pas angélique)
 
 	A enregistrer : jean qui pisse sur rebecca
-	On ne comprend pas bien que jean s'est pissé dessus si on ne l'a pas vu faire : augmenter le temps + dialogue explicite
 	On peut se faire enfermer dans les toilettes avec Marie...
 	Quand Mika défonce la porte, ne pas la faire réapparaître
 	finir de coder le cas où Alicia prend les clefs pour nous
