@@ -90,6 +90,8 @@ La seconde partie désigne la direction vers laquelle cette personne doit se tou
 Le troisième partie désigne l'expression que la personne qui parle doit adopter. Cette dernière est directement disponible dans le dossier de texture du personnage en question.
 La quatrième partie est le dialogue qui doit s'afficher.
 
+Note : si la personne est considérée comme stun, c.-à-d. qu'elle n'est pas censée pouvoir bouger (par exemple, si elle est assise - voir Type de Requêtes CONDITION "requêtes state.txt"). La seconde partie sera sans effet : la personne ne se tournera pas vers la direction indiquée.
+
 Les espaces permettent de gagner en lisibilité dans le code, mais ils sont ignorés par le programme ; c'est pourquoi des '#' sont introduits dans le texte et seront comptés comme des espaces à l'affichage.
 De la même façon, le caractère "saut de ligne" dans le dialogue est le symbole "@". Il peut y en avoir aucun, mais il ne doit pas y en avoir plus d'un par ligne de texte !
 
