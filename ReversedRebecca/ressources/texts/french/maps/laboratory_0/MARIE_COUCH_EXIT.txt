@@ -1,9 +1,0 @@
-rebecca = object = happy_var = Hey#!#Marie#!
-object = DOWN = happy = Bonjour#Rebecca,#tu#prends#déjà#ta#pause#?
-rebecca = object = happy = Non,#je#cherche#un#moyen#de#sortir#d'ici.
-object = DOWN = surprised = Quoi#?#Tu#veux#démissionner#?@Mais#je#croyais#que#tu#adorais#ce#travail…
-rebecca = object = no_sens = ...#Hein#?
-rebecca = object = surprised = Ho#!#J'y#suis#!
-rebecca = object = laugh = Quand#je#dis#"sortir#d'ici",#je#veux#dire#au#sens@propre#!#Un#mec#a#condamné#la#porte#d'entrée.
-object = DOWN = laugh = Ha#!#Si#tu#ne#donnes#pas#le#contexte,#aussi…
-object = DOWN = happy = De#mémoire,#je#crois#qu'on#a#des#explosifs@dans#le#stock.#Tu#pourrais#t'en#servir.

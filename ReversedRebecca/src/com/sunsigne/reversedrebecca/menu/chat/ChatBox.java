@@ -102,15 +102,16 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		Request instruction = RequestList.getList().getObject(new FacingRequest());
 		var handler = object.getHandler();
-		
-		for (Updatable tempUpdatable :  handler.getList()) {
+
+		for (Updatable tempUpdatable : handler.getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 
 			PiranhaObject tempObject = (LivingObject) tempUpdatable;
 
 			if (tempObject.getName().equalsIgnoreCase(formated_living_name))
-				instruction.doAction(tempObject, formated_facing);
+				if (tempObject.isStunned() == false)
+					instruction.doAction(tempObject, formated_facing);
 		}
 	}
 
