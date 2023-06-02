@@ -37,6 +37,7 @@ OFFER_A_TEA = Key1 % proposer#un#thé
 I_HAVE_TO_GO = Key1 % Je#dois#y#aller...
 SHUT_UP = Key2 % Ta#gueule#!
 WASH_AWAY_THE_JEANS_DIRTYNESS = Key2% laver#la#cochonnerie#de#Jean
+GET_ANGRY = Key1 % s'énerver
 
 ///// RIGHT AREA /////
 

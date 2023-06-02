@@ -1,0 +1,8 @@
+player = object = happy = Tu#travailles#sur#quoi#en#ce#moment#?
+jean = player = unhappy = Pourquoi#cette#question#?
+player = object = worry = Je#ne#sais#pas…#J'ai#juste#envie#de#te#parler.
+jean = player = unhappy = On#a#subis#un#attentat,#et#toi,@tu#me#demandes#sur#quoi#je#travaille#?
+player = object = laugh = Maitenant#c'est#un#"attentat"#?@Ok,#là,#tu#exagères.
+jean = player = unhappy = Je#n'ai#pas#peur#des#mots.@Je#te#l'ai#déjà#dit.
+player = object = worry = Je#pense#que#tu#aimes#un#peu#trop#les#"mots".@À#un#moment,#il#faut#savoir#relativiser.
+jean = player = unhappy = Mouais…#Si#tu#le#dis.
