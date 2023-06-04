@@ -19,8 +19,7 @@
 	////////// EN COURS ////////////
 	
 	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
-	Jean : les TA à partir des toilettes doivent être créées
-	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se reance jamais)
+	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
 	
 	////////// PERSONNAGES à faire ////////////
 
