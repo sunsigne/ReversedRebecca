@@ -14,4 +14,7 @@ ITS_NOT_FUNNY = Key1 % C'est#pas#drôle#!
 EMPTY = Key2 % vider
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
+WATER_TAKE = Key1 % se#servir
+WATER_EMPTY = Key1 % vider#l'eau
+WATER_PLANT = Key2 % arroser
 
