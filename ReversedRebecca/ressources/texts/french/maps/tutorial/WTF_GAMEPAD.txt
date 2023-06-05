@@ -1,1 +1,1 @@
-dave = player = calm = ...#Apparemment,#tu#utilises#une#manette.
+dave = player = calm = …#Apparemment,#tu#utilises#une#manette.

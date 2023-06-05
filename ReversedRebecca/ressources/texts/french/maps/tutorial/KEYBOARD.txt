@@ -1,2 +1,2 @@
 dave = player = calm = Tu#peux#donc#utiliser#les#touches#$$up$$left$$down$$right@ou#les#flêches,#pour#te#déplacer#dans#la#pièce.
-dave = player = calm = À#noter#que#si#ces#touches#ne#te#conviennent#pas,@tu#peux#les#changer#dans#les#options.
+dave = player = calm = Si#ces#touches#ne#te#conviennent#pas,@tu#peux#les#changer#dans#les#options.
