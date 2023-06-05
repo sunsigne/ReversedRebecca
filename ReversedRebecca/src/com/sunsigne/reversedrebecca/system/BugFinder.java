@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 
 import com.sunsigne.reversedrebecca.Infos;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
@@ -26,7 +26,7 @@ public class BugFinder {
 
 		while (error) {
 			// create crash_report_xx.txt in AppData/Roaming
-			path = "crash_report_" + new FormatedString().getNumber(num) + ".txt";
+			path = "crash_report_" + new FormattedString().getNumber(num) + ".txt";
 			error = task.doesExist(true, path);
 			if (error)
 				error = task.isEmptyFile(true, path);

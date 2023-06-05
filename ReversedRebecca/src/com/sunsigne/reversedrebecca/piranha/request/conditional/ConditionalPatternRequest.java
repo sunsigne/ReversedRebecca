@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -35,7 +35,7 @@ public abstract class ConditionalPatternRequest extends ConditionalRequest {
 				continue;
 
 			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-			String formated_valueToCheck = new FormatedString().getName(tempObject, valueToCheck);
+			String formated_valueToCheck = new FormattedString().getName(tempObject, valueToCheck);
 
 			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))
 				return finalVerification(object, tempObject);

@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -62,7 +62,7 @@ public class FacingRequest extends ConditionalRequest {
 				continue;
 
 			LivingObject tempLiving = (LivingObject) tempUpdatable;
-			String formated_valueToCheck = new FormatedString().getName(object, target);
+			String formated_valueToCheck = new FormattedString().getName(object, target);
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
 				PathFinder pathFinder = new PathFinder(object, tempLiving);

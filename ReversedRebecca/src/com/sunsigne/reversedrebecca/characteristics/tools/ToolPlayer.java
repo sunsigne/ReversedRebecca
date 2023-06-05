@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.gui.GUITools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolMaxLevelCondition;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -77,7 +77,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {
-			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
 			txtDifficulty = "CYAN";
 		}
 
@@ -112,7 +112,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {
-			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
 			txtDifficulty = "NULL";
 		}
 
@@ -177,7 +177,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtCriticalChance.isEmpty()) {
-			registerDefaultCharacteristic(new FormatedString().capitalize(getName()));
+			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
 			txtCriticalChance = "0%";
 		}
 

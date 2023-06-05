@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.physic.finder.NearestOfFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -97,7 +97,7 @@ public class MoveRequest implements Request {
 				continue;
 
 			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-			String formated_valueToCheck = new FormatedString().getName(object, target);
+			String formated_valueToCheck = new FormattedString().getName(object, target);
 
 			if (tempObject.getName().equalsIgnoreCase(formated_valueToCheck))
 				return tempObject;

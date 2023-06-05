@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -38,7 +38,7 @@ public class LanguageScreen extends SubMenuScreen {
 		while (lang_list == null)
 			loadLangList();
 
-		return "lang_" + new FormatedString().getNumber(lang_list.size());
+		return "lang_" + new FormattedString().getNumber(lang_list.size());
 	}
 
 	////////// SUB MENU ////////////

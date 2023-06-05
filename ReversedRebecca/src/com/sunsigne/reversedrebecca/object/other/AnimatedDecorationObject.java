@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -67,7 +67,7 @@ public class AnimatedDecorationObject extends DecorationObject {
 		GameList<BufferedImage> list = new GameList<>(LISTTYPE.ARRAY);
 
 		for (int index = 0; index < frames; index++) {
-			String formated_index = new FormatedString().getNumber(index);
+			String formated_index = new FormattedString().getNumber(index);
 			list.addObject(loader.loadImage(path + formated_index));
 
 			if (index == 0)

@@ -6,7 +6,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -34,7 +34,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	////////// USEFUL ////////////
 
 	private String format(String text) {
-		return new FormatedString().getNoSpecialCharacter(text).toUpperCase();
+		return new FormattedString().getNoSpecialCharacter(text).toUpperCase();
 	}
 
 	////////// DATA ////////////

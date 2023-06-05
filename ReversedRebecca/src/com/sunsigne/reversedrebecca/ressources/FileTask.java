@@ -8,6 +8,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
+
 public class FileTask {
 
 	////////// USEFUL ////////////
@@ -61,18 +63,18 @@ public class FileTask {
 				if (valueToRead == null) {
 					while (scan.hasNextLine()) {
 						if (!flag) {
-							content = content.concat(getFormattedSpace(scan.nextLine()));
+							content = content.concat(getFormattedText(scan.nextLine()));
 							flag = true;
 						} else
 							content = content
-									.concat(System.getProperty("line.separator") + getFormattedSpace(scan.nextLine()));
+									.concat(System.getProperty("line.separator") + getFormattedText(scan.nextLine()));
 					}
 				}
 
 				// read one specific value
 				else {
 					while (scan.hasNextLine()) {
-						String line = getFormattedSpace(scan.nextLine());
+						String line = getFormattedText(scan.nextLine());
 						if (line.split("=")[0].equalsIgnoreCase(valueToRead))
 							content = line.split("=")[1];
 					}
@@ -87,9 +89,11 @@ public class FileTask {
 		return content;
 	}
 
-	private String getFormattedSpace(String text) {
-		String formattedText = text.replace(" ", "");
-		return formattedText.replace("#", " ");
+	private String getFormattedText(String text) {
+		String formatted_text = text;
+		formatted_text = new FormattedString().replaceSpace(formatted_text);
+		formatted_text = new FormattedString().replaceValues(formatted_text);
+		return formatted_text;
 	}
 
 	////////// WRITE ////////////

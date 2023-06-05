@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.gotoo;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.pattern.FormatedString;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.piranha.condition.global.AffectingCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -46,7 +46,7 @@ public class AffectingRequest implements Request {
 		// restricted case
 		String name = String.valueOf(target.split("\\*")[0]);
 		String value = String.valueOf(target.split("\\*")[1]);
-		String formated_name = new FormatedString().getName(object, name);
+		String formated_name = new FormattedString().getName(object, name);
 		new AffectingCondition().registerValue(formated_name, value);
 	}
 
