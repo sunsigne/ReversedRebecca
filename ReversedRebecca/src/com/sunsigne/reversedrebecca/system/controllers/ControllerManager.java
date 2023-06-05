@@ -13,6 +13,10 @@ public class ControllerManager {
 
 	////////// SIGNELTON ////////////
 
+	private ControllerManager() {
+		
+	}
+	
 	private static ControllerManager instance;
 
 	public static ControllerManager getInstance() {

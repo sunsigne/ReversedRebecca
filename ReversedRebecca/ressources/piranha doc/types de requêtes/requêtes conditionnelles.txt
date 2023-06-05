@@ -82,6 +82,18 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
 
 
+////// GAMEPAD //////
+
+Le Type de Requête GAMEPAD permet de savoir si le joueur utilise actuellement une manette pour jouer, en opposition à l'ensemble clavier/souris.
+
+exemple :
+TIME -> 0 = GAMEPAD -> TRUE ? TALK:DAVE_GAMEPAD / TALK:DAVE_KEYBOARD
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur utilise-t-il actuellement une manette pour jouer ?
+- si oui, le dialogue "DAVE_GAMEPAD" est lancé
+- sinon, c'est le dialogue "DAVE_KEYBOARD" qui est lancé
+
+
 ////// PLAYER_FUTHER_THAN //////
 
 Le Type de Requête PLAYER_FUTHER_THAN permet de savoir le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
