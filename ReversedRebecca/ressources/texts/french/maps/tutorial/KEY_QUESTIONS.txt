@@ -1,0 +1,12 @@
+player = object = laugh = Ouais ! Des clés !
+dave = player = calm = Je suis content que tu t'amuses.
+dave = player = calm = Tu te souviens de ce que j'ai dit sur leur durée de vie ?
+player = object = happy_var = Elles disparaissent quand le niveau est fini.
+dave = player = calm = Bien.
+dave = player = calm = Avez-tu remarquée que ces clés ont une couleur en commun avec les portes vérouillées ?
+player = object = no_sens = Heu… Oui, je crois… Le bleu, non ?
+dave = player = calm = Je préfère parler de "cyan", mais c'est exact.
+player = object = happy = Donc les clefs d'une certaine couleur permettent d'ouvrir une porte de cette couleur ?
+dave = player = calm = Souvent mais pas toujours.
+player = object = worry = Pourquoi ?
+dave = player = calm = Encore une fois, un dessin vaut mieux que mille discours.

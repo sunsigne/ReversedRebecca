@@ -1,0 +1,2 @@
+player = object = laugh = C'est marrant ! J'en veux d'autres !
+dave = player = calm = Si ça te fait plaisir.

@@ -1,0 +1,8 @@
+KEYBOARD_MOUSE = Key1 % Clavier#&#Souris
+GAMEPAD = Key2 % Manette
+WHAT_THE_FUCK = Key3 % Hein#?!
+CLICK_ON_ACION = Key1 % Cliquer#sur#$action1
+I_GET_IT = Key1 % Ok,#j'ai#compris
+CLEAR_IT_UP = Key2 % Tu#peux#être#plus#clair#?
+ITS_NOT_FUNNY = Key1 % C'est#pas#drôle#!
+

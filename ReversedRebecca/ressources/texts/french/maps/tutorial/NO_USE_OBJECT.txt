@@ -1,0 +1,2 @@
+dave = player = calm = Il#n'est#pas#toujours#possible#d'interagir#avec#un#objet.
+dave = player = calm = Je#te#laisse#découvrir#à#quel#point#cette#salle#est#inutile.

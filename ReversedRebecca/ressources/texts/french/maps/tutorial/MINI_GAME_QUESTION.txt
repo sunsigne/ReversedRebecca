@@ -1,0 +1,12 @@
+player = object = laugh = Ok. Tu voulais dire quoi sur les mini-jeux ?
+dave = player = calm = Seulement qu'il en existe beaucoup et qu'ils sont très différents. Tout l'amusement réside dans le fait que tu doives t'adapter pour les comprendre.
+player = object = happy_var = Bien.
+dave = player = Deux dernières choses avant de se quitter. Si tu veux mettre sur pause, clique sur la touche "Esc" / le bouton "Start".
+player = object = worry = Et la deuxième chose ?
+dave = player = calm = Dans ce jeu, tes choix sont réelement pris en compte. Pour chacune de tes actions, il y aura des conséquences.
+dave = player = calm = Mais il n'y a pas de meilleure façon de s'en rendre compte qu'en refaisant le jeu.
+dave = player = calm = Tu réaliseras alors que même des détails ont parfois des conséquences, comme manger, lire une lettre ou simplement prendre son temps.
+player = object = happy = Tu parles l'effet papillon, c'est ça ?
+dave = player = calm = En quelque sorte, oui.
+dave = player = calm = Bon, je te souhaite une bonne nuit.
+player = object = no_sens = … Une bonne nuit ?

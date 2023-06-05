@@ -1,0 +1,5 @@
+dave = player = calm = Bienvenue#dans#ce#tutoriel,#Rebecca.@Appuie#sur#$dialogue#pour#continuer.
+player = object = unhappy = Tu#es#vraiment#bizarre,#Dave…@Il#n'y#a#aucun#"bouton#$dialogue",#dans#cette#pièce…
+player = object = worry = Mais#bon,#si#ça#te#fait#plaisir…#"J'appuie#sur#$dialogue".@Et#maintenant#?
+dave = player = calm = Maintenant,#tu#vas#étudier#les#contrôles.
+dave = player = calm = Appuie#sur#$action1#ou#$action2#pour#répondre#à#ma#question#:@avec#quoi#joues-tu#?

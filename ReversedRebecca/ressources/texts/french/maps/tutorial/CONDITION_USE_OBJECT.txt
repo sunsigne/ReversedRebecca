@@ -1,0 +1,2 @@
+dave = player = calm = Attention#à#ne#pas#mal#juger#un#objet.@Parfois,#tu#dois#remplir#une#condition#pour#interagir#avec#lui.
+dave = player = calm = Cette#plante#en#est#un#très#bon#exemple.

@@ -1,0 +1,6 @@
+dave = player = calm = C'est#tout#ce#que#tu#as#à#savoir#sur#les#objets.@Des#questions#avant#qu'on#passe#à#la#suite#?
+player = object = happy = Oui#!#Comment#je#fais#pour#différencier#les#objets#inutiles@des#objets#utilisables#sous#conditions#?
+player = object = worry = Je#veux#dire…#Si#je#n'avais#pas#eu#de#verre#d'eau,@je#n'aurais#jamais#su#que#la#plante#était#utilisable.
+dave = player = calm = C'est#une#bonne#question.
+dave = player = calm = En#vérité,#tu#ne#peux#pas#directement#faire#la#différence.@Le#plus#souvent,#il#te#faudra#faire#preuve#de#bon#sens.
+dave = player = calm = Les#objets#s'adapteront#souvent#à#ta#situation.@C'est#en#vérité#une#simple#question#de#contexte.

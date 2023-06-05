@@ -18,8 +18,7 @@
 
 	////////// EN COURS ////////////
 	
-	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
-	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
+
 	
 	////////// PERSONNAGES à faire ////////////
 
@@ -61,6 +60,9 @@
 
 	////////// FACILE ////////////
 
+	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
+	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
+	vérifier sur Underale et imiter le cas échant : le bouton X qui apparait après qu'un dialogue soit fini ?
 	créer un debug mode pour activer les raccourcis clavier de dev ?
 	dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
 	Les outils doivent clignoter lorsqu'ils apparaissent !
@@ -94,6 +96,7 @@
 	
 	////////// RR000 ////////////
 
+	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	traduction english pas fini (les actions)
@@ -106,6 +109,7 @@
 	////////// LVL001 ////////////
 
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
+	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
 
 	jean doit pouvoir être grondé par Sarah et Rebecca normalement (là, c'est la cinématique des toilettes qui se lance tj)	
 	faire du décors à l'exterieur, et dans la salle de droite

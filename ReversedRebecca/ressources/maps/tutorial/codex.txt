@@ -1,0 +1,2 @@
+NPC-01 = Dave
+OBJ-01 = Trash
