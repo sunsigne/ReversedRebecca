@@ -1,4 +1,4 @@
-player = object = no_sens = C'est qui $user ?
+player = object = no_sens = C'est qui $$user ?
 dave = DOWN = calm = Quelqu'un qui ferait mieux de respecter les "personnages", comme il les appelle.
 dave = player = calm = Il ne voit en eux que des pantîns sans émotions qui ne sont là que pour son amusemment.
 dave = player = calm = Pour moi, vous êtes bien plus…
