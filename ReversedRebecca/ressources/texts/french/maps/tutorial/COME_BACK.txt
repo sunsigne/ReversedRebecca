@@ -1,1 +1,1 @@
-dave = player = calm = Reviens#me#voir#et#clique#sur#$action1@quand#tu#te#sens#prête#pour#la#suite.
+dave = player = calm = Reviens#me#voir#et#clique#sur#$$action1@quand#tu#te#sens#prête#pour#la#suite.
