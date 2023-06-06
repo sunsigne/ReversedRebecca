@@ -1,4 +1,5 @@
-player = object = angry = Tu te moques de moi, ou quoi ? La porte est verouillée !
-dave = player = calm = Pardon, je ne voulais pas te vexer. Je voulais juste que tu arrives à cette conclusion.
-player = object = wrong_with_you = Et donc ? Comment je l'ouvre ?
-dave = player = calm = Je vais faire appaître une clé. Lorsque tu la ramasseras, tu la verras appaître en bas à gauche sur ton écran.
+player = object = angry = Tu#te#moques#de#moi,#ou#quoi#?@La#porte#est#verrouillée#!
+dave = player = calm = Pardon,#je#ne#voulais#pas#te#vexer.@Je#voulais#juste#que#tu#arrives#à#cette#conclusion.
+player = object = wrong_with_you = Et#donc#?#Comment#je#l'ouvre#?
+dave = player = calm = Je#vais#faire#apparaitre#une#clé.
+dave = player = calm = Lorsque#tu#la#ramasseras,#tu#la#verras@apparaitre#en#bas#à#gauche#de#l'écran.

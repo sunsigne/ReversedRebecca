@@ -14,4 +14,5 @@ OBJ-07 = Fake Wall Left Little Box
 OBJ-08 = Fake Wall Right Little Box
 OBJ-09 = Fake Wall Desk Up Part
 OBJ-10 = Fake Wall Desk Right Part
-OBJ-13 = Fake Wall Plant/Sink
+OBJ-13 = Fake Wall Vertical
+OBJ-14 = Fake Wall Horizontal

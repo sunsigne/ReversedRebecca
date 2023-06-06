@@ -1,11 +1,5 @@
-player = object = no_sens = C'est qui $$user ?
-dave = DOWN = calm = Quelqu'un qui ferait mieux de respecter les "personnages", comme il les appelle.
-dave = player = calm = Il ne voit en eux que des pantîns sans émotions qui ne sont là que pour son amusemment.
-dave = player = calm = Pour moi, vous êtes bien plus…
-dave = player = calm = Quand on vous parle, votre réponse dépend à chaque fois du contexte, et n'est jamais deux fois le même.
-dave = player = calm = Vous avez des émotions, des sentiments, vous vous adaptez, vous êtes autônomes, vos conversations changent et évoluent en fonction de la situation…
-dave = player = calm = Bref, pour moi, vous êtes humains. Mais même si ça n'e sera jamais le cas pour $user, il se rendra vite compte de votre intelligence.
-player = object = worry = Ce que tu dis et à la fois très gentil, et très bizarre…
-dave = player = calm = Je mets juste les choses à plat : une sauvegarde n'est pas une excuse pour faire des choses affreuses.
-player = dave = surprised = Ça y est ! J'ai compris !
-player = dave = laugh = Tu parles comme si on était dans un jeu vidéo !
+dave = player = camera = Toi,#Rebecca,#non.#Mais#$$user,#oui.
+player = object = no_sens = ...
+player = object = no_sens = C'est#qui#$$user ?
+dave = DOWN = camera = Quelqu'un#qui#ferait#mieux#de#respecter#les@"personnages#du#jeu",#comme#il#les#appelle.
+dave = player = calm = Il#ne#voit#en#eux#que#des#pantins#sans#émotions,@qui#ne#sont#là#que#pour#son#amusement.

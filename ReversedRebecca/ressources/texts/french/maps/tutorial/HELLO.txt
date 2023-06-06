@@ -1,6 +1,6 @@
 dave = player = calm = Bienvenue#dans#ce#tutoriel,#Rebecca.@Appuie#sur#$$dialogue#pour#continuer.
 player = object = worry = Tu#es#bizarre,#Dave…@Ça#veut#dire#quoi#"Appuie#sur#$$dialogue"#?
-dave = player = calm = On#va#prétendre#que#tu#l'as#fait.
+dave = player = calm = On#va#prétendre#que#tu#viens#de#le#faire.
 player = object = happy_var = Ok.#Et#maintenant#?
 dave = player = calm = Maintenant,#tu#vas#étudier#les#contrôles.
 dave = player = calm = Appuie#sur#$$action1#ou#$$action2#pour#répondre#à@ma#question#:#avec#quoi#joues-tu#?

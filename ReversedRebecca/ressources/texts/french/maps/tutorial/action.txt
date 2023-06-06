@@ -1,6 +1,7 @@
 ///// DAVE /////
 
 TALK = Key1 % parler
+TALK_VAR = Key1 % parler
 KEYBOARD_MOUSE = Key1 % Clavier/Souris
 GAMEPAD = Key2 % Manette
 WHAT = Key3 % Quoi#?!
