@@ -1,5 +1,5 @@
-dave = player = calm = Tu vois la porte à gauche ? Elle est de niveau "CYAN".
-dave = player = calm = Au milieu et à droite, les portes sont de niveaux supérieur : "VERT" et "JAUNE".
-dave = player = calm = Que se passera-t-il selon toi lorsque tu rammasseras la clé jaune ?
-player = object = happy_var = La clé en bas à gauche de mon écran va devenir jaune.
-dave = player = calm = À toi l'honneur.
+dave = player = calm = Tu#vois#la#porte#à#gauche#?@Elle#est#de#niveau#"CYAN".
+dave = player = calm = Au#milieu#et#à#droite,#les#portes#sont@de#niveaux#supérieurs#:#"VERT"#et#"JAUNE".
+dave = player = calm = Que#se#passera-t-il#selon#toi#lorsque@tu#ramasseras#la#clé#jaune#?
+player = object = happy_var = La#clé#en#bas#à#gauche#de@mon#écran#va#devenir#jaune.
+dave = player = calm = À#toi#l'honneur.

@@ -5,6 +5,7 @@ OBJ-03 = Chair
 OBJ-04 = Chair Leaver
 OBJ-11 = Plant
 OBJ-12 = Sink
+OBJ-15 = Cyan Key Checker
 
 ///// WALLS /////
 

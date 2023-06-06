@@ -1,11 +1,11 @@
-dave = player = calm = Tu as appris quelque chose ?
-player = object = happy = Que ma clé est infinie ? Je peux ouvrir autant de portes que je veux.
-dave = player = calm = Presque. Elle durera le temps d'un niveau seulement.
-player = object = no_sens = C'est à dire ?
-dave = player = calm = Que tu devras en trouver une nouvelle à chaque fois que tu changes d'endroit.
-player = object = no_sens = ... Parce… Genre, elle disparaitra de ma poche ?
-dave = player = calm = Ton comptes t'arrêter sur toutes les incohérences ludo-narative ?
-player = object = worry = Pardon, pardon. J'ai compris, c'est comme ça que ça marche. Et ensuite ?
-dave = player = calm = Puisque ou une seule clé permet d'ouvrir toutes les portes, en ramasser plusieurs n'est pas utile.
-player = object = excited = Je vois ! Oui, c'est logique !
-dave = player = calm = Comme un dessin vaut mieux que mille discours. Je te laisse le constater.
+dave = player = calm = Tu#as#appris#quelque#chose#?
+player = object = happy = Que#ma#clé#est#infini#?@J'ai#ouvert#plusieurs#portes,#avec#une#seule.
+dave = player = calm = Presque.#Elle#durera#le#temps#d'un#niveau.
+player = object = no_sens = …#C'est-à-dire#?
+dave = player = calm = Que#tu#devras#en#trouver#une#nouvelle,@à#chaque#fois#que#tu#changeras#de#lieu.
+player = object = no_sens = ...#Parce…#Genre…@Elle…#disparaitra#de#ma#poche#?
+dave = player = calm = Tu#comptes#t'arrêter#sur#toutes@les#incohérences#ludo-narrative#?
+player = object = worry = Pardon,#pardon.#J'ai#compris,#c'est@comme#ça#que#ça#marche.#Et#ensuite#?
+dave = player = calm = Puisque#une#seule#clé#te#permet#d'ouvrir#toutes@les#portes,#en#ramasser#plusieurs#n'est#pas#utile.
+player = object = excited = Je#vois#!#Oui,#c'est#logique#!
+dave = player = calm = Démonstration.

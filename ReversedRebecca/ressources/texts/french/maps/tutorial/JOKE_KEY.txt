@@ -1,2 +1,2 @@
-dave = player = smile = Moi, je trouve que si.
-dave = player = calm = Ok. Pour de vrai cette fois.
+dave = player = smile = Moi,#je#trouve#que#si.
+dave = player = calm = Ok.#Pour#de#vrai#cette#fois.
