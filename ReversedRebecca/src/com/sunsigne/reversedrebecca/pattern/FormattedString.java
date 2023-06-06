@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.pattern;
 
+import com.sun.jna.platform.win32.Secur32;
+import com.sun.jna.platform.win32.Secur32Util;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -53,9 +55,9 @@ public class FormattedString {
 	}
 
 	public String replaceValues(String text) {
-		if(text.contains("$$") == false)
+		if (text.contains("$$") == false)
 			return text;
-		
+
 		String formatted_value = text;
 		formatted_value = formatted_value.replace("$$up", getKeyText(UpKey.getKey()));
 		formatted_value = formatted_value.replace("$$down", getKeyText(DownKey.getKey()));
@@ -65,8 +67,8 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("$$action1", getKeyText(ActionOneKey.getKey()));
 		formatted_value = formatted_value.replace("$$action2", getKeyText(ActionTwoKey.getKey()));
 		formatted_value = formatted_value.replace("$$action3", getKeyText(ActionThreeKey.getKey()));
-		formatted_value = formatted_value.replace("$$user", getUser());
-		
+		formatted_value = formatted_value.replace("$$user", getUserName());
+
 		return formatted_value;
 	}
 
@@ -75,8 +77,14 @@ public class FormattedString {
 		return key_text;
 	}
 
-	private String getUser() {
-		return System.getProperty("user.name");
+	public String getUserName() {
+		String fullName = Secur32Util.getUserNameEx(Secur32.EXTENDED_NAME_FORMAT.NameDisplay);
+		String name = fullName;
+
+		if (fullName.contains(" "))
+			name = fullName.split(" ")[0];
+
+		return name;
 	}
 
 }

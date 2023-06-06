@@ -7,6 +7,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JInput"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JNA"/>
 	<classpathentry kind="lib" path="ressources"/>
 	<classpathentry kind="lib" path="userdata"/>
 	<classpathentry kind="lib" path="dependencies"/>
