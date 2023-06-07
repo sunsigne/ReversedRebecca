@@ -1,4 +1,4 @@
 player = object = laugh = Ok.#Tu#voulais#dire#quoi#sur#les#mini-jeux#?
 dave = player = calm = Seulement#qu'il#en#existe#beaucoup,@et#qu'ils#sont#très#différents.
-dave = player = calm = Tout#l'amusement#réside#dans#le#fait@de#devoir#s'adapter#pour#les#comprendre.
+dave = player = calm = Tout#l'amusement#réside#dans#le#fait#de@devoir#s'adapter#pour#les#comprendre.
 player = object = happy_var = Ok.

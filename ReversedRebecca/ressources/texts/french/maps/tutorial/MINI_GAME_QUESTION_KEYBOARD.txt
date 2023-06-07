@@ -1,1 +1,1 @@
-dave = player = Encore#deux#choses#avant#de#se#quitter#:@si#tu#veux#mettre#sur#pause,#clique#sur#"Esc".
+dave = player = calm = Encore#deux#choses#:@si#tu#veux#mettre#sur#pause,#clique#sur#"Esc".

@@ -23,8 +23,9 @@
 
 	////////// EN COURS ////////////
 	
+	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
+	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	+ grosse police de caractère pour les actions & bonus text
-	créer une autre simulation pour les portes vertes
 	refaire les textures de la liste des textures à refaire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	lvl001 - scolding jean, il devrait jouer + les victimes "pourquoi tu me cries dessus ?"
@@ -71,7 +72,6 @@
 	////////// FACILE ////////////
 
 	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
-	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	vérifier sur Underale et imiter le cas échant : le bouton X qui apparait après qu'un dialogue soit fini ?
 	créer un debug mode pour activer les raccourcis clavier de dev ?
 	dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête

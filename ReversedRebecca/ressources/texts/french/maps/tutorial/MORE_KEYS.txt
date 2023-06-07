@@ -1,6 +1,6 @@
 dave = player = calm = Tu#as#appris#quelque#chose#?
 player = object = happy = Que#ma#clé#est#infinie#?@J'ai#ouvert#plusieurs#portes,#avec#une#seule.
-dave = player = calm = Elle#durera#le#temps#d'un#niveau#seulement.
+dave = player = calm = Elle#durera#le#temps#du#niveau#seulement.
 player = object = no_sens = …#C'est-à-dire#?
 dave = player = calm = Que#tu#devras#en#trouver#une#nouvelle,@à#chaque#fois#que#tu#changeras#de#lieu.
 player = object = no_sens = ...#Parce…#Genre…@Elle…#disparaitra#de#ma#poche#?

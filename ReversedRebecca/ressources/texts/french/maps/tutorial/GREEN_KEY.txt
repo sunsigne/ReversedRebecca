@@ -1,5 +1,5 @@
 player = object = no_sens = Pourquoi#ma#clé#est#devenue#verte#?
-dave = player = calm = Chaque#couleur#correspond#à#un#niveau#de@difficulté#:#cyan#->#1,#vert#->#2,#jaune#->#3,#etc.
+dave = player = calm = Chaque#couleur#correspond#à#un#niveau#de@difficulté#:#cyan#->#1#/#vert#->#2#/#jaune#->#3#/#etc.
 dave = player = calm = Une#clé#de#niveau#3#permet#d'ouvrir@toutes#les#portes#de#niveaux#1,#2#ou#3.
 player = object = happy = Dit#autrement#:#une#clé#jaune#permet#d'ouvrir@toutes#les#portes#cyans,#vertes#ou#jaunes.
 dave = player = calm = Oui.#Mais#il#y#a#un#"mais".
