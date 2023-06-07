@@ -1,5 +1,9 @@
 	
-	-> pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
+	////////// MARKETING ////////////
+	
+	faire un short sur la golden shower
+	faire un short sur le "FUCK" avec les touches dans le tuto
+	pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// VERSION PUBLIQUE ////////////
 
@@ -19,7 +23,10 @@
 
 	////////// EN COURS ////////////
 	
-
+	refaire les textures de la liste des textures à refaire
+	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
+	lvl001 - scolding jean, il devrait jouer + les victimes "pourquoi tu me cries dessus ?"
+	censurer les mots grossiers (scolding hard, crier sur jospeh, rr000 sarah dans le sadic path du rr)
 	
 	////////// PERSONNAGES à faire ////////////
 
@@ -222,7 +229,6 @@
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner
 
-	golden shower : se faire uriner dessus
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 

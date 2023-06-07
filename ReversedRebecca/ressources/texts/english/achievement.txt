@@ -16,6 +16,8 @@ CryingText = Three#in#tears#at#the#same#time
 
 ///// YELLOW /////
 
+GoldenShowerTitle = Golden#Shower
+GoldenShowerText = To#be#urinated#on...
 TerminatedTitle = TERMINATED!
 TerminatedText = Permanent#death#on#a#terminator
 
