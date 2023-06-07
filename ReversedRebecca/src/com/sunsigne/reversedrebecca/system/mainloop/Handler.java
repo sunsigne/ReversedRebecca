@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -35,7 +36,11 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			if (tempObject instanceof Player && playerExluded)
 				continue;
 
-			if (tempObject.getX() == x && tempObject.getY() == y) {
+			int gap = 0;
+			if (tempObject.getSize() == Size.S)
+				gap = Size.XS / 2;
+
+			if (tempObject.getX() == x + gap && tempObject.getY() == y + gap) {
 				object_list.addObject(tempObject);
 				continue;
 			}
