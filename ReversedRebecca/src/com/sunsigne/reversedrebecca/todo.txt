@@ -23,6 +23,9 @@
 
 	////////// EN COURS ////////////
 	
+	+ grosse police de caractère pour les actions & bonus text
+	faire disparaitre la clef derrière la porte après la blague
+	créer une autre simulation pour les portes vertes
 	refaire les textures de la liste des textures à refaire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	lvl001 - scolding jean, il devrait jouer + les victimes "pourquoi tu me cries dessus ?"

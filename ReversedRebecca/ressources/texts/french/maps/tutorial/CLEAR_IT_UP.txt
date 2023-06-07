@@ -7,6 +7,6 @@ dave = player = calm = Oui.#En#fait,#la#commode#est@utilisable#sous#cette#condit
 dave = player = calm = Mais#tu#pourrais#ne#pas#en#avoir#conscience#si#c'est@avant#d'être#nue#que#tu#avais#essayé#de#l'utiliser.
 player = object = unhappy = ...#Je#crois#que#j'ai#saisi#l'idée,@mais#ça#reste#vague…
 dave = player = calm = Tu#n'as#qu'à#te#dire#que#les#objets#sont#intelligent,@en#sens#où#ils#prennent#en#compte#ta#situation.
-dave = player = calm = C'est#une#simple#question#de#contexte.
+dave = player = calm = C'est#vraiment#une#simple#question#de#contexte.
 dave = player = calm = Dans#le#pire#des#cas,#tu#peux#toujours#revenir@sur#tes#pas#et#réessayer#d'utiliser#des#objets.
 player = object = laugh = Ok,#pourquoi#pas.

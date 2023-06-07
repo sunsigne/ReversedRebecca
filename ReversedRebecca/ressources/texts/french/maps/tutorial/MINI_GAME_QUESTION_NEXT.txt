@@ -1,0 +1,8 @@
+player = object = worry = Et#la#deuxième#chose#?
+dave = player = calm = Dans#ce#jeu,#tes#choix#sont#réellement#pris#en#compte.@Chacune#de#tes#actions#entrainera#des#conséquences.
+dave = player = calm = Parfois#même#pour#des#détails,#comme#manger,#lire#un#livre,#ou#simplement#prendre#son#temps.
+dave = player = calm = Mais#pour#réaliser#tout#ça,#il#n'y#a#pas#de#meilleure@façon#de#s'en#rendre#compte#qu'en#refaisant#le#jeu.
+player = object = happy = Tu#parles#l'effet#papillon,#c'est#ça#?
+dave = player = calm = En#quelque#sorte,#oui.
+dave = player = calm = Bon,#je#te#souhaite#une#bonne#nuit.
+player = object = no_sens = …#Une#bonne#nuit#?

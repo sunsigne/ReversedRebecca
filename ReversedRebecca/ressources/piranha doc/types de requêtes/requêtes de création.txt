@@ -21,7 +21,6 @@ Note : les objets devraient toujours être créés dans la sous-couche "world", 
 Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Lorsque c'est le cas, définissez la par défaut comme BACK ou FRONT et tenez-vous-y :
 L'avantage de choisir BACK par défaut : l'objet le plus récent aura toujours un index de 1.
 L'avantage de choisir FRONT par défaut : les objets auront tendance à garder le même index.
-Pour ma part, j'ai choisi BACK par défaut. Mais rien ne vous oblige à faire pareil.
 
 
 ////// CREATE_DECORATION //////
