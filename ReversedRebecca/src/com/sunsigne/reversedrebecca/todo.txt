@@ -29,7 +29,6 @@
 	+ grosse police de caractère pour les actions & bonus text
 	refaire les textures de la liste des textures à refaire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
-	lvl001 - scolding jean, il devrait jouer + les victimes "pourquoi tu me cries dessus ?"
 	
 	////////// PERSONNAGES à faire ////////////
 
