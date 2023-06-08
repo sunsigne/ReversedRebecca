@@ -83,15 +83,21 @@ public class TextAction implements Updatable {
 
 	///// no action text /////
 
-	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 20f);
+	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 30f);
 
 	private void drawNoActionText(Graphics g, Player player, String text) {
-		int[] rect = getNoActionRect(player.getFacing());
+		DIRECTION facing = player.getFacing();
+
+		for (DIRECTION tempDirection : DIRECTION.values()) {
+			facing = protrudeFixOnBorder(facing, player, tempDirection, true);
+		}
+
+		int[] rect = getNoActionRect(facing);
 
 		DIRECTION centeredText = DIRECTION.NULL;
-		if (player.getFacing() == DIRECTION.LEFT)
+		if (facing == DIRECTION.LEFT)
 			centeredText = DIRECTION.RIGHT;
-		if (player.getFacing() == DIRECTION.RIGHT)
+		if (facing == DIRECTION.RIGHT)
 			centeredText = DIRECTION.LEFT;
 
 		new TextDecoration().drawOutlinesString(g, no_action_font, text, centeredText, rect);
@@ -119,15 +125,14 @@ public class TextAction implements Updatable {
 
 	///// choice text /////
 
-	private float font_size = 17f / (float) Math.sqrt(Window.SCALE_X);
+	private float font_size = 26f / (float) Math.sqrt(Window.SCALE_X);
 	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", font_size);
 
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();
 
-		// this prevent text to protrude from the screen
-		if (tooCloseToRightBorder(player))
-			facing = DIRECTION.RIGHT;
+		facing = protrudeFixOnBorder(facing, player, DIRECTION.LEFT, false);
+		facing = protrudeFixOnBorder(facing, player, DIRECTION.RIGHT, false);
 
 		int[] rect = getChoiceRect(player, facing, gap);
 
@@ -147,14 +152,14 @@ public class TextAction implements Updatable {
 		}
 	}
 
-	private boolean tooCloseToRightBorder(Player player) {
-		if (CameraDependency.CAMERA.getX() != 0)
-			return false;
+	private DIRECTION protrudeFixOnBorder(DIRECTION facing, Player player, DIRECTION border, boolean opposite) {
+		if (CameraDependency.CAMERA.isObjectCloseFromBorder(player, border) == false)
+			return facing;
 
-		if (player.getX() < 1500)
-			return false;
+		if (CameraDependency.CAMERA.isObjectCloseFromBorder(interactive, border))
+			return opposite ? border.getOpposite() : border;
 
-		return true;
+		return facing;
 	}
 
 }

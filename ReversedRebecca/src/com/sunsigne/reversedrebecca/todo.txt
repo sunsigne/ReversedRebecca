@@ -21,13 +21,16 @@
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
 
-	////////// EN COURS ////////////
-	
+	////////// DEMO ////////////
+
+	faire le nouvel écran de fin de niveau
 	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
+	faire animation de sorti de puzzle (resituer le joueur du 1er coup d'oeil !)
+
+	////////// EN COURS ////////////
+		
 	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
-	+ grosse police de caractère pour les actions & bonus text
-	refaire les textures de la liste des textures à refaire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	
 	////////// PERSONNAGES à faire ////////////

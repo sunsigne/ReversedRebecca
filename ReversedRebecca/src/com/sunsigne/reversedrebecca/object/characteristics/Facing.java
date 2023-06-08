@@ -9,24 +9,13 @@ public interface Facing {
 	public void setFacing(DIRECTION facing);
 
 	public default DIRECTION getOppositeFacing() {
-		switch (getFacing()) {
-		case LEFT:
-			return DIRECTION.RIGHT;
-		case RIGHT:
-			return DIRECTION.LEFT;
-		case UP:
-			return DIRECTION.DOWN;
-		case DOWN:
-			return DIRECTION.UP;
-		default:
-			return DIRECTION.NULL;
-		}
+		return getFacing().getOpposite();
 	}
-	
+
 	public static String getAxisName(boolean horizontal) {
 		return horizontal ? "horizontal" : "vertical";
 	}
-	
+
 	////////// DIRECTION ////////////
 
 	public enum DIRECTION {
@@ -47,6 +36,21 @@ public interface Facing {
 
 		public int getNum() {
 			return num;
+		}
+
+		public DIRECTION getOpposite() {
+			switch (this) {
+			case LEFT:
+				return DIRECTION.RIGHT;
+			case RIGHT:
+				return DIRECTION.LEFT;
+			case UP:
+				return DIRECTION.DOWN;
+			case DOWN:
+				return DIRECTION.UP;
+			default:
+				return DIRECTION.NULL;
+			}
 		}
 	}
 

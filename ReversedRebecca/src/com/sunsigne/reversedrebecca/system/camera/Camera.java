@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.system.camera;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.system.Window;
 
@@ -36,6 +37,41 @@ public class Camera {
 				return false;
 		} else
 			return false;
+	}
+
+	public boolean isObjectCloseFromBorder(Position position, DIRECTION border) {
+		int px = position.getX() + position.getWidth() / 2;
+		int py = position.getY() + position.getHeight() / 2;
+
+		switch (border) {
+
+		case LEFT:
+			if (px > -x && px < -x + Window.WIDHT / 4)
+				return true;
+			else
+				return false;
+
+		case RIGHT:
+			if (px > -x + (3 * Window.WIDHT / 4) && px < -x + Window.WIDHT)
+				return true;
+			else
+				return false;
+
+		case UP:
+			if (py > -y && py < -y + Window.HEIGHT / 4)
+				return true;
+			else
+				return false;
+
+		case DOWN:
+			if (py > -y + (3 * Window.HEIGHT / 4) && py < -y + Window.HEIGHT)
+				return true;
+			else
+				return false;
+
+		default:
+			return false;
+		}
 	}
 
 }

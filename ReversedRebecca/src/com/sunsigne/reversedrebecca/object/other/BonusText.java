@@ -40,7 +40,7 @@ public class BonusText extends GameObject {
 	private Font font;
 	
 	private void createFont(boolean importante) {
-		float size = importante ? 44f: 22f;
+		float size = importante ? 66f: 33f;
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size);
 	}
 
