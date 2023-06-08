@@ -23,13 +23,13 @@
 
 	////////// EN COURS ////////////
 	
+	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	+ grosse police de caractère pour les actions & bonus text
 	refaire les textures de la liste des textures à refaire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	lvl001 - scolding jean, il devrait jouer + les victimes "pourquoi tu me cries dessus ?"
-	censurer les mots grossiers (scolding hard, crier sur jospeh, rr000 sarah dans le sadic path du rr)
 	
 	////////// PERSONNAGES à faire ////////////
 
