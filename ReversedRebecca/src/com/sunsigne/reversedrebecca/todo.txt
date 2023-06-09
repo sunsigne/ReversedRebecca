@@ -28,9 +28,8 @@
 	faire animation de sorti de puzzle (resituer le joueur du 1er coup d'oeil !)
 
 	////////// EN COURS ////////////
-		
-	faire les tests de tailles de police sur des résolutions différentes
-	faire les tests des interactifs près des bords de sur des résolutions différentes
+	
+	faire la manette du meno video
 	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt

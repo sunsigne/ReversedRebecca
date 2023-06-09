@@ -6,6 +6,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.system.Window;
 
 public class TextDecoration {
 
@@ -60,7 +61,7 @@ public class TextDecoration {
 	public void drawShadowedString(Graphics g, Font font, String text, Color color, Color shadow_color,
 			DIRECTION facing, int[] rect) {
 
-		int gap = 4;
+		int gap = (int) (4 * Math.sqrt(Window.SCALE_X));
 		int[] shadow_rect = { rect[0] + gap, rect[1] + gap, rect[2], rect[3] };
 
 		drawCenteredString(g, font, text, shadow_color, facing, shadow_rect);

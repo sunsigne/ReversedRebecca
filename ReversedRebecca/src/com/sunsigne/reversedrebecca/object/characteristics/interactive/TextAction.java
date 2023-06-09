@@ -97,7 +97,8 @@ public class TextAction implements Updatable {
 	private Font no_action_font;
 
 	private void build_no_action_font() {
-		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 20f * TextsOption.getSize());
+		float size = 20f / (float) Math.sqrt(Window.SCALE_X);
+		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 	
 	private void drawNoActionText(Graphics g, Player player, String text) {
@@ -140,12 +141,11 @@ public class TextAction implements Updatable {
 
 	///// choice text /////
 
-	private float font_size;
 	private Font choice_font;
 
 	private void build_choice_font() {
-		font_size = 17f / (float) Math.sqrt(Window.SCALE_X);
-		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", font_size * TextsOption.getSize());
+		float size = 17f / (float) Math.sqrt(Window.SCALE_X);
+		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 	
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {

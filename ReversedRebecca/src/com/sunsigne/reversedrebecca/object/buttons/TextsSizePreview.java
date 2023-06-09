@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Window;
 
 public class TextsSizePreview extends GameObject {
 
@@ -40,7 +41,8 @@ public class TextsSizePreview extends GameObject {
 
 	@Override
 	public void tick() {
-		font = new FontTask().createNewFont("square_sans_serif_7.ttf", 22f * TextsOption.getSize());
+		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
+		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 
 	////////// TEXTURE ////////////
@@ -74,9 +76,9 @@ public class TextsSizePreview extends GameObject {
 		if (character.isEmpty() || image == null)
 			return;
 
-		int gap = 3 * character.length() - 12;
+		int gap = (int) ((float) (3 * character.length() - 12) / Window.SCALE_X);
 
-		g.drawImage(image, getX() + Size.XS - gap, getY(), getWidth(), getHeight(), null);
+		g.drawImage(image, getX() + Size.XS - (int) (gap / Window.SCALE_X), getY(), getWidth(), getHeight(), null);
 
 		int[] rect = new int[] { getX() + Size.XL + gap, getY(), getWidth(), getHeight() };
 		new TextDecoration().drawOutlinesString(g, font, character, DIRECTION.NULL, rect);
