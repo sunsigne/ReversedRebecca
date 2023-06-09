@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -18,6 +20,9 @@ public class TextAction implements Updatable {
 	public TextAction(Interactive interactive, TripleAction tripleAction) {
 		this.interactive = interactive;
 		this.tripleAction = tripleAction;
+		
+		build_no_action_font();
+		build_choice_font();
 	}
 
 	private Interactive interactive;
@@ -29,6 +34,12 @@ public class TextAction implements Updatable {
 	public void tick() {
 		if (tripleAction != interactive.getTripleAction())
 			removeObject();
+		
+		if(LAYER.MENU.getHandler().getList().isEmpty())
+			return;
+		
+		build_no_action_font();
+		build_choice_font();
 	}
 
 	////////// RENDER ////////////
@@ -83,8 +94,12 @@ public class TextAction implements Updatable {
 
 	///// no action text /////
 
-	private Font no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 30f);
+	private Font no_action_font;
 
+	private void build_no_action_font() {
+		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 20f * TextsOption.getSize());
+	}
+	
 	private void drawNoActionText(Graphics g, Player player, String text) {
 		DIRECTION facing = player.getFacing();
 
@@ -125,9 +140,14 @@ public class TextAction implements Updatable {
 
 	///// choice text /////
 
-	private float font_size = 26f / (float) Math.sqrt(Window.SCALE_X);
-	private Font choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", font_size);
+	private float font_size;
+	private Font choice_font;
 
+	private void build_choice_font() {
+		font_size = 17f / (float) Math.sqrt(Window.SCALE_X);
+		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", font_size * TextsOption.getSize());
+	}
+	
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();
 

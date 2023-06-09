@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -40,7 +41,8 @@ public class BonusText extends GameObject {
 	private Font font;
 	
 	private void createFont(boolean importante) {
-		float size = importante ? 66f: 33f;
+		float size = importante ? 44f: 22f;
+		size = size * TextsOption.getSize();
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size);
 	}
 

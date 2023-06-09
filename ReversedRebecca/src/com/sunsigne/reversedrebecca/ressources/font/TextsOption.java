@@ -17,6 +17,22 @@ public class TextsOption {
 		return size;
 	}
 
+	public static float getSize() {
+		if(size == null)
+			return 1.3f;
+		
+		switch (size) {
+		case SMALL:
+			return 1.1f;
+		case MEDIUM:
+			return 1.3f;
+		case LARGE:
+			return 1.5f;
+		default:
+			return 1.3f;
+		}
+	}
+
 	private TEXTS_SIZE getRegisteredType() {
 		String registeredType = new FileTask().read(userData, getValueToRead(), file);
 		for (TEXTS_SIZE tempType : TEXTS_SIZE.values()) {
