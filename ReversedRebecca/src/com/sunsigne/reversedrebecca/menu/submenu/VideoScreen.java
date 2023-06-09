@@ -173,10 +173,9 @@ public class VideoScreen extends SubMenuScreen {
 	private BufferedImage gamepad_instruction_image;
 
 	protected BufferedImage get_gamepad_instruction_image() {
-		if (gamepad_instruction_image == null) {
+		if (gamepad_instruction_image == null)
 			gamepad_instruction_image = new ImageTask().loadImage("textures/menu/" + getName() + "_gamepad_instruction",
 					true);
-		}
 		return gamepad_instruction_image;
 	}
 

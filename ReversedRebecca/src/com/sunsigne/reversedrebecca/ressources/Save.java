@@ -105,7 +105,7 @@ public class Save {
 		new FileTask().write(dave_file, fileContent);
 	}
 
-	private void updateCharacteristics() {
+	public void updateCharacteristics() {
 
 		FileTask task = new FileTask();
 

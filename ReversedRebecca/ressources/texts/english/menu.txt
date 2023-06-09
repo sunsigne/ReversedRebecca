@@ -48,6 +48,13 @@ NormalDetail2 = experience
 HardDetail1 = harder#puzzle
 HardDetail2 = only#one#life
 
+///// TUTORIAL /////
+
+TutorialDetail1 = Do#you#need#a#tutorial
+TutorialDetail2 = to#learn#how#to#play?
+YesButton = Yes
+NoButton = No
+
 ///// SAVE /////
 
 GeneralButton = general

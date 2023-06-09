@@ -102,6 +102,7 @@
 	
 	////////// DAVE ////////////
 	
+	Dave propose le tutorial avant de lancer le jeu
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)

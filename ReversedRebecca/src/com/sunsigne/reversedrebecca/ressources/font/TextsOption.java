@@ -57,7 +57,6 @@ public class TextsOption {
 
 	public enum TEXTS_SIZE {
 		SMALL("small"), MEDIUM("medium"), LARGE("large");
-		;
 
 		TEXTS_SIZE(String name) {
 			this.name = name;

@@ -21,6 +21,7 @@ public class FilePath {
 	public static final String TECHTREE = "techtree.txt";
 	public static final String TOOL = "tool.txt";
 	
+	public static final String TUTORIAL = "tutorial";
 	public static final String LVL000 = "rebeccas_room_000";
 	
 }

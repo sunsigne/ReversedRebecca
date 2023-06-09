@@ -48,6 +48,13 @@ NormalDetail2 = original
 HardDetail1 = puzzle#plus#durs
 HardDetail2 = une#seule#vie
 
+///// TUTORIAL /////
+
+TutorialDetail1 = As-tu#besoin#d'un#tutoriel
+TutorialDetail2 = pour#apprendre#à#jouer#?
+YesButton = Oui
+NoButton = Non
+
 ///// SAVE /////
 
 GeneralButton = general
