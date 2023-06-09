@@ -90,3 +90,7 @@ CameraDynamic = dynamique
 CameraDetail = La#Camera#suit#le#joueur
 StaticDetail = au#pixel#pres
 DynamicDetail = de#façon#fluide
+Texts = textes
+TextsSmall = petit
+TextsMedium = moyen
+TextsLarge = grand

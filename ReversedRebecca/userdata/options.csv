@@ -1,5 +1,6 @@
 Language=french
 Camera=dynamic
+Texts=medium
 Difficulty=normal
 
 /////KEYS/////
@@ -15,7 +16,7 @@ Action3=F:70
 
 /////VOLUME/////
 
-Main=1.0
+Main=0.22
 Music=1.0
 Sound=1.0
 Voice=1.0

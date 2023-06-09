@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
+import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -46,35 +48,51 @@ public class VideoScreen extends SubMenuScreen {
 	private TitleScreenText camera;
 	private TitleScreenText cameraType;
 	private TitleScreenText[] cameraDetail;
+	
+	private TitleScreenText texts;
+	private TitleScreenText textsSize;
 
+	private int gap = - 278;
+	
 	private void loadText() {
 		String text = null;
 		int x = 325 + 416;
 		int y = 503;
 
 		// camera
-		camera = new TitleScreenText(translate("Camera"), x, y + 51);
+		camera = new TitleScreenText(translate("Camera"), x - gap, y + 51);
 		LAYER.MENU.addObject(camera);
 
 		// static / dynamic
 		String typeName = CameraOption.getType().getName();
 		text = translate("Camera" + typeName);
-		cameraType = new TitleScreenTextSelectable(translate("Camera" + typeName), x, y + 155);
+		cameraType = new TitleScreenTextSelectable(translate("Camera" + typeName), x - gap, y + 155);
 		LAYER.MENU.addObject(cameraType);
 
 		cameraDetail = new TitleScreenText[2];
 
 		// the camera follows the player ...
 		text = translate("Camera" + "Detail");
-		cameraDetail[0] = new TitleScreenText(text, x, y + 245);
+		cameraDetail[0] = new TitleScreenText(text, x - gap, y + 245);
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
 
 		// ... to the nearest pixel / fluidly
 		text = translate(typeName + "Detail");
-		cameraDetail[1] = new TitleScreenText(text, x, y + 280);
+		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 280);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
+		
+		
+		// texts
+		texts = new TitleScreenText(translate("Texts"), x + gap, y + 51);
+		LAYER.MENU.addObject(texts);
+		
+		// small / medium / large
+		String sizeName = TextsOption.getType().getName();
+		text = translate("Texts" + sizeName);
+		textsSize = new TitleScreenTextSelectable(translate("Texts" + sizeName), x + gap, y + 155);
+		LAYER.MENU.addObject(textsSize);
 	}
 
 	////////// BUTTONS ////////////
@@ -87,13 +105,23 @@ public class VideoScreen extends SubMenuScreen {
 	}
 
 	private void createLeftArrowButton(DIRECTION direction) {
-		GenericListener onPress = () -> choosePreviousCameraType();
-		createArrowButton("<", direction, 0, onPress);
+		GenericListener onPress = null;
+		
+		onPress = () -> choosePreviousCameraType();
+		createArrowButton("<", direction, 0 - gap, onPress);
+		
+		onPress = () -> choosePreviousTextsSize();
+		createArrowButton("<", direction, 0 + gap, onPress);
 	}
 
 	private void createRightArrowButton(DIRECTION direction) {
-		GenericListener onPress = () -> chooseNextCameraType();
-		createArrowButton(">", direction, 420, onPress);
+		GenericListener onPress = null;
+		
+		onPress = () -> chooseNextCameraType();
+		createArrowButton(">", direction, 420 - gap, onPress);
+		
+		onPress = () -> chooseNextTextsSize();
+		createArrowButton(">", direction, 420 + gap, onPress);
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -109,11 +137,26 @@ public class VideoScreen extends SubMenuScreen {
 		new CameraOption().registerType(camera_type);
 		refresh();
 	}
+	
+	private void choosePreviousTextsSize() {
+		TEXTS_SIZE texts_size = TextsOption.getType().getPrevious();
+		new TextsOption().registerType(texts_size);
+		refresh();
+	}
+
+	private void chooseNextTextsSize() {
+		TEXTS_SIZE texts_size = TextsOption.getType().getNext();
+		new TextsOption().registerType(texts_size);
+		refresh();
+	}
 
 	private void refresh() {
 		String typeName = CameraOption.getType().getName();
 		cameraType.setText(translate("Camera" + typeName));
 		cameraDetail[1].setText(translate(typeName + "Detail"));
+		
+		String sizeName = TextsOption.getType().getName();
+		textsSize.setText(translate("Texts" + sizeName));
 	}
 
 	////////// PRESET MOUSE POS ////////////

@@ -90,3 +90,7 @@ CameraDynamic = dynamic
 CameraDetail = The#camera#follows#the#player
 StaticDetail = to#the#nearest#pixel
 DynamicDetail = fluidly
+Texts = texts
+TextsSmall = small
+TextsMedium = medium
+TextsLarge = large

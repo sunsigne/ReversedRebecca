@@ -27,6 +27,7 @@ public class Options {
 
 		line.addObject("Language=french");
 		line.addObject("Camera=dynamic");
+		line.addObject("Texts=medium");
 		line.addObject("Difficulty=normal");
 		line.getList().add("");
 		line.addObject("/////KEYS/////");
