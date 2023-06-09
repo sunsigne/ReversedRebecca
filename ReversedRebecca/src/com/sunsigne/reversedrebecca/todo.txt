@@ -29,7 +29,6 @@
 
 	////////// EN COURS ////////////
 	
-	faire la manette du meno video
 	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
