@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.TextsSizePreview;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
@@ -51,6 +52,7 @@ public class VideoScreen extends SubMenuScreen {
 	
 	private TitleScreenText texts;
 	private TitleScreenText textsSize;
+	private TextsSizePreview textsSizePreview;
 
 	private int gap = - 278;
 	
@@ -93,6 +95,10 @@ public class VideoScreen extends SubMenuScreen {
 		text = translate("Texts" + sizeName);
 		textsSize = new TitleScreenTextSelectable(translate("Texts" + sizeName), x + gap, y + 155);
 		LAYER.MENU.addObject(textsSize);
+		
+		// preview of the size
+		textsSizePreview = new TextsSizePreview(x + gap + 45, y + 245 + 10);
+		LAYER.MENU.addObject(textsSizePreview);
 	}
 
 	////////// BUTTONS ////////////

@@ -30,7 +30,7 @@
 	////////// EN COURS ////////////
 		
 	faire les tests de tailles de police sur des résolutions différentes
-	faire les tests des interactifs près des bords de map sur des résolutions différentes
+	faire les tests des interactifs près des bords de sur des résolutions différentes
 	créer une entrée et une sortie pour le tuto (la sortie doit réinitialiser la difficulté et les outils, l'netrée doit etre proposée depuis le menu "jouer")
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
@@ -104,6 +104,7 @@
 	
 	////////// DAVE ////////////
 	
+	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
 	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
