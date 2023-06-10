@@ -97,7 +97,7 @@ public class TextAction implements Updatable {
 	private Font no_action_font;
 
 	private void build_no_action_font() {
-		float size = 20f / (float) Math.sqrt(Window.SCALE_X);
+		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
 		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 	
@@ -144,7 +144,7 @@ public class TextAction implements Updatable {
 	private Font choice_font;
 
 	private void build_choice_font() {
-		float size = 17f / (float) Math.sqrt(Window.SCALE_X);
+		float size = 20f / (float) Math.sqrt(Window.SCALE_X);
 		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 	

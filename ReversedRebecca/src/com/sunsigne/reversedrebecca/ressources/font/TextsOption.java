@@ -18,9 +18,9 @@ public class TextsOption {
 	}
 
 	public static float getSize() {
-		if(size == null)
-			return 1.3f;
-		
+		if (size == null)
+			size = new TextsOption().getRegisteredType();
+
 		switch (size) {
 		case SMALL:
 			return 1.1f;
