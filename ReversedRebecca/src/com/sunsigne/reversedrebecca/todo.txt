@@ -29,7 +29,6 @@
 
 	////////// EN COURS ////////////
 	
-	le TutorialScreen n'est pas encore gamepad compatible
 	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour 
 	les outils doivent "clignotter" lorsqu'ils quand ils apparaissent sur la map (les lootables en général)
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt

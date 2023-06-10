@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
@@ -16,13 +15,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
@@ -30,8 +28,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 public class TutorialScreen extends SubMenuScreen {
 
 	public TutorialScreen(GenericListener startWorld) {
-		super(PLAY);
-		getBackButton().removeObject();
+		super(NO);
+		//getBackButton().removeObject();
 
 		loadText();
 
@@ -73,7 +71,7 @@ public class TutorialScreen extends SubMenuScreen {
 
 	private void createYesButton(GenericListener startWorld) {
 		int x = 325 + 416 + 128;
-		int y = 503 - 25;
+		int y = 503 + 25;
 
 		GenericListener onPress = () -> startTutorial(startWorld);
 		ButtonObject button = new TitleScreenButton(translate("YesButton"), x - gap, y + 259, 160, 80, onPress, null) {
@@ -84,13 +82,14 @@ public class TutorialScreen extends SubMenuScreen {
 			}
 		};
 
-		buttons.put(PLAY, button);
+		buttons.put(YES, button);
+		button.setRectsize(RECTSIZE.CUSTOM_NO_BUTTON);
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createNoButton(GenericListener startWorld) {
 		int x = 325 + 416 + 128;
-		int y = 503 - 25;
+		int y = 503 + 25;
 
 		ButtonObject button = new TitleScreenButton(translate("NoButton"), x + gap, y + 259, 160, 80, startWorld,
 				null) {
@@ -101,7 +100,8 @@ public class TutorialScreen extends SubMenuScreen {
 			}
 		};
 
-		buttons.put(PLAY, button);
+		buttons.put(NO, button);
+		button.setRectsize(RECTSIZE.CUSTOM_NO_BUTTON);
 		LAYER.MENU.addObject(button);
 	}
 
@@ -141,20 +141,18 @@ public class TutorialScreen extends SubMenuScreen {
 		if (font == null)
 			return;
 
-		int[] up_rect = new int[] { 890, 565, 120, 120 };
-		int[] down_rect = new int[] { 890, 565 + 30, 120, 120 };
+		int[] up_rect = new int[] { 890, 615, 120, 120 };
+		int[] down_rect = new int[] { 890, 615 + 30, 120, 120 };
 
-		g.drawImage(get_dave_image(), 890, 712, 120, 120, null);
+		g.drawImage(get_dave_image(), 890, 762, 120, 120, null);
 		new TextDecoration().drawOutlinesString(g, font, tutorialDetail[0], DIRECTION.NULL, up_rect);
 		new TextDecoration().drawOutlinesString(g, font, tutorialDetail[1], DIRECTION.NULL, down_rect);
 	}
 
 	////////// PRESET MOUSE POS ////////////
 
-	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
-
-	public static final PresetMousePos DIFFICULTY = new PresetMousePos(925, 600);
-	public static final PresetMousePos PLAY = new PresetMousePos(925, 800);
+	public static final PresetMousePos YES = new PresetMousePos(325 + 416 + 128 - gap + 80, 503 + 25 + 259 + 40);
+	public static final PresetMousePos NO = new PresetMousePos(325 + 416 + 128 + gap + 80, 503 + 25 + 259 + 40);
 
 	////////// GAMEPAD ////////////
 
@@ -164,51 +162,28 @@ public class TutorialScreen extends SubMenuScreen {
 			return;
 
 		if (isPresetNull())
-			setPreset(DIFFICULTY);
-		else if (e.getKey() == ButtonEvent.B) {
-			setPreset(BACK, false);
-			buttons.get(BACK).mousePressed(null);
-		}
+			setPreset(NO);
 
-		else if (getPreset() == DIFFICULTY)
-			difficultyPressed(e);
-		else if (getPreset() == PLAY)
-			playPressed(e);
-		else if (getPreset() == BACK)
-			backPressed(e);
+		else if (getPreset() == YES)
+			yesPressed(e);
+		else if (getPreset() == NO)
+			noPressed(e);
 	}
 
-	private void difficultyPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.LEFT) {
-			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
-			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-			// choosePreviousGameDifficulty();
-		}
+	private void yesPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.RIGHT)
+			setPreset(NO);
 
-		else if (e.getKey() == ButtonEvent.RIGHT) {
-			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
-			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-			// chooseNextGameDifficulty();
-		}
-
-		else if (e.getKey() == ButtonEvent.DOWN)
-			setPreset(PLAY);
-	}
-
-	private void playPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.UP)
-			setPreset(DIFFICULTY);
-		else if (e.getKey() == ButtonEvent.DOWN)
-			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(PLAY).mousePressed(null);
+			buttons.get(YES).mousePressed(null);
 	}
 
-	private void backPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.UP)
-			setPreset(PLAY);
+	private void noPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT)
+			setPreset(YES);
+
 		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(BACK).mousePressed(null);
+			buttons.get(NO).mousePressed(null);
 	}
 
 }
