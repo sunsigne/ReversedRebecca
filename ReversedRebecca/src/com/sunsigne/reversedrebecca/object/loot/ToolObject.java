@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class ToolObject extends LootObject implements Difficulty {
 
@@ -20,17 +21,16 @@ public class ToolObject extends LootObject implements Difficulty {
 	}
 
 	////////// NAME ////////////
-	
+
 	@Override
 	public String toString() {
 		var clazz = "LOOT";
-		var name =  toolPlayer.getName().toUpperCase();
+		var name = toolPlayer.getName().toUpperCase();
 		var lvl = difficulty.getName().toUpperCase();
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + name + " " + lvl + " : " + goal.getX() + "-" + goal.getY();
 	}
-	
-	
+
 	private ToolPlayer toolPlayer;
 
 	////////// DIFFICULTY ////////////
@@ -50,6 +50,7 @@ public class ToolObject extends LootObject implements Difficulty {
 	////////// TEXTURE ////////////
 
 	protected BufferedImage image;
+	protected BufferedImage active_image;
 
 	public BufferedImage getImage() {
 		if (image == null)
@@ -57,11 +58,23 @@ public class ToolObject extends LootObject implements Difficulty {
 		return image;
 	}
 
+	public BufferedImage getActiveImage() {
+		if (active_image == null)
+			active_image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + "active");
+		return active_image;
+	}
+
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+
+		if (blinking.getState()) {
+			int gap = Size.XS / 8;
+			g.drawImage(getActiveImage(), getX() - gap, getY() - gap, getWidth() + 2 * gap, getHeight() + 2 * gap,
+					null);
+		}
 	}
 
 	////////// COLLISION ////////////
