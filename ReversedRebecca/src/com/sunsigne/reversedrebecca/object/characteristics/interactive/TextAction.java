@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -20,7 +20,7 @@ public class TextAction implements Updatable {
 	public TextAction(Interactive interactive, TripleAction tripleAction) {
 		this.interactive = interactive;
 		this.tripleAction = tripleAction;
-		
+
 		build_no_action_font();
 		build_choice_font();
 	}
@@ -30,14 +30,17 @@ public class TextAction implements Updatable {
 
 	////////// TICK ////////////
 
+	private TEXTS_SIZE size;
+
 	@Override
 	public void tick() {
 		if (tripleAction != interactive.getTripleAction())
 			removeObject();
-		
-		if(LAYER.MENU.getHandler().getList().isEmpty())
+
+		if (size == TextsOption.getType())
 			return;
-		
+
+		size = TextsOption.getType();
 		build_no_action_font();
 		build_choice_font();
 	}
@@ -100,7 +103,7 @@ public class TextAction implements Updatable {
 		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
 		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
-	
+
 	private void drawNoActionText(Graphics g, Player player, String text) {
 		DIRECTION facing = player.getFacing();
 
@@ -147,7 +150,7 @@ public class TextAction implements Updatable {
 		float size = 20f / (float) Math.sqrt(Window.SCALE_X);
 		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
-	
+
 	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
 		DIRECTION facing = player.getFacing();
 

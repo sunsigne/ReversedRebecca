@@ -23,7 +23,9 @@
 
 	////////// DEMO ////////////
 
+	les outils (et la GUI) ne devraient pas clignoter lors du démarage d'un niveau
 	faire le nouvel écran de fin de niveau
+	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
 	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	faire animation de sorti de puzzle (resituer le joueur du 1er coup d'oeil !)
 
@@ -198,8 +200,6 @@
 	Faire double Y (le pro du combat), et "mister boom"
 	
 	////////// SONS ////////////
-
-	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
 	
 	////////// A CREER PLUS TARD ////////////
 	

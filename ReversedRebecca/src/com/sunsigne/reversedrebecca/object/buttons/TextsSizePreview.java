@@ -41,7 +41,7 @@ public class TextsSizePreview extends GameObject {
 
 	@Override
 	public void tick() {
-		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
+		float size = 24f / (float) Math.sqrt(Window.SCALE_X);
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 
@@ -76,7 +76,7 @@ public class TextsSizePreview extends GameObject {
 		if (character.isEmpty() || image == null)
 			return;
 
-		int gap = (int) ((float) (3 * character.length() - 12) / Window.SCALE_X);
+		int gap = (int) ((float) (4 * character.length() - 16) / Window.SCALE_X);
 
 		g.drawImage(image, getX() + Size.XS - (int) (gap / Window.SCALE_X), getY(), getWidth(), getHeight(), null);
 
