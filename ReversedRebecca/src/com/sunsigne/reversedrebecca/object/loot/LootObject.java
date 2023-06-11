@@ -1,20 +1,20 @@
 package com.sunsigne.reversedrebecca.object.loot;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Blinking;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class LootObject extends GameObject implements CollisionReactor {
+public abstract class LootObject extends GameObject implements CollisionReactor, Blinking {
 
 	public LootObject(int x, int y) {
 		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
-		blink();
+		setBlinking();
 	}
 
 	public void pickup() {
@@ -24,27 +24,25 @@ public abstract class LootObject extends GameObject implements CollisionReactor 
 		actionWhenLooted();
 	}
 
-	////////// TICK ////////////
+	////////// BLINKING ////////////
 
-	private final int ACTIVE_TIME = 100;
 	private int time;
-	protected Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
 
-	public void blink() {
-		time = ACTIVE_TIME;
-		blinking.setState(true);
+	@Override
+	public int getBlinkingTime() {
+		return time;
 	}
 
 	@Override
-	public void tick() {
-		if (time < 0)
-			return;
+	public void setBlinkingTime(int time) {
+		this.time = time;
+	}
 
-		time--;
-		if(time % 10 == 0)
-			blinking.cycle();
-		if (time == 0)
-			blinking.setState(false);
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		runBlinking();
 	}
 
 	////////// COLLISION ////////////

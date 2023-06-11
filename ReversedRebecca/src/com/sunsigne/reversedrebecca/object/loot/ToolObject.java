@@ -18,6 +18,8 @@ public class ToolObject extends LootObject implements Difficulty {
 		super(x, y);
 		this.toolPlayer = toolPlayer;
 		this.difficulty = difficulty;
+
+		loadImages();
 	}
 
 	////////// NAME ////////////
@@ -50,30 +52,22 @@ public class ToolObject extends LootObject implements Difficulty {
 	////////// TEXTURE ////////////
 
 	protected BufferedImage image;
-	protected BufferedImage active_image;
+	protected BufferedImage blinking_image;
 
-	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
-		return image;
-	}
-
-	public BufferedImage getActiveImage() {
-		if (active_image == null)
-			active_image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + "active");
-		return active_image;
+	private void loadImages() {
+		image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
+		blinking_image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + "blinking");
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 
-		if (blinking.getState()) {
+		if (isBlinking()) {
 			int gap = Size.XS / 8;
-			g.drawImage(getActiveImage(), getX() - gap, getY() - gap, getWidth() + 2 * gap, getHeight() + 2 * gap,
-					null);
+			g.drawImage(blinking_image, getX() - gap, getY() - gap, getWidth() + 2 * gap, getHeight() + 2 * gap, null);
 		}
 	}
 
