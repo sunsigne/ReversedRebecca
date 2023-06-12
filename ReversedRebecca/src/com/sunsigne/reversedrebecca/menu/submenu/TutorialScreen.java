@@ -29,8 +29,6 @@ public class TutorialScreen extends SubMenuScreen {
 
 	public TutorialScreen(GenericListener startWorld) {
 		super(NO);
-		//getBackButton().removeObject();
-
 		loadText();
 
 		createYesButton(startWorld);
@@ -168,11 +166,15 @@ public class TutorialScreen extends SubMenuScreen {
 			yesPressed(e);
 		else if (getPreset() == NO)
 			noPressed(e);
+		else if (getPreset() == BACK)
+			backPressed(e);
 	}
 
 	private void yesPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.RIGHT)
 			setPreset(NO);
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
 
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(YES).mousePressed(null);
@@ -181,9 +183,18 @@ public class TutorialScreen extends SubMenuScreen {
 	private void noPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(YES);
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
 
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(NO).mousePressed(null);
 	}
 
+	private void backPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(NO);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BACK).mousePressed(null);
+	}
+	
 }
