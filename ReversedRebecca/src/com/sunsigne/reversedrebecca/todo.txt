@@ -21,47 +21,39 @@
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
 
-	////////// DEMO ////////////
-
-	faire le nouvel écran de fin de niveau
-	faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
-	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
-	faire animation de sorti de puzzle (resituer le joueur du 1er coup d'oeil !)
-
 	////////// EN COURS ////////////
 	
-	les outils de GUI doivent "clignotter" lorsqu'ils sont mis à jour 
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
-	
-	////////// PERSONNAGES à faire ////////////
-
-	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
-	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
-	D5 - l'un des 2 boss de l'embranchement lvl03
-	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
+	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt	
+	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
+	écran de fin : faire le nouvel écran de fin de niveau
+	musique : faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
+	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
+	puzzle : faire une animation de sorti (resituer le joueur du 1er coup d'oeil !)
+	le bouton "option" du Menu Ingame ne fait rien
+	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
+	vérifier sur Underale et imiter le cas échant : le bouton X qui apparait après qu'un dialogue soit fini ?
+	ajouter un bouton 'ajouter sur steam"
+	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
+	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
+	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
+	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure
+	succès : regarder le todo et le faire
+	lvl001 : regarder le todo et le faire
 
 	////////// GAMEPAD ////////////
 
-	ControlsScreen pas fini
+	ControlsScreen pas fini : replacer la souris par des options manettes -> les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
 	Chatbox & Interactive must be adapted
-	Puzzles must be compatible
-	
-	le tchat et les options doivent afficher le bon bouton de manette
-	la souris doit disparaitre (le système doit s'adapter à la manette -> souris / clavier) en fonction de l'input utilisé
-	replacer la souris par des options manettes
-	les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
+	Puzzles must be compatible	
+	le tchat et les interactives options doivent afficher le bon bouton de manette	
 
 	////////// DIFFICILE ////////////
 	
-	faire une animation de résolution des puzzle
 	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
-	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	le bouton "option" du Menu Ingame ne fait rien
-	créer une "difficulté" tutoriel (qui est en fait un lvl explicatif)
 	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
 	"You are" ne se sauvegarde pas encore
@@ -70,21 +62,18 @@
 	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 	KOAnimation dans les 4 direction ?
+	créer une animation "sick" pour quand on marche	 ?
 
 	////////// FACILE ////////////
 
-	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
-	vérifier sur Underale et imiter le cas échant : le bouton X qui apparait après qu'un dialogue soit fini ?
 	créer un debug mode pour activer les raccourcis clavier de dev ?
 	dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
 	Les outils doivent clignoter lorsqu'ils apparaissent !
-	Créer un bouton "refaire le niveau"
-	grossir la police d'écriture des interactions
+	Créer un bouton "refaire le niveau" ?
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	vous êtes : exemplaire, gentil, neutre, méchant, sadique / psycopath
-	les flêches pour le déplacement doit ête dit qq part (dans le tuto par exemple)
 	temps "méticuleux" du lvl000 à vérifier (changer la mécanique même ?)
 	faire un joli écran de fin de niveau : qui s'anime et avec une musique de victoire	
 	supprimer "sauvegarde" sur l'écran de fin de niveau
@@ -99,8 +88,17 @@
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
+		
+	////////// PERSONNAGES à faire ////////////
+
+	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
+	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
+	D5 - l'un des 2 boss de l'embranchement lvl03
+	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 	
 	////////// DAVE ////////////
+	
+	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	
 	Dave propose le tutorial avant de lancer le jeu
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
@@ -110,7 +108,6 @@
 	
 	////////// RR000 ////////////
 
-	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	traduction english pas fini (les actions)
@@ -124,11 +121,8 @@
 
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
-
-	jean doit pouvoir être grondé par Sarah et Rebecca normalement (là, c'est la cinématique des toilettes qui se lance tj)	
 	faire du décors à l'exterieur, et dans la salle de droite
 	scénario sadique pas encore faits
-	reduire le temps de Joseph devant la bibliothèque ! (testé récemment, c'est clairement trop long)
 	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
 
 	scénario : exit
@@ -199,14 +193,10 @@
 	Faire double Y (le pro du combat), et "mister boom"
 	
 	////////// SONS ////////////
-	
-	////////// A CREER PLUS TARD ////////////
-	
-	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
-	créer une animation "sick" pour quand on marche	 ?
-	
+
 	///////// IDEE ////////////
 
+	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
 	faire un niveau de dance (c'est le film the emoji qui m'a donné envie)
 	des outils de + en + élaborés (design) en fonction de leur lvl
