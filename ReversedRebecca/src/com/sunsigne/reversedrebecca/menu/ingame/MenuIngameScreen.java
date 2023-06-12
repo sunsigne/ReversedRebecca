@@ -23,19 +23,24 @@ public abstract class MenuIngameScreen extends SuperMenuScreen {
 
 	private BufferedImage image;
 
-	private BufferedImage getImage() {
+	protected BufferedImage getImage() {
 		if (image == null) {
 			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
+			xl = getName().contains("_xl");
 		}
 		return image;
 	}
 
 	////////// RENDER ////////////
 
+	private boolean xl;
+
 	@Override
 	public void render(Graphics g) {
 		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
-		g.drawImage(getImage(), 289, 305, 1324, 474, null);
+		int y = xl ? 226 : 305;
+		int height = xl ? 600 : 474;
+		g.drawImage(getImage(), 289, y, 1324, height, null);
 
 	}
 

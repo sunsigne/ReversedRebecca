@@ -43,11 +43,6 @@ public class ControlsScreen extends SubMenuScreen {
 	////////// SUB MENU ////////////
 
 	@Override
-	protected String getBackButtonText() {
-		return super.getBackButtonText();
-	}
-
-	@Override
 	protected MenuScreen getPreviousMenu() {
 		return new OptionsScreen(BACK);
 	}
@@ -207,7 +202,7 @@ public class ControlsScreen extends SubMenuScreen {
 		if (handler != null)
 			handler.removeObject(button);
 
-		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey);
+		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey, false);
 		LAYER.MENU.addObject(keyButton);
 	}
 

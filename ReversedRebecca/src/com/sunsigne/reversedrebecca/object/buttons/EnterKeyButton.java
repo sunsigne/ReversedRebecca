@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.buttons;
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.ControlsIngameScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.ControlsScreen;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -25,11 +26,12 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
-	public EnterKeyButton(int x, int y, Key key, boolean actionKey) {
+	public EnterKeyButton(int x, int y, Key key, boolean actionKey, boolean ingame) {
 		super("...", x, y, 150, 80);
 
 		this.key = key;
 		this.actionKey = actionKey;
+		this.ingame = ingame;
 	}
 
 	////////// TICK ////////////
@@ -54,6 +56,8 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 		return keyboardController;
 	}
 
+	private boolean ingame;
+
 	@Override
 	public void keyPressed(KeyEvent e) {
 		var analyzer = new KeyAnalyzer(e.getKeyCode());
@@ -64,7 +68,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 		// play sound
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
-		
+
 		// registering new key
 		String keyText = analyzer.getKeyText();
 		key.registerKey(keyText, e.getKeyCode());
@@ -76,7 +80,11 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 		// refresh Menu
 		preventDuplicated();
-		new ControlsScreen(actionKey);
+
+		if (ingame)
+			new ControlsIngameScreen(actionKey);
+		else
+			new ControlsScreen(actionKey);
 	}
 
 	private GameLimitedList<Key> createList() {
