@@ -23,7 +23,6 @@
 
 	////////// EN COURS ////////////
 	
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt	
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	écran de fin : faire le nouvel écran de fin de niveau
 	musique : faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
@@ -39,6 +38,7 @@
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
+	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	////////// GAMEPAD ////////////
 
