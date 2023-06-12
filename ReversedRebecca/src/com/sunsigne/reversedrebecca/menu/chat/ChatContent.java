@@ -81,7 +81,6 @@ public class ChatContent implements Updatable {
 
 	@Override
 	public void tick() {
-
 		if (pausetime > 0) {
 			pausetime--;
 			return;
@@ -214,8 +213,11 @@ public class ChatContent implements Updatable {
 
 	private String registeredKey = "[" + new DialogueKey().getRegisteredKey() + "]";
 	private Font fontKey = new Font("arial", 1, 35);
-	
+
 	private void drawActionKey(Graphics g) {
+		if (isFulldisplayed() == false)
+			return;
+
 		int[] rect = { x + 1365, y + 180, 0, 0 };
 		Color color = new Color(255, 255, 255, 180);
 		fontKey = new Font("arial", 1, 35);

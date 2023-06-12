@@ -30,7 +30,6 @@
 	puzzle : faire une animation de sorti (resituer le joueur du 1er coup d'oeil !)
 	le bouton "option" du Menu Ingame ne fait rien
 	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
-	vérifier sur Underale et imiter le cas échant : le bouton X qui apparait après qu'un dialogue soit fini ?
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
