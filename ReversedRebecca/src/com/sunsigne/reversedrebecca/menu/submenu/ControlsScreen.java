@@ -17,7 +17,6 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
-import com.sunsigne.reversedrebecca.world.World;
 
 public class ControlsScreen extends SubMenuScreen {
 
@@ -43,22 +42,13 @@ public class ControlsScreen extends SubMenuScreen {
 
 	////////// SUB MENU ////////////
 
-	private static boolean reloadRequired;
-
 	@Override
 	protected String getBackButtonText() {
-		if (reloadRequired)
-			return translate("ApplyButton");
-		else
-			return super.getBackButtonText();
+		return super.getBackButtonText();
 	}
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		if (reloadRequired)
-			World.get().destroy();
-
-		reloadRequired = false;
 		return new OptionsScreen(BACK);
 	}
 
@@ -219,7 +209,6 @@ public class ControlsScreen extends SubMenuScreen {
 
 		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey);
 		LAYER.MENU.addObject(keyButton);
-		reloadRequired = true;
 	}
 
 	private boolean actionKeyScreen;
@@ -274,7 +263,6 @@ public class ControlsScreen extends SubMenuScreen {
 		new ActionOneKey().registerKey("E", 69);
 		new ActionTwoKey().registerKey("R", 82);
 		new ActionThreeKey().registerKey("F", 70);
-		reloadRequired = true;
 
 		new ControlsScreen(actionKeyScreen);
 	}

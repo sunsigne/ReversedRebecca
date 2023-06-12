@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class ActionAnalyzer {
@@ -53,7 +54,7 @@ public class ActionAnalyzer {
 
 		// reattribution of key and name
 		String keyANDname = new Translatable().getTranslatedText(objectAction.getName(), getFile(object));
-		objectAction.setKeyEvent(getKey(keyANDname));
+		objectAction.setKeyEvent(getKey(keyANDname), getKeyEvent(keyANDname));
 		objectAction.setName(getName(keyANDname));
 
 		return objectAction;
@@ -102,6 +103,11 @@ public class ActionAnalyzer {
 			}
 
 			@Override
+			public Key getRegisteredKey() {
+				return new ActionOneKey();
+			}
+
+			@Override
 			public int getRegisteredKeyEvent() {
 				return ActionOneKey.getKey();
 			}
@@ -111,7 +117,19 @@ public class ActionAnalyzer {
 		return defaultAction;
 	}
 
-	private int getKey(String keyANDname) {
+	private Key getKey(String keyANDname) {
+		switch (keyANDname.split("%")[0]) {
+		case "Key1":
+			return new ActionOneKey();
+		case "Key2":
+			return new ActionTwoKey();
+		case "Key3":
+			return new ActionThreeKey();
+		}
+		return new ActionOneKey();
+	}
+	
+	private int getKeyEvent(String keyANDname) {
 		switch (keyANDname.split("%")[0]) {
 		case "Key1":
 			return ActionOneKey.getKey();

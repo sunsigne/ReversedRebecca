@@ -81,6 +81,8 @@ public class ChatContent implements Updatable {
 
 	@Override
 	public void tick() {
+		updateDialogueKey();
+		
 		if (pausetime > 0) {
 			pausetime--;
 			return;
@@ -95,6 +97,16 @@ public class ChatContent implements Updatable {
 			readSentence(1);
 	}
 
+	private int registeredKey;
+	
+	private void updateDialogueKey() {
+		if(registeredKey == DialogueKey.getKey())
+			return;
+		
+		registeredKey = DialogueKey.getKey();
+		dialogue_key = "[" + new DialogueKey().getRegisteredKey() + "]";
+	}
+	
 	private void pause() {
 		pausetime = 15;
 	}
@@ -211,7 +223,7 @@ public class ChatContent implements Updatable {
 			g.drawString(text1, x0, y + 158);
 	}
 
-	private String registeredKey = "[" + new DialogueKey().getRegisteredKey() + "]";
+	private String dialogue_key;
 	private Font fontKey = new Font("arial", 1, 35);
 
 	private void drawActionKey(Graphics g) {
@@ -221,7 +233,7 @@ public class ChatContent implements Updatable {
 		int[] rect = { x + 1365, y + 180, 0, 0 };
 		Color color = new Color(255, 255, 255, 180);
 		fontKey = new Font("arial", 1, 35);
-		new TextDecoration().drawCenteredString(g, fontKey, registeredKey, color, DIRECTION.RIGHT, rect);
+		new TextDecoration().drawCenteredString(g, fontKey, dialogue_key, color, DIRECTION.RIGHT, rect);
 	}
 
 }

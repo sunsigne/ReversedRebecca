@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class DigAction extends OpenPuzzleAction {
@@ -99,6 +100,11 @@ public class DigAction extends OpenPuzzleAction {
 	}
 
 	////////// KEYBOARD ////////////
+
+	@Override
+	public Key getKey() {
+		return new ActionOneKey();
+	}
 
 	@Override
 	public int getKeyEvent() {

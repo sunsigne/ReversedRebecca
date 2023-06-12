@@ -11,20 +11,22 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 
 public abstract class Action {
 
-	public Action(Interactive interactive, String name, GenericListener listener, int keyEvent) {
-		this(interactive, name, null, listener, keyEvent);
+	public Action(Interactive interactive, String name, GenericListener listener, Key key, int keyEvent) {
+		this(interactive, name, null, listener, key, keyEvent);
 	}
 
-	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener, int keyEvent) {
+	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener, Key key,
+			int keyEvent) {
 		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
 		this.listener = listener;
-		setKeyEvent(keyEvent);
+		setKeyEvent(key, keyEvent);
 	}
 
 	private Interactive interactive;
@@ -107,18 +109,35 @@ public abstract class Action {
 	////////// RENDER ////////////
 
 	public String getDisplayedText() {
-		return "[" + new KeyAnalyzer(keyEvent).getKeyText() + "]" + " " + name.toUpperCase();
+		return "[" + new KeyAnalyzer(getKeyEvent()).getKeyText() + "]" + " " + name.toUpperCase();
 	}
 
 	////////// KEYBOARD ////////////
 
+	private Key key;
 	private int keyEvent;
 
 	public int getKeyEvent() {
+		if (key.getValueToRead().contains("1")) {
+			if (ActionOneKey.getKey() != keyEvent)
+				keyEvent = ActionOneKey.getKey();
+		}
+
+		if (key.getValueToRead().contains("2")) {
+			if (ActionTwoKey.getKey() != keyEvent)
+				keyEvent = ActionTwoKey.getKey();
+		}
+
+		if (key.getValueToRead().contains("3")) {
+			if (ActionThreeKey.getKey() != keyEvent)
+				keyEvent = ActionThreeKey.getKey();
+		}
+
 		return keyEvent;
 	}
 
-	public void setKeyEvent(int keyEvent) {
+	public void setKeyEvent(Key key, int keyEvent) {
+		this.key = key;
 		this.keyEvent = keyEvent;
 
 		if (keyEvent == ActionOneKey.getKey())

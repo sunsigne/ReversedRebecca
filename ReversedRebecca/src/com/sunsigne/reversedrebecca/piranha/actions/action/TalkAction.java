@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.piranha.actions.ActionList;
 import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 
 public class TalkAction extends PiranhaObjectAction {
 
@@ -52,6 +53,11 @@ public class TalkAction extends PiranhaObjectAction {
 	}
 
 	////////// KEYBOARD ////////////
+
+	@Override
+	public Key getRegisteredKey() {
+		return new ActionOneKey();
+	}
 
 	@Override
 	public int getRegisteredKeyEvent() {

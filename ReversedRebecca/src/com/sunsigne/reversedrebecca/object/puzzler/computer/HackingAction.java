@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 
 public class HackingAction extends OpenPuzzleAction {
 
@@ -45,6 +46,11 @@ public class HackingAction extends OpenPuzzleAction {
 	}
 
 	////////// KEYBOARD ////////////
+
+	@Override
+	public Key getKey() {
+		return new ActionOneKey();
+	}
 
 	@Override
 	public int getKeyEvent() {
