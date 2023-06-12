@@ -66,8 +66,8 @@ public class ToolObject extends LootObject implements Difficulty {
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 
 		if (isBlinking()) {
-			int gap = Size.XS / 8;
-			g.drawImage(blinking_image, getX() - gap, getY() - gap, getWidth() + 2 * gap, getHeight() + 2 * gap, null);
+			int pixel = Size.XS / 8;
+			g.drawImage(blinking_image, getX() - pixel, getY() - pixel, getWidth() + 2 * pixel, getHeight() + 2 * pixel, null);
 		}
 	}
 

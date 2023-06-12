@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -26,6 +27,13 @@ public abstract class LootObject extends GameObject implements CollisionReactor,
 
 	////////// BLINKING ////////////
 
+	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
+	
+	@Override
+	public Cycloid<Boolean> getBlinking() {
+		return  blinking;
+	}
+	
 	private int time;
 
 	@Override
@@ -36,13 +44,6 @@ public abstract class LootObject extends GameObject implements CollisionReactor,
 	@Override
 	public void setBlinkingTime(int time) {
 		this.time = time;
-	}
-
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-		runBlinking();
 	}
 
 	////////// COLLISION ////////////

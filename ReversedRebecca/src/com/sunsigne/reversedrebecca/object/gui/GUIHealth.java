@@ -23,8 +23,8 @@ public class GUIHealth extends GameObject implements GUI {
 	public String toString() {
 		Player player = new PlayerFinder().getPlayer();
 		var clazz = "GUI HP";
-		
-		if (player != null)	{
+
+		if (player != null) {
 			if (player.isInvulnerable())
 				return clazz + " : " + "INVULNERABLE";
 		}
@@ -42,6 +42,13 @@ public class GUIHealth extends GameObject implements GUI {
 	@Override
 	public GUI getGUI() {
 		return gui;
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
 	}
 
 	////////// TEXTURE ////////////

@@ -64,7 +64,7 @@ public abstract class ToolPlayer implements Difficulty {
 			loadMaxDifficulty();
 		else
 			// normal case
-			updateGUITools();
+			updateGUITools(false);
 
 		new UnlockedToolMaxLevelCondition().registerValue(this, getMaxDifficulty());
 	}
@@ -82,7 +82,7 @@ public abstract class ToolPlayer implements Difficulty {
 		}
 
 		getTool().max_difficulty = LVL.valueOf(txtDifficulty);
-		updateGUITools();
+		updateGUITools(false);
 	}
 
 	///// start /////
@@ -101,7 +101,7 @@ public abstract class ToolPlayer implements Difficulty {
 			loadStartDifficulty();
 		else
 			// normal case
-			updateGUITools();
+			updateGUITools(false);
 	}
 
 	private void loadStartDifficulty() {
@@ -131,16 +131,18 @@ public abstract class ToolPlayer implements Difficulty {
 
 	@Override
 	public void setDifficulty(LVL difficulty) {
+		boolean blinking = getTool().difficulty == LVL.NULL;
+		
 		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty))
 			getTool().difficulty = getMaxDifficulty();
 		else
 			getTool().difficulty = difficulty;
 
 		new UnlockedToolCondition().registerValue(this, getDifficulty());
-		updateGUITools();
+		updateGUITools(blinking);
 	}
 
-	private void updateGUITools() {
+	private void updateGUITools(boolean blinking) {
 		GUITools guiTool = null;
 
 		for (GUI tempGUI : GUIList.getList().getList()) {
@@ -154,7 +156,8 @@ public abstract class ToolPlayer implements Difficulty {
 		if (guiTool == null)
 			return;
 
-		guiTool.loadImages();
+		ToolPlayer tool = blinking ? this : null;
+		guiTool.loadImages(tool);
 	}
 
 	////////// CRITICAL ////////////
