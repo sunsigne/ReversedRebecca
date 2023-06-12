@@ -60,12 +60,11 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 	private TextsSizePreview textsSizePreview;
 
 	private static final int gap = -278;
-	private static final int v_gap = -160;
 
 	private void loadText() {
 		String text = null;
 		int x = 325 + 416;
-		int y = 503 + v_gap;
+		int y = 503 + y_gap;
 
 		// camera
 		camera = new TitleScreenText(translate("Camera"), x - gap, y + 51);
@@ -109,7 +108,7 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createArrowButton(String text, DIRECTION direction, int x, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 710 + x, 670 + v_gap, 60, 60, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 710 + x, 670 + y_gap, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
@@ -187,15 +186,15 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 	public void render(Graphics g) {
 		super.render(g);
 		if (ControllerManager.getInstance().isUsingGamepad())
-			g.drawImage(get_gamepad_instruction_image(), 890, 575 + v_gap, 120, 120, null);
+			g.drawImage(get_gamepad_instruction_image(), 890, 575 + y_gap, 120, 120, null);
 	}
 
 	////////// PRESET MOUSE POS ////////////
 
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
-	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 700 + v_gap);
-	public static final PresetMousePos TEXTS = new PresetMousePos(925 + gap, 700 + v_gap);
+	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 700 + y_gap);
+	public static final PresetMousePos TEXTS = new PresetMousePos(925 + gap, 700 + y_gap);
 
 	////////// GAMEPAD ////////////
 

@@ -15,6 +15,8 @@ public abstract class MenuIngameSubMenuScreen extends MenuIngameScreen {
 		createBackButton();
 	}
 
+	protected static final int y_gap = -160;
+	
 	////////// SUB MENU ////////////
 
 	protected abstract MenuIngameScreen getPreviousMenu();

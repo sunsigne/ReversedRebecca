@@ -23,6 +23,9 @@
 
 	////////// EN COURS ////////////
 	
+	les menu ingame des options ne pointent pas (encore) vers le bon menu vers le BackButton
+	
+	la souris / manette fait des trucs bizarre sur les submenus
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	écran de fin : faire le nouvel écran de fin de niveau
 	musique : faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
