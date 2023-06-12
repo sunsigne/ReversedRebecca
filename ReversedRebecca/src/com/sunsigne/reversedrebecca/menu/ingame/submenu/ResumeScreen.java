@@ -71,9 +71,7 @@ public class ResumeScreen extends MenuIngameScreen {
 	}
 
 	private void createOptionsButton() {
-		// GenericListener onPress = () -> new ControlsScreen();
-		GenericListener onPress = () -> {
-		};
+		GenericListener onPress = () -> new OptionsIngameScreen(OptionsIngameScreen.GENERAL);
 		createOptionScreenButton(translate("OptionsButton"), OPTIONS, 416, 155, onPress);
 	}
 
@@ -101,7 +99,7 @@ public class ResumeScreen extends MenuIngameScreen {
 			setPreset(RESUME, false);
 			buttons.get(RESUME).mousePressed(null);
 		}
-		
+
 		else if (getPreset() == RESUME)
 			resumePressed(e);
 		else if (getPreset() == OPTIONS)

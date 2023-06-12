@@ -45,8 +45,7 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 
 	@Override
 	protected MenuIngameScreen getPreviousMenu() {
-		// return new OptionsIngameScreen(BACK);
-		return new ResumeScreen();
+		return new OptionsIngameScreen(BACK);
 	}
 
 	////////// TEXT ////////////
