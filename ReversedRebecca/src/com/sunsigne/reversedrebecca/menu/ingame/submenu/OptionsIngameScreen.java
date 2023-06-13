@@ -42,9 +42,7 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 	}
 
 	private void createGeneralButton() {
-		// GenericListener onPress = () -> new GeneralIngameScreen();
-		GenericListener onPress = () -> {
-		};
+		GenericListener onPress = () -> new GeneralIngameScreen();
 		createOptionScreenButton(translate("GeneralButton"), GENERAL, 206, 104, onPress);
 	}
 

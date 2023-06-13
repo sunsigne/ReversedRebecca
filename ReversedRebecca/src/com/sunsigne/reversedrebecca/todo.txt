@@ -23,7 +23,6 @@
 
 	////////// EN COURS ////////////
 	
-	le menu ingame "general" n'existe pas encore	
 	la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles)
 	la manette arrivant sur le TutoScreen -> on ne voit pas l'option sélectionnée
 	
