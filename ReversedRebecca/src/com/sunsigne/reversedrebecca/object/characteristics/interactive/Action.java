@@ -118,6 +118,9 @@ public abstract class Action {
 	private int keyEvent;
 
 	public int getKeyEvent() {
+		if(key == null)
+			return keyEvent;
+		
 		if (key.getValueToRead().contains("1")) {
 			if (ActionOneKey.getKey() != keyEvent)
 				keyEvent = ActionOneKey.getKey();
