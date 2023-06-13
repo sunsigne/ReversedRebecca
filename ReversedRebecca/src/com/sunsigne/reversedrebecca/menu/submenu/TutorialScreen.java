@@ -29,6 +29,7 @@ public class TutorialScreen extends SubMenuScreen {
 
 	public TutorialScreen(GenericListener startWorld) {
 		super(NO);
+		// getBackButton().removeObject();
 		loadText();
 
 		createYesButton(startWorld);
