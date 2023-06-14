@@ -49,7 +49,7 @@ public class UnlockAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public PuzzlerAnimationObject getAnimationObject(int x, int y) {
+	public PuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new UnlockAnimationObject(x, y);
 	}
 

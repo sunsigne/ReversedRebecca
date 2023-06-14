@@ -44,8 +44,8 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
-	public abstract PuzzlerAnimationObject getAnimationObject(int x, int y);
-
+	public abstract PuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y);
+	
 	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
 		GenericListener actionOnWinning = () -> {
@@ -58,7 +58,7 @@ public abstract class OpenPuzzleAction extends Action {
 				handler.removeObject(puzzlerObject);
 			}
 
-			PuzzlerAnimationObject animation = getAnimationObject(puzzlerObject.getX(), puzzlerObject.getY());
+			PuzzlerAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);

@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.HoleObject;
@@ -58,6 +59,14 @@ public class DigAction extends OpenPuzzleAction {
 			return new NullHoleUpwardObject(facing, x, y);
 		else
 			return new NullHoleObject(facing, x, y);
+	}
+
+	@Override
+	public PuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
+		if (puzzlerObject instanceof HoleUpwardObject)
+			return null;
+		else
+			return null;
 	}
 
 	@Override
