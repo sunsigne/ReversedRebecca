@@ -28,14 +28,13 @@
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	écran de fin : faire le nouvel écran de fin de niveau
 	musique : faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
-	s'assurer de ne pas avoir de pb avec les images !!!!
+	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	puzzle critique : le terminator doit faire son faiseau jaune quand on clique ! + le son du kill est trop fort !
 	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure
 	succès : regarder le todo et le faire

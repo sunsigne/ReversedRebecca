@@ -30,15 +30,25 @@ public class AntivirusTerminator extends AntivirusObject {
 	}
 
 	////////// ANTIVIRUS ////////////
-	
-	private boolean virusJustArrived;
-	
-	public void virusJustArrived() {
-		if(getVirus().isDisguised())
-			return;
-		
-		virusJustArrived = true;
+
+	private Color beam_color;
+
+	private void beamToRed() {
 		beam_color = new Color(255, 0, 0, 120);
+	}
+
+	private void beamToYellow() {
+		beam_color = new Color(255, 255, 0, 120);
+	}
+
+	private boolean virusJustArrived;
+
+	public void virusJustArrived() {
+		if (getVirus().isDisguised())
+			return;
+
+		virusJustArrived = true;
+		beamToRed();
 		playSound("laser_aiming");
 	}
 
@@ -47,6 +57,7 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (isCritical() == false)
 			getPuzzle().closePuzzle(false);
 
+		beamToRed();
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "laser_shoot");
 	}
 
@@ -84,8 +95,6 @@ public class AntivirusTerminator extends AntivirusObject {
 		super.render(g);
 	}
 
-	private Color beam_color;
-	
 	private void drawArc(Graphics g) {
 
 		// récupération des coordonées
@@ -127,13 +136,11 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (isClickable() == false)
 			return;
 
-		if (getVirus().isDisguised() || isCritical()) {
+		if (virusJustArrived == false)
+			beamToYellow();
+
+		if (getVirus().isDisguised() || isCritical())
 			super.mousePressed(e);
-			return;
-		}
-		
-		if(virusJustArrived == false)
-			beam_color = new Color(255, 255, 0, 120);
 	}
 
 	@Override
@@ -144,10 +151,10 @@ public class AntivirusTerminator extends AntivirusObject {
 		if (getVirus().isDisguised())
 			return;
 
-		if(virusJustArrived == false)
+		if (virusJustArrived == false)
 			antivirusAction();
-		
-		virusJustArrived = false;		
+
+		virusJustArrived = false;
 	}
 
 }
