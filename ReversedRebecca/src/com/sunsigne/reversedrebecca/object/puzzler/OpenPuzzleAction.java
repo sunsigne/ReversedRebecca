@@ -9,13 +9,14 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class OpenPuzzleAction extends Action {
 
 	public OpenPuzzleAction(PuzzlerObject puzzlerObject) {
-		super(puzzlerObject, null, null, null, null,  0);
+		super(puzzlerObject, null, null, null, null, 0);
 
 		setName(new Translatable().getTranslatedText(getName(), FilePath.ACTION));
 		setToolPlayer(getToolPlayer());
@@ -43,6 +44,8 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
+	public abstract PuzzlerAnimationObject getAnimationObject(int x, int y);
+
 	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
 		GenericListener actionOnWinning = () -> {
@@ -55,6 +58,9 @@ public abstract class OpenPuzzleAction extends Action {
 				handler.removeObject(puzzlerObject);
 			}
 
+			PuzzlerAnimationObject animation = getAnimationObject(puzzlerObject.getX(), puzzlerObject.getY());
+			LAYER.WORLD_TEXT.addObject(animation);
+
 			new WonPuzzleCondition().registerValue(puzzlerObject);
 		};
 		return actionOnWinning;
@@ -63,7 +69,7 @@ public abstract class OpenPuzzleAction extends Action {
 	////////// KEYBOARD ////////////
 
 	public abstract Key getKey();
-	
+
 	public abstract int getKeyEvent();
 
 }

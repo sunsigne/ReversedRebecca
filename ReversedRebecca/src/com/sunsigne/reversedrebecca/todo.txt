@@ -31,7 +31,6 @@
 	s'assurer de ne pas avoir de pb avec les images !!!!
 	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti (resituer le joueur du 1er coup d'oeil !)
-	le bouton "option" du Menu Ingame ne fait rien
 	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)

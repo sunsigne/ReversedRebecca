@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -45,6 +46,11 @@ public class UnlockAction extends OpenPuzzleAction {
 	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
 		COLOR color = ((DoorObject) puzzlerObject).color;
 		return new NullDoorObject(color, x, y);
+	}
+
+	@Override
+	public PuzzlerAnimationObject getAnimationObject(int x, int y) {
+		return new UnlockAnimationObject(x, y);
 	}
 
 	////////// KEYBOARD ////////////
