@@ -28,6 +28,7 @@
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	écran de fin : faire le nouvel écran de fin de niveau
 	musique : faire en sorte que toutes les musiques soit des boucles (à la The World's Revolving)
+	s'assurer de ne pas avoir de pb avec les images !!!!
 	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti (resituer le joueur du 1er coup d'oeil !)
 	le bouton "option" du Menu Ingame ne fait rien
@@ -223,7 +224,8 @@
 	
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner
-
+	coockie -> la bonne traduction en anglais serait plutôt "you are a fat girl, becky"
+	
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
