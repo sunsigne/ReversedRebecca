@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.BombToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -43,6 +44,11 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 	@Override
 	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return null;
+	}
+
+	@Override
+	public PuzzlerAnimationObject getAnimationObject(int x, int y) {
+		return new ExplodeRubbleAnimationObject(x, y);
 	}
 
 	////////// KEYBOARD ////////////

@@ -120,6 +120,7 @@
 
 	////////// LVL001 ////////////
 
+	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
 	faire du décors à l'exterieur, et dans la salle de droite

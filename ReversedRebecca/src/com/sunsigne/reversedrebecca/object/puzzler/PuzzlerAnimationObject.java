@@ -11,6 +11,10 @@ public abstract class PuzzlerAnimationObject extends GameObject {
 	public PuzzlerAnimationObject(int x, int y) {
 		super(x + Size.XS / 8, y + Size.XS / 8, Size.XL / 2, Size.XL / 2);
 	}
+	
+	public PuzzlerAnimationObject(int x, int y, int w, int h) {
+		super(x + Size.XS / 8, y + Size.XS / 8, w + Size.XL / 2, h + Size.XL / 2);
+	}
 
 	////////// NAME ////////////
 
