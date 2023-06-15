@@ -121,7 +121,8 @@ public class GUITools extends GameObject implements GUI, Blinking {
 		int size = images.getList().size();
 
 		for (int index = 0; index < size; index += 2) {
-
+			try {
+				
 			// tool
 			g.drawImage(images.getList().get(index), getX() + index * getWidth(), getY(), getWidth(), getHeight(),
 					null);
@@ -134,9 +135,10 @@ public class GUITools extends GameObject implements GUI, Blinking {
 			}
 
 			// battery
-			try {
+			
 				g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth() - Size.XL / 8, getY(), getWidth(),
 						getHeight(), null);
+				
 			} catch (IndexOutOfBoundsException e) {
 				// can occurs when MultiToolMode is used
 			}
