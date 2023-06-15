@@ -31,7 +31,6 @@
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée + le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
-	la map workshop n'est pas à jour : l'outils n'est pas sur la couche "outils" (+vérifier piranha back)
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
@@ -44,7 +43,7 @@
 	////////// GAMEPAD ////////////
 
 	ControlsScreen pas fini : replacer la souris par des options manettes -> les EnterKeyButton doivent s'adapter en fonction de si la manette est utilisée ou non
-	Chatbox & Interactive must be adapted
+	Chatbox & Interactive must be adapted (cliquer longtemps devrait être équivalent à "laisser appuyé"
 	Puzzles must be compatible	
 	le tchat et les interactives options doivent afficher le bon bouton de manette	
 
