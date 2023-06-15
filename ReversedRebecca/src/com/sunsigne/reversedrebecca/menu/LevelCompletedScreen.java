@@ -64,7 +64,7 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	private boolean isPsychopath;
 	
 	private void loadMusic() {
-		var name = isPsychopath ? "absolute_evilness" : "victory";
+		var name = isPsychopath ? "absolute_evilness" : "victory_screen";
 		new SoundTask().playMusic(name, false, false);
 	}
 	
