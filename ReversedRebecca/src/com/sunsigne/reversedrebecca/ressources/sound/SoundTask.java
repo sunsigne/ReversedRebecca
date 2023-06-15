@@ -58,7 +58,7 @@ public class SoundTask implements CameraDependency {
 			AudioInputStream clip = AudioSystem.getAudioInputStream(url);
 
 			if (soundType == SOUNDTYPE.MUSIC) {
-				if (musicName == path)
+				if (path.equalsIgnoreCase(musicName))
 					return;
 
 				musicName = path;

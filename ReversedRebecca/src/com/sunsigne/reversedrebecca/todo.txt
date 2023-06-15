@@ -34,7 +34,6 @@
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	rr000 - tester et régler les musiques avec la porte (typiquement, quand on ouvre trop tard à sarah, la musique ne se relance jamais)
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
