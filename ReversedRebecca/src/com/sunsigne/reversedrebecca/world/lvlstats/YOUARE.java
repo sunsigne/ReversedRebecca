@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.world.lvlstats;
 
 public enum YOUARE {
 
-	FAST("Fast"), PRAGMATIC("Pragmatic"), METICULOUS("Meticulous"),
-	PSYCHOPATH("Psychopath"), MEAN("Mean"), NICE("Nice");
+	PSYCHOPATH("Psychopath"), SADISCTIC("Sadistic"), MEAN("Mean"), NEUTRAL("Neutral"), NICE("Nice"),
+	ANGELIC("Angelic");
 
 	private String name;
 

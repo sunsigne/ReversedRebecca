@@ -6,45 +6,55 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class Deed {
 
 	public Deed() {
-		goodDeed = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
-		badDeed = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
+		goodText = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
+		badText = new Translatable().getTranslatedText("LevelNoneDeed", FilePath.MENU);
+	}
+
+	private int karmaWeight;
+
+	public int getKarmaWeight() {
+		return karmaWeight;
 	}
 
 	////////// GOOD ////////////
 
-	private String goodDeed, badDeed;
-	private int goodWeight, badWeight;
+	private String goodText;
+	private int goodWeight;
 
-	public String getGoodDeed() {
-		return goodDeed;
+	public String getGoodText() {
+		return goodText;
 	}
 
-	public String getBadDeed() {
-		return badDeed;
-	}
+	public void setGoodDeed(int weight, String text) {
+		karmaWeight = karmaWeight + weight;
 
-	public int getGoodWeight() {
-		return goodWeight;
-	}
-
-	public int getBadWeight() {
-		return badWeight;
-	}
-
-	public void setGoodDeed(int weight, String goodDeed) {
 		if (weight < goodWeight)
 			return;
 
 		this.goodWeight = weight;
-		this.goodDeed = goodDeed;
+		this.goodText = text;
 	}
 
-	public void setBadDeed(int weight, String badDeed) {
+	////////// BAD ////////////
+
+	private String badText;
+	private int badWeight;
+
+	public String getBadText() {
+		return badText;
+	}
+
+	public void setBadDeed(int weight, String text) {
+		if (weight >= 999)
+			weight = weight * 10;
+		
+		karmaWeight = karmaWeight - weight;
+
 		if (weight < badWeight)
 			return;
 
 		this.badWeight = weight;
-		this.badDeed = badDeed;
+		this.badText = text;
 	}
 
 }

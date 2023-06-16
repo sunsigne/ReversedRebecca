@@ -4,19 +4,15 @@ ProgressSaved = Progress#saved
 ///// LEVEL STATS /////
 
 LevelCompleted = Level#Completed
-LevelTime = Time
-LevelTimeUnit = Sec
-LevelPuzzle = Puzzle#Finished
 LevelGoodDeed = Good#Deed
 LevelBadDeed = Bad#Deed
 LevelNoneDeed = None
-LevelEndingAchieved = Ending#Achieved
-LevelYouAreFast = You#are#:#fast
-LevelYouArePragmatic = You#are#:#pragmatic
-LevelYouAreMeticulous = You#are#:#meticulous
-LevelYouAreNice = You#are#:#nice
-LevelYouAreMean = You#are#:#mean
 LevelYouArePsychopath = You#are#:#psycopath
+LevelYouAreSadistic = You#are#:#sadistic
+LevelYouAreMean = You#are#:#mean
+LevelYouAreNeutral = You#are#:#neutral
+LevelYouAreNice = You#are#:#nice
+LevelYouAreAngelic = You#are#:#angelic
 LevelClickToContinue = Click#to#continue
 
 ///// RESUME /////

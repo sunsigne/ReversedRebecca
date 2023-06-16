@@ -13,7 +13,9 @@ public class TextDecoration {
 	///// center /////
 
 	public void drawCenteredString(Graphics g, Font font, String text, Color color, DIRECTION facing, int[] rect) {
-
+		if(text == null)
+			return;
+		
 		FontMetrics metrics = g.getFontMetrics(font);
 
 		int horizontal = 0;

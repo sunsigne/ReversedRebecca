@@ -38,8 +38,7 @@ public abstract class MenuScreen extends SuperMenuScreen {
 	}
 
 	private void drawRebeccasRoom() {
-		World world = new World(new Save().getLevel(true));
-		world.getLevelStats().getStopWatch().stop();
+		new World(new Save().getLevel(true));
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 

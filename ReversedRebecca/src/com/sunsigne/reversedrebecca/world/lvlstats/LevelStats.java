@@ -1,56 +1,24 @@
 package com.sunsigne.reversedrebecca.world.lvlstats;
 
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class LevelStats {
 
+	private boolean userData = false;
+
 	public LevelStats(String mapName) {
-		createStopWatch();
-		createDeed();
-		createJudgment(mapName);
-	}
-
-	////////// STOPWATCH ////////////
-
-	private StopWatch stopWatch;
-
-	public StopWatch getStopWatch() {
-		return stopWatch;
-	}
-
-	private void removeExistingStopWatch() {
-		Updatable stopWatch = null;
-
-		for (Updatable tempUpdatable : LAYER.DEBUG.getHandler().getList()) {
-			if (tempUpdatable instanceof StopWatch)
-				stopWatch = tempUpdatable;
-		}		
-		LAYER.DEBUG.getHandler().removeObject(stopWatch);
-	}
-
-	private void createStopWatch() {
-		removeExistingStopWatch();
-		stopWatch = new StopWatch();
-		LAYER.DEBUG.addObject(stopWatch);
-	}
-
-	public String getTime() {
-		return String.format("%.2f", stopWatch.getTime());
+		deed = new Deed();
+		loadDeedsLimits(mapName);
 	}
 
 	////////// PUZZLE COUNT ////////////
-
-	private int puzzleCount;
-
-	public void addPuzzleCount() {
-		puzzleCount++;
-	}
-
-	public String getPuzzleCount() {
-		return String.valueOf(puzzleCount);
-	}
-
+	/*
+	 * private int puzzleCount;
+	 * 
+	 * public void addPuzzleCount() { puzzleCount++; }
+	 * 
+	 * public String getPuzzleCount() { return String.valueOf(puzzleCount); }
+	 */
 	////////// DEED ////////////
 
 	private Deed deed;
@@ -59,37 +27,37 @@ public class LevelStats {
 		return deed;
 	}
 
-	private void createDeed() {
-		deed = new Deed();
-	}
-
-	public String getGoodDeed() {
-		return deed.getGoodDeed();
-	}
-
-	public String getBadDeed() {
-		return deed.getBadDeed();
-	}
-
 	////////// YOU ARE ////////////
 
-	private Judgment judgement;
+	private int sadisticLimit = -10;
+	private int angelicLimit = 10;
 
-	public Judgment getJudgment() {
-		return judgement;
+	private void loadDeedsLimits(String mapName) {
+		String path = "maps/" + mapName + "/" + "DEED.txt";
+		FileTask file = new FileTask();
+
+		if (file.doesExist(userData, path) == false)
+			return;
+
+		sadisticLimit = Integer.parseInt(file.read(userData, "SADISTIC", path));
+		angelicLimit = Integer.parseInt(file.read(userData, "ANGELIC", path));
 	}
 
-	private void createJudgment(String mapName) {
-		judgement = new Judgment(mapName, stopWatch, deed);
-	}
+	public YOUARE getYouAre() {
+		int karma = deed.getKarmaWeight();
 
+		if (karma <= -999)
+			return YOUARE.PSYCHOPATH;
+		if (karma <= sadisticLimit)
+			return YOUARE.SADISCTIC;
+		if (karma >= angelicLimit)
+			return YOUARE.ANGELIC;
+		if (karma < 0)
+			return YOUARE.MEAN;
+		if (karma > 0)
+			return YOUARE.NICE;		
 
-	public boolean isPsychoPath() {
-		return judgement.isPsychoPath();
-	}
-	
-	public String getYouAre() {
-		return judgement.getYouAre();
+		return YOUARE.NEUTRAL; // -> karma == 0;
 	}
 
 }

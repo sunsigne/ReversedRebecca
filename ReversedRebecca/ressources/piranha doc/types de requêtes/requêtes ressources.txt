@@ -106,10 +106,11 @@ exemple :
 $ -> DEED_OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
 
 Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. Son nom et son "poids" seront déterminés par les valeurs trouvées dans le dossier mentionné ci-dessous :
-la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.csv".
+la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.txt".
 Note : le "poids" détermine le nom de l'action à afficher sur l'écran de fin de niveau : le poids le plus fort l'emporte.
 
-Note : pour déclencher une route "psychopathe", il suffit de pointer vers un BAD DEED dont le poids est supérieur ou égal à 99. Il est facultatif mais conseillé de créer également un GOOD DEED de "psychopathe" pour coller au thème, comme "mort rapidement" par exemple.
+Note : pour déclencher une route "psychopathe", il suffit de pointer vers un BAD DEED dont le poids est supérieur ou égal à 999. Il est facultatif mais conseillé de créer également un GOOD DEED de "psychopathe" pour coller au thème, comme "mort rapidement" par exemple.
+Note : lorsqu'un niveau est terminé, tous les "poids" intervenues sont additionnés pour déterminer le karma du joueur (les poids des mauvaises actions sont comptés comme étant négatifs dans ce calcul). Le karma (méchant, neutre, gentil, etc.) sera déterminé par la valeur de ce total.
 
 
 ////// GOOD_DEED //////

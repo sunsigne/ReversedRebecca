@@ -1,0 +1,2 @@
+SADISTIC = -10
+ANGELIC = 6
