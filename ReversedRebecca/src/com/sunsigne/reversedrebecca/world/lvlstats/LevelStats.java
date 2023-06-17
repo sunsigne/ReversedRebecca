@@ -29,9 +29,9 @@ public class LevelStats {
 	}
 
 	private void loadCounter() {
-		counter1 = new Counter("Counter 1", 0);
-		counter2 = new Counter("Counter 2", 0);
-		counter3 = new Counter("Counter 3", 0);
+		counter1 = new Counter("Custom Count 1", 0);
+		counter2 = new Counter("Custom Count 2", 0);
+		counter3 = new Counter("Custom Count 3", 0);
 	}
 
 	////////// DEED ////////////

@@ -4,15 +4,15 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class CounterOneRequest extends CounterRequest {
+public class CounterThreeRequest extends CounterRequest {
 
 	////////// REQUEST ////////////
 
-	public CounterOneRequest() {
+	public CounterThreeRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new CounterOneRequest();
+	private static Request request = new CounterThreeRequest();
 
 	@Override
 	public Request getRequest() {
@@ -21,12 +21,12 @@ public class CounterOneRequest extends CounterRequest {
 
 	@Override
 	public String getType() {
-		return "COUNTER_ONE";
+		return "COUNTER_THREE";
 	}
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		super.doAction(object, "1," + target);
+		super.doAction(object, "3," + target);
 	}
 
 }

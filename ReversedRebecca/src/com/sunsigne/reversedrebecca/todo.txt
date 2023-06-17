@@ -23,10 +23,9 @@
 
 	////////// EN COURS ////////////
 	
-	faire le test en anglaise des counters
+	la manette arrivant sur le TutoScreen -> on ne voit pas l'option sélectionnée + retirer le bouton retour (et sa manette)	
 	retirer le bouton "retour" du TutorialScreen
 	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
-	la manette arrivant sur le TutoScreen -> on ne voit pas l'option sélectionnée + retirer le bouton retour (et sa manette)	
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	écran de fin : faire le nouvel écran de fin de niveau
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
@@ -34,8 +33,10 @@
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
+	ecran de fin de niveau : le système de karma n'est pas terminé (faire la tête de rebecca qui se place sur le barème en fonction du karma
+	ecran de fin de niveau : faire une animation d'apparition des paramètres
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure
+	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
@@ -119,6 +120,7 @@
 
 	////////// LVL001 ////////////
 
+	refaire les end lvl
 	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
