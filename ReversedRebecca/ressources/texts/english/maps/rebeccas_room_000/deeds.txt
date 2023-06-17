@@ -1,18 +1,18 @@
 ///// GOOD /////
 
-OFFER_A_JUICE = 1 % offer#a#juice
-SHARE_PANCAKES = 2 % share#your#pancakes
-OFFER_PANCAKES = 2 % offer#pancakes
-MAKE_AMENDS = 3 % make#amends
+OFFER_A_JUICE = 2 % offer#a#juice
+SHARE_PANCAKES = 4 % share#your#pancakes
+OFFER_PANCAKES = 4 % offer#pancakes
+MAKE_AMENDS = 5 % make#amends
 
 ///// BAD /////
 
-FRIEND_RECEIVED_BADLY = 1% friend#received#badly
-INAPPROPRIATE_BEHAVIOR = 2% inappropriate#behavior
-BAD_JOKE = 3% bad#joke
-BEING_A_JERK = 4% being#a#jerk
+FRIEND_RECEIVED_BADLY = 2% friend#received#badly
+INAPPROPRIATE_BEHAVIOR = 4% inappropriate#behavior
+BAD_JOKE = 6% bad#joke
+BEING_A_JERK = 20% being#a#jerk
 
 ///// PSYCHOPATH /////
 
-NO_KILL = 99% no#murder
-SEQUESTRATION = 99% sequestration
+NO_KILL = 999% no#murder
+SEQUESTRATION = 999% sequestration

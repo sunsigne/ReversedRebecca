@@ -98,7 +98,7 @@ De la même façon, le caractère "saut de ligne" dans le dialogue est le symbol
 
 ////// DEED //////
 
-Le Type de Requête DEED permet de définir ce qui est une bonne ou une mauvaise action.
+Le Type de Requête DEED permet de définir ce qui est une bonne ou une mauvaise action, c.-à.-d d'affecter le karma du joueur.
 Lorsqu'un niveau est terminé, un écran affiche un récapitulatif pour le joueur. Sur cet écran est mentionné la bonne et la mauvaise action ayant le plus grand "poids"
 Note : n'oubliez pas que les bonnes et les mauvaises actions influent sur la fin obtenue par le joueur ; ne négligez pas cet aspect.
 
@@ -121,6 +121,27 @@ La seconde cible devenant unitaire, l'écriture compacte devient alors possible.
 ////// BAD_DEED //////
 
 Exactement le même principe qu'avec GOOD_DEED.
+
+
+////// COUNTER //////
+
+Le Type de Requête COUNTER permet de modifier les informations qu'afficheront les compteurs sur l'écran de victoire.
+
+exemple : 
+TIME -> 0 = COUNTER -> 1, ADD, 1
+autre écriture acceptée :
+TIME -> 0 = COUNTER_ONE -> ADD, 1
+
+Lorsqu'un niveau est terminé, un écran affiche un récapitulatif pour le joueur. Sur cet écran, le nombre que le premier compteur affichera sera de 1 supérieur au chiffre qu'il avait précédemment enregistré.
+Note : lorsqu'un niveau commence, tous les compteurs sont à 0 (logique).
+Note : les compteurs ont un intérêt purement ludique.
+
+Le 1 en cible (ou ONE dans le second exemple) indique que le compteur ciblé par la Requête est le premier.
+
+Pour la cible en toutes lettres, il existe trois types de cibles que le Type de Requête COUNTER accepte :
+- ADD : ajouter X à la valeur du compteur
+- REMOVE : retire X à la valeur du compteur
+- CREATE : renome le compteur en utilisant le nom trouvé dans le fichier : "ressources/texts/(la langue)/(le niveau)/counter.txt".
 
 
 ////// ACHIEVEMENT //////

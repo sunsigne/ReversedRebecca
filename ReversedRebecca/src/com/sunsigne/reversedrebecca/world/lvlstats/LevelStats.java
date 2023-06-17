@@ -8,17 +8,32 @@ public class LevelStats {
 
 	public LevelStats(String mapName) {
 		deed = new Deed();
+		loadCounter();
 		loadDeedsLimits(mapName);
 	}
 
-	////////// PUZZLE COUNT ////////////
-	/*
-	 * private int puzzleCount;
-	 * 
-	 * public void addPuzzleCount() { puzzleCount++; }
-	 * 
-	 * public String getPuzzleCount() { return String.valueOf(puzzleCount); }
-	 */
+	////////// COUNTER ////////////
+
+	private Counter counter1;
+	private Counter counter2;
+	private Counter counter3;
+
+	public Counter getCounter(int index) {
+		if (index == 1)
+			return counter1;
+		if (index == 2)
+			return counter2;
+		if (index == 3)
+			return counter3;
+		return null;
+	}
+
+	private void loadCounter() {
+		counter1 = new Counter("Counter 1", 0);
+		counter2 = new Counter("Counter 2", 0);
+		counter3 = new Counter("Counter 3", 0);
+	}
+
 	////////// DEED ////////////
 
 	private Deed deed;
@@ -55,7 +70,7 @@ public class LevelStats {
 		if (karma < 0)
 			return YOUARE.MEAN;
 		if (karma > 0)
-			return YOUARE.NICE;		
+			return YOUARE.NICE;
 
 		return YOUARE.NEUTRAL; // -> karma == 0;
 	}

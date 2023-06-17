@@ -15,12 +15,12 @@ Les Actions enregistrées sont les suivantes :
 Le Type de Requête ACTION permet de définir une Action sur un objet.
 
 exemple : 
-TIME -> 0 = ACTION -> 1,TALK*PEEBOY_INIT
+TIME -> 0 = ACTION -> 1, TALK*PEEBOY_INIT
 autre écriture acceptée :
 TIME -> 0 = ACTION_ONE -> TALK*PEEBOY_INIT
 
 Lorsque la Condition sera vérifiée, L'action TALK sera disponible et pointera vers le fichier "peeboy_init.csv"
-Attention : il ne faut pas confondre une Action avec un Type de Requête ! Même si TALK est effectivement le nom d'un Type de Requête, il s'agit ici EXCLUSIVEMENT d'une action dont le nom se trouve être le même qu'une requête, par simple hasard.
+Attention : il ne faut pas confondre une Action avec un Type de Requête ! Même si TALK est effectivement le nom d'un Type de Requête, il s'agit ici EXCLUSIVEMENT d'une action dont le nom se trouve être le même qu'une requête, par commodité.
 
 Le 1 en cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action du TRIPLE_ACTION (en plus de le créer s'il n'existe pas), ce chiffre peut donc aller jusqu'à 3.
 Vous pouvez utiliser l'écriture que vous préférez, notez cependant que l'écriture condensée n'est possible que dans le second cas (puisqu'une seule cible).

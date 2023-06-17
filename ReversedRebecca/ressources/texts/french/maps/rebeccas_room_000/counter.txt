@@ -1,0 +1,3 @@
+COOKIES_EATEN = cookies#mangés
+PANCAKES_COOKED = crêpes#cuites
+SEQUESTRATION = séquestration

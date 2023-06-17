@@ -119,9 +119,9 @@ Le Type de Requête END_LVL permet de demander au programme de charger les nouve
 Note : les demandes enregistrées par le Type de Requête SAVE (voir "requêtes memory.txt") sont traitées juste avant l'enregistrement des nouveaux niveaux.
 
 exemple :
-WONPUZZLE -> 6-0 = END_LVL -> 1/3, REBECCAS_ROOM_1, LVL001
+WONPUZZLE -> 6-0 = END_LVL -> REBECCAS_ROOM_1, LVL001
 
-Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1. Sur l'écran de victoire de fin de niveau que nous venons de terminée, on pourra lire "fin obtenue : 1/3".
+Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1. Sur l'écran de victoire, les données affichées dépendront du karma du joueur (voir requêtes ressources : "Type de Requête DEED") et des compteurs (voir requêtes ressources : "Type de Requête COUNTER").
 
 Note : l'écran titre changeant est une mécanique très intéressante. Vous pouvez totalement l'ignorer, mais cela sera dommage de passer à côté de l'histoire qu'il peut raconter.
 

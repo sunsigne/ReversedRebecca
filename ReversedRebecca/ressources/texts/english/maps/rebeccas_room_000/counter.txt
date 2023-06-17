@@ -1,0 +1,3 @@
+COOKIES_EATEN = cookies#eaten
+PANCAKES_COOKED = pancakes#cooked
+SEQUESTRATION = sequestration

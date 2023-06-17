@@ -23,6 +23,7 @@
 
 	////////// EN COURS ////////////
 	
+	faire le test en anglaise des counters
 	retirer le bouton "retour" du TutorialScreen
 	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	la manette arrivant sur le TutoScreen -> on ne voit pas l'option sélectionnée + retirer le bouton retour (et sa manette)	
