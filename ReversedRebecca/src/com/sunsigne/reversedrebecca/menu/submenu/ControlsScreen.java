@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -9,7 +10,11 @@ import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.EnterKeyButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -60,6 +65,17 @@ public class ControlsScreen extends SubMenuScreen {
 	private TitleScreenText thirdLine;
 	private TitleScreenText fourthLine;
 
+	private String menuPauseText;
+	private String movementsText;
+	private String action1Text;
+	private String action2Text;
+	private String action3Text;
+	private String dialogueText;
+	
+	private String format(String text) {
+		return new FormattedString().getNoSpecialCharacter(text).toUpperCase();
+	}
+	
 	private void loadText() {
 		int x = 525;
 		int y = 323;
@@ -69,6 +85,13 @@ public class ControlsScreen extends SubMenuScreen {
 		thirdLine = getTitleScreenText(x, y + 208);
 		fourthLine = getTitleScreenText(x, y + 312);
 
+		menuPauseText = format(translate("MenuPause"));
+		movementsText = format(translate("Movements"));
+		action1Text = format(translate("Action1"));
+		action2Text = format(translate("Action2"));
+		action3Text = format(translate("Action3"));
+		dialogueText = format(translate("Dialogue"));
+		
 		LAYER.MENU.addObject(firstLine);
 		LAYER.MENU.addObject(secondLine);
 		LAYER.MENU.addObject(thirdLine);
@@ -320,7 +343,28 @@ public class ControlsScreen extends SubMenuScreen {
 		}
 
 		drawTransluantLayer((Graphics2D) g);
-		g.drawImage(get_gamepad_image(), 630, 170, 680, 680, null);
+		g.drawImage(get_gamepad_image(), 580, 170, 730, 710, null);
+		drawGamepadTexts(g);
+	}
+
+	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);
+	
+	private void drawGamepadTexts(Graphics g) {
+		var text = new TextDecoration();
+		int[] rect;
+		
+		rect = new int[] {888, 768, 150, 80};
+		text.drawOutlinesString(g, font, menuPauseText, DIRECTION.NULL, rect);
+		rect = new int[] {435, 298, 150, 80};
+		text.drawOutlinesString(g, font, movementsText, DIRECTION.RIGHT, rect);
+		rect = new int[] {1280, 162, 150, 80};
+		text.drawOutlinesString(g, font, action1Text, DIRECTION.LEFT, rect);
+		rect = new int[] {1280, 216, 150, 80};
+		text.drawOutlinesString(g, font, action2Text, DIRECTION.LEFT, rect);
+		rect = new int[] {1280, 270, 150, 80};
+		text.drawOutlinesString(g, font, action3Text, DIRECTION.LEFT, rect);
+		rect = new int[] {1305, 424, 150, 80};
+		text.drawOutlinesString(g, font, dialogueText, DIRECTION.LEFT, rect);
 	}
 
 	////////// GAMEPAD ////////////

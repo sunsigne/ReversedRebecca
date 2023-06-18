@@ -66,6 +66,8 @@ ResetDetail2 = permanently#lost
 
 ApplyButton = apply
 ControlsButton = controls
+MenuPause = menu/pause
+Movements = movements
 Up = up
 Down = down
 Left = left
