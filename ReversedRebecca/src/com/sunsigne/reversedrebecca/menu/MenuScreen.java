@@ -57,7 +57,7 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		drawVersion(g);
 	}
 
-	private void drawTransluantLayer(Graphics2D g2d) {
+	protected void drawTransluantLayer(Graphics2D g2d) {
 		int alpha = 155;
 		Color purple = new Color(0, 25, 195, alpha);
 		Color black = new Color(0, 0, 0, alpha);

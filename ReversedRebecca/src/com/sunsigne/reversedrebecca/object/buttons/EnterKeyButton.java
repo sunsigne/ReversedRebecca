@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
@@ -38,6 +39,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 	@Override
 	public void tick() {
+		ControllerManager.getInstance().setUsingGamepad(false);
 		new GameCursor().setCursor(null);
 		MousePos mouse = new MousePos();
 
