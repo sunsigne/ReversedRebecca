@@ -1,12 +1,24 @@
 package com.sunsigne.reversedrebecca.menu.ingame.submenu;
 
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.EnterKeyButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -56,19 +68,48 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 	private TitleScreenText thirdLine;
 	private TitleScreenText fourthLine;
 
+	private String menuPauseText;
+	private String movementsText;
+	private String action1Text;
+	private String action2Text;
+	private String action3Text;
+	private String dialogueText;
+
+	private String format(String text) {
+		return new FormattedString().getNoSpecialCharacter(text).toUpperCase();
+	}
+
 	private void loadText() {
 		int x = 525;
 		int y = 323 + y_gap;
 
-		firstLine = new TitleScreenText("", x, y);
-		secondLine = new TitleScreenText("", x, y + 104);
-		thirdLine = new TitleScreenText("", x, y + 208);
-		fourthLine = new TitleScreenText("", x, y + 312);
+		firstLine = getTitleScreenText(x, y);
+		secondLine = getTitleScreenText(x, y + 104);
+		thirdLine = getTitleScreenText(x, y + 208);
+		fourthLine = getTitleScreenText(x, y + 312);
+
+		menuPauseText = format(translate("MenuPause"));
+		movementsText = format(translate("Movements"));
+		action1Text = format(translate("Action1"));
+		action2Text = format(translate("Action2"));
+		action3Text = format(translate("Action3"));
+		dialogueText = format(translate("Dialogue"));
 
 		LAYER.MENU.addObject(firstLine);
 		LAYER.MENU.addObject(secondLine);
 		LAYER.MENU.addObject(thirdLine);
 		LAYER.MENU.addObject(fourthLine);
+	}
+
+	private TitleScreenText getTitleScreenText(int x, int y) {
+		return new TitleScreenText("", x, y) {
+
+			@Override
+			public void render(Graphics g) {
+				if (ControllerManager.getInstance().isUsingGamepad() == false)
+					super.render(g);
+			}
+		};
 	}
 
 	////////// BUTTONS ////////////
@@ -89,7 +130,14 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 	}
 
 	private ButtonObject getKeyboardButton(String text, int x, int y, GenericListener onPress) {
-		return new TitleScreenButton(text, 1095 + x, 323 + y + y_gap, 150, 80, onPress, null);
+		return new TitleScreenButton(text, 1095 + x, 323 + y + y_gap, 150, 80, onPress, null) {
+
+			@Override
+			public void render(Graphics g) {
+				if (ControllerManager.getInstance().isUsingGamepad() == false)
+					super.render(g);
+			}
+		};
 	}
 
 	private ButtonObject upButton;
@@ -173,13 +221,26 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 			public String getSound() {
 				return "button_validate";
 			}
+
+			@Override
+			public void render(Graphics g) {
+				if (ControllerManager.getInstance().isUsingGamepad() == false)
+					super.render(g);
+			}
 		};
 
 		LAYER.MENU.addObject(button);
 	}
 
 	private ButtonObject createArrowButton(String text, int x, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 920 + x, 460 + 312 + y_gap, 60, 60, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 920 + x, 460 + 312 + y_gap, 60, 60, onPress, null) {
+
+			@Override
+			public void render(Graphics g) {
+				if (ControllerManager.getInstance().isUsingGamepad() == false)
+					super.render(g);
+			}
+		};
 		((TitleScreenButton) button).setFontSize(40f);
 		return button;
 	}
@@ -265,9 +326,49 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 		new ControlsIngameScreen(actionKeyScreen);
 	}
 
-	////////// PRESET MOUSE POS ////////////
+	////////// TEXTURE ////////////
 
-	// public static final PresetMousePos EXEMPLE = new PresetMousePos(730, 650);
+	private BufferedImage gamepad_image;
+
+	protected BufferedImage get_gamepad_image() {
+		if (gamepad_image == null)
+			gamepad_image = new ImageTask().loadImage("textures/menu/" + "gamepad", true);
+		return gamepad_image;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		if (ControllerManager.getInstance().isUsingGamepad() == false) {
+			super.render(g);
+			return;
+		}
+
+		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
+		g.drawImage(get_gamepad_image(), 580, 170, 730, 710, null);
+		drawGamepadTexts(g);
+	}
+
+	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);
+
+	private void drawGamepadTexts(Graphics g) {
+		var text = new TextDecoration();
+		int[] rect;
+
+		rect = new int[] { 888, 768, 150, 80 };
+		text.drawOutlinesString(g, font, menuPauseText, DIRECTION.NULL, rect);
+		rect = new int[] { 435, 298, 150, 80 };
+		text.drawOutlinesString(g, font, movementsText, DIRECTION.RIGHT, rect);
+		rect = new int[] { 1280, 162, 150, 80 };
+		text.drawOutlinesString(g, font, action1Text, DIRECTION.LEFT, rect);
+		rect = new int[] { 1280, 216, 150, 80 };
+		text.drawOutlinesString(g, font, action2Text, DIRECTION.LEFT, rect);
+		rect = new int[] { 1280, 270, 150, 80 };
+		text.drawOutlinesString(g, font, action3Text, DIRECTION.LEFT, rect);
+		rect = new int[] { 1305, 424, 150, 80 };
+		text.drawOutlinesString(g, font, dialogueText, DIRECTION.LEFT, rect);
+	}
 
 	////////// GAMEPAD ////////////
 
