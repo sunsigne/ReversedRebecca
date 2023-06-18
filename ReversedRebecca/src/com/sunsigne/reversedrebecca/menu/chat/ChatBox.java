@@ -190,7 +190,7 @@ public class ChatBox implements Updatable, KeyboardEvent, GamepadEvent {
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() != ButtonEvent.B)
+		if (e.getKey() != DialogueKey.getGamepadKey())
 			return;
 
 		pressing = true;

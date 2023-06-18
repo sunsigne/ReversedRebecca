@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+
 public class ActionTwoKey implements Key {
 
 	////////// KEY ////////////
@@ -20,6 +22,12 @@ public class ActionTwoKey implements Key {
 	@Override
 	public String getValueToRead() {
 		return "Action2";
+	}
+
+	////////// GAMEPAD ////////////
+
+	public static int getGamepadKey() {
+		return ButtonEvent.X;
 	}
 
 }

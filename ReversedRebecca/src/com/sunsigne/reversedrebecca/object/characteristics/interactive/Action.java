@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
@@ -118,9 +117,9 @@ public abstract class Action {
 	private int keyEvent;
 
 	public int getKeyEvent() {
-		if(key == null)
+		if (key == null)
 			return keyEvent;
-		
+
 		if (key.getValueToRead().contains("1")) {
 			if (ActionOneKey.getKey() != keyEvent)
 				keyEvent = ActionOneKey.getKey();
@@ -144,11 +143,11 @@ public abstract class Action {
 		this.keyEvent = keyEvent;
 
 		if (keyEvent == ActionOneKey.getKey())
-			buttonEvent = ButtonEvent.A;
+			buttonEvent = ActionOneKey.getGamepadKey();
 		if (keyEvent == ActionTwoKey.getKey())
-			buttonEvent = ButtonEvent.X;
+			buttonEvent = ActionTwoKey.getGamepadKey();
 		if (keyEvent == ActionThreeKey.getKey())
-			buttonEvent = ButtonEvent.Y;
+			buttonEvent = ActionThreeKey.getGamepadKey();
 	}
 
 	////////// GAMEPAD ////////////
