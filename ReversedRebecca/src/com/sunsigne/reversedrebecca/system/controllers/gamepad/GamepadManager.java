@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
+import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -120,8 +121,12 @@ public class GamepadManager {
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
 					tempAdapter.buttonPressed(button);
 
-				if (event.getValue() > -0.05f && event.getValue() < 0.05f)
+				if (event.getValue() > -0.05f && event.getValue() < 0.05f) {
+					if (button.getKey() == ButtonEvent.B)
+						ChatBox.pressing = false;
+
 					tempAdapter.buttonReleased(button);
+				}
 			}
 		}
 	}

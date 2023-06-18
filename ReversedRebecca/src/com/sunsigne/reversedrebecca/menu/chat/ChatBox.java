@@ -28,11 +28,10 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
+public class ChatBox implements Updatable, KeyboardEvent, GamepadEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue) {
 		this.object = object;
@@ -40,6 +39,27 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		// register the whole dialogue as an array of lines
 		all_lines = dialogue.split(System.getProperty("line.separator"));
+	}
+
+	////////// TICK ////////////
+
+	public static boolean pressing;
+	private static final int PRESSING_TIME = 30;
+	private static int time;
+
+	@Override
+	public void tick() {
+		if (pressing == false) {
+			time = PRESSING_TIME;
+			return;
+		}
+
+		time--;
+		if (time > 0)
+			return;
+
+		if (time % 3 == 0)
+			inputPressed();
 	}
 
 	////////// TEXTURE ////////////
@@ -170,8 +190,11 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.B)
-			inputPressed();
+		if (e.getKey() != ButtonEvent.B)
+			return;
+
+		pressing = true;
+		inputPressed();
 	}
 
 	@Override
@@ -182,6 +205,9 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	////////// INPUT ////////////
 
 	private void inputPressed() {
+		if (LAYER.PUZZLE.getHandler().containsObject(this) == false)
+			return;
+
 		if (MenuIngameController.getMenu() != null)
 			return;
 
