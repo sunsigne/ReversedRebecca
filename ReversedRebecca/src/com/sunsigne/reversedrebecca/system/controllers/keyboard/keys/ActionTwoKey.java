@@ -1,5 +1,8 @@
 package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
+import java.awt.image.BufferedImage;
+
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
 public class ActionTwoKey implements Key {
@@ -25,6 +28,14 @@ public class ActionTwoKey implements Key {
 	}
 
 	////////// GAMEPAD ////////////
+
+	private static BufferedImage gamepadButton;
+
+	public static BufferedImage getGamepadButton() {
+		if (gamepadButton == null)
+			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "x");
+		return gamepadButton;
+	}
 
 	public static int getGamepadKey() {
 		return ButtonEvent.X;

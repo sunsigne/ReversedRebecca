@@ -23,6 +23,7 @@
 
 	////////// EN COURS ////////////
 	
+	gamepad : un délai étrange (et chaitn) s'installe -> après avoir utilisé la manette un certain temps
 	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
