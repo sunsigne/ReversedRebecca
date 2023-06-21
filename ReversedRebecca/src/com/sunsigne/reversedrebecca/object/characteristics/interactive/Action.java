@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
@@ -108,7 +109,11 @@ public abstract class Action {
 	////////// RENDER ////////////
 
 	public String getDisplayedText() {
-		return "[" + new KeyAnalyzer(getKeyEvent()).getKeyText() + "]" + " " + name.toUpperCase();
+		String key = "[" + new KeyAnalyzer(getKeyEvent()).getKeyText() + "]";
+		if (ControllerManager.getInstance().isUsingGamepad())
+			key = "  ";
+
+		return key + " " + name.toUpperCase();
 	}
 
 	////////// KEYBOARD ////////////

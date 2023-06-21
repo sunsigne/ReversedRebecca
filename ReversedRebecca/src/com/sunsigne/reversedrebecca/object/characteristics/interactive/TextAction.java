@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -12,7 +13,11 @@ import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TextAction implements Updatable {
@@ -74,23 +79,23 @@ public class TextAction implements Updatable {
 		// if ONE action can be performed, draw it in front of the player
 		if (tripleAction.canDoExactlyOneAction()) {
 			Action action = tripleAction.getTheOnlyOnePerformableAction();
-			drawChoiceText(g, player, action.getDisplayedText(), 0);
+			drawChoiceText(g, player, action, 0);
 			return;
 		}
 
 		// if TWO actions can be performed, draw them perpendicularly to the player
 		if (tripleAction.canDoExactlyTwoActions()) {
 			Action[] action = tripleAction.getTheOnlyTwoPerformableActions();
-			drawChoiceText(g, player, action[0].getDisplayedText(), -12);
-			drawChoiceText(g, player, action[1].getDisplayedText(), +12);
+			drawChoiceText(g, player, action[0], -12);
+			drawChoiceText(g, player, action[1], +12);
 			return;
 		}
 
 		// if THREE actions, draw the second in front of the player
 		if (tripleAction.canDoExactlyThreeActions()) {
-			drawChoiceText(g, player, tripleAction.getAction(0).getDisplayedText(), -24);
-			drawChoiceText(g, player, tripleAction.getAction(1).getDisplayedText(), 0);
-			drawChoiceText(g, player, tripleAction.getAction(2).getDisplayedText(), +24);
+			drawChoiceText(g, player, tripleAction.getAction(0), -24);
+			drawChoiceText(g, player, tripleAction.getAction(1), 0);
+			drawChoiceText(g, player, tripleAction.getAction(2), +24);
 			return;
 		}
 	}
@@ -151,7 +156,7 @@ public class TextAction implements Updatable {
 		choice_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 	}
 
-	private void drawChoiceText(Graphics g, Player player, String text, int gap) {
+	private void drawChoiceText(Graphics g, Player player, Action action, int gap) {
 		DIRECTION facing = player.getFacing();
 
 		facing = protrudeFixOnBorder(facing, player, DIRECTION.LEFT, false);
@@ -163,7 +168,101 @@ public class TextAction implements Updatable {
 		if (facing == DIRECTION.RIGHT)
 			centeredText = DIRECTION.RIGHT;
 
+		String text = action.getDisplayedText();
+
+		if (ControllerManager.getInstance().isUsingGamepad()) {
+			text = text.concat("   ");
+			drawActionGamepadButton(g, player, facing, action, gap);
+
+			if (text.contains("[") && text.contains("]")) {
+				BufferedImage gamepadButton = getGamepadButton(action);
+				int key_gap = getGapBeforeWithinKeyText(text, centeredText);
+				int key_rect[] = new int[] { player.getX() + Size.M, player.getY() + gap + Size.XS, Size.XS, Size.XS };
+				text = removeWithinKeyText(text);
+
+				g.drawImage(gamepadButton, key_rect[0] + key_gap, key_rect[1], key_rect[2], key_rect[3], null);
+			}
+		}
+
 		new TextDecoration().drawOutlinesString(g, choice_font, text, centeredText, rect);
+	}
+
+	private BufferedImage getGamepadButton(Action action) {
+		if (action.getKeyEvent() == ActionOneKey.getKey())
+			return ActionOneKey.getGamepadButton();
+		if (action.getKeyEvent() == ActionTwoKey.getKey())
+			return ActionTwoKey.getGamepadButton();
+		if (action.getKeyEvent() == ActionThreeKey.getKey())
+			return ActionThreeKey.getGamepadButton();
+		if (action.getKeyEvent() == DialogueKey.getKey())
+			return DialogueKey.getGamepadButton();
+
+		return null;
+	}
+
+	private int getGapBeforeWithinKeyText(String text, DIRECTION facing) {
+		int gap = 0;
+
+		if (facing == DIRECTION.RIGHT) {
+			text = text.split("\\[")[1];
+
+			switch (TextsOption.getType()) {
+
+			case SMALL:
+				gap = (int) (Math.pow(text.length(), 0.58d) + 6);
+				break;
+			case MEDIUM:
+				gap = (int) (Math.pow(text.length(), 0.90d) + 5);
+				break;
+			case LARGE:
+				gap = (int) (Math.pow(text.length(), 0.70d) + 0);
+				break;
+			}
+
+			gap = -(Size.M - Size.XS / 6)
+					- (int) (gap + ((12.6f * Math.pow(text.length(), 1.03d)) * TextsOption.getSize()));
+		} else {
+			text = text.split("\\[")[0];
+			
+			switch (TextsOption.getType()) {
+
+			case SMALL:
+				gap = (int) (- Math.pow(text.length(), 0.70d) + 12);
+				break;
+			case MEDIUM:
+				gap = (int) (Math.pow(text.length(), 0.75d) + 13);
+				break;
+			case LARGE:
+				gap = (int) (- Math.pow(text.length(), 0.70d) + 22);
+				break;
+			}
+			
+			gap = (int) (gap + ((13 * Math.pow(text.length(), 1.025d)) * TextsOption.getSize()));
+		}
+
+		return gap;
+	}
+
+	private String removeWithinKeyText(String text) {
+		text = text.split("\\[")[0] + "  " + text.split("\\]")[1];
+		return text;
+	}
+
+	private void drawActionGamepadButton(Graphics g, Player player, DIRECTION facing, Action action, int gap) {
+		int rect[] = new int[] { player.getX() + Size.M, player.getY() + gap + Size.XS, Size.XS, Size.XS };
+		if (facing == DIRECTION.RIGHT)
+			rect[0] = player.getX() - Size.XS;
+
+		// following line is to display buttons on the left of "right facing texts"
+		// rect[0] = rect[0] - (100) - (18 * (int)
+		// Math.pow(action.getDisplayedText().length(), 1.04d));
+
+		if (action.getKeyEvent() == ActionOneKey.getKey())
+			g.drawImage(ActionOneKey.getGamepadButton(), rect[0], rect[1], rect[2], rect[3], null);
+		if (action.getKeyEvent() == ActionTwoKey.getKey())
+			g.drawImage(ActionTwoKey.getGamepadButton(), rect[0], rect[1], rect[2], rect[3], null);
+		if (action.getKeyEvent() == ActionThreeKey.getKey())
+			g.drawImage(ActionThreeKey.getGamepadButton(), rect[0], rect[1], rect[2], rect[3], null);
 	}
 
 	private int[] getChoiceRect(Player player, DIRECTION facing, int gap) {
@@ -176,13 +275,16 @@ public class TextAction implements Updatable {
 	}
 
 	private DIRECTION protrudeFixOnBorder(DIRECTION facing, Player player, DIRECTION border, boolean opposite) {
-		if (CameraDependency.CAMERA.isObjectCloseFromBorder(player, border) == false)
-			return facing;
-
-		if (CameraDependency.CAMERA.isObjectCloseFromBorder(interactive, border))
-			return opposite ? border.getOpposite() : border;
-
 		return facing;
+		/*
+		 * if (CameraDependency.CAMERA.isObjectCloseFromBorder(player, border) == false)
+		 * return facing;
+		 * 
+		 * if (CameraDependency.CAMERA.isObjectCloseFromBorder(interactive, border))
+		 * return opposite ? border.getOpposite() : border;
+		 * 
+		 * return facing;
+		 */
 	}
 
 }
