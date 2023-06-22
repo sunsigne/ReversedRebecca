@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.system.controllers.keyboard.keys;
 
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -68,4 +69,24 @@ public class KeyAnalyzer {
 		return new Translatable().getTranslatedText(java_text, FilePath.KEY);
 	}
 
+	public static BufferedImage getGamepadButton(String text) {
+		String key = text.split("\\]")[0].split("\\[")[1];
+		
+		String action1 = new KeyAnalyzer(ActionOneKey.getKey()).getKeyText();
+		String action2 = new KeyAnalyzer(ActionTwoKey.getKey()).getKeyText();
+		String action3 = new KeyAnalyzer(ActionThreeKey.getKey()).getKeyText();
+		String dialogue = new KeyAnalyzer(DialogueKey.getKey()).getKeyText();
+		
+		if (key.equalsIgnoreCase(action1))
+			return ActionOneKey.getGamepadButton();
+		if (key.equalsIgnoreCase(action2))
+			return ActionTwoKey.getGamepadButton();
+		if (key.equalsIgnoreCase(action3))
+			return ActionThreeKey.getGamepadButton();
+		if (key.equalsIgnoreCase(dialogue))
+			return DialogueKey.getGamepadButton();
+
+		return null;
+	}
+	
 }

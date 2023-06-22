@@ -1,0 +1,1 @@
+player = object = happy = Je#clique#sur$$action1##!

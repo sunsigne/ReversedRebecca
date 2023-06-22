@@ -54,6 +54,27 @@ public class FormattedString {
 		return no_space.replace("#", " ");
 	}
 
+	public String replaceWithinKeyText(String text, String replacement) {
+		String start = text.split("\\[")[0];
+
+		if (text.contains("]") == false)
+			return start;
+
+		String[] sequel = text.split("\\]");
+		text = start;
+
+		for (String tempSequel : sequel) {
+			if (tempSequel.contentEquals(sequel[0]))
+				continue;
+
+			text = text.concat(replacement + tempSequel + "]");
+			text = text.replace(replacement + replacement, replacement);
+		}
+
+		text = text.substring(0, text.length() - 1);
+		return text;
+	}
+
 	public String replaceValues(String text) {
 		if (text.contains("$$") == false)
 			return text;

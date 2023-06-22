@@ -1,0 +1,5 @@
+dave = player = calm = Tu#n'as#pas#besoin#de#le#dire,@juste#de#le#faire.
+player = object = worry = Hey…#Je#fais#de#mon#mieux,#mais@tu#admettras#que#c'est#bizarre#ton#truc.
+dave = player = disillusioned = Si#tu#avais#mes#yeux#et#ma#"double#vue",@tu#comprendrais…
+dave = player = calm = Passons#aux#interactions.
+dave = player = calm = Je#vais#faire#apparaître#un#objet.@Interagis#avec#lui#et#reviens#me#voir.

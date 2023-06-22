@@ -6,11 +6,15 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChatContent implements Updatable {
@@ -82,7 +86,7 @@ public class ChatContent implements Updatable {
 	@Override
 	public void tick() {
 		updateDialogueKey();
-		
+
 		if (pausetime > 0) {
 			pausetime--;
 			return;
@@ -98,15 +102,15 @@ public class ChatContent implements Updatable {
 	}
 
 	private int registeredKey;
-	
+
 	private void updateDialogueKey() {
-		if(registeredKey == DialogueKey.getKey())
+		if (registeredKey == DialogueKey.getKey())
 			return;
-		
+
 		registeredKey = DialogueKey.getKey();
 		dialogue_key = "[" + new DialogueKey().getRegisteredKey() + "]";
 	}
-	
+
 	private void pause() {
 		pausetime = 15;
 	}
@@ -218,9 +222,40 @@ public class ChatContent implements Updatable {
 		String text0 = stop[0] ? sentence[0] : currentText[0];
 		String text1 = stop[1] ? sentence[1] : currentText[1];
 
+		text0 = drawGamepadButton(g, text0, x0, y + 83);
+		text1 = drawGamepadButton(g, text1, x0, y + 158);
+
 		g.drawString(text0, x0, y + 83);
 		if (sentence[1] != null)
 			g.drawString(text1, x0, y + 158);
+	}
+
+	private String drawGamepadButton(Graphics g, String text, int x, int y) {
+		if (ControllerManager.getInstance().isUsingGamepad() == false || text == null)
+			return text;
+
+		while (text.contains("[")) {
+
+			BufferedImage gamepadButton = null;
+			if (text.contains("]"))
+				gamepadButton = KeyAnalyzer.getGamepadButton(text);
+
+			String replacement = "     ";
+			int key_gap = getGapBeforeWithinKeyText(text, replacement);
+			text = new FormattedString().replaceWithinKeyText(text, replacement);
+
+			g.drawImage(gamepadButton, x + key_gap, y - 45, Size.S, Size.S, null);
+		}
+
+		return text;
+	}
+
+	private int getGapBeforeWithinKeyText(String text, String replacement) {
+		text = text.split("\\[")[0];
+		text = text.replace(replacement, "   ");
+		int gap = (int) ((29.5f * Math.pow(text.length(), 0.936d)));
+
+		return gap;
 	}
 
 	private String dialogue_key;
