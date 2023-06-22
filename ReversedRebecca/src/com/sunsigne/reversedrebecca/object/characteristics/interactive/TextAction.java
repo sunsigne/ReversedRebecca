@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKe
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TextAction implements Updatable {
@@ -175,8 +176,9 @@ public class TextAction implements Updatable {
 			text = text.concat("   ");
 			drawActionGamepadButton(g, player, facing, action, gap);
 
-			if (text.contains("[") && text.contains("]")) {
-				BufferedImage gamepadButton = getGamepadButton(action);
+			while (text.contains("[") && text.contains("]")) {
+				
+				BufferedImage gamepadButton = getGamepadButton(text);
 				int key_gap = getGapBeforeWithinKeyText(text, centeredText);
 				int key_rect[] = new int[] { player.getX() + Size.M, player.getY() + gap + Size.XS, Size.XS, Size.XS };
 				text = removeWithinKeyText(text);
@@ -188,14 +190,21 @@ public class TextAction implements Updatable {
 		new TextDecoration().drawOutlinesString(g, choice_font, text, centeredText, rect);
 	}
 
-	private BufferedImage getGamepadButton(Action action) {
-		if (action.getKeyEvent() == ActionOneKey.getKey())
+	private BufferedImage getGamepadButton(String text) {
+		String key = text.split("\\]")[0].split("\\[")[1];
+		
+		String action1 = new KeyAnalyzer(ActionOneKey.getKey()).getKeyText();
+		String action2 = new KeyAnalyzer(ActionTwoKey.getKey()).getKeyText();
+		String action3 = new KeyAnalyzer(ActionThreeKey.getKey()).getKeyText();
+		String dialogue = new KeyAnalyzer(DialogueKey.getKey()).getKeyText();
+		
+		if (key.equalsIgnoreCase(action1))
 			return ActionOneKey.getGamepadButton();
-		if (action.getKeyEvent() == ActionTwoKey.getKey())
+		if (key.equalsIgnoreCase(action2))
 			return ActionTwoKey.getGamepadButton();
-		if (action.getKeyEvent() == ActionThreeKey.getKey())
+		if (key.equalsIgnoreCase(action3))
 			return ActionThreeKey.getGamepadButton();
-		if (action.getKeyEvent() == DialogueKey.getKey())
+		if (key.equalsIgnoreCase(dialogue))
 			return DialogueKey.getGamepadButton();
 
 		return null;
@@ -245,7 +254,19 @@ public class TextAction implements Updatable {
 	}
 
 	private String removeWithinKeyText(String text) {
-		text = text.split("\\[")[0] + "  " + text.split("\\]")[1];
+		String start = text.split("\\[")[0];
+		String gap = "  ";
+		String[] sequel = text.split("\\]");
+		text = start;
+
+		for(String tempSequel : sequel) {
+			if(tempSequel.contentEquals(sequel[0]))
+				continue;
+			
+			text = text.concat(gap + tempSequel + "]");
+		}
+		
+		text = text.substring(0, text.length() - 1);
 		return text;
 	}
 
