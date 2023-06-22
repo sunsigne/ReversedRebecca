@@ -268,7 +268,11 @@ public class ChatContent implements Updatable {
 		int[] rect = { x + 1365, y + 180, 0, 0 };
 		Color color = new Color(255, 255, 255, 180);
 		fontKey = new Font("arial", 1, 35);
-		new TextDecoration().drawCenteredString(g, fontKey, dialogue_key, color, DIRECTION.RIGHT, rect);
+
+		if (ControllerManager.getInstance().isUsingGamepad())
+			g.drawImage(DialogueKey.getGamepadButton(), rect[0] - Size.S, rect[1] - Size.XS - 8, Size.S, Size.S, null);
+		else
+			new TextDecoration().drawCenteredString(g, fontKey, dialogue_key, color, DIRECTION.RIGHT, rect);
 	}
 
 }
