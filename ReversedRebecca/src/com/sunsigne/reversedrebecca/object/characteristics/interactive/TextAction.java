@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -223,20 +224,20 @@ public class TextAction implements Updatable {
 					- (int) (gap + ((12.6f * Math.pow(text.length(), 1.03d)) * TextsOption.getSize()));
 		} else {
 			text = text.split("\\[")[0];
-			
+
 			switch (TextsOption.getType()) {
 
 			case SMALL:
-				gap = (int) (- Math.pow(text.length(), 0.70d) + 12);
+				gap = (int) (-Math.pow(text.length(), 0.70d) + 12);
 				break;
 			case MEDIUM:
 				gap = (int) (Math.pow(text.length(), 0.75d) + 13);
 				break;
 			case LARGE:
-				gap = (int) (- Math.pow(text.length(), 0.70d) + 22);
+				gap = (int) (-Math.pow(text.length(), 0.70d) + 22);
 				break;
 			}
-			
+
 			gap = (int) (gap + ((13 * Math.pow(text.length(), 1.025d)) * TextsOption.getSize()));
 		}
 
@@ -275,16 +276,15 @@ public class TextAction implements Updatable {
 	}
 
 	private DIRECTION protrudeFixOnBorder(DIRECTION facing, Player player, DIRECTION border, boolean opposite) {
+
+		if (CameraDependency.CAMERA.isObjectCloseFromBorder(player, border) == false)
+			return facing;
+
+		if (CameraDependency.CAMERA.isObjectCloseFromBorder(interactive, border))
+			return opposite ? border.getOpposite() : border;
+
 		return facing;
-		/*
-		 * if (CameraDependency.CAMERA.isObjectCloseFromBorder(player, border) == false)
-		 * return facing;
-		 * 
-		 * if (CameraDependency.CAMERA.isObjectCloseFromBorder(interactive, border))
-		 * return opposite ? border.getOpposite() : border;
-		 * 
-		 * return facing;
-		 */
+
 	}
 
 }
