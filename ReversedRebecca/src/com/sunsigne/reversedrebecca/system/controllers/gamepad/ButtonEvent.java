@@ -15,6 +15,8 @@ public class ButtonEvent {
 	public static final int Y = 3;
 	public static final int L1 = 4;
 	public static final int R1 = 5;
+	public static final int L2 = 16;
+	public static final int R2 = 17;
 	public static final int SELECT = 6;
 	public static final int START = 7;
 	public static final int LSTICK = 8;
@@ -54,6 +56,8 @@ public class ButtonEvent {
 			button.put(Identifier.Button._0, new ButtonEvent(Y));
 			button.put(Identifier.Button._4, new ButtonEvent(L1));
 			button.put(Identifier.Button._5, new ButtonEvent(R1));
+			button.put(Identifier.Button._6, new ButtonEvent(L2));
+			button.put(Identifier.Button._7, new ButtonEvent(R2));
 			button.put(Identifier.Button._8, new ButtonEvent(SELECT));
 			button.put(Identifier.Button._9, new ButtonEvent(START));			
 			button.put(Identifier.Button._10, new ButtonEvent(LSTICK));
