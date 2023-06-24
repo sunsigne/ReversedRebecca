@@ -3,10 +3,12 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.gui.GUI;
 import com.sunsigne.reversedrebecca.object.gui.GUIList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
@@ -24,6 +26,7 @@ import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -235,6 +238,14 @@ public class World implements Updatable, RenderFree {
 	private GameList<BufferedImage> map_list = new GameList<BufferedImage>(LISTTYPE.ARRAY);
 
 	private void loadImageMap() {
+		String mapName = this.mapName;
+
+		if (mapName.equals(FilePath.TEST)) {
+			COLOR[] colors = COLOR.values();
+			COLOR color = colors[new Random().nextInt(colors.length)];
+			mapName = mapName.concat("/" + color.getName());
+		}
+
 		for (LAYER tempLayer : LAYER.values()) {
 			if (!tempLayer.isMapLayer())
 				continue;

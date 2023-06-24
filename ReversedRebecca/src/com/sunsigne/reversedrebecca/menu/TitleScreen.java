@@ -152,7 +152,7 @@ public class TitleScreen extends MenuScreen {
 	private void loadTestMap() {
 		DifficultyOption.setDifficulty(GAME_DIFFICULTY.NORMAL);
 		LAYER.MENU.getHandler().clear();
-		new World("test");
+		new World(FilePath.TEST);
 		ToolList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
 	}
 
