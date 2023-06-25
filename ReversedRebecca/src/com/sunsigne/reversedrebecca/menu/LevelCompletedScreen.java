@@ -8,24 +8,26 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
-import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.Counter;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 import com.sunsigne.reversedrebecca.world.lvlstats.YOUARE;
 
-public class LevelCompletedScreen implements Updatable, TickFree {
+public class LevelCompletedScreen implements Updatable {
 
 	public LevelCompletedScreen(String lvl) {
 		loadImages();
@@ -63,11 +65,11 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		LevelStats stats = World.get().getLevelStats();
 
 		counter1 = stats.getCounter(1);
-		counter1.setName(format(counter1.getName()) + " :");
+		counter1.setName(format(counter1.getName()));
 		counter2 = stats.getCounter(2);
-		counter2.setName(format(counter2.getName()) + " :");
+		counter2.setName(format(counter2.getName()));
 		counter3 = stats.getCounter(3);
-		counter3.setName(format(counter3.getName()) + " :");
+		counter3.setName(format(counter3.getName()));
 
 		goodDeed_stats = format(stats.getDeed().getGoodText());
 		badDeed_stats = format(stats.getDeed().getBadText());
@@ -76,6 +78,44 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		String you_are_stats_unformatted = new Translatable().getTranslatedText("LevelYouAre" + you_are_stats_raw,
 				FilePath.MENU);
 		you_are_stats = format(you_are_stats_unformatted);
+	}
+
+	////////// TICK ////////////
+
+	private int time;
+	private boolean flag;
+
+	@Override
+	public void tick() {
+		time++;
+
+		int delay = 30;
+		SoundTask sound = new SoundTask();
+		double volume = VolumeSound.getVolume() / 2;
+
+		if (time == 90)
+			sound.playSound(SOUNDTYPE.SOUND, "jump");
+		if (time == 120)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+		if (time == 120 + delay)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+		if (time == 120 + 2 * delay)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+		if (time == 120 + 3 * delay)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+		if (time == 120 + 4 * delay)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+		if (time == 120 + 5 * delay)
+			sound.play(SOUNDTYPE.SOUND, volume, "button_validate", false, false);
+
+		if (isYouAreReady && flag == false) {
+			flag = true;
+			GenericListener listener = () -> {
+				isYouAreReadyConfirmed = true;
+				sound.playSound(SOUNDTYPE.SOUND, "button");
+			};
+			new GameTimer(20, true, listener);
+		}
 	}
 
 	////////// FONT ////////////
@@ -111,33 +151,92 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	////////// TEXTURE ////////////
 
 	private BufferedImage karma_image;
+	private BufferedImage karma_cursor;
 
 	private void loadImages() {
 		String path = "textures/menu/";
 
 		karma_image = new ImageTask().loadImage(path + "karma");
+		karma_cursor = new ImageTask().loadImage(path + "karma_cursor");
 	}
 
 	////////// RENDER ////////////
 
+	private boolean isYouAreReady;
+	private boolean isYouAreReadyConfirmed;
+
 	@Override
 	public void render(Graphics g) {
-		new TransluantLayer().drawDarkGray(g, Window.WIDHT, Window.HEIGHT);
 
-		drawTitle(g);
-		drawText(g, counter1.getName(), 0);
-		drawStats(g, String.valueOf(counter1.getCount()), 0);
-		drawText(g, counter2.getName(), 70);
-		drawStats(g, String.valueOf(counter2.getCount()), 70);
-		drawText(g, counter3.getName(), 140);
-		drawStats(g, String.valueOf(counter3.getCount()), 140);
+		// title
 
-		drawDeed(g, goodDeed_text, goodDeed_stats, 295);
-		drawDeed(g, badDeed_text, badDeed_stats, 455);
-		drawKarma(g);
-		drawYouAre(g);
-		drawClickToContinue(g);
+		int delay = 40;
+		if (time >= delay)
+			drawGrayLayer(g, delay);
+		if (time >= 90)
+			drawTitle(g);
+
+		// counter 1
+
+		int count = 0;
+		int speed = time;
+		delay = 30;
+
+		if (time >= 120) {
+			drawText(g, counter1.getName() + " :", 0);
+			speed = (time - 120) * (int) Math.sqrt(counter1.getCount()) / 10;
+			count = Math.min(counter1.getCount(), speed);
+			drawStats(g, String.valueOf(count), 0);
+		}
+
+		// counter 2
+
+		if (time >= 120 + delay) {
+			drawText(g, counter2.getName() + " :", 70);
+			speed = (time - 120 - delay) * (int) Math.sqrt(counter2.getCount()) / 10;
+			count = Math.min(counter2.getCount(), speed);
+			drawStats(g, String.valueOf(counter2.getCount()), 70);
+		}
+
+		// counter 3
+
+		if (time >= 120 + delay * 2) {
+			drawText(g, counter3.getName() + " :", 140);
+			speed = (time - 120 - delay * 2) * (int) Math.sqrt(counter3.getCount()) / 10;
+			count = Math.min(counter3.getCount(), speed);
+			drawStats(g, String.valueOf(counter3.getCount()), 140);
+		}
+
+		// deeds
+
+		if (time >= 120 + delay * 3)
+			drawDeed(g, goodDeed_text, goodDeed_stats, 295);
+		if (time >= 120 + delay * 4)
+			drawDeed(g, badDeed_text, badDeed_stats, 455);
+
+		// karma
+
+		if (time >= 120 + delay * 5)
+			drawKarma(g, 120 + delay * 5);
+
+		// you are
+		
+		if (isYouAreReadyConfirmed) {
+			drawYouAre(g);
+
+			if (time / 40 % 2 == 0)
+				drawClickToContinue(g);
+		}
+		
 		drawProgressSaved(g);
+	}
+
+	private void drawGrayLayer(Graphics g, int delay) {
+		Color gray = new Color(40, 40, 40, 224);
+		g.setColor(gray);
+		int speed = 20 * (time - delay);
+		g.fillRect(Math.min(0, -Window.WIDHT / 2 + speed), 0, Window.WIDHT / 2, Window.HEIGHT);
+		g.fillRect(Math.max(0, Window.WIDHT / 2 - speed) + Window.WIDHT / 2, 0, Window.WIDHT / 2, Window.HEIGHT);
 	}
 
 	private void drawTitle(Graphics g) {
@@ -161,14 +260,73 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 		int[] rect = new int[] { Window.WIDHT / 2 - 80 - 12 * stat.length(), 250 + y, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, text_font, text, DIRECTION.NULL, rect);
 
-		rect = new int[] { Window.WIDHT / 2 + 140 - 8 * stat.length(), 250 + y, 0, 0 };
+		rect = new int[] { Window.WIDHT / 2 + 160 - 8 * stat.length(), 250 + y, 0, 0 };
 		Color yellow = new Color(235, 235, 100);
 		new TextDecoration().drawOutlinesString(g, text_font, stat, yellow, Color.BLACK, DIRECTION.LEFT, rect);
 	}
 
-	private void drawKarma(Graphics g) {
+	private void drawKarma(Graphics g, int delay) {
 		int w = 777;
 		g.drawImage(karma_image, (Window.WIDHT - w) / 2, 595, w, 61, null);
+
+		if (time <= delay + 30)
+			delay = time;
+		else
+			delay = delay + 30;
+
+		int karma_gap = getKarmaGap();
+		int karma_pos = 0;
+
+		if (karma_gap > 0)
+			karma_pos = (int) Math.min(karma_gap, 2.8f * (time - delay));
+		if (karma_gap < 0)
+			karma_pos = (int) Math.max(karma_gap, -2.8f * (time - delay));
+
+		if (karma_pos == karma_gap)
+			isYouAreReady = true;
+
+		g.drawImage(karma_cursor, karma_pos + 2 + (Window.WIDHT - Size.M) / 2, 580, Size.M, Size.M, null);
+	}
+
+	private boolean flag1;
+
+	private int getKarmaGap() {
+		YOUARE youare = World.get().getLevelStats().getYouAre();
+		int gap = 155;
+		int karmaGap = 0;
+
+		switch (youare) {
+
+		case PSYCHOPATH:
+			karmaGap = (int) (-3.2f * gap);
+			break;
+		case SADISTIC:
+			karmaGap = -2 * gap;
+			break;
+		case MEAN:
+			karmaGap = -gap;
+			break;
+		case NICE:
+			karmaGap = gap;
+			break;
+		case ANGELIC:
+			karmaGap = 2 * gap;
+			break;
+		case NEUTRAL:
+		default:
+			karmaGap = 0;
+			break;
+		}
+
+		String sound = "karma_" + youare.getName().toLowerCase();
+
+		if (flag1)
+			sound = null;
+		else
+			flag1 = true;
+
+		new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+		return karmaGap;
 	}
 
 	private void drawYouAre(Graphics g) {
@@ -204,6 +362,12 @@ public class LevelCompletedScreen implements Updatable, TickFree {
 	}
 
 	private void loadNextLvl(String lvl) {
+		if (isYouAreReadyConfirmed == false) {
+			isYouAreReadyConfirmed = flag = flag1 = true;
+			time = 500;
+			return;
+		}
+
 		LAYER.MENU.getHandler().clear();
 		new World(lvl);
 	}

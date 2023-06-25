@@ -64,7 +64,7 @@ public class LevelStats {
 		if (karma <= -999)
 			return YOUARE.PSYCHOPATH;
 		if (karma <= sadisticLimit)
-			return YOUARE.SADISCTIC;
+			return YOUARE.SADISTIC;
 		if (karma >= angelicLimit)
 			return YOUARE.ANGELIC;
 		if (karma < 0)

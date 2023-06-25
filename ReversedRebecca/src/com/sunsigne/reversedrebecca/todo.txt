@@ -22,27 +22,26 @@
 	reset la sauvegarde pour commencer sur le bon lvl
 
 	////////// EN COURS ////////////
-	
-	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
+		
+	trouver un autre mot que "séquestration" car ça fait doublant dans le cas du psychopath
 	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	manette : ajouter pour la version publique l'information comme quoi la manette n'est pas terminée
-	manette : Puzzles must be compatible
 	le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
-	ecran de fin de niveau : le système de karma n'est pas terminé (faire la tête de rebecca qui se place sur le barème en fonction du karma
-	ecran de fin de niveau : faire une animation d'apparition des paramètres
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
+	manette : regarder le todo et le faire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	////////// GAMEPAD ////////////
 
+	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	Puzzles must be compatible
+	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée
 
 	////////// DIFFICILE ////////////
 	
