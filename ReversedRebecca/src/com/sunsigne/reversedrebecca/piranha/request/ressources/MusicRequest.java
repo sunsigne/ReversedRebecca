@@ -62,7 +62,9 @@ public class MusicRequest implements Request {
 
 			@Override
 			public boolean canDoAction() {
-				return LAYER.MENU.getHandler().getList().isEmpty();
+				boolean noMenu = LAYER.MENU.getHandler().getList().isEmpty();
+				boolean noLoading = LAYER.LOADING.getHandler().getList().isEmpty();
+				return noMenu && noLoading;
 			}
 
 			@Override
