@@ -24,7 +24,6 @@
 	////////// EN COURS ////////////
 		
 	trouver un autre mot que "séquestration" car ça fait doublant dans le cas du psychopath
-	le bouton "signaler un bug" devrait envoyer un email
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
