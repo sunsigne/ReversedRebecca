@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.OptionsScreen;
 import com.sunsigne.reversedrebecca.object.buttons.AchievementButton;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.CrashButton;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
@@ -97,8 +98,7 @@ public class TitleScreen extends MenuScreen {
 
 	private void createCrashButton() {
 		GenericListener onPress = () -> new FormTask().sendRequest();
-		ButtonObject button = new TitleScreenButton("Signaler un bug", 50, -25, 420, 140, onPress, null);
-		((TitleScreenButton) button).setFontSize(30f);
+		ButtonObject button = new CrashButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}
 

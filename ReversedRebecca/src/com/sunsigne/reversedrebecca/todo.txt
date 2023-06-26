@@ -24,15 +24,15 @@
 	////////// EN COURS ////////////
 		
 	trouver un autre mot que "séquestration" car ça fait doublant dans le cas du psychopath
-	le bouton "signaler un bug" sur l'écran titre est pas terrible ... Il faudra se décider sur un design définitif
+	le bouton "signaler un bug" devrait envoyer un email
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	le niveau du labo n'est pas fait sur le scénario "enquête"
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
 	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	succès : regarder le todo et le faire
+	le niveau du labo n'est pas fait sur le scénario "enquête"
 	lvl001 : regarder le todo et le faire
 	manette : regarder le todo et le faire
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
