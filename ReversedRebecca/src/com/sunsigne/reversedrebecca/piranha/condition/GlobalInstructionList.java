@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.piranha.condition;
 
+import java.util.ConcurrentModificationException;
 import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
@@ -54,21 +55,27 @@ public class GlobalInstructionList {
 	private GameList<PiranhaObject> getAllPiranhaObjects() {
 		var list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
 
-		for (LAYER tempLayer : LAYER.values()) {
-
-			Handler handler = tempLayer.getHandler();
-
-			for (Updatable tempUpdatable : handler.getList()) {
-
-				if (tempUpdatable instanceof PiranhaObject)
-					list.addObject((PiranhaObject) tempUpdatable);
-
-				try {
-					handler.getList().iterator().next();
-				} catch (NoSuchElementException e) {
-					break;
+		try {
+			for (LAYER tempLayer : LAYER.values()) {
+	
+				Handler handler = tempLayer.getHandler();
+	
+				
+					for (Updatable tempUpdatable : handler.getList()) {
+		
+						if (tempUpdatable instanceof PiranhaObject)
+							list.addObject((PiranhaObject) tempUpdatable);
+		
+						try {
+							handler.getList().iterator().next();
+						} catch (NoSuchElementException e) {
+							break;
+						}
+					}			
 				}
-			}
+		} catch (ConcurrentModificationException e) {
+			// unlikly to do infinite loop, as "concurrent modifier" will eventually stop modifying
+			list = getAllPiranhaObjects();
 		}
 
 		return list;
