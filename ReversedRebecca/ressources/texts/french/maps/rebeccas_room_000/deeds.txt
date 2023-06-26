@@ -15,4 +15,4 @@ BEING_A_JERK = 20% être#une#ordure
 ///// PSYCHOPATH /////
 
 NO_KILL = 999% aucun#meurtre
-SEQUESTRATION = 999% séquestration
+FORCED_CONFINEMENT = 999% confinement#forcé

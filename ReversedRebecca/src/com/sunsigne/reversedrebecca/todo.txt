@@ -23,8 +23,7 @@
 
 	////////// EN COURS ////////////
 	
-	warning : map002 a ENCORE été corrompu, il va falloir mettre à jour le main
-	trouver un autre mot que "séquestration" car ça fait doublant dans le cas du psychopath
+	warning : map002 a ENCORE été corrompu, il va falloir mettre à jour 'la branche main'
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
@@ -177,6 +176,7 @@
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	good psycopath deed : mort rapidement ?
+	on ne comprend pas bien le point de vue d'alicia qui n'aime pas qu'on explose le labo, il faut être + claire sur la raison pour laquelle elle n'aime pas ça
 	
 	////////// LVL002 ////////////
 	
