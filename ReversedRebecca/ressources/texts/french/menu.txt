@@ -31,6 +31,7 @@ OptionsButton = options
 QuitButton = quitter
 BackButton = retour
 Achievement = succes
+CrashButton = Signaler#un#bug
 
 ///// PLAY /////
 

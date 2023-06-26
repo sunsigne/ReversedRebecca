@@ -8,13 +8,15 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class CrashButton extends TitleScreenButton {
 
 	public CrashButton(GenericListener onPress, GenericListener onRelease) {
-		super("Signaler un bug", 6, 3, 385, 90, onPress, onRelease);
+		super(new Translatable().getTranslatedText("CrashButton", FilePath.MENU), 6, 3, 385, 90, onPress, onRelease);
 		rectsize = RECTSIZE.NORMAL;
 	}
 
