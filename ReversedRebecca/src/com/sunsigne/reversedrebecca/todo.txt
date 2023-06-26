@@ -22,7 +22,8 @@
 	reset la sauvegarde pour commencer sur le bon lvl
 
 	////////// EN COURS ////////////
-		
+	
+	warning : map002 a ENCORE été corrompu, il va falloir mettre à jour le main
 	trouver un autre mot que "séquestration" car ça fait doublant dans le cas du psychopath
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
