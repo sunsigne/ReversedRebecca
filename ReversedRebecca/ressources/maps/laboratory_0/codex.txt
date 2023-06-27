@@ -83,6 +83,7 @@ OBJ-43 = Alicia Rubbles Up Checker
 OBJ-44 = Alicia Rubbles Down Checker
 OBJ-45 = Rebecca Pee Checker
 OBJ-46 = Sink
+OBJ-49 = Joseph SAS Key Checker
 
 ///// RIGHT AREA /////
 

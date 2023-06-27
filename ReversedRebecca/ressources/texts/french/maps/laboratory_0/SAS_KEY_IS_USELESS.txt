@@ -1,0 +1,2 @@
+player = DOWN = sad = Zut…#Je#viens#seulement#de#réaliser@que#je#ne#sais#pas#me#servir#de#cette#clé.
+player = DOWN = you_silly = Tant#pis…#Je#trouverai#une#autre#solution.

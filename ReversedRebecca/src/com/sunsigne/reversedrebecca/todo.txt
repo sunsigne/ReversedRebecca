@@ -121,7 +121,6 @@
 	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
 
 	scénario : exit
-	- Jean : les TA à partir des toilettes doivent être créées
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
 	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la réaction après la porte du bas
@@ -129,6 +128,7 @@
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
 	
 	scénarion : inquery
+		- Jean : les TA à partir des toilettes doivent être créées
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
 	post puzzle : 
