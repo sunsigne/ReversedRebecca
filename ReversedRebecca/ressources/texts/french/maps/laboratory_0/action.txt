@@ -38,6 +38,7 @@ I_HAVE_TO_GO = Key1 % Je#dois#y#aller...
 SHUT_UP = Key2 % La#ferme#!
 WASH_AWAY_THE_JEANS_DIRTYNESS = Key2% laver#la#cochonnerie#de#Jean
 GET_ANGRY = Key1 % s'énerver
+SAS_KEY = Key3 % clé#?
 
 ///// RIGHT AREA /////
 

@@ -1,0 +1,2 @@
+object = player = happy = Attend#!#J'ai#quelque#chose#pour#toi.
+object = player = doubt = Je#ne#sais#pas#pourquoi,#mais#mon#petit@doigt#me#dit#que#tu#pourrais#en#avoir#besoin.

@@ -1,0 +1,4 @@
+object = DOWN = happy = Hein#?#Quoi#?#De#quoi#?
+player = object = laugh = Ha#?#Tu#es#réveillé#?#Parfait#!@Il#me#faut#ta#clé.
+object = DOWN = happy = Heu...#Voilà
+player = object = happy_var = Merci#!

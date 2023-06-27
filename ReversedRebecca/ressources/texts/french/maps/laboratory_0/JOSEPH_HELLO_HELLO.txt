@@ -1,4 +1,5 @@
-object = RIGHT = happy_var = Tu#as#déjà#essayé#de#dormir#sur#ces#canapés#?
+player = object = happy = Bonjour,#Joseph.#Ça#va#?
+object = RIGHT = happy_var = Ha#!#Bonjour#Rebecca.@Tu#as#déjà#essayé#de#dormir#sur#ces#canapés#?
 object = RIGHT = happy = C'est#incroyable#ce#qu'ils#sont#confortables#!@On#croirait#être#posé#sur#un#nuage.
 object = RIGHT = happy = Ça#me#rappelle#dans#ma#jeunesse,@quand…
 object = RIGHT = doubt = Bla#bla#bla.

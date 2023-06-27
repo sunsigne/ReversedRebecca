@@ -12,7 +12,7 @@
 	start();
 
 	if(mapName.equalsIgnoreCase("laboratory_0"))
-		JOptionPane.showMessageDialog(null, "Le niveau auquel vous allez jouer n'est pas terminé en plus de contenir de nombreux bugs." + System.getProperty("line.separator") + "Je connais déjà ces bugs, merci de ne pas envoyer de rapport d'erreurs les concernants.");
+		JOptionPane.showMessageDialog(null, "Le niveau auquel vous allez jouer n'est pas terminé en plus de contenir de nombreux bugs." + System.getProperty("line.separator") + "Je connais déjà ces bugs, merci de ne pas envoyer de rapport d'erreurs les concernant.");
 
 	LAYER.LOADING.getHandler().clear();
 	
@@ -23,6 +23,7 @@
 
 	////////// EN COURS ////////////
 	
+	attetnion ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	warning : map002 a ENCORE été corrompu, il va falloir mettre à jour 'la branche main'
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
@@ -109,6 +110,8 @@
 
 	////////// LVL001 ////////////
 
+	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas)
+	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
 	refaire les end lvl
 	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
@@ -121,7 +124,6 @@
 	- Jean : les TA à partir des toilettes doivent être créées
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
 	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
-	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la réaction après la porte du bas
 	- Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
@@ -157,10 +159,9 @@
 	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
 	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
-	Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
+	en inquery -> Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
 	gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
-	faire en sorte qu'on puisse aller engueuler Jean lorsqu'il nous a poussé dans le scénario exit.	
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	les différents karmas doivent affecter le scénario !
 	rendre le PNG enfermé + vivant
@@ -176,7 +177,7 @@
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	good psycopath deed : mort rapidement ?
-	on ne comprend pas bien le point de vue d'alicia qui n'aime pas qu'on explose le labo, il faut être + claire sur la raison pour laquelle elle n'aime pas ça
+	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	
 	////////// LVL002 ////////////
 	
