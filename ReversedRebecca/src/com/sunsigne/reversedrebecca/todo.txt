@@ -21,6 +21,16 @@
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
 
+	
+	////////// CSN ////////////
+	
+	tutoriel :
+	à supprimer. Garder seulement 1 - les outils et les niveaux de difficulté 2 - c'est un jeu à conséquences et à choix
+	rr000
+	qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ?
+	lvl001
+	sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
+
 	////////// EN COURS ////////////
 	
 	attetnion ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
@@ -76,6 +86,7 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
+	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
@@ -96,7 +107,7 @@
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
 	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
-	
+
 	////////// RR000 ////////////
 
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
@@ -110,7 +121,7 @@
 
 	////////// LVL001 ////////////
 
-	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas)
+	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
 	refaire les end lvl
 	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée

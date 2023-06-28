@@ -1,5 +1,5 @@
 sarah = delta = happy = Delta,#tu#as#une#minute#?
-delta = sarah = wink = Bien#sûr#!#Comment#je#peux#t'aider#?
+delta = sarah = excited = Bien#sûr#!#Comment#je#peux#t'aider#?
 sarah = delta = happy = Je#crois#me#souvenir#que@tu#t'y#connais#en#vol#industriel,#non#?
 delta = sarah = laugh_var = Ha#!#C'est#une#longue#histoire,#ça#!
 sarah = delta = wink = Je#ne#suis#pas#pressée.

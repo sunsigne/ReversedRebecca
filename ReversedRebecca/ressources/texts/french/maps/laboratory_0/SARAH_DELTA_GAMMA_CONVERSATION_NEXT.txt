@@ -1,0 +1,5 @@
+delta = sarah = gamma = "Si#on#m'avait#donné#une#pièce#à#chaque#fois@que#je#m'étais#retrouvé#dans#cette#situation…"
+delta = sarah = gamma_var = "…#en#fait,#ça#me#ferait#deux#pièces…"
+delta = sarah = gamma = "C'est#pas#beaucoup,#mais#c'est#quand#même@bizarre#que#ça#me#soit#arrivé#deux#fois."
+sarah = delta = laugh = Ha#ha#ha#ha#ha#ha#ha#!
+rebecca = DOWN = you_silly = Je#pense#qu'elles#ne#sont#pas#près#de#s'arrêter.@Je#ferais#mieux#de#continuer.
