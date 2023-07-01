@@ -24,6 +24,7 @@
 	
 	////////// CSN ////////////
 	
+	le formulaire de bug apparait DERRIERE la fenetre du jeu
 	tutoriel :
 	à supprimer. Garder seulement 1 - les outils et les niveaux de difficulté 2 - c'est un jeu à conséquences et à choix
 	rr000
@@ -32,9 +33,8 @@
 	sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 
 	////////// EN COURS ////////////
-	
-	attetnion ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
-	warning : map002 a ENCORE été corrompu, il va falloir mettre à jour 'la branche main'
+
+	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
 	ajouter un bouton 'ajouter sur steam"
@@ -43,8 +43,6 @@
 	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
-	le niveau du labo n'est pas fait sur le scénario "enquête"
 	manette : regarder le todo et le faire
 
 	////////// GAMEPAD ////////////
@@ -121,15 +119,17 @@
 
 	////////// LVL001 ////////////
 
+	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
+	rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
 	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
 	refaire les end lvl
 	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
-	Faire un scoling de sarah si fort qu'on l'entend dans tout le batiment (càd, forcer le dialogue, peut importe ou se trouve le joueur)
 	faire du décors à l'exterieur, et dans la salle de droite
 	scénario sadique pas encore faits
 	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
+	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	scénario : exit
 	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
@@ -139,7 +139,7 @@
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
 	
 	scénarion : inquery
-		- Jean : les TA à partir des toilettes doivent être créées
+	- Jean : les TA à partir des toilettes doivent être créées
 	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
 	
 	post puzzle : 
@@ -172,7 +172,6 @@
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	en inquery -> Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
-	gérer l'enguelade hypothétique de Jean par Sarah vis à vis du poussage d'elle ou du joueur (dans les toilettes)
 	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	les différents karmas doivent affecter le scénario !
 	rendre le PNG enfermé + vivant
@@ -182,8 +181,7 @@
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
-	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée
-	rajouter des images d'explosion pour les explosions
+	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée ?
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
