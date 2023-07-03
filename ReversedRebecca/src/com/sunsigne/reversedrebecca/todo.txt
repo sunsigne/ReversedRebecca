@@ -34,6 +34,7 @@
 
 	////////// EN COURS ////////////
 
+	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres

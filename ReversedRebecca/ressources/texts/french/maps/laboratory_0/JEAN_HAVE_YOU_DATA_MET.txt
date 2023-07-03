@@ -1,0 +1,1 @@
+player = object = happy = Sinon,#tu#as#des#infos#sur#ce@qu'il#vient#de#se#passer#?

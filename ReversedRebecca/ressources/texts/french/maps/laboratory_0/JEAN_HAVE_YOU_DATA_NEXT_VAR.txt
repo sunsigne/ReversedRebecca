@@ -1,0 +1,2 @@
+object = player = urge_happy = Mais#tout#va#bien.#Sarah#est#allée#chercher#la#clef.
+player = object = laugh = Je#vois.
