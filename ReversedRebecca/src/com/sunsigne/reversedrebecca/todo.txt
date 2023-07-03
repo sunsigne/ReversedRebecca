@@ -119,6 +119,7 @@
 
 	////////// LVL001 ////////////
 
+	toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
 	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
 	rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
 	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
@@ -132,9 +133,8 @@
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	scénario : exit
-	- Sarah et delta : ajouter dialogues + attention, sarah n'ira pas voir Delta si Jean pousse Rebecca devant elle
-	- Mika : quand on ramasse les bobmes, dialogue différent + SAVE le bisou
-	- Alicia : la libérer ne se sauvegarde pas + vérifier si elle est déjà libre lorsqu'on résoud le puzzle + vérifier le cas "sadique" + faire la réaction après la porte du bas
+	- La machine à café !
+	- Sarah : après l'enguelade de Jean dans les toilettes
 	- Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
 	
@@ -159,7 +159,26 @@
 	- se faire pisser dessus (pas angélique)
 	- crier sur jean (pas angélique)
 
-	A enregistrer : jean qui pisse sur rebecca, rebecca qui enguele jean (lui en veut) ou même s'énerve à force de lui parler (parce qu'il est naturellement casse-couille)
+	à enregister :
+	- le type de scénario (sortie ou enquête)
+	- Saboter l'ordinateur de Bernard
+	- Mika qui embrasse
+	- Delta a informé rebecca qu'elle faisait des casses avec son frère
+	- Jean qui se fait gronder par Sarah
+	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
+	- Jean s'énerver et il ne s'excuse pas
+	- Jean golden shower
+	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
+	- Marie enfermée dans les toilettes
+	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
+	- Jopseh faire pleurer (+ éventuelles réactions des autres)
+	- Alicia knock knock (si pas libérer, il faut enregistrer l'oublie)
+	- à droite pas encore fait (à partir du bureau d'alicia inclus)
+	// inquery
+	- Mika qui défonce la porte (relation + avec Rebecca)
+	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
+	- Alicia se moquer de sa situation (+ karma négatif)
+	
 	On peut se faire enfermer dans les toilettes avec Marie...
 	Quand Mika défonce la porte, ne pas la faire réapparaître
 	finir de coder le cas où Alicia prend les clefs pour nous
@@ -172,7 +191,6 @@
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	en inquery -> Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
-	ne pas oublier de supprimer les sauvegardes "short range" de rr000 dans le lvl001
 	les différents karmas doivent affecter le scénario !
 	rendre le PNG enfermé + vivant
 	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
