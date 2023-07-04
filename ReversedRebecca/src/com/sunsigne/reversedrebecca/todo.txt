@@ -120,6 +120,8 @@
 
 	////////// LVL001 ////////////
 
+	ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
+	
 	toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
 	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
 	rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
@@ -140,8 +142,10 @@
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
 	
 	scénarion : inquery
+	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ! + Vol ?) doivent être créés
 	- Jean : les TA à partir des toilettes doivent être créées
-	- Delta a un dialogue comme si on n'avait jamais quitté son bureau
+	- changer l'aide de delta pour le sécanrio d'enquête (parles des objectifs à accomplir plutôt que de la map)
+	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah
 	
 	post puzzle : 
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
