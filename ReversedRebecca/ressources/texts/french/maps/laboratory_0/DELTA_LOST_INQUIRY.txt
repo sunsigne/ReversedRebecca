@@ -1,0 +1,8 @@
+rebecca = object = worry = Delta,#je#suis#un#peu#perdue…@Tu#peux#m'aider#?
+delta = rebecca = excited = Bien#sûr#!#Quel#est#le#problème#?
+rebecca = object = unhappy = Tu#vas#trouver#ça#bête,#mais…@Je#ne#sais#pas#trop#comment#enquêter…
+delta = rebecca = laugh_var = Vraiment#?
+delta = rebecca = smile = Pose#des#questions#aux#gens,#et#examine@la#"scène#de#crime".#C'est#déjà#très#bien.
+rebecca = object = no_sens = C'est#tout#?
+delta = rebecca = wink = Yup.
+rebecca = object = happy = D'accord.#Merci.
