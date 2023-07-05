@@ -1,0 +1,3 @@
+mika = player = doubt = Ça#me#fait#une#belle#jambe…
+rebecca = mika = worry = Mais…#Tu#ne#sais#rien#à#ce#sujet#?
+mika = player = serious = Non.
