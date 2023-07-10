@@ -26,9 +26,9 @@ public class CrashButton extends TitleScreenButton {
 	public int[] getRect() {
 		int[] rect = new int[4];
 		rect[0] = getX() + 1;
-		rect[1] = getY() + 1;
+		rect[1] = getY() + 2;
 		rect[2] = getWidth() - 2;
-		rect[3] = getHeight() - 2;
+		rect[3] = getHeight() - 3;
 		return rect;
 	}
 

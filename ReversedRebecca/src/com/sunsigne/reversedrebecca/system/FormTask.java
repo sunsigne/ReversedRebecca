@@ -21,23 +21,33 @@ public class FormTask {
 
 	private String getLink() {
 		String lang = Language.getInstance().getLang();
-		
-		if(lang.equalsIgnoreCase("french"))
+
+		if (lang.equalsIgnoreCase("french"))
 			return LINK_FR;
-		else if(lang.equalsIgnoreCase("english"))
+		else if (lang.equalsIgnoreCase("english"))
 			return LINK_ENG;
 		else
 			return LINK_ENG;
-			
-	}	
-	
+
+	}
+
 	////////// REQUEST ////////////
 
 	public void sendRequest() {
-		try {
-			Desktop.getDesktop().browse(new URI(getLink()));
-		} catch (IOException | URISyntaxException e) {
-			e.printStackTrace();
+		if (Desktop.isDesktopSupported()) {
+			try {
+				Desktop.getDesktop().browse(new URI(getLink()));
+			} catch (IOException | URISyntaxException e) {
+				e.printStackTrace();
+			}
+		}
+
+		else {
+			try {
+				Runtime.getRuntime().exec("xdg-open " + getLink());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
