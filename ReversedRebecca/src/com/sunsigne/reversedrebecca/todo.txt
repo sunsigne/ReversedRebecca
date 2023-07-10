@@ -21,13 +21,14 @@
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
 
-	////////// CONVENTION ////////////
+	////////// GEEKALI ////////////
+
 
 	1h30 = ! créer une texture de panneau (en construction) pour les zones pas finies
 	0h10 = le formulaire de bug apparait DERRIERE la fenetre du jeu	
-	0h20 = supprimer "sauvegarde" sur l'écran de fin de niveau ?
 	
 	2h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ?
+	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	2h00 = ajouter un bouton 'ajouter sur steam"
 	4h00 = ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
@@ -35,11 +36,15 @@
 	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	1h00 = dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
+	0h20 = supprimer "sauvegarde" sur l'écran de fin de niveau ?
 	
 	?h?? = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
 	4h00 = succès : regarder le todo et le faire
 	
+	3h00 = temporaire ws002
+	
 	6h00 = créer le design des sous-terrain
+	2h00 = créer les musiques des sous-terrain
 	4h00 = créer le level design des sous-terrain (map + piranhas) (ajouter la blague de sarah qui dit "on a pas eu le temps d'écrire le scénario !")
 	20h00 = créer le combat de boss dans le niveau du sous-terrain
 
@@ -47,6 +52,8 @@
 	20h : fix et corrections des retours tests
 	
 	note : appeler cette version "version : geekali 2023"
+	succès : bienvenue au geekali ?
+	succès : finir la démo ?
 	faire en sorte que quitter cette version reset la sauvegarde !
 	
 	////////// EN COURS ////////////
@@ -113,7 +120,6 @@
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	
-	Dave propose le tutorial avant de lancer le jeu
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
