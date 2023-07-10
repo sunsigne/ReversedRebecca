@@ -21,27 +21,41 @@
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
 
-	
-	////////// CSN ////////////
-	
-	le formulaire de bug apparait DERRIERE la fenetre du jeu
-	tutoriel :
-	à supprimer. Garder seulement 1 - les outils et les niveaux de difficulté 2 - c'est un jeu à conséquences et à choix
-	rr000
-	qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ?
-	lvl001
-	sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
+	////////// CONVENTION ////////////
 
+	1h30 = ! créer une texture de panneau (en construction) pour les zones pas finies
+	0h10 = le formulaire de bug apparait DERRIERE la fenetre du jeu	
+	0h20 = supprimer "sauvegarde" sur l'écran de fin de niveau ?
+	
+	2h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ?
+	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
+	2h00 = ajouter un bouton 'ajouter sur steam"
+	4h00 = ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
+	2h00 = créer un Dave spécial pour la démo
+	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
+	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
+	1h00 = dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
+	
+	?h?? = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
+	4h00 = succès : regarder le todo et le faire
+	
+	6h00 = créer le design des sous-terrain
+	4h00 = créer le level design des sous-terrain (map + piranhas) (ajouter la blague de sarah qui dit "on a pas eu le temps d'écrire le scénario !")
+	20h00 = créer le combat de boss dans le niveau du sous-terrain
+
+	5h00 : correction de bugs
+	20h : fix et corrections des retours tests
+	
+	note : appeler cette version "version : geekali 2023"
+	faire en sorte que quitter cette version reset la sauvegarde !
+	
 	////////// EN COURS ////////////
 
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
-	ajouter un bouton 'ajouter sur steam"
-	ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
 	manette : regarder le todo et le faire
@@ -71,12 +85,9 @@
 	////////// FACILE ////////////
 
 	créer un debug mode pour activer les raccourcis clavier de dev ?
-	dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
-	Créer un bouton "refaire le niveau" ?
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
-	supprimer "sauvegarde" sur l'écran de fin de niveau
 	DieWhenNoHp -> kill() prévoir un restart
 
 	////////// TRADUCTION ////////////
@@ -85,11 +96,12 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
+	lvl001 :
 	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
-		
+
 	////////// PERSONNAGES à faire ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
@@ -109,7 +121,6 @@
 
 	////////// RR000 ////////////
 
-	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	traduction english pas fini (les actions)
 	
@@ -120,6 +131,7 @@
 
 	////////// LVL001 ////////////
 
+	les différents karmas doivent affecter le scénario !
 	ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
 	toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
 	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
@@ -141,9 +153,10 @@
 	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
 	
 	scénarion : inquery
-	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ! + Vol ?) doivent être créés
-	- Jean : les TA à partir des toilettes doivent être créées
-	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah
+	- Alicia + Dave : créer le TA du vol
+	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
+	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
+	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)
 	
 	post puzzle : 
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
@@ -181,31 +194,23 @@
 	- Mika qui défonce la porte (relation + avec Rebecca)
 	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
 	- Alicia se moquer de sa situation (+ karma négatif)
+	- Le meutre de Alicia (+ karma psycopath)
 	
 	On peut se faire enfermer dans les toilettes avec Marie...
 	Quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 	finir de coder le cas où Alicia prend les clefs pour nous
-	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ?
-	sauvegarder le kill de Alicia
+	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?)
 	lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?
 	landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
 	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
-	tester la cutscene, le choix, la conversation et le canapé avec Jospeh ! + mettre des memory en cas d'arrivée sur un point déjà défini
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
-	en inquery -> Delta ne vérifie pas si le joueur est sorti pour ses dernier dialgoues (ex : la porte va rester longtemps fermée)
 	Delta reaction du "Alicia" n'est pas fini
-	les différents karmas doivent affecter le scénario !
-	rendre le PNG enfermé + vivant
-	finir peeboy (TOUTE la partie après l'ouverture de la porte + le croche pied)
-	ajouter des réactions des personnages dans quand (si) ils voient le pipi
+	ajouter des réactions des personnages dans quand (si) ils voient le pipi ?
 	créer un parking pour l'entrée "des visiteurs"
 	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 	faire des personnages de remplissage dans les bureau en haut à droite
 	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée ?
-	traduire "quel taré" par "what a freak"
-	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
-	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	good psycopath deed : mort rapidement ?
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 	
