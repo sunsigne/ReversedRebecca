@@ -1,0 +1,12 @@
+///// WORLD /////
+
+NPC-01 = The Mole
+OBJ-01 = World Setup
+
+///// DOWN /////
+
+OBJ-02 = Down Setup
+
+///// DOWNER /////
+
+OBJ-03 = Downer Setup
