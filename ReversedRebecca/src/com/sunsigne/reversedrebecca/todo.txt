@@ -43,9 +43,9 @@
 	
 	3h00 = temporaire ws002
 	
-	6h00 = créer le design des sous-terrain
-	2h00 = créer les musiques des sous-terrain
-	4h00 = créer le level design des sous-terrain (map + piranhas) (ajouter la blague de sarah qui dit "on a pas eu le temps d'écrire le scénario !")
+	6h00 = créer les textures décoration des sous-terrain
+	0h30 = vérifier et adapter les musiques des sous-terrain
+	3h00 = créer les piranha des sous-terrain (map + piranhas) (ajouter la blague de sarah qui dit "on a pas eu le temps d'écrire le scénario !")
 	20h00 = créer le combat de boss dans le niveau du sous-terrain
 
 	5h00 : correction de bugs
