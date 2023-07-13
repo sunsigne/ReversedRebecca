@@ -25,8 +25,6 @@
 
 	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
 
-	1h30 = ! créer une texture de panneau (en construction) pour les zones pas finies
-	
 	2h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ?
 	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant

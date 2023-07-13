@@ -129,6 +129,7 @@ There is no chip to create those objects. Those are created from specific Piranh
 Rien / Nothing : 0-0-0
 Mur / Wall : 255-255-255
 Mur / Wall : 128-128-255 (peut servir pour le mobilier, pour faire la différence avec les "murs classique" sur la carte / can be used for the furniture, to make the difference with "classical walls" on the map).
+Panneau "Disponible Prochainement" / "Coming Soon" Panel : 255-190-255
 
 Les points de passages sont des repères pour les PNJ lorsque leur objectif (là où ils veulent aller) est inatteignable par plus d'un "simple coude".
 Leur consommation en ressource croit exponentiellement avec leur nombre, n'en mettre que là où c'est nécessaire.
