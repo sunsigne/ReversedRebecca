@@ -1,10 +1,12 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
+import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class EndLevelQuietRequest implements Request {
@@ -35,6 +37,7 @@ public class EndLevelQuietRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		World.get().freeze(true);
+		LAYER.LOADING.addObject(new LoadingScreen(true));
 
 		// update save file
 		new Save().registerSave();

@@ -35,8 +35,6 @@
 	2h00 = créer un Dave spécial pour la démo
 	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	1h00 = dans les GlobalInstruction, on peut améliorer l'efficacité du filtre : au lieu de faire une boucle sur la 2nd liste pour supprimer des éléments de la 1ère, il suffit de les comparer en amont au moment de la requête
-	0h20 = supprimer "sauvegarde" sur l'écran de fin de niveau ?
 	
 	?h?? = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
 	4h00 = succès : regarder le todo et le faire

@@ -59,7 +59,8 @@ public class World implements Updatable, RenderFree {
 	////////// WORLD ////////////
 
 	public World(String mapName) {
-		LAYER.LOADING.addObject(new LoadingScreen());
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			LAYER.LOADING.addObject(new LoadingScreen());
 
 		initParameters(mapName);
 		createMap();
