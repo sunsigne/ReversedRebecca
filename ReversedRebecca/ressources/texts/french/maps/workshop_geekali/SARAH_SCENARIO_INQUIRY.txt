@@ -1,0 +1,4 @@
+sarah = rebecca = happy = …#Donc#en#résumer#:#l'individu#s'appelle#Vladimir,@et#il#est#venu#voler#les#plans#du#casque#de#déblocage.
+rebecca = sarah = worry = C'est#quand#même#dingue#que#de#tous#nos#projets,@il#ait#choisi#de#voler#le#moins#prometteur.
+sarah = rebecca = happy_var = Bon,#tu#es#prête#pour#ton#cadeau#?
+rebecca = sarah = excited = Et#comment#!

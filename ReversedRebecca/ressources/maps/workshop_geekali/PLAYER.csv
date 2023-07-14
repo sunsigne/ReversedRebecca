@@ -1,0 +1,9 @@
+TIME -> 0 = GOTO -> NAME:REBECCA
+
+
+//// ARRIVAL ////
+
+TIME -> 1 = SLOW -> 12-6
+GOAL -> 12-6 = FACING -> LEFT
+! -> SARAH_SIT = SLOW -> 10-5
+GOAL -> 10-5 = SLOW -> 8-5

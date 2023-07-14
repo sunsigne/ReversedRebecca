@@ -1,0 +1,5 @@
+NPC-01 = Sarah
+OBJ-01 = Chair
+OBJ-02 = Simulation Slabs
+OBJ-03 = Fake Sarah
+OBJ-04 = Fake Walls
