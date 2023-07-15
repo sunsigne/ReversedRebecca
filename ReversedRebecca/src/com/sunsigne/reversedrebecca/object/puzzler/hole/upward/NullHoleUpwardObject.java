@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.LayerSendable;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.GoUpAction;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSendable {
@@ -38,7 +39,9 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 
 	@Override
 	public Updatable getReplacementUpdatable() {
-		return new NullHoleUpwardObject(getFacing(), getX(), getY(), true);
+		Updatable updatable = new NullHoleUpwardObject(getFacing(), getX(), getY(), true);
+		((PuzzlerObject) updatable).setDisabled(isDisabled());
+		return updatable;
 	}
 
 	////////// TICK ////////////
