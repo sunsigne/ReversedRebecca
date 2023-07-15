@@ -48,7 +48,7 @@
 	4h00 = créer texture et animation de la taupe
 	2h00 = créer texture et animation des bombes
 	8h00 = créer 3 à 5 paternes de boss
-	2h30 = créer le script piranha de victoire (creusage)
+	0h20 = créer le script piranha de victoire (creusage) raccourci
 	4h00 = créer le script piranha de victoire animation et dialogue
 
 	5h00 : correction de bugs

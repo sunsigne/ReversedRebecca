@@ -9,4 +9,5 @@ OBJ-02 = Down Setup
 
 ///// DOWNER /////
 
+NPC-02 = The Mole Boss
 OBJ-03 = Downer Setup
