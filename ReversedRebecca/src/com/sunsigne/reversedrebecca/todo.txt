@@ -25,6 +25,7 @@
 
 	à supprimer - map + text + texture workshop_geekali
 	à supprimer - le memory du labo sur le scénario (geekali feature for ws_geekali)
+	à supprimer - mole 0 le coffre en + et le texte en entrée
 
 	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
 
@@ -41,10 +42,14 @@
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	4h00 = succès : regarder le todo et le faire
 	
-	6h00 = créer les textures décoration des sous-terrain
 	0h30 = vérifier et adapter les musiques des sous-terrain
-	3h00 = créer les piranha des sous-terrain (map + piranhas) (ajouter la blague de sarah qui dit "on a pas eu le temps d'écrire le scénario !")
-	20h00 = créer le combat de boss dans le niveau du sous-terrain
+	3h00 = créer les piranha des sous-terrain (map + piranhas)
+	créer le combat de boss dans le niveau du sous-terrain :
+	4h00 = créer texture et animation de la taupe
+	2h00 = créer texture et animation des bombes
+	8h00 = créer 3 à 5 paternes de boss
+	2h30 = créer le script piranha de victoire (creusage)
+	4h00 = créer le script piranha de victoire animation et dialogue
 
 	5h00 : correction de bugs
 	20h : fix et corrections des retours tests
@@ -106,6 +111,9 @@
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
+	
+	lvl_mole :
+	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 
 	////////// PERSONNAGES à faire ////////////
 
