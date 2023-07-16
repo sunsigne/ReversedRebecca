@@ -136,6 +136,22 @@ Note : puisqu'une animation se lance aussitôt placée, il est bien plus intére
 Note: since an animation starts as soon as it is placed, it is much more interesting to instantiate it at the desired time from a Piranha Instruction rather than placing them as a "chip" on a map file.
 
 
+////// ROCHERS / ROCKS //////
+
+Red = 130 + x (jusqu'à 15) / 130 + x (up to 15)
+Green = 130 + y (jusqu'à 15) / 130 + y (up to 15)
+Blue = dépend du rocher
+
+Rocher Pyramidale / Pyramidal Rock -> 254
+Petit Rocher / Small Rock -> 253
+Rocher Plat / Flat Rock -> 252
+Gros Rocher / Big Rock -> 251
+
+exemple :
+Rocher Pyramidale décalé de 4 pixels vers la droite et de 3 pixels vers le bas : 134-133-254
+Pyramidal Rock shifted 4 pixels to the right and 3 pixels down : 134-133-254
+
+
 ////// AUTRE / OTHER //////
 
 Rien / Nothing : 0-0-0

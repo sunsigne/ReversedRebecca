@@ -24,7 +24,7 @@ public class MappablePyramidRock0804 implements Mappable {
 	@Override
 	public GameObject createObject(int x, int y) {
 		var rock = new RockPiranhaObject(x, y);
-		rock.setBounds(8, 4, RockSize.PYRAMID[0], RockSize.PYRAMID[1]);		
+		rock.setBounds(8, 4, RockSize.PYRAMID[2], RockSize.PYRAMID[3]);		
 		return rock;
 	}
 
