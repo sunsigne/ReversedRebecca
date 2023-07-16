@@ -10,4 +10,5 @@ OBJ-02 = Down Setup
 ///// DOWNER /////
 
 NPC-02 = The Mole Boss
+NPC-03 = Dig Animation Helper
 OBJ-03 = Downer Setup
