@@ -1,5 +1,5 @@
 Les mappables sont des classes Java programmées pour créer des objets à partir de pastilles de couleurs sur un fichier _content.png
-Le mot apparaissant devant _content ne peut être choisi que parmi les suivants : downiest, down, world, up, upper, uppiest
+Le mot apparaissant devant _content ne peut être choisi que parmi les suivants : downiest, downer, down, world, up, upper, uppiest
 Il est important de noter que le fichier _content.png DOIT être un carré : si l'image fait 57 pixel de large, elle doit faire 57 pixel de haut.
 
 Chaque pastille, par sa couleur RGB exacte, créera un objet précis sur la map. Voici la bibliothèque référençant ces pastilles.
@@ -119,9 +119,21 @@ OBJ-99 -> 99
 
 ////// DECORATION & ANIMATION //////
 
+La plupart des décoration et animations sont créées à partir d'Instructions Piranha bien précises (voir "ressources\piranha doc\types de requêtes\requêtes de création").
+Il existe des exceptions : certaines "pastilles" correspondent à des animations. Notamment celles de résolution des puzzles. 
+Most of the decorations and animations are created from specific Piranha Instruction (see "ressources\piranha doc\types de requêtes\requêtes de création").
+There are some exceptions : some "chips" correspond to some animations. Especially those for solving puzzles.
 
-Il n'existe aucune "pastille" pour créer ces objets. Ces derniers sont créés à partir d'Instructions Piranha bien précises (voir "ressources\piranha doc\types de requêtes\requêtes de création").
-There is no chip to create those objects. Those are created from specific Piranha Instruction (see "ressources\piranha doc\types de requêtes\requêtes de création").
+Red = dépend du puzzler / depends on the puzzler
+Green = 128*
+Blue = dépend de l'action (1, 2 ou 3) / depends on the action (1, 2 or 3)
+
+exemple : 
+Animation d'explosion de porte / Animation for exploding door : 1-128-2
+Animation de creusage de trou / Animation for digging hole : 4-128-1
+
+Note : puisqu'une animation se lance aussitôt placée, il est bien plus intéressant de l'instancier au moment voulu à partir d'une Instruction Piranha plutôt que de les placer comme "pastille" sur un fichier de map.
+Note: since an animation starts as soon as it is placed, it is much more interesting to instantiate it at the desired time from a Piranha Instruction rather than placing them as a "chip" on a map file.
 
 
 ////// AUTRE / OTHER //////
