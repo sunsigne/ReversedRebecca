@@ -2,6 +2,9 @@
 
 NPC-01 = The Mole
 OBJ-01 = World Setup
+OBJ-04 = Cyan Bomb Box Left
+OBJ-05 = Cyan Bomb Box Right
+OBJ-06 = Down Barrel
 
 ///// DOWN /////
 

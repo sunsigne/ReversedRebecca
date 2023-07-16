@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.piranha.RockPiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -43,7 +44,7 @@ public class MapCreator {
 				if (world.getLayer(true) == tempLayer)
 					hideRendering = true;
 			}
-			
+
 			// load light
 			if (tempLayer.getName().contains("light")) {
 				tempLayer.addObject(new LightRendering(world, tempLayer));
@@ -80,6 +81,8 @@ public class MapCreator {
 						layer.addObject(obj);
 					}
 				}
+
+				loadRocks(layer, red, green, blue, x0, y0);
 			}
 		}
 	}
@@ -102,6 +105,22 @@ public class MapCreator {
 		g2d.dispose();
 
 		return img;
+	}
+
+	private void loadRocks(LAYER layer, int red, int green, int blue, int x, int y) {
+		boolean valid_red = 121 <= red && red <= 135;
+		boolean valid_green = 121 <= green && green <= 135;
+		boolean valid_blue = 240 <= blue;
+
+		if (valid_red && valid_green && valid_blue) {
+
+			int x0 = red - 128;
+			int y0 = green - 128;
+			int type = 255 - blue;
+
+			var rock = new RockPiranhaObject(x, y, x0, y0, type);
+			layer.addObject(rock);
+		}
 	}
 
 }

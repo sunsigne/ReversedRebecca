@@ -235,9 +235,9 @@
 	lvl state : fusillade (comme rr000 sequestration)
 	Stephan est l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
 	
-	////////// LVL003 A & B ////////////
+	////////// MOLE 0 ////////////
 	
-	Faire double Y (le pro du combat), et "mister boom"
+	rajouter les coffres aux endroits prévus sur la map
 	
 	////////// SONS ////////////
 

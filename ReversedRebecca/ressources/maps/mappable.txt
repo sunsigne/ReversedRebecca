@@ -138,9 +138,9 @@ Note: since an animation starts as soon as it is placed, it is much more interes
 
 ////// ROCHERS / ROCKS //////
 
-Red = 130 + x (jusqu'à 15) / 130 + x (up to 15)
-Green = 130 + y (jusqu'à 15) / 130 + y (up to 15)
-Blue = dépend du rocher
+Red = 128 plus ou moins X (jusqu'à 7) / 128 plus or minus X (up to 7)
+Green = 128 plus ou moins Y (jusqu'à 7) / 128 plus or minus Y (up to 7)
+Blue = dépend du rocher / depends on the rock
 
 Rocher Pyramidale / Pyramidal Rock -> 254
 Petit Rocher / Small Rock -> 253
@@ -148,8 +148,11 @@ Rocher Plat / Flat Rock -> 252
 Gros Rocher / Big Rock -> 251
 
 exemple :
-Rocher Pyramidale décalé de 4 pixels vers la droite et de 3 pixels vers le bas : 134-133-254
-Pyramidal Rock shifted 4 pixels to the right and 3 pixels down : 134-133-254
+Rocher Pyramidale décalé de 4 pixels vers la droite et de 3 pixels vers le haut : 132-125-254
+Pyramidal Rock shifted 4 pixels to the right and 3 pixels up : 132-125-254
+
+Attention ! Ces pastilles ne PEUVENT PAS être utilisées dans le cadre d'Instructions Piranha. Leurs usages est exclusivement prévu pour les fichiers de map.
+Attention ! These chips CANNOT be used in Piranha Instructions. Their use is exclusively intended for map files.
 
 
 ////// AUTRE / OTHER //////
