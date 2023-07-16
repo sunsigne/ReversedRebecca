@@ -27,6 +27,8 @@
 	à supprimer - le memory du labo sur le scénario (geekali feature for ws_geekali)
 	à supprimer - mole 0 le coffre en + et le texte en entrée
 
+	0h30 text lvl plante lorsque la couleur "BROWN" est choisie"
+
 	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
 
 	?h?? = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ? (cinématique d'intro ?)
@@ -64,7 +66,7 @@
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	puzzle : faire une animation de sorti pour les trou (haut + bas) ET les coffres
+	puzzle : faire une animation puzzler pour la résolution des coffres
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire

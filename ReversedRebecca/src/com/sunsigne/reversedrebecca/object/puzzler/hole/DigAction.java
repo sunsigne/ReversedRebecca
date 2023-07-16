@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -63,10 +64,7 @@ public class DigAction extends OpenPuzzleAction {
 
 	@Override
 	public PuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
-		if (puzzlerObject instanceof HoleUpwardObject)
-			return null;
-		else
-			return null;
+		return new DigAnimationObject(x, y);
 	}
 
 	@Override
@@ -79,6 +77,10 @@ public class DigAction extends OpenPuzzleAction {
 			handler.addObject(nullObject);
 			handler.removeObject(puzzlerObject);
 			triggerExit(handler, puzzlerObject);
+
+			PuzzlerAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
+					puzzlerObject.getY());
+			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);
 		};
