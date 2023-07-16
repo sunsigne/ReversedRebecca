@@ -1,5 +1,5 @@
 rebecca = UP = no_sens = Heu…#On#s'est#téléporté#?#Où#est-ce#que#je#suis#?
-sarah = UP = happy = Un#mec#qu'on#surnomme#"la#taupe"#vit#ici.@Tu#dois#le#trouver#et#l'interroger.
+sarah = UP = happy = Un#mec#qu'on#surnomme#"Blast-X"#vit#ici.@Tu#dois#le#trouver#et#l'interroger.
 rebecca = UP = no_sens = ...#C'est#quoi#le#rapport#avec#Vladimir#?
 sarah = UP = surprised = PAS#LE#TEMPS#D'EXPLIQUER#!
 rebecca = UP = surprised = Ho#!#Alors#je#m'y#mets#immédiatement#!

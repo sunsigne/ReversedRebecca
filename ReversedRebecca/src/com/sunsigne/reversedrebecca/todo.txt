@@ -45,7 +45,7 @@
 	0h30 = vérifier et adapter les musiques des sous-terrain
 	3h00 = créer les piranha des sous-terrain (map + piranhas)
 	créer le combat de boss dans le niveau du sous-terrain :
-	4h00 = créer texture et animation de la taupe
+	2h00 = créer animations de blast-X ?
 	2h00 = créer texture et animation des bombes
 	8h00 = créer 3 à 5 paternes de boss
 	0h20 = créer le script piranha de victoire (creusage) raccourci
