@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public abstract class BossObject extends LivingObject {
 
@@ -49,7 +48,7 @@ public abstract class BossObject extends LivingObject {
 
 		// recovery time between two single patterns
 		if (patterns.getState() instanceof BossRestPattern == false)
-			new GameTimer(1 * Game.SEC, start);
+			new GameTimer(90, start);
 		else
 			start.doAction();
 	}
