@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 public class RockPiranhaObject extends PiranhaObject implements TickFree, RenderFree {
 
 	public RockPiranhaObject(int x, int y, int hitboxX, int hitboxY, int type) {
-		super("rock", x, y);
+		super("", x, y);
 		setStunned(true); // looks stupid, but allow to bypass the RoundToTileLaw
 
 		carvingHitbox(hitboxX, hitboxY, type);
