@@ -10,7 +10,12 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class ExplodeRubbleAnimationObject extends PuzzlerAnimationObject {
 
 	public ExplodeRubbleAnimationObject(int x, int y) {
-		super(x - Size.M / 2, y - Size.M / 2, Size.M, Size.M);
+		this(x, y, Size.M, Size.M);
+		loadAnimation();
+	}
+	
+	public ExplodeRubbleAnimationObject(int x, int y, int w, int h) {
+		super(x - w / 2, y - h / 2, w, h);
 		loadAnimation();
 	}
 

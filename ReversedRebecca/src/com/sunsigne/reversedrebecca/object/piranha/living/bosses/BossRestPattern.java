@@ -13,8 +13,7 @@ public class BossRestPattern extends BossPattern {
 
 	@Override
 	public int getPatternTimeInSec() {
-		// return 8;
-		return 3;
+		return 8;
 	}
 
 	@Override

@@ -1,9 +1,9 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses.blastx;
 
+import com.sunsigne.reversedrebecca.object.hostile.FallingBomb;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.object.puzzler.rubble.ExplodeRubbleAnimationObject;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 
 public class BlastXBombFromSkyPattern extends BossPattern {
@@ -18,8 +18,7 @@ public class BlastXBombFromSkyPattern extends BossPattern {
 
 	@Override
 	public int getPatternTimeInSec() {
-		// return 15;
-		return 3;
+		return 10;
 	}
 
 	////////// TICK ////////////
@@ -44,8 +43,8 @@ public class BlastXBombFromSkyPattern extends BossPattern {
 	}
 
 	private void attack(Player player) {
-		var object = new ExplodeRubbleAnimationObject(player.getX(), player.getY());
-		player.getHandler().addObject(object);
+		var bomb = new FallingBomb(player.getX(), player.getY());
+		player.getHandler().addObject(bomb);
 	}
 
 }

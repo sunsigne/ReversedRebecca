@@ -28,6 +28,7 @@
 	à supprimer - mole 0 le coffre en +
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
 	à supprimer - la musique troll et le visage troll de blast
+	à rétablir - le jouer n'est pas censé être invulnérable sur ce niveau
 
 	0h30 text lvl plante lorsque la couleur "BROWN" est choisie"
 
@@ -52,7 +53,7 @@
 	2h00 = créer le couloir obscrure des éboulements
 	créer le combat de boss dans le niveau du sous-terrain :
 	2h00 = créer animations de blast-X ?
-	2h00 = créer texture et animation des bombes
+	2h00 = créer texture et animation des bombes (faire en sorte que le boss regarde en direction du joueur)
 	8h00 = créer 3 à 5 paternes de boss
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	0h20 = relier la fin du niveau à l'écran de fin de démo
@@ -84,6 +85,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	le système de résurrection après KO doit être créé
 	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -245,6 +247,7 @@
 	agrandir la carte de sorte qu'on ne voit pas les bords
 	
 	boss : 
+	les patterns du boss et leurs images peuvent être améliorer
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
 	

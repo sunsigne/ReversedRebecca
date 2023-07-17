@@ -42,7 +42,7 @@ public class BlastXThrowingBombPattern extends BossPattern {
 		attack(player);
 	}
 
-	private void attack(Player player) {
+	protected void attack(Player player) {
 		var bomb = new RollingBomb(getBoss().getX(), getBoss().getY());
 		bomb.movingtoPlayer();
 		player.getHandler().addObject(bomb);

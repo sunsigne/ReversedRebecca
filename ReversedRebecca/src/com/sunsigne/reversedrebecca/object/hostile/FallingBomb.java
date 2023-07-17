@@ -14,53 +14,30 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class RollingBomb extends GameObject implements CollisionReactor {
+public class FallingBomb extends GameObject implements CollisionReactor {
 
-	public RollingBomb(int x, int y) {
+	public FallingBomb(int x, int y) {
 		super(x, y, Size.XL / 2, Size.XL / 2);
-	}
-	
-	public RollingBomb(int x, int y, int w, int h) {
-		super(x, y, w, h);
-	}
-
-	////////// MOUVEMENT ////////////
-
-	public int getSpeed() {
-		return 2;
-	}
-
-	public void movingtoPlayer() {
-		Player player = new PlayerFinder().getPlayer();
-		if (player == null)
-			return;
-
-		float diffX = getX() - player.getX();
-		float diffY = getY() - player.getY();
-		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2)) / 6;
-
-		setVelX(getSpeed() * Math.round((-1 / distance) * diffX));
-		setVelY(getSpeed() * Math.round((-1 / distance) * diffY));
 	}
 
 	////////// TICK ////////////
 
-	public int getExplodingTime() {
-		return 35;
-	}
-
+	private final int FALLING_TIME = 25;
 	private int time;
 
 	@Override
 	public void tick() {
 		time++;
 
-		if (time >= getExplodingTime())
+		if (time == FALLING_TIME)
+			canHurtPlayer = true;
+
+		if (time > FALLING_TIME)
 			explode();
 	}
 
-	protected void explode() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
+	private void explode() {
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 
 		var handler = getHandler();
 		handler.removeObject(this);
@@ -81,7 +58,14 @@ public class RollingBomb extends GameObject implements CollisionReactor {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		int size = 3 * (FALLING_TIME - time);
+		
+		int x = getX() - size / 2;
+		int y = getY() - size / 2;
+		int w = getWidth() + size;
+		int h = getHeight() + size;
+		
+		g.drawImage(getImage(), x, y, w, h, null);
 	}
 
 	////////// COLLISION ////////////
@@ -96,14 +80,16 @@ public class RollingBomb extends GameObject implements CollisionReactor {
 		return false;
 	}
 
+	private boolean canHurtPlayer;
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		if (detectorObject instanceof Player == false)
 			return;
 
 		collidingReaction(detectorObject, false, () -> {
-			new PlayerFinder().getPlayer().removeHp();
-			explode();
+			if (canHurtPlayer)
+				new PlayerFinder().getPlayer().removeHp();
 		});
 	}
 
