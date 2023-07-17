@@ -6,6 +6,18 @@ OBJ-04 = Cyan Bomb Box Left
 OBJ-05 = Cyan Bomb Box Right
 OBJ-06 = Down Barrel
 OBJ-07 = Up Barrel
+OBJ-09 = Yellow Bomb Box Left
+OBJ-10 = Yellow Bomb Box Middle
+OBJ-11 = Yellow Bomb Box Right
+OBJ-12 = Cyan Shovel Box Left
+OBJ-13 = Cyan Shovel Box Middle
+OBJ-14 = Cyan Shovel Box Right
+OBJ-15 = Cyan Shovel Box Up
+OBJ-16 = Lake Left Part
+OBJ-17 = Lake
+OBJ-18 = Geode Room
+OBJ-19 = Geodes Pieces
+
 
 ///// DOWN /////
 

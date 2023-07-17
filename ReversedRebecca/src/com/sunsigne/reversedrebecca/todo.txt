@@ -237,6 +237,7 @@
 	
 	////////// MOLE 0 ////////////
 	
+	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
 	rajouter les coffres aux endroits prévus sur la map
 	
 	////////// SONS ////////////
