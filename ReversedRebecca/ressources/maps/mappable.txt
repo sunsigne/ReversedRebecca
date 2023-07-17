@@ -138,10 +138,11 @@ Note: since an animation starts as soon as it is placed, it is much more interes
 
 ////// ROCHERS / ROCKS //////
 
-Red = 128 plus ou moins X (jusqu'à 7) / 128 plus or minus X (up to 7)
-Green = 128 plus ou moins Y (jusqu'à 7) / 128 plus or minus Y (up to 7)
+Red = 128 plus ou moins X (jusqu'à 8) / 128 plus or minus X (up to 8)
+Green = 128 plus ou moins Y (jusqu'à 8) / 128 plus or minus Y (up to 8)
 Blue = dépend du rocher / depends on the rock
 
+Mur / Wall -> 255
 Rocher Pyramidale / Pyramidal Rock -> 254
 Petit Rocher / Small Rock -> 253
 Rocher Plat / Flat Rock -> 252

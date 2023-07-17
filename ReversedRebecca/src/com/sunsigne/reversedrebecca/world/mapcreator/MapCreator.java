@@ -108,9 +108,9 @@ public class MapCreator {
 	}
 
 	private void loadRocks(LAYER layer, int red, int green, int blue, int x, int y) {
-		boolean valid_red = 121 <= red && red <= 135;
-		boolean valid_green = 121 <= green && green <= 135;
-		boolean valid_blue = 240 <= blue;
+		boolean valid_red = 120 <= red && red <= 136;
+		boolean valid_green = 120 <= green && green <= 136;
+		boolean valid_blue = 241 <= blue;
 
 		if (valid_red && valid_green && valid_blue) {
 

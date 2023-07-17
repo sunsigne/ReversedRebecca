@@ -55,7 +55,7 @@
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	0h20 = relier la fin du niveau à l'écran de fin de démo
 
-	5h00 : correction de bugs
+	4h30 : correction de bugs
 	20h : fix et corrections des retours tests
 	
 	note : appeler cette version "version : geekali 2023"

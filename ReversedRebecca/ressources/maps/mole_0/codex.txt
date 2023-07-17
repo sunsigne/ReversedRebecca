@@ -5,10 +5,12 @@ OBJ-01 = World Setup
 OBJ-04 = Cyan Bomb Box Left
 OBJ-05 = Cyan Bomb Box Right
 OBJ-06 = Down Barrel
+OBJ-07 = Up Barrel
 
 ///// DOWN /////
 
 OBJ-02 = Down Setup
+OBJ-08 = Rock
 
 ///// DOWNER /////
 
