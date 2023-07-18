@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class BlastXBoss extends BossObject {
 
@@ -16,7 +17,16 @@ public class BlastXBoss extends BossObject {
 
 	@Override
 	public int get_num_of_patterns_before_resting() {
-		return 2;
+		switch (DifficultyOption.getDifficulty()) {
+		case EASY:
+			return 1;
+		case NORMAL:
+			return 2;
+		case HARD:
+			return 3;
+		default:
+			return 2;
+		}
 	}
 
 	////////// PATTERN ////////////
@@ -32,7 +42,7 @@ public class BlastXBoss extends BossObject {
 	private BossPattern getThrowingBigBombPattern() {
 		return new BlastXThrowingBigBombPattern(this, 120);
 	}
-	
+
 	@Override
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);

@@ -1,11 +1,13 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 
 public abstract class BossObject extends LivingObject {
 
@@ -31,6 +33,7 @@ public abstract class BossObject extends LivingObject {
 
 	public void activate() {
 		setCondition(CONDITION.GOOD);
+		setWalkingInPlace(true);
 		this.activated = true;
 	}
 
@@ -67,16 +70,38 @@ public abstract class BossObject extends LivingObject {
 				return;
 		}
 
+		// animation
+		facingPlayer();
+
 		if (patterns == null)
 			startRandomPatternCycle();
 	}
 
+	private void facingPlayer() {
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return;
+
+		PathFinder pathFinder = new PathFinder(this, player);
+		if (pathFinder.getPath() != DIRECTION.NULL) {
+			setFacing(pathFinder.getPath());
+		}
+	}
+
 	private void startRandomPatternCycle() {
 		BossPattern[] pattern_array = new BossPattern[0];
+		BossPattern pattern = null;
 
-		for (int index = 0; index < get_num_of_patterns_before_resting(); index++)
-			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array,
-					getRandomPattern());
+		for (int index = 0; index < get_num_of_patterns_before_resting(); index++) {
+			pattern = getRandomPattern();
+
+			if (index > 0) {
+				while (pattern.getClass() == pattern_array[index - 1].getClass())
+					pattern = getRandomPattern();
+			}
+
+			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, pattern);
+		}
 
 		var rest = new BossRestPattern(this);
 		pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, rest);

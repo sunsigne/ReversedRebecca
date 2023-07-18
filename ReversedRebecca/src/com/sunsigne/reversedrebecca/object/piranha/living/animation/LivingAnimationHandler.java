@@ -107,7 +107,9 @@ public class LivingAnimationHandler {
 
 	private LivingAnimation getStandingWalkingAnimation(LivingAnimation standingAnimation,
 			LivingAnimation walkingAnimation) {
-		if (living.isMotionless() || living.isStunned())
+		if (living.isWalkingInPlace())
+			return walkingAnimation;
+		else if (living.isMotionless() || living.isStunned())
 			return standingAnimation;
 		else
 			return walkingAnimation;

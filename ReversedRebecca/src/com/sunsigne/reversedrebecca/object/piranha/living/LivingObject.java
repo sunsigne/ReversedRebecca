@@ -93,6 +93,16 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 		this.condition = condition;
 	}
 
+	private boolean walkingInPlace;
+
+	public boolean isWalkingInPlace() {
+		return walkingInPlace;
+	}
+
+	public void setWalkingInPlace(boolean walkingInPlace) {
+		this.walkingInPlace = walkingInPlace;
+	}
+
 	////////// INVULNERABILITY ////////////
 
 	private boolean invulnerable;
