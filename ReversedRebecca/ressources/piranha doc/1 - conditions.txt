@@ -45,6 +45,17 @@ Le Type de Condition WONPUZZLE est vérifiée lorsque le puzzle aux coordonnées
 exemple : WONPUZZLE -> 34-31 = "Requête"
 
 
+////// BOSS //////
+
+
+Le Type de Condition BOSS est vérifiée au moment où un boss entre ou sort de sa phase de repos.
+exemple : BOSS -> REST = "Requête"
+
+La "Requête" sera effectué aussitôt que le boss entrera dans sa phase de repos. 
+
+Note : Pour vérifier si le joueur sort de sa phase de repos, remplacer le mot clé "REST" par "READY"
+
+
 ////// TALKED //////
 
 

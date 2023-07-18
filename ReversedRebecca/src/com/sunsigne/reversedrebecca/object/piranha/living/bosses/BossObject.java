@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
-import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 
@@ -17,10 +16,14 @@ public abstract class BossObject extends LivingObject {
 
 	////////// USEFUL ////////////
 
-	private void start(BossPattern pattern) {
+	private void start(BossPattern pattern, int delay) {
 		var handler = getHandler();
 		if (handler != null)
-			handler.addObject(pattern);
+			new GameTimer(delay, () -> handler.addObject(pattern));
+	}
+
+	private void start(BossPattern pattern) {
+		start(pattern, 0);
 	}
 
 	////////// STATE ////////////
@@ -47,13 +50,12 @@ public abstract class BossObject extends LivingObject {
 
 	public void nextPattern() {
 		patterns.cycle();
-		GenericListener start = () -> start(patterns.getState());
 
 		// recovery time between two single patterns
 		if (patterns.getState() instanceof BossRestPattern == false)
-			new GameTimer(90, start);
+			start(patterns.getState(), 90);
 		else
-			start.doAction();
+			start(patterns.getState());
 	}
 
 	////////// TICK ////////////
@@ -107,7 +109,7 @@ public abstract class BossObject extends LivingObject {
 		pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, rest);
 
 		patterns = new Cycloid<>(pattern_array);
-		start(patterns.getState());
+		start(patterns.getState(), 120);
 	}
 
 }

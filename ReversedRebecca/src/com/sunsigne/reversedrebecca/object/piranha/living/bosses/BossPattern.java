@@ -33,6 +33,8 @@ public abstract class BossPattern implements Updatable, RenderFree {
 	@Override
 	public void tick() {
 		time--;
+		selfDestructionIfNoBoss();
+
 		if (time > 0)
 			return;
 
@@ -41,6 +43,11 @@ public abstract class BossPattern implements Updatable, RenderFree {
 
 		if (getActionWhenFinished() != null)
 			getActionWhenFinished().doAction();
+	}
+
+	private void selfDestructionIfNoBoss() {
+		if (getBoss().getHandler() == null)
+			removeObject();
 	}
 
 }
