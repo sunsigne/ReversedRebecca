@@ -16,14 +16,14 @@ public abstract class BossObject extends LivingObject {
 
 	////////// USEFUL ////////////
 
-	private void start(BossPattern pattern, int delay) {
+	protected void start(BossPattern pattern) {
+		start(pattern, 0);
+	}
+
+	protected void start(BossPattern pattern, int delay) {
 		var handler = getHandler();
 		if (handler != null)
 			new GameTimer(delay, () -> handler.addObject(pattern));
-	}
-
-	private void start(BossPattern pattern) {
-		start(pattern, 0);
 	}
 
 	////////// STATE ////////////
@@ -40,22 +40,48 @@ public abstract class BossObject extends LivingObject {
 		this.activated = true;
 	}
 
+	////////// EVOLUTION ////////////
+
+	private int evolution;
+
+	public int getEvolution() {
+		return evolution;
+	}
+
+	public void evolve() {
+		evolution++;
+	}
+
 	////////// PATTERN ////////////
 
 	protected Cycloid<BossPattern> patterns;
 
 	public abstract BossPattern getRandomPattern();
 
+	public BossPattern getDifferentRandomPattern(BossPattern pattern) {
+		BossPattern rad_pattern = getRandomPattern();
+
+		while (rad_pattern.getClass() == pattern.getClass())
+			rad_pattern = getRandomPattern();
+
+		rad_pattern.setPatternTimeInSec(pattern.getPatternTimeInSec());
+		rad_pattern.setActionWhenFinished(null);
+		return rad_pattern;
+	}
+
 	public abstract int get_num_of_patterns_before_resting();
 
 	public void nextPattern() {
+		if (patterns == null)
+			return;
+
 		patterns.cycle();
 
 		// recovery time between two single patterns
 		if (patterns.getState() instanceof BossRestPattern == false)
 			start(patterns.getState(), 90);
 		else
-			start(patterns.getState());
+			start(patterns.getState(), 30);
 	}
 
 	////////// TICK ////////////
@@ -90,7 +116,7 @@ public abstract class BossObject extends LivingObject {
 		}
 	}
 
-	private void startRandomPatternCycle() {
+	protected void startRandomPatternCycle() {
 		BossPattern[] pattern_array = new BossPattern[0];
 		BossPattern pattern = null;
 
@@ -109,7 +135,7 @@ public abstract class BossObject extends LivingObject {
 		pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, rest);
 
 		patterns = new Cycloid<>(pattern_array);
-		start(patterns.getState(), 120);
+		start(patterns.getState(), 90);
 	}
 
 }

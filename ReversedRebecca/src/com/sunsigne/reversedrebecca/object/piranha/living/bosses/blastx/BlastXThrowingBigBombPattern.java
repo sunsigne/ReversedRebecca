@@ -8,13 +8,7 @@ public class BlastXThrowingBigBombPattern extends BlastXThrowingBombPattern {
 
 	public BlastXThrowingBigBombPattern(BossObject boss, int delay_between_two_attacks) {
 		super(boss, delay_between_two_attacks);
-	}
-
-	////////// PATTERN ////////////
-
-	@Override
-	public int getPatternTimeInSec() {
-		return 12;
+		setPatternTimeInSec(10);
 	}
 
 	////////// TICK ////////////

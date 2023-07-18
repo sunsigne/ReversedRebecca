@@ -18,6 +18,12 @@ public class GameTimer implements Updatable, RenderFree {
 	}
 
 	public GameTimer(int timeInTicks, boolean absolute, GenericListener listener) {
+		if (timeInTicks <= 0) {
+			if (listener != null)
+				listener.doAction();
+			return;
+		}
+
 		if (World.get() == null)
 			return;
 
@@ -25,7 +31,7 @@ public class GameTimer implements Updatable, RenderFree {
 			this.handler = LAYER.DEBUG.getHandler();
 		else
 			this.handler = World.get().getLayer(false).getHandler();
-		
+
 		handler.addObject(this);
 
 		this.time = timeInTicks;

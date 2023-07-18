@@ -9,16 +9,8 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 public class BlastXBombFromSkyPattern extends BossPattern {
 
 	public BlastXBombFromSkyPattern(BossObject boss, int delay_between_two_attacks) {
-		super(boss);
-
+		super(boss, 8);
 		this.delay_between_two_attacks = delay_between_two_attacks;
-	}
-
-	////////// PATTERN ////////////
-
-	@Override
-	public int getPatternTimeInSec() {
-		return 10;
 	}
 
 	////////// TICK ////////////

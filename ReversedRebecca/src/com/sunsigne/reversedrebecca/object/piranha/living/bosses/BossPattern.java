@@ -7,9 +7,11 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BossPattern implements Updatable, RenderFree {
 
-	public BossPattern(BossObject boss) {
+	public BossPattern(BossObject boss, int pattern_time_in_sec) {
 		this.boss = boss;
-		time = getPatternTimeInSec() * Game.SEC;
+		this.pattern_time_in_sec = pattern_time_in_sec;
+
+		setActionWhenFinished(() -> getBoss().nextPattern());
 	}
 
 	////////// PATTERN ////////////
@@ -20,10 +22,24 @@ public abstract class BossPattern implements Updatable, RenderFree {
 		return boss;
 	}
 
-	public abstract int getPatternTimeInSec();
+	private int pattern_time_in_sec;
+
+	public void setPatternTimeInSec(int pattern_time_in_sec) {
+		this.pattern_time_in_sec = pattern_time_in_sec;
+	}
+
+	public int getPatternTimeInSec() {
+		return pattern_time_in_sec;
+	}
+
+	private GenericListener actionWhenFinished;
+
+	public void setActionWhenFinished(GenericListener actionWhenFinished) {
+		this.actionWhenFinished = actionWhenFinished;
+	}
 
 	public GenericListener getActionWhenFinished() {
-		return null;
+		return actionWhenFinished;
 	}
 
 	////////// TICK ////////////
@@ -32,15 +48,14 @@ public abstract class BossPattern implements Updatable, RenderFree {
 
 	@Override
 	public void tick() {
-		time--;
+		time++;
 		selfDestructionIfNoBoss();
 
-		if (time > 0)
+		if (time < getPatternTimeInSec() * Game.SEC)
 			return;
 
-		getBoss().nextPattern();
 		removeObject();
-
+		
 		if (getActionWhenFinished() != null)
 			getActionWhenFinished().doAction();
 	}

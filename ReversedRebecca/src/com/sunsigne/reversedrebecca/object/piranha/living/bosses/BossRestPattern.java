@@ -7,24 +7,16 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.BossCondition;
 public class BossRestPattern extends BossPattern {
 
 	public BossRestPattern(BossObject boss) {
-		super(boss);
-	}
+		super(boss, 7);
 
-	////////// PATTERN ////////////
-
-	@Override
-	public int getPatternTimeInSec() {
-		return 7;
-	}
-
-	@Override
-	public GenericListener getActionWhenFinished() {
-		GenericListener listener = () -> {
+		GenericListener listener = getActionWhenFinished();
+		setActionWhenFinished(() -> {
 			getBoss().setCondition(CONDITION.GOOD);
 			new BossCondition().registerValue("READY");
+			getBoss().evolve();
 			getBoss().patterns = null;
-		};
-		return listener;
+			listener.doAction();
+		});
 	}
 
 	////////// TICK ////////////
