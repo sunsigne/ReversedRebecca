@@ -27,7 +27,7 @@
 	à supprimer - le memory du labo sur le scénario (geekali feature for ws_geekali)
 	à supprimer - mole 0 le coffre en +
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
-	à supprimer - la musique troll et le visage troll de blast
+	à supprimer - la musique troll, celle de fin de démo et le visage troll de blast
 	à supprimer - la résurection à la va vite du joueur
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été mis à 5 au lieu de 3
@@ -40,7 +40,6 @@
 	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	2h00 = ajouter un bouton 'ajouter sur steam"
-	4h00 = ajouter un message de fin de démo pour donner envie (page steam + niveau débug)
 	2h00 = créer un Dave spécial pour la démo
 	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
@@ -85,6 +84,8 @@
 
 	////////// DIFFICILE ////////////
 	
+	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
+	augmenter la difficulté du boss Blast X (3 patterns en même temps après 1 loop)
 	relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
 	le système de résurrection après KO doit être créé
 	créer un moyen de recuppérer de la vie
