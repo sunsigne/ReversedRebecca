@@ -28,7 +28,9 @@
 	à supprimer - mole 0 le coffre en +
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
 	à supprimer - la musique troll et le visage troll de blast
-	à rétablir - le jouer n'est pas censé être invulnérable sur ce niveau
+	à supprimer - la résurection à la va vite du joueur
+	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
+	à rétablir - Userdata & class Player : les PV ont actuellement été mis à 5 au lieu de 3
 
 	0h30 text lvl plante lorsque la couleur "BROWN" est choisie"
 
@@ -51,6 +53,7 @@
 	5h00 = créer les piranha des sous-terrain (map + piranhas)
 	2h00 = créer le couloir obscrure des éboulements
 	créer le combat de boss dans le niveau du sous-terrain :
+	0h30 faire un trou rond au lieu d'un rond carré
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	0h20 = relier la fin du niveau à l'écran de fin de démo
 
@@ -86,6 +89,7 @@
 	le système de résurrection après KO doit être créé
 	créer un moyen de recuppérer de la vie
 	créer un système de checkpoint avant les combats de boss ?
+	la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
 	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -102,7 +106,6 @@
 
 	////////// FACILE ////////////
 
-	les PV ont actuellement été mis à 6 au lieu de 3
 	transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
 	mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	créer un debug mode pour activer les raccourcis clavier de dev ?

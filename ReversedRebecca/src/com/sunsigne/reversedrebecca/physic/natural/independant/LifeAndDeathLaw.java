@@ -32,10 +32,10 @@ public class LifeAndDeathLaw extends IndependantLaw {
 		if (health.isRegisteredAsDead())
 			return;
 
-		health.setStunned(true);
-		health.setCondition(CONDITION.KO);
-		health.registeredAsDead(true);
-		health.sendToGround();
+		//health.setStunned(true);
+		//health.setCondition(CONDITION.KO);
+		//health.registeredAsDead(true);
+		//health.sendToGround();
 	}
 
 	////////// RENDER ////////////
