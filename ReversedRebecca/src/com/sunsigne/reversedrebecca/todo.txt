@@ -48,13 +48,9 @@
 	4h00 = succès : regarder le todo et le faire
 	
 	1h00 = animation de fuite de blast la première fois (les 2 chemins)
-	0h30 = vérifier et adapter les musiques des sous-terrain
 	5h00 = créer les piranha des sous-terrain (map + piranhas)
 	2h00 = créer le couloir obscrure des éboulements
 	créer le combat de boss dans le niveau du sous-terrain :
-	2h00 = créer animations de blast-X ?
-	2h00 = créer texture et animation des bombes (faire en sorte que le boss regarde en direction du joueur)
-	8h00 = créer 3 à 5 paternes de boss
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	0h20 = relier la fin du niveau à l'écran de fin de démo
 
@@ -68,6 +64,7 @@
 	
 	////////// EN COURS ////////////
 
+	présicer dans les mappable les pastilles de boss
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
@@ -85,7 +82,10 @@
 
 	////////// DIFFICILE ////////////
 	
+	relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
 	le système de résurrection après KO doit être créé
+	créer un moyen de recuppérer de la vie
+	créer un système de checkpoint avant les combats de boss ?
 	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
 	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -102,6 +102,9 @@
 
 	////////// FACILE ////////////
 
+	les PV ont actuellement été mis à 6 au lieu de 3
+	transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
+	mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	créer un debug mode pour activer les raccourcis clavier de dev ?
 	il faut créer le design des couches de light et de sous sol des maps !
 	il faudra penser à faire les lumières dans les niveaux

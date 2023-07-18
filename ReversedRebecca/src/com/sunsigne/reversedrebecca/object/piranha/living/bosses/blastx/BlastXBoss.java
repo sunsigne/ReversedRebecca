@@ -38,7 +38,7 @@ public class BlastXBoss extends BossObject {
 	protected void start(BossPattern pattern, int delay) {
 		
 		// first patterns
-		if (getEvolution() == 0) {
+		if (getEvolution() <= 1) {
 			super.start(pattern, delay);
 			return;
 		}
