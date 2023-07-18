@@ -30,13 +30,13 @@
 	à supprimer - la musique troll, celle de fin de démo et le visage troll de blast
 	à supprimer - la résurection à la va vite du joueur
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
-	à rétablir - Userdata & class Player : les PV ont actuellement été mis à 5 au lieu de 3
+	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
-	0h30 text lvl plante lorsque la couleur "BROWN" est choisie"
+	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
 
 	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
 
-	?h?? = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ? (cinématique d'intro ?)
+	5h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ? (cinématique d'intro ?)
 	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	2h00 = ajouter un bouton 'ajouter sur steam"
@@ -44,29 +44,26 @@
 	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
-	?h?? = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
+	20h0 = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	4h00 = succès : regarder le todo et le faire
-	
-	1h00 = animation de fuite de blast la première fois (les 2 chemins)
-	5h00 = créer les piranha des sous-terrain (map + piranhas)
+
+	5h00 = créer les piranha des sous-terrain (map + piranhas) :	
+	3h00 = animation de fuite de blast la première fois (les 2 chemins) (+ le cas où on ne le voit jamais ?)
 	2h00 = créer le couloir obscrure des éboulements
 	créer le combat de boss dans le niveau du sous-terrain :
-	0h30 faire un trou rond au lieu d'un rond carré
-	0h20 = créer le script piranha de victoire (creusage) raccourci
-	0h20 = relier la fin du niveau à l'écran de fin de démo
 
 	4h30 : correction de bugs
 	10h : fix et corrections des retours tests
 	
 	note : appeler cette version "version : geekali 2023"
 	succès : bienvenue au geekali ?
-	succès : finir la démo ?
 	faire en sorte que quitter cette version reset la sauvegarde !
 	
 	////////// EN COURS ////////////
 
-	présicer dans les mappable les pastilles de boss
+	EndGameRequest est un peu nulle, et n'est pas repertoriée dans la doc
+	préciser dans les mappable les pastilles de boss & des hostiles objets
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
@@ -254,6 +251,7 @@
 	agrandir la carte de sorte qu'on ne voit pas les bords
 	
 	boss : 
+	0h20 = créer le script piranha de victoire (creusage) raccourci
 	les patterns du boss et leurs images peuvent être améliorer
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)

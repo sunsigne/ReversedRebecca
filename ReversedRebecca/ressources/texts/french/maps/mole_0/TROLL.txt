@@ -1,1 +1,4 @@
 blast-x = DOWN = troll = Il#va#falloir#attendre#la#version#finale#du#jeu#!
+rebecca = RIGHT = troll = HOOOOO!
+blast-x = RIGHT = troll_var = HOOOOO!
+rebecca = DOWN = troll_var = HOOOOO!

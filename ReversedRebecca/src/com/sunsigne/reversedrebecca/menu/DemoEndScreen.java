@@ -239,7 +239,8 @@ public class DemoEndScreen implements Updatable {
 	private void loadTitleScreen() {
 		LAYER.LOADING.addObject(new LoadingScreen());
 
-		World.get().destroy();
+		if (World.get() != null)
+			World.get().destroy();
 		new TitleScreen(TitleScreen.PLAY);
 
 		LAYER.LOADING.getHandler().clear();
