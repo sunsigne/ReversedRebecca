@@ -48,9 +48,10 @@
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	4h00 = succès : regarder le todo et le faire
 
+	mole_0
 	5h00 = créer les piranha des sous-terrain (map + piranhas) :
 	3h00 = animation de fuite de blast la première fois (les 2 chemins) (+ le cas où on ne le voit jamais ?)
-	2h00 = créer le couloir obscrure des éboulements
+	créer une voix pour Blast-X (important, pour éviter les faux positif rapports d'erreur)
 
 	4h30 : correction de bugs
 	10h : fix et corrections des retours tests
