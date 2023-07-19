@@ -1,0 +1,4 @@
+blast-x = LEFT = happy = Tiens,#je#me#demandais#justement#d'où@venaient#tout#ces#bruits#dans#mes#galeries.
+rebecca = RIGHT = determinated = Tu#dois#être#Blast-X.@J'ai#une#ou#deux#questions#à#te#poser.
+blast-x = LEFT = happy = J'ai#une#meilleure#idée…#J'ai#de#nouveaux@jouets#à#tester,#tu#vas#servir#de#cobaille#!
+rebecca = RIGHT = no_sens_var = Pardon#?
