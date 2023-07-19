@@ -18,14 +18,23 @@ OBJ-17 = Lake
 OBJ-18 = Geode Room
 OBJ-19 = Geodes Pieces
 
-
 ///// DOWN /////
 
 OBJ-02 = Down Setup
 OBJ-08 = Rock
+OBJ-20 = Poop Bucket
+OBJ-21 = Barrel
+OBJ-22 = Straw Bed
+OBJ-23 = Green Shovel Box
+OBJ-29 = Mush Room
 
 ///// DOWNER /////
 
 NPC-02 = The Mole Boss
 NPC-03 = Dig Animation Helper
 OBJ-03 = Downer Setup
+OBJ-24 = Tool Box Up
+OBJ-25 = Tool Box Left
+OBJ-26 = Tool Box Down
+OBJ-27 = Tool Box Middle
+OBJ-28 = Box

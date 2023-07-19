@@ -6,3 +6,5 @@ TAKE = Key2 % prendre
 ///// DOWN /////
 
 ///// DOWNER /////
+
+FILL_UP = Key2 % faire#le#plein

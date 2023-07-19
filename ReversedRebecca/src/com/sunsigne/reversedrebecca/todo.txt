@@ -48,17 +48,16 @@
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	4h00 = succès : regarder le todo et le faire
 
-	5h00 = créer les piranha des sous-terrain (map + piranhas) :	
+	5h00 = créer les piranha des sous-terrain (map + piranhas) :
 	3h00 = animation de fuite de blast la première fois (les 2 chemins) (+ le cas où on ne le voit jamais ?)
 	2h00 = créer le couloir obscrure des éboulements
-	créer le combat de boss dans le niveau du sous-terrain :
 
 	4h30 : correction de bugs
 	10h : fix et corrections des retours tests
 	
 	note : appeler cette version "version : geekali 2023"
 	succès : bienvenue au geekali ?
-	faire en sorte que quitter cette version reset la sauvegarde !
+	faire en sorte que démmarer le jeu reset la sauvegarde !
 	
 	////////// EN COURS ////////////
 
@@ -248,6 +247,7 @@
 	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
 	rajouter les coffres aux endroits prévus sur la map
 	finir la salle des géodes - son au sol + réaction à l'entrée + possibilité d'en prendre une (ne pas oublier le son joué lors de la prise) : dialogueS (elle hésite puis accepte) & sauvegarde (que ça soit pris ou non, souvenir d'avoir vu la salle ? - ça peut être punitif si le joueur n'est pas explicitement rentrée DANS la salle, bien gérer son coup)
+	finir la salle des champignons
 	agrandir la carte de sorte qu'on ne voit pas les bords
 	
 	boss : 
