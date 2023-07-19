@@ -44,6 +44,10 @@ public abstract class BossPattern implements Updatable, RenderFree {
 
 	////////// TICK ////////////
 
+	public void interrupt() {
+		time = 999;
+	}
+
 	private int time;
 
 	@Override
@@ -55,7 +59,7 @@ public abstract class BossPattern implements Updatable, RenderFree {
 			return;
 
 		removeObject();
-		
+
 		if (getActionWhenFinished() != null)
 			getActionWhenFinished().doAction();
 	}

@@ -86,6 +86,11 @@ public abstract class BossObject extends LivingObject {
 
 	////////// TICK ////////////
 
+	public void interrupt() {
+		if(patterns != null);
+			patterns.getState().interrupt();
+	}
+	
 	@Override
 	public void tick() {
 		super.tick();
@@ -135,7 +140,7 @@ public abstract class BossObject extends LivingObject {
 		pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, rest);
 
 		patterns = new Cycloid<>(pattern_array);
-		start(patterns.getState(), 90);
+		start(patterns.getState(), 60);
 	}
 
 }

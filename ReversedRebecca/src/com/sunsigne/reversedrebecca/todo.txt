@@ -77,8 +77,9 @@
 
 	////////// DIFFICILE ////////////
 	
+	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
 	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
-	augmenter la difficulté du boss Blast X (3 patterns en même temps après 1 loop)
+	augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
 	relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
 	le système de résurrection après KO doit être créé
 	créer un moyen de recuppérer de la vie
@@ -250,7 +251,6 @@
 	
 	boss : 
 	arranger le dialogue d'avant combat
-	ajouter une sécurité qui fait que 3 trous creusé = retour en phase dattaque du boss
 	ajouter un passage qui expliquerait par où le boss a pu passer
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	les patterns du boss et leurs images peuvent être améliorer

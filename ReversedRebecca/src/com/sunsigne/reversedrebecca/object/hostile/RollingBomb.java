@@ -19,7 +19,7 @@ public class RollingBomb extends GameObject implements CollisionReactor {
 	public RollingBomb(int x, int y) {
 		super(x, y, Size.XL / 2, Size.XL / 2);
 	}
-	
+
 	public RollingBomb(int x, int y, int w, int h) {
 		super(x, y, w, h);
 	}
@@ -60,9 +60,11 @@ public class RollingBomb extends GameObject implements CollisionReactor {
 	}
 
 	protected void explode() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
-
 		var handler = getHandler();
+		if (handler == null)
+			return;
+
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 		handler.removeObject(this);
 		handler.addObject(new ExplodeRubbleAnimationObject(getX(), getY()));
 	}
