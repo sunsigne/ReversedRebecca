@@ -23,6 +23,7 @@ public class FilePath {
 	
 	public static final String TEST = "test";
 	public static final String TUTORIAL = "tutorial";
+	public static final String WARNING = "warning";
 	public static final String LVL000 = "rebeccas_room_000";
 	
 }

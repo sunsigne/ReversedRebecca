@@ -49,7 +49,6 @@
 	!! A FAIRE !!
 	0h10 = note : appeler cette version "version : geekali 2023"
 	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !	
-	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	2h00 = créer un Dave spécial pour la démo
 	0h20 = dans mole_0, les outils dans la salle de boss devraient apparaitre et être pickup instantannément, tout en conservant le TA de l'objet afin d'éviter un softlock
 	
@@ -162,6 +161,7 @@
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	
+	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)

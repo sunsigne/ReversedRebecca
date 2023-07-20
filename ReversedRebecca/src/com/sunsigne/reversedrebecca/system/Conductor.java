@@ -2,11 +2,13 @@ package com.sunsigne.reversedrebecca.system;
 
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class Conductor {
 
@@ -28,7 +30,7 @@ public class Conductor {
 		new RessourceLoader().loadRessources();
 		Game.getInstance().forceLoop();
 
-		startGame();
+		new World(FilePath.WARNING);
 	}
 
 	public void stopApp() {

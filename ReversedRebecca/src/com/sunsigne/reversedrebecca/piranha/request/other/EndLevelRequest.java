@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class EndLevelRequest implements Request {
@@ -50,6 +51,7 @@ public class EndLevelRequest implements Request {
 		if (endType.equalsIgnoreCase("START_GAME")) {
 			LAYER.LOADING.addObject(new LoadingScreen(true));
 			World.get().destroy();
+			new Conductor().startGame();
 			return;
 		}
 
