@@ -33,9 +33,11 @@ public class BigRollingBomb extends RollingBomb implements CollisionReactor {
 
 	@Override
 	protected void explode() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_large");
-
 		var handler = getHandler();
+		if (handler == null)
+			return;
+		
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_large");
 		handler.removeObject(this);
 		handler.addObject(new ExplodeRubbleAnimationObject(getX(), getY(), Size.XL, Size.XL));
 

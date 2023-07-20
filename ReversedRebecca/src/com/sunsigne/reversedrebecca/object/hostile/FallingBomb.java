@@ -37,9 +37,11 @@ public class FallingBomb extends GameObject implements CollisionReactor {
 	}
 
 	private void explode() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
-
 		var handler = getHandler();
+		if (handler == null)
+			return;
+		
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 		handler.removeObject(this);
 		handler.addObject(new ExplodeRubbleAnimationObject(getX(), getY()));
 	}

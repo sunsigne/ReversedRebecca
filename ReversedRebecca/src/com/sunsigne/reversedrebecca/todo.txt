@@ -48,9 +48,7 @@
 	
 	!! A FAIRE !!
 	0h10 = note : appeler cette version "version : geekali 2023"
-	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !	
-	2h00 = créer un Dave spécial pour la démo
-	0h20 = dans mole_0, les outils dans la salle de boss devraient apparaitre et être pickup instantannément, tout en conservant le TA de l'objet afin d'éviter un softlock
+	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !
 	
 	!! LABORATORY !!
 	20h0 = lvl001 s"assurer qu'il soit "finissable" :
@@ -83,6 +81,7 @@
 
 	////////// EN COURS ////////////
 
+	gui gug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
