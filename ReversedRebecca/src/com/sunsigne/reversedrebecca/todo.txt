@@ -55,7 +55,6 @@
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	0h30 = On peut se faire enfermer dans les toilettes avec Marie...
 	0h10 = à enregister : - le type de scénario (sortie ou enquête)
-	0h10 = ajouter l'animatinon d'explosion quand Vladimir fait sauter l'entrée
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
 	0h20 = toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
 	0h30 = rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
