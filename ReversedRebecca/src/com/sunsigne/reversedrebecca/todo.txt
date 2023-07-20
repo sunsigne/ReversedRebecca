@@ -77,6 +77,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	ExplosionBrightnessLaw est pas terrible, à arranger
 	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
 	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
 	augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
