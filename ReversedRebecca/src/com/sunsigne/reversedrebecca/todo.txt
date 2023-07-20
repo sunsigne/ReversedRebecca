@@ -33,33 +33,59 @@
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
+	!! SUCCESS !!
+	4h00 = succès : regarder le todo et le faire
+	succès : bienvenue au geekali ?
+
+	!! BUG !!
+	4h30 : correction de bugs
 	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
-
+	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
+	
+	!! RETOUS DE TEST !!
+	10h0 : fix et corrections des retours tests
 	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
-
+	
+	!! A FAIRE !!
+	0h10 = note : appeler cette version "version : geekali 2023"
+	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !	
 	5h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ? (cinématique d'intro ?)
 	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
-	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
-	2h00 = ajouter un bouton 'ajouter sur steam"
 	2h00 = créer un Dave spécial pour la démo
-	1h00 = réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
-	2h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
-	20h0 = lvl001 s"assurer qu'il soit "finissable" (vérifier le todo)
+	!! LABORATORY !!
+	20h0 = lvl001 s"assurer qu'il soit "finissable" :
+	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
+	0h30 = On peut se faire enfermer dans les toilettes avec Marie...
+	0h10 = à enregister : - le type de scénario (sortie ou enquête)
+	0h10 = ajouter l'animatinon d'explosion quand Vladimir fait sauter l'entrée
+	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
+	0h20 = toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
+	0h30 = rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
+	0h10 = machine à café "pas disponible sur cette version"
+	6h00 = la totalité des points dans "scénarion : inquery" est à vérifié			
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
-	4h00 = succès : regarder le todo et le faire
+	0h30 = préciser que quelques données ne sont pas encore sauvegardées, tq le comportent dans le niveau précédent & dans celui-ci
+	8h00 = autres / imprévu / bugs / feature à régler
+	3h00 = les éléments de la liste "peut-être" juste en dessous de ce texte-ci de la todo list
+		
+	!! LABORATORY !!
+	!!!!!!!!!!!!!!!!
+	LE ELEMENTS SUIVANT SONT EN DOUBLONS DANS LA PARTIE LVL001 : A LES SUPPRIMER SI ON LES A FAIT
+	
+	peut-être pour geekali :
+	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
+	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
+	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
+	finir de coder le cas où Alicia prend les clefs pour nous
+	
+	LE ELEMENTS SUIVANT SONT EN DOUBLONS DANS LA PARTIE LVL001 : A LES SUPPRIMER SI ON LES A FAIT
+	!!!!!!!!!!!!!!!!
 
-	4h30 : correction de bugs
-	10h : fix et corrections des retours tests
-	
-	note : appeler cette version "version : geekali 2023"
-	succès : bienvenue au geekali ?
-	faire en sorte que démmarer le jeu reset la sauvegarde !
-	
 	////////// EN COURS ////////////
 
 	EndGameRequest est un peu nulle, et n'est pas repertoriée dans la doc
-	préciser dans les mappable les pastilles de boss & des hostiles objets
+	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
@@ -77,6 +103,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
 	ExplosionBrightnessLaw est pas terrible, à arranger
 	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
 	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
@@ -144,6 +171,7 @@
 	////////// RR000 ////////////
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
+	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
 	traduction english pas fini (les actions)
 	
 	////////// WS000 ////////////
@@ -153,15 +181,14 @@
 
 	////////// LVL001 ////////////
 
-	les différents karmas doivent affecter le scénario !
-	ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
+	peut-être pour geekali :
 	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
-	rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
 	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
+	finir de coder le cas où Alicia prend les clefs pour nous
+
+	les différents karmas doivent affecter le scénario !
 	refaire les end lvl
-	ajouter l'animatino d'explosion quand Vladimir fait sauter l'entrée
 	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 	faire du décors à l'exterieur, et dans la salle de droite
 	scénario sadique pas encore faits
@@ -178,8 +205,7 @@
 	- Alicia + Dave : créer le TA du vol
 	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
 	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
-	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)
-	
+	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)	
 	post puzzle : 
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
@@ -218,9 +244,8 @@
 	- Alicia se moquer de sa situation (+ karma négatif)
 	- Le meutre de Alicia (+ karma psycopath)
 	
-	On peut se faire enfermer dans les toilettes avec Marie...
+	la machine à café affiche "indisponibilité sur cette version"
 	Quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
-	finir de coder le cas où Alicia prend les clefs pour nous
 	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?)
 	lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?
 	landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller

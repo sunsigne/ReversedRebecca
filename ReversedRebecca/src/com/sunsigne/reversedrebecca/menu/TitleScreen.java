@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.object.buttons.AchievementButton;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.CrashButton;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
+import com.sunsigne.reversedrebecca.object.buttons.SteamButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
@@ -21,12 +22,13 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
+import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
-import com.sunsigne.reversedrebecca.system.FormTask;
+import com.sunsigne.reversedrebecca.system.WebTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -45,6 +47,7 @@ public class TitleScreen extends MenuScreen {
 		createFlagLanguageButton();
 		createAchievementsButton();
 		createCrashButton();
+		createSteamButton();
 
 		createTestMapButton();
 	}
@@ -97,15 +100,21 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createCrashButton() {
-		GenericListener onPress = () -> new FormTask().sendRequest();
+		GenericListener onPress = () -> crashRequest();
 		ButtonObject button = new CrashButton(onPress, null);
+		LAYER.MENU.addObject(button);
+	}
+
+	private void createSteamButton() {
+		GenericListener onPress = () -> new WebTask().openHtml(WebTask.STEAM_LINK);
+		ButtonObject button = new SteamButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}
 
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
-		// placed exactly on the "hot water tap" in the kitchen
-		ButtonObject hidden_button = new TitleScreenButton("", 105, 250, 10, 10, onPress, null);
+		// placed exactly on the "power button" of the washing machine in the bathroom
+		ButtonObject hidden_button = new TitleScreenButton("", 111, 597, 10, 10, onPress, null);
 		LAYER.MENU.addObject(hidden_button);
 	}
 
@@ -147,6 +156,16 @@ public class TitleScreen extends MenuScreen {
 		int time = player.getCondition() == CONDITION.BED ? 4 : 0; // if in bed, must awake first
 		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
 		new GameTimer(time * Game.SEC, listener);
+	}
+
+	private void crashRequest() {
+		String crash_link = WebTask.CRASH_LINK_ENG;
+
+		String lang = Language.getInstance().getLang();
+		if (lang.equalsIgnoreCase("french"))
+			crash_link = WebTask.CRASH_LINK_FR;
+
+		new WebTask().openHtml(crash_link);
 	}
 
 	private void loadTestMap() {
