@@ -126,24 +126,23 @@ $ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
 TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
 $ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
 
+
 ////// END_LVL //////
 
 Le Type de Requête END_LVL permet de demander au programme de charger les nouveaux niveaux pour l'écran titre et pour le jeu en cours.
-Note : les demandes enregistrées par le Type de Requête SAVE (voir "requêtes memory.txt") sont traitées juste avant l'enregistrement des nouveaux niveaux.
+Attention ! Ce chargement s'effectuera différemment en fonction de la première Cible renseignée :
+
+- NORMAL : afficher l'écran de fin de niveau
+- QUIET : le joueur accèdera directement au niveau suivant
+- START_GAME : le joueur est envoyé à l'écran titre du jeu
+- END_GAME : le joueur est envoyé vers les crédits du jeu
+
+Note : les demandes enregistrées par le Type de Requête SAVE (voir "requêtes memory.txt") sont traitées aussitôt le Type de Requête END_LVL appelé (avant toute opération).
 
 exemple :
-WONPUZZLE -> 6-0 = END_LVL -> REBECCAS_ROOM_1, LVL001
+WONPUZZLE -> 6-0 = END_LVL -> NORMAL, REBECCAS_ROOM_1, LVL001
 
 Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1. Sur l'écran de victoire, les données affichées dépendront du karma du joueur (voir requêtes ressources : "Type de Requête DEED") et des compteurs (voir requêtes ressources : "Type de Requête COUNTER").
 
 Note : l'écran titre changeant est une mécanique très intéressante. Vous pouvez totalement l'ignorer, mais cela sera dommage de passer à côté de l'histoire qu'il peut raconter.
-
-
-////// END_LVL_QUIET //////
-
-Le Type de Requête END_LVL_QUIET a un fonctionnement très similaire au Type de Requête END_LVL; à la différence près que le niveau est chargé directement (càd sans passer par un écran de fin de niveau).
-
-exemple :
-WONPUZZLE -> 6-0 = END_LVL -> REBECCAS_ROOM_1, LVL001
-
-Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1.
+Note : dans le cas d'une première Cible "START_GAME", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites pour respecter la syntaxe attendue.

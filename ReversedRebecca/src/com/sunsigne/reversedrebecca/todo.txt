@@ -49,9 +49,9 @@
 	!! A FAIRE !!
 	0h10 = note : appeler cette version "version : geekali 2023"
 	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !	
-	5h00 = rr000 - qu'est ce qu'on fout là ? C'est quoi le but ? Le robot ? c'est quoi le contexte ? (cinématique d'intro ?)
 	4h00 = préciser à chaque lancement du jeu qu'il s'agit d'un jeu à choix (avant l'écran titre ? A chaque fois qu'on clique sur "jouer" ?)
 	2h00 = créer un Dave spécial pour la démo
+	0h20 = dans mole_0, les outils dans la salle de boss devraient apparaitre et être pickup instantannément, tout en conservant le TA de l'objet afin d'éviter un softlock
 	
 	!! LABORATORY !!
 	20h0 = lvl001 s"assurer qu'il soit "finissable" :
@@ -84,7 +84,6 @@
 
 	////////// EN COURS ////////////
 
-	EndGameRequest est un peu nulle, et n'est pas repertoriée dans la doc
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room

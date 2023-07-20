@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class Conductor {
 
-	////////// START & STOP ////////////
+	////////// APPLICATION ////////////
 
 	public void startApp() {
 
@@ -28,13 +28,19 @@ public class Conductor {
 		new RessourceLoader().loadRessources();
 		Game.getInstance().forceLoop();
 
-		new TitleScreen(TitleScreen.PLAY);
-		LAYER.LOADING.getHandler().clear();
-		PresetMousePos.usingPreset = false;
+		startGame();
 	}
 
 	public void stopApp() {
 		Game.getInstance().stop();
+	}
+
+	////////// GAME ////////////
+
+	public void startGame() {
+		new TitleScreen(TitleScreen.PLAY);
+		LAYER.LOADING.getHandler().clear();
+		PresetMousePos.usingPreset = false;
 	}
 
 }
