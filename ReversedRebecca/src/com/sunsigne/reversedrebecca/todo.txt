@@ -58,7 +58,6 @@
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
 	0h20 = toilette : on devrait pouvoir saboter la serrure même quand c'est trop tard (pour informer le joueur que ce choix existe)
 	0h30 = rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
-	0h10 = machine à café "pas disponible sur cette version"
 	6h00 = la totalité des points dans "scénarion : inquery" est à vérifié			
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	0h30 = préciser que quelques données ne sont pas encore sauvegardées, tq le comportent dans le niveau précédent & dans celui-ci

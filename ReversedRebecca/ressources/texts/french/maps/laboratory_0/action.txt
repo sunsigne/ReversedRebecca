@@ -40,6 +40,8 @@ SHUT_UP = Key2 % La#ferme#!
 WASH_AWAY_THE_JEANS_DIRTYNESS = Key2% laver#la#cochonnerie#de#Jean
 GET_ANGRY = Key1 % s'énerver
 SAS_KEY = Key3 % clé#?
+TAKE_COFFEE = Key1% café
+TAKE_TEA = Key2% thé
 
 ///// RIGHT AREA /////
 
