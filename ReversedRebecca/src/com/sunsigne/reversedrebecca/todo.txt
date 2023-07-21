@@ -52,11 +52,11 @@
 	
 	!! LABORATORY !!
 	20h0 = lvl001 s"assurer qu'il soit "finissable" :
+	0h10 = quand Eric crie de peur, il doit regarder en bas (ça semble ne pas être le cas)
 	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	0h30 = On peut se faire enfermer dans les toilettes avec Marie...
 	0h10 = à enregister : - le type de scénario (sortie ou enquête)
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	0h30 = rebecca devrait TOUJOURS (sauf psycopath ?) faire la remarque comme quoi la clé verte ne lui est pas utile (si c'est le cas)
 	6h00 = la totalité des points dans "scénarion : inquery" est à vérifié			
 	0h10 = lvl001 - créer le memory/save temporaire du scénario pour le ws_geekali
 	0h30 = préciser que quelques données ne sont pas encore sauvegardées, tq le comportent dans le niveau précédent & dans celui-ci
@@ -142,6 +142,7 @@
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
+	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
 	
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
@@ -191,6 +192,7 @@
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	scénario : exit
+	- si on commence à exploser des murs AVANT de libérer alicia, il faut prévoir sa réaction
 	- La machine à café !
 	- Sarah : après l'enguelade de Jean dans les toilettes
 	- Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)
