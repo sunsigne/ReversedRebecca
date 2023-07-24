@@ -66,7 +66,6 @@
 	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
 	20h0 = lvl001 s"assurer qu'il soit "finissable" :
 	0h10 = quand Eric crie de peur, il doit regarder en bas (ça semble ne pas être le cas)
-	0h10 = lvl001 - sarah qui parle de dave, on dirait qu'elle parle du dev, c'est confusant
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
 	8h00 = autres / imprévu / bugs / feature à régler :
 	- le comportement des deux portes du SAS sont incompatibles entre elles
