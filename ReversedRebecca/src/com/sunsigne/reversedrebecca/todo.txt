@@ -72,6 +72,7 @@
 
 	////////// EN COURS ////////////
 
+	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
 	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
