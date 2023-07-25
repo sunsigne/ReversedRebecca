@@ -67,8 +67,7 @@
 	!! LABORATORY !!
 	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	5h00 = lvl001 s"assurer qu'il soit "finissable" :
-	- créer le chemin où alicia ouvre les portes pour nous
+	1h30 = lvl001 s"assurer qu'il soit "finissable" :
 	- vérifier la cohérence globale, tester les bugs éventuels
 
 	////////// EN COURS ////////////
@@ -80,6 +79,7 @@
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation puzzler pour la résolution des coffres
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
+	ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
 	manette : regarder le todo et le faire
@@ -240,6 +240,7 @@
 	- Le meutre de Alicia (+ karma psycopath)
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
 	
+	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
 	obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes)
 	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter

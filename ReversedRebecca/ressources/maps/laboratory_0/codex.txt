@@ -92,3 +92,6 @@ OBJ-49 = Joseph SAS Key Checker
 
 NPC-17 = Eric
 OBJ-50 = Leaving Player Checker
+OBJ-51 = Green SAS Door Up
+OBJ-52 = Green SAS Door Left
+OBJ-53 = Green SAS Door Down
