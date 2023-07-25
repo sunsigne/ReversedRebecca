@@ -62,8 +62,11 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		}
 
 		delay = 0.15f;
-		if (isPlayerFutherThan(CAMERA.getX(), targetX, 0.3f))
-			CAMERA.setX(cameraX + (targetX - cameraX) * delay);
+		if (isPlayerFutherThan(CAMERA.getX(), targetX, 0.3f)) {
+			targetX = cameraX + (targetX - cameraX) * delay;
+			targetX = getBorderedTarget(targetX, true, true);
+			CAMERA.setX(targetX);
+		}
 	}
 
 	private void moveCameraByY(Player player) {
@@ -81,12 +84,15 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		}
 
 		delay = 0.2f;
-		if (isPlayerFutherThan(CAMERA.getY(), targetY, 0.3f))
-			CAMERA.setY(cameraY + (targetY - cameraY) * delay);
+		if (isPlayerFutherThan(CAMERA.getY(), targetY, 0.3f)) {
+			targetY = cameraY + (targetY - cameraY) * delay;
+			targetY = getBorderedTarget(targetY, false, true);
+			CAMERA.setY(targetY);
+		}
 	}
 
 	// prevent camera to protrude from the borders' map
-	private float getBorderedTarget(float target, boolean horizontal, boolean staticCamera) {
+	public float getBorderedTarget(float target, boolean horizontal, boolean staticCamera) {
 
 		// border left or up
 		if (target >= 0)

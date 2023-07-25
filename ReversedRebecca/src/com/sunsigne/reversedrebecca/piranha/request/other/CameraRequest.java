@@ -74,8 +74,11 @@ public class CameraRequest implements Request, CameraDependency {
 		if (player == null)
 			return;
 
-		CAMERA.setX(-player.getX() + (Window.WIDHT - player.getWidth()) / 2);
-		CAMERA.setY(-player.getY() + (Window.HEIGHT - player.getHeight()) / 2);
+		float targetX = -player.getX() + (Window.WIDHT - player.getWidth()) / 2;
+		float targetY = -player.getY() + (Window.HEIGHT - player.getHeight()) / 2;
+		
+		CAMERA.setX(camera.getBorderedTarget(targetX, true, true));
+		CAMERA.setY(camera.getBorderedTarget(targetY, false, true));
 	}
 
 }
