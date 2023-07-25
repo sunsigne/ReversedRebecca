@@ -67,9 +67,9 @@
 	20h0 = lvl001 s"assurer qu'il soit "finissable" :
 	0h10 = quand Eric crie de peur, il doit regarder en bas (ça semble ne pas être le cas)
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	8h00 = autres / imprévu / bugs / feature à régler :
-	- le comportement des deux portes du SAS sont incompatibles entre elles
-	- créer une fin de scénario exit par le haut et par l"entrée publique des visiteur
+	7h00 = autres / imprévu / bugs / feature à régler :
+	- le comportement des deux portes du SAS sont incompatibles entre elles	
+	- créer une fin de scénario exit par l"entrée publique des visiteur
 	- créer le chemin où alicia ouvre les portes pour nous
 
 	////////// EN COURS ////////////
@@ -217,6 +217,7 @@
 	- envoyer chier joseph ou non
 	- se faire pisser dessus (pas angélique)
 	- crier sur jean (pas angélique)
+	- (obj-50) le choix d'abandonner les gens sur place et de partir
 
 	à enregister :
 	- le type de scénario (sortie ou enquête)
@@ -238,7 +239,9 @@
 	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
 	- Alicia se moquer de sa situation (+ karma négatif)
 	- Le meutre de Alicia (+ karma psycopath)
+	- (obj-50) le choix d'abandonner les gens sur place et de partir
 	
+	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	la machine à café affiche "indisponibilité sur cette version"
 	Quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?)

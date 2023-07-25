@@ -91,3 +91,4 @@ OBJ-49 = Joseph SAS Key Checker
 ///// RIGHT AREA /////
 
 NPC-17 = Eric
+OBJ-50 = Leaving Player Checker

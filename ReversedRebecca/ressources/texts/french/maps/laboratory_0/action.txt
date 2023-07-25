@@ -47,3 +47,5 @@ TAKE_TEA = Key2% thé
 
 NO_I_CONTINUE = Key1 % non,#je#continue
 OK_I_STOP = Key2 % ok,#j'arrête
+COME_BACK = Key1 % revenir
+ABADON_EVERYONE = Key3 % abandonner#tout#le#monde
