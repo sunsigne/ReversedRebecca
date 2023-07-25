@@ -41,15 +41,16 @@
 	+ System.getProperty("line.separator")
 	+ "- certains comportements et dialogues de personnages"
 	+ System.getProperty("line.separator")
-	+ "- certaines conséquences liées à vos actions passées" 
+	+ "- certaines conséquences liées à vos actions (passées et présentes)"
 	);
+	-- ajouter dans ce message "certains objets"
 
 	!! SUCCESS !!
-	4h00 = succès : regarder le todo et le faire
-	succès : bienvenue au geekali ?
+	1h00 = succès : bienvenue au geekali ?
+	1h00 = succès : finir la démo
+	0h10 = mettre de côté le terminator
 
 	!! BUG !!
-	4h30 : correction de bugs
 	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
 	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
@@ -61,16 +62,15 @@
 	0h10 = note : appeler cette version "version : geekali 2023"
 	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !
 	0h10 = afficher le message de niveau pas terminé
+	1h00 = créer un bouton flêche sur l'écran de fin de démo pour revenir sur l'écran précédent
 	
 	!! LABORATORY !!
 	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
-	20h0 = lvl001 s"assurer qu'il soit "finissable" :
 	0h10 = quand Eric crie de peur, il doit regarder en bas (ça semble ne pas être le cas)
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	7h00 = autres / imprévu / bugs / feature à régler :
-	- le comportement des deux portes du SAS sont incompatibles entre elles	
-	- créer une fin de scénario exit par l"entrée publique des visiteur
+	5h00 = lvl001 s"assurer qu'il soit "finissable" :
 	- créer le chemin où alicia ouvre les portes pour nous
+	- vérifier la cohérence globale, tester les bugs éventuels
 
 	////////// EN COURS ////////////
 
@@ -241,6 +241,8 @@
 	- Le meutre de Alicia (+ karma psycopath)
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
 	
+	obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
+	créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes)
 	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	la machine à café affiche "indisponibilité sur cette version"
 	Quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
@@ -312,8 +314,8 @@
 	vérifier la couleur de tous les succès (+ choisir leur position)
 	
 	akward -> en vert ?
-	terminated -> condition à créer + à redesigner
-	coockie -> la bonne traduction en anglais serait plutôt "you are a fat girl, becky"
+	terminated -> condition à créer + à redesigner (il est dans le working)
+	cookie -> la bonne traduction en anglais serait plutôt "you are a fat girl, becky"
 	
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
