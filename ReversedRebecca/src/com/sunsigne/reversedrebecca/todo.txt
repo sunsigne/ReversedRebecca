@@ -66,7 +66,6 @@
 	
 	!! LABORATORY !!
 	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
-	0h10 = quand Eric crie de peur, il doit regarder en bas (ça semble ne pas être le cas)
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
 	5h00 = lvl001 s"assurer qu'il soit "finissable" :
 	- créer le chemin où alicia ouvre les portes pour nous
@@ -74,7 +73,7 @@
 
 	////////// EN COURS ////////////
 
-	gui gug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
+	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
