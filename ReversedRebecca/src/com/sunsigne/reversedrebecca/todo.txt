@@ -7,15 +7,6 @@
 
 	////////// VERSION PUBLIQUE ////////////
 
-	World - message d'erreur prévenant que le niveau du laboratoire n'est pas fini :
-	
-	start();
-
-	if(mapName.equalsIgnoreCase("laboratory_0"))
-		JOptionPane.showMessageDialog(null, "Le niveau auquel vous allez jouer n'est pas terminé en plus de contenir de nombreux bugs." + System.getProperty("line.separator") + "Je connais déjà ces bugs, merci de ne pas envoyer de rapport d'erreurs les concernant.");
-
-	LAYER.LOADING.getHandler().clear();
-	
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
@@ -33,17 +24,6 @@
 	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit"
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
-
-	JOptionPane.showMessageDialog(null, "Le niveau auquel vous allez jouer comporte des éléments non terminés, nottament :"
-	+ System.getProperty("line.separator")
-	+ System.getProperty("line.separator")
-	+ "- l'intégralité du scénario \"enquête\""
-	+ System.getProperty("line.separator")
-	+ "- certains comportements et dialogues de personnages"
-	+ System.getProperty("line.separator")
-	+ "- certaines conséquences liées à vos actions (passées et présentes)"
-	);
-	-- ajouter dans ce message "certains objets"
 
 	!! SUCCESS !!
 	1h00 = succès : bienvenue au geekali ?
@@ -71,6 +51,20 @@
 	- vérifier la cohérence globale, tester les bugs éventuels
 
 	////////// EN COURS ////////////
+
+	bug :
+	l'utilisation de la souris n'est pas claire
+	erreur fichier non trouvé pour l'achievement
+	adaptation de l'écran
+	rr000 si on ouvre trop tard à la porte (c'est qui), le dialogue de la vérité de sarah devrait être 'je suis arrivé trop tard"
+	c'est pas clair quand on obtient la clef de sarah dans le labo qu'on ne l'a pas "puisqu'on parle de "commencer un niveau avec", en plus on se demande ce que c'est que cette histoire de clef
+	mika ne réagi pas à la possession de bombe
+	workshop geekali : on ne devrait poas pouvoir parler à sarah sans avoir ouvert les 2 coffres dans 
+	
+	pour le geekali : 
+	retirer les infos des trucs qu'il manque
+	retirer les commandes de debug !
+	retirer dave
 
 	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
 	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
