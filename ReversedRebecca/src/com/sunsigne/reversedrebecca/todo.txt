@@ -58,9 +58,7 @@
 	adaptation de l'écran
 	rr000 si on ouvre trop tard à la porte (c'est qui), le dialogue de la vérité de sarah devrait être 'je suis arrivé trop tard"
 	c'est pas clair quand on obtient la clef de sarah dans le labo qu'on ne l'a pas "puisqu'on parle de "commencer un niveau avec", en plus on se demande ce que c'est que cette histoire de clef
-	mika ne réagi pas à la possession de bombe
-	workshop geekali : on ne devrait poas pouvoir parler à sarah sans avoir ouvert les 2 coffres dans 
-	
+
 	pour le geekali : 
 	retirer les infos des trucs qu'il manque
 	retirer les commandes de debug !
