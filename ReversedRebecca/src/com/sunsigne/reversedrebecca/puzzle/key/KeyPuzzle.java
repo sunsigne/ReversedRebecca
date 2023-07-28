@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.puzzle.key;
 
+import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
@@ -16,10 +18,13 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class KeyPuzzle extends Puzzle {
 
@@ -74,19 +79,22 @@ public abstract class KeyPuzzle extends Puzzle {
 		if (numOfWalls <= 0)
 			return;
 
+		RandomGenerator rad = new RandomGenerator();
 		Handler handler = LAYER.PUZZLE.getHandler();
 		BufferedImage img = getWallTexture();
-		int safeRow = getRow(new RandomGenerator().getIntBetween(1, 6));
+		int safeRow = getRow(rad.getIntBetween(1, 6));
 
 		int count = 0;
 
 		while (count < numOfWalls) {
 			count++;
 
-			int radCol = getCol(new RandomGenerator().getIntBetween(2, 11));
+			int radCol = getCol(rad.getIntBetween(2, 11));
 			int radRow;
 			do {
-				radRow = getRow(new RandomGenerator().getIntBetween(1, 6));
+				radRow = getRow(rad.getIntBetween(1, 6));
+				if (isTutorial())
+					radRow = rad.getBoolean() ? getRow(rad.getIntBetween(1, 2)) : getRow(rad.getIntBetween(5, 6));
 			} while (radRow == safeRow);
 
 			if (moving)
@@ -120,6 +128,29 @@ public abstract class KeyPuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
 		new TransluantLayer().drawPuzzle(g, green);
+
+		if (isTutorial() == false)
+			return;
+
+		BufferedImage image = new ImageTask().loadImage("textures/puzzle/" + "mouse_tuto");
+		int size = 150;
+
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
+		g2d.drawImage(image, getCol(4) + Size.XS, getRow(3) - Size.XS / 2, 5 * size, 2 * size, null);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+	}
+
+	private boolean isTutorial() {
+		World world = World.get();
+
+		if (world == null)
+			return false;
+
+		if (world.getMapName().equalsIgnoreCase(FilePath.LVL000) == false)
+			return false;
+
+		return true;
 	}
 
 }

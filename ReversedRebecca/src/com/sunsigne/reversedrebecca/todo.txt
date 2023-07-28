@@ -53,7 +53,6 @@
 	////////// EN COURS ////////////
 
 	bug :
-	l'utilisation de la souris n'est pas claire
 	erreur fichier non trouvé pour l'achievement
 	adaptation de l'écran
 	rr000 si on ouvre trop tard à la porte (c'est qui), le dialogue de la vérité de sarah devrait être 'je suis arrivé trop tard"
