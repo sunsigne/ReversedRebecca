@@ -27,7 +27,6 @@
 
 	!! SUCCESS !!
 	1h00 = succès : bienvenue au geekali ?
-	1h00 = succès : finir la démo
 	0h10 = mettre de côté le terminator
 
 	!! BUG !!
@@ -36,14 +35,12 @@
 	
 	!! RETOUS DE TEST !!
 	10h0 : fix et corrections des retours tests
-	le formulaire de bug apparait DERRIERE la fenetre du jeu ?
 	
 	!! A FAIRE !!
-	0h10 = note : appeler cette version "version : geekali 2023"
+	0h10 = note : appeler cette version "Version : geekali 2023"
 	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !
 	0h10 = afficher le message de niveau pas terminé
-	1h00 = créer un bouton flêche sur l'écran de fin de démo pour revenir sur l'écran précédent
-	
+
 	!! LABORATORY !!
 	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
@@ -56,6 +53,7 @@
 	
 	////////// EN COURS ////////////
 
+	le formulaire de bug apparait DERRIERE la fenetre du jeu ? (à confirmer)
 	adapter le système de camera et de render d'une manière général pour qu'il soit opti !
 	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
 	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
