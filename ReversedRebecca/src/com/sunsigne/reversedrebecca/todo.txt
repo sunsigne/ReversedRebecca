@@ -32,7 +32,6 @@
 
 	A FAIRE / bug à corriger pour geekali :
 	erreur fichier non trouvé pour l'achievement
-	adaptation de l'écran
 	
 	////////// EN COURS ////////////
 

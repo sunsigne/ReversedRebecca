@@ -14,15 +14,18 @@ public class Window {
 
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
+
+	private static final int SCREEN_WIDHT = Toolkit.getDefaultToolkit().getScreenSize().width;
+	private static final int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
 	
-	public static final float SCALE_X = (float) Toolkit.getDefaultToolkit().getScreenSize().width / WIDHT;
-	public static final float SCALE_Y = (float) Toolkit.getDefaultToolkit().getScreenSize().height / HEIGHT;
+	public static final float SCALE_X = (float) SCREEN_WIDHT / WIDHT;
+	public static final float SCALE_Y = (float) SCREEN_HEIGHT / HEIGHT;
 
 	protected Window(Game game) {
 
-		game.setMinimumSize(new Dimension(WIDHT, HEIGHT));
-		game.setMaximumSize(new Dimension(WIDHT, HEIGHT));
-		game.setPreferredSize(new Dimension(WIDHT, HEIGHT));
+		game.setMinimumSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
+		game.setMaximumSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
+		game.setPreferredSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
 		game.setFocusTraversalKeysEnabled(false); // allow TAB as valid key
 
 		ImageIcon icon = Infos.ICON;
@@ -37,8 +40,7 @@ public class Window {
 		frame.setUndecorated(true);
 		frame.setVisible(true);
 		frame.pack();
-		frame.setLocationRelativeTo(null);
-		
+		//frame.setLocationRelativeTo(null);		
 	}
 
 }
