@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.system;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
@@ -17,6 +18,11 @@ public class Conductor {
 	public void startApp() {
 
 		// LOADING OF MINIMAL RESSOURCES
+		new FileTask().delete(true, "achievements.csv");
+		new FileTask().delete(true, "characteristics.csv");
+		new FileTask().delete(true, "options.csv");
+		new FileTask().delete(true, "save.csv");
+		
 		new BugFinder().run();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new RessourceLoader().loadMinimalRessources();
