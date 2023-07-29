@@ -16,8 +16,8 @@ public class WebTask {
 
 	////////// HTML ////////////
 
-	public static final String CRASH_LINK_FR = "https://form.dragnsurvey.com/survey/r/04b4b3ff";
-	public static final String CRASH_LINK_ENG = "https://form.dragnsurvey.com/survey/r/535fb02b";
+	public static final String CRASH_LINK_FR = "https://form.dragnsurvey.com/survey/r/7276c03c";
+	public static final String CRASH_LINK_ENG = "https://form.dragnsurvey.com/survey/r/7276c03c";
 	public static final String STEAM_LINK = "https://store.steampowered.com/app/2297990/Reversed_Rebecca/";
 
 	public void openHtml(String link) {
