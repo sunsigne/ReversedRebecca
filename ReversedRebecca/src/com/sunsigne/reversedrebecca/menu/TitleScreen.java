@@ -22,6 +22,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -50,6 +51,7 @@ public class TitleScreen extends MenuScreen {
 		createSteamButton();
 
 		createTestMapButton();
+		new GameTimer(Game.SEC, true, () -> new AchievementTask().unlockAchievement("geekali"));		
 	}
 
 	////////// BUTTONS ////////////

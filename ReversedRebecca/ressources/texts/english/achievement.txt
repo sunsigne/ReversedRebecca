@@ -8,6 +8,8 @@ FruitTitle = Cyber-Vegetarian
 FruitText = Eat#a#virtual#fruit
 FirstKillTitle = Meat#pancake
 FirstKillText = Eliminate#Alicia
+GeekaliTitle = A#crazy#$$day_capitalize
+GeekaliText = Welcome#to#Geekali
 
 ///// GREEN /////
 
