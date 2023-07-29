@@ -243,7 +243,10 @@ public class World implements Updatable, RenderFree {
 
 		if (mapName.equals(FilePath.TEST)) {
 			COLOR[] colors = COLOR.values();
-			COLOR color = colors[new Random().nextInt(colors.length)];
+			COLOR color = null;
+			do {
+				color = colors[new Random().nextInt(colors.length)];
+			} while (color == COLOR.BROWN);
 			mapName = mapName.concat("/" + color.getName());
 		}
 
