@@ -1,3 +1,2 @@
-rebecca = LEFT = laugh = Je#n'avais#pas#envie#d'ouvrir.
 sarah = RIGHT = sad = ...#C'est#pourtant#le#principe#d'une#porte…
 sarah = RIGHT = you_silly_var = Bon,#oublions#ça.@J'ai#quelque#chose#pour#toi.

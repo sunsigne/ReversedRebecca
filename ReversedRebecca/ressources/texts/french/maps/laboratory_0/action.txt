@@ -1,7 +1,7 @@
 ///// SARAH /////
 
-BEING_POLITE = Key1 % être#polie
-TELL_THE_TRUTH = Key2 % dire#la#vérité
+BEING_POLITE = Key1 % j'ai#ouvert#trop#tard
+TELL_THE_TRUTH = Key2 % je#n'avais#pas#envie#d'ouvrir
 FIND_AN_EXIT = Key1 % trouver#une#sortie
 INVASTIGATE_THE_INTRUDER = Key2 % enquêter#sur#l'intrus
 
