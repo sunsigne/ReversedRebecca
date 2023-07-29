@@ -94,7 +94,8 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("$$action3", getKeyText(ActionThreeKey.getKey()));
 
 		formatted_value = formatted_value.replace("$$user", getUserName());
-		formatted_value = formatted_value.replace("$$day", getDay());
+		formatted_value = formatted_value.replace("$$day_capitalize", getDay(true));
+		formatted_value = formatted_value.replace("$$day", getDay(false));
 
 		return formatted_value;
 	}
@@ -114,12 +115,12 @@ public class FormattedString {
 		return name;
 	}
 
-	private String getDay() {
+	private String getDay(boolean capitalize) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(new Date());
 		Integer day_value = cal.get(Calendar.DAY_OF_WEEK);
 		String day = new Translatable().getTranslatedText(day_value.toString(), "day.txt");
-		return day;
+		return capitalize ? capitalize(day) : day;
 	}
 
 }

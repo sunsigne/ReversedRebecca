@@ -25,10 +25,6 @@
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
-	!! SUCCESS !!
-	1h00 = succès : bienvenue au geekali ?
-	0h10 = mettre de côté le terminator
-
 	!! BUG !!
 	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
 	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
