@@ -51,12 +51,8 @@
 	- vérifier la cohérence globale, tester les bugs éventuels
 
 	A FAIRE / bug à corriger pour geekali :
-	tester l'icone de bureau
 	erreur fichier non trouvé pour l'achievement
 	adaptation de l'écran
-	rr000 si on ouvre trop tard à la porte (c'est qui), le dialogue de la vérité de sarah devrait être 'je suis arrivé trop tard"
-	c'est pas clair quand on obtient la clef de sarah dans le labo qu'on ne l'a pas "puisqu'on parle de "commencer un niveau avec", en plus on se demande ce que c'est que cette histoire de clef
-	retirer les commandes de debug !
 	
 	////////// EN COURS ////////////
 

@@ -86,20 +86,14 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null)
-			firstLine = new Translatable().getTranslatedText("TOOLMAXLVL1", FilePath.TECHTREE);
+			firstLine = new Translatable().getTranslatedText("TOOLMAXLVL", FilePath.TECHTREE);
 		return firstLine;
 	}
 
 	@Override
 	public String getSecondLine() {
-		if (secondLine == null) {
-			String line = new Translatable().getTranslatedText("TOOLMAXLVL2", FilePath.TECHTREE);
-			String tool_gender = new Translatable().getTranslatedText(tool.getName() + "gender" + "the", FilePath.TOOL);
-			String card_tool = new Translatable().getTranslatedText(tool.getName(), FilePath.TOOL);
-			String link_word = new Translatable().getTranslatedText("TOOLMAXLVL3", FilePath.TECHTREE);
-			String difficulty = new Translatable().getTranslatedText(getDifficulty().getName(), FilePath.TOOL);
-			secondLine = line + tool_gender + " " + card_tool + link_word + difficulty;
-		}
+		if (secondLine == null)
+			secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural" + getDifficulty().getName(), FilePath.TOOL);
 		return secondLine;
 	}
 
