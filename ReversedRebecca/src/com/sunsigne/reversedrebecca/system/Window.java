@@ -40,7 +40,7 @@ public class Window {
 		frame.setUndecorated(true);
 		frame.setVisible(true);
 		frame.pack();
-		//frame.setLocationRelativeTo(null);		
+		frame.setLocationRelativeTo(null);		
 	}
 
 }
