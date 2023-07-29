@@ -50,19 +50,17 @@
 	1h30 = lvl001 s"assurer qu'il soit "finissable" :
 	- vérifier la cohérence globale, tester les bugs éventuels
 
-	////////// EN COURS ////////////
-
-	bug :
+	A FAIRE / bug à corriger pour geekali :
+	tester l'icone de bureau
 	erreur fichier non trouvé pour l'achievement
 	adaptation de l'écran
 	rr000 si on ouvre trop tard à la porte (c'est qui), le dialogue de la vérité de sarah devrait être 'je suis arrivé trop tard"
 	c'est pas clair quand on obtient la clef de sarah dans le labo qu'on ne l'a pas "puisqu'on parle de "commencer un niveau avec", en plus on se demande ce que c'est que cette histoire de clef
-
-	pour le geekali : 
-	retirer les infos des trucs qu'il manque
 	retirer les commandes de debug !
-	retirer dave
+	
+	////////// EN COURS ////////////
 
+	adapter le système de camera et de render d'une manière général pour qu'il soit opti !
 	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
 	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
