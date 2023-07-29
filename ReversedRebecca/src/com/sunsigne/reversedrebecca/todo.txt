@@ -25,27 +25,10 @@
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
-	!! SUCCESS !!
-	1h00 = succès : bienvenue au geekali ?
-	0h10 = mettre de côté le terminator
-
 	!! BUG !!
 	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
 	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	
-	!! RETOUS DE TEST !!
-	10h0 : fix et corrections des retours tests
-	
-	!! A FAIRE !!
-	0h10 = note : appeler cette version "Version : geekali 2023"
-	0h10 = faire en sorte que démmarer le jeu reset la sauvegarde !
-	0h10 = afficher le message de niveau pas terminé
-
-	!! LABORATORY !!
-	0h10 = rediriger de force le joueur du scénario inquiry au scénario exit
-	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?	
-	1h30 = lvl001 s"assurer qu'il soit "finissable" :
-	- vérifier la cohérence globale, tester les bugs éventuels
+	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 
 	A FAIRE / bug à corriger pour geekali :
 	erreur fichier non trouvé pour l'achievement
