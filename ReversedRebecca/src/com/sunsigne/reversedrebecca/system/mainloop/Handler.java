@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -169,6 +170,16 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 		for (Updatable tempObject : getList()) {
 
+			// skip rendering if out of camera
+			if (isCameraDependant()) {
+				if (tempObject instanceof Position) {					
+					Position tempPosition = (Position) tempObject;
+					
+					if (CAMERA.isObjectVisible(tempPosition, true) == false)
+						continue;
+				}
+			}
+			
 			renderDependency(g, true);
 
 			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {
