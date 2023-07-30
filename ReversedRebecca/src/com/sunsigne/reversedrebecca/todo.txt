@@ -50,6 +50,7 @@
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
 	manette : regarder le todo et le faire
+	note : l'effet de "gris" pour les niveaux du dessous est à manuellement reproiduire sur les cartes (à cause d'une optimisation des graphismes)
 
 	////////// GAMEPAD ////////////
 
