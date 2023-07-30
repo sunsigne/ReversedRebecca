@@ -42,6 +42,7 @@
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
 	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
+	retirer l'image de "lock = cursor" pour quand on utilise la manette ?
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation puzzler pour la résolution des coffres
 	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
