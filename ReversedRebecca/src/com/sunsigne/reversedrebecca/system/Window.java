@@ -15,11 +15,11 @@ public class Window {
 	public static final int WIDHT = 1920;
 	public static final int HEIGHT = 1080;
 
-	private static final int SCREEN_WIDHT = Toolkit.getDefaultToolkit().getScreenSize().width;
-	private static final int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
+	private static int SCREEN_WIDHT = Toolkit.getDefaultToolkit().getScreenSize().width;
+	private static int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
 	
-	public static final float SCALE_X = (float) SCREEN_WIDHT / WIDHT;
-	public static final float SCALE_Y = (float) SCREEN_HEIGHT / HEIGHT;
+	public static float SCALE_X = (float) SCREEN_WIDHT / WIDHT;
+	public static float SCALE_Y = (float) SCREEN_HEIGHT / HEIGHT;
 
 	protected Window(Game game) {
 
@@ -40,7 +40,28 @@ public class Window {
 		frame.setUndecorated(true);
 		frame.setVisible(true);
 		frame.pack();
-		frame.setLocationRelativeTo(null);		
+		// frame.setLocationRelativeTo(null);		
 	}
 
+	public static void updateDim(Game game) {
+		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+		
+		int screen_width = dimension.width;
+		int screen_height = dimension.height;
+		float scale_x = (float) screen_width / WIDHT;
+		float scale_y = (float) screen_height / HEIGHT;
+		
+		if(SCREEN_WIDHT == screen_width && SCREEN_HEIGHT == screen_height && SCALE_X == scale_x && SCALE_Y == scale_y)
+			return;
+		
+		SCREEN_WIDHT = screen_width;
+		SCREEN_HEIGHT = screen_height;
+		SCALE_X = scale_x;
+		SCALE_Y = scale_y;
+		
+		game.setMinimumSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
+		game.setMaximumSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
+		game.setPreferredSize(new Dimension(SCREEN_WIDHT, SCREEN_HEIGHT));
+	}
+	
 }

@@ -141,6 +141,8 @@ public class Game extends Canvas implements Runnable {
 
 			while (delta >= 1) {
 
+				Window.updateDim(getInstance());	
+				
 //				ticks++;
 				try {
 					tick();

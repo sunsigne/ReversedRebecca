@@ -50,7 +50,6 @@
 	succès : regarder le todo et le faire
 	lvl001 : regarder le todo et le faire
 	manette : regarder le todo et le faire
-	note : l'effet de "gris" pour les niveaux du dessous est à manuellement reproiduire sur les cartes (à cause d'une optimisation des graphismes)
 
 	////////// GAMEPAD ////////////
 
@@ -60,6 +59,7 @@
 
 	////////// DIFFICILE ////////////
 	
+	note : l'effet de "gris" pour les niveaux du dessous est à manuellement reproiduire sur les cartes (à cause d'une optimisation des graphismes) / problème : les piranha (et tout le "world" en fait) de la couche du dessous sera caché par le "ground" de la couche acvuelle, à corriger
 	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
 	ExplosionBrightnessLaw est pas terrible, à arranger
 	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
