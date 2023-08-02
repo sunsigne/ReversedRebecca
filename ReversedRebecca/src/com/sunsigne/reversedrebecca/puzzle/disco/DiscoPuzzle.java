@@ -66,9 +66,9 @@ public abstract class DiscoPuzzle extends Puzzle {
 
 	private GameList<DiscoArrowObject> arrow_list = new GameList<>(LISTTYPE.ARRAY);
 
-	protected void createArrow(DIRECTION facing, int row) {
+	protected void createArrow(DIRECTION facing, int y) {
 		int x = getPlayerArrow(facing).getX();
-		DiscoArrowObject arrow = new DiscoArrowObject(this, facing, x, getRow(row));
+		DiscoArrowObject arrow = new DiscoArrowObject(this, facing, x, y);
 		arrow_list.addObject(arrow);
 		LAYER.PUZZLE.addObject(arrow);
 	}
