@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
@@ -40,6 +42,7 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 
 	////////// PLAY ////////////
 
+	private DiscoPlayerArrowObject player_arrrow;
 	private boolean played;
 
 	protected enum CASE {
@@ -58,7 +61,32 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 
 	private void play(CASE caze) {
 		played = true;
+		playSound(caze);
 		LAYER.PUZZLE.addObject(new DiscoTextObject(getPuzzle(), getX(), caze));
+
+		if (caze == CASE.FAIL)
+			return;
+		
+		removeObject();
+		player_arrrow.blink();
+	}
+
+	private void playSound(CASE caze) {
+		String path = null;
+
+		switch (caze) {
+		case FAIL:
+			path = "snore";
+			break;
+		case GOOD:
+			path = "button";
+			break;
+		case PERFECT:
+			path = "button_validate";
+			break;
+		}
+
+		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
 	}
 
 	////////// TICK ////////////
@@ -126,9 +154,10 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 		else
 			onDown = false;
 
-		if (detectorObject.getBounds(DIRECTION.NULL).intersects(getBounds()))
+		if (detectorObject.getBounds(DIRECTION.NULL).intersects(getBounds())) {
 			validPos = true;
-		else
+			player_arrrow = (DiscoPlayerArrowObject) detectorObject;
+		} else
 			validPos = false;
 	}
 

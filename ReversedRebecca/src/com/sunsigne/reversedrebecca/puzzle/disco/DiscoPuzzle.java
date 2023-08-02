@@ -14,7 +14,7 @@ import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class DiscoPuzzle extends Puzzle {
 
@@ -46,12 +46,17 @@ public abstract class DiscoPuzzle extends Puzzle {
 	}
 
 	protected void createPlayerArrows() {
+		DIRECTION facing;
 		player_arrows = new DiscoPlayerArrowObject[4];
 
-		player_arrows[DIRECTION.LEFT.getNum()] = new DiscoPlayerArrowObject(this, DIRECTION.LEFT, getCol(7));
-		player_arrows[DIRECTION.RIGHT.getNum()] = new DiscoPlayerArrowObject(this, DIRECTION.RIGHT, getCol(10));
-		player_arrows[DIRECTION.UP.getNum()] = new DiscoPlayerArrowObject(this, DIRECTION.UP, getCol(8));
-		player_arrows[DIRECTION.DOWN.getNum()] = new DiscoPlayerArrowObject(this, DIRECTION.DOWN, getCol(9));
+		facing = DIRECTION.LEFT;
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(7) + Size.XS + Size.XS);
+		facing = DIRECTION.RIGHT;
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(10) + Size.XS + Size.L);
+		facing = DIRECTION.UP;
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(8) + Size.XS + Size.S);
+		facing = DIRECTION.DOWN;
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(9) + Size.XS + Size.M);
 
 		LAYER.PUZZLE.addObject(player_arrows[0]);
 		LAYER.PUZZLE.addObject(player_arrows[1]);
