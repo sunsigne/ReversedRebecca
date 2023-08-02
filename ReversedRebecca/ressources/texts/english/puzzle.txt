@@ -1,3 +1,9 @@
+///// DISCO /////
+
+DiscoFail = missed
+DiscoGood = good
+DiscoPerfect = perfect
+
 ///// HACK /////
 
 ProcessorBack = back

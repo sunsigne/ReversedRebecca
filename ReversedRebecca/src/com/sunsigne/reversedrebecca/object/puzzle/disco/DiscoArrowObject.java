@@ -1,0 +1,183 @@
+package com.sunsigne.reversedrebecca.object.puzzle.disco;
+
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
+
+public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, KeyboardEvent {
+
+	public DiscoArrowObject(Puzzle puzzle, DIRECTION facing, int x, int y) {
+		super(puzzle, false, x, y);
+		this.facing = facing;
+	}
+
+	private DIRECTION facing;
+
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "ARROW";
+	}
+
+	@Override
+	public String toString() {
+		return "PUZZLE : " + getName() + " : " + "FACING:" + facing.getName();
+	}
+
+	////////// PLAY ////////////
+
+	private boolean played;
+
+	protected enum CASE {
+		GOOD("good"), PERFECT("perfect"), FAIL("fail");
+
+		private String name;
+
+		CASE(String name) {
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+	}
+
+	private void play(CASE caze) {
+		played = true;
+		LAYER.PUZZLE.addObject(new DiscoTextObject(getPuzzle(), getX(), caze));
+	}
+
+	////////// TICK ////////////
+
+	private boolean flag;
+
+	@Override
+	public void tick() {
+		if (validPos)
+			flag = true;
+
+		// fail case
+		if (flag == true && played == false && validPos == false) {
+			flag = false;
+			play(CASE.FAIL);
+		}
+	}
+
+	////////// TEXTURE ////////////
+
+	private BufferedImage image;
+
+	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask()
+					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_arrow_" + facing.getName());
+		return image;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	}
+
+	////////// COLLISION ////////////
+
+	private boolean onUp;
+	private boolean onDown;
+	private boolean validPos;
+
+	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
+
+	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		if (detectorObject instanceof DiscoPlayerArrowObject == false)
+			return;
+
+		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds()))
+			onUp = true;
+		else
+			onUp = false;
+
+		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds()))
+			onDown = true;
+		else
+			onDown = false;
+
+		if (detectorObject.getBounds(DIRECTION.NULL).intersects(getBounds()))
+			validPos = true;
+		else
+			validPos = false;
+	}
+
+	////////// KEYBOARD ////////////
+
+	private KeyboardController keyboardController = new KeyboardController(this);
+
+	@Override
+	public KeyboardController getKeyBoardController() {
+		return keyboardController;
+	}
+
+	private boolean isValidKey(KeyEvent e) {
+		int key = e.getKeyCode();
+
+		switch (facing) {
+		case LEFT:
+			return key == LeftKey.getKey() || key == KeyEvent.VK_LEFT;
+		case RIGHT:
+			return key == RightKey.getKey() || key == KeyEvent.VK_RIGHT;
+		case UP:
+			return key == UpKey.getKey() || key == KeyEvent.VK_UP;
+		case DOWN:
+			return key == DownKey.getKey() || key == KeyEvent.VK_DOWN;
+		default:
+			return false;
+		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if (played)
+			return;
+
+		if (validPos == false)
+			return;
+
+		if (isValidKey(e) == false)
+			return;
+
+		if (onUp && onDown)
+			play(CASE.PERFECT);
+		else
+			play(CASE.GOOD);
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+
+	}
+
+}
