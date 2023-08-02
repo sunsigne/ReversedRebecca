@@ -15,29 +15,29 @@
 	////////// GEEKALI ////////////
 
 	à supprimer - map + text + texture workshop_geekali
-	à supprimer - le memory du labo sur le scénario (geekali feature for ws_geekali)
-	à supprimer - mole 0 le coffre en +
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
 	à supprimer - la musique troll, celle de fin de démo et le visage troll de blast
-	à supprimer - la résurection à la va vite du joueur
 	à supprimer - le fichier set-up de mole_0 supprime la présence de blast-x vers le début du niveau
 	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit"
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
-	!! BUG !!
-	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
-	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
-
-	A FAIRE / bug à corriger pour geekali :
-	erreur fichier non trouvé pour l'achievement
+	////////// BUG ////////////
+	
+	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
+	à confirmer : erreur fichier non trouvé pour l'achievement "geekali" ? (est arrivé poru Logan)
+	le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
 	
 	////////// EN COURS ////////////
-
-	le formulaire de bug apparait DERRIERE la fenetre du jeu ? (à confirmer)
-	adapter le système de camera et de render d'une manière général pour qu'il soit opti !
-	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
+	
+	un passe de dance ! (pourquoi pas un mini-jeu/puzzle ?)
+	créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
+	- une scène où ul prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
+	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
+	
+	0h10 test lvl plante lorsque la couleur "BROWN" est choisie"
+	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
+	
 	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
@@ -59,7 +59,7 @@
 
 	////////// DIFFICILE ////////////
 	
-	note : l'effet de "gris" pour les niveaux du dessous est à manuellement reproiduire sur les cartes (à cause d'une optimisation des graphismes) / problème : les piranha (et tout le "world" en fait) de la couche du dessous sera caché par le "ground" de la couche acvuelle, à corriger
+	GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
 	ExplosionBrightnessLaw est pas terrible, à arranger
 	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
@@ -208,6 +208,7 @@
 	- Le meutre de Alicia (+ karma psycopath)
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
 	
+	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
 	obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes)
@@ -256,6 +257,13 @@
 
 	///////// IDEE ////////////
 
+	rebecca bourée -> contrôles inversées
+	transporter de la nitro
+	un niveau sous l'eau
+	un niveau dans l'espace
+	sous-sol horrifique (anges pleureurs + silence + escargot
+	un trou noir ! (c'est dans le titre du jeu après tout)
+	
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
