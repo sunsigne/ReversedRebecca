@@ -2,8 +2,11 @@ package com.sunsigne.reversedrebecca.puzzle.disco.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.disco.DiscoPuzzle;
+import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class CyanDiscoPuzzle extends DiscoPuzzle {
 
@@ -14,8 +17,15 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	////////// PUZZLE ////////////
 
 	@Override
+	public DiscoDancerObject getDiscoDancer() {
+		return new DiscoDancerObject(this, "rebecca");
+	}
+
+	@Override
 	public void createPuzzle() {
 		createPlayerArrows();
+		createDiscoBall();
+		createDiscoDancer(18 * Game.SEC - 10);
 
 		createPhase1();
 		createPhase2();
@@ -29,7 +39,9 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	private int getY(int num) {
 		int start = 18;
 		int gap = 7;
-		return getRow(start + num) + num * gap;
+		int puzzle = - Size.XS; // only because Puzzle start the music
+		
+		return getRow(start + num) + num * gap + puzzle;
 	}
 
 	private void createPhase1() {

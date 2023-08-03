@@ -76,7 +76,7 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 
 		switch (caze) {
 		case FAIL:
-			path = "snore";
+			path = "button_back";
 			break;
 		case GOOD:
 			path = "button";

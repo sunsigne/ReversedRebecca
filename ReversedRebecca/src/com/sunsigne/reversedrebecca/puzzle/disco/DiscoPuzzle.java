@@ -6,6 +6,8 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoBallObject;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoPlayerArrowObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -14,13 +16,17 @@ import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
 public abstract class DiscoPuzzle extends Puzzle {
 
 	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
-		// new GameCursor().setCursor(null);
+		new GameCursor().setCursor(null);
+		
+		new SoundTask().playMusic("dance_floor", false, true);
 	}
 
 	////////// NAME ////////////
@@ -38,6 +44,21 @@ public abstract class DiscoPuzzle extends Puzzle {
 	}
 
 	////////// PUZZLE ////////////
+
+	public abstract DiscoDancerObject getDiscoDancer();
+
+	protected void createDiscoDancer(int delayBeforeLitinTicks) {
+		DiscoDancerObject dancer = getDiscoDancer();
+		dancer.setX(getCol(2));
+		dancer.setY(getRow(4));
+		dancer.lit(delayBeforeLitinTicks);
+
+		LAYER.PUZZLE.addObject(dancer);
+	}
+
+	protected void createDiscoBall() {
+		LAYER.PUZZLE.addObject(new DiscoBallObject(this));
+	}
 
 	private DiscoPlayerArrowObject[] player_arrows;
 
