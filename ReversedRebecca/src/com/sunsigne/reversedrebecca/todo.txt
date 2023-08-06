@@ -30,7 +30,16 @@
 	
 	////////// EN COURS ////////////
 	
-	un passe de dance ! (pourquoi pas un mini-jeu/puzzle ?)
+	coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
+	cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
+	hack puzzle : la clef du producteur passe derrière quand on ort du dossier
+	hack puzzle : nerf le paralyseur + déplacement rapide au lieu de TP ?
+	jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
+	le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	rendre + évident le système de couches (vent avant tunnel ?)
+	softlock au niveau du pot de chambre
+	mieux dessiner le lit en paille ?
+	
 	créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
 	- une scène où ul prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
@@ -86,6 +95,7 @@
 
 	////////// FACILE ////////////
 
+	finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 	transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
 	mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	créer un debug mode pour activer les raccourcis clavier de dev ?
@@ -250,6 +260,7 @@
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	les patterns du boss et leurs images peuvent être améliorer
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
+	le boss continue de bombarder le jour même lorsqu'il quitte la zone (bombes par au-dessus)
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
 	
 	
@@ -267,7 +278,6 @@
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
-	faire un niveau de dance (c'est le film the emoji qui m'a donné envie)
 	des outils de + en + élaborés (design) en fonction de leur lvl
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
