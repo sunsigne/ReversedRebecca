@@ -26,11 +26,9 @@
 	
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
-	0h10 - erreur des variables dans les fichiers .txt (fichier non toruvé)
+	0h10 - erreur des variables dans les fichiers .txt (fichier non trouvé) -> à vérifier auprès d'un ordinateur qui rencontre le pb !
 	0h10 - test lvl plante lorsque la couleur "BROWN" est choisie"
-	1h00 - gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
-	0h20 - attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
-	
+
 	////////// EN COURS ////////////
 	
 	coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
