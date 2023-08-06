@@ -25,8 +25,11 @@
 	////////// BUG ////////////
 	
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
-	à confirmer : erreur fichier non trouvé pour l'achievement "geekali" ? (est arrivé poru Logan)
-	le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
+	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
+	0h10 - erreur des variables dans les fichiers .txt (fichier non toruvé)
+	0h10 - test lvl plante lorsque la couleur "BROWN" est choisie"
+	1h00 - gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
+	0h20 - attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
 	
 	////////// EN COURS ////////////
 	
@@ -37,20 +40,13 @@
 	jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
 	le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	rendre + évident le système de couches (vent avant tunnel ?)
-	softlock au niveau du pot de chambre
 	mieux dessiner le lit en paille ?
-	
-	créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
-	- une scène où ul prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
-	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
-	
-	0h10 test lvl plante lorsque la couleur "BROWN" est choisie"
+
 	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
-	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
 	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
-	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
-	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
+	0h30 - créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
+
 	retirer l'image de "lock = cursor" pour quand on utilise la manette ?
 	s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	puzzle : faire une animation puzzler pour la résolution des coffres
@@ -64,9 +60,13 @@
 
 	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	Puzzles must be compatible
-	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée
+	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée ?
 
 	////////// DIFFICILE ////////////
+		
+	créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
+	- une scène où ul prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
+	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 	
 	GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
