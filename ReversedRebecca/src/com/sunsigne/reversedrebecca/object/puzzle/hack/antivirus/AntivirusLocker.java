@@ -39,12 +39,12 @@ public class AntivirusLocker extends AntivirusObject {
 	@Override
 	public void antivirusAction() {
 		if (isCritical() == false)
-			target.setLocked(true);
+			target.setLocker(this);
 	}
 
 	@Override
 	public void destroyAntivirus() {
-		target.setLocked(false);
+		target.setLocker(null);
 	}
 
 	////////// TEXTURE ////////////

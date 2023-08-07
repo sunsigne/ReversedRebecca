@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -49,14 +50,14 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	////////// PROCESSOR ////////////
 
-	private boolean locked;
+	private AntivirusLocker locker;
 
 	public boolean isLocked() {
-		return locked;
+		return locker != null;
 	}
 
-	public void setLocked(boolean locked) {
-		this.locked = locked;
+	public void setLocker(AntivirusLocker locker) {
+		this.locker = locker;
 	}
 
 	////////// VIRUS ACTION ////////////
@@ -118,6 +119,9 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 		drawText(g);
+
+		if (locker != null)
+			locker.render(g);
 	}
 
 	protected void drawText(Graphics g) {

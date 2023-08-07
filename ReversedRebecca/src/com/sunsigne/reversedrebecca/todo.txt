@@ -33,8 +33,6 @@
 	
 	coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
-	hack puzzle : la clef du producteur passe derrière quand on ort du dossier
-	hack puzzle : nerf le paralyseur + déplacement rapide au lieu de TP ?
 	jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
 	le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	rendre + évident le système de couches (vent avant tunnel ?)
