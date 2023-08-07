@@ -1,9 +1,3 @@
-	
-	////////// MARKETING ////////////
-	
-	faire un short sur la golden shower
-	faire un short sur le "FUCK" avec les touches dans le tuto
-	pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// VERSION PUBLIQUE ////////////
 
@@ -28,99 +22,94 @@
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
 	0h10 - erreur des variables dans les fichiers .txt (fichier non trouvé) -> à vérifier auprès d'un ordinateur qui rencontre le pb !
 	0h10 - test lvl plante lorsque la couleur "BROWN" est choisie"
+	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
-	////////// EN COURS ////////////
+	////////// EXPERIENCE UTILISATEUR ////////////
+
+	3h00 - jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
+	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
+	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	
-	coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-	cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
-	jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
-	le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
-	rendre + évident le système de couches (vent avant tunnel ?)
-	mieux dessiner le lit en paille ?
-
-	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	
-	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
-	0h30 - créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
-
-	retirer l'image de "lock = cursor" pour quand on utilise la manette ?
-	s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	puzzle : faire une animation puzzler pour la résolution des coffres
-	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
-	succès : regarder le todo et le faire
-	lvl001 : regarder le todo et le faire
-	manette : regarder le todo et le faire
-
 	////////// GAMEPAD ////////////
 
-	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
-	Puzzles must be compatible
-	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée ?
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
+	30h00 - Puzzles must be compatible
+	0h30 - retirer l'image de "lock = cursor" pour quand on utilise la manette ?
+	
+	////////// EN COURS ////////////
 
-	////////// DIFFICILE ////////////
+
+
+
+
+	////////// BOSS ////////////
+
+	30h00 - retravailer le système de boss :
+	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
+	5h00 - InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
+	2h00 - augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
+	5h00 - créer d'autres patterns de sboss pour blast
+
+	////////// CHEST ////////////
+
+	2h30 - puzzle : faire une animation puzzler pour la résolution des coffres	
+	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
+	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
+	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !	
+
+	////////// DESSIN ////////////
+
+	12h00 - KOAnimation dans les 4 direction ?
+	12h00 - créer une animation "sick" pour quand on marche	 ?
+	2h00 - la pile PURPLE
+	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
+	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
 		
-	créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
-	- une scène où ul prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
-	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 	
-	GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
-	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
-	ExplosionBrightnessLaw est pas terrible, à arranger
-	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
-	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
-	augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
-	relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
-	le système de résurrection après KO doit être créé
-	créer un moyen de recuppérer de la vie
-	créer un système de checkpoint avant les combats de boss ?
-	la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
-	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
-	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
-	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
-	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
-	"You are" ne se sauvegarde pas encore
-	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
-	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
-	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
-	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
-	KOAnimation dans les 4 direction ?
-	créer une animation "sick" pour quand on marche	 ?
-
+	
+	
+	
 	////////// FACILE ////////////
-
-	finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
-	transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
-	mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
-	créer un debug mode pour activer les raccourcis clavier de dev ?
-	il faut créer le design des couches de light et de sous sol des maps !
-	il faudra penser à faire les lumières dans les niveaux
-	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
-	DieWhenNoHp -> kill() prévoir un restart
-
-	////////// TRADUCTION ////////////
 	
-	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
-	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	4h00 - ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
+	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
+	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
+	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
+	4h00 - transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
+	5h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
+	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
+	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
 	
-	lvl001 :
-	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
-	traduire "quel taré" par "what a freak"
-	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
-	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
-	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
+	////////// DIFFICILE ////////////
 	
-	lvl_mole :
-	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
+	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
+	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
+	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
-	////////// PERSONNAGES à faire ////////////
+	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
+	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
+	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
+	24h00 - retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
+	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
+	5h00 - créer un moyen de recuppérer de la vie
+	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
+	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
+	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	XhXX - les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
+	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
+	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
+	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+
+
+
+
+
+	////////// PERSONNAGES A FAIRE ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
 	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
-	D5 - l'un des 2 boss de l'embranchement lvl03
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 	
 	////////// DAVE ////////////
@@ -243,6 +232,7 @@
 	
 	////////// MOLE 0 ////////////
 	
+	mieux dessiner le lit en paille ?
 	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
 	rajouter les coffres aux endroits prévus sur la map
 	finir la salle des géodes - son au sol + réaction à l'entrée + possibilité d'en prendre une (ne pas oublier le son joué lors de la prise) : dialogueS (elle hésite puis accepte) & sauvegarde (que ça soit pris ou non, souvenir d'avoir vu la salle ? - ça peut être punitif si le joueur n'est pas explicitement rentrée DANS la salle, bien gérer son coup)
@@ -258,6 +248,9 @@
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
 	le boss continue de bombarder le jour même lorsqu'il quitte la zone (bombes par au-dessus)
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
+	
+	
+	
 	
 	
 	////////// SONS ////////////
@@ -290,6 +283,24 @@
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
+	
+	////////// TRADUCTION ////////////
+	
+	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
+	
+	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
+	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	
+	lvl001 :
+	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
+	traduire "quel taré" par "what a freak"
+	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
+	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
+	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
+	
+	lvl_mole :
+	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 
 	////////// SUCCES ////////////
 	
@@ -303,5 +314,8 @@
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
-		
+	
+	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
+
+	"You are" ne se sauvegarde pas encore
 	
