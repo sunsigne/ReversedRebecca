@@ -1,0 +1,6 @@
+alicia = player = unhappy = J'aurais#préféré#que#tu#fasses#ça@sans#que#je#sois#là…#C'était#gênant…
+player = alicia = wrong_with_you = Pardon,#mais#il#m'a#trop#énervé#!
+alicia = player = happy = Je#n'aurais#pas#non#plus#aimé#qu'on#me#pousse.
+alicia = player = unhappy = C'est#juste#que…#C'est#toujours#un#peu@embarrassant#d'être#juste#à-coté#d'une#dispute.
+player = alicia = worry = Oui,#je#comprends.#Excuse-moi,@je#ferai#attention#la#prochaine#fois.
+alicia = player = happy = Merci.

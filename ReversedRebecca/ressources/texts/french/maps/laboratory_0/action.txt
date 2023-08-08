@@ -45,6 +45,7 @@ TAKE_TEA = Key2% thé
 
 ///// RIGHT AREA /////
 
+EXPLODE = Key1 % exploser
 NO_I_CONTINUE = Key1 % non,#je#continue
 OK_I_STOP = Key2 % ok,#j'arrête
 COME_BACK = Key1 % revenir

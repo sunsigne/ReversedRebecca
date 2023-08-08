@@ -233,8 +233,10 @@ public class PathFinder implements Position {
 				if (wall instanceof PlayerAvoider == false)
 					return true;
 
+				// searcher is the player and object is an npc that can be passed through
 				PlayerAvoider avoider = (PlayerAvoider) wall;
-				if (avoider.getPlayerAvoiderType() != AVOIDERTYPE.THROUGH)
+				if (avoider.getPlayerAvoiderType() != AVOIDERTYPE.THROUGH
+						|| initial_searcher instanceof Player == false)
 					return true;
 			}
 		}
