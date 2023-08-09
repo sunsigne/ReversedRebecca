@@ -21,6 +21,11 @@ THATS_NOT_COOL = Key2 % c'est#pas#cool
 THEFT = Key2 % Vol#?
 ALICIA = Key3 % Alicia#?
 
+///// ALICIA ROOM /////
+
+WE_WILL_HELP_YOU = Key1 % on#t'aidera
+INDEED = Key2 % en#effet
+
 ///// LEFT AREA /////
 
 TAKE = Key2 % prendre

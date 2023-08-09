@@ -89,6 +89,10 @@ OBJ-45 = Rebecca Pee Checker
 OBJ-46 = Sink
 OBJ-49 = Joseph SAS Key Checker
 
+///// ALICIA ROOM /////
+
+OBJ-56 = Alicia Room
+
 ///// RIGHT AREA /////
 
 NPC-17 = Eric
