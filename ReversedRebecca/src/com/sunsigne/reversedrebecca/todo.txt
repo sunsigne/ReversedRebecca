@@ -19,8 +19,8 @@
 	////////// BUG ////////////
 	
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
+	à vérifier aurpès d'un ordinateur qui présentait le pb : erreur avec les variables dans les fichiers .txt (fichier non trouvé)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
-	0h10 - erreur des variables dans les fichiers .txt (fichier non trouvé) -> à vérifier auprès d'un ordinateur qui rencontre le pb !
 	0h40 - test lvl plante lorsque la couleur "BROWN" est choisie"
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	obligation de ramasser le verre d'eau lors qu'on a fait fuire sarah avec le calin serviette (choice object mal fichu)

@@ -80,21 +80,21 @@ public class FormattedString {
 	}
 
 	public String replaceValues(String text) {
-		if (text.contains("$$") == false)
+		if (text.contains("+") == false)
 			return text;
 
 		String formatted_value = text;
-		formatted_value = formatted_value.replace("$$up", getKeyText(UpKey.getKey()));
-		formatted_value = formatted_value.replace("$$down", getKeyText(DownKey.getKey()));
-		formatted_value = formatted_value.replace("$$left", getKeyText(LeftKey.getKey()));
-		formatted_value = formatted_value.replace("$$right", getKeyText(RightKey.getKey()));
-		formatted_value = formatted_value.replace("$$dialogue", getKeyText(DialogueKey.getKey()));
-		formatted_value = formatted_value.replace("$$action1", getKeyText(ActionOneKey.getKey()));
-		formatted_value = formatted_value.replace("$$action2", getKeyText(ActionTwoKey.getKey()));
-		formatted_value = formatted_value.replace("$$action3", getKeyText(ActionThreeKey.getKey()));
+		formatted_value = formatted_value.replace("+up", getKeyText(UpKey.getKey()));
+		formatted_value = formatted_value.replace("+down", getKeyText(DownKey.getKey()));
+		formatted_value = formatted_value.replace("+left", getKeyText(LeftKey.getKey()));
+		formatted_value = formatted_value.replace("+right", getKeyText(RightKey.getKey()));
+		formatted_value = formatted_value.replace("+dialogue", getKeyText(DialogueKey.getKey()));
+		formatted_value = formatted_value.replace("+action1", getKeyText(ActionOneKey.getKey()));
+		formatted_value = formatted_value.replace("+action2", getKeyText(ActionTwoKey.getKey()));
+		formatted_value = formatted_value.replace("+action3", getKeyText(ActionThreeKey.getKey()));
 
-		formatted_value = formatted_value.replace("$$user", getUserName());
-		formatted_value = formatted_value.replace("$$day", getDay());
+		formatted_value = formatted_value.replace("+user", getUserName());
+		formatted_value = formatted_value.replace("+day", getDay());
 
 		return formatted_value;
 	}
