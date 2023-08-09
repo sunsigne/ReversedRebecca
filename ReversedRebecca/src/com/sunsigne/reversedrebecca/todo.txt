@@ -21,7 +21,7 @@
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
 	0h10 - erreur des variables dans les fichiers .txt (fichier non trouvé) -> à vérifier auprès d'un ordinateur qui rencontre le pb !
-	0h10 - test lvl plante lorsque la couleur "BROWN" est choisie"
+	0h40 - test lvl plante lorsque la couleur "BROWN" est choisie"
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	obligation de ramasser le verre d'eau lors qu'on a fait fuire sarah avec le calin serviette (choice object mal fichu)
 
@@ -43,8 +43,7 @@
 	////////// EN COURS ////////////
 
 	lvl001 - exit :
-	0h20 - créer un petit message (bonus text) pour quand elle appelle Alicia pour ouvrir une porte "ouvre ça"
-	XhXX - changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh, dave
+	4h00 - changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh, dave
 	- marie (faire son IA d'abords)
 	- delta (faire son IA d'abords)
 	- jospeh (l'engueulage)
@@ -77,7 +76,6 @@
 	3h00 - finir le bureau d'alicia (rebecca fait une remarque + hitbox)
 	4h00 - ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
 	6h00 - Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)	(note : gérer les réaction en temps réel en cas de proximité - "Jean se content d'une expression "..." ?)
-	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	0h30 - créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
 	XhXX - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
