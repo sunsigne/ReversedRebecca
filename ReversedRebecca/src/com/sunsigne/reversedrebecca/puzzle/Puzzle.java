@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -104,6 +105,7 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 		LAYER.PUZZLE.getHandler().clear();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
+		new PlayerFinder().roundToTilePlayer();
 
 		if (isPuzzleWon) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());

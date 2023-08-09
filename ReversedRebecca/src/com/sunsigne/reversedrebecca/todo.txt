@@ -32,7 +32,6 @@
 	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	1h00 - hackpuzzle rétablir le Producteur, et nerf par évolution progressive le paralyseur
-	XhXX - soucis de hitbox : il est possible d'ouvrir des portes, des éboulement, etc. en étant "trop" de coté, et donc on se retrouve à ne pas pouvoir avancer sans devoir se décaler
 	
 	////////// GAMEPAD ////////////
 
