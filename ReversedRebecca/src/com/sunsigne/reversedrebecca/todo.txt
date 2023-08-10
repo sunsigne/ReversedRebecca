@@ -40,8 +40,6 @@
 	
 	////////// EN COURS ////////////
 
-	le son de mèche doit arriver + tôt !
-
 	lvl001 - exit :
 	4h00 - changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh, dave
 	- marie (faire son IA d'abords)
