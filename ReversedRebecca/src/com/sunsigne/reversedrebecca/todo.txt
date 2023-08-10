@@ -23,7 +23,6 @@
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
 	0h40 - test lvl plante lorsque la couleur "BROWN" est choisie"
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	obligation de ramasser le verre d'eau lors qu'on a fait fuire sarah avec le calin serviette (choice object mal fichu)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
@@ -34,9 +35,11 @@ public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
 	public default boolean canPlayerInterfact(boolean checkFakeInterract) {
 
 		// player is already interacting with an object
-		if (SingleInteractivityLaw.getCurrentInteractor() != null
-				&& SingleInteractivityLaw.getCurrentInteractor() != this)
-			return false;
+		if (this instanceof ChoiceObject == false) {
+			if (SingleInteractivityLaw.getCurrentInteractor() != null
+					&& SingleInteractivityLaw.getCurrentInteractor() != this)
+				return false;
+		}
 
 		// object is disabled
 		if (isDisabled())
