@@ -51,8 +51,13 @@
 	1h00 - si on commence à exploser des murs AVANT de libérer alicia à droite, il faut prévoir sa réaction
 	1h00 - finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
 
-	0h10 - Marie, vérifier compotement dans les toilettes
+
 	4h00 - réaction au pipi (Sarah ne le voit pas, Alicia a un moement d'arrêt, Marie le nettoie)
+	
+	XhXX - Marie IA :
+	- vérifier compotement dans les toilettes
+	- s'assurer qu'elle ne parte pas chercher Sarah à "bab el oued" si elle est venue engueler Jean, ou si elle la croise en train de prendre la chaise
+	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
