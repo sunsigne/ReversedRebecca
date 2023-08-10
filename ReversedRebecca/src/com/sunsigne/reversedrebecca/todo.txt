@@ -41,6 +41,8 @@
 	
 	////////// EN COURS ////////////
 
+	le son de mèche doit arriver + tôt !
+
 	lvl001 - exit :
 	4h00 - changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh, dave
 	- marie (faire son IA d'abords)
@@ -54,6 +56,7 @@
 	XhXX - Marie IA :
 	- s'assurer qu'elle ne parte pas chercher Sarah à "bab el oued" si elle est venue engueler Jean, ou si elle la croise en train de prendre la chaise
 	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
+	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
@@ -73,7 +76,6 @@
 	1h00 - en haut à droite, quand rebecca prend le chemin bombes, mettre les éboulement vert + tôt (+ une cinatique ?) afin que Rebecca soit au courant que le chemin est bloqué
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
-	3h00 - finir le bureau d'alicia (rebecca fait une remarque + hitbox)
 	4h00 - ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
 	6h00 - Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)	(note : gérer les réaction en temps réel en cas de proximité - "Jean se content d'une expression "..." ?)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
@@ -322,6 +324,8 @@
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
 	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
+	ALICIA_ROOM_PLANT -> "tant mieux" = "good"
+	ALICIA_REACTION_ALICIA_ROOM_PLANT -> "enfin..." -> "I mean..."
 	
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !

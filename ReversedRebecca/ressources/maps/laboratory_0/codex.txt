@@ -92,6 +92,11 @@ OBJ-49 = Joseph SAS Key Checker
 ///// ALICIA ROOM /////
 
 OBJ-56 = Alicia Room
+OBJ-57 = Plant
+OBJ-58 = Desk
+OBJ-59 = Computer
+OBJ-60 = Chair
+OBJ-61 = Paperworkd
 
 ///// RIGHT AREA /////
 
