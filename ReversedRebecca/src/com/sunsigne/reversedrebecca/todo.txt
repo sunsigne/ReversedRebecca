@@ -31,6 +31,7 @@
 	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	1h00 - hackpuzzle rétablir le Producteur, et nerf par évolution progressive le paralyseur
+	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	
 	////////// GAMEPAD ////////////
 
@@ -72,7 +73,6 @@
 	1h00 - en haut à droite, quand rebecca prend le chemin bombes, mettre les éboulement vert + tôt (+ une cinatique ?) afin que Rebecca soit au courant que le chemin est bloqué
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
-	4h00 - ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
 	6h00 - Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)	(note : gérer les réaction en temps réel en cas de proximité - "Jean se content d'une expression "..." ?)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	0h30 - créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
@@ -119,7 +119,6 @@
 	
 	////////// FACILE ////////////
 	
-	4h00 - ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
@@ -146,6 +145,8 @@
 	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
 	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
+	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 
 
 
@@ -196,6 +197,7 @@
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
+	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 
 	karma actions :
 	- saboter l'ordinateur de bernard

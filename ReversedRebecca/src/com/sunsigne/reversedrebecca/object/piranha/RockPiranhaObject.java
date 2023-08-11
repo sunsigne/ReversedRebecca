@@ -10,7 +10,15 @@ public class RockPiranhaObject extends PiranhaObject implements TickFree, Render
 		super("", x, y);
 		setStunned(true); // looks stupid, but allow to bypass the RoundToTileLaw
 
+		this.type = type;
 		carvingHitbox(hitboxX, hitboxY, type);
+	}
+
+	private int type;
+
+	@Override
+	public boolean isBlockingSight() {
+		return type == 0;
 	}
 
 	@Override
@@ -28,9 +36,9 @@ public class RockPiranhaObject extends PiranhaObject implements TickFree, Render
 		case 1:
 			return new int[] { 0, -2, 8, 11 }; // pyramidal rock
 		case 2:
-			return new int[] { 0, -2, 10, 10 }; // small rock	
+			return new int[] { 0, -2, 10, 10 }; // small rock
 		case 3:
-			return new int[] { 0, -2, 13, 11 }; // flat rock		
+			return new int[] { 0, -2, 13, 11 }; // flat rock
 		case 4:
 			return new int[] { 0, -2, 12, 16 }; // big rock
 		default:
