@@ -1,4 +1,3 @@
 blast-x = DOWN = happy = Bien#joué,#wesh.#T'es#une#petite#futée,#toi.@Je#ne#peux#plus#t'attaquer#d'ici.
 rebecca = RIGHT = determinated = Et#donc,#tu#vas#répondre#à#mes#questions.
 rebecca = RIGHT = angry = Où#est#Vladimir#et#qu'est-ce#qu'il#compte@faire#avec#les#plans#qu'il#a#volé#?
-blast-x = DOWN = happy = Si#tu#veux#le#savoir,#alors...

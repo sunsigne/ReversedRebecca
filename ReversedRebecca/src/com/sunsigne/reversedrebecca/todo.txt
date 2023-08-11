@@ -11,8 +11,6 @@
 
 	à supprimer - map + text + texture workshop_geekali
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
-	à supprimer - la musique troll, celle de fin de démo et le visage troll de blast
-	à supprimer - le fichier set-up de mole_0 supprime la présence de blast-x vers le début du niveau
 	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit"
 	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
@@ -22,7 +20,6 @@
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 	à vérifier aurpès d'un ordinateur qui présentait le pb : erreur avec les variables dans les fichiers .txt (fichier non trouvé)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
-	0h40 - test lvl plante lorsque la couleur "BROWN" est choisie"
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
 	////////// EXPERIENCE UTILISATEUR ////////////
@@ -31,7 +28,6 @@
 	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
 	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-	1h00 - hackpuzzle rétablir le Producteur, et nerf par évolution progressive le paralyseur
 	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	
 	////////// GAMEPAD ////////////
@@ -68,8 +64,7 @@
 	- camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	- marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
 	- attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
-	- 0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
-		
+
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	1h00 - en haut à droite, quand rebecca prend le chemin bombes, mettre les éboulement vert + tôt (+ une cinatique ?) afin que Rebecca soit au courant que le chemin est bloqué
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
@@ -78,12 +73,12 @@
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	0h30 - créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
 	XhXX - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
-	1h30 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
+	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
 	XhXX - variantes sadiques, psycopath, angélique, etc. à créer
 	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	XhXX - dessiner l'exterieur et les labo à droite (haut et bas) (créer un parking pour l'entrée "des visiteurs")
 
-	enpêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile drotie (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	enpêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 		
 	////////// BOSS ////////////
 
