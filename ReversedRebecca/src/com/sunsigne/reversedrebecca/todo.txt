@@ -29,6 +29,9 @@
 	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
+	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
+	4h00 - ramasser un outils de niveau supérieur à ce qu'on peut porter devrait VISUELLEMENT (dans la GUI par exemple) montrer le problème / le niveau gardé avec une animation
 	
 	////////// GAMEPAD ////////////
 
@@ -66,7 +69,6 @@
 	- attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
-	1h00 - en haut à droite, quand rebecca prend le chemin bombes, mettre les éboulement vert + tôt (+ une cinatique ?) afin que Rebecca soit au courant que le chemin est bloqué
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
 	6h00 - Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)	(note : gérer les réaction en temps réel en cas de proximité - "Jean se content d'une expression "..." ?)
@@ -116,10 +118,9 @@
 	////////// FACILE ////////////
 	
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
+	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
+	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
-	4h00 - transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
-	5h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	
@@ -129,7 +130,6 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
-	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
 	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
@@ -281,13 +281,12 @@
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
-	sous-sol horrifique (anges pleureurs + silence + escargot
+	sous-sol horrifique (anges pleureurs + silence + escargot)
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
-	des outils de + en + élaborés (design) en fonction de leur lvl
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
