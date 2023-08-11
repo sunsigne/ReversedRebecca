@@ -5,6 +5,7 @@
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
 	reset la sauvegarde pour commencer sur le bon lvl
+	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 
 	////////// GEEKALI ////////////
 

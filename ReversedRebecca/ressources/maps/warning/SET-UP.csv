@@ -1,1 +1,7 @@
-TIME -> 0 = CAMERA -> 0-2
+TIME -> 0 = GOTO -> CAMERA, DEV_LOADING
+
+
+//// SET UP ////
+
+$ -> CAMERA = CAMERA -> 0-2
+$ -> DEV_LOADING = END_LVL -> START_GAME, PROCESS
