@@ -106,3 +106,6 @@ OBJ-51 = Green SAS Door Up
 OBJ-52 = Green SAS Door Left
 OBJ-53 = Green SAS Door Down
 OBJ-54 = Rubble Explosing Refusal
+OBJ-62 = Plant
+OBJ-63 = Chair
+OBJ-64 = Desk
