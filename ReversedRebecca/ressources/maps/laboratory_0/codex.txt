@@ -109,3 +109,4 @@ OBJ-54 = Rubble Explosing Refusal
 OBJ-62 = Plant
 OBJ-63 = Chair
 OBJ-64 = Desk
+OBJ-65 = Bombable Desk Rubble

@@ -73,7 +73,6 @@
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
 	6h00 - Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)	(note : gérer les réaction en temps réel en cas de proximité - "Jean se content d'une expression "..." ?)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
-	0h30 - créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
 	XhXX - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
 	XhXX - variantes sadiques, psycopath, angélique, etc. à créer
