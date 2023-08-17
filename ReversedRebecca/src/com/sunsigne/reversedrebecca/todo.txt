@@ -26,12 +26,13 @@
 
 	3h00 - jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
 	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
-	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ?
+	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ? + dessiner l'objet de la même couleur que le lvl qu'il donne
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 	4h00 - ramasser un outils de niveau supérieur à ce qu'on peut porter devrait VISUELLEMENT (dans la GUI par exemple) montrer le problème / le niveau gardé avec une animation
+	0h30 - l'UI doit toujours être au-dessus de l'écrna de cinématique
 	
 	////////// GAMEPAD ////////////
 
@@ -56,6 +57,9 @@
 	- s'assurer qu'elle ne parte pas chercher Sarah à "bab el oued" si elle est venue engueler Jean, ou si elle la croise en train de prendre la chaise
 	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
 	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
+	- gerer le cas de la liaison avec Marie vis-à-vis du baiser de Mika
+	- alicia (marie ne développe pas de liaison si Alicia suit Rebecca)
+	- vider le carton lors du donnage de bombe s'il est plein (+ le désactiver)
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
@@ -178,6 +182,8 @@
 
 	////////// LVL001 ////////////
 
+	compteur 3 : personnes embrassées (se transforme en "garçon embrassé" ou "fille embrassée" en fonction de Marie ou de Mika)
+
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
 	les différents karmas doivent affecter le scénario !
 	refaire les end lvl
@@ -278,6 +284,11 @@
 
 	///////// IDEE ////////////
 
+	pour la fin de la démo, voilà les twists qui peuvent arriver :
+	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"
+	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
+	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
+
 	rebecca bourée -> contrôles inversées
 	transporter de la nitro
 	un niveau sous l'eau
@@ -335,6 +346,7 @@
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
+	coeur brisé : refuser de sortir avec Marie
 	(hidden=true) débloquer le niveau test sur l'écran titre
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////

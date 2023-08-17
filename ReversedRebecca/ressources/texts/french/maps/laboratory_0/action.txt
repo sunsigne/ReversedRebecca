@@ -47,6 +47,8 @@ GET_ANGRY = Key1 % s'énerver
 SAS_KEY = Key3 % clé#?
 TAKE_COFFEE = Key1% café
 TAKE_TEA = Key2% thé
+YES = Key1% oui
+NO = Key2% non
 
 ///// RIGHT AREA /////
 

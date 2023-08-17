@@ -16,6 +16,8 @@ CryingText = Trois#en#larmes#en#meme#temps
 
 ///// YELLOW /////
 
+BrokenHeartTitle = Coeur#Brise
+BrokenHeartText = Refuser#de#sortir#avec#Marie
 GoldenShowerTitle = Golden#Shower
 GoldenShowerText = Se#faire#uriner#dessus...
 TerminatedTitle = EXTERMINATION#!

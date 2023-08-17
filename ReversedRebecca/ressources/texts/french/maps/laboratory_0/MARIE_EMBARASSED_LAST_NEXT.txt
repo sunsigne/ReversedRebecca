@@ -1,0 +1,7 @@
+object = player = blush_var3 = Est-ce#que#blrhfghlre#?
+object = player = surprised_var = (Et#merde…)
+object = player = surprised = HEU…#TES#LACETS#SONT#DÉFAITS#!
+object = player = surprised_var = (J'ai#vraiment#dit#ça#?)
+object = player = cry_var = (Et#je#l'ai#crié#en#plus…#Je#suis#trop#une#nouille)
+object = player = cry_var = (Ses#lacets#ne#sont#même#pas#défaits…@Elle#va#penser#que#je#suis#trop#bizarre…)
+object = player = cry_var = (Ma#vie#est#fichue…)

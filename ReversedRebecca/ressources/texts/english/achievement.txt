@@ -16,6 +16,8 @@ CryingText = Three#in#tears#at#the#same#time
 
 ///// YELLOW /////
 
+BrokenHeartTitle = Broken#Heart
+BrokenHeartText = Refuse#to#go#out#with#Marie
 GoldenShowerTitle = Golden#Shower
 GoldenShowerText = To#be#urinated#on...
 TerminatedTitle = TERMINATED!

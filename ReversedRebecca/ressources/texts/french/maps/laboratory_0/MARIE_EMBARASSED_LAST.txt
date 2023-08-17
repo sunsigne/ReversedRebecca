@@ -1,0 +1,4 @@
+object = player = blush_var = (Ok,#Marie,#c'est#ta#chance#!@C'est#ton#moment#!#C'est#maintenant#!)
+object = player = blush_var2 = Heu…#Rebecca#?
+object = player = blush_var = (Je#m'approche#ou#je#lui#demande#?)
+object = player = blush_var = (…#Je#vais#lui#demander.#C'est#plus#correct)

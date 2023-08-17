@@ -1,0 +1,4 @@
+rebecca = object = excited = C'est#pas#mal,#mais#je#veux#des#super#bombes#!@On#a#des#bombes#vertes#?
+object = player = worry = Je#crois#que#non…
+object = player = surprised = Ho#!#Attend#!#Mais#si#!@J'en#ai#trouvé#une#dans#un#carton#tout#à#l'heure.
+object = player = happy = Tiens,#la#voilà.

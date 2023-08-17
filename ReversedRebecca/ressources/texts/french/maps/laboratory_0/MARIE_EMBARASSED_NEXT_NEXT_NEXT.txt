@@ -1,0 +1,3 @@
+object = player = blush_var2 = ("Rebecca,#je#t'aime.")
+object = player = blush_var = (Allez,#c'est#pas#dur,#Marie.@Il#faut#se#lancer#!)
+object = player = blush = (Ho#non,#je#savais#que#j'aurais#dû@me#laver#les#cheveux#ce#matin#!)
