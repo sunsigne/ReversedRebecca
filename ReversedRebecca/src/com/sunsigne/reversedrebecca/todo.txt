@@ -57,9 +57,10 @@
 	- s'assurer qu'elle ne parte pas chercher Sarah à "bab el oued" si elle est venue engueler Jean, ou si elle la croise en train de prendre la chaise
 	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
 	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
-	- gerer le cas de la liaison avec Marie vis-à-vis du baiser de Mika
-	- alicia (marie ne développe pas de liaison si Alicia suit Rebecca)
-	- vider le carton lors du donnage de bombe s'il est plein (+ le désactiver)
+	dans le stock :
+	- finir le cas d'un "non"
+	- gerer le baiser de Mika si on sort avec Marie
+	- alicia (marie ne se monte pas la tête si Alicia est présente avec Rebecca)
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
@@ -73,7 +74,8 @@
 	- camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	- marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
 	- attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
-
+	
+	?? retimer l'achievement "golden shower" pour qu'il y ai le même gag de temps avec l'achievement "coeur brisé" ??
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
@@ -243,6 +245,7 @@
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
 	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
 	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
+	- la romance (positive, négative ou même hypothétique) avec Marie
 	
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
@@ -346,7 +349,6 @@
 	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
-	coeur brisé : refuser de sortir avec Marie
 	(hidden=true) débloquer le niveau test sur l'écran titre
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
