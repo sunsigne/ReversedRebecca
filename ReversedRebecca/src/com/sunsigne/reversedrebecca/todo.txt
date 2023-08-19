@@ -17,6 +17,7 @@
 
 	////////// BUG ////////////
 	
+	le wall pass mode fait laguer de ouf
 	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 	à vérifier aurpès d'un ordinateur qui présentait le pb : erreur avec les variables dans les fichiers .txt (fichier non trouvé)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
@@ -58,9 +59,7 @@
 	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
 	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
 	dans le stock :
-	- finir le cas d'un "non"
 	- gerer le baiser de Mika si on sort avec Marie
-	- alicia (marie ne se monte pas la tête si Alicia est présente avec Rebecca)
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
