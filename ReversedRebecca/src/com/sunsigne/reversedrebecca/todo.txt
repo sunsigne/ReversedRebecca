@@ -22,7 +22,6 @@
 	à vérifier aurpès d'un ordinateur qui présentait le pb : erreur avec les variables dans les fichiers .txt (fichier non trouvé)
 	4h00 - le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	renomer tout ce qui est relatif au HUD en HUD au lieu de GUI
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -33,7 +32,7 @@
 	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
-	4h00 - ramasser un outils de niveau supérieur à ce qu'on peut porter devrait VISUELLEMENT (dans la GUI par exemple) montrer le problème / le niveau gardé avec une animation
+	4h00 - ramasser un outils de niveau supérieur à ce qu'on peut porter devrait VISUELLEMENT (dans la HUD par exemple) montrer le problème / le niveau gardé avec une animation
 	0h30 - l'HUD doit toujours être au-dessus de l'écran de cinématique
 	
 	////////// GAMEPAD ////////////
@@ -146,7 +145,7 @@
 	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	XhXX - les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
-	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
+	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la HUD
 	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
@@ -262,7 +261,7 @@
 	
 	////////// MOLE 0 ////////////
 	
-	faire le plein -> donner une bombe est-il vraiment nécessaire ?? voir si c'est mieux de s'en passer sinon (pour le blink dans l'affichage GUI)
+	faire le plein -> donner une bombe est-il vraiment nécessaire ?? voir si c'est mieux de s'en passer sinon (pour le blink dans l'affichage HUD)
 	mieux dessiner le lit en paille ?
 	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
 	rajouter les coffres aux endroits prévus sur la map

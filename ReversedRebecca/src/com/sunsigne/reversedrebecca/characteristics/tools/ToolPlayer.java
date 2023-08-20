@@ -1,9 +1,9 @@
 package com.sunsigne.reversedrebecca.characteristics.tools;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
-import com.sunsigne.reversedrebecca.object.gui.GUI;
-import com.sunsigne.reversedrebecca.object.gui.GUIList;
-import com.sunsigne.reversedrebecca.object.gui.GUITools;
+import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
+import com.sunsigne.reversedrebecca.object.hud.HUDTools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
@@ -143,13 +143,13 @@ public abstract class ToolPlayer implements Difficulty {
 	}
 
 	private void updateGUITools(boolean blinking) {
-		GUITools guiTool = null;
+		HUDTools guiTool = null;
 
-		for (GUI tempGUI : GUIList.getList().getList()) {
-			if (tempGUI instanceof GUITools == false)
+		for (HUD tempGUI : HUDList.getList().getList()) {
+			if (tempGUI instanceof HUDTools == false)
 				continue;
 
-			guiTool = (GUITools) tempGUI;
+			guiTool = (HUDTools) tempGUI;
 			break;
 		}
 

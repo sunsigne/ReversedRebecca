@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.gui;
+package com.sunsigne.reversedrebecca.object.hud;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -9,11 +9,11 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class GUIHealth extends GameObject implements GUI {
+public class HUDHealth extends GameObject implements HUD {
 
-	private GUIHealth() {
+	private HUDHealth() {
 		super(0, 0, Size.M, Size.M);
-		GUIList.getList().addObject(this);
+		HUDList.getList().addObject(this);
 		loadImages();
 	}
 
@@ -22,7 +22,7 @@ public class GUIHealth extends GameObject implements GUI {
 	@Override
 	public String toString() {
 		Player player = new PlayerFinder().getPlayer();
-		var clazz = "GUI HP";
+		var clazz = "HUD HP";
 
 		if (player != null) {
 			if (player.isInvulnerable())
@@ -35,13 +35,13 @@ public class GUIHealth extends GameObject implements GUI {
 		return clazz + " : " + hp + "/" + maxhp;
 	}
 
-	////////// GUI ////////////
+	////////// HUD ////////////
 
-	private static GUI gui = new GUIHealth();
+	private static HUD hud = new HUDHealth();
 
 	@Override
-	public GUI getGUI() {
-		return gui;
+	public HUD getHUD() {
+		return hud;
 	}
 
 	////////// TICK ////////////
@@ -57,8 +57,8 @@ public class GUIHealth extends GameObject implements GUI {
 	private BufferedImage full_img;
 
 	private void loadImages() {
-		empty_img = new ImageTask().loadImage("textures/gui/" + "heart_empty");
-		full_img = new ImageTask().loadImage("textures/gui/" + "heart_full");
+		empty_img = new ImageTask().loadImage("textures/hud/" + "heart_empty");
+		full_img = new ImageTask().loadImage("textures/hud/" + "heart_full");
 	}
 
 	////////// RENDER ////////////

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.gui;
+package com.sunsigne.reversedrebecca.object.hud;
 
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
@@ -26,7 +26,7 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 
 	@Override
 	public String toString() {
-		var clazz = "DEBUG GUI";
+		var clazz = "DEBUG HUD";
 		var name = debugMode.getName().split("debugmode_")[1].toUpperCase();
 		return clazz + " : " + name + " / " + " ACTIVE : " + debugMode.getState();
 	}
@@ -41,8 +41,8 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 	private BufferedImage active_image;
 
 	private void loadImages() {
-		image = new ImageTask().loadImage("textures/gui/" + debugMode.getName());
-		active_image = new ImageTask().loadImage("textures/gui/" + debugMode.getName() + "_active");
+		image = new ImageTask().loadImage("textures/hud/" + debugMode.getName());
+		active_image = new ImageTask().loadImage("textures/hud/" + debugMode.getName() + "_active");
 	}
 
 	////////// RENDER ////////////

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.gui;
+package com.sunsigne.reversedrebecca.object.hud;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -17,11 +17,11 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class GUITools extends GameObject implements GUI, Blinking {
+public class HUDTools extends GameObject implements HUD, Blinking {
 
-	private GUITools() {
+	private HUDTools() {
 		super(0, Window.HEIGHT - Size.M - 10, Size.M, Size.M);
-		GUIList.getList().addObject(this);
+		HUDList.getList().addObject(this);
 		loadImages(null);
 	}
 
@@ -29,7 +29,7 @@ public class GUITools extends GameObject implements GUI, Blinking {
 
 	@Override
 	public String toString() {
-		var clazz = "GUI TOOL : ";
+		var clazz = "HUD TOOL : ";
 		var result = clazz;
 
 		var list = ToolList.getList();
@@ -44,13 +44,13 @@ public class GUITools extends GameObject implements GUI, Blinking {
 		return result;
 	}
 
-	////////// GUI ////////////
+	////////// HUD ////////////
 
-	private static GUI gui = new GUITools();
+	private static HUD hud = new HUDTools();
 
 	@Override
-	public GUI getGUI() {
-		return gui;
+	public HUD getHUD() {
+		return hud;
 	}
 
 	////////// BLINKING ////////////
@@ -96,7 +96,7 @@ public class GUITools extends GameObject implements GUI, Blinking {
 				continue;
 
 			BufferedImage tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_null");
-			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "gui/battery_max_"
+			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "hud/battery_max_"
 					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName());
 
 			images.addObject(tool_image);
