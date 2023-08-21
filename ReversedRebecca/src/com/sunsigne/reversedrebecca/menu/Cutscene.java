@@ -42,7 +42,7 @@ public class Cutscene implements Updatable {
 	////////// TICK ////////////
 
 	private int blacking;
-	private final int MAX_BLACKING = 90;
+	private final int MAX_BLACKING = 110;
 	private final int BLACKING_SPEED = 4;
 
 	@Override

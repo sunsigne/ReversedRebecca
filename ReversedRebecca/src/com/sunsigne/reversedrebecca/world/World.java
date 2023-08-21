@@ -147,7 +147,7 @@ public class World implements Updatable, RenderFree {
 
 	private void addGUI() {
 		for (HUD tempGUI : HUDList.getList().getList()) {
-			LAYER.GUI.addObject(tempGUI);
+			LAYER.GUI.getHandler().getList().add(0, tempGUI);
 		}
 	}
 

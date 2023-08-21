@@ -29,12 +29,10 @@
 	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
 	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ? + dessiner l'objet de la même couleur que le lvl qu'il donne
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-	0h20 - simplifier le deign de sbombes (enlever la couloeur orange) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
+	0h20 - simplifier le design des bombes dans le puzzle (enlever la couleur orange du compteur) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
-	4h00 - ramasser un outils de niveau supérieur à ce qu'on peut porter devrait VISUELLEMENT (dans la HUD par exemple) montrer le problème / le niveau gardé avec une animation
-	0h30 - l'HUD doit toujours être au-dessus de l'écran de cinématique
-	
+
 	////////// GAMEPAD ////////////
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
