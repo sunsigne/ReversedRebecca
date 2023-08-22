@@ -39,10 +39,8 @@
 	30h00 - Puzzles must be compatible
 
 	////////// EN COURS ////////////
-
+	
 	IA et corrélation Marie & Sarah :	
-	- vérifier qui marie va effectivement de façon naturelle dans le stock	
-	- verrou -> sarah ne part spontannement fouiller le bureau d'alicia QUE si marie à atteint l'entrée du stock ou est enfermée dans les toilettes (et que la porte sur le chemin est ouverte)
 	- enguelade de jean -> sarah part fouiller immédiatement
 	- marie est intimidée par sarah et n'ira pas lui parler (gérer la pré-intimidation ?)
 	Ajouts de Alicia :
@@ -50,10 +48,9 @@
 	- autre (réfléchir) PS : baisé de mika incompatible, on a forcement déjà des bombes si Alicia nous suit
 	Joseph :
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
-	
 
 	bug ! sortir par le parking génère PLUSIEURS fois le dialogues
-
+	
 	lvl001 - exit :
 	
 	4h00 - changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh, dave
@@ -67,7 +64,7 @@
 	XhXX - Marie IA :
 	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
 	dans le stock :
-	- gerer le baiser de Mika si on sort avec Marie
+	- gerer le baiser de Mika si on sort avec Marie (techniquement possible, si on a pas pris les bombes - c'est d'ailleurs un easter egg super cool !)
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
