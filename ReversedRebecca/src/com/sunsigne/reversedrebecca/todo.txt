@@ -64,14 +64,12 @@
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	- créer une réaction "naturelle" de Rebecca lorsqu'elle entre dans le bureau pour la 1ère fois ?
 	- l'IA après enguelade n'est pas encore mise en place
-	- le "vérou" de prise de chaise existe toujours
 	- sarah ne se dirige pas encore naturellement vers le bureau de Alicia après avoir été intérompu par Marie (même si son comportement dans la salle en question est déjà codé et en accord avec la présence d'Alicia (mais pas en accord avec le déclanchement d'éboulement)
 		
 	20h00 - reprendre / finir les pathing de Marie et Sarah :
 	- sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
 	- camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
 	- marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
-	- attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
 	
 	?? retimer l'achievement "golden shower" pour qu'il y ai le même gag de temps avec l'achievement "coeur brisé" ??
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
@@ -110,6 +108,7 @@
 	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
 	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
 	1h30 - attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
+	1h30 - finir marie_date
 	
 	////////// VIE & HP ////////////
 	
@@ -128,6 +127,7 @@
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
+	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
 	
 	////////// DIFFICILE ////////////
 	
@@ -192,6 +192,7 @@
 	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	scénarion : inquery
+	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery
 	- Alicia + Dave : créer le TA du vol
 	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
 	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
