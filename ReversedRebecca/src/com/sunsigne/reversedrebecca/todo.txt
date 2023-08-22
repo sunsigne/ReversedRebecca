@@ -40,6 +40,18 @@
 
 	////////// EN COURS ////////////
 
+	IA et corrélation Marie & Sarah :	
+	- vérifier qui marie va effectivement de façon naturelle dans le stock	
+	- verrou -> sarah ne part spontannement fouiller le bureau d'alicia QUE si marie à atteint l'entrée du stock ou est enfermée dans les toilettes (et que la porte sur le chemin est ouverte)
+	- enguelade de jean -> sarah part fouiller immédiatement
+	- marie est intimidée par sarah et n'ira pas lui parler (gérer la pré-intimidation ?)
+	Ajouts de Alicia :
+	- Alicia réagit lorsque Rebecca demande des bombes si elles ne se sont pas mise d'accord avant
+	- autre (réfléchir) PS : baisé de mika incompatible, on a forcement déjà des bombes si Alicia nous suit
+	Joseph :
+	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
+	
+
 	bug ! sortir par le parking génère PLUSIEURS fois le dialogues
 
 	lvl001 - exit :
@@ -51,21 +63,16 @@
 	- reaction au cassage de serrure / à eteindre sans sauvegarder
 	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
 	1h00 - si on commence à exploser des murs AVANT de libérer alicia à droite, il faut prévoir sa réaction
-	1h00 - finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?) (heu ... c'est sûr ça ? ya pas des ébouelmetn qui bloquent l'accès ?)
 
 	XhXX - Marie IA :
-	- s'assurer qu'elle ne parte pas chercher Sarah à "bab el oued" si elle est venue engueler Jean, ou si elle la croise en train de prendre la chaise
-	- créer un comportement "stable / viable" lorsqu'elle recherche Sarah
 	- dans le cas d'une golden shower et où marie prend les toilettes du haut, on fait quoi ? on la fait nettoyer ? ingorer la flaque ? on l'efface après la golden shower ?
 	dans le stock :
 	- gerer le baiser de Mika si on sort avec Marie
 	
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
-	- créer une réaction "naturelle" de Rebecca lorsqu'elle entre dans le bureau pour la 1ère fois ?
-	- l'IA après enguelade n'est pas encore mise en place
-	- sarah ne se dirige pas encore naturellement vers le bureau de Alicia après avoir été intérompu par Marie (même si son comportement dans la salle en question est déjà codé et en accord avec la présence d'Alicia (mais pas en accord avec le déclanchement d'éboulement)
-		
+	- créer une réaction "naturelle" de Rebecca lorsqu'elle entre dans le bureau d'Alicia pour la 1ère fois ?
+
 	20h00 - reprendre / finir les pathing de Marie et Sarah :
 	- sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
 	- camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
