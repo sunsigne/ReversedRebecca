@@ -64,9 +64,6 @@
 	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
 	1h00 - si on commence à exploser des murs AVANT de libérer alicia à droite, il faut prévoir sa réaction
 
-	XhXX - Marie IA :
-	- désactiver le dialogue par défaut pendant qu'elle est au toilettes (toute la salle, pas juste la cabine)
-
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	- créer une réaction "naturelle" de Rebecca lorsqu'elle entre dans le bureau d'Alicia pour la 1ère fois ?
