@@ -1,2 +1,2 @@
 rebecca = object = happy_var = En#effet,#j'en#ai#pris#avec#moi.
-object = DOWN = happy = Alors#c'est#parfait.
+object = player = happy = Alors#c'est#parfait.
