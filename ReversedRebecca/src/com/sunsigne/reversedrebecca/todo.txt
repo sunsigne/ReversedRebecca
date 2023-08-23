@@ -39,14 +39,7 @@
 	30h00 - Puzzles must be compatible
 
 	////////// EN COURS ////////////
-	
-	IA et corrélation Marie & Sarah :	
-	- marie est intimidée si sarah a enguelé jean, et n'ira pas lui parler (gérer la pré-intimidation ?)
-	Ajouts de Alicia :
-	- Alicia réagit lorsque Rebecca demande des bombes à Marie si elles ne se sont pas mise d'accord avant
-	- Reaction à la discution du trio féminin ?
-	- réaction à sarah qui gueule ? à Marie qui dit qu'elle n'est pas chaude pour demander des infos à Sarah ?
-	- autre (réfléchir)
+
 	Joseph :
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
 
@@ -62,6 +55,10 @@
 	- mika : baisé incompatible, on a forcement déjà des bombes si Alicia nous suit
 	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
 	1h00 - si on commence à exploser des murs AVANT de libérer alicia à droite, il faut prévoir sa réaction
+	- Alicia réagit lorsque Rebecca demande des bombes à Marie si elles ne se sont pas mise d'accord avant
+	- Reaction à la discution du trio féminin ?
+	- réaction à sarah qui gueule ? à Marie qui dit qu'elle n'est pas chaude pour demander des infos à Sarah ?
+	- autre (réfléchir)
 
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
