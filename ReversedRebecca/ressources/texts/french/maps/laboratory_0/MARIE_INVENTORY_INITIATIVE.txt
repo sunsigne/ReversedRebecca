@@ -1,2 +1,5 @@
 object = player = happy = Tu#as#besoin#de#quelque#chose#?
 rebecca = object = happy_var = Non,#merci.@Je#visite,#c'est#tout.
+object = player = laugh = Tu#visites#notre#stock#?#Tu#peux#le@dire#si#tu#viens#chercher#des#bombes.
+rebecca = object = happy_var = Non,#non.#Vraiment,#je#visite.
+object = player = you_silly = Si#tu#le#dis…#Je#t'en#donne@quand#même#une,#au#cas#où.

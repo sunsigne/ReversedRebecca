@@ -65,9 +65,8 @@
 	1h00 - si on commence à exploser des murs AVANT de libérer alicia à droite, il faut prévoir sa réaction
 
 	XhXX - Marie IA :
-	dans le stock :
-	- gerer le baiser de Mika si on sort avec Marie (techniquement possible si on a pas pris les bombes - rendre impossible ou en faire un easter egg (pas sûr, dans la mesure où il faut "attendre" que Marie prenne l'initiative de nous parler pour que ça arrive, ça n'est probablement pas spécialement naturel))
-	
+	- désactiver le dialogue par défaut pendant qu'elle est au toilettes (toute la salle, pas juste la cabine)
+
 	4h00 - Sarah IA :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	- créer une réaction "naturelle" de Rebecca lorsqu'elle entre dans le bureau d'Alicia pour la 1ère fois ?
@@ -79,6 +78,7 @@
 	
 	?? retimer l'achievement "golden shower" pour qu'il y ai le même gag de temps avec l'achievement "coeur brisé" ??
 	0h20 - créer la hitbox des toilettes (et une fonctionnalité ?)
+	1h00 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs, etc)
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
