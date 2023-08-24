@@ -111,3 +111,4 @@ OBJ-62 = Plant
 OBJ-63 = Chair
 OBJ-64 = Desk
 OBJ-65 = Bombable Desk Rubble
+OBJ-67 = Bomb Path Soft Lock Preventer

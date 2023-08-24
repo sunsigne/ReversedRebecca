@@ -1,0 +1,9 @@
+player = alicia = no_sens_var = Heu…
+player = alicia = unhappy = Je#suis#désolée#Alicia,#je#crois@qu'on#est#officiellement#bloquée.
+alicia = player = surprised_var = Non…#Vraiment#?
+player = UP = worry = Oui…#Je#n'ai#pas#de#bombe@verte#pour#dégager#la#voie.
+player = UP = unhappy = Et#je#ne#sais#pas#me#servir#de@la#clé#verte#que#j'ai#trouvée.
+alicia = player = laugh = Ha#!#C'est#parfait#!
+player = alicia = no_sens = Pardon#?
+alicia = player = happy_var = Tu#as#trouvé#une#clé#verte.@Donnes-la#moi,#je#sais#m'en#servir.
+player = alicia = laugh = Ha#!#Ok,#tiens.
