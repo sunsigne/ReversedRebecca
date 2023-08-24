@@ -61,22 +61,18 @@
 	-> alicia a accès au bas (suivant ou seule) = on a obligatoirement la clef verte
 	
 	- changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh
-	- marie (faire son IA d'abords)
 	- delta (faire son IA d'abords)
 	- jospeh (l'engueulage)
 	- reaction au cassage de serrure / à eteindre sans sauvegarder
 	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
-	- Alicia réagit lorsque Rebecca demande des bombes à Marie si elles ne se sont pas mise d'accord avant
-	- Reaction à la discution du trio féminin ?
 	- réaction à sarah qui gueule ? à Marie qui dit qu'elle n'est pas chaude pour demander des infos à Sarah ?
 	- autre (réfléchir / tester toute (ou presque) les conversations possibles avec les gens)
-	+ 3h00 - création du path en la libérant par le bas
+	+ 5h00 - création du path en la libérant par le bas
 
 	0h20 - bug ! sortir par le parking génère PLUSIEURS fois le dialogues
 
 	1h00 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
-	6h00 - créer le path de Alicia dans le cas où elle a été libérée par le bas	
 	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
 	1h00 - (+ transformer 3 en pleurs en même temps en 4 ?)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
