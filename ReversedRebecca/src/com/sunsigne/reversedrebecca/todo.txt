@@ -65,7 +65,6 @@
 	- jospeh (l'engueulage)
 	- reaction au cassage de serrure / à eteindre sans sauvegarder
 	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
-	- réaction à sarah qui gueule ? à Marie qui dit qu'elle n'est pas chaude pour demander des infos à Sarah ?
 	- autre (réfléchir / tester toute (ou presque) les conversations possibles avec les gens)
 	+ 5h00 - création du path en la libérant par le bas
 
