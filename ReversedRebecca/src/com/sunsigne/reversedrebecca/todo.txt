@@ -55,18 +55,13 @@
 	0h40 - Sarah :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	
-	4h00 - Alicia :
+	5h00 - Alicia :
 	rappel : 
 	-> alicia nous suit = on a obligatoirement les bombes
-	-> alicia a accès au bas (suivant ou seule) = on a obligatoirement la clef verte
-	
-	- changer TOUS? les dialogues de demande de sortie pour lorsqu'on a Alicia avec nous : sarah, delta, mika (+ bisou ?), marie, jospeh
-	- delta (faire son IA d'abords)
+	-> alicia a accès au bas = on a obligatoirement la clef verte
 	- jospeh (l'engueulage)
-	- reaction au cassage de serrure / à eteindre sans sauvegarder
-	- Attention, zone de flou avec JOSEPH_SAS_KEY (on est pas pouvoir censé pouvoir demander les clefs du sas si on l'a déjà ouvert, ni à Joseph, ni auprès de Delta)
-	- autre (réfléchir / tester toute (ou presque) les conversations possibles avec les gens)
-	+ 5h00 - création du path en la libérant par le bas
+	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder	
+	- création du path en la libérant par le bas
 
 	0h20 - bug ! sortir par le parking génère PLUSIEURS fois le dialogues
 
