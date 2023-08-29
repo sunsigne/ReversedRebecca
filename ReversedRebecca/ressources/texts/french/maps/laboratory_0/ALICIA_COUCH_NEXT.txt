@@ -1,0 +1,4 @@
+player = alicia = worry = Si#ça#ne#te#gêne#pas#d'en#parler…#Comment@t'es-tu#retrouvée#enfermée#dans#le#SAS#?
+alicia = DOWN = happy = C'est#à#cause#de#notre#système#de#sécurité.@Quand#il#y#a#eu#l'explosion,#il#a#vérouillé#les#portes.
+alicia = DOWN = unhappy = Et…#Ben…@J'étais#simplement#dedans#quand#c'est#arrivé.
+player = alicia = you_silly_var = Je#vois.

@@ -55,13 +55,8 @@
 	0h40 - Sarah :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	
-	5h00 - Alicia :
-	rappel : 
-	-> alicia nous suit = on a obligatoirement les bombes
-	-> alicia a accès au bas = on a obligatoirement la clef verte
-	- jospeh (l'engueulage)
-	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder	
-	- création du path en la libérant par le bas
+	1h00 - Alicia :
+	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder
 
 	0h20 - bug ! sortir par le parking génère PLUSIEURS fois le dialogues
 
@@ -215,6 +210,8 @@
 	- accepter d'arrêter de faire sauter le batiment (sauf si explosion de l'entrée sans "marie protection")
 	- se disputer avec Alicia (pas angélique ?)
 	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
+	- boire le café d'alicia
+	- s'excuser d'avoir bu le café d'Alicia
 
 	à enregister :
 	- le type de scénario (sortie ou enquête)
@@ -286,11 +283,12 @@
 	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
 	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
 
+	un passage dont la mécanique s'inspire du jeu mobile "alien invasion idle rpg", par exemple lors de la reconstruction du laboiratoire où il faut gérer la quantité d'ouvrier, les répartir, gérer les ressoruces, etc.
 	rebecca bourée -> contrôles inversées
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
-	sous-sol horrifique (anges pleureurs + silence + escargot)
+	musée de l'horreur (anges pleureurs + silence + escargot + luther)
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) -> le twist de la dernière input (sauvegarder, quitter, recharger)
