@@ -49,14 +49,18 @@
 	- créer la réaction des gens sur son engueulade :
 		- Jean -> expression : "..."
 		- Marie -> ?
-		- Alicia -> ?
+		- Alicia -> voir plus bas
+	- cas particulier : que se passe-t-il si joseph est déjà en train de pleurer quand alicia arrive dans la pièce (en suivant le joueur ou par le bas) ? Est-ce qu'il a été consollé par Marie ? Si oui, il faut arranger le cas où on lui prend les clés du SAS alors qu'on l'a engueler avant
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
 	
 	0h40 - Sarah :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	
-	1h00 - Alicia :
+	2h00 - Alicia :
+	- étudier si le timing du "alicia oops" doit être fixé à 5 ou 6 secondes
+	- créer la réaction de l'engueulade lorsqu'elle est passée par le bas + que se passe-t-il si joseph est déjà en train de pleurer quand alicia arrive dans la pièce
 	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder
+	- installer une sécurité : alicia ne boit pas son verre si le joueur est trop près de la table (passer ke risque de confusion avec un faible % de chance à un risque 0)
 
 	0h20 - bug ! sortir par le parking génère PLUSIEURS fois le dialogues
 

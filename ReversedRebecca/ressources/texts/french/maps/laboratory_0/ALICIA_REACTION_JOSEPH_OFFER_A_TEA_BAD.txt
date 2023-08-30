@@ -1,0 +1,4 @@
+alicia = player = angry_var = Rebecca#!#Mais#ça#va#pas#la#tête#?@C'est#quoi#ton#problème#?
+player = alicia = angry = Ha#non#!#Tu#ne#vas#pas#commencer@à#me#saouler#toi#aussi#!
+alicia = player = angry = Ha#bon#?#On#te#saoule#?#Tu#veux#que@je#te#rappelle#qui#se#tape#ta#paperasse#?
+player = alicia = angry_var2 = Elle#me#cherche,#ou#quoi#?@Parce#qu'elle#va#me#trouver#!

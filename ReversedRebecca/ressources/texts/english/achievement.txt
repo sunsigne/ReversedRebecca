@@ -27,4 +27,7 @@ TerminatedText = Permanent#death#on#a#terminator
 
 ///// RED /////
 
+ThatWasAnAccidentTitle = That#was#an#accident...
+ThatWasAnAccidentText = Die#because#of#a#couch
+
 ///// PURPLE /////

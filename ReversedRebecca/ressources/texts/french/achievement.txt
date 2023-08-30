@@ -27,4 +27,7 @@ TerminatedText = Mort#definitive#sur#un#terminator
 
 ///// RED /////
 
+ThatWasAnAccidentTitle = C'etait#un#accident...
+ThatWasAnAccidentText = Mourir#a#cause#d'un#canape
+
 ///// PURPLE /////
