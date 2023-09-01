@@ -40,9 +40,8 @@
 
 	////////// EN COURS ////////////
 
-	animation :
-	(sur la mort par canapé) rajouter 1 frames d'entre-deux lors du poussage de rebecca 
-	(sur le bombe path) rétrécir la taille de l'ordi lorsqu'il est en l'air
+	pour la démo :
+	- créer des coffres dans les sousterrains
 
 	5h00 - Dave :
 	- retirer le personnage
@@ -62,7 +61,7 @@
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
 	
 	2h00 - Alicia :
-	- étudier si le timing du "alicia oops" doit être fixé à 5 ou 6 secondes
+	- étudier si le timing du "alicia oops" doit être fixé à 5 ou 6 secondes (tj d'actualité)
 	- créer la réaction de l'engueulade lorsqu'elle est passée par le bas + que se passe-t-il si joseph est déjà en train de pleurer quand alicia arrive dans la pièce
 	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder
 	- installer une sécurité : alicia ne boit pas son verre si le joueur est trop près de la table (passer ke risque de confusion avec un faible % de chance à un risque 0)
@@ -147,7 +146,8 @@
 	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
 	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
-
+	1h00 - changer le système d'aléatorie pour du déterminisme ?
+	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition
 
 
 
