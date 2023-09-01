@@ -40,6 +40,10 @@
 
 	////////// EN COURS ////////////
 
+	animation :
+	(sur la mort par canapé) rajouter 1 frames d'entre-deux lors du poussage de rebecca 
+	(sur le bombe path) rétrécir la taille de l'ordi lorsqu'il est en l'air
+
 	5h00 - Dave :
 	- retirer le personnage
 	- retirer / adapter les dialogues
@@ -52,6 +56,7 @@
 		- Alicia -> voir plus bas
 	- cas particulier : que se passe-t-il si joseph est déjà en train de pleurer quand alicia arrive dans la pièce (en suivant le joueur ou par le bas) ? Est-ce qu'il a été consollé par Marie ? Si oui, il faut arranger le cas où on lui prend les clés du SAS alors qu'on l'a engueler avant
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
+	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
 	
 	0h40 - Sarah :
 	- faire une réaction si des éboulements ont lieu lorsqu'elle est dans le bureau d'Alicia
@@ -74,6 +79,7 @@
 	XhXX - variantes sadiques, psycopath, angélique, etc. à créer
 	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	XhXX - dessiner l'exterieur et les labo à droite (haut et bas) (créer un parking pour l'entrée "des visiteurs")
+	0h20 - retirer l'achievement des 3 qui pleurent en même temps
 
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	en psycopath, les éboulement du bureau d'alicia SANS la cutscene ALicia donne-t-il l'idée du meutre ? à tester
