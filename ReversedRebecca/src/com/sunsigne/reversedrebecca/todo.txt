@@ -73,11 +73,10 @@
 	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
 	XhXX - variantes sadiques, psycopath, angélique, etc. à créer
 	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
-	XhXX - dessiner l'exterieur et les labo à droite (haut et bas) (créer un parking pour l'entrée "des visiteurs")
 	0h20 - retirer l'achievement des 3 qui pleurent en même temps
 
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	en psycopath, les éboulement du bureau d'alicia SANS la cutscene ALicia donne-t-il l'idée du meutre ? à tester
+	en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester
 		
 	////////// BOSS ////////////
 
@@ -250,6 +249,7 @@
 	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta reaction du "Alicia" n'est pas fini
+	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs
 
 	////////// LVL002 ////////////
 	
