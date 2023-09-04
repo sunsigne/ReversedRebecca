@@ -11,9 +11,6 @@ FirstKillText = Eliminate#Alicia
 
 ///// GREEN /////
 
-CryingTitle = The#taste#of#your#tears
-CryingText = Three#in#tears#at#the#same#time
-
 ///// YELLOW /////
 
 BrokenHeartTitle = Broken#Heart

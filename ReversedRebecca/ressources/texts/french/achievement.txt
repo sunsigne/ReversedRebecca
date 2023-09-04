@@ -11,9 +11,6 @@ FirstKillText = Eliminer#Alicia
 
 ///// GREEN /////
 
-CryingTitle = Le#gout#de#vos#larmes
-CryingText = Trois#en#larmes#en#meme#temps
-
 ///// YELLOW /////
 
 BrokenHeartTitle = Coeur#Brise

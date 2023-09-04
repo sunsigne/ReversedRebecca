@@ -60,7 +60,6 @@
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
-	0h20 - retirer l'achievement des 3 qui pleurent en même temps
 	
 	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
 	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
