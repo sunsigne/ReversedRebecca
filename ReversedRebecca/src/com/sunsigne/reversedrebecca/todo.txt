@@ -27,11 +27,12 @@
 
 	0h40 - arranger le formulaire d'erreur (l'aide devrait soit être déroulante, soit s'afficher avant)
 	3h00 - jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
-	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
-	4h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ? + dessiner l'objet de la même couleur que le lvl qu'il donne
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	0h20 - simplifier le design des bombes dans le puzzle (enlever la couleur orange du compteur) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
+	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
+	1h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ? + dessiner l'objet de la même couleur que le lvl qu'il donne
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	-
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 
 	////////// GAMEPAD ////////////
@@ -42,39 +43,31 @@
 	////////// EN COURS ////////////
 
 	pour la démo :
-	- créer des coffres dans les sousterrains
+	3h00 - créer des coffres dans les sousterrains
 
 	5h00 - Dave :
 	- retirer le personnage
 	- retirer / adapter les dialogues
 	- créer les dialogues d'avant niveau
 	
-	3h00 - Joseph :
-	- créer la réaction des gens sur son engueulade :
-		- Jean -> expression : "..."
-		- Marie -> ?
-		- Alicia - cas particulier : que se passe-t-il si joseph est déjà en train de pleurer quand alicia arrive dans la pièce (en suivant le joueur ou par le bas) ? Est-ce qu'il a été consollé par Marie ? Si oui, il faut arranger le cas où on lui prend les clés du SAS alors qu'on l'a engueler avant
+	4h00 - Joseph :
+	- créer la réaction de Marie sur son engueulade
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
 	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
 	
-	0h40 - Sarah :
-	- faire une réaction si des éboulements (ou une explosion du mur) ont lieu lorsqu'elle est dans le bureau d'Alicia
-	
-	2h00 - Alicia :
-	- objects - reaction au cassage de serrure / à eteindre sans sauvegarder
-	- installer une sécurité : alicia ne boit pas son verre si le joueur est trop près de la table (passer ke risque de confusion avec un faible % de chance à un risque 0)
-
-	1h00 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
+	1h00 - Sarah - faire une réaction si des éboulements (ou une explosion du mur) ont lieu lorsqu'elle est dans le bureau d'Alicia
+	1h40 - Alicia - objects - reaction au cassage de serrure / à eteindre sans sauvegarder
+	0h20 - Alicia - installer une sécurité : alicia ne boit pas son verre si le joueur est trop près de la table (passer ke risque de confusion avec un faible % de chance à un risque 0)
+	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
-	8h00 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
-	1h00 - (+ transformer 3 en pleurs en même temps en 4 ?)
+	0h30 - finir la machine à café (option de base, + mémory de quand alicia propose + proposer aux gens + autre ?)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
-	XhXX - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
-	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
-	XhXX - variantes sadiques, psycopath, angélique, etc. à créer
 	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	0h20 - retirer l'achievement des 3 qui pleurent en même temps
-
+	
+	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
+	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
+	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester
 		
