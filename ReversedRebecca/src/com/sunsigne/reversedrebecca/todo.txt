@@ -40,10 +40,6 @@
 
 	////////// EN COURS ////////////
 
-	1h00 - pickuploot -> pos :
-	- adapter la clef verte du bombe path
-	- adpater la clef verte de jospeh
-
 	pour la démo :
 	3h00 - créer des coffres dans les sousterrains
 
