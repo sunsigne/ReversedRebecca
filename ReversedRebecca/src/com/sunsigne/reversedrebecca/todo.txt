@@ -28,7 +28,6 @@
 	3h00 - jeux des bombes trop confus (logan et son histoire de paterns : on reconnait qq chose,n on croit que ça marche, en fait c'est pas ça)
 	0h20 - simplifier le design des bombes dans le puzzle (enlever la couleur orange du compteur) - à vérifier si c'est définitivement mieux, mais sûr à 90% que c'est la bonne décision
 	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
-	1h00 - cartons : pourquoi les cartons restent visuellement les même lorsque l'outils a été récupéré ? + dessiner l'objet de la même couleur que le lvl qu'il donne
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	-
