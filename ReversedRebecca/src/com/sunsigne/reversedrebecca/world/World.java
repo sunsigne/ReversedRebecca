@@ -146,6 +146,8 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void addHUD() {
+		new CharacteristicList().reset();
+		
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			LAYER.HUD.getHandler().getList().add(0, tempHUD);
 		}
@@ -306,7 +308,6 @@ public class World implements Updatable, RenderFree {
 		resetLayers();
 		freeze(false);
 		instance = null;
-		new CharacteristicList().reset();
 		MemorySet.getSet().clear();
 		SaveList.getList().clear();
 		SaveEraserList.getList().clear();
