@@ -41,6 +41,10 @@
 
 	////////// EN COURS ////////////
 
+	1h00 - pickuploot -> pos :
+	- adapter la clef verte du bombe path
+	- adpater la clef verte de jospeh
+
 	pour la démo :
 	3h00 - créer des coffres dans les sousterrains
 
@@ -67,6 +71,8 @@
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester
 		
+	! soflock EVIDENT dans le niveau mole_0 : si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
+			
 	////////// BOSS ////////////
 
 	30h00 - retravailer le système de boss :

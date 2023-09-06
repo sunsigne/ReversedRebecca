@@ -45,6 +45,13 @@ Le Type de Condition WONPUZZLE est vérifiée lorsque le puzzle aux coordonnées
 exemple : WONPUZZLE -> 34-31 = "Requête"
 
 
+////// PICKUPLOOT //////
+
+
+Le Type de Condition PICKUPLOOT est vérifiée lorsque l'objet ramassable aux coordonnées indiquées est ramassé.
+exemple : PICKUPLOOT -> 34-31 = "Requête"
+
+
 ////// BOSS //////
 
 
