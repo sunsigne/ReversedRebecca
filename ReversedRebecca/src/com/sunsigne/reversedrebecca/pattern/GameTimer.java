@@ -24,13 +24,12 @@ public class GameTimer implements Updatable, RenderFree {
 			return;
 		}
 
-		if (World.get() == null)
-			return;
-
 		if (absolute)
 			this.handler = LAYER.DEBUG.getHandler();
-		else
+		else if (World.get() != null)
 			this.handler = World.get().getLayer(false).getHandler();
+		else
+			return;
 
 		handler.addObject(this);
 
