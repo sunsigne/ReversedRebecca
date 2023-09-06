@@ -67,7 +67,7 @@ public class World implements Updatable, RenderFree {
 		updateLayer();
 		addSetup();
 		new Save().loadSave();
-		addGUI();
+		addHUD();
 		addControllers();
 		start();
 
@@ -145,9 +145,9 @@ public class World implements Updatable, RenderFree {
 		Game.getInstance().forceLoop();
 	}
 
-	private void addGUI() {
-		for (HUD tempGUI : HUDList.getList().getList()) {
-			LAYER.GUI.getHandler().getList().add(0, tempGUI);
+	private void addHUD() {
+		for (HUD tempHUD : HUDList.getList().getList()) {
+			LAYER.HUD.getHandler().getList().add(0, tempHUD);
 		}
 	}
 

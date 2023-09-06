@@ -23,7 +23,7 @@ public class Cutscene implements Updatable {
 
 	public void start() {
 		running = true;
-		LAYER.GUI.addObject(this);
+		LAYER.HUD.addObject(this);
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
 		new PlayerFinder().roundToTilePlayer();
 	}
@@ -69,9 +69,9 @@ public class Cutscene implements Updatable {
 	private void realStop() {
 		new PlayerFinder().setUserAllowedToControlPlayer(true);
 		
-		for (Updatable tempUpdatable : LAYER.GUI.getHandler().getList()) {
+		for (Updatable tempUpdatable : LAYER.HUD.getHandler().getList()) {
 			if (tempUpdatable instanceof Cutscene)
-				LAYER.GUI.getHandler().removeObject(tempUpdatable);
+				LAYER.HUD.getHandler().removeObject(tempUpdatable);
 		}
 	}
 
