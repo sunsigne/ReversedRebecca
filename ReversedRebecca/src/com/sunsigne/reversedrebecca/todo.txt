@@ -17,17 +17,19 @@
 
 	////////// BUG ////////////
 	
-	le wall pass mode fait laguer de ouf
-	à confirmer : le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
-	à vérifier aurpès d'un ordinateur qui présentait le pb : erreur avec les variables dans les fichiers .txt (fichier non trouvé)
-	à vérifier si le gamepad consomme ENCORE toutes les ressources disponible jusqu'à crash du jeu ...
-	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
+	pas réglé :
+		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
+		- menu languages 4 langues se sont affiché au lieu de 2
+	
+	vérifié si bien réglé :
+		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
+		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-	10h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	-
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 
@@ -37,6 +39,12 @@
 	30h00 - Puzzles must be compatible
 
 	////////// EN COURS ////////////
+
+	les personnages "dummy" s'affichent comme tels sur l'écrna d'option, avec le nom "dummy". Il fait arranger ça du coup ^^
+
+	bug à régler :
+		- 1h00 le wall pass mode fait laguer de ouf
+		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
 	pour la démo :
 	3h00 - créer des coffres dans les sousterrains
@@ -64,7 +72,7 @@
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester
 		
-	! soflock EVIDENT dans le niveau mole_0 : si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
+	! soflock EVIDENT dans le niveau mole_0 : (si évident que peut-être que j'y avais déjà pensé / que je l'avais réglé pour le geekali) si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
 			
 	////////// BOSS ////////////
 
