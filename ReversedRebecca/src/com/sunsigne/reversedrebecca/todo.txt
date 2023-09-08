@@ -60,7 +60,6 @@
 	1h00 - Sarah - faire une réaction si des éboulements (ou une explosion du mur) ont lieu lorsqu'elle est dans le bureau d'Alicia
 	1h40 - Alicia - objects - reaction au cassage de serrure / à eteindre sans sauvegarder
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
-	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	
