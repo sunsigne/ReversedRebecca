@@ -21,7 +21,7 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
 	
-	vérifié si bien réglé :
+	vérifier si bien réglé :
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 	
@@ -39,8 +39,6 @@
 	30h00 - Puzzles must be compatible
 
 	////////// EN COURS ////////////
-
-	les personnages "dummy" s'affichent comme tels sur l'écrna d'option, avec le nom "dummy". Il fait arranger ça du coup ^^
 
 	bug à régler :
 		- 1h00 le wall pass mode fait laguer de ouf
@@ -64,13 +62,13 @@
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h20 - rebecca dit "zut, je ne peux plus passer par là" voit les éboulement, mêem quand elle a fait le tour par le SAS (landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
-	5h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
+	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	
 	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
 	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
 	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester
+	1h00 en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester - vérifier également que les éboulement lorsqu'on est en bas ne donne pas l'idée, sinon elle ne serait pas praticable de toute façon
 		
 	! soflock EVIDENT dans le niveau mole_0 : (si évident que peut-être que j'y avais déjà pensé / que je l'avais réglé pour le geekali) si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
 			

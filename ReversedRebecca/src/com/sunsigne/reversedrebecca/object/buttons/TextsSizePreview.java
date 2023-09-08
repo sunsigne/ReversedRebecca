@@ -57,7 +57,7 @@ public class TextsSizePreview extends GameObject {
 
 		file_list.forEach(tempfile -> {
 			if (tempfile.contains(".") == false) // check if folder or file
-				if (tempfile.contains("error") == false)
+				if (tempfile.contains("error") == false && tempfile.contains("dummy") == false)
 					chara_list.addObject(tempfile);
 		});
 
