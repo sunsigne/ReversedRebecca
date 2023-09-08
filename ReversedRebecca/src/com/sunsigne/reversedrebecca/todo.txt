@@ -27,25 +27,24 @@
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	XhXX - rendre + évident le système de couches (vent avant tunnel ?)
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
-	-
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 
 	////////// GAMEPAD ////////////
 
+	////////// EN COURS ////////////
+		
+	ux :
+	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
+	
+	gamepad : 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	////////// EN COURS ////////////
-
 	bug à régler :
-		- 1h00 le wall pass mode fait laguer de ouf
+		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-
-	pour la démo :
-	3h00 - créer des coffres dans les sousterrains
 
 	5h00 - Dave :
 	- retirer le personnage
@@ -57,19 +56,23 @@
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
 	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
 	
-	1h00 - Sarah - faire une réaction si des éboulements (ou une explosion du mur) ont lieu lorsqu'elle est dans le bureau d'Alicia
 	1h40 - Alicia - objects - reaction au cassage de serrure / à eteindre sans sauvegarder
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	
 	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
-	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
+	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue player_leaving devraient s'adapter
 	1h30 - psycopath - Rebecca devrait pousser Alicia 1 seconde + tôt ( à vérifier si c'est pas déjà fait) + bug Alicia ne meurt pas suite à ce poussage...
-	empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	0h30 - empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	1h00 en psycopath, les éboulement du bureau d'alicia SANS la cutscene Alicia donne-t-il l'idée du meutre ? à tester - vérifier également que les éboulement lorsqu'on est en bas ne donne pas l'idée, sinon elle ne serait pas praticable de toute façon
-		
-	! soflock EVIDENT dans le niveau mole_0 : (si évident que peut-être que j'y avais déjà pensé / que je l'avais réglé pour le geekali) si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
+	
+	pour la démo :
+	geekali :
+		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo
+	mole : 
+		- 3h00 créer des coffres dans les sousterrains	
+		- 0h20 ! soflock EVIDENT dans le niveau mole_0 : (si évident que peut-être que j'y avais déjà pensé / que je l'avais réglé pour le geekali) si on ne peut pas prendre de bombe > à cyan, et qu'on va chercher la bombe jaune
 			
 	////////// BOSS ////////////
 
