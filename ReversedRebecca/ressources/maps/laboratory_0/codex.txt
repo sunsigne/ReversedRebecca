@@ -81,7 +81,6 @@ OBJ-33 = Vertical Couch Down Part
 OBJ-34 = Giant Plant
 OBJ-35 = Trash
 OBJ-37 = Coffee Machine
-OBJ-55 = Coffee Machine Joseph Vision Patch
 OBJ-39 = Toilet Door
 OBJ-42 = Alicia Rubbles
 OBJ-43 = Alicia Rubbles Up Checker

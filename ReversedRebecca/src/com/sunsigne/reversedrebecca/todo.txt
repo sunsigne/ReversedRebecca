@@ -50,10 +50,7 @@
 	- retirer le personnage
 	- retirer / adapter les dialogues
 	- créer les dialogues d'avant niveau
-	
-	1h30 - Joseph :
-	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
-	
+
 	0h30 - Alicia - objects - reaction au cassage de serrure (rebecca fait genre "ho ! c'est quoi ça ?" ? + vérifier action turn off without saving
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
