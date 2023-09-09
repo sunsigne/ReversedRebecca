@@ -56,7 +56,7 @@
 	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
 	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
 	
-	1h40 - Alicia - objects - reaction au cassage de serrure / à eteindre sans sauvegarder
+	0h30 - Alicia - objects - reaction au cassage de serrure (rebecca fait genre "ho ! c'est quoi ça ?" ? + vérifier action turn off without saving
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
