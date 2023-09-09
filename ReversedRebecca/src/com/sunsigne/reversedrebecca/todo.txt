@@ -46,11 +46,6 @@
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
-	5h00 - Dave :
-	- retirer le personnage
-	- retirer / adapter les dialogues
-	- créer les dialogues d'avant niveau
-
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
@@ -133,7 +128,7 @@
 	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 	1h00 - changer le système d'aléatorie pour du déterminisme ?
 	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition
-
+	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
 
 
@@ -149,8 +144,8 @@
 	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
+	faire en sorte qu'un niveau Dave ne puisse pas être rechargé (si on le zap, on est tp au niveau suivant) ... pb, c'est chiant vis-à-vis des speedrun
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
-	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
 	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
 
 	////////// RR000 ////////////
