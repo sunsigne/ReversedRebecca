@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class LifeAndDeathLaw extends IndependantLaw {
@@ -32,10 +33,15 @@ public class LifeAndDeathLaw extends IndependantLaw {
 		if (health.isRegisteredAsDead())
 			return;
 
-		//health.setStunned(true);
-		//health.setCondition(CONDITION.KO);
-		//health.registeredAsDead(true);
-		//health.sendToGround();
+		// WARNING ! This condition makes the player immortal
+		// (remove it once respawn system is built)
+		if(health instanceof Player)
+			return;
+		
+		health.setStunned(true);
+		health.setCondition(CONDITION.KO);
+		health.registeredAsDead(true);
+		health.sendToGround();
 	}
 
 	////////// RENDER ////////////
