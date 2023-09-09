@@ -51,8 +51,7 @@
 	- retirer / adapter les dialogues
 	- créer les dialogues d'avant niveau
 	
-	2h00 - Joseph :
-	- doit s'endormir naturellement après un certain temps sur le canapé (n'arrive pas si on a envoyé Marie voir Sarah)
+	1h30 - Joseph :
 	- pb de pathfinder : si alicia bloque le chemin (porte, jean, machine à café, etc)
 	
 	0h30 - Alicia - objects - reaction au cassage de serrure (rebecca fait genre "ho ! c'est quoi ça ?" ? + vérifier action turn off without saving
