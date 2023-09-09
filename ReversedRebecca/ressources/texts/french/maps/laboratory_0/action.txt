@@ -36,6 +36,7 @@ KINDLY = Key1 % Gentiment
 BLAMING = Key2 % Culpabiliser
 SCOLDING = Key3 % Engueuler
 SABOTAGE = Key3 % Saboter
+QUIETLY_SABOTAGE = Key3 % Saboter#discrètement
 DRINK = Key2 % boire
 COFFEE = Key1 % café
 TEA = Key2 % thé
