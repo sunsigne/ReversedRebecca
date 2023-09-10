@@ -42,7 +42,8 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	créer les 3 compteurs et les actions de karma !
+	créer les 3 compteurs 
+	implanter les actions qui influencent le karma !
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs)	
 	
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
@@ -54,13 +55,14 @@
 	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
 	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue player_leaving devraient s'adapter
 	0h30 - empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	- good psycopath deed : mort rapidement ?
 
 	pour la démo :
 	geekali :
 		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo
 	mole : 
 		- 3h00 créer des coffres dans les sousterrains	
-			
+
 	////////// BOSS ////////////
 
 	30h00 - retravailer le système de boss :
@@ -97,6 +99,7 @@
 	
 	////////// FACILE ////////////
 	
+	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
@@ -160,17 +163,10 @@
 
 	////////// LVL001 ////////////
 
-	compteur 2 : conversation écoutées
-	compteur 3 : romance (se transforme en "romance hétéro" ou "romance lesbienne" en fonction de Marie ou de Mika)
-
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
-	les différents karmas doivent affecter le scénario !
-	refaire les end lvl
-	scénario sadique pas encore faits
-	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
 
 	scénarion : inquery
+	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
 	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery
 	- Alicia + Dave : créer le TA du vol
 	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
@@ -194,10 +190,9 @@
 	- se faire pisser dessus (pas angélique)
 	- crier sur jean (pas angélique)
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
-	- good psycopath deed : mort rapidement ?
 	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
 	- accepter d'arrêter de faire sauter le batiment (sauf si explosion de l'entrée sans "marie protection")
-	- se disputer avec Alicia (pas angélique ?)
+	- se disputer avec Alicia à propos des bombes dans le bombe path (pas angélique ?)
 	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
 	- boire le café d'alicia
 	- s'excuser d'avoir bu le café d'Alicia
@@ -234,7 +229,7 @@
 	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta reaction du "Alicia" n'est pas fini
-	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs
+	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs)
 
 	////////// LVL002 ////////////
 	
