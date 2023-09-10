@@ -105,6 +105,8 @@ OBJ-61 = Paperworkd
 ///// RIGHT AREA /////
 
 NPC-17 = Eric
+NPC-18 = Dummy Down
+NPC-19 = Dummy Up
 OBJ-50 = Leaving Player Checker
 OBJ-51 = Green SAS Door Up
 OBJ-52 = Green SAS Door Left
