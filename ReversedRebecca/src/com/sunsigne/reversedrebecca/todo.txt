@@ -34,8 +34,6 @@
 
 	////////// EN COURS ////////////
 
-	1h30 - le labo en bas à droite est un peu vide, et ça c'est choquant
-
 	ux :
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
