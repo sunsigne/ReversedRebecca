@@ -2,7 +2,7 @@
 
 AwkwardTitle = That#was#awkward...
 AwkwardText = Being#denied#a#hug
-CookiesTitle = You're#a#diabetic,#Becky
+CookiesTitle = You're#a#fat#girl,#Becky
 CookiesText = Eat#100#cookies
 FruitTitle = Cyber-Vegetarian
 FruitText = Eat#a#virtual#fruit

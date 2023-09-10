@@ -42,13 +42,12 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	créer les 3 compteurs 
 	implanter les actions qui influencent le karma !
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs)	
-	
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 
 	bug à régler :
+		- le surcrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
@@ -129,7 +128,7 @@
 	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
 	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 	1h00 - changer le système d'aléatorie pour du déterminisme ?
-	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition
+	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition. En plus, je n'aime pas l'aléatoire
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
 
@@ -264,7 +263,7 @@
 
 	///////// IDEE ////////////
 
-	pour la fin de la démo, voilà les twists qui peuvent arriver :
+	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
 	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"
 	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
 	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
@@ -277,6 +276,7 @@
 	musée de l'horreur (anges pleureurs + silence + escargot + luther)
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
+	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) -> le twist de la dernière input (sauvegarder, quitter, recharger)
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
@@ -325,9 +325,7 @@
 	
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner (il est dans le working)
-	cookie -> la bonne traduction en anglais serait plutôt "you are a fat girl, becky"
 	
-	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
