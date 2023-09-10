@@ -33,7 +33,7 @@
 	////////// GAMEPAD ////////////
 
 	////////// EN COURS ////////////
-		
+
 	ux :
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -42,7 +42,7 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	1h30 - créer hitbox et fonctionnalité? des objets restants (les toilettes, les consoles près des SAS, la salle des visiteurs, etc)
+	1h30 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs, etc)
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 	3h00 - ? finir le comportement de Eric ? le labo en haut à droite ? (lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?)
 	
@@ -225,6 +225,7 @@
 	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
 	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
 	- la romance (positive, négative ou même hypothétique) avec Marie
+	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
 	
 	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)

@@ -1,2 +1,2 @@
 object = player = surprised = Ho#!#Pardon#!@Je#ne#savais#pas#que#c'était#occupé#!
-rebecca = object = laugh = Pas#de#soucis#!#Je#ne#faisais#que#passer.
+rebecca = object = laugh = Pas#de#soucis#!
