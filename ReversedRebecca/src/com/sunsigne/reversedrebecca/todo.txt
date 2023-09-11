@@ -42,16 +42,15 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	1h30 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs)	
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 
 	bug à régler :
-		- le surcrit mode et le multitool mod ne sont plus persistant après un reset...
+		- le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
 	10h00 - variantes sadiques, psycopath, angélique, etc. à créer
-	0h30 - (je ne me souviens pas de ce que ça veut dire...) quand on est sadique, l'objet 50 et le dialogue player_leaving devraient s'adapter
+	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
 	0h30 - empêcher sur le scénario psycopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	- good psycopath deed : mort rapidement ?
 
