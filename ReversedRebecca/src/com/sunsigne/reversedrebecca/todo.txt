@@ -34,6 +34,8 @@
 
 	////////// EN COURS ////////////
 
+	quand alicia tue rebecca, remplacer le dialogue par "ho non, je crois que je l'ai tué" ou qq chose de plus spécifique qu'actuellement
+
 	ux :
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -42,7 +44,6 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
 
-	implanter les actions qui influencent le karma !
 	1h30 - créer hitbox et fonctionnalité? des objets restants (les consoles près des SAS, la salle des visiteurs)	
 	0h30 - obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
 
@@ -178,24 +179,16 @@
 	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 
 	karma actions :
-	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
 	- narguer Alicia dans le SAS (inquery)
-	- enfermer Marie dans les toilettes
-	- libérer Alicia
-	- tuer Alicia
-	- envoyer chier joseph ou non
-	- se faire pisser dessus (pas angélique)
-	- crier sur jean (pas angélique)
-	- (obj-50) le choix d'abandonner les gens sur place et de partir
-	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
-	- accepter d'arrêter de faire sauter le batiment (sauf si explosion de l'entrée sans "marie protection")
-	- se disputer avec Alicia à propos des bombes dans le bombe path (pas angélique ?)
-	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
-	- boire le café d'alicia
-	- s'excuser d'avoir bu le café d'Alicia
-
+	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
+	note :
+	en exit :
+	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
+	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
+	)
+	
 	à enregister :
 	- le type de scénario (sortie ou enquête)
 	- Saboter l'ordinateur de Bernard
@@ -203,9 +196,9 @@
 	- Delta a informé rebecca qu'elle faisait des casses avec son frère
 	- Jean qui se fait gronder par Sarah
 	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
+	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
 	- Jean s'énerver et il ne s'excuse pas
 	- Jean golden shower
-	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
 	- Marie enfermée dans les toilettes
 	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
 	- Jopseh faire pleurer (+ éventuelles réactions des autres)
