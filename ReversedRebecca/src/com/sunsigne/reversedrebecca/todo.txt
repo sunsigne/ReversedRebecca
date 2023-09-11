@@ -34,8 +34,6 @@
 
 	////////// EN COURS ////////////
 
-	quand alicia tue rebecca, remplacer le dialogue par "ho non, je crois que je l'ai tué" ou qq chose de plus spécifique qu'actuellement
-
 	ux :
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -114,7 +112,7 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
-	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw
+	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
 	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
