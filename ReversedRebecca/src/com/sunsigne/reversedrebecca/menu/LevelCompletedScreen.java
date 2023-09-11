@@ -21,22 +21,27 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.Counter;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 import com.sunsigne.reversedrebecca.world.lvlstats.YOUARE;
 
-public class LevelCompletedScreen implements Updatable {
+public class LevelCompletedScreen implements Updatable, GamepadEvent {
 
-	public LevelCompletedScreen(String lvl) {
+	public LevelCompletedScreen(String nextLvl) {
+		this.nextLvl = nextLvl;
+
 		loadImages();
 		loadMusic();
 
 		loadStats();
 		loadFont();
 		loadText();
-		createContinueButton(lvl);
+		createContinueButton();
 	}
 
 	private void loadMusic() {
@@ -220,14 +225,14 @@ public class LevelCompletedScreen implements Updatable {
 			drawKarma(g, 120 + delay * 5);
 
 		// you are
-		
+
 		if (isYouAreReadyConfirmed) {
 			drawYouAre(g);
 
 			if (time / 40 % 2 == 0)
 				drawClickToContinue(g);
 		}
-		
+
 		drawProgressSaved(g);
 	}
 
@@ -349,8 +354,10 @@ public class LevelCompletedScreen implements Updatable {
 
 	////////// BUTTON ////////////
 
-	private void createContinueButton(String lvl) {
-		GenericListener onPress = () -> loadNextLvl(lvl);
+	private String nextLvl;
+
+	private void createContinueButton() {
+		GenericListener onPress = () -> loadNextLvl();
 
 		ButtonObject button = new ButtonObject(null, 0, 0, Window.WIDHT, Window.HEIGHT, onPress, null) {
 			@Override
@@ -361,7 +368,7 @@ public class LevelCompletedScreen implements Updatable {
 		LAYER.MENU.addObject(button);
 	}
 
-	private void loadNextLvl(String lvl) {
+	private void loadNextLvl() {
 		if (isYouAreReadyConfirmed == false) {
 			isYouAreReadyConfirmed = flag = flag1 = true;
 			time = 500;
@@ -369,7 +376,26 @@ public class LevelCompletedScreen implements Updatable {
 		}
 
 		LAYER.MENU.getHandler().clear();
-		new World(lvl);
+		new World(nextLvl);
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		loadNextLvl();
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
 	}
 
 }
