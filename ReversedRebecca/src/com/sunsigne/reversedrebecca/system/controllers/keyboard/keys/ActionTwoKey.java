@@ -33,12 +33,12 @@ public class ActionTwoKey implements Key {
 
 	public static BufferedImage getGamepadButton() {
 		if (gamepadButton == null)
-			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "x");
+			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "y");
 		return gamepadButton;
 	}
 
 	public static int getGamepadKey() {
-		return ButtonEvent.X;
+		return ButtonEvent.Y;
 	}
 
 }

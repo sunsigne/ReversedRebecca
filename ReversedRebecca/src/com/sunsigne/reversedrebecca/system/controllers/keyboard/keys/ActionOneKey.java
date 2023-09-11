@@ -33,12 +33,12 @@ public class ActionOneKey implements Key {
 
 	public static BufferedImage getGamepadButton() {
 		if (gamepadButton == null)
-			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "a");
+			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "x");
 		return gamepadButton;
 	}
 
 	public static int getGamepadKey() {
-		return ButtonEvent.A;
+		return ButtonEvent.X;
 	}
 
 }
