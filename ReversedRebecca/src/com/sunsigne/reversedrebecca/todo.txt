@@ -32,11 +32,13 @@
 
 	////////// GAMEPAD ////////////
 
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
+
 	////////// EN COURS ////////////
 	
 	gamepad : 
-	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
 	30h00 - Puzzles must be compatible
+	3h généraliser le "je laisse appuyé sur un bouton pour spammer" qui a été créé dans la classe ChatBox
 
 	bug à régler :
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...

@@ -1,11 +1,10 @@
 package com.sunsigne.reversedrebecca.system.controllers;
 
-import java.awt.Cursor;
-
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
@@ -14,9 +13,9 @@ public class ControllerManager {
 	////////// SIGNELTON ////////////
 
 	private ControllerManager() {
-		
+
 	}
-	
+
 	private static ControllerManager instance;
 
 	public static ControllerManager getInstance() {
@@ -42,8 +41,6 @@ public class ControllerManager {
 
 	////////// UPDATE ////////////
 
-	private static Cursor cursor;
-
 	private static void updateGamepadDiplay(boolean active) {
 		if (active)
 			activeGamepadDisplay();
@@ -52,30 +49,28 @@ public class ControllerManager {
 	}
 
 	private static void activeGamepadDisplay() {
-		cursor = Game.getInstance().getCursor();
-		new GameCursor().setCursor(null);
-		
-		resetMousePresetings();		
+		Game.getInstance().setCursor(CURSOR_TYPE.NULL.getCursor());
+		resetMousePresetings();
 	}
 
-	private static void resetMousePresetings() {		
+	private static void resetMousePresetings() {
 		var list = GamepadManager.getList();
 		for (GamepadAdapter tempAdapter : list.getList()) {
-			
-			if(tempAdapter instanceof GamepadController == false)
-				continue;		
+
+			if (tempAdapter instanceof GamepadController == false)
+				continue;
 			var tempEvent = ((GamepadController) tempAdapter).getGamepadEvent();
-			
-			if(tempEvent instanceof MousePreseting == false)
+
+			if (tempEvent instanceof MousePreseting == false)
 				continue;
 			var tempPreset = (MousePreseting) tempEvent;
-			
+
 			tempPreset.setPreset(MousePreseting.NULL);
-		}	
+		}
 	}
 
 	private static void desactiveGamepadDisplay() {
-		Game.getInstance().setCursor(cursor);
+		new GameCursor().refreshCursor();
 	}
 
 }

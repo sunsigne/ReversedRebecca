@@ -8,15 +8,25 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class GameCursor {
+
+	private static Cursor cursor;
+
+	public void refreshCursor() {
+		Game.getInstance().setCursor(cursor);
+	}
 
 	public void setCursor(CURSOR_TYPE cursorType) {
 		if (cursorType == null)
 			cursorType = CURSOR_TYPE.NULL;
 
-		Game.getInstance().setCursor(cursorType.getCursor());
+		cursor = cursorType.getCursor();
+
+		if (ControllerManager.getInstance().isUsingGamepad() == false)
+			Game.getInstance().setCursor(cursor);
 	}
 
 	////////// CURSOR TYPE ////////////
@@ -31,7 +41,7 @@ public class GameCursor {
 			cursor = Toolkit.getDefaultToolkit().createCustomCursor(rescaleImage(img), new Point(0, 0), name);
 		}
 
-		private Cursor getCursor() {
+		public Cursor getCursor() {
 			return cursor;
 		}
 	}
