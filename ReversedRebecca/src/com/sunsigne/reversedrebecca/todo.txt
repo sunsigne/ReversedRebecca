@@ -41,7 +41,7 @@
 	gamepad : 
 	3h00 - LockObject, le SpammableGamepadEvent est imparfait, il traite les différent cas séparemment avec 1 tick de différence ... On s'en rend compte en situation de "puzzle critique"
 	8h00 - rendre compatible le BombPuzzle (fait, mais même pb qu'au dessus, sauf que ça n'est plus qu'en critique mais tout le temps !)
-	
+	1h00 - puisuqe c'est le World qui écoute la souris, il est en pause pendant les doalogue et les puzzles (donc il ne relève plus le mouveMouse())
 	8h00 - rendre compatible le DigPuzzle
 	3h généraliser à certains objets de la map le "je laisse appuyé sur un bouton pour spammer"
 

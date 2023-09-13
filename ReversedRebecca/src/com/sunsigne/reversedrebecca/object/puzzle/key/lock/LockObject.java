@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
@@ -98,13 +99,13 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 		spammable = new SpammableGamepadEvent[4];
 		GenericListener onSpam = null;
 
-		onSpam = () -> moveMouseFrom(-SPEED, 0);
+		onSpam = () -> moveMouseFrom(-GameCursor.SPEED, 0);
 		spammable[0] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.LEFT, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(+SPEED, 0);
+		onSpam = () -> moveMouseFrom(GameCursor.SPEED, 0);
 		spammable[1] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.RIGHT, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(0, -SPEED);
+		onSpam = () -> moveMouseFrom(0, -GameCursor.SPEED);
 		spammable[2] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.UP, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(0, +SPEED);
+		onSpam = () -> moveMouseFrom(0, GameCursor.SPEED);
 		spammable[3] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.DOWN, 1, 1, onSpam);
 	}
 
@@ -121,8 +122,6 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 	public GamepadController getGamepadController() {
 		return gamepadController;
 	}
-
-	private final int SPEED = 12;
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {

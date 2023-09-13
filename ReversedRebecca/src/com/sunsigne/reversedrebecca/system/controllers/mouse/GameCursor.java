@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class GameCursor {
 
+	public static final int SPEED = 12;	
 	private static Cursor cursor;
 
 	public void refreshCursor() {

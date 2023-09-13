@@ -34,7 +34,7 @@ public class SpammableGamepadEvent {
 
 		pressed = true;
 		listener.doAction();
-		timer = new GameTimer(startDelay, true, () -> spamButton(e));
+		timer = new GameTimer(startDelay, true, () -> spamButton());
 	}
 
 	public void buttonReleased(ButtonEvent e) {
@@ -61,7 +61,7 @@ public class SpammableGamepadEvent {
 		return false;
 	}
 
-	private void spamButton(ButtonEvent e) {
+	public void spamButton() {
 		if (pressed == false)
 			return;
 
@@ -71,7 +71,7 @@ public class SpammableGamepadEvent {
 		}
 
 		listener.doAction();
-		timer = new GameTimer(spamDelay, true, () -> spamButton(e));
+		timer = new GameTimer(spamDelay, true, () -> spamButton());
 	}
 
 }
