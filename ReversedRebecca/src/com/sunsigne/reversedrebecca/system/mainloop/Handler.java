@@ -92,20 +92,33 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// MAP OR LIST ////////////
 
-	public void softRemoveObject(Updatable object) {
-		if (object == null || !containsObject(object))
-			return;
+	private GameList<Updatable> add_list = new GameList<Updatable>(LISTTYPE.LINKED);
+	private GameList<Updatable> remove_list = new GameList<Updatable>(LISTTYPE.LINKED);
 
-		getList().remove(object);
+	public void addObject(Updatable object, boolean forthwith) {
+		if (forthwith)
+			super.addObject(object);
+		else
+			add_list.addObject(object);
+	}
+
+	public void softRemoveObject(Updatable object) {
+		super.removeObject(object);
 	}
 
 	@Override
 	public void removeObject(Updatable object) {
-		if (object == null || !containsObject(object))
-			return;
+		removeObject(object, true);
+	}
 
-		object.destroyControls();
-		getList().remove(object);
+	public void removeObject(Updatable object, boolean forthwith) {
+		if (object != null)
+			object.destroyControls();
+
+		if (forthwith)
+			super.removeObject(object);
+		else
+			remove_list.addObject(object);
 	}
 
 	@Override
@@ -115,8 +128,18 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				tempUpdatable.destroyControls();
 			}
 		}
-		getList().clear();
+		super.clear();
 		hideRendering = false;
+	}
+
+	public void updateHandler() {
+		for (Updatable tempObject : add_list.getList())
+			super.addObject(tempObject);
+		add_list.clear();
+
+		for (Updatable tempObject : remove_list.getList())
+			super.removeObject(tempObject);
+		remove_list.clear();
 	}
 
 	////////// CAMERA ////////////
@@ -139,6 +162,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	protected void tick() {
 		if (freezeTicking)
 			return;
+
+		updateHandler();
 
 		for (Updatable tempObject : getList()) {
 
@@ -172,14 +197,14 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			// skip rendering if out of camera
 			if (isCameraDependant()) {
-				if (tempObject instanceof Position) {					
+				if (tempObject instanceof Position) {
 					Position tempPosition = (Position) tempObject;
-					
+
 					if (CAMERA.isObjectVisible(tempPosition, true) == false)
 						continue;
 				}
 			}
-			
+
 			renderDependency(g, true);
 
 			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {

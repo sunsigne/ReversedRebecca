@@ -31,7 +31,7 @@ public class GameTimer implements Updatable, RenderFree {
 		else
 			return;
 
-		handler.addObject(this);
+		handler.addObject(this, false);
 
 		this.time = timeInTicks;
 		this.listener = listener;
@@ -48,7 +48,7 @@ public class GameTimer implements Updatable, RenderFree {
 	}
 
 	public void destroy() {
-		handler.removeObject(this);
+		handler.removeObject(this, false);
 	}
 
 	////////// TICK ////////////
@@ -66,6 +66,7 @@ public class GameTimer implements Updatable, RenderFree {
 			ready = true;
 			if (listener != null)
 				listener.doAction();
+			listener = null;
 		}
 	}
 
