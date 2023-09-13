@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -19,6 +20,8 @@ public abstract class BombPuzzle extends Puzzle {
 
 	public BombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
+
+		LAYER.PUZZLE.addObject(new PointerBombObject(this, isCritical));
 	}
 
 	////////// NAME ////////////
@@ -67,7 +70,7 @@ public abstract class BombPuzzle extends Puzzle {
 
 			bomb[index] = getBomb(this, index == radCrit, col, radRow);
 			LAYER.PUZZLE.addObject(bomb[index]);
-		}		
+		}
 	}
 
 	protected void setRandomMaxCountBetween(int a, int b) {
