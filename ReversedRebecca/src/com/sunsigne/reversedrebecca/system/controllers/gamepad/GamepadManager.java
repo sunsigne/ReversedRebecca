@@ -1,10 +1,8 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
-import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
-import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 
 import net.java.games.input.Component;
@@ -122,12 +120,8 @@ public class GamepadManager {
 				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
 					tempAdapter.buttonPressed(button);
 
-				if (event.getValue() > -0.05f && event.getValue() < 0.05f) {
-					if (button.getKey() == DialogueKey.getGamepadKey())
-						ChatBox.pressing = false;
-
+				if (event.getValue() > -0.05f && event.getValue() < 0.05f)
 					tempAdapter.buttonReleased(button);
-				}
 			}
 		}
 	}
