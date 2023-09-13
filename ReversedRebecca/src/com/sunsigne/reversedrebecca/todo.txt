@@ -33,11 +33,14 @@
 	////////// GAMEPAD ////////////
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
+	3h00 - LockObject, le SpammableGamepadEvent est imparfait, il traite les différent cas séparemment avec 1 tick de différence ... On s'en rend compte en situation de "puzzle critique"
+	8h00 - rendre compatible le HackPuzzle
 
 	////////// EN COURS ////////////
 	
 	gamepad : 
-	30h00 - Puzzles must be compatible
+	8h00 - rendre compatible le BombPuzzle
+	8h00 - rendre compatible le DigPuzzle
 	3h généraliser à certains objets de la map le "je laisse appuyé sur un bouton pour spammer"
 
 	bug à régler :
