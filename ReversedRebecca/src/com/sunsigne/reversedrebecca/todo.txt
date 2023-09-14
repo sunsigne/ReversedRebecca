@@ -41,7 +41,6 @@
 	////////// EN COURS ////////////
 	
 	gamepad : 
- 	8h00 - rendre compatible les coffres !
 	3h00 - généraliser à certains objets de la map le "je laisse appuyé sur un bouton pour spammer"
 
 	bug à régler :
