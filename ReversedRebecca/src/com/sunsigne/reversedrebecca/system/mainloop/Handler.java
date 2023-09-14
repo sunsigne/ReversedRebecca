@@ -92,8 +92,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// MAP OR LIST ////////////
 
-	private GameList<Updatable> add_list = new GameList<Updatable>(LISTTYPE.LINKED);
-	private GameList<Updatable> remove_list = new GameList<Updatable>(LISTTYPE.LINKED);
+	private GameList<Updatable> add_list = new GameList<Updatable>(LISTTYPE.ARRAY);
+	private GameList<Updatable> remove_list = new GameList<Updatable>(LISTTYPE.ARRAY);
 
 	public void addObject(Updatable object, boolean forthwith) {
 		if (forthwith)
