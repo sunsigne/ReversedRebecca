@@ -35,12 +35,13 @@
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
 	
 	8h00 - rendre compatible le HackPuzzle
+	8h00 - rendre compatible le DiscoPuzzle
+	4h00 - le DigPuzzle fait des choses bizarre en critical
 
 	////////// EN COURS ////////////
 	
 	gamepad : 
-	1h00 - puisque c'est le World qui écoute la souris, il est en pause pendant les dialogue et les puzzles (donc il ne relève plus le mouveMouse())
-	8h00 - rendre compatible le DigPuzzle
+ 	8h00 - rendre compatible les coffres !
 	3h00 - généraliser à certains objets de la map le "je laisse appuyé sur un bouton pour spammer"
 
 	bug à régler :

@@ -89,6 +89,8 @@ public class DirtObject extends DigPuzzleObject {
 
 		if (getY() != getPuzzle().getRow(1))
 			g.drawLine(getX(), getY(), getX() + getWidth(), getY());
+		
+		drawSelecting(g);
 	}
 
 	////////// MOUSE ////////////

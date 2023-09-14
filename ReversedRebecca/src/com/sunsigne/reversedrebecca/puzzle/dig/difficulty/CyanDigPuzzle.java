@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class CyanDigPuzzle extends DigPuzzle {
 
@@ -17,6 +18,11 @@ public class CyanDigPuzzle extends DigPuzzle {
 		return 2 * Size.L;
 	}
 
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		return M_LEFT_UP;
+	}
+	
 	////////// PUZZLE ////////////
 
 	@Override
@@ -53,7 +59,7 @@ public class CyanDigPuzzle extends DigPuzzle {
 		}
 		
 		createTool(2, 2, DIG_STATE.DIG);
-		createTool(2, 4, DIG_STATE.PICK);	
+		createTool(2, 4, DIG_STATE.PICK);
 	}
 	
 }

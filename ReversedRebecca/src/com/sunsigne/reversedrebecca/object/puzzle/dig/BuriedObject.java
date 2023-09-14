@@ -54,6 +54,8 @@ public abstract class BuriedObject extends DigPuzzleObject {
 
 		if (getImage() != null)
 			g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		
+		drawSelecting(g);
 	}
 
 	private void drawBackground(Graphics g) {

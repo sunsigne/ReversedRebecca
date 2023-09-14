@@ -1,15 +1,22 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, MouseUserEvent {
+public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, MouseUserEvent, GamepadEvent {
 
 	public DigPuzzleObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
@@ -66,5 +73,46 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 	public boolean isCritical() {
 		return getPuzzle().getState() == DIG_STATE.CRITICAL;
 	}
-	
+
+	////////// RENDER ////////////
+
+	public void drawSelecting(Graphics g) {
+		if (ControllerManager.getInstance().isUsingGamepad() == false)
+			return;
+
+		g.setColor(Color.YELLOW);
+
+		if (isCritical()) {
+			if (mouseOver(new MousePos().get(), getRowRect()) == false
+					&& mouseOver(new MousePos().get(), getColRect()) == false)
+				return;
+
+		} else if (mouseOver(new MousePos().get(), getRect()) == false)
+			return;
+
+		g.drawRect(getX() + 1, getY() + 1, getWidth() - 2, getHeight() - 2);
+		g.drawRect(getX() + 2, getY() + 2, getWidth() - 4, getHeight() - 4);
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mouseReleased(null);
+	}
+
 }
