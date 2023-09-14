@@ -12,10 +12,13 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class ChestCard extends PuzzleObject implements MouseUserEvent {
+public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEvent {
 
 	public ChestCard(ChestPuzzle puzzle, String lootData, int x, int y) {
 		super(puzzle, false, x, y, 4 * Size.L, 5 * Size.L);
@@ -190,5 +193,25 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent {
 	public void mouseReleased(MouseEvent e) {
 
 	}
+	
+	////////// GAMEPAD ////////////
 
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
+	}
+	
 }
