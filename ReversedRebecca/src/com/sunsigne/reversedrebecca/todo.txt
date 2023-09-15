@@ -20,6 +20,8 @@
 	pas réglé :
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
+		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
+		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
 	vérifier si bien réglé :
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
@@ -41,14 +43,10 @@
 	////////// EN COURS ////////////
 
 	bug à régler :
-		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
-		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	
-	10h00 - variantes sadiques, psychopath, et angélique à créer
-	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
-	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-
+	lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés
+	
 	ux :
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -162,7 +160,10 @@
 	////////// LVL001 ////////////
 
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
-
+	XhX - variantes sadiques, psychopath, et angélique à créer
+	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
+	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	
 	scénarion : inquery
 	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
 	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery

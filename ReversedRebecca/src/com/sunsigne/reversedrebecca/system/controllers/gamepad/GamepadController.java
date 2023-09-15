@@ -25,7 +25,7 @@ public class GamepadController implements GamepadAdapter {
 		return gamepadEvent;
 	}
 
-	private static GameList<Integer> pressing = new GameList<>(LISTTYPE.ARRAY);
+	public static GameList<Integer> pressing = new GameList<>(LISTTYPE.ARRAY);
 	
 	public boolean isPressed(int buttonEvent) {
 		return pressing.containsObject(buttonEvent);

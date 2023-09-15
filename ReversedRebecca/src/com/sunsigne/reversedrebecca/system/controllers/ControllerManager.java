@@ -33,6 +33,9 @@ public class ControllerManager {
 	}
 
 	public void setUsingGamepad(boolean usingGamepad) {
+		if(usingGamepad == false)
+			GamepadController.pressing.clear();
+		
 		if (this.usingGamepad != usingGamepad)
 			updateGamepadDiplay(usingGamepad);
 

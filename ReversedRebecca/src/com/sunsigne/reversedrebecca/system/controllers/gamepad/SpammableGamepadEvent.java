@@ -77,7 +77,7 @@ public class SpammableGamepadEvent {
 		if (pressed == false)
 			return;
 
-		if (GamepadManager.getList().containsObject(gamepad) == false) {
+		if (GamepadManager.getList().containsObject(gamepad) == false || gamepad.isPressed(buttonEvent) == false) {
 			timer = null;
 			pressed = false;
 		}
