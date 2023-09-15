@@ -15,11 +15,16 @@ public class SpammableGamepadEvent {
 	}
 
 	private GamepadController gamepad;
-	private int buttonEvent;
 	private int startDelay;
 	private int spamDelay;
 	private GenericListener listener;
 
+	private int buttonEvent;
+	
+	public int getButtonEvent() {
+		return buttonEvent;
+	}
+	
 	////////// GAMEPAD ////////////
 
 	private GameTimer timer;
@@ -62,6 +67,13 @@ public class SpammableGamepadEvent {
 	}
 
 	public void spamButton() {
+		spamButton(false);
+	}
+	
+	public void spamButton(boolean force) {
+		if(force)
+			pressed = true;
+		
 		if (pressed == false)
 			return;
 

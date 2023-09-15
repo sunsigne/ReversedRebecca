@@ -39,9 +39,6 @@
 	4h00 - le DigPuzzle fait des choses bizarre en critical
 
 	////////// EN COURS ////////////
-	
-	gamepad : 
-	3h00 - généraliser à certains objets de la map le "je laisse appuyé sur un bouton pour spammer"
 
 	bug à régler :
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...

@@ -134,7 +134,7 @@ public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
 
 	////////// INPUT ////////////
 
-	private void inputPressed(int key, int button) {
+	public default void inputPressed(int key, int button) {
 
 		if (!canPlayerInterfact())
 			return;

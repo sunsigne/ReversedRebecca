@@ -2,13 +2,13 @@
 MaxHp=5
 
 
-BombMaxLvl=CYAN
-BombStartLvl=NULL
-BombCriticalChance=0%
-
 KeyMaxLvl=CYAN
 KeyStartLvl=NULL
 KeyCriticalChance=0%
+
+BombMaxLvl=CYAN
+BombStartLvl=NULL
+BombCriticalChance=0%
 
 MicrochipMaxLvl=CYAN
 MicrochipStartLvl=NULL

@@ -169,6 +169,9 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	private void createSpammable() {
 		GenericListener onSpam = () -> inputPressed();
 		spammable = new SpammableGamepadEvent(getGamepadController(), DialogueKey.getGamepadKey(), 30, 3, onSpam);
+
+		if (getGamepadController().isPressed(DialogueKey.getGamepadKey()))
+			spammable.spamButton(true);
 	}
 
 	////////// GAMEPAD ////////////
