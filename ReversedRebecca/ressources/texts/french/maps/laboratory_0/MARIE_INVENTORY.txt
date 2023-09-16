@@ -1,0 +1,2 @@
+object = player = happy = Il#te#faut#autre#chose#?
+rebecca = object = happy_var = Non,#merci.@Je#visite,#c'est#tout.

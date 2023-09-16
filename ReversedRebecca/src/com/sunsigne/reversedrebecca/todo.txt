@@ -1,119 +1,132 @@
-	
-	////////// MARKETING ////////////
-	
-	faire un short sur la golden shower
-	faire un short sur le "FUCK" avec les touches dans le tuto
-	pour le trailer, le fil rouge : manger des cookies tranquille, manger des cookis + vite, laisser la touche appuyée. Après l'achievement, un petit temps de pause puis boire un jus (c'est la chute)
 
 	////////// VERSION PUBLIQUE ////////////
 
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
-	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde) / le retirer de la version test
+	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
 	reset la sauvegarde pour commencer sur le bon lvl
+	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
+	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
 
 	////////// GEEKALI ////////////
 
 	à supprimer - map + text + texture workshop_geekali
-	à supprimer - le memory du labo sur le scénario (geekali feature for ws_geekali)
-	à supprimer - mole 0 le coffre en +
 	à supprimer - mole 0 la plupart des textes et leur piranha declancheur
-	à supprimer - la musique troll, celle de fin de démo et le visage troll de blast
-	à supprimer - la résurection à la va vite du joueur
-	à supprimer - le fichier set-up de mole_0 supprime la présence de blast-x vers le début du niveau
 	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit"
-	à rétablir - LiefeAndDeathLaw a été temporairement desactivé pour la démo
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
-	!! BUG !!
-	0h10 text lvl plante lorsque la couleur "BROWN" est choisie"
-	1h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
-
-	A FAIRE / bug à corriger pour geekali :
-	erreur fichier non trouvé pour l'achievement
+	////////// BUG ////////////
 	
-	////////// EN COURS ////////////
+	pas réglé :
+		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
+		- menu languages 4 langues se sont affiché au lieu de 2
+		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
+		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
+	
+	vérifier si bien réglé :
+		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
+		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
+	
+	////////// EXPERIENCE UTILISATEUR ////////////
 
-	le formulaire de bug apparait DERRIERE la fenetre du jeu ? (à confirmer)
-	adapter le système de camera et de render d'une manière général pour qu'il soit opti !
-	le bouton de signalement d'erreur n'ouvre plus userdata, c'est un choix ou c'est un oublie ?
-	gui bug : dans mole_0 quand on spam de "faire le plein", il y a parfois des dédoublement d'outils dans la gui ...
-	préciser dans les mappable les pastilles de boss & des hostiles objets + rebuild les animations
-	créer un "lien" entre les talk, qui empêche un tick de s'executer tant que les requêtes n'ont pas étaient executer ?
-	attention ! la musique du niveau RR se lance parfois lorsqu'on va dans la debug room
-	retirer l'image de "lock = cursor" pour quand on utilise la manette ?
-	s'assurer de ne pas avoir de pb de droits avec les images !!!!
-	puzzle : faire une animation puzzler pour la résolution des coffres
-	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
-	ajouter une animation de porte qui s'ouvre à chaque fois qu'un personnage ouvre une porte même violette ?
-	succès : regarder le todo et le faire
-	lvl001 : regarder le todo et le faire
-	manette : regarder le todo et le faire
+	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
+	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 
 	////////// GAMEPAD ////////////
 
-	MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus -> la souris a un affichage inversé ... probablement à cause d'un script qui dit d'afficher la souris quand un menu est lancé (pour lutter contre la souris invisible pendant les puzzles). Attention ! S'assurer que l'utilisation du menu pendant les puzzle (avec et sans manette) reste cohérent dans tous les cas de figures (ie du puzzle au menu à l'écran titre / du puzzle au menu au puzzle / etc)
-	Puzzles must be compatible
-	ajouter pour la version publique l'information comme quoi la manette n'est pas terminée
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
+	
+	8h00 - rendre compatible le HackPuzzle
+	8h00 - rendre compatible le DiscoPuzzle
+	4h00 - le DigPuzzle fait des choses bizarre en critical
 
+	////////// EN COURS ////////////
+
+	pour la démo :
+	dave001 & lvl001 :
+		- passer d'un texte qui dit "tu as le choix entre deux options" à une seule option et c'est tout (ça fait moins cheap)
+		- rr000 - la fin psycopath fait planter le jeu	
+		- lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés	
+	geekali :
+		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo (si besoin)
+
+	////////// BOSS ////////////
+
+	30h00 - retravailer le système de boss :
+	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
+	5h00 - InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
+	2h00 - augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
+	5h00 - créer d'autres patterns de sboss pour blast
+
+	////////// CHEST ////////////
+
+	2h30 - puzzle : faire une animation puzzler pour la résolution des coffres	
+	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
+	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
+	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !	
+
+	////////// DESSIN ////////////
+
+	12h00 - KOAnimation dans les 4 direction ?
+	12h00 - créer une animation "sick" pour quand on marche	 ?
+	2h00 - la pile PURPLE
+	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
+	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
+	1h30 - attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
+	1h30 - finir marie_date
+	
+	////////// VIE & HP ////////////
+	
+	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
+	5h00 - créer un moyen de recuppérer de la vie
+	
+	
+	
+	
+	
+	////////// FACILE ////////////
+	
+	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
+	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
+	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
+	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
+	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
+	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
+	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
+	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
+	
 	////////// DIFFICILE ////////////
 	
-	WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
-	ExplosionBrightnessLaw est pas terrible, à arranger
-	InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
-	retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
-	augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
-	relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
-	le système de résurrection après KO doit être créé
-	créer un moyen de recuppérer de la vie
-	créer un système de checkpoint avant les combats de boss ?
-	la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
-	faire une animation spéciales d'animation? et de résolution pour les puzzle critique !
-	? DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
-	attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
-	ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
-	"You are" ne se sauvegarde pas encore
-	des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
-	le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la GUI
-	! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
-	Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
-	KOAnimation dans les 4 direction ?
-	créer une animation "sick" pour quand on marche	 ?
+	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
+	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
+	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
-	////////// FACILE ////////////
+	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
+	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
+	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
+	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
+	24h00 - retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
+	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
+	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
+	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	XhXX - les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
+	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la HUD
+	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
+	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
+	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
+	1h00 - changer le système d'aléatorie pour du déterminisme ?
+	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition. En plus, je n'aime pas l'aléatoire
+	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
-	transformer les animations de puzzle en animations tout court ET mettre à jour le fichier mappable qui en parle
-	mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
-	créer un debug mode pour activer les raccourcis clavier de dev ?
-	il faut créer le design des couches de light et de sous sol des maps !
-	il faudra penser à faire les lumières dans les niveaux
-	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?)
-	DieWhenNoHp -> kill() prévoir un restart
 
-	////////// TRADUCTION ////////////
-	
-	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
-	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
-	
-	lvl001 :
-	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
-	traduire "quel taré" par "what a freak"
-	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
-	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
-	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
-	
-	lvl_mole :
-	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 
-	////////// PERSONNAGES à faire ////////////
+	////////// PERSONNAGES A FAIRE ////////////
 
 	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
 	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
-	D5 - l'un des 2 boss de l'embranchement lvl03
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 	
 	////////// DAVE ////////////
@@ -122,14 +135,15 @@
 	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
+	faire en sorte qu'un niveau Dave ne puisse pas être rechargé (si on le zap, on est tp au niveau suivant) ... pb, c'est chiant vis-à-vis des speedrun
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
-	Lvl001 -> Sarah fait une alusion à Dave au moment de choisir le scénario du niveau (Enquête ou Sortie)
 	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
 
 	////////// RR000 ////////////
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
+	- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	traduction english pas fini (les actions)
 	
 	////////// WS000 ////////////
@@ -139,30 +153,14 @@
 
 	////////// LVL001 ////////////
 
-	0h10 = à enregister : - le type de scénario (sortie ou enquête)
-
-	peut-être pour geekali :
-	sarah n'a pas de comportement après avoir enguelé jean (elle devrait adopter celui qu'elle est censé avoir dans la salle de repos, après la visite de Marie quand elle est avec delta ?)
-	camille : vérifier que quand sarah s'en va, la conversation est cohérente (dialogues lost : perdue + sas) -> faire un triple request save/load peut être une idée
-	! attetnion : marie sait "magiquement" que sarah est avec Camille, ce qui peut poser des pb dans le cas où Sarah est partie engueuler jean
-	finir de coder le cas où Alicia prend les clefs pour nous
-
-	les différents karmas doivent affecter le scénario !
-	refaire les end lvl
-	attention ! il y a un vérouillage sur Marie et Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (ou même en exit, si Sarah a suivi Jean pour le gronder)
-	faire du décors à l'exterieur, et dans la salle de droite
-	scénario sadique pas encore faits
-	lvl001 scénario psycophathe pas encore faisable (fin "créée", mais début de partie injoignable)	
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
-
-	scénario : exit
-	- si on commence à exploser des murs AVANT de libérer alicia, il faut prévoir sa réaction
-	- La machine à café !
-	- Sarah : après l'enguelade de Jean dans les toilettes
-	- Jospeh: Marie, Sarah, Alicia ou Jean -> réaction à l'engeulade / aux pleurs (+ transformer 3 en pleurs en même temps en 4 ?)
-	- Marie : IA pas fini (pendant les toilettes + quand elle part voir Sarah)
+	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
+	XhX - variantes sadiques, psychopath, et angélique à créer
+	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
+	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	
 	scénarion : inquery
+	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
+	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery
 	- Alicia + Dave : créer le TA du vol
 	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
 	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
@@ -171,20 +169,19 @@
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
+	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 
 	karma actions :
-	- saboter l'ordinateur de bernard
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
-	- mentir sans raison à Sarah sur l'emplacement de la clef
-	- narguer Alicia dans le SAS
-	- enfermer Marie dans les toilettes
-	- libérer Alicia
-	- tuer Alicia
-	- envoyer chier joseph ou non
-	- se faire pisser dessus (pas angélique)
-	- crier sur jean (pas angélique)
-	- (obj-50) le choix d'abandonner les gens sur place et de partir
-
+	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
+	- narguer Alicia dans le SAS (inquery)
+	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
+	note :
+	en exit :
+	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
+	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
+	)
+	
 	à enregister :
 	- le type de scénario (sortie ou enquête)
 	- Saboter l'ordinateur de Bernard
@@ -192,9 +189,9 @@
 	- Delta a informé rebecca qu'elle faisait des casses avec son frère
 	- Jean qui se fait gronder par Sarah
 	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
+	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
 	- Jean s'énerver et il ne s'excuse pas
 	- Jean golden shower
-	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
 	- Marie enfermée dans les toilettes
 	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
 	- Jopseh faire pleurer (+ éventuelles réactions des autres)
@@ -206,28 +203,19 @@
 	- Alicia se moquer de sa situation (+ karma négatif)
 	- Le meutre de Alicia (+ karma psycopath)
 	- (obj-50) le choix d'abandonner les gens sur place et de partir
+	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
+	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
+	- la romance (positive, négative ou même hypothétique) avec Marie
+	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
 	
+	0h30 = ajouter un dialogue pour que sarah evnoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
-	obj-50 devient instable si la l'accueil ET le chemin du haut sont ouvert, il faudrat créer ce cas de figure (rebecca qui se fait la remarque comme quoi c'est bizarre de faire ça)
-	créer le cas de figure où "l'exit up" peut se faire de l'interieur (c'est à dire que les portes du SAS d'Alicia ont étaient ouvertes)
+	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 	quand on est sadique, l'objet 50 et le dialogue paleyr_leaving devraient s'adapter
-	la machine à café affiche "indisponibilité sur cette version"
-	Quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
-	finir le code dans le cas où Alicia est partie, et qu'il faudra faire le tour pour la libérer ? (ou la laisser tomber ?)
-	lorsqu'Eric s'enfuit, il doit parler à qqun et revenir ?
-	landslide alicia desk - penser à rajouter la phrase "bah, ça n'est pas comme si je ne pouvais pas faire le tour" si les 2 portes du sas sont déjà déverouiller
-	normal alicia cutscene - pour le remontant, mettre dans le dialogue (memory) si on a déjà pris un thé / café
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta reaction du "Alicia" n'est pas fini
-	ajouter des réactions des personnages dans quand (si) ils voient le pipi ?
-	créer un parking pour l'entrée "des visiteurs"
-	peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
-	attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
-	faire des personnages de remplissage dans les bureau en haut à droite
-	rajouter un bruit de méche explosive avant la détonation de la porte d'entrée ?
-	good psycopath deed : mort rapidement ?
-	lvl001 - psycopath - Rebecca devrait pousser Alicia 1 secvonde + tôt
-	
+	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs)
+
 	////////// LVL002 ////////////
 	
 	lvl state : fusillade (comme rr000 sequestration)
@@ -235,12 +223,15 @@
 	
 	////////// MOLE 0 ////////////
 	
+	faire le plein -> donner une bombe est-il vraiment nécessaire ?? voir si c'est mieux de s'en passer sinon (pour le blink dans l'affichage HUD)
+	mieux dessiner le lit en paille ?
 	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
 	rajouter les coffres aux endroits prévus sur la map
 	finir la salle des géodes - son au sol + réaction à l'entrée + possibilité d'en prendre une (ne pas oublier le son joué lors de la prise) : dialogueS (elle hésite puis accepte) & sauvegarde (que ça soit pris ou non, souvenir d'avoir vu la salle ? - ça peut être punitif si le joueur n'est pas explicitement rentrée DANS la salle, bien gérer son coup)
 	finir la salle des champignons
 	agrandir la carte de sorte qu'on ne voit pas les bords
 	3h00 = animation de fuite de blast la première fois (les 2 chemins) (+ le cas où on ne le voit jamais ?)
+	3h00 créer des coffres dans les sousterrains	
 	
 	boss : 
 	arranger le dialogue d'avant combat
@@ -248,18 +239,35 @@
 	0h20 = créer le script piranha de victoire (creusage) raccourci
 	les patterns du boss et leurs images peuvent être améliorer
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
+	le boss continue de bombarder le jour même lorsqu'il quitte la zone (bombes par au-dessus)
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
+	
+	
+	
 	
 	
 	////////// SONS ////////////
 
 	///////// IDEE ////////////
 
+	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
+	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"
+	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
+	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
+
+	un passage dont la mécanique s'inspire du jeu mobile "alien invasion idle rpg", par exemple lors de la reconstruction du laboiratoire où il faut gérer la quantité d'ouvrier, les répartir, gérer les ressoruces, etc.
+	rebecca bourée -> contrôles inversées
+	transporter de la nitro
+	un niveau sous l'eau
+	un niveau dans l'espace
+	musée de l'horreur (anges pleureurs + silence + escargot + luther)
+	un trou noir ! (c'est dans le titre du jeu après tout)
+	
+	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
+	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) -> le twist de la dernière input (sauvegarder, quitter, recharger)
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
-	faire un niveau de dance (c'est le film the emoji qui m'a donné envie)
-	des outils de + en + élaborés (design) en fonction de leur lvl
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	faire un lvl ou on joue qqun d'autre que Rebecca (on choisi entre 2), peut importe qui, quoi ou dans quel contexte, mais choisir entre 2 NPC
@@ -275,18 +283,41 @@
 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
 	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
+	
+	////////// TRADUCTION ////////////
+	
+	la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
+	
+	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
+	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	
+	lvl001 :
+	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
+	traduire "quel taré" par "what a freak"
+	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
+	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
+	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
+	ALICIA_ROOM_PLANT -> "tant mieux" = "good"
+	ALICIA_REACTION_ALICIA_ROOM_PLANT -> "enfin..." -> "I mean..."
+	
+	lvl_mole :
+	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 
 	////////// SUCCES ////////////
+	
+	100% neutre / sadique / (tous les karmas)
 	
 	vérifier la couleur de tous les succès (+ choisir leur position)
 	
 	akward -> en vert ?
 	terminated -> condition à créer + à redesigner (il est dans le working)
-	cookie -> la bonne traduction en anglais serait plutôt "you are a fat girl, becky"
 	
-	suivre Sarah dans les toilettes (important, sinon le joueur ne peut pas deviner comment faire la fin sadique)
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
 	(hidden=true) débloquer le niveau test sur l'écran titre
-		
+	
+	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
+
+	"You are" ne se sauvegarde pas encore
 	

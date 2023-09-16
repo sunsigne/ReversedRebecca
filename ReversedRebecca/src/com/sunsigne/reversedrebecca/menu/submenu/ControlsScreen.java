@@ -357,13 +357,13 @@ public class ControlsScreen extends SubMenuScreen {
 		text.drawOutlinesString(g, font, menuPauseText, DIRECTION.NULL, rect);
 		rect = new int[] {435, 298, 150, 80};
 		text.drawOutlinesString(g, font, movementsText, DIRECTION.RIGHT, rect);
-		rect = new int[] {1280, 162, 150, 80};
-		text.drawOutlinesString(g, font, action1Text, DIRECTION.LEFT, rect);
 		rect = new int[] {1280, 216, 150, 80};
-		text.drawOutlinesString(g, font, action2Text, DIRECTION.LEFT, rect);
+		text.drawOutlinesString(g, font, action1Text, DIRECTION.LEFT, rect);
 		rect = new int[] {1280, 270, 150, 80};
+		text.drawOutlinesString(g, font, action2Text, DIRECTION.LEFT, rect);
+		rect = new int[] {1280, 324, 150, 80};
 		text.drawOutlinesString(g, font, action3Text, DIRECTION.LEFT, rect);
-		rect = new int[] {1305, 424, 150, 80};
+		rect = new int[] {1280, 474, 150, 80};
 		text.drawOutlinesString(g, font, dialogueText, DIRECTION.LEFT, rect);
 	}
 

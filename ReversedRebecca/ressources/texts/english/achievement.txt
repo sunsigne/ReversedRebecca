@@ -2,7 +2,7 @@
 
 AwkwardTitle = That#was#awkward...
 AwkwardText = Being#denied#a#hug
-CookiesTitle = You're#a#diabetic,#Becky
+CookiesTitle = You're#a#fat#girl,#Becky
 CookiesText = Eat#100#cookies
 FruitTitle = Cyber-Vegetarian
 FruitText = Eat#a#virtual#fruit
@@ -11,11 +11,10 @@ FirstKillText = Eliminate#Alicia
 
 ///// GREEN /////
 
-CryingTitle = The#taste#of#your#tears
-CryingText = Three#in#tears#at#the#same#time
-
 ///// YELLOW /////
 
+BrokenHeartTitle = Broken#Heart
+BrokenHeartText = Refuse#to#go#out#with#Marie
 GoldenShowerTitle = Golden#Shower
 GoldenShowerText = To#be#urinated#on...
 TerminatedTitle = TERMINATED!
@@ -24,5 +23,8 @@ TerminatedText = Permanent#death#on#a#terminator
 ///// ORANGE /////
 
 ///// RED /////
+
+ThatWasAnAccidentTitle = That#was#an#accident...
+ThatWasAnAccidentText = Die#because#of#a#couch
 
 ///// PURPLE /////

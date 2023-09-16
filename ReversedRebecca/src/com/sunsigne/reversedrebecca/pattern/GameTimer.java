@@ -24,15 +24,14 @@ public class GameTimer implements Updatable, RenderFree {
 			return;
 		}
 
-		if (World.get() == null)
-			return;
-
 		if (absolute)
 			this.handler = LAYER.DEBUG.getHandler();
-		else
+		else if (World.get() != null)
 			this.handler = World.get().getLayer(false).getHandler();
+		else
+			return;
 
-		handler.addObject(this);
+		handler.addObject(this, false);
 
 		this.time = timeInTicks;
 		this.listener = listener;
@@ -49,7 +48,7 @@ public class GameTimer implements Updatable, RenderFree {
 	}
 
 	public void destroy() {
-		handler.removeObject(this);
+		handler.removeObject(this, false);
 	}
 
 	////////// TICK ////////////
@@ -67,6 +66,7 @@ public class GameTimer implements Updatable, RenderFree {
 			ready = true;
 			if (listener != null)
 				listener.doAction();
+			listener = null;
 		}
 	}
 

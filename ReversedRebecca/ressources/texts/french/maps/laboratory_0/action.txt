@@ -21,6 +21,11 @@ THATS_NOT_COOL = Key2 % c'est#pas#cool
 THEFT = Key2 % Vol#?
 ALICIA = Key3 % Alicia#?
 
+///// ALICIA ROOM /////
+
+WE_WILL_HELP_YOU = Key1 % on#t'aidera
+INDEED = Key2 % en#effet
+
 ///// LEFT AREA /////
 
 TAKE = Key2 % prendre
@@ -31,20 +36,28 @@ KINDLY = Key1 % Gentiment
 BLAMING = Key2 % Culpabiliser
 SCOLDING = Key3 % Engueuler
 SABOTAGE = Key3 % Saboter
+QUIETLY_SABOTAGE = Key3 % Saboter#discrètement
+DRINK = Key2 % boire
 COFFEE = Key1 % café
 TEA = Key2 % thé
 NO_THANKS = Key3 % non#merci
 OFFER_A_TEA = Key1 % proposer#un#thé
 I_HAVE_TO_GO = Key1 % Je#dois#y#aller...
 SHUT_UP = Key2 % La#ferme#!
+USE = Key1 % utiliser
 WASH_AWAY_THE_JEANS_DIRTYNESS = Key2% laver#la#cochonnerie#de#Jean
 GET_ANGRY = Key1 % s'énerver
 SAS_KEY = Key3 % clé#?
 TAKE_COFFEE = Key1% café
 TAKE_TEA = Key2% thé
+YES = Key1% oui
+NO = Key2% non
+APOLOGIZE = Key1 % s'excuser
+SAY_NOTHING = Key2 % ne#rien#dire
 
 ///// RIGHT AREA /////
 
+EXPLODE = Key1 % exploser
 NO_I_CONTINUE = Key1 % non,#je#continue
 OK_I_STOP = Key2 % ok,#j'arrête
 COME_BACK = Key1 % revenir

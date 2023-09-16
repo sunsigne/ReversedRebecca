@@ -120,16 +120,16 @@ OBJ-99 -> 99
 ////// DECORATION & ANIMATION //////
 
 La plupart des décoration et animations sont créées à partir d'Instructions Piranha bien précises (voir "ressources\piranha doc\types de requêtes\requêtes de création").
-Il existe des exceptions : certaines "pastilles" correspondent à des animations. Notamment celles de résolution des puzzles. 
+Il existe des exceptions : certaines "pastilles" correspondent à des animations. Notamment celles liées aux puzzlers. 
 Most of the decorations and animations are created from specific Piranha Instruction (see "ressources\piranha doc\types de requêtes\requêtes de création").
-There are some exceptions : some "chips" correspond to some animations. Especially those for solving puzzles.
+There are some exceptions : some "chips" correspond to some animations. Especially those related to puzzlers.
 
 Red = dépend du puzzler / depends on the puzzler
-Green = 128*
-Blue = dépend de l'action (1, 2 ou 3) / depends on the action (1, 2 or 3)
+Green = 128
+Blue = dépend de l'animation / depends on the animation
 
 exemple : 
-Animation d'explosion de porte / Animation for exploding door : 1-128-2
+Animation de vérouillage de porte / Animation for locking door : 1-128-2
 Animation de creusage de trou / Animation for digging hole : 4-128-1
 
 Note : puisqu'une animation se lance aussitôt placée, il est bien plus intéressant de l'instancier au moment voulu à partir d'une Instruction Piranha plutôt que de les placer comme "pastille" sur un fichier de map.

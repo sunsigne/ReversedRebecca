@@ -7,12 +7,12 @@ MAKE_AMENDS = 5 % faire#amende#honorable
 
 ///// BAD /////
 
-FRIEND_RECEIVED_BADLY = 2% amie#mal#reçue
-INAPPROPRIATE_BEHAVIOR = 4% comportement#déplacé
-BAD_JOKE = 6% blague#douteuse
-BEING_A_JERK = 20% être#une#ordure
+FRIEND_RECEIVED_BADLY = 2 % amie#mal#reçue
+INAPPROPRIATE_BEHAVIOR = 4 % comportement#déplacé
+BAD_JOKE = 6 % blague#douteuse
+BEING_A_JERK = 20 % être#une#ordure
 
 ///// PSYCHOPATH /////
 
-NO_KILL = 999% aucun#meurtre
-FORCED_CONFINEMENT = 999% confinement#forcé
+NO_KILL = 999 % aucun#meurtre
+FORCED_CONFINEMENT = 999 % confinement#forcé

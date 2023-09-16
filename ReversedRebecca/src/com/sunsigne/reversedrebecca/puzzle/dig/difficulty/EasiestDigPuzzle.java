@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class EasiestDigPuzzle extends DigPuzzle {
 
@@ -17,6 +18,11 @@ public class EasiestDigPuzzle extends DigPuzzle {
 		return 3 * Size.L;
 	}
 
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		return S_LEFT_UP;
+	}
+	
 	////////// PUZZLE ////////////
 
 	@Override

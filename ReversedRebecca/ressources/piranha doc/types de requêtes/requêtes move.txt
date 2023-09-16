@@ -84,6 +84,8 @@ TIME -> 0 = GOTO -> TP:33-35
 
 Lorsque la Condition sera vérifiée, l'objet se téléportera en x=33 y=35.
 
+À l'instar du Type de Requête MOVE, il est possible de définir une position à partir d'un NAME. L'objet se téléportera alors à une position valide parmi les 4 emplacements autours de l'objet.
+Note : si la cible est PLAYER, il est recommandé de s'assurer que le joueur soit centré au moment de l'exécution de la Requête afin d'obtenir un résultat "propre", par exemple en lançant une cinématique (voir Type de Requête CUTSCENE "requêtes autres.txt") ou en le centrant explicitement (voir Type de Requête CENTER_PLAYER "requêtes player.txt")
 
 ////// PUSH //////
 

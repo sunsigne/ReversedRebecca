@@ -30,7 +30,7 @@ public class Conductor {
 		new RessourceLoader().loadRessources();
 		Game.getInstance().forceLoop();
 
-		new World(FilePath.WARNING);
+		new World(FilePath.DAVE000);
 	}
 
 	public void stopApp() {

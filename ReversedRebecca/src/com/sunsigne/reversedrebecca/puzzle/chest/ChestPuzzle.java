@@ -24,8 +24,14 @@ import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class ChestPuzzle extends Puzzle {
+public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting {
 
 	private boolean userData = false;
 
@@ -35,6 +41,8 @@ public class ChestPuzzle extends Puzzle {
 		this.lootFile = lootFile;
 		loadSize(); // 1, 2 or 3;
 		this.chestCard = new ChestCard[size];
+
+		loadGamepadSetup();
 	}
 
 	////////// NAME ////////////
@@ -256,6 +264,96 @@ public class ChestPuzzle extends Puzzle {
 	private void displayText(Graphics g) {
 		int[] rect = new int[] { 0, 0, Window.WIDHT, Window.HEIGHT / 4 };
 		new TextDecoration().drawOutlinesString(g, font, getText(), DIRECTION.NULL, rect);
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	private static final int GAP = 0;
+
+	public static final PresetMousePos LEFTMAX = new PresetMousePos(Window.WIDHT / 2 + GAP - 550,
+			Window.HEIGHT / 2 + GAP);
+	public static final PresetMousePos LEFT = new PresetMousePos(Window.WIDHT / 2 + GAP - 375, Window.HEIGHT / 2 + GAP);
+	public static final PresetMousePos MIDDLE = new PresetMousePos(Window.WIDHT / 2 + GAP, Window.HEIGHT / 2 + GAP);
+	public static final PresetMousePos RIGHT = new PresetMousePos(Window.WIDHT / 2 + GAP + 375,
+			Window.HEIGHT / 2 + GAP);
+	public static final PresetMousePos RIGHTMAX = new PresetMousePos(Window.WIDHT / 2 + GAP + 550,
+			Window.HEIGHT / 2 + GAP);
+
+	private PresetMousePos preset;
+
+	@Override
+	public PresetMousePos getPreset() {
+		return preset;
+	}
+
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		return size == 2 ? LEFT : MIDDLE;
+	}
+
+	@Override
+	public void setPreset(PresetMousePos preset) {
+		this.setPreset(preset, true);
+	}
+
+	public void setPreset(PresetMousePos preset, boolean sound) {
+		this.preset = preset;
+		preset.moveMouse();
+
+		if (isPresetNull() == false && sound)
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
+	}
+
+	protected void loadGamepadSetup() {
+		if (ControllerManager.getInstance().isUsingGamepad())
+			setPreset(getDefaultPreset(), false);
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if(isClosing())
+			return;
+		
+		if (isPresetNull())
+			setPreset(getDefaultPreset());
+
+		if(size == 1)
+			return;
+		
+		else if (getPreset() == LEFT) {
+			if (e.getKey() == ButtonEvent.RIGHT)
+				setPreset(RIGHT);
+		} else if (getPreset() == RIGHT) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(LEFT);
+		}
+
+		else if (getPreset() == LEFTMAX) {
+			if (e.getKey() == ButtonEvent.RIGHT)
+				setPreset(MIDDLE);
+		} else if (getPreset() == MIDDLE) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(LEFTMAX);
+			if (e.getKey() == ButtonEvent.RIGHT)
+				setPreset(RIGHTMAX);
+		} else if (getPreset() == RIGHTMAX) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(MIDDLE);
+		}
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
 	}
 
 }

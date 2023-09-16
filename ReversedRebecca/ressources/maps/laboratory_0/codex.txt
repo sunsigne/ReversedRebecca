@@ -3,6 +3,7 @@
 // short range
 ERASE = REBECCAS*ATE_BREAKFAST
 ERASE = REBECCA*IGNORED_DOOR
+ERASE = REBECCA*USED_BATHROOM
 ERASE = LABORATORY*REBECCA_ARRIVE_BEFORE_SARAH
 ERASE = LABORATORY*REBECCA_ARRIVE_WITH_SARAH
 ERASE = LABORATORY*REBECCA_ARRIVE_AFTER_SARAH
@@ -72,26 +73,52 @@ OBJ-27 = Down Stool
 OBJ-28 = Table Left Part
 OBJ-29 = Table Middle Part
 OBJ-30 = Table Right Part
-OBJ-31 = Horizontal Couch
+OBJ-31 = Horizontal Couch Middle Part
+OBJ-68 = Horizontal Couch Left Part
+OBJ-38 = Horizontal Couch Right Part
+OBJ-36 = Vertical Couch Middle Part
 OBJ-32 = Vertical Couch Up Part
 OBJ-33 = Vertical Couch Down Part
 OBJ-34 = Giant Plant
 OBJ-35 = Trash
-OBJ-36 = Vertical Couch Middle Part
 OBJ-37 = Coffee Machine
-OBJ-38 = Horizontal Couch Right Part
 OBJ-39 = Toilet Door
 OBJ-42 = Alicia Rubbles
 OBJ-43 = Alicia Rubbles Up Checker
 OBJ-44 = Alicia Rubbles Down Checker
 OBJ-45 = Rebecca Pee Checker
 OBJ-46 = Sink
+OBJ-69 = Toilet Down
+OBJ-70 = Toilet Up
 OBJ-49 = Joseph SAS Key Checker
+OBJ-66 = Marie Romance Helper
+
+///// ALICIA ROOM /////
+
+OBJ-56 = Alicia Room
+OBJ-57 = Plant
+OBJ-58 = Desk
+OBJ-59 = Computer
+OBJ-60 = Chair
+OBJ-61 = Paperworkd
 
 ///// RIGHT AREA /////
 
 NPC-17 = Eric
+NPC-18 = Dummy Down
+NPC-19 = Dummy Up
 OBJ-50 = Leaving Player Checker
 OBJ-51 = Green SAS Door Up
 OBJ-52 = Green SAS Door Left
 OBJ-53 = Green SAS Door Down
+OBJ-54 = Rubble Explosing Refusal
+OBJ-62 = Plant
+OBJ-63 = Chair
+OBJ-64 = Desk
+OBJ-65 = Bombable Desk Rubble
+OBJ-67 = Bomb Path Soft Lock Preventer
+OBJ-72 = Chair Toward Up
+OBJ-73 = SAS Console Toward Left
+OBJ-74 = SAS Console Toward Right
+OBJ-75 = SAS Console Toward Up
+OBJ-76 = SAS Console Toward Down

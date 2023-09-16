@@ -37,7 +37,7 @@ public class SoundTask implements CameraDependency {
 	////////// SOUND ////////////
 
 	public void playSoundIfCamera(Position position, String path) {
-		if (CAMERA.isObjectVisible(position))
+		if (CAMERA.isObjectVisible(position, false))
 			play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
 	}
 

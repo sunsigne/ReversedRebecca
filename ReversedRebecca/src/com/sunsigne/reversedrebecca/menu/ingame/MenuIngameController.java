@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -23,24 +24,27 @@ public class MenuIngameController {
 	}
 
 	private static Cursor cursor;
-	
+
 	public void loadResumeScreen() {
 		hardFreeze(true);
-		
+
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 		menu = new ResumeScreen();
-		
+
 		cursor = Game.getInstance().getCursor();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 	}
 
 	public void unloadResumeScreen() {
 		hardFreeze(false);
-		
+
 		LAYER.MENU.getHandler().clear();
 		menu = null;
-		
-		Game.getInstance().setCursor(cursor);
+
+		if (ControllerManager.getInstance().isUsingGamepad() == false)
+			new GameCursor().refreshCursor();
+		else
+			Game.getInstance().setCursor(cursor);
 	}
 
 	public void hardFreeze(boolean freeze) {

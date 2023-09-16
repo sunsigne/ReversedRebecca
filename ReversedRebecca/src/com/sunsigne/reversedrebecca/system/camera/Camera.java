@@ -26,12 +26,21 @@ public class Camera {
 		Camera.y = y;
 	}
 
-	public boolean isObjectVisible(Position position) {
-		int px = position.getX() + position.getWidth() / 2;
-		int py = position.getY() + position.getHeight() / 2;
+	public boolean isObjectVisible(Position position, boolean withRoom) {
+		int px = position.getX();
+		int py = position.getY();
+		int pw = position.getWidth();
+		int ph = position.getHeight();
+		
+		if(withRoom == false) {
+			px = px +  + position.getWidth() / 2;
+			py = py + position.getHeight() / 2;;
+			pw = 0;
+			ph = 0;
+		}
 
-		if (px > -x && px < -x + Window.WIDHT) {
-			if (py > -y && py < -y + Window.HEIGHT) {
+		if (px + 3 * pw > -x && px < -x + 2 * pw + Window.WIDHT) {
+			if (py + 3 * ph > -y && py < -y + 2 * ph + Window.HEIGHT) {
 				return true;
 			} else
 				return false;

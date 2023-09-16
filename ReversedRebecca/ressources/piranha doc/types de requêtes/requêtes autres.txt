@@ -56,9 +56,10 @@ TIME -> 0 = GOTO -> CUTSCENE:START
 
 Lorsque la Condition sera vérifiée, une scène cinématique sera lancée.
 
-Les deux "seules choses" que font une scène cinématique sont :
-- d'afficher des bandes noires en haut et en bas de l'écran.
-- d'interdire à l'utilisateur de contrôler le joueur avec le clavier.
+Les trois choses que font une scène cinématique sont :
+- afficher des bandes noires en haut et en bas de l'écran.
+- centrer le joueur sur la "case" où il est actuellement le plus.
+- interdire à l'utilisateur de contrôler le joueur avec le clavier.
 
 Le Type de Requête CUTSCENE accepte 3 cibles :
 - START, pour lancer une scène cinématique.

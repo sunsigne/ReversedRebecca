@@ -11,11 +11,10 @@ FirstKillText = Eliminer#Alicia
 
 ///// GREEN /////
 
-CryingTitle = Le#gout#de#vos#larmes
-CryingText = Trois#en#larmes#en#meme#temps
-
 ///// YELLOW /////
 
+BrokenHeartTitle = Coeur#Brise
+BrokenHeartText = Refuser#de#sortir#avec#Marie
 GoldenShowerTitle = Golden#Shower
 GoldenShowerText = Se#faire#uriner#dessus...
 TerminatedTitle = EXTERMINATION#!
@@ -24,5 +23,8 @@ TerminatedText = Mort#definitive#sur#un#terminator
 ///// ORANGE /////
 
 ///// RED /////
+
+ThatWasAnAccidentTitle = C'etait#un#accident...
+ThatWasAnAccidentText = Mourir#a#cause#d'un#canape
 
 ///// PURPLE /////

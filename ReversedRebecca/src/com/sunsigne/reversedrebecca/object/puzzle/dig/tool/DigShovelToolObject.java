@@ -19,13 +19,14 @@ public class DigShovelToolObject extends DigToolObject {
 
 	@Override
 	protected void pickupTool() {
-		replaceHandByShovel();
+		replaceHandByShovel();		
 		super.pickupTool();
 	}
 
 	private void replaceHandByShovel() {
 		getPuzzle().setState(getState());
-
+		getPuzzle().tool_list.removeObject(getPuzzle().tool_list.getList().get(0));
+		
 		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
 			if (tempUpdatable instanceof DigHandToolObject == false)
 				continue;
@@ -33,7 +34,6 @@ public class DigShovelToolObject extends DigToolObject {
 			LAYER.PUZZLE.getHandler().removeObject(tempUpdatable);
 			return;
 		}
-
 	}
 
 }

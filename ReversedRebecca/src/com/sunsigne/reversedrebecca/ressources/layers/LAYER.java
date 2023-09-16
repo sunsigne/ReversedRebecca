@@ -32,7 +32,7 @@ public enum LAYER {
 	//UPPEST_GROUND("uppiest_ground", new Handler(true)),
 	
 	WORLD_TEXT("world_text", new Handler(true)),	
-	GUI("gui", new Handler(false)),
+	HUD("hud", new Handler(false)),
 	
 	PUZZLE("puzzle", new Handler(false)),
 	

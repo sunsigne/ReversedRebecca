@@ -117,6 +117,7 @@ public abstract class DigToolObject extends BuriedObject {
 		DigToolObject selectable = getPuzzle().getTool(getState(), x_pos_in_menu, y_pos_in_menu, true);
 		selectable.setX(x_pos_in_menu);
 		selectable.setY(y_pos_in_menu);
+		getPuzzle().tool_list.addObject(selectable);
 		LAYER.PUZZLE.addObject(selectable);
 	}
 

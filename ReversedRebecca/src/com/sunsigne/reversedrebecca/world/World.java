@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
-import com.sunsigne.reversedrebecca.object.gui.GUI;
-import com.sunsigne.reversedrebecca.object.gui.GUIList;
+import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -67,7 +67,7 @@ public class World implements Updatable, RenderFree {
 		updateLayer();
 		addSetup();
 		new Save().loadSave();
-		addGUI();
+		addHUD();
 		addControllers();
 		start();
 
@@ -145,9 +145,11 @@ public class World implements Updatable, RenderFree {
 		Game.getInstance().forceLoop();
 	}
 
-	private void addGUI() {
-		for (GUI tempGUI : GUIList.getList().getList()) {
-			LAYER.GUI.addObject(tempGUI);
+	private void addHUD() {
+		new CharacteristicList().reset();
+		
+		for (HUD tempHUD : HUDList.getList().getList()) {
+			LAYER.HUD.getHandler().getList().add(0, tempHUD);
 		}
 	}
 
@@ -306,7 +308,6 @@ public class World implements Updatable, RenderFree {
 		resetLayers();
 		freeze(false);
 		instance = null;
-		new CharacteristicList().reset();
 		MemorySet.getSet().clear();
 		SaveList.getList().clear();
 		SaveEraserList.getList().clear();

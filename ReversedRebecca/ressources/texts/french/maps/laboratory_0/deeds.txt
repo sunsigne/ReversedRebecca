@@ -1,0 +1,21 @@
+///// GOOD /////
+
+OFFER_A_TEA = 1 % proposer#un#thé
+CONFORT_JEAN = 2 % réconforter#Jean
+FREE_ALICIA = 3 % libérer#Alicia
+FREE_AND_BEFRIEND_ALICIA = 4 % libérer#Alicia#et#sympathiser
+
+///// BAD /////
+
+STEAL_HER_DRINK = 1 % voler#son#café
+SCOLD_JEAN = 2 % engueuler#Jean
+TRAP_THE_TOILET = 3 % piéger#les#toilettes
+DESTROY_12_HOURS_OF_WORK = 4 % détruire#12h#de#travail
+YELL_AT_AN_OLD_MAN = 5 % crier#sur#un#vieil#homme
+UNREASONABLE_DESTRUCTION = 6 % destruction#déraisonnable
+ABADON_EVERYONE = 7 % abandonner#tout#le#monde
+
+///// PSYCHOPATH /////
+
+QUICK_DEATH = 999 % mort#rapide
+PLUG_THE_HOLE_POORLY = 999 % mal#reboucher#le#trou

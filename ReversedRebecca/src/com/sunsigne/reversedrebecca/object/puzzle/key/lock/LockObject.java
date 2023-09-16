@@ -7,14 +7,23 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class LockObject extends PuzzleObject implements MouseObject, CollisionReactor {
+public class LockObject extends PuzzleObject implements MouseObject, CollisionReactor, GamepadEvent {
 
 	public LockObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0);
+
+		createSpammable();
 
 		if (isCritical())
 			xmax = getPuzzle().getCol(11);
@@ -80,6 +89,53 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> getPuzzle().closePuzzle(true));
+	}
+
+	////////// SPAMMABLE ////////////
+
+	private SpammableGamepadEvent[] spammable;
+
+	private void createSpammable() {
+		spammable = new SpammableGamepadEvent[4];
+		GenericListener onSpam = null;
+
+		onSpam = () -> moveMouseFrom(-GameCursor.SPEED, 0);
+		spammable[0] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.LEFT, 1, 1, onSpam);
+		onSpam = () -> moveMouseFrom(GameCursor.SPEED, 0);
+		spammable[1] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.RIGHT, 1, 1, onSpam);
+		onSpam = () -> moveMouseFrom(0, -GameCursor.SPEED);
+		spammable[2] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.UP, 1, 1, onSpam);
+		onSpam = () -> moveMouseFrom(0, GameCursor.SPEED);
+		spammable[3] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.DOWN, 1, 1, onSpam);
+	}
+
+	private void moveMouseFrom(int x, int y) {
+		int[] pos = new MousePos().get();
+		new PresetMousePos(pos[0] + x, pos[1] + y).moveMouse();
+	}
+	
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (isInPauseMenu())
+			return;
+
+		for (int index = 0; index < 4; index++)
+			spammable[index].buttonPressed(e);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		for (int index = 0; index < 4; index++)
+			spammable[index].buttonReleased(e);
 	}
 
 }

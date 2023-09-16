@@ -33,12 +33,12 @@ public class ActionThreeKey implements Key {
 
 	public static BufferedImage getGamepadButton() {
 		if (gamepadButton == null)
-			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "y");
+			gamepadButton = new ImageTask().loadImage("textures/menu/button_" + "b");
 		return gamepadButton;
 	}
 
 	public static int getGamepadKey() {
-		return ButtonEvent.Y;
+		return ButtonEvent.B;
 	}
 
 }

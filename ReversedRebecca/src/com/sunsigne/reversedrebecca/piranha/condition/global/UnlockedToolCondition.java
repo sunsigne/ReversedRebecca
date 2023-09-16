@@ -16,8 +16,8 @@ public class UnlockedToolCondition extends GlobalInstruction {
 	public UnlockedToolCondition() {
 		GlobalInstructionList.getList().addObject(this);
 	}
-	
-	private static GlobalInstruction globalInstruction = new  UnlockedToolCondition();
+
+	private static GlobalInstruction globalInstruction = new UnlockedToolCondition();
 
 	@Override
 	public GlobalInstruction getGlobalInstruction() {
@@ -28,16 +28,19 @@ public class UnlockedToolCondition extends GlobalInstruction {
 	public String getConditionType() {
 		return "UNLOCKEDTOOL->";
 	}
-	
+
 	public void registerValue(ToolPlayer toolPlayer, LVL lvl) {
-		// prevent the condition to occurs during map loading
-		if (LAYER.LOADING.getHandler().getList().isEmpty() == false)
+		if (mapLoadingPrevention(false))
 			return;
 
 		String value = toolPlayer.getName() + ":" + lvl.getName();
 		analyse(getConditionType() + value);
 	}
-	
+
+	private boolean mapLoadingPrevention(boolean activated) {
+		return activated && LAYER.LOADING.getHandler().getList().isEmpty() == false;
+	}
+
 	////////// OPTIMIZATION ////////////
 
 	private static GameList<PiranhaObject> exceptions = new GameList<>(LISTTYPE.ARRAY);
@@ -46,5 +49,5 @@ public class UnlockedToolCondition extends GlobalInstruction {
 	public GameList<PiranhaObject> getExceptionsList() {
 		return exceptions;
 	}
-	
+
 }

@@ -1,17 +1,74 @@
 package com.sunsigne.reversedrebecca.world.controllers;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class WorldControllers implements KeyboardEvent, GamepadEvent {
+public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent, GamepadEvent, TickFree, RenderFree {
 
 	public abstract WorldControllers getWorldControllers();
+
+	////////// POSITION ////////////
+
+	@Override
+	public int getX() {
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		return 0;
+	}
+
+	@Override
+	public void setX(int x) {
+
+	}
+
+	@Override
+	public void setY(int y) {
+
+	}
+
+	@Override
+	public int getWidth() {
+		return Window.WIDHT;
+	}
+
+	@Override
+	public int getHeight() {
+		return Window.HEIGHT;
+	}
+
+	////////// MOUSE ////////////
+
+	private MouseController mouseController = new MouseController(this);
+
+	@Override
+	public MouseController getMouseController() {
+		return mouseController;
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
+	}
 
 	////////// KEYBOARD ////////////
 
@@ -29,7 +86,7 @@ public abstract class WorldControllers implements KeyboardEvent, GamepadEvent {
 
 		if (pressed)
 			return;
-		
+
 		inputPressed(e.getKeyCode(), -1);
 		pressed = true;
 	}
@@ -42,9 +99,9 @@ public abstract class WorldControllers implements KeyboardEvent, GamepadEvent {
 		inputReleased(e.getKeyCode(), -1);
 		pressed = false;
 	}
-	
+
 	////////// GAMEPAD ////////////
-	
+
 	private GamepadController gamepadController = new GamepadController(this);
 
 	@Override
@@ -56,7 +113,7 @@ public abstract class WorldControllers implements KeyboardEvent, GamepadEvent {
 	public void buttonPressed(ButtonEvent e) {
 		if (World.get() == null)
 			return;
-		
+
 		inputPressed(65535, e.getKey());
 	}
 
@@ -64,14 +121,14 @@ public abstract class WorldControllers implements KeyboardEvent, GamepadEvent {
 	public void buttonReleased(ButtonEvent e) {
 		if (World.get() == null)
 			return;
-		
+
 		inputReleased(65535, e.getKey());
 	}
-	
+
 	////////// INPUT ////////////
 
 	private boolean pressed;
-	
+
 	public abstract void inputPressed(int key, int button);
 
 	public abstract void inputReleased(int key, int button);

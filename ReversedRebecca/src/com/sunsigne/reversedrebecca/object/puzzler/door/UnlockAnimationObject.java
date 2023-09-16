@@ -49,10 +49,10 @@ public class UnlockAnimationObject extends PuzzlerAnimationObject {
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage lockedImage;
-	private BufferedImage unlockedImage;
+	protected BufferedImage lockedImage;
+	protected BufferedImage unlockedImage;
 
-	private void loadImages() {
+	protected void loadImages() {
 		String path = "textures/puzzler/" + getName() + "_";
 
 		lockedImage = new ImageTask().loadImage(path + "0");
@@ -61,7 +61,7 @@ public class UnlockAnimationObject extends PuzzlerAnimationObject {
 		currentImage = lockedImage;
 	}
 
-	private BufferedImage currentImage;
+	protected BufferedImage currentImage;
 
 	@Override
 	public BufferedImage getImage() {

@@ -1,0 +1,2 @@
+object = player = blush_var2 = (Pourquoi#elle#reste#là#?@Est-ce#que#c'est#ce#je#crois#?)
+object = player = blush_var = (Est-ce#que#c'est#vraiment@en#train#d'arriver#?)

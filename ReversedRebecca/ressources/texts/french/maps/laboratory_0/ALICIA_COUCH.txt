@@ -1,0 +1,2 @@
+alicia = DOWN = happy = Merci#encore#de#m'avoir#libérée.
+player = alicia = laugh = Je#t'en#prie,#c'est#normal.

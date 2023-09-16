@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class HarderDigPuzzle extends DigPuzzle {
 
@@ -17,7 +18,12 @@ public class HarderDigPuzzle extends DigPuzzle {
 	public int getSize() {
 		return 2 * Size.M;
 	}
-
+	
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		return L_LEFTMAX_UPMAX;
+	}
+	
 	////////// PUZZLE ////////////
 
 	@Override

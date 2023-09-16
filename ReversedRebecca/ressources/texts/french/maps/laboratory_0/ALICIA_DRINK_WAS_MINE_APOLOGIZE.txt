@@ -1,0 +1,4 @@
+player = alicia = worry = Pardon…#C'était#pour#te#faire#une#blague.@Vraiment.
+alicia = DOWN = unhappy = …
+alicia = DOWN = happy = …#J'avoue#que#je#ne#m'y#attendais#pas.
+alicia = DOWN = happy_var = Oui,#c'était#amusant.

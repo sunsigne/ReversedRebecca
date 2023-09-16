@@ -11,11 +11,15 @@ public class PresetMousePos {
 
 	private int x, y;
 	public static boolean usingPreset;
-	
+	private static GameTimer timer;
+
 	public void moveMouse() {
 		usingPreset = true;
-		new GameTimer(5, () -> usingPreset = false);
-		
+
+		if (timer != null)
+			timer.destroy();
+		timer = new GameTimer(5, true, () -> usingPreset = false);
+
 		new MousePos().setX(x, true);
 		new MousePos().setY(y, true);
 	}

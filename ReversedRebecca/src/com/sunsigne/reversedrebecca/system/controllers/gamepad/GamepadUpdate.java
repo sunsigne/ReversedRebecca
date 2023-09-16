@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
+
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 
@@ -68,6 +70,9 @@ public class GamepadUpdate implements Runnable {
 
 	@Override
 	public void run() {
+		if (activedMemoryLeakPrevention)
+			return;
+
 		running = true;
 
 		GamepadManager.currentControllers = null;
@@ -88,6 +93,15 @@ public class GamepadUpdate implements Runnable {
 		var controllers = env.getControllers();
 		running = false;
 		GamepadUpdate.controllers = controllers;
+
+		updateMemoryLeakPreventer();
+	}
+
+	private static boolean activedMemoryLeakPrevention;
+
+	private void updateMemoryLeakPreventer() {
+		activedMemoryLeakPrevention = true;
+		new GameTimer(1, true, () -> activedMemoryLeakPrevention = false);
 	}
 
 }

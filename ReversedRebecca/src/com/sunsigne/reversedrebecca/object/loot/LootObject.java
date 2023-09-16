@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.piranha.condition.global.PickupLootCondition;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -22,18 +23,19 @@ public abstract class LootObject extends GameObject implements CollisionReactor,
 		removeObject();
 		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
 		new SoundTask().playSoundIfCamera(this, "loot");
+		new PickupLootCondition().registerValue(this);
 		actionWhenLooted();
 	}
 
 	////////// BLINKING ////////////
 
 	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
-	
+
 	@Override
 	public Cycloid<Boolean> getBlinking() {
-		return  blinking;
+		return blinking;
 	}
-	
+
 	private int time;
 
 	@Override

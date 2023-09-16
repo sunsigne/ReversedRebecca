@@ -1,0 +1,3 @@
+object = player = happy = Tu#as#besoin#de#quelque#chose#?
+rebecca = object = excited = Des#bombes#!
+object = player = happy = Bien#sûr,#tiens.

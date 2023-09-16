@@ -44,7 +44,7 @@ public class AntivirusSpawner extends AntivirusObject {
 
 	////////// TICK ////////////
 
-	private final int SPAWNING_TIME = 100;
+	private final int SPAWNING_TIME = 210;
 	private int time = 0;
 
 	@Override

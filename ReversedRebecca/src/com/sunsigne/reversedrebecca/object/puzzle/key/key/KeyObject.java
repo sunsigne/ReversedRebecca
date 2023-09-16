@@ -15,10 +15,13 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector {
+public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector, GamepadEvent {
 
 	public KeyObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0);
@@ -135,6 +138,26 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
 
 	}
 

@@ -16,14 +16,18 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class BombObject extends PuzzleObject implements MouseUserEvent {
+public class BombObject extends PuzzleObject implements MouseUserEvent, GamepadEvent {
 
 	protected BombObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
 		loadAnimation();
+		countless = true;
 		maxcount = 1;
 		count = maxcount;
 	}
@@ -66,6 +70,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	////////// MAX COUNT ////////////
 
+	private boolean countless;
 	private int maxcount;
 
 	public int getMaxCount() {
@@ -73,6 +78,8 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	}
 
 	public void setMaxCount(int maxcount) {
+		countless = false;
+
 		if (maxcount > 1 && isCritical() == false)
 			this.maxcount = maxcount;
 		else
@@ -172,7 +179,7 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
-		if (count > 0 && isCritical() == false)
+		if (countless == false && count > 0 && isCritical() == false)
 			drawCount(font, g);
 	}
 
@@ -191,9 +198,6 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 		if (count == maxcount)
 			// red
 			return new Color(180, 50, 50);
-		if (count == maxcount - 1)
-			// orange
-			return new Color(255, 128, 40);
 		else
 			return Color.YELLOW;
 	}
@@ -223,4 +227,24 @@ public class BombObject extends PuzzleObject implements MouseUserEvent {
 
 	}
 
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
+	}
+	
 }

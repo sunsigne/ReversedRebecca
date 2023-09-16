@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.gui.DebugModeObject;
+import com.sunsigne.reversedrebecca.object.hud.DebugModeObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
