@@ -31,6 +31,8 @@
 
 	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
+	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 
 	////////// GAMEPAD ////////////
 
@@ -42,20 +44,13 @@
 
 	////////// EN COURS ////////////
 
-	bug à régler :
-		- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	
-	lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés
-	
-	ux :
-	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-
 	pour la démo :
 	dave001 & lvl001 :
 		- passer d'un texte qui dit "tu as le choix entre deux options" à une seule option et c'est tout (ça fait moins cheap)
+		- rr000 - la fin psycopath fait planter le jeu	
+		- lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés	
 	geekali :
-		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo
+		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo (si besoin)
 	mole : 
 		- 3h00 créer des coffres dans les sousterrains	
 
@@ -150,6 +145,7 @@
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
 	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
+	- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 	traduction english pas fini (les actions)
 	
 	////////// WS000 ////////////
