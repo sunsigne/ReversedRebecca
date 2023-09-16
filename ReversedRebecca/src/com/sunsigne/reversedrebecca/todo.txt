@@ -51,8 +51,6 @@
 		- lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés	
 	geekali :
 		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo (si besoin)
-	mole : 
-		- 3h00 créer des coffres dans les sousterrains	
 
 	////////// BOSS ////////////
 
@@ -233,6 +231,7 @@
 	finir la salle des champignons
 	agrandir la carte de sorte qu'on ne voit pas les bords
 	3h00 = animation de fuite de blast la première fois (les 2 chemins) (+ le cas où on ne le voit jamais ?)
+	3h00 créer des coffres dans les sousterrains	
 	
 	boss : 
 	arranger le dialogue d'avant combat
