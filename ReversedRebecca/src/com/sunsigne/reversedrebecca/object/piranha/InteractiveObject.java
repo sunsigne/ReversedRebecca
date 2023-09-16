@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.object.piranha;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -63,13 +62,6 @@ public class InteractiveObject extends PiranhaObject implements TickFree, Render
 	}
 
 	////////// GAMEPAD ////////////
-
-	private GamepadController gamepadController = new GamepadController(this);
-
-	@Override
-	public GamepadController getGamepadController() {
-		return gamepadController;
-	}
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {

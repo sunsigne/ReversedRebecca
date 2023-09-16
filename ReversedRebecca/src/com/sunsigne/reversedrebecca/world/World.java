@@ -147,7 +147,7 @@ public class World implements Updatable, RenderFree {
 
 	private void addHUD() {
 		new CharacteristicList().reset();
-		
+
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			LAYER.HUD.getHandler().getList().add(0, tempHUD);
 		}
@@ -164,7 +164,9 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void start() {
+		freeze(true);
 		getLayer(false).addObject(this);
+		freeze(false);
 		Game.getInstance().forceLoop();
 	}
 
@@ -298,20 +300,22 @@ public class World implements Updatable, RenderFree {
 
 		new PlayerFinder().setPlayerCanInterract(!freeze);
 
-		if (freeze) // remove fading menu if froze before completed
+		boolean flag = false;
+		if (flag && freeze) // when active, remove fading menu if froze before completed
 			((FadeMenuLaw) PhysicList.getList().getObject(new FadeMenuLaw())).setFading(false);
 	}
 
 	public void destroy() {
+		freeze(true);
 		new Cutscene().stop(false);
 		closePuzzle();
 		resetLayers();
-		freeze(false);
 		instance = null;
 		MemorySet.getSet().clear();
 		SaveList.getList().clear();
 		SaveEraserList.getList().clear();
 		Game.getInstance().forceLoop();
+		freeze(false);
 	}
 
 	private void closePuzzle() {
