@@ -18,7 +18,7 @@
 	////////// BUG ////////////
 	
 	pas réglé :
-	- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
+		- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
@@ -47,15 +47,9 @@
 
 	////////// EN COURS ////////////
 
+	- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
+	- le spammable à la fin du niveau (RR000) créé un spam sur ce que dit Dave
 	mettre à jour le backup des maps !
-
-	pour la démo :
-	dave001 & lvl001 :
-		- passer d'un texte qui dit "tu as le choix entre deux options" à une seule option et c'est tout (ça fait moins cheap)
-		- rr000 - la fin psycopath fait planter le jeu	
-		- lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés	
-	geekali :
-		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo (si besoin)
 
 	////////// BOSS ////////////
 

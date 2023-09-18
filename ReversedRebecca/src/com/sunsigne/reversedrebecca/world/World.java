@@ -164,9 +164,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void start() {
+		boolean frozen = isFrozen();
 		freeze(true);
 		getLayer(false).addObject(this);
-		freeze(false);
+		freeze(false, frozen);
 		Game.getInstance().forceLoop();
 	}
 
@@ -291,6 +292,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	public void freeze(boolean freeze) {
+		freeze(freeze, !freeze);
+	}
+	
+	public void freeze(boolean freeze, boolean playerCanInterract) {
 		this.freeze = freeze;
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -298,7 +303,7 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		new PlayerFinder().setPlayerCanInterract(!freeze);
+		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
 
 		boolean flag = false;
 		if (flag && freeze) // when active, remove fading menu if froze before completed
