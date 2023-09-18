@@ -47,8 +47,6 @@
 
 	////////// EN COURS ////////////
 
-	- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
-	- le spammable à la fin du niveau (RR000) créé un spam sur ce que dit Dave
 	mettre à jour le backup des maps !
 
 	////////// BOSS ////////////
