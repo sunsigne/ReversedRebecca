@@ -45,10 +45,6 @@ public class GamepadController implements GamepadAdapter {
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 		ControllerManager.getInstance().setUsingGamepad(true);
-
-		if (LAYER.LOADING.getHandler().getList().isEmpty() == false)
-			return;
-		
 		pressing.removeObject(e.getKey());
 		gamepadEvent.buttonReleased(e);
 	}
