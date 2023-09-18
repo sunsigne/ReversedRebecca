@@ -18,6 +18,8 @@
 	////////// BUG ////////////
 	
 	pas réglé :
+		- partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
+		- les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
 		- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
