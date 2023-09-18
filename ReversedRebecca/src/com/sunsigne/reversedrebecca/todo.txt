@@ -46,6 +46,8 @@
 
 	////////// EN COURS ////////////
 
+	mettre à jour le backup des maps !
+
 	pour la démo :
 	dave001 & lvl001 :
 		- passer d'un texte qui dit "tu as le choix entre deux options" à une seule option et c'est tout (ça fait moins cheap)
