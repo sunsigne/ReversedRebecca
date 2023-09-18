@@ -18,6 +18,7 @@
 	////////// BUG ////////////
 	
 	pas réglé :
+	- le dernier patch dans WORLD (pour defreeze le monde) rentre en contradiction avec le lvl du menu
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
