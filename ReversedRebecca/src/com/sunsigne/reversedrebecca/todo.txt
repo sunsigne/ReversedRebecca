@@ -25,6 +25,7 @@
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
 	vérifier si bien réglé :
+		- RR000 il m'a semblait en changeant de langue (en étant en FR du coup) que le niveau n'était pas à jour. A vérifier, j'ai peut-être confondu avec le jeu qui était en anglais mais qui avait des textes FR (ce qui est normal, puisque lma traduction n'était pas terminé lorsque s'est arrivé)
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
