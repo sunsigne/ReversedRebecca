@@ -65,8 +65,14 @@ public class World implements Updatable, RenderFree {
 		initParameters(mapName);
 		createMap();
 		updateLayer();
+		
 		addSetup();
+		if(instance != this)
+			return;
 		new Save().loadSave();
+		if(instance != this)
+			return;
+		
 		addHUD();
 		addControllers();
 		start();
@@ -303,7 +309,7 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
+		new PlayerFinder().setUserAllowedToControlPlayer(playerCanInterract);
 
 		boolean flag = false;
 		if (flag && freeze) // when active, remove fading menu if froze before completed
