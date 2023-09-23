@@ -19,6 +19,8 @@
 
 	pas réglé :
 		- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?)
+		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
+		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
@@ -48,12 +50,6 @@
 	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
-	
-	grave :
-		- partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
-		- les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
-	
-	mettre à jour le backup des maps et les fichiers map.pdn (ça bug trop souvent, créer une succession de fichiers .png !)
 
 	////////// BOSS ////////////
 
