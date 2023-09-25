@@ -41,7 +41,7 @@
 
 	////////// GAMEPAD ////////////
 
-	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
 	8h00 - rendre compatible le HackPuzzle
 	8h00 - rendre compatible le DiscoPuzzle
@@ -52,6 +52,7 @@
 	////////// EN COURS ////////////
 
 	gamepad :
+	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette
 	- corriger la latence (trop d'objets ? merory leak ?)
 	- le cursor DES puzzle à centrer (exemple de la bombe)
 	- faire en sorte que tous les boutons soit valides durant les puzzles
@@ -59,7 +60,7 @@
 
 	bug : 
 	- menu pause pendant DigPuzzle -> réaffiche la souris
-	- lui faire et partager les crêpes avec Sarah = elle n'affiche plujs "je suis prête" tant qu'elle n'a pas atteint le canapé
+	- lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 	
 	RR000 :
 	- TOUT le monde demande la soluce pour les clefs. Changer en faisant 3 (4?) essaies pour la trouver ?
@@ -71,13 +72,12 @@
 	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder
 		
 	Hack puzzle : 
-		- bug : le rikikiteur n'attaque plus si on entre puis sort de son repéteroite !
 		- visuel sur le Paralyser, 
 		- mieux introduire le teminator & le rikikiteur
 	
 	- changer "parler" en fonction de la situation
 
-	- les gens prennent Camille pour une vieille + sont consus sur qui est Erika
+	- les gens prennent Camille pour une vieille + sont confus sur qui est Erika
 	
 	- mieux informer un joueur sur ce qui finit un niveau (Sarah, Mika, la porte, etc)
 
