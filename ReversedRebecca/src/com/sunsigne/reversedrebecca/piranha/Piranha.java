@@ -1,7 +1,17 @@
 package com.sunsigne.reversedrebecca.piranha;
 
+import java.util.ConcurrentModificationException;
+import java.util.NoSuchElementException;
+
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class Piranha {
 
@@ -9,10 +19,56 @@ public class Piranha {
 		new ForceInit().loadAllClassesInPackage(Piranha.class.getPackageName());
 	}
 
+	////////// USEFULL ////////////
+
+	private boolean userData = false;
+
+	public GameList<PiranhaObject> getAllPiranhaObjects() {
+		var list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
+
+		try {
+			for (LAYER tempLayer : LAYER.values()) {
+
+				Handler handler = tempLayer.getHandler();
+
+				for (Updatable tempUpdatable : handler.getList()) {
+
+					if (tempUpdatable instanceof PiranhaObject)
+						list.addObject((PiranhaObject) tempUpdatable);
+
+					try {
+						handler.getList().iterator().next();
+					} catch (NoSuchElementException e) {
+						break;
+					}
+				}
+			}
+		} catch (ConcurrentModificationException e) {
+			// unlikly to do infinite loop, as "concurrent modifier" will eventually stop modifying
+			list = getAllPiranhaObjects();
+		}
+
+		return list;
+	}
+
+	public String getContent(PiranhaObject object) {
+		if (new FileTask().doesExist(userData, object.getPiranhaFile()) == false)
+			return null;
+
+		String content = new FileTask().read(userData, object.getPiranhaFile());
+		return content.toUpperCase();
+	}
+
 	////////// OPTIMIZATION ////////////
-	
+
 	public void optimize() {
-		new GlobalInstructionList().optimize();
+		GameList<PiranhaObject> allPiranhaObjects = getAllPiranhaObjects();
+		
+		new GlobalInstructionList().optimize(allPiranhaObjects);
+
+		for (PiranhaObject tempObject : allPiranhaObjects.getList()) {
+			tempObject.optimize();
+		}
 	}
 
 }

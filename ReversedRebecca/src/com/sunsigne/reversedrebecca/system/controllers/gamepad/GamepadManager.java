@@ -15,7 +15,7 @@ public class GamepadManager {
 
 	////////// MAP OR LIST ////////////
 
-	private static GameList<GamepadAdapter> list = new GameList<>(LISTTYPE.ARRAY);
+	private static GameList<GamepadAdapter> list = new GameList<>(LISTTYPE.LINKED);
 
 	public static GameList<GamepadAdapter> getList() {
 		return list;

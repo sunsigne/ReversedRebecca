@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
@@ -35,6 +36,8 @@ public abstract class PiranhaObject extends GameObject
 
 		if (World.get() != null)
 			piranhaFile = ("maps/" + World.get().getMapName() + "/" + getName() + ".csv");
+
+		optimize();
 	}
 
 	////////// NAME ////////////
@@ -106,6 +109,18 @@ public abstract class PiranhaObject extends GameObject
 
 	public String getPiranhaFile() {
 		return piranhaFile;
+	}
+
+	public void optimize() {
+		String content = new Piranha().getContent(this);
+
+		if (content == null)
+			return;
+
+		if (content.contains("ACTION"))
+			return;
+
+		destroyControls();
 	}
 
 	////////// FACING ////////////
