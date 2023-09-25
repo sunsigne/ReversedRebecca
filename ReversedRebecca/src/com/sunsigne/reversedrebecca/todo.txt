@@ -72,8 +72,8 @@
 	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder
 		
 	Hack puzzle : 
-		- visuel sur le Paralyser, 
-		- mieux introduire le teminator & le rikikiteur
+	- mieux introduire le teminator
+	- mieux introduire le rikikiteur
 	
 	- changer "parler" en fonction de la situation
 

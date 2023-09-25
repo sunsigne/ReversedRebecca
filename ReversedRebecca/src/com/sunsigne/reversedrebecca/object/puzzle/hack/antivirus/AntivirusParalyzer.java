@@ -1,7 +1,13 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
+import java.awt.AlphaComposite;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
@@ -51,6 +57,42 @@ public class AntivirusParalyzer extends AntivirusObject {
 			time = PARALYZING_TIME;
 			antivirusAction();
 		}
+	}
+
+	////////// TEXTURE ////////////
+
+	private BufferedImage image;
+	private BufferedImage blueImage;
+
+	@Override
+	public BufferedImage getImage() {
+		if (image == null)
+			image = new ImageTask()
+					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "white");
+		return image;
+	}
+
+	public BufferedImage getBlueImage() {
+		if (blueImage == null)
+			blueImage = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName());
+		return blueImage;
+	}
+
+	////////// RENDER ////////////
+
+	protected String text;
+
+	@Override
+	public void render(Graphics g) {
+		super.render(g);
+
+		Graphics2D g2d = (Graphics2D) g;
+		float alpha = (float) time / (float) (PARALYZING_TIME / 2);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.min(alpha, 1f)));
+		
+		g2d.drawImage(getBlueImage(), getX(), getY(), getWidth(), getHeight(), null);
+
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 }
