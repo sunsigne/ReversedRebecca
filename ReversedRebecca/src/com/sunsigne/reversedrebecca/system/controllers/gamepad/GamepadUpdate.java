@@ -39,7 +39,7 @@ public class GamepadUpdate implements Runnable {
 
 	public void start() {
 		run();
-		executorService.scheduleAtFixedRate(this, 0, 100, TimeUnit.MILLISECONDS);
+		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
 	}
 
 	public void stop() {
