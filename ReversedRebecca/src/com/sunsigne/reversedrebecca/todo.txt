@@ -7,6 +7,7 @@
 	reset la sauvegarde pour commencer sur le bon lvl
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
+	retirer dans GamepadUpdate le gamepad detection
 
 	////////// GEEKALI ////////////
 
@@ -46,14 +47,14 @@
 	8h00 - rendre compatible le HackPuzzle
 	8h00 - rendre compatible le DiscoPuzzle
 	4h00 - le DigPuzzle fait des choses bizarre en critical
-	1h00 - le spam fonctionne d'un piranha à un autre, mais pas avec les pnj ou les puzzlers
+	20h - corriger la latence provoqué par le système de detection de la manette (merory leak ?)
+	8h00 - le spam fonctionne d'un piranha à un autre, mais pas avec les pnj ou les puzzlers
 	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
 
 	gamepad :
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette
-	- corriger la latence (trop d'objets ? merory leak ?)
 	- le cursor DES puzzle à centrer (exemple de la bombe)
 	- faire en sorte que tous les boutons soit valides durant les puzzles
 	- les manettes de xbox sont folles ...
