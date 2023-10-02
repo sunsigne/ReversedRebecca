@@ -19,6 +19,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 		- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?)
@@ -59,7 +60,7 @@
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette
 	- le cursor DES puzzle à centrer (exemple de la bombe)
 	- faire en sorte que tous les boutons soit valides durant les puzzles
-	- les manettes de xbox sont folles ...
+	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
 
 	RR000 :
 	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive

@@ -109,20 +109,55 @@ public class GamepadManager {
 		while (eventQueue.getNextEvent(event)) {
 
 			Component comp = event.getComponent();
-			if (comp.getIdentifier() == Identifier.Axis.UNKNOWN)
+			if (comp.getIdentifier() == Identifier.Axis.UNKNOWN || comp.getIdentifier() == Identifier.Axis.Z)
 				continue;
+
+			ButtonEvent button = ButtonEvent.getButtonEvent(gamepad.getType(), comp.getIdentifier(), event.getValue());
+
+			if (button.getKey() == ButtonEvent.ERROR)
+				continue;
+
+			int pressedButton = ButtonEvent.ERROR;
+			int releasedButton = ButtonEvent.ERROR;
 
 			for (GamepadAdapter tempAdapter : list.getList()) {
 
-				ButtonEvent button = ButtonEvent.getButtonEvent(gamepad.getType(), comp.getIdentifier(),
-						event.getValue());
+				if (event.getValue() < -0.5f || event.getValue() > 0.5f)
+					if (tempAdapter.isPressed(button.getKey()) == false) {
+						pressedButton = button.getKey();
+						tempAdapter.buttonPressed(button);
+					}
 
-				if (event.getValue() < -0.05f || event.getValue() > 0.05f)
-					tempAdapter.buttonPressed(button);
-
-				if (event.getValue() > -0.05f && event.getValue() < 0.05f)
-					tempAdapter.buttonReleased(button);
+				if (event.getValue() > -0.5f && event.getValue() < 0.5f) {
+					if (tempAdapter.isPressed(button.getKey())) {
+						releasedButton = button.getKey();
+						tempAdapter.buttonReleased(button);
+					}
+				}
+				
 			}
+
+			updatePressedButton(pressedButton, releasedButton);
+		}
+	}
+
+	private static void updatePressedButton(int pressedButton, int releasedButton) {
+		GamepadController.pressing.addObject(pressedButton);
+
+		if (pressedButton == ButtonEvent.LEFT || pressedButton == ButtonEvent.RIGHT)
+			GamepadController.pressing.addObject(ButtonEvent.NULL_X);
+		if (pressedButton == ButtonEvent.UP || pressedButton == ButtonEvent.DOWN)
+			GamepadController.pressing.addObject(ButtonEvent.NULL_Y);
+
+		GamepadController.pressing.removeObject(releasedButton);
+
+		if (releasedButton == ButtonEvent.NULL_X) {
+			GamepadController.pressing.removeObject(ButtonEvent.LEFT);
+			GamepadController.pressing.removeObject(ButtonEvent.RIGHT);
+		}
+		if (releasedButton == ButtonEvent.NULL_Y) {
+			GamepadController.pressing.removeObject(ButtonEvent.UP);
+			GamepadController.pressing.removeObject(ButtonEvent.DOWN);
 		}
 	}
 

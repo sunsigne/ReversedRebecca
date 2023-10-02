@@ -8,4 +8,6 @@ public interface GamepadAdapter {
 
 	void buttonReleased(ButtonEvent e);
 	
+	boolean isPressed(int buttonEvent);
+	
 }
