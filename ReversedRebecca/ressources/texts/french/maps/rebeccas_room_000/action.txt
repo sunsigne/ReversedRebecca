@@ -51,7 +51,6 @@ DO_PANCAKES = Key2 % faire#des#crepes
 EAT_COOKIE = Key1 % manger#un#cookie
 DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
-TAKE_KEY = Key3 % prendre#la#clé
 OFFER_A_JUICE = Key3 % proposer#un#jus
 ALL_FOR_ME = Key1 % tout#pour#moi#!
 SHARE = Key2 % partager
@@ -59,8 +58,6 @@ SHARE = Key2 % partager
 ///// ENTRANCE /////
 
 OPEN = Key1 % ouvrir
-SEARCH = Key1 % chercher#par#soi-meme
-THINK = Key2 % réflechir#(solution)
 GO_TO_WORK = Key3 % aller#au#travail
 LEAVE_WITHOUT_SARAH = Key3 % partir#sans#Sarah
 BRING_SARAH = Key1 % faire#venir#Sarah

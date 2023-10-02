@@ -1,5 +1,0 @@
-player = UP = laugh = C'est#qui#?
-sarah = DOWN = happy = C'est#Sarah#!
-player = UP = excited = Sarah#!
-player = UP = happy = Juste#une#seconde,#je#vais#chercher#la#clef#!
-sarah = DOWN = happy = Ok,#j'attends.

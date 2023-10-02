@@ -19,6 +19,8 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- menu pause pendant DigPuzzle -> réaffiche la souris
+		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 		- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?)
 		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
 		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
@@ -59,30 +61,21 @@
 	- faire en sorte que tous les boutons soit valides durant les puzzles
 	- les manettes de xbox sont folles ...
 
-	bug : 
-	- menu pause pendant DigPuzzle -> réaffiche la souris
-	- lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
-	
 	RR000 :
-	- TOUT le monde demande la soluce pour les clefs. Changer en faisant 3 (4?) essaies pour la trouver ?
-	- reppouser de 5 seoncdes l'arrivée de sarah
 	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive
+	- dave ne vient pas si on finit le lvl sans sarah
 			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 	
 	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder
-		
-	Hack puzzle : 
-	- mieux introduire le teminator
-	- mieux introduire le rikikiteur
-	
+
 	- changer "parler" en fonction de la situation
 
 	- les gens prennent Camille pour une vieille + sont confus sur qui est Erika
 	
 	- mieux informer un joueur sur ce qui finit un niveau (Sarah, Mika, la porte, etc)
 
-	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)
+	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)   /   mieux mettre en avant le système de karma ?
 
 	////////// BOSS ////////////
 
@@ -119,7 +112,11 @@
 	
 	
 	////////// FACILE ////////////
-	
+			
+	Hack puzzle : 
+	- mieux introduire le teminator
+	- mieux introduire le rikikiteur
+		
 	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -164,6 +161,8 @@
 	////////// DAVE ////////////
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
+	
+	RR000 -> lorsque le joueur cherhce la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?
 	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
@@ -323,6 +322,9 @@
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	
+	rr000:
+	traduire "jouer quand même" par "play regardless"
 	
 	lvl001 :
 	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
