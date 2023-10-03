@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -170,7 +171,13 @@ public class TextAction implements Updatable {
 		if (facing == DIRECTION.RIGHT)
 			centeredText = DIRECTION.RIGHT;
 
+		Color color = Color.WHITE;
+		
 		String text = action.getDisplayedText();
+		if(text.contains("(END_LVL)")) {
+			text = text.replace("(END_LVL)", "");
+			color = new Color(255, 220, 0);
+		}
 
 		if (ControllerManager.getInstance().isUsingGamepad()) {
 			text = text.concat("   ");
@@ -187,7 +194,7 @@ public class TextAction implements Updatable {
 			}
 		}
 
-		new TextDecoration().drawOutlinesString(g, choice_font, text, centeredText, rect);
+		new TextDecoration().drawOutlinesString(g, choice_font, text, color, Color.BLACK, centeredText, rect);
 	}
 
 	private int getGapBeforeWithinKeyText(String text, DIRECTION facing) {

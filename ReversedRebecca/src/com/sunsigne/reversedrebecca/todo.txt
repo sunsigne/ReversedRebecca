@@ -64,7 +64,7 @@
 	- rr000 remplacer puzzle tuto par puzzle classique (cadena = souris)
 
 	gamepad :
-	- faire en sorte que tous les boutons soit valides durant les puzzles
+	- faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
 
 	RR000 :
@@ -73,13 +73,13 @@
 			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 	
-	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder
+	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder : Needed = requis
 
 	- changer "parler" en fonction de la situation
 
 	- les gens prennent Camille pour une vieille + sont confus sur qui est Erika
 	
-	- mieux informer un joueur sur ce qui finit un niveau (Sarah, Mika, la porte, etc)
+	- informer le joueur sur ce qui finit les niveau (sauf rr000 -> déjà fait)
 
 	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)   /   mieux mettre en avant le système de karma ?
 
