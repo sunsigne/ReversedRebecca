@@ -12,8 +12,11 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -24,6 +27,9 @@ public abstract class Puzzle implements Updatable, TickFree {
 	public Puzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		loadToolData(toolPlayer);
 		this.actionOnWinning = actionOnWinning;
+
+		if (ControllerManager.getInstance().isUsingGamepad())
+			new PresetMousePos(Window.WIDHT / 2, Window.HEIGHT / 2).moveMouse();
 	}
 
 	////////// USEFULL ////////////
@@ -53,7 +59,7 @@ public abstract class Puzzle implements Updatable, TickFree {
 	protected boolean isCritical;
 
 	private void loadToolData(ToolPlayer toolPlayer) {
-		
+
 		isCritical = false;
 		if (toolPlayer != null)
 			isCritical = new RandomGenerator().getBoolean(toolPlayer.getCriticalChance());
@@ -71,7 +77,7 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 		createWallBorder();
 		createPuzzle();
-		
+
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getOpeningSound());
 	}
 

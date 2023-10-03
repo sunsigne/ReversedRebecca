@@ -19,6 +19,8 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
+		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
 		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
@@ -45,6 +47,8 @@
 
 	////////// GAMEPAD ////////////
 
+	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
+
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
 	8h00 - rendre compatible le HackPuzzle
@@ -56,9 +60,10 @@
 
 	////////// EN COURS ////////////
 
+	démo otaku :
+	- rr000 remplacer puzzle tuto par puzzle classique (cadena = souris)
+
 	gamepad :
-	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette
-	- le cursor DES puzzle à centrer (exemple de la bombe)
 	- faire en sorte que tous les boutons soit valides durant les puzzles
 	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
 
