@@ -61,8 +61,8 @@
 	////////// EN COURS ////////////
 
 	démo otaku :
-	- rr000 remplacer puzzle tuto par puzzle classique (cadena = souris)
-	- remettre en place le script de Dave (en incluant la chasse au trésor)
+	- rr000 remplacer "puzzle tuto" par "puzzle cyan" classique (cadena = souris)
+	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
 
 	gamepad :
 	- faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
@@ -74,7 +74,7 @@
 			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 	
-	- les nouveau RquierementBubble -> l'afficher clairement pour RR et pour SAS
+	- les nouveau RquierementBubble -> l'afficher clairement pour SAS
 
 	- changer "parler" en fonction de la situation
 
