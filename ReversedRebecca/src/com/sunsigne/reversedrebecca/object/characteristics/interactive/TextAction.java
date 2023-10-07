@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -29,7 +30,6 @@ public class TextAction implements Updatable {
 		this.interactive = interactive;
 		this.tripleAction = tripleAction;
 
-		build_no_action_font();
 		build_choice_font();
 	}
 
@@ -49,7 +49,6 @@ public class TextAction implements Updatable {
 			return;
 
 		size = TextsOption.getType();
-		build_no_action_font();
 		build_choice_font();
 	}
 
@@ -74,8 +73,8 @@ public class TextAction implements Updatable {
 
 		// no action can be performed
 		if (tripleAction.cannotDoAnyAction()) {
-			if (tripleAction.getNoActionText() != null)
-				drawNoActionText(g, player, tripleAction.getNoActionText());
+			if (tripleAction.getRequirementBubble() != null)
+				drawRequirementBubble(player, tripleAction.getRequirementBubble());
 			return;
 		}
 
@@ -103,47 +102,41 @@ public class TextAction implements Updatable {
 		}
 	}
 
-	///// no action text /////
+	///// requirement bubble /////
 
-	private Font no_action_font;
-
-	private void build_no_action_font() {
-		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
-		no_action_font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
-	}
-
-	private void drawNoActionText(Graphics g, Player player, String text) {
+	private void drawRequirementBubble(Player player, RequirementBubbleObject requirementBubble) {
 		DIRECTION facing = player.getFacing();
 
 		for (DIRECTION tempDirection : DIRECTION.values()) {
 			facing = protrudeFixOnBorder(facing, player, tempDirection, true);
 		}
 
-		int[] rect = getNoActionRect(facing);
-
-		DIRECTION centeredText = DIRECTION.NULL;
+		int[] rect = getRequirementBubbleRect(facing);
 		if (facing == DIRECTION.LEFT)
-			centeredText = DIRECTION.RIGHT;
-		if (facing == DIRECTION.RIGHT)
-			centeredText = DIRECTION.LEFT;
+			rect[0] = rect[0] + rect[2] - requirementBubble.getWidth();
 
-		new TextDecoration().drawOutlinesString(g, no_action_font, text, centeredText, rect);
+		requirementBubble.setX(rect[0]);
+		requirementBubble.setY(rect[1]);
+		requirementBubble.setVisible(true);
 	}
 
-	private int[] getNoActionRect(DIRECTION facing) {
+	private int[] getRequirementBubbleRect(DIRECTION facing) {
 
+		int gap = Size.XS / 2;
+		
 		switch (facing) {
 		case LEFT:
-			return new int[] { interactive.getX() - (Size.M + Size.XS / 2), interactive.getY(), interactive.getWidth(),
+			return new int[] { interactive.getX() - Size.M - gap, interactive.getY() - Size.XS / 2, interactive.getWidth(),
 					interactive.getHeight() };
 		case RIGHT:
-			return new int[] { interactive.getX() + Size.M + Size.XS / 2, interactive.getY(), interactive.getWidth(),
+			return new int[] { interactive.getX() + Size.M + gap, interactive.getY() - Size.XS / 2, interactive.getWidth(),
 					interactive.getHeight() };
 		case UP:
-			return new int[] { interactive.getX(), interactive.getY() - Size.XL / 2, interactive.getWidth(),
+			return new int[] { interactive.getX() - Size.XS / 2, interactive.getY() - Size.L - gap, interactive.getWidth(),
 					interactive.getHeight() };
 		case DOWN:
-			return new int[] { interactive.getX(), interactive.getY() + Size.XL / 2, interactive.getWidth(),
+			return new int[] { interactive.getX()
+					- Size.XS / 2, interactive.getY() + Size.M + gap, interactive.getWidth(),
 					interactive.getHeight() };
 		default:
 			return interactive.getRect();

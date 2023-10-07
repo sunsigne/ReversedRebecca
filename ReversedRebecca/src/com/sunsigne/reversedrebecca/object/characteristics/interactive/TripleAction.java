@@ -1,9 +1,11 @@
 package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
+
 public class TripleAction {
 
-	public TripleAction(String noActionText, Action action1, Action action2, Action action3) {
-		this.noActionText = noActionText;
+	public TripleAction(RequirementBubbleObject requirementBubble, Action action1, Action action2, Action action3) {
+		this.requirementBubble = requirementBubble;
 
 		this.action1 = action1;
 		this.action2 = action2;
@@ -12,10 +14,10 @@ public class TripleAction {
 
 	////////// INTERACTION ////////////
 
-	private String noActionText;
+	private RequirementBubbleObject requirementBubble;
 
-	public String getNoActionText() {
-		return noActionText;
+	public RequirementBubbleObject getRequirementBubble() {
+		return requirementBubble;
 	}
 
 	private Action action1;
@@ -36,13 +38,13 @@ public class TripleAction {
 
 	public TripleAction removeAction(Action action) {
 		if (action == action1)
-			return new TripleAction(noActionText, null, action2, action3);
+			return new TripleAction(requirementBubble, null, action2, action3);
 		if (action == action2)
-			return new TripleAction(noActionText, action1, null, action3);
+			return new TripleAction(requirementBubble, action1, null, action3);
 		if (action == action3)
-			return new TripleAction(noActionText, action1, action2, null);
+			return new TripleAction(requirementBubble, action1, action2, null);
 		
-		return new TripleAction(noActionText, action1, action2, action3);
+		return new TripleAction(requirementBubble, action1, action2, action3);
 	}
 
 	///// no action /////

@@ -41,7 +41,7 @@ public class ActionTwoRequest implements Request {
 		if (ta == null)
 			ta = new TripleAction(null, null, null, null);
 		
-		TripleAction tripleAction = new TripleAction(ta.getNoActionText(), ta.getAction(0), action, ta.getAction(2));
+		TripleAction tripleAction = new TripleAction(ta.getRequirementBubble(), ta.getAction(0), action, ta.getAction(2));
 
 		object.setTripleAction(tripleAction);
 		object.createTextAction();

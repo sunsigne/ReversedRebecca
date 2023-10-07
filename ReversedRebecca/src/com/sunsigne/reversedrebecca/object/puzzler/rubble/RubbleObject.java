@@ -4,11 +4,10 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 
 public class RubbleObject extends PuzzlerObject {
 
@@ -26,12 +25,12 @@ public class RubbleObject extends PuzzlerObject {
 
 	////////// NAME ////////////
 
-	private boolean horizontal;		
+	private boolean horizontal;
 	private COLOR color;
-	
+
 	@Override
 	public String getName() {
-		return "rubble"  + "_" + color.getName() + "_" + Facing.getAxisName(horizontal);
+		return "rubble" + "_" + color.getName() + "_" + Facing.getAxisName(horizontal);
 	}
 
 	////////// INTERACTION ////////////
@@ -44,9 +43,12 @@ public class RubbleObject extends PuzzlerObject {
 	}
 
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("RubbleBlocked", FilePath.ACTION);
-		Action explodeAction = new ExplodeRubbleAction(this);
-		tripleAction = new TripleAction(noActionText, explodeAction, null, null);
+		OpenPuzzleAction explodeAction = new ExplodeRubbleAction(this);
+
+		RequirementBubbleObject requirementExplode = new RequirementBubbleObject(getX(), getY(),
+				explodeAction.getToolPlayer(), getDifficulty());
+
+		tripleAction = new TripleAction(requirementExplode, explodeAction, null, null);
 	}
 
 	////////// RENDER ////////////

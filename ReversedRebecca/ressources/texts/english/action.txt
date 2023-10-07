@@ -1,3 +1,5 @@
+Require = require
+
 ///// STAIRS /////
 
 GoDown = go#down

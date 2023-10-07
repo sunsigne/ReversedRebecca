@@ -17,7 +17,11 @@ import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogu
 public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
 
 	public default void createTextAction() {
+		if (getTripleAction() == null)
+			return;
+		
 		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
+		LAYER.WORLD_TEXT.addObject(getTripleAction().getRequirementBubble());
 	}
 
 	////////// INTERACTIVE ////////////

@@ -1,11 +1,10 @@
 package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 
 public class DoorObject extends PuzzlerObject {
 
@@ -39,9 +38,12 @@ public class DoorObject extends PuzzlerObject {
 
 	@Override
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("DoorLocked", FilePath.ACTION);
-		Action unlockAction = new UnlockAction(this);
-		tripleAction = new TripleAction(noActionText, unlockAction, null, null);
+		OpenPuzzleAction unlockAction = new UnlockAction(this);
+
+		RequirementBubbleObject requirementUnlock = new RequirementBubbleObject(getX(), getY(),
+				unlockAction.getToolPlayer(), getDifficulty());
+
+		tripleAction = new TripleAction(requirementUnlock, unlockAction, null, null);
 	}
 
 }

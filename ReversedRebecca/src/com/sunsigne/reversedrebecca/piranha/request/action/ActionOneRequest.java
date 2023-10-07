@@ -40,8 +40,9 @@ public class ActionOneRequest implements Request {
 		TripleAction ta = object.getTripleAction();
 		if (ta == null)
 			ta = new TripleAction(null, null, null, null);
-		
-		TripleAction tripleAction = new TripleAction(ta.getNoActionText(), action, ta.getAction(1), ta.getAction(2));
+
+		TripleAction tripleAction = new TripleAction(ta.getRequirementBubble(), action, ta.getAction(1),
+				ta.getAction(2));
 
 		object.setTripleAction(tripleAction);
 		object.createTextAction();

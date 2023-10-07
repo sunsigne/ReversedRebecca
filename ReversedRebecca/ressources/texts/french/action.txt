@@ -1,3 +1,5 @@
+Require = requis
+
 ///// STAIRS /////
 
 GoDown = descendre

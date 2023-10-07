@@ -62,6 +62,7 @@
 
 	démo otaku :
 	- rr000 remplacer puzzle tuto par puzzle classique (cadena = souris)
+	- remettre en place le script de Dave (en incluant la chasse au trésor)
 
 	gamepad :
 	- faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
@@ -73,7 +74,7 @@
 			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 	
-	- mieux attier l'attention du joueur sur les COULEURS des puzzleRs, le texte de refus d'action, et donc qu'il comprenne pk il ne peut pas y accéder : Needed = requis
+	- les nouveau RquierementBubble -> l'afficher clairement pour RR et pour SAS
 
 	- changer "parler" en fonction de la situation
 
@@ -138,6 +139,7 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
+	dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur

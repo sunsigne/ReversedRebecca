@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzler.chest;
 
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -13,7 +13,7 @@ public class ChestObject extends PuzzlerObject {
 
 	protected ChestObject(LVL lvl, int num, int x, int y) {
 		super(lvl, x, y);
-		
+
 		if (World.get() != null)
 			lootFile = ("maps/" + World.get().getMapName() + "/" + getName().toUpperCase() + "-0" + num + ".csv");
 	}
@@ -32,7 +32,7 @@ public class ChestObject extends PuzzlerObject {
 	public String getLootFile() {
 		return lootFile;
 	}
-	
+
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;
@@ -44,7 +44,8 @@ public class ChestObject extends PuzzlerObject {
 
 	@Override
 	protected void loadTripleAction() {
-		Action openAction = new OpenAction(this);
+		OpenPuzzleAction openAction = new OpenAction(this);
+
 		tripleAction = new TripleAction(null, openAction, null, null);
 	}
 
