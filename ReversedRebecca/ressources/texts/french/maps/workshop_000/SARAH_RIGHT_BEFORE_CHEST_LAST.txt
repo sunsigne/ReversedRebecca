@@ -1,4 +1,3 @@
-player = object = happy = ...#Il#est#sympa#ton#atelier.
 sarah = player = akward = Tu#me#fais#quoi#?@Tu#ne#va#pas#chercher#ton#cadeau…#?
 player = object = laugh = Si,#si#!#Je#fais#juste#durer#le#plaisir.
 sarah = player = wink = Ha#!#Dans#ce#cas…
