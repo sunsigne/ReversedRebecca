@@ -70,10 +70,9 @@
 
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 
-	- changer "parler" en fonction de la situation
+	- changer "parler" en fonction de la situation (sauf rr000 -> déjà fait)
 	- informer le joueur sur ce qui finit les niveau (sauf rr000 -> déjà fait)
-	
-	
+		
 	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 
 	////////// BOSS ////////////

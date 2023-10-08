@@ -36,6 +36,9 @@ JUST_ONE_GAME = Key1 % juste#une#partie...
 I_AM_WEAK = Key1 % je#suis#faible...
 TAKE_GLASS = Key2 % prendre
 ASK_FOR_KEY = Key3 % où#sont#mes#clés#?
+TALK_ABOUT_CAMILLE = Key1 % parler#de#Camille
+PHILOSOPHIZE = Key1 % philosopher
+LISTEN = Key1 % écouter
 
 ///// LIVING ROOM /////
 
@@ -44,6 +47,11 @@ FACE_REALITY = Key1 % affronter#la#réalité
 WATCH_TV = Key1 % regarder#la#TV
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
+TALK_ABOUT_BOOKS = Key1 % parler#des#livres
+TALK_ABOUT_BOOKS = Key1 % parler#des#livres
+WATCH_SARAH = Key1 % regarder#Sarah
+TALK_ABOUT_ERIKA = Key1 % parler#de#Erika
+OFFER_A_BLANKET = Key1 % proposer#une#couverture
 
 ///// KITCHEN /////
 
