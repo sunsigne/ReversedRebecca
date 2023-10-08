@@ -51,6 +51,7 @@
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
+	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	8h00 - rendre compatible le HackPuzzle
 	8h00 - rendre compatible le DiscoPuzzle
 	4h00 - le DigPuzzle fait des choses bizarre en critical
@@ -63,23 +64,17 @@
 	démo otaku :
 	- rr000 remplacer "puzzle tuto" par "puzzle cyan" classique (cadena = souris)
 	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
-
-	gamepad :
-	- faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
+	- faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle
 	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
 
-	RR000 :
-	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive
-			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 
 	- changer "parler" en fonction de la situation
-
-	- les gens prennent Camille pour une vieille + sont confus sur qui est Erika
-	
+	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive
 	- informer le joueur sur ce qui finit les niveau (sauf rr000 -> déjà fait)
-
-	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)   /   mieux mettre en avant le système de karma ?
+	
+	
+	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 
 	////////// BOSS ////////////
 
