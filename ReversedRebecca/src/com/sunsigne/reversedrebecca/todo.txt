@@ -66,11 +66,11 @@
 	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
 	- faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle
 	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
+	- gérer le système de "dev version" pour quand même avoir les rapport d'erreurs
 
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
 
 	- changer "parler" en fonction de la situation
-	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive
 	- informer le joueur sur ce qui finit les niveau (sauf rr000 -> déjà fait)
 	
 	
