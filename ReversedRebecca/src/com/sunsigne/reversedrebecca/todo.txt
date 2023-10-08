@@ -70,11 +70,8 @@
 
 	RR000 :
 	- les joueurs ont tendence à dire "je suis prête" à Sarah" aussitôt qu'elle arrive
-	- dave ne vient pas si on finit le lvl sans sarah
 			
 	LVL001 : Jean, Joseph (rendre + évident le timer d'une façon ou d'une autre)
-	
-	- les nouveau RquierementBubble -> l'afficher clairement pour SAS
 
 	- changer "parler" en fonction de la situation
 
