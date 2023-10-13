@@ -4,6 +4,7 @@
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
+	désactiver le scénarion 'inquery'
 	reset la sauvegarde pour commencer sur le bon lvl
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
@@ -62,18 +63,12 @@
 	////////// EN COURS ////////////
 
 	démo otaku :
+	- désactiver la vérification chonique gamepad (memory leak)
 	- rr000 remplacer "puzzle tuto" par "puzzle cyan" classique (cadena = souris)
-	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
 	- faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle
 	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
 	- gérer le système de "dev version" pour quand même avoir les rapport d'erreurs
-
-	LVL001 : Jean, Joseph, Marie (rendre + évident leurs timers d'une façon ou d'une autre)
-	- boite à bomb -> faire pop SUR le joueur comme dans RR000
-		
-	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
-
-	- possibilité de repousser le baiser de Mika
+	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
 
 	////////// BOSS ////////////
 
@@ -131,6 +126,8 @@
 	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
+		
+	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 
 	dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
