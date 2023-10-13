@@ -1,2 +1,1 @@
-player = object = happy = Tu#tiens#le#coup#?
 object = player = urge_sad = Bof…

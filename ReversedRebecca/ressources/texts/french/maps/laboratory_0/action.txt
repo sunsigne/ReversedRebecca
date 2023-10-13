@@ -4,15 +4,20 @@ BEING_POLITE = Key1 % j'ai#ouvert#trop#tard
 TELL_THE_TRUTH = Key2 % je#n'avais#pas#envie#d'ouvrir
 FIND_AN_EXIT = Key1 % trouver#une#sortie
 INVASTIGATE_THE_INTRUDER = Key2 % enquêter#sur#l'intrus
+EXIT = Key1 % sortie#?
+EXIT_END = Key1 % (END_LVL)sortie
+CHAT = Key1 % bavarder
 
 ///// DOWN DESKS /////
 
 WATCH = Key1 % regarder
+LOOK_HARDER = Key1 % regarder#mieux
 READ = Key1 % lire
 TALK = Key1 % parler
 TALK_VAR = Key1 % parler
 LISTEN = Key1 % écouter
 CHEAR = Key1 % encourager
+CHEAR_MORE = Key1 % encourager#plus
 TURN_OFF_WITHOUT_SAVING = Key3 % éteindre#sans#sauvegarder
 YES = Key1 % oui
 LIE_NO = Key2 % (mentir)#non
@@ -20,6 +25,20 @@ SOUNDS_FUN = Key1 % ça#a#l'air#amusant
 THATS_NOT_COOL = Key2 % c'est#pas#cool
 THEFT = Key2 % Vol#?
 ALICIA = Key3 % Alicia#?
+WHAT_ARE_YOU_FIDGETING = Key1 % pourquoi#tu#gigotes#?
+STOP_MOVING = Key1 % arrête#de#bouger
+STILL_HOLDING_IT = Key1 % tu#tiens#le#coup#?
+ANYTHING_CHANGED = Key1 % et#là#?
+AND_NOW = Key1 % et#maintenant#?
+MAKE_A_SUGGESTION = Key1 % faire#une#suggestion
+DOING_ALRIGHT = Key1 % ça#va#aller#?
+OFFER_TO_HELP = Key1 % proposer#de#l'aide
+INSIST = Key1 % insister
+YOUR_BROTHER = Key1 % ton#frère#?
+WAS_IT_HIM_TODAY = Key1 % ...#c'était#lui#aujourd'hui#?
+KEEP_CHATTING = Key1 % contiuer#à#bavarder
+ASK_DIRECTIONS = Key1 % demander#son#chemin
+ONE_MORE_THING = Key1 % une#dernière#chose...
 
 ///// ALICIA ROOM /////
 
@@ -54,6 +73,12 @@ YES = Key1% oui
 NO = Key2% non
 APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne#rien#dire
+LOCKED_UP = Key1 % enfermée#?
+WHAT_DID_YOU_ASK = Key1 % tu#as#dit#quoi#?
+LISTEN_TO_RAMBLING = Key1 % écouter#les#divagations
+WATCH_MARIE = Key1 % regarder#Marie
+KEEP_WATCHING_MARIE = Key1 % continuer#à#regarder#Marie
+ASK_FOR_BOMBS = Key1 % demander#des#bombes
 
 ///// RIGHT AREA /////
 
@@ -61,5 +86,8 @@ EXPLODE = Key1 % exploser
 NO_I_CONTINUE = Key1 % non,#je#continue
 OK_I_STOP = Key2 % ok,#j'arrête
 COME_BACK = Key1 % revenir
-ABADON_EVERYONE = Key3 % abandonner#tout#le#monde
+ABADON_EVERYONE = Key3 % (END_LVL)abandonner#tout#le#monde
 ASK_FOR_OPENING = Key2 % demander#à#ouvrir
+ASK_FOR_OPENING_END = Key2 % (END_LVL)demander#à#ouvrir
+OPEN = Key1 % ouvrir
+OPEN_END = Key1 % (END_LVL)ouvrir

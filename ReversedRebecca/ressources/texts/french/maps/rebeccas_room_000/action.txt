@@ -48,7 +48,6 @@ WATCH_TV = Key1 % regarder#la#TV
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
 TALK_ABOUT_BOOKS = Key1 % parler#des#livres
-TALK_ABOUT_BOOKS = Key1 % parler#des#livres
 WATCH_SARAH = Key1 % regarder#Sarah
 TALK_ABOUT_ERIKA = Key1 % parler#de#Erika
 OFFER_A_BLANKET = Key1 % proposer#une#couverture
