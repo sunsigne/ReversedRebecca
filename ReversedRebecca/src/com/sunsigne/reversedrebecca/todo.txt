@@ -4,9 +4,11 @@
 	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
+	désactiver le scénarion 'inquery'
 	reset la sauvegarde pour commencer sur le bon lvl
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
+	retirer dans GamepadUpdate le gamepad detection
 
 	////////// GEEKALI ////////////
 
@@ -16,14 +18,24 @@
 	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
 
 	////////// BUG ////////////
-	
+
 	pas réglé :
+		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
+		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
+		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
+		- menu pause pendant DigPuzzle -> réaffiche la souris
+		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
+		- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?)
+		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
+		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 		- menu languages 4 langues se sont affiché au lieu de 2
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
 	vérifier si bien réglé :
+		- RR000 il m'a semblait en changeant de langue (en étant en FR du coup) que le niveau n'était pas à jour. A vérifier, j'ai peut-être confondu avec le jeu qui était en anglais mais qui avait des textes FR (ce qui est normal, puisque lma traduction n'était pas terminé lorsque s'est arrivé)
+		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 	
@@ -36,21 +48,27 @@
 
 	////////// GAMEPAD ////////////
 
-	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette, il est possible que la souris a un affichage inversé
+	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
+
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
+	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	8h00 - rendre compatible le HackPuzzle
 	8h00 - rendre compatible le DiscoPuzzle
 	4h00 - le DigPuzzle fait des choses bizarre en critical
+	20h - corriger la latence provoqué par le système de detection de la manette (merory leak ?)
+	8h00 - le spam fonctionne d'un piranha à un autre, mais pas avec les pnj ou les puzzlers
+	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
 
-	pour la démo :
-	dave001 & lvl001 :
-		- passer d'un texte qui dit "tu as le choix entre deux options" à une seule option et c'est tout (ça fait moins cheap)
-		- rr000 - la fin psycopath fait planter le jeu	
-		- lvl001 - préciser par un dialogue de dave que les cas "sadique, angélique et psycopath" ne sont pas gérés	
-	geekali :
-		- vérifier les réglages de cet event, et les appliquer à la nouvelle démo (si besoin)
+	démo otaku :
+	- désactiver la vérification chonique gamepad (memory leak)
+	- rr000 remplacer "puzzle tuto" par "puzzle cyan" classique (cadena = souris)
+	- faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle
+	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
+	- gérer le système de "dev version" pour quand même avoir les rapport d'erreurs
+	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
 
 	////////// BOSS ////////////
 
@@ -87,7 +105,13 @@
 	
 	
 	////////// FACILE ////////////
-	
+			
+	Hack puzzle : 
+	- mieux introduire le teminator
+	- mieux introduire le rikikiteur
+		
+	1h00 - créer des flammes violettes pour le DiscoPuzzle
+	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?		
 	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -102,7 +126,10 @@
 	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lors de Vladimir (facultatif) :
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
+		
+	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 
+	dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
@@ -133,6 +160,8 @@
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	
+	RR000 -> lorsque le joueur cherhce la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?
+	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	faire en sorte qu'un niveau Dave ne puisse pas être rechargé (si on le zap, on est tp au niveau suivant) ... pb, c'est chiant vis-à-vis des speedrun
@@ -159,6 +188,7 @@
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	
 	scénarion : inquery
+	- les TALK et TALK_VAR n'ont pas encore été remplacés
 	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
 	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery
 	- Alicia + Dave : créer le TA du vol
@@ -223,6 +253,7 @@
 	
 	////////// MOLE 0 ////////////
 	
+	boite en carton -> faire pop SUR le joueur comme dans RR000 (+ vérifier si soflock possible - car Out Of Range)	
 	faire le plein -> donner une bombe est-il vraiment nécessaire ?? voir si c'est mieux de s'en passer sinon (pour le blink dans l'affichage HUD)
 	mieux dessiner le lit en paille ?
 	le dialogue du début pourrait être un genre de "c'est un labyrinthe, il va falloir que je me débrouille comme je peux"
@@ -292,6 +323,9 @@
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
+	rr000:
+	traduire "jouer quand même" par "play regardless"
+
 	lvl001 :
 	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
 	traduire "quel taré" par "what a freak"

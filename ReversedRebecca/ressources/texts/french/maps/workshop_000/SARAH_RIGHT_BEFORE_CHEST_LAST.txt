@@ -1,7 +1,6 @@
-player = object = happy = ...#Il#est#sympa#ton#atelier.
 sarah = player = akward = Tu#me#fais#quoi#?@Tu#ne#va#pas#chercher#ton#cadeau…#?
 player = object = laugh = Si,#si#!#Je#fais#juste#durer#le#plaisir.
 sarah = player = wink = Ha#!#Dans#ce#cas…
-sarah = player = pervert = Faisons#durer#ça#des#heures.@Tu#y#prendras#beaucoup#de#plaisir.
+sarah = player = pervert = Faisons#durer#ça#des#heures.@Tu#y#prendras…#beaucoup#de#plaisir.
 player = object = blush_var = Sarah#!!!@Ça#va#pas#de#dire#des#choses#comme#ça#?
 sarah = player = laugh = Ha#ha#!#Pardon,#mais#tu#verrais#ta#tête.@Allez,#va#chercher#ton#cadeau.

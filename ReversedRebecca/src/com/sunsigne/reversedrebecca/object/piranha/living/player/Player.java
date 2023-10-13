@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 
 public class Player extends LivingObject {
 
@@ -177,21 +176,14 @@ public class Player extends LivingObject {
 	public void keyReleased(KeyEvent e) {
 		UserKeyMovePlayer.getInstance().directionKey(this, e.getKeyCode(), -1, false);
 	}
-	
+
 	////////// GAMEPAD ////////////
-	
-	private GamepadController gamepadController = new GamepadController(this);
-	
-	@Override
-	public GamepadController getGamepadController() {
-		return gamepadController;
-	}
-	
+
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		UserKeyMovePlayer.getInstance().directionKey(this, 65535, e.getKey(), true);
 	}
-	
+
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 		UserKeyMovePlayer.getInstance().directionKey(this, 65535, e.getKey(), false);

@@ -36,6 +36,9 @@ JUST_ONE_GAME = Key1 % juste#une#partie...
 I_AM_WEAK = Key1 % je#suis#faible...
 TAKE_GLASS = Key2 % prendre
 ASK_FOR_KEY = Key3 % où#sont#mes#clés#?
+TALK_ABOUT_CAMILLE = Key1 % parler#de#Camille
+PHILOSOPHIZE = Key1 % philosopher
+LISTEN = Key1 % écouter
 
 ///// LIVING ROOM /////
 
@@ -44,6 +47,10 @@ FACE_REALITY = Key1 % affronter#la#réalité
 WATCH_TV = Key1 % regarder#la#TV
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
+TALK_ABOUT_BOOKS = Key1 % parler#des#livres
+WATCH_SARAH = Key1 % regarder#Sarah
+TALK_ABOUT_ERIKA = Key1 % parler#de#Erika
+OFFER_A_BLANKET = Key1 % proposer#une#couverture
 
 ///// KITCHEN /////
 
@@ -51,7 +58,6 @@ DO_PANCAKES = Key2 % faire#des#crepes
 EAT_COOKIE = Key1 % manger#un#cookie
 DRINK_JUICE = Key2 % boire#du#jus
 WAIT_WHAT = Key3 % Hein#?!
-TAKE_KEY = Key3 % prendre#la#clé
 OFFER_A_JUICE = Key3 % proposer#un#jus
 ALL_FOR_ME = Key1 % tout#pour#moi#!
 SHARE = Key2 % partager
@@ -59,10 +65,8 @@ SHARE = Key2 % partager
 ///// ENTRANCE /////
 
 OPEN = Key1 % ouvrir
-SEARCH = Key1 % chercher#par#soi-meme
-THINK = Key2 % réflechir#(solution)
-GO_TO_WORK = Key3 % aller#au#travail
-LEAVE_WITHOUT_SARAH = Key3 % partir#sans#Sarah
+GO_TO_WORK = Key3 % (END_LVL)aller#au#travail
+LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)partir#sans#Sarah
 BRING_SARAH = Key1 % faire#venir#Sarah
 JUST_A_MOMENT = Key1 % juste#une#seconde...
 WHOS_THERE = Key2 % c'est#qui#?
@@ -79,7 +83,8 @@ MAKE_SOME = Key1 % je#vais#t'en#faire
 WERE_TASTY = Key2 % elles#étaient#bonnes
 WE_SHARE = Key1 % on#partage
 YES_I_KNOW = Key2 % oui#je#sais
-I_AM_READY = Key3 % je#suis#prête
+I_AM_READY_TOWEL = Key3 % je#suis#prête
+I_AM_READY = Key3 % (END_LVL)je#suis#prête
 APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne#rien#dire
 TALK_VAR = Key1 % parler

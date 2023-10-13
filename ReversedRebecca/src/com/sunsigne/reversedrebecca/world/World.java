@@ -65,8 +65,14 @@ public class World implements Updatable, RenderFree {
 		initParameters(mapName);
 		createMap();
 		updateLayer();
+		
 		addSetup();
+		if(instance != this)
+			return;
 		new Save().loadSave();
+		if(instance != this)
+			return;
+		
 		addHUD();
 		addControllers();
 		start();
@@ -147,7 +153,7 @@ public class World implements Updatable, RenderFree {
 
 	private void addHUD() {
 		new CharacteristicList().reset();
-		
+
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			LAYER.HUD.getHandler().getList().add(0, tempHUD);
 		}
@@ -164,7 +170,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void start() {
+		boolean frozen = isFrozen();
+		freeze(true);
 		getLayer(false).addObject(this);
+		freeze(false, !frozen);
 		Game.getInstance().forceLoop();
 	}
 
@@ -289,6 +298,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	public void freeze(boolean freeze) {
+		freeze(freeze, !freeze);
+	}
+	
+	public void freeze(boolean freeze, boolean playerCanInterract) {
 		this.freeze = freeze;
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -296,22 +309,24 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		new PlayerFinder().setPlayerCanInterract(!freeze);
+		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
 
-		if (freeze) // remove fading menu if froze before completed
+		boolean flag = false;
+		if (flag && freeze) // when active, remove fading menu if froze before completed
 			((FadeMenuLaw) PhysicList.getList().getObject(new FadeMenuLaw())).setFading(false);
 	}
 
 	public void destroy() {
+		freeze(true);
 		new Cutscene().stop(false);
 		closePuzzle();
 		resetLayers();
-		freeze(false);
 		instance = null;
 		MemorySet.getSet().clear();
 		SaveList.getList().clear();
 		SaveEraserList.getList().clear();
 		Game.getInstance().forceLoop();
+		freeze(false);
 	}
 
 	private void closePuzzle() {

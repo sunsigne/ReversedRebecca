@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionAnalyzer;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -43,12 +44,12 @@ public class TripleActionRequest implements Request {
 		String actionInstruction2 = targets.length > 1 ? targets[1] : null;
 		String actionInstruction3 = targets.length > 2 ? targets[2] : null;
 
-		String noActionText = null;
+		RequirementBubbleObject requirementBubble = null;
 		Action action1 = new ActionAnalyzer().getAction(object, actionInstruction1);
 		Action action2 = new ActionAnalyzer().getAction(object, actionInstruction2);
 		Action action3 = new ActionAnalyzer().getAction(object, actionInstruction3);
 
-		TripleAction tripleAction = new TripleAction(noActionText, action1, action2, action3);
+		TripleAction tripleAction = new TripleAction(requirementBubble, action1, action2, action3);
 
 		object.setTripleAction(tripleAction);
 		object.createTextAction();

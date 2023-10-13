@@ -1,7 +1,7 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -19,24 +19,6 @@ public class GamepadUpdate implements Runnable {
 	public GamepadUpdate() {
 		env = ControllerEnvironment.getDefaultEnvironment();
 		clazz = env.getClass();
-		loadedPluginNames = buildLoadedPluginNames();
-	}
-
-	private Collection<String> loadedPluginNames;
-
-	@SuppressWarnings("unchecked")
-	private Collection<String> buildLoadedPluginNames() {
-		Field field = null;
-
-		try {
-			field = clazz.getDeclaredField("loadedPluginNames");
-			field.setAccessible(true);
-			loadedPluginNames = (Collection<String>) field.get(env);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return loadedPluginNames;
 	}
 
 	////////// GAMEPAD ////////////
@@ -78,13 +60,16 @@ public class GamepadUpdate implements Runnable {
 		GamepadManager.currentControllers = null;
 		Field field = null;
 
-		// System.out.println("Scanning USB ports (for Gamepad detection)");
+		// System.err.println("Scanning USB ports (for Gamepad detection)");
 
 		try {
+			field = clazz.getDeclaredField("loadedPluginNames");
+			field.setAccessible(true);
+			field.set(env, new ArrayList<>());
+
 			field = clazz.getDeclaredField("controllers");
 			field.setAccessible(true);
 			field.set(env, null);
-			loadedPluginNames.clear();
 
 		} catch (Exception e) {
 			e.printStackTrace();

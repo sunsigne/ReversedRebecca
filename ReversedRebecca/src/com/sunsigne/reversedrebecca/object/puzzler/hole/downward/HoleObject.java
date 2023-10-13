@@ -1,12 +1,11 @@
 package com.sunsigne.reversedrebecca.object.puzzler.hole.downward;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.DigAction;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -24,21 +23,21 @@ public class HoleObject extends PuzzlerObject implements Facing {
 
 	public LAYER getExitLayer(Handler currentHandler) {
 		LAYER exit_layer = LAYER.WORLD_CONTENT;
-		
+
 		for (LAYER tempLayer : LAYER.values()) {
-			if(tempLayer.getName().contains("content") == false)
+			if (tempLayer.getName().contains("content") == false)
 				continue;
-			
+
 			if (currentHandler != tempLayer.getHandler())
 				exit_layer = tempLayer;
 
 			else
 				break;
 		}
-		
+
 		return exit_layer;
 	}
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -69,9 +68,12 @@ public class HoleObject extends PuzzlerObject implements Facing {
 
 	@Override
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("HoleLoose", FilePath.ACTION);
-		Action digAction = new DigAction(this);
-		tripleAction = new TripleAction(noActionText, digAction, null, null);
+		OpenPuzzleAction digAction = new DigAction(this);
+
+		RequirementBubbleObject requirementDig = new RequirementBubbleObject(getX(), getY(), digAction.getToolPlayer(),
+				getDifficulty());
+
+		tripleAction = new TripleAction(requirementDig, digAction, null, null);
 	}
 
 	////////// COLLISION ////////////

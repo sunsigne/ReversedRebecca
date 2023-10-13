@@ -1,10 +1,9 @@
 package com.sunsigne.reversedrebecca.object.puzzler.computer;
 
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 
 public class ComputerObject extends PuzzlerObject {
 
@@ -33,9 +32,12 @@ public class ComputerObject extends PuzzlerObject {
 	}
 
 	protected void loadTripleAction() {
-		String noActionText = new Translatable().getTranslatedText("ComputerProtected", FilePath.ACTION);
-		Action hackingAction = new HackingAction(this);
-		tripleAction = new TripleAction(noActionText, hackingAction, null, null);
+		OpenPuzzleAction hackingAction = new HackingAction(this);
+
+		RequirementBubbleObject requirementHacking = new RequirementBubbleObject(getX(), getY(),
+				hackingAction.getToolPlayer(), getDifficulty());
+
+		tripleAction = new TripleAction(requirementHacking, hackingAction, null, null);
 	}
 
 }

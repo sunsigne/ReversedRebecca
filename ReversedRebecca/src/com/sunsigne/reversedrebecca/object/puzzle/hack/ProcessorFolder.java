@@ -174,7 +174,8 @@ public class ProcessorFolder extends ProcessorObject {
 		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof AntivirusShrinker)
 				handler.softRemoveObject(tempUpdatable);
-			handler.removeObject(tempUpdatable);
+			else
+				handler.removeObject(tempUpdatable);
 		}
 	}
 
@@ -203,7 +204,7 @@ public class ProcessorFolder extends ProcessorObject {
 		}
 
 		for (ProcessorObject tempTerminator : list.getList()) {
-			if(tempTerminator instanceof AntivirusTerminator)
+			if (tempTerminator instanceof AntivirusTerminator)
 				((AntivirusTerminator) tempTerminator).virusJustArrived();
 			LAYER.PUZZLE.addObject(tempTerminator);
 		}
