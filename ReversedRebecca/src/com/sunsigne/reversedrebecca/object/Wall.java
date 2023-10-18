@@ -23,7 +23,7 @@ public class Wall extends GameObject implements TickFree, RenderFree, CollisionR
 	////////// COLOR ////////////
 
 	public enum COLOR {
-		BROWN("brown"), BLUE("blue"), GREEN("green"), WHITE("white");
+		BROWN("brown"), BROWN_SUGAR("brown_sugar"), BLUE("blue"), GREEN("green"), WHITE("white");
 
 		private String name;
 
