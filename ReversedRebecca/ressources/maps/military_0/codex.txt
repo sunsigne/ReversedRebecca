@@ -1,0 +1,4 @@
+///// WORLD /////
+
+NPC-01 = Nothing
+OBJ-01 = Nothing
