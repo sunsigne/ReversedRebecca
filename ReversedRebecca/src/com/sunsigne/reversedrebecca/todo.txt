@@ -49,6 +49,10 @@
 	////////// GAMEPAD ////////////
 
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
+	puzzle cadenas PAS intuitif
+	memory leak du à la vérification chonique gamepad
+	faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle ?
+	le spam est tj complètement bugué ! trop de faux positif : typiquement, les textes sont souvent passés sans l'accord du joueur
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
@@ -62,13 +66,27 @@
 
 	////////// EN COURS ////////////
 
-	démo otaku :
-	- désactiver la vérification chonique gamepad (memory leak)
-	- rr000 remplacer "puzzle tuto" par "puzzle cyan" classique (cadena = souris)
-	- faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle
-	- le spam est tj complètement bugué ! à désactiver (ou à vérifier qu'il le soit déjà)
-	- gérer le système de "dev version" pour quand même avoir les rapport d'erreurs
-	- remettre en place le script de Dave (en incluant la chasse au trésor ?)
+	puzzle : sentiment "d'aimantation" du virus/cadenas sur les bords, forcer la souris à rester dans le cadre ? (attention à éviter le 'parasitage')
+	optimiser le MapCreator vis à vis des puzzler
+
+	LVL001 :
+	Marie devrait aller voir Sarah dès le 1er dialogues ?
+	Stock, il faut un indice pour inciter le jouer à rester + longtemps avec Marie
+	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
+	Jean : on le perd trop facilement de vue après le poussage ! le suive plus vite ? raccourci la cutscene ? pousser vers le haut ?
+	
+	RR000 :
+	bug si on a pas la clef au 3ème coup (un joueur a fait un truc bizarre où il devait de nouveau la chercher, car il a pu interagir avec la porte ... piste : sarah est arrivée entre le moment où la clef a spawn et avant que le joueur ne la ramasse ?)
+	la clef dans la commode (livre) n'est pas sur le joueur
+	
+	les objets interactifs ne sont pas intuitif. ex : passer à côté de la lettre de Fred & George donne l'impression qu'on peut faire un truc avec l'ordi
+	IMPORTANT TEXT n'attire pas assez le regard : faire clignotter ?
+	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
+	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
+	
+	gamepad :
+	- lire les rapport d'erreur (pb bouton A) - piste : spammable ? bouton power ?
+	- à corriger les pb les + grave dans la catégorie "gamepad" !
 
 	////////// BOSS ////////////
 
@@ -281,6 +299,8 @@
 
 	///////// IDEE ////////////
 
+	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
+
 	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
 	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"
 	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
@@ -296,7 +316,6 @@
 	
 	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) -> le twist de la dernière input (sauvegarder, quitter, recharger)
-	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 

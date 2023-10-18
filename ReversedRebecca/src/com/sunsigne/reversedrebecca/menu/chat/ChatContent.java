@@ -169,7 +169,8 @@ public class ChatContent implements Updatable {
 			return;
 		}
 
-		new SoundTask().playSound(SOUNDTYPE.VOICE, living_name);
+		String voice = living_name.contains("_") ? living_name.split("_")[0] : living_name;
+		new SoundTask().playSound(SOUNDTYPE.VOICE, voice);
 		talkingSoundPause = true;
 	}
 
