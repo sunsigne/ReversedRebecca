@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.piranha.RockPiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -11,6 +12,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
+import com.sunsigne.reversedrebecca.world.mapcreator.mappable.MappableComplexe;
 
 public class MapCreator {
 
@@ -70,21 +72,32 @@ public class MapCreator {
 				int x0 = xx * Size.M / STEP;
 				int y0 = yy * Size.M / STEP;
 
-				for (Mappable tempMappable : mappable_list.getList()) {
-
-					int tempRed = tempMappable.getRedCode();
-					int tempGreen = tempMappable.getGreenCode();
-					int tempBlue = tempMappable.getBlueCode();
-
-					if (red == tempRed && green == tempGreen && blue == tempBlue) {
-						GameObject obj = tempMappable.createObject(x0, y0);
-						layer.addObject(obj);
-					}
-				}
+				GameObject object = determinateCreation(red, green, blue, x0, y0);
+				layer.addObject(object);
 
 				loadRocks(layer, red, green, blue, x0, y0);
 			}
 		}
+	}
+
+	public GameObject determinateCreation(int red, int green, int blue, int x, int y) {
+		for (Mappable tempMappable : mappable_list.getList()) {
+
+			int tempRed = tempMappable.getRedCode();
+			int tempGreen = tempMappable.getGreenCode();
+			int tempBlue = tempMappable.getBlueCode();
+
+			if (red == tempRed && green == tempGreen && blue == tempBlue)
+				return tempMappable.createObject(x, y);
+
+			if (tempMappable instanceof MappableComplexe) {
+				MappableComplexe tempComplexe = (MappableComplexe) tempMappable;
+				if (tempComplexe.isValidRGB(red, green, blue))
+					return tempComplexe.createObject(red, green, blue, x, y);
+			}
+		}
+
+		return null;
 	}
 
 	private static BufferedImage rescaleImage(BufferedImage image) {
@@ -105,6 +118,22 @@ public class MapCreator {
 		g2d.dispose();
 
 		return img;
+	}
+
+	private void loadPuzzler(LAYER layer, int red, int green, int blue, int x, int y) {
+		boolean valid_red = 5 <= red; // total numbre of puzzlers
+		boolean valid_green = 260 - COLOR.values().length * 10 <= green;
+		boolean valid_blue = 10 <= blue;
+
+		if (valid_red && valid_green && valid_blue) {
+
+			int x0 = red - 128;
+			int y0 = green - 128;
+			int type = 255 - blue;
+
+			var rock = new RockPiranhaObject(x, y, x0, y0, type);
+			layer.addObject(rock);
+		}
 	}
 
 	private void loadRocks(LAYER layer, int red, int green, int blue, int x, int y) {

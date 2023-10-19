@@ -9,7 +9,6 @@ import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
-import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
 public class CreateRequest implements IndexRequest {
 
@@ -69,22 +68,11 @@ public class CreateRequest implements IndexRequest {
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {
-
 		int red = Integer.parseInt(type.split("-")[0]);
 		int green = Integer.parseInt(type.split("-")[1]);
 		int blue = Integer.parseInt(type.split("-")[2]);
 
-		for (Mappable tempMappable : new MapCreator().getList().getList()) {
-
-			int tempRed = tempMappable.getRedCode();
-			int tempGreen = tempMappable.getGreenCode();
-			int tempBlue = tempMappable.getBlueCode();
-
-			if (red == tempRed && green == tempGreen && blue == tempBlue) {
-				return tempMappable.createObject(x, y);
-			}
-		}
-		return null;
+		return new MapCreator().determinateCreation(red, green, blue, x, y);
 	}
 
 }
