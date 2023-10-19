@@ -74,8 +74,6 @@ public class MapCreator {
 
 				GameObject object = determinateCreation(red, green, blue, x0, y0);
 				layer.addObject(object);
-
-				loadRocks(layer, red, green, blue, x0, y0);
 			}
 		}
 	}
@@ -124,22 +122,6 @@ public class MapCreator {
 		boolean valid_red = 5 <= red; // total numbre of puzzlers
 		boolean valid_green = 260 - COLOR.values().length * 10 <= green;
 		boolean valid_blue = 10 <= blue;
-
-		if (valid_red && valid_green && valid_blue) {
-
-			int x0 = red - 128;
-			int y0 = green - 128;
-			int type = 255 - blue;
-
-			var rock = new RockPiranhaObject(x, y, x0, y0, type);
-			layer.addObject(rock);
-		}
-	}
-
-	private void loadRocks(LAYER layer, int red, int green, int blue, int x, int y) {
-		boolean valid_red = 120 <= red && red <= 136;
-		boolean valid_green = 120 <= green && green <= 136;
-		boolean valid_blue = 241 <= blue;
 
 		if (valid_red && valid_green && valid_blue) {
 

@@ -35,7 +35,7 @@ public class MappableInteractive implements MappableComplexe {
 
 	@Override
 	public int[] rgbCode() {
-		// red = 0 to 100
+		// red = 1 to 100
 		int[] rgb = { -1, 255, 255 };
 		return rgb;
 	}
