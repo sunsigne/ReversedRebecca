@@ -4,8 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
-import com.sunsigne.reversedrebecca.object.piranha.RockPiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -116,22 +114,6 @@ public class MapCreator {
 		g2d.dispose();
 
 		return img;
-	}
-
-	private void loadPuzzler(LAYER layer, int red, int green, int blue, int x, int y) {
-		boolean valid_red = 5 <= red; // total numbre of puzzlers
-		boolean valid_green = 260 - COLOR.values().length * 10 <= green;
-		boolean valid_blue = 10 <= blue;
-
-		if (valid_red && valid_green && valid_blue) {
-
-			int x0 = red - 128;
-			int y0 = green - 128;
-			int type = 255 - blue;
-
-			var rock = new RockPiranhaObject(x, y, x0, y0, type);
-			layer.addObject(rock);
-		}
 	}
 
 }

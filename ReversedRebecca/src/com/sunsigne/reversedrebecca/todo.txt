@@ -67,7 +67,6 @@
 	////////// EN COURS ////////////
 
 	puzzle : sentiment "d'aimantation" du virus/cadenas sur les bords, forcer la souris à rester dans le cadre ? (attention à éviter le 'parasitage')
-	optimiser le MapCreator vis à vis des puzzler
 
 	LVL001 :
 	Marie devrait aller voir Sarah dès le 1er dialogues ?
