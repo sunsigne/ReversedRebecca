@@ -37,7 +37,11 @@ public class MappableRubble implements MappablePuzzler {
 		else
 			return new RubbleObject(difficulty, color, horizontal, x, y);
 	}
-
+	
+	public static int getRed() {
+		return mappable.getRedCode();
+	}
+	
 	@Override
 	public int[] rgbCode() {
 		// green = 255 to X

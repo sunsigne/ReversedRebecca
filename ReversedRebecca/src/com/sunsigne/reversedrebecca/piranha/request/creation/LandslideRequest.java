@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
+import com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.MappableRubble;
 
 public class LandslideRequest implements IndexRequest {
 
@@ -93,7 +94,7 @@ public class LandslideRequest implements IndexRequest {
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {
-		int red = 2; // code for mappable RubbleObjet
+		int red = MappableRubble.getRed();
 		int green = Integer.parseInt(type.split("-")[0]);
 		int blue = Integer.parseInt(type.split("-")[1]);
 
