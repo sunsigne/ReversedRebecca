@@ -134,15 +134,16 @@ public class GamepadManager {
 						tempAdapter.buttonReleased(button);
 					}
 				}
-				
+
 			}
 
-			updatePressedButton(pressedButton, releasedButton);
+			updatePressedButton(pressedButton);
+			updateReleasedButton(releasedButton);
 		}
 	}
 
-	private static void updatePressedButton(int pressedButton, int releasedButton) {
-		if (pressedButton == ButtonEvent.ERROR || releasedButton == ButtonEvent.ERROR)
+	private static void updatePressedButton(int pressedButton) {
+		if (pressedButton == ButtonEvent.ERROR)
 			return;
 
 		GamepadController.pressing.addObject(pressedButton);
@@ -151,16 +152,23 @@ public class GamepadManager {
 			GamepadController.pressing.addObject(ButtonEvent.NULL_X);
 		if (pressedButton == ButtonEvent.UP || pressedButton == ButtonEvent.DOWN)
 			GamepadController.pressing.addObject(ButtonEvent.NULL_Y);
+	}
 
-		GamepadController.pressing.removeObject(releasedButton);
+	private static void updateReleasedButton(int releasedButton) {
+		if (releasedButton == ButtonEvent.ERROR)
+			return;
+
+		// casting an Integer object so as not to confuse Java as calling function
+		// "remove(int index)" instead of "remove(Object o)"
+		GamepadController.pressing.removeObject(Integer.valueOf(releasedButton));
 
 		if (releasedButton == ButtonEvent.NULL_X) {
-			GamepadController.pressing.removeObject(ButtonEvent.LEFT);
-			GamepadController.pressing.removeObject(ButtonEvent.RIGHT);
+			GamepadController.pressing.removeObject(Integer.valueOf(ButtonEvent.LEFT));
+			GamepadController.pressing.removeObject(Integer.valueOf(ButtonEvent.RIGHT));
 		}
 		if (releasedButton == ButtonEvent.NULL_Y) {
-			GamepadController.pressing.removeObject(ButtonEvent.UP);
-			GamepadController.pressing.removeObject(ButtonEvent.DOWN);
+			GamepadController.pressing.removeObject(Integer.valueOf(ButtonEvent.UP));
+			GamepadController.pressing.removeObject(Integer.valueOf(ButtonEvent.DOWN));
 		}
 	}
 

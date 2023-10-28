@@ -52,7 +52,7 @@
 	puzzle cadenas PAS intuitif
 	memory leak du à la vérification chonique gamepad
 	faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle ?
-	le spam est tj complètement bugué ! trop de faux positif : typiquement, les textes sont souvent passés sans l'accord du joueur
+	les spammables ont des défaut (tester la chaise de RR000 pour comprendre
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
@@ -75,6 +75,9 @@
 	RR000 :
 	bug si on a pas la clef au 3ème coup (un joueur a fait un truc bizarre où il devait de nouveau la chercher, car il a pu interagir avec la porte ... piste : sarah est arrivée entre le moment où la clef a spawn et avant que le joueur ne la ramasse ?)
 	la clef dans la commode (livre) n'est pas sur le joueur
+	
+	RR001 :
+	sarah n'apparrait pas sur le canapé en psycopath
 	
 	les objets interactifs ne sont pas intuitif. ex : passer à côté de la lettre de Fred & George donne l'impression qu'on peut faire un truc avec l'ordi
 	IMPORTANT TEXT n'attire pas assez le regard : faire clignotter ?
