@@ -91,6 +91,10 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 		int mouseX = new MousePos().get()[0] - getWidth() / 2;
 		int mouseY = new MousePos().get()[1] - getHeight() / 2;
 
+		int w = getWidth() / 2;
+		int h = getHeight() / 2;
+		keepMouseWithinZone(mouseX + w, mouseY + h, xmin + w, xmax + w, ymin + h, ymax + h);
+		
 		if (isReversed()) {
 			mouseX = xmax + xmin - mouseX;
 			mouseY = ymax + ymin - mouseY;

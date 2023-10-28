@@ -55,6 +55,7 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 
 		followMouse(mouseX, mouseY);
 		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
+		keepMouseWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
 	}
 
 	////////// TEXTURE ////////////
