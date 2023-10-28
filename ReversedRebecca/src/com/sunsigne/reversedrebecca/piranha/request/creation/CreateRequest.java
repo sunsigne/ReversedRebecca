@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 
@@ -42,8 +41,8 @@ public class CreateRequest implements IndexRequest {
 
 		String pos = String.valueOf(target.split(":")[0]);
 		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
-		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
-		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+		int x = onTheSpot ? object.getX() : Integer.parseInt(pos.split("-")[0]);
+		int y = onTheSpot ? object.getY() : Integer.parseInt(pos.split("-")[1]);
 
 		// determinate the index
 
@@ -52,9 +51,11 @@ public class CreateRequest implements IndexRequest {
 
 		// refine data
 
-		GoalObject goal = new GoalObject(x, y, false);
-		x = goal.getX();
-		y = goal.getY();
+		if (onTheSpot == false) {
+			GoalObject goal = new GoalObject(x, y, false);
+			x = goal.getX();
+			y = goal.getY();
+		}
 
 		// determinate the type of object
 
