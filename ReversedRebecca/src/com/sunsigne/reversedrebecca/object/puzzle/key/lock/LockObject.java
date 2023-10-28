@@ -126,6 +126,9 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		if (isInPauseMenu())
 			return;
 
@@ -135,6 +138,9 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		for (int index = 0; index < 4; index++)
 			spammable[index].buttonReleased(e);
 	}

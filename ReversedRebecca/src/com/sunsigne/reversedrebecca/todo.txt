@@ -66,8 +66,6 @@
 
 	////////// EN COURS ////////////
 
-	puzzle : sentiment "d'aimantation" du virus/cadenas sur les bords, forcer la souris à rester dans le cadre ? (attention à éviter le 'parasitage')
-
 	LVL001 :
 	Marie devrait aller voir Sarah dès le 1er dialogues ?
 	Stock, il faut un indice pour inciter le jouer à rester + longtemps avec Marie
@@ -84,7 +82,6 @@
 	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	
 	gamepad :
-	- lire les rapport d'erreur (pb bouton A) - piste : spammable ? bouton power ?
 	- à corriger les pb les + grave dans la catégorie "gamepad" !
 
 	////////// BOSS ////////////

@@ -142,6 +142,9 @@ public class GamepadManager {
 	}
 
 	private static void updatePressedButton(int pressedButton, int releasedButton) {
+		if (pressedButton == ButtonEvent.ERROR || releasedButton == ButtonEvent.ERROR)
+			return;
+
 		GamepadController.pressing.addObject(pressedButton);
 
 		if (pressedButton == ButtonEvent.LEFT || pressedButton == ButtonEvent.RIGHT)

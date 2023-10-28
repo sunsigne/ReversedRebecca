@@ -65,12 +65,18 @@ public class InteractiveObject extends PiranhaObject implements TickFree, Render
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		for (int index = 0; index < 4; index++)
 			spammable[index].buttonPressed(e);
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		for (int index = 0; index < 4; index++)
 			spammable[index].buttonReleased(e);
 	}

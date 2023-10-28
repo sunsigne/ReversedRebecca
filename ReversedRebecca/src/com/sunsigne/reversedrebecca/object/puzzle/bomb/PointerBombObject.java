@@ -100,6 +100,9 @@ public class PointerBombObject extends PuzzleObject implements MouseObject, Game
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		if (isInPauseMenu())
 			return;
 
@@ -109,6 +112,9 @@ public class PointerBombObject extends PuzzleObject implements MouseObject, Game
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
+		if(spammable == null)
+			return;
+		
 		for (int index = 0; index < 4; index++)
 			spammable[index].buttonReleased(e);
 	}
