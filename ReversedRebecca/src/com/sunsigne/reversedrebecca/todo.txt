@@ -52,7 +52,7 @@
 	puzzle cadenas PAS intuitif
 	memory leak du à la vérification chonique gamepad
 	faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle ?
-	les spammables ont des défaut (tester la chaise de RR000 pour comprendre
+	les spammables ont des défaut (tester la chaise de RR000 pour comprendre)
 
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
 	
@@ -67,18 +67,15 @@
 	////////// EN COURS ////////////
 
 	LVL001 :
-	Marie devrait aller voir Sarah dès le 1er dialogues ?
-	Stock, il faut un indice pour inciter le jouer à rester + longtemps avec Marie
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
 	Jean : on le perd trop facilement de vue après le poussage ! le suive plus vite ? raccourci la cutscene ? pousser vers le haut ?
 
 	les objets interactifs ne sont pas intuitif. ex : passer à côté de la lettre de Fred & George donne l'impression qu'on peut faire un truc avec l'ordi
-	IMPORTANT TEXT n'attire pas assez le regard : faire clignotter ?
 	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
 	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	
 	gamepad :
-	- à corriger les pb les + grave dans la catégorie "gamepad" !
+	- à corriger les pb grave dans la catégorie "gamepad" !
 
 	////////// BOSS ////////////
 
@@ -120,7 +117,7 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 		
-	1h00 - créer des flammes violettes pour le DiscoPuzzle
+	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?		
 	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
