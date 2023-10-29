@@ -48,6 +48,7 @@ INDEED = Key2 % en#effet
 
 ///// LEFT AREA /////
 
+INTRUDER = Key1 % intrus#?
 TAKE = Key2 % prendre
 KNOCK = Key1 % toc#toc#?
 ALICIA_HELP = Key3 % Alicia#!
