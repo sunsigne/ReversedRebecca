@@ -5,8 +5,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public enum LAYER {
 	
-	//DOWNEST_GROUND("downiest_ground", new Handler(true)),
-	//DOWNER_GROUND("downer_ground", new Handler(true)),
+	//DOWNEST_GROUND("downest_ground", new Handler(true)),
 	/////////////////////////////////////////
 	DOWNER_GROUND("downer_ground", new Handler(true)),
 	DOWNER_WORLD_CONTENT("downer_world_content", new Handler(true)),
@@ -28,8 +27,7 @@ public enum LAYER {
 	UPPER_WORLD_CONTENT("upper_world_content", new Handler(true)),
 	UPPER_LIGHT("upper_light", new Handler(true)),
 	/////////////////////////////////////////
-	//UPPER_GROUND("upper_ground", new Handler(true)),
-	//UPPEST_GROUND("uppiest_ground", new Handler(true)),
+	//UPPEST_GROUND("upest_ground", new Handler(true)),
 	
 	WORLD_TEXT("world_text", new Handler(true)),	
 	HUD("hud", new Handler(false)),

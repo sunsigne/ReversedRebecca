@@ -20,6 +20,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
 		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
 		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
@@ -65,6 +66,9 @@
 	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
+
+	rr001:
+	mettre à jour le codex
 
 	LVL001 :
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
@@ -300,11 +304,11 @@
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
-	musée de l'horreur (anges pleureurs + silence + escargot + luther)
+	musée de l'horreur (anges pleureurs + silence + escargot + luther + cursed 3 (TOUS les objets qui bougent et l'écran qui dégouline))
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
 	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
-	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) -> le twist de la dernière input (sauvegarder, quitter, recharger)
+	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) / dans les succès ? (puisqu'il faut les débloquer pour avoir le secret) -> le twist de la dernière input (sauvegarder, quitter, recharger)
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
 	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en difficile elle se casse, en difficile non 
