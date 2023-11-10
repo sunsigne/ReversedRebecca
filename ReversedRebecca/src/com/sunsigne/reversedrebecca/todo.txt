@@ -304,6 +304,7 @@
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
+	un niveau dans un volcan
 	musée de l'horreur (anges pleureurs + silence + escargot + luther + cursed 3 (TOUS les objets qui bougent et l'écran qui dégouline))
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
