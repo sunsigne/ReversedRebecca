@@ -53,11 +53,23 @@ public class ActionAnalyzer {
 		}
 
 		// reattribution of key and name
-		String keyANDname = new Translatable().getTranslatedText(objectAction.getName(), getFile(object));
+		String keyANDname = getTranslatedText(objectAction.getName(), getFile(object));
 		objectAction.setKeyEvent(getKey(keyANDname), getKeyEvent(keyANDname));
 		objectAction.setName(getName(keyANDname));
 
 		return objectAction;
+	}
+
+	private String getTranslatedText(String valueToRead, String filePath) {
+		String text = new Translatable().getStrictTranslatedText(valueToRead, filePath);
+
+		if (text.isEmpty())
+			text = new Translatable().getStrictTranslatedText(valueToRead, FilePath.ACTION);
+
+		if (text.isEmpty())
+			text = new Translatable().getTranslatedText(valueToRead, filePath);
+
+		return text;
 	}
 
 	private PiranhaObjectAction getPiranhaObjectAction(String actionType) {
@@ -128,7 +140,7 @@ public class ActionAnalyzer {
 		}
 		return new ActionOneKey();
 	}
-	
+
 	private int getKeyEvent(String keyANDname) {
 		switch (keyANDname.split("%")[0]) {
 		case "Key1":

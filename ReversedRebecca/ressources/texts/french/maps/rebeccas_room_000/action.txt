@@ -6,7 +6,6 @@ WATCH = Key1 % regarder
 CANDLE_LIGHT = Key2 % allumer#la#bougie
 CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
 DRESS = Key2 % s'habiller
-TALK = Key1 % parler
 WATER_PLANT = Key2 % arroser
 
 ///// BATHROOM /////

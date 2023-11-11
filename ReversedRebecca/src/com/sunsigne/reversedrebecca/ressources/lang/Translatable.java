@@ -13,11 +13,14 @@ public class Translatable {
 
 	private boolean userData = false;
 
+	public String getStrictTranslatedText(String valueToRead, String filePath) {
+		return new FileTask().read(userData, valueToRead, "texts/" + Language.getInstance().getLang() + "/" + filePath);
+	}
+
 	public String getTranslatedText(String valueToRead, String filePath) {
 
 		// configured language
-		String text = new FileTask().read(userData, valueToRead,
-				"texts/" + Language.getInstance().getLang() + "/" + filePath);
+		String text = getStrictTranslatedText(valueToRead, filePath);
 		if (text.isEmpty() == false)
 			return text;
 

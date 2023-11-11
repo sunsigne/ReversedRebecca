@@ -20,6 +20,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- l'affichage de la langue de RR000 n'est pas correctement initié lorsqu'on la change (voir le frigo pour comprendre)
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
 		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
@@ -66,6 +67,8 @@
 	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
+
+	piranha et traduction : traduire le nouveau fichier action.txt prenant en compte les priorité sur les cartes + expliciter l'info dans "requêtes actions.txt" et dans le GDD (en "Note :" juste après le "ATTENTION !" en dessous du paragraphe parlant de l'action custom "WATCH")
 
 	rr001:
 	mettre à jour le codex

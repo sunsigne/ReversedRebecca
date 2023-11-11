@@ -19,7 +19,7 @@ public abstract class OpenPuzzleAction extends Action {
 	public OpenPuzzleAction(PuzzlerObject puzzlerObject) {
 		super(puzzlerObject, null, null, null, null, 0);
 
-		setName(new Translatable().getTranslatedText(getName(), FilePath.ACTION));
+		setName(new Translatable().getTranslatedText(getName(), FilePath.PUZZLER));
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
 			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(), getToolPlayer(),

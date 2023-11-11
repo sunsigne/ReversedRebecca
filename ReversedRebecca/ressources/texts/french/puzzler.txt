@@ -1,0 +1,17 @@
+///// UNSOLVED /////
+
+Require = requis
+DoorLocked = fermé
+RubbleBlocked = bloqué
+ComputerProtected = protégé
+HoleLoose = terre#molle
+
+///// ACTION /////
+
+Open = ouvrir
+DoorUnlock = ouvrir
+RubbleExplode = exploser
+ComputerHack = pirater
+HoleDig = creuser
+GoDown = descendre
+GoUp = monter
