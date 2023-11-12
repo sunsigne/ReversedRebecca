@@ -1,7 +1,5 @@
 ///// DAVE /////
 
-TALK = Key1 % parler
-TALK_VAR = Key1 % parler
 KEYBOARD_MOUSE = Key1 % Clavier/Souris
 GAMEPAD = Key2 % Manette
 WHAT = Key3 % Quoi#?!
@@ -12,8 +10,6 @@ THATS_NOT_FUNNY = Key1 % C'est#pas#drôle#!
 
 ///// OBJECT /////
 
-EMPTY = Key2 % vider
-SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
 WATER_TAKE = Key1 % se#servir
 WATER_EMPTY = Key1 % vider#l'eau

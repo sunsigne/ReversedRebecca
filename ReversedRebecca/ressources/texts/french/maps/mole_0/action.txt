@@ -1,7 +1,6 @@
 ///// WORLD /////
 
 TAKE_A_DIP = Key2 % se#baigner
-TAKE = Key2 % prendre
 
 ///// DOWN /////
 

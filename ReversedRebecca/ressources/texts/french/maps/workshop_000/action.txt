@@ -1,7 +1,4 @@
-WATCH = Key1 % regarder
-TALK = Key1 % parler
 I_FINISHED = Key1 % (END_LVL)j'ai#fini
-READ = Key1 % lire
 GLANCE = Key1 % jeter#un#oeil
 FOOD = Key1 % nourriture#?
 NICE_WEATHER_ISNT_IT = Key1 % ...#il#fait#beau,#non#?

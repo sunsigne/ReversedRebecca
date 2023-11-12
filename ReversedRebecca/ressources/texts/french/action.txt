@@ -1,1 +1,30 @@
+///// CLASSIC /////
+
 TALK = Key1 % parler
+TALK_VAR = Key1 % parler
+LISTEN = Key1 % écouter
+WATCH = Key1 % regarder
+READ = Key1 % lire
+USE = Key1 % utiliser
+SIT = Key1 % s'assoir
+
+///// ENVIRONMENT /////
+
+TAKE = Key2 % prendre
+DRINK = Key2 % boire
+EMPTY = Key2 % vider
+
+///// PUZZLER /////
+
+OPEN = Key1 % ouvrir
+EXPLODE = Key1 % exploser
+DIG = Key1% creuser
+HACK = Key1% pirater
+
+///// CHOICES /////
+
+WATER_TAKE = Key1 % se#servir
+WATER_EMPTY = Key1 % vider#l'eau
+WATER_PLANT = Key2 % arroser
+APOLOGIZE = Key1 % s'excuser
+SAY_NOTHING = Key2 % ne#rien#dire

@@ -68,7 +68,7 @@
 
 	////////// EN COURS ////////////
 
-	piranha et traduction : traduire le nouveau fichier action.txt prenant en compte les priorité sur les cartes + expliciter l'info dans "requêtes actions.txt" et dans le GDD (en "Note :" juste après le "ATTENTION !" en dessous du paragraphe parlant de l'action custom "WATCH")
+	piranha et traduction : pliciter l'info du nouveau fichier action.txt prenant en compte les priorité sur les cartes dans "requêtes actions.txt" et dans le GDD (en "Note :" juste après le "ATTENTION !" en dessous du paragraphe parlant de l'action custom "WATCH")
 
 	rr001:
 	mettre à jour le codex

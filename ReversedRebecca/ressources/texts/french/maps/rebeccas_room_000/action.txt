@@ -2,30 +2,20 @@
 
 WAKE_UP = Key1 % se#réveiller
 SEARCH_KEY = Key3 % fouiller#(clé?)
-WATCH = Key1 % regarder
 CANDLE_LIGHT = Key2 % allumer#la#bougie
 CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
 DRESS = Key2 % s'habiller
-WATER_PLANT = Key2 % arroser
 
 ///// BATHROOM /////
 
-WATER_TAKE = Key1 % se#servir
-WATER_EMPTY = Key1 % vider#l'eau
 FILL = Key2 % remplir
-EMPTY = Key2 % vider
 WASH = Key1 % se#laver
 LEAVE = Key1 % sortir
 CLEAN_HAIR = Key2 % nettoyer#les#cheveux
-TAKE = Key1 % prendre
 CLEAN_CLOTHES = Key2 % ranger#les#vetements
 DO_LAUNDRY = Key2 % faire#la#lessive
 DO_LAUNDRY_SHORT = Key2 % lessive
 SEARCH_KEY_SHORT = Key3 % fouiller
-
-///// TOILET /////
-
-USE = Key1 % utiliser
 
 ///// DESK /////
 
@@ -33,18 +23,15 @@ PLAY = Key1 % jouer
 PLAY_ANYWAY = Key1 % jouer#quand#meme
 JUST_ONE_GAME = Key1 % juste#une#partie...
 I_AM_WEAK = Key1 % je#suis#faible...
-TAKE_GLASS = Key2 % prendre
 ASK_FOR_KEY = Key3 % où#sont#mes#clés#?
 TALK_ABOUT_CAMILLE = Key1 % parler#de#Camille
 PHILOSOPHIZE = Key1 % philosopher
-LISTEN = Key1 % écouter
 
 ///// LIVING ROOM /////
 
 RELAX = Key1 % se#détendre
 FACE_REALITY = Key1 % affronter#la#réalité
 WATCH_TV = Key1 % regarder#la#TV
-SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
 TALK_ABOUT_BOOKS = Key1 % parler#des#livres
 WATCH_SARAH = Key1 % regarder#Sarah
@@ -63,7 +50,6 @@ SHARE = Key2 % partager
 
 ///// ENTRANCE /////
 
-OPEN = Key1 % ouvrir
 GO_TO_WORK = Key3 % (END_LVL)aller#au#travail
 LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)partir#sans#Sarah
 BRING_SARAH = Key1 % faire#venir#Sarah
@@ -84,9 +70,6 @@ WE_SHARE = Key1 % on#partage
 YES_I_KNOW = Key2 % oui#je#sais
 I_AM_READY_TOWEL = Key3 % je#suis#prête
 I_AM_READY = Key3 % (END_LVL)je#suis#prête
-APOLOGIZE = Key1 % s'excuser
-SAY_NOTHING = Key2 % ne#rien#dire
-TALK_VAR = Key1 % parler
 WAKE = Key1 % réveiller
 SOAK_SARAH = Key2 % tremper#Sarah
 I_MADE_PANCAKES = Key3 % j'ai#fait#des#crêpes

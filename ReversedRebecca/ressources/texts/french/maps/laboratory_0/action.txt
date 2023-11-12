@@ -10,12 +10,7 @@ CHAT = Key1 % bavarder
 
 ///// DOWN DESKS /////
 
-WATCH = Key1 % regarder
 LOOK_HARDER = Key1 % regarder#mieux
-READ = Key1 % lire
-TALK = Key1 % parler
-TALK_VAR = Key1 % parler
-LISTEN = Key1 % écouter
 CHEAR = Key1 % encourager
 CHEAR_MORE = Key1 % encourager#plus
 CHEAR_MORE_END = Key1 % (END_LVL)encourager#plus
@@ -49,7 +44,6 @@ INDEED = Key2 % en#effet
 ///// LEFT AREA /////
 
 INTRUDER = Key1 % intrus#?
-TAKE = Key2 % prendre
 KNOCK = Key1 % toc#toc#?
 ALICIA_HELP = Key3 % Alicia#!
 INSIST = Key3 % Insister
@@ -58,14 +52,12 @@ BLAMING = Key2 % Culpabiliser
 SCOLDING = Key3 % Engueuler
 SABOTAGE = Key3 % Saboter
 QUIETLY_SABOTAGE = Key3 % Saboter#discrètement
-DRINK = Key2 % boire
 COFFEE = Key1 % café
 TEA = Key2 % thé
 NO_THANKS = Key3 % non#merci
 OFFER_A_TEA = Key1 % proposer#un#thé
 I_HAVE_TO_GO = Key1 % Je#dois#y#aller...
 SHUT_UP = Key2 % La#ferme#!
-USE = Key1 % utiliser
 WASH_AWAY_THE_JEANS_DIRTYNESS = Key2% laver#la#cochonnerie#de#Jean
 GET_ANGRY = Key1 % s'énerver
 SAS_KEY = Key3 % clé#?
@@ -73,8 +65,6 @@ TAKE_COFFEE = Key1% café
 TAKE_TEA = Key2% thé
 YES = Key1% oui
 NO = Key2% non
-APOLOGIZE = Key1 % s'excuser
-SAY_NOTHING = Key2 % ne#rien#dire
 LOCKED_UP = Key1 % enfermée#?
 WHAT_DID_YOU_ASK = Key1 % tu#as#dit#quoi#?
 LISTEN_TO_RAMBLING = Key1 % écouter#les#divagations
@@ -84,12 +74,10 @@ ASK_FOR_BOMBS = Key1 % demander#des#bombes
 
 ///// RIGHT AREA /////
 
-EXPLODE = Key1 % exploser
 NO_I_CONTINUE = Key1 % non,#je#continue
 OK_I_STOP = Key2 % ok,#j'arrête
 COME_BACK = Key1 % revenir
 ABADON_EVERYONE = Key3 % (END_LVL)abandonner#tout#le#monde
 ASK_FOR_OPENING = Key2 % demander#à#ouvrir
 ASK_FOR_OPENING_END = Key2 % (END_LVL)demander#à#ouvrir
-OPEN = Key1 % ouvrir
 OPEN_END = Key1 % (END_LVL)ouvrir
