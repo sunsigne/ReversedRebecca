@@ -1,46 +1,20 @@
 ////// Introduction //////
 
 
-Piranha est un langage de programmation inventé par Florian Murcia en 2022 pour le jeu vidéo Reversed Rebecca.
-Piranha vient de l'animal, sans raison autre que le mot sonnait bien et qu'on le retenait facilement.
+Piranha est un langage de programmation inventé par Florian Murcia en 2022 pour le jeu vidéo Reversed Rebecca. Le mot « Piranha » vient de l'animal, sans raison autre qu'il sonnait bien et qu'on le retenait facilement.
 
-Le Piranha a pour principal objectif de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus facilement éditable qu'en Java.
+Le Piranha a pour principal objectif de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus simplement éditable qu'en Java. L'avantage du Piranha est qu'il peut très facilement être lu, écrit et édité par un éditeur de texte ou de contenu csv, alors même que le jeu est « compilé »; chose impossible en Java.
 
-L'avantage du Piranha est qu'il peut très facilement être lu, écrit et édité en remplaçant par un éditeur de texte ou de contenu csv
+Les éditeurs de code actuels ne reconnaissant pas le Piranha comme langage, nous vous conseillons, afin de gagner en lisibilité, d'en configurer vous-même la colorisation syntaxique : pour cela, vous pouvez prendre un éditeur de code acceptant le csv et définir l'espace (" ") comme élément séparateur.
 
-Les éditeurs de code actuels ne reconnaissant pas encore le Piranha comme langage, c'est pourquoi nous vous conseillons, afin de gagner en visibilité, de configurer vous-même la colorisation syntaxique.
-Pour celà, vous pouvez simplement prendre un éditeur de code acceptant le csv et définir l'espace (" ") comme élément séparateur.
+Note : dans toute la documentation Piranha, le mot "objet" sera utilisé pour parler d'objets Piranha, indifféremment qu'il s’agisse de NPC ou d’objets interactifs. L'unique différence notable entre ceux deux éléments est que davantage de Type de Requête peuvent s'appliquer aux NPC (exemple : INVULNERABLE, MOVE – oui, les objets sont immobiles –, etc.)
 
-
-////// Fichier //////
-
-Un fichier Piranha est le "cerveau" d'un objet Piranha. Si l'objet n'est pas présent dans le niveau, son cerveau seul ne fera rien du tout.
-Pour qu'un objet Piranha soit dans le niveau, il suffit soit de l'introduire sur la map (voir "mappable" dans le dossier "maps"), soit qu'un autre objet Piranha l'ait créé (voir "requêtes de création")
-Seule exception, l'objet SET-UP qui est créé automatiquement lors du chargement d'une map (à des coordonnées négatives, donc impossible à atteindre avec du Piranha).
-
-Actuellement, les fichiers en Piranha lus et traités par Java sont les fichiers dont l'extension est .csv, et dont les noms sont PLAYER, SET-UP, compris entre NPC-01 et NPC-30, ou compris entre OBJ-01 à OBJ-99.
-
-Note : les fichiers Piranha ont tous un nom qui fait exactement 6 caractères. Cette règle ne peut pas être transgressée.
-
-Le mot "objet" sera parfois utilisé de façon générique alors que le Type de Requête ne s'applique qu'aux personnages.
-En effet, certains objets sont des objets, d'autre des personnages. Pour l'expliquer simplement, plus de requêtes sont possibles sur les personnages : INVULNERABLE, MOVE, etc. (oui, les objets sont immobiles).
-
-Il est conseillé dans chaque dossier de map, bien que totalement facultatif, de créer un fichier codex.txt référençant les différents fichiers piranha présent dans ce même dossier, en y renseignant le nom des objets ou personnages qu'ils incarnent.
-On pourra également y noter toutes les cibles de chaque Instruction dont le Type de Requête est SAVE, afin de les retrouver plus facilement si besoin.
-
-exemple de codex : 
-REGISTER = REBECCAS_ROOM*CANDLE_ON
-REGISTER = REBECCAS_ROOM*WATERED_PLANT
-OBJ-01 = Bed
-OBJ-02 = Nightstand
-
-Cela signifie que dans cette map, les objets 1 et 2 correspondent respectivement à un lit et une table de nuit. Il sera également sauvegardé comme information à la fin du niveau si la bougie a été allumée et si la plante a été arrosée.
 
 ////// Nomenclature //////
 
-
-Prenons l'exemple suivant : GOAL -> 33-33 = FACING -> LEFT
-Ce que cette ligne fait n'a aucune importance ici.
+Soit, l'exemple de code Piranha suivant : 
+GOAL ->33-33 = FACING -> LEFT
+(Ce que fait ce code n'a aucune importance ici.)
 
 Un telle ligne de code est appelée une "Instruction".
 L'ensemble "GOAL -> 33-33" est appelé la "Condition" de l'Instruction.
@@ -52,16 +26,39 @@ FACING est le "Type de Requête" de l'Instruction.
 LEFT est la "Cible" de l'Instruction.
 
 
+////// Fichier //////
+
+Un fichier Piranha est le "cerveau" d'un objet Piranha, il ne communique avec le code Java que s'il (l'objet) est effectivement présent sur la carte. 
+
+Pour qu'un objet Piranha soit sur une carte, il faut, soit l'introduire sur le dessin de carte afin qu'il soit créé par les mappables (voir "mappable" dans le dossier "maps"), soit qu'un autre objet Piranha le créé (voir "requêtes de création"). Il existe une exception : l'objet SET-UP est automatiquement créé lors du chargement d'une carte (à des coordonnées négatives, donc impossible à atteindre à partir d'instructions).
+
+Présentement, un fichier est officiellement un fichier Piranha seulement si son extension est csv, que son nom fait exactement six caractères, et qu'il soit « PLAYER », « SET-UP », compris entre « NPC-01 » et « NPC-30 », ou compris entre « OBJ-01 » à « OBJ-99 ».
+
+Il est conseillé dans chaque dossier de carte – bien que totalement facultatif – de créer un fichier codex.txt référençant les différents fichiers Piranha présent dans ce même dossier, en y renseignant le nom des objets ou personnages qu'ils incarnent.
+On pourra également y noter toutes les cibles de chaque Instruction dont le Type de Requête est SAVE, afin de les retrouver plus facilement si besoin.
+
+exemple de codex : 
+REGISTER = REBECCAS_ROOM*CANDLE_ON
+REGISTER = REBECCAS_ROOM*WATERED_PLANT
+OBJ-01 = Bed
+OBJ-02 = Nightstand
+...
+
+Dans cet exemple, les objets 1 et 2 correspondent respectivement à un lit et une table de nuit. Parallèlement, à la fin du niveau, sera sauvegardé comme informations si la bougie a été allumée et si la plante a été arrosée.
+
+
 ////// Syntaxe //////
 
+Bien que le Piranha ne soit pas sensible à la case, par convention, les Instructions sont écrites en lettres capitales. Parallèlement, les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code. Les commentaires s'écrivent n'importe où, tant qu'ils ne contiennent pas les caractères « → » et « = ».
 
-Le Piranha n'est pas sensible à la case : les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code.
-En Piranha, si ça n'est pas obligatoire, il est conseillé d'écrire les Instructions en lettres capitales.
-Attention ! Les coordonnées négatives sont souvant impossibles en Piranha. Le point 0-0 se situe en haut à gauche de votre map.
-Pour écrire des commentaires dans votre code, vous pouvez le faire n'importe où ! Si la syntaxe n'est pas reconnue comme étant une Instruction, rien ne se passera. Évitez cependant d'utiliser les caractères "->" et "=" dans un commentaire, votre fichier risquerait d'être invalide.
+Le point 0-0 se situe en haut à gauche de la carte. Il est impossible d'écrire des coordonnées négatives en Piranha. 
 
-Une Instruction s'écrit de la façon suivante : WONPUZZLE -> 34-31 = TP -> 37-42
-Ici, il faut comprendre : "si le puzzle en x=34 y=31 est résolu, alors se téléporter en x=37 y=42"
+Une Instruction s'écrit de la façon suivante :
+WONPUZZLE -> 34-31 = TP -> 37-42
 
-ATTENTION ! Il n'est pas possible d'avoir deux Conditions identiques ("Type de Condition -> Valeur") dans un même fichier Piranha ; seule la première sera traitée. L'utilisation de Conditions identiques dans des fichiers indépendants les uns des autres ne pose aucun problème.
-Si vous avez besoin d'effectuer plusieurs Instructions vérifiant la même Condition, utiliser le Type d'Action GOTO.
+Voici sa traduction en langage courant : 
+Si le puzzle situé en x = 34 et y = 31 est résolu, alors l'objet dans lequel apparaît cette ligne doit se téléporter en x = 37 et y = 42.
+
+Sauf exception, lorsqu'une Requête implique plusieurs Cibles, elles sont séparées par des virgules (","). Parfois, certains Types de Requêtes utiliseront le symbole deux-point (":").
+
+ATTENTION ! Il n'est pas possible d'avoir deux Conditions ("Type de Condition -> Valeur") identiques dans un même fichier Piranha ! Seule la dernière sera traitée. L'utilisation de Conditions identiques dans des fichiers Piranha différents ne pose aucun problème. Si vous avez besoin d'effectuer plusieurs Instructions vérifiant la même Condition, utilisez le Type de Requête GOTO.

@@ -1,27 +1,24 @@
 ////// ÉCRITURE COMPACTE //////
 
-L'écriture compacte est une écriture permettant d'aérer le code en éliminant des instructions "triviales".
-Elle est souvent possible lorsqu'un Type de Requête n'aura jamais qu'une seule Cible .
+L'écriture compacte (aussi appelée « écriture condensée ») est une façon d'écrire du code Piranha en éliminant des Instructions "triviales". Elle est possible lorsqu'un Type de Requête n'a qu'une seule Cible.
 
-Prenons l'exemple suivant du chapitre précédent : 
+Soit, l'exemple suivant : 
 TIME -> 0 = GOTO -> MY_NAME, MY_FACING
 $ -> MY_NAME = NAME -> BOB
 $ -> MY_FACING = FACING -> DOWN
 
-L'Instruction en 1ère ligne demande à ce qu'on exécute les Instructions en ligne 2 et 3.
-L'Instruction en 2ème ligne n'a qu'une seule Cible : "BOB"
-L'Instruction en 3ème ligne n'a qu'une seule Cible "DOWN"
+L'Instruction en 1ère ligne initie l’exécution des Instructions en ligne 2 et 3.
+L'Instruction en 2ème ligne n'a qu'une seule Cible : "BOB".
+L'Instruction en 3ème ligne n'a qu'une seule Cible : "DOWN".
 
-Dans la mesure où le Type de Requête "NAME" n'aura jamais qu'une seule Cible (un nom), l'écriture suivante est tout à fait autorisée :
+Le Type de Requête "NAME" ne peut avoir qu'une seule Cible (un nom), l'écriture compacte suivante devient alors possible :
 TIME -> 0 = GOTO -> NAME:BOB
 
 Ici, NAME est à la fois la Cible de GOTO, et un Type de Requête dont la Cible est "BOB" !
 
-En faisant la même chose avec FACING, nous obtenons ceci :
+L'exemple précédent peut ainsi être simplifié de la façon suivante : 
 TIME -> 0 = GOTO -> NAME:BOB, FACING:DOWN
 
-Cette seule ligne fait le même travail que les 3 Instructions de notre exemple ! Nous avons donc éliminé 2 Instructions "triviales" de notre code !
+Cette seule ligne fait le même travail que les trois Instructions de notre exemple. Nous avons donc éliminé 2 Instructions "triviales" de notre code !
 
-
-Attention ! Tous les Types de Requête n'autorisent pas l'écriture compacte. Lorsqu'elle l'est, un exemple d'écriture compacte sera systématiquement donné.
-Pour vous aider, dîtes que lorsque qu'elle "simplifierait le code", elle est probablement possible. Inversement, si elle le rendrait dur à écrire et à comprendre, elle ne l'est probablement pas.
+ATTENTION ! Tous les Types de Requête n'autorisent pas l'écriture compacte. Lorsqu'elle est possible, un exemple sera systématiquement donné.

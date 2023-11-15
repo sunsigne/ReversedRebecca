@@ -1,34 +1,29 @@
 ////// Requête conditionnelle //////
 
 
-Certains Types de Requête sont strictement Conditionnels. C'est-à-dire qu'ils vérifient une Valeur supplémentaire (en plus de celle de la Condition) avant de choisir entre deux Cibles.
-Leur écriture est différente des requêtes classiques, afin de s'adapter à leur statut particulier.
+Certains Types de Requête sont strictement Conditionnels, c'est-à-dire qu'ils vérifient une Valeur (en plus de celle de la Condition) supplémentaire avant de « choisir » entre deux Cibles.
 
 exemple :
-GOAL -> 37-43 = SEE -> BOB ? GOCRYING / MOVE:37-42
+GOAL -> 37-43 = SEE -> BOB ? TP:37-42 / NAME:FANTASIO
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : l'objet dont le nom est "Bob" est-il dans le champ de vision de l'objet ?
-- si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
-- si non, définir le GOAL comme étant en x=37 y=42
-
-Pour en savoir plus sur le Type de Requête SEE, voir "types de requêtes/requêtes conditionnelles".
+Lorsque la Condition est vérifiée, une nouvelle Valeur doit être vérifiée : l'objet dont le nom est "Bob" est-il dans le champ de vision de l'objet actuel ?
+- si oui, téléporter l’objet actuel en x = 37 et y = 42.
+- sinon, renommer l'objet en « FANTASIO ».
 
 
 ////// Requête classique à caractère conditionnelle //////
 
 
-Certains Types de Requête "classiques" peuvent également s'écrire sous la forme conditionnelle, leur écriture change donc afin de s'adapter à ce nouveau statut.
-
+Certains Types de Requête "classiques" peuvent s'écrire sous la forme conditionnelle, leur écriture change afin de s'adapter à ce nouveau statut.
 
 exemple de requête classique :
-TALKED -> PEEBOY_YOU_HERE = FACING -> UP
+TALKED -> PEEBOY = FACING -> UP
+
+Dans cet exemple, lorsque la Condition est vérifiée, l'objet actuel regardera en haut.
 
 exemple de requête classique écrite sous forme conditionnelle :
-TALKED -> PEEBOY_YOU_HERE = FACING -> UP ? SLOW:38-44 / NULL
+TALKED -> PEEBOY = FACING -> UP ? TP:38-44 / NULL
 
-Dans le premier exemple, lorsque la Condition sera vérifiée, l'objet regardera en haut.
-Dans le second exemple, lorsque la Condition sera vérifiée, Si l'objet regard en haut, alors il aura pour GOAL x=38 y=44 et devra s'y rendre lentement. Sinon, il ne fera rien.
+Dans cet exemple, lorsque la Condition est vérifiée, si l'objet regard en haut, alors il sera téléporté en x = 38 et y = 44, sinon, il ne se passera rien (NULL).
 
-
-Attention ! Tous les Types de Requête ne peuvent pas avoir une écriture conditionnelle ! C'est pourquoi cela sera précisé systématiquement lorsque c'est possible.
-Note : TOUTES les requêtes conditionnelles ou à écriture conditionnelle ont leur 2 cibles renvoyées chacune à un GOTO à cible unitaire, l'écriture compacte y est donc possible.
+ATTENTION ! Tous les Types de Requête ne peuvent pas avoir une écriture conditionnelle ! Lorsqu'elle est possible, cela sera précisé.

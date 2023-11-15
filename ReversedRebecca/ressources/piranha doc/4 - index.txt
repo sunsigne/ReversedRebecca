@@ -1,57 +1,55 @@
+////// INDEX //////
+
+Certains Types de Requêtes ont pour Cible la position d'un objet (ex : DISABLE, DELETE, etc.). Dans la mesure où plusieurs de ceux-ci peuvent se trouver au même endroit, il devient nécessaire de faire intervenir un index afin d'assurer une correcte sélection.
+
+L'index peut être renseigné sous deux formes : en lettres lors de la création d'un objet (« FRONT » ou « BACK »), et en nombre lors de sa recherche. La relation entre ces paramètres fonctionne comme suit :
+
+- FRONT attribue le dernier index chiffré disponible (c.-à-d. le plus haut)
+- BACK attribue l'index chiffré 1 (« poussant » au passage tous les autres objets vers des index plus élevés).
+
+L'avantage de choisir FRONT : les objets auront tendance à garder le même index.
+L'avantage de choisir BACK : l'objet le plus récent aura toujours un index de 1.
+
+Note : lors du renseignement numéroté d'un index, un index trop élevé sera systématiquement ramené à l'index le plus haut trouvé : s'il n'y a qu'un objet et que vous renseignez un index « 3 », l'index sera "lu" comme étant « 1 ».
+
+Exemple de cas pratique :
+
+Nous avons besoin qu'un personnage parle à travers une porte (événement non prévu par le moteur du jeu). Nous devons donc "désactiver" (DISABLE) la porte, créer un objet Piranha à son emplacement, et coder son comportement de sorte qu'il imite les actions du NPC de l'autre côté. Lorsque nous voulons désactiver la porte, nous pouvons renseigner l'index 2 pour la sélectionner (considéré comme 1 puisqu'un seul objet présent). Nous créons ensuite l'objet Piranha en BACK, (il prendra alors l'index 1 et "poussera" la porte en index 2). Lorsque nous ferons référence à la porte par la suite, nous pouvons continuer à utiliser l'index 2 (qui sera cette fois "officiellement" le bon).
+
+Nous avons donc utilisé le même index (2) tout au long de notre code pour désigner la porte. À noter qu'il était également tout à fait possible de garder l'index 1 pour la porte et de créer l'objet en FRONT.
+
+Remarque : la mécanique d'index est assez complexe à prendre en main. Voici deux conseils pour vous aider :
+- 95% du temps, vous n'aurez affaire qu'à un seul objet (donc index 1).
+- Dans le cas de plusieurs objets, il est toujours possible de brute force ! Faites des essais jusqu'à obtenir le résultat attendu.
+
+Connaître le fonctionnement détaillé de l'index n'est foncièrement utile que lorsque le brute force a du mal à fonctionner.
+
+
 ////// POSITION //////
 
-La position d'un objet en Piranha est la "case" la plus proche de laquelle il se trouve.
-Lorsqu'on créer un objet, il est créé sur la case exacte demandée.
-Lorsqu'on cherche implicitement la position d'un objet (par exemple avec DISABLE, DELETE, etc.), l'objet est considéré sur la "case" seulement s'il est majoritairement sur cette dernière.
-Ainsi, un objet n'est considéré sur "une case" que lorsqu'il est majoritairement dessus. S'il y dépasse "un peu", ça ne compte pas.
+La position d'un objet en Piranha est la "case" sur laquelle il se trouve. Lorsqu'un objet est créé, il l'est sur la case exacte. Lorsqu'on cherche implicitement sa position (ex : DISABLE, DELETE, etc.), il est considéré comme étant sur la case sur laquelle il se trouve « majoritairement ». 
 
-Il existe une exception à cette règle : Le Joueur.
-Afin d'avoir un pathfinding efficace, le Joueur est considéré sur une case même si un seul pixel touche cette dernière.
-Il est donc le seul objet qui peut se trouver sur plusieurs cases à la fois.
-Note : cela n'impacte pas l'index puisqu'une sécurité empêche de sélectionner ce dernier à partir d'un index (il ne faudra pas l'effacer par accident...)
+Lorsque plusieurs objets se trouvent sur la même case, l'index permet d'affiner la sélection.
 
-Lorsque plusieurs objets se trouve sur une même case, il faut faire intervenir la notion d'index pour les différencier.
+À ces règles existe une exception : pour des raisons de pathfinding, le joueur est considéré comme étant sur une case même si un seul de ces pixels touche celle-ci. Il est ainsi le seul objet pouvant se trouver officiellement sur plusieurs cases en même temps. Il n'est également pas possible de sélectionner le joueur à partir d'un index (mesure de sécurité mise en place pour éviter son effacement involontairement).
 
 
 ////// COUCHES //////
 
-Une notion très importante à ne jamais oublier en Piranha et celle des LAYER - "couche" en français, mais il faut comprendre étage -.
-À CHAQUE FOIS qu'il est question d'une position en Piranha, la position en question est cherchée au même "étage" que l'objet faisant la demande.
-Par exemple, il n'est pas possible pour un objet d'utiliser le type de condition WONPUZZLE afin de vérifier si le Puzzle d'un autre étage est résolu ! Il faudra pour cela passer par un AFFECTING (qui est indépendant de la position, donc applicable partout).
+Une notion très importante à ne jamais oublier en Piranha et celle des LAYER – « couches » en français, mais il faut comprendre « étages » –.
 
-Cette information est d'autant plus importante à garder en tête avec le fichier SET-UP : "l'objet" SET-UP est construit lors du chargement de la map sur la couche où se trouve le joueur.
-Note : "l'objet" SET-UP ne "suit" pas le joueur si ce dernier change de couche, il reste là où il a été créé.
+À CHAQUE FOIS qu'il est question d'une position en Piranha, la position en question est cherchée au même "étage" que l'objet faisant la demande. Par exemple, il n'est pas possible pour un objet d'utiliser le type de condition WONPUZZLE afin de vérifier si le Puzzle d'un autre étage est résolu ! Il faudra pour cela passer par un AFFECTING (qui est indépendant de la position, donc applicable partout).
+
+ATTENTION ! L'objet SET-UP créé sur la même couche que le joueur lors du chargement d'une carte est également soumis à cette règle !
 
 
 ////// SOUS-CHOUCHES //////
 
-Pour CHAQUE couche, il existe 3 sous-couches. Lorsque vous êtes amené à renseigner sur laquelle vous travaillez, retenez ceci :
+Pour CHAQUE couche existent 3 sous-couches :
 
-- GROUND : la couche "sol", qui est en dessous de world. Elle sert à stocker les objets qui doivent TOUJOURS être en dessous. Exemple : les flaques, les trous, etc.
-- WORLD : la couche du "monde" où se trouve tous les objets, les murs, les personnages, etc. Contient 95% des objets
-- LIGHT : la couche "lumière" ou "éclairage", qui est au-dessus de world. Elle contient les objets toujours au-dessus. Exemple : les ombres, les lumières, etc.
+- GROUND : la couche "sol", en dessous de WORLD. Sert à stocker les objets qui doivent toujours être en dessous (ex : les flaques, les trous, les cadavres, etc.).
+- WORLD : la couche du "monde" où se trouvent tous les objets, les murs, les personnages, etc. Contient 95% des objets.
+- LIGHT : la couche "lumière" ou "éclairage", au-dessus de WORLD. Contient les objets toujours au-dessus (ex : les ombres, les lumières, etc.).
 
-Note : si vous avez un doute, préférez WORLD. Les autres couches sont situationnelles.
-Attention : la "carte" (c.-à-d. le sol) se trouve sur la couche GROUND. Ajouter un objet sur cette couche avec un index BACK créera l'objet derrière le sol (donc, il ne sera pas visible).
-
-
-////// INDEX //////
-
-Certains Types de Requêtes se basent sur la position d'un objet (ex: DISABLE, DELETE, etc.) Dans la mesure ou plusieurs objets peuvent se trouver au même endroit, ces requêtes ont besoin, en plus des coordonnées de l'objet, d'un index.
-L'index fonctionne de la façon suivante :
-
-Lorsqu'il n'y a qu'un seul objet : l'index est de 1.
-Lorsqu'il y a plusieurs objets, le dernier objet créé aura l'index 1 si sa cible "z" était BACK (et "poussera" tous les autres objets vers des index plus élevé), et l'index le plus haut si sa cible "z" était FRONT. Ce qui signifie qu'un objet qui avait un index 1 pourra très bien avoir un index 2 dans le futur !
-Un index trop élevé sera ramené systématiquement à l'index le plus haut trouvé : s'il n'y a qu'un objet et que vous entrez comme index 3, l'index sera "lu" comme 1. Cette dernière propriété peut être très pratique pour conserver le même index pour un même objet.
-
-Exemple pratique :
-
-Nous avons besoin qu'un personnage parle à travers une porte, chose à-priori non autorisée "de base" par le jeu.
-Nous allons donc "désactiver" (DISABLE) la porte et créer un Piranha objet par-dessus cette dernière, qui se comporterait comme le PNJ le ferait, ce qui créera l'illusion de parler à ce dernier.
-Lorsque nous voulons désactiver la porte, nous pouvons indiquer l'index 2 (qui sera considéré comme 1), puis créer l'objet Piranha qui en BACK, donc qui prendra l'index 1 et "poussera" la porte en index 2.
-Lorsque nous ferons référence à la porte par la suite, nous continuerons à utiliser l'index 2 (qui sera cette fois "officiellement" le bon).
-Nous avons donc utilisé le même index (2) tout au long de notre code pour désigner la porte.
-À noter qu'il était également possible de garder l'index 1 pour la porte et de créer l'objet en FRONT.
-
-Ç'est à l'air un peu technique, mais ne vous en fait pas ! La plupart du temps, vous n'aurez affaire qu'à un seul objet.
-Si un jour vous en avez plusieurs, faites des essais jusqu'à ce que ça passe et ça devrait aller ! Retenez simplement : index = 1, sauf exception.
+Remarque : si vous avez un doute, préférez WORLD. Les autres sous-couches sont situationnelles.
+ATTENTION : la « carte » (ici dans le sens « sol ») se trouve sur la couche GROUND : ajouter un objet sur cette couche avec un index BACK créera l'objet derrière le sol (donc, il ne sera pas visible).
