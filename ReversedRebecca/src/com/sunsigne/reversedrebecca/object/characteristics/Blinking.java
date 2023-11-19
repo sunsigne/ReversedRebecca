@@ -3,8 +3,15 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.world.World;
 
-public interface Blinking extends Velocity {
+public interface Blinking extends Highlightable {
 
+	////////// HIGHLIGHT ////////////
+	
+	@Override
+	default boolean getHighlightCondition() {
+		return isBlinking();
+	}
+	
 	////////// BLINKING ////////////
 
 	default int getTotalBlinkingTime() {

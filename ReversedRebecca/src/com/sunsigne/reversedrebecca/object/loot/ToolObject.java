@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
-import com.sunsigne.reversedrebecca.system.Size;
 
-public class ToolObject extends LootObject implements Difficulty {
+public class ToolObject extends LootObject implements Difficulty, Highlightable {
 
 	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
@@ -64,11 +64,7 @@ public class ToolObject extends LootObject implements Difficulty {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
-
-		if (isBlinking()) {
-			int pixel = Size.XS / 8;
-			g.drawImage(blinking_image, getX() - pixel, getY() - pixel, getWidth() + 2 * pixel, getHeight() + 2 * pixel, null);
-		}
+		drawHighlight(g, blinking_image);
 	}
 
 	////////// COLLISION ////////////

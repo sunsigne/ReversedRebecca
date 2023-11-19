@@ -128,10 +128,12 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 					null);
 
 			// blinking
-			if (isBlinking() && map.get(images.getList().get(index)) != null) {
-				int pixel = 6; // -> almost Size.XS / 5
-				g.drawImage(blinking_tool_image, getX() - pixel + index * getWidth(), getY() - pixel,
-						getWidth() + 2 * pixel, getHeight() + 2 * pixel, null);
+			if (map.get(images.getList().get(index)) != null) {				
+				if (getHighlightCondition()) {				
+					int pixel = getHighlightSize();
+					g.drawImage(blinking_tool_image, getX() - pixel + index * getWidth(), getY() - pixel,
+							getWidth() + 2 * pixel, getHeight() + 2 * pixel, null);
+				}
 			}
 
 			// battery

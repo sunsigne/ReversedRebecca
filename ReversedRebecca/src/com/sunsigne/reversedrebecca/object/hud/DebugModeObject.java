@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -13,7 +14,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DebugModeObject extends GameObject implements TickFree, MouseUserEvent {
+public class DebugModeObject extends GameObject implements Highlightable, TickFree, MouseUserEvent {
 
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
@@ -35,14 +36,21 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 
 	private DebugMode debugMode;
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		return debugMode != null && debugMode.getState();
+	}
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
-	private BufferedImage active_image;
+	private BufferedImage highlightImage;
 
 	private void loadImages() {
 		image = new ImageTask().loadImage("textures/hud/" + debugMode.getName());
-		active_image = new ImageTask().loadImage("textures/hud/" + debugMode.getName() + "_active");
+		highlightImage = new ImageTask().loadImage("textures/hud/" + debugMode.getName() + "_highlight");
 	}
 
 	////////// RENDER ////////////
@@ -50,9 +58,7 @@ public class DebugModeObject extends GameObject implements TickFree, MouseUserEv
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
-
-		if (debugMode.getState())
-			g.drawImage(active_image, getX(), getY(), getWidth(), getHeight(), null);
+		drawHighlight(g, highlightImage);
 	}
 
 	////////// MOUSE ////////////
