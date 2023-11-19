@@ -68,6 +68,14 @@
 
 	////////// EN COURS ////////////
 
+	création des highlights, à faire :
+	- highlight adaptable aux actions à effectuer (aucune, action sur tout l'objet ou juste une partie, etc)
+	- highlight adaptable à l'animation de l'objet (bougie, NPC en mvt, etc) -> les conditions de l'objets s'il est vivant ? son facing ?
+	- code STABLE pour la récupération de texture (éviter le "null si non trouvé ?)
+	- code à implanter dans les "Interactive" directement au lieu des Piranha objets ?
+	- créer une requête Piranha qui permet de switcher de highlight
+	- NPC et certains objets : vérifier l'addatpation au nom du highlight (si possible,n s'adapter au nom d'origine)
+
 	LVL001 :
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
 
