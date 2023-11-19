@@ -82,7 +82,7 @@ public class SoundTask implements CameraDependency {
 				soundclip.start();
 			}
 
-		} catch (LineUnavailableException e) {
+		} catch (LineUnavailableException | IllegalArgumentException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
