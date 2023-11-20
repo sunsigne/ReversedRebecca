@@ -59,7 +59,7 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 	public int getTotalBlinkingTime() {
 		return 80 + Blinking.super.getTotalBlinkingTime();
 	}
-	
+
 	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
 
 	@Override
@@ -122,25 +122,20 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 
 		for (int index = 0; index < size; index += 2) {
 			try {
-				
-			// tool
-			g.drawImage(images.getList().get(index), getX() + index * getWidth(), getY(), getWidth(), getHeight(),
-					null);
 
-			// blinking
-			if (map.get(images.getList().get(index)) != null) {				
-				if (getHighlightCondition()) {				
-					int pixel = getHighlightSize();
-					g.drawImage(blinking_tool_image, getX() - pixel + index * getWidth(), getY() - pixel,
-							getWidth() + 2 * pixel, getHeight() + 2 * pixel, null);
-				}
-			}
+				// tool
+				g.drawImage(images.getList().get(index), getX() + index * getWidth(), getY(), getWidth(), getHeight(),
+						null);
 
-			// battery
-			
-				g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth() - Size.XL / 8, getY(), getWidth(),
-						getHeight(), null);
-				
+				// blinking
+				if (map.get(images.getList().get(index)) != null)
+					drawHighlight(g, blinking_tool_image, index * getWidth(), 0, 0, 0);
+
+				// battery
+
+				g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth() - Size.XL / 8, getY(),
+						getWidth(), getHeight(), null);
+
 			} catch (IndexOutOfBoundsException e) {
 				// can occurs when MultiToolMode is used
 			}

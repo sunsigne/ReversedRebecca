@@ -18,12 +18,16 @@ public interface Highlightable extends Velocity {
 	////////// RENDER ////////////
 
 	default void drawHighlight(Graphics g, BufferedImage image) {
+		drawHighlight(g, image, 0, 0, 0, 0);
+	}
+
+	default void drawHighlight(Graphics g, BufferedImage image, int x, int y, int width, int height) {
 		if (getHighlightCondition() == false)
 			return;
 
 		int pixel = getHighlightSize();
-		g.drawImage(image, getX() - pixel, getY() - pixel, getWidth() + 2 * pixel,
-				getHeight() + 2 * pixel, null);
+		g.drawImage(image, x + getX() - pixel, y + getY() - pixel, width + getWidth() + 2 * pixel,
+				height + getHeight() + 2 * pixel, null);
 	}
 
 }

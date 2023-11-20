@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
@@ -57,17 +56,7 @@ public class RubbleObject extends PuzzlerObject {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX() - getWidth(), getY() - getHeight(), 3 * getWidth(), 3 * getHeight(), null);
-		drawHighlight(g, getHighlightImage());
-	}
-
-	@Override
-	public void drawHighlight(Graphics g, BufferedImage image) {
-		if (getHighlightCondition() == false)
-			return;
-
-		int pixel = getHighlightSize();
-		g.drawImage(image, getX() - getWidth() - pixel, getY() - getHeight() - pixel, 3 * getWidth() + 2 * pixel,
-				3 * getHeight() + 2 * pixel, null);
+		drawHighlight(g, getHighlightImage(), -getWidth(), -getHeight(), 2 * getWidth(), 2 * getHeight());
 	}
 
 }
