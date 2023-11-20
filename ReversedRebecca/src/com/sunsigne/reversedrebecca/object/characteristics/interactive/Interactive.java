@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -14,12 +14,12 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogue;
 
-public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
+public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent {
 
 	public default void createTextAction() {
 		if (getTripleAction() == null)
 			return;
-		
+
 		LAYER.WORLD_TEXT.addObject(new TextAction(this, getTripleAction()));
 		LAYER.WORLD_TEXT.addObject(getTripleAction().getRequirementBubble());
 	}
@@ -110,6 +110,19 @@ public interface Interactive extends Velocity, KeyboardEvent, GamepadEvent {
 		default:
 			return false;
 		}
+	}
+
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	default boolean getHighlightCondition() {
+		if (canPlayerInterfact() == false)
+			return false;
+
+		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())
+			return false;
+
+		return true;
 	}
 
 	////////// KEYBOARD ////////////

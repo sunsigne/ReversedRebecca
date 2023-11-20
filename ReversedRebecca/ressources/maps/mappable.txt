@@ -58,7 +58,7 @@ Trou / Hole -> 4
 Trou vers le haut / Hole Upward -> 5
 
 exemple : 
-Porte (Bleu) Null / Null (Blue) Door : 1-255-0
+Porte (Bleu et Horizontal) Null / Null (Blue and Horizontal) Door : 1-255-0
 Gravas (Bleu et Horizontal) Jaune / Yellow (Blue and Horizontal) Rubble : 2-255-3
 Trou Droite Vert / Green Right Hole : 4-253-2
 

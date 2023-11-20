@@ -38,10 +38,13 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 
 	////////// GROUND LAYER SENDABLE ////////////
 
+	private NullHoleObject initial_hole;
+
 	@Override
 	public Updatable getReplacementUpdatable() {
 		Updatable updatable = new NullHoleObject(getX(), getY());
-		((PuzzlerObject) updatable).setDisabled(isDisabled());		
+		((PuzzlerObject) updatable).setDisabled(isDisabled());
+		this.initial_hole = (NullHoleObject) updatable;
 		return updatable;
 	}
 
@@ -56,6 +59,25 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 
 		onGround = true;
 		sendToGround();
+	}
+
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		if(onGround == false)
+			return false;
+		
+		if (getFacing() != DIRECTION.NULL && initial_hole != null)
+			return initial_hole.getHighlightCondition();
+
+		if (canPlayerInterfact() == false)
+			return false;
+
+		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())
+			return false;
+
+		return true;
 	}
 
 	////////// TEXTURE ////////////
@@ -76,5 +98,5 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 
 		super.render(g);
 	}
-	
+
 }

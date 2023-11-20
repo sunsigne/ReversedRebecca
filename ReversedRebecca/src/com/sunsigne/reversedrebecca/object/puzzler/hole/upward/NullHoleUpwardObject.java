@@ -1,12 +1,14 @@
 package com.sunsigne.reversedrebecca.object.puzzler.hole.upward;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.LayerSendable;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.GoUpAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSendable {
@@ -37,10 +39,13 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 
 	////////// GROUND LAYER SENDABLE ////////////
 
+	private NullHoleUpwardObject initial_hole;
+
 	@Override
 	public Updatable getReplacementUpdatable() {
 		Updatable updatable = new NullHoleUpwardObject(getFacing(), getX(), getY(), true);
 		((PuzzlerObject) updatable).setDisabled(isDisabled());
+		this.initial_hole = (NullHoleUpwardObject) updatable;
 		return updatable;
 	}
 
@@ -55,6 +60,34 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 
 		onLight = true;
 		sendToLight();
+	}
+
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		if (onLight == false)
+			return false;
+
+		if (getFacing() != DIRECTION.NULL && initial_hole != null)
+			return initial_hole.getHighlightCondition();
+
+		if (canPlayerInterfact() == false)
+			return false;
+
+		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())
+			return false;
+
+		return true;
+	}
+
+	////////// TEXTURE ////////////
+
+	@Override
+	public BufferedImage getHighlightImage() {
+		if (highlightImage == null)
+			highlightImage = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "null" + "_" + "highlight");
+		return highlightImage;
 	}
 
 	////////// RENDER ////////////

@@ -125,8 +125,9 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
-	2h00 - parler dans les codex du chargement des données sauvegardées ?	
 	1h00 - les portes grises n'ont pas encore de mappable
+	1h00 - gordon est mal introduit dans les fichiers
+	2h00 - parler dans les codex du chargement des données sauvegardées ?
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?		
 	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)

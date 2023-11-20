@@ -63,6 +63,9 @@ public class ToolObject extends LootObject implements Difficulty, Highlightable 
 
 	@Override
 	public void render(Graphics g) {
+		if (image == null)
+			return;
+
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 		drawHighlight(g, blinking_image);
 	}
