@@ -19,7 +19,7 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 		setStunned(true); // looks stupid, but allow to bypass the RoundToTileLaw
 
 		createSpammable();
-		loadImages();
+		refreshHighlight();
 	}
 
 	////////// PATH FINDER ////////////
@@ -89,6 +89,8 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 
 	////////// HIGHLIGHT ////////////
 
+	private BufferedImage highlightImage;
+
 	@Override
 	public boolean getHighlightCondition() {
 		if (highlightImage == null)
@@ -97,33 +99,9 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 		return super.getHighlightCondition();
 	}
 
-	private int var;
-
-	private String getVarName(int var) {
-		if (var < 0)
-			var = this.var;
-
-		if (var == 0)
-			return "";
-
-		String num = String.valueOf(var);
-		return "-VAR" + num;
-	}
-
-	////////// TEXTURE ////////////
-
-	private BufferedImage highlightImage;
-
-	private void loadImages() {
-		loadHighlightVar(0);
-	}
-
-	public void loadHighlightVar(int var) {
-		if (var >= 0)
-			this.var = var;
-
+	public void refreshHighlight() {
 		highlightImage = new ImageTask().loadImage(
-				"maps/" + World.get().getMapName() + "/" + "highlights/" + getName() + getVarName(var), true);
+				"maps/" + World.get().getMapName() + "/" + "highlights/" + getName(), true);
 	}
 
 	////////// RENDER ////////////

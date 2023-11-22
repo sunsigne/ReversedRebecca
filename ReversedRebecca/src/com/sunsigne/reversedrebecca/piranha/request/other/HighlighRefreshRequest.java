@@ -5,15 +5,15 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class HighlighVarRequest implements Request {
+public class HighlighRefreshRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public HighlighVarRequest() {
+	public HighlighRefreshRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new HighlighVarRequest();
+	private static Request request = new HighlighRefreshRequest();
 
 	@Override
 	public Request getRequest() {
@@ -22,7 +22,7 @@ public class HighlighVarRequest implements Request {
 
 	@Override
 	public String getType() {
-		return "HIGHLIGHT_VAR";
+		return "HIGHLIGHT_REFRESH";
 	}
 
 	@Override
@@ -35,8 +35,7 @@ public class HighlighVarRequest implements Request {
 		if (object instanceof InteractiveObject == false)
 			return;
 
-		int var = Integer.parseInt(target);
-		((InteractiveObject) object).loadHighlightVar(var);
+		((InteractiveObject) object).refreshHighlight();
 	}
 
 }
