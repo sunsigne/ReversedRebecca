@@ -1,51 +1,85 @@
 ////// CAMERA //////
 
+Le Type de Requête CAMERA permet de déterminer le type de Caméra ou son emplacement.
 
-Le Type de Requête CAMERA permet de déterminer l'emplacement de la Caméra.
-
-exemple :
+Exemple : 
 TIME -> 0 = CAMERA -> 0-0
 TIME -> 0 = GOTO -> CAMERA:0-0
 
-Lorsque la Condition sera vérifiée, la Caméra se placera en x=0 y=0.
+Lorsque la Condition sera vérifiée, la Caméra se placera en x = 0 et y = 0.
 
-Note : il est tout à fait autorisé d'entrer "PLAYER" comme Cible à la place de coordonnées afin de demander à la Caméra suivre le joueur.
-Note : la cible "FIX" est également autorisée, la Caméra va alors cesser de suivre le joueur et rester "là où elle est".
-Note : "PLAYER_FLUID" est également une Cible autorisée. La Caméra va alors se déplacer rapidement jusqu'au joueur au lieu de s'y "téléporter".
-Note : le comportement par défaut de la Caméra n'est pas de suivre le joueur, ni de se placer en 0-0 ; mais conserver le dernier comportement retenu. Il faudra donc configurer le fichier SET-UP à chaque fois.
+Les Cibles suivantes permettent de modifier le comportement de la Caméra :
+PLAYER : ordonne à la Caméra de suivre le joueur.
+PLAYER_FLUID : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa position.
+FIX : ordonne à la caméra de cesser de suivre le joueur et rester "là où elle se trouve actuellement".
 
-
-////// DISPLAY //////
-
-
-Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x et y.
-De la même façon que le Type de Requête HITBOX ne changeait QUE les dimensions de la hitbox d'un objet (voir "requêtes state.txt"), DISPLAY ne change QUE le visuel d'un objet et aucune autre caractéristique.
-Note : dans la mesure où seuls les objets Piranha "vivants" ont un visuel, le Type de Requête DISPLAY ne s'applique qu'à ces derniers. Il devient pratique lorsque l'un d'eux se trouve dans une situation particulaire comme dans un lit, sur une chaise, etc.
-
-L'échelle est de 16 pixels pour une taille de 1 case (voir le Type de requête HITBOX pour mieux comprendre ce point s'il est flou pour vous).
-
-exemple :
-$ -> DISPLAY_SIT = DISPLAY -> 0, -1
-
-Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle.
-Comme vous le voyez, il est possible d'entrer des valeurs négatives pour ce Type de Requête.
+Note : le comportement par défaut de la Caméra au chargement d'une carte est de se placer en 0-0.
 
 
 ////// INTERRUPT_BOSS //////
 
+Le Type de Requête INTERRUPT_BOSS permet de terminer l'action en cours de tous les Boss actuellement présents sur la même couche (voir "index") que l'objet lançant la Requête. Dit autrement, si un Boss est en train de se reposer, il retourne à l'attaque.
 
-Le Type de Requête INTERRUPT_BOSS permet de terminer l'action en cours de tous les Boss actuellement présents sur la carte. Dit autrement, si un Boss est en train de se reposer, il retourne à l'attaque.
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite pour respecter la syntaxe attendue.
-Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
-
-exemple :
+Exemple :
 WONPUZZLE -> 6-0 = INTERRUPT_BOSS -> PROCESS
 
-Attention ! Pour des raisons de performance, seules les Boss présent sur la même COUCHE (voir index.txt) que l'objet lançant la Requête sont affectées.
+Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose comme : TRUE, PROCESS ou START.
+
+
+////// DISPLAY //////
+
+Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x et y. 
+De la même façon que le Type de Requête HITBOX ne change QUE les dimensions de la hitbox d'un objet (voir "requêtes state"), DISPLAY ne change QUE le visuel de l'objet : aucune autre caractéristique n'est prise en compte.
+Il est utilisé lorsqu'un personnage se trouve dans un lit, sur une chaise, etc.
+
+Note : dans la mesure où seuls les objets Piranha "vivants" ont officiellement un visuel, le Type de Requête DISPLAY ne s'applique qu'à ces derniers.
+
+L'échelle est de 16 pixels pour une case (voir le Type de requête HITBOX).
+
+Exemple :
+$ -> DISPLAY_SIT = DISPLAY -> 0, -1
+
+Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle.
+
+Note : il est possible d'entrer des valeurs négatives pour ce Type de Requête.
+
+
+////// HIGHLIGHT //////
+
+Le Type de Requête HIGHLIGHT permet de déterminer l'emplacement visuel du détourage d'un objet interactif lorsque celui-ci peut être utilisé. 
+
+L'échelle est de 1 pour une case.
+
+Exemple :
+$ -> HIGHLIGHT_INIT = HIGHLIGHT -> -1, -1, 2, 3
+
+Lorsque la Condition sera vérifiée, le détourage de l'objet sera visuellement décalé comme suit : x=-1, y=-1, largeur=2, hauteur=3.
+
+Note : il est possible d'entrer des valeurs négatives pour ce Type de Requête.
+
+
+////// HIGHLIGHT_ABSOLUTE //////
+
+Le Type de Requête HIGHLIGHT_ABSOLUTE a exactement le même effet et est soumis aux mêmes règles que le permet Type de Requête HIGHLIGHT.
+La seule différence avec cette dernière est que HIGHLIGHT_ABSOLUTE ne se base pas sur un décalage relative "par rapport" à la position de l'objet sur la map, mais utilise les coordonnées de la carte directement.
+
+
+////// HIGHLIGHT_VAR //////
+
+Le Type de Requête HIGHLIGHT_VAR permet de changer le fichier de référence pour le visuel du détourage d'un objet. 
+
+Exemple :
+$ -> HIGHLIGHT_INIT = HIGHLIGHT_VAR -> 1
+$ -> HIGHLIGHT_INIT = GOTO -> HIGHLIGHT_VAR:1
+
+Lorsque la Condition sera vérifiée, le fichier de référence pour le détourage de l'objet sera "(nom de l'objet)-VAR1.png".
+
+Note : lorsque la valeur de la Cible est 0, le fichier de référence sera "(nom de l'objet).png" et non "(nom de l'objet)-VAR0.png".
+
+ATTENTION ! Changer le nom de l'objet (voir NAME dans "requêtes state") change également le fichier de référence !
 
 
 ////// CUTSCENE //////
-
 
 Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.
 Note : il peut parfois être utile de vérifier si le Joueur respecte certaines conditions avant de lancer une cinématique (voir READY_PLAYER dans "requêtes conditionnelles").
@@ -87,7 +121,6 @@ Rappel, le mot "RUNNING" n'est pas analysé ici. L'écriture conditionnelle du T
 
 
 ////// WAITFOR //////
-
 
 Le Type de Requête WAITFOR est à la fois l'un des plus utiles et le plus compliqué à utiliser correctement !
 L'écriture d'un WAITFOR, même si elle est différente, ressemble un peu à l'écriture Conditionnelle : il accepte une cible de "Condition", suivi d'une ou de plusieurs Cibles séparées par des virgules (comme pour GOTO), exécutée(s) lorsque la condition est vérifiée.

@@ -17,6 +17,8 @@ Lorsque la Condition sera vérifiée, l'objet sera renommé Bob.
 Cette Requête est très utile juste après la génération d'une map afin d'établir le nom d'un personnage (et ainsi d'afficher les bonnes textures).
 Note : le nom générique OBJECT (qu'on trouvera souvent dans les fichiers de dialogue) fait référence à l'objet Piranha en cours. Le nom PLAYER est également possible pour faire référence au joueur.
 
+ATTENTION ! Changer le nom d'un objet interactif change également le fichier de référence de son détourage (voir HIGHLIGHT_VAR dans "requêtes autres") !
+
 
 ////// FACING //////
 
