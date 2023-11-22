@@ -1,0 +1,45 @@
+
+OBJ-17 = Desk
+OBJ-18 = Plant
+OBJ-19 = Chair
+
+///// LIVING ROOM /////
+
+OBJ-20 = Vertical Couch
+OBJ-21 = Couch Leaver
+OBJ-22 = Horizontal Couch
+OBJ-44 = Horizontal Couch Left Part
+OBJ-23 = Couch Leaver
+OBJ-24 = TV
+OBJ-25 = Bookshelf
+OBJ-26 = Table
+OBJ-27 = Chair Toward Up
+OBJ-28 = Chair Toward Down
+OBJ-29 = Chair Toward Left
+OBJ-30 = Chair Toward Right
+OBJ-31 = Chair Leaver
+
+///// KITCHEN /////
+
+OBJ-32 = Bar
+OBJ-33 = Trash
+// from top right
+OBJ-34 = Plant
+OBJ-35 = Hotplates
+OBJ-36 = Bar
+OBJ-37 = Sink
+OBJ-38 = Bar
+// to bottom left
+OBJ-39 = Fridge
+OBJ-40 = Gaz Sound
+OBJ-48 = Cookie Counter
+
+///// ENTRANCE /////
+
+NPC-02 = Sarah
+OBJ-41 = Special Exit Door
+OBJ-42 = /hidden
+OBJ-43 = /hidden
+OBJ-45 = Sarah Toilet Path Checker
+OBJ-46 = Wall
+OBJ-47 = Glasses of water

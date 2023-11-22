@@ -97,8 +97,13 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 		return super.getHighlightCondition();
 	}
 
+	private int var;
+
 	private String getVarName(int var) {
-		if (var <= 0)
+		if (var < 0)
+			var = this.var;
+
+		if (var == 0)
 			return "";
 
 		String num = String.valueOf(var);
@@ -114,6 +119,9 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 	}
 
 	public void loadHighlightVar(int var) {
+		if (var >= 0)
+			this.var = var;
+
 		highlightImage = new ImageTask().loadImage(
 				"maps/" + World.get().getMapName() + "/" + "highlights/" + getName() + getVarName(var), true);
 	}

@@ -66,17 +66,19 @@ La seule différence avec cette dernière est que HIGHLIGHT_ABSOLUTE ne se base 
 
 ////// HIGHLIGHT_VAR //////
 
-Le Type de Requête HIGHLIGHT_VAR permet de changer le fichier de référence pour le visuel du détourage d'un objet. 
+Le Type de Requête HIGHLIGHT_VAR permet de changer le fichier de référence pour le visuel du détourage d'un objet, et de réactualiser son visuel. 
 
 Exemple :
 $ -> HIGHLIGHT_INIT = HIGHLIGHT_VAR -> 1
 $ -> HIGHLIGHT_INIT = GOTO -> HIGHLIGHT_VAR:1
 
-Lorsque la Condition sera vérifiée, le fichier de référence pour le détourage de l'objet sera "(nom de l'objet)-VAR1.png".
+Lorsque la Condition sera vérifiée, le fichier de référence pour le détourage de l'objet sera "(nom de l'objet)-VAR1.png", et le visuel de ce détourage sera réactualisé.
 
 Note : lorsque la valeur de la Cible est 0, le fichier de référence sera "(nom de l'objet).png" et non "(nom de l'objet)-VAR0.png".
 
-ATTENTION ! Changer le nom de l'objet (voir NAME dans "requêtes state") change également le fichier de référence !
+ATTENTION ! Changer le nom de l'objet (voir NAME dans "requêtes state") change également le fichier de référence, mais sans réactualiser le visuel.
+
+Note : lorsque la valeur de la Cible est -1, le visuel du détourage de l'objet est réactualisé tout en conservant le même fichier de référence.
 
 
 ////// CUTSCENE //////

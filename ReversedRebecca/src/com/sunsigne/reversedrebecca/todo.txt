@@ -69,11 +69,8 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- highlight adaptable aux actions à effectuer (aucune, action sur tout l'objet ou juste une partie, etc)
-	- highlight adaptable à l'animation de l'objet (bougie, NPC en mvt, etc) -> les conditions de l'objets s'il est vivant ? son facing ?
-	- code STABLE pour la récupération de texture (éviter le "null si non trouvé ?)
-	- créer une requête Piranha qui permet de switcher de highlight
-	- NPC et certains objets : vérifier l'addatpation au nom du highlight (si possible,n s'adapter au nom d'origine)
+	- créer un petit timer pour que les highlights restent visuelement sur qq frames avant de disparaitre (à cause du clignottement de la baignoire par exemple) + créer une Interface basée sur render pour faire ça ! Ca facilitera pour les bonus texts
+	- NPC : créer les highlight
 
 	LVL001 :
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
@@ -147,6 +144,7 @@
 		
 	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 
+	3h00 - créer dans les menu options la possibilité de désactiver les highlights
 	dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
@@ -166,7 +164,10 @@
 	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition. En plus, je n'aime pas l'aléatoire
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
-
+	menu bonus après new game + :
+	- nivaeaux desactivé (debug room + tuto room)
+	- possibilité de refaire le niveau de gestion (réparation du labo)
+	- consulter les textures non utilisées
 
 	////////// PERSONNAGES A FAIRE ////////////
 
