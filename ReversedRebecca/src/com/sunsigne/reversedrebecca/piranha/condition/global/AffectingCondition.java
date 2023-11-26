@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.condition.global;
 
+import java.util.List;
+
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -45,13 +47,26 @@ public class AffectingCondition extends GlobalInstruction {
 
 			var list = tempLayer.getHandler().getList();
 
-			for (Updatable tempUpdatable : list) {
+			loadNominativePiranha(list, name, true);
 
-				if (tempUpdatable instanceof PiranhaObject == false)
-					continue;
+			if (list.isEmpty())
+				loadNominativePiranha(list, name, false);
+		}
+	}
 
-				PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
+	private void loadNominativePiranha(List<Updatable> list, String name, boolean exactNameMatch) {
+		for (Updatable tempUpdatable : list) {
+
+			if (tempUpdatable instanceof PiranhaObject == false)
+				continue;
+
+			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
+
+			if (exactNameMatch) {
 				if (tempObject.getName().equalsIgnoreCase(name))
+					getList().addObject(tempObject);
+			} else {
+				if (tempObject.getName().contains(name))
 					getList().addObject(tempObject);
 			}
 		}
