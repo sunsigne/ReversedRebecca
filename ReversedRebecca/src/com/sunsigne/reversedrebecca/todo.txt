@@ -69,7 +69,7 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- à faire : TUTO, WS000, LVL001, MOLE_0, TEST?
+	- à faire : TUTO, LVL001, MOLE_0
 	- NPC : créer les highlight
 
 	LVL001 :
