@@ -122,7 +122,8 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 			if (getDelayer() != null)
 				getDelayer().destroy();
 
-			setDelayer(new GameTimer(2));
+			setDelayer(new GameTimer(2, true, () -> {
+			}));
 		}
 
 		if (getDelayer() != null && getDelayer().isReady())
