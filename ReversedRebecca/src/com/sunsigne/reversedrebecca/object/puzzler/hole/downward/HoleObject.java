@@ -76,6 +76,13 @@ public class HoleObject extends PuzzlerObject implements Facing {
 		tripleAction = new TripleAction(requirementDig, digAction, null, null);
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean isHighlightAbovePlayer() {
+		return false;
+	}
+
 	////////// COLLISION ////////////
 
 	@Override

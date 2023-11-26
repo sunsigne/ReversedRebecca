@@ -15,6 +15,10 @@ public interface Highlightable extends Velocity {
 		return (2 * getWidth()) / Size.XS;
 	}
 
+	default boolean isHighlightAbovePlayer() {
+		return true;
+	}
+	
 	////////// RENDER ////////////
 
 	default void drawHighlight(Graphics g, BufferedImage image) {

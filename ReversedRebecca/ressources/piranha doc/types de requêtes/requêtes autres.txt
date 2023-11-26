@@ -79,6 +79,20 @@ Lorsque la Condition sera vérifiée, le visuel du détourage de l'objet sera r�
 Note : par souci de clarté, il est conseillé d'écrire pour Cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
 
 
+////// HIGHLIGHT_ABOVE_PLAYER //////
+
+
+Le Type de Requête HIGHLIGHT_ABOVE_PLAYER permet de changer la propriété visuelle du détourage d'un objet, de sorte qu'il apparaisse soit devant, soit derrière le joueur.
+
+exemple :
+TIME -> 0 = HIGHLIGHT_ABOVE_PLAYER -> FALSE
+TIME -> 0 = GOTO -> HIGHLIGHT_ABOVE_PLAYER:FALSE
+
+Lorsque la Condition sera vérifiée, le visuel du détourage de l'objet apparaitra derrière le joueur.
+
+Note : par défaut, le visuel du détourage d'un objet apparait devant le joueur.
+
+
 ////// CUTSCENE //////
 
 Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.

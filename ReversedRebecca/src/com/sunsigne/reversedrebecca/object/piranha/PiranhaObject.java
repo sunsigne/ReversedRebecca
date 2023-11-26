@@ -33,6 +33,7 @@ public abstract class PiranhaObject extends GameObject
 		super(x, y);
 		this.name = name.toLowerCase();
 		set_stun_at_waitfor_attribution(true);
+		setHighlightAbovePlayer(true);
 		setBlockingPath(true);
 
 		if (World.get() != null)
@@ -249,6 +250,19 @@ public abstract class PiranhaObject extends GameObject
 		this.registeredTripleAction = tripleAction;
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	private boolean hightligh_above_player;
+
+	@Override
+	public boolean isHighlightAbovePlayer() {
+		return hightligh_above_player;
+	}
+
+	public void setHighlightAbovePlayer(boolean hightligh_above_player) {
+		this.hightligh_above_player = hightligh_above_player;
+	}
+	
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
