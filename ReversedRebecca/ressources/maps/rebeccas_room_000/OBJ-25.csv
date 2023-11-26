@@ -1,9 +1,10 @@
-TIME -> 0 = GOTO -> HITBOX_INIT
+TIME -> 0 = GOTO -> HITBOX_INIT, HIGHLIGHT_INIT
 
 
 //// STATE ////
 
 $ -> HITBOX_INIT = HITBOX -> -8, 0, 32, 12
+$ -> HIGHLIGHT_INIT = HIGHLIGHT -> -1, -1, 3, 2
 
 
 //// SEARCHING KEY ////

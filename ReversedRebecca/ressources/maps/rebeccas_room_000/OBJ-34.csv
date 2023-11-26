@@ -1,9 +1,10 @@
-TIME -> 0 = GOTO -> HITBOX_INIT
+TIME -> 0 = GOTO -> HITBOX_INIT, HIGHLIGHT_INIT
 
 
 //// STATE ////
 
 $ -> HITBOX_INIT = HITBOX -> 0, 0, 12, 13
+$ -> HIGHLIGHT_INIT = HIGHLIGHT -> 0, -1, 1, 2
 
 
 //// WATER PLANT ////

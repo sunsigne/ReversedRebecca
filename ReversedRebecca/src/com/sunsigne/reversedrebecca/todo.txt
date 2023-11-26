@@ -69,7 +69,7 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- RR000 la plante au niveau du bureau est derrière le bureau...
+	- à faire : TUTO, WS000, LVL001, MOLE_0, TEST?
 	- NPC : créer les highlight
 
 	LVL001 :
