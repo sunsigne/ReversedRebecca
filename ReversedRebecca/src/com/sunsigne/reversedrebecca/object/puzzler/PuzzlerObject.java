@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -93,6 +94,18 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 		this.isDisabled = isDisabled;
 	}
 
+	private GameTimer delayer;
+	
+	@Override
+	public GameTimer getDelayer() {
+		return delayer;
+	}
+
+	@Override
+	public void setDelayer(GameTimer delayer) {
+		this.delayer = delayer;
+	}
+	
 	protected abstract void loadTripleAction();
 
 	////////// TEXTURE ////////////

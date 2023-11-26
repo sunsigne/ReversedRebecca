@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -248,6 +249,18 @@ public abstract class PiranhaObject extends GameObject
 
 	public void setRegisteredTripleAction(TripleAction tripleAction) {
 		this.registeredTripleAction = tripleAction;
+	}
+	
+	private GameTimer delayer;
+	
+	@Override
+	public GameTimer getDelayer() {
+		return delayer;
+	}
+
+	@Override
+	public void setDelayer(GameTimer delayer) {
+		this.delayer = delayer;
 	}
 
 	////////// HIGHLIGHT ////////////

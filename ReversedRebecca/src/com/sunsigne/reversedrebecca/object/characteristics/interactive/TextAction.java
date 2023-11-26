@@ -68,7 +68,7 @@ public class TextAction implements Updatable {
 			return;
 
 		// player can't interact
-		if (!interactive.canPlayerInterfact(true))
+		if (!interactive.canPlayerInterfactDelayer(true))
 			return;
 
 		// no action can be performed

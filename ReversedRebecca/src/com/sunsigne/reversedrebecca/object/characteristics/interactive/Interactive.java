@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
@@ -112,11 +113,29 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 		}
 	}
 
+	public GameTimer getDelayer();
+
+	public void setDelayer(GameTimer delayer);
+
+	public default boolean canPlayerInterfactDelayer(boolean checkFakeInterract) {
+		if (canPlayerInterfact(checkFakeInterract)) {
+			if (getDelayer() != null)
+				getDelayer().destroy();
+
+			setDelayer(new GameTimer(2));
+		}
+
+		if (getDelayer() != null && getDelayer().isReady())
+			setDelayer(null);
+
+		return getDelayer() != null;
+	}
+
 	////////// HIGHLIGHT ////////////
 
 	@Override
 	default boolean getHighlightCondition() {
-		if (canPlayerInterfact() == false)
+		if (canPlayerInterfactDelayer(false) == false)
 			return false;
 
 		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())

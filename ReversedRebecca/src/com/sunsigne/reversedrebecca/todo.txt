@@ -69,7 +69,7 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- créer un petit timer pour que les highlights restent visuelement sur qq frames avant de disparaitre (à cause du clignottement de la baignoire par exemple) + créer une Interface basée sur render pour faire ça ! Ca facilitera pour les bonus texts
+	- RR000 la plante au niveau du bureau est derrière le bureau...
 	- NPC : créer les highlight
 
 	LVL001 :
