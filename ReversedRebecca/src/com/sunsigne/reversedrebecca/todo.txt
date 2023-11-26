@@ -69,8 +69,9 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- à faire : TUTO, LVL001, MOLE_0
+	- RR000 travail de dégeulasse sur les chaises
 	- NPC : créer les highlight
+	- debug -> refaire le couteau suisse
 
 	LVL001 :
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
@@ -122,6 +123,7 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
+	1h00 - faire les highlights du lvl tuto
 	1h00 - les portes grises n'ont pas encore de mappable
 	1h00 - gordon est mal introduit dans les fichiers
 	2h00 - parler dans les codex du chargement des données sauvegardées ?
@@ -168,6 +170,7 @@
 	- nivaeaux desactivé (debug room + tuto room)
 	- possibilité de refaire le niveau de gestion (réparation du labo)
 	- consulter les textures non utilisées
+	- tous les succès abandonnées
 
 	////////// PERSONNAGES A FAIRE ////////////
 
@@ -272,6 +275,7 @@
 	
 	////////// MOLE 0 ////////////
 	
+	faire les highlights
 	boite en carton -> faire pop SUR le joueur comme dans RR000 (+ vérifier si soflock possible - car Out Of Range)	
 	faire le plein -> donner une bombe est-il vraiment nécessaire ?? voir si c'est mieux de s'en passer sinon (pour le blink dans l'affichage HUD)
 	mieux dessiner le lit en paille ?
