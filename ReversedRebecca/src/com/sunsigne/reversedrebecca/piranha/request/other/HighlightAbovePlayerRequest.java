@@ -22,7 +22,7 @@ public class HighlightAbovePlayerRequest extends ConditionalRequest {
 
 	@Override
 	public String getType() {
-		return "HIGHTLIGHT_ABOVE_PLAYER";
+		return "HIGHLIGHT_ABOVE_PLAYER";
 	}
 
 	@Override
