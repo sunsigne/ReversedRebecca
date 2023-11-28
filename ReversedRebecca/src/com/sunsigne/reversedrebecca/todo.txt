@@ -69,9 +69,10 @@
 	////////// EN COURS ////////////
 
 	création des highlights, à faire :
-	- RR000 travail de dégeulasse sur les chaises
 	- NPC : créer les highlight
 	- debug -> refaire le couteau suisse
+
+	rebatptiser raymond en james
 
 	LVL001 :
 	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
