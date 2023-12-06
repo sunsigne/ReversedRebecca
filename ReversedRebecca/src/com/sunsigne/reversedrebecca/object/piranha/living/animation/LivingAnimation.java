@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
@@ -62,6 +63,8 @@ public class LivingAnimation {
 	@SuppressWarnings("unchecked")
 	private Cycloid<BufferedImage>[] cycloid = new Cycloid[4];
 
+	private static HashMap<BufferedImage, BufferedImage> map = new HashMap<>();
+
 	private void loadAnimations() {
 		cycloid[DIRECTION.LEFT.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.LEFT));
 		cycloid[DIRECTION.RIGHT.getNum()] = new Cycloid<BufferedImage>(loadAnimation(DIRECTION.RIGHT));
@@ -73,19 +76,19 @@ public class LivingAnimation {
 
 		// no orientable case
 		String path = name;
-		if(orientable)
+		if (orientable)
 			path = path + direction.getName();
 
 		// no animation case
 		if (animation_time == -1)
 			return new BufferedImage[] { loadImage(path) };
-		
+
 		BufferedImage img0 = loadImage(path + "_0");
 		BufferedImage img1 = loadImage(path + "_1");
 
 		return new BufferedImage[] { img0, img1 };
 	}
-	
+
 	private BufferedImage loadImage(String imageName) {
 		String imagePath = "textures/characters/" + living.getName() + "/" + imageName;
 
@@ -95,6 +98,11 @@ public class LivingAnimation {
 		if (img == null)
 			img = new ImageTask().loadImage(imagePath.replace(living.getName(), "error"));
 
+		// load of highlights
+		BufferedImage hightlight = new ImageTask().loadImage(imagePath.replace(imageName, "highlights/" + imageName),
+				true);
+		map.put(img, hightlight);
+
 		return img;
 	}
 
@@ -103,6 +111,10 @@ public class LivingAnimation {
 	public BufferedImage getImage() {
 		int facing = living.getFacing().getNum();
 		return cycloid[facing].getState();
+	}
+
+	public BufferedImage getHightlightFromImage(BufferedImage image) {
+		return map.get(image);
 	}
 
 }

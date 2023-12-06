@@ -68,8 +68,11 @@
 
 	////////// EN COURS ////////////
 
-	création des highlights, à faire :
+	highlights :
+	- rr000 adapter le choice sur sarah pour le calin
 	- NPC : créer le code des highlight
+
+	lvl001 retirer l'image "subliminale" de la clef vertes de la porte "toc toc"
 
 	rebatptiser raymond en james ?
 

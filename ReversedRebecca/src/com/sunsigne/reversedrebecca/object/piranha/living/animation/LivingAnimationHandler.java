@@ -119,4 +119,8 @@ public class LivingAnimationHandler {
 		return getAnimation().getImage();
 	}
 
+	public BufferedImage getHightlightImage() {
+		return getAnimation().getHightlightFromImage(getImage());
+	}
+
 }
