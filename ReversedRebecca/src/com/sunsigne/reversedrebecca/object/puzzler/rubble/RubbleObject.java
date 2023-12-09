@@ -51,6 +51,13 @@ public class RubbleObject extends PuzzlerObject {
 		tripleAction = new TripleAction(requirementExplode, explodeAction, null, null);
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean isHighlightAbovePlayer() {
+		return false;
+	}
+	
 	////////// RENDER ////////////
 
 	@Override

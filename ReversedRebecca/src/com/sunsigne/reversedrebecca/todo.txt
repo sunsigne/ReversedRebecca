@@ -71,7 +71,7 @@
 	highlights :
 	- rr000 adapter le choice sur sarah pour le calin
 
-	les rubbles ne disparaissent pas à temps lorsqu'un dialogue se lance...
+	bubblerequirement : la porte du sas en bas est buguée 
 
 	rebatptiser raymond en james ?
 
