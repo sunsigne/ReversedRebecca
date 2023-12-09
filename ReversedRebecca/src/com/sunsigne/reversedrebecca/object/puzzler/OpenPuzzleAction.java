@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class OpenPuzzleAction extends Action {
@@ -57,6 +58,7 @@ public abstract class OpenPuzzleAction extends Action {
 				if (nullObject != null)
 					handler.addObject(nullObject);
 				handler.removeObject(puzzlerObject);
+				Game.getInstance().forceLoop();
 			}
 
 			PuzzlerAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
