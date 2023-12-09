@@ -136,7 +136,7 @@ public class TextAction implements Updatable {
 				continue;
 
 			PiranhaObject tempPiranha = (PiranhaObject) tempObj;
-			if (tempPiranha.canPlayerInterfact())
+			if (tempPiranha.canPlayerInterfact() && tempPiranha.getTripleAction().cannotDoAnyAction() == false)
 				return true;
 		}
 

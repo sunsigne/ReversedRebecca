@@ -71,8 +71,6 @@
 	highlights :
 	- rr000 adapter le choice sur sarah pour le calin
 
-	bubblerequirement : la porte du sas en bas est buguée 
-
 	rebatptiser raymond en james ?
 
 	LVL001 :
