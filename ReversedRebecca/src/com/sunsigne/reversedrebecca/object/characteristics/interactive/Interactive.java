@@ -117,6 +117,7 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	public void setDelayer(GameTimer delayer);
 
+	// besure the highlight for large objects does not "blink" when the player change of tile
 	public default boolean canPlayerInterfactDelayer(boolean checkFakeInterract) {
 		if (canPlayerInterfact(checkFakeInterract)) {
 			if (getDelayer() != null)

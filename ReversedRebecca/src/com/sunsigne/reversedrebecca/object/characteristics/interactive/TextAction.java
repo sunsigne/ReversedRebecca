@@ -5,7 +5,9 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
@@ -22,6 +24,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKe
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TextAction implements Updatable {
@@ -105,6 +108,9 @@ public class TextAction implements Updatable {
 	///// requirement bubble /////
 
 	private void drawRequirementBubble(Player player, RequirementBubbleObject requirementBubble) {
+		if (thereIsAPiranhaAbove())
+			return;
+
 		DIRECTION facing = player.getFacing();
 
 		for (DIRECTION tempDirection : DIRECTION.values()) {
@@ -120,24 +126,40 @@ public class TextAction implements Updatable {
 		requirementBubble.setVisible(true);
 	}
 
+	// fix subliminal display of RequirementBubble when a priority Piranha is on the same spot
+	private boolean thereIsAPiranhaAbove() {
+		Interactive obj = interactive;
+		var list = Handler.getObjectsAtPos(obj.getHandler(), obj.getX(), obj.getY(), obj.getSize(), true);
+
+		for (GameObject tempObj : list.getList()) {
+			if (tempObj instanceof PiranhaObject == false)
+				continue;
+
+			PiranhaObject tempPiranha = (PiranhaObject) tempObj;
+			if (tempPiranha.canPlayerInterfact())
+				return true;
+		}
+
+		return false;
+	}
+
 	private int[] getRequirementBubbleRect(DIRECTION facing) {
 
 		int gap = Size.XS / 2;
-		
+
 		switch (facing) {
 		case LEFT:
-			return new int[] { interactive.getX() - Size.M - gap, interactive.getY() - Size.XS / 2, interactive.getWidth(),
-					interactive.getHeight() };
+			return new int[] { interactive.getX() - Size.M - gap, interactive.getY() - Size.XS / 2,
+					interactive.getWidth(), interactive.getHeight() };
 		case RIGHT:
-			return new int[] { interactive.getX() + Size.M + gap, interactive.getY() - Size.XS / 2, interactive.getWidth(),
-					interactive.getHeight() };
+			return new int[] { interactive.getX() + Size.M + gap, interactive.getY() - Size.XS / 2,
+					interactive.getWidth(), interactive.getHeight() };
 		case UP:
-			return new int[] { interactive.getX() - Size.XS / 2, interactive.getY() - Size.L - gap, interactive.getWidth(),
-					interactive.getHeight() };
+			return new int[] { interactive.getX() - Size.XS / 2, interactive.getY() - Size.L - gap,
+					interactive.getWidth(), interactive.getHeight() };
 		case DOWN:
-			return new int[] { interactive.getX()
-					- Size.XS / 2, interactive.getY() + Size.M + gap, interactive.getWidth(),
-					interactive.getHeight() };
+			return new int[] { interactive.getX() - Size.XS / 2, interactive.getY() + Size.M + gap,
+					interactive.getWidth(), interactive.getHeight() };
 		default:
 			return interactive.getRect();
 		}
@@ -165,9 +187,9 @@ public class TextAction implements Updatable {
 			centeredText = DIRECTION.RIGHT;
 
 		Color color = Color.WHITE;
-		
+
 		String text = action.getDisplayedText();
-		if(text.contains("(END_LVL)")) {
+		if (text.contains("(END_LVL)")) {
 			text = text.replace("(END_LVL)", "");
 			color = new Color(255, 220, 0);
 		}

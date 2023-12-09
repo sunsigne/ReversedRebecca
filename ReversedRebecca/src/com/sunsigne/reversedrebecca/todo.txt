@@ -72,7 +72,9 @@
 	- rr000 adapter le choice sur sarah pour le calin
 	- NPC : créer le code des highlight
 
+	les rubbles ne disparaissent pas à temps lorsqu'un dialogue se lance...
 	lvl001 retirer l'image "subliminale" de la clef vertes de la porte "toc toc"
+	couteau suisse debug highlight -> refaire
 
 	rebatptiser raymond en james ?
 

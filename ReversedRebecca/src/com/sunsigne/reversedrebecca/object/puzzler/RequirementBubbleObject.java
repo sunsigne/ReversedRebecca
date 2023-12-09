@@ -68,15 +68,32 @@ public class RequirementBubbleObject extends GameObject {
 	////////// RENDER ////////////
 
 	private boolean visible;
+	private int registeredX, registeredY;
 
+	// besure correct display without blinking or misplacement
 	public void setVisible(boolean visible) {
-		this.visible = visible;
+		if (visible) {
+			this.visible = true;
+			if (registeredX == 0 && registeredY == 0) {
+				registeredX = getX();
+				registeredY = getY();
+			}
+		}
+
+		else {
+			this.visible = false;
+			registeredX = 0;
+			registeredY = 0;
+		}
 	}
 
 	private String text;
 
 	@Override
 	public void render(Graphics g) {
+		if (registeredX != getX() || registeredY != getY())
+			setVisible(false);
+
 		if (visible == false)
 			return;
 
