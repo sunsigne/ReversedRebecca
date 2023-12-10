@@ -4,7 +4,7 @@ Note : la plupart des Types de Requête suivants font intervenir un PathFinder q
 ////// MOVE //////
 
 
-Le Type de Requête MOVE permet définir un GOAL à un objet. Si le GOAL est atteignable et que l'objet peut se déplacer, il se déplacera dans sa direction.
+Le Type de Requête MOVE permet définir un GOAL (ou Objectif) à un objet. Si le GOAL est atteignable et que l'objet peut se déplacer, il se déplacera dans sa direction.
 
 exemple :
 TIME -> 0 = MOVE -> 33-35

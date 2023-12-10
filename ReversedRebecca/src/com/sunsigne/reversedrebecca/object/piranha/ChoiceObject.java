@@ -6,13 +6,29 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAct
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChoiceObject extends InteractiveObject {
 
-	public ChoiceObject() {
+	public ChoiceObject(PiranhaObject object) {
+		this(object, null);
+	}
+
+	public ChoiceObject(String highlight) {
+		this(null, highlight);
+	}
+
+	private ChoiceObject(PiranhaObject object, String highlight) {
 		super("CHOICE", 0, 0);
 
 		this.player = new PlayerFinder().getPlayer();
+
+		if (object != null)
+			this.object = object;
+		else
+			registerHighlight(highlight);
+
+		imitateHighlight(true);
 	}
 
 	////////// INTERACTIVE ////////////
@@ -41,7 +57,7 @@ public class ChoiceObject extends InteractiveObject {
 			return;
 
 		player.setCanInterract(true);
-		player.setUserAllowedToMovePlayer(false);		
+		player.setUserAllowedToMovePlayer(false);
 		int[] pos = new InFrontOfFinder().getPos(player);
 		setX(pos[0]);
 		setY(pos[1]);
@@ -52,6 +68,37 @@ public class ChoiceObject extends InteractiveObject {
 		boolean playerCanInterract = Cutscene.isRunning() == false;
 		player.setCanInterract(playerCanInterract);
 		player.setUserAllowedToMovePlayer(true);
+		imitateHighlight(false);
+	}
+
+	////////// HIGHLIGHT ////////////
+
+	private PiranhaObject object;
+
+	private void registerHighlight(String highlight) {
+		if (player == null)
+			return;
+
+		var list = player.getHandler().getList();
+
+		for (Updatable tempUpdatable : list) {
+			if (tempUpdatable instanceof PiranhaObject == false)
+				continue;
+
+			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
+			if (tempObject.getName().equalsIgnoreCase(highlight) == false)
+				continue;
+
+			object = tempObject;
+			return;
+		}
+	}
+
+	private void imitateHighlight(boolean active) {
+		if (object == null)
+			return;
+
+		object.setForceHighlight(active);
 	}
 
 	////////// COLLISION ////////////
@@ -60,7 +107,7 @@ public class ChoiceObject extends InteractiveObject {
 	public boolean isBlockingPath() {
 		return false;
 	}
-	
+
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
 

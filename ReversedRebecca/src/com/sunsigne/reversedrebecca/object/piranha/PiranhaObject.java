@@ -250,9 +250,9 @@ public abstract class PiranhaObject extends GameObject
 	public void setRegisteredTripleAction(TripleAction tripleAction) {
 		this.registeredTripleAction = tripleAction;
 	}
-	
+
 	private GameTimer delayer;
-	
+
 	@Override
 	public GameTimer getDelayer() {
 		return delayer;
@@ -275,7 +275,21 @@ public abstract class PiranhaObject extends GameObject
 	public void setHighlightAbovePlayer(boolean hightligh_above_player) {
 		this.hightligh_above_player = hightligh_above_player;
 	}
-	
+
+	private boolean forceHighlight;
+
+	public void setForceHighlight(boolean forceHighlight) {
+		this.forceHighlight = forceHighlight;
+	}
+
+	@Override
+	public boolean getHighlightCondition() {
+		if (forceHighlight)
+			return true;
+		else
+			return RegistrableInteractive.super.getHighlightCondition();
+	}
+
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);
