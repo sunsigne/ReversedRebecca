@@ -68,12 +68,6 @@
 
 	////////// EN COURS ////////////
 
-	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
-	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
-	
-	gamepad :
-	- à corriger les pb grave dans la catégorie "gamepad" !
-
 	////////// BOSS ////////////
 
 	30h00 - retravailer le système de boss :
@@ -114,6 +108,8 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
+	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
+	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	1h00 - faire les highlights du lvl tuto
 	1h00 - les portes grises n'ont pas encore de mappable
 	1h00 - gordon est mal introduit dans les fichiers
