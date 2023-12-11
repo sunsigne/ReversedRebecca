@@ -70,9 +70,6 @@
 
 	rebatptiser raymond en james ?
 
-	LVL001 :
-	parler à Joseph sur le canapé devrait donner la clé verte ? (le joueur a été patient après tout)
-
 	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
 	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	
@@ -162,11 +159,12 @@
 	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition. En plus, je n'aime pas l'aléatoire
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
-	menu bonus après new game + :
-	- nivaeaux desactivé (debug room + tuto room)
-	- possibilité de refaire le niveau de gestion (réparation du labo)
-	- consulter les textures non utilisées
-	- tous les succès abandonnées
+	////////// MENU BONUS ////////////
+
+	niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
+	consulter les textures non utilisées
+	activer tous les succès abandonnées
+	jouer avec le skin "rebecca_dark"
 
 	////////// PERSONNAGES A FAIRE ////////////
 
@@ -352,7 +350,7 @@
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
 	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
-	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase
+	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase (faire un jeu de mot avec "feeling blue" en anglais")
 	ALICIA_ROOM_PLANT -> "tant mieux" = "good"
 	ALICIA_REACTION_ALICIA_ROOM_PLANT -> "enfin..." -> "I mean..."
 	
