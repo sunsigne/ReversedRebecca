@@ -15,7 +15,7 @@ public class GoUpAction extends Action {
 	public GoUpAction(Interactive interactive, String soundPath) {
 		super(interactive, null, null, null, ActionOneKey.getKey());
 
-		setName(new Translatable().getTranslatedText("GoUp", FilePath.ACTION));
+		setName(new Translatable().getTranslatedText("GoUp", FilePath.PUZZLER));
 		setListener(() -> {
 			Player player = new PlayerFinder().getPlayer();
 			player.setX(interactive.getX());

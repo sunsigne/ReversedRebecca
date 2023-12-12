@@ -23,7 +23,7 @@ public class RequirementBubbleObject extends GameObject {
 		this.tool = tool;
 		this.difficulty = difficulty;
 
-		text = new Translatable().getTranslatedText("Require", FilePath.ACTION);
+		text = new Translatable().getTranslatedText("Require", FilePath.PUZZLER);
 	}
 
 	private ToolPlayer tool;

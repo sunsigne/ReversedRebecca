@@ -15,7 +15,7 @@ public class GoDownAction extends Action {
 	public GoDownAction(Interactive interactive, String soundPath) {
 		super(interactive, null, null, null, ActionOneKey.getKey());
 
-		setName(new Translatable().getTranslatedText("GoDown", FilePath.ACTION));
+		setName(new Translatable().getTranslatedText("GoDown", FilePath.PUZZLER));
 		setListener(() -> {
 			Player player = new PlayerFinder().getPlayer();
 			player.setX(interactive.getX());
