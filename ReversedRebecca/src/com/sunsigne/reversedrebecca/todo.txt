@@ -20,14 +20,12 @@
 	////////// BUG ////////////
 
 	pas réglé :
-		- l'affichage de la langue de RR000 n'est pas correctement initié lorsqu'on la change (voir le frigo pour comprendre)
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
 		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
 		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
-		- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?)
 		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
 		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
@@ -36,7 +34,6 @@
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
 	vérifier si bien réglé :
-		- RR000 il m'a semblait en changeant de langue (en étant en FR du coup) que le niveau n'était pas à jour. A vérifier, j'ai peut-être confondu avec le jeu qui était en anglais mais qui avait des textes FR (ce qui est normal, puisque lma traduction n'était pas terminé lorsque s'est arrivé)
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
@@ -67,6 +64,12 @@
 	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
+
+	bug : 
+	- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?) -> déjà réglé ?
+	
+	8h faire la traduction en anglais du jeu
+	1h formulaire de test : mettre à jour pour la version publique classique
 
 	////////// BOSS ////////////
 

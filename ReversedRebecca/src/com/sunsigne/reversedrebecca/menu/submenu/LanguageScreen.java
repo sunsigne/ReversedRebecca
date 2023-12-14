@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -14,6 +15,7 @@ import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -21,6 +23,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class LanguageScreen extends SubMenuScreen {
 
@@ -176,9 +179,9 @@ public class LanguageScreen extends SubMenuScreen {
 			}
 		};
 
-		if(Language.getInstance().getLang().contentEquals(name))
+		if (Language.getInstance().getLang().contentEquals(name))
 			loadGamepadSetup(preset);
-			
+
 		buttons.put(preset, button);
 		LAYER.MENU.getHandler().addObject(button);
 	}
@@ -187,7 +190,14 @@ public class LanguageScreen extends SubMenuScreen {
 
 	private void chooseLanguage(String language) {
 		Language.getInstance().setLang(language);
+		if (new Save().getLevel(true).equalsIgnoreCase(new Save().getLevel(false)))
+			reloadWorld();
 		new TitleScreen(TitleScreen.PLAY);
+	}
+
+	private void reloadWorld() {
+		LAYER.LOADING.addObject(new LoadingScreen());
+		World.get().destroy();
 	}
 
 	////////// PRESET MOUSE POS ////////////
@@ -248,7 +258,7 @@ public class LanguageScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(getPreset()).mousePressed(null);
 
-		else {			
+		else {
 			switch (lang_list.size()) {
 			case 2:
 				buttonPressed02(e);
@@ -288,7 +298,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed02(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L12_C2R3);
@@ -303,9 +313,9 @@ public class LanguageScreen extends SubMenuScreen {
 				setPreset(BACK);
 		}
 	}
-	
+
 	private void buttonPressed03(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L9_C2R3);
@@ -326,21 +336,21 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed04(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L8_C2R2)
 				setPreset(L8_C1R2);
 			else if (getPreset() == L8_C2R3)
 				setPreset(L8_C1R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L8_C1R2)
 				setPreset(L8_C2R2);
 			else if (getPreset() == L8_C1R3)
 				setPreset(L8_C2R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L8_C1R3);
@@ -361,21 +371,21 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed05(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L6_C2R1)
 				setPreset(L6_C1R1);
 			else if (getPreset() == L6_C2R2)
 				setPreset(L6_C1R2);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L6_C1R1)
 				setPreset(L6_C2R1);
 			else if (getPreset() == L6_C1R2)
 				setPreset(L6_C2R2);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L9_C2R3);
@@ -400,7 +410,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed06(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L6_C2R1)
 				setPreset(L6_C1R1);
@@ -409,7 +419,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L6_C2R3)
 				setPreset(L6_C1R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L6_C1R1)
 				setPreset(L6_C2R1);
@@ -418,7 +428,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L6_C1R3)
 				setPreset(L6_C2R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L6_C1R3);
@@ -447,7 +457,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed07(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L8_C2R1)
 				setPreset(L8_C1R1);
@@ -456,7 +466,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C2R3)
 				setPreset(L8_C1R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L8_C1R1)
 				setPreset(L8_C2R1);
@@ -465,12 +475,12 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C1R3)
 				setPreset(L8_C2R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L12_C2R4);
 			else if (getPreset() == L12_C2R4)
-				setPreset(L8_C1R3);			
+				setPreset(L8_C1R3);
 			else if (getPreset() == L8_C1R3)
 				setPreset(L8_C1R2);
 			else if (getPreset() == L8_C1R2)
@@ -498,7 +508,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed08(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L8_C2R1)
 				setPreset(L8_C1R1);
@@ -509,7 +519,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C2R4)
 				setPreset(L8_C1R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L8_C1R1)
 				setPreset(L8_C2R1);
@@ -520,12 +530,12 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C1R4)
 				setPreset(L8_C2R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L8_C1R4);
 			else if (getPreset() == L8_C1R4)
-				setPreset(L8_C1R3);			
+				setPreset(L8_C1R3);
 			else if (getPreset() == L8_C1R3)
 				setPreset(L8_C1R2);
 			else if (getPreset() == L8_C1R2)
@@ -544,7 +554,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C1R2)
 				setPreset(L8_C1R3);
 			else if (getPreset() == L8_C1R3)
-				setPreset(L8_C1R4);			
+				setPreset(L8_C1R4);
 			else if (getPreset() == L8_C2R1)
 				setPreset(L8_C2R2);
 			else if (getPreset() == L8_C2R2)
@@ -557,7 +567,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed09(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L9_C3R1)
 				setPreset(L9_C2R1);
@@ -572,7 +582,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L9_C2R3)
 				setPreset(L9_C1R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L9_C1R1)
 				setPreset(L9_C2R1);
@@ -587,20 +597,20 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L9_C2R3)
 				setPreset(L9_C3R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L9_C2R3);
 			else if (getPreset() == L9_C1R3)
-				setPreset(L9_C1R2);		
+				setPreset(L9_C1R2);
 			else if (getPreset() == L9_C1R2)
 				setPreset(L9_C1R1);
 			else if (getPreset() == L9_C2R3)
-				setPreset(L9_C2R2);			
+				setPreset(L9_C2R2);
 			else if (getPreset() == L9_C2R2)
 				setPreset(L9_C2R1);
 			else if (getPreset() == L9_C3R3)
-				setPreset(L9_C3R2);			
+				setPreset(L9_C3R2);
 			else if (getPreset() == L9_C3R2)
 				setPreset(L9_C3R1);
 		}
@@ -617,14 +627,14 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L9_C3R1)
 				setPreset(L9_C3R2);
 			else if (getPreset() == L9_C3R2)
-				setPreset(L9_C3R3);			
+				setPreset(L9_C3R3);
 			else if (getPreset() == L9_C1R3 || getPreset() == L9_C2R3 || getPreset() == L9_C3R3)
 				setPreset(BACK);
 		}
 	}
 
 	private void buttonPressed10(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L12_C3R1)
 				setPreset(L12_C2R1);
@@ -639,7 +649,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C2R3)
 				setPreset(L12_C1R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L12_C1R1)
 				setPreset(L12_C2R1);
@@ -654,7 +664,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C2R3)
 				setPreset(L12_C3R3);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L12_C2R4);
@@ -686,7 +696,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C3R1)
 				setPreset(L12_C3R2);
 			else if (getPreset() == L12_C3R2)
-				setPreset(L12_C3R3);			
+				setPreset(L12_C3R3);
 			else if (getPreset() == L12_C1R3 || getPreset() == L12_C2R3 || getPreset() == L12_C3R3)
 				setPreset(L12_C2R4);
 			else if (getPreset() == L12_C2R4)
@@ -695,7 +705,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed11(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L12_C3R1)
 				setPreset(L12_C2R1);
@@ -712,7 +722,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C2R4)
 				setPreset(L8_C1R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L12_C1R1)
 				setPreset(L12_C2R1);
@@ -729,7 +739,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L8_C1R4)
 				setPreset(L8_C2R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L8_C1R4);
@@ -763,7 +773,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C3R1)
 				setPreset(L12_C3R2);
 			else if (getPreset() == L12_C3R2)
-				setPreset(L12_C3R3);			
+				setPreset(L12_C3R3);
 			else if (getPreset() == L12_C1R3 || getPreset() == L12_C2R3)
 				setPreset(L8_C1R4);
 			else if (getPreset() == L12_C3R3)
@@ -774,7 +784,7 @@ public class LanguageScreen extends SubMenuScreen {
 	}
 
 	private void buttonPressed12(ButtonEvent e) {
-		
+
 		if (e.getKey() == ButtonEvent.LEFT) {
 			if (getPreset() == L12_C3R1)
 				setPreset(L12_C2R1);
@@ -793,7 +803,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C2R4)
 				setPreset(L12_C1R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			if (getPreset() == L12_C1R1)
 				setPreset(L12_C2R1);
@@ -812,7 +822,7 @@ public class LanguageScreen extends SubMenuScreen {
 			else if (getPreset() == L12_C2R4)
 				setPreset(L12_C3R4);
 		}
-		
+
 		else if (e.getKey() == ButtonEvent.UP) {
 			if (getPreset() == BACK)
 				setPreset(L12_C2R4);
