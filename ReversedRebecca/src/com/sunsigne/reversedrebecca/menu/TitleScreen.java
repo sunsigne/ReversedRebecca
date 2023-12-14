@@ -106,7 +106,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createSteamButton() {
-		GenericListener onPress = () -> new WebTask().openHtml(WebTask.STEAM_LINK);
+		GenericListener onPress = () -> new WebTask().openSteam(WebTask.STEAM_LINK, WebTask.STEAM_LINK_HTTP);
 		ButtonObject button = new SteamButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}

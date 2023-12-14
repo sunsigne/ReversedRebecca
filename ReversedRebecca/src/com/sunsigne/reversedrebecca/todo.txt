@@ -40,11 +40,6 @@
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
-	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
-	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
-
 	////////// GAMEPAD ////////////
 
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
@@ -65,26 +60,66 @@
 
 	////////// EN COURS ////////////
 
-	bug : 
-	- dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?) -> déjà réglé ?
+	BUG : 
+	1h dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?) -> déjà réglé ?
 	
+	EXPERIENCE UTILISATEUR :
+	3h00 - créer dans les menu options la possibilité de désactiver les highlights
+	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)	
+	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
+	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
+	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
+	1h00 - ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
+	24h00 - retravailler l'écran de fin de jeu (mettre à jour les captures d'écran du futur jeu)
+	3h faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
+	
+	CHEST:
+	2h30 - puzzle : faire une animation puzzler pour la résolution des coffres
+	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !	
+	
+	DESSIN :
+	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
+	1h30 - attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
+	1h30 - finir marie_date
+	
+	VIE & HP :
+	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
+	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
+	5h00 - créer un moyen de recuppérer de la vie (j'avais pensé à un % de chance croissant par hp manquant du boss de tirer des coeurs à la place des bombes, mais ça ne serait valable que pendant les combats du coup. Ca peut être un choix définitif si la vie du joueur n'est pas constamment menacée, mais il faudrait probablement afficher les coeur tout le temps pendant la run psycopath, pour montrer que pour Rebecca tout est une question de vie ou de mort. Ca serait même l'ocassion de dessiner des coeurs plus lugubres ou menaçant)
+
+	RR000 :
+	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
+	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
+
+	LVL001 :
+	XhX - variantes sadiques, psychopath, et angélique à créer
+	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
+	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+		
+	AUTRE :
+	60h à vérifier le boss et tout ce qui est lié à lui
 	8h faire la traduction en anglais du jeu
 	1h formulaire de test : mettre à jour pour la version publique classique
-
+	20h niveau de fin de démo vantant les mérites du jeu final, incluant des puzzles pas encore fait (piratage)
+	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
+	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
+	- penser à vérifier la cohérence globale du jeu avec les système de difficulté et de karma (facile, normal, difficile / sadique, psycopath, angelic)
+	
+	dans le todo, vérifier tout ce qui est arpès la catégorie LVL001 (j'avais la flemme de descendre + bas)
+	
 	////////// BOSS ////////////
 
 	30h00 - retravailer le système de boss :
 	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
 	5h00 - InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
 	2h00 - augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
-	5h00 - créer d'autres patterns de sboss pour blast
+	5h00 - créer d'autres patterns de boss pour blast-x
 
 	////////// CHEST ////////////
 
-	2h30 - puzzle : faire une animation puzzler pour la résolution des coffres	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
 	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
-	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !	
 
 	////////// DESSIN ////////////
 
@@ -92,34 +127,21 @@
 	12h00 - créer une animation "sick" pour quand on marche	 ?
 	2h00 - la pile PURPLE
 	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
-	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
-	1h30 - attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
-	1h30 - finir marie_date
 	
 	////////// VIE & HP ////////////
-	
-	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
-	5h00 - créer un moyen de recuppérer de la vie
-	
-	
-	
-	
-	
+			
 	////////// FACILE ////////////
 			
 	Hack puzzle : 
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
-	ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
-	faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	1h00 - faire les highlights du lvl tuto
 	1h00 - les portes grises n'ont pas encore de mappable
 	1h00 - gordon est mal introduit dans les fichiers
 	2h00 - parler dans les codex du chargement des données sauvegardées ?
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
-	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?		
-	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)
+	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
@@ -134,15 +156,9 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 		
-	- arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
-
-	3h00 - créer dans les menu options la possibilité de désactiver les highlights
+	30h arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 	dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
-	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
-	12h00 - WebTask devrait ouvrir la page steam DANS steam et non dans le navigateur
-	6h00 - ExplosionBrightnessLaw est pas terrible, à arranger
-	24h00 - retravailler l'écran de fin de niveau (mettre à jour les captures d'écran du futur jeu)
 	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
 	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -154,7 +170,6 @@
 	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 	1h00 - changer le système d'aléatorie pour du déterminisme ?
 	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? Second problème : on peut perdre sur un critique ... ce qui est bizarre par définition. En plus, je n'aime pas l'aléatoire
-	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV
 
 	////////// MENU BONUS ////////////
 
@@ -165,15 +180,14 @@
 
 	////////// PERSONNAGES A FAIRE ////////////
 
-	characters to finish : gamma, stephan, policemen & women X, william, teddy, polaris, 4 more prisonners
-	stephan - l'un des méchant ? un mec à recruter ? un "boss" méchant qui devient gentil ?
+	characters to finish : gamma, stephan, policemen & women, william, teddy, polaris, 4 more prisonners
 	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
 	
 	////////// DAVE ////////////
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
 	
-	RR000 -> lorsque le joueur cherhce la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?
+	RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?
 	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
@@ -184,22 +198,15 @@
 	////////// RR000 ////////////
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	réétablir les fins correctement (exemple : la fin psycopath est la même que la fin où on sort sans sarah)
-	- 3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
-	traduction english pas fini (les actions)
 	
 	////////// WS000 ////////////
 	
 	passage secret tj vide ...
-	faire la route physopath
 
 	////////// LVL001 ////////////
 
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
-	XhX - variantes sadiques, psychopath, et angélique à créer
-	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
-	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	
+
 	scénarion : inquery
 	- les TALK et TALK_VAR n'ont pas encore été remplacés
 	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
@@ -262,7 +269,6 @@
 	////////// LVL002 ////////////
 	
 	lvl state : fusillade (comme rr000 sequestration)
-	Stephan est l'un des prissoniers ? un mec à recruter ? un "boss" méchant qui devient gentil ?
 	
 	////////// MOLE 0 ////////////
 	
