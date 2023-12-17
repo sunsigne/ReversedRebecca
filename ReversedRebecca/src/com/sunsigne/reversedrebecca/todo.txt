@@ -40,6 +40,8 @@
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
+	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
+
 	////////// GAMEPAD ////////////
 
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
@@ -75,7 +77,6 @@
 	3h faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	
 	CHEST:
-	2h30 - puzzle : faire une animation puzzler pour la résolution des coffres
 	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !	
 	
 	DESSIN :
