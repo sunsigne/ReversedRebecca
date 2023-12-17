@@ -42,7 +42,7 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 		int y = player == null ? 0 : player.getY();
 
 		ToolObject object = new ToolObject(tool, tool.getStartDifficulty(), x, y);
-		object.pickup();
+		object.pickup(false);
 	}
 
 	////////// TOOL////////////

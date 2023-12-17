@@ -20,9 +20,14 @@ public abstract class LootObject extends GameObject implements CollisionReactor,
 	}
 
 	public void pickup() {
+		pickup(true);
+	}
+
+	public void pickup(boolean playSound) {
 		removeObject();
 		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
-		new SoundTask().playSoundIfCamera(this, "loot");
+		if (playSound)
+			new SoundTask().playSoundIfCamera(this, "loot");
 		new PickupLootCondition().registerValue(this);
 		actionWhenLooted();
 	}
