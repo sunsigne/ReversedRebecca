@@ -62,9 +62,9 @@
 
 	////////// EN COURS ////////////
 
-	BUG : 
-	1h dans le RR001, timing de Sarah qui se lève trop tôt + Sarah est invisible lorsqu'elle est sur le canapé + revoir sa vitesse de déplacement (tout diminuer de 1 ?) -> déjà réglé ?
-	
+	DAVE : 
+	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
+
 	EXPERIENCE UTILISATEUR :
 	3h00 - créer dans les menu options la possibilité de désactiver les highlights
 	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)	
@@ -94,7 +94,12 @@
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
 	LVL001 :
-	XhX - variantes sadiques, psychopath, et angélique à créer
+	XhX - variantes sadiques, psychopath
+	variante sadique : sarah pousse le joueur hors de son bureau, pb :
+	- mika ne commence pas son paterne
+	- marie fait tp sarah au niveau de delta
+	- si alicia nous suit lorsque ça arrive, que se passe-t-il ?	
+	
 	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 		
