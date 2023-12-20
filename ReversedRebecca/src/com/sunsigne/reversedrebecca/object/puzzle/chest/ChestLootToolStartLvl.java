@@ -58,7 +58,7 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public void setDifficulty(LVL difficulty) {
-		// defined by the current player lvl : should't be changed.
+		// defined by the current player lvl : shouldn't be changed.
 	}
 
 	////////// TEXTURE ////////////
