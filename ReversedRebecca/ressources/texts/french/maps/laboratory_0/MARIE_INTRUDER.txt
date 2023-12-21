@@ -3,8 +3,3 @@ rebecca = object = worry = Un#individu#s'est#introduit#dans#le#labo,@et#l'a#fait
 object = player = surprised = Alors#c'était#ça,#ce#bruit#!
 object = player = unhappy = Et,#qu'est-ce#qu'il#voulait#?
 rebecca = object = laugh = Aucune#idée.
-rebecca = object = happy = Moi,#je#dois#nous#trouver#une#sortie.@C'est#Sarah#qui#mène#l'enquête. 
-object = player = worry = Zut…#Du#coup,#j'ai#envie#d'en#savoir#plus…
-object = player = happy = Je#vais#aller#lui#demander#directement.@Tu#sais#où#elle#est#?
-rebecca = object = happy_var = Avec#Delta,#probablement.
-object = player = laugh = Oui,#comme#d'habitude#!#Merci.

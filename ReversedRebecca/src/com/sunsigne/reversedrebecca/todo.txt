@@ -94,12 +94,7 @@
 	3h00 = rr000 - la fin psycopath fait planter le jeu ! prévoir ce cas de figure : rr000 refaire les end level
 
 	LVL001 :
-	XhX - variantes sadiques, psychopath
-	variante sadique : sarah pousse le joueur hors de son bureau, pb :
-	- mika ne commence pas son paterne
-	- marie fait tp sarah au niveau de delta
-	- si alicia nous suit lorsque ça arrive, que se passe-t-il ?	
-	
+	XhX - variantes psychopath	
 	0h30 - quand on est sadique ou psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 		
