@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Options;
 import com.sunsigne.reversedrebecca.ressources.achievement.Achievements;
+import com.sunsigne.reversedrebecca.ressources.images.Textures;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
@@ -40,6 +41,7 @@ public class RessourceLoader {
 
 		new Physic().loadRessources();
 		new Piranha().loadRessources();
+		new Textures().loadRessources();
 		new Achievements().loadRessources();
 	}
 

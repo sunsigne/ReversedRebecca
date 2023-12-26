@@ -23,6 +23,10 @@ public class ImageTask {
 		BufferedImage image = null;
 		String path0 = "/" + FilePath.RESSOURCES_PATH + path + ".png";
 
+		image = ImageList.getImageFromPath(path);
+		if (image != null)
+			return image;
+
 		try {
 			URL url = new File((new File(FilePath.LOC.toURI())).getParent() + path0).toURI().toURL();
 			image = ImageIO.read(url);
@@ -32,6 +36,8 @@ public class ImageTask {
 			e.printStackTrace();
 			image = drawMissingTexture();
 		}
+
+		ImageList.registerImage(path, image);
 		return image;
 	}
 
