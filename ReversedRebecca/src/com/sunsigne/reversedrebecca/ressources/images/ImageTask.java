@@ -23,7 +23,7 @@ public class ImageTask {
 		BufferedImage image = null;
 		String path0 = "/" + FilePath.RESSOURCES_PATH + path + ".png";
 
-		image = ImageList.getImageFromPath(path);
+		image = ImageList.getImageFromPath(path0);
 		if (image != null)
 			return image;
 
@@ -37,7 +37,7 @@ public class ImageTask {
 			image = drawMissingTexture();
 		}
 
-		ImageList.registerImage(path, image);
+		ImageList.registerImage(path0, image);
 		return image;
 	}
 
