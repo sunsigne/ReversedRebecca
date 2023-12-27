@@ -30,6 +30,7 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadE
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -76,6 +77,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		// added as first element to render behind chat content object
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
+		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), this);
 		goToNextLine();
 	}
 

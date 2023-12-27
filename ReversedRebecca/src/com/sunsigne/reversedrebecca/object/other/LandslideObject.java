@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 
 public class LandslideObject extends GameObject implements RenderFree, Pusher {
@@ -86,8 +87,11 @@ public class LandslideObject extends GameObject implements RenderFree, Pusher {
 
 		mustPush = false;
 		var handler = getHandler();
-		if (handler != null)
-			getHandler().getList().add(0, rubble);
+		if (handler != null) {
+			handler.getList().add(0, rubble);	
+			Handler.updateHandlerMap(handler, rubble);
+		}
+			
 	}
 
 	////////// STUNNABLE ////////////

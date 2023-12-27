@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.system.mainloop;
 
 import java.awt.Graphics;
+import java.util.HashMap;
 import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -92,32 +93,61 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// MAP OR LIST ////////////
 
+	private static HashMap<Updatable, Handler> map = new HashMap<>();
 	private GameList<Updatable> add_list = new GameList<Updatable>(LISTTYPE.ARRAY);
 	private GameList<Updatable> remove_list = new GameList<Updatable>(LISTTYPE.ARRAY);
 
+	public static void updateHandlerMap(Handler handler, Updatable object) {
+		if (object != null)
+			map.put(object, handler);
+	}
+
+	public static Handler getHandler(Updatable object) {
+		return map.get(object);
+	}
+
+	@Override
+	public boolean containsObject(Updatable object) {
+		return getHandler(object) == this;
+	}
+
 	public void addObject(Updatable object, boolean forthwith) {
 		if (forthwith)
-			super.addObject(object);
+			addObject(object);
 		else
 			add_list.addObject(object);
 	}
 
+	@Override
+	public void addObject(Updatable object) {
+		super.addObject(object);
+		updateHandlerMap(this, object);
+	}
+
 	public void softRemoveObject(Updatable object) {
 		super.removeObject(object);
+
+		if (object != null)
+			map.remove(object);
 	}
 
 	@Override
 	public void removeObject(Updatable object) {
 		removeObject(object, true);
+
+		if (object != null)
+			map.remove(object);
 	}
 
 	public void removeObject(Updatable object, boolean forthwith) {
 		if (object != null)
 			object.destroyControls();
 
-		if (forthwith)
+		if (forthwith) {
 			super.removeObject(object);
-		else
+			if (object != null)
+				map.remove(object);
+		} else
 			remove_list.addObject(object);
 	}
 
@@ -126,6 +156,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		if (getList().size() > 0) {
 			for (Updatable tempUpdatable : getList()) {
 				tempUpdatable.destroyControls();
+				map.remove(tempUpdatable);
 			}
 		}
 		super.clear();
@@ -134,11 +165,14 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	public void updateHandler() {
 		for (Updatable tempObject : add_list.getList())
-			super.addObject(tempObject);
+			addObject(tempObject);
 		add_list.clear();
 
-		for (Updatable tempObject : remove_list.getList())
+		for (Updatable tempObject : remove_list.getList()) {
 			super.removeObject(tempObject);
+			map.remove(tempObject);
+		}
+
 		remove_list.clear();
 	}
 

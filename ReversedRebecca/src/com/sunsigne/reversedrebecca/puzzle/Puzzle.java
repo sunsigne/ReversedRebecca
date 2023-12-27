@@ -74,7 +74,8 @@ public abstract class Puzzle implements Updatable, TickFree {
 
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
-
+		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), this);
+		
 		createWallBorder();
 		createPuzzle();
 

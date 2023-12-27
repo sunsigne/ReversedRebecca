@@ -64,8 +64,11 @@ public class CreateRequest implements IndexRequest {
 
 		// creation of the object
 
-		if (creation != null)
+		if (creation != null) {
 			handler.getList().add(index, creation);
+			Handler.updateHandlerMap(handler, creation);
+		}
+			
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {

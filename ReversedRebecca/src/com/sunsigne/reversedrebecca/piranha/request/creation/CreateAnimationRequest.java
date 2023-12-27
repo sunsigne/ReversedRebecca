@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -77,6 +78,7 @@ public class CreateAnimationRequest implements IndexRequest {
 
 		GameObject creation = new AnimatedDecorationObject(x, y, width, height, name, frames, animation_time, cycle);
 		handler.getList().add(index, creation);
+		Handler.updateHandlerMap(handler, creation);
 	}
 
 }

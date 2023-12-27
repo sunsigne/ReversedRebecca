@@ -259,10 +259,7 @@ public class ControlsScreen extends SubMenuScreen {
 	////////// BUTTON ACTION ////////////
 
 	private void refresh(ButtonObject button, Key key, boolean actionKey) {
-		var handler = button.getHandler();
-		if (handler != null)
-			handler.removeObject(button);
-
+		LAYER.MENU.getHandler().removeObject(button);
 		EnterKeyButton keyButton = new EnterKeyButton(button.getX(), button.getY() - 10, key, actionKey, false);
 		LAYER.MENU.addObject(keyButton);
 	}

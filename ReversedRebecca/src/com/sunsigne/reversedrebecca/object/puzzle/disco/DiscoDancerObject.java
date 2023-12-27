@@ -17,6 +17,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 
@@ -49,6 +50,7 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 
 		// adding right after the puzzle itself
 		LAYER.PUZZLE.getHandler().getList().add(1, fire);
+		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), fire);
 	}
 
 	////////// TICK ////////////

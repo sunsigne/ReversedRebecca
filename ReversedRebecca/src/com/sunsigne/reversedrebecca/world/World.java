@@ -156,6 +156,7 @@ public class World implements Updatable, RenderFree {
 
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			LAYER.HUD.getHandler().getList().add(0, tempHUD);
+			Handler.updateHandlerMap(LAYER.HUD.getHandler(), tempHUD);
 		}
 	}
 
