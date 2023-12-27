@@ -60,4 +60,12 @@ public class ImageTask {
 		return img;
 	}
 
+	public BufferedImage drawCopyOf(BufferedImage image) {
+		BufferedImage copy = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g2d = copy.createGraphics();
+		g2d.drawImage(image, 0, 0, null);
+		g2d.dispose();
+		return copy;
+	}
+
 }

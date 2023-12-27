@@ -90,15 +90,17 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		images.clear();
 
 		var list = ToolList.getList();
+		ImageTask task = new ImageTask();
 
 		for (ToolPlayer tempTool : list.getList()) {
 			if (tempTool.getDifficulty() == LVL.NULL)
 				continue;
 
-			BufferedImage tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_null");
-			BufferedImage battery_image = new ImageTask().loadImage("textures/" + "hud/battery_max_"
+			BufferedImage tool_image = task.loadImage("textures/tools/" + tempTool.getName() + "_null");
+			BufferedImage battery_image = task.loadImage("textures/" + "hud/battery_max_"
 					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName());
-
+			battery_image = task.drawCopyOf(battery_image);
+			
 			images.addObject(tool_image);
 			images.addObject(battery_image);
 
