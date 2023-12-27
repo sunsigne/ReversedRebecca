@@ -2,11 +2,8 @@ package com.sunsigne.reversedrebecca.object.hostile;
 
 import java.awt.Rectangle;
 
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplodeRubbleAnimationObject;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -25,8 +22,17 @@ public class BigRollingBomb extends RollingBomb implements CollisionReactor {
 		return 1;
 	}
 
+	////////// HP ////////////
+
+	@Override
+	protected void removeHp() {
+		super.removeHp();
+		super.removeHp();
+	}
+
 	////////// TICK ////////////
 
+	@Override
 	public int getExplodingTime() {
 		return 50;
 	}
@@ -67,23 +73,12 @@ public class BigRollingBomb extends RollingBomb implements CollisionReactor {
 
 	@Override
 	public Rectangle getBounds() {
-		int shrink = Size.XS / 2;		
+		int shrink = Size.XS / 2;
 		int x = getX() + shrink;
 		int y = getY() + shrink;
 		int w = getWidth() - 2 * shrink;
 		int h = getHeight() - 2 * shrink;
 		return new Rectangle(x, y, w, h);
-	}
-
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof Player == false)
-			return;
-
-		collidingReaction(detectorObject, false, () -> {
-			new PlayerFinder().getPlayer().removeHp(2);
-			explode();
-		});
 	}
 
 }

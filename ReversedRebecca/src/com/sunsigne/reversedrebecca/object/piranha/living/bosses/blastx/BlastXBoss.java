@@ -71,9 +71,11 @@ public class BlastXBoss extends BossObject {
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
 
-		list.addObject(new BlastXBombFromSkyPattern(this, 40));
-		list.addObject(new BlastXThrowingBombPattern(this, 40));
-		list.addObject(new BlastXThrowingBigBombPattern(this, 120));
+		list.addObject(new BlastXBombFromSkyPattern(this));
+		list.addObject(new BlastXThrowingBombPattern(this));
+		//list.addObject(new BlastXThrowingCurvedBombPattern(this));
+		list.addObject(new BlastXThrowingBigBombPattern(this));
+		list.addObject(new BlastXThrowingGhostBombPattern(this));
 
 		return new RandomGenerator().getElementFromList(list);
 	}

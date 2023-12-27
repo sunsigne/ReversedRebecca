@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.BossCondition;
 public class BossRestPattern extends BossPattern {
 
 	public BossRestPattern(BossObject boss) {
-		super(boss, 8);
+		super(boss, 8, -1);
 
 		GenericListener listener = getActionWhenFinished();
 		setActionWhenFinished(() -> {

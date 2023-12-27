@@ -1,20 +1,20 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses.blastx;
 
-import com.sunsigne.reversedrebecca.object.hostile.BigRollingBomb;
+import com.sunsigne.reversedrebecca.object.hostile.CurvedRollingBomb;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 
-public class BlastXThrowingBigBombPattern extends BlastXThrowingBombPattern {
+public class BlastXThrowingCurvedBombPattern extends BlastXThrowingBombPattern {
 
-	public BlastXThrowingBigBombPattern(BossObject boss) {
-		super(boss, 10, 120);
+	public BlastXThrowingCurvedBombPattern(BossObject boss) {
+		super(boss);
 	}
 
 	////////// TICK ////////////
 
 	@Override
 	protected void attack(Player player) {
-		var bomb = new BigRollingBomb(getBoss().getX(), getBoss().getY());
+		var bomb = new CurvedRollingBomb(getBoss().getX(), getBoss().getY());
 		bomb.movingtoPlayer();
 		player.getHandler().addObject(bomb);
 	}

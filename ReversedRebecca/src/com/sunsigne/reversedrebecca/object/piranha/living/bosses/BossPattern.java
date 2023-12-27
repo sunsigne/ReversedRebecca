@@ -7,9 +7,10 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BossPattern implements Updatable, RenderFree {
 
-	public BossPattern(BossObject boss, int pattern_time_in_sec) {
+	public BossPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		this.boss = boss;
 		this.pattern_time_in_sec = pattern_time_in_sec;
+		this.delay_between_two_attacks = delay_between_two_attacks;
 
 		setActionWhenFinished(() -> getBoss().nextPattern());
 	}
@@ -30,6 +31,12 @@ public abstract class BossPattern implements Updatable, RenderFree {
 
 	public int getPatternTimeInSec() {
 		return pattern_time_in_sec;
+	}
+
+	private int delay_between_two_attacks;
+
+	public int getDelayBetweenTwoAttacks() {
+		return delay_between_two_attacks;
 	}
 
 	private GenericListener actionWhenFinished;
