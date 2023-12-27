@@ -15,11 +15,7 @@ public interface Updatable {
 	}
 
 	default Handler getHandler() {
-		for (Handler tempHandler : SuperHandler.getList().getList()) {
-			if (tempHandler.containsObject(this))
-				return tempHandler;
-		}
-		return null;
+		return Handler.getHandler(this);
 	}
 
 	default void destroyControls() {
