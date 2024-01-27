@@ -11,11 +11,13 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public abstract class PuzzlerObject extends GameObject implements TickFree, Difficulty, Interactive, CollisionReactor {
+public abstract class PuzzlerObject extends GameObject
+		implements TickFree, SheetableImage, Difficulty, Interactive, CollisionReactor {
 
 	// you should NOT use it : this exist for test purposes only
 	public PuzzlerObject(DEV_LVL devDifficulty, int x, int y) {
@@ -49,7 +51,7 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + name + " " + lvl + " : " + goal.getX() + "-" + goal.getY();
 	}
-	
+
 	////////// DEV LVL ////////////
 
 	private DEV_LVL devDifficulty;
@@ -95,7 +97,7 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	}
 
 	private GameTimer delayer;
-	
+
 	@Override
 	public GameTimer getDelayer() {
 		return delayer;
@@ -105,7 +107,7 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	public void setDelayer(GameTimer delayer) {
 		this.delayer = delayer;
 	}
-	
+
 	protected abstract void loadTripleAction();
 
 	////////// TEXTURE ////////////
@@ -113,15 +115,25 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	private BufferedImage image;
 	protected BufferedImage highlightImage;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1 + getDifficulty().ordinal();
+	}
+
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + getDifficulty().getName());
+		if (image == null) {
+			image = new ImageTask().loadImage("textures/puzzler/" + getName());
+			image = getSheetSubImage(image);
+		}
 		return image;
 	}
 
 	public BufferedImage getHighlightImage() {
-		if (highlightImage == null)
+		if (highlightImage == null) {
 			highlightImage = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
+			highlightImage = getSheetSubImage(highlightImage, 1, getSheetRowCriterion(), getSheetWidth() + 2,
+					getSheetHeight() + 2);
+		}
 		return highlightImage;
 	}
 
@@ -158,7 +170,7 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	public KeyboardController getKeyBoardController() {
 		return keyboardController;
 	}
-	
+
 	////////// GAMEPAD ////////////
 
 	private GamepadController gamepadController = new GamepadController(this);
@@ -167,5 +179,5 @@ public abstract class PuzzlerObject extends GameObject implements TickFree, Diff
 	public GamepadController getGamepadController() {
 		return gamepadController;
 	}
-	
+
 }

@@ -42,7 +42,7 @@ public class HoleObject extends PuzzlerObject implements Facing {
 
 	@Override
 	public String getName() {
-		return "hole" + "_" + getFacing().getName();
+		return "hole";
 	}
 
 	////////// FACING ////////////
@@ -57,6 +57,13 @@ public class HoleObject extends PuzzlerObject implements Facing {
 		this.facing = facing;
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1 + getFacing().getNum();
+	}
+	
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;

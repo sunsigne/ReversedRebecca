@@ -24,7 +24,23 @@ public class DoorObject extends PuzzlerObject {
 
 	@Override
 	public String getName() {
-		return "door" + "_" + color.getName();
+		return "door";
+	}
+
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		switch (color) {
+		case BLUE:
+			return 1;
+		case GREEN:
+			return 2;
+		case WHITE:
+			return 3;
+		default:
+			return 1;
+		}
 	}
 
 	////////// INTERACTION ////////////

@@ -20,6 +20,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- les hole_upward semble ne pas respecter la loi "single interactive law"
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
 		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)

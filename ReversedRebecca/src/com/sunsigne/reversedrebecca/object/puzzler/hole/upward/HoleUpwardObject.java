@@ -41,7 +41,7 @@ public class HoleUpwardObject extends HoleObject {
 
 	@Override
 	public String getName() {
-		return "hole_upward" + "_" + getFacing().getName();
+		return "hole_upward";
 	}
 
 }

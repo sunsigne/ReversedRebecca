@@ -33,6 +33,13 @@ public class ChestObject extends PuzzlerObject {
 		return lootFile;
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+	
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;

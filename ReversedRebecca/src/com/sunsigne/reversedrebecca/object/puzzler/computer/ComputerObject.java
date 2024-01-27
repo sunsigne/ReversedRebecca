@@ -22,6 +22,13 @@ public class ComputerObject extends PuzzlerObject {
 		return "computer";
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+	
 	////////// INTERACTION ////////////
 
 	protected TripleAction tripleAction;

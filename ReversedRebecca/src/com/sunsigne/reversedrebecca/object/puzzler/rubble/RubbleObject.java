@@ -1,13 +1,14 @@
 package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class RubbleObject extends PuzzlerObject {
 
@@ -30,7 +31,49 @@ public class RubbleObject extends PuzzlerObject {
 
 	@Override
 	public String getName() {
-		return "rubble" + "_" + color.getName() + "_" + Facing.getAxisName(horizontal);
+		return "rubble";
+	}
+
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		int col = horizontal ? 0 : 7;
+		return col + super.getSheetColCriterion();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		switch (color) {
+		case BLUE:
+			return 1;
+		case GREEN:
+			return 2;
+		case WHITE:
+			return 3;
+		case BROWN:
+			return 4;
+		case BROWN_SUGAR:
+			return 5;
+		default:
+			return 1;
+		}
+	}
+
+	@Override
+	public int getSheetSize() {
+		return 3 * 16;
+	}
+
+	@Override
+	public BufferedImage getHighlightImage() {
+		if (highlightImage == null) {
+			highlightImage = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
+			int col = horizontal ? 0 : 1;
+			highlightImage = getSheetSubImage(highlightImage, 1 + col, getSheetRowCriterion(), getSheetWidth() + 2,
+					getSheetHeight() + 2);
+		}
+		return highlightImage;
 	}
 
 	////////// INTERACTION ////////////
@@ -57,7 +100,7 @@ public class RubbleObject extends PuzzlerObject {
 	public boolean isHighlightAbovePlayer() {
 		return false;
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
