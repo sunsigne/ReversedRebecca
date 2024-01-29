@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class UnlockAnimationObject extends PuzzlerAnimationObject {
+public class UnlockAnimationObject extends SuperPuzzlerAnimationObject {
 
 	public UnlockAnimationObject(int x, int y) {
 		super(x, y);
@@ -52,10 +52,10 @@ public class UnlockAnimationObject extends PuzzlerAnimationObject {
 	protected BufferedImage unlockedImage;
 
 	protected void loadImages() {
-		String path = "textures/puzzler/" + getName() + "_";
+		BufferedImage image = new ImageTask().loadImage("textures/puzzler/" + getName());
 
-		lockedImage = new ImageTask().loadImage(path + "0");
-		unlockedImage = new ImageTask().loadImage(path + "1");
+		lockedImage = getSheetSubImage(image, 1);
+		unlockedImage = getSheetSubImage(image, 2);
 
 		currentImage = lockedImage;
 	}

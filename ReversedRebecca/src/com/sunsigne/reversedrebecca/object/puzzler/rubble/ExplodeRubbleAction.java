@@ -7,7 +7,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplodeRubbleAnimationObject;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.PuzzlerAnimationObject;
+import com.sunsigne.reversedrebecca.object.puzzler.animation.SuperPuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzleFactory;
@@ -48,7 +48,7 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public PuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
+	public SuperPuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new ExplodeRubbleAnimationObject(x, y);
 	}
 

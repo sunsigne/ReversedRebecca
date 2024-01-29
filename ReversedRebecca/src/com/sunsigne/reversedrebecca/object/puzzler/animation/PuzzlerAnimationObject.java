@@ -1,53 +1,65 @@
 package com.sunsigne.reversedrebecca.object.puzzler.animation;
 
-import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
+import com.sunsigne.reversedrebecca.ressources.images.Animation;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class PuzzlerAnimationObject extends GameObject {
+public abstract class PuzzlerAnimationObject extends SuperPuzzlerAnimationObject {
 
 	public PuzzlerAnimationObject(int x, int y) {
-		super(x + Size.XS / 8, y + Size.XS / 8, Size.XL / 2, Size.XL / 2);
+		this(x, y, 0, 0);
 	}
-	
+
 	public PuzzlerAnimationObject(int x, int y, int w, int h) {
-		super(x + Size.XS / 8, y + Size.XS / 8, w + Size.XL / 2, h + Size.XL / 2);
-	}
-
-	////////// NAME ////////////
-
-	public abstract String getName();
-
-	@Override
-	public String toString() {
-		var clazz = "PUZZLER ANIMATION";
-		return clazz + " : " + getName().toUpperCase();
+		super(x, y, w, h);
+		loadAnimations();
 	}
 
 	////////// TICK ////////////
 
-	protected final int ANIMATION_TIME = 60;
-	protected int time = ANIMATION_TIME;
+	public abstract FRAME_RATE getFrameRate();
+
+	protected enum FRAME_RATE {
+		NORMAL(4), FAST(3);
+
+		FRAME_RATE(int value) {
+			this.value = value;
+		}
+
+		private int value;
+
+		public int getValue() {
+			return value;
+		}
+	}
 
 	@Override
 	public void tick() {
-		time--;
+		super.tick();
 
-		if (time <= 0)
-			removeObject();
+		if (time % getFrameRate().getValue() == 0)
+			animation.cycle();
 	}
 
 	////////// TEXTURE ////////////
 
-	public abstract BufferedImage getImage();
+	private LimitedCycloid<BufferedImage> animation;
 
-	////////// RENDER ////////////
+	protected Animation buildAnimation(BufferedImage image) {
+		return new Animation(image);
+	}
+
+	private void loadAnimations() {
+		BufferedImage image = new ImageTask().loadImage("textures/puzzler/" + getName());
+		Animation images = buildAnimation(image);
+		animation = new LimitedCycloid<BufferedImage>(images.getImages());
+	}
 
 	@Override
-	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	public BufferedImage getImage() {
+		return animation.getState();
 	}
 
 }
