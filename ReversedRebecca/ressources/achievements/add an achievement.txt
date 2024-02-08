@@ -1,8 +1,8 @@
 To add a new achievement, proceed as follows :
 1 - copy the folder of an existing achievement
-2 - paste it in in this very folder (the game will automatically detect it)
+2 - paste it in this very folder (the game will automatically detect it)
 3 - rename that folder into a unique name (important for later)
-4 - change files within that folder as desired (your image, your parameters, etc.)
+4 - change files within that folder as desired (your image, your parameters*, etc.)
 5 - for every folder of "ressources/texts", open its "achievement.txt" file
 6 - write the text of your achievement as it should be displayed in each language (the word in the very left part is the exact word used when naming the folder)
 
@@ -10,3 +10,6 @@ Congrats ! Your achievement is now a game achievement ! Now, you only need to cr
 This might be intimidating, but it's the only way to proceed.
 
 Note : your custom achievements won't be licked to the steam achievement system, only to the one integrated into the game.
+
+*"hidden" determines if the condition to unlock the achievement should be displayed or not.
+*"location" determines where the achievement is placed in the menu. The first digit is for its color, the two other ones are its number.

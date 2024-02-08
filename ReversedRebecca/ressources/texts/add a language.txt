@@ -1,9 +1,9 @@
 To add a new language, proceed as follows :
-1 - copy the folder of an existing language
-2 - paste it in in this very folder (the game will automatically detect it)
-3 - rename that folder into the name of your language (optional)
-4 - for each file contained within, translate each value after the "=" symbole
+1 - Copy the folder of an existing language.
+2 - Paste it into this very folder (the game will automatically detect it).
+3 - Rename your folder into the name of your language (optional).
+4 - For every file contained within, translate each value after the "=" symbol.
 
 That's it.
 
-Note : the game cannot display more than 12 languages
+Note : the game cannot display more than 12 languages.
