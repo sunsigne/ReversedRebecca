@@ -271,6 +271,7 @@
 	////////// LVL002 ////////////
 	
 	lvl state : fusillade (comme rr000 sequestration)
+	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	
 	////////// MOLE 0 ////////////
 	
