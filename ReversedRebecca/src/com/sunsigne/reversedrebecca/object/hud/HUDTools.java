@@ -117,7 +117,8 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 			if (tempTool.getDifficulty() == LVL.NULL)
 				continue;
 
-			BufferedImage tool_image = task.loadImage("textures/tools/" + tempTool.getName() + "_null");
+			BufferedImage tool_image = task.loadImage("textures/tools/" + tempTool.getName());
+			tool_image = getSheetSubImage(tool_image, 1, 1, 16, 16);			
 			BufferedImage battery_image = loadBatteryImage(tempTool.getMaxDifficulty(), tempTool.getDifficulty());
 
 			images.addObject(tool_image);
@@ -130,7 +131,7 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 				continue;
 
 			setBlinking();
-			blinking_tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_blinking");
+			blinking_tool_image = new ImageTask().loadImage("textures/tools/" + tempTool.getName() + "_highlight");
 			map.put(tool_image, blinking_tool_image);
 		}
 	}
@@ -153,7 +154,6 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 					drawHighlight(g, blinking_tool_image, index * getWidth(), 0, 0, 0);
 
 				// battery
-
 				g.drawImage(images.getList().get(index + 1), getX() + (1 + index) * getWidth() - Size.XL / 8, getY(),
 						getWidth(), getHeight(), null);
 

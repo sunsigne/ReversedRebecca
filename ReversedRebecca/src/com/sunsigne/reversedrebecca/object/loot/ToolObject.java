@@ -6,13 +6,12 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
-import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
-public class ToolObject extends LootObject implements Difficulty, Highlightable {
+public class ToolObject extends LootObject implements Difficulty {
 
 	public ToolObject(ToolPlayer toolPlayer, LVL difficulty, int x, int y) {
 		super(x, y);
@@ -54,9 +53,21 @@ public class ToolObject extends LootObject implements Difficulty, Highlightable 
 	protected BufferedImage image;
 	protected BufferedImage blinking_image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1 + difficulty.ordinal();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
 	private void loadImages() {
-		image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + difficulty.getName());
-		blinking_image = new ImageTask().loadImage("textures/tools/" + toolPlayer.getName() + "_" + "blinking");
+		String path = "textures/tools/" + toolPlayer.getName();
+		image = new ImageTask().loadImage(path);
+		image = getSheetSubImage(image);
+		blinking_image = new ImageTask().loadImage(path + "_" + "highlight");
 	}
 
 	////////// RENDER ////////////

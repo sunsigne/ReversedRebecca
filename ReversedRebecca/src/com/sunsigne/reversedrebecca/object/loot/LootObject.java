@@ -8,11 +8,12 @@ import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.piranha.condition.global.PickupLootCondition;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class LootObject extends GameObject implements CollisionReactor, Blinking {
+public abstract class LootObject extends GameObject implements SheetableImage, CollisionReactor, Blinking {
 
 	public LootObject(int x, int y) {
 		super(x + Size.XS / 2, y + Size.XS / 2, Size.S, Size.S);
