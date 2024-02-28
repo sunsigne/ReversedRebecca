@@ -1,10 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bomb;
 
-import java.awt.image.BufferedImage;
-
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class DuplicatingBombObject extends CrazyBombObject {
@@ -49,19 +46,9 @@ public class DuplicatingBombObject extends CrazyBombObject {
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage image;
-
 	@Override
-	public BufferedImage getImage() {
-		if (hasExploded() == false) {
-			if (image == null) {
-				String critical = isCritical() ? "_critical" : "";
-				image = new ImageTask()
-						.loadImage("textures/puzzle/" + getPuzzle().getName() + "_bomb_" + "dual" + critical);
-			}
-			return image;
-		}
-		return super.getImage();
+	public int getSheetColCriterion() {
+		return 2;
 	}
 
 }

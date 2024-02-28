@@ -8,11 +8,14 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -22,7 +25,7 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class BombObject extends PuzzleObject implements MouseUserEvent, GamepadEvent {
+public class BombObject extends PuzzleObject implements SheetableImage, MouseUserEvent, GamepadEvent {
 
 	protected BombObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
@@ -147,24 +150,38 @@ public class BombObject extends PuzzleObject implements MouseUserEvent, GamepadE
 
 	private LimitedCycloid<BufferedImage> animation;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1 + (isCritical() ? 1 : 0);
+	}
+
+	@Override
+	public int getSheetSize() {
+		return 64;
+	}
+
+	protected Animation buildAnimation(BufferedImage image) {
+		return new Animation(image, 64, 64);
+	}
+
 	private void loadAnimation() {
+		String path = "textures/puzzle/" + getPuzzle().getName() + "_";
 
-		String path = "textures/puzzle/" + getPuzzle().getName() + "_bomb_";
-		ImageTask loader = new ImageTask();
+		BufferedImage bomb_img = new ImageTask().loadImage(path + "bomb");
+		bomb_img = getSheetSubImage(bomb_img);
+		BufferedImage[] bomb_img_array = { bomb_img };
 
-		String critical = isCritical() ? "critical" : "0";
-		BufferedImage i0 = loader.loadImage(path + critical);
-		BufferedImage i1 = loader.loadImage(path + "1");
-		BufferedImage i2 = loader.loadImage(path + "2");
-		BufferedImage i3 = loader.loadImage(path + "3");
-		BufferedImage i4 = loader.loadImage(path + "4");
-		BufferedImage i5 = loader.loadImage(path + "5");
-		BufferedImage i6 = loader.loadImage(path + "6");
-		BufferedImage i7 = loader.loadImage(path + "7");
-		BufferedImage i8 = loader.loadImage(path + "8");
-		BufferedImage i9 = loader.loadImage(path + "9");
+		BufferedImage explosion_img = new ImageTask().loadImage(path + "explosion");
+		Animation explosion_animation = buildAnimation(explosion_img);
 
-		animation = new LimitedCycloid<BufferedImage>(i0, i1, i2, i3, i4, i5, i6, i7, i8, i9);
+		BufferedImage img[] = new ArrayCombiner<BufferedImage>().combine(BufferedImage.class, bomb_img_array,
+				explosion_animation.getImages());
+		animation = new LimitedCycloid<BufferedImage>(img);
 	}
 
 	public BufferedImage getImage() {
@@ -246,5 +263,5 @@ public class BombObject extends PuzzleObject implements MouseUserEvent, GamepadE
 	public void buttonReleased(ButtonEvent e) {
 
 	}
-	
+
 }
