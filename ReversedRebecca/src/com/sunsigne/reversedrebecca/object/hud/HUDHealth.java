@@ -56,9 +56,21 @@ public class HUDHealth extends GameObject implements HUD {
 	private BufferedImage empty_img;
 	private BufferedImage full_img;
 
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	
 	private void loadImages() {
-		empty_img = new ImageTask().loadImage("textures/hud/" + "heart_empty");
-		full_img = new ImageTask().loadImage("textures/hud/" + "heart_full");
+		BufferedImage image = new ImageTask().loadImage("textures/hud/" + "heart");		
+		empty_img = getSheetSubImage(image, 2);
+		full_img = getSheetSubImage(image, 1);
 	}
 
 	////////// RENDER ////////////

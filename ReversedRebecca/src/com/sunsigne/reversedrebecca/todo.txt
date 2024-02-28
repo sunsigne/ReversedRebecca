@@ -176,7 +176,7 @@
 	////////// MENU BONUS ////////////
 
 	niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
-	consulter les textures non utilisées
+	consulter les ressources non utilisées (son, textures, etc.)
 	activer tous les succès abandonnées
 	jouer avec le skin "rebecca_dark"
 
@@ -312,7 +312,7 @@
 	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
 
 	un passage dont la mécanique s'inspire du jeu mobile "alien invasion idle rpg", par exemple lors de la reconstruction du laboiratoire où il faut gérer la quantité d'ouvrier, les répartir, gérer les ressoruces, etc.
-	rebecca bourée -> contrôles inversées
+	rebecca bourée -> contrôles inversées + s'embrasse elle-même
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
@@ -378,5 +378,13 @@
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
 
+	Psycopathe :
+	Combat normal contre blast-X
+	Conbatr difficile contre double Y & Blast-X en même temps (qui a miuraculeusement survécu la fois dernière)
+	Oneshot du robot prétenduement super fort que double Y désactive à chaque fois, sauf en difficile
+	Dave passe le jeu en difficile le temps de son combat, qui est epic (musique type mégalovania) il envoie des rayons lazer, vers le passé pour se battre avec d'autres version de lui-même, etc.
+	Combat normal avec musique au piano un peu mélancolique, avecv Sarah
+	Rebecca débloque son pouvoir de télékinésie (via des genre de vagues d'energie violettes) et relache le musée de l'horreur sur le monde pour devenir reine
+	
 	"You are" ne se sauvegarde pas encore
 	

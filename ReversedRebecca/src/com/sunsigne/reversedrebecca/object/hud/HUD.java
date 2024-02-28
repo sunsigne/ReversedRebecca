@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.object.hud;
 
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 
-public interface HUD extends Updatable {
+public interface HUD extends SheetableImage {
 
 	////////// HUD ////////////
 

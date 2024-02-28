@@ -85,6 +85,27 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 	private GameList<BufferedImage> images = new GameList<>(LISTTYPE.ARRAY);
 	private BufferedImage blinking_tool_image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return -1;
+	}
+	
+	@Override
+	public int getSheetSize() {
+		return 32;
+	}
+	
+	private BufferedImage loadBatteryImage(LVL maxDifficulty, LVL difficulty) {
+		BufferedImage image = new ImageTask().loadImage("textures/hud/" + "batteries");	
+		BufferedImage battery_img = getSheetSubImage(image, difficulty.ordinal(), maxDifficulty.ordinal(), getSheetWidth(), getSheetHeight());
+		return battery_img;
+	}
+	
 	public void loadImages(ToolPlayer tool) {
 		map.clear();
 		images.clear();
@@ -97,10 +118,8 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 				continue;
 
 			BufferedImage tool_image = task.loadImage("textures/tools/" + tempTool.getName() + "_null");
-			BufferedImage battery_image = task.loadImage("textures/" + "hud/battery_max_"
-					+ tempTool.getMaxDifficulty().getName() + "_current_" + tempTool.getDifficulty().getName());
-			battery_image = task.drawCopyOf(battery_image);
-			
+			BufferedImage battery_image = loadBatteryImage(tempTool.getMaxDifficulty(), tempTool.getDifficulty());
+
 			images.addObject(tool_image);
 			images.addObject(battery_image);
 
