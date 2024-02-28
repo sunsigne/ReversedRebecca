@@ -23,6 +23,11 @@ public class WallPassMode extends DebugMode {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 2;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_wall_pass";
 	}

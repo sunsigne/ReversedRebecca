@@ -19,6 +19,11 @@ public class FastWorldMode extends DebugMode {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 4;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_fast_world";
 	}

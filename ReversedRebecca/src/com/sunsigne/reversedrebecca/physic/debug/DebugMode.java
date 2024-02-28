@@ -19,6 +19,8 @@ public abstract class DebugMode extends Cycloid<Boolean> implements PhysicLaw {
 		return local_index;
 	}
 
+	public abstract int getNum();
+	
 	public abstract DebugMode getDebugMode();
 
 	////////// NAME ////////////

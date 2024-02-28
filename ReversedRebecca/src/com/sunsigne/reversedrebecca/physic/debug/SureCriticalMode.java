@@ -21,6 +21,11 @@ public class SureCriticalMode extends DebugMode {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 7;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_sure_critical";
 	}

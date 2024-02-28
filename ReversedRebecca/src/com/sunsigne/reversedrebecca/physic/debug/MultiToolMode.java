@@ -22,6 +22,11 @@ public class MultiToolMode extends DebugMode {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 6;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_multitool";
 	}

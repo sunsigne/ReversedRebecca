@@ -21,6 +21,11 @@ public class SwiftMovingMode extends DebugMode {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 3;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_swift_moving";
 	}

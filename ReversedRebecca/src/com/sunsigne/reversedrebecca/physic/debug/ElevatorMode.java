@@ -24,6 +24,11 @@ public class ElevatorMode extends DebugMode implements KeyboardEvent {
 	////////// NAME ////////////
 
 	@Override
+	public int getNum() {
+		return 5;
+	}
+
+	@Override
 	public String getName() {
 		return "debugmode_elevator";
 	}

@@ -8,13 +8,14 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DebugModeObject extends GameObject implements Highlightable, TickFree, MouseUserEvent {
+public class DebugModeObject extends GameObject implements TickFree, SheetableImage, Highlightable, MouseUserEvent {
 
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
@@ -48,9 +49,29 @@ public class DebugModeObject extends GameObject implements Highlightable, TickFr
 	private BufferedImage image;
 	private BufferedImage highlightImage;
 
+	@Override
+	public int getSheetColCriterion() {
+		return debugMode.getNum();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetSize() {
+		return 32;
+	}
+
 	private void loadImages() {
-		image = new ImageTask().loadImage("textures/hud/" + debugMode.getName());
-		highlightImage = new ImageTask().loadImage("textures/hud/" + debugMode.getName() + "_highlight");
+		String name = "debugmode";
+		image = new ImageTask().loadImage("textures/hud/" + name);
+		image = getSheetSubImage(image);
+
+		highlightImage = new ImageTask().loadImage("textures/hud/" + name + "_" + "highlight");
+		highlightImage = getSheetSubImage(highlightImage, getSheetColCriterion(), getSheetRowCriterion(), getSheetWidth() + 4,
+				getSheetHeight() + 4);
 	}
 
 	////////// RENDER ////////////

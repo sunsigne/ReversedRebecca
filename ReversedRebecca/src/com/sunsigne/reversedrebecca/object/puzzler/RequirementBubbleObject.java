@@ -12,11 +12,12 @@ import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class RequirementBubbleObject extends GameObject {
+public class RequirementBubbleObject extends GameObject implements SheetableImage {
 
 	public RequirementBubbleObject(int x, int y, ToolPlayer tool, LVL difficulty) {
 		super(x, y, Size.L, Size.L);
@@ -53,6 +54,21 @@ public class RequirementBubbleObject extends GameObject {
 	private BufferedImage tool_image;
 	private BufferedImage difficulty_image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return difficulty.ordinal();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetSize() {
+		return 128;
+	}
+
 	public BufferedImage getToolImage() {
 		if (tool_image == null)
 			tool_image = new ImageTask().loadImage("textures/tools/" + tool.getName() + "_" + "null");
@@ -60,8 +76,10 @@ public class RequirementBubbleObject extends GameObject {
 	}
 
 	public BufferedImage getDifficultyImage() {
-		if (difficulty_image == null)
-			difficulty_image = new ImageTask().loadImage("textures/hud/" + "requirement" + "_" + difficulty.getName());
+		if (difficulty_image == null) {
+			difficulty_image = new ImageTask().loadImage("textures/hud/" + "requirement");
+			difficulty_image = getSheetSubImage(difficulty_image);
+		}
 		return difficulty_image;
 	}
 
