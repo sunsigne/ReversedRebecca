@@ -70,8 +70,10 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 	}
 
 	public BufferedImage getToolImage() {
-		if (tool_image == null)
-			tool_image = new ImageTask().loadImage("textures/tools/" + tool.getName() + "_" + "null");
+		if (tool_image == null) {
+			tool_image = new ImageTask().loadImage("textures/tools/" + tool.getName());
+			tool_image = getSheetSubImage(tool_image, 1, 1, 16, 16);
+		}
 		return tool_image;
 	}
 
