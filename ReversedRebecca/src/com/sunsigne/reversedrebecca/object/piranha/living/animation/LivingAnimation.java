@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
@@ -7,20 +8,17 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 
-public class LivingAnimation {
+public class LivingAnimation implements SheetableImage {
 
-	public LivingAnimation(LivingObject living, String name, int animation_time, boolean orientable) {
-		this.name = name;
+	public LivingAnimation(LivingObject living, int animation_time, boolean orientable, int... col) {
+		this.col = col;
 		this.living = living;
 		this.animation_time = animation_time; // -1 for no animation
 		this.orientable = orientable;
 		loadAnimations();
 	}
-
-	////////// NAME ////////////
-
-	private String name;
 
 	////////// BEHAVIOR ////////////
 
@@ -30,6 +28,11 @@ public class LivingAnimation {
 
 	private int animation_time;
 	private int time = animation_time;
+
+	@Override
+	public void tick() {
+		run();
+	}
 
 	public void run() {
 		// no animation case
@@ -58,6 +61,18 @@ public class LivingAnimation {
 
 	////////// TEXTURE ////////////
 
+	private int[] col;
+
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 5; // no orientable case
+	}
+
 	private boolean orientable;
 
 	@SuppressWarnings("unchecked")
@@ -73,39 +88,53 @@ public class LivingAnimation {
 	}
 
 	private BufferedImage[] loadAnimation(DIRECTION direction) {
+		int row = orientable ? 1 + direction.getNum() : getSheetRowCriterion();
 
-		// no orientable case
-		String path = name;
-		if (orientable)
-			path = path + direction.getName();
+		BufferedImage[] animation = new BufferedImage[col.length];
+		BufferedImage highlight = null;
+		int index = 0;
 
-		// no animation case
-		if (animation_time == -1)
-			return new BufferedImage[] { loadImage(path) };
+		do {
+			animation[index] = getSheetSubImage(loadImage(), col[index], row, getSheetWidth(), getSheetHeight());
+			highlight = getSheetSubImage(loadHighlightImage(), col[index], row, getSheetWidth() + 2, getSheetHeight() + 2);
+			map.put(animation[index], highlight);
+			index++;
+		} while (index < col.length);
 
-		BufferedImage img0 = loadImage(path + "_0");
-		BufferedImage img1 = loadImage(path + "_1");
-
-		return new BufferedImage[] { img0, img1 };
+		return animation;
 	}
 
-	private BufferedImage loadImage(String imageName) {
-		String imagePath = "textures/characters/" + living.getName() + "/" + imageName;
+	private BufferedImage living_img;
+	protected BufferedImage highlight_image;
 
-		BufferedImage img = new ImageTask().loadImage(imagePath, true);
+	private BufferedImage loadImage() {
+		if (living_img != null)
+			return living_img;
+
+		String path = "textures/characters/" + living.getName() + "/" + living.getName();
+		living_img = new ImageTask().loadImage(path, true);
 
 		// load error character instead of missing texture
-		if (img == null)
-			img = new ImageTask().loadImage(imagePath.replace(living.getName(), "error"));
+		if (living_img == null)
+			living_img = new ImageTask().loadImage(path.replace(living.getName(), "error"));
 
-		// load of highlights
-		BufferedImage hightlight = new ImageTask().loadImage(imagePath.replace(imageName, "highlights/" + imageName),
-				true);
-		map.put(img, hightlight);
-
-		return img;
+		return living_img;
 	}
 
+	private BufferedImage loadHighlightImage() {
+		if (highlight_image != null)
+			return highlight_image;
+
+		String path = "textures/characters/" + living.getName() + "/" + living.getName() + "_highlight";
+		highlight_image = new ImageTask().loadImage(path, true);
+
+		// load error character instead of missing texture
+		if (highlight_image == null)
+			highlight_image = new ImageTask().loadImage(path.replace(living.getName(), "error"));
+
+		return highlight_image;
+	}
+	
 	////////// RENDER ////////////
 
 	public BufferedImage getImage() {
@@ -113,8 +142,13 @@ public class LivingAnimation {
 		return cycloid[facing].getState();
 	}
 
-	public BufferedImage getHightlightFromImage(BufferedImage image) {
+	public BufferedImage getHighlightFromImage(BufferedImage image) {
 		return map.get(image);
+	}
+
+	@Override
+	public void render(Graphics g) {
+
 	}
 
 }

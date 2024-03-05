@@ -57,23 +57,22 @@ public class LivingAnimationHandler {
 
 	private void loadAnimations() {
 
-		walkingGoodAnimation = new LivingAnimation(living, "walking_", 15, true);
-		walkingGlassAnimation = new LivingAnimation(living, "var/glass/walking_", 15, true);
-		walkingCupAnimation = new LivingAnimation(living, "var/cup/walking_", 15, true);
-		standingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
-//		walkingSickAnimation = new LivingAnimation(living, "var/sick/walking_", 15, true); // to create ?
-		walkingSickAnimation = new LivingAnimation(living, "var/sick/standing_", 30, true);
+		walkingGoodAnimation = new LivingAnimation(living, 15, true, 2, 3);
+		walkingGlassAnimation = new LivingAnimation(living, 15, true, 5, 6);
+		walkingCupAnimation = new LivingAnimation(living, 15, true, 8, 9);
+		standingSickAnimation = new LivingAnimation(living, 30, true, 10, 11);
+//		walkingSickAnimation = new LivingAnimation(living, 15, true, X, Y); // to create ?
 
-		standingGoodAnimation = new LivingAnimation(living, "standing_", -1, true);
-		standingGlassAnimation = new LivingAnimation(living, "var/glass/standing_", -1, true);
-		standingCupAnimation = new LivingAnimation(living, "var/cup/standing_", -1, true);
-		sitAnimation = new LivingAnimation(living, "var/sit/", -1, true);
+		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
+		standingGlassAnimation = new LivingAnimation(living, -1, true, 4);
+		standingCupAnimation = new LivingAnimation(living, -1, true, 7);
+		sitAnimation = new LivingAnimation(living, -1, true, 12);
 
-		bedAnimation = new LivingAnimation(living, "var/fixed/bed", 59, false);
-		cryAnimation = new LivingAnimation(living, "var/fixed/cry", 50, false);
+		bedAnimation = new LivingAnimation(living, 59, false, 1, 2);
+		cryAnimation = new LivingAnimation(living, 50, false, 3, 4);
 
-		bathAnimation = new LivingAnimation(living, "var/fixed/bath", -1, false);
-		koAnimation = new LivingAnimation(living, "var/fixed/ko", -1, false);
+		bathAnimation = new LivingAnimation(living, -1, false, 6);
+		koAnimation = new LivingAnimation(living, -1, false, 5);
 	}
 
 	////////// RENDER ////////////
@@ -119,8 +118,8 @@ public class LivingAnimationHandler {
 		return getAnimation().getImage();
 	}
 
-	public BufferedImage getHightlightImage() {
-		return getAnimation().getHightlightFromImage(getImage());
+	public BufferedImage getHighlightImage() {
+		return getAnimation().getHighlightFromImage(getImage());
 	}
 
 }

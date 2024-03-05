@@ -219,7 +219,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX() + displayedX, getY() + displayedY, getWidth(), getHeight(), null);
-		drawHighlight(g, animation.getHightlightImage(), displayedX, displayedY, 0, 0);
+		drawHighlight(g, animation.getHighlightImage(), displayedX, displayedY, 0, 0);
 	}
 
 	////////// PUSHER ////////////
