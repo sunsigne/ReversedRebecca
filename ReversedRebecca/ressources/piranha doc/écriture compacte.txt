@@ -1,0 +1,24 @@
+////// ÉCRITURE COMPACTE //////
+
+L'écriture compacte (aussi appelée « écriture condensée ») est une façon d'écrire du code Piranha en éliminant des Instructions "triviales". Elle est possible lorsqu'un Type de Requête n'a qu'une seule Cible.
+
+Soit, l'exemple suivant : 
+TIME -> 0 = GOTO -> MY_NAME, MY_FACING
+$ -> MY_NAME = NAME -> BOB
+$ -> MY_FACING = FACING -> DOWN
+
+L'Instruction en 1ère ligne initie l’exécution des Instructions en ligne 2 et 3.
+L'Instruction en 2ème ligne n'a qu'une seule Cible : "BOB".
+L'Instruction en 3ème ligne n'a qu'une seule Cible : "DOWN".
+
+Le Type de Requête "NAME" ne peut avoir qu'une seule Cible (un nom), l'écriture compacte suivante devient alors possible :
+TIME -> 0 = GOTO -> NAME:BOB
+
+Ici, NAME est à la fois la Cible de GOTO, et un Type de Requête dont la Cible est "BOB" !
+
+L'exemple précédent peut ainsi être simplifié de la façon suivante : 
+TIME -> 0 = GOTO -> NAME:BOB, FACING:DOWN
+
+Cette seule ligne fait le même travail que les trois Instructions de notre exemple. Nous avons donc éliminé 2 Instructions "triviales" de notre code !
+
+ATTENTION ! Tous les Types de Requête n'autorisent pas l'écriture compacte. Lorsqu'elle est possible, un exemple sera systématiquement donné.

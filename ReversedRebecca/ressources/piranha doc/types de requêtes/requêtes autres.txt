@@ -1,6 +1,6 @@
 ////// CAMERA //////
 
-Le Type de Requête CAMERA permet de déterminer le type de Caméra ou son emplacement.
+Le Type de Requête CAMERA permet de déterminer le type de Caméra, ou son emplacement, en fonction de la Cible.
 
 Exemple : 
 TIME -> 0 = CAMERA -> 0-0
@@ -23,18 +23,18 @@ Le Type de Requête INTERRUPT_BOSS permet de terminer l'action en cours de tous 
 Exemple :
 WONPUZZLE -> 6-0 = INTERRUPT_BOSS -> PROCESS
 
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose comme : TRUE, PROCESS ou START.
+Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire une Cible cohérente, comme : TRUE, PROCESS ou START.
 
 
 ////// DISPLAY //////
 
 Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x et y. 
-De la même façon que le Type de Requête HITBOX ne change QUE les dimensions de la hitbox d'un objet (voir "requêtes state"), DISPLAY ne change QUE le visuel de l'objet : aucune autre caractéristique n'est prise en compte.
+De la même façon que le Type de Requête HITBOX ne change QUE les dimensions de la hitbox d'un objet (voir le Type de Requête HITBOX dans la partie « Requêtes state »), DISPLAY ne change QUE le visuel de l'objet : aucune autre caractéristique n'est prise en compte.
 Il est utilisé lorsqu'un personnage se trouve dans un lit, sur une chaise, etc.
 
 Note : dans la mesure où seuls les objets Piranha "vivants" ont officiellement un visuel, le Type de Requête DISPLAY ne s'applique qu'à ces derniers.
 
-L'échelle est de 16 pixels pour une case (voir le Type de requête HITBOX).
+L'échelle est de 16 pixels pour une case (voir le Type de Requête HITBOX).
 
 Exemple :
 $ -> DISPLAY_SIT = DISPLAY -> 0, -1
@@ -53,9 +53,10 @@ L'échelle est de 1 pour une case.
 Exemple :
 $ -> HIGHLIGHT_INIT = HIGHLIGHT -> -1, -1, 2, 3
 
-Lorsque la Condition sera vérifiée, le détourage de l'objet sera visuellement décalé comme suit : x=-1, y=-1, largeur=2, hauteur=3.
+Lorsque la Condition sera vérifiée, le détourage de l'objet sera visuellement décalé comme suit par rapport à l'objet : x=-1, y=-1, largeur=2, hauteur=3.
 
 Note : il est possible d'entrer des valeurs négatives pour ce Type de Requête.
+Note : les valeurs par défauts sont -1, -1, 18, 18.
 
 
 ////// HIGHLIGHT_ABSOLUTE //////
@@ -96,7 +97,7 @@ Note : par défaut, le visuel du détourage d'un objet apparait devant le joueur
 ////// CUTSCENE //////
 
 Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.
-Note : il peut parfois être utile de vérifier si le Joueur respecte certaines conditions avant de lancer une cinématique (voir READY_PLAYER dans "requêtes conditionnelles").
+Note : il peut parfois être utile de vérifier si le Joueur respecte certaines conditions avant de lancer une cinématique (voir Type de Requête READY_PLAYER dans « Requêtes conditionnelles).
 
 exemple :
 TIME -> 0 = CUTSCENE -> START
@@ -112,10 +113,10 @@ Les trois choses que font une scène cinématique sont :
 Le Type de Requête CUTSCENE accepte 3 cibles :
 - START, pour lancer une scène cinématique.
 - STOP, pour arrêter une scène cinématique.
-- STOP_WITH_DELAY, pour arrêter une scène cinématique après un court délais (1 secondes). On ne sait jamais, ça peut servir ¯\_(ツ)_/¯
+- STOP_WITH_DELAY, pour arrêter une scène cinématique après un court délai (1 seconde). On ne sait jamais, ça peut servir ¯\_(ツ)_/¯
 
-Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur.
-Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cutscene suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
+Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur et il se retrouvera dans une situation de « softlock ».
+Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cinématique suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
 
 
 L'écriture conditionnelle est possible, quoique légèrement différente de d'habitude.
