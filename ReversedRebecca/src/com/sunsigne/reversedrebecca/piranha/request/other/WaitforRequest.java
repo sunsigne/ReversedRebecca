@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
@@ -79,7 +80,7 @@ public class WaitforRequest implements Request {
 
 		case "FACING":
 			return getFacingListener(generic, object, condition);
-			
+
 		case "PLAYER_FUTHER_THAN":
 			return getPlayerDistanceListener(generic, object, Integer.parseInt(condition), true);
 
@@ -88,6 +89,12 @@ public class WaitforRequest implements Request {
 
 		case "PLAYER_FACING":
 			return getPlayerFacingListener(generic, condition);
+			
+		case "SLOW":
+		case "MOVE":
+		case "FAST":
+			doMoveAction(object, conditionType, condition);
+			return getMoveListener(generic, object);
 		}
 
 		return null;
@@ -102,6 +109,31 @@ public class WaitforRequest implements Request {
 			@Override
 			public boolean canDoAction() {
 				return timer.isReady();
+			}
+
+			@Override
+			public GenericListener getAction() {
+				return generic;
+			}
+		};
+	}
+
+	private void doMoveAction(PiranhaObject object, String conditionType, String condition) {
+		for (Request tempAction : RequestList.getList().getList()) {
+			if (conditionType.equalsIgnoreCase(tempAction.getType()))
+				tempAction.doAction(object, condition);
+		}
+	}
+
+	private ConditionalListener getMoveListener(GenericListener generic, PiranhaObject object) {
+
+		Position goal = object.getGoal();
+		
+		return new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				return goal.getX() - object.getX() == 0 & goal.getY() - object.getY() == 0;
 			}
 
 			@Override
