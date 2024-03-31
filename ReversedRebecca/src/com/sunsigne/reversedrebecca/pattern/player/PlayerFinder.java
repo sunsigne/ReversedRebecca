@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.pattern.player;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
@@ -30,7 +31,7 @@ public class PlayerFinder {
 	public void setPlayerCanInterract(boolean canInterract) {
 		Player player = getPlayer();
 
-		if (player == null)
+		if (player == null || Cutscene.isRunning())
 			return;
 
 		player.setCanInterract(canInterract);
