@@ -20,6 +20,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- l'animation de vérouillage de porte est bugué (texture non lue)
 		- les hole_upward semble ne pas respecter la loi "single interactive law"
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
@@ -35,6 +36,7 @@
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
 	vérifier si bien réglé :
+		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
@@ -303,6 +305,9 @@
 	////////// SONS ////////////
 
 	///////// IDEE ////////////
+
+	puzzle casse brique (pour l'ordi)
+	puzzle passer à travers les jet d'eau
 
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 

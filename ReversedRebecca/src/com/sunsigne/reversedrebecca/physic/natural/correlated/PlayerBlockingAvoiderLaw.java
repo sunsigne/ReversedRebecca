@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -19,12 +20,13 @@ public class PlayerBlockingAvoiderLaw implements PhysicLaw {
 		PlayerAvoider avoider = (PlayerAvoider) object;
 
 		switch (avoider.getPlayerAvoiderType()) {
-		case AROUND:
-			avoider.setPlayerBlockingAvoider(isPlayerAtCriticalDistance(avoider));
-			break;
 		case AROUND_OMNISCIENT:
 			avoider.setPlayerBlockingAvoider(true);
 			break;
+		case AROUND:
+			avoider.setPlayerBlockingAvoider(isPlayerAtCriticalDistance(avoider));
+			if(Cutscene.isRunning() == false)
+				break;
 		case CUTSCENE:
 			avoider.setPlayerBlockingAvoider(new PlayerFinder().isPlayerCloserThan(avoider, 3));
 			break;
