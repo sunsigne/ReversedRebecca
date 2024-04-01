@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.other;
 public class SimulationAnimatedObject extends AnimatedDecorationObject {
 
 	public SimulationAnimatedObject(int x, int y, int w, int h, String path, String name) {
-		super(x, y, w, h, path + "/" + name, 5, 3, false);
+		super(x, y, w, h, path + "/" + name, 3, false);
 	}
 
 	////////// NAME ////////////
@@ -25,5 +25,5 @@ public class SimulationAnimatedObject extends AnimatedDecorationObject {
 	protected int getNumberOfTimesFirstImageIsRepeated() {
 		return 12;
 	}
-	
+
 }

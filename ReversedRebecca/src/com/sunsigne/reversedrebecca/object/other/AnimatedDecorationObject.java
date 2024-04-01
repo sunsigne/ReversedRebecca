@@ -11,10 +11,8 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public class AnimatedDecorationObject extends DecorationObject {
 
-	public AnimatedDecorationObject(int x, int y, int w, int h, String name, int frames, int animation_time,
-			boolean cycle) {
+	public AnimatedDecorationObject(int x, int y, int w, int h, String name, int animation_time, boolean cycle) {
 		super(x, y, w, h, name);
-		this.frames = frames;
 		this.animation_time = time = animation_time;
 		loadAnimation(cycle);
 	}
@@ -53,7 +51,6 @@ public class AnimatedDecorationObject extends DecorationObject {
 	////////// TEXTURE ////////////
 
 	protected Cycloid<BufferedImage> animation;
-	private int frames;
 
 	protected int getNumberOfTimesFirstImageIsRepeated() {
 		return 0;
@@ -65,15 +62,24 @@ public class AnimatedDecorationObject extends DecorationObject {
 		ImageTask loader = new ImageTask();
 
 		GameList<BufferedImage> list = new GameList<>(LISTTYPE.ARRAY);
+		int index = 0;
+		BufferedImage image = null;
 
-		for (int index = 0; index < frames; index++) {
+		do {
 			String formated_index = new FormattedString().getNumber(index);
+			image = loader.loadImage(path + formated_index, true);
+
+			if (image == null)
+				break;
+
 			list.addObject(loader.loadImage(path + formated_index));
 
 			if (index == 0)
 				for (int repeat = 0; repeat < getNumberOfTimesFirstImageIsRepeated(); repeat++)
 					list.addObject(loader.loadImage(path + formated_index));
-		}
+
+			index++;
+		} while (true);
 
 		// converting the list into an array
 		BufferedImage[] images = new BufferedImage[list.getList().size()];

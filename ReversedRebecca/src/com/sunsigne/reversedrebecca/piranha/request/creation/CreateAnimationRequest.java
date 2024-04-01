@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -61,9 +60,8 @@ public class CreateAnimationRequest implements IndexRequest {
 
 		// determine the animation characteristics
 
-		int frames = Integer.parseInt(data.split(",")[4]);
-		int animation_time = Integer.parseInt(data.split(",")[5]);
-		boolean cycle = Boolean.parseBoolean(data.split(",")[6]);
+		int animation_time = Integer.parseInt(data.split(",")[4]);
+		boolean cycle = Boolean.parseBoolean(data.split(",")[5]);
 
 		// refine data
 
@@ -76,7 +74,7 @@ public class CreateAnimationRequest implements IndexRequest {
 
 		// creation of the object
 
-		GameObject creation = new AnimatedDecorationObject(x, y, width, height, name, frames, animation_time, cycle);
+		GameObject creation = new AnimatedDecorationObject(x, y, width, height, name, animation_time, cycle);
 		handler.getList().add(index, creation);
 		Handler.updateHandlerMap(handler, creation);
 	}
