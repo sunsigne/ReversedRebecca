@@ -36,6 +36,9 @@ public class SaveRequest implements Request {
 		String saveType = target.split(",")[0].toUpperCase();
 		String data = target.split(",")[1].toUpperCase();
 
+		if (data.toLowerCase().contains("currentlvl"))
+			return;
+
 		switch (saveType) {
 
 		case "REGISTER":
