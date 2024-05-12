@@ -1,109 +1,126 @@
-Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cutscene suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
-Note : la plupart des Types de Requête suivants font intervenir un PathFinder qui, malgré son optimisation, est assez gourmand en ressources... Ce dernier le devient énormémant lorsque aucune trajectoire n'est trouvée (par exemple, lorsque le joueur bloque le chemin). Il est du devoir du programmeur Piranha de faire en sorte que cela arrive le moins souvent possible en empêchant le calcul de trajectoire lorsque cela n'est pas désiré, par exemple en utilisant un "WAITFOR -> PLAYER_FUTHER_THAN:2 ?" (voir "requêtes autres"), en privilegiant le Type de Requête MOVE_BACKUP (voir plus bas) qui est moins gourmand si un chemin est trouvé, que MOVE lorsque aucun ne l'est, ou en changeant le PLAYER_AVOIDER_TYPE (voir "requêtes states") pour en choisir un qui ignore le joueur lors du calcul de la trajectoire (par exemple "STOP", dans les espaces étroits).
+La plupart des Types de Requête suivants font intervenir le Path Finder, qui, malgré son optimisation, est assez gourmand en puissance de calcul. Ce dernier consomme une puissance de calcul amplifiée lorsque aucune trajectoire n'est trouvée, ce qui – dans un monde parfait – ne devrait arriver que lorsque le joueur – seule variable non contrôlable sur une carte – bloque le chemin de l'objet. Il est du devoir du programmeur Piranha de prendre en compte la présence hypothétique du joueur et d’empêcher les calculs de trajectoires inutiles qui n'aboutiront pas, par exemple en vérifiant que celui-ci est suffisamment loin (exemple : … WAITFOR → PLAYER_FUTHER_THAN:2 ? … – voir « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres » –), en privilégiant le Type de Requête MOVE_BACKUP (voir pages suivantes) lorsqu'une trajectoire doit absolument être trouvée, ou en changeant le Player Avoider de l'objet (voir « PLAYER_AVOIDER_TYPE » dans la partie « Piranha – Types de Requêtes : States ») pour en choisir un qui ignore le joueur lors du calcul de la trajectoire (exemple : « STOP », dans les espaces étroits).
+
+Attention ! À part la vitesse de base du joueur qui est modifiée, les mouvements durant les cinématiques (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres ») suivent les mêmes règles qu'en dehors de ces dernières. Assurez-vous qu'aucun NPC ne soit pas bloqué par le joueur, au risque de provoquer un « softlock ».
+
+
 
 ////// MOVE //////
 
+Le Type de Requête MOVE permet de définir un Goal (ou Objectif) pour un objet. Si le Goal est atteignable et que l'objet peut se déplacer, il se déplacera dans sa direction.
 
-Le Type de Requête MOVE permet définir un GOAL (ou Objectif) à un objet. Si le GOAL est atteignable et que l'objet peut se déplacer, il se déplacera dans sa direction.
+Exemple :
+TIME -> 0 = MOVE -> 10-20
+TIME -> 0 = GOTO -> MOVE:10-20
 
-exemple :
-TIME -> 0 = MOVE -> 33-35
-TIME -> 0 = GOTO -> MOVE:33-35
+Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en X=10 Y=20.
 
-Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en x=33 y=35
-Note : la Cible "STOP" est autorisé. Le nouveau GOAL se l'objet sera alors défini comme null. Ni le NAME d'un objet, ni la Cible "Player" ne sont autorisés pour ce Type de Requête.
+Note : la Cible « STOP » est autorisé, l'objet sera alors immobilisé, recentré sur sa propre case, et son nouveau Goal sera défini comme étant « null ».
+Une façon alternative d'écrire ce Type de Requête tout en anticipant l'Instruction dont la Condition coïncide à sa Cible (voir « GOAL » dans la partie « Piranha – Conditions »), est de passer par un WAITFOR (voir « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres »).
+
+Exemple :
+! -> MOVE_TO_A = MOVE -> 10-20
+GOAL -> 10-20 -> FACING:UP, AFFECTING:REACHED_A
+
+… peut être simplifié de la façon suivante :
+! -> MOVE_TO_A = WAITFOR -> MOVE:10-20 ? AFFECTING:REACHED_A
 
 
-Utilisation "spéciale" :
+Utilisation "spéciale" :
 
-Il est possible de définir un GOAL à partir d'un NAME (voir "requêtes states.txt"). Dans ce cas, le GOAL sera défini comme étant la position valide la plus proche parmi les 4 emplacements autours de l'objet.
+Il est possible de définir un Goal à partir d'un nom (voir « NAME » dans la partie « Piranha – Types de Requêtes : Autres »). Dans ce cas, le Goal sera défini comme étant la Position valide la plus proche parmi les quatre emplacements autours de l'objet.
 
-exemple :
+Exemple :
 TIME -> 20 = MOVE -> PLAYER
 
 Lorsque la Condition sera vérifiée, l'objet se rendra "à-côté" du joueur. L'endroit exact sera déterminé en fonction de la distance "à vol d'oiseau" la plus courte.
 
-Attention : le GOAL est défini au moment du lancement de la Requête et n'est pas recalculé "automatiquement" ! Dit autrement ; si le joueur s'est déplacé pendant le mouvement de l'objet, ce dernier ne changera pas sa destination.
-Note : Il est tout à fait possible de remédier à ce genre de problème en créant une boucle, par exemple comme ceci :
+Attention ! le Goal est défini au moment du lancement de la Requête et n'est pas recalculé durant le trajet ! Dit autrement ; si le joueur s'est déplacé pendant le mouvement de l'objet, ce dernier ne changera pas sa destination : il arrivera là où le joueur était, et non là où il se trouve nouvellement.
+
+Note : Il est tout à fait possible de corriger ce comportement en créant une boucle, comme dans cet exemple :
 
 $ -> START_FOLLOWING = GOTO -> PLAYER_AVOIDER_TYPE:THROUGH, WAITFOR_STUN:FALSE, FOLLOW_PLAYER
-$ -> FOLLOW_PLAYER = WAITFOR -> TIMER:1 ? PARSE_FOLLOW_PLAYER_FAR, PARSE_FOLLOW_PLAYER_CLOSE, FOLLOW_PLAYER
-$ -> PARSE_FOLLOW_PLAYER_FAR = PLAYER_FUTHER_THAN -> 2 ? MOVE:PLAYER / NULL
-$ -> PARSE_FOLLOW_PLAYER_CLOSE = PLAYER_CLOSER_THAN -> 3 ? FACING:PLAYER / NULL
+$ -> FOLLOW_PLAYER = WAITFOR -> TIMER:1 ? PARSE_PLAYER_FAR, PARSE_PLAYER_CLOSE, FOLLOW_PLAYER
+$ -> PARSE_PLAYER_FAR = PLAYER_FUTHER_THAN -> 2 ? MOVE:PLAYER / NULL
+$ -> PARSE_PLAYER_CLOSE = PLAYER_CLOSER_THAN -> 3 ? FACING:PLAYER / NULL
 
-Dans cet exemple, la position exacte du joueur sera recalculée toutes les secondes.
+Explication : ici, la Position exacte du joueur sera recalculée toutes les secondes. S'il est à proximité, l'objet se tournera vers lui mais ne bougera pas afin de conserver une distance « socialement acceptable ». Si en revanche le joueur s’éloigne, l'objet le suivra.
 
-Note : il n'est pas possible de vérifier une Condition du genre "GOAL -> PLAYER". L'écriture du Type de Condition GOAL ne peut pas s'adapter à l'utilisation "spéciale" du Type de Requête MOVE. Il faudra "ruser" afin de vérifier l'arrivée de votre objet, par exemple de la façon suivante :
+Note : L'écriture du Type de Condition GOAL ne peut pas s'adapter à l'utilisation "spéciale" du Type de Requête MOVE. Dit autrement, il est impossible de vérifier une Condition du genre « GOAL → PLAYER » ; il faudra "ruser" afin de vérifier l'arrivée de votre objet, par exemple de la façon suivante :
 
 TIME -> 20 = GOTO -> SLOW:PLAYER, WAITFOR_REACHED_PLAYER
 $ -> WAITFOR_REACHED_PLAYER = WAITFOR -> PLAYER_CLOSER_THAN:3 ? WAITFOR_REAL_ARRIVING
 $ -> WAITFOR_REAL_ARRIVING = WAITFOR -> TIMER:1 ? YOUR_ACTION
 
-Dans cet exemple, la balise GOTO "YOUR_ACTION" sera déclenché à peu près au moment où l'objet arrivera devant le joueur.
+Dans cet exemple, la balise GOTO « YOUR_ACTION » sera déclenché à peu près au moment où l'objet arrivera devant le joueur, grâce à une vérification de proximité avec celui-ci, couplé à un court délai.
+
 
 
 ////// SLOW //////
 
+Le Type de Requête SLOW a exactement le même effet et est soumis aux mêmes règles que Type de Requête MOVE.
 
-Même chose que pour MOVE, mais demande en plus à l'objet de se déplacer lentement.
+La seule différence avec ce dernier est que SLOW demande en plus à l'objet d'effectuer son déplacement de façon lente.
+
 
 
 ////// FAST //////
 
+Le Type de Requête SLOW a exactement le même effet et est soumis aux mêmes règles que Type de Requête MOVE.
 
-Même principe, mais rapidement.
+La seule différence avec ce dernier est que SLOW demande en plus à l'objet d'effectuer son déplacement de façon rapide.
+
 
 
 ////// MOVE_BACKUP //////
 
-Le Type de Requête MOVE_BACKUP permet de définir deux GOAL à un objet. Le GOAL visé sera celui atteignable par la cible.
+Le Type de Requête MOVE_BACKUP permet de définir deux Goals à un objet. L'objet cherchera à se rendre au premier Goal accessible. Le calcul de la trajectoire se met constamment à jour, jusqu'à arrivée à destination à l'un ou l'autre des Objectifs.
 
-exemple :
-TIME -> 0 = MOVE_BACKUP -> 14-7, 15-6
+Exemple :
+TIME -> 0 = MOVE_BACKUP -> 10-20, 11-19
 
-Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en x=14 y=7.
-Aussitôt que ce chemin sera considéré comme "bloqué", l'objet cherchera à se rendre en x=15 y=6 à la place.
-Aussitôt que ce chemin sera considéré comme "bloqué", l'objet cherchera à se rendre de nouveau en x=14 y=7.
-Etc.
+Lorsque la Condition sera vérifiée, l'objet cherchera à se rendre en X=10 Y=20.
+Si cette Position devient inatteignable – par exemple, à cause de la présence du joueur à cet endroit –, l'objet cherchera aussitôt et à la place à se rendre en X=11 Y=19. Si cette nouvelle Position devient inatteignable, l'objet cherchera de nouveau à se rendre en X=10 Y=20.
 
-Attention ! Afin de définir quel goal est atteignable, une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres").
-Note : pour des raisons que vous comprendrez, ce Type de Requête est deux fois plus gourmand en ressource que le Type de Requête MOVE. Il vaut mieux donc se servir de MOVE pour les grands trajets, puis affiner l'arrivée avec MOVE_BACKUP.
+ATTENTION ! Afin de définir quel Goal est atteignable, une Instruction cachée dont le Type de Requête est WAITFOR s'effectue tout au long du trajet, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres »).
 
-Note : vous pouvez en deviner leurs fonctionnements, aussi, nous ne les détaillerons pas, mais il existe également les Types de Requête SLOW_BACKUP et FAST_BACKUP.
+Attention ! Il est nécessaire d'utiliser MOVE pour les grands trajets, avant d'éventuellement affiner l'arrivée avec MOVE_BACKUP. La raison à cette règle est double : le trajet avec MOVE_BACKUP n'est pas trouvé lorsqu’il fait intervenir des Path Point (voir le fichier "mappable.txt" dans le dossier "maps"), c.-à-d. lorsque le chemin est plus complexe qu'une ligne droite ou qu'un simple coude, et la puissance de calcul nécessaire au bon fonctionnement de MOVE_BACKUP est deux fois celle de MOVE.
 
-Attention ! Ce Type de requête est un peu instable : le trajet n'est pas trouvé losqu'il fait intervenir des PathPoint (voir ressources\maps\mappable.txt). À n'utiliser que sur des trajectoires simples) 
+Note : il existe également les Types de Requête SLOW_BACKUP et FAST_BACKUP dont vous devinerez aisément les fonctionnements.
+
 
 
 ////// TP //////
 
-Le Type de Requête TP téléporte un objet aux coordonnées indiquées.
+Le Type de Requête TP téléporte un objet aux coordonnées X et Y indiquées.
 
-exemple :
-TIME -> 0 = TP -> 33-35
-TIME -> 0 = GOTO -> TP:33-35
+Exemple :
+TIME -> 0 = TP -> 10-20
+TIME -> 0 = GOTO -> TP:10-20
 
-Lorsque la Condition sera vérifiée, l'objet se téléportera en x=33 y=35.
+Lorsque la Condition sera vérifiée, l'objet sera téléporté en X=10 Y=20.
 
-À l'instar du Type de Requête MOVE, il est possible de définir une position à partir d'un NAME. L'objet se téléportera alors à une position valide parmi les 4 emplacements autours de l'objet.
-Note : si la cible est PLAYER, il est recommandé de s'assurer que le joueur soit centré au moment de l'exécution de la Requête afin d'obtenir un résultat "propre", par exemple en lançant une cinématique (voir Type de Requête CUTSCENE "requêtes autres.txt") ou en le centrant explicitement (voir Type de Requête CENTER_PLAYER "requêtes player.txt")
+À l'instar du Type de Requête MOVE, il est possible de définir une Position à partir d'un nom. L'objet se téléportera alors à une Position valide parmi les quatre emplacements autours de l'objet.
+
+Note : si la Cible est PLAYER, il est recommandé de s'assurer que le joueur est centré au moment de l'exécution de la Requête afin d'obtenir un résultat "propre", par exemple en lançant une cinématique (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres ») ou en en faisant explicitement la demande (voir « CENTER_PLAYER » dans la partie « Piranha – Types de Requêtes : Player »).
+
+
 
 ////// PUSH //////
 
-Le Type de Requête PUSH pousse un objet dans la direction définie en Cible. Il faut bien entendu que cet objet puisse être poussé (donc être vivant).
-La direction indiqué peut prendre comme valeur "LEFT", "RIGHT", "UP" ou "DOWN".
+Le Type de Requête PUSH pousse un objet dans la direction définie en Cible.
 
-exemple :
+La direction indiquée peut prendre comme valeur « LEFT », « RIGHT », « UP » ou « DOWN ».
+
+Exemple :
 ! -> PUSH_PLAYER_UP = PUSH -> UP
 ! -> PUSH_PLAYER_UP = GOTO -> PUSH:UP
 
 Lorsque la Condition sera vérifiée, l'objet sera poussé vers le haut.
 
-Attention ! Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun"; et donc immobilisé pendant 1 frame. Il faut donc éviter d'appeler le Type de Requête WAITFOR juste après avoir utilisé le Type de Requête PUSH, qui serait instantanément annulé.
+Rappel : lorsqu'un objet est poussé, il est « stun » (c.-à.d. perte des contrôles). Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement « dé-stun », ce qui a pour effet de l'immobiliser ; donc d'annuler la poussée. Il ne faut pas appeler le Type de Requête WAITFOR juste après avoir utilisé le Type de Requête PUSH ! L'inverse reste possible.
 
-Pour le dire plus simplement, n'écrivez pas :
+Pour le dire plus simplement, n'écrivez pas :
 TIME -> 0 = GOTO -> PUSH:UP, WAITING_BEFORE_STUFF
-$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
 
-Écrivez à la place :
+Écrivez à la place :
 TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
-$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF

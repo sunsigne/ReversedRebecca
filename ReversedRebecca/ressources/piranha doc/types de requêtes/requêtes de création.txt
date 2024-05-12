@@ -3,172 +3,178 @@ Attention ! Pour tous les Types de Requête suivants, leur effet s'applique sur 
 
 Attention : Pour les Types de Requête suivant, la syntaxe est particulièrement exigeante : le signe ":" est parfois utilisé en parallèle au signe habituel "," comme "séparateur de cibles". Soyez très attentif aux exemples donnés afin d'écrire une Requête correcte !
 
+
+
 ////// CREATE //////
 
-Le Type de Requête CREATE permet de créer un objet à partir de coordonnées x, y et "z", d'une pastille RGB (voir "mappable" dans le dossier "maps").
-Si les coordonnées x et y sont des nombres, z ne peut prendre que deux valeurs : FRONT et BACK.
+Le Type de Requête CREATE permet de créer un objet à partir de coordonnées X, Y et Z, et du code RGB d'un mappable (voir le fichier "mappable.txt" dans le dossier "maps").
 
-exemple :
+Les coordonnées X et Y sont des nombres. La coordonnée Z correspond à l'Index de l'objet (voir la partie « Piranha – Index ») : « FRONT » ou « BACK ».
+
+Le paramètre déterminant la Sous-Couche (voir « Sous-Couches » dans la partie « Piranha – Index ») pour ce Type de Requête n'est pas demandé et est automatiquement défini sur « WORLD ».
+
+Exemple :
 TIME -> 0 = CREATE -> 10-20-FRONT:1-255-0
 TIME -> 0 = CREATE -> ONTHESPOT-FRONT:1-255-0
 
-Lorsque la Condition sera vérifiée, une porte basique (1-255-0) sera créée aux coordonnées x=10 y=20 et apparaitra devant les objets se trouvant à la même position qu'elle.
+Lorsque la Condition sera vérifiée, une porte bleue nulle (1-255-0) sera créée aux coordonnées X=10 Y=20 et sera placée devant les objets ayant la même Position.
 
-Attention ! Pensez aux collisions ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires.
-ATTENTION ! Ne confondait pas la coordonnée "z" avec la notion de LAYER (voir "index.txt"), il s'agit ici d'un comportement VISUEL de l'objet vis-à-vis des autres.
+Attention ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires en termes de collisions ! Soyez certains de ce que vous faites.
 
-Note : les objets devraient toujours être créés dans la sous-couche "world", c'est pourquoi ce paramètre n'est pas demandé pour ce Type de Requête.
-Note : la "coordonnée z" d'un objet n'aura, dans la plupart des cas, aucune importance. Lorsque c'est le cas, définissez la par défaut comme BACK ou FRONT et tenez-vous-y :
-L'avantage de choisir BACK par défaut : l'objet le plus récent aura toujours un index de 1.
-L'avantage de choisir FRONT par défaut : les objets auront tendance à garder le même index.
 
 
 ////// CREATE_DECORATION //////
 
-Le Type de Requête CREATE_DECORATION permet de créer un objet "décoratif" à partir d'un fichier texture se trouvant dans le répertoire "textures\other\decoration".
+Le Type de Requête CREATE_DECORATION permet de créer un visuel à partir d'un fichier image.
 
-exemple :
-TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,BATH_HAIR
+Fichier de référence : « textures/other/decoration/(cible).png ».
 
-Lorsque la Condition sera vérifiée, sera créée dans le monde aux coordonnées x=10 y=20 un objet apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et ayant pour texture le fichier "bath_hair.png".
+Exemple :
+TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,HAIR
 
-Par définition, les objets décoratifs n'ont pas de collisions. Si vous avez besoin que votre objet soit "interactif", il faudra créer un objet Piranha au même emplacement que ce dernier.
+Lorsque la Condition sera vérifiée, sera créée sur la carte aux coordonnées X=10 Y=20 un visuel apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et dont le fichier de référence est « hair.png ».
+
+Par définition, les visuels n'ont pas de collisions. Si vous avez besoin que votre objet soit un « interactif » (objet interactif), il faudra créer un objet Piranha au même emplacement et en définir les propriétés.
+
+Note : si le programmeur Piranha peut préciser les dimensions de l'objet à afficher là où le programme Java serait en mesure de les estimer correctement à partir des dimensions du fichier de référence, c'est pour permettre au programmeur de "mentir" et d'afficher – de façons situationnelles – des textures hautes définitions (par exemple, pour un effet comique).
+
 
 
 ////// CREATE_ANIMATION //////
 
-Le Type de Requête CREATE_ANIMATION est en quelque sorte une requête CREATE_DECORATION en plus complexe : elle permet de créer un objet "décoratif" ayant une animation, à partir de fichiers textures se trouvant dans le répertoire "textures\other\animation".
-En plus des mêmes Cibles que celles demandées par CREATE_DECORATION, CREATE_ANIMATION a besoin de 3 Cibles supplémentaires :
-- le nombre d'images constituant l'animation.
-- la "durée" d'animation en "tick" (60 ticks = 1 seconde). Exemple : 120 signifie que chaque image de l'animation restera pendent exactement 2 secondes.
-- si l'animation doit recommencer une fois terminée. Exemple : false, l'animation s'arrêtera sur la dernière image.
+Le Type de Requête CREATE_ANIMATION est une variante complexe de CREATE_DECORATION : elle permet de créer un visuel ayant une animation.
 
-exemple :
-! -> PLAYER_FILL_SHOWER = CREATE_ANIMATION -> 1-8-BACK:WORLD,1,2,BATH_FILLING,3,90,FALSE
+FichierS de référence : « textures/other/animation/(cible)_XX.png » (où XX sont des nombres allant de 00 à 99). 
 
-Lorsque la Condition sera vérifiée, sera créé un objet animé :
-- dans la sous-couche "world",
-- dont les coordonnées sont x=1 et y=8,
-- apparaissant derrière les autres objets (cf le joueur)
+Note : à nommage et numérotation correcte, le jeu détectera automatiquement la totalité des fichiers de références requis pour jouer l'animation.
+
+En plus des mêmes Cibles que celles demandées par le Type de Requête CREATE_DECORATION, CREATE_ANIMATION a besoin de deux Cibles supplémentaires :
+- la "durée" d'animation en "ticks" (60 ticks = 1 seconde). Exemple : « 120 » signifie que chaque image de l'animation restera pendent exactement 2 secondes,
+- un boolean informant de si l'animation doit, ou non, recommencer une fois terminée. Exemple : « false » signifie que l'animation s'arrêtera sur la dernière image.
+
+Exemple :
+! -> PLAYER_FILL_BATH = CREATE_ANIMATION -> 1-8-BACK:WORLD,1,2,BATH_FILLING,3,90,FALSE
+
+Lorsque la Condition sera vérifiée, sera créé un visuel animé :
+- dont les coordonnées sont X=10 Y=20,
+- apparaissant derrière les autres objets (joueur inclus),
+- dans la Sous-Couche « WORLD »,
 - de largeur 1 case, de hauteur 2 cases,
-- nécessitant exactement 3 fichiers texture "bath_filling_00.png", "bath_filling_01.png" et "bath_filling_02.png",
-- où chaque image reste pendant 1 seconde et demi,
-- qui s'arrête sur la dernière image (la baignoire est rempli).
+- nécessitant les fichiers de références « bath_filling_XX.png » (où XX sont des nombres allant de 00 à 99),
+- où chaque image reste pendant 90 ticks (1 seconde et demie),
+- qui s'arrête sur la dernière image (la baignoire est remplie).
+
 
 
 ////// CREATE_SIMULATION //////
 
-Le Type de Requête CREATE_SIMULATION permet de gérer l'animation des "dalles de générations" qu'on retrouve dans les niveaux de l'atelier (workshop).
+Le Type de Requête CREATE_SIMULATION permet de créer l'animation des « Dalles de Générations » qu'on retrouve au workshop (voir « Dalles de générations » dans la partie « Workshop »).
 
-Il est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
-- La sous-couche est définie comme étant "GROUND"*
-- L'index est défini comme étant "FRONT"*
-- Le nombre d'images requises est fixé à exactement 5.
-- La première image reste pendant 0.65 seconde.
-- Chaque image suivante reste pendant 0.05 seconde.
-- L'animation s'arrête sur la dernière image.
+CREATE_SIMULATION est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
+- la Sous-Couche est définie comme étant « GROUND »*,
+- l'Index est défini comme étant « FRONT »*,
+- le nombre de fichiers de références attendus est fixé à exactement 5,
+- la première image reste pendant 0.65 seconde,
+- chaque image suivante reste pendant 0.05 seconde,
+- l'animation s'arrête sur la dernière image,
+- un son spécifique est joué.
 
-*Ces 2 propriétés s'assurent que l'objet apparaisse au niveau du sol, sans pour autant apparaitre "sous" la carte.
+*Ces 2 propriétés s'assurent que l'objet apparaisse au niveau du sol, sans pour autant apparaître "sous" la carte.
 
-exemple : 
+Dans l'exemple suivant, les deux dernières cible permettent de déterminer le chemin d'accès des fichiers.
+
+Exemple : 
 TIME -> 0 = CREATE_SIMULATION -> 0-0:9,11,000,0
 
-Lorsque la Condition sera vérifiée, sera créé un objet animé :
-- dont les coordonnées sont x=0 et y=0,
+Lorsque la Condition sera vérifiée, sera créé un visuel animé :
+- dont les coordonnées sont X=0 Y=0,
 - de largeur 9 case, de hauteur 11 cases,
-- nécessitant exactement 5 fichiers texture se trouvant dans le dossier "textures\workshop\000" et de noms allant de "0_00.png" à "0_05.png".
+- nécessitant exactement cinq fichiers de références se trouvant dans le dossier « textures/workshop/000 » et de noms allant de "0_00.png" à "0_04.png".
 
-Comme vous le voyais, la cible "000" permet de déterminer le chemin d'accès des fichiers. La cible suivante "0" détermine le "nom" des fichiers à charger.
-
-Note : un son spécifique est joué en même temps que la création de cet objet.
 
 
 ////// CREATE_BONUSTEXT //////
 
-Le Type de Requête CREATE_BONUSTEXT permet de créer un "bonus texte" à l'emplacement désigné.
-Ce texte aura les mêmes propriétés que les textes qui s'affichent lors de ramassage d'objets (c.-à-d. qu'ils vont lentement vers le haut et qu'ils disparaissent tous seuls en 0,6 seconde).
-Note : aucun index n'est à renseigner pour créer un tel objet. En effet, les "bonus textes" sont créés sur une "couche" spécialement dédiée.
+Le Type de Requête CREATE_BONUSTEXT permet de créer un « bonus texte » à l'emplacement désigné. Ce texte aura les mêmes propriétés que les textes qui s'affichent lors de ramassage d'objets (c.-à-d. qu'ils apparaissent, vont lentement vers le haut, puis disparaissent après 0.6 seconde).
 
-Attention : comme vous le voyez dans l'exemple ci-dessous, le signe ":", commun pour les Types de Requêtes de creations, n'est pas utilisé pour ce Type de Requête . À la place, le signe "," reprend son rôle habituel de "séparateur de cibles".
+La seconde Cible détermine l'importance du texte en termes d'ERA :
+- NORMAL : le regard du joueur (pas le personnage, le joueur devant son écran) est déjà au niveau de l'élément en question.
+- IMPORTANT : le regard du joueur DOIT être attiré par l'élément en question.
 
-exemple :
-TIME -> 0 = CREATE_BONUSTEXT -> 10-20,NORMAL,YOLO
+Note : aucun Index n'est à renseigner pour ce Type de Requête : les bonus textes sont créés sur une couche spécialement dédiée.
 
-Lorsque la Condition sera vérifiée, sera créé aux coordonnées x=10 et y=20 un objet "bonus texte" d'importance "normale" et dont le contenu sera la valeur trouvée pour le terme "YOLO" dans le fichier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/bonus_text.txt".
-Attention ! Ce fichier doit disposer ses informations de la façon suivante :
+Exemple :
+TIME -> 0 = CREATE_BONUSTEXT -> 10-20,NORMAL,MON_TEXTE
 
-SLURP = SLURP
-CRUNCH = CRUNCH
-KNOCKKNOCK = TOC#TOC
-(etc.)
+Lorsque la Condition sera vérifiée, sera créé aux coordonnées X=10 Y=20 un bonus texte d'importance normale et dont le contenu sera les mots trouvés dans les ressources correspondants aux termes « MON_TEXTE ».
 
-À gauche se trouve le terme recherché par le système piranha, et à droite se trouve sa traduction dans la langue actuelle (donc, le texte qui sera affiché).
-Note : il n'existe aucun Type de Requête pour supprimer un "bonus texte", dans la mesure où ils disparaissent tous seuls naturellement en moins d'une seconde.
+Note : puisqu'ils disparaissent tous seuls naturellement en moins d'une seconde, il n'existe aucun Type de Requête pour supprimer un bonus texte.
 
-Voici les différentes importances de texte disponible :
-- NORMAL, à utiliser lorsque le regard du joueur (pas le personnage, le joueur devant son écran) est déjà au niveau de l'élément en question.
-- IMPORTANT, à utiliser pour attirer le regard et l'attention du joueur sur l'élément.
-
-////// DELETE //////
-
-Le Type de Requête DELETE permet de supprimer l'objet qui se trouve aux coordonnées indiquée.
-Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, une seconde cible correspondant à l'index doit être établie (voir "index")
-En effet, des Cibles telles que FRONT et BACK risquerait de ne pas suffire pour cibler précisémment un objet.
-
-exemple :
-TIME -> 0 = DELETE -> 10-20:WORLD,1
-
-Lorsque la Condition sera vérifiée, l'objet contenu dans la sous-couche "world", d'index 1, et aux coordonnées x=10 y=20 sera supprimé.
-
-Attention ! DELETE est une requête puissante, les NPC se déplaçant en permanence, ne les supprimez pas par accident !
-Note : il est impossible de supprimer le joueur de cette façon : une sécurité empêche de le sélectionner à partir d'un index.
-Attention ! Aussitôt qu'un objet est supprimé, son Piranha ne sera plus lu. Si DELETE concerne l'objet en cours, toute requête après DELETE sera ignorée. Assurez-vous d'avoir utilisé AFFECTION (voir GOTO) avant la suppression afin de prendre le relais depuis un autre objet.
-
-
-////// DELETE_ONTHESPOT //////
-
-Est un raccourci direct de DELETE. Les deux Instructions suivantes sont strictement équivalentes :
-
-TIME -> 0 = DELETE -> ONTHESPOT:WORLD,1
-TIME -> 0 = GOTO -> DELETE_ONTHESPOT:1
-
-Comme vous le constatez, les coordonnées sont définies en fonction de la position de l'objet, et la sous-couche est considérée comme étant "world".
-
-Note : la cible "index" devenant unitaire, l'écriture compacte devient alors possible. C'est d'ailleurs tout l'intérêt de ce Type de Requête.
-
-
-////// DELETE_MYSELF //////
-
-Le Type de Requête DELETE_MYSELF permet de supprimer l'objet lançant l'Instruction dans laquelle il est contenu.
-L'avantage de ce Type de Requête sur le Type de Requête DELETE_ONTHESPOT est qu'il évite toute ambiguïté en cas de superposition d'objets !
-
-Attention : toute Requête écrite après ce Type de Requête ne se lancera pas (puisque l'objet sera supprimé avant qu'elles ne soient appelées)
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite pour respecter la syntaxe attendue.
-
-exemple :
-TIME -> 5 = DELETE_MYSELF -> BANANA
-TIME -> 5 = GOTO -> DELETE_MYSELF:YOLO
-
-Lorsque la Condition sera vérifiée, l'objet lançant cette Instruction sera supprimé.
-
-Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
 
 
 ////// LANDSLIDE //////
 
-Le Type de Requête LANDSLIDE permet de créer un "éboulement" à partir d'une direction de poussée, de coordonnées x, y et d'une pastille (R)GB (voir "mappable" dans le dossier "maps").
-Note : Contrairement au Type de Requête CREATE, la "coordonnée z" n'est pas demandée : elle est d'office définie comme étant BACK.
-Note : le "paramètre de couleur rouge" n'est pas non plus demandé ici : il est d'office défini sur 2 - ce qui correspond à un objet de type "gravas" -. 
+Le Type de Requête LANDSLIDE permet de créer un « éboulement » à partir d'une direction de poussée, de coordonnées X et Y, et du code (R)GB d'un mappable (voir le fichier "mappable.txt" dans le dossier "maps").
 
-L'intérêt du "Type de Requête éboulement" réside dans le fait que ce dernier survient dans la durée :
-- un bruit d'éboulement est joué.
-- des "bulles de textes "éboulement"" apparaissent autour de la zone sur laquelle l'éboulement est en train d'avoir lieu.
-- un objet de type "gravas" est créé au bout de quelques secondes.
+Contrairement au Type de Requête CREATE, la coordonnée Z n'est pas demandée : elle est d'office définie comme étant BACK. Le "paramètre rouge" du mappable n'est pas non plus demandé : il est d'office défini sur 2, ce qui correspond à un puzzler de type « gravas » (voir la partie « Puzzler – Rubble »).
 
-exemple :
-TIME -> 10 = LANDSLIDE -> UP,26-58,255-1
+Le Type de Requête LANDSLIDE provoque les actions suivantes :
+- un son spécifique est joué,
+- des "bonus textes d'éboulement" apparaissent autour de la zone sur laquelle l'éboulement est en train d'avoir lieu,
+- un puzzler de type « gravas » est créé au bout de quelques secondes.
 
-Lorsque la Condition sera vérifiée :
-   - Un éboulement aura lieu aux coordonnées x=26 et y=58.
-   - Pendant cet éboulement, les objets poussables (ce qui inclut tous les vivants) se trouvant sur les lieux perdront 1PV (si cela est possible) et, s'ils ont survécu, seront poussés vers le haut.
-   - À l'issue de cet éboulement, un objet "gravas bleu, horizontal et de difficulté cyan" sera créé -> (2-)255-1. 
+Exemple :
+TIME -> 10 = LANDSLIDE -> UP,10-20,255-1
+
+Lorsque la Condition sera vérifiée :
+- un éboulement aura lieu aux coordonnées X=10 Y=20,
+- durant cet éboulement, les objets "poussables" (NPC inclus) se trouvant sur les lieux perdront 1 PV, et (s'ils y survivent) seront poussés vers le haut (UP),
+- à l'issue de cet éboulement, un objet "Gravas horizontales bleus cyan" (2-255-1) sera créé.
+
+
+
+////// DELETE //////
+
+Le Type de Requête DELETE permet de supprimer un objet à partir de cordonnées X et Y, d'une Sous-Couche, et d'une coordonnée Z (voir la partie « Piranha – Index »). La coordonnée Z correspond à l'Index chiffré de l'objet.
+
+Attention ! DELETE est un Type de Requête puissant, les NPC se déplaçant en permanence, ne les supprimez pas par accident !
+
+Exemple :
+TIME -> 0 = DELETE -> 10-20:WORLD,1
+
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées X=10 Y=20, contenu dans la Sous-Couche WORLD et d'Index 1, sera supprimé.
+
+Rappel : il est impossible de supprimer le joueur de cette façon : une sécurité empêche de le sélectionner à partir d'un Index.
+
+Attention ! Aussitôt qu'un objet est supprimé, son fichier Piranha ne sera plus lu, puisque seuls les objets présents sur la carte son analysé.
+
+
+
+////// DELETE_ONTHESPOT //////
+
+Est un raccourci direct du Type de Requête DELETE. Les deux Instructions suivantes sont strictement équivalentes :
+
+TIME -> 0 = DELETE -> ONTHESPOT:WORLD,1
+TIME -> 0 = GOTO -> DELETE_ONTHESPOT:1
+
+Les coordonnées sont définies comment étant celles de l'objet actuel. La Sous-Couche est implicitement considérée comme étant WORLD, rendant la Cible Index unitaire, et donc l'Écriture Compacte possible (ce qui est précisément l'intérêt de ce Type de Requête).
+
+
+
+////// DELETE_MYSELF //////
+
+Le Type de Requête DELETE_MYSELF permet de supprimer l'objet actuel (c.-à-d. l'objet dont le fichier Piranha contient cette Instruction).
+
+L'avantage de ce Type de Requête sur le Type de Requête DELETE_ONTHESPOT est qu'il évite toute ambiguïté en cas de superposition d'objets !
+
+Attention ! De la même façon que pour le Type de Requête DELETE, toute Requête effectuée après ce Type de Requête ne se lancera pas (puisque l'objet sera supprimé).
+
+Note : ce Type de Requête est l'un des rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose de cohérent, comme : TRUE, PROCESS ou START.
+
+Exemple :
+TIME -> 5 = DELETE_MYSELF -> START
+TIME -> 5 = GOTO -> DELETE_MYSELF:PROCESS
+
+Lorsque la Condition sera vérifiée, l'objet lançant cette Instruction sera supprimé.
+
+Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.

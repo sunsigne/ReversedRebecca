@@ -1,160 +1,183 @@
-Les Types de requêtes suivants ont pour Cibles le nom d'un fichier dans le dossier "ressources" du jeu, vous pouvez donc créer vos propres Cibles !
+Les Types de Requêtes suivants ont pour Cibles des noms de fichiers dans les ressources du jeu ; on parle de fichier de référence. UN UTILISATEUR / JOUEUR PEUT CRÉER ET UTILISER SES PROPRES RESSOURCES : IMAGES, SONS, DIALOGUES, ETC.
 
-Note : d'un point de vue technique, le Type de Requête NAME est partiellement de type ressources dans la mesure où sa cible sert d'ID, mais charge également la texture d'un personnage en cherchant parmi les fichiers dans le dossier "ressources/textures/characters/(nom de la cible)".
+Note : d'une certaine façon, le Type de Requête NAME (voir « NAME » dans la partie « Piranha – Type de Requêtes : States ») est en quelque sorte un Type de Requêtes Ressources, puisqu'il renseigne pour les NPC les fichiers de références responsables de leurs textures (« ressources/textures/characters/(cible) »).
+
 
 
 ////// EXPRESSION //////
 
-Le Type de Requête EXPRESSION permet d'afficher une bulle expressive au-dessus d'un objet.
-La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/textures/other".
+Le Type de Requête EXPRESSION affiche une bulle expressive au-dessus d'un objet. Cette bulle disparaît après un court instant, et son but est "d'habiller" les cinématiques (voir « CUTSCENE » dans la partie « Piranha – Type de Requêtes : Autres »).
 
-exemple :
+Fichier de référence : « ressources/textures/other/expression_(cible).png ».
+
+Fichiers de références inclus dans le jeu (ressources) :
+- SUSPENSION : affiche des points de suspension.
+- EXLAMATION : affiche un point d'exclamation.
+
+Note : l'expression EXCLAMATION a une animation supplémentaire par rapport aux autres, semblable à un "petit saut".
+
+Exemple :
 TIME -> 0 = EXPRESSION -> SUSPENSION
 TIME -> 0 = GOTO -> EXPRESSION:SUSPENSION
 
-Lorsque la Condition sera vérifiée, une bulle avec des points de suspensions apparaitra au-dessus de l'objet.
+Lorsque la Condition sera vérifiée, une bulle expressive contenant des points de suspension apparaîtra au-dessus de l'objet.
 
-Ces bulles disparaissent en peu de temps. Leur but est avant tout "d'habiller" une cinématique.
-
-Officiellement, il en existe 2 :
-- SUSPENSION, qui affiche des points de suspensions.
-- EXLAMATION, qui affiche un point d'exclamation.
-
-Note : l'expression "exclamation" a une animation supplémentaire par rapport aux autres, semblable à un "petit saut".
 
 
 ////// MUSIC //////
 
-Le Type de Requête MUSIC permet d'arrêter la musique qui se joue actuellement (il peut y en avoir aucune) et de lancer la musique en cible.
-La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/music".
+Le Type de Requête MUSIC permet d'arrêter et de remplacer la musique actuellement jouée par la musique en Cible. Il ne peut y avoir qu'une seule musique jouée en même temps, et ce changement s'effectue progressivement, aussi bien en arrivée qu'en sortie.
 
-Note : pour arrêter une musique sans en lancer une autre, il suffit d'écrire "NULL" pour cible.
-Note : si la musique cible est déjà celle qui est en train d'être jouée, au lieu de la relancer, cette requête n'aura aucun effet.
+Fichier de référence : « ressources/audio/music/(cible).wav ».
 
-exemple :
+Note : pour arrêter progressivement une musique sans en lancer une autre, il suffit d'écrire "NULL" en Cible.
+
+Note : si la musique Cible est déjà celle actuellement jouée, rien ne se passera.
+
+Exemple :
 TIME -> 0 = MUSIC -> EXEMPLE_MUSIC
 TIME -> 0 = GOTO -> MUSIC:EXEMPLE_MUSIC
 
-Lorsque la Condition sera vérifiée, la musique "exemple_music.wav" sera jouée.
+Lorsque la Condition sera vérifiée, la musique dont le fichier de référence est « exemple_musique.wav » remplacera la musique actuellement jouée.
 
-Note : Cette requête change progressivement la musique, aussi bien en arrivée qu'en sortie (càd vers le silence si MUSIC:NULL est appelé). Si l'on veut la changer "soudainement", il faut utiliser le Type de Requête MUSIC_WITHOUT_TRANSITION.
+Attention ! Si une Instruction contenant ce Type de Requête est appelée pendant l'écran titre (c.-à-d., pour les cartes se passant chez Rebecca), la Requête sera "enregistrée"* et ne s'effectuera que lorsque le joueur lancera la carte. En effet, la musique de l'écran titre est définie par le jeu et ne peut être changée.
 
-Attention ! Si une instruction contenant ce type de requête est appelé pendant l'écran titre (par exemple, pour les niveaux se passant chez Rebecca), elle sera "enregistrée"* et ne s'effectuera que lorsque le joueur lancera le niveau : la musique durant l'écran titre reste toujours la même.
-*l'enregistrement s'effectue via une Instruction cachée dont le Type de Requête est WAITFOR, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir "requêtes autres"). Il est d'ailleurs conseillé d'effectuer une telle Instruction dans le fichier SETUP.
+*ATTENTION ! l'enregistrement s'effectue via une Instruction cachée dont le Type de Requête est WAITFOR, il faut donc faire attention à ne pas écraser par accident un WAITFOR précédent (voir « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres »). Il est conseillé d'effectuer une telle Instruction dans le fichier SET-UP.
+
 
 
 ////// MUSIC_WITHOUT_TRANSITION //////
 
-Le Type de Requête MUSIC_WITHOUT_TRANSITION a exactement le même effet et est soumis aux mêmes règles que le permet Type de Requête MUSIC.
-La seule différence avec cette dernière est que MUSIC_WITHOUT_TRANSITION change la musique "d'un seul coup". (utile lors des changements soudain d'ambience).
+Le Type de Requête MUSIC_WITHOUT_TRANSITION a exactement le même effet et est soumis aux mêmes règles que Type de Requête MUSIC.
+
+La seule différence avec ce dernier est que MUSIC_WITHOUT_TRANSITION change la musique "d'un seul coup" au lieu de le faire progressivement.
+
+Note : ce Type de Requête est utile lors des changements soudain d’ambiance.
+
 
 
 ////// SOUND //////
 
 Le Type de Requête SOUND permet de jouer un son.
-La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/audio/sound".
 
-exemple :
+Fichier de référence : « ressources/audio/sound/(cible).wav ».
+
+Exemple :
 TIME -> 0 = SOUND -> EXEMPLE_SOUND
 TIME -> 0 = GOTO -> SOUND:EXEMPLE_SOUND
 
-Lorsque la Condition sera vérifiée, le son "exemple_sound.wav" sera joué.
+Lorsque la Condition sera vérifiée, le son dont le fichier de référence est « exemple_sound.wav » sera joué.
 
-Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED, ce qui facilite grandement la tâche !
+Note : Le Type de Requête SOUND est ignoré lorsque le Type de Condition est SAVED (voir « SAVED » dans la partie « Piranha – Conditions »).
+
 
 
 ////// SOUND_IF_CAMERA //////
 
-Le Type de Requête SOUND_IF_CAMERA fonctionne exactement de la même manière que le Type de Requête SOUND, à la différence près que le son n'est joué que si l'objet est visible sur l'écran au moment où la Requête est demandée.
+Le Type de Requête SOUND_IF_CAMERA a exactement le même effet et est soumis aux mêmes règles que Type de Requête SOUND.
 
+La seule différence avec ce dernier est que SOUND_IF_CAMERA ne joue de son que si l'objet est visible à l'écran au moment où la Condition de l'Instruction est vérifiée.
 
-////// TALK //////
-
-Le Type de Requête TALK permet de lancer un dialogue.
-La Cible de ce Type de Requête cherche le fichier correspondant dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)".
-
-exemple :
-TIME -> 0 = TALK -> PEEBOY_PEE_ITS_PANTS
-TIME -> 0 = GOTO -> TALK:PEEBOY_PEE_ITS_PANTS
-
-Lorsque la Condition sera vérifiée, le dialogue "peeboy_pee_its_pants.csv" sera lancé.
-
-L'écriture des fichiers dialogues est un peu particulière, expliquons l'exemple suivant :
-
-object = player = urge_sad = C'est#trop#tard…
-player = object = sad = Ha…
-object = player = urge_happy = T'inquiète#pas.@Je#n'ai#plus#qu'à#aller#pleurer#dans#un#coin…
-
-La première partie définie la personne qui parle à partir de son NAME, et affichera son visage dans la boite de dialogue. Le mot "objet" est autorisé pour pointer l'objet Piranha qui a lancé la requête de dialogue.
-La seconde partie désigne la direction vers laquelle cette personne doit se tourner à partir d'une requête FACING, elle accepte donc les mêmes cibles que cette dernière, en plus du mot "objet".
-Le troisième partie désigne l'expression que la personne qui parle doit adopter. Cette dernière est directement disponible dans le dossier de texture du personnage en question.
-La quatrième partie est le dialogue qui doit s'afficher.
-
-Note : si la personne est considérée comme stun, c.-à-d. qu'elle n'est pas censée pouvoir bouger (par exemple, si elle est assise - voir Type de Requêtes CONDITION "requêtes state.txt"). La seconde partie sera sans effet : la personne ne se tournera pas vers la direction indiquée.
-
-Les espaces permettent de gagner en lisibilité dans le code, mais ils sont ignorés par le programme ; c'est pourquoi des '#' sont introduits dans le texte et seront comptés comme des espaces à l'affichage.
-De la même façon, le caractère "saut de ligne" dans le dialogue est le symbole "@". Il peut y en avoir aucun, mais il ne doit pas y en avoir plus d'un par ligne de texte !
-
-
-////// DEED //////
-
-Le Type de Requête DEED permet de définir ce qui est une bonne ou une mauvaise action, c.-à.-d d'affecter le karma du joueur.
-Lorsqu'un niveau est terminé, un écran affiche un récapitulatif pour le joueur. Sur cet écran est mentionné la bonne et la mauvaise action ayant le plus grand "poids"
-Note : n'oubliez pas que les bonnes et les mauvaises actions influent sur la fin obtenue par le joueur ; ne négligez pas cet aspect.
-
-exemple :
-$ -> DEED_OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
-
-Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. Son nom et son "poids" seront déterminés par les valeurs trouvées dans le dossier mentionné ci-dessous :
-la seconde cible cherche la valeur correspondante dans le dossier "ressources/texts/(la langue actuelle)/maps/(la map actuelle)/deeds.txt".
-Note : le "poids" détermine le nom de l'action à afficher sur l'écran de fin de niveau : le poids le plus fort l'emporte.
-
-Note : pour déclencher une route "psychopathe", il suffit de pointer vers un BAD DEED dont le poids est supérieur ou égal à 999. Il est facultatif mais conseillé de créer également un GOOD DEED de "psychopathe" pour coller au thème, comme "mort rapidement" par exemple.
-Note : lorsqu'un niveau est terminé, tous les "poids" intervenues sont additionnés pour déterminer le karma du joueur (les poids des mauvaises actions sont comptés comme étant négatifs dans ce calcul). Le karma (méchant, neutre, gentil, etc.) sera déterminé par la valeur de ce total.
-
-
-////// GOOD_DEED //////
-
-Est un raccourci direct de DEED, mais dont la cible GOOD est incluse dans le Type de Requête.
-La seconde cible devenant unitaire, l'écriture compacte devient alors possible.
-
-////// BAD_DEED //////
-
-Exactement le même principe qu'avec GOOD_DEED.
-
-
-////// COUNTER //////
-
-Le Type de Requête COUNTER permet de modifier les informations qu'afficheront les compteurs sur l'écran de victoire.
-
-exemple : 
-TIME -> 0 = COUNTER -> 1, ADD, 1
-autre écriture acceptée :
-TIME -> 0 = COUNTER_ONE -> ADD, 1
-
-Lorsqu'un niveau est terminé, un écran affiche un récapitulatif pour le joueur. Sur cet écran, le nombre que le premier compteur affichera sera de 1 supérieur au chiffre qu'il avait précédemment enregistré.
-Note : lorsqu'un niveau commence, tous les compteurs sont à 0 (logique).
-Note : les compteurs ont un intérêt purement ludique.
-
-Le 1 en cible (ou ONE dans le second exemple) indique que le compteur ciblé par la Requête est le premier.
-
-Pour la cible en toutes lettres, il existe trois types de cibles que le Type de Requête COUNTER accepte :
-- ADD : ajouter X à la valeur du compteur
-- REMOVE : retire X à la valeur du compteur
-- CREATE : renome le compteur en utilisant le nom trouvé dans le fichier : "ressources/texts/(la langue)/(le niveau)/counter.txt".
 
 
 ////// ACHIEVEMENT //////
 
 Le Type de Requête ACHIEVEMENT permet de déverrouiller un succès.
-Les succès existants se trouvent dans le dossier suivant : ressources/achievements. Chaque dossier est un succès déverrouillable.
 
-Lorsqu'un succès est déverrouillé : il s'affiche en haut de l'écran, un son est joué, et il sera désormais visible dans la fenêtre des succès (via le menu principal du jeu)
+Fichier de référence (qui est en fait un dossier) : « ressources/achievements/(cible) ».
 
-exemple :
+Lorsqu'un succès est déverrouillé : il s'affiche en haut de l'écran, un son est joué, et il sera désormais visible dans la fenêtre des succès (via le menu principal du jeu)
+
+Exemple :
 WONPUZZLE -> 10-20 = ACHIEVEMENT -> FIRST_PUZZLE
 WONPUZZLE -> 10-20 = GOTO -> ACHIEVEMENT:FIRST_PUZZLE
 
-Lorsque la Condition sera vérifiée, le succès dont le dossier s'appelle "first_puzzle" sera déverrouillé.
+Lorsque la Condition sera vérifiée, dont le dossier s'appelle « FIRST_PUZZLE » sera déverrouillé.
 
-Note : vos succès custom ne seront pas liés au système de succès steam, seulement à celui intégré au jeu.
+Note : les succès custom créé par l'utilisateur / le joueur ne seront pas liés au système de succès des plate-formes de distribution du jeu (Steam), mais seulement à celui déjà intégré au jeu.
+
+
+
+////// TALK //////
+
+Le Type de Requête TALK permet de lancer un dialogue.
+
+Fichier de référence : « ressources/texts/(langue actuelle)/maps/(carte actuelle)/(cible).txt ».
+
+Exemple :
+TIME -> 0 = TALK -> JEAN_PISSED_ITS_PANTS
+TIME -> 0 = GOTO -> TALK:JEAN_PISSED_ITS_PANTS
+
+Lorsque la Condition sera vérifiée, le dialogue dont le fichier de référence est « jean_pissed_pee_its_pants.txt » sera lancé.
+
+
+L'écriture des fichiers de dialogues nécessite de respecter une syntaxe particulière..
+
+Exemple du contenu du fichier de référence d'un dialogue :
+player = object = happy = Salut Camille !@Toujours aussi… "Robotique" ?
+object = DOWN = asleep = …
+
+La première partie désigne le personnage prenant la parole. Cette information permet au jeu de savoir qui afficher et quelle voix utiliser. Si le personnage est le joueur, il peut être désigné soit par son nom (Rebecca), soit par le terme « player ». Si le personnage est un NPC, il peut être désigné soit par son nom, soit par le terme « object » si le NPC en question est celui ayant initié le dialogue (c.-à-d. que l'Instruction à l’origine du dialogue vient de son fichier Piranha). 
+La seconde partie désigne la direction vers laquelle il doit se tourner. Elle peut être explicite (« LEFT », « RIGHT », « UP », ou « DOWN ») ou implicite (exemple : « BOB » → regarder vers Bob).
+La troisième partie désigne l'expression du visage qu'il doit adopter. Attention, il faut s'assurer que l'expression choisie existe bel et bien dans les ressources (voir « Textures » dans la partie « Ressources »).
+La dernière partie correspond au texte à afficher dans le jeu. Il peut tenir sur une ou deux lignes, séparées alors par le symbole d'arobase ("@"). Il est à noter qu'il incombe au traducteur de s'assurer que le texte ne dépasse pas de la zone de texte !
+
+
+
+////// DEED //////
+
+Le Type de Requête DEED permet de définir ce qui est une bonne ou une mauvaise action, donc d'affecter le karma du joueur (donc, la fin obtenue !)
+
+Note : lorsqu'une carte est terminée, un écran affiche un récapitulatif pour le joueur. Sur cet écran est mentionné la bonne et la mauvaise action ayant le plus grand "poids".
+
+Exemple :
+$ -> DEED_OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
+
+Lorsque la Condition sera vérifiée, une action sera enregistrée comme bonne. Son nom et son "poids" seront déterminés par les valeurs trouvées dans les ressources correspondantes aux termes « OFFER_PANCAKES » dans le fichier de référence suivant : « ressources/texts/(langue actuelle)/maps/(carte actuelle)/deeds.txt ».
+
+Note : pour déclencher une route « psychopathe », il suffit de pointer vers un BAD DEED dont le poids est supérieur ou égal à 999. Il est facultatif mais conseillé de créer également un GOOD DEED « psychopathe » pour coller au thème, comme "mort rapidement" par exemple.
+
+Note : lorsqu'une carte est terminée, tous les "poids" intervenues sont additionnés pour déterminer le karma du joueur (les poids des mauvaises actions sont comptés comme étant négatifs dans ce calcul). Le karma (méchant, neutre, gentil, etc.) sera déterminé par la valeur de ce total.
+
+
+
+////// GOOD_DEED //////
+
+Est un raccourci direct de DEED, mais dont la Cible GOOD est incluse dans le Type de Requête.
+La seconde Cible devenant unitaire, l'Écriture Compacte devient alors possible.
+
+Est un raccourci direct du Type de Requête DELETE. Les deux Instructions suivantes sont strictement équivalentes :
+
+$ -> OFFER_PANCAKES = DEED -> GOOD, OFFER_PANCAKES
+$ -> OFFER_PANCAKES = GOTO -> GOOD_DEED:OFFER_PANCAKES
+
+L'action est définie comme ayant un karma positif. La Cible de référence devenant unitaire, l'Écriture Compacte devient possible (ce qui est précisément l'intérêt de ce Type de Requête).
+
+
+
+////// BAD_DEED //////
+
+Le Type de Requête BAD_DEED a exactement le même effet et est soumis aux mêmes règles que Type de Requête GOOD_DEED.
+
+La seule différence avec ce dernier est que BAD_DEED définie l'action comme ayant un karma négatif.
+
+
+
+////// COUNTER //////
+
+Le Type de Requête COUNTER permet de modifier les informations qu'afficheront les compteurs sur l'écran de fin de carte.
+
+La Cible en toutes lettres permet de déterminer l'action à effectuer avec la Cible "X" :
+- ADD : ajouter X à la valeur du compteur.
+- REMOVE : retirer X à la valeur du compteur.
+- CREATE : renommer le compteur en utilisant les mots trouvés dans les ressources correspondants aux termes X dans le fichier de référence suivant : « ressources/texts/(langue actuelle)/maps/(carte actuelle)/counter.txt ».
+
+Exemple :
+TIME -> 0 = COUNTER -> 1, ADD, 1
+TIME -> 0 = COUNTER_ONE -> ADD, 1
+
+Lorsqu'une carte est terminée, un écran affiche un récapitulatif pour le joueur. Sur cet écran, le nombre que le premier compteur affichera sera de 1 supérieur au chiffre qu'il avait précédemment enregistré.
+
+Le 1 en Cible (ou ONE dans le second exemple) indique que le compteur ciblé par la Requête est le premier, ce chiffre peut donc aller jusqu'à 3 (THREE).
+
+Note : lorsqu'une carte commence, tous les compteurs sont à 0 (logique).

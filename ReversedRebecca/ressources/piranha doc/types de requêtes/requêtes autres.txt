@@ -1,6 +1,11 @@
 ////// CAMERA //////
 
-Le Type de Requête CAMERA permet de déterminer le type de Caméra, ou son emplacement, en fonction de la Cible.
+Le Type de Requête CAMERA permet de définir le comportement de la Caméra, ou son emplacement, en fonction de la Cible.
+
+Les Cibles permettent de modifier le comportement de la Caméra sont les suivantes :
+PLAYER : ordonne à la Caméra de suivre le joueur.
+PLAYER_FLUID : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa Position.
+FIX : ordonne à la caméra de cesser de suivre le joueur et de rester "là où elle se trouve actuellement".
 
 Exemple : 
 TIME -> 0 = CAMERA -> 0-0
@@ -16,182 +21,188 @@ FIX : ordonne à la caméra de cesser de suivre le joueur et rester "là où el
 Note : le comportement par défaut de la Caméra au chargement d'une carte est de se placer en 0-0.
 
 
-////// INTERRUPT_BOSS //////
-
-Le Type de Requête INTERRUPT_BOSS permet de terminer l'action en cours de tous les Boss actuellement présents sur la même couche (voir "index") que l'objet lançant la Requête. Dit autrement, si un Boss est en train de se reposer, il retourne à l'attaque.
-
-Exemple :
-WONPUZZLE -> 6-0 = INTERRUPT_BOSS -> PROCESS
-
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire une Cible cohérente, comme : TRUE, PROCESS ou START.
-
-
-////// DISPLAY //////
-
-Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet selon les axes x et y. 
-De la même façon que le Type de Requête HITBOX ne change QUE les dimensions de la hitbox d'un objet (voir le Type de Requête HITBOX dans la partie « Requêtes state »), DISPLAY ne change QUE le visuel de l'objet : aucune autre caractéristique n'est prise en compte.
-Il est utilisé lorsqu'un personnage se trouve dans un lit, sur une chaise, etc.
-
-Note : dans la mesure où seuls les objets Piranha "vivants" ont officiellement un visuel, le Type de Requête DISPLAY ne s'applique qu'à ces derniers.
-
-L'échelle est de 16 pixels pour une case (voir le Type de Requête HITBOX).
-
-Exemple :
-$ -> DISPLAY_SIT = DISPLAY -> 0, -1
-
-Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa position réelle.
-
-Note : il est possible d'entrer des valeurs négatives pour ce Type de Requête.
-
 
 ////// HIGHLIGHT //////
 
-Le Type de Requête HIGHLIGHT permet de déterminer l'emplacement visuel du détourage d'un objet interactif lorsque celui-ci peut être utilisé. 
+Le Type de Requête HIGHLIGHT permet de déterminer l'emplacement de l'ERA sous forme de détourage visuel d'un objet interactif, lorsque qu'il peut être utilisé. Le fichier de référence de ce détourage est du nom de l'objet (voir « NAME » dans la partie « Piranha – Type de Requêtes : States ») et se trouve dans le dossier « textures/(carte actuelle)/highlights ».
 
-L'échelle est de 1 pour une case.
+L'échelle est d'un pour une case (voir « HITBOX » dans la partie « Piranha – Type de Requêtes : States »). Il est possible d'écrire des Cibles à valeurs négatives.
 
 Exemple :
 $ -> HIGHLIGHT_INIT = HIGHLIGHT -> -1, -1, 2, 3
 
-Lorsque la Condition sera vérifiée, le détourage de l'objet sera visuellement décalé comme suit par rapport à l'objet : x=-1, y=-1, largeur=2, hauteur=3.
+Lorsque la Condition sera vérifiée, l'ERA sous forme détourage visuel de l'objet sera décalé comme suit par rapport à l'objet : X=-1, Y=-1. Ce détourage aura une largeur de 2 et une hauteur de 3.
 
-Note : il est possible d'entrer des valeurs négatives pour ce Type de Requête.
-Note : les valeurs par défauts sont -1, -1, 18, 18.
 
 
 ////// HIGHLIGHT_ABSOLUTE //////
 
-Le Type de Requête HIGHLIGHT_ABSOLUTE a exactement le même effet et est soumis aux mêmes règles que le permet Type de Requête HIGHLIGHT.
-La seule différence avec cette dernière est que HIGHLIGHT_ABSOLUTE ne se base pas sur un décalage relative "par rapport" à la position de l'objet sur la map, mais utilise les coordonnées de la carte directement.
+Le Type de Requête HIGHLIGHT_ABSOLUTE a exactement le même effet et est soumis aux mêmes règles que Type de Requête HIGHLIGHT.
+
+La seule différence avec ce dernier est que HIGHLIGHT_ABSOLUTE ne se base pas sur un décalage relatif "par rapport" à la Position de l'objet sur la carte, mais utilise les coordonnées de la carte directement.
+
 
 
 ////// HIGHLIGHT_REFRESH //////
 
-Le Type de Requête HIGHLIGHT_REFRESH permet de réactualiser le visuel du détourage d'un objet à partir de son fichier de référence.
-Pour changer ce fichier de référence, il suffit de le renomer (voir NAME dans "requêtes state").
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite pour respecter la syntaxe attendue.
+Le Type de Requête HIGHLIGHT_REFRESH permet de réactualiser l'ERA sous forme de détourage visuel d'un objet à partir de son fichier de référence. En effet, changer le nom d'un objet n'actualise pas son détourage : la sélection du fichier de référence ne se met à jour que lorsque HIGHLIGHT_REFRESH est utilisé.
+
+Note : ce Type de Requête est l'un des rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose de cohérent, comme : TRUE, PROCESS ou START.
 
 Exemple :
 $ -> HIGHLIGHT_INIT = HIGHLIGHT_REFRESH -> PROCESS
 $ -> HIGHLIGHT_INIT = GOTO -> HIGHLIGHT_REFRESH:PROCESS
 
-Lorsque la Condition sera vérifiée, le visuel du détourage de l'objet sera réactualisé à partir du fichier de référence "(nom de l'objet).png".
+Lorsque la Condition sera vérifiée, l'ERA sous forme détourage visuel de l'objet sera réactualisé et pointera vers le fichier de référence suivant : "(nom de l'objet).png".
 
-Note : par souci de clarté, il est conseillé d'écrire pour Cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
 
 
 ////// HIGHLIGHT_ABOVE_PLAYER //////
 
 
-Le Type de Requête HIGHLIGHT_ABOVE_PLAYER permet de changer la propriété visuelle du détourage d'un objet, de sorte qu'il apparaisse soit devant, soit derrière le joueur.
+Le Type de Requête HIGHLIGHT_ABOVE_PLAYER permet de changer une propriété de l'ERA sous forme de détourage visuel d'un objet, de sorte qu'il apparaisse soit devant, soit derrière le joueur.
 
-exemple :
+Exemple :
 TIME -> 0 = HIGHLIGHT_ABOVE_PLAYER -> FALSE
 TIME -> 0 = GOTO -> HIGHLIGHT_ABOVE_PLAYER:FALSE
 
-Lorsque la Condition sera vérifiée, le visuel du détourage de l'objet apparaitra derrière le joueur.
+Lorsque la Condition sera vérifiée, l'ERA sous forme détourage de l'objet apparaîtra derrière le joueur.
 
-Note : par défaut, le visuel du détourage d'un objet apparait devant le joueur.
+Note : par défaut, l'ERA sous forme détourage de l'objet d'un objet apparaît devant le joueur.
+
+
+
+////// DISPLAY //////
+
+Le Type de Requête DISPLAY permet de déterminer l'emplacement visuel d'un objet à partir de coordonnées X et Y.
+
+Rappel : parmi les objets Piranha, seuls les NPC ont un visuel.
+
+L'échelle est de seize pixels pour une case (voir « HITBOX » dans la partie « Piranha – Type de Requêtes : States »). Il est possible d'écrire des à Cibles à valeurs négatives.
+
+Exemple :
+$ -> DISPLAY_SIT = DISPLAY -> 0, -1
+
+Lorsque la Condition sera vérifiée, l'objet sera visuellement légèrement décalé vers le haut par rapport à sa Position réelle.
+
+Attention ! De la même façon que le Type de Requête HITBOX ne change QUE les dimensions de la Hitbox d'un objet, DISPLAY ne change QUE le visuel de l'objet : aucune autre caractéristique n'est prise en compte.
+
+
+
+////// INTERRUPT_BOSS //////
+
+Le Type de Requête INTERRUPT_BOSS permet de terminer l'action en cours de tous les boss actuellement présents sur la même couche (voir « Couches » dans la partie « Piranha – Index ») que l'objet actuel. Dit autrement, si un boss est en train de se reposer, il retourne à l'attaque.
+
+Note : ce Type de Requête est l'un des rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose de cohérent, comme : TRUE, PROCESS ou START.
+
+Exemple :
+WONPUZZLE -> 10-20 = INTERRUPT_BOSS -> PROCESS
+
+Lorsque la Condition sera vérifiée, le boss passera au paterne d'attaque (ou de repos) suivant.
+
 
 
 ////// CUTSCENE //////
 
 Le Type de Requête CUTSCENE permet de lancer ou d'arrêter une scène cinématique.
-Note : il peut parfois être utile de vérifier si le Joueur respecte certaines conditions avant de lancer une cinématique (voir Type de Requête READY_PLAYER dans « Requêtes conditionnelles).
 
-exemple :
+La Cible unitaire de ce Type de Requête défini l'opération à effectuer :
+- START : lancer une scène cinématique.
+- STOP : arrêter une scène cinématique.
+- STOP_WITH_DELAY : arrêter une scène cinématique après un court délai (1 seconde).
+
+Lors du lancement d'une cinématique, trois événements se produisent :
+- des bandes noires s'affichent en haut et en bas de l'écran,
+- le joueur est centré sur sa case,
+- les contrôles de l'utilisateur sur le joueur sont retirés, sauf pour les choix (voir « CHOICE » dans la partie « Piranha – Type de Requêtes : Actions »).
+
+Exemple :
 TIME -> 0 = CUTSCENE -> START
 TIME -> 0 = GOTO -> CUTSCENE:START
 
 Lorsque la Condition sera vérifiée, une scène cinématique sera lancée.
 
-Les trois choses que font une scène cinématique sont :
-- afficher des bandes noires en haut et en bas de l'écran.
-- centrer le joueur sur la "case" où il est actuellement le plus.
-- interdire à l'utilisateur de contrôler le joueur avec le clavier.
+Note : la vitesse de marche du joueur est habituellement plus rapide que celle des NPC. Durant les cinématiques, cette vitesse devient identique.
 
-Le Type de Requête CUTSCENE accepte 3 cibles :
-- START, pour lancer une scène cinématique.
-- STOP, pour arrêter une scène cinématique.
-- STOP_WITH_DELAY, pour arrêter une scène cinématique après un court délai (1 seconde). On ne sait jamais, ça peut servir ¯\_(ツ)_/¯
+Note : il peut parfois être utile de vérifier si le joueur respecte certaines conditions avant de lancer une cinématique (voir « READY_PLAYER » dans la partie « Piranha – Type de Requêtes : Conditionnelles »).
 
-Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne pourra pas reprendre le contrôle du joueur et il se retrouvera dans une situation de « softlock ».
-Attention : à part la vitesse de base du joueur qui est modifiée, les mouvements durant les cinématique suivent les mêmes règles que hors de ces dernières. Si un personnage est bloqué, car le joueur est considéré comme étant "trop près", effectuez une requête PLAYER_AVOIDER_TYPE:CUTSCENE (voir "requêtes states").
+Attention ! Assurez-vous toujours qu'une cinématique ait une fin ! Sans quoi l'utilisateur ne reprendra pas le contrôle sur le joueur, ce qui causera un « softlock ».
 
 
-L'écriture conditionnelle est possible, quoique légèrement différente de d'habitude.
-Lorsque cette dernière est utilisée, elle vérifie toujours si une cinématique est en cours; peu importe la cible écrite.
+L'Écriture Conditionnelle avec le Type de Requête CUTSCENE est possible, quoique légèrement différente des autres : elle vérifie toujours si une cinématique est en cours ; quelle que soit la Cible.
 
-ex : 
-TIME -> 100 = GOTO -> TRY_ARRIVING
-$ -> TRY_ARRIVING = CUTSCENE -> RUNNING ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
-$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+Exemple : 
+TIME -> 100 = GOTO -> TRY_ARRIVE
+$ -> TRY_ARRIVE = CUTSCENE -> RUNNING ? WAIT_ARRIVE / ARRIVE
+$ -> WAIT_ARRIVE = WAITFOR -> TIMER:1 ? TRY_ARRIVE
 
-Lorsque la condition sera vérifiée, une nouvelle condition doit être vérifiée : une cinématique est-elle en cours ?
-- si oui, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
-- si non, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
-Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque la cinématique est finie (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : une cinématique est-elle en cours ?
+- si oui, effectuer l'action WAIT_ARRIVE (qui est une balise GOTO).
+- si non, effectuer l'action ARRIVE (qui est une autre balise GOTO)
 
-Rappel, le mot "RUNNING" n'est pas analysé ici. L'écriture conditionnelle du Type de Requête CUTSCENE vérifiera TOUJOURS si une cinématique est en cours ; peu importe le mot écrit. Il est bien sûr conseillé d'écrire "RUNNING" afin que la requête ait du sens à la lecture.
+Explication : dans notre exemple la 3ème Instruction forme une boucle avec la seconde. De cette façon, l'action ARRIVE s'effectuera lorsque la cinématique sera finie (puisque cette boucle-ci implique que la nouvelle condition soit vérifiée chaque seconde jusqu'à sa validation).
+
+Rappel : le mot « RUNNING » n'est pas analysé ici. L'Écriture Conditionnelle du Type de Requête CUTSCENE vérifiera TOUJOURS si une cinématique est en cours ; peu importe le mot écrit. Il est bien sûr conseillé d'écrire « RUNNING » afin que l'Instruction ait du sens à la lecture.
+
 
 
 ////// WAITFOR //////
 
-Le Type de Requête WAITFOR est à la fois l'un des plus utiles et le plus compliqué à utiliser correctement !
-L'écriture d'un WAITFOR, même si elle est différente, ressemble un peu à l'écriture Conditionnelle : il accepte une cible de "Condition", suivi d'une ou de plusieurs Cibles séparées par des virgules (comme pour GOTO), exécutée(s) lorsque la condition est vérifiée.
-Note : s'il est autorisé d'écrire plusieurs Cibles "requêtes" dans un WAITFOR, il est recommandé de n'en écrire qu'une seule par soucis de lisibilité.
+Le Type de Requête WAITFOR est à la fois le plus utile et le plus compliqué à utiliser !
 
-Attention ! Il ne peut y avoir qu'un seul waitfor actif en même temps par objet Piranha. En effet, le Type de Requête WAITFOR écrase les waitfor précédents ! Soyez donc précis lorsque vous voulez enchainer plusieurs actions : la seconde cible du waitfor est tout indiquée pour créer une balise GOTO qui exécutera votre action et lancera un autre waitfor.
-Attention ! Plusieurs Types de Requête lance des Instructions "cachés" dont le Type de Requête est WAITFOR (cela est systématiquement précisé). Prenez bien garde en les utilisant à ne pas écraser le waitfor précédent.
+L'écriture d'un WAITFOR, même si elle est différente, ressemble à l'Écriture Conditionnelle (voir la partie « Piranha – Écriture Conditionnelle ») : il pose une "condition" à vérifier, suivi d'une ou de plusieurs Cibles séparées par des virgules – à la manière de GOTO (voir « GOTO » dans la partie « Piranha – Type de Requêtes : Goto ») – et à exécuter lorsqu'elle (la condition) est vérifiée.
 
-exemple en situation :
-
-TALKED -> PEEBOY_FIND_A_ROOM = GOTO -> WAITING_BEFORE_CONFESSING, CUTSCENE:START, MEMORY:TOO_LATE
-$ -> WAITING_BEFORE_CONFESSING = WAITFOR -> TIMER:1 ? IS_ASHAMED
-$ -> IS_ASHAMED = GOTO -> AVOID_LOOKING, EXPRESSION:SUSPENSION, WAITING_BEFORE_CONFESSING_AGAIN
-$ -> AVOID_LOOKING = FACING -> DOWN ? FACING:LEFT / FACING:DOWN
-$ -> WAITING_BEFORE_CONFESSING_AGAIN = WAITFOR -> TIMER:2 ? TALK:PEEBOY_PEE_ITS_PANTS
-TALKED -> PEEBOY_PEE_ITS_PANTS = FACING -> DOWN ? CREATE_HORIZONTAL_PEE_PUDDLES / CREATE_VERTICAL_PEE_PUDDLES
-
-L'exemple ici est une cinématique où PEEBOY confesse qu'il s'est accidentellement fait pipi dessus. Les WAITFOR ici permettent de marquer des temps de pause entre les dialogues afin de rendre la "confession" crédible. Voyez comme les 2 WAITFOR n'ont pas été créé en même temps dès le départ, c'est bien le premier qui créé le second dans sa cible.
-
-Le Type de Requête WAITFOR accepte les "Conditions" suivantes :
-- TIMER:X (remplacer "X" par un nombre), attend X secondes avant d'effectuer la requête.
-- FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), n'exécute la requête que lorsque l'objet appelant cette Instruction regarde dans la direction choisie.
-- PLAYER_FUTHER_THAN:X (remplacer "X" par un nombre), n'exécute la requête que lorsque le joueur est plus loin que X cases.
-- PLAYER_CLOSER_THAN:X, même principe qu'avec FUTHER, mais on mesure cette fois la proximité au lieu de l'éloignement.
-- PLAYER_FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), n'exécute la requête que lorsque le joueur regarde dans la direction choisie. (Note : il est possible de mettre un point d'exclamation "!" devant la direction pour obtenir l'inverse de la condition - càd toutes les directions sauf celle indiquée).
-
-Note : dans la mesure où un WAITFOR écrase les waitfor précédents, si l'on a besoin d'annuler un waitfor existant, il suffit d'écrire la requête "WAITFOR -> TIMER:0 ? NULL".
+Les différentes conditions qu'il est possible de vérifier sont les suivants :
+- TIMER:X (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque X secondes se sont écoulées.
+- FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN") : n'exécuter la Requête que lorsque l'objet appelant cette Instruction "regarde" dans la direction choisie (voir « FACING » dans la partie « Piranha – Type de Requêtes : States »).
+- PLAYER_FUTHER_THAN:X (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque le joueur est plus loin que X cases.
+- PLAYER_CLOSER_THAN:X : (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque le joueur est plus près que X cases.
+- PLAYER_FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN") : n'exécuter la Requête que lorsque le joueur regarde dans la direction choisie. (Note : il est possible de mettre un point d'exclamation "!" devant la direction pour obtenir l'inverse de la condition – c-.à-d. toutes les directions sauf celle indiquée).
+- MOVE:X-Y (remplacer « X » et « Y » par des coordonnées) : n’exécuter la Requête que lorsque l'objet atteindra son nouveau Goal en X et Y. (MOVE peut être remplacé par SLOW ou FAST). Attention ! Ce type de WAITFOR attribue un Goal à l'objet ! (Voir « MOVE » dans la partie « Piranha – Type de Requêtes : Move »).
+Note : vous l'aurez deviné, un WAITFOR peut tout à fait remplir immédiatement sa condition. Dans ce cas, les Cibles sont immédiatement exécutées.
 
 
-Attention ! Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun"; et donc immobilisé pendant 1 frame. Il faut donc éviter d'appeler ce Type de Requête juste après avoir utilisé le Type de Requête PUSH par exemple (voir "requêtes move") qui serait instantanément annulé.
+ATTENTION ! IL NE PEUT Y AVOIR QU'UN SEUL WAITFOR ACTIF EN MÊME TEMPS PAR OBJET PIRANHA ! Ainsi, le Type de Requête WAITFOR écrase le WAITFOR précédent, soyez donc précis lorsque vous voulez enchaîner plusieurs actions.
 
-Pour le dire plus simplement, n'écrivez pas :
-TIME -> 0 = GOTO -> PUSH:UP, WAITING_BEFORE_STUFF
-$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
+Note : dans la mesure où un WAITFOR écrase les WAITFOR précédents, si l'on a besoin d'annuler un WAITFOR existant, il suffit d'écrire la Requête « WAITFOR → TIMER:0 ? NULL ».
 
-Écrivez à la place :
-TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
-$ -> WAITING_BEFORE_STUFF = WAITFOR -> TIMER:1 ? DO_STUFF
+Attention ! Certains Types de Requête lancent des Instructions "cachées" dont le Type de Requête est WAITFOR. Prenez bien garde en les utilisant à ne pas écraser le WAITFOR précédent ! Rassurez-vous, ils sont peu nombreux et cela sera systématiquement précisé.
+
+
+Exemple de situation :
+TALKED -> BOB_TOILET = GOTO -> CUTSCENE:START, WAIT_ASHAME
+$ -> WAIT_ASHAME = WAITFOR -> TIMER:1 ? ASHAME
+$ -> ASHAME = GOTO -> AVOID_LOOK, EXPRESSION:SUSPENSION, WAIT_CONFESS
+$ -> AVOID_LOOK = FACING -> DOWN ? FACING:LEFT / FACING:DOWN
+$ -> WAIT_CONFESS = WAITFOR -> TIMER:2 ? TALK:BOB_PISSED_ITSELF
+
+Explication : nous avons ici une cinématique (voir « CUTSCENE » dans la partie « Piranha – Type de Requêtes : Autres ») où Bob confesse qu'il s'est accidentellement uriné dessus. Les WAITFOR présents permettent de marquer des temps de pause entre les dialogues afin de rendre la "confession" plus naturelle et crédible. Voyez comme les deux WAITFOR ne se superposent pas : le second est créé une fois que le premier a validé sa condition.
+
+Attention ! Lorsqu'un objet est poussé (voir « PUSH » dans la partie « Piranha – Type de Requêtes : Move »), il est "stun", il est « stun » (voir « STUNNED » dans la partie « Piranha – Type de Requêtes : Conditionnelles »). Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun", ce qui a pour effet de l'immobiliser pendant un court instant ; donc d'annuler la poussée. Il ne faut pas appeler le Type de Requête WAITFOR juste après avoir utilisé le Type de Requête PUSH.
+
+Pour le dire plus simplement, n'écrivez pas :
+TIME → 0 = GOTO → PUSH:UP, WAIT_STUFF
+
+Écrivez à la place :
+TIME → 0 = GOTO → WAIT_STUFF, PUSH:UP
+
 
 
 ////// END_LVL //////
 
-Le Type de Requête END_LVL permet de demander au programme de charger les nouveaux niveaux pour l'écran titre et pour le jeu en cours.
-Attention ! Ce chargement s'effectuera différemment en fonction de la première Cible renseignée :
+Le Type de Requête END_LVL prépare les nouvelles cartes pour l'écran titre et pour le joueur, et est à utiliser lorsque l'objectif d'une carte est atteint.
 
-- NORMAL : afficher l'écran de fin de niveau
-- QUIET : le joueur accèdera directement au niveau suivant
-- START_GAME : le joueur est envoyé à l'écran titre du jeu
-- END_GAME : le joueur est envoyé vers les crédits du jeu
+La 1ère Cible de ce Type de Requête défini l'opération à effectuer :
+- NORMAL : afficher l'écran de fin de carte.
+- QUIET : envoyer directement le joueur dans la carte suivante (à privilégier dans les workshop).
+- START_GAME : envoyer le joueur dans le menu de l'écran titre du jeu.
+- END_GAME : envoyer le joueur vers les crédits de fin du jeu.
 
-Note : les demandes enregistrées par le Type de Requête SAVE (voir "requêtes memory.txt") sont traitées aussitôt le Type de Requête END_LVL appelé (avant toute opération).
+Note : dans le cas d'une première Cible "START_GAME", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites afin de respecter la syntaxe attendue.
 
-exemple :
-WONPUZZLE -> 6-0 = END_LVL -> NORMAL, REBECCAS_ROOM_1, LVL001
+Note : les demandes de sauvegarde enregistrées par le Type de Requête SAVE (voir « SAVE » dans la partie « Piranha – Type de Requêtes : Memory ») sont traitées aussitôt le Type de Requête END_LVL appelé (c-.à-d. avant même que ses Cibles soient analysées).
 
-Lorsque le Puzzle en x=6 y=0 sera résolu, le niveau prendra fin et le lvl001 sera chargé. Parallèlement, l'écran titre affichera maintenant le niveau REBECCAS_ROOM_1. Sur l'écran de victoire, les données affichées dépendront du karma du joueur (voir requêtes ressources : "Type de Requête DEED") et des compteurs (voir requêtes ressources : "Type de Requête COUNTER").
+Exemple :
+WONPUZZLE -> 10-20 = END_LVL -> NORMAL, REBECCAS_ROOM_1, LVL001
 
-Note : l'écran titre changeant est une mécanique très intéressante. Vous pouvez totalement l'ignorer, mais cela sera dommage de passer à côté de l'histoire qu'il peut raconter.
-Note : dans le cas d'une première Cible "START_GAME", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites pour respecter la syntaxe attendue.
+Lorsque le puzzle initié par le puzzler en X=10 Y=20 sera résolu, la carte actuelle prendra fin et la carte « LVL001 » sera chargée. Parallèlement, l'écran titre affichera à présent la carte « REBECCAS_ROOM_001 ». Avant que le joueur ne soit plongé dans la nouvelle carte, un écran de fin de carte s'affichera (voir la partie « Écran de fin de carte »).

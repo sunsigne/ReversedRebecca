@@ -1,6 +1,5 @@
 Les mappables sont des classes Java programmées pour créer des objets à partir de pastilles de couleurs sur le dessin de carte X_content.png
 Le mot remplaçant X devant _content ne peut être choisi que parmi les suivants : downest, downer, down, world, up, upper, upest
-Il est important de noter que le fichier _content.png DOIT être un carré : si l'image fait 57 pixel de large, elle doit faire 57 pixel de haut.
 
 Chaque pastille, par sa couleur RGB exacte, créera un objet précis sur la map. Voici la bibliothèque référençant ces pastilles.
 
@@ -8,7 +7,6 @@ Chaque pastille, par sa couleur RGB exacte, créera un objet précis sur la map.
 
 The mappables are Java classes programmed to create objects from color chips on a file _content.png
 The word before _content can only be one of those : downest, down, world, up, upper, uppest
-It is important to note that the file _content.png MUST be a scare : if the image is 57 pixel wide, it must be 57 pixel high.
 
 Each chip, by its exact RGB color, will create a specific object on the map. Here is the chip SEO library. 
 

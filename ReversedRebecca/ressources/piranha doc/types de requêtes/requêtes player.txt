@@ -1,12 +1,15 @@
-Les Type de Requête player sont des Types de Requête state spéciales : elles ciblent spécifiquement le joueur.
-L'avantage de ces Types de Requête est qu'ils sont utilisables depuis n'importe quel fichier Piranha sans avoir à utiliser AFFECTING.
-L'écriture condensée leur est systématiquement permise, ainsi que l'écriture conditionnelle.
+Les Type de Requête suivants sont des Types de Requête « States » spéciaux : elles ciblent spécifiquement le joueur. L'avantage de ces Types de Requête est qu'ils sont utilisables depuis n'importe quel fichier Piranha sans avoir à utiliser AFFECTING (voir « AFFECTING » dans la partie « Piranha – Types de Requêtes : Goto »).
+
+L'Écriture Compacte leur est systématiquement permise, ainsi que l'Écriture Conditionnelle.
+
 
 
 ////// NAME_PLAYER //////
 
 Équivalant au Type de Requête NAME.
-ATTENTION ! Il s'agit d'un attribut important qui change la texture même d'un personnage ! Il ne devrait être utilisé que dans le cadre conditionnel.
+
+Attention ! Il s'agit d'un attribut important qui change la texture même du joueur ! Il ne devrait être utilisé que dans le cadre conditionnel.
+
 
 
 ////// FACING_PLAYER //////
@@ -17,7 +20,9 @@ ATTENTION ! Il s'agit d'un attribut important qui change la texture même d'un p
 ////// INVULNERABLE_PLAYER //////
 
 Équivalant au Type de Requête INVULNERABLE.
-Note : très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un niveau.
+
+Note : très pratique dans le fichier Piranha « SET-UP », lors du lancement d'une carte (voir « Fichier » dans la partie « Piranha – Piranha »).
+
 
 
 ////// CONDITION_PLAYER //////
@@ -25,35 +30,42 @@ Note : très pratique dans le fichier Piranha "SET-UP" lors du lancement d'un ni
 Équivalant au Type de Requête CONDITION.
 
 
+
 ////// EXPRESSION_PLAYER //////
 
 Équivalant au Type de Requête EXPRESSION.
-Note : ce Type de Requête n'est pas "state" mais "ressource", mais il peut faciliter la vie lors des cinématiques; il a donc tout à fait sa place ici.
-Attention ! L'écriture conditionnelle est impossible avec ce Type de Requête (l'écriture condensée reste permise).
 
+Note : ce Type de Requête n'est pas « State » mais « Ressources ». Il facilite la gestion des cinématiques (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres »).
 
-////// STATE_PLAYER //////
+Attention ! L'Écriture Conditionnelle est impossible avec ce Type de Requête (l'Écriture Condensée reste permise).
 
-Le Type de Requête STATE_PLAYER est une requête affectant le joueur, mais une exception aux Types de Requête player "classique". Ni l'écriture conditionnelle, ni l'écriture condensée ne lui est permise.
-STATE_PLAYER permet d'affecter à la fois la position réelle du Joueur, sa position visuelle, son Facing, sa Condition, et accepter des Cibles supplémentaires à la manière de GOTO. C'est tout juste s'il ne fait pas le café.
-Pour faire simple, elle regroupe à la fois les Types de Requête TP, DISPLAY, FACING, CONDITION et GOTO.
-
-exemple :
-$ -> PLAYER_GO_ON_TOILET = STATE_PLAYER -> 18-9,0,-4,UP,SIT, MEMORY:PLAYER_TOILET, SOUND:JUMP
-
-Cette expression a l'air compliquée au premier abord, mais elle ne fait que se baser sur l'expression des différents Types de Requête qu'elle contient. Si elle vous semble floue, étudier chacun d'eux pour la comprendre.
 
 
 ////// CENTER_PLAYER //////
 
 Le Type de Requête CENTER_PLAYE permet de recentrer le joueur sur la case sur laquelle il est le plus.
-Note : ce Type de Requête est l'un des très rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite pour respecter la syntaxe attendue.
-Note : dans la mesure où la cible n'a aucune importance, l'écriture conditionnelle est évidemment interdite avec ce Type de Requête.
 
-exemple :
-TIME -> 5 = CENTER_PLAYER -> BANANA
-TIME -> 5 = GOTO -> CENTER_PLAYER:YOLO
+Note : ce Type de Requête est l'un des rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose de cohérent, comme : TRUE, PROCESS ou START.
+
+Note : dans la mesure où la Cible n'a aucune importance, L'Écriture Conditionnelle est impossible avec ce Type de Requête.
+
+Exemple :
+TIME -> 5 = CENTER_PLAYER -> PROCESS
+TIME -> 5 = GOTO -> CENTER_PLAYER:PROCESS
 
 Lorsque la Condition sera vérifiée, le joueur sera recentré sur la case sur laquelle il est le plus.
 
-Note : par soucis de clarté, il est conseillé d'écrire pour cible : TRUE, PROCESS, START ou n'importe quoi de cohérent.
+Rappel : lors du lancement d'une cinématique (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres »), le joueur est automatiquement recentré.
+
+
+
+////// STATE_PLAYER //////
+
+Le Type de Requête STATE_PLAYER permet d'ajuster en une seule Instruction la Position réelle du joueur, sa Position visuelle, son orientation et sa Condition. Il est également possible d'ajouter d'autres Cibles, à la manière du Type de Requête GOTO. Dit simplement, le Type de Requête STATE_PLAYER regroupe à la fois les Types de Requête TP, DISPLAY, FACING, CONDITION et GOTO.
+
+Note : ni l'Écriture Compacte, ni l'Écriture Conditionnelle ne sont possibles avec Type de Requête.
+
+Exemple :
+$ -> PLAYER_GO_ON_TOILET = STATE_PLAYER -> 18-9,0,-4,UP,SIT, MEMORY:PLAYER_TOILET, SOUND:JUMP
+
+Cette Instruction a l'air compliquée au premier abord, mais elle ne fait que se baser sur l'expression des différents Types de Requête qu'elle contient : étudiez les séparément pour y voir plus clair.

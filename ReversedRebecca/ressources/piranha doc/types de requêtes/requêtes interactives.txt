@@ -1,52 +1,58 @@
 ////// DISABLE //////
 
 
-Le Type de Requête DISABLE permet de "désactiver" l'objet aux coordonnées indiquées : l'objet est toujours présent, mais les Actions de son TRIPLE_ACTION ne sont plus accessibles.
-Attention ! Dans la mesure où plusieurs objets peuvent être au même endroit, une seconde cible correspondant à l'index doit être établie (voir "index")
+Le Type de Requête DISABLE permet de "désactiver" l'objet à partir de coordonnées X, Y et Z : l'objet est toujours présent, mais ses actions ne sont plus accessibles. La coordonnée Z correspond à l'Index chiffré de l'objet (voir la partie « Piranha – Index »).
 
-exemple :
+Exemple :
 TIME -> 0 = DISABLE -> 10-20:1
 
-Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=20 verra ses Actions gelées jusqu'à Instruction contraire.
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées X=10 Y=20 et d'Index 1 verra ses actions désactivées jusqu'à Instruction contraire.
 
-Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
+Note : on peut se demander, à première vue, à quoi un tel Type de Requête pourrait bien servir. La réponse est que, de façon situationnelle, il peut exister un cas bien précis / une situation bien précise où vous auriez besoin d'effectuer une telle Requête. Tous les Types de Requêtes ne servent pas autant, mais il doit exister un Type de Requête pour chaque situation !
+
 
 
 ////// DISABLE_ONTHESPOT //////
 
-Fait exactement la même chose que DISABLE, à la différence que les coordonnées sont automatiquement celles de l'objet Piranha qui demande l'action.
-DISABLE_ONTHESPOT ne disposant que d'une seule cible, l'écriture compacte devient possible.
+Est un raccourci direct du Type de Requête DISABLE. Les deux Instructions suivantes sont strictement équivalentes :
 
-Note : DISABLE_ONTHESPOT est une modification du Type de Requête DISABLE. Il est donc possible (quoique curieux), d'écrire l'instruction suivante :
 TIME -> 0 = DISABLE -> ONTHESPOT:1
+TIME -> 0 = GOTO -> DISABLE_ONTHESPOT:1
+
+Les coordonnées sont définies comment étant celles de l'objet actuel. La Cible Index devenant unitaire, l'Écriture Compacte devient possible (ce qui est précisément l'intérêt de ce Type de Requête).
+
 
 
 ////// ENABLE //////
 
+Le Type de Requête ENABLE a exactement le même effet et est soumis aux mêmes règles que Type de Requête DISABLE.
 
-A EXACTEMENT le même fonctionnement que DISABLE, mais pour réactiver les Actions que ce dernier avait gelées.
-Note : les actions sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.
-Note : Le Type de Requête ENABLE_ONTHESPOT existe également. À ce stade, vous aurez déjà compris comment s'en servir, inutile donc de l'expliquer.
+La seule différence avec ce dernier est que ENABLE permet de "réactiver" les actions d'un objet.
 
+Note : les actions des objets Piranha sont activées par défaut, il est donc inutile d'utiliser ENABLE si DISABLE n'a pas été utilisé en premier lieu.
 
-////// OPEN_PUZZLE //////
+Note : Le Type de Requête ENABLE_ONTHESPOT existe également. À ce stade, vous aurez déjà compris comment l'utiliser.
 
-Le Type de Requête OPEN_PUZZLE force l'activation d'une action d'un puzzler à distance.
-Les deux cibles sont les coordonnées du puzzler et le numéro de l'action à effectuer.
-Note : si plusieurs objets peuvent théoriquement se trouver au même endroit, plusieurs puzzler ne sont pas censés être superposé; l'index n'est donc pas demandé : le premier puzzler trouvé sera sélectionné.
-
-exemple :
-TALKED -> DOOR_RIGHT_HAND = OPEN_PUZZLE -> 6-1,1
-
-Lorsque la Condition sera vérifiée, le puzzler en 6-1 verra son action 1 se lancer.
-Note : Les coordonnées ONTHESPOT ne sont pas autorisées pour ce type de requête, il faut donc systématiquement renseigner les coordonnées. Il n'existe également aucun Type de Requête OPEN_PUZZLE_ONTHESPOT.
 
 
 ////// PICKUP //////
 
-Le Type de Requête PICKUP permet au joueur de ramasser un objet à distance.
+Le Type de Requête PICKUP permet au joueur de ramasser un objet "ramassable" à distance, à partir de coordonnées X, Y et Z. La coordonnée Z correspond à l'Index chiffré de l'objet (voir la partie « Piranha – Index »).
 
-exemple :
+Exemple :
 $ -> TAKE_KEY = PICKUP -> 10-20:1
 
-Lorsque la Condition sera vérifiée, l'objet d'index 1 aux coordonnées x=10 y=20 sera ramassé (s'il s'agit d'un objet ramassable)
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées X=10 Y=20 et d'Index 1 sera ramassé (pourvu qu'il s'agisse d'un objet "ramassable" – exemple : un outil –).
+
+
+
+////// OPEN_PUZZLE //////
+
+Le Type de Requête OPEN_PUZZLE force l'activation d'une action d'un puzzler à distance (ce qui lancera un puzzle), à partir de coordonnées X et Y, et du numéro de l'action à effectuer.
+
+Exemple :
+TALKED -> DOOR_CLOSED = OPEN_PUZZLE -> 10-20,1
+
+Lorsque la Condition sera vérifiée, le puzzler en 10-20 verra son action 1 se lancer.
+
+Note : Les coordonnées ONTHESPOT ne sont pas autorisées pour ce Type de Requête, il faut donc systématiquement renseigner les coordonnées. Il n'existe également aucun Type de Requête OPEN_PUZZLE_ONTHESPOT.

@@ -1,166 +1,187 @@
-Les Types de requêtes suivants sont purement conditionnels. C'est-à-dire que contrairement aux Types de Requêtes "classiques", ils ne peuvent pas être utilisés autrement qu'avec une écriture conditionnelle.
+Les Types de Requêtes suivants sont purement conditionnels. C'est-à-dire que contrairement aux Types de Requêtes "classiques", ils ne peuvent être utilisés QU'avec une Écriture Conditionnelle.
+
+
 
 ////// UNLOCKEDTOOL //////
 
 Le Type de Requête UNLOCKEDTOOL permet de vérifier si le joueur atteint ou non le niveau de l'outil en question.
 Note : Tous les outils et niveaux sont détaillés dans le fichier "mappable" (dans le dossier "maps")
 
-exemple :
-TIME -> 20 = UNLOCKEDTOOL -> KEY:CYAN ? DOOR_CLOSED / DIALOGUE
+Exemple :
+TIME -> 20 = UNLOCKEDTOOL -> KEY:CYAN ? IS_CLOSED / DIALOGUE
 
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : l'outil KEY a-t-il été débloqué au moins au niveau CYAN ?
-- si oui, effectuer l'action DOOR_CLOSED (qui est une balise comme pour GOTO)
+- si oui, effectuer l'action IS_CLOSED (qui est une balise comme pour GOTO)
 - si non, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
+
 
 
 ////// UNLOCKEDTOOLMAXLEVEL //////
 
-Le Type de Requête UNLOCKEDTOOLMAXLEVEL fonctionne exactement de la même façon que le Type de Requête UNLOCKEDTOOL, à la différence près que ce premier vérifie si le joueur a atteint ou non la possibilité d'utiliser un outil de ce niveau (qu'il le possède ou non).
+Le Type de Requête UNLOCKEDTOOLMAXLEVEL a exactement le même effet et est soumis aux mêmes règles que Type de Requête UNLOCKEDTOOL.
 
-exemple :
-TIME -> 20 = UNLOCKEDTOOLMAXLEVEL -> KEY:GREEN ? DOOR_CLOSED / DIALOGUE
+La seule différence avec ce dernier est que UNLOCKEDTOOLMAXLEVEL vérifie si le joueur a atteint ou non la possibilité (compétence) d'utiliser un outil de ce niveau (qu'il le possède ou non).
+
+Exemple :
+TIME -> 20 = UNLOCKEDTOOLMAXLEVEL -> KEY:GREEN ? MAY_OPEN / DIALOGUE
 
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : si un outil KEY de couleur GREEN est ramassé, pourrait-il être stocké au seulement son niveau CYAN sera atteint ?
-- dans le premier cas, effectuer l'action DOOR_CLOSED (qui est une balise comme pour GOTO)
-- dans le cas contraire, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
+- si oui, effectuer l'action MAY_OPEN (qui est une balise comme pour GOTO)
+- si non, effectuer l'action DIALOGUE (qui est une autre balise comme pour GOTO)
+
 
 
 ////// DIFFICULTY //////
 
-Le Type de Requête DIFFICULTY permet de vérifier le mode de difficulté actuel.
+Le Type de Requête DIFFICULTY permet de vérifier la difficulté du jeu actuel.
 
-Les modes de difficulté est établi par le joueur lors de la création d'une nouvelle partie. Il peut prendre trois valeurs différentes :
+Rappel : la difficulté du jeu est établie par le joueur lors de la création de sa sauvegarde (c.-à-d. lorsqu'il crée une nouvelle partie). Elle peut prendre trois valeurs différentes :
 - EASY
 - NORMAL
 - HARD
 
 exemple :
-TIME -> 0 = DIFFICULTY -> EASY ? EASY_BOSS_IA / NORMAL_OR_HARD_BOSS_IA
+TIME -> 0 = DIFFICULTY -> EASY ? EASY_BOSS_IA / NOT_EASY_BOSS_IA
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : la difficulté est-elle définie comme étant sur "EASY" (facile) ?
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : la difficulté est-elle définie comme étant EASY (facile) ?
 - si oui, effectuer l'action EASY_BOSS_IA (qui est une balise comme pour GOTO)
-- si non, effectuer l'action NORMAL_OR_HARD_BOSS_IA (qui est une autre balise comme pour GOTO)
+- si non, effectuer l'action NOT_EASY_BOSS_IA (qui est une autre balise comme pour GOTO)
+
 
 
 ////// SEE //////
 
-Le Type de Requête SEE permet de savoir si un objet a ou non dans son champ de vision un autre objet (en utilisant son NAME comme Cible).
-Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets, et que cette ligne ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les objets et personnages Piranha ne le sont pas par défaut (cela peut être modifié en utilisant le Type de Requête BLOCKING_SIGHT, voir "requêtes state").
+Le Type de Requête SEE permet de savoir pour un objet si un autre objet – qu'on désigne par son nom (voir « NAME » dans la partie « Requêtes States ») – est présent dans son champ de vision.
 
-exemple :
-TIME -> 0 = SEE -> PLAYER ? GOCRYING / MOVE:37-42
+Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets sans qu'elle ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les NPC et les objets Piranha et ne le sont pas – par défaut, mais cela peut être modifié (voir « BLOCKING_SIGHT » dans la partie « Requêtes States ») –.
+
+Exemple :
+TIME -> 0 = SEE -> PLAYER ? GO_HIDING / GO_CRYING
 
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il dans le champ de vision de l'objet ?
-- si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
-- si non, définir le GOAL comme étant en x=37 y=42
+- si oui, effectuer l'action GO_HIDING (qui est une balise comme pour GOTO)
+- si non, effectuer l'action GO_CRYING (qui est une autre balise comme pour GOTO)
+
 
 
 ////// RANDOM //////
 
 Le Type de Requête RANDOM permet de vérifier une condition supplémentaire, à caractère aléatoire.
 
-exemple :
+Les différentes conditions qu'il est possible de vérifier sont les suivants :
+- PERCENTAGE:X (remplacer "X" par un nombre) : la première action à X % de chances de se produire.
+
+Exemple :
 TIME -> 0 = RANDOM -> PERCENTAGE:30 ? FACING:LEFT / FACING:UP
 
-Lorsque la Condition sera vérifiée, l'objet à 30 % de chances de regarder à droite, et 70 % de chances de regarder en haut.
+Lorsque la Condition sera vérifiée, l'objet à 30 % de chances de "regarder" à droite (voir « FACING » dans la partie « Piranha – Type de Requêtes : States »), et 70 % de chances de regarder en haut.
 
-Le Type de Requête RANDOM accepte les "Conditions" suivantes :
-- PERCENTAGE:X (remplacer "X" par un nombre), la première action à X % de chances de se produire. Dans le cas contraire, la seconde action se produira.
 
 
 ////// MENU //////
 
 Le Type de Requête MENU permet de savoir si le jeu est actuellement sur un écran de chargement ou sur un menu (par exemple, l'écran titre).
 
-exemple :
+Exemple :
 TIME -> 0 = MENU -> TRUE ? NULL / CREATE_BONUSTEXT_ZZZ
 
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : un menu est-il ouvert ?
 - si oui, n'effectuer aucune action
-- sinon, effectuer l'action CREATE_BONUSTEXT_ZZZ (qui est une balise comme pour GOTO)
+- si non, effectuer l'action CREATE_BONUSTEXT_ZZZ (qui est une balise comme pour GOTO)
 
-Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que situationnellement parlant, il peut exister un cas bien précis, dans une situation bien précise, où vous auriez besoin d'une telle requête. Toutes les requêtes ne servent pas autant, mais il doit exister une requête pour chaque situation !
+Note : on peut se demander, à première vue, à quoi une telle Requête pourrait bien servir. La réponse est que, de façon situationnelle, il peut exister un cas bien précis / une situation bien précise où vous auriez besoin d'une telle Requête. Toutes les Requêtes ne servent pas autant, mais il doit exister une Requête pour chaque situation !
+
 
 
 ////// GAMEPAD //////
 
-Le Type de Requête GAMEPAD permet de savoir si le joueur utilise actuellement une manette pour jouer, en opposition à l'ensemble clavier/souris.
+Le Type de Requête GAMEPAD permet de savoir si le joueur utilise actuellement une manette pour jouer au jeu (en opposition à l'ensemble clavier/souris).
 
-exemple :
-TIME -> 0 = GAMEPAD -> TRUE ? TALK:DAVE_GAMEPAD / TALK:DAVE_KEYBOARD
+Exemple :
+TIME -> 0 = GAMEPAD -> TRUE ? TALK:DAVE_GPAD / TALK:KBOARD
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur utilise-t-il actuellement une manette pour jouer ?
-- si oui, le dialogue "DAVE_GAMEPAD" est lancé
-- sinon, c'est le dialogue "DAVE_KEYBOARD" qui est lancé
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur utilise-t-il actuellement une manette pour jouer ?
+- si oui, le dialogue « DAVE_GPAD » est lancé (voir « TALK » dans la partie « Piranha – Type de Requêtes : Actions »).
+- si non, c'est le dialogue « KBOARD » qui est lancé.
+
+Note : on peut se demander, à première vue, à quoi un tel Type de Requête pourrait bien servir. La réponse est que, de façon situationnelle, il peut exister un cas bien précis / une situation bien précise où vous auriez besoin d'effectuer une telle Requête. Tous les Types de Requêtes ne servent pas autant, mais il doit exister un Type de Requête pour chaque situation !
+
 
 
 ////// PLAYER_FUTHER_THAN //////
 
-Le Type de Requête PLAYER_FUTHER_THAN permet de savoir le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
+Le Type de Requête PLAYER_FUTHER_THAN permet de savoir si le joueur est plus loin de l'objet actuel que le nombre de cases définies par la Cible.
 
-exemple :
-TIME -> 0 = PLAYER_FUTHER_THAN -> 6 ? GOCRYING / MOVE:37-42
+Exemple :
+TIME -> 100 = PLAYER_FUTHER_THAN -> 6 ? GO_CRYING / GO_HIDING
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il plus loin que 6 cases ?
-- si oui, effectuer l'action GOCRYING (qui est une balise comme pour GOTO)
-- si non, définir le GOAL comme étant en x=37 y=42
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il plus loin que 6 cases de l'objet actuel ?
+- si oui, effectuer l'action GO_CRYING (qui est une balise GOTO).
+- si non, effectuer l'action GO_HIDING (qui est une autre balise GOTO).
+
 
 
 ////// PLAYER_CLOSER_THAN //////
 
-Le Type de Requête PLAYER_CLOSER_THAN fonctionne exactement de la même façon que le Type de Requête PLAYER_FUTHER_THAN, à la différence près qu'il vérifie si le joueur est "plus prêt" au lieu de "plus loin".
+Le Type de Requête PLAYER_CLOSER_THAN a exactement le même effet et est soumis aux mêmes règles que Type de Requête PLAYER_FUTHER_THAN.
+
+La seule différence avec ce dernier est que PLAYER_CLOSER_THAN vérifie si le joueur est « plus prêt » et non « plus loin » du nombre de cases indiquées.
+
 
 
 ////// STUNNED //////
 
-Le Type de Requête STUNNED permet de savoir si un objet est considéré comme "stun" ou non (en utilisant son NAME comme Cible).
-Note : même s'il peut encore interagir, un objet est considéré comme "stun" si sa Condition lui interdit de bouger (voir CONDITION dans "requête state").
+Le Type de Requête STUNNED permet de savoir pour un objet si un autre objet – qu'on désigne par son nom (voir « NAME » dans la partie « Piranha – Type de Requêtes : States ») – est « stun » ou non.
 
-exemple :
-TIME -> 0 = GOTO -> PARSE_READY_PLAYER_DISPUTE
-$ -> PARSE_READY_PLAYER_DISPUTE = STUNNED -> PLAYER ? WAITING_BEFORE_START_DISPUTE / START_DISPUTE
-$ -> WAITING_BEFORE_START_DISPUTE = WAITFOR -> TIMER:1 ? PARSE_READY_PLAYER_DISPUTE
+Note : même s'il peut encore interagir avec d'autres objets, un objet est considéré comme « stun » s'il lui est interdit de bouger (voir « CONDITION » dans la partie « Piranha – Type de Requêtes : States »). Son équivalant français serait donc « immobilisé ».
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il stun ?
-- si oui, effectuer l'action WAITING_BEFORE_START_DISPUTE (qui est une balise comme pour GOTO)
-- si non, effectuer l'action START_DISPUTE (qui est une balise comme pour GOTO)
-Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action START_DISPUTE s'effectuera lorsque le joueur ne sera plus stun (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+Exemple :
+TIME -> 100 = GOTO -> PARSE_PLAYER
+$ -> PARSE_PLAYER = STUNNED -> PLAYER ? AWAIT_PLAYER / START
+$ -> AWAIT_PLAYER = WAITFOR -> TIMER:1 ? PARSE_PLAYER
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il immobilisé ?
+- si oui, effectuer l'action AWAIT_PLAYER (qui est une balise GOTO).
+- si non, effectuer l'action START (qui est une autre balise GOTO).
+
+Explication : dans notre exemple, la 3ème Instruction forme une boucle avec la seconde. De cette façon, l'action START s'effectuera lorsque le joueur ne sera plus immobilisé (puisque cette boucle-ci implique que la Condition soit vérifiée chaque seconde jusqu'à sa validation).
+
 
 
 ////// CHOOSING //////
 
-Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir type de reqête CHOICE dans "requêtes actions").
-Cela peut nottament avoir un intérêt lors du déclanchement de certain évênements.
+Le Type de Requête CHOOSING permet de savoir si le joueur est en train d'effectuer ou non un choix (voir « CHOICE » dans la partie « Requêtes Actions »).
 
 exemple :
-TIME -> 100 = GOTO -> TRY_ARRIVING
-$ -> TRY_ARRIVING = CHOOSING -> TRUE ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
-$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+TIME -> 100 = GOTO -> PARSE_PLAYER
+$ -> PARSE_PLAYER = CHOOSING -> TRUE ? AWAIT_PLAYER / START
+$ -> AWAIT_PLAYER = WAITFOR -> TIMER:1 ? PARSE_PLAYER
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il en train d'effectuer un choix ?
-- si oui, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
-- si non, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
-Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque le joueur ne sera plus face à un choix (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il en train d'effectuer un choix ?
+- si oui, effectuer l'action AWAIT_PLAYER (qui est une balise GOTO).
+- si non, effectuer l'action START (qui est une autre balise GOTO).
+
+Explication : dans notre exemple, la 3ème Instruction forme une boucle avec la seconde. De cette façon, l'action START s'effectuera lorsque le joueur ne sera plus en train d'effectuer un choix (puisque cette boucle-ci implique que la Condition soit vérifiée chaque seconde jusqu'à sa validation).
+
 
 
 ////// READY_PLAYER //////
 
-Le Type de Requête READY_PLAYER permet de savoir si le joueur est "prêt" ou non. Ce Type de Requête est très utile avant de lancer une cinématique (voir CUTSCENE dans "requêtes autres").
+Le Type de Requête READY_PLAYER permet de savoir si le joueur est « prêt » ou non. Ce Type de Requête est très utile avant de lancer une cinématique (voir « CUTSCENE » dans la partie « Requêtes Autres »).
 
-Le joueur est considéré comme "prêt" s'il respecte 4 conditions :
+Le joueur est considéré comme « prêt » s'il respecte ces quatre conditions :
 - il est présent sur la carte.
-- il n'est pas "stun" (voir STUNNED au dessus)
-- il n'est pas en train d'effectuer un choix (voir CHOOSING au-dessus)
+- il n'est pas immobilisé (voir « STUNNED », au-dessus)
+- il n'est pas en train d'effectuer un choix (voir « CHOOSING »)
 - une cinématique n'est pas en cours.
 
 exemple :
-TIME -> 100 = GOTO -> TRY_ARRIVING
-$ -> TRY_ARRIVING = READY_PLAYER -> FALSE ? WAITING_BEFORE_ARRIVING / ARRIVE_NOW
-$ -> WAITING_BEFORE_ARRIVING = WAITFOR -> TIMER:1 ? TRY_ARRIVING
+TIME -> 100 = GOTO -> PARSE_PLAYER
+$ -> PARSE_PLAYER = READY_PLAYER -> FALSE ? AWAIT_PLAYER / GO
+$ -> AWAIT_PLAYER = WAITFOR -> TIMER:1 ? PARSE_PLAYER
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il "prêt" ?
-- si non, effectuer l'action WAITING_BEFORE_ARRIVING (qui est une balise comme pour GOTO)
-- si oui, effectuer l'action ARRIVE_NOW (qui est une balise comme pour GOTO)
-Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde, de cette façon l'action ARRIVE_NOW s'effectuera lorsque le joueur sera prêt (puisque cette boucle-ci implique que la condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il « prêt » ?
+- si non, effectuer l'action AWAIT_PLAYER (qui est une balise GOTO).
+- si oui, effectuer l'action GO (qui est une autre balise GOTO).
 
-
+Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde. De cette façon, l'action GO s'effectuera lorsque le joueur sera « prêt » (puisque cette boucle-ci implique que la Condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).

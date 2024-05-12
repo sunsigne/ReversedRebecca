@@ -1,179 +1,200 @@
-Sauf mentions contraire, L'écriture conditionnelle est possible pour tous les Types de Requête suivants, ils auront alors un but conditionnel (voir "requêtes conditionnelles").
+Sauf mention contraire, L'Écriture Conditionnelle (voir la partie « Pirana – Écriture Conditionnelle ») est possible pour tous les Types de Requête suivants.
+
+
 
 ////// NAME //////
 
-
 Le Type de Requête NAME permet de renommer un objet.
-Attention ! Veuillez noter qu'il s'agit en quelque sorte d'une ID, il faut éviter d'utiliser plusieurs fois le même nom sur une même carte.
 
-Lorsqu'un objet est "vivant", son visuel est automatiquement défini en fonction de son nom parmi les dossiers dans "textures/characters".
-Lorsqu'un objet est interactif, le fichier de référence de son détourage est changé (voir HIGHLIGHT et HIGHLIGHT_REFRESH dans "requêtes autres").
-Note : il est tout à fait possible (et pratique) d'utiliser NAME de façon classique et conditionnelle afin d'imiter le comportement du Type de Requête MEMORY (voir "requêtes memory.txt).
+Attention ! Un nom est l'équivalent d'une ID : deux objets différents sur une même carte ne devraient jamais avoir le même.
 
-exemple :
+Il est très courant d'utiliser ce Type de Requête juste après la génération d'une carte afin d'établir le nom et d'appliquer les bonnes textures des NPC. En effet, pour les NPC, leurs visuels sont automatiquement définis en fonction de ce nom (voir « ??? » dans la partie « NPC »). Pour les objets interactifs, ce sont les fichiers de références de leurs ERA sous forme de détourage visuel qui sont changés (voir « HIGHLIGHT » et « HIGHLIGHT_REFRESH » dans la partie « Piranha – Type de Requêtes : Autres »).
+
+Exemple :
 TIME -> 0 = NAME -> BOB
 TIME -> 0 = GOTO -> NAME:BOB
 
-Lorsque la Condition sera vérifiée, l'objet sera renommé Bob.
+Lorsque la Condition sera vérifiée, l'objet sera renommé en « Bob ».
 
-Cette Requête est très utile juste après la génération d'une map afin d'établir le nom d'un personnage (et ainsi d'afficher les bonnes textures).
-Note : le nom générique OBJECT (qu'on trouvera souvent dans les fichiers de dialogue) fait référence à l'objet Piranha en cours. Le nom PLAYER est également possible pour faire référence au joueur.
+Note : il est tout à fait possible (voire, très pratique) d'utiliser NAME alternativement de façon "classique" et Conditionnelle afin d'imiter le comportement du Type de Requête MEMORY (voir la partie « Piranha – Type de Requêtes : Memory »).
+
+Rappel : au besoin, les mots clés « PLAYER » ou « OBJECT » peuvent être utilisés pour faire référence respectivement au joueur ou à l'objet actuel.
+
 
 
 ////// FACING //////
 
-
 Le Type de Requête FACING permet de changer l'orientation d'un objet.
 
-exemple :
+Exemple :
 TIME -> 0 = FACING -> RIGHT
 TIME -> 0 = GOTO -> FACING:RIGHT
 
-Lorsque la Condition sera vérifiée, l'objet regardera à droite.
+Lorsque la Condition sera vérifiée, l'objet "regardera" à droite.
 
-Il est tout à fait possible, au lieu d'écrire une direction, d'écrire le nom d'un autre objet, pour que l'objet se tourne vers direction.
-ex : 
+Il est tout à fait possible, au lieu d'écrire une direction, d'écrire le nom d'un autre objet. Le Path Finder se chargera alors de déterminer la direction vers laquelle l'objet doit "regarder".
+
+Exemple :
 TALKED -> COMPUTER = FACING -> BOB
-À la fin du dialogue "COMPUTER", l'objet se tournera vers BOB.
 
-Attention ! Lorsqu'un nom est utilisé à la place d'une direction, un PathFinder est déclenché. Si un mur, une porte fermée, etc. fait obstacle, l'objet ne trouvera pas de chemin et ne changera donc pas son facing.
-Attention ! Il est facile de se tromper : c'est seulement l'orientation de l'objet dans lequel est écrite cette Instruction qui change ! Si on veut changer le facing du player ou d'un npc, il faut écrire cette Instruction dans LEURS fichiers.
+À la fin du dialogue « COMPUTER », l'objet se tournera vers Bob.
+
+Attention ! Si aucun chemin n'est trouvé par le Path Finder, l'objet conservera son orientation actuelle.
+
+Attention ! Il est facile de se tromper : c'est l'orientation de l'objet dans lequel est écrite cette Instruction qui change ! Si l'on souhaite changer l'orientation du joueur ou d'un autre NPC, c'est dans LEURS fichiers Piranha qu'il faut le faire – ou utiliser le Type de Requête FACING_PLAYER (voir la partie « Piranha – Types de Requête : Player ») –.
+
 
 
 ////// WAITFOR_STUN //////
 
-Le Type de Requête WAITFOR_STUN permet de changer une propriété très spécifique de l'objet. Avant de la détailler, sachez que ce Type de Requête vous sera inutile 99,9% du temps.
-Lorsqu'un objet se voit attribuer un "waitfor" (voir "requêtes autres.txt"), il est "stun" pendant un très court instant. Ce "mini-stun" assure la cohérence du code et prévient certains bugs, mais a pour conséquence d'immobiliser l'objet (toujours pendant un très court instant).
-Il peut exister une situation spécifique où, par exemple, on construit une boucle "waitfor" se lançant à intervalles réguliers et recalculant le goal de l'objet (voir "requêtes move.txt"). Cette boucle va donc "immobiliser" l'objet à chaque itération, ce qui rendra le mouvement de l'objet saccadé. En désactivant la propriété WAITFOR_STUN de l'objet, nous nous assurons de conserver un mouvement fluide.
+Le Type de Requête WAITFOR_STUN permet de changer une propriété très spécifique d'un objet. Avant de la détailler, sachez que ce Type de Requête vous sera inutile 99.9 % du temps !
 
-ex : 
+Contexte : lorsqu'un objet se voit attribuer un WAITFOR (voir « WAITFOR » dans la partie « Piranha – Types de Requête : Autres »), il est « stun » pendant un court instant (voir « STUNNED » dans la partie « Piranha – Type de Requêtes : Conditionnelles »). Ce court « stun » assure la cohérence du code et prévient certains bugs, mais a pour conséquence d'immobiliser l'objet sur place (toujours durant un court instant). Il peut exister certaines situations extrêmement spécifiques où l'on souhaite désactiver temporairement cette propriété "d'immobilisation", c'est là que le Type de Requête WAITFOR_STUN intervient.
+
+Exemple :
 TIME -> 0 = WAITFOR_STUN -> FALSE
 TIME -> 0 = GOTO -> WAITFOR_STUN:FALSE
 
-Lorsque la Condition sera vérifiée, l'objet ne sera plus stun au moment de l'attribution d'un "waitfor".
+Lorsque la Condition sera vérifiée, l'objet ne sera plus « stun » au moment de l'attribution d'un WAITFOR.
 
-Note : comme vous l'aurez déjà compris, par défaut WAITFOR_STUN est défini sur "TRUE" et doit le rester le plus souvent possible.
-Attention : pour rappel, un WAITFOR_STUN activé permet de se prémunir de certains bugs. Pensez à bien le réactiver lorsque vous n'êtes plus dans le cas particulier qui nécessitait sa désactivation.
+Exemple de situation :
+Une boucle WAITFOR astucieuse permet à un objet de suivre les déplacements joueur (voir « MOVE » dans la partie « Piranha – Types de Requête : Move »). Cette boucle se lançant à intervalles réguliers va donc "immobiliser" l'objet à chaque itération, ce qui rendra le mouvement saccadé… En désactivant la propriété WAITFOR_STUN de l'objet, nous nous assurons de conserver un mouvement fluide !
+
+Attention ! Par défaut, WAITFOR_STUN est défini sur « TRUE » et doit le rester le plus souvent possible : un WAITFOR_STUN activé permet de se prémunir de certains bugs.
+
 
 
 ////// BLOCKING_PATH //////
 
+Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d'un objet : un objet non-bloquant est un objet à travers lequel on peut passer (ex : une flaque).
 
-Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d'un objet.
-Note : changer cette propriété change également les chemins valides du PathFinder.
+Note : changer cette propriété change également les chemins valides trouvés par le Path Finder.
 
-exemple :
+Exemple :
 TIME -> 0 = BLOCKIN_PATH -> FALSE
 TIME -> 0 = GOTO -> BLOCKIN_PATH:FALSE
 
 Lorsque la Condition sera vérifiée, l'objet sera franchissable.
 
-Note : par défaut, les objets Piranha sont bloquants.
+Note : par défaut, les objets Piranha sont bloquants.
+
 
 
 ////// BLOCKING_SIGHT //////
 
+Le Type de Requête BLOCKING_SIGHT permet de changer la propriété "opaque" d'un objet : un objet opaque est un objet à travers lequel on ne peut pas voir (ex : un distributeur de boissons).
 
-Le Type de Requête BLOCKING_SIGHT permet de changer la propriété "opaque" d'un objet.
-Son utilité est très limitée, elle peut cependant s'avérer utile dans certaines situations, comme en utilisant le Type de Requête SEE par exemple (voir "requêtes conditionnelles").
+Note : changer cette propriété change le « champ de vision » d'un objet, ce qui n'est utile que de façon très situationnelle (voir « SEE » dans la partie « Piranha – Types de Requête : Conditionnelles »).
 
-Son écriture fonctionne exactement de la même manière que pour le Type de Requête BLOCKING_PATH.
-Note : par défaut, les objets Piranha sont "non opaques". Dis autrement, par défaut, on voit au travers.
+Exemple :
+TIME -> 0 = BLOCKIN_SIGHT -> TRUE
+TIME -> 0 = GOTO -> SIGHT_PATH:TRUE
+
+Lorsque la Condition sera vérifiée, l'objet sera opaque.
+
+Note : par défaut, les objets Piranha sont "non opaques". Dit autrement, par défaut, on voit au travers. En effet, Les objets Piranha incarnent le plus souvent du mobilier. Or, une plante, une table basse, un bureau, etc. ne cachent presque jamais la vision sur une personne se trouvant de l'autre côté !
+
 
 
 ////// HITBOX //////
 
+Le Type de Requête HITBOX permet de changer les dimensions de la Hitbox d'un objet (c.-à-d. la zone dans laquelle les autres objets sont considérés comme étant en contact avec celui-ci). L'intérêt principal de ce Type de Requête est de rendre "propre" le chemin que peut emprunter le joueur, en sens où il est cohérent avec ce qu'il voit.
 
-Le Type de Requête HITBOX permet de changer les dimensions de la hitbox d'un objet. L'intérêt est de rendre "propre" le chemin que peut emprunter le Joueur.
-ATTENTION : changer les dimensions de la hitbox n'influence aucun autre facteur : ni les chemins valides du PathFinder (même avec une hibox réduit à 0), ni la position officielle de l'objet, ni la règle qui défini si un objet est "à portée", ni son visuel, etc. Il est donc fortement déconseillé d'utiliser cette propriété pour créer des objets "à deux cases".
-Note : L'écriture conditionnelle n'est possible pour ce Type de Requête.
+L'Écriture Conditionnelle n'est possible pour ce Type de Requête.
 
-Ce Type de Requête requiert 4 Cibles : une position horizontale initiale (x), verticale (y), une largeur (width), et une hauteur (height).
-L'échelle est de 16 pixels pour une taille de 1 case.
+Ce Type de Requête requiert quatre Cibles : une Position horizontale par rapport à l'objet (X), une Position verticale par rapport à l'objet (Y), une largeur (width) et une hauteur (height).
 
-exemple :
-TIME -> 0 = HITBOX -> 0, 0, 8, 16
+L'échelle est de seize pixels pour une case. Il est possible d'écrire des Cibles à valeurs négatives où qui dépassent les dimensions d'origines.
 
-Lorsque la Condition sera vérifiée, l'objet aura une hitbox par rapport à l'objet défini comme suit : x=0, y=0, largeur=8, hauteur=16.
-Voici un petit schéma illustratif. À gauche, la hitbox d'origine. À droite, la nouvelle hitbox de l'objet :
+Exemple :
+TIME -> 0 = HITBOX -> 8, 0, 8, 16
 
-XX	XO
-XX	XO
+Lorsque la Condition sera vérifiée, l'objet aura une Hitbox par rapport à l'objet, définie comme suit : X=8, Y=0, largeur=8, hauteur=16.
 
-Les 4 lettres représentent une case en tout. Les X représente un obstacle infranchissable. Les O représentent une position autorisée pour le Joueur.
-Note : il est théoriquement possible de dépasser la taille d'origine d'un objet, et même d'entrer des valeurs négatives ! Tant que vous gardez à l'esprit que seule les dimensions de la hitbox change, cette pratique n'est pas déconseillée.
-Note : afin de "voir" vos hitbox, vous pouvez utiliser le debugMode "illumitati" (ressources/userdata/debugmod.txt)
+Explication : ci-dessous, un schéma illustratif. À gauche, la Hitbox d'origine. À droite, la nouvelle Hitbox de l'objet :
+
+XX	OX
+XX	OX
+
+Les quatre lettres représentent une case en tout. En imaginant que l'objet est "bloquant" (voir « BLOKING_PATH » dans les pages précédentes), les X représentent une zone infranchissable, et les O, un endroit où le joueur peut se trouver.
+
+Attention ! Changer les dimensions de la Hitbox n'influence aucun autre facteur que celui su-cité. Ni les chemins valides du Path Finder – même avec une Hitbox réduite à 0 –, ni la Position officielle de l'objet, ni les règles qui définissent si un objet est "à portée d'actions", ni son visuel, etc. ne sont modifiées. Il est donc fortement déconseillé d'utiliser cette propriété pour créer des objets "à deux cases".
+
+Rappel : lors de la phase de développement, afin de "visualiser" les Hitbox, il faut utiliser le Debug Mode (voir le fichier "debugmod.txt").
+
 
 
 ////// INVULNERABLE //////
 
+Le Type de Requête INVULNERABLE permet de changer la propriété "vulnérable" de l'objet actuel : un objet vulnérable est un objet pouvant perdre des points de vie (PV).
 
-Le Type de Requête INVULNERABLE permet de changer la propriété "vulnérable" de l'objet courant.
-Note : les objets "obj" ne peuvent pas devenir vulnérable, cette propriété ne concerne que les objets vivants ("npc", "player", etc.).
-
-exemple :
+Exemple :
 TIME -> 0 = INVULNERABLE -> TRUE
 TIME -> 0 = GOTO -> INVULNERABLE:TRUE
 
 Lorsque la Condition sera vérifiée, l'objet deviendra invulnérable.
 
-Note : par défaut, les objets vivant sont vulnérables.
-Note : lorsque le joueur est invulnérable, ses PV ne sont plus affichés.
+Note : par défaut, les objets vivants sont vulnérables.
+
+Note : lorsque le joueur est invulnérable, ses PV ne sont plus affichés dans la HUD.
+
 
 
 ////// CONDITION //////
 
 
-Le Type de Requête CONDITION n'a rien à voir avec une requête Conditionnelle (même si cette dernière reste possible) ! Elle permet de changer la "condition" de l'objet courant.
+Le Type de Requête CONDITION, contrairement à ce que son nom laisse penser, n'a aucun lien avec l'Écriture Conditionnelle : il permet de changer la condition – dans le sens « état physique » – (voir « Conditions » dans la partie « NPC ») d'un objet, ce qui modifie à la fois le visuel d'un NPC et son comportement.
 
-exemple :
+Les différentes conditions existantes sont les suivantes :
+- GOOD : condition par défaut.
+- GLASS : le NPC tient un verre d'eau.
+- CUP : le NPC tient un gobelet.
+- SICK : le NPC a l'air malade.
+- BATH : seule la tête du NPC est visible. Il a l'air de dormir et ne peut plus bouger (mais peut toujours interagir !)
+- BED : le NPC dort et ne peut plus bouger (mais peut toujours interagir !)
+- CRY : le NPC pleure et ne peut plus bouger (mais peut toujours interagir !)
+- RELAX : le NPC est allongé et ne peut plus bouger (mais peut toujours interagir !)
+- SIT : le NPC est assis et ne peut plus bouger (mais peut toujours interagir !)
+- KO : le NPC est allongé et ne peut plus rien faire.
+
+Exemple :
 TIME -> 0 = CONDITION -> GOOD
 TIME -> 0 = GOTO -> CONDITION:GOOD
 
-Lorsque la Condition sera vérifiée, l'objet adoptera la condition par défaut.
+Lorsque la Condition sera vérifiée, l'objet adoptera la condition « GOOD ».
 
-La condition permet d'altérer à la fois le visuel d'un personnage et son comportement. Voici les conditions existentes :
-- GOOD, condition par défaut
-- GLASS, le personnage tient un verre d'eau
-- CUP, le personnage tient un gobelet
-- SICK, le personnage a l'air malade
-- BATH, seul la tête du personnage est visible. Il a l'air de dormir et ne peut plus bouger (mais peut toujours interagir !)
-- BED, le personnage a l'air de dormir, et ne peut plus bouger (mais peut toujours interagir !)
-- CRY, le personnage a l'air de pleurer, et ne peut plus bouger (mais peut toujours interagir !)
-- RELAX, le personnage a l'air allongé, et ne peut plus bouger (mais peut toujours interagir !)
-- SIT, le personnage a l'air sur des toilettes, et ne peut plus bouger (mais peut toujours interagir !)
-- KO, le personnage a l'air allongé et ne peut plus rien faire.
 
 
 ////// PLAYER_AVOIDER_TYPE //////
 
+Attention ! Ce Type de Requête N'EST PAS de Type Player (voir la partie « Piranha – Types de Requête : Player ») : ces derniers ont le mot « PLAYER » en fin de nom, et non en début.
 
-Attention ! Cette requête N'EST PAS un Type de Requête player (voir "requêtes player.txt"). Ces dernières ont le mot "PLAYER" en fin et non en début de nom.
-Le Type de Requête PLAYER_AVOIDER_TYPE permet de changer la "règle d'évitement" d'un personnage à l'égare du joueur. L'écriture conditionnelle est possible.
+Le Type de Requête PLAYER_AVOIDER_TYPE permet de changer le « type d'évitement » (voir pages suivantes) d'un NPC à l'égard du joueur.
 
-exemple :
-TIME -> 0 = PLAYER_AVOIDER_TYPE -> AROUND
-TIME -> 0 = GOTO -> PLAYER_AVOIDER_TYPE:AROUND
+Exemple :
+TIME → 0 = PLAYER_AVOIDER_TYPE → AROUND
+TIME → 0 = GOTO → PLAYER_AVOIDER_TYPE:AROUND
 
-Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement AROUND (qui est celui défini par défaut pour les personnages).
-
-
-Les types d'évitements et leurs fonctionnements sont les suivants :
-- AROUND est l'un des trois types d'évitement où le joueur est compté comme un obstacle pour le pathfinder : le personnage va donc tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendra que ce dernier se décale. Dans le cas où le personnage est "en plein mouvement entre deux cases" et qu'une collision survient avec le joueur, il fera "glisser" ce dernier (à la façon du type d'évitement FORCE) afin de finir son mouvement jusqu'à une case entière.
-- AROUND_OMNISCIENT a le même fonctionnement que AROUND à ceci près qu'avec AROUND, le joueur n'est pas compté comme un obstacle lorsqu'il est loin (plus de 5 cases). En effet, ce procédé est très efficace pour éviter que les personnages ne "sachent" qu'ils ne peuvent pas atteindre leur objectif à cause du joueur (et ne s'arrête sur place), alors que ce dernier est très loin, voir dans une autre pièce. Dans les lieux étroits à grande visibilité, la limitation de distance de AROUND peut génerer des comportements "d'allers-retours infinis". AROUND_OMNISCIENT permet de pallier ce problème en supprimant cette limitation.
-- CUTSCENE a le même fonctionnement que AROUND à ceci près que AROUND semble plus "naturelle" lors des phases de gameplay. Avec AROUND, les personnages ne tentent pas de se déplacer si le joueur est trop près, car ce dernier est la plupart du temps en mouvement et qu'un risque de collision est fort : ils "attendent d'avoir plus de place". Lors des cinématiques, le joueur est la plupart du temps statique et proche des personnages : ces derniers ont plus de liberté de mouvement et ne devraient pas attendre que le joueur soit loin pour se déplacer.
-Attention ! le player avoider ne change pas "tout seul" lors des cinématiques : il reste le même que celui qu'on a défini en dernier. Même chose à la sortie de ces dernières.
-
-Dans tous les cas suivants, le pathfinder va ignorer l'existence du joueur dans le calcul du trajet. C'est le type de réaction face à une collision avec le joueur qui change :
-- FORCE, le personnage va "forcer le passage" en avançant comme si le joueur n'était pas là. Le joueur sera poussé dans le sens de la marche. (Attention, ce mouvement ne semble pas "naturel", mais certaines situations ne peuvent parfois pas être gérées autrement).
-- THROUGH, le personnage va ignorer purement et simplement le joueur : il lui passera au travers ! (cela peut être utile lors de cinématiques).
-- STOP, le personnage va s'arrêter net et attendre que le joueur s'en aille (en suivant du regard ce dernier) avant de reprendre son chemin. 
-- PUSH, le personnage va pousser le joueur en face de lui. Aucune pause n'est marquée.
-- PUSH_DIRECTION (il faut remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN"), le personnage va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
-- PUSH_HURT, le personnage va pousser le joueur en face de lui et lui retirer de la vie. Le personnage marquera une "courte pause" après cette action (en se figeant sur place).
-
-Note: si le PLAYER_AVOIDER_TYPE est défini par défaut sur AROUND, il ne faut pas hésiter à le mettre sur STOP dans les espaces étroits afin de ne pas avoir des lags à cause du PathFinder qui ne trouve pas de chemin valide.
-Note: En ce qui concerne les comportements de PUSH, il est important de noter que le jeu dispose d'une sécurité pour éviter un paradoxe : si l'objet Piranha cherche à pousser un autre objet dans la direction qu'il bloque lui-même avec sa propre hitbox, il le poussera à la place dans la direction opposée.
+Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement « AROUND » (qui est celui attribué par défaut).
 
 
-Il existe tout un autre panel de Type de Requête state, pour les connaître, voir le fichier "requêtes player.txt"
+Les types d'évitements existants et leurs fonctionnements sont les suivants :
+
+- AROUND : l'un des trois types d'évitement avec AROUND_OMNISCIENT et CUTSCENE où le joueur est compté comme un obstacle pour le Path Finder : le NPC va tenter de le contourner. S'il ne peut pas, il se rapprochera à distance suffisante et attendra que ce dernier se décale. Dans le cas où le NPC est "en plein mouvement entre deux cases" et qu'une collision survient avec le joueur, il fera "glisser" ce dernier (à la façon du type d'évitement FORCE) afin de finir son mouvement jusqu'à une case entière.
+- AROUND_OMNISCIENT : a le même fonctionnement que AROUND à ceci près qu'avec AROUND, le joueur n'est compté comme un obstacle que lorsqu'il est suffisamment proche (cinq cases ou moins). Ce procédé est très efficace pour éviter que les NPC ne "devinent" qu'ils ne peuvent pas atteindre leurs Objectifs et ne s'arrêtent sur place à cause du joueur – alors que celui-ci est très loin, voir dans une autre pièce –. Cependant, dans les lieux étroits à grande visibilité (ex : longs couloirs, grandes salles pleines d'obstacles, etc.), la limitation de distance de AROUND peut générer des comportements indésirables "d'allers-retours infinis". AROUND_OMNISCIENT permet de pallier ce problème en supprimant cette limitation : le joueur EST un obstacle, où qu'il se trouve.
+- CUTSCENE : a le même fonctionnement que AROUND à ceci près que AROUND semble plus "naturelle" lors des phases de "Gameplay". Avec AROUND, les NPC ne tentent pas de se déplacer si le joueur est trop près, car ce dernier est la plupart du temps en mouvement, de façon imprévisible, et qu'un risque de collision est fort : ils "attendent d'avoir plus de place" pour passer. Lors des cinématiques (voir « CUTSCENE » dans la partie « Piranha – Types de Requête : Autres »), le joueur est la plupart du temps statique et proche des NPC : ces derniers ont plus de liberté de mouvement et n’attentent pas que le joueur soit loin pour se déplacer.
+
+Attention ! le Player Avoider ne change pas "tout seul" lors des cinématiques : il reste le même que celui qu'on a défini en dernier. Cependant, une sécurité dans le code Java s'assure que les spécificités d'arrêts de AROUND et de STOP (joueur trop proche) sont ignorées lors des cinématiques, afin de réduire les chances de « softlock ».
+
+Dans tous les cas suivants, le Path Finder va ignorer l'existence du joueur dans le calcul du trajet d'un NPC vers son Objectif. C'est la réaction face à une collision avec le joueur qui change :
+
+- FORCE : le NPC va "forcer le passage" en avançant comme si le joueur n'était pas là. Le joueur sera poussé dans le sens de la marche. (Attention, ce mouvement ne semble pas "naturel", mais certaines situations ne peuvent parfois pas être gérées autrement).
+- THROUGH : le NPC va ignorer purement et simplement le joueur comme s'il était un fantôme, et lui passer au travers ! (Cela peut être utile lors de cinématiques).
+- STOP : le NPC va s'arrêter net et attendre que le joueur s'en aille, en suivant du regard ce dernier, avant de reprendre son chemin. 
+- PUSH : le NPC va pousser le joueur en face de lui. Aucune pause n'est marquée.
+- PUSH_DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN") : le NPC va pousser le joueur dans la direction indiquée. Aucune pause n'est marquée.
+- PUSH_HURT : le NPC va pousser le joueur en face de lui et lui retirer de la vie. Le NPC marquera une "courte pause" (en se figeant sur place) après cette action.
+
+Note : si le PLAYER_AVOIDER_TYPE est défini par défaut sur AROUND, il ne faut pas hésiter à le mettre sur STOP ou CUTSCENE dans les espaces étroits afin de ne pas avoir des lags à cause du Path Finder qui ne trouve pas de chemin valide.
+
+Note : En ce qui concerne les comportements de PUSH, il est important de noter que le jeu dispose d'une sécurité pour éviter un paradoxe : si l'objet Piranha cherche à pousser un autre objet dans la direction qu'il bloque lui-même avec sa propre Hitbox (c-.à-d. s'il tente de pousser un objet "vers lui-même"), il le poussera à la place dans la direction opposée.

@@ -1,51 +1,52 @@
 ////// MEMORY //////
 
 
-Le Type de Requête MEMORY a deux rôles différents en fonction de son écriture.
-lorsqu'elle est classique, elle permet d'enregistrer une balise.
-lorsqu'elle est conditionnelle, elle permet de vérifier si une balise est enregistrée et de choisir la cible en fonction.
+Le Type de Requête MEMORY a deux rôles différents en fonction de son Écriture. Lorsqu'elle est "classique", elle permet d'enregistrer une balise, lorsqu'elle est Conditionnelle, elle permet de vérifier si une balise est enregistrée et de choisir la Cible en fonction.
 
-exemple :
-TIME -> 60 = GOTO -> PEEBOY_PEE_ITS_PANTS, MEMORY:TOO_LATE
+Dans la mesure où le Type de Requête MEMORY a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les MEMORY ne dure que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
+
+Exemple de situation :
+TIME -> 60 = GOTO -> JEAN_PEE_ITS_PANTS, MEMORY:TOO_LATE
 WONPUZZLE -> 10-20 = MEMORY -> TOO_LATE ? NULL / GO_BATHROOM
 
+Explication :
+- Jean veut aller aux toilettes, mais ne peut pas, car le puzzler (probablement une porte) en X=10 Y=20 lui barre la route,
+- après 60 secondes, Jean aura un "petit accident" et le jeu enregistrera cette information (balise « TOO_LATE »),
+- lorsque le puzzler en X=10 Y=20 est résolu, le chemin n'est plus bloqué ! Jean peut donc aller aux toilettes, mais SEULEMENT si ça n'est pas déjà trop tard…
 
-Ici, voilà ce qu'il faut comprendre :
-PEEBOY veut aller aux toilettes, mais ne peut pas, car le puzzle en x=10 y=20 lui barre la route
-Après 60 secondes de jeux, PEEBOY va se pisser dessus et enregistrer cette information.
-Lorsque le puzzle en x=34 y=31 est résolu, le chemin n'est plus bloqué ! PEEBOY peut donc aller aux toilettes, mais SEULEMENT si ça n'est pas déjà trop tard…
+Note : il est impossible d'effacer ou d'éditer des MEMORY, il est fortement déconseillé, lorsque vous devez créer des cycles, de les utiliser. Préférez des méthodes alternatives, comme un nom changeant cycliquement utilisé tour à tour de façon classique et conditionnelle, une suite d'AFFECTING se renvoyant la balle, un WAITFOR qui se rappelle lui-même, etc. (voir respectivement « NAME » dans la partie « Piranha – Types de Requêtes : States », « AFFECTING » dans la partie « Piranha – Types de Requêtes : Goto » et « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres »). 
 
+Attention ! N'oubliez pas que MEMORY a une portée GLOBALE et NAME une portée LOCALE ! Soyez précis dans votre code pour qu'il fonctionne.
 
-Dans la mesure où le Type de Requête MEMORY a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer.
-Pas d'inquiétude ! Les MEMORY ne dure que le temps du niveau : ils ne sont pas transportés sur les maps suivantes.
-Si vous devez créer des cycles, préférez une autre méthode (: un NAME changeant en cycle, une suite d'AFFECTING se renvoyant la balle, un WAITFOR qui se rappelle lui-même, etc.)
-En effet, il est tout à fait possible (et pratique) d'utiliser NAME de façon classique et conditionnelle afin d'imiter le comportement du Type de Requête MEMORY. L'avantage est qu'on ne peut pas effacer ni éditer un MEMORY, alors que NAME peut être changé à loisir.
-ATTENTION ! N'oubliez pas que MEMORY a une portée globale et NAME une portée LOCALE ! Soyez précis dans votre code pour qu'il fonctionne.
 
 
 ////// SAVE //////
 
-Le Type de Requête SAVE a un rôle majeur puisqu'elle permet de sauvegarder des informations à travers tout le jeu !
-Attention ! SAVE (à l'exception d'une sauvegarde de Type DAVE) ne sauvegarde pas directement l'information dans l'ordinateur, elle ne fait qu'en faire la demande ; c'est finir le niveau qui valide cette demande.
+Le Type de Requête SAVE a un rôle majeur puisqu'elle permet d’enregistrer des données dans la sauvegarde du jeu !
 
-exemple : 
+La première Cible de ce Type de Requête permet de déterminer l'action à effectuer avec la donnée, représentée par la seconde Cible :
+- REGISTER : faire une demande de sauvegarde de la donnée.
+- CANCEL_REGISTER : annuler la demande de sauvegarde de la donnée.
+- ERASE : faire une demande de suppression d'une donnée déjà sauvegardée.
+- CANCEL_ERASE : annuler la demande de suppression de la donnée sauvegardée.
+- DAVE : faire une demande de sauvegarde IMMEDIATE ET PERMANANTE d'une donnée (non effacée lors d'un reset ou d'une désinstallation du jeu). L'idée est de simuler dans le jeu un "souvenir de la vraie vie" (puisque dans la vraie vie, chaque événement créé des souvenirs "immédiats et permanents"). Le personnage de Dave se sert de ces souvenirs pour interagir directement avec le joueur (celui devant l'écran d'ordinateur, et non le personnage qu'il contrôle).
+
+Attention ! À l'exception d'une sauvegarde de Type DAVE, le Type de Requête SAVE n'enregistre pas directement l'information dans l'ordinateur, elle n'en fait que la demande ; c'est finir la carte qui valide cette demande (voir « END_LVL » dans la partie « Piranha – Types de Requêtes : Autres »).
+
+Note : il est tout à fait possible, pour un même nom de donnée, de faire d'abords REGISTER, puis CANCEL_REGISTER, puis REGISTER de nouveau ; c'est la dernière demande enregistrée qui prime.
+
+Exemple :
 $ -> SAVE_CANDLE_ON = SAVE -> REGISTER, REBECCAS_ROOM*CANDLE_ON
 
-Lorsque la Condition sera vérifiée, une demande de sauvegarde sera effectuer pour une donnée dont le nom exact est défini comme "REBECCAS_ROOM*CANDLE_ON". Cette donnée sera sauvegardée dans l'ordinateur lorsque le niveau sera terminée.
-Note : il est recommandé de bien réfléchir au nom de la donnée que vous souhaitez enregistrer, afin d'une part, d'éviter tout possible doublon, et d'autre part, de la retrouver facilement.
-Note : le mot "currentlvl" est interdit à l'interieur d'une donnée.
+Lorsque la Condition sera vérifiée, une demande de sauvegarde sera effectuée pour une donnée dont le nom exact est défini comme « REBECCAS_ROOM*CANDLE_ON ». Cette donnée sera enregistrée dans l'ordinateur lorsque la carte sera terminée.
 
-Comme vous pouvez le voir, en plus du nom de la donnée que l'on souhaite sauvegarder, il existe une Cible supplémentaire qui déterminer l'action à effectuer avec cette donnée :
+Note : il est conseillé pour une même carte de renseigner les différentes Cibles utilisées par ce Type de Requête dans son fichier « codex.txt » (voir « Codex » dans la partie « Piranha – Piranha »). 
 
-- REGISTER : faire une demande de sauvegarde de la donnée (qui sera sauvegardée à la fin du niveau).
-- CANCEL_REGISTER : annuler la demande de sauvegarde de la donnée (la donnée ne sera donc pas sauvegardée à la fin du niveau).
-Note : il est tout à fait possible, pour un même nom de donnée, de faire d'abords REGISTER, puis CANCEL_REGISTER, puis REGISTER de nouveau ; c'est la dernière demande enregistrée qui prime.
 
-- ERASE : faire une demande de suppression d'une donnée déjà sauvegardée par le passé (cette demande sera traitée à la fin du niveau).
-- CANCEL_ERASE : annuler la demande de suppression de la donnée (la donnée ne sera donc pas supprimée à la fin du niveau).
+Note : il est recommandé de bien réfléchir au nom de la donnée que vous souhaitez enregistrer, afin d'une part, de la retrouver facilement, et d'autre part, d'éviter les doublons.
 
-- DAVE : faire une demande de sauvegarde IMMEDIATE et PERMMANENTE d'une donnée (non effacée lors d'un reset, ni d'une désinstallation). L'idée est de simuler dans le jeu un "souvenir de la vraie vie" (puisque dans la vraie vie, chaque évênement créé des souvenirs "immédiats" et "permanants"). Le personnage de Dave se sert de ces souvenirs pour interagir directement avec le joueur (celui devant son écran d'ordinateur, et non le personnage qu'il contrôle).
+Attention ! La suite de caractères « currentlvl » est interdit à l’intérieur du nom d'une donnée, de même que la plupart des caractères spéciaux (« # », « @ » et « = », etc.).
 
-Note : Dans 99% des cas, cette information vous sera inutile, mais sachez qu'à la fin d'un niveau, REGISTER s'applique avant ERASE.
-Note : pour rappel, afin de lire une donnée enregistrée, il faut utiliser la condition SAVED (voir "1 - conditions.txt).
-Note : il est conseillé de renseigner les différentes cibles utilisées par ce Type de Requête d'une même map dans son codex.txt
+Note : Dans 99 % des cas, cette information vous sera inutile, mais sachez qu'à la fin d'une carte, REGISTER s'applique AVANT ERASE.
+
+Rappel : afin de lire une donnée enregistrée, il faut la mettre en Valeur dans un Type de Condition SAVED (voir « SAVED » dans la partie « Piranha – Conditions »).

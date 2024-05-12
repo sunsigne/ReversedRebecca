@@ -1,94 +1,75 @@
-Les Types de Requêtes d'actions sont difficiles à bien cerner, mais sont au cœur même du gameplay ! Il vous faudra donc prendre le temps de bien les comprendre.
+Les Types de Requêtes d'actions sont difficiles à cerner, mais les comprendre est essentiel car ils sont au cœur du gameplay.
 
-Ces Types de Requêtes sont particuliers : ils n’exécutent pas directement leurs Cibles. À la place, ils la « sauvegardent » comme action disponible sur l’objet.
+Ces Types de Requêtes sont particuliers : ils n’exécutent pas directement leurs Cibles. À la place, ils la "sauvegardent" comme action disponible sur l’objet.
 
 Un même objet peut stocker jusqu’à trois actions en même temps. Par défaut, si l'une d'elle est activée, elle est supprimée des actions proposées par l'objet – tout en laissant les autres, s'il y en a –.
 
-Il existe deux types d'actions : les actions enregistrées et les actions custom. 
+Il existe deux types d'actions : les actions existantes et les actions custom. 
 
-Les actions enregistrées sont les suivantes :
-- TALK : lance une boite de dialogue.
+Les actions existantes sont les suivantes :
+- TALK : lance une boite de dialogue.
 
-Les actions custom sont des actions créées sur mesure pour répondre à un besoin, vous verrez comme procéder un peu plus loin.
+Les actions custom sont des actions créées sur mesure pour répondre à un besoin. Un exemple est donné dans le Type de Requête ACTION.
+
 
 
 ////// ACTION //////
 
 Le Type de Requête ACTION permet de définir une action sur un objet.
 
-Ci-dessous, deux exemples d'écritures différentes pour la même Instruction. La différence principale est que l'écriture compacte n'est possible que dans le second cas (puisqu'une seule cible).
+Ci-dessous, deux exemples d'écritures différentes pour la même Instruction. L'Écriture Compacte n'est possible que dans le second cas (puisqu'une seule Cible).
 
 Exemple : 
-TIME -> 0 = ACTION -> 1, TALK*COMPUTER
-TIME -> 0 = ACTION_ONE -> TALK*COMPUTER
+TIME -> 0 = ACTION -> 1, TALK*BOOK
+TIME -> 0 = ACTION_ONE -> TALK*BOOK
 
-Lorsque la Condition sera vérifiée, L'action TALK sera disponible et aura pour fichier de référence COMPUTER.csv.
+Lorsque la Condition sera vérifiée, L'action TALK sera disponible et aura pour fichier de référence « book.txt » dans le dossier « texts/(langue actuelle)/maps/(carte actuelle) ».
 
-ATTENTION ! Il ne faut pas confondre une action avec un Type de Requête ! Si « TALK » est effectivement le nom d'un Type de Requête existant, il s'agit ici EXCLUSIVEMENT d'une action, dont le nom y est identique par commodité.
+Le 1 en Cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action proposée par l'objet, ce chiffre peut donc aller jusqu'à 3 (THREE).
 
-Le 1 en cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action du TRIPLE_ACTION, ce chiffre peut donc aller jusqu'à 3.
+Attention ! Il ne faut pas confondre une action avec un Type de Requête ! Si « TALK » est effectivement le nom d'un Type de Requête existant (voir « TALK » dans la partie « Piranha – Types de Requêtes : Autres »), il s'agit ici EXCLUSIVEMENT d'une action, dont le nom y est identique, par commodité.
 
-Note : si vous avez besoin de nullifier une (ou toutes les) actions disponibles, procédez simplement de la façon suivante :
-(Condition) = ACTION_ONE -> NULL (nullifie une action – ici, la 1ère –)
-(Condition) = TRIPLE_ACTION -> NULL (nullifie toutes les actions)
+Note : si vous avez besoin de nullifier une (ou toutes les) actions disponibles, procédez simplement comme suit :
+(Condition) = ACTION_ONE → NULL (nullifie la 1ère action)
+(Condition) = TRIPLE_ACTION → NULL (nullifie toutes les actions)
 
 Rappel : une action se nullifie d'elle-même lorsqu'elle est perpétrée, ces méthodes sont donc essentiellement situationnelles.
 
 
-Exemple d'action custom :
-TIME -> 0 = ACTION -> 1, WATCH*TALK_PLANT
+Exemple d'action custom :
+TIME -> 0 = ACTION → 1, WATCH*TALK_PLANT
 $ -> TALK_PLANT = TALK -> PLANT
 
-Ici, WATCH ne correspond à aucune action enregistrée. Le programme va donc :
-- chercher dans les ressources le mot à afficher, en jeu, décrivant l'action (fichier "action.txt" dans le dossier "texts/(la langue)" ou "texts/(la langue)/maps/(la carte)").
+Ici, WATCH ne correspond à aucune action existante. Le programme va donc :
+- chercher dans les ressources le mot à afficher décrivant l'action.
 - définir, à partir de ce même fichier, la touche du clavier déclenchant l'action.
-- créer une balise GOTO dont la Valeur est TALK_PLANT : la seconde Instruction sera exécutée aussitôt que l'action de la première sera perpétrée.
-
-ATTENTION ! Qu'une action soit enregistrée ou custom, il faut dans les deux cas en créer la référence dans le fichier "action.txt".
+- créer une balise GOTO dont la Valeur est TALK_PLANT : la seconde Instruction sera exécutée aussitôt que l'action dans la première sera activée.
 
 
-Pour déterminer quelle touche du clavier devrait être attribuée à une action, voici la règle à suivre. Elle n'est pas absolue, mais elle regroupe la plupart des situations :
-touche 1 = action basique (parler, regarder, etc.)
-touche 2 = modification de l'environnement (déplacer un objet, vider une poubelle, etc.)
-touche 3 = actions importantes (chercher un objet, terminer la carte, etc.)
+Pour déterminer quelle touche du clavier devrait être attribuée à une action, voici la ligne de conduite à suivre (elle n'est pas absolue, mais elle regroupe la plupart des situations) :
+- touche 1 : action basique (parler, regarder, etc.)
+- touche 2 : modification de l'environnement (déplacer un objet, vider une poubelle, etc.)
+- touche 3 : actions importantes (chercher un objet, terminer la carte, etc.)
 
-Note : lorsqu'une action doit terminer la carte, il faut dans le juste fichier "action.txt", juste avant la traduction de celle-ci, écrire « (END_LVL) ». Le mot affiché en jeu décrivant l'action se démarquera alors physiquement des autres afin d'informer le joueur de sa spécificité (c.-à-d., de son caractère définitif).
+Note : lorsqu'une action doit terminer la carte, il faut, dans le fichier « action.txt », juste avant la traduction de celle-ci, écrire « (END_LVL) ». Le mot affiché en jeu décrivant l'action se démarquera alors physiquement des autres (ERA) afin d'informer le joueur de sa spécificité (c.-à-d. de son caractère définitif).
 
-
-////// TRIPLE_ACTION //////
-
-Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions sur un objet.
-
-Exemple :
-$ -> TA_INIT = TRIPLE_ACTION -> TALK*PLANT, WATCH*PLANT
-
-Lorsque la Condition sera vérifiée, L'action TALK sera disponible et aura pour fichier de référence PLANT.csv. Une autre action, custom, (WATCH) sera également disponible ; la création d'action custom est expliquée dans le Type de Requête précédent (c.-à-d. Action).
-
-ATTENTION ! Même si une seule action est mise en place avec le TripleAction, ce dernier écrase les trois actions précédemment disponibles. 
-
-
-ATTENTION ! Les Types de Requêtes ACTION et TRIPLE_ACTION n'affectent que l'objet courant ! Lorsque plusieurs objets différents sur la carte partagent un même fichier Piranha (ex : les objets sur deux cases), vous aurez besoin d'utiliser le Type de Requête AFFECTING de façon "locale" comme dans l'exemple suivant :
-
-! -> TA_NULL_CLOTHES = TRIPLE_ACTION -> NULL
-$ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES*CLEAN_CLOTHES
-$ -> CLEAN_CLOTHES = GOTO -> AFFECTING:TA_NULL_CLOTHES, DELETE_CLOTHES
-$ -> DELETE_CLOTHES = DELETE -> 5-7:1
 
 
 ////// SAVED_TRIPLE_ACTION //////
 
 Le Type de Requête SAVED_TRIPLE_ACTION permet d'enregistrer ou de remplacer les actions actuelles d'un objet.
 
-La cible unitaire de ce Type de Requête défini l'opération à effectuer :
+La Cible unitaire de ce Type de Requête défini l'opération à effectuer :
 - SAVE : enregistrer les actions actuelles de l'objet. 
 - LOAD : remplacer les actions actuelles de l'objet par les actions enregistrées.
 - RESET : effacer les actions enregistrées.
 
-Note : un seul "ensemble d'actions" peut être stocké à la fois par objet. Dit autrement, un enregistrement remplacera toujours le précédent.
-Note : charger des actions ne supprime pas l'enregistrement.
+Note : un seul "ensemble d'actions" peut être stocké à la fois par objet. Dit autrement, un enregistrement remplacera toujours le précédent.
+
+Note : charger des actions ne supprime pas l'enregistrement.
 
 Exemple de situation :
-Un personnage est seul. Le joueur a la possibilité de discuter avec lui. Au bout d'un temps, ce personnage est rejoint par un second et ils discutent entre eux. Le joueur ne peut plus parler avec le premier, mais il peut écouter leurs conversations. Lorsque le premier personnage se retrouvera de nouveau seul, le joueur pourra reprendre sa conversation avec lui, là où il l'avait laissé.
+Un NPC A est seul, et le joueur a la possibilité de discuter avec lui. Au bout d'un certain temps, ce NPC A est rejoint par un NPC B et ils discutent entre eux. Le joueur ne peut plus parler avec A, mais il peut écouter leurs conversations AB. Lorsque le NPC A se retrouvera de nouveau seul, le joueur pourra reprendre sa conversation avec lui, là où il l'avait laissé.
 
 TIME -> 0 = TRIPLE_ACTION -> TALK*HELLO
 TIME -> 20 = GOTO → SAVED_TRIPLE_ACTION:SAVE, TA_AB_TALKING
@@ -97,35 +78,56 @@ $ -> TALK_AB_TALKING = TALK -> AB_TALKING
 TIME -> 40 = SAVED_TRIPLE_ACTION -> LOAD
 
 Dans cet exemple :
-
-- (ligne 1) Le personnage propose une action de conversation "HELLO".
-Rappel : une action se nullifie d'elle-même lorsqu'elle est perpétrée, cela signifie que « l'action de conversation » est remplacée par une action nulle si elle a lieu.
-
+Explication :
+- (ligne 1) Le NPC propose une action de dialogue "HELLO".
+Rappel : une action se nullifie d'elle-même lorsqu'elle est perpétrée, cela signifie que "l'action de dialogue" est remplacée par une action nulle si elle a lieu.
 - (ligne 2) Au bout de 20 seconde, les actions actuellement disponibles sont enregistrées… 
 - (ligne 3 & 4) … puis remplacées par d'autres.
-Attention : si l'action de conversation avait eu lieu, c'est une action nulle qui est enregistrée !
+Attention ! Si l'action de dialogue avait eu lieu, c'est une action nulle qui est enregistrée !
+- (ligne 5) Après 40 secondes, les "nouvelles actions" sont supprimées et les actions précédemment enregistrées sont de nouveau disponibles (donc aucune si une action nulle était enregistrée).
 
-- (ligne 5) Après 40 secondes, les « nouvelles actions » sont supprimées et les actions précédemment enregistrées sont de nouveau disponibles (donc aucune si une action nulle était enregistrée).
+
+
+////// TRIPLE_ACTION //////
+
+Le Type de Requête TRIPLE_ACTION permet de définir jusqu'à trois actions sur un objet à l'aide d'une seule Instruction.
+
+Exemple :
+$ -> TA_INIT = TRIPLE_ACTION -> TALK*PLANT, WATCH*PLANT
+
+Attention ! Même si une seule action est mise en place avec ce Type de Requête, les trois actions précédemment disponibles sont remplacées. Dans notre exemple, la 3ème action est donc nullifiée.
+
+
+Attention ! Lorsqu'une action est perpétrée, elle n'est nullifiée que pour l'objet actuel ! Par conséquent, lorsque plusieurs objets différents sur la carte partagent un même fichier Piranha (ex : certains objets sur deux cases), vous aurez besoin d'utiliser le Type de Requête AFFECTING (voir « AFFECTING » dans la partie « Piranha – Types de Requêtes : Goto ») de façon "locale" comme dans l'exemple suivant :
+
+! -> TA_NULL_CLOTHES = TRIPLE_ACTION -> NULL
+$ -> TA_INIT = TRIPLE_ACTION -> CLEAN_CLOTHES*CLEAN_CLOTHES
+$ -> CLEAN_CLOTHES = GOTO -> AFFECTING:TA_NULL_CLOTHES, DELETE_CLOTHES
+$ -> DELETE_CLOTHES = DELETE -> 10-20:1
+
+Dans notre exemple, nous nous assurons que lorsque l'action « CLEAN CLOTHES » est activée, elle est nullifiée pour tous les objets partageant ce même fichier Piranha.
+
 
 
 ////// CHOICE //////
 
-Le Type de Requête CHOICE est en quelque sorte un Type de Requête TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite exécutée et les autres choix ne sont plus disponibles.
+Le Type de Requête CHOICE est un Type de Requête TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite exécutée et les autres choix (actions) ne sont plus disponibles.
 
-La première Cible de ce Type de Requête (séparée par le symbole ":" au lieu de ",") doit correspondre au nom d'un objet (voir Type de Requête NAME dans "requêtes states"). Le détourage de l'objet ainsi désigné (voir Type de Requête HIGHLIGHT dans "requêtes autres") sera alors actif tant que le joueur n'aura pas effectué son choix.
+Note : durant les cinématiques (voir « CUTSCENE » dans la partie « Piranha – Type de Requêtes : Autres »), bien que le joueur perde la capacité à effectuer des actions, il conserve la capacité à effectuer des choix.
+
+La première Cible de ce Type de Requête (séparée par le symbole « : » au lieu de « , ») doit correspondre au nom (voir « NAME » dans la partie « Piranha – Types de Requêtes : State ») de l'objet dont on veut activer l'ERA sous forme de détourage visuel (voir « HIGHLIGHT » dans la partie « Piranha – Types de Requêtes : Autres »). Ce détourage sera actif tant que le joueur n'aura pas effectué son choix.
+
+Note : 95 % du temps, l'objet dont on veut afficher le détourage est soit le joueur, soit l'objet actuel. Dans ces cas-là, la première Cible sera respectivement PLAYER ou OBJECT.
 
 Exemple : 
 TALKED -> NO_KEY = CHOICE -> REBECCA : SEARCH*SEARCH_K, THINK*THINK_K
 
-Lorsque la Condition sera vérifiée, le joueur ne pourra plus bouger tant qu'il n'aura pas choisi entre "chercher" (search) et "réfléchir" (think). Ce choix activera le détourage de l'objet dont le nom est "Rebecca".
+Lorsque la Condition sera vérifiée, le joueur ne pourra plus bouger tant qu'il n'aura pas choisi entre « search » (chercher) et « think » (réfléchir). Ce choix activera le détourage de l'objet dont le nom est celui du joueur (Rebecca).
 
-ATTENTION ! Il est très important de noter que si les Type de Requêtes ACTION et TRIPLE_ACTION utilisent GOTO pour déterminer une action custom, le Type de Requête CHOICE utilise AFFECTING à la place !
-Il faudra donc utiliser des "!" au lieu de "$" pour détailler les différents choix (ainsi que de faire attention aux mots utilisés, afin d'éviter des doublons inter-fichiers).
+Attention ! Il est à noter que si les Type de Requêtes ACTION et TRIPLE_ACTION utilisent GOTO pour déterminer une action custom, le Type de Requête CHOICE utilise AFFECTING à la place ! Il faudra donc utiliser des Types de Condition « ! » au lieu de « $ » pour détailler les différents choix (ainsi que de faire attention aux mots utilisés, afin d'éviter des doublons inter-fichiers).
 
 Exemple :
-! -> SEARCH_K = MOVE -> 6-6
+! -> SEARCH_K = MOVE -> 10-20
 ! -> THINK_K = TALK -> KEY_THINKING
 
-
-Si la raison technique de ce changement vous intéresse, la voici : pour rappel, GOTO est un type de Requête local, il ne peut donc pas affecter les autres objets Piranha. Les types de Requête ACTION et TRIPLE_ACTION affectent directement l'objet Piranha dont il est question. Lorsque c'est le type de Requête CHOICE qui est utilisé, un « objet temporaire » est créé devant le joueur, et c'est cet objet qui contient les actions possibles ; il y a donc deux objets : l'objet Piranha "choix" sans fichier, et l'objet Piranha l'ayant créé. Les balises GOTO des actions dans l'objet Piranha "créateur" ne sont ainsi jamais vérifiée, car les actions les appelant sont exécutées dans l'objet "choix" qui n'a pas de fichier ! En élargissant la portée du type de Requête CHOICE et en utilisant des balises AFFECTING, nous réglons le problème.
-PS : si vous aviez compris ça par vous-même, alors c'est que le Piranha n'a plus aucun secret pour vous !
+Si la raison technique de ce changement vous intéresse, la voici : pour rappel, GOTO est un Type de Requête local, il ne peut donc pas affecter les autres objets Piranha. Les Types de Requête ACTION et TRIPLE_ACTION affectent directement l'objet Piranha actuel. Lorsque c'est le Type de Requête CHOICE qui est utilisé, un "objet temporaire" est créé devant le joueur, et c'est cet objet qui contient les actions possibles ; il y a donc deux objets : l'objet Piranha "choix" sans fichier, et l'objet Piranha l'ayant créé. Les balises GOTO des actions dans l'objet Piranha "créateur" ne sont ainsi jamais vérifiées, car les actions les appelant sont exécutées dans l'objet "choix" qui n'a pas de fichier ! En élargissant la portée du Type de Requête CHOICE via des balises AFFECTING, nous réglons le problème.
