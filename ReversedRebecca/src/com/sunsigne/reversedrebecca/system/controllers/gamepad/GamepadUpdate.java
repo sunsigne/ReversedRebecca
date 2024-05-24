@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +25,7 @@ public class GamepadUpdate implements Runnable {
 
 	////////// GAMEPAD ////////////
 
-	private static Controller[] controllers;
+	static Controller[] controllers;
 
 	protected static Controller[] getRegisteredGamepad() {
 		if (running)
@@ -38,18 +40,21 @@ public class GamepadUpdate implements Runnable {
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
 	public void start() {
-		run();
-		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
+		//run();
+		//executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
+		
 	}
 
 	public void stop() {
-		executorService.shutdown();
+		//executorService.shutdown();
 	}
 
 	////////// MAIN LOOP ////////////
 
 	public static boolean running;
 
+	private final static String JINPUT_THREAD_TO_KILL = "net.java.games.input.RawInputEventQueue$QueueThread";
+	
 	@Override
 	public void run() {
 		if (activedMemoryLeakPrevention)
@@ -59,9 +64,23 @@ public class GamepadUpdate implements Runnable {
 
 		GamepadManager.currentControllers = null;
 		Field field = null;
+		
+		// System.err.println("start thread scan");
 
-		// System.err.println("Scanning USB ports (for Gamepad detection)");
-
+		for (final var thread : Thread.getAllStackTraces().keySet()) {
+			System.out.println(thread.getClass());
+			if(thread.getClass().getName().equalsIgnoreCase(JINPUT_THREAD_TO_KILL)) {
+                thread.interrupt();
+                try {
+					thread.join();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+            }
+        }
+		
+		// System.err.println("finished thread scan");
+		
 		try {
 			field = clazz.getDeclaredField("loadedPluginNames");
 			field.setAccessible(true);
