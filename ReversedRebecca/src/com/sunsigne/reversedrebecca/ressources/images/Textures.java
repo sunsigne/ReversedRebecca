@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 public class Textures {
 
 	public void loadRessources() {
-		loadRessources("textures");
+		//loadRessources("textures");
 	}
 
 	private void loadRessources(String path) {
