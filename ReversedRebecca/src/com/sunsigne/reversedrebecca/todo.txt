@@ -20,7 +20,9 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- pour les loots de coofre (cartes), la texture des outils ne s'affiche pas (erreur, texture non trouvée)
 		- l'animation de vérouillage de porte est bugué (texture non lue)
+		- on peut marcher sur jean quand il s'est cassé la figure. A réfléchir si c'est voulu ou non
 		- les hole_upward semble ne pas respecter la loi "single interactive law"
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
@@ -40,6 +42,9 @@
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
+	
+	droits à demander :
+		- les drapeaux
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -76,7 +81,7 @@
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	1h00 - ecran de fin de niveau : "cliquer pour continuer" -> les touches du caliver devrait marcher aussi ? (si oui, la/les-quel(les))
-	24h00 - retravailler l'écran de fin de jeu (mettre à jour les captures d'écran du futur jeu)
+	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu)
 	3h faire clignotter ou mettre dans un carré rouge l'outils HUD actuel lorsqu'on ne peut pas en utiliser un + mettre en avant le ramassage d'un outils de niveau supérieur à l'outils HUD
 	
 	CHEST:
