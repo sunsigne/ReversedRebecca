@@ -27,6 +27,7 @@ import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -65,14 +66,14 @@ public class World implements Updatable, RenderFree {
 		initParameters(mapName);
 		createMap();
 		updateLayer();
-		
+
 		addSetup();
-		if(instance != this)
+		if (instance != this)
 			return;
 		new Save().loadSave();
-		if(instance != this)
+		if (instance != this)
 			return;
-		
+
 		addHUD();
 		addControllers();
 		start();
@@ -254,8 +255,13 @@ public class World implements Updatable, RenderFree {
 		String mapName = this.mapName;
 
 		if (mapName.equals(FilePath.TEST)) {
-			COLOR[] colors = COLOR.values();
-			COLOR color = colors[new Random().nextInt(colors.length)];
+			boolean exist = false;
+			COLOR color = null;
+			do {
+				COLOR[] colors = COLOR.values();
+				color = colors[new Random().nextInt(colors.length)];
+				exist = new FileTask().doesExist(false, "maps/" + mapName.concat("/" + color.getName()));
+			} while (exist == false);
 			mapName = mapName.concat("/" + color.getName());
 		}
 
@@ -301,7 +307,7 @@ public class World implements Updatable, RenderFree {
 	public void freeze(boolean freeze) {
 		freeze(freeze, !freeze);
 	}
-	
+
 	public void freeze(boolean freeze, boolean playerCanInterract) {
 		this.freeze = freeze;
 
