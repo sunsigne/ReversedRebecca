@@ -11,9 +11,10 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class ChestLoot extends PuzzleObject {
+public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
 	protected ChestLoot(ChestCard card, boolean widerUpgradeImg) {
 		super(card.getPuzzle(), false, card.getX(), card.getY(), card.getWidth(), card.getHeight());
@@ -44,6 +45,11 @@ public abstract class ChestLoot extends PuzzleObject {
 	}
 
 	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
 
 	public abstract BufferedImage getToolImage();
 

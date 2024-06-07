@@ -70,10 +70,17 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	private String secondLine;
 
 	@Override
+	public int getSheetColCriterion() {
+		return 1 + getDifficulty().ordinal();
+	}
+
+	@Override
 	public BufferedImage getToolImage() {
-		if (tool_img == null)
-			tool_img = new ImageTask()
-					.loadImage("textures/" + "tools/" + tool.getName() + "_" + getDifficulty().getName());
+		if (tool_img == null) {
+			String path = "textures/tools/" + tool.getName();
+			tool_img = new ImageTask().loadImage(path);
+			tool_img = getSheetSubImage(tool_img);
+		}
 		return tool_img;
 	}
 
