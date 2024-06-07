@@ -21,7 +21,6 @@
 
 	pas réglé :
 		- pour les loots de coofre (cartes), la texture des outils ne s'affiche pas (erreur, texture non trouvée)
-		- l'animation de vérouillage de porte est bugué (texture non lue)
 		- on peut marcher sur jean quand il s'est cassé la figure. A réfléchir si c'est voulu ou non
 		- les hole_upward semble ne pas respecter la loi "single interactive law"
 		- il y a visiblement un pb dans CreateSimulationRequest (tester avec lvl tutorial pour s'en rendre compte)
