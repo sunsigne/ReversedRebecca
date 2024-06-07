@@ -72,11 +72,11 @@ public class AnimatedDecorationObject extends DecorationObject {
 			if (image == null)
 				break;
 
-			list.addObject(loader.loadImage(path + formated_index));
+			list.addObject(image);
 
 			if (index == 0)
 				for (int repeat = 0; repeat < getNumberOfTimesFirstImageIsRepeated(); repeat++)
-					list.addObject(loader.loadImage(path + formated_index));
+					list.addObject(loader.drawCopyOf(image));
 
 			index++;
 		} while (true);
