@@ -90,6 +90,10 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 	private boolean visible;
 	private int registeredX, registeredY;
 
+	public boolean isVisible() {
+		return visible;
+	}
+	
 	// besure correct display without blinking or misplacement
 	public void setVisible(boolean visible) {
 		if (visible) {
