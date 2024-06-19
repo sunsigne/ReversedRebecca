@@ -13,7 +13,7 @@ TRAP_THE_TOILET = 3 % piéger#les#toilettes
 DESTROY_12_HOURS_OF_WORK = 4 % détruire#12h#de#travail
 YELL_AT_AN_OLD_MAN = 5 % crier#sur#un#vieil#homme
 UNREASONABLE_DESTRUCTION = 6 % destruction#déraisonnable
-ABADON_EVERYONE = 7 % abandonner#tout#le#monde
+ABANDON_EVERYONE = 7 % abandonner#tout#le#monde
 
 ///// PSYCHOPATH /////
 
