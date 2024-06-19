@@ -54,7 +54,7 @@ Attention ! si le joueur ramasse l'objet "YELLOW KEY" mais qu'il ne peut « qu
 
 Le Type de Condition UNLOCKEDTOOLMAXLEVEL a exactement le même effet et est soumis aux mêmes règles que Type de Requête UNLOCKEDTOOL.
 
-La seule différence avec ce dernier est que UNLOCKEDTOOLMAXLEVEL la Condition de déclenchement est lorsque le joueur acquiert la compétence d'atteindre le niveau renseigné avec l'outil renseigné (par exemple, lors de l'ouverture d'un coffre).
+LLa seule différence avec ce dernier est que pour UNLOCKEDTOOLMAXLEVEL, la Condition de déclenchement est que le joueur acquiert la compétence d'atteindre le niveau renseigné avec l'outil renseigné (par exemple, lors de l'ouverture d'un coffre).
 
 
 

@@ -1,13 +1,10 @@
 ////// Introduction //////
 
-
 Piranha est un langage de programmation inventé par Florian Murcia en 2022 pour le jeu vidéo Reversed Rebecca. Le mot « Piranha » vient de l'animal, sans raison autre qu'il sonnait bien et qu'on le retenait facilement.
 
 Le Piranha a pour objectif principal de contrôler le comportement d'objets en Java, au travers d'une interface beaucoup plus simplement éditable qu'à travers un IDE. L'avantage principal du Piranha est ainsi qu'il peut très facilement être lu, écrit et édité par un éditeur de texte ou de contenu .csv, alors même que le jeu est « compilé ».
 
-Les éditeurs de code actuels ne reconnaissant pas le Piranha comme langage. Il est donc conseillé, lorsqu'on écrit en Piranha, de prendre un éditeur de code reconnaissant le .csv, d'y appliquer un filtre de coloration par colonne d'élément, et de définir l'espace (" ") comme élément séparateur : une "colorisation syntaxique" s'appliquera alors naturellement.
-
-Note : dans toute la documentation Piranha, le mot « objet » sera utilisé pour parler d'objets Piranha, indifféremment qu'il s’agisse dans le jeu de NPC ou d’objets interactifs. L'unique différence notable entre ceux deux éléments est que davantage de Type de Requête peuvent s'appliquer aux NPC, notamment la majorité des « Types de Requêtes : Move » et des « Types de Requêtes : States ».
+Note : dans toute la documentation Piranha, le mot « objet » sera utilisé pour parler d'objets Piranha, indifféremment qu'il s’agisse dans le jeu de NPC ou d’objets interactifs. L'unique différence notable entre ceux deux éléments est que davantage de Types de Requête peuvent s'appliquer aux NPC, notamment la majorité des « Types de Requêtes : Move » et des « Types de Requêtes : States ».
 
 
 ////// Nomenclature //////
@@ -49,7 +46,7 @@ Dans cet exemple, les objets 1 et 2 correspondent respectivement à un lit et un
 
 ////// Syntaxe //////
 
-Bien que le Piranha ne soit pas sensible à la case, par convention, les Instructions sont écrites en lettres capitales. Parallèlement, les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code. Les commentaires peuvent s'écrire n'importe où, tant qu'ils ne contiennent pas les caractères « -> » et « = », cependant, par convention et dans un souci de clarté, il est conseillé d'écrire les caractères « // » à l'amorce de ceux-ci, afin d'imiter la syntaxe standard des autres langages de programmation.
+Bien que le Piranha ne soit pas sensible à la casse, par convention, les Instructions sont écrites en lettres capitales. Parallèlement, les espaces (" ") permettent de gagner en lisibilité, mais n'ont aucune incidence sur le code. Les commentaires peuvent s'écrire n'importe où, tant qu'ils ne contiennent pas les caractères « -> » et « = », cependant, par convention et dans un souci de clarté, il est conseillé d'écrire les caractères « // » à l'amorce de ceux-ci, afin d'imiter la syntaxe standard des autres langages de programmation.
 
 Le point X=0 Y=0 se situe en haut à gauche de la carte. Sauf exceptions, il n'est pas possible d'écrire des coordonnées négatives en Piranha. 
 
@@ -62,5 +59,7 @@ Si le puzzle situé en X=10 et Y=20 est résolu, alors l'objet actuel doit se t�
 Lorsqu'une Requête implique plusieurs Cibles, elles sont séparées par des virgules (","). Certains Types de Requêtes exigent une séparation différente, via le symbole deux-points (":").
 
 Note : il est presque toujours possible, lorsque l'Instruction a du sens, d'écrire en Valeur ou en Cible les mots clés « PLAYER » ou « OBJECT » pour faire référence respectivement au joueur ou à l'objet actuel.
+
+Les éditeurs de code actuels ne reconnaissant pas le Piranha comme langage, il est donc conseillé, lorsqu'on écrit en Piranha, de prendre un éditeur de code reconnaissant le .csv, d'y appliquer un filtre de coloration par colonne d'élément, et de définir l'espace (" ") comme élément séparateur : une "colorisation syntaxique" s'appliquera alors naturellement.
 
 Attention ! Il n'est pas possible d'avoir deux Conditions (« Type de Condition -> Valeur ») identiques dans un même fichier Piranha ! En cas de doublons, seule la dernière sera traitée. L'utilisation de Conditions identiques dans des fichiers Piranha différents ne pose aucun problème. Si vous avez besoin d'effectuer plusieurs Instructions vérifiant la même Condition, utilisez le Type de Requête GOTO (voir la partie « Piranha – Type de Requêtes : Goto »).

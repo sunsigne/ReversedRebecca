@@ -111,7 +111,7 @@ Dans notre exemple, nous nous assurons que lorsque l'action « CLEAN CLOTHES �
 
 ////// CHOICE //////
 
-Le Type de Requête CHOICE est un Type de Requête TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite exécutée et les autres choix (actions) ne sont plus disponibles.
+Le Type de Requête CHOICE est un Type de Requête TRIPLE_ACTION particulier : lorsqu'il est appelé, le joueur est paralysé et ne peut plus bouger tant qu'il n'a pas choisi une (et une seule) des actions proposées. L'action est ensuite exécutée et les autres choix (actions) ne sont plus disponibles. Le temps du jeu n'est pas arrêté durant ce choix.
 
 Note : durant les cinématiques (voir « CUTSCENE » dans la partie « Piranha – Type de Requêtes : Autres »), bien que le joueur perde la capacité à effectuer des actions, il conserve la capacité à effectuer des choix.
 

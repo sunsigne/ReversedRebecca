@@ -1,0 +1,6 @@
+normal = laisse-moi aller au-dessus,@ je veux essayer qq chose
+normal = ok, c'est cool, mais desserre un peu tes mains, je vais manquer d'air là.
+rougis la bouche ouverte = non, c'est trop bon...
+rougis + sourire de tueur et yeux rouge = ... Je vais serrer plus fort !
+bave = ... puex ... Plus ... Respi...
+rougis la bouche ouverte = oui, exactement... OUIIIII

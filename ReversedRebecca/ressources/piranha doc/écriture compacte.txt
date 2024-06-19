@@ -5,7 +5,7 @@ TIME -> 0 = GOTO -> MY_NAME, MY_FACING
 $ -> MY_NAME = NAME -> BOB
 $ -> MY_FACING = FACING -> DOWN
 
-L'Instruction en 1ère ligne initie l’exécution des Instructions en ligne 2 et 3.
+L'Instruction en 1ère ligne initialise l’exécution des Instructions en ligne 2 et 3.
 L'Instruction en 2ème ligne n'a qu'une seule Cible : « BOB ».
 L'Instruction en 3ème ligne n'a qu'une seule Cible : « DOWN ».
 

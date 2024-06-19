@@ -14,7 +14,22 @@ Lors du renseignement numéroté, un Index trop élevé sera systématiquement r
 ////// Cas Pratique //////
 
 
-Nous avons besoin qu'un NPC parle à travers une porte, à partir d'une action (événement non prévu par le moteur du jeu). Nous devons donc "désactiver" la porte (voir « DISABLE » dans la partie « Piranha – Type de Requêtes : Interactives »), créer un objet Piranha à son emplacement, et coder son comportement de sorte qu'il imite les actions du NPC. Lorsque nous voulons désactiver la porte, nous pouvons renseigner l'Index 2 pour la sélectionner (considéré comme 1 puisqu'un seul objet présent). Nous créons ensuite l'objet Piranha au niveau de la porte avec un Index BACK, (il prendra alors l'Index 1 et "poussera" la porte en Index 2). Lorsque nous ferons référence à la porte par la suite, nous pouvons continuer à utiliser l'Index 2 (qui sera cette fois "officiellement" le bon) : nous aurons donc utilisé le même Index (2) tout au long de notre code pour désigner la porte. À noter qu'il était également tout à fait possible de choisir de garder l'Index 1 pour la porte et de créer l'objet Piranha en FRONT.
+Nous avons besoin qu'un NPC parle à travers une porte verrouillée, à partir d'une action (événement non prévu par le moteur du jeu).
+
+Pour ce faire, nous pouvons "désactiver" la porte (voir « DISABLE » dans la partie « Piranha – Type de Requêtes : Interactives »), créer un objet Piranha à son emplacement (voir « CREATE » dans la partie « Piranha – Type de Requêtes : Création »), et coder son comportement de sorte qu'il imite les actions du NPC (voir « ACTION » dans la partie « Piranha – Type de Requêtes : Action »). Ex :
+TIME -> 0 = GOTO -> DISABLE_DOOR, CREATE_FAKE_DOOR, INIT_FAKE_DOOR
+
+Lorsque nous voulons désactiver la porte, nous pouvons renseigner l'Index 2 pour la sélectionner (considéré comme 1 puisqu'un seul objet présent). Ex :
+$ -> DISABLE_DOOR = DISABLE -> 10-20:2
+
+Nous créons ensuite l'objet Piranha au niveau de la porte avec un Index BACK, (il prendra alors l'Index 1 et "poussera" la porte en Index 2). Ex :
+$ -> CREATE_FAKE_DOOR = CREATE -> 10-20-BACK:1-255-255
+
+Lorsque nous ferons référence à la porte par la suite, nous pouvons continuer à utiliser l'Index 2 (qui sera cette fois "officiellement" le bon) : nous aurons donc utilisé le même Index (2) tout au long de notre code pour désigner la porte. À noter qu'il était également tout à fait possible de choisir de garder l'Index 1 pour la porte et de créer l'objet Piranha en FRONT.
+
+Attention ! Il ne faudra pas oublier ensuite d'initialiser le comportement de l'objet pour qu'il imite celui du NPC. Ex :
+(même fichier) $ -> INIT_FAKE_DOOR = AFFECTING -> OBJ-01*INIT
+(fichier OBJ-01) ! -> INIT = ACTION_ONE -> TALK*ALICIA_BEHIND_DOOR 
 
 Note : la mécanique d'Index est assez complexe à prendre en main. Voici deux conseils pour vous aider :
 - 95 % du temps, vous n'aurez affaire qu'à un seul objet (donc Index 1).
@@ -32,11 +47,11 @@ La Position d'un objet Piranha est la "case" sur laquelle il se trouve. Lorsqu'u
 ////// Couches //////
 
 
-Une notion importante à ne jamais oublier en Piranha et celle des Layer – « couches » en français, mais il faut comprendre « étages » –.
+Une notion importante à ne jamais oublier en Piranha est celle des Layer – « couches » en français, dans le sens « étages » –.
 
 À CHAQUE FOIS qu'il est question d'une Position en Piranha, la Position en question est cherchée sur la même Layer que l'objet faisant la demande. Par exemple, si un objet souhaite vérifier que le puzzle d'un autre « étage » est résolu, il ne doit pas utiliser le Type de Condition WONPUZZLE (voir la partie « Piranha – Conditions ») qui n'est vérifié que sur le sien, mais passer par un AFFECTING, indépendant de la Position, donc applicable partout.
 
-Attention ! L'objet SET-UP, qui est créé sur la même Layer que le joueur lors du chargement d'une carte, et est également soumis à cette règle !
+Attention ! L'objet SET-UP, qui est créé sur la même Layer que le joueur lors du chargement d'une carte, est est également soumis à cette règle !
 
 
 ////// Sous-Couches //////

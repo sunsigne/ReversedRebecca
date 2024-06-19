@@ -10,7 +10,7 @@ Lorsque la Condition est vérifiée, une nouvelle "condition" doit être vérifi
 - si non, renommer l'objet en « ALICE ».
 
 
-////// Requête "classique" à caractère conditionnelle //////
+////// Requête "classique" à caractère Conditionnel //////
 
 
 Certains Types de Requête "classiques" peuvent s'écrire sous la forme Conditionnelle, changeant ainsi leur comportement.
