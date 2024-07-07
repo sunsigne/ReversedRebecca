@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -112,7 +111,7 @@ public abstract class PuzzlerObject extends GameObject
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage image;
+	protected BufferedImage image;
 	protected BufferedImage highlightImage;
 
 	@Override
@@ -120,22 +119,9 @@ public abstract class PuzzlerObject extends GameObject
 		return 1 + getDifficulty().ordinal();
 	}
 
-	public BufferedImage getImage() {
-		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName());
-			image = getSheetSubImage(sheet);
-		}
-		return image;
-	}
+	public abstract BufferedImage getImage();
 
-	public BufferedImage getHighlightImage() {
-		if (highlightImage == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2,
-					getSheetHeight() + 2);
-		}
-		return highlightImage;
-	}
+	public abstract BufferedImage getHighlightImage();
 
 	////////// RENDER ////////////
 

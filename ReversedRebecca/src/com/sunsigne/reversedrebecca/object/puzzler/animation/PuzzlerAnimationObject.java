@@ -52,7 +52,7 @@ public abstract class PuzzlerAnimationObject extends SuperPuzzlerAnimationObject
 	}
 
 	private void loadAnimations() {
-		BufferedImage image = new ImageTask().loadImage("textures/puzzler/" + getName());
+		BufferedImage image = new ImageTask().loadImage("textures/puzzler/animation/" + getName());
 		Animation images = buildAnimation(image);
 		animation = new LimitedCycloid<BufferedImage>(images.getImages());
 	}

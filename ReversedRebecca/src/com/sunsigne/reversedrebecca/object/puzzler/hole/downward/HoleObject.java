@@ -1,11 +1,14 @@
 package com.sunsigne.reversedrebecca.object.puzzler.hole.downward;
 
+import java.awt.image.BufferedImage;
+
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.DigAction;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -63,7 +66,26 @@ public class HoleObject extends PuzzlerObject implements Facing {
 	public int getSheetRowCriterion() {
 		return 1 + getFacing().getNum();
 	}
-	
+
+	@Override
+	public BufferedImage getImage() {
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole");
+			image = getSheetSubImage(sheet);
+		}
+		return image;
+	}
+
+	@Override
+	public BufferedImage getHighlightImage() {
+		if (highlightImage == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole" + "_" + "highlight");
+			highlightImage = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2,
+					getSheetHeight() + 2);
+		}
+		return highlightImage;
+	}
+
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;

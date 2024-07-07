@@ -4,7 +4,7 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplodeRubbleAnimationObject;
+import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.LightRendering;
@@ -35,7 +35,7 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
-		if (object instanceof ExplodeRubbleAnimationObject)
+		if (object instanceof ExplosionAnimationObject)
 			if (brightning == false && fading == false) {
 				brightning = true;
 				alpha = 1f;

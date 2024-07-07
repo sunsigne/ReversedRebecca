@@ -44,4 +44,11 @@ public class HoleUpwardObject extends HoleObject {
 		return "hole_upward";
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 5 + getFacing().getNum();
+	}
+
 }

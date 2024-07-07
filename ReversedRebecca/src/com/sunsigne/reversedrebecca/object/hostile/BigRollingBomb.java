@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.hostile;
 import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplodeRubbleAnimationObject;
+import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -45,7 +45,7 @@ public class BigRollingBomb extends RollingBomb implements CollisionReactor {
 		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_large");
 		handler.removeObject(this);
-		handler.addObject(new ExplodeRubbleAnimationObject(getX(), getY(), Size.XL, Size.XL));
+		handler.addObject(new ExplosionAnimationObject(getX(), getY(), Size.XL, Size.XL));
 
 		createSubBombs(handler);
 	}

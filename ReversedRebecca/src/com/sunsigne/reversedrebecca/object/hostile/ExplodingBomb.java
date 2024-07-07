@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplodeRubbleAnimationObject;
+import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -67,7 +67,7 @@ public abstract class ExplodingBomb extends GameObject implements CollisionReact
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 		handler.removeObject(this);
-		handler.addObject(new ExplodeRubbleAnimationObject(getX(), getY()));
+		handler.addObject(new ExplosionAnimationObject(getX(), getY()));
 	}
 
 	////////// TEXTURE ////////////
