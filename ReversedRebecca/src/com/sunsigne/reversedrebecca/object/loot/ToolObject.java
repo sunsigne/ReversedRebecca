@@ -65,8 +65,8 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	private void loadImages() {
 		String path = "textures/tools/" + toolPlayer.getName();
-		image = new ImageTask().loadImage(path);
-		image = getSheetSubImage(image);
+		BufferedImage sheet = new ImageTask().loadImage(path);
+		image = getSheetSubImage(sheet);
 		blinking_image = new ImageTask().loadImage(path + "_" + "highlight");
 	}
 

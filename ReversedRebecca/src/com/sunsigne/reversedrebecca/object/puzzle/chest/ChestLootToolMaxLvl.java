@@ -68,8 +68,8 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			String path = "textures/tools/" + tool.getName();
-			tool_img = new ImageTask().loadImage(path);
-			tool_img = getSheetSubImage(tool_img);
+			BufferedImage sheet = new ImageTask().loadImage(path);
+			tool_img = getSheetSubImage(sheet);
 		}
 		return tool_img;
 	}

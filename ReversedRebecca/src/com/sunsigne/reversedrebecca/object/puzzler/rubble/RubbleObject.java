@@ -68,9 +68,9 @@ public class RubbleObject extends PuzzlerObject {
 	@Override
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
-			highlightImage = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
 			int col = horizontal ? 0 : 1;
-			highlightImage = getSheetSubImage(highlightImage, 1 + col, getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1 + col, getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

@@ -24,11 +24,11 @@ public class LockAnimationObject extends UnlockAnimationObject {
 
 	@Override
 	protected void loadImages() {
-		BufferedImage image = new ImageTask().loadImage("textures/puzzler/" + super.getName());
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + super.getName());
 
-		lockedImage = getSheetSubImage(image, 1);
-		unlockedImage = getSheetSubImage(image, 1);
-
+		lockedImage = getSheetSubImage(sheet, 1);
+		unlockedImage = lockedImage;
+		
 		currentImage = lockedImage;
 	}
 

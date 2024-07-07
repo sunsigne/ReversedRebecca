@@ -172,8 +172,8 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 	private void loadAnimation() {
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_";
 
-		BufferedImage bomb_img = new ImageTask().loadImage(path + "bomb");
-		bomb_img = getSheetSubImage(bomb_img);
+		BufferedImage sheet = new ImageTask().loadImage(path + "bomb");
+		BufferedImage bomb_img = getSheetSubImage(sheet);
 		BufferedImage[] bomb_img_array = { bomb_img };
 
 		BufferedImage explosion_img = new ImageTask().loadImage(path + "explosion");

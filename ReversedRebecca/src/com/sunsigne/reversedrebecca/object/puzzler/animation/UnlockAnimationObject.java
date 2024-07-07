@@ -52,10 +52,10 @@ public class UnlockAnimationObject extends SuperPuzzlerAnimationObject {
 	protected BufferedImage unlockedImage;
 
 	protected void loadImages() {
-		BufferedImage image = new ImageTask().loadImage("textures/puzzler/" + getName());
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName());
 
-		lockedImage = getSheetSubImage(image, 1);
-		unlockedImage = getSheetSubImage(image, 2);
+		lockedImage = getSheetSubImage(sheet, 1);
+		unlockedImage = getSheetSubImage(sheet, 2);
 
 		currentImage = lockedImage;
 	}

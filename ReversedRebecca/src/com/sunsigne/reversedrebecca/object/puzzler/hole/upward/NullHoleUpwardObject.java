@@ -85,13 +85,13 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
-			highlightImage = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
-			highlightImage = getSheetSubImage(highlightImage, 2, getSheetRowCriterion(), getSheetWidth() + 2,
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
+			highlightImage = getSheetSubImage(sheet, 2, getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;
 	}
-	
+
 	////////// RENDER ////////////
 
 	private boolean invisible;

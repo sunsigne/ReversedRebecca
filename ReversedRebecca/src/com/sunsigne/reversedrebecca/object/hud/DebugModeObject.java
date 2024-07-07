@@ -66,12 +66,14 @@ public class DebugModeObject extends GameObject implements TickFree, SheetableIm
 
 	private void loadImages() {
 		String name = "debugmode";
-		image = new ImageTask().loadImage("textures/hud/" + name);
-		image = getSheetSubImage(image);
+		BufferedImage sheet = null;
 
-		highlightImage = new ImageTask().loadImage("textures/hud/" + name + "_" + "highlight");
-		highlightImage = getSheetSubImage(highlightImage, getSheetColCriterion(), getSheetRowCriterion(), getSheetWidth() + 4,
-				getSheetHeight() + 4);
+		sheet = new ImageTask().loadImage("textures/hud/" + name);
+		image = getSheetSubImage(sheet);
+
+		sheet = new ImageTask().loadImage("textures/hud/" + name + "_" + "highlight");
+		highlightImage = getSheetSubImage(highlightImage, getSheetColCriterion(), getSheetRowCriterion(),
+				getSheetWidth() + 4, getSheetHeight() + 4);
 	}
 
 	////////// RENDER ////////////
