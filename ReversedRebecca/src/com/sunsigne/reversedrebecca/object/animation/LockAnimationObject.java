@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import java.awt.image.BufferedImage;
 
@@ -24,7 +24,7 @@ public class LockAnimationObject extends UnlockAnimationObject {
 
 	@Override
 	protected void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/animation/" + super.getName());
+		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + super.getName());
 
 		lockedImage = getSheetSubImage(sheet, 1);
 		unlockedImage = lockedImage;

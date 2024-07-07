@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import java.awt.image.BufferedImage;
 
@@ -6,13 +6,13 @@ import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public abstract class PuzzlerAnimationObject extends SuperPuzzlerAnimationObject {
+public abstract class AnimationObject extends SuperAnimationObject {
 
-	public PuzzlerAnimationObject(int x, int y) {
+	public AnimationObject(int x, int y) {
 		this(x, y, 0, 0);
 	}
 
-	public PuzzlerAnimationObject(int x, int y, int w, int h) {
+	public AnimationObject(int x, int y, int w, int h) {
 		super(x, y, w, h);
 		loadAnimations();
 	}
@@ -52,7 +52,7 @@ public abstract class PuzzlerAnimationObject extends SuperPuzzlerAnimationObject
 	}
 
 	private void loadAnimations() {
-		BufferedImage image = new ImageTask().loadImage("textures/puzzler/animation/" + getName());
+		BufferedImage image = new ImageTask().loadImage("textures/animation/" + getName());
 		Animation images = buildAnimation(image);
 		animation = new LimitedCycloid<BufferedImage>(images.getImages());
 	}

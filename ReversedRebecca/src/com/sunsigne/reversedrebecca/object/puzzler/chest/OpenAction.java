@@ -1,12 +1,12 @@
 package com.sunsigne.reversedrebecca.object.puzzler.chest;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.animation.OpenChestAnimationObject;
+import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.OpenChestAnimationObject;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.SuperPuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.chest.ChestPuzzleFactory;
@@ -48,7 +48,7 @@ public class OpenAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public SuperPuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
+	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new OpenChestAnimationObject(x, y);
 	}
 

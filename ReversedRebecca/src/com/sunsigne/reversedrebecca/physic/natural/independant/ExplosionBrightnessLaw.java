@@ -4,7 +4,7 @@ import java.awt.AlphaComposite;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplosionAnimationObject;
+import com.sunsigne.reversedrebecca.object.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.LightRendering;

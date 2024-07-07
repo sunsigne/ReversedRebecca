@@ -1,17 +1,17 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.animation;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.animation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.LockAnimationObject;
+import com.sunsigne.reversedrebecca.object.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
-public class MappableLockAnimation implements Mappable {
+public class MappableExplosionAnimation implements Mappable {
 
-	private MappableLockAnimation() {
+	private MappableExplosionAnimation() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableLockAnimation();
+	private static Mappable mappable = new MappableExplosionAnimation();
 
 	@Override
 	public Mappable getMappable() {
@@ -22,12 +22,12 @@ public class MappableLockAnimation implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new LockAnimationObject(x, y);
+		return new ExplosionAnimationObject(x, y);
 	}
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 1, 128, 2 };
+		int[] rgb = { 2, 128, 1 };
 		return rgb;
 	}
 

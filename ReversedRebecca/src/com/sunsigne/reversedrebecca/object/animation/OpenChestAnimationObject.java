@@ -1,8 +1,8 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class OpenChestAnimationObject extends PuzzlerAnimationObject {
+public class OpenChestAnimationObject extends AnimationObject {
 
 	public OpenChestAnimationObject(int x, int y) {
 		super(x, y);

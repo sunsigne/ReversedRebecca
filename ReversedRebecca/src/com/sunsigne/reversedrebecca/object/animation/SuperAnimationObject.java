@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -7,13 +7,13 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public abstract class SuperPuzzlerAnimationObject extends GameObject implements SheetableImage {
+public abstract class SuperAnimationObject extends GameObject implements SheetableImage {
 
-	public SuperPuzzlerAnimationObject(int x, int y) {
+	public SuperAnimationObject(int x, int y) {
 		super(x + Size.XS / 8, y + Size.XS / 8, Size.XL / 2, Size.XL / 2);
 	}
 
-	public SuperPuzzlerAnimationObject(int x, int y, int w, int h) {
+	public SuperAnimationObject(int x, int y, int w, int h) {
 		super(x + Size.XS / 8, y + Size.XS / 8, w + Size.XL / 2, h + Size.XL / 2);
 	}
 
@@ -23,7 +23,7 @@ public abstract class SuperPuzzlerAnimationObject extends GameObject implements 
 
 	@Override
 	public String toString() {
-		var clazz = "PUZZLER ANIMATION";
+		var clazz = "ANIMATION";
 		return clazz + " : " + getName().toUpperCase();
 	}
 

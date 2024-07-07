@@ -1,10 +1,10 @@
 package com.sunsigne.reversedrebecca.object.puzzler;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.SuperPuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -46,7 +46,7 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
-	public abstract SuperPuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y);
+	public abstract SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y);
 	
 	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
@@ -61,7 +61,7 @@ public abstract class OpenPuzzleAction extends Action {
 				Game.getInstance().forceLoop();
 			}
 
-			SuperPuzzlerAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
+			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);

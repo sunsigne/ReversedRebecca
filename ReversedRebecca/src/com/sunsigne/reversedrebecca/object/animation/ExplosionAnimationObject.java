@@ -1,11 +1,11 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class ExplosionAnimationObject extends PuzzlerAnimationObject {
+public class ExplosionAnimationObject extends AnimationObject {
 
 	public ExplosionAnimationObject(int x, int y) {
 		this(x, y, Size.M, Size.M);

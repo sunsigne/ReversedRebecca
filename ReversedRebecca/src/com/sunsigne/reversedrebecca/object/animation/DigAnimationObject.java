@@ -1,10 +1,10 @@
-package com.sunsigne.reversedrebecca.object.puzzler.animation;
+package com.sunsigne.reversedrebecca.object.animation;
 
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class ZapAnimationObject extends PuzzlerAnimationObject {
+public class DigAnimationObject extends AnimationObject {
 
-	public ZapAnimationObject(int x, int y) {
+	public DigAnimationObject(int x, int y) {
 		super(x - Size.XS / 4, y - Size.M / 4, Size.XS / 2, Size.XS / 2);
 	}
 
@@ -12,7 +12,7 @@ public class ZapAnimationObject extends PuzzlerAnimationObject {
 
 	@Override
 	public String getName() {
-		return "zap";
+		return "hole_dug";
 	}
 
 	////////// TICK ////////////

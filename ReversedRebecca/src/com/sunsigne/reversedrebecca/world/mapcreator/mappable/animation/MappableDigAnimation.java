@@ -1,7 +1,7 @@
-package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.animation;
+package com.sunsigne.reversedrebecca.world.mapcreator.mappable.animation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.DigAnimationObject;
+import com.sunsigne.reversedrebecca.object.animation.DigAnimationObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 

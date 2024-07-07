@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.object.hostile;
 
 import java.awt.Rectangle;
 
+import com.sunsigne.reversedrebecca.object.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;

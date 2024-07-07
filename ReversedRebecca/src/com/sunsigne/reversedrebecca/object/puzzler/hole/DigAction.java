@@ -3,14 +3,14 @@ package com.sunsigne.reversedrebecca.object.puzzler.hole;
 import com.sunsigne.reversedrebecca.characteristics.tools.ShovelToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.animation.DigAnimationObject;
+import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.DigAnimationObject;
-import com.sunsigne.reversedrebecca.object.puzzler.animation.SuperPuzzlerAnimationObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.HoleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.NullHoleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.upward.HoleUpwardObject;
@@ -64,7 +64,7 @@ public class DigAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public SuperPuzzlerAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
+	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new DigAnimationObject(x, y);
 	}
 
@@ -79,7 +79,7 @@ public class DigAction extends OpenPuzzleAction {
 			handler.removeObject(puzzlerObject);
 			triggerExit(handler, puzzlerObject);
 
-			SuperPuzzlerAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
+			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
 					puzzlerObject.getY());
 			LAYER.WORLD_TEXT.addObject(animation);
 
