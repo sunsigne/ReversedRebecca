@@ -33,4 +33,11 @@ public class RockObject extends BuriedObstacleObject {
 		return "pick_fail";
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+	
 }

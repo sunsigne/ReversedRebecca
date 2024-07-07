@@ -26,10 +26,22 @@ public class BuriedExitObject extends BuriedObject {
 	////////// TEXTURE ////////////
 
 	@Override
+	public int getSheetRowCriterion() {
+		return 2;
+	}
+
+	@Override
+	public int getSheetColCriterion() {
+		return state.getState();
+	}
+
+	private BufferedImage image;
+
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName().toLowerCase()
-					+ "_" + state.getState());
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_digable");
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 

@@ -2,11 +2,13 @@ package com.sunsigne.reversedrebecca.object.puzzle.dig.obstacle;
 
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -56,6 +58,22 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 		buriedObject.setY(y);
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetSize() {
+		return 2*16;
+	}
+	
+	@Override
+	public BufferedImage getImage() {
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_obstacle");
+			image = getSheetSubImage(sheet);
+		}
+		return image;
+	}
+	
 	////////// RENDER ////////////
 
 	@Override

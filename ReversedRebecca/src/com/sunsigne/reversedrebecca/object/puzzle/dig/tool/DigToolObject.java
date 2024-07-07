@@ -57,6 +57,11 @@ public abstract class DigToolObject extends BuriedObject {
 
 	////////// TEXTURE ////////////
 
+	@Override
+	public int getSheetColCriterion() {
+		return getState().getSheetColCriterion();
+	}
+	
 	public BufferedImage getImage() {
 		return getState().getImage();
 	}

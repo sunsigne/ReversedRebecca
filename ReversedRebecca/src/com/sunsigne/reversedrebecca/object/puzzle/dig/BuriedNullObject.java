@@ -21,6 +21,11 @@ public class BuriedNullObject extends BuriedObject {
 	////////// TEXTURE ////////////
 
 	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
 	public BufferedImage getImage() {
 		return null;
 	}

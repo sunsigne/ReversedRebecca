@@ -31,7 +31,7 @@ public enum DIG_STATE implements SheetableImage {
 
 	@Override
 	public int getSheetSize() {
-		return 48;
+		return 3*16;
 	}
 
 	@Override

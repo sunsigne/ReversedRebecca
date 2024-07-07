@@ -32,5 +32,12 @@ public class LogObject extends BuriedObstacleObject {
 	protected String getFailSound() {
 		return "chop_fail";
 	}
-
+	
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 2;
+	}
+	
 }

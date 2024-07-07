@@ -33,4 +33,11 @@ public class BushObject extends BuriedObstacleObject {
 		return "bush_fail";
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 3;
+	}
+
 }

@@ -8,12 +8,13 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
-public class DirtObject extends DigPuzzleObject {
+public class DirtObject extends DigPuzzleObject implements SheetableImage {
 
 	public DirtObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -62,13 +63,22 @@ public class DirtObject extends DigPuzzleObject {
 
 	////////// TEXTURE ////////////
 
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetColCriterion() {
+		return punched ? 2 : 1;
+	}
+
 	private BufferedImage image;
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			var punched = this.punched ? "_punched" : "";
-			image = new ImageTask()
-					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName().toLowerCase() + punched);
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_digable");
+			image = getSheetSubImage(sheet);
 		}
 		return image;
 	}
@@ -89,7 +99,7 @@ public class DirtObject extends DigPuzzleObject {
 
 		if (getY() != getPuzzle().getRow(1))
 			g.drawLine(getX(), getY(), getX() + getWidth(), getY());
-		
+
 		drawSelecting(g);
 	}
 
