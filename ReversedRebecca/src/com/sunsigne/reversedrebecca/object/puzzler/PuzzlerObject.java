@@ -131,7 +131,7 @@ public abstract class PuzzlerObject extends GameObject
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + getName() + "_" + "highlight");
-			highlightImage = getSheetSubImage(highlightImage, 1, getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;
