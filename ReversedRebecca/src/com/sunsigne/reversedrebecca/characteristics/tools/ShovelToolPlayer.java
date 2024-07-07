@@ -16,7 +16,12 @@ public class ShovelToolPlayer extends ToolPlayer {
 	}
 
 	////////// NAME ////////////
-
+	
+	@Override
+	public int getNum() {
+		return 4;
+	}
+	
 	@Override
 	public String getName() {
 		return "shovel";

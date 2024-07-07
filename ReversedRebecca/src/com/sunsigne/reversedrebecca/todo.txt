@@ -46,6 +46,7 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
+	digpuzzle : faire clignoter l'outils lorsque récupéré
 
 	////////// GAMEPAD ////////////
 
@@ -116,6 +117,7 @@
 	
 	////////// BOSS ////////////
 
+	double-Y se "recoiffe" ou flex ses musles sur sa phase de repos (ou veut dire les deux, mais l'un ou l'autre au hasard)
 	30h00 - retravailer le système de boss :
 	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
 	5h00 - InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
@@ -384,6 +386,9 @@
 	(hidden=true) débloquer le niveau test sur l'écran titre
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
+
+	polish : 
+	digpuzzle : ajouter animation de rocher (buche / buisson) qui se casse
 
 	Psycopathe :
 	Combat normal contre blast-X

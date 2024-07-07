@@ -60,14 +60,17 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 1;
+		return toolPlayer.getNum();
 	}
 
 	private void loadImages() {
-		String path = "textures/tools/" + toolPlayer.getName();
-		BufferedImage sheet = new ImageTask().loadImage(path);
+		BufferedImage sheet = null;
+
+		sheet = new ImageTask().loadImage("textures/tools/" + "tool");
 		image = getSheetSubImage(sheet);
-		blinking_image = new ImageTask().loadImage(path + "_" + "highlight");
+
+		sheet = new ImageTask().loadImage("textures/tools/" + "highlight");
+		blinking_image = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2, getSheetHeight() + 2);
 	}
 
 	////////// RENDER ////////////

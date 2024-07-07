@@ -16,7 +16,12 @@ public class BombToolPlayer extends ToolPlayer {
 	}
 
 	////////// NAME ////////////
-
+	
+	@Override
+	public int getNum() {
+		return 2;
+	}
+	
 	@Override
 	public String getName() {
 		return "bomb";

@@ -44,6 +44,8 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// NAME ////////////
 
+	public abstract int getNum();
+	
 	public abstract String getName();
 
 	////////// DIFFICULTY ////////////
