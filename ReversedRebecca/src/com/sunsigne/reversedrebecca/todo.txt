@@ -68,6 +68,13 @@
 
 	////////// EN COURS ////////////
 
+	texture on sheet (à faire) :
+	- caracter (chat)
+	- cursor
+	- menu
+	- other
+	- techtree
+
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
 
