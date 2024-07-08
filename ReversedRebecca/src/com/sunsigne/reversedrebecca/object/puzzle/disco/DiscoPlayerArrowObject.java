@@ -95,13 +95,13 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 		case DOWN:
 			return getBoundsDown();
 		default:
-			return new Rectangle(getX(), getY() + getHeight() / 2 - 5, getWidth(), 10);
+			return new Rectangle(getX(), 16 + getY() + getHeight() / 2 - 5, getWidth(), 10);
 		}
 	}
 
 	private Rectangle getBoundsUp() {
 		int x = getX() + getWidth() / 3;
-		int y = getY();
+		int y = 16 + getY();
 		int w = getWidth() / 3;
 		int h = getHeight() / 8;
 		return new Rectangle(x, y, w, h);
@@ -109,7 +109,7 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 
 	private Rectangle getBoundsDown() {
 		int x = getX() + getWidth() / 3;
-		int y = getY() + 7 * getHeight() / 8;
+		int y = 16 + getY() + 7 * getHeight() / 8;
 		int w = getWidth() / 3;
 		int h = getHeight() / 8;
 		return new Rectangle(x, y, w, h);
