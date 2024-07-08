@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
@@ -18,7 +19,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class LockObject extends PuzzleObject implements MouseObject, CollisionReactor, GamepadEvent {
+public class LockObject extends PuzzleObject implements SheetableImage, MouseObject, CollisionReactor, GamepadEvent {
 
 	public LockObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0);
@@ -62,9 +63,26 @@ public class LockObject extends PuzzleObject implements MouseObject, CollisionRe
 
 	private BufferedImage image;
 
+	@Override
+	public int getSheetSize() {
+		return 2*16;
+	}
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_lock");
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "key");
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 

@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -21,7 +22,7 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class KeyObject extends PuzzleObject implements MouseUserEvent, CollisionDetector, GamepadEvent {
+public class KeyObject extends PuzzleObject implements SheetableImage, MouseUserEvent, CollisionDetector, GamepadEvent {
 
 	public KeyObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0);
@@ -103,9 +104,26 @@ public class KeyObject extends PuzzleObject implements MouseUserEvent, Collision
 
 	private BufferedImage image;
 
+	@Override
+	public int getSheetSize() {
+		return 2*16;
+	}
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 2;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_key");
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "key");
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 
