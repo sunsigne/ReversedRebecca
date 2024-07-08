@@ -160,6 +160,13 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 	protected void createWallBorder() {
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+		
 	////////// CLOSE ////////////
 
 	private boolean closing;

@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -22,7 +23,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class Puzzle implements Updatable, TickFree {
+public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	public Puzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		loadToolData(toolPlayer);
@@ -82,8 +83,21 @@ public abstract class Puzzle implements Updatable, TickFree {
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getOpeningSound());
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetSize() {
+		return 2*16;
+	}
+	
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+	
 	protected BufferedImage getWallTexture() {
-		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall");
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+		return getSheetSubImage(sheet);
 	}
 
 	protected void createWallBorder() {

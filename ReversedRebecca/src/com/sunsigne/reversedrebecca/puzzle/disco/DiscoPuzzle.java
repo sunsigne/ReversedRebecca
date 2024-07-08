@@ -99,6 +99,13 @@ public abstract class DiscoPuzzle extends Puzzle {
 			tempArrow.setVelY(-speed);
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 5;
+	}
+		
 	////////// RENDER ////////////
 
 	@Override

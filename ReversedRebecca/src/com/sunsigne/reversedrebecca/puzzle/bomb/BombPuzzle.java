@@ -102,6 +102,13 @@ public abstract class BombPuzzle extends Puzzle {
 		closePuzzle(true);
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 2;
+	}
+	
 	////////// RENDER ////////////
 
 	@Override

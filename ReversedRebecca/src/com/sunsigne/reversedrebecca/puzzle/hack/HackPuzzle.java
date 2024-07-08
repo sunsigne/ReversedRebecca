@@ -78,12 +78,18 @@ public abstract class HackPuzzle extends Puzzle {
 		return computer;
 	}
 
-	////////// OPEN ////////////
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 3;
+	}
 
 	@Override
 	protected BufferedImage getWallTexture() {
-		String rad = String.valueOf(Math.round(Math.random()));
-		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall_" + rad);
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+		int row = new RandomGenerator().getBoolean() ? 2 : 1;
+		return getSheetSubImage(sheet, getSheetColCriterion(), row, getSheetWidth(), getSheetHeight());
 	}
 
 	@Override
@@ -105,6 +111,8 @@ public abstract class HackPuzzle extends Puzzle {
 			handler.addObject(new WallPuzzle(img, getCol(13), getRow(row)));
 		}
 	}
+
+	////////// OPEN ////////////
 
 	protected void createVirus() {
 		PuzzleObject virus = new VirusObject(this, isCritical);

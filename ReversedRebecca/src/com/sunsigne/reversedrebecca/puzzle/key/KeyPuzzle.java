@@ -69,10 +69,19 @@ public abstract class KeyPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(key);
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
 	@Override
 	protected BufferedImage getWallTexture() {
-		String critical = isCritical ? "_critical" : "";
-		return new ImageTask().loadImage("textures/puzzle/" + getName() + "_wall" + critical);
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+		int row = isCritical ? 2 : 1;
+		return getSheetSubImage(sheet, getSheetColCriterion(), row, getSheetWidth(), getSheetHeight());
+
 	}
 
 	protected void createRandomWalls(int numOfWalls, boolean moving) {

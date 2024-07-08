@@ -292,6 +292,13 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 		return exit_list.getList().isEmpty() == false;
 	}
 
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 4;
+	}
+		
 	////////// RENDER ////////////
 
 	@Override
