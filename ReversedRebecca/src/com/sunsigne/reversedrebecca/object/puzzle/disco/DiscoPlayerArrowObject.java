@@ -11,8 +11,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 
-public class DiscoPlayerArrowObject extends PuzzleObject implements CollisionDetector {
+public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableImage, CollisionDetector {
 
 	public DiscoPlayerArrowObject(Puzzle puzzle, DIRECTION facing, int x) {
 		super(puzzle, false, x, 200);
@@ -51,10 +52,25 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements CollisionDet
 	private BufferedImage image;
 	private BufferedImage image_full;
 
+	@Override
+	public int getSheetSize() {
+		return 2*16;
+	}
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 1 + facing.getNum();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return -1;
+	}
+	
 	private void loadImages() {
-		String path = "textures/puzzle/" + getPuzzle().getName() + "_player_arrow";
-		image = new ImageTask().loadImage(path + "_" + facing.getName());
-		image_full = new ImageTask().loadImage(path + "_full_" + facing.getName());
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");	
+		image = getSheetSubImage(sheet, getSheetColCriterion(), 2, getSheetWidth(), getSheetHeight());
+		image_full = getSheetSubImage(sheet, getSheetColCriterion(), 3, getSheetWidth(), getSheetHeight());
 	}
 
 	////////// RENDER ////////////

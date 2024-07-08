@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Window;
 
@@ -45,16 +46,14 @@ public class DiscoBallObject extends PuzzleObject {
 
 	private Cycloid<BufferedImage> animation;
 
-	private void loadAnimations() {
-		BufferedImage img0 = loadImage("0");
-		BufferedImage img1 = loadImage("1");
-		animation = new Cycloid<>(img0, img1);
+	protected Animation buildAnimation(BufferedImage image) {
+		return new Animation(image, 1920, 1080);
 	}
-
-	private BufferedImage loadImage(String name) {
-		String path = "textures/puzzle/" + getPuzzle().getName() + "_ball_" + name;
-		BufferedImage image = new ImageTask().loadImage(path);
-		return image;
+	
+	private void loadAnimations() {
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_ball");
+		Animation images = buildAnimation(sheet);
+		animation = new Cycloid<BufferedImage>(images.getImages());
 	}
 
 	public BufferedImage getImage() {

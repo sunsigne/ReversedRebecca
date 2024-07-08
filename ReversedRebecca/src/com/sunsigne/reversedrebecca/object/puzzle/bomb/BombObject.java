@@ -165,8 +165,8 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 		return 64;
 	}
 
-	protected Animation buildAnimation(BufferedImage image) {
-		return new Animation(image, 64, 64);
+	protected Animation buildAnimation(BufferedImage sheet) {
+		return new Animation(sheet, 64, 64);
 	}
 
 	private void loadAnimation() {

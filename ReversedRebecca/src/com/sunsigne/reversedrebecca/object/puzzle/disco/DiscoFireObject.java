@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -30,8 +31,8 @@ public class DiscoFireObject extends PuzzleObject {
 
 	////////// TICK ////////////
 
-	private int animation_time = 10;
-	private int time = animation_time;
+	private int ANIMATION_TIME = 10;
+	private int time = ANIMATION_TIME;
 	private int delay;
 
 	@Override
@@ -39,7 +40,7 @@ public class DiscoFireObject extends PuzzleObject {
 		delay--;
 		time--;
 		if (time < 0) {
-			time = animation_time;
+			time = ANIMATION_TIME;
 			animation.cycle();
 		}
 	}
@@ -48,17 +49,14 @@ public class DiscoFireObject extends PuzzleObject {
 
 	private Cycloid<BufferedImage> animation;
 
-	private void loadAnimations() {
-		BufferedImage img0 = loadImage("0");
-		BufferedImage img1 = loadImage("1");
-		BufferedImage img2 = loadImage("2");
-		animation = new Cycloid<>(img0, img1, img2);
+	protected Animation buildAnimation(BufferedImage image) {
+		return new Animation(image, 32, 32);
 	}
 
-	private BufferedImage loadImage(String name) {
-		String path = "textures/puzzle/" + getPuzzle().getName() + "_fire_" + name;
-		BufferedImage image = new ImageTask().loadImage(path);
-		return image;
+	private void loadAnimations() {
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_fire");
+		Animation images = buildAnimation(sheet);
+		animation = new Cycloid<BufferedImage>(images.getImages());
 	}
 
 	public BufferedImage getImage() {

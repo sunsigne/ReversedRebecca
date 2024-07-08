@@ -10,18 +10,18 @@ public class Animation {
 
 	private GameList<BufferedImage> list = new GameList<>(LISTTYPE.ARRAY);
 
-	public Animation(BufferedImage image) {
-		this(image, 16, 16);
+	public Animation(BufferedImage sheet) {
+		this(sheet, 16, 16);
 	}
 
-	public Animation(BufferedImage image, int width, int height) {
+	public Animation(BufferedImage sheet, int width, int height) {
 		boolean hasNextImage = true;
 		int col = 0;
 
 		while (hasNextImage) {
 			try {
 				col++;
-				BufferedImage img = image.getSubimage((col * width) - width, 0, width, height);
+				BufferedImage img = sheet.getSubimage((col * width) - width, 0, width, height);
 				list.addObject(img);
 			} catch (RasterFormatException e) {
 				hasNextImage = false;

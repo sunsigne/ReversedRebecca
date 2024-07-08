@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -20,7 +21,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 
-public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, KeyboardEvent {
+public class DiscoArrowObject extends PuzzleObject implements SheetableImage, CollisionReactor, KeyboardEvent {
 
 	public DiscoArrowObject(Puzzle puzzle, DIRECTION facing, int x, int y) {
 		super(puzzle, false, x, y);
@@ -66,7 +67,7 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 
 		if (caze == CASE.FAIL)
 			return;
-		
+
 		removeObject();
 		player_arrrow.blink();
 	}
@@ -109,10 +110,26 @@ public class DiscoArrowObject extends PuzzleObject implements CollisionReactor, 
 
 	private BufferedImage image;
 
+	@Override
+	public int getSheetSize() {
+		return 2 * 16;
+	}
+
+	@Override
+	public int getSheetColCriterion() {
+		return 1 + facing.getNum();
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask()
-					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_arrow_" + facing.getName());
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 

@@ -31,8 +31,8 @@ public class ExplosionAnimationObject extends AnimationObject {
 
 	////////// TEXTURE ////////////
 	
-	protected Animation buildAnimation(BufferedImage image) {
-		return new Animation(image, 32, 32);
+	protected Animation buildAnimation(BufferedImage sheet) {
+		return new Animation(sheet, 32, 32);
 	}
 	
 }
