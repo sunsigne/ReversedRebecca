@@ -10,10 +10,11 @@ import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class VirusObject extends PuzzleObject implements MouseObject {
+public class VirusObject extends PuzzleObject implements SheetableImage, MouseObject {
 
 	public VirusObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.M, Size.M);
@@ -94,7 +95,7 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 		int w = getWidth() / 2;
 		int h = getHeight() / 2;
 		keepMouseWithinZone(mouseX + w, mouseY + h, xmin + w, xmax + w, ymin + h, ymax + h);
-		
+
 		if (isReversed()) {
 			mouseX = xmax + xmin - mouseX;
 			mouseY = ymax + ymin - mouseY;
@@ -128,14 +129,25 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 
 	private Cycloid<BufferedImage> animation;
 
+	@Override
+	public int getSheetSize() {
+		return 2 * 16;
+	}
+
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return isCritical() ? 2 : 1;
+	}
+
 	private void loadAnimation() {
-
-		String path = "textures/puzzle/" + getPuzzle().getName() + "_virus";
-		ImageTask loader = new ImageTask();
-		String critical = isCritical() ? "_critical" : "";
-
-		BufferedImage img0 = loader.loadImage(path + "_0" + critical);
-		BufferedImage img1 = loader.loadImage(path + "_1" + critical);
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_virus");
+		BufferedImage img0 = getSheetSubImage(sheet, 1);
+		BufferedImage img1 = getSheetSubImage(sheet, 2);
 
 		animation = new Cycloid<BufferedImage>(img0, img1);
 	}
@@ -147,8 +159,10 @@ public class VirusObject extends PuzzleObject implements MouseObject {
 	private BufferedImage disguise_image;
 
 	public BufferedImage getDisguiseImage() {
-		if (disguise_image == null)
-			disguise_image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_disguise");
+		if (disguise_image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_addon");
+			disguise_image = getSheetSubImage(sheet, 2, 1, 48, 48);
+		}
 		return disguise_image;
 	}
 

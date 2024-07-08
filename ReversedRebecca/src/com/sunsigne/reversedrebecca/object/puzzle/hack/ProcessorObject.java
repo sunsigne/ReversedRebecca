@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
@@ -22,7 +23,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public abstract class ProcessorObject extends PuzzleObject implements MouseUserEvent {
+public abstract class ProcessorObject extends PuzzleObject implements SheetableImage, MouseUserEvent {
 
 	public ProcessorObject(Puzzle puzzle, String text) {
 		super(puzzle, false, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2,
@@ -103,11 +104,18 @@ public abstract class ProcessorObject extends PuzzleObject implements MouseUserE
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage image;
+	protected BufferedImage image;
+
+	@Override
+	public int getSheetSize() {
+		return 3 * 16;
+	}
 
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName());
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+			image = getSheetSubImage(sheet);
+		}			
 		return image;
 	}
 

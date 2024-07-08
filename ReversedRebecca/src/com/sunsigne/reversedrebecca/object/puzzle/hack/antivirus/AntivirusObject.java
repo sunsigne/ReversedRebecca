@@ -30,4 +30,11 @@ public abstract class AntivirusObject extends ProcessorEatable {
 
 	public abstract void destroyAntivirus();
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetRowCriterion() {
+		return 4;
+	}
+	
 }

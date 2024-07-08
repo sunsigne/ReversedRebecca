@@ -49,10 +49,9 @@ public class ProcessorTrash extends ProcessorEatable {
 	private BufferedImage full_img;
 
 	private void loadImages() {
-		empty_img = new ImageTask()
-				.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "empty");
-		full_img = new ImageTask()
-				.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "filled");
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+		empty_img = getSheetSubImage(sheet, 4);
+		full_img = getSheetSubImage(sheet, 3);
 	}
 
 	@Override

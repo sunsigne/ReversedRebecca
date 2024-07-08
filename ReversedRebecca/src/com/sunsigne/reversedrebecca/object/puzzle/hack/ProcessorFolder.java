@@ -216,4 +216,30 @@ public class ProcessorFolder extends ProcessorObject {
 		myback = new ProcessorBack(getPuzzle(), previousback, processors);
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+		
+	@Override
+	public int getSheetColCriterion() {
+		switch (getName()) {
+		case "folder":
+			return 1;
+		case "back":
+			return 2;
+		case "computer":
+			return 3;
+		case "peripherals":
+			return 4;
+		case "image":
+			return 5;
+		case "music":
+			return 6;
+		}
+		return 0;
+	}
+
 }

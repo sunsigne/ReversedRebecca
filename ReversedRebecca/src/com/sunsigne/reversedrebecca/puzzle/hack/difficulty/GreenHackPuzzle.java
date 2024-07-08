@@ -29,7 +29,7 @@ public class GreenHackPuzzle extends HackPuzzle {
 		// desktop content
 		ProcessorFolder system = createSystem(windows);
 		ProcessorEatable[] mp3 = createMP3Files();
-		ProcessorFolder music = createFolder("music_0", translate("FolderMusics"), mp3);
+		ProcessorFolder music = createFolder("music", translate("FolderMusics"), mp3);
 
 		// root content
 		createDesktop(system, music);

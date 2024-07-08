@@ -238,7 +238,7 @@ public abstract class HackPuzzle extends Puzzle {
 			png[index] = new ProcessorEatable(this, rad.getString(getPNGNames())) {
 				@Override
 				public String getName() {
-					return "image_" + 1;
+					return "image";
 				}
 			};
 			// number "horse" not added to computer yet

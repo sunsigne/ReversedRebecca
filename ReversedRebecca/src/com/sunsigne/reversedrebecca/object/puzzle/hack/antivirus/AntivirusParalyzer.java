@@ -66,15 +66,18 @@ public class AntivirusParalyzer extends AntivirusObject {
 
 	@Override
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask()
-					.loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "white");
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+			image = getSheetSubImage(sheet, 4);
+		}
 		return image;
 	}
 
 	public BufferedImage getBlueImage() {
-		if (blueImage == null)
-			blueImage = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName());
+		if (blueImage == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+			blueImage = getSheetSubImage(sheet, 3);
+		}
 		return blueImage;
 	}
 
@@ -89,7 +92,7 @@ public class AntivirusParalyzer extends AntivirusObject {
 		Graphics2D g2d = (Graphics2D) g;
 		float alpha = (float) time / (float) (PARALYZING_TIME / 2);
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.min(alpha, 1f)));
-		
+
 		g2d.drawImage(getBlueImage(), getX(), getY(), getWidth(), getHeight(), null);
 
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));

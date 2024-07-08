@@ -1,9 +1,11 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus;
 
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class AntivirusShrinker extends AntivirusObject {
@@ -52,4 +54,13 @@ public class AntivirusShrinker extends AntivirusObject {
 			antivirusAction();
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public BufferedImage getImage() {
+		if(image == null)
+			image = new ImageTask().loadImage("textures/puzzle/" + "hack_antivirus_shrinker");
+		return image;
+	}
+	
 }

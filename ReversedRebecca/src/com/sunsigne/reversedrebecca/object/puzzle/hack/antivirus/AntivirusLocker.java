@@ -51,9 +51,16 @@ public class AntivirusLocker extends AntivirusObject {
 
 	private BufferedImage image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
 	public BufferedImage getSubImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + "key");
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_addon");
+			image = getSheetSubImage(sheet, 1, 1, 48, 48);
+		}
 		return image;
 	}
 

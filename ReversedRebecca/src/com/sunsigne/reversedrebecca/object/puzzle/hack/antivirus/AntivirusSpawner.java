@@ -58,4 +58,11 @@ public class AntivirusSpawner extends AntivirusObject {
 		}
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 7;
+	}
+	
 }

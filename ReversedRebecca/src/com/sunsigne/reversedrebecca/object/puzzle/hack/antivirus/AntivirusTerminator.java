@@ -72,8 +72,9 @@ public class AntivirusTerminator extends AntivirusObject {
 	private BufferedImage off_img;
 
 	private void loadImages() {
-		on_img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "on");
-		off_img = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_" + getName() + "_" + "off");
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+		on_img = getSheetSubImage(sheet, 5);
+		off_img = getSheetSubImage(sheet, 6);
 	}
 
 	@Override

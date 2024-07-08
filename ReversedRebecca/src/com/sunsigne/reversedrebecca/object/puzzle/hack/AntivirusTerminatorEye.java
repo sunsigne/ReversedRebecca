@@ -1,10 +1,12 @@
 package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusTerminator;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class AntivirusTerminatorEye extends ProcessorObject implements MouseObject {
@@ -111,6 +113,27 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 		keepWithinZone(getX(), getY(), x0 - R / 2, x0 + R / 2, y0 - R / 2, y0 + R / 2);
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 3;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+	
+	@Override
+	public BufferedImage getImage() {
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_addon");
+			image = getSheetSubImage(sheet);
+		}			
+		return image;
+	}
+	
 	////////// RENDER ////////////
 
 	private boolean left_eye;

@@ -31,8 +31,8 @@ public class HardestHackPuzzle extends HackPuzzle {
 		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorEatable[] mp3 = createMP3Files();
 		ProcessorEatable[] png = createPNGFiles();
-		ProcessorFolder music = createFolder("music_0", translate("FolderMusics"), mp3);
-		ProcessorFolder image = createFolder("image_0", translate("FolderImages"), png);
+		ProcessorFolder music = createFolder("music", translate("FolderMusics"), mp3);
+		ProcessorFolder image = createFolder("image", translate("FolderImages"), png);
 
 		// root content
 		AntivirusParalyzer paralyzer = new AntivirusParalyzer(this);

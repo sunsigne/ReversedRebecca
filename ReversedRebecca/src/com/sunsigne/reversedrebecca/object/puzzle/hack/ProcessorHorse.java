@@ -24,7 +24,7 @@ public class ProcessorHorse extends ProcessorEatable {
 
 	@Override
 	public String getName() {
-		return "image_1";
+		return "image";
 	}
 
 	////////// RENDER ////////////

@@ -42,6 +42,13 @@ public class AntivirusReverser extends AntivirusObject {
 		playSound("antivirus_reverser");
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 2;
+	}
+	
 	////////// MOUSE ////////////
 
 	@Override

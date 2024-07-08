@@ -15,4 +15,11 @@ public class ProcessorCPU extends ProcessorEatable {
 		return "cpu";
 	}
 
+	////////// TEXTURE ////////////
+	
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+	
 }

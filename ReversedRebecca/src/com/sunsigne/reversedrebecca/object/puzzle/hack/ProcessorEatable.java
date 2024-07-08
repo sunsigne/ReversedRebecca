@@ -17,8 +17,8 @@ public abstract class ProcessorEatable extends ProcessorObject {
 	public void doVirusAction() {
 		removeObject();
 		getComputer().removeObject(this);
-		
-		if(isFruitFile())
+
+		if (isFruitFile())
 			new AchievementTask().unlockAchievement("fruit");
 	}
 
@@ -26,18 +26,40 @@ public abstract class ProcessorEatable extends ProcessorObject {
 	public String getVirusActionSound() {
 		return "virus_bite";
 	}
-	
+
 	private boolean isFruitFile() {
-		if(text.equalsIgnoreCase(new Translatable().getTranslatedText("Apple", FilePath.PUZZLE)))
+		if (text.equalsIgnoreCase(new Translatable().getTranslatedText("Apple", FilePath.PUZZLE)))
 			return true;
-		
-		if(text.equalsIgnoreCase(new Translatable().getTranslatedText("Banana", FilePath.PUZZLE)))
+
+		if (text.equalsIgnoreCase(new Translatable().getTranslatedText("Banana", FilePath.PUZZLE)))
 			return true;
-		
-		if(text.equalsIgnoreCase(new Translatable().getTranslatedText("Grapes", FilePath.PUZZLE)))
+
+		if (text.equalsIgnoreCase(new Translatable().getTranslatedText("Grapes", FilePath.PUZZLE)))
 			return true;
-		
+
 		return false;
+	}
+
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 2;
+	}
+
+	@Override
+	public int getSheetColCriterion() {
+		switch (getName()) {
+		case "image":
+			return 2;
+		case "music_1":
+			return 5;
+		case "music_2":
+			return 6;
+		case "music_3":
+			return 7;
+		}
+		return 0;
 	}
 
 }
