@@ -10,15 +10,17 @@ public class ArrayCombiner<T> {
 		T[] combinedArray = (T[]) Array.newInstance(clazz, array.length + elements.length);
 		int index = 0;
 
-		for (T tempElement : array) {
-			combinedArray[index] = tempElement;
-			index++;
-		}
+		if (array.length > 0)
+			for (T tempElement : array) {
+				combinedArray[index] = tempElement;
+				index++;
+			}
 
-		for (T tempElement : elements) {
-			combinedArray[index] = tempElement;
-			index++;
-		}
+		if (elements.length > 0)
+			for (T tempElement : elements) {
+				combinedArray[index] = tempElement;
+				index++;
+			}
 
 		return combinedArray;
 	}
