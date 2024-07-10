@@ -44,9 +44,9 @@ Note : si le programmeur Piranha peut préciser les dimensions de l'objet à af
 
 Le Type de Requête CREATE_ANIMATION est une variante complexe de CREATE_DECORATION : elle permet de créer un visuel ayant une animation.
 
-FichierS de référence : « textures/other/animation/(cible)_XX.png » (où XX sont des nombres allant de 00 à 99). 
+Fichier de référence : « textures/other/animation/(cible).png ». 
 
-Note : à nommage et numérotation correcte, le jeu détectera automatiquement la totalité des fichiers de références requis pour jouer l'animation.
+Note : les images constituant l'animation doivent toutes être rassemblées dans un seul fichier, en ligne de gauche à droite. Le jeu détectera automatiquement leur nombre.
 
 En plus des mêmes Cibles que celles demandées par le Type de Requête CREATE_DECORATION, CREATE_ANIMATION a besoin de deux Cibles supplémentaires :
 - la "durée" d'animation en "ticks" (60 ticks = 1 seconde). Exemple : « 120 » signifie que chaque image de l'animation restera pendent exactement 2 secondes,
@@ -64,6 +64,7 @@ Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - où chaque image reste pendant 90 ticks (1 seconde et demie),
 - qui s'arrête sur la dernière image (la baignoire est remplie).
 
+Note : si le programmeur Piranha précise des dimensions à afficher différentes des réelles dimensions des images constituant l'animation dans le fichier de référence, elles doivent alors avoir une largeur et une hauteur identique (le jeu ne pouvant pas à la fois "deviner" la largeur d'une seule image et leurs nombres, la largeur est définie par le jeu comme étant égale à la hauteur).
 
 
 ////// CREATE_SIMULATION //////
@@ -73,7 +74,7 @@ Le Type de Requête CREATE_SIMULATION permet de créer l'animation des « Dalle
 CREATE_SIMULATION est une extension du Type de Requête CREATE_ANIMATION, avec des propriétés fixes :
 - la Sous-Couche est définie comme étant « GROUND »*,
 - l'Index est défini comme étant « FRONT »*,
-- le nombre de fichiers de références attendus est fixé à exactement 5,
+- le nombre d'images attendus constituant l'animation dans le fichier de référence est fixé à exactement 5,
 - la première image reste pendant 0.65 seconde,
 - chaque image suivante reste pendant 0.05 seconde,
 - l'animation s'arrête sur la dernière image,
@@ -89,7 +90,7 @@ TIME -> 0 = CREATE_SIMULATION -> 0-0:9,11,000,0
 Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - dont les coordonnées sont X=0 Y=0,
 - de largeur 9 case, de hauteur 11 cases,
-- nécessitant exactement cinq fichiers de références se trouvant dans le dossier « textures/workshop/000 » et de noms allant de "0_00.png" à "0_04.png".
+- nécessitant un fichier de référence dont le nom est "0.png", situé dans le dossier « textures/workshop/000 ».
 
 
 

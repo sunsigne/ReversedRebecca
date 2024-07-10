@@ -47,13 +47,9 @@ public abstract class AnimationObject extends SuperAnimationObject {
 
 	private LimitedCycloid<BufferedImage> animation;
 
-	protected Animation buildAnimation(BufferedImage sheet) {
-		return new Animation(sheet);
-	}
-
 	private void loadAnimations() {
 		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + getName());
-		Animation images = buildAnimation(sheet);
+		Animation images = new Animation(sheet);
 		animation = new LimitedCycloid<BufferedImage>(images.getImages());
 	}
 

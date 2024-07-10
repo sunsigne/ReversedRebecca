@@ -46,13 +46,9 @@ public class DiscoBallObject extends PuzzleObject {
 
 	private Cycloid<BufferedImage> animation;
 
-	protected Animation buildAnimation(BufferedImage image) {
-		return new Animation(image, 1920, 1080);
-	}
-	
 	private void loadAnimations() {
 		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_ball");
-		Animation images = buildAnimation(sheet);
+		Animation images = new Animation(sheet, 1920, 1080);
 		animation = new Cycloid<BufferedImage>(images.getImages());
 	}
 

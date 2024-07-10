@@ -49,13 +49,9 @@ public class DiscoFireObject extends PuzzleObject {
 
 	private Cycloid<BufferedImage> animation;
 
-	protected Animation buildAnimation(BufferedImage image) {
-		return new Animation(image, 32, 32);
-	}
-
 	private void loadAnimations() {
 		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_fire");
-		Animation images = buildAnimation(sheet);
+		Animation images = new Animation(sheet);
 		animation = new Cycloid<BufferedImage>(images.getImages());
 	}
 

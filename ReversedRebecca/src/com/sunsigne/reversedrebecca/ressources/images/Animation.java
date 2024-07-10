@@ -17,11 +17,13 @@ public class Animation {
 	public Animation(BufferedImage sheet, int width, int height) {
 		boolean hasNextImage = true;
 		int col = 0;
-
+		int h = sheet.getHeight();
+		int w = height == h ? width : h;
+		
 		while (hasNextImage) {
 			try {
 				col++;
-				BufferedImage img = sheet.getSubimage((col * width) - width, 0, width, height);
+				BufferedImage img = sheet.getSubimage((col * w) - w, 0, w, h);
 				list.addObject(img);
 			} catch (RasterFormatException e) {
 				hasNextImage = false;

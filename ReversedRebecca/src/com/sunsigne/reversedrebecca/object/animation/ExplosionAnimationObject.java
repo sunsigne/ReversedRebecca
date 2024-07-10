@@ -1,8 +1,5 @@
 package com.sunsigne.reversedrebecca.object.animation;
 
-import java.awt.image.BufferedImage;
-
-import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class ExplosionAnimationObject extends AnimationObject {
@@ -29,10 +26,4 @@ public class ExplosionAnimationObject extends AnimationObject {
 		return FRAME_RATE.NORMAL;
 	}
 
-	////////// TEXTURE ////////////
-	
-	protected Animation buildAnimation(BufferedImage sheet) {
-		return new Animation(sheet, 32, 32);
-	}
-	
 }

@@ -165,10 +165,6 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 		return 64;
 	}
 
-	protected Animation buildAnimation(BufferedImage sheet) {
-		return new Animation(sheet, 64, 64);
-	}
-
 	private void loadAnimation() {
 		String path = "textures/puzzle/" + getPuzzle().getName() + "_";
 
@@ -177,7 +173,7 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 		BufferedImage[] bomb_img_array = { bomb_img };
 
 		BufferedImage explosion_img = new ImageTask().loadImage(path + "explosion");
-		Animation explosion_animation = buildAnimation(explosion_img);
+		Animation explosion_animation = new Animation(explosion_img);
 
 		BufferedImage img[] = new ArrayCombiner<BufferedImage>().combine(BufferedImage.class, bomb_img_array,
 				explosion_animation.getImages());
