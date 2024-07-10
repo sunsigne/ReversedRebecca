@@ -70,8 +70,6 @@
 
 	texture on sheet (à faire) :
 	- caracter (chat)
-	- cursor
-	- menu
 	- other
 	- techtree
 
