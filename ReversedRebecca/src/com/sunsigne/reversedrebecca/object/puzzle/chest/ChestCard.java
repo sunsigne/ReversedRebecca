@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.chest.ChestPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -18,7 +19,7 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEvent {
+public class ChestCard extends PuzzleObject implements SheetableImage, MouseUserEvent, GamepadEvent {
 
 	public ChestCard(ChestPuzzle puzzle, String lootData, int x, int y) {
 		super(puzzle, false, x, y, 4 * Size.L, 5 * Size.L);
@@ -29,7 +30,7 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEv
 	public boolean isValid() {
 		return new ChestLootFactory().createLoot(this, lootData).isValid();
 	}
-	
+
 	////////// NAME ////////////
 
 	@Override
@@ -37,7 +38,7 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEv
 		var clazz = "CHEST CARD";
 		return clazz + " : " + lootData;
 	}
-	
+
 	////////// LOOT ////////////
 
 	private boolean lootCreated;
@@ -142,13 +143,32 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEv
 	private BufferedImage normal_img;
 	private BufferedImage gold_img;
 	private BufferedImage selection_img;
+	
+	@Override
+	public int getSheetWidth() {
+		return 512;
+	}
+	
+	@Override
+	public int getSheetHeight() {
+		return 640;
+	}
+	
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
 
 	private void loadImages() {
-		String path = "textures/techtree/";
-
-		normal_img = new ImageTask().loadImage(path + "card_normal");
-		gold_img = new ImageTask().loadImage(path + "card_gold");
-		selection_img = new ImageTask().loadImage(path + "card_selection");
+		BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "card");
+		normal_img = getSheetSubImage(sheet, 1);
+		gold_img = getSheetSubImage(sheet, 2);
+		selection_img = getSheetSubImage(sheet, 3);
 	}
 
 	////////// RENDER ////////////
@@ -193,7 +213,7 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEv
 	public void mouseReleased(MouseEvent e) {
 
 	}
-	
+
 	////////// GAMEPAD ////////////
 
 	private GamepadController gamepadController = new GamepadController(this);
@@ -213,5 +233,5 @@ public class ChestCard extends PuzzleObject implements MouseUserEvent, GamepadEv
 	public void buttonReleased(ButtonEvent e) {
 
 	}
-	
+
 }

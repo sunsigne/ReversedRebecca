@@ -61,7 +61,7 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public int getSheetColCriterion() {
-		return 1;
+		return getDifficulty().ordinal() - 1;
 	}
 
 	@Override
@@ -76,7 +76,8 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public BufferedImage getUpgradeImage() {
 		if (upgrade_img == null) {
-			upgrade_img = new ImageTask().loadImage("textures/" + "techtree/" + "battery_" + getDifficulty().getName());
+			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "battery");
+			upgrade_img = getSheetSubImage(sheet, getSheetColCriterion(), 1, 64, 32);
 			getUpgradeGoldImage(); // ensure to load the same difficulty image
 		}
 		return upgrade_img;
@@ -84,9 +85,10 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public BufferedImage getUpgradeGoldImage() {
-		if (upgrade_gold_img == null)
-			upgrade_gold_img = new ImageTask()
-					.loadImage("textures/" + "techtree/" + "battery_" + getDifficulty().getName() + "_gold");
+		if (upgrade_gold_img == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "battery");
+			upgrade_gold_img = getSheetSubImage(sheet, getSheetColCriterion(), 2, 64, 32);
+		}
 		return upgrade_gold_img;
 	}
 
@@ -100,7 +102,8 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public String getSecondLine() {
 		if (secondLine == null)
-			secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural" + getDifficulty().getName(), FilePath.TOOL);
+			secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural" + getDifficulty().getName(),
+					FilePath.TOOL);
 		return secondLine;
 	}
 

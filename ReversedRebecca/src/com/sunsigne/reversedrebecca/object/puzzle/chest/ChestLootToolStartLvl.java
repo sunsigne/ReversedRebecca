@@ -85,16 +85,19 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public BufferedImage getUpgradeImage() {
-		if (upgrade_img == null)
-			upgrade_img = new ImageTask()
-					.loadImage("textures/" + "techtree/" + "infinity_" + getDifficulty().getName());
+		if (upgrade_img == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
+			upgrade_img = getSheetSubImage(sheet, getSheetColCriterion() - 1, 1, 32, 32);
+		}
 		return upgrade_img;
 	}
 
 	@Override
 	public BufferedImage getUpgradeGoldImage() {
-		if (upgrade_gold_img == null)
-			upgrade_gold_img = new ImageTask().loadImage("textures/" + "techtree/" + "infinity_" + "gold");
+		if (upgrade_gold_img == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
+			upgrade_gold_img = getSheetSubImage(sheet, 1, 2, 32, 32);
+		}
 		return upgrade_gold_img;
 	}
 

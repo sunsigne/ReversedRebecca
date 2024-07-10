@@ -16,8 +16,9 @@ public class Textures {
 		loadRessources("textures/other/expression");
 		loadRessources("textures/puzzle");
 		loadRessources("textures/puzzler");
-		//loadRessources("textures/techtree");
+		loadRessources("textures/techtree");
 		loadRessources("textures/tools");
+		//loadRessources("textures/workshop");
 	}
 
 	private void loadRessources(String path) {
