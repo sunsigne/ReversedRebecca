@@ -8,7 +8,7 @@ Note : d'une certaine façon, le Type de Requête NAME (voir « NAME » dans 
 
 Le Type de Requête EXPRESSION affiche une bulle expressive au-dessus d'un objet. Cette bulle disparaît après un court instant, et son but est "d'habiller" les cinématiques (voir « CUTSCENE » dans la partie « Piranha – Type de Requêtes : Autres »).
 
-Fichier de référence : « ressources/textures/other/expression_(cible).png ».
+Fichier de référence : « ressources/textures/other/expression/(cible).png ».
 
 Fichiers de références inclus dans le jeu (ressources) :
 - SUSPENSION : affiche des points de suspension.

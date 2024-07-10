@@ -59,7 +59,7 @@ public class ExpressionObject extends GameObject {
 
 	public BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/other/" + "expression_" + name);
+			image = new ImageTask().loadImage("textures/other/expression/" + name);
 		return image;
 	}
 
