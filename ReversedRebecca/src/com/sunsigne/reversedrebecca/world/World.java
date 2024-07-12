@@ -30,6 +30,7 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.Textures;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -253,6 +254,11 @@ public class World implements Updatable, RenderFree {
 
 	private void loadImageMap() {
 		String mapName = this.mapName;
+
+		if (mapName.contains("workshop_")) {
+			String name = mapName.split("workshop_")[1];
+			new Textures().loadRessources("textures/workshop/" + name);
+		}
 
 		if (mapName.equals(FilePath.TEST)) {
 			boolean exist = false;

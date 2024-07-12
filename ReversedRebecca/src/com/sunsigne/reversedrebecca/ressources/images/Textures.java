@@ -18,10 +18,9 @@ public class Textures {
 		loadRessources("textures/puzzler");
 		loadRessources("textures/techtree");
 		loadRessources("textures/tools");
-		//loadRessources("textures/workshop");
 	}
 
-	private void loadRessources(String path) {
+	public void loadRessources(String path) {
 		File file = new File(FilePath.RESSOURCES_PATH + path);
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
 

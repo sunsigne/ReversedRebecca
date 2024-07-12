@@ -70,8 +70,6 @@
 
 	texture on sheet (à faire) :
 	- caracter (chat)
-	- techtree
-	- workshop (pour les lvl workshop uniquement)
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.

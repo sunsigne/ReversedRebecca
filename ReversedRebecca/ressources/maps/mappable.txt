@@ -45,7 +45,7 @@ Green = 255*
 Blue = voir niveau / see level
 
 *Si l'objet a un FACING, retirer 0 pour HORIZONTAL, 1 pour GAUCHE, 2 pour DROITE, 3 pour HAUT, 4 pour BAS et 5 pour VERTICAL.
-*Si l'objet a une couleur (indépendante du niveau), retirez 10 pour l'en changer (répétable).
+*Si l'objet a une couleur (indépendante du niveau), retirer 10 pour l'en changer (répétable).
 *If the object has a FACING, subtract 0 for HORIZONTAL, 1 for LEFT, 2 for RIGHT, 3 for UP et 4 for DOWN and 5 for VERTICAL.
 *If the object has a color (independent of the level), subtract 10 to change it (repeatable).
 
