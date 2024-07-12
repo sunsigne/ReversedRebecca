@@ -10,7 +10,7 @@ public class Textures {
 
 	public void loadRessources() {
 		loadRessources("textures/animation");
-		//loadRessources("textures/characters");
+		loadRessources("textures/characters");
 		loadRessources("textures/hud");
 		loadRessources("textures/other/animation");
 		loadRessources("textures/other/expression");

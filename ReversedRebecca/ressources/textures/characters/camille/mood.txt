@@ -1,0 +1,4 @@
+////// CHARACTER SPECIFIC //////
+
+happy=1,1
+asleep=1,2

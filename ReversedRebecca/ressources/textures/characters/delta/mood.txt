@@ -1,0 +1,24 @@
+////// HAPPY //////
+
+happy=1,1
+excited=1,2
+smile=1,3
+happy_var=1,4
+laugh=1,5
+laugh_var=1,6
+
+////// UNHAPPY //////
+
+no_sens=2,1
+sad=2,2
+
+////// CHARACTER SPECIFIC //////
+
+worry=3,1
+surprised=3,2
+wink=3,3
+
+////// IMITATION //////
+
+gamma=4,1
+gamma_var=4,2

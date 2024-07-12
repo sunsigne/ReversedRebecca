@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -21,6 +22,8 @@ public class ChatContent implements Updatable {
 
 	private String living_name;
 	private String mood;
+
+	private boolean userData = false;
 
 	public ChatContent(String living_name, String mood, String text) {
 		this.living_name = living_name;
@@ -178,13 +181,31 @@ public class ChatContent implements Updatable {
 
 	private BufferedImage image;
 
+	public BufferedImage getSheetSubImage(BufferedImage image, String moodFilePath) {
+		BufferedImage img = null;
+		int width = 144;
+		int height = 144;
+
+		try {
+			String data = new FileTask().read(userData, mood, moodFilePath);
+			int col = Integer.parseInt(data.split(",")[1]);
+			int row = Integer.parseInt(data.split(",")[0]);
+			img = image.getSubimage((col * width) - width, (row * height) - height, width, height);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		return img;
+	}
+
 	private void loadImage() {
-		String imagePath = "textures/characters/" + living_name + "/chat/" + mood;
-		image = new ImageTask().loadImage(imagePath, true);
+		String path = "textures/characters/" + living_name + "/";
+		BufferedImage sheet = new ImageTask().loadImage(path + "dialogue", true);
+		image = getSheetSubImage(sheet, path + "mood.txt");
 
 		// load error character instead of missing texture
 		if (image == null) {
-			String fixedPath = "textures/characters/" + "error" + "/chat/" + "neutral";
+			String fixedPath = "textures/characters/" + "error" + "/" + "dialogue";
 			image = new ImageTask().loadImage(fixedPath);
 		}
 	}

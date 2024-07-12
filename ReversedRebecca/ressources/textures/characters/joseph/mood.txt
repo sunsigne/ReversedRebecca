@@ -1,0 +1,5 @@
+////// CHARACTER SPECIFIC //////
+
+happy=1,1
+happy_var=1,2
+doubt=1,3

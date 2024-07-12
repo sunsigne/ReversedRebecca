@@ -1,0 +1,18 @@
+////// VICTIM //////
+
+unhappy=1,1
+sad=1,2
+cry=1,3
+cry_var=1,4
+
+////// URGE //////
+
+urge_sad=2,1
+surprised=2,2
+urge_happy=2,3
+urge=2,4
+scared=2,4
+
+////// CHARACTER SPECIFIC //////
+
+happy=3,1

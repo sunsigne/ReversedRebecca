@@ -1,0 +1,35 @@
+////// HAPPY //////
+
+happy=1,1
+laugh=1,2
+worry=1,3
+you_silly=1,4
+
+////// UNHAPPY //////
+
+unhappy=2,1
+unhappy_var=2,2
+surprised_var2=2,3
+surprised=2,4
+surprised_var=2,5
+
+////// CRY //////
+
+cry_happy=3,1
+cry_var=3,2
+cry_var3=3,3
+cry=3,4
+cry_var2=3,5
+
+////// CHARACTER SPECIFIC //////
+
+asleep=4,1
+
+////// BLUSH //////
+
+blush_var2=5,1
+blush_var4=5,2
+blush_var5=5,3
+blush_var=5,4
+blush=5,5
+blush_var3=5,6
