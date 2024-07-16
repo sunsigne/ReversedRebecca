@@ -8,6 +8,11 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JInput"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JNA"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Lwjgl">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="ReversedRebecca/dependencies/Lwjgl"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="ressources"/>
 	<classpathentry kind="lib" path="userdata"/>
 	<classpathentry kind="lib" path="dependencies"/>

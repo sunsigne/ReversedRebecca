@@ -8,6 +8,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.glfw.GLFWJoystickCallback;
+
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 
 import net.java.games.input.Controller;
@@ -39,14 +42,35 @@ public class GamepadUpdate implements Runnable {
 
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
+	private GLFWJoystickCallback joystickCallback;
+	
 	public void start() {
-		//run();
-		//executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
+		
+		// Initialize GLFW. Most GLFW functions will not work before doing this.
+		if (!GLFW.glfwInit())
+			throw new IllegalStateException("Unable to initialize GLFW");
+		
+		System.out.println(GLFW.glfwJoystickPresent(GLFW.GLFW_JOYSTICK_1));
+
+		this.joystickCallback = new GLFWJoystickCallback() {
+            @Override
+            public void invoke(int jid, int event) {
+                if (event == GLFW.GLFW_CONNECTED) {
+                    System.out.println("Joystick " + jid + " connected");
+                } else if (event == GLFW.GLFW_DISCONNECTED) {
+                    System.out.println("Joystick " + jid + " disconnected");
+                }
+            }
+        };
+        GLFW.glfwSetJoystickCallback(this.joystickCallback);
+		
+		run();
+		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
 		
 	}
 
 	public void stop() {
-		//executorService.shutdown();
+		executorService.shutdown();
 	}
 
 	////////// MAIN LOOP ////////////
@@ -62,6 +86,8 @@ public class GamepadUpdate implements Runnable {
 
 		running = true;
 
+		System.out.println(GLFW.glfwJoystickPresent(GLFW.GLFW_JOYSTICK_1));
+		/*
 		GamepadManager.currentControllers = null;
 		Field field = null;
 		
@@ -95,10 +121,12 @@ public class GamepadUpdate implements Runnable {
 		}
 
 		var controllers = env.getControllers();
+		*/
 		running = false;
-		GamepadUpdate.controllers = controllers;
-
+		//GamepadUpdate.controllers = controllers;
+		
 		updateMemoryLeakPreventer();
+		
 	}
 
 	private static boolean activedMemoryLeakPrevention;
