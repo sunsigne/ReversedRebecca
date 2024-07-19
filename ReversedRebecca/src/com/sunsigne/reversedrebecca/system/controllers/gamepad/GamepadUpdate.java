@@ -8,9 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import org.lwjgl.glfw.GLFW;
-import org.lwjgl.glfw.GLFWJoystickCallback;
-
+import com.studiohartman.jamepad.ControllerManager;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 
 import net.java.games.input.Controller;
@@ -20,7 +18,8 @@ public class GamepadUpdate implements Runnable {
 
 	private ControllerEnvironment env;
 	private Class<? extends ControllerEnvironment> clazz;
-
+	private ControllerManager manager = new ControllerManager();	
+	
 	public GamepadUpdate() {
 		env = ControllerEnvironment.getDefaultEnvironment();
 		clazz = env.getClass();
@@ -42,27 +41,8 @@ public class GamepadUpdate implements Runnable {
 
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
-	private GLFWJoystickCallback joystickCallback;
-	
 	public void start() {
-		
-		// Initialize GLFW. Most GLFW functions will not work before doing this.
-		if (!GLFW.glfwInit())
-			throw new IllegalStateException("Unable to initialize GLFW");
-		
-		System.out.println(GLFW.glfwJoystickPresent(GLFW.GLFW_JOYSTICK_1));
-
-		this.joystickCallback = new GLFWJoystickCallback() {
-            @Override
-            public void invoke(int jid, int event) {
-                if (event == GLFW.GLFW_CONNECTED) {
-                    System.out.println("Joystick " + jid + " connected");
-                } else if (event == GLFW.GLFW_DISCONNECTED) {
-                    System.out.println("Joystick " + jid + " disconnected");
-                }
-            }
-        };
-        GLFW.glfwSetJoystickCallback(this.joystickCallback);
+		manager.initSDLGamepad();
 		
 		run();
 		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
@@ -70,6 +50,7 @@ public class GamepadUpdate implements Runnable {
 	}
 
 	public void stop() {
+		manager.quitSDLGamepad();
 		executorService.shutdown();
 	}
 
@@ -86,7 +67,9 @@ public class GamepadUpdate implements Runnable {
 
 		running = true;
 
-		System.out.println(GLFW.glfwJoystickPresent(GLFW.GLFW_JOYSTICK_1));
+		manager.update();
+		System.out.println(manager.getNumControllers());
+		
 		/*
 		GamepadManager.currentControllers = null;
 		Field field = null;
