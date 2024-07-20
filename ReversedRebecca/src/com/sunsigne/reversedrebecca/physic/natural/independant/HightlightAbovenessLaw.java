@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class HightlightAbovenessLaw extends IndependantLaw {
@@ -33,16 +34,19 @@ public class HightlightAbovenessLaw extends IndependantLaw {
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (object instanceof Player == false)
+		Player player = new PlayerFinder().getPlayer();
+		Interactive interactive = SingleInteractivityLaw.getCurrentInteractor();
+
+		if (object == null || player == null || interactive == null)
 			return;
 
-		Interactive interactive = SingleInteractivityLaw.getCurrentInteractor();
-		
-		if(interactive == null)
+		if (object != player && object != interactive)
 			return;
-		
+
 		if (interactive.isHighlightAbovePlayer())
 			interactive.render(g);
+		else
+			player.render(g);
 	}
 
 }
