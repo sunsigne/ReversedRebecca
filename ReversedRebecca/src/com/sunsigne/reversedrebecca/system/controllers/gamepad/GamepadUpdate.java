@@ -1,9 +1,7 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -18,8 +16,8 @@ public class GamepadUpdate implements Runnable {
 
 	private ControllerEnvironment env;
 	private Class<? extends ControllerEnvironment> clazz;
-	private ControllerManager manager = new ControllerManager();	
-	
+	private ControllerManager jamepad = new ControllerManager();
+
 	public GamepadUpdate() {
 		env = ControllerEnvironment.getDefaultEnvironment();
 		clazz = env.getClass();
@@ -42,54 +40,43 @@ public class GamepadUpdate implements Runnable {
 	private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
 	public void start() {
-		manager.initSDLGamepad();
-		
+		jamepad.initSDLGamepad();
+		requiredUpdate = jamepad.getNumControllers();
+
 		run();
 		executorService.scheduleAtFixedRate(this, 0, 500, TimeUnit.MILLISECONDS);
-		
+
 	}
 
 	public void stop() {
-		manager.quitSDLGamepad();
+		jamepad.quitSDLGamepad();
 		executorService.shutdown();
 	}
 
 	////////// MAIN LOOP ////////////
 
 	public static boolean running;
+	private int requiredUpdate;
 
-	private final static String JINPUT_THREAD_TO_KILL = "net.java.games.input.RawInputEventQueue$QueueThread";
-	
 	@Override
 	public void run() {
+		jamepad.update();
+
+		if (jamepad.getNumControllers() != requiredUpdate)
+			updateControlles();
+
+		requiredUpdate = jamepad.getNumControllers();
+	}
+
+	private void updateControlles() {
 		if (activedMemoryLeakPrevention)
 			return;
 
 		running = true;
 
-		manager.update();
-		System.out.println(manager.getNumControllers());
-		
-		/*
 		GamepadManager.currentControllers = null;
 		Field field = null;
-		
-		// System.err.println("start thread scan");
 
-		for (final var thread : Thread.getAllStackTraces().keySet()) {
-			System.out.println(thread.getClass());
-			if(thread.getClass().getName().equalsIgnoreCase(JINPUT_THREAD_TO_KILL)) {
-                thread.interrupt();
-                try {
-					thread.join();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-            }
-        }
-		
-		// System.err.println("finished thread scan");
-		
 		try {
 			field = clazz.getDeclaredField("loadedPluginNames");
 			field.setAccessible(true);
@@ -104,12 +91,11 @@ public class GamepadUpdate implements Runnable {
 		}
 
 		var controllers = env.getControllers();
-		*/
+
 		running = false;
-		//GamepadUpdate.controllers = controllers;
-		
+		GamepadUpdate.controllers = controllers;
+
 		updateMemoryLeakPreventer();
-		
 	}
 
 	private static boolean activedMemoryLeakPrevention;
