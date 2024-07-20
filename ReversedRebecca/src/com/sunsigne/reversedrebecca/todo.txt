@@ -52,7 +52,6 @@
 
 	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
 	puzzle cadenas PAS intuitif
-	memory leak du à la vérification chonique gamepad
 	faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle ?
 	les spammables ont des défaut (tester la chaise de RR000 pour comprendre)
 
