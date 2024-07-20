@@ -14,18 +14,19 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class TutorialScreen extends SubMenuScreen {
+public class TutorialScreen extends SubMenuScreen implements SheetableImage {
 
 	public TutorialScreen(GenericListener startWorld) {
 		super(NO);
@@ -62,6 +63,13 @@ public class TutorialScreen extends SubMenuScreen {
 
 		float size = 22f / (float) Math.sqrt(Window.SCALE_X);
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * 1.3f);
+	}
+
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+
 	}
 
 	////////// BUTTONS ////////////
@@ -125,9 +133,22 @@ public class TutorialScreen extends SubMenuScreen {
 
 	private BufferedImage dave_image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 4;
+	}
+
 	protected BufferedImage get_dave_image() {
-		if (dave_image == null)
-			dave_image = new ImageTask().loadImage("textures/characters/" + getCharacter() + "/" + "standing_down");
+		if (dave_image == null) {
+			BufferedImage sheet = new ImageTask()
+					.loadImage("textures/characters/" + getCharacter() + "/" + getCharacter());
+			dave_image = getSheetSubImage(sheet);
+		}
 		return dave_image;
 	}
 
