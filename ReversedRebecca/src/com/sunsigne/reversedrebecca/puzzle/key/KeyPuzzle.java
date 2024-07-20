@@ -131,14 +131,26 @@ public abstract class KeyPuzzle extends Puzzle {
 		}
 	}
 
+	////////// CLOSE ////////////
+
+	@Override
+	public void closePuzzle(boolean isPuzzleWon) {
+		super.closePuzzle(isPuzzleWon);
+
+		if (isPuzzleWon && mouseDisplayed == false)
+			mouseDisplayed = true;
+	}
+
 	////////// RENDER ////////////
+
+	private static boolean mouseDisplayed;
 
 	@Override
 	public void render(Graphics g) {
 		Color green = new Color(15, 45, 10, 240);
 		new TransluantLayer().drawPuzzle(g, green);
 
-		if (isTutorial() == false)
+		if (isTutorial() == false || mouseDisplayed)
 			return;
 
 		BufferedImage image = new ImageTask().loadImage("textures/puzzle/" + "mouse_tuto");
@@ -156,10 +168,13 @@ public abstract class KeyPuzzle extends Puzzle {
 		if (world == null)
 			return false;
 
-		if (world.getMapName().equalsIgnoreCase(FilePath.LVL000) == false)
-			return false;
+		if (world.getMapName().equalsIgnoreCase(FilePath.TUTORIAL))
+			return true;
+		
+		if (world.getMapName().equalsIgnoreCase(FilePath.LVL000))
+			return true;
 
-		return true;
+		return false;
 	}
 
 }
