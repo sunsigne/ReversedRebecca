@@ -18,10 +18,11 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class TextsSizePreview extends GameObject {
+public class TextsSizePreview extends GameObject implements SheetableImage {
 
 	public TextsSizePreview(int x, int y) {
 		super(x, y);
@@ -50,6 +51,16 @@ public class TextsSizePreview extends GameObject {
 	private String character;
 	private BufferedImage image;
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 4;
+	}
+	
 	private void loadCharacter() {
 		File file = new File(FilePath.RESSOURCES_PATH + "textures/characters");
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
@@ -62,7 +73,8 @@ public class TextsSizePreview extends GameObject {
 		});
 
 		character = new RandomGenerator().getElementFromList(chara_list);
-		image = new ImageTask().loadImage("textures/characters/" + character + "/" + "standing_down");
+		BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + character + "/" + character);
+		image = getSheetSubImage(sheet);
 
 		character = new FormattedString().capitalize(character);
 		if (character.contains("_"))
