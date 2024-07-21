@@ -24,7 +24,6 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
-		
 		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
 		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
 		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
@@ -76,7 +75,6 @@
 
 	EXPERIENCE UTILISATEUR :
 	3h00 - créer dans les menu options la possibilité de désactiver les highlights
-	1h30 - créer un système de "persistence visuel temporelle du texte" (0,5 sec de fadding par exemple) lors d'un choix (afin que les walktrhough no commentary soit compréhensibles)	
 	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -108,7 +106,6 @@
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 		
 	AUTRE :
-	0h20 lorsque la carte n'existe pas (mauvaise manip dans save.csv), afficher un message d'erreur
 	60h à vérifier le boss et tout ce qui est lié à lui
 	8h faire la traduction en anglais du jeu
 	1h formulaire de test : mettre à jour pour la version publique classique

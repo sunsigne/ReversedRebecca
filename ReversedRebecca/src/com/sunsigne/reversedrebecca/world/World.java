@@ -5,6 +5,8 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
@@ -33,6 +35,9 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.Textures;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -60,6 +65,8 @@ public class World implements Updatable, RenderFree {
 
 	////////// WORLD ////////////
 
+	private boolean userdata = false;
+	
 	public World(String mapName) {
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
 			LAYER.LOADING.addObject(new LoadingScreen());
@@ -180,6 +187,13 @@ public class World implements Updatable, RenderFree {
 		Game.getInstance().forceLoop();
 	}
 
+	private void stopApp() {
+		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
+		JOptionPane.showMessageDialog(null,
+				"An error has occurred : map folder \"" + mapName + "\" incorrect format or missing");
+		new Conductor().stopApp();
+	}
+	
 	////////// NAME ////////////
 
 	private String mapName;
@@ -255,6 +269,9 @@ public class World implements Updatable, RenderFree {
 	private void loadImageMap() {
 		String mapName = this.mapName;
 
+		if(new FileTask().doesExist(userdata, "maps/" + mapName) == false)
+			stopApp();
+				
 		if (mapName.contains("workshop_")) {
 			String name = mapName.split("workshop_")[1];
 			new Textures().loadRessources("textures/workshop/" + name);
