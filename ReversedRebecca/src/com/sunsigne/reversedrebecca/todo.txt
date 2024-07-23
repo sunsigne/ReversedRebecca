@@ -31,9 +31,12 @@
 		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
 		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
-		- menu languages 4 langues se sont affiché au lieu de 2
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
+	
+	pas réglé mais très compliqué :
+		- dans le supermenu, il est arrivé que le handler soit clear juste après avoir ajouté le menu (alors que l'inverse devrait se produire), ce qui a détruit son affichage
+		- menu languages 4 langues se sont affiché au lieu de 2
 	
 	vérifier si bien réglé :
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
@@ -68,7 +71,7 @@
 
 	////////// EN COURS ////////////
 
-	changer les fichiers de dialogues pour rempalcer les '#' par des ' '
+	3h00 changer les fichiers de dialogues pour rempalcer les '#' par des ' '
 	
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
