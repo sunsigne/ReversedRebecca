@@ -53,9 +53,14 @@ public class FormattedString {
 		return text.substring(0, 1).toUpperCase() + text.substring(1);
 	}
 
-	public String replaceSpace(String text) {
-		String no_space = text.replace(" ", "");
-		return no_space.replace("#", " ");
+	public String replaceSpace(boolean txt, String text) {
+		if (txt == false)
+			return text.replace(" ", "");
+
+		String no_space = text;		
+		no_space = no_space.replace(" = ", "=");
+		no_space = no_space.replace(" % ", "%");
+		return no_space;
 	}
 
 	public String replaceWithinKeyText(String text, String replacement) {

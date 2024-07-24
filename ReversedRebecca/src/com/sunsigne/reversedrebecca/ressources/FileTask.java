@@ -24,7 +24,6 @@ public class FileTask {
 		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
 		Path path0 = Paths.get(folder + path);
 		try {
-			System.out.println(Files.size(path0));
 			return Files.size(path0) != 0L;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -53,6 +52,7 @@ public class FileTask {
 		File file = new File(folder + path);
 		Scanner scan = null;
 		String content = "";
+		boolean txt = path.contains(".txt");
 
 		try {
 			if (file.exists()) {
@@ -63,18 +63,18 @@ public class FileTask {
 				if (valueToRead == null) {
 					while (scan.hasNextLine()) {
 						if (!flag) {
-							content = content.concat(getFormattedText(scan.nextLine()));
+							content = content.concat(getFormattedText(txt, scan.nextLine()));
 							flag = true;
 						} else
 							content = content
-									.concat(System.getProperty("line.separator") + getFormattedText(scan.nextLine()));
+									.concat(System.getProperty("line.separator") + getFormattedText(txt, scan.nextLine()));
 					}
 				}
 
 				// read one specific value
 				else {
 					while (scan.hasNextLine()) {
-						String line = getFormattedText(scan.nextLine());
+						String line = getFormattedText(txt, scan.nextLine());
 						if (line.split("=")[0].equalsIgnoreCase(valueToRead))
 							content = line.split("=")[1];
 					}
@@ -89,9 +89,9 @@ public class FileTask {
 		return content;
 	}
 
-	private String getFormattedText(String text) {
+	private String getFormattedText(boolean txt, String text) {
 		String formatted_text = text;
-		formatted_text = new FormattedString().replaceSpace(formatted_text);
+		formatted_text = new FormattedString().replaceSpace(txt, formatted_text);
 		formatted_text = new FormattedString().replaceValues(formatted_text);
 		return formatted_text;
 	}

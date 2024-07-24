@@ -18,8 +18,8 @@ EMPTY = Key2 % vider
 
 OPEN = Key1 % ouvrir
 EXPLODE = Key1 % exploser
-DIG = Key1% creuser
-HACK = Key1% pirater
+DIG = Key1 % creuser
+HACK = Key1 % pirater
 
 ///// CHOICES /////
 
