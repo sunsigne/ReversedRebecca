@@ -59,7 +59,11 @@ public class FormattedString {
 
 		String no_space = text;		
 		no_space = no_space.replace(" = ", "=");
+		no_space = no_space.replace("= ", "=");
+		no_space = no_space.replace(" =", "=");
 		no_space = no_space.replace(" % ", "%");
+		no_space = no_space.replace("% ", "%");
+		no_space = no_space.replace("% ", "%");
 		return no_space;
 	}
 
