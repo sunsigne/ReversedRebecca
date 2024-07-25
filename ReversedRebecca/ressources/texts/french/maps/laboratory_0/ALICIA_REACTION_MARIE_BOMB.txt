@@ -1,7 +1,7 @@
-alicia = marie = angry = Non,#c'est#pas#parfait#!@On#ne#va#pas#tout#faire#péter#!
-marie = down = worry = C'est#juste#pour#dégager#la#porte#d'entrée…@Rebecca#fera#attention.
-alicia = marie = unhappy = Hmm...#Rebecca,#tu#en#penses#quoi#?
-rebecca = alicia = laugh = (Je#ne#devrais#probablement#pas#lui@dire#que#je#trouve#l'idée#excitante.)
-rebecca = alicia = happy = Je#n'ai#aucun#problème#avec#ça.
-alicia = marie = unhappy = Bon…#Peut-être#que#vous#avez#raison,#après#tout…
-alicia = rebecca = happy = Je#suis#d'accord#si#tu#veux#faire#exploser#l'entrée.
+alicia = marie = angry = Non, c'est pas parfait !@On ne va pas tout faire péter !
+marie = down = worry = C'est juste pour dégager la porte d'entrée…@Rebecca fera attention.
+alicia = marie = unhappy = Hmm... Rebecca, tu en penses quoi ?
+rebecca = alicia = laugh = (Je ne devrais probablement pas lui@dire que je trouve l'idée excitante.)
+rebecca = alicia = happy = Je n'ai aucun problème avec ça.
+alicia = marie = unhappy = Bon… Peut-être que vous avez raison, après tout…
+alicia = rebecca = happy = Je suis d'accord si tu veux faire exploser l'entrée.

@@ -1,4 +1,4 @@
-rebecca = sarah = happy = …#Donc#en#résumer#:#l'individu#s'appelle#Vladimir,@et#il#est#venu#voler#les#plans#du#casque#de#déblocage.
-sarah = rebecca = worry = J'espère#qu'on#les#retrouvera#vite,#sinon@ça#pourrait#rapidemment#devenir#un#problème.
-sarah = rebecca = happy_var = Bon,#tu#es#prête#pour#ton#cadeau#?
-rebecca = sarah = excited = Et#comment#!
+rebecca = sarah = happy = … Donc en résumer : l'individu s'appelle Vladimir,@et il est venu voler les plans du casque de déblocage.
+sarah = rebecca = worry = J'espère qu'on les retrouvera vite, sinon@ça pourrait rapidemment devenir un problème.
+sarah = rebecca = happy_var = Bon, tu es prête pour ton cadeau ?
+rebecca = sarah = excited = Et comment !

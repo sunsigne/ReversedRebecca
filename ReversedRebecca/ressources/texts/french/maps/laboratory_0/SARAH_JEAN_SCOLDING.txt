@@ -1,4 +1,4 @@
-sarah = UP = angry_var = NON#MAIS#ÇA#VA#PAS#BIEN#DE@POUSSER#LES#GENS,#COMME#ÇA#!
+sarah = UP = angry_var = NON MAIS ÇA VA PAS BIEN DE@POUSSER LES GENS, COMME ÇA !
 jean = DOWN = surprised = Heu…
-sarah = UP = angry_var = "HEU"#RIEN#DU#TOUT#!#TU#VAS#VOIR#REBECCA@ET#TU#T'EXCUSES#!#MAINTENANT#!
-jean = DOWN = surprised = …#Oui.
+sarah = UP = angry_var = "HEU" RIEN DU TOUT ! TU VAS VOIR REBECCA@ET TU T'EXCUSES ! MAINTENANT !
+jean = DOWN = surprised = … Oui.

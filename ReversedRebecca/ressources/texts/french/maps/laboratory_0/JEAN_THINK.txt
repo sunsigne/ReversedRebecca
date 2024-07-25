@@ -1,1 +1,1 @@
-player = object = you_silly_var = (Je#ferais#mieux#de#le#laisser#tranquille).
+player = object = you_silly_var = (Je ferais mieux de le laisser tranquille).

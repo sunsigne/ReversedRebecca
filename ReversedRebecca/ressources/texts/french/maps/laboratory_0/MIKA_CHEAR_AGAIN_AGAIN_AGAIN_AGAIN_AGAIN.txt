@@ -1,2 +1,2 @@
-rebecca = object = excited = Allez#Mika#!#Tu#peux#le#faire#!
-mika = DOWN = angry_var = Je#sens#que#ça#vient#!
+rebecca = object = excited = Allez Mika ! Tu peux le faire !
+mika = DOWN = angry_var = Je sens que ça vient !

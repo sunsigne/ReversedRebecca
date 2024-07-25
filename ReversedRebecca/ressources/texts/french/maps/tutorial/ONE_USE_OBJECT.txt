@@ -1,2 +1,2 @@
-dave = player = calm = Tu#as#dû#le#remarquer,#mais#tu#n'as#pu@interagir#qu'une#seule#fois#avec#cet#objet.
-dave = player = calm = Ça#ne#sera#pas#toujours#le#cas.@Je#te#laisse#t'en#rendre#compte#par#toi-même.
+dave = player = calm = Tu as dû le remarquer, mais tu n'as pu@interagir qu'une seule fois avec cet objet.
+dave = player = calm = Ça ne sera pas toujours le cas.@Je te laisse t'en rendre compte par toi-même.

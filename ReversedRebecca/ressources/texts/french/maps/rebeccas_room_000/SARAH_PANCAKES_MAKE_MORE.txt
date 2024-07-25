@@ -1,2 +1,2 @@
-sarah = player = laugh = Là,#je#vais#pas#dire#non#!
-player = sarah = happy = Prends#une#chaise,@je#m'occupe#de#tout.
+sarah = player = laugh = Là, je vais pas dire non !
+player = sarah = happy = Prends une chaise,@je m'occupe de tout.

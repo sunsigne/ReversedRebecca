@@ -1,1 +1,1 @@
-alicia = rebecca = happy = Merci.#C'est#gentil.
+alicia = rebecca = happy = Merci. C'est gentil.

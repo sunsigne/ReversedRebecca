@@ -1,1 +1,1 @@
-player = object = laugh = Ha#!#Je#pensais#bien#les#trouver@dans#une#poches#de#vêtement.
+player = object = laugh = Ha ! Je pensais bien les trouver@dans une poches de vêtement.

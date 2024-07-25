@@ -1,2 +1,2 @@
-player = object = laugh = Mais#oui#!#J'ai#surement#dormi#avec@et#elles#se#sont#perdues#dans#les#draps#!
-player = object = happy = J'avais#raison,#elles#étaient#là.
+player = object = laugh = Mais oui ! J'ai surement dormi avec@et elles se sont perdues dans les draps !
+player = object = happy = J'avais raison, elles étaient là.

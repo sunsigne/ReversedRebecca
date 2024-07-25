@@ -1,1 +1,1 @@
-mika = DOWN = angry_var = C'EST#QUI#LE#PATRON#?
+mika = DOWN = angry_var = C'EST QUI LE PATRON ?

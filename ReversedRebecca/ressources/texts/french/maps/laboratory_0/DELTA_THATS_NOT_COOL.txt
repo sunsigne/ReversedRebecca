@@ -1,5 +1,5 @@
-delta = rebecca = worry = Hé#!#Chacun#son#passé…
-delta = rebecca = laugh = Et#puis…#Aujourd'hui,#moi#j'ai#rien#fait.
-rebecca = object = worry = C'est#pas#faux.
-rebecca = object = happy = Bon,#je#ferais#mieux#d'y#aller.
-delta = rebecca = wink = Bonne#chance,#ma#grande.
+delta = rebecca = worry = Hé ! Chacun son passé…
+delta = rebecca = laugh = Et puis… Aujourd'hui, moi j'ai rien fait.
+rebecca = object = worry = C'est pas faux.
+rebecca = object = happy = Bon, je ferais mieux d'y aller.
+delta = rebecca = wink = Bonne chance, ma grande.

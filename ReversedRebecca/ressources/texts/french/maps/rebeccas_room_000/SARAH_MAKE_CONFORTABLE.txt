@@ -1,4 +1,4 @@
-player = object = worry = Ne#reste#pas#debout#à#coté#de#la#porte#pendant@que#je#me#prépare,#hein#?#Mets-toi#à#l'aise.
-sarah = player = laugh = Ne#t'en#fais#pas,#c'est#prévu#!@J'attends#juste#que#tu#te#décales.
+player = object = worry = Ne reste pas debout à coté de la porte pendant@que je me prépare, hein ? Mets-toi à l'aise.
+sarah = player = laugh = Ne t'en fais pas, c'est prévu !@J'attends juste que tu te décales.
 
 

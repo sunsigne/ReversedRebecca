@@ -1,1 +1,1 @@
-player = object = laugh = This#plant#is#already#in#water,@it#doesn't#need#me#to#water#it.
+player = object = laugh = This plant is already in water,@it doesn't need me to water it.

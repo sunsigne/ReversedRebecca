@@ -1,13 +1,13 @@
-player = object = no_sens = Pourquoi#ma#clé#est#devenue#verte#?
-dave = player = calm = Chaque#couleur#correspond#à#un#niveau#de@difficulté#:#cyan#->#1#/#vert#->#2#/#jaune#->#3#/#etc.
-dave = player = calm = Une#clé#de#niveau#3#permet#d'ouvrir@toutes#les#portes#de#niveaux#1,#2#ou#3.
-player = object = happy = Dit#autrement#:#une#clé#jaune#permet#d'ouvrir@toutes#les#portes#cyans,#vertes#ou#jaunes.
-dave = player = calm = Oui.#Mais#il#y#a#un#"mais".
-dave = player = calm = Regardons#en#bas#à#gauche#de#ton#écran.
-dave = player = calm = Tu#as#ramassé#une#clé#de#niveau#3,#mais#ta@"jauge#à#clé"#n'est#montée#qu'au#niveau#2. 
-dave = player = calm = Sauf#que#visiblement,#elle#est#pleine.
-dave = player = calm = Vois#ça#comme…@Essayer#de#mettre#5#litres#d'eau#dans#une#tasse.
-dave = player = calm = À#moins#d'avoir#une#très#grande#tasse,@elle#sera#pleine#avant.
-player = object = worry = J'ai#saisi#l'idée.
-dave = player = calm = Il#y#a#encore#autre#chose#que@tu#dois#savoir#sur#les#mini-jeux…
-player = object = angry = Tu#rigoles#ou#quoi#?#Assez#de#blabla#!#Laisse-moi@m'amuser#un#peu#!#J'ai#une#porte#verte#à#ouvrir#!
+player = object = no_sens = Pourquoi ma clé est devenue verte ?
+dave = player = calm = Chaque couleur correspond à un niveau de@difficulté : cyan -> 1 / vert -> 2 / jaune -> 3 / etc.
+dave = player = calm = Une clé de niveau 3 permet d'ouvrir@toutes les portes de niveaux 1, 2 ou 3.
+player = object = happy = Dit autrement : une clé jaune permet d'ouvrir@toutes les portes cyans, vertes ou jaunes.
+dave = player = calm = Oui. Mais il y a un "mais".
+dave = player = calm = Regardons en bas à gauche de ton écran.
+dave = player = calm = Tu as ramassé une clé de niveau 3, mais ta@"jauge à clé" n'est montée qu'au niveau 2. 
+dave = player = calm = Sauf que visiblement, elle est pleine.
+dave = player = calm = Vois ça comme…@Essayer de mettre 5 litres d'eau dans une tasse.
+dave = player = calm = À moins d'avoir une très grande tasse,@elle sera pleine avant.
+player = object = worry = J'ai saisi l'idée.
+dave = player = calm = Il y a encore autre chose que@tu dois savoir sur les mini-jeux…
+player = object = angry = Tu rigoles ou quoi ? Assez de blabla ! Laisse-moi@m'amuser un peu ! J'ai une porte verte à ouvrir !

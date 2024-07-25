@@ -1,2 +1,2 @@
-alicia = DOWN = happy_var = Comme#tu#veux.#Alors,#à#plus#tard.
+alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
 player = UP = laugh = Oui.

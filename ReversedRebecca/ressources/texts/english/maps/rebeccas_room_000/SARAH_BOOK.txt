@@ -1,6 +1,6 @@
-player = object = happy = You're#looking#for#something?
-sarah = player = happy = I#was#thinking#that#your#piece@of#furniture#is#really#big.
-sarah = player = laugh = While#yo#have,#like…@Ten#books.
-player = object = worry = I#wanted#to#buy#more,@but#I#never#find#the#time#to#read.
-sarah = player = laugh = No,#I'm#laughing#because#I#have#the#same#furniture,@even#though#I've#got#fewer#books#than#you.
+player = object = happy = You're looking for something?
+sarah = player = happy = I was thinking that your piece@of furniture is really big.
+sarah = player = laugh = While yo have, like…@Ten books.
+player = object = worry = I wanted to buy more,@but I never find the time to read.
+sarah = player = laugh = No, I'm laughing because I have the same furniture,@even though I've got fewer books than you.
 player = object = laugh = Hah!

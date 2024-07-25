@@ -1,9 +1,9 @@
-player = UP = laugh = Who's#there?
+player = UP = laugh = Who's there?
 sarah = DOWN = happy = Sarah!
 player = UP = excited = Sarah!
-player = UP = laugh = I#open#the#door#right#away!
+player = UP = laugh = I open the door right away!
 player = UP = happy_var = …
-player = UP = surprised = Yikes!#I#was#sure@I#had#left#my#keys#in#the#lock…
-player = UP = worry = Eh…#One#moment!@I#must#find#my#keys!
-sarah = DOWN = laugh = This#is#so#Rebecca!
-player = DOWN = no_sens = What#do#I#do?
+player = UP = surprised = Yikes! I was sure@I had left my keys in the lock…
+player = UP = worry = Eh… One moment!@I must find my keys!
+sarah = DOWN = laugh = This is so Rebecca!
+player = DOWN = no_sens = What do I do?

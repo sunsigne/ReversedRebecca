@@ -1,12 +1,12 @@
-rebecca = object = laugh = Salut#Delta#!
-delta = rebecca = happy = Yo,#ma#grande#!@Comment#je#peux#t'aider#?
-rebecca = object = happy = Tu#as#des#infos#sur#ce@qu'il#vient#de#se#passer#?
-delta = rebecca = excited = Oui,#je#sais#tout.
-rebecca = object = surprised = Vraiment#?
-delta = rebecca = worry = Non.#Mais,#je#devine#les#grandes#lignes.
-delta = rebecca = happy = Un#type#s'est#introduit#ici,#il#a#volé#un#truc,@et#il#est#parti.#J'ai#bon#?
-rebecca = object = laugh = À#peu#près,#oui#!
-rebecca = object = worry = Par#contre,#on#ne#sait#pas@s'il#a#volé#quelque#chose.
-delta = rebecca = wink = Crois-en#mon#expérience.#Qui#que#ça#soit,@il#ou#elle#n'est#pas#reparti#les#mains#vides.
-rebecca = object = happy_var = Ok.#Dans#ce#cas,#je#dois#trouver#ce#qu'il#a#pris.
-delta = rebecca = excited = Bon#courage,#ma#grande#!
+rebecca = object = laugh = Salut Delta !
+delta = rebecca = happy = Yo, ma grande !@Comment je peux t'aider ?
+rebecca = object = happy = Tu as des infos sur ce@qu'il vient de se passer ?
+delta = rebecca = excited = Oui, je sais tout.
+rebecca = object = surprised = Vraiment ?
+delta = rebecca = worry = Non. Mais, je devine les grandes lignes.
+delta = rebecca = happy = Un type s'est introduit ici, il a volé un truc,@et il est parti. J'ai bon ?
+rebecca = object = laugh = À peu près, oui !
+rebecca = object = worry = Par contre, on ne sait pas@s'il a volé quelque chose.
+delta = rebecca = wink = Crois-en mon expérience. Qui que ça soit,@il ou elle n'est pas reparti les mains vides.
+rebecca = object = happy_var = Ok. Dans ce cas, je dois trouver ce qu'il a pris.
+delta = rebecca = excited = Bon courage, ma grande !

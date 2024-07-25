@@ -1,1 +1,1 @@
-object = player = laugh = Hey,#Rebecca#!
+object = player = laugh = Hey, Rebecca !

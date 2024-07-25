@@ -1,2 +1,2 @@
-player = LEFT = you_silly = As#ever,#I#do#cast#pearls#before#swine.
-player = DOWN = surprised = Oh!#Here's#an#idea!
+player = LEFT = you_silly = As ever, I do cast pearls before swine.
+player = DOWN = surprised = Oh! Here's an idea!

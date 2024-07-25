@@ -1,12 +1,12 @@
-player = mika = unhappy = J'ai#de#la#peine#pour#Alicia...@Toute#seule...#Enfermée...
-mika = player = doubt = Tu#me#fais#quoi,#là ?
-player = mika = worry = Je#te#fais#culpabiliser.#Ça#marche#?
+player = mika = unhappy = J'ai de la peine pour Alicia...@Toute seule... Enfermée...
+mika = player = doubt = Tu me fais quoi, là ?
+player = mika = worry = Je te fais culpabiliser. Ça marche ?
 mika = player = serious = Non.
-player = mika = worry = C'est#parce#que#je#ne#m'y#suis#pas#bien#prise.@Attend,#je#vais#l'imiter.
-player = mika = you_silly_var = Hum…#Hum…
-player = mika = cry_var = Aide-moi#!
-player = mika = laugh = Ho#mon#Dieu#!#Je#l'ai#trop#bien#faite#!
-player = mika = happy = Plus#sérieusement,#tu#vas#m'aider#maitenant#?
-mika = player = serious_var = J'applaudis#l'effort,#mais#c'est#toujours#non.
-mika = player = serious = Je#dois#dégager#la#sortie.@Demande#à#quelqu'un#d'autre.
-player = mika = worry = Ok,#j'ai#compris…#Tant#pis.
+player = mika = worry = C'est parce que je ne m'y suis pas bien prise.@Attend, je vais l'imiter.
+player = mika = you_silly_var = Hum… Hum…
+player = mika = cry_var = Aide-moi !
+player = mika = laugh = Ho mon Dieu ! Je l'ai trop bien faite !
+player = mika = happy = Plus sérieusement, tu vas m'aider maitenant ?
+mika = player = serious_var = J'applaudis l'effort, mais c'est toujours non.
+mika = player = serious = Je dois dégager la sortie.@Demande à quelqu'un d'autre.
+player = mika = worry = Ok, j'ai compris… Tant pis.

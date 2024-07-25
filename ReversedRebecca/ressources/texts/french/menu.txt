@@ -1,28 +1,28 @@
 Loading = Chargement
-ProgressSaved = Progression#sauvegardée
+ProgressSaved = Progression sauvegardée
 
 ///// LEVEL STATS /////
 
-LevelCompleted = Niveau#Terminé
-LevelGoodDeed = Bonne#Action
-LevelBadDeed = Mauvaise#Action
+LevelCompleted = Niveau Terminé
+LevelGoodDeed = Bonne Action
+LevelBadDeed = Mauvaise Action
 LevelNoneDeed = Aucune
-LevelYouArePsychopath = Vous#êtes#:#psychopathe
-LevelYouAreSadistic = Vous#êtes#:#sadique
-LevelYouAreMean = Vous#êtes#:#méchant
-LevelYouAreNeutral = Vous#êtes#:#neutre
-LevelYouAreNice = Vous#êtes#:#gentil
-LevelYouAreAngelic = Vous#êtes#:#angélique
-LevelClickToContinue = Cliquez#pour#continuer
+LevelYouArePsychopath = Vous êtes : psychopathe
+LevelYouAreSadistic = Vous êtes : sadique
+LevelYouAreMean = Vous êtes : méchant
+LevelYouAreNeutral = Vous êtes : neutre
+LevelYouAreNice = Vous êtes : gentil
+LevelYouAreAngelic = Vous êtes : angélique
+LevelClickToContinue = Cliquez pour continuer
 
 ///// RESUME /////
 
 ResumeButton = reprendre
 Cancel = annuler
-ResumeDetail1 = Le#jeu#sauvegarde
-ResumeDetail2 = a#chaque#fin#de#niveau
-QuitDetail1 = Voulez-vous#vraiment
-QuitDetail2 = quitter#le#jeu#?
+ResumeDetail1 = Le jeu sauvegarde
+ResumeDetail2 = a chaque fin de niveau
+QuitDetail1 = Voulez-vous vraiment
+QuitDetail2 = quitter le jeu ?
 
 ///// MAIN /////
 
@@ -31,24 +31,24 @@ OptionsButton = options
 QuitButton = quitter
 BackButton = retour
 Achievement = succes
-CrashButton = Signaler#un#bug
+CrashButton = Signaler un bug
 
 ///// PLAY /////
 
 DifficultyEasy = facile
 DifficultyNormal = normal
 DifficultyHard = difficile
-EasyDetail1 = double#XP
-EasyDetail2 = puzzle#plus#faciles
-NormalDetail1 = l'experience#du#jeu
+EasyDetail1 = double XP
+EasyDetail2 = puzzle plus faciles
+NormalDetail1 = l'experience du jeu
 NormalDetail2 = original
-HardDetail1 = puzzle#plus#durs
-HardDetail2 = une#seule#vie
+HardDetail1 = puzzle plus durs
+HardDetail2 = une seule vie
 
 ///// TUTORIAL /////
 
-TutorialDetail1 = As-tu#besoin#d'un#tutoriel
-TutorialDetail2 = pour#apprendre#à#jouer#?
+TutorialDetail1 = As-tu besoin d'un tutoriel
+TutorialDetail2 = pour apprendre à jouer ?
 YesButton = Oui
 NoButton = Non
 
@@ -60,8 +60,8 @@ Reset = reset
 ///// RESET /////
 
 Confirm = confirmer
-ResetDetail1 = Votre#progression#sera
-ResetDetail2 = definitivement#perdue
+ResetDetail1 = Votre progression sera
+ResetDetail2 = definitivement perdue
 
 ///// CONTROLS /////
 
@@ -74,10 +74,10 @@ Down = bas
 Left = gauche
 Right = droite
 Dialogue = dialogue
-Action1 = action#1
-Action2 = action#2
-Action3 = action#3
-Default = par#defaut
+Action1 = action 1
+Action2 = action 2
+Action3 = action 3
+Default = par defaut
 
 ///// AUDIO /////
 
@@ -93,9 +93,9 @@ VideoButton = video
 Camera = camera
 CameraStatic = statique
 CameraDynamic = dynamique
-CameraDetail = La#Camera#suit#le#joueur
-StaticDetail = au#pixel#pres
-DynamicDetail = de#façon#fluide
+CameraDetail = La Camera suit le joueur
+StaticDetail = au pixel pres
+DynamicDetail = de façon fluide
 Texts = textes
 TextsSmall = petit
 TextsMedium = moyen

@@ -1,95 +1,95 @@
 ///// KEY /////
 
-KeyCyan = cyan#key
-KeyGreen = green#key
-KeyYellow = yellow#key
-KeyOrange = orange#key
-KeyRed = red#key
-KeyPurple = purple#key
+KeyCyan = cyan key
+KeyGreen = green key
+KeyYellow = yellow key
+KeyOrange = orange key
+KeyRed = red key
+KeyPurple = purple key
 
 KeyPermanentDeterminer = a
-KeyPermanentCyan = permanent#cyan#key
-KeyPermanentGreen = permanent#green#key
-KeyPermanentYellow = permanent#yellow#key
-KeyPermanentOrange = permanent#orange#key
-KeyPermanentRed = permanent#red#key
-KeyPermanentPurple = permanent#purple#key
+KeyPermanentCyan = permanent cyan key
+KeyPermanentGreen = permanent green key
+KeyPermanentYellow = permanent yellow key
+KeyPermanentOrange = permanent orange key
+KeyPermanentRed = permanent red key
+KeyPermanentPurple = permanent purple key
 
-KeyPluralCyan = the#cyan#keys
-KeyPluralGreen = the#green#keys
-KeyPluralYellow = the#yellow#keys
-KeyPluralOrange = the#orange#keys
-KeyPluralRed = the#red#keys
-KeyPluralPurple = the#purple#keys
+KeyPluralCyan = the cyan keys
+KeyPluralGreen = the green keys
+KeyPluralYellow = the yellow keys
+KeyPluralOrange = the orange keys
+KeyPluralRed = the red keys
+KeyPluralPurple = the purple keys
 
 ///// BOMB /////
 
-BombCyan = cyan#bomb
-BombGreen = green#bomb
-BombYellow = yellow#bomb
-BombOrange = orange#bomb
-BombRed = red#bomb
-BombPurple = purple#bomb
+BombCyan = cyan bomb
+BombGreen = green bomb
+BombYellow = yellow bomb
+BombOrange = orange bomb
+BombRed = red bomb
+BombPurple = purple bomb
 
 BombPermanentDeterminer = a
-BombPermanentCyan = permanent#cyan#bomb
-BombPermanentGreen = permanent#green#bomb
-BombPermanentYellow = permanent#yellow#bomb
-BombPermanentOrange = permanent#orange#bomb
-BombPermanentRed = permanent#red#bomb
-BombPermanentPurple = permanent#purple#bomb
+BombPermanentCyan = permanent cyan bomb
+BombPermanentGreen = permanent green bomb
+BombPermanentYellow = permanent yellow bomb
+BombPermanentOrange = permanent orange bomb
+BombPermanentRed = permanent red bomb
+BombPermanentPurple = permanent purple bomb
 
-BombPluralCyan = the#cyan#bombs
-BombPluralGreen = the#green#bombs
-BombPluralYellow = the#yellow#bombs
-BombPluralOrange = the#orange#bombs
-BombPluralRed = the#red#bombs
-BombPluralPurple = the#purple#bombs
+BombPluralCyan = the cyan bombs
+BombPluralGreen = the green bombs
+BombPluralYellow = the yellow bombs
+BombPluralOrange = the orange bombs
+BombPluralRed = the red bombs
+BombPluralPurple = the purple bombs
 
 ///// MICROCHIP /////
 
-MicrochipCyan = cyan#chip
-MicrochipGreen = green#chip
-MicrochipYellow = yellow#chip
-MicrochipOrange = orange#chip
-MicrochipRed = red#chip
-MicrochipPurple = purple#chip
+MicrochipCyan = cyan chip
+MicrochipGreen = green chip
+MicrochipYellow = yellow chip
+MicrochipOrange = orange chip
+MicrochipRed = red chip
+MicrochipPurple = purple chip
 
 MicrochipPermanentDeterminer = a
-MicrochipPermanentCyan = permanent#cyan#chip
-MicrochipPermanentGreen = permanent#green#chip
-MicrochipPermanentYellow = permanent#yellow#chip
-MicrochipPermanentOrange = permanent#orange#chip
-MicrochipPermanentRed = permanent#red#chip
-MicrochipPermanentPurple = permanent#purple#chip
+MicrochipPermanentCyan = permanent cyan chip
+MicrochipPermanentGreen = permanent green chip
+MicrochipPermanentYellow = permanent yellow chip
+MicrochipPermanentOrange = permanent orange chip
+MicrochipPermanentRed = permanent red chip
+MicrochipPermanentPurple = permanent purple chip
 
-MicrochipPluralCyan = the#cyan#chips
-MicrochipPluralGreen = the#green#chips
-MicrochipPluralYellow = the#yellow#chips
-MicrochipPluralOrange = the#orange#chips
-MicrochipPluralRed = the#red#chips
-MicrochipPluralPurple = the#purple#chips
+MicrochipPluralCyan = the cyan chips
+MicrochipPluralGreen = the green chips
+MicrochipPluralYellow = the yellow chips
+MicrochipPluralOrange = the orange chips
+MicrochipPluralRed = the red chips
+MicrochipPluralPurple = the purple chips
 
 ///// SHOVEL /////
 
-ShovelCyan = cyan#shovel
-ShovelGreen = green#shovel
-ShovelYellow = yellow#shovel
-ShovelOrange = orange#shovel
-ShovelRed = red#shovel
-ShovelPurple = purple#shovel
+ShovelCyan = cyan shovel
+ShovelGreen = green shovel
+ShovelYellow = yellow shovel
+ShovelOrange = orange shovel
+ShovelRed = red shovel
+ShovelPurple = purple shovel
 
 ShovelPermanentDeterminer = a
-ShovelPermanentCyan = permanent#cyan#shovel
-ShovelPermanentGreen = permanent#green#shovel
-ShovelPermanentYellow = permanent#yellow#shovel
-ShovelPermanentOrange = permanent#orange#shovel
-ShovelPermanentRed = permanent#red#shovel
-ShovelPermanentPurple = permanent#purple#shovel
+ShovelPermanentCyan = permanent cyan shovel
+ShovelPermanentGreen = permanent green shovel
+ShovelPermanentYellow = permanent yellow shovel
+ShovelPermanentOrange = permanent orange shovel
+ShovelPermanentRed = permanent red shovel
+ShovelPermanentPurple = permanent purple shovel
 
-ShovelPluralCyan = the#cyan#shovels
-ShovelPluralGreen = the#green#shovels
-ShovelPluralYellow = the#yellow#shovels
-ShovelPluralOrange = the#orange#shovels
-ShovelPluralRed = the#red#shovels
-ShovelPluralPurple = the#purple#shovels
+ShovelPluralCyan = the cyan shovels
+ShovelPluralGreen = the green shovels
+ShovelPluralYellow = the yellow shovels
+ShovelPluralOrange = the orange shovels
+ShovelPluralRed = the red shovels
+ShovelPluralPurple = the purple shovels

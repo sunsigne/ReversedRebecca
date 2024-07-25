@@ -1,1 +1,1 @@
-player = object = unhappy = I#wish#I#had#time#to#play,#but#I'll#be#late#for#work.
+player = object = unhappy = I wish I had time to play, but I'll be late for work.

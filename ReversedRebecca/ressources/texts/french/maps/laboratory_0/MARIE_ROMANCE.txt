@@ -1,1 +1,1 @@
-object = player = cry_var2 = Rebecca#!#Attends#!
+object = player = cry_var2 = Rebecca ! Attends !

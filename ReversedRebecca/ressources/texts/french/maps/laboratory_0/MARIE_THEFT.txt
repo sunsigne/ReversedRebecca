@@ -1,11 +1,11 @@
-object = player = surprised = Un#vol,#tu#dis#?
+object = player = surprised = Un vol, tu dis ?
 object = player = asleep = Hmm…
-object = player = happy = Ça#me#rappelle#une#histoire.#Il#y#a#deux#mois,#un@monsieur#été#venu#faire#un#scandale#à#ce#sujet.
-object = player = worry = Il#prétendait#que#notre#entreprise@avait#volé#ses#travaux.
-rebecca = object = angry = Quoi#?#Mais#non#!
-object = player = worry = Je#te#dis#juste#ce#qu'il#disait.
-object = player = unhappy = Mais#dans#sa#logique,#il#est#possible#qu'il#ait@décidé#de#venir#aujourd'hui#les…#"récupérer".
-rebecca = object = happy = C'est#possible.#Tu#te#souviens#de#son#nom#?
-object = player = worry = Va...#Vi...#Hmmm…
-object = player = unhappy = Non.#Désolé…
-rebecca = object = laugh = C'est#pas#grave.#C'est#déjà#très#bien.#Merci#!
+object = player = happy = Ça me rappelle une histoire. Il y a deux mois, un@monsieur été venu faire un scandale à ce sujet.
+object = player = worry = Il prétendait que notre entreprise@avait volé ses travaux.
+rebecca = object = angry = Quoi ? Mais non !
+object = player = worry = Je te dis juste ce qu'il disait.
+object = player = unhappy = Mais dans sa logique, il est possible qu'il ait@décidé de venir aujourd'hui les… "récupérer".
+rebecca = object = happy = C'est possible. Tu te souviens de son nom ?
+object = player = worry = Va... Vi... Hmmm…
+object = player = unhappy = Non. Désolé…
+rebecca = object = laugh = C'est pas grave. C'est déjà très bien. Merci !

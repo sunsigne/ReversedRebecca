@@ -1,5 +1,5 @@
-player = RIGHT = happy_var = So#good#that#I#ate#the#plate!
-sarah = DOWN = laugh = Yeah,#I#did#the#same#thing!
-sarah = DOWN = happy = Anyway,#How#about#we#go#to#work#together?@That#could#be#nice.
-player = object = excited = Sure!#I'll#let#you#know#when#I'm#ready.
-sarah = DOWN = wink = Fine.#Let's#do#this.
+player = RIGHT = happy_var = So good that I ate the plate!
+sarah = DOWN = laugh = Yeah, I did the same thing!
+sarah = DOWN = happy = Anyway, How about we go to work together?@That could be nice.
+player = object = excited = Sure! I'll let you know when I'm ready.
+sarah = DOWN = wink = Fine. Let's do this.

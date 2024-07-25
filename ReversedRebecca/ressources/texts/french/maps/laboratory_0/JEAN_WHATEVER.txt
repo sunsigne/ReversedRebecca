@@ -1,1 +1,1 @@
-player = DOWN = angry_var2 = Je#n'ai#pas#envie#de#lui#parler.#Il#m'a@enervé#avec#ces#:#"mouais,#si#tu#le#dis"#!
+player = DOWN = angry_var2 = Je n'ai pas envie de lui parler. Il m'a@enervé avec ces : "mouais, si tu le dis" !

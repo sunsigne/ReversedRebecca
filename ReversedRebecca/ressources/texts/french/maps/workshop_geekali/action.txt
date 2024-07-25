@@ -1,1 +1,1 @@
-I_AM_READY = Key3 % je#suis#prête
+I_AM_READY = Key3 % je suis prête

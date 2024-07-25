@@ -1,1 +1,1 @@
-player = object = happy = Plants#are#so…#soothing.
+player = object = happy = Plants are so… soothing.

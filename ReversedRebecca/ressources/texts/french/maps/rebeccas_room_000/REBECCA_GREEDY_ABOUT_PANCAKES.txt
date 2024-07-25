@@ -1,1 +1,1 @@
-player = object = angry_var2 = Elle#a#cru#quoi,#l'autre#?@Je#partage#pas#mes#crêpes#!
+player = object = angry_var2 = Elle a cru quoi, l'autre ?@Je partage pas mes crêpes !

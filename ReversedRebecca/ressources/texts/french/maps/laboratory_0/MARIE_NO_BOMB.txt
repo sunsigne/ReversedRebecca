@@ -1,1 +1,1 @@
-rebecca = object = happy_var = Bonne#idée,#je#vais#essayer#ça.
+rebecca = object = happy_var = Bonne idée, je vais essayer ça.

@@ -1,1 +1,1 @@
-sarah = player = happy_var = Au#fait#!
+sarah = player = happy_var = Au fait !

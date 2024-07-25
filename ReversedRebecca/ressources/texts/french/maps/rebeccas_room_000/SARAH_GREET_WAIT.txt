@@ -1,3 +1,3 @@
-player = object = worry = Salut,#Sarah#!#Désolé,#j'ai#mis@un#peu#de#temps#à#ouvrir…
-sarah = player = laugh = Pas#de#soucis,#je#te#connais.
-sarah = player = happy = Tu#es#prête#pour#le#travail#?@Je#me#suis#dit#qu'on#pourrait#y#aller#ensemble.
+player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
+sarah = player = laugh = Pas de soucis, je te connais.
+sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pourrait y aller ensemble.

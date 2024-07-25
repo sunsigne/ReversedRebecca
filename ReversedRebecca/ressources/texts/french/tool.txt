@@ -1,95 +1,95 @@
 ///// KEY /////
 
-KeyCyan = clef#cyan
-KeyGreen = clef#verte
-KeyYellow = clef#jaune
-KeyOrange = clef#orange
-KeyRed = clef#rouge
-KeyPurple = clef#violette
+KeyCyan = clef cyan
+KeyGreen = clef verte
+KeyYellow = clef jaune
+KeyOrange = clef orange
+KeyRed = clef rouge
+KeyPurple = clef violette
 
 KeyPermanentDeterminer = une
-KeyPermanentCyan = clef#cyan#permanente
-KeyPermanentGreen = clef#verte#permanente
-KeyPermanentYellow = clef#jaune#permanente
-KeyPermanentOrange = clef#orange#permanente
-KeyPermanentRed = clef#rouge#permanente
-KeyPermanentPurple = clef#violette#permanente
+KeyPermanentCyan = clef cyan permanente
+KeyPermanentGreen = clef verte permanente
+KeyPermanentYellow = clef jaune permanente
+KeyPermanentOrange = clef orange permanente
+KeyPermanentRed = clef rouge permanente
+KeyPermanentPurple = clef violette permanente
 
-KeyPluralCyan = les#clefs#cyans
-KeyPluralGreen = les#clefs#vertes
-KeyPluralYellow = les#clefs#jaunes
-KeyPluralOrange = les#clefs#oranges
-KeyPluralRed = les#clefs#rouges
-KeyPluralPurple = les#clefs#violettes
+KeyPluralCyan = les clefs cyans
+KeyPluralGreen = les clefs vertes
+KeyPluralYellow = les clefs jaunes
+KeyPluralOrange = les clefs oranges
+KeyPluralRed = les clefs rouges
+KeyPluralPurple = les clefs violettes
 
 ///// BOMB /////
 
-BombCyan = bombe#cyan
-BombGreen = bombe#verte
-BombYellow = bombe#jaune
-BombOrange = bombe#orange
-BombRed = bombe#rouge
-BombPurple = bombe#violette
+BombCyan = bombe cyan
+BombGreen = bombe verte
+BombYellow = bombe jaune
+BombOrange = bombe orange
+BombRed = bombe rouge
+BombPurple = bombe violette
 
 BombPermanentDeterminer = une
-BombPermanentCyan = bombe#cyan#permanente
-BombPermanentGreen = bombe#verte#permanente
-BombPermanentYellow = bombe#jaune#permanente
-BombPermanentOrange = bombe#orange#permanente
-BombPermanentRed = bombe#rouge#permanente
-BombPermanentPurple = bombe#violette#permanente
+BombPermanentCyan = bombe cyan permanente
+BombPermanentGreen = bombe verte permanente
+BombPermanentYellow = bombe jaune permanente
+BombPermanentOrange = bombe orange permanente
+BombPermanentRed = bombe rouge permanente
+BombPermanentPurple = bombe violette permanente
 
-BombPluralCyan = les#bombes#cyans
-BombPluralGreen = les#bombes#vertes
-BombPluralYellow = les#bombes#jaunes
-BombPluralOrange = les#bombes#oranges
-BombPluralRed = les#bombes#rouges
-BombPluralPurple = les#bombes#violettes
+BombPluralCyan = les bombes cyans
+BombPluralGreen = les bombes vertes
+BombPluralYellow = les bombes jaunes
+BombPluralOrange = les bombes oranges
+BombPluralRed = les bombes rouges
+BombPluralPurple = les bombes violettes
 
 ///// MICROCHIP /////
 
-MicrochipCyan = puce#cyan
-MicrochipGreen = puce#verte
-MicrochipYellow = puce#jaune
-MicrochipOrange = puce#orange
-MicrochipRed = puce#rouge
-MicrochipPurple = puce#violette
+MicrochipCyan = puce cyan
+MicrochipGreen = puce verte
+MicrochipYellow = puce jaune
+MicrochipOrange = puce orange
+MicrochipRed = puce rouge
+MicrochipPurple = puce violette
 
 MicrochipPermanentDeterminer = une
-MicrochipPermanentCyan = puce#cyan#permanente
-MicrochipPermanentGreen = puce#verte#permanente
-MicrochipPermanentYellow = puce#jaune#permanente
-MicrochipPermanentOrange = puce#orange#permanente
-MicrochipPermanentRed = puce#rouge#permanente
-MicrochipPermanentPurple = puce#violette#permanente
+MicrochipPermanentCyan = puce cyan permanente
+MicrochipPermanentGreen = puce verte permanente
+MicrochipPermanentYellow = puce jaune permanente
+MicrochipPermanentOrange = puce orange permanente
+MicrochipPermanentRed = puce rouge permanente
+MicrochipPermanentPurple = puce violette permanente
 
-MicrochipPluralCyan = les#puces#cyans
-MicrochipPluralGreen = les#puces#vertes
-MicrochipPluralYellow = les#puces#jaunes
-MicrochipPluralOrange = les#puces#oranges
-MicrochipPluralRed = les#puces#rouges
-MicrochipPluralPurple = les#puces#violettes
+MicrochipPluralCyan = les puces cyans
+MicrochipPluralGreen = les puces vertes
+MicrochipPluralYellow = les puces jaunes
+MicrochipPluralOrange = les puces oranges
+MicrochipPluralRed = les puces rouges
+MicrochipPluralPurple = les puces violettes
 
 ///// SHOVEL /////
 
-ShovelCyan = pelle#cyan
-ShovelGreen = pelle#verte
-ShovelYellow = pelle#jaune
-ShovelOrange = pelle#orange
-ShovelRed = pelle#rouge
-ShovelPurple = pelle#violette
+ShovelCyan = pelle cyan
+ShovelGreen = pelle verte
+ShovelYellow = pelle jaune
+ShovelOrange = pelle orange
+ShovelRed = pelle rouge
+ShovelPurple = pelle violette
 
 ShovelPermanentDeterminer = une
-ShovelPermanentCyan = pelle#cyan#permanente
-ShovelPermanentGreen = pelle#verte#permanente
-ShovelPermanentYellow = pelle#jaune#permanente
-ShovelPermanentOrange = pelle#orange#permanente
-ShovelPermanentRed = pelle#rouge#permanente
-ShovelPermanentPurple = pelle#violette#permanente
+ShovelPermanentCyan = pelle cyan permanente
+ShovelPermanentGreen = pelle verte permanente
+ShovelPermanentYellow = pelle jaune permanente
+ShovelPermanentOrange = pelle orange permanente
+ShovelPermanentRed = pelle rouge permanente
+ShovelPermanentPurple = pelle violette permanente
 
-ShovelPluralCyan = les#pelles#cyans
-ShovelPluralGreen = les#pelles#vertes
-ShovelPluralYellow = les#pelles#jaunes
-ShovelPluralOrange = les#pelles#oranges
-ShovelPluralRed = les#pelles#rouges
-ShovelPluralPurple = les#pelles#violettes
+ShovelPluralCyan = les pelles cyans
+ShovelPluralGreen = les pelles vertes
+ShovelPluralYellow = les pelles jaunes
+ShovelPluralOrange = les pelles oranges
+ShovelPluralRed = les pelles rouges
+ShovelPluralPurple = les pelles violettes

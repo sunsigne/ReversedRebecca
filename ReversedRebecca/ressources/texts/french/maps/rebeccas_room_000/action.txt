@@ -1,75 +1,75 @@
 ///// BEDROOM /////
 
-WAKE_UP = Key1 % se#réveiller
-SEARCH_KEY = Key3 % fouiller#(clé?)
-CANDLE_LIGHT = Key2 % allumer#la#bougie
-CANDLE_EXTINGUISH = Key2 % éteindre#la#bougie
+WAKE_UP = Key1 % se réveiller
+SEARCH_KEY = Key3 % fouiller (clé?)
+CANDLE_LIGHT = Key2 % allumer la bougie
+CANDLE_EXTINGUISH = Key2 % éteindre la bougie
 DRESS = Key2 % s'habiller
 
 ///// BATHROOM /////
 
 FILL = Key2 % remplir
-WASH = Key1 % se#laver
+WASH = Key1 % se laver
 LEAVE = Key1 % sortir
-CLEAN_HAIR = Key2 % nettoyer#les#cheveux
-CLEAN_CLOTHES = Key2 % ranger#les#vetements
-DO_LAUNDRY = Key2 % faire#la#lessive
+CLEAN_HAIR = Key2 % nettoyer les cheveux
+CLEAN_CLOTHES = Key2 % ranger les vetements
+DO_LAUNDRY = Key2 % faire la lessive
 DO_LAUNDRY_SHORT = Key2 % lessive
 SEARCH_KEY_SHORT = Key3 % fouiller
 
 ///// DESK /////
 
 PLAY = Key1 % jouer
-PLAY_ANYWAY = Key1 % jouer#quand#meme
-JUST_ONE_GAME = Key1 % juste#une#partie...
-I_AM_WEAK = Key1 % je#suis#faible...
-ASK_FOR_KEY = Key3 % où#sont#mes#clés#?
-TALK_ABOUT_CAMILLE = Key1 % parler#de#Camille
+PLAY_ANYWAY = Key1 % jouer quand meme
+JUST_ONE_GAME = Key1 % juste une partie...
+I_AM_WEAK = Key1 % je suis faible...
+ASK_FOR_KEY = Key3 % où sont mes clés ?
+TALK_ABOUT_CAMILLE = Key1 % parler de Camille
 PHILOSOPHIZE = Key1 % philosopher
 
 ///// LIVING ROOM /////
 
-RELAX = Key1 % se#détendre
-FACE_REALITY = Key1 % affronter#la#réalité
-WATCH_TV = Key1 % regarder#la#TV
+RELAX = Key1 % se détendre
+FACE_REALITY = Key1 % affronter la réalité
+WATCH_TV = Key1 % regarder la TV
 EXIT = Key1 % sortir
-TALK_ABOUT_BOOKS = Key1 % parler#des#livres
-WATCH_SARAH = Key1 % regarder#Sarah
-TALK_ABOUT_ERIKA = Key1 % parler#de#Erika
-OFFER_A_BLANKET = Key1 % proposer#une#couverture
+TALK_ABOUT_BOOKS = Key1 % parler des livres
+WATCH_SARAH = Key1 % regarder Sarah
+TALK_ABOUT_ERIKA = Key1 % parler de Erika
+OFFER_A_BLANKET = Key1 % proposer une couverture
 
 ///// KITCHEN /////
 
-DO_PANCAKES = Key2 % faire#des#crepes
-EAT_COOKIE = Key1 % manger#un#cookie
-DRINK_JUICE = Key2 % boire#du#jus
-WAIT_WHAT = Key3 % Hein#?!
-OFFER_A_JUICE = Key3 % proposer#un#jus
-ALL_FOR_ME = Key1 % tout#pour#moi#!
+DO_PANCAKES = Key2 % faire des crepes
+EAT_COOKIE = Key1 % manger un cookie
+DRINK_JUICE = Key2 % boire du jus
+WAIT_WHAT = Key3 % Hein ?!
+OFFER_A_JUICE = Key3 % proposer un jus
+ALL_FOR_ME = Key1 % tout pour moi !
 SHARE = Key2 % partager
 
 ///// ENTRANCE /////
 
-GO_TO_WORK = Key3 % (END_LVL)aller#au#travail
-LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)partir#sans#Sarah
-BRING_SARAH = Key1 % faire#venir#Sarah
-JUST_A_MOMENT = Key1 % juste#une#seconde...
-WHOS_THERE = Key2 % c'est#qui#?
+GO_TO_WORK = Key3 % (END_LVL)aller au travail
+LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)partir sans Sarah
+BRING_SARAH = Key1 % faire venir Sarah
+JUST_A_MOMENT = Key1 % juste une seconde...
+WHOS_THERE = Key2 % c'est qui ?
 
 ///// SARAH /////
 
 GREET = Key1 % saluer
-HUG = Key2 % faire#un#calin
-GREAT_IDEA = Key1 % super#idée#!
-NO_THANKS = Key2 % non#merci
+HUG = Key2 % faire un calin
+GREAT_IDEA = Key1 % super idée !
+NO_THANKS = Key2 % non merci
 I_ACCEPT = Key1 % j'accepte
-ANOTHER_TIME = Key2 % une#autre#fois
-MAKE_SOME = Key1 % je#vais#t'en#faire
-WERE_TASTY = Key2 % elles#étaient#bonnes
-WE_SHARE = Key1 % on#partage
-YES_I_KNOW = Key2 % oui#je#sais
-I_AM_READY_TOWEL = Key3 % je#suis#prête
-I_AM_READY = Key3 % (END_LVL)je#suis#prête
+ANOTHER_TIME = Key2 % une autre fois
+MAKE_SOME = Key1 % je vais t'en faire
+WERE_TASTY = Key2 % elles étaient bonnes
+WE_SHARE = Key1 % on partage
+YES_I_KNOW = Key2 % oui je sais
+I_AM_READY_TOWEL = Key3 % je suis prête
+I_AM_READY = Key3 % (END_LVL)je suis prête
 WAKE = Key1 % réveiller
-SOAK_SARAH = Key2 % tremper#Sarah
-I_MADE_PANCAKES = Key3 % j'ai#fait#des#crêpes
+SOAK_SARAH = Key2 % tremper Sarah
+I_MADE_PANCAKES = Key3 % j'ai fait des crêpes

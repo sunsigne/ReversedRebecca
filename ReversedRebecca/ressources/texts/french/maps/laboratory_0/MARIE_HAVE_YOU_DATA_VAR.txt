@@ -1,2 +1,2 @@
-rebecca = object = happy = Tu#as#des#infos#sur#ce#qu'il#vient#de#se#passer#?
-object = player = happy = Pas#plus#que#ce#que#je#viens#de#te#dire.
+rebecca = object = happy = Tu as des infos sur ce qu'il vient de se passer ?
+object = player = happy = Pas plus que ce que je viens de te dire.

@@ -1,2 +1,2 @@
-alicia = DOWN = happy = J'ai#besoin#d'un#remontant.@Je#vais#me#chercher#un#thé.
-alicia = DOWN = happy = Tu#veux#quelque#chose#?
+alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alicia = DOWN = happy = Tu veux quelque chose ?

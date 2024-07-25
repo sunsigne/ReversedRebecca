@@ -1,1 +1,1 @@
-player = object = worry = C'est#meilleur#quand#c'est#chaud,@mais#ça#sera#bon#quand#même.
+player = object = worry = C'est meilleur quand c'est chaud,@mais ça sera bon quand même.

@@ -1,4 +1,4 @@
-player = object = happy_var = C'était#marrant#!
-sarah = player = determinated = N'hésite#pas#à#repasser#quand#tu#veux.@J'aurai#toujours#quelque#chose#pour#toi#!
-player = object = laugh = T'es#vraiment#la#meilleure#!
-sarah = player = wink = Je#sais.@Bon#!#Allons-y#avant#d'être#en#retard.
+player = object = happy_var = C'était marrant !
+sarah = player = determinated = N'hésite pas à repasser quand tu veux.@J'aurai toujours quelque chose pour toi !
+player = object = laugh = T'es vraiment la meilleure !
+sarah = player = wink = Je sais.@Bon ! Allons-y avant d'être en retard.

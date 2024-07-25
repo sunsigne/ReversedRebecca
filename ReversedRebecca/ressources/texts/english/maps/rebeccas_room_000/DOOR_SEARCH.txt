@@ -1,2 +1,2 @@
-player = DOWN = you_silly = Oh#Well…#I'll#eventually#come#across#it@while#looking#for#a#bit.
-player = DOWN = happy = I#should#probably#take#a#tour@of#the#house#again.
+player = DOWN = you_silly = Oh Well… I'll eventually come across it@while looking for a bit.
+player = DOWN = happy = I should probably take a tour@of the house again.

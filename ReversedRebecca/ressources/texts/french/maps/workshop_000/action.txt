@@ -1,4 +1,4 @@
-I_FINISHED = Key1 % (END_LVL)j'ai#fini
-GLANCE = Key1 % jeter#un#oeil
-FOOD = Key1 % nourriture#?
-NICE_WEATHER_ISNT_IT = Key1 % ...#il#fait#beau,#non#?
+I_FINISHED = Key1 % (END_LVL)j'ai fini
+GLANCE = Key1 % jeter un oeil
+FOOD = Key1 % nourriture ?
+NICE_WEATHER_ISNT_IT = Key1 % ... il fait beau, non ?

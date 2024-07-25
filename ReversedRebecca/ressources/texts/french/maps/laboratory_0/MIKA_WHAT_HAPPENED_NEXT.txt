@@ -1,2 +1,2 @@
-sarah = DOWN = determinated = Alors,#on#va#enquêter#!
-sarah = RIGHT = happy = Rebecca,#à#toi#de#choisir.@Qu'est-ce#que#tu#préfères#faire#?
+sarah = DOWN = determinated = Alors, on va enquêter !
+sarah = RIGHT = happy = Rebecca, à toi de choisir.@Qu'est-ce que tu préfères faire ?

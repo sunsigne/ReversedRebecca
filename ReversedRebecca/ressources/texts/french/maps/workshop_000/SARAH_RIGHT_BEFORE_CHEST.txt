@@ -1,2 +1,2 @@
-player = object = excited = C'est#toujours#aussi#impressionnant#!
-sarah = player = laugh = Je#suis#assez#d'accord.
+player = object = excited = C'est toujours aussi impressionnant !
+sarah = player = laugh = Je suis assez d'accord.

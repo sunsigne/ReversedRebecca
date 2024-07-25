@@ -1,1 +1,1 @@
-player = DOWN = laugh = En#fait,#c'est#plutôt#marrant.
+player = DOWN = laugh = En fait, c'est plutôt marrant.

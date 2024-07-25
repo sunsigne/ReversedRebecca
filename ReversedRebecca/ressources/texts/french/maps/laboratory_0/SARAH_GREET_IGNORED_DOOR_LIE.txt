@@ -1,2 +1,2 @@
-sarah = RIGHT = laugh = Du#Rebecca#tout#craché#!
-sarah = RIGHT = wink = Du#coup,#je#suis#passée#ce#matin#parce#que…@J'ai#quelque#chose#pour#toi.
+sarah = RIGHT = laugh = Du Rebecca tout craché !
+sarah = RIGHT = wink = Du coup, je suis passée ce matin parce que…@J'ai quelque chose pour toi.

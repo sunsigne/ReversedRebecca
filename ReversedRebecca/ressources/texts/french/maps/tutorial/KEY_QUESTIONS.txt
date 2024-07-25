@@ -1,11 +1,11 @@
-player = object = laugh = Ouais#!#Des#clés#!
-dave = player = calm = Ravi#que#ça#t'amuse.
-dave = player = calm = Tu#te#souviens#de#ce#que@j'ai#dit#sur#leurs#durées#de#vie#?
-player = object = happy_var = Ma#clé#dispara#quand#le#niveau#sera#fini.
+player = object = laugh = Ouais ! Des clés !
+dave = player = calm = Ravi que ça t'amuse.
+dave = player = calm = Tu te souviens de ce que@j'ai dit sur leurs durées de vie ?
+player = object = happy_var = Ma clé dispara quand le niveau sera fini.
 dave = player = calm = Bien.
-dave = player = calm = Avais-tu#remarquée#que#ces#clés#ont#une#couleur#en@commun#avec#les#portes#que#tu#as#déverrouillées#?
-player = object = no_sens = Heu…#Oui,#je#crois…@Le#bleu,#non#?
-dave = player = calm = Je#préfère#parler#de#"cyan",#mais#c'est#ça.
-player = object = happy = Donc…#Les#clefs#d'une#certaine#couleur@permettent#d'ouvrir#les#portes#de#cette#couleur#?
-dave = player = calm = Pas#toujours,#ça#dépend.
-player = object = worry = Ha#?
+dave = player = calm = Avais-tu remarquée que ces clés ont une couleur en@commun avec les portes que tu as déverrouillées ?
+player = object = no_sens = Heu… Oui, je crois…@Le bleu, non ?
+dave = player = calm = Je préfère parler de "cyan", mais c'est ça.
+player = object = happy = Donc… Les clefs d'une certaine couleur@permettent d'ouvrir les portes de cette couleur ?
+dave = player = calm = Pas toujours, ça dépend.
+player = object = worry = Ha ?

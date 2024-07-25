@@ -1,1 +1,1 @@
-player = object = laugh = Cette#plante#est#déjà#dans#l'eau,@elle#n'a#pas#besoin#que#je#l'arrose.
+player = object = laugh = Cette plante est déjà dans l'eau,@elle n'a pas besoin que je l'arrose.

@@ -1,5 +1,5 @@
-rebecca = object = worry = Hé…#Tu#veux#bien#me#réexpliquer@un#peu#les#lieux#?
-delta = rebecca = laugh = Tu#as#oublié#ta#tête#chez#toi#ce#matin,#ou#quoi#?
-delta = rebecca = smile = Gauche#:#salle#de#pause.#Droite#:#le#grand#labo.@Au#milieu#:#l'entrée#des#visiteurs.
-delta = rebecca = wink = Et#juste#devant#moi,#une#grande#fille@pas#très#dégourdie.
-rebecca = object = happy_var = Je#plaide#coupable.
+rebecca = object = worry = Hé… Tu veux bien me réexpliquer@un peu les lieux ?
+delta = rebecca = laugh = Tu as oublié ta tête chez toi ce matin, ou quoi ?
+delta = rebecca = smile = Gauche : salle de pause. Droite : le grand labo.@Au milieu : l'entrée des visiteurs.
+delta = rebecca = wink = Et juste devant moi, une grande fille@pas très dégourdie.
+rebecca = object = happy_var = Je plaide coupable.

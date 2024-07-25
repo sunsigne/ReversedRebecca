@@ -1,6 +1,6 @@
-player = alicia = unhappy = Tu#as#raison,#j'ai#assez#fait#de#dégâts…
-player = alicia = worry = On#va#trouver#un#autre#chemin.
-alicia = player = happy = À#la#bonne#heure.
-player = alicia = happy_var = D'ailleurs,#Eric#a#fait#tomber#ses#clés#en#partant.@On#pourrait#les#utiliser.
-player = alicia = no_sens = Enfin…#Si#tu#sais#te#servir#de#clés#vertes…@Parce#que#moi#non.
-alicia = player = happy_var = C'est#des#clés#Rebecca.@Je#pense#pouvoir#me#débrouiller.
+player = alicia = unhappy = Tu as raison, j'ai assez fait de dégâts…
+player = alicia = worry = On va trouver un autre chemin.
+alicia = player = happy = À la bonne heure.
+player = alicia = happy_var = D'ailleurs, Eric a fait tomber ses clés en partant.@On pourrait les utiliser.
+player = alicia = no_sens = Enfin… Si tu sais te servir de clés vertes…@Parce que moi non.
+alicia = player = happy_var = C'est des clés Rebecca.@Je pense pouvoir me débrouiller.

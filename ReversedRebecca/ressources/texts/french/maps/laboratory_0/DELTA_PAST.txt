@@ -1,16 +1,16 @@
-rebecca = object = happy = Vous#faisiez#quoi#avec#ton#frère,#exactement#?
-delta = rebecca = happy = On#repérait#un#endroit#avec#des#trucs#high-tech,@on#entrait#par#effraction,#puis#on#la#volait.
-rebecca = object = excited = …#Et#ensuite#?
-delta = rebecca = happy_var = Non,#ben#c'est#tout.#On#a#fini#par#avoir@un#garage#plein#de#ces#trucs-là.
-rebecca = object = no_sens = Vous#ne#vous#en#serviez#jamais#?
-delta = rebecca = laugh = Si,#comme#cale-porte#ou#comme#presse-papier.
-delta = rebecca = excited = C'était#le#vol#qui#était#intéressant.
-delta = rebecca = worry = Pour#nous,#ç'a#toujours#était#du#bric-à-brac.@On#n'a#jamais#compris#à#quoi#ça#servait.
-rebecca = object = happy = Pourtant#aujourd'hui,#tu#es#ingénieur#!@Tu#devrais#comprendre#facilement.
-delta = rebecca = wink = Oui,#mais#entre-temps,#nos#vies@avec#mon#frère#se#sont#séparées.
-delta = rebecca = smile = Il#a#gardé#son#amour#des#"raids",@et#moi,#celui#pour#les#technologies.
-delta = rebecca = worry = Et#comme#moi#je#me#suis#rangé,#et#lui#non,@c'était#logique#qu'il#garde#le#garage.
-delta = rebecca = happy_var = Mais#j'en#garde#un#bon#souvenir.#Et#si@c'était#à#refaire,#je#signe#tout#de#suite#!
-rebecca = object = laugh = Oui,#c'est#l'impression#que#tu#donnes.
-rebecca = object = happy = Bon,#j'y#vais.
-delta = rebecca = excited = Au#plaisir#ma#grande.
+rebecca = object = happy = Vous faisiez quoi avec ton frère, exactement ?
+delta = rebecca = happy = On repérait un endroit avec des trucs high-tech,@on entrait par effraction, puis on la volait.
+rebecca = object = excited = … Et ensuite ?
+delta = rebecca = happy_var = Non, ben c'est tout. On a fini par avoir@un garage plein de ces trucs-là.
+rebecca = object = no_sens = Vous ne vous en serviez jamais ?
+delta = rebecca = laugh = Si, comme cale-porte ou comme presse-papier.
+delta = rebecca = excited = C'était le vol qui était intéressant.
+delta = rebecca = worry = Pour nous, ç'a toujours était du bric-à-brac.@On n'a jamais compris à quoi ça servait.
+rebecca = object = happy = Pourtant aujourd'hui, tu es ingénieur !@Tu devrais comprendre facilement.
+delta = rebecca = wink = Oui, mais entre-temps, nos vies@avec mon frère se sont séparées.
+delta = rebecca = smile = Il a gardé son amour des "raids",@et moi, celui pour les technologies.
+delta = rebecca = worry = Et comme moi je me suis rangé, et lui non,@c'était logique qu'il garde le garage.
+delta = rebecca = happy_var = Mais j'en garde un bon souvenir. Et si@c'était à refaire, je signe tout de suite !
+rebecca = object = laugh = Oui, c'est l'impression que tu donnes.
+rebecca = object = happy = Bon, j'y vais.
+delta = rebecca = excited = Au plaisir ma grande.

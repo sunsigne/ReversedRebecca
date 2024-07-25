@@ -1,12 +1,12 @@
-dave = player = calm = Je#peux.
-dave = player = calm = Imaginons#que#tu#es#chez#toi,#toute#nue,#et#que@tu#doives#aller#quelque#part.#Que#fais-tu#?
-player = object = happy_var = Je#m'habille,#évidemment.
-dave = player = calm = Et#si#je#te#dis#que#la#commode@n'est#pas#utilisable#?
-player = object = unhappy = Mais#je#suis#toute#nue#!@Il#faut#bien#que#je#m'habille#!
-dave = player = calm = Oui.#En#fait,#la#commode#est@utilisable#sous#cette#condition.
-dave = player = calm = Mais#tu#pourrais#ne#pas#en#avoir#conscience#si#c'est@avant#d'être#nue#que#tu#avais#essayé#de#l'utiliser.
-player = object = unhappy = ...#Je#crois#que#j'ai#saisi#l'idée,@mais#ça#reste#vague…
-dave = player = calm = Tu#n'as#qu'à#te#dire#que#les#objets#sont#intelligent,@en#sens#où#ils#prennent#en#compte#ta#situation.
-dave = player = calm = C'est#vraiment#une#simple#question#de#contexte.
-dave = player = calm = Dans#le#pire#des#cas,#tu#peux#toujours#revenir@sur#tes#pas#et#réessayer#d'utiliser#des#objets.
-player = object = laugh = Ok,#pourquoi#pas.
+dave = player = calm = Je peux.
+dave = player = calm = Imaginons que tu es chez toi, toute nue, et que@tu doives aller quelque part. Que fais-tu ?
+player = object = happy_var = Je m'habille, évidemment.
+dave = player = calm = Et si je te dis que la commode@n'est pas utilisable ?
+player = object = unhappy = Mais je suis toute nue !@Il faut bien que je m'habille !
+dave = player = calm = Oui. En fait, la commode est@utilisable sous cette condition.
+dave = player = calm = Mais tu pourrais ne pas en avoir conscience si c'est@avant d'être nue que tu avais essayé de l'utiliser.
+player = object = unhappy = ... Je crois que j'ai saisi l'idée,@mais ça reste vague…
+dave = player = calm = Tu n'as qu'à te dire que les objets sont intelligent,@en sens où ils prennent en compte ta situation.
+dave = player = calm = C'est vraiment une simple question de contexte.
+dave = player = calm = Dans le pire des cas, tu peux toujours revenir@sur tes pas et réessayer d'utiliser des objets.
+player = object = laugh = Ok, pourquoi pas.

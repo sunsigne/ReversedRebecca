@@ -1,8 +1,8 @@
-delta = rebecca = excited = C'est#"grave#cool"#tu#veux#dire#!
-delta = rebecca = laugh = Mais#bon,#c'est#derrière#tout#ça…@Aujourd'hui,#je#me#suis#rangée.
-rebecca = object = happy = Pourquoi#tu#as#arrêté#?
-delta = rebecca = no_sens = Pour#la#faire#courte#:@mon#frère#est#un#addict.
-delta = rebecca = happy = On#a#fini#par#se#séparer,#et#je#me#voyais#pas@continuer#sans#lui.#Alors,#j'ai#arrêté.
-rebecca = object = you_silly_var = Je#vois.
-rebecca = object = happy = Bon,#je#ferais#mieux#d'y#aller.
-delta = rebecca = wink = Bonne#chance,#ma#grande.
+delta = rebecca = excited = C'est "grave cool" tu veux dire !
+delta = rebecca = laugh = Mais bon, c'est derrière tout ça…@Aujourd'hui, je me suis rangée.
+rebecca = object = happy = Pourquoi tu as arrêté ?
+delta = rebecca = no_sens = Pour la faire courte :@mon frère est un addict.
+delta = rebecca = happy = On a fini par se séparer, et je me voyais pas@continuer sans lui. Alors, j'ai arrêté.
+rebecca = object = you_silly_var = Je vois.
+rebecca = object = happy = Bon, je ferais mieux d'y aller.
+delta = rebecca = wink = Bonne chance, ma grande.

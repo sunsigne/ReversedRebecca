@@ -1,5 +1,5 @@
-player = object = excited = Salut,#Sarah#!#Comment#tu#vas#?
-sarah = player = laugh = Bien,#merci.
-sarah = player = happy = Tu#es#prête#pour#le#travail#?@Je#me#suis#dit#qu'on#pourrait#y#aller#ensemble.
+player = object = excited = Salut, Sarah ! Comment tu vas ?
+sarah = player = laugh = Bien, merci.
+sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pourrait y aller ensemble.
 
 

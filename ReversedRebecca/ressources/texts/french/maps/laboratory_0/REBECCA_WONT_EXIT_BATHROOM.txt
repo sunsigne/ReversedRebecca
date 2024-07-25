@@ -1,1 +1,1 @@
-player = DOWN = unhappy = Je#ne#peux#pas#sortir#comme#ça.
+player = DOWN = unhappy = Je ne peux pas sortir comme ça.

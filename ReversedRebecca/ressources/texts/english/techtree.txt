@@ -1,5 +1,5 @@
-REWARD1 = Choose#a#reward
-REWARD2 = Choose#two#rewards
+REWARD1 = Choose a reward
+REWARD2 = Choose two rewards
 
-TOOLSTARTLVL = You#obtain
-TOOLMAXLVL = You#can#use
+TOOLSTARTLVL = You obtain
+TOOLMAXLVL = You can use

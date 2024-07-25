@@ -1,1 +1,1 @@
-rebecca = DOWN = evil_var = Qui#?#Moi#?#Mais#je#suis#adorable.
+rebecca = DOWN = evil_var = Qui ? Moi ? Mais je suis adorable.

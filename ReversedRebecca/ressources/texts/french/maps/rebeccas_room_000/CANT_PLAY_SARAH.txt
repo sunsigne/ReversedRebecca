@@ -1,1 +1,1 @@
-player = object = unhappy = Ça#n'est#pas#le#moment#de#jouer…@Sarah#attend#que#je#me#prépare.
+player = object = unhappy = Ça n'est pas le moment de jouer…@Sarah attend que je me prépare.

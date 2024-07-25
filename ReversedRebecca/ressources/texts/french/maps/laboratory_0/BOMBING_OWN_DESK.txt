@@ -1,1 +1,1 @@
-player = UP = worry = C'est#un#peu#barbare,#d'exploser#nos#locaux…@Mais#je#n'ai#pas#trop#le#choix.
+player = UP = worry = C'est un peu barbare, d'exploser nos locaux…@Mais je n'ai pas trop le choix.

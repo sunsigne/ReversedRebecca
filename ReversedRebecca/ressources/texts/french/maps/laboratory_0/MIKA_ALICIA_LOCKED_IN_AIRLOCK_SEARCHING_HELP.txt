@@ -1,4 +1,4 @@
-mika = player = surprised = Quoi#?#Enfermée#dans#le#sas#?
+mika = player = surprised = Quoi ? Enfermée dans le sas ?
 player = mika = unhappy = Oui…
 mika = player = serious_var = Hmm…
-mika = player = serious = Je#dois#rester#ici,#pour#dégager#les#décombres.@Tu#devrais#demander#de#l'aide#à#Sarah.
+mika = player = serious = Je dois rester ici, pour dégager les décombres.@Tu devrais demander de l'aide à Sarah.

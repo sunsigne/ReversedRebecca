@@ -1,1 +1,1 @@
-object = player = laugh = Tiens#!#Salut#Rebecca#!
+object = player = laugh = Tiens ! Salut Rebecca !

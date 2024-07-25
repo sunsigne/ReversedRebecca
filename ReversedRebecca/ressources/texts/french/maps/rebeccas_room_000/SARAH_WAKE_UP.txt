@@ -1,2 +1,2 @@
-player = object = you_silly_var = Après#réflexion,#je#vais#la#laisser#dormir.
-player = object = you_silly = Inutile#de#la#réveiller#tant#je#ne#suis#pas#prête.
+player = object = you_silly_var = Après réflexion, je vais la laisser dormir.
+player = object = you_silly = Inutile de la réveiller tant je ne suis pas prête.

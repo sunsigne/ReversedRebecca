@@ -1,1 +1,1 @@
-alicia = player = angry = Rebecca#!#Tu#avais#dit#que#tu#arrêtais#!
+alicia = player = angry = Rebecca ! Tu avais dit que tu arrêtais !

@@ -1,5 +1,5 @@
-rebecca = sarah = happy = Tu#saurais#où#je#peux#nous#trouver#une#sortie#?
-sarah = rebecca = worry = Pourquoi#tu#me#demandes#à#moi#?
-rebecca = sarah = no_sens = Pourquoi#pas#?
-sarah = rebecca = akward = Parce#que#si#je#savais#où#il#y#en#avait#une,@je#t'aurais#déjà#dit#où#chercher#tout#à#l'heure.
+rebecca = sarah = happy = Tu saurais où je peux nous trouver une sortie ?
+sarah = rebecca = worry = Pourquoi tu me demandes à moi ?
+rebecca = sarah = no_sens = Pourquoi pas ?
+sarah = rebecca = akward = Parce que si je savais où il y en avait une,@je t'aurais déjà dit où chercher tout à l'heure.
 rebecca = sarah = happy = Effectivement.

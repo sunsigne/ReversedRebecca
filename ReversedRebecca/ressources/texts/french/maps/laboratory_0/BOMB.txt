@@ -1,1 +1,1 @@
-rebecca = DOWN = you_silly = C'est#quand#même#pratique#d'avoir#ça#ici.
+rebecca = DOWN = you_silly = C'est quand même pratique d'avoir ça ici.

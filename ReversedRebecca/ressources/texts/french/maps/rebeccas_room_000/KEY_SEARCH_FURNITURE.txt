@@ -1,1 +1,1 @@
-player = object = unhappy = Non,#elles#ne#sont#pas#là.
+player = object = unhappy = Non, elles ne sont pas là.

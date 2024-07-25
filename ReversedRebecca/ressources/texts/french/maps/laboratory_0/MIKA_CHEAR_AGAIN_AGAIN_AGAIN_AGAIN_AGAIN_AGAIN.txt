@@ -1,2 +1,2 @@
-rebecca = object = laugh = Mika#!#Mika#!#Mika#!
-mika = DOWN = angry_var = JE#SUIS#REMONTÉ#À#BLOC#!
+rebecca = object = laugh = Mika ! Mika ! Mika !
+mika = DOWN = angry_var = JE SUIS REMONTÉ À BLOC !

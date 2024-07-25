@@ -1,8 +1,8 @@
-player = object = happy = Bonjour#Dave,#tu#regardes#quoi#?
-dave = player = calm = Rebecca,#ça#ne#te#fatigue#pas#de#jouer@la#même#pièce,#encore#et#encore#?
-dave = player = calm = Personnellement,#je#ne#vois#pas#à#quoi#ça#rime.
-player = object = worry = Tu#es#encore#plus#bizarre#que#d'habitude…@Tu#es#sûr#que#ça#va#?
-dave = DOWN = disillusioned = Les#mêmes#réponses…#Les#mêmes#lieux…@La#même#musique#bizarre…
-dave = DOWN = calm = Parfois,#j'aimerais#pouvoir#perdre#la#mémoire…@Mais#c'est#totalement#impossible.
-dave = DOWN = calm = Je#vais#arrêter#de#venir#ici,#à#cette#heure#et#à@cet#endroit.#Je#n'en#vois#vraiment#pas#l'intérêt.
-player = object = no_sens = Ok…#Si#tu#le#dis…
+player = object = happy = Bonjour Dave, tu regardes quoi ?
+dave = player = calm = Rebecca, ça ne te fatigue pas de jouer@la même pièce, encore et encore ?
+dave = player = calm = Personnellement, je ne vois pas à quoi ça rime.
+player = object = worry = Tu es encore plus bizarre que d'habitude…@Tu es sûr que ça va ?
+dave = DOWN = disillusioned = Les mêmes réponses… Les mêmes lieux…@La même musique bizarre…
+dave = DOWN = calm = Parfois, j'aimerais pouvoir perdre la mémoire…@Mais c'est totalement impossible.
+dave = DOWN = calm = Je vais arrêter de venir ici, à cette heure et à@cet endroit. Je n'en vois vraiment pas l'intérêt.
+player = object = no_sens = Ok… Si tu le dis…

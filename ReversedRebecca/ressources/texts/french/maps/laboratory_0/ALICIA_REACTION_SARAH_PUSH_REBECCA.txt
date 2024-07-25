@@ -1,8 +1,8 @@
-sarah = RIGHT = angry = Rebecca#!#Fiche-moi#la#paix#!
-alicia = player = unhappy = …#Vous#…#vous#êtes#disputées#?
+sarah = RIGHT = angry = Rebecca ! Fiche-moi la paix !
+alicia = player = unhappy = … Vous … vous êtes disputées ?
 rebecca = alicia = happy = Non.
-sarah = RIGHT = angry = Non#?!#Tu#m'as#jeté#de#l'eau#dessus.
-alicia = player = unhappy = …#Rebecca,#c'est#pas#cool…
-rebecca = alicia = laugh = C'était#juste#pour#rigoler#!
-alicia = player = angry = …#C'est#encore#moins#cool…
-rebecca = alicia = angry = Rho#!#ça#va,#vous#avez#pas#d'humour.
+sarah = RIGHT = angry = Non ?! Tu m'as jeté de l'eau dessus.
+alicia = player = unhappy = … Rebecca, c'est pas cool…
+rebecca = alicia = laugh = C'était juste pour rigoler !
+alicia = player = angry = … C'est encore moins cool…
+rebecca = alicia = angry = Rho ! ça va, vous avez pas d'humour.

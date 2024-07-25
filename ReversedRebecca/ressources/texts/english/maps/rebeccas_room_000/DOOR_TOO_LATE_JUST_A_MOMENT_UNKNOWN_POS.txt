@@ -1,1 +1,1 @@
-player = UP = laugh = Just#a#second,#I'm#looking#for#my#keys!
+player = UP = laugh = Just a second, I'm looking for my keys!

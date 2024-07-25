@@ -1,2 +1,2 @@
-rebecca = object = evil = Allez#!#C'est#mou#tout#ça.
-mika = DOWN = angry_var = MUUUUUUSCLES#!
+rebecca = object = evil = Allez ! C'est mou tout ça.
+mika = DOWN = angry_var = MUUUUUUSCLES !

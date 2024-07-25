@@ -1,1 +1,1 @@
-player = DOWN = determinated = C'est#tellement#marrant#de#les#pousser#à#bout.
+player = DOWN = determinated = C'est tellement marrant de les pousser à bout.

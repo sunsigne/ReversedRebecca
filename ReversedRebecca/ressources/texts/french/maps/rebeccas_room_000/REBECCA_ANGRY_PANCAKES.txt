@@ -1,1 +1,1 @@
-rebecca = object = you_silly = Après#une#dispute,#c'est#encore#meilleur.
+rebecca = object = you_silly = Après une dispute, c'est encore meilleur.

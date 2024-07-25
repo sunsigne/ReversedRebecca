@@ -1,1 +1,1 @@
-rebecca = DOWN = you_silly = That#was#fun.
+rebecca = DOWN = you_silly = That was fun.

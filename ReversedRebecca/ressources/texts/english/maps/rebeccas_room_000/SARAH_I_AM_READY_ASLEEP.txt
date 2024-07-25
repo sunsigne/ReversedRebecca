@@ -2,5 +2,5 @@ player = object = worry = Sarah?
 sarah = player = asleep = Zzzz…
 sarah = player = fine = Hmm…?
 sarah = player = wink = Yes?
-player = object = happy = I#am#ready!#We#can#go!
+player = object = happy = I am ready! We can go!
 sarah = player = happy_var = Okay!

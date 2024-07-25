@@ -1,1 +1,1 @@
-player = object = laugh = Je#vois.#Sarah#va#s'en#occuper.
+player = object = laugh = Je vois. Sarah va s'en occuper.

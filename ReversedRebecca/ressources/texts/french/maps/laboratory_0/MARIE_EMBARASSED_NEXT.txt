@@ -1,1 +1,1 @@
-object = player = blush_var = (Elle#est#toujours#là…)
+object = player = blush_var = (Elle est toujours là…)

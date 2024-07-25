@@ -1,1 +1,1 @@
-player = object = laugh = DEBOUT,#LE#VIEUX#!
+player = object = laugh = DEBOUT, LE VIEUX !

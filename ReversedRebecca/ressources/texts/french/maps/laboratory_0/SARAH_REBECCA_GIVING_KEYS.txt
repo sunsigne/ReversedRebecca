@@ -1,1 +1,1 @@
-sarah = LEFT = wink = Merci,#c'est#top#!
+sarah = LEFT = wink = Merci, c'est top !

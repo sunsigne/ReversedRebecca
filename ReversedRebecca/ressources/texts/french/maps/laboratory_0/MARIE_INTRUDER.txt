@@ -1,5 +1,5 @@
-object = player = laugh = Au#fait,#c'est#qui#qui#a#cassé#la#porte#d'entrée#?
-rebecca = object = worry = Un#individu#s'est#introduit#dans#le#labo,@et#l'a#fait#exploser#en#sortant.
-object = player = surprised = Alors#c'était#ça,#ce#bruit#!
-object = player = unhappy = Et,#qu'est-ce#qu'il#voulait#?
-rebecca = object = laugh = Aucune#idée.
+object = player = laugh = Au fait, c'est qui qui a cassé la porte d'entrée ?
+rebecca = object = worry = Un individu s'est introduit dans le labo,@et l'a fait exploser en sortant.
+object = player = surprised = Alors c'était ça, ce bruit !
+object = player = unhappy = Et, qu'est-ce qu'il voulait ?
+rebecca = object = laugh = Aucune idée.

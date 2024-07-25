@@ -1,6 +1,6 @@
-player = object = excited = Hi,#Sarah!#How#are#you?
-sarah = player = laugh = I'm#fine,#thank#you.
-sarah = player = worry = Just#to#know,#do#you#often#welcome@people#in#towels#?
-player = object = blush = Oops,#I#knew#I#forgot#something…
-sarah = player = laugh = That's#okay.#It's#not#like#I#was#a#stranger.
-sarah = player = happy = Anyway,#How#about#we#go#to#work#together?
+player = object = excited = Hi, Sarah! How are you?
+sarah = player = laugh = I'm fine, thank you.
+sarah = player = worry = Just to know, do you often welcome@people in towels ?
+player = object = blush = Oops, I knew I forgot something…
+sarah = player = laugh = That's okay. It's not like I was a stranger.
+sarah = player = happy = Anyway, How about we go to work together?

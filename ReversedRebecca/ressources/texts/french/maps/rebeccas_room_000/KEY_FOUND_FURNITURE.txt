@@ -1,1 +1,1 @@
-player = object = laugh = Ha#!#Elles#étaient#ici,#ces#petites#coquines.
+player = object = laugh = Ha ! Elles étaient ici, ces petites coquines.

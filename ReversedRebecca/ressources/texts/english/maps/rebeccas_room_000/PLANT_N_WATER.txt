@@ -1,1 +1,1 @@
-player = object = you_silly = Too#much#water#will#kill#the#flower.
+player = object = you_silly = Too much water will kill the flower.

@@ -1,1 +1,1 @@
-MIKA = DOWN = angry_var = ARRÊTEZ-LE#!
+MIKA = DOWN = angry_var = ARRÊTEZ-LE !

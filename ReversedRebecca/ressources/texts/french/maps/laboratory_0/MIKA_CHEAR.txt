@@ -1,2 +1,2 @@
-rebecca = object = excited = Allez#Mika#!#Tu#es#le#meilleur#!
-mika = DOWN = angry = Ces#cailloux#n'ont#qu'à#bien#se#tenir#!
+rebecca = object = excited = Allez Mika ! Tu es le meilleur !
+mika = DOWN = angry = Ces cailloux n'ont qu'à bien se tenir !

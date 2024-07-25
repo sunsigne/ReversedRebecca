@@ -1,4 +1,4 @@
-object = player = surprised_var = Enfin,#mais#Rebecca…#Qu'est-ce#qu'il#te#prend#?
-player = object = dreaming = Je#remets#juste#un#vieux#croûton#à#sa#place.
-object = player = surprised_var = (Elle#a#toujours#été#comme#ça…#?)
-object = player = worry = (Non,#elle#est#probablement#très#stressée…)
+object = player = surprised_var = Enfin, mais Rebecca… Qu'est-ce qu'il te prend ?
+player = object = dreaming = Je remets juste un vieux croûton à sa place.
+object = player = surprised_var = (Elle a toujours été comme ça… ?)
+object = player = worry = (Non, elle est probablement très stressée…)

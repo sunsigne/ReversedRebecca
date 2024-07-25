@@ -1,2 +1,2 @@
-alicia = player = surprised = Ben#dis#donc#!#Quand#tu#cherches#une#sortie,@tu#ne#fais#pas#semblant#!
-player = alicia = worry = Je#sais,#c'est#barbare…@Mais#on#n'a#pas#trop#le#choix.
+alicia = player = surprised = Ben dis donc ! Quand tu cherches une sortie,@tu ne fais pas semblant !
+player = alicia = worry = Je sais, c'est barbare…@Mais on n'a pas trop le choix.

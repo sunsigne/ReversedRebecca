@@ -1,1 +1,1 @@
-alicia = player = surprised = Entièrement#d'accord#!
+alicia = player = surprised = Entièrement d'accord !

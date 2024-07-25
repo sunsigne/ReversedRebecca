@@ -1,1 +1,1 @@
-player = object = laugh = A#good#thing#done!
+player = object = laugh = A good thing done!

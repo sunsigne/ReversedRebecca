@@ -99,7 +99,6 @@ public class FileTask {
 	////////// WRITE ////////////
 
 	// it is impossible to write in Programmes Files -> userData is always true here
-	// to write something, keep in mind that "readable space" must be writted "#"
 	public void write(String path, String text) {
 		write(null, path, text);
 	}
@@ -126,7 +125,7 @@ public class FileTask {
 					if (alllines[i].split("=")[0].equalsIgnoreCase(valueToReplace))
 						writer.write(alllines[i].split("=")[0] + "=" + text + System.getProperty("line.separator"));
 					else
-						writer.write(alllines[i].replace(" ", "#") + System.getProperty("line.separator"));
+						writer.write(alllines[i] + System.getProperty("line.separator"));
 				}
 			}
 

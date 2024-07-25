@@ -1,3 +1,3 @@
-player = alicia = worry = Alicia…#Je#casses#juste#quelques#vieux#murs.@On#les#reconstruira.
-player = alicia = laugh = Et#puis,#c'est#facile#d'avancer#!@C'est#tout#droit#!
-alicia = rebecca = unhappy = Ça#sera#sans#moi,#Rebecca.
+player = alicia = worry = Alicia… Je casses juste quelques vieux murs.@On les reconstruira.
+player = alicia = laugh = Et puis, c'est facile d'avancer !@C'est tout droit !
+alicia = rebecca = unhappy = Ça sera sans moi, Rebecca.

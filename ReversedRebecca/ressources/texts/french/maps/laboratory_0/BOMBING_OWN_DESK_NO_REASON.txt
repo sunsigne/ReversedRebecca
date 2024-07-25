@@ -1,1 +1,1 @@
-player = DOWN = unhappy = Je#me#demande#si#je#n'ai#pas#fait#une#bêtise…@Je#n'avais#clairement#pas#besoin#de#faire#ça.
+player = DOWN = unhappy = Je me demande si je n'ai pas fait une bêtise…@Je n'avais clairement pas besoin de faire ça.

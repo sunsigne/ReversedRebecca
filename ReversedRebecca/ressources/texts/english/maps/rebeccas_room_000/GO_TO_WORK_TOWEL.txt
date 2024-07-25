@@ -1,1 +1,1 @@
-player = UP = blush = I#forgot#to#put#on#clothes.
+player = UP = blush = I forgot to put on clothes.

@@ -1,2 +1,2 @@
-sarah = player = happy = By#the#way,#I#can't#wait#to#see#the#result.
-player = sarah = laugh = Yeah,#me#too!
+sarah = player = happy = By the way, I can't wait to see the result.
+player = sarah = laugh = Yeah, me too!

@@ -1,1 +1,1 @@
-player = LEFT = no_sens = Why#did#I#do#that?
+player = LEFT = no_sens = Why did I do that?

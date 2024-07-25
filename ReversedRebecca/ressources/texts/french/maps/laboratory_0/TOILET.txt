@@ -1,1 +1,1 @@
-rebecca = DOWN = you_silly = Non,#j'ai#déjà#fait#ce#matin.
+rebecca = DOWN = you_silly = Non, j'ai déjà fait ce matin.

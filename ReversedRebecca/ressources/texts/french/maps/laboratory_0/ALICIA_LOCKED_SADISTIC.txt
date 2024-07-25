@@ -1,5 +1,5 @@
-alicia = down = cry_var2 = Oui#!#Je#suis#là#!#Je#suis#enfermée#!
-rebecca = up = laugh = Ha#ha#ha#ha#!#C'est#encore#mieux@que#ce#que#j'imaginais. 
-alicia = down = cry = C'est#pas#drôle#Rebecca…@Aide-moi#à#sortir.
-rebecca = up = dreaming = Oui,#oui,#je#vais#t'aider.@Je#vais#juste#prendre#mon#temps.
-alicia = down = cry_var = Pourquoi#il#fallait#que#je#tombe#sur#toi…
+alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+rebecca = up = laugh = Ha ha ha ha ! C'est encore mieux@que ce que j'imaginais. 
+alicia = down = cry = C'est pas drôle Rebecca…@Aide-moi à sortir.
+rebecca = up = dreaming = Oui, oui, je vais t'aider.@Je vais juste prendre mon temps.
+alicia = down = cry_var = Pourquoi il fallait que je tombe sur toi…

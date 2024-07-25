@@ -1,2 +1,2 @@
-player = object = unhappy = Tu#pourrais#arrêter#de#bouger#s'il#te#plaît#?@Tu#me#stresses.
-object = player = urge_happy = Oui,#pardon.
+player = object = unhappy = Tu pourrais arrêter de bouger s'il te plaît ?@Tu me stresses.
+object = player = urge_happy = Oui, pardon.

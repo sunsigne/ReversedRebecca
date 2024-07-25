@@ -1,3 +1,3 @@
-sarah = player = angry = Fuck#you,#Rebecca#!@You're#busting#my#balls.
-player = sarah = excited = Come#on,#that's#just#a#prank.
-sarah = player = angry = Get#out#of#my#way.
+sarah = player = angry = Fuck you, Rebecca !@You're busting my balls.
+player = sarah = excited = Come on, that's just a prank.
+sarah = player = angry = Get out of my way.

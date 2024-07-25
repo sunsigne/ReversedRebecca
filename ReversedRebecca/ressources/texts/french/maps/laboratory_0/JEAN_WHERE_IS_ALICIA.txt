@@ -1,1 +1,1 @@
-jean = rebecca = urge_sad = Non,#je#ne#l'ai#pas#vu.
+jean = rebecca = urge_sad = Non, je ne l'ai pas vu.

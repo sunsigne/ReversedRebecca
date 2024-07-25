@@ -1,1 +1,1 @@
-player = DOWN = you_silly = Tout#bien#réfléchi,#ça#valait#carrément#le#coup#!
+player = DOWN = you_silly = Tout bien réfléchi, ça valait carrément le coup !

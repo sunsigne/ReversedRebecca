@@ -1,1 +1,1 @@
-rebecca = DOWN = you_silly = C'était#marrant.
+rebecca = DOWN = you_silly = C'était marrant.

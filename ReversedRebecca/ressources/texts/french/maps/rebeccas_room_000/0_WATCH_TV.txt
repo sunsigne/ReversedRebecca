@@ -1,1 +1,1 @@
-error = object = neutral = Action#indisponible#sur#cette#version.
+error = object = neutral = Action indisponible sur cette version.

@@ -1,5 +1,5 @@
-player = object = worry = It's#nice,#but#I#prefer#to#go#alone.
-player = object = happy = See#you#there#anyway.
-sarah = player = fine = I#get#it.
+player = object = worry = It's nice, but I prefer to go alone.
+player = object = happy = See you there anyway.
+sarah = player = fine = I get it.
 
 

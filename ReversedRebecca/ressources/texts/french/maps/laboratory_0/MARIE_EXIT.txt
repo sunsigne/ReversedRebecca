@@ -1,9 +1,9 @@
-rebecca = object = happy_var = Hey#!#Marie#!
-object = player = happy = Bonjour#Rebecca,#tu#prends#déjà#ta#pause#?
-rebecca = object = happy = Non,#je#cherche#un#moyen#de#sortir#d'ici.
-object = player = surprised = Quoi#?#Tu#veux#démissionner#?@Mais#je#croyais#que#tu#adorais#ce#travail…
-rebecca = object = no_sens = ...#Hein#?
-rebecca = object = surprised = Ho#!#J'y#suis#!
-rebecca = object = laugh = Quand#je#dis#"sortir#d'ici",#je#veux#dire#au#sens@propre#!#Un#mec#a#condamné#la#porte#d'entrée.
-object = player = laugh = Ha#!#Si#tu#ne#donnes#pas#le#contexte,#aussi…
-object = player = happy = De#mémoire,#je#crois#qu'on#a#des#explosifs@dans#le#stock.#Tu#pourrais#t'en#servir.
+rebecca = object = happy_var = Hey ! Marie !
+object = player = happy = Bonjour Rebecca, tu prends déjà ta pause ?
+rebecca = object = happy = Non, je cherche un moyen de sortir d'ici.
+object = player = surprised = Quoi ? Tu veux démissionner ?@Mais je croyais que tu adorais ce travail…
+rebecca = object = no_sens = ... Hein ?
+rebecca = object = surprised = Ho ! J'y suis !
+rebecca = object = laugh = Quand je dis "sortir d'ici", je veux dire au sens@propre ! Un mec a condamné la porte d'entrée.
+object = player = laugh = Ha ! Si tu ne donnes pas le contexte, aussi…
+object = player = happy = De mémoire, je crois qu'on a des explosifs@dans le stock. Tu pourrais t'en servir.

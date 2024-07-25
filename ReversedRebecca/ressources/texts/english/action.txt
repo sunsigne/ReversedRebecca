@@ -2,8 +2,8 @@ Require = require
 
 ///// STAIRS /////
 
-GoDown = go#down
-GoUp = go#up
+GoDown = go down
+GoUp = go up
 
 ///// CHEST /////
 
@@ -26,5 +26,5 @@ ComputerHack = hack
 
 ///// HOLE /////
 
-HoleLoose = soft#soil
+HoleLoose = soft soil
 HoleDig = dig

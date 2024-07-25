@@ -1,1 +1,1 @@
-player = object = angry = Non#mais#dis#donc#!@Ça#va#bien#de#me#pousser#comme#ça#?
+player = object = angry = Non mais dis donc !@Ça va bien de me pousser comme ça ?

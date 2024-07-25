@@ -1,3 +1,3 @@
-sarah = player = happy = En#chemin,#j'aimerais#qu'on#s'arrête#à#mon#atelier.@J'ai#une#surprise#pour#toi.
-player = object = laugh = T'es#la#meilleure#!
-sarah = player = wink = Ne#l'oublie#jamais.
+sarah = player = happy = En chemin, j'aimerais qu'on s'arrête à mon atelier.@J'ai une surprise pour toi.
+player = object = laugh = T'es la meilleure !
+sarah = player = wink = Ne l'oublie jamais.

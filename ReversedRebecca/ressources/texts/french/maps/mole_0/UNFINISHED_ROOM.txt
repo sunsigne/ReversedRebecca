@@ -1,1 +1,1 @@
-error = DOWN = neutral = Cette#salle#n'est#pas#encore#finie.
+error = DOWN = neutral = Cette salle n'est pas encore finie.

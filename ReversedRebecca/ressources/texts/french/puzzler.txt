@@ -4,7 +4,7 @@ Require = requis
 DoorLocked = fermé
 RubbleBlocked = bloqué
 ComputerProtected = protégé
-HoleLoose = terre#molle
+HoleLoose = terre molle
 
 ///// ACTION /////
 

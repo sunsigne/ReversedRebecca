@@ -1,4 +1,4 @@
-delta = rebecca = surprised = Quoi#?#Blessée,#tu#dis#?
-rebecca = object = unhappy = Peut-être.@C'est#dans#son#bureau#que#ça#s'est#passé.
-delta = rebecca = no_sens = Rho,#c'est#pas#cool…
-delta = rebecca = worry = Enfin…#Si#ça#se#trouve,#elle#a#rien.@Je#viens#avec#toi.
+delta = rebecca = surprised = Quoi ? Blessée, tu dis ?
+rebecca = object = unhappy = Peut-être.@C'est dans son bureau que ça s'est passé.
+delta = rebecca = no_sens = Rho, c'est pas cool…
+delta = rebecca = worry = Enfin… Si ça se trouve, elle a rien.@Je viens avec toi.

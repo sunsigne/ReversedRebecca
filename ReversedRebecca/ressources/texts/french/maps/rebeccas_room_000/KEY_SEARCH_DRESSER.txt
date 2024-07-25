@@ -1,1 +1,1 @@
-player = object = unhappy = Rien…#Je#pensais#les#trouver@dans#une#poches#de#vêtement.
+player = object = unhappy = Rien… Je pensais les trouver@dans une poches de vêtement.

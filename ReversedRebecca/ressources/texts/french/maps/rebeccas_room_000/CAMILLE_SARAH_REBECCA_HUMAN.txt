@@ -1,10 +1,10 @@
-sarah = player = happy_var = C'est#fascinant#de#regarder#ce#robot…@On#dirait#qu'elle#est#humaine.
-player = sarah = happy = Erika#dit#que#ça#ne#se#limitera@pas#qu'à#son#apparence.
-player = sarah = happy_var = Elle#aura#une#intelligence#si#poussée#qu'on@ne#pourra#même#plus#faire#la#différence.
-sarah = player = surprised = À#ce#point#?
-player = sarah = laugh = Oui.#C'est#rafraichissant,#tu#ne#trouves#pas#?
-sarah = player = worry = Qu'est-ce#que#tu#veux#dire#?
-player = sarah = happy = Souvent,#quand#on#est#confronté#à#un#programme,@on#s'aperçoit#très#vite#de#ses#limites.
-player = sarah = happy_var = Eh#bien#cette#fois,#on#passera#surtout#notre@temps#à#s'étonner#à#quel#point#il#s'adapte.
-sarah = player = laugh = J'ai#compris#!#Ça#change,#en#effet.
-player = DOWN = you_silly = N'est-ce#pas#?
+sarah = player = happy_var = C'est fascinant de regarder ce robot…@On dirait qu'elle est humaine.
+player = sarah = happy = Erika dit que ça ne se limitera@pas qu'à son apparence.
+player = sarah = happy_var = Elle aura une intelligence si poussée qu'on@ne pourra même plus faire la différence.
+sarah = player = surprised = À ce point ?
+player = sarah = laugh = Oui. C'est rafraichissant, tu ne trouves pas ?
+sarah = player = worry = Qu'est-ce que tu veux dire ?
+player = sarah = happy = Souvent, quand on est confronté à un programme,@on s'aperçoit très vite de ses limites.
+player = sarah = happy_var = Eh bien cette fois, on passera surtout notre@temps à s'étonner à quel point il s'adapte.
+sarah = player = laugh = J'ai compris ! Ça change, en effet.
+player = DOWN = you_silly = N'est-ce pas ?

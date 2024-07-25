@@ -1,10 +1,10 @@
-dave = player = calm = Pour#moi,#vous#êtes#bien#plus#que#ça…
-dave = player = calm = Quand#on#vous#parle,#votre#réponse#n'est#jamais@deux#fois#le#même#car#elle#dépend#du#contexte.
-dave = player = calm = Vos#conversations#changent#et#évoluent@en#fonction#de#la#situation.
-dave = player = calm = Vous#avez#des#émotions,#des#sentiments,#vous@vous#adaptez,#vous#êtes#autônomes…
-dave = player = calm = Bref,#pour#moi,#vous#êtes#humains.
-dave = player = camera = Mais#même#si#ça#ne#sera#jamais#le#cas#pour#+user,@il#se#rendra#vite#compte#de#votre#intelligence.
-player = object = worry = Ce#que#tu#dis#et#à#la#fois#très#gentil,#et#très#bizarre…
-dave = player = calm = Je#mets#juste#les#choses#à#plat#:#une#sauvegarde#n'@est#pas#une#excuse#pour#faire#des#choses#affreuses.
-player = dave = surprised = Ça#y#est#!#J'ai#compris#!
-player = dave = laugh = Tu#parles#comme#si#on#était#dans#un#jeu#vidéo#!
+dave = player = calm = Pour moi, vous êtes bien plus que ça…
+dave = player = calm = Quand on vous parle, votre réponse n'est jamais@deux fois le même car elle dépend du contexte.
+dave = player = calm = Vos conversations changent et évoluent@en fonction de la situation.
+dave = player = calm = Vous avez des émotions, des sentiments, vous@vous adaptez, vous êtes autônomes…
+dave = player = calm = Bref, pour moi, vous êtes humains.
+dave = player = camera = Mais même si ça ne sera jamais le cas pour +user,@il se rendra vite compte de votre intelligence.
+player = object = worry = Ce que tu dis et à la fois très gentil, et très bizarre…
+dave = player = calm = Je mets juste les choses à plat : une sauvegarde n'@est pas une excuse pour faire des choses affreuses.
+player = dave = surprised = Ça y est ! J'ai compris !
+player = dave = laugh = Tu parles comme si on était dans un jeu vidéo !

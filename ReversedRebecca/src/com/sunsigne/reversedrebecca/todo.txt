@@ -71,8 +71,6 @@
 
 	////////// EN COURS ////////////
 
-	3h00 changer les fichiers de dialogues pour rempalcer les '#' par des ' '
-	
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
 

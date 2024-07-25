@@ -1,1 +1,1 @@
-rebecca = object = happy = Tiens#?#Il#y#a#des#clés#à#côté#de@l'ordinateur.#Je#vais#les#prendre.
+rebecca = object = happy = Tiens ? Il y a des clés à côté de@l'ordinateur. Je vais les prendre.

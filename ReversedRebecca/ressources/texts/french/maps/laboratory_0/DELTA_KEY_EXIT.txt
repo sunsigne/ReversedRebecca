@@ -1,11 +1,11 @@
-rebecca = object = laugh = Salut#Delta#!
-delta = rebecca = happy = Yo,#ma#grande#!@Comment#je#peux#t'aider#?
-rebecca = object = happy = Tu#as#une#idée#de#comment@je#nous#trouve#une#sortie#?
-delta = rebecca = no_sens = Hmm…#J'imagine#que#si#tu#demandes,@c'est#que#la#porte#d'entrée#est#bloquée.
-rebecca = object = no_sens = Le#mot#est#faible…#Elle#est#complètement@ensevelie#sous#les#rochers.
-delta = rebecca = laugh = Ha#ouais#!#Il#a#pas#fait#semblant#le#mec#!
-delta = rebecca = excited = Si#j'étais#toi,#je#passerais#simplement@par#l'accueil.
-rebecca = object = surprised = Ho#!#C'est#vrai#qu'on#a#ça#!
-rebecca = object = worry = Comme#on#ne#reçoit#presque#jamais#de#public,@j'avais#fini#par#oublier#que#cette#salle#existait.
-delta = rebecca = laugh = Aller,#va#nous#sauver,#"madame#l'aventurière".
+rebecca = object = laugh = Salut Delta !
+delta = rebecca = happy = Yo, ma grande !@Comment je peux t'aider ?
+rebecca = object = happy = Tu as une idée de comment@je nous trouve une sortie ?
+delta = rebecca = no_sens = Hmm… J'imagine que si tu demandes,@c'est que la porte d'entrée est bloquée.
+rebecca = object = no_sens = Le mot est faible… Elle est complètement@ensevelie sous les rochers.
+delta = rebecca = laugh = Ha ouais ! Il a pas fait semblant le mec !
+delta = rebecca = excited = Si j'étais toi, je passerais simplement@par l'accueil.
+rebecca = object = surprised = Ho ! C'est vrai qu'on a ça !
+rebecca = object = worry = Comme on ne reçoit presque jamais de public,@j'avais fini par oublier que cette salle existait.
+delta = rebecca = laugh = Aller, va nous sauver, "madame l'aventurière".
 rebecca = object = happy_var = Oui.

@@ -1,1 +1,1 @@
-player = object = happy = Salut#!#Tu#as#des#infos#sur#ce@qu'il#vient#de#se#passer#?
+player = object = happy = Salut ! Tu as des infos sur ce@qu'il vient de se passer ?

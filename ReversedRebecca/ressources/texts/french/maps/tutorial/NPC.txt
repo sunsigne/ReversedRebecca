@@ -1,5 +1,5 @@
-dave = player = camera = Toi,#Rebecca,#non.#Mais#+user,#oui.
+dave = player = camera = Toi, Rebecca, non. Mais +user, oui.
 player = object = no_sens = ...
-player = object = no_sens = C'est#qui#+user ?
-dave = DOWN = camera = Quelqu'un#qui#ferait#mieux#de#respecter#les@"personnages#du#jeu",#comme#il#les#appelle.
-dave = player = calm = Il#ne#voit#en#eux#que#des#pantins#sans#émotions,@qui#ne#sont#là#que#pour#son#amusement.
+player = object = no_sens = C'est qui +user ?
+dave = DOWN = camera = Quelqu'un qui ferait mieux de respecter les@"personnages du jeu", comme il les appelle.
+dave = player = calm = Il ne voit en eux que des pantins sans émotions,@qui ne sont là que pour son amusement.

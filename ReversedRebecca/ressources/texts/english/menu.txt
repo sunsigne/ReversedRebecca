@@ -1,28 +1,28 @@
 Loading = Loading
-ProgressSaved = Progress#saved
+ProgressSaved = Progress saved
 
 ///// LEVEL STATS /////
 
-LevelCompleted = Level#Completed
-LevelGoodDeed = Good#Deed
-LevelBadDeed = Bad#Deed
+LevelCompleted = Level Completed
+LevelGoodDeed = Good Deed
+LevelBadDeed = Bad Deed
 LevelNoneDeed = None
-LevelYouArePsychopath = You#are#:#psycopath
-LevelYouAreSadistic = You#are#:#sadistic
-LevelYouAreMean = You#are#:#mean
-LevelYouAreNeutral = You#are#:#neutral
-LevelYouAreNice = You#are#:#nice
-LevelYouAreAngelic = You#are#:#angelic
-LevelClickToContinue = Click#to#continue
+LevelYouArePsychopath = You are : psycopath
+LevelYouAreSadistic = You are : sadistic
+LevelYouAreMean = You are : mean
+LevelYouAreNeutral = You are : neutral
+LevelYouAreNice = You are : nice
+LevelYouAreAngelic = You are : angelic
+LevelClickToContinue = Click to continue
 
 ///// RESUME /////
 
 ResumeButton = resume
 Cancel = cancel
-ResumeDetail1 = The#gave#saves#at
-ResumeDetail2 = the#end#of#each#level
-QuitDetail1 = do#you#really#want
-QuitDetail2 = to#quit#the#game?
+ResumeDetail1 = The gave saves at
+ResumeDetail2 = the end of each level
+QuitDetail1 = do you really want
+QuitDetail2 = to quit the game?
 
 ///// MAIN /////
 
@@ -31,24 +31,24 @@ OptionsButton = options
 QuitButton = quit
 BackButton = back
 Achievement = achievements
-CrashButton = Report#a#bug
+CrashButton = Report a bug
 
 ///// PLAY /////
 
 DifficultyEasy = easy
 DifficultyNormal = normal
 DifficultyHard = hard
-EasyDetail1 = double#XP
-EasyDetail2 = easier#puzzle
-NormalDetail1 = the#original#game
+EasyDetail1 = double XP
+EasyDetail2 = easier puzzle
+NormalDetail1 = the original game
 NormalDetail2 = experience
-HardDetail1 = harder#puzzle
-HardDetail2 = only#one#life
+HardDetail1 = harder puzzle
+HardDetail2 = only one life
 
 ///// TUTORIAL /////
 
-TutorialDetail1 = Do#you#need#a#tutorial
-TutorialDetail2 = to#learn#how#to#play?
+TutorialDetail1 = Do you need a tutorial
+TutorialDetail2 = to learn how to play?
 YesButton = Yes
 NoButton = No
 
@@ -60,8 +60,8 @@ Reset = reset
 ///// RESET /////
 
 Confirm = confirm
-ResetDetail1 = your#progress#will#be
-ResetDetail2 = permanently#lost
+ResetDetail1 = your progress will be
+ResetDetail2 = permanently lost
 
 ///// CONTROLS /////
 
@@ -74,10 +74,10 @@ Down = down
 Left = left
 Right = right
 Dialogue = dialogue
-Action1 = action#1
-Action2 = action#2
-Action3 = action#3
-Default = to#default
+Action1 = action 1
+Action2 = action 2
+Action3 = action 3
+Default = to default
 
 ///// AUDIO /////
 
@@ -93,8 +93,8 @@ VideoButton = video
 Camera = camera
 CameraStatic = static
 CameraDynamic = dynamic
-CameraDetail = The#camera#follows#the#player
-StaticDetail = to#the#nearest#pixel
+CameraDetail = The camera follows the player
+StaticDetail = to the nearest pixel
 DynamicDetail = fluidly
 Texts = texts
 TextsSmall = small

@@ -1,1 +1,1 @@
-player = UP = laugh = It's#open!
+player = UP = laugh = It's open!

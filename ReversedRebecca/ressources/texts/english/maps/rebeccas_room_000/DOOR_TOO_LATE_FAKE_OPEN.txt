@@ -1,5 +1,5 @@
-player = UP = laugh = Just#a#second,#I'm#opening!
+player = UP = laugh = Just a second, I'm opening!
 player = UP = happy_var = …
-player = UP = surprised = Dear#me…#I#was#sure@I#had#left#my#keys#in#the#lock…
-player = UP = worry = Eh…#One#moment#!@I#must#find#my#keys!
-player = DOWN = no_sens = What#do#I#do?
+player = UP = surprised = Dear me… I was sure@I had left my keys in the lock…
+player = UP = worry = Eh… One moment !@I must find my keys!
+player = DOWN = no_sens = What do I do?

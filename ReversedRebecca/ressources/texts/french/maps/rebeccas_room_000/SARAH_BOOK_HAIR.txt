@@ -1,11 +1,11 @@
 player = object = happy = …
 sarah = UP = worry = ?
 player = object = worry = …
-sarah = player = happy = Qu'est-ce#qu'il#y#a#?
-player = object = laugh = Je#regardais#tes#cheveux#!@Ils#sont#super#longs#!
-sarah = player = happy_var = Oui,#ça#fait#sept#ans#que#je#les#laisse#pousser.
-player = object = excited = Ils#sont#magnifiques#!@Ça#doit#être#long#à#entretenir…
-sarah = player = laugh = Oh#que#oui#!
-sarah = player = happy = Je#pensais#justement#les#raccourcir,@à#cause#de#ça.
-player = object = happy = En#tout#cas,#ça#te#va#bien.
-sarah = player = happy_var = Merci,#c'est#gentil.
+sarah = player = happy = Qu'est-ce qu'il y a ?
+player = object = laugh = Je regardais tes cheveux !@Ils sont super longs !
+sarah = player = happy_var = Oui, ça fait sept ans que je les laisse pousser.
+player = object = excited = Ils sont magnifiques !@Ça doit être long à entretenir…
+sarah = player = laugh = Oh que oui !
+sarah = player = happy = Je pensais justement les raccourcir,@à cause de ça.
+player = object = happy = En tout cas, ça te va bien.
+sarah = player = happy_var = Merci, c'est gentil.

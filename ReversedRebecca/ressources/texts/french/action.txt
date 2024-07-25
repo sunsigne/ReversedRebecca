@@ -23,8 +23,8 @@ HACK = Key1 % pirater
 
 ///// CHOICES /////
 
-WATER_TAKE = Key1 % se#servir
-WATER_EMPTY = Key1 % vider#l'eau
+WATER_TAKE = Key1 % se servir
+WATER_EMPTY = Key1 % vider l'eau
 WATER_PLANT = Key2 % arroser
 APOLOGIZE = Key1 % s'excuser
-SAY_NOTHING = Key2 % ne#rien#dire
+SAY_NOTHING = Key2 % ne rien dire

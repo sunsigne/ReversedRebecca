@@ -1,8 +1,8 @@
-player = object = wrong_with_you = Non#mais#ça#suffit,#oui#?@Je#t'ai#pas#demandé#de#raconter#ta#vie#!
-object = RIGHT = happy = Pardon#?
-player = object = angry = C'est#pas#clair#?#T'es#saoulant#!
-object = RIGHT = happy = Mais…#Je…
-player = object = angry_var = La#ferme#!
+player = object = wrong_with_you = Non mais ça suffit, oui ?@Je t'ai pas demandé de raconter ta vie !
+object = RIGHT = happy = Pardon ?
+player = object = angry = C'est pas clair ? T'es saoulant !
+object = RIGHT = happy = Mais… Je…
+player = object = angry_var = La ferme !
 object = RIGHT = happy = …
-player = object = evil_var = Ben#voilà.#Tu#vois#quand#tu#veux.
+player = object = evil_var = Ben voilà. Tu vois quand tu veux.
 object = RIGHT = happy = …

@@ -1,8 +1,8 @@
-player = object = happy = Dis,#je#cherche#une#sortie.@Tu#passerais#par#où,#toi#?
-jean = player = unhappy = Mika#n'est#pas#en#train#de#déboucher#l'entrée#?
-player = object = worry = Si,#mais#je#veux#aider#à#ma#façon.
-jean = player = unhappy = Alors#à#ta#place,#j'irais#l'encourager.
-player = object = no_sens = …#C'est#tout#?
-jean = player = happy = Pourquoi#pas#?
-player = object = laugh = Parce#que#ça#ne#suffira#pas,#voyons#!
-jean = player = unhappy = …#Ha.#Si#tu#le#dis…
+player = object = happy = Dis, je cherche une sortie.@Tu passerais par où, toi ?
+jean = player = unhappy = Mika n'est pas en train de déboucher l'entrée ?
+player = object = worry = Si, mais je veux aider à ma façon.
+jean = player = unhappy = Alors à ta place, j'irais l'encourager.
+player = object = no_sens = … C'est tout ?
+jean = player = happy = Pourquoi pas ?
+player = object = laugh = Parce que ça ne suffira pas, voyons !
+jean = player = unhappy = … Ha. Si tu le dis…

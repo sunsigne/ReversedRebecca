@@ -1,1 +1,1 @@
-alicia = player = angry_var = C'est#quoi#ton#problème#?
+alicia = player = angry_var = C'est quoi ton problème ?

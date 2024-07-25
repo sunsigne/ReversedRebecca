@@ -1,1 +1,1 @@
-player = object = happy = C'est#tellement#apaisant,#les#plantes.
+player = object = happy = C'est tellement apaisant, les plantes.

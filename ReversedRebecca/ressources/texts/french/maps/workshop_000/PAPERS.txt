@@ -1,1 +1,1 @@
-player = object = surprised = C'est#impressionnant,@tous#ces#travaux#de#recherche#!
+player = object = surprised = C'est impressionnant,@tous ces travaux de recherche !

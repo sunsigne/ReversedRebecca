@@ -1,1 +1,1 @@
-player = object = excited = C'est#gentil.#Merci#Joseph.
+player = object = excited = C'est gentil. Merci Joseph.

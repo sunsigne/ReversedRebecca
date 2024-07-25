@@ -1,1 +1,1 @@
-player = object = unhappy = Nothing…#I#thought#I'd#find#them@in#a#clothing#pocket.
+player = object = unhappy = Nothing… I thought I'd find them@in a clothing pocket.

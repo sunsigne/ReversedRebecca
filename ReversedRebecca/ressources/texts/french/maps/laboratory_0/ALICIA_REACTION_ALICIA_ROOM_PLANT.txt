@@ -1,2 +1,2 @@
 rebecca = alicia = unhappy = Enfin…
-alicia = rebecca = happy = T'en#fait#pas,#j'ai#compris.
+alicia = rebecca = happy = T'en fait pas, j'ai compris.

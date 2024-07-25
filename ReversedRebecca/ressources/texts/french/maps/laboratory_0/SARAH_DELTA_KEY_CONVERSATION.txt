@@ -1,3 +1,3 @@
-sarah = UP = happy = Tu#sais#où#sont#les#clés#du#couloir,#par#hasard#?
-delta = DOWN = excited = J'ai#un#double,#prends#les#miennes.
-sarah = UP = laugh = Super,#merci#Delta#!
+sarah = UP = happy = Tu sais où sont les clés du couloir, par hasard ?
+delta = DOWN = excited = J'ai un double, prends les miennes.
+sarah = UP = laugh = Super, merci Delta !

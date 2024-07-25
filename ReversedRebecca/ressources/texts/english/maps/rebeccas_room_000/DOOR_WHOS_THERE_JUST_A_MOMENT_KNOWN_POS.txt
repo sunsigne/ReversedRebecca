@@ -1,5 +1,5 @@
-player = UP = laugh = Who's#there?
+player = UP = laugh = Who's there?
 sarah = DOWN = happy = Sarah!
 player = UP = excited = Sarah!
-player = UP = happy = Just#a#second,#I'll#get#the#key!
-sarah = DOWN = happy = Ok,#I'm#waiting.
+player = UP = happy = Just a second, I'll get the key!
+sarah = DOWN = happy = Ok, I'm waiting.

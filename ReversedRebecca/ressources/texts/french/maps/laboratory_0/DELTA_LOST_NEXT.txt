@@ -1,5 +1,5 @@
-rebecca = object = worry = Hé…#Comment#je#fais#pour#me#rendre#à#l'accueil#?
-delta = rebecca = worry = Tu#passes#par#le#SAS#?
-rebecca = object = unhappy = Oui,#mais#il#est#vérouillé…
-delta = rebecca = surprised = Vraiment#?
-delta = rebecca = happy = Alors,#demande#à#ce#bon#vieux#Joseph.@Je#suis#sûre#qu'il#a#la#clé.
+rebecca = object = worry = Hé… Comment je fais pour me rendre à l'accueil ?
+delta = rebecca = worry = Tu passes par le SAS ?
+rebecca = object = unhappy = Oui, mais il est vérouillé…
+delta = rebecca = surprised = Vraiment ?
+delta = rebecca = happy = Alors, demande à ce bon vieux Joseph.@Je suis sûre qu'il a la clé.

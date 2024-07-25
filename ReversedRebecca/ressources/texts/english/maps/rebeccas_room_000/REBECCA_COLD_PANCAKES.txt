@@ -1,1 +1,1 @@
-player = object = worry = It's#tastier#when#it's#hot,@but#it#still#should#be#good.
+player = object = worry = It's tastier when it's hot,@but it still should be good.

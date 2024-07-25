@@ -1,1 +1,1 @@
-object = player = serious = Tu#ne#devrais#pas#pouvoir#me#parler.#Soit#tu#as@triché,#soit#le#développeur#a#mal#fait#son#travail.
+object = player = serious = Tu ne devrais pas pouvoir me parler. Soit tu as@triché, soit le développeur a mal fait son travail.

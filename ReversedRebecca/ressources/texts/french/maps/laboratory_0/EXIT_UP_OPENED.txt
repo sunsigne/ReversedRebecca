@@ -1,1 +1,1 @@
-rebecca = object = excited = Parfait#!#Je#n'ai#plus#qu'à#faire#le#tour@par#l'exterieur#pour#dégager#l'entrée#!
+rebecca = object = excited = Parfait ! Je n'ai plus qu'à faire le tour@par l'exterieur pour dégager l'entrée !

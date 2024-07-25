@@ -1,1 +1,1 @@
-alicia = player = happy_var = On#n'a#rien#à#perdre#essayer.
+alicia = player = happy_var = On n'a rien à perdre essayer.

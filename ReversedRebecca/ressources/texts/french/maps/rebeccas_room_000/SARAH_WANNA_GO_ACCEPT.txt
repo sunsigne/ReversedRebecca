@@ -1,4 +1,4 @@
-player = object = happy_var = Pourquoi#pas#?#Je#te#fais#signe@dès#que#je#suis#prête.
-sarah = player = happy = Ça#marche,#on#fait#comme#ça.
+player = object = happy_var = Pourquoi pas ? Je te fais signe@dès que je suis prête.
+sarah = player = happy = Ça marche, on fait comme ça.
 
 

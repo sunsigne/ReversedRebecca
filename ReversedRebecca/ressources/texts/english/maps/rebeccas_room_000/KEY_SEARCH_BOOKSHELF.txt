@@ -1,1 +1,1 @@
-player = object = worry = No#keys#here.#I#kinda#expected#that,#anyway.
+player = object = worry = No keys here. I kinda expected that, anyway.

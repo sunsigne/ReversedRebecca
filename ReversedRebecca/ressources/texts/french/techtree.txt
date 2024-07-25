@@ -1,5 +1,5 @@
-REWARD1 = Choisissez#une#récompense
-REWARD2 = Choisissez#deux#récompenses
+REWARD1 = Choisissez une récompense
+REWARD2 = Choisissez deux récompenses
 
-TOOLSTARTLVL = Vous#obtenez
-TOOLMAXLVL = Vous#pouvez#utiliser
+TOOLSTARTLVL = Vous obtenez
+TOOLMAXLVL = Vous pouvez utiliser

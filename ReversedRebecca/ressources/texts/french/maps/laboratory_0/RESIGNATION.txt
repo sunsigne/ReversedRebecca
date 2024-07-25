@@ -1,1 +1,1 @@
-rebecca = object = happy = C'est#la#lettre#de#démission#de#Fred#et#Georges.@Apparemment,#ils#vont#ouvrir#leur#propre#boîte.
+rebecca = object = happy = C'est la lettre de démission de Fred et Georges.@Apparemment, ils vont ouvrir leur propre boîte.

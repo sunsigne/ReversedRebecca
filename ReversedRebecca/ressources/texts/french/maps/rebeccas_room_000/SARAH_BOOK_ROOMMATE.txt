@@ -1,11 +1,11 @@
-sarah = player = happy = Au#fait,#comment#va#ta#coloc'#?
-player = object = no_sens = …#Quelle#coloc'#?
-sarah = player = surprised = Erika#!#Vous#n'êtes#pas#coloc'#?
-player = object = laugh = Ha#!#Non,#on#ne#vit#pas#ensemble.
-player = object = happy = Elle#vient#souvent#et#elle#a#les#clefs,@mais#c'est#juste#une#amie.
-sarah = player = wink = Et…#Il#y#a#un#truc#entre#vous#?
-player = object = happy_var = Non.#Je#suis#plutôt#garçons.
-player = object = happy = En#parlant#de#ça,#ça#avance#avec#Pierre#?
-sarah = player = akward = Eh#!#Ça#ne#te#regarde#pas… 
-sarah = player = worry = D'ailleurs,#tu#ne#devrais#pas@être#en#train#de#te#préparer#?
-player = object = laugh = Tu#as#raison.#Je#m'y#mets.
+sarah = player = happy = Au fait, comment va ta coloc' ?
+player = object = no_sens = … Quelle coloc' ?
+sarah = player = surprised = Erika ! Vous n'êtes pas coloc' ?
+player = object = laugh = Ha ! Non, on ne vit pas ensemble.
+player = object = happy = Elle vient souvent et elle a les clefs,@mais c'est juste une amie.
+sarah = player = wink = Et… Il y a un truc entre vous ?
+player = object = happy_var = Non. Je suis plutôt garçons.
+player = object = happy = En parlant de ça, ça avance avec Pierre ?
+sarah = player = akward = Eh ! Ça ne te regarde pas… 
+sarah = player = worry = D'ailleurs, tu ne devrais pas@être en train de te préparer ?
+player = object = laugh = Tu as raison. Je m'y mets.

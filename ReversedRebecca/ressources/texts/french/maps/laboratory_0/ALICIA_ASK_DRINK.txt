@@ -1,2 +1,2 @@
-alicia = DOWN = happy_var = Ok,#je#te#fais#ça.
-player = UP = laugh = Top,#merci.
+alicia = DOWN = happy_var = Ok, je te fais ça.
+player = UP = laugh = Top, merci.

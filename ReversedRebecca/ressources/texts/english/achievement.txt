@@ -1,32 +1,32 @@
 ///// CYAN /////
 
-AwkwardTitle = That#was#awkward...
-AwkwardText = Being#denied#a#hug
-CookiesTitle = You're#a#fat#girl,#Becky
-CookiesText = Eat#100#cookies
-InTheToiletTitle = Always#in#3rd#spot
-InTheToiletText = Found#the#keys#in#the#WC
+AwkwardTitle = That was awkward...
+AwkwardText = Being denied a hug
+CookiesTitle = You're a fat girl, Becky
+CookiesText = Eat 100 cookies
+InTheToiletTitle = Always in 3rd spot
+InTheToiletText = Found the keys in the WC
 FruitTitle = Cyber-Vegetarian
-FruitText = Eat#a#virtual#fruit
-FirstKillTitle = Meat#pancake
-FirstKillText = Eliminate#Alicia
+FruitText = Eat a virtual fruit
+FirstKillTitle = Meat pancake
+FirstKillText = Eliminate Alicia
 
 ///// GREEN /////
 
 ///// YELLOW /////
 
-BrokenHeartTitle = Broken#Heart
-BrokenHeartText = Refuse#to#go#out#with#Marie
-GoldenShowerTitle = Golden#Shower
-GoldenShowerText = To#be#urinated#on...
+BrokenHeartTitle = Broken Heart
+BrokenHeartText = Refuse to go out with Marie
+GoldenShowerTitle = Golden Shower
+GoldenShowerText = To be urinated on...
 TerminatedTitle = TERMINATED!
-TerminatedText = Permanent#death#on#a#terminator
+TerminatedText = Permanent death on a terminator
 
 ///// ORANGE /////
 
 ///// RED /////
 
-ThatWasAnAccidentTitle = That#was#an#accident...
-ThatWasAnAccidentText = Die#because#of#a#couch
+ThatWasAnAccidentTitle = That was an accident...
+ThatWasAnAccidentText = Die because of a couch
 
 ///// PURPLE /////
