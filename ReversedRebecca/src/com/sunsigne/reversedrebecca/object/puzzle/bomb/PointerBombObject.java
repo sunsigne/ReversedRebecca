@@ -3,27 +3,20 @@ package com.sunsigne.reversedrebecca.object.puzzle.bomb;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
+import com.sunsigne.reversedrebecca.object.characteristics.MouseSpammableGamepadObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class PointerBombObject extends PuzzleObject implements MouseObject, GamepadEvent {
+public class PointerBombObject extends PuzzleObject implements MouseSpammableGamepadObject {
 
 	public PointerBombObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.S, Size.S);
-
-		createSpammable();
 	}
 
 	////////// NAME ////////////
@@ -70,23 +63,19 @@ public class PointerBombObject extends PuzzleObject implements MouseObject, Game
 
 	private SpammableGamepadEvent[] spammable;
 
-	private void createSpammable() {
-		spammable = new SpammableGamepadEvent[4];
-		GenericListener onSpam = null;
+	@Override
+	public SpammableGamepadEvent[] getSpammables() {
+		if (spammable != null)
+			return spammable;
 
-		onSpam = () -> moveMouseFrom(-GameCursor.SPEED, 0);
-		spammable[0] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.LEFT, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(GameCursor.SPEED, 0);
-		spammable[1] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.RIGHT, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(0, -GameCursor.SPEED);
-		spammable[2] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.UP, 1, 1, onSpam);
-		onSpam = () -> moveMouseFrom(0, GameCursor.SPEED);
-		spammable[3] = new SpammableGamepadEvent(getGamepadController(), ButtonEvent.DOWN, 1, 1, onSpam);
+		spammable = new SpammableGamepadEvent[4];
+		createSpammable();
+		return spammable;
 	}
 
-	private void moveMouseFrom(int x, int y) {
-		int[] pos = new MousePos().get();
-		new PresetMousePos(pos[0] + x, pos[1] + y).moveMouse();
+	@Override
+	public void setSpammable(int index, SpammableGamepadEvent spammable) {
+		this.spammable[index] = spammable;
 	}
 
 	////////// GAMEPAD ////////////
@@ -96,27 +85,6 @@ public class PointerBombObject extends PuzzleObject implements MouseObject, Game
 	@Override
 	public GamepadController getGamepadController() {
 		return gamepadController;
-	}
-
-	@Override
-	public void buttonPressed(ButtonEvent e) {
-		if(spammable == null)
-			return;
-		
-		if (isInPauseMenu())
-			return;
-
-		for (int index = 0; index < 4; index++)
-			spammable[index].buttonPressed(e);
-	}
-
-	@Override
-	public void buttonReleased(ButtonEvent e) {
-		if(spammable == null)
-			return;
-		
-		for (int index = 0; index < 4; index++)
-			spammable[index].buttonReleased(e);
 	}
 
 }

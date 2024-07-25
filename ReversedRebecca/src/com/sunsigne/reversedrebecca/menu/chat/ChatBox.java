@@ -11,7 +11,6 @@ import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
-import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -26,7 +25,6 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
@@ -43,7 +41,6 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		// register the whole dialogue as an array of lines
 		all_lines = dialogue.split(System.getProperty("line.separator"));
-		createSpammable();
 	}
 
 	////////// TEXTURE ////////////
@@ -164,18 +161,6 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 	}
 
-	////////// SPAMMABLE ////////////
-
-	private SpammableGamepadEvent spammable;
-
-	private void createSpammable() {		
-		GenericListener onSpam = () -> inputPressed();
-		spammable = new SpammableGamepadEvent(getGamepadController(), DialogueKey.getGamepadKey(), 30, 3, onSpam);
-
-		if (getGamepadController().isPressed(DialogueKey.getGamepadKey()))
-			spammable.spamButton(true);
-	}
-
 	////////// GAMEPAD ////////////
 
 	private GamepadController gamepadController = new GamepadController(this);
@@ -187,14 +172,15 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (spammable != null)
-			spammable.buttonPressed(e);
+		if (e.getKey() != DialogueKey.getGamepadKey())
+			return;
+
+		inputPressed();
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-		if (spammable != null)
-			spammable.buttonReleased(e);
+
 	}
 
 	////////// INPUT ////////////
