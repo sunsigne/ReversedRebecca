@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
+import com.sunsigne.reversedrebecca.object.characteristics.MouseSpammableGamepadObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
@@ -12,9 +12,11 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class VirusObject extends PuzzleObject implements SheetableImage, MouseObject {
+public class VirusObject extends PuzzleObject implements SheetableImage, MouseSpammableGamepadObject {
 
 	public VirusObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.M, Size.M);
@@ -186,6 +188,34 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseOb
 			g.drawImage(image, x, y, w, h, null);
 		else
 			g.drawImage(image, x, y + h, w, -h, null);
+	}
+
+	////////// SPAMMABLE ////////////
+
+	private SpammableGamepadEvent[] spammable;
+
+	@Override
+	public SpammableGamepadEvent[] getSpammables() {
+		if (spammable != null)
+			return spammable;
+
+		spammable = new SpammableGamepadEvent[4];
+		createSpammable();
+		return spammable;
+	}
+
+	@Override
+	public void setSpammable(int index, SpammableGamepadEvent spammable) {
+		this.spammable[index] = spammable;
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
 	}
 
 }

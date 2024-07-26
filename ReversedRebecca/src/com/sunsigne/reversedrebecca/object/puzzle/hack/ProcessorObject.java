@@ -20,10 +20,13 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public abstract class ProcessorObject extends PuzzleObject implements SheetableImage, MouseUserEvent {
+public abstract class ProcessorObject extends PuzzleObject implements SheetableImage, MouseUserEvent, GamepadEvent {
 
 	public ProcessorObject(Puzzle puzzle, String text) {
 		super(puzzle, false, puzzle.getCol(1) + Size.XS + Size.XS / 2, puzzle.getRow(1) + Size.XS + Size.XS / 2,
@@ -115,7 +118,7 @@ public abstract class ProcessorObject extends PuzzleObject implements SheetableI
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
 			image = getSheetSubImage(sheet);
-		}			
+		}
 		return image;
 	}
 
@@ -179,6 +182,27 @@ public abstract class ProcessorObject extends PuzzleObject implements SheetableI
 	@Override
 	public void mouseReleased(MouseEvent e) {
 
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			mouseReleased(null);
 	}
 
 }
