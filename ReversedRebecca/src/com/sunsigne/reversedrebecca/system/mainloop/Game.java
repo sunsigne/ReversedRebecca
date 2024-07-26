@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
 import java.io.File;
 import java.util.ConcurrentModificationException;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Logger;
@@ -106,6 +107,10 @@ public class Game extends Canvas implements Runnable {
 
 	////////// GAMEPAD ////////////
 
+	public List<GamepadAdapter> getGamepadListeners() {
+		return GamepadManager.getList().getList();
+	}
+
 	public void addGamepadListener(GamepadAdapter adapter) {
 		new GamepadManager().addGamepadListener(adapter);
 	}
@@ -141,8 +146,8 @@ public class Game extends Canvas implements Runnable {
 
 			while (delta >= 1) {
 
-				Window.updateDim(getInstance());	
-				
+				Window.updateDim(getInstance());
+
 //				ticks++;
 				try {
 					tick();

@@ -54,20 +54,12 @@
 
 	////////// GAMEPAD ////////////
 
-	- le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
-	puzzle cadenas PAS intuitif
-	faire en sorte que tous les boutons soit valides durant BombPuzzle, KeyPuzzle, ChestPuzzle ?
-	les spammables ont des défaut (tester la chaise de RR000 pour comprendre)
-
-	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé
-	
+	1h00 monter d'un niveau d'abstraction de gamepad pour les puzzleObjects
+	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
 	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	8h00 - rendre compatible le HackPuzzle
 	8h00 - rendre compatible le DiscoPuzzle
-	4h00 - le DigPuzzle fait des choses bizarre en critical
-	20h - corriger la latence provoqué par le système de detection de la manette (merory leak ?)
-	8h00 - le spam fonctionne d'un piranha à un autre, mais pas avec les pnj ou les puzzlers
-	1h00 - pour les puzzles object, monter d'un niveau dans l'abstrait la création d'un controller (new GamepadController)
 
 	////////// EN COURS ////////////
 
