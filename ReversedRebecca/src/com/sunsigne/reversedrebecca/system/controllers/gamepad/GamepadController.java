@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -11,21 +10,6 @@ public class GamepadController implements GamepadAdapter {
 	public GamepadController(GamepadEvent gamepadEvent) {
 		this.gamepadEvent = gamepadEvent;
 		Game.getInstance().addGamepadListener(this);
-	}
-
-	public GamepadController(GameObject object, GamepadEvent gamepadEvent) {
-		this.gamepadEvent = gamepadEvent;
-		this.object = object;
-		Game.getInstance().addGamepadListener(this);
-	}
-
-	private GameObject object;
-
-	@Override
-	public String toString() {
-		if (object == null)
-			return super.toString();
-		return object.toString();
 	}
 
 	public void removeGamepadListener() {
