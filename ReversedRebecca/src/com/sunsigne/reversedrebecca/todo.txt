@@ -8,7 +8,6 @@
 	reset la sauvegarde pour commencer sur le bon lvl
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
-	retirer dans GamepadUpdate le gamepad detection
 
 	////////// GEEKALI ////////////
 
@@ -24,13 +23,8 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
-		- est vrai avec manette xbox : souvent, il faut cliquer 2 fois pour qu'une input soit comptée !
-		- est arrivé avec la manette xbox : il faut cliquer 2 fois pendant le digPuzzle pour effectivement creuser une dalle ou casser un obstacle (tartine avait marché sur le clavier juste avant, est-ce que c'est systématique quand même ?)
-		- avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
-		- manette : partout où les spammable sont utilisé, il faudrait vérifié qu'ils soient non nulles avant d'appeler une fonction les concernant (exemple concret, il y a eu un crash avec la fonction buttonReleased() dans ChatBox)
-		- manette : les spammables detectent parfois des faux possitifs (nottamment vis-à-vis du tchat). Comprendre pourquoi et régler le pb
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
 	
@@ -42,7 +36,6 @@
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
-		- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 	
 	droits à demander :
 		- les drapeaux
@@ -54,6 +47,10 @@
 
 	////////// GAMEPAD ////////////
 
+	vérifié si réglé :
+	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
+
+	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
 	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)

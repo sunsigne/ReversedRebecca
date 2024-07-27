@@ -23,4 +23,4 @@ cry=4,1
 cry_var=4,2
 cry_var2=4,3
 cry_happy=4,4
-cry_laught=4,5
+cry_laugh=4,5
