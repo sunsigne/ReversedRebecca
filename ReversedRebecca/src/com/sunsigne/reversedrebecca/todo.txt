@@ -56,13 +56,40 @@
 	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	2h00 - rendre compatible le DiscoPuzzle
 
+	////////// PUBLIC ////////////
+
+	à regarder :
+
+	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
+	2h00 verifier l'onglet "GEEKALI" et mettre à jour les éléments
+	1h00? regazrder les bugs les + grave et les corriger
+	- partie "EXPERIENCE UTILISATEUR"
+	- partie "EN COURS"
+	- partie "TRADUCTION"
+	- partie "SUCCES"
+	1h30 s'assurer de préciser que le support manette est imparfait (lorsqu'elle est branchée, genre un pop-up windows ?)
+	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.)
+	
+	à faire :
+	
+	1h00 - réfléchier à si userdata peut se conserver ou doit se reset (succès, réglages et dave)
+	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
+	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
+	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
+	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
+	8h00 traduction anglais
+	1h00 écran de fin (dave qui prévient que le niveau boucle mais qu'il y a plusieurs possibilités)
+
 	////////// EN COURS ////////////
+
+	URGENTISSIME : le bug de bidouille (sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise)
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
 
 	EXPERIENCE UTILISATEUR :
-	3h00 - créer dans les menu options la possibilité de désactiver les highlights
+	4h00 - créer dans les menu options la possibilité de désactiver les highlights (j'ai une idée : autant faire d'une pierre deux coup avec le choix de la taille du texte : rebecca se tient devient une plante avec l'action "[E] arroser". La taille de cette action se met à jour ainsi que l'affichage du highlight, en fonction des options choisies par le joueur)
 	40h00 - le jeux se fait au clavier et soudainement à la souris (puzzle), ça n'est pas naturel
 	20h00 - avoir une solution pour les colorblind : outils & puzzler (des outils de + en + élaborés (design) en fonction de leur lvl ?)
 	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ?
@@ -133,17 +160,14 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
-	1h00 - faire les highlights du lvl tuto
 	1h00 - les portes grises n'ont pas encore de mappable
 	1h00 - gordon est mal introduit dans les fichiers
 	2h00 - parler dans les codex du chargement des données sauvegardées ?
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?
-	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
-	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
 	
@@ -158,7 +182,6 @@
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction
 	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
 	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	XhXX - les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la HUD
 	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
@@ -183,9 +206,8 @@
 	////////// DAVE ////////////
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
-	
-	RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?
-	
+
+	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
 	TextsSizePreview -> dave apparait (donc le supprimer lorsqu'il est mort)
 	faire en sorte qu'un niveau Dave ne puisse pas être rechargé (si on le zap, on est tp au niveau suivant) ... pb, c'est chiant vis-à-vis des speedrun
@@ -231,7 +253,7 @@
 	
 	à enregister :
 	- le type de scénario (sortie ou enquête)
-	- Saboter l'ordinateur de Bernard
+	- Saboter l'ordinateur de Bernard (Tim ?)
 	- Mika qui embrasse
 	- Delta a informé rebecca qu'elle faisait des casses avec son frère
 	- Jean qui se fait gronder par Sarah
@@ -290,10 +312,8 @@
 	"rolling bomb" ET son partern sont à perfectionner (bombe qui roule visuellement ?)...
 	le boss continue de bombarder le jour même lorsqu'il quitte la zone (bombes par au-dessus)
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
-	
-	
-	
-	
+
+
 	
 	////////// SONS ////////////
 
