@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.world.controllers;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
@@ -81,6 +82,9 @@ public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent,
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		if (devOnly() && Infos.IS_DEV_VERSION == false)
+			return;
+		
 		if (World.get() == null)
 			return;
 
@@ -93,6 +97,9 @@ public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent,
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+		if (devOnly() && Infos.IS_DEV_VERSION == false)
+			return;
+		
 		if (World.get() == null)
 			return;
 
@@ -128,6 +135,8 @@ public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent,
 	////////// INPUT ////////////
 
 	private boolean pressed;
+
+	public abstract boolean devOnly();
 
 	public abstract void inputPressed(int key, int button);
 

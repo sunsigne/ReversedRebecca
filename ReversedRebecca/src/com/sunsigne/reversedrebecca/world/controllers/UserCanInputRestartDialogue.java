@@ -18,7 +18,12 @@ public class UserCanInputRestartDialogue extends WorldControllers {
 	}
 
 	////////// KEYBOARD ////////////
-
+	
+	@Override
+	public boolean devOnly() {
+		return true;
+	}
+	
 	public static Action lastChat;
 
 	@Override

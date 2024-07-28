@@ -15,7 +15,12 @@ public class UserCanInputRestart extends WorldControllers {
 	}
 
 	////////// KEYBOARD ////////////
-
+	
+	@Override
+	public boolean devOnly() {
+		return true;
+	}
+	
 	@Override
 	public void inputPressed(int key, int button) {
 		if (key == KeyEvent.VK_BACK_SPACE) {

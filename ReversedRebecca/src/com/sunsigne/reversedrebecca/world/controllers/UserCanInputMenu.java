@@ -20,6 +20,11 @@ public class UserCanInputMenu extends WorldControllers {
 	////////// KEYBOARD ////////////
 
 	@Override
+	public boolean devOnly() {
+		return false;
+	}
+
+	@Override
 	public void inputPressed(int key, int button) {
 		if (key != KeyEvent.VK_ESCAPE && button != ButtonEvent.START)
 			return;

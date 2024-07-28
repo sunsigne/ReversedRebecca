@@ -1,7 +1,6 @@
 
 	////////// VERSION PUBLIQUE ////////////
 
-	UserCanKeyRestart & ...KeyDie -> à supprimer quand les tests sont fini
 	supprimer les ressources non utilisées
 	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
 	désactiver le scénarion 'inquery'
@@ -74,7 +73,6 @@
 	
 	1h00 - réfléchier à si userdata peut se conserver ou doit se reset (succès, réglages et dave)
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	3h00 - créer un debug mode pour activer les raccourcis clavier de dev ?
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
@@ -83,7 +81,7 @@
 
 	////////// EN COURS ////////////
 
-	URGENTISSIME : le bug de bidouille (sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise)
+	URGENTISSIME : le bug où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise)
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé.
@@ -160,6 +158,7 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
+	1h00 - UserInputDie -> devrait quand même faire quelque chose si le joueur est invulnérable
 	1h00 - les portes grises n'ont pas encore de mappable
 	1h00 - gordon est mal introduit dans les fichiers
 	2h00 - parler dans les codex du chargement des données sauvegardées ?
