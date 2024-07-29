@@ -64,9 +64,9 @@ public class Player extends LivingObject {
 
 	////////// HP ////////////
 
-	private void createCharacteristic(String text, int num) {
+	private void createCharacteristic(String text, String value) {
 		String content = new FileTask().read(userData, file);
-		String new_content = text + "=5" + System.getProperty("line.separator") + content;
+		String new_content = text + "=" + value + System.getProperty("line.separator") + content;
 		new FileTask().write(file, new_content);
 	}
 
@@ -75,8 +75,8 @@ public class Player extends LivingObject {
 
 		// if the file "characteristics" has no value for the hp, create one
 		if (txtMaxHp.isEmpty()) {
-			createCharacteristic(System.getProperty("line.separator") + "MaxHp", 3);
-			txtMaxHp = "5";
+			txtMaxHp = "3";
+			createCharacteristic(System.getProperty("line.separator") + "MaxHp", txtMaxHp);
 		}
 
 		setMaxHp(Integer.parseInt(txtMaxHp));

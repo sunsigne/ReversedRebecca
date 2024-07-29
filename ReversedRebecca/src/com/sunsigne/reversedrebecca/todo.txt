@@ -48,18 +48,10 @@
 	2h00 - rendre compatible le DiscoPuzzle
 	3h00 - dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 
-	////////// PUBLIC ////////////
+	////////// EN COURS ////////////
 
-	0h10 - geekali :
-	à supprimer - map + text + texture workshop_geekali (mettre dans &working)
-	à supprimer - mole 0 la plupart des textes et leur piranha declancheur (mettre dans &working)
-	à rétablir - Userdata & class Player : les PV ont actuellement été augmenté au lieu des 3 réglementaires
-
-	bug :
-	0h30 - URGENTISSIME : le bug où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise)
-	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
-	0h30 - droits à demander : les drapeaux + autres ?
-
+	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
+	0h10 - BombPuzzle -> laisser le viseur du controleur en mode souris (et faire se déplacer très lentement les bombes, car les 2 "live" officiles sur le jeu ont dit "j'ai pas compris mais c'est passé" (à comprendre : difficulté non comprise, donc il faut un ERA + objectif très clair, et un mouvement + un viseur c'est parfait)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 verifier l'onglet "GEEKALI" et mettre à jour les éléments
 	1h00? regazrder les bugs les + grave et les corriger
@@ -76,16 +68,10 @@
 	1h00 lvl001 faire en sorte qu'un joueur nul/^perdu trouve la clef cyan (timer ? ERA ?)
 	72h00 réfléchir au système de dialogues pour s'y retrouver (et ça aidera pour la traduction)
 
-	+ toute les parties suivantes :
-	- partie "VERSION PUBLIQUE"
-	- partie "EN COURS"
-	- partie "DAVE"
-	- partie "TRADUCTION"
-
-	////////// EN COURS ////////////
-
-	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
-	0h10 - BombPuzzle -> laisser le viseur du controleur en mode souris (et faire se déplacer très lentement les bombes, car les 2 "live" officiles sur le jeu ont dit "j'ai pas compris mais c'est passé" (à comprendre : difficulté non comprise, donc il faut un ERA + objectif très clair, et un mouvement + un viseur c'est parfait)
+	BUG :
+	0h30 - le bug avec la streameuse où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug)
+	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
+	0h30 - droits à demander : les drapeaux + autres ?
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
@@ -112,6 +98,12 @@
 
 	AUTRE :
 	1h formulaire de test : mettre à jour pour la version publique classique + 6h mettre en place système d'envoie automatique d'erreur ?
+
+	+ toute les parties suivantes :
+	- partie "VERSION PUBLIQUE"
+	- partie "EN COURS"
+	- partie "DAVE"
+	- partie "TRADUCTION"
 
 	////////// BOSS ////////////
 
