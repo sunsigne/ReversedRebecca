@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
@@ -54,9 +53,8 @@ public class PointerBombObject extends PuzzleObject implements MouseSpammableGam
 
 	@Override
 	public void render(Graphics g) {
-		if (ControllerManager.getInstance().isUsingGamepad())
-			g.drawImage(getImage(), getX() - getWidth() / 2, getY() - getHeight() / 2, 2 * getWidth(), 2 * getHeight(),
-					null);
+		g.drawImage(getImage(), getX() - getWidth() / 2, getY() - getHeight() / 2, 2 * getWidth(), 2 * getHeight(),
+				null);
 	}
 
 	////////// SPAMMABLE ////////////

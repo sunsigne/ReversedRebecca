@@ -51,12 +51,10 @@
 	////////// EN COURS ////////////
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
-	0h10 - BombPuzzle -> laisser le viseur du controleur en mode souris (et faire se déplacer très lentement les bombes, car les 2 "live" officiles sur le jeu ont dit "j'ai pas compris mais c'est passé" (à comprendre : difficulté non comprise, donc il faut un ERA + objectif très clair, et un mouvement + un viseur c'est parfait)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 verifier l'onglet "GEEKALI" et mettre à jour les éléments
-	1h00? regazrder les bugs les + grave et les corriger
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
-	0h30 désactiver le support maneyyr (message de Dave qui prévient)
+	0h30 désactiver le support manette (message de Dave qui prévient)
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.)
 	1h00 - réfléchier à si userdata peut se conserver ou doit se reset (succès, réglages et dave)
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -101,7 +99,6 @@
 
 	+ toute les parties suivantes :
 	- partie "VERSION PUBLIQUE"
-	- partie "EN COURS"
 	- partie "DAVE"
 	- partie "TRADUCTION"
 
