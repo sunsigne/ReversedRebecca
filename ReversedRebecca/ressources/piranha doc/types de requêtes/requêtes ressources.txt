@@ -102,18 +102,19 @@ Note : les succès custom créé par l'utilisateur / le joueur ne seront pas li
 
 Le Type de Requête TALK permet de lancer un dialogue.
 
-Fichier de référence : « ressources/texts/(langue actuelle)/maps/(carte actuelle)/(cible).txt ».
+Fichier de référence : « ressources/texts/(langue actuelle)/maps/(carte actuelle)/(première partie de la cible).txt ».
 
 Exemple :
-TIME -> 0 = TALK -> JEAN_PISSED_ITS_PANTS
-TIME -> 0 = GOTO -> TALK:JEAN_PISSED_ITS_PANTS
+TIME -> 0 = TALK -> JEAN*PISSED_ITS_PANTS
+TIME -> 0 = GOTO -> TALK:JEAN*PISSED_ITS_PANTS
 
-Lorsque la Condition sera vérifiée, le dialogue dont le fichier de référence est « jean_pissed_pee_its_pants.txt » sera lancé.
+Lorsque la Condition sera vérifiée, le dialogue dont le fichier de référence est « jean.txt » sera lancé. Dans ce fichier, c'est la partie sous la balise « % PISSED_ITS_PANTS » qui sera traitée.
 
 
 L'écriture des fichiers de dialogues nécessite de respecter une syntaxe particulière..
 
 Exemple du contenu du fichier de référence d'un dialogue :
+% HELLO
 player = object = happy = Salut Camille !@Toujours aussi… "Robotique" ?
 object = DOWN = asleep = …
 
