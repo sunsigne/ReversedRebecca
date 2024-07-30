@@ -20,10 +20,10 @@ Le Type de Requête ACTION permet de définir une action sur un objet.
 Ci-dessous, deux exemples d'écritures différentes pour la même Instruction. L'Écriture Compacte n'est possible que dans le second cas (puisqu'une seule Cible).
 
 Exemple : 
-TIME -> 0 = ACTION -> 1, TALK(WATCH)OBJECT*BOOK
-TIME -> 0 = ACTION_ONE -> TALK(WATCH)OBJECT*BOOK
+TIME -> 0 = ACTION -> 1, TALK(WATCH)BOOK
+TIME -> 0 = ACTION_ONE -> TALK(WATCH)BOOK
 
-Lorsque la Condition sera vérifiée, L'action TALK sera disponible, apparaîtra pour le joueur comme étant l'action « WATCH » et aura pour fichier de référence « object.txt » dans le dossier « texts/(langue actuelle)/maps/(carte actuelle) ». Dans ce fichier, c'est la partie sous la balise « % BOOK » qui sera traitée.
+Lorsque la Condition sera vérifiée, L'action TALK sera disponible, apparaîtra pour le joueur comme étant l'action « WATCH » et aura pour fichier de référence « book.txt » dans le dossier « texts/(langue actuelle)/maps/(carte actuelle) ».
 
 Le 1 en Cible (ou ONE dans le second exemple) indique que cette action doit remplacer la première action proposée par l'objet, ce chiffre peut donc aller jusqu'à 3 (THREE).
 
@@ -35,6 +35,11 @@ Pour déterminer quelle touche du clavier devrait être attribuée à une action
 - touche 1 : action basique (parler, regarder, etc.)
 - touche 2 : modification de l'environnement (déplacer un objet, vider une poubelle, etc.)
 - touche 3 : actions importantes (chercher un objet, terminer la carte, etc.)
+
+De la même façon que pour le Type de Requête TALK (voir la « TALK » dans la partie « Piranha – Type de Requêtes : Ressources »), il est possible de ne sélectionner qu'une partie du contenu du fichier de référence :
+TIME -> 0 = ACTION -> 1, TALK(WATCH)OBJECT*BOOK
+
+Lorsque la Condition sera vérifiée, le dialogue dont le fichier de référence est « object.txt » sera lancé. Dans ce fichier, c'est la partie sous la balise « % BOOK » qui sera traitée.
 
 Attention ! Il ne faut pas confondre une action avec un Type de Requête ! Si « TALK » est effectivement le nom d'un Type de Requête existant (voir « TALK » dans la partie « Piranha – Types de Requêtes : Autres »), il s'agit ici EXCLUSIVEMENT d'une action, dont le nom y est identique, par commodité.
 
