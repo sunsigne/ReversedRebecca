@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 public abstract class LocalInstruction {
 
 	private boolean userData = false;
-	
+
 	protected void analyse(PiranhaObject object, String condition) {
 		this.object = object;
 
@@ -22,19 +22,25 @@ public abstract class LocalInstruction {
 		if (request.isBlank())
 			return;
 
-		processAction();
+		processAction(condition);
 	}
 
 	private PiranhaObject object;
 	private String request;
 
-	private void processAction() {
+	private void processAction(String condition) {
 		String requestType = request.split("->")[0];
 		String target = request.split("->")[1];
 
 		for (Request tempRequest : RequestList.getList().getList()) {
 			if (requestType.equalsIgnoreCase(tempRequest.getType())) {
-				tempRequest.doAction(object, target);
+				try {
+					tempRequest.doAction(object, target);
+				} catch (Exception e) {
+					System.err.println("Problem encounter with following object : " + object.toString());
+					System.err.println("can't process following Instruction : " + condition + "=" + request);
+					e.printStackTrace();
+				}
 			}
 		}
 	}
