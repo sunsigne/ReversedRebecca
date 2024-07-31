@@ -1,2 +1,0 @@
-sarah = player = wink = C'est prêt ! Tu connais la suite.
-player = sarah = laugh = Oui, comme d'habitude.

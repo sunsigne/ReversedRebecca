@@ -35,12 +35,12 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
 
-	public ChatBox(PiranhaObject object, String target, String dialogue) {
+	public ChatBox(PiranhaObject object, String target, String dialogue, String tag) {
 		this.object = object;
 		this.value = target;
 
 		// register the whole dialogue as an array of lines
-		all_lines = dialogue.split(System.getProperty("line.separator"));
+		all_lines = selectTag(dialogue, tag);
 	}
 
 	////////// TEXTURE ////////////
@@ -81,11 +81,39 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	private String[] all_lines;
 	private ChatContent content;
 
+	private String[] selectTag(String dialogue, String tag) {
+		if (tag == null)
+			return dialogue.split(System.getProperty("line.separator"));
+
+		String lines[] = dialogue.split("%");
+		String line = null;
+
+		for (int index = 0; index < lines.length; index++) {
+			String tagLine = lines[index].split(System.getProperty("line.separator"))[0];
+			tagLine = tagLine.replace(" ", "");
+			if (tag.equalsIgnoreCase(tagLine)) {
+				line = lines[index].split(tag)[1];
+				break;
+			}
+		}
+
+		if (line == null)
+			stopApp();
+
+		return line.split(System.getProperty("line.separator"));
+	}
+
 	private void goToNextLine() {
 
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
+
+		if (line.isEmpty()) {
+			count++;
+			goToNextLine();
+			return;
+		}
 
 		if (line.split("=").length != 4)
 			stopApp();

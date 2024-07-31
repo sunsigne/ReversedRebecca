@@ -1,1 +1,0 @@
-player = object = laugh = Elle n'avait pas menti :@le même meuble, mais avec moins de livres !

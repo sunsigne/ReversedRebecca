@@ -1,0 +1,37 @@
+% WAIT_HERE
+sarah = player = happy = On y est !@J'en ai pour une seconde.
+player = sarah = laugh = Aucun problème.
+
+
+% ITS_READY
+sarah = player = wink = C'est prêt ! Tu connais la suite.
+player = sarah = laugh = Oui, comme d'habitude.
+
+
+% RIGHT_BEFORE_CHEST
+player = object = excited = C'est toujours aussi impressionnant !
+sarah = player = laugh = Je suis assez d'accord.
+
+
+% RIGHT_BEFORE_CHEST_AGAIN
+player = object = worry = Je me demandais… Tu peux créer@tout ce que tu veux avec ce système ?
+player = object = laugh = Par exemple… de la nourriture ?
+sarah = player = you_silly_var = Non, je ne peux pas.
+sarah = player = happy = C'est un peu comme une imprimante.@Une image de nourriture restera de l'encre.
+player = object = you_silly_var = Dommage.
+
+
+% RIGHT_BEFORE_CHEST_LAST
+sarah = player = akward = Tu me fais quoi ?@Tu ne va pas chercher ton cadeau… ?
+player = object = laugh = Si, si ! Je fais juste durer le plaisir.
+sarah = player = wink = Ha ! Dans ce cas…
+sarah = player = pervert = Faisons durer ça des heures.@Tu y prendras… beaucoup de plaisir.
+player = object = blush_var = Sarah !!!@Ça va pas de dire des choses comme ça ?
+sarah = player = laugh = Ha ha ! Pardon, mais tu verrais ta tête.@Allez, va chercher ton cadeau.
+
+
+% THAT_WAS_FUN
+player = object = happy_var = C'était marrant !
+sarah = player = determinated = N'hésite pas à repasser quand tu veux.@J'aurai toujours quelque chose pour toi !
+player = object = laugh = T'es vraiment la meilleure !
+sarah = player = wink = Je sais.@Bon ! Allons-y avant d'être en retard.
