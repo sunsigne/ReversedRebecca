@@ -46,6 +46,7 @@
 	72h00 réfléchir au système de dialogues pour s'y retrouver (et ça aidera pour la traduction)
 
 	BUG :
+	0n10 - (ws000) highlight des notes de sarah sur son bureau pas faites
 	0h30 - le bug avec la "streameuse dont on ne doit pas prononcer le nom", où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug)
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 	0h30 - droits à demander : les drapeaux + autres ?

@@ -31,8 +31,9 @@ public class ActionAnalyzer {
 		if (actionInstruction.equalsIgnoreCase("null"))
 			return null;
 
-		String actionType = actionInstruction.split("\\*")[0];
-		String target = actionInstruction.split("\\*")[1];
+		String actionType = actionInstruction.split("\\(")[0];
+		String name = actionInstruction.split("\\(")[1].split("\\)")[0];
+		String target = actionInstruction.split("\\)")[1];
 
 		PiranhaObjectAction genericAction = getPiranhaObjectAction(actionType);
 		PiranhaObjectAction objectAction = null;
@@ -53,7 +54,7 @@ public class ActionAnalyzer {
 		}
 
 		// reattribution of key and name
-		String keyANDname = getTranslatedText(objectAction.getName(), getFile(object));
+		String keyANDname = getTranslatedText(name, getFile(object));
 		objectAction.setKeyEvent(getKey(keyANDname), getKeyEvent(keyANDname));
 		objectAction.setName(getName(keyANDname));
 
@@ -75,9 +76,8 @@ public class ActionAnalyzer {
 	private PiranhaObjectAction getPiranhaObjectAction(String actionType) {
 
 		for (PiranhaObjectAction tempAction : ActionList.getList().getList()) {
-			if (actionType.equalsIgnoreCase(tempAction.getName())) {
+			if (actionType.equalsIgnoreCase(tempAction.getName()))
 				return tempAction;
-			}
 		}
 		return null;
 	}
