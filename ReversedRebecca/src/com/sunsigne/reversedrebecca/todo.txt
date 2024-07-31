@@ -31,6 +31,9 @@
 
 	////////// EN COURS ////////////
 
+	tester ws001 tous les dialogues (intégrallement)
+	tester rr000 tous les clefs (intégrallement)
+
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
