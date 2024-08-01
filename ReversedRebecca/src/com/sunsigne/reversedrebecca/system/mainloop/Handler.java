@@ -2,11 +2,11 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 
 import java.awt.Graphics;
 import java.util.HashMap;
-import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -199,18 +199,20 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 		updateHandler();
 
-		for (Updatable tempObject : getList()) {
+		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
+		list.getList().addAll(getList());
+
+		for (Updatable tempObject : list.getList()) {
+			if (getList().contains(tempObject) == false)
+				continue;
 
 			tempObject.tick();
 
-			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {
-				tempPhysicLaw.tick(tempObject);
-			}
+			var physic_list = new GameLimitedList<PhysicLaw>(LISTTYPE.ARRAY);
+			physic_list.getList().addAll(PhysicList.getList().getList());
 
-			try {
-				getList().iterator().next();
-			} catch (NoSuchElementException e) {
-				break;
+			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
+				tempPhysicLaw.tick(tempObject);
 			}
 		}
 	}
@@ -227,7 +229,10 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		if (hideRendering)
 			return;
 
-		for (Updatable tempObject : getList()) {
+		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
+		list.getList().addAll(getList());
+
+		for (Updatable tempObject : list.getList()) {
 
 			// skip rendering if out of camera
 			if (isCameraDependant()) {
@@ -241,23 +246,20 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			renderDependency(g, true);
 
-			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {
+			var physic_list = new GameLimitedList<PhysicLaw>(LISTTYPE.ARRAY);
+			physic_list.getList().addAll(PhysicList.getList().getList());
+			
+			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
 				tempPhysicLaw.beforeObjectRender(g, tempObject);
 			}
 
 			tempObject.render(g);
 
-			for (PhysicLaw tempPhysicLaw : PhysicList.getList().getList()) {
+			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
 				tempPhysicLaw.afterObjectRender(g, tempObject);
 			}
 
 			renderDependency(g, false);
-
-			try {
-				getList().iterator().next();
-			} catch (NoSuchElementException e) {
-				break;
-			}
 		}
 	}
 
