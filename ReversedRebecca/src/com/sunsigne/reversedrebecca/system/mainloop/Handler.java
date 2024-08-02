@@ -6,9 +6,9 @@ import java.util.HashMap;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -164,15 +164,12 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	}
 
 	public void updateHandler() {
-		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
-		list.getList().addAll(add_list.getList());
 
+		var list = new ListCloner().deepClone(add_list);
 		for (Updatable tempObject : list.getList())
 			addObject(tempObject);
 
-		list.clear();
-		list.getList().addAll(remove_list.getList());
-
+		list = new ListCloner().deepClone(remove_list);
 		for (Updatable tempObject : list.getList()) {
 			super.removeObject(tempObject);
 			map.remove(tempObject);
@@ -205,18 +202,14 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 		updateHandler();
 
-		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
-		list.getList().addAll(getList());
-
+		var list = new ListCloner().deepClone(this);
 		for (Updatable tempObject : list.getList()) {
 			if (getList().contains(tempObject) == false)
 				continue;
 
 			tempObject.tick();
 
-			var physic_list = new GameLimitedList<PhysicLaw>(LISTTYPE.ARRAY);
-			physic_list.getList().addAll(PhysicList.getList().getList());
-
+			var physic_list = new ListCloner().deepClone(PhysicList.getList());
 			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
 				tempPhysicLaw.tick(tempObject);
 			}
@@ -235,9 +228,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		if (hideRendering)
 			return;
 
-		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
-		list.getList().addAll(getList());
-
+		var list = new ListCloner().deepClone(this);
 		for (Updatable tempObject : list.getList()) {
 
 			// skip rendering if out of camera
@@ -252,9 +243,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			renderDependency(g, true);
 
-			var physic_list = new GameLimitedList<PhysicLaw>(LISTTYPE.ARRAY);
-			physic_list.getList().addAll(PhysicList.getList().getList());
-
+			var physic_list = new ListCloner().deepClone(PhysicList.getList());
 			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
 				tempPhysicLaw.beforeObjectRender(g, tempObject);
 			}

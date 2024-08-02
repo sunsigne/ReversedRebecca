@@ -6,8 +6,7 @@ import java.awt.Rectangle;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.pattern.list.GameList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -27,9 +26,7 @@ public class CollisionLaw implements PhysicLaw {
 		if (layer == null)
 			return;
 
-		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
-		list.getList().addAll(layer.getList());
-		
+		var list = new ListCloner().deepClone(layer);
 		for (Updatable tempObject : list.getList()) {
 			if (object == tempObject)
 				continue;
