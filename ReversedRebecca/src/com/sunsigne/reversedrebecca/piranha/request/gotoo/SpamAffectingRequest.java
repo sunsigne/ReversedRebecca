@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -65,7 +66,8 @@ public class SpamAffectingRequest extends AffectingRequest {
 	private void createSpamTimer(PiranhaObject object, String target) {
 		list.addObject(target);
 		GameTimer timer = new GameTimer(20, () -> {
-			for (String tempTarget : list.getList()) {
+			var cloneList = new ListCloner().deepClone(list);
+			for (String tempTarget : cloneList.getList()) {
 				map.remove(tempTarget);
 				if (list.getList().iterator().hasNext())
 					super.doAction(object, tempTarget);
