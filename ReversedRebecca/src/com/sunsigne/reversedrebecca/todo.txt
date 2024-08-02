@@ -14,16 +14,13 @@
 	peut-être existant sur build only ? :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
+		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
-	
-	pas réglé mais très compliqué :
-		- dans le supermenu, il est arrivé que le handler soit clear juste après avoir ajouté le menu (alors que l'inverse devrait se produire), ce qui a détruit son affichage
-		- menu languages 4 langues se sont affiché au lieu de 2
-	
+
 	vérifier si bien réglé :
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
@@ -31,8 +28,12 @@
 
 	////////// EN COURS ////////////
 
-	tester ws001 tous les dialogues (intégrallement)
+	URGENT :
+	rr000 :
+	obj-01 - MEMORY:ACTIVATED_RIGHT_HAND_ADVISE semble ne pas marcher
 	tester rr000 tous les clefs (intégrallement)
+	adapter laboratory & tutorial au nouveau système
+	-> venir à bout une bonne fois pour totue des concurrentmodification
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
@@ -50,7 +51,7 @@
 
 	BUG :
 	0n10 - (ws000) highlight des notes de sarah sur son bureau pas faites
-	0h30 - le bug avec la "streameuse dont on ne doit pas prononcer le nom", où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug)
+	0h30 - le bug avec la "streameuse dont on ne doit pas prononcer le nom", où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug) -> corrigé depuis le patch sur les ConcurrentModification ? Lui demander de reproduire le bug, et son crash repport quand même, au cas où.
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 	0h30 - droits à demander : les drapeaux + autres ?
 

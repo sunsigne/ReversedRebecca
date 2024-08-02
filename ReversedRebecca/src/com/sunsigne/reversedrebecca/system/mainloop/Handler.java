@@ -164,15 +164,21 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	}
 
 	public void updateHandler() {
-		for (Updatable tempObject : add_list.getList())
-			addObject(tempObject);
-		add_list.clear();
+		var list = new GameList<Updatable>(LISTTYPE.ARRAY);
+		list.getList().addAll(add_list.getList());
 
-		for (Updatable tempObject : remove_list.getList()) {
+		for (Updatable tempObject : list.getList())
+			addObject(tempObject);
+
+		list.clear();
+		list.getList().addAll(remove_list.getList());
+
+		for (Updatable tempObject : list.getList()) {
 			super.removeObject(tempObject);
 			map.remove(tempObject);
 		}
 
+		add_list.clear();
 		remove_list.clear();
 	}
 
@@ -248,7 +254,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			var physic_list = new GameLimitedList<PhysicLaw>(LISTTYPE.ARRAY);
 			physic_list.getList().addAll(PhysicList.getList().getList());
-			
+
 			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
 				tempPhysicLaw.beforeObjectRender(g, tempObject);
 			}

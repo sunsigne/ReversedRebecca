@@ -153,7 +153,8 @@ public class Game extends Canvas implements Runnable {
 					tick();
 				} catch (ConcurrentModificationException e) {
 					// some ticks may be compromised. As the next tick repair the problem,
-					// no need to proccess this exception.
+					// this exception shouldn't not be a problem. Still better if not occuring.
+					e.printStackTrace();
 				} catch (NullPointerException e) {
 					if (tickNullError)
 						e.printStackTrace();
@@ -172,6 +173,7 @@ public class Game extends Canvas implements Runnable {
 					render();
 				} catch (ConcurrentModificationException e) {
 					// same problem as above
+					e.printStackTrace();
 				} catch (NullPointerException e) {
 					if (renderNullError)
 						e.printStackTrace();
@@ -197,9 +199,9 @@ public class Game extends Canvas implements Runnable {
 			tick();
 			render();
 		} catch (Exception e) {
-			// same problem as above but can be more annoying.
-			// Clearly, It's just better to ignore this catch
-			// as this method is called rarelly.
+			e.printStackTrace();
+			// same problem as above.
+			// Should be even less problematic as this method is called rarelly.
 		}
 	}
 
@@ -213,9 +215,9 @@ public class Game extends Canvas implements Runnable {
 	////////// RENDER ////////////
 
 	private void render() {
-		if(running == false)
+		if (running == false)
 			return;
-		
+
 		BufferStrategy bs = this.getBufferStrategy();
 		if (bs == null) {
 			this.createBufferStrategy(3);
