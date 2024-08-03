@@ -1,1 +1,0 @@
-player = object = no_sens = Pourquoi j'ai fais ça ?

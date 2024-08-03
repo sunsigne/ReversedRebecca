@@ -1,1 +1,0 @@
-player = object = happy_var = Salut Vera, tu vas bien ce matin ?

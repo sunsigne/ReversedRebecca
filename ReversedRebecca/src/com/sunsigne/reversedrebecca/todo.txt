@@ -49,6 +49,7 @@
 	8h00 traduction anglais
 	1h00 lvl001 faire en sorte qu'un joueur nul/perdu trouve la clef cyan (timer ? ERA ?)
 	72h00 réfléchir au système de dialogues pour s'y retrouver (et ça aidera pour la traduction)
+	0h20 changer la musique de l'écran titre
 
 	BUG :
 	0n10 - (ws000) highlight des notes de sarah sur son bureau pas faites

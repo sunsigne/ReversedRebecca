@@ -1,2 +1,0 @@
-player = object = surprised = Ho !
-player = object = laugh = Mes clés ne sont pas là, mais j'ai trouvé une pièce !

@@ -1,1 +1,0 @@
-player = object = worry = On dirait qu'elles ne sont pas ici…@Ça aurait pu quand on y réfléchit.
