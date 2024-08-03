@@ -1,1 +1,0 @@
-player = object = unhappy = Non, je ne devrais vraiment pas…

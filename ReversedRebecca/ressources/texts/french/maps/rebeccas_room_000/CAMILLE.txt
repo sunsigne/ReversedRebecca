@@ -1,3 +1,10 @@
+% ASK_FOR_KEY
+player = object = happy = Camille, tu ne saurais pas où sont mes clés ?
+object = DOWN = asleep = …
+player = object = you_silly = Ça valait la peine d'essayer…
+
+
+% HELLO
 player = object = happy = Salut Camille, tu vas bien ?
 object = DOWN = asleep = …
 player = object = worry = Toujours aussi… "Robotique" ?
@@ -7,3 +14,58 @@ player = object = camille = Oui. Et toi, Rebecca ?@Toujours aussi "humaine" ?
 object = object = asleep = …
 player = object = you_silly_var = "Construire un robot intelligent"…@C'est un sacré projet que tu as là, Erika…
 player = object = you_silly = J'espère qu'elle ne si fatigue pas trop…
+
+
+% SARAH_NOTICE
+sarah = player = happy = En tout cas, j'ai hâte de voir le résultat.
+player = sarah = laugh = Oui, mais aussi !
+
+
+% SARAH_REBECCA_HUMAN
+sarah = player = happy_var = C'est fascinant de regarder ce robot…@On dirait qu'elle est humaine.
+player = sarah = happy = Erika dit que ça ne se limitera@pas qu'à son apparence.
+player = sarah = happy_var = Elle aura une intelligence si poussée qu'on@ne pourra même plus faire la différence.
+sarah = player = surprised = À ce point ?
+player = sarah = laugh = Oui. C'est rafraichissant, tu ne trouves pas ?
+sarah = player = worry = Qu'est-ce que tu veux dire ?
+player = sarah = happy = Souvent, quand on est confronté à un programme,@on s'aperçoit très vite de ses limites.
+player = sarah = happy_var = Eh bien cette fois, on passera surtout notre@temps à s'étonner à quel point il s'adapte.
+sarah = player = laugh = J'ai compris ! Ça change, en effet.
+player = DOWN = you_silly = N'est-ce pas ?
+
+
+% SARAH_REBECCA_LIFE
+
+player = sarah = happy = Tu ne t'es jamais demandé si@les robots étaient vivants ?
+sarah = player = laugh = Ce ne serait plus des robots@si c'était le cas.
+player = sarah = worry = Je suis serieuse.@Les plantes par exemple, c'est vivant.
+player = sarah = happy_var = Pourtant, elles sont tellement@différentes de nous…
+player = sarah = happy_var = Il nous est impossible d'imaginer@comment elles pensent.
+player = sarah = happy = Mais si les plantes sont vivantes,@alors pourquoi pas les pierres ?
+sarah = player = laugh = Tu mélanges tout.@Ce qui est vivant, c'est ce qui respire.
+player = sarah = worry = Dans ce cas, le feu est vivant…
+sarah = player = happy = Le feu ne respire pas, Rebecca. Il…
+sarah = camille = fine = …
+sarah = player = happy = Il transforme seulement l'oxygène.
+sarah = player = worry = Bon, d'accords… C'est vrai qu'il en a@en quelque sorte besoin pour "vivre".
+sarah = player = you_silly_var = Et c'est vrai aussi que d'une certaine façon,@il mange et il se reproduit.
+sarah = player = happy = Mais il ne pense pas.@C'est juste du feu.
+player = sarah = worry = On ne peut pas savoir, s'il pense ou non.
+player = sarah = happy = La pensée chez les animaux,@ça n'est qu'un gros réseaux électrique.
+sarah = player = wink = Et organique !@Elle est là, la différence.
+player = sarah = laugh = Arrête de balancer un nouveau terme sans le@définir dès que tu veux justifier ta pensée.
+player = sarah = happy = Les organes, c'est des machines bien faites.
+player = sarah = happy = Mais la brique de base est@la même pour tout : l'atome.
+player = sarah = laugh = D'accord, on est bien plus@complexe que des pierres.
+player = sarah = happy = Mais peut-être qu'elles sont une@forme de vie primitive.
+player = sarah = happy_var = Et peut-être que la planète toute entière@est vivante et qu'on paraît primitif à ses yeux.
+sarah = player = worry = Tu pars trop loin…
+sarah = camille = you_silly_var = …
+sarah = player = happy = Cela dit, ton point de vue est intéressante.
+sarah = player = happy_var = Même si je n'y crois pas trop…
+player = sarah = laugh = Tant mieux ! On s'ennuierait si@on pensait de la même façon.
+
+
+% SARAH_REBECCA_THINK
+
+sarah = camille = you_silly_var = Des pierres vivantes…@Du Rebecca tout craché…

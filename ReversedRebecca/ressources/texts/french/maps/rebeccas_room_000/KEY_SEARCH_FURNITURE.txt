@@ -1,1 +1,0 @@
-player = object = unhappy = Non, elles ne sont pas là.

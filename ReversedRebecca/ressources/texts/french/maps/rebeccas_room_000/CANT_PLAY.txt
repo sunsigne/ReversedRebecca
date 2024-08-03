@@ -1,1 +1,17 @@
+% FIRST
 player = object = unhappy = J'aimerais tellement avoir le temps de jouer,@mais je vais être en retard au travail.
+
+% SECOND
+player = object = unhappy = Non, je ne devrais vraiment pas…
+
+% THIRD
+player = object = you_silly_var = Rebecca, tu n'as aucune volonté…
+player = object = determinated = Résiste, tu peux le faire !
+
+% FOURTH
+player = object = surprised = Quelle surprise ! Mon ordinateur devant moi !@Je voulais juste m'assoir !
+player = object = no_sens = C'est quand même fou ce hasard,@mais bon, maintenant qu'il est là…
+player = object = laugh = Ha ha ha. Bon allez, j'arrête.@J'aurais le temps ce soir.
+
+% SARAH
+player = object = unhappy = Ça n'est pas le moment de jouer…@Sarah attend que je me prépare.
