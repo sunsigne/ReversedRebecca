@@ -51,9 +51,10 @@ public class ChoiceRequest implements Request {
 			choice = new ChoiceObject(object);
 		else
 			choice = new ChoiceObject(highlight);
-		
+
 		Request request = RequestList.getList().getObject(new TripleActionRequest());
-		request.doAction(choice, choices);
+		String formattedChoices = formattedChoices(choices);
+		request.doAction(choice, formattedChoices);
 
 		// create the object
 		var handler = player.getHandler();
@@ -62,6 +63,13 @@ public class ChoiceRequest implements Request {
 
 		handler.addObject(choice);
 		choice.tick();
+	}
+
+	private String formattedChoices(String choices) {
+		choices = "CUSTOM(".concat(choices);
+		choices = choices.replace(",", ",CUSTOM(");
+		choices = choices.replace("*", ")");
+		return choices;
 	}
 
 }
