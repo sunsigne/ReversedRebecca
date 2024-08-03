@@ -17,6 +17,7 @@
 		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
+		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
@@ -29,12 +30,15 @@
 	////////// EN COURS ////////////
 
 	URGENT :
+	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
+	pour une raison étrange, on peut intéragir pendant la cutscene des crêpes (une fois qu'on en a mangé, et qu'on en fait à Sarah à son arrivée)
 	rr000 :
 	obj-01 - MEMORY:ACTIVATED_RIGHT_HAND_ADVISE semble ne pas marcher
 	obj-04 - MEMORY:PLAYER_NO_LONGER_IN_TOWEL_WITH_SARAH vérifier si bien utile
+	obj-07 - MEMORY:PLAYER_IN_TOWEL_WITH_SARAH
 	tester rr000 tous les clefs (intégrallement)
 	adapter laboratory & tutorial au nouveau système
-	-> venir à bout une bonne fois pour totue des concurrentmodification
+	changer ChoiceRequest (passer de l'étoile * à la parenthèse () + mettre à jour la doc
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)

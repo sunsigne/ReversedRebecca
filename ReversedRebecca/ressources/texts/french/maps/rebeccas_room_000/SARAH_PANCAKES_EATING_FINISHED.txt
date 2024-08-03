@@ -1,5 +1,0 @@
-sarah = DOWN = happy_var = Si bonnes que j'en ai mangé l'assiette !
-player = RIGHT = laugh = Oui, j'ai fait pareil !
-sarah = DOWN = happy = Sinon, ça te dit qu'on aille@au travail ensemble ?@Je me suis dit que ça serait sympa.
-player = object = excited = Avec plaisir ! Je te fais signe@dès que je suis prête.
-sarah = DOWN = wink = Ça marche, on fait comme ça.

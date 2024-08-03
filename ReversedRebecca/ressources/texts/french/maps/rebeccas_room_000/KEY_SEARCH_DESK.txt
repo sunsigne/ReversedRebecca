@@ -1,2 +1,0 @@
-player = object = laugh = L'excuse parfaite pour s'installer et jouer !
-player = object = you_silly = Plus sérieusement, mes clés ne sont pas là.
