@@ -1,0 +1,44 @@
+% BED
+player = object = happy = J'avais raison, elles étaient là.
+
+
+% PLANT
+player = object = no_sens = Mes clés ?! Mais qu'est-ce qu'elles font là…
+player = object = no_sens = …
+player = object = no_sens = …
+player = object = no_sens_var = Non, je ne vois vraiment pas…
+player = object = laugh = C'est un miracle que je les ai trouvées, du coup.
+
+
+% FURNITURE
+player = object = laugh = Ha ! Elles étaient ici, ces petites coquines.
+
+
+% BOOKSHELF
+player = object = no_sens = Mes clés ?! Mais qu'est-ce qu'elles font là…
+player = object = laugh = Ça me revient ! Hier soir, je les avais en main,@et je les ai posées pour prendre un livre.
+
+
+% COUCH
+player = object = laugh = J'ai enfin trouvé ces petites coquines.
+
+
+% DESK
+player = object = you_silly = Et le plus drôle, c'est que mes clés étaient bien ici.
+
+
+% DRESSER
+player = object = laugh = Ha ! Je pensais bien les trouver@dans une poches de vêtement.
+
+
+% FRIDGE
+player = object = no_sens = Mes clés ?! Mais qu'est-ce qu'elles font là…
+player = object = laugh = Ça me revient ! Je suis rentrée avec des@courses et j'ai tout balancé dans le frigo.
+
+% TOILET
+player = object = despair = J'y crois pas… Elles sont dedans… Elles ont dû@tomber de ma poche la dernière fois que j'ai…
+player = object = angry_var2 = Interdiction d'en parler. À qui que ce soit.
+
+
+% WASHING_MACHINE
+player = object = laugh = Elles sont là ! Je devrais vraiment penser à vider@mes poches AVANT de faire une lessive.

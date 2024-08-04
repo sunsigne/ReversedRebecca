@@ -1,1 +1,0 @@
-player = object = you_silly_var = Elles ne sont pas là, mais…@C'est l'inverse qui serait bizarre.

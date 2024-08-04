@@ -1,1 +1,0 @@
-player = object = happy_var = Mes herbes aromatiques n'ont pas besoin@que je les arrose, il fait souvent humide ici.

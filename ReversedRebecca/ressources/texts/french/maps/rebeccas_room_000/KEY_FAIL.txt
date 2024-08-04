@@ -1,0 +1,47 @@
+% BED
+player = object = happy_var = …
+player = object = unhappy = Elles ne sont pas là…
+
+
+% PLANT
+player = object = you_silly_var = Tout bien réfléchi, je suis à peu près@sûre qu'elles ne sont pas là.
+
+
+% NIGHTSTAND
+player = object = unhappy = Rien ici, j'aurais pensé…
+
+
+% FURNITURE
+player = object = unhappy = Non, elles ne sont pas là.
+
+
+% BOOKSHELF
+player = object = worry = Pas de clés ici.@En même temps, je m'y attendais un peu.
+
+
+% COUCH
+player = object = unhappy = Rho… Mais où est-ce que j'ai bien pu@les mettre…
+
+
+% CLOTHES_BASKET
+player = object = laugh = Mes clés ne sont pas là, mais j'ai trouvé une pièce !
+
+
+% DESK
+player = object = you_silly = Plus sérieusement, mes clés ne sont pas là.
+
+
+% DRESSER
+player = object = unhappy = Rien… Je pensais les trouver@dans une poches de vêtement.
+
+
+% FRIDGE
+player = object = you_silly_var = Elles ne sont pas là, mais…@C'est l'inverse qui serait bizarre.
+
+
+% TOILET
+player = object = angry_var2 = Non.
+
+
+% WASHING_MACHINE
+player = object = worry = On dirait qu'elles ne sont pas ici…@Ça aurait pu quand on y réfléchit.

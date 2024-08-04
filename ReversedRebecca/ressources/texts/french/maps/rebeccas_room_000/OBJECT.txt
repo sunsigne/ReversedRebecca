@@ -12,3 +12,15 @@ player = object = you_silly_var = Je parle encore toute seule…
 % DRESSER_CLOTHLESS
 player = object = unhappy = Je n'ai plus rien à me mettre…
 player = object = you_silly_var = Pas le choix, il va falloir faire la lessive.
+
+
+% BATH_EMPTY_WASHLESS
+player = object = no_sens = Pourquoi j'ai fais ça ?
+
+
+% PLANT_DESK_UNWATERABLE
+player = object = laugh = Cette plante est déjà dans l'eau,@elle n'a pas besoin que je l'arrose.
+
+
+% PLANT_KITCHEN_UNWATERABLE
+player = object = happy_var = Mes herbes aromatiques n'ont pas besoin@que je les arrose, il fait souvent humide ici.

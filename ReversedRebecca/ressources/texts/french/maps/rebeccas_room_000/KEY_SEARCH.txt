@@ -1,0 +1,14 @@
+% BED
+player = object = laugh = Mais oui ! J'ai surement dormi avec@et elles se sont perdues dans les draps !
+
+
+% COUCH
+player = object = excited = C'est ça ! Elles doivent être dans le canapé !
+
+
+% CLOTHES_BASKET
+player = object = surprised = Ho !
+
+
+% DESK
+player = object = laugh = L'excuse parfaite pour s'installer et jouer !

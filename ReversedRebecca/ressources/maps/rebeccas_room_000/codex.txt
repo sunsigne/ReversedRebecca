@@ -89,14 +89,9 @@ OBJ-31 = Chair Leaver
 ///// KITCHEN /////
 
 OBJ-32 = Bar
-OBJ-33 = Trash
-// from top right
 OBJ-34 = Plant
 OBJ-35 = Hotplates
-OBJ-36 = Bar
 OBJ-37 = Sink
-OBJ-38 = Bar
-// to bottom left
 OBJ-39 = Fridge
 OBJ-40 = Gaz Sound
 OBJ-48 = Cookie Counter
@@ -108,5 +103,4 @@ OBJ-41 = Special Exit Door
 OBJ-42 = /hidden
 OBJ-43 = /hidden
 OBJ-45 = Sarah Toilet Path Checker
-OBJ-46 = Wall
 OBJ-47 = Glasses of water
