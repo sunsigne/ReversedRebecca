@@ -32,12 +32,9 @@
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	pour une raison étrange, on peut intéragir pendant la cutscene des crêpes (une fois qu'on en a mangé, et qu'on en fait à Sarah à son arrivée)
-	rr000 :
-	obj-01 - MEMORY:ACTIVATED_RIGHT_HAND_ADVISE semble ne pas marcher
-	obj-04 - MEMORY:PLAYER_NO_LONGER_IN_TOWEL_WITH_SARAH vérifier si bien utile
-	obj-07 - MEMORY:PLAYER_IN_TOWEL_WITH_SARAH
-	tester rr000 tous les clefs (intégrallement)
 	adapter laboratory & tutorial au nouveau système
+	rr000 :
+	reste plus que sarah (npc-02) et obj-41 - reste les TALKED de la partie end_lvl à faire (+ les choice, évidemment)
 	changer ChoiceRequest (passer de l'étoile * à la parenthèse () + mettre à jour la doc
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)

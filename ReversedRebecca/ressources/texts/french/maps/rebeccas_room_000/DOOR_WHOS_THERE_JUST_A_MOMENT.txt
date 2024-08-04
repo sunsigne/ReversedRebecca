@@ -1,5 +1,0 @@
-player = UP = laugh = C'est qui ?
-sarah = DOWN = happy = C'est Sarah !
-player = UP = excited = Sarah !
-player = UP = happy = Juste une seconde, je suis en train@de chercher mes clefs !
-sarah = DOWN = laugh = Du Rebecca tout craché !@Ok, j'attends.

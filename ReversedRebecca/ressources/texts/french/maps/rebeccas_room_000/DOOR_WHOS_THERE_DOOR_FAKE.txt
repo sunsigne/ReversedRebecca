@@ -1,8 +1,0 @@
-player = UP = laugh = C'est qui ?
-sarah = DOWN = happy = C'est Sarah !
-player = UP = excited = Sarah !
-player = UP = laugh = Je t'ouvre tout de suite !
-player = UP = happy_var = …
-player = UP = surprised = Zut ! J'étais certaine d'avoir @laissé mes clés sur la porte…
-player = UP = worry = Heu… Un instant !@Je dois chercher mes clefs !
-sarah = DOWN = laugh = Du Rebecca tout craché !

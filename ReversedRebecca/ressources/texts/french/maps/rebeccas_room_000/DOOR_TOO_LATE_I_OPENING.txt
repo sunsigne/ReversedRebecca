@@ -1,1 +1,0 @@
-player = UP = laugh = Voilà voilà, j'ouvre la porte !

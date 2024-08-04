@@ -1,6 +1,0 @@
-player = UP = laugh = Juste une seconde, j'ouvre la porte !
-sarah = DOWN = happy = Ok, j'attends.
-player = UP = happy_var = …
-player = UP = surprised = Ben mince… J'étais certaine d'avoir @laissé mes clés sur la serrure…
-player = UP = worry = Heu… Un instant !@Je dois chercher mes clefs !
-sarah = DOWN = laugh = Du Rebecca tout craché !

@@ -1,1 +1,0 @@
-player = UP = laugh = Juste une seconde, je suis en train@de chercher la clef !

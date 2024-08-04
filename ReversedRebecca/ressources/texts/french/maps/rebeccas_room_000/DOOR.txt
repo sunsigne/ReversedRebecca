@@ -1,0 +1,72 @@
+% WHOS_THERE_NOBODY
+player = UP = laugh = C'est qui ?
+player = UP = happy_var = …
+player = UP = happy_var = …
+player = UP = happy = …
+
+
+% BUT_NOBODY_CAME
+player = UP = unhappy = Zut ! Je suis arrivée trop tard.
+player = UP = worry = Bon, tant pis…@La prochaine fois je serai plus rapide.
+
+
+% WHOS_THERE
+player = UP = laugh = C'est qui ?
+sarah = DOWN = happy = C'est Sarah !
+player = UP = excited = Sarah !
+
+
+% I_OPENING
+player = UP = laugh = Juste une seconde, j'ouvre la porte !
+
+
+% I_WAITING
+sarah = DOWN = happy = Ok, j'attends.
+
+
+% DAMN_NO_KEY
+player = UP = happy_var = …
+player = UP = surprised = Ben mince… J'étais certaine d'avoir @laissé mes clés sur la serrure…
+
+
+% WHOS_THERE_DAMN_NO_KEY
+player = UP = laugh = Je t'ouvre tout de suite !
+player = UP = happy_var = …
+player = UP = surprised = Zut ! J'étais certaine d'avoir @laissé mes clés sur la porte…
+
+
+% WAIT_I_WILL_SEARCH
+player = UP = worry = Heu… Un instant !@Je dois chercher mes clefs !
+
+
+% THIS_IS_SO_REBECCA
+sarah = DOWN = laugh = Du Rebecca tout craché !
+
+
+% RESEARCH_STRATEGY
+player = DOWN = you_silly = Je devrais probablement refaire un tour de@la maison. Je finirai bien par tomber dessus.
+
+
+% WAIT_I_SEARCHING
+player = UP = laugh = Juste une seconde, je suis en train@de chercher la clef !
+
+
+% THIS_IS_SO_REBECCA_VAR
+sarah = DOWN = laugh = Du Rebecca tout craché !@Ok, j'attends.
+
+
+% I_OPENING_VAR
+player = UP = laugh = Voilà voilà, j'ouvre la porte !
+
+
+% IF_YOU_MAKE_IT
+sarah = DOWN = laugh = Si tu y arrives.
+
+
+% RIGHT_HAND
+player = object = happy = C'est amusant… Je viens juste de@réaliser que j'ai beau être gauchère…
+player = DOWN = you_silly = J'utilise toujours ma main droite pour@ouvrir les portes.
+
+
+% IS_OPEN
+player = UP = laugh = C'est ouvert !
