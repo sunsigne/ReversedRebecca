@@ -331,7 +331,7 @@ public class World implements Updatable, RenderFree {
 		freeze(freeze, !freeze);
 	}
 
-	public void freeze(boolean freeze, boolean playerCanInterract) {
+	public void freeze(boolean freeze, boolean playerCanInteract) {
 		this.freeze = freeze;
 
 		for (LAYER tempLayer : LAYER.values()) {
@@ -339,7 +339,7 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
+		new PlayerFinder().setPlayerCanInteract(playerCanInteract);
 
 		boolean flag = false;
 		if (flag && freeze) // when active, remove fading menu if froze before completed

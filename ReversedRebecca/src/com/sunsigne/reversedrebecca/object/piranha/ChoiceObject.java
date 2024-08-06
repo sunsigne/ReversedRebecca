@@ -56,7 +56,7 @@ public class ChoiceObject extends InteractiveObject {
 		if (player == null)
 			return;
 
-		player.setCanInterract(true);
+		player.setCanInteract(true);
 		player.setUserAllowedToMovePlayer(false);
 		int[] pos = new InFrontOfFinder().getPos(player);
 		setX(pos[0]);
@@ -65,8 +65,8 @@ public class ChoiceObject extends InteractiveObject {
 
 	private void updateChoice() {
 		removeObject();
-		boolean playerCanInterract = Cutscene.isRunning() == false;
-		player.setCanInterract(playerCanInterract);
+		boolean playerCanInteract = Cutscene.isRunning() == false;
+		player.setCanInteract(playerCanInteract);
 		player.setUserAllowedToMovePlayer(true);
 		imitateHighlight(false);
 	}

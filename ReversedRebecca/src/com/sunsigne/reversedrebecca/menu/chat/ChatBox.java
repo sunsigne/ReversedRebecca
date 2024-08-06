@@ -70,7 +70,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 			world.freeze(true);
 
 		object.setMotionless();
-		new PlayerFinder().setPlayerCanInterract(false);
+		new PlayerFinder().setPlayerCanInteract(false);
 
 		// added as first element to render behind chat content object
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
@@ -161,8 +161,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		if (world != null)
 			world.freeze(false);
 
-		boolean playerCanInterract = Cutscene.isRunning() == false;
-		new PlayerFinder().setPlayerCanInterract(playerCanInterract);
+		boolean playerCanInteract = Cutscene.isRunning() == false;
+		new PlayerFinder().setPlayerCanInteract(playerCanInteract);
 		LAYER.PUZZLE.getHandler().clear();
 		new TalkedCondition().registerValue(value);
 	}

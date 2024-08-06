@@ -58,7 +58,7 @@ public class MenuIngameController {
 		if (!freeze && World.get().isFrozen())
 			World.get().freeze(true);
 		else
-			new PlayerFinder().setPlayerCanInterract(!freeze);
+			new PlayerFinder().setPlayerCanInteract(!freeze);
 	}
 
 }
