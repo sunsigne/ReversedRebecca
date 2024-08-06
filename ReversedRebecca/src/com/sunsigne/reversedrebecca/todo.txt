@@ -33,9 +33,8 @@
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	30h00 - adapter laboratory & tutorial au nouveau système piranha d'action, de choix et de dialogues
 	labo : convertir 
-	rr000 :	on dirait qu'avoir un choix pendant une cutscene permet de faire des actions par la suite pendant celle-ci
+	rr000 :	avoir un choix pendant une cutscene permet de faire des actions par la suite pendant celle-ci
 
-	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
 	0h30 désactiver le support manette (message de Dave qui prévient)

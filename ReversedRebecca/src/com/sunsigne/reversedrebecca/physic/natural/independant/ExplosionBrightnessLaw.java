@@ -66,8 +66,8 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 		if (object instanceof LightRendering == false)
 			return;
 
-		Graphics2D g2d = (Graphics2D) g;
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0, alpha)));
+		// Graphics2D g2d = (Graphics2D) g;
+		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0, alpha)));
 	}
 
 	@Override
@@ -75,8 +75,8 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 		if (object instanceof LightRendering == false)
 			return;
 
-		Graphics2D g2d = (Graphics2D) g;
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+		// Graphics2D g2d = (Graphics2D) g;
+		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 }
