@@ -75,7 +75,7 @@ public class CreateAnimationRequest implements IndexRequest {
 		// creation of the object
 
 		GameObject creation = new AnimatedDecorationObject(x, y, width, height, name, animation_time, cycle);
-		handler.getList().add(index, creation);
+		addObject(handler, index, creation);
 		Handler.updateHandlerMap(handler, creation);
 	}
 

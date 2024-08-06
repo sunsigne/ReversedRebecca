@@ -70,7 +70,7 @@ public class CreateDecorationRequest implements IndexRequest {
 		// creation of the object
 
 		GameObject creation = new DecorationObject(x, y, width, height, name);
-		handler.getList().add(index, creation);
+		addObject(handler, index, creation);
 		Handler.updateHandlerMap(handler, creation);
 	}
 

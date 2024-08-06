@@ -65,7 +65,7 @@ public class CreateRequest implements IndexRequest {
 		// creation of the object
 
 		if (creation != null) {
-			handler.getList().add(index, creation);
+			addObject(handler, index, creation);
 			Handler.updateHandlerMap(handler, creation);
 		}
 			

@@ -81,4 +81,14 @@ public interface IndexRequest extends Request {
 		return handler;
 	}
 
+	public default void addObject(Handler handler, int index, GameObject creation) {
+		try {
+			handler.getList().add(index, creation);
+		} catch (IndexOutOfBoundsException e) {
+			// may occurs if index is superior to list size,
+			// in what case, element can just be appended at the end
+			handler.getList().add(creation);
+		}
+	}
+
 }

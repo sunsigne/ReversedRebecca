@@ -68,7 +68,7 @@ public class CreateSimulationRequest implements IndexRequest {
 		
 		// creation of the object
 		GameObject creation = new SimulationAnimatedObject(x, y, width, height, path, name);
-		handler.getList().add(index, creation);
+		addObject(handler, index, creation);
 		Handler.updateHandlerMap(handler, creation);
 		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "simulation_on");
