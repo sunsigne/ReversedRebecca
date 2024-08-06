@@ -19,7 +19,7 @@ public class Player extends LivingObject {
 		UserKeyMovePlayer.refreshInstance();
 		setDisabled(true);
 		setUserAllowedToMovePlayer(true);
-		setCanInterract(true);
+		setCanInteract(true);
 
 		loadHealth();
 	}
@@ -31,7 +31,7 @@ public class Player extends LivingObject {
 		var clazz = "PIRANHA : PLAYER";
 
 		var dirName = "NAME:" + getName().toUpperCase();
-		var dirCanInterract = "CAN INTERACT:" + canInteract();
+		var dirCanInteract = "CAN INTERACT:" + canInteract();
 
 		GoalObject goal = null;
 		goal = new GoalObject(getX(), getY(), true);
@@ -42,7 +42,7 @@ public class Player extends LivingObject {
 			goal = new GoalObject(getGoal().getX(), getGoal().getY(), true);
 		var dirGoal = goal == null ? "N/A" : goal.getX() + "-" + goal.getY();
 
-		return clazz + " : " + dirName + " / " + dirCanInterract + " / " + dirPos + " / " + "GOAL:" + dirGoal;
+		return clazz + " : " + dirName + " / " + dirCanInteract + " / " + dirPos + " / " + "GOAL:" + dirGoal;
 	}
 
 	////////// SPEED ////////////
@@ -111,7 +111,7 @@ public class Player extends LivingObject {
 	private boolean canInteract;
 	private boolean fakingCanInteract;
 
-	public boolean getFakingCanInterract() {
+	public boolean getFakingCanInteract() {
 		return canInteract() || fakingCanInteract;
 	}
 
@@ -125,11 +125,11 @@ public class Player extends LivingObject {
 		return canInteract;
 	}
 
-	public void setCanInterract(boolean canInteract) {
-		setCanInterract(canInteract, false);
+	public void setCanInteract(boolean canInteract) {
+		setCanInteract(canInteract, false);
 	}
 
-	public void setCanInterract(boolean canInteract, boolean fakingCanInteract) {
+	public void setCanInteract(boolean canInteract, boolean fakingCanInteract) {
 		this.canInteract = canInteract;
 		this.fakingCanInteract = fakingCanInteract;
 	}

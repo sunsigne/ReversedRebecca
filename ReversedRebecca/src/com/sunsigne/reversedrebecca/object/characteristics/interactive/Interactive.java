@@ -58,7 +58,7 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 		// player specifically can't interact
 		if (player.canInteract() == false) {
-			if (!checkFakeInteract || player.getFakingCanInterract() == false)
+			if (!checkFakeInteract || player.getFakingCanInteract() == false)
 				return false;
 		}
 

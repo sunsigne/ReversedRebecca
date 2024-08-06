@@ -101,10 +101,10 @@ public abstract class Action {
 		if (player.canInteract() == false)
 			return;
 
-		player.setCanInterract(false, true);
+		player.setCanInteract(false, true);
 		new GameTimer(3, () -> {
-			if (player.getFakingCanInterract())
-				player.setCanInterract(true);
+			if (player.getFakingCanInteract())
+				player.setCanInteract(true);
 		});
 
 	}

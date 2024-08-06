@@ -28,13 +28,13 @@ public class PlayerFinder {
 	
 	////////// CONTROL ////////////
 
-	public void setPlayerCanInterract(boolean canInterract) {
+	public void setPlayerCanInteract(boolean canInteract) {
 		Player player = getPlayer();
 
 		if (player == null || Cutscene.isRunning())
 			return;
 
-		player.setCanInterract(canInterract);
+		player.setCanInteract(canInteract);
 	}
 
 	public void setUserAllowedToControlPlayer(boolean isUserAllowedToMovePlayer) {
@@ -44,7 +44,7 @@ public class PlayerFinder {
 			return;
 
 		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
-		player.setCanInterract(isUserAllowedToMovePlayer);
+		player.setCanInteract(isUserAllowedToMovePlayer);
 	}
 
 	////////// DISTANCE ////////////
