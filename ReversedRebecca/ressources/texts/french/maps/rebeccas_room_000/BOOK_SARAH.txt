@@ -1,0 +1,46 @@
+% NEUTRAL
+player = object = happy = Tu regardes mes livres ?
+sarah = player = happy = J'étais en train de me dire que@ton meuble est super grand.
+sarah = player = laugh = Alors que tu as, genre…@Dix livres.
+player = object = worry = Je voulais m'en acheter plus, mais@je ne trouve jamais le temps pour lire.
+sarah = player = laugh = Non, je ris parce que j'ai le même meuble,@alors que j'ai encore moins de livres que toi.
+player = object = laugh = Ha !
+
+% HAIR
+player = object = happy = …
+sarah = UP = worry = ?
+player = object = worry = …
+sarah = player = happy = Qu'est-ce qu'il y a ?
+player = object = laugh = Je regardais tes cheveux !@Ils sont super longs !
+sarah = player = happy_var = Oui, ça fait sept ans que je les laisse pousser.
+player = object = excited = Ils sont magnifiques !@Ça doit être long à entretenir…
+sarah = player = laugh = Oh que oui !
+sarah = player = happy = Je pensais justement les raccourcir,@à cause de ça.
+player = object = happy = En tout cas, ça te va bien.
+sarah = player = happy_var = Merci, c'est gentil.
+
+% LIFE
+sarah = player = determinated = Dis-moi, d'après ta théorie,@tes livres sont vivants du coup…
+player = sarah = happy_var = C'est exact.
+sarah = player = surprised = Tu y avais déjà pensé ?
+sarah = player = laugh = Ben mince, moi qui pensais t'avoir piégé.
+sarah = player = w rry = Tu reconnais quand même@que ça a l'air ridicule…
+player = sarah = happy_var = Encore une fois, c'est exact.
+player = sarah = w rry = Je sais bien que c'est une idée farfelue.@Mais je ne vois pas les choses autrement…
+sarah = player = laugh = Au moins tu es cohérente dans ta logique.
+player = sarah = happy_var = Cohérence, c'est mon deuxième prénom !
+sarah = player = wink = Ha bon ? Ça n'est plus Nathalie ?
+player = sarah = y u_silly_var = Très amusant…
+
+% ROOMMATE
+sarah = player = happy = Au fait, comment va ta coloc' ?
+player = object = no_sens = … Quelle coloc' ?
+sarah = player = surprised = Erika ! Vous n'êtes pas coloc' ?
+player = object = laugh = Ha ! Non, on ne vit pas ensemble.
+player = object = happy = Elle vient souvent et elle a les clefs,@mais c'est juste une amie.
+sarah = player = wink = Et… Il y a un truc entre vous ?
+player = object = happy_var = Non. Je suis plutôt garçons.
+player = object = happy = En parlant de ça, ça avance avec Pierre ?
+sarah = player = akward = Eh ! Ça ne te regarde pas… 
+sarah = player = worry = D'ailleurs, tu ne devrais pas@être en train de te préparer ?
+player = object = laugh = Tu as raison. Je m'y mets.

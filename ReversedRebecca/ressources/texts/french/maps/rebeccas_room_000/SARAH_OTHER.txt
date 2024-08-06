@@ -1,0 +1,20 @@
+% MAKE_CONFORTABLE
+player = object = worry = Ne reste pas debout à coté de la porte pendant@que je me prépare, hein ? Mets-toi à l'aise.
+sarah = player = laugh = Ne t'en fais pas, c'est prévu !@J'attends juste que tu te décales.
+
+
+% OFFER_A_JUICE
+player = RIGHT = excited = SARAH ! TU VEUX UN JUS ?
+sarah = LEFT = laugh = NON MERCI !
+player = LEFT = you_silly = Ben moi, j'en prends un.
+
+
+% SLEEPY
+player = sarah = happy = Tu veux une couverture ? Un coussin ?
+sarah = DOWN = happy_var = C'est gentil, mais ça ira.
+sarah = DOWN = wink = Va te préparer, je t'attends.
+
+
+% WAKE_UP
+player = object = you_silly_var = Après réflexion, je vais la laisser dormir.
+player = object = you_silly = Inutile de la réveiller tant je ne suis pas prête.

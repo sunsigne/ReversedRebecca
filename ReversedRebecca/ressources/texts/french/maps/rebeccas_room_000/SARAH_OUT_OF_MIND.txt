@@ -1,3 +1,0 @@
-sarah = player = angry = Non mais, c'est pas vrai !@Rebecca ! Tu saoules !
-player = sarah = excited = Allez, c'est pour rigoler.
-sarah = player = angry = Dégage de mon chemin.

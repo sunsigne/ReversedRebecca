@@ -1,3 +1,25 @@
+% NEUTRAL
 player = DOWN = evil_var2 = Voilà ma chance, elle dort !
 player = DOWN = laugh = Je me demande quelle tête elle fera quand@elle se rendra compte que je l'ai enfermé.
 player = DOWN = surprised = Ho ! J'ai une idée !
+
+
+% PANCAKES
+player = DOWN = evil_var2 = Voilà ma chance, elle dort !
+player = DOWN = laugh = Je me demande quelle tête elle fera quand@elle se rendra compte que je l'ai enfermé.
+player = RIGHT = determinated = Mais pour l'instant, pas question@qu'elle mange mes crêpes.
+
+
+% TRASH
+player = LEFT = you_silly = Après tout, on ne donne pas@de confiture aux cochons.
+player = DOWN = surprised = Ho ! J'ai une idée !
+
+
+% STEAL_PHONE
+player = DOWN = surprised = Quel malheur ! Son téléphone@est tombé dans la cuvette !
+player = DOWN = evil_var2 = Bonne chance pour appeler à l'aide.
+
+
+% STEAL_KEY
+player = DOWN = you_silly = J'ai aussi pris ses clefs, ça peut servir.
+player = UP = evil_var2 = Allez, à ce soir Sarah !

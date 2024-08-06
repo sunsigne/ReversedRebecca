@@ -4,13 +4,13 @@ sarah = player = laugh = Bien, merci.
 sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pourrait y aller ensemble.
 
 
-% SARAH_GREET_PANCAKES
+% PANCAKES
 player = object = excited = Salut, Sarah ! Comment tu vas ?
 sarah = player = happy = Bien, mer…
 sarah = player = asleep = *sniff* *sniff*
 
 
-% SARAH_GREET_TOWEL
+% TOWEL
 player = object = excited = Salut, Sarah ! Comment tu vas ?
 sarah = player = laugh = Bien, merci.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?
@@ -19,7 +19,7 @@ sarah = player = laugh = T'inquiète, c'est pas grave.@C'est pas comme si j'avai
 sarah = player = happy = À part ça, ça te dit qu'on aille@au travail ensemble ?
 
 
-% SARAH_GREET_TOWEL_PANCAKES
+% TOWEL_PANCAKES
 player = object = excited = Salut, Sarah ! Comment tu vas ?
 sarah = player = laugh = Bien, merci.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?
@@ -28,19 +28,19 @@ sarah = player = happy = T'inquiète, c'est pas grave.@C'est pas comme si j'avai
 sarah = player = asleep = *sniff* *sniff*
 
 
-% SARAH_GREET_WAIT
+% WAIT
 player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
 sarah = player = laugh = Pas de soucis, je te connais.
 sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pourrait y aller ensemble.
 
 
-% SARAH_GREET_WAIT_PANCAKES
+% WAIT_PANCAKES
 player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
 sarah = player = happy = Pas de soucis, je te con…
 sarah = player = asleep = *sniff* *sniff*
 
 
-% SARAH_GREET_WAIT_TOWEL
+% WAIT_TOWEL
 player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
 sarah = player = laugh = Pas de soucis, je te connais.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?
@@ -49,7 +49,7 @@ sarah = player = laugh = T'inquiète, c'est pas grave.@C'est pas comme si j'avai
 sarah = player = happy = À part ça, ça te dit qu'on aille@au travail ensemble ?
 
 
-% SARAH_GREET_WAIT_TOWEL_PANCAKES
+% WAIT_TOWEL_PANCAKES
 player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
 sarah = player = laugh = Pas de soucis, je te connais.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?

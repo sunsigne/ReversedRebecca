@@ -1,3 +1,0 @@
-player = DOWN = evil_var2 = Voilà ma chance, elle dort !
-player = DOWN = laugh = Je me demande quelle tête elle fera quand@elle se rendra compte que je l'ai enfermé.
-player = RIGHT = determinated = Mais pour l'instant, pas question@qu'elle mange mes crêpes.

@@ -73,7 +73,7 @@ sarah = DOWN = happy = C'est Sarah !
 player = UP = excited = Sarah !
 
 
-% WHOS_THERE_FAKE
+% WHOS_THERE_DOOR_FAKE
 player = UP = laugh = C'est qui ?
 sarah = DOWN = happy = C'est Sarah !
 player = UP = excited = Sarah !

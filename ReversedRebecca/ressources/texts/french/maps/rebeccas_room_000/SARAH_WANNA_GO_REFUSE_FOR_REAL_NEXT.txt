@@ -1,4 +1,0 @@
-sarah = player = happy = À tout à l'heure, alors.
-player = object = happy_var = Compte sur moi.
-
-

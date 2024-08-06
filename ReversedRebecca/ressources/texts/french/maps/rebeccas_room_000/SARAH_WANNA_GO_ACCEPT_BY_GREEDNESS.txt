@@ -1,4 +1,0 @@
-player = object = happy_var = Présenté comme ça, difficile de refuser.@Je te fais signe dès que je suis prête.
-sarah = player = happy = Ça marche, on fait comme ça.
-
-

@@ -1,0 +1,41 @@
+% TOILET_YOU_MIND
+sarah = player = angry = Tu permets ?
+player = sarah = sad = Pardon, je voulais voir si j'arriverais à@me faire enfermer dans les toilettes avec toi.
+sarah = player = angry = Mais t'es pas bien ! Dégage !
+
+
+% TOILET_APOLOGIZE
+player = sarah = unhappy = Désolé, Sarah.@C'était maladroit de ma part…
+sarah = player = angry = Franchement, ça se fait trop pas…
+player = sarah = unhappy = Je sais…
+sarah = player = angry = …
+player = sarah = unhappy = …
+player = sarah = worry = Ça s'est bien passé au moins ?
+sarah = player = determinated = Pfff… T'es bête.
+sarah = player = happy = Aller… On est cool.
+player = sarah = happy_var = Tant mieux.
+
+
+% TOILET_GOODBYE
+sarah = LEFT = angry = J'ai changé d'avis. Je pars toute seule.
+player = sarah = wrong_with_you = Je ne te retiens pas.
+
+
+% WATER_JOKE
+sarah = player = angry = Mais t'es pas bien !@C'est quoi ton problème ?
+player = sarah = excited = Rho, ça va !@Je voulais voir ce que ça faisait.
+sarah = player = angry = Franchement Rebecca, c'est nul.@Je me casse.
+
+
+% OUT_OF_MIND
+sarah = player = angry = Non mais, c'est pas vrai !@Rebecca ! Tu saoules !
+player = sarah = excited = Allez, c'est pour rigoler.
+sarah = player = angry = Dégage de mon chemin.
+
+
+% REBECCA_AMUSED_ABOUT
+rebecca = DOWN = you_silly = C'était marrant.
+
+
+% REBECCA_ANGRY_ABOUT
+rebecca = DOWN = angry_var2 = J'aurais dû lui faire un croche-pied,@pour lui apprendre à me pousser…

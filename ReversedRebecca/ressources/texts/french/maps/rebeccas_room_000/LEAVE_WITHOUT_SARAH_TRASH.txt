@@ -1,2 +1,0 @@
-player = LEFT = you_silly = Après tout, on ne donne pas@de confiture aux cochons.
-player = DOWN = surprised = Ho ! J'ai une idée !

@@ -1,3 +1,0 @@
-sarah = player = angry = Tu permets ?
-player = sarah = sad = Pardon, je voulais voir si j'arriverais à@me faire enfermer dans les toilettes avec toi.
-sarah = player = angry = Mais t'es pas bien ! Dégage !
