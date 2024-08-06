@@ -1,3 +1,0 @@
-dave = player = disillusioned = On va dire que je fais semblant que c'est le cas…
-dave = player = calm = Bon, assez de théorie. Passons aux mini-jeux.@Tu dois déverrouiller cette porte.
-dave = player = calm = Au moment du déverrouillage, tu seras confrontée@à un puzzle. À toi de trouver comment le résoudre.

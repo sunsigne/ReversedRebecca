@@ -1,8 +1,0 @@
-player = object = worry = Et la deuxième chose ?
-dave = player = calm = Dans ce jeu, tes choix sont vraiment pris en compte.@Chaque action entraine des conséquences.
-dave = player = calm = Parfois même pour des actions simples, comme@manger, lire un livre, ou juste prendre son temps.
-dave = player = calm = Mais pour bien s'en rendre compte,@la meilleure façon est de refaire le jeu.
-player = object = happy = Tu parles de l'effet papillon, c'est ça ?
-dave = player = calm = Plus ou moins.
-dave = player = calm = Bon, je te souhaite une bonne nuit.
-player = object = no_sens = … Une bonne nuit ?

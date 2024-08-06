@@ -1,6 +1,0 @@
-dave = player = calm = Pour les objets, c'est tout ce que tu as à savoir.@Des questions avant qu'on passe à la suite ?
-player = object = happy = Oui ! Si je n'avais pas eu de verre d'eau,@j'aurais pu croire que la plante était décorative.
-player = object = worry = Comment je fais pour savoir si un objet est@inutile ou si je ne remplis juste pas sa condition ?
-dave = player = calm = C'est une bonne question.
-dave = player = calm = En vérité, tu ne peux pas faire la différence.
-dave = player = calm = Le plus souvent, les objets s'adapteront à@ta situation. C'est une question de contexte.

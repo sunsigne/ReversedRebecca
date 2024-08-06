@@ -32,7 +32,6 @@ PHILOSOPHIZE = Key1 % philosopher
 RELAX = Key1 % se détendre
 FACE_REALITY = Key1 % affronter la réalité
 WATCH_TV = Key1 % regarder la TV
-EXIT = Key1 % sortir
 TALK_ABOUT_BOOKS = Key1 % parler des livres
 WATCH_SARAH = Key1 % regarder Sarah
 TALK_ABOUT_ERIKA = Key1 % parler de Erika

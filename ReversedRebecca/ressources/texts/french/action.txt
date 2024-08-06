@@ -1,12 +1,12 @@
 ///// CLASSIC /////
 
 TALK = Key1 % parler
-TALK_VAR = Key1 % parler
 LISTEN = Key1 % écouter
 WATCH = Key1 % regarder
 READ = Key1 % lire
 USE = Key1 % utiliser
 SIT = Key1 % s'assoir
+EXIT = Key1 % sortir
 
 ///// ENVIRONMENT /////
 

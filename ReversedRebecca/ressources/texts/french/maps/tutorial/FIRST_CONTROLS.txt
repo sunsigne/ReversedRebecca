@@ -1,0 +1,42 @@
+% HELLO
+dave = player = calm = Bienvenue dans ce tutoriel, Rebecca.@Appuie sur +dialogue pour continuer.
+player = object = worry = Tu es bizarre, Dave…@Ça veut dire quoi "Appuie sur +dialogue" ?
+dave = player = calm = On va prétendre que tu viens de le faire.
+player = object = happy_var = Ok. Et maintenant ?
+dave = player = calm = Maintenant, tu vas étudier les contrôles.
+dave = player = calm = Appuie sur +action1 ou +action2 pour répondre à@ma question : avec quoi joues-tu ?
+
+
+% KEYBOARD
+dave = player = calm = Tu peux donc utiliser les touches +up+left+down+right@ou les flêches, pour te déplacer dans la pièce.
+dave = player = calm = Si ces touches ne te conviennent pas,@tu peux les changer dans les options.
+
+
+% GAMEPAD
+dave = player = calm = Tu peux donc utiliser le stick analogique gauche,@pour te déplacer dans la pièce.
+
+
+% WTF
+player = object = no_sens = …
+dave = player = calm = …
+player = object = no_sens = …
+
+
+% WTF_KEYBOARD
+dave = player = calm = … Apparemment, tu utilises un clavier.
+
+
+% WTF_GAMEPAD
+dave = player = calm = … Apparemment, tu utilises une manette.
+
+
+% COME_BACK
+dave = player = calm = Reviens me voir et clique sur +action1@quand tu te sens prête pour la suite.
+
+
+% CLICK_ON_ACTION
+player = object = happy = Je clique sur +action1 !
+
+
+% CLICK_ON_ACTION_GAMEPAD
+player = object = happy = Je clique sur+action1  !

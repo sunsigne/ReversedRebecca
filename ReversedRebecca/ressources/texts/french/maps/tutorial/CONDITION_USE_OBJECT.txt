@@ -1,2 +1,0 @@
-dave = player = calm = Attention à ne pas mal juger un objet. Parfois,@tu dois remplir une condition pour l'utiliser.
-dave = player = calm = Cette plante est un très bon exemple.

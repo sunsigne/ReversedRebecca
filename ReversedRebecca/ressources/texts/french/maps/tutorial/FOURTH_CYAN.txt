@@ -1,0 +1,54 @@
+% MINI_GAME
+dave = player = disillusioned = On va dire que je fais semblant que c'est le cas…
+dave = player = calm = Bon, assez de théorie. Passons aux mini-jeux.@Tu dois déverrouiller cette porte.
+dave = player = calm = Au moment du déverrouillage, tu seras confrontée@à un puzzle. À toi de trouver comment le résoudre.
+
+
+% MINI_GAME_KEYBOARD
+dave = player = calm = Et puisque tu joues au Clavier, saches que@les mini-jeux se jouent toujours à la Souris. 
+
+
+% CLOSED_DOOR
+player = object = angry = Tu te moques de moi, ou quoi ?@La porte est verrouillée !
+dave = player = calm = Pardon, je ne voulais pas te vexer.@Je voulais juste que tu arrives à cette conclusion.
+player = object = wrong_with_you = Et donc ? Comment je l'ouvre ?
+dave = player = calm = Je vais faire apparaitre une clé.
+dave = player = calm = Lorsque tu la ramasseras, tu la verras@apparaitre en bas à gauche de l'écran.
+
+
+% JOKE_KEY
+dave = player = smile = Moi, je trouve que si.
+dave = player = calm = Ok. Pour de vrai cette fois.
+
+
+% MORE_DOORS
+player = object = laugh = C'est amusant ! Je veux refaire !
+dave = player = calm = Si ça te fait plaisir.
+
+
+% MORE_KEYS
+dave = player = calm = Tu as appris quelque chose ?
+player = object = happy = Que ma clé est infinie ?@J'ai ouvert plusieurs portes, avec une seule.
+dave = player = calm = Elle durera le temps du niveau seulement.
+player = object = no_sens = … C'est-à-dire ?
+dave = player = calm = Que tu devras en trouver une nouvelle,@à chaque fois que tu changeras de lieu.
+player = object = no_sens = ... Parce… Genre…@Elle… disparaitra de ma poche ?
+dave = player = intrigued = Tu comptes t'arrêter sur toutes@les incohérences ludo-narrative ?
+player = object = worry = Pardon, pardon. J'ai compris, c'est@comme ça que ça marche. Et ensuite ?
+dave = player = calm = Puisque une seule clé te permet d'ouvrir toutes@les portes, en ramasser plusieurs n'est pas utile.
+player = object = excited = Je vois ! Oui, c'est logique !
+dave = player = calm = Démonstration.
+
+
+% KEY_QUESTIONS
+player = object = laugh = Ouais ! Des clés !
+dave = player = calm = Ravi que ça t'amuse.
+dave = player = calm = Tu te souviens de ce que@j'ai dit sur leurs durées de vie ?
+player = object = happy_var = Ma clé dispara quand le niveau sera fini.
+dave = player = calm = Bien.
+dave = player = calm = Avais-tu remarquée que ces clés ont une couleur en@commun avec les portes que tu as déverrouillées ?
+player = object = no_sens = Heu… Oui, je crois…@Le bleu, non ?
+dave = player = calm = Je préfère parler de "cyan", mais c'est ça.
+player = object = happy = Donc… Les clefs d'une certaine couleur@permettent d'ouvrir les portes de cette couleur ?
+dave = player = calm = Pas toujours, ça dépend.
+player = object = worry = Ha ?

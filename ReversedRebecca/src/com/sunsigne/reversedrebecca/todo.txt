@@ -31,9 +31,8 @@
 
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
-	pour une raison étrange, on peut intéragir pendant la cutscene des crêpes (une fois qu'on en a mangé, et qu'on en fait à Sarah à son arrivée)
-	adapter laboratory & tutorial au nouveau système
-	tuto & labo : convertir 
+	30h00 - adapter laboratory & tutorial au nouveau système piranha d'action, de choix et de dialogues
+	labo : convertir 
 	rr000 :	on dirait qu'avoir un choix pendant une cutscene permet de faire des actions par la suite pendant celle-ci
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
@@ -48,7 +47,6 @@
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	8h00 traduction anglais
 	1h00 lvl001 faire en sorte qu'un joueur nul/perdu trouve la clef cyan (timer ? ERA ?)
-	72h00 réfléchir au système de dialogues pour s'y retrouver (et ça aidera pour la traduction)
 	0h20 changer la musique de l'écran titre
 
 	BUG :

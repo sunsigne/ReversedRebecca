@@ -1,2 +1,0 @@
-player = object = laugh = C'est amusant ! Je veux refaire !
-dave = player = calm = Si ça te fait plaisir.

@@ -1,2 +1,0 @@
-dave = player = calm = Satisfaite ?
-player = object = laugh = Encore une fois ou deux, s'il-te-plaît.

@@ -1,1 +1,0 @@
-dave = player = calm = Tu peux donc utiliser le stick analogique gauche,@pour te déplacer dans la pièce.

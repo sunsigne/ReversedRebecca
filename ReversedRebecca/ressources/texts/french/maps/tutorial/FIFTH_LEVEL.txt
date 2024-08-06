@@ -1,0 +1,53 @@
+% YELLOW_KEY
+dave = DOWN = calm = Tu vois la porte à gauche ?@Elle est de niveau "CYAN".
+dave = DOWN = calm = Au milieu et à droite, les portes sont@de niveaux supérieurs : "VERT" et "JAUNE".
+dave = player = calm = Que se passera-t-il selon toi lorsque@tu ramasseras la clé jaune ?
+player = object = happy_var = La clé en bas à gauche de@mon écran va devenir jaune.
+dave = player = calm = À toi l'honneur.
+
+
+% GREEN_KEY
+player = object = no_sens = Pourquoi ma clé est devenue verte ?
+dave = player = calm = Chaque couleur correspond à un niveau de@difficulté : cyan -> 1 / vert -> 2 / jaune -> 3 / etc.
+dave = player = calm = Une clé de niveau 3 permet d'ouvrir@toutes les portes de niveaux 1, 2 ou 3.
+player = object = happy = Dit autrement : une clé jaune permet d'ouvrir@toutes les portes cyans, vertes ou jaunes.
+dave = player = calm = Oui. Mais il y a un "mais".
+dave = player = calm = Regardons en bas à gauche de ton écran.
+dave = player = calm = Tu as ramassé une clé de niveau 3, mais ta@"jauge à clé" n'est montée qu'au niveau 2. 
+dave = player = calm = Sauf que visiblement, elle est pleine.
+dave = player = calm = Vois ça comme…@Essayer de mettre 5 litres d'eau dans une tasse.
+dave = player = calm = À moins d'avoir une très grande tasse,@elle sera pleine avant.
+player = object = worry = J'ai saisi l'idée.
+dave = player = calm = Il y a encore autre chose que@tu dois savoir sur les mini-jeux…
+player = object = angry = Tu rigoles ou quoi ? Assez de blabla ! Laisse-moi@m'amuser un peu ! J'ai une porte verte à ouvrir !
+
+
+% MORE_GREEN_DOORS
+dave = player = calm = Satisfaite ?
+player = object = laugh = Encore une fois ou deux, s'il-te-plaît.
+
+
+% MINI_GAME_QUESTION
+player = object = laugh = Ok. Tu voulais dire quoi sur les mini-jeux ?
+dave = player = calm = Seulement qu'il en existe beaucoup,@et qu'ils sont très différents.
+dave = player = calm = Tout l'amusement réside dans le fait de@devoir s'adapter pour les comprendre.
+player = object = happy_var = Ok.
+
+
+% MINI_GAME_QUESTION_KEYBOARD
+dave = player = calm = Encore deux choses :@si tu veux mettre sur pause, clique sur "Esc".
+
+
+% MINI_GAME_QUESTION_GAMEPAD
+dave = player = calm = Encore deux choses :@si tu veux mettre sur pause, clique sur "Start".
+
+
+% MINI_GAME_QUESTION_NEXT
+player = object = worry = Et la deuxième chose ?
+dave = player = calm = Dans ce jeu, tes choix sont vraiment pris en compte.@Chaque action entraine des conséquences.
+dave = player = calm = Parfois même pour des actions simples, comme@manger, lire un livre, ou juste prendre son temps.
+dave = player = calm = Mais pour bien s'en rendre compte,@la meilleure façon est de refaire le jeu.
+player = object = happy = Tu parles de l'effet papillon, c'est ça ?
+dave = player = calm = Plus ou moins.
+dave = player = calm = Bon, je te souhaite une bonne nuit.
+player = object = no_sens = … Une bonne nuit ?

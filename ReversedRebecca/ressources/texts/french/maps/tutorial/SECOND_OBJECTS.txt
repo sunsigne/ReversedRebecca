@@ -1,0 +1,45 @@
+% CLICK_ON_ACTION_NEXT
+dave = player = calm = Tu n'as pas besoin de le dire,@juste de le faire.
+player = object = worry = Hey… Je fais de mon mieux, mais@tu admettras que c'est bizarre ton truc.
+dave = player = disillusioned = Si tu avais mes yeux et ma "double vue",@tu comprendrais…
+dave = player = calm = Passons aux interactions.
+dave = player = calm = Je vais faire apparaître un objet.@Interagis avec lui et reviens me voir.
+
+
+% ONE_USE_OBJECT
+dave = player = calm = Tu as dû le remarquer, mais tu n'as pu@interagir qu'une seule fois avec cet objet.
+dave = player = calm = Ça ne sera pas toujours le cas.@Je te laisse t'en rendre compte par toi-même.
+
+
+% NO_USE_OBJECT
+dave = player = calm = Il ne sera pas toujours possible d'interagir@avec un objet.
+dave = player = calm = Vois comme cette salle est inutile.
+
+
+% CONDITION_USE_OBJECT
+dave = player = calm = Attention à ne pas mal juger un objet. Parfois,@tu dois remplir une condition pour l'utiliser.
+dave = player = calm = Cette plante est un très bon exemple.
+
+
+% USE_QUESTION
+dave = player = calm = Pour les objets, c'est tout ce que tu as à savoir.@Des questions avant qu'on passe à la suite ?
+player = object = happy = Oui ! Si je n'avais pas eu de verre d'eau,@j'aurais pu croire que la plante était décorative.
+player = object = worry = Comment je fais pour savoir si un objet est@inutile ou si je ne remplis juste pas sa condition ?
+dave = player = calm = C'est une bonne question.
+dave = player = calm = En vérité, tu ne peux pas faire la différence.
+dave = player = calm = Le plus souvent, les objets s'adapteront à@ta situation. C'est une question de contexte.
+
+
+% CLEAR_IT_UP
+dave = player = calm = Je peux.
+dave = player = calm = Imaginons que tu es chez toi, toute nue, et que@tu doives aller quelque part. Que fais-tu ?
+player = object = happy_var = Je m'habille, évidemment.
+dave = player = calm = Et si je te dis que la commode@n'est pas utilisable ?
+player = object = unhappy = Mais je suis toute nue !@Il faut bien que je m'habille !
+dave = player = calm = Oui. En fait, la commode est@utilisable sous cette condition.
+dave = player = calm = Mais tu pourrais ne pas en avoir conscience si c'est@avant d'être nue que tu avais essayé de l'utiliser.
+player = object = unhappy = ... Je crois que j'ai saisi l'idée,@mais ça reste vague…
+dave = player = calm = Tu n'as qu'à te dire que les objets sont intelligent,@en sens où ils prennent en compte ta situation.
+dave = player = calm = C'est vraiment une simple question de contexte.
+dave = player = calm = Dans le pire des cas, tu peux toujours revenir@sur tes pas et réessayer d'utiliser des objets.
+player = object = laugh = Ok, pourquoi pas.

@@ -1,2 +1,0 @@
-dave = player = calm = Il ne sera pas toujours possible d'interagir@avec un objet.
-dave = player = calm = Vois comme cette salle est inutile.

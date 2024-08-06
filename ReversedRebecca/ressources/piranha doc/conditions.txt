@@ -63,7 +63,7 @@ LLa seule différence avec ce dernier est que pour UNLOCKEDTOOLMAXLEVEL, la Cond
 Le Type de Condition PICKUPLOOT est vérifié lorsque l'objet « ramassable » aux coordonnées indiquées est ramassé (par le joueur).
 
 Exemple :
-PICKUPLOOT → 10-20 = "Requête"
+PICKUPLOOT -> 10-20 = "Requête"
 
 "Requête" sera appelé lorsque l'objet en X=10 Y=20 est ramassé par le joueur.
 

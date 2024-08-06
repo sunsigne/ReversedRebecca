@@ -7,11 +7,3 @@ CLICK_ON_ACTION = Key1 % Cliquer sur +action1
 I_GET_IT = Key1 % Ok, j'ai compris
 CLEAR_IT_UP = Key2 % Tu peux être plus clair ?
 THATS_NOT_FUNNY = Key1 % C'est pas drôle !
-
-///// OBJECT /////
-
-EXIT = Key1 % sortir
-WATER_TAKE = Key1 % se servir
-WATER_EMPTY = Key1 % vider l'eau
-WATER_PLANT = Key2 % arroser
-
