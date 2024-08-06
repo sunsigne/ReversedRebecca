@@ -102,7 +102,10 @@ public abstract class Action {
 			return;
 
 		player.setCanInterract(false, true);
-		new GameTimer(3, () -> player.setCanInterract(true));
+		new GameTimer(3, () -> {
+			if (player.getFakingCanInterract())
+				player.setCanInterract(true);
+		});
 
 	}
 
