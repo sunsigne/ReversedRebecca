@@ -1,1 +1,0 @@
-sarah = player = happy_var = Personnellement, je ne sais@même pas me faire cuire des pâtes.

@@ -1,0 +1,65 @@
+% SARAH_SEARCH_KITCHEN
+sarah = LEFT = asleep = *sniff* *sniff*
+sarah = player = laugh = Ça sent super bon !
+player = object = happy = Oui, j'ai fait des crêpes ce matin.
+
+
+% SARAH_SEARCH_TABLE_DOWN
+sarah = DOWN = laugh = Ho ! Tu t'es fait des crêpes ?@Ça sent super bon !
+
+
+% SARAH_SEARCH_TABLE_RIGHT
+sarah = RIGHT = laugh = Ho ! Tu t'es fait des crêpes ?@Ça sent super bon !
+
+
+% SARAH_NOT_PROPOSED
+sarah = player = happy_var = Personnellement, je ne sais@même pas me faire cuire des pâtes.
+
+
+% SARAH_MAKE_MORE
+sarah = player = laugh = Là, je vais pas dire non !
+player = sarah = happy = Prends une chaise,@je m'occupe de tout.
+
+
+% SARAH_WE_SHARE
+sarah = player = laugh = Là, je vais pas dire non !
+player = sarah = happy = Prends une chaise,@je vais chercher une assiette.
+
+
+% SARAH_THANK
+sarah = DOWN = happy = Merci, c'est adorable.
+player = RIGHT = happy_var = Je t'en pris.
+
+
+% SARAH_NOT_PROPOSED_NEXT
+sarah = player = happy = À part ça, ça te dit qu'on aille@au travail ensemble ?
+
+
+% SARAH_EATING_FINISHED
+sarah = DOWN = happy_var = Si bonnes que j'en ai mangé l'assiette !
+player = RIGHT = laugh = Oui, j'ai fait pareil !
+sarah = DOWN = happy = Sinon, ça te dit qu'on aille@au travail ensemble ?@Je me suis dit que ça serait sympa.
+player = object = excited = Avec plaisir ! Je te fais signe@dès que je suis prête.
+sarah = DOWN = wink = Ça marche, on fait comme ça.
+
+
+% SARAH_EATING_SHARED_FINISHED
+player = RIGHT = happy_var = Si bonnes que j'en ai mangé l'assiette !
+sarah = DOWN = laugh = Oui, j'ai fait pareil !
+sarah = DOWN = happy = Sinon, ça te dit qu'on aille@au travail ensemble ?@Je me suis dit que ça serait sympa.
+player = object = excited = Avec plaisir ! Je te fais signe@dès que je suis prête.
+sarah = DOWN = wink = Ça marche, on fait comme ça.
+
+
+% SARAH_EATING_POST_ARRIVAL_FINISHED
+player = RIGHT = happy_var = Si bonnes que j'en ai mangé l'assiette !
+sarah = DOWN = laugh = Oui, j'ai fait pareil !
+sarah = DOWN = happy = Si ça ne t'embête pas, je vais faire@une sieste le temps que tu te prépares.
+player = RIGHT = happy_var = D'accord, je te réveillerai.
+
+
+% SARAH_EATING_POST_ARRIVAL_FINISHED_AND_SLEEP
+player = RIGHT = happy_var = Si bonnes que j'en ai mangé l'assiette !
+sarah = DOWN = laugh = Oui, j'ai fait pareil !
+sarah = DOWN = happy = Bon, je retourne m'allonger.@Préviens-moi quand tu es prête.
+player = RIGHT = happy_var = Ça marche !

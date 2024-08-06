@@ -14,36 +14,5 @@ player = object = angry_var2 = Elle a cru quoi, l'autre ?@Je partage pas mes cr�
 rebecca = object = you_silly = Après une dispute, c'est encore meilleur.
 
 
-% SARAH_THANK
-sarah = DOWN = happy = Merci, c'est adorable.
-player = RIGHT = happy_var = Je t'en pris.
-
-
 % FINISHED_EATING
 player = object = happy_var = Si bonnes que j'en ai mangé l'assiette !
-
-
-% SARAH_FINISHED_EATING
-player = RIGHT = happy_var = Si bonnes que j'en ai mangé l'assiette !
-sarah = DOWN = laugh = Oui, j'ai fait pareil !
-
-
-% SARAH_FINISHED_EATING_VAR
-sarah = DOWN = happy_var = Si bonnes que j'en ai mangé l'assiette !
-player = RIGHT = laugh = Oui, j'ai fait pareil !
-
-
-% SARAH_GOTO_WORK
-sarah = DOWN = happy = Sinon, ça te dit qu'on aille@au travail ensemble ?@Je me suis dit que ça serait sympa.
-player = object = excited = Avec plaisir ! Je te fais signe@dès que je suis prête.
-sarah = DOWN = wink = Ça marche, on fait comme ça.
-
-
-% SARAH_EATING_POST_ARRIVAL_FINISHED
-sarah = DOWN = happy = Si ça ne t'embête pas, je vais faire@une sieste le temps que tu te prépares.
-player = RIGHT = happy_var = D'accord, je te réveillerai.
-
-
-% SARAH_EATING_POST_ARRIVAL_FINISHED_AND_SLEEP
-sarah = DOWN = happy = Bon, je retourne m'allonger.@Préviens-moi quand tu es prête.
-player = RIGHT = happy_var = Ça marche !
