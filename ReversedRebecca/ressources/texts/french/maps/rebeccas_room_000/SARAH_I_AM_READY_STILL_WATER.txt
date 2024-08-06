@@ -1,8 +1,0 @@
-sarah = player = happy = Au fait !
-sarah = LEFT = worry = Pourquoi tu as mis un verre d'eau ici ?
-rebecca = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
-sarah = player = akward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
-player = sarah = laugh = Exactement !
-sarah = player = worry = Mais du coup, pourquoi@il est encore là ?
-player = sarah = laugh = Parce que, je n'aime pas ranger.
-sarah = player = you_silly_var = Rebecca… Tu es fatigante…

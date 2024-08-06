@@ -39,7 +39,7 @@ despair=4,8
 determinated=5,1
 evil=5,2
 evil_var=5,3
-eval_var2=5,4
+evil_var2=5,4
 death=5,5
 
 ////// IMITATION //////

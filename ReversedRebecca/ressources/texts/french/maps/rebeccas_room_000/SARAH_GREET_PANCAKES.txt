@@ -1,3 +1,0 @@
-player = object = excited = Salut, Sarah ! Comment tu vas ?
-sarah = player = happy = Bien, mer…
-sarah = player = asleep = *sniff* *sniff*

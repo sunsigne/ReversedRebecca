@@ -1,1 +1,0 @@
-player = DOWN = blush = Zut ! Je suis toujours en serviette.
