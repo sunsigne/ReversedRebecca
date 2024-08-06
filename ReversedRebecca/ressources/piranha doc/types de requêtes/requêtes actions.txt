@@ -125,14 +125,14 @@ La première Cible de ce Type de Requête (séparée par le symbole « : » au
 Note : 95 % du temps, l'objet dont on veut afficher le détourage est soit le joueur, soit l'objet actuel. Dans ces cas-là, la première Cible sera respectivement PLAYER ou OBJECT.
 
 Exemple : 
-TALKED -> NO_KEY = CHOICE -> REBECCA : SEARCH*SEARCH_K, THINK*THINK_K
+TALKED -> NO_KEY = CHOICE -> REBECCA : (SEARCH)SEARCH_KEY, (THINK)THINK_KEY
 
 Lorsque la Condition sera vérifiée, le joueur ne pourra plus bouger tant qu'il n'aura pas choisi entre « search » (chercher) et « think » (réfléchir). Ce choix activera le détourage de l'objet dont le nom est celui du joueur (Rebecca).
 
 Attention ! Il est à noter que si les Type de Requêtes ACTION et TRIPLE_ACTION utilisent GOTO pour déterminer une action custom, le Type de Requête CHOICE utilise AFFECTING à la place ! Il faudra donc utiliser des Types de Condition « ! » au lieu de « $ » pour détailler les différents choix (ainsi que de faire attention aux mots utilisés, afin d'éviter des doublons inter-fichiers).
 
 Exemple :
-! -> SEARCH_K = MOVE -> 10-20
-! -> THINK_K = TALK -> KEY_THINKING
+! -> SEARCH_KEY = MOVE -> 10-20
+! -> THINK_KEY = TALK -> KEY_THINKING
 
 Si la raison technique de ce changement vous intéresse, la voici : pour rappel, GOTO est un Type de Requête local, il ne peut donc pas affecter les autres objets Piranha. Les Types de Requête ACTION et TRIPLE_ACTION affectent directement l'objet Piranha actuel. Lorsque c'est le Type de Requête CHOICE qui est utilisé, un "objet temporaire" est créé devant le joueur, et c'est cet objet qui contient les actions possibles ; il y a donc deux objets : l'objet Piranha "choix" sans fichier, et l'objet Piranha l'ayant créé. Les balises GOTO des actions dans l'objet Piranha "créateur" ne sont ainsi jamais vérifiées, car les actions les appelant sont exécutées dans l'objet "choix" qui n'a pas de fichier ! En élargissant la portée du Type de Requête CHOICE via des balises AFFECTING, nous réglons le problème.

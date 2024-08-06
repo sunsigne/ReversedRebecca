@@ -66,9 +66,8 @@ public class ChoiceRequest implements Request {
 	}
 
 	private String formattedChoices(String choices) {
-		choices = "CUSTOM(".concat(choices);
-		choices = choices.replace(",", ",CUSTOM(");
-		choices = choices.replace("*", ")");
+		choices = "CUSTOM".concat(choices);
+		choices = choices.replace(",", ",CUSTOM");
 		return choices;
 	}
 

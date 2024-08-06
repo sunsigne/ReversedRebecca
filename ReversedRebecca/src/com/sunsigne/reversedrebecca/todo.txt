@@ -33,9 +33,8 @@
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	pour une raison étrange, on peut intéragir pendant la cutscene des crêpes (une fois qu'on en a mangé, et qu'on en fait à Sarah à son arrivée)
 	adapter laboratory & tutorial au nouveau système
-	rr000 :
-	reste plus que sarah (npc-02) et obj-41 - reste les TALKED de la partie end_lvl à faire (+ les choice, évidemment)
-	changer ChoiceRequest (passer de l'étoile * à la parenthèse () + mettre à jour la doc
+	tuto & labo : convertir 
+	rr000 :	on dirait qu'avoir un choix pendant une cutscene permet de faire des actions par la suite pendant celle-ci
 
 	0h10 - désactiver ExplosionBrightnessLaw (il est déjà écrit ailleurs de la réactiver)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
