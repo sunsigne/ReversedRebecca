@@ -21,8 +21,7 @@
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
-		- lorsqu'on a partagé des cre^pes avec sarah, une action subliminal de la chaise s'active avant que la vraie action de sortir n'arrive, il faudrait forcer une boucle ? c'est peut-être le même problème qui fait que le lit continue d'afficher l'option juste après qu'on se soit levé (l'espece de Timer dans la classe ACTION qui est là pour empêcher que le texe ne clignotte quand on spam les copokies ou les verres d'eau))
-
+		
 	vérifier si bien réglé :
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World

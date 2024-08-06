@@ -64,6 +64,9 @@ public class TextAction implements Updatable {
 
 		if (tripleAction != interactive.getTripleAction())
 			return;
+		
+		if(interactive.isDisabled())
+			return;
 
 		// player doesn't exist
 		Player player = new PlayerFinder().getPlayer();
