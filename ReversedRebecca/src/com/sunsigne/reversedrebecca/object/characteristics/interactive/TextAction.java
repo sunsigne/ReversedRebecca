@@ -71,7 +71,7 @@ public class TextAction implements Updatable {
 			return;
 
 		// player can't interact
-		if (!interactive.canPlayerInterfactDelayer(true))
+		if (!interactive.canPlayerInteractDelayer(true))
 			return;
 
 		// no action can be performed
@@ -139,7 +139,7 @@ public class TextAction implements Updatable {
 			if(tempPiranha.getTripleAction() == null)
 				continue;
 			
-			if (tempPiranha.canPlayerInterfact() && tempPiranha.getTripleAction().cannotDoAnyAction() == false)
+			if (tempPiranha.canPlayerInteract() && tempPiranha.getTripleAction().cannotDoAnyAction() == false)
 				return true;
 		}
 

@@ -72,7 +72,7 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 		if (getFacing() != DIRECTION.NULL && initial_hole != null)
 			return initial_hole.getHighlightCondition();
 
-		if (canPlayerInterfact() == false)
+		if (canPlayerInteract() == false)
 			return false;
 
 		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())

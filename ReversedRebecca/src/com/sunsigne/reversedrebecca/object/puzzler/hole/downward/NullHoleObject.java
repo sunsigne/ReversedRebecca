@@ -71,7 +71,7 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 		if (getFacing() != DIRECTION.NULL && initial_hole != null)
 			return initial_hole.getHighlightCondition();
 
-		if (canPlayerInterfact() == false)
+		if (canPlayerInteract() == false)
 			return false;
 
 		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())

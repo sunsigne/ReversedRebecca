@@ -98,7 +98,7 @@ public abstract class Action {
 		if (player == null)
 			return;
 
-		if (player.canInterract() == false)
+		if (player.canInteract() == false)
 			return;
 
 		player.setCanInterract(false, true);

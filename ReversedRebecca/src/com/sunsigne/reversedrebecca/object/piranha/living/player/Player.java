@@ -31,7 +31,7 @@ public class Player extends LivingObject {
 		var clazz = "PIRANHA : PLAYER";
 
 		var dirName = "NAME:" + getName().toUpperCase();
-		var dirCanInterract = "CAN INTERACT:" + canInterract();
+		var dirCanInterract = "CAN INTERACT:" + canInteract();
 
 		GoalObject goal = null;
 		goal = new GoalObject(getX(), getY(), true);
@@ -108,30 +108,30 @@ public class Player extends LivingObject {
 
 	////////// INTERACTIVE ////////////
 
-	private boolean canInterract;
-	private boolean fakingCanInterract;
+	private boolean canInteract;
+	private boolean fakingCanInteract;
 
 	public boolean getFakingCanInterract() {
-		return canInterract() || fakingCanInterract;
+		return canInteract() || fakingCanInteract;
 	}
 
-	public boolean canInterract() {
+	public boolean canInteract() {
 		if (isStunned() == false)
-			return canInterract;
+			return canInteract;
 
 		if (getCondition() == CONDITION.KO)
 			return false;
 
-		return canInterract;
+		return canInteract;
 	}
 
-	public void setCanInterract(boolean canInterract) {
-		setCanInterract(canInterract, false);
+	public void setCanInterract(boolean canInteract) {
+		setCanInterract(canInteract, false);
 	}
 
-	public void setCanInterract(boolean canInterract, boolean fakingCanInterract) {
-		this.canInterract = canInterract;
-		this.fakingCanInterract = fakingCanInterract;
+	public void setCanInterract(boolean canInteract, boolean fakingCanInteract) {
+		this.canInteract = canInteract;
+		this.fakingCanInteract = fakingCanInteract;
 	}
 
 	////////// TICK ////////////

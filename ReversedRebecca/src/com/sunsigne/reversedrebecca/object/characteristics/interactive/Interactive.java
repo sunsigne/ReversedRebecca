@@ -33,11 +33,11 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	public void setDisabled(boolean isDisabled);
 
-	public default boolean canPlayerInterfact() {
-		return canPlayerInterfact(false);
+	public default boolean canPlayerInteract() {
+		return canPlayerInteract(false);
 	}
 
-	public default boolean canPlayerInterfact(boolean checkFakeInterract) {
+	public default boolean canPlayerInteract(boolean checkFakeInteract) {
 
 		// player is already interacting with an object
 		if (this instanceof ChoiceObject == false) {
@@ -57,8 +57,8 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 			return false;
 
 		// player specifically can't interact
-		if (player.canInterract() == false) {
-			if (!checkFakeInterract || player.getFakingCanInterract() == false)
+		if (player.canInteract() == false) {
+			if (!checkFakeInteract || player.getFakingCanInterract() == false)
 				return false;
 		}
 
@@ -118,8 +118,8 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 	public void setDelayer(GameTimer delayer);
 
 	// besure the highlight for large objects does not "blink" when the player change of tile
-	public default boolean canPlayerInterfactDelayer(boolean checkFakeInterract) {
-		if (canPlayerInterfact(checkFakeInterract)) {
+	public default boolean canPlayerInteractDelayer(boolean checkFakeInteract) {
+		if (canPlayerInteract(checkFakeInteract)) {
 			if (getDelayer() != null)
 				getDelayer().destroy();
 
@@ -137,7 +137,7 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	@Override
 	default boolean getHighlightCondition() {
-		if (canPlayerInterfactDelayer(false) == false)
+		if (canPlayerInteractDelayer(false) == false)
 			return false;
 
 		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())
@@ -174,7 +174,7 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	public default void inputPressed(int key, int button) {
 
-		if (!canPlayerInterfact())
+		if (!canPlayerInteract())
 			return;
 
 		if (getTripleAction() == null)

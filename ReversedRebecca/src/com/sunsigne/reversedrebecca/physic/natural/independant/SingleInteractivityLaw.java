@@ -48,7 +48,7 @@ public class SingleInteractivityLaw extends IndependantLaw {
 			return;
 
 		Interactive interactive = (Interactive) object;
-		if (interactive.canPlayerInterfact() == false)
+		if (interactive.canPlayerInteract() == false)
 			return;
 
 		if (interactive.getTripleAction() != null && interactive.getTripleAction().cannotDoAnyAction() == false) {
