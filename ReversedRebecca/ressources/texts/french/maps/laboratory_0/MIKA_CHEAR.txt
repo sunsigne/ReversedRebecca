@@ -1,2 +1,71 @@
+% FIRST
 rebecca = object = excited = Allez Mika ! Tu es le meilleur !
 mika = DOWN = angry = Ces cailloux n'ont qu'à bien se tenir !
+
+
+% AGAIN
+rebecca = object = determinated = Allez Mika ! Je crois en toi !
+mika = DOWN = angry = C'est lourd… Mais ça m'aide !
+
+
+% AGAIN_AGAIN
+rebecca = object = laugh = T'es trop fort, Mika !
+mika = DOWN = angry_var = Ouais ! Chui le meilleur ! 
+
+
+% AGAIN_AGAIN_AGAIN
+rebecca = object = happy = Allez ! Tu…
+rebecca = object = worry = Heu…
+rebecca = object = happy = Allez !
+mika = DOWN = angry_var = J'y suis presque !
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Allez Mika ! Tu es le meilleur !
+mika = DOWN = doubt = Tu l'as pas déjà dit ?
+rebecca = object = worry = Hey… Je fais ce que je peux…
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Allez Mika ! Tu peux le faire !
+mika = DOWN = angry_var = Je sens que ça vient !
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = laugh = Mika ! Mika ! Mika !
+mika = DOWN = angry_var = JE SUIS REMONTÉ À BLOC !
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Allez Mika ! Tu y es presque !
+mika = DOWN = angry = OUAIS !
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = evil = Allez ! C'est mou tout ça.
+mika = DOWN = angry_var = MUUUUUUSCLES !
+
+
+% LAST
+rebecca = object = laugh = MIKA ! MIKA ! MIKA !
+mika = DOWN = angry = RHAAAAA !
+
+
+% LAST_NEXT
+mika = DOWN = angry_var = C'EST QUI LE PATRON ?
+
+
+% LAST_NEXT_POST_KISS_LEFT
+mika = LEFT = surprised = Heu… Pardon… Je me suis laissé emporter…
+mika = LEFT = worry = Désolé…
+rebecca = RIGHT = blush = ... Pas de soucis…
+mika = LEFT = serious = Bon… Heu… La voie est libre.@Je vais prévenir les autres.
+rebecca = RIGHT = blush = Ok.
+
+
+% LAST_NEXT_POST_KISS_RIGHT
+mika = RIGHT = surprised = Heu… Pardon… Je me suis laissé emporter…
+mika = RIGHT = worry = Désolé…
+rebecca = LEFT = blush = ... Pas de soucis…
+mika = RIGHT = serious = Bon… Heu… La voie est libre.@Je vais prévenir les autres.
+rebecca = LEFT = blush = Ok.

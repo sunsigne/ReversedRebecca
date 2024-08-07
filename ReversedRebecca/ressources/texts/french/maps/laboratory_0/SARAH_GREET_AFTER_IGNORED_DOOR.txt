@@ -1,5 +1,0 @@
-sarah = RIGHT = happy = Salut Rebecca ! Comment ça va ?
-rebecca = LEFT = laugh = Bien, merci !
-rebecca = LEFT = worry = C'est toi qui a frappé à ma porte ce matin ?
-sarah = RIGHT = surprised = Ha ! Alors, tu étais là ?
-rebecca = LEFT = happy = Oui, mais…

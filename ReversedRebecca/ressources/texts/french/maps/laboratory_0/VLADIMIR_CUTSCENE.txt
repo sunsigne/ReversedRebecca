@@ -1,0 +1,46 @@
+% MIKA_STOP_HIM
+MIKA = DOWN = angry_var = ARRÊTEZ-LE !
+
+
+% MIKA_DAMN_IT
+MIKA = DOWN = angry = Et merde…
+
+
+% MIKA_WHAT_HAPPENED
+rebecca = DOWN = no_sens = Qu'est-ce qu'il s'est passé ?
+mika = UP = angry_var = Ce mec… Il a fait exploser le mur@pour rentrer dans le laboratoire !
+mika = DOWN = angry_var = Quel taré...@Et maintenant, on peut même plus sortir.
+
+
+% MIKA_WHAT_HAPPENED_PRE_NEXT
+sarah = DOWN = surprised = Qu'est-ce qu'il est venu faire ici ?
+mika = UP = serious = Je suis comme vous les filles…@J'en sais pas plus…
+
+
+% MIKA_WHAT_HAPPENED_NEXT
+sarah = DOWN = determinated = Alors, on va enquêter !
+sarah = RIGHT = happy = Rebecca, à toi de choisir.@Qu'est-ce que tu préfères faire ?
+
+
+% MIKA_WHAT_HAPPENED_NEXT_ANGRY
+sarah = DOWN = determinated = Alors, on va enquêter !
+sarah = RIGHT = worry = Rebecca, oublions notre petit différent, d'accord ?@Il va falloir qu'on règle cette situation.
+sarah = RIGHT = happy = Qu'est-ce que tu préfères faire ?
+
+
+% MIKA_WHAT_HAPPENED_SADISTIC
+rebecca = DOWN = laugh = En effet. Quel excité !
+rebecca = DOWN = worry = Ne t'en fais pas, Mika. Je vais me trouver une sortie.
+rebecca = DOWN = you_silly = Enfin… "Nous" trouver une sortie, bien sûr…
+
+
+% SARAH_SCENARIO_EXIT
+sarah = RIGHT = happy_var = Ok. Dans ce cas, je pars interroger les témoins.
+sarah = RIGHT = wink = On fera un point à l'atelier, tout à l'heure.
+rebecca = LEFT = happy = Ça marche.
+
+
+% SARAH_SCENARIO_INQUIRY
+sarah = RIGHT = happy_var = Ok. Dans ce cas, je pars nous trouver une sortie.
+sarah = RIGHT = wink = On fera un point à l'atelier, tout à l'heure.
+rebecca = LEFT = happy = Ça marche.

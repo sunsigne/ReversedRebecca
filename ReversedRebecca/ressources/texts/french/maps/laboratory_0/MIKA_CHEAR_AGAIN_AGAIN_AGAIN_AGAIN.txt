@@ -1,3 +1,0 @@
-rebecca = object = excited = Allez Mika ! Tu es le meilleur !
-mika = DOWN = doubt = Tu l'as pas déjà dit ?
-rebecca = object = worry = Hey… Je fais ce que je peux…

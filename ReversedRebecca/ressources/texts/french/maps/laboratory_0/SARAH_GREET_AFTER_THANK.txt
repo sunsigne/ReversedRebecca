@@ -1,4 +1,0 @@
-rebecca = LEFT = happy_var = Merci, tu es adorable !
-sarah = RIGHT = wink = De rien, j'en ai plein à l'atelier.@Pense à venir me voir, dès que tu peux.
-rebecca = LEFT = laugh = C'est noté !
-rebecca = LEFT = happy = Bon, allez ! Je m'y mets.

@@ -1,3 +1,75 @@
+% NEUTRAL
 rebecca = DOWN = excited = Salut Sarah ! Tu vas bien ?
 sarah = UP = laugh = Oui, merci !
 sarah = UP = happy = Tu es venue tôt ! Je suis passée chez toi@ce matin, mais il n'y avait personne…
+
+
+% NO_BREAKFAST
+rebecca = DOWN = worry = J'avais peur d'être en retard.@Je n'ai même pas pris de petit-déjeuner…
+sarah = UP = worry = Ma pauvre…
+sarah = UP = wink = Bon, ça n'est pas de la nourriture, mais…@J'ai quelque chose pour toi.
+
+
+% ATE_BREAKFAST
+rebecca = DOWN = happy_var = Oui, je suis une lève-tôt.
+sarah = UP = laugh = Pas moi !
+sarah = UP = wink = Du coup, je suis passée ce matin parce que…@J'ai quelque chose pour toi.
+
+
+% AFTER_REFUSED_TO_GO_WITH
+sarah = RIGHT = laugh = Rebonjour, Rebecca !
+rebecca = LEFT = laugh = Rebonjour, Sarah !
+sarah = RIGHT = wink = Au fait ! J'ai ta surprise avec moi.
+rebecca = LEFT = excited = Ho ! Tu es la meilleure !
+
+
+% AFTER_TOO_LATE
+sarah = RIGHT = happy = Salut Rebecca ! Comment ça va ?
+rebecca = LEFT = laugh = Bien, merci !
+rebecca = LEFT  = worry = C'est toi qui a frappé à ma porte ce matin ?
+sarah = RIGHT = surprised = Ha ! Alors, tu étais là ?
+rebecca = LEFT = worry = Oui, mais j'ai ouvert la porte trop tard…
+sarah = RIGHT = laugh = Du Rebecca tout craché !
+sarah = RIGHT = wink = Du coup, je suis passée ce matin parce que…@J'ai quelque chose pour toi.
+
+
+% AFTER_IGNORED_DOOR
+sarah = RIGHT = happy = Salut Rebecca ! Comment ça va ?
+rebecca = LEFT = laugh = Bien, merci !
+rebecca = LEFT = worry = C'est toi qui a frappé à ma porte ce matin ?
+sarah = RIGHT = surprised = Ha ! Alors, tu étais là ?
+rebecca = LEFT = happy = Oui, mais…
+
+
+% IGNORED_DOOR_OPENED_TOO_LATE
+sarah = RIGHT = laugh = Du Rebecca tout craché !
+sarah = RIGHT = wink = Du coup, je suis passée ce matin parce que…@J'ai quelque chose pour toi.
+
+
+% IGNORED_DOOR_DIDN'T_WANT_TO_OPEN
+sarah = RIGHT = sad = ... C'est pourtant le principe d'une porte…
+sarah = RIGHT = you_silly_var = Bon, oublions ça.@J'ai quelque chose pour toi.
+
+
+% THANK
+rebecca = DOWN = happy_var = Merci, tu es adorable !
+sarah = UP = wink = De rien, j'en ai plein à l'atelier.@Pense à venir me voir, dès que tu peux.
+rebecca = DOWN = laugh = C'est noté !
+sarah = UP = happy = Bon ! Il serait temps que je m'y mette.
+
+
+% AFTER_THANK
+rebecca = LEFT = happy_var = Merci, tu es adorable !
+sarah = RIGHT = wink = De rien, j'en ai plein à l'atelier.@Pense à venir me voir, dès que tu peux.
+rebecca = LEFT = laugh = C'est noté !
+rebecca = LEFT = happy = Bon, allez ! Je m'y mets.
+
+
+% AFTER_ANGRY
+sarah = RIGHT = sad = Salut.
+rebecca = LEFT = angry = Salut.
+
+
+% AFTER_ANGRY_REALLY_HARD
+sarah = RIGHT = angry = …
+rebecca = LEFT = you_silly = ?

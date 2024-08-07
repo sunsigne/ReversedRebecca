@@ -1,2 +1,0 @@
-sarah = RIGHT = sad = Salut.
-rebecca = LEFT = angry = Salut.

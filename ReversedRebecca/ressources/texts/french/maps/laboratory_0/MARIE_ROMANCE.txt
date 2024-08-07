@@ -1,1 +1,130 @@
+% INVENTORY_HELLO
+object = player = laugh = Tiens ! Salut Rebecca !
+
+
+% INVENTORY_INITIATIVE_HELLO
+object = player = laugh = Hey, Rebecca !
+
+
+% INVENTORY_INITIATIVE
+object = player = happy = Tu as besoin de quelque chose ?
+rebecca = object = happy_var = Non, merci.@Je visite, c'est tout.
+object = player = laugh = Tu visites notre stock ? Tu peux le@dire si tu viens chercher des bombes.
+rebecca = object = happy_var = Non, non. Vraiment, je visite.
+object = player = you_silly = Si tu le dis… Je t'en donne@quand même une, au cas où.
+
+
+% INVENTORY_BOMB
+object = player = happy = Tu as besoin de quelque chose ?
+rebecca = object = excited = Des bombes !
+object = player = happy = Bien sûr, tiens.
+
+
+% INVENTORY_BOMB_NEXT
+rebecca = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes vertes ?
+object = player = worry = Je crois que non…
+object = player = surprised = Ho ! Attend ! Mais si !@J'en ai trouvé une dans un carton tout à l'heure.
+object = player = happy = Tiens, la voilà.
+
+
+% INVENTORY_BOMB_LAST
+object = player = unhappy = Tu as l'air déçue… Ça ne va pas ?
+rebecca = object = unhappy = J'avais oublié, mais elle ne me servent à rien…@Je ne sais pas encore m'en servir…
+object = player = worry = Ha…
+object = player = unhappy = Heu…
+object = player = worry = Tu apprendras bientôt…
+rebecca = object = happy_var = Merci, tu es gentille.
+
+
+% INVENTORY_NEXT
+object = player = happy = Il te faut autre chose ?
+rebecca = object = happy_var = Non, merci.@Je visite, c'est tout.
+
+
+% INVENTORY_LAST
+object = player = worry = ... Tu … es sûre qu'il ne te faut vraiment rien ?
+object = player = unhappy = Désolé d'être insistante…@C'est juste que tu te comportes biza…
+object = player = worry = Hm… C'est juste que tu me donnes l'impression que@tu attends quelque chose sans oser le demander.
+rebecca = object = happy = Non, non. Je te regarde, c'est tout.
+
+
+% DISILLUSIONED
+marie = RIGHT = unhappy = (Zut, je commençais à croire que…)
+marie = RIGHT = worry = (Bah… Une autre fois)
+
+
+% EMBARASSED
+object = player = happy = (Elle me regarde toujours…)
+object = player = blush_var2 = (… Elle est aussi belle que d'habitude…)
+object = player = blush = (Je n'arrive pas à me concentrer)
+
+
+% EMBARASSED_NEXT
+object = player = blush_var = (Elle est toujours là…)
+
+
+% EMBARASSED_NEXT_NEXT
+object = player = blush_var2 = (Pourquoi elle reste là ?@Est-ce que c'est ce je crois ?)
+object = player = blush_var = (Est-ce que c'est vraiment@en train d'arriver ?)
+
+
+% DISILLUSIONED_NEXT
+marie = RIGHT = cry_var = (Je me faisais juste des idées…)
+
+
+% EMBARASSED_NEXT_NEXT_NEXT
+object = player = blush_var2 = ("Rebecca, je t'aime.")
+object = player = blush_var = (Allez, c'est pas dur, Marie.@Il faut se lancer !)
+object = player = blush = (Ho non, je savais que j'aurais dû@me laver les cheveux ce matin !)
+
+
+% EMBARASSED_NEXT_NEXT_NEXT_NEXT
+object = player = blush_var = (C'est peut être un peu ridicule@d'annoncer ça comme ça…)
+object = player = blush_var = (Peut-être que je devrais juste m'approcher et lui@caresser la joue, puis les cheveux, et l'embrasser…)
+
+
+% EMBARASSED_LAST
+object = player = blush_var = (Ok, Marie, c'est ta chance !@C'est ton moment ! C'est maintenant !)
+object = player = blush_var2 = Heu… Rebecca ?
+object = player = blush_var = (Je m'approche ou je lui demande ?)
+object = player = blush_var = (… Je vais lui demander. C'est plus correct)
+
+
+% EMBARASSED_LAST_NEXT
+object = player = blush_var3 = Est-ce que blrhfghlre ?
+object = player = surprised_var = (Et merde…)
+object = player = surprised = HEU… TES LACETS SONT DÉFAITS !
+object = player = surprised_var = (J'ai vraiment dit ça ?)
+object = player = cry_var = (Et je l'ai crié en plus… Je suis trop une nouille)
+object = player = cry_var = (Ses lacets ne sont même pas défaits…@Elle va penser que je suis trop bizarre…)
+object = player = cry_var = (Ma vie est fichue…)
+
+
+% WILL_YOU
 object = player = cry_var2 = Rebecca ! Attends !
+
+
+% WILL_YOU_NEXT
+object = player = cry = Je voulais savoir si…
+object = player = cry_happy = Est-ce que…
+object = player = blush_var2 = Tu veux sortir avec moi ?
+
+
+% WILL_YOU_NO
+object = player = cry_var = Ha ha… Tu y as cru, hein ?@Je te faisais marcher… Bien sûr…
+object = player = cry_var = Excuse-moi… Je dois aller quelque part…
+
+
+% WILL_YOU_YES
+object = player = blush_var2 = Ok… Heu… Je… Heu…
+object = player = blush_var4 = … Je n'ai pas réfléchi à la suite…
+player = object = worry = Moi non plus. Je t'avoue que c'est@complètement nouveau pour moi.
+object = player = surprised_var2 = Je suis ta première ?
+player = object = worry = Oui. Je préfère les garçons normalement…
+player = object = happy_var = Mais je t'ai trouvé touchante,@alors je me suis dit "pourquoi pas".
+
+
+% WILL_YOU_YES_NEXT
+object = player = blush_var2 = Du coup... On… mange ensemble@au restaurant ce soir ?
+player = object = happy = Oui, c'est bien.
+object = player = blush_var5 = Ok, je réserverai pour 20h. Je t'appellerai.

@@ -1,4 +1,0 @@
-object = player = worry = ... Tu … es sûre qu'il ne te faut vraiment rien ?
-object = player = unhappy = Désolé d'être insistante…@C'est juste que tu te comportes biza…
-object = player = worry = Hm… C'est juste que tu me donnes l'impression que@tu attends quelque chose sans oser le demander.
-rebecca = object = happy = Non, non. Je te regarde, c'est tout.

@@ -1,0 +1,34 @@
+% CHOSEN_ONE
+player = object = happy = Bonjour Dave, tu regardes quoi ?
+dave = player = calm = Tiens, salut Rebecca.@Alors c'est toi qui as été choisie ?
+dave = player = disillusioned = C'est drôle, j'ai toujours pensé que ça serait moi.
+dave = player = calm = Ça fait quel effet ?
+player = object = worry = Tu es encore plus bizarre que d'habitude…@Tu es sûr que ça va ?
+dave = player = calm = Je vais bien, merci de t'en soucier.
+dave = DOWN = calm = Et pour répondre à ta question, je regardais@les bombes dans la salle d'à-côté.
+player = object = no_sens = Ok… Si tu le dis…
+
+
+% CHOSEN_ONE_PLUS
+player = object = happy = Bonjour Dave, tu regardes quoi ?
+dave = player = calm = Nous avons déjà eu cette conversation, Rebecca.@Je n'ai pas pour habitude de me répéter.
+player = object = worry = Qu'est-ce que tu racontes ?@C'est la première fois que je te demande ça.
+dave = player = disillusioned = Toi, peut-être…
+dave = player = calm = Pardon, j'en oubli parfois que je suis@le seul à voir le monde tel qu'il est.
+player = object = worry = Tu es encore plus bizarre que d'habitude…@Tu es sûr que ça va ?
+dave = player = calm = C'est drôle. La dernière fois tu avais@demandé exactement la même chose…
+dave = player = calm= J'ai l'impression que quoi que je fasse,@au fond, rien ne changera jamais…
+dave = player = disillusioned = Mais bon, ça n'est pas moi qui ai été choisi,@donc je n'ai pas mon mot à dire.
+dave = DOWN = calm = Et pour répondre une nouvelles fois à ta question,@je regardais les bombes dans la salle d'à-côté.
+player = object = no_sens = Ok… Si tu le dis…
+
+
+% CHOSEN_ONE_EXTRA_PLUS
+player = object = happy = Bonjour Dave, tu regardes quoi ?
+dave = player = calm = Rebecca, ça ne te fatigue pas de jouer@la même pièce, encore et encore ?
+dave = player = calm = Personnellement, je ne vois pas à quoi ça rime.
+player = object = worry = Tu es encore plus bizarre que d'habitude…@Tu es sûr que ça va ?
+dave = DOWN = disillusioned = Les mêmes réponses… Les mêmes lieux…@La même musique bizarre…
+dave = DOWN = calm = Parfois, j'aimerais pouvoir perdre la mémoire…@Mais c'est totalement impossible.
+dave = DOWN = calm = Je vais arrêter de venir ici, à cette heure et à@cet endroit. Je n'en vois vraiment pas l'intérêt.
+player = object = no_sens = Ok… Si tu le dis…

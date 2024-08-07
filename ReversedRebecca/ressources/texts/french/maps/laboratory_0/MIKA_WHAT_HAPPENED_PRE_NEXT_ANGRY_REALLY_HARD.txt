@@ -1,3 +1,0 @@
-rebecca = DOWN = laugh = En effet. Quel excité !
-rebecca = DOWN = worry = Ne t'en fais pas, Mika. Je vais me trouver une sortie.
-rebecca = DOWN = you_silly = Enfin… "Nous" trouver une sortie, bien sûr…

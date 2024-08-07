@@ -1,3 +1,18 @@
+% INQUIRY_SOON
+rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
+mika = player = serious = Donne-moi cinq secondes…@Je rassemble mes idées.
+
+
+% SOON_NEXT
+mika = player = serious = Ok, c'est bon. Tu disais ?
+
+
+% SOON_NEXT_VAR
+rebecca = object = worry = Hey Mika ! On peut discuter, maintenant ?
+mika = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
+
+
+% NEUTRAL
 rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
 mika = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
 mika = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
@@ -7,3 +22,20 @@ rebecca = object = surprised = Attend ! Mais si ça se trouve, Alicia est bless�
 mika = player = surprised = ?!
 mika = player = serious = Je n'y avais pas pensé…
 mika = player = serious = Va voir comment elle va.@Je dois rester pour ici dégager le chemin.
+
+
+% HURRY_UP
+mika = player = angry_var = Rebecca ! Tu fous quoi ?@Va voir si Alicia va bien ! 
+
+
+% HURRY_UP_AGAIN
+mika = player = doubt = C'est par là…
+
+
+% HURRY_UP_LAST
+mika = player = angry_var = Bon ! Ça suffit ! C'est quoi ton problème ?@T'en a rien à foutre des gens ?
+mika = player = angry = Casse-toi.
+
+
+% HURRY_UP_LAST_REBECCA
+player = DOWN = determinated = C'est tellement marrant de les pousser à bout.

@@ -1,2 +1,0 @@
-rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
-mika = player = serious = Donne-moi cinq secondes…@Je rassemble mes idées.

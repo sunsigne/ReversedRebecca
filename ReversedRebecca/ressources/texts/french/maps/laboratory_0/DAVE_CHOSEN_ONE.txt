@@ -1,8 +1,0 @@
-player = object = happy = Bonjour Dave, tu regardes quoi ?
-dave = player = calm = Tiens, salut Rebecca.@Alors c'est toi qui as été choisie ?
-dave = player = disillusioned = C'est drôle, j'ai toujours pensé que ça serait moi.
-dave = player = calm = Ça fait quel effet ?
-player = object = worry = Tu es encore plus bizarre que d'habitude…@Tu es sûr que ça va ?
-dave = player = calm = Je vais bien, merci de t'en soucier.
-dave = DOWN = calm = Et pour répondre à ta question, je regardais@les bombes dans la salle d'à-côté.
-player = object = no_sens = Ok… Si tu le dis…
