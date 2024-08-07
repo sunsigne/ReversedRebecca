@@ -31,8 +31,7 @@
 
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
-	30h00 - adapter laboratory & tutorial au nouveau système piranha d'action, de choix et de dialogues
-	labo : convertir 
+	20h00 - adapter laboratory au nouveau système de talk & dialogues
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
@@ -48,7 +47,6 @@
 	0h20 changer la musique de l'écran titre
 
 	BUG :
-	0n10 - (ws000) highlight des notes de sarah sur son bureau pas faites
 	0h30 - le bug avec la "streameuse dont on ne doit pas prononcer le nom", où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug) -> corrigé depuis le patch sur les ConcurrentModification ? Lui demander de reproduire le bug, et son crash repport quand même, au cas où.
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 	0h30 - droits à demander : les drapeaux + autres ?
