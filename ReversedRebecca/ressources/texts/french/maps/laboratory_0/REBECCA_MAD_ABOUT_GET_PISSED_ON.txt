@@ -1,1 +1,0 @@
-player = DOWN = angry_var2 = Non mais je rêve !

@@ -1,0 +1,45 @@
+% YOU_HERE_FIRST_TIME
+object = player = cry = Ho ! Salut Rebecca…
+player = object = unhappy = Tu en fait une tête… Ça ne va pas ?
+object = player = cry = Non…
+player = object = unhappy = Je… peux faire quelque chose pour toi ?
+object = player = cry = Me laisse seul, s'il te plaît.
+
+
+% ARE_YOU_OK_FIRST_TIME
+object = player = cry = Ne t'en fais pas, je vais bien.@J'ai juste un peu honte de…
+object = player = cry_var = Ça va aller.
+
+
+% THINK_FIRST_TIME
+player = object = you_silly_var = (Je ne sais pas ce qu'il a, mais je@ferais mieux de le laisser tranquille).
+
+
+% YOU_HERE
+object = player = cry = Ho ! Tu es là ?
+player = object = unhappy = Tu n'as pas tenu…
+object = player = cry = Non…
+player = object = unhappy = Je… peux faire quelque chose pour toi ?
+object = player = cry = Me laisse seul, s'il te plaît.
+
+
+% ARE_YOU_OK
+object = player = cry = Ne t'en fais pas, je vais bien.@J'ai juste un peu honte de ce qui s'est passé.
+
+
+% CLOTHES
+player = object = happy = Je me disais… Tu veux que@je te trouve des vêtements de rechange ?
+object = player = cry = C'est gentil, mais je veux juste rentrer chez moi…
+
+
+% LEAVE_ME_ALONE
+object = player = cry = J'aimerais être un peu seul@si ça ne te dérange pas.
+player = object = unhappy = J'ai pas envie de te laisser comme ça…
+object = player = cry_var = Ça ira pour moi, merci.
+object = player = cry = Je fermerai la porte quand tu seras partie,@j'ai juste pas envie qu'on me voit comme ça…
+player = object = happy_var = Ok ! Tu tiens le coup, hein ?
+object = player = cry_var = Oui.
+
+
+% THINK
+player = object = you_silly_var = (Je ferais mieux de le laisser tranquille).

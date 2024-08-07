@@ -1,1 +1,0 @@
-sarah = jean = angry = Mais il est pas bien, lui !

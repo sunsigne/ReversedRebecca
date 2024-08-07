@@ -1,1 +1,0 @@
-object = player = urge_sad = Bof…

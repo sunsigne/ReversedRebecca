@@ -1,1 +1,0 @@
-player = DOWN = unhappy = Je ne peux pas sortir comme ça.

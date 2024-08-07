@@ -1,1 +1,0 @@
-player = object = you_silly_var = (Je ne sais pas ce qu'il a, mais je@ferais mieux de le laisser tranquille).

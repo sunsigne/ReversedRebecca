@@ -1,0 +1,63 @@
+SARAH_JEAN_SCOLDING_FROM_FAR
+sarah = UP = angry_var = NON MAIS ÇA VA PAS BIEN DE@POUSSER LES GENS, COMME ÇA !
+rebecca = DOWN = unhappy = Holala… Sarah est vraiment fachée…
+
+SARAH_JEAN_SCOLDING_VAR
+sarah = UP = angry_var = NON MAIS ÇA VA PAS BIEN DE@POUSSER LES GENS, COMME ÇA !
+jean = DOWN = surprised = Heu…
+sarah = UP = angry_var = "HEU" RIEN DU TOUT ! TU T'EXCUSES !@MAINTENANT !
+jean = DOWN = surprised = … Oui. Pardon.
+
+SARAH_JEAN_SCOLDING
+sarah = UP = angry_var = NON MAIS ÇA VA PAS BIEN DE@POUSSER LES GENS, COMME ÇA !
+jean = DOWN = surprised = Heu…
+sarah = UP = angry_var = "HEU" RIEN DU TOUT ! TU VAS VOIR REBECCA@ET TU T'EXCUSES ! MAINTENANT !
+jean = DOWN = surprised = … Oui.
+
+JEAN_APOLOGIZE_FOR_PUSHING
+jean = player = sad = Pardon de t'avoir poussé, tout à l'heure…
+player = object = no_sens = Heu… Pas de soucis.
+
+JEAN_APOLOGIZE_FOR_PUSHING_VAR
+object = player = cry = Ho ! Salut Rebecca…
+player = object = unhappy = Tu en fait une tête… Ça ne va pas ?
+jean = player = sad = Pardon de t'avoir poussé, tout à l'heure…
+player = object = no_sens = Heu… Pas de soucis.
+
+JEAN_SCOLDING
+player = object = angry = Dis donc, toi !@Tu m'as poussé tout à l'heure !
+jean = player = urge_happy = Ho… Heu…
+jean = player = unhappy = C'est que… J'avais vraiment besoin@d'aller aux toilettes…
+player = object = angry = C'est pas une raison !
+jean = player = unhappy = …
+jean = player = unhappy = ...
+jean = player = cry = … Pourquoi tu me cries dessus …
+player = object = asleep = Soupir.
+player = object = wrong_with_you = Tu nous fais quoi ? Tu joues les victimes ? Quand@on pousse les gens, c'est normal qu'ils s'énervent !
+jean = player = cry = …
+player = DOWN = angry_var2 = (Et il ne s'excuse même pas !@Je ne veux plus lui parler).
+
+JEAN_SCOLDING_BATHROOM
+player = object = angry = Non mais dis donc !@Ça va bien de me pousser comme ça ?
+
+JEAN_SCOLDING_BATHROOM_NEXT
+object = player = scared = HAAAA!
+
+JEAN_SCOLDING_HARD
+player = object = angry_var = JE RÊVE OU TU VIENS DE ME PISSER DESSUS ?
+jean = player = urge_sad = Pardon… Tu m'as surpris et…@C'est sorti tout seul…
+player = object = angry = T'es un sacré dégueulasse !
+jean = player = urge_sad = Je suis désolé…
+player = object = angry = "Désolé" c'est ce qu'on dit quand on fait trop@de bruit, ou quand on fait tomber un truc…
+player = object = angry_var = PAS QUAND ON PISSE SUR LES GENS !
+jean = player = urge_sad = Désolé, désolé, désolé…
+player = object = angry = Tire-toi.
+
+REBECCA_MAD_ABOUT_GET_PISSED_ON
+player = DOWN = angry_var2 = Non mais je rêve !
+
+TOILET_PISSED_ON
+rebecca = DOWN = angry_var2 = Ha non ! Avec ce dégoutant de Jean, je n'ai plus@envie d'entendre parler d'aller aux toilettes !
+
+REBECCA_WONT_EXIT_BATHROOM
+player = DOWN = unhappy = Je ne peux pas sortir comme ça.
