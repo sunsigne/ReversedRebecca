@@ -1,5 +1,13 @@
+% NEUTRAL
 rebecca = object = worry = C'est un sacré éboulement… Il@y a moyen de s'en débarrasser ?
 mika = player = serious = L'huile de coude.
 rebecca = object = sad = Je passe.
 rebecca = object = sad = Je vais voir s'il existe une autre solution.
 mika = player = serious = Comme tu veux, moi j'y vais à l'ancienne.
+
+
+% MIKA_BOMB
+rebecca = object = laugh = Allez ! Hop ! On se décale !
+mika = object = doubt = Hein ? Des bombes ?
+mika = object = surprised = Attend ?! Mais tu as déjà allumé la mèche !
+rebecca = object = laugh = J'ai dit : on se décale !

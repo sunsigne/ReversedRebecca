@@ -1,9 +1,0 @@
-rebecca = object = happy = Delta ?
-delta = rebecca = laugh = Alala ! Ta pauvre enquête va longtemps@rester non résolue, on dirait !
-rebecca = object = happy_var = Il faut croire que je t'aime bien.
-rebecca = object = happy = Plus sérieusement. Tu as une idée de@ce que l'intrus a pris ?
-delta = rebecca = no_sens = Non. Je n'en sais rien.
-delta = rebecca = excited = Si j'étais toi, j'essayerais de retracer son chemin.@Ça peut aider.
-rebecca = object = happy_var = Oui, j'avais cette idée dans un coin de ma tête.
-delta = rebecca = laugh = Aller, va enquêter, "madame l'inspecteur".
-rebecca = object = happy_var = Oui, cette fois, je m'y mets vraiment.

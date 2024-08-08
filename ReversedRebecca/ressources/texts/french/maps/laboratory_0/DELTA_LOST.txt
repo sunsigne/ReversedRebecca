@@ -1,9 +1,0 @@
-rebecca = object = worry = Delta, je suis un peu perdue…@Tu peux m'aider ?
-delta = rebecca = excited = Bien sûr ! Quel est le problème ?
-rebecca = object = unhappy = Tu vas trouver ça bête, mais…@Tous ces bureaux, ça m'embrouille…
-delta = rebecca = laugh_var = T'es sérieuse ?
-delta = rebecca = excited = Ok, je te fais un topo : ici, c'est le pôle recherche.
-delta = rebecca = smile = On a des bureaux, et au bout du couloir,@une salle de pause super cool.
-delta = rebecca = smile = À droite, c'est le pôle développement :@encore des bureaux, et le "grand laboratoire".
-delta = rebecca = wink = Et entre les deux, l'accueil pour les touristes.
-rebecca = object = happy = Ok, merci.
