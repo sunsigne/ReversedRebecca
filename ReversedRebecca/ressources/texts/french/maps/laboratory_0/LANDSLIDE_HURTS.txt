@@ -1,2 +1,0 @@
-rebecca = DOWN = angry_var2 = Aïe ! Ça fait mal !
-rebecca = UP = unhappy = Zut… Maintenant, je ne peux plus passer.

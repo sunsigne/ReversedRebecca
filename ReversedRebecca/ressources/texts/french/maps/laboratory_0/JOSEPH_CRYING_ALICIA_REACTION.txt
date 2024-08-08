@@ -1,0 +1,20 @@
+% SPONTANEOUS_VAR
+alicia = player = angry_var = Rebecca ! Mais ça va pas la tête ?
+
+
+% SPONTANEOUS_VAR_NEXT
+alicia = player = angry_var = C'est quoi ton problème ?
+
+
+% SPONTANEOUS
+alicia = player = angry_var = Rebecca ! Mais ça va pas la tête ?@C'est quoi ton problème ?
+
+
+% SPONTANEOUS_NEXT
+player = alicia = angry = Ha non ! Tu ne vas pas commencer@à me saouler toi aussi !
+alicia = player = angry = Ha bon ? Je te saoule ? Tu veux que@je te rappelle qui se tape ta paperasse ?
+player = alicia = angry_var2 = Elle me cherche, ou quoi ?@Parce qu'elle va me trouver !
+
+
+% FATALITY
+alicia = UP = surprised_var = Ho non… Ne me dîtes pas qu'elle est morte…

@@ -32,8 +32,8 @@
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	lvl001 - sarah arrive et rebecca lui parle déjà alors qu'elle n'a pas atteint le bureau
-	20h00 - adapter laboratory au nouveau système de talk & dialogues
-	-> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi)
+	10h00 - adapter laboratory au nouveau système de talk & dialogues
+	2h -> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi) + libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau) + les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef)
 	-> delta contient "have you data", jospeh aussi et il contient même "theft"
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)

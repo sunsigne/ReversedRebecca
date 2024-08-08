@@ -1,2 +1,0 @@
-alicia = player = surprised = Ben dis donc ! Quand tu cherches une sortie,@tu ne fais pas semblant !
-player = alicia = evil = Oui, on va passer par là.

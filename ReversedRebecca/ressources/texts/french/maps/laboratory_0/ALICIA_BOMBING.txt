@@ -1,0 +1,77 @@
+% BOMBING_OWN_DESK_VAR
+alicia = player = angry = Rebecca ! C'est pas l'entrée ça !@N'explose pas nos murs !
+player = alicia = worry = Oui, pardon…
+
+
+% BOMBING_OWN_DESK
+alicia = player = surprised = Ben dis donc ! Quand tu cherches une sortie,@tu ne fais pas semblant !
+player = alicia = worry = Je sais, c'est barbare…@Mais on n'a pas trop le choix.
+
+
+% BOMBING_OWN_DESK_AGAIN
+alicia = UP = unhappy = Ça ne me plait vraiment pas que@tu exploses nos murs…
+player = DOWN = wrong_with_you = Tu as une autre solution, peut-être ?
+player = DOWN = worry = Pardon, c'était un peu violent.@C'est le seul chemin, Alicia.
+
+
+% BOMBING_OWN_DESK_AGAIN_VAR
+alicia = UP = unhappy = Ça ne me plait vraiment pas que@tu exploses nos murs…
+player = DOWN = wrong_with_you = Tu as une autre solution, peut-être ?
+player = DOWN = worry = Pardon, c'était un peu violent.@Tu as raison. Je vais trouver un autre chemin.
+
+
+% ERIC_FREAKS_OUT_ALICIA_HERE
+alicia = UP = speaking = Attend !
+
+
+% STOP_BOMB
+alicia = player = unhappy = Rebecca. Ça suffit. Arrête les bombes.
+alicia = player = unhappy = Tu exploses notre laboratoire…@Et en plus, tu fais peur à nos collègues…
+
+
+% STOP_BOMB_NO_PRE_WARNING
+alicia = player = unhappy = Rebecca, je ne pense pas que les@bombes soient une bonne solution…
+alicia = player = unhappy = Tu exploses notre laboratoire…@Et tu fais peur à nos collègues…
+
+
+% NO_I_CONTINUE
+player = alicia = worry = Alicia… Je casses juste quelques vieux murs.@On les reconstruira.
+player = alicia = laugh = Et puis, c'est facile d'avancer !@C'est tout droit !
+alicia = rebecca = unhappy = Ça sera sans moi, Rebecca.
+
+
+% NOT_THAT_BAD
+player = DOWN = unhappy = Je ne la comprends pas…@Ça n'est quand même pas si grave…
+player = DOWN = sad = Je ne blesse personne après tout…
+
+
+% NO_I_CONTINUE_NO_KEY
+player = alicia = unhappy = Tu ne comprends pas, Alicia…@C'est le seul chemin. On n'a pas le choix…
+alicia = rebecca = unhappy = On a toujours le choix, Rebecca.
+
+
+% I_HAD_NO_CHOICE
+player = DOWN = unhappy = Elle ne comprend pas…
+player = RIGHT = sad = Continuer, c'est réellement le seul chemin puisque@je suis incapable de me servir d'une clef verte…
+
+
+% I_STOP_BOMB_HAVING_KEY
+player = alicia = unhappy = Tu as raison, j'ai assez fait de dégâts…
+player = alicia = worry = On va trouver un autre chemin.
+alicia = player = happy = À la bonne heure.
+
+
+% I_STOP_BOMB_CAN_TAKE_KEY
+player = alicia = worry = Je suis désolé que ça t'aie déplu…@Mais on n'a pas besoin d'aller plus loin.
+player = alicia = happy_var = Eric a fait tomber ses clés en partant.
+player = alicia = laugh = D'ailleurs, tu marches dessus.
+alicia = player = surprised = Pardon.
+
+
+% I_STOP_BOMB_CANNOT_TAKE_KEY
+player = alicia = unhappy = Tu as raison, j'ai assez fait de dégâts…
+player = alicia = worry = On va trouver un autre chemin.
+alicia = player = happy = À la bonne heure.
+player = alicia = happy_var = D'ailleurs, Eric a fait tomber ses clés en partant.@On pourrait les utiliser.
+player = alicia = no_sens = Enfin… Si tu sais te servir de clés vertes…@Parce que moi non.
+alicia = player = happy_var = C'est des clés Rebecca.@Je pense pouvoir me débrouiller.

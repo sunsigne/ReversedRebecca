@@ -1,2 +1,0 @@
-alicia = RIGHT = appeased = Merci.
-player = LEFT = happy_var = Je n'allais quand même pas te laisser là-dedans.

@@ -1,3 +1,0 @@
-player = alicia = unhappy = Tu as raison, j'ai assez fait de dégâts…
-player = alicia = worry = On va trouver un autre chemin.
-alicia = player = happy = À la bonne heure.

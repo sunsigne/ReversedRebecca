@@ -1,3 +1,0 @@
-alicia = DOWN = angry = Et ça, c'est quoi ? Hein ?@C'est pas un gros trou, peut-être ?
-rebecca = DOWN = happy = C'était comme ça quand je suis arrivée.
-alicia = UP = angry_var = Et en plus, tu te fous de moi !

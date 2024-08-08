@@ -1,0 +1,89 @@
+% LOCKED_EXIT
+alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+rebecca = up = surprised = Alicia ? Ne bouge pas !@Je vais te sortir de là !
+alicia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
+rebecca = up = unhappy = Pardon, ce n'est pas ce que je voulais dire…
+alicia = down = cry_happy = T'en fait pas, j'ai compris.
+alicia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
+
+
+% LOCKED_INQUIRY
+alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+rebecca = up = surprised = Alicia ? Ne bouge pas !@Je vais chercher de l'aide !
+alicia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
+rebecca = up = unhappy = Pardon, ce n'est pas ce que je voulais dire…
+alicia = down = cry_happy = T'en fait pas, j'ai compris.
+alicia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
+
+
+% LOCKED_SADISTIC
+alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+rebecca = up = laugh = Ha ha ha ha ! C'est encore mieux@que ce que j'imaginais. 
+alicia = down = cry = C'est pas drôle Rebecca…@Aide-moi à sortir.
+rebecca = up = dreaming = Oui, oui, je vais t'aider.@Je vais juste prendre mon temps.
+alicia = down = cry_var = Pourquoi il fallait que je tombe sur toi…
+
+
+% HUG
+alicia = RIGHT = appeased = Merci.
+player = LEFT = happy_var = Je n'allais quand même pas te laisser là-dedans.
+
+
+% PICK_ME_UP
+alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alicia = DOWN = happy = Tu veux quelque chose ?
+
+
+% ASK_DRINK
+alicia = DOWN = happy_var = Ok, je te fais ça.
+player = UP = laugh = Top, merci.
+
+
+% NO_THANKS
+alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
+player = UP = laugh = Oui.
+
+
+% LANDSLIDE_DISCOVERED_UP
+rebecca = UP = unhappy = Zut… Je ne peux plus passer par là.
+
+
+% LANDSLIDE_DISCOVERED_DOWN
+rebecca = DOWN = unhappy = Zut… Je ne peux plus passer par là.
+
+
+% LANDSLIDE_HURTS
+rebecca = DOWN = angry_var2 = Aïe ! Ça fait mal !
+rebecca = UP = unhappy = Zut… Maintenant, je ne peux plus passer.
+
+
+% LANDSLIDE_ANYWAY
+rebecca = DOWN = you_silly = Bah… Ça n'est pas comme si@je ne pouvais pas faire le tour.
+
+
+% ALICIA_LANDSLIDE_THERE
+alicia = player = happy = Du coup, c'est par où la sortie ?
+player = DOWN = no_sens = En fait, c'était pas là, mais ça s'est effondré.
+alicia = DOWN = surprised = Ha.
+player = alicia = worry = Mais ne t'en fait pas, je vais@nous en trouver une autre.
+alicia = player = happy = Ok, je te suis.
+
+
+% ALICIA_LANDSLIDE_DESK
+player = DOWN = no_sens = Bon… Heu… C'était la sortie.
+alicia = DOWN = surprised = Ha.
+
+
+% SARAH_LANDSLIDE_FREAKS_OUT
+sarah = UP = worry_var = ÇA VA LES FILLES ?
+rebecca = DOWN = excited = OUI, ON VA BIEN !
+sarah = UP = worry = OK.
+
+
+% ALICIA_LANDSLIDE_DESK_NEXT
+player = alicia = worry = Ne t'en fait pas, je vais@nous en trouver une autre.
+alicia = player = happy = Je te suis.
+
+
+% LANDSLIDE_EVIL_IDEA
+player = alicia = determinated = (Cet éboulement me donne une idée…)
