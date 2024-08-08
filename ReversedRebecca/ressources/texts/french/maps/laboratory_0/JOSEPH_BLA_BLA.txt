@@ -1,2 +1,0 @@
-player = object = happy = Tu cherches un livre ?
-object = player = happy_var = Non, je les ai déjà tous lu.

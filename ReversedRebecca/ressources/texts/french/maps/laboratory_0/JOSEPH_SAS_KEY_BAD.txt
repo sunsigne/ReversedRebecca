@@ -1,2 +1,0 @@
-player = object = evil = Hé ! Le vieux ! Il me faut tes clés.
-player = object = evil_var = Bouge pas, je me sers.

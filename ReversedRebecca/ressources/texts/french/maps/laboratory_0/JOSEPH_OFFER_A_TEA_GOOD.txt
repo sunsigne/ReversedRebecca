@@ -1,3 +1,0 @@
-player = object = worry = Pardon de te couper, mais@il faut vraiment que j'y aille.
-object = RIGHT = happy_var = D'accord, à bientôt alors.
-player = DOWN = you_silly = Il n'est pas méchant, mais@qu'est-ce qu'il est bavard !

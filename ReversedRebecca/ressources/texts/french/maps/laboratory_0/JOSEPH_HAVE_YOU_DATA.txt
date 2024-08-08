@@ -1,5 +1,0 @@
-player = object = happy = Bonjour, Joseph. Tu as des infos@sur ce qu'il vient de se passer ?
-object = player = happy = Quoi ? Qu'est-ce qu'il vient de se passer ?
-player = object = sad = (Je n'ai pas envie d'être celle qui apprendra @à Joseph qu'on vient de subir une attaque).
-player = object = worry = Heu… Non, rien.@Oublie ce que je viens de dire.
-object = player = happy_var = Ha ! Ces jeunes !

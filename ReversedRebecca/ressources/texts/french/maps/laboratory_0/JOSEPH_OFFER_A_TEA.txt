@@ -1,6 +1,0 @@
-player = object = worry = Je peux t'offrir un thé ?
-object = RIGHT = happy_var = C'est très gentil à toi, Rebecca.@Mais, non merci.
-object = RIGHT = happy = Figure-toi qu'il y a 30 ans, j'ai appris@une histoire incroyable sur le thé…
-object = RIGHT = doubt = Est-ce que tu savais que… Bla bla bla.
-object = RIGHT = happy = Bla bla bla.
-object = RIGHT = happy_var = Bla bla bla.

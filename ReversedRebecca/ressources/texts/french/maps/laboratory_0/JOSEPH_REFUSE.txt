@@ -1,7 +1,0 @@
-object = RIGHT = doubt = Tu ne t'es jamais demandée à quoi@ressemblerait le monde dans 50 ans ?
-player = object = no_sens = Heu… non.
-object = RIGHT = happy_var = C'est une question très intéressante, pourtant !@Moi, si on m'avait dit il y a 50 ans que…
-object = RIGHT = doubt = Bla bla bla.
-object = RIGHT = happy = Bla bla bla.
-object = RIGHT = happy_var = Bla bla bla.
-player = object = sad = ... Et galère…

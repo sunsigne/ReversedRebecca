@@ -1,6 +1,0 @@
-player = object = worry = Joseph… Tu pourrais me rappeler@ce que tu m'as demandé s'il te plaît ?
-object = RIGHT = happy_var = Ha ! Ces jeunes !
-object = RIGHT = doubt = En fait, je t'avoue que je ne m'en souviens pas@non plus. Ma mémoire n'est plus ce qu'elle était…
-player = object = worry = Ha…
-object = RIGHT = happy = … Mais, je suis sûr que ça n'était pas important.
-player = object = happy_var = Ok, si tu le dis.

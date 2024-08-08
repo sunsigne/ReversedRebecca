@@ -33,7 +33,8 @@
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	lvl001 - sarah arrive et rebecca lui parle déjà alors qu'elle n'a pas atteint le bureau
 	20h00 - adapter laboratory au nouveau système de talk & dialogues
-	-> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir)
+	-> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi)
+	-> delta contient "have you data", jospeh aussi et il contient même "theft"
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
@@ -152,6 +153,7 @@
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
+	20h00 - revoir la requete "createDecoration" pour utiliser des "sheet sprite"
 	
 	////////// DIFFICILE ////////////
 	
