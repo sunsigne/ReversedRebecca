@@ -1,8 +1,0 @@
-delta = sarah = laugh_var = … et là, il s'est rendu compte que tous les efforts@qu'il avait fait, c'était pour voler un grille-pain !
-sarah = delta = surprised = Non…
-delta = sarah = smile = Je te jure que c'est vrai.
-sarah = delta = laugh = Mais non, mais c'est dingue !@Et comment il a réagi ?
-delta = sarah = excited = Il m'a regardé droit dans les yeux et il m'a sorti@le plus sérieusement du monde :
-delta = sarah = gamma = "Cool. Maintenant, j'ai plus qu'à voler du beurre@et du pain."
-sarah = delta = laugh = Ha ha ha ha ha ha ha !
-rebecca = DOWN = you_silly = Delta parle encore de son frère.

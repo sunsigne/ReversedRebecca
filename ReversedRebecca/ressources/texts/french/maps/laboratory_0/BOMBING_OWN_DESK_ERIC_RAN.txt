@@ -1,1 +1,0 @@
-player = DOWN = you_silly = Quel fragile ce Eric…

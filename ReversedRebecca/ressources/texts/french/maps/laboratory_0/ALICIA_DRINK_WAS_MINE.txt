@@ -1,3 +1,0 @@
-alicia = DOWN = surprised_var = Mais… C'était à moi !
-player = alicia = excited = Et c'était délicieux !
-alicia = DOWN = unhappy = …

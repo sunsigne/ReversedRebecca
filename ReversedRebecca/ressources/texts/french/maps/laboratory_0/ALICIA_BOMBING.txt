@@ -75,3 +75,15 @@ alicia = player = happy = À la bonne heure.
 player = alicia = happy_var = D'ailleurs, Eric a fait tomber ses clés en partant.@On pourrait les utiliser.
 player = alicia = no_sens = Enfin… Si tu sais te servir de clés vertes…@Parce que moi non.
 alicia = player = happy_var = C'est des clés Rebecca.@Je pense pouvoir me débrouiller.
+
+
+% ALICIA_GREEN_KEY_SOFTLOCK
+player = alicia = no_sens_var = Heu…
+player = alicia = unhappy = Je suis désolée Alicia, je crois@qu'on est officiellement bloquée.
+alicia = player = surprised_var = Non… Vraiment ?
+player = UP = worry = Oui… Je n'ai pas de bombe@verte pour dégager la voie.
+player = UP = unhappy = Et je ne sais pas me servir de@la clé verte que j'ai trouvée.
+alicia = player = laugh = Ha ! C'est parfait !
+player = alicia = no_sens = Pardon ?
+alicia = player = happy_var = Tu as trouvé une clé verte.@Donnes-la moi, je sais m'en servir.
+player = alicia = laugh = Ha ! Ok, tiens.

@@ -1,1 +1,0 @@
-player = DOWN = you_silly = Je devrais la laisser tranquille. Elle a sûrement @besoin de repos après qu'elle vient de vivre.

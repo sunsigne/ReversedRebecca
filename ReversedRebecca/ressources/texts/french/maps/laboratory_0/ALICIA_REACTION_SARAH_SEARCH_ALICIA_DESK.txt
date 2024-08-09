@@ -1,3 +1,0 @@
-alicia = sarah = unhappy = Ça fait mal de voir mon bureau dans cet état…
-alicia = sarah = happy = Tu me tiendras au courant de ce@que tu apprends ici, d'accord ?
-sarah = rebecca = happy_var = Oui, bien sûr.

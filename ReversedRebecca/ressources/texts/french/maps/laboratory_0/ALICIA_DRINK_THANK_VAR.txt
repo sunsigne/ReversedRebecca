@@ -1,2 +1,0 @@
-player = alicia = happy_var = Merci pour le thé !
-alicia = DOWN = happy = De rien.

@@ -1,2 +1,41 @@
+% NEUTRAL
 alicia = DOWN = happy = Merci encore de m'avoir libérée.
 player = alicia = laugh = Je t'en prie, c'est normal.
+
+
+% NEXT
+player = alicia = worry = Si ça ne te gêne pas d'en parler… Comment@t'es-tu retrouvée enfermée dans le SAS ?
+alicia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a vérouillé les portes.
+alicia = DOWN = unhappy = Et… Ben…@J'étais simplement dedans quand c'est arrivé.
+player = alicia = you_silly_var = Je vois.
+
+
+% LAST
+player = DOWN = you_silly = Je devrais la laisser tranquille. Elle a sûrement @besoin de repos après qu'elle vient de vivre.
+
+
+% DRINK_THANK
+player = alicia = happy_var = Merci pour le café !
+alicia = DOWN = happy = De rien.
+
+
+% DRINK_THANK_VAR
+player = alicia = happy_var = Merci pour le thé !
+alicia = DOWN = happy = De rien.
+
+
+% DRINK_WAS_MINE
+alicia = DOWN = surprised_var = Mais… C'était à moi !
+player = alicia = excited = Et c'était délicieux !
+alicia = DOWN = unhappy = …
+
+
+% DRINK_WAS_MINE_NEXT
+alicia = DOWN = unhappy = …
+
+
+% DRINK_WAS_MINE_APOLOGIZE
+player = alicia = worry = Pardon… C'était pour te faire une blague.@Vraiment.
+alicia = DOWN = unhappy = …
+alicia = DOWN = happy = … J'avoue que je ne m'y attendais pas.
+alicia = DOWN = happy_var = Oui, c'était amusant.

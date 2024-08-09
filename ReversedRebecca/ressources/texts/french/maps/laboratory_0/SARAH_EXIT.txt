@@ -1,0 +1,71 @@
+% MIKA_CONVERSATION
+sarah = mika = happy = Que s'est-il passé, exactement ?
+mika = sarah = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
+mika = sarah = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
+mika = sarah = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alicia !
+mika = sarah = serious = Je lui ai couru après. La suite, tu la connais.
+sarah = mika = fine = Je vois.@Je pense qu'on est victime d'un vol industriel.
+sarah = mika = happy =  Enfin… Une version un peu musclé, quoi.@Tu as vu s'il tenait quelque chose ?
+mika = sarah = serious = Non. Je n'ai pas pensé à regarder.
+sarah = mika = happy =  Ok. Merci pour les infos !
+
+
+% DELTA_EXIT_CONVERSATION
+sarah = delta = happy = Delta, tu as une minute ?
+delta = sarah = excited = Bien sûr ! Comment je peux t'aider ?
+sarah = delta = happy = Je crois me souvenir que@tu t'y connais en vol industriel, non ?
+delta = sarah = laugh_var = Ha ! C'est une longue histoire, ça !
+sarah = delta = wink = Je ne suis pas pressée.
+delta = sarah = happy = Ok. Tu te souviens de mon frère ?
+sarah = delta = laugh = Comment l'oublier ?
+delta = sarah = surprised = Ho ! Ça me fait penser que je ne t'ai pas@raconté la dernière ! Figure-toi que…
+rebecca = DOWN = you_silly = Je pense qu'elles en ont pour un moment.@Je ferais mieux de continuer.
+
+
+% DELTA_GAMMA_CONVERSATION
+delta = sarah = laugh_var = … et là, il s'est rendu compte que tous les efforts@qu'il avait fait, c'était pour voler un grille-pain !
+sarah = delta = surprised = Non…
+delta = sarah = smile = Je te jure que c'est vrai.
+sarah = delta = laugh = Mais non, mais c'est dingue !@Et comment il a réagi ?
+delta = sarah = excited = Il m'a regardé droit dans les yeux et il m'a sorti@le plus sérieusement du monde :
+delta = sarah = gamma = "Cool. Maintenant, j'ai plus qu'à voler du beurre@et du pain."
+sarah = delta = laugh = Ha ha ha ha ha ha ha !
+rebecca = DOWN = you_silly = Delta parle encore de son frère.
+
+
+% DELTA_GAMMA_CONVERSATION_NEXT
+delta = sarah = gamma = "Si on m'avait donné une pièce à chaque fois@que je m'étais retrouvé dans cette situation…"
+delta = sarah = gamma_var = "… en fait, ça me ferait deux pièces…"
+delta = sarah = gamma = "C'est pas beaucoup, mais c'est quand même@bizarre que ça me soit arrivé deux fois."
+sarah = delta = laugh = Ha ha ha ha ha ha ha !
+rebecca = DOWN = you_silly = Je pense qu'elles ne sont pas près de s'arrêter.@Je ferais mieux de continuer.
+
+
+% SEARCH_ALICIA_DESK
+rebecca = sarah = laugh = Hey ! Ton enquête avance ?
+sarah = rebecca = happy = Lentement, mais surement.
+
+
+% SEARCH_ALICIA_DESK_NEXT
+rebecca = sarah = happy = Tu saurais où je peux nous trouver une sortie ?
+sarah = rebecca = worry = Pourquoi tu me demandes à moi ?
+rebecca = sarah = no_sens = Pourquoi pas ?
+sarah = rebecca = akward = Parce que si je savais où il y en avait une,@je t'aurais déjà dit où chercher tout à l'heure.
+rebecca = sarah = happy = Effectivement.
+
+
+% SEARCH_ALICIA_DESK_NEXT_NEXT
+sarah = rebecca = laugh = Je t'aimes beaucoup Rebecca,@mais je dois continuer mon enquête.
+sarah = rebecca = wink = On discutera à l'atelier.
+rebecca = sarah = laugh = Ok, je ne t'embête pas plus.
+
+
+% ALICIA_REACTION_SARAH_SEARCH_ALICIA_DESK
+alicia = sarah = unhappy = Ça fait mal de voir mon bureau dans cet état…
+alicia = sarah = happy = Tu me tiendras au courant de ce@que tu apprends ici, d'accord ?
+sarah = rebecca = happy_var = Oui, bien sûr.
+
+
+% ALICIA_DESK_EXPLOSION
+sarah = player = worry = Ben dis donc…
+rebecca = sarah = laugh = Oui, j'ai décidé que je passerai par là.

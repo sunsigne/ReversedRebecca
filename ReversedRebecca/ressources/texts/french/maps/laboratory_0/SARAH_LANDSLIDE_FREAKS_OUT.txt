@@ -1,3 +1,0 @@
-sarah = UP = worry_var = ÇA VA LES FILLES ?
-rebecca = DOWN = excited = OUI, ON VA BIEN !
-sarah = UP = worry = OK.
