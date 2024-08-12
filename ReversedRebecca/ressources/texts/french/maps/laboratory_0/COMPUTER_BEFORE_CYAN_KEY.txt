@@ -1,2 +1,0 @@
-rebecca = object = surprised = Ho ! Mais…
-rebecca = object = laugh = Ben alors, Jean ? On joue pendant@les heures de bureau ?

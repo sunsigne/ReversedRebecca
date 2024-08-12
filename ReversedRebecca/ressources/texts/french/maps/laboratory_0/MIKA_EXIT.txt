@@ -11,3 +11,22 @@ rebecca = object = laugh = Allez ! Hop ! On se décale !
 mika = object = doubt = Hein ? Des bombes ?
 mika = object = surprised = Attend ?! Mais tu as déjà allumé la mèche !
 rebecca = object = laugh = J'ai dit : on se décale !
+
+
+% ALICIA_REACTION_MIKA_BOMB
+alicia = player = surprised = Ben dis donc ! Quand elle cherche une sortie,@elle ne fait pas semblant !
+
+
+% ALICIA_REACTION_MIKA_BOMB_VAR
+alicia = player = angry_var = Rebecca ! On avait dit qu'on arrêtait@avec les bombes ! 
+
+
+% ALICIA_REACTION_EXIT_IS_OPENED
+alicia = DOWN = angry = Tu te fous de moi ?
+mika = alicia = doubt = C'est quoi le problème ? Elle a dégagé l'entrée…
+alicia = mika = angry_var = Le problème, c'est qu'elle a fait exploser@la moitié de notre laboratoire.
+mika = DOWN = surprised = Sérieusement ?
+rebecca = UP = no_sens = Je nous cherchais juste une sortie…
+mika = DOWN = serious = Si c'était pour tout casser au passage,@c'était pas la peine.
+alicia = DOWN = angry_var = Exactement !
+rebecca = UP = sad = …

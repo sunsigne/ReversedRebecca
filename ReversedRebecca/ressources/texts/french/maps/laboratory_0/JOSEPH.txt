@@ -46,6 +46,11 @@ object = player = happy = … Mais, ça va me revenir dans une minute.
 player = object = happy_var = C'est noté.
 
 
+% ALICIA_REACTION_JOSEPH_FORGET
+player = alicia = happy = Et toi ? Tu te souviens de ce que Joseph@m'a demandé ?
+alicia = player = surprised = Pas du tout !
+
+
 % REMEMBER
 object = player = happy = Je me souviens de ce qu'on a dit !
 object = player = happy_var = Je t'ai demandé si toi aussi tu trouvais que les@aubergines étaient meilleures que les poireaux.

@@ -1,2 +1,0 @@
-rebecca = object = happy_var = En effet, j'en ai pris avec moi.
-object = player = happy = Alors c'est parfait.

@@ -1,2 +1,0 @@
-rebecca = UP = surprised = Ho ! Un singe à trois têtes !
-alicia = UP = surprised_var = Quoi ?

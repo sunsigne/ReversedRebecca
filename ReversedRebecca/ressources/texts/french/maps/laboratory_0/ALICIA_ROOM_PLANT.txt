@@ -1,2 +1,0 @@
-rebecca = object = happy = À en juger par l'état de la pièce,@cette plante a de la chance d'être indemne !
-rebecca = object = happy_var = Tant mieux.

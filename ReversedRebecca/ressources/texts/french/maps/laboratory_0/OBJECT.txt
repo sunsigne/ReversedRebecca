@@ -1,0 +1,107 @@
+% PEE_PUDDLE
+player = object = sad = Beurk.
+
+
+% PLANTS
+rebecca = object = you_silly_var = Quel dommage que dans les bureaux@double, il y ait si peu de place…
+rebecca = object = worry = J'aurais adoré avoir moi aussi@une grande plante verte…
+
+
+% VAT
+rebecca = object = happy = Ces cuves sont très pratiques@pour nos expériences.
+
+
+% VAT_SABOTAGE
+rebecca = object = happy = Ces cuves sont très pratiques@pour nos expériences.
+rebecca = DOWN = determinated = Quel dommage !@Tim va devoir recommencer la sienne !
+
+
+% RESIGNATION
+rebecca = object = happy = C'est la lettre de démission de Fred et Georges.@Apparemment, ils vont ouvrir leur propre boîte.
+
+
+% RESIGNATION_READ
+rebecca = object = sad = Je n'ai pas vraiment le temps pour ça…
+
+
+% COMPUTER
+player = object = you_silly_var = Alala… Tim, tu as encore@oublié de sauvegarder ton travail.
+
+
+% COMPUTER_TURN_OFF_WITHOUT_SAVING
+rebecca = down = you_silly = Oups…
+
+
+% ALICIA_REACTION_COMPUTER_TURN_OFF_WITHOUT_SAVING
+alicia = player = surprised_var = Pourquoi tu as fait ça ?
+rebecca = RIGHT = surprised = Ho zut ! J'ai, heu…
+rebecca = alicia = you_silly = … pas fait exprès.
+alicia = player = unhappy = Rho… C'est pas cool…@J'ai de la peine pour Tim…
+rebecca = alicia = you_silly = Ouais… Moi aussi.
+
+
+% COMPUTER_BEFORE_CYAN_KEY
+rebecca = object = surprised = Ho ! Mais…
+rebecca = object = laugh = Ben alors, Jean ? On joue pendant@les heures de bureau ?
+
+
+% COMPUTER_CYAN_KEY
+rebecca = object = happy = Tiens ? Il y a des clés à côté de@l'ordinateur. Je vais les prendre.
+
+
+% BOMB
+rebecca = DOWN = you_silly = C'est quand même pratique d'avoir ça ici.
+
+
+% BOMB_FAKING_TAKE
+rebecca = DOWN = worry = Je n'ai pas besoin de ça pour mon enquête…
+rebecca = DOWN = you_silly = Sarah va nous trouver une sortie.
+
+
+% BOMB_INQUIRY
+rebecca = UP = unhappy = Regarder cette caisse ne m'apprend rien.
+
+
+% BLACKBOARD
+player = object = happy = "Merci de laisser cet endroit dans le même état@où vous l'avez trouvé en entrant."
+
+
+% TOILET
+rebecca = DOWN = you_silly = Non, j'ai déjà fait ce matin.
+
+
+% TOILET_DOOR_SABOTAGE
+rebecca = object = you_silly = Quel maladroite…@J'ai cassé la serrure…
+
+
+% ALICIA_REACTION_TOILET_DOOR_SABOTAGE
+rebecca = UP = surprised = Ho ! Un singe à trois têtes !
+alicia = UP = surprised_var = Quoi ?
+
+
+% ALICIA_REACTION_TOILET_DOOR_SABOTAGE_NEXT
+rebecca = alicia = laugh = Ha non, c'était juste une mouche.
+alicia = player = unhappy = Sérieusement ?
+alicia = player = appeased = Pfff…
+
+
+% TOILET_BUT_SABOTAGED
+rebecca = DOWN = you_silly = Je ferais mieux d'éviter d'utiliser@les toilettes dont j'ai saboté la porte…
+
+
+% ALICIA_ROOM_ANYTHING
+rebecca = DOWN = unhappy = Quel carnage…
+
+
+% ALICIA_REACTION_ALICIA_ROOM_ANYTHING
+alicia = rebecca = unhappy = Ouais… Ça fait un coup au moral@de voir mon bureau comme ça.
+
+
+% ALICIA_ROOM_PLANT
+rebecca = object = happy = À en juger par l'état de la pièce,@cette plante a de la chance d'être indemne !
+rebecca = object = happy_var = Tant mieux.
+
+
+% ALICIA_REACTION_ALICIA_ROOM_PLANT
+rebecca = alicia = unhappy = Enfin…
+alicia = rebecca = happy = T'en fait pas, j'ai compris.
