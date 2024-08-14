@@ -1,3 +1,0 @@
-alicia = player = unhappy = Heu… Rebecca… On est d'accord que@tu ne vas pas tout faire sauter, pas vrai ?
-rebecca = alicia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
-alicia = player = happy = C'était juste pour être sûre.

@@ -1,0 +1,47 @@
+% THEFT
+sarah = rebecca = akward = Tu sais bien que j'étais avec toi quand ça s'est@passé… Tu devrais demander aux autres.
+
+
+% DELTA_KEY_CONVERSATION
+sarah = UP = happy = Tu sais où sont les clés du couloir, par hasard ?
+delta = DOWN = excited = J'ai un double, prends les miennes.
+sarah = UP = laugh = Super, merci Delta !
+
+
+% JEAN_CONVERSATION
+sarah = LEFT = happy = Tu sais où sont les clés, par hasard ?
+jean = RIGHT = urge_happy = J'en ai dans mon bureau,@mais je ne sais plus où.
+sarah = LEFT = wink = Ok, merci Jean.
+
+
+% REBECCA_HELP_FOR_KEYS
+sarah = LEFT = laugh = Tiens, tu es là ? Tu aurais vu des clefs ici,@par hasard ?
+
+
+% REBECCA_HELP_FOR_KEYS_ALICIA
+sarah = LEFT = laugh = Tiens, tu es là ?
+rebecca = RIGHT = happy = Oui, je cherche Alicia. Tu l'aurais vu ?
+sarah = LEFT = worry = Non, désolé.
+sarah = LEFT = laugh = Et toi ? Tu aurais vu des clefs ici,@par hasard ?
+
+
+% REBECCA_WAIT_HERE_FOR_KEYS
+rebecca = RIGHT = happy = Ne bouge pas, je te les donne.
+
+
+% REBECCA_GIVING_KEYS
+sarah = LEFT = wink = Merci, c'est top !
+
+
+% REBECCA_NO_KEYS
+sarah = LEFT = unhappy = Ha… J'aurais pensais…
+sarah = LEFT = wink = Bon, c'est pas grave.@Merci quand même.
+
+
+% REBECCA_OPENED_CYAN_DOOR
+sarah = rebecca = happy_var = Je vois que tu t'es servie de mon cadeau.
+rebecca = sarah = laugh = Tu as remarqué ?
+sarah = rebecca = worry = Bien sûr… Pourquoi tu dis ça ?
+rebecca = sarah = you_silly = Parce que la porte est loin.@Comment tu sais qu'elle est ouverte ?
+sarah = rebecca = wink = Je t'ai entendu faire quand @j'étais dans l'autre pièce.
+rebecca = sarah = laugh = Ha !

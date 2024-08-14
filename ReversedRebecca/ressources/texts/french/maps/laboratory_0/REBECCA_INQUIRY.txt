@@ -1,0 +1,6 @@
+% ONLY_STOLEN_OBJECT
+rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir ce que@Vladimir est venu  nous voler.
+
+
+% ONLY_THIEF_NAME
+rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir qui est venu nous@voler nos travaux de recherche sur le déblocage.

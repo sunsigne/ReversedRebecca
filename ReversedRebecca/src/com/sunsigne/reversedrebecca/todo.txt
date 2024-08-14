@@ -32,9 +32,27 @@
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	lvl001 - sarah arrive et rebecca lui parle déjà alors qu'elle n'a pas atteint le bureau
-	5h00 - adapter laboratory au nouveau système de talk & dialogues
-	2h -> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi) + libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau) + les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef) + tester de boire le café d'alicia + tester Alicia tentative de softlock + tester parler avec sarah sur tout son pathing (avec alicia qui réagit danns le bureau + l'effonrement juste devant sarah) + scolding jean avec Alicia en témoin + faire pe^ter l'entrée Alicia témoin et neutre des bombes, pas contente des bombes (+ ok, par rapport à Marie) + les discutions de base avec Marie (avec et sans LES enervemment de Sarah -> contre Jean et contre le joueur en sadique + réaction d'Alicia à la bombe et à Sarah pissed contre jean) + tester tous les dialogues "objet" + jean post bathroom (+ mika qui embrasse rebecca devant alicia ?)
-	-> delta contient "have you data", jospeh aussi et il contient même "theft" (pareil pour jean)
+	2h30 -> tester mika cheer jusqu'au bout
+	+ initiative marie romance (jusqu'au oui ET au non inclus)
+	+ jean qui se fait dessus et qui part chialer comme un bébé
+	+ jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée)
+	+ un peu de delta jusqu'à lost (partir et revenir)
+	+ qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi)
+	+ libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau)
+	+ les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef)
+	+ tester de boire le café d'alicia
+	+ tester Alicia tentative de softlock
+	+ tester parler avec sarah sur tout son pathing (avec alicia qui réagit danns le bureau + l'effonrement juste devant sarah)
+	+ scolding jean avec Alicia en témoin
+	+ faire pe^ter l'entrée Alicia témoin et neutre des bombes, pas contente des bombes (+ ok, par rapport à Marie)
+	+ les discutions de base avec Marie (avec et sans LES enervemment de Sarah -> contre Jean et contre le joueur en sadique
+	+ réaction d'Alicia à la bombe et à Sarah pissed contre jean)
+	+ tester tous les dialogues "objet"
+	+ jean post bathroom (+ mika qui embrasse rebecca devant alicia ?)
+	+ vladimir easter egg
+	+ alicia découvre son bureau
+	+ sorftlock à tester (celui où on prend la clef avant de libérer alicia)
+	+ l'intégralité des balises du fichier "rebecca_exit"
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
@@ -266,6 +284,8 @@
 	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
 	- la romance (positive, négative ou même hypothétique) avec Marie
 	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
+	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
+	- sarah qui pousse rebecca (devant alicia)
 	
 	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)

@@ -1,0 +1,48 @@
+% ALICIA_DISCOVER_HER_ROOM
+alicia = RIGHT = surprised_var = Quel bazar ! Je vais mettre@une éternité à tout ranger…
+
+
+% ALICIA_DISCOVER_HER_ROOM_HELP
+alicia = rebecca = happy = Merci. C'est gentil.
+
+
+% TAKING_KEY_TO_PREVENT_SOFLOCK
+player = DOWN = you_silly = Juste au cas où…
+
+
+% RECEPTION_IS_OPENED
+rebecca = DOWN = laugh = Parfait ! Maintenant, on pourra sortir !
+rebecca = DOWN = happy = On n'a plus qu'à dévérouiller la porte@du SAS au bout du couloir.
+
+
+% SAS_FULLY_UNLOCKED
+rebecca = DOWN = laugh = Parfait ! Maintenant, on peut passer !
+
+
+% EXIT_UP_OPENED
+rebecca = object = excited = Parfait ! Je n'ai plus qu'à faire le tour@par l'exterieur pour dégager l'entrée !
+
+
+% EXIT_IS_OPENED
+rebecca = UP = excited = C'est ouvert !
+
+
+% EXIT_IS_OPENED_VAR
+rebecca = DOWN = excited = C'est ouvert !
+
+
+% MISSION_ACCOMPLISHED
+rebecca = DOWN = no_sens = Bon ! Ben… Heu…
+rebecca = DOWN = laugh = Mission accomplie !
+
+
+% PLAYER_LEAVING
+rebecca = object = no_sens = Je ne vais quand meme pas m'en aller,@comme ça… Si ?
+
+
+% PLAYER_LEAVING_NEXT
+rebecca = object = you_silly = Ho, et puis après tout… Ils se débrouilleront.
+
+
+% ALICIA_REACTION_PLAYER_LEAVING_NEXT
+rebecca = DOWN = you_silly_var = Et de toute façon, Alicia ne sait pas que@l'entrée est bloquée ; donc elle ne dira rien.

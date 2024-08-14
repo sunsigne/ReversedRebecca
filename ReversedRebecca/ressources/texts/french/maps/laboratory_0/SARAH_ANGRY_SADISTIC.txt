@@ -1,3 +1,12 @@
+% SARAH_PUSH_REBECCA
+sarah = RIGHT = angry = Laisse-moi tranquille.
+
+
+% SARAH_PUSH_REBECCA_TWICE
+sarah = RIGHT = angry = Dernier avertissement !
+
+
+% ALICIA_REACTION_SARAH_PUSH_REBECCA
 sarah = RIGHT = angry = Rebecca ! Fiche-moi la paix !
 alicia = player = unhappy = … Vous … vous êtes disputées ?
 rebecca = alicia = happy = Non.

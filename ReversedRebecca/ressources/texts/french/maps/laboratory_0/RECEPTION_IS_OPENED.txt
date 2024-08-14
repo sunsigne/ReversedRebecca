@@ -1,2 +1,0 @@
-rebecca = DOWN = laugh = Parfait ! Maintenant, on pourra sortir !
-rebecca = DOWN = happy = On n'a plus qu'à dévérouiller la porte@du SAS au bout du couloir.

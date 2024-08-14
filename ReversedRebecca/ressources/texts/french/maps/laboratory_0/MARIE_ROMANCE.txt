@@ -20,6 +20,18 @@ rebecca = object = excited = Des bombes !
 object = player = happy = Bien sûr, tiens.
 
 
+% ALICIA_WORRY_ABOUT_BOMBS
+alicia = player = unhappy = Heu… Rebecca… On est d'accord que@tu ne vas pas tout faire sauter, pas vrai ?
+rebecca = alicia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
+alicia = player = happy = C'était juste pour être sûre.
+
+
+% ALICIA_WORRIER_ABOUT_BOMBS
+alicia = down = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
+rebecca = up = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
+alicia = down = appeased = Tu m'as bien fait marcher.
+
+
 % INVENTORY_BOMB_NEXT
 rebecca = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes vertes ?
 object = player = worry = Je crois que non…

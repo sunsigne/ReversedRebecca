@@ -1,4 +1,0 @@
-rebecca = object = laugh = Allez ! Hop ! On se décale !
-mika = object = doubt = Hein ? Des bombes ?
-mika = object = surprised = Attend ?! Mais tu as déjà allumé la mèche !
-rebecca = object = laugh = J'ai dit : on se décale !
