@@ -1,8 +1,0 @@
-player = object = happy = Alors ? Ça va mieux ?@Tu avais l'air secoué tout à l'heure.
-jean = player = unhappy = Oui… Enfin, je crois…
-player = object = worry = ... Tu es sûr ?
-jean = player = unhappy = Pas vraiment. Ça fait bizarre@de subir une attaque terroriste.
-player = object = laugh = "Terroriste" ? Carrément ?@Tu y vas un peu fort.
-jean = player = unhappy = Je n'ai pas peur des mots.
-player = object = worry = On ne peut pas "juste affirmer" que s'en est une.@Sarah mène l'enquête, elle nous le dira.
-jean = player = unhappy = Mouais… Si tu le dis.

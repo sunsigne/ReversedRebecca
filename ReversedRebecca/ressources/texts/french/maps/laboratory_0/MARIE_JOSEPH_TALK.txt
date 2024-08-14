@@ -1,8 +1,0 @@
-joseph = RIGHT = happy = … et c'est pour que le café s'appelle "café".
-marie = LEFT = laugh = Quelle histoire ! On en apprend tous les jours.
-marie = player = happy = Et toi Rebecca, tu savais qu'en arabe,@le mot "café" était synonyme d'allégresse ?
-joseph = RIGHT = doubt = Ça n'est pas ce que j'ai dit…
-marie = LEFT = unhappy = Ha… J'ai mal compris ?
-joseph = RIGHT = happy_var = C'était presque ça de toute façon.@Tu as juste fait un raccourci.
-marie = LEFT = happy = Et le mot "thé", ça vient d'où ?
-rebecca = DOWN = you_silly = Je pense qu'ils en ont pour un moment.@Je ferais mieux de continuer.

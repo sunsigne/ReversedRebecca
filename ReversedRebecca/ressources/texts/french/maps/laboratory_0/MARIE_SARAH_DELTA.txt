@@ -1,5 +1,0 @@
-sarah = LEFT = happy = … C'est justement ce que j'essaie de découvrir.
-marie = UP = unhappy = Zut… Je pensais que tu en saurais plus.
-sarah = LEFT = laugh = Pas encore, mais je te dirais ce que j'apprends.@D'ailleurs, je ferai bien de reprendre mon enquête.
-delta = RIGHT = wink = Yes, on enquête super dur, là.@On était en train de parler du déjeuner.
-sarah = LEFT = laugh = Non, je voulais dire "vraiment"@reprendre mon enquête.

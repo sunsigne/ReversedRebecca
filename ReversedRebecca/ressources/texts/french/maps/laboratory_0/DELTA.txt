@@ -13,6 +13,11 @@ rebecca = object = happy_var = Ok. Dans ce cas, je dois trouver ce qu'il a pris.
 delta = rebecca = excited = Bon courage, ma grande !
 
 
+% THEFT
+delta = rebecca = smile = Non, je ne sais pas ce qu'il a pris.@Sinon, je te l'aurais dit.
+rebecca = object = happy_var = C'était pour être sûre.
+
+
 % KEY_EXIT
 rebecca = object = laugh = Salut Delta !
 delta = rebecca = happy = Yo, ma grande !@Comment je peux t'aider ?

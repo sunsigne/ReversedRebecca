@@ -1,5 +1,0 @@
-player = object = angry = Tu comptes finir toutes nos conversations par :@"mouais, si tu le dis" ?
-jean = player = unhappy = Non. Tout à l'heure j'ai fini par :@"Ha. Si tu le dis".
-player = DOWN = angry_var2 = Retenez-moi, je vais l'étrangler…
-player = object = asleep = Calme-toi Rebecca… Il n'en vaut pas la peine.
-player = DOWN = angry_var2 = Mais qu'est-ce qu'il est agaçant !@Je ne veux plus lui parler.

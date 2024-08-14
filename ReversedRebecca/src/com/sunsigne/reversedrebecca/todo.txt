@@ -32,9 +32,9 @@
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
 	lvl001 - sarah arrive et rebecca lui parle déjà alors qu'elle n'a pas atteint le bureau
-	10h00 - adapter laboratory au nouveau système de talk & dialogues
-	2h -> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi) + libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau) + les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef) + tester de boire le café d'alicia + tester Alicia tentative de softlock + tester parler avec sarah sur tout son pathing (avec alicia qui réagit danns le bureau + l'effonrement juste devant sarah) + scolding jean avec Alicia en témoin + faire pe^ter l'entrée Alicia témoin et neutre des bombes, pas contente des bombes (+ ok, par rapport à Marie) + les discutions de base avec Marie (avec et sans LES enervemment de Sarah -> contre Jean et contre le joueur en sadique + réaction d'Alicia à la bombe et à Sarah pissed contre jean) + tester tous les dialogues "objet"
-	-> delta contient "have you data", jospeh aussi et il contient même "theft"
+	5h00 - adapter laboratory au nouveau système de talk & dialogues
+	2h -> tester mika cheer jusqu'au bout + initiative marie romance (jusqu'au oui ET au non inclus) + jean qui se fait dessus et qui part chialer comme un bébé + jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée) + un peu de delta jusqu'à lost (partir et revenir) + qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi) + libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau) + les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef) + tester de boire le café d'alicia + tester Alicia tentative de softlock + tester parler avec sarah sur tout son pathing (avec alicia qui réagit danns le bureau + l'effonrement juste devant sarah) + scolding jean avec Alicia en témoin + faire pe^ter l'entrée Alicia témoin et neutre des bombes, pas contente des bombes (+ ok, par rapport à Marie) + les discutions de base avec Marie (avec et sans LES enervemment de Sarah -> contre Jean et contre le joueur en sadique + réaction d'Alicia à la bombe et à Sarah pissed contre jean) + tester tous les dialogues "objet" + jean post bathroom (+ mika qui embrasse rebecca devant alicia ?)
+	-> delta contient "have you data", jospeh aussi et il contient même "theft" (pareil pour jean)
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
@@ -228,6 +228,7 @@
 	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
 	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
+	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 
 	karma actions :
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	

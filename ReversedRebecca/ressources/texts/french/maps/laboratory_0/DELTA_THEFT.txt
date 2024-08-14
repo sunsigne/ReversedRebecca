@@ -1,2 +1,0 @@
-delta = rebecca = smile = Non, je ne sais pas ce qu'il a pris.@Sinon, je te l'aurais dit.
-rebecca = object = happy_var = C'était pour être sûre.

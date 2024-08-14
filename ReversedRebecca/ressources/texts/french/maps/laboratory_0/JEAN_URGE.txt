@@ -1,0 +1,74 @@
+% HAVE_YOU_DATA_HELLO
+player = object = happy = Salut ! Tu as des infos sur ce@qu'il vient de se passer ?
+
+
+% HAVE_YOU_DATA_MET
+player = object = happy = Sinon, tu as des infos sur ce@qu'il vient de se passer ?
+
+
+% HAVE_YOU_DATA
+object = player = urge_happy = Je n'ai rien vu, désolé.@J'étais dans mon bureau.
+player = object = unhappy = Tu as l'air pâle, ça va ?
+object = player = urge = Il faut vraiment que j'aille aux toilettes …
+player = object = worry = Et, tu n'y vas pas parce que... ?
+object = player = urge_sad = La porte est fermée !
+
+
+% HAVE_YOU_DATA_NEXT
+player = object = laugh = Je vois. Sarah va s'en occuper.
+
+
+% HAVE_YOU_DATA_NEXT_VAR
+object = player = urge_happy = Mais tout va bien. Sarah est allée chercher la clef.
+player = object = laugh = Je vois.
+
+
+% HAVE_YOU_DATA_AGAIN
+player = object = unhappy = Tu ne sais vraiment rien qui pourrait m'aider ?
+object = player = urge_happy = Je sais juste qu'il y a eu une explosion, et que@le système de sécurité a verouillé les portes.
+object = player = urge_sad = D'où mon problème, d'ailleurs…
+player = object = happy = D'accord. Merci.
+
+
+% THEFT
+jean = rebecca = urge_sad = Je ne sais rien à ce sujet.
+
+
+% FIRST
+object = player = urge = Il faut vraiment que j'aille aux toilettes …
+player = object = you_silly = Pourquoi tu n'y va pas ?
+object = player = urge_sad = La porte est fermée !
+player = object = you_silly_var = Ok, je m'en occupe.
+
+
+% STOP_MOVING
+player = object = unhappy = Tu pourrais arrêter de bouger s'il te plaît ?@Tu me stresses.
+object = player = urge_happy = Oui, pardon.
+
+
+% SECOND
+object = player = urge = Je t'en pris ! Dépêche-toi !
+player = object = happy_var = Oui oui.
+
+
+% HOLDING
+object = player = urge_sad = Bof…
+
+
+% HOLDING_AGAIN
+object = player = urge_sad = Non…
+
+
+% HOLDING_LAST
+object = player = urge_sad = C'est pas drôle Rebecca…
+player = object = you_silly = …
+
+
+% PEE_CORNER
+player = object = you_silly = Je me disais… Tu peux peut-être@trouver un autre endroit pour faire ça ?
+
+
+% PISSED_ITS_PANTS
+object = player = urge_sad = C'est trop tard…
+player = object = sad = Ha…
+object = player = urge_happy = T'inquiète pas.@Je n'ai plus qu'à aller pleurer dans un coin…

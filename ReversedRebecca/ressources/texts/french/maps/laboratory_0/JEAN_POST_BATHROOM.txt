@@ -1,0 +1,53 @@
+% ASK_REBECCA_FOR_CHAIR
+object = player = unhappy = Rebecca, tu aurais vu ma chaise ?
+player = object = no_sens = Heu… Non.
+object = player = unhappy = Ok, tant pis.
+
+
+% SHOCKED
+player = object = happy = Alors ? Ça va mieux ?@Tu avais l'air secoué tout à l'heure.
+jean = player = unhappy = Oui… Enfin, je crois…
+player = object = worry = ... Tu es sûr ?
+jean = player = unhappy = Pas vraiment. Ça fait bizarre@de subir une attaque terroriste.
+player = object = laugh = "Terroriste" ? Carrément ?@Tu y vas un peu fort.
+jean = player = unhappy = Je n'ai pas peur des mots.
+player = object = worry = On ne peut pas "juste affirmer" que s'en est une.@Sarah mène l'enquête, elle nous le dira.
+jean = player = unhappy = Mouais… Si tu le dis.
+
+
+% EXIT
+player = object = happy = Dis, je cherche une sortie.@Tu passerais par où, toi ?
+jean = player = unhappy = Mika n'est pas en train de déboucher l'entrée ?
+player = object = worry = Si, mais je veux aider à ma façon.
+jean = player = unhappy = Alors à ta place, j'irais l'encourager.
+player = object = no_sens = … C'est tout ?
+jean = player = happy = Pourquoi pas ?
+player = object = laugh = Parce que ça ne suffira pas, voyons !
+jean = player = unhappy = … Ha. Si tu le dis…
+
+
+% ALICIA_REACTION_JEAN_EXIT
+alicia = player = happy_var = On n'a rien à perdre à essayer.
+
+
+% WORK
+player = object = happy = Tu travailles sur quoi en ce moment ?
+jean = player = unhappy = Pourquoi cette question ?
+player = object = worry = Je ne sais pas… J'ai juste envie de te parler.
+jean = player = unhappy = On a subis un attentat, et toi,@tu me demandes sur quoi je travaille ?
+player = object = laugh = Maitenant c'est un "attentat" ?@Ok, là, tu exagères.
+jean = player = unhappy = Je n'ai pas peur des mots.@Je te l'ai déjà dit.
+player = object = worry = Je pense que tu aimes un peu trop les "mots".@À un moment, il faut savoir relativiser.
+jean = player = unhappy = Mouais… Si tu le dis.
+
+
+% GET_ANGRY
+player = object = angry = Tu comptes finir toutes nos conversations par :@"mouais, si tu le dis" ?
+jean = player = unhappy = Non. Tout à l'heure j'ai fini par :@"Ha. Si tu le dis".
+player = DOWN = angry_var2 = Retenez-moi, je vais l'étrangler…
+player = object = asleep = Calme-toi Rebecca… Il n'en vaut pas la peine.
+player = DOWN = angry_var2 = Mais qu'est-ce qu'il est agaçant !@Je ne veux plus lui parler.
+
+
+% WHATEVER
+player = DOWN = angry_var2 = Je n'ai pas envie de lui parler. Il m'a@enervé avec ces : "mouais, si tu le dis" !

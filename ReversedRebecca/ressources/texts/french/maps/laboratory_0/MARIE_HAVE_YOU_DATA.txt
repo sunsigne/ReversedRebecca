@@ -1,8 +1,0 @@
-rebecca = object = happy_var = Hey ! Marie !
-object = player = happy = Bonjour Rebecca, tu prends déjà ta pause ?
-rebecca = object = happy = Non, j'enquête sur ce qu'il vient de se passer.
-object = player = laugh = Tu parles du gros bruit ? Il s'est passé quoi ?
-rebecca = object = worry = Un individu s'est introduit dans le labo,@et l'a fait exploser en sortant.
-object = player = surprised = Alors c'était ça !
-rebecca = object = happy = Tu as des infos à ce sujet, d'ailleurs ?
-object = player = unhappy = Non… Désolé.
