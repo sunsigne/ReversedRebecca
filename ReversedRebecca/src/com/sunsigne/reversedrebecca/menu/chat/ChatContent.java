@@ -201,7 +201,9 @@ public class ChatContent implements Updatable {
 	private void loadImage() {
 		String path = "textures/characters/" + living_name + "/";
 		BufferedImage sheet = new ImageTask().loadImage(path + "dialogue", true);
-		image = getSheetSubImage(sheet, path + "mood.txt");
+
+		if (living_name.equalsIgnoreCase("error") == false)
+			image = getSheetSubImage(sheet, path + "mood.txt");
 
 		// load error character instead of missing texture
 		if (image == null) {

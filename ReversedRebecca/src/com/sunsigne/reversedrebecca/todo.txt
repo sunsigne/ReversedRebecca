@@ -28,9 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	URGENT :
-	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
-
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
 	0h30 désactiver le support manette (message de Dave qui prévient)
