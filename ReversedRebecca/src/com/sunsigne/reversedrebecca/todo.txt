@@ -30,7 +30,6 @@
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
-	0h30 désactiver le support manette (message de Dave qui prévient)
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.)
 	1h00 - sauvegarder les userdata dans les fichiers temporaires de l'ordi (pour les version démo) ?
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
@@ -87,7 +86,7 @@
 
 	////////// GAMEPAD ////////////
 
-	manette actuellement désactivé (message "coming soon")
+	manette actuellement désactivé (message "coming soon") : GamepadManager -> activeGamepadDisplay()
 
 	vérifié si réglé :
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
