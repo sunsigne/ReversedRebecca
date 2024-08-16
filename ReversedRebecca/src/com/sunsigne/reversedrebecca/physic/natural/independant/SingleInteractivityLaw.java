@@ -30,19 +30,10 @@ public class SingleInteractivityLaw extends IndependantLaw {
 
 	////////// TICK ////////////
 
-	private boolean flag;
-
 	@Override
 	public void tick(Updatable object) {
-		if (object == singleInteractor)
-			flag = true;
-
-		if (object instanceof World) {
-			if (flag)
-				flag = false;
-			else
-				singleInteractor = null;
-		}
+		if (object instanceof World)
+			singleInteractor = null;
 
 		if (object instanceof Interactive == false)
 			return;
@@ -51,43 +42,41 @@ public class SingleInteractivityLaw extends IndependantLaw {
 		if (interactive.canPlayerInteract() == false)
 			return;
 
-		if (interactive.getTripleAction() != null && interactive.getTripleAction().cannotDoAnyAction() == false) {
+		if (interactive.getTripleAction() != null && interactive.getTripleAction().cannotDoAnyAction() == false)
 			singleInteractor = interactive;
-			flag = true;
-		}
 	}
 
 	////////// RENDER ////////////
 
 	private RequirementBubbleObject singleBubble;
-	private boolean flag2;
-	
+	private boolean flag;
+
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
 		if (object instanceof World)
 			singleBubble = null;
-		
-		if(object instanceof RequirementBubbleObject == false)
+
+		if (object instanceof RequirementBubbleObject == false)
 			return;
-		
+
 		RequirementBubbleObject bubble = (RequirementBubbleObject) object;
-		
-		if(singleBubble != null) {
-			flag2 = true;
+
+		if (singleBubble != null) {
+			flag = true;
 			Graphics2D g2d = (Graphics2D) g;
 			g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0));
 		}
-		
-		if(bubble.isVisible())
+
+		if (bubble.isVisible())
 			singleBubble = bubble;
 	}
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (flag2 == false)
+		if (flag == false)
 			return;
 
-		flag2 = false;
+		flag = false;
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
