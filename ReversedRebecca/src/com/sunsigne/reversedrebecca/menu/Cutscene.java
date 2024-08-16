@@ -5,6 +5,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -68,8 +69,10 @@ public class Cutscene implements Updatable {
 
 	private void realStop() {
 		new PlayerFinder().setUserAllowedToControlPlayer(true);
-		
-		for (Updatable tempUpdatable : LAYER.HUD.getHandler().getList()) {
+
+		var list = new ListCloner().deepClone(LAYER.HUD.getHandler());
+
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof Cutscene)
 				LAYER.HUD.getHandler().removeObject(tempUpdatable);
 		}

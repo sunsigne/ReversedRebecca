@@ -25,36 +25,13 @@
 	vérifier si bien réglé :
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
-		- erreur avec les variables $$ dans les fichiers .txt (fichier non trouvé)
 
 	////////// EN COURS ////////////
 
 	URGENT :
 	bug - personnage error : regarder la TV lance une erreur (ça devait être déjà réglé)
-	lvl001 - sarah arrive et rebecca lui parle déjà alors qu'elle n'a pas atteint le bureau
-	2h30 -> tester mika cheer jusqu'au bout
-	+ initiative marie romance (jusqu'au oui ET au non inclus)
-	+ jean qui se fait dessus et qui part chialer comme un bébé
-	+ jean qui se fait crié dessus par sarah et qui s'excuse (et tant qu'à faire, la docuhe dorée)
-	+ un peu de delta jusqu'à lost (partir et revenir)
-	+ qq interactions avec jospeh (jusqu'à marie temoin, et alicia aussi)
-	+ libérer alicia (en bas comme à droite, de préférence pendant qe sarah fouille le bureau)
-	+ les explosion à droite (sans et avec psycopath), en cours de route comme depuis le début, avec toutes les outcome possibles (je continue car pas de clef possible, je continune mais clef possible, j'arrête mais je peux pas prendre la clef, j'arrête et je peux prendre la clef, j'arrête et j'avais déjà la clef)
-	+ tester de boire le café d'alicia
-	+ tester Alicia tentative de softlock
-	+ tester parler avec sarah sur tout son pathing (avec alicia qui réagit danns le bureau + l'effonrement juste devant sarah)
-	+ scolding jean avec Alicia en témoin
-	+ faire pe^ter l'entrée Alicia témoin et neutre des bombes, pas contente des bombes (+ ok, par rapport à Marie)
-	+ les discutions de base avec Marie (avec et sans LES enervemment de Sarah -> contre Jean et contre le joueur en sadique
-	+ réaction d'Alicia à la bombe et à Sarah pissed contre jean)
-	+ tester tous les dialogues "objet"
-	+ jean post bathroom (+ mika qui embrasse rebecca devant alicia ?)
-	+ vladimir easter egg
-	+ alicia découvre son bureau
-	+ sorftlock à tester (celui où on prend la clef avant de libérer alicia)
-	+ l'intégralité des balises du fichier "rebecca_exit"
 
-	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?)
+	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
 	0h30 désactiver le support manette (message de Dave qui prévient)
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.)
@@ -78,7 +55,7 @@
 	EXPERIENCE UTILISATEUR :
 	3h00 - menu "vidéo" prête à confussion, repenser les catégories (audio et contrôles, c'est déjà nickel par exemple)
 	4h00 - créer dans les menu options la possibilité de désactiver les highlights (j'ai une idée : autant faire d'une pierre deux coup avec le choix de la taille du texte : rebecca (ou dark rebecca si design remplacé) se tient devient une plante avec l'action "[E] arroser". La taille de cette action se met à jour ainsi que l'affichage du highlight, en fonction des options choisies par le joueur) + mode Daltonier
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ? -> remplacer "choississez" par "ramassez" ou "récupérez" lorsque le nombre de loots possibles correspond au nombre de loots qu'on peut récupérer + remplacer souris par une main
+	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ? -> remplacer "choississez" par "ramassez" ou "récupérez" lorsque le nombre de loots possibles correspond au nombre de loots qu'on peut récupérer + remplacer souris par une main (voir comment fait SV lors d'un lvl 5)
 	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
 	
 	DESSIN :
@@ -112,6 +89,8 @@
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
 	////////// GAMEPAD ////////////
+
+	manette actuellement désactivé (message "coming soon")
 
 	vérifié si réglé :
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...

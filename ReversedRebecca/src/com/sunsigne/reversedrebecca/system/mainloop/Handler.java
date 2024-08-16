@@ -125,6 +125,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	}
 
 	public void softRemoveObject(Updatable object) {
+		if (containsObject(object) == false)
+			return;
+
 		super.removeObject(object);
 
 		if (object != null)
@@ -133,6 +136,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	@Override
 	public void removeObject(Updatable object) {
+		if (containsObject(object) == false)
+			return;
+
 		removeObject(object, true);
 
 		if (object != null)
@@ -140,6 +146,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	}
 
 	public void removeObject(Updatable object, boolean forthwith) {
+		if (containsObject(object) == false)
+			return;
+
 		if (object != null)
 			object.destroyControls();
 

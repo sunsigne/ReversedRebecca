@@ -27,9 +27,9 @@ alicia = player = happy = C'était juste pour être sûre.
 
 
 % ALICIA_WORRIER_ABOUT_BOMBS
-alicia = down = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
-rebecca = up = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
-alicia = down = appeased = Tu m'as bien fait marcher.
+alicia = player = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
+rebecca = alicia = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
+alicia = player = appeased = Tu m'as bien fait marcher.
 
 
 % INVENTORY_BOMB_NEXT
