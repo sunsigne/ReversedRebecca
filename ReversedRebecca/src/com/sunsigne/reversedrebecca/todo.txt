@@ -29,9 +29,7 @@
 	////////// EN COURS ////////////
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
-	2h00 prévenir Windows only + bouton Steam "app ou navigateur"
-	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.)
-	1h00 - sauvegarder les userdata dans les fichiers temporaires de l'ordi (pour les version démo) ?
+	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
 	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
@@ -41,7 +39,6 @@
 	0h20 changer la musique de l'écran titre
 
 	BUG :
-	0h30 - le bug avec la "streameuse dont on ne doit pas prononcer le nom", où sarah a dormie, puis mangée des crêpes -> est restée bloquée sur la chaise ... tout se passe comme si le fichier Piranha avait été mal scanné (je n'arrive pas à reproduire le bug) -> corrigé depuis le patch sur les ConcurrentModification ? Lui demander de reproduire le bug, et son crash repport quand même, au cas où.
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 	0h30 - droits à demander : les drapeaux + autres ?
 
@@ -83,6 +80,11 @@
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
+
+	////////// LINUX & MAC ////////////
+
+	tester les balises de dialogues "up", "username", etc.
+	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
 
 	////////// GAMEPAD ////////////
 
