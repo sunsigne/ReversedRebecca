@@ -28,19 +28,17 @@
 
 	////////// EN COURS ////////////
 
+	1h00 lvl001 faire en sorte qu'un joueur nul/perdu trouve la clef cyan (timer ? ERA ?)
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
-	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!!
+	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!! + droits à demander : les drapeaux + autres ?
 	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	8h00 traduction anglais
-	1h00 lvl001 faire en sorte qu'un joueur nul/perdu trouve la clef cyan (timer ? ERA ?)
 	0h20 changer la musique de l'écran titre
 
 	BUG :
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
-	0h30 - droits à demander : les drapeaux + autres ?
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
@@ -64,9 +62,6 @@
 	LVL001 :
 	1h00 - quand on est sadique l'objet 50 et le dialogue player_leaving devraient s'adapter -> faire l'inverser ? chercher la proximité du joueur et dire "je ne vais quand même pas les aider pour de vrai... si ?", "ho et puis après tout, si je suis "adorable", non ?" (ou un truc du genre)
 	(la ligne du dessus est réécrite dans la partie du todo "LVL001" vers le début (3ème ligne ?), pour la version psycopathe
-
-	AUTRE :
-	1h formulaire de test : mettre à jour pour la version publique classique + 6h mettre en place système d'envoie automatique d'erreur ?
 
 	+ toute les parties suivantes :
 	- partie "VERSION PUBLIQUE"
@@ -156,6 +151,7 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
+	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
 	30h arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
 	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction

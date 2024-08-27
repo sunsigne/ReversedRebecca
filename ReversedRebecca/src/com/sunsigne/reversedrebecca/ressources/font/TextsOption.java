@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class TextsOption {
 
-	////////// CAMERA OPTION ////////////
+	////////// TEXT OPTION ////////////
 
 	private String file = "options.csv";
 	private boolean userData = true;

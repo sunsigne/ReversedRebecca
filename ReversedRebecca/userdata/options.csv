@@ -3,6 +3,11 @@ Camera=dynamic
 Texts=medium
 Difficulty=normal
 
+/////ACTION/////
+
+Highlight=bright
+Design=color
+
 /////KEYS/////
 
 Up=Z:90

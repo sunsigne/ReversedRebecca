@@ -30,6 +30,11 @@ public class Options {
 		line.addObject("Texts=medium");
 		line.addObject("Difficulty=normal");
 		line.getList().add("");
+		line.addObject("/////ACTION/////");
+		line.getList().add("");
+		line.getList().add("Highlight=bright");
+		line.getList().add("Design=color");
+		line.getList().add("");
 		line.addObject("/////KEYS/////");
 		line.getList().add("");
 		line.addObject("Up=Z:90");

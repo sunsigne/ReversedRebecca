@@ -52,10 +52,25 @@ TutorialDetail2 = to learn how to play?
 YesButton = Yes
 NoButton = No
 
-///// SAVE /////
+///// GENERAL /////
 
 GeneralButton = general
 Reset = reset
+VideoButton = video
+Camera = camera
+CameraStatic = static
+CameraDynamic = dynamic
+CameraDetail = The camera follows the player
+StaticDetail = to the nearest pixel
+DynamicDetail = fluidly
+Action = action
+ActionNeutral = neutral
+ActionBright = bright
+ActionColor = color
+ActionNumber = number
+ActionSmall = small
+ActionMedium = medium
+ActionLarge = large
 
 ///// RESET /////
 
@@ -86,17 +101,3 @@ VolumeMain = main
 VolumeMusic = music
 VolumeSound = sound
 VolumeVoice = voice
-
-///// VIDEO /////
-
-VideoButton = video
-Camera = camera
-CameraStatic = static
-CameraDynamic = dynamic
-CameraDetail = The camera follows the player
-StaticDetail = to the nearest pixel
-DynamicDetail = fluidly
-Texts = texts
-TextsSmall = small
-TextsMedium = medium
-TextsLarge = large

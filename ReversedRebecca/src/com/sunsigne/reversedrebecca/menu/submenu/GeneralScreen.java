@@ -6,11 +6,14 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
-import com.sunsigne.reversedrebecca.object.buttons.TextsSizePreview;
+import com.sunsigne.reversedrebecca.object.buttons.ActionOptionPreview;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
@@ -24,10 +27,10 @@ import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class VideoScreen extends SubMenuScreen {
+public class GeneralScreen extends SubMenuScreen {
 
-	public VideoScreen() {
-		super(TEXTS);
+	public GeneralScreen() {
+		super(ACTION);
 		loadText();
 
 		createLeftArrowButton(DIRECTION.LEFT);
@@ -38,7 +41,7 @@ public class VideoScreen extends SubMenuScreen {
 
 	@Override
 	public String getName() {
-		return "video";
+		return "general_xl";
 	}
 
 	////////// SUB MENU ////////////
@@ -54,60 +57,74 @@ public class VideoScreen extends SubMenuScreen {
 	private TitleScreenText cameraType;
 	private TitleScreenText[] cameraDetail;
 
-	private TitleScreenText texts;
-	private TitleScreenText textsSize;
-	private TextsSizePreview textsSizePreview;
+	private TitleScreenText action;
+	private TitleScreenText actionHighlight;
+	private TitleScreenText actionDesign;
+	private TitleScreenText actionSize;
+	private ActionOptionPreview actionPreview;
 
 	private static final int gap = -278;
 
 	private void loadText() {
 		String text = null;
 		int x = 325 + 416;
-		int y = 503;
+		int y = 323;
 
 		// camera
-		camera = new TitleScreenText(translate("Camera"), x - gap, y + 51);
+		camera = new TitleScreenText(translate("Camera"), x - gap, y);
 		LAYER.MENU.addObject(camera);
 
 		// static / dynamic
 		String typeName = CameraOption.getType().getName();
 		text = translate("Camera" + typeName);
-		cameraType = new TitleScreenTextSelectable(translate("Camera" + typeName), x - gap, y + 155);
+		cameraType = new TitleScreenTextSelectable(translate("Camera" + typeName), x - gap, y + 104);
 		LAYER.MENU.addObject(cameraType);
 
 		cameraDetail = new TitleScreenText[2];
 
 		// the camera follows the player ...
 		text = translate("Camera" + "Detail");
-		cameraDetail[0] = new TitleScreenText(text, x - gap, y + 245);
+		cameraDetail[0] = new TitleScreenText(text, x - gap, y + 195);
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
 
 		// ... to the nearest pixel / fluidly
 		text = translate(typeName + "Detail");
-		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 280);
+		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 229);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
 
-		// texts
-		texts = new TitleScreenText(translate("Texts"), x + gap, y + 51);
-		LAYER.MENU.addObject(texts);
+		// action
+		action = new TitleScreenText(translate("Action"), x + gap, y);
+		LAYER.MENU.addObject(action);
 
+		// highlight
+		String highlightName = ActionOption.getHighlight().getName();
+		text = translate("Action" + highlightName);
+		actionHighlight = new TitleScreenTextSelectable(translate("Action" + highlightName), x + gap, y + 104);
+		LAYER.MENU.addObject(actionHighlight);
+		
+		// color / number
+		String designName = ActionOption.getDesign().getName();
+		text = translate("Action" + designName);
+		actionDesign = new TitleScreenTextSelectable(translate("Action" + designName), x + gap, y + 208);
+		LAYER.MENU.addObject(actionDesign);
+		
 		// small / medium / large
 		String sizeName = TextsOption.getType().getName();
-		text = translate("Texts" + sizeName);
-		textsSize = new TitleScreenTextSelectable(translate("Texts" + sizeName), x + gap, y + 155);
-		LAYER.MENU.addObject(textsSize);
+		text = translate("Action" + sizeName);
+		actionSize = new TitleScreenTextSelectable(translate("Action" + sizeName), x + gap, y + 312);
+		LAYER.MENU.addObject(actionSize);
 
-		// preview of the size
-		textsSizePreview = new TextsSizePreview(x + gap + 45, y + 245 + 10);
-		LAYER.MENU.addObject(textsSizePreview);
+		// preview of the action
+		actionPreview = new ActionOptionPreview(x + gap + 45, y + 403 + 10);
+		LAYER.MENU.addObject(actionPreview);
 	}
 
 	////////// BUTTONS ////////////
 
-	private void createArrowButton(String text, DIRECTION direction, int x, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 710 + x, 670, 60, 60, onPress, null);
+	private void createArrowButton(String text, DIRECTION direction, int x, int y, GenericListener onPress) {
+		ButtonObject button = new TitleScreenButton(text, 710 + x, 439 + y, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
@@ -117,20 +134,28 @@ public class VideoScreen extends SubMenuScreen {
 		GenericListener onPress = null;
 
 		onPress = () -> choosePreviousCameraType();
-		createArrowButton("<", direction, 0 - gap, onPress);
+		createArrowButton("<", direction, 0 - gap, 0, onPress);
 
-		onPress = () -> choosePreviousTextsSize();
-		createArrowButton("<", direction, 0 + gap, onPress);
+		onPress = () -> choosePreviousActionHighlight();
+		createArrowButton("<", direction, 0 + gap, 0, onPress);
+		onPress = () -> choosePreviousActionDesign();
+		createArrowButton("<", direction, 0 + gap, 104, onPress);		
+		onPress = () -> choosePreviousActionSize();
+		createArrowButton("<", direction, 0 + gap, 208, onPress);
 	}
 
 	private void createRightArrowButton(DIRECTION direction) {
 		GenericListener onPress = null;
 
 		onPress = () -> chooseNextCameraType();
-		createArrowButton(">", direction, 420 - gap, onPress);
+		createArrowButton(">", direction, 420 - gap, 0, onPress);
 
-		onPress = () -> chooseNextTextsSize();
-		createArrowButton(">", direction, 420 + gap, onPress);
+		onPress = () -> chooseNextActionHighlight();
+		createArrowButton(">", direction, 420 + gap, 0, onPress);
+		onPress = () -> chooseNextActionDesign();
+		createArrowButton(">", direction, 420 + gap, 104, onPress);
+		onPress = () -> chooseNextActionSize();
+		createArrowButton(">", direction, 420 + gap, 208, onPress);
 	}
 
 	////////// BUTTON ACTION ////////////
@@ -147,13 +172,37 @@ public class VideoScreen extends SubMenuScreen {
 		refresh();
 	}
 
-	private void choosePreviousTextsSize() {
+	private void choosePreviousActionHighlight() {
+		ACTION_HIGHLIGHT action_highlight = ActionOption.getHighlight().getPrevious();
+		new ActionOption().registerHighlight(action_highlight);
+		refresh();
+	}
+
+	private void chooseNextActionHighlight() {
+		ACTION_HIGHLIGHT action_highlight = ActionOption.getHighlight().getNext();
+		new ActionOption().registerHighlight(action_highlight);
+		refresh();
+	}
+	
+	private void choosePreviousActionDesign() {
+		ACTION_DESIGN action_design = ActionOption.getDesign().getPrevious();
+		new ActionOption().registerDesign(action_design);
+		refresh();
+	}
+
+	private void chooseNextActionDesign() {
+		ACTION_DESIGN action_design = ActionOption.getDesign().getNext();
+		new ActionOption().registerDesign(action_design);
+		refresh();
+	}
+	
+	private void choosePreviousActionSize() {
 		TEXTS_SIZE texts_size = TextsOption.getType().getPrevious();
 		new TextsOption().registerType(texts_size);
 		refresh();
 	}
 
-	private void chooseNextTextsSize() {
+	private void chooseNextActionSize() {
 		TEXTS_SIZE texts_size = TextsOption.getType().getNext();
 		new TextsOption().registerType(texts_size);
 		refresh();
@@ -164,8 +213,12 @@ public class VideoScreen extends SubMenuScreen {
 		cameraType.setText(translate("Camera" + typeName));
 		cameraDetail[1].setText(translate(typeName + "Detail"));
 
+		String highlightName = ActionOption.getHighlight().getName();
+		actionHighlight.setText(translate("Action" + highlightName));
+		String designName = ActionOption.getDesign().getName();
+		actionDesign.setText(translate("Action" + designName));
 		String sizeName = TextsOption.getType().getName();
-		textsSize.setText(translate("Texts" + sizeName));
+		actionSize.setText(translate("Action" + sizeName));
 	}
 
 	////////// TEXTURE ////////////
@@ -193,7 +246,7 @@ public class VideoScreen extends SubMenuScreen {
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
 	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 700);
-	public static final PresetMousePos TEXTS = new PresetMousePos(925 + gap, 700);
+	public static final PresetMousePos ACTION = new PresetMousePos(925 + gap, 700);
 
 	////////// GAMEPAD ////////////
 
@@ -201,9 +254,9 @@ public class VideoScreen extends SubMenuScreen {
 	public void buttonPressed(ButtonEvent e) {
 		if (pressingButton())
 			return;
-
+		
 		if (isPresetNull())
-			setPreset(TEXTS);
+			setPreset(ACTION);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
@@ -211,23 +264,24 @@ public class VideoScreen extends SubMenuScreen {
 
 		else if (getPreset() == CAMERA)
 			cameraPressed(e);
-		else if (getPreset() == TEXTS)
-			textsPressed(e);
+		else if (getPreset() == ACTION)
+			actionPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
+			
 	}
 
-	private void textsPressed(ButtonEvent e) {
+	private void actionPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
 			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-			choosePreviousTextsSize();
+			choosePreviousActionSize();
 		}
 
 		else if (e.getKey() == ButtonEvent.RIGHT) {
 			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-			chooseNextTextsSize();
+			chooseNextActionSize();
 		}
 
 		else if (e.getKey() == ButtonEvent.UP) {
@@ -252,7 +306,7 @@ public class VideoScreen extends SubMenuScreen {
 		}
 
 		else if (e.getKey() == ButtonEvent.UP) {
-			setPreset(TEXTS);
+			setPreset(ACTION);
 		}
 
 		else if (e.getKey() == ButtonEvent.DOWN)
@@ -261,7 +315,7 @@ public class VideoScreen extends SubMenuScreen {
 
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
-			setPreset(TEXTS);
+			setPreset(ACTION);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
 	}

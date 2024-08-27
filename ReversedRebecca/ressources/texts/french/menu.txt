@@ -52,10 +52,25 @@ TutorialDetail2 = pour apprendre à jouer ?
 YesButton = Oui
 NoButton = Non
 
-///// SAVE /////
+///// GENERAL /////
 
 GeneralButton = general
 Reset = reset
+VideoButton = video
+Camera = camera
+CameraStatic = statique
+CameraDynamic = dynamique
+CameraDetail = La Camera suit le joueur
+StaticDetail = au pixel pres
+DynamicDetail = de façon fluide
+Action = action
+ActionNeutral = neutre
+ActionBright = brillant
+ActionColor = couleur
+ActionNumber = nombre
+ActionSmall = petit
+ActionMedium = moyen
+ActionLarge = grand
 
 ///// RESET /////
 
@@ -86,17 +101,3 @@ VolumeMain = principal
 VolumeMusic = musique
 VolumeSound = son
 VolumeVoice = voix
-
-///// VIDEO /////
-
-VideoButton = video
-Camera = camera
-CameraStatic = statique
-CameraDynamic = dynamique
-CameraDetail = La Camera suit le joueur
-StaticDetail = au pixel pres
-DynamicDetail = de façon fluide
-Texts = textes
-TextsSmall = petit
-TextsMedium = moyen
-TextsLarge = grand

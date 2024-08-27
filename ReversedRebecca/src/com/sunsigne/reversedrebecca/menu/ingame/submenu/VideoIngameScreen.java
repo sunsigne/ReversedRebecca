@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
-import com.sunsigne.reversedrebecca.object.buttons.TextsSizePreview;
+import com.sunsigne.reversedrebecca.object.buttons.ActionOptionPreview;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
@@ -56,7 +56,7 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 
 	private TitleScreenText texts;
 	private TitleScreenText textsSize;
-	private TextsSizePreview textsSizePreview;
+	private ActionOptionPreview textsSizePreview;
 
 	private static final int gap = -278;
 
@@ -100,7 +100,7 @@ public class VideoIngameScreen extends MenuIngameSubMenuScreen {
 		LAYER.MENU.addObject(textsSize);
 
 		// preview of the size
-		textsSizePreview = new TextsSizePreview(x + gap + 45, y + 245 + 10);
+		textsSizePreview = new ActionOptionPreview(x + gap + 45, y + 245 + 10);
 		LAYER.MENU.addObject(textsSizePreview);
 	}
 

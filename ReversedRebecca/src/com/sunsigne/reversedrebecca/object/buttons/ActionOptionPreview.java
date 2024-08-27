@@ -22,9 +22,9 @@ import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class TextsSizePreview extends GameObject implements SheetableImage {
+public class ActionOptionPreview extends GameObject implements SheetableImage {
 
-	public TextsSizePreview(int x, int y) {
+	public ActionOptionPreview(int x, int y) {
 		super(x, y);
 		loadCharacter();
 	}
@@ -32,7 +32,7 @@ public class TextsSizePreview extends GameObject implements SheetableImage {
 	////////// NAME ////////////
 
 	public String toString() {
-		var clazz = "TEXT SIZE PREVIEW ";
+		var clazz = "ACTION OPTION PREVIEW ";
 		return clazz + " : " + getX() + "-" + getY();
 	}
 
