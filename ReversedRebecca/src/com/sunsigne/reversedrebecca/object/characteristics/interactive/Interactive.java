@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
@@ -137,6 +138,9 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	@Override
 	default boolean getHighlightCondition() {
+		if (ActionOption.getHighlight() == ACTION_HIGHLIGHT.NEUTRAL)
+			return false;
+
 		if (canPlayerInteractDelayer(false) == false)
 			return false;
 

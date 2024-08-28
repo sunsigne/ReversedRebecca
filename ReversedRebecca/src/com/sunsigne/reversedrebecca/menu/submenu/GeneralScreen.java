@@ -117,7 +117,7 @@ public class GeneralScreen extends SubMenuScreen {
 		LAYER.MENU.addObject(actionSize);
 
 		// preview of the action
-		actionPreview = new ActionOptionPreview(x + gap + 45, y + 403 + 10);
+		actionPreview = new ActionOptionPreview(x + gap + 225, y + 403 + 10);
 		LAYER.MENU.addObject(actionPreview);
 	}
 
