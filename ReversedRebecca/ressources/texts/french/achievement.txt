@@ -30,3 +30,6 @@ ThatWasAnAccidentTitle = C'etait un accident...
 ThatWasAnAccidentText = Mourir a cause d'un canape
 
 ///// PURPLE /////
+
+NothingNextTitle = Bien joue ! Mais...
+NothingNextText = Le jeu n'a pas prevu la suite
