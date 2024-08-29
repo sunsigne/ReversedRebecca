@@ -45,7 +45,6 @@
 	-> 0h30 menu action - vérifier l'harmonie du dessin lorsqu'on change de langue
 	-> 3h00 menu "vidéo" prête à confussion, repenser les catégories (audio et contrôles, c'est déjà nickel par exemple)
 	-> 4h00 mode daltonien dans le menu + effacer la progression
-	2h00 - coffres pourquoi ne proposer qu'une seul récompense et ne pas la "ramasser automatiquement ? -> remplacer "choississez" par "ramassez" ou "récupérez" lorsque le nombre de loots possibles correspond au nombre de loots qu'on peut récupérer + remplacer souris par une main (voir comment fait SV lors d'un lvl 5)
 	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
 	
 	DESSIN :

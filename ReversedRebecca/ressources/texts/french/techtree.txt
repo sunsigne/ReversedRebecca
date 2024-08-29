@@ -1,3 +1,5 @@
+REWARD1ONLY = Récupérez votre récompense
+REWARD2ONLY = Récupérez deux récompenses
 REWARD1 = Choisissez une récompense
 REWARD2 = Choisissez deux récompenses
 

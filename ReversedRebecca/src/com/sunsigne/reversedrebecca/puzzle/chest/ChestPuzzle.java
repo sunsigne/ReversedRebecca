@@ -166,7 +166,7 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 	public int getSheetColCriterion() {
 		return -1;
 	}
-		
+
 	////////// CLOSE ////////////
 
 	private boolean closing;
@@ -248,7 +248,8 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 
 	private String getText() {
 		if (text == null)
-			text = new Translatable().getTranslatedText("REWARD" + getNumberOfRewards(), FilePath.TECHTREE);
+			text = new Translatable().getTranslatedText("REWARD" + getNumberOfRewards() + getMaxAmountOfRewards(),
+					FilePath.TECHTREE);
 		return text;
 	}
 
@@ -264,6 +265,13 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 		// easy difficulty
 		else
 			return 2;
+	}
+
+	private String getMaxAmountOfRewards() {
+		if (size == getNumberOfRewards())
+			return "ONLY";
+		else
+			return "";
 	}
 
 	private Font font = new FontTask().createNewFont("AGENCYB.ttf", 56f);
@@ -327,15 +335,15 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if(isClosing())
+		if (isClosing())
 			return;
-		
+
 		if (isPresetNull())
 			setPreset(getDefaultPreset());
 
-		if(size == 1)
+		if (size == 1)
 			return;
-		
+
 		else if (getPreset() == LEFT) {
 			if (e.getKey() == ButtonEvent.RIGHT)
 				setPreset(RIGHT);
