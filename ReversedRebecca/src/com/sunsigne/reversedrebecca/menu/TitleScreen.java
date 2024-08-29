@@ -38,7 +38,7 @@ public class TitleScreen extends MenuScreen {
 
 	public TitleScreen(PresetMousePos defaultPreset) {
 		super(defaultPreset);
-		new SoundTask().playMusic("title_screen", false, true);
+		new SoundTask().playMusic("3 Joys & the Truth", false, true);
 
 		createPlayButton();
 		createOptionsButton();
