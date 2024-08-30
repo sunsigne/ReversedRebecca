@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -60,11 +61,19 @@ public class MusicRequest implements Request {
 
 		return new ConditionalListener() {
 
+			boolean flag;
+			
 			@Override
 			public boolean canDoAction() {
 				boolean noMenu = LAYER.MENU.getHandler().getList().isEmpty();
 				boolean noLoading = LAYER.LOADING.getHandler().getList().isEmpty();
-				return noMenu && noLoading;
+				
+				if(noMenu && noLoading)
+					new GameTimer(1, true, () -> flag =true);
+				else
+					flag = false;
+				
+				return flag;
 			}
 
 			@Override
