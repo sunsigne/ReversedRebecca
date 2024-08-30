@@ -35,6 +35,7 @@ public class GeneralScreen extends SubMenuScreen {
 
 		createLeftArrowButton(DIRECTION.LEFT);
 		createRightArrowButton(DIRECTION.RIGHT);
+		createResetButton();
 	}
 
 	////////// NAME ////////////
@@ -84,13 +85,13 @@ public class GeneralScreen extends SubMenuScreen {
 
 		// the camera follows the player ...
 		text = translate("Camera" + "Detail");
-		cameraDetail[0] = new TitleScreenText(text, x - gap, y + 195);
+		cameraDetail[0] = new TitleScreenText(text, x - gap, y + 185);
 		cameraDetail[0].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[0]);
 
 		// ... to the nearest pixel / fluidly
 		text = translate(typeName + "Detail");
-		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 229);
+		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 219);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
 
@@ -119,6 +120,21 @@ public class GeneralScreen extends SubMenuScreen {
 		// preview of the action
 		actionPreview = new ActionOptionPreview(x + gap + 225, y + 403 + 10);
 		LAYER.MENU.addObject(actionPreview);
+		
+		TitleScreenText resetDetail;
+
+		// your progress will be ...
+		text = translate("ResetDetail" + "1");
+		resetDetail = new TitleScreenText(text, x - gap, y + 362 + 79);
+		resetDetail.setFontSize(18f);
+		LAYER.MENU.addObject(resetDetail);
+
+		// ... permanently lost
+		text = translate("ResetDetail" + "2");
+		resetDetail = new TitleScreenText(text, x - gap, y + 362 + 113);
+		resetDetail.setFontSize(18f);
+		LAYER.MENU.addObject(resetDetail);
+		
 	}
 
 	////////// BUTTONS ////////////
@@ -158,6 +174,20 @@ public class GeneralScreen extends SubMenuScreen {
 		createArrowButton(">", direction, 420 + gap, 208, onPress);
 	}
 
+	private void createResetButton() {
+		GenericListener onPress = () -> new ResetScreen();
+		ButtonObject button = new TitleScreenButton(translate("Reset"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+		
+		LAYER.MENU.addObject(button);
+		//buttons.put(RESET, button);
+	}
+	
 	////////// BUTTON ACTION ////////////
 
 	private void choosePreviousCameraType() {

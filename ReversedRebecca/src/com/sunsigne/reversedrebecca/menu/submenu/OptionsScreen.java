@@ -43,7 +43,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createGeneralButton() {
-		GenericListener onPress = () -> new OldGeneralScreen();
+		GenericListener onPress = () -> new GeneralScreen();
 		createOptionScreenButton(translate("GeneralButton"), GENERAL, 206, 104, onPress);
 	}
 
@@ -58,7 +58,7 @@ public class OptionsScreen extends SubMenuScreen {
 	}
 
 	private void createVideoButton() {
-		GenericListener onPress = () -> new GeneralScreen();
+		GenericListener onPress = () -> {};//new GeneralScreen();
 		createOptionScreenButton(translate("VideoButton"), VIDEO, 623, 208, onPress);
 	}
 
