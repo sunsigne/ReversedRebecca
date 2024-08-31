@@ -11,14 +11,16 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.chest.ChestObject;
 import com.sunsigne.reversedrebecca.object.puzzler.door.DoorObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 
 public class ActionOptionPreview extends GameObject implements SheetableImage {
 
@@ -57,7 +59,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 			};
 		};
 	}
-	
+
 	private BufferedImage rebecca_img;
 
 	@Override
@@ -85,15 +87,28 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 			return;
 
 		g.drawImage(rebecca_img, getX(), getY(), getWidth(), getHeight(), null);
-		
+
 		int gap = 100;
 		g.drawImage(puzzler.getImage(), getX() + gap, getY(), getWidth(), getHeight(), null);
 		puzzler.drawHighlight(g, puzzler.getHighlightImage(), gap, 0, 0, 0);
 
 		gap = (int) (TextsOption.getSize() * 100) - 130;
-		int[] rect = new int[] { getX() - 160 - gap, getY(), getWidth(), getHeight() };
+		DIRECTION centeredText = DIRECTION.NULL;
 		String text = puzzler.getTripleAction().getAction(0).getDisplayedText();
-		new TextDecoration().drawOutlinesString(g, font, text, DIRECTION.NULL, rect);
+		int[] rect = new int[] { getX() - 160 - gap, getY(), getWidth(), getHeight() };
+
+		if (ControllerManager.getInstance().isUsingGamepad()) {
+			centeredText = DIRECTION.RIGHT;
+			text = text.concat("   ");
+			rect = new int[] { getX() - Size.XS, getY() + Size.XS, Size.XS, Size.XS };
+			int size = 2;
+			g.drawImage(ActionOneKey.getGamepadButton(), rect[0] - size, rect[1] - size, rect[2] + size * 2,
+					rect[3] + size * 2, null);
+			gap = (int) (((TextsOption.getSize() * 100) - 100) / 2.6f);
+			rect = new int[] { rect[0] + gap, rect[1], rect[2], rect[3] };
+		}
+
+		new TextDecoration().drawOutlinesString(g, font, text, centeredText, rect);
 	}
 
 }
