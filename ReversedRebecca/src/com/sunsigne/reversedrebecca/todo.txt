@@ -31,6 +31,7 @@
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	EndLevelRequest : le jeu est actuellement redirigé vers l'écran test de démo
+	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 
 	////////// EN COURS ////////////
 
@@ -83,8 +84,6 @@
 	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
 
 	////////// GAMEPAD ////////////
-
-	manette actuellement désactivé (message "coming soon") : GamepadManager -> activeGamepadDisplay()
 
 	vérifié si réglé :
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...

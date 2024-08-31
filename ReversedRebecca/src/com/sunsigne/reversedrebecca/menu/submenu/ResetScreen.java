@@ -33,7 +33,7 @@ public class ResetScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new OptionsScreen(BACK);
+		return new GeneralScreen();
 	}
 
 	////////// TEXT ////////////
@@ -61,14 +61,14 @@ public class ResetScreen extends SubMenuScreen {
 
 	private void createResetButton() {
 		GenericListener onPress = () -> resetProgression();
-		ButtonObject button = new TitleScreenButton(translate("Confirm"), 741, 607, 415, 80, onPress, null) {
-			
+		ButtonObject button = new TitleScreenButton(translate("Reset"), 741, 607, 415, 80, onPress, null) {
+
 			@Override
 			public String getSound() {
 				return "button_validate";
 			}
 		};
-		
+
 		LAYER.MENU.addObject(button);
 		buttons.put(RESET, button);
 	}
@@ -83,41 +83,41 @@ public class ResetScreen extends SubMenuScreen {
 	}
 
 	////////// PRESET MOUSE POS ////////////
-	
+
 	public static final PresetMousePos RESET = new PresetMousePos(925, 650);
-	
+
 	////////// GAMEPAD ////////////
-	
+
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		if (pressingButton())
 			return;
-	
+
 		if (isPresetNull())
 			setPreset(RESET);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
-		
+
 		else if (getPreset() == RESET)
 			resetPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
-	
+
 	private void resetPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(RESET).mousePressed(null);
 	}
-	
+
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
 			setPreset(RESET);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
 	}
-	
+
 }

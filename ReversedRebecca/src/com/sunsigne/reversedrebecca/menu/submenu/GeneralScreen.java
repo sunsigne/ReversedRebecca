@@ -30,7 +30,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 public class GeneralScreen extends SubMenuScreen {
 
 	public GeneralScreen() {
-		super(ACTION);
+		super(ACTION_HIGHLIGHT);
 		loadText();
 
 		createLeftArrowButton(DIRECTION.LEFT);
@@ -139,6 +139,8 @@ public class GeneralScreen extends SubMenuScreen {
 
 	////////// BUTTONS ////////////
 
+	private ButtonObject resetButton;
+		
 	private void createArrowButton(String text, DIRECTION direction, int x, int y, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, 710 + x, 439 + y, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
@@ -175,8 +177,10 @@ public class GeneralScreen extends SubMenuScreen {
 	}
 
 	private void createResetButton() {
-		GenericListener onPress = () -> new ResetScreen();
-		ButtonObject button = new TitleScreenButton(translate("Reset"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
+		LAYER.MENU.getHandler().removeObject(resetButton);
+		
+		GenericListener onPress = () -> createConfirmButton();
+		resetButton = new TitleScreenButton(translate("Reset"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
 			
 			@Override
 			public String getSound() {
@@ -184,8 +188,24 @@ public class GeneralScreen extends SubMenuScreen {
 			}
 		};
 		
-		LAYER.MENU.addObject(button);
-		//buttons.put(RESET, button);
+		LAYER.MENU.addObject(resetButton);
+		buttons.put(RESET, resetButton);
+	}
+	
+	private void createConfirmButton() {
+		LAYER.MENU.getHandler().removeObject(resetButton);
+		
+		GenericListener onPress = () -> new ResetScreen();
+		resetButton = new TitleScreenButton(translate("Confirm"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
+			
+			@Override
+			public String getSound() {
+				return "button_validate";
+			}
+		};
+
+		LAYER.MENU.addObject(resetButton);
+		buttons.put(RESET, resetButton);
 	}
 	
 	////////// BUTTON ACTION ////////////
@@ -249,6 +269,8 @@ public class GeneralScreen extends SubMenuScreen {
 		actionDesign.setText(translate("Action" + designName));
 		String sizeName = TextsOption.getType().getName();
 		actionSize.setText(translate("Action" + sizeName));
+		
+		createResetButton();
 	}
 
 	////////// TEXTURE ////////////
@@ -268,15 +290,18 @@ public class GeneralScreen extends SubMenuScreen {
 	public void render(Graphics g) {
 		super.render(g);
 		if (ControllerManager.getInstance().isUsingGamepad())
-			g.drawImage(get_gamepad_instruction_image(), 890, 575, 120, 120, null);
+			g.drawImage(get_gamepad_instruction_image(), 890, 313, 120, 120, null);
 	}
 
 	////////// PRESET MOUSE POS ////////////
 
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
-	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 700);
-	public static final PresetMousePos ACTION = new PresetMousePos(925 + gap, 700);
+	public static final PresetMousePos ACTION_HIGHLIGHT = new PresetMousePos(925 + gap, 460);
+	public static final PresetMousePos ACTION_DESIGN = new PresetMousePos(925 + gap, 570);
+	public static final PresetMousePos ACTION_SIZE = new PresetMousePos(925 + gap, 670);
+	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 460);
+	public static final PresetMousePos RESET = new PresetMousePos(925 - gap, 720);
 
 	////////// GAMEPAD ////////////
 
@@ -286,22 +311,70 @@ public class GeneralScreen extends SubMenuScreen {
 			return;
 		
 		if (isPresetNull())
-			setPreset(ACTION);
+			setPreset(ACTION_HIGHLIGHT);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
 
+		else if (getPreset() == ACTION_HIGHLIGHT)
+			actionHighlightPressed(e);
+		else if (getPreset() == ACTION_DESIGN)
+			actionDesignPressed(e);
+		else if (getPreset() == ACTION_SIZE)
+			actionSizePressed(e);
 		else if (getPreset() == CAMERA)
 			cameraPressed(e);
-		else if (getPreset() == ACTION)
-			actionPressed(e);
+		else if (getPreset() == RESET)
+			resetPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 			
 	}
 
-	private void actionPressed(ButtonEvent e) {
+	private void actionHighlightPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousActionHighlight();
+		}
+
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextActionHighlight();
+		}
+
+		else if (e.getKey() == ButtonEvent.UP) {
+			setPreset(CAMERA);
+		}
+
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(ACTION_DESIGN);
+	}
+	
+	private void actionDesignPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousActionDesign();
+		}
+
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextActionDesign();
+		}
+
+		else if (e.getKey() == ButtonEvent.UP) {
+			setPreset(ACTION_HIGHLIGHT);
+		}
+
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(ACTION_SIZE);
+	}
+	
+	private void actionSizePressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
 			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
@@ -315,7 +388,7 @@ public class GeneralScreen extends SubMenuScreen {
 		}
 
 		else if (e.getKey() == ButtonEvent.UP) {
-			setPreset(CAMERA);
+			setPreset(ACTION_DESIGN);
 		}
 
 		else if (e.getKey() == ButtonEvent.DOWN)
@@ -336,16 +409,28 @@ public class GeneralScreen extends SubMenuScreen {
 		}
 
 		else if (e.getKey() == ButtonEvent.UP) {
-			setPreset(ACTION);
+			setPreset(ACTION_HIGHLIGHT);
+		}
+
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(RESET);
+	}
+
+	private void resetPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP) {
+			setPreset(CAMERA);
 		}
 
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
+		
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(RESET).mousePressed(null);
 	}
-
+	
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
-			setPreset(ACTION);
+			setPreset(ACTION_SIZE);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
 	}
