@@ -16,14 +16,13 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 		createGeneralButton();
 		createControlsButton();
 		createAudioButton();
-		createVideoButton();
 	}
 
 	////////// NAME ////////////
 
 	@Override
 	public String getName() {
-		return "options";
+		return "resume";
 	}
 
 	////////// SUB MENU ////////////
@@ -43,30 +42,24 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 
 	private void createGeneralButton() {
 		GenericListener onPress = () -> new GeneralIngameScreen();
-		createOptionScreenButton(translate("GeneralButton"), GENERAL, 206, 104, onPress);
+		createOptionScreenButton(translate("GeneralButton"), GENERAL, 416, 51, onPress);
 	}
 
 	private void createControlsButton() {
 		GenericListener onPress = () -> new ControlsIngameScreen();
-		createOptionScreenButton(translate("ControlsButton"), CONTROLS, 623, 104, onPress);
+		createOptionScreenButton(translate("ControlsButton"), CONTROLS, 416, 155, onPress);
 	}
 
 	private void createAudioButton() {
 		GenericListener onPress = () -> new AudioIngameScreen();
-		createOptionScreenButton(translate("AudioButton"), AUDIO, 206, 208, onPress);
-	}
-
-	private void createVideoButton() {
-		GenericListener onPress = () -> {}; //new GeneralIngameScreen();
-		createOptionScreenButton(translate("VideoButton"), VIDEO, 623, 208, onPress);
+		createOptionScreenButton(translate("AudioButton"), AUDIO, 416, 259, onPress);
 	}
 
 	////////// PRESET MOUSE POS ////////////
 
-	public static final PresetMousePos GENERAL = new PresetMousePos(730, 650 + y_gap);
-	public static final PresetMousePos CONTROLS = new PresetMousePos(1150, 650 + y_gap);
-	public static final PresetMousePos AUDIO = new PresetMousePos(730, 750 + y_gap);
-	public static final PresetMousePos VIDEO = new PresetMousePos(1150, 750 + y_gap);
+	public static final PresetMousePos GENERAL = new PresetMousePos(945, 430);
+	public static final PresetMousePos CONTROLS = new PresetMousePos(945, 535);
+	public static final PresetMousePos AUDIO = new PresetMousePos(945, 640);
 
 	////////// GAMEPAD ////////////
 
@@ -83,55 +76,38 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 		}
 
 		else if (getPreset() == GENERAL)
-			gamePressed(e);
+			generalPressed(e);
 		else if (getPreset() == CONTROLS)
 			controlsPressed(e);
 		else if (getPreset() == AUDIO)
 			audioPressed(e);
-		else if (getPreset() == VIDEO)
-			videoPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
 
-	private void gamePressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.RIGHT)
+	private void generalPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(CONTROLS);
-		else if (e.getKey() == ButtonEvent.DOWN)
-			setPreset(AUDIO);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(GENERAL).mousePressed(null);
 	}
 
 	private void controlsPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.LEFT)
+		if (e.getKey() == ButtonEvent.UP)
 			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.DOWN)
-			setPreset(VIDEO);
+			setPreset(AUDIO);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(CONTROLS).mousePressed(null);
 	}
 
 	private void audioPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.RIGHT)
-			setPreset(VIDEO);
-		else if (e.getKey() == ButtonEvent.UP)
-			setPreset(GENERAL);
-		else if (e.getKey() == ButtonEvent.DOWN)
-			setPreset(BACK);
-		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(AUDIO).mousePressed(null);
-	}
-
-	private void videoPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.LEFT)
-			setPreset(AUDIO);
-		else if (e.getKey() == ButtonEvent.UP)
+		if (e.getKey() == ButtonEvent.UP)
 			setPreset(CONTROLS);
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(VIDEO).mousePressed(null);
+			buttons.get(AUDIO).mousePressed(null);
 	}
 
 	private void backPressed(ButtonEvent e) {
