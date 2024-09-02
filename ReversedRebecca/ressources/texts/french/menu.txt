@@ -101,3 +101,7 @@ VolumeMain = principal
 VolumeMusic = musique
 VolumeSound = son
 VolumeVoice = voix
+
+///// BONUS /////
+
+BonusButton = bonus

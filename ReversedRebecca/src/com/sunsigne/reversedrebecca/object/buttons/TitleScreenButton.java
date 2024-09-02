@@ -29,31 +29,47 @@ public class TitleScreenButton extends ButtonObject {
 	public Font getFont() {
 		return font;
 	}
-	
+
 	public void setFontSize(float size) {
 		font = new FontTask().createNewFont("dogicabold.ttf", size);
-		
-		if(size > 40f)
+
+		if (size > 40f)
 			rectsize = RECTSIZE.SMALL;
+	}
+
+	////////// TEXTURE ////////////
+
+	protected Color text_color;
+	protected Color shadow_color;
+
+	public Color getTextColor() {
+		if (text_color == null)
+			text_color = new Color(255, 204, 0);
+		return text_color;
+	}
+
+	public Color getShadowColor() {
+		if (shadow_color == null)
+			shadow_color = new Color(255, 163, 0, 80);
+		return shadow_color;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		Color text_color = new Color(255, 204, 0);
-		Color shadow_color = new Color(255, 163, 0, 80);
+		Color color = getTextColor();
 		int[] rect = getRect();
 
 		if (isSelected()) {
 			if (ControllerManager.getInstance().isUsingGamepad())
 				new RectDecoration().drawRoundRect(g, rect, rectsize);
 
-			text_color = new Color(255, 232, 170);
+			color = new Color(255, 232, 170);
 			rect = new int[] { getX(), getY() - 3, getWidth(), getHeight() };
 		}
 
-		new TextDecoration().drawShadowedString(g, getFont(), getText(), text_color, shadow_color, getFacing(), rect);
+		new TextDecoration().drawShadowedString(g, getFont(), getText(), color, getShadowColor(), getFacing(), rect);
 	}
 
 	////////// MOUSE ////////////
