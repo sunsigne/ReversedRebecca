@@ -162,8 +162,10 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	@Override
 	public void clear() {
-		if (getList().size() > 0) {
-			for (Updatable tempUpdatable : getList()) {
+		var list = new ListCloner().deepClone(this);
+		
+		if (list.getList().size() > 0) {
+			for (Updatable tempUpdatable : list.getList()) {
 				tempUpdatable.destroyControls();
 				map.remove(tempUpdatable);
 			}
