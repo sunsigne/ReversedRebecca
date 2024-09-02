@@ -32,6 +32,7 @@
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	EndLevelRequest : le jeu est actuellement redirigé vers l'écran test de démo
 	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
+	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
 
 	////////// EN COURS ////////////
 
@@ -51,8 +52,7 @@
 
 	EXPERIENCE UTILISATEUR :
 	-> 0h30 menu action - vérifier l'harmonie du dessin lorsqu'on change de langue
-	-> 3h00 menu "vidéo" prête à confussion, repenser les catégories (audio et contrôles, c'est déjà nickel par exemple)
-	-> 4h00 mode daltonien dans le menu + effacer la progression
+	-> 4h00 menu "general" mais ingame
 	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
 	
 	DESSIN :

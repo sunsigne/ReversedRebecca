@@ -17,6 +17,9 @@ public class ChestObject extends PuzzlerObject {
 	protected ChestObject(LVL lvl, int num, int x, int y) {
 		super(lvl, x, y);
 
+		if (num < 0)
+			return;
+
 		if (World.get() != null)
 			lootFile = ("maps/" + World.get().getMapName() + "/" + getName().toUpperCase() + "-0" + num + ".csv");
 	}
@@ -44,8 +47,7 @@ public class ChestObject extends PuzzlerObject {
 	}
 
 	@Override
-	public BufferedImage getImage()
-	{
+	public BufferedImage getImage() {
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler");
 			image = getSheetSubImage(sheet);
@@ -54,8 +56,7 @@ public class ChestObject extends PuzzlerObject {
 	}
 
 	@Override
-	public BufferedImage getHighlightImage()
-	{
+	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
 			highlightImage = getSheetSubImage(sheet, 1, 1 + getSheetRowCriterion(), getSheetWidth() + 2,
@@ -63,8 +64,7 @@ public class ChestObject extends PuzzlerObject {
 		}
 		return highlightImage;
 	}
-	
-	
+
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;

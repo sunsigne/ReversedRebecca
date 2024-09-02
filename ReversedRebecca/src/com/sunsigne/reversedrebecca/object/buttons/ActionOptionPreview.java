@@ -5,18 +5,18 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.door.DoorObject;
+import com.sunsigne.reversedrebecca.object.puzzler.chest.ChestObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -52,7 +52,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	private PuzzlerObject puzzler;
 
 	private void loadPuzzler() {
-		puzzler = new DoorObject(LVL.RED, COLOR.WHITE, getX(), getY()) {
+		puzzler = new ChestObject(-1, getX(), getY()) {
 			@Override
 			public boolean getHighlightCondition() {
 				return ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;
@@ -61,6 +61,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	}
 
 	private BufferedImage rebecca_img;
+	private BufferedImage coming_soon;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -77,6 +78,15 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 
 		sheet = new ImageTask().loadImage("textures/characters/rebecca/" + "rebecca");
 		rebecca_img = getSheetSubImage(sheet, 1, 2, 16, 16);
+
+		String path = "textures/other/coming_soon";
+		String lang = Language.getInstance().getLang();
+
+		if (lang.equalsIgnoreCase("french")) {
+			path = path.concat("_fr");
+		}
+
+		coming_soon = new ImageTask().loadImage(path);
 	}
 
 	////////// RENDER ////////////
@@ -86,12 +96,22 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 		if (rebecca_img == null)
 			return;
 
+		int gap = 100;
+		
 		g.drawImage(rebecca_img, getX(), getY(), getWidth(), getHeight(), null);
 
-		int gap = 100;
-		g.drawImage(puzzler.getImage(), getX() + gap, getY(), getWidth(), getHeight(), null);
-		puzzler.drawHighlight(g, puzzler.getHighlightImage(), gap, 0, 0, 0);
+		if(ActionOption.getDesign() == ACTION_DESIGN.COLOR) {
+			g.drawImage(puzzler.getImage(), getX() + gap, getY(), getWidth(), getHeight(), null);
+			puzzler.drawHighlight(g, puzzler.getHighlightImage(), gap, 0, 0, 0);
+		}
+		else
+			g.drawImage(coming_soon, getX() + gap, getY() + 20, 125, 66, null);
 
+
+		drawTextAction(g, gap);
+	}
+
+	private void drawTextAction(Graphics g, int gap) {
 		gap = (int) (TextsOption.getSize() * 100) - 130;
 		DIRECTION centeredText = DIRECTION.NULL;
 		String text = puzzler.getTripleAction().getAction(0).getDisplayedText();
