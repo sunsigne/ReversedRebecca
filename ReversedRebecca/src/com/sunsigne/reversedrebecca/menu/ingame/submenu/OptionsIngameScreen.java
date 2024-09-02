@@ -57,7 +57,7 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 	}
 
 	private void createVideoButton() {
-		GenericListener onPress = () -> new VideoIngameScreen();
+		GenericListener onPress = () -> {}; //new GeneralIngameScreen();
 		createOptionScreenButton(translate("VideoButton"), VIDEO, 623, 208, onPress);
 	}
 

@@ -1,26 +1,21 @@
 package com.sunsigne.reversedrebecca.menu.ingame.submenu;
 
-import com.sunsigne.reversedrebecca.menu.LoadingScreen;
-import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
-import com.sunsigne.reversedrebecca.world.World;
 
-public class ResetIngameScreen extends MenuIngameScreen {
+public class OldGeneralIngameScreen extends MenuIngameScreen {
 
-	public ResetIngameScreen() {
+	public OldGeneralIngameScreen() {
 		super(RESET);
 		loadText();
 
-		createConfirmButton();
+		createResetButton();
 		createBackButton();
 	}
 
@@ -66,27 +61,14 @@ public class ResetIngameScreen extends MenuIngameScreen {
 		LAYER.MENU.addObject(button);
 	}
 
-	private void createConfirmButton() {
-		GenericListener onPress = () -> resetProgression();
-		createGeneralScreenButton(translate("Confirm"), RESET, 416, 51, onPress, "button_validate");
+	private void createResetButton() {
+		GenericListener onPress = () -> new ResetIngameScreen();
+		createGeneralScreenButton(translate("Reset"), RESET, 416, 51, onPress, "button_validate");
 	}
 
 	private void createBackButton() {
-		GenericListener onPress = () -> new GeneralIngameScreen();
+		GenericListener onPress = () -> new OptionsIngameScreen(OptionsIngameScreen.BACK);
 		createGeneralScreenButton(translate("Cancel"), BACK, 416, 155, onPress, "button_back");
-	}
-
-	////////// BUTTON ACTION ////////////
-
-	private void resetProgression() {
-		LAYER.LOADING.addObject(new LoadingScreen());
-
-		new MenuIngameController().unloadResumeScreen();
-		new Save().resetProgression();
-		World.get().destroy();
-		new TitleScreen(TitleScreen.PLAY);
-
-		LAYER.LOADING.getHandler().clear();
 	}
 
 	////////// PRESET MOUSE POS ////////////
