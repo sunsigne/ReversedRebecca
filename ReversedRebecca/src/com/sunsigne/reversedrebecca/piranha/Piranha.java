@@ -1,16 +1,15 @@
 package com.sunsigne.reversedrebecca.piranha;
 
 import java.util.ConcurrentModificationException;
-import java.util.NoSuchElementException;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class Piranha {
@@ -29,18 +28,12 @@ public class Piranha {
 		try {
 			for (LAYER tempLayer : LAYER.values()) {
 
-				Handler handler = tempLayer.getHandler();
+				var handler_list = new ListCloner().deepClone(tempLayer.getHandler());
 
-				for (Updatable tempUpdatable : handler.getList()) {
+				for (Updatable tempUpdatable : handler_list.getList()) {
 
 					if (tempUpdatable instanceof PiranhaObject)
 						list.addObject((PiranhaObject) tempUpdatable);
-
-					try {
-						handler.getList().iterator().next();
-					} catch (NoSuchElementException e) {
-						break;
-					}
 				}
 			}
 		} catch (ConcurrentModificationException e) {
@@ -63,7 +56,7 @@ public class Piranha {
 
 	public void optimize() {
 		GameList<PiranhaObject> allPiranhaObjects = getAllPiranhaObjects();
-		
+
 		new GlobalInstructionList().optimize(allPiranhaObjects);
 
 		for (PiranhaObject tempObject : allPiranhaObjects.getList()) {
