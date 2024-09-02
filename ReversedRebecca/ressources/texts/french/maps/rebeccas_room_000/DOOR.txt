@@ -67,7 +67,7 @@ player = UP = unhappy = Zut ! Je suis arrivée trop tard.
 player = UP = worry = Bon, tant pis…@La prochaine fois je serai plus rapide.
 
 
-% WHOS_THERE_OPEN
+% WHOS_THERE_DOOR_OPEN
 player = UP = laugh = C'est qui ?
 sarah = DOWN = happy = C'est Sarah !
 player = UP = excited = Sarah !
