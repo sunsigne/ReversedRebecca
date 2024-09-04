@@ -96,31 +96,29 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 		if (rebecca_img == null)
 			return;
 
-		int gap = 100;
+		String text = puzzler.getTripleAction().getAction(0).getDisplayedText();
 		
-		g.drawImage(rebecca_img, getX(), getY(), getWidth(), getHeight(), null);
+		int gap = 180 + (10 - text.length() * 6) - (int) (TextsOption.getSize() * 90);
+		
+		g.drawImage(rebecca_img, getX() - gap, getY(), getWidth(), getHeight(), null);
 
 		if(ActionOption.getDesign() == ACTION_DESIGN.COLOR) {
-			g.drawImage(puzzler.getImage(), getX() + gap, getY(), getWidth(), getHeight(), null);
-			puzzler.drawHighlight(g, puzzler.getHighlightImage(), gap, 0, 0, 0);
+			g.drawImage(puzzler.getImage(), getX() + 100 - gap, getY(), getWidth(), getHeight(), null);
+			puzzler.drawHighlight(g, puzzler.getHighlightImage(), 100 - gap, 0, 0, 0);
 		}
 		else
-			g.drawImage(coming_soon, getX() + gap, getY() + 20, 125, 66, null);
+			g.drawImage(coming_soon, getX() + 100 - gap, getY() + 20, 125, 66, null);
 
 
-		drawTextAction(g, gap);
+		drawTextAction(g, text, gap);
 	}
 
-	private void drawTextAction(Graphics g, int gap) {
-		gap = (int) (TextsOption.getSize() * 100) - 130;
-		DIRECTION centeredText = DIRECTION.NULL;
-		String text = puzzler.getTripleAction().getAction(0).getDisplayedText();
-		int[] rect = new int[] { getX() - 160 - gap, getY(), getWidth(), getHeight() };
+	private void drawTextAction(Graphics g, String text, int gap) {
+		int[] rect = new int[] { getX() - 100 - gap, getY(), getWidth(), getHeight() };
 
 		if (ControllerManager.getInstance().isUsingGamepad()) {
-			centeredText = DIRECTION.RIGHT;
 			text = text.concat("   ");
-			rect = new int[] { getX() - Size.XS, getY() + Size.XS, Size.XS, Size.XS };
+			rect = new int[] { getX() - Size.XS - gap, getY() + Size.XS, Size.XS, Size.XS };
 			int size = 2;
 			g.drawImage(ActionOneKey.getGamepadButton(), rect[0] - size, rect[1] - size, rect[2] + size * 2,
 					rect[3] + size * 2, null);
@@ -128,7 +126,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 			rect = new int[] { rect[0] + gap, rect[1], rect[2], rect[3] };
 		}
 
-		new TextDecoration().drawOutlinesString(g, font, text, centeredText, rect);
+		new TextDecoration().drawOutlinesString(g, font, text, DIRECTION.RIGHT, rect);
 	}
 
 }
