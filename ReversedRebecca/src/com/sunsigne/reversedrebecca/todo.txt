@@ -51,7 +51,6 @@
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
 
 	EXPERIENCE UTILISATEUR :
-	-> 0h30 menu action - vérifier l'harmonie du dessin lorsqu'on change de langue
 	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
 	
 	DESSIN :
