@@ -1,2 +1,0 @@
-player = DOWN = you_silly = I also took her keys, it may be useful.
-player = UP = evil_var2 = See you this evening, Sarah!

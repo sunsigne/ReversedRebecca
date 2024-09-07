@@ -1,1 +1,0 @@
-sarah = player = happy = Are you ready for work ?@I thought we could go together.

@@ -1,3 +1,0 @@
-sarah = LEFT = asleep = *sniff* *sniff*
-sarah = player = laugh = It smells great!
-player = object = happy = Yes, I made pancakes this morning.

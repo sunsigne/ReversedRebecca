@@ -1,3 +1,69 @@
+% ASK_FOR_KEY
+player = object = happy = Camille, you don't know where@my keys are, do you?
+object = DOWN = asleep = …
+player = object = you_silly = Worth the try…
+
+
+% HELLO
 player = object = happy = Hi Camille, how are you?
 object = DOWN = asleep = …
-player = object = worry = Erika has been working on this robot for months,@I home she's not pushing her body to the limit…
+player = object = worry = Still… kinda "Robotic" ?
+object = object = asleep = …
+player = object = you_silly_var = That was a silly question…@ She won't answer:
+player = object = camille = Sure thing! And you, Rebecca?@Still kinda "human"?
+object = object = asleep = …
+player = object = you_silly_var = "Make an intelligent robot"…@That’s quite a project you have there, Erika…
+player = object = you_silly = I hope she doesn't push herself too much…
+
+
+% SARAH_NOTICE
+sarah = player = happy = By the way, I can't wait to see the result.
+player = sarah = laugh = Yeah, me too!
+
+
+% SARAH_REBECCA_HUMAN
+sarah = player = happy_var = It's fascinating to see how much@she looks like a human being.
+player = sarah = happy = Erika says it won't be just about@her looks.
+player = sarah = happy_var = She will have such an advanced intelligence that@you won't even be able to tell the difference.
+sarah = player = surprised = Really?
+player = sarah = laugh = Yes. It's refreshing, don't you think?
+sarah = player = worry = What do you mean?
+player = sarah = happy = Mostly, when you deal with a software,@you can quickly point out its limits.
+player = sarah = happy_var = Not this time! We will mainly be marveling@at its adaptiveness.
+sarah = player = laugh = I get it!@It's a change, indeed.
+player = DOWN = you_silly = Isn't it?
+
+
+% SARAH_REBECCA_LIFE
+player = sarah = happy = Did you ever wonder if robots were alive?
+sarah = player = laugh = They wouldn't be robots anymore, though.
+player = sarah = worry = I'm being serious.
+player = sarah = happy = Here is my point : plants are alive.@But, they are so different from us…
+player = sarah = happy_var = We can't just figure out how they do think.
+player = sarah = happy = However, if plants are alive,@why rocks wouldn't be?
+sarah = player = laugh = You mix everything up.@What is alive is what is breathing.
+player = sarah = worry = If so, fire is alive…
+sarah = player = happy = Fire doesn't breathe, Rebecca. It…
+sarah = camille = fine = …
+sarah = player = happy = It just transforms oxygene.
+sarah = player = worry = Fine… In a way, it needs it to "live".
+sarah = player = worry = And in another way, it does "eat" and "reproduce".
+sarah = player = happy = But it does not think.@It's just fire.
+player = sarah = worry = You can't tell if it does think or not.
+player = sarah = happy = The thought among animals is just@a big electrical networks.
+sarah = player = wink = A big electrical AND organic networks!@That is the difference.
+player = sarah = laugh = Stop throwing out a new word without defining it@as soon as you want to justify your thinking.
+player = sarah = happy = The organs are well-crafted machines.
+player = sarah = happy = But the fundamental brick is the same@for everything : atoms.
+player = sarah = laugh = Of course, we are way more complex than rocks.
+player = sarah = happy = But… Maybe, they are primitive forms of life.
+player = sarah = happy_var = And maybe the whole planet is alive,@and that we look primitive to it.
+sarah = player = worry = Nah, that's too much…
+sarah = camille = you_silly_var = …
+sarah = player = happy = Yet, that's an interesting point of view.
+sarah = player = happy_var = Even if I don't share it…
+player = sarah = laugh = So much the better! That would be so boring@if we all were thinking the same way.
+
+
+% SARAH_REBECCA_THINK
+sarah = camille = you_silly_var = Living rocks…@This is so Rebecca…

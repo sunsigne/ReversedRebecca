@@ -1,0 +1,18 @@
+% HAPPY_ABOUT
+player = object = you_silly = It definitely was a good idea.
+
+
+% COLD
+player = object = worry = It's tastier when it's hot,@but it still should be good.
+
+
+% GREEDY_ABOUT
+player = object = angry_var2 = What did this frump think ?@I don't share my pancakes!
+
+
+% EVEN_BETTER_AFTER_DISPUTE
+rebecca = object = you_silly = After an argument, it's even tastier.
+
+
+% FINISHED_EATING
+player = object = happy_var = So good that I ate the plate!

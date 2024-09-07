@@ -1,2 +1,0 @@
-player = object = you_silly_var = Rebecca, you have no willpower…
-player = object = determinated = Hold out, you can do it!

@@ -1,3 +1,0 @@
-player = UP = sad_var = Let's see…@Where did I last see my keys…
-player = UP = surprised = Oh! I know!
-player = DOWN = laugh = I came home with groceries and@threw everything in the fridge.

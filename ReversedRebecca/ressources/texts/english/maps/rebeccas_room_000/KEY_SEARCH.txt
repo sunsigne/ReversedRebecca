@@ -1,0 +1,14 @@
+% BED
+player = object = laugh = Of couse! I probably slept with them@and they got lost in the sheets!
+
+
+% COUCH
+player = object = excited = Obviously! They must be in the couch!
+
+
+% CLOTHES_BASKET
+player = object = surprised = Ho!
+
+
+% DESK
+player = object = laugh = The perfect excuse to settle down and play!

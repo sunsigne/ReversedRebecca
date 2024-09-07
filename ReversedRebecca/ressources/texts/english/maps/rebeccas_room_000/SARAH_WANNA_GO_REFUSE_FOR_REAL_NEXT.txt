@@ -1,4 +1,0 @@
-sarah = player = happy = So, see you soon.
-player = object = happy_var = Yeah. Sure.
-
-

@@ -1,3 +1,25 @@
+% NEUTRAL
 player = DOWN = evil_var2 = Here's my chance, she's sleeping!
 player = DOWN = laugh = I would have loved to see the look on her@face when she'll realize I locked her up.
 player = DOWN = surprised = Oh! Here's an idea!
+
+
+% PANCAKES
+player = DOWN = evil_var2 = Here's my chance, she's sleeping!
+player = DOWN = laugh = I would have loved to see the look on her@face when she'll realize I locked her up.
+player = RIGHT = determinated = But for now, she's out of the question@to eat my pancakes.
+
+
+% TRASH
+player = LEFT = you_silly = As ever, I don't cast pearls before swine.
+player = DOWN = surprised = Oh! Here's an idea!
+
+
+% STEAL_PHONE
+player = DOWN = surprised = What a pity! Her phone fell in the toilet!
+player = DOWN = evil_var2 = Good luck calling for help.
+
+
+% STEAL_KEY
+player = DOWN = you_silly = I also took her keys, it may be useful.
+player = UP = evil_var2 = See you this evening, Sarah!

@@ -1,0 +1,26 @@
+% CANDLE
+player = object = happy_var = I love scented candles,@it helps me fall asleep.
+
+
+% BOOK
+player = object = happy_var = Final Space! What a great book!
+player = object = happy = It tells the story of Gary,@an intergalactic prisoner who…
+player = object = you_silly = …
+player = object = you_silly_var = I'm talking to myself, again…
+
+
+% DRESSER_CLOTHLESS
+player = object = unhappy = I have nothing left to wear…
+player = object = you_silly_var = No choice, I'll have to do the laundry.
+
+
+% BATH_EMPTY_WASHLESS
+player = LEFT = no_sens = Why did I do that?
+
+
+% PLANT_DESK_UNWATERABLE
+player = object = laugh = This plant is already in water,@it doesn't need me to water it.
+
+
+% PLANT_KITCHEN_UNWATERABLE
+player = object = happy_var = My aromatic herbs don't need me@to water them, it's often humid here.

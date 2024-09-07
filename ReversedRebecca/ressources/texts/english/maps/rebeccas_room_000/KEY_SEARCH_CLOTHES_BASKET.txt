@@ -1,2 +1,0 @@
-player = object = surprised = Ho!
-player = object = laugh = My keys aren't there, but@I found a coin in a pocket!

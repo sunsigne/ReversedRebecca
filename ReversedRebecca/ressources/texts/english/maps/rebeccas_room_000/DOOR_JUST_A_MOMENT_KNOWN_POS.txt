@@ -1,2 +1,0 @@
-player = UP = laugh = Just a second, I'll get the key!
-sarah = DOWN = happy = Ok, I'm waiting.

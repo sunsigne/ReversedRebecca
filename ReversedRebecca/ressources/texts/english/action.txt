@@ -1,30 +1,30 @@
-Require = require
+///// CLASSIC /////
 
-///// STAIRS /////
+TALK = Key1 % talk
+LISTEN = Key1 % listen
+WATCH = Key1 % watch
+READ = Key1 % read
+USE = Key1 % use
+SIT = Key1 % sit
+EXIT = Key1 % exit
 
-GoDown = go down
-GoUp = go up
+///// ENVIRONMENT /////
 
-///// CHEST /////
+TAKE = Key2 % take
+DRINK = Key2 % drink
+EMPTY = Key2 % empty
 
-Open = open
+///// PUZZLER /////
 
-///// DOOR /////
+OPEN = Key1 % open
+EXPLODE = Key1 % explode
+DIG = Key1 % dig
+HACK = Key1 % hack
 
-DoorLocked = locked
-DoorUnlock = unlock
+///// CHOICES /////
 
-///// RUBBLE /////
-
-RubbleBlocked = blocked
-RubbleExplode = explode
-
-///// COMPUTER /////
-
-ComputerProtected = protected
-ComputerHack = hack
-
-///// HOLE /////
-
-HoleLoose = soft soil
-HoleDig = dig
+WATER_TAKE = Key1 % pour water
+WATER_EMPTY = Key1 % empty water
+WATER_PLANT = Key2 % water
+APOLOGIZE = Key1 % apologize
+SAY_NOTHING = Key2 % say nothing

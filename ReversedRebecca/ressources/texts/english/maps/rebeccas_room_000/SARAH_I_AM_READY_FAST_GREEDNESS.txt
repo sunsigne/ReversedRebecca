@@ -1,5 +1,0 @@
-player = object = happy = I am ready! We can go!
-sarah = player = laugh = Already? Okay!
-sarah = player = happy = But first, let's go to my workshop.@This is where your surprise is.
-player = object = laugh = I suspected a little.@You are the best!
-sarah = player = wink = Don't forget it.

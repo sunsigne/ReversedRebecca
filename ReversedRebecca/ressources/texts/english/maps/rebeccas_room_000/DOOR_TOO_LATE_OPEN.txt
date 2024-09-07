@@ -1,2 +1,0 @@
-player = UP = unhappy = Yikes! I arrived too late.
-player = UP = worry = Too bad…@Next time, I will be faster.

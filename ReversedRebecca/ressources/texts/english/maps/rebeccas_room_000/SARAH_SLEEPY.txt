@@ -1,3 +1,0 @@
-player = sarah = happy = Want a blanket? A pillow ?
-sarah = DOWN = happy_var = That's nice, but I'm okay.
-sarah = DOWN = wink = Go get prepared. I'll be waiting here.

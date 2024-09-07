@@ -1,0 +1,20 @@
+% MAKE_COMFORTABLE
+player = object = worry = Don't be standing next the door while@I'm being prepared. Make comfortable.
+sarah = player = laugh = Don't worry, I will!@I'm just waiting for you to move a little bit.
+
+
+% OFFER_A_JUICE
+player = RIGHT = excited = SARAH! WANT A JUICE ?
+sarah = LEFT = laugh = NO, THANK!
+player = LEFT = you_silly = Just one for me, then.
+
+
+% SLEEPY
+player = sarah = happy = Want a blanket? A pillow ?
+sarah = DOWN = happy_var = That's nice, but I'm okay.
+sarah = DOWN = wink = Go get prepared. I'll be waiting here.
+
+
+% WAKE_UP
+player = object = you_silly_var = On second thought, I'll let her sleep.
+player = object = you_silly = No need to wake her up until I'm ready.

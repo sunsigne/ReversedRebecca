@@ -1,0 +1,65 @@
+% SEARCH_KITCHEN
+sarah = LEFT = asleep = *sniff* *sniff*
+sarah = player = laugh = It smells great!
+player = object = happy = Yes, I made pancakes this morning.
+
+
+% SEARCH_TABLE_DOWN
+sarah = DOWN = laugh = Oh! You made pancakes?@It smells great!
+
+
+% SEARCH_TABLE_RIGHT
+sarah = RIGHT = laugh = Oh! You made pancakes?@It smells great!
+
+
+% NOT_PROPOSED
+sarah = player = happy_var = I personally don't even know@how to cook pasta.
+
+
+% MAKE_MORE
+sarah = player = laugh = I won't say no!
+player = sarah = happy = Take a seat, I'll take care of everything.
+
+
+% WE_SHARE
+sarah = player = laugh = I won't say no!
+player = sarah = happy = Take a seat, I'll take an extra plate.
+
+
+% THANK
+sarah = DOWN = happy = Thank you, that's lovely.
+player = RIGHT = happy_var = My pleasure.
+
+
+% NOT_PROPOSED_NEXT
+sarah = player = happy = Anyway, How about we go to work together?
+
+
+% EATING_FINISHED
+sarah = DOWN = happy_var = So good that I ate the plate!
+player = RIGHT = laugh = Yeah, I did the same thing!
+sarah = DOWN = happy = Anyway, How about we go to work together?@That could be nice.
+player = RIGHT = excited = Sure! I'll let you know when I'm ready.
+sarah = DOWN = wink = Fine. Let's do this.
+
+
+% EATING_SHARED_FINISHED
+player = RIGHT = happy_var = So good that I ate the plate!
+sarah = DOWN = laugh = Yeah, I did the same thing!
+sarah = DOWN = happy = Anyway, How about we go to work together?@That could be nice.
+player = RIGHT = excited = Sure! I'll let you know when I'm ready.
+sarah = DOWN = wink = Fine. Let's do this.
+
+
+% EATING_POST_ARRIVAL_FINISHED
+player = RIGHT = happy_var = So good that I ate the plate!
+sarah = DOWN = laugh = Yeah, I did the same thing!
+sarah = DOWN = happy = If you don't mind, I will take a nap@while you get prepared.
+player = RIGHT = happy_var = Sure! I'll wake you up.
+
+
+% EATING_POST_ARRIVAL_FINISHED_AND_SLEEP
+player = RIGHT = happy_var = So good that I ate the plate!
+sarah = DOWN = laugh = Yeah, I did the same thing!
+sarah = DOWN = happy = Well, I'll go back to lie down.@Let me know when you're ready.
+player = RIGHT = happy_var = Sure!

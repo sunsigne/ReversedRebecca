@@ -1,2 +1,0 @@
-player = object = laugh = The perfect excuse to settle down and play!
-player = object = you_silly = Seriously, my keys are not there.

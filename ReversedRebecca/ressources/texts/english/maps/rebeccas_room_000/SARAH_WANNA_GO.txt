@@ -1,0 +1,28 @@
+% ACCEPT
+player = object = happy_var = Why not? I'll let you know when I'm ready.
+sarah = player = happy = Fine. Let's do this.
+
+
+% ACCEPT_BY_GREEDNESS
+player = object = happy_var = You know the words… Deal.@I'll let you know when I'm ready.
+sarah = player = happy = Fine. Let's do this.
+
+
+% REFUSE
+sarah = LEFT = sad = Oh…
+player = object = worry = It's not against you…@Next time, okay ?
+sarah = player = happy = Yeah…
+sarah = player = wink = But if it might change your mind,@I wanted to get you something on the way.
+
+
+% REFUSE_FOR_REAL
+player = object = worry = It's nice, but I prefer to go alone.
+player = object = happy = See you there anyway.
+sarah = player = fine = I get it.
+
+
+% REFUSE_FOR_REAL_NEXT
+sarah = player = happy = So, see you soon.
+player = object = happy_var = Yeah. Sure.
+
+

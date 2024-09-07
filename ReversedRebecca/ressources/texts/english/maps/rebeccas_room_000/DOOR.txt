@@ -1,0 +1,101 @@
+% FAKE_OPEN
+player = UP = laugh = Just a second, I'm opening!
+sarah = DOWN = happy = Ok, I'm waiting.
+player = UP = happy_var = …
+player = UP = surprised = Dear me… I was sure@I had left my keys in the lock…
+player = UP = worry = Eh… One moment!@I must find my keys!
+sarah = DOWN = laugh = This is so Rebecca!
+
+
+% MISSING_KEY
+player = UP = surprised = Dear me… I was sure@I had left my keys in the lock…
+
+
+% SEARCH
+player = DOWN = happy = I should probably take a tour of the@house again. I'll eventually come across it
+
+
+% JUST_A_MOMENT
+player = UP = laugh = Just a second, I'm looking for my keys!
+sarah = DOWN = laugh = This is so Rebecca!@Ok, I'm waiting.
+
+
+% I_OPENING
+player = UP = laugh = Just a second, I'm opening!
+sarah = DOWN = laugh = If you make it.
+
+
+% I_OPENING_FOR_REAL
+player = UP = laugh = There there, I'm opening!
+sarah = DOWN = laugh = If you make it.
+
+
+% RIGHT_HAND
+player = object = happy = How fun… I just realized that@I may be left-handed…
+player = DOWN = you_silly = I always use my right hand to open doors.
+
+
+% IS_OPEN
+player = UP = laugh = It's open!
+
+
+% TOO_LATE_FAKE_OPEN
+player = UP = laugh = Just a second, I'm opening!
+player = UP = happy_var = …
+player = UP = surprised = Dear me… I was sure@I had left my keys in the lock…
+player = UP = worry = Eh… One moment !@I must find my keys!
+
+
+% TOO_LATE_JUST_A_MOMENT_UNKNOWN_POS
+player = UP = laugh = Just a second, I'm looking for my keys!
+
+
+% TOO_LATE_I_OPENING
+player = UP = laugh = There there, I'm opening!
+
+
+% TOO_LATE_OPEN
+player = UP = unhappy = Yikes! I arrived too late.
+player = UP = worry = Too bad…@Next time, I will be faster.
+
+
+% TOO_LATE_WHOS_THERE
+player = UP = laugh = Who's there?
+player = UP = happy_var = …
+player = UP = happy_var = …
+player = UP = happy = …
+player = UP = unhappy = Yikes! I arrived too late.
+player = UP = worry = Too bad…@Next time, I will be faster.
+
+
+% WHOS_THERE_DOOR_OPEN
+player = UP = laugh = Who's there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!
+
+
+% WHOS_THERE_DOOR_FAKE
+player = UP = laugh = Who's there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!
+player = UP = laugh = I open the door right away!
+player = UP = happy_var = …
+player = UP = surprised = Yikes! I was sure@I had left my keys in the lock…
+player = UP = worry = Eh… One moment!@I must find my keys!
+sarah = DOWN = laugh = This is so Rebecca!
+
+
+% WHOS_THERE_JUST_A_MOMENT
+player = UP = laugh = Who's there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!
+player = UP = happy = Just a second, I'm looking for my keys!
+sarah = DOWN = laugh = This is so Rebecca!@Ok, I'm waiting.
+
+
+% WHOS_THERE_I_OPENING
+player = UP = laugh = Who's there?
+sarah = DOWN = happy = Sarah!
+player = UP = excited = Sarah!
+player = UP = happy = Just a second, I'm opening!
+sarah = DOWN = laugh = If you make it.

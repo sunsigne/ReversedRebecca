@@ -1,3 +1,0 @@
-sarah = player = angry = You mind?
-player = sarah = sad = Sorry, I wanted to see if I could@get locked in the toilet with you.
-sarah = player = angry = What is wrong with you? Get away!

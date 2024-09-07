@@ -1,3 +1,0 @@
-player = object = excited = Hi, Sarah! Sorry, it took a little time to open…
-sarah = player = laugh = Don't worry, I know you well.
-sarah = player = happy = Are you ready for work ?@I thought we could go together.

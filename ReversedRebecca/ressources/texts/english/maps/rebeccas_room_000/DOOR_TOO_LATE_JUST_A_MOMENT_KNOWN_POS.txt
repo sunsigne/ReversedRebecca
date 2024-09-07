@@ -1,1 +1,0 @@
-player = UP = laugh = Just a second, I'll get the key!

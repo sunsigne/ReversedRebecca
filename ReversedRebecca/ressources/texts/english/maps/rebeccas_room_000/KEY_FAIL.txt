@@ -1,0 +1,47 @@
+% BED
+player = object = happy_var = …
+player = object = unhappy = They are not here…
+
+
+% PLANT
+player = object = you_silly_var = On second thought, I'm pretty sure@they are not there.
+
+
+% NIGHTSTAND
+player = object = sad_var = Nothing here, I would have thought…
+
+
+% FURNITURE
+player = object = unhappy = No, they are not here…
+
+
+% BOOKSHELF
+player = object = worry = No keys here. I kinda expected that, anyway.
+
+
+% COUCH
+player = object = unhappy = Yikes… Where the hell did I put them…
+
+
+% CLOTHES_BASKET
+player = object = laugh = My keys aren't there, but I found a coin!
+
+
+% DESK
+player = object = you_silly = Seriously, my keys are not there.
+
+
+% DRESSER
+player = object = unhappy = Nothing… I thought I'd find them@in a clothing pocket.
+
+
+% FRIDGE
+player = object = you_silly_var = Not here, but the opposite would be odd.
+
+
+% TOILET
+player = object = angry_var2 = No.
+
+
+% WASHING_MACHINE
+player = object = worry = It looks like they are not here…@It could have been when you think about it.

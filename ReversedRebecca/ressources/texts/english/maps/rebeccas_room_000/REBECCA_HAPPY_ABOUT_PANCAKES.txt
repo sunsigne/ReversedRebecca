@@ -1,1 +1,0 @@
-player = object = you_silly = It definitely was a good idea.

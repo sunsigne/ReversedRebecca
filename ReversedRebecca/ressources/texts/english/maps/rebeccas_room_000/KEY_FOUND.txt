@@ -1,0 +1,45 @@
+% BED
+player = object = happy = I was right, here they are.
+
+
+% PLANT
+player = object = no_sens = My keys?! What are they doing in here…
+player = object = no_sens = …
+player = object = no_sens = …
+player = object = no_sens_var = No, I can't see…
+player = object = laugh = By the way, it's a miracle I found them!
+
+
+% FURNITURE
+player = object = laugh = Hah! Here are those playful things.
+
+
+% BOOKSHELF
+player = object = no_sens = My keys?! What are they doing in here…
+player = object = laugh = Ho! I remember! When I came home@I put them down to pick up a book.
+
+
+% COUCH
+player = object = laugh = I finally found those playful things.
+
+
+% DESK
+player = object = you_silly = Yet, the funniest part is they actually were here.
+
+
+% DRESSER
+player = object = laugh = Hah! I knew I would find them@in a clothing pocket.
+
+
+% FRIDGE
+player = object = no_sens = My keys?! What are they doing in here…
+player = object = laugh = Ho! I remember! I came home with groceries@and threw everything in the fridge.
+
+
+% TOILET
+player = object = despair = No way… They're in there… They must@have fallen out of my pocket the last time I…
+player = object = angry_var2 = Not a single word about it.@To anyone.
+
+
+% WASHING_MACHINE
+player = object = laugh = Here they are! I really should empty@my pockets BEFORE to do the laundry.

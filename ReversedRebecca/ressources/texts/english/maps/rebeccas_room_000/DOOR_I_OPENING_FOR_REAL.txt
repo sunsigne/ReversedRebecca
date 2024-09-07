@@ -1,2 +1,0 @@
-player = UP = laugh = There there, I'm opening!
-sarah = DOWN = laugh = If you make it.

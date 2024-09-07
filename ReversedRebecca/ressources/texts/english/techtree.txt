@@ -1,3 +1,5 @@
+REWARD1ONLY = Collect your reward
+REWARD2ONLY = Collect two rewards
 REWARD1 = Choose a reward
 REWARD2 = Choose two rewards
 

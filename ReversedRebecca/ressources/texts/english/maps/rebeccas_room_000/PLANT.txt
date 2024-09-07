@@ -1,0 +1,18 @@
+% GREET
+player = object = happy_var = Hi Vera, how are you this morning?
+
+
+% WATER_WATERLESS
+player = object = you_silly_var = I forgot to take water…
+
+
+% FIRST_WATER
+player = object = laugh = A good thing done!
+
+
+% N_WATER
+player = object = you_silly = "Too much water, kill the flower."
+
+
+% WATCH
+player = object = happy = Plants are so… soothing.

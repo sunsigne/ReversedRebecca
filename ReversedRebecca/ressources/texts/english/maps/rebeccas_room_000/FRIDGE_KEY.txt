@@ -1,2 +1,0 @@
-player = object = no_sens = My keys?! What are they doing in here…
-player = object = laugh = Ho! I remember! I came home with groceries@and threw everything in the fridge.

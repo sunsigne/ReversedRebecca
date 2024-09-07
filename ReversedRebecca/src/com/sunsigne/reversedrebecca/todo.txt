@@ -49,13 +49,7 @@
 
 	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
-	8h00 traduction anglais (+ tester :
-	- philosoper avec sarah
-	- la bibliothèque (philosophie, cheveux & coloc')
-	- DOOR*SEARCH
-	- KEY_FOUND
-	- sarah_otehr*make_comfortable
-	)
+	8h00 traduction anglais
 
 	BUG :
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé

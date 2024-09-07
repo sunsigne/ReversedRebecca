@@ -30,3 +30,6 @@ ThatWasAnAccidentTitle = That was an accident...
 ThatWasAnAccidentText = Die because of a couch
 
 ///// PURPLE /////
+
+NothingNextTitle = Well played! But...
+NothingNextText = The game didn't plan no sequel

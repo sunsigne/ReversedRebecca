@@ -1,4 +1,0 @@
-player = RIGHT = happy_var = So good that I ate the plate!
-sarah = DOWN = laugh = Yeah, I did the same thing!
-sarah = DOWN = happy = Well, I'll go back to lie down.@Let me know when you're ready.
-player = RIGHT = happy_var = Sure!
