@@ -6,6 +6,7 @@ player = object = worry = Je voulais m'en acheter plus, mais@je ne trouve jamais
 sarah = player = laugh = Non, je ris parce que j'ai le même meuble,@alors que j'ai encore moins de livres que toi.
 player = object = laugh = Ha !
 
+
 % HAIR
 player = object = happy = …
 sarah = UP = worry = ?
@@ -19,6 +20,7 @@ sarah = player = happy = Je pensais justement les raccourcir,@à cause de ça.
 player = object = happy = En tout cas, ça te va bien.
 sarah = player = happy_var = Merci, c'est gentil.
 
+
 % LIFE
 sarah = player = determinated = Dis-moi, d'après ta théorie,@tes livres sont vivants du coup…
 player = sarah = happy_var = C'est exact.
@@ -31,6 +33,7 @@ sarah = player = laugh = Au moins tu es cohérente dans ta logique.
 player = sarah = happy_var = Cohérence, c'est mon deuxième prénom !
 sarah = player = wink = Ha bon ? Ça n'est plus Nathalie ?
 player = sarah = y u_silly_var = Très amusant…
+
 
 % ROOMMATE
 sarah = player = happy = Au fait, comment va ta coloc' ?

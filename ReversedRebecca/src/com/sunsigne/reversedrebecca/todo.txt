@@ -39,10 +39,23 @@
 	0h30 map "dave_psychopathe" obj NPC-001, end_lvl -> redirige vers une map buguée "rr001"
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
-	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!! + droits à demander : les drapeaux + autres ?
+	15h00 - s'assurer de ne pas avoir de pb de droits avec les images !!!! + droits à demander : 
+	- drapeaux
+	- sablier
+	- disco ball
+	- music soundraw
+	- music dano
+	(c'est tout. Oui, j'ai vérifié.)
+
 	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
-	8h00 traduction anglais
+	8h00 traduction anglais (+ tester :
+	- philosoper avec sarah
+	- la bibliothèque (philosophie, cheveux & coloc')
+	- DOOR*SEARCH
+	- KEY_FOUND
+	- sarah_otehr*make_comfortable
+	)
 
 	BUG :
 	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
@@ -349,7 +362,7 @@
 	8h00 - la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
 	
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / Tant mieux -> So much the better.
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 	
 	rr000:
