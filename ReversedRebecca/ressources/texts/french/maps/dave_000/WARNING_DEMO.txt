@@ -1,0 +1,16 @@
+% FIRST_TIME
+dave = DOWN = camera = Au fait ! Dans ce jeu, tes choix@sont vraiment pris en compte.
+
+% SECOND_TIME
+dave = DOWN = camera = Re-bonjour.
+
+% KEYS
+dave = DOWN = camera = Est-ce que tu avais remarqué ?
+dave = DOWN = camera = Les clefs dans l'appartement de Rebecca sont@toujours au 3ème endroit où tu les cherches.
+
+% WHAT
+alicia = DOWN = surprised_var = Qu'est-ce que je fais là, moi ?
+
+% BOLTS
+dave = DOWN = camera = Fait amusant :
+dave = DOWN = camera = Les giraffe ont 30 fois plus de chances@d'être frappé par la foudre que les humains.

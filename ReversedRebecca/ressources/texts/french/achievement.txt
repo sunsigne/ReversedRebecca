@@ -17,6 +17,8 @@ FirstKillText = Eliminer Alicia
 
 BrokenHeartTitle = Coeur Brise
 BrokenHeartText = Refuser de sortir avec Marie
+ThatWasAnAccidentTitle = C'etait un accident...
+ThatWasAnAccidentText = Mourir a cause d'un canape
 GoldenShowerTitle = Golden Shower
 GoldenShowerText = Se faire uriner dessus...
 TerminatedTitle = EXTERMINATION !
@@ -26,8 +28,8 @@ TerminatedText = Mort definitive sur un terminator
 
 ///// RED /////
 
-ThatWasAnAccidentTitle = C'etait un accident...
-ThatWasAnAccidentText = Mourir a cause d'un canape
+SignOfStoppingTitle = Signe pour t'arreter
+SignOfStoppingText = relancer le jeu 5 fois
 
 ///// PURPLE /////
 

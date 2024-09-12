@@ -39,7 +39,7 @@
 	0h30 map "dave_psychopathe" obj NPC-001, end_lvl -> redirige vers une map buguée "rr001"
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
-	6h00 dave présentateur + toute la partie Dave (s'assurer de noter conscientieusement qu'elles sont TOUS les messages de dave dans un excel ? il ne faudrait pas chevaucher pluseurs possibilité de dialogues sans le savoir)
+	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	8h00 traduction anglais
 
@@ -66,6 +66,8 @@
 	- partie "VERSION PUBLIQUE"
 	- partie "DAVE"
 	- partie "TRADUCTION"
+		
+	1h00 réattribuer l'empalcement des achievement en fonction de s'ils sont cachés ou non ?
 		
 	////////// EXPERIENCE UTILISATEUR ////////////
 

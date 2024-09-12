@@ -1,0 +1,20 @@
+% FIRST
+dave = DOWN = camera = Tu n'en as pas marre de rouvrir et de refermer@le jeu en boucle pour voir tout ce que j'ai à dire ?
+dave = DOWN = camera = Si tu cherches un signe pour t'arrêter, le voici :
+
+% SECOND
+dave = DOWN = camera_happy = Quoi ? Tu attends l'écran titre, peut-être ?
+dave = DOWN = camera = À quoi ça te servirait ? Tu n'arrêtes pas@de le quitter aussitôt qu'il s'affiche…
+dave = DOWN = camera_happy = En te gardant avec moi ici, au moins tu as@l'impression qu'il se passe quelque chose.
+
+% THIRD
+dave = DOWN = camera = Ce suspense ! Vais-je encore dire quelque@chose si tu attends assez longtemps ?
+
+% FOURTH
+dave = DOWN = intrigued = Qu'est-ce qu'on s'amuse, hein ?@Restez tous les deux ici, à ne rien faire…
+
+% FIFTH
+dave = DOWN = intrigued = Vraie question : tu t'amuses vraiment, là ?@À regarder 120 pixels colorés, sur un fond noir ?
+
+% LAST
+dave = DOWN = camera = Ok, j'abandonne. Je m'ennuie.@On se voit plus tard.
