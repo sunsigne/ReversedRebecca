@@ -21,6 +21,8 @@
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
 		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
+		- 1h00 le wall pass mode ne marche plus
+		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		
 	vérifier si bien réglé :
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
@@ -42,9 +44,6 @@
 	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	8h00 traduction anglais
-
-	BUG :
-	0h30 - RR000 lui faire et partager les crêpes avec Sarah = elle n'affiche plus "je suis prête" tant qu'elle n'a pas atteint le canapé
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
