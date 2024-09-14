@@ -50,9 +50,6 @@
 
 	EXPERIENCE UTILISATEUR :
 	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
-	
-	DESSIN :
-	1h30 - attention, la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli). Elle est actuellement sur la couche Piranha
 
 	VIE & HP :
 	2h00 - Alicia qui tue en difficile DOIT être un game over
@@ -110,7 +107,8 @@
 	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
 
 	////////// DESSIN ////////////
-
+	
+	(pas à faire, mais à ne pas oublier cette règle) lvl001 - la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli).
 	12h00 - KOAnimation dans les 4 direction ? seulement dans 2 (UP & DOWN) ?
 	12h00 - créer une animation "sick" pour quand on marche	 ?
 	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
