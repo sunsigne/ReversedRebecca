@@ -20,7 +20,7 @@ SEARCH_KEY_SHORT = Key3 % search
 ///// DESK /////
 
 PLAY = Key1 % play
-PLAY_ANYWAY = Key1 % play anyway
+PLAY_ANYWAY = Key1 % play regardless
 JUST_ONE_GAME = Key1 % just one game...
 I_AM_WEAK = Key1 % I am weak...
 ASK_FOR_KEY = Key3 % where are my keys?
