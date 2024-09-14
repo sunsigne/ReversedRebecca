@@ -31,14 +31,19 @@
 	////////// TEMP ////////////
 
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
+	lvl001 : redirection du end_lvl vers "dave_end"
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
-	EndLevelRequest : le jeu est actuellement redirigé vers l'écran test de démo
 	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
+	la classe DemoEndScreen :
+	(
+	musique : 3 Joys & the Truth - clapless version
+	texture other : les éléments de demoend
+	)
+
 
 	////////// EN COURS ////////////
 
-	0h30 map "dave_psychopathe" obj NPC-001, end_lvl -> redirige vers une map buguée "rr001"
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
@@ -47,9 +52,6 @@
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
-
-	EXPERIENCE UTILISATEUR :
-	24h00 - retravailler l'écran de fin de jeu (de jeu ! pas de "niveau" -> mettre à jour les captures d'écran du futur jeu) -> préciser les choses non faites : sortir avec Marie, séquestrer Sarah, crier sur Joseph avec un témoin (Alicia a une réaction particulièrement intéressante)
 
 	VIE & HP :
 	2h00 - Alicia qui tue en difficile DOIT être un game over
@@ -339,19 +341,17 @@
 	anges pleureurs
 	silence (Dr Who)
 	escargot
+	la mort (la grande faucheuse directement)
 	luther + cursed 3 (TOUS les objets qui bougent et l'écran qui dégouline)
 	cafard & araignées (Rebecca a peur de l'un, Sarah de l'autre. Ca peut même devenir la mécanique pour passer ?)
 	
 	////////// TRADUCTION ////////////
 	
-	8h00 - la traduction en anglais n'est pas fini ! (nottament les interactions du rr000)
+	8h00 - la traduction en anglais n'est pas fini !
 	
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
 	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
-	
-	rr000:
-	traduire "jouer quand même" par "play regardless"
 
 	lvl001 :
 	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT

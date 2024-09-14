@@ -7,27 +7,29 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.World;
 
-public class DemoEndScreen implements Updatable {
+public class DemoEndScreen implements Updatable, SheetableImage {
 
 	public DemoEndScreen() {
+		new Save().resetProgression();
+
 		loadImages();
 		loadMusic();
-
 		loadText();
-		createContinueButton();
 	}
 
 	private void loadMusic() {
-		new SoundTask().playMusic("3_Joys_&_the_Truth", false, false);
+		new SoundTask().playMusic("3 Joys & the Truth - clapless version", false, false);
 	}
 
 	////////// TICK ////////////
@@ -87,8 +89,10 @@ public class DemoEndScreen implements Updatable {
 			displayer[17] = true;
 		if (time == t0 + 29 * DELAY)
 			displayer[18] = true;
-		if (time == t0 + 31 * DELAY)
+		if (time == t0 + 31 * DELAY) {
 			displayer[19] = true;
+			createContinueButton();
+		}
 
 		if (time < t0 + 31 * DELAY)
 			return;
@@ -108,7 +112,7 @@ public class DemoEndScreen implements Updatable {
 
 		text[1] = "Dans le jeu final :";
 		text[2] = "- des dizaines de mini-jeux";
-		text[3] = "- plus de 6 fins differents";
+		text[3] = "- plus de 8 fins differents";
 		text[4] = "- des voyages dans le temps";
 		text[5] = "- pres de 40 niveaux";
 		text[6] = "Et plein d'autres surprises";
@@ -125,19 +129,36 @@ public class DemoEndScreen implements Updatable {
 	////////// TEXTURE ////////////
 
 	private BufferedImage[] image = new BufferedImage[8];
+	private BufferedImage rebecca;
+
+	@Override
+	public int getSheetColCriterion() {
+		return -1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
 
 	private void loadImages() {
-		String path = "textures/other/";
+		rebecca = new ImageTask().loadImage("textures/menu/title");
 
-		image[0] = new ImageTask().loadImage(path + "Capture1");
-		image[1] = new ImageTask().loadImage(path + "Capture2");
-		image[2] = new ImageTask().loadImage(path + "Capture3");
+		String path = "textures/other/demoend_";
+		BufferedImage sheet = null;
+		sheet = new ImageTask().loadImage(path + "puzzle");
 
-		image[3] = new ImageTask().loadImage(path + "QR-steam_1");
-		image[4] = new ImageTask().loadImage(path + "QR-steam_2");
-		image[5] = new ImageTask().loadImage(path + "QR-steam_3");
-		image[6] = new ImageTask().loadImage(path + "QR-steam_4");
-		image[7] = new ImageTask().loadImage(path + "QR-steam_5");
+		image[0] = getSheetSubImage(sheet, 1, 1, 1792, 1024);
+		image[1] = getSheetSubImage(sheet, 2, 1, 1792, 1024);
+		image[2] = getSheetSubImage(sheet, 3, 1, 1792, 1024);
+
+		sheet = new ImageTask().loadImage(path + "qr");
+
+		image[3] = getSheetSubImage(sheet, 1, 1, 300, 300);
+		image[4] = getSheetSubImage(sheet, 2, 1, 300, 300);
+		image[5] = getSheetSubImage(sheet, 3, 1, 300, 300);
+		image[6] = getSheetSubImage(sheet, 4, 1, 300, 300);
+		image[7] = getSheetSubImage(sheet, 5, 1, 300, 300);
 	}
 
 	////////// RENDER ////////////
@@ -153,7 +174,10 @@ public class DemoEndScreen implements Updatable {
 		g.setColor(Color.WHITE);
 
 		g.setFont(title_font);
-		g.drawString(text[0], 470, 150);
+		int size = 300;
+		g.drawImage(rebecca, Window.WIDHT / 2 - size - 50, 0, 2 * size, size, null);
+		text[0] = "";
+		g.drawString(text[0], 470, 210);
 
 		g.setFont(font);
 		drawFistPage(g);
@@ -163,7 +187,7 @@ public class DemoEndScreen implements Updatable {
 	private void drawFistPage(Graphics g) {
 		int gap = 70;
 		int x0 = 30;
-		int y0 = 370;
+		int y0 = 400;
 
 		if (displayer[1])
 			g.drawString(text[1], x0 + 180, y0);
@@ -190,7 +214,7 @@ public class DemoEndScreen implements Updatable {
 	}
 
 	private void drawSecondPage(Graphics g) {
-		int y0 = -15;
+		int y0 = 15;
 
 		if (displayer[11])
 			g.drawString(text[7], 605, y0 + 340);
@@ -219,13 +243,13 @@ public class DemoEndScreen implements Updatable {
 	////////// BUTTON ////////////
 
 	private void createContinueButton() {
-		GenericListener onPress = () -> loadTitleScreen();
+		GenericListener onPress = () -> new Conductor().stopApp();
 
 		ButtonObject button = new ButtonObject(null, 0, 0, Window.WIDHT, Window.HEIGHT, onPress, null) {
 
 			@Override
 			public boolean isSelected() {
-				return (time > 50 + 31 * DELAY);
+				return true;
 			}
 
 			@Override
@@ -234,16 +258,6 @@ public class DemoEndScreen implements Updatable {
 			}
 		};
 		LAYER.MENU.addObject(button);
-	}
-
-	private void loadTitleScreen() {
-		LAYER.LOADING.addObject(new LoadingScreen());
-
-		if (World.get() != null)
-			World.get().destroy();
-		new TitleScreen(TitleScreen.PLAY);
-
-		LAYER.LOADING.getHandler().clear();
 	}
 
 }

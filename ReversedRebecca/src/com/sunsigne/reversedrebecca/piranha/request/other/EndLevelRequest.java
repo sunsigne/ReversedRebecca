@@ -1,10 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.DemoEndScreen;
 import com.sunsigne.reversedrebecca.menu.LevelCompletedScreen;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
-import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -12,8 +10,6 @@ import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
-import com.sunsigne.reversedrebecca.system.DifficultyOption;
-import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class EndLevelRequest implements Request {
@@ -77,19 +73,11 @@ public class EndLevelRequest implements Request {
 
 		case "END_GAME":
 			World.get().destroy();
-			loadTestMap();
-			//LAYER.MENU.addObject(new DemoEndScreen());
+			LAYER.MENU.addObject(new DemoEndScreen());
 			break;
 		}
 	}
 
-	private void loadTestMap() {
-		DifficultyOption.setDifficulty(GAME_DIFFICULTY.NORMAL);
-		LAYER.MENU.getHandler().clear();
-		new World(FilePath.TEST);
-		ToolList.getList().getList().forEach(tempTool -> tempTool.setMaxDifficulty(LVL.RED));
-	}
-	
 	private void quiteEndLevel(String lvlmenu, String lvl) {
 		// tutorial case
 		if (lvlmenu.contains(FilePath.LVL000) && lvl.contains(FilePath.LVL000)) {
