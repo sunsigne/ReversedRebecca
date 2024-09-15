@@ -33,6 +33,7 @@ INSIST = Key1 % insister
 YOUR_BROTHER = Key1 % ton frère ?
 WAS_IT_HIM_TODAY = Key1 % ... c'était lui aujourd'hui ?
 KEEP_CHATTING = Key1 % contiuer à bavarder
+RECEPTION = Key1 % accueil ?
 ASK_DIRECTIONS = Key1 % demander son chemin
 ONE_MORE_THING = Key1 % une dernière chose...
 

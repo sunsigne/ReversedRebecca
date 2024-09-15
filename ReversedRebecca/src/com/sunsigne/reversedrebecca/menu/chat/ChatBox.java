@@ -126,6 +126,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
 		String text = line.contains("=") ? line.split("=")[3] : line;
+		text = text.replace("\"0/0\"", "%");
 
 		content = new ChatContent(formated_living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);

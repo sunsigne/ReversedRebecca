@@ -80,7 +80,7 @@ delta = rebecca = excited = Au plaisir ma grande.
 % JUST_CHECKING
 rebecca = object = worry = Juste pour être sûre… C'est pas ton frère@qui a fait le coup aujourd'hui, si ?
 delta = rebecca = laugh_var = Ha ha ha ha !
-delta = rebecca = wink = Non. Il sait où je travaille. Il ne me ferait pas@ce coup là. Crois-moi, c'était 100% pas lui.
+delta = rebecca = wink = Non. Il sait où je travaille. Il ne me ferait pas@ce coup là. Crois-moi, c'était 100"0/0" pas lui.
 rebecca = object = laugh = Ok, si tu le dis.
 
 
@@ -128,7 +128,7 @@ rebecca = object = happy = Bon je m'y mets.
 delta = rebecca = laugh = Oui, oui… C'est pas comme si c'était@la quatrième fois que tu disais ça.
 
 
-% WHERE_DO_I_FIND_STOLEN
+% WHOS_THE_INTRUDER
 rebecca = object = happy = Delta ?
 delta = rebecca = laugh = Alala ! Ta pauvre enquête va longtemps@rester non résolue, on dirait !
 rebecca = object = happy_var = Il faut croire que je t'aime bien.
@@ -157,20 +157,13 @@ delta = rebecca = laugh = Aller, va nous sauver, "madame l'aventurière".
 rebecca = object = happy_var = Oui, cette fois, je m'y mets vraiment.
 
 
-% WHERE_DO_I_FIND_KEY
+% WHERE_DO_I_FIND_RECEPTION
 rebecca = object = happy = Delta ?
-delta = rebecca = laugh = Alala ! cette salle des visiteurs va longtemps@rester sans visite, on dirait !
+delta = rebecca = laugh = Alala ! L'accueil n'est pas prêt de recevoir@ta visite, on dirait !
 rebecca = object = happy_var = Il faut croire que je t'aime bien.
-rebecca = object = happy = Plus sérieusement. Tu saurais comment je fais@pour déverrouiller l'accès jusque là-bas ?
-delta = rebecca = happy_var = Pas en restant ici à me parler, déjà.
-rebecca = object = laugh = Je m'en doute,@mais tu as une réponse plus précise ?
-delta = rebecca = happy = J'ai un double des clés de la porte@d'à-côté, si ça peut t'aider.
-rebecca = object = sad_var = J'ai déjà ces clés-là.
-delta = rebecca = no_sens = Je m'en doutais, tu me@les aurais déjà demandées, sinon.
-delta = rebecca = smile = Désolé, je ne pense pas pouvoir t'aider.
-rebecca = object = happy_var = Merci quand même.@Et puis, c'était sympa de discuter !
-delta = rebecca = excited = Plaisir partagé, ma grande !
-rebecca = object = happy = Aller, cette fois, je m'y mets vraiment.
+rebecca = object = happy = Plus sérieusement. Tu saurais comment@je fais pour aller jusqu'à là-bas ?
+delta = rebecca = wink = À droite, après le SAS.
+rebecca = object = happy = Merci ! Cette fois, je m'y mets vraiment.
 
 
 % LOST

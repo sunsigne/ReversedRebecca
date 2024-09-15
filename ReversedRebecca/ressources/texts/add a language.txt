@@ -7,3 +7,4 @@ To add a new language, proceed as follows :
 That's it.
 
 Note : the game cannot display more than 12 languages.
+Note : during a dialogue, if you NEED a character to say %, write "0/0" instead : the game will convert it.
