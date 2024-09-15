@@ -32,6 +32,7 @@
 
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	lvl001 : redirection du end_lvl vers "dave_end"
+	lvl001 : talked FATALITY - Alicia qui tue est actuellement un end_lvl vers les crédit ou l'écran titre du jeu.
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
@@ -43,6 +44,11 @@
 
 
 	////////// EN COURS ////////////
+
+	lvl001 :
+	joseph qui donne les clef quand demandé regarde vers le bas (ou lieu de la bibliothèque)
+	si clefs cyan récupéré sur l'ordi, delta ne donne pas le tuyau pour le sas. A corriger ?
+	Alicia est bloqué devant jospeh si on ne choisi pas une option
 
 	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + erreur de fichier dialogue -> rapport d'erreur -> vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
@@ -120,6 +126,7 @@
 	////////// VIE & HP ////////////
 	
 	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
+	2h00 - Alicia qui tue en difficile DOIT être un game over
 	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
 	5h00 - créer un moyen de recuppérer de la vie (j'avais pensé à un % de chance croissant par hp manquant du boss de tirer des coeurs à la place des bombes, mais ça ne serait valable que pendant les combats du coup. Ca peut être un choix définitif si la vie du joueur n'est pas constamment menacée, mais il faudrait probablement afficher les coeur tout le temps pendant la run psycopath, pour montrer que pour Rebecca tout est une question de vie ou de mort. Ca serait même l'ocassion de dessiner des coeurs plus lugubres ou menaçant)
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
