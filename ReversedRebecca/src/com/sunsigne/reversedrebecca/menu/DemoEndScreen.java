@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
@@ -67,7 +68,7 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 			displayer[9] = true;
 		if (time == t0 + 15 * DELAY)
 			displayer[10] = true;
-
+		
 		t0 = t0 + 10;
 		if (time == t0 + 17 * DELAY) {
 			for (int index = 0; index <= 10; index++)
@@ -101,6 +102,7 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 			displayer[19] = false;
 		else
 			displayer[19] = true;
+			
 	}
 
 	////////// TEXT ////////////
@@ -108,19 +110,35 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 	private String[] text = new String[11];
 
 	private void loadText() {
-		text[0] = "Merci d'avoir joue";
+		text[0] = "Thank for playing";
 
-		text[1] = "Dans le jeu final :";
-		text[2] = "- des dizaines de mini-jeux";
-		text[3] = "- plus de 8 fins differents";
-		text[4] = "- des voyages dans le temps";
-		text[5] = "- pres de 40 niveaux";
-		text[6] = "Et plein d'autres surprises";
+		text[1] = "In the full game:";
+		text[2] = "- dozens of mini-games";
+		text[3] = "- more than 8 endings";
+		text[4] = "- time travels";
+		text[5] = "- around 40 levels";
+		text[6] = "And many other surprises";
 
-		text[7] = "La page steam du jeu :";
-		text[8] = "L'ajouter a votre liste de souhait";
-		text[9] = "c'est aider a son developpement";
-		text[10] = "Cliquez pour quitter";
+		text[7] = "The game's steam page:";
+		text[8] = "Adding it to your wishlist";
+		text[9] = "is helping its development";
+		text[10] = "Click to quit";
+
+		if (Language.getInstance().getLang().equalsIgnoreCase("french")) {
+			text[0] = "Merci d'avoir joue";
+
+			text[1] = "Dans le jeu final :";
+			text[2] = "- des dizaines de mini-jeux";
+			text[3] = "- plus de 8 fins differents";
+			text[4] = "- des voyages dans le temps";
+			text[5] = "- pres de 40 niveaux";
+			text[6] = "Et plein d'autres surprises";
+
+			text[7] = "La page steam du jeu :";
+			text[8] = "L'ajouter a votre liste de souhait";
+			text[9] = "c'est aider a son developpement";
+			text[10] = "Cliquez pour quitter";
+		}
 
 		for (int index = 0; index < text.length; index++)
 			text[index] = text[index].toUpperCase();
@@ -189,20 +207,26 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 		int x0 = 30;
 		int y0 = 400;
 
+		int x1[] = {215, 105, 115, 225, 165, 400, 90};
+		
+		if (Language.getInstance().getLang().equalsIgnoreCase("french")) {
+			x1 = new int[] {180, 45, 45, 45, 128, 400, 50};
+		}
+		
 		if (displayer[1])
-			g.drawString(text[1], x0 + 180, y0);
+			g.drawString(text[1], x0 + x1[0], y0);
 		if (displayer[2])
-			g.drawString(text[2], x0 + 45, y0 + 30 + gap);
+			g.drawString(text[2], x0 + x1[1], y0 + 30 + gap);
 		if (displayer[3])
-			g.drawString(text[3], x0 + 45, y0 + 30 + 2 * gap);
+			g.drawString(text[3], x0 + x1[2], y0 + 30 + 2 * gap);
 		if (displayer[4])
-			g.drawString(text[4], x0 + 45, y0 + 30 + 3 * gap);
+			g.drawString(text[4], x0 + x1[3], y0 + 30 + 3 * gap);
 		if (displayer[5])
-			g.drawString(text[5], x0 + 125, y0 + 30 + 4 * gap);
+			g.drawString(text[5], x0 + x1[4], y0 + 30 + 4 * gap);
 		if (displayer[6])
-			g.drawString("...", x0 + 400, y0 + 30 + 5 * gap);
+			g.drawString("...", x0 + x1[5], y0 + 30 + 5 * gap);
 		if (displayer[7])
-			g.drawString(text[6], x0 + 50, y0 + 30 + 6 * gap + 10);
+			g.drawString(text[6], x0 + x1[6], y0 + 30 + 6 * gap + 10);
 
 		float size = 0.34f;
 		if (displayer[8])
@@ -230,14 +254,20 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 		if (displayer[16])
 			g.drawImage(image[7], 780, y0 + 410, 300, 300, null);
 
+		int x1[] = {540, 540, 710};
+		
+		if (Language.getInstance().getLang().equalsIgnoreCase("french")) {
+			x1 = new int[] {430, 485, 590};
+		}
+		
 		if (displayer[17])
-			g.drawString(text[8], 430, y0 + 810);
+			g.drawString(text[8], x1[0], y0 + 810);
 		if (displayer[18])
-			g.drawString(text[9], 485, y0 + 880);
+			g.drawString(text[9], x1[1], y0 + 880);
 
 		g.setFont(button_font);
 		if (displayer[19])
-			g.drawString(text[10], 590, 1030);
+			g.drawString(text[10], x1[2], 1030);
 	}
 
 	////////// BUTTON ////////////

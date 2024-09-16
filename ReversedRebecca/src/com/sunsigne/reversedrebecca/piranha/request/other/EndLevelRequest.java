@@ -74,6 +74,7 @@ public class EndLevelRequest implements Request {
 		case "END_GAME":
 			World.get().destroy();
 			LAYER.MENU.addObject(new DemoEndScreen());
+			LAYER.LOADING.getHandler().clear();
 			break;
 		}
 	}
