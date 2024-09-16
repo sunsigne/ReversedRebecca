@@ -148,6 +148,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 	private void stopApp() {
 		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
+		System.err.println("An error has occurred on the map \"" + World.get().getMapName() + "\" : file \"" + value
+				+ "\" incorrect format or missing");
 		JOptionPane.showMessageDialog(null,
 				"An error has occurred : file \"" + value + "\" incorrect format or missing");
 		new Conductor().stopApp();
