@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class TalkAction extends PiranhaObjectAction {
 
@@ -43,7 +44,11 @@ public class TalkAction extends PiranhaObjectAction {
 			String tag = superTarget[1];
 			path = path.concat(fileTarget + ".txt");
 
-			String dialogue = new Translatable().getTranslatedText(null, path);
+			String dialogue = World.get().getSpecialDialogue(target);
+			if (dialogue == null)
+				dialogue = new Translatable().getTranslatedText(null, path);
+			else
+				tag = null;
 
 			ChatBox chatbox = new ChatBox(object, target, dialogue, tag);
 			chatbox.openChat();

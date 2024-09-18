@@ -11,6 +11,7 @@ public class FilePath {
 	public static final String RESSOURCES_PATH = Infos.IS_DEV_VERSION ? "ressources/" : "";
 	public static final String USERDATA_PATH = Infos.IS_DEV_VERSION ? "userdata/"
 			: System.getenv("APPDATA").replace("\\", "/") + "/" + Infos.NAME + "/";
+	public static final String DAVEDATA_PATH = "https://raw.githubusercontent.com/sunsigne/DaveData/main/";
 
 	public static final String ACHIEVEMENT = "achievement.txt";
 	public static final String ACTION = "action.txt";
@@ -21,10 +22,10 @@ public class FilePath {
 	public static final String PUZZLER = "puzzler.txt";
 	public static final String TECHTREE = "techtree.txt";
 	public static final String TOOL = "tool.txt";
-	
+
 	public static final String TEST = "test";
 	public static final String TUTORIAL = "tutorial";
 	public static final String DAVE000 = "dave_000";
 	public static final String LVL000 = "rebeccas_room_000";
-	
+
 }

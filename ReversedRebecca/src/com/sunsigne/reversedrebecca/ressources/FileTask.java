@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.ressources;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,6 +15,20 @@ import com.sunsigne.reversedrebecca.pattern.FormattedString;
 public class FileTask {
 
 	////////// USEFUL ////////////
+
+	public boolean doesExist(URL url) {
+		boolean exist = false;
+
+		try {
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("HEAD");
+			exist = connection.getResponseCode() == HttpURLConnection.HTTP_OK;
+		} catch (IOException e) {
+			// invalide URL or no connection
+		}
+
+		return exist;
+	}
 
 	public boolean doesExist(boolean userData, String path) {
 		String folder = userData ? FilePath.USERDATA_PATH : FilePath.RESSOURCES_PATH;
@@ -57,33 +73,58 @@ public class FileTask {
 		try {
 			if (file.exists()) {
 				scan = new Scanner(file, "UTF-8");
-				boolean flag = false;
-
-				// read the whole file
-				if (valueToRead == null) {
-					while (scan.hasNextLine()) {
-						if (!flag) {
-							content = content.concat(getFormattedText(txt, scan.nextLine()));
-							flag = true;
-						} else
-							content = content
-									.concat(System.getProperty("line.separator") + getFormattedText(txt, scan.nextLine()));
-					}
-				}
-
-				// read one specific value
-				else {
-					while (scan.hasNextLine()) {
-						String line = getFormattedText(txt, scan.nextLine());
-						if (line.split("=")[0].equalsIgnoreCase(valueToRead))
-							content = line.split("=")[1];
-					}
-				}
-
+				content = scanText(scan, valueToRead, txt);
 				scan.close();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+
+		return content;
+	}
+
+	public String readOnline(String path) {
+		URL url;
+		Scanner scan = null;
+		String content = "";
+
+		try {
+			url = new URL(FilePath.DAVEDATA_PATH + path);
+			if (doesExist(url)) {
+				scan = new Scanner(url.openStream(), "UTF-8");
+				content = scanText(scan, null, true);
+				scan.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return content;
+	}
+
+	private String scanText(Scanner scan, String valueToRead, boolean txt) {
+		String content = "";
+		boolean flag = false;
+
+		// read the whole file
+		if (valueToRead == null) {
+			while (scan.hasNextLine()) {
+				if (!flag) {
+					content = content.concat(getFormattedText(txt, scan.nextLine()));
+					flag = true;
+				} else
+					content = content
+							.concat(System.getProperty("line.separator") + getFormattedText(txt, scan.nextLine()));
+			}
+		}
+
+		// read one specific value
+		else {
+			while (scan.hasNextLine()) {
+				String line = getFormattedText(txt, scan.nextLine());
+				if (line.split("=")[0].equalsIgnoreCase(valueToRead))
+					content = line.split("=")[1];
+			}
 		}
 
 		return content;

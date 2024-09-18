@@ -45,7 +45,7 @@
 
 	////////// EN COURS ////////////
 
-	3h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
+	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
 	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
@@ -53,9 +53,6 @@
 
 	DAVE : 
 	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
-
-	VIE & HP :
-	2h00 - Alicia qui tue en difficile DOIT être un game over
 
 	LVL001 :
 	1h00 - quand on est sadique l'objet 50 et le dialogue player_leaving devraient s'adapter -> faire l'inverser ? chercher la proximité du joueur et dire "je ne vais quand même pas les aider pour de vrai... si ?", "ho et puis après tout, si je suis "adorable", non ?" (ou un truc du genre)
