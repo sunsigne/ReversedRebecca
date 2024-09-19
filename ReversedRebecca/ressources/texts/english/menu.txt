@@ -102,6 +102,12 @@ VolumeMusic = music
 VolumeSound = sound
 VolumeVoice = voice
 
+///// UPDATE /////
+
+UpdateText = Game update available
+UpdateButton = Click here
+UpdateInfo = New level : police station
+
 ///// BONUS /////
 
 BonusButton = bonus

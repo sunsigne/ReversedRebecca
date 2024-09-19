@@ -102,6 +102,12 @@ VolumeMusic = musique
 VolumeSound = son
 VolumeVoice = voix
 
+///// UPDATE /////
+
+UpdateText = Mise a jour du jeu disponible
+UpdateButton = Cliquez ici
+UpdateInfo = Nouveau niveau : le commissariat
+
 ///// BONUS /////
 
 BonusButton = bonus

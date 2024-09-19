@@ -17,6 +17,7 @@
 		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
+		- SoundTask : joueur autours des 1% affiche un message d'erreur
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
@@ -44,6 +45,9 @@
 
 
 	////////// EN COURS ////////////
+
+	UpdateScreen -> afficher lorsque la version est ancienne (faire le lien avec davedata)
+	bonus -> création d'un texte par les joueur
 
 	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only

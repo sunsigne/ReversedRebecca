@@ -22,6 +22,8 @@ public class WebTask {
 
 	public static final String STEAM_LINK_HTTP = "https://store.steampowered.com/app/2297990/Reversed_Rebecca/";
 	public static final String STEAM_LINK = "steam://store/2297990/";
+	
+	public static final String ITCHIO_LINK = "https://sunsigne.itch.io/reversedrebecca";
 
 	public void openSteam(String steamLink, String httpLink) {
 		String app = "C://Program Files (x86)//Steam";
