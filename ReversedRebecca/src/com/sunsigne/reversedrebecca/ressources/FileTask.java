@@ -84,6 +84,10 @@ public class FileTask {
 	}
 
 	public String readOnline(String path) {
+		return readOnline(null, path);
+	}
+	
+	public String readOnline(String valueToRead, String path) {
 		URL url;
 		Scanner scan = null;
 		String content = "";
@@ -92,7 +96,7 @@ public class FileTask {
 			url = new URL(FilePath.DAVEDATA_PATH + path);
 			if (doesExist(url)) {
 				scan = new Scanner(url.openStream(), "UTF-8");
-				content = scanText(scan, null, true);
+				content = scanText(scan, valueToRead, true);
 				scan.close();
 			}
 		} catch (Exception e) {

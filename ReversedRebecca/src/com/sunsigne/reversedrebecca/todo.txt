@@ -8,6 +8,8 @@
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
 	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
 	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit" (mettre le vrai dialogue dans &working)
+	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
+	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
 
 	////////// BUG ////////////
 
@@ -46,7 +48,6 @@
 
 	////////// EN COURS ////////////
 
-	UpdateScreen -> afficher lorsque la version est ancienne (faire le lien avec davedata)
 	bonus -> création d'un texte par les joueur
 
 	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés

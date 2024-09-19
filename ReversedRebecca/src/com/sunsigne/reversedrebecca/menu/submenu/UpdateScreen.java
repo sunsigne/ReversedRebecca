@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.WebTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
@@ -15,6 +16,7 @@ public class UpdateScreen extends SubMenuScreen {
 	public UpdateScreen(PresetMousePos defaultPreset) {
 		super(defaultPreset);
 		loadText();
+		loadLink();
 
 		createClickHereButton();
 	}
@@ -56,11 +58,17 @@ public class UpdateScreen extends SubMenuScreen {
 
 	////////// BUTTONS ////////////
 
+	private String updateLink = WebTask.ITCHIO_LINK;
+
+	private void loadLink() {
+		updateLink = new FileTask().readOnline("LINK", "update.txt");
+	}
+
 	private void createClickHereButton() {
 		int x = 325 + 416;
 		int y = 503;
 
-		GenericListener onPress = () -> new WebTask().openHtml(WebTask.ITCHIO_LINK);
+		GenericListener onPress = () -> new WebTask().openHtml(updateLink);
 		String text = translate("UpdateButton");
 		TitleScreenButton button = new TitleScreenButton(text, x, y + 18, 415, 80, onPress, null);
 		button.setFontSize(30f);
