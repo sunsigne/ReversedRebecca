@@ -33,6 +33,7 @@
 
 	////////// TEMP ////////////
 
+	dave : supprimer les images creepy de dave
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	lvl001 : redirection du end_lvl vers "dave_end"
 	lvl001 : talked FATALITY - Alicia qui tue est actuellement un end_lvl vers les crédit ou l'écran titre du jeu.
