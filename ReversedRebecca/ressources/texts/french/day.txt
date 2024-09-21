@@ -1,0 +1,7 @@
+2 = lundi
+3 = mardi
+4 = mercredi
+5 = jeudi
+6 = vendredi
+7 = samedi
+1 = dimanche

@@ -1,0 +1,29 @@
+dave = DOWN = calm = Salut, +user.
+dave = DOWN = smile = Quoi ? Tu es surpris que je connaisse ton nom ?
+dave = DOWN = smile = Mon savoir ne se limite pas à ça. Je sais aussi@que dans ton monde, il est +day.
+dave = DOWN = calm = Et aussi que si je te demande de penser@à un pays qui commence par un "D"…
+dave = DOWN = calm = … de prendre la dernière lettre de ce pays…
+dave = DOWN = calm = … et de trouver un fruit qui commence@par cette lettre…
+dave = DOWN = smile = … ta réponse sera "Kiwi".
+dave = DOWN = calm = Mais peu importe. Je viens te demander ton aide.
+dave = DOWN = intrigued = Est-ce que tu connais quelqu'un qui aimerait ce jeu ?@J'ai une idée de farce.
+dave = DOWN = smile = Imagine la tête que ferait cette personne@si je l'appelais aussi par son nom.
+dave = DOWN = smile = Mieux, imagine que je parle aussi de ses amis,@de ses passe-temps, de ses animaux, etc.
+dave = DOWN = calm = C'est pour ça que j'ai besoin de toi.@Je ne connais pas ces choses-là, mais toi, si.
+dave = DOWN = smile = La farce t'intéresse ?
+dave = DOWN = calm = Ok. Note bien quelque part ce que je vais dire,@car je ne répèterai JAMAIS cette conversation :
+dave = DOWN = calm = Étape 1 : lorsque nous aurons fini de discuter,@ré-ouvre le menu "bonus".
+dave = DOWN = calm = Étape 2 : ouvre avec le bloc-notes@le fichier suivant dans ton ordinateur :
+dave = DOWN = calm = Reversed Rebecca\ressources\texts\french\maps@\dave_bonus\template.txt
+dave = DOWN = calm = Étape 3 : édite ce fichier, pour me faire@dire ce que tu voudras que je dise à ton ami.
+dave = DOWN = calm = Tu pourras modifier, rajouter@ou supprimer des lignes.
+dave = DOWN = calm = Étape 4 : sauvegarde le fichier.
+dave = DOWN = smile = On ne sait jamais, tu pourrais oublier…
+dave = DOWN = calm = Étape 5 : re-clique sur "bonus". Je dirais@exactement ce que tu as écrit.
+dave = DOWN = intrigued = Profites-en pour te relire.
+dave = DOWN = calm = D'ailleurs, je ne dirais plus que ça,@à chaque fois qu'on cliquera sur "bonus".
+dave = DOWN = camera = Étape 6 : supprime ta sauvegarde.
+dave = DOWN = calm = Ça n'effacera pas ma mémoire. Par contre, le@bouton "bonus" sera de nouveau innaccessible.
+dave = DOWN = calm = Ton ami se fera bien plus avoir, s'il débloque@lui-même ce menu en jouant "normalement".
+dave = DOWN = calm = Dernière étape : envoie ce jeu à ton ami.@Avec un lien wetransfer.com par exemple.
+dave = DOWN = smile = Tu as tout noté ?@Alors, à tout de suite.

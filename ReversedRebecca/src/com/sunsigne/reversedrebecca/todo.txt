@@ -48,6 +48,9 @@
 
 	////////// EN COURS ////////////
 
+	dave_bonus : mettre la musique de l'écran titre sur l'écran bonus, sauf si c'est la template
+	dave_bonus : créer un succès du genre "je vais venir te chercher ..." (et texte de condition du succès -> "...")
+
 	bonus -> création d'un texte par les joueur
 
 	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés

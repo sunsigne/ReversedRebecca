@@ -1,0 +1,7 @@
+TIME -> 0 = GOTO -> CAMERA, MUSIC
+
+
+//// SET UP ////
+
+$ -> CAMERA = CAMERA -> 0-2
+$ -> MUSIC = MUSIC -> NULL
