@@ -30,7 +30,7 @@ public class DemoEndScreen implements Updatable, SheetableImage {
 	}
 
 	private void loadMusic() {
-		new SoundTask().playMusic("3 Joys & the Truth - clapless version", false, false);
+		new SoundTask().playMusic("3_joys_and_the_truth_clapless_version", false, false);
 	}
 
 	////////// TICK ////////////
