@@ -40,6 +40,7 @@
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
+	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	la classe DemoEndScreen :
 	(
 	musique : 3 Joys & the Truth - clapless version

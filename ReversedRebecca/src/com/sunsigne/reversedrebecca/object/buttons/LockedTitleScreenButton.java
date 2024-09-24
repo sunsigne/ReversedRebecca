@@ -9,9 +9,9 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class UnlockableTitleScreenButton extends TitleScreenButton implements SheetableImage {
+public class LockedTitleScreenButton extends TitleScreenButton implements SheetableImage {
 
-	public UnlockableTitleScreenButton(String text, int x, int y, int w, int h, GenericListener onPress,
+	public LockedTitleScreenButton(String text, int x, int y, int w, int h, GenericListener onPress,
 			GenericListener onRelease) {
 		super(text, x, y, w, h, onPress, onRelease);
 	}

@@ -22,7 +22,7 @@ dave = DOWN = smile = On ne sait jamais, tu pourrais oublier…
 dave = DOWN = calm = Étape 5 : re-clique sur "bonus". Je dirais@exactement ce que tu as écrit.
 dave = DOWN = intrigued = Profites-en pour te relire.
 dave = DOWN = calm = D'ailleurs, je ne dirais plus que ça,@à chaque fois qu'on cliquera sur "bonus".
-dave = DOWN = camera = Étape 6 : supprime ta sauvegarde.
+dave = DOWN = camera = Étape 6 : supprime ta sauvegarde et tes succès.
 dave = DOWN = calm = Ça n'effacera pas ma mémoire. Par contre, le@bouton "bonus" sera de nouveau innaccessible.
 dave = DOWN = calm = Ton ami se fera bien plus avoir, s'il débloque@lui-même ce menu en jouant "normalement".
 dave = DOWN = calm = Dernière étape : envoie ce jeu à ton ami.@Avec un site de partage de fichier par exemple.

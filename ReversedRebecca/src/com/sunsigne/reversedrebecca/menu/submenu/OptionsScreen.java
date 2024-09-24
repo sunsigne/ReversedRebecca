@@ -3,12 +3,15 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.LockedTitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
-import com.sunsigne.reversedrebecca.object.buttons.UnlockableTitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class OptionsScreen extends SubMenuScreen {
 
@@ -38,15 +41,15 @@ public class OptionsScreen extends SubMenuScreen {
 	////////// BUTTONS ////////////
 
 	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress) {
-		createUnlockableOptionScreenButton(text, preset, x, y, onPress, false);
+		createLockedOptionScreenButton(text, preset, x, y, onPress, false);
 	}
 
-	private void createUnlockableOptionScreenButton(String text, PresetMousePos preset, int x, int y,
-			GenericListener onPress, boolean unlockable) {
+	private void createLockedOptionScreenButton(String text, PresetMousePos preset, int x, int y,
+			GenericListener onPress, boolean locked) {
 
 		ButtonObject button;
-		if (unlockable)
-			button = new UnlockableTitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
+		if (locked)
+			button = new LockedTitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
 		else
 			button = new TitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
 
@@ -69,10 +72,24 @@ public class OptionsScreen extends SubMenuScreen {
 		createOptionScreenButton(translate("AudioButton"), AUDIO, 206, 208, onPress);
 	}
 
+	private boolean bonusUnlocked;
+
 	private void createBonusButton() {
-		GenericListener onPress = () -> {
-		};
-		createUnlockableOptionScreenButton(translate("BonusButton"), BONUS, 623, 208, onPress, true);
+		GenericListener onPress = () -> new World("dave_bonus");
+
+		Achievement achievement = null;
+		for (Achievement tempAchievement : AchievementList.getList().getList()) {
+			if (tempAchievement.getName().equalsIgnoreCase("bonus") == false)
+				continue;
+			achievement = tempAchievement;
+			break;
+		}
+
+		bonusUnlocked = false;
+		if (achievement != null)
+			bonusUnlocked = achievement.isUnlocked();
+
+		createLockedOptionScreenButton(translate("BonusButton"), BONUS, 623, 208, onPress, bonusUnlocked == false);
 	}
 
 	////////// PRESET MOUSE POS ////////////
@@ -81,6 +98,13 @@ public class OptionsScreen extends SubMenuScreen {
 	public static final PresetMousePos CONTROLS = new PresetMousePos(1150, 650);
 	public static final PresetMousePos AUDIO = new PresetMousePos(730, 750);
 	public static final PresetMousePos BONUS = new PresetMousePos(1150, 750);
+
+	public void setPreset(boolean condition, PresetMousePos presetIfTrue, PresetMousePos presetIfFalse) {
+		if (bonusUnlocked)
+			this.setPreset(presetIfTrue, true);
+		else
+			this.setPreset(presetIfFalse, true);
+	}
 
 	////////// GAMEPAD ////////////
 
@@ -102,8 +126,8 @@ public class OptionsScreen extends SubMenuScreen {
 			controlsPressed(e);
 		else if (getPreset() == AUDIO)
 			audioPressed(e);
-		// else if (getPreset() == BONUS)
-		// bonusPressed(e);
+		else if (getPreset() == BONUS)
+			bonusPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
@@ -121,23 +145,23 @@ public class OptionsScreen extends SubMenuScreen {
 		if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.DOWN)
-			// setPreset(BONUS);
-			setPreset(AUDIO);
+			setPreset(bonusUnlocked, BONUS, AUDIO);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(CONTROLS).mousePressed(null);
 	}
 
 	private void audioPressed(ButtonEvent e) {
-		// if (e.getKey() == ButtonEvent.RIGHT)
-		// setPreset(BONUS);
-		/* else */ if (e.getKey() == ButtonEvent.UP)
+		if (e.getKey() == ButtonEvent.RIGHT) {
+			if (bonusUnlocked)
+				setPreset(BONUS);
+		} else if (e.getKey() == ButtonEvent.UP)
 			setPreset(GENERAL);
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(AUDIO).mousePressed(null);
 	}
-/*
+
 	private void bonusPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(AUDIO);
@@ -148,7 +172,7 @@ public class OptionsScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(BONUS).mousePressed(null);
 	}
-*/
+
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
 			setPreset(AUDIO);
