@@ -26,6 +26,9 @@ TerminatedText = Mort definitive sur un terminator
 
 ///// ORANGE /////
 
+BonusTitle = Acces : menu BONUS
+BonusText = finir la demo
+
 ///// RED /////
 
 SignOfStoppingTitle = Signe pour t'arreter
