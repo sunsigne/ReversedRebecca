@@ -19,6 +19,7 @@
 		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
+		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- SoundTask : joueur autours des 1% affiche un message d'erreur
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
@@ -50,11 +51,6 @@
 
 	////////// EN COURS ////////////
 
-	dave_bonus : mettre la musique de l'écran titre sur l'écran bonus, sauf si c'est la template
-	dave_bonus : créer un succès du genre "je vais venir te chercher ..." (et texte de condition du succès -> "...")
-
-	bonus -> création d'un texte par les joueur
-
 	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
@@ -62,19 +58,20 @@
 	8h00 traduction anglais
 
 	DAVE : 
-	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choir alors que non, devrait rebondir dessus ?)
+	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choix alors que non, devrait rebondir dessus ?)
 
 	LVL001 :
 	1h00 - quand on est sadique l'objet 50 et le dialogue player_leaving devraient s'adapter -> faire l'inverser ? chercher la proximité du joueur et dire "je ne vais quand même pas les aider pour de vrai... si ?", "ho et puis après tout, si je suis "adorable", non ?" (ou un truc du genre)
 	(la ligne du dessus est réécrite dans la partie du todo "LVL001" vers le début (3ème ligne ?), pour la version psycopathe
 
+	SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position)
+	akward -> en vert ?
+
 	+ toute les parties suivantes :
 	- partie "VERSION PUBLIQUE"
 	- partie "DAVE"
 	- partie "TRADUCTION"
-		
-	1h00 réattribuer l'empalcement des achievement en fonction de s'ils sont cachés ou non ?
-		
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
@@ -376,11 +373,11 @@
 
 	////////// SUCCES ////////////
 	
-	100% neutre / sadique / (tous les karmas)
+	100% neutre / sadique / (tous les karmas)			
+	1h00 réattribuer l'empalcement des achievement en fonction de s'ils sont cachés ou non ?
 	
 	vérifier la couleur de tous les succès (+ choisir leur position)
-	
-	akward -> en vert ?
+
 	terminated -> condition à créer + à redesigner (il est dans le working)
 	
 	Fin secrète : finir le jeu en difficile

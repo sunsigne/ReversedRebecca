@@ -33,6 +33,8 @@ BonusText = finish the demo
 
 SignOfStoppingTitle = Sign of stopping
 SignOfStoppingText = relaunch the game 5 times
+ComingForYouTitle = I'm coming for you
+ComingForYouText = 	
 
 ///// PURPLE /////
 
