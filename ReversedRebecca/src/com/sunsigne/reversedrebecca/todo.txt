@@ -2,15 +2,14 @@
 	////////// VERSION PUBLIQUE ////////////
 
 	supprimer les ressources non utilisées
-	mettre à jour les textes de Dave pour la version test (ainsi que sa sauvegarde)
-	désactiver le scénarion 'inquery'
-	reset la sauvegarde pour commencer sur le bon lvl
-	retirer la ligne "dev_loading" dans le fichier set-up de la map warning 
-	s'assurer que le built soit considéré comme "dev" pour bénéficier du local, tout en s'assurant de sortir les .txt de la console
-	à supprimer & rétablir - la redirection forcée du scénario "inquiry" vers le scénario "exit" (mettre le vrai dialogue dans &working)
+	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
+	reset la sauvegarde, les succès & la mémoire de dave
+	désactiver le scénarion 'inquery' & mettre à jour texte de dave au niveau d'avant
+	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
 	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
-
+	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
+	
 	////////// BUG ////////////
 
 	peut-être existant sur build only ? :
@@ -42,6 +41,7 @@
 	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
+	Creepy pasta dave bonus (& achievement)
 	la classe DemoEndScreen :
 	(
 	musique : 3 Joys & the Truth - clapless version
@@ -51,26 +51,18 @@
 
 	////////// EN COURS ////////////
 
-	18h00 mettre à jour les éléments de "VERSION PUBLIQUE" et stabiliser les built une bonne fois pour toute (càd version non dev avec les erreurs qui sortent et sont envoyées en crash repport ?) + vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
-	6h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
-	5h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
-	3h00 patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
-	8h00 traduction anglais
-
-	DAVE : 
-	n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choix alors que non, devrait rebondir dessus ?)
+	3h00 toute la partie Dave : entre leux deux niveau + dans le labo + écran de fin (vérifier le fichier excel pour ne pas superposer)
+	+ n'est plus à jour avant lvl001, parle d'un choix qui en sadique n'est pas proposé (et du choix alors que non, devrait rebondir dessus ?)
 
 	LVL001 :
 	1h00 - quand on est sadique l'objet 50 et le dialogue player_leaving devraient s'adapter -> faire l'inverser ? chercher la proximité du joueur et dire "je ne vais quand même pas les aider pour de vrai... si ?", "ho et puis après tout, si je suis "adorable", non ?" (ou un truc du genre)
 	(la ligne du dessus est réécrite dans la partie du todo "LVL001" vers le début (3ème ligne ?), pour la version psycopathe
 
-	SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position)
-	akward -> en vert ?
-
-	+ toute les parties suivantes :
-	- partie "VERSION PUBLIQUE"
-	- partie "DAVE"
-	- partie "TRADUCTION"
+	dans l'ordre, à la fin :
+	- 8h00 traduction + voir la partie "TRADUCTION"
+	- 1h00 SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position) + akward -> en vert ?
+	- 3h00 built en se basant sur "VERSION PUBLIQUE"
+	- 2h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -155,6 +147,7 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
+	vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
 	30h arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
