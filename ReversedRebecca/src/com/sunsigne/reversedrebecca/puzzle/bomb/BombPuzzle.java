@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -22,7 +23,7 @@ public abstract class BombPuzzle extends Puzzle {
 	public BombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
 		new GameCursor().setCursor(null);
-		
+
 		LAYER.PUZZLE.addObject(new PointerBombObject(this, isCritical));
 	}
 
@@ -91,7 +92,9 @@ public abstract class BombPuzzle extends Puzzle {
 		if (bomb[0] == null)
 			return;
 
-		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
+
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof BombObject == false)
 				continue;
 
@@ -110,7 +113,7 @@ public abstract class BombPuzzle extends Puzzle {
 	public int getSheetColCriterion() {
 		return 2;
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
