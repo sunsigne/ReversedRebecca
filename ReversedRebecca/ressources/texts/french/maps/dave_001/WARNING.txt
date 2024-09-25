@@ -1,2 +1,12 @@
+% N_TIMES
+dave = DOWN = camera = Tu connais la chanson…
+
+% FIRST_TIME
 dave = DOWN = camera = Tu vas avoir le choix entre deux scénarios@dans ce niveau.
 dave = DOWN = camera = Le choix de ce scénario va influencer@tes interactions avec les gens et les objets.
+
+% SADISTIC
+dave = DOWN = camera = Bon…
+dave = DOWN = camera = En principe, tu étais censé avoir le choix entre@deux scénarios dans le prochain niveau.
+dave = DOWN = intrigued = Mais c'est Sarah qui te propose ce choix,@et tu l'as vraiment enervé…
+dave = DOWN = calm = Donc… Trouve une sortie.
