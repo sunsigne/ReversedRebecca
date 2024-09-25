@@ -82,3 +82,4 @@ ABANDON_EVERYONE = Key3 % (END_LVL)abandonner tout le monde
 ASK_FOR_OPENING = Key2 % demander à ouvrir
 ASK_FOR_OPENING_END = Key2 % (END_LVL)demander à ouvrir
 OPEN_END = Key1 % (END_LVL)ouvrir
+EXPLODE_END = Key1 % (END_LVL)exploser

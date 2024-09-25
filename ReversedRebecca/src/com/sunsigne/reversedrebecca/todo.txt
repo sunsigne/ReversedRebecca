@@ -51,10 +51,6 @@
 
 	////////// EN COURS ////////////
 
-	LVL001 :
-	1h00 - quand on est sadique l'objet 50 et le dialogue player_leaving devraient s'adapter -> faire l'inverser ? chercher la proximité du joueur et dire "je ne vais quand même pas les aider pour de vrai... si ?", "ho et puis après tout, si je suis "adorable", non ?" (ou un truc du genre)
-	(la ligne du dessus est réécrite dans la partie du todo "LVL001" vers le début (3ème ligne ?), pour la version psycopathe
-
 	dans l'ordre, à la fin :
 	- 8h00 traduction + voir la partie "TRADUCTION"
 	- 1h00 SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position) + akward -> en vert ?

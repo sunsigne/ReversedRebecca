@@ -23,6 +23,10 @@ rebecca = DOWN = laugh = Parfait ! Maintenant, on peut passer !
 rebecca = object = excited = Parfait ! Je n'ai plus qu'à faire le tour@par l'exterieur pour dégager l'entrée !
 
 
+% IS_OPENED_SADISTIC
+rebecca = DOWN = you_silly = Ou pas… Je suis sûr qu'ils se débrouilleront…
+
+
 % EXIT_IS_OPENED
 rebecca = UP = excited = C'est ouvert !
 
