@@ -4,7 +4,7 @@ mika = DOWN = angry = Ces cailloux n'ont qu'à bien se tenir !
 
 
 % AGAIN
-rebecca = object = determinated = Allez Mika ! Je crois en toi !
+rebecca = object = determined = Allez Mika ! Je crois en toi !
 mika = DOWN = angry = C'est lourd… Mais ça m'aide !
 
 

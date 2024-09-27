@@ -1,5 +1,5 @@
 % THEFT
-sarah = rebecca = akward = Tu sais bien que j'étais avec toi quand ça s'est@passé… Tu devrais demander aux autres.
+sarah = rebecca = awkward = Tu sais bien que j'étais avec toi quand ça s'est@passé… Tu devrais demander aux autres.
 
 
 % DELTA_KEY_CONVERSATION

@@ -20,7 +20,7 @@ player = object = you_silly_var = Too bad.
 % RIGHT_BEFORE_CHEST_LAST
 sarah = player = awkward = What are you doing?@You're not taking your gift…?
 player = object = laugh = I am! I'm just making the pleasure last.
-sarah = player = wink = Han! Is that so…
+sarah = player = wink = Hah! Is that so…
 sarah = player = pervert = Let's make it last for hours.@You will take… a lot of pleasure.
 player = object = blush_var = Sarah!!!@You can't say things like this.
 sarah = player = laugh = Haha! Sorry, but you should see your face.@Go get your gift.

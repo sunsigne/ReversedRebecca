@@ -22,7 +22,7 @@ sarah = player = happy_var = Thank you, that's sweet.
 
 
 % LIFE
-sarah = player = determinated = Tell me, according to your theory,@your books are alive…
+sarah = player = determined = Tell me, according to your theory,@your books are alive…
 player = sarah = happy_var = That's right.
 sarah = player = surprised = Oh! You already thought of that?
 sarah = player = laugh = Damn, I thought I had tricked you.
@@ -44,6 +44,6 @@ player = object = happy = She often comes and she has@the keys, but she's just a
 sarah = player = wink = And… Is there something between you?
 player = object = happy_var = No. I'm into boys.
 player = object = happy = Speaking of boys,@how things are going with Pierre?
-sarah = player = akward = Hey! None of your business…
+sarah = player = awkward = Hey! None of your business…
 sarah = player = worry = Besides, shouldn't you be getting ready?
 player = object = laugh = You're right. I'm on it.

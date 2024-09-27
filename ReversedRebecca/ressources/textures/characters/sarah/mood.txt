@@ -27,12 +27,12 @@ dreaming=4,2
 fine=4,3
 surprised=4,4
 worry_var=4,5
-akward=4,6
+awkward=4,6
 wink=4,7
 
 ////// PSYCHOPATH //////
 
-determinated=5,1
+determined=5,1
 evil=5,2
 evil_var=5,3
 pervert=5,4

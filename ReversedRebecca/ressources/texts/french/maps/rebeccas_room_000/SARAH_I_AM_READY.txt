@@ -52,7 +52,7 @@ sarah = player = wink = Ne l'oublie jamais.
 sarah = player = happy = Au fait !
 sarah = LEFT = worry = Pourquoi tu as mis un verre d'eau ici ?
 rebecca = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
-sarah = player = akward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
+sarah = player = awkward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
 player = sarah = laugh = Exactement !
 sarah = player = worry = Mais du coup, pourquoi@il est encore là ?
 player = sarah = laugh = Parce que, je n'aime pas ranger.
@@ -61,7 +61,7 @@ sarah = player = you_silly_var = Rebecca… Tu es fatigante…
 
 % TOWEL
 player = object = happy_var = Je suis prête ! On peut y aller !
-sarah = player = akward = … Tu es sûre ?
+sarah = player = awkward = … Tu es sûre ?
 player = object = no_sens = Bah oui, pourquoi ?
 sarah = player = you_silly_var = Bon… Si tu le dis…
 player = object = happy = …
@@ -80,14 +80,14 @@ player = DOWN = blush = Zut ! Je suis toujours en serviette.
 sarah = player = happy = Au fait !
 sarah = LEFT = worry = Pourquoi tu avais mis un verre d'eau ici@tout à l'heure ?
 rebecca = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
-sarah = player = akward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
+sarah = player = awkward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
 player = sarah = laugh = Exactement !
 sarah = player = you_silly_var = Rebecca… Tu es fatigante…
 
 
 % WHILE_PANCAKES
 sarah = RIGHT = surprised = Mais ?
-sarah = player = akward = Tu vas vraiment partir en laissant@des crêpes sur la table ?
+sarah = player = awkward = Tu vas vraiment partir en laissant@des crêpes sur la table ?
 player = object = wrong_with_you = De quoi je me mêle ?
 player = object = worry = Pardon, c'était un peu violent.@Oui, je les mangerai plus tard.
 sarah = player = laugh = C'est toi qui vois.

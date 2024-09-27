@@ -64,7 +64,7 @@ player = mika = angry = Dis-donc, Mika ! Ça t'arrive souvent de pas@aider les g
 mika = player = worry = Heu… Non.
 player = mika = wrong_with_you = Et donc ? Tu vas faire quoi pour Alicia ?
 mika = player = worry = Je vais aller l'aider ?
-player = mika = determinated = À la bonne heure.
+player = mika = determined = À la bonne heure.
 
 
 % MIKA_THANKING_REBECCA_FOR_SCOLDING

@@ -36,7 +36,7 @@ despair=4,8
 
 ////// PSYCHOPATH //////
 
-determinated=5,1
+determined=5,1
 evil=5,2
 evil_var=5,3
 evil_var2=5,4

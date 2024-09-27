@@ -86,4 +86,4 @@ alicia = player = happy = Je te suis.
 
 
 % LANDSLIDE_EVIL_IDEA
-player = alicia = determinated = (Cet éboulement me donne une idée…)
+player = alicia = determined = (Cet éboulement me donne une idée…)

@@ -44,4 +44,4 @@ mika = player = angry = Casse-toi.
 
 
 % HURRY_UP_LAST_REBECCA
-player = DOWN = determinated = C'est tellement marrant de les pousser à bout.
+player = DOWN = determined = C'est tellement marrant de les pousser à bout.

@@ -8,7 +8,7 @@ player = object = unhappy = Non, je ne devrais vraiment pas…
 
 % THIRD
 player = object = you_silly_var = Rebecca, tu n'as aucune volonté…
-player = object = determinated = Résiste, tu peux le faire !
+player = object = determined = Résiste, tu peux le faire !
 
 
 % FOURTH

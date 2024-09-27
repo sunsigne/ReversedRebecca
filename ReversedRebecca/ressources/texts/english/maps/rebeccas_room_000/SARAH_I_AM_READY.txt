@@ -20,7 +20,7 @@ sarah = player = happy_var = By the way!
 player = object = happy = I am ready! We can go!
 sarah = player = laugh = Already? Okay!
 sarah = player = happy = But first, let's go to my workshop.@I have a surprise for you.
-player = object = laugh = I suspected a little.@You are the best!
+player = object = laugh = I suspected it a little bit.@You are the best!
 sarah = player = wink = Don't forget it.
 
 
@@ -28,7 +28,7 @@ sarah = player = wink = Don't forget it.
 player = object = happy = I am ready! We can go!
 sarah = player = laugh = Already? Okay!
 sarah = player = happy = But first, let's go to my workshop.@This is where your surprise is.
-player = object = laugh = I suspected a little.@You are the best!
+player = object = laugh = I suspected it a little bit.@You are the best!
 sarah = player = wink = Don't forget it.
 
 
@@ -52,7 +52,7 @@ sarah = player = wink = Don't forget it.
 sarah = player = happy = Now I'm thinking…
 sarah = LEFT = worry = Why did you put a glass of water here?
 rebecca = object = worry = I had to put it somewhere, to open the door…
-sarah = player = akward = So… You put it on the floor because…@The table was too far?
+sarah = player = awkward = So… You put it on the floor because…@The table was too far?
 player = sarah = laugh = Exactly!
 sarah = player = worry = Ok, so… … Why is it still there?
 player = sarah = laugh = Because I dislike cleaning.
@@ -61,7 +61,7 @@ sarah = player = you_silly_var = Rebecca… You're tiring me…
 
 % TOWEL
 player = object = happy_var = I am ready! We can go!
-sarah = player = akward = … Are you sure about that?
+sarah = player = awkward = … Are you sure about that?
 player = object = no_sens = I am. Why?
 sarah = player = you_silly_var = If you say so…
 player = object = happy = …
@@ -80,14 +80,14 @@ player = DOWN = blush = Dear me! I'm still wearing only a towel.
 sarah = player = happy = Now I'm thinking…
 sarah = LEFT = worry = Why did you put a glass of water here earlier?
 rebecca = object = worry = I had to put it somewhere, to open the door…
-sarah = player = akward = So… You put it on the floor because…@The table was too far?
+sarah = player = awkward = So… You put it on the floor because…@The table was too far?
 player = sarah = laugh = Exactly!
 sarah = player = you_silly_var = Rebecca… You're tiring me…
 
 
 % WHILE_PANCAKES
 sarah = RIGHT = surprised = Wait?
-sarah = player = akward = Are you really going to leave,@leaving pancakes on the table?
+sarah = player = awkward = Are you really going to leave,@leaving pancakes on the table?
 player = object = wrong_with_you = Mind your business ?
 player = object = worry = Sorry, it was a little rude.@Yes, I'll eat those later.
 sarah = player = laugh = It's up to you.

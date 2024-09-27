@@ -7,7 +7,7 @@ player = DOWN = surprised = Oh! Here's an idea!
 % PANCAKES
 player = DOWN = evil_var2 = Here's my chance, she's sleeping!
 player = DOWN = laugh = I would have loved to see the look on her@face when she'll realize I locked her up.
-player = RIGHT = determinated = But for now, she's out of the question@to eat my pancakes.
+player = RIGHT = determined = But for now, she's out of the question@to eat my pancakes.
 
 
 % TRASH

@@ -6,7 +6,7 @@ player = object = unhappy = No, I really shouldn't…
 
 % THIRD
 player = object = you_silly_var = Rebecca, you have no willpower…
-player = object = determinated = Hold out, you can do it!
+player = object = determined = Hold out, you can do it!
 
 % FOURTH
 player = object = surprised = What a surprise! Ma computer before me!@I just wanted to sit!

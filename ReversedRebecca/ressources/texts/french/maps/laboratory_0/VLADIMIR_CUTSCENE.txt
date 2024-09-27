@@ -18,12 +18,12 @@ mika = UP = serious = Je suis comme vous les filles…@J'en sais pas plus…
 
 
 % MIKA_WHAT_HAPPENED_NEXT
-sarah = DOWN = determinated = Alors, on va enquêter !
+sarah = DOWN = determined = Alors, on va enquêter !
 sarah = RIGHT = happy = Rebecca, à toi de choisir.@Qu'est-ce que tu préfères faire ?
 
 
 % MIKA_WHAT_HAPPENED_NEXT_ANGRY
-sarah = DOWN = determinated = Alors, on va enquêter !
+sarah = DOWN = determined = Alors, on va enquêter !
 sarah = RIGHT = worry = Rebecca, oublions notre petit différent, d'accord ?@Il va falloir qu'on règle cette situation.
 sarah = RIGHT = happy = Qu'est-ce que tu préfères faire ?
 
