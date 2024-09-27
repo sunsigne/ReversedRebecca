@@ -1,0 +1,16 @@
+% FIRST_TIME
+dave = DOWN = camera = By the way! In this game, your choices@really matter.
+
+% SECOND_TIME
+dave = DOWN = camera = Hello again.
+
+% KEYS
+dave = DOWN = camera = Did you notice?
+dave = DOWN = camera = The keys in Rebecca's apartment are always@in the 3rd place you look for them.
+
+% WHAT
+alicia = DOWN = surprised_var = What am I doing here?
+
+% BOLTS
+dave = DOWN = camera = Fun fact:
+dave = DOWN = camera = Giraffes are 30 times more likely to be struck@by lightning than humans.

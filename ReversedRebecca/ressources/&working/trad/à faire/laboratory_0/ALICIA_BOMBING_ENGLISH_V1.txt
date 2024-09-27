@@ -1,0 +1,88 @@
+% BOMBING_OWN_DESK_VAR
+alicia = player = angry = Rebecca! This isn't the entrance !@Don't blow up our walls!
+player = alicia = worry = Yeah, sorry...
+
+
+% BOMBING_OWN_DESK
+alicia = player = surprised = Jeez ! When you kook for an exit you don't do half mesures
+player = alicia = worry = I know, it's barbaric... But we don't have any choice.
+
+
+% BOMBING_OWN_DESK_AGAIN
+alicia = UP = unhappy = I really don't like how you blow up our walls...
+player = DOWN = wrong_with_you = Do you have another solution to propose ?
+player = DOWN = worry = Sorry, it was a bit violent.@But it's the only way, Alicia.
+
+
+% BOMBING_OWN_DESK_AGAIN_VAR
+alicia = UP = unhappy = I really don't like how you blow up our walls...
+player = DOWN = wrong_with_you = Do you have another solution to propose ?
+player = DOWN = worry = Sorry, it was a bit violent. You're right. I will find another way.
+
+% ERIC_FREAKS_OUT_ALICIA_HERE
+alicia = UP = speaking = Wait up !
+
+
+% STOP_BOMB
+alicia = player = unhappy = Rebecca. That's enough@Stop it with the bombs.
+alicia = player = unhappy = You're blowing up our laboratory...@And you're scaring our colleagues.
+
+
+% STOP_BOMB_NO_PRE_WARNING
+alicia = player = unhappy = Rebecca, I don't think bombs are a good solution...
+alicia = player = unhappy = You're blowing up our laboratory...@ And you're scaring our colleagues.
+
+
+% NO_I_CONTINUE
+player = alicia = worry = Alicia... I'm just knocking down some old walls. We'll rebuild them.
+player = alicia = laugh = Besides, it's easy to move forward!@It's just straight ahead!
+alicia = rebecca = unhappy = That will be without me, Rebecca.
+
+
+% NOT_THAT_BAD
+player = DOWN = unhappy = I don't understand her... It can't be that Serious
+player = DOWN = sad = I'm not hurting anyone
+
+
+% NO_I_CONTINUE_NO_KEY
+player = alicia = unhappy = You don't understand, Alicia... @It's the only way forward. We don't have a choice...
+alicia = rebecca = unhappy = We always have a choice, Rebecca.
+
+
+% I_HAD_NO_CHOICE
+player = DOWN = unhappy = he doesn't understand...
+player = RIGHT = sad = Continuing is really the only way since... I am genuinely unable to use a green key...
+
+
+% I_STOP_BOMB_HAVING_KEY
+player = alicia = unhappy = You're right, I've caused enough damage...
+player = alicia = worry = We will find another way.
+alicia = player = happy = I'm glad to hear that.
+
+
+% I_STOP_BOMB_CAN_TAKE_KEY
+player = alicia = worry = I'm sorry if it upset you... @ however, we don't need to go further. (problème avec le mais de la phrase original)
+player = alicia = happy_var = Eric dropped his keys on the while leaving.
+player = alicia = laugh = By the way, you're stepping on them.
+alicia = player = surprised = Sorry.
+
+
+% I_STOP_BOMB_CANNOT_TAKE_KEY
+player = alicia = unhappy = You're right, I've caused enough damage...
+player = alicia = worry = OWe will find another way.
+alicia = player = happy = I'm glad to hear that.
+player = alicia = happy_var = Besides, Eric dropped his keys while leaving.@We could use them.
+player = alicia = no_sens = Well... If you know how to use green keys... @ Because I don't.
+alicia = player = happy_var = They're keys, Rebecca.@ I think I can manage.
+
+
+% ALICIA_GREEN_KEY_SOFTLOCK
+player = alicia = no_sens_var = Well...
+player = alicia = unhappy = I'm sorry, Alicia, @ I think we're officially softlock (or stuck).
+alicia = player = surprised_var = No... Really?
+player = UP = worry = Yes... I don't have a green bomb to clear a path.
+player = UP = unhappy = And I don't know how to use the green key I found.
+alicia = player = laugh = Huh? That's just wonderful!
+player = alicia = no_sens = Sorry ?
+alicia = player = happy_var = You found a green key. Here, give it to me, I know how to use it.
+player = alicia = laugh = Okay, take it

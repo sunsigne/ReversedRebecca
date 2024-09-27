@@ -51,6 +51,9 @@
 
 	////////// EN COURS ////////////
 
+	succès : reset les achievement empêche d'avoir de nouveau "sign of stopping"
+	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
+
 	dans l'ordre, à la fin :
 	- 8h00 traduction + voir la partie "TRADUCTION"
 	- 1h00 SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position) + akward -> en vert ?
@@ -172,7 +175,7 @@
 	
 	////////// DAVE ////////////
 	
-	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? 
+	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
 
 	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	Warning - le niveau / avertissement au début de jeu : le message devrait changer d'une fois sur l'autre
@@ -339,13 +342,14 @@
 	
 	////////// TRADUCTION ////////////
 	
-	8h00 - la traduction en anglais n'est pas fini !
+	4h00 - la traduction en anglais n'est pas fini !
 	
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure
+	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad
 	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
 
 	lvl001 :
+	traduire "trouver une sortie" par "find a way out"
 	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
 	traduire "quel taré" par "what a freak"
 	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"

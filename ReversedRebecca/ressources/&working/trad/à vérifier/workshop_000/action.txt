@@ -1,0 +1,4 @@
+I_FINISHED = Key1 % (END_LVL)I finished
+GLANCE = Key1 % glance
+FOOD = Key1 % food ?
+NICE_WEATHER_ISNT_IT = Key1 % ... nice weather, isn't it?

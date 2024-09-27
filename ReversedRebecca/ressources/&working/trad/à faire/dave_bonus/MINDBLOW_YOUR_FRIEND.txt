@@ -1,0 +1,27 @@
+dave = DOWN = calm = Hello +user.
+dave = DOWN = smile = What? Are you surprised that I know your name ?
+dave = DOWN = smile = My knowledge doesn't stop there. I also know that in your world, it's +day.
+dave = DOWN = calm = And that if I ask you for a word that rhyme with "wolf"…
+dave = DOWN = smile = … you will not find any.
+dave = DOWN = calm = But it doesn't matter. I came to ask for your help.
+dave = DOWN = intrigued = Do you know anyone who would like this game?@I have an idea of a joke.
+dave = DOWN = smile = Imagine its face if I that person by her name too.
+dave = DOWN = smile = Better yet, imagine that I talk about their friends, their hobbies, their animals etc.
+dave = DOWN = calm = That's why I need you. I don't know these things but you do.
+dave = DOWN = smile = Do you find it interesting?
+dave = DOWN = calm = Okay. Write somewhere what I'm about to say, because I will never repeat this conversation:
+dave = DOWN = calm = Step 1: when we finish talking, reopen the "bonus" menu.
+dave = DOWN = calm = Step 2: open with the notepad file the following file in your computer:
+dave = DOWN = calm = Reversed Rebecca\ressources\texts\french\maps@\dave_bonus\template.txt
+dave = DOWN = calm = Step 3: edit this file to tell me what you want me to say to your friend.
+dave = DOWN = calm = You can modify, add or delete lines.
+dave = DOWN = calm = Step 4: save the file.
+dave = DOWN = smile = We never know, you might forget...
+dave = DOWN = calm = Step 5: click again on "bonus". I would say exactly what you wrote.
+dave = DOWN = intrigued = Take advantage of it to re-read yourself.
+dave = DOWN = calm =  By the way, I won't say that anymore, every time we click on "bonus".
+dave = DOWN = camera = Step 6: delete your save and achievements.
+dave = DOWN = calm = It won't erase my memory. However, the "bonus" button will be inaccessible again.
+dave = DOWN = calm = Your friend will have a lot more to gain if he unlocks this menu by playing normally.
+dave = DOWN = calm = Final step: send this game to your friend. With a file sharing website for example.
+dave = DOWN = smile = Did you get everything?  So, see you soon.

@@ -1,0 +1,8 @@
+dave = DOWN = camera = Congratulations, you've reached the end@of this demo.
+dave = DOWN = camera_happy = Yes, already. But the final demo will be longer.
+dave = DOWN = camera = In the meantime, you can always start over!@There are many things you haven't seen yet, like...
+dave = DOWN = camera = kidnapping Sarah at your house,
+dave = DOWN = camera = a romantic scene with Marie@where she confesses her love to you,
+dave = DOWN = camera_happy = screaming at Joseph just under Alicia's nose.@I assure you, it's worth it!
+dave = DOWN = intrigued = You can even be urinated on by Jean…@And there is an achievement for that.
+dave = DOWN = camera = The game has plenty of choices and@consequences. That's the whole principle of:

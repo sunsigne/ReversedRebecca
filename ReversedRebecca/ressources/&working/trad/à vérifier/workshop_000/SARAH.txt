@@ -1,0 +1,32 @@
+% WAIT_HERE
+sarah = player = happy = Here we are!@Give me a second.
+player = sarah = laugh = Sure.
+
+% ITS_READY
+sarah = player = wink = I'm done! You know what's next.
+player = sarah = laugh = Yes, as always.
+
+% RIGHT_BEFORE_CHEST
+player = object = excited = It's still amazing!
+sarah = player = laugh = I agree.
+
+% RIGHT_BEFORE_CHEST_AGAIN
+player = object = worry =  I was wondering… Can you create@anything you want with this system?
+player = object = laugh = Like… food?
+sarah = player = you_silly_var = No, I can't.
+sarah = player = happy = It's more or less like an inkjet printer.@An image of food will remain ink.
+player = object = you_silly_var = Too bad.
+
+% RIGHT_BEFORE_CHEST_LAST
+sarah = player = awkward = What are you doing?@You're not taking your gift…?
+player = object = laugh = I am! I'm just making the pleasure last.
+sarah = player = wink = Han! Is that so…
+sarah = player = pervert = Let's make it last for hours.@You will take… a lot of pleasure.
+player = object = blush_var = Sarah!!!@You can't say things like this.
+sarah = player = laugh = Haha! Sorry, but you should see your face.@Go get your gift.
+
+% THAT_WAS_FUN
+player = object = happy_var = That was fun!
+sarah = player = determined = You can come back when you want.@I'll always have something for you!
+player = object = laugh = You are the best!
+sarah = player = wink = I know.@Let’s go before we’re late.

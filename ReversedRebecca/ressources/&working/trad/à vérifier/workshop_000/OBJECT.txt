@@ -1,0 +1,32 @@
+% BLACKBOARD
+player = object = unhappy = Eww ! Maths…
+
+
+% BOOKSHELF
+player = object = worry = I don't understand half of the titles…
+
+
+% BOOKSHELF_VAR
+player = object = laugh = She didn't lie:@the same furniture, but with fewer books!
+
+
+% DESK
+player = object = laugh = When it comes to making stuff,@Sarah is the best!
+
+
+% PAPERS
+player = object = surprised =  It's impressive,@all these research works!
+
+
+% PAPERS_RESEARCHES
+player = object = happy = ...
+player = object = happy_var = It talks about Sarah's "simulation tiles".
+player = object = worry = … I never really understood@how they worked…
+
+
+% POSTER
+player = object = unhappy = The boards filled with post-its,@that stresses me out…
+
+
+% SARAH_NOTE
+player = object = you_silly = It's just a draft…
