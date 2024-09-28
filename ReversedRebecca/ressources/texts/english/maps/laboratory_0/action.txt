@@ -1,0 +1,85 @@
+///// SARAH /////
+
+I_OPENED_TOO_LATE = Key1 % I opened too late
+I_DIDN'T_WANT_TO_OPEN = Key2 % I didn't want to open
+FIND_AN_EXIT = Key1 % find a way out
+INVASTIGATE_THE_INTRUDER = Key2 % invastigate the intruder
+EXIT = Key1 % exit ?
+EXIT_END = Key1 % (END_LVL)exit
+CHAT = Key1 % chat
+
+///// DOWN DESKS /////
+
+LOOK_HARDER = Key1 % look harder
+CHEAR = Key1 % chear
+CHEAR_MORE = Key1 % chear more
+CHEAR_MORE_END = Key1 % (END_LVL)chear more
+TURN_OFF_WITHOUT_SAVING = Key3 % turn off without saving
+YES = Key1 % yes
+LIE_NO = Key2 % (lie) no
+SOUNDS_FUN = Key1 % sounds fun
+THATS_NOT_COOL = Key2 % that's not cool
+THEFT = Key2 % theft ?
+ALICIA = Key3 % Alicia ?
+WHAT_ARE_YOU_FIDGETING = Key1 % why are you fidgeting?
+STOP_MOVING = Key1 % stop moving
+STILL_HOLDING_IT = Key1 % still holding it?
+ANYTHING_CHANGED = Key1 % anything changed?
+AND_NOW = Key1 % and now ?
+MAKE_A_SUGGESTION = Key1 % make a suggestion
+DOING_ALRIGHT = Key1 % doing alright?
+OFFER_TO_HELP = Key1 % offer to help
+INSIST = Key1 % insist
+YOUR_BROTHER = Key1 % your brother?
+WAS_IT_HIM_TODAY = Key1 % ... was it him today?
+KEEP_CHATTING = Key1 % keep chatting
+RECEPTION = Key1 % reception?
+ASK_DIRECTIONS = Key1 % ask for directions
+ONE_MORE_THING = Key1 % one more thing...
+
+///// ALICIA ROOM /////
+
+WE_WILL_HELP_YOU = Key1 % we will help you
+INDEED = Key2 % indeed
+
+///// LEFT AREA /////
+
+INTRUDER = Key1 % intruder?
+KNOCK = Key1 % knock knock?
+ALICIA_HELP = Key3 % Alicia!
+INSIST = Key3 % Insist
+KINDLY = Key1 % Kindly
+BLAMING = Key2 % Blaming
+SCOLDING = Key3 % Scolding
+SABOTAGE = Key3 % Sabotage
+QUIETLY_SABOTAGE = Key3 % quietly sabotage
+COFFEE = Key1 % coffee
+TEA = Key2 % tea
+NO_THANKS = Key3 % no thank
+OFFER_A_TEA = Key1 % offer a tea
+I_HAVE_TO_GO = Key1 % I have to go...
+SHUT_UP = Key2 % Shut up!
+WASH_AWAY_THE_JEANS_DIRTYNESS = Key2 % wash away the Jean's dirtyness
+GET_ANGRY = Key1 % get angry
+SAS_KEY = Key3 % key?
+TAKE_COFFEE = Key1 % coffee
+TAKE_TEA = Key2 % tea
+YES = Key1 % yes
+NO = Key2 % no
+LOCKED_UP = Key1 % locked up?
+WHAT_DID_YOU_ASK = Key1 % what did you ask?
+LISTEN_TO_RAMBLING = Key1 % listen to rambling
+WATCH_MARIE = Key1 % watch Marie
+KEEP_WATCHING_MARIE = Key1 % keep watching Marie
+ASK_FOR_BOMBS = Key1 % ask for bombs
+
+///// RIGHT AREA /////
+
+NO_I_CONTINUE = Key1 % no, I continue
+OK_I_STOP = Key2 % ok, I stop
+COME_BACK = Key1 % come back
+ABANDON_EVERYONE = Key3 % (END_LVL)abandon everyone
+ASK_FOR_OPENING = Key2 % ask for opening
+ASK_FOR_OPENING_END = Key2 % (END_LVL)ask for opening
+OPEN_END = Key1 % (END_LVL)open
+EXPLODE_END = Key1 % (END_LVL)explode

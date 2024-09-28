@@ -1,0 +1,6 @@
+% ONLY_STOLEN_OBJECT
+rebecca = DOWN = you_silly = I just have to find out what @Vladimir came to steal from us.
+
+
+% ONLY_THIEF_NAME
+rebecca = DOWN = you_silly = I just have to find out who came to steal our unlocking research.

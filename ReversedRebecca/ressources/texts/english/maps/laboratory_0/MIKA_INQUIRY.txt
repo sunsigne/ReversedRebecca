@@ -1,0 +1,47 @@
+% THEFT
+mika = player = doubt = It gives me a nice leg…
+rebecca = mika = worry = But… You don’t know anything about this?
+mika = player = serious = No.
+
+
+%INQUIRY_SOON
+rebecca = object = happy = What exactly happened?
+mika = player = serious = Give me five seconds…@I’m gathering my thoughts.
+
+
+% SOON_NEXT
+mika = player = serious = Ok, that's good. Did you say?
+
+
+% SOON_NEXT_VAR
+rebecca = object = worry = Hey Mika! Can we talk now?
+mika = player = serious = Yes, it's good. What were you saying?
+
+
+% NEUTRAL
+rebecca = object = happy = What exactly happened?
+mika = player = serious = I was coming out of the break room,@when I heard an explosion.
+mika = player = doubt = I didn't see the explosion,@but I recognize the sound.
+mika = player = serious = Right after, this guy "came from nowhere", @ quietly leaves Alicia's office!
+mika = player = serious = I ran after him. The rest, you know it.
+rebecca = object = surprised = Wait! But maybe Alicia is hurt!
+mika = player = surprised = ?!
+mika = player = serious = I hadn’t thought about that…
+mika = player = serious = Go see how she's doing.@I have to stay here to clear the way.
+
+
+%HURRY_UP
+mika = player = angry_var = Rebecca! What are you doing? @Go see if Alicia is okay! 
+
+
+% HURRY_UP_AGAIN
+mika = player = doubt = It’s this way…
+
+
+% HURRY_UP_LAST
+mika = player = angry_var = Good! That's enough! What's your problem? @Don't give a damn about people?
+mika = player = angry = Get out.
+
+
+% HURRY_UP_LAST_REBECCA
+player = DOWN = determined = It's so much fun to push them to the limit.

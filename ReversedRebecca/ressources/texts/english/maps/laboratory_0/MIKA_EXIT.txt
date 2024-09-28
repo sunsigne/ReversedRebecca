@@ -1,0 +1,32 @@
+% NEUTRAL
+rebecca = object = worry = It’s quite a landslide… Is there any way to get rid of it?
+mika = player = serious = Elbow grease.
+rebecca = object = sad = I’ll pass.
+rebecca = object = sad = I will see if there is another solution.
+mika = player = serious = As you wish, I'll go the old-fashioned way.
+
+
+% MIKA_BOMB
+rebecca = object = laugh = Come on! Hop! We're moving away!
+mika = object = doubt = Huh? Bombs?
+mika = object = surprised = Wait?! But you've already lit the fuse!
+rebecca = object = laugh = I said: let’s move on!
+
+
+% ALICIA_REACTION_MIKA_BOMB
+alicia = player = surprised = Well, I say so! When she's looking for a way out, she doesn't pretend!
+
+
+% ALICIA_REACTION_MIKA_BOMB_VAR
+alicia = player = angry_var = Rebecca! We said we were stopping with the bombs! 
+
+
+% ALICIA_REACTION_EXIT_IS_OPENED
+alicia = DOWN = angry = Are you kidding me?
+mika = alicia = doubt = What's the problem? She cleared the entrance…
+alicia = mika = angry_var = The problem is, she blew up@half our lab.
+mika = DOWN = surprised = Seriously?
+rebecca = UP = no_sens = I was just looking for an outing…
+mika = DOWN = serious = If it was to break everything in the process, @it wasn't worth it.
+alicia = DOWN = angry_var = Exactly!
+rebecca = UP = sad = …

@@ -1,0 +1,74 @@
+% HAVE_YOU_DATA_HELLO
+player = object = happy = Hello! Do you have any info on what just happened?
+
+
+% HAVE_YOU_DATA_MET
+player = object = happy = Otherwise, do you have any info on what just happened?
+
+
+% HAVE_YOU_DATA
+object = player = urge_happy = I didn't see anything, sorry.@I was in my office.
+player = object = unhappy = You look pale, are you okay?
+object = player = urgent = I really need to go to the bathroom...
+player = object = worry = And, you're not going because...?
+object = player = urge_sad = The door is closed!
+
+
+% HAVE_YOU_DATA_NEXT
+player = object = laugh = I see. Sarah will take care of it.
+
+
+% HAVE_YOU_DATA_NEXT_VAR
+object = player = urge_happy = But everything is fine. Sarah went to get the key.
+player = object = laugh = I see.
+
+
+% HAVE_YOU_DATA_AGAIN
+player = object = unhappy = Don't you really know anything that could help me?
+object = player = urge_happy = I just know there was an explosion, and @the security system locked the doors.
+object = player = urge_sad = Hence my problem, by the way…
+player = object = happy = Okay. THANKS.
+
+
+% THEFT
+jean = rebecca = urge_sad = I don't know anything about this.
+
+
+% FIRST
+object = player = urgent = I really need to go to the bathroom...
+player = object = you_silly = Why don't you go?
+object = player = urge_sad = The door is closed!
+player = object = you_silly_var = Ok, I'll take care of it.
+
+
+% STOP_MOVING
+player = object = unhappy = Could you please stop moving?@You're stressing me out.
+object = player = urge_happy = Yes, sorry.
+
+
+% SECOND
+object = player = urge = I'm taking it from you! Hurry up!
+player = object = happy_var = Yes yes.
+
+
+% HOLDING
+object = player = urge_sad = Ugh…
+
+
+%HOLDING_AGAIN
+object = player = urge_sad = No…
+
+
+% HOLDING_LAST
+object = player = urge_sad = It’s not funny Rebecca…
+player = object = you_silly = …
+
+
+% PEE_CORNER
+player = object = you_silly = I was thinking…maybe you can find somewhere else to do this?
+
+
+% PISSED_ITS_PANTS
+object = player = urge_sad = It's too late...
+player = object = sad = Ha…
+object = player = urge_happy = Don't worry.@I just have to go cry in a corner...

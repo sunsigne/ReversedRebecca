@@ -1,0 +1,205 @@
+% HAVE_YOU_DATA
+player = object = happy = Hello, Joseph. Do you have any info@on what just happened?
+object = player = happy = What? What just happened?
+player = object = sad = (I don't want to be the one to tell Joseph that we've just suffered an attack).
+player = object = worry = Um… No, nothing.@Forget what I just said.
+object = player = happy_var = Ha! These young people!
+
+
+% THEFT
+player = DOWN = sad = I risk worrying Joseph if I talk to him about this.
+
+
+% BOOK_HELLO
+player = object = happy = Hello, Joseph.@Are you looking for a book?
+object = player = happy_var = Ha! Hello Rebecca.@No, I have already read them all.
+
+
+% BOOK
+player = object = happy = Are you looking for a book?
+object = player = happy_var = No, I've already read them all.
+
+
+% BOOK_NEXT
+object = player = happy = I didn't like any of them…@However, I'm not picky.
+object = RIGHT = doubt = It must be said that the books here are not great.
+object = player = happy = It reminds me of my youth,@when…
+object = player = doubt = Blah blah blah.
+object = player = happy = Blah blah blah.
+object = player = happy_var = Blah blah blah.
+object = player = doubt = Blah blah blah.
+object = player = happy = Blah blah blah?
+player = object = worry = ...
+object = player = happy = So what? What do you think?
+player = object = no_sens = Ha! Um… I guess…
+object = player = happy_var = Great! I'm glad we talked about it.
+player = object = no_sens = … Yes, me too…
+player = DOWN = no_sens = … I have no idea what that was about.
+
+
+% FORGOT
+player = object = worry = Joseph… Could you remind me@what you asked me please?
+object = player = happy_var = Ha! These young people!
+object = player = doubt = In fact, I admit that I don't remember it either. My memory is no longer what it used to be...
+player = object = worry = Ha…
+object = player = happy = … But, it will come back to me in a minute.
+player = object = happy_var = Noted.
+
+
+% ALICIA_REACTION_JOSEPH_FORGET
+player = alicia = happy = And you? Do you remember what Joseph@asked me?
+alicia = player = surprised = Not at all!
+
+
+% REMEMBER
+object = player = happy = I remember what we said!
+object = player = happy_var = I asked you if you too found that @eggplants were better than leeks.
+player = object = no_sens = Ha! Um… I guess…
+object = player = happy_var = Great! I'm glad we talked about it.
+object = player = happy = Besides, it reminds me of my youth,@when…
+object = player = doubt = Blah blah blah.
+object = player = happy = Blah blah blah.
+object = player = happy_var = Blah blah blah.
+object = player = doubt = Blah blah blah.
+object = player = happy = Blah blah blah?
+player = object = worry = ...
+object = player = happy = So what? What do you think?
+player = object = no_sens = Um… I prefer the first?
+object = player = doubt = Are you sure?@I didn't imagine you liking licorice...
+object = player = happy_var = Finally, tastes and colors…
+
+
+% REMEMBERED_THEN_FORGET_AGAIN
+player = object = worry = So, do you remember what you asked me?
+object = RIGHT = doubt = To be honest, it came back to me while you were gone.
+object = RIGHT = happy = But I forgot again…
+player = object = worry = Ha…
+object = RIGHT = happy = Besides, it reminds me of my youth,@when…
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah.
+object = RIGHT = happy_var = Blah blah blah.
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah?
+player = object = worry = ...
+object = RIGHT = happy = So what? What do you think?
+player = object = no_sens = Um… I guess…
+object = RIGHT = doubt = Are you sure? @I didn't imagine you liking licorice...
+object = RIGHT = happy_var = Finally, tastes and colors…
+
+
+% REMEMBER_AND_KEY
+player = object = worry = Okay, I have to go.
+object = player = happy = Wait! I have something for you.
+object = player = doubt = I don't know why, but my little@finger tells me you might need it.
+
+
+% PINKY
+player = object = excited = That’s nice. Thank you Joseph.
+
+
+% COUCH_HELLO
+player = object = happy = Hello, Joseph. How are you ?
+object = RIGHT = happy_var = Ha! Hello Rebecca.@Have you ever tried sleeping on these sofas?
+object = RIGHT = happy = It's incredible how comfortable they are! @It's like you're sitting on a cloud.
+object = RIGHT = happy = It reminds me of my youth,@when…
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah.
+object = RIGHT = happy_var = Blah blah blah.
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah?
+player = object = worry = ...
+object = RIGHT = happy = So what? What do you think?
+player = object = no_sens = Ha! Um… I guess…
+object = RIGHT = happy_var = Great! I'm glad we talked about it.
+player = object = no_sens = … Yes, me too…
+player = DOWN = no_sens = … I have no idea what that was about.
+
+
+% COUCH
+object = RIGHT = happy_var = Have you ever tried sleeping on these couches?
+object = RIGHT = happy = It's incredible how comfortable they are! @It's like you're sitting on a cloud.
+object = RIGHT = happy = It reminds me of my youth,@when…
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah.
+object = RIGHT = happy_var = Blah blah blah.
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah?
+player = object = worry = ...
+object = RIGHT = happy = So what? What do you think?
+player = object = no_sens = Ha! Um… I guess…
+object = RIGHT = happy_var = Great! I'm glad we talked about it.
+player = object = no_sens = … Yes, me too…
+player = DOWN = no_sens = … I have no idea what that was about.
+
+
+% FORGOT_COUCH
+player = object = worry = Joseph… Could you remind me@what you asked me please?
+object = RIGHT = happy_var = Ha! These young people!
+object = RIGHT = doubt = In fact, I admit that I don't remember it either. My memory is no longer what it used to be...
+player = object = worry = Ha…
+object = RIGHT = happy = … But, I'm sure that wasn't important.
+player = object = happy_var = Ok, if you say so.
+
+
+% FIFTY_YEARS
+object = RIGHT = doubt = Have you ever wondered what the world would look like in 50 years?
+player = object = no_sens = Um… no.
+object = RIGHT = happy_var = It’s a very interesting question, though!@Me, if someone had told me 50 years ago that…
+object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = happy = Blah blah blah.
+object = RIGHT = happy_var = Blah blah blah.
+player = object = sad = ... And trouble…
+
+
+% OFFER_A_TEA
+player = object = worry = Can I offer you some tea?
+object = RIGHT = happy_var = That's very kind of you, Rebecca.@But, no thanks.
+object = RIGHT = happy = Imagine that 30 years ago, I learned an incredible story about tea…
+object = RIGHT = doubt = Did you know that… Blah blah blah.
+object = RIGHT = happy = Blah blah blah.
+object = RIGHT = happy_var = Blah blah blah.
+
+
+% OFFER_A_TEA_GOOD
+player = object = worry = Sorry to cut you off, but @I really have to go.
+object = RIGHT = happy_var = Okay, see you then.
+player = DOWN = you_silly = He's not mean, but how talkative he is!
+
+
+% OFFER_A_TEA_BAD
+player = object = wrong_with_you = No, but that's enough, yes?@I didn't ask you to tell your life story!
+object = RIGHT = happy = Sorry?
+player = object = angry = Isn't that clear? You're drunk!
+object = RIGHT = happy = But… I…
+player = object = angry_var = Shut up!
+object = RIGHT = happy = …
+player = object = evil_var = Well there you go. You see when you want.
+object = RIGHT = happy = …
+
+
+%SAS_KEY
+player = object = happy = Joseph, could I have the keys to the SAS?
+object = player = happy = Of course my little Rebecca. Here they are.
+player = object = happy_var = Thanks!
+
+
+%SAS_KEY_BAD
+player = object = evil = Hey! The old man! I need your keys.
+player = object = evil_var = Don't move, I'm helping myself.
+
+
+%SAS_KEY_SLEEPING
+player = object = laugh = STAND UP, OLD MAN!
+
+
+%SAS_KEY_SLEEPING_NEXT
+object = DOWN = happy = Huh? What ? What ?
+player = object = laugh = Ha? Are you awake? Perfect!@I need your key.
+object = DOWN = happy = Um... There you go
+player = object = happy_var = Thanks!
+
+
+%SAS_KEY_IS_USELESS
+player = DOWN = unhappy = Damn… I only just realized that I don't know how to use the green keys yet.
+player = DOWN = you_silly = Too bad… I'll have to manage "cyan".
+

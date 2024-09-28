@@ -1,0 +1,21 @@
+///// GOOD /////
+
+OFFER_A_TEA = 1 % offer a tea
+CONFORT_JEAN = 2 % confort Jean
+FREE_ALICIA = 3 % free Alicia
+FREE_AND_BEFRIEND_ALICIA = 4 % free and befriend Alicia
+
+///// BAD /////
+
+STEAL_HER_DRINK = 1 % steal her drink
+SCOLD_JEAN = 2 % scold Jean
+TRAP_THE_TOILET = 3 % trap the toilet
+DESTROY_12_HOURS_OF_WORK = 4 % destroy 12 hours of work
+YELL_AT_AN_OLD_MAN = 5 % yell at an old man
+UNREASONABLE_DESTRUCTION = 6 % unreasonable destruction
+ABANDON_EVERYONE = 7 % abandon everyone
+
+///// PSYCHOPATH /////
+
+QUICK_DEATH = 999 % quick death
+PLUG_THE_HOLE_POORLY = 999 % plug the hole poorly

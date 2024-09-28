@@ -1,0 +1,81 @@
+% JEANS
+jean = rebecca = urge_sad = No, I didn't see it.
+
+
+% JEAN_VAR
+jean = rebecca = urge_sad = I haven't seen it either.
+
+
+% SARAH
+sarah = rebecca = worry = Sorry. I don't know where she is.
+
+
+% SARAH
+sarah = rebecca = worry = I don't know where she is either.
+
+
+% DELTA
+delta = rebecca = surprised = What? Hurt, you say?
+rebecca = object = unhappy = Maybe.@It happened in his office.
+delta = rebecca = no_sens = Rho, that’s not cool…
+delta = rebecca = worry = Well… Maybe, she has nothing.@I’m coming with you.
+
+
+% MIKA_DELTA_CONVERSATION
+delta = DOWN = surprised = What? Hurt, you say?
+mika = UP = serious = It's possible.@It happened in his office.
+delta = DOWN = no_sens = Rho, that’s not cool…
+delta = DOWN = worry = Well... Maybe, she has nothing.@I'm coming with you.
+
+
+% MIKA_ASKED_FOR_HELP
+mika = player = surprised = What? Locked in the airlock?
+player = mika = unhappy = Yes…
+mika = player = serious_var = Hmm…
+mika = player = serious = I have to stay here, to clear the rubble.@You should ask Sarah for help.
+
+
+% MIKA_ASKED_FOR_HELP_KINDLY
+
+player = mika = worry = I'm asking you for help.
+mika = player = serious = I'm busy.
+player = mika = unhappy = But… Alicia…
+mika = player = doubt = … is alive. Shall I ask you for help@to clear the exit? Everyone has their own problem.
+player = mika = wrong_with_you = … … …
+player = DOWN = angry_var2 = What an asshole!
+
+
+% MIKA_ASKED_FOR_HELP_BLAMING
+player = mika = unhappy = I feel sorry for Alicia...@All alone... Locked up...
+mika = player = doubt = What are you doing to me now?
+player = mika = worry = I’m making you feel guilty. That works ?
+mika = player = serious = No.
+player = mika = worry = It's because I didn't do it well.@Wait, I'll imitate it.
+player = mika = you_silly_var = Um… Um…
+player = mika = cry_var = Help me!
+player = mika = laugh = Ho my God! I did it so well!
+player = mika = happy = More seriously, are you going to help me now?
+mika = player = serious_var = I applaud the effort, but it's still a no.
+mika = player = serious = I have to clear the exit.@Ask someone else.
+player = mika = worry = Ok, I understand… Too bad.
+
+
+% MIKA_ASKED_FOR_HELP_SCOLDING
+player = mika = angry = Say, Mika! Do you often fail to help people locked in airlocks?
+mika = player = worry = Um… No.
+player = mika = wrong_with_you = So what? What are you going to do for Alicia?
+mika = player = worry = Am I going to go help him?
+player = mika = determined = Right on time.
+
+
+% MIKA_THANKING_REBECCA_FOR_SCOLDING
+mika = DOWN = serious = Thanks for shaking me up.@You told me what I needed to hear.
+player = UP = laugh = To be honest, I didn't think it would work.
+mika = DOWN = serious = It seems so.
+
+
+% MIKA_ALICIA_TALKING_ABOUT_BREAKING_DOWN_DOOR
+mika = UP = worry = Alicia… Are you okay?
+alicia = DOWN = happy = I'm locked up, but it's okay.@Did you come to help me?
+mika = UP = serious_var = I don't have the key, but I'll manage.@You should move away from the door.
+alicia = DOWN = surprised = ... Ha.

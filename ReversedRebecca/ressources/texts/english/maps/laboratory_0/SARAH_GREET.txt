@@ -1,0 +1,75 @@
+% NEUTRAL
+rebecca = DOWN = excited = Hi Sarah! Are you doing well ?
+sarah = UP = laugh = Yes, thank you!
+sarah = UP = happy = You came early! I went to your house this morning, but there was no one there...
+
+
+% NO_BREAKFAST
+rebecca = DOWN = worry = I was afraid of being late.@I didn't even have breakfast…
+sarah = UP = worry = My poor…
+sarah = UP = wink = Okay, it's not food, but…@I have something for you.
+
+
+%ATE_BREAKFAST
+rebecca = DOWN = happy_var = Yes, I'm an early riser.
+sarah = UP = laugh = Not me!
+sarah = UP = wink = So, I stopped by this morning because…@I have something for you.
+
+
+% AFTER_REFUSED_TO_GO_WITH
+sarah = RIGHT = laugh = Hello again, Rebecca!
+rebecca = LEFT = laugh = Hello again, Sarah!
+sarah = RIGHT = wink = By the way! I have your surprise with me.
+rebecca = LEFT = excited = Ho! You are the best!
+
+
+% AFTER_TOO_LATE
+sarah = RIGHT = happy = Hi Rebecca! How are you ?
+rebecca = LEFT = laugh = Good, thank you!
+rebecca = LEFT = worry = Were you the one who knocked on my door this morning?
+sarah = RIGHT = surprised = Ha! So, were you there?
+rebecca = LEFT = worry = Yes, but I opened the door too late…
+sarah = RIGHT = laugh = Absolute Rebecca!
+sarah = RIGHT = wink = So, I stopped by this morning because…@I have something for you.
+
+
+% AFTER_IGNORED_DOOR
+sarah = RIGHT = happy = Hi Rebecca! How are you ?
+rebecca = LEFT = laugh = Good, thank you!
+rebecca = LEFT = worry = Were you the one who knocked on my door this morning?
+sarah = RIGHT = surprised = Ha! So, were you there?
+rebecca = LEFT = happy = Yes, but…
+
+
+%IGNORED_DOOR_OPENED_TOO_LATE
+sarah = RIGHT = laugh = Absolute Rebecca!
+sarah = RIGHT = wink = So, I stopped by this morning because…@I have something for you.
+
+
+% IGNORED_DOOR_DIDN'T_WANT_TO_OPEN
+sarah = RIGHT = sad = ... Yet this is the principle of a door…
+sarah = RIGHT = you_silly_var = Okay, let's forget that.@I have something for you.
+
+
+%THANK
+rebecca = DOWN = happy_var = Thank you, you are adorable!
+sarah = UP = wink = You're welcome, I have plenty at the workshop.@Remember to come see me as soon as you can.
+rebecca = DOWN = laugh = Noted!
+sarah = UP = happy = Good! It's about time I got started.
+
+
+%AFTER_THANK
+rebecca = LEFT = happy_var = Thank you, you are adorable!
+sarah = RIGHT = wink = You're welcome, I have plenty at the workshop.@Remember to come see me as soon as you can.
+rebecca = LEFT = laugh = Noted!
+rebecca = LEFT = happy = Okay, come on! I'm getting started.
+
+
+% AFTER_ANGRY
+sarah = RIGHT = sad = Hi.
+rebecca = LEFT = angry = Hi.
+
+
+%AFTER_ANGRY_REALLY_HARD
+sarah = RIGHT = angry = …
+rebecca = LEFT = you_silly = ?

@@ -1,0 +1,87 @@
+% SARAH_ANGRY_AGAINST_JEAN
+sarah = jean = angry = But he’s not good!
+
+
+% SARAH_JEAN_SCOLDING_FROM_FAR
+sarah = UP = angry_var = NO BUT IT'S NOT GOOD TO PUSH PEOPLE LIKE THAT!
+rebecca = DOWN = unhappy = Holala… Sarah is really angry…
+
+
+% SARAH_JEAN_SCOLDING_VAR
+sarah = UP = angry_var = NO BUT IT'S NOT GOOD TO PUSH PEOPLE LIKE THAT!
+jeans = DOWN = surprised = Um…
+sarah = UP = angry_var = “UH” NOTHING AT ALL! YOU APOLOGIZE!@NOW!
+jeans = DOWN = surprised = … Yes. Pardon.
+
+
+% SARAH_JEAN_SCOLDING
+sarah = UP = angry_var = NO BUT IT'S NOT GOOD TO PUSH PEOPLE LIKE THAT!
+jeans = DOWN = surprised = Um…
+sarah = UP = angry_var = “UH” NOTHING AT ALL! YOU GO SEE REBECCA@AND YOU APOLOGIZE! NOW !
+jeans = DOWN = surprised = … Yes.
+
+
+% JEAN_APOLOGIZE_FOR_PUSHING
+jean = player = sad = Sorry for pushing you earlier...
+player = object = no_sens = Um… No worries.
+
+
+% JEAN_APOLOGIZE_FOR_PUSHING_VAR
+object = player = cry = Ho! Hi Rebecca…
+player = object = unhappy = Are you making a fuss… Isn’t that okay?
+jean = player = sad = Sorry for pushing you earlier...
+player = object = no_sens = Um… No worries.
+
+
+% JEAN_SCOLDING
+player = object = angry = Hey, you!@You pushed me earlier!
+jean = player = urge_happy = Ho… Uh…
+jean = player = unhappy = It’s that… I really needed@to go to the toilet…
+player = object = angry = That's no reason!
+jean = player = unhappy = …
+jean = player = unhappy = ...
+jean = player = cry = … Why are you shouting at me…
+player = object = asleep = Sigh.
+player = object = wrong_with_you = What are you doing to us? Are you playing the victim? When we push people, it's normal for them to get angry!
+jean = player = cry = …
+player = DOWN = angry_var2 = (And he doesn't even apologize!@I don't want to talk to him anymore).
+
+
+% ALICIA_REACTION_JEAN_SCOLDING
+alicia = player = unhappy = I would have preferred you to do that@without me being there… It was embarrassing…
+player = alicia = wrong_with_you = Sorry, but he pissed me off too much!
+alicia = player = happy = I wouldn't have liked to be pushed either.
+alicia = player = unhappy = It's just that... It's always a little embarrassing to be right next to an argument.
+player = alicia = worry = Yes, I understand. Excuse me, @I'll be careful next time.
+alicia = player = happy = Thank you.
+
+
+% JEAN_SCOLDING_BATHROOM
+player = object = angry = No, but what the heck! @Is it okay to push me like that?
+
+
+% JEAN_SCOLDING_BATHROOM_NEXT
+object = player = scared = HAAAA!
+
+
+% JEAN_SCOLDING_HARD
+player = object = angry_var = AM I DREAMING OR DID YOU JUST PISE ON ME?
+jean = player = urge_sad = Sorry… You surprised me and…@It came out on its own…
+player = object = angry = You're a real disgusting person!
+jean = player = urge_sad = I’m sorry…
+player = object = angry = “Sorry” is what we say when we make too much noise, or when we drop something…
+player = object = angry_var = NOT WHEN YOU PISS ON PEOPLE!
+jean = player = urge_sad = Sorry, sorry, sorry…
+player = object = angry = Get out.
+
+
+% REBECCA_MAD_ABOUT_GET_PISSED_ON
+player = DOWN = angry_var2 = No but I'm dreaming!
+
+
+% TOILET_PISSED_ON
+rebecca = DOWN = angry_var2 = Ha no! With that disgusting Jean, I no longer want to hear about going to the toilet!
+
+
+%REBECCA_WONT_EXIT_BATHROOM
+player = DOWN = unhappy = I can't go out like this.

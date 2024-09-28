@@ -1,0 +1,16 @@
+% SPONTANEOUS
+object = player = surprised_var = Well, but Rebecca... What's wrong with you?
+player = object = dreaming = I'm just putting an old crouton back in its place.
+object = player = surprised_var = (She's always been like that...?)
+object = player = worry = (No, she is probably very stressed…)
+
+
+% WHEN_TALKED
+object = player = worry = Hey! Um…
+object = player = unhappy = You…
+object = player = worry = Are you okay at the moment?
+player = object = happy_var = Yes, why?
+object = player = unhappy_var = I found you a little... direct with Jospeh.@You... are upset?
+player = object = wrong_with_you = This old geezer is drunk! @Don't you agree?
+object = player = worry = … He is indeed talkative…
+object = player = unhappy = (I feel like I'm walking on eggshells…@I'd better not insist.)

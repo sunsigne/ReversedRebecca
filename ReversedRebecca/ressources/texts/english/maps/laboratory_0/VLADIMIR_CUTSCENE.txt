@@ -1,0 +1,46 @@
+% MIKA_STOP_HIM
+MIKA = DOWN = angry_var = STOP IT!
+
+
+% MIKA_DAMN_IT
+MIKA = DOWN = angry = And shit…
+
+
+% MIKA_WHAT_HAPPENED
+rebecca = DOWN = no_sens = What happened?
+mika = UP = angry_var = This guy... He blew up the wall@to get into the laboratory!
+mika = DOWN = angry_var = What a weirdo...@And now we can't even go out.
+
+
+% MIKA_WHAT_HAPPENED_PRE_NEXT
+sarah = DOWN = surprised = What did he come here to do?
+mika = UP = serious = I'm like you girls…@I don't know any more…
+
+
+% MIKA_WHAT_HAPPENED_NEXT
+sarah = DOWN = determined = So, let's investigate!
+sarah = RIGHT = happy = Rebecca, it's your choice.@What do you prefer to do?
+
+
+% MIKA_WHAT_HAPPENED_NEXT_ANGRY
+sarah = DOWN = determined = So, let's investigate!
+sarah = RIGHT = worry = Rebecca, let's forget our little difference, okay? @We're going to have to resolve this situation.
+sarah = RIGHT = happy = What do you prefer to do?
+
+
+% MIKA_WHAT_HAPPENED_SADISTIC
+rebecca = DOWN = laugh = Indeed. How excited!
+rebecca = DOWN = worry = Don't worry, Mika. I'm going to find a way out.
+rebecca = DOWN = you_silly = Finally… “We” find a way out, of course…
+
+
+% SARAH_SCENARIO_EXIT
+sarah = RIGHT = happy_var = Ok. In that case, I'm going to question the witnesses.
+sarah = RIGHT = wink = We'll have an update at the workshop later.
+rebecca = LEFT = happy = It works.
+
+
+% SARAH_SCENARIO_INQUIRY
+sarah = RIGHT = happy_var = Ok. In that case, I'm going to find us an exit.
+sarah = RIGHT = wink = We'll have an update at the workshop later.
+rebecca = LEFT = happy = Let's do this.

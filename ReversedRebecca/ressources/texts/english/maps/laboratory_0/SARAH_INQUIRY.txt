@@ -1,0 +1,47 @@
+% THEFT
+sarah = rebecca = awkward = You know I was with you when it happened… You should ask the others.
+
+
+% DELTA_KEY_CONVERSATION
+sarah = UP = happy = Do you know where the keys to the hallway are, by any chance?
+delta = DOWN = excited = I have a duplicate, take mine.
+sarah = UP = laugh = Great, thanks Delta!
+
+
+% JEAN_CONVERSATION
+sarah = LEFT = happy = Do you know where the keys are, by any chance?
+jean = RIGHT = urge_happy = I have some in my office,@but I don't remember where.
+sarah = LEFT = wink = Ok, thank you Jean.
+
+
+% REBECCA_HELP_FOR_KEYS
+sarah = LEFT = laugh = Hey, are you there? Did you see any keys here by chance?
+
+
+% REBECCA_HELP_FOR_KEYS_ALICIA
+sarah = LEFT = laugh = Hey, are you there?
+rebecca = RIGHT = happy = Yes, I'm looking for Alicia. Would you have seen it?
+sarah = LEFT = worry = No, sorry.
+sarah = LEFT = laugh = And you? Did you see any keys here by chance?
+
+
+% REBECCA_WAIT_HERE_FOR_KEYS
+rebecca = RIGHT = happy = Don’t move, I’ll give them to you.
+
+
+%REBECCA_GIVING_KEYS
+sarah = LEFT = wink = Thanks, that’s great!
+
+
+% REBECCA_NO_KEYS
+sarah = LEFT = unhappy = Ha… I would have thought…
+sarah = LEFT = wink = Well, it doesn't matter.@Thanks anyway.
+
+
+% REBECCA_OPENED_CYAN_DOOR
+sarah = rebecca = happy_var = I see you used my gift.
+rebecca = sarah = laugh = Did you notice?
+sarah = rebecca = worry = Of course… Why do you say that?
+rebecca = sarah = you_silly = Because the door is far away.@How do you know it's open?
+sarah = rebecca = wink = I heard you do it when @I was in the other room.
+rebecca = sarah = laugh = Ha!

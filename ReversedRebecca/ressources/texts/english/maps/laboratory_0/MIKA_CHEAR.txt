@@ -1,0 +1,63 @@
+% FIRST
+rebecca = object = excited = Come on Mika! You are the best!
+mika = DOWN = angry = These stones had better hold on!
+
+
+% AGAIN
+rebecca = object = determined = Come on Mika! I believe in you!
+mika = DOWN = angry = It’s heavy… But it helps me!
+
+
+%AGAIN_AGAIN
+rebecca = object = laugh = You’re too strong, Mika!
+mika = DOWN = angry_var = Yeah! Chui the best! 
+
+
+% AGAIN_AGAIN_AGAIN
+rebecca = object = happy = Come on! You…
+rebecca = object = worry = Um…
+rebecca = object = happy = Come on!
+mika = DOWN = angry_var = I'm almost there!
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Come on Mika! You are the best!
+mika = DOWN = doubt = Haven’t you already said that?
+rebecca = object = worry = Hey… I do what I can…
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Come on Mika! You can do it!
+mika = DOWN = angry_var = I feel it coming!
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = laugh = Mika! Mika! Mika!
+mika = DOWN = angry_var = I'M BACK UP!
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = excited = Come on Mika! You're almost there!
+mika = DOWN = angry = YEAH!
+
+
+% AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
+rebecca = object = evil = Come on! It's all soft.
+mika = DOWN = angry_var = MUUUUUUSCLES!
+
+
+%LAST
+rebecca = object = laugh = MIKA! MIKA! MIKA!
+mika = DOWN = angry = RHAAAAAA!
+
+
+%LAST_NEXT
+mika = DOWN = angry_var = WHO’S THE BOSS?
+
+
+% LAST_NEXT_POST_KISS_LEFT
+mika = LEFT = surprised = Um… Sorry… I got carried away…
+mika = LEFT = worry = Sorry…
+rebecca = RIGHT = blush = ... No worries…
+mika = LEFT = serious = Well… Um… The coast is clear.@I will warn the others.
+rebecca = RIGHT = blush = Ok.

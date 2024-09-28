@@ -1,0 +1,120 @@
+% HAVE_YOU_DATA
+rebecca = object = happy_var = Hey! Married !
+object = player = happy = Hello Rebecca, are you taking your break already?
+rebecca = object = happy = No, I'm investigating what just happened.
+object = player = laugh = Are you talking about the big noise? What happened?
+rebecca = object = worry = An individual broke into the lab,@and blew it up on the way out.
+object = player = surprised = So that was it!
+rebecca = object = happy = Do you have any information on this subject, by the way?
+object = player = unhappy = No… Sorry.
+
+
+% HAVE_YOU_DATA_VAR
+rebecca = object = happy = Do you have any information on what just happened?
+object = player = happy = No more than what I just told you.
+
+
+% THEFT
+object = player = surprised = A theft, you say?
+object = player = asleep = Hmm…
+object = player = happy = This reminds me of a story. Two months ago, a gentleman came to make a scandal about this.
+object = player = worry = He claimed our company stole his work.
+rebecca = object = angry = What? But no !
+object = player = worry = I'm just telling you what he said.
+object = player = unhappy = But in his logic, it is possible that he has decided to come today to… “recover” them.
+rebecca = object = happy = It’s possible. Do you remember his name?
+object = player = worry = Va... Vi... Hmmm…
+object = player = unhappy = No. Sorry…
+rebecca = object = laugh = It doesn't matter. It's already very good. THANKS !
+
+
+% THEFT_NEXT
+object = player = surprised = VLADIMIR!
+object = player = happy = His name was Vladimir.
+rebecca = object = excited = Top! THANKS !
+
+
+%EXIT
+rebecca = object = happy_var = Hey! Married !
+object = player = happy = Hello Rebecca, are you taking your break already?
+rebecca = object = happy = No, I'm looking for a way out of here.
+object = player = surprised = What? Do you want to resign?@But I thought you loved this job…
+rebecca = object = no_sens = ... Huh?
+rebecca = object = surprised = Ho! I'm there!
+rebecca = object = laugh = When I say "get out of here", I mean literally! A guy blocked the front door.
+object = player = laugh = Ha! If you don't give the context, too...
+object = player = happy = From memory, I think we have explosives@in stock. You could use it.
+
+
+% NO_BOMB
+rebecca = object = happy_var = Good idea, I'll try that.
+
+
+% BOMB
+rebecca = object = happy_var = Indeed, I took some with me.
+object = player = happy = Then it's perfect.
+
+
+% ALICIA_REACTION_BOMB
+alicia = marie = angry = No, it's not perfect! @We're not going to blow everything up!
+marie = down = worry = It's just to clear the front door…@Rebecca will be careful.
+alicia = marie = unhappy = Hmm... Rebecca, what do you think?
+rebecca = alicia = laugh = (I probably shouldn't tell him that I find the idea exciting.)
+rebecca = alicia = happy = I have no problem with that.
+alicia = marie = unhappy = Well… Maybe you are right after all…
+alicia = rebecca = happy = I agree if you want to blow up the entrance.
+
+
+% INTRUDER
+object = player = laugh = By the way, who broke the front door?
+rebecca = object = worry = An individual broke into the lab,@and blew it up on the way out.
+object = player = surprised = So that was it, that noise!
+object = player = unhappy = And, what did he want?
+rebecca = object = laugh = No idea.
+
+
+% INTRUDER_SARAH_PISSED
+rebecca = object = happy = Me, I have to find us an exit.@It's Sarah who is leading the investigation. 
+object = player = unhappy = Damn… I would have liked to know more…
+object = player = worry = I would have gone to ask him directly,@but…
+object = player = worry = She seems upset, and I don't want to be yelled at.
+rebecca = object = laugh = That makes sense!
+
+
+% ALICIA_REACTION_INTRUDER_SARAH_PISSED
+alicia = player = surprised = Completely agree!
+
+
+% INTRUDER_SARAH_PISSED_VAR
+object = player = worry = Ha… Too bad, I would have liked to know more…
+
+
+% INTRUDER_NEXT
+rebecca = object = happy = Me, I have to find us an exit.@It's Sarah who is leading the investigation. 
+object = player = worry = Damn… So, I want to know more…
+object = player = happy = I'll go ask her directly.@Do you know where she is?
+rebecca = object = happy_var = With Delta, probably.
+object = player = laugh = Yes, as usual! THANKS.
+
+% BATHROOM_SORRY
+object = player = surprised = Ho! Sorry! @I didn't know it was busy!
+rebecca = object = laugh = No worries!
+
+
+% JOSEPH_TALK
+joseph = RIGHT = happy = … and that's why the coffee is called "coffee".
+marie = LEFT = laugh = What a story! We learn something every day.
+marie = player = happy = And you Rebecca, did you know that in Arabic, the word “coffee” was synonymous with joy?
+joseph = RIGHT = doubt = That’s not what I said…
+marie = LEFT = unhappy = Ha… Did I misunderstand?
+joseph = RIGHT = happy_var = That was almost it anyway.@You just took a shortcut.
+marie = LEFT = happy = And the word “tea”, where does it come from?
+rebecca = DOWN = you_silly = I think they'll be there for a while.@I'd better keep going.
+
+
+% SARAH_DELTA
+sarah = LEFT = happy = … This is precisely what I'm trying to find out.
+marie = UP = unhappy = Damn… I thought you would know more.
+sarah = LEFT = laugh = Not yet, but I will tell you what I learn.@Besides, I would do well to resume my investigation.
+delta = RIGHT = wink = Yes, we're investigating really hard there.@We were talking about lunch.
+sarah = LEFT = laugh = No, I meant "really"@resume my investigation.

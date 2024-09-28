@@ -1,0 +1,34 @@
+% CHOSEN_ONE
+player = object = happy = Hi Dave, what are you looking at?
+dave = player = calm = Hold on, hello Rebecca. So, it's you who's been chosen?
+dave = player = disillusioned = It's funny, I always thought it would be me.
+dave = player = calm = What effect does it have?
+player = object = worry = You are even more strange than usual… Are you sure you're okay?
+dave = player = calm = I'm fine, thanks for caring.
+dave = DOWN = calm = And to answer your question, I was looking at the bombs in the adjoining room.
+player = object = no_sens = Ok… If you say so…
+
+
+% CHOSEN_ONE_PLUS
+player = object = happy = Hi Dave, what are you looking at?
+dave = player = calm = We've already had this conversation, Rebecca. I don't have a habit of repeating myself.
+player = object = worry = What are you talking about? This is the first time I've asked you that.
+dave = player = disillusioned = You, maybe…
+dave = player = calm = Sorry, sometimes I forget that I'm the only one seeing the world as it really is.
+player = object = worry = You are even more strange than usual… Are you sure you're okay?
+dave = player = calm = It's funny. Last time you asked for exactly the same thing…
+dave = player = calm = I feel like no matter what I do, nothing will ever change…
+dave = player = disillusioned = But, hey, it wasn’t me who was chosen, so I don't have a say in anything.
+dave = DOWN = calm = And to answer your question one more time, I was looking at the bombs in the adjoining room.
+player = object = no_sens = Ok… If you say so…
+
+
+% CHOSEN_ONE_EXTRA_PLUS
+player = object = happy = Hi Dave, what are you looking at?
+dave = player = calm = Rebecca, doesn't this whole routine get boring after a while?
+dave = player = calm = Personally, I don’t see the point.
+player = object = worry = You are even more strange than usual… Are you sure you're okay?
+dave = DOWN = disillusioned = The same responses… Same places… Same weird music…
+dave = DOWN = calm = Sometimes, I wish I could forget my memory… But it’s totally impossible.
+dave = DOWN = calm = I am leaving here now, at this time and place. There's no point for me to be here anymore.
+player = object = no_sens = Ok… If you say so…

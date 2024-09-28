@@ -1,0 +1,5 @@
+WALLS_EXPLODED = walls exploded
+DISCUSSIONS_LISTENED = discussions listened
+ROMANCE = romance
+STRAIGHT_ROMANCE = straight romance
+LESBIAN_ROMANCE = lesbian romance

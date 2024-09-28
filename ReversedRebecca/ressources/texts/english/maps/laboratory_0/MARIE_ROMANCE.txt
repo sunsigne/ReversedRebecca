@@ -1,0 +1,143 @@
+%INVENTORY_HELLO
+object = player = laugh = Hey! Hi Rebecca!
+
+
+%INVENTORY_INITIATIVE_HELLO
+object = player = laugh = Hey, Rebecca!
+
+
+%INVENTORY_INITIATIVE
+object = player = happy = Do you need anything?
+rebecca = object = happy_var = No, thanks.@I'm visiting, that's all.
+object = player = laugh = Are you visiting our stock? You can say it if you come looking for bombs.
+rebecca = object = happy_var = No, no. Really, I'm visiting.
+object = player = you_silly = If you say so... I'll give you one anyway, just in case.
+
+
+%INVENTORY_BOMB
+object = player = happy = Do you need anything?
+rebecca = object = excited = Bombs!
+object = player = happy = Of course, here.
+
+
+% ALICIA_WORRY_ABOUT_BOMBS
+alicia = player = unhappy = Um... Rebecca... We agree that @you're not going to blow everything up, right?
+rebecca = alicia = laugh = No, just enough so we can go out.
+alicia = player = happy = It was just to be sure.
+
+
+% ALICIA_WORRIER_ABOUT_BOMBS
+alicia = player = angry = Rebecca! You said you were stopping with the bombs!
+rebecca = alicia = laugh = Ha ha ha! I know, I said that to annoy you.
+alicia = player = appeased = You made me walk well.
+
+
+%INVENTORY_BOMB_NEXT
+rebecca = object = excited = It's not bad, but I want super bombs!@Do we have green bombs?
+object = player = worry = I think not…
+object = player = surprised = Ho! Wait! But yes! @I found one in a box earlier.
+object = player = happy = Hey, here it is.
+
+
+%INVENTORY_BOMB_LAST
+object = player = unhappy = You look disappointed... Isn't that okay?
+rebecca = object = unhappy = I had forgotten, but they are of no use to me…@I don’t know how to use them yet…
+object = player = worry = Ha…
+object = player = unhappy = Um…
+object = player = worry = You will learn soon…
+rebecca = object = happy_var = Thank you, you are kind.
+
+
+%INVENTORY_NEXT
+object = player = happy = Do you need anything else?
+rebecca = object = happy_var = No, thanks.@I'm visiting, that's all.
+
+
+%INVENTORY_LAST
+object = player = worry = ... Are you sure you really don't need anything?
+object = player = unhappy = Sorry for being pushy…@You’re just acting weird…
+object = player = worry = Hm… It's just that you give me the impression that you're waiting for something without daring to ask for it.
+rebecca = object = happy = No, no. I'm looking at you, that's all.
+
+
+% DISILLUSIONED
+marie = RIGHT = unhappy = (Damn, I was starting to think that…)
+marie = RIGHT = worry = (Well… Another time)
+
+
+% EMBARASSED
+object = player = happy = (She always looks at me…)
+object = player = blush_var2 = (…She looks as beautiful as always…)
+object = player = blush = (I can't concentrate)
+
+
+% EMBARASSED_NEXT
+object = player = blush_var = (She’s still there…)
+
+
+% EMBARASSED_NEXT_NEXT
+object = player = blush_var2 = (Why does she stay there?@Is that what I think?)
+object = player = blush_var = (Is this really@happening?)
+
+
+% DISILLUSIONED_NEXT
+marie = RIGHT = cry_var = (I was just getting ideas…)
+
+
+% EMBARASSED_NEXT_NEXT_NEXT
+object = player = blush_var2 = ("Rebecca, I love you.")
+object = player = blush_var = (Come on, it’s not hard, Marie.@You have to get started!)
+object = player = blush = (Oh no, I knew I should have washed my hair this morning!)
+
+
+% EMBARASSED_NEXT_NEXT_NEXT_NEXT
+object = player = blush_var = (It might be a little ridiculous to announce it like that…)
+object = player = blush_var = (Maybe I should just walk up and stroke his cheek, then his hair, and kiss him…)
+
+
+% EMBARASSED_LAST
+object = player = blush_var = (Okay, Marie, this is your chance!@It's your time! It's now!)
+object = player = blush_var2 = Um… Rebecca?
+object = player = blush_var = (Should I approach him or ask him?)
+object = player = blush_var = (…I'll ask him. It's more correct)
+
+
+% EMBARASSED_LAST_NEXT
+object = player = blush_var3 = Is blrhfghlre?
+object = player = surprised_var = (And shit…)
+object = player = surprised = UH… YOUR LACES ARE UNDONE!
+object = player = surprised_var = (Did I really say that?)
+object = player = cry_var = (And I shouted it too… I'm such a noodle)
+object = player = cry_var = (Her shoelaces aren't even untied…@She'll think I'm too weird…)
+object = player = cry_var = (My life is ruined…)
+
+
+% WILL_YOU
+
+object = player = cry_var2 = Rebecca! Wait!
+
+
+% WILL_YOU_NEXT
+object = player = cry = I wanted to know if…
+object = player = cry_happy = Is…
+object = player = blush_var2 = Do you want to go out with me?
+
+
+% WILL_YOU_NO
+object = player = cry_var = Ha ha… You believed it, right? @I was making you walk… Of course…
+object = player = cry_var = Excuse me… I have to go somewhere…
+
+
+% WILL_YOU_YES
+object = player = blush_var2 = Ok… Um… I… Um…
+object = player = blush_var4 = … I didn't think about the rest…
+player = object = worry = Me neither. I admit that this is completely new to me.
+object = player = surprised_var2 = Am I your first?
+player = object = worry = Yes. I normally prefer boys...
+player = object = happy_var = But I found you touching, @so I said to myself "why not".
+
+
+% WILL_YOU_YES_NEXT
+object = player = blush_var2 = So... Shall we… eat together@at a restaurant this evening?
+player = object = happy = Yes, that's good.
+object = player = blush_var5 = Ok, I will book for 8 p.m. I'll call you.

@@ -1,0 +1,45 @@
+% YOU_HERE_FIRST_TIME
+object = player = cry = Hey! Hello Rebecca…
+player = object = unhappy = You make it sound like something's wrong. Is everything okay?
+object = player = cry = No…
+player = object = unhappy = I… can I do something for you?
+object = player = cry = Leave me alone, please.
+
+
+% ARE_YOU_OK_FIRST_TIME
+object = player = cry = Don't worry, I'm fine. I just feel a bit embarrassed about…
+object = player = cry_var = It will be okay.
+
+
+% THINK_FIRST_TIME
+player = object = you_silly_var = (I don’t know what it was, but I’d rather let him have his peace.)
+
+
+% YOU_HERE
+object = player = cry = Hey! Are you here?
+player = object = unhappy = You didn’t keep your word…
+object = player = cry = No…
+player = object = unhappy = I… can I do something for you?
+object = player = cry = Leave me alone, please.
+
+
+% ARE_YOU_OK
+object = player = cry = Don't worry, I'm fine. I just feel a bit embarrassed about what happened.
+
+
+% CLOTHES
+player = object = happy = I was thinking… Do you want me to find some spare clothes for you?
+object = player = cry = That's kind of you, but I’d rather go home…
+
+
+% LEAVE_ME_ALONE
+object = player = cry = I would like to be alone a little if that doesn't bother you.
+player = object = unhappy = I don’t want to let you like this…
+object = player = cry_var = It will be okay for me, thank you.
+object = player = cry = I’ll close the door when you leave, just don't want anyone to see us like this…
+player = object = happy_var = Okay! You got this, right?
+object = player = cry_var = Yes.
+
+
+% THINK
+player = object = you_silly_var = (I'd better leave him alone).
