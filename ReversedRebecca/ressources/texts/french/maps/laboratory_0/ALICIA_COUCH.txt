@@ -11,7 +11,7 @@ player = alicia = you_silly_var = Je vois.
 
 
 % LAST
-player = DOWN = you_silly = Je devrais la laisser tranquille. Elle a sûrement @besoin de repos après qu'elle vient de vivre.
+player = DOWN = you_silly = Je devrais la laisser tranquille. Elle a sûrement@besoin de repos après qu'elle vient de vivre.
 
 
 % DRINK_THANK

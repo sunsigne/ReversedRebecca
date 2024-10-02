@@ -1,80 +1,88 @@
 % HAVE_YOU_DATA
 rebecca = object = laugh = Hi Delta!
-delta = rebecca = happy = Yo, my big one!@How can I help you?
+delta = rebecca = happy = Yo, sis!@How can I help you?
 rebecca = object = happy = Do you have any info on what just happened?
 delta = rebecca = excited = Yes, I know everything.
 rebecca = object = surprised = Really?
 delta = rebecca = worry = No. But, I can guess the main points.
-delta = rebecca = happy = A guy broke in here, stole something,@and left. Am I good?
-rebecca = object = laugh = Almost, yes!
-rebecca = object = worry = On the other hand, we don't know if he stole something.
-delta = rebecca = wink = Believe my experience. Whoever it is, he or she didn't leave empty-handed.
-rebecca = object = happy_var = Ok. In this case I need to find out what he took.
-delta = rebecca = excited = Good luck, big girl!
+delta = rebecca = happy = A dawg broke in here, stole something, and left.@Am I right?
+rebecca = object = laugh = Yes, kind of!
+rebecca = object = worry = Yet, we don't know if he stole something.
+delta = rebecca = wink = Believe my experience. Whoever it is,@he or she didn't leave empty-handed.
+rebecca = object = happy_var = Ok. In this case, I need to find out what he took.
+delta = rebecca = excited = Good luck, sis!
 
 
 % THEFT
 delta = rebecca = smile = No, I don't know what he took.@Otherwise, I would have told you.
-rebecca = object = happy_var = That was to be sure.
+rebecca = object = happy_var = Just wanted to be sure.
 
 
 % KEY_EXIT
 rebecca = object = laugh = Hi Delta!
-delta = rebecca = happy = Yo, my big one!@How can I help you?
-rebecca = object = happy = Do you have any idea how@I find us an outing?
+delta = rebecca = happy = Yo, sis!@How can I help you?
+rebecca = object = happy = Do you have any idea@how I can find us an outing?
 delta = rebecca = no_sens = Hmm… I guess if you're asking,@it's because the front door is blocked.
-rebecca = object = no_sens = The word is weak… She is completely@buried under the rocks.
-delta = rebecca = laugh = Oh yeah! The guy didn't pretend!
+rebecca = object = no_sens = Not just a little…@It is completely buried under rocks.
+delta = rebecca = laugh = Hell! The pal went at it full force!
 delta = rebecca = excited = If I were you, I would just stop by the reception.
-rebecca = object = surprised = Ho! It’s true that we have that!
-rebecca = object = worry = As we almost never receive an audience, @I ended up forgetting that this room existed.
-delta = rebecca = laugh = Come on, go save us, “madam adventurer”.
-rebecca = object = happy_var = Yes.
+rebecca = object = surprised = Ho! We do have that!
+rebecca = object = worry = As we almost never receive the public,@I ended up forgetting that this room existed.
+delta = rebecca = laugh = Come on, go save us, "miss adventurer".
+rebecca = object = happy_var = Sure.
 
 
 % KEY
 rebecca = object = laugh = Hi Delta!
-delta = rebecca = happy = Yo, my big one!@How can I help you?
+delta = rebecca = happy = Yo, sis!@How can I help you?
 rebecca = object = happy = Do you know where the@keys to the next door are?
-delta = rebecca = excited = I have a duplicate, take mine.
+delta = rebecca = excited = I have a spare one, take it.
 rebecca = object = happy_var = Thanks!
 
 
 % THATS_CRAZY
-rebecca = object = no_sens = It’s still crazy, @this guy showing up like that…
-delta = rebecca = happy_var = Oh no! It's not new!
+rebecca = object = no_sens = How crazy it is,@this guy bursting in like that…
+delta = rebecca = happy_var = Oh no! It's nothing new!
 delta = rebecca = worry = You say that because you're not used to it.
-delta = rebecca = laugh = But with my brother, we did@this kind of thing all the time.
+delta = rebecca = laugh = But with my brother, we used to do@this kind of stuff all the time.
 rebecca = object = surprised = What?!
 delta = rebecca = worry = Don't worry. Nobody was hurt.
 delta = rebecca = happy_var = We were just stealing cool stuff.
 
 
 % THATS_NOT_COOL
-delta = rebecca = worry = Hey! Everyone has their own past...
+delta = rebecca = worry = Hey! Everyone has their own past…
 delta = rebecca = laugh = And then… Today, I didn’t do anything.
-rebecca = object = worry = It's not false.
+rebecca = object = worry = True enough.
 rebecca = object = happy = Well, I better go.
-delta = rebecca = wink = Good luck, big girl.
+delta = rebecca = wink = Good luck, sis.
 
 
 % PAST
-rebecca = object = happy = What were you doing with your brother, exactly?
-delta = rebecca = happy = We spotted a place with high-tech stuff, @we broke in, then we stole it.
-rebecca = object = excited = …And then?
-delta = rebecca = happy_var = No, well that's all. We ended up having a garage full of this stuff.
-rebecca = object = no_sens = You never used it?
-delta = rebecca = laugh = Yes, as a doorstop or as a paperweight.
-delta = rebecca = excited = It was the flight that was interesting.
-delta = rebecca = worry = For us, it was always junk.@We never understood what it was for.
-rebecca = object = happy = Yet today, you are an engineer!@You should understand easily.
-delta = rebecca = wink = Yes, but in the meantime, our lives with my brother have separated.
-delta = rebecca = smile = He kept his love of "raids", @and me, my love of technology.
-delta = rebecca = worry = And like me, I moved in, and he didn't, @it was logical that he kept the garage.
-delta = rebecca = happy_var = But I have good memories of it. And if I had to do it again, I'd sign right away!
+rebecca = object = happy = What exaclty were you doing with your brother?
+delta = rebecca = happy = We would scout out a place with high-tech pieces,@break in, and then steal it.
+rebecca = object = excited = … And then?
+delta = rebecca = happy_var = Actually, that's it.@We ended up having a garage full of stuff.
+rebecca = object = no_sens = You never used any of it?
+delta = rebecca = laugh = Yes, as doorstops or as paperweights.
+delta = rebecca = excited = It was the theft itself that was interesting.
+delta = rebecca = worry = To us, it was always just junk.@We never understood what it was for.
+rebecca = object = happy = Yet today, you are an engineer!@You should understand easily now.
+delta = rebecca = wink = Yeah, but in the meantime, my brother@and I went our separate ways.
+delta = rebecca = smile = He kept his love for "raids",@and I kept my love of technology.
+delta = rebecca = worry = And since I settled down and he didn't,@it made sense that he kept the garage.
+delta = rebecca = happy_var = But I have fond memories of it. And if I had@the chance to do it all over again, I'd sign up right away!
 rebecca = object = laugh = Yes, that's the impression you give.
-rebecca = object = happy = Okay, I'm going.
-delta = rebecca = excited = Looking forward to it, my dear.
+rebecca = object = happy = Alright, I'm off.
+delta = rebecca = excited = Take care, sis.
+
+
+
+
+
+
+
+
 
 
 % JUST_CHECKING
@@ -85,7 +93,7 @@ rebecca = object = laugh = Ok, if you say so.
 
 
 % SOUNDS_FUN
-delta = rebecca = excited = That’s “seriously cool” you mean!
+delta = rebecca = excited = That's "heavy cool" you mean!
 delta = rebecca = laugh = But hey, it's behind all that…@Today, I settled down.
 rebecca = object = happy = Why did you stop?
 delta = rebecca = no_sens = To make it short: @my brother is an addict.

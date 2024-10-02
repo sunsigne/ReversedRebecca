@@ -7,7 +7,7 @@ player = object = worry = I don't understand half of the titles…
 
 
 % BOOKSHELF_VAR
-player = object = laugh = She didn't lie:@the same furniture, but with fewer books!
+player = object = laugh = She wasn't lying:@the same bookshelf, but with fewer books!
 
 
 % DESK
@@ -25,7 +25,7 @@ player = object = worry = … I never really understood@how they worked…
 
 
 % POSTER
-player = object = unhappy = The boards filled with post-its,@that stresses me out…
+player = object = unhappy = Boards filled with post-its stress me out…
 
 
 % SARAH_NOTE

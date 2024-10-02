@@ -9,7 +9,7 @@ player = object = you_silly_var = Rebecca, you have no willpower…
 player = object = determined = Hold out, you can do it!
 
 % FOURTH
-player = object = surprised = What a surprise! Ma computer before me!@I just wanted to sit!
+player = object = surprised = What a surprise! Ma computer before me!@I just wanted to sit down!
 player = object = no_sens = Sounds crazy… Well, while I'm at it…
 player = object = laugh = Ha ha ha. Ok, that's enough.@I'll have plenty of time this evening.
 

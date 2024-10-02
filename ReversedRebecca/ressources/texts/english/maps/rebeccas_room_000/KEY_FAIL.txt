@@ -28,7 +28,7 @@ player = object = laugh = My keys aren't there, but I found a coin!
 
 
 % DESK
-player = object = you_silly = Seriously, my keys are not there.
+player = object = you_silly = Seriously though, my keys are not there.
 
 
 % DRESSER
@@ -44,4 +44,4 @@ player = object = angry_var2 = No.
 
 
 % WASHING_MACHINE
-player = object = worry = It looks like they are not here…@It could have been when you think about it.
+player = object = worry = It looks like they are not here… Although, that@would have made sense if you think about it.

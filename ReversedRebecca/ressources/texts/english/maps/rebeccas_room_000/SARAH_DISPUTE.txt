@@ -5,12 +5,12 @@ sarah = player = angry = What is wrong with you? Get away!
 
 
 % TOILET_APOLOGIZE
-player = sarah = unhappy = I'm sorry, Sarah.@I've been clumsy…
+player = sarah = unhappy = Excuse me, Sarah.@I've been clumsy…
 sarah = player = angry = Honestly, that's totally uncool…
 player = sarah = unhappy = I know…
 sarah = player = angry = …
 player = sarah = unhappy = …
-player = sarah = worry = Did it go well, at least?
+player = sarah = worry = At least, did it go well?
 sarah = player = determined = Pfff… Silly girl.
 sarah = player = happy = Come on… We're cool.
 player = sarah = happy_var = So much the better.
@@ -22,7 +22,7 @@ player = sarah = wrong_with_you = I ain't holding you back.
 
 
 % WATER_JOKE
-sarah = player = angry = Damn you, Rebecca!@What is wrong with you?
+sarah = player = angry = Darn you, Rebecca!@What is wrong with you?
 player = sarah = excited = Come on! I just wanted to see@what would happen.
 sarah = player = angry = That is totally not cool. I'm out.
 
@@ -38,4 +38,4 @@ rebecca = DOWN = you_silly = That was fun.
 
 
 % REBECCA_ANGRY_ABOUT
-rebecca = DOWN = angry_var2 = I should have tripped her…
+rebecca = DOWN = angry_var2 = I should have tripped her for pushing me…

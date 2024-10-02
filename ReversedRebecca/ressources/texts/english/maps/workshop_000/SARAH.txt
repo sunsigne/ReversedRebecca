@@ -32,6 +32,6 @@ sarah = player = laugh = Haha! Sorry, but you should see your face.@Go get your 
 
 % THAT_WAS_FUN
 player = object = happy_var = That was fun!
-sarah = player = determined = You can come back when you want.@I'll always have something for you!
+sarah = player = determined = You can come back whenever you want.@I'll always have something for you!
 player = object = laugh = You are the best!
 sarah = player = wink = I know.@Let’s go before we’re late.

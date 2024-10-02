@@ -1,35 +1,35 @@
 % BOMBING_OWN_DESK
-alicia = player = surprised = Jeez ! When you kook for an exit you don't do half mesures !
-player = alicia = evil = Yes, it is a fine way through
+alicia = player = surprised = Wow! When you look for an exit,@you don't take half mesures
+player = alicia = evil = Yes, we will go that way.
 
 
 % BOMBING_OWN_DESK_AGAIN
-alicia = UP = unhappy = I really don't like how you blow up our walls...
-player = DOWN = evil_var = D'accord. J'arrête.
+alicia = UP = unhappy = I really don't like how you blow up our walls…
+player = DOWN = evil_var = You are right. I stop.
 
 
 % PISSED_OFF
-alicia = player = angry = Rebecca ! You said you you'd stop!
+alicia = player = angry = Rebecca! You said you would stop!
 
 
 % PISSED_OFF_NEXT
-player = alicia = happy = I didn't do that. 
+player = alicia = happy = I didn't do it. 
 
 
 % PISSED_OFF_NEXT_NEXT
 alicia = DOWN = angry = What about that huge hole, doesn't it ring any bells?
 rebecca = DOWN = happy = It was like that when I arrived.
-alicia = UP = angry_var = And to top it off you're mocking me !
+alicia = UP = angry_var = And to top it off, you're fooling me !
 
 
 % I_AM_ADORABLE
-rebecca = DOWN = evil_var = Who? Me? But I am too cute.
+rebecca = DOWN = evil_var = Who? Me? But I am so lovable.
 
 
 % I_WILL_HELP_YOU
-rebecca = DOWN = excited = That's actually why I'm going to help you patch up the hole...
+rebecca = DOWN = excited = And that's why, I will actually help you out, patching up the hole…
 
 
 % I_WILL_HELP_YOU_DEFINITIVELY
-rebecca = DOWN = death = … Absolutely .
-alicia = UP = surprised_var = What ?!
+rebecca = DOWN = death = … For good.
+alicia = UP = surprised_var = What?!

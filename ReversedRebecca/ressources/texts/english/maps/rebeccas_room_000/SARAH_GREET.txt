@@ -16,7 +16,7 @@ sarah = player = laugh = I'm fine, thank you.
 sarah = player = worry = Just to know, do you often welcome@people in towels ?
 player = object = blush = Oops, I knew I forgot something…
 sarah = player = laugh = That's okay. It's not like I was a stranger.
-sarah = player = happy = Anyway, How about we go to work together?
+sarah = player = happy = Anyway, how about we go to work together?
 
 
 % TOWEL_PANCAKES
@@ -29,28 +29,28 @@ sarah = player = asleep = *sniff* *sniff*
 
 
 % WAIT
-player = object = excited = Hi, Sarah! Sorry, it took a little time to open…
+player = object = excited = Hi, Sarah! Sorry, it took a little while to open…
 sarah = player = laugh = Don't worry, I know you well.
 sarah = player = happy = Are you ready for work ?@I thought we could go together.
 
 
 % WAIT_PANCAKES
-player = object = excited = Hi, Sarah! Sorry, it took a little time to open…
+player = object = excited = Hi, Sarah! Sorry, it took a little while to open…
 sarah = player = laugh = Don't worry, I know you w…
 sarah = player = asleep = *sniff* *sniff*
 
 
 % WAIT_TOWEL
-player = object = excited = Hi, Sarah! Sorry, it took a little time to open…
+player = object = excited = Hi, Sarah! Sorry, it took a little while to open…
 sarah = player = laugh = Don't worry, I know you well.
 sarah = player = worry = Just to know, do you often welcome@people in towels ?
 player = object = blush = Oops, I knew I forgot something…
 sarah = player = laugh = That's okay. It's not like I was a stranger.
-sarah = player = happy = Anyway, How about we go to work together?
+sarah = player = happy = Anyway, how about we go to work together?
 
 
 % WAIT_TOWEL_PANCAKES
-player = object = excited = Hi, Sarah! Sorry, it took a little time to open…
+player = object = excited = Hi, Sarah! Sorry, it took a little while to open…
 sarah = player = laugh = Don't worry, I know you well.
 sarah = player = worry = Just to know, do you often welcome@people in towels ?
 player = object = blush = Oops, I knew I forgot something…

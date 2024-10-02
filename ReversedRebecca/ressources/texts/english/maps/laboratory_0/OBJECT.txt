@@ -50,7 +50,7 @@ rebecca = object = happy = Hey? There are keys next to the computer. I'll take t
 
 
 % BOMB
-rebecca = DOWN = you_silly = It's still handy to have this here.
+rebecca = DOWN = you_silly = This is convenient to have this here.
 
 
 % BOMB_FAKING_TAKE
@@ -103,5 +103,5 @@ rebecca = object = happy_var = Good.
 
 
 % ALICIA_REACTION_ALICIA_ROOM_PLANT
-rebecca = alicia = unhappy = Finally…
+rebecca = alicia = unhappy = I mean…
 alicia = rebecca = happy = Don’t worry, I get it.

@@ -1,5 +1,5 @@
 % MAKE_COMFORTABLE
-player = object = worry = Don't be standing next the door while@I'm being prepared. Make comfortable.
+player = object = worry = Don't be standing next the door while@I'm being prepared. Make yourself comfortable.
 sarah = player = laugh = Don't worry, I will!@I'm just waiting for you to move a little bit.
 
 
@@ -17,4 +17,4 @@ sarah = DOWN = wink = Go get prepared. I'll be waiting here.
 
 % WAKE_UP
 player = object = you_silly_var = On second thought, I'll let her sleep.
-player = object = you_silly = No need to wake her up until I'm ready.
+player = object = you_silly = No need to wake her up as I'm not ready.

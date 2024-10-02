@@ -23,4 +23,4 @@ player = object = laugh = This plant is already in water,@it doesn't need me to 
 
 
 % PLANT_KITCHEN_UNWATERABLE
-player = object = happy_var = My aromatic herbs don't need me@to water them, it's often humid here.
+player = object = happy_var = My aromatic herbs don't need watering,@it's often humid here.

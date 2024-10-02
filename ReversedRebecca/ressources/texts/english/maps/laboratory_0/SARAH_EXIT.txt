@@ -24,7 +24,7 @@ rebecca = DOWN = you_silly = I think they'll be there for a while.@I'd better ke
 
 % DELTA_GAMMA_CONVERSATION
 delta = sarah = laugh_var = … and then he realized that all the effort he had made was to steal a toaster!
-sarah = delta = surprised = No…
+sarah = delta = surprised = No way!
 delta = sarah = smile = I swear it's true.
 sarah = delta = laugh = No, but it's crazy! @And how did he react?
 delta = sarah = excited = He looked me straight in the eyes and he said @ in the most serious way:

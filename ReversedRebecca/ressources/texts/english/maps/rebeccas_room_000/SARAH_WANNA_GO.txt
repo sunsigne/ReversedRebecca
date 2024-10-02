@@ -22,7 +22,7 @@ sarah = player = fine = I get it.
 
 
 % REFUSE_FOR_REAL_NEXT
-sarah = player = happy = So, see you soon.
+sarah = player = happy = See you soon, then.
 player = object = happy_var = Yeah. Sure.
 
 

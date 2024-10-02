@@ -347,20 +347,12 @@
 	
 	4h00 - la traduction en anglais n'est pas fini !
 	
-	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah 
-	Rebecca :  Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad
-	Sarah : Ben mince -> Damn... / Ha bon ? - Ha ce point -> Really ?
+	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
+	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me
+	Sarah : Ben mince -> Darn... / Ha bon ? - Ha ce point -> Really ?
+	Delta : ma grande (pour rebecca) -> sis / type, gars, mec -> a dawg, pal
 
-	lvl001 :
-	traduire "trouver une sortie" par "find a way out"
-	traduire la deuxième phrase par "no way" -> SARAH_DELTA_EXIT_CONVERSATION_SAT
-	traduire "quel taré" par "what a freak"
-	Traduire "C'est quand même pratique d'avoir ça ici." pas "this is convenient to have this here"
-	traduire "quoi ? c'est pas clair ?" par "did I shuttered?"
-	SAS_KEY_IS_USELESS en l'absence de jeu de mot, l'expression de base doit être "sad" pour la 2nd phrase (faire un jeu de mot avec "feeling blue" en anglais")
-	ALICIA_ROOM_PLANT -> "tant mieux" = "good"
-	ALICIA_REACTION_ALICIA_ROOM_PLANT -> "enfin..." -> "I mean..."
-	
+	lvl laboratory : trouver une sortie -> find an outing
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 

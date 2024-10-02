@@ -1,33 +1,33 @@
 % NEUTRAL
-alicia = DOWN = happy = Thank you again for having set me free.
-player = alicia = laugh = You're welcome, it's normal.
+alicia = DOWN = happy = Thanks again for freeing me.
+player = alicia = laugh = My pleasure, it's nothing.
 
 
 % NEXT
-player = alicia = worry = If you don't mind talking about it... How did you end up locked in the SAS ?
-alicia = DOWN = happy = It's thanks to our security system. When there was the explosion, it locked down all the doors.
-alicia = DOWN = unhappy = "And... well... I was just in there when it happened." 
+player = alicia = worry = If you don't mind talking about it…@How did you end up locked in the SAS?
+alicia = DOWN = happy = All thanks to our security system.@When the explosion occured, it locked down all the doors.
+alicia = DOWN = unhappy = And… well…@I was just in there when it happened.
 player = alicia = you_silly_var = I see.
 
 
 % LAST
-player = DOWN = you_silly = I should leave her alone. She probably needs some rest after what she just went through.
+player = DOWN = you_silly = I should leave her alone. She probably needs@some rest after what she just went through.
 
 
 % DRINK_THANK
-player = alicia = happy_var = Thank you for the coffee !
+player = alicia = happy_var = Thank you for the coffee!
 alicia = DOWN = happy = You're welcome
 
 
 % DRINK_THANK_VAR
-player = alicia = happy_var = Thank you for the tea !
+player = alicia = happy_var = Thank you for the tea!
 alicia = DOWN = happy = You're welcome
 
 
 
 % DRINK_WAS_MINE
-alicia = DOWN = surprised_var = But... that was mine !
-player = alicia = excited = And it was delicious 
+alicia = DOWN = surprised_var = But… This was mine !
+player = alicia = excited = And this was delicious 
 alicia = DOWN = unhappy = …
 
 
@@ -36,7 +36,7 @@ alicia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_APOLOGIZE
-player = alicia = worry = Sorry... I was just a litle joke. Really. 
+player = alicia = worry = Excuse me… It was to play a joke on you.@Really. 
 alicia = DOWN = unhappy = …
 alicia = DOWN = happy = … I have to admit I didn't expect that.
-alicia = DOWN = happy_var = Yes, it was fun.
+alicia = DOWN = happy_var = Yes, that was fun.

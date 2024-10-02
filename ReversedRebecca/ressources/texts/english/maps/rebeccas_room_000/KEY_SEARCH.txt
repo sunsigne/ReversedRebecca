@@ -7,8 +7,8 @@ player = object = excited = Obviously! They must be in the couch!
 
 
 % CLOTHES_BASKET
-player = object = surprised = Ho!
+player = object = surprised = Oh!
 
 
 % DESK
-player = object = laugh = The perfect excuse to settle down and play!
+player = object = laugh = The perfect excuse to sit down and play!

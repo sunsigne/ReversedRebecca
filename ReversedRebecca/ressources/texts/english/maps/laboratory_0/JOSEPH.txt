@@ -168,8 +168,8 @@ player = DOWN = you_silly = He's not mean, but how talkative he is!
 
 % OFFER_A_TEA_BAD
 player = object = wrong_with_you = No, but that's enough, yes?@I didn't ask you to tell your life story!
-object = RIGHT = happy = Sorry?
-player = object = angry = Isn't that clear? You're drunk!
+object = RIGHT = happy = Excuse me?
+player = object = angry = Did I shuttered? You're a windbag!
 object = RIGHT = happy = But… I…
 player = object = angry_var = Shut up!
 object = RIGHT = happy = …
@@ -177,29 +177,29 @@ player = object = evil_var = Well there you go. You see when you want.
 object = RIGHT = happy = …
 
 
-%SAS_KEY
+% SAS_KEY
 player = object = happy = Joseph, could I have the keys to the SAS?
 object = player = happy = Of course my little Rebecca. Here they are.
 player = object = happy_var = Thanks!
 
 
-%SAS_KEY_BAD
+% SAS_KEY_BAD
 player = object = evil = Hey! The old man! I need your keys.
 player = object = evil_var = Don't move, I'm helping myself.
 
 
-%SAS_KEY_SLEEPING
+% SAS_KEY_SLEEPING
 player = object = laugh = STAND UP, OLD MAN!
 
 
-%SAS_KEY_SLEEPING_NEXT
+% SAS_KEY_SLEEPING_NEXT
 object = DOWN = happy = Huh? What ? What ?
 player = object = laugh = Ha? Are you awake? Perfect!@I need your key.
 object = DOWN = happy = Um... There you go
 player = object = happy_var = Thanks!
 
 
-%SAS_KEY_IS_USELESS
+% SAS_KEY_IS_USELESS
 player = DOWN = unhappy = Damn… I only just realized that I don't know how to use the green keys yet.
-player = DOWN = you_silly = Too bad… I'll have to manage "cyan".
+player = DOWN = you_silly = Too bad… I'm almost feeling "blue".
 

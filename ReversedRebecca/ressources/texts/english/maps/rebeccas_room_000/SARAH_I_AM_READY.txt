@@ -87,7 +87,7 @@ sarah = player = you_silly_var = Rebecca… You're tiring me…
 
 % WHILE_PANCAKES
 sarah = RIGHT = surprised = Wait?
-sarah = player = awkward = Are you really going to leave,@leaving pancakes on the table?
+sarah = player = awkward = Are you really going to leave@pancakes on the table?
 player = object = wrong_with_you = Mind your business ?
 player = object = worry = Sorry, it was a little rude.@Yes, I'll eat those later.
 sarah = player = laugh = It's up to you.

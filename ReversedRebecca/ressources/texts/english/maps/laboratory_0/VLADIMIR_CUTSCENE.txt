@@ -9,7 +9,7 @@ MIKA = DOWN = angry = And shit…
 % MIKA_WHAT_HAPPENED
 rebecca = DOWN = no_sens = What happened?
 mika = UP = angry_var = This guy... He blew up the wall@to get into the laboratory!
-mika = DOWN = angry_var = What a weirdo...@And now we can't even go out.
+mika = DOWN = angry_var = What a freak...@And now we can't even go out.
 
 
 % MIKA_WHAT_HAPPENED_PRE_NEXT

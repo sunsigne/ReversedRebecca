@@ -1,5 +1,5 @@
 % BOMBING_OWN_DESK
-player = UP = worry = Blowing up our own office is a bit barbaric... @But I don't really have a choice.
+player = UP = worry = Blowing up our own office is a bit barbaric…@But I don't really have the choice.
 
 
 % ERIC_FREAKS_OUT
@@ -7,15 +7,15 @@ eric = DOWN = scared = HAAAAAA!
 
 
 % BOMBING_OWN_DESK_ERIC_RAN
-player = DOWN = you_silly = Eric is such a wuss...
+player = DOWN = you_silly = Eric is such a wuss…
 
 
 % BOMBING_IS_FUN
-player = DOWN = laugh = Actually, this is rather quite fun !
+player = DOWN = laugh = Actually, this is quite fun!
 
 
 % BOMBING_OWN_DESK_NO_REASON
-player = DOWN = unhappy = I wonder if I have made a mistake...(première phrase à retouché avec le contexte) I clearly didn't need to do this
+player = DOWN = unhappy = I wonder if I didn't just misbehave…@I clearly didn't need to do that.
 
 
 % BOMBING_OWN_DESK_NO_REASON_ERIC_RAN
