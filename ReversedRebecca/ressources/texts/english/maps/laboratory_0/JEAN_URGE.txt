@@ -1,17 +1,17 @@
 % HAVE_YOU_DATA_HELLO
-player = object = happy = Hello! Do you have any info on what just happened?
+player = object = happy = Hello! Do you have any info@about what just happened?
 
 
 % HAVE_YOU_DATA_MET
-player = object = happy = Otherwise, do you have any info on what just happened?
+player = object = happy = Otherwise, do you have any info@about what just happened?
 
 
 % HAVE_YOU_DATA
 object = player = urge_happy = I didn't see anything, sorry.@I was in my office.
 player = object = unhappy = You look pale, are you okay?
-object = player = urgent = I really need to go to the bathroom...
+object = player = urgent = I really need to go to the bathroom…
 player = object = worry = And, you're not going because...?
-object = player = urge_sad = The door is closed!
+object = player = urge_sad = The door is locked!
 
 
 % HAVE_YOU_DATA_NEXT
@@ -19,15 +19,15 @@ player = object = laugh = I see. Sarah will take care of it.
 
 
 % HAVE_YOU_DATA_NEXT_VAR
-object = player = urge_happy = But everything is fine. Sarah went to get the key.
+object = player = urge_happy = But it's all good. Sarah went to get the key.
 player = object = laugh = I see.
 
 
 % HAVE_YOU_DATA_AGAIN
-player = object = unhappy = Don't you really know anything that could help me?
+player = object = unhappy = You really don't know anything that could help me?
 object = player = urge_happy = I just know there was an explosion, and @the security system locked the doors.
-object = player = urge_sad = Hence my problem, by the way…
-player = object = happy = Okay. THANKS.
+object = player = urge_sad = Hence my problem, actually…
+player = object = happy = Alright. Thanks.
 
 
 % THEFT
@@ -35,9 +35,9 @@ jean = rebecca = urge_sad = I don't know anything about this.
 
 
 % FIRST
-object = player = urgent = I really need to go to the bathroom...
+object = player = urgent = I really need to go to the bathroom…
 player = object = you_silly = Why don't you go?
-object = player = urge_sad = The door is closed!
+object = player = urge_sad = The door is locked!
 player = object = you_silly_var = Ok, I'll take care of it.
 
 
@@ -47,12 +47,12 @@ object = player = urge_happy = Yes, sorry.
 
 
 % SECOND
-object = player = urge = I'm taking it from you! Hurry up!
+object = player = urge = Please! Hurry up!
 player = object = happy_var = Yes yes.
 
 
 % HOLDING
-object = player = urge_sad = Ugh…
+object = player = urge_sad = Not really…
 
 
 %HOLDING_AGAIN
@@ -60,15 +60,15 @@ object = player = urge_sad = No…
 
 
 % HOLDING_LAST
-object = player = urge_sad = It’s not funny Rebecca…
+object = player = urge_sad = This isn't funny, Rebecca…
 player = object = you_silly = …
 
 
 % PEE_CORNER
-player = object = you_silly = I was thinking…maybe you can find somewhere else to do this?
+player = object = you_silly = I was thinking…@Maybe you can find somewhere else to do this?
 
 
 % PISSED_ITS_PANTS
-object = player = urge_sad = It's too late...
+object = player = urge_sad = It's too late…
 player = object = sad = Ha…
-object = player = urge_happy = Don't worry.@I just have to go cry in a corner...
+object = player = urge_happy = Don't worry.@I just have to go cry in a corner…

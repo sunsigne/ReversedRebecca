@@ -1,46 +1,46 @@
 % MIKA_STOP_HIM
-MIKA = DOWN = angry_var = STOP IT!
+MIKA = DOWN = angry_var = STOP HIM!
 
 
 % MIKA_DAMN_IT
-MIKA = DOWN = angry = And shit…
+MIKA = DOWN = angry = Shit…
 
 
 % MIKA_WHAT_HAPPENED
 rebecca = DOWN = no_sens = What happened?
-mika = UP = angry_var = This guy... He blew up the wall@to get into the laboratory!
+mika = UP = angry_var = That guy… He blew up the wall to get into the lab!
 mika = DOWN = angry_var = What a freak...@And now we can't even go out.
 
 
 % MIKA_WHAT_HAPPENED_PRE_NEXT
-sarah = DOWN = surprised = What did he come here to do?
-mika = UP = serious = I'm like you girls…@I don't know any more…
+sarah = DOWN = surprised = What was he doing here?
+mika = UP = serious = I'm just like you girls…@I don’t know any more…
 
 
 % MIKA_WHAT_HAPPENED_NEXT
-sarah = DOWN = determined = So, let's investigate!
-sarah = RIGHT = happy = Rebecca, it's your choice.@What do you prefer to do?
+sarah = DOWN = determined = Then let's investigate!
+sarah = RIGHT = happy = Rebecca, it's up to you to choose.@What do you prefer to do?
 
 
 % MIKA_WHAT_HAPPENED_NEXT_ANGRY
-sarah = DOWN = determined = So, let's investigate!
-sarah = RIGHT = worry = Rebecca, let's forget our little difference, okay? @We're going to have to resolve this situation.
+sarah = DOWN = determined = Then let's investigate!
+sarah = RIGHT = worry = Rebecca, let's forget our little disagreement, okay? @We need to sort this situation out.
 sarah = RIGHT = happy = What do you prefer to do?
 
 
 % MIKA_WHAT_HAPPENED_SADISTIC
-rebecca = DOWN = laugh = Indeed. How excited!
-rebecca = DOWN = worry = Don't worry, Mika. I'm going to find a way out.
-rebecca = DOWN = you_silly = Finally… “We” find a way out, of course…
+rebecca = DOWN = laugh = Indeed. What an agitator!
+rebecca = DOWN = worry = Don't worry, Mika. I'm going to find me an outing.
+rebecca = DOWN = you_silly = I mean… Find "us" an outing, of course…
 
 
 % SARAH_SCENARIO_EXIT
 sarah = RIGHT = happy_var = Ok. In that case, I'm going to question the witnesses.
-sarah = RIGHT = wink = We'll have an update at the workshop later.
-rebecca = LEFT = happy = It works.
+sarah = RIGHT = wink = We'll have a debrief at the workshop later.
+rebecca = LEFT = happy = Sure.
 
 
 % SARAH_SCENARIO_INQUIRY
-sarah = RIGHT = happy_var = Ok. In that case, I'm going to find us an exit.
-sarah = RIGHT = wink = We'll have an update at the workshop later.
-rebecca = LEFT = happy = Let's do this.
+sarah = RIGHT = happy_var = Ok. In that case, I'm going to find us a way out.
+sarah = RIGHT = wink = We'll have a debrief at the workshop later.
+rebecca = LEFT = happy = Sure.

@@ -1,5 +1,5 @@
 % YOU_HERE_FIRST_TIME
-object = player = cry = Ho! Hello Rebecca…
+object = player = cry = Oh! Hello Rebecca…
 player = object = unhappy = You make it sound like something's wrong.@Is everything okay?
 object = player = cry = No…
 player = object = unhappy = Can… I do something for you?
@@ -7,7 +7,7 @@ object = player = cry = Leave me alone, please.
 
 
 % ARE_YOU_OK_FIRST_TIME
-object = player = cry = Don't worry, I'm fine. I just feel a bit embarrassed about…
+object = player = cry = Don't worry, I'm fine. I just feel a bit ashamed of…
 object = player = cry_var = I'm okay.
 
 
@@ -16,28 +16,28 @@ player = object = you_silly_var = (I don't know what is wrong, but@I feel like I
 
 
 % YOU_HERE
-object = player = cry = Ho! You are here?
-player = object = unhappy = You didn't hold it…
+object = player = cry = Oh! You are here?
+player = object = unhappy = You couldn't hold it…
 object = player = cry = No…
 player = object = unhappy = Can… I do something for you?
 object = player = cry = Leave me alone, please.
 
 
 % ARE_YOU_OK
-object = player = cry = Don't worry, I'm fine. I just feel a bit embarrassed about what happened.
+object = player = cry = Don't worry, I'm fine. I just feel a bit ashamed of what happened.
 
 
 % CLOTHES
-player = object = happy = I was thinking… Do you want me@to find some spare clothes for you?
-object = player = cry = That's kind of you, but I'd rather go home…
+player = object = happy = I was thinking… Do you want me@to find some spare clothes?
+object = player = cry = That's kind of you, but I just want to go home…
 
 
 % LEAVE_ME_ALONE
 object = player = cry = I would like to be alone@if you don't mind.
-player = object = unhappy = I don't want to let you like this…
+player = object = unhappy = I don't want to leave you like this…
 object = player = cry_var = I will be ok, thank you.
-object = player = cry = I'll lock the door once you left,@I just don't people to see me like this…
-player = object = happy_var = Ok! You're holding up, huh?
+object = player = cry = I'll close the door once you left,@I just don't want anyone to see me like this…
+player = object = happy_var = Ok! You're hanging in there, huh?
 object = player = cry_var = Yes.
 
 

@@ -1,41 +1,41 @@
 % THEFT
-sarah = rebecca = awkward = You know I was with you when it happened… You should ask the others.
+sarah = rebecca = awkward = You know I was with you when it happened…@You should ask the others.
 
 
 % DELTA_KEY_CONVERSATION
 sarah = UP = happy = Do you know where the keys to the hallway are, by any chance?
-delta = DOWN = excited = I have a duplicate, take mine.
-sarah = UP = laugh = Great, thanks Delta!
+delta = DOWN = excited = I've got a spare, take it.
+sarah = UP = laugh = Nice, thanks Delta!
 
 
 % JEAN_CONVERSATION
 sarah = LEFT = happy = Do you know where the keys are, by any chance?
-jean = RIGHT = urge_happy = I have some in my office,@but I don't remember where.
-sarah = LEFT = wink = Ok, thank you Jean.
+jean = RIGHT = urge_happy = I have some in my office,@but I can't remember where.
+sarah = LEFT = wink = Ok, thanks Jean.
 
 
 % REBECCA_HELP_FOR_KEYS
-sarah = LEFT = laugh = Hey, are you there? Did you see any keys here by chance?
+sarah = LEFT = laugh = Hey, there you are! Have you seen any keys around here, by any chance?
 
 
 % REBECCA_HELP_FOR_KEYS_ALICIA
-sarah = LEFT = laugh = Hey, are you there?
-rebecca = RIGHT = happy = Yes, I'm looking for Alicia. Would you have seen it?
+sarah = LEFT = laugh = Hey, there you are!
+rebecca = RIGHT = happy = Yes, I'm looking for Alicia. Have you seen her?
 sarah = LEFT = worry = No, sorry.
-sarah = LEFT = laugh = And you? Did you see any keys here by chance?
+sarah = LEFT = laugh = And you? Have you seen any keys around here, by any chance?
 
 
 % REBECCA_WAIT_HERE_FOR_KEYS
-rebecca = RIGHT = happy = Don’t move, I’ll give them to you.
+rebecca = RIGHT = happy = Don’t bother, I’ll get them for you.
 
 
 %REBECCA_GIVING_KEYS
-sarah = LEFT = wink = Thanks, that’s great!
+sarah = LEFT = wink = Thanks, that's great!
 
 
 % REBECCA_NO_KEYS
 sarah = LEFT = unhappy = Ha… I would have thought…
-sarah = LEFT = wink = Well, it doesn't matter.@Thanks anyway.
+sarah = LEFT = wink = Well, too bad.@Thanks anyway.
 
 
 % REBECCA_OPENED_CYAN_DOOR
@@ -43,5 +43,5 @@ sarah = rebecca = happy_var = I see you used my gift.
 rebecca = sarah = laugh = Did you notice?
 sarah = rebecca = worry = Of course… Why do you say that?
 rebecca = sarah = you_silly = Because the door is far away.@How do you know it's open?
-sarah = rebecca = wink = I heard you do it when @I was in the other room.
-rebecca = sarah = laugh = Ha!
+sarah = rebecca = wink = I heard you when I was in the other room.
+rebecca = sarah = laugh = Hah!

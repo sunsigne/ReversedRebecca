@@ -1,16 +1,16 @@
 % SPONTANEOUS
-object = player = surprised_var = Well, but Rebecca... What's wrong with you?
-player = object = dreaming = I'm just putting an old crouton back in its place.
-object = player = surprised_var = (She's always been like that...?)
-object = player = worry = (No, she is probably very stressed…)
+object = player = surprised_var = Holy… Rebecca… What's gotten into you?
+player = object = dreaming = I'm just putting an old grouch in its place.
+object = player = surprised_var = (Has she always been like this…?)
+object = player = worry = (No, she's probably just very stressed…)
 
 
 % WHEN_TALKED
-object = player = worry = Hey! Um…
-object = player = unhappy = You…
-object = player = worry = Are you okay at the moment?
+object = player = worry = Hey! Uh…
+object = player = unhappy = Are you…
+object = player = worry = Are you okay, currently?
 player = object = happy_var = Yes, why?
-object = player = unhappy_var = I found you a little... direct with Jospeh.@You... are upset?
-player = object = wrong_with_you = This old geezer is drunk! @Don't you agree?
+object = player = unhappy_var = I found you a little… direct with Jospeh.@Are… you upset?
+player = object = wrong_with_you = This old crank is annoying! @Don't you agree?
 object = player = worry = … He is indeed talkative…
-object = player = unhappy = (I feel like I'm walking on eggshells…@I'd better not insist.)
+object = player = unhappy = (I feel like I'm walking on eggshells…@I'd better not push it.)

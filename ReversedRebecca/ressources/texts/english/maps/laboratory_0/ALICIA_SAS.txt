@@ -18,7 +18,7 @@ alicia = down = cry_laugh = I'm glad you found me.@I'll wait.
 
 % LOCKED_SADISTIC
 alicia = down = cry_var2 = Yes! I'm here! I'm locked in!
-rebecca = up = laugh = Ha ha ha ha! That's even better than what I imagined! 
+rebecca = up = laugh = Ha ha ha ha! That's even better than I imagined! 
 alicia = down = cry = This isn't funny, Rebecca…@Help me out.
 rebecca = up = dreaming = Yeah, yeah, I'll help you.@I will just take my time.
 alicia = down = cry_var = Of all people it had to be you…
@@ -58,7 +58,7 @@ rebecca = UP = unhappy = Yikes… Can't go that way anymore.
 
 
 % LANDSLIDE_ANYWAY
-rebecca = DOWN = you_silly = Well… It's not like if I couldn't go around.
+rebecca = DOWN = you_silly = Well… It's not like I can't go around.
 
 
 % ALICIA_LANDSLIDE_THERE

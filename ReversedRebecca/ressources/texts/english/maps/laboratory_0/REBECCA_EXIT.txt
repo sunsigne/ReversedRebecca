@@ -1,6 +1,6 @@
 
 % ALICIA_DISCOVER_HER_ROOM
-alicia = RIGHT = surprised_var = What a mess! It's going to take forever to put everything away...
+alicia = RIGHT = surprised_var = What a mess!@It's going to take me forever to clean everything up…
 
 
 % ALICIA_DISCOVER_HER_ROOM_HELP
@@ -12,16 +12,16 @@ player = DOWN = you_silly = Just in case…
 
 
 % RECEIPT_IS_OPENED
-rebecca = DOWN = laugh = Perfect! Now we can go out!
-rebecca = DOWN = happy = We just have to unlock the SAS door at the end of the corridor.
+rebecca = DOWN = laugh = Perfect! Now we can get out!
+rebecca = DOWN = happy = We just need to unlock the SAS door at the end of the hallway.
 
 
-%SAS_FULLY_UNLOCKED
-rebecca = DOWN = laugh = Perfect! Now we can move on!
+% SAS_FULLY_UNLOCKED
+rebecca = DOWN = laugh = Perfect! Now we can go through!
 
 
 % EXIT_UP_OPENED
-rebecca = object = excited = Perfect! I just have to go around the outside to clear the entrance!
+rebecca = object = excited = Perfect! I just need to go around outside to clear the entrance!
 
 
 % IS_OPENED_SADISTIC
@@ -37,17 +37,17 @@ rebecca = DOWN = excited = It’s open!
 
 
 % MISSION_ACCOMPLISHED
-rebecca = DOWN = no_sens = Good! Well… Um…
+rebecca = DOWN = no_sens = Good! Well… So…
 rebecca = DOWN = laugh = Mission accomplished!
 
 
 %PLAYER_LEAVING
-rebecca = object = no_sens = I'm not going to leave, @like that... Am I?
+rebecca = object = no_sens = I'm not just going to leave like this…@Am I?
 
 
 % PLAYER_LEAVING_NEXT
-rebecca = object = you_silly = Ho, and after all… They will manage.
+rebecca = object = you_silly = Oh, and after all… They’ll manage.
 
 
 % ALICIA_REACTION_PLAYER_LEAVING_NEXT
-rebecca = DOWN = you_silly_var = And anyway, Alicia doesn't know that @the entrance is blocked; so she won't say anything.
+rebecca = DOWN = you_silly_var = Besides, Alicia doesn't know that the entrance@is blocked; so she won't say anything.

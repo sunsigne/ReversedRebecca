@@ -1,5 +1,5 @@
 % SPONTANEOUS_VAR
-alicia = player = angry_var = Rebecca! But what's wrong with your head?
+alicia = player = angry_var = Rebecca! Have you lost your mind?
 
 
 % SPONTANEOUS_VAR_NEXT
@@ -7,14 +7,14 @@ alicia = player = angry_var = What's your problem?
 
 
 % SPONTANEOUS
-alicia = player = angry_var = Rebecca! But what's wrong? @What's your problem?
+alicia = player = angry_var = Rebecca! Have you lost your mind?@What's your problem?
 
 
 %SPONTANEOUS_NEXT
-player = alicia = angry = Ha no! You're not going to start @getting me drunk too!
-alicia = player = angry = Ha okay? Am I getting you drunk? Do you want me to remind you who is doing your paperwork?
-player = alicia = angry_var2 = She's looking for me, or what?@Because she's going to find me!
+player = alicia = angry = No way! You're not going@to start annoying me too!
+alicia = player = angry = Oh really? I'm annoying you? Do you want me@to remind you who's dealing with your paperwork?
+player = alicia = angry_var2 = Is she looking for trouble, or what?@Because she's going to find it!
 
 
 % FATALITY
-alicia = UP = surprised_var = Ho no… Don’t tell me she’s dead…
+alicia = UP = surprised_var = Oh no… Don’t tell me she's dead…

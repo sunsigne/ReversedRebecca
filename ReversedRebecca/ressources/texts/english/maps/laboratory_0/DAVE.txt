@@ -1,11 +1,11 @@
 % CHOSEN_ONE
 player = object = happy = Hi Dave, what are you looking at?
-dave = player = calm = Hello there, Rebecca. So, it's you who has been chosen?
+dave = player = calm = Hello there, Rebecca. So, you're the one who was chosen?
 dave = player = disillusioned = How odd, I always thought it would be me.
 dave = player = calm = How does it feel?
 player = object = worry = You are even weirder than usual… Are you sure you're okay?
 dave = player = calm = I'm fine, thanks for caring.
-dave = DOWN = calm = And to answer your question,@I was looking at the bombs in the adjoining room.
+dave = DOWN = calm = And to answer your question,@I was looking at the bombs in the next room.
 player = object = no_sens = Ok… If you say so…
 
 
@@ -16,10 +16,10 @@ player = object = worry = What are you talking about?@This is the first time I a
 dave = player = disillusioned = You, maybe…
 dave = player = calm = Sorry, sometimes I forget that@I'm the only one seeing the world as it is.
 player = object = worry = You are even weirder than usual… Are you sure you're okay?
-dave = player = calm = How funny. Last time, you asked exactly the same thing…
+dave = player = calm = How funny. Last time, you asked the exact same thing…
 dave = player = calm = I feel like no matter what I do,@nothing will ever change…
-dave = player = disillusioned = But, hey, it wasn’t me who had been chosen,@so I don't have a say.
-dave = DOWN = calm = And to answer your question one more time,@I was looking at the bombs in the adjoining room.
+dave = player = disillusioned = But, hey, I wasn't the one who was chosen,@so I don't have a say.
+dave = DOWN = calm = And to answer your question one more time,@I was looking at the bombs in the next room.
 player = object = no_sens = Ok… If you say so…
 
 
@@ -29,6 +29,6 @@ dave = player = calm = Rebecca, doesn't this whole routine get boring after a wh
 dave = player = calm = Personally, I don’t see the point.
 player = object = worry = You are even weirder than usual… Are you sure you're okay?
 dave = DOWN = disillusioned = The same responses… The same places… The same weird music…
-dave = DOWN = calm = Sometimes, I wish I could forget my memory…@But it’s totally impossible.
-dave = DOWN = calm = I am leaving here now, at this time and place.@There's no point for me to be here.
+dave = DOWN = calm = Sometimes, I wish I could lose my memory…@But it’s totally impossible.
+dave = DOWN = calm =  I'm going to stop coming here, at this time and@in this place. I really don't see the point.
 player = object = no_sens = Ok… If you say so…

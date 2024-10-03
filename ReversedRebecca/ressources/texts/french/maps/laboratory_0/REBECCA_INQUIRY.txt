@@ -1,5 +1,5 @@
 % ONLY_STOLEN_OBJECT
-rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir ce que@Vladimir est venu  nous voler.
+rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir ce que@Vladimir est venu nous voler.
 
 
 % ONLY_THIEF_NAME

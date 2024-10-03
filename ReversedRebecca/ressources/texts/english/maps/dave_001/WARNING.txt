@@ -2,7 +2,7 @@
 dave = DOWN = camera = You know the tune…
 
 % FIRST_TIME
-dave = DOWN = camera = You will have the choice between two scenarios@in this level.
+dave = DOWN = camera = You will have a choice between two scenarios@in this level.
 dave = DOWN = camera = Your interactions with people and objects@will depends on this choice.
 
 % SADISTIC

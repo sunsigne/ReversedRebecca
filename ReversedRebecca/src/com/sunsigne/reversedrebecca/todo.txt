@@ -300,6 +300,8 @@
 	puzzle casse brique (pour l'ordi)
 	puzzle passer à travers les jet d'eau
 
+	Mécanique de gameplay : Marie trouve souvent des outils de meilleurs qualité dans les boites, et trouve des outils où il n'y en a pas
+
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 
 	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
@@ -348,9 +350,11 @@
 	4h00 - la traduction en anglais n'est pas fini !
 	
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
-	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me
-	Sarah : Ben mince -> Darn... / Ha bon ? - Ha ce point -> Really ?
+	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet!
+	Sarah : Ben mince -> Darn... / Ha bon ? - Ha ce point -> Really ? / Du Rebecca tout craché -> this is so Rebecca
 	Delta : ma grande (pour rebecca) -> sis / type, gars, mec -> a dawg, pal
+	Joseph : (never use any abreviation : i'm -> i am / don't -> do not) yet -> nonetheless
+	Marie : by the way -> now i'm thinking / Zut -> Jeez
 
 	lvl laboratory : trouver une sortie -> find an outing
 	lvl_mole :

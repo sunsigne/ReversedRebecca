@@ -1,5 +1,5 @@
 % BOMBING_OWN_DESK
-player = UP = worry = Blowing up our own office is a bit barbaric…@But I don't really have the choice.
+player = UP = worry = Blowing up our own office is a bit barbaric…@But I don't really have a choice.
 
 
 % ERIC_FREAKS_OUT

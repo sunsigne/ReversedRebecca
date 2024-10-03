@@ -1,5 +1,5 @@
 % BOMBING_OWN_DESK
-alicia = player = surprised = Wow! When you look for an exit,@you don't take half mesures
+alicia = player = surprised = Wow! When you look for an exit,@you really don't mess around!
 player = alicia = evil = Yes, we will go that way.
 
 
@@ -9,7 +9,7 @@ player = DOWN = evil_var = You are right. I stop.
 
 
 % PISSED_OFF
-alicia = player = angry = Rebecca! You said you would stop!
+alicia = player = angry = Rebecca! You said you'd stop!
 
 
 % PISSED_OFF_NEXT
@@ -19,7 +19,7 @@ player = alicia = happy = I didn't do it.
 % PISSED_OFF_NEXT_NEXT
 alicia = DOWN = angry = What about that huge hole, doesn't it ring any bells?
 rebecca = DOWN = happy = It was like that when I arrived.
-alicia = UP = angry_var = And to top it off, you're fooling me !
+alicia = UP = angry_var = And to top it off, you're mocking me !
 
 
 % I_AM_ADORABLE
@@ -27,7 +27,7 @@ rebecca = DOWN = evil_var = Who? Me? But I am so lovable.
 
 
 % I_WILL_HELP_YOU
-rebecca = DOWN = excited = And that's why, I will actually help you out, patching up the hole…
+rebecca = DOWN = excited = And that's why, I'm going to help you patch up the hole…
 
 
 % I_WILL_HELP_YOU_DEFINITIVELY

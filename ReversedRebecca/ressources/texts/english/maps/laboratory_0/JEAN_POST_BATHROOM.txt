@@ -1,29 +1,29 @@
 % ASK_REBECCA_FOR_CHAIR
 object = player = unhappy = Rebecca, have you seen my chair?
-player = object = no_sens = Um… No.
-object = player = unhappy = Ok, too bad.
+player = object = no_sens = Uh… No.
+object = player = unhappy = Ok, never mind.
 
 
 % SHOCKED
-player = object = happy = So? Are you feeling better?@You looked shaken earlier.
-jean = player = unhappy = Yes… Well, I think…
+player = object = happy = So? Feeling better?@You seemed pretty shaken up earlier.
+jean = player = unhappy = Yes… I guess…
 player = object = worry = ... Are you sure?
-jean = player = unhappy = Not really. It feels strange to suffer a terrorist attack.
-player = object = laugh = “Terrorist”? Absolutely?@You're going a bit too hard.
+jean = player = unhappy = Not really.@It's strange to be caught up in an attack.
+player = object = laugh = "An attack"? Really?@That's a bit of an exaggeration.
 jean = player = unhappy = I'm not afraid of words.
-player = object = worry = We can't "just say" that it is one. @Sarah is leading the investigation, she will tell us.
-jean = player = unhappy = Yeah… If you say so.
+player = object = worry = We can't "just declare" it as one. @Sarah is investigating, she'll let us know.
+jean = player = unhappy = Yeah… Whatever.
 
 
 %EXIT
-player = object = happy = Hey, I'm looking for an exit.@Where would you go?
-jean = player = unhappy = Mika isn't unblocking the entrance?
+player = object = happy = Hey, I'm looking for an outing.@Where would you go?
+jean = player = unhappy = Isn't Mika clearing then entrance?
 player = object = worry = Yes, but I want to help in my own way.
-jean = player = unhappy = So if I were you, I would go and encourage him.
-player = object = no_sens = … Is that all?
+jean = player = unhappy = Then I'd go and encourage him if I were you.
+player = object = no_sens = … That's it?
 jean = player = happy = Why not?
-player = object = laugh = Because that won't be enough, let's see!
-jean = player = unhappy = … Ha. If you say so...
+player = object = laugh = Because that won't be enough, obviously!
+jean = player = unhappy = … Ha. Whatever…
 
 
 % ALICIA_REACTION_JEAN_EXIT
@@ -31,23 +31,23 @@ alicia = player = happy_var = We have nothing to lose by trying.
 
 
 % WORK
-player = object = happy = What are you working on at the moment?
-jean = player = unhappy = Why this question?
-player = object = worry = I don’t know… I just want to talk to you.
-jean = player = unhappy = We suffered an attack, and you,@are you asking me what I'm working on?
-player = object = laugh = Now it's an "attack"?@Ok, there, you're exaggerating.
+player = object = happy = What are you working currently?
+jean = player = unhappy = Why asking?
+player = object = worry = I don’t know… I just feel like talking to you.
+jean = player = unhappy = We suffered an terrorist attack, and you,@are you asking me what I'm working on?
+player = object = laugh = Now it's an "terrorist attack"?@Ok, you're exaggerating again.
 jean = player = unhappy = I'm not afraid of words.@I already told you.
-player = object = worry = I think you like “words” a little too much.@At some point, you have to know how to put things into perspective.
-jean = player = unhappy = Yeah… If you say so.
+player = object = worry = I think you like "words" a bit too much.@At some point, you have to know how to put things in perspective.
+jean = player = unhappy = Yeah… Whatever…
 
 
 %GET_ANGRY
-player = object = angry = Do you plan to end all our conversations with:@"yeah, if you say so"?
-jean = player = unhappy = No. Earlier I finished with:@"Ha. If you say so".
-player = DOWN = angry_var2 = Hold me back, I'm going to strangle him...
+player = object = angry = Do you plan to end all our conversations with:@"yeah, whatever"?
+jean = player = unhappy = No. Earlier I finished with:@"Ha. Whatever".
+player = DOWN = angry_var2 = Hold me back, I'm going to smack him…
 player = object = asleep = Calm down Rebecca… He's not worth it.
 player = DOWN = angry_var2 = But he's so annoying!@I don't want to talk to him anymore.
 
 
 % WHATEVER
-player = DOWN = angry_var2 = I don't want to talk to him. He pissed me off with these: “yeah, if you say so”!
+player = DOWN = angry_var2 = I don't want to talk to him.@He pissed me off with these: "yeah, whatever"!

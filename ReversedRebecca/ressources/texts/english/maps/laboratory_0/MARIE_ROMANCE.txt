@@ -1,5 +1,5 @@
 %INVENTORY_HELLO
-object = player = laugh = Hey! Hi Rebecca!
+object = player = laugh = Oh! Hello there, Rebecca !
 
 
 %INVENTORY_INITIATIVE_HELLO
@@ -8,76 +8,76 @@ object = player = laugh = Hey, Rebecca!
 
 %INVENTORY_INITIATIVE
 object = player = happy = Do you need anything?
-rebecca = object = happy_var = No, thanks.@I'm visiting, that's all.
-object = player = laugh = Are you visiting our stock? You can say it if you come looking for bombs.
-rebecca = object = happy_var = No, no. Really, I'm visiting.
-object = player = you_silly = If you say so... I'll give you one anyway, just in case.
+rebecca = object = happy_var = No, thanks.@I'm just looking around.
+object = player = laugh = You're looking around our stock?@You can say it if you're looking for bombs.
+rebecca = object = happy_var = No, no. Really, I'm looking around.
+object = player = you_silly = If you say so… I'll still give you one, just in case.
 
 
 %INVENTORY_BOMB
 object = player = happy = Do you need anything?
 rebecca = object = excited = Bombs!
-object = player = happy = Of course, here.
+object = player = happy = Of course, here you go.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS
-alicia = player = unhappy = Um... Rebecca... We agree that @you're not going to blow everything up, right?
-rebecca = alicia = laugh = No, just enough so we can go out.
-alicia = player = happy = It was just to be sure.
+alicia = player = unhappy = Uh… Rebecca… You don't plan@to blow everything up, right?
+rebecca = alicia = laugh = No, just enough to get us out.
+alicia = player = happy = Just making sure.
 
 
 % ALICIA_WORRIER_ABOUT_BOMBS
-alicia = player = angry = Rebecca! You said you were stopping with the bombs!
-rebecca = alicia = laugh = Ha ha ha! I know, I said that to annoy you.
-alicia = player = appeased = You made me walk well.
+alicia = player = angry = Rebecca! You said you were done with bombs!
+rebecca = alicia = laugh = Ha ha ha! I know, I said that to mess with you.
+alicia = player = appeased = You really got me there.
 
 
 %INVENTORY_BOMB_NEXT
-rebecca = object = excited = It's not bad, but I want super bombs!@Do we have green bombs?
-object = player = worry = I think not…
-object = player = surprised = Ho! Wait! But yes! @I found one in a box earlier.
-object = player = happy = Hey, here it is.
+rebecca = object = excited = That’s cool, but I want some super bombs!@Do we have green bombs?
+object = player = worry = I don't think so…
+object = player = surprised = Ho! Wait! Actually, yes!@I found one in a box earlier.
+object = player = happy = Here it is.
 
 
 %INVENTORY_BOMB_LAST
-object = player = unhappy = You look disappointed... Isn't that okay?
-rebecca = object = unhappy = I had forgotten, but they are of no use to me…@I don’t know how to use them yet…
-object = player = worry = Ha…
-object = player = unhappy = Um…
-object = player = worry = You will learn soon…
-rebecca = object = happy_var = Thank you, you are kind.
+object = player = unhappy = You seem disappointed… Is something wrong?
+rebecca = object = unhappy = I forgot, but they're useless to me…@I don't know how to use them yet…
+object = player = worry = Oh…
+object = player = unhappy = Uh…
+object = player = worry = You'll learn soon…
+rebecca = object = happy_var = Thank you, you are sweet.
 
 
 %INVENTORY_NEXT
 object = player = happy = Do you need anything else?
-rebecca = object = happy_var = No, thanks.@I'm visiting, that's all.
+rebecca = object = happy_var = No, thanks.@I'm just looking around.
 
 
 %INVENTORY_LAST
-object = player = worry = ... Are you sure you really don't need anything?
-object = player = unhappy = Sorry for being pushy…@You’re just acting weird…
-object = player = worry = Hm… It's just that you give me the impression that you're waiting for something without daring to ask for it.
+object = player = worry = ... Are you… really sure you don't need anything?
+object = player = unhappy = Sorry for being pushy…@You're just acting wei…
+object = player = worry = Hm… It's just that you give me the impression that you're@waiting for something without daring to ask for it.
 rebecca = object = happy = No, no. I'm looking at you, that's all.
 
 
 % DISILLUSIONED
-marie = RIGHT = unhappy = (Damn, I was starting to think that…)
-marie = RIGHT = worry = (Well… Another time)
+marie = RIGHT = unhappy = (Jeez, I was starting to think that…)
+marie = RIGHT = worry = (Well… Maybe another time)
 
 
 % EMBARASSED
-object = player = happy = (She always looks at me…)
-object = player = blush_var2 = (…She looks as beautiful as always…)
+object = player = happy = (She's still watching me…)
+object = player = blush_var2 = (… She's as beautiful as always…)
 object = player = blush = (I can't concentrate)
 
 
 % EMBARASSED_NEXT
-object = player = blush_var = (She’s still there…)
+object = player = blush_var = (She's still there…)
 
 
 % EMBARASSED_NEXT_NEXT
-object = player = blush_var2 = (Why does she stay there?@Is that what I think?)
-object = player = blush_var = (Is this really@happening?)
+object = player = blush_var2 = (Why is she still standing there?@Is this what I think it is?)
+object = player = blush_var = (Is this really happening?)
 
 
 % DISILLUSIONED_NEXT
@@ -86,30 +86,30 @@ marie = RIGHT = cry_var = (I was just getting ideas…)
 
 % EMBARASSED_NEXT_NEXT_NEXT
 object = player = blush_var2 = ("Rebecca, I love you.")
-object = player = blush_var = (Come on, it’s not hard, Marie.@You have to get started!)
-object = player = blush = (Oh no, I knew I should have washed my hair this morning!)
+object = player = blush_var = (Come on, Marie, it's not that hard.@You just have to go for it!)
+object = player = blush = (Oh no, I knew I should've washed my hair this morning!)
 
 
 % EMBARASSED_NEXT_NEXT_NEXT_NEXT
-object = player = blush_var = (It might be a little ridiculous to announce it like that…)
-object = player = blush_var = (Maybe I should just walk up and stroke his cheek, then his hair, and kiss him…)
+object = player = blush_var = (Maybe it's a bit ridiculous@to announce it like that…)
+object = player = blush_var = (Maybe I should just get closer, touch her cheek,@then her hair, and kiss her…)
 
 
 % EMBARASSED_LAST
-object = player = blush_var = (Okay, Marie, this is your chance!@It's your time! It's now!)
-object = player = blush_var2 = Um… Rebecca?
-object = player = blush_var = (Should I approach him or ask him?)
-object = player = blush_var = (…I'll ask him. It's more correct)
+object = player = blush_var = (Okay, Marie, this is your chance!@This is your moment! Now or never!)
+object = player = blush_var2 = Uh… Rebecca?
+object = player = blush_var = (Should I move closer or ask her?)
+object = player = blush_var = (…I'll ask. That's the polite thing to do.)
 
 
 % EMBARASSED_LAST_NEXT
-object = player = blush_var3 = Is blrhfghlre?
-object = player = surprised_var = (And shit…)
-object = player = surprised = UH… YOUR LACES ARE UNDONE!
-object = player = surprised_var = (Did I really say that?)
-object = player = cry_var = (And I shouted it too… I'm such a noodle)
-object = player = cry_var = (Her shoelaces aren't even untied…@She'll think I'm too weird…)
-object = player = cry_var = (My life is ruined…)
+object = player = blush_var3 = Can I blrhfghlre?
+object = player = surprised_var = (Oh shit…)
+object = player = surprised = UH… YOUR SHOELACES ARE UNTIED!
+object = player = surprised_var = (Did I really just say that?)
+object = player = cry_var = (And I shouted it too… I'm such a nut)
+object = player = cry_var = (Her shoelaces aren't even untied…@She'll think I'm so weird…)
+object = player = cry_var = (My life is over…)
 
 
 % WILL_YOU
@@ -119,25 +119,25 @@ object = player = cry_var2 = Rebecca! Wait!
 
 % WILL_YOU_NEXT
 object = player = cry = I wanted to know if…
-object = player = cry_happy = Is…
-object = player = blush_var2 = Do you want to go out with me?
+object = player = cry_happy = Will you…
+object = player = blush_var2 = Go out with me?
 
 
 % WILL_YOU_NO
-object = player = cry_var = Ha ha… You believed it, right? @I was making you walk… Of course…
+object = player = cry_var = Ha ha… You believed it, right?@I was just messing with you… Of course…
 object = player = cry_var = Excuse me… I have to go somewhere…
 
 
 % WILL_YOU_YES
-object = player = blush_var2 = Ok… Um… I… Um…
-object = player = blush_var4 = … I didn't think about the rest…
-player = object = worry = Me neither. I admit that this is completely new to me.
+object = player = blush_var2 = Ok… Uh… I… Uh…
+object = player = blush_var4 = … I didn’t think this far ahead…
+player = object = worry = Me neither. To be honest, this@is completely new for me.
 object = player = surprised_var2 = Am I your first?
-player = object = worry = Yes. I normally prefer boys...
-player = object = happy_var = But I found you touching, @so I said to myself "why not".
+player = object = worry = My first girl, yes. I usually prefer guys…
+player = object = happy_var = But I found you endearing,@so I thought "why not."
 
 
 % WILL_YOU_YES_NEXT
-object = player = blush_var2 = So... Shall we… eat together@at a restaurant this evening?
-player = object = happy = Yes, that's good.
-object = player = blush_var5 = Ok, I will book for 8 p.m. I'll call you.
+object = player = blush_var2 = So... Shall we… have dinner@at a restaurant tonight?
+player = object = happy = Yeah, that sound's good.
+object = player = blush_var5 = Ok, I'll book for 8 p.m. I'll call you.

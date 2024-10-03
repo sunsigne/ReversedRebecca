@@ -1,48 +1,48 @@
 % MIKA_CONVERSATION
 sarah = mika = happy = What exactly happened?
-mika = sarah = serious = I was coming out of the break room,@when I heard an explosion.
+mika = sarah = serious = I was coming out of the break room,@when I heard a blast.
 mika = sarah = doubt = I didn't see the explosion,@but I recognize the sound.
-mika = sarah = serious = Right after, this guy "came from nowhere", @ quietly leaves Alicia's office!
-mika = sarah = serious = I ran after him. The rest, you know it.
-sarah = mika = fine = I see.@I think we are the victim of industrial theft.
-sarah = mika = happy = Finally… A slightly muscular version, that is.@Did you see if he was holding anything?
-mika = sarah = serious = No. I didn't think to look.
+mika = sarah = serious = Right after, this guy "out of nowhere",@calmly walked out of Alicia's office!
+mika = sarah = serious = I ran after him. you know the rest.
+sarah = mika = fine = I see.@I think we're victims of an industrial theft.
+sarah = mika = happy = Or… a lightly more intense version.@Did you see if he was holding anything?
+mika = sarah = serious = No. I didn’t think to check.
 sarah = mika = happy = Ok. Thanks for the info!
 
 
 % DELTA_EXIT_CONVERSATION
 sarah = delta = happy = Delta, do you have a minute?
 delta = sarah = excited = Of course! How can I help you?
-sarah = delta = happy = I seem to remember that@you know something about industrial flight, right?
-delta = sarah = laugh_var = Ha! It’s a long story, that!
-sarah = delta = wink = I'm in no hurry.
+sarah = delta = happy = I remember that you have knowledge about industrial theft, haven't you?
+delta = sarah = laugh_var = Ha! That's a long story!
+sarah = delta = wink = I'm not in a hurry.
 delta = sarah = happy = Ok. Do you remember my brother?
-sarah = delta = laugh = How to forget it?
-delta = sarah = surprised = Ho! That makes me think I didn't tell you the last one! Imagine that...
+sarah = delta = laugh = How could I forget?
+delta = sarah = surprised = Oh! That reminds me, I haven't told you the latest! You won't believe it…
 rebecca = DOWN = you_silly = I think they'll be there for a while.@I'd better keep going.
 
 
 % DELTA_GAMMA_CONVERSATION
-delta = sarah = laugh_var = … and then he realized that all the effort he had made was to steal a toaster!
-sarah = delta = surprised = No way!
+delta = sarah = laugh_var = … and then he realized that all the effort he put was to steal a toaster!
+sarah = delta = surprised = No…
 delta = sarah = smile = I swear it's true.
-sarah = delta = laugh = No, but it's crazy! @And how did he react?
-delta = sarah = excited = He looked me straight in the eyes and he said @ in the most serious way:
-delta = sarah = gamma = "Cool. Now all I have to do is steal butter@and bread."
+sarah = delta = laugh = No way, that’s crazy! How did he react?
+delta = sarah = excited = He looked me straight in the eyes and said, as serious as could be:
+delta = sarah = gamma = "Cool. Now I just need to steal some butter and bread."
 sarah = delta = laugh = Ha ha ha ha ha ha ha!
-rebecca = DOWN = you_silly = Delta talks about her brother again.
+rebecca = DOWN = you_silly = Delta is still talking about her brother.
 
 
 % DELTA_GAMMA_CONVERSATION_NEXT
-delta = sarah = gamma = “If I had been given a coin for each time I found myself in this situation…”
-delta = sarah = gamma_var = “…actually, that would give me two coins…”
-delta = sarah = gamma = "It's not much, but it's still@weird that it happened to me twice."
+delta = sarah = gamma = "If I had a penny for every time I found myself in this situation…"
+delta = sarah = gamma_var = "… actually, that would make two pennies…"
+delta = sarah = gamma = "It's not much, but it's still weird that it's happened to me twice."
 sarah = delta = laugh = Ha ha ha ha ha ha ha!
-rebecca = DOWN = you_silly = I don't think they're going to stop any time soon.@I'd better keep going.
+rebecca = DOWN = you_silly = I think they’re not stopping anytime soon.@I’d better keep going.
 
 
 % SEARCH_ALICIA_DESK
-rebecca = sarah = laugh = Hey! Is your investigation progressing?
+rebecca = sarah = laugh = Hey! How's your investigation going?
 sarah = rebecca = happy = Slowly, but surely.
 
 
@@ -50,22 +50,22 @@ sarah = rebecca = happy = Slowly, but surely.
 rebecca = sarah = happy = Do you know where I can find us an outing?
 sarah = rebecca = worry = Why are you asking me?
 rebecca = sarah = no_sens = Why not?
-sarah = rebecca = awkward = Because if I knew where there was one, @I would have already told you where to look earlier.
-rebecca = sarah = happy = Indeed.
+sarah = rebecca = awkward = Because if I knew where one was,@I'd have already told you where to look earlier.
+rebecca = sarah = happy = Fair enough.
 
 
 % SEARCH_ALICIA_DESK_NEXT_NEXT
-sarah = rebecca = laugh = I love you very much Rebecca,@but I must continue my investigation.
+sarah = rebecca = laugh = I love you very much, Rebecca,@but I must continue my investigation.
 sarah = rebecca = wink = We'll talk at the workshop.
-rebecca = sarah = laugh = Ok, I won't bother you anymore.
+rebecca = sarah = laugh = Ok, I stop bothering you.
 
 
 % ALICIA_REACTION_SARAH_SEARCH_ALICIA_DESK
 alicia = sarah = unhappy = It hurts to see my office in this state…
-alicia = sarah = happy = You'll keep me posted on what you learn here, okay?
+alicia = sarah = happy = Keep me updated on what you learn here, okay?
 sarah = rebecca = happy_var = Yes, of course.
 
 
 % ALICIA_DESK_EXPLOSION
-sarah = player = worry = Well say…
+sarah = player = worry = Oh darn…
 rebecca = sarah = laugh = Yes, I decided that I will go through that.
