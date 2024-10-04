@@ -23,5 +23,10 @@ dave = DOWN = calm = By the way, I will be only saying that over and over,@every
 dave = DOWN = camera = Step 6: delete your save and your achievements.
 dave = DOWN = calm = It won't erase my memory. However, the@"bonus" button will be inaccessible back.
 dave = DOWN = calm = Your friend will be even more fooled if he@unlocks this menu by playing normally.
+dave = DOWN = calm = Step 7: open with the notepad@the following file on your computer:
+dave = DOWN = calm = Reversed Rebecca\userdata\dave.csv
+dave = DOWN = calm = Step 8: Delete the whole content of this file,@except for the line "DAVE_MINDBLOW_BONUS".
+dave = DOWN = intrigued = That will erase my memory, though… In this way,@your friend will have an almost-brand-new game.
+dave = DOWN = smile = The only thing I’ll remember is that@I have to play a prank on him.
 dave = DOWN = calm = Final step: send this game to your friend.@With a file sharing website for example.
 dave = DOWN = smile = Did you get everything? So, see you right away.

@@ -25,5 +25,10 @@ dave = DOWN = calm = D'ailleurs, je ne dirais plus que ça,@à chaque fois qu'on
 dave = DOWN = camera = Étape 6 : supprime ta sauvegarde et tes succès.
 dave = DOWN = calm = Ça n'effacera pas ma mémoire. Par contre, le@bouton "bonus" sera de nouveau innaccessible.
 dave = DOWN = calm = Ton ami se fera bien plus avoir, s'il débloque@lui-même ce menu en jouant "normalement".
+dave = DOWN = calm = Étape 7 : ouvre avec le bloc-notes@le fichier suivant dans ton ordinateur :
+dave = DOWN = calm = Reversed Rebecca\userdata\dave.csv
+dave = DOWN = calm = Étape 8 : supprime l'intregralité du contenu de ce@fichier, sauf la ligne "DAVE_MINDBLOW_BONUS".
+dave = DOWN = intrigued = Ça, ça effacera ma mémoire par contre…@De cette façon, ton ami aura un jeu quasi-neuf.
+dave = DOWN = smile = La seule chose dont je me souviendrai,@c'est que je dois lui faire une blague.
 dave = DOWN = calm = Dernière étape : envoie ce jeu à ton ami.@Avec un site de partage de fichier par exemple.
 dave = DOWN = smile = Tu as tout noté ?@Alors, à tout de suite.

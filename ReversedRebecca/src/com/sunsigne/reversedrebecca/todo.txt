@@ -51,8 +51,8 @@
 
 	////////// EN COURS ////////////
 
-	succès : reset les achievement empêche d'avoir de nouveau "sign of stopping" (même chose pour "well payed, but)
 	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
+	+ baisser trop le son envoie des rapport d'erreur
 
 	dans l'ordre, à la fin :
 	- 3h00 built en se basant sur "VERSION PUBLIQUE"
