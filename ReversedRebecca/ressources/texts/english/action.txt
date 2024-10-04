@@ -28,3 +28,5 @@ WATER_EMPTY = Key1 % empty water
 WATER_PLANT = Key2 % water
 APOLOGIZE = Key1 % apologize
 SAY_NOTHING = Key2 % say nothing
+YES = Key1 % yes
+NO = Key2 % no

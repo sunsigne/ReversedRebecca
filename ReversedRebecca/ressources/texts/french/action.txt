@@ -28,3 +28,5 @@ WATER_EMPTY = Key1 % vider l'eau
 WATER_PLANT = Key2 % arroser
 APOLOGIZE = Key1 % s'excuser
 SAY_NOTHING = Key2 % ne rien dire
+YES = Key1 % oui
+NO = Key2 % non

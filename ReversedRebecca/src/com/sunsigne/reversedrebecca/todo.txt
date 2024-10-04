@@ -53,9 +53,6 @@
 
 	succès : reset les achievement empêche d'avoir de nouveau "sign of stopping"
 	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
-	
-	!! fichier laboratory_0 action.txt : INSIST apparait 2 fois (dans down desk et dans left area, et pas avec la même key (1 et 3))
-	même problème pour yes et no
 
 	dans l'ordre, à la fin :
 	- 1h00 SUCCèS : vérifier la couleur de tous les succès (+ choisir leur position) + akward -> en vert ?
