@@ -4,7 +4,7 @@ rebecca = up = surprised = Alicia? Stay put! I'll get you out of there!
 alicia = down = cry_happy = Staying put is the whole problem, Rebecca.
 rebecca = up = unhappy = Sorry, that's not what I meant…
 alicia = down = cry_happy = Don't worry, I understood.
-alicia = down = cry_laugh = I'm glad you found me.@I'll wait.
+alicia = down = cry_laugh = I'm glad you found me. I'll wait.
 
 
 % LOCKED_INQUIRY
@@ -13,19 +13,19 @@ rebecca = up = surprised = Alicia? Stay put! I'll get some help!
 alicia = down = cry_happy = Staying put is the whole problem, Rebecca.
 rebecca = up = unhappy = Sorry, that's not what I meant…
 alicia = down = cry_happy = Don't worry, I understood.
-alicia = down = cry_laugh = I'm glad you found me.@I'll wait.
+alicia = down = cry_laugh = I'm glad you found me. I'll wait.
 
 
 % LOCKED_SADISTIC
 alicia = down = cry_var2 = Yes! I'm here! I'm locked in!
-rebecca = up = laugh = Ha ha ha ha! That's even better than I imagined! 
+rebecca = up = laugh = Ha ha ha ha! That's even better than I imagined!
 alicia = down = cry = This isn't funny, Rebecca…@Help me out.
 rebecca = up = dreaming = Yeah, yeah, I'll help you.@I will just take my time.
-alicia = down = cry_var = Of all people it had to be you…
+alicia = down = cry_var = Of all people, it had to be you…
 
 
 % HUG
-alicia = RIGHT = appeased = Thank you
+alicia = RIGHT = appeased = Thank you.
 player = LEFT = happy_var = There's no way I would have left you in there.
 
 
@@ -35,7 +35,7 @@ alicia = DOWN = happy = Do you want something?
 
 
 % ASK_DRINK
-alicia = DOWN = happy_var = Okay, I'll get you that. 
+alicia = DOWN = happy_var = Okay, I'll get you that.
 player = UP = laugh = Sweet, thank you. 
 
 
@@ -75,8 +75,8 @@ alicia = DOWN = surprised = Ha.
 
 
 % SARAH_LANDSLIDE_FREAKS_OUT
-sarah = UP = worry_var = HEY ! GIRLS ! ARE YOU OK ?
-rebecca = DOWN = excited = WE ARE FINE !
+sarah = UP = worry_var = HEY! GIRLS! ARE YOU OK?
+rebecca = DOWN = excited = WE ARE FINE!
 sarah = UP = worry = ALRIGHT.
 
 

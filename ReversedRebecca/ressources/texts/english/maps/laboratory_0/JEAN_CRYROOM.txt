@@ -1,5 +1,5 @@
 % YOU_HERE_FIRST_TIME
-object = player = cry = Oh! Hello Rebecca…
+object = player = cry = Oh! Hello, Rebecca…
 player = object = unhappy = You make it sound like something's wrong.@Is everything okay?
 object = player = cry = No…
 player = object = unhappy = Can… I do something for you?
@@ -24,16 +24,16 @@ object = player = cry = Leave me alone, please.
 
 
 % ARE_YOU_OK
-object = player = cry = Don't worry, I'm fine. I just feel a bit ashamed of what happened.
+object = player = cry = Don't worry, I'm fine. I just feel a bit ashamed@of what happened.
 
 
 % CLOTHES
-player = object = happy = I was thinking… Do you want me@to find some spare clothes?
+player = object = happy = I was thinking… Do you want me@to find you some spare clothes?
 object = player = cry = That's kind of you, but I just want to go home…
 
 
 % LEAVE_ME_ALONE
-object = player = cry = I would like to be alone@if you don't mind.
+object = player = cry = I would like to be alone, if you don't mind.
 player = object = unhappy = I don't want to leave you like this…
 object = player = cry_var = I will be ok, thank you.
 object = player = cry = I'll close the door once you left,@I just don't want anyone to see me like this…

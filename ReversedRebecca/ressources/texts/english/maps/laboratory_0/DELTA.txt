@@ -41,7 +41,7 @@ rebecca = object = happy_var = Thanks!
 
 
 % THATS_CRAZY
-rebecca = object = no_sens = How crazy it is,@this guy bursting in like that…
+rebecca = object = no_sens = How crazy it is, this guy bursting in like that…
 delta = rebecca = happy_var = Oh no! It's nothing new!
 delta = rebecca = worry = You say that because you're not used to it.
 delta = rebecca = laugh = But my brother and I used to do@this kind of stuff all the time.
@@ -60,18 +60,19 @@ delta = rebecca = wink = Good luck, sis.
 
 % PAST
 rebecca = object = happy = What exaclty were you doing with your brother?
-delta = rebecca = happy = We would scout out a place with high-tech pieces,@break in, and then steal it.
+delta = rebecca = happy = We would scout out a place with high-tech@pieces, break in, then steal it.
 rebecca = object = excited = … And then?
 delta = rebecca = happy_var = Actually, that's it.@We ended up having a garage full of stuff.
 rebecca = object = no_sens = You never used any of it?
-delta = rebecca = laugh = We did, as doorstops or as paperweights.
+delta = rebecca = laugh = We did, as doorstops or paperweights.
 delta = rebecca = excited = It was the thrill of the heist that was interesting.
 delta = rebecca = worry = To us, it was always just junk.@We never understood what it was for.
 rebecca = object = happy = Yet today, you are an engineer!@You should understand easily now.
 delta = rebecca = wink = Yeah, but in the meantime, my brother@and I have taken our own paths.
 delta = rebecca = smile = He kept his love for "raids",@and I kept my love of technology.
 delta = rebecca = worry = And since I settled down and he didn't,@it made sense that he kept the garage.
-delta = rebecca = happy_var = But I have fond memories of it. And if I had@the chance to do it all over again, I'd sign up right away!
+delta = rebecca = happy_var = But I have fond memories of it.
+delta = rebecca = wink = And if I had the chance to do it@all over again, I'd sign up right away!
 rebecca = object = laugh = Yes, that's the impression you give.
 rebecca = object = happy = Alright, I'm off.
 delta = rebecca = excited = Take care, sis.
@@ -80,7 +81,7 @@ delta = rebecca = excited = Take care, sis.
 % JUST_CHECKING
 rebecca = object = worry = Just to be sure… It's not your brother@who pulled the stunt today, is it?
 delta = rebecca = laugh_var = Ha ha ha ha!
-delta = rebecca = wink = No. He knows where I work. He wouldn't do that to me. Trust me, it was 100"0/0" not him.
+delta = rebecca = wink = No. He knows where I work. He wouldn't do@that to me. Trust me, it was 100"0/0" not him.
 rebecca = object = laugh = Ok, if you say so.
 
 
@@ -89,24 +90,25 @@ delta = rebecca = excited = That's "heavy cool" you mean!
 delta = rebecca = laugh = But hey, it's all in the past…@Today, I've settled down.
 rebecca = object = happy = Why did you stop?
 delta = rebecca = no_sens = To make it short: @my brother is an addict.
-delta = rebecca = happy = We ended up breaking up, and I couldn't see myself continuing without him. So, I quit.
+delta = rebecca = happy = We ended up breaking up, and I couldn't@see myself continuing without him. So, I quit.
 rebecca = object = you_silly_var = I see.
 rebecca = object = happy = Well, I better go.
 delta = rebecca = wink = Good luck, sis.
 
 
 % ADDICT
-rebecca = object = worry = It's probably personal but…@Is your brother okay then?
+rebecca = object = worry = It's probably personal but…@Is your brother okay?
 delta = rebecca = no_sens = Well, yeah, why?
 rebecca = object = unhappy = I don't know… You said he was an addict.
 delta = rebecca = surprised = Ho! I see! You think@I'm talking about drugs or alcohol.
 delta = rebecca = laugh_var = Ha ha ha ha!
 delta = rebecca = happy = He is addicted to games.
 delta = rebecca = wink = For him, life is one big playground.
-delta = rebecca = worry = And since a game without risk its't fun, @he always wanted us to take more risks.
+delta = rebecca = worry = And since a game without risk isn't fun, @he always wanted us to take more risks.
 delta = rebecca = no_sens = I don't mind a little challenge, but@it was getting more and more dangerous.
 delta = rebecca = happy = I preferred to quit before@we started having real problems. 
-delta = rebecca = happy_var = But I have fond memories of it. And if I had@the chance to do it all over again, I'd sign up right away!
+delta = rebecca = happy_var = But I have fond memories of it.
+delta = rebecca = wink = And if I had the chance to do it@all over again, I'd sign up right away!
 rebecca = object = laugh = Yes, that's the impression you give.
 rebecca = object = happy = Alright, I'm off.
 delta = rebecca = excited = Take care, sis.
@@ -118,8 +120,8 @@ rebecca = object = happy = I was thinking…@"Delta" is an odd name. Don't you t
 rebecca = object = worry = No offense.
 delta = rebecca = laugh = No offense taken. Yes, it's definitively uncommon.@My parents have a thing with the Greek alphabet.
 delta = rebecca = smile = And you, where does "Rebecca" come from?
-rebecca = object = worry = To be honest, the story behind my name isn't very interesting…
-rebecca = object = excited = But, I like to imagine that I share the same name as a star!
+rebecca = object = worry = To be honest, the story behind@my name isn't very interesting…
+rebecca = object = excited = But, I like to imagine that@I share the same name as a star!
 delta = rebecca = surprised = There is a star named "Rebecca"?
 rebecca = object = laugh = No. But there could be.
 delta = rebecca = wink = In that case, let me know if tomorrow,@they name a star "Delta".
@@ -132,7 +134,7 @@ delta = rebecca = laugh = Yes, yes… It's not like this is@the fourth time you'
 rebecca = object = happy = Delta?
 delta = rebecca = laugh = Oh dear! It looks like your sad investigation@is going to stay unsolved for a long time!
 rebecca = object = happy_var = I guess that means I like you.
-rebecca = object = happy = Seriously though. Do you have any idea what the intruder took?
+rebecca = object = happy = Seriously though.@Do you have any idea what the intruder took?
 delta = rebecca = no_sens = No. I don't know anything about it.
 delta = rebecca = excited = If I were you, I’d try to retrace his steps.@That might help.
 rebecca = object = happy_var = Yes, I had this idea in the back of my mind.
@@ -144,7 +146,7 @@ rebecca = object = happy_var = Yes, this time I'm really getting into it.
 rebecca = object = happy = Delta?
 delta = rebecca = laugh = Oh dear! It looks like that poor door@is going to stay closed for a long time!
 rebecca = object = happy_var = I guess that means I like you.
-rebecca = object = happy = Seriously though. Do you have any idea@how I find us an outing?
+rebecca = object = happy = Seriously though. Do you have any idea@how I do find us an outing?
 delta = rebecca = happy_var = Not by standing here talking to me, for sure.
 rebecca = object = laugh = I figured,@but do you have a more general suggestion?
 delta = rebecca = no_sens = Hmm… I guess if you're asking,@the front door is blocked.
@@ -161,7 +163,7 @@ rebecca = object = happy_var = Yes, this time I'm really getting into it.
 rebecca = object = happy = Delta?
 delta = rebecca = laugh = Oh dear! It looks like the reception@isn't going to receive your visit anytime soon!
 rebecca = object = happy_var = I guess that means I like you.
-rebecca = object = happy = Seriously though. Do you know how I can get there?
+rebecca = object = happy = Seriously though.@Do you know how I can get there?
 delta = rebecca = wink = To the right, after the SAS.
 rebecca = object = happy = Thanks! This time, I'm really getting into it.
 
@@ -171,7 +173,7 @@ rebecca = object = worry = Delta, I'm a little lost…@Can you help me?
 delta = rebecca = excited = Of course! What's the problem?
 rebecca = object = unhappy = You're might think it's silly, but…@All these offices are confusing me…
 delta = rebecca = laugh_var = Are you serious?
-delta = rebecca = excited = Ok, I'll give you an overview: here is the research area.
+delta = rebecca = excited = Ok, I'll give you an overview:@here is the research area.
 delta = rebecca = smile = We have offices, and at the end of the hallway,@there'a a super cool break room.
 delta = rebecca = smile = To the right, it's the development area: @more offices, and the "big laboratory".
 delta = rebecca = wink = And in between, the reception for tourists.
@@ -198,7 +200,7 @@ rebecca = object = happy_var = That's me.
 
 
 % LOST_NEXT
-rebecca = object = worry = Hey… How do I get to reception?
+rebecca = object = worry = Hey… How do I get to the reception?
 delta = rebecca = worry = You go through the SAS?
 rebecca = object = unhappy = Yes, but it’s locked…
 delta = rebecca = surprised = Really?

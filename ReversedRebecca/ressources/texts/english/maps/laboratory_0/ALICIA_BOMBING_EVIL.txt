@@ -17,7 +17,7 @@ player = alicia = happy = I didn't do it.
 
 
 % PISSED_OFF_NEXT_NEXT
-alicia = DOWN = angry = What about that huge hole, doesn't it ring any bells?
+alicia = DOWN = angry = What about that huge hole, does it ring any bells?
 rebecca = DOWN = happy = It was like that when I arrived.
 alicia = UP = angry_var = And to top it off, you're mocking me !
 
@@ -27,7 +27,7 @@ rebecca = DOWN = evil_var = Who? Me? But I am so lovable.
 
 
 % I_WILL_HELP_YOU
-rebecca = DOWN = excited = And that's why, I'm going to help you patch up the hole…
+rebecca = DOWN = excited = And that's why, I'm going to help you@patch up the hole…
 
 
 % I_WILL_HELP_YOU_DEFINITIVELY

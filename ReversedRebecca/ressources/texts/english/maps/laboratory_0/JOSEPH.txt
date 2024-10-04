@@ -1,7 +1,7 @@
 % HAVE_YOU_DATA
 player = object = happy = Hello, Joseph. Do you have any info@about what just happened?
 object = player = happy = What? What just happened?
-player = object = sad = (I don't want to be the one to tell Joseph that we've just suffered a grief).
+player = object = sad = (I don't want to be the one informing to Joseph@that we've just suffered a grief)
 player = object = worry = Um… No, nothing.@Forget what I just said.
 object = player = happy_var = Hah! These kids!
 
@@ -21,9 +21,9 @@ object = player = happy_var = No, I have already read them all.
 
 
 % BOOK_NEXT
-object = player = happy = I did not like any of them…@Nontheless, I am not picky.
+object = player = happy = I did not like any of them…@Nonetheless, I am not picky.
 object = RIGHT = doubt = I have to say, the books here are not great.
-object = player = happy = It reminds me of my youth,@when…
+object = player = happy = It reminds me of my youth, when…
 object = player = doubt = Blah blah blah.
 object = player = happy = Blah blah blah.
 object = player = happy_var = Blah blah blah.
@@ -38,16 +38,16 @@ player = DOWN = no_sens = … I have no idea what we were talking about.
 
 
 % FORGOT
-player = object = worry = Joseph… Could you remind me@what you asked me please?
+player = object = worry = Joseph… Could you remind me@what you asked me, please?
 object = player = happy_var = Hah! These kids!
-object = player = doubt = To be honest, I admit that I do not remember it either.@My memory is no longer what it used to be…
+object = player = doubt = To be honest, I admit that I do not remember either.@My memory is no longer what it used to be…
 player = object = worry = Ha…
 object = player = happy = … But, it will come back to me in a minute.
 player = object = happy_var = Noted.
 
 
 % ALICIA_REACTION_JOSEPH_FORGET
-player = alicia = happy = And you? Do you remember what Joseph@asked me?
+player = alicia = happy = And you?@Do you remember what Joseph asked me?
 alicia = player = surprised = Not at all!
 
 
@@ -56,7 +56,7 @@ object = player = happy = I remember what we talked about!
 object = player = happy_var = I asked you if you thought that eggplants@were better than leeks too.
 player = object = no_sens = Hah! Um… I guess…
 object = player = happy_var = Great! I am glad we talked about it.
-object = player = happy = Besides, it reminds me of my youth,@when…
+object = player = happy = Besides, it reminds me of my youth, when…
 object = player = doubt = Blah blah blah.
 object = player = happy = Blah blah blah.
 object = player = happy_var = Blah blah blah.
@@ -71,14 +71,14 @@ object = player = happy_var = Well, tastes and colors…
 
 % REMEMBERED_THEN_FORGET_AGAIN
 player = object = worry = So, do you remember what you asked me?
-object = RIGHT = doubt = To be honest, it came back to me while you were gone.
-object = RIGHT = happy = But I have just forgotten again…
+object = RIGHT = doubt = To be honest, it came back while you were gone.
+object = RIGHT = happy = But I have forgotten again…
 player = object = worry = Ha…
-object = RIGHT = happy = Besides, it reminds me of my youth,@when…
+object = RIGHT = happy = Besides, it reminds me of my youth, when…
 object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah.
 object = RIGHT = happy_var = Blah blah blah.
-object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah?
 player = object = worry = ...
 object = RIGHT = happy = So? What do you think?
@@ -94,18 +94,18 @@ object = player = doubt = I do not know why, but my intuition@says you might nee
 
 
 % PINKY
-player = object = excited = That's nice. Thank you Joseph.
+player = object = excited = That's nice. Thank you, Joseph.
 
 
 % COUCH_HELLO
-player = object = happy = Hello, Joseph. How are you ?
+player = object = happy = Hello, Joseph. How are you?
 object = RIGHT = happy_var = Hah! Hello Rebecca.@Have you ever tried sleeping on these sofas?
 object = RIGHT = happy = They are incredibly comfortable!@It feels like you are resting on a cloud.
-object = RIGHT = happy = It reminds me of my youth,@when…
+object = RIGHT = happy = It reminds me of my youth, when…
 object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah.
 object = RIGHT = happy_var = Blah blah blah.
-object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah?
 player = object = worry = ...
 object = RIGHT = happy = So? What do you think?
@@ -118,11 +118,11 @@ player = DOWN = no_sens = … I have no idea what we were talking about.
 % COUCH
 object = RIGHT = happy_var = Have you ever tried sleeping on these sofas?
 object = RIGHT = happy = They are incredibly comfortable!@It feels like you are resting on a cloud.
-object = RIGHT = happy = It reminds me of my youth,@when…
+object = RIGHT = happy = It reminds me of my youth, when…
 object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah.
 object = RIGHT = happy_var = Blah blah blah.
-object = RIGHT = doubt = Bla bla bla.
+object = RIGHT = doubt = Blah blah blah.
 object = RIGHT = happy = Blah blah blah?
 player = object = worry = ...
 object = RIGHT = happy = So? What do you think?
@@ -133,16 +133,16 @@ player = DOWN = no_sens = … I have no idea what we were talking about.
 
 
 % FORGOT_COUCH
-player = object = worry = Joseph… Could you remind me@what you asked me please?
+player = object = worry = Joseph… Could you remind me@what you asked me, please?
 object = RIGHT = happy_var = Hah! These kids!
-object = RIGHT = doubt = To be honest, I admit that I do not remember it either.@My memory is no longer what it used to be…
+object = RIGHT = doubt = To be honest, I admit that I do not remember either.@My memory is no longer what it used to be…
 player = object = worry = Ha…
 object = RIGHT = happy = … But, I am sure that was not important.
-player = object = happy_var = Ok, if you say so.
+player = object = happy_var = If you say so.
 
 
 % FIFTY_YEARS
-object = RIGHT = doubt = Have you ever wondered what the world would look like in 50 years?
+object = RIGHT = doubt = Have you ever wondered what the world@would look like in 50 years?
 player = object = no_sens = Uh… no.
 object = RIGHT = happy_var = It is a very interesting question, though!@If someone had told me 50 years ago that…
 object = RIGHT = doubt = Blah blah blah.
@@ -152,7 +152,7 @@ player = object = sad = ... Shoot…
 
 
 % OFFER_A_TEA
-player = object = worry = Can I offer you a tea?
+player = object = worry = Can I offer you tea?
 object = RIGHT = happy_var = That is very kind of you, Rebecca.@But no, thank you.
 object = RIGHT = happy = You know, 30 years ago,@I learned an incredible story about tea…
 object = RIGHT = doubt = Did you know that… Blah blah blah.
@@ -161,7 +161,7 @@ object = RIGHT = happy_var = Blah blah blah.
 
 
 % OFFER_A_TEA_GOOD
-player = object = worry = Sorry to interrupt you, but@I really have to go.
+player = object = worry = Sorry to interrupt you, but I really have to go.
 object = RIGHT = happy_var = Okay, see you soon then.
 player = DOWN = you_silly = He's not mean, but what a chatterbox!
 
@@ -179,7 +179,7 @@ object = RIGHT = happy = …
 
 % SAS_KEY
 player = object = happy = Joseph, could I have the keys to the SAS?
-object = player = happy = Of course sweet Rebecca. Here they are.
+object = player = happy = Of course, sweet Rebecca. Here they are.
 player = object = happy_var = Thanks!
 
 
@@ -200,6 +200,6 @@ player = object = happy_var = Thanks!
 
 
 % SAS_KEY_IS_USELESS
-player = DOWN = unhappy = Yikes… I just realized that@I don't know how to use the green keys yet.
+player = DOWN = unhappy = Yikes… I just realized that I don't@know how to use the green keys yet.
 player = DOWN = you_silly = Too bad… I'm almost feeling "blue".
 

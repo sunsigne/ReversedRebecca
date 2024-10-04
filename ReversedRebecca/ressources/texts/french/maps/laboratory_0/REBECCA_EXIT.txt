@@ -6,7 +6,7 @@ alicia = RIGHT = surprised_var = Quel bazar ! Je vais mettre@une éternité à t
 alicia = rebecca = happy = Merci. C'est gentil.
 
 
-% TAKING_KEY_TO_PREVENT_SOFLOCK
+% TAKING_KEY_TO_PREVENT_SOFTLOCK
 player = DOWN = you_silly = Juste au cas où…
 
 

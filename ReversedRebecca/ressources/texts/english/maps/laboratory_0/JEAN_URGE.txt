@@ -9,7 +9,7 @@ player = object = happy = Otherwise, do you have any info@about what just happen
 % HAVE_YOU_DATA
 object = player = urge_happy = I didn't see anything, sorry.@I was in my office.
 player = object = unhappy = You look pale, are you okay?
-object = player = urgent = I really need to go to the bathroom…
+object = player = urge = I really need to go to the bathroom…
 player = object = worry = And, you're not going because...?
 object = player = urge_sad = The door is locked!
 
@@ -24,7 +24,7 @@ player = object = laugh = I see.
 
 
 % HAVE_YOU_DATA_AGAIN
-player = object = unhappy = You really don't know anything that could help me?
+player = object = unhappy = You really don't know anything@that could help me?
 object = player = urge_happy = I just know there was an explosion, and @the security system locked the doors.
 object = player = urge_sad = Hence my problem, actually…
 player = object = happy = Alright. Thanks.
@@ -35,7 +35,7 @@ jean = rebecca = urge_sad = I don't know anything about this.
 
 
 % FIRST
-object = player = urgent = I really need to go to the bathroom…
+object = player = urge = I really need to go to the bathroom…
 player = object = you_silly = Why don't you go?
 object = player = urge_sad = The door is locked!
 player = object = you_silly_var = Ok, I'll take care of it.
@@ -48,7 +48,7 @@ object = player = urge_happy = Yes, sorry.
 
 % SECOND
 object = player = urge = Please! Hurry up!
-player = object = happy_var = Yes yes.
+player = object = happy_var = Yeah, yeah.
 
 
 % HOLDING
@@ -71,4 +71,4 @@ player = object = you_silly = I was thinking…@Maybe you can find somewhere els
 % PISSED_ITS_PANTS
 object = player = urge_sad = It's too late…
 player = object = sad = Ha…
-object = player = urge_happy = Don't worry.@I just have to go cry in a corner…
+object = player = urge_happy = Don't worry.@I just have to go crying in a corner…

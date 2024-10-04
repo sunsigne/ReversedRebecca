@@ -8,9 +8,9 @@ sarah = RIGHT = angry = Last warning!
 
 % ALICIA_REACTION_SARAH_PUSH_REBECCA
 sarah = RIGHT = angry = Rebecca! Gimme a break!
-alicia = player = unhappy = … Did… you two have a fight?
+alicia = player = unhappy = … Did you… two have a fight?
 rebecca = alicia = happy = No.
-sarah = RIGHT = angry = No?! You splashed water on me..
+sarah = RIGHT = angry = No?! You splashed water on me.
 alicia = player = unhappy = … Rebecca, that's not cool…
 rebecca = alicia = laugh = It was just for fun!
 alicia = player = angry = … That's even less cool…

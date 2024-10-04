@@ -10,7 +10,7 @@ jean = rebecca = urge_sad = Je ne l'ai pas vu non plus.
 sarah = rebecca = worry = Désolé. Je ne sais pas où elle est.
 
 
-% SARAH
+% SARAH_VAR
 sarah = rebecca = worry = Je ne sais pas non plus où elle est.
 
 

@@ -1,5 +1,5 @@
 %INVENTORY_HELLO
-object = player = laugh = Oh! Hello there, Rebecca !
+object = player = laugh = Oh! Hello there, Rebecca!
 
 
 %INVENTORY_INITIATIVE_HELLO
@@ -33,7 +33,7 @@ alicia = player = appeased = You really got me there.
 
 
 %INVENTORY_BOMB_NEXT
-rebecca = object = excited = That’s cool, but I want some super bombs!@Do we have green bombs?
+rebecca = object = excited = That's cool, but I want some super bombs!@Do we have green bombs?
 object = player = worry = I don't think so…
 object = player = surprised = Ho! Wait! Actually, yes!@I found one in a box earlier.
 object = player = happy = Here it is.
@@ -41,7 +41,7 @@ object = player = happy = Here it is.
 
 %INVENTORY_BOMB_LAST
 object = player = unhappy = You seem disappointed… Is something wrong?
-rebecca = object = unhappy = I forgot, but they're useless to me…@I don't know how to use them yet…
+rebecca = object = unhappy = I forgot they're useless to me…@I don't know how to use them yet…
 object = player = worry = Oh…
 object = player = unhappy = Uh…
 object = player = worry = You'll learn soon…
@@ -56,7 +56,7 @@ rebecca = object = happy_var = No, thanks.@I'm just looking around.
 %INVENTORY_LAST
 object = player = worry = ... Are you… really sure you don't need anything?
 object = player = unhappy = Sorry for being pushy…@You're just acting wei…
-object = player = worry = Hm… It's just that you give me the impression that you're@waiting for something without daring to ask for it.
+object = player = worry = Hm… It's just you give me the impression you're@waiting for something without daring to ask for it.
 rebecca = object = happy = No, no. I'm looking at you, that's all.
 
 
@@ -87,12 +87,12 @@ marie = RIGHT = cry_var = (I was just getting ideas…)
 % EMBARASSED_NEXT_NEXT_NEXT
 object = player = blush_var2 = ("Rebecca, I love you.")
 object = player = blush_var = (Come on, Marie, it's not that hard.@You just have to go for it!)
-object = player = blush = (Oh no, I knew I should've washed my hair this morning!)
+object = player = blush = (Oh no, I knew I should've@washed my hair this morning!)
 
 
 % EMBARASSED_NEXT_NEXT_NEXT_NEXT
 object = player = blush_var = (Maybe it's a bit ridiculous@to announce it like that…)
-object = player = blush_var = (Maybe I should just get closer, touch her cheek,@then her hair, and kiss her…)
+object = player = blush_var = (Maybe I should just get closer, touch@her cheek, then her hair, and kiss her…)
 
 
 % EMBARASSED_LAST
@@ -107,8 +107,8 @@ object = player = blush_var3 = Can I blrhfghlre?
 object = player = surprised_var = (Oh shit…)
 object = player = surprised = UH… YOUR SHOELACES ARE UNTIED!
 object = player = surprised_var = (Did I really just say that?)
-object = player = cry_var = (And I shouted it too… I'm such a nut)
-object = player = cry_var = (Her shoelaces aren't even untied…@She'll think I'm so weird…)
+object = player = cry_var = (And I shouted it… I'm such a nut)
+object = player = cry_var = (Her shoelaces aren't even untied…@She'll think I'm too weird…)
 object = player = cry_var = (My life is over…)
 
 

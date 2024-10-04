@@ -19,4 +19,4 @@ player = DOWN = unhappy = I wonder if I didn't just misbehave…@I clearly didn'
 
 
 % BOMBING_OWN_DESK_NO_REASON_ERIC_RAN
-player = DOWN = you_silly = In the grand scheme of things, that was totally worth it!
+player = DOWN = you_silly = In the grand scheme of things,@that was totally worth it!

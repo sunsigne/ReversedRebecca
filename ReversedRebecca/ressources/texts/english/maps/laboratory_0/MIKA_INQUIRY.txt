@@ -4,7 +4,7 @@ rebecca = mika = worry = But… You don’t know anything about this?
 mika = player = serious = No.
 
 
-%INQUIRY_SOON
+% SOON
 rebecca = object = happy = What exactly happened?
 mika = player = serious = Give me five seconds…@I'm gathering my thoughts.
 
@@ -15,7 +15,7 @@ mika = player = serious = Ok, I'm good. What were you saying?
 
 % SOON_NEXT_VAR
 rebecca = object = worry = Hey Mika! Can we talk now?
-mika = player = serious = Yes, it's fine. What were you saying?
+mika = player = serious = Yes, I'm good. What were you saying?
 
 
 % NEUTRAL
@@ -30,7 +30,7 @@ mika = player = serious = I hadn't thought about that…
 mika = player = serious = Go check on her.@I have to stay here to clear the way.
 
 
-%HURRY_UP
+% HURRY_UP
 mika = player = angry_var = Rebecca! What are you doing?@Go check if Alicia is okay!
 
 

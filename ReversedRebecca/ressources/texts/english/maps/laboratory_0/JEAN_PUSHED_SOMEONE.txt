@@ -3,34 +3,34 @@ sarah = jean = angry = What's his problem?
 
 
 % SARAH_JEAN_SCOLDING_FROM_FAR
-sarah = UP = angry_var = WHAT IS WRONG WITH YOU, SHOVING PEOPLE LIKE THAT!
+sarah = UP = angry_var = WHAT IS WRONG WITH YOU,@SHOVING PEOPLE LIKE THAT!
 rebecca = DOWN = unhappy = Oh no… Sarah is really angry…
 
 
 % SARAH_JEAN_SCOLDING_VAR
-sarah = UP = angry_var = WHAT IS WRONG WITH YOU, SHOVING PEOPLE LIKE THAT!
-jeans = DOWN = surprised = Uh…
+sarah = UP = angry_var = WHAT IS WRONG WITH YOU,@SHOVING PEOPLE LIKE THAT!
+jean = DOWN = surprised = Uh…
 sarah = UP = angry_var = DON'T "UH" ME! YOU APOLOGIZE! NOW!
-jeans = DOWN = surprised = … Yes. Sorry.
+jean = DOWN = surprised = … Yes. Sorry.
 
 
 % SARAH_JEAN_SCOLDING
-sarah = UP = angry_var = WHAT IS WRONG WITH YOU, SHOVING PEOPLE LIKE THAT!
-jeans = DOWN = surprised = Uh…
-sarah = UP = angry_var = DON'T "UH" ME! YOU GO TO REBECCA AND YOU APOLOGIZE! NOW !
-jeans = DOWN = surprised = … Yes.
+sarah = UP = angry_var = WHAT IS WRONG WITH YOU,@SHOVING PEOPLE LIKE THAT!
+jean = DOWN = surprised = Uh…
+sarah = UP = angry_var = DON'T "UH" ME! YOU GO TO REBECCA@AND YOU APOLOGIZE! NOW!
+jean = DOWN = surprised = … Yes.
 
 
 % JEAN_APOLOGIZE_FOR_PUSHING
 jean = player = sad = Sorry for pushing you earlier…
-player = object = no_sens = Um… No worries.
+player = object = no_sens = Uh… No worries.
 
 
 % JEAN_APOLOGIZE_FOR_PUSHING_VAR
-object = player = cry = Oh! Hi Rebecca…
-player = object = unhappy = You look upset… Isn’t that okay?
+object = player = cry = Oh! Hi, Rebecca…
+player = object = unhappy = You look upset… Is everything okay?
 jean = player = sad = Sorry for pushing you earlier…
-player = object = no_sens = Um… No worries.
+player = object = no_sens = Uh… No worries.
 
 
 % JEAN_SCOLDING
@@ -50,7 +50,7 @@ player = DOWN = angry_var2 = (And he doesn't even apologize!@I don't want to tal
 % ALICIA_REACTION_JEAN_SCOLDING
 alicia = player = unhappy = I wish you had done that without me around…@It was awkward…
 player = alicia = wrong_with_you = Sorry, but he made me so mad!
-alicia = player = happy = I wouldn't have liked being pushed either.
+alicia = player = happy = I wouldn't have liked to be pushed either.
 alicia = player = unhappy = It's just… It's always a little embarrassing@to be right next to an argument.
 player = alicia = worry = Yes, I understand. Excuse me, @I'll be more careful next time.
 alicia = player = happy = Thank you.
@@ -68,19 +68,19 @@ object = player = scared = AAAAH!
 player = object = angry_var = DID YOU SERIOUSLY JUST PEE ON ME?
 jean = player = urge_sad = Sorry… You surprised me and…@It just came out…
 player = object = angry = You grossly disgusting dog!
-jean = player = urge_sad = I’m sorry…
-player = object = angry = "Sorry" is what we say when we make too much@noise, or when we drop something…
+jean = player = urge_sad = I'm sorry…
+player = object = angry = "Sorry" is what we say when you do too much@noise, or when you drop something…
 player = object = angry_var = NOT WHEN YOU PEE ON PEOPLE!
 jean = player = urge_sad = Sorry, sorry, sorry…
 player = object = angry = Get lost, now.
 
 
 % REBECCA_MAD_ABOUT_GET_PISSED_ON
-player = DOWN = angry_var2 = I can’t believe it!
+player = DOWN = angry_var2 = I can't believe it!
 
 
 % TOILET_PISSED_ON
-rebecca = DOWN = angry_var2 = No way! After that sickening Jean, I never@want to hear about going to the bathroom again!
+rebecca = DOWN = angry_var2 = No way! After that sickening Jean, I never want@to hear about going to the bathroom ever again!
 
 
 %REBECCA_WONT_EXIT_BATHROOM

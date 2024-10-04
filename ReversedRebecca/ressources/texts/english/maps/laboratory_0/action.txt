@@ -2,9 +2,9 @@
 
 I_OPENED_TOO_LATE = Key1 % I opened too late
 I_DIDN'T_WANT_TO_OPEN = Key2 % I didn't want to open
-FIND_AN_EXIT = Key1 % find a way out
+FIND_AN_EXIT = Key1 % find an outing
 INVASTIGATE_THE_INTRUDER = Key2 % invastigate the intruder
-EXIT = Key1 % exit ?
+EXIT = Key1 % exit?
 EXIT_END = Key1 % (END_LVL)exit
 CHAT = Key1 % chat
 
@@ -19,13 +19,13 @@ YES = Key1 % yes
 LIE_NO = Key2 % (lie) no
 SOUNDS_FUN = Key1 % sounds fun
 THATS_NOT_COOL = Key2 % that's not cool
-THEFT = Key2 % theft ?
-ALICIA = Key3 % Alicia ?
+THEFT = Key2 % theft?
+ALICIA = Key3 % Alicia?
 WHAT_ARE_YOU_FIDGETING = Key1 % why are you fidgeting?
 STOP_MOVING = Key1 % stop moving
 STILL_HOLDING_IT = Key1 % still holding it?
 ANYTHING_CHANGED = Key1 % anything changed?
-AND_NOW = Key1 % and now ?
+AND_NOW = Key1 % what about now?
 MAKE_A_SUGGESTION = Key1 % make a suggestion
 DOING_ALRIGHT = Key1 % doing alright?
 OFFER_TO_HELP = Key1 % offer to help
@@ -55,7 +55,7 @@ SABOTAGE = Key3 % Sabotage
 QUIETLY_SABOTAGE = Key3 % quietly sabotage
 COFFEE = Key1 % coffee
 TEA = Key2 % tea
-NO_THANKS = Key3 % no thank
+NO_THANKS = Key3 % no thanks
 OFFER_A_TEA = Key1 % offer a tea
 I_HAVE_TO_GO = Key1 % I have to go...
 SHUT_UP = Key2 % Shut up!

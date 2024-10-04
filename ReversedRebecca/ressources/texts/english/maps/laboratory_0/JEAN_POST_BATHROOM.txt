@@ -1,11 +1,11 @@
 % ASK_REBECCA_FOR_CHAIR
 object = player = unhappy = Rebecca, have you seen my chair?
 player = object = no_sens = Uh… No.
-object = player = unhappy = Ok, never mind.
+object = player = unhappy = Ok, nevermind.
 
 
 % SHOCKED
-player = object = happy = So? Feeling better?@You seemed pretty shaken up earlier.
+player = object = happy = So? Feeling better?@You seemed shaken up, earlier.
 jean = player = unhappy = Yes… I guess…
 player = object = worry = ... Are you sure?
 jean = player = unhappy = Not really.@It's strange to be caught up in an attack.
@@ -15,11 +15,11 @@ player = object = worry = We can't "just declare" it as one. @Sarah is investiga
 jean = player = unhappy = Yeah… Whatever.
 
 
-%EXIT
+% EXIT
 player = object = happy = Hey, I'm looking for an outing.@Where would you go?
-jean = player = unhappy = Isn't Mika clearing then entrance?
+jean = player = unhappy = Isn't Mika clearing the entrance?
 player = object = worry = Yes, but I want to help in my own way.
-jean = player = unhappy = Then I'd go and encourage him if I were you.
+jean = player = unhappy = Then I'd go and encourage him, if I were you.
 player = object = no_sens = … That's it?
 jean = player = happy = Why not?
 player = object = laugh = Because that won't be enough, obviously!
@@ -31,13 +31,13 @@ alicia = player = happy_var = We have nothing to lose by trying.
 
 
 % WORK
-player = object = happy = What are you working currently?
+player = object = happy = What are you working on currently?
 jean = player = unhappy = Why asking?
 player = object = worry = I don’t know… I just feel like talking to you.
-jean = player = unhappy = We suffered an terrorist attack, and you,@are you asking me what I'm working on?
-player = object = laugh = Now it's an "terrorist attack"?@Ok, you're exaggerating again.
+jean = player = unhappy = We suffered a terrorist attack, and you,@are you asking me what I'm working on?
+player = object = laugh = Now it's a "terrorist attack"?@Ok, you're exaggerating again.
 jean = player = unhappy = I'm not afraid of words.@I already told you.
-player = object = worry = I think you like "words" a bit too much.@At some point, you have to know how to put things in perspective.
+player = object = worry = I think you like "words" a bit too much. You@have to know how to put things in perspective.
 jean = player = unhappy = Yeah… Whatever…
 
 
@@ -45,7 +45,7 @@ jean = player = unhappy = Yeah… Whatever…
 player = object = angry = Do you plan to end all our conversations with:@"yeah, whatever"?
 jean = player = unhappy = No. Earlier I finished with:@"Ha. Whatever".
 player = DOWN = angry_var2 = Hold me back, I'm going to smack him…
-player = object = asleep = Calm down Rebecca… He's not worth it.
+player = object = asleep = Calm down, Rebecca… He's not worth it.
 player = DOWN = angry_var2 = But he's so annoying!@I don't want to talk to him anymore.
 
 

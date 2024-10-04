@@ -1,5 +1,5 @@
 % NEUTRAL
-rebecca = object = worry = That's quite a crumbling… Is there any way to get rid of it?
+rebecca = object = worry = That's quite a crumbling…@Is there any way to get rid of it?
 mika = player = serious = Elbow grease.
 rebecca = object = sad = I'll pass.
 rebecca = object = sad = I'll see if there is another solution.
@@ -18,7 +18,7 @@ alicia = player = surprised = Well, when she's looking for an exit,@she really d
 
 
 % ALICIA_REACTION_MIKA_BOMB_VAR
-alicia = player = angry_var = Rebecca! We agreed to stop with the bombs!
+alicia = player = angry_var = Rebecca! We agreed to stop with bombs!
 
 
 % ALICIA_REACTION_EXIT_IS_OPENED
@@ -27,6 +27,6 @@ mika = alicia = doubt = What's the problem? She cleared the entrance…
 alicia = mika = angry_var = The problem is that she blew up half of our lab.
 mika = DOWN = surprised = Seriously?
 rebecca = UP = no_sens = I was just looking for an outing…
-mika = DOWN = serious = If it was just to destroy everything in the process,@it wasn't worth it.
+mika = DOWN = serious = If it meant destroying everything in the process,@it wasn't worth it.
 alicia = DOWN = angry_var = Exactly!
 rebecca = UP = sad = …

@@ -1,6 +1,6 @@
 % BOMBING_OWN_DESK_VAR
 alicia = player = angry = Rebecca! This isn't the entrance!@Don't blow up our walls!
-player = alicia = worry = Yeah, excuse me…
+player = alicia = worry = Yeah, my bad…
 
 
 % BOMBING_OWN_DESK
@@ -26,12 +26,12 @@ alicia = UP = speaking = Wait!
 
 % STOP_BOMB
 alicia = player = unhappy = Rebecca. That's enough. No more bombs.
-alicia = player = unhappy = You're blowing up our lab…@And you're scaring our colleagues.
+alicia = player = unhappy = You're blowing up our lab…@And now you're scaring our colleagues.
 
 
 % STOP_BOMB_NO_PRE_WARNING
-alicia = player = unhappy = Rebecca, I don't think bombs are a good solution…
-alicia = player = unhappy = You're blowing up our lab…@And you're scaring our colleagues.
+alicia = player = unhappy = Rebecca, I don't think bombs are@a good solution…
+alicia = player = unhappy = You're blowing up our lab…@And now you're scaring our colleagues.
 
 
 % NO_I_CONTINUE
@@ -46,7 +46,7 @@ player = DOWN = sad = I'm hurting nobody, after all.
 
 
 % NO_I_CONTINUE_NO_KEY
-player = alicia = unhappy = You don't understand, Alicia…@It's the only way forward. We don't have a choice…
+player = alicia = unhappy = You don't understand, Alicia… It's the@only way forward. We don't have a choice…
 alicia = rebecca = unhappy = We always have a choice, Rebecca.
 
 
@@ -78,12 +78,12 @@ alicia = player = happy_var = That's just keys, Rebecca.@I think I can manage.
 
 
 % ALICIA_GREEN_KEY_SOFTLOCK
-player = alicia = no_sens_var = Uh…
+player = UP = no_sens_var = Uh…
 player = alicia = unhappy = Excuse me, Alicia,@I think we're officially trapped.
 alicia = player = surprised_var = Wait… Really?
 player = UP = worry = Yeah… I don't have a green bomb to clear the path.
 player = UP = unhappy = And I don't know how to use the green key I found.
-alicia = player = laugh = Huh? That's wonderful!
-player = alicia = no_sens = What ?
+alicia = player = laugh = That's wonderful!
+player = alicia = no_sens = What?
 alicia = player = happy_var = You found a green key.@Here, give it to me, I know how to use it.
 player = alicia = laugh = Hah! Sure, take it

@@ -51,6 +51,10 @@
 
 	////////// EN COURS ////////////
 
+	trad -> remplacer "landslide" dans les dialogues par "collaspe" (+ le mettre en bonus texte en anglais)
+	vérifier le faux positif "toc toc" pour alicia, quand on ouvre la porte du sas par le haut
+	Alicia ne se téléporte pas à côté de jean pour le dialogue "encourager mika" (JEAN_POST_BATHROOM*ALICIA_REACTION_JEAN_EXIT) + JEAN_PUSHED_SOMEONE*ALICIA_REACTION_JEAN_SCOLDING (pareil, no tp)
+	bug -> lvl001 la clef cyan apparait alors qu'on a déjà ouvert la porte... mettre une vérification de si on est en possession ou non d'une clef cyan
 	succès : reset les achievement empêche d'avoir de nouveau "sign of stopping"
 	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
 	
@@ -195,6 +199,9 @@
 	passage secret tj vide ...
 
 	////////// LVL001 ////////////
+
+	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
+	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean
 
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
 

@@ -12,7 +12,7 @@ alicia = player = angry_var = Rebecca! Have you lost your mind?@What's your prob
 
 %SPONTANEOUS_NEXT
 player = alicia = angry = No way! You're not going@to start annoying me too!
-alicia = player = angry = Oh really? I'm annoying you? Do you want me@to remind you who's dealing with your paperwork?
+alicia = player = angry = Oh really? I'm annoying you? Do you want me to@remind you who's dealing with your paperwork?
 player = alicia = angry_var2 = Is she looking for trouble, or what?@Because she's going to find it!
 
 

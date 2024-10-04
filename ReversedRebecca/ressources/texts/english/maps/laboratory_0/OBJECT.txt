@@ -4,20 +4,20 @@ player = object = sad = Eww.
 
 % PLANTS
 rebecca = object = you_silly_var = So sad double offices have so little space…
-rebecca = object = worry = I would have loved to have a big plant too…
+rebecca = object = worry = I'd love having a big plant too…
 
 
 % VAT
-rebecca = object = happy = These tanks are very convenient for our experiments.
+rebecca = object = happy = These tanks are very convenient@for our experiments.
 
 
 % VAT_SABOTAGE
-rebecca = object = happy = These tanks are very convenient for our experiments.
-rebecca = DOWN = determined = What a pity!@Tim will have to redo his!
+rebecca = object = happy = These tanks are very convenient@for our experiments.
+rebecca = DOWN = determined = What a shame!@Tim will have to redo his!
 
 
 % RESIGNATION
-rebecca = object = happy = This is Fred and George's resignation letter.@Apparently, they're going to open their own company.
+rebecca = object = happy = This is Fred and George's resignation letter.@They're going to open their own company.
 
 
 % RESIGNATION_READ
@@ -42,7 +42,7 @@ rebecca = alicia = you_silly = Yeah… Me too.
 
 % COMPUTER_BEFORE_CYAN_KEY
 rebecca = object = surprised = Oh! But…
-rebecca = object = laugh = Well then, Jean?@Are we playing during office hours?
+rebecca = object = laugh = Well then, Jean?@Are you playing during office hours?
 
 
 % COMPUTER_CYAN_KEY
@@ -86,7 +86,7 @@ alicia = player = appeased = Pfff…
 
 
 % TOILET_BUT_SABOTAGED
-rebecca = DOWN = you_silly = I'd better avoid using@the bathroom whose door I sabotaged…
+rebecca = DOWN = you_silly = I'd better avoid using the bathroom@whose door I sabotaged…
 
 
 % ALICIA_ROOM_ANYTHING

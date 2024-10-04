@@ -1,16 +1,16 @@
-% JEANS
+% JEAN
 jean = rebecca = urge_sad = No, I haven't seen her.
 
 
 % JEAN_VAR
-jean = rebecca = urge_sad = I haven't seen it either.
+jean = rebecca = urge_sad = I haven't seen her either.
 
 
 % SARAH
 sarah = rebecca = worry = Sorry. I don't know where she is.
 
 
-% SARAH
+% SARAH_VAR
 sarah = rebecca = worry = I don't know where she is either.
 
 
@@ -23,7 +23,7 @@ delta = rebecca = worry = Well… Let's hope she's fine.@I'm coming with you.
 
 % MIKA_DELTA_CONVERSATION
 delta = DOWN = surprised = What? Hurt?
-mika = UP = serious = Maybe.@It happened in her office.
+mika = UP = serious = Maybe. It happened in her office.
 delta = DOWN = no_sens = Ugh, that's not cool…
 delta = DOWN = worry = Well… Let's hope she's fine.@I'm coming with you.
 
@@ -39,7 +39,7 @@ mika = player = serious = I have to stay here, to clear the rubble.@You should a
 player = mika = worry = I'm asking you for help.
 mika = player = serious = I'm busy.
 player = mika = unhappy = But… Alicia…
-mika = player = doubt = … is alive. Am I asking you for help@to clear the exit? Everyone has their own problem.
+mika = player = doubt = … is alive. Am I asking you for help to clear@the exit? Everyone has their own problem.
 player = mika = wrong_with_you = … … …
 player = DOWN = angry_var2 = What an asshole!
 
@@ -60,10 +60,10 @@ player = mika = worry = Ok, I get it… Too bad.
 
 
 % MIKA_ASKED_FOR_HELP_SCOLDING
-player = mika = angry = Hey, Mika! Does it happen often that@you don't help people locked in SAS?
+player = mika = angry = Hey, Mika! Does it often come to you@not to help people locked in SAS?
 mika = player = worry = Uh… No.
 player = mika = wrong_with_you = What now? What are you going to do for Alicia?
-mika = player = worry = Am I going to go help her?
+mika = player = worry = I am going to help her?
 player = mika = determined = Finally!
 
 

@@ -1,1 +1,1 @@
-object = player = serious = You shouldn't be able to talk to me. Either you cheated or the developer did his job poorly.
+object = player = serious = You shouldn't be able to talk to me. Either you@cheated or the developer did his job poorly.

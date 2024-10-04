@@ -1,5 +1,5 @@
 % NEUTRAL
-alicia = DOWN = happy = Thanks again for freeing me.
+alicia = DOWN = happy = Thank you again, for freeing me.
 player = alicia = laugh = My pleasure, it's nothing.
 
 
@@ -15,19 +15,19 @@ player = DOWN = you_silly = I should leave her alone. She probably needs@some re
 
 
 % DRINK_THANK
-player = alicia = happy_var = Thank you for the coffee!
-alicia = DOWN = happy = You're welcome
+player = alicia = happy_var = Thanks for the coffee!
+alicia = DOWN = happy = You're welcome.
 
 
 % DRINK_THANK_VAR
-player = alicia = happy_var = Thank you for the tea!
-alicia = DOWN = happy = You're welcome
+player = alicia = happy_var = Thanks for the tea!
+alicia = DOWN = happy = You're welcome.
 
 
 
 % DRINK_WAS_MINE
-alicia = DOWN = surprised_var = But… This was mine !
-player = alicia = excited = And this was delicious 
+alicia = DOWN = surprised_var = But… This was mine!
+player = alicia = excited = And this was delicious!
 alicia = DOWN = unhappy = …
 
 
@@ -36,7 +36,7 @@ alicia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_APOLOGIZE
-player = alicia = worry = Excuse me… It was to play a joke on you.@Really. 
+player = alicia = worry = Excuse me… It was to play a joke on you. Really.
 alicia = DOWN = unhappy = …
 alicia = DOWN = happy = … I have to admit I didn't expect that.
 alicia = DOWN = happy_var = Yes, that was funny.
