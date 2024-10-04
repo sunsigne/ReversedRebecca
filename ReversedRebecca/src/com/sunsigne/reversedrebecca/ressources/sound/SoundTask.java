@@ -117,6 +117,12 @@ public class SoundTask implements CameraDependency {
 			int pos = clip.getFramePosition();
 			FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 			float dB = (float) (Math.log((volume * VolumeMain.getVolume()) / 2) / Math.log(10) * 20);
+			
+			if(dB < gain.getMinimum())
+				dB = gain.getMinimum();
+			if(dB > gain.getMaximum())
+				dB = gain.getMaximum();
+				
 			gain.setValue(dB);
 			if (!delay)
 				clip.setFramePosition(pos);

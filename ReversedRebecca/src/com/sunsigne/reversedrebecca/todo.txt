@@ -19,7 +19,6 @@
 
 	pas réglé :
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
-		- SoundTask : joueur autours des 1% affiche un message d'erreur
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
@@ -52,7 +51,6 @@
 	////////// EN COURS ////////////
 
 	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
-	+ baisser trop le son envoie des rapport d'erreur
 
 	dans l'ordre, à la fin :
 	- 3h00 built en se basant sur "VERSION PUBLIQUE"
