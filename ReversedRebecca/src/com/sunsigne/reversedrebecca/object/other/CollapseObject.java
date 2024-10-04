@@ -15,9 +15,9 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 
-public class LandslideObject extends GameObject implements RenderFree, Pusher {
+public class CollapseObject extends GameObject implements RenderFree, Pusher {
 
-	public LandslideObject(int x, int y, RubbleObject rubble, PUSHING_DIRECTION pushingDirection) {
+	public CollapseObject(int x, int y, RubbleObject rubble, PUSHING_DIRECTION pushingDirection) {
 		super(x, y);
 		this.rubble = rubble;
 		this.hurtWhenPushing = true;
@@ -30,15 +30,15 @@ public class LandslideObject extends GameObject implements RenderFree, Pusher {
 
 	@Override
 	public String toString() {
-		var clazz = "LANDSLIDE";
+		var clazz = "COLLAPSE";
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + goal.getX() + "-" + goal.getY();
 	}
 
 	////////// TICK ////////////
 
-	private final int LANDSLIDE_TIME = 180;
-	private int time = LANDSLIDE_TIME;
+	private final int COLLAPSE_TIME = 180;
+	private int time = COLLAPSE_TIME;
 
 	@Override
 	public void tick() {
@@ -54,13 +54,13 @@ public class LandslideObject extends GameObject implements RenderFree, Pusher {
 	}
 
 	private void playSound() {
-		if (time != LANDSLIDE_TIME)
+		if (time != COLLAPSE_TIME)
 			return;
 
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "landslide");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "collapse");
 	}
 
-	private String text = new Translatable().getTranslatedText("LANDSLIDE", FilePath.BONUS_TEXT);
+	private String text = new Translatable().getTranslatedText("COLLAPSE", FilePath.BONUS_TEXT);
 	private RandomGenerator rad = new RandomGenerator();
 
 	private void displayText() {

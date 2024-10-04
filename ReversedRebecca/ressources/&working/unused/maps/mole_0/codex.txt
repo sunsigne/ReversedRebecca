@@ -17,7 +17,7 @@ OBJ-16 = Lake Left Part
 OBJ-17 = Lake
 OBJ-18 = Geode Room
 OBJ-19 = Geodes Pieces
-OBJ-30 = Landslide Checker
+OBJ-30 = Collapse Checker
 
 ///// DOWN /////
 
@@ -28,7 +28,7 @@ OBJ-21 = Barrel
 OBJ-22 = Straw Bed
 OBJ-23 = Green Shovel Box
 OBJ-29 = Mush Room
-OBJ-31 = Landslide Checker
+OBJ-31 = Collapse Checker
 
 ///// DOWNER /////
 

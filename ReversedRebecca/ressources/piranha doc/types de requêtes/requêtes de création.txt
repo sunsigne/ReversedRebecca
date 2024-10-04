@@ -113,19 +113,19 @@ Note : puisqu'ils disparaissent tous seuls naturellement en moins d'une seconde
 
 
 
-////// LANDSLIDE //////
+////// COLLAPSE //////
 
-Le Type de Requête LANDSLIDE permet de créer un « éboulement » à partir d'une direction de poussée, de coordonnées X et Y, et du code (R)GB d'un mappable (voir le fichier "mappable.txt" dans le dossier "maps").
+Le Type de Requête COLLAPSE permet de créer un « éboulement » à partir d'une direction de poussée, de coordonnées X et Y, et du code (R)GB d'un mappable (voir le fichier "mappable.txt" dans le dossier "maps").
 
 Contrairement au Type de Requête CREATE, la coordonnée Z n'est pas demandée : elle est d'office définie comme étant BACK. Le "paramètre rouge" du mappable n'est pas non plus demandé : il est d'office défini sur 2, ce qui correspond à un puzzler de type « gravas » (voir la partie « Puzzler – Rubble »).
 
-Le Type de Requête LANDSLIDE provoque les actions suivantes :
+Le Type de Requête COLLAPSE provoque les actions suivantes :
 - un son spécifique est joué,
 - des "bonus textes d'éboulement" apparaissent autour de la zone sur laquelle l'éboulement est en train d'avoir lieu,
 - un puzzler de type « gravas » est créé au bout de quelques secondes.
 
 Exemple :
-TIME -> 10 = LANDSLIDE -> UP,10-20,255-1
+TIME -> 10 = COLLAPSE -> UP,10-20,255-1
 
 Lorsque la Condition sera vérifiée :
 - un éboulement aura lieu aux coordonnées X=10 Y=20,

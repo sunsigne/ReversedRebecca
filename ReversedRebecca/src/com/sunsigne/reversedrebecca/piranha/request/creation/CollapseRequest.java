@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher.PUSHING_DIRECTION;
-import com.sunsigne.reversedrebecca.object.other.LandslideObject;
+import com.sunsigne.reversedrebecca.object.other.CollapseObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
@@ -14,15 +14,15 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler.MappableRubble;
 
-public class LandslideRequest implements IndexRequest {
+public class CollapseRequest implements IndexRequest {
 
 	////////// REQUEST ////////////
 
-	public LandslideRequest() {
+	public CollapseRequest() {
 		RequestList.getList().addObject(this);
 	}
 
-	private static Request request = new LandslideRequest();
+	private static Request request = new CollapseRequest();
 
 	@Override
 	public Request getRequest() {
@@ -31,7 +31,7 @@ public class LandslideRequest implements IndexRequest {
 
 	@Override
 	public String getType() {
-		return "LANDSLIDE";
+		return "COLLAPSE";
 	}
 
 	@Override
@@ -66,8 +66,8 @@ public class LandslideRequest implements IndexRequest {
 		if (rubble == null)
 			return;
 
-		LandslideObject landslide = new LandslideObject(x, y, (RubbleObject) rubble, pushingDirection);
-		object.getHandler().addObject(landslide);
+		CollapseObject collapse = new CollapseObject(x, y, (RubbleObject) rubble, pushingDirection);
+		object.getHandler().addObject(collapse);
 	}
 
 	private DIRECTION getFacing(String target) {

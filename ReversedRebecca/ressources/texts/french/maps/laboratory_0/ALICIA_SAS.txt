@@ -44,24 +44,24 @@ alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
 player = UP = laugh = Oui.
 
 
-% LANDSLIDE_DISCOVERED_UP
+% COLLAPSE_DISCOVERED_UP
 rebecca = UP = unhappy = Zut… Je ne peux plus passer par là.
 
 
-% LANDSLIDE_DISCOVERED_DOWN
+% COLLAPSE_DISCOVERED_DOWN
 rebecca = DOWN = unhappy = Zut… Je ne peux plus passer par là.
 
 
-% LANDSLIDE_HURTS
+% COLLAPSE_HURTS
 rebecca = DOWN = angry_var2 = Aïe ! Ça fait mal !
 rebecca = UP = unhappy = Zut… Maintenant, je ne peux plus passer.
 
 
-% LANDSLIDE_ANYWAY
+% COLLAPSE_ANYWAY
 rebecca = DOWN = you_silly = Bah… Ça n'est pas comme si@je ne pouvais pas faire le tour.
 
 
-% ALICIA_LANDSLIDE_THERE
+% ALICIA_COLLAPSE_THERE
 alicia = player = happy = Du coup, c'est par où la sortie ?
 player = DOWN = no_sens = En fait, c'était pas là, mais ça s'est effondré.
 alicia = DOWN = surprised = Ha.
@@ -69,21 +69,21 @@ player = alicia = worry = Mais ne t'en fait pas, je vais@nous en trouver une aut
 alicia = player = happy = Ok, je te suis.
 
 
-% ALICIA_LANDSLIDE_DESK
+% ALICIA_COLLAPSE_DESK
 player = DOWN = no_sens = Bon… Heu… C'était la sortie.
 alicia = DOWN = surprised = Ha.
 
 
-% SARAH_LANDSLIDE_FREAKS_OUT
+% SARAH_COLLAPSE_FREAKS_OUT
 sarah = UP = worry_var = ÇA VA LES FILLES ?
 rebecca = DOWN = excited = OUI, ON VA BIEN !
 sarah = UP = worry = OK.
 
 
-% ALICIA_LANDSLIDE_DESK_NEXT
+% ALICIA_COLLAPSE_DESK_NEXT
 player = alicia = worry = Ne t'en fait pas, je vais@nous en trouver une autre.
 alicia = player = happy = Je te suis.
 
 
-% LANDSLIDE_EVIL_IDEA
+% COLLAPSE_EVIL_IDEA
 player = alicia = determined = (Cet éboulement me donne une idée…)
