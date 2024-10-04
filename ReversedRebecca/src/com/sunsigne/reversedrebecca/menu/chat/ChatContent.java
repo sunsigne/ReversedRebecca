@@ -85,9 +85,14 @@ public class ChatContent implements Updatable {
 
 	private int pausetime;
 	private int count, index;
+	private boolean loading;
 
 	@Override
 	public void tick() {
+		if (loading)
+			return;		
+		loading = true;
+		
 		updateDialogueKey();
 
 		if (pausetime > 0) {
@@ -228,6 +233,7 @@ public class ChatContent implements Updatable {
 		drawFacial(g);
 		drawText(g);
 		drawActionKey(g);
+		loading = false;
 	}
 
 	private void drawFacial(Graphics g) {

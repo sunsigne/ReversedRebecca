@@ -50,8 +50,6 @@
 
 	////////// EN COURS ////////////
 
-	bug : les texts sont agressifs au moment où on lance le jeu (la première fois d'une map ou seulement pour dave 000 ?)
-
 	dans l'ordre, à la fin :
 	- 3h00 built en se basant sur "VERSION PUBLIQUE"
 	- 2h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
