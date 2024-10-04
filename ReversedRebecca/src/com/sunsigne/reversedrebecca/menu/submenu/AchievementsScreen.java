@@ -12,7 +12,9 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
+import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
 import com.sunsigne.reversedrebecca.ressources.achievement.AchievementList;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -77,8 +79,12 @@ public class AchievementsScreen extends SubMenuScreen {
 		for (int index = listStart; index < getListEnd(); index++) {
 			int x = newCol ? Size.XS + Window.WIDHT / 2 : Size.L;
 
-			AchievementObject achievement = new AchievementObject(list.getList().get(index), x, y);
-			LAYER.MENU.addObject(achievement);
+			Achievement achievement = list.getList().get(index);
+			AchievementObject achievement_object = new AchievementObject(list.getList().get(index), x, y);
+			LAYER.MENU.addObject(achievement_object);
+
+			if (achievement.getName().equalsIgnoreCase("clickHere") && achievement.isUnlocked() == false)
+				createClickHereButton(achievement_object);
 
 			y = y + 155;
 
@@ -122,7 +128,7 @@ public class AchievementsScreen extends SubMenuScreen {
 		if (listStart == 0)
 			return;
 
-		GenericListener onPress = () -> showPreviousAchivements();
+		GenericListener onPress = () -> showPreviousAchievements();
 		createArrowButton("<", direction, -210, onPress);
 	}
 
@@ -130,18 +136,40 @@ public class AchievementsScreen extends SubMenuScreen {
 		if (getListEnd() >= AchievementList.getList().getList().size())
 			return;
 
-		GenericListener onPress = () -> showNextAchivements();
+		GenericListener onPress = () -> showNextAchievements();
 		createArrowButton(">", direction, 210 + 75, onPress);
+	}
+
+	private void createClickHereButton(AchievementObject achievement) {
+		int x = achievement.getX();
+		int y = achievement.getY();
+		int w = achievement.getWidth();
+		int h = achievement.getHeight();
+
+		GenericListener onPress = () -> unlockClickHereAchievement();
+		GenericListener onRelease = () -> {
+		};
+
+		ButtonObject button = new TitleScreenButton("", x, y, w, h, onPress, onRelease);
+		CLICK_HERE = new PresetMousePos(x + w / 2, y + h / 2);
+		buttons.put(CLICK_HERE, button);
+		button.setRectsize(RECTSIZE.LARGE);
+		LAYER.MENU.addObject(button);
 	}
 
 	////////// BUTTON ACTION ////////////
 
-	private void showNextAchivements() {
+	private void showNextAchievements() {
 		new AchievementsScreen(BACK, listStart + 5);
 	}
 
-	private void showPreviousAchivements() {
+	private void showPreviousAchievements() {
 		new AchievementsScreen(BACK, listStart - 5);
+	}
+
+	private void unlockClickHereAchievement() {
+		new AchievementTask().unlockAchievement("ClickHere");
+		new AchievementsScreen(BACK, listStart);
 	}
 
 	////////// RENDER ////////////
@@ -155,6 +183,7 @@ public class AchievementsScreen extends SubMenuScreen {
 
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
+	public PresetMousePos CLICK_HERE;
 	public static final PresetMousePos RESET = new PresetMousePos(1685, 1010);
 
 	////////// GAMEPAD ////////////
@@ -171,25 +200,39 @@ public class AchievementsScreen extends SubMenuScreen {
 			buttons.get(BACK).mousePressed(null);
 		}
 
+		else if (getPreset() == CLICK_HERE)
+			clickHerePressed(e);
 		else if (getPreset() == RESET)
 			resetPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
 
+	private void clickHerePressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(CLICK_HERE).mousePressed(null);
+	}
+
 	private void resetPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.LEFT)
+		if (e.getKey() == ButtonEvent.UP && CLICK_HERE != null)
+			setPreset(CLICK_HERE);
+		else if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(RESET).mousePressed(null);
 	}
 
 	private void backPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.LEFT) {
+		if (e.getKey() == ButtonEvent.UP && CLICK_HERE != null)
+			setPreset(CLICK_HERE);
+		
+		else if (e.getKey() == ButtonEvent.LEFT) {
 			if (listStart != 0) {
 				var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-				showPreviousAchivements();
+				showPreviousAchievements();
 			}
 		}
 
@@ -197,7 +240,7 @@ public class AchievementsScreen extends SubMenuScreen {
 			if (getListEnd() < AchievementList.getList().getList().size()) {
 				var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-				showNextAchivements();
+				showNextAchievements();
 			} else
 				setPreset(RESET);
 		}
