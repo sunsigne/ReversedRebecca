@@ -1,1 +1,0 @@
-error = DOWN = neutral = Cette salle n'est pas encore finie.
