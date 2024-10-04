@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -30,7 +31,8 @@ public abstract class ConditionalPatternRequest extends ConditionalRequest {
 		String valueToCheck = String.valueOf(target.split("\\?")[0]);
 		Handler handler = object.getHandler();
 
-		for (Updatable tempUpdatable : handler.getList()) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 

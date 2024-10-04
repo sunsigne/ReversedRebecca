@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -79,9 +80,10 @@ public class ChoiceObject extends InteractiveObject {
 		if (player == null)
 			return;
 
-		var list = player.getHandler().getList();
+		var handler = player.getHandler();
 
-		for (Updatable tempUpdatable : list) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 

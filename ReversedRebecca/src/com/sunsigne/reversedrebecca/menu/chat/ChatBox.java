@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -134,7 +135,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		Request instruction = RequestList.getList().getObject(new FacingRequest());
 		var handler = object.getHandler();
 
-		for (Updatable tempUpdatable : handler.getList()) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 

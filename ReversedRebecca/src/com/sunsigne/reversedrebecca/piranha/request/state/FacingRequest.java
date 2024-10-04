@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -57,7 +58,8 @@ public class FacingRequest extends ConditionalRequest {
 		// if facing is a character
 		var handler = object.getHandler();
 		
-		for (Updatable tempUpdatable : handler.getList()) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof LivingObject == false)
 				continue;
 

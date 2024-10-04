@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -51,7 +52,9 @@ public class ChoosingRequest extends ConditionalRequest {
 
 	protected boolean isPlayerChoosing(PiranhaObject object) {
 		Handler handler = object.getHandler();
-		for (Updatable tempUpdatable : handler.getList()) {
+		
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof ChoiceObject)
 				return true;
 		}

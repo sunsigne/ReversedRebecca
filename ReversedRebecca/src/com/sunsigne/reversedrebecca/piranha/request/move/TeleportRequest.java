@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.finder.NearestOfFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -68,7 +69,8 @@ public class TeleportRequest implements Request {
 	private PiranhaObject getObject(PiranhaObject object, String target) {
 		var handler = object.getHandler();
 		
-		for (Updatable tempUpdatable : handler.getList()) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof PiranhaObject == false)
 				continue;
 
