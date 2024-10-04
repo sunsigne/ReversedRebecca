@@ -1,8 +1,6 @@
 package com.sunsigne.reversedrebecca.physic.natural.independant;
 
-import java.awt.AlphaComposite;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -67,7 +65,8 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 			return;
 
 		// Graphics2D g2d = (Graphics2D) g;
-		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0, alpha)));
+		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER,
+		// Math.max(0, alpha)));
 	}
 
 	@Override

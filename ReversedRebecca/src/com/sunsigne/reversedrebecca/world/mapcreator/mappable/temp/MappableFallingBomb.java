@@ -1,7 +1,6 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.temp;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.hostile.FallingBomb;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;

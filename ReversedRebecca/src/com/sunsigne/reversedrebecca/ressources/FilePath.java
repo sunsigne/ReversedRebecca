@@ -2,15 +2,13 @@ package com.sunsigne.reversedrebecca.ressources;
 
 import java.net.URL;
 
-import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class FilePath {
 
 	public static final URL LOC = Game.class.getProtectionDomain().getCodeSource().getLocation();
-	public static final String RESSOURCES_PATH = Infos.IS_DEV_VERSION ? "ressources/" : "";
-	public static final String USERDATA_PATH = Infos.IS_DEV_VERSION ? "userdata/"
-			: System.getenv("APPDATA").replace("\\", "/") + "/" + Infos.NAME + "/";
+	public static final String RESSOURCES_PATH = "ressources/";
+	public static final String USERDATA_PATH = "userdata/";
 	public static final String DAVEDATA_PATH = "https://raw.githubusercontent.com/sunsigne/DaveData/main/";
 
 	public static final String ACHIEVEMENT = "achievement.txt";
