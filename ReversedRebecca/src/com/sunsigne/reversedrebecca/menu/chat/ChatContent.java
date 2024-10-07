@@ -90,9 +90,9 @@ public class ChatContent implements Updatable {
 	@Override
 	public void tick() {
 		if (loading)
-			return;		
+			return;
 		loading = true;
-		
+
 		updateDialogueKey();
 
 		if (pausetime > 0) {
@@ -193,6 +193,12 @@ public class ChatContent implements Updatable {
 
 		try {
 			String data = new FileTask().read(userData, mood, moodFilePath);
+			if (data.split(",").length < 2) {
+				System.err.println("Problem encounter with following text dialogue : " + sentence[0] + " " + sentence[1]);
+				System.err.println(
+						"Image for following character and mood can't be found : " + living_name + " - " + mood);
+			}
+
 			int col = Integer.parseInt(data.split(",")[1]);
 			int row = Integer.parseInt(data.split(",")[0]);
 			img = image.getSubimage((col * width) - width, (row * height) - height, width, height);
