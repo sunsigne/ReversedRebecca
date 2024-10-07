@@ -14,9 +14,17 @@ public interface Volume {
 	String getValueToRead();
 
 	public default String getRegisteredVolume() {
-		if (new FileTask().doesExist(userData, file))
-			return new FileTask().read(userData, getValueToRead(), file);
-		else return "1";
+		String default_volume = "1";
+
+		if (new FileTask().doesExist(userData, file) == false)
+			return default_volume;
+
+		String volume = new FileTask().read(userData, getValueToRead(), file);
+
+		if (volume.isEmpty() == false)
+			return volume;
+
+		return default_volume;
 	}
 
 	public default double loadVolume() {
