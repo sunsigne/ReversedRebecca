@@ -56,6 +56,7 @@
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
+	AudioScreen : mettre un bouton reset pour remettre à 100%
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 	digpuzzle : faire clignoter l'outils lorsque récupéré
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
