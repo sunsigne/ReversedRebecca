@@ -50,6 +50,11 @@
 
 	////////// EN COURS ////////////
 
+	BUG :
+	fix la fonction de déplacement de souris (bug chez Yan, lors du choix d'une touche)
+	dave 5 : prévenir que le joueur peut quitter le jeu à tout moment
+	le outline de la clef HUD passe sous le niveau
+
 	dans l'ordre, à la fin :
 	- 3h00 built en se basant sur "VERSION PUBLIQUE"
 	- 2h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
