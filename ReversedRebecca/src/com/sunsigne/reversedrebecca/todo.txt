@@ -56,6 +56,7 @@
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
+	ControlsScreen : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer + mettre message d'erreur quand clef non assignée
 	AudioScreen : mettre un bouton reset pour remettre à 100%
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 	digpuzzle : faire clignoter l'outils lorsque récupéré
@@ -138,6 +139,7 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
+	les menu clignottent lorsqu'ils sont refresh, à corriger !
 	vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
