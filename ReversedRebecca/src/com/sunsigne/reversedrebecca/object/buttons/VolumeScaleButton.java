@@ -205,12 +205,14 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		if (holding) {
+		boolean flag = holding;
+		holding = false;
+
+		if (flag) {
 			new MousePos().setX(getX() + getGap());
 			new MousePos().setY(getY() + getHeight() / 2);
 		}
 
-		holding = false;
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 	}
 
