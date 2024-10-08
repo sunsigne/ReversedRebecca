@@ -1,13 +1,9 @@
 package com.sunsigne.reversedrebecca.pattern;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
@@ -102,7 +98,7 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("+action3", getKeyText(ActionThreeKey.getKey()));
 
 		formatted_value = formatted_value.replace("+user", Infos.USERNAME);
-		formatted_value = formatted_value.replace("+day", getDay());
+		formatted_value = formatted_value.replace("+day", Infos.DAYOFTHEWEEK);
 
 		return formatted_value;
 	}
@@ -110,14 +106,6 @@ public class FormattedString {
 	private String getKeyText(int key) {
 		String key_text = "[" + new KeyAnalyzer(key).getKeyText() + "]";
 		return key_text;
-	}
-
-	private String getDay() {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(new Date());
-		Integer day_value = cal.get(Calendar.DAY_OF_WEEK);
-		String day = new Translatable().getTranslatedText(day_value.toString(), "day.txt");
-		return day;
 	}
 
 }
