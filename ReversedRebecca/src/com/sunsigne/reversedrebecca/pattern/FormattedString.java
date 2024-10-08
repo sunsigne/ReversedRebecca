@@ -3,8 +3,7 @@ package com.sunsigne.reversedrebecca.pattern;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.sun.jna.platform.win32.Secur32;
-import com.sun.jna.platform.win32.Secur32Util;
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -57,7 +56,7 @@ public class FormattedString {
 		if (txt == false)
 			return text.replace(" ", "");
 
-		String no_space = text;		
+		String no_space = text;
 		no_space = no_space.replace(" = ", "=");
 		no_space = no_space.replace("= ", "=");
 		no_space = no_space.replace(" =", "=");
@@ -102,7 +101,7 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("+action2", getKeyText(ActionTwoKey.getKey()));
 		formatted_value = formatted_value.replace("+action3", getKeyText(ActionThreeKey.getKey()));
 
-		formatted_value = formatted_value.replace("+user", getUserName());
+		formatted_value = formatted_value.replace("+user", Infos.USERNAME);
 		formatted_value = formatted_value.replace("+day", getDay());
 
 		return formatted_value;
@@ -111,16 +110,6 @@ public class FormattedString {
 	private String getKeyText(int key) {
 		String key_text = "[" + new KeyAnalyzer(key).getKeyText() + "]";
 		return key_text;
-	}
-
-	public String getUserName() {
-		String fullName = Secur32Util.getUserNameEx(Secur32.EXTENDED_NAME_FORMAT.NameDisplay);
-		String name = fullName;
-
-		if (fullName.contains(" "))
-			name = fullName.split(" ")[0];
-
-		return name;
 	}
 
 	private String getDay() {
