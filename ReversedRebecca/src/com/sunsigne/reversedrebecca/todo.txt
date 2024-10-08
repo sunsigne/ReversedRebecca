@@ -1,6 +1,8 @@
 
 	////////// VERSION PUBLIQUE ////////////
 
+	configurer le clavier en querty par défaut sur les version anglophone
+	rajouter le ficher icon.png dans le dossier racine
 	supprimer les ressources non utilisées
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
 	reset la sauvegarde, les succès & la mémoire de dave
