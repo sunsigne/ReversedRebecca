@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.other;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -15,7 +16,8 @@ public class BonusTextReusable extends BonusText {
 	private void autoReuse() {
 		var handler = LAYER.WORLD_TEXT.getHandler();
 
-		for (Updatable tempUpdatable : handler.getList()) {
+		var list = new ListCloner().deepClone(handler);
+		for (Updatable tempUpdatable : list.getList()) {
 			if (tempUpdatable instanceof BonusTextReusable == false)
 				continue;
 
