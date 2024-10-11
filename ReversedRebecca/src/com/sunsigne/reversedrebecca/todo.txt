@@ -52,17 +52,13 @@
 
 	////////// EN COURS ////////////
 
-	BUG :
-	- fix la fonction de déplacement de souris (bug chez Yan, lors du choix d'une touche)
-
-	EXPERIENCE UTILISATEUR : "partir sans Sarah" -> trop gros décalage entre le texte et les conséquences
-
 	dans l'ordre, à la fin :
 	- 3h00 built en se basant sur "VERSION PUBLIQUE"
 	- 2h00 les réseaux sur lesquels communiqué (itch.io, discord, reddit, contacter des influenceurs, etc.) + bien préciser que c'est Windows only
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
+	EXPERIENCE UTILISATEUR : "partir sans Sarah" -> trop gros décalage entre le texte et les conséquences
 	ControlsScreen : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer + mettre message d'erreur quand clef non assignée
 	AudioScreen : mettre un bouton reset pour remettre à 100%
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
