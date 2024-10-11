@@ -17,7 +17,7 @@ public class Infos {
 	////////// GAME ////////////
 
 	public static final String NAME = "Reversed Rebecca";
-	public static final String VERSION = "(early-demo) v.0.4.0.6p";
+	public static final String VERSION = "(early-demo) v.0.4.0.5p";
 	// public static final boolean IS_DEV_VERSION =
 	// System.getProperty("java.class.path").contains("\\git\\");
 	public static boolean IS_DEV_VERSION = false;
