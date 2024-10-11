@@ -26,8 +26,9 @@ public class DigMouseObject extends DigPuzzleObject implements MouseObject {
 
 	@Override
 	public void tick() {
-		int mouseX = new MousePos().get()[0] - getWidth() / 2;
-		int mouseY = new MousePos().get()[1] - getHeight() / 2;
+		MousePos mousePos = new MousePos();
+		int mouseX = mousePos.getX() - getWidth() / 2;
+		int mouseY = mousePos.getY() - getHeight() / 2;
 		followMouse(mouseX, mouseY);
 	}
 

@@ -91,24 +91,23 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	private void tickHodling() {
 		playHelpingSound();
 
-		int mouseX = new MousePos().get()[0];
-		int mouseY = new MousePos().get()[1];
+		MousePos mousePos = new MousePos();
 
-		setX(mouseX);
+		setX(mousePos.getX());
 		refreshVolume();
 
-		if (mouseX > xmax) {
+		if (mousePos.getX() > xmax) {
 			setX(xmax);
-			new MousePos().setX(xmax);
+			mousePos.setX(xmax);
 		}
 
-		if (mouseX < xmin) {
+		if (mousePos.getX() < xmin) {
 			setX(xmin);
-			new MousePos().setX(xmin);
+			mousePos.setX(xmin);
 		}
 
-		if (mouseY < getY() || mouseY > getY() + getHeight())
-			new MousePos().setY(getY() + getHeight() / 2);
+		if (mousePos.getY() < getY() || mousePos.getY() > getY() + getHeight())
+			mousePos.setY(getY() + getHeight() / 2);
 	}
 
 	private final int STEP = 2;
@@ -209,8 +208,9 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 		holding = false;
 
 		if (flag) {
-			new MousePos().setX(getX() + getGap());
-			new MousePos().setY(getY() + getHeight() / 2);
+			MousePos mousePos = new MousePos();
+			mousePos.setX(getX() + getGap());
+			mousePos.setY(getY() + getHeight() / 2);
 		}
 
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);

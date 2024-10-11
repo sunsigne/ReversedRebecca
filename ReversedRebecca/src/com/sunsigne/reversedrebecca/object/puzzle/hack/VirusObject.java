@@ -70,12 +70,13 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 	}
 
 	protected void updateMouse() {
-		int mouseX = new MousePos().get()[0] - getWidth();
-		int mouseY = new MousePos().get()[1] - getHeight();
+		MousePos mousePos = new MousePos();
+		int mouseX = mousePos.getX() - getWidth();
+		int mouseY = mousePos.getY() - getHeight();
 		mouseX = xmax + xmin - mouseX;
 		mouseY = ymax + ymin - mouseY;
-		new MousePos().setX(mouseX);
-		new MousePos().setY(mouseY);
+		mousePos.setX(mouseX);
+		mousePos.setY(mouseY);
 	}
 
 	////////// TICK ////////////
@@ -91,8 +92,9 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 
 	@Override
 	public void tick() {
-		int mouseX = new MousePos().get()[0] - getWidth() / 2;
-		int mouseY = new MousePos().get()[1] - getHeight() / 2;
+		MousePos mousePos = new MousePos();
+		int mouseX = mousePos.getX() - getWidth() / 2;
+		int mouseY = mousePos.getY() - getHeight() / 2;
 
 		int w = getWidth() / 2;
 		int h = getHeight() / 2;

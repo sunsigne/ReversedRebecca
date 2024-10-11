@@ -44,12 +44,11 @@ public class LockObject extends PuzzleObject implements SheetableImage, Collisio
 
 	@Override
 	public void tick() {
-		int mouseX = new MousePos().get()[0];
-		int mouseY = new MousePos().get()[1];
+		MousePos mousePos = new MousePos();
 
-		followMouse(mouseX, mouseY);
-		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
-		keepMouseWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
+		followMouse(mousePos.getX(), mousePos.getY());
+		keepWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
+		keepMouseWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
 	}
 
 	////////// TEXTURE ////////////
