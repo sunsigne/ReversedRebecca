@@ -2,19 +2,33 @@
 dave = DOWN = camera = Aren't you tired of closing the game over@and over again to see everything I have to say?
 dave = DOWN = camera = If you're looking for a sign of stopping, here it is:
 
+
 % SECOND
 dave = DOWN = camera_happy = What? Are you waiting for the title screen,@or something?
 dave = DOWN = camera = For what? You keep quitting as soon as@it appears…
 dave = DOWN = camera_happy = By keeping you here with me, at least, you have@the feeling that something is happening.
 
+
 % THIRD
 dave = DOWN = camera = This suspense! Will I say something else if@you wait long enough?
+dave = DOWN = camera = You know, you can go to the title screen@by yourself from here.
+
+
+% THIRD_KEYBOARD
+dave = DOWN = camera_happy = You just need to click on Esc and quit.
+
+
+% THIRD_GAMEPAD
+dave = DOWN = camera_happy = You just need to click on Start and quit.
+
 
 % FOURTH
 dave = DOWN = intrigued = How fun we're having, haven't we?@Staying there, both of us, doing nothing…
 
+
 % FIFTH
 dave = DOWN = intrigued = Serious question: are you really having fun?@Watching 120 colorful pixels on a black screen?
+
 
 % LAST
 dave = DOWN = camera = Okay, I'm giving up. I'm bored.@We'll catch up sooner or later.
