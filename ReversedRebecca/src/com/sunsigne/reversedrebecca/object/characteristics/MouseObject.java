@@ -9,8 +9,10 @@ public interface MouseObject extends Velocity {
 	}
 
 	default void followMouse(int mouseX, int mouseY) {
-		setX(mouseX);
-		setY(mouseY);
+		if (Math.abs(Math.abs(getX()) - Math.abs(mouseX)) > 5)
+			setX(mouseX);
+		if (Math.abs(Math.abs(getY()) - Math.abs(mouseY)) > 5)
+			setY(mouseY);
 	}
 
 	default void keepWithinZone(int mouseX, int mouseY, int xmin, int xmax, int ymin, int ymax) {
@@ -26,15 +28,17 @@ public interface MouseObject extends Velocity {
 	}
 
 	default void keepMouseWithinZone(int mouseX, int mouseY, int xmin, int xmax, int ymin, int ymax) {
+		MousePos mousePos = new MousePos();
+
 		if (mouseX > xmax)
-			new MousePos().setX(xmax);
+			mousePos.setX(xmax);
 		if (mouseX < xmin)
-			new MousePos().setX(xmin);
+			mousePos.setX(xmin);
 
 		if (mouseY > ymax)
-			new MousePos().setY(ymax);
+			mousePos.setY(ymax);
 		if (mouseY < ymin)
-			new MousePos().setY(ymin);
+			mousePos.setY(ymin);
 	}
 
 }

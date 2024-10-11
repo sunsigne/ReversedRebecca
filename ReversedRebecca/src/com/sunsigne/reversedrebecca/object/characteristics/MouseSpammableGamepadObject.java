@@ -41,8 +41,8 @@ public interface MouseSpammableGamepadObject extends MouseObject, GamepadEvent {
 	}
 
 	private void moveMouseFrom(int x, int y) {
-		int[] pos = new MousePos().get();
-		new PresetMousePos(pos[0] + x, pos[1] + y).moveMouse();
+		MousePos mousePos = new MousePos();
+		new PresetMousePos(mousePos.getX() + x, mousePos.getY() + y).moveMouse();
 	}
 	
 	////////// GAMEPAD ////////////

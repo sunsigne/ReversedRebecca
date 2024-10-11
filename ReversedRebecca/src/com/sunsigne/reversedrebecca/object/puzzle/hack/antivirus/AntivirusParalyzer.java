@@ -31,8 +31,9 @@ public class AntivirusParalyzer extends AntivirusObject {
 	public void antivirusAction() {
 
 		if (isCritical() == false) {
-			new MousePos().setX(Window.WIDHT / 2);
-			new MousePos().setY(Window.HEIGHT / 2);
+			MousePos mousePos = new MousePos();
+			mousePos.setX(Window.WIDHT / 2);
+			mousePos.setY(Window.HEIGHT / 2);
 		}
 
 		playSound("laser_little");

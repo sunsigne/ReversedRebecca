@@ -30,6 +30,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScre
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -386,7 +387,8 @@ public abstract class HackPuzzle extends Puzzle {
 	public void tick() {
 		boolean flag = false;
 
-		for (ProcessorObject tempProcessor : getComputer().getList()) {
+		var list = new ListCloner().deepClone(getComputer());
+		for (ProcessorObject tempProcessor : list.getList()) {
 			if (tempProcessor instanceof ProcessorCPU)
 				return;
 

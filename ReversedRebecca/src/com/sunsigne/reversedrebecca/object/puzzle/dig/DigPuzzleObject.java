@@ -39,8 +39,9 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 		if (isCritical() == false)
 			return MouseUserEvent.super.isSelected();
 
-		boolean row_rect = mouseOver(new MousePos().get(), getRowRect()) && isClickable();
-		boolean col_rect = mouseOver(new MousePos().get(), getColRect()) && isClickable();
+		MousePos mousePos = new MousePos();
+		boolean row_rect = mouseOver(mousePos.get(), getRowRect()) && isClickable();
+		boolean col_rect = mouseOver(mousePos.get(), getColRect()) && isClickable();
 
 		return row_rect || col_rect;
 	}
@@ -82,12 +83,12 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 
 		g.setColor(Color.YELLOW);
 
+		MousePos mousePos = new MousePos();
 		if (isCritical()) {
-			if (mouseOver(new MousePos().get(), getRowRect()) == false
-					&& mouseOver(new MousePos().get(), getColRect()) == false)
+			if (mouseOver(mousePos.get(), getRowRect()) == false && mouseOver(mousePos.get(), getColRect()) == false)
 				return;
 
-		} else if (mouseOver(new MousePos().get(), getRect()) == false)
+		} else if (mouseOver(mousePos.get(), getRect()) == false)
 			return;
 
 		g.drawRect(getX() + 1, getY() + 1, getWidth() - 2, getHeight() - 2);

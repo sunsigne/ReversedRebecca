@@ -10,15 +10,26 @@ import com.sunsigne.reversedrebecca.system.Window;
 
 public class MousePos {
 
-	public int[] get() {
-
+	public MousePos() {
 		PointerInfo a = MouseInfo.getPointerInfo();
 		Point b = a.getLocation();
-		int x = (int) (b.getX() / Window.SCALE_X);
-		int y = (int) (b.getY() / Window.SCALE_Y);
-		int[] mousePos = { x, y };
+		mouseX = (int) (b.getX() / Window.SCALE_X);
+		mouseY = (int) (b.getY() / Window.SCALE_Y);
+	}
 
-		return mousePos;
+	private int mouseX;
+	private int mouseY;
+
+	public int[] get() {
+		return new int[] { mouseX, mouseY };
+	}
+
+	public int getX() {
+		return mouseX;
+	}
+
+	public int getY() {
+		return mouseY;
 	}
 
 	public void setX(int x) {
@@ -27,8 +38,8 @@ public class MousePos {
 
 	public void setX(int x, boolean paramount) {
 		try {
-			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove((int) (x * Window.SCALE_X), (int) (get()[1] * Window.SCALE_Y));
+			if (mouseOver(0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
+				new Robot().mouseMove((int) (x * Window.SCALE_X), (int) (mouseY * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
@@ -40,19 +51,16 @@ public class MousePos {
 
 	public void setY(int y, boolean paramount) {
 		try {
-			if (mouseOver(get(), 0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove((int) (get()[0]* Window.SCALE_X), (int) (y * Window.SCALE_Y));
+			if (mouseOver(0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
+				new Robot().mouseMove((int) (mouseX * Window.SCALE_X), (int) (y * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
 	}
 
-	private boolean mouseOver(int[] mousePos, int x, int y, int width, int height) {
-		int mx = mousePos[0];
-		int my = mousePos[1];
-
-		if (mx > x && mx < x + width) {
-			if (my > y && my < y + height) {
+	private boolean mouseOver(int x, int y, int width, int height) {
+		if (mouseX > x && mouseX < x + width) {
+			if (mouseY > y && mouseY < y + height) {
 				return true;
 			} else
 				return false;

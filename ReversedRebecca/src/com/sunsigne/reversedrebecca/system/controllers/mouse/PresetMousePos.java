@@ -20,8 +20,9 @@ public class PresetMousePos {
 			timer.destroy();
 		timer = new GameTimer(5, true, () -> usingPreset = false);
 
-		new MousePos().setX(x, true);
-		new MousePos().setY(y, true);
+		MousePos mousePos = new MousePos();
+		mousePos.setX(x, true);
+		mousePos.setY(y, true);
 	}
 
 }
