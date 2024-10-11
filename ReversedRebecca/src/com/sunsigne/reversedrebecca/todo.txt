@@ -53,9 +53,9 @@
 	////////// EN COURS ////////////
 
 	BUG :
-	fix la fonction de déplacement de souris (bug chez Yan, lors du choix d'une touche)
-	dave 5 : prévenir que le joueur peut quitter le jeu à tout moment
-	le outline de la clef HUD passe sous le niveau
+	- fix la fonction de déplacement de souris (bug chez Yan, lors du choix d'une touche)
+	- dave 5 : prévenir que le joueur peut quitter le jeu à tout moment
+	- vérification de la serviette de Rebecca lorsque Sarah est partie (ne peut pas ouvrir la porte)
 
 	EXPERIENCE UTILISATEUR : "partir sans Sarah" -> trop gros décalage entre le texte et les conséquences
 
