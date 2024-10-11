@@ -68,13 +68,8 @@ public class GameCursor {
 		////////// TEXTURE ////////////
 
 		@Override
-		public int getSheetWidth() {
-			return 8;
-		}
-
-		@Override
-		public int getSheetHeight() {
-			return 10;
+		public int getSheetSize() {
+			return 32;
 		}
 
 		@Override
