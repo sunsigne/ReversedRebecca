@@ -28,17 +28,26 @@ public interface MouseObject extends Velocity {
 	}
 
 	default void keepMouseWithinZone(int mouseX, int mouseY, int xmin, int xmax, int ymin, int ymax) {
+		keepMouseWithinXZone(mouseX, xmin, xmax);
+		keepMouseWithinYZone(mouseY, ymin, ymax);
+	}
+
+	default void keepMouseWithinXZone(int mouseX, int xmin, int xmax) {
 		MousePos mousePos = new MousePos();
 
 		if (mouseX > xmax)
-			mousePos.setX(xmax);
+			mousePos.setX(xmax - 5);
 		if (mouseX < xmin)
-			mousePos.setX(xmin);
+			mousePos.setX(xmin + 5);
+	}
+
+	default void keepMouseWithinYZone(int mouseY, int ymin, int ymax) {
+		MousePos mousePos = new MousePos();
 
 		if (mouseY > ymax)
-			mousePos.setY(ymax);
+			mousePos.setY(ymax - 5);
 		if (mouseY < ymin)
-			mousePos.setY(ymin);
+			mousePos.setY(ymin + 5);
 	}
 
 }
