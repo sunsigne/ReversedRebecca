@@ -48,7 +48,11 @@ public class LockObject extends PuzzleObject implements SheetableImage, Collisio
 
 		followMouse(mousePos.getX(), mousePos.getY());
 		keepWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
-		keepMouseWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
+
+		if (isCritical())
+			keepMouseWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
+		else
+			keepMouseWithinYZone(mousePos.getY(), ymin, ymax);
 	}
 
 	////////// TEXTURE ////////////
