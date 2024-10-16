@@ -3,6 +3,6 @@ dave = DOWN = camera_happy = Oui, déjà. Mais la démo finale sera plus longue.
 dave = DOWN = camera = En attendant, tu peux toujours recommencer ! Il@y a plein de choses que tu n'as pas vu, comme…
 dave = DOWN = camera = séquestrer Sarah chez toi,
 dave = DOWN = camera = une scène romantique avec Marie@où elle t'avoue son amour,
-dave = DOWN = camera_happy = crier sur Josepth juste sous le nez d'Alicia.@Je t'assure que sa réaction en vaut le détour !
+dave = DOWN = camera_happy = crier sur Joseph juste sous le nez d'Alicia.@Je t'assure que sa réaction en vaut le détour !
 dave = DOWN = intrigued = Tu peux même te faire uriner dessus par Jean…@Et il y a carrément un succès pour ça.
 dave = DOWN = camera = Le jeu regorge de choix et de conséquences.@C'est là tout le principe de :
