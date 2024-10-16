@@ -17,7 +17,7 @@ FirstKillText = Eliminate Alicia
 
 ///// YELLOW /////
 
-BrokenHeartTitle = Broken Heart
+BrokenHeartTitle = Heartbroken
 BrokenHeartText = Refuse to go out with Marie
 ThatWasAnAccidentTitle = That was an accident...
 ThatWasAnAccidentText = Die because of a couch
