@@ -1,0 +1,14 @@
+///// USELESS /////
+
+OBJ-01 = Desk Up Left
+OBJ-02 = Desk Up Right
+OBJ-03 = Desk Down Left
+OBJ-04 = Desk Down Right
+OBJ-05 = Desk Secretary
+OBJ-06 = Desk Policegrade
+OBJ-07 = Desk Above Restroom
+OBJ-08 = Chair Desk Left
+OBJ-09 = Chair Desk Right
+OBJ-10 = Chair Left
+OBJ-11 = Chair Right Up
+OBJ-12 = Chair Right Down

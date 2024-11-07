@@ -17,7 +17,7 @@ public class Infos {
 	////////// GAME ////////////
 
 	public static final String NAME = "Reversed Rebecca";
-	public static final String VERSION = "v.0.4.0.12";
+	public static final String VERSION = "v.0.4.0.13";
 	// public static final boolean IS_DEV_VERSION =
 	// System.getProperty("java.class.path").contains("\\git\\");
 	public static boolean IS_DEV_VERSION = true;
@@ -88,7 +88,6 @@ public class Infos {
 	}
 
 	private static String getMostProbableActualName(String userName1, String userName2, String userName3) {
-
 		
 		String not_a_name = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		String name1 = userName1;
