@@ -16,6 +16,7 @@ OBJ-10 = Plant
 NPC-01 = Up
 NPC-02 = Left
 NPC-03 = Down
+NPC-04 = Girl
 OBJ-11 = Chair
 OBJ-12 = Water Dispenser
 OBJ-13 = Toilet
