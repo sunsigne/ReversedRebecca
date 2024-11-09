@@ -5,13 +5,20 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DecorationObject extends GameObject implements TickFree {
+public class DecorationObject extends GameObject implements TickFree, SheetableImage {
 
 	public DecorationObject(int x, int y, int w, int h, String name) {
+		this(x, y, w, h, name, 0, 0);
+	}
+
+	public DecorationObject(int x, int y, int w, int h, String name, int offsetX, int offsetY) {
 		super(x, y, w, h);
 		this.name = name;
+		setOffset(offsetX, offsetY);
 	}
 
 	////////// NAME ////////////
@@ -21,24 +28,57 @@ public class DecorationObject extends GameObject implements TickFree {
 	public String getName() {
 		return name;
 	}
-	
+
 	protected String getPath() {
 		return "textures/other/decoration/";
 	}
-	
+
 	@Override
 	public String toString() {
 		var clazz = "DECORACTION";
 		return clazz + " : " + getName().toUpperCase();
 	}
 
+	////////// POSITION ////////////
+
+	private int offsetX, offsetY;
+
+	private void setOffset(int offsetX, int offsetY) {
+		int pixel = 16;
+		int ratio = Size.M / pixel;
+		this.offsetX = offsetX * ratio;
+		this.offsetY = offsetY * ratio;
+	}
+
 	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetWidth() {
+		return getWidth() / 6;
+	}
+
+	@Override
+	public int getSheetHeight() {
+		return getHeight() / 6;
+	}
 
 	private BufferedImage image;
 
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage(getPath() + getName());
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage(getPath() + getName());
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 
@@ -46,7 +86,7 @@ public class DecorationObject extends GameObject implements TickFree {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), getX() + offsetX, getY() + offsetY, getWidth(), getHeight(), null);
 	}
 
 }

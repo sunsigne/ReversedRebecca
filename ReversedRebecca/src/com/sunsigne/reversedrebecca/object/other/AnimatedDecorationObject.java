@@ -9,9 +9,8 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 
-public class AnimatedDecorationObject extends DecorationObject implements SheetableImage {
+public class AnimatedDecorationObject extends DecorationObject {
 
 	public AnimatedDecorationObject(int x, int y, int w, int h, String name, int animation_time, boolean cycle) {
 		super(x, y, w, h, name);
@@ -57,21 +56,6 @@ public class AnimatedDecorationObject extends DecorationObject implements Sheeta
 	@Override
 	public int getSheetColCriterion() {
 		return -1;
-	}
-
-	@Override
-	public int getSheetRowCriterion() {
-		return 1;
-	}
-
-	@Override
-	public int getSheetWidth() {
-		return getWidth() / 6;
-	}
-
-	@Override
-	public int getSheetHeight() {
-		return getHeight() / 6;
 	}
 
 	protected int getNumberOfTimesFirstImageIsRepeated() {

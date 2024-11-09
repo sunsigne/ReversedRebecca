@@ -51,6 +51,7 @@
 
 	////////// EN COURS ////////////
 
+	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE"
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -357,6 +358,7 @@
 	lvl laboratory : trouver une sortie -> find an outing
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
+	mole_0 se baigner : même. pas. en. rêve -> there. is. no. way
 
 	////////// SUCCES ////////////
 	

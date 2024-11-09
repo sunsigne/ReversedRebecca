@@ -30,9 +30,16 @@ Le Type de Requête CREATE_DECORATION permet de créer un visuel à partir d'un 
 Fichier de référence : « textures/other/decoration/(cible).png ».
 
 Exemple :
-TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,HAIR
+TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,CHAIR,6-8,1-2
 
-Lorsque la Condition sera vérifiée, sera créée sur la carte aux coordonnées X=10 Y=20 un visuel apparaissant derrière les autres objets, de largeur 1 case, de hauteur 2 cases, et dont le fichier de référence est « hair.png ».
+Lorsque la Condition sera vérifiée, sera créé un visuel :
+- dont les coordonnées sont X=10 Y=20,
+- apparaissant derrière les autres objets (joueur inclus),
+- dans la Sous-Couche « WORLD »,
+- de largeur 1 case, de hauteur 2 cases,
+- dont le fichier de référence est « hair.png ».
+- décalé de 6 pixels vers la droite, et de 8 pixels vers le bas (seize pixels font une case complète) par rapport à la position définie.
+- dont l'image à séléctionner dans le fichier de référence est en ligne 1 et colonne 2.
 
 Par définition, les visuels n'ont pas de collisions. Si vous avez besoin que votre objet soit un « interactif » (objet interactif), il faudra créer un objet Piranha au même emplacement et en définir les propriétés.
 
@@ -42,7 +49,7 @@ Note : si le programmeur Piranha peut préciser les dimensions de l'objet à af
 
 ////// CREATE_ANIMATION //////
 
-Le Type de Requête CREATE_ANIMATION est une variante complexe de CREATE_DECORATION : elle permet de créer un visuel ayant une animation.
+Le Type de Requête CREATE_ANIMATION est une variante de CREATE_DECORATION : elle permet de créer un visuel ayant une animation.
 
 Fichier de référence : « textures/other/animation/(cible).png ». 
 
@@ -53,7 +60,7 @@ En plus des mêmes Cibles que celles demandées par le Type de Requête CREATE_D
 - un boolean informant de si l'animation doit, ou non, recommencer une fois terminée. Exemple : « false » signifie que l'animation s'arrêtera sur la dernière image.
 
 Exemple :
-! -> PLAYER_FILL_BATH = CREATE_ANIMATION -> 1-8-BACK:WORLD,1,2,BATH_FILLING,3,90,FALSE
+! -> PLAYER_FILL_BATH = CREATE_ANIMATION -> 1-8-BACK:WORLD,1,2,BATH_FILLING,90,FALSE
 
 Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - dont les coordonnées sont X=10 Y=20,
@@ -65,6 +72,7 @@ Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - qui s'arrête sur la dernière image (la baignoire est remplie).
 
 Note : si le programmeur Piranha précise des dimensions à afficher différentes des réelles dimensions des images constituant l'animation dans le fichier de référence, elles doivent alors avoir une largeur et une hauteur identique (le jeu ne pouvant pas à la fois "deviner" la largeur d'une seule image et leurs nombres, la largeur est définie par le jeu comme étant égale à la hauteur).
+
 
 
 ////// CREATE_SIMULATION //////

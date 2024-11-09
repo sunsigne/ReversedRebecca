@@ -58,6 +58,18 @@ public class CreateDecorationRequest implements IndexRequest {
 		int height = Integer.parseInt(data.split(",")[2]);
 		String name = String.valueOf(data.split(",")[3]);
 
+		// determinate the offset
+		
+		String offset = String.valueOf(data.split(",")[4]);
+		int offsetX = Integer.parseInt(offset.split("-")[0]);
+		int offsetY = Integer.parseInt(offset.split("-")[1]);
+		
+		// determinate the image
+		
+		String sheet = String.valueOf(data.split(",")[5]);
+		int row = Integer.parseInt(sheet.split("-")[0]);
+		int col = Integer.parseInt(sheet.split("-")[1]);
+		
 		// refine data
 
 		GoalObject goal = new GoalObject(x, y, false);
@@ -69,7 +81,19 @@ public class CreateDecorationRequest implements IndexRequest {
 
 		// creation of the object
 
-		GameObject creation = new DecorationObject(x, y, width, height, name);
+		GameObject creation = new DecorationObject(x, y, width, height, name, offsetX, offsetY) {
+			
+			@Override
+			public int getSheetColCriterion() {
+				return col;
+			}
+
+			@Override
+			public int getSheetRowCriterion() {
+				return row;
+			}
+		};
+		
 		addObject(handler, index, creation);
 		Handler.updateHandlerMap(handler, creation);
 	}
