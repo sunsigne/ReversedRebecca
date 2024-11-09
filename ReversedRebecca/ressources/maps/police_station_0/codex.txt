@@ -9,3 +9,13 @@ OBJ-06 = Small Down Desk Right Part
 OBJ-07 = Large Desk Left Part
 OBJ-08 = Large Desk Middle Part
 OBJ-09 = Large Desk Right Part
+OBJ-10 = Plant
+
+///// RECEPTION /////
+
+NPC-01 = Up
+NPC-02 = Left
+NPC-03 = Down
+OBJ-11 = Chair
+OBJ-12 = Water Dispenser
+OBJ-13 = Toilet
