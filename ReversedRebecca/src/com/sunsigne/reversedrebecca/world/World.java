@@ -20,6 +20,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
@@ -112,9 +113,10 @@ public class World implements Updatable, RenderFree {
 
 			Handler handler = tempLayer.getHandler();
 			var list = new GameList<Updatable>(LISTTYPE.LINKED);
+			var clone = new ListCloner().deepClone(handler);
 
 			// search for LivingObject
-			for (Updatable tempUpdatable : handler.getList()) {
+			for (Updatable tempUpdatable : clone.getList()) {
 				if (tempUpdatable instanceof LivingObject == false)
 					continue;
 
