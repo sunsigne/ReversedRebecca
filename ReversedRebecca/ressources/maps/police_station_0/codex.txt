@@ -22,11 +22,13 @@ OBJ-12 = Water Dispenser
 OBJ-13 = Toilet
 OBJ-14 = Desk Plant
 
-///// CHANGING ROOM /////
+///// CHANGING ROOM & FUTHER /////
 
 OBJ-15 = Closet
 OBJ-16 = Coat Rack Up
 OBJ-17 = Coat Rack Down
+OBJ-19 = Shovel Box
+OBJ-20 = Shovel Box Right Part (Path Finder Helper)
 
 ///// CHIEF /////
 
