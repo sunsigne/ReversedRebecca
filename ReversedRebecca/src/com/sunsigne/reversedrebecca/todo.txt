@@ -50,6 +50,7 @@
 	////////// EN COURS ////////////
 
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE"
+	lvl002 bureau (+ chaise & ordi, vérfieir la map du sol) près de la cellule est décalé d'une case vers le bas (voir hitbox pour comprendre)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

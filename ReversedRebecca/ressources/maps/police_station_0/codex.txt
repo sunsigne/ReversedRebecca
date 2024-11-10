@@ -20,3 +20,14 @@ NPC-04 = Girl
 OBJ-11 = Chair
 OBJ-12 = Water Dispenser
 OBJ-13 = Toilet
+OBJ-14 = Desk Plant
+
+///// CHANGING ROOM /////
+
+OBJ-15 = Closet
+OBJ-16 = Coat Rack Up
+OBJ-17 = Coat Rack Down
+
+///// CHIEF /////
+
+OBJ-18 = Coat Rack
