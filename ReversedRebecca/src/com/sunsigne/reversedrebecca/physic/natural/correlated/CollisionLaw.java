@@ -6,8 +6,10 @@ import java.awt.Rectangle;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -42,7 +44,9 @@ public class CollisionLaw implements PhysicLaw {
 	}
 
 	private boolean objectAreColliding(CollisionDetector detectorObject, CollisionReactor reactorObject) {
-
+		if(detectorObject instanceof Player && WallPassMode.isActive())
+			return false;
+		
 		Rectangle reactorObjectBounds = reactorObject.getBounds();
 
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObjectBounds))

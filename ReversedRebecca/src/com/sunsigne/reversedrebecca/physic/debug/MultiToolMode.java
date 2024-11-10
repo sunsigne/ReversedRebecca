@@ -65,7 +65,8 @@ public class MultiToolMode extends DebugMode {
 
 		// doesn't update if already did in current world
 		if (World.get() == world)
-			return;
+			if (world.getFrame() != 1)
+				return;
 
 		world = World.get();
 		ToolList.getList().getList().forEach(tempTool -> setToolToDifficulty(tempTool, LVL.RED));

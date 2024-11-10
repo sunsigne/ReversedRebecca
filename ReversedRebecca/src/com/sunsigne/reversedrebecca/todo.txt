@@ -23,9 +23,7 @@
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
-		- 1h00 le surecrit mode et le multitool mod ne sont plus persistant après un reset...
-		- 1h00 le wall pass mode fait laguer de ouf + vérifier si ok sur le built final
-		- 1h00 le wall pass mode ne marche plus
+		- 1h00 le multitool une fois utilisé corrompt le VRAI scrore des outils
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		
 	vérifier si bien réglé :
@@ -266,6 +264,7 @@
 	
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
+	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	
 	////////// MOLE 0 ////////////
 	

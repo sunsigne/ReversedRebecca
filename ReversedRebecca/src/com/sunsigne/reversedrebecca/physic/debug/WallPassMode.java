@@ -5,8 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
-import com.sunsigne.reversedrebecca.physic.natural.correlated.CollisionLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class WallPassMode extends DebugMode {
@@ -34,19 +32,13 @@ public class WallPassMode extends DebugMode {
 
 	////////// TICK ////////////
 
+	public static boolean isActive() {
+		return debugMode.getState();
+	}
+
 	@Override
 	public void tick(Updatable object) {
-		if (getState()) {
-			if (object instanceof Player)
-				// For a weird reason, this tends to "pause" the game, but
-				// as it's a dev tool, it's not that important anyway.
-				PhysicList.getList().removeObject(new CollisionLaw());
-			else
-				// Yes, this does NOT add the law to the right place, which
-				// could cause pathfinding and camera issues.
-				// As it's still a dev tool, it's still not important.
-				PhysicList.getList().addObject(new CollisionLaw());
-		}
+
 	}
 
 	////////// RENDER ////////////
