@@ -427,6 +427,10 @@ public class World implements Updatable, RenderFree {
 	private int frame = Game.SEC;
 	private int time;
 
+	public int getFrame() {
+		return time * Game.SEC + Game.SEC - frame;
+	}
+	
 	public int getTime() {
 		return time;
 	}
