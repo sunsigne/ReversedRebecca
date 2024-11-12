@@ -49,7 +49,7 @@
 
 	////////// EN COURS ////////////
 
-	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE"
+	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples)
 	lvl002 bureau (+ chaise & ordi, vérfieir la map du sol) près de la cellule est décalé d'une case vers le bas (voir hitbox pour comprendre)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
@@ -266,6 +266,8 @@
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
+	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
+	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
 	
 	////////// MOLE 0 ////////////
 	
@@ -359,6 +361,7 @@
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 	mole_0 se baigner : même. pas. en. rêve -> there. is. no. way
+	lvl002 : pour sortir de la chaise dans restroom, garder la même logique de traduction que dans rr000
 
 	////////// SUCCES ////////////
 	

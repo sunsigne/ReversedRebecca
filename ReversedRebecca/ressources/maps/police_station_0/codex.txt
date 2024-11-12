@@ -30,6 +30,15 @@ OBJ-17 = Coat Rack Down
 OBJ-19 = Shovel Box
 OBJ-20 = Shovel Box Right Part (Path Finder Helper)
 
+///// RESTROOM /////
+
+OBJ-21 = Chair Up Part
+OBJ-22 = Chair Down Part
+OBJ-23 = Stool
+OBJ-24 = Couch Side Parts (Path Finder Helper)
+OBJ-25 = Couch
+OBJ-26 = Couch Leaver
+
 ///// CHIEF /////
 
 OBJ-18 = Coat Rack

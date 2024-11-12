@@ -71,8 +71,8 @@ Le Type de Requête BLOCKING_PATH permet de changer la propriété "bloquante" d
 Note : changer cette propriété change également les chemins valides trouvés par le Path Finder.
 
 Exemple :
-TIME -> 0 = BLOCKIN_PATH -> FALSE
-TIME -> 0 = GOTO -> BLOCKIN_PATH:FALSE
+TIME -> 0 = BLOCKING_PATH -> FALSE
+TIME -> 0 = GOTO -> BLOCKING_PATH:FALSE
 
 Lorsque la Condition sera vérifiée, l'objet sera franchissable.
 
@@ -87,8 +87,8 @@ Le Type de Requête BLOCKING_SIGHT permet de changer la propriété "opaque" d'u
 Note : changer cette propriété change le « champ de vision » d'un objet, ce qui n'est utile que de façon très situationnelle (voir « SEE » dans la partie « Piranha – Types de Requête : Conditionnelles »).
 
 Exemple :
-TIME -> 0 = BLOCKIN_SIGHT -> TRUE
-TIME -> 0 = GOTO -> SIGHT_PATH:TRUE
+TIME -> 0 = BLOCKING_SIGHT -> TRUE
+TIME -> 0 = GOTO -> BLOCKING_SIGHT:TRUE
 
 Lorsque la Condition sera vérifiée, l'objet sera opaque.
 
