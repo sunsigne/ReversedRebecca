@@ -16,7 +16,7 @@ OBJ-10 = Plant
 NPC-01 = Up
 NPC-02 = Left
 NPC-03 = Down
-NPC-04 = Girl
+NPC-06 = Girl
 OBJ-11 = Chair
 OBJ-12 = Water Dispenser
 OBJ-13 = Toilet
@@ -43,4 +43,18 @@ OBJ-27 = Coffee Machine
 
 ///// CHIEF /////
 
+NPC-07 = Police
 OBJ-18 = Coat Rack
+
+///// UP /////
+
+NPC-05 = Police
+
+///// BIG JAIL /////
+
+NPC-08 = William
+NPC-09 = Teddy
+NPC-10 = CC1
+NPC-11 = CC2
+NPC-12 = Polaris
+NPC-13 = Doug
