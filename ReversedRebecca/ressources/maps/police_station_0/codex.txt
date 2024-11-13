@@ -30,8 +30,9 @@ OBJ-17 = Coat Rack Down
 OBJ-19 = Shovel Box
 OBJ-20 = Shovel Box Right Part (Path Finder Helper)
 
-///// RESTROOM /////
+///// RESTROOM & ABOVE /////
 
+NPC-04 = Police
 OBJ-21 = Chair Up Part
 OBJ-22 = Chair Down Part
 OBJ-23 = Stool
