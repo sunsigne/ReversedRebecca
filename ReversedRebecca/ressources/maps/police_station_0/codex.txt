@@ -38,6 +38,7 @@ OBJ-23 = Stool
 OBJ-24 = Couch Side Parts (Path Finder Helper)
 OBJ-25 = Couch
 OBJ-26 = Couch Leaver
+OBJ-27 = Coffee Machine
 
 ///// CHIEF /////
 

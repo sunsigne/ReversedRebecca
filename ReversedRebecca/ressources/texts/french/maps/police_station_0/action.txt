@@ -1,1 +1,3 @@
-DISGUISE = Key2 % se deguiser
+DISGUISE = Key2 % se déguiser
+BLACK_COFFEE = Key1 % café noir
+MILK_COFFEE = Key2 % café au lait
