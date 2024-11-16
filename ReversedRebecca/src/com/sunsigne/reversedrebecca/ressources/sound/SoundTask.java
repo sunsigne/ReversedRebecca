@@ -134,6 +134,10 @@ public class SoundTask implements CameraDependency {
 	////////// MUSIC ////////////
 
 	protected static String musicName;
+	
+	public static String getMusicName() {
+		return musicName;
+	}
 
 	public void playMusic(String path, boolean transition, boolean loop) {
 		play(SOUNDTYPE.MUSIC, VolumeMusic.getVolume(), path, transition, loop);

@@ -54,7 +54,6 @@
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	bugs lors des niveau avec dave (chargement en coursn supporposition d'états -> lvl & chargement)
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
 	"partir sans Sarah" -> trop gros décalage entre le texte et les conséquences
 	ControlsScreen : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer + mettre message d'erreur quand clef non assignée

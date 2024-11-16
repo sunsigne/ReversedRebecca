@@ -50,6 +50,7 @@ SHARE = Key2 % partager
 
 GO_TO_WORK = Key3 % (END_LVL)aller au travail
 LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)partir sans Sarah
+LEAVE_WITHOUT_SARAH = Key3 % (PSYCHOPATH)séquestrer Sarah
 BRING_SARAH = Key1 % faire venir Sarah
 JUST_A_MOMENT = Key1 % juste une seconde...
 WHOS_THERE = Key2 % c'est qui ?

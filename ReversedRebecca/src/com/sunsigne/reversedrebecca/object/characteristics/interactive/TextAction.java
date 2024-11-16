@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
@@ -64,8 +65,8 @@ public class TextAction implements Updatable {
 
 		if (tripleAction != interactive.getTripleAction())
 			return;
-		
-		if(interactive.isDisabled())
+
+		if (interactive.isDisabled())
 			return;
 
 		// player doesn't exist
@@ -129,7 +130,8 @@ public class TextAction implements Updatable {
 		requirementBubble.setVisible(true);
 	}
 
-	// fix subliminal display of RequirementBubble when a priority Piranha is on the same spot
+	// fix subliminal display of RequirementBubble when a priority Piranha is on the
+	// same spot
 	private boolean thereIsAPiranhaAbove() {
 		Interactive obj = interactive;
 		var list = Handler.getObjectsAtPos(obj.getHandler(), obj.getX(), obj.getY(), obj.getSize(), true);
@@ -139,9 +141,9 @@ public class TextAction implements Updatable {
 				continue;
 
 			PiranhaObject tempPiranha = (PiranhaObject) tempObj;
-			if(tempPiranha.getTripleAction() == null)
+			if (tempPiranha.getTripleAction() == null)
 				continue;
-			
+
 			if (tempPiranha.canPlayerInteract() && tempPiranha.getTripleAction().cannotDoAnyAction() == false)
 				return true;
 		}
@@ -198,6 +200,13 @@ public class TextAction implements Updatable {
 		if (text.contains("(END_LVL)")) {
 			text = text.replace("(END_LVL)", "");
 			color = new Color(255, 220, 0);
+		}
+		if (text.contains("(PSYCHOPATH)")) {
+			text = text.replace("(PSYCHOPATH)", "");
+			color = new Color(255, 0, 0);
+			int radX = new RandomGenerator().getIntBetween(-1, 1);
+			int radY = new RandomGenerator().getIntBetween(-1, 1);
+			rect = new int[] { rect[0] + radX, rect[1] + radY, rect[2], rect[3] };
 		}
 
 		if (ControllerManager.getInstance().isUsingGamepad()) {

@@ -50,7 +50,7 @@ SHARE = Key2 % share
 ///// ENTRANCE /////
 
 GO_TO_WORK = Key3 % (END_LVL)go to work
-LEAVE_WITHOUT_SARAH = Key3 % (END_LVL)leave without Sarah
+LEAVE_WITHOUT_SARAH = Key3 % (PSYCHOPATH)sequester Sarah
 BRING_SARAH = Key1 % bring Sarah
 JUST_A_MOMENT = Key1 % just a second...
 WHOS_THERE = Key2 % who's there?
