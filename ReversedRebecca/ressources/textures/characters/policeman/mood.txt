@@ -5,3 +5,11 @@ butch=1,1
 ////// JAMES //////
 
 james=2,1
+
+////// MIAOUSS //////
+
+miaouss=3,1
+
+////// RATTATAC //////
+
+rattatac=4,1
