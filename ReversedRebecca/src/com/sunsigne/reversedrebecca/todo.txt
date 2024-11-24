@@ -49,7 +49,9 @@
 
 	////////// EN COURS ////////////
 
-	voix à créer + highlight + tester texture : teddy, william, polaris, doug
+	highlight + tester texture : 
+	voix à créer : teddy, william, polaris, doug
+	à créer : les policiers-ères et commissaire
 
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples)
 	lvl002 bureau (+ chaise & ordi, vérfieir la map du sol) près de la cellule est décalé d'une case vers le bas (voir hitbox pour comprendre)
