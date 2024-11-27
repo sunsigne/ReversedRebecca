@@ -13,10 +13,10 @@ OBJ-10 = Plant
 
 ///// RECEPTION /////
 
-NPC-01 = Up
-NPC-02 = Left
-NPC-03 = Down
-NPC-06 = Girl
+NPC-01 = Policeman (Up) : James
+NPC-02 = Policeman (Left) : Miaouss
+NPC-03 = Policewoman (Down) : Cassidy
+NPC-06 = Policewoman (Right) : Jessy
 OBJ-11 = Chair
 OBJ-12 = Water Dispenser
 OBJ-13 = Toilet
@@ -32,7 +32,7 @@ OBJ-20 = Shovel Box Right Part (Path Finder Helper)
 
 ///// RESTROOM & ABOVE /////
 
-NPC-04 = Police
+NPC-04 = Policeman : Rattatac
 OBJ-21 = Chair Up Part
 OBJ-22 = Chair Down Part
 OBJ-23 = Stool
@@ -43,18 +43,18 @@ OBJ-27 = Coffee Machine
 
 ///// CHIEF /////
 
-NPC-07 = Police
+NPC-07 = Policegrade : Giovanni
 OBJ-18 = Coat Rack
 
 ///// UP /////
 
-NPC-05 = Police
+NPC-05 = Policeman : Butch
 
 ///// BIG JAIL /////
 
 NPC-08 = William
 NPC-09 = Teddy
-NPC-10 = CC1
-NPC-11 = CC2
+NPC-10 = CCC1
+(NPC-11 = CCC2)
 NPC-12 = Polaris
 NPC-13 = Doug
