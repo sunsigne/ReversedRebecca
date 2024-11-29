@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.ressources.images;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
+import com.sunsigne.reversedrebecca.Infos;
+
 public class ImageList {
 
 	////////// MAP OR LIST ////////////
@@ -14,7 +16,8 @@ public class ImageList {
 	}
 
 	public static void registerImage(String path, BufferedImage image) {
-		map.put(path, image);
+		if (Infos.IS_DEV_VERSION == false)
+			map.put(path, image);
 	}
 
 }
