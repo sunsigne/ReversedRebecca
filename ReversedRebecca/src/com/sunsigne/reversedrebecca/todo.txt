@@ -5,7 +5,7 @@
 	rajouter le ficher icon.png dans le dossier racine
 	supprimer les ressources non utilisées
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
-	reset la sauvegarde, les succès & la mémoire de dave
+	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
 	désactiver le scénarion 'inquery' & mettre à jour texte de dave au niveau d'avant
 	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
 	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
@@ -20,6 +20,7 @@
 		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
+		- la clef à l'envers (vérifier aussi le virus) est folle
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
@@ -50,6 +51,7 @@
 	////////// EN COURS ////////////
 
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples)
+	lvl002 - plant dans le couloir pas fini !!!
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

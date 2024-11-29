@@ -45,10 +45,12 @@ OBJ-27 = Coffee Machine
 
 NPC-07 = Policegrade : Giovanni
 OBJ-18 = Coat Rack
+OBJ-29 = Corridor Plant
 
 ///// UP /////
 
 NPC-05 = Policeman : Butch
+OBJ-28 = Chair and Table
 
 ///// BIG JAIL /////
 
