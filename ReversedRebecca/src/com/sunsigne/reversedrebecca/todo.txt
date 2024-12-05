@@ -52,6 +52,10 @@
 
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples)
 	lvl002 - plant dans le couloir pas fini !!!
+	
+	le code qui créé un trou sur la couche cible lorsqu'on en creuse un, semble ne plus fonrctionner
+	lvl002 le ficher "preview" a une salle des armes à jour
+		-> respectivement de haut en bas de gauche à droite, les trous sont "down / up / right / right"
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

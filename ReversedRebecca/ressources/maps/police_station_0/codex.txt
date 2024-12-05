@@ -50,7 +50,8 @@ OBJ-29 = Corridor Plant
 ///// UP /////
 
 NPC-05 = Policeman : Butch
-OBJ-28 = Chair and Table
+OBJ-28 = Right Chair and Table
+OBJ-30 = Middle Cell Chair and Table
 
 ///// BIG JAIL /////
 
