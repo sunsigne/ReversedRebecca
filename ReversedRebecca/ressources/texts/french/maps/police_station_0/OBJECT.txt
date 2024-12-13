@@ -1,3 +1,7 @@
 % BETTER_COUCHING
 player = DOWN = you_silly = Quitte à m'assoir, autant aller dans le canapé.
 player = DOWN = laugh = C'est plus confortable !
+
+
+% TABLE_FLIP
+player = DOWN = laugh = Oups !
