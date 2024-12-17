@@ -54,8 +54,8 @@
 	lvl002 - plant dans le couloir pas fini !!!
 	
 	le code qui créé un trou sur la couche cible lorsqu'on en creuse un, semble ne plus fonrctionner
-	lvl002 le ficher "preview" a une salle des armes à jour
-		-> respectivement de haut en bas de gauche à droite, les trous sont "down / up / right / right"
+
+	EXPERIENCE UTILISATEUR - puzzle de la porte -> les joueurs ne comprennent pas qu'ils peuvent déplacer en haut et en bas le cadenas : dessiner des flêches pour le dessin de tuto
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
