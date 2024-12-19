@@ -10,7 +10,7 @@ public class GamepadRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public GamepadRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new GamepadRequest();

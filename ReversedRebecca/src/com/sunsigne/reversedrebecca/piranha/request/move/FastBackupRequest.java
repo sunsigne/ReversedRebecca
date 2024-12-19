@@ -9,7 +9,7 @@ public class FastBackupRequest extends MoveBackupRequest {
 	////////// REQUEST ////////////
 
 	public FastBackupRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new FastBackupRequest();

@@ -14,7 +14,7 @@ public class CreateRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public CreateRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CreateRequest();

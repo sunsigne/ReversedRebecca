@@ -9,7 +9,7 @@ public class HitboxRequest implements Request {
 	////////// REQUEST ////////////
 
 	public HitboxRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new HitboxRequest();

@@ -9,7 +9,7 @@ public class ActionRequest implements Request {
 	////////// REQUEST ////////////
 
 	public ActionRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ActionRequest();
@@ -43,11 +43,11 @@ public class ActionRequest implements Request {
 	private Request getActionRequest(int index) {
 		switch (index) {
 		case 1:
-			return RequestList.getList().getObject(new ActionOneRequest());
+			return new ActionOneRequest();
 		case 2:
-			return RequestList.getList().getObject(new ActionTwoRequest());
+			return new ActionTwoRequest();
 		case 3:
-			return RequestList.getList().getObject(new ActionThreeRequest());
+			return new ActionThreeRequest();
 		}
 		return null;
 	}

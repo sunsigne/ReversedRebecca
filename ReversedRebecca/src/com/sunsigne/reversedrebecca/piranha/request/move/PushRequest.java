@@ -14,7 +14,7 @@ public class PushRequest implements Request {
 	////////// REQUEST ////////////
 
 	public PushRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new PushRequest();

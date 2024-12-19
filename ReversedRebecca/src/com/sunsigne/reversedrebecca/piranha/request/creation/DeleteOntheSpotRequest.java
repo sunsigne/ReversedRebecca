@@ -9,7 +9,7 @@ public class DeleteOntheSpotRequest extends DeleteRequest {
 	////////// REQUEST ////////////
 
 	public DeleteOntheSpotRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new DeleteOntheSpotRequest();

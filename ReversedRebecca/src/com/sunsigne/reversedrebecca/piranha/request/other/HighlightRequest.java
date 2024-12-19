@@ -9,7 +9,7 @@ public class HighlightRequest extends HighlightAbsoluteRequest {
 	////////// REQUEST ////////////
 
 	public HighlightRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new HighlightRequest();

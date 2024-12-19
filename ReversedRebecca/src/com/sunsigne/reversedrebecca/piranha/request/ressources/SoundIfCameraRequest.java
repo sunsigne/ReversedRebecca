@@ -10,7 +10,7 @@ public class SoundIfCameraRequest extends SoundRequest {
 	////////// REQUEST ////////////
 
 	public SoundIfCameraRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new SoundIfCameraRequest();

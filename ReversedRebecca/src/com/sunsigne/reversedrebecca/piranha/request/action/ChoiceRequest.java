@@ -13,7 +13,7 @@ public class ChoiceRequest implements Request {
 	////////// REQUEST ////////////
 
 	public ChoiceRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ChoiceRequest();
@@ -52,7 +52,7 @@ public class ChoiceRequest implements Request {
 		else
 			choice = new ChoiceObject(highlight);
 
-		Request request = RequestList.getList().getObject(new TripleActionRequest());
+		Request request = new TripleActionRequest();
 		String formattedChoices = formattedChoices(choices);
 		request.doAction(choice, formattedChoices);
 

@@ -18,7 +18,7 @@ public class WaitforRequest implements Request {
 	////////// REQUEST ////////////
 
 	public WaitforRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new WaitforRequest();
@@ -58,7 +58,7 @@ public class WaitforRequest implements Request {
 
 			@Override
 			public void doAction() {
-				Request request = RequestList.getList().getObject(new GotoRequest());
+				Request request = new GotoRequest();
 				request.doAction(object, action);
 			}
 		};
@@ -89,7 +89,7 @@ public class WaitforRequest implements Request {
 
 		case "PLAYER_FACING":
 			return getPlayerFacingListener(generic, condition);
-			
+
 		case "SLOW":
 		case "MOVE":
 		case "FAST":
@@ -119,16 +119,14 @@ public class WaitforRequest implements Request {
 	}
 
 	private void doMoveAction(PiranhaObject object, String conditionType, String condition) {
-		for (Request tempAction : RequestList.getList().getList()) {
-			if (conditionType.equalsIgnoreCase(tempAction.getType()))
-				tempAction.doAction(object, condition);
-		}
+		Request request = new RequestList().getRequestFromType(conditionType);
+		request.doAction(object, condition);
 	}
 
 	private ConditionalListener getMoveListener(GenericListener generic, PiranhaObject object) {
 
 		Position goal = object.getGoal();
-		
+
 		return new ConditionalListener() {
 
 			@Override

@@ -11,7 +11,7 @@ public class AffectingRequest implements Request {
 	////////// REQUEST ////////////
 
 	public AffectingRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new AffectingRequest();

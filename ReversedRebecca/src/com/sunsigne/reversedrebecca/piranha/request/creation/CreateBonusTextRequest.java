@@ -15,7 +15,7 @@ public class CreateBonusTextRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public CreateBonusTextRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CreateBonusTextRequest();

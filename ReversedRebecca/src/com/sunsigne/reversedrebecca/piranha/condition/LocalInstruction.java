@@ -32,17 +32,16 @@ public abstract class LocalInstruction {
 		String requestType = request.split("->")[0];
 		String target = request.split("->")[1];
 
-		for (Request tempRequest : RequestList.getList().getList()) {
-			if (requestType.equalsIgnoreCase(tempRequest.getType())) {
-				try {
-					tempRequest.doAction(object, target);
-				} catch (Exception e) {
-					System.err.println("Problem encounter with following object : " + object.toString());
-					System.err.println("can't process following Instruction : " + condition + "=" + request);
-					e.printStackTrace();
-				}
-			}
+		Request request = new RequestList().getRequestFromType(requestType);
+
+		try {
+			request.doAction(object, target);
+		} catch (Exception e) {
+			System.err.println("Problem encounter with following object : " + object.toString());
+			System.err.println("can't process following Instruction : " + condition + "=" + request);
+			e.printStackTrace();
 		}
+
 	}
 
 }

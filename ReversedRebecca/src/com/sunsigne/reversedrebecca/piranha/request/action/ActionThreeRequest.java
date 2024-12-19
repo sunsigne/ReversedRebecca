@@ -12,7 +12,7 @@ public class ActionThreeRequest implements Request {
 	////////// REQUEST ////////////
 
 	public ActionThreeRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ActionThreeRequest();

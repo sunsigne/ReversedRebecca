@@ -13,7 +13,7 @@ public class UnlockedToolMaxLevelRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public UnlockedToolMaxLevelRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new UnlockedToolMaxLevelRequest();

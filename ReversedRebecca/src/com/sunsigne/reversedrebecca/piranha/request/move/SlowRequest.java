@@ -9,7 +9,7 @@ public class SlowRequest extends MoveRequest {
 	////////// REQUEST ////////////
 
 	public SlowRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new SlowRequest();

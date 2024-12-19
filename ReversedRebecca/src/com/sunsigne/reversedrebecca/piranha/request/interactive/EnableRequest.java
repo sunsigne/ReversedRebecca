@@ -12,7 +12,7 @@ public class EnableRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public EnableRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new EnableRequest();

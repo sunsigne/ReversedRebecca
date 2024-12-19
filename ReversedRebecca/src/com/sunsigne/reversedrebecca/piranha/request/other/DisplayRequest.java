@@ -10,7 +10,7 @@ public class DisplayRequest implements Request {
 	////////// REQUEST ////////////
 
 	public DisplayRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new DisplayRequest();

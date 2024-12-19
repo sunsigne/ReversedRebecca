@@ -12,7 +12,7 @@ public class FacingPlayerRequest extends FacingRequest {
 	////////// REQUEST ////////////
 
 	public FacingPlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new FacingPlayerRequest();

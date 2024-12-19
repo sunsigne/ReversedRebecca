@@ -10,7 +10,7 @@ public class NameRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public NameRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new NameRequest();

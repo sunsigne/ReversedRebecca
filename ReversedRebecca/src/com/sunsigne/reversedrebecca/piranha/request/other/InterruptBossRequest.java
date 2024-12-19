@@ -12,7 +12,7 @@ public class InterruptBossRequest implements Request {
 	////////// REQUEST ////////////
 
 	public InterruptBossRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new InterruptBossRequest();

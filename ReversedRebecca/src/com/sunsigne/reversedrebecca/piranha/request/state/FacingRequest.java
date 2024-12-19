@@ -18,7 +18,7 @@ public class FacingRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public FacingRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new FacingRequest();

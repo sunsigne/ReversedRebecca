@@ -9,7 +9,7 @@ public class BadDeedRequest extends DeedRequest {
 	////////// REQUEST ////////////
 
 	public BadDeedRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new BadDeedRequest();

@@ -10,7 +10,7 @@ public class PlayerFutherThanRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public PlayerFutherThanRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new PlayerFutherThanRequest();

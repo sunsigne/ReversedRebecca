@@ -1,16 +1,22 @@
 package com.sunsigne.reversedrebecca.piranha.request;
 
-import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import java.util.HashMap;
 
 public class RequestList {
-	
+
 	////////// MAP OR LIST ////////////
-	
-	private static GameLimitedList<Request> list = new GameLimitedList<>(LISTTYPE.ARRAY);
-	
-	public static GameLimitedList<Request> getList() {
-		return list;
+
+	private static HashMap<String, Request> map = new HashMap<>();
+
+	public void addRequest(Request request, String type) {
+		if (map.containsValue(request))
+			return;
+
+		map.put(type, request);
+	}
+
+	public Request getRequestFromType(String type) {
+		return map.get(type);
 	}
 
 }

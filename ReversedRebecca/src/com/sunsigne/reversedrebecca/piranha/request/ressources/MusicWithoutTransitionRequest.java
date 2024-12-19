@@ -8,7 +8,7 @@ public class MusicWithoutTransitionRequest extends MusicRequest {
 	////////// REQUEST ////////////
 
 	public MusicWithoutTransitionRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new MusicWithoutTransitionRequest();

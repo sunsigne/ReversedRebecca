@@ -9,7 +9,7 @@ public class EnableOntheSpotRequest extends EnableRequest {
 	////////// REQUEST ////////////
 
 	public EnableOntheSpotRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new EnableOntheSpotRequest();

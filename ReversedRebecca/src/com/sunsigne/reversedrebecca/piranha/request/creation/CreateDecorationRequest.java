@@ -15,7 +15,7 @@ public class CreateDecorationRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public CreateDecorationRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CreateDecorationRequest();

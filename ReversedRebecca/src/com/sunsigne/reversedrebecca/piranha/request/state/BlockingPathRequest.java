@@ -10,7 +10,7 @@ public class BlockingPathRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public BlockingPathRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new BlockingPathRequest();

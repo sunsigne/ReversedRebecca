@@ -10,7 +10,7 @@ public class RandomRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public RandomRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new RandomRequest();

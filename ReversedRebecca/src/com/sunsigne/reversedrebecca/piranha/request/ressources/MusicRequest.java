@@ -14,7 +14,7 @@ public class MusicRequest implements Request {
 	////////// REQUEST ////////////
 
 	public MusicRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new MusicRequest();

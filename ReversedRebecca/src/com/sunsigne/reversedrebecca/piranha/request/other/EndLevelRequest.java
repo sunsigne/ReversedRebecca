@@ -17,7 +17,7 @@ public class EndLevelRequest implements Request {
 	////////// REQUEST ////////////
 
 	public EndLevelRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new EndLevelRequest();

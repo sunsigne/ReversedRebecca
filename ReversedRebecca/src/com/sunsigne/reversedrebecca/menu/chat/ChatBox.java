@@ -15,7 +15,6 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
-import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -132,7 +131,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		content = new ChatContent(formated_living_name, mood, text);
 		LAYER.PUZZLE.addObject(content);
 
-		Request instruction = RequestList.getList().getObject(new FacingRequest());
+		Request request = new FacingRequest();
 		var handler = object.getHandler();
 
 		var list = new ListCloner().deepClone(handler);
@@ -144,7 +143,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 			if (tempObject.getName().equalsIgnoreCase(formated_living_name))
 				if (tempObject.isStunned() == false)
-					instruction.doAction(tempObject, formated_facing);
+					request.doAction(tempObject, formated_facing);
 		}
 	}
 

@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
-import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.AffectingRequest;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -102,9 +101,9 @@ public class ActionAnalyzer {
 
 					Request request;
 					if (object instanceof ChoiceObject)
-						request = RequestList.getList().getObject(new AffectingRequest());
+						request = new AffectingRequest();
 					else
-						request = RequestList.getList().getObject(new GotoRequest());
+						request = new GotoRequest();
 
 					request.doAction(object, target);
 

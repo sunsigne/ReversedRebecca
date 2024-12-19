@@ -13,7 +13,7 @@ public class UnlockedToolRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public UnlockedToolRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new UnlockedToolRequest();

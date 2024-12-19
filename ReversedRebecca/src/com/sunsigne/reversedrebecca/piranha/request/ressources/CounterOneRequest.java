@@ -9,7 +9,7 @@ public class CounterOneRequest extends CounterRequest {
 	////////// REQUEST ////////////
 
 	public CounterOneRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CounterOneRequest();

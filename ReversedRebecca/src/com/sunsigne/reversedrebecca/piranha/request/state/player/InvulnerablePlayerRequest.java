@@ -12,7 +12,7 @@ public class InvulnerablePlayerRequest extends InvulnerableRequest {
 	////////// REQUEST ////////////
 
 	public InvulnerablePlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new InvulnerablePlayerRequest();

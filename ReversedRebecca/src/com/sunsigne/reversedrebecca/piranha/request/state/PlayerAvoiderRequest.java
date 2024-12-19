@@ -12,7 +12,7 @@ public class PlayerAvoiderRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public PlayerAvoiderRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new PlayerAvoiderRequest();

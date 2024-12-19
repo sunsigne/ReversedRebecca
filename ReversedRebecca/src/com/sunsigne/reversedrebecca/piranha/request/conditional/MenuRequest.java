@@ -13,7 +13,7 @@ public class MenuRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public MenuRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new MenuRequest();

@@ -8,7 +8,7 @@ public class DisableRequest extends EnableRequest {
 	////////// REQUEST ////////////
 
 	public DisableRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new DisableRequest();

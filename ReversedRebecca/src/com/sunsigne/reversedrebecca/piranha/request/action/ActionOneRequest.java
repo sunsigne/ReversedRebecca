@@ -12,7 +12,7 @@ public class ActionOneRequest implements Request {
 	////////// REQUEST ////////////
 
 	public ActionOneRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ActionOneRequest();

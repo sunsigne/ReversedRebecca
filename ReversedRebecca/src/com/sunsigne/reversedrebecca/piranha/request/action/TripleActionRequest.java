@@ -13,7 +13,7 @@ public class TripleActionRequest implements Request {
 	////////// REQUEST ////////////
 
 	public TripleActionRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new TripleActionRequest();

@@ -17,7 +17,7 @@ public class CreateSimulationRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public CreateSimulationRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CreateSimulationRequest();

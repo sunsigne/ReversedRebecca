@@ -9,7 +9,7 @@ public class SlowBackupRequest extends MoveBackupRequest {
 	////////// REQUEST ////////////
 
 	public SlowBackupRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new SlowBackupRequest();

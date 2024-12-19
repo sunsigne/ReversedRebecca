@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
-import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
 
 public class NPC extends LivingObject implements PlayerAvoider {
@@ -94,7 +93,7 @@ public class NPC extends LivingObject implements PlayerAvoider {
 	}
 
 	private void lookAtPlayer() {
-		Request request = RequestList.getList().getObject(new FacingRequest());
+		Request request = new FacingRequest();
 		request.doAction(this, "player");
 	}
 

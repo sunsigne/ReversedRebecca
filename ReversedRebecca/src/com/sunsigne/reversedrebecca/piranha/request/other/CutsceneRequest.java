@@ -11,7 +11,7 @@ public class CutsceneRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public CutsceneRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CutsceneRequest();

@@ -10,7 +10,7 @@ public class SavedTripleActionRequest implements Request {
 	////////// REQUEST ////////////
 
 	public SavedTripleActionRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new SavedTripleActionRequest();

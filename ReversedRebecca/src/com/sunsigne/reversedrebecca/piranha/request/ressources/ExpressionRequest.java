@@ -11,7 +11,7 @@ public class ExpressionRequest implements Request {
 	////////// REQUEST ////////////
 
 	public ExpressionRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ExpressionRequest();

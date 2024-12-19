@@ -15,7 +15,7 @@ public class SoundRequest implements Request {
 	////////// REQUEST ////////////
 
 	public SoundRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new SoundRequest();

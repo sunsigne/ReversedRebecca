@@ -9,7 +9,7 @@ public class FastRequest extends MoveRequest {
 	////////// REQUEST ////////////
 
 	public FastRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new FastRequest();

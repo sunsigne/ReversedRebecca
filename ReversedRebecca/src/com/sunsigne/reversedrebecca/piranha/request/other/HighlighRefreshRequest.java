@@ -10,7 +10,7 @@ public class HighlighRefreshRequest implements Request {
 	////////// REQUEST ////////////
 
 	public HighlighRefreshRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new HighlighRefreshRequest();

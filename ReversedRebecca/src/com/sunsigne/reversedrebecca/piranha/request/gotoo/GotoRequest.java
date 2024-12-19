@@ -10,7 +10,7 @@ public class GotoRequest implements Request {
 	////////// REQUEST ////////////
 
 	public GotoRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new GotoRequest();
@@ -37,13 +37,20 @@ public class GotoRequest implements Request {
 
 		for (String tempTarget : targets) {
 
-			for (Request tempAction : RequestList.getList().getList()) {
-				if (!tempAction.hasCompactWriting())
-					continue;
+			if (tempTarget.contains(":")) {
+				Request request = new RequestList().getRequestFromType(tempTarget.split(":")[0]);
 
-				if (tempTarget.contains(":"))
-					if (tempTarget.split(":")[0].equalsIgnoreCase(tempAction.getType()))
-						tempAction.doAction(object, tempTarget.split(":")[1]);
+				try {
+					if (request.hasCompactWriting() == false)
+						continue;
+
+					request.doAction(object, tempTarget.split(":")[1]);
+				} catch (Exception e) {
+					System.err.println("Problem encounter with following object : " + object.toString());
+					System.err.println("can't process following Instruction : " + "UNKOWNW_CONDITION" + "=" + targets);
+					e.printStackTrace();
+				}
+
 			}
 
 			if (!tempTarget.equalsIgnoreCase("null"))

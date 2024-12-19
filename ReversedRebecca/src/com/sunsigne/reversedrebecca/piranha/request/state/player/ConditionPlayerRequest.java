@@ -12,7 +12,7 @@ public class ConditionPlayerRequest extends ConditionRequest {
 	////////// REQUEST ////////////
 
 	public ConditionPlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ConditionPlayerRequest();

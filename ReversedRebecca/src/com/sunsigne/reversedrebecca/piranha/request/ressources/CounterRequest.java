@@ -11,7 +11,7 @@ public class CounterRequest implements Request {
 	////////// REQUEST ////////////
 
 	public CounterRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CounterRequest();

@@ -12,7 +12,7 @@ public class ReadyPlayerRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public ReadyPlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ReadyPlayerRequest();

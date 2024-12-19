@@ -12,7 +12,7 @@ public class ExpressionPlayerRequest extends ExpressionRequest {
 	////////// REQUEST ////////////
 
 	public ExpressionPlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ExpressionPlayerRequest();

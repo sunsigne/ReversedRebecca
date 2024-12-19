@@ -2,13 +2,12 @@ package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
-import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
 
 public abstract class ConditionalRequest implements Request {
 
 	////////// REQUEST ////////////
-	
+
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		if (isConditional(target))
@@ -16,7 +15,7 @@ public abstract class ConditionalRequest implements Request {
 		else
 			doClassicAction(object, target);
 	}
-	
+
 	public abstract void doClassicAction(PiranhaObject object, String target);
 
 	////////// CONDITIONAL ////////////
@@ -54,7 +53,7 @@ public abstract class ConditionalRequest implements Request {
 	///// goto action /////
 
 	private void gotoAction(PiranhaObject object, String action) {
-		Request request = RequestList.getList().getObject(new GotoRequest());
+		Request request = new GotoRequest();
 		request.doAction(object, action);
 	}
 

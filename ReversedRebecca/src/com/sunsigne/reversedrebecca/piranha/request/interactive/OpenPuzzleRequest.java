@@ -16,7 +16,7 @@ public class OpenPuzzleRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public OpenPuzzleRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new OpenPuzzleRequest();

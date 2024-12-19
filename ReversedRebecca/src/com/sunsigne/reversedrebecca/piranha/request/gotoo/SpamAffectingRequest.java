@@ -15,7 +15,7 @@ public class SpamAffectingRequest extends AffectingRequest {
 	////////// REQUEST ////////////
 
 	public SpamAffectingRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new SpamAffectingRequest();

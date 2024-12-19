@@ -15,7 +15,7 @@ public class TeleportRequest implements Request {
 	////////// REQUEST ////////////
 
 	public TeleportRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new TeleportRequest();

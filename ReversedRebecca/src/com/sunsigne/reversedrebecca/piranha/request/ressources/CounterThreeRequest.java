@@ -9,7 +9,7 @@ public class CounterThreeRequest extends CounterRequest {
 	////////// REQUEST ////////////
 
 	public CounterThreeRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CounterThreeRequest();

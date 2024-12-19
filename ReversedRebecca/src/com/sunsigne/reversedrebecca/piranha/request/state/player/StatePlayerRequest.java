@@ -16,7 +16,7 @@ public class StatePlayerRequest implements Request {
 	////////// REQUEST ////////////
 
 	public StatePlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new StatePlayerRequest();
@@ -44,23 +44,23 @@ public class StatePlayerRequest implements Request {
 
 		String[] targets = target.split(",");
 
-		Request teleport = RequestList.getList().getObject(new TeleportRequest());
+		Request teleport = new TeleportRequest();
 		teleport.doAction(player, targets[0]);
 
-		Request display = RequestList.getList().getObject(new DisplayRequest());
+		Request display = new DisplayRequest();
 		display.doAction(player, targets[1] + "," + targets[2]);
 
-		Request facing = RequestList.getList().getObject(new FacingRequest());
+		Request facing = new FacingRequest();
 		facing.doAction(player, targets[3]);
 
-		Request condition = RequestList.getList().getObject(new ConditionRequest());
+		Request condition = new ConditionRequest();
 		condition.doAction(player, targets[4]);
 
 		int size = targets.length;
 		if (size < 6)
 			return;
 
-		Request got0 = RequestList.getList().getObject(new GotoRequest());
+		Request got0 = new GotoRequest();
 		for (int index = 5; index < size; index++)
 			got0.doAction(object, targets[index]);
 	}

@@ -15,7 +15,7 @@ public class CreateAnimationRequest implements IndexRequest {
 	////////// REQUEST ////////////
 
 	public CreateAnimationRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new CreateAnimationRequest();

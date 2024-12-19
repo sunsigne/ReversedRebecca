@@ -9,7 +9,7 @@ public class GoodDeedRequest extends DeedRequest {
 	////////// REQUEST ////////////
 
 	public GoodDeedRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new GoodDeedRequest();

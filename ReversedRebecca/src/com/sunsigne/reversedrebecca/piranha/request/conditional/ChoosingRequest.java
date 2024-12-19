@@ -13,7 +13,7 @@ public class ChoosingRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public ChoosingRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new ChoosingRequest();

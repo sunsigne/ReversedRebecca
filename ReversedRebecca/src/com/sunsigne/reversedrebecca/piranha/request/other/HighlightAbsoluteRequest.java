@@ -11,7 +11,7 @@ public class HighlightAbsoluteRequest implements Request {
 	////////// REQUEST ////////////
 
 	public HighlightAbsoluteRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new HighlightAbsoluteRequest();

@@ -15,7 +15,7 @@ public class MoveBackupRequest implements Request {
 	////////// REQUEST ////////////
 
 	public MoveBackupRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new MoveBackupRequest();

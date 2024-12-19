@@ -10,7 +10,7 @@ public class HighlightAbovePlayerRequest extends ConditionalRequest {
 	////////// REQUEST ////////////
 
 	public HighlightAbovePlayerRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new HighlightAbovePlayerRequest();

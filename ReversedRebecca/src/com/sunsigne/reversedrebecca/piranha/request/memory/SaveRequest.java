@@ -10,7 +10,7 @@ public class SaveRequest implements Request {
 	////////// REQUEST ////////////
 
 	public SaveRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request request = new SaveRequest();

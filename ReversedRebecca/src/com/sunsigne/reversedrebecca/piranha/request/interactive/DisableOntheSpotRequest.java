@@ -9,7 +9,7 @@ public class DisableOntheSpotRequest extends DisableRequest {
 	////////// REQUEST ////////////
 
 	public DisableOntheSpotRequest() {
-		RequestList.getList().addObject(this);
+		new RequestList().addRequest(this, getType());
 	}
 
 	private static Request action = new DisableOntheSpotRequest();
