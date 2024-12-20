@@ -186,12 +186,29 @@ public class Game extends Canvas implements Runnable {
 
 			if (System.currentTimeMillis() - timer >= 1000) {
 				timer += 1000;
+				displayMemoryUsage();
 //				System.out.println("Ticks : " + ticks + ", FPS : " + frames);
 //				frames = 0;
 //				ticks = 0;
 			}
 		}
 		stop();
+	}
+
+	private void displayMemoryUsage() {
+		if (Infos.IS_DEV_VERSION == false)
+			return;
+
+		final long BYTE_TO_MB_CONVERSION_VALUE = 1024 * 1024;
+		final int MAX_ACCEPTABLE_VALUE = 80;
+		
+		Runtime runtime = Runtime.getRuntime();		
+		long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / BYTE_TO_MB_CONVERSION_VALUE;
+		
+		if (usedMemory < MAX_ACCEPTABLE_VALUE)
+			System.out.println("Used memory : " + usedMemory + " MB");
+		else
+			System.err.println("Used memory : " + usedMemory + " MB");
 	}
 
 	public void forceLoop() {
