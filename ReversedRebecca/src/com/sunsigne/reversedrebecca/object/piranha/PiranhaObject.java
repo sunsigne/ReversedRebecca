@@ -1,11 +1,8 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
-import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
@@ -18,20 +15,19 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class PiranhaObject extends GameObject
-		implements Waitfor, Facing, Stunnable, SpeedVariator, PathSearcher, RegistrableInteractive, CollisionReactor {
+public abstract class PiranhaObject extends CustomHitboxObject
+		implements Waitfor, Facing, Stunnable, SpeedVariator, PathSearcher, RegistrableInteractive {
 
 	// the only difference between PiranhaObject and LivingObject is that
 	// PiranhaObject are not supposed to move by themself.
 	// That's it. A homing rolling pin is then a "LivingObject".
 	public PiranhaObject(String name, int x, int y) {
-		super(x, y);
+		super(x, y, 0, 0, 0);
 		this.name = name.toLowerCase();
 		set_stun_at_waitfor_attribution(true);
 		setHighlightAbovePlayer(true);
@@ -350,29 +346,6 @@ public abstract class PiranhaObject extends GameObject
 
 	public void setBlockingPath(boolean blockingPath) {
 		this.blockingPath = blockingPath;
-	}
-
-	private int hitboxX, hitboxY;
-	private int hitboxW = getWidth();
-	private int hitboxH = getHeight();
-
-	// width and height should be between 0 and 16
-	public void setBounds(int x, int y, int width, int height) {
-		int pixel = 16;
-		int ratio = Size.M / pixel;
-		this.hitboxX = x * ratio;
-		this.hitboxY = y * ratio;
-		this.hitboxW = width * ratio;
-		this.hitboxH = height * ratio;
-	}
-
-	@Override
-	public Rectangle getBounds() {
-		int x = getX() + hitboxX;
-		int y = getY() + hitboxY;
-		int w = hitboxW;
-		int h = hitboxH;
-		return new Rectangle(x, y, w, h);
 	}
 
 }

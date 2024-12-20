@@ -1,18 +1,18 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.piranha;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.piranha.RockPiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.CustomHitboxObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.MappableComplexe;
 
-public class MappableRock implements MappableComplexe {
+public class MappableCustomHitbox implements MappableComplexe {
 
-	private MappableRock() {
+	private MappableCustomHitbox() {
 		new MapCreator().getList().addObject(this);
 	}
 
-	private static Mappable mappable = new MappableRock();
+	private static Mappable mappable = new MappableCustomHitbox();
 
 	@Override
 	public Mappable getMappable() {
@@ -27,7 +27,7 @@ public class MappableRock implements MappableComplexe {
 		int y0 = green - 128;
 		int type = 255 - blue;
 
-		return new RockPiranhaObject(x, y, x0, y0, type);
+		return new CustomHitboxObject(x, y, x0, y0, type);
 	}
 
 	@Override
