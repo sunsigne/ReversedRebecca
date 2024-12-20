@@ -12,7 +12,7 @@ ERASE = SARAH*ANGRY_ABOUT_PRIVACY
 ERASE = SARAH*ANGRY_ABOUT_WATER_JOKE
 ERASE = SARAH*HAS_BEEN_REFUSED_TO_GO_WITH
 
-///// REBECCA'S DESK /////
+///// PRE-VLADIMIR SCENE /////
 
 NPC-01 = Rebecca Cinematic when Rebecca Arrive Before Sarah
 NPC-02 = Sarah Cinematic when Rebecca Arrive Before Sarah
@@ -20,11 +20,6 @@ NPC-03 = Rebecca Cinematic when Rebecca Arrive With Sarah
 NPC-04 = Sarah Cinematic when Rebecca Arrive With Sarah
 NPC-05 = Rebecca Cinematic when Rebecca Arrive After Sarah
 NPC-06 = Sarah Cinematic when Rebecca Arrive After Sarah
-OBJ-01 = Left Desk
-OBJ-02 = Plant
-OBJ-03 = Trash
-OBJ-04 = Chair
-OBJ-05 = Bubble Colomn
 
 ///// DOWN DESKS /////
 
@@ -33,11 +28,12 @@ NPC-09 = Vladimir
 NPC-10 = Mika
 NPC-11 = Jean
 NPC-12 = Delta
-OBJ-06 = Left Desk Up Part
-OBJ-07 = Chair
-OBJ-08 = Plant
-OBJ-09 = Letter
-OBJ-10 = Tim's Computer
+
+OBJ-01 = Rebecca Chair
+OBJ-02 = Plant
+OBJ-03 = Letter
+OBJ-04 = Tim's Computer
+OBJ-05 = Bubble Colomn
 OBJ-11 = Bubble Colomn Sabotaged
 OBJ-12 = Pee Puddle
 OBJ-13 = Cyan Key Computer
@@ -59,6 +55,7 @@ NPC-13 = Alicia
 NPC-14 = Joseph
 NPC-15 = Marie
 NPC-16 = Dave
+
 OBJ-17 = Down Desk
 OBJ-18 = Empty Vat
 OBJ-19 = Small Boxes Left
@@ -107,6 +104,7 @@ OBJ-61 = Paperworkd
 NPC-17 = Eric
 NPC-18 = Dummy Down
 NPC-19 = Dummy Up
+
 OBJ-50 = Leaving Player Checker
 OBJ-51 = Green SAS Door Up
 OBJ-52 = Green SAS Door Left
