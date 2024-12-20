@@ -39,7 +39,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		return object_list;
 	}
 
-	private void loadAllPiranha() {
+	protected void loadAllPiranha() {
 		for (LAYER tempLayer : LAYER.values()) {
 			if (tempLayer.isMapLayer() == false)
 				return;

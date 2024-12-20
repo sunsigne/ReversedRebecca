@@ -116,6 +116,16 @@ TALKED -> JEAN_HOLDING = ACTION_ONE -> TALK:JEAN_TOO_LATE
 ...
 
 
+////// SELFTALKING //////
+
+Le Type de Condition SELFTALKING a exactement le même fonctionnement que le Type de Condition TALKED, à la différence près que ce premier à une portée semi-global au lieu de global.
+
+En effet, le Type de Condition SELFTALKING n'est vérifiée que pour (tous) les objets Piranha partageant le fichier étant à l'origine de l'Instruction ayant initié le dialogue.
+Par exemple, si trois plantes sur la map partagent le même fichier Piranha, "parler" à l'une d'elle vérifiera la Condition SELFTALKING pour les trois.
+
+Note : la raison de l'existance de ce Type de Condition est purement une question d'optimisation : moins de fichiers sont analysés.
+
+
 
 ////// GOAL //////
 

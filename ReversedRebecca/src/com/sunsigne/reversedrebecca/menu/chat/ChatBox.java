@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.condition.global.SelfTalkingCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.state.FacingRequest;
@@ -168,6 +169,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		boolean playerCanInteract = Cutscene.isRunning() == false;
 		new PlayerFinder().setPlayerCanInteract(playerCanInteract);
 		LAYER.PUZZLE.getHandler().clear();
+		new SelfTalkingCondition().registerValue(object, value);
 		new TalkedCondition().registerValue(value);
 	}
 
