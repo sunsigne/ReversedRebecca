@@ -1,6 +1,0 @@
-TIME -> 0 = GOTO -> HITBOX_INIT
-
-
-//// STATE ////
-
-$ -> HITBOX_INIT = HITBOX -> 0, 0, 8, 15
