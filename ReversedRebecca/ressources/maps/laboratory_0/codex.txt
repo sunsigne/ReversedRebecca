@@ -36,9 +36,8 @@ OBJ-04 = Tim's Computer
 OBJ-05 = Bubble Colomn
 OBJ-06 = Pee Puddle
 OBJ-07 = Cyan Key Computer
-
-OBJ-14 = Sarah Desk Key Room Path Checker
-OBJ-16 = Delta Player Distance Checker
+OBJ-08 = Sarah Desk Key Room Path Checker
+OBJ-09 = Delta Player Distance Checker
 OBJ-48 = Fake Jean
 
 ///// LEFT AREA /////
