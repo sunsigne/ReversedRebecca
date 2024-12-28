@@ -12,7 +12,6 @@ rebecca = object = happy = These tanks are very convenient@for our experiments.
 
 
 % VAT_SABOTAGE
-rebecca = object = happy = These tanks are very convenient@for our experiments.
 rebecca = DOWN = determined = What a shame!@Tim will have to redo his!
 
 

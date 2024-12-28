@@ -12,7 +12,6 @@ rebecca = object = happy = Ces cuves sont très pratiques@pour nos expériences.
 
 
 % VAT_SABOTAGE
-rebecca = object = happy = Ces cuves sont très pratiques@pour nos expériences.
 rebecca = DOWN = determined = Quel dommage !@Tim va devoir recommencer la sienne !
 
 
