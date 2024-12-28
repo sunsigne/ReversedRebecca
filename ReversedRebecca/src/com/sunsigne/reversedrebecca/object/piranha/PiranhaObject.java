@@ -8,11 +8,14 @@ import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
@@ -212,6 +215,12 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	}
 
 	////////// INTERACTIVE ////////////
+
+	private GameList<Velocity> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);
+
+	public GameList<Velocity> getSpreadInteractivenessList() {
+		return spreadInteractivenessList;
+	}
 
 	private boolean isDisabled;
 

@@ -3,10 +3,12 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
@@ -28,6 +30,8 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	////////// INTERACTIVE ////////////
 
+	public GameList<Velocity> getSpreadInteractivenessList();
+
 	public TripleAction getTripleAction();
 
 	public boolean isDisabled();
@@ -39,86 +43,96 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 	}
 
 	public default boolean canPlayerInteract(boolean checkFakeInteract) {
+		if (getSpreadInteractivenessList() == null)
+			return false;
 
-		// player is already interacting with an object
-		if (this instanceof ChoiceObject == false) {
-			if (SingleInteractivityLaw.getCurrentInteractor() != null
-					&& SingleInteractivityLaw.getCurrentInteractor() != this)
+		if (getSpreadInteractivenessList().containsObject(this) == false)
+			getSpreadInteractivenessList().addObject(this);
+
+		for (Velocity tempInteractive : getSpreadInteractivenessList().getList()) {
+
+			// player is already interacting with an object
+			if (tempInteractive instanceof ChoiceObject == false) {
+				if (SingleInteractivityLaw.getCurrentInteractor() != null
+						&& SingleInteractivityLaw.getCurrentInteractor() != this)
+					return false;
+			}
+
+			// object is disabled
+			if (isDisabled())
 				return false;
+
+			Player player = new PlayerFinder().getPlayer();
+
+			// player is null
+			if (player == null)
+				return false;
+
+			// player specifically can't interact
+			if (player.canInteract() == false) {
+				if (!checkFakeInteract || player.getFakingCanInteract() == false)
+					return false;
+			}
+
+			// player is not on the same layer
+			if (player.getHandler() != getHandler())
+				return false;
+
+			int diffX = tempInteractive.getX() - player.getX();
+			int diffY = tempInteractive.getY() - player.getY();
+
+			// player is too far
+			if (new PlayerFinder().isPlayerFutherThan(tempInteractive, 1))
+				continue;
+
+			// player is superimposed on the object
+			if (new PlayerFinder().isPlayerCloserThan(tempInteractive, 1))
+				continue;
+
+			// player is watching the object
+			switch (player.getFacing()) {
+
+			case LEFT:
+				// player is at the right of the object & the object is almost on the same Y
+				if (diffX < 0 && Math.pow(diffX, 2) > Math.pow(diffY, 2))
+					return true;
+				else
+					break;
+
+			case RIGHT:
+				// player is at the left of the object & the object is almost on the same Y
+				if (diffX > 0 && Math.pow(diffX, 2) > Math.pow(diffY, 2))
+					return true;
+				else
+					break;
+
+			case UP:
+				// player is under the object & the object is almost on the same X
+				if (diffY < 0 && Math.pow(diffX, 2) < Math.pow(diffY, 2))
+					return true;
+				else
+					break;
+
+			case DOWN:
+				// player is above the object & the object is almost on the same X
+				if (diffY > 0 && Math.pow(diffX, 2) < Math.pow(diffY, 2))
+					return true;
+				else
+					break;
+
+			default:
+				break;
+			}
 		}
-
-		// object is disabled
-		if (isDisabled())
-			return false;
-
-		Player player = new PlayerFinder().getPlayer();
-
-		// player is null
-		if (player == null)
-			return false;
-
-		// player specifically can't interact
-		if (player.canInteract() == false) {
-			if (!checkFakeInteract || player.getFakingCanInteract() == false)
-				return false;
-		}
-
-		// player is not on the same layer
-		if (player.getHandler() != getHandler())
-			return false;
-
-		int diffX = getX() - player.getX();
-		int diffY = getY() - player.getY();
-
-		// player is too far
-		if (new PlayerFinder().isPlayerFutherThan(this, 1))
-			return false;
-
-		// player is superimposed on the object
-		if (new PlayerFinder().isPlayerCloserThan(this, 1))
-			return true;
-
-		// player is watching the object
-		switch (player.getFacing()) {
-
-		case LEFT:
-			// player is at the right of the object & the object is almost on the same Y
-			if (diffX < 0 && Math.pow(diffX, 2) > Math.pow(diffY, 2))
-				return true;
-			else
-				return false;
-
-		case RIGHT:
-			// player is at the left of the object & the object is almost on the same Y
-			if (diffX > 0 && Math.pow(diffX, 2) > Math.pow(diffY, 2))
-				return true;
-			else
-				return false;
-
-		case UP:
-			// player is under the object & the object is almost on the same X
-			if (diffY < 0 && Math.pow(diffX, 2) < Math.pow(diffY, 2))
-				return true;
-			else
-				return false;
-
-		case DOWN:
-			// player is above the object & the object is almost on the same X
-			if (diffY > 0 && Math.pow(diffX, 2) < Math.pow(diffY, 2))
-				return true;
-			else
-				return false;
-
-		default:
-			return false;
-		}
+		return false;
 	}
 
 	public GameTimer getDelayer();
 
 	public void setDelayer(GameTimer delayer);
 
-	// besure the highlight for large objects does not "blink" when the player change of tile
+	// besure the highlight for large objects does not "blink" when the player
+	// change of tile
 	public default boolean canPlayerInteractDelayer(boolean checkFakeInteract) {
 		if (canPlayerInteract(checkFakeInteract)) {
 			if (getDelayer() != null)

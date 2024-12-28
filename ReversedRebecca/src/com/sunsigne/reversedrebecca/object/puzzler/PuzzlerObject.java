@@ -8,8 +8,11 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -83,6 +86,12 @@ public abstract class PuzzlerObject extends GameObject
 
 	////////// INTERACTIVE ////////////
 
+	private GameList<Velocity> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);
+	
+	public GameList<Velocity> getSpreadInteractivenessList() {
+		return spreadInteractivenessList;
+	}
+	
 	private boolean isDisabled;
 
 	@Override
