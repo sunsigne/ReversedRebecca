@@ -35,6 +35,23 @@ Note : Le Type de Requête ENABLE_ONTHESPOT existe également. À ce stade, vou
 
 
 
+////// SPREAD_INTERACTIVENESS //////
+
+Le Type de Requête SPREAD_INTERACTIVENESS permet d'établir à une position donnée la possibilité d'interagir avec l'objet actuel, quelle que soit sa position réelle.
+
+La Cible en toutes lettres permet de déterminer l'action à effectuer aux coordonnées X et Y :
+- ADD : en X et Y, il devient possible d'interagir avec l'objet actuel.
+- REMOVE : en X et Y, il n'est plus possible d'interagir avec l'objet actuel.
+- CLEAR : il n'est plus possible d'interagir avec l'objet actuel autrement qu'à partir de sa position réelle.
+
+Exemple :
+$ -> FAKE_SARAH = SPREAD_INTERACTIVENESS -> ADD,10-20
+
+Lorsque la Condition sera vérifiée, il devient possible en X=10 Y=20 d'interagir avec l'objet actuel.
+
+Note : ce Type de Requêtes est très utile lorsque deux NPC discutent, ou qu'un NPC se retrouve entre deux "cases".
+
+
 ////// PICKUP //////
 
 Le Type de Requête PICKUP permet au joueur de ramasser un objet "ramassable" à distance, à partir de coordonnées X, Y et Z. La coordonnée Z correspond à l'Index chiffré de l'objet (voir la partie « Piranha – Index »).

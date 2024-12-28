@@ -73,7 +73,7 @@
 
 	
 	pour la version publique :
-	- SelfTalkingCondition + transformer RequestList en map
+	- transformer RequestList en map
 	
 
 	////////// EXPERIENCE UTILISATEUR ////////////
