@@ -71,7 +71,7 @@ public class PlayerFinder {
 		return new TilePos().getTilePos(pos, getPlayer().getSize());
 	}
 
-	private int[] getDistance(Velocity object, int distanceInTiles) {
+	public int[] getDistance(Velocity object, int distanceInTiles) {
 		Player player = getPlayer();
 
 		if (player == null)
