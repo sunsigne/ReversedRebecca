@@ -30,7 +30,7 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 
 	////////// INTERACTIVE ////////////
 
-	public GameList<Velocity> getSpreadInteractivenessList();
+	public GameList<Highlightable> getSpreadInteractivenessList();
 
 	public TripleAction getTripleAction();
 

@@ -22,6 +22,10 @@ public interface Highlightable extends Velocity {
 		return true;
 	}
 
+	default boolean adaptSpreadInteractivenessHighlight() {
+		return true;
+	}
+
 	////////// RENDER ////////////
 
 	default void drawHighlight(Graphics g, BufferedImage image) {
@@ -56,10 +60,13 @@ public interface Highlightable extends Velocity {
 		if (player == null)
 			return pos;
 
-		Velocity closestInteractive = interactive;
+		Highlightable closestInteractive = interactive;
 		int distance = finder.getDistance(closestInteractive, -1)[0];
 
-		for (Velocity tempInteractive : list) {
+		for (Highlightable tempInteractive : list) {
+			if (tempInteractive.adaptSpreadInteractivenessHighlight() == false)
+				continue;
+
 			int tempDistance = finder.getDistance(tempInteractive, -1)[0];
 			if (tempDistance < distance)
 				closestInteractive = tempInteractive;

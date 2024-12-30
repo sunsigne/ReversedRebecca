@@ -4,11 +4,11 @@ import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
-import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
@@ -216,9 +216,10 @@ public abstract class PiranhaObject extends CustomHitboxObject
 
 	////////// INTERACTIVE ////////////
 
-	private GameList<Velocity> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);
+	private GameList<Highlightable> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);
 
-	public GameList<Velocity> getSpreadInteractivenessList() {
+	@Override
+	public GameList<Highlightable> getSpreadInteractivenessList() {
 		return spreadInteractivenessList;
 	}
 

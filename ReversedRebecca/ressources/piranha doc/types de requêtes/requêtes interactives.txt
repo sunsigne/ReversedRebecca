@@ -41,6 +41,7 @@ Le Type de Requête SPREAD_INTERACTIVENESS permet d'établir à une position don
 
 La Cible en toutes lettres permet de déterminer l'action à effectuer aux coordonnées X et Y :
 - ADD : en X et Y, il devient possible d'interagir avec l'objet actuel.
+- ADD_KEEP_HIGHLIGHT : fait la même chose que "ADD", mais le HIGHLIGHT (voir « HIGHLIGHT » dans la partie « Piranha – Type de Requête – Requêtes Autres ») ne s'adapte pas (c.-à-d. que c'est la position d'orginie de l'objet qui se met à "briller")
 - REMOVE : en X et Y, il n'est plus possible d'interagir avec l'objet actuel.
 - CLEAR : il n'est plus possible d'interagir avec l'objet actuel autrement qu'à partir de sa position réelle.
 

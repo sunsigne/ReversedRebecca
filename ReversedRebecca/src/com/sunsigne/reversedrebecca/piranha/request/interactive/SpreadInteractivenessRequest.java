@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.interactive;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
@@ -43,7 +43,9 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 		switch (action) {
 
 		case "ADD":
-			addAction(object, target);
+			addAction(object, target, true);
+		case "ADD_KEEP_HIGHLIGHT":
+			addAction(object, target, false);
 			break;
 		case "REMOVE":
 			removeAction(object, target);
@@ -62,7 +64,7 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 		return new GoalObject(x, y, false);
 	}
 
-	private void addAction(PiranhaObject object, String target) {
+	private void addAction(PiranhaObject object, String target, boolean adaptHighlight) {
 
 		// determinate the position
 		GoalObject goal = getGoal(target);
@@ -70,7 +72,7 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 		int y = goal.getY();
 
 		// determinate the type of object
-		Velocity interactive = determinateCreation(object, x, y);
+		Highlightable interactive = determinateCreation(object, x, y, adaptHighlight);
 
 		// creation of the object
 		object.getSpreadInteractivenessList().addObject(interactive);
@@ -86,19 +88,31 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 		int y = goal.getY();
 
 		var clone = new ListCloner().deepClone(object.getSpreadInteractivenessList());
-		for (Velocity tempInteractive : clone.getList())
+		for (Highlightable tempInteractive : clone.getList())
 			if (x == tempInteractive.getX() && y == tempInteractive.getY())
 				object.getSpreadInteractivenessList().removeObject(tempInteractive);
 	}
 
-	private Velocity determinateCreation(PiranhaObject object, int x, int y) {
-		Velocity interactive = new Velocity() {
+	private Highlightable determinateCreation(PiranhaObject object, int x, int y, boolean adaptHighlight) {
+		Highlightable interactive = new Highlightable() {
 
 			@Override
 			public Handler getHandler() {
 				return object.getHandler();
 			}
 
+			////////// HIGHLIGHT ////////////
+
+			@Override
+			public boolean getHighlightCondition() {
+				return object.getHighlightCondition();
+			}
+
+			@Override
+			public boolean adaptSpreadInteractivenessHighlight() {
+				return adaptHighlight;
+			}
+			
 			////////// POSITION ////////////
 
 			@Override
