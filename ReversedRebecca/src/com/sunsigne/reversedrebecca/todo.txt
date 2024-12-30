@@ -54,7 +54,8 @@
 	- la boucle des les lois de la physique est trop gourmandes !
 	- la boucle qui récupère la totalité des objets piranha (dans les instructions) est trop gourmande
 	- la présence d'un trop grand nombre d'objectr piranha
-	- inverser l'héritage : piranha <-> rockpiranha, de sorte que rockpiranha soit moins gourmand
+	
+	- spread interactiveness ne highlight pas le bon élément
 	
 	bug : ws000 -> j'étais en fast mode à ce moment là, mais je suis passé à travers sarah du haut sur le dialogue de fin "tp centré sur la case pendant cinématique"
 	le puzzle de la door est complètement fou lorsque le cadenas est à l'envers
@@ -73,7 +74,7 @@
 
 	
 	pour la version publique :
-	- transformer RequestList en map
+	- spread interactiveness ne highlight pas le bon élément
 	
 
 	////////// EXPERIENCE UTILISATEUR ////////////
