@@ -59,17 +59,17 @@ OBJ-15 = Pee On Rebecca Checker
 OBJ-16 = Toilet Door
 OBJ-17 = Toilet Down
 OBJ-18 = Toilet Up
+OBJ-19 = Joseph SAS Key Checker
+OBJ-20 = Marie Romance Helper
 
 OBJ-23 = Speakable Alicia Door
 OBJ-42 = Alicia Rubbles
 OBJ-43 = Alicia Rubbles Up Checker
 OBJ-44 = Alicia Rubbles Down Checker
-OBJ-49 = Joseph SAS Key Checker
-OBJ-66 = Marie Romance Helper
+
 
 ///// ALICIA ROOM /////
 
-OBJ-56 = Alicia Room
 OBJ-57 = Plant
 OBJ-58 = Desk
 OBJ-59 = Computer
