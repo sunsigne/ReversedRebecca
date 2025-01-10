@@ -63,6 +63,15 @@ public class DigAction extends OpenPuzzleAction {
 			return new NullHoleObject(facing, x, y);
 	}
 
+	private PuzzlerObject getOppositeNullObject(PuzzlerObject nullObject) {
+		DIRECTION facing = ((HoleObject) nullObject).getFacing();
+
+		if (nullObject instanceof HoleUpwardObject)
+			return new NullHoleObject(facing, nullObject.getX(), nullObject.getY());
+		else
+			return new NullHoleUpwardObject(facing, nullObject.getX(), nullObject.getY());
+	}
+
 	@Override
 	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
 		return new DigAnimationObject(x, y);
@@ -77,7 +86,7 @@ public class DigAction extends OpenPuzzleAction {
 
 			handler.addObject(nullObject);
 			handler.removeObject(puzzlerObject);
-			triggerExit(handler, puzzlerObject);
+			triggerExit(handler, puzzlerObject, nullObject);
 
 			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
 					puzzlerObject.getY());
@@ -88,13 +97,16 @@ public class DigAction extends OpenPuzzleAction {
 		return actionOnWinning;
 	}
 
-	private void triggerExit(Handler handler, PuzzlerObject puzzlerObject) {
+	private void triggerExit(Handler handler, PuzzlerObject puzzlerObject, PuzzlerObject nullObject) {
 		Handler exit_handler = ((HoleObject) puzzlerObject).getExitLayer(handler).getHandler();
 		GameList<GameObject> list = Handler.getObjectsAtPos(exit_handler, puzzlerObject.getX(), puzzlerObject.getY(),
 				puzzlerObject.getSize(), true);
 
-		if (list.getList().isEmpty())
+		if (list.getList().isEmpty()) {
+			PuzzlerObject hole = getOppositeNullObject(nullObject);
+			exit_handler.addObject(hole);
 			return;
+		}
 
 		for (GameObject tempObject : list.getList()) {
 			if (tempObject instanceof HoleObject == false)
