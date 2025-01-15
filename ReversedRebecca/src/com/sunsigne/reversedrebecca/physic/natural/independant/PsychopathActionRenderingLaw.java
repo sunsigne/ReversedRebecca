@@ -11,11 +11,11 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class PsycopathActionRenderingLaw extends IndependantLaw {
+public class PsychopathActionRenderingLaw extends IndependantLaw {
 
 	////////// INDEPENDANT LAW ////////////
 
-	private static IndependantLaw independantLaw = new PsycopathActionRenderingLaw();
+	private static IndependantLaw independantLaw = new PsychopathActionRenderingLaw();
 
 	@Override
 	public IndependantLaw getIndependantLaw() {
