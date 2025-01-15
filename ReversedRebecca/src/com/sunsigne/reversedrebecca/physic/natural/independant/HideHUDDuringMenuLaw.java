@@ -8,11 +8,11 @@ import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class HideGUIDuringMenuLaw extends IndependantLaw {
+public class HideHUDDuringMenuLaw extends IndependantLaw {
 
 	////////// INDEPENDANT LAW ////////////
 
-	private static IndependantLaw independantLaw = new HideGUIDuringMenuLaw();
+	private static IndependantLaw independantLaw = new HideHUDDuringMenuLaw();
 
 	@Override
 	public IndependantLaw getIndependantLaw() {
