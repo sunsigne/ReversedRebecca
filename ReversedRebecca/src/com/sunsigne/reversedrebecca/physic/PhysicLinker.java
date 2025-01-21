@@ -36,40 +36,40 @@ public class PhysicLinker {
 
 	////////// PHYSICS ////////////
 
-	private static final PhysicLaw C_VELOCITY = new VelocityLaw();
-	private static final PhysicLaw C_GOAL = new MoveTowardGoalLaw();
-	private static final PhysicLaw C_COLLISION = new CollisionLaw();
-	private static final PhysicLaw C_TILE = new RoundToTileLaw();
-	private static final PhysicLaw C_AVOIDER = new PlayerBlockingAvoiderLaw();
-	private static final PhysicLaw C_PATH = new PathFindingLaw();
-	private static final PhysicLaw C_CAMERA = new CameraMovingLaw();
+	private static final PhysicLaw C_VELOCITY = PhysicList.getList().getObject(new VelocityLaw());
+	private static final PhysicLaw C_GOAL = PhysicList.getList().getObject(new MoveTowardGoalLaw());
+	private static final PhysicLaw C_COLLISION = PhysicList.getList().getObject(new CollisionLaw());
+	private static final PhysicLaw C_TILE = PhysicList.getList().getObject(new RoundToTileLaw());
+	private static final PhysicLaw C_AVOIDER = PhysicList.getList().getObject(new PlayerBlockingAvoiderLaw());
+	private static final PhysicLaw C_PATH = PhysicList.getList().getObject(new PathFindingLaw());
+	private static final PhysicLaw C_CAMERA = PhysicList.getList().getObject(new CameraMovingLaw());
 
-	private static final IndependantLaw I_BLINKING = new BlinkingRecoveringLaw();
-	private static final IndependantLaw I_EXPLOSION = new ExplosionBrightnessLaw();
-	private static final IndependantLaw I_FADE_MENU = new FadeMenuLaw();
-	private static final IndependantLaw I_FADE_PUZZLE = new FadePuzzleLaw();
-	private static final IndependantLaw I_HUD = new HideHUDDuringMenuLaw();
-	private static final IndependantLaw I_HIGHLIGHT = new HightlightAbovenessLaw();
-	private static final IndependantLaw I_DEATH = new LifeAndDeathLaw();
-	private static final IndependantLaw I_MOUSE = new MouseObjectRenderAboveLaw();
-	private static final IndependantLaw I_PLAYER = new PlayerFinderLaw();
-	private static final IndependantLaw I_PSYCHO = new PsychopathActionRenderingLaw();
-	private static final IndependantLaw I_HACK = new RefreshProcessorLaw();
-	private static final IndependantLaw I_INTERACT = new SingleInteractivityLaw();
-	private static final IndependantLaw I_LAYER = new UpdateLayersLaw();
-	private static final IndependantLaw I_CHAT = new UpgradeChatTextQualityLaw();
-	private static final IndependantLaw I_WAITFOR = new WaitforLaw();
+	private static final IndependantLaw I_BLINKING = new BlinkingRecoveringLaw().getIndependantLaw();
+	private static final IndependantLaw I_EXPLOSION = new ExplosionBrightnessLaw().getIndependantLaw();
+	private static final IndependantLaw I_FADE_MENU = new FadeMenuLaw().getIndependantLaw();
+	private static final IndependantLaw I_FADE_PUZZLE = new FadePuzzleLaw().getIndependantLaw();
+	private static final IndependantLaw I_HUD = new HideHUDDuringMenuLaw().getIndependantLaw();
+	private static final IndependantLaw I_HIGHLIGHT = new HightlightAbovenessLaw().getIndependantLaw();
+	private static final IndependantLaw I_DEATH = new LifeAndDeathLaw().getIndependantLaw();
+	private static final IndependantLaw I_MOUSE = new MouseObjectRenderAboveLaw().getIndependantLaw();
+	private static final IndependantLaw I_PLAYER = new PlayerFinderLaw().getIndependantLaw();
+	private static final IndependantLaw I_PSYCHO = new PsychopathActionRenderingLaw().getIndependantLaw();
+	private static final IndependantLaw I_HACK = new RefreshProcessorLaw().getIndependantLaw();
+	private static final IndependantLaw I_INTERACT = new SingleInteractivityLaw().getIndependantLaw();
+	private static final IndependantLaw I_LAYER = new UpdateLayersLaw().getIndependantLaw();
+	private static final IndependantLaw I_CHAT = new UpgradeChatTextQualityLaw().getIndependantLaw();
+	private static final IndependantLaw I_WAITFOR = new WaitforLaw().getIndependantLaw();
 
 	@SuppressWarnings("unused")
-	private static final DebugMode D_ELEVATOR = new ElevatorMode();
+	private static final DebugMode D_ELEVATOR = new ElevatorMode().getDebugMode();
 	@SuppressWarnings("unused")
-	private static final DebugMode D_FAST = new FastWorldMode(); // already by default
-	
-	private static final DebugMode D_MULTI = new MultiToolMode();
-	private static final DebugMode D_CRIT = new SureCriticalMode();
-	private static final DebugMode D_SWIFT = new SwiftMovingMode();
-	private static final DebugMode D_HITBOX = new VisibleHitboxMode();
-	private static final DebugMode D_WALLPASS = new WallPassMode();
+	private static final DebugMode D_FAST = new FastWorldMode().getDebugMode(); // already by default
+
+	private static final DebugMode D_MULTI = new MultiToolMode().getDebugMode();
+	private static final DebugMode D_CRIT = new SureCriticalMode().getDebugMode();
+	private static final DebugMode D_SWIFT = new SwiftMovingMode().getDebugMode();
+	private static final DebugMode D_HITBOX = new VisibleHitboxMode().getDebugMode();
+	private static final DebugMode D_WALLPASS = new WallPassMode().getDebugMode();
 
 	////////// LINKERS ////////////
 

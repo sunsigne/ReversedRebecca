@@ -23,6 +23,9 @@ public class UpdateLayersLaw extends IndependantLaw {
 
 	@Override
 	public void tick(Updatable object) {
+		if (layer == null)
+			layer = LAYER.DEBUG;
+
 		if (World.get() == null) {
 			layer = LAYER.DEBUG;
 			return;
@@ -33,7 +36,7 @@ public class UpdateLayersLaw extends IndependantLaw {
 
 		World world = (World) object;
 
-		var world_layer = world.getLayer(false);		
+		var world_layer = world.getLayer(false);
 		if (layer == world_layer)
 			return;
 
