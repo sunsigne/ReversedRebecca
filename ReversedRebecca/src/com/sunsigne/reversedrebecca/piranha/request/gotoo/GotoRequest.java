@@ -47,7 +47,8 @@ public class GotoRequest implements Request {
 					request.doAction(object, tempTarget.split(":")[1]);
 				} catch (Exception e) {
 					System.err.println("Problem encounter with following object : " + object.toString());
-					System.err.println("can't process following Instruction : " + "UNKOWNW_CONDITION" + "=" + targets);
+					System.err.println("can't process following Instruction : " + "UNKOWNW_CONDITION" + "=" + target);
+					System.err.println("following target is not recognized as a valid request : " + tempTarget);
 					e.printStackTrace();
 				}
 
