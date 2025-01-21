@@ -9,7 +9,7 @@ public interface WallOptimizer extends Velocity {
 
 	////////// WALL OPTIMIZER ////////////
 
-	boolean getPlayerTooFar();
+	boolean isPlayerTooFar();
 
 	void setPlayerTooFar(boolean playerTooFar);
 
@@ -17,7 +17,7 @@ public interface WallOptimizer extends Velocity {
 
 	@Override
 	public default PhysicLaw[] getPhysicLinker() {
-		if (getPlayerTooFar())
+		if (isPlayerTooFar())
 			return PhysicLinker.OPTIMIZED_WALL;
 		else
 			return PhysicLinker.COLLISIONNER;

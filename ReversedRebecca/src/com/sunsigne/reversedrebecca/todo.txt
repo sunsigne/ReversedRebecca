@@ -51,9 +51,6 @@
 	////////// EN COURS ////////////
 
 	à tester : 
-	- qualité des texte chat (flou ?)
-	- pb cutscene ? loading screen ? 
-	- (included visible hitboxe) victory screen ? reset achievement ? demo-end screen ?
 	- fonctionnement des boutons du menu ? du menu audio ? Le visuel du coffre dans le menu daltonien
 	- les animations de puzzler -> cadenas qui bouge, creusage, ordinateur qui explose, rubble qui explose et éclaire la map ?
 	- les textes actions

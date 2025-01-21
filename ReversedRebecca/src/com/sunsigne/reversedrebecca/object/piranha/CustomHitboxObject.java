@@ -22,7 +22,7 @@ public class CustomHitboxObject extends GameObject implements WallOptimizer, Ren
 	private boolean playerTooFar;
 
 	@Override
-	public boolean getPlayerTooFar() {
+	public boolean isPlayerTooFar() {
 		return playerTooFar;
 	}
 

@@ -40,7 +40,7 @@ public class Wall extends GameObject implements WallOptimizer, RenderFree, Colli
 	private boolean playerTooFar;
 
 	@Override
-	public boolean getPlayerTooFar() {
+	public boolean isPlayerTooFar() {
 		return playerTooFar;
 	}
 

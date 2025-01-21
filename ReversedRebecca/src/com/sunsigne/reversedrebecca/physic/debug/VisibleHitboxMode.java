@@ -103,12 +103,23 @@ public class VisibleHitboxMode extends DebugMode {
 
 		Color color;
 
+		// not blocking path
 		if (reactorObject.isBlockingPath() == false)
 			color = Color.GREEN;
+
+		// blocking path...
 		else {
-			if (object instanceof WallOptimizer && object instanceof PiranhaObject == false)
-				color = Color.YELLOW;
-			else
+			if (object instanceof WallOptimizer && object instanceof PiranhaObject == false) {
+				WallOptimizer wallObject = (WallOptimizer) object;
+
+				if (wallObject.isPlayerTooFar())
+					// ... if the player come closer
+					color = Color.PINK;
+				else
+					// ... currently
+					color = Color.RED;
+			} else
+				// ... always
 				color = Color.RED;
 		}
 
