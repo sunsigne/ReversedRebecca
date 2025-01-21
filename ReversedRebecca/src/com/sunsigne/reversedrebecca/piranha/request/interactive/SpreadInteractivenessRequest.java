@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -112,7 +113,7 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 			public boolean adaptSpreadInteractivenessHighlight() {
 				return adaptHighlight;
 			}
-			
+
 			////////// POSITION ////////////
 
 			@Override
@@ -167,6 +168,13 @@ public class SpreadInteractivenessRequest implements IndexRequest {
 			@Override
 			public void setVelY(int velY) {
 
+			}
+
+			////////// PHYSICS ////////////
+
+			@Override
+			public PhysicLaw[] getPhysicLinker() {
+				return null;
 			}
 
 			////////// TICK ////////////

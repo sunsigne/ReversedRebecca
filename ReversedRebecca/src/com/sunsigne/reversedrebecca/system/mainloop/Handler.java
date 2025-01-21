@@ -9,8 +9,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
-import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -163,7 +161,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	@Override
 	public void clear() {
 		var list = new ListCloner().deepClone(this);
-		
+
 		if (list.getList().size() > 0) {
 			for (Updatable tempUpdatable : list.getList()) {
 				tempUpdatable.destroyControls();
@@ -219,11 +217,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				continue;
 
 			tempObject.tick();
-
-			var physic_list = new ListCloner().deepClone(PhysicList.getList());
-			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
-				tempPhysicLaw.tick(tempObject);
-			}
+			tempObject.applyPhysics(null, 1);
 		}
 	}
 
@@ -253,18 +247,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			}
 
 			renderDependency(g, true);
-
-			var physic_list = new ListCloner().deepClone(PhysicList.getList());
-			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
-				tempPhysicLaw.beforeObjectRender(g, tempObject);
-			}
-
+			tempObject.applyPhysics(g, 2);
 			tempObject.render(g);
-
-			for (PhysicLaw tempPhysicLaw : physic_list.getList()) {
-				tempPhysicLaw.afterObjectRender(g, tempObject);
-			}
-
+			tempObject.applyPhysics(g, 3);
 			renderDependency(g, false);
 		}
 	}

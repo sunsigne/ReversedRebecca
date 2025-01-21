@@ -3,18 +3,32 @@ package com.sunsigne.reversedrebecca.object.piranha;
 import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.WallOptimizer;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class CustomHitboxObject extends GameObject implements TickFree, RenderFree, CollisionReactor {
+public class CustomHitboxObject extends GameObject implements WallOptimizer, RenderFree, CollisionReactor {
 
 	public CustomHitboxObject(int x, int y, int hitboxX, int hitboxY, int type) {
 		super(x, y);
 
 		carvingHitbox(hitboxX, hitboxY, type);
+	}
+
+	////////// WALL OPTIMIZER ////////////
+
+	private boolean playerTooFar;
+
+	@Override
+	public boolean getPlayerTooFar() {
+		return playerTooFar;
+	}
+
+	@Override
+	public void setPlayerTooFar(boolean playerTooFar) {
+		this.playerTooFar = playerTooFar;
 	}
 
 	////////// COLLISION ////////////

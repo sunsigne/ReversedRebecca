@@ -24,13 +24,14 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.Counter;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 import com.sunsigne.reversedrebecca.world.lvlstats.YOUARE;
 
-public class LevelCompletedScreen implements Updatable, GamepadEvent {
+public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent {
 
 	public LevelCompletedScreen(String nextLvl) {
 		this.nextLvl = nextLvl;

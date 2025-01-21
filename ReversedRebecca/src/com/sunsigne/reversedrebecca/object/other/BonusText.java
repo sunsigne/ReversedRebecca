@@ -7,6 +7,8 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -55,6 +57,13 @@ public class BonusText extends GameObject {
 		outlines_color = importante ? Color.WHITE : Color.BLACK;
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MOVER;
+	}
+	
 	////////// TICK ////////////
 
 	protected int time = 40;

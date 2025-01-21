@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.object.puzzle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -20,6 +22,13 @@ public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFr
 		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
 
+	////////// PHYSICS ////////////
+	
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
+	}
+	
 	////////// COLLISION ////////////
 
 	@Override

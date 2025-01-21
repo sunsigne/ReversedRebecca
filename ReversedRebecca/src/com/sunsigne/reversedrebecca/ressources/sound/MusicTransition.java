@@ -3,10 +3,11 @@ package com.sunsigne.reversedrebecca.ressources.sound;
 import javax.sound.sampled.Clip;
 
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class MusicTransition implements Updatable, RenderFree {
+public class MusicTransition implements Updatable, PhysicFree, RenderFree {
 
 	protected static Clip fadingClip;
 	protected static Clip currentClip;

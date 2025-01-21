@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
@@ -120,6 +122,13 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_MOVER;
+	}
+	
 	////////// TICK ////////////
 
 	private final int ANIMATION_TIME = 2;

@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.world.mapcreator;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -22,6 +24,13 @@ public class LightRendering implements Updatable, TickFree {
 		return world;
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.EXPLOSION;
+	}
+	
 	////////// RENDER ////////////
 
 	private LAYER layer;

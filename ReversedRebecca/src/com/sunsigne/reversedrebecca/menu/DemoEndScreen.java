@@ -17,9 +17,10 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class DemoEndScreen implements Updatable, SheetableImage {
+public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 
 	public DemoEndScreen() {
 		new Save().resetProgression();

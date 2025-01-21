@@ -9,8 +9,9 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 
-public class LivingAnimation implements SheetableImage {
+public class LivingAnimation implements SheetableImage, PhysicFree {
 
 	public LivingAnimation(LivingObject living, int animation_time, boolean orientable, int... col) {
 		this.col = col;

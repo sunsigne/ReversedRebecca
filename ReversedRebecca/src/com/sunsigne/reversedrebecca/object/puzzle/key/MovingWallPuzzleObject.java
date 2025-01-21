@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -26,6 +28,13 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 	public String toString() {
 		var clazz = "PUZZLE : MOVING WALL";
 		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
+	}
+	
+	////////// PHYSICS ////////////
+	
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
 	}
 	
 	////////// TICK ////////////

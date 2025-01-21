@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.other.BonusText;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.piranha.condition.global.PickupLootCondition;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -33,6 +35,13 @@ public abstract class LootObject extends GameObject implements SheetableImage, C
 		actionWhenLooted();
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.COLLISIONNER;
+	}
+	
 	////////// BLINKING ////////////
 
 	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);

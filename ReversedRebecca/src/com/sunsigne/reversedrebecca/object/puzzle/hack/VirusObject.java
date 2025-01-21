@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.MouseSpammableGamepad
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -79,6 +81,13 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 		mousePos.setY(mouseY);
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_HACK;
+	}
+	
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);

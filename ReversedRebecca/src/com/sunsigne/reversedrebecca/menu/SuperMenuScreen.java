@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -32,6 +34,13 @@ public abstract class SuperMenuScreen implements Updatable, TickFree, GamepadEve
 		return new Translatable().getTranslatedText(text, FilePath.MENU);
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MENU;
+	}
+	
 	////////// PRESET MOUSE POS ////////////
 
 	protected HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();

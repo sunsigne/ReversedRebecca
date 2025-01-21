@@ -18,6 +18,13 @@ public class InteractiveObject extends PiranhaObject implements TickFree {
 		refreshHighlight();
 	}
 
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		TickFree.super.tick();
+	}
+	
 	////////// PATH FINDER ////////////
 
 	@Override

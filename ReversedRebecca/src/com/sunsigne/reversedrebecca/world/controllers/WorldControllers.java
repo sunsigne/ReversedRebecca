@@ -12,11 +12,12 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.world.World;
 
-public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent, GamepadEvent, TickFree, RenderFree {
+public abstract class WorldControllers implements MouseUserEvent, KeyboardEvent, GamepadEvent, PhysicFree, TickFree, RenderFree {
 
 	public abstract WorldControllers getWorldControllers();
 

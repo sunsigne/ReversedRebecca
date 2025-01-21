@@ -5,6 +5,7 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -36,9 +37,14 @@ public class TransluantLayer implements CameraDependency {
 	public boolean isCameraDependant() {
 		return true;
 	}
-	
+
 	public void drawPsycopath(Graphics g) {
 		Updatable blackFilter = new Updatable() {
+
+			@Override
+			public PhysicLaw[] getPhysicLinker() {
+				return null;
+			}
 
 			@Override
 			public void tick() {
@@ -54,7 +60,7 @@ public class TransluantLayer implements CameraDependency {
 				Color black = new Color(0, 0, 0, alpha);
 
 				renderDependency(g2d, false);
-				
+
 				GradientPaint up_paint = new GradientPaint(0, -Size.M, deep_black, 0, Window.HEIGHT / 3, black);
 				g2d.setPaint(up_paint);
 				g2d.fillRect(0, 0, Window.WIDHT, Window.HEIGHT / 2);
@@ -63,7 +69,7 @@ public class TransluantLayer implements CameraDependency {
 						deep_black);
 				g2d.setPaint(down_paint);
 				g2d.fillRect(0, Window.HEIGHT / 2, Window.WIDHT, Window.HEIGHT / 2);
-				
+
 				renderDependency(g2d, true);
 
 				removeObject();

@@ -6,6 +6,8 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
@@ -61,6 +63,13 @@ public class AchievementObject extends GameObject {
 		return text;
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MOVER;
+	}
+	
 	////////// TICK ////////////
 
 	public void popup() {

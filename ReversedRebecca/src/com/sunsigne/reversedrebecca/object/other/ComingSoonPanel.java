@@ -8,9 +8,10 @@ import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class ComingSoonPanel extends GameObject implements TickFree {
+public class ComingSoonPanel extends GameObject implements PhysicFree, TickFree {
 
 	public ComingSoonPanel(int x, int y) {
 		super(x, y);

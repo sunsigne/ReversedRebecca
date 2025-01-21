@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -37,6 +39,29 @@ public interface Updatable {
 			if (gamepad.getGamepadController() != null)
 				gamepad.getGamepadController().removeGamepadListener();
 		}
+	}
+
+	////////// PHYSICS ////////////
+	/*
+	 * default PhysicLaw[] getPhysicLinker() { return null; };
+	 */
+	PhysicLaw[] getPhysicLinker();
+
+	default void applyPhysics(Graphics g, int type) {
+		if (getPhysicLinker() == null)
+			return;
+
+		for (PhysicLaw tempPhysicLaw : getPhysicLinker()) {
+			if (type == 1)
+				tempPhysicLaw.tick(this);
+			if (type == 2)
+				tempPhysicLaw.beforeObjectRender(g, this);
+			if (type == 3)
+				tempPhysicLaw.afterObjectRender(g, this);
+		}
+
+		if (type == 1)
+			new FastWorldMode().tick(this);
 	}
 
 	////////// TICK ////////////

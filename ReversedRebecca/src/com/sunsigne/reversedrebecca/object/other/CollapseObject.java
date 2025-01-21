@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -35,6 +37,13 @@ public class CollapseObject extends GameObject implements RenderFree, Pusher {
 		return clazz + " : " + goal.getX() + "-" + goal.getY();
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.COLLISIONNER;
+	}
+	
 	////////// TICK ////////////
 
 	private final int COLLAPSE_TIME = 180;

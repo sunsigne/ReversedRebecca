@@ -6,6 +6,8 @@ import java.awt.event.MouseEvent;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.Volume;
@@ -69,7 +71,14 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 
 		this.request = e;
 	}
+	
+	////////// PHYSICS ////////////
 
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MENU;
+	}
+	
 	////////// TICK ////////////
 
 	private boolean holding;

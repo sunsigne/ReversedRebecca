@@ -1,12 +1,14 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
-import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
+import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public enum DIG_STATE implements SheetableImage {
+public enum DIG_STATE implements SheetableImage, PhysicFree, TickFree, RenderFree {
 	DIG("shovel"), PICK("pickaxe"), CHOP("axe"), PUNCH("hand"), SLASH("sword"), CRITICAL("critical");
 
 	private String tool;
@@ -15,23 +17,11 @@ public enum DIG_STATE implements SheetableImage {
 		this.tool = tool;
 	}
 
-	////////// UPDATABLE ////////////
-
-	@Override
-	public void tick() {
-
-	}
-
-	@Override
-	public void render(Graphics g) {
-
-	}
-
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetSize() {
-		return 3*16;
+		return 3 * 16;
 	}
 
 	@Override

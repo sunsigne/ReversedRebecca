@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.object.other;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 
 public class ExclamationObject extends ExpressionObject {
@@ -13,6 +15,13 @@ public class ExclamationObject extends ExpressionObject {
 		new SoundTask().playSoundIfCamera(this, "jump");
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MOVER;
+	}
+	
 	////////// TICK ////////////
 
 	private int ymin;

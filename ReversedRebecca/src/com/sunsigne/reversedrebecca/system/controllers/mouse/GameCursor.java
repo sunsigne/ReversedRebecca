@@ -7,6 +7,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -66,6 +67,11 @@ public class GameCursor {
 		}
 
 		////////// TEXTURE ////////////
+
+		@Override
+		public PhysicLaw[] getPhysicLinker() {
+			return null;
+		}
 
 		@Override
 		public int getSheetSize() {

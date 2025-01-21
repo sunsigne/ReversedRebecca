@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -69,6 +71,13 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 		// adding right after the puzzle itself
 		LAYER.PUZZLE.getHandler().getList().add(1, fire);
 		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), fire);
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE;
 	}
 
 	////////// TICK ////////////

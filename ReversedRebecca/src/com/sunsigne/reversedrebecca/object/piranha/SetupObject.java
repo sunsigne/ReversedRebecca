@@ -12,6 +12,13 @@ public class SetupObject extends PiranhaObject implements TickFree, RenderFree {
 		setDisabled(true);
 	}
 
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		TickFree.super.tick();
+	}
+	
 	////////// PATH FINDER ////////////
 
 	@Override

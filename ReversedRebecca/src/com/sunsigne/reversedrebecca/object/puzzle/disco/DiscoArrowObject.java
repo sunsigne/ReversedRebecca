@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
@@ -89,7 +91,14 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
 	}
-
+	
+	////////// PHYSICS ////////////
+	
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
+	}
+	
 	////////// TICK ////////////
 
 	private boolean flag;

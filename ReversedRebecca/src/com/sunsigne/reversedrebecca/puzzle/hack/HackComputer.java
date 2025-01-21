@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.peripheral.PeripheralScre
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -61,6 +63,13 @@ public class HackComputer extends GameList<ProcessorObject> implements Updatable
 
 	public boolean hasMouse() {
 		return mouse;
+	}
+	
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE;
 	}
 
 	////////// TICK ////////////

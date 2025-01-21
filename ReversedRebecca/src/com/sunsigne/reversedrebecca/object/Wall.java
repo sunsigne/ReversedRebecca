@@ -3,23 +3,22 @@ package com.sunsigne.reversedrebecca.object;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class Wall extends GameObject implements TickFree, RenderFree, CollisionReactor {
+public class Wall extends GameObject implements WallOptimizer, RenderFree, CollisionReactor {
 
 	public Wall(int x, int y) {
 		super(x, y);
 	}
 
 	////////// NAME ////////////
-	
+
 	@Override
 	public String toString() {
 		var clazz = "WALL";
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + goal.getX() + "-" + goal.getY();
 	}
-	
+
 	////////// COLOR ////////////
 
 	public enum COLOR {
@@ -34,6 +33,20 @@ public class Wall extends GameObject implements TickFree, RenderFree, CollisionR
 		public String getName() {
 			return name;
 		}
+	}
+
+	////////// WALL OPTIMIZER ////////////
+
+	private boolean playerTooFar;
+
+	@Override
+	public boolean getPlayerTooFar() {
+		return playerTooFar;
+	}
+
+	@Override
+	public void setPlayerTooFar(boolean playerTooFar) {
+		this.playerTooFar = playerTooFar;
 	}
 
 	////////// COLLISION ////////////

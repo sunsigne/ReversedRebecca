@@ -5,6 +5,8 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -75,6 +77,13 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 		return getPuzzle().getState() == DIG_STATE.CRITICAL;
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE;
+	}
+	
 	////////// RENDER ////////////
 
 	public void drawSelecting(Graphics g) {

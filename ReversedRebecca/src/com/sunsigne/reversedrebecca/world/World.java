@@ -22,6 +22,8 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
@@ -422,6 +424,13 @@ public class World implements Updatable, RenderFree {
 		}
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.WORLD;
+	}
+
 	////////// TICK ////////////
 
 	private int frame = Game.SEC;
@@ -430,7 +439,7 @@ public class World implements Updatable, RenderFree {
 	public int getFrame() {
 		return time * Game.SEC + Game.SEC - frame;
 	}
-	
+
 	public int getTime() {
 		return time;
 	}

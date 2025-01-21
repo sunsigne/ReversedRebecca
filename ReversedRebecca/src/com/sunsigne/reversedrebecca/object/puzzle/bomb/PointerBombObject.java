@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.MouseSpammableGamepadObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -26,7 +28,14 @@ public class PointerBombObject extends PuzzleObject implements MouseSpammableGam
 		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
 		return clazz + " : " + pos + " / ";
 	}
+	
+	////////// PHYSICS ////////////
 
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE;
+	}
+	
 	////////// TICK ////////////
 
 	@Override

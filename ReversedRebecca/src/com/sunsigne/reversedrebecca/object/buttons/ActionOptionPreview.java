@@ -12,6 +12,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOpt
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.chest.ChestObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -37,6 +39,13 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 		return clazz + " : " + getX() + "-" + getY();
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.MENU;
+	}
+	
 	////////// TICK ////////////
 
 	private Font font;

@@ -10,8 +10,9 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 
-public class ExpressionObject extends GameObject {
+public class ExpressionObject extends GameObject implements PhysicFree {
 
 	private String name;
 

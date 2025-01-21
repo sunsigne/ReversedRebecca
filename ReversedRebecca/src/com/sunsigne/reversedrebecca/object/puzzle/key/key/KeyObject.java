@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
@@ -71,6 +73,13 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
 
+	////////// PHYSICS ////////////
+	
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
+	}
+	
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);

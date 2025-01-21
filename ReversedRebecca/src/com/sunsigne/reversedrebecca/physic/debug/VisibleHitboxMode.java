@@ -6,9 +6,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
+import com.sunsigne.reversedrebecca.object.WallOptimizer;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -99,7 +101,17 @@ public class VisibleHitboxMode extends DebugMode {
 
 		CollisionReactor reactorObject = (CollisionReactor) object;
 
-		Color color = reactorObject.isBlockingPath() ? Color.RED : Color.GREEN;
+		Color color;
+
+		if (reactorObject.isBlockingPath() == false)
+			color = Color.GREEN;
+		else {
+			if (object instanceof WallOptimizer && object instanceof PiranhaObject == false)
+				color = Color.YELLOW;
+			else
+				color = Color.RED;
+		}
+
 		renderHitbox(g2d, color, reactorObject.getBounds());
 	}
 

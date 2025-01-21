@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interacti
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
@@ -119,6 +121,13 @@ public abstract class PuzzlerObject extends GameObject
 
 	protected abstract void loadTripleAction();
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLER;
+	}
+	
 	////////// TEXTURE ////////////
 
 	protected BufferedImage image;

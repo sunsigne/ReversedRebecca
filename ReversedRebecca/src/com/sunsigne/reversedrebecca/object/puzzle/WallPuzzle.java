@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
@@ -32,6 +34,13 @@ public class WallPuzzle extends GameObject implements TickFree {
 		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
 
+	////////// PHYSICS ////////////
+	
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE;
+	}
+	
 	////////// RENDER ////////////
 
 	private BufferedImage image;

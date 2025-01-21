@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.antivirus.AntivirusLocker;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackComputer;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
@@ -88,6 +90,13 @@ public abstract class ProcessorObject extends PuzzleObject implements SheetableI
 		new SoundTask().play(SOUNDTYPE.SOUND, volume, path, false, false);
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_HACK;
+	}
+	
 	////////// TICK ////////////
 
 	private boolean flag;

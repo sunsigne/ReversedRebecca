@@ -2,10 +2,11 @@ package com.sunsigne.reversedrebecca.object.piranha.living.bosses;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public abstract class BossPattern implements Updatable, RenderFree {
+public abstract class BossPattern implements Updatable, PhysicFree, RenderFree {
 
 	public BossPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		this.boss = boss;

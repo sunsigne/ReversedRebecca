@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -114,6 +116,11 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 	private void createRender() {
 		TickFree grayFilter = new TickFree() {
 
+			@Override
+			public PhysicLaw[] getPhysicLinker() {
+				return PhysicLinker.MENU;
+			}
+			
 			@Override
 			public void render(Graphics g) {
 				new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);

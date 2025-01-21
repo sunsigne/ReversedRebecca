@@ -30,11 +30,12 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
+public class ChatBox implements Updatable, PhysicFree, TickFree, KeyboardEvent, GamepadEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue, String tag) {
 		this.object = object;

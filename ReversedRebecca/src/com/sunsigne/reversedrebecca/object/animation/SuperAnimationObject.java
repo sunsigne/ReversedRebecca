@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -27,6 +29,13 @@ public abstract class SuperAnimationObject extends GameObject implements Sheetab
 		return clazz + " : " + getName().toUpperCase();
 	}
 
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.ANIMATION;
+	}
+	
 	////////// TICK ////////////
 
 	protected final int ANIMATION_TIME = 60;

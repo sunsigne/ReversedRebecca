@@ -3,10 +3,11 @@ package com.sunsigne.reversedrebecca.object;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class PathPointObject extends GameObject implements TickFree, RenderFree, PathSearcher {
+public class PathPointObject extends GameObject implements PhysicFree, TickFree, RenderFree, PathSearcher {
 
 	public PathPointObject(int x, int y) {
 		super(x, y);

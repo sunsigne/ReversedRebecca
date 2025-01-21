@@ -8,6 +8,8 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -79,6 +81,13 @@ public class ChatContent implements Updatable {
 			currentText[0] = sentence[0];
 			currentText[1] = sentence[1];
 		}
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.CHAT;
 	}
 
 	////////// TICK ////////////
@@ -194,7 +203,8 @@ public class ChatContent implements Updatable {
 		try {
 			String data = new FileTask().read(userData, mood, moodFilePath);
 			if (data.split(",").length < 2) {
-				System.err.println("Problem encounter with following text dialogue : " + sentence[0] + " " + sentence[1]);
+				System.err
+						.println("Problem encounter with following text dialogue : " + sentence[0] + " " + sentence[1]);
 				System.err.println(
 						"Image for following character and mood can't be found : " + living_name + " - " + mood);
 			}

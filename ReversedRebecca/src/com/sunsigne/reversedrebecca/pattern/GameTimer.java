@@ -3,11 +3,12 @@ package com.sunsigne.reversedrebecca.pattern;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class GameTimer implements Updatable, RenderFree {
+public class GameTimer implements Updatable, PhysicFree, RenderFree {
 
 	public GameTimer(int timeInTicks) {
 		this(timeInTicks, false, null);
