@@ -52,7 +52,7 @@
 
 	bug d'optimisation :
 	- la boucle qui récupère la totalité des objets piranha (dans les instructions) est trop gourmande
-	- la présence d'un trop grand nombre d'objectr piranha
+	- la présence d'un trop grand nombre d'objectr piranha (tous les lvl sauf lvl001)
 	
 	bug : ws000 -> j'étais en fast mode à ce moment là, mais je suis passé à travers sarah du haut sur le dialogue de fin "tp centré sur la case pendant cinématique"
 	key -> complètement fou lorsque le cadenas est à l'envers
@@ -69,6 +69,10 @@
 	itch.io -> stabiliser les images en allant les chercher sur github ?
 	lvl001, npc-12, ligne 44 -> ouvrir le sas fait quoi au juste ? + jean qui rentre dans la cryroom -> vérifier que le joueur caché est toujours valide
 	lvl001 obj-23 ligne 16 ?
+
+	pour build public :
+	- lvl001 faire l'adaptation
+	- les lois de la physique : passé au nouveau système
 
 	EXPERIENCE UTILISATEUR - puzzle de la porte -> les joueurs ne comprennent pas qu'ils peuvent déplacer en haut et en bas le cadenas : dessiner des flêches pour le dessin de tuto
 
