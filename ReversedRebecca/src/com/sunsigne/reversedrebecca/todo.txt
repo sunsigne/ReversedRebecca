@@ -50,27 +50,18 @@
 
 	////////// EN COURS ////////////
 
-	à tester : 
-	- coming soon panneau (existant ? normalement pas "bloquant" d'eux-même de toute façon) + decoration object (même logique)
-	- psycopath rendenring (World & TransluantLayer)
-	- custom hitobx object & wall -> vérifier la statilité du code durant les pathfinding
-
-	pb: 
-	- le fastmode ne marche plus
-	- hack -> l'inverseur à le même pb qu'avant
-	- dig : les otuils et sortie apparaissent en au à gauche
-	- le paralyser remet en Y, mais pas en x
-
 	bug d'optimisation :
-	- la boucle des les lois de la physique est trop gourmandes !
 	- la boucle qui récupère la totalité des objets piranha (dans les instructions) est trop gourmande
 	- la présence d'un trop grand nombre d'objectr piranha
 	
 	bug : ws000 -> j'étais en fast mode à ce moment là, mais je suis passé à travers sarah du haut sur le dialogue de fin "tp centré sur la case pendant cinématique"
-	le puzzle de la door est complètement fou lorsque le cadenas est à l'envers
+	key -> complètement fou lorsque le cadenas est à l'envers
+	hack -> l'inverseur à le même pb qu'avant+ le paralyser remet en Y, mais pas en x
+	dig : les otuils et sortie apparaissent en au à gauche
 	les trous ne fonctionnent plus comme avant (interactivité quand on est dessus)
+	lvl001 softlock possible (jean qui te bloque dans les toilettes si tu y vas avant lui)
 
-	le fichier "mappable.txt" n'est plus -> la partie "customisable hitbox objet" n'est plus à jour : parler des 2 nouveaux modèles + est-ce que "pas de piranha" est tj d'actualité ? + préciser qu'ils ne cachent pas la vue
+	le fichier "mappable.txt" n'est plus d'actualité -> la partie "customisable hitbox objet" n'est plus à jour : parler des 2 nouveaux modèles + est-ce que "pas de piranha" est tj d'actualité ? + préciser qu'ils ne cachent pas la vue
 
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS"
 	lvl002 - plant dans le couloir pas fini !!!

@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -212,12 +213,14 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		updateHandler();
 
 		var list = new ListCloner().deepClone(this);
+
 		for (Updatable tempObject : list.getList()) {
 			if (getList().contains(tempObject) == false)
 				continue;
 
 			tempObject.tick();
 			tempObject.applyPhysics(null, 1);
+			FastWorldMode.debugMode.getDebugMode().tick(tempObject);
 		}
 	}
 

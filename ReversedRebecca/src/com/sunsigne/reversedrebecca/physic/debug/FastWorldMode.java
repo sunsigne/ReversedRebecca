@@ -9,7 +9,7 @@ public class FastWorldMode extends DebugMode {
 
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new FastWorldMode();
+	public static final DebugMode debugMode = new FastWorldMode();
 
 	@Override
 	public DebugMode getDebugMode() {

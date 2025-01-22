@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.system.mainloop;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
-import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -57,9 +56,6 @@ public interface Updatable {
 			if (type == 3)
 				tempPhysicLaw.afterObjectRender(g, this);
 		}
-
-		if (type == 1)
-			new FastWorldMode().getDebugMode().tick(this);
 	}
 
 	////////// TICK ////////////
