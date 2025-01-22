@@ -51,34 +51,15 @@
 	////////// EN COURS ////////////
 
 	à tester : 
-	- fonctionnement des boutons du menu ? du menu audio ? Le visuel du coffre dans le menu daltonien
-	- les animations de puzzler -> cadenas qui bouge, creusage, ordinateur qui explose, rubble qui explose et éclaire la map ?
-	- les textes actions
-	- les boutons de debug (fade during fading menu ? correct higlhight ?)
-	- hud (pv + affichage correct & clignottement des outils)
-	- les outils par terre (leur apparition et leur ramassage)
-	- le pathfinding des NPC (pathpoint & goalobject)
-	- achievement
-	- bonus text
 	- coming soon panneau (existant ? normalement pas "bloquant" d'eux-même de toute façon) + decoration object (même logique)
-	- expression (normal + exclamation)
-	- collapse object
 	- psycopath rendenring (World & TransluantLayer)
-	- GameTimer ? (je ne sais pas comment on vérifie ça, mais en principe ça devrait marcher... ?)
-	- puzzle (bomb (et pointeur au dessus), clef & cadenas (les collisions), pelle et pioche (et mouse au dessus), processor, virus (au dessus), coffre (hightlight, arrivée & départ) + fading
-	- discoPuzzle : text, fleches, flecheplayer, discoball, discodancer, fire
-	- puzzler (hibox, highlight -> surtout des différents types de trou)
-	- les bubble de requieremennt & la transition des musiques
-	- point sensible : vérifier que le hack puzzle est stable (spammer la sortie et l'entrée d'un fichier)
-	- GameCursor (en principe, la souris est toujours au dessus de tout. Juste vérifier)
-	- spreadInteracitvenessRequest (vérifier que ça fonctionne toujours : hightlight, single interactive & désactivation des autres si utilisé
 	- custom hitobx object & wall -> vérifier la statilité du code durant les pathfinding
-	- vérifier que la PsocopathLaw s'active
-	- le joueur, et tout particulièrement le highlight et durant les cinématiques
-	- LivingAnimation ? (normalement il n'y a rien de spécial)
-	- les NPC (les lois de la physique qui les régies)
-	- les Piranha (les lois de la physique qui les régies)
-	- le world (les lois de la physique qui les régies)
+
+	pb: 
+	- le fastmode ne marche plus
+	- hack -> l'inverseur à le même pb qu'avant
+	- dig : les otuils et sortie apparaissent en au à gauche
+	- le paralyser remet en Y, mais pas en x
 
 	bug d'optimisation :
 	- la boucle des les lois de la physique est trop gourmandes !

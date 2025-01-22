@@ -42,9 +42,7 @@ public interface Updatable {
 	}
 
 	////////// PHYSICS ////////////
-	/*
-	 * default PhysicLaw[] getPhysicLinker() { return null; };
-	 */
+
 	PhysicLaw[] getPhysicLinker();
 
 	default void applyPhysics(Graphics g, int type) {
@@ -61,7 +59,7 @@ public interface Updatable {
 		}
 
 		if (type == 1)
-			new FastWorldMode().tick(this);
+			new FastWorldMode().getDebugMode().tick(this);
 	}
 
 	////////// TICK ////////////
