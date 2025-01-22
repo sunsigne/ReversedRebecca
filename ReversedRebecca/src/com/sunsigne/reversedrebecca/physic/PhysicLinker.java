@@ -87,7 +87,7 @@ public class PhysicLinker {
 	public static final PhysicLaw[] COLLISIONNER = { C_COLLISION, D_HITBOX };
 	public static final PhysicLaw[] EXPLOSION = { I_EXPLOSION };
 	public static final PhysicLaw[] HUD = { I_HUD };
-	public static final PhysicLaw[] MOVER = { C_VELOCITY/* , C_TILE, D_SWIFT */ };
+	public static final PhysicLaw[] MOVER = { C_VELOCITY };
 	public static final PhysicLaw[] MENU = { I_FADE_MENU, D_HITBOX };
 	public static final PhysicLaw[] OPTIMIZED_WALL = { D_HITBOX };
 	public static final PhysicLaw[] PROJECTILE = { C_VELOCITY, C_COLLISION, D_HITBOX };
