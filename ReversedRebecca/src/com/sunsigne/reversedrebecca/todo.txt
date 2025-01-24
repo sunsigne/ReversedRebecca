@@ -54,10 +54,9 @@
 	- la boucle qui récupère la totalité des objets piranha (dans les instructions) est trop gourmande
 	- réduire nombre d'objet piranha sur rr000
 	
-	bug : ws000 -> j'étais en fast mode à ce moment là, mais je suis passé à travers sarah du haut sur le dialogue de fin "tp centré sur la case pendant cinématique"
+	bug : 
 	key -> complètement fou lorsque le cadenas est à l'envers
 	hack -> l'inverseur à le même pb qu'avant+ le paralyser remet en Y, mais pas en x
-	dig : les otuils et sortie apparaissent en au à gauche
 	les trous ne fonctionnent plus comme avant (interactivité quand on est dessus)
 	lvl001 softlock possible (jean qui te bloque dans les toilettes si tu y vas avant lui)
 
@@ -161,6 +160,7 @@
 
 	les menu clignottent lorsqu'ils sont refresh, à corriger !
 	vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
+	2h00 - les NPC passent au travers des murs si le joueur est loin (pose pb avec Sarah dans le scénarion "Inquery", lorsqu'elle ouvre la porte pour Jean)
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
 	30h arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?

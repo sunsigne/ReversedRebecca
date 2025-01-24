@@ -205,6 +205,8 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 					continue;
 
 				dirt.setBuriedObject(tool, getSize(), getSize());
+				tool.setX(dirt.getX());
+				tool.setY(dirt.getY());
 				return;
 			}
 			BuriedObstacleObject obstacle = (BuriedObstacleObject) buried;
@@ -217,6 +219,8 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 				if (isImpossiblePuzzle(tool.getState(), obstacle.getState()) == false) {
 
 					obstacle.setBuriedObject(tool, getSize(), getSize());
+					tool.setX(obstacle.getX());
+					tool.setY(obstacle.getY());
 					tool_map.put(tool.getState(), obstacle.getState());
 					return;
 				}
@@ -246,6 +250,8 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 		} while (true);
 
 		dirt.setBuriedObject(tool, getSize(), getSize());
+		tool.setX(dirt.getX());
+		tool.setY(dirt.getY());
 	}
 
 	private boolean isImpossiblePuzzle(DIG_STATE tool_state, DIG_STATE obstacle_state) {
@@ -279,9 +285,13 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 				return;
 			}
 			obstacle.setBuriedObject(exit, getSize(), getSize());
+			exit.setX(obstacle.getX());
+			exit.setY(obstacle.getY());
 			exit_list.addObject(exit);
 		} else {
 			dirt.setBuriedObject(exit, getSize(), getSize());
+			exit.setX(dirt.getX());
+			exit.setY(dirt.getY());
 			exit_list.addObject(exit);
 		}
 
