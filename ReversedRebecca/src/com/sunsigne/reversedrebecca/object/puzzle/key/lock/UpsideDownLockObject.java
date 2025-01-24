@@ -23,7 +23,7 @@ public class UpsideDownLockObject extends LockObject {
 	public void tick() {
 		MousePos mousePos = new MousePos();
 		int mouseX = mousePos.getX();
-		int mouseY = mousePos.getX();
+		int mouseY = mousePos.getY();
 			
 		keepMouseWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
 		
