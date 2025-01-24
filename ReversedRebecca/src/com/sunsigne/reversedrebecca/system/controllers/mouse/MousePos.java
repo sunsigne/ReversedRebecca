@@ -39,7 +39,7 @@ public class MousePos {
 	public void setX(int x, boolean paramount) {
 		try {
 			if (mouseOver(0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove((int) (x * Window.SCALE_X), (int) (mouseY * Window.SCALE_Y));
+				new Robot().mouseMove((int) (x * Window.SCALE_X), (int) (new MousePos().getY() * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}
@@ -52,7 +52,7 @@ public class MousePos {
 	public void setY(int y, boolean paramount) {
 		try {
 			if (mouseOver(0, 0, Window.WIDHT, Window.HEIGHT) || paramount)
-				new Robot().mouseMove((int) (mouseX * Window.SCALE_X), (int) (y * Window.SCALE_Y));
+				new Robot().mouseMove((int) (new MousePos().getX() * Window.SCALE_X), (int) (y * Window.SCALE_Y));
 		} catch (AWTException e) {
 			e.printStackTrace();
 		}

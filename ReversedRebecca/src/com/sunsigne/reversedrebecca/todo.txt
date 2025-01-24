@@ -56,7 +56,6 @@
 	
 	bug : 
 	key -> complètement fou lorsque le cadenas est à l'envers
-	hack -> l'inverseur à le même pb qu'avant+ le paralyser remet en Y, mais pas en x
 	les trous ne fonctionnent plus comme avant (interactivité quand on est dessus)
 	lvl001 softlock possible (jean qui te bloque dans les toilettes si tu y vas avant lui)
 
