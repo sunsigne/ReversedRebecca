@@ -172,8 +172,8 @@ Attention ! Ce Type de Requête N'EST PAS de Type Player (voir la partie « Pi
 Le Type de Requête PLAYER_AVOIDER_TYPE permet de changer le « type d'évitement » (voir pages suivantes) d'un NPC à l'égard du joueur.
 
 Exemple :
-TIME → 0 = PLAYER_AVOIDER_TYPE → AROUND
-TIME → 0 = GOTO → PLAYER_AVOIDER_TYPE:AROUND
+TIME -> 0 = PLAYER_AVOIDER_TYPE -> AROUND
+TIME -> 0 = GOTO -> PLAYER_AVOIDER_TYPE:AROUND
 
 Lorsque la Condition sera vérifiée, l'objet adoptera le type d'évitement « AROUND » (qui est celui attribué par défaut).
 

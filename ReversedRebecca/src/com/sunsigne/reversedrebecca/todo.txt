@@ -55,9 +55,7 @@
 	- réduire nombre d'objet piranha sur rr000
 	
 	bug : 
-	key -> complètement fou lorsque le cadenas est à l'envers
 	les trous ne fonctionnent plus comme avant (interactivité quand on est dessus)
-	lvl001 softlock possible (jean qui te bloque dans les toilettes si tu y vas avant lui)
 
 	le fichier "mappable.txt" n'est plus d'actualité -> la partie "customisable hitbox objet" n'est plus à jour : parler des 2 nouveaux modèles + est-ce que "pas de piranha" est tj d'actualité ? + préciser qu'ils ne cachent pas la vue
 
