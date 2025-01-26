@@ -51,8 +51,13 @@
 	////////// EN COURS ////////////
 
 	bug d'optimisation :
-	- la boucle qui récupère la totalité des objets piranha (dans les instructions) est trop gourmande
-	- réduire nombre d'objet piranha sur rr000
+	- réduire nombre d'objet piranha sur rr000 :
+		- obj 06 et 07 (dual sink et baignoire) à spreadInteractive
+		- pareil pour obj 15 (big furniture du salon), 
+		- le 13 n'extiste pas
+		- le 19 (la chaise du bureau) peut être englobé dans le 18.
+		- pas vérifié à partir du 19 exclus
+	
 
 	le fichier "mappable.txt" n'est plus d'actualité -> la partie "customisable hitbox objet" n'est plus à jour : parler des 2 nouveaux modèles + est-ce que "pas de piranha" est tj d'actualité ? + préciser qu'ils ne cachent pas la vue
 
