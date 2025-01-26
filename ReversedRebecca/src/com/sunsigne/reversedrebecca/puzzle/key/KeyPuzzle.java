@@ -103,7 +103,7 @@ public abstract class KeyPuzzle extends Puzzle {
 			do {
 				radRow = getRow(rad.getIntBetween(1, 6));
 				if (isTutorial())
-					radRow = rad.getBoolean() ? getRow(rad.getIntBetween(1, 2)) : getRow(rad.getIntBetween(5, 6));
+					radRow = rad.getBoolean() ? 1 : 6;
 			} while (radRow == safeRow);
 
 			if (moving)
@@ -170,7 +170,7 @@ public abstract class KeyPuzzle extends Puzzle {
 
 		if (world.getMapName().equalsIgnoreCase(FilePath.TUTORIAL))
 			return true;
-		
+
 		if (world.getMapName().equalsIgnoreCase(FilePath.LVL000))
 			return true;
 
