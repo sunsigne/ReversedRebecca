@@ -39,6 +39,10 @@ REGISTER = SARAH*PANCAKES_GIVEN
 REGISTER = SARAH*ANGRY_REALLY_HARD
 REGISTER = PSYCHOPATH*SARAH_SEQUESTRATION
 
+///// NULL /////
+
+OBJ-13 / OBJ-23 / OBJ-44
+
 ///// BEDROOM /////
 
 OBJ-01 = Bed & Bed Leaver
@@ -75,8 +79,6 @@ OBJ-19 = Chair
 OBJ-20 = Vertical Couch
 OBJ-21 = Couch Leaver
 OBJ-22 = Horizontal Couch
-OBJ-44 = Horizontal Couch Left Part
-OBJ-23 = Couch Leaver
 OBJ-24 = TV
 OBJ-25 = Bookshelf
 OBJ-26 = Table

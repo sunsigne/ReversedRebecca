@@ -186,7 +186,7 @@ public class Game extends Canvas implements Runnable {
 
 			if (System.currentTimeMillis() - timer >= 1000) {
 				timer += 1000;
-				displayMemoryUsage();
+//				displayMemoryUsage();
 //				System.out.println("Ticks : " + ticks + ", FPS : " + frames);
 //				frames = 0;
 //				ticks = 0;
@@ -195,6 +195,7 @@ public class Game extends Canvas implements Runnable {
 		stop();
 	}
 
+	@SuppressWarnings("unused")
 	private void displayMemoryUsage() {
 		if (Infos.IS_DEV_VERSION == false)
 			return;

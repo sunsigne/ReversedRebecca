@@ -51,28 +51,31 @@
 	////////// EN COURS ////////////
 
 	bug d'optimisation :
-	- réduire nombre d'objet piranha sur rr000 :
-		- obj 06 et 07 (dual sink et baignoire) à spreadInteractive
-		- pareil pour obj 15 (big furniture du salon), 
-		- le 13 n'extiste pas
-		- le 19 (la chaise du bureau) peut être englobé dans le 18.
-		- pas vérifié à partir du 19 exclus
+	- le tchat lag sur l'ordi d'ophélie
+	- pareil pour les puzzle, ça vient de la souris ?
 	
+	bug : la souris dépasse de l'ordi de Yan
+	ws000 - après la simulation, quand o parle à sarah, si on est "en bas", rebecca regarde "en haut" pendant le dialogue au lieu de "à droite"
+	
+	interactivité : faire comme dans le proto : si dépassé de moins de la motié d'une case, on peut interagir avec (trous)
 
 	le fichier "mappable.txt" n'est plus d'actualité -> la partie "customisable hitbox objet" n'est plus à jour : parler des 2 nouveaux modèles + est-ce que "pas de piranha" est tj d'actualité ? + préciser qu'ils ne cachent pas la vue
-
 	GDD - mettre à jour "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS"
-	lvl002 - plant dans le couloir pas fini !!!
 	
 	itch.io -> stabiliser les images en allant les chercher sur github ?
 	lvl001, npc-12, ligne 44 -> ouvrir le sas fait quoi au juste ? + jean qui rentre dans la cryroom -> vérifier que le joueur caché est toujours valide
 	lvl001 obj-23 ligne 16 ?
 
+	à faire pour la 0.4.0.8p :
+	- UE : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer
+	
+	à faire plus tard :
+	- Gamepad : vérifier la liste des choses à faire absoluement
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
-	"partir sans Sarah" -> trop gros décalage entre le texte et les conséquences
-	ControlsScreen : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer + mettre message d'erreur quand clef non assignée
+	ControlsScreen : mettre message d'erreur quand clef non assignée
 	AudioScreen : mettre un bouton reset pour remettre à 100%
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 	digpuzzle : faire clignoter l'outils lorsque récupéré
@@ -279,6 +282,7 @@
 
 	////////// LVL002 ////////////
 	
+	plante dans le couloir pas fini !!!
 	réduire nombre d'objet piranha sur lvl002
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
@@ -362,6 +366,7 @@
 	la mort (la grande faucheuse directement)
 	luther + cursed 3 (TOUS les objets qui bougent et l'écran qui dégouline)
 	cafard & araignées (Rebecca a peur de l'un, Sarah de l'autre. Ca peut même devenir la mécanique pour passer ?)
+	un monstre qui n'attaque que si le joueur (devant son écran, pas rebecca) le voit. Il y a une action "[E] fermer les yeux", et se guider au bruit. A un moment, la porte claque, on pense qu'il est partie et on réouvre les yeux, mais en vérité il a feinté le joueur et il lui saute dessus s'il réouvre les yeux à ce moment là
 	
 	////////// TRADUCTION ////////////
 	
