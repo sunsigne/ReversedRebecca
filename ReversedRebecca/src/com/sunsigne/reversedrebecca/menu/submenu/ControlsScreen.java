@@ -65,17 +65,22 @@ public class ControlsScreen extends SubMenuScreen {
 	private TitleScreenText thirdLine;
 	private TitleScreenText fourthLine;
 
+	private TitleScreenText firstOrLine;
+	private TitleScreenText secondOrLine;
+	private TitleScreenText thirdOrLine;
+	private TitleScreenText fourthOrLine;
+	
 	private String menuPauseText;
 	private String movementsText;
 	private String action1Text;
 	private String action2Text;
 	private String action3Text;
 	private String dialogueText;
-	
+
 	private String format(String text) {
 		return new FormattedString().getNoSpecialCharacter(text).toUpperCase();
 	}
-	
+
 	private void loadText() {
 		int x = 525;
 		int y = 323;
@@ -84,6 +89,12 @@ public class ControlsScreen extends SubMenuScreen {
 		secondLine = getTitleScreenText(x, y + 104);
 		thirdLine = getTitleScreenText(x, y + 208);
 		fourthLine = getTitleScreenText(x, y + 312);
+		
+		x = x + 529;
+		firstOrLine = getTitleScreenText(x, y);
+		secondOrLine = getTitleScreenText(x, y + 104);
+		thirdOrLine = getTitleScreenText(x, y + 208);
+		fourthOrLine = getTitleScreenText(x, y + 312);
 
 		menuPauseText = format(translate("MenuPause"));
 		movementsText = format(translate("Movements"));
@@ -91,11 +102,16 @@ public class ControlsScreen extends SubMenuScreen {
 		action2Text = format(translate("Action2"));
 		action3Text = format(translate("Action3"));
 		dialogueText = format(translate("Dialogue"));
-		
+
 		LAYER.MENU.addObject(firstLine);
 		LAYER.MENU.addObject(secondLine);
 		LAYER.MENU.addObject(thirdLine);
 		LAYER.MENU.addObject(fourthLine);
+		
+		LAYER.MENU.addObject(firstOrLine);
+		LAYER.MENU.addObject(secondOrLine);
+		LAYER.MENU.addObject(thirdOrLine);
+		LAYER.MENU.addObject(fourthOrLine);
 	}
 
 	private TitleScreenText getTitleScreenText(int x, int y) {
@@ -143,7 +159,7 @@ public class ControlsScreen extends SubMenuScreen {
 		Key key = new UpKey();
 		GenericListener onPress = () -> refresh(upButton, key, false);
 		String text = key.getRegisteredKey();
-		upButton = getKeyboardButton(text, 0, 0, onPress);
+		upButton = getKeyboardButton(text, -86, 0, onPress);
 	}
 
 	private ButtonObject downButton;
@@ -152,7 +168,7 @@ public class ControlsScreen extends SubMenuScreen {
 		Key key = new DownKey();
 		GenericListener onPress = () -> refresh(downButton, key, false);
 		String text = key.getRegisteredKey();
-		downButton = getKeyboardButton(text, 0, 104, onPress);
+		downButton = getKeyboardButton(text, -86, 104, onPress);
 	}
 
 	private ButtonObject leftButton;
@@ -161,7 +177,7 @@ public class ControlsScreen extends SubMenuScreen {
 		Key key = new LeftKey();
 		GenericListener onPress = () -> refresh(leftButton, key, false);
 		String text = key.getRegisteredKey();
-		leftButton = getKeyboardButton(text, 0, 208, onPress);
+		leftButton = getKeyboardButton(text, -86, 208, onPress);
 	}
 
 	private ButtonObject rightButton;
@@ -170,7 +186,7 @@ public class ControlsScreen extends SubMenuScreen {
 		Key key = new RightKey();
 		GenericListener onPress = () -> refresh(rightButton, key, false);
 		String text = key.getRegisteredKey();
-		rightButton = getKeyboardButton(text, 0, 312, onPress);
+		rightButton = getKeyboardButton(text, -86, 312, onPress);
 	}
 
 	private ButtonObject dialogueButton;
@@ -230,14 +246,14 @@ public class ControlsScreen extends SubMenuScreen {
 
 	private ButtonObject createArrowButton(String text, int x, GenericListener onPress) {
 		ButtonObject button = new TitleScreenButton(text, 920 + x, 460 + 312, 60, 60, onPress, null) {
-			
+
 			@Override
 			public void render(Graphics g) {
 				if (ControllerManager.getInstance().isUsingGamepad() == false)
 					super.render(g);
 			}
 		};
-		
+
 		((TitleScreenButton) button).setFontSize(40f);
 		return button;
 	}
@@ -272,6 +288,11 @@ public class ControlsScreen extends SubMenuScreen {
 		secondLine.setText(translate("Down"));
 		thirdLine.setText(translate("Left"));
 		fourthLine.setText(translate("Right"));
+		
+		firstOrLine.setText(translate("Or"));
+		secondOrLine.setText(translate("Or"));
+		thirdOrLine.setText(translate("Or"));
+		fourthOrLine.setText(translate("Or"));
 
 		LAYER.MENU.getHandler().softRemoveObject(dialogueButton);
 		LAYER.MENU.getHandler().softRemoveObject(actionOneButton);
@@ -293,6 +314,11 @@ public class ControlsScreen extends SubMenuScreen {
 		thirdLine.setText(translate("Action2"));
 		fourthLine.setText(translate("Action3"));
 
+		firstOrLine.setText("");
+		secondOrLine.setText("");
+		thirdOrLine.setText("");
+		fourthOrLine.setText("");
+		
 		LAYER.MENU.getHandler().softRemoveObject(upButton);
 		LAYER.MENU.getHandler().softRemoveObject(downButton);
 		LAYER.MENU.getHandler().softRemoveObject(leftButton);
@@ -330,6 +356,23 @@ public class ControlsScreen extends SubMenuScreen {
 		return gamepad_image;
 	}
 
+	private BufferedImage image;
+	private BufferedImage arrow_image;
+
+	protected BufferedImage getImage() {
+		if (image == null) {
+			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
+			xl = getName().contains("_xl");
+		}
+
+		if (arrow_image == null) {
+			arrow_image = new ImageTask().loadImage("textures/menu/" + getName() + "_arrows", true);
+			xl = getName().contains("_xl");
+		}
+
+		return actionKeyScreen ? image : arrow_image;
+	}
+
 	////////// RENDER ////////////
 
 	@Override
@@ -345,22 +388,22 @@ public class ControlsScreen extends SubMenuScreen {
 	}
 
 	private Font font = new FontTask().createNewFont("dogicabold.ttf", 35f);
-	
+
 	private void drawGamepadTexts(Graphics g) {
 		var text = new TextDecoration();
 		int[] rect;
-		
-		rect = new int[] {888, 768, 150, 80};
+
+		rect = new int[] { 888, 768, 150, 80 };
 		text.drawOutlinesString(g, font, menuPauseText, DIRECTION.NULL, rect);
-		rect = new int[] {435, 298, 150, 80};
+		rect = new int[] { 435, 298, 150, 80 };
 		text.drawOutlinesString(g, font, movementsText, DIRECTION.RIGHT, rect);
-		rect = new int[] {1280, 216, 150, 80};
+		rect = new int[] { 1280, 216, 150, 80 };
 		text.drawOutlinesString(g, font, action1Text, DIRECTION.LEFT, rect);
-		rect = new int[] {1280, 270, 150, 80};
+		rect = new int[] { 1280, 270, 150, 80 };
 		text.drawOutlinesString(g, font, action2Text, DIRECTION.LEFT, rect);
-		rect = new int[] {1280, 324, 150, 80};
+		rect = new int[] { 1280, 324, 150, 80 };
 		text.drawOutlinesString(g, font, action3Text, DIRECTION.LEFT, rect);
-		rect = new int[] {1280, 474, 150, 80};
+		rect = new int[] { 1280, 474, 150, 80 };
 		text.drawOutlinesString(g, font, dialogueText, DIRECTION.LEFT, rect);
 	}
 

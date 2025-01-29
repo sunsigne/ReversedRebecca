@@ -73,7 +73,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 
 	////////// RENDER ////////////
 
-	private boolean xl;
+	protected boolean xl;
 
 	@Override
 	public void render(Graphics g) {

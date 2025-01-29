@@ -63,9 +63,6 @@
 	lvl001, npc-12, ligne 44 -> ouvrir le sas fait quoi au juste ? + jean qui rentre dans la cryroom -> vérifier que le joueur caché est toujours valide
 	lvl001 obj-23 ligne 16 ?
 
-	à faire pour la 0.4.0.8p :
-	- UE : mettre des flêches pour informer le joueur qu'il peut utiliser les flêches pour se déplacer
-	
 	à faire plus tard :
 	- Gamepad : vérifier la liste des choses à faire absoluement
 
@@ -90,6 +87,7 @@
 	vérifié si réglé :
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 
+	0h10 vérifier que le OCntrolScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
 	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
