@@ -103,7 +103,7 @@ public abstract class KeyPuzzle extends Puzzle {
 			do {
 				radRow = getRow(rad.getIntBetween(1, 6));
 				if (isTutorial())
-					radRow = rad.getBoolean() ? 1 : 6;
+					radRow = rad.getBoolean() ? getRow(1) : getRow(6);
 			} while (radRow == safeRow);
 
 			if (moving)
