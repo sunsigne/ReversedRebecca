@@ -85,11 +85,11 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 			if (new PlayerFinder().isPlayerFutherThan(tempInteractive, 1))
 				continue;
 
-			/*
+			
 			// player is superimposed on the object
 			if (new PlayerFinder().isPlayerCloserThan(tempInteractive, 1))
-				continue;
-			 */
+				return true;
+			
 
 			// player is watching the object
 			switch (player.getFacing()) {
