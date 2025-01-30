@@ -140,18 +140,19 @@ Red = 128 plus ou moins X (jusqu'à 8) / 128 plus or minus X (up to 8)
 Green = 128 plus ou moins Y (jusqu'à 8) / 128 plus or minus Y (up to 8)
 Blue = dépend du rocher / depends on the rock
 
-Mur / Wall -> 255
-Rocher Pyramidale / Pyramidal Rock -> 254
-Petit Rocher / Small Rock -> 253
-Rocher Plat / Flat Rock -> 252
-Gros Rocher / Big Rock -> 251
+Mur / Wall -> 255 -> (0, 0, 16, 16) 
+Rocher Pyramidale / Pyramidal Rock -> 254 -> (0, -2, 8, 11) 
+Petit Rocher / Small Rock -> 253 -> (0, -2, 10, 10) 
+Rocher Plat / Flat Rock -> 252 -> (0, -2, 13, 11) 
+Gros Rocher / Big Rock -> 251 -> (0, -2, 12, 16) 
+Canapé Horizontal / Horizontal Couch -> 250 -> (0, 0, 16, 17) 
+Canapé Vertical / Vertical Couch -> 249 -> (0, 0, 15, 10) 
 
 exemple :
 Rocher Pyramidale décalé de 4 pixels vers la droite et de 3 pixels vers le haut : 132-125-254
 Pyramidal Rock shifted 4 pixels to the right and 3 pixels up : 132-125-254
 
-Attention ! Ces pastilles ne PEUVENT PAS être utilisées dans le cadre d'Instructions Piranha. Leurs usages est exclusivement prévu pour les fichiers de map.
-Attention ! These chips CANNOT be used in Piranha Instructions. Their use is exclusively intended for map files.
+Note : contrairement aux murs "classiques", ces murs et rochers ne cachent pas la ligne de vue.
 
 
 ////// AUTRE / OTHER //////
