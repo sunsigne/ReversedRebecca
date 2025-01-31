@@ -60,10 +60,6 @@
 	bug : la souris dépasse de l'ordi de Yan
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS"
-	
-
-	lvl001, npc-12, ligne 44 -> ouvrir le sas fait quoi au juste ? + jean qui rentre dans la cryroom -> vérifier que le joueur caché est toujours valide
-	lvl001 obj-23 ligne 16 ?
 
 	à faire plus tard :
 	- Gamepad : vérifier la liste des choses à faire absoluement
