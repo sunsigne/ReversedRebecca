@@ -60,7 +60,13 @@ public class ControllerManager {
 			desactiveGamepadDisplay();
 	}
 
+	private static boolean flag;
+	
 	private static void activeGamepadDisplay() {
+		if(flag)
+			return;
+		
+		flag = true;
 		displayGamepadWarning();
 		Game.getInstance().setCursor(CURSOR_TYPE.NULL.getCursor());
 		resetMousePresetings();
