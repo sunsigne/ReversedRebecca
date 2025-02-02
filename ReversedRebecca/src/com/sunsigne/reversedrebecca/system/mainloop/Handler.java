@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -239,9 +240,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		var list = new ListCloner().deepClone(this);
 		for (Updatable tempObject : list.getList()) {
 
-			// skip rendering if out of camera
+			// skip rendering if out of camera, except for walls
 			if (isCameraDependant()) {
-				if (tempObject instanceof Position) {
+				if (tempObject instanceof Position && tempObject instanceof Wall == false) {
 					Position tempPosition = (Position) tempObject;
 
 					if (CAMERA.isObjectVisible(tempPosition, true) == false)

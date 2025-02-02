@@ -1,13 +1,20 @@
 package com.sunsigne.reversedrebecca.object;
 
+import java.awt.Rectangle;
+
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class Wall extends GameObject implements WallOptimizer, RenderFree, CollisionReactor {
+public class Wall extends GameObject implements TickFree, RenderFree, CollisionReactor {
 
-	public Wall(int x, int y) {
+	public Wall(int x, int y, int width, int height) {
 		super(x, y);
+
+		setBounds(width, height);
 	}
 
 	////////// NAME ////////////
@@ -35,18 +42,11 @@ public class Wall extends GameObject implements WallOptimizer, RenderFree, Colli
 		}
 	}
 
-	////////// WALL OPTIMIZER ////////////
-
-	private boolean playerTooFar;
+	////////// PHYSICS ////////////
 
 	@Override
-	public boolean isPlayerTooFar() {
-		return playerTooFar;
-	}
-
-	@Override
-	public void setPlayerTooFar(boolean playerTooFar) {
-		this.playerTooFar = playerTooFar;
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.COLLISIONNER;
 	}
 
 	////////// COLLISION ////////////
@@ -59,6 +59,23 @@ public class Wall extends GameObject implements WallOptimizer, RenderFree, Colli
 	@Override
 	public boolean isBlockingPath() {
 		return true;
+	}
+
+	private int hitboxW = getWidth();
+	private int hitboxH = getHeight();
+
+	public void setBounds(int width, int height) {
+		this.hitboxW = getWidth() * width;
+		this.hitboxH = getHeight() * height;
+	}
+
+	@Override
+	public Rectangle getBounds() {
+		int x = getX();
+		int y = getY();
+		int w = hitboxW;
+		int h = hitboxH;
+		return new Rectangle(x, y, w, h);
 	}
 
 	@Override

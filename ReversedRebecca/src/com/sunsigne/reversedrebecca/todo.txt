@@ -50,11 +50,14 @@
 
 	////////// EN COURS ////////////
 	
+	! -> mappable.txt des murs n'est plus à jour
+	! -> moddifier la détection d'objet dans l'handler
+	
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
 	bug d'optimisation :
-	- le tchat lag sur l'ordi d'ophélie
+	- le tchat lag sur l'ordi d'ophélie (ChatBox -> readSentence -> supprimer cette histoire d'index + ça N'EST PAS la lecture du clip audio qui fait laguer! (j'ai essayé en supprimant la ligne qui joue un son)
 	- pareil pour les puzzle, ça vient de la souris ?
 	
 	bug : la souris dépasse de l'ordi de Yan
