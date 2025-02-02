@@ -30,6 +30,8 @@ public interface CollisionReactor extends Position {
 	}
 
 	default void collidingReaction(CollisionDetector detectorObject, boolean blockPass, GenericListener listener) {
+		if (detectorObject.getBounds().intersects(getBounds()) == false)
+			return;
 
 		boolean actionDone = false;
 
