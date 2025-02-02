@@ -42,6 +42,32 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				continue;
 			}
 
+			// walls may have big hitboxes
+			if (tempObject instanceof Wall) {
+				Wall tempWall = (Wall) tempObject;
+
+				if (object_list.containsObject(tempWall))
+					continue;
+
+				if (tempWall.getX() == x) {
+					if (tempWall.getY() > y)
+						continue;
+
+					for (int yy = y + size; yy < y + tempWall.getHeight(); yy = yy + size)
+						if (y == yy)
+							object_list.addObject(tempWall);
+				}
+
+				if (tempWall.getY() == y) {
+					if (tempWall.getX() > x)
+						continue;
+					
+					for (int xx = x + size; xx < x + tempWall.getWidth(); xx = xx + size)
+						if (x == xx)
+							object_list.addObject(tempWall);
+				}
+			}
+
 			if (tempObject instanceof Player == false)
 				continue;
 
