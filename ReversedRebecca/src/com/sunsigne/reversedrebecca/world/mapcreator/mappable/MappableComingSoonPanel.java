@@ -26,7 +26,7 @@ public class MappableComingSoonPanel implements Mappable {
 
 	@Override
 	public int[] rgbCode() {
-		int[] rgb = { 255, 190, 255 };
+		int[] rgb = { 255, 128, 0 };
 		return rgb;
 	}
 
