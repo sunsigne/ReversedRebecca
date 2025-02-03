@@ -50,21 +50,13 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 					continue;
 
 				if (tempWall.getX() == x) {
-					if (tempWall.getY() > y)
-						continue;
-
-					for (int yy = y + size; yy < y + tempWall.getHeight(); yy = yy + size)
-						if (y == yy)
-							object_list.addObject(tempWall);
+					if (tempWall.getY() < y && tempWall.getY() + tempWall.getHeight() > y)
+						object_list.addObject(tempWall);
 				}
 
 				if (tempWall.getY() == y) {
-					if (tempWall.getX() > x)
-						continue;
-					
-					for (int xx = x + size; xx < x + tempWall.getWidth(); xx = xx + size)
-						if (x == xx)
-							object_list.addObject(tempWall);
+					if (tempWall.getX() < x && tempWall.getX() + tempWall.getWidth() > x)
+						object_list.addObject(tempWall);
 				}
 			}
 
