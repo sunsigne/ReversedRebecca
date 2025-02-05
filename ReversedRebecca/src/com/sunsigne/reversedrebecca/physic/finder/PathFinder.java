@@ -212,8 +212,8 @@ public class PathFinder implements Position {
 				continue;
 
 			// object is outside the trajectory
-			boolean beforeElements = horizontal ? tempObject.getX() + tempObject.getSize() - 1 < firstElement.getX()
-					: tempObject.getY() + tempObject.getSize() - 1 < firstElement.getY();
+			boolean beforeElements = horizontal ? tempObject.getX() + tempObject.getWidth() - 1 < firstElement.getX()
+					: tempObject.getY() + tempObject.getHeight() - 1 < firstElement.getY();
 			boolean afterElements = horizontal ? tempObject.getX() - tempObject.getSize() + 1 > secondElement.getX()
 					: tempObject.getY() - tempObject.getSize() + 1 > secondElement.getY();
 

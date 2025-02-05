@@ -22,10 +22,10 @@ public class NearestOfFinder {
 		int x = new TilePos().getTilePos(object.getX(), object.getSize());
 		int y = new TilePos().getTilePos(object.getY(), object.getSize());
 
-		Position left = createPosition(x, y, object.getSize(), DIRECTION.LEFT);
-		Position right = createPosition(x, y, object.getSize(), DIRECTION.RIGHT);
-		Position up = createPosition(x, y, object.getSize(), DIRECTION.UP);
-		Position down = createPosition(x, y, object.getSize(), DIRECTION.DOWN);
+		Position left = createPosition(x, y, object.getWidth(), DIRECTION.LEFT);
+		Position right = createPosition(x, y, object.getWidth(), DIRECTION.RIGHT);
+		Position up = createPosition(x, y, object.getHeight(), DIRECTION.UP);
+		Position down = createPosition(x, y, object.getHeight(), DIRECTION.DOWN);
 
 		DIRECTION path_left = new PathFinder(searcher, left).getPath();
 		DIRECTION path_right = new PathFinder(searcher, right).getPath();

@@ -15,20 +15,20 @@ public class InFrontOfFinder {
 		switch (facing.getFacing()) {
 
 		case LEFT:
-			pos[0] = object.getX() - object.getSize();
+			pos[0] = object.getX() - object.getWidth();
 			pos[1] = object.getY();
 			break;
 		case RIGHT:
-			pos[0] = object.getX() + object.getSize();
+			pos[0] = object.getX() + object.getWidth();
 			pos[1] = object.getY();
 			break;
 		case UP:
 			pos[0] = object.getX();
-			pos[1] = object.getY() - object.getSize();
+			pos[1] = object.getY() - object.getHeight();
 			break;
 		case DOWN:
 			pos[0] = object.getX();
-			pos[1] = object.getY() + object.getSize();
+			pos[1] = object.getY() + object.getHeight();
 			break;
 		case NULL:
 			return null;
