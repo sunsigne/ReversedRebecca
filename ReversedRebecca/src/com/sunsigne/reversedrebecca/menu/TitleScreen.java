@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.CrashButton;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
 import com.sunsigne.reversedrebecca.object.buttons.SteamButton;
+import com.sunsigne.reversedrebecca.object.buttons.SupportButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
@@ -48,6 +49,7 @@ public class TitleScreen extends MenuScreen {
 		createAchievementsButton();
 		createCrashButton();
 		createSteamButton();
+		createSupportButton();
 
 		createTestMapButton();
 	}
@@ -111,17 +113,23 @@ public class TitleScreen extends MenuScreen {
 		LAYER.MENU.addObject(button);
 	}
 
+	private void createSupportButton() {
+		GenericListener onPress = () -> supportRequest();
+		ButtonObject button = new SupportButton(onPress, null);
+		LAYER.MENU.addObject(button);
+	}
+	
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
 		
+		/*
 		// placed exactly on the "hot water tap" in the kitchen
 		ButtonObject hidden_button = new TitleScreenButton("", 105, 250, 10, 10, onPress, null);
-		
-		/*
-		placed exactly on the "power button" of the washing machine in the bathroom
-		ButtonObject hidden_button = new TitleScreenButton("", 111, 597, 10, 10, onPress, null);
 		*/
-
+				
+		//placed exactly on the "power button" of the washing machine in the bathroom
+		ButtonObject hidden_button = new TitleScreenButton("", 111, 597, 10, 10, onPress, null);
+		
 		LAYER.MENU.addObject(hidden_button);
 	}
 
@@ -173,6 +181,10 @@ public class TitleScreen extends MenuScreen {
 			crash_link = WebTask.CRASH_LINK_FR;
 
 		new WebTask().openHtml(crash_link);
+	}
+	
+	private void supportRequest() {
+		new WebTask().openHtml(WebTask.PATREON_LINK);
 	}
 
 	private void loadTestMap() {

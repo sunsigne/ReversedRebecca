@@ -25,6 +25,7 @@ public class WebTask {
 	
 	public static final String REDDIT_LINK = "https://www.reddit.com/r/ReversedRebecca/";
 	public static final String ITCHIO_LINK = "https://sunsigne.itch.io/reversedrebecca";
+	public static final String PATREON_LINK = "https://www.google.com/";
 
 	public void openSteam(String steamLink, String httpLink) {
 		String app = "C://Program Files (x86)//Steam";

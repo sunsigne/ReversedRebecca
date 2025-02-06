@@ -32,6 +32,7 @@ QuitButton = quitter
 BackButton = retour
 Achievement = succes
 CrashButton = Signaler un bug
+SupportButton = Soutenir  
 
 ///// PLAY /////
 

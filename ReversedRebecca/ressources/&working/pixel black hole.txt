@@ -1,5 +1,0 @@
-noir : 71
-blanc : 150
-bleu : 69
-middle : 99
-cyan : 77

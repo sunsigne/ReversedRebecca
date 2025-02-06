@@ -53,6 +53,7 @@
 	
 	! -> mappable.txt des murs n'est plus à jour
 
+	support button : lien patreon pas fini
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
