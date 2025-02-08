@@ -53,13 +53,14 @@
 	
 	! -> mappable.txt des murs n'est plus à jour
 
-	support button : lien patreon pas fini
+	support button : lien patreon pas fini + décaler légèrement le cadeau vers le haut OU la tasse vers le bas ?
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
 	bug d'optimisation :
 	- le tchat lag sur l'ordi d'ophélie (ChatBox -> readSentence -> supprimer cette histoire d'index + ça N'EST PAS la lecture du clip audio qui fait laguer! (j'ai essayé en supprimant la ligne qui joue un son)
 	- pareil pour les puzzle, ça vient de la souris ?
+	- vérifier si les murs sont enfin stables (càd ne font pas laguer le jeu)
 	
 	bug : la souris dépasse de l'ordi de Yan
 
