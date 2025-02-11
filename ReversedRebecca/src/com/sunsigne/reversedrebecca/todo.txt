@@ -90,6 +90,7 @@
 	vérifié si réglé :
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 
+	? pitch le son du gamepad pour les bouton et le dig puzzle ?
 	0h10 vérifier que le OCntrolScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
 	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
