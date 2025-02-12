@@ -58,17 +58,16 @@
 	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
 	bug d'optimisation :
-	- le tchat lag sur l'ordi d'ophélie (ChatBox -> readSentence -> supprimer cette histoire d'index + ça N'EST PAS la lecture du clip audio qui fait laguer! (j'ai essayé en supprimant la ligne qui joue un son)
-	- pareil pour les puzzle, ça vient de la souris ?
-	- vérifier si les murs sont enfin stables (càd ne font pas laguer le jeu)
-	
+	- 1h - il y a un PIC de vitesse sur le premier dialogue du jeu, voir s'il y a moyen d'en charger un dans le vide
+	- lags pour les puzzle, ça vient de la souris ?
+		
 	bug : la souris dépasse de l'ordi de Yan
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS"
 
 	à faire plus tard :
 	- Gamepad : vérifier la liste des choses à faire absoluement
-
+	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris

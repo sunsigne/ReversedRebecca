@@ -93,15 +93,10 @@ public class ChatContent implements Updatable {
 	////////// TICK ////////////
 
 	private int pausetime;
-	private int count, index;
-	private boolean loading;
+	private int count;
 
 	@Override
 	public void tick() {
-		if (loading)
-			return;
-		loading = true;
-
 		updateDialogueKey();
 
 		if (pausetime > 0) {
@@ -133,41 +128,20 @@ public class ChatContent implements Updatable {
 	}
 
 	private void readSentence(int sentenceNum) {
-		index++;
 		playTalkingSound();
-
-		if (index == 1) {
-			nextChar(sentenceNum);
-		}
-
-		if (index == 2) {
-			index = 0;
-			nextChar(sentenceNum);
-		}
+		nextChar(sentenceNum);
 	}
 
 	private void nextChar(int line) {
-		char newchar = ' ';
-		String newletter;
+		char newchar = letter[line][count];
 
-		int size = sentence[line].length();
-		if (size > NUM_OF_CHARACTERS)
-			size = NUM_OF_CHARACTERS;
-		for (int i = 0; i < size; i++) {
+		if (".!?…".indexOf(newchar) != -1)
+			pause();
 
-			if (count == i) {
-				newchar = letter[line][i];
-				newletter = String.valueOf(newchar);
-				boolean isPauseChar = ".!?…".contains(Character.toString(letter[line][i]));
-				if (isPauseChar)
-					pause();
+		currentText[line] = currentText[line].concat(String.valueOf(newchar));
 
-				currentText[line] = currentText[line].concat(newletter);
-			}
-		}
 		count++;
-
-		if (count == size) {
+		if (count == sentence[line].length() || count == NUM_OF_CHARACTERS) {
 			count = 0;
 			stop[line] = true;
 			if (line == 0 && sentence[1] == null)
@@ -249,7 +223,6 @@ public class ChatContent implements Updatable {
 		drawFacial(g);
 		drawText(g);
 		drawActionKey(g);
-		loading = false;
 	}
 
 	private void drawFacial(Graphics g) {
