@@ -58,7 +58,8 @@
 	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
 	bug d'optimisation :
-	- 1h - il y a un PIC de vitesse sur le premier dialogue du jeu, voir s'il y a moyen d'en charger un dans le vide
+	- les menus sont un peu lents
+	- les maps sont un peu lentes
 	- lags pour les puzzle, ça vient de la souris ?
 		
 	bug : la souris dépasse de l'ordi de Yan

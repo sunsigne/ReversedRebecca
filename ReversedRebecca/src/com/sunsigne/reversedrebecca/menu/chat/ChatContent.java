@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -128,7 +129,9 @@ public class ChatContent implements Updatable {
 	}
 
 	private void readSentence(int sentenceNum) {
-		playTalkingSound();
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			playTalkingSound();
+
 		nextChar(sentenceNum);
 	}
 
@@ -151,14 +154,20 @@ public class ChatContent implements Updatable {
 		}
 	}
 
+	private static int firstDialogue = 11;
 	private boolean talkingSoundPause;
 
-	// talking sound played once every two ticks
 	private void playTalkingSound() {
+		// talking sound played once every two ticks
 		if (talkingSoundPause) {
 			talkingSoundPause = false;
 			return;
 		}
+
+		// prevent the first dialogue of the game to do a lot of noises
+		firstDialogue--;
+		if (firstDialogue > 0 && firstDialogue % 5 != 0)
+			return;
 
 		String voice = living_name.contains("_") ? living_name.split("_")[0] : living_name;
 		new SoundTask().playSound(SOUNDTYPE.VOICE, voice);
