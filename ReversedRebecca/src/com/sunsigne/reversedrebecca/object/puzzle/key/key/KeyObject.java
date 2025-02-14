@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
@@ -188,4 +189,18 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 
 	}
 
+	////////// COLLISION ////////////
+
+	private CollisionReactor lastCollidedObject;
+		
+	@Override
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
+		this.lastCollidedObject = lastCollidedObject;
+	}
+
+	@Override
+	public CollisionReactor getLastCollidedObject() {
+		return lastCollidedObject;
+	}
+	
 }

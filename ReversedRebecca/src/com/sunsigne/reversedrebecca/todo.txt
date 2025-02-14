@@ -59,8 +59,9 @@
 
 	bug d'optimisation :
 	- les menus sont un peu lents
-	- les maps sont un peu lentes
 	- lags pour les puzzle, ça vient de la souris ?
+
+	lvl001 -> les hitbox de la bomb room ne me plaise pas du tout !
 		
 	bug : la souris dépasse de l'ordi de Yan
 

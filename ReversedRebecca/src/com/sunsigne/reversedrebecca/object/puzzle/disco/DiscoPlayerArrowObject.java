@@ -7,6 +7,7 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -37,12 +38,12 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	}
 
 	////////// PHYSICS ////////////
-	
+
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// TICK ////////////
 
 	private float alpha;
@@ -63,9 +64,9 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 
 	@Override
 	public int getSheetSize() {
-		return 2*16;
+		return 2 * 16;
 	}
-	
+
 	@Override
 	public int getSheetColCriterion() {
 		return 1 + facing.getNum();
@@ -75,9 +76,9 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	public int getSheetRowCriterion() {
 		return -1;
 	}
-	
+
 	private void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");	
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");
 		image = getSheetSubImage(sheet, getSheetColCriterion(), 2, getSheetWidth(), getSheetHeight());
 		image_full = getSheetSubImage(sheet, getSheetColCriterion(), 3, getSheetWidth(), getSheetHeight());
 	}
@@ -95,7 +96,19 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	}
 
 	////////// COLLISION ////////////
-
+	
+	private CollisionReactor lastCollidedObject;
+	
+	@Override
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
+		this.lastCollidedObject = lastCollidedObject;
+	}
+	
+	@Override
+	public CollisionReactor getLastCollidedObject() {
+		return lastCollidedObject;
+	}
+	
 	@Override
 	public Rectangle getBounds(DIRECTION direction) {
 		switch (direction) {

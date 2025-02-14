@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -23,6 +24,26 @@ public class CollisionLaw implements PhysicLaw {
 			return;
 
 		CollisionDetector detectorObject = (CollisionDetector) object;
+		CollisionReactor lastCollidedObject = detectorObject.getLastCollidedObject();
+
+		
+		if (object instanceof Player == false) {
+
+			// still colliding last object
+			if (objectAreColliding(detectorObject, lastCollidedObject)) {
+				lastCollidedObject.collidingReaction(detectorObject);
+				return;
+			}
+
+			// not moving
+			if (object instanceof Velocity) {
+				Velocity velocityObject = (Velocity) object;
+				if (velocityObject.isMotionless()) {
+					detectorObject.setLastCollidedObject(null);
+					return;
+				}					
+			}
+		}
 
 		Handler layer = object.getHandler();
 		if (layer == null)
@@ -38,20 +59,25 @@ public class CollisionLaw implements PhysicLaw {
 
 			CollisionReactor reactorObject = (CollisionReactor) tempObject;
 
-			if (objectAreColliding(detectorObject, reactorObject))
+			if (objectAreColliding(detectorObject, reactorObject)) {
 				reactorObject.collidingReaction(detectorObject);
+				detectorObject.setLastCollidedObject(reactorObject);
+			}				
 		}
 	}
 
 	private boolean objectAreColliding(CollisionDetector detectorObject, CollisionReactor reactorObject) {
-		if(detectorObject instanceof Player && WallPassMode.isActive())
+		if (reactorObject == null)
 			return false;
-		
+
+		if (detectorObject instanceof Player && WallPassMode.isActive())
+			return false;
+
 		Rectangle reactorObjectBounds = reactorObject.getBounds();
 
 		if (detectorObject.getBounds().intersects(reactorObjectBounds) == false)
 			return false;
-		
+
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObjectBounds))
 			return true;
 

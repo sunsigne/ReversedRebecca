@@ -4,12 +4,14 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -191,7 +193,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.LIVING;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -258,6 +260,19 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	}
 
 	////////// COLLISION ////////////
+
+	private CollisionReactor lastCollidedObject;
+
+	@Override
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
+		if (lastCollidedObject instanceof Player == false)
+			this.lastCollidedObject = lastCollidedObject;
+	}
+
+	@Override
+	public CollisionReactor getLastCollidedObject() {
+		return lastCollidedObject;
+	}
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {

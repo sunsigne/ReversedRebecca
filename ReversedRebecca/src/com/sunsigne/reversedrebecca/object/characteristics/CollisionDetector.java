@@ -6,6 +6,10 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 
 public interface CollisionDetector extends Position {
 
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject);
+	
+	public CollisionReactor getLastCollidedObject();
+	
 	public default Rectangle getBounds() {
 		int x = getX();
 		int y = getY();
