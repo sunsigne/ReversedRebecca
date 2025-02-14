@@ -49,6 +49,9 @@ public class CollisionLaw implements PhysicLaw {
 		
 		Rectangle reactorObjectBounds = reactorObject.getBounds();
 
+		if (detectorObject.getBounds().intersects(reactorObjectBounds) == false)
+			return false;
+		
 		if (detectorObject.getBounds(DIRECTION.LEFT).intersects(reactorObjectBounds))
 			return true;
 
