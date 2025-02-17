@@ -18,6 +18,7 @@ public class CorrelatedLaw {
 		load(new PlayerBlockingAvoiderLaw());
 		load(new PathFindingLaw());
 		load(new CameraMovingLaw());
+		load(new CameraShakingLaw());
 	}
 
 }

@@ -4,37 +4,45 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class GroundRendering implements Updatable, PhysicFree, TickFree {
+public class GroundRendering implements Updatable, TickFree {
 
 	public GroundRendering(World world, LAYER layer) {
 		this.world = world;
 		this.layer = layer;
 	}
-	
+
 	private World world;
-	
+
 	public World getWorld() {
 		return world;
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.LIGHT;
 	}
 
 	////////// RENDER ////////////
 
 	private LAYER layer;
-	
+
 	@Override
 	public void render(Graphics g) {
 		if (world.getLayer(false) != layer)
 			return;
-		
+
 		BufferedImage img = world.getImageMap(layer);
-		
+
 		int pixel = 16;
 		int ratio = Size.M / pixel;
 		int width = img.getWidth() * ratio;
@@ -44,5 +52,5 @@ public class GroundRendering implements Updatable, PhysicFree, TickFree {
 		new TransluantLayer().drawGray(g, width, height);
 		g.drawImage(img, 0, 0, width, height, null);
 	}
-	
+
 }

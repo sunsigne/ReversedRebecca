@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.physic.debug.SwiftMovingMode;
 import com.sunsigne.reversedrebecca.physic.debug.VisibleHitboxMode;
 import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraMovingLaw;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShakingLaw;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CollisionLaw;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.MoveTowardGoalLaw;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.PathFindingLaw;
@@ -43,6 +44,7 @@ public class PhysicLinker {
 	private static final PhysicLaw C_AVOIDER = PhysicList.getList().getObject(new PlayerBlockingAvoiderLaw());
 	private static final PhysicLaw C_PATH = PhysicList.getList().getObject(new PathFindingLaw());
 	private static final PhysicLaw C_CAMERA = PhysicList.getList().getObject(new CameraMovingLaw());
+	private static final PhysicLaw C_SHAKE = PhysicList.getList().getObject(new CameraShakingLaw());
 
 	private static final IndependantLaw I_BLINKING = new BlinkingRecoveringLaw().getIndependantLaw();
 	private static final IndependantLaw I_EXPLOSION = new ExplosionBrightnessLaw().getIndependantLaw();
@@ -73,29 +75,29 @@ public class PhysicLinker {
 
 	////////// LINKERS ////////////
 
-	public static final PhysicLaw[] LIVING = { C_VELOCITY, C_GOAL, C_COLLISION, C_TILE, C_AVOIDER, C_PATH, I_BLINKING,
+	public static final PhysicLaw[] LIVING = { C_VELOCITY, C_GOAL, C_COLLISION, C_TILE, C_AVOIDER, C_PATH, C_SHAKE, I_BLINKING,
 			I_HIGHLIGHT, I_DEATH, I_INTERACT, I_WAITFOR, D_SWIFT, D_HITBOX };
-	public static final PhysicLaw[] PIRANHA = { C_COLLISION, I_HIGHLIGHT, I_INTERACT, I_WAITFOR, D_HITBOX };
-	public static final PhysicLaw[] PLAYER = { C_VELOCITY, C_GOAL, C_COLLISION, C_TILE, C_PATH, C_CAMERA, I_BLINKING,
+	public static final PhysicLaw[] PIRANHA = { C_COLLISION, C_SHAKE, I_HIGHLIGHT, I_INTERACT, I_WAITFOR, D_HITBOX };
+	public static final PhysicLaw[] PLAYER = { C_VELOCITY, C_GOAL, C_COLLISION, C_TILE, C_PATH, C_CAMERA, C_SHAKE, I_BLINKING,
 			I_FADE_PUZZLE, I_HIGHLIGHT, I_DEATH, I_MOUSE, I_PLAYER, I_WAITFOR, D_SWIFT, D_HITBOX, D_WALLPASS };
-	public static final PhysicLaw[] WORLD = { I_BLINKING, I_EXPLOSION, I_FADE_MENU, I_PSYCHO, I_INTERACT, I_LAYER,
+	public static final PhysicLaw[] WORLD = { C_SHAKE, I_BLINKING, I_EXPLOSION, I_FADE_MENU, I_PSYCHO, I_INTERACT, I_LAYER,
 			D_MULTI, D_CRIT };
-
-	public static final PhysicLaw[] ANIMATION = { C_VELOCITY, I_EXPLOSION };
-	public static final PhysicLaw[] BUBBLE = { I_INTERACT };
+	public static final PhysicLaw[] GROUND = { C_SHAKE };
+	public static final PhysicLaw[] LIGHT = { C_SHAKE, I_EXPLOSION };
+	
+	public static final PhysicLaw[] ANIMATION = { C_VELOCITY, C_SHAKE, I_EXPLOSION };
+	public static final PhysicLaw[] BUBBLE = { C_SHAKE, I_INTERACT };
 	public static final PhysicLaw[] CHAT = { I_CHAT };
-	public static final PhysicLaw[] COLLISIONNER = { C_COLLISION, D_HITBOX };
-	public static final PhysicLaw[] EXPLOSION = { I_EXPLOSION };
+	public static final PhysicLaw[] COLLISIONNER = { C_COLLISION, C_SHAKE, D_HITBOX };
 	public static final PhysicLaw[] HUD = { I_HUD };
-	public static final PhysicLaw[] MOVER = { C_VELOCITY };
+	public static final PhysicLaw[] MOVER = { C_VELOCITY, C_SHAKE };
 	public static final PhysicLaw[] MENU = { I_FADE_MENU, D_HITBOX };
-	public static final PhysicLaw[] OPTIMIZED_WALL = { D_HITBOX };
-	public static final PhysicLaw[] PROJECTILE = { C_VELOCITY, C_COLLISION, D_HITBOX };
-	public static final PhysicLaw[] PUZZLE = { I_FADE_PUZZLE, I_MOUSE, D_HITBOX };
-	public static final PhysicLaw[] PUZZLE_HACK = { I_FADE_PUZZLE, I_MOUSE, I_HACK, D_HITBOX };
-	public static final PhysicLaw[] PUZZLE_MOVER = { C_VELOCITY, I_FADE_PUZZLE, I_MOUSE, D_HITBOX };
-	public static final PhysicLaw[] PUZZLE_COLLISION = { C_VELOCITY, C_COLLISION, I_FADE_PUZZLE, D_HITBOX };
-	public static final PhysicLaw[] PUZZLER = { C_COLLISION, I_HIGHLIGHT, I_INTERACT, D_HITBOX };
+	public static final PhysicLaw[] PROJECTILE = { C_VELOCITY, C_COLLISION, C_SHAKE, D_HITBOX };
+	public static final PhysicLaw[] PUZZLE = { C_SHAKE, I_FADE_PUZZLE, I_MOUSE, D_HITBOX };
+	public static final PhysicLaw[] PUZZLE_HACK = { C_SHAKE, I_FADE_PUZZLE, I_MOUSE, I_HACK, D_HITBOX };
+	public static final PhysicLaw[] PUZZLE_MOVER = { C_VELOCITY, C_SHAKE, I_FADE_PUZZLE, I_MOUSE, D_HITBOX };
+	public static final PhysicLaw[] PUZZLE_COLLISION = { C_VELOCITY, C_COLLISION, C_SHAKE, I_FADE_PUZZLE, D_HITBOX };
+	public static final PhysicLaw[] PUZZLER = { C_COLLISION, C_SHAKE, I_HIGHLIGHT, I_INTERACT, D_HITBOX };
 	public static final PhysicLaw[] PSYCHO = { I_PSYCHO };
 
 }

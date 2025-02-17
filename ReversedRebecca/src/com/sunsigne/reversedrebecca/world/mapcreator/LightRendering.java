@@ -28,7 +28,7 @@ public class LightRendering implements Updatable, TickFree {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.EXPLOSION;
+		return PhysicLinker.LIGHT;
 	}
 	
 	////////// RENDER ////////////
