@@ -21,6 +21,24 @@ FIX : ordonne à la caméra de cesser de suivre le joueur et rester "là où el
 Note : le comportement par défaut de la Caméra au chargement d'une carte est de se placer en 0-0.
 
 
+////// CAMERA_SHAKE //////
+
+Le Type de Requête CAMERA_SHAKE permet de faire "trembler" l'écran, afin de donner de l'impact à certaines actions.
+
+La Cible est chiffrée, en pixels. Les valeurs suivantes sont égalements acceptées :
+STRONG (vaut 40 pixels)
+MEDIUM (vaut 18 pixels)
+LITTLE (vaut 10 pixels)
+TINY (vaut 3 pixels)
+
+Exemple : 
+TIME -> 0 = CAMERA_SHAKE -> MEDIUM
+TIME -> 0 = GOTO -> CAMERA_SHAKE:MEDIUM
+
+Lorsque la Condition sera vérifiée, la Caméra va "trembler" avec un décalage de 18 pixels.
+
+Note : le tremblement se résorbe progressivement à raison d'un pixel par tick.
+
 
 ////// HIGHLIGHT //////
 
