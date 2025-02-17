@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.hack.difficulty.CyanHackPuzzle;
@@ -133,5 +134,12 @@ public class HackPuzzleFactory implements PuzzleFactory {
 	public String getVictorySound() {
 		return "short_circuit";
 	}
-
+	
+	////////// SHAKE ////////////
+	
+	@Override
+	public SHAKE getVictoryShake() {
+		return SHAKE.LITTLE;
+	}
+		
 }

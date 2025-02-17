@@ -3,10 +3,13 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.piranha.condition.global.PushedCondition;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 
@@ -63,6 +66,9 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void pushPushable(Pushable pushable) {
+		if(pushable instanceof Player)
+			new CameraShaker().shaking(SHAKE.MEDIUM);
+			
 		new SoundTask().playSoundIfCamera(this, "hit_medium");
 		pushable.setSpeedness(SPEEDNESS.SWIFT);
 

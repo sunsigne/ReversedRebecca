@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
@@ -51,6 +53,7 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 		this.exploded = exploded;
 
 		if (exploded) {
+			new CameraShaker().shaking(SHAKE.LITTLE);
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 			if (isCritical())
 				getPuzzle().closePuzzle(true);
@@ -119,6 +122,7 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 
 	public void removeCount() {
 		setCount(getCount() - 1);
+		new CameraShaker().shaking(SHAKE.TINY);
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 	}
 

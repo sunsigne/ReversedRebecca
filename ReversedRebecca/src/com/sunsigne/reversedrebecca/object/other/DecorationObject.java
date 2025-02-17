@@ -4,13 +4,14 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class DecorationObject extends GameObject implements PhysicFree, TickFree, SheetableImage {
+public class DecorationObject extends GameObject implements TickFree, SheetableImage {
 
 	public DecorationObject(int x, int y, int w, int h, String name) {
 		this(x, y, w, h, name, 0, 0);
@@ -38,6 +39,13 @@ public class DecorationObject extends GameObject implements PhysicFree, TickFree
 	public String toString() {
 		var clazz = "DECORACTION";
 		return clazz + " : " + getName().toUpperCase();
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.SHAKER;
 	}
 
 	////////// POSITION ////////////

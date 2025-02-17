@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -138,6 +139,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		new PlayerFinder().roundToTilePlayer();
 
 		if (isPuzzleWon) {
+			new CameraShaker().shaking(getFactory().getVictoryShake());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			actionOnWinning.doAction();
 		} else
