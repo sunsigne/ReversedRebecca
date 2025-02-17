@@ -8,6 +8,9 @@ public class DuplicatingBombObject extends CrazyBombObject {
 
 	public DuplicatingBombObject(Puzzle puzzle, boolean critical, int x, int y) {
 		super(puzzle, critical, x, y);
+		
+		radCount[0] = new RandomGenerator().getIntBetween(2, 5);
+		radCount[1] = new RandomGenerator().getIntBetween(2, 5);
 	}
 
 	@Override
@@ -17,6 +20,12 @@ public class DuplicatingBombObject extends CrazyBombObject {
 		if (exploded && isCritical() == false)
 			createCrazyBombs();
 	}
+	
+	private int[] radCount = new int[2];
+	
+	public int getBonusBullet() {
+		return radCount[0] + radCount[1];
+	}
 
 	private void createCrazyBombs() {
 		CrazyBombObject[] bomb = new CrazyBombObject[2];
@@ -24,10 +33,8 @@ public class DuplicatingBombObject extends CrazyBombObject {
 		for (int index = 0; index < 2; index++) {
 
 			bomb[index] = new CrazyBombObject(getPuzzle(), false, getX(), getY());
-
-			int count = new RandomGenerator().getIntBetween(2, 5);
-			bomb[index].setMaxCount(count);
-			bomb[index].setCount(count);
+			bomb[index].setMaxCount(radCount[index]);
+			bomb[index].setCount(radCount[index]);
 
 			LAYER.PUZZLE.addObject(bomb[index]);
 		}

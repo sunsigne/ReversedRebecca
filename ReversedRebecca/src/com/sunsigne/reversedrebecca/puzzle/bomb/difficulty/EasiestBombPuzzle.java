@@ -28,6 +28,7 @@ public class EasiestBombPuzzle extends BombPuzzle {
 	@Override
 	public void createPuzzle() {
 		createBombs();
+		createBullets(9);
 	}
 
 }

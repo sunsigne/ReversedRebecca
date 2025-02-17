@@ -28,6 +28,7 @@ public class CyanBombPuzzle extends BombPuzzle {
 	@Override
 	public void createPuzzle() {
 		createBombs();
+		createBullets(9);
 	}
 
 }

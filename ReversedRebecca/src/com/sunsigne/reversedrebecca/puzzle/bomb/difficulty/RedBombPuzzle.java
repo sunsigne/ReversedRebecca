@@ -29,6 +29,7 @@ public class RedBombPuzzle extends BombPuzzle {
 	public void createPuzzle() {
 		createBombs();
 		setRandomMaxCountBetween(2, 5);
+		createBullets(5);
 	}
 
 }

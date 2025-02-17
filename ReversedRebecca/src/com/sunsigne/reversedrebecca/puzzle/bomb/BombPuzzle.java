@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BulletBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.DuplicatingBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
@@ -77,16 +78,22 @@ public abstract class BombPuzzle extends Puzzle {
 		}
 	}
 
+	private int bonusBullet;
+
 	protected void createBullets(int num) {
-		BulletBombObject bullets = new BulletBombObject(this, num, isCritical);
+		BulletBombObject bullets = new BulletBombObject(this, bonusBullet + num, isCritical);
 		LAYER.PUZZLE.addObject(bullets);
 	}
 
 	protected void setRandomMaxCountBetween(int a, int b) {
 		for (int index = 0; index < getBombAmount(); index++) {
 			int count = new RandomGenerator().getIntBetween(a, b);
+			bonusBullet = bonusBullet + count - 1;
 			bomb[index].setMaxCount(count);
 			bomb[index].setCount(count);
+
+			if (bomb[index] instanceof DuplicatingBombObject)
+				bonusBullet = bonusBullet + ((DuplicatingBombObject) bomb[index]).getBonusBullet();
 		}
 	}
 

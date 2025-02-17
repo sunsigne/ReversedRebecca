@@ -32,7 +32,7 @@ public class BulletBombObject extends PuzzleObject implements SheetableImage, Mo
 		if (isCritical() == false)
 			setCount(num);
 		else
-			setCount(999);
+			setCount(99);
 	}
 
 	////////// NAME ////////////
