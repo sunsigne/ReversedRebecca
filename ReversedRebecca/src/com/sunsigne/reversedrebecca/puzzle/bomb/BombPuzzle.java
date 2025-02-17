@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.BulletBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
@@ -74,6 +75,11 @@ public abstract class BombPuzzle extends Puzzle {
 			bomb[index] = getBomb(this, index == radCrit, col, radRow);
 			LAYER.PUZZLE.addObject(bomb[index]);
 		}
+	}
+
+	protected void createBullets(int num) {
+		BulletBombObject bullets = new BulletBombObject(this, num, isCritical);
+		LAYER.PUZZLE.addObject(bullets);
 	}
 
 	protected void setRandomMaxCountBetween(int a, int b) {

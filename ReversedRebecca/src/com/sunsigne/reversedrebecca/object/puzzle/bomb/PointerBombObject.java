@@ -9,12 +9,13 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
-public class PointerBombObject extends PuzzleObject implements MouseSpammableGamepadObject {
+public class PointerBombObject extends PuzzleObject implements SheetableImage, MouseSpammableGamepadObject {
 
 	public PointerBombObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.S, Size.S);
@@ -28,14 +29,14 @@ public class PointerBombObject extends PuzzleObject implements MouseSpammableGam
 		var pos = getRow(Size.S + getX() / 2) + "-" + getCol(Size.S + getY() / 2);
 		return clazz + " : " + pos + " / ";
 	}
-	
+
 	////////// PHYSICS ////////////
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -50,11 +51,28 @@ public class PointerBombObject extends PuzzleObject implements MouseSpammableGam
 
 	////////// TEXTURE ////////////
 
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetSize() {
+		return 32;
+	}
+
 	private BufferedImage image;
 
 	public BufferedImage getImage() {
-		if (image == null)
-			image = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_pointer");
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + getPuzzle().getName() + "_shoot");
+			image = getSheetSubImage(sheet);
+		}
 		return image;
 	}
 
