@@ -6,10 +6,24 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 public class CameraShaker {
 
 	public enum SHAKE {
-		TINY, LITTLE, MEDIUM, STRONG;
+		TINY("tiny"), LITTLE("little"), MEDIUM("medium"), STRONG("strong");
+
+		private String name;
+
+		SHAKE(String name) {
+			this.name = name;
+		}
+
+		public String getName() {
+			return name;
+		}
+
 	}
 
 	public void shaking(SHAKE shake) {
+		if (shake == null)
+			return;
+
 		switch (shake) {
 		case STRONG:
 			shaking(40);
@@ -23,8 +37,6 @@ public class CameraShaker {
 		case TINY:
 			shaking(3);
 			return;
-		default:
-			shaking(0);
 		}
 	}
 

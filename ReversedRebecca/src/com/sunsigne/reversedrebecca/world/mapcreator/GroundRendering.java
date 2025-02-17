@@ -29,7 +29,7 @@ public class GroundRendering implements Updatable, TickFree {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.LIGHT;
+		return PhysicLinker.SHAKER;
 	}
 
 	////////// RENDER ////////////

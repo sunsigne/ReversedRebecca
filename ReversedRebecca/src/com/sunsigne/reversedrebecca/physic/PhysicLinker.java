@@ -82,7 +82,6 @@ public class PhysicLinker {
 			I_FADE_PUZZLE, I_HIGHLIGHT, I_DEATH, I_MOUSE, I_PLAYER, I_WAITFOR, D_SWIFT, D_HITBOX, D_WALLPASS };
 	public static final PhysicLaw[] WORLD = { C_SHAKE, I_BLINKING, I_EXPLOSION, I_FADE_MENU, I_PSYCHO, I_INTERACT, I_LAYER,
 			D_MULTI, D_CRIT };
-	public static final PhysicLaw[] GROUND = { C_SHAKE };
 	public static final PhysicLaw[] LIGHT = { C_SHAKE, I_EXPLOSION };
 	
 	public static final PhysicLaw[] ANIMATION = { C_VELOCITY, C_SHAKE, I_EXPLOSION };
@@ -99,5 +98,6 @@ public class PhysicLinker {
 	public static final PhysicLaw[] PUZZLE_COLLISION = { C_VELOCITY, C_COLLISION, C_SHAKE, I_FADE_PUZZLE, D_HITBOX };
 	public static final PhysicLaw[] PUZZLER = { C_COLLISION, C_SHAKE, I_HIGHLIGHT, I_INTERACT, D_HITBOX };
 	public static final PhysicLaw[] PSYCHO = { I_PSYCHO };
+	public static final PhysicLaw[] SHAKER = { C_SHAKE };
 
 }
