@@ -124,11 +124,11 @@ public class TitleScreen extends MenuScreen {
 		
 		/*
 		// placed exactly on the "hot water tap" in the kitchen
-		ButtonObject hidden_button = new TitleScreenButton("", 105, 250, 10, 10, onPress, null);
+		ButtonObject hidden_button = new TitleScreenButton("", 102, 247, 16, 16, onPress, null);
 		*/
 				
 		//placed exactly on the "power button" of the washing machine in the bathroom
-		ButtonObject hidden_button = new TitleScreenButton("", 111, 597, 10, 10, onPress, null);
+		ButtonObject hidden_button = new TitleScreenButton("", 108, 594, 16, 16, onPress, null);
 		
 		LAYER.MENU.addObject(hidden_button);
 	}
