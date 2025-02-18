@@ -53,16 +53,12 @@
 	
 	! -> mappable.txt des murs n'est plus à jour
 
-	support button : lien patreon pas fini + décaler légèrement le cadeau vers le haut OU la tasse vers le bas ?
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
-	itch.io -> stabiliser les images en allant les chercher sur github ? + les enregistrer
 
 	bug d'optimisation :
 	- les menus sont un peu lents
 	- lags pour les puzzle, ça vient de la souris ?
 
-	lvl001 -> les hitbox de la bomb room ne me plaise pas du tout !
-		
 	bug : la souris dépasse de l'ordi de Yan
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE"
