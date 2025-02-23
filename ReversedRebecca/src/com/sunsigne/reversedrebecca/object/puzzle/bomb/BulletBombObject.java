@@ -118,7 +118,7 @@ public class BulletBombObject extends PuzzleObject implements SheetableImage, Mo
 	private void drawCount(Font font, Graphics g) {
 
 		int rect[] = new int[] { getX() - 130, getY() - 8, getWidth(), getHeight() };
-		Color yellow = new Color(255, 180, 0);
+		Color yellow = new Color(255, 170, 30);
 		
 		new TextDecoration().drawOutlinesString(g, font, String.valueOf(count) + "X", yellow, Color.BLACK, DIRECTION.RIGHT, rect);
 	}
