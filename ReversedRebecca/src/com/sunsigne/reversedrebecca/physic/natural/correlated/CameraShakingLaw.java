@@ -47,13 +47,13 @@ public class CameraShakingLaw implements PhysicLaw {
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
-		if (shift != 0)
+		if (shift != 0 && object instanceof ChatBox == false)
 			renderDependency(g, true);
 	}
 
 	@Override
 	public void afterObjectRender(Graphics g, Updatable object) {
-		if (shift != 0)
+		if (shift != 0 && object instanceof ChatBox == false)
 			renderDependency(g, false);
 	}
 

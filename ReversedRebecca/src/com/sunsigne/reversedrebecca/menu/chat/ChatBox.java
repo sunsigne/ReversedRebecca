@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SelfTalkingCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TalkedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -30,12 +32,11 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardControll
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, PhysicFree, TickFree, KeyboardEvent, GamepadEvent {
+public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue, String tag) {
 		this.object = object;
@@ -43,6 +44,13 @@ public class ChatBox implements Updatable, PhysicFree, TickFree, KeyboardEvent, 
 
 		// register the whole dialogue as an array of lines
 		all_lines = selectTag(dialogue, tag);
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.SHAKER;
 	}
 
 	////////// TEXTURE ////////////
