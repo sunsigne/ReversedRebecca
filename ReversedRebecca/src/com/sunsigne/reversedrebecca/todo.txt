@@ -17,14 +17,13 @@
 	peut-être existant sur build only ? :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
-		- fast mode & swift mod sont incompatibles
 
 	pas réglé :
-		- la clef à l'envers (vérifier aussi le virus) est folle
+		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
-		- 1h00 le multitool une fois utilisé corrompt le VRAI scrore des outils
+		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu)
 		
@@ -51,8 +50,7 @@
 
 	////////// EN COURS ////////////
 	
-	! -> mappable.txt des murs n'est plus à jour
-
+	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
 	bug d'optimisation :

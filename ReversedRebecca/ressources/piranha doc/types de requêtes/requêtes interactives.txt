@@ -45,6 +45,8 @@ La Cible en toutes lettres permet de déterminer l'action à effectuer aux coord
 - REMOVE : en X et Y, il n'est plus possible d'interagir avec l'objet actuel.
 - CLEAR : il n'est plus possible d'interagir avec l'objet actuel autrement qu'à partir de sa position réelle.
 
+Note : en utilisant CLEAR pour Cible, des coordonnées doivent tout de même être renseignées afin de respecter la syntaxe, bien qu'elles soient ignorées. Il est conseillé d'écrire "0-0".
+
 Exemple :
 $ -> FAKE_SARAH = SPREAD_INTERACTIVENESS -> ADD,10-20
 
