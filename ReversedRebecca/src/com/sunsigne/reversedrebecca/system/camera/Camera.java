@@ -33,7 +33,7 @@ public class Camera {
 		int ph = position.getHeight();
 		
 		if(withRoom == false) {
-			px = px +  + position.getWidth() / 2;
+			px = px + position.getWidth() / 2;
 			py = py + position.getHeight() / 2;;
 			pw = 0;
 			ph = 0;
