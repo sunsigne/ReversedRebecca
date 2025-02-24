@@ -36,7 +36,7 @@ public class GameCursor {
 	////////// CURSOR TYPE ////////////
 
 	public enum CURSOR_TYPE implements SheetableImage {
-		NULL("null"), NORMAL("game");
+		NULL("null"), NORMAL("game"), POINTER("pointer");
 
 		private Cursor cursor;
 		private String name;
@@ -49,7 +49,7 @@ public class GameCursor {
 			if (cursor == null) {
 				BufferedImage sheet = new ImageTask().loadImage("textures/" + "cursor");
 				BufferedImage image = getSheetSubImage(sheet);
-				cursor = Toolkit.getDefaultToolkit().createCustomCursor(rescaleImage(image), new Point(0, 0), name);
+				cursor = Toolkit.getDefaultToolkit().createCustomCursor(rescaleImage(image), new Point(4, 4), name);
 			}
 			return cursor;
 		}
@@ -90,6 +90,8 @@ public class GameCursor {
 				return 1;
 			case "game":
 				return 2;
+			case "pointer":
+				return 3;
 			}
 			return 0;
 		}

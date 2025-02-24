@@ -19,6 +19,7 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
+		- bug : la souris dépasse de l'ordi de Yan
 		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
@@ -53,11 +54,12 @@
 	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
-	bug d'optimisation :
-	- les menus sont un peu lents
-	- lags pour les puzzle, ça vient de la souris ?
+	bug souris :
+	- keypuzzle (lock déplacé par rapport à la position de base)
+	- keypuzzle (lock à l'envers complétement fou)
+	- hackPuzzle (virus à l'envers contre intuitif)
 
-	bug : la souris dépasse de l'ordi de Yan
+	note : GameCursor - rescaleImage -> supprimer les scale règle peut-être le pb de la souris coupée chez Yan ? essayer les 2 builds
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE"
 

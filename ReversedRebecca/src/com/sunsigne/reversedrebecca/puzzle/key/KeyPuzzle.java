@@ -23,6 +23,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -30,7 +31,7 @@ public abstract class KeyPuzzle extends Puzzle {
 
 	public KeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
-		new GameCursor().setCursor(null);
+		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 	}
 
 	////////// NAME ////////////

@@ -40,13 +40,14 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class HackPuzzle extends Puzzle {
 
 	public HackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
-		new GameCursor().setCursor(null);
+		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 	}
 
 	////////// USEFUL ////////////

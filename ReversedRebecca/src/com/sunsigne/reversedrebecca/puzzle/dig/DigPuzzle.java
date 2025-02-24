@@ -44,6 +44,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThree
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePreseting {
@@ -51,7 +52,7 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 	public DigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
 		super(toolPlayer, actionOnWinning);
 
-		new GameCursor().setCursor(null);
+		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));
 		loadGamepadSetup();
 	}
