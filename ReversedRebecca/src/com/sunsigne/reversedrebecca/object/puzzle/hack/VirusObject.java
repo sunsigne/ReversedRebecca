@@ -65,7 +65,7 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 	}
 
 	public void setReversed(boolean reversed) {
-		if (isReversed() != reversed)
+		if (isReversed() != reversed && reversed == false)
 			updateMouse();
 
 		this.reversed = reversed;

@@ -20,7 +20,6 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
-		- bug : la souris dépasse de l'ordi de Yan
 		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
@@ -30,6 +29,7 @@
 		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu)
 		
 	vérifier si bien réglé :
+		- la souris dépasse de l'ordi de Yan
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 
@@ -54,12 +54,6 @@
 	
 	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
-
-	bug souris :
-	- keypuzzle (lock à l'envers contre intuitif)
-	- hackPuzzle (virus à l'envers contre intuitif)
-
-	note : GameCursor - rescaleImage -> supprimer les scale règle peut-être le pb de la souris coupée chez Yan ? essayer les 2 builds
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE"
 
@@ -88,7 +82,7 @@
 	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
 
 	? pitch le son du gamepad pour les bouton et le dig puzzle ?
-	0h10 vérifier que le OCntrolScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
+	0h10 vérifier que le ControlScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
 	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
 	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
