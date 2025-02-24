@@ -4,7 +4,6 @@
 	configurer le clavier en querty par défaut sur les version anglophone
 	rajouter le ficher icon.png dans le dossier racine
 	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
-	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
 	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	supprimer le "soutenir" sur l'écrna titre tant que le lien n'est pas bon
 	

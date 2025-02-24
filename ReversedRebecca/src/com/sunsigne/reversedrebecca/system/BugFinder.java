@@ -17,8 +17,8 @@ public class BugFinder {
 	private final FileTask task = new FileTask();
 
 	protected boolean run() {
-		if (Infos.IS_DEV_VERSION)
-			return false;
+		@SuppressWarnings("unused")
+		var var = Infos.IS_DEV_VERSION;
 
 		boolean error = true;
 		int num = 1;
