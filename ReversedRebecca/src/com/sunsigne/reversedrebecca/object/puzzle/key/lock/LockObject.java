@@ -22,7 +22,7 @@ public class LockObject extends PuzzleObject implements SheetableImage, Collisio
 		super(puzzle, critical, 0, 0);
 
 		if (isCritical())
-			xmax = getPuzzle().getCol(11);
+			xmax = getPuzzle().getCol(11) + getWidth() / 2;
 	}
 
 	////////// NAME ////////////
@@ -43,25 +43,23 @@ public class LockObject extends PuzzleObject implements SheetableImage, Collisio
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// TICK ////////////
 
-	protected final int xmin = getPuzzle().getCol(1);
-	protected int xmax = getPuzzle().getCol(1);
-	protected final int ymin = getPuzzle().getRow(1);
-	protected final int ymax = getPuzzle().getRow(6);
+	protected final int xmin = getPuzzle().getCol(1) + getWidth() / 2;
+	protected int xmax = getPuzzle().getCol(1) + getWidth() / 2;
+	protected final int ymin = getPuzzle().getRow(1) + getHeight() / 2;
+	protected final int ymax = getPuzzle().getRow(6) + getHeight() / 2;
 
 	@Override
 	public void tick() {
 		MousePos mousePos = new MousePos();
 
-		followMouse(mousePos.getX(), mousePos.getY());
-		keepWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
-
-		if (isCritical())
-			keepMouseWithinZone(mousePos.getX(), mousePos.getY(), xmin, xmax, ymin, ymax);
-		else
-			keepMouseWithinYZone(mousePos.getY(), ymin, ymax);
+		followMouse(mousePos.getX() - getWidth() / 2, mousePos.getY() - getHeight() / 2);
+		keepWithinZone(mousePos.getX() - getWidth() / 2, mousePos.getY() - getHeight() / 2, xmin - getWidth() / 2,
+				xmax - getWidth() / 2, ymin - getHeight() / 2, ymax - getHeight() / 2);
+		
+		keepMouseWithinZone(mousePos.getX(), mousePos.getY(), xmin - 5, xmax + 5, ymin, ymax);
 	}
 
 	////////// TEXTURE ////////////

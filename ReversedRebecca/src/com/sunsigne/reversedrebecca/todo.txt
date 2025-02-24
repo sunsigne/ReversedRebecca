@@ -11,6 +11,7 @@
 	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
 	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
+	supprimer le "soutenir" sur l'écrna titre tant que le lien n'est pas bon
 	
 	////////// BUG ////////////
 
@@ -55,8 +56,7 @@
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
 	bug souris :
-	- keypuzzle (lock déplacé par rapport à la position de base)
-	- keypuzzle (lock à l'envers complétement fou)
+	- keypuzzle (lock à l'envers contre intuitif)
 	- hackPuzzle (virus à l'envers contre intuitif)
 
 	note : GameCursor - rescaleImage -> supprimer les scale règle peut-être le pb de la souris coupée chez Yan ? essayer les 2 builds

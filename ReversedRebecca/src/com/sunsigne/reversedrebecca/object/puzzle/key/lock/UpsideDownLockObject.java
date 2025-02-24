@@ -25,13 +25,14 @@ public class UpsideDownLockObject extends LockObject {
 		int mouseX = mousePos.getX();
 		int mouseY = mousePos.getY();
 			
-		keepMouseWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
+		keepMouseWithinZone(mouseX, mouseY, xmin - 5, xmax + 5, ymin, ymax);
 		
 		mouseX = xmax + xmin - mouseX;
 		mouseY = ymax + ymin - mouseY;
 
-		followMouse(mouseX, mouseY);
-		keepWithinZone(mouseX, mouseY, xmin, xmax, ymin, ymax);
+		followMouse(mouseX- getWidth() / 2, mouseY - getHeight() / 2);
+		keepWithinZone(mouseX - getWidth() / 2, mouseY - getHeight() / 2, xmin - getWidth() / 2,
+				xmax - getWidth() / 2, ymin - getHeight() / 2, ymax - getHeight() / 2);
 		
 	}
 
