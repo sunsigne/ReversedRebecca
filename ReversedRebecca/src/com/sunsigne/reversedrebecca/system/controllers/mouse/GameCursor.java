@@ -99,8 +99,8 @@ public class GameCursor {
 	}
 
 	private static BufferedImage rescaleImage(BufferedImage image) {
-		int w = (int) (image.getWidth() / Window.SCALE_X);
-		int h = (int) (image.getHeight() / Window.SCALE_Y);
+		int w = (int) (image.getWidth() / Math.min(Window.SCALE_X, 1));
+		int h = (int) (image.getHeight() / Math.min(Window.SCALE_Y, 1));
 
 		BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D g2d = img.createGraphics();
