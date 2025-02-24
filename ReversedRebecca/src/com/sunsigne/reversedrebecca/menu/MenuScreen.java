@@ -79,7 +79,7 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		var font = new Font("arial", 1, 30);
 		int[] rect = new int[] { 940, 460, 0, 0 };
 
-		new TextDecoration().drawOutlinesString(g, font, Infos.VERSION, DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, Infos.DISPLAYED_VERSION, DIRECTION.NULL, rect);
 	}
 
 }

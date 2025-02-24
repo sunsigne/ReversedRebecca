@@ -49,8 +49,7 @@ public class Conductor {
 		new TitleScreen(TitleScreen.PLAY);
 		LAYER.LOADING.getHandler().clear();
 		PresetMousePos.usingPreset = false;
-		
-		isUpdatableVersion = false;
+
 		if (isUpdatableVersion == false)
 			return;
 		
