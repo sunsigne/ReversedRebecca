@@ -3,7 +3,6 @@
 
 	configurer le clavier en querty par défaut sur les version anglophone
 	rajouter le ficher icon.png dans le dossier racine
-	supprimer les ressources non utilisées
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
 	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
 	désactiver le scénarion 'inquery' & mettre à jour texte de dave au niveau d'avant

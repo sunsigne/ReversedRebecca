@@ -1,9 +1,0 @@
-///// WORLD /////
-
-TAKE_A_DIP = Key2 % se baigner
-
-///// DOWN /////
-
-///// DOWNER /////
-
-FILL_UP = Key2 % faire le plein
