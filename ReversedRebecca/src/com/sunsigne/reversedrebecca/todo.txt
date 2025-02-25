@@ -52,7 +52,8 @@
 
 	////////// EN COURS ////////////
 	
-	lvl001 - changer les meubles violet innategnables en "non-objets" sur le mappable
+	lvl002 :
+	- creuser sous la table basse ne créé aucun trou...
 	
 	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"

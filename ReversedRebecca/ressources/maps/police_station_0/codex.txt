@@ -1,14 +1,14 @@
 ///// USELESS /////
 
-OBJ-01 = Small Up Desk Left Part
-OBJ-02 = Small UpDesk Center Part
-OBJ-03 = Small Up Desk Right Part
-OBJ-04 = Small Down Desk Left Part
-OBJ-05 = Small Down Desk Center Part
-OBJ-06 = Small Down Desk Right Part
-OBJ-07 = Large Desk Left Part
-OBJ-08 = Large Desk Middle Part
-OBJ-09 = Large Desk Right Part
+- OBJ-01 = Small Up Desk Left Part
+- OBJ-02 = Small Up Desk Center Part
+- OBJ-03 = Small Up Desk Right Part
+- OBJ-04 = Small Down Desk Left Part
+- OBJ-05 = Small Down Desk Center Part
+- OBJ-06 = Small Down Desk Right Part
+- OBJ-07 = Large Desk Left Part
+- OBJ-08 = Large Desk Middle Part
+- OBJ-09 = Large Desk Right Part
 OBJ-10 = Plant
 
 ///// RECEPTION /////
@@ -28,7 +28,7 @@ OBJ-15 = Closet
 OBJ-16 = Coat Rack Up
 OBJ-17 = Coat Rack Down
 OBJ-19 = Shovel Box
-OBJ-20 = Shovel Box Right Part (Path Finder Helper)
+- OBJ-20 = Shovel Box Right Part (Path Finder Helper)
 
 ///// RESTROOM & ABOVE /////
 

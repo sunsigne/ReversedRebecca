@@ -57,6 +57,10 @@ public class CustomHitboxObject extends GameObject implements TickFree, RenderFr
 			return new int[] { 0, 0, 16, 17 }; // horizontal couch
 		case 6:
 			return new int[] { 0, 0, 15, 10 }; // vertical couch
+		case 7:
+			return new int[] { 0, 0, 16, 9 }; // horizontal desk
+		case 8:
+			return new int[] { 6, 1, 9, 13 }; // big horizontal desk
 		default:
 			return new int[] { 0, 0, 16, 16 };
 		}
