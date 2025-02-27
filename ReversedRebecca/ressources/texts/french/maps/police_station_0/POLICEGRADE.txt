@@ -1,0 +1,6 @@
+% PLAYER_SPOTTED
+policegrade = DOWN = giovanni = Hey !
+
+
+% PLAYER_SPOTTED_NEXT
+policegrade = player = giovanni = Ceci est une zone interdite au public.@Je vais devoir vous demander de partir.
