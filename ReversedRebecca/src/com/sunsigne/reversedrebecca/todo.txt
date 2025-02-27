@@ -51,15 +51,28 @@
 	)
 
 	////////// EN COURS ////////////
-	
-	lvl002 :
-	- creuser sous la table basse ne créé aucun trou...
-	
+
 	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
 	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE"
 
+	////////// LVL002 ////////////
+	
+	faire grossièrement :
+	- diversion  cléf
+	- s'infiltrer par la bombe
+	- se faire remarquer sans déguisement par le colonnel
+	
+	creuser sous la table basse ne créé aucun trou...
+	plante dans le couloir pas fini !!!
+	réduire nombre d'objet piranha sur lvl002
+	lvl state : fusillade (comme rr000 sequestration)
+	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
+	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
+	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
+	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
+	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
@@ -270,16 +283,6 @@
 	Delta reaction du "Alicia" n'est pas fini
 	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs)
 
-	////////// LVL002 ////////////
-	
-	plante dans le couloir pas fini !!!
-	réduire nombre d'objet piranha sur lvl002
-	lvl state : fusillade (comme rr000 sequestration)
-	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
-	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
-	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
-	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
-	
 	////////// MOLE 0 ////////////
 	
 	faire les highlights
