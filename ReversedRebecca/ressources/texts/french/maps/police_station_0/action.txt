@@ -1,4 +1,5 @@
 STEAL = Key3 % voler
 DISGUISE = Key2 % se déguiser
+PUT_ON_A_CAP = Key2 % mettre un chapeau
 BLACK_COFFEE = Key1 % café noir
 MILK_COFFEE = Key2 % café au lait

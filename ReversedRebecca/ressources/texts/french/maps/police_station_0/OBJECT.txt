@@ -5,3 +5,11 @@ player = DOWN = laugh = C'est plus confortable !
 
 % TABLE_FLIP
 player = DOWN = laugh = Oups !
+
+
+% DISGUISE
+player = DOWN = laugh = Avec ça, je passerai inaperçue !
+
+
+% DISGUISE_CAP
+player = object = laugh = Lieutenant Rebecca, au rapport !

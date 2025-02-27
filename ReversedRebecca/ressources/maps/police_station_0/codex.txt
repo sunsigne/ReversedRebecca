@@ -24,7 +24,7 @@ OBJ-14 = Desk Plant
 
 ///// CHANGING ROOM & FUTHER /////
 
-OBJ-15 = Closet
+- OBJ-15 = Closet
 OBJ-16 = Coat Rack Up
 OBJ-17 = Coat Rack Down
 OBJ-19 = Shovel Box
