@@ -1,57 +1,43 @@
-///// USELESS /////
+///// NULL /////
 
-- OBJ-01 = Small Up Desk Left Part
-- OBJ-02 = Small Up Desk Center Part
-- OBJ-03 = Small Up Desk Right Part
-- OBJ-04 = Small Down Desk Left Part
-- OBJ-05 = Small Down Desk Center Part
-- OBJ-06 = Small Down Desk Right Part
-- OBJ-07 = Large Desk Left Part
-- OBJ-08 = Large Desk Middle Part
-- OBJ-09 = Large Desk Right Part
-OBJ-10 = Plant
+OBJ-10
 
 ///// RECEPTION /////
 
 NPC-01 = Policeman (Up) : James
 NPC-02 = Policeman (Left) : Miaouss
 NPC-03 = Policewoman (Down) : Cassidy
-NPC-06 = Policewoman (Right) : Jessy
-OBJ-11 = Chair
-OBJ-12 = Water Dispenser
-OBJ-13 = Toilet
-OBJ-14 = Desk Plant
+NPC-04 = Policewoman (Right) : Jessy
+OBJ-01 = Chair
+OBJ-02 = Water Dispenser
+OBJ-03 = Toilet
+OBJ-04 = Desk Plant
 
-///// CHANGING ROOM & FUTHER /////
+///// PRE-CHIEF & CHIEF /////
 
-- OBJ-15 = Closet
-OBJ-16 = Coat Rack Up
-OBJ-17 = Coat Rack Down
-OBJ-19 = Shovel Box
-- OBJ-20 = Shovel Box Right Part (Path Finder Helper)
+NPC-05 = Policegrade : Giovanni
+OBJ-05 = Shovel Box
+OBJ-06 = Coat Rack Up
+OBJ-07 = Coat Rack Down
+OBJ-08 = Coat Rack Chief
+OBJ-09 = Corridor Plant
 
-///// RESTROOM & ABOVE /////
+///// RESTROOM /////
 
-NPC-04 = Policeman : Rattatac
-OBJ-21 = Chair Up Part
-OBJ-22 = Chair Down Part
-OBJ-23 = Stool
-OBJ-24 = Couch Side Parts (Path Finder Helper)
-OBJ-25 = Couch
-OBJ-26 = Couch Leaver
-OBJ-27 = Coffee Machine
-
-///// CHIEF /////
-
-NPC-07 = Policegrade : Giovanni
-OBJ-18 = Coat Rack
-OBJ-29 = Corridor Plant
+OBJ-11 = Chair Up Part
+OBJ-12 = Chair Down Part
+OBJ-13 = Stool
+OBJ-14 = Couch Side Parts (Path Finder Helper)
+OBJ-15 = Couch
+OBJ-16 = Couch Leaver
+OBJ-17 = Coffee Machine
 
 ///// UP /////
 
-NPC-05 = Policeman : Butch
-OBJ-28 = Right Chair and Table
-OBJ-30 = Middle Cell Chair and Table
+NPC-06 = Policeman : Rattatac
+NPC-07 = Policeman : Butch
+OBJ-30 = Right Chair and Table
+OBJ-31 = Middle Cell Chair and Table
 
 ///// BIG JAIL /////
 
