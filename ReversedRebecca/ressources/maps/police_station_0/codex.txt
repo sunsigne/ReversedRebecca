@@ -1,7 +1,3 @@
-///// NULL /////
-
-OBJ-10
-
 ///// RECEPTION /////
 
 NPC-01 = Policeman (Up) : James
@@ -21,6 +17,7 @@ OBJ-06 = Coat Rack Up
 OBJ-07 = Coat Rack Down
 OBJ-08 = Coat Rack Chief
 OBJ-09 = Corridor Plant
+OBJ-10 = Disguise Detector
 
 ///// RESTROOM /////
 

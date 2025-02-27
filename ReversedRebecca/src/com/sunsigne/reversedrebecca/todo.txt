@@ -59,14 +59,13 @@
 
 	////////// LVL002 ////////////
 	
-	faire grossièrement :
-	- diversion  cléf
+	faire grossièrement :	
 	- s'infiltrer par la bombe
+		
+	fait grossièrement :
+	- diversion  cléf
 	- se faire remarquer sans déguisement par le colonnel
 	
-	creuser sous la table basse ne créé aucun trou...
-	plante dans le couloir pas fini !!!
-	réduire nombre d'objet piranha sur lvl002
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant

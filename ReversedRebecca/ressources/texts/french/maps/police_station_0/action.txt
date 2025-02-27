@@ -1,5 +1,14 @@
+///// RECEPTION /////
+
 STEAL = Key3 % voler
+CREATE_A_DIVERSION = Key3 % faire diversion
+
+///// PRE-CHIEF & CHIEF /////
+
 DISGUISE = Key2 % se déguiser
 PUT_ON_A_CAP = Key2 % mettre un chapeau
+
+///// RESTROOM /////
+
 BLACK_COFFEE = Key1 % café noir
 MILK_COFFEE = Key2 % café au lait
