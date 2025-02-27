@@ -102,12 +102,6 @@ public class DigAction extends OpenPuzzleAction {
 		GameList<GameObject> list = Handler.getObjectsAtPos(exit_handler, puzzlerObject.getX(), puzzlerObject.getY(),
 				puzzlerObject.getSize(), true);
 
-		if (list.getList().isEmpty()) {
-			PuzzlerObject hole = getOppositeNullObject(nullObject);
-			exit_handler.addObject(hole);
-			return;
-		}
-
 		for (GameObject tempObject : list.getList()) {
 			if (tempObject instanceof HoleObject == false)
 				continue;
@@ -120,7 +114,12 @@ public class DigAction extends OpenPuzzleAction {
 			DigAction digAction = (DigAction) action;
 			GenericListener listener = digAction.actionOnWinning(hole);
 			listener.doAction();
+			return;
 		}
+		
+		// if no hole found, create one
+		PuzzlerObject hole = getOppositeNullObject(nullObject);
+		exit_handler.addObject(hole);
 	}
 
 	////////// KEYBOARD ////////////
