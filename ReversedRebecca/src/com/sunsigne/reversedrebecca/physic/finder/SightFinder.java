@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.physic.finder;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
@@ -80,6 +82,9 @@ public class SightFinder implements Position {
 			int diffY = getY() - (goal.getY());
 			distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
 
+			if (isInTheBack(diffX, diffY))
+				return false;
+
 			// draw a line between the observer and the goal
 			setX(getX() + Math.round((-1 / distance) * diffX));
 			setY(getY() + Math.round((-1 / distance) * diffY));
@@ -100,6 +105,25 @@ public class SightFinder implements Position {
 		} while (distance != 0);
 
 		return true;
+	}
+
+	private boolean isInTheBack(int diffX, int diffY) {
+		if (observer instanceof Facing == false)
+			return false;
+
+		Facing facer = (Facing) observer;
+		DIRECTION direction = facer.getFacing();
+
+		if (direction == DIRECTION.LEFT && diffX < 0)
+			return true;
+		if (direction == DIRECTION.RIGHT && diffX > 0)
+			return true;
+		if (direction == DIRECTION.UP && diffY < 0)
+			return true;
+		if (direction == DIRECTION.DOWN && diffY > 0)
+			return true;
+
+		return false;
 	}
 
 	private void removeObserverAndGoalFromList(GameList<GameObject> wall_list) {
