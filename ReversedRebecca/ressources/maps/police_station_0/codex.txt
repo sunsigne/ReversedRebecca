@@ -8,6 +8,7 @@ OBJ-01 = Chair
 OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
 OBJ-04 = Desk Plant
+OBJ-18 = Miaouss Detector
 
 ///// PRE-CHIEF & CHIEF /////
 

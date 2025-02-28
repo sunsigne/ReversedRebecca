@@ -1,0 +1,6 @@
+% PLAYER_SPOTTED_MIAOUSS_WITHIN_DESK
+policeman = player = miaouss = Je rêve… Les gens se croient@vraiment tout permis de nos jours…
+policeman = player = miaouss = Sortez d'ici.
+
+% PLAYER_SPOTTED_MIAOUSS_IN_CORRIDOR
+policeman = player = miaouss = … Mademoiselle, vous n'avez rien à faire ici.@Veuillez circulez.

@@ -59,6 +59,11 @@
 
 	////////// LVL002 ////////////
 	
+	miaouss :
+	- tester pour voir les bugs
+	- vérifier l'intteraction lorsqu'il "apercoit" le joueur dans le couloir (devrait avoir des doutes ? un temps de réaction ?)
+	- devrait réagir si le joueur entre dans le bureau de James
+	
 	faire grossièrement :	
 	- s'infiltrer par la bombe
 		
@@ -66,6 +71,7 @@
 	- diversion  cléf
 	- se faire remarquer sans déguisement par le colonnel
 	
+	le highlight de l'action "sortir du canapé" dans la salle de pause doit s'adapter à la tenue de rebecca
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
