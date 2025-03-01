@@ -11,10 +11,18 @@ L'Écriture Compacte leur est systématiquement permise, ainsi que l'Écriture C
 Attention ! Il s'agit d'un attribut important qui change la texture même du joueur ! Il ne devrait être utilisé que dans le cadre conditionnel.
 
 
+////// TEXTURE_NAME_PLAYER //////
+
+Équivalant au Type de Requête TEXTURE_NAME.
+
+Attention ! Il s'agit d'un attribut important qui change la texture même du joueur ! Il ne devrait être utilisé que dans le cadre conditionnel.
+
+
 
 ////// FACING_PLAYER //////
 
 Équivalant au Type de Requête FACING.
+
 
 
 ////// INVULNERABLE_PLAYER //////

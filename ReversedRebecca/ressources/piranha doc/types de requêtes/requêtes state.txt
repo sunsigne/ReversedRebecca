@@ -8,7 +8,7 @@ Le Type de Requête NAME permet de renommer un objet.
 
 Attention ! Un nom est l'équivalent d'une ID : deux objets différents sur une même carte ne devraient jamais avoir le même.
 
-Il est très courant d'utiliser ce Type de Requête juste après la génération d'une carte afin d'établir le nom et d'appliquer les bonnes textures des NPC. En effet, pour les NPC, leurs visuels sont automatiquement définis en fonction de ce nom (voir « ??? » dans la partie « NPC »). Pour les objets interactifs, ce sont les fichiers de références de leurs ERA sous forme de détourage visuel qui sont changés (voir « HIGHLIGHT » et « HIGHLIGHT_REFRESH » dans la partie « Piranha – Type de Requêtes : Autres »).
+Il est très courant d'utiliser ce Type de Requête juste après la génération d'une carte afin d'établir le nom et d'appliquer les bonnes textures des NPC. En effet, pour les NPC, leurs visuels sont automatiquement définis en fonction de ce nom. Pour les objets interactifs, ce sont les fichiers de références de leurs ERA sous forme de détourage visuel qui sont changés (voir « HIGHLIGHT » et « HIGHLIGHT_REFRESH » dans la partie « Piranha – Type de Requêtes : Autres »).
 
 Exemple :
 TIME -> 0 = NAME -> BOB
@@ -19,6 +19,22 @@ Lorsque la Condition sera vérifiée, l'objet sera renommé en « Bob ».
 Note : il est tout à fait possible (voire, très pratique) d'utiliser NAME alternativement de façon "classique" et Conditionnelle afin d'imiter le comportement du Type de Requête MEMORY (voir la partie « Piranha – Type de Requêtes : Memory »).
 
 Rappel : au besoin, les mots clés « PLAYER » ou « OBJECT » peuvent être utilisés pour faire référence respectivement au joueur ou à l'objet actuel.
+
+
+
+////// TEXTURE_NAME //////
+
+Le Type de Requête TEXTURE_NAME permet de changer le visuel des NPC, en définissant pour leurs textures des fichiers de référence explicitement différents de leurs noms (NAME).
+
+Ce type de Requête est utile de façon situationnelle, lorsque plusieurs NPC utilise la même texture.
+
+Exemple :
+TIME -> 0 = TEXTURE_NAME -> POLICEMAN
+TIME -> 0 = GOTO -> TEXTURE_NAME:POLICEMAN
+
+Lorsque la Condition sera vérifiée, l'objet adotera la texture « POLICEMAN », sans changer de nom.
+
+Rappel : un nom est l'équivalent d'une ID : deux objets différents sur une même carte ne devraient jamais avoir le même.
 
 
 

@@ -112,12 +112,12 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 		if (living_img != null)
 			return living_img;
 
-		String path = "textures/characters/" + living.getName() + "/" + "world";
+		String path = "textures/characters/" + living.getTextureName() + "/" + "world";
 		living_img = new ImageTask().loadImage(path, true);
 
 		// load error character instead of missing texture
 		if (living_img == null)
-			living_img = new ImageTask().loadImage(path.replace(living.getName(), "error"));
+			living_img = new ImageTask().loadImage(path.replace(living.getTextureName(), "error"));
 
 		return living_img;
 	}
@@ -126,12 +126,12 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 		if (highlight_image != null)
 			return highlight_image;
 
-		String path = "textures/characters/" + living.getName() + "/" + "highlight";
+		String path = "textures/characters/" + living.getTextureName() + "/" + "highlight";
 		highlight_image = new ImageTask().loadImage(path, true);
 
 		// load error character instead of missing texture
 		if (highlight_image == null)
-			highlight_image = new ImageTask().loadImage(path.replace(living.getName(), "error"));
+			highlight_image = new ImageTask().loadImage(path.replace(living.getTextureName(), "error"));
 
 		return highlight_image;
 	}

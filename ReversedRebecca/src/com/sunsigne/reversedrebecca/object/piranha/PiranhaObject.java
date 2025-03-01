@@ -34,6 +34,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public PiranhaObject(String name, int x, int y) {
 		super(x, y, 0, 0, 0);
 		this.name = name.toLowerCase();
+		this.textureName = name.toLowerCase();
 		set_stun_at_waitfor_attribution(true);
 		setHighlightAbovePlayer(true);
 		setBlockingPath(true);
@@ -53,8 +54,22 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	}
 
 	public void setName(String name) {
-		if (name != null)
-			this.name = name.toLowerCase();
+		if (name == null)
+			return;
+		
+		this.name = name.toLowerCase();
+		setTextureName(name);
+	}
+
+	private String textureName;
+
+	public String getTextureName() {
+		return textureName;
+	}
+
+	public void setTextureName(String textureName) {
+		if (textureName != null)
+			this.textureName = textureName.toLowerCase();
 	}
 
 	@Override
@@ -62,10 +77,11 @@ public abstract class PiranhaObject extends CustomHitboxObject
 		var clazz = "PIRANHA";
 
 		var dirName = "NAME:" + getName().toUpperCase();
+		var dirTextureName = "TEXTURE NAME:" + getTextureName().toUpperCase();
 		var goal = new GoalObject(getX(), getY(), true);
 		var dirPos = "POS:" + goal.getX() + "-" + goal.getY();
 		var dirBlockPath = "BLOCKPATH:" + isBlockingPath();
-		var result = clazz + " : " + dirName + " / " + dirPos + " / " + dirBlockPath;
+		var result = clazz + " : " + dirName + " / " + dirTextureName + " / " + dirPos + " / " + dirBlockPath;
 
 		if (getTripleAction() != null) {
 			if (getTripleAction().getAction(0) != null)
@@ -304,7 +320,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PIRANHA;
 	}
-	
+
 	////////// KEYBOARD ////////////
 
 	private KeyboardController keyboardController = new KeyboardController(this);

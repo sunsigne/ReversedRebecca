@@ -36,6 +36,12 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 		super.setName(name);
 		loadAnimation();
 	}
+	
+	@Override
+	public void setTextureName(String name) {
+		super.setTextureName(name);
+		loadAnimation();
+	}
 
 	////////// FACING ////////////
 
