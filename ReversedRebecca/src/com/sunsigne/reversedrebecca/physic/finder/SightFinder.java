@@ -64,6 +64,29 @@ public class SightFinder implements Position {
 
 	////////// USEFUL ////////////
 
+	public DIRECTION getDirectionOfGoalFromObserver() {
+		if (goal == null)
+			return DIRECTION.NULL;
+
+		int diffX = getX() - (goal.getX());
+		int diffY = getY() - (goal.getY());
+
+		if (diffX == 0 && diffY == 0)
+			return DIRECTION.NULL;
+
+		if (Math.abs(diffX) > Math.abs(diffY)) {
+			if (diffX > 0)
+				return DIRECTION.LEFT;
+			else
+				return DIRECTION.RIGHT;
+		} else {
+			if (diffY > 0)
+				return DIRECTION.UP;
+			else
+				return DIRECTION.DOWN;
+		}
+	}
+
 	public boolean isGoalInSight() {
 
 		if (goal == null)
