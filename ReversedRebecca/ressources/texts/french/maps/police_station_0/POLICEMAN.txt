@@ -2,5 +2,8 @@
 policeman = player = miaouss = Je rêve… Les gens se croient@vraiment tout permis de nos jours…
 policeman = player = miaouss = Sortez d'ici.
 
+% PLAYER_SPOTTED_MIAOUSS_WITHIN_DESK_BUT_STAYING
+policeman = player = miaouss = Madame, vous êtes officiellement en situation@d'intrusion. Sortez d'ici ou j'utiliserai la force.
+
 % PLAYER_SPOTTED_MIAOUSS_IN_CORRIDOR
-policeman = player = miaouss = … Mademoiselle, vous n'avez rien à faire ici.@Veuillez circulez.
+policeman = player = miaouss = … Madame, vous n'avez rien à faire ici.@Veuillez circulez.
