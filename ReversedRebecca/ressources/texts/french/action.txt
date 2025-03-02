@@ -20,6 +20,8 @@ OPEN = Key1 % ouvrir
 EXPLODE = Key1 % exploser
 DIG = Key1 % creuser
 HACK = Key1 % pirater
+GODOWN = Key1 % descendre
+GOUP = Key1 % monter
 
 ///// CHOICES /////
 

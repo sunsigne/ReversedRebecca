@@ -33,7 +33,7 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 	}
 
 	protected void loadTripleAction() {
-		Action goUpAction = new GoUpAction(this, "enter_hole");
+		Action goUpAction = new GoUpAction(this, getGoSound());
 		tripleAction = new TripleAction(null, goUpAction, null, null);
 	}
 

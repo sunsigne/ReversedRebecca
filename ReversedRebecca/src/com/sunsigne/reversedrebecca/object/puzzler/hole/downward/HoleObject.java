@@ -95,6 +95,10 @@ public class HoleObject extends PuzzlerObject implements Facing {
 		return tripleAction;
 	}
 
+	public String getGoSound() {
+		return "enter_hole";
+	}
+	
 	@Override
 	protected void loadTripleAction() {
 		OpenPuzzleAction digAction = new DigAction(this);

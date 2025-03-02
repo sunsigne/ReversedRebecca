@@ -32,7 +32,7 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 
 	@Override
 	protected void loadTripleAction() {
-		Action goDownAction = new GoDownAction(this, "enter_hole");
+		Action goDownAction = new GoDownAction(this, getGoSound());
 		tripleAction = new TripleAction(null, goDownAction, null, null);
 	}
 

@@ -20,6 +20,8 @@ OPEN = Key1 % open
 EXPLODE = Key1 % explode
 DIG = Key1 % dig
 HACK = Key1 % hack
+GODOWN = Key1 % go down
+GOUP = Key1 % go up
 
 ///// CHOICES /////
 
