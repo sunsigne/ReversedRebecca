@@ -8,7 +8,7 @@ OBJ-01 = Chair
 OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
 OBJ-04 = Desk Plant
-OBJ-18 = Miaouss Detector
+OBJ-18 = Miaouss Detector & Plant
 OBJ-19 = /hidden
 OBJ-20 = Miaouss Chair & Computer
 

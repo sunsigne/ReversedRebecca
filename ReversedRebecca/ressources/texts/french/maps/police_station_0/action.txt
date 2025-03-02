@@ -3,8 +3,9 @@
 STEAL = Key3 % voler
 CREATE_A_DIVERSION = Key3 % faire diversion
 DO_RESEARCH = Key3 % faire des recherches
-STOP_PREMATURELY = Key3 % arreter prematurement
+STOP = Key3 % arrêter
 MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
+SET_UP_THE_DIVERSION = Key2 % mettre en place la diversion
 
 ///// PRE-CHIEF & CHIEF /////
 

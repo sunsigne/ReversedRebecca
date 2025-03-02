@@ -67,6 +67,8 @@
 	- réaction si on ouvre la porte depuis l'intérieur
 	- création de la diversion plante + du trajet retour
 	- créer musique speciale pour la route speedrun
+	- rebecca doit faire une remarque comme quoi elle n'a pas fini ses recherches
+	- un dialogue est requis pour quand on met la plante sur le bord du meuble
 			
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
