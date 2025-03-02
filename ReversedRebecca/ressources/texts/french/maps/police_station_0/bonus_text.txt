@@ -1,1 +1,14 @@
 SLURP = SLURP
+RESULTS_IN_12 = resultats dans … 12
+RESULTS_IN_11 = resultats dans … 11
+RESULTS_IN_10 = resultats dans … 10
+RESULTS_IN_9 = resultats dans … 9
+RESULTS_IN_8 = resultats dans … 8
+RESULTS_IN_7 = resultats dans … 7
+RESULTS_IN_6 = resultats dans … 6
+RESULTS_IN_5 = resultats dans … 5
+RESULTS_IN_4 = resultats dans … 4
+RESULTS_IN_3 = resultats dans … 3
+RESULTS_IN_2 = resultats dans … 2
+RESULTS_IN_1 = resultats dans … 1
+RESULTS_OBTAINED = resultats obtenus !
