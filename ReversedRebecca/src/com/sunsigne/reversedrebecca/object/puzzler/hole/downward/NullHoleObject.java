@@ -16,7 +16,7 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 		super(LVL.NULL, facing, x, y);
 	}
 
-	private NullHoleObject(int x, int y) {
+	protected NullHoleObject(int x, int y) {
 		super(LVL.NULL, DIRECTION.NULL, x, y);
 		this.onGround = true;
 	}
@@ -38,7 +38,7 @@ public class NullHoleObject extends HoleObject implements LayerSendable {
 
 	////////// GROUND LAYER SENDABLE ////////////
 
-	private NullHoleObject initial_hole;
+	protected NullHoleObject initial_hole;
 
 	@Override
 	public Updatable getReplacementUpdatable() {
