@@ -70,6 +70,7 @@
 	- réaction si le joueur refuse de partir
 	- réaction si seconde fois ouvre la porte
 	- réaction si trouve le joueur dans son bureau
+	- créer un chemin de speerunner avec la bouche d'aération qui communique entre les deux bureau, et où la sortie est par les toilettes ? (achievement pour guider)
 	
 	faire grossièrement :	
 	- s'infiltrer par la bombe
