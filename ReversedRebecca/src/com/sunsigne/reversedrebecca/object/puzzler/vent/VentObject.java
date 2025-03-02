@@ -2,13 +2,19 @@ package com.sunsigne.reversedrebecca.object.puzzler.vent;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.downward.NullHoleObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class VentObject extends NullHoleObject {
 
 	public VentObject(DIRECTION facing, int x, int y) {
 		super(facing, x, y);
+	}
+
+	protected VentObject(int x, int y) {
+		super(x, y);
 	}
 
 	////////// NAME ////////////
@@ -49,6 +55,16 @@ public class VentObject extends NullHoleObject {
 	@Override
 	public String getGoSound() {
 		return "vent";
+	}
+
+	////////// GROUND LAYER SENDABLE ////////////
+
+	@Override
+	public Updatable getReplacementUpdatable() {
+		Updatable updatable = new VentObject(getX(), getY());
+		((PuzzlerObject) updatable).setDisabled(isDisabled());
+		this.initial_hole = (NullHoleObject) updatable;
+		return updatable;
 	}
 
 }
