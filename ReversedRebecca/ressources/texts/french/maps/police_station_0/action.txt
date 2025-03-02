@@ -4,6 +4,7 @@ LEAVE = Key1 % partir
 STAY = Key2 % rester
 STEAL = Key3 % voler
 CREATE_A_DIVERSION = Key3 % faire diversion
+MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
 
 ///// PRE-CHIEF & CHIEF /////
 

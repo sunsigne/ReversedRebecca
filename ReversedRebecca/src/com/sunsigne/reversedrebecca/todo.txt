@@ -20,6 +20,7 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
+		- lorsque le joueur change de couche, son index n'est plus raccord avec ce qu'il est suposé être
 		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
@@ -57,9 +58,13 @@
 	mappable.txt des murs n'est plus à jour
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
-	GDD - mettre à jour "MAPPABLE", "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME"
+	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER"
 
 	////////// LVL002 ////////////
+	
+	en cours :
+	vent : un auto affecting en premier ligne doit être supprimé (c'était pour les tests)
+	vent : le son "nope" est joué lorsque la grille est emprunté, au lieu d'un son de grille
 	
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
@@ -70,7 +75,7 @@
 	- réaction si le joueur refuse de partir
 	- réaction si seconde fois ouvre la porte
 	- réaction si trouve le joueur dans son bureau
-	- créer un chemin de speerunner avec la bouche d'aération qui communique entre les deux bureau, et où la sortie est par les toilettes ? (achievement pour guider)
+	- créer musique speciale pour la route speedrun
 	
 	faire grossièrement :	
 	- s'infiltrer par la bombe

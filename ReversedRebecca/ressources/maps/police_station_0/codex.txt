@@ -9,6 +9,7 @@ OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
 OBJ-04 = Desk Plant
 OBJ-18 = Miaouss Detector
+OBJ-19 = /hidden
 
 ///// PRE-CHIEF & CHIEF /////
 
