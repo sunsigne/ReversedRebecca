@@ -17,12 +17,12 @@ public class GoDownAction extends Action {
 
 		setName(new Translatable().getTranslatedText("GoDown", FilePath.PUZZLER));
 		setListener(() -> {
-			Player player = new PlayerFinder().getPlayer();
-			player.setX(interactive.getX());
-			player.setY(interactive.getY());
-
 			new SoundTask().playSound(SOUNDTYPE.SOUND, soundPath);
 			new PlayerLayerChanger().goesDown();
+			
+			Player player = new PlayerFinder().getPlayer();
+			player.setX(interactive.getX());
+			player.setY(interactive.getY());			
 		});
 	}
 

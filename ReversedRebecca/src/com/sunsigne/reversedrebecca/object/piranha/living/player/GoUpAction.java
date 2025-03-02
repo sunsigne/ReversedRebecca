@@ -17,12 +17,12 @@ public class GoUpAction extends Action {
 
 		setName(new Translatable().getTranslatedText("GoUp", FilePath.PUZZLER));
 		setListener(() -> {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, soundPath);
+			new PlayerLayerChanger().goesUp();
+			
 			Player player = new PlayerFinder().getPlayer();
 			player.setX(interactive.getX());
 			player.setY(interactive.getY());
-
-			new SoundTask().playSound(SOUNDTYPE.SOUND, soundPath);
-			new PlayerLayerChanger().goesUp();
 		});
 	}
 
