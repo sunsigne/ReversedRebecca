@@ -6,6 +6,7 @@ DO_RESEARCH = Key3 % faire des recherches
 STOP = Key3 % arrêter
 MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
 SET_UP_THE_DIVERSION = Key2 % mettre en place la diversion
+START_THE_DIVERSION = Key2 % lancer la diversion
 
 ///// PRE-CHIEF & CHIEF /////
 
