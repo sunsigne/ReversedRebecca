@@ -66,6 +66,23 @@ Lorsque la Condition sera vérifiée, le joueur sera recentré sur la case sur l
 Rappel : lors du lancement d'une cinématique (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres »), le joueur est automatiquement recentré.
 
 
+////// SEND_PLAYER //////
+
+Le Type de Requête SEND_PLAYER permet d'envoyer le joueur dans une autre couche.
+
+La Cible détermine la couche d'arrivée :
+- UP : celle directement au-dessus du joueur.
+- DOWN : celle directement en dessous du joueur.
+
+Exemple :
+TIME -> 0 = SEND_PLAYER -> UP
+TIME -> 0 = GOTO -> SEND_PLAYER:UP
+
+Lorsque la Condition sera vérifiée, le joueur sera envoyé à la couche au-dessus de lui.
+
+Attention ! L'Écriture Conditionnelle est impossible avec ce Type de Requête (l'Écriture Condensée reste permise).
+
+
 
 ////// STATE_PLAYER //////
 
