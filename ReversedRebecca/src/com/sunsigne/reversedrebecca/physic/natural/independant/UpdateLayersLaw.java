@@ -44,6 +44,15 @@ public class UpdateLayersLaw extends IndependantLaw {
 		registerNewLayer(world, world_layer);
 	}
 
+	public void forceUdpate() {
+		World world = World.get();
+		if (world == null)
+			return;
+		
+		updateLayerVisibilities(world);
+		registerNewLayer(world, world.getLayer(false));
+	}
+	
 	public void updateLayerVisibilities(World world) {
 		boolean hideRendering = false;
 

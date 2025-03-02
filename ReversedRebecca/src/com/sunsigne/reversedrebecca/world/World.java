@@ -26,6 +26,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
+import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
@@ -191,6 +192,7 @@ public class World implements Updatable, RenderFree {
 		getLayer(false).addObject(this);
 		freeze(false, !frozen);
 		Game.getInstance().forceLoop();
+		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
 	}
 
 	private void stopApp() {

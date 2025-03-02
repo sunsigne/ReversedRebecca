@@ -40,8 +40,8 @@ public class GroundRendering implements Updatable, TickFree, CameraDependency {
 
 	@Override
 	public void render(Graphics g) {
-		if (world.getLayer(false) != layer)
-			return;
+		// if (world.getLayer(false) != layer)
+		// return;
 
 		BufferedImage img = world.getImageMap(layer);
 
