@@ -1,7 +1,5 @@
 ///// RECEPTION /////
 
-LEAVE = Key1 % partir
-STAY = Key2 % rester
 STEAL = Key3 % voler
 CREATE_A_DIVERSION = Key3 % faire diversion
 DO_RESEARCH = Key3 % faire des recherches

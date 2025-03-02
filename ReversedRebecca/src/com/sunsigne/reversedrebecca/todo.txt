@@ -53,29 +53,24 @@
 
 	////////// EN COURS ////////////
 
-	- devrait utiliser "texture name" pour le jour à CHAQUE FOIS (serviette et police)
+	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
-	mappable.txt des murs n'est plus à jour
+	mappable.txt des murs n'est plus à jour, ya "vent" aussi
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
 
 	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER"
 
 	////////// LVL002 ////////////
-	
-	en cours :
-	vent : un auto affecting en premier ligne doit être supprimé (c'était pour les tests)
-	vent : le son "nope" est joué lorsque la grille est emprunté, au lieu d'un son de grille
-	
+
+	miaouss :
+	- réaction si seconde fois ouvre la porte
+	- réaction si on ouvre la porte depuis l'intérieur
+	- création de la diversion plante + du trajet retour
+	- créer musique speciale pour la route speedrun
+			
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
 	le highlight de l'action "sortir du canapé" dans la salle de pause doit s'adapter à la tenue de rebecca
-	
-	miaouss :
-	- tester pour voir les bugs
-	- réaction si le joueur refuse de partir
-	- réaction si seconde fois ouvre la porte
-	- réaction si trouve le joueur dans son bureau
-	- créer musique speciale pour la route speedrun
 	
 	faire grossièrement :	
 	- s'infiltrer par la bombe
