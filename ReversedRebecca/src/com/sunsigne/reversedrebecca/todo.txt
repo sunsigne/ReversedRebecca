@@ -65,11 +65,8 @@
 	miaouss :
 	- réaction si seconde fois ouvre la porte
 	- réaction si on ouvre la porte depuis l'intérieur
-	- rebecca doit faire une remarque comme quoi elle n'a pas fini ses recherches
-	- un dialogue est requis pour quand on met la plante sur le bord du meuble
-	- succèes "agent secret B)"
-	- la fuite final ne fini par encore le niveau
-			
+	- si on se tient sur la porte quand il revient, softlock
+
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
 	le highlight de l'action "sortir du canapé" dans la salle de pause doit s'adapter à la tenue de rebecca
