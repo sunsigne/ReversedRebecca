@@ -64,8 +64,6 @@
 
 	miaouss :
 	- réaction si seconde fois ouvre la porte
-	- réaction si on ouvre la porte depuis l'intérieur
-	- si on se tient sur la porte quand il revient, softlock
 
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
