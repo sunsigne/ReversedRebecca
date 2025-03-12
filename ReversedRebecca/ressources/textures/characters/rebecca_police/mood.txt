@@ -36,11 +36,12 @@ despair=4,8
 
 ////// PSYCHOPATH //////
 
-determined=5,1
-evil=5,2
-evil_var=5,3
-evil_var2=5,4
-death=5,5
+convinced=5,1
+determined=5,2
+evil=5,3
+evil_var=5,4
+evil_var2=5,5
+death=5,6
 
 ////// IMITATION //////
 
