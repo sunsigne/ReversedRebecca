@@ -62,9 +62,7 @@
 
 	////////// LVL002 ////////////
 
-	police texture for rebecca (highlight) est incorrect
-	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
-	le highlight de l'action "sortir du canapé" dans la salle de pause doit s'adapter à la tenue de rebecca
+	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 	
 	faire grossièrement :	
 	- s'infiltrer par la bombe
