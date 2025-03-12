@@ -3,9 +3,14 @@ policeman = player = miaouss = Je rêve… Les gens se croient@vraiment tout per
 policeman = player = miaouss = Sortez d'ici.
 
 
-% PLAYER_SPOTTED_MIAOUSS_WITHIN_DESK_BUT_STAYING
-policeman = player = miaouss = Madame, vous êtes officiellement en situation@d'intrusion. Sortez d'ici ou j'utiliserai la force.
-
-
 % PLAYER_SPOTTED_MIAOUSS_IN_CORRIDOR
 policeman = player = miaouss = … Madame, vous n'avez rien à faire ici.@Veuillez circulez.
+
+
+% PLAYER_SPOTTED_MIAOUSS_SECOND_INTRUSION
+policeman = player = miaouss = La blague a assez durée.
+
+
+% PLAYER_SPOTTED_MIAOUSS_SECOND_INTRUSION_NEXT
+policeman = player = miaouss = Vous êtes en état d'arrestation.
+

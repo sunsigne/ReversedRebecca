@@ -62,9 +62,6 @@
 
 	////////// LVL002 ////////////
 
-	miaouss :
-	- réaction si seconde fois ouvre la porte
-
 	police texture for rebecca (highlight) est incorrect
 	inverser les deux porte manteau (pour que le chapeau soit porté moins souvent, voire même le supprimer car moche)
 	le highlight de l'action "sortir du canapé" dans la salle de pause doit s'adapter à la tenue de rebecca
