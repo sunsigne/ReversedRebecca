@@ -199,10 +199,10 @@ Explication : nous avons ici une cinématique (voir « CUTSCENE » dans la pa
 Attention ! Lorsqu'un objet est poussé (voir « PUSH » dans la partie « Piranha – Type de Requêtes : Move »), il est "stun", il est « stun » (voir « STUNNED » dans la partie « Piranha – Type de Requêtes : Conditionnelles »). Aussitôt qu'est appelée une Instruction dont le Type de Requête est WAITFOR, l'objet est automatiquement "dé-stun", ce qui a pour effet de l'immobiliser pendant un court instant ; donc d'annuler la poussée. Il ne faut pas appeler le Type de Requête WAITFOR juste après avoir utilisé le Type de Requête PUSH.
 
 Pour le dire plus simplement, n'écrivez pas :
-TIME → 0 = GOTO → PUSH:UP, WAIT_STUFF
+TIME → 0 = GOTO -> PUSH:UP, WAIT_STUFF
 
 Écrivez à la place :
-TIME → 0 = GOTO → WAIT_STUFF, PUSH:UP
+TIME → 0 = GOTO -> WAIT_STUFF, PUSH:UP
 
 
 

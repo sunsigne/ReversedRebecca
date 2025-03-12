@@ -1,0 +1,30 @@
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK
+policewoman = player = cassidy = Je peux vous aider ?
+player = DOWN = happy = Ça ira, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT
+policewoman = player = cassidy = Vous avez besoin de quelque chose ?
+player = DOWN = happy = Non, c'est bon, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT
+policewoman = player = cassidy = Je peux vous être utile ?
+player = DOWN = happy = D'aucune façon, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT_NEXT
+policewoman = player = cassidy = Vous êtes certaine qu'il ne vous faut rien ?
+player = DOWN = happy = Certaine, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT_NEXT_NEXT
+player = DOWN = happy_var = J'ai besoin de quelque chose !
+policewoman = player = cassidy = Oui ?
+player = DOWN = happy = Je cherche la sortie de votre bureau.
+policewoman = player = cassidy = Derrière vous.
+player = DOWN = excited = Merci !
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_FINAL
+player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission à accomplir.

@@ -64,12 +64,16 @@
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 	
+	
 	faire grossièrement :	
 	- s'infiltrer par la bombe
 		
 	fait grossièrement :
 	- diversion  cléf
 	- se faire remarquer sans déguisement par le colonnel
+	
+	ne pas oublier :
+	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
