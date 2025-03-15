@@ -23,7 +23,7 @@ player = DOWN = happy_var = J'ai besoin de quelque chose !
 policewoman = player = cassidy = Oui ?
 player = DOWN = happy = Je cherche la sortie de votre bureau.
 policewoman = player = cassidy = Derrière vous.
-player = DOWN = excited = Merci !
+player = DOWN = happy = Merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_FINAL
