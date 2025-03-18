@@ -1,0 +1,43 @@
+% DOUG_ASKING_FOR_SHOWEL
+doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
+
+
+% TEDDY
+teddy = player = happy = William triche tout le temps aux cartes.@Voilà la technique pour gagner :
+player = teddy = determined = Ok, j'ai bien noté la technique !
+
+
+% WILLIAM_LOSE
+william = player = serious = Jouons aux cartes pour un donut.
+william = player = serious = Dommage, tu as perdue.
+
+
+% WILLIAM_WIN
+william = player = serious = Jouons aux cartes pour un donut.
+william = player = serious = Wow ! Tu as gagné ! Voilà ton donut.
+
+
+% REBECCA_ATE_DONUT
+player = DOWN = happy_var = Il était délicieux ce donut !
+player = DOWN = surprised = Ho zut ! J'étais censé l'échanger !
+player = DOWN = you_silly = Je plaisante, je n'y ai pas touché.@J'ai seulement fait le bruit avec ma bouche.
+
+
+% RATTATAC
+policeman = player = rattatac = Il est délicieux mon café ! Mais je préfèrerais un donut…
+
+
+% RATTATAC_TRADE
+policeman = player = rattatac = Merci pour ce donut. Voilà le café en échange.
+
+
+% BUTCH
+policeman = player = butch = Je suis le gardien de la clef verte,@et je veux un café.
+
+
+% BUTCH_TRADE
+policeman = player = butch = Merci pour ce café ! Voilà la clef verte en échange.
+
+
+% BUTCH_TRADE_NEXT
+policeman = player = butch = Mais… Il y a des miettes dans ce café !@C'est qui le gros dégeulasse qui a fait ça !

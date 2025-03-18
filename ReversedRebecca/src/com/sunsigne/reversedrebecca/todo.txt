@@ -56,20 +56,26 @@
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	mappable.txt des murs n'est plus à jour, ya "vent" aussi
-	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres"
+	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres")
 
 	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER"
 
 	////////// LVL002 ////////////
 
+ 	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
+ 	William : Joue aux cartes dans la cellule commune :- Propose à Rebecca de jouer aux cartes (CowboyPuzzle) contre lui. Si elle gagne, il lui donne un donut. Si elle perd, elle lui cédera sa clé cyan.
+ 	Teddy : Joue aux cartes dans la cellule commune :- Informe Rebecca que William triche toujours aux cartes. Lui donne la technique pour ne pas se faire avoir.
+ 	Rattatac (gauche) : Travaille à son bureau : - La machine à café ne marchant pas, accepte de donner son café en échange d'un donut, une fois qu'il l'aura trempé dedans.
+	Butch (haut) : Travaille à son bureau : - Accepter de donner la clé permettant d'aller chercher la pelle en échange d'un bon café.
+
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
-	
-	
+		
 	faire grossièrement :	
 	- s'infiltrer par la bombe
 		
 	fait grossièrement :
-	- diversion  cléf
+	- quete café
+	- diversion  clef
 	- se faire remarquer sans déguisement par le colonnel
 	
 	ne pas oublier :
