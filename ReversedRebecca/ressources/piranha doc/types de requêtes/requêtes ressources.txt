@@ -98,6 +98,34 @@ Note : les succès custom créé par l'utilisateur / le joueur ne seront pas li
 
 
 
+////// HUD_ADD //////
+
+Le Type de Requête HUD_ADD permet d'ajouter une image dans la HUD, sous les points de vie du joueur.
+
+Fichiers de référence : « ressources/texture/hud/inventory » et « ressources/texture/hud/inventory_highlight ».
+
+Exemple :
+WONPUZZLE -> 10-20 = HUD_ADD -> 1
+WONPUZZLE -> 10-20 = GOTO -> HUD_ADD:1
+
+Lorsque la Condition sera vérifiée, sera ajouté à la HUD l'image située en première colonne du fichier de référence.
+
+Note : l'image est automatiquement retirée lorsque le niveau prend fin.
+
+
+
+////// HUD_REMOVE //////
+
+Le Type de Requête HUD_REMOVE permet de retirer une image de la HUD qui a été ajouté par le Type de Requête HUD_ADD.
+
+Exemple :
+WONPUZZLE -> 10-20 = HUD_REMOVE -> 1
+WONPUZZLE -> 10-20 = GOTO -> HUD_REMOVE:1
+
+Lorsque la Condition sera vérifiée, sera retiré de la HUD la première image qui a été ajouté par le Type de Requête HUD_ADD.
+
+
+
 ////// TALK //////
 
 Le Type de Requête TALK permet de lancer un dialogue.
