@@ -2,6 +2,16 @@
 doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
 
 
+% BROKEN_MACHINE
+player = DOWN = sad = Zut ! La machine est en panne !@Au moment où j'en avais vraiment besoin…
+player = DOWN = worry = Bon… J'imagine que je peux toujours@demander son café à quelqu'un.
+
+
+% BROKEN_MACHINE_BAD
+player = DOWN = sad = Zut ! Au moment où j'en avais vraiment besoin…
+player = DOWN = you_silly = Bon… J'imagine que je peux toujours@voler son café à quelqu'un.
+
+
 % TEDDY
 teddy = player = happy = William triche tout le temps aux cartes.@Voilà la technique pour gagner :
 player = teddy = determined = Ok, j'ai bien noté la technique !

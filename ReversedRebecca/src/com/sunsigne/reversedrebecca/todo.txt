@@ -63,11 +63,13 @@
 
 	////////// LVL002 ////////////
 
- 	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
- 	William : Joue aux cartes dans la cellule commune :- Propose à Rebecca de jouer aux cartes (CowboyPuzzle) contre lui. Si elle gagne, il lui donne un donut. Si elle perd, elle lui cédera sa clé cyan.
- 	Teddy : Joue aux cartes dans la cellule commune :- Informe Rebecca que William triche toujours aux cartes. Lui donne la technique pour ne pas se faire avoir.
- 	Rattatac (gauche) : Travaille à son bureau : - La machine à café ne marchant pas, accepte de donner son café en échange d'un donut, une fois qu'il l'aura trempé dedans.
-	Butch (haut) : Travaille à son bureau : - Accepter de donner la clé permettant d'aller chercher la pelle en échange d'un bon café.
+	quete café - à faire :
+	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide)
+	- quete café + machine à café a dans son init "MEMORY:COFFEE_REQUIRED" (pour faire des tests)
+	- créer la réelle condition qui déclanche le memory "COFFEE_REQUIRED" + son annulation ?
+	- mettre sur le bureau du garde au dessus le café, BIEN VISIBLE
+	- ajouter la nuance "voler son café" au lieu de "demander son café" dans le cas où Rebecca a un karma négatif	
+	
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 		
@@ -75,13 +77,19 @@
 	- s'infiltrer par la bombe
 		
 	fait grossièrement :
-	- quete café
 	- diversion  clef
 	- se faire remarquer sans déguisement par le colonnel
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
-	
+		
+	rappel :
+ 	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
+ 	William : Joue aux cartes dans la cellule commune :- Propose à Rebecca de jouer aux cartes (CowboyPuzzle) contre lui. Si elle gagne, il lui donne un donut. Si elle perd, elle lui cédera sa clé cyan.
+ 	Teddy : Joue aux cartes dans la cellule commune :- Informe Rebecca que William triche toujours aux cartes. Lui donne la technique pour ne pas se faire avoir.
+ 	Rattatac (gauche) : Travaille à son bureau : - La machine à café ne marchant pas, accepte de donner son café en échange d'un donut, une fois qu'il l'aura trempé dedans.
+	Butch (haut) : Travaille à son bureau : - Accepter de donner la clé permettant d'aller chercher la pelle en échange d'un bon café.
+		
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
