@@ -43,12 +43,7 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 	}
 
 	////////// BLINKING ////////////
-	
-	@Override
-	public int getHighlightSize() {
-		return (getWidth()) / Size.XL;
-	}
-	
+
 	@Override
 	public int getTotalBlinkingTime() {
 		return 80 + Blinking.super.getTotalBlinkingTime();
@@ -100,8 +95,8 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 				g.drawImage(image, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
 
 				// blinking
-				if (InventoryPlayer.getHighlight(image) != null)
-					drawHighlight(g, InventoryPlayer.getHighlight(image), index * getWidth(), 0, 0, 0);
+				if (InventoryPlayer.getHighlight() != null)
+					drawHighlight(g, InventoryPlayer.getHighlight(), index * getWidth(), 0, 0, 0);
 
 			} catch (IndexOutOfBoundsException e) {
 				// can occurs when MultiToolMode is used

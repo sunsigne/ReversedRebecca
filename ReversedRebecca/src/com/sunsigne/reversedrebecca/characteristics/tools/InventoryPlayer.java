@@ -23,8 +23,8 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 		return InventoryList.list.getList().get(index);
 	}
 
-	public static BufferedImage getHighlight(BufferedImage image) {
-		return InventoryList.map.get(image);
+	public static BufferedImage getHighlight() {
+		return image_highlight;
 	}
 
 	public void removeItem(int index) {
@@ -37,6 +37,8 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 	}
 
 	////////// TEXTURE ////////////
+
+	private static BufferedImage image_highlight;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -52,11 +54,11 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "inventory");
 		BufferedImage image = getSheetSubImage(sheet, col);
 
-		BufferedImage sheet_highlight = new ImageTask().loadImage("textures/hud/" + "inventory_highlight");
-		BufferedImage image_highlight = getSheetSubImage(sheet_highlight, col, getSheetRowCriterion(), getSheetWidth() + 2, getSheetHeight() + 2);
+		sheet = new ImageTask().loadImage("textures/hud/" + "inventory_highlight");
+		image_highlight = getSheetSubImage(sheet, col, getSheetRowCriterion(), getSheetWidth() + 2,
+				getSheetHeight() + 2);
 
 		InventoryList.list.addObject(image);
-		InventoryList.map.put(image, image_highlight);
 
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			if (tempHUD instanceof HUDInventory)
