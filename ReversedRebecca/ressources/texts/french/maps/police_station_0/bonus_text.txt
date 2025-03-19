@@ -1,6 +1,7 @@
 SLURP = SLURP
 CRUNCH = CRUNCH
 DONUT = DONUT
+COFFEE = CAFE
 RESULTS_IN_9 = recherche … 9
 RESULTS_IN_8 = recherche … 8
 RESULTS_IN_7 = recherche … 7

@@ -20,9 +20,6 @@ william = player = serious = Wow ! Tu as gagné ! Voilà ton donut.
 % REBECCA_ATE_DONUT
 player = DOWN = happy_var = Il était délicieux ce donut !
 player = DOWN = surprised = Ho zut ! J'étais censé l'échanger !
-
-
-% REBECCA_ATE_DONUT_NEXT
 player = DOWN = you_silly = Je plaisante, je n'y ai pas touché.@J'ai seulement fait le bruit avec ma bouche.
 
 
@@ -43,4 +40,4 @@ policeman = player = butch = Merci pour ce café ! Voilà la clef verte en écha
 
 
 % BUTCH_TRADE_NEXT
-policeman = player = butch = Mais… Il y a des miettes dans ce café !@C'est qui le gros dégeulasse qui a fait ça !
+policeman = player = butch = Mais… Il y a des miettes de donut dans ce café !@C'est qui le gros dégeulasse qui a fait ça !

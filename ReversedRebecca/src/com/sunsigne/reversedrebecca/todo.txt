@@ -53,6 +53,7 @@
 
 	////////// EN COURS ////////////
 
+	- bug : problème d'affichage de rebecca dans le menu "options - général"
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	mappable.txt des murs n'est plus à jour, ya "vent" aussi
