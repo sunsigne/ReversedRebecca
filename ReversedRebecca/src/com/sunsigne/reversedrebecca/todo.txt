@@ -64,12 +64,13 @@
 	////////// LVL002 ////////////
 
 	quete café - à faire :
-	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide)
+	- COFFE_QUEST*RATTATAC_ASK_FOR_COFFEE -> dialogue pas fini, il faut orienter le joueur vers la cellule
 	- quete café + machine à café a dans son init "MEMORY:COFFEE_REQUIRED" (pour faire des tests)
 	- créer la réelle condition qui déclanche le memory "COFFEE_REQUIRED" + son annulation ?
-	- mettre sur le bureau du garde au dessus le café, BIEN VISIBLE
+	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide) -> retirer l'interactivité si café obtenu
 	- ajouter la nuance "voler son café" au lieu de "demander son café" dans le cas où Rebecca a un karma négatif	
 	
+
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 		
@@ -90,6 +91,7 @@
  	Rattatac (gauche) : Travaille à son bureau : - La machine à café ne marchant pas, accepte de donner son café en échange d'un donut, une fois qu'il l'aura trempé dedans.
 	Butch (haut) : Travaille à son bureau : - Accepter de donner la clé permettant d'aller chercher la pelle en échange d'un bon café.
 		
+	rattatac (café) a un accès français lorsque langue en anglais
 	lvl state : fusillade (comme rr000 sequestration)
 	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant

@@ -36,6 +36,7 @@ OBJ-17 = Coffee Machine
 
 NPC-06 = Policeman : Rattatac
 NPC-07 = Policeman : Butch
+OBJ-21 = Rattatac Coffee
 OBJ-30 = Right Chair and Table
 OBJ-31 = Middle Cell Chair and Table
 

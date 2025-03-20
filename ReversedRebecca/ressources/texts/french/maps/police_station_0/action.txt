@@ -17,3 +17,7 @@ PUT_ON_A_CAP = Key2 % mettre un chapeau
 
 BLACK_COFFEE = Key1 % café noir
 MILK_COFFEE = Key2 % café au lait
+
+///// UP /////
+
+ASK_FOR_COFFEE = Key3 % demander le café

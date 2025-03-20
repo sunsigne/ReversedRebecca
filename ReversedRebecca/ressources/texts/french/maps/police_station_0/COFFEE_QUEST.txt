@@ -1,7 +1,3 @@
-% DOUG_ASKING_FOR_SHOWEL
-doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
-
-
 % BROKEN_MACHINE
 player = DOWN = sad = Zut ! La machine est en panne !@Au moment où j'en avais vraiment besoin…
 player = DOWN = worry = Bon… J'imagine que je peux toujours@demander son café à quelqu'un.
@@ -10,6 +6,30 @@ player = DOWN = worry = Bon… J'imagine que je peux toujours@demander son café
 % BROKEN_MACHINE_BAD
 player = DOWN = sad = Zut ! Au moment où j'en avais vraiment besoin…
 player = DOWN = you_silly = Bon… J'imagine que je peux toujours@voler son café à quelqu'un.
+
+
+% BROKEN_MACHINE_TABLE
+player = DOWN = you_silly = Ça aurait pu, mais ces tasses sont vide.
+
+
+% RATTATAC
+policeman = DOWN = rattatac = Yé peux t'aider poul quelqué chose ?
+player = UP = happy_var = Ça ira, je visite.
+policeman = DOWN = rattatac = Tou visite ? Alol visite la machine à café !@Yé plaisante pas. Ils sont supel bons !
+policeman = DOWN = rattatac = Enfin… Yé dit ça…@Mais sant dounut, yé boilé pas le mien.
+player = DOWN = no_sens = Je rêve ou il me raconte sa vie ?
+
+
+% RATTATAC_ASK_FOR_COFFEE
+player = UP = happy = Je peux avoir ton café, s'il te plaît ? 
+policeman = DOWN = rattatac = Ma qué… Poulquoi pas…@Mais en échange, yé veux oune dounut.
+
+
+
+
+
+% DOUG_ASKING_FOR_SHOWEL
+doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
 
 
 % TEDDY
@@ -31,10 +51,6 @@ william = player = serious = Wow ! Tu as gagné ! Voilà ton donut.
 player = DOWN = happy_var = Il était délicieux ce donut !
 player = DOWN = surprised = Ho zut ! J'étais censé l'échanger !
 player = DOWN = you_silly = Je plaisante, je n'y ai pas touché.@J'ai seulement fait le bruit avec ma bouche.
-
-
-% RATTATAC
-policeman = player = rattatac = Il est délicieux mon café ! Mais je préfèrerais un donut…
 
 
 % RATTATAC_TRADE
