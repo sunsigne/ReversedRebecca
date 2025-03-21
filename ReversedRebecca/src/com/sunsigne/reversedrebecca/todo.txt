@@ -59,12 +59,11 @@
 	mappable.txt des murs n'est plus à jour, ya "vent" aussi
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres")
 
-	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER" + "HUD_ADD" & "HUD_REMOVE"
+	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER" + "HUD_ADD" & "HUD_REMOVE" + "KARMA_GREATER_THAN" & "KARMA_SMALLER_THAN"
 
 	////////// LVL002 ////////////
 
 	quete café - à faire :
-	- COFFE_QUEST*RATTATAC_ASK_FOR_COFFEE -> dialogue pas fini, il faut orienter le joueur vers la cellule
 	- quete café + machine à café a dans son init "MEMORY:COFFEE_REQUIRED" (pour faire des tests)
 	- créer la réelle condition qui déclanche le memory "COFFEE_REQUIRED" + son annulation ?
 	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide) -> retirer l'interactivité si café obtenu

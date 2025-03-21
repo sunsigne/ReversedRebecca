@@ -115,7 +115,10 @@ public class Save {
 		// karma
 		LevelStats stats = World.get().getLevelStats();
 		Karma karma = stats.getKarma();
-		karma.setValue(karma.getValue() + getKarmaValueBasedOnYouAre(stats));
+		int value = karma.getValue() + getKarmaValueBasedOnYouAre(stats);
+		if (karma.getValue() == -999 || getKarmaValueBasedOnYouAre(stats) == -999)
+			value = -999;
+		karma.setValue(value);
 		karma.registerKarma();
 
 		// tools

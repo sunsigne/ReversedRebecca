@@ -129,6 +129,35 @@ La seule différence avec ce dernier est que PLAYER_CLOSER_THAN vérifie si le j
 
 
 
+////// KARMA_GREATER_THAN //////
+
+Le Type de Requête KARMA_GREATER_THAN permet de savoir si le karma du joueur est plus grand ou non qu'une certainte valeur.
+
+Lorsque le jeu commence, le karma est à 0. À chaque écran de fin de niveau que rencontre le joueur, la valeur de karma change de la façon suivante :
+- ANGELIQUE = +2
+- GENTIL = +1
+- NEUTRE = +0
+- MÉCHANT = -1
+- SADIQUE = -2
+- PSYCHOPATHE = fixée à -999
+
+Exemple :
+TIME -> 0 = KARMA_GREATER_THAN -> 2 ? CANNOT_STEAL / CAN_STEAL
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur a-t-il un karma supérieur à 3 ?
+- si oui, effectuer l'action CANNOT_STEAL (qui est une balise GOTO).
+- si non, effectuer l'action CAN_STEAL (qui est une autre balise GOTO).
+
+
+
+////// KARMA_SMALLER_THAN //////
+
+Le Type de Requête KARMA_SMALLER_THAN a exactement le même effet et est soumis aux mêmes règles que Type de Requête KARMA_GREATER_THAN.
+
+La seule différence avec ce dernier est que KARMA_SMALLER_THAN vérifie si le karma est « plus petit » et non « plus grand » de la valeur indiquée.
+
+
+
 ////// STUNNED //////
 
 Le Type de Requête STUNNED permet de savoir pour un objet si un autre objet – qu'on désigne par son nom (voir « NAME » dans la partie « Piranha – Type de Requêtes : States ») – est « stun » ou non.
