@@ -7,6 +7,7 @@ public class LevelStats {
 	private boolean userData = false;
 
 	public LevelStats(String mapName) {
+		karma = new Karma();
 		deed = new Deed();
 		loadCounter();
 		loadDeedsLimits(mapName);
@@ -34,6 +35,14 @@ public class LevelStats {
 		counter3 = new Counter("Custom Count 3", 0);
 	}
 
+	////////// KARMA ////////////
+	
+	private Karma karma;
+
+	public Karma getKarma() {
+		return karma;
+	}
+	
 	////////// DEED ////////////
 
 	private Deed deed;

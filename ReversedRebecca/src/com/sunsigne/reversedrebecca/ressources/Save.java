@@ -9,6 +9,9 @@ import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
+import com.sunsigne.reversedrebecca.world.World;
+import com.sunsigne.reversedrebecca.world.lvlstats.Karma;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 
 public class Save {
 
@@ -109,6 +112,12 @@ public class Save {
 
 		FileTask task = new FileTask();
 
+		// karma
+		LevelStats stats = World.get().getLevelStats();
+		Karma karma = stats.getKarma();
+		karma.setValue(karma.getValue() + getKarmaValueBasedOnYouAre(stats));
+		karma.registerKarma();
+
 		// tools
 		var list = ToolList.getList();
 		for (ToolPlayer tempTool : list.getList()) {
@@ -121,6 +130,25 @@ public class Save {
 			task.write(tempTool.getName() + "CriticalChance", char_file,
 					String.valueOf(tempTool.getCriticalChance() + "%"));
 		}
+	}
+
+	private int getKarmaValueBasedOnYouAre(LevelStats stats) {
+		switch (stats.getYouAre()) {
+		case ANGELIC:
+			return 2;
+		case NICE:
+			return 1;
+		case NEUTRAL:
+			return 0;
+		case MEAN:
+			return -1;
+		case SADISTIC:
+			return -2;
+		case PSYCHOPATH:
+			return -999;
+		}
+
+		return 0;
 	}
 
 	////////// DELETE ////////////
