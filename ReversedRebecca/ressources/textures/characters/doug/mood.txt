@@ -1,3 +1,4 @@
 ////// NEUTRAL //////
 
 serious=1,1
+intrigued=1,2

@@ -11,10 +11,11 @@ you_silly=1,7
 ////// UNHAPPY //////
 
 unhappy=2,1
-sad=2,2
-sad_var=2,3
-cry=2,4
-cry_var=2,5
+unhappy_var=2,2
+sad=2,3
+sad_var=2,4
+cry=2,5
+cry_var=2,6
 
 ////// MAD //////
 
