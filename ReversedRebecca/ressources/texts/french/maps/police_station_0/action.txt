@@ -21,3 +21,4 @@ MILK_COFFEE = Key2 % café au lait
 ///// UP /////
 
 ASK_FOR_COFFEE = Key3 % demander le café
+STEAL_THE_COFFEE = Key3 % voler le café
