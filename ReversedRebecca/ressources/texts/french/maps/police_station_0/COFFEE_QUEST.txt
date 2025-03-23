@@ -37,10 +37,10 @@ player = UP = happy_var = Ha non, c'était juste le mur.
 policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
 
 
-
-
 % DOUG_ASKING_FOR_SHOWEL
 doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
+
+
 
 
 % TEDDY

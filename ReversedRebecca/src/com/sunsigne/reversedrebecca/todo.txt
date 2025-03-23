@@ -69,6 +69,9 @@
 	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide) -> retirer l'interactivité si café obtenu
 	- ajouter la nuance "voler son café" au lieu de "demander son café" dans le cas où Rebecca a un karma négatif	
 	
+	doug :
+	- créer le code du surnonm de Doug
+	- créer le code où il montrer comment ouvrir la porte verte (+ contrebalancer avec un autre type de bonus si ça n'est pas le cas ?)
 
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
@@ -82,6 +85,7 @@
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
+	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, il réagit
 		
 	rappel :
  	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
@@ -400,6 +404,7 @@
 	Marie : by the way -> now i'm thinking / Zut -> Jeez
 	rajouter le jeu de mot "i have an egg on my face" -> "i have a whole omelet on my face"
 
+	lvl002 : DOUG*MEET : poulet -> Bill
 	lvl laboratory : trouver une sortie -> find an outing
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
