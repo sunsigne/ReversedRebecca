@@ -71,7 +71,7 @@
 	
 	doug :
 	- créer le code du surnonm de Doug
-	- créer le code où il montrer comment ouvrir la porte verte (+ contrebalancer avec un autre type de bonus si ça n'est pas le cas ?)
+	- créer le coffre pour quand il dévérouille la porte (+ réfléchir à comment utiliser la clef jaune)
 
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
@@ -425,6 +425,8 @@
 	(hidden=true) débloquer le niveau test sur l'écran titre
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
+
+	en facile : mettre les objets qu'on récupère dans l'inventaire HUD ? (exemple : lvl002 - le donut)
 
 	polish : 
 	digpuzzle : ajouter animation de rocher (buche / buisson) qui se casse
