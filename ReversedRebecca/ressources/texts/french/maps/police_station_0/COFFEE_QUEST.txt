@@ -37,8 +37,22 @@ player = UP = happy_var = Ha non, c'était juste le mur.
 policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
 
 
-% DOUG_ASKING_FOR_SHOWEL
-doug = player = serious = Je t'aide à ouvrir la porte des archives@en échange d'une pelle.
+% BUTCH_ASK_FOR_GREEN_KEY
+policeman = player = butch = Pour faire quoi ?
+
+
+% BUTCH_COFFEE_CHIEF
+policeman = player = butch = Quel glandeur celui-là…@Dis-lui de venir les chercher lui-même !
+player = UP = unhappy = …@S'il te plaît ?
+policeman = player = butch = Ok… Mais j'ai besoin d'un café.@Apporte-moi ça et les clés sont à toi.
+
+
+% BUTCH_COFFEE_INMATES
+policeman = player = butch = … … …
+policeman = player = butch_smirk = Ok, c'était drôle.
+policeman = player = butch = C'est surement le chef qui t'as demandé de toute façon.@Apporte-moi un café et les clés sont à toi.
+
+
 
 
 
