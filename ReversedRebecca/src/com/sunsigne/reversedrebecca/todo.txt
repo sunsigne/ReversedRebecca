@@ -63,6 +63,8 @@
 
 	////////// LVL002 ////////////
 
+	! réduire le render inutile de la couche "down" dans les layers
+
 	quete café - à faire :
 	- quete café + machine à café a dans son init "MEMORY:COFFEE_REQUIRED" (pour faire des tests)
 	- créer la réelle condition qui déclanche le memory "COFFEE_REQUIRED" + son annulation ?

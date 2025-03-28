@@ -1,6 +1,7 @@
 ////// BUTCH //////
 
 butch=1,1
+butch_smirk=1,2
 
 ////// JAMES //////
 

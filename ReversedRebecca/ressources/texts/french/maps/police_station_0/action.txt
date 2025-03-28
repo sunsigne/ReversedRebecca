@@ -22,5 +22,12 @@ MILK_COFFEE = Key2 % café au lait
 
 ASK_FOR_COFFEE = Key3 % demander le café
 STEAL_THE_COFFEE = Key3 % voler le café
+ASK_FOR_KEY = Key3 % demander la clé
+STEAL_THE_KEY = Key3 % voler la clé
+CHIEF_ASKED_FOR = Key1 % le chef m'a demandé
+FEELING_LIKE_FREEING_THE_INMATES = Key1 % j'ai envie de libérer les détenus
+
+///// BIG JAIL /////
+
 BARGAIN = Key3 % marchander
 OPENED_CELL = Key1 % cellule ouverte ?!
