@@ -43,11 +43,12 @@ policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
 % RATTATAC_TRADE
 policeman = player = rattatac = Melci ! Voilà lé café !@Tou m'en dilas des nouvelles !
 
+
+
+
+
 % BUTCH
-policeman = player = butch = Je suis le gardien de la clef verte,@et je veux un café.
-
-
-
+policeman = player = butch = Pas maintenant. Je suis occupé.
 
 
 % BUTCH_ASK_FOR_GREEN_KEY
@@ -74,23 +75,69 @@ policeman = player = butch = Merci pour ce café. Comme promis, voilà la clef v
 policeman = player = butch = Mais… Il y a des miettes de donut dans ce café !@C'est qui le gros dégeulasse qui a fait ça !
 
 
+% DONUT_DOUG
+doug = player = serious = Je suis presque sûr que William doit avoir ça.
+player = doug = worry = Et William, c'est … ?
+doug = player = serious = Le type avec un chapeau de cowboy, là-bas.
+
+
+% DONUT_POLARIS
+polaris = player = happy = Sans gluten, j'espère.
+player = doug = worry = Heu… ? Oui. Tu sais où je peux trouver ça ?
+polaris = player = sad = Désolé, je ne sais pas.
+
+
+% DONUT_TEDDY
+teddy = player = happy = William te trouvera ça. Il trouve toujours tout.
+player = doug = worry = Et William, c'est … ?
+teddy = player = happy = L'ami de Teddy. Il est juste à côté de lui.
+player = doug = wrong_with_you = Et Teddy, c'est … ?
+teddy = player = happy = Je suis Teddy.
+player = doug = no_sens_var = (Ok… Il parle de lui à la troisième personne…)
+player = doug = happy = (Donc William, c'est le cowboy à côté de lui.)
+
+
+% DONUT_WILLIAM
+william = DOWN = serious = Je peux tout trouver.
+player = doug = laugh_var = Super ! Je peux en avoir un ?
+william = DOWN = serious = Est-ce que le serpent donne son venin gratuitement ?
+player = doug = no_sens = ... Techniquement, quand il mord une proie,@il lui "donne" son venin…
+william = DOWN = serious = Pas de là d'où je viens.
+william = DOWN = serious = Mais, je ne suis pas cher aujourd'hui : je m'ennuie.@Jouons ensemble, et quand tu gagneras je te donnerai ce que tu cherches.
+player = doug = unhappy_var = Et si je perds ?
+william = DOWN = serious = Tu ne me dois rien.@Je me paierai de tes larmes à chacun de tes échecs.
+player = doug = worry = Ok, si tu veux…
+
+
+% DONUT_WILLIAM_FAIL
+player = DOWN = sad = Zut… Il est doué…
+
+
+% DONUT_WILLIAM_FAIL_VAR
+player = DOWN = sad_var = Encore perdu… Je dois trouver un moyen de le battre…
 
 
 
 
-% TEDDY
-teddy = player = happy = William triche tout le temps aux cartes.@Voilà la technique pour gagner :
-player = teddy = determined = Ok, j'ai bien noté la technique !
+
+% TEDDY_PSSST
+teddy = player = happy = Pssst.
+player = teddy = wrong_with_you = (Qu'est-ce qu'il me veut ?)
+
+
+% TEDDY_TRICK
+teddy = player = happy = L'ami de Teddy triche. Si tu veux le battre, tu dois tricher aussi.
+player = teddy = wrong_with_you = Comment ça, il triche ? Mais quel sale type !
+teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil.@Tu perds juste ton temps, il ne te vole pas ton argent.
+player = teddy = angry = Ça reste partiellement malhonnête !
+teddy = player = happy = Teddy est d'accord.@C'est pour ça qu'il va t'enseigner l'astuce pour le battre.
+teddy = player = happy = INSERER L'ASTUCE ICI.
+player = teddy = convinced = Excellent ! Je n'y aurais jamais pensée toute seule !@Merci.
 
 
 % WILLIAM_LOSE
-william = player = serious = Jouons aux cartes pour un donut.
-william = player = serious = Dommage, tu as perdue.
-
-
-% WILLIAM_WIN
-william = player = serious = Jouons aux cartes pour un donut.
-william = player = serious = Wow ! Tu as gagné ! Voilà ton donut.
+william = player = serious = Bien joué, gamine. C'était très malin de ta part.
+william = player = serious = Chose promis, chose dûe. Voilà ton butin.
 
 
 % REBECCA_ATE_DONUT

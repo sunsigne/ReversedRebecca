@@ -33,3 +33,5 @@ GIVE_THE_COFFEE = Key3 % donner le café
 
 BARGAIN = Key3 % marchander
 OPENED_CELL = Key1 % cellule ouverte ?!
+DONUT = Key2 % donut ?
+PLAY_FOR_A_DONUT = Key1 % jouer pour un donut
