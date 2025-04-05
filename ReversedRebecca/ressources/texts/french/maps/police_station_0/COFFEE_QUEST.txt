@@ -16,7 +16,7 @@ player = DOWN = you_silly = Ça aurait pu, mais ces tasses sont vide.
 policeman = DOWN = rattatac = Yé peux t'aider poul quelqué chose ?
 player = UP = happy_var = Ça ira, je visite.
 policeman = DOWN = rattatac = Tou visite ? Alol visite la machine à café !@Yé plaisante pas. Ils sont supel bons !
-policeman = DOWN = rattatac = Enfin… Yé dit ça…@Mais sant dounut, yé boilé pas le mien.
+policeman = DOWN = rattatac = Enfin… Yé dit ça…@Mais sans dounut, yé boilé pas le mien.
 player = DOWN = no_sens = Je rêve ou il me raconte sa vie ?
 
 

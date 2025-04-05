@@ -6,6 +6,8 @@ import java.util.TreeSet;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
@@ -22,10 +24,34 @@ public class Save {
 
 	////////// LEVEL ////////////
 
+	private void createSaveFile() {
+		var line = getSaveTemplate();
+		String text = "";
+
+		for (String tempLine : line.getList()) {
+			text = text.concat(tempLine + System.getProperty("line.separator"));
+		}
+
+		new FileTask().write(file, text);
+	}
+
+	private GameList<String> getSaveTemplate() {
+		var line = new GameList<String>(LISTTYPE.ARRAY);
+		String surname = "surname";
+
+		line.addObject("currentlvlmenu=" + FilePath.LVL000);
+		line.addObject("currentlvl=" + FilePath.LVL000);
+		line.addObject("surname_doug=" + surname);
+		line.addObject("surname_custom1=" + surname);
+		line.addObject("surname_custom2=" + surname);
+		line.addObject("surname_custom3=" + surname);
+
+		return line;
+	}
+
 	public String getLevel(boolean menu) {
-		if (new FileTask().doesExist(true, file) == false)
-			new FileTask().write(file, "currentlvlmenu=" + FilePath.LVL000 + System.getProperty("line.separator")
-					+ "currentlvl=" + FilePath.LVL000);
+		if (new FileTask().doesExist(userData, file) == false)
+			createSaveFile();
 
 		if (menu)
 			return new FileTask().read(userData, "currentlvlmenu", file);

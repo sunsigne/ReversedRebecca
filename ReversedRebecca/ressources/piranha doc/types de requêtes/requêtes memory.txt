@@ -42,11 +42,27 @@ Lorsque la Condition sera vérifiée, une demande de sauvegarde sera effectuée 
 
 Note : il est conseillé pour une même carte de renseigner les différentes Cibles utilisées par ce Type de Requête dans son fichier « codex.txt » (voir « Codex » dans la partie « Piranha – Piranha »). 
 
-
 Note : il est recommandé de bien réfléchir au nom de la donnée que vous souhaitez enregistrer, afin d'une part, de la retrouver facilement, et d'autre part, d'éviter les doublons.
 
-Attention ! La suite de caractères « currentlvl » est interdit à l’intérieur du nom d'une donnée, de même que la plupart des caractères spéciaux (« # », « @ » et « = », etc.).
+Attention ! Les suites de caractères « currentlvl » et « surname » sont interdites à l’intérieur du nom d'une donnée, de même que la plupart des caractères spéciaux (« # », « @ » et « = », etc.).
 
 Note : Dans 99 % des cas, cette information vous sera inutile, mais sachez qu'à la fin d'une carte, REGISTER s'applique AVANT ERASE.
 
 Rappel : afin de lire une donnée enregistrée, il faut la mettre en Valeur dans un Type de Condition SAVED (voir « SAVED » dans la partie « Piranha – Conditions »).
+
+
+////// SURNAME //////
+
+Le Type de Requête SURNAME permet d'enregistrer un "mot" dans la sauvegarde du jeu, qui peut être réutiliser dans les dialogues.
+
+La première Cible de ce Type de Requête permet de déterminer le fichier de référence dans lequel le mot à utiliser se trouve :
+- DOUG : « texts/(langue actuelle)/surname/doug.txt ».
+- CUTSTOM1 : « texts/(langue actuelle)/surname/custom1.txt ».
+- CUTSTOM2 : « texts/(langue actuelle)/surname/custom2.txt ».
+- CUTSTOM3 : « texts/(langue actuelle)/surname/custom3.txt ».
+
+Exemple :
+$ -> SAVE_SUNAME = SURNAME -> DOUG,POLICE
+
+Lors d'un dialogue, les caractères "+surname_doug" seront remplacés par la valeur trouvée correspondante à « police » dans le fichier « doug.txt » (en français, ce mot est "fliquette"). 
+

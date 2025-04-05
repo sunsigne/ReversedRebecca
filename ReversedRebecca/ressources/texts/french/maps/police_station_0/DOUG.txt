@@ -8,7 +8,7 @@ doug = player = intrigued = Ben alors gamine, on se la joue infiltration ?
 
 % MEET_NEXT
 player = doug = wrong_with_you = Et alors ? De quoi je me mêle ?
-doug = player = serious = Tout doux +doug_surname, chui pas là pour te dénoncer.
+doug = player = serious = Tout doux +surname_doug, chui pas là pour te dénoncer.
 doug = player = serious = En fait, je me disais qu'on pouvait peut-être@s'aider mutuellement. Ça t'intéresse ?
 player = doug = unhappy_var = Développe ton idée ?
 doug = player = serious = Je pense que tu cherches à accéder aux@archives. Moi, je cherche à me barrer d'ici.
@@ -16,7 +16,7 @@ doug = player = serious = En échange d'une pelle cyan,@je te donnerai une clef 
 
 
 % NO_DEAL
-doug = player = serious = Comme tu veux. Si tu changes d'avis,@fait moi signe, +doug_surname.
+doug = player = serious = Comme tu veux. Si tu changes d'avis,@fait moi signe, +surname_doug.
 
 
 % NO_DEAL_NEXT
@@ -33,7 +33,7 @@ doug = player = intrigued = Augmenter ton quoi ?@Bah, peu importe. Admire l'arti
 % YES_DEAL
 doug = player = serious = Ok. Petit tuyau :@pour obtenir la pelle, tu vas avoir besoin d'une clef verte.
 doug = player = serious = Le flic dans le bureau d'à côté@en a une. Celui avec des barreaux.
-doug = player = serious = Bonne chance, +doug_surname.
+doug = player = serious = Bonne chance, +surname_doug.
 
 
 % YES_DEAL_GREEN_KEY
@@ -62,4 +62,4 @@ doug = player = serious = J'ai juste déverrouillé pour te laisser rentrer,@des
 % BARGAIN_DEAL_NEXT
 doug = player = serious = Au fait ! Petit tuyau :@pour obtenir la pelle, tu vas avoir besoin d'une clef verte.
 doug = player = serious = Le flic dans le bureau d'à côté@en a une. Celui avec des barreaux.
-doug = player = serious = Bonne chance, +doug_surname.
+doug = player = serious = Bonne chance, +surname_doug.
