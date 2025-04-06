@@ -11,8 +11,8 @@ player = doug = wrong_with_you = Et alors ? De quoi je me mêle ?
 doug = player = serious = Tout doux +surname_doug, chui pas là pour te dénoncer.
 doug = player = serious = En fait, je me disais qu'on pouvait peut-être@s'aider mutuellement. Ça t'intéresse ?
 player = doug = unhappy_var = Développe ton idée ?
-doug = player = serious = Je pense que tu cherches à accéder aux@archives. Moi, je cherche à me barrer d'ici.
-doug = player = serious = En échange d'une pelle cyan,@je te donnerai une clef jaune. Deal ?
+doug = player = serious = Toi, tu as une tête à vouloir accéder aux@archives. Moi, je cherche à me barrer d'ici.
+doug = player = serious = En échange d'une pelle cyan, je te donnerai@la clef jaune qu'il te faut. Deal ?
 
 
 % NO_DEAL
@@ -20,24 +20,26 @@ doug = player = serious = Comme tu veux. Si tu changes d'avis,@fait moi signe, +
 
 
 % NO_DEAL_NEXT
-player = doug = unhappy_var = Tu proposes quoi déjà ?
-doug = player = intrigued = Une pelle cyan contre une clef jaune. Alors ?
+player = doug = unhappy_var = Tu proposes quoi, déjà ?
+doug = player = intrigued = Une pelle cyan contre une clef jaune. Deal ?
 
 
 % BARGAIN_DEAL
 doug = player = intrigued = Intéressant… Tu penses à quoi ?
-player = doug = happy_var = Augmente mon niveau de compétence avec les clefs !
-doug = player = intrigued = Augmenter ton quoi ?@Bah, peu importe. Admire l'artiste.
+player = doug = happy_var = Augmente mon niveau de compétence@avec les clefs !
+doug = player = intrigued = Augmenter ton quoi ?
+doug = player = serious = Bah, peu importe. Admire l'artiste.
 
 
 % YES_DEAL
-doug = player = serious = Ok. Petit tuyau :@pour obtenir la pelle, tu vas avoir besoin d'une clef verte.
-doug = player = serious = Le flic dans le bureau d'à côté@en a une. Celui avec des barreaux.
+doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle,@tu vas avoir besoin d'une clef verte.
+doug = player = serious = Le flic dans le bureau d'à côté en a une.@C'est la porte avec des bareaux, derrière-toi.
+player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
 % YES_DEAL_GREEN_KEY
-player = doug = unhappy = Une clef verte ne me sera pas utile :@je ne sais pas m'en servir.
+player = doug = unhappy = Attend ! Une clef verte ne me sera@pas utile… Je ne sais pas m'en servir.
 doug = player = intrigued = Vraiment ?
 doug = player = serious = Je vais te montrer l'astuce. Admire l'artiste.
 
@@ -54,12 +56,12 @@ player = doug = surprised = Mais j'y pense !
 player = doug = no_sens_var = Tu as déverrouillé ta cellule ?!
 doug = player = intrigued = Et alors ?
 player = doug = unhappy_var = Alors, pourquoi tu as besoin d'une pelle ?@Tu peux déjà t'enfuir !
-doug = player = intrigued = Et pour aller où ? Je te croyais plus maligne…
-doug = player = serious = Je peux sortir, mais pas aller très loin.@Il y a des flics partout !
-doug = player = serious = J'ai juste déverrouillé pour te laisser rentrer,@des fois que ça te soit utile.
+doug = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peux sortir, mais pas aller très loin.
+doug = player = serious = J'ai juste déverrouillé la porte pour te@laisser rentrer, des fois que ça te soit utile.
 
 
 % BARGAIN_DEAL_NEXT
-doug = player = serious = Au fait ! Petit tuyau :@pour obtenir la pelle, tu vas avoir besoin d'une clef verte.
-doug = player = serious = Le flic dans le bureau d'à côté@en a une. Celui avec des barreaux.
+doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle,@tu vas avoir besoin d'une clef verte.
+doug = player = serious = Le flic dans le bureau d'à côté en a une.@C'est la porte avec des bareaux, derrière-toi.
+player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
