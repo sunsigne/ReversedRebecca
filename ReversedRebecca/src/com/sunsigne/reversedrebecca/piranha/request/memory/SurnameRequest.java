@@ -36,6 +36,7 @@ public class SurnameRequest implements Request {
 		String data = target.split(",")[1].toLowerCase();
 
 		new Surname().registerSurname(surnameType, data);
+		System.out.println("SURNAME : " + surnameType + "=" + data);
 	}
 
 }

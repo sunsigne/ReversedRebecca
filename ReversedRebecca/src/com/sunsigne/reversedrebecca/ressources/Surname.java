@@ -16,7 +16,6 @@ public class Surname {
 
 	public void registerSurname(String surname, String value) {
 		new FileTask().write("surname_" + surname, file, value);
-		System.out.println(new FileTask().read(userData, "surname_doug", file));
 		refreshSurname();
 	}
 
