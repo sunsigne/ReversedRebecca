@@ -29,11 +29,14 @@ policeman = DOWN = rattatac = Yé sais pas… Aucun de mes collègues n'en a !@I
 
 % RATTATAC_STEAL_THE_COFFEE
 player = UP = surprised = Ho dis-donc ! C'est quoi derrière toi ?
-policeman = UP = rattatac = Ma qué ? Dé quoi ?
 
+% RATTATAC_STEAL_THE_COFFEE_UP
+policeman = UP = rattatac = Ma qué ? Dé quoi ?
 
 % RATTATAC_STEAL_THE_COFFEE_NEXT
 player = UP = happy_var = Ha non, c'était juste le mur.
+
+% RATTATAC_STEAL_THE_COFFEE_NEXT_UP
 policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
 
 
@@ -56,19 +59,19 @@ policeman = player = butch = Pour faire quoi ?
 
 
 % BUTCH_COFFEE_CHIEF
-policeman = player = butch = Quel glandeur celui-là…@Dis-lui de venir les chercher lui-même !
-player = UP = unhappy = …@S'il te plaît ?
-policeman = player = butch = Ok… Mais j'ai besoin d'un café.@Apporte-moi ça et les clés sont à toi.
+policeman = player = butch = Quel glandeur celui-là !@Dis-lui de venir les chercher lui-même !
+player = UP = unhappy = … S'il te plaît ?
+policeman = player = butch = D'accord, d'accord… Mais j'ai besoin d'un@café. Apporte-moi ça et les clés sont à toi.
 
 
 % BUTCH_COFFEE_INMATES
 policeman = player = butch = … … …
 policeman = player = butch_smirk = Ok, c'était drôle.
-policeman = player = butch = C'est surement le chef qui t'as demandé de toute façon.@Apporte-moi un café et les clés sont à toi.
+policeman = player = butch = C'est surement le chef qui t'as demandé de toute@façon. Apporte-moi un café et les clés sont à toi.
 
 
 % BUTCH_TRADE
-policeman = player = butch = Merci pour ce café. Comme promis, voilà la clef verte.
+policeman = player = butch = Merci. Comme promis, voilà la clef verte.
 
 
 % BUTCH_TRADE_NEXT
@@ -82,31 +85,31 @@ doug = player = serious = Le type avec un chapeau de cowboy, là-bas.
 
 
 % DONUT_POLARIS
-polaris = player = happy = Sans gluten, j'espère.
-player = doug = worry = Heu… ? Oui. Tu sais où je peux trouver ça ?
-polaris = player = sad = Désolé, je ne sais pas.
+polaris = player = neutral = Sans gluten, j'espère.
+player = polaris = worry = Heu… ? Oui. Tu sais où je peux trouver ça ?
+polaris = player = neutral = Désolé, je ne sais pas.
 
 
 % DONUT_TEDDY
 teddy = player = happy = William te trouvera ça. Il trouve toujours tout.
-player = doug = worry = Et William, c'est … ?
+player = teddy = worry = Et William, c'est … ?
 teddy = player = happy = L'ami de Teddy. Il est juste à côté de lui.
-player = doug = wrong_with_you = Et Teddy, c'est … ?
+player = teddy = wrong_with_you = Et Teddy, c'est … ?
 teddy = player = happy = Je suis Teddy.
-player = doug = no_sens_var = (Ok… Il parle de lui à la troisième personne…)
-player = doug = happy = (Donc William, c'est le cowboy à côté de lui.)
+player = teddy = no_sens_var = (Ok… Il parle de lui à la troisième personne…)
+player = teddy = happy = (Donc… Le cowboy va me trouver un donut !)
 
 
 % DONUT_WILLIAM
 william = DOWN = serious = Je peux tout trouver.
-player = doug = laugh_var = Super ! Je peux en avoir un ?
-william = DOWN = serious = Est-ce que le serpent donne son venin gratuitement ?
-player = doug = no_sens = ... Techniquement, quand il mord une proie,@il lui "donne" son venin…
+player = william = laugh = Super ! Je peux en avoir un ?
+william = DOWN = serious = Est-ce que le serpent donne son venin@gratuitement ?
+player = william = no_sens = … Techniquement, oui…
 william = DOWN = serious = Pas de là d'où je viens.
-william = DOWN = serious = Mais, je ne suis pas cher aujourd'hui : je m'ennuie.@Jouons ensemble, et quand tu gagneras je te donnerai ce que tu cherches.
-player = doug = unhappy_var = Et si je perds ?
-william = DOWN = serious = Tu ne me dois rien.@Je me paierai de tes larmes à chacun de tes échecs.
-player = doug = worry = Ok, si tu veux…
+william = DOWN = serious = Mais, je ne suis pas cher aujourd'hui. Jouons.@Si tu gagne je te donnerai ce que tu cherches.
+player = william = unhappy_var = Et si je perds ?
+william = DOWN = serious = Alors, tu ne me dois rien. Je me paierai@de tes larmes à chacun de tes échecs.
+player = william = worry = Ok, si tu veux…
 
 
 % DONUT_WILLIAM_FAIL

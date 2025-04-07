@@ -64,16 +64,16 @@
 
 	! réduire le render inutile de la couche "down" dans les layers
 
-	quete café - à faire :
-	- quete café + machine à café a dans son init "MEMORY:COFFEE_REQUIRED" (pour faire des tests)
-	- créer la réelle condition qui déclanche le memory "COFFEE_REQUIRED" + son annulation ?
-	- les tasses à côté de la machine à café devienne interactive (rebecca fait une remarque en expliqut qu'elles sont vide) -> retirer l'interactivité si café obtenu
-	- ajouter la nuance "voler son café" au lieu de "demander son café" dans le cas où Rebecca a un karma négatif	
-	
-	doug :
-	- créer le code du surnonm de Doug
-	- créer le coffre pour quand il dévérouille la porte (+ réfléchir à comment utiliser la clef jaune)
+	à finir :
+	- le mini jeu contre william
+	- les interactions en cas de victoire / défaite
+	- vérifier le donut dans toute la cellue
+	- le moine qui donne le tuyau
+	- l'après donut (échange contre café + donner café et vérifi le beurk)
+	- l'après café donné (ergo, la pelle)
 
+	doug :
+	- réfléchir à comment utiliser la clef jaune)
 
 	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 		
@@ -81,12 +81,13 @@
 	- s'infiltrer par la bombe
 		
 	fait grossièrement :
-	- diversion  clef
+	- diversion clef
 	- se faire remarquer sans déguisement par le colonnel
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
-	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, il réagit
+	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
+	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
 		
 	rappel :
  	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
