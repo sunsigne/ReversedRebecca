@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class CyanDigPuzzle extends DigPuzzle {
 
-	public CyanDigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public CyanDigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	@Override

@@ -49,8 +49,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePreseting {
 
-	public DigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public DigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));

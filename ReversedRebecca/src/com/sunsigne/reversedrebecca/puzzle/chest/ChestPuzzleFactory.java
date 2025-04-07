@@ -17,13 +17,13 @@ public class ChestPuzzleFactory implements PuzzleFactory {
 	@Override
 	@Deprecated // use instead : createPuzzle(String lootFile, GenericListener actionOnWinning)
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning) {
+			GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		// will stop the app
-		return new ChestPuzzle("wrong \"createPuzzle\" method used from ChestPuzzleFactory", actionOnWinning);
+		return new ChestPuzzle("wrong \"createPuzzle\" method used from ChestPuzzleFactory", actionOnWinning, actionOnLosing);
 	}
 
-	public Puzzle createPuzzle(String lootFile, GenericListener actionOnWinning) {
-		return new ChestPuzzle(lootFile, actionOnWinning);
+	public Puzzle createPuzzle(String lootFile, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		return new ChestPuzzle(lootFile, actionOnWinning, actionOnLosing);
 	}
 
 	////////// SOUND ////////////

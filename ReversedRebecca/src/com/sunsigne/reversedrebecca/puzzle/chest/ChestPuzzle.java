@@ -35,8 +35,8 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 
 	private boolean userData = false;
 
-	public ChestPuzzle(String lootFile, GenericListener actionOnWinning) {
-		super(null, actionOnWinning);
+	public ChestPuzzle(String lootFile, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(null, actionOnWinning, actionOnLosing);
 
 		this.lootFile = lootFile;
 		loadSize(); // 1, 2 or 3;

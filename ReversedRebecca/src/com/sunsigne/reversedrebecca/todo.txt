@@ -59,7 +59,7 @@
 	mappable.txt des murs n'est plus à jour, ya "vent" aussi
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres")
 
-	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER" + "HUD_ADD" & "HUD_REMOVE" + "KARMA_GREATER_THAN" & "KARMA_SMALLER_THAN" + "SAVE" (mettre à jour) + "SURNAME"
+	GDD - mettre à jour "MAPPABLE" (curshom hitbox, wall & vent, "CREATE DECORATION" + (vérifier "CREATE ANIMATION") et "COLLASPE" qui remplace "LANDSLIDE" + BLOKING_PATH & BLOKING_SIGHT (faute de typo dans les exemples) + Condition "SELFTALKING" + "SPREAD_INTERACTIVENESS" + Requete "CAMERA_SHAKE" + "TEXTURE_NAME" + "TEXTURE_NAME_PLAYER" + "SEND_PLAYER" + "HUD_ADD" & "HUD_REMOVE" + "KARMA_GREATER_THAN" & "KARMA_SMALLER_THAN" + "SAVE" (mettre à jour) + "SURNAME" + le type de condition "LOSTPUZZLE"
 	////////// LVL002 ////////////
 
 	! réduire le render inutile de la couche "down" dans les layers

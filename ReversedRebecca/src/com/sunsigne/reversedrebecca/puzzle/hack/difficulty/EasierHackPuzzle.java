@@ -11,8 +11,8 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class EasierHackPuzzle extends HackPuzzle {
 
-	public EasierHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public EasierHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

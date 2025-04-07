@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class OrangeKeyPuzzle extends KeyPuzzle {
 
-	public OrangeKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public OrangeKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

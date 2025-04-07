@@ -10,8 +10,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class CyanDiscoPuzzle extends DiscoPuzzle {
 
-	public CyanDiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public CyanDiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

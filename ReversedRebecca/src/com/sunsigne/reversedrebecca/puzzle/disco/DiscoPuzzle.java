@@ -22,8 +22,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
 public abstract class DiscoPuzzle extends Puzzle {
 
-	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);
 		
 		new SoundTask().playMusic("dance_floor", false, true);

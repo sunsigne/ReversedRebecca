@@ -8,8 +8,8 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class CyanHackPuzzle extends HackPuzzle {
 
-	public CyanHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public CyanHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

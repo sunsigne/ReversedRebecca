@@ -39,8 +39,8 @@ public class UnlockAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning) {
-		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning);
+			GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	@Override

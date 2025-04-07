@@ -8,8 +8,8 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class YellowKeyPuzzle extends KeyPuzzle {
 
-	public YellowKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public YellowKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

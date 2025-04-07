@@ -24,52 +24,52 @@ public class HackPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning) {
+			GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning);
+			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning, actionOnLosing);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		case HARD:
-			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestHackPuzzle(toolPlayer, actionOnWinning);
+			return new EasiestHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case EASIER:
-			return new EasierHackPuzzle(toolPlayer, actionOnWinning);
+			return new EasierHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDER:
-			return new HarderHackPuzzle(toolPlayer, actionOnWinning);
+			return new HarderHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDEST:
-			return new HardestHackPuzzle(toolPlayer, actionOnWinning);
+			return new HardestHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestHackPuzzle(toolPlayer, actionOnWinning);
+			return new EasiestHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new EasierHackPuzzle(toolPlayer, actionOnWinning);
+			return new EasierHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new CyanHackPuzzle(toolPlayer, actionOnWinning);
+			return new CyanHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new GreenHackPuzzle(toolPlayer, actionOnWinning);
+			return new GreenHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new YellowHackPuzzle(toolPlayer, actionOnWinning);
+			return new YellowHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -79,19 +79,19 @@ public class HackPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanHackPuzzle(toolPlayer, actionOnWinning);
+			return new CyanHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new GreenHackPuzzle(toolPlayer, actionOnWinning);
+			return new GreenHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new YellowHackPuzzle(toolPlayer, actionOnWinning);
+			return new YellowHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new OrangeHackPuzzle(toolPlayer, actionOnWinning);
+			return new OrangeHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new RedHackPuzzle(toolPlayer, actionOnWinning);
+			return new RedHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -101,19 +101,19 @@ public class HackPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowHackPuzzle(toolPlayer, actionOnWinning);
+			return new YellowHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new OrangeHackPuzzle(toolPlayer, actionOnWinning);
+			return new OrangeHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new RedHackPuzzle(toolPlayer, actionOnWinning);
+			return new RedHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new HarderHackPuzzle(toolPlayer, actionOnWinning);
+			return new HarderHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new HardestHackPuzzle(toolPlayer, actionOnWinning);
+			return new HardestHackPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

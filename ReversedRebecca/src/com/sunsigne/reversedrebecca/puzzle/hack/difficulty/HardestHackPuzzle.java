@@ -10,8 +10,8 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class HardestHackPuzzle extends HackPuzzle {
 
-	public HardestHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public HardestHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

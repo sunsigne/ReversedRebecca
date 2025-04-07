@@ -38,8 +38,8 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning) {
-		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning);
+			GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	@Override

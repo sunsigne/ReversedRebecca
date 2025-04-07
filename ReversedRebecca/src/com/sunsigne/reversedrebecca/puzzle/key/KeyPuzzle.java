@@ -29,8 +29,8 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class KeyPuzzle extends Puzzle {
 
-	public KeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public KeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 	}
 

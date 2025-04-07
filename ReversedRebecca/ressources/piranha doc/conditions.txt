@@ -35,6 +35,14 @@ WONPUZZLE -> 10-20 = "Requête"
 
 
 
+////// LOSTPUZZLE //////
+
+Le Type de Condition LOSTPUZZLE a exactement le même effet et est soumis aux mêmes règles que Type de Requête WONPUZZLE.
+
+La seule différence avec ce dernier est que LOSTPUZZLE vérifie si le puzzle est « échoué » et non « résolu ».
+
+
+
 ////// UNLOCKEDTOOL //////
 
 Le Type de Condition UNLOCKEDTOOL est vérifié au moment où le joueur atteint (exactement) le niveau de l'outil en question.

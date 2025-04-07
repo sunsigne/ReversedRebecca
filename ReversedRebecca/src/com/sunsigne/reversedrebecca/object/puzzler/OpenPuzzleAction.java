@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.piranha.condition.global.LostPuzzleCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -24,7 +25,7 @@ public abstract class OpenPuzzleAction extends Action {
 		setToolPlayer(getToolPlayer());
 		setListener(() -> {
 			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(), getToolPlayer(),
-					actionOnWinning(puzzlerObject));
+					actionOnWinning(puzzlerObject), actionOnLosing());
 			if (puzzle != null)
 				puzzle.openPuzzle();
 		});
@@ -42,12 +43,12 @@ public abstract class OpenPuzzleAction extends Action {
 	////////// PUZZLE ////////////
 
 	public abstract Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning);
+			GenericListener actionOnWinning, GenericListener actionOnLosing);
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
 	public abstract SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y);
-	
+
 	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
 
 		GenericListener actionOnWinning = () -> {
@@ -61,12 +62,21 @@ public abstract class OpenPuzzleAction extends Action {
 				Game.getInstance().forceLoop();
 			}
 
-			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
+			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
+					puzzlerObject.getY());
 			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);
 		};
 		return actionOnWinning;
+	}
+
+	public GenericListener actionOnLosing() {
+		GenericListener actionOnLosing = () -> {
+			PuzzlerObject puzzlerObject = (PuzzlerObject) getInteractive();
+			new LostPuzzleCondition().registerValue(puzzlerObject);
+		};
+		return actionOnLosing;
 	}
 
 	////////// KEYBOARD ////////////

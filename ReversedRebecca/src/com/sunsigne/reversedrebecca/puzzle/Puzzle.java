@@ -28,9 +28,10 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
-	public Puzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	public Puzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		loadToolData(toolPlayer);
 		this.actionOnWinning = actionOnWinning;
+		this.actionOnLosing = actionOnLosing;
 
 		if (ControllerManager.getInstance().isUsingGamepad())
 			new PresetMousePos(Window.WIDHT / 2, Window.HEIGHT / 2).moveMouse();
@@ -79,13 +80,13 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		// added as first element to render behind objects
 		LAYER.PUZZLE.getHandler().getList().add(0, this);
 		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), this);
-		
+
 		createWallBorder();
 		createPuzzle();
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getOpeningSound());
 	}
-	
+
 	////////// PHYSICS ////////////
 
 	@Override
@@ -94,17 +95,17 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	}
 
 	////////// TEXTURE ////////////
-	
+
 	@Override
 	public int getSheetSize() {
-		return 2*16;
+		return 2 * 16;
 	}
-	
+
 	@Override
 	public int getSheetRowCriterion() {
 		return 1;
 	}
-	
+
 	protected BufferedImage getWallTexture() {
 		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
 		return getSheetSubImage(sheet);
@@ -128,6 +129,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	////////// CLOSE ////////////
 
 	private GenericListener actionOnWinning;
+	private GenericListener actionOnLosing;
 
 	public void closePuzzle(boolean isPuzzleWon) {
 		World world = World.get();
@@ -142,8 +144,11 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 			new CameraShaker().shaking(getFactory().getVictoryShake());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			actionOnWinning.doAction();
-		} else
+		} else {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
+			actionOnLosing.doAction();
+		}
+
 	}
 
 }

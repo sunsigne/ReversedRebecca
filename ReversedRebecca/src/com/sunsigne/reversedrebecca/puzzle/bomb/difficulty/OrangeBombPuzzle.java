@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzle;
 
 public class OrangeBombPuzzle extends BombPuzzle {
 
-	public OrangeBombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public OrangeBombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

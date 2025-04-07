@@ -23,8 +23,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombPuzzle extends Puzzle {
 
-	public BombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public BombPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 
 		LAYER.PUZZLE.addObject(new PointerBombObject(this, isCritical));

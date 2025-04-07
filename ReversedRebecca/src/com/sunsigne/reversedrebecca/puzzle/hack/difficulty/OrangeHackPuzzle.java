@@ -9,8 +9,8 @@ import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class OrangeHackPuzzle extends HackPuzzle {
 
-	public OrangeHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning) {
-		super(toolPlayer, actionOnWinning);
+	public OrangeHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
 	////////// PUZZLE ////////////

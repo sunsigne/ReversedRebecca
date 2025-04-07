@@ -23,52 +23,52 @@ public class DigPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning) {
+			GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning);
+			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning, actionOnLosing);
 
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		case NORMAL:
-			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		case HARD:
-			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning);
+			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestDigPuzzle(toolPlayer, actionOnWinning);
+			return new EasiestDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case EASIER:
-			return new EasierDigPuzzle(toolPlayer, actionOnWinning);
+			return new EasierDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDER:
-			return new HarderDigPuzzle(toolPlayer, actionOnWinning);
+			return new HarderDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDEST:
-			return new HardestDigPuzzle(toolPlayer, actionOnWinning);
+			return new HardestDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestDigPuzzle(toolPlayer, actionOnWinning);
+			return new EasiestDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new EasierDigPuzzle(toolPlayer, actionOnWinning);
+			return new EasierDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new CyanDigPuzzle(toolPlayer, actionOnWinning);
+			return new CyanDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new GreenDigPuzzle(toolPlayer, actionOnWinning);
+			return new GreenDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new YellowDigPuzzle(toolPlayer, actionOnWinning);
+			return new YellowDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -78,19 +78,19 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanDigPuzzle(toolPlayer, actionOnWinning);
+			return new CyanDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new GreenDigPuzzle(toolPlayer, actionOnWinning);
+			return new GreenDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new YellowDigPuzzle(toolPlayer, actionOnWinning);
+			return new YellowDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new OrangeDigPuzzle(toolPlayer, actionOnWinning);
+			return new OrangeDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new RedDigPuzzle(toolPlayer, actionOnWinning);
+			return new RedDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -100,19 +100,19 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowDigPuzzle(toolPlayer, actionOnWinning);
+			return new YellowDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new OrangeDigPuzzle(toolPlayer, actionOnWinning);
+			return new OrangeDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new RedDigPuzzle(toolPlayer, actionOnWinning);
+			return new RedDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new HarderDigPuzzle(toolPlayer, actionOnWinning);
+			return new HarderDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new HardestDigPuzzle(toolPlayer, actionOnWinning);
+			return new HardestDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
