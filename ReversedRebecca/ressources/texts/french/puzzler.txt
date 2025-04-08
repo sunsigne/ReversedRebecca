@@ -5,6 +5,7 @@ DoorLocked = fermé
 RubbleBlocked = bloqué
 ComputerProtected = protégé
 HoleLoose = terre molle
+Undefeated = invaincu
 
 ///// ACTION /////
 
@@ -15,3 +16,4 @@ ComputerHack = pirater
 HoleDig = creuser
 GoDown = descendre
 GoUp = monter
+Confront = affronter

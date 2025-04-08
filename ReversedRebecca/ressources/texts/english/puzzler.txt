@@ -5,6 +5,7 @@ DoorLocked = locked
 RubbleBlocked = blocked
 ComputerProtected = protected
 HoleLoose = soft soil
+Undefeated = undefeated
 
 ///// ACTION /////
 
@@ -15,3 +16,4 @@ ComputerHack = hack
 HoleDig = dig
 GoDown = go down
 GoUp = go up
+Confront = confront

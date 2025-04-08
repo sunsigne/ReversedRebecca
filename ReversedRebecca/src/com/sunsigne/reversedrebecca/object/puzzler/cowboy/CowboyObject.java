@@ -1,20 +1,19 @@
-package com.sunsigne.reversedrebecca.object.puzzler.computer;
+package com.sunsigne.reversedrebecca.object.puzzler.cowboy;
 
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public class ComputerObject extends PuzzlerObject {
+public class CowboyObject extends PuzzlerObject {
 
-	public ComputerObject(DEV_LVL devDifficulty, int x, int y) {
+	public CowboyObject(DEV_LVL devDifficulty, int x, int y) {
 		super(devDifficulty, x, y);
 	}
 
-	public ComputerObject(LVL difficulty, int x, int y) {
+	public CowboyObject(LVL difficulty, int x, int y) {
 		super(difficulty, x, y);
 	}
 
@@ -22,19 +21,23 @@ public class ComputerObject extends PuzzlerObject {
 
 	@Override
 	public String getName() {
-		return "computer";
+		return "cowboy";
 	}
 
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
+		return 3;
 	}
-	
+
 	@Override
-	public BufferedImage getImage()
-	{
+	public int getSheetColCriterion() {
+		return 1;
+	}
+
+	@Override
+	public BufferedImage getImage() {
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler");
 			image = getSheetSubImage(sheet);
@@ -43,8 +46,7 @@ public class ComputerObject extends PuzzlerObject {
 	}
 
 	@Override
-	public BufferedImage getHighlightImage()
-	{
+	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
 			highlightImage = getSheetSubImage(sheet, 1, 1 + getSheetRowCriterion(), getSheetWidth() + 2,
@@ -52,7 +54,7 @@ public class ComputerObject extends PuzzlerObject {
 		}
 		return highlightImage;
 	}
-	
+
 	////////// INTERACTION ////////////
 
 	protected TripleAction tripleAction;
@@ -64,12 +66,9 @@ public class ComputerObject extends PuzzlerObject {
 
 	@Override
 	protected void loadTripleAction() {
-		OpenPuzzleAction hackingAction = new HackingAction(this);
+		OpenPuzzleAction confrontAction = new ConfrontAction(this);
 
-		RequirementBubbleObject requirementHacking = new RequirementBubbleObject(getX(), getY(),
-				hackingAction.getToolPlayer(), getDifficulty());
-
-		tripleAction = new TripleAction(requirementHacking, hackingAction, null, null);
+		tripleAction = new TripleAction(null, confrontAction, null, null);
 	}
 
 }
