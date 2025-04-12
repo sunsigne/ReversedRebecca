@@ -6,13 +6,18 @@ dialogue à écrire
 dialogue à écrire
 
 
+
+
+
+
+
 % WILLIAM
 william = DOWN = serious = Toi, t'es pas du coin…
 player = william = happy_var = En effet.
-william = DOWN = serious = Du sang neuf, ça fait plaisir.@Ça te dirait une petite partie de NOM_DU_JEU ?
+william = DOWN = serious = Une nouvelle adversaire, ça ne se refuse pas.@Tu es partante pour une partie de NOM_DU_JEU ?
 player = william = worry = Désolé, je ne connais pas ce jeu…
-william = DOWN = serious = Les règles sont facile à comprendre,@tu vas très vite prendre le coup de main.
-player = william = happy = Ok, c'est noté.
+william = DOWN = serious = Les règles sont simples, tu prendras le@coup de main en un rien de temps. Alors ?
+player = william = happy = Je vais y réfléchir.
 
 
 % DONUT_DOUG
@@ -49,58 +54,58 @@ william = DOWN = serious = Alors, tu ne me dois rien. Je me paierai@de tes larme
 player = william = worry = Ok, si tu veux…
 
 
+% DONUT_WILLIAM_ALREADY_WON
+william = DOWN = serious = Tu as de la chance, j'ai ça sur moi.
+player = william = laugh = Super ! Je peux en avoir un ?
+william = player = serious = Chose promis, chose dûe. Prend-le.
+
+
 % DONUT_WILLIAM_FAIL
-player = DOWN = sad = Zut… Il est doué…
+player = william = sad = Zut… Il est doué…
 
 
 % DONUT_WILLIAM_FAIL_NEXT
-player = DOWN = sad_var = Encore perdu… Il doit bien y avoir un moyen de le battre…
+player = william = sad = Encore perdu… Je vais essayer une dernière fois.
 
 
 % DONUT_WILLIAM_FAIL_FINAL
-player = DOWN = angry_var2 = Ça suffit ! Je ne veux plus jouer contre lui.
+player = william = angry_var2 = Ça suffit ! Je ne veux plus jouer contre lui.
 
 
 % TEDDY_PSSST
-teddy = player = happy = Pssst.
+teddy = player = neutral = Pssst.
 player = teddy = wrong_with_you = (Qu'est-ce qu'il me veut, lui ?)
 
 
 % TEDDY_TRICK
-teddy = player = happy = L'ami de Teddy triche. Si tu veux le battre, tu dois tricher aussi.
+teddy = player = happy = L'ami de Teddy triche.@Si tu veux le battre, tu dois tricher aussi.
 player = teddy = wrong_with_you = Comment ça, il triche ? Mais quel sale type !
-teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil.@Tu perds juste ton temps, il ne te vole pas ton argent.
-player = teddy = angry = Ça reste partiellement malhonnête !
-teddy = player = happy = Teddy est d'accord.@C'est pour ça qu'il va t'enseigner l'astuce pour le battre.
+teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil. Tu perds@juste ton temps, il ne te vole pas ton argent.
+player = teddy = angry = Ça reste malhonnête !
+teddy = player = happy = Teddy est d'accord. C'est pour ça qu'il@va t'enseigner l'astuce pour le battre.
 teddy = player = happy = INSERER L'ASTUCE ICI.
 player = teddy = convinced = Excellent ! Je n'y aurais jamais pensée toute seule !@Merci.
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK
-player = DOWN = unhappy = Zut ! J'ai oublié de INSERER L'ASTUCE ICI…
+player = william = unhappy = Zut ! J'ai oublié de INSERER L'ASTUCE ICI…
 
 
-
-
+% DONUT_WILLIAM_FAIL_POST_TRICK_VAR
+player = william = you_silly = Quelle tête de linotte…@Je suis censée INSERER L'ASTUCE ICI.
 
 
 % DONUT_WILLIAM_SUCCESS
-william = player = serious = Bien joué, petite. C'était très malin de ta part.
+william = player = serious = Bien joué, petite. C'était malin de ta part.
 william = player = serious = Si tu cherches quelque chose, fais-moi signe.
-player = william = excited = Des outils ! Bombe, clés, pelle, etc.
-william = player = serious = Je n'ai pas ça dans ma botte… Tu veux autre chose ?
-player = william = no_sens = Là, tout de suite, rien ne me vient.
-william = player = serious = Dommage. Fais-moi signe si quelque chose te vient.
-player = william = happy_var = C'est noté.
+player = william = excited = Des outils ! Des bombes, des clés, des pelles…
+william = player = serious = Je n'ai pas ça dans ma botte…@Autre chose te conviendrait ?
+player = william = happy_var = Pour l'instant rien.@Je reviendrai te voir, si jamais.
 
 
 % DONUT_WILLIAM_SUCCESS_DONUT
-william = player = serious = Bien joué, gamine. C'était très malin de ta part.
+william = player = serious = Bien joué, gamine. C'était malin de ta part.
 william = player = serious = Chose promis, chose dûe. Voilà ton butin.
-
-
-
-
 
 
 % REBECCA_ATE_DONUT

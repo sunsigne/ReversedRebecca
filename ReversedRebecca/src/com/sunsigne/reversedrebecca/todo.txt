@@ -66,9 +66,11 @@
 	! réduire le render inutile de la couche "down" dans les layers
 
 	à finir :
+	- vérifier le donut dans toute la cellule
+	- le dialogue de teddy lorsqu'on connait déjà william (donut ?)
+	- le "je commence à jouer avec william, mais je m'arrête et je reprends pendant la quete du donut
+
 	- le mini jeu contre william
-	- les interactions en cas de victoire / défaite
-	- vérifier le donut dans toute la cellue
 	- le moine qui donne le tuyau
 	- l'après donut (échange contre café + donner café et vérifi le beurk)
 	- l'après café donné (ergo, la pelle)

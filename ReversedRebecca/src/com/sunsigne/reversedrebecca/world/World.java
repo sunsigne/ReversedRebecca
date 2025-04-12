@@ -408,7 +408,9 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void closePuzzle() {
-		for (Updatable tempObject : LAYER.PUZZLE.getHandler().getList()) {
+		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
+		
+		for (Updatable tempObject : list.getList()) {
 			if (tempObject instanceof Puzzle == false)
 				continue;
 
