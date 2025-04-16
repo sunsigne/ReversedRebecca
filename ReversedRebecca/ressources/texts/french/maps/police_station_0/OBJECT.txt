@@ -9,3 +9,7 @@ player = DOWN = laugh = Oups !
 
 % DISGUISE
 player = DOWN = laugh = Avec ça, je passerai inaperçue !
+
+
+% SHOVEL
+player = DOWN = laugh = Deux pelles cyan d'un coup ! Quelle chance !

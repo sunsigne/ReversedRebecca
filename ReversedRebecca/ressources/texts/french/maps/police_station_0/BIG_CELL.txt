@@ -75,7 +75,7 @@ player = william = laugh = Super ! Je peux en avoir un ?
 william = DOWN = serious = Est-ce que le serpent donne son venin@gratuitement ?
 player = william = no_sens = … Techniquement, oui…
 william = DOWN = serious = Pas de là d'où je viens.
-william = DOWN = serious = Mais, je ne suis pas cher aujourd'hui. Jouons.@Si tu gagne je te donnerai ce que tu cherches.
+william = DOWN = serious = Mais, je ne suis pas cher aujourd'hui. Jouons.@Si tu gagnes je te donnerai ce que tu cherches.
 player = william = unhappy_var = Et si je perds ?
 william = DOWN = serious = Alors, tu ne me dois rien. Je me paierai@de tes larmes à chacun de tes échecs.
 player = william = worry = Ok, si tu veux…
@@ -84,7 +84,7 @@ player = william = worry = Ok, si tu veux…
 % DONUT_WILLIAM_ALREADY_WON
 william = DOWN = serious = Tu as de la chance, j'ai ça sur moi.
 player = william = laugh = Super ! Je peux en avoir un ?
-william = player = serious = Chose promis, chose dûe. Prend-le.
+william = player = serious = Chose promis, chose dûe. Prends-le.
 
 
 % DONUT_WILLIAM_FAIL
@@ -111,7 +111,7 @@ teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil. Tu perds@juste
 player = teddy = angry = Ça reste malhonnête !
 teddy = player = happy = Teddy est d'accord. C'est pour ça qu'il@va t'enseigner l'astuce pour le battre.
 teddy = player = happy = INSERER L'ASTUCE ICI.
-player = teddy = convinced = Excellent ! Je n'y aurais jamais pensée toute seule !@Merci.
+player = teddy = convinced = Excellent ! Je n'y aurais jamais pensé toute seule !@Merci.
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK
@@ -119,7 +119,7 @@ player = william = unhappy = Zut ! J'ai oublié de INSERER L'ASTUCE ICI…
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK_VAR
-player = william = you_silly = Quelle tête de linotte…@Je suis censée INSERER L'ASTUCE ICI.
+player = william = you_silly = Quelle tête de linotte…@Je suis sensée INSERER L'ASTUCE ICI.
 
 
 % DONUT_WILLIAM_SUCCESS
@@ -132,10 +132,10 @@ player = william = happy_var = Pour l'instant rien.@Je reviendrai te voir, si ja
 
 % DONUT_WILLIAM_SUCCESS_DONUT
 william = player = serious = Bien joué, gamine. C'était malin de ta part.
-william = player = serious = Chose promis, chose dûe. Voilà ton butin.
+william = player = serious = Chose promis, chose due. Voilà ton butin.
 
 
 % REBECCA_ATE_DONUT
 player = DOWN = happy_var = Il était délicieux ce donut !
-player = DOWN = surprised = Ho zut ! J'étais censé l'échanger !
+player = DOWN = surprised = Ho zut ! J'étais sensé l'échanger !
 player = DOWN = you_silly = Je plaisante, je n'y ai pas touché.@J'ai seulement fait le bruit avec ma bouche.

@@ -64,13 +64,15 @@
 	
 	////////// LVL002 ////////////
 
+	en cours : 
+	- doug : réfléchir à comment utiliser la clef jaune
+	- l'après café donné (ergo, la pelle) (vérifier le karma)
+
 	à finir :
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
-	- l'après café donné (ergo, la pelle)
 
-	doug : réfléchir à comment utiliser la clef jaune
 	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 		
 	faire grossièrement :	

@@ -34,3 +34,4 @@ OPENED_CELL = Key1 % cellule ouverte ?!
 NAKED = Key1 % tout nu ?!
 DONUT = Key2 % donut ?
 WHAT_PSSST = Key1 % quoi "pssst" ?
+GIVE_A_SHOVEL = Key3 % donner une pelle

@@ -65,3 +65,44 @@ doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle,@tu vas 
 doug = player = serious = Il y a une clef verte dans le bureau@avec des barreaux, derrière-toi.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
+
+
+
+
+
+
+% GIVE_A_SHOVEL
+player = doug = happy_var = Voilà ta pelle !
+doug = player = serious = Et voilà ta clef.
+player = doug = excited = Je n'ai pas pu m'empêcher de remarquer@que cette clef dévérouille aussi la salle des armes.
+doug = player = intrigued = Vraiment ?
+player = doug = happy_var = Vraiment.
+doug = player = serious = Passer en force, c'est plus rapide que de@creuser un tunnel. Tu irais nous les chercher ?
+
+
+% GIVE_A_SHOVEL_GOOD
+player = doug = angry = Ça va pas la tête ? Tuer, c'est mal.@Je ne me rapprocherai même pas de cette salle !
+doug = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre +surname_doug.
+
+
+% GIVE_A_SHOVEL_EVIL
+player = doug = evil_var = L'idée est tentante ! Je vais sérieusement y réfléchir.
+doug = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende +surname_doug.
+
+
+% GIVE_A_SHOVEL_NEUTRAL
+player = doug = unhappy = Heu… Non ? Peut-être ?
+doug = player = serious = Ha ? Tu hésites à vraiment le faire ?
+player = doug = worry = On verra, d'accord ?
+player = doug = happy =  Je sais que je ne suis pas un ange, mais ce que tu me demandes est vraiment extrême.
+player = doug = unhappy = Et si je franchis ce pas, je pense que je vais me perdre moi-même…
+doug = player = serious = Te bile pas +surname_doug, je ne pensais@pas vraiment que tu le ferais.
+player = doug = unhappy_var = Mouais… C'est juste curieux que j'hésite…
+player = doug = sad = C'est presque comme si je n'étais ni assez gentille,@ni assez méchante pour avoir une réponse différente.
+doug = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la vois du crime.
+doug = player = worry = Comme j'ai dit, on verra.
+
+
+% ASKED_FOR_YELLOW_KEY_LESSON
+player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
+doug = player = serious = Ce dialogue n'est pas terminé
