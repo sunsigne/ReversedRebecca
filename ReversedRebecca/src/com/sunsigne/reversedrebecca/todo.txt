@@ -64,13 +64,12 @@
 	////////// LVL002 ////////////
 
 	à finir :
-	- vérifier le donut dans toute la cellule
-	- le dialogue de teddy lorsqu'on connait déjà william (donut ?)
+	- les dialogues de polaris (un truc du genre, dis... tu es tout nu, non ?)
 	- le "je commence à jouer avec william, mais je m'arrête et je reprends pendant la quete du donut
 
 	- le mini jeu contre william
-	- le moine qui donne le tuyau
-	- l'après donut (échange contre café + donner café et vérifi le beurk)
+	- le moine qui donne le tuyau & le nom du jeu
+	- l'après donut (échange contre café + donner café et vérifier le beurk)
 	- l'après café donné (ergo, la pelle)
 
 	doug :
@@ -103,6 +102,9 @@
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
 	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
+	
+	à faire plus tard :
+	- plus d'interactions avec les détenus (william est auto-suffisant, pas les autres)
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
