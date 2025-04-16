@@ -69,17 +69,14 @@
 	NPC-08 (william) ligne 2 active automatiquement la recherche du donut après 20 secondes
 
 	à finir :
-	- le "je commence à jouer avec william, mais je m'arrête et je reprends pendant la quete du donut
-
+	- interactions avec les détenus : doug	
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
 	- l'après donut (échange contre café + donner café et vérifier le beurk)
 	- l'après café donné (ergo, la pelle)
 
-	doug :
-	- réfléchir à comment utiliser la clef jaune)
-
-	- miaouss softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
+	doug : réfléchir à comment utiliser la clef jaune
+	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 		
 	faire grossièrement :	
 	- s'infiltrer par la bombe
@@ -92,24 +89,14 @@
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
 	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
-		
-	rappel :
- 	Doug : Enfermé dans la cellule commune : - Aide Rebecca à ouvrir la porte des archives en échange d'une pelle
- 	William : Joue aux cartes dans la cellule commune :- Propose à Rebecca de jouer aux cartes (CowboyPuzzle) contre lui. Si elle gagne, il lui donne un donut. Si elle perd, elle lui cédera sa clé cyan.
- 	Teddy : Joue aux cartes dans la cellule commune :- Informe Rebecca que William triche toujours aux cartes. Lui donne la technique pour ne pas se faire avoir.
- 	Rattatac (gauche) : Travaille à son bureau : - La machine à café ne marchant pas, accepte de donner son café en échange d'un donut, une fois qu'il l'aura trempé dedans.
-	Butch (haut) : Travaille à son bureau : - Accepter de donner la clé permettant d'aller chercher la pelle en échange d'un bon café.
-		
+
 	rattatac (café) a un accès français lorsque langue en anglais
 	lvl state : fusillade (comme rr000 sequestration)
-	arme à utiliser : la pelle ! Rebecca, c'est une sauvage XD
+	arme à utiliser : la pelle ! Rebecca, c'est une sauvage
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
 	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
-	
-	à faire plus tard :
-	- plus d'interactions avec les détenus (william est auto-suffisant, pas les autres)
-	
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris

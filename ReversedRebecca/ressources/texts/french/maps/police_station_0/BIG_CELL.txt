@@ -16,6 +16,10 @@ player = teddy = no_sens = Heu… Je visite, c'est tout. Merci.
 teddy = player = happy = Bonne visite.
 
 
+% TEDDY_NEXT
+player = teddy = sad = Il sourit, mais ses yeux font froid dans le dos.@Je préfère ne lui parler que si c'est nécessaire.
+
+
 % WILLIAM
 william = DOWN = serious = Toi, t'es pas du coin…
 player = william = happy_var = En effet.
