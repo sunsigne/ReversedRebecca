@@ -1,8 +1,10 @@
 % POLARIS
-dialogue à écrire
-
-
-
+polaris = player = happy = Je me sens plus proche de la nature de cette façon.
+polaris = player = happy = C'est important de renouer@avec les énergies cosmiques.
+player = polaris = no_sens = … en ne portant pas de vêtements ?
+polaris = player = neutral = C'est tellement une réponse de neurotypique…
+polaris = player = happy = Mais c'est bien qu'on ne pense pas tous@la même chose. La nature aime la diversité.
+player = polaris = no_sens_var = (… Je crois que je vais juste éviter de lui parler.)
 
 
 % TEDDY

@@ -53,6 +53,7 @@
 
 	////////// EN COURS ////////////
 
+	- le temps de latence (volontaire) après un point pause plus des problèmes de fluidité qu'il n'en règle
 	- softlock dans le laboratoire quand on échoue à la bombe de Mika
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
@@ -63,8 +64,11 @@
 	
 	////////// LVL002 ////////////
 
+	! -> temporairement :
+	NPC-13 (doug) ligne 8, distance mise à 1 au lieu de 6
+	NPC-08 (william) ligne 2 active automatiquement la recherche du donut après 20 secondes
+
 	à finir :
-	- les dialogues de polaris (un truc du genre, dis... tu es tout nu, non ?)
 	- le "je commence à jouer avec william, mais je m'arrête et je reprends pendant la quete du donut
 
 	- le mini jeu contre william

@@ -30,5 +30,6 @@ GIVE_THE_COFFEE = Key3 % donner le café
 
 BARGAIN = Key3 % marchander
 OPENED_CELL = Key1 % cellule ouverte ?!
+NAKED = Key1 % tout nu ?!
 DONUT = Key2 % donut ?
 WHAT_PSSST = Key1 % quoi "pssst" ?
