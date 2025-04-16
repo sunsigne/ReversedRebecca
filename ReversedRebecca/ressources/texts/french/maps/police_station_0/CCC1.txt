@@ -1,0 +1,5 @@
+% HELLO
+CCC1 = player = neutral = Je suis un personnage de crowdfunding.@Je ne suis pas encore créé.
+player = CC1 = worry = Qu'est-ce que ça veut dire ?
+CCC1 = player = neutral = Ça veut dire qu'un jour, quelqu'un payera cher pour@décider de mon apparence et de mes dialogues.
+player = CC1 = you_silly = C'est beau de rêver, écoute…
