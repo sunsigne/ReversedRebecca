@@ -64,10 +64,6 @@
 	
 	////////// LVL002 ////////////
 
-	! -> temporairement :
-	NPC-13 (doug) ligne 8, distance mise à 1 au lieu de 6
-	NPC-08 (william) ligne 2 active automatiquement la recherche du donut après 20 secondes
-
 	à finir :
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
@@ -90,12 +86,10 @@
 	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
 
 	rattatac (café) a un accès français lorsque langue en anglais
-	lvl state : fusillade (comme rr000 sequestration)
-	arme à utiliser : la pelle ! Rebecca, c'est une sauvage
+	lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
-	le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert
-
+	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
