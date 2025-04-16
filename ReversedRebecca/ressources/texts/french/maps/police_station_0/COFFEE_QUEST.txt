@@ -40,14 +40,8 @@ player = UP = happy_var = Ha non, c'était juste le mur.
 policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
 
 
-
-
-
 % RATTATAC_TRADE
 policeman = player = rattatac = Melci ! Voilà lé café !@Tou m'en dilas des nouvelles !
-
-
-
 
 
 % BUTCH
