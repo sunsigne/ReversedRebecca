@@ -1,0 +1,37 @@
+% DOUG_GIVE_A_SHOVEL_NEXT
+player = doug = excited = Je n'ai pas pu m'empêcher de remarquer@que cette clef dévérouille aussi la salle des armes.
+doug = player = intrigued = Vraiment ?
+player = doug = happy_var = Vraiment.
+doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
+
+
+% DOUG_GIVE_A_SHOVEL_GOOD
+player = doug = angry = Ça va pas la tête ? Tuer, c'est mal.@Je ne me rapprocherai même pas de cette salle !
+doug = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre, +surname_doug.
+
+
+% DOUG_GIVE_A_SHOVEL_EVIL
+player = doug = evil_var = Quelle bonne idée ! Je vais faire ça !
+doug = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende, +surname_doug.
+
+
+% DOUG_GIVE_A_SHOVEL_NEUTRAL
+player = doug = unhappy = Heu… Non ? Peut-être ?
+doug = player = serious = Ha ? Tu y penses sérieusement ?
+player = doug = worry = On verra, d'accord ?
+player = doug = happy =  Je sais que je ne suis pas un ange, mais@ce que tu me demandes est vraiment extrême.
+player = doug = unhappy = Et si je franchis ce pas, je pense que@je vais me perdre moi-même…
+doug = player = serious = Ne te bile pas +surname_doug, je ne pensais pas@"réellement" que tu le ferais de toute façon.
+player = doug = unhappy_var = C'est juste… que c'est curieux que j'hésite…
+player = doug = sad = C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.
+doug = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la voie du crime.
+player = doug = worry = Comme j'ai dit, on verra.
+
+
+% ARMORY_NEUTRAL
+player = RIGHT = unhappy = Je vais vraiment faire ça ?@Donner des armes aux prisonniers ?
+player = RIGHT = happy = Ça peut être marrant après tout…
+
+
+% ARMORY_EVIL
+player = RIGHT = death = Je sens qu'on va s'amuser.
