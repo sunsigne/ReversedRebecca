@@ -1,5 +1,5 @@
 % DOUG_GIVE_A_SHOVEL_NEXT
-player = doug = excited = Je n'ai pas pu m'empêcher de remarquer@que cette clef dévérouille aussi la salle des armes.
+player = doug = excited = Je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
 doug = player = intrigued = Vraiment ?
 player = doug = happy_var = Vraiment.
 doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
@@ -49,10 +49,10 @@ doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@j
 
 
 % DOUG_YELLOW_KEY_NEUTRAL
-player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
+player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
 doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
 player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
-doug = player = serious = Je pourrais… Ça te motivera peut-être@à dévérouiller la salle des armes…
+doug = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
 doug = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
@@ -61,7 +61,7 @@ player = doug = laugh = D'accord, merci !
 
 
 % DOUG_YELLOW_KEY_GOOD
-player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
+player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
 doug = player = serious = Ça ne me surprend pas d'une gentille fille.
 player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
 doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.

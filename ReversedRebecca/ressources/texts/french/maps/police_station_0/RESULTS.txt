@@ -9,3 +9,21 @@ player = down = sad = Zut, j'y étais presque…
 % OBTAINED
 player = down = you_silly = J'ai été vraiment rapide !
 player = down = laugh = Dommage ! J'aimais bien@la musique de la ventilation !
+
+
+% ARCHIVES
+player = down = sad = Rien ici.
+
+
+% ARCHIVES_NEXT
+player = down = sad = Toujours rien.
+
+
+% ARCHIVES_NEXT_NEXT
+player = down = surprised = Ho !
+player = down = you_silly = Rien du tout.
+
+
+% ARCHIVES_FINAL
+player = down = laugh = Ha ! Ça y est ! Des informations utiles !
+player = down = happy_var = Je prends le dossier avec moi !@Je n'ai plus qu'à retrouver Sarah.

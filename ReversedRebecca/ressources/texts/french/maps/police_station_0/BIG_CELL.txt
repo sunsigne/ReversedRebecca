@@ -84,7 +84,7 @@ player = william = worry = Ok, si tu veux…
 % DONUT_WILLIAM_ALREADY_WON
 william = DOWN = serious = Tu as de la chance, j'ai ça sur moi.
 player = william = laugh = Super ! Je peux en avoir un ?
-william = player = serious = Chose promis, chose dûe. Prends-le.
+william = DOWN = serious = Chose promis, chose dûe. Prends-le.
 
 
 % DONUT_WILLIAM_FAIL
@@ -123,16 +123,16 @@ player = william = you_silly = Quelle tête de linotte…@Je suis sensée INSERE
 
 
 % DONUT_WILLIAM_SUCCESS
-william = player = serious = Bien joué, petite. C'était malin de ta part.
-william = player = serious = Si tu cherches quelque chose, fais-moi signe.
+william = down = serious = Bien joué, petite. C'était malin de ta part.
+william = down = serious = Si tu cherches quelque chose, fais-moi signe.
 player = william = excited = Des outils ! Des bombes, des clés, des pelles…
-william = player = serious = Je n'ai pas ça dans ma botte…@Autre chose te conviendrait ?
+william = down = serious = Je n'ai pas ça dans ma botte…@Autre chose te conviendrait ?
 player = william = happy_var = Pour l'instant rien.@Je reviendrai te voir, si jamais.
 
 
 % DONUT_WILLIAM_SUCCESS_DONUT
-william = player = serious = Bien joué, gamine. C'était malin de ta part.
-william = player = serious = Chose promis, chose due. Voilà ton butin.
+william = down = serious = Bien joué, gamine. C'était malin de ta part.
+william = down = serious = Chose promis, chose due. Voilà ton butin.
 
 
 % REBECCA_ATE_DONUT
