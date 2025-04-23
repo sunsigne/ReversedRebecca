@@ -12,4 +12,6 @@ player = DOWN = laugh = Avec ça, je passerai inaperçue !
 
 
 % SHOVEL
-player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !
+player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !@Une pour moi, et une pour…
+player = LEFT = no_sens = Heu… Je ne sais pas comment il s'appelle…
+player = LEFT = you_silly = Il faudra que je pense à lui demander.

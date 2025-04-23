@@ -67,6 +67,10 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
+% NAME
+doug = player = serious = Doug.
+
+
 % GIVE_A_SHOVEL
 player = doug = happy_var = Voilà ta pelle !
 doug = player = serious = Et voilà ta clef.

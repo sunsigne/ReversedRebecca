@@ -35,3 +35,45 @@ player = RIGHT = happy = Ça peut être marrant après tout…
 
 % ARMORY_EVIL
 player = RIGHT = death = Je sens qu'on va s'amuser.
+
+
+
+
+
+
+% DOUG_YELLOW_KEY_GOOD
+player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
+doug = player = serious = Ça ne me surprend pas d'une gentille fille comme toi.
+player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
+doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.
+player = doug = sad = Bon… Peut-être qu'un autre détenu voudra bien m'aider…
+
+
+% TEDDY_YELLOW_KEY
+player = teddy = worry = Teddy, tu sais te servir d'une clé jaune ?
+teddy = player = happy = Tu cherches à aller aux archives ? Teddy peut t'aider.
+player = teddy = excited = Super ! On fait comment ?
+teddy = player = happy = Comme ceci :
+
+
+% TEDDY_YELLOW_KEY_NEXT
+player = teddy = no_sens = Heu…
+player = teddy = laugh = Merci beaucoup !
+teddy = player = happy = De rien.
+
+
+% DOUG_YELLOW_KEY_NEUTRAL
+player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
+doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
+player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
+doug = player = serious = Je pourrais… Ça te motivera peut-être à dévérouiller la salle des armes…
+doug = player = serious = Ok, c'est bon. Voilà l'astuce :@si la clé coince, joue légèrement avec la poignée.
+
+
+% DOUG_YELLOW_KEY_NEUTRAL_NEXT
+player = doug = laugh = D'accord, merci !
+
+
+% DOUG_YELLOW_KEY_EVIL
+player = doug = wrong_with_you = Minute… Elle marche comment cette clef ?
+doug = player = serious = Ha oui, pardon. Voilà l'astuce :@si la clé coince, joue légèrement avec la poignée.
