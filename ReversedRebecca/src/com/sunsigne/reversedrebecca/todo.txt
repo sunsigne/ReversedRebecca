@@ -64,10 +64,6 @@
 	
 	////////// LVL002 ////////////
 
-	en cours : 
-	- doug : réfléchir à comment utiliser la clef jaune
-	- insister sur le fait que 2 pelle veut dire "une pour doug, une pour soi"
-
 	à finir :
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
