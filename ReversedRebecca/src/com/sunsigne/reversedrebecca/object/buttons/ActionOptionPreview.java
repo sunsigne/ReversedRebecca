@@ -85,7 +85,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	private void loadImages() {
 		BufferedImage sheet = null;
 
-		sheet = new ImageTask().loadImage("textures/characters/rebecca/" + "rebecca");
+		sheet = new ImageTask().loadImage("textures/characters/rebecca/" + "world");
 		rebecca_img = getSheetSubImage(sheet, 1, 2, 16, 16);
 
 		String path = "textures/other/coming_soon";
