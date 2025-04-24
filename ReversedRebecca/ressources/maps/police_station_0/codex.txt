@@ -1,9 +1,10 @@
 ///// RECEPTION /////
 
-NPC-01 = Policeman (Up) : James
-NPC-02 = Policeman (Left) : Miaouss
-NPC-03 = Policewoman (Down) : Cassidy
-NPC-04 = Policewoman (Right) : Jessy
+NPC-01 = Sarah
+NPC-02 = Policeman (Up) : James
+NPC-03 = Policeman (Left) : Miaouss
+NPC-04 = Policewoman (Down) : Cassidy
+NPC-05 = Policewoman (Right) : Jessy
 OBJ-01 = Chair
 OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
@@ -14,7 +15,7 @@ OBJ-20 = Miaouss Chair & Computer
 
 ///// PRE-CHIEF & CHIEF /////
 
-NPC-05 = Policegrade : Giovanni
+NPC-06 = Policegrade : Giovanni
 OBJ-05 = Shovel Box
 OBJ-06 = Coat Rack Up
 OBJ-07 = Coat Rack Down
@@ -34,8 +35,8 @@ OBJ-17 = Coffee Machine
 
 ///// UP /////
 
-NPC-06 = Policeman : Rattatac
-NPC-07 = Policeman : Butch
+NPC-07 = Policeman : Rattatac
+NPC-08 = Policeman : Butch
 OBJ-21 = Rattatac Coffee
 OBJ-27 = Archives Toward Left
 OBJ-28 = Archives Toward Up
@@ -45,9 +46,9 @@ OBJ-31 = Middle Cell Chair and Table
 
 ///// BIG JAIL /////
 
-NPC-08 = William
-NPC-09 = Teddy
-NPC-10 = CCC1
-(NPC-11 = CCC2)
-NPC-12 = Polaris
-NPC-13 = Doug
+NPC-09 = William
+NPC-10 = Teddy
+NPC-11 = CCC1
+(NPC-12 = CCC2)
+NPC-13 = Polaris
+NPC-14 = Doug

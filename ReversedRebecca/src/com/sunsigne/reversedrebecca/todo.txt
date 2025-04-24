@@ -75,6 +75,8 @@
 	- s'infiltrer par la bombe
 		
 	fait grossièrement :
+	- Sarah
+	- début & fin de niveau
 	- diversion clef
 	- se faire remarquer sans déguisement par le colonnel
 	

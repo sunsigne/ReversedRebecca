@@ -1,0 +1,3 @@
+% COMPLAINT
+sarah = player = angry = Grrr! Ces policiers sont inutiles ! Ils ont@enregistré notre plainte mais ils ne feront rien.
+sarah = player = determined = Rebecca, je compte sur toi ! Infiltre-toi dans ce@commisariat, et vole des informations sur Vladimir.
