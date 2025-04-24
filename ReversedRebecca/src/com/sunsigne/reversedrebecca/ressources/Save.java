@@ -183,12 +183,9 @@ public class Save {
 	////////// DELETE ////////////
 
 	public void resetProgression() {
-		String nextLine = System.getProperty("line.separator");
-		String lvlmenu = "currentlvlmenu=" + FilePath.LVL000;
-		String lvl = "currentlvl=" + FilePath.LVL000;
-
-		new FileTask().write(file, lvlmenu + nextLine + lvl);
 		new FileTask().write(char_file, "");
+		new FileTask().write(file, "");
+		createSaveFile();
 	}
 
 	// the name is alarming but it just erase some specific intended data

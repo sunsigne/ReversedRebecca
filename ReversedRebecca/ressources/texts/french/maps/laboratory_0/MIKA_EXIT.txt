@@ -13,6 +13,10 @@ mika = object = surprised = Attend ?! Mais tu as déjà allumé la mèche !
 rebecca = object = laugh = J'ai dit : on se décale !
 
 
+% MIKA_BOMB_FAIL
+rebecca = object = worry = Quelle maladroite ! Allez, je recommence.
+
+
 % ALICIA_REACTION_MIKA_BOMB
 alicia = player = surprised = Ben dis donc ! Quand elle cherche une sortie,@elle ne fait pas semblant !
 

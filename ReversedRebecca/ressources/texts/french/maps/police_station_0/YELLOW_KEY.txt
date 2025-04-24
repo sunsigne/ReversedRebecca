@@ -37,12 +37,6 @@ player = RIGHT = happy = Ça peut être marrant après tout…
 player = RIGHT = death = Je sens qu'on va s'amuser.
 
 
-
-
-
-
-
-
 % DOUG_YELLOW_KEY_EVIL
 player = doug = wrong_with_you = Minute… Elle marche comment cette clé jaune ?
 doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.

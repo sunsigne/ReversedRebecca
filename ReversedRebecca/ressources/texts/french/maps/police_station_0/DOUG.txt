@@ -32,14 +32,14 @@ doug = player = serious = Bah, peu importe. Admire l'artiste.
 
 
 % YES_DEAL
-doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle,@tu vas avoir besoin d'une clef verte.
+doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
 doug = player = serious = Il y a une clef verte dans le bureau@avec des barreaux, derrière-toi.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
 % YES_DEAL_GREEN_KEY
-player = doug = unhappy = Maintenant que j'y pense… Cette clef ne@me sera pas utile… Je ne sais pas m'en servir.
+player = doug = unhappy = Maintenant que j'y pense… Cette clé ne@me sera pas utile… Je ne sais pas m'en servir.
 doug = player = intrigued = Vraiment ?
 doug = player = serious = Je vais te montrer l'astuce. Admire l'artiste.
 
@@ -61,7 +61,7 @@ doug = player = serious = J'ai juste déverrouillé la porte pour te@laisser ren
 
 
 % BARGAIN_DEAL_NEXT
-doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle,@tu vas avoir besoin d'une clef verte.
+doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
 doug = player = serious = Il y a une clef verte dans le bureau@avec des barreaux, derrière-toi.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
@@ -73,9 +73,9 @@ doug = player = serious = Doug.
 
 % GIVE_A_SHOVEL
 player = doug = happy_var = Voilà ta pelle !
-doug = player = serious = Et voilà ta clef.
+doug = player = serious = Et voilà ta clé.
 
 
-% ASKED_FOR_YELLOW_KEY_LESSON
-player = doug = worry = Heu… Je ne sais pas me servir d'une clef jaune…
-doug = player = serious = Ce dialogue n'est pas terminé
+% GIVE_A_SHOVEL_VAR
+player = doug = happy_var = Voilà ta pelle, Doug !
+doug = player = serious = Et voilà ta clé, +surname_doug.
