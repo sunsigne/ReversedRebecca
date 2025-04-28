@@ -54,7 +54,6 @@
 	////////// EN COURS ////////////
 
 	faire un dave otaku (entre laboratoire et commisariat)
-	- le temps de latence (volontaire) après un point pause plus des problèmes de fluidité qu'il n'en règle
 	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres")
 		
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
@@ -91,7 +90,7 @@
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
 	ControlsScreen : mettre message d'erreur quand clef non assignée
-	AudioScreen : mettre un bouton reset pour remettre à 100%
+	AudioScreen : mettre un bouton reset pour remettre à 100% ?
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 	digpuzzle : faire clignoter l'outils lorsque récupéré
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
@@ -119,7 +118,7 @@
 
 	////////// BOSS ////////////
 
-	double-Y se "recoiffe" ou flex ses musles sur sa phase de repos (ou veut dire les deux, mais l'un ou l'autre au hasard)
+	double-Y se "recoiffe" ou flex ses musles sur sa phase de repos ("ou" veut dire "les deux", mais l'un ou l'autre au hasard)
 	60h à vérifier le boss et tout ce qui est lié à lui
 	30h00 - retravailer le système de boss :
 	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
@@ -158,16 +157,13 @@
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
 	1h00 - UserInputDie -> devrait quand même faire quelque chose si le joueur est invulnérable
 	1h00 - les portes grises n'ont pas encore de mappable
-	1h00 - gordon est mal introduit dans les fichiers
 	2h00 - parler dans les codex du chargement des données sauvegardées ?
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
-	1h00 - adapter l'unique action piranha TALK poour accepter CHAT, READ et LISTEN?
-	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
+	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
-	20h00 - revoir la requete "createDecoration" pour utiliser des "sheet sprite"
 	
 	////////// DIFFICILE ////////////
 	
@@ -204,9 +200,8 @@
 
 	////////// PERSONNAGES A FAIRE ////////////
 
-	characters to finish : gamma, stephan, policemen & women, william, teddy, polaris, 4 more prisonners
-	double Y - l'autre boss de l'embranchement. Pro du combat, très macho MAIS inteligent (muscle TOUS ces muslces, y compris son cerveaux). Phrase favorite "je n'ai aucun gène récessif !"
-	
+	characters to finish : gamma, stephan
+
 	////////// DAVE ////////////
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)

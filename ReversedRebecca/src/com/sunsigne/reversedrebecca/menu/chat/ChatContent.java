@@ -124,8 +124,9 @@ public class ChatContent implements Updatable {
 		dialogue_key = "[" + new DialogueKey().getRegisteredKey() + "]";
 	}
 
+	// was a good idea in theory, but inaccurate in practice
 	private void pause() {
-		pausetime = 15;
+		// pausetime = 15;
 	}
 
 	private void readSentence(int sentenceNum) {
