@@ -121,7 +121,7 @@ public class Player extends LivingObject {
 		if (isStunned() == false)
 			return canInteract;
 
-		if (getCondition() == CONDITION.KO)
+		if (getCondition() == CONDITION.KO || getCondition() == CONDITION.KO_UPSIDEDOWN)
 			return false;
 
 		return canInteract;

@@ -172,6 +172,7 @@ Les différentes conditions existantes sont les suivantes :
 - RELAX : le NPC est allongé et ne peut plus bouger (mais peut toujours interagir !)
 - SIT : le NPC est assis et ne peut plus bouger (mais peut toujours interagir !)
 - KO : le NPC est allongé et ne peut plus rien faire.
+- KO_UPSIDEDOWN : le NPC est face contre terre et ne peut plus rien faire.
 
 Exemple :
 TIME -> 0 = CONDITION -> GOOD

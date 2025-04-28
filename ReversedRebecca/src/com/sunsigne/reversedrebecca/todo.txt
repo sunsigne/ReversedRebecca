@@ -136,7 +136,6 @@
 	////////// DESSIN ////////////
 	
 	(pas à faire, mais à ne pas oublier cette règle) lvl001 - la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli).
-	12h00 - KOAnimation dans les 4 direction ? seulement dans 2 (UP & DOWN) ?
 	12h00 - créer une animation "sick" pour quand on marche	 ?
 	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
 	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !

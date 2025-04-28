@@ -54,6 +54,7 @@ public class LivingAnimationHandler {
 
 	private LivingAnimation bathAnimation;
 	private LivingAnimation koAnimation;
+	private LivingAnimation koUpsidedownAnimation;
 
 	private void loadAnimations() {
 
@@ -71,8 +72,9 @@ public class LivingAnimationHandler {
 		bedAnimation = new LivingAnimation(living, 59, false, 1, 2);
 		cryAnimation = new LivingAnimation(living, 50, false, 3, 4);
 
-		bathAnimation = new LivingAnimation(living, -1, false, 6);
+		bathAnimation = new LivingAnimation(living, -1, false, 7);
 		koAnimation = new LivingAnimation(living, -1, false, 5);
+		koUpsidedownAnimation = new LivingAnimation(living, -1, false, 6);
 	}
 
 	////////// RENDER ////////////
@@ -99,6 +101,8 @@ public class LivingAnimationHandler {
 			return sitAnimation;
 		case KO:
 			return koAnimation;
+		case KO_UPSIDEDOWN:
+			return koUpsidedownAnimation;
 		}
 
 		return standingGoodAnimation;
