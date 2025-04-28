@@ -25,7 +25,7 @@ Note : le comportement par défaut de la Caméra au chargement d'une carte est d
 
 Le Type de Requête CAMERA_SHAKE permet de faire "trembler" l'écran, afin de donner de l'impact à certaines actions.
 
-La Cible est chiffrée, en pixels. Les valeurs suivantes sont égalements acceptées :
+La Cible est chiffrée, en pixels. Les valeurs suivantes sont également acceptées :
 STRONG (vaut 40 pixels)
 MEDIUM (vaut 18 pixels)
 LITTLE (vaut 10 pixels)

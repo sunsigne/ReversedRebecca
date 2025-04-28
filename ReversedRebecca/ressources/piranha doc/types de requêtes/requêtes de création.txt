@@ -37,8 +37,8 @@ Lorsque la Condition sera vérifiée, sera créé un visuel :
 - apparaissant derrière les autres objets (joueur inclus),
 - dans la Sous-Couche « WORLD »,
 - de largeur 1 case, de hauteur 2 cases,
-- dont le fichier de référence est « hair.png ».
-- décalé de 6 pixels vers la droite, et de 8 pixels vers le bas (seize pixels font une case complète) par rapport à la position définie.
+- dont le fichier de référence est « hair.png »,
+- décalé de 6 pixels vers la droite, et de 8 pixels vers le bas (seize pixels font une case complète) par rapport à la position définie,
 - dont l'image à séléctionner dans le fichier de référence est en ligne 1 et colonne 2.
 
 Par définition, les visuels n'ont pas de collisions. Si vous avez besoin que votre objet soit un « interactif » (objet interactif), il faudra créer un objet Piranha au même emplacement et en définir les propriétés.

@@ -131,9 +131,9 @@ La seule différence avec ce dernier est que PLAYER_CLOSER_THAN vérifie si le j
 
 ////// KARMA_GREATER_THAN //////
 
-Le Type de Requête KARMA_GREATER_THAN permet de savoir si le karma du joueur est plus grand ou non qu'une certainte valeur.
+Le Type de Requête KARMA_GREATER_THAN permet de savoir si le karma du joueur est plus grand ou non qu'une certaine valeur.
 
-Lorsque le jeu commence, le karma est à 0. À chaque écran de fin de niveau que rencontre le joueur, la valeur de karma change de la façon suivante :
+Lorsque le jeu commence, le karma est à 0. À chaque écran de fin de carte que rencontre le joueur, la valeur de karma change de la façon suivante :
 - ANGELIQUE = +2
 - GENTIL = +1
 - NEUTRE = +0
@@ -144,7 +144,7 @@ Lorsque le jeu commence, le karma est à 0. À chaque écran de fin de niveau qu
 Exemple :
 TIME -> 0 = KARMA_GREATER_THAN -> 2 ? CANNOT_STEAL / CAN_STEAL
 
-Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur a-t-il un karma supérieur à 3 ?
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur a-t-il un karma supérieur à 2 ?
 - si oui, effectuer l'action CANNOT_STEAL (qui est une balise GOTO).
 - si non, effectuer l'action CAN_STEAL (qui est une autre balise GOTO).
 

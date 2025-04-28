@@ -62,7 +62,7 @@ La première Cible de ce Type de Requête permet de déterminer le fichier de r�
 - CUTSTOM3 : « texts/(langue actuelle)/surname/custom3.txt ».
 
 Exemple :
-$ -> SAVE_SUNAME = SURNAME -> DOUG,POLICE
+$ -> SAVE_SUNAME = SURNAME -> DOUG, POLICE
 
 Lors d'un dialogue, les caractères "+surname_doug" seront remplacés par la valeur trouvée correspondante à « police » dans le fichier « doug.txt » (en français, ce mot est "fliquette"). 
 

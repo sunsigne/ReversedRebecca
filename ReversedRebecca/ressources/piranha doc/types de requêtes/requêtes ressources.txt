@@ -110,7 +110,7 @@ WONPUZZLE -> 10-20 = GOTO -> HUD_ADD:1
 
 Lorsque la Condition sera vérifiée, sera ajouté à la HUD l'image située en première colonne du fichier de référence.
 
-Note : l'image est automatiquement retirée lorsque le niveau prend fin.
+Note : l'image est automatiquement retirée lorsque la carte prend fin.
 
 
 
