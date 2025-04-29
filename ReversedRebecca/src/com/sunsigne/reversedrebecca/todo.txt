@@ -11,7 +11,6 @@
 	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
 	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
-	supprimer le "soutenir" sur l'écrna titre tant que le lien n'est pas bon
 	
 	////////// BUG ////////////
 
@@ -69,7 +68,9 @@
 	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
 
 	fait grossièrement :
-	- Sarah
+	- Sarah + le lvl up
+	- dave 002 qui introduit le niveau du commisariat
+	- les buissons qui bloque l'exterieur et l'entrée
 	- début & fin de niveau
 	- diversion clef
 	- se faire remarquer sans déguisement par le colonnel
@@ -80,7 +81,7 @@
 	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
 	- softlock hors des toilettes à cause de l'éboulement vert
 
-	rattatac (café) a un accès français lorsque langue en anglais
+	rattatac (café) a un accent français lorsque langue en anglais
 	lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
 	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
