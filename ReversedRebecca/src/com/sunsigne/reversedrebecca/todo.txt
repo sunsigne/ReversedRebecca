@@ -64,12 +64,10 @@
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
+	- infiltration (vérifier bug & continuer avec doug)
 
 	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
-	
-	faire grossièrement :	
-	- s'infiltrer par la bombe
-		
+
 	fait grossièrement :
 	- Sarah
 	- début & fin de niveau
@@ -80,6 +78,7 @@
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
 	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
+	- softlock hors des toilettes à cause de l'éboulement vert
 
 	rattatac (café) a un accès français lorsque langue en anglais
 	lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?

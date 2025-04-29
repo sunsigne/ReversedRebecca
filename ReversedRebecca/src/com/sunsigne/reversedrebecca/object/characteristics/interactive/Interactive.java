@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
@@ -49,7 +50,9 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 		if (getSpreadInteractivenessList().containsObject(this) == false)
 			getSpreadInteractivenessList().addObject(this);
 
-		for (Velocity tempInteractive : getSpreadInteractivenessList().getList()) {
+		var list = new ListCloner().deepClone(getSpreadInteractivenessList());
+
+		for (Velocity tempInteractive : list.getList()) {
 
 			// player is already interacting with an object
 			if (tempInteractive instanceof ChoiceObject == false) {
@@ -85,11 +88,9 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 			if (new PlayerFinder().isPlayerFutherThan(tempInteractive, 1))
 				continue;
 
-			
 			// player is superimposed on the object
 			if (new PlayerFinder().isPlayerCloserThan(tempInteractive, 1))
 				return true;
-			
 
 			// player is watching the object
 			switch (player.getFacing()) {
