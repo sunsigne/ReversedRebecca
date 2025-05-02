@@ -14,6 +14,8 @@
 	
 	////////// BUG ////////////
 
+	renvoyer à l'écran titre dans un niveau, alors qu'on a looté (chest) des choses permet de les conserver (créer un écran de game over)
+
 	peut-être existant sur build only ? :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
@@ -59,6 +61,13 @@
 	
 	////////// LVL002 ////////////
 
+	infiltration :
+	- dialogues dougs à changer
+	- envoie mail sur téléphone depuis bureau
+	- explosion mur
+	- passage ventitaltion
+	- penser à adapter dialogue de donnage de pelle
+
 	à finir :
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
@@ -73,7 +82,7 @@
 	- les buissons qui bloque l'exterieur et l'entrée
 	- début & fin de niveau
 	- diversion clef
-	- se faire remarquer sans déguisement par le colonnel
+	- se faire remarquer sans déguiseme**nt par le colonnel
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
