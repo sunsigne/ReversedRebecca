@@ -54,12 +54,23 @@
 
 	////////// EN COURS ////////////
 
-	faire un dave otaku (entre laboratoire et commisariat)
-	SEO : ajouter patreon également sur github (il y a un onglet "sponsorchip" dans "paramètres")
-		
+	- tout le monde croit que sarah pleur quand elle dit "sniff sniff" pour les crêpes
+	- la cinématique de l'ordinateur débranchée est intérompue si jean se pisse dessus au même moment
+	- marie passe à travers la porte des toilettes
+	- les joeuurs ne remarquent par qu'il peuvent saboter la porte (ils passent trop vite à cet endroit)
+	- manger exactement 101 cookies pour une joueuse n'a pas déclanché le succès
+	- Sarah a fait le tour de la pièce et est partie aux toilettes au lieu du "je suis prête"
+
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	
 	////////// LVL002 ////////////
+
+	liste des pb :
+	- les joueurs ne comprennent pas qu'il faut demander le donut aux détenus
+	- les joueurs ne savent plus ce qu'il faut faire au cours de la quête : lorsqu'ils ont la clef verte, ils essaient de la donner à Doug : le joueur devrait être davantage guidé par les dialogues, et doug devrait rappeler au joueur son objectif
+	- remplacer "faire des recherches" dans les archives par "conituner à chercher" la 2nd fois. De la même façon, éviter les "parler" d'une manière générale
+	- lorsque doug dit au joueur qu'il s'agit du bureau avec des barreaux, il doit être encore + explicite : parler de la couleur de la porte, et du flio dedans
+	- en se plaçant exactement en 14-43 facing up, un joueur a lancé les deux dialogues de Miaouss
 
 	infiltration :
 	- dialogues dougs à changer
@@ -72,9 +83,8 @@
 	- interactions avec les détenus : doug	
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
-	- infiltration (vérifier bug & continuer avec doug)
 
-	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur)
+	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur) + si on est en haut, ça déclanche la speedrun
 
 	fait grossièrement :
 	- Sarah + le lvl up
@@ -82,7 +92,7 @@
 	- les buissons qui bloque l'exterieur et l'entrée
 	- début & fin de niveau
 	- diversion clef
-	- se faire remarquer sans déguiseme**nt par le colonnel
+	- se faire remarquer sans déguisement par le colonnel
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
