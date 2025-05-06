@@ -4,7 +4,7 @@ sarah = player = laugh = Yeah, I'm happy too.
 
 
 % PANCAKES
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff?* *sniff?*
 
 
 % TOWEL
@@ -25,7 +25,7 @@ sarah = player = awkward = … despite being half-naked?
 player = object = blush = Oops, I knew I forgot something…
 sarah = player = happy_var = That's okay. You just took me by surprise.
 sarah = player = wink = Put some clothes on and we'll talk abou…
-sarah = DOWN = asleep = *sniff* *sniff*
+sarah = DOWN = asleep = *sniff?* *sniff?*
 
 
 % TOWEL_WATER
@@ -53,7 +53,7 @@ rebecca = object = worry = I had to put it somewhere, to open the door…
 sarah = player = awkward = So… You put it on the floor because…@The table was too far?
 player = sarah = laugh = Exactly!
 sarah = player = you_silly_var = Rebecca… You're tiring me…
-sarah = DOWN = asleep = *sniff* *sniff*
+sarah = DOWN = asleep = *sniff?* *sniff?*
 
 
 % WANNA_GO

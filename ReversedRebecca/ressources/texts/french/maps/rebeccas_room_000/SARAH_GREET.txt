@@ -7,7 +7,7 @@ sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pou
 % PANCAKES
 player = object = excited = Salut, Sarah ! Comment tu vas ?
 sarah = player = happy = Bien, mer…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff ?* *sniff ?*
 
 
 % TOWEL
@@ -25,7 +25,7 @@ sarah = player = laugh = Bien, merci.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?
 player = object = blush = Oops, je savais que j'avais@oublié quelque chose…
 sarah = player = happy = T'inquiète, c'est pas grave.@C'est pas comme si j'avais été une in…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff ?* *sniff ?*
 
 
 % WAIT
@@ -37,7 +37,7 @@ sarah = player = happy = Tu es prête pour le travail ?@Je me suis dit qu'on pou
 % WAIT_PANCAKES
 player = object = worry = Salut, Sarah ! Désolé, j'ai mis@un peu de temps à ouvrir…
 sarah = player = happy = Pas de soucis, je te con…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff ?* *sniff ?*
 
 
 % WAIT_TOWEL
@@ -55,4 +55,4 @@ sarah = player = laugh = Pas de soucis, je te connais.
 sarah = player = worry = Dis, tu accueilles souvent@les gens en serviette ?
 player = object = blush = Oops, je savais que j'avais@oublié quelque chose…
 sarah = player = happy = T'inquiète, c'est pas grave.@C'est pas comme si j'avais été une in…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff ?* *sniff ?*

@@ -7,7 +7,7 @@ sarah = player = happy = Are you ready for work ?@I thought we could go together
 % PANCAKES
 player = object = excited = Hi, Sarah! How are you?
 sarah = player = happy = I'm fine, thank yo…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff?* *sniff?*
 
 
 % TOWEL
@@ -25,7 +25,7 @@ sarah = player = laugh = I'm fine, thank you.
 sarah = player = worry = Just to know, do you often welcome@people in towels ?
 player = object = blush = Oops, I knew I forgot something…
 sarah = player = laugh = That's okay. It's not like  I was a stran…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff?* *sniff?*
 
 
 % WAIT
@@ -37,7 +37,7 @@ sarah = player = happy = Are you ready for work ?@I thought we could go together
 % WAIT_PANCAKES
 player = object = excited = Hi, Sarah! Sorry, it took a little while to open…
 sarah = player = laugh = Don't worry, I know you w…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff?* *sniff?*
 
 
 % WAIT_TOWEL
@@ -55,4 +55,4 @@ sarah = player = laugh = Don't worry, I know you well.
 sarah = player = worry = Just to know, do you often welcome@people in towels ?
 player = object = blush = Oops, I knew I forgot something…
 sarah = player = laugh = That's okay. It's not like I was a stran…
-sarah = player = asleep = *sniff* *sniff*
+sarah = player = asleep = *sniff?* *sniff?*

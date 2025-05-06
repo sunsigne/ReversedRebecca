@@ -1,5 +1,5 @@
 % SEARCH_KITCHEN
-sarah = LEFT = asleep = *sniff* *sniff*
+sarah = LEFT = fine = *sniff !* *sniff !*
 sarah = player = laugh = Ça sent super bon !
 player = object = happy = Oui, j'ai fait des crêpes ce matin.
 
