@@ -135,8 +135,21 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
+% PLANT
+player = doug = worry = Qu'est-ce que je dois faire, déjà ?
+doug = player = serious = J'ai une tête de panneau d'information ?@Va demander à une plante verte.
+player = doug = sad = (C'est pas très sympa… Mais c'est vrai@qu'elles m'aident à réfléchir.)
+
+
 % NAME
 doug = player = serious = Doug.
+
+
+% GIVE_THE_GREEN_KEY
+player = doug = happy_var = Voilà ta clé !
+doug = player = intrigued = Je ne t'ai pas demandé de clé verte…
+doug = player = serious = Je t'ai demandé une pelle cyan. Mais avec ta clé,@tu devrais facilement pouvoir aller la chercher.
+player = doug = happy_var = Au temps pour moi.
 
 
 % GIVE_A_SHOVEL

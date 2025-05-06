@@ -37,4 +37,5 @@ DONUT = Key2 % donut ?
 WHAT_PSSST = Key1 % quoi "pssst" ?
 NAME = Key1 % prénom ?
 GIVE_A_SHOVEL = Key3 % donner une pelle
+GIVE_THE_GREEN_KEY = Key3 % donner la clé verte
 YELLOW_KEY = Key3 % clé jaune ?

@@ -24,17 +24,21 @@ player = DOWN = no_sens = Je rêve ou il me raconte sa vie ?
 player = UP = happy = Je peux avoir ton café, s'il te plaît ? 
 policeman = DOWN = rattatac = Ma qué… Poulquoi pas…@Mais en échange, yé veux oune dounut.
 player = UP = no_sens = Où est-ce que je touve ça ?
-policeman = DOWN = rattatac = Yé sais pas… Aucun de mes collègues n'en a !@Il va falloil demander à quelqu'un d'autle.
+policeman = DOWN = rattatac = Yé sais pas… Aucun de mes collègues n'en a !@Il va falloil demander à oune contlébandié.
+player = DOWN = no_sens = (Je sais qu'il fait de l'humour, mais je@devrais peut-être vraiment faire ça…)
 
 
 % RATTATAC_STEAL_THE_COFFEE
 player = UP = surprised = Ho dis-donc ! C'est quoi derrière toi ?
 
+
 % RATTATAC_STEAL_THE_COFFEE_UP
 policeman = UP = rattatac = Ma qué ? Dé quoi ?
 
+
 % RATTATAC_STEAL_THE_COFFEE_NEXT
 player = UP = happy_var = Ha non, c'était juste le mur.
+
 
 % RATTATAC_STEAL_THE_COFFEE_NEXT_UP
 policeman = DOWN = rattatac = Bah oui… Il est là dépuis lé débout…
