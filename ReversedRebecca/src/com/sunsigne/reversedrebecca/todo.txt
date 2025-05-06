@@ -54,6 +54,8 @@
 
 	////////// EN COURS ////////////
 
+	- mettre GDD à jour pour les portes grises
+
 	- tout le monde croit que sarah pleur quand elle dit "sniff sniff" pour les crêpes
 	- la cinématique de l'ordinateur débranchée est intérompue si jean se pisse dessus au même moment
 	- marie passe à travers la porte des toilettes
@@ -73,6 +75,7 @@
 	- en se plaçant exactement en 14-43 facing up, un joueur a lancé les deux dialogues de Miaouss
 
 	infiltration :
+	- le softlock à l'exterieur du commisariat (si on faity pêter le mur mais qu'on fuit, qui est la réaction la plus probable)
 	- dialogues dougs à changer
 	- envoie mail sur téléphone depuis bureau
 	- explosion mur
@@ -92,7 +95,7 @@
 	- les buissons qui bloque l'exterieur et l'entrée
 	- début & fin de niveau
 	- diversion clef
-	- se faire remarquer sans déguisement par le colonnel
+	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie)
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade

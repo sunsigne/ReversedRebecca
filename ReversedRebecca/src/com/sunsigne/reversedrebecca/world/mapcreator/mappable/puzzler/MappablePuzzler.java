@@ -89,6 +89,8 @@ public interface MappablePuzzler extends MappableComplexe {
 		case BROWN:
 			return COLOR.BROWN_SUGAR;
 		case BROWN_SUGAR:
+			return COLOR.GRAY;
+		case GRAY:
 			return COLOR.BLUE;
 		}
 
