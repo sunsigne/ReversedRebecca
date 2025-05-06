@@ -58,7 +58,6 @@
 	- marie passe à travers la porte des toilettes
 	- les joeuurs ne remarquent par qu'il peuvent saboter la porte (ils passent trop vite à cet endroit)
 	- manger exactement 101 cookies pour une joueuse n'a pas déclanché le succès
-	- Sarah a fait le tour de la pièce et est partie aux toilettes au lieu du "je suis prête"
 
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	
