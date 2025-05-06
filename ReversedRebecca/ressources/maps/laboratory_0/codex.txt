@@ -29,6 +29,7 @@ NPC-10 = Mika
 NPC-11 = Jean
 NPC-12 = Delta
 
+OBJ-38 = Rebecca Plant
 OBJ-01 = Rebecca Chair
 OBJ-02 = Plant
 OBJ-03 = Letter
@@ -89,3 +90,4 @@ OBJ-34 = Rubble Explosing Refusal
 OBJ-35 = Bombable Desk Rubble
 OBJ-36 = Bomb Path Soft Lock Preventer
 OBJ-37 = Dummy Chair
+OBJ-39 = Plant
