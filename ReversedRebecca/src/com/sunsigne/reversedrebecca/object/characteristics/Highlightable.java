@@ -68,8 +68,10 @@ public interface Highlightable extends Velocity {
 				continue;
 
 			int tempDistance = finder.getDistance(tempInteractive, -1)[0];
-			if (tempDistance < distance)
+			if (tempDistance < distance) {
+				distance = tempDistance;
 				closestInteractive = tempInteractive;
+			}
 		}
 
 		pos = new int[] { closestInteractive.getX(), closestInteractive.getY() };
