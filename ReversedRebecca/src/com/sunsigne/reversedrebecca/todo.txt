@@ -54,13 +54,12 @@
 
 	////////// EN COURS ////////////
 
-	- les joeuurs ne remarquent par qu'il peuvent saboter la porte (ils passent trop vite à cet endroit)
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	
 	////////// LVL002 ////////////
 
 	liste des pb :
-	- remplacer "faire des recherches" dans les archives par "conituner à chercher" la 2nd fois. De la même façon, éviter les "parler" d'une manière générale
+	- remplacer "faire des recherches" dans les archives par "continuer à chercher" la 2nd fois. De la même façon, éviter les "parler" d'une manière générale
 	- lorsque doug dit au joueur qu'il s'agit du bureau derrière, il doit être encore + explicite : parler du flic dedans
 	- en se plaçant exactement en 14-43 facing up, un joueur a lancé les deux dialogues de Miaouss
 
@@ -73,7 +72,6 @@
 	- penser à adapter dialogue de donnage de pelle
 
 	à finir :
-	- interactions avec les détenus : doug	
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
 
