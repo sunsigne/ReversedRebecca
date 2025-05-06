@@ -1,0 +1,22 @@
+% NAKED
+player = object = asleep = Let's see…
+player = object = laugh = I'm only wearing a towel!
+player = object = happy = I have to do laundry and get dressed.
+
+
+% SEARCH_KEY
+player = object = asleep = Let's see…
+player = object = unhappy_var = My door is locked and I don't have the keys.
+player = object = happy = I have to take a tour of the house again.@I'll eventually come across it.
+player = object = you_silly = I can always count on plants to help@me think. No matter the situation.
+
+
+% SARAH
+player = object = asleep = Let's see…
+player = object = happy = I have to let Sarah know when I'm ready to leave.
+player = object = you_silly = Well… A priori…
+
+
+% GO_TO_WORK
+player = object = asleep = Let's see…
+player = object = happy = I have to go to work.

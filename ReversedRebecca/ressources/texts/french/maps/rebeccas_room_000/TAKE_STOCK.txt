@@ -1,0 +1,22 @@
+% NAKED
+player = object = asleep = Voyons voir…
+player = object = laugh = Je ne suis habillée que d'une serviette !
+player = object = happy = Je dois faire la lessive et m'habiller.
+
+
+% SEARCH_KEY
+player = object = asleep = Voyons voir…
+player = object = unhappy_var = Ma porte est verrouillée et je n'ai pas les clés.
+player = object = happy = Je dois refaire un tour de la maison.@Je finirai bien par tomber dessus.
+player = object = you_silly = Je peux toujours compter sur les plantes pour@m'aider à réfléchir. Quelle que soit la situation.
+
+
+% SARAH
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois prévenir Sarah quand je suis prête à partir.
+player = object = you_silly = Enfin… À-priori…
+
+
+% GO_TO_WORK
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois aller au travail.

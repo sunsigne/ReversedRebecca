@@ -7,6 +7,7 @@ READ = Key1 % read
 USE = Key1 % use
 SIT = Key1 % sit
 EXIT = Key1 % exit
+TAKE_STOCK = Key3 % take stock
 
 ///// ENVIRONMENT /////
 

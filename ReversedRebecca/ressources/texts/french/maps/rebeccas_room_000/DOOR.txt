@@ -11,8 +11,9 @@ sarah = DOWN = laugh = Du Rebecca tout craché !
 player = object = surprised = Ben mince… J'étais certaine d'avoir @laissé mes clés sur la porte…
 
 
-% SEARCH
-player = DOWN = you_silly = Je devrais probablement refaire un tour de@la maison. Je finirai bien par tomber dessus.
+% PLANT
+player = DOWN = unhappy = Je ne sais pas quoi faire… J'ai besoin de@regarder une plante pour m'aider à réfléchir.
+player = DOWN = worry = Heureusement, n'importe laquelle fera l'affaire.
 
 
 % JUST_A_MOMENT

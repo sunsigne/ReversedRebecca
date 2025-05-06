@@ -2,14 +2,6 @@
 player = object = happy = I was right, here they are.
 
 
-% PLANT
-player = object = no_sens = My keys?! What are they doing in here…
-player = object = no_sens = …
-player = object = no_sens = …
-player = object = no_sens_var = No, I can't see…
-player = object = laugh = It's a miracle I found them, though!
-
-
 % FURNITURE
 player = object = laugh = Hah! Here are those playful things.
 

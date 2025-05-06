@@ -2,14 +2,6 @@
 player = object = happy = J'avais raison, elles étaient là.
 
 
-% PLANT
-player = object = no_sens = Mes clés ?! Mais qu'est-ce qu'elles font là…
-player = object = no_sens = …
-player = object = no_sens = …
-player = object = no_sens_var = Non, je ne vois vraiment pas…
-player = object = laugh = C'est un miracle que je les ai trouvées, du coup.
-
-
 % FURNITURE
 player = object = laugh = Ha ! Elles étaient ici, ces petites coquines.
 

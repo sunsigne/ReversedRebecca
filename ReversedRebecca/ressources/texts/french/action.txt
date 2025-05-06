@@ -7,6 +7,7 @@ READ = Key1 % lire
 USE = Key1 % utiliser
 SIT = Key1 % s'assoir
 EXIT = Key1 % sortir
+TAKE_STOCK = Key3 % faire le point
 
 ///// ENVIRONMENT /////
 

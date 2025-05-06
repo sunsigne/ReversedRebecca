@@ -3,10 +3,6 @@ player = object = happy_var = …
 player = object = unhappy = They are not here…
 
 
-% PLANT
-player = object = you_silly_var = On second thought, I'm pretty sure@they are not there.
-
-
 % NIGHTSTAND
 player = object = sad_var = Nothing here, I would have thought…
 

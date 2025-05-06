@@ -11,8 +11,11 @@ sarah = DOWN = laugh = This is so Rebecca!
 player = UP = surprised = Dear me… I was sure@I had left my keys in the lock…
 
 
-% SEARCH
-player = DOWN = happy = I should probably take a tour of the@house again. I'll eventually come across it
+% PLANT
+player = DOWN = unhappy = I don't know what to do…@I need to look at a plant to help me think.
+player = DOWN = worry = Luckily, any will do.
+
+
 
 
 % JUST_A_MOMENT
