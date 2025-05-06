@@ -54,7 +54,6 @@
 
 	////////// EN COURS ////////////
 
-	- la cinématique de l'ordinateur débranchée est intérompue si jean se pisse dessus au même moment
 	- les joeuurs ne remarquent par qu'il peuvent saboter la porte (ils passent trop vite à cet endroit)
 	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	
