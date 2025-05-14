@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogue;
 
 public class TalkRequest implements Request {
@@ -34,10 +35,22 @@ public class TalkRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+		if (multipleDialoguesSnitching(object))
+			return;
+
 		PiranhaObjectAction action = new TalkAction();
 		action.setListener(action.getListener(object, target));
 		UserCanInputRestartDialogue.lastChat = action;
 		action.doAction();
+	}
+
+	private boolean multipleDialoguesSnitching(PiranhaObject object) {
+		if (LAYER.PUZZLE.getHandler().getList().isEmpty())
+			return false;
+
+		System.err.println("Problem encounter with following object : " + object.toString());
+		System.err.println("A dialogue has been initiated while another dialogue was already running");
+		return true;
 	}
 
 }

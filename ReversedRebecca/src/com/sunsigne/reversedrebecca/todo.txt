@@ -58,12 +58,8 @@
 	
 	////////// LVL002 ////////////
 
-	liste des pb :
-	- remplacer "faire des recherches" dans les archives par "continuer à chercher" la 2nd fois. De la même façon, éviter les "parler" d'une manière générale
-	- lorsque doug dit au joueur qu'il s'agit du bureau derrière, il doit être encore + explicite : parler du flic dedans
-	- en se plaçant exactement en 14-43 facing up, un joueur a lancé les deux dialogues de Miaouss
-
 	infiltration :
+	- quand cafeman a quité son bureau, on peut quand même intéragir avec lui à cause du spreadinteractiveness
 	- le softlock à l'exterieur du commisariat (si on faity pêter le mur mais qu'on fuit, qui est la réaction la plus probable)
 	- dialogues dougs à changer
 	- envoie mail sur téléphone depuis bureau

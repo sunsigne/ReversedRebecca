@@ -101,7 +101,7 @@ doug = player = serious = Bah, peu importe. Admire l'artiste.
 
 % YES_DEAL
 doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
-doug = player = serious = Il y a une clef verte dans le bureau@avec la porte grise, derrière-toi.
+doug = player = serious = Il y a une clef verte dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
@@ -130,7 +130,7 @@ doug = player = serious = J'ai juste déverrouillé la porte pour te@laisser ren
 
 % BARGAIN_DEAL_NEXT
 doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
-doug = player = serious = Il y a une clef verte dans le bureau@avec la porte grise, derrière-toi.
+doug = player = serious = Il y a une clef verte dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
