@@ -24,17 +24,12 @@ doug = player = serious = En échange d'une pelle cyan, je te donnerai@la clef j
 
 
 
-
-
 % MEET_BOMB
-player = doug = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosifs.
+player = doug = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosive.
 doug = player = intrigued = Vraiment ?
 doug = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant pêter ce mur.
-player = doug = happy_var = On va faire ça. Tu me trouves une pelle cyan,@et je t'ouvre la porte de la cellule. Deal ?
-
-
-% MEET_BOMB_QUESTION
-player = doug = no_sens_var = Tu peux déverouiller ta cellule ?!
+doug = player = serious = On va faire ça. Tu me trouves une pelle cyan,@et je t'ouvre la porte de la cellule. Deal ?
+player = doug = no_sens_var = Une seconde…@Tu dis pouvoir déverouiller ta cellule ?!
 doug = player = intrigued = Et alors ?
 player = doug = unhappy_var = Alors, pourquoi tu as besoin d'une pelle ?@Tu peux déjà t'enfuir !
 doug = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peux sortir, mais pas aller très loin.
@@ -50,14 +45,17 @@ doug = player = intrigued = Une pelle cyan contre l'accès à notre cellule. Dea
 doug = player = intrigued = Intéressant… Tu penses à quoi ?
 player = doug = happy_var = Augmente mon niveau de compétence@avec les clefs !
 doug = player = intrigued = Augmenter ton quoi ?
-doug = player = serious = Bah, peu importe. Tu n'auras qu'à@me regarder faire quand je déverouillerai la porte.
+doug = player = serious = Bah, peu importe. Tu n'auras qu'à me regarder@faire quand je déverouillerai la porte.
 
 
 % YES_BOMB_DEAL
-doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin de divertir le commissaire.
-doug = player = serious = Envoie-lui un email sur son téléphone depuis l'ordinateur d'un autre policier.
+doug = player = serious = Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin de divertir le commissaire.
+doug = player = serious = Envoie-lui un email sur son téléphone@depuis l'ordinateur d'un autre policier.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
+
+
+
 
 
 % GIVE_A_SHOVEL_BOMB
@@ -155,8 +153,10 @@ player = doug = happy_var = Au temps pour moi.
 % GIVE_A_SHOVEL
 player = doug = happy_var = Voilà ta pelle !
 doug = player = serious = Et voilà ta clé.
+player = doug = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.
 
 
 % GIVE_A_SHOVEL_VAR
 player = doug = happy_var = Voilà ta pelle, Doug !
 doug = player = serious = Et voilà ta clé, +surname_doug.
+player = doug = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.

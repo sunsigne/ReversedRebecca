@@ -1,5 +1,5 @@
 % DOUG_GIVE_A_SHOVEL_NEXT
-player = doug = excited = Je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
+player = doug = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
 doug = player = intrigued = Vraiment ?
 player = doug = happy_var = Vraiment.
 doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
