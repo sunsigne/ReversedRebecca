@@ -15,3 +15,11 @@ player = DOWN = laugh = Avec ça, je passerai inaperçue !
 player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !@Une pour moi, et une pour…
 player = LEFT = no_sens = Heu… Je ne sais pas comment il s'appelle…
 player = LEFT = you_silly = Il faudra que je pense à lui demander.
+
+
+% EMAIL
+player = DOWN = you_silly_var = Je devrais attendre que le commissaire soit@de retour dans son bureau avant de faire ça.
+
+
+% EMAIL_WHILE_SHOVEL
+player = DOWN = sad = Je n'ai aucune raison de faire ça,@j'ai déjà récupérer la pelle cyan.

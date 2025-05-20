@@ -22,6 +22,7 @@ OBJ-07 = Coat Rack Down
 OBJ-08 = Coat Rack Chief
 OBJ-09 = Corridor Plant
 OBJ-10 = Disguise Detector
+OBJ-23 = Vent Furniture
 
 ///// RESTROOM /////
 
@@ -38,12 +39,12 @@ OBJ-17 = Coffee Machine
 NPC-07 = Policeman : Rattatac
 NPC-08 = Policeman : Butch
 OBJ-21 = Rattatac Coffee
+OBJ-22 = Email Desk
 OBJ-27 = Archives Toward Left
 OBJ-28 = Archives Toward Up
 OBJ-29 = Archives Toward Down
 OBJ-30 = Right Chair and Table
 OBJ-31 = Middle Cell Chair and Table
-OBJ-32 = Email Desk
 
 ///// BIG JAIL /////
 

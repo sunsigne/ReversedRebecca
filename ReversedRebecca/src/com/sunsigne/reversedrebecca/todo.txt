@@ -58,23 +58,18 @@
 	
 	////////// LVL002 ////////////
 
-	bug : 
-	- le commissaire se téléporte s'il voit le joueur en sortant des verstaires
-	- en étant trop rapide, on prend le risque de bypass les policiers et d'envoyer le mails alors que le commissaire n'est pas dans son bureau
-
 	infiltration :
 	- les gravas dans le bureau du commissaire apparaissent au dessus des autres textures
-	- le softlock à l'exterieur du commisariat (si on faity pêter le mur mais qu'on fuit, qui est la réaction la plus probable)
-	- dialogues dougs à changer
-	- envoie mail sur téléphone depuis bureau
-	- explosion mur
 	- passage ventitaltion
-	- penser à adapter dialogue de donnage de pelle
-
-	à finir :
+	- penser à adapter dialogue de récupération (surtout dans le cas où on a jamais parlé à doug) et de donnage de pelle
+	- prévoir le coup de si le joueur essaies de se déguiser
+	- prévoir le coup de si le joueur arrive à Doug pour la 1ère fois en ayant déjà la pelle (c'est possible)
+	- prévoir le cas où le joueur fait peter le mur du commisaire depuis l'autre côté pour sortir
 	- si on a une bombe, il faut que sarah dise clairement qu'on peut l'utiliser et que donc elle ne fera PAS diversion
+	+
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
+	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie) + on peut être vu depuis le côté gauche en étant pas dans la lumière
 
 	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur) + si on est en haut, ça déclanche la speedrun
 
@@ -84,18 +79,16 @@
 	- les buissons qui bloque l'exterieur et l'entrée
 	- début & fin de niveau
 	- diversion clef
-	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie)
 	
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
-	- si on a dit ok à doug pour le deal, mais qu'on fait pêter le mur qui sépare la prison des archives, le faire réagir
-	- softlock hors des toilettes à cause de l'éboulement vert
-
-	rattatac (café) a un accent français lorsque langue en anglais
-	lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
-	la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
-	se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
+	
+	idées : 
+	- rattatac (café) a un accent français lorsque langue en anglais
+	- lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
+	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
+	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 

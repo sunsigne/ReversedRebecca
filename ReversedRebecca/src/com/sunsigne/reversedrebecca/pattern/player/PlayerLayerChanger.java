@@ -68,7 +68,6 @@ public class PlayerLayerChanger {
 				goes(list.getList().get(index + 2));
 				return;
 			}
-
 		}
 	}
 

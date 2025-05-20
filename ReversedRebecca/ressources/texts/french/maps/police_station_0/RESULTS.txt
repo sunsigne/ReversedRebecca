@@ -1,6 +1,6 @@
 % PLAN
-
 player = down = convinced = Ok. J'ai fait le plus dur.@Maintenant, la phase deux du plan.
+
 
 % NOT_OBTAINED
 player = down = sad = Zut, j'y étais presque…
@@ -8,7 +8,7 @@ player = down = sad = Zut, j'y étais presque…
 
 % OBTAINED
 player = down = you_silly = J'ai été vraiment rapide !
-player = down = laugh = Dommage ! J'aimais bien@la musique de la ventilation !
+player = down = laugh = Dommage ! J'aimais bien la musique@spéciale speedrun.
 
 
 % ARCHIVES
