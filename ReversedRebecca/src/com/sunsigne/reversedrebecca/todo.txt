@@ -58,16 +58,14 @@
 	
 	////////// LVL002 ////////////
 
-	à tester : les dialogues de doug en scénario "key" (des fois qu'ils aient sauté depuis la création du scénario "bomb")
+	à corriger :
+	- les dialogues de doug en scénario "key" (des fois qu'ils aient sauté depuis la création du scénario "bomb")
+	- miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur) + si on est en haut, ça déclanche la speedrun
 
-	infiltration :
-	- prévoir le cas où le joueur fait peter le mur du commisaire depuis l'autre côté pour sortir + s'il descend du conduit juste sous son nez
-	+
+	à finir :
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
-	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie) + on peut être vu depuis le côté gauche en étant pas dans la lumière + ventilation si on descend en étant dans le bureau du commisaire
-
-	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur) + si on est en haut, ça déclanche la speedrun
+	- un chemin pour finir le scénario bomb
 
 	fait grossièrement :
 	- Sarah + le lvl up

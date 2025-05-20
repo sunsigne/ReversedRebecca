@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.world.World;
@@ -53,6 +54,7 @@ public class PlayerLayerChanger {
 		player.getHandler().softRemoveObject(player);
 		content_layer.addObject(player);
 		World.get().setLayer(ground_layer);
+		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
 	}
 
 	public void goesUp() {
