@@ -11,10 +11,18 @@ player = DOWN = laugh = Oups !
 player = DOWN = laugh = Avec ça, je passerai inaperçue !
 
 
+% NOT_DISGUISING
+player = DOWN = unhappy = Je ne tromperai personne… J'ai fait sauter@un mur… Les policiers sont sur leur qui vive.
+
+
 % SHOVEL
 player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !@Une pour moi, et une pour…
 player = LEFT = no_sens = Heu… Je ne sais pas comment il s'appelle…
 player = LEFT = you_silly = Il faudra que je pense à lui demander.
+
+
+% SHOVEL_DOUGLESS
+player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !
 
 
 % EMAIL

@@ -61,8 +61,6 @@
 	à tester : les dialogues de doug en scénario "key" (des fois qu'ils aient sauté depuis la création du scénario "bomb")
 
 	infiltration :
-	- adapter dialogue de récupération de pelle si on a jamais parlé à doug (+ celui de rencontre)
-	- prévoir le coup de si le joueur essaies de se déguiser
 	- prévoir le cas où le joueur fait peter le mur du commisaire depuis l'autre côté pour sortir + s'il descend du conduit juste sous son nez
 	+
 	- le mini jeu contre william

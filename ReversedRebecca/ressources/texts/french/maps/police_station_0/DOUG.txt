@@ -46,6 +46,16 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
+% YES_BOMB_DEAL_SPEEDRUN
+doug = player = serious = Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin de divertir le commissaire.
+player = doug = you_silly_var = Ouais… Ouais…@Je ne t'ai pas attendu pour me débrouiller…
+player = doug = happy = En fait, j'ai déjà ta pelle sur moi.
+doug = player = intrigued = Vraiment ? Pourquoi tu ne l'as pas dit ?
+player = doug = angry = Tu ne m'a pas demandé, que je sache !
+player = doug = you_silly_var = Bref, peu importe. Voilà ma part du contrat.
+doug = player = serious = Et voilà la mienne, admire l'artiste.
+
+
 % GIVE_A_SHOVEL_BOMB
 player = doug = happy_var = Voilà ta pelle !
 doug = player = serious = Et voilà l'accès. Admire l'artiste.
