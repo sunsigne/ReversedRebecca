@@ -58,18 +58,16 @@
 	
 	////////// LVL002 ////////////
 
+	à tester : les dialogues de doug en scénario "key" (des fois qu'ils aient sauté depuis la création du scénario "bomb")
+
 	infiltration :
-	- les gravas dans le bureau du commissaire apparaissent au dessus des autres textures
-	- passage ventitaltion
-	- penser à adapter dialogue de récupération (surtout dans le cas où on a jamais parlé à doug) et de donnage de pelle
+	- adapter dialogue de récupération de pelle si on a jamais parlé à doug (+ celui de rencontre)
 	- prévoir le coup de si le joueur essaies de se déguiser
-	- prévoir le coup de si le joueur arrive à Doug pour la 1ère fois en ayant déjà la pelle (c'est possible)
-	- prévoir le cas où le joueur fait peter le mur du commisaire depuis l'autre côté pour sortir
-	- si on a une bombe, il faut que sarah dise clairement qu'on peut l'utiliser et que donc elle ne fera PAS diversion
+	- prévoir le cas où le joueur fait peter le mur du commisaire depuis l'autre côté pour sortir + s'il descend du conduit juste sous son nez
 	+
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
-	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie) + on peut être vu depuis le côté gauche en étant pas dans la lumière
+	- se faire remarquer sans déguisement par le colonnel (on peut rentrer dans le bureau du commisaire sans déclancher la cutscene de sortie) + on peut être vu depuis le côté gauche en étant pas dans la lumière + ventilation si on descend en étant dans le bureau du commisaire
 
 	miaouss : softlock (si on est au niveau de la porte du bas, on se fait ejecter par l'apparition du mur) + si on est en haut, ça déclanche la speedrun
 
@@ -83,6 +81,7 @@
 	ne pas oublier :
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
+	- si on a une bombe, il faut que sarah dise clairement qu'on peut l'utiliser et que donc elle ne fera PAS diversion
 	
 	idées : 
 	- rattatac (café) a un accent français lorsque langue en anglais

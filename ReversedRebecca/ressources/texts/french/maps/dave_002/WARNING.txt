@@ -1,4 +1,5 @@
 % FIRST_TIME
-dave = DOWN = camera = Je vais la faire courte : Rebecca et Sarah@ont appris l'identité de l'individu.
+dave = DOWN = camera = Je vais la faire courte parce que le développeur@n'a pas encore eu le temps d'introduire la suite.
+dave = DOWN = camera = Rebecca et Sarah ont appris l'identité de l'individu.
 dave = DOWN = camera = Il s'appelle Vladimir, et il est venu voler@les plans d'un projet important.
 dave = DOWN = camera = Maintenant qu'elles ont réussi à sortir,@elles partent porter plainte à la police.

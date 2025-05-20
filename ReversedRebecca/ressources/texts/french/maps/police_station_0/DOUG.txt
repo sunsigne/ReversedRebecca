@@ -46,11 +46,6 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
-
-
-
-
-
 % GIVE_A_SHOVEL_BOMB
 player = doug = happy_var = Voilà ta pelle !
 doug = player = serious = Et voilà l'accès. Admire l'artiste.
@@ -59,12 +54,6 @@ doug = player = serious = Et voilà l'accès. Admire l'artiste.
 % GIVE_A_SHOVEL_BOMB_VAR
 player = doug = happy_var = Voilà ta pelle, Doug !
 doug = player = serious = Et voilà l'accès. Admire l'artiste, +surname_doug.
-
-
-
-
-
-
 
 
 % NO_DEAL

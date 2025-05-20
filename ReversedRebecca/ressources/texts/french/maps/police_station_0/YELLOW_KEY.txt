@@ -1,3 +1,11 @@
+% DOUG_GIVE_A_SHOVEL_BOMB_NEXT
+player = doug = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.
+player = doug = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que votre cellule est à côté de la salle des armes.
+doug = player = intrigued = Vraiment ?
+player = doug = happy_var = Vraiment.
+doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu nous donnerais l'accès aux guns ?
+
+
 % DOUG_GIVE_A_SHOVEL_NEXT
 player = doug = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
 doug = player = intrigued = Vraiment ?
@@ -29,12 +37,12 @@ player = doug = worry = Comme j'ai dit, on verra.
 
 
 % ARMORY_NEUTRAL
-player = RIGHT = unhappy = Je vais vraiment faire ça ?@Donner des armes aux prisonniers ?
-player = RIGHT = happy = Ça peut être marrant après tout…
+player = DOWN = unhappy = Je vais vraiment faire ça ?@Donner des armes aux prisonniers ?
+player = DOWN = happy = Ça peut être marrant après tout…
 
 
 % ARMORY_EVIL
-player = RIGHT = death = Je sens qu'on va s'amuser.
+player = DOWN = death = Je sens qu'on va s'amuser.
 
 
 % DOUG_YELLOW_KEY_EVIL
