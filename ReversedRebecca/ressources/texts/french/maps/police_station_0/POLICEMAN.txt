@@ -14,3 +14,7 @@ policeman = player = miaouss = La blague a assez durée.
 % PLAYER_SPOTTED_MIAOUSS_SECOND_INTRUSION_NEXT
 policeman = player = miaouss = Vous êtes en état d'arrestation.
 
+
+% PLAYER_SPOTTED_JAMES_WITHIN_DESK
+policeman = player = james = Cordialement, dehors.
+
