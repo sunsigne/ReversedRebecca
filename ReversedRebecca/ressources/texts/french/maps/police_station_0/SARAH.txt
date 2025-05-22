@@ -1,12 +1,65 @@
-% COMPLAINT
-sarah = player = angry = Grrr! Ces policiers sont inutiles ! Ils ont@enregistré notre plainte mais ils ne feront rien.
-sarah = player = determined = Rebecca, je compte sur toi ! Infiltre-toi dans ce@commisariat, et vole des informations sur Vladimir.
-sarah = player = wink = Voilà un petit quelque chose qui devrait t'aider.
+% INTRODUCTION
+policeman = DOWN = james = Donc, pour résumer votre histoire :
+policeman = DOWN = james = Un certain Vladimir Wolanski est venu@ce jour, à l'adresse indiqué, et a cassé la porte…
+sarah = UP = angry = … a fait EXPLOSER la porte !
+policeman = DOWN = james = Oui… oui… a cassé la porte avec des boum-boum@de kermesse et est parti en emportant des feuilles…
+sarah = UP = angry_var = … les plans confidentiels d'un projet@gouvernemental !
+policeman = DOWN = james = C'est ça… C'est ça… En emportant les feuilles@de votre gouvernante.
+policeman = DOWN = james = Donc… C'est tout ?
+sarah = UP = angry = Comment ça "donc, c'est tout" ?@Mais c'est très grave !
+policeman = DOWN = james = J'ai enregistré votre plainte.@Vous voulez que je l'imprime ?
+sarah = UP = angry_var = MAIS C'EST TRÈS GRAVE !
+policeman = DOWN = james = … Donc… Je l'imprime en plus gros ?
+sarah = UP = pikachu_face = …
+sarah = player = angry = Viens Rebecca. On s'en va.
 
 
-% SCENARIO_BOMB
-sarah = player = laugh = Les bombes, hein ? Dans ce cas, trouve une entrée@par l'exterieur pour accéder à la salle des archives.
+% WHAT_NOW
+player = sarah = no_sens = Et maitenant ?
+sarah = player = angry = Suis-moi.
 
 
-% SCENARIO_KEY
-sarah = player = happy = Les clés ? Dans ce cas, déguise-toi en policière@pour accéder à la salle des archives.
+% BRANCHING_FAIL
+sarah = player = angry = Ces policiers ne feront rien !@On ne peut compter que sur nous-même.
+sarah = player = worry = Heu… Tu peux fermer la porte@derrière-toi, s'il te plaît.
+player = LEFT = happy_var = Oui, pardon.
+
+
+% BRANCHING
+sarah = player = sad_var = Je disais…
+sarah = player = angry = Ces policiers ne feront rien !@On ne peut compter que sur nous-même.
+sarah = player = determined = Je suis convaincue qu'on peut trouver des@informations sur ce Vladimir en fouinant !
+sarah = player = worry = Mais… ça implique de se salir les mains…
+player = sarah = surprised = Tu suggères qu'on vole des documents ?@Aux forces de l'ordre ?
+sarah = player = unhappy =  En effet, ça peut être une option…
+sarah = player = worry = On peut aussi ne rien faire. Chacun rentre chez soi@et on cherche demain une autre façon d'enquêter.
+sarah = player = wink = Je m'en remets à ton jugement. Mais pas de@stress, aucune des deux options n'est mauvaise.
+sarah = player = happy = Quoi que tu décides, il n'y a pas de retour en@arrière possible. Le futur dépend de ton choix.
+
+
+% SCENARIO_CAMILLE
+player = sarah = laugh = Ok ! On va le faire ! On va voler les informations !
+sarah = player = happy = Bien ! Donne-moi une petite minute,@j'ai besoin de réfléchir à un plan.
+
+
+% SCENARIO_STEPHAN
+no done yet
+
+
+% PLAN_NOT_YET
+sarah = player = you_silly_var = Mais quelle impatiente…
+sarah = player = wink = Donne-moi juste un peu d'espace.@Dans quelques secondes, j'aurai une idée.
+
+
+% PLAN_KEY
+sarah = player = happy_var = Oui ! J'ai une idée.
+sarah = player = happy = Tu vois la policière à l'accueil ? Je vais la distraire.@Toi, tu vas passer par la porte derrière elle.
+sarah = player = laugh = Une fois de l'autre côté, tu cherches des@informations sur Vladimir, puis tu ressors avec !
+player = sarah = worry = Ok, mais … je cherche quoi, exactement ?
+sarah = player = laugh = Si on est logique, tu trouveras forcement@quelque chose dans les archives.
+sarah = player = happy = Si tu trouves une pièce remplie d'étagères ou@de commodes, c'est que tu es au bon endroit.
+sarah = player = happy_var = Bien ! Je suis prête.@Fais-moi signe quand je dois faire diversion.
+
+
+% PLAN_BOMB
+no done yet

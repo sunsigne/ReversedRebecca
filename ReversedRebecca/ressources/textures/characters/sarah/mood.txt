@@ -40,3 +40,4 @@ pervert=5,4
 ////// IMITATION //////
 
 dave=6,1
+pikachu_face=6,2
