@@ -67,7 +67,7 @@ Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - apparaissant derrière les autres objets (joueur inclus),
 - dans la Sous-Couche « WORLD »,
 - de largeur 1 case, de hauteur 2 cases,
-- nécessitant les fichiers de références « bath_filling_XX.png » (où XX sont des nombres allant de 00 à 99),
+- nécessitant le fichier de référence dont le nom est « bath_filling.png »,
 - où chaque image reste pendant 90 ticks (1 seconde et demie),
 - qui s'arrête sur la dernière image (la baignoire est remplie).
 

@@ -59,9 +59,10 @@
 	////////// LVL002 ////////////
 
 	pendant la diversion :
-	- réaction de jessy si rebecca trop proche (tout court, c'est pas logique qu'on apsse derrière son bureau)
+	- réaction de jessy si rebecca trop proche (tout court, c'est pas logique qu'on passe derrière son bureau)
 	- vol de la plante
-	- dégager la chaise (la pousser d'une case à droite, sinon le joueur peut se retrouver bloqué entre Jessy et Sarah la seconde fois)
+	- quand on écoute jessy, on devrait pouvoir également écouter sarah
+	- rebecca peut empêcher jessy de capturer sarah si elle la bloque (ce qui est absurde, sécuriser la chose par une arrestation de rebecca pour obstruction ?)
 	- clé cyan si pas permanante
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	- après que la policière ait sermoné le joueur, il peut toujours s'infilter derrière le bureau (il faudrait lancer une cutscene pour l'en empêcher)
