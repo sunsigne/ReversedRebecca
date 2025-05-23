@@ -12,6 +12,7 @@ OBJ-04 = Desk Plant
 OBJ-18 = Miaouss Detector & Plant
 OBJ-19 = /hidden
 OBJ-20 = Miaouss Chair & Computer
+OBJ-25 = Player Behind Desk Scanner
 
 ///// PRE-CHIEF & CHIEF /////
 

@@ -1,6 +1,7 @@
 ////// JESSY //////
 
 jessy=1,1
+jessy_angry=1,2
 
 ////// CASSIDY //////
 

@@ -3,6 +3,7 @@
 DO_YOU_HAVE_A_PLAN = Key1 % tu as un plan ?
 STEAL = Key3 % voler
 CREATE_A_DIVERSION = Key3 % faire diversion
+CREATE_A_DIVERSION_VAR = Key3 % fais diversion
 DO_RESEARCH = Key3 % faire des recherches
 KEEP_RESEARCHING = Key3 % continuer à chercher
 STOP = Key3 % arrêter

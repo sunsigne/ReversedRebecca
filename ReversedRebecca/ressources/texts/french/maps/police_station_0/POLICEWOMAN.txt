@@ -28,3 +28,28 @@ player = DOWN = happy = Merci.
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_FINAL
 player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission à accomplir.
+
+
+% JESSY_YELLING_AT_SARAH
+policewoman = DOWN = jessy_angry = Au nom de la loi, je vous somme d'arrêter !
+sarah = UP = laugh = Désolé madame, c'était un accident.
+sarah = UP = sad = (Rebecca… Qu'est-ce que tu fiches@à nous regarder… Dépêche-toi…)
+
+
+% JESSY_YELLING_AT_SARAH_PRISON
+policewoman = DOWN = jessy_angry = Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+policewoman = DOWN = jessy_angry = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+policewoman = DOWN = jessy_angry = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+sarah = UP = sad_var = (Rebecca… Je compte sur toi pour me@sortir de là…)
+
+
+% JESSY_YELLING_AT_PLAYER
+policewoman = player = jessy_angry = Qu'est-ce que vous faites, vous ?
+player = policewoman = laugh = Moi ? Rien du tout.
+policewoman = player = jessy = Ha ok, pardon.
+
+
+% JESSY_YELLING_STRONGLY_AT_PLAYER
+policewoman = player = jessy_angry = Non mais dis-donc ! Vous vous croyez où, vous ?!
+player = policewoman = laugh = Pardon ! Je me suis perdue.
+policewoman = player = jessy_angry = Cette zone est interdite au pulic !@Reculez, ou je vais devoir vous arrêter.

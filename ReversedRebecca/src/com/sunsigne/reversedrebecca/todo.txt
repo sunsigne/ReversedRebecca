@@ -58,18 +58,27 @@
 	
 	////////// LVL002 ////////////
 
-	à corriger :
-	- les dialogues de doug en scénario "key" (des fois qu'ils aient sauté depuis la création du scénario "bomb")
+	pendant la diversion :
+	- réaction de jessy si rebecca trop proche (tout court, c'est pas logique qu'on apsse derrière son bureau)
+	- vol de la plante
+	- dégager la chaise (la pousser d'une case à droite, sinon le joueur peut se retrouver bloqué entre Jessy et Sarah la seconde fois)
+	- clé cyan si pas permanante
+	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
+	- après que la policière ait sermoné le joueur, il peut toujours s'infilter derrière le bureau (il faudrait lancer une cutscene pour l'en empêcher)
+	
 
 	à finir :
 	- dave 002 qui introduit le niveau du commisariat
 	- le lvl up
-	- le blabla des scénarios des sarah
+	- le blabla des scénarios de sarah (bomb ? pas de clé cyan ?)
 	- la séléction de scénario : si on a une bombe, il faut que sarah dise clairement qu'on peut l'utiliser et que donc elle ne fera PAS diversion
 	- une diverson CORRECTE pour avoir la clef
 	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	- un chemin pour finir le scénario bomb
 	- les buissons qui bloque l'exterieur et l'entrée
+	- les hitbox des objets après les toilettes
+	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
+	- une réaction de butch si on ouvre son bureau depuis le côté
 	- fin de niveau
 
 	à faire + tard :
