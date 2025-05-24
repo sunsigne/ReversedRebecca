@@ -59,12 +59,9 @@
 	////////// LVL002 ////////////
 
 	pendant la diversion :
-	- que faire une fois que jessy est en chemin pour emprisonner sarah ? ou en train de revenir ?
 	- quels sont les réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
 	- réaction de jessy si rebecca trop proche, DERRIERE elle (au niveau de la porte)
-	- réaction de jessy si rebecca trop proche durant le sermonage de sarah, même chose pour l'arrestation
-	- rebecca peut empêcher jessy de capturer sarah si elle la bloque (ce qui est absurde, sécuriser la chose par une arrestation de rebecca pour obstruction ?)
-	- vol de la plante
+	- 	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	- clé cyan si pas permanante
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
@@ -73,11 +70,11 @@
 	
 
 	à finir :
+	- mettre à jour les highlighs de tous les types de policiers (gun)
 	- dave 002 qui introduit le niveau du commisariat
 	- le lvl up
 	- le blabla de la diversion en l'absence de clé cyan
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
-	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	- un chemin pour finir le scénario bomb
 	- les buissons qui bloque l'exterieur et l'entrée
 	- les hitbox des objets après les toilettes
