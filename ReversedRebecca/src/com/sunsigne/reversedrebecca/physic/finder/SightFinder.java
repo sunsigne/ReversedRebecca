@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.piranha.InteractiveObject;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -132,6 +133,9 @@ public class SightFinder implements Position {
 
 	private boolean isInTheBack(int diffX, int diffY) {
 		if (observer instanceof Facing == false)
+			return false;
+		
+		if (observer instanceof InteractiveObject)
 			return false;
 
 		Facing facer = (Facing) observer;

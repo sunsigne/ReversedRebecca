@@ -65,7 +65,6 @@
 	- rebecca peut empêcher jessy de capturer sarah si elle la bloque (ce qui est absurde, sécuriser la chose par une arrestation de rebecca pour obstruction ?)
 	- clé cyan si pas permanante
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
-	- après que la policière ait sermoné le joueur, il peut toujours s'infilter derrière le bureau (il faudrait lancer une cutscene pour l'en empêcher)
 	
 
 	à finir :
