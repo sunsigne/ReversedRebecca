@@ -59,10 +59,12 @@
 	////////// LVL002 ////////////
 
 	pendant la diversion :
-	- réaction de jessy si rebecca trop proche (tout court, c'est pas logique qu'on passe derrière son bureau)
-	- vol de la plante
-	- quand on écoute jessy, on devrait pouvoir également écouter sarah
+	- que faire une fois que jessy est en chemin pour emprisonner sarah ? ou en train de revenir ?
+	- quels sont els réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
+	- réaction de jessy si rebecca trop proche, DERRIERE elle (au niveau de la porte)
+	- réaction de jessy si rebecca trop proche durant le sermonage de sarah, même chose pour l'arrestation
 	- rebecca peut empêcher jessy de capturer sarah si elle la bloque (ce qui est absurde, sécuriser la chose par une arrestation de rebecca pour obstruction ?)
+	- vol de la plante
 	- clé cyan si pas permanante
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	

@@ -30,6 +30,24 @@ player = DOWN = happy = Merci.
 player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission à accomplir.
 
 
+% PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK
+policewoman = player = jessy_neutral = Qu'est-ce que vous faites ?
+player = policewoman = laugh = Rien du tout.
+policewoman = player = jessy_neutral = Alors reculez, s'il vous plaît.
+
+
+% PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_NEXT
+policewoman = player = jessy_angry = Madame, reculez.
+player = policewoman = angry = Ça va, calmez-vous. Je vais reculer.
+
+
+% PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_FINAL
+policewoman = player = jessy_angry = Ça suffit. Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+policewoman = player = jessy_angry = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+policewoman = player = jessy_angry = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+player = policewoman = sad = (J'ai déconné, là…)
+
+
 % JESSY_YELLING_AT_SARAH
 policewoman = DOWN = jessy_angry = Au nom de la loi, je vous somme d'arrêter !
 sarah = UP = laugh = Désolé madame, c'était un accident.
