@@ -60,7 +60,7 @@
 
 	pendant la diversion :
 	- que faire une fois que jessy est en chemin pour emprisonner sarah ? ou en train de revenir ?
-	- quels sont els réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
+	- quels sont les réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
 	- réaction de jessy si rebecca trop proche, DERRIERE elle (au niveau de la porte)
 	- réaction de jessy si rebecca trop proche durant le sermonage de sarah, même chose pour l'arrestation
 	- rebecca peut empêcher jessy de capturer sarah si elle la bloque (ce qui est absurde, sécuriser la chose par une arrestation de rebecca pour obstruction ?)
@@ -68,13 +68,15 @@
 	- clé cyan si pas permanante
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
+	bomb : 
+	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
+	
 
 	à finir :
 	- dave 002 qui introduit le niveau du commisariat
 	- le lvl up
-	- le blabla des scénarios de sarah (bomb ? pas de clé cyan ?)
-	- la séléction de scénario : si on a une bombe, il faut que sarah dise clairement qu'on peut l'utiliser et que donc elle ne fera PAS diversion
-	- une diverson CORRECTE pour avoir la clef
+	- le blabla de la diversion en l'absence de clé cyan
+	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
 	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	- un chemin pour finir le scénario bomb
 	- les buissons qui bloque l'exterieur et l'entrée
@@ -88,6 +90,7 @@
 	- le moine qui donne le tuyau & le nom du jeu
 
 	ne pas oublier :
+	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
 	

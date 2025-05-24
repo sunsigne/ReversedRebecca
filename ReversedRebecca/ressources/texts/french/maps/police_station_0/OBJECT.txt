@@ -1,3 +1,7 @@
+% LEAVING
+player = DOWN = sad = J'ai dit à Sarah qu'on allait infiltrer le@commissariat… Je n'ai aucune raison de partir.
+
+
 % BETTER_COUCHING
 player = DOWN = you_silly = Quitte à m'assoir, autant aller dans le canapé.
 player = DOWN = laugh = C'est plus confortable !

@@ -62,6 +62,17 @@ sarah = player = happy = Si tu trouves une pièce remplie d'étagères ou@de com
 sarah = player = happy_var = Bien ! Je suis prête.@Fais-moi signe quand je dois faire diversion.
 
 
+% PLAN_BOMB
+sarah = player = happy_var = Ça y est ! J'ai une idée.
+player = sarah = excited = Ha oui ?
+sarah = player = happy = Tu as encore les bombes que je t'ai données ?@Tu vas passer par l'extérieur et trouver une entrée.
+sarah = player = laugh = Une fois à l'intérieur, tu cherches des@informations sur Vladimir, puis tu ressors avec !
+player = sarah = worry = Ok, mais … je cherche quoi, exactement ?
+sarah = player = laugh = Si on est logique, tu trouveras forcement@quelque chose dans les archives.
+sarah = player = happy = Si tu trouves une pièce remplie d'étagères ou@de commodes, c'est que tu es au bon endroit.
+sarah = player = happy_var = Bien ! Je compte sur toi.@Fais attention, les bombes ça attire l'attention.
+
+
 % DIVERSION_START
 sarah = player = worry = Ok… Quand il faut y aller, il faut y aller…
 
@@ -69,7 +80,3 @@ sarah = player = worry = Ok… Quand il faut y aller, il faut y aller…
 % DIVERSION_AGAIN
 sarah = player = unhappy = Rebecca… Il fallait être plus réactive…@Je vais avoir des problèmes si je recommence…
 sarah = player = sad_var = Mais bon… J'imagine qu'on a plus le choix…@Je compte sur toi.
-
-
-% PLAN_BOMB
-no done yet
