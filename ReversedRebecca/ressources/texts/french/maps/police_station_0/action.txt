@@ -9,6 +9,7 @@ KEEP_RESEARCHING = Key3 % continuer à chercher
 STOP = Key3 % arrêter
 MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
 SET_UP_THE_DIVERSION = Key2 % mettre en place la diversion
+TAKE_THE_KEYS = Key2 % prendre les clés
 START_THE_DIVERSION = Key2 % (END_LVL)lancer la diversion
 I_HAVE_THE_DATA = Key3 % (END_LVL)j'ai les informations
 

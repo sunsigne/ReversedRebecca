@@ -82,3 +82,16 @@ sarah = player = unhappy = Rebecca… Il fallait être plus réactive…@Je vais
 sarah = player = sad_var = Mais bon… J'imagine qu'on a plus le choix…@Je compte sur toi…
 sarah = player = worry = Pour l'heure, fais-toi discrète. Il ne faut pas@qu'elle comprenne ce qu'on essaie de faire.
 sarah = player = awkward = Et viens me chercher, d'accord ?
+
+
+% DIVERSION_AGAIN_VAR
+sarah = player = unhappy = Rebecca… Il fallait être plus réactive…@Je vais me faire arrêter si je recommence…
+player = sarah = unhappy_var = La porte est verrouillée. Je ne peux pas passer.
+sarah = player = surprised = C'est pas vrai ! Comment n'ai-je ne pas y penser !
+sarah = player = asleep = Hmm…
+sarah = player = happy = En y réfléchissant, je penses que les clés@sont sur son bureau.
+sarah = player = happy_var = Ok. On va recommencer.@Tu trouves les clés et tu t'infiltres.
+sarah = player = unhappy = À mon avis, cette fois, je vais me faire arrêter…
+sarah = player = sad_var = Mais bon… J'imagine qu'on a plus le choix…@Je compte sur toi…
+sarah = player = worry = Pour l'heure, fais-toi discrète. Il ne faut pas@qu'elle comprenne ce qu'on essaie de faire.
+sarah = player = awkward = Et viens me chercher, d'accord ?

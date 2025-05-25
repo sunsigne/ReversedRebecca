@@ -2,6 +2,14 @@
 player = DOWN = sad = J'ai dit à Sarah qu'on allait infiltrer le@commissariat… Je n'ai aucune raison de partir.
 
 
+% LEAVING_GOOD
+player = DOWN = angry_var2 = Il n'est pas question que@j'abandonne Sarah à son sort !
+
+
+% LEAVING_BAD
+player = DOWN = evil = Bien que ce soit tentant d'abandonner Sarah@à son sort, je dois quand même infiltrer le commissariat.
+
+
 % BETTER_COUCHING
 player = DOWN = you_silly = Quitte à m'assoir, autant aller dans le canapé.
 player = DOWN = laugh = C'est plus confortable !
