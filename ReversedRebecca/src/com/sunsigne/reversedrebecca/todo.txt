@@ -6,7 +6,6 @@
 	supprimer les ressources non utilisées
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
 	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
-	désactiver le scénarion 'inquery' & mettre à jour texte de dave au niveau d'avant
 	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
 	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
@@ -54,40 +53,44 @@
 
 	////////// EN COURS ////////////
 
-	- devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
-	- mettre à jour les highlighs de tous les types de policiers (gun)
+
 	
 	////////// LVL002 ////////////
 
+	à faire absolument :
+		lvl001 :
+	- désactiver temporairement le chemin "enquete"
+	
+		lvl002 :
+	- clarifier l'embranchement
+	- clé cyan si pas permanante (elles sont actuellement sur la plante au lieu du bureau)
+	- un chemin pour finir le scénario bomb
+	- les buissons qui bloque l'exterieur et l'entrée
+	- fin de niveau
+
+
 	à vérifier :
-	- diversion en ayant déjà la clef cyan (dialogue de Sarah sur la 2ème chaise)
-	- texte de l'entrée neutre / une fois sarah arrêtée, en fonction du karma
 
 	pendant la diversion :
 	- quels sont les réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
 	- réaction de jessy si rebecca trop proche, DERRIERE elle (au niveau de la porte) ou, empêcher rebecca d'ouvrir la porte
-	- clé cyan si pas permanante (elles sont actuellement sur la plante au lieu du bureau)
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
 	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
 	
 	à finir :
-	- dave 002 qui introduit le niveau du commisariat
-	- le lvl up
-	- le blabla de la diversion en l'absence de clé cyan
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
-	- un chemin pour finir le scénario bomb
-	- les buissons qui bloque l'exterieur et l'entrée
 	- les hitbox des objets après les toilettes
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
-	- fin de niveau
+
 
 	à faire + tard :
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
 	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
+	- les variantes sadique et psycopathe
 
 	ne pas oublier :
 	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
@@ -167,6 +170,8 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
+	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
+	0h30 - mettre à jour les highlighs de tous les types de policiers (gun)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
 	1h00 - UserInputDie -> devrait quand même faire quelque chose si le joueur est invulnérable
 	1h00 - les portes grises n'ont pas encore de mappable
