@@ -16,6 +16,7 @@ sad=2,3
 sad_var=2,4
 cry=2,5
 cry_var=2,6
+pain=2,7
 
 ////// MAD //////
 
