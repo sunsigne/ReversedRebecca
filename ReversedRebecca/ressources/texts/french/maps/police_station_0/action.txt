@@ -35,6 +35,7 @@ WAKE_UP = Key1 % réveiller
 
 ///// BIG JAIL /////
 
+LATER = Key2 % plus tard
 BARGAIN = Key3 % marchander
 OPENED_CELL = Key1 % cellule ouverte ?!
 NAKED = Key1 % tout nu ?!

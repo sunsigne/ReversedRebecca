@@ -58,16 +58,9 @@
 	////////// LVL002 ////////////
 
 	à faire absolument :
-		lvl001 :
-	- désactiver temporairement le chemin "enquete"
-	
-		lvl002 :
 	- clarifier l'embranchement
-	- clé cyan si pas permanante (elles sont actuellement sur la plante au lieu du bureau)
-	- un chemin pour finir le scénario bomb
-	- les buissons qui bloque l'exterieur et l'entrée
-	- fin de niveau
-
+	- clé cyan (actuellement sur la plante au lieu du bureau)
+	- un chemin pour finir le scénario bomb / les buissons qui bloque l'exterieur et l'entrée
 
 	à vérifier :
 
@@ -84,7 +77,8 @@
 	- les hitbox des objets après les toilettes
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
-
+	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
+	- les buissons qui bloquent la route
 
 	à faire + tard :
 	- le mini jeu contre william
