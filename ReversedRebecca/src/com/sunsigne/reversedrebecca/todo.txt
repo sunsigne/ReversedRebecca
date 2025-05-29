@@ -57,6 +57,10 @@
 	
 	////////// LVL002 ////////////
 
+	pb actuels :
+	- bomb pas finissable
+	- embranchement bugué (R ou F)
+
 	à vérifier :
 
 	pendant la diversion :
@@ -80,7 +84,6 @@
 	- l'embranchement
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
-	- la plante sur le bureau de la secrétaire : on peut la voler si on est neutre ou gentil (interdit en angélique), mais le vol est automatique si on est neutre/méchant
 	- les variantes sadique et psycopathe
 
 	ne pas oublier :
@@ -93,6 +96,11 @@
 	- lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
 	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
 	
+	à sauvegarder :
+	- sarah enfermée ?
+	- plante volée ?
+	- costum de flic ?	
+		
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris

@@ -1,7 +1,6 @@
 ///// RECEPTION /////
 
 DO_YOU_HAVE_A_PLAN = Key1 % tu as un plan ?
-STEAL = Key3 % voler
 CREATE_A_DIVERSION = Key3 % faire diversion
 CREATE_A_DIVERSION_VAR = Key3 % fais diversion
 DO_RESEARCH = Key3 % faire des recherches
@@ -10,6 +9,7 @@ STOP = Key3 % arrêter
 MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
 SET_UP_THE_DIVERSION = Key2 % mettre en place la diversion
 TAKE_THE_KEYS = Key2 % prendre les clés
+STEAL = Key2 % voler
 START_THE_DIVERSION = Key2 % (END_LVL)lancer la diversion
 I_HAVE_THE_DATA = Key3 % (END_LVL)j'ai les informations
 
