@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.physic.debug.DebugMode;
 import com.sunsigne.reversedrebecca.physic.debug.ElevatorMode;
 import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 import com.sunsigne.reversedrebecca.physic.debug.MultiToolMode;
+import com.sunsigne.reversedrebecca.physic.debug.NoPoximityTriggerMode;
 import com.sunsigne.reversedrebecca.physic.debug.SureCriticalMode;
 import com.sunsigne.reversedrebecca.physic.debug.SwiftMovingMode;
 import com.sunsigne.reversedrebecca.physic.debug.VisibleHitboxMode;
@@ -66,6 +67,8 @@ public class PhysicLinker {
 	private static final DebugMode D_ELEVATOR = new ElevatorMode().getDebugMode();
 	@SuppressWarnings("unused")
 	private static final DebugMode D_FAST = new FastWorldMode().getDebugMode(); // already by default
+	@SuppressWarnings("unused")
+	private static final DebugMode D_PROXIMITY = new NoPoximityTriggerMode().getDebugMode();
 
 	private static final DebugMode D_MULTI = new MultiToolMode().getDebugMode();
 	private static final DebugMode D_CRIT = new SureCriticalMode().getDebugMode();

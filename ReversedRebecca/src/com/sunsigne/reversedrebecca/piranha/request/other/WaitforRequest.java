@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.debug.NoPoximityTriggerMode;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.GotoRequest;
@@ -164,6 +165,9 @@ public class WaitforRequest implements Request {
 
 			@Override
 			public boolean canDoAction() {
+				if (NoPoximityTriggerMode.isActive())
+					return false;
+
 				if (futherType)
 					return new PlayerFinder().isPlayerFutherThan(object, distance);
 				else
