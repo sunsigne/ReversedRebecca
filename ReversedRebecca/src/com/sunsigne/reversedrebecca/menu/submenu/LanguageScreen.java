@@ -62,7 +62,8 @@ public class LanguageScreen extends SubMenuScreen {
 
 		file_list.forEach(tempfile -> {
 			if (tempfile.contains(".") == false) // check if folder or file
-				lang_list.add(tempfile);
+				if (lang_list.contains(tempfile) == false)
+					lang_list.add(tempfile);
 		});
 
 		while (lang_list.size() > 12) // max size is 12

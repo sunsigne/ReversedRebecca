@@ -58,7 +58,6 @@
 	////////// LVL002 ////////////
 
 	pb actuels :
-	- bomb pas finissable
 	- embranchement bugué (R ou F)
 
 	à vérifier :
@@ -77,7 +76,7 @@
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
-	- un chemin pour finir le scénario bomb / les buissons qui bloque l'exterieur et l'entrée
+	- vérifier la fin du scénario bomb (rythme)
 
 	à faire + tard :
 	- l'embranchement
