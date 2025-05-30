@@ -18,6 +18,7 @@ OBJ-33 = Barbed Wire
 
 ///// PRE-CHIEF & CHIEF /////
 
+OBJ-34 = Door Diversion Checker
 NPC-06 = Policegrade : Giovanni
 OBJ-05 = Shovel Box
 OBJ-06 = Coat Rack Up

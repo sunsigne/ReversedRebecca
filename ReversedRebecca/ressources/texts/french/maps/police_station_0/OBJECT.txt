@@ -23,6 +23,10 @@ player = object = you_silly = Puisque j'y suis, je peux aussi bien voler@cette p
 player = object = laugh = Allez hop ! Toi, tu vas finir dans ma cuisine.
 
 
+% DOOR_DIVERSION
+player = DOWN = sad = Hmm… Je ferais mieux de ne plus passer@par cette porte.
+
+
 % BETTER_COUCHING
 player = DOWN = you_silly = Quitte à m'assoir, autant aller dans le canapé.
 player = DOWN = laugh = C'est plus confortable !
