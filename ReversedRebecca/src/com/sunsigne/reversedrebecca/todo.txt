@@ -53,12 +53,21 @@
 
 	////////// EN COURS ////////////
 
-
+	à faire :
+	- lvl002 bomb - quand on arrive dans les toilettes, il faut que rébecca indique qu'elle doit s'y cachée + une fois cachée, elle prévient qu'elle ferait mieux de toruve rune autre cachette*$
+	- lvl002 bomb - lorsque le commissaire quitte le bueau avec le SMS, il faudrait que la camera montre où il part (+, ralonger le temps où il n'est pas là)
+	- lvl002 bomb - diminuer la ligne de vue des flics ! ça n'est pas normal qu'il nous tue lorsqu'on parle à Doug, où lorsqu'il est hors caméra
+	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
+	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
+	- dans les dialogues, quand une info est importante, il faut que Rebecca la "pense" (c'est comme ça que l'attention du joueur sera récupérée)
+	- lvl002 - le policier à gauche créé un softlock la 2ème fois qu'on le dérange, si on ne bouge pas
+	- lvl002 - utiliser les toilettes déclanche le dialogue de sarah
+	- lvl002 - en route speedrun, la TP n'est pas très propre...
 	
 	////////// LVL002 ////////////
 
 	pb actuels :
-	- embranchement bugué (R ou F)
+	- embranchement bugué (R ou F) temporairement desactivé
 
 	à vérifier :
 

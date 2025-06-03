@@ -57,7 +57,7 @@ public class CreateBonusTextRequest implements IndexRequest {
 		boolean importante = target.split(",")[1].equalsIgnoreCase("important");
 
 		// creation of the object
-		new BonusTextReusable(text, x, y, importante);
+		new BonusTextReusable(text, x, y, importante, object.getHandler());
 	}
 
 }

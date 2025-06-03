@@ -27,8 +27,8 @@ public abstract class LootObject extends GameObject implements SheetableImage, C
 	}
 
 	public void pickup(boolean playSound) {
+		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY(), getHandler()));
 		removeObject();
-		LAYER.WORLD_TEXT.addObject(new BonusText(getTextWhenLooted(), getX(), getY()));
 		if (playSound)
 			new SoundTask().playSoundIfCamera(this, "loot");
 		new PickupLootCondition().registerValue(this);

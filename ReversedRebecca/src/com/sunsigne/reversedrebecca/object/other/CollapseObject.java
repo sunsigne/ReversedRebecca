@@ -79,7 +79,7 @@ public class CollapseObject extends GameObject implements RenderFree, Pusher {
 		int radX = getX() + rad.getIntBetween(-getSize(), getSize());
 		int radY = getY() + getSize() + rad.getIntBetween(-getSize(), getSize());
 
-		BonusText bonusText = new BonusText(text, radX, radY);
+		BonusText bonusText = new BonusText(text, radX, radY, getHandler());
 		LAYER.WORLD_TEXT.addObject(bonusText);
 	}
 

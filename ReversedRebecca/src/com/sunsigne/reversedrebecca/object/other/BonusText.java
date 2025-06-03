@@ -14,19 +14,21 @@ import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class BonusText extends GameObject {
 
-	public BonusText(String text, int x, int y) {
-		this(text, x, y, false);
+	public BonusText(String text, int x, int y, Handler handler) {
+		this(text, x, y, false, handler);
 	}
-	
-	public BonusText(String text, int x, int y, boolean importante) {
+
+	public BonusText(String text, int x, int y, boolean importante, Handler handler) {
 		super(x, y);
 		this.text = text;
+		this.handler = handler;
 
 		createFont(importante);
-		createColor(importante);
 		setVelY(-1);
 	}
 
@@ -42,20 +44,15 @@ public class BonusText extends GameObject {
 
 	protected String text;
 	private Font font;
-	
+
 	private void createFont(boolean importante) {
-		float size = importante ? 44f: 22f;
+		float size = importante ? 44f : 22f;
 		size = size * TextsOption.getSize() / (float) Math.sqrt(Window.SCALE_X);
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size);
 	}
 
-	private Color color;
-	private Color outlines_color;
-	
-	private void createColor(boolean importante) {
-		color = importante ? Color.BLACK : Color.WHITE;
-		outlines_color = importante ? Color.WHITE : Color.BLACK;
-	}
+	private Color color = Color.WHITE;
+	private Color outlines_color = Color.BLACK;
 
 	////////// PHYSICS ////////////
 
@@ -63,7 +60,7 @@ public class BonusText extends GameObject {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.MOVER;
 	}
-	
+
 	////////// TICK ////////////
 
 	protected int time = 40;
@@ -77,11 +74,27 @@ public class BonusText extends GameObject {
 
 	////////// RENDER ////////////
 
+	private Handler handler;
+
 	@Override
 	public void render(Graphics g) {
+		if (isAtSameLayerAsWorld() == false)
+			return;
 
 		int[] rect = new int[] { getX(), getY() - Size.S, getWidth(), getHeight() };
 		new TextDecoration().drawOutlinesString(g, font, text, color, outlines_color, DIRECTION.NULL, rect);
+	}
+
+	private boolean isAtSameLayerAsWorld() {
+		World world = World.get();
+
+		if (world == null) // shouldn't occurs
+			return true;
+
+		if (handler == world.getLayer(true).getHandler())
+			return true;
+
+		return false;
 	}
 
 }

@@ -4,12 +4,13 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class BonusTextReusable extends BonusText {
 
-	public BonusTextReusable(String text, int x, int y, boolean importante) {
-		super(text, x, y, importante);
+	public BonusTextReusable(String text, int x, int y, boolean importante, Handler handler) {
+		super(text, x, y, importante, handler);
 		autoReuse();
 	}
 
