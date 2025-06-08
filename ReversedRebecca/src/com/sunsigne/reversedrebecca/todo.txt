@@ -54,7 +54,7 @@
 	////////// EN COURS ////////////
 
 	à faire :
-	- lvl002 bomb - quand on arrive dans les toilettes, il faut que rebecca indique qu'elle doit s'y cachée + une fois cachée, elle prévient qu'elle ferait mieux de toruve rune autre cachette*$
+	- la hitbox des toilettes
 	- lvl002 bomb - lorsque le commissaire quitte le bureau avec le SMS, il faudrait que la camera montre où il part (+, ralonger le temps où il n'est pas là)
 	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
