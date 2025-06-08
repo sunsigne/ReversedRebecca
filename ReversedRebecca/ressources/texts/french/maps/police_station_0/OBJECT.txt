@@ -64,6 +64,9 @@ player = DOWN = sad = Je ferais mieux de trouver une autre cachette@avant qu'il 
 
 % EXIT_TOILET_SOFTLOCK
 player = RIGHT = no_sens = Je … me suis bloquée à l'extérieur…
+
+
+% EXIT_TOILET_SOFTLOCK_NEXT
 player = DOWN = no_sens_var = La mission est fichue.
 
 
