@@ -1,6 +1,10 @@
 Loading = Chargement
 ProgressSaved = Progression sauvegardée
 
+///// GAME OVER /////
+
+GameOver = Game Over
+
 ///// LEVEL STATS /////
 
 LevelCompleted = Niveau Terminé
