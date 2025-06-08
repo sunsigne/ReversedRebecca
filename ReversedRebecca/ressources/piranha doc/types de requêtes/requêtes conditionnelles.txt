@@ -129,6 +129,21 @@ La seule différence avec ce dernier est que PLAYER_CLOSER_THAN vérifie si le j
 
 
 
+////// SEE_PLAYER_AND_CLOSER_THAN //////
+
+Le Type de Requête SEE_PLAYER_AND_CLOSER_THAN permet de savoir si le joueur est à la fois présent dans le champ de vision de l'objet actuel, et plus proche de lui que le nombre de cases définies par la Cible.
+
+Le champ de vision est valide lorsqu'une ligne droite peut être tracée entre deux objets sans qu'elle ne rencontre aucun obstacle défini comme "opaque" : une porte et un mur sont opaques, les NPC et les objets Piranha et ne le sont pas – par défaut, mais cela peut être modifié (voir « BLOCKING_SIGHT » dans la partie « Requêtes States ») –.
+
+Exemple :
+TIME -> 0 = SEE_PLAYER_AND_CLOSER_THAN -> 5 ? GO_HIDING / GO_CRYING
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur est-il dans le champ de vision de l'objet ET plus proche que 5 case de l'objet actuel ?
+- si oui, effectuer l'action GO_HIDING (qui est une balise comme pour GOTO)
+- si non, effectuer l'action GO_CRYING (qui est une autre balise comme pour GOTO)
+
+
+
 ////// KARMA_GREATER_THAN //////
 
 Le Type de Requête KARMA_GREATER_THAN permet de savoir si le karma du joueur est plus grand ou non qu'une certaine valeur.

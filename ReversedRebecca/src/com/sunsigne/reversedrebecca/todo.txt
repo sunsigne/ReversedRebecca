@@ -56,7 +56,6 @@
 	à faire :
 	- lvl002 bomb - quand on arrive dans les toilettes, il faut que rebecca indique qu'elle doit s'y cachée + une fois cachée, elle prévient qu'elle ferait mieux de toruve rune autre cachette*$
 	- lvl002 bomb - lorsque le commissaire quitte le bureau avec le SMS, il faudrait que la camera montre où il part (+, ralonger le temps où il n'est pas là)
-	- lvl002 bomb - diminuer la ligne de vue des flics ! ça n'est pas normal qu'il nous tue lorsqu'on parle à Doug, où lorsqu'il est hors caméra
 	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
 	- lvl002 - en route speedrun, la TP n'est pas très propre...
