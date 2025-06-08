@@ -215,7 +215,7 @@ La 1ère Cible de ce Type de Requête défini l'opération à effectuer :
 - QUIET : envoyer directement le joueur dans la carte suivante (à privilégier dans les workshop).
 - START_GAME : envoyer le joueur dans le menu de l'écran titre du jeu.
 - END_GAME : envoyer le joueur vers les crédits de fin du jeu.
-- GAME_OVER : envoie le joueur sur l'écran de game over, l'informant qu'il a perdu.
+- GAME_OVER : envoyer le joueur sur l'écran de game over, l'informant qu'il a perdu.
 
 Note : dans le cas d'une première Cible "START_GAME" ou "GAME_OVER", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites afin de respecter la syntaxe attendue.
 
