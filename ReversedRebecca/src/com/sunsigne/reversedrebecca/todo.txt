@@ -53,8 +53,12 @@
 
 	////////// EN COURS ////////////
 
+	à tester :
+	- perdre de façon "normal" tout ses pv (écran de game over qui se lance correctement ?)
+
 	à faire :
-	- la hitbox des toilettes
+	- lvl001 - mourrir sur un canapé = game over
+	- lvl002 - la hitbox des toilettes
 	- lvl002 bomb - lorsque le commissaire quitte le bureau avec le SMS, il faudrait que la camera montre où il part (+, ralonger le temps où il n'est pas là)
 	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)

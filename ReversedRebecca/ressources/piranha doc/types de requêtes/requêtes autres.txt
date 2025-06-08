@@ -215,10 +215,13 @@ La 1ère Cible de ce Type de Requête défini l'opération à effectuer :
 - QUIET : envoyer directement le joueur dans la carte suivante (à privilégier dans les workshop).
 - START_GAME : envoyer le joueur dans le menu de l'écran titre du jeu.
 - END_GAME : envoyer le joueur vers les crédits de fin du jeu.
+- GAME_OVER : envoie le joueur sur l'écran de game over, l'informant qu'il a perdu.
 
-Note : dans le cas d'une première Cible "START_GAME", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites afin de respecter la syntaxe attendue.
+Note : dans le cas d'une première Cible "START_GAME" ou "GAME_OVER", les Cibles suivantes ne sont tout simplement pas lues ! Elles doivent tout de même être écrites afin de respecter la syntaxe attendue.
 
 Note : les demandes de sauvegarde enregistrées par le Type de Requête SAVE (voir « SAVE » dans la partie « Piranha – Type de Requêtes : Memory ») sont traitées aussitôt le Type de Requête END_LVL appelé (c-.à-d. avant même que ses Cibles soient analysées).
+
+Note : dans le cas d'une première Cible "GAME_OVER", aucune sauvegarde n'est effectuée et le joueur doit recommencer la carte. Si la difficulté du jeu est en "difficile", la sauvegarde est effacée.
 
 Exemple :
 WONPUZZLE -> 10-20 = END_LVL -> NORMAL, REBECCAS_ROOM_1, LVL001

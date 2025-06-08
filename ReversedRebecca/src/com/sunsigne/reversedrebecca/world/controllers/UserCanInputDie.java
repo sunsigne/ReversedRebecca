@@ -28,8 +28,11 @@ public class UserCanInputDie extends WorldControllers {
 	public void inputPressed(int key, int button) {
 		if (key == KeyEvent.VK_EXCLAMATION_MARK) {
 			Player player = new PlayerFinder().getPlayer();
-			player.removeHp(player.getMaxHp());
 
+			if (player == null || player.isRegisteredAsDead())
+				return;
+
+			player.removeHp(player.getMaxHp());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_large");
 			LifeAndDeathLaw.kill(player);
 		}

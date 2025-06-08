@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.menu.DemoEndScreen;
 import com.sunsigne.reversedrebecca.menu.LevelCompletedScreen;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.physic.natural.independant.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -41,11 +42,17 @@ public class EndLevelRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		World.get().freeze(true);
 
+		String endType = target.split(",")[0].toUpperCase();
+
+		// game over case
+		if (endType.equalsIgnoreCase("GAME_OVER")) {
+			LifeAndDeathLaw.loadGameOverScreen();
+			return;
+		}
+
 		// update save file
 		new Save().registerSave();
 		new Save().eraseSave(); // the name is alarming but it just erase some specific intended data
-
-		String endType = target.split(",")[0].toUpperCase();
 
 		// starting game case
 		if (endType.equalsIgnoreCase("START_GAME")) {

@@ -143,6 +143,11 @@ public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 			public void render(Graphics g) {
 
 			}
+
+			@Override
+			public String getSound() {
+				return null;
+			}
 		};
 		LAYER.MENU.addObject(button);
 	}
