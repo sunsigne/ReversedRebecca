@@ -51,6 +51,7 @@ OBJ-30 = Right Chair and Table
 OBJ-31 = Middle Cell Chair and Table
 OBJ-32 = Sarah Music
 OBJ-35 = Toilet Exit Preventer
+OBJ-36 = Toilet
 
 ///// BIG JAIL /////
 

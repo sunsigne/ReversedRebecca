@@ -13,7 +13,8 @@
 	
 	////////// BUG ////////////
 
-	renvoyer à l'écran titre dans un niveau, alors qu'on a looté (chest) des choses permet de les conserver (créer un écran de game over)
+	à tester :
+		- perdre de façon "normal" tout ses pv (écran de game over qui se lance correctement ?)
 
 	peut-être existant sur build only ? :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
@@ -52,17 +53,6 @@
 
 	////////// EN COURS ////////////
 
-	à tester :
-	- perdre de façon "normal" tout ses pv (écran de game over qui se lance correctement ?)
-
-	à faire :
-	- lvl001 - mourrir sur un canapé = game over
-	- lvl002 - la hitbox des toilettes
-	- lvl002 bomb - ralonger le temps de diversion du commissaire (dans le vestiaire)
-	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
-	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
-	- lvl002 - en route speedrun, la TP n'est pas très propre...
-
 	
 	////////// LVL002 ////////////
 
@@ -76,11 +66,18 @@
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
+	- ralonger le temps de diversion du commissaire (dans le vestiaire)
+	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
+
+	à faire :
+	- dialogue de la récupération de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
+	- en route speedrun, la TP n'est pas très propre...
 	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
+		
 	
 	à finir :
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
-	- les hitbox des objets après les toilettes
+	- interraction des objets dans les salles des 3 policiers
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)

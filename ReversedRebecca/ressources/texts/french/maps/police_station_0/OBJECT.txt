@@ -54,6 +54,10 @@ player = LEFT = you_silly = Il faudra que je pense à lui demander.
 player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !
 
 
+% CANT_USE_TOILET
+player = DOWN = sad = Je suis beaucoup trop stressée pour ça.
+
+
 % EXIT_TOILET
 player = LEFT = surprised = Pas par là !@Je dois trouver une cachette à l'intérieur !
 
