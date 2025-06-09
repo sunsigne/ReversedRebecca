@@ -20,7 +20,6 @@
 		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
-		- lorsque le joueur change de couche, son index n'est plus raccord avec ce qu'il est suposé être
 		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification

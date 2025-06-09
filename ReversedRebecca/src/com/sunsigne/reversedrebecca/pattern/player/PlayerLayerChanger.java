@@ -5,9 +5,12 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.mapcreator.GroundRendering;
 
@@ -52,9 +55,27 @@ public class PlayerLayerChanger {
 			return;
 
 		player.getHandler().softRemoveObject(player);
-		content_layer.addObject(player);
+		sendPlayerToCorrectIndex(player, content_layer);
 		World.get().setLayer(ground_layer);
 		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
+	}
+
+	private void sendPlayerToCorrectIndex(Player player, LAYER layer) {
+		Handler handler = layer.getHandler();
+		GameList<Updatable> cloneList = new ListCloner().deepClone(handler);
+
+		for (int index = 0; index < cloneList.getList().size(); index++) {
+			Updatable tempUpdatable = cloneList.getList().get(index);
+
+			if (tempUpdatable instanceof PlayerClone == false)
+				continue;
+
+			handler.getList().add(index, player);
+			Handler.updateHandlerMap(handler, player);
+		}
+
+		// if clone not found
+		layer.addObject(player);
 	}
 
 	public void goesUp() {
