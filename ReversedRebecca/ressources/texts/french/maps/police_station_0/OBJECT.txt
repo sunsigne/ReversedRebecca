@@ -55,11 +55,11 @@ player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !
 
 
 % EXIT_TOILET
-player = LEFT = surprised = Pas par là !@Je dois trouver une cachette !
+player = LEFT = surprised = Pas par là !@Je dois trouver une cachette à l'intérieur !
 
 
 % EXIT_TOILET_NEXT
-player = DOWN = sad = Je ferais mieux de trouver une autre cachette@avant qu'il ne revienne.
+player = DOWN = sad = Il est surement parti chercher de l'aide.@Je ferais mieux de trouver une autre cachette.
 
 
 % EXIT_TOILET_SOFTLOCK

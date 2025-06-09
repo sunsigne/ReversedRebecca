@@ -6,25 +6,15 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class PlayerClone extends GameObject implements TickFree, RenderFree {
+public class PlayerClone extends GameObject implements RenderFree {
 
-	public PlayerClone(int x, int y) {
-		super(x, y);
+	public PlayerClone(Player player) {
+		super(player.getX(), player.getY());
+
+		this.player = player;
 	}
-	
-	////////// POSITION ////////////
 
-	public void resetPos() {
-		Player player = new PlayerFinder().getPlayer();
-		if(player == null)
-			return;
-		
-		setX(player.getX());
-		setY(player.getY());
-	}
-	
 	////////// NAME ////////////
 
 	@Override
@@ -32,6 +22,29 @@ public class PlayerClone extends GameObject implements TickFree, RenderFree {
 		var clazz = "PLAYER CLONE";
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + goal.getX() + "-" + goal.getY();
+	}
+
+	////////// TICK ////////////
+
+	private Player player;
+
+	private boolean followingPlayer;
+
+	public boolean isFollowingPlayer() {
+		return followingPlayer;
+	}
+
+	public void setFollowingPlayer(boolean followingPlayer) {
+		this.followingPlayer = followingPlayer;
+	}
+
+	@Override
+	public void tick() {
+		if (followingPlayer == false)
+			return;
+
+		setX(player.getX());
+		setY(player.getY());
 	}
 
 	////////// PHYSICS ////////////

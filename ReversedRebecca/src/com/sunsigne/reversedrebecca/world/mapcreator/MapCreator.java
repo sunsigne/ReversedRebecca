@@ -75,7 +75,7 @@ public class MapCreator {
 				GameObject object = determinateCreation(red, green, blue, x0, y0);
 
 				if (object instanceof Player)
-					layer.addObject(new PlayerClone(object.getX(), object.getY()));
+					layer.addObject(new PlayerClone((Player) object));
 				layer.addObject(object);
 			}
 		}

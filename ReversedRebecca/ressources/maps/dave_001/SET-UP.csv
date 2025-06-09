@@ -3,5 +3,5 @@ TIME -> 0 = GOTO -> CAMERA, MUSIC
 
 //// SET UP ////
 
-$ -> CAMERA = CAMERA -> 0-2
+$ -> CAMERA = CAMERA_WITHOUT_TRANSITION -> 0-2
 $ -> MUSIC = MUSIC -> NULL

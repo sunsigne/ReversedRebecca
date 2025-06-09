@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -38,16 +39,16 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		if (!followingPlayer)
 			return;
 
-		if (object instanceof Player == false)
+		if (object instanceof PlayerClone == false)
 			return;
 
-		Player player = (Player) object;
+		PlayerClone player = (PlayerClone) object;
 
 		moveCameraByX(player);
 		moveCameraByY(player);
 	}
 
-	private void moveCameraByX(Player player) {
+	private void moveCameraByX(PlayerClone player) {
 		boolean staticCamera = CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false
 				|| isWorldSpawning();
 		float targetX = -player.getX() + (Window.WIDHT - player.getWidth()) / 2;
@@ -69,7 +70,7 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 		}
 	}
 
-	private void moveCameraByY(Player player) {
+	private void moveCameraByY(PlayerClone player) {
 		boolean staticCamera = CameraOption.getType() == CAMERA_TYPE.STATIC && tempDynamic == false
 				|| isWorldSpawning();
 		float targetY = -player.getY() + (Window.HEIGHT - player.getHeight()) / 2;

@@ -1,24 +1,40 @@
-////// CAMERA //////
+////// CAMERA_WITHOUT_TRANSITION //////
 
-Le Type de Requête CAMERA permet de définir le comportement de la Caméra, ou son emplacement, en fonction de la Cible.
+Le Type de Requête CAMERA_WITHOUT_TRANSITION permet de définir le comportement de la Caméra, ou son emplacement, en fonction de la Cible.
 
 Les Cibles permettent de modifier le comportement de la Caméra sont les suivantes :
-PLAYER : ordonne à la Caméra de suivre le joueur.
-PLAYER_FLUID : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa Position.
-FIX : ordonne à la caméra de cesser de suivre le joueur et de rester "là où elle se trouve actuellement".
+PLAYER : ordonne à la Caméra de se placer sur le joueur et de le suivre.
+FIX : ordonne à la Caméra de cesser de suivre le joueur et de rester "là où elle se trouve actuellement".
+
+Exemple : 
+TIME -> 0 = CAMERA_WITHOUT_TRANSITION -> 0-0
+TIME -> 0 = GOTO -> CAMERA_WITHOUT_TRANSITION:0-0
+
+Lorsque la Condition sera vérifiée, la Caméra se placera de sorte que x = 0 et y = 0 soit "au centre" de l'écran.
+
+Note : le comportement par défaut de la Caméra au chargement d'une carte est de se placer en 0-0.
+
+Note : indiquer des coordonnées en Cible déclenchera automatiquement le type de comportement FIX (car c'est implicitement ce que l'on souhaite).
+
+
+////// CAMERA //////
+
+Le Type de Requête CAMERA permet de définir le comportement de la Caméra, ou son emplacement, en fonction de la Cible. La Caméra se déplacera rapidement jusqu'à l'emplacement indiqué.
+
+Les Cibles permettent de modifier le comportement de la Caméra sont les suivantes :
+PLAYER : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa Position.
+FIX : ordonne à la Caméra de cesser de suivre le joueur et de rester "là où elle se trouve actuellement".
 
 Exemple : 
 TIME -> 0 = CAMERA -> 0-0
 TIME -> 0 = GOTO -> CAMERA:0-0
 
-Lorsque la Condition sera vérifiée, la Caméra se placera en x = 0 et y = 0.
-
-Les Cibles suivantes permettent de modifier le comportement de la Caméra :
-PLAYER : ordonne à la Caméra de suivre le joueur.
-PLAYER_FLUID : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa position.
-FIX : ordonne à la caméra de cesser de suivre le joueur et rester "là où elle se trouve actuellement".
+Lorsque la Condition sera vérifiée, la Caméra se déplacera rapidement et se placera de sorte que x = 0 et y = 0 soit "en haut à gauche" de l'écran.
 
 Note : le comportement par défaut de la Caméra au chargement d'une carte est de se placer en 0-0.
+
+Note : indiquer des coordonnées en Cible déclenchera automatiquement le type de comportement FIX (car c'est implicitement ce que l'on souhaite).
+
 
 
 ////// CAMERA_SHAKE //////

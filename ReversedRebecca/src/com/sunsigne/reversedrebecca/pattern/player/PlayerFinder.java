@@ -13,6 +13,10 @@ public class PlayerFinder {
 	public Player getPlayer() {
 		return PlayerFinderLaw.getPlayer();
 	}
+	
+	public PlayerClone getPlayerClone() {
+		return PlayerFinderLaw.getPlayerClone();
+	}
 
 	public void roundToTilePlayer() {
 		Player player = getPlayer();
