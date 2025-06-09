@@ -58,7 +58,7 @@
 	à faire :
 	- lvl001 - mourrir sur un canapé = game over
 	- lvl002 - la hitbox des toilettes
-	- lvl002 bomb - lorsque le commissaire quitte le bureau avec le SMS, il faudrait que la camera montre où il part (+, ralonger le temps où il n'est pas là)
+	- lvl002 bomb - ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lvl002 bomb - lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 	- lvl002 - dialogue de la récupératino de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
 	- lvl002 - en route speedrun, la TP n'est pas très propre...
@@ -85,6 +85,7 @@
 	- une réaction de butch si on ouvre son bureau depuis le côté
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
 	- vérifier la fin du scénario bomb (rythme)
+	- le commisaire n'est pas terminé (on peut toujours se bloquer derrière son bureau entre lui et le trophée)
 
 	à faire + tard :
 	- l'embranchement
