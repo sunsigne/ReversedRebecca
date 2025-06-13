@@ -111,7 +111,7 @@ teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil. Tu perds@juste
 player = teddy = angry = Ça reste malhonnête !
 teddy = player = happy = Teddy est d'accord. C'est pour ça qu'il@va t'enseigner l'astuce pour le battre.
 teddy = player = happy = INSERER L'ASTUCE ICI.
-player = teddy = convinced = Excellent ! Je n'y aurais jamais pensé toute seule !@Merci.
+player = teddy = convinced = Excellent ! Je n'y aurais jamais pensé toute seule !
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK

@@ -31,7 +31,7 @@ player = doug = happy =  Je sais que je ne suis pas un ange, mais@ce que tu me d
 player = doug = unhappy = Et si je franchis ce pas, je pense que@je vais me perdre moi-même…
 doug = player = serious = Ne te bile pas +surname_doug, je ne pensais pas@"réellement" que tu le ferais de toute façon.
 player = doug = unhappy_var = C'est juste… que c'est curieux que j'hésite…
-player = doug = sad = C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.
+player = doug = sad = (C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.)
 doug = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la voie du crime.
 player = doug = worry = Comme j'ai dit, on verra.
 

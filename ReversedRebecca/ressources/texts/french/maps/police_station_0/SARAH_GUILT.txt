@@ -1,0 +1,35 @@
+% BAR
+sarah = player = worry = J'ai l'air bien pathétique derrière les barreaux.@Pas vrai ?
+player = sarah = unhappy = Ne dit pas ça, Sarah…
+
+
+% BARLESS
+sarah = DOWN = worry = Qu'est-ce qu'il m'est passé par la tête…@Je suis une amie tellement nulle…
+player = sarah = unhappy = Ne dit pas ça, Sarah…
+
+
+% GUILT_TRIP
+sarah = player = unhappy = Mais c'est la vérité ! J'étais en colère,@j'ai réagi sous le coup de l'émotion.
+sarah = player = sad_var = Quelle idée de voler des documents…@On est des criminelles.
+player = sarah = worry = Je ne suis pas d'accord. On nous a fait du tort,@et on cherche seulement à réparer cette injustice.
+sarah = player = unhappy = Ce que je dis, c'est qu'il y avait peut-être@un autre moyen…
+
+
+% GUILT_TRIP_NEXT
+sarah = player = cry = Je suis désolé, Rebecca…@Pardon de t'avoir entrainé là-dedans…
+player = sarah = worry = Hey… C'était ma décision de te suivre.@Tu n'as pas à te reprocher mes choix.
+player = sarah = excited = Et puis regarde, j'ai la classe en uniforme !
+sarah = player = cry_var = Pfff, t'es bête.
+
+
+% NO_DOCUMENT
+player = sarah = unhappy = Bon… Pour l'heure, je n'ai pas encore trouvé@ce qu'on est venu chercher, mais j'y travaille.
+player = sarah = happy_var = Allez. Je m'y mets et on sort d'ici, ensemble.@D'accord ?
+sarah = player = cry_var = Oui.
+sarah = player = fine = Merci.
+
+
+% DOCUMENTS
+player = sarah = happy = En plus, j'ai trouvé ce qu'on est venu chercher.@On a plus qu'à partir, ensemble.
+sarah = DOWN = cry_var = C'est vrai ?@Merci d'être restée forte, Rebecca.
+player = sarah = happy_var = Les amis, c'est fait pour ça.

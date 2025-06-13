@@ -53,19 +53,23 @@
 
 	////////// EN COURS ////////////
 
+	- le dialogue à l'exterieur n'est pas fini : gérer le cas sans documents, et gérer la fin si en possession de ceux-ci
 	
 	////////// LVL002 ////////////
 
 	pb actuels :
 	- embranchement bugué (R ou F) temporairement desactivé
+	- pre,dre le trou SOUS la table ne la fait plus tomber
 
 	à vérifier :
+	- l'action "key3 % i_hava_data" est_il encore utilisé ?
 
 	pendant la diversion :
 	- quels sont les réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
+	- réaction de sarah une fois rebecca partie pour pêter les murs
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 
@@ -73,7 +77,7 @@
 	- dialogue de la récupération de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
 	- en route speedrun, la TP n'est pas très propre...
 	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
-		
+	- rajouter un dialogue sur la porte au dessus de jessy : sad - "si je passe par là, je vais me faire attraper"
 	
 	à finir :
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
