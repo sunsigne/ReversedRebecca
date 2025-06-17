@@ -78,6 +78,8 @@
 	- en route speedrun, la TP n'est pas très propre...
 	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
 	- rajouter un dialogue sur la porte au dessus de jessy : sad - "si je passe par là, je vais me faire attraper"
+	- ajotuer la possibilité d'abandonner sarah ?
+	- toues les interactions avec le colonel
 	
 	à finir :
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)

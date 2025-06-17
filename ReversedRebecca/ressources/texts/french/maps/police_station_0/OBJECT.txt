@@ -27,6 +27,10 @@ player = object = laugh = Allez hop ! Toi, tu vas finir dans ma cuisine.
 player = DOWN = sad = Hmm… Je ferais mieux de ne plus passer@par cette porte.
 
 
+% DOOR_DIVERSION_NEXT
+player = DOWN = sad = Je ne dois pas passer par cette porte…
+
+
 % BETTER_COUCHING
 player = DOWN = you_silly = Quitte à m'assoir, autant aller dans le canapé.
 player = DOWN = laugh = C'est plus confortable !
