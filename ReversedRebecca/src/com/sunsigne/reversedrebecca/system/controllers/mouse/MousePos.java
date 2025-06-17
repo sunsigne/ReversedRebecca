@@ -12,6 +12,9 @@ public class MousePos {
 
 	public MousePos() {
 		PointerInfo a = MouseInfo.getPointerInfo();
+		if (a == null)
+			return;
+
 		Point b = a.getLocation();
 		mouseX = (int) (b.getX() / Window.SCALE_X);
 		mouseY = (int) (b.getY() / Window.SCALE_Y);
