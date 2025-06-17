@@ -4,3 +4,31 @@ policegrade = DOWN = giovanni = Hey !
 
 % PLAYER_SPOTTED_NEXT
 policegrade = player = giovanni = Ceci est une zone interdite au public.@Je vais devoir vous demander de partir.
+
+
+% PLAYER_SUSPECTED
+policegrade = DOWN = giovanni = C'est pour quoi ?
+player = UP = unhappy_var = Heu…
+player = UP = unhappy = (Qu'est-ce qui m'a pris de rentrer dans le bureau@du chef de la police… Je vais être repérer…)
+player = UP = sad_var = (Vite… Un mensonge crédible…)
+policegrade = DOWN = giovanni = Alors ?
+player = UP = happy = Heu… Il n'y a plus de papier dans l'imprimante !
+policegrade = DOWN = giovanni = Demande à Laura.
+player = UP = happy_var = D'accord, merci.
+player = UP = unhappy_var = (J'ai gagné du temps, mais mon déguisement ne@le dupera pas… Je dois vite sortir de son bureau.)
+
+
+% PLAYER_SUSPECTED_NEXT
+policegrade = DOWN = giovanni = Une seconde…
+player = UP = despair = (Zut…)
+policegrade = DOWN = giovanni = Laura est en congés… Demande plutôt à Jessy.
+player = UP = no_sens = Heu… Ok.
+player = UP = no_sens_var = (J'ai vraiment cru qu'il m'avait cramé…)
+player = UP = no_sens = (Je ne vais pas pousser ma chance…@Si je reste encore, je suis cuite.)
+
+
+% PLAYER_SUSPECTED_FINAL
+policegrade = DOWN = giovanni = Hey !
+policegrade = DOWN = giovanni = Mais vous ne faites pas partie de la police !@Vous avez juste volé un uniforme !
+policegrade = DOWN = giovanni = Vous êtes en état d'arrestation.
+player = UP = sad = (J'ai déconné, là…)

@@ -59,13 +59,13 @@
 
 	pb actuels :
 	- embranchement bugué (R ou F) temporairement desactivé
-	- pre,dre le trou SOUS la table ne la fait plus tomber
+	- prendre le trou SOUS la table ne la fait plus tomber
 
 	à vérifier :
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
 
 	pendant la diversion :
-	- quels sont les réactions des policiers s'ils voient rebecca deguisée ? (chacun d'eux)
+	- quels sont les réactions des 3 policiers du bas s'ils voient rebecca deguisée ? (chacun d'eux)
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
@@ -74,21 +74,19 @@
 	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 
 	à faire :
+	- dans le bureau du chef, le joueur peut se bloquer entre le trophée et la chaise
 	- dialogue de la récupération de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
 	- en route speedrun, la TP n'est pas très propre...
 	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
-	- rajouter un dialogue sur la porte au dessus de jessy : sad - "si je passe par là, je vais me faire attraper"
 	- ajotuer la possibilité d'abandonner sarah ?
-	- toues les interactions avec le colonel
 	
 	à finir :
 	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
-	- interraction des objets dans les salles des 3 policiers
+	- interraction des objets dans les salles des 3 policiers (chef inclus pour le chemin bombe ?)
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
 	- vérifier la fin du scénario bomb (rythme)
-	- le commisaire n'est pas terminé (on peut toujours se bloquer derrière son bureau entre lui et le trophée)
 
 	à faire + tard :
 	- l'embranchement
