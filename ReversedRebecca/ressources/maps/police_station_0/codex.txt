@@ -1,3 +1,7 @@
+///// DOWN /////
+
+OBJ-37 = Table Hole
+
 ///// RECEPTION /////
 
 NPC-01 = Sarah

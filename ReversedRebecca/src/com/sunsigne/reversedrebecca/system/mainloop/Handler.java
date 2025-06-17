@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
@@ -34,8 +35,10 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			GameObject tempObject = (GameObject) tempUpdatable;
 
-			if (tempObject instanceof Player && playerExluded)
-				continue;
+			if (playerExluded) {
+				if (tempObject instanceof Player || tempObject instanceof PlayerClone)
+					continue;
+			}
 
 			if (tempObject.getX() == x && tempObject.getY() == y) {
 				object_list.addObject(tempObject);
