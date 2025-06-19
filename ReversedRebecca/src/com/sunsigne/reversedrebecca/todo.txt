@@ -59,17 +59,17 @@
 
 	pb actuels :
 	- embranchement bugué (R ou F) temporairement desactivé
-	- prendre le trou SOUS la table ne la fait plus tomber
+	- miaouss ne vérouille pas la porte lorsqu'il revient du couloir, s'il n'a pas trouvé le joueur (ce qui est inchohérent, et softlock ce npc)
 
 	à vérifier :
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
+	- si pas déjà fait, changer le dialogue speedrun "j'aimais bien la musique de la ventilation" en "la musique (speedrun?)"
 
 	pendant la diversion :
-	- quels sont les réactions des 3 policiers du bas s'ils voient rebecca deguisée ? (chacun d'eux)
+	- gérer la réaction de Cassidy si elle voint rebecca deguisée ? (miaouss et james sont déjà faits)
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
-	- réaction de sarah une fois rebecca partie pour pêter les murs
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 
@@ -77,11 +77,11 @@
 	- dans le bureau du chef, le joueur peut se bloquer entre le trophée et la chaise
 	- dialogue de la récupération de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
 	- en route speedrun, la TP n'est pas très propre...
-	- réaction de sarah par défaut qui attend rebecca (s'assoies ? fait le tour pour attendre de l'autre côté ? préviens qu'elle va le faire dans le dialogue SARAH*PLAN_BOMB ?)
+	- finir sarah qui a fait le tour
 	- ajotuer la possibilité d'abandonner sarah ?
 	
 	à finir :
-	- une diverson CORRECTE pour avoir la clef (+ étudier la cohérence avec la route speedrun si sarah s'est faite arrêter)
+	- étudier la cohérence avec la route speedrun si sarah s'est faite arrêter
 	- interraction des objets dans les salles des 3 policiers (chef inclus pour le chemin bombe ?)
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté

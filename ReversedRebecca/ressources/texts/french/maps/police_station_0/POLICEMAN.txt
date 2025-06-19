@@ -18,3 +18,29 @@ policeman = player = miaouss = Vous êtes en état d'arrestation.
 % PLAYER_SPOTTED_JAMES_WITHIN_DESK
 policeman = player = james = Cordialement, dehors.
 
+
+% PLAYER_SPOTTED_MIAOUSS_DISGUISED
+policeman = player = miaouss = Je rêve… Les gens se croient@vraiment tout permis de nos jours…
+policeman = player = miaouss = J'ignore qui vous a donné les clés, mais mon@bureau, c'est mon bureau. Laissez-moi tranquille.
+
+
+% PLAYER_SPOTTED_MIAOUSS_SECOND_INTRUSION_DISGUISED
+policeman = player = miaouss = Ho ? Alors vous étiez une collègue ?@Ça doit être votre premier jour…
+policeman = player = miaouss = Quoi qu'il en soit, mon bureau, c'est mon bureau.@Laissez-moi tranquille. Je ne plaisante pas.
+
+
+% PLAYER_SPOTTED_MIAOUSS_DISGUISED_FIRST_WARNING
+policeman = player = miaouss = Ça commence à bien faire !
+policeman = player = miaouss = Ton premier jour commence très mal !@Je vais en informer le chef.
+
+
+% PLAYER_SPOTTED_MIAOUSS_DISGUISED_SECOND_WARNING
+policeman = player = miaouss = Celle-là, tu l'auras pas volé.
+
+
+% PLAYER_SPOTTED_JAMES_WITHIN_DESK_DISGUISED
+policeman = player = james = C'est une blague ?
+policeman = player = james = Désolé, mais elle est très mauvaise. Je vais@devoir vous arrêter pour port illégal d'uniforme.
+player = policewoman = sad = (J'ai déconné, là…)
+
+

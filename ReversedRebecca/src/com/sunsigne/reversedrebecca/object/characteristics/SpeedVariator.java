@@ -8,6 +8,7 @@ public interface SpeedVariator extends Velocity {
 
 	void setSpeedness(SPEEDNESS speedness);
 
+	@Override
 	default int getSpeed() {
 		switch (getSpeedness()) {
 		case SLOW:

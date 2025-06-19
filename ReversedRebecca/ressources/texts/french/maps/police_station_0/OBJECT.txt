@@ -45,7 +45,7 @@ player = DOWN = laugh = Avec ça, je passerai inaperçue !
 
 
 % NOT_DISGUISING
-player = DOWN = unhappy = Je ne tromperai personne… J'ai fait sauter@un mur… Les policiers sont sur leur qui vive.
+player = DOWN = unhappy = Je ne tromperai personne… J'ai fait sauter@un mur… Les policiers sont sur le qui-vive.
 
 
 % SHOVEL
