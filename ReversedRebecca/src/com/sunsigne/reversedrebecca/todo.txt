@@ -59,7 +59,6 @@
 
 	pb actuels :
 	- embranchement bugué (R ou F) temporairement desactivé
-	- miaouss ne vérouille pas la porte lorsqu'il revient du couloir, s'il n'a pas trouvé le joueur (ce qui est inchohérent, et softlock ce npc)
 
 	à vérifier :
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
