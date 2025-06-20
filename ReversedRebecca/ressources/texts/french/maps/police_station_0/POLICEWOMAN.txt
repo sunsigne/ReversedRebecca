@@ -26,6 +26,31 @@ policewoman = player = cassidy = Derrière vous.
 player = DOWN = happy = Merci.
 
 
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE
+policewoman = player = cassidy = L'uniforme vous va bien.
+player = DOWN = happy = C'est gentil, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT
+policewoman = player = cassidy = Vous êtes une nouvelle collègue ?
+player = DOWN = happy = Pas du tout, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT
+policewoman = player = cassidy = Pourquoi portez vous l'uniforme ?
+player = DOWN = happy = Pour me faire passer pour une policière, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT_NEXT
+policewoman = player = cassidy = Qui vous a donné cette tenue ?
+player = DOWN = happy = Je l'ai volé dans les vestiaires, merci.
+
+
+% PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT_NEXT_NEXT
+policewoman = player = cassidy = Je vais devoir vous arrêter.
+player = DOWN = happy = Non merci, merci.
+
+
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_FINAL
 player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission à accomplir.
 

@@ -66,7 +66,6 @@
 	- si pas déjà fait, changer le dialogue speedrun "j'aimais bien la musique de la ventilation" en "la musique (speedrun?)"
 
 	pendant la diversion :
-	- gérer la réaction de Cassidy si elle voint rebecca deguisée ? (miaouss et james sont déjà faits)
 	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
 	
 	bomb : 
