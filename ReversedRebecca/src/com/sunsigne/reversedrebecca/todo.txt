@@ -57,50 +57,42 @@
 	
 	////////// LVL002 ////////////
 
-	pb actuels :
-	- embranchement bugué (R ou F) temporairement desactivé
-
-	à vérifier :
-	- l'action "key3 % i_hava_data" est_il encore utilisé ?
-	- si pas déjà fait, changer le dialogue speedrun "j'aimais bien la musique de la ventilation" en "la musique (speedrun?)"
-
-	pendant la diversion :
-	- réaction de sarah si passé dès la 1ère fois (remettre la chaise et attendre)
+	à faire :
+	- finir sarah qui a fait le tour
+	- ajotuer la possibilité d'abandonner sarah ?
 	
 	bomb : 
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
+	- si le joueur a terminé, mettre sarah à l'exterieur à attendre ?
 
-	à faire :
-	- dans le bureau du chef, le joueur peut se bloquer entre le trophée et la chaise
-	- dialogue de la récupération de pelle cyan : "il faudra que je lui demande SON PRENOM" (rappeler le prénom)
-	- en route speedrun, la TP n'est pas très propre...
-	- finir sarah qui a fait le tour
-	- ajotuer la possibilité d'abandonner sarah ?
-	
 	à finir :
 	- étudier la cohérence avec la route speedrun si sarah s'est faite arrêter
-	- interraction des objets dans les salles des 3 policiers (chef inclus pour le chemin bombe ?)
+	- interraction des objets dans les salles des 2 policiers (+ chef pour le chemin bombe ?)
 	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
 	- une réaction de butch si on ouvre son bureau depuis le côté
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
 	- vérifier la fin du scénario bomb (rythme)
 
+	polish "final" pré-diffusion :
+	- embranchement bugué (R ou F) temporairement desactivé
+	- l'action "key3 % i_hava_data" est_il encore utilisé ?
+
 	à faire + tard :
-	- l'embranchement
+	- l'embranchement onirique
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
 	- les variantes sadique et psycopathe
+	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
 	ne pas oublier :
-	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
 	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
 	
 	idées : 
-	- rattatac (café) a un accent français lorsque langue en anglais
-	- lvl state : fusillade (comme rr000 sequestration) -> le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
+	- le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
 	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
+	- traduction : rattatac (café) a un accent français lorsque langue en anglais
 	
 	à sauvegarder :
 	- sarah enfermée ?
