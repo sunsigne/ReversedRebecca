@@ -1,7 +1,5 @@
 ///// CYAN /////
 
-AwkwardTitle = That was awkward...
-AwkwardText = Being denied a hug
 CookiesTitle = You're a fat girl, Becky
 CookiesText = Eat 100 cookies
 ConcussionTitle = Concussion
@@ -18,6 +16,11 @@ FirstKillTitle = Meat pancake
 FirstKillText = Eliminate Alicia
 
 ///// GREEN /////
+
+AwkwardTitle = That was awkward...
+AwkwardText = Being denied a hug
+AirheadTitle = Airhead
+AirheadText = Leave without stealing the files
 
 ///// YELLOW /////
 

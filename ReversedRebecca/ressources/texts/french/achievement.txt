@@ -1,7 +1,5 @@
 ///// CYAN /////
 
-AwkwardTitle = C'etait genant...
-AwkwardText = Se faire refuser un calin
 CookiesTitle = Tu es diabetique, Becky
 CookiesText = Manger 100 cookies
 ConcussionTitle = Commotion cerebrale
@@ -18,6 +16,11 @@ FirstKillTitle = Crepe a la viande
 FirstKillText = Eliminer Alicia
 
 ///// GREEN /////
+
+AwkwardTitle = C'etait genant...
+AwkwardText = Se faire refuser un calin
+AirheadTitle = Tete de Linotte
+AirheadText = Sortir sans voler les documents
 
 ///// YELLOW /////
 
