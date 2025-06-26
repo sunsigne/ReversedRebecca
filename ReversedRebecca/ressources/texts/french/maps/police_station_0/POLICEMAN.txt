@@ -44,3 +44,19 @@ policeman = player = james = Désolé, mais elle est très mauvaise. Je vais@dev
 player = policewoman = sad = (J'ai déconné, là…)
 
 
+% PLAYER_SPOTTED_BUTCH_SHOTGUN
+policeman = player = butch = Je peux savoir ce que tu fais ?
+player = butch = happy = J'essaie d'aller chercher discrètement le fusil@derrière-toi.
+policeman = player = butch = … … …
+policeman = player = butch_smirk = Ok, c'était drôle.
+policeman = player = butch = Plus sérieusement. Recule.
+
+
+% PLAYER_SPOTTED_BUTCH_SHOTGUN_NEXT
+policeman = player = butch = Tu vas où ?
+player = butch = happy_var = Je te l'ai déjà dit.
+policeman = player = butch = Les blagues les plus drôles sont les plus courtes.
+
+
+% PLAYER_SPOTTED_BUTCH_SHOTGUN_FINAL
+policeman = player = butch = Arrête.

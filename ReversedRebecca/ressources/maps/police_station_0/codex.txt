@@ -44,8 +44,8 @@ OBJ-17 = Coffee Machine
 
 ///// UP /////
 
-NPC-07 = Policeman : Rattatac
-NPC-08 = Policeman : Butch
+NPC-07 = Policeman (LEFT) : Rattatac
+NPC-08 = Policeman (UP) : Butch
 OBJ-21 = Rattatac Coffee
 OBJ-22 = Email Desk
 OBJ-27 = Archives Toward Left
@@ -56,6 +56,7 @@ OBJ-31 = Middle Cell Chair and Table
 OBJ-32 = Sarah Music
 OBJ-35 = Toilet Exit Preventer
 OBJ-36 = Toilet
+OBJ-38 = Butch Shotgun Scanner
 
 ///// BIG JAIL /////
 
