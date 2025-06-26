@@ -2,6 +2,10 @@
 player = down = convinced = Ok. J'ai fait le plus dur.@Maintenant, la phase deux du plan.
 
 
+% PLAN_VAR
+player = down = you_silly = Étape trois : libérer Sarah.@Si facile qu'on va l'élipser.
+
+
 % NOT_OBTAINED
 player = down = sad = Zut, j'y étais presque…
 

@@ -57,10 +57,8 @@
 	
 	////////// LVL002 ////////////
 
-	à faire :
-	- finir sarah qui a fait le tour
-
 	bomb : 
+	- faire sarah qui a fait le tour ?
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
 	- si le joueur a terminé, mettre sarah à l'exterieur à attendre ?
@@ -69,7 +67,6 @@
 	- interraction des objets dans la salle du chef lorsqu'il s'absente
 
 	à finir :
-	- étudier la cohérence avec la route speedrun si sarah s'est faite arrêter
 	- un calin avec Sarah  dans sa cellule, (fin du niveau quand on emprunte le trou pour sortir)
 	- ajotuer la possibilité d'abandonner sarah (possible que si elle s'est faite enfermée, il faut alors soit descendre, soit passer par le trou à côté de sa cellule)
 
