@@ -31,7 +31,12 @@ sarah = player = cry_var = Oui.
 sarah = player = fine = Merci.
 
 
+% NO_DOCUMENT_OOPSY
+player = sarah = happy = En plus, j'ai trouvé ce qu'on est venu cherch…
+player = sarah = no_sens = Heu…
+
+
 % DOCUMENTS
 player = sarah = happy = En plus, j'ai trouvé ce qu'on est venu chercher.@On a plus qu'à partir, ensemble.
-sarah = DOWN = cry_var = C'est vrai ?@Merci d'être restée forte, Rebecca.
+sarah = player = cry_var = C'est vrai ?@Merci d'être restée forte, Rebecca.
 player = sarah = happy_var = Les amis, c'est fait pour ça.
