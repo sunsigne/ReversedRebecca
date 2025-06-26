@@ -68,9 +68,7 @@
 
 	à finir :
 	- étudier la cohérence avec la route speedrun si sarah s'est faite arrêter
-	- interraction des objets dans les salles des 2 policiers (+ chef pour le chemin bombe ?)
-	- une réaction de Butch quand on passer derrière son bureau (il y a un fusil de chasse, après tout...)
-	- une réaction de butch si on ouvre son bureau depuis le côté
+	- interraction des objets dans la salle du chef lors du chemin bombe
 	- un calin avec Sarah avant de sortir, (fin du niveau quand on emprunte le trou pour sortir)
 	- vérifier la fin du scénario bomb (rythme)
 
@@ -79,6 +77,7 @@
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
 
 	à faire + tard :
+	- toute la variante "shotgun"
 	- l'embranchement onirique
 	- le mini jeu contre william
 	- le moine qui donne le tuyau & le nom du jeu
