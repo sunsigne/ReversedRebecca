@@ -84,28 +84,6 @@
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
 	- faire les plantes
 
-	à faire + tard :
-	- toute la variante "shotgun"
-	- l'embranchement onirique
-	- le mini jeu contre william
-	- le moine qui donne le tuyau & le nom du jeu
-	- les variantes sadique et psycopathe
-	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
-
-	ne pas oublier :
-	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
-	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
-	
-	idées : 
-	- le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
-	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
-	- traduction : rattatac (café) a un accent français lorsque langue en anglais
-	
-	à sauvegarder :
-	- sarah enfermée ?
-	- plante volée ?
-	- costum de flic ?	
-		
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
@@ -314,6 +292,32 @@
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta reaction du "Alicia" n'est pas fini
 	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs)
+
+	
+	////////// LVL002 ////////////
+
+	à faire + tard :
+	- toute la variante "shotgun"
+	- l'embranchement onirique
+	- le mini jeu contre william
+	- le moine qui donne le tuyau & le nom du jeu
+	- les variantes sadique et psycopathe
+	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
+
+	ne pas oublier :
+	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
+	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
+	
+	idées : 
+	- le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
+	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
+	- traduction : rattatac (café) a un accent français lorsque langue en anglais
+	
+	à sauvegarder :
+	- sarah enfermée ?
+	- costume de flic ?	
+	- sarah abandonnée
+	- plante volée
 
 	////////// MOLE 0 ////////////
 	
