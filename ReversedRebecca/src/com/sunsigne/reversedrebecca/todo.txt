@@ -60,14 +60,14 @@
 	équilibrer sadique et angélique (baisser les critères)
 
 	à tester :
+	- le fonctionnement de sarah cellule jusqu'à la fin avec les documents
 	- pour d'entrée (version sans document mais sarah libre)
 	- la sortie à l'arrière du batiment quand la diversion est un succès
 	- quand on va voir sarah dans sa cellue :
 		- une fois les document récupérés
 		- sans avoir récupéré les documents (et tester de les récupérer par la suite)
-	à faire et tester :
-	- la possibilité d'abandonner sarah (rendre ça compatible avec la récupération de document, et l'obet-26 (la sortie porte / la sortie de derrière si diversion succès)
-	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant
+	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant (implique la fin, soit immédiate si on a les documents, soit au moement où on choppe les documents)
+	- la possibilité d'abandonner sarah (une fois les documents récupérés, aussi bien la porte d'entrée que derrière les prison en haut)
 
 	bomb : 
 	- faire sarah qui a fait le tour ?

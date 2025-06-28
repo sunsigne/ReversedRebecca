@@ -14,6 +14,14 @@ player = DOWN = you_silly = C'est tentant d'abandonner Sarah à son sort,@mais j
 player = DOWN = you_silly_var = J'y suis presque…@Je ne vais pas abandonner maintenant.
 
 
+% PLAYER_LEAVING
+rebecca = object = no_sens = Je ne vais quand meme pas m'en aller,@comme ça… Si ?
+
+
+% PLAYER_LEAVING_NEXT
+rebecca = object = you_silly = Ho, et puis après tout… Elle se débrouillera.
+
+
 % BARBED_WIRE
 player = LEFT = pain = Aïe !
 player = LEFT = sad = Je me suis approchée trop près des barbelés.

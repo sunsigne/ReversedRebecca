@@ -12,6 +12,8 @@ TAKE_THE_KEYS = Key2 % prendre les clés
 STEAL = Key2 % voler
 START_THE_DIVERSION = Key2 % (END_LVL)lancer la diversion
 I_HAVE_THE_DATA = Key3 % (END_LVL)j'ai les informations
+COME_BACK = Key1 % revenir
+ABANDON_SARAH = Key3 % (END_LVL)abandonner Sarah
 
 ///// PRE-CHIEF & CHIEF /////
 
