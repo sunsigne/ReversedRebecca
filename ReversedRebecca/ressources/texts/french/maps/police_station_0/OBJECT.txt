@@ -1,5 +1,5 @@
 % LEAVING
-player = DOWN = sad = J'ai dit à Sarah qu'on allait infiltrer le@commissariat… Je n'ai aucune raison de partir.
+player = DOWN = sad = J'ai dit à Sarah qu'on allait voler des@informations… Je n'ai aucune raison de partir.
 
 
 % LEAVING_GOOD
@@ -7,7 +7,11 @@ player = DOWN = angry_var2 = Il n'est pas question que j'abandonne Sarah !
 
 
 % LEAVING_BAD
-player = DOWN = you_silly = C'est tentant d'abandonner Sarah à son sort,@mais je dois quand même infiltrer le commissariat.
+player = DOWN = you_silly = C'est tentant d'abandonner Sarah à son sort,@mais je dois quand même voler des informations.
+
+
+% LEAVING_NO_DOCUMENT
+player = DOWN = you_silly_var = J'y suis presque…@Je ne vais pas abandonner maintenant.
 
 
 % BARBED_WIRE

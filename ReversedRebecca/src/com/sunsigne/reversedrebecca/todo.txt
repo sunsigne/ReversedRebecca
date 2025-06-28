@@ -53,9 +53,21 @@
 
 	////////// EN COURS ////////////
 
-	- le dialogue à l'exterieur n'est pas fini : gérer le cas sans documents, et gérer la fin si en possession de ceux-ci
 	
 	////////// LVL002 ////////////
+	
+	rien à voir avec lel lvl002, mais à faire :
+	équilibrer sadique et angélique (baisser les critères)
+
+	à tester :
+	- pour d'entrée (version sans document mais sarah libre)
+	- la sortie à l'arrière du batiment quand la diversion est un succès
+	- quand on va voir sarah dans sa cellue :
+		- une fois les document récupérés
+		- sans avoir récupéré les documents (et tester de les récupérer par la suite)
+	à faire et tester :
+	- la possibilité d'abandonner sarah (rendre ça compatible avec la récupération de document, et l'obet-26 (la sortie porte / la sortie de derrière si diversion succès)
+	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant
 
 	bomb : 
 	- faire sarah qui a fait le tour ?
@@ -66,13 +78,11 @@
 	- vérifier la fin du scénario bomb (rythme)
 	- interraction des objets dans la salle du chef lorsqu'il s'absente
 
-	à finir :
-	- un calin avec Sarah  dans sa cellule, (fin du niveau quand on emprunte le trou pour sortir)
-	- ajotuer la possibilité d'abandonner sarah (possible que si elle s'est faite enfermée, il faut alors soit descendre, soit passer par le trou à côté de sa cellule)
-
 	polish "final" pré-diffusion :
+	- petit message pour prévenir que le shotgun n'est pas encore disponible
 	- embranchement bugué (R ou F) temporairement desactivé
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
+	- faire les plantes
 
 	à faire + tard :
 	- toute la variante "shotgun"

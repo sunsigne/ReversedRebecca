@@ -40,3 +40,16 @@ player = sarah = no_sens = Heu…
 player = sarah = happy = En plus, j'ai trouvé ce qu'on est venu chercher.@On a plus qu'à partir, ensemble.
 sarah = player = cry_var = C'est vrai ?@Merci d'être restée forte, Rebecca.
 player = sarah = happy_var = Les amis, c'est fait pour ça.
+
+
+% FREE
+player = sarah = happy_var = Et voilà ! Tu es libre !@On a plus qu'à sortir !
+
+
+% FREE_NO_DOCUMENT
+player = sarah = happy_var = Et voilà ! Tu es libre !
+
+
+% FREE_NO_DOCUMENT_NEXT
+player = sarah = laugh = Donne-moi juste une petite minute pour aller récupérer@les documents. J'ai la clé sur moi.
+sarah = player = happy = Ok, je ne bouge pas.
