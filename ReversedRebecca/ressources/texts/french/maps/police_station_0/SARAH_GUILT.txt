@@ -51,5 +51,5 @@ player = sarah = happy_var = Et voilà ! Tu es libre !
 
 
 % FREE_NO_DOCUMENT_NEXT
-player = sarah = laugh = Donne-moi juste une petite minute pour aller récupérer@les documents. J'ai la clé sur moi.
+player = sarah = laugh = Donne-moi juste une petite minute pour aller@récupérer les documents. J'ai la clé sur moi.
 sarah = player = happy = Ok, je ne bouge pas.

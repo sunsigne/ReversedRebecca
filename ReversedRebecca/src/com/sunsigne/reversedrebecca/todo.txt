@@ -66,7 +66,7 @@
 	- quand on va voir sarah dans sa cellue :
 		- une fois les document récupérés
 		- sans avoir récupéré les documents (et tester de les récupérer par la suite)
-	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant (implique la fin, soit immédiate si on a les documents, soit au moement où on choppe les documents)
+	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant (puis aller chercher les documents. Implique la fin ?)
 	- la possibilité d'abandonner sarah (une fois les documents récupérés, aussi bien la porte d'entrée que derrière les prison en haut)
 
 	bomb : 
