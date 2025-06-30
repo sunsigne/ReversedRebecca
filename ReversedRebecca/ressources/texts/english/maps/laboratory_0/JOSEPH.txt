@@ -34,7 +34,7 @@ object = player = happy = So ? What do you think?
 player = object = no_sens = Ha! Uh… I guess…
 object = player = happy_var = Great! I am glad we talked about it.
 player = object = no_sens = … Yes, me too…
-player = DOWN = no_sens = … I have no idea what we were talking about.
+player = DOWN = no_sens = (… I have no idea what we were talking about.)
 
 
 % FORGOT
@@ -112,7 +112,7 @@ object = RIGHT = happy = So? What do you think?
 player = object = no_sens = Ha! Uh… I guess…
 object = RIGHT = happy_var = Great! I am glad we talked about it.
 player = object = no_sens = … Yes, me too…
-player = DOWN = no_sens = … I have no idea what we were talking about.
+player = DOWN = no_sens = (… I have no idea what we were talking about.)
 
 
 % COUCH
@@ -129,7 +129,7 @@ object = RIGHT = happy = So? What do you think?
 player = object = no_sens = Ha! Uh… I guess…
 object = RIGHT = happy_var = Great! I am glad we talked about it.
 player = object = no_sens = … Yes, me too…
-player = DOWN = no_sens = … I have no idea what we were talking about.
+player = DOWN = no_sens = (… I have no idea what we were talking about.)
 
 
 % FORGOT_COUCH
