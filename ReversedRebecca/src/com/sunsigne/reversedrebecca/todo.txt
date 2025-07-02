@@ -56,25 +56,17 @@
 	
 	////////// LVL002 ////////////
 	
-	rien à voir avec lel lvl002, mais à faire :
+	rien à voir avec le lvl002, mais à faire :
 	équilibrer sadique et angélique (baisser les critères)
 
-	à tester :
-	- le fonctionnement de sarah cellule jusqu'à la fin avec les documents
-	- pour d'entrée (version sans document mais sarah libre)
+	à réparer :
+	- porte d'entrée (version sans document mais sarah libre)
 	- la sortie à l'arrière du batiment quand la diversion est un succès
-	- quand on va voir sarah dans sa cellue :
-		- une fois les document récupérés
-		- sans avoir récupéré les documents (et tester de les récupérer par la suite)
-	- la possibilité d'aller voir sarah dans sa cellule, sans lui avoir parlé avant (puis aller chercher les documents. Implique la fin ?)
 	- la possibilité d'abandonner sarah (une fois les documents récupérés, aussi bien la porte d'entrée que derrière les prison en haut)
 
 	bomb : 
-	- faire sarah qui a fait le tour ?
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
-	- lorsque le joueur quitte la prison (azvec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents
-	- si le joueur a terminé, mettre sarah à l'exterieur à attendre ?
-	- vérifier fin du niveau (cas sans document, calin, et reliement avec le END_LVL)
+	- lorsque le joueur quitte la prison (avec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents !
 	- vérifier la fin du scénario bomb (rythme)
 	- interraction des objets dans la salle du chef lorsqu'il s'absente
 
