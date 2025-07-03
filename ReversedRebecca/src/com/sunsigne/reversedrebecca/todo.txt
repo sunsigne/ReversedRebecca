@@ -60,6 +60,8 @@
 	- équilibrer sadique et angélique (baisser les critères)		
 	- bug : lvl001 - le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 	
+	bomb : réduire de 1 seconde le message "il est aller chercher de l'aide" dans les toilettes
+	
 	polish "final" pré-diffusion :
 	- petit message pour prévenir que le shotgun n'est pas encore disponible
 	- embranchement bugué (R ou F) temporairement desactivé
