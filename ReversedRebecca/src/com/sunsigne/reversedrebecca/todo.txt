@@ -55,17 +55,11 @@
 
 	
 	////////// LVL002 ////////////
-	
-	bug : lvl001 - le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
-	
+
 	rien à voir avec le lvl002, mais à faire :
-	équilibrer sadique et angélique (baisser les critères)
-
-	bomb : 
-	- ralonger le temps de diversion du commissaire (dans le vestiaire)
-	- vérifier la fin du scénario bomb (rythme)
-	- interraction des objets dans la salle du chef lorsqu'il s'absente
-
+	- équilibrer sadique et angélique (baisser les critères)		
+	- bug : lvl001 - le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+	
 	polish "final" pré-diffusion :
 	- petit message pour prévenir que le shotgun n'est pas encore disponible
 	- embranchement bugué (R ou F) temporairement desactivé

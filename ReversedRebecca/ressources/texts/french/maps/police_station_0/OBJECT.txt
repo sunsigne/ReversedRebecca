@@ -98,5 +98,9 @@ player = DOWN = you_silly_var = Je devrais attendre que le commissaire soit@de r
 player = DOWN = sad = Je n'ai aucune raison de faire ça,@j'ai déjà récupérer la pelle cyan.
 
 
+% TROPHY
+player = DOWN = surprised = C'est impressionnant !@Toutes ces médailles et ces trophées.
+
+
 % WAKE_UP_JESSY
 player = DOWN = no_sens = Après réflexion, ça sonne comme@une grosse idée de merde.

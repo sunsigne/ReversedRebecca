@@ -31,6 +31,7 @@ OBJ-08 = Coat Rack Chief
 OBJ-09 = Corridor Plant
 OBJ-10 = Disguise Detector
 OBJ-23 = Vent Furniture
+OBJ-40 = Trophy
 
 ///// RESTROOM /////
 
