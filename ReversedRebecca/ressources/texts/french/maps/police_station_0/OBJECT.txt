@@ -11,7 +11,7 @@ player = DOWN = you_silly = C'est tentant d'abandonner Sarah à son sort,@mais j
 
 
 % LEAVING_NO_DOCUMENT
-player = DOWN = you_silly_var = J'y suis presque…@Je ne vais pas abandonner maintenant.
+player = DOWN = sad = Je n'ai pas encore volé les informations…@J'y suis presque ! Je ne vais pas abandonner.
 
 
 % PLAYER_LEAVING

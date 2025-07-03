@@ -59,11 +59,6 @@
 	rien à voir avec le lvl002, mais à faire :
 	équilibrer sadique et angélique (baisser les critères)
 
-	à réparer :
-	- porte d'entrée (version sans document mais sarah libre)
-	- la sortie à l'arrière du batiment quand la diversion est un succès
-	- la possibilité d'abandonner sarah (une fois les documents récupérés, aussi bien la porte d'entrée que derrière les prison en haut)
-
 	bomb : 
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
 	- lorsque le joueur quitte la prison (avec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents !
