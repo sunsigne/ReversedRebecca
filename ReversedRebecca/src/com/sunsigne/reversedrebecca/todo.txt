@@ -56,12 +56,13 @@
 	
 	////////// LVL002 ////////////
 	
+	bug : lvl001 - le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+	
 	rien à voir avec le lvl002, mais à faire :
 	équilibrer sadique et angélique (baisser les critères)
 
 	bomb : 
 	- ralonger le temps de diversion du commissaire (dans le vestiaire)
-	- lorsque le joueur quitte la prison (avec les trous), mettre un piranha vérificateur dans le cas où il n'a pas volé les documents !
 	- vérifier la fin du scénario bomb (rythme)
 	- interraction des objets dans la salle du chef lorsqu'il s'absente
 
