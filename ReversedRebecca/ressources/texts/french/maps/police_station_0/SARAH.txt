@@ -43,7 +43,10 @@ sarah = player = happy = Bien ! Donne-moi une petite minute,@j'ai besoin de réf
 
 
 % SCENARIO_STEPHAN
-no done yet
+player = sarah = laugh = Ok ! On va le faire ! On va voler les informations !
+sarah = player = worry = Tu es sûre que c'est sur ça que tu as cliquée ?
+player = sarah = laugh = Non, mais le développeur n'a pas encore codé@mon choix, donc c'est ce qu'on va faire !
+sarah = player = happy = Bien ! Donne-moi une petite minute,@j'ai besoin de réfléchir à un plan.
 
 
 % PLAN_NOT_YET

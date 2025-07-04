@@ -34,6 +34,7 @@ FEELING_LIKE_FREEING_THE_INMATES = Key2 % j'ai envie de libérer les détenus
 GIVE_THE_DONUT = Key3 % donner le donut
 GIVE_THE_COFFEE = Key3 % donner le café
 WAKE_UP = Key1 % réveiller
+COMMIT_MURDER = Key3 % (PSYCHOPATH)commettre un meutre
 
 ///// BIG JAIL /////
 

@@ -59,6 +59,7 @@ OBJ-35 = Toilet Exit Preventer
 OBJ-36 = Toilet
 OBJ-38 = Butch Shotgun Scanner
 OBJ-39 = Behind Cells Scanner
+OBJ-41 = Butch Shotgun
 
 ///// BIG JAIL /////
 
