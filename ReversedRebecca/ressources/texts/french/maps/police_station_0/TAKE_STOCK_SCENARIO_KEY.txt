@@ -1,0 +1,52 @@
+% FIRST_DOOR
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois déverrouiller la porte au bout du couloir.
+
+
+% FIRST_DOOR_NO_KEY
+player = object = laugh = Je suis sûre que je vais trouver la clé@en fouillant un peu partout.
+
+
+% ALICIA
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = object = happy = Une clé verte ou des bombes cyan devrait m'aider.
+
+
+% ALICIA_CANT_HELP
+player = object = asleep = Voyons voir…
+player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes cyan.
+player = object = sad = À moins d'avoir une clé verte,@elle est définitivement bloquée.
+
+
+% NO_BOMB
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois trouver un moyen de nous faire sortir.
+player = object = happy_var = Je devrais commencer par récupérer des bombes.
+
+
+% HAS_BOMB
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois trouver un moyen de nous faire sortir.
+player = object = happy_var = Je peux retourner à l'entrée et utiliser des bombes.
+
+
+% TRAPPED
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je suis piégée. Je dois trouver un moyen de sortir.
+
+
+% TRAPPED_WITH_ALICIA
+player = object = asleep = Voyons voir…
+player = object = unhappy = Alicia et moi sommes piégées.@Nous devons trouver un moyen de sortir.
+
+
+% GREEN_KEY
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois trouver un moyen de nous faire sortir.
+player = object = happy_var = La clé verte va se montrer très pratique !
+
+
+% EXPLOSIONS
+player = object = asleep = Voyons voir…
+player = object = laugh = Qu'est-ce que c'est amusant de@tout faire exploser !

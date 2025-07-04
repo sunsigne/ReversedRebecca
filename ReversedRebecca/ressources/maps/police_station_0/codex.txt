@@ -70,3 +70,4 @@ NPC-11 = CCC1
 NPC-13 = Polaris
 NPC-14 = Doug
 OBJ-24 = Armory Collapse Scanner
+OBJ-42 = Little Plant
