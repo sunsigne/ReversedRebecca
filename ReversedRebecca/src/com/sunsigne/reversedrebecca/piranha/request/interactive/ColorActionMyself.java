@@ -1,23 +1,20 @@
 package com.sunsigne.reversedrebecca.piranha.request.interactive;
 
-import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action.TEXT_COLOR;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class ColorActionRequest implements IndexRequest {
+public class ColorActionMyself implements Request {
 
 	////////// REQUEST ////////////
 
-	public ColorActionRequest() {
+	public ColorActionMyself() {
 		new RequestList().addRequest(this, getType());
 	}
 
-	private static Request action = new ColorActionRequest();
+	private static Request action = new ColorActionMyself();
 
 	@Override
 	public Request getRequest() {
@@ -26,7 +23,7 @@ public class ColorActionRequest implements IndexRequest {
 
 	@Override
 	public String getType() {
-		return "COLOR_ACTION";
+		return "COLOR_ACTION_MYSELF";
 	}
 
 	@Override
@@ -38,15 +35,9 @@ public class ColorActionRequest implements IndexRequest {
 	public void doAction(PiranhaObject object, String target) {
 		String color = target.split(",")[0].toUpperCase();
 		String num = target.split(",")[1].toUpperCase();
-		String pos = target.split(",")[2].toUpperCase();
 
-		GameObject gameObject = getGameObject(object, pos);
-		if (gameObject instanceof Interactive == false)
-			return;
-
-		Interactive interactive = (Interactive) gameObject;
 		TEXT_COLOR textColor = getTextColor(color);
-		Action action = interactive.getTripleAction().getAction(Integer.parseInt(num) - 1);
+		Action action = object.getTripleAction().getAction(Integer.parseInt(num) - 1);
 		action.setTextColor(textColor);
 	}
 
