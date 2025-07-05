@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action.TEXT_COLOR;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
@@ -203,20 +204,15 @@ public class TextAction implements Updatable {
 		if (facing == DIRECTION.RIGHT)
 			centeredText = DIRECTION.RIGHT;
 
-		Color color = Color.WHITE;
+		TEXT_COLOR textColor = action.getTextColor();
 
-		String text = action.getDisplayedText();
-		if (text.contains("(END_LVL)")) {
-			text = text.replace("(END_LVL)", "");
-			color = new Color(255, 220, 0);
-		}
-		if (text.contains("(PSYCHOPATH)")) {
-			text = text.replace("(PSYCHOPATH)", "");
-			color = new Color(255, 0, 0);
+		if (textColor == TEXT_COLOR.RED) {
 			int radX = new RandomGenerator().getIntBetween(-1, 1);
 			int radY = new RandomGenerator().getIntBetween(-1, 1);
 			rect = new int[] { rect[0] + radX, rect[1] + radY, rect[2], rect[3] };
 		}
+
+		String text = action.getDisplayedText();
 
 		if (ControllerManager.getInstance().isUsingGamepad()) {
 			text = text.concat("   ");
@@ -233,7 +229,8 @@ public class TextAction implements Updatable {
 			}
 		}
 
-		new TextDecoration().drawOutlinesString(g, choice_font, text, color, Color.BLACK, centeredText, rect);
+		new TextDecoration().drawOutlinesString(g, choice_font, text, textColor.getColor(), Color.BLACK, centeredText,
+				rect);
 	}
 
 	private int getGapBeforeWithinKeyText(String text, DIRECTION facing) {

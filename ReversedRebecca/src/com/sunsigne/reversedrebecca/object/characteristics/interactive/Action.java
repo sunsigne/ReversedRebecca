@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
+import java.awt.Color;
+
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -26,6 +28,7 @@ public abstract class Action {
 		this.name = name;
 		this.toolPlayer = toolPlayer;
 		this.listener = listener;
+		setTextColor(TEXT_COLOR.WHITE);
 		setKeyEvent(key, keyEvent);
 	}
 
@@ -107,6 +110,38 @@ public abstract class Action {
 				player.setCanInteract(true);
 		});
 
+	}
+
+	////////// COLOR ////////////
+
+	public enum TEXT_COLOR {
+		WHITE("white", Color.WHITE), YELLOW("yellow", new Color(255, 220, 0)), RED("red", new Color(255, 0, 0));
+
+		private String name;
+		private Color color;
+
+		TEXT_COLOR(String name, Color color) {
+			this.name = name;
+			this.color = color;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public Color getColor() {
+			return color;
+		}
+	}
+
+	private TEXT_COLOR textColor;
+
+	public TEXT_COLOR getTextColor() {
+		return textColor;
+	}
+
+	public void setTextColor(TEXT_COLOR textColor) {
+		this.textColor = textColor;
 	}
 
 	////////// RENDER ////////////

@@ -1,3 +1,18 @@
+////// COLOR_ACTION //////
+
+Le Type de Requête COLOR_ACTION permet de définir la couleur d'une action sur un objet interactif.
+
+La première Cible de ce Type de Requête permet de déterminer la couleur souhaitée :
+- WHITE : blanc (par défaut),
+- YELLOW : jaune (pour prévenir que l'action terminera la carte),
+- RED : rouge (pour prévenir que l'action est une action de karma "psychopathe").
+
+Exemple :
+TIME -> 0 = COLOR_ACTION -> YELLOW,2,10-20:1
+
+Lorsque la Condition sera vérifiée, l'objet aux coordonnées X=10 Y=20 et d'Index 1 verra son action 2 avoir un texte jaune.
+
+
 ////// DISABLE //////
 
 
