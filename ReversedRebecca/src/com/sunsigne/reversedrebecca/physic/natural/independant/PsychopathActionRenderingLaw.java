@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.physic.natural.independant;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action.TEXT_COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -62,11 +63,11 @@ public class PsychopathActionRenderingLaw extends IndependantLaw {
 		Action actionTwo = tripleAction.getAction(1);
 		Action actionThree = tripleAction.getAction(2);
 
-		if (actionOne != null && actionOne.getDisplayedText().contains("(PSYCHOPATH)"))
+		if (actionOne != null && actionOne.getTextColor() == TEXT_COLOR.RED)
 			return true;
-		if (actionTwo != null && actionTwo.getDisplayedText().contains("(PSYCHOPATH)"))
+		if (actionTwo != null && actionTwo.getTextColor() == TEXT_COLOR.RED)
 			return true;
-		if (actionThree != null && actionThree.getDisplayedText().contains("(PSYCHOPATH)"))
+		if (actionThree != null && actionThree.getTextColor() == TEXT_COLOR.RED)
 			return true;
 
 		return false;

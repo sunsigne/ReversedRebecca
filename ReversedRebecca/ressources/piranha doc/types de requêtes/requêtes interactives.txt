@@ -12,6 +12,22 @@ TIME -> 0 = COLOR_ACTION -> YELLOW,2,10-20:1
 
 Lorsque la Condition sera vérifiée, l'objet aux coordonnées X=10 Y=20 et d'Index 1 verra son action 2 avoir un texte jaune.
 
+Note : l'action ACTUELLE de l'objet se verra attribuer la couleur désignée. Aussitôt qu'une nouvelle action la remplace, cette dernière sera de couleur blanche. Dit autrement, utiliser le Type de Requête ACTION (voir la partie « Piranha – Type de Requête – Requêtes Actions ») supprimera la couleur.
+
+
+
+////// COLOR_ACTION_MYSELF //////
+
+Le Type de Requête COLOR_ACTION_MYSELF permet de définir la couleur d'une action sur l'objet actuel (c.-à-d. l'objet dont le fichier Piranha contient cette Instruction).
+
+Exemple :
+TIME -> 0 = COLOR_ACTION_MYSELF -> YELLOW,2
+
+Lorsque la Condition sera vérifiée, l'objet actuel verra son action 2 avoir un texte jaune.
+
+L'avantage de ce Type de Requête sur le Type de Requête COLOR_ACTION est qu'il évite toute ambiguïté en cas d'un NPC en cours de déplacement.
+
+
 
 ////// DISABLE //////
 
