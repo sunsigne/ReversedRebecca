@@ -30,6 +30,7 @@
 		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu)
 		
 	vérifier si bien réglé :
+		- vérifier que le type de requete SaveTripleActionRequest ne fait pas sauter la couleur d'un texte
 		- la souris dépasse de l'ordi de Yan
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
@@ -55,6 +56,15 @@
 
 	
 	////////// LVL002 ////////////
+
+	piranha:
+	- actions red et yellow pour changer la couleur du texte (finir le lvl001 et lvl002 + rendre comptabile avec ChoiceRequest)
+	- waitfor_timer:1?goto_unitaire
+	- memory:name?goto1/goto2
+	- raccourcis : ta_null, waitfor_null, etc. (voir les states les plus récurrents)
+	- request:obj-42*blocking_path:false (syntage exacte à étudier)
+	- équivalent à "state_player" mais pour les objets, avec higlith, display, hitbox, ta eventuel, etc. et goto à la fin (pouyr ne faire qu'une seule grosse méga-ligne (puis utilement, tout réunir dans un seul fichier)
+	- create_animation qui fait disparaitre le personnage plutôt qu'avoir à le faire soit même, la même chose avec delete_animation ? un delete_animation qui efface à partir du nom plutôt que des coordonées ? (l'intérêt et la cible unitaire)
 
 	rien à voir avec le lvl002, mais à faire :
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		

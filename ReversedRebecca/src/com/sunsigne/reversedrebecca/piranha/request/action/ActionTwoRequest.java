@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.piranha.actions.action.ColorAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -40,11 +41,21 @@ public class ActionTwoRequest implements Request {
 		TripleAction ta = object.getTripleAction();
 		if (ta == null)
 			ta = new TripleAction(null, null, null, null);
-		
-		TripleAction tripleAction = new TripleAction(ta.getRequirementBubble(), ta.getAction(0), action, ta.getAction(2));
+
+		TripleAction tripleAction = new TripleAction(ta.getRequirementBubble(), ta.getAction(0), action,
+				ta.getAction(2));
 
 		object.setTripleAction(tripleAction);
 		object.createTextAction();
+		coloringAction(action);
+	}
+
+	private void coloringAction(Action action) {
+		if (action instanceof ColorAction == false)
+			return;
+
+		ColorAction colorAction = (ColorAction) action;
+		colorAction.setTextColor(colorAction.getColor());
 	}
 
 }

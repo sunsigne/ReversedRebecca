@@ -112,7 +112,7 @@ public abstract class Action {
 
 	}
 
-	////////// COLOR ////////////
+	////////// TEXT COLOR ////////////
 
 	public enum TEXT_COLOR {
 		WHITE("white", Color.WHITE), YELLOW("yellow", new Color(255, 220, 0)), RED("red", new Color(255, 0, 0));

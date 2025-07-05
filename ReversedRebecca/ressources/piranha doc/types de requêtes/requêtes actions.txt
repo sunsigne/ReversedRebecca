@@ -8,6 +8,8 @@ Il existe deux types d'actions : les actions existantes et les actions custom.
 
 Les actions existantes sont les suivantes :
 - TALK : lance une boite de dialogue.
+- YELLOW : a le même fonctionnement qu'une action custom, en plus de définir la couleur de son texte en jaune (voir « COLOR_ACTION_MYSELF » dans la partie « Piranha – Type de Requête – Requêtes Interactives »).
+- RED : a le même fonctionnement qu'une action custom, en plus de définir la couleur de son texte en rouge.
 
 Les actions custom sont des actions créées sur mesure pour répondre à un besoin. Un exemple est donné dans le Type de Requête ACTION.
 

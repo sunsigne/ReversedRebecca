@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.actions.ActionAnalyzer;
+import com.sunsigne.reversedrebecca.piranha.actions.action.ColorAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
@@ -46,6 +47,15 @@ public class ActionOneRequest implements Request {
 
 		object.setTripleAction(tripleAction);
 		object.createTextAction();
+		coloringAction(action);
+	}
+
+	private void coloringAction(Action action) {
+		if (action instanceof ColorAction == false)
+			return;
+
+		ColorAction colorAction = (ColorAction) action;
+		colorAction.setTextColor(colorAction.getColor());
 	}
 
 }
