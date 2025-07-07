@@ -49,16 +49,17 @@ public class WaitforComplexeTimerRequest implements Request {
 		String targets = String.valueOf(target.split("\\?")[1]);
 		String[] values = targets.split(",");
 
-		for (int index = timers.length - 1; index > -1; index--) {
-			String timer = timers[index];
+		for (int index_timer = timers.length - 1; index_timer > -1; index_timer--) {
+			String timer = timers[index_timer];
 			int time = Integer.parseInt(timer);
 
-			for (String tempValue : values) {
-				String num = tempValue.split("\\*")[0];
-				if (Integer.parseInt(num) - 1 != index)
+			for (int index_value = values.length - 1; index_value > -1; index_value--) {
+				String value = values[index_value];
+				String num = value.split("\\*")[0];
+				if (Integer.parseInt(num) - 1 != index_timer)
 					continue;
 
-				replaceWaitfor(object, tempValue.replace(num + "*", ""), time);
+				replaceWaitfor(object, value.replace(num + "*", ""), time);
 			}
 		}
 	}
@@ -90,11 +91,11 @@ public class WaitforComplexeTimerRequest implements Request {
 
 			@Override
 			public void doAction() {
-				Request request = new GotoRequest();
-				request.doAction(object, target);
-
 				if (waitfor != null)
 					object.setWaitfor(waitfor);
+
+				Request request = new GotoRequest();
+				request.doAction(object, target);
 			}
 		};
 	}
