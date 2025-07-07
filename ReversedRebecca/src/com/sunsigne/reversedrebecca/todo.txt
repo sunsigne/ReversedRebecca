@@ -57,6 +57,8 @@
 	
 	////////// LVL002 ////////////
 
+	lvl001 - quand rebecca fait des crêpes à sarah, elle dit "je t'en pris" au lieu de "je t'en prie"
+
 	piranha:
 	- actions red et yellow pour changer la couleur du texte (finir le lvl001 et lvl002 + rendre comptabile avec ChoiceRequest)
 	- waitfor_timer:1?goto_unitaire
