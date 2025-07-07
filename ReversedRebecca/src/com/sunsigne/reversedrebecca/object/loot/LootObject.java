@@ -41,7 +41,7 @@ public abstract class LootObject extends GameObject implements SheetableImage, C
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.COLLISIONNER;
 	}
-	
+
 	////////// BLINKING ////////////
 
 	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
@@ -77,7 +77,7 @@ public abstract class LootObject extends GameObject implements SheetableImage, C
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (!(detectorObject instanceof Player))
+		if (detectorObject instanceof Player == false)
 			return;
 
 		collidingReaction(detectorObject, false, () -> pickup());

@@ -57,6 +57,11 @@
 	
 	////////// LVL002 ////////////
 
+	les prochains objectifs :
+	- mettre à jour la fusillade
+	- implémenter les dessins de double Y et son code particulier
+	- finir les end_lvl des lvl001 et lvl002
+
 	rien à voir avec le lvl002, mais à faire :
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
 	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
