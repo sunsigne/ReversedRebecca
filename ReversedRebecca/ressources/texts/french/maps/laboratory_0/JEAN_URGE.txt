@@ -47,7 +47,7 @@ object = player = urge_happy = Oui, pardon.
 
 
 % SECOND
-object = player = urge = Je t'en pris ! Dépêche-toi !
+object = player = urge = Je t'en prie ! Dépêche-toi !
 player = object = happy_var = Oui oui.
 
 

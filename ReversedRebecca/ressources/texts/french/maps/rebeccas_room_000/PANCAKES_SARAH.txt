@@ -28,7 +28,7 @@ player = sarah = happy = Prends une chaise,@je vais chercher une assiette.
 
 % THANK
 sarah = DOWN = happy = Merci, c'est adorable.
-player = RIGHT = happy_var = Je t'en pris.
+player = RIGHT = happy_var = Je t'en prie.
 
 
 % NOT_PROPOSED_NEXT
