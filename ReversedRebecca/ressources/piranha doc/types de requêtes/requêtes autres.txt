@@ -241,9 +241,9 @@ Note : Ce Type de Requête peut dans certains cas impliquer l'utilisation multip
 Le Type de Requête WAITFOR_COMPLEXE_TIMER permet de définir une suite de WAITFOR pour l'objet actuel, qui auront lieu successivement en fonction de plusieurs TIMER.
 
 Exemple :
-$ -> CUTSCENE_SARAH_ARRIVAL = WAITFOR_COMPLEXE_TIMER -> 4, 2, 11 ? 1*SOUND:DOOR_KNOCK, 2*SOUND:DOOR_KNOCK, 3*AFFECTING:TOO_LATE_AT_DOOR, 3*MEMORY:BUT_NOBODY_CAME
+$ -> CUTSCENE_SARAH_ARRIVAL = WAITFOR_COMPLEXE_TIMER -> 4,6,17 ? 1*SOUND:DOOR_KNOCK, 2*SOUND:DOOR_KNOCK, 3*AFFECTING:TOO_LATE_AT_DOOR, 3*MEMORY:BUT_NOBODY_CAME
 
-Lorsque la Condition sera vérifiée, un WAITFOR sera activé sur l'objet. Au bout de 4 secondes, un son sera joué et un deuxième WAITFOR de 2 secondes sera appliquée sur l'objet. À l'issue de ce temps ci, un son sera joué et un troisième WAITFOR, cette fois de 11 secondes sera appliquée sur l'objet. Onze secondes plus tard, ce troisième WAITFOR, à l'instar des précédents, exécutera toutes les Cibles portant son numéro, ce qui, dans cet exemple, sont deux Requêtes.
+Lorsque la Condition sera vérifiée, un WAITFOR sera activé sur l'objet. Au bout de 4 secondes, un son sera joué et un deuxième WAITFOR s'activera 2 secondes plus tard. À l'issue de ce temps-ci, un son sera joué et un troisième WAITFOR, cette fois de 11 secondes (17 secondes au total) sera appliquée sur l'objet. À l'instar des précédents, à son activation, il exécutera toutes les Cibles portant son numéro, ce qui, dans cet exemple, sont deux Requêtes.
 
 Note : ce Type de Requête facilite la création de scène cinématique et l'enchaînement d'actions des NPC.
 

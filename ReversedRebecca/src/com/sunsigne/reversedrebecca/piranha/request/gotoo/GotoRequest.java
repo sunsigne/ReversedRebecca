@@ -38,13 +38,14 @@ public class GotoRequest implements Request {
 		for (String tempTarget : targets) {
 
 			if (tempTarget.contains(":")) {
-				Request request = new RequestList().getRequestFromType(tempTarget.split(":")[0]);
+				String requestType = tempTarget.split(":")[0];
+				Request request = new RequestList().getRequestFromType(requestType);
 
 				try {
 					if (request.hasCompactWriting() == false)
 						continue;
 
-					request.doAction(object, tempTarget.split(":")[1]);
+					request.doAction(object, tempTarget.replace(requestType + ":", ""));
 				} catch (Exception e) {
 					System.err.println("Problem encounter with following object : " + object.toString());
 					System.err.println("can't process following Instruction : " + "UNKOWNW_CONDITION" + "=" + target);
