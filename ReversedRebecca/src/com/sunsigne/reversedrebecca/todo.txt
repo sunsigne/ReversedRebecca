@@ -292,13 +292,7 @@
 	- les variantes sadique et psycopathe
 	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
-	ne pas oublier :
-	- un mur est créé sur la porte de cassidy si le joueur va trop souvent la voir. Il faut le retirer lors de la fusillade
-	- un mur est créé depuis l'objet 21 au niveau de la poubelle de rattatac
-	
 	idées : 
-	- le flic au dessus de la restoom renverse son bureau et ouvre la porte pour tirer sur les prisoniers en étant à couvert ?
-	- se servir de la chaise dans la restroom pour fracasser un flic avec, ou comme couverture pour les balles
 	- traduction : rattatac (café) a un accent français lorsque langue en anglais
 	
 	à sauvegarder :
@@ -306,6 +300,7 @@
 	- costume de flic ?	
 	- sarah abandonnée
 	- plante volée
+	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
 
 	////////// MOLE 0 ////////////
 	
