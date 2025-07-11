@@ -33,6 +33,19 @@ Rappel : il est possible définir la couleur du texte d'une action dès la créa
 
 
 
+////// COLOR_ACTION_CHOICE //////
+
+Le Type de Requête COLOR_ACTION_CHOICE permet de définir la couleur du texte d'une action sur l'objet "choix" actuellement présent (voir « CHOICE » dans la partie « Piranha – Type de Requête – Requêtes Actions »).
+
+Exemple :
+TIME -> 0 = COLOR_ACTION_CHOICE -> YELLOW,2
+
+Lorsque la Condition sera vérifiée, l'objet "choix" actuellement présent verra son action 2 avoir un texte jaune.
+
+Note : un objet "choix" ne possédant pas de fichier Piranha, il est impossible définir la couleur du texte d'une de ses actions dès sa création.
+
+
+
 ////// DISABLE //////
 
 

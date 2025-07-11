@@ -6,15 +6,15 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class ColorActionMyself implements Request {
+public class ColorActionMyselfRequest implements Request {
 
 	////////// REQUEST ////////////
 
-	public ColorActionMyself() {
+	public ColorActionMyselfRequest() {
 		new RequestList().addRequest(this, getType());
 	}
 
-	private static Request action = new ColorActionMyself();
+	private static Request action = new ColorActionMyselfRequest();
 
 	@Override
 	public Request getRequest() {
@@ -31,13 +31,22 @@ public class ColorActionMyself implements Request {
 		return false;
 	}
 
+	protected PiranhaObject getObject(PiranhaObject object) {
+		return object;
+	}
+
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		String color = target.split(",")[0].toUpperCase();
 		String num = target.split(",")[1].toUpperCase();
 
 		TEXT_COLOR textColor = getTextColor(color);
-		Action action = object.getTripleAction().getAction(Integer.parseInt(num) - 1);
+
+		PiranhaObject obj = getObject(object);
+		if (obj == null)
+			return;
+
+		Action action = obj.getTripleAction().getAction(Integer.parseInt(num) - 1);
 		action.setTextColor(textColor);
 	}
 
