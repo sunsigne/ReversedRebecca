@@ -60,7 +60,6 @@
 	les prochains objectifs :
 	- mettre à jour la fusillade
 	- implémenter les dessins de double Y et son code particulier
-	- finir les end_lvl des lvl001 et lvl002
 
 	rien à voir avec le lvl002, mais à faire :
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
@@ -68,6 +67,7 @@
 	- actions red et yellow pour changer la couleur du texte (finir le lvl001 et lvl002 + rendre comptabile avec ChoiceRequest)
 
 	polish "final" pré-diffusion :
+		- finir les end_lvl du lvl002
 	- l'action "key3 % i_hava_data" est_il encore utilisé ? -> programmer qqun chose pour que les actions puzzlers devienent "finales" (càd qu'on SAIT que par exemple, ouvrir une porte déclanchera la fin du niveau par rapport à la couleur jaune du texte, mais le faciliter à partir de Java)
 	- faire les plantes
 	- prévenir que la fusillade n'est pas finie
