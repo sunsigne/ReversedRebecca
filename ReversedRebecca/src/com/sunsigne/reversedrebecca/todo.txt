@@ -54,6 +54,15 @@
 
 	////////// EN COURS ////////////
 
+	- lvl001 
+		-> proposer une couverture -> karma +
+		-> prêter un livre -> karma +
+		-> derniere cazction positive ?
+	(noter que 2 actions positives = karma angélique)
+	
+		-> rembarer sarah sans calin = méchant
+		-> rembarer sarah sans calin et sans crêpe = sadique
+
 	
 	////////// LVL002 ////////////
 
@@ -63,14 +72,14 @@
 
 	rien à voir avec le lvl002, mais à faire :
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
-	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exteiruer est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
-	- actions red et yellow pour changer la couleur du texte (finir le lvl001 et lvl002 + rendre comptabile avec ChoiceRequest)
+	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
 	polish "final" pré-diffusion :
 	- finir les end_lvl du lvl002
 	- l'action "key3 % i_hava_data" est_il encore utilisé ? -> programmer qqun chose pour que les actions puzzlers devienent "finales" (càd qu'on SAIT que par exemple, ouvrir une porte déclanchera la fin du niveau par rapport à la couleur jaune du texte, mais le faciliter à partir de Java)
 	- faire les plantes
 	- prévenir que la fusillade n'est pas finie
+	- prévenir que le choix n'est pas terminé, ou le réorienté de la même façon que le scénario "inquery", qui au passage devrait être orienté de façon encore plus explicite (càd, parler explicitement du developpeur)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
