@@ -58,14 +58,17 @@
 	rr000 - lorsque Sarah est arrivé, on peut "ouvrir" la porte (ce qui soflock le jeu). Le problème vient de la façon dont les Action_Request:null sont codées : en enchainer 3 n'est pas équivalent à un TA_NULL
 	lvl002 - (bombe path) si le commissaire noous voit, il a les dialogues du bureau qui se déclanche
 
+	cowboy puzzle par terminé et pas relié au cowboy
+
 	- lvl001 
 		-> proposer une couverture -> karma +
 		-> prêter un livre -> karma +
-		-> derniere cazction positive ?
+		-> derniere action positive ?
 	(noter que 2 actions positives = karma angélique)
 	
 		-> rembarer sarah sans calin = méchant
 		-> rembarer sarah sans calin et sans crêpe = sadique
+	séquestrer sarah devrait être + évident (essayer quand elle est aux toilettes)
 
 	
 	////////// LVL002 ////////////
