@@ -1,52 +1,71 @@
-% FIRST_DOOR
+% SPEEDRUN
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois déverrouiller la porte au bout du couloir.
+player = object = unhappy = Ce policier reviendra avant que je n'aie le temps de trouver des réponses…
+player = object = sad = Si seulement il pouvait rester à l'extérieur…
 
 
-% FIRST_DOOR_NO_KEY
-player = object = laugh = Je suis sûre que je vais trouver la clé@en fouillant un peu partout.
-
-
-% ALICIA
+% DIVERSION
 player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
-player = object = happy = Une clé verte ou des bombes cyan devrait m'aider.
+player = object = happy_var = Sarah et moi allons infiltrer le commissariat.@Ça va être amusant !
+player = object = you_silly = Je devrais rester près d'elle.@Elle va bientôt me parler de son plan.
 
 
-% ALICIA_CANT_HELP
+% DIVERSION_READY
 player = object = asleep = Voyons voir…
-player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes cyan.
-player = object = sad = À moins d'avoir une clé verte,@elle est définitivement bloquée.
+player = LEFT = sad = Sarah doit divertir la policière pour que je m'infiltre.
+player = LEFT = camera_sad = Si je n'y arrive pas du premier coup, il va falloir réessayer.
 
 
-% NO_BOMB
+% SARAH_IS_BUSTED
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = Je devrais commencer par récupérer des bombes.
+player = object = cry = Sarah a été enfermée !
+player = object = yeux fermées = Pas de panique Rebecca… Réfléchis…
+player = object = ? = La première chose à faire, c'est de me déguiser@en policière pour ne pas attirer l'attention.
 
 
-% HAS_BOMB
+% CRIMINAL
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = Je peux retourner à l'entrée et utiliser des bombes.
-
-
-% TRAPPED
-player = object = asleep = Voyons voir…
-player = object = unhappy = Je suis piégée. Je dois trouver un moyen de sortir.
-
-
-% TRAPPED_WITH_ALICIA
-player = object = asleep = Voyons voir…
-player = object = unhappy = Alicia et moi sommes piégées.@Nous devons trouver un moyen de sortir.
+player = object = ? = Je pourrais attirer l'attention des policiers si je leur en demande trop.
+player = object = ? = Seul un criminel pourrait m'aider à l'heure actuelle.
 
 
 % GREEN_KEY
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = La clé verte va se montrer très pratique !
+player = object = unhappy = Je dois demander la clef verte au policier dans le bureau avec des bareaux.
 
 
-% EXPLOSIONS
+% COFFEE
 player = object = asleep = Voyons voir…
-player = object = laugh = Qu'est-ce que c'est amusant de@tout faire exploser !
+player = object = ? = Je dois ramener un café au policier dans le bureau avec des bareaux.
+
+
+% COFFEE_POLICEMAN
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je dois ramener un café au policier dans le bureau avec des bareaux.
+player = object = unhappy = Mais la machine à café est en panne…@Un autre policier en aura peut-être un.
+
+
+% DONUT_CRIMINAL
+player = object = asleep = Voyons voir…
+player = object = ? = Je dois trouver un donut pour l'échanger au policier contre un café.
+player = object = ? = Je ne peux avoir ce donut qu'auprès d'un contrebandier.
+
+
+% DONUT
+player = object = asleep = Voyons voir…
+player = object = happy_var = J'ai récupéré un donut ! Je n'ai plus qu'à l'échanger au policier contre un café.
+
+
+% ARCHIVES
+player = object = asleep = Voyons voir…
+player = object = convinced/determinned = Grâce à la clef verte, je récupère une pelle cyan.@Grâce à la pelle cyan, je gagne la clef jaune auprès du mystérieux détenu.
+
+
+% TEDDY_YELLOW_KEY
+player = object = asleep = Voyons voir…
+player = object = convinced/determinned = Puisque ce criminel ne veut pas m'apprendre à accéder aux archives, je vais devoir demnader à un autre…
+
+
+% DOCUMENTS
+player = object = asleep = Voyons voir…
+player = object = ? = J'ai enfin accès aux archives ! Je vole les documents, et je pars avec.
