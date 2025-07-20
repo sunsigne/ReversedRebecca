@@ -4,7 +4,7 @@ player = object = unhappy = Ce policier reviendra avant que je n'aie le temps de
 player = object = sad = Si seulement il pouvait rester à l'extérieur…
 
 
-% DIVERSION
+% BEFORE_PLAN
 player = object = asleep = Voyons voir…
 player = object = happy_var = Sarah et moi allons infiltrer le commissariat.@Ça va être amusant !
 player = object = you_silly = Je devrais rester près d'elle.@Elle va bientôt me parler de son plan.
@@ -16,7 +16,7 @@ player = LEFT = sad = Sarah doit divertir la policière pour que je m'infiltre.
 player = LEFT = camera_sad = Si je n'y arrive pas du premier coup, il va falloir réessayer.
 
 
-% SARAH_IS_BUSTED
+% SARAH_DETENTION
 player = object = asleep = Voyons voir…
 player = object = cry = Sarah a été enfermée !
 player = object = yeux fermées = Pas de panique Rebecca… Réfléchis…
