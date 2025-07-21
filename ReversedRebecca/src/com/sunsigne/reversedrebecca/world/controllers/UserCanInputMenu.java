@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
 public class UserCanInputMenu extends WorldControllers {
@@ -28,6 +29,11 @@ public class UserCanInputMenu extends WorldControllers {
 	public void inputPressed(int key, int button) {
 		if (key != KeyEvent.VK_ESCAPE && button != ButtonEvent.START)
 			return;
+
+		if (PausePreventer.state != null) {
+			PausePreventer.createDisabledPauseObject();
+			return;
+		}
 
 		if (MenuIngameController.getMenu() == null) {
 			if (LAYER.MENU.getHandler().getList().isEmpty())

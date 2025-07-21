@@ -1,6 +1,12 @@
 Loading = Chargement
 ProgressSaved = Progression sauvegardée
 
+///// PAUSE /////
+
+DisabledPause = PAUSE TEMPORAIREMENT DESACTIVE
+DisabledPauseMusic = Raison : Musique trop cool
+DisabledPauseWimp = Raison : le joueur n'assume pas de se faire botter le cul
+
 ///// GAME OVER /////
 
 GameOver = Game Over

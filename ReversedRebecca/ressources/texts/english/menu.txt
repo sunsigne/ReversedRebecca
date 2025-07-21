@@ -1,6 +1,12 @@
 Loading = Loading
 ProgressSaved = Progress saved
 
+///// PAUSE /////
+
+DisabledPause = PAUSE TEMPORARILY DISABLED
+DisabledPauseMusic = Reason : Music too cool
+DisabledPauseWimp = Reason : the player is trying not to get its ass kicked by pausing
+
 ///// GAME OVER /////
 
 GameOver = You lose
