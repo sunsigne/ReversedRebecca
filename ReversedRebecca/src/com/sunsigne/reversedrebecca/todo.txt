@@ -56,12 +56,9 @@
 
 	bug :
 	rr000 - lorsque Sarah est arrivé, on peut "ouvrir" la porte (ce qui soflock le jeu). Le problème vient de la façon dont les Action_Request:null sont codées : en enchainer 3 n'est pas équivalent à un TA_NULL
-	lvl002 - (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
-
-	cowboy puzzle par terminé et pas relié au cowboy
 
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
-	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
 	- lvl001 
 		-> proposer une couverture -> karma +
@@ -73,14 +70,18 @@
 		-> rembarer sarah sans calin et sans crêpe = sadique
 	séquestrer sarah devrait être + évident (essayer quand elle est aux toilettes)
 
+	les prochains objectifs :
+	- implémenter les dessins de double Y et son code particulier
+
 	
 	////////// LVL002 ////////////
 
-	les prochains objectifs :
-	- mettre à jour la fusillade
-	- implémenter les dessins de double Y et son code particulier
+	bug :
+	lvl002 - (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
 
 	polish "final" pré-diffusion :
+	- cowboy puzzle par terminé et pas relié au cowboy
+	- mettre à jour la fusillade
 	- finir les actions end_lvl et psychopath du lvl002
 	- l'action "key3 % i_hava_data" est_il encore utilisé ? -> programmer qqun chose pour que les actions puzzlers devienent "finales" (càd qu'on SAIT que par exemple, ouvrir une porte déclanchera la fin du niveau par rapport à la couleur jaune du texte, mais le faciliter à partir de Java)
 	- faire les plantes
@@ -436,6 +437,7 @@
 
 	polish : 
 	digpuzzle : ajouter animation de rocher (buche / buisson) qui se casse
+	le PausePreventer devrait s'activer lors des combats de boss où on a peu de points de vie en hardcode
 
 	Psycopathe :
 	Combat normal contre blast-X

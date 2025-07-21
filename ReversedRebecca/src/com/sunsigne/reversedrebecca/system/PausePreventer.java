@@ -1,15 +1,37 @@
 package com.sunsigne.reversedrebecca.system;
 
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.object.DisabledPauseObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class PausePreventer {
 
 	public static PAUSE_STATE state;
+	private static HashMap<String, Integer> map = new HashMap<>();
 
-	public static void createDisabledPauseObject() {
+	public void loadRessources() {
+		map.put("dave_theme_gunshot", Game.SEC * (60 + 31));
+		map.put("c_est_moi_qui_domine", Game.SEC * (120 + 46));
+	}
+
+	public void createDisabledPauseObject() {
 		DisabledPauseObject noPause = new DisabledPauseObject();
 		LAYER.DEBUG.addObject(noPause);
+	}
+
+	public void analyzeMusic(String musicName) {
+		if(musicName == null)
+			return;
+		
+		Integer timer = map.get(musicName);
+		if (timer == null)
+			return;
+
+		state = PAUSE_STATE.MUSIC;
+		new GameTimer(timer, true, () -> state = null);
 	}
 
 	////////// PAUSE STATE ////////////

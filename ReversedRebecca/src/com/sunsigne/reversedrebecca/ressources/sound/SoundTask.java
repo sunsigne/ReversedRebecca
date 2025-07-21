@@ -11,6 +11,7 @@ import javax.sound.sampled.LineUnavailableException;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class SoundTask implements CameraDependency {
@@ -62,6 +63,7 @@ public class SoundTask implements CameraDependency {
 					return;
 
 				musicName = path;
+				new PausePreventer().analyzeMusic(musicName);
 				Clip musicClip = AudioSystem.getClip();
 				musicClip.open(clip);
 

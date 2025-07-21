@@ -43,6 +43,7 @@ public class RessourceLoader {
 		new Piranha().loadRessources();
 		new Textures().loadRessources();
 		new Achievements().loadRessources();
+		new PausePreventer().loadRessources();
 	}
 
 }

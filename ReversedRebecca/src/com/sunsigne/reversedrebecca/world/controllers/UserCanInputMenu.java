@@ -31,7 +31,7 @@ public class UserCanInputMenu extends WorldControllers {
 			return;
 
 		if (PausePreventer.state != null) {
-			PausePreventer.createDisabledPauseObject();
+			new PausePreventer().createDisabledPauseObject();
 			return;
 		}
 
