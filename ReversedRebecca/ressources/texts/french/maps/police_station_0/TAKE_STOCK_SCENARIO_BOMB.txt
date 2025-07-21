@@ -1,26 +1,27 @@
 % OUTSIDE
 player = object = asleep = Voyons voir…
-player = object = convinced/determinned = Je vais passer par l'extérieur et faire@exploser un mur pour trouver une entrée.
+player = object = convinced = Je dois passer par l'extérieur et faire@exploser un mur pour trouver une entrée.
 
 
 % CRIMINAL
 player = object = asleep = Voyons voir…
-player = object = ? = J'ai attiré l'attention avec l'explosion.@Je ne peux pas être vue par un policier.
-player = object = camera_sad = Seul un criminel pourrait m'aider à l'heure actuelle.
+player = object = unhappy = J'ai attiré l'attention avec l'explosion.@Je ne peux pas être vue par un policier.
+player = object = sad = Seul un criminel pourrait m'aider à l'heure actuelle.
 
 
 % EMAIL_DESK
 player = object = asleep = Voyons voir…
-player = object = convinced/determinned = Je dois divertir le commissaire pour accéder à son bureau.
-player = object = happy_var = L'ordinateur du policier qui est dans@les toilettes fera parfaitement l'affaire !
+player = object = convinced = Je dois divertir le commissaire avec un email@sur son téléphone, pour accéder à son bureau.
+player = object = happy_var = L'ordinateur du policier qui est dans les toilettes@fera parfaitement l'affaire !
 
 
 % ARCHIVES
 player = object = asleep = Voyons voir…
-player = object = ? = En échange de la pelle cyan, j'ai accès à l'intérieur de la cellule ; donc aux archives.
-player = object = ? = Je vole les documents, et je pars avec.
+player = object = happy = En échange de la pelle cyan, j'ai accès à l'intérieur@
+de la cellule ; donc aux archives.
+player = object = laugh = Je vole les documents, et je pars avec.
 
 
 % EXIT
 player = object = asleep = Voyons voir…
-player = object = you_silly = Ma pelle va me permettre de sortir.@Je dois juste trouver l'endroit idéal pour creuser.
+player = object = you_silly = Je peux sortir grâce à ma pelle. Je dois@juste trouver l'endroit idéal pour creuser.

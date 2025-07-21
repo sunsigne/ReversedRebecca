@@ -1,71 +1,79 @@
 % SPEEDRUN
 player = object = asleep = Voyons voir…
-player = object = unhappy = Ce policier reviendra avant que je n'aie le temps de trouver des réponses…
-player = object = sad = Si seulement il pouvait rester à l'extérieur…
+player = object = unhappy = Ce policier reviendra avant que je n'aie le temps@de trouver des réponses…
+player = object = sad = Je suis ici parce que je me suis cachée en bas.@Je devrais peut-être réessayer ?
 
 
 % BEFORE_PLAN
 player = object = asleep = Voyons voir…
 player = object = happy_var = Sarah et moi allons infiltrer le commissariat.@Ça va être amusant !
-player = object = you_silly = Je devrais rester près d'elle.@Elle va bientôt me parler de son plan.
+player = object = you_silly = Je ne vais pas trop m'éloigner.@Elle va bientôt me parler de son plan.
 
 
 % DIVERSION_READY
 player = object = asleep = Voyons voir…
-player = LEFT = sad = Sarah doit divertir la policière pour que je m'infiltre.
-player = LEFT = camera_sad = Si je n'y arrive pas du premier coup, il va falloir réessayer.
+player = LEFT = unhappy_var = Sarah dois divertir la policière pour que je m'infiltre.
+player = LEFT = sad_var = Si je n'y arrive pas, il faut réessayer.
+
+
+% SARAH_DETENTION_KEY
+player = object = asleep = Voyons voir…
+player = object = surprised = Sarah a été enfermée !
+player = object = sad_var = Pas de panique Rebecca… Réfléchis…
+player = object = angry = La première chose à faire, c'est de récupérer@la clé cyan sur le bureau de cette vilaine policière.
 
 
 % SARAH_DETENTION
 player = object = asleep = Voyons voir…
-player = object = cry = Sarah a été enfermée !
-player = object = yeux fermées = Pas de panique Rebecca… Réfléchis…
-player = object = ? = La première chose à faire, c'est de me déguiser@en policière pour ne pas attirer l'attention.
+player = object = surprised = Sarah a été enfermée !
+player = object = sad_var = Pas de panique Rebecca… Réfléchis…
+player = object = sad = La première chose à faire, c'est de me déguiser@en policière pour ne pas attirer l'attention.
 
 
 % CRIMINAL
 player = object = asleep = Voyons voir…
-player = object = ? = Je pourrais attirer l'attention des policiers si je leur en demande trop.
-player = object = ? = Seul un criminel pourrait m'aider à l'heure actuelle.
+player = object = unhappy = Je pourrais attirer l'attention des policiers,@si je leur en demande trop.
+player = object = sad = Seul un criminel pourrait m'aider à l'heure actuelle.
 
 
 % GREEN_KEY
 player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois demander la clef verte au policier dans le bureau avec des bareaux.
+player = object = happy = Je dois demander la clef verte au policier@dans le bureau avec des barreaux.
 
 
 % COFFEE
 player = object = asleep = Voyons voir…
-player = object = ? = Je dois ramener un café au policier dans le bureau avec des bareaux.
+player = object = happy = Je dois ramener un café au policier dans@le bureau avec des barreaux.
 
 
 % COFFEE_POLICEMAN
 player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois ramener un café au policier dans le bureau avec des bareaux.
-player = object = unhappy = Mais la machine à café est en panne…@Un autre policier en aura peut-être un.
+player = object = happy = Je dois ramener un café au policier dans@le bureau avec des barreaux.
+player = object = unhappy_var = Mais la machine à café est en panne…@Un autre policier en aura peut-être un.
 
 
 % DONUT_CRIMINAL
 player = object = asleep = Voyons voir…
-player = object = ? = Je dois trouver un donut pour l'échanger au policier contre un café.
-player = object = ? = Je ne peux avoir ce donut qu'auprès d'un contrebandier.
+player = object = happy = Je dois trouver un donut pour l'échanger@au policier contre un café.
+player = object = sad = Je ne peux avoir ce donut qu'auprès d'un@contrebandier.
 
 
 % DONUT
 player = object = asleep = Voyons voir…
-player = object = happy_var = J'ai récupéré un donut ! Je n'ai plus qu'à l'échanger au policier contre un café.
+player = object = laugh = J'ai récupéré un donut ! Je n'ai plus qu'à@l'échanger au policier contre un café.
 
 
 % ARCHIVES
 player = object = asleep = Voyons voir…
-player = object = convinced/determinned = Grâce à la clef verte, je récupère une pelle cyan.@Grâce à la pelle cyan, je gagne la clef jaune auprès du mystérieux détenu.
+player = object = convinced = Grâce à la clef verte, je récupère une pelle cyan.
+player = object = convinced = Grâce à la pelle cyan, je gagne la clef jaune@auprès du mystérieux détenu.
 
 
 % TEDDY_YELLOW_KEY
 player = object = asleep = Voyons voir…
-player = object = convinced/determinned = Puisque ce criminel ne veut pas m'apprendre à accéder aux archives, je vais devoir demnader à un autre…
+player = object = sad = Puisque ce criminel ne veut pas m'aider à accéder@aux archives, je vais devoir demander à un autre…
 
 
 % DOCUMENTS
 player = object = asleep = Voyons voir…
-player = object = ? = J'ai enfin accès aux archives ! Je vole les documents, et je pars avec.
+player = object = laugh = J'ai enfin accès aux archives !@Je vole les documents, et je pars avec.
