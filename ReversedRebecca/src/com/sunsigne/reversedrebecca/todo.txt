@@ -60,6 +60,9 @@
 
 	cowboy puzzle par terminé et pas relié au cowboy
 
+	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
+	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+
 	- lvl001 
 		-> proposer une couverture -> karma +
 		-> prêter un livre -> karma +
@@ -77,12 +80,8 @@
 	- mettre à jour la fusillade
 	- implémenter les dessins de double Y et son code particulier
 
-	rien à voir avec le lvl002, mais à faire :
-	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
-	- lvl001 _ bug : le joueur qui commence à faire le puzzble bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
-
 	polish "final" pré-diffusion :
-	- finir les end_lvl du lvl002
+	- finir les actions end_lvl et psychopath du lvl002
 	- l'action "key3 % i_hava_data" est_il encore utilisé ? -> programmer qqun chose pour que les actions puzzlers devienent "finales" (càd qu'on SAIT que par exemple, ouvrir une porte déclanchera la fin du niveau par rapport à la couleur jaune du texte, mais le faciliter à partir de Java)
 	- faire les plantes
 	- prévenir que la fusillade n'est pas finie
