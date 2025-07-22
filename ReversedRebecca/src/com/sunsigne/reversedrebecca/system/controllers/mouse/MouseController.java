@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.system.controllers.mouse;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -23,6 +25,8 @@ public class MouseController extends MouseAdapter {
 	////////// MOUSE ////////////
 
 	private MouseUserEvent mouseUserEvent;
+	public ConcurrentLinkedQueue<MouseEvent> mousePressedEvent = new ConcurrentLinkedQueue<>();
+	public ConcurrentLinkedQueue<MouseEvent> mouseReleasedEvent = new ConcurrentLinkedQueue<>();
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
@@ -35,7 +39,7 @@ public class MouseController extends MouseAdapter {
 		ControllerManager.getInstance().setUsingGamepad(false);
 
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
-			mouseUserEvent.mousePressed(e);
+			mousePressedEvent.add(e);
 	}
 
 	@Override
@@ -43,7 +47,24 @@ public class MouseController extends MouseAdapter {
 		ControllerManager.getInstance().setUsingGamepad(false);
 
 		if (LAYER.LOADING.getHandler().getList().isEmpty())
-			mouseUserEvent.mouseReleased(e);
+			mouseReleasedEvent.add(e);
+	}
+
+	////////// TICK ////////////
+
+	public static void tick() {
+		MouseEvent e;
+		for (MouseListener tempMouseListener : Game.getInstance().getMouseListeners()) {
+			if (tempMouseListener instanceof MouseController == false)
+				continue;
+
+			MouseController tempMouseController = (MouseController) tempMouseListener;
+			while ((e = tempMouseController.mousePressedEvent.poll()) != null)
+				tempMouseController.mouseUserEvent.mousePressed(e);
+
+			while ((e = tempMouseController.mouseReleasedEvent.poll()) != null)
+				tempMouseController.mouseUserEvent.mouseReleased(e);
+		}
 	}
 
 }

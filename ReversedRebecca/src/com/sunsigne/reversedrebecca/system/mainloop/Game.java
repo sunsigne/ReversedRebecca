@@ -19,6 +19,8 @@ import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadUpdate;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
 import net.java.games.input.ControllerEnvironment;
 
@@ -202,10 +204,10 @@ public class Game extends Canvas implements Runnable {
 
 		final long BYTE_TO_MB_CONVERSION_VALUE = 1024 * 1024;
 		final int MAX_ACCEPTABLE_VALUE = 80;
-		
-		Runtime runtime = Runtime.getRuntime();		
+
+		Runtime runtime = Runtime.getRuntime();
 		long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / BYTE_TO_MB_CONVERSION_VALUE;
-		
+
 		if (usedMemory < MAX_ACCEPTABLE_VALUE)
 			System.out.println("Used memory : " + usedMemory + " MB");
 		else
@@ -227,6 +229,8 @@ public class Game extends Canvas implements Runnable {
 
 	private void tick() {
 		GamepadManager.tick();
+		MouseController.tick();
+		KeyboardController.tick();
 		SuperHandler.tick();
 	}
 
