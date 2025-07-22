@@ -54,9 +54,6 @@
 
 	////////// EN COURS ////////////
 
-	bug :
-	rr000 - lorsque Sarah est arrivé, on peut "ouvrir" la porte (ce qui soflock le jeu). Le problème vient de la façon dont les Action_Request:null sont codées : en enchainer 3 n'est pas équivalent à un TA_NULL
-
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
 	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
