@@ -9,15 +9,29 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.cowboy.CowboyPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFree, CollisionReactor {
+public class CowboyHoleObject extends PuzzleObject implements TickFree, SheetableImage, CollisionDetector {
 
-	public CowboyTarget(Puzzle puzzle, boolean critical) {
-		super(puzzle, critical, 0, 0, 4 * Size.XL, 4 * Size.XL);
+	public CowboyHoleObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x, y);
+	}
+
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "HOLE";
+	}
+
+	@Override
+	public String toString() {
+		String pos = getX() + "-" + getY();
+		String overBadGuy = ((CowboyPuzzle) getPuzzle()).isWinning() ? "TRUE" : "FALSE";
+
+		return "PUZZLE : " + getName() + " : " + "OVER BAD GUY" + " : " + overBadGuy + " / " + pos;
 	}
 
 	////////// PHYSICS ////////////
@@ -27,18 +41,27 @@ public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFr
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
 
+	////////// VELOCICY ////////////
+
+	// collision detection is disabled when objects are motionless
+
+	@Override
+	public boolean isMotionless() {
+		return false;
+	}
+
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
 
 	@Override
 	public int getSheetSize() {
-		return 4 * 16;
+		return 2 * 16;
 	}
 
 	@Override
 	public int getSheetColCriterion() {
-		return 1;
+		return 3;
 	}
 
 	@Override
@@ -48,38 +71,31 @@ public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFr
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_target");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "bomb_shoot");
 			image = getSheetSubImage(sheet);
 		}
 		return image;
 	}
 
-	//////// RENDER ////////////
+	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
-	//////// COLLISION ////////////
+	////////// COLLISION ////////////
+
+	private CollisionReactor lastCollidedObject;
 
 	@Override
-	public boolean isBlockingSight() {
-		return false;
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
+		this.lastCollidedObject = lastCollidedObject;
 	}
 
 	@Override
-	public boolean isBlockingPath() {
-		return false;
-	}
-
-	@Override
-	public void collidingReaction(CollisionDetector detectorObject) {
-		if (detectorObject instanceof CowboyCursorObject == false)
-			return;
-
-		CowboyCursorObject cursor = (CowboyCursorObject) detectorObject;
-		cursor.erraticMovements();
+	public CollisionReactor getLastCollidedObject() {
+		return lastCollidedObject;
 	}
 
 }

@@ -14,14 +14,26 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class CowboyHatObject extends PuzzleObject implements SheetableImage {
 
-	public CowboyHatObject(Puzzle puzzle, boolean critical) {
-		super(puzzle, critical, 0, 0, 2 * Size.XL, 2 * Size.XL);
+	public CowboyHatObject(Puzzle puzzle, boolean critical, int x, int y) {
+		super(puzzle, critical, x, y, 3 * Size.XL, 3 * Size.XL);
 		setVelX(-speed / 2);
 		setVelY(-speed * 2);
 	}
 
 	private int speed = Size.XS / 2;
 
+	////////// NAME ////////////
+	
+	protected String getName() {
+		return "HAT";
+	}
+
+	@Override
+	public String toString() {
+		String pos = getX() + "-" + getY();		
+		return "PUZZLE : " + getName() + " : " + pos;
+	}
+	
 	////////// PHYSICS ////////////
 
 	@Override
@@ -31,16 +43,12 @@ public class CowboyHatObject extends PuzzleObject implements SheetableImage {
 
 	////////// TICK ////////////
 
-	private int time;
-	private final int MAX_TIMER = 300;
+	private int alpha;
 
 	@Override
 	public void tick() {
 		setVelY(getVelY() + 1);
-
-		time = time + 2;
-		if (time >= MAX_TIMER)
-			getPuzzle().closePuzzle(true);
+		alpha++;
 	}
 
 	////////// TEXTURE ////////////
@@ -59,7 +67,7 @@ public class CowboyHatObject extends PuzzleObject implements SheetableImage {
 
 	@Override
 	public int getSheetColCriterion() {
-		return 3;
+		return 4;
 	}
 
 	@Override
@@ -69,7 +77,7 @@ public class CowboyHatObject extends PuzzleObject implements SheetableImage {
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_badguy");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_living");
 			image = getSheetSubImage(sheet);
 		}
 		return image;
@@ -82,9 +90,9 @@ public class CowboyHatObject extends PuzzleObject implements SheetableImage {
 		int offset = getSize() / 2;
 
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.rotate(Math.toRadians(time * 10), getX() + offset, getY() + offset);
+		g2d.rotate(Math.toRadians(alpha * 20), getX() + offset, getY() + offset);
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		g2d.rotate(Math.toRadians(-time * 10), getX() + offset, getY() + offset);
+		g2d.rotate(Math.toRadians(-alpha * 20), getX() + offset, getY() + offset);
 	}
 
 }

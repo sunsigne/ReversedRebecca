@@ -4,15 +4,17 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyBadGuy;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyCursorObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyHatObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyTarget;
+import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyHoleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyTargetObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cowboy.living.CowboyBadGuyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cowboy.living.CowboyRebeccaObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 
@@ -40,42 +42,75 @@ public abstract class CowboyPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	public abstract CowboyTarget getTarget();
-
-	public abstract CowboyBadGuy getBadGuy();
-
-	public abstract CowboyCursorObject getCursor();
-
 	protected void createTarget() {
-		CowboyTarget target = getTarget();
-		target.setX(getCol(4));
+		CowboyTargetObject target = new CowboyTargetObject(this, isCritical);
+		target.setX(getCol(4) + Size.S);
 		target.setY(getCol(1));
-
 		LAYER.PUZZLE.addObject(target);
 	}
 
+	private CowboyRebeccaObject rebecca;
+
+	protected void createRebecca() {
+		rebecca = new CowboyRebeccaObject(this, isCritical);
+		rebecca.setX(0);
+		rebecca.setY(getCol(3));
+		LAYER.PUZZLE.addObject(rebecca);
+	}
+
+	private CowboyBadGuyObject badGuy;
+
 	protected void createBadGuy() {
-		CowboyBadGuy badGuy = getBadGuy();
+		badGuy = new CowboyBadGuyObject(this, isCritical);
 		badGuy.setX(getCol(10));
 		badGuy.setY(getCol(3));
-
 		LAYER.PUZZLE.addObject(badGuy);
 	}
 
 	protected void createCursor() {
-		CowboyCursorObject cursor = getCursor();
+		CowboyCursorObject cursor = new CowboyCursorObject(this, isCritical);
 		cursor.setX(getCol(1));
 		cursor.setY(getCol(3));
-
 		LAYER.PUZZLE.addObject(cursor);
 	}
 
-	public void createHatObject(int x, int y) {
-		CowboyHatObject hat = new CowboyHatObject(this, isCritical);
-		hat.setX(x);
-		hat.setY(y);
+	private CowboyHoleObject hole;
 
-		LAYER.PUZZLE.addObject(hat);
+	public void createHoleObject(int x, int y) {
+		rebecca.cycle();
+		badGuy.cycle();
+		hole = new CowboyHoleObject(this, isCritical, x, y);
+		LAYER.PUZZLE.addObject(hole);
+	}
+
+	private boolean winning;
+
+	public boolean isWinning() {
+		return winning;
+	}
+
+	public void setWinning(boolean winning) {
+		badGuy.cycle();
+		rebecca.cycle();
+		rebecca.cycle();
+		rebecca.cycle();
+		rebecca.cycle();
+		this.winning = winning;
+	}
+
+	////////// TICK ////////////
+
+	private int time = 150;
+
+	@Override
+	public void tick() {
+		if (hole == null)
+			return;
+
+		time--;
+
+		if (time <= 0)
+			closePuzzle(winning);
 	}
 
 	////////// TEXTURE ////////////

@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.cowboy.CowboyPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -30,6 +31,20 @@ public class CowboyCursorObject extends PuzzleObject
 	}
 
 	private int speed = Size.XS / 3;
+
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "CURSOR";
+	}
+
+	@Override
+	public String toString() {
+		String pos = getRow(getX()) + "-" + getCol(getY());
+		String erratic = radX != 0 ? "(erratic)" : "";
+
+		return "PUZZLE : " + getName() + " : " + pos + " " + erratic;
+	}
 
 	////////// PHYSICS ////////////
 
@@ -88,10 +103,12 @@ public class CowboyCursorObject extends PuzzleObject
 	private int radY;
 
 	public void erraticMovements() {
-		int Xrange = 20;
-		int Yrange = 150;
+		int Xrange = 80;
+		int Yrange = 200;
 		radX = new RandomGenerator().getIntBetween(-Xrange, Xrange);
 		radY = new RandomGenerator().getIntBetween(-Yrange, Yrange);
+		while (Math.abs(radY) < 20)
+			erraticMovements();
 	}
 
 	@Override
@@ -114,15 +131,25 @@ public class CowboyCursorObject extends PuzzleObject
 		return cursorPressed;
 	}
 
+	private boolean hasFired;
+	
 	@Override
 	public void mousePressed(MouseEvent e) {
+		if (isInPauseMenu())
+			return;
+
+		if (hasFired == true)
+			return;
+
+		hasFired = true;
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "shoot");
-		cursorPressed = true;
+		CowboyPuzzle puzzle = (CowboyPuzzle) getPuzzle();
+		puzzle.createHoleObject(getX() + radX, getY() + radY);
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		cursorPressed = false;
+
 	}
 
 	////////// GAMEPAD ////////////

@@ -54,6 +54,12 @@
 
 	////////// EN COURS ////////////
 
+	jeu cowboy :
+		- faire les différents visuel en fonction du look de rebecca (+ code adaptatif)
+		- dans CowboyRebecca, nulifier sustématiquement la variable "images" une fois qu'on a parlé au moine (ça fonctionnera parfaitement comme ça) -> partir sur le boolean du puzzle critique ?
+		- finir les cheuveux de rebecca, et le chapeau
+		- succès si on tire sur son propre chapeau
+
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
 	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
