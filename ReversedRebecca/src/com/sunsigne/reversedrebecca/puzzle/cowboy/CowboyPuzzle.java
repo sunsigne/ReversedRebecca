@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyBadGuy;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyCursorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyHatObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyTarget;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -47,16 +48,16 @@ public abstract class CowboyPuzzle extends Puzzle {
 
 	protected void createTarget() {
 		CowboyTarget target = getTarget();
-		target.setX(getCol(6));
-		target.setY(getCol(3));
+		target.setX(getCol(4));
+		target.setY(getCol(1));
 
 		LAYER.PUZZLE.addObject(target);
 	}
 
 	protected void createBadGuy() {
 		CowboyBadGuy badGuy = getBadGuy();
-		badGuy.setX(getCol(11));
-		badGuy.setY(getCol(2));
+		badGuy.setX(getCol(10));
+		badGuy.setY(getCol(3));
 
 		LAYER.PUZZLE.addObject(badGuy);
 	}
@@ -69,18 +70,26 @@ public abstract class CowboyPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(cursor);
 	}
 
+	public void createHatObject(int x, int y) {
+		CowboyHatObject hat = new CowboyHatObject(this, isCritical);
+		hat.setX(x);
+		hat.setY(y);
+
+		LAYER.PUZZLE.addObject(hat);
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetColCriterion() {
-		return 5;
+		return 6;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		Color cyan = new Color(50, 175, 185, 240);
+		Color cyan = new Color(215, 160, 50, 240);
 		new TransluantLayer().drawPuzzle(g, cyan);
 	}
 

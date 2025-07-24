@@ -16,12 +16,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFree, CollisionReactor {
 
-	protected CowboyTarget(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
-		super(puzzle, critical, x, y, w, h);
-	}
-
 	public CowboyTarget(Puzzle puzzle, boolean critical) {
-		this(puzzle, critical, 0, 0, 2 * Size.M, 2 * Size.M);
+		super(puzzle, critical, 0, 0, 4 * Size.XL, 4 * Size.XL);
 	}
 
 	////////// PHYSICS ////////////
@@ -37,12 +33,12 @@ public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFr
 
 	@Override
 	public int getSheetSize() {
-		return 2 * 16;
+		return 4 * 16;
 	}
 
 	@Override
 	public int getSheetColCriterion() {
-		return 6;
+		return 1;
 	}
 
 	@Override
@@ -52,7 +48,7 @@ public class CowboyTarget extends PuzzleObject implements SheetableImage, TickFr
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_target");
 			image = getSheetSubImage(sheet);
 		}
 		return image;

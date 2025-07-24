@@ -9,24 +9,19 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.cowboy.CowboyPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class CowboyBadGuy extends PuzzleObject implements SheetableImage, TickFree, CollisionReactor {
 
-	public CowboyBadGuy(Puzzle puzzle, boolean isActive, int x, int y, int w, int h) {
-		super(puzzle, isActive, x, y, w, h);
+	public CowboyBadGuy(Puzzle puzzle, boolean isCritical) {
+		super(puzzle, isCritical, 0, 0, 3 * Size.XL, 3 * Size.XL);
 	}
-
-	public CowboyBadGuy(Puzzle puzzle, boolean isActive) {
-		this(puzzle, isActive, 0, 0, 2 * Size.XL, 2 * Size.XL);
-	}
-
-	//////// COWBOY ////////////
-
-	private boolean isActive;
 
 	////////// PHYSICS ////////////
 
@@ -37,14 +32,22 @@ public class CowboyBadGuy extends PuzzleObject implements SheetableImage, TickFr
 
 	////////// TEXTURE ////////////
 
+	private BufferedImage image;
+	private BufferedImage hatless_image;
+
 	@Override
-	public int getSheetSize() {
-		return 2 * 32;
+	public int getSheetWidth() {
+		return 144;
+	}
+
+	@Override
+	public int getSheetHeight() {
+		return 171;
 	}
 
 	@Override
 	public int getSheetColCriterion() {
-		return 2;
+		return 1;
 	}
 
 	@Override
@@ -52,32 +55,37 @@ public class CowboyBadGuy extends PuzzleObject implements SheetableImage, TickFr
 		return 1;
 	}
 
-	private BufferedImage image;
-
 	public BufferedImage getImage() {
-
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "bomb_bomb");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_badguy");
 			image = getSheetSubImage(sheet);
 		}
-
-		if (!isActive) {
-			BufferedImage deadBadGuyImage = new ImageTask().loadImage("textures/puzzle/" + "bomb_explosion");
-			image = getSheetSubImage(deadBadGuyImage);
-		}
-
 		return image;
+	}
+
+	public BufferedImage getHatlessImage() {
+		if (hatless_image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cowboy_badguy");
+			hatless_image = getSheetSubImage(sheet, 2);
+		}
+		return hatless_image;
 	}
 
 	//////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		BufferedImage img = getImage();
+		if (isHatless)
+			img = getHatlessImage();
+
+		g.drawImage(img, getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 	//////// COLLISION ////////////
-
+	
+	private boolean isHatless;
+	
 	@Override
 	public boolean isBlockingSight() {
 		return false;
@@ -90,16 +98,19 @@ public class CowboyBadGuy extends PuzzleObject implements SheetableImage, TickFr
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (isActive == false)
+		if (isHatless)
 			return;
-		
-		if ((detectorObject instanceof CowboyCursorObject) == false)
+
+		if (detectorObject instanceof CowboyCursorObject == false)
 			return;
 
 		CowboyCursorObject cursor = (CowboyCursorObject) detectorObject;
 
 		if (cursor.isCursorPressed()) {
-			isActive = false;
+			isHatless = true;
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "shoot_gun");
+			CowboyPuzzle puzzle = (CowboyPuzzle) getPuzzle();
+			puzzle.createHatObject(getX(), getY());
 		}
 	}
 

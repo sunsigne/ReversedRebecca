@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
@@ -51,7 +53,6 @@ public class CowboyCursorObject extends PuzzleObject
 			setVelX(speed);
 
 		radX = radY = 0;
-		cursorPressed = false;
 	}
 
 	////////// TEXTURE ////////////
@@ -115,6 +116,7 @@ public class CowboyCursorObject extends PuzzleObject
 
 	@Override
 	public void mousePressed(MouseEvent e) {
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "shoot");
 		cursorPressed = true;
 	}
 

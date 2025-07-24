@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.cowboy.CowboyPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 
@@ -37,7 +37,7 @@ public class ConfrontAction extends OpenPuzzleAction {
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListener actionOnWinning, GenericListener actionOnLosing) {
-		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
+		return new CowboyPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
 				actionOnLosing);
 	}
 
