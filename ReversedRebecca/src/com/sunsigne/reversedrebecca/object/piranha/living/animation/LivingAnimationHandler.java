@@ -11,7 +11,7 @@ public class LivingAnimationHandler {
 		loadAnimations();
 	}
 
-	private LivingObject living;
+	protected LivingObject living;
 
 	////////// TICK ////////////
 
@@ -56,7 +56,7 @@ public class LivingAnimationHandler {
 	private LivingAnimation koAnimation;
 	private LivingAnimation koUpsidedownAnimation;
 
-	private void loadAnimations() {
+	protected void loadAnimations() {
 
 		walkingGoodAnimation = new LivingAnimation(living, 15, true, 2, 3);
 		walkingGlassAnimation = new LivingAnimation(living, 15, true, 5, 6);
@@ -79,7 +79,7 @@ public class LivingAnimationHandler {
 
 	////////// RENDER ////////////
 
-	private LivingAnimation getAnimation() {
+	protected LivingAnimation getAnimation() {
 		switch (living.getCondition()) {
 		case GOOD:
 			return getStandingWalkingAnimation(standingGoodAnimation, walkingGoodAnimation);
@@ -108,7 +108,7 @@ public class LivingAnimationHandler {
 		return standingGoodAnimation;
 	}
 
-	private LivingAnimation getStandingWalkingAnimation(LivingAnimation standingAnimation,
+	protected LivingAnimation getStandingWalkingAnimation(LivingAnimation standingAnimation,
 			LivingAnimation walkingAnimation) {
 		if (living.isWalkingInPlace())
 			return walkingAnimation;

@@ -24,7 +24,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	// That's it. A homing rolling pin is then a "LivingObject".
 	public LivingObject(String name, int x, int y) {
 		super(name, x, y);
-		loadAnimation();
+		loadAnimationHandler(new LivingAnimationHandler(this));
 		setMaxHp(1);
 		setFullHp();
 	}
@@ -34,13 +34,13 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	@Override
 	public void setName(String name) {
 		super.setName(name);
-		loadAnimation();
+		loadAnimationHandler(new LivingAnimationHandler(this));
 	}
 	
 	@Override
 	public void setTextureName(String name) {
 		super.setTextureName(name);
-		loadAnimation();
+		loadAnimationHandler(new LivingAnimationHandler(this));
 	}
 
 	////////// FACING ////////////
@@ -214,8 +214,8 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	private LivingAnimationHandler animation;
 
-	private void loadAnimation() {
-		animation = new LivingAnimationHandler(this);
+	protected void loadAnimationHandler(LivingAnimationHandler animationHandler) {
+		animation = animationHandler;
 	}
 
 	public BufferedImage getImage() {

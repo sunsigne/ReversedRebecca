@@ -65,6 +65,11 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 	private int[] col;
 
 	@Override
+	public int getSheetSize() {
+		return living.getPixelSize();
+	}
+	
+	@Override
 	public int getSheetColCriterion() {
 		return -1;
 	}

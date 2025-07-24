@@ -28,6 +28,10 @@ public class CustomHitboxObject extends GameObject implements TickFree, RenderFr
 
 	////////// COLLISION ////////////
 
+	public int getPixelSize() {
+		return 16;
+	}
+	
 	@Override
 	public boolean isBlockingSight() {
 		return false;
@@ -64,7 +68,7 @@ public class CustomHitboxObject extends GameObject implements TickFree, RenderFr
 		case 9:
 			return new int[] { -1, -1, 17, 17 }; // bush
 		default:
-			return new int[] { 0, 0, 16, 16 };
+			return new int[] { 0, 0, getPixelSize(), getPixelSize() };
 		}
 	}
 
