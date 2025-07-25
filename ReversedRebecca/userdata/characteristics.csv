@@ -12,6 +12,10 @@ BombMaxLvl=CYAN
 BombStartLvl=NULL
 BombCriticalChance=0%
 
+CowboyMaxLvl=RED
+CowboyStartLvl=RED
+CowboyCriticalChance=0%
+
 MicrochipMaxLvl=CYAN
 MicrochipStartLvl=NULL
 MicrochipCriticalChance=0%

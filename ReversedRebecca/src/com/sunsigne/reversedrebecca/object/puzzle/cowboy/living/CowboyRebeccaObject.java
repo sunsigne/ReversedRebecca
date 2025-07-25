@@ -50,9 +50,8 @@ public class CowboyRebeccaObject extends CowboyLivingObject {
 
 	@Override
 	protected void loadImages() {
-		/*
-		 * if (isCritical()) images = null; // ne marche pas tout à fait avec le surcrit mod, le critique est peut-être désactivé de base ?
-		 */
+		if (isCritical())
+			images = null;
 
 		if (images != null)
 			return;

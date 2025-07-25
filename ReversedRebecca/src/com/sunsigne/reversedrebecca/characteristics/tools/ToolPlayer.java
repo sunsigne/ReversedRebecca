@@ -34,8 +34,8 @@ public abstract class ToolPlayer implements Difficulty {
 		String content = new FileTask().read(userData, file);
 		String br = System.getProperty("line.separator");
 
-		String maxLine = tool + "MaxLvl=" + LVL.CYAN.getName().toUpperCase();
-		String startLine = tool + "StartLvl=" + LVL.NULL.getName().toUpperCase();
+		String maxLine = tool + "MaxLvl=" + getDefaultMaxDifficulty();
+		String startLine = tool + "StartLvl=" + getDefaultStartDifficulty();
 		String criticalLine = tool + "CriticalChance=" + "0%";
 
 		String new_content = content + br + br + maxLine + br + startLine + br + criticalLine;
@@ -54,6 +54,10 @@ public abstract class ToolPlayer implements Difficulty {
 
 	private LVL max_difficulty = LVL.NULL;
 
+	protected String getDefaultMaxDifficulty() {
+		return LVL.CYAN.getName().toUpperCase();
+	}
+	
 	public LVL getMaxDifficulty() {
 		return getTool().max_difficulty;
 	}
@@ -70,7 +74,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		new UnlockedToolMaxLevelCondition().registerValue(this, getMaxDifficulty());
 	}
-
+	
 	private void loadMaxDifficulty() {
 		if (getMaxDifficulty() != LVL.NULL)
 			return;
@@ -80,7 +84,7 @@ public abstract class ToolPlayer implements Difficulty {
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {
 			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
-			txtDifficulty = "CYAN";
+			txtDifficulty = getDefaultMaxDifficulty();
 		}
 
 		getTool().max_difficulty = LVL.valueOf(txtDifficulty);
@@ -91,6 +95,10 @@ public abstract class ToolPlayer implements Difficulty {
 
 	private LVL start_difficulty;
 
+	protected String getDefaultStartDifficulty() {
+		return LVL.NULL.getName().toUpperCase();
+	}
+	
 	public LVL getStartDifficulty() {
 		return getTool().start_difficulty;
 	}
@@ -115,7 +123,7 @@ public abstract class ToolPlayer implements Difficulty {
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtDifficulty.isEmpty()) {
 			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
-			txtDifficulty = "NULL";
+			txtDifficulty = getDefaultStartDifficulty();
 		}
 
 		getTool().start_difficulty = LVL.valueOf(txtDifficulty);

@@ -125,6 +125,9 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		for (ToolPlayer tempTool : list.getList()) {
 			if (tempTool.getDifficulty() == LVL.NULL)
 				continue;
+			
+			if(tempTool.getNum() <= 0)
+				continue;
 
 			BufferedImage sheet = null;
 			sheet = task.loadImage("textures/tools/" + "tool");
