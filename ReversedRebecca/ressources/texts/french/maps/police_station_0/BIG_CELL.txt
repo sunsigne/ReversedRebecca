@@ -23,7 +23,7 @@ player = teddy = sad = Il sourit, mais ses yeux font froid dans le dos.@Je préf
 % WILLIAM
 william = DOWN = serious = Toi, t'es pas du coin…
 player = william = happy_var = En effet.
-william = DOWN = serious = Une nouvelle adversaire, ça ne se refuse pas.@Tu es partante pour une partie de NOM_DU_JEU ?
+william = DOWN = serious = Une nouvelle adversaire, ça ne se refuse pas.@Tu es partante pour une partie de "Dans le Mille" ?
 player = william = worry = Désolé, je ne connais pas ce jeu…
 william = DOWN = serious = Les règles sont simples, tu prendras le@coup de main en un rien de temps. Alors ?
 player = william = happy = Je vais y réfléchir.
@@ -110,16 +110,16 @@ player = teddy = wrong_with_you = Comment ça, il triche ? Mais quel sale type !
 teddy = player = happy = Il s'amuse, c'est tout. Il reste gentil. Tu perds@juste ton temps, il ne te vole pas ton argent.
 player = teddy = angry = Ça reste malhonnête !
 teddy = player = happy = Teddy est d'accord. C'est pour ça qu'il@va t'enseigner l'astuce pour le battre.
-teddy = player = happy = INSERER L'ASTUCE ICI.
+teddy = player = happy = Au lieu de viser la cible, vise le chapeau.
 player = teddy = convinced = Excellent ! Je n'y aurais jamais pensé toute seule !
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK
-player = william = unhappy = Zut ! J'ai oublié de INSERER L'ASTUCE ICI…
+player = william = you_silly = Zut ! J'avais oublié, mais je suis sensée@viser le cowboy.
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK_VAR
-player = william = you_silly = Quelle tête de linotte…@Je suis sensée INSERER L'ASTUCE ICI.
+player = william = you_silly = Quelle tête de linotte…@Je suis sensée viser le cowboy.
 
 
 % DONUT_WILLIAM_SUCCESS

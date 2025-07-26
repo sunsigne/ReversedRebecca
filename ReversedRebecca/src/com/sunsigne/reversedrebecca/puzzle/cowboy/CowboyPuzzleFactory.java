@@ -118,12 +118,12 @@ public class CowboyPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getOpeningSound() {
-		return "door_key";
+		return "gun_loading";
 	}
 
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return null;
 	}
 
 }

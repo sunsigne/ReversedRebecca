@@ -124,7 +124,7 @@ public abstract class CowboyPuzzle extends Puzzle {
 
 	@Override
 	public void render(Graphics g) {
-		Color cyan = new Color(215, 160, 50, 240);
+		Color cyan = new Color(215, 150, 50, 240);
 		new TransluantLayer().drawPuzzle(g, cyan);
 	}
 
