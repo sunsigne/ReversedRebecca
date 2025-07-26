@@ -1,5 +1,15 @@
-////// MEMORY //////
+////// EARNCRIT //////
 
+Le Type de Requête EARNCRIT permet d'augmenter de façon définitive les chances de déclencher un puzzle critique, pour un outil donné.
+
+Exemple :
+TIME -> 0 = EARNCRIT -> COWBOY, 50
+
+Lorsque la Condition sera vérifiée, les chances d'obtenir un puzzle critique lors de l'utilisation de l'outil "cowboy" augmentent définitivement de 50 %. 
+
+
+
+////// MEMORY //////
 
 Le Type de Requête MEMORY a deux rôles différents en fonction de son Écriture. Lorsqu'elle est "classique", elle permet d'enregistrer une balise, lorsqu'elle est Conditionnelle, elle permet de vérifier si une balise est enregistrée et de choisir la Cible en fonction.
 
