@@ -56,9 +56,7 @@
 
 	jeu cowboy :
 		- faire les différents visuel en fonction du look de rebecca (+ code adaptatif)
-		- quand Teddy donne l'astuce, passée la valeur de CowboyCriticalChance à 100% (ça ajustera le visuel de Rebecca PENDANT le puzzle)
-		- finir les cheuveux de rebecca, et le chapeau ?
-		- succès si on tire sur son propre chapeau ?
+		- finir les cheuveux de rebecca
 
 	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
 	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
