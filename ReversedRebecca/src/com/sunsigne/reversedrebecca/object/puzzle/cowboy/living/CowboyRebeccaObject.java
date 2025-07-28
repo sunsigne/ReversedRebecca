@@ -2,8 +2,10 @@ package com.sunsigne.reversedrebecca.object.puzzle.cowboy.living;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -45,7 +47,19 @@ public class CowboyRebeccaObject extends CowboyLivingObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
+		int row = 2;
+
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return row;
+
+		if (player.getTextureName().contains("rebecca_gothic"))
+			row = 3;
+
+		if (player.getTextureName().contains("rebecca_police"))
+			row = 4;
+
+		return row;
 	}
 
 	@Override
