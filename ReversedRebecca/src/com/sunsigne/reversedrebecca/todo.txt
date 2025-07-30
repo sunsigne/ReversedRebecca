@@ -54,16 +54,14 @@
 
 	////////// EN COURS ////////////
 
-	jeu cowboy :
-		- finir les cheveux de rebecca
-	
-	- lvl001_bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
-
 	////////// LVL002 ////////////
 
 	bug :
-	lvl002 - (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
-	- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
+	lvl001 : 
+		_ le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+	lvl002 :
+		- (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
+		- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
 
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
@@ -104,7 +102,6 @@
 
 	////////// BOSS ////////////
 
-	double-Y se "recoiffe" ou flex ses musles sur sa phase de repos ("ou" veut dire "les deux", mais l'un ou l'autre au hasard)
 	60h à vérifier le boss et tout ce qui est lié à lui
 	30h00 - retravailer le système de boss :
 	18h00 - relire et revoir TOUT le code qui regit les boss et les patterns (faire du clean code, ça a été écrit vite)
@@ -300,6 +297,11 @@
 	- sarah abandonnée
 	- plante volée
 	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
+
+	////////// MOLE 0 ////////////
+
+	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
+	intégrer les poses de YY
 
 	////////// MOLE 0 ////////////
 	

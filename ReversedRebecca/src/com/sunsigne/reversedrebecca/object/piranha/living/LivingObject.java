@@ -212,7 +212,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	////////// TEXTURE ////////////
 
-	private LivingAnimationHandler animation;
+	protected LivingAnimationHandler animation;
 
 	protected void loadAnimationHandler(LivingAnimationHandler animationHandler) {
 		animation = animationHandler;
