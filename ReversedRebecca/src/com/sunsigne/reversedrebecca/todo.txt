@@ -58,15 +58,16 @@
 
 	bug :
 	lvl001 : 
-		_ le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
+		- le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 	lvl002 :
 		- (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
 		- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
 
 	polish "final" pré-diffusion :
+	- les compteurs et les deeds
 	- mettre à jour la fusillade
 	- finir les actions end_lvl et psychopath du lvl002
-	- l'action "key3 % i_hava_data" est_il encore utilisé ? -> programmer qqun chose pour que les actions puzzlers devienent "finales" (càd qu'on SAIT que par exemple, ouvrir une porte déclanchera la fin du niveau par rapport à la couleur jaune du texte, mais le faciliter à partir de Java)
+	- l'action "key3 % i_hava_data" est_il encore utilisé ?
 	- prévenir que la fusillade n'est pas finie
 	- prévenir que le choix n'est pas terminé, ou le réorienté de la même façon que le scénario "inquery", qui au passage devrait être orienté de façon encore plus explicite (càd, parler explicitement du developpeur)
 
