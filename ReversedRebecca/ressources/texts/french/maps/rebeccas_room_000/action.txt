@@ -23,6 +23,7 @@ PLAY = Key1 % jouer
 PLAY_ANYWAY = Key1 % jouer quand meme
 JUST_ONE_GAME = Key1 % juste une partie...
 I_AM_WEAK = Key1 % je suis faible...
+OFFER_TO_PLAY = Key3 % proposer de jouer
 ASK_FOR_KEY = Key3 % où sont mes clés ?
 TALK_ABOUT_CAMILLE = Key1 % parler de Camille
 PHILOSOPHIZE = Key1 % philosopher

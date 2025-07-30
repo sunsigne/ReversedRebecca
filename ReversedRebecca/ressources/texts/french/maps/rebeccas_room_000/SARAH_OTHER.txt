@@ -18,3 +18,8 @@ sarah = DOWN = wink = Va te préparer, je t'attends.
 % WAKE_UP
 player = object = you_silly_var = Après réflexion, je vais la laisser dormir.
 player = object = you_silly = Inutile de la réveiller tant je ne suis pas prête.
+
+
+% OFFER_TO_PLAY
+player = UP = excited = Sarah ! Une petite partie ?
+sarah = DOWN = worry = C'est gentil, mais on se mettrait en retard…

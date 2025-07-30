@@ -55,29 +55,18 @@
 	////////// EN COURS ////////////
 
 	jeu cowboy :
-		- finir les cheuveux de rebecca
-
-	- rr000 et lvl001 équilibrer sadique et angélique (baisser les critères)		
+		- finir les cheveux de rebecca
+	
 	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
-	- lvl001 
-		-> proposer une couverture -> karma +
-		-> prêter un livre -> karma +
-		-> derniere action positive ?
-	(noter que 2 actions positives = karma angélique)
-	
-		-> rembarer sarah sans calin = méchant
-		-> rembarer sarah sans calin et sans crêpe = sadique
-	séquestrer sarah devrait être + évident (essayer quand elle est aux toilettes)
+	karma :
+		séquestrer sarah devrait être + évident (essayer quand elle est aux toilettes)
 
-	les prochains objectifs :
-	- implémenter les dessins de double Y et son code particulier
-
-	
 	////////// LVL002 ////////////
 
 	bug :
 	lvl002 - (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
+	- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
 
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
@@ -90,7 +79,6 @@
 
 	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
 	ControlsScreen : mettre message d'erreur quand clef non assignée
-	AudioScreen : mettre un bouton reset pour remettre à 100% ?
 	digpuzzle : faire clignoter l'outils lorsque récupéré
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
