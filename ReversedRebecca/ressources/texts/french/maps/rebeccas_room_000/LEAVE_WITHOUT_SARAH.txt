@@ -1,3 +1,7 @@
+% NOT_YET
+player = DOWN = you_silly = Si je veux faire ça, je dois attendre le bon moment.
+
+
 % NEUTRAL
 player = DOWN = evil_var2 = Voilà ma chance, elle dort !
 player = DOWN = laugh = Je me demande quelle tête elle fera quand@elle se rendra compte que je l'ai enfermé.

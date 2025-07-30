@@ -1,3 +1,7 @@
+% NOT_YET
+player = DOWN = you_silly = If I want to do this,@I have to wait for the right moment.
+
+
 % NEUTRAL
 player = DOWN = evil_var2 = Here's my chance, she's sleeping!
 player = DOWN = laugh = I would have loved to see the look on her@face when she'll realize I locked her in.

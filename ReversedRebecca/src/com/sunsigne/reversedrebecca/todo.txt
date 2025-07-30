@@ -57,10 +57,7 @@
 	jeu cowboy :
 		- finir les cheveux de rebecca
 	
-	- lvl001 _ bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
-
-	karma :
-		séquestrer sarah devrait être + évident (essayer quand elle est aux toilettes)
+	- lvl001_bug : le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 
 	////////// LVL002 ////////////
 

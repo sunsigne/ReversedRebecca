@@ -50,8 +50,8 @@ SHARE = Key2 % share
 
 ///// ENTRANCE /////
 
-GO_TO_WORK = Key3 % (END_LVL)go to work
-LEAVE_WITHOUT_SARAH = Key3 % (PSYCHOPATH)sequester Sarah
+GO_TO_WORK = Key3 % go to work
+LEAVE_WITHOUT_SARAH = Key3 % sequester Sarah
 BRING_SARAH = Key1 % bring Sarah
 JUST_A_MOMENT = Key1 % just a second...
 WHOS_THERE = Key2 % who's there?
@@ -69,7 +69,7 @@ WERE_TASTY = Key2 % they were tasty
 WE_SHARE = Key1 % let's share
 YES_I_KNOW = Key2 % yes, it does
 I_AM_READY_TOWEL = Key3 % I am ready
-I_AM_READY = Key3 % (END_LVL)I am ready
+I_AM_READY = Key3 % I am ready
 WAKE = Key1 % wake up
 SOAK_SARAH = Key2 % soak Sarah
 I_MADE_PANCAKES = Key3 % I made pancakes
