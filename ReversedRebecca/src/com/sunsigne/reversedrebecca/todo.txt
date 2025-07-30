@@ -57,8 +57,6 @@
 	////////// LVL002 ////////////
 
 	bug :
-	lvl001 : 
-		- le joueur qui commence à faire le puzzle bomb pour dégager l'entrée depuis l'exterieur est bloqué dans une boucle infinie de dialogue alors qu'il peut encore bouger
 	lvl002 :
 		- (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
 		- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
