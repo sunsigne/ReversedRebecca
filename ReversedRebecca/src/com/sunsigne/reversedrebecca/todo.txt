@@ -65,7 +65,7 @@
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
 	- prévenir que la fusillade n'est pas finie
-	- prévenir que le choix n'est pas terminé, ou le réorienté de la même façon que le scénario "inquery", qui au passage devrait être orienté de façon encore plus explicite (càd, parler explicitement du developpeur)
+	- relier le fusil à pompe derrière Butch à la fusillade
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

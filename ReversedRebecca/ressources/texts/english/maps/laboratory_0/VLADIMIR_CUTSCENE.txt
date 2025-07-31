@@ -50,6 +50,6 @@ rebecca = LEFT = happy = Sure.
 sarah = RIGHT = happy_var = "Ok. In that case, I'm going to find us a way out."
 sarah = RIGHT = wink = "Let's have a debrief at the workshop later."
 rebecca = LEFT = happy = Sure.
-Sarah = RIGHT = pervert = Wait a minute, that's what I would have said@if this scenario was over.
+Sarah = RIGHT = pervert = Wait a minute, that's what I would have said@if the developer had finished coding your choice.
 Sarah = RIGHT = wink = It looks like you'l have to find us a way out.@I'm going to question the witnesses.
 Rebecca = LEFT = no_sens = Uh… Ok.
