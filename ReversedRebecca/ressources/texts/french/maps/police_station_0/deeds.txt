@@ -1,0 +1,20 @@
+///// GOOD /////
+
+SMILING_COFFEE = 2 % café en souriant
+LEFT_A_NICE_NOTE = 3 % laisser un mot gentil
+CHEER_UP_SARAH = 4 % réconforter Sarah
+FREE_SARAH = 5 % libérer Sarah
+
+///// BAD /////
+
+LEFT_A_MEAN_NOTE = 3 % laisser un mot méchant
+STEAL_A_COFFEE = 4 % voler un café
+STEAL_A_PLANT = 5 % voler une plante
+SPITTING_IN_A_COFFEE = 9 % cracher dans un café
+INSTALL_A_VIRUS = 10 % installer un virus
+ABANDON_SARAH = 11 % abandonner Sarah
+
+///// PSYCHOPATH /////
+
+FREE_DOUG = 999 % liberer Doug
+COLLATERAL_DAMAGE = 999 % dommages collatéraux
