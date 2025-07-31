@@ -72,5 +72,11 @@ policeman = player = butch = C'est surement le chef qui t'as demandé de toute@f
 policeman = player = butch = Merci. Comme promis, voilà la clef verte.
 
 
+% BUTCH_SPAT
+policeman = player = butch = … … …
+policeman = player = butch_smirk = …
+policeman = player = butch = Comme promis, voilà la clef verte.
+
+
 % BUTCH_TRADE_NEXT
 policeman = player = butch = Mais… Il y a des miettes de donut dans ce café !@C'est qui le gros dégeulasse qui a fait ça !

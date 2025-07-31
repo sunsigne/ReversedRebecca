@@ -1,11 +1,11 @@
 ///// CYAN /////
 
+AmbivalenceTitle = Ambivalence
+AmbivalenceText = Laisser deux mots contradictoires
 ClickHereTitle = C'etait facile
 ClickHereText = Cliquer ici
 CookiesTitle = Tu es diabetique, Becky
 CookiesText = Manger 100 cookies
-SorryJerkTitle = Desole... Ordure !
-SorryJerkText = Laisser deux mots contradictoires
 ConcussionTitle = Commotion cerebrale
 ConcussionText = Se faire assommer par un policier
 EternalSleepTitle = Sommeil Eternel

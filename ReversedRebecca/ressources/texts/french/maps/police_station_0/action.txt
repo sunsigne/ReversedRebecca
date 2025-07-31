@@ -28,11 +28,16 @@ MILK_COFFEE = Key2 % café au lait
 
 ASK_FOR_COFFEE = Key3 % demander le café
 STEAL_THE_COFFEE = Key3 % voler le café
+LEAVE_A_LITTLE_NOTE = Key1 % laisser un petit mot
+INSTALL_A_VIRUS = Key2 % installer un virus
+LEAVE_A_NOTE_NICE = Key1 % "Tu es quelqu'un de bien"
+LEAVE_A_NOTE_MEAN = Key2 % "Personne ne t'aime !"
 I_WOULD_LIKE_A_GREEN_KEY = Key3 % j'aimerais une clé verte
 CHIEF_ASKED_FOR = Key1 % le chef m'a demandé
 FEELING_LIKE_FREEING_THE_INMATES = Key2 % j'ai envie de libérer les détenus
 GIVE_THE_DONUT = Key3 % donner le donut
-GIVE_THE_COFFEE = Key3 % donner le café
+GIVE_WITH_A_SMILE = Key1 % (donner avec le sourire)
+I_SPAT_IN_IT = Key2 % j'ai craché dedans
 WAKE_UP = Key1 % réveiller
 COMMIT_MURDER = Key3 % (PSYCHOPATH)commettre un meutre
 

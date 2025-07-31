@@ -90,6 +90,23 @@ player = RIGHT = no_sens = Je … me suis bloquée à l'extérieur…
 player = DOWN = no_sens_var = La mission est fichue.
 
 
+% VIRUS
+player = DOWN = you_silly = Il aurait pu l'attraper n'importe où. Pas vrai ?
+
+
+% LEAVE_A_NOTE
+player = DOWN = laugh = Et voilà ! Il aura une surprise en revenant !
+
+
+% LEAVE_A_NOTE_AGAIN
+player = DOWN = happy = J'ai déjà écrit ça.
+
+
+% LEAVE_A_NOTE_BOTH
+player = DOWN = evil = Mwahaha ! Le chaos !
+player = DOWN = laugh = Ha ha ha ha !
+
+
 % EMAIL
 player = DOWN = you_silly_var = Je devrais attendre que le commissaire soit@de retour dans son bureau avant de faire ça.
 
