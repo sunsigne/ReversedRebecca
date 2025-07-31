@@ -1,0 +1,3 @@
+EMAILS_SENT = email envoyés
+HOLEY_HATS = chapeaux troués
+BODIES = cadavres

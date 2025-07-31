@@ -62,7 +62,7 @@
 		- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
 
 	polish "final" pré-diffusion :
-	- les compteurs et les deeds
+	- les deeds
 	- mettre à jour la fusillade
 	- finir les actions end_lvl et psychopath du lvl002
 	- l'action "key3 % i_hava_data" est_il encore utilisé ?
