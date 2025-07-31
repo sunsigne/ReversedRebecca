@@ -10,10 +10,9 @@ MOVE_UNDER_VENTILATION = Key2 % déplacer sous la ventilation
 SET_UP_THE_DIVERSION = Key2 % mettre en place la diversion
 TAKE_THE_KEYS = Key2 % prendre les clés
 STEAL = Key2 % voler
-START_THE_DIVERSION = Key2 % (END_LVL)lancer la diversion
-I_HAVE_THE_DATA = Key3 % (END_LVL)j'ai les informations
+START_THE_DIVERSION = Key2 % lancer la diversion
 COME_BACK = Key1 % revenir
-ABANDON_SARAH = Key3 % (END_LVL)abandonner Sarah
+ABANDON_SARAH = Key3 % abandonner Sarah
 
 ///// PRE-CHIEF & CHIEF /////
 
@@ -39,7 +38,7 @@ GIVE_THE_DONUT = Key3 % donner le donut
 GIVE_WITH_A_SMILE = Key1 % (donner avec le sourire)
 I_SPAT_IN_IT = Key2 % j'ai craché dedans
 WAKE_UP = Key1 % réveiller
-COMMIT_MURDER = Key3 % (PSYCHOPATH)commettre un meutre
+COMMIT_MURDER = Key3 % commettre un meutre
 
 ///// BIG JAIL /////
 
