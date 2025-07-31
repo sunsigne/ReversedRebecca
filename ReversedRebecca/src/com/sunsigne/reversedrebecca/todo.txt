@@ -62,11 +62,6 @@
 		- avoir volé la tenue de policier
 		- doug rencontré
 
-	bug :
-	lvl002 :
-		- (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche
-		- softlock : si on a la bombe cyan ET la clé cyan, on peut prendre la route éboulement, puis ouvrir la porte derrière cassidy (il suffirait de provoquer unb game over pour régler le pb)
-
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
 	- finir les actions end_lvl et psychopath du lvl002

@@ -3,4 +3,4 @@ dave = DOWN = camera = Je vais la faire courte parce que le développeur@n'a pas
 dave = DOWN = camera = Rebecca et Sarah ont appris l'identité de l'individu.
 dave = DOWN = camera = Il s'appelle Vladimir, et il est venu voler@les plans d'un projet important.
 dave = DOWN = camera = Maintenant qu'elles ont réussi à sortir,@elles partent porter plainte à la police.
-dave = DOWN = camera = Au passage, Sarah te donne un nouvel objet :
+dave = DOWN = camera = Au passage, Sarah te donne un nouvel objet. Mais@sache qu'en choisissant les bombes, ça sera plus dur.
