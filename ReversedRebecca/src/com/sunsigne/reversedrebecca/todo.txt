@@ -56,6 +56,22 @@
 
 	////////// LVL002 ////////////
 
+	deeds
+		
+		clé :
+		- voler un café
+		- voler une plante
+		- abandonner sarah
+		- [R] j'ai craché dedans
+		+ [E] (donner avec le sourire)
+		+ libérer sarah
+		+ reconforter sarah
+		
+		bomb :
+		- installer un virus
+		-+ laisser un mot (gentil / méchant) (+ succès : sorryJerk)
+		+ reconforter sarah
+
 	bug :
 	lvl002 :
 		- (bombe path) si le commissaire nous voit, il a les dialogues du bureau qui se déclanche

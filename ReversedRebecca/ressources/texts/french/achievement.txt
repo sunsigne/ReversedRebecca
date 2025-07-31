@@ -1,13 +1,15 @@
 ///// CYAN /////
 
+ClickHereTitle = C'etait facile
+ClickHereText = Cliquer ici
 CookiesTitle = Tu es diabetique, Becky
 CookiesText = Manger 100 cookies
+SorryJerkTitle = Desole... Ordure !
+SorryJerkText = Laisser deux mots contradictoires
 ConcussionTitle = Commotion cerebrale
 ConcussionText = Se faire assommer par un policier
 EternalSleepTitle = Sommeil Eternel
 EternalSleepText = Non, vous ne vous reveillerez pas
-ClickHereTitle = C'etait facile
-ClickHereText = Cliquer ici
 InTheToiletTitle = Toujours au 3eme endroit
 InTheToiletText = Trouver les cles dans les WC
 FruitTitle = Cyber-Vegetarien
