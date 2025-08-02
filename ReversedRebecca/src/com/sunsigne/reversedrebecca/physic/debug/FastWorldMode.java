@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzler.door.NullDoorObject;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -35,11 +36,22 @@ public class FastWorldMode extends DebugMode {
 		if (getState() == false)
 			return;
 
-		if (object instanceof NullDoorObject)
+		if (isSpecialCase(object))
 			return;
 
 		object.tick();
 		object.tick();
+	}
+
+	private boolean isSpecialCase(Updatable object) {
+		if (object instanceof NullDoorObject)
+			return true;
+
+		if (object instanceof Player == false)
+			return false;
+
+		// makes SwiftMovingMode and FastWorldMode compatible for player movement
+		return SwiftMovingMode.debugMode.getDebugMode().getState();
 	}
 
 	////////// RENDER ////////////

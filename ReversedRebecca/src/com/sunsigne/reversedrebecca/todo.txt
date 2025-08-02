@@ -17,7 +17,6 @@
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 
 	pas réglé :
-		- fast mode & swift mod sont incompatibles
 		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris

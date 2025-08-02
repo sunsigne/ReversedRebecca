@@ -11,7 +11,7 @@ public class SwiftMovingMode extends DebugMode {
 
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new SwiftMovingMode();
+	public static DebugMode debugMode = new SwiftMovingMode();
 
 	@Override
 	public DebugMode getDebugMode() {
