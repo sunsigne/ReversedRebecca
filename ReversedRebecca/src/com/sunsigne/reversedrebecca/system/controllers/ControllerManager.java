@@ -61,13 +61,12 @@ public class ControllerManager {
 	}
 
 	private static boolean flag;
-	
+
 	private static void activeGamepadDisplay() {
-		if(flag)
-			return;
-		
+		if (!flag)
+			displayGamepadWarning();
 		flag = true;
-		displayGamepadWarning();
+
 		Game.getInstance().setCursor(CURSOR_TYPE.NULL.getCursor());
 		resetMousePresetings();
 	}
@@ -83,7 +82,7 @@ public class ControllerManager {
 			message = "Le support manette est encore en développement. Il est instable sur cette version du jeu.";
 			path = path.concat("_fr");
 		}
-		
+
 		BufferedImage image = new ImageTask().loadImage(path);
 		ImageIcon icon = new ImageIcon(image);
 		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
