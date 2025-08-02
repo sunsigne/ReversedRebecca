@@ -146,7 +146,7 @@ public class TutorialScreen extends SubMenuScreen implements SheetableImage {
 	protected BufferedImage get_dave_image() {
 		if (dave_image == null) {
 			BufferedImage sheet = new ImageTask()
-					.loadImage("textures/characters/" + getCharacter() + "/" + getCharacter());
+					.loadImage("textures/characters/" + getCharacter() + "/" + "world");
 			dave_image = getSheetSubImage(sheet);
 		}
 		return dave_image;

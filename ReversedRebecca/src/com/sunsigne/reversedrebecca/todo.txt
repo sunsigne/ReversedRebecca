@@ -13,12 +13,8 @@
 	
 	////////// BUG ////////////
 
-	à tester :
-		- perdre de façon "normal" tout ses pv (écran de game over qui se lance correctement ?)
-
 	peut-être existant sur build only ? :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
-		- le formulaire de test s'affiche derrière la fenêtre du jeu (est arrivé pour CSN)
 
 	pas réglé :
 		- fast mode & swift mod sont incompatibles
