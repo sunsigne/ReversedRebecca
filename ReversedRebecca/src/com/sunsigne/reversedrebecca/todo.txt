@@ -13,11 +13,11 @@
 	
 	////////// BUG ////////////
 
-	peut-être existant sur build only ? :
+	vérifier si réglé sur build low CPU :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
+		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 
 	pas réglé :
-		- lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
 		- hackpuzzle : venir à bout des concurrentmodification
 		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
