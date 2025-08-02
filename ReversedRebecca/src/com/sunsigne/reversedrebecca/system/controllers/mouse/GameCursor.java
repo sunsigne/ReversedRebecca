@@ -17,20 +17,26 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 public class GameCursor {
 
 	public static final int SPEED = 12;
-	private static Cursor cursor;
+	private static Cursor previousCursor;
+	private static Cursor currentCursor;
+
+	public void setPreviousCursor() {
+		Game.getInstance().setCursor(previousCursor);
+	}
 
 	public void refreshCursor() {
-		Game.getInstance().setCursor(cursor);
+		Game.getInstance().setCursor(currentCursor);
 	}
 
 	public void setCursor(CURSOR_TYPE cursorType) {
 		if (cursorType == null)
 			cursorType = CURSOR_TYPE.NULL;
 
-		cursor = cursorType.getCursor();
+		previousCursor = Game.getInstance().getCursor();
+		currentCursor = cursorType.getCursor();
 
 		if (ControllerManager.getInstance().isUsingGamepad() == false)
-			Game.getInstance().setCursor(cursor);
+			Game.getInstance().setCursor(currentCursor);
 	}
 
 	////////// CURSOR TYPE ////////////

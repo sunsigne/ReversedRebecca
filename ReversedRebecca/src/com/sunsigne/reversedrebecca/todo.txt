@@ -13,13 +13,9 @@
 	
 	////////// BUG ////////////
 
-	vérifier si réglé sur build low CPU :
-		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
-		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
-
 	pas réglé :
+		- utiliser la "manette, puis souris, puis manette" bloque le cursor de la souris en position "visible"
 		- hackpuzzle : venir à bout des concurrentmodification
-		- menu pause pendant DigPuzzle -> réaffiche la souris
 		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu)
@@ -29,7 +25,11 @@
 		- la souris dépasse de l'ordi de Yan
 		- PlayerBlockingAvoiderLaw : une spécificité a été ajoutée : le "around" est court-circuité lors des cinématiques
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
-
+	
+	vérifier si réglé sur build low CPU :
+		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
+		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
+		
 	////////// TEMP ////////////
 
 	dave : supprimer les images creepy de dave

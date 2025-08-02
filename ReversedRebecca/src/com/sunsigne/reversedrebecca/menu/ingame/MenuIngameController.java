@@ -42,7 +42,7 @@ public class MenuIngameController {
 		menu = null;
 
 		if (ControllerManager.getInstance().isUsingGamepad() == false)
-			new GameCursor().refreshCursor();
+			new GameCursor().setPreviousCursor();
 		else
 			Game.getInstance().setCursor(cursor);
 	}
