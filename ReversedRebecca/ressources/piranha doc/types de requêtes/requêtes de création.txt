@@ -23,6 +23,21 @@ Attention ! Créer un objet au même endroit qu'un autre peut avoir des conséq
 
 
 
+////// CREATE_FRAME_IMPACT //////
+
+Le Type de Requête CREATE_FRAME_IMPACT permet de créer une image au niveau de l'écran, qui restera pendant une très courte période.
+
+Fichier de référence : « textures/other/frameimpact »
+
+Exemple :
+TIME -> 0 = CREATE_FRAME_IMPACT -> 60, EXPLOSION
+
+Lorsque la Condition sera vérifiée, dans exactement 60 ticks (1 seconde), sera créé au niveau de l'écran un visuel dont le fichier de référence est « explosion.png ».
+
+Attention ! Ces visuels disparaissent très rapidement. Leur rôle est essentiellement de mettre l’emphase sur un choc ou un événement violant.
+
+
+
 ////// CREATE_DECORATION //////
 
 Le Type de Requête CREATE_DECORATION permet de créer un visuel à partir d'un fichier image.
