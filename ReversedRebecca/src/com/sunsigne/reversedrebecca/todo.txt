@@ -49,12 +49,6 @@
 
 	////////// LVL002 ////////////
 
-	données à enregistrer :
-		- sarah en prison
-		- partir sans sarah
-		- avoir volé la tenue de policier
-		- doug rencontré
-
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
 	- prévenir que la fusillade n'est pas finie
@@ -271,10 +265,8 @@
 	////////// LVL002 ////////////
 
 	à faire + tard :
-	- toute la variante "shotgun"
+	- toute la variante "gunshot"
 	- l'embranchement onirique
-	- le mini jeu contre william
-	- le moine qui donne le tuyau & le nom du jeu
 	- les variantes sadique et psycopathe
 	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
@@ -282,13 +274,14 @@
 	- traduction : rattatac (café) a un accent français lorsque langue en anglais
 	
 	à sauvegarder :
-	- sarah enfermée ?
-	- costume de flic ?	
-	- sarah abandonnée
+	- sarah enfermée
+	- costume de flic	
 	- plante volée
 	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
+	- doug rencontré
 
-	////////// MOLE 0 ////////////
+
+	////////// MILITARY 0 ////////////
 
 	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
 	intégrer les poses de YY
@@ -369,7 +362,7 @@
 	anges pleureurs
 	silence (Dr Who)
 	escargot
-	la mort (la grande faucheuse directement)
+	la mort (la grande faucheuse directement, qui indique une direction
 	luther + cursed 3 (TOUS les objets qui bougent et l'écran qui dégouline)
 	cafard & araignées (Rebecca a peur de l'un, Sarah de l'autre. Ca peut même devenir la mécanique pour passer ?)
 	un monstre qui n'attaque que si le joueur (devant son écran, pas rebecca) le voit. Il y a une action "[E] fermer les yeux", et se guider au bruit. A un moment, la porte claque, on pense qu'il est partie et on réouvre les yeux, mais en vérité il a feinté le joueur et il lui saute dessus s'il réouvre les yeux à ce moment là
