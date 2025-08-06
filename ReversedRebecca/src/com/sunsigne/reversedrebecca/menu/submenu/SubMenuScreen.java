@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.LockedTitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -30,7 +31,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 	////////// BUTTONS ////////////
 
 	private TitleScreenButton backButton;
-	
+
 	protected String getBackButtonText() {
 		return translate("BackButton");
 	}
@@ -38,8 +39,15 @@ public abstract class SubMenuScreen extends MenuScreen {
 	public TitleScreenButton getBackButton() {
 		return backButton;
 	}
-	
+
 	private void createBackButton() {
+		createBackButton(false);
+	}
+
+	protected void createBackButton(boolean locked) {
+		if (backButton != null)
+			LAYER.MENU.getHandler().removeObject(backButton);
+
 		GenericListener onPress = () -> getPreviousMenu();
 		ButtonObject button = new TitleScreenButton(getBackButtonText(), 740, 940, 420, 140, onPress, null) {
 
@@ -51,6 +59,9 @@ public abstract class SubMenuScreen extends MenuScreen {
 					return "button_back";
 			}
 		};
+
+		if (locked)
+			button = new LockedTitleScreenButton(getBackButtonText(), 740, 940, 420, 140, 38, 42, onPress, null);
 
 		button.setFacing(DIRECTION.NULL);
 		((TitleScreenButton) button).setFontSize(45f);
@@ -82,9 +93,9 @@ public abstract class SubMenuScreen extends MenuScreen {
 		int height = xl ? 600 : 474;
 		g.drawImage(getImage(), 289, y, 1324, height, null);
 	}
-	
+
 	////////// PRESET MOUSE POS ////////////
 
 	public static final PresetMousePos BACK = new PresetMousePos(925, 1000);
-	
+
 }

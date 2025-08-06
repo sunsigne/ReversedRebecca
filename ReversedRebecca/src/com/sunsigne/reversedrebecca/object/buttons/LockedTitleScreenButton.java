@@ -11,10 +11,15 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class LockedTitleScreenButton extends TitleScreenButton implements SheetableImage {
 
-	public LockedTitleScreenButton(String text, int x, int y, int w, int h, GenericListener onPress,
-			GenericListener onRelease) {
+	public LockedTitleScreenButton(String text, int x, int y, int w, int h, int xLock, int yLock,
+			GenericListener onPress, GenericListener onRelease) {
 		super(text, x, y, w, h, onPress, onRelease);
+
+		this.xLock = xLock;
+		this.yLock = yLock;
 	}
+
+	private int xLock, yLock;
 
 	////////// TICK ////////////
 
@@ -64,8 +69,8 @@ public class LockedTitleScreenButton extends TitleScreenButton implements Sheeta
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		g.drawImage(getImage(), getX() + 40, getY() + 10, Size.S, Size.S, null);
-		g.drawImage(getImage(), getX() + 310, getY() + 10, Size.S, Size.S, null);
+		g.drawImage(getImage(), getX() + 40 - xLock, getY() + yLock, Size.S, Size.S, null);
+		g.drawImage(getImage(), getX() + 310 + xLock, getY() + yLock, Size.S, Size.S, null);
 
 	}
 

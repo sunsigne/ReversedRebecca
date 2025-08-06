@@ -46,7 +46,6 @@
 
 	////////// EN COURS ////////////
 
-
 	////////// LVL002 ////////////
 
 	polish "final" pré-diffusion :
@@ -56,8 +55,6 @@
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	souris : mettre sur pause et en sortir pendant le DoorPuzzle réafiche la souris
-	ControlsScreen : mettre message d'erreur quand clef non assignée
 	digpuzzle : faire clignoter l'outils lorsque récupéré
 	3h00 - rendre + évident le système de couches (vent avant tunnel ?)
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application

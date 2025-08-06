@@ -49,7 +49,7 @@ public class OptionsScreen extends SubMenuScreen {
 
 		ButtonObject button;
 		if (locked)
-			button = new LockedTitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
+			button = new LockedTitleScreenButton(text, 325 + x, 503 + y, 415, 80, 0, 10, onPress, null);
 		else
 			button = new TitleScreenButton(text, 325 + x, 503 + y, 415, 80, onPress, null);
 

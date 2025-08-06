@@ -69,7 +69,7 @@ public class ControlsScreen extends SubMenuScreen {
 	private TitleScreenText secondOrLine;
 	private TitleScreenText thirdOrLine;
 	private TitleScreenText fourthOrLine;
-	
+
 	private String menuPauseText;
 	private String movementsText;
 	private String action1Text;
@@ -89,7 +89,7 @@ public class ControlsScreen extends SubMenuScreen {
 		secondLine = getTitleScreenText(x, y + 104);
 		thirdLine = getTitleScreenText(x, y + 208);
 		fourthLine = getTitleScreenText(x, y + 312);
-		
+
 		x = x + 529;
 		firstOrLine = getTitleScreenText(x, y);
 		secondOrLine = getTitleScreenText(x, y + 104);
@@ -107,7 +107,7 @@ public class ControlsScreen extends SubMenuScreen {
 		LAYER.MENU.addObject(secondLine);
 		LAYER.MENU.addObject(thirdLine);
 		LAYER.MENU.addObject(fourthLine);
-		
+
 		LAYER.MENU.addObject(firstOrLine);
 		LAYER.MENU.addObject(secondOrLine);
 		LAYER.MENU.addObject(thirdOrLine);
@@ -288,7 +288,7 @@ public class ControlsScreen extends SubMenuScreen {
 		secondLine.setText(translate("Down"));
 		thirdLine.setText(translate("Left"));
 		fourthLine.setText(translate("Right"));
-		
+
 		firstOrLine.setText(translate("Or"));
 		secondOrLine.setText(translate("Or"));
 		thirdOrLine.setText(translate("Or"));
@@ -305,6 +305,8 @@ public class ControlsScreen extends SubMenuScreen {
 		LAYER.MENU.getHandler().addObject(leftButton);
 		LAYER.MENU.getHandler().addObject(rightButton);
 		LAYER.MENU.getHandler().addObject(rightArrowButton);
+
+		updateBackButton();
 	}
 
 	private void displayActionsKeys() {
@@ -318,7 +320,7 @@ public class ControlsScreen extends SubMenuScreen {
 		secondOrLine.setText("");
 		thirdOrLine.setText("");
 		fourthOrLine.setText("");
-		
+
 		LAYER.MENU.getHandler().softRemoveObject(upButton);
 		LAYER.MENU.getHandler().softRemoveObject(downButton);
 		LAYER.MENU.getHandler().softRemoveObject(leftButton);
@@ -330,6 +332,8 @@ public class ControlsScreen extends SubMenuScreen {
 		LAYER.MENU.getHandler().addObject(actionTwoButton);
 		LAYER.MENU.getHandler().addObject(actionThreeButton);
 		LAYER.MENU.getHandler().addObject(leftArrowButton);
+
+		updateBackButton();
 	}
 
 	private void resetKeyboard() {
@@ -344,6 +348,30 @@ public class ControlsScreen extends SubMenuScreen {
 		new ActionThreeKey().registerKey("F", 70);
 
 		new ControlsScreen(actionKeyScreen);
+	}
+
+	private void updateBackButton() {
+		boolean keyNotAssagined = false;
+
+		if (upButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (downButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (leftButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (rightButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (dialogueButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionOneButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionTwoButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionThreeButton.getText().contains("..."))
+			keyNotAssagined = true;
+
+		if (keyNotAssagined)
+			createBackButton(true);
 	}
 
 	////////// TEXTURE ////////////
