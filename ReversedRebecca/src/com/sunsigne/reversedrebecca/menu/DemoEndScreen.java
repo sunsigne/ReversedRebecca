@@ -14,7 +14,6 @@ import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
@@ -69,7 +68,7 @@ public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 			displayer[9] = true;
 		if (time == t0 + 15 * DELAY)
 			displayer[10] = true;
-		
+
 		t0 = t0 + 10;
 		if (time == t0 + 17 * DELAY) {
 			for (int index = 0; index <= 10; index++)
@@ -103,7 +102,7 @@ public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 			displayer[19] = false;
 		else
 			displayer[19] = true;
-			
+
 	}
 
 	////////// TEXT ////////////
@@ -208,12 +207,12 @@ public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 		int x0 = 30;
 		int y0 = 400;
 
-		int x1[] = {215, 105, 115, 225, 165, 400, 90};
-		
+		int x1[] = { 215, 105, 115, 225, 165, 400, 90 };
+
 		if (Language.getInstance().getLang().equalsIgnoreCase("french")) {
-			x1 = new int[] {180, 45, 45, 45, 128, 400, 50};
+			x1 = new int[] { 180, 45, 45, 45, 128, 400, 50 };
 		}
-		
+
 		if (displayer[1])
 			g.drawString(text[1], x0 + x1[0], y0);
 		if (displayer[2])
@@ -255,12 +254,12 @@ public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 		if (displayer[16])
 			g.drawImage(image[7], 780, y0 + 410, 300, 300, null);
 
-		int x1[] = {540, 540, 710};
-		
+		int x1[] = { 540, 540, 710 };
+
 		if (Language.getInstance().getLang().equalsIgnoreCase("french")) {
-			x1 = new int[] {430, 485, 590};
+			x1 = new int[] { 430, 485, 590 };
 		}
-		
+
 		if (displayer[17])
 			g.drawString(text[8], x1[0], y0 + 810);
 		if (displayer[18])
@@ -274,7 +273,7 @@ public class DemoEndScreen implements Updatable, PhysicFree, SheetableImage {
 	////////// BUTTON ////////////
 
 	private void createContinueButton() {
-		GenericListener onPress = () -> new Conductor().stopApp();
+		GenericListener onPress = () -> new TitleScreen(TitleScreen.PLAY);
 
 		ButtonObject button = new ButtonObject(null, 0, 0, Window.WIDHT, Window.HEIGHT, onPress, null) {
 

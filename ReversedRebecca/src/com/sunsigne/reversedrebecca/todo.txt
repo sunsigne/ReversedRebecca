@@ -17,7 +17,7 @@
 		- hackpuzzle : venir à bout des concurrentmodification
 		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
-		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu)
+		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu). Il est aussi présent dans la lucky run
 		
 	vérifier si bien réglé :
 		- vérifier que le type de requete SaveTripleActionRequest ne fait pas sauter la couleur d'un texte
@@ -32,9 +32,8 @@
 	dave : supprimer les images creepy de dave
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	lvl001 : redirection du end_lvl vers "dave_end"
-	lvl001 : talked FATALITY - Alicia qui tue est actuellement un end_lvl vers les crédit ou l'écran titre du jeu.
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
-	manette actuellement désactivé (message "coming soon") : ControllerManager -> activeGamepadDisplay()
+	manette actuellement (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	Creepy pasta dave bonus (& achievement)
