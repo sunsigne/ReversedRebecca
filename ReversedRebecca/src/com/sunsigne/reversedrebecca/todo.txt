@@ -48,8 +48,6 @@
 
 	////////// LVL002 ////////////
 
-	relier la fusillade au scénario clé
-
 	polish "final" pré-diffusion :
 	- mettre à jour la fusillade
 	- prévenir que la fusillade n'est pas finie
