@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.buttons.LockedTitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -21,7 +22,7 @@ public abstract class MenuIngameSubMenuScreen extends MenuIngameScreen {
 	}
 
 	protected static final int y_gap = -160;
-	
+
 	////////// SUB MENU ////////////
 
 	protected abstract MenuIngameScreen getPreviousMenu();
@@ -39,6 +40,23 @@ public abstract class MenuIngameSubMenuScreen extends MenuIngameScreen {
 	}
 
 	private void createBackButton() {
+		createBackButton(false);
+	}
+
+	protected void createBackButton(boolean locked) {
+		if (backButton != null)
+			LAYER.MENU.getHandler().removeObject(backButton);
+		
+		ButtonObject button = getBackButton(locked);
+		button.setFacing(DIRECTION.NULL);
+		((TitleScreenButton) button).setFontSize(45f);
+		((TitleScreenButton) button).setRectsize(RECTSIZE.X_SMALL);
+		LAYER.MENU.getHandler().addObject(button);
+		backButton = (TitleScreenButton) button;
+		buttons.put(BACK, button);
+	}
+
+	private ButtonObject getBackButton(boolean locked) {
 		GenericListener onPress = () -> getPreviousMenu();
 		ButtonObject button = new TitleScreenButton(getBackButtonText(), 740, 950, 415, 80, onPress, null) {
 
@@ -49,7 +67,7 @@ public abstract class MenuIngameSubMenuScreen extends MenuIngameScreen {
 				else
 					return "button_back";
 			}
-			
+
 			private BufferedImage image;
 
 			public BufferedImage getImage() {
@@ -57,21 +75,36 @@ public abstract class MenuIngameSubMenuScreen extends MenuIngameScreen {
 					image = new ImageTask().loadImage("textures/menu/" + "back");
 				return image;
 			}
-			
+
 			@Override
 			public void render(Graphics g) {
-				g.drawImage(getImage(), 289, 758, 1324, 474, null);				
+				g.drawImage(getImage(), 289, 758, 1324, 474, null);
 				super.render(g);
 			}
-			
+
 		};
 
-		button.setFacing(DIRECTION.NULL);
-		((TitleScreenButton) button).setFontSize(45f);
-		((TitleScreenButton) button).setRectsize(RECTSIZE.X_SMALL);
-		LAYER.MENU.getHandler().addObject(button);
-		backButton = (TitleScreenButton) button;
-		buttons.put(BACK, button);
+		if (locked) {
+			button = new LockedTitleScreenButton(getBackButtonText(), 740, 950, 415, 80, 20, 12, onPress, null) {
+
+				private BufferedImage image;
+
+				public BufferedImage getImage() {
+					if (image == null)
+						image = new ImageTask().loadImage("textures/menu/" + "back");
+					return image;
+				}
+
+				@Override
+				public void render(Graphics g) {
+					g.drawImage(getImage(), 289, 758, 1324, 474, null);
+					super.render(g);
+				}
+
+			};
+		}
+
+		return button;
 	}
 
 	////////// PRESET MOUSE POS ////////////

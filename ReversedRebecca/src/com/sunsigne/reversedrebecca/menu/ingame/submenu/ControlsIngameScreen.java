@@ -287,6 +287,8 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 		LAYER.MENU.getHandler().addObject(leftButton);
 		LAYER.MENU.getHandler().addObject(rightButton);
 		LAYER.MENU.getHandler().addObject(rightArrowButton);
+		
+		updateBackButton();
 	}
 
 	private void displayActionsKeys() {
@@ -307,6 +309,8 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 		LAYER.MENU.getHandler().addObject(actionTwoButton);
 		LAYER.MENU.getHandler().addObject(actionThreeButton);
 		LAYER.MENU.getHandler().addObject(leftArrowButton);
+		
+		updateBackButton();
 	}
 
 	private void resetKeyboard() {
@@ -323,6 +327,30 @@ public class ControlsIngameScreen extends MenuIngameSubMenuScreen {
 		new ControlsIngameScreen(actionKeyScreen);
 	}
 
+	private void updateBackButton() {
+		boolean keyNotAssagined = false;
+
+		if (upButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (downButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (leftButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (rightButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (dialogueButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionOneButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionTwoButton.getText().contains("..."))
+			keyNotAssagined = true;
+		if (actionThreeButton.getText().contains("..."))
+			keyNotAssagined = true;
+
+		if (keyNotAssagined)
+			createBackButton(true);
+	}
+	
 	////////// TEXTURE ////////////
 
 	private BufferedImage gamepad_image;

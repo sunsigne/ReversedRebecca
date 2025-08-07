@@ -28,9 +28,11 @@ public abstract class ButtonObject extends GameObject implements TickFree, Facin
 	
 	public String toString() {
 		var clazz = "BUTTON ";
-		return clazz + text.toUpperCase() + " : " + getX() + "-" + getY();
-	}
+		String clickable = isClickable() ? "" : " (NOT CLICKABLE)";
 		
+		return clazz + text.toUpperCase() + clickable + " : " + getX() + "-" + getY();
+	}
+	
 	////////// BEHAVIOR ////////////
 
 	private GenericListener onPress;
