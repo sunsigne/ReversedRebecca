@@ -120,15 +120,11 @@
 	
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
-	1h00 - UserInputDie -> devrait quand même faire quelque chose si le joueur est invulnérable
-	1h00 - les portes grises n'ont pas encore de mappable
-	2h00 - parler dans les codex du chargement des données sauvegardées ?
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
-	1h00 - faire en sorte que KeyPuzzle ne puisse pas être perdu en cas de critique ?
 	
 	////////// DIFFICILE ////////////
 	

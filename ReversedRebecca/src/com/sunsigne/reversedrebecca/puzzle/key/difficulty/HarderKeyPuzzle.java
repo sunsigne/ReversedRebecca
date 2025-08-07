@@ -23,7 +23,7 @@ public class HarderKeyPuzzle extends CyanKeyPuzzle {
 
 	@Override
 	public KeyObject getKey() {
-		return new KeyObject(this);
+		return new KeyObject(this, isCritical);
 	}
 
 	@Override

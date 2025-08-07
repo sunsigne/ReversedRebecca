@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class FastKeyObject extends KeyObject {
 
-	public FastKeyObject(Puzzle puzzle) {
-		super(puzzle);
+	public FastKeyObject(Puzzle puzzle, boolean isCritical) {
+		super(puzzle, isCritical);
 		multiplySpeedBy(2);
 	}
 

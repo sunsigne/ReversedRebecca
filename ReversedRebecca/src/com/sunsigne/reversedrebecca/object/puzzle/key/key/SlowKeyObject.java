@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class SlowKeyObject extends KeyObject {
 
-	public SlowKeyObject(Puzzle puzzle) {
-		super(puzzle);
+	public SlowKeyObject(Puzzle puzzle, boolean isCritical) {
+		super(puzzle, isCritical);
 		divideSpeedBy(3);
 	}
 

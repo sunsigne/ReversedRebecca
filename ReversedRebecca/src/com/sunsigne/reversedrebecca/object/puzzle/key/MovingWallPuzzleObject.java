@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -16,8 +17,8 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 
 	private int speed = Size.XS / 8;
 
-	public MovingWallPuzzleObject(Puzzle puzzle, BufferedImage image, int x, int y) {
-		super(puzzle, false, x, y);
+	public MovingWallPuzzleObject(Puzzle puzzle, boolean isCritical, BufferedImage image, int x, int y) {
+		super(puzzle, isCritical, x, y);
 		this.image = image;
 		setVelY(new RandomGenerator().getBoolean() ? speed : -speed);
 	}
@@ -29,14 +30,14 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 		var clazz = "PUZZLE : MOVING WALL";
 		return clazz + " : " + getRow(getX()) + "-" + getCol(getY());
 	}
-	
+
 	////////// PHYSICS ////////////
-	
+
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);
@@ -75,7 +76,11 @@ public class MovingWallPuzzleObject extends PuzzleObject implements CollisionRea
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		collidingReaction(detectorObject, false, () -> getPuzzle().closePuzzle(false));
+		GenericListener listener = () -> getPuzzle().closePuzzle(false);
+		if (isCritical())
+			listener = () -> removeObject();
+
+		collidingReaction(detectorObject, false, listener);
 	}
 
 }

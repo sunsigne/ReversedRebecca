@@ -22,7 +22,7 @@ public class OrangeKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public KeyObject getKey() {
-		return new FastKeyObject(this);
+		return new FastKeyObject(this, isCritical);
 	}
 
 	@Override

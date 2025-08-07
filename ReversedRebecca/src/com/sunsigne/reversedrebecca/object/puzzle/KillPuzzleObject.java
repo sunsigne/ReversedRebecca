@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -10,8 +11,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFree, CollisionReactor {
 
-	public KillPuzzleObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, false, x, y);
+	public KillPuzzleObject(Puzzle puzzle, boolean isCritical, int x, int y) {
+		super(puzzle, isCritical, x, y);
 	}
 
 	////////// NAME ////////////
@@ -23,12 +24,12 @@ public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFr
 	}
 
 	////////// PHYSICS ////////////
-	
+
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// COLLISION ////////////
 
 	@Override
@@ -43,7 +44,11 @@ public class KillPuzzleObject extends PuzzleObject implements TickFree, RenderFr
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		collidingReaction(detectorObject, false, () -> getPuzzle().closePuzzle(false));
+		GenericListener listener = () -> getPuzzle().closePuzzle(false);
+		if (isCritical())
+			listener = () -> removeObject();
+
+		collidingReaction(detectorObject, false, listener);
 	}
 
 }

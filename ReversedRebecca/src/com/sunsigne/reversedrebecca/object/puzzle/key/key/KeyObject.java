@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
@@ -27,8 +28,8 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class KeyObject extends PuzzleObject implements SheetableImage, MouseUserEvent, CollisionDetector, GamepadEvent {
 
-	public KeyObject(Puzzle puzzle) {
-		super(puzzle, false, 0, 0);
+	public KeyObject(Puzzle puzzle, boolean isCritical) {
+		super(puzzle, isCritical, 0, 0);
 		multiplySpeedBy(1);
 		new GameTimer(20, true, () -> sound = true);
 	}
@@ -75,16 +76,17 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 	}
 
 	////////// PHYSICS ////////////
-	
+
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ymin = getPuzzle().getRow(1);
 	private final int ymax = getPuzzle().getRow(6);
+	private final int MAX_SPEED = -100;
 	private boolean sound;
 
 	@Override
@@ -105,9 +107,12 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 
 		// when is throwing, continue faster
 		if (getVelX() != 0) {
-			setVelX(getVelX() - 1);
+			setVelX(Math.max(getVelX() - 1, MAX_SPEED));
 			setVelY(0);
 		}
+
+		if (isCritical() && getX() < -getWidth())
+			setX(Window.WIDHT + getWidth());
 	}
 
 	////////// TEXTURE ////////////
@@ -116,9 +121,9 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 
 	@Override
 	public int getSheetSize() {
-		return 2*16;
+		return 2 * 16;
 	}
-	
+
 	@Override
 	public int getSheetColCriterion() {
 		return 2;
@@ -192,7 +197,7 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 	////////// COLLISION ////////////
 
 	private CollisionReactor lastCollidedObject;
-		
+
 	@Override
 	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
 		this.lastCollidedObject = lastCollidedObject;
@@ -202,5 +207,5 @@ public class KeyObject extends PuzzleObject implements SheetableImage, MouseUser
 	public CollisionReactor getLastCollidedObject() {
 		return lastCollidedObject;
 	}
-	
+
 }

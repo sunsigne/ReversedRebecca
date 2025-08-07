@@ -21,7 +21,7 @@ public class CyanKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public KeyObject getKey() {
-		return new KeyObject(this);
+		return new KeyObject(this, isCritical);
 	}
 
 	@Override

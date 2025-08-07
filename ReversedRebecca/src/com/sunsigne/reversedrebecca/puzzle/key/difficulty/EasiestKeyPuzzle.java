@@ -22,7 +22,7 @@ public class EasiestKeyPuzzle extends KeyPuzzle {
 
 	@Override
 	public KeyObject getKey() {
-		return new SlowKeyObject(this);
+		return new SlowKeyObject(this, isCritical);
 	}
 
 	@Override

@@ -108,11 +108,11 @@ public abstract class KeyPuzzle extends Puzzle {
 			} while (radRow == safeRow);
 
 			if (moving)
-				handler.addObject(new MovingWallPuzzleObject(this, img, radCol, radRow));
+				handler.addObject(new MovingWallPuzzleObject(this, isCritical, img, radCol, radRow));
 
 			else {
 				handler.addObject(new WallPuzzle(img, radCol, radRow));
-				handler.addObject(new KillPuzzleObject(this, radCol, radRow));
+				handler.addObject(new KillPuzzleObject(this, isCritical, radCol, radRow));
 			}
 		}
 	}
@@ -128,7 +128,7 @@ public abstract class KeyPuzzle extends Puzzle {
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
 			// Almost invisible in VisibleHitboxMode because added before Walls
-			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, getCol(0), getRow(row)));
+			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, isCritical, getCol(0), getRow(row)));
 		}
 	}
 
