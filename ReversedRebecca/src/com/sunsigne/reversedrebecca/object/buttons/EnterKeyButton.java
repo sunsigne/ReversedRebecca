@@ -23,6 +23,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 
 public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
@@ -40,7 +41,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 	@Override
 	public void tick() {
 		ControllerManager.getInstance().setUsingGamepad(false);
-		new GameCursor().setCursor(null);
+		Game.getInstance().setCursor(CURSOR_TYPE.NULL.getCursor());
 		MousePos mouse = new MousePos();
 
 		mouse.setX(getX() + getWidth() / 2);
@@ -78,7 +79,7 @@ public class EnterKeyButton extends TitleScreenText implements KeyboardEvent {
 
 		// destroy objet
 		removeObject();
-		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
+		new GameCursor().refreshCursor();
 
 		// refresh Menu
 		preventDuplicated();
