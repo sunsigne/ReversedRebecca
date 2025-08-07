@@ -137,11 +137,7 @@
 	6h00 - les custom "surname" devrait être dynamique
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
-	30h arranger l'écran de fin de niveau et/ou créer un système d'objectifs / de quête ( / le relier au système d'aéchievement ?)  /   mieux mettre en avant le système de karma ?
-	6h00 - GroudRendering : le ground des niveaux inférieur n'est plus affiché, problème : le transluant gris ne remplis plus sa fonction (toujours d'acutalité ?)
 	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
-	XhXX ? - DigPuzzle : ajouter une animation lors d'un ramassage d'outil ?
-	XhXX - les hole upward ont ce pb bizarre de donner l'impression que le joueur est "couché par terre" (à corriger pour de bon ?)
 	6h00 - le niveau PURPLE est un niveau d'auto-win : créer l'outils (qui surpasse le lvling ?) et la HUD
 	5h00 - ! MultiToolMode ne va que jusqu'à RED -> créer un "pile" violette (et la mécanique qui va avec) ?
 	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe

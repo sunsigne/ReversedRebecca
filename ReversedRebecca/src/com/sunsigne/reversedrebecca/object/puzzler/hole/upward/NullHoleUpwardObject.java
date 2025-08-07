@@ -5,7 +5,9 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.LayerSendable;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.GoUpAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -78,7 +80,7 @@ public class NullHoleUpwardObject extends HoleUpwardObject implements LayerSenda
 		if (getTripleAction() == null || getTripleAction().cannotDoAnyAction())
 			return false;
 
-		return true;
+		return ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;
 	}
 
 	////////// TEXTURE ////////////

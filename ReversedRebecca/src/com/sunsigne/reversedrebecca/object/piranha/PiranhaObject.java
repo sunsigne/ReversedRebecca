@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
 import com.sunsigne.reversedrebecca.object.characteristics.Waitfor;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.RegistrableInteractive;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -56,7 +58,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public void setName(String name) {
 		if (name == null)
 			return;
-		
+
 		this.name = name.toLowerCase();
 		setTextureName(name);
 	}
@@ -308,7 +310,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 
 	@Override
 	public boolean getHighlightCondition() {
-		if (forceHighlight)
+		if (forceHighlight && ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT)
 			return true;
 		else
 			return RegistrableInteractive.super.getHighlightCondition();
