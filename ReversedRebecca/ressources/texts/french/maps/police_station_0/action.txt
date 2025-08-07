@@ -34,6 +34,7 @@ LEAVE_A_NOTE_MEAN = Key2 % "Personne ne t'aime !"
 I_WOULD_LIKE_A_GREEN_KEY = Key3 % j'aimerais une clé verte
 CHIEF_ASKED_FOR = Key1 % le chef m'a demandé
 FEELING_LIKE_FREEING_THE_INMATES = Key2 % j'ai envie de libérer les détenus
+TO_STEAL_YOUR_SHOTGUN = Key3 % pour te voler ton fusil
 GIVE_THE_DONUT = Key3 % donner le donut
 GIVE_WITH_A_SMILE = Key1 % (donner avec le sourire)
 I_SPAT_IN_IT = Key2 % j'ai craché dedans

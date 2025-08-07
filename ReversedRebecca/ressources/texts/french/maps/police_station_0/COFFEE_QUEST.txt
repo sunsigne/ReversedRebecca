@@ -62,7 +62,7 @@ player = UP = unhappy = … S'il te plaît ?
 policeman = player = butch = D'accord, d'accord… Mais j'ai besoin d'un@café. Apporte-moi ça et les clés sont à toi.
 
 
-% BUTCH_COFFEE_INMATES
+% BUTCH_COFFEE_JOKE
 policeman = player = butch = … … …
 policeman = player = butch_smirk = Ok, c'était drôle.
 policeman = player = butch = C'est surement le chef qui t'as demandé de toute@façon. Apporte-moi un café et les clés sont à toi.
