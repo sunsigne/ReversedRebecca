@@ -1,6 +1,6 @@
 ///// DOWN /////
 
-OBJ-37 = Table Hole
+OBJ-42 = Table Hole
 
 ///// RECEPTION /////
 
@@ -13,25 +13,12 @@ OBJ-01 = Chair
 OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
 OBJ-04 = Desk & Plant
-OBJ-18 = Miaouss Detector & Plant
-OBJ-19 = /hidden
-OBJ-20 = Miaouss Chair & Computer
-OBJ-25 = Player Behind Desk Scanner
-OBJ-26 = Entrance
-OBJ-33 = Barbed Wire
-
-///// PRE-CHIEF & CHIEF /////
-
-OBJ-34 = Door Diversion Checker
-NPC-06 = Policegrade : Giovanni
-OBJ-05 = Shovel Box
-OBJ-06 = Coat Rack Up
-OBJ-07 = Coat Rack Down
-OBJ-08 = Coat Rack Chief
-OBJ-09 = Corridor Plant
-OBJ-10 = Disguise Detector
-OBJ-23 = Vent Furniture
-OBJ-40 = Trophy
+OBJ-05 = Entrance
+OBJ-06 = Barbed Wire
+OBJ-07 = /hidden
+OBJ-08 = Miaouss Detector & Plant
+OBJ-09 = Miaouss Chair & Computer
+OBJ-10 = Player Behind Desk Scanner
 
 ///// RESTROOM /////
 
@@ -43,23 +30,37 @@ OBJ-15 = Couch
 OBJ-16 = Couch Leaver
 OBJ-17 = Coffee Machine
 
+///// PRE-CHIEF & CHIEF /////
+
+NPC-06 = Policegrade : Giovanni
+OBJ-18 = Door Diversion Checker
+OBJ-19 = Coat Rack Up
+OBJ-20 = Coat Rack Down
+OBJ-21 = Coat Rack Chief
+OBJ-22 = Shovel Box
+OBJ-23 = Vent Furniture
+OBJ-24 = Disguise Detector
+OBJ-25 = Trophy
+OBJ-26 = Corridor Plant
+
 ///// UP /////
 
 NPC-07 = Policeman (LEFT) : Rattatac
 NPC-08 = Policeman (UP) : Butch
-OBJ-21 = Rattatac Coffee
-OBJ-22 = Email Desk
-OBJ-27 = Archives Toward Left
-OBJ-28 = Archives Toward Up
-OBJ-29 = Archives Toward Down
-OBJ-30 = Right Chair and Table
-OBJ-31 = Middle Cell Chair and Table
-OBJ-32 = Sarah Music
-OBJ-35 = Toilet Exit Preventer
-OBJ-36 = Toilet
-OBJ-38 = Butch Shotgun Scanner
-OBJ-39 = Behind Cells Scanner
-OBJ-41 = Butch Shotgun
+
+OBJ-27 = Rattatac Coffee
+OBJ-28 = Email Desk
+OBJ-29 = Toilet Exit Preventer
+OBJ-30 = Toilet
+OBJ-31 = Butch Shotgun Scanner
+OBJ-32 = Behind Cells Scanner
+OBJ-33 = Butch Shotgun
+OBJ-34 = Archives Toward Left
+OBJ-35 = Archives Toward Up
+OBJ-36 = Archives Toward Down
+OBJ-37 = Right Chair and Table
+OBJ-38 = Middle Cell Chair and Table
+OBJ-39 = Sarah Music
 
 ///// BIG JAIL /////
 
@@ -69,5 +70,5 @@ NPC-11 = CCC1
 (NPC-12 = CCC2)
 NPC-13 = Polaris
 NPC-14 = Doug
-OBJ-24 = Armory Collapse Scanner
-OBJ-42 = Little Plant
+OBJ-40 = Little Plant
+OBJ-41 = Armory Collapse Scanner
