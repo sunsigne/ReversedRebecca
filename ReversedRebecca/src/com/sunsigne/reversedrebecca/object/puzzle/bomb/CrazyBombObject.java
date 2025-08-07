@@ -8,7 +8,7 @@ public class CrazyBombObject extends ShrinkBombObject {
 
 	public CrazyBombObject(Puzzle puzzle, boolean critical, int x, int y) {
 		super(puzzle, critical, x, y);
-		defineNewXSpeed(Size.XS / 4);
+		defineNewXSpeed(speed);
 	}
 
 	////////// NAME ////////////
@@ -20,7 +20,7 @@ public class CrazyBombObject extends ShrinkBombObject {
 	
 	////////// VELOCITY ////////////
 
-	private int speed = Size.XS / 4;
+	private int speed = Size.XS / 10;
 	
 	protected void defineNewXSpeed(int speed) {
 		this.speed = speed;

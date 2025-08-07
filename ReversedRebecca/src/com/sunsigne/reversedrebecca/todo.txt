@@ -46,7 +46,6 @@
 
 	////////// EN COURS ////////////
 
-	BombPuzzle -> munitions négatives si on utilise le gamepad + difficulté des 2 derniers niveaux trop élevée (rajouter des minution et réduire la vitesse de déplacement horizontale)
 	DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers
 
 	////////// LVL002 ////////////

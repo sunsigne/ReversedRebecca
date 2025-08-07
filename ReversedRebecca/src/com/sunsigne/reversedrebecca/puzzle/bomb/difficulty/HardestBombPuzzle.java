@@ -29,7 +29,7 @@ public class HardestBombPuzzle extends BombPuzzle {
 	public void createPuzzle() {
 		createBombs();
 		setRandomMaxCountBetween(2, 5);
-		createBullets(8);
+		createBullets(7);
 	}
 
 }
