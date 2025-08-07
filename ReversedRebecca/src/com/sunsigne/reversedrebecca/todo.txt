@@ -46,6 +46,10 @@
 
 	////////// EN COURS ////////////
 
+	ControlsIngameScreen = le bouton "retour" devrait être situationnellement lock, exactement comme dans le menu title screen
+	BombPuzzle -> munitions négatives si on utilise le gamepad + difficulté des 2 derniers niveaux trop élevée (rajouter des minution et réduire la vitesse de déplacement horizontale)
+	DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers
+
 	////////// LVL002 ////////////
 
 	polish "final" pré-diffusion :
