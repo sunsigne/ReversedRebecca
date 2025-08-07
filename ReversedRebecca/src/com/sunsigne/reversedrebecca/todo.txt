@@ -119,7 +119,6 @@
 	- mieux introduire le rikikiteur
 	
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
-	0h30 - mettre à jour les highlighs de tous les types de policiers (gun)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
 	1h00 - UserInputDie -> devrait quand même faire quelque chose si le joueur est invulnérable
 	1h00 - les portes grises n'ont pas encore de mappable
