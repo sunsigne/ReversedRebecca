@@ -41,8 +41,10 @@ public class DoorObject extends PuzzlerObject {
 			return 2;
 		case WHITE:
 			return 3;
-		case GRAY:
+		case BROWN_SUGAR:
 			return 4;
+		case GRAY:
+			return 5;
 		default:
 			return 1;
 		}
