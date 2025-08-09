@@ -1,6 +1,6 @@
 GROUP1 = Key1 % groupe 1
 GROUP2 = Key2 % groupe 2
-GROUP3 = Key1 % groupe 3
+GROUP3 = Key3 % groupe 3
 GROUP4 = Key2 % groupe 4
 CLOSE = Key1 % fermer
 LETS_GO = Key1 % c'est parti
