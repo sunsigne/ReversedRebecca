@@ -1,4 +1,9 @@
 ///// WORLD /////
 
-NPC-01 = Nothing
-OBJ-01 = Nothing
+OBJ-01 = Plant
+OBJ-02 = Plant Slightly Downer
+
+///// REFECTORY /////
+
+OBJ-03 = Table Left
+OBJ-04 = Table Right

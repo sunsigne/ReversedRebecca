@@ -79,7 +79,7 @@ Exemple de situation :
 Un NPC A est seul, et le joueur a la possibilité de discuter avec lui. Au bout d'un certain temps, ce NPC A est rejoint par un NPC B et ils discutent entre eux. Le joueur ne peut plus parler avec A, mais il peut écouter leurs conversations AB. Lorsque le NPC A se retrouvera de nouveau seul, le joueur pourra reprendre sa conversation avec lui, là où il l'avait laissé.
 
 TIME -> 0 = TRIPLE_ACTION -> TALK*HELLO
-TIME -> 20 = GOTO → SAVED_TRIPLE_ACTION:SAVE, TA_AB_TALKING
+TIME -> 20 = GOTO -> SAVED_TRIPLE_ACTION:SAVE, TA_AB_TALKING
 $ -> TA_AB_TALKING = TRIPLE_ACTION -> LISTEN*TALK_AB_TALKING
 $ -> TALK_AB_TALKING = TALK -> AB_TALKING
 TIME -> 40 = SAVED_TRIPLE_ACTION -> LOAD
