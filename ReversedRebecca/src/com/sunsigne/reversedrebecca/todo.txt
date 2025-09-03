@@ -272,6 +272,8 @@
 
 	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
 	intégrer les poses de YY
+	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
+	le sac pouvelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 
 	////////// MOLE 0 ////////////
 	
