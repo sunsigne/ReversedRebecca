@@ -18,11 +18,13 @@
 
 ////// SERGENT //////
 
-////// SAVIER DUPONT //////
+////// XAVIER DUPONT //////
+
+xavier_dupont=1,1
 
 ////// RUNNER_ONE //////
 
-runner_one=1,1
+runner_one=2,1
 
 ////// RUNNER_TWO //////
 
