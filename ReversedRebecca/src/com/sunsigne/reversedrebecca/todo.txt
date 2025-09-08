@@ -45,6 +45,10 @@
 
 	////////// EN COURS ////////////
 
+	à vérifier : 
+	- cassidy texture non manquante
+	- jessy texture
+
 	////////// LVL002 ////////////
 
 	polish "final" pré-diffusion :

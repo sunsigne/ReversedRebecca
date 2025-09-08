@@ -1,53 +1,53 @@
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK
-policewoman = player = cassidy = Je peux vous aider ?
+cassidy = player = happy = Je peux vous aider ?
 player = DOWN = happy = Ça ira, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT
-policewoman = player = cassidy = Vous avez besoin de quelque chose ?
+cassidy = player = happy = Vous avez besoin de quelque chose ?
 player = DOWN = happy = Non, c'est bon, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT
-policewoman = player = cassidy = Je peux vous être utile ?
+cassidy = player = happy = Je peux vous être utile ?
 player = DOWN = happy = D'aucune façon, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT_NEXT
-policewoman = player = cassidy = Vous êtes certaine qu'il ne vous faut rien ?
+cassidy = player = happy = Vous êtes certaine qu'il ne vous faut rien ?
 player = DOWN = happy = Certaine, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_NEXT_NEXT_NEXT_NEXT
 player = DOWN = happy_var = J'ai besoin de quelque chose !
-policewoman = player = cassidy = Oui ?
+cassidy = player = happy = Oui ?
 player = DOWN = happy = Je cherche la sortie de votre bureau.
-policewoman = player = cassidy = Derrière vous.
+cassidy = player = happy = Derrière vous.
 player = DOWN = happy = Merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE
-policewoman = player = cassidy = L'uniforme vous va bien.
+cassidy = player = happy = L'uniforme vous va bien.
 player = DOWN = happy = C'est gentil, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT
-policewoman = player = cassidy = Vous êtes une nouvelle collègue ?
+cassidy = player = happy = Vous êtes une nouvelle collègue ?
 player = DOWN = happy = Pas du tout, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT
-policewoman = player = cassidy = Pourquoi portez vous l'uniforme ?
+cassidy = player = happy = Pourquoi portez vous l'uniforme ?
 player = DOWN = happy = Pour me faire passer pour une policière, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT_NEXT
-policewoman = player = cassidy = Qui vous a donné cette tenue ?
+cassidy = player = happy = Qui vous a donné cette tenue ?
 player = DOWN = happy = Je l'ai volé dans les vestiaires, merci.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_DISGUISE_NEXT_NEXT_NEXT_NEXT
-policewoman = player = cassidy = Je vais devoir vous arrêter.
+cassidy = player = happy = Je vais devoir vous arrêter.
 player = DOWN = happy = Non merci, merci.
 
 
@@ -56,45 +56,45 @@ player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission 
 
 
 % PLAYER_SPOTTED_JESSY_BEHIND_DOOR
-policewoman = player = jessy_angry = Non mais dis-donc ! Vous vous croyez où, vous ?!
-player = policewoman = laugh = Pardon ! Je me suis perdue.
-policewoman = player = jessy_angry = Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
-policewoman = player = jessy_angry = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
-policewoman = player = jessy_angry = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
-player = policewoman = sad = (J'ai déconné, là…)
+jessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
+player = jessy = laugh = Pardon ! Je me suis perdue.
+jessy = player = angry_var = Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+jessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+jessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+player = jessy = sad = (J'ai déconné, là…)
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK
-policewoman = player = jessy_neutral = Qu'est-ce que vous faites ?
-player = policewoman = laugh = Rien du tout.
-policewoman = player = jessy_neutral = Alors reculez, s'il vous plaît.
+jessy = player = unhappy = Qu'est-ce que vous faites ?
+player = jessy = laugh = Rien du tout.
+jessy = player = unhappy = Alors reculez, s'il vous plaît.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_NEXT
-policewoman = player = jessy_angry = Madame, reculez.
-player = policewoman = angry = Ça va, calmez-vous. Je vais reculer.
+jessy = player = angry_var = Madame, reculez.
+player = jessy = angry = Ça va, calmez-vous. Je vais reculer.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_FINAL
-policewoman = player = jessy_angry = Ça suffit. Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
-policewoman = player = jessy_angry = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
-policewoman = player = jessy_angry = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
-player = policewoman = sad = (J'ai déconné, là…)
+jessy = player = angry_var = Ça suffit. Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+jessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+jessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+player = jessy = sad = (J'ai déconné, là…)
 
 
 % JESSY_YELLING_AT_SARAH
-policewoman = DOWN = jessy_angry = Au nom de la loi, je vous somme d'arrêter !
+jessy = DOWN = angry_var = Au nom de la loi, je vous somme d'arrêter !
 sarah = UP = laugh = Désolé madame, c'était un accident.
 sarah = UP = sad = (Rebecca… Qu'est-ce que tu fiches@à nous regarder… Dépêche-toi…)
 
 
 % JESSY_YELLING_AT_PLAYER
-policewoman = player = jessy_angry = Qu'est-ce que vous faites, vous ?
-player = policewoman = laugh = Moi ? Rien du tout.
-policewoman = player = jessy = Ha ok, pardon.
+jessy = player = angry_var = Qu'est-ce que vous faites, vous ?
+player = jessy = laugh = Moi ? Rien du tout.
+jessy = player = happy = Ha ok, pardon.
 
 
 % JESSY_YELLING_STRONGLY_AT_PLAYER
-policewoman = player = jessy_angry = Non mais dis-donc ! Vous vous croyez où, vous ?!
-player = policewoman = laugh = Pardon ! Je me suis perdue.
-policewoman = player = jessy_angry = Cette zone est interdite au pulic !@Reculez, ou je vais devoir vous arrêter.
+jessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
+player = jessy = laugh = Pardon ! Je me suis perdue.
+jessy = player = angry_var = Cette zone est interdite au pulic !@Reculez, ou je vais devoir vous arrêter.
