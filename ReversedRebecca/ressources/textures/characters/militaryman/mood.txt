@@ -2,13 +2,13 @@
 
 ////// ENGINEER //////
 
-////// IDIOT //////
-
 ////// THE MOUNTAIN //////
 
 ////// DORMITORY CHIEF //////
 
-////// TRASH MAN //////
+////// TRASHMAN //////
+
+trashman=1,1
 
 ////// DOCTOR //////
 
@@ -20,13 +20,17 @@
 
 ////// XAVIER DUPONT //////
 
-xavier_dupont=1,1
+xavier_dupont=2,1
 
 ////// RUNNER_ONE //////
 
-runner_one=2,1
+runner_one=3,1
 
 ////// RUNNER_TWO //////
+
+////// IDIOT //////
+
+idiot=4,1
 
 ////// SHOOTER_ONE //////
 
