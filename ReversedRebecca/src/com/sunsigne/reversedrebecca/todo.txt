@@ -46,6 +46,7 @@
 	////////// EN COURS ////////////
 
 	à vérifier : 
+	lvl002 :
 	- cassidy texture non manquante
 	- jessy texture
 
