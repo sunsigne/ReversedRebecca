@@ -1,41 +1,47 @@
 ////// GUARD //////
 
-////// ENGINEER //////
+guard=1,1
 
-////// THE MOUNTAIN //////
+////// DORMITORY //////
 
-////// DORMITORY CHIEF //////
+dormitory=2,1
 
 ////// TRASHMAN //////
 
-trashman=1,1
+trashman=3,1
 
-////// DOCTOR //////
+////// CLEANER //////
 
-////// MAINTENANCE WORKER //////
+cleaner=4,1
 
-////// RESTAURATEUR //////
+////// COOK //////
+
+cook=5,1
 
 ////// SERGENT //////
 
+sergent=6,1
+
 ////// XAVIER DUPONT //////
 
-xavier_dupont=2,1
+xavier_dupont=7,1
 
 ////// RUNNER_ONE //////
 
-runner_one=3,1
-
-////// RUNNER_TWO //////
+runner_one=8,1
 
 ////// IDIOT //////
 
-idiot=4,1
+idiot=9,1
 
-////// SHOOTER_ONE //////
+////// SHOOTER //////
 
-////// SHOOTER_TWO //////
+shooter=10,1
 
 ////// PRISONNER //////
 
+prisonner=11,1
+
 ////// SLACKER //////
+
+slacker=12,1
