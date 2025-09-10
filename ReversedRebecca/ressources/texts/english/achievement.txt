@@ -23,6 +23,8 @@ AwkwardTitle = That was awkward...
 AwkwardText = Being denied a hug
 AirheadTitle = Airhead
 AirheadText = Leave without stealing the files
+DarwinAwardTitle = Darwin Award
+DarwinAwardText = Deadly accident at shooting field
 
 ///// YELLOW /////
 
