@@ -1,0 +1,5 @@
+///// TRAINING /////
+
+YOU_DONT_SHOOT = Key1 % tu ne tires pas ?
+BOUH! = Key1 % BOUH !
+ACCIDENT = Key3 % accident

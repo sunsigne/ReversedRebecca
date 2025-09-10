@@ -17,6 +17,7 @@ cook=4,1
 ////// SERGENT //////
 
 sergent=5,1
+sergent_yelling=5,2
 
 ////// XAVIER DUPONT //////
 
@@ -33,6 +34,8 @@ idiot=8,1
 ////// SHOOTER //////
 
 shooter=9,1
+shooter_shocked=9,2
+shooter_cry=9,3
 
 ////// PRISONNER //////
 

@@ -1,0 +1,19 @@
+% WHAT_DID_I_DO
+militaryman = RIGHT = shooter_shocked = Ho mon Dieu ! Qu'est ce que j'ai fait !
+
+
+% SHOOTER
+militaryman = RIGHT = shooter_cry = Relève-toi mon pote…@On en a vu d'autres, pas vrai ?
+
+
+% RUNNER
+militaryman = player = runner = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courrir !
+
+
+% SERGENT
+militaryman = UP = sergent_yelling = C'est une faute inqualifiable, soldat ! Vous serez@traduit en cour martiale ! Le trou vous attend !
+
+
+% JESSY
+jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
+jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…

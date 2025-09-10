@@ -49,6 +49,12 @@
 	lvl002 :
 	- cassidy texture non manquante
 	- jessy texture
+	
+	à créer :
+	les voix de tous les niveaux personnages (nathan, jessy, nancy, les militarymen)
+	
+	à faire :
+	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
 
 	////////// LVL002 ////////////
 
