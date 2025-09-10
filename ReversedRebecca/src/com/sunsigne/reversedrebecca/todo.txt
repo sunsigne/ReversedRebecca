@@ -279,6 +279,7 @@
 	intégrer les poses de YY
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	le sac pouvelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
+	créer un succès ou l'idiot se fait tirer dans la tête (on a retarder sa course juste ce qu'il faut) - sélection naturelle
 
 	////////// MOLE 0 ////////////
 	

@@ -7,17 +7,13 @@ NPC-01 = Sarah
 NPC-03 = Dormitory
 NPC-04 = Trashman
 NPC-05 = Cook
-NPC-06 = Sergent
 NPC-07 = Xavier Dupont
-NPC-08 = Runner
-NPC-09 = Idiot
-NPC-10 = Shooter
 NPC-11 = Prisonner
 NPC-12 = Slacker
 NPC-13 = Cleaner
 NPC-14 = Nathan
 NPC-15 = Cassidy
-NPC-16 = Jessy
+
 NPC-17 = Nancy
 
 ///// CENTER /////
@@ -29,3 +25,12 @@ OBJ-05 = Guard Checker
 
 OBJ-03 = Table Left
 OBJ-04 = Table Right
+OBJ-06 = Target
+
+///// TRAINING /////
+
+NPC-06 = Sergent
+NPC-08 = Runner
+NPC-09 = Idiot
+NPC-10 = Shooter
+NPC-16 = Jessy
