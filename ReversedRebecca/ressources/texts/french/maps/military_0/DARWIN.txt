@@ -1,19 +1,48 @@
 % WHAT_DID_I_DO
-militaryman = RIGHT = shooter_shocked = Ho mon Dieu ! Qu'est ce que j'ai fait !
+militaryman = RIGHT = shooter_shocked = Ho mon Dieu ! Qu'est-ce que j'ai fait !
 
 
 % SHOOTER
 militaryman = RIGHT = shooter_cry = Relève-toi mon pote…@On en a vu d'autres, pas vrai ?
 
 
+% SHOOTER_NEXT
+militaryman = RIGHT = shooter_cry = Bou hou hou !
+
+
 % RUNNER
-militaryman = player = runner = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courrir !
+militaryman = player = runner = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courir !
+
+
+% JESSY
+jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
+jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
 
 
 % SERGENT
 militaryman = UP = sergent_yelling = C'est une faute inqualifiable, soldat ! Vous serez@traduit en cour martiale ! Le trou vous attend !
 
 
-% JESSY
-jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
-jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
+% SERGENT_NEXT
+militaryman = UP = sergent_yelling = Tirer sur un allié ? Vous avez de la chance si vous@n'allez qu'en prison ! Je vous aurai fait exécuter !
+
+
+% SERGENT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Déshonneur sur toi ! Déshonneur sur ta famille !@Déshonneur sur ta vache !
+
+
+% SERGENT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Même les raclures de chiottes sont plus utiles que@vous ! On peut les jeter pour faire de l'engrais !
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Vous êtes une catastrophe ambulante ! Un danger@public ! Même votre ombre a peur de vous !
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Si la discipline était une balle, vous l’auriez déjà@tirée dans votre pied ! Vous puez !
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = On devrait vous exposer comme exemple :@"Voilà ce qu’il ne faut jamais devenir !"
+
