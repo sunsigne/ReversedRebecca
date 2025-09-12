@@ -45,11 +45,6 @@
 
 	////////// EN COURS ////////////
 
-	à vérifier : 
-	lvl002 :
-	- cassidy texture non manquante
-	- jessy texture
-	
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, les militarymen)
 	
