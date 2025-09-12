@@ -13,7 +13,7 @@ Lorsque la Condition sera vérifiée, les chances d'obtenir un puzzle critique l
 
 Le Type de Requête MEMORY a deux rôles différents en fonction de son Écriture. Lorsqu'elle est "classique", elle permet d'enregistrer une balise, lorsqu'elle est Conditionnelle, elle permet de vérifier si une balise est enregistrée et de choisir la Cible en fonction.
 
-Dans la mesure où le Type de Requête MEMORY a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les MEMORY ne dure que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
+Dans la mesure où le Type de Requête MEMORY a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les MEMORY ne durent que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
 
 Exemple de situation :
 TIME -> 60 = GOTO -> JEAN_PEE_ITS_PANTS, MEMORY:TOO_LATE
@@ -27,6 +27,25 @@ Explication :
 Note : il est impossible d'effacer ou d'éditer des MEMORY, il est fortement déconseillé, lorsque vous devez créer des cycles, de les utiliser. Préférez des méthodes alternatives, comme un nom changeant cycliquement utilisé tour à tour de façon classique et conditionnelle, une suite d'AFFECTING se renvoyant la balle, un WAITFOR qui se rappelle lui-même, etc. (voir respectivement « NAME » dans la partie « Piranha – Types de Requêtes : States », « AFFECTING » dans la partie « Piranha – Types de Requêtes : Goto » et « WAITFOR » dans la partie « Piranha – Types de Requêtes : Autres »). 
 
 Attention ! N'oubliez pas que MEMORY a une portée GLOBALE et NAME une portée LOCALE ! Soyez précis dans votre code pour qu'il fonctionne.
+
+
+
+
+////// CHECKPOINT //////
+
+Le Type de Requête CHECKPOINT est à mi-chemin entre les Types de Requêtes MEMORY et SAVE. Son écriture est exactement la même que pour MEMORY, mais les balises enregistrées sont semi-persistance : elles existent tant que la fenêtre du jeu n'a pas été fermée et que la carte n'a pas été terminée.
+
+Son rôle est essentiellement de s'assurer, dans le cas où le joueur viendrait à mourir, de ne pas recommencer une carte du début.
+
+Dans la mesure où le Type de Requête SAVE a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les SAVE ne durent que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
+
+Exemple de situation :
+TIME -> 60 = GOTO -> JEAN_PEE_ITS_PANTS, CHECKPOINT:TOO_LATE, JEAN_IS_HIDING
+TIME -> 0 = CHECKPOINT -> TOO_LATE ? JEAN_IS_HIDING / NULL
+
+Explication :
+- Jean veut aller aux toilettes et aura un "petit accident" après 60 secondes. Le jeu enregistrera cette information (balise « TOO_LATE »),
+- lorsque la carte est lancée, le jeu vérifie si Jean s'est déjà fait dessus ou non. Si oui, il ira directement se cacher sans attendre 60 secondes.
 
 
 

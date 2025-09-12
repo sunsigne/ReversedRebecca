@@ -28,6 +28,7 @@ import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
+import com.sunsigne.reversedrebecca.piranha.request.memory.CheckPointSet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
@@ -95,6 +96,9 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void initParameters(String mapName) {
+		if (mapName.equalsIgnoreCase(this.mapName) == false)
+			CheckPointSet.getSet().clear();
+
 		updateInstance();
 		this.mapName = mapName;
 		setLayer(LAYER.GROUND);
