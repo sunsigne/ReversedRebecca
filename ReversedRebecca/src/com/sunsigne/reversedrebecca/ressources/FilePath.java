@@ -11,7 +11,7 @@ public class FilePath {
 	public static final String RESSOURCES_PATH = Infos.IS_DEV_VERSION ? "ressources/" : "";
 	public static final String USERDATA_PATH = Infos.IS_DEV_VERSION ? "userdata/"
 			: System.getenv("APPDATA").replace("\\", "/") + "/" + Infos.NAME + "/";
-	public static final String DAVEDATA_PATH = "https://raw.githubusercontent.com/sunsigne/DaveData/main/";
+	public static final String BDD_PATH = "https://raw.githubusercontent.com/sunsigne/ReversedRebeccaRandomRessources/main/";
 
 	public static final String ACHIEVEMENT = "achievement.txt";
 	public static final String ACTION = "action.txt";

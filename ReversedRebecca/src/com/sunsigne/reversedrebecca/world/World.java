@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
@@ -77,7 +76,6 @@ public class World implements Updatable, RenderFree {
 			LAYER.LOADING.addObject(new LoadingScreen());
 
 		initParameters(mapName);
-		analyseKeys();
 		createMap();
 		updateLayer();
 
@@ -270,46 +268,6 @@ public class World implements Updatable, RenderFree {
 		layers[2] = new LayerDualizer().getLightFromContent(layers[1].getHandler());
 	}
 
-	////////// KEYS ////////////
-
-	private HashMap<String, String> special_chat_map = new HashMap<>();
-
-	private void analyseKeys() {
-		FileTask task = new FileTask();
-		String path = "keys.txt";
-
-		if (task.doesExist(true, path) == false)
-			return;
-
-		GameList<String> keys = new GameList<>(LISTTYPE.ARRAY);
-
-		// read file "keys.txt"
-		for (int index = 1; index < 9; index++) {
-			String valueToRead = mapName + "%" + index;
-			String key = task.read(true, valueToRead, path);
-
-			if (key.isEmpty() == false)
-				keys.addObject(key);
-		}
-
-		// attribution of special dialogues to each target
-		for (String tempKey : keys.getList()) {
-			String[] targets = tempKey.split("\\%");
-			String dialogue = task.readOnline(targets[1] + ".txt");
-
-			if (dialogue.isEmpty())
-				continue;
-
-			String warning = "SPECIAL DIALOGUE : MAP - " + mapName + " / " + targets[0] + " -> " + targets[1];
-			System.out.println(warning);
-			special_chat_map.put(targets[0], dialogue);
-		}
-	}
-
-	public String getSpecialDialogue(String target) {
-		return special_chat_map.get(target);
-	}
-
 	////////// MAP OR LIST ////////////
 
 	private GameList<BufferedImage> map_list = new GameList<BufferedImage>(LISTTYPE.ARRAY);
@@ -409,7 +367,7 @@ public class World implements Updatable, RenderFree {
 
 	private void closePuzzle() {
 		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
-		
+
 		for (Updatable tempObject : list.getList()) {
 			if (tempObject instanceof Puzzle == false)
 				continue;

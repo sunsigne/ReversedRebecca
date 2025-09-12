@@ -93,7 +93,7 @@ public class FileTask {
 		String content = "";
 
 		try {
-			url = new URL(FilePath.DAVEDATA_PATH + path);
+			url = new URL(FilePath.BDD_PATH + path);
 			if (doesExist(url)) {
 				scan = new Scanner(url.openStream(), "UTF-8");
 				content = scanText(scan, valueToRead, true);

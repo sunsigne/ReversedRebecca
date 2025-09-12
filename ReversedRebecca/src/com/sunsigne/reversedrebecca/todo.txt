@@ -7,7 +7,6 @@
 	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
 	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
 	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
-	mettre à jour la classe "UpdateScreen" (dossier menu), ainsi que la DaveData
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
 	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	
@@ -45,18 +44,26 @@
 
 	////////// EN COURS ////////////
 
+	créer un système de checkpoint
+	mettre à jour update screen
+	vérifier que le lien BDD n'a pas été détruit + les dialogues normaux, ceux sans balise, et ceux de dave
+
+	à faire :
+	configurer le clavier en querty par défaut sur les version anglophone
+	rajouter le ficher icon.png dans le dossier racine
+	supprimer les ressources non utilisées
+	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
+	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
+	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
+	mettre à jour la DaveData
+	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
+	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
+
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, les militarymen)
 	
 	à faire :
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
-
-	////////// LVL002 ////////////
-
-	polish "final" pré-diffusion :
-	- mettre à jour la fusillade
-	- prévenir que la fusillade n'est pas finie
-	- relier le fusil à pompe derrière Butch à la fusillade
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -256,6 +263,9 @@
 	////////// LVL002 ////////////
 
 	à faire + tard :
+	- finir la fusillade
+	- retirer le message qui dit que la fussillade 'nest pas finie
+	- relier le fusil à pompe derrière Butch à la fusillade
 	- toute la variante "gunshot"
 	- l'embranchement onirique
 	- les variantes sadique et psycopathe
@@ -270,9 +280,6 @@
 	- plante volée
 	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
 	- doug rencontré
-
-	cacher une façon de date l'une des policières, en lui apportant le donut ou le café (scène X où elle utilise les menottes)
-
 
 	////////// MILITARY 0 ////////////
 
