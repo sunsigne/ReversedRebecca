@@ -1,0 +1,138 @@
+1
+Cassidy =Player =surprised =Oh mais !
+Cassidy =Player =happy_var =Salut ! On s'est vu au commissariat ce matin ! Vous rentriez sans cesse dans mon bureau / Vous êtes rentrée dans mon bureau !
+
+2
+Rebecca =Cassidy =excited =Exact ! Vous êtes donc policière et militaire ?
+Cassidy =Player =happy_var =Oui ! J'ai une double formation, exactement comme ma soeur. 
+Cassidy =Player =happy =Moi, c'est Cassidy au fait. Et ma soeur, Jessie. Elle doit être au stand de tir en ce moment.
+Rebecca =Cassidy =happy_var =Entendu, merci !
+bouton "E" =Jessie, qu'est-ce que tu veux savoir à son sujet ?
+
+3
+action "F" =I'm into her / Elle me plaît carrément
+Cassidy =Player =surprised_var =Elle te plaît ?
+Cassidy =Player =happy =Tu es assez son genre justement, tu pourrais avoir tes chances avec elle !
+Cassidy =Player =happy =Par contre du dois savoir qu'elle sort déjà avec Nancy.
+Cassidy =Player =happy =Elles sont plutôt ouvertes de ce côté là, alors ça peut marcher. Tu devrais voir ça avec elles.
+bouton "E" =Conseils ?
+Cassidy =Player =??? =Jessie a un caractère difficile... Si tu es trop gentil, tu vas l'ennuyer. Si tu joues un peu trop les fortes têtes, tu vas l'énerver.
+Cassidy =Player =??? =En dosant ce qu'il faut d'impertinence (sassy) et de soumission, tu la feras craquer.
+
+4
+bouton "E" =Tu les manipules
+Jessie =Player =angry =S'ils sont assez bêtes pour penser qu'ils ont une chance avec moi, ils méritent de se prendre des coups...
+Jessie =Player =sadistic_snurk =Ils méritent que je les fasse tourner en bourrique !
+bouton "E" =C'est mal...
+bouton "R" =C'est amusant !
+Jessie =Player =Je ne t'ai pas vraiment demandé ton avis la bleue ! D'ailleurs, j'ai envie d'un (objet)
+bouton "E" =Va le chercher toi-même !
+bouton "R" =Oui Madame !
+
+5
+Jessie =Player =dreaming =Tu m'as probablement mal entendu... 
+Jessie =Player =angry =Je t'ai dis apporte moi (objet) !
+Jessie =Player =doubt =Ah, tu y vas vraiment ? Très bien, je t'attends alors.
+action "E" =Donner.
+Jessie =Player =C'est pas mal, mais ça manque de (sucre ?). Merci d'y retourner et d'arranger ça.
+action "E" =Soumis.
+action "R" =Rebiffer.
+
+6
+Jessie =Player =sadistic =Nan, tu sais quoi ? J'ai changé d'avis, dis à Nancy d'y aller. (petite phase avec Nancy) 
+Jessie =Player =Tu peux disposer Nancy, je dois parler à notre ami.
+Jessie =Player =sadistic =Bon Mademoiselle, tu es plutôt mon genre... J'ai assez envie de te menotter pour tout te dire.
+Jessie =Player =wink =Retrouve moi dans quelques minutes derrière la chambre froide. (elle va prévenir Nancy puis y aller pour attendre pour le reste du temps du niveau) 
+
+7
+(le joueur y va, et lorsqu'il arrive, Jessie le plaque contre le mur)
+
+8
+Jessie =Player =sadistic =Alors comme ça, tu es une gentille fille bien sage qui fait tout ce qu'on lui demande...
+Jessie =Player =sadistic =Tu as envie que je te punisse ? J'ai bien envie de t'expliquer un truc ou deux, là tout de suite.
+Jessie =Player =sadistic =Mais je vais rester sage moi aussi, en tout cas pour cette fois.
+Jessie =Player =wink =J'ai parlé à Nancy, on a décidé de passer toutes les deux chez toi ce soir.
+Jessie =Player =sadistic =Alors à bientôt... ma chose. (Rebecca devient rouge pendant 10/15sec, ou elle devient rouge et bave en s'effondrant sur place ?)
+
+9
+Nancy =Player =happy =My name is Nancy (Moi c'est Nancy) ! Comment puis-je t'aider ?
+Rebecca =Nancy =worry =Je ne sais pas encore...
+Rebecca =Nancy =happy_var2 =En fait, je m'amuse à parler avec tous les gens que je croise pour voir ce qu'ils ont à dire.
+Nancy =Player =excited =Tu... Tu quoi ? T'es sérieuse ? C'est trop mignon !
+Nancy =Player =happy =Par contre, je ne peux pas te parler trop longtemps, ma copine va être jalouse.
+Rebecca =Nancy =surprised =Quoi ? Tu n'as pas le droit de parler aux autres filles ?
+Nancy =Player =blush_side =Pas quand elles sont aussi jolies que toi...
+Nancy =Player =blush_side =Mais c'était sympa de faire connaissance.
+action "E" =Ta copine ?
+Rebecca =Nancy =sad =Je trouve que ça n'est pas sain que tu n'aie pas le droit de parler à d'autres personne.
+Nancy =Player =J'imagine que c'est comme ça dans une relation.
+Nancy =Player =blush_side =Et puis, moi aussi je serai jalouse si je la voyais en train de parler à quelqu'un d'aussi jolie que toi...
+Nancy =Player =blush =En plus, elle m'a dis récemment qu'elle voulait essayer des choses nouvelles, alors peut-être qu'à trois...
+Nancy =Player =blush_side =Désolée, je m'avance. Tu n'as probablement pas envie de... Oublie ce que j'ai dit.
+action "E" =C'est qui ta copine ?
+action "R" =Peut-être que j'ai envie ?
+
+10
+Nancy =Player =embarassed =Do you ? (Vraiment ?)
+Nancy =Player =embarassed =Non... On ne devrait pas, pas sans son accord...
+Nancy =Player =embarassed =Va lui parler, elle est au stand de tir...
+action "E" =(mentir) Je lui ai parlé, elle est d'accord.
+Nancy =Player =embarassed_var =Menteuse, tu n'as pas quitté la pièce...
+action "E" =(mentir) Je lui ai parlé avant de venir te voir
+Nancy =Player =Ah oui ? Elle s'appelle comment ?
+
+11
+action "E" =Elisabeth ou Cassidy.
+action "R" =Mathilde ou Jessie.
+action "F" =Ok j'ai menti.
+
+
+12
+[F ? (mais je suppose E)] Nancy =Player =blush_deceived =Ca n'est pas drôle...
+Nancy =Player =blush_deceived =Quoi qu'il en soit, je n'aime pas tes mensonges... Ne me parle plus s'il te plaît.
+action "E" =S'excuser.
+Nancy =Player =C'est gentil, j'apprécie. Je suis désolée, mais je n'ai quand même plus envie de te parler.
+[F] Nancy =Player =blush_side =C'est noble de l'admettre, reviens me voir quand tu lui auras vraiment parlé...
+[R ?] Nancy =Player =embarassed =Oh... Tu lui as vraiment parlé... Donnes moi une seconde, je reviens. (elle devient rouge et se cache sous la table. Elle crie "Ahhh !" puis revient très doucement)
+Nancy =Player =blush =Ok... Euh... Très bien... (Very well...) Alors... 
+Nancy =Player =blush_side =J'imagine qu'on peut s'embrasser ? (Une fois un petit bisou, elle court vite se cacher sous la table. Rebecca se rapproche doucement pour lui parler)
+Nancy =Player =embarassed_var =Désolée... C'était très bien, trop bien...
+Nancy =Player =Je... vais dire à Jessie qu'on passera chez toi ce soir. Je sais qu'elle fouillera les fichiers de la police pour trouver ton adresse.
+Nancy =Player =Tu peux me laisser ici, je finirai par sortir... ou pas.
+
+13
+(dans l'appartement de Rebecca)
+(cas où Rebecca à menti à Nancy et que Jessie l'a appris)
+
+14
+Jessie =Player =angry_var ou sadistic =Police ! Ouvrez ou j'enfonce la porte !
+
+15
+(cas où Rebecca n'a pas menti)
+Jessie =Player =sadistic =Alors comme ça on décide de s'immiscer dans un couple ? 
+Jessie =Player =sadistic =Ca n'est pas très réglementaire, c'est même totalement interdit... (Faisant un pas, forçant Rebecca à reculer)
+Jessie =Player =aroused =Tu mérites une punition... Je vais te montrer comment je me sers réellement de mes menottes... (Plaquée contre le mur)
+
+16
+T'inquiètes je gère ma poule ! :D
+
+17
+(cas du mensonge)
+Jessie =Player =angry =Alors comme ça on drague ma copine sans ma permission ?!
+Rebecca =Jessie =angry =Nancy n'a pas besoin de ta permission, elle fait ce qu'elle veut, c'est une adulte ! 
+Jessie =Player =angry_var2 =Une adulte qui m'appartient, personne ne la touche à part moi !
+Nancy =Player =Si je peux me permettr- (dialogue interrompu par le moteur du jeu)
+Jessie =Player =Tu ne te permet rien du tout.
+Jessie =Player =Quant à toi (plaquée contre un mur)...
+Jessie =Player =aroused =Tu mérites une punition... Je vais te montrer comment je me sers réellement de mes menottes...
+action "E" =L'embrasser.
+action "R" =La repousser.
+(version où on la repousse)
+Rebecca =Jessie =angry =Tu t'es cru où ? Sors de chez moi !
+Nancy =Player =Jessie, je pense qu'on devrait (parole coupée)
+Jessie =Player =La ferme ! Tu veux te taper cette garce dans mon dos ?? Vas-y sale trainée ! (part en la poussant)
+Nancy =Player =sad =Rebecca, je suis désolée pour tout ça (ou Jessie). 
+Nancy =Player =sad_side =Aussi, tu n'aurais pas dû me mentir...
+Nancy =Player =cry =Et maintenant, Jessie m'a... Jessie est...
+action "E" =Ca va aller...
+action "R" =Sucks to be you... (Ca craint d'être toi...)
