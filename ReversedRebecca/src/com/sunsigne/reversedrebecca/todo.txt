@@ -44,9 +44,9 @@
 
 	////////// EN COURS ////////////
 
-	créer un système de checkpoint
+	créer checkpoint lvl001
 	mettre à jour update screen
-	vérifier que le lien BDD n'a pas été détruit + les dialogues normaux, ceux sans balise, et ceux de dave
+	vérifier que le lien BDD n'a pas été détruit
 
 	à faire :
 	configurer le clavier en querty par défaut sur les version anglophone
