@@ -96,7 +96,7 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void initParameters(String mapName) {
-		if (mapName.equalsIgnoreCase(this.mapName) == false)
+		if (get() != null && mapName.equalsIgnoreCase(get().mapName) == false)
 			CheckPointSet.getSet().clear();
 
 		updateInstance();
