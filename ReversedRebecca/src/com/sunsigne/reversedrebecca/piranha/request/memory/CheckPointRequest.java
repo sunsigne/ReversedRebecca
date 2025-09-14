@@ -32,7 +32,9 @@ public class CheckPointRequest extends ConditionalRequest {
 
 	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
-		CheckPointSet.getSet().add(target.toUpperCase());
+		String data = target.toUpperCase();
+		CheckPointSet.getSet().add(data);
+		System.out.println("CHECKPOINT : " + data);
 	}
 
 	@Override
