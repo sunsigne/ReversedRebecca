@@ -44,7 +44,7 @@
 
 	////////// EN COURS ////////////
 
-	créer checkpoint lvl001
+	traduction en anglais
 	mettre à jour update screen
 	vérifier que le lien BDD n'a pas été détruit
 
