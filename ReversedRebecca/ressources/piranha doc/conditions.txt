@@ -24,6 +24,12 @@ Note : par souci d'ergonomie, le Type de Requête SOUND est ignoré lorsque le 
 
 
 
+////// PRIORSAVED //////
+
+Le Type de Condition PRIORSAVED fonction de la même façon que le Type de Condition SAVED, à ceci près que ce premier est lancé AVANT le chargement de la carte (ou plus précisément, après le chargement de la carte, mais avant l'initialisation des objets – TIME -> 0).
+
+
+
 ////// WONPUZZLE //////
 
 Le Type de Condition WONPUZZLE est vérifié lorsque le puzzle, initié par le puzzler aux coordonnées indiquées en Valeur, est résolu.

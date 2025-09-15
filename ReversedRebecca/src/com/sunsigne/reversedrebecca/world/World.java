@@ -83,7 +83,7 @@ public class World implements Updatable, RenderFree {
 		addSetup();
 		if (instance != this)
 			return;
-		new Save().loadSave();
+		new Save().loadSave(false);
 		if (instance != this)
 			return;
 
@@ -165,6 +165,7 @@ public class World implements Updatable, RenderFree {
 	private void addSetup() {
 		levelStats = new LevelStats(mapName);
 		getLayer(true).addObject(new SetupObject());
+		new Save().loadSave(true);
 		new TimeCondition().registerValue(0);
 		Game.getInstance().forceLoop();
 	}

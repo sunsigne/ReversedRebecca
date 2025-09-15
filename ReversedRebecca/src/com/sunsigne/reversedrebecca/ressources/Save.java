@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.piranha.condition.global.PriorSavedCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
@@ -66,7 +67,7 @@ public class Save {
 
 	////////// READ ////////////
 
-	public void loadSave() {
+	public void loadSave(boolean prior) {
 
 		String[] saved_data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 		String[] dave_data = new FileTask().read(userData, dave_file).split(System.getProperty("line.separator"));
@@ -75,7 +76,10 @@ public class Save {
 		for (String tempDatum : data) {
 			if (tempDatum.toLowerCase().contains("currentlvl"))
 				continue;
-			new SavedCondition().registerValue(tempDatum);
+			if (prior)
+				new PriorSavedCondition().registerValue(tempDatum);
+			else
+				new SavedCondition().registerValue(tempDatum);
 		}
 	}
 
