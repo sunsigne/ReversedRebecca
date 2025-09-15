@@ -1,0 +1,20 @@
+///// GOOD /////
+
+SMILING_COFFEE = 2% coffee while smiling
+LEFT_A_NICE_NOTE = 3% leave a kind note
+CHEER_UP_SARAH = 4% cheer up Sarah
+FREE_SARAH = 5% free Sarah
+
+///// BAD /////
+
+LEFT_A_MEAN_NOTE = 3% leave a mean note
+STEAL_A_COFFEE = 4% steal a coffee
+STEAL_A_PLANT = 5% steal a plant
+SPITTING_IN_A_COFFEE = 9% spit in a coffee
+INSTALL_A_VIRUS = 10% install a virus
+ABANDON_SARAH = 11% abandon Sarah
+
+///// PSYCHOPATH /////
+
+FREE_DOUG = 999% free Doug
+COLLATERAL_DAMAGE = 999% damage collaterals

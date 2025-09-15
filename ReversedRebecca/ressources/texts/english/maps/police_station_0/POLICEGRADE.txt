@@ -1,0 +1,29 @@
+% PLAYER_SPOTTED
+policegrade = DOWN = giovanni = Hey!
+
+% PLAYER_SPOTTED_NEXT
+policegrade = player = giovanni = This is a restricted area. @I'm going to have to ask you to leave.
+
+% PLAYER_SUSPECTED
+policegrade = DOWN = giovanni = What's this for?
+player = UP = unhappy_var = Uh…
+player = UP = unhappy = (What possessed me to break into the police chief's office… I'm going to be spotted…)
+player = UP = sad_var = (Quick… A credible lie…)
+policegrade = DOWN = giovanni = So?
+player = UP = happy = Uh… The printer's out of paper!
+policegrade = DOWN = giovanni = Ask Laura.
+player = UP = happy_var = Okay, thanks.
+player = UP = unhappy_var = (I bought some time, but my disguise won't fool him... I have to get out of his office quickly.)
+
+% PLAYER_SUSPECTED_NEXT
+policegrade = DOWN = giovanni = Just a sec...
+player = UP = despair = (Damn...)
+policegrade = DOWN = giovanni = Laura's on vacation... Ask Jessy instead.
+player = UP = no_sens = Um... Okay.
+player = UP = no_sens_var = (I really thought he'd caught me...)
+player = UP = no_sens = (I'm not going to push my luck... If I stay any longer, I'm done for.)
+
+% PLAYER_SUSPECTED_FINAL
+policegrade = DOWN = giovanni = Hey!
+policegrade = DOWN = giovanni = But you're not part of the police! You just stole a uniform! policegrade = DOWN = giovanni = You are under arrest.
+player = UP = sad = (I messed up there…)

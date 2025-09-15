@@ -1,0 +1,50 @@
+% PLAYER_SPOTTED_MEOWS_WITHIN_DESK
+policeman = player = meows = I'm dreaming... People really think they can get away with anything these days...
+policeman = player = meows = Get out of here.
+
+% PLAYER_SPOTTED_MEOWS_IN_CORRIDOR
+policeman = player = meows = … Madam, you don't belong here. Please move along.
+
+% PLAYER_SPOTTED_MEOWS_SECOND_INTRUSION
+policeman = player = meows = This joke has gone on long enough.
+
+% PLAYER_SPOTTED_MEOWS_SECOND_INTRUSION_NEXT
+policeman = player = meows = You are under arrest.
+
+% PLAYER_SPOTTED_JAMES_WITHIN_DESK
+policeman = player = james = Sincerely, out.
+
+% PLAYER_SPOTTED_MEOWS_DISGUISED
+policeman = player = meows = I'm dreaming... People really think they can get away with anything these days...
+policeman = player = meows = I don't know who gave you the keys, but my@office is my office. Leave me alone.
+
+% PLAYER_SPOTTED_MEOWS_SECOND_INTRUSION_DISGUISED
+policeman = player = meows = So? So you were a colleague? @This must be your first day...
+policeman = player = meows = Anyway, my office is my office. @Leave me alone. I'm not joking.
+
+% PLAYER_SPOTTED_MEOWS_DISGUISED_FIRST_WARNING
+policeman = player = meows = This is getting pretty boring!
+policeman = player = meows = Your first day is off to a very bad start! @I'll tell the chief.
+
+% PLAYER_SPOTTED_MEOWS_DISGUISED_SECOND_WARNING
+policeman = player = meows = You deserved that one.
+
+% PLAYER_SPOTTED_JAMES_WITHIN_DESK_DISGUISED
+policeman = player = james = Is this a joke?
+policeman = player = james = Sorry, but this is a very bad one. I'm going to @have to arrest you for wearing an illegal uniform.
+player = policewoman = sad = (I messed up there…)
+
+% PLAYER_SPOTTED_BUTCH_SHOTGUN
+policeman = player = butch = Can I ask what you're doing?
+player = butch = happy = I'm trying to sneak up on the gun@behind you.
+policeman = player = butch = … … …
+policeman = player = butch_smirk = Okay, that was funny.
+policeman = player = butch = Seriously. Back up.
+
+% PLAYER_SPOTTED_BUTCH_SHOTGUN_NEXT
+policeman = player = butch = Where are you going?
+player = butch = happy_var = I told you.
+policeman = player = butch = The funniest jokes are the shortest.
+
+% PLAYER_SPOTTED_BUTCH_SHOTGUN_FINAL
+policeman = player = butch = Stop.

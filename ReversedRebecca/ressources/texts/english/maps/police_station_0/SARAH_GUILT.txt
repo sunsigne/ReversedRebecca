@@ -1,0 +1,52 @@
+% BAR
+sarah = player = worry = I look pretty pathetic behind bars. @Don't I?
+player = sarah = unhappy = Don't say that, Sarah...
+
+% BARLESS
+sarah = player = surprised = Rebecca! Are you okay? @I was so worried...
+player = sarah = happy = I'm fine, thank you.
+sarah = player = sad_var = What on earth did I think I'd ask you to infiltrate @a police station... I'm a terrible friend...
+player = sarah = unhappy = Don't say that, Sarah...
+
+% GUILT_TRIP
+sarah = player = unhappy = But it's the truth! I was angry, @I reacted emotionally.
+sarah = player = sad_var = What a great idea to steal documents... @We're criminals.
+player = sarah = worry = I don't agree. We've been wronged,@and we're only trying to right that wrong.
+sarah = player = unhappy = What I'm saying is, maybe@there was another way…
+
+% GUILT_TRIP_NEXT
+sarah = player = cry = I'm sorry, Rebecca…@Sorry I dragged you into this…
+player = sarah = worry = Hey… It was my decision to follow you.@You don't have to blame yourself for my choices.
+player = sarah = excited = And look, I look cool in uniform!
+sarah = player = cry_var = Ugh, you're stupid.
+
+% GUILT_TRIP_NEXT_VAR
+sarah = player = cry = I'm sorry, Rebecca…@Sorry I dragged you into this…
+player = sarah = worry = Hey… It was my decision to follow you.@You don't have to blame yourself for my choices.
+player = sarah = excited = And besides, blowing up walls is fun!
+sarah = player = cry_var = Pfff, you're stupid.
+
+% NO_DOCUMENT
+player = sarah = unhappy = Well... For now, I haven't found@what we came for, but I'm working on it.
+player = sarah = happy_var = Come on. I'll get started and we'll get out of here, together.@Okay?
+sarah = player = cry_var = Yes.
+sarah = player = fine = Thanks.
+
+% NO_DOCUMENT_OOPSY
+player = sarah = happy = Plus, I found what we came for…
+player = sarah = no_sens = Uh…
+
+% DOCUMENTS
+player = sarah = happy = Plus, I found what we came for.@Now we just have to leave, together.
+sarah = player = cry_var = Is that true? @Thanks for staying strong, Rebecca.
+player = sarah = happy_var = That's what friends are for.
+
+% FREE
+player = sarah = happy_var = There you go! You're free! @All we have to do is go out!
+
+% FREE_NO_DOCUMENT
+player = sarah = happy_var = There you go! You're free!
+
+% FREE_NO_DOCUMENT_NEXT
+player = sarah = laugh = Just give me a minute to go@get the documents. I have the key with me.
+sarah = player = happy = Okay, I'm not moving.

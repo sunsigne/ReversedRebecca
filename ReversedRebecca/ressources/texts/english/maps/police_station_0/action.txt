@@ -1,0 +1,55 @@
+///// RECEPTION /////
+
+DO_YOU_HAVE_A_PLAN = Key1 % do you have a plan?
+CREATE_A_DIVERSION = Key 3 % create a diversion
+CREATE_A_DIVERSION_VAR = Key 3 % create a diversion
+DO_RESEARCH = Key 3 % conduct research
+KEEP_RESEARCHING = Key 3 % continue searching
+STOP = Key 3 % stop
+MOVE_UNDER_VENTILATION = Key 2 % move under the ventilation
+SET_UP_THE_DIVERSION = Key 2 % set up the diversion
+TAKE_THE_KEYS = Key 2 % take the keys
+STEAL = Key 2 % steal
+START_THE_DIVERSION = Key 2 % start the diversion
+COME_BACK = Key 1 % return
+ABANDON_SARAH = Key 3 % abandon Sarah
+
+///// PRE-CHIEF & CHIEF /////
+
+DISGUISE = Key 2 % disguise
+
+///// RESTROOM /////
+
+BLACK_COFFEE = Key 1 % coffee black
+MILK_COFFEE = Key2 % coffee with milk
+
+///// UP /////
+
+ASK_FOR_COFFEE = Key3 % ask for the coffee
+STEAL_THE_COFFEE = Key3 % steal the coffee
+LEAVE_A_LITTLE_NOTE = Key1 % leave a little note
+INSTALL_A_VIRUS = Key2 % install a virus
+LEAVE_A_NOTE_NICE = Key1 % "You're a nice person"
+LEAVE_A_NOTE_MEAN = Key2 % "Nobody likes you!"
+I_WOULD_LIKE_A_GREEN_KEY = Key3 % I'd like a green key
+CHIEF_ASKED_FOR = Key1 % The chief asked me
+FEELING_LIKE_FREEING_THE_INMATES = Key2 % I want to free the inmates
+TO_STEAL_YOUR_SHOTGUN = Key3 % To steal your shotgun
+GIVE_THE_DONUT = Key3 % Give the donut
+GIVE_WITH_A_SMILE = Key1 % (Give with a smile)
+I_SPAT_IN_IT = Key2 % I spat in it
+WAKE_UP = Key1 % Wake up
+COMMIT_MURDER = Key3 % Commit murder
+
+///// BIG JAIL /////
+
+LATER = Key2 % Later
+BARGAIN = Key3 % Bargain
+OPENED_CELL = Key1 % Open cell?!
+NAKED = Key1 % Naked?!
+DONUT = Key2 % donut?
+WHAT_PSSST = Key1 % what "pssst"?
+NAME = Key1 % first name?
+GIVE_A_SHOVEL = Key3 % give a shovel
+GIVE_THE_GREEN_KEY = Key3 % give the green key
+YELLOW_KEY = Key3 % yellow key?

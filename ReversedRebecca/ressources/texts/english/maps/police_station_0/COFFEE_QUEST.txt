@@ -1,0 +1,66 @@
+% BROKEN_MACHINE
+player = DOWN = sad = Damn! The machine's broken! @Just when I really needed it…
+player = DOWN = worry = Well… I guess I can always@ask someone for their coffee.
+
+% BROKEN_MACHINE_BAD
+player = DOWN = sad = Damn! Just when I really needed it…
+player = DOWN = you_silly = Well… I guess I can always@steal someone's coffee.
+
+% BROKEN_MACHINE_TABLE
+player = DOWN = you_silly = Could have, but these cups are empty.
+
+% RATTATAC
+policeman = DOWN = rattatac = Hey, can you help me with anything?
+player = UP = happy_var = Okay, I'll check it out.
+policeman = DOWN = rattatac = Visit you? Hey, visit the coffee machine! @Hey, don't joke. They're really good!
+policeman = DOWN = rattatac = Well... He says that... @But without a donut, he didn't boil mine.
+player = DOWN = no_sens = Am I dreaming, or is he telling me his life story?
+
+% RATTATAC_ASK_FOR_COFFEE
+player = UP = happy = Can I have your coffee, please?
+policeman = DOWN = rattatac = My quest... Why not... @But in exchange, he wants a donut.
+player = UP = no_sens = Where can I find that?
+policeman = DOWN = rattatac = He doesn't know... None of my colleagues have one! @We'll have to ask a counter-bandit.
+player = DOWN = no_sens = (I know he's being funny, but maybe I should really do this...)
+
+% RATTATAC_STEAL_THE_COFFEE
+player = UP = surprised = Oh, man! What's that behind you?
+
+% RATTATAC_STEAL_THE_COFFEE_UP
+policeman = UP = rattatac = What's that? What's that?
+
+% RATTATAC_STEAL_THE_COFFEE_NEXT
+player = UP = happy_var = Oh no, it was just the wall.
+
+% RATTATAC_STEAL_THE_COFFEE_NEXT_UP
+policeman = DOWN = rattatac = Well, yeah... It's been here all along...
+
+% RATTATAC_TRADE
+policeman = player = rattatac = Melci! Here's the coffee! @Tou tell me how it's going!
+
+% BUTCH
+policeman = player = butch = Not right now. I'm busy.
+
+% BUTCH_ASK_FOR_GREEN_KEY
+policeman = player = butch = For what?
+
+% BUTCH_COFFEE_CHIEF
+policeman = player = butch = What a slacker! @Tell him to come get them himself!
+player = UP = unhappy = … Please?
+policeman = player = butch = Okay, okay… But I need a @coffee. Bring it to me and the keys are yours.
+
+% BUTCH_COFFEE_JOKE
+policeman = player = butch = … … …
+policeman = player = butch_smirk = Okay, that was funny.
+policeman = player = butch = It was probably the chief who asked you anyway. Bring me a coffee and the keys are yours.
+
+% BUTCH_TRADE
+policeman = player = butch = Thank you. As promised, here's the green key.
+
+% BUTCH_SPAT
+policeman = player = butch = … … …
+policeman = player = butch_smirk = …
+policeman = player = butch = As promised, here's the green key.
+
+% BUTCH_TRADE_NEXT
+policeman = player = butch = But... There are donut crumbs in this coffee! @Who's the big, disgusting bastard who did this!

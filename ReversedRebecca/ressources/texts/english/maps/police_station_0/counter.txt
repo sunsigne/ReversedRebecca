@@ -1,0 +1,3 @@
+EMAILS_SENT = emails sent
+HOLEY_HATS = hats with holes
+BODIES = corpses

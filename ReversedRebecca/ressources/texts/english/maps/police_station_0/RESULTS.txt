@@ -1,0 +1,26 @@
+% PLAN
+player = down = convinced = Okay. I've done the hardest part. @Now, phase two of the plan.
+
+% PLAN_VAR
+player = down = you_silly = Step three: Free Sarah. @So easy we'll skip it.
+
+% NOT_OBTAINED
+player = down = sad = Damn, I was almost there…
+
+% OBTAINED
+player = down = you_silly = I was really fast!
+player = down = laugh = Too bad! I liked the special speedrun music.
+
+% ARCHIVES
+player = down = sad = Nothing here.
+
+% ARCHIVES_NEXT
+player = down = sad = Still nothing.
+
+% ARCHIVES_NEXT_NEXT
+player = down = surprised = Whoa!
+player = down = you_silly = Nothing at all.
+
+% ARCHIVES_FINAL
+player = down = laugh = Ha! That's it! Useful information!
+player = down = happy_var = I'll take the file with me! @All I have to do now is find Sarah.
