@@ -1,66 +1,82 @@
 % BROKEN_MACHINE
-player = DOWN = sad = Damn! The machine's broken! @Just when I really needed it…
-player = DOWN = worry = Well… I guess I can always@ask someone for their coffee.
+player = DOWN = sad = Yikes! The machine's broken! Right when@I really needed it…
+player = DOWN = worry = Too bad… I guess I can still ask someone@for their coffee.
+
 
 % BROKEN_MACHINE_BAD
-player = DOWN = sad = Damn! Just when I really needed it…
-player = DOWN = you_silly = Well… I guess I can always@steal someone's coffee.
+player = DOWN = sad = Yikes! Right when I really needed it…
+player = DOWN = you_silly = Too bad… I guess I can still steal@someone's coffee.
+
 
 % BROKEN_MACHINE_TABLE
-player = DOWN = you_silly = Could have, but these cups are empty.
+player = DOWN = you_silly = It could have, but these cups are empty.
+
 
 % RATTATAC
-policeman = DOWN = rattatac = Hey, can you help me with anything?
-player = UP = happy_var = Okay, I'll check it out.
-policeman = DOWN = rattatac = Visit you? Hey, visit the coffee machine! @Hey, don't joke. They're really good!
-policeman = DOWN = rattatac = Well... He says that... @But without a donut, he didn't boil mine.
+policeman = DOWN = rattatac = Can I help you wiz anysing?
+player = UP = happy_var = I'm okay, I'm just visiting.
+policeman = DOWN = rattatac = You are visiting? Zen, visit ze coffee machine!@I'm not joking. Zey are really good!
+policeman = DOWN = rattatac = Well… Zey are but…@Wizout a donut, I won't drink mine.
 player = DOWN = no_sens = Am I dreaming, or is he telling me his life story?
+
 
 % RATTATAC_ASK_FOR_COFFEE
 player = UP = happy = Can I have your coffee, please?
-policeman = DOWN = rattatac = My quest... Why not... @But in exchange, he wants a donut.
+policeman = DOWN = rattatac = Mon café ? Why not…@But in exchange, I want a donut.
 player = UP = no_sens = Where can I find that?
-policeman = DOWN = rattatac = He doesn't know... None of my colleagues have one! @We'll have to ask a counter-bandit.
-player = DOWN = no_sens = (I know he's being funny, but maybe I should really do this...)
+policeman = DOWN = rattatac = I don't know… None of my colleagues 'ave one!@You will 'ave to ask a smuggler.
+player = DOWN = no_sens = (I know he's joking, but maybe@I really should do this…)
+
 
 % RATTATAC_STEAL_THE_COFFEE
 player = UP = surprised = Oh, man! What's that behind you?
 
+
 % RATTATAC_STEAL_THE_COFFEE_UP
-policeman = UP = rattatac = What's that? What's that?
+policeman = UP = rattatac = Quoi? What's zat? What's zat?
+
 
 % RATTATAC_STEAL_THE_COFFEE_NEXT
-player = UP = happy_var = Oh no, it was just the wall.
+player = UP = happy_var = My bad, it was just the wall.
+
 
 % RATTATAC_STEAL_THE_COFFEE_NEXT_UP
-policeman = DOWN = rattatac = Well, yeah... It's been here all along...
+policeman = DOWN = rattatac = Ze wall? It's been here all along…
+
 
 % RATTATAC_TRADE
-policeman = player = rattatac = Melci! Here's the coffee! @Tou tell me how it's going!
+policeman = player = rattatac = Merci! Here's the coffee!@You will sure love it very much.
+
 
 % BUTCH
-policeman = player = butch = Not right now. I'm busy.
+policeman = player = butch = Not now. I'm busy.
+
 
 % BUTCH_ASK_FOR_GREEN_KEY
 policeman = player = butch = For what?
 
+
 % BUTCH_COFFEE_CHIEF
 policeman = player = butch = What a slacker! @Tell him to come get them himself!
-player = UP = unhappy = … Please?
-policeman = player = butch = Okay, okay… But I need a @coffee. Bring it to me and the keys are yours.
+player = UP = unhappy = … Pretty please?
+policeman = player = butch = Fine, fine… But I need a coffee.@Bring me one and the keys are yours.
+
 
 % BUTCH_COFFEE_JOKE
 policeman = player = butch = … … …
-policeman = player = butch_smirk = Okay, that was funny.
-policeman = player = butch = It was probably the chief who asked you anyway. Bring me a coffee and the keys are yours.
+policeman = player = butch_smirk = I admit, that was funny.
+policeman = player = butch = It's probably the chief who asked you anyway.@Bring me a coffee and the keys are yours.
+
 
 % BUTCH_TRADE
 policeman = player = butch = Thank you. As promised, here's the green key.
+
 
 % BUTCH_SPAT
 policeman = player = butch = … … …
 policeman = player = butch_smirk = …
 policeman = player = butch = As promised, here's the green key.
 
+
 % BUTCH_TRADE_NEXT
-policeman = player = butch = But... There are donut crumbs in this coffee! @Who's the big, disgusting bastard who did this!
+policeman = player = butch = Wait… There are donut crumbs in this coffee!@Who's the fat ass pig who did this!

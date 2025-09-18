@@ -43,12 +43,12 @@ player = object = happy = Je dois demander la clef verte au policier@dans le bur
 
 % COFFEE
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois ramener un café au policier dans@le bureau avec des barreaux.
+player = object = happy = Je dois ramener un café au policier dans@le bureau avec la porte grise.
 
 
 % COFFEE_POLICEMAN
 player = object = asleep = Voyons voir…
-player = object = happy = Je dois ramener un café au policier dans@le bureau avec des barreaux.
+player = object = happy = Je dois ramener un café au policier dans@le bureau avec la porte grise.
 player = object = unhappy_var = Mais la machine à café est en panne…@Un autre policier en aura peut-être un.
 
 

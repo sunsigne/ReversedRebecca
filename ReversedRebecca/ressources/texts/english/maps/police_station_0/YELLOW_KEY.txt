@@ -1,74 +1,88 @@
 % DOUG_GIVE_A_SHOVEL_BOMB_NEXT
-player = doug = excited = Great! I'm finally going to be able to access the archives room.
-player = doug = happy = By the way, I couldn't help noticing that your cell is next to the weapons room.
+player = doug = excited = Great! I'll finally be able to access the@archives room.
+player = doug = happy = By the way, I couldn't help noticing that your cell@isnext to the weapons room.
 doug = player = intrigued = Really?
 player = doug = happy_var = Really.
-doug = player = serious = Breaking in is faster than digging a tunnel. Would you give us access to the guns?
+doug = player = serious = Pushing through is faster than digging a tunnel.@Would you give us access to the guns?
+
 
 % DOUG_GIVE_A_SHOVEL_NEXT
-player = doug = happy = By the way, I couldn't help noticing that this key also unlocks the weapons room.
+player = doug = happy = By the way, I couldn't help noticing that this key@also unlocks the weapons room.
 doug = player = intrigued = Really?
 player = doug = happy_var = Really.
-doug = player = serious = Pushing through is faster than digging@a tunnel. Would you go get us some guns?
+doug = player = serious = Pushing through is faster than digging a tunnel.@Would you go get us some guns?
+
 
 % DOUG_GIVE_A_SHOVEL_GOOD
 player = doug = angry = Are you out of your mind? Killing is wrong.@I won't even go near that room!
-doug = player = serious = I figured as much, you're a nice girl.@Too bad, we could have gotten along great, +surname_doug.
+doug = player = serious = I figured as much, you're a nice girl. Too bad,@we could have gotten along great, +surname_doug.
+
 
 % DOUG_GIVE_A_SHOVEL_EVIL
 player = doug = evil_var = What a great idea! I'll do that!
-doug = player = serious = Cool. I thought you were a nice girl,@but there's a way we could get along, +surname_doug.
+doug = player = serious = Cool. I thought you were a nice girl, but@there's a way we could get along, +surname_doug.
+
 
 % DOUG_GIVE_A_SHOVEL_NEUTRAL
-player = doug = unhappy = Uh… No? Maybe?
-doug = player = serious = Ha? Are you seriously thinking about it?
+player = doug = unhappy = Um… No? Maybe?
+doug = player = serious = Ah? Are you seriously thinking about it?
 player = doug = worry = We'll see, okay?
-player = doug = happy = I know I'm no angel, but@what you're asking me is really extreme.
-player = doug = unhappy = And if I take that step, I think@I'll lose myself…
-doug = player = serious = Don't worry +surname_doug, I didn't@"really" think you'd do it anyway.
-player = doug = unhappy_var = It's just... it's strange that I'm hesitant...
-player = doug = sad = (It's almost as if I haven't been nice enough or mean enough to have a real opinion.)
-doug = player = serious = I see what you mean. I was like you once, then I went down the criminal path.
+player = doug = happy = I know I'm no angel, but what you're asking me@is really extreme.
+player = doug = unhappy = And if I take that step, I think I'll lose myself…
+doug = player = serious = Don't worry +surname_doug, I didn't "really" think@you'd do it anyway.
+player = doug = unhappy_var = It's just… It's strange that I'm hesitant…
+player = doug = sad = (It's almost as if I haven't been nice enough or@mean enough to have a real opinion.)
+doug = player = serious = I see what you mean. I was like you once, then@I went down the criminal path.
 player = doug = worry = Like I said, we'll see.
+
 
 % ARMORY_NEUTRAL
 player = DOWN = unhappy = Am I really going to do this? @Give the prisoners guns?
-player = DOWN = happy = It might be fun after all...
+player = DOWN = happy = It might be fun after all…
+
 
 % ARMORY_EVIL
 player = DOWN = death = I have a feeling we're going to have some fun.
 
+
 % DOUG_YELLOW_KEY_EVIL
-player = doug = wrong_with_you = Wait... How does this yellow key work?
-doug = player = serious = Oh yeah, sorry. Here's the trick: if the key sticks, @twist the handle lightly.
+player = doug = wrong_with_you = Wait… How does this yellow key work?
+doug = player = serious = Right, sorry. Here's the trick: if the key gets stuck,@twist the handle lightly.
+
 
 % DOUG_YELLOW_KEY_NEUTRAL
 player = doug = worry = Um… I don't know how to use a yellow key…
 doug = player = intrigued = … Why is that only half surprising me?
 player = doug = unhappy_var = Aren't you going to teach me?
-doug = player = serious = I could… Maybe it'll motivate you@ to unlock the weapons room…
-doug = player = serious = Okay, that's it. Here's the trick: if the key sticks, @twist the handle lightly.
+doug = player = serious = I could… Maybe it'll motivate you to unlock@the weapons room…
+doug = player = serious = Okay, fine. Here's the trick: if the key gets stuck,@twist the handle lightly.
+
 
 % DOUG_YELLOW_KEY_NEUTRAL_NEXT
 player = doug = laugh = Okay, thanks!
 
+
 % DOUG_YELLOW_KEY_GOOD
-player = doug = worry = Um... I don't know how to use a yellow key...
+player = doug = worry = Um… I don't know how to use a yellow key…
 doug = player = serious = That doesn't surprise me from a nice girl.
 player = doug = unhappy_var = Aren't you going to teach me?
 doug = player = serious = Do I look like a teacher? Figure it out.
-player = doug = sad = (Well... Another inmate will probably help me...)
+player = doug = sad = (Well… Another inmate will probably help me…)
+
 
 % WILLIAM_YELLOW_KEY
-william = DOWN = serious = Sorry, friend. A cowboy doesn't reveal his tricks.
+william = DOWN = serious = Sorry, friend. A cowboy never reveal his tricks.
+
 
 % POLARIS_YELLOW_KEY
 polaris = player = neutral = No idea.
 
+
 % TEDDY_YELLOW_KEY
 teddy = player = happy = Why? Are you trying to get to the archives? @Teddy can help you.
 player = teddy = excited = Great! How do we do it?
-teddy = player = happy = Let's do it like this.
+teddy = player = happy = We do that way.
+
 
 % TEDDY_YELLOW_KEY_NEXT
 player = teddy = no_sens = Um…

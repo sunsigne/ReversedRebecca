@@ -1,90 +1,100 @@
 % INTRODUCTION
 policeman = DOWN = james = So, to summarize your story:
-policeman = DOWN = james = A certain Vladimir Wolanski came@today, to the address indicated, and broke down the door…
-sarah = UP = angry = …exploded the door!
-policeman = DOWN = james = Yes… yes… broke down the door with carnival boom-booms@ and left, taking some papers…
-sarah = UP = angry_var = …confidential plans for a government@project!
-policeman = DOWN = james = That's it… That's it… Taking your housekeeper's papers.
+policeman = DOWN = james = A folk named Vladimir Wolanski came today,@to the address indicated, and broke the door…
+sarah = UP = angry = … exploded the door!
+policeman = DOWN = james = Yes… yes… broke down the door with carnival@boom-booms and left, taking some papers…
+sarah = UP = angry_var = … confidential plans for a government project!
+policeman = DOWN = james = Yeah… Sure… Taking your world-saving doodles.
 policeman = DOWN = james = So… That's all?
-sarah = UP = angry = What do you mean "so, that's all"?@But it's very serious!
-policeman = DOWN = james = I've recorded your complaint. @Do you want me to print it?
+sarah = UP = angry = What do you mean "so, that's all"?@It's very serious!
+policeman = DOWN = james = I've registered your complaint. @Do you want me to print it?
 sarah = UP = angry_var = BUT IT'S VERY SERIOUS!
 policeman = DOWN = james = … So… Shall I print it bigger?
 sarah = UP = pikachu_face = …
 sarah = player = angry = Come on, Rebecca. Let's go.
 
+
 % WHAT_NOW
-player = sarah = no_sens = And now?
+player = sarah = no_sens = What now?
 sarah = player = angry = Follow me.
 
+
 % BRANCHING_FAIL
-sarah = player = angry = These police officers won't do anything! @We can only count on ourselves.
+sarah = player = angry = These police officers won't do anything!@We can only count on ourselves.
 sarah = player = worry = Um… Can you close the door@behind you, please.
 player = LEFT = happy_var = Yes, sorry.
 
+
 % BRANCHING
-sarah = player = sad_var = I was saying…
-sarah = player = angry = These police officers won't do anything! @We can only count on ourselves.
-sarah = player = determined = I'm convinced we can find some information on this Vladimir by snooping around!
+sarah = player = sad_var = Like I was saying…
+sarah = player = angry = These police officers won't do anything!@We can only count on ourselves.
+sarah = player = determined = I'm convinced we can find some information on@this Vladimir by snooping around!
 sarah = player = worry = But… that means getting our hands dirty…
-player = sarah = surprised = Are you suggesting we steal documents? @From the police?
+player = sarah = surprised = Are you implying we should steal documents?@From the police?
 sarah = player = unhappy = Indeed, that could be an option…
-sarah = player = worry = We could also do nothing. Everyone goes home@and tomorrow we'll look for another way to investigate.
-sarah = player = wink = I'll defer to your judgment. But don't stress, neither option is bad.
-sarah = player = happy = Whatever you decide, there's no going back. The future depends on your choice.
+sarah = player = worry = We could also do nothing. Everyone goes home and@tomorrow we'll look for another way to investigate.
+sarah = player = wink = I'll defer to your judgment.@But no stress, neither option is bad.
+sarah = player = happy = Whatever you decide, there's no going back.@The future depends on your choice.
+
 
 % SCENARIO_CAMILLE
 player = sarah = laugh = Okay! We'll do it! We'll steal the information!
-sarah = player = happy = Good! Give me a minute, @I need to think of a plan.
+sarah = player = happy = Good! Give me a minute, I need to think of a plan.
 
 
 % SCENARIO_STEPHAN
 player = sarah = laugh = Okay! We'll do it! We'll steal the information!
 sarah = player = worry = Are you sure that's what you clicked on?
-player = sarah = laugh = No, but the developer hasn't coded @my choice yet, so that's what we'll do!
-sarah = player = happy = Good! Give me a minute, @I need to think of a plan.
+player = sarah = laugh = No, but the developer hasn't coded my choice yet,@so that's what we'll do!
+sarah = player = happy = Good! Give me a minute, I need to think of a plan.
+
 
 % PLAN_NOT_YET
-sarah = player = you_silly_var = How impatient...
-sarah = player = wink = Just give me some space. @In a few seconds, I'll have an idea.
+sarah = player = you_silly_var = How impatient…
+sarah = player = wink = Just give me some space.@In a few seconds, I'll have an idea.
+
 
 % PLAN_KEY
-sarah = player = happy_var = That's it! I have an idea.
-player = sarah = excited = Oh yeah?
-sarah = player = happy = Do you see the policewoman at the reception desk? I'm going to distract her. @You're going to go through the door behind her.
-sarah = player = laugh = Once on the other side, you look for @information on Vladimir, then you come out with it!
+sarah = player = happy_var = Here is it! I have an idea.
+player = sarah = excited = Sweet!
+sarah = player = happy = See the officer at the reception desk? I'll distract@her. You'll go through the door behind her.
+sarah = player = laugh = Once you are on the other side, you look for@information on Vladimir, then you come out with it!
 player = sarah = worry = Okay, but… what am I looking for, exactly?
-sarah = player = laugh = If we're logical, you'll definitely find @something in the archives.
-sarah = player = happy = If you find a room full of shelves or @dressers, you're in the right place.
-sarah = player = happy_var = Good! I'm ready. @Let me know when I need to create a diversion.
+sarah = player = laugh = If we're logical, you'll definitely find something@in the archives.
+sarah = player = happy = If you find a room full of shelves or cupboards,@you're in the right place.
+sarah = player = happy_var = Fine! I'm ready. Let me know when you need me@to create a diversion.
+
 
 % PLAN_BOMB
-sarah = player = happy_var = That's it! I have an idea.
-player = sarah = excited = Oh yeah?
+sarah = player = happy_var = Here is it! I have an idea.
+player = sarah = excited = Sweet!
 sarah = player = happy = Do you still have the bombs I gave you? @You're going to go outside and find an entrance.
-sarah = player = laugh = Once inside, you'll look for @information on Vladimir, then you'll come out with it!
+sarah = player = laugh = Once inside, you look for information on Vladimir,@then you'll come out with it!
 player = sarah = worry = Okay, but... what am I looking for, exactly?
-sarah = player = laugh = If we're logical, you'll definitely find @something in the archives.
-sarah = player = happy = If you find a room full of shelves or @dressers, you're in the right place.
-sarah = player = happy_var = Good! I'm counting on you. @Be careful, bombs attract attention.
+sarah = player = laugh = If we're logical, you'll definitely find something@in the archives.
+sarah = player = happy = If you find a room full of shelves or cupboards,@you're in the right place.
+sarah = player = happy_var = Fine! I'm counting on you. But be careful:@bombs draw attention.
+
 
 % DIVERSION_START
-sarah = player = worry = Okay… When you have to go, you have to go…
+sarah = player = worry = Okay… When you gotta go, you gotta go…
+
 
 % DIVERSION_AGAIN
-sarah = player = unhappy = Rebecca… You should have been more proactive… @I'll get arrested if I do this again…
-sarah = player = sad_var = But hey… I guess we don't have a choice… @I'm counting on you…
-sarah = player = worry = For now, be discreet. We mustn't let her figure out what we're trying to do.
+sarah = player = unhappy = Rebecca… You should have been more on@the alert… I'll get arrested if I do this again…
+sarah = player = sad_var = Well… I guess we don't have a choice…@I'm counting on you…
+sarah = player = worry = For now, keep a low profile. We don't want her@to figure out what we're trying to do.
 sarah = player = awkward = And come get me, okay?
 
+
 % DIVERSION_AGAIN_VAR
-sarah = player = unhappy = Rebecca… You should have been more proactive… @I'll get arrested if I do this again…
+sarah = player = unhappy = Rebecca… You should have been more on@the alert… I'll get arrested if I do this again…
 player = sarah = unhappy_var = The door is locked. I can't get through.
-sarah = player = surprised = It's not true! How could I not have thought of that!
+sarah = player = surprised = Darn! How could I not have thought of that!
 sarah = player = asleep = Hmm…
-sarah = player = happy = Come to think of it, I think the keys@ are on her desk.
-sarah = player = happy_var = Okay. Let's start again.@ You find the keys and go undercover.
-sarah = player = unhappy = I think this time I'll end up in detention…
-sarah = player = sad_var = But hey… I guess we don't have a choice…@ I'm counting on you…
-sarah = player = worry = For now, keep a low profile. We don't want@ her to figure out what we're trying to do.
+sarah = player = happy = Now I'm thinking, the keys are probably on her@desk.
+sarah = player = happy_var = Okay. Let's start again.@Go find the keys and get undercover.
+sarah = player = unhappy = I think this time, I'll end up in detention…
+sarah = player = sad_var = But hey… I guess we don't have a choice…@I'm counting on you…
+sarah = player = worry = For now, keep a low profile. We don't want her@to figure out what we're trying to do.
 sarah = player = awkward = And come get me, okay?

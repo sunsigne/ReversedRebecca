@@ -41,11 +41,11 @@ rebecca = DOWN = laugh = Mission accomplished!
 
 
 % PLAYER_LEAVING
-rebecca = object = no_sens = I'm not just going to leave like this… Am I?
+rebecca = object = no_sens = I'm not going to just leave like this… Am I?
 
 
 % PLAYER_LEAVING_NEXT
-rebecca = object = you_silly = Oh, and after all… They'll manage.
+rebecca = object = you_silly = Oh, well, after all… They'll manage.
 
 
 % ALICIA_REACTION_PLAYER_LEAVING_NEXT

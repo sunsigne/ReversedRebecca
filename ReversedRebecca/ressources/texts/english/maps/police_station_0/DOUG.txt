@@ -1,121 +1,145 @@
 % MEET
-doug = player = intrigued = So, kid, shall we dress up as chickens?
+doug = player = intrigued = 'zup, girl ? Dressing up as a cop?
+
 
 % MEET_VAR
-doug = player = intrigued = So, kid, shall we go undercover?
+doug = player = intrigued = 'zup, girl ? Wandering undercover?
+
 
 % MEET_NEXT
 player = doug = wrong_with_you = So what? What's my business?
-doug = player = serious = Easy +surname_doug, I'm not here to rat you out.
-doug = player = serious = Actually, I was thinking maybe we could help each other. Are you interested?
-player = doug = unhappy_var = Expand on your idea?
-doug = player = serious = You look like you want to access the archives. I'm trying to get out of here.
-doug = player = serious = In exchange for a cyan shovel, I'll give you the yellow key you need. Deal?
+doug = player = serious = Easy +surname_doug, 'not going to rat you out.
+doug = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
+player = doug = unhappy_var = Elaborate?
+doug = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
+doug = player = serious = In exchange for a cyan shovel,@I'll give you the yellow key you need. Deal?
+
 
 % MEET_BOMB
-player = doug = happy_var = No thanks. Keys aren't really@my thing. I'm pretty explosive.
+player = doug = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
 doug = player = intrigued = Really?
-doug = UP = serious = Now that I think about it, you should also be able@to access the archives by blowing up this wall.
-doug = player = serious = We'll do that. You find me a cyan shovel,@and I'll open the cell door for you. Deal?
-player = doug = no_sens_var = Just a sec…@You say you can unlock your cell?!
+doug = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
+doug = player = serious = Let's do that. You find me a cyan shovel,@and I'll open the cell door for you. Deal?
+player = doug = no_sens_var = Wait… You're telling me you can unlock@your cell?!
 doug = player = intrigued = So what?
-player = doug = unhappy_var = So why do you need a shovel?@You can already run away!
-doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far. doug = player = serious = So? Deal?
+player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
+doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+doug = player = serious = So? Deal?
+
 
 % NO_DEAL_BOMB_NEXT
 player = doug = unhappy_var = What are you offering, again?
-doug = player = intrigued = A cyan shovel in exchange for access to our cell. Deal?
+doug = player = intrigued = A cyan shovel in exchange for access to our cell.@Deal?
+
 
 % BARGAIN_BOMB_DEAL
-doug = player = intrigued = Interesting... What are you thinking?
-player = doug = happy_var = Increase my skill level@with the keys!
+doug = player = intrigued = Interesting… What's in your mind?
+player = doug = happy_var = Increase my skill level with the keys!
 doug = player = intrigued = Increase your what?
-doug = player = serious = Well, whatever. Just watch me@do it when I unlock the door.
+doug = player = serious = Yeah, whatever. Just watch me doing it@when I'll unlock the door.
+
 
 % YES_BOMB_DEAL
-doug = player = serious = Hint: to get the cyan shovel,@you're going to need to entertain the commissioner.
-doug = player = serious = Send him an email to his phone@from another officer's computer.
+doug = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
+doug = player = serious = Send him an email to his phone from another@officer's computer.
 player = doug = happy_var = Thank you.
 doug = player = serious = Good luck, +surname_doug.
 
+
 % YES_BOMB_DEAL_SPEEDRUN
-doug = player = serious = Tip: To get the cyan shovel,@you're going to need to entertain the commissioner.
-player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to sort me out…
+doug = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
+player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
 player = doug = happy = Actually, I already have your shovel with me.
 doug = player = intrigued = Really? Why didn't you say so?
 player = doug = angry = You didn't ask me, as far as I know!
-player = doug = you_silly_var = Anyway, whatever. Here's my end of the deal. doug = player = serious = And here's mine, admire the artist.
+player = doug = you_silly_var = Anyway… Here's my part of the deal. 
+doug = player = serious = And here's mine. Watch the move.
+
 
 % GIVE_A_SHOVEL_BOMB
 player = doug = happy_var = Here's your shovel!
-doug = player = serious = And here's the access. Admire the artist.
+doug = player = serious = And here's the access. Watch the move.
+
 
 % GIVE_A_SHOVEL_BOMB_VAR
 player = doug = happy_var = Here's your shovel, Doug!
-doug = player = serious = And here's the access. Admire the artist, +surname_doug.
+doug = player = serious = And here's the access. Watch the move, +surname_doug.
+
 
 % NO_DEAL
-doug = player = serious = As you wish. If you change your mind, @let me know, +surname_doug.
+doug = player = serious = As you wish. If you change your mind,@let me know, +surname_doug.
+
 
 % NO_DEAL_NEXT
-player = doug = unhappy_var = What do you offer, again?
+player = doug = unhappy_var =  What are you offering, again?
 doug = player = intrigued = A cyan shovel for a yellow key. Deal?
 
+
 % BARGAIN_DEAL
-doug = player = intrigued = Interesting... What are you thinking?
-player = doug = happy_var = Increase my skill level@with the keys!
+doug = player = intrigued = Interesting… What's in your mind?
+player = doug = happy_var = Increase my skill level with the keys!
 doug = player = intrigued = Increase your what?
-doug = player = serious = Well, whatever. Admire the artist.
+doug = player = serious = Yeah, whatever. Watch the move.
+
 
 % YES_DEAL
-doug = player = serious = Okay. Here's a little tip: to get the cyan shovel,@you'll need a green key.
-doug = player = serious = There's a green key in the office with the gray door, behind you. Talk to the cop there.
+doug = player = serious = Ok. Quick tip: to get the cyan shovel,@you'll need a green key.
+doug = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
 player = doug = happy_var = Thanks.
 doug = player = serious = Good luck, +surname_doug.
 
+
 % YES_DEAL_GREEN_KEY
-player = doug = unhappy = Now that I think about it... This key won't be any use to me... I don't know how to use it.
+player = doug = unhappy = Now I'm thinking, this key won't be any use…@ I don't know how to use it.
 doug = player = intrigued = Really?
-doug = player = serious = I'll show you the trick. Admire the artist.
+doug = player = serious = I'll show you the trick. Watch the move.
+
 
 % CUTSCENE_UNLOCK_SCENE
 player = doug = convinced = Okay! I get the idea!
 
+
 % WAIT_A_MINUTE
-player = doug = surprised = But I'm thinking!
+player = doug = surprised = Wait! I'm thinking!
+
 
 % UNLOCK_CELL
 player = doug = no_sens_var = You unlocked your cell?!
 doug = player = intrigued = So what?
-player = doug = unhappy_var = So why do you need a shovel? You can run away now!
-doug = player = intrigued = And where to? There are cops everywhere. @I can get out, but not go very far.
-doug = player = serious = I just unlocked the door to let you in, in case it's useful.
+player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
+doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+doug = player = serious = I just unlocked the door to let you in, in case@it's useful.
 
 
 % BARGAIN_DEAL_NEXT
 doug = player = serious = By the way! Quick tip: to get the cyan shovel,@you'll need a green key.
-doug = player = serious = There's a green key in the office with the@gray door behind you. Talk to the cop there.
+doug = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
 player = doug = happy_var = Thanks.
 doug = player = serious = Good luck, +surname_doug.
 
+
 % PLANT
 player = doug = worry = What should I do again?
-doug = player = serious = Do I look like an information sign?@Go ask a houseplant.
-player = doug = sad = (It's not very nice… But it's true@that they help me think.)
+doug = player = serious = Do I look like an information sign?@Go ask a plant.
+player = doug = sad =(That's not very nice… But it's true@that they help me think.)
+
 
 % NAME
 doug = player = serious = Doug.
 
+
 % GIVE_THE_GREEN_KEY
 player = doug = happy_var = Here's your key!
-doug = player = intrigued = I didn't ask for a green key...
+doug = player = intrigued = I didn't ask for a green key…
 doug = player = serious = I asked for a cyan shovel. But with your key,@you should be able to easily get it.
 player = doug = happy_var = My bad.
+
 
 % GIVE_A_SHOVEL
 player = doug = happy_var = Here's your shovel!
 doug = player = serious = And here's your key.
 player = doug = excited = Great! I'll finally be able to access@the archive room.
+
 
 % GIVE_A_SHOVEL_VAR
 player = doug = happy_var = Here's your shovel, Doug!

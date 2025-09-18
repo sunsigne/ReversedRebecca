@@ -1,94 +1,121 @@
 % LEAVING
-player = DOWN = sad = I told Sarah we were going to steal some information… I have no reason to leave.
+player = DOWN = sad = I told Sarah we were going to steal some@information… I have no reason to leave.
 
 % LEAVING_GOOD
 player = DOWN = angry_var2 = There's no way I'm abandoning Sarah!
 
 % LEAVING_BAD
-player = DOWN = you_silly = It's tempting to abandon Sarah to her fate, but I still have to steal some information.
+player = DOWN = you_silly = It's tempting to abandon Sarah to her fate,@but I still have to steal some information.
+
 
 % LEAVING_NO_DOCUMENT
-player = DOWN = sad = I haven't stolen the information yet… I'm almost there! I'm not going to give up.
+player = DOWN = sad = I haven't stolen the information yet…@I'm almost there! I won't give up that close.
+
 
 % PLAYER_LEAVING
 rebecca = object = no_sens = I'm not going to just leave like that… Am I?
 
+
 % PLAYER_LEAVING_NEXT
 rebecca = object = you_silly = Oh, well, after all… She'll manage.
+
 
 % BARBED_WIRE
 player = LEFT = pain = Ouch!
 player = LEFT = sad = I got too close to the barbed wire.
 
+
 % STEAL_PLANT_EVIL
-player = object = you_silly = While I'm here, I might as well steal this plant for my home.
+player = object = you_silly = While I'm at here, I might aswell steal@this plant for my home.
+
 
 % STEAL_PLANT
-player = object = laugh = Come on! You'll end up in my kitchen.
+player = object = laugh = Here goes nothing! You'll end up in my kitchen.
+
 
 % DOOR_DIVERSION
-player = DOWN = sad = Hmm... I better not go through that door again.
+player = DOWN = sad = Hmm… I better not go through that door again.
+
 
 % DOOR_DIVERSION_NEXT
-player = DOWN = sad = I shouldn't go through that door...
+player = DOWN = sad = I shouldn't go through that door…
+
 
 % BETTER_COUCHING
-player = DOWN = you_silly = If I'm going to sit down, I might as well go to the couch.
-player = DOWN = laugh = It's more comfortable!
+player = DOWN = you_silly = If I'm going to sit down, I might aswell@go to the couch.
+player = DOWN = laugh = It's softer!
+
 
 % TABLE_FLIP
 player = DOWN = laugh = Oops!
 
+
 % DISGUISE
-player = DOWN = laugh = With this, I'll go unnoticed!
+player = DOWN = laugh = Now I'm invisible!
+
 
 % NOT_DISGUISING
-player = DOWN = unhappy = I won't fool anyone... I blew up a wall... The police are on high alert.
+player = DOWN = unhappy = I won't fool anyone… I blew up a wall…@The police are on high alert.
+
 
 % SHOVEL
-player = LEFT = laugh = Two cyan shovels at once! How lucky! One for me, and one for...
-player = LEFT = no_sens = Um... I don't know his name...
-player = LEFT = you_silly = I'll have to remember to ask his first name.
+player = LEFT = laugh = Two cyan shovels at once! How lucky!@One for me, and one for…
+player = LEFT = no_sens = Um… I don't know his first name…
+player = LEFT = you_silly = I'll have to remember to ask him.
+
 
 % SHOVEL_DOUGLESS
 player = LEFT = laugh = Two cyan shovels at once! How lucky!
 
+
 % CANT_USE_TOILET
 player = DOWN = sad = I'm way too stressed for that.
 
+
 % EXIT_TOILET
-player = LEFT = surprised = Not that way! @I have to find a hiding place inside!
+player = LEFT = surprised = Not that way!@I have to find a hiding place inside!
+
 
 % EXIT_TOILET_NEXT
-player = DOWN = sad = He's probably gone to get help. @I'd better find another hiding place.
+player = DOWN = sad = He's probably gone to get help.@I'd better find another hiding place.
+
 
 % EXIT_TOILET_SOFTLOCK
-player = RIGHT = no_sens = I... got locked out...
+player = RIGHT = no_sens = I… got locked out…
+
 
 % EXIT_TOILET_SOFTLOCK_NEXT
-player = DOWN = no_sens_var = Mission ruined.
+player = DOWN = no_sens_var = The mission is blasted.
+
 
 % VIRUS
-player = DOWN = you_silly = He could have caught it anywhere. Right?
+player = DOWN = you_silly = He could have caught that anywhere. haven't he?
+
 
 % LEAVE_A_NOTE
-player = DOWN = laugh = There you go! He'll have a surprise when he comes back!
+player = DOWN = laugh = There! He'll have a surprise when he comes back!
+
 
 % LEAVE_A_NOTE_AGAIN
 player = DOWN = happy = I already wrote that.
+
 
 % LEAVE_A_NOTE_BOTH
 player = DOWN = evil = Mwahaha! Chaos!
 player = DOWN = laugh = Ha ha ha ha!
 
+
 % EMAIL
-player = DOWN = you_silly_var = I should wait until the commissioner is@back in his office before doing this.
+player = DOWN = you_silly_var = I should wait until the commissioner is@back to his office before doing this.
+
 
 % EMAIL_WHILE_SHOVEL
 player = DOWN = sad = I have no reason to do this,@I already got the cyan shovel.
 
+
 % TROPHY
-player = DOWN = surprised = That's impressive!@All these medals and trophies.
+player = DOWN = surprised = So impressive!@All these medals and trophies.
+
 
 % WAKE_UP_JESSY
-player = DOWN = no_sens = On second thought, that sounds like@a really shitty idea.
+player = DOWN = no_sens = On second thought, that idea smells like fat shit.

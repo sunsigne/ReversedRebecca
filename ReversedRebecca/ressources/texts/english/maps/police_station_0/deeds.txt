@@ -1,6 +1,6 @@
 ///// GOOD /////
 
-SMILING_COFFEE = 2% coffee while smiling
+SMILING_COFFEE = 2% coffee with a smile
 LEFT_A_NICE_NOTE = 3% leave a kind note
 CHEER_UP_SARAH = 4% cheer up Sarah
 FREE_SARAH = 5% free Sarah
@@ -17,4 +17,4 @@ ABANDON_SARAH = 11% abandon Sarah
 ///// PSYCHOPATH /////
 
 FREE_DOUG = 999% free Doug
-COLLATERAL_DAMAGE = 999% damage collaterals
+COLLATERAL_DAMAGE = 999% collateral damage

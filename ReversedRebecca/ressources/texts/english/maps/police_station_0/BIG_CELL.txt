@@ -1,119 +1,139 @@
 % POLARIS
 polaris = player = happy = I feel closer to nature this way.
-polaris = player = happy = It's important to reconnect@with cosmic energies.
-player = polaris = no_sens = …by not wearing clothes?
-polaris = player = neutral = That's such a neurotypical answer…
-polaris = player = happy = But it's good that we don't all think the same thing. Nature loves diversity.
+polaris = player = happy = It's important to reconnect with cosmic energies.
+player = polaris = no_sens = … by not wearing clothes?
+polaris = player = neutral = That's such a neurotypical person's answer…
+polaris = player = happy = But it's good that we don't all think the same way.@Nature loves diversity.
 player = polaris = no_sens_var = (… I think I'll just avoid talking to him.)
+
 
 % TEDDY
 teddy = player = happy = Can Teddy help you?
-player = teddy = no_sens = Who is Teddy?
+player = teddy = no_sens = Who's Teddy?
 teddy = player = happy = I'm Teddy.
-player = teddy = no_sens_var = (Okay… He's talking about himself in the third person…)
+player = teddy = no_sens_var = (Okay… He's talking about himself in the@third-person…)
 player = teddy = no_sens = Um… I'm just visiting. Thanks.
 teddy = player = happy = Enjoy your visit.
 
+
 % TEDDY_NEXT
-player = teddy = sad = He's smiling, but his eyes are chilling. @I prefer to only talk to him if necessary.
+player = teddy = sad = He's smiling, but his eyes are chilling.@I prefer to only talk to him if necessary.
+
 
 % WILLIAM
-william = DOWN = serious = You're not from around here…
-player = william = happy_var = Indeed.
-william = DOWN = serious = A new opponent, that's not something you can refuse. @Are you up for a game of "Bullet Point"?
-player = william = worry = Sorry, I don't know this game…
-william = DOWN = serious = The rules are simple, you'll get the hang of it in no time. So?
+william = DOWN = serious = Ain't seen your face 'round here…
+player = william = happy_var = No, you didn't.
+william = DOWN = serious = A new adversary is not something you can refuse.@Are you up for a game of "Bullseye"?
+player = william = worry = Excuse me, I don't know this game…
+william = DOWN = serious = The rules are simple, you'll get the hang of it@in no time. So?
 player = william = happy = I'll think about it.
 
+
 % DONUT_DOUG
-doug = player = serious = I'm pretty sure William must have this.
-player = doug = worry = And William, is that…?
-doug = player = serious = The guy with the cowboy hat over there.
+doug = player = serious = I'm dead sure William will have this.
+player = doug = worry = And William is …?
+doug = player = serious = The cowboy's hat guy, over there.
+
 
 % DONUT_POLARIS
 polaris = player = happy = Gluten-free?
-player = polaris = no_sens = Um… Never mind. @Do you know where I can find this?
+player = polaris = no_sens = Well… Whatever.@Do you know where I can find this?
 polaris = player = neutral = Sorry, I don't know.
 
+
 % DONUT_TEDDY
-teddy = player = happy = William will find this for you. He always finds everything.
-player = teddy = worry = And William, is that…?
+teddy = player = happy = William will find this for you.@He always finds anything.
+player = teddy = worry = And William is …?
 teddy = player = happy = Teddy's friend. He's right next to him.
 
+
 % DONUT_TEDDY_NEXT
-player = teddy = wrong_with_you = And Teddy, is he…?
+player = teddy = wrong_with_you = And Teddy is…?
 teddy = player = happy = I'm Teddy.
-player = teddy = no_sens_var = (Okay… He's talking about himself in the third person…)
+player = teddy = no_sens_var = (Okay… He's talking about himself in the@third-person…)
 player = teddy = happy = (So… The cowboy is going to get me a donut!)
+
 
 % DONUT_TEDDY_NEXT_MET
 player = teddy = laugh = The cowboy? Okay, thanks!
 
+
 % DONUT_TEDDY_NEXT_COWBOY
-player = teddy = wrong_with_you = And Teddy, is he…?
+player = teddy = wrong_with_you = And Teddy is…?
 teddy = player = happy = I'm Teddy.
-player = teddy = no_sens_var = (Okay… He's referring to himself in the third person…)
-player = teddy = happy = (So… The cowboy's name is William. Good to know.)
+player = teddy = no_sens_var = (Okay… He's talking about himself in the@third-person…)
+player = teddy = happy = (So… The cowboy's name is William. Noted.)
+
 
 % DONUT_TEDDY_NEXT_MET_AND_COWBOY
 player = teddy = laugh = Ha! The cowboy! Good to know, thanks.
 
+
 % DONUT_WILLIAM
 william = DOWN = serious = I can find anything.
 player = william = laugh = Great! Can I have one?
-william = DOWN = serious = Does the snake give its venom@for free?
-player = william = no_sens = …Technically, yes…
-william = DOWN = serious = Not where I'm from.
+william = DOWN = serious = Does the snake give its venom for free?
+player = william = no_sens = … Technically, yes…
+william = DOWN = serious = Not where I come from.
 william = DOWN = serious = But, I'm cheap today. Let's play.@If you win, I'll give you what you're looking for.
 player = william = unhappy_var = What if I lose?
-william = DOWN = serious = Then you don't owe me anything. I'll pay for your tears every time you fail.
-player = william = worry = Okay, if you want...
+william = DOWN = serious = Then you don't owe me anything. I'll pay@myself with your tears every time you fail.
+player = william = worry = Odd, but as you wish…
+
 
 % DONUT_WILLIAM_ALREADY_WON
-william = DOWN = serious = You're lucky, I have this on me.
+william = DOWN = serious = You are lucky, I have this on me.
 player = william = laugh = Great! Can I have one?
 william = DOWN = serious = A promise is a promise. Take it.
 
+
 % DONUT_WILLIAM_FAIL
-player = william = sad = Damn... He's good...
+player = william = sad = Yikes… He's good…
 
 % DONUT_WILLIAM_FAIL_NEXT
-player = william = sad = Lost again... I'll try one last time.
+player = william = sad = Lost again… I'll try one last time.
+
 
 % DONUT_WILLIAM_FAIL_FINAL
-player = william = angry_var2 = That's enough! I don't want to play against him anymore.
+player = william = angry_var2 = That's enough!@I don't want to play against him anymore.
+
 
 % TEDDY_PSSST
 teddy = player = neutral = Pssst.
 player = teddy = wrong_with_you = (What does he want from me?)
 
+
 % TEDDY_TRICK
-teddy = player = happy = Teddy's friend is cheating. @If you want to beat him, you have to cheat too.
-player = teddy = wrong_with_you = What do you mean, he's cheating? What a creep!
-teddy = player = happy = He's just having fun. He's being nice. You're just wasting your time, he's not stealing your money.
+teddy = player = happy = Teddy's friend is cheating.@If you want to beat him, you have to cheat too.
+player = teddy = wrong_with_you = For real, he's cheating? What a douche!
+teddy = player = happy = He's just having fun. He's a nice guy. You're just@wasting your time, he's not stealing your money.
 player = teddy = angry = That's still dishonest!
-teddy = player = happy = Teddy agrees. That's why he's going to teach you the trick to beat him.
+teddy = player = happy = Teddy agrees. That's why he's going to teach@you the trick to beat him.
 teddy = player = happy = Instead of aiming for the target, aim for the hat.
-player = teddy = convinced = Excellent! I never would have thought of that on my own!
+player = teddy = convinced = Excellent! I never would have thought of this@on my own!
+
 
 % DONUT_WILLIAM_FAIL_POST_TRICK
-player = william = you_silly = Damn! I forgot, but I'm supposed to aim for the cowboy.
+player = william = you_silly = Dear me! I forgot, but I'm supposed@to aim for the cowboy.
+
 
 % DONUT_WILLIAM_FAIL_POST_TRICK_VAR
-player = william = you_silly = What a fool... I'm supposed to aim for the cowboy.
+player = william = you_silly = What an airhead…@I'm supposed to aim for the cowboy.
+
 
 % DONUT_WILLIAM_SUCCESS
 william = down = serious = Well done, kiddo. That was smart of you.
 william = down = serious = If you're looking for anything, let me know.
-player = william = excited = Tools! Bombs, wrenches, shovels...
-william = down = serious = I don't have any of that in my boot...@Would anything else suit you?
-player = william = happy_var = Nothing for now.@I'll come back and see you, if ever.
+player = william = excited = Tools! Bombs, keys, shovels…
+william = down = serious = I don't have any of that in my boot…@Would anything else suit you?
+player = william = happy_var = Nothing for now.@I noted where to find you if needed.
 
 % DONUT_WILLIAM_SUCCESS_DONUT
 william = down = serious = Well done, kiddo. That was smart of you.
-william = down = serious = As promised, here's your loot.
+william = down = serious = A promise is a promise. Here's your loot.
+
 
 % REBECCA_ATE_DONUT
 player = DOWN = happy_var = That donut was delicious!
-player = DOWN = surprised = Oh damn! I was supposed to trade it!
+player = DOWN = surprised = Oh no! I was supposed to trade it!
 player = DOWN = you_silly = Just kidding, I didn't touch it. @I only made the noise with my mouth.
