@@ -18,3 +18,8 @@ OBJ-04 = Console SAS
 OBJ-05 = Console Tesla
 OBJ-06 = Console Cryo
 OBJ-07 = Console Telepad
+
+OBJ-08 = Tesla Leftest
+OBJ-09 = Tesla Left
+OBJ-10 = Tesla Right
+OBJ-11 = Tesla Rightest
