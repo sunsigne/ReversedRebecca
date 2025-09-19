@@ -50,7 +50,7 @@ public class Conductor {
 		LAYER.LOADING.getHandler().clear();
 		PresetMousePos.usingPreset = false;
 		
-		isUpdatableVersion = false;
+		// isUpdatableVersion = false;
 		if (isUpdatableVersion == false)
 			return;
 		

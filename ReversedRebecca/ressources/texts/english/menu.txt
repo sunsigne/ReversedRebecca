@@ -118,7 +118,7 @@ VolumeVoice = voice
 
 UpdateText = Game update available
 UpdateButton = Click here
-UpdateInfo = New level : police station
+UpdateInfo = New level : military camp
 
 ///// BONUS /////
 

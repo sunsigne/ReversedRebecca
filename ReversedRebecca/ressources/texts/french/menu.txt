@@ -118,7 +118,7 @@ VolumeVoice = voix
 
 UpdateText = Mise a jour du jeu disponible
 UpdateButton = Cliquez ici
-UpdateInfo = Nouveau niveau : le commissariat
+UpdateInfo = Nouveau niveau : le camp militaire
 
 ///// BONUS /////
 
