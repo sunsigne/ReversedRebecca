@@ -39,10 +39,12 @@ player = doug = worry = Comme j'ai dit, on verra.
 % ARMORY_NEUTRAL
 player = DOWN = unhappy = Je vais vraiment faire ça ?@Donner des armes aux prisonniers ?
 player = DOWN = happy = Ça peut être marrant après tout…
+player = DOWN = you_silly_var = Enfin, presque… Le developpeur n'a pas tout à fait@terminé de coder la cinématique qui va suivre.
 
 
 % ARMORY_EVIL
 player = DOWN = death = Je sens qu'on va s'amuser.
+player = DOWN = you_silly_var = Enfin, presque… Le developpeur n'a pas tout à fait@terminé de coder la cinématique qui va suivre.
 
 
 % DOUG_YELLOW_KEY_EVIL

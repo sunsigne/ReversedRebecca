@@ -7,7 +7,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -17,9 +16,6 @@ public class BugFinder {
 	private final FileTask task = new FileTask();
 
 	protected boolean run() {
-		if (Infos.IS_DEV_VERSION)
-			return false;
-
 		boolean error = true;
 		int num = 1;
 		String path = null;

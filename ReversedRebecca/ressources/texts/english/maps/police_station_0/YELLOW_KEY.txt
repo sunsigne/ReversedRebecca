@@ -39,10 +39,12 @@ player = doug = worry = Like I said, we'll see.
 % ARMORY_NEUTRAL
 player = DOWN = unhappy = Am I really going to do this? @Give the prisoners guns?
 player = DOWN = happy = It might be fun after all…
+player = DOWN = you_silly_var = Well, almost… The developer didn't completly@finished to program the next cutscene.
 
 
 % ARMORY_EVIL
 player = DOWN = death = I have a feeling we're going to have some fun.
+player = DOWN = you_silly_var = Well, almost… The developer didn't completly@finished to program the next cutscene.
 
 
 % DOUG_YELLOW_KEY_EVIL
