@@ -1,3 +1,8 @@
+///// SCENARIO /////
+
+STEAL_INFORMATION = Key1 % steal information
+LOOK_FOR_ANOTHER_LEAD = Key2 % look for another lead
+
 ///// RECEPTION /////
 
 DO_YOU_HAVE_A_PLAN = Key1 % do you have a plan?
