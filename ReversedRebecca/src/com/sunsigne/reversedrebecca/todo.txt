@@ -46,6 +46,7 @@
 	////////// EN COURS ////////////
 
 	à faire :
+	préciser quye la fusillade n'est pas terminée!
 	configurer le clavier en querty par défaut sur les version anglophone
 	rajouter le ficher icon.png dans le dossier racine
 	supprimer les ressources non utilisées
