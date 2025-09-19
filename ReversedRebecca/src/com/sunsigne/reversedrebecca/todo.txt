@@ -44,8 +44,6 @@
 
 	////////// EN COURS ////////////
 
-	faire un meilleur coix dans police station (voler ou faire des recherches)
-	bug : music du labo se lance trop tôt hors checkpoint depuis que j'ai instauré un checkpoint
 	mettre à jour update screen
 	vérifier que le lien BDD n'a pas été détruit
 
