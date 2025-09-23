@@ -1,0 +1,30 @@
+% HELLO
+prisonnier = player = neutral = Qu'est-ce qu’on a là ? De la viande fraîche ?@Fait comme tous les autres, fuis.
+(la musique s'arrête avant le choix)
+
+% LEAVING
+prisonnier = player = neutral = C'est bien ce que je pensais… Tous les mêmes.
+
+% STAYING
+prisonnier = player = neutral = Tu reste ?
+prisonnier = player = neutral = Je pourrais te faire du mal… Bouh !
+player = prisonnier = happy =  Je pense que tu te donnes un genre…@Tu n'es probablement pas méchant.
+prisonnier = player = mad = Tsss, un jugement. Que c'est surprenant…
+(mad = un seul sourcil levé + sourrir en coin)
+prisonnier = player = neutral = Mais est-ce que tu crois seulement à ce que tu dis ?
+[E] Oui [R] Non (casser un truc dans sa cellule)
+
+prisonnier = player = neutral = Vraiment ? Vas-y alors, prouve-le. Ouvre la porte, si t'es cap.
+
+
+prisonnier = player = neutral = Tu… l'as… vraiment fait ?  
+prisonnier = player = neutral = Tu n'as pas peur de moi ?
+player = prisonnier = worry = Je te l'ai dit, je ne pense pas que tu sois réellement méchant.
+prisonnier = player = neutral = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
+(regarde de côté, pas à face)
+prisonnier = player = neutral = J’imagine que… je devrais te… dire merci.
+prisonnier = player = neutral = Rah ! Je m’ennuie ! J'ai l'impression de t'en devoir une !@Et je déteste avoir des dettes.
+prisonnier = player = neutral = Regarde ! Une abeille ! (court la tuer)
+prisonnier = player = neutral = Tu as vu ? Je l'ai tué. Tu peux être allergique sans le savoir.@Je t'ai sauvé ! Je ne te dois plus rien.
+prisonnier = player = neutral = Je ne te dirai plus rien !
+prisonnier = player = neutral = Allez, salut.
