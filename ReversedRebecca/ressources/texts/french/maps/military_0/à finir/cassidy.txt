@@ -1,0 +1,27 @@
+% HELLO
+cassidy = player = surprised = Oh mais !
+cassidy = player = happy_var = Salut ! On s'est vu au commissariat ce matin.@Vous rentriez sans cesse dans mon bureau.
+
+
+% HELLO_VAR
+cassidy = player = surprised = Oh mais !
+cassidy = player = happy_var = Salut ! On s'est vu au commissariat ce matin.@Vous êtes rentrée dans mon bureau.
+
+
+% HELLO_NEXT
+rebecca = cassidy = excited = Exact ! Vous êtes donc policière et militaire ?
+cassidy = player = happy_var = Oui ! J'ai une double formation, exactement comme ma soeur. 
+cassidy = player = happy = Moi, c'est Cassidy au fait, et ma soeur, Jessy.@Elle doit être au stand de tir en ce moment.
+rebecca = cassidy = happy_var = Entendu, merci !
+
+[E] jessy
+cassidy = player = happy = Qu'est-ce que tu veux savoir à son sujet ?
+[F] = I'm into her / Elle me plaît carrément
+cassidy = player = surprised_var = Elle te plaît ?
+cassidy = player = happy = Tu es assez son genre justement,@tu pourrais avoir tes chances avec elle.
+cassidy = player = happy = Par contre, tu dois savoir qu'elle sortent déjà ensemble avec Nancy.
+cassidy = player = happy = Elles sont plutôt ouvertes de ce côté-là, alors ça peut marcher.@Tu devrais voir ça avec elles.
+
+[E] = conseils
+cassidy = player = ??? = Jessy a un caractère difficile : si tu es trop gentille,@tu vas l'ennuyer. Si tu joues un peu trop les fortes têtes, tu vas l'énerver.
+cassidy = player = ??? = En dosant ce qu'il faut d'impertinence (sassy) et de soumission, tu la feras craquer.

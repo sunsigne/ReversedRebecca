@@ -1,0 +1,70 @@
+cook = player = ??? = Tu tombes à pic. Tu pourrais me passer (objet) s'il te plaît ?
+cook = player = ??? = Parfait. Moi, c'est (nom). Ravi de te rencontrer.
+cook = player = ??? = Mais dis-moi, tu n'es pas d'ici… Qu'est-ce qui t'amène dans ce camp ?
+player = cook = worry = C'est une longue histoire… Mais pour résumer : je dois parler au chef.
+cook = player = ??? = Double Y ? C'est un homme adorable. Et il a un de ces appétits !@Six demi-douzaine d'oeuf à chaque petit déjeuner !
+cook = player = ??? = Dis-moi chouquette, je suis désolé de te demander ça mais…@Tu crois que tu pourrais me rendre un service ?
+cook = player = ??? = J'ai ce repas que je dois livrer au prisonnier en isolement, mais je suis debordé en cuisine. Tu crois que tu pourrais lui apporter ?
+
+
+[E] pas le temps / pas envie [R] avec plaisir [F] j'y gagne quelque chose ?
+cook = player = ??? = Merci ! Tiens, voilà.
+cook = player = ??? = Reviens me voir quand tu auras fini. J'aurais quelque chose pour toi.
+
+
+[E] manger le repas [R] don't
+
+cook = player = ??? = Chouquette ! (nom) a apprécié le repas ?
+player = cook = laugh = Oui, c'était délicieux !
+player = cook = silly_var = Enfin… C'est ce qu'il m'a dit, bien sûr…
+cook = player = ??? = Super ! Tu me sauves.
+cook = player = ??? = J'ai mis des petits choux à la crème de côté. Tiens, ils sont pour toi.
+[E] merci ! Je mangerai plus tard [R] on partage ? [F] manger comme une sauvage
+
+(F)
+cook = player = ??? = Ho wow ! Quel appétit ! Pense à mâcher quand même…
+cook = player = ??? = … J'imagine que ça veut dire que tu aimes ma cuisine ?
+[E] MORE ! GIMME MORE! [R] Bof ! J'avais juste faim
+_
+[E] merci, c'était délicieux [R] J'AI FAIM
+_
+[E] GIVE [R] ME [F] MORE !
+
+(R)
+cook = player = ??? = Non, c'est très gentil, chouquette, mais je n'ai pas faim.
+cook = player = ??? = Mais merci. J'apprécie le geste.
+player = cook = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
+cook = player = ??? = Bon, si tu insistes, alors d'accord. Donne-moi@juste une minute, je dois terminer quelque chose.
+player = cook = laugh = Très bien, je reviens plus tard, alors.
+
+
+cook = player = ??? = Ok ! J'ai terminé, tu es sûre que tu veux les manger avec moi ?
+[E] non [R] oui
+(E)
+cook = player = ??? = Ok, pas de soucis. Elles sont pour toi de toute façon.@Merci encore pour ton aide, chouquette.
+(R)
+player = cook = happy_var = Pourquoi pas ? C'est meilleur quand on partage avec un ami !
+cook = player = ??? = Un… ami ?
+cook = player = ??? = Oui… Ça sonne bien… Soyons amis !
+cook = player = ??? = Parfait ! Suis-moi.
+_
+cook = player = ??? = Alors comme ça, tu disais avoir besoin de parler au chef ?
+player = cook = ??? = Oui. Pour résumer, je cherche quelqu'un qui m'a volé quelque chose,@et il pourrait savoir où je peux trouver cette personne.
+cook = player = ??? = Un vol ? Ça n'est pas le genre de YY.@Il est un peu macho, mais c'est un homme droit.
+cook = player = ??? = Je suis sûr qu'il ne cautionne pas ce qu'à fait cette personne…@Il va t'aider, j'en suis certain.
+player = cook = ??? = Et toi alors ? Qu'est-ce que tu fais ici ?
+cook = player = ??? = Je cuisine, mais ça je crois que tu l'avais déjà compris.
+cook = player = ??? = J'adore apporter de la joie aux autres par la nourriture.@Après une longue journée, il n'y a rien de mieux que de trouver son bonheur dans une assiette !
+player = cook = ??? = Ho mon Dieu ! Il faut que je t'ai chez moi pour que je te mange tout le temps.
+_
+...
+...
+_
+player = cook = embarassed = Je… voulais dire pour que je mange tout le temps. Que je mange ce que tu fais, quoi…
+cook = player = ??? = Oui… J'avais compris… Bien sûr…
+
+
+
+
+
+

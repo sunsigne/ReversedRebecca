@@ -1,0 +1,48 @@
+% HELLO
+nancy = player = happy = Name's Nancy (Moi, c'est nancy). Comment je peux t'aider ?
+rebecca = nancy = worry = Je ne sais pas encore…
+rebecca = nancy = happy_var2 = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
+nancy = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+(rajouter une phrase ou deux)
+nancy = player = happy = Par contre, je ne peux pas te parler trop longtemps, ma copine va être jalouse.
+rebecca = nancy = surprised = Comment ça ? Tu n'as pas le droit de parler aux autres filles ?
+nancy = player = blush_side = Pas quand elles sont aussi jolies que toi…
+nancy = player = blush_side = Mais c'était sympa de faire connaissance.
+
+
+[E] ta copine est dure
+rebecca = nancy = sad = Je trouve que ça n'est pas sain que tu n'aies@pas le droit de parler à d'autres personnes.
+nancy = player = J'imagine que c'est normal dans une relation…
+nancy = player = blush_side = Et puis… Moi aussi, je serais jalouse si je la voyais@en train de parler à quelqu'un d'aussi jolie que toi…
+nancy = player = blush = En plus, elle m'a dit récemment qu'elle voulait essayer@des choses nouvelles, alors peut-être qu'à trois…
+nancy = player = blush_side = Désolée, je m'avance… Tu n'as probablement pas envie de… Oublie ce que j'ai dit.
+
+
+[E] = C'est qui ta copine ? [R] Peut-être que j'ai envie ?
+nancy = player = embarassed = … Do you ? (Vraiment ?)
+nancy = player = embarassed = Non… On ne devrait pas. Pas sans son accord…
+nancy = player = embarassed = Va lui parler, elle est au stand de tir…
+[E] = (mentir) Je lui ai parlé, elle est d'accord.
+nancy = player = embarassed_var = Menteuse, tu n'as pas quitté la pièce…
+[E] = (mentir) Je lui ai parlé avant de venir te voir
+nancy = player = Ha oui ? Elle s'appelle comment ?
+
+
+[E] Elisabeth ou Cassidy [R] Mathilde ou Jessy [F] Ok, j'ai menti.
+(E)
+nancy = player = blush_deceived = Ça n'est pas drôle…
+nancy = player = blush_deceived = Quoi qu'il en soit, je n'aime pas tes mensonges…@Ne me parle plus s'il te plaît.
+[E] = S'excuser
+nancy = player = C'est gentil, j'apprécie. Je suis désolée, mais@je n'ai quand même plus envie de te parler.
+(F)
+nancy = player = blush_side = C'est noble de l'admettre, reviens me voir quand tu lui auras vraiment parlé…
+(R)
+nancy = player = embarassed = Ho… Tu lui as vraiment parlé…
+nancy = player = embarassed = Donnes moi une seconde, je reviens.
+(elle devient rouge et se cache sous la table. Elle crie "Haaaaa !" puis revient très doucement)
+nancy = player = blush = Ok… Euh… Très bien… (Very well…) Alors…
+nancy = player = blush_side = J'imagine qu'on peut s'embrasser ?
+(Une fois un petit bisou, elle court vite se cacher sous la table. Rebecca se rapproche doucement pour lui parler)
+nancy = player = embarassed_var = Désolée… C'était très bien, trop bien…
+nancy = player = Je… vais dire à Jessy qu'on passera chez toi ce soir.@Je sais qu'elle fouillera les fichiers de la police pour trouver ton adresse.
+nancy = player = Tu peux me laisser ici, je finirai par sortir… ou pas…

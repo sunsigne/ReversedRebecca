@@ -1,0 +1,29 @@
+(cas où rebecca n'a pas menti)
+jessy = player = sadistic = Police ! Ouvrez, ou j'enfonce la porte !
+jessy = player = sadistic = Alors comme ça on décide de s'immiscer dans un couple ? 
+(Faisant un pas, forçant rebecca à reculer)
+jessy = player = sadistic = Ça n'est pas très réglementaire, c'est même totalement interdit… 
+jessy = player = aroused = Tu mérites une punition… Je vais te montrer comment je me sers réellement de mes menottes…
+(Plaquée contre le mur)
+
+17
+(cas du mensonge)
+jessy = player = angry_var = Police ! Ouvrez, ou j'enfonce la porte !
+jessy = player = angry = Alors comme ça on drague ma copine sans ma permission ?!
+rebecca = jessy = angry = Nancy n'a pas besoin de ta permission, elle fait ce qu'elle veut, c'est une adulte ! 
+jessy = player = angry_var2 = Une adulte qui m'appartient, personne ne la touche à part moi !
+nancy = player = ??? = Si je peux me permettr- (dialogue interrompu par le moteur du jeu)
+jessy = player = ??? = Tu ne te permets rien du tout.
+jessy = player = ??? = Quant à toi…
+(plaquée contre un mur)	
+jessy = player = aroused = Tu mérites une punition… Je vais te montrer comment je me sers réellement de mes menottes...
+[E] la repousser [R] l'embrasser. 
+(version où on la repousse)
+rebecca = jessy = angry = Tu t'es cru où ? Sors de chez moi !
+nancy = player = Jessy, je pense qu'on devr- (parole coupée)
+jessy = player = ??? = La ferme ! Tu veux te taper cette garce dans mon dos ? Vas-y sale trainée !
+(part en la poussant)
+nancy = player = sad = Rebecca, je suis désolée pour tout ça (ou Jessy). 
+nancy = player = sad_side = Aussi, tu n'aurais pas dû me mentir…
+nancy = player = cry = Et maintenant, Jessy m'a… Jessy est…
+[E] Ça va aller… [R] Sucks to be you… (Ca craint d'être toi…)
