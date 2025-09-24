@@ -43,7 +43,7 @@ public class ChoiceRequest implements Request {
 			return;
 
 		// determinate the choice
-		String highlight = new FormattedString().getName(object, target.split(":")[0]);
+		String highlight = new FormattedString().getName(object, target.split(":")[0], true);
 		String choices = target.split(":")[1];
 		ChoiceObject choice = null;
 

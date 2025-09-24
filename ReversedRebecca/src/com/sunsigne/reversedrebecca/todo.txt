@@ -45,6 +45,9 @@
 
 	////////// EN COURS ////////////
 
+	à vérifier :
+	- getname a été changé dans : move (vérifier alicia), choice (vérifier le highlight), conditionnalrequest (vérifier le see)
+
 	à changer :
 	RR001 "je suis plutôt garçon
 	LVL001 "tu es ma 1ère"

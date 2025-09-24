@@ -17,7 +17,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 
 public class FormattedString {
 
-	public String getName(PiranhaObject object, String name) {
+	public String getName(PiranhaObject object, String name, boolean textureName) {
 		String lower_name = name.toLowerCase();
 
 		switch (lower_name) {
@@ -26,10 +26,10 @@ public class FormattedString {
 			if (player == null)
 				return "error";
 			else
-				return player.getName();
+				return textureName ? player.getTextureName() : player.getName();
 
 		case "object":
-			return object.getName();
+			return textureName ? object.getTextureName() : object.getName();
 		}
 		return lower_name;
 	}

@@ -37,7 +37,7 @@ public abstract class ConditionalPatternRequest extends ConditionalRequest {
 				continue;
 
 			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-			String formated_valueToCheck = new FormattedString().getName(tempObject, valueToCheck);
+			String formated_valueToCheck = new FormattedString().getName(tempObject, valueToCheck, false);
 
 			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))
 				return finalVerification(object, tempObject);

@@ -46,7 +46,7 @@ public class AffectingRequest implements Request {
 		// restricted case
 		String name = String.valueOf(target.split("\\*")[0]);
 		String value = String.valueOf(target.split("\\*")[1]);
-		String formated_name = new FormattedString().getName(object, name);
+		String formated_name = new FormattedString().getName(object, name, false);
 		new AffectingCondition().registerValue(formated_name, value);
 	}
 

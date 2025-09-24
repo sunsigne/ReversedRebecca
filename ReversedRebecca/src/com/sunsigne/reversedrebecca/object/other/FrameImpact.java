@@ -1,9 +1,5 @@
 package com.sunsigne.reversedrebecca.object.other;
 
-import java.awt.AlphaComposite;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class FrameImpact extends DecorationObject {

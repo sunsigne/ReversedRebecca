@@ -64,7 +64,7 @@ public class FacingRequest extends ConditionalRequest {
 				continue;
 
 			LivingObject tempLiving = (LivingObject) tempUpdatable;
-			String formated_valueToCheck = new FormattedString().getName(object, target);
+			String formated_valueToCheck = new FormattedString().getName(object, target, false);
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
 				SightFinder sightFinder = new SightFinder(object, tempLiving);

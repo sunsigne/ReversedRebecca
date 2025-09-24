@@ -75,7 +75,7 @@ public class TeleportRequest implements Request {
 				continue;
 
 			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-			String formated_valueToCheck = new FormattedString().getName(object, target);
+			String formated_valueToCheck = new FormattedString().getName(object, target, false);
 
 			if (tempObject.getName().equalsIgnoreCase(formated_valueToCheck))
 				return tempObject;
