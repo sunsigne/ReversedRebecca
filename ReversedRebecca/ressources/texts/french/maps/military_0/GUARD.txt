@@ -1,0 +1,21 @@
+% BAD_I_MUST_SEE_YY
+militaryman = player = guard = On ne passe pas.
+player = militaryman = angry = Moi, c'est pas "on".@Moi, c'est "Rebecca", et je passe.
+militaryman = player = guard = J'ai dit "non".
+player = militaryman = angry_var = Dégage, en fait !
+militaryman = player = guard = Et tu comptes m'y forcer comment ?
+player = militaryman = wrong_with_you = … ?
+
+
+% BAD_IDEA
+player = DOWN = angry_var2 = Il m'énerve ! Mais au moins, il m'a donné une idée. 
+player = DOWN = convinced = Je vais aller chercher une arme dans l'armurerie.@Il n'aura pas d'autre choix que de me laisser passer.
+
+
+% BAD_MOVE_OUT
+militaryman = player = guard = Ou sinon quoi ?
+player = militaryman = wrong_with_you = … ?
+
+
+% BAD_MOVE_OUT_NEXT
+player = DOWN = angry_var2 = Je déteste l'admettre, mais je n'arriverai à rien@de cette manière.

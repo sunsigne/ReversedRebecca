@@ -1,3 +1,8 @@
+///// WORLD /////
+
+I_MUST_SEE_YY = Key1 % je dois voir YY
+MOVE_OUT = Key1 % pousse-toi !
+
 ///// TRAINING /////
 
 YOU_DONT_SHOOT = Key1 % tu ne tires pas ?
