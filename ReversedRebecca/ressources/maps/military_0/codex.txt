@@ -26,6 +26,7 @@ OBJ-05 = Guard Checker
 OBJ-03 = Table Left
 OBJ-04 = Table Right
 OBJ-06 = Target
+OBJ-07 = Bomb Box
 
 ///// TRAINING /////
 
