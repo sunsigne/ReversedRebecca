@@ -25,6 +25,10 @@ player = LEFT = pain = Ouch!
 player = LEFT = sad = I got too close to the barbed wire.
 
 
+% MASTER_KEY
+player = object = excited = Lucky! These aren't just keys, they're a master key!
+
+
 % STEAL_PLANT_EVIL
 player = object = you_silly = While I'm at here, I might aswell steal@this plant for my home.
 

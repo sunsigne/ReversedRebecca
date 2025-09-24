@@ -27,6 +27,10 @@ player = LEFT = pain = Aïe !
 player = LEFT = sad = Je me suis approchée trop près des barbelés.
 
 
+% MASTER_KEY
+player = object = excited = Quelle chance ! Ça n'est pas jsute des clés,@c'est un passe-partout !
+
+
 % STEAL_PLANT_EVIL
 player = object = you_silly = Puisque j'y suis, je peux aussi bien voler@cette plante pour chez moi.
 
