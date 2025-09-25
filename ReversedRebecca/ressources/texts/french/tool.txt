@@ -15,6 +15,7 @@ KeyPermanentOrange = clef orange permanente
 KeyPermanentRed = clef rouge permanente
 KeyPermanentPurple = clef violette permanente
 
+KeyPlural = les clefs
 KeyPluralCyan = les clefs cyans
 KeyPluralGreen = les clefs vertes
 KeyPluralYellow = les clefs jaunes
@@ -39,6 +40,7 @@ BombPermanentOrange = bombe orange permanente
 BombPermanentRed = bombe rouge permanente
 BombPermanentPurple = bombe violette permanente
 
+BombPlural = les bombes
 BombPluralCyan = les bombes cyans
 BombPluralGreen = les bombes vertes
 BombPluralYellow = les bombes jaunes
@@ -63,6 +65,7 @@ MicrochipPermanentOrange = puce orange permanente
 MicrochipPermanentRed = puce rouge permanente
 MicrochipPermanentPurple = puce violette permanente
 
+MicrochipPlural = les puces
 MicrochipPluralCyan = les puces cyans
 MicrochipPluralGreen = les puces vertes
 MicrochipPluralYellow = les puces jaunes
@@ -87,6 +90,7 @@ ShovelPermanentOrange = pelle orange permanente
 ShovelPermanentRed = pelle rouge permanente
 ShovelPermanentPurple = pelle violette permanente
 
+ShovelPlural = les pelles cyans
 ShovelPluralCyan = les pelles cyans
 ShovelPluralGreen = les pelles vertes
 ShovelPluralYellow = les pelles jaunes

@@ -15,6 +15,7 @@ KeyPermanentOrange = permanent orange key
 KeyPermanentRed = permanent red key
 KeyPermanentPurple = permanent purple key
 
+KeyPlural = the keys
 KeyPluralCyan = the cyan keys
 KeyPluralGreen = the green keys
 KeyPluralYellow = the yellow keys
@@ -39,6 +40,7 @@ BombPermanentOrange = permanent orange bomb
 BombPermanentRed = permanent red bomb
 BombPermanentPurple = permanent purple bomb
 
+BombPlural = the bombs
 BombPluralCyan = the cyan bombs
 BombPluralGreen = the green bombs
 BombPluralYellow = the yellow bombs
@@ -63,6 +65,7 @@ MicrochipPermanentOrange = permanent orange chip
 MicrochipPermanentRed = permanent red chip
 MicrochipPermanentPurple = permanent purple chip
 
+MicrochipPlural = the chips
 MicrochipPluralCyan = the cyan chips
 MicrochipPluralGreen = the green chips
 MicrochipPluralYellow = the yellow chips
@@ -87,6 +90,7 @@ ShovelPermanentOrange = permanent orange shovel
 ShovelPermanentRed = permanent red shovel
 ShovelPermanentPurple = permanent purple shovel
 
+ShovelPlural = the shovels
 ShovelPluralCyan = the cyan shovels
 ShovelPluralGreen = the green shovels
 ShovelPluralYellow = the yellow shovels
