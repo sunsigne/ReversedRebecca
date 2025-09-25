@@ -1,0 +1,13 @@
+////// CHARACTER SPECIFIC //////
+
+sadistic=1,1
+skeptical=1,2
+mad=1,3
+
+////// UNHAPPY //////
+
+sad=2,1
+sad_var=2,2
+sad_hidden=2,3
+frustrated=2,4
+angry=2,5

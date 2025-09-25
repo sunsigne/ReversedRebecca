@@ -37,10 +37,6 @@ shooter=9,1
 shooter_shocked=9,2
 shooter_cry=9,3
 
-////// PRISONNER //////
-
-prisonner=10,1
-
 ////// SLACKER //////
 
-slacker=11,1
+slacker=10,1
