@@ -3,8 +3,14 @@
 I_MUST_SEE_YY = Key1 % je dois voir YY
 MOVE_OUT = Key1 % pousse-toi !
 
-///// TRAINING /////
+///// TRAINING FIELD /////
 
 YOU_DONT_SHOOT = Key1 % tu ne tires pas ?
 BOUH! = Key1 % BOUH !
 ACCIDENT = Key3 % accident
+I_CANT_DO_THAT = Key1 % Je… ne peux pas faire ça.
+TRUTH_DONT_HAVE_KEY = Key1 % (vérité) J'ai envie, mais je n'ai pas la clé
+LIE_DONT_HAVE_KEY = Key1 % (mentir) J'ai envie, mais je n'ai pas la clé
+I_VE_CHANGED_MY_MIND_I_LL_FREE_YOU = Key2 % (vérité) J'ai changé d'avis, je vais te libérer
+EVADE_WILL_HAVE_PROBLEM = Key3 % (éluder) Je vais avoir des problèmes
+HERES_GREEN_BOMBS = Key3 % voilà des bombes vertes

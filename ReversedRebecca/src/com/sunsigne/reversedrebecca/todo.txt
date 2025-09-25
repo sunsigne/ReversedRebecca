@@ -45,7 +45,10 @@
 
 	////////// EN COURS ////////////
 
+	à tester ! tout le code de Jules + la capacité d'exploser les portes
+
 	lvl003-y gameplay :
+	- mettre nancy dans la salle des opération derrière une porte orange, don't on obtient la clef qu'après avoir ouvert l'armurerie verte (et clef de YY en jaune). Ca récompensera le joueur qui a max la clé
 	- laboratoire ET prisonnier enfermée avec porte verte, mais pas de clef verte dans le niveau :
 		- lvl002 faire en sorte que la "clef" de jessy soit un passe partout (amélioration cyan permanante). Fonctionne car on ne le récupère que dans le cas où on n'a pas déjà de clef cyan, et est contrebalancé par l'enseignement de doug
 		- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
@@ -60,10 +63,20 @@
 	LVL001 "tu es ma 1ère"
 
 	à créer :
-	les voix de tous les niveaux personnages (nathan, jessy, nancy, les militarymen)
+	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
 	à faire :
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
+	le highlight de la bomb box
+
+	////////// MILITARY 0 ////////////
+
+	créer un puzzle spécial pour quand on fait exploser une porte
+	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
+	intégrer les poses de YY
+	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
+	le sac pouvelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
+	créer un succès ou l'idiot se fait tirer dans la tête (on a retarder sa course juste ce qu'il faut) - sélection naturelle
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -280,14 +293,6 @@
 	- plante volée
 	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
 	- doug rencontré
-
-	////////// MILITARY 0 ////////////
-
-	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
-	intégrer les poses de YY
-	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	le sac pouvelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
-	créer un succès ou l'idiot se fait tirer dans la tête (on a retarder sa course juste ce qu'il faut) - sélection naturelle
 
 	////////// MOLE 0 ////////////
 	

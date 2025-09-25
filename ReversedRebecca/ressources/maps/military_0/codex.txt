@@ -8,12 +8,11 @@ NPC-03 = Dormitory
 NPC-04 = Trashman
 NPC-05 = Cook
 NPC-07 = Xavier Dupont
-NPC-11 = Prisonner
+NPC-11 = Jules
 NPC-12 = Slacker
 NPC-13 = Cleaner
 NPC-14 = Nathan
 NPC-15 = Cassidy
-
 NPC-17 = Nancy
 
 ///// CENTER /////
@@ -35,3 +34,4 @@ NPC-08 = Runner
 NPC-09 = Idiot
 NPC-10 = Shooter
 NPC-16 = Jessy
+OBJ-08 = Jules Detector
