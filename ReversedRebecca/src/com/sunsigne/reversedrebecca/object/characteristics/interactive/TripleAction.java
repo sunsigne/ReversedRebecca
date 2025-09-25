@@ -43,7 +43,7 @@ public class TripleAction {
 			return new TripleAction(requirementBubble, action1, null, action3);
 		if (action == action3)
 			return new TripleAction(requirementBubble, action1, action2, null);
-		
+
 		return new TripleAction(requirementBubble, action1, action2, action3);
 	}
 
@@ -68,23 +68,35 @@ public class TripleAction {
 	///// one action /////
 
 	public boolean canDoExactlyOneAction() {
-		if (action1 != null & action2 == null & action3 == null)
-			return action1.canDoAction();
-		if (action1 == null & action2 != null & action3 == null)
-			return action2.canDoAction();
-		if (action1 == null & action2 == null & action3 != null)
-			return action3.canDoAction();
+		boolean canA1 = false;
+		boolean canA2 = false;
+		boolean canA3 = false;
+
+		if (action1 != null)
+			canA1 = action1.canDoAction();
+		if (action2 != null)
+			canA2 = action2.canDoAction();
+		if (action3 != null)
+			canA3 = action3.canDoAction();
+
+		if (canA1 && !canA2 && !canA3)
+			return true;
+		if (!canA1 && canA2 && !canA3)
+			return true;
+		if (!canA1 && !canA2 && canA3)
+			return true;
+
 		return false;
 	}
 
 	public Action getTheOnlyOnePerformableAction() {
 		if (!canDoExactlyOneAction())
 			return null;
-		if (action1 != null)
+		if (action1 != null && action1.canDoAction())
 			return action1;
-		if (action2 != null)
+		if (action2 != null && action2.canDoAction())
 			return action2;
-		if (action3 != null)
+		if (action3 != null && action3.canDoAction())
 			return action3;
 		return null;
 	}
