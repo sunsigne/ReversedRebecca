@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.cowboy;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.CowboyToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
@@ -26,11 +27,16 @@ public class ConfrontAction extends OpenPuzzleAction {
 		return "Confront";
 	}
 
-	////////// TOOL ////////////
+	////////// TOOL & UPGRADE ////////////
 
 	@Override
 	public ToolPlayer getToolPlayer() {
 		return new CowboyToolPlayer();
+	}
+
+	@Override
+	public UpgradePlayer getUpgradePlayer() {
+		return null;
 	}
 
 	////////// PUZZLE ////////////

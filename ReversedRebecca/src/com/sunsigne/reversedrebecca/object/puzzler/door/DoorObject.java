@@ -83,11 +83,12 @@ public class DoorObject extends PuzzlerObject {
 	@Override
 	protected void loadTripleAction() {
 		OpenPuzzleAction unlockAction = new UnlockAction(this);
+		OpenPuzzleAction explodeAction = new ExplodeDoorAction(this);
 
 		RequirementBubbleObject requirementUnlock = new RequirementBubbleObject(getX(), getY(),
 				unlockAction.getToolPlayer(), getDifficulty());
 
-		tripleAction = new TripleAction(requirementUnlock, unlockAction, null, null);
+		tripleAction = new TripleAction(requirementUnlock, unlockAction, explodeAction, null);
 	}
 
 }

@@ -16,12 +16,7 @@ public class BombingDoorUpgrade extends UpgradePlayer {
 	}
 
 	////////// NAME ////////////
-	
-	@Override
-	public int getNum() {
-		return 1;
-	}
-	
+
 	@Override
 	public String getName() {
 		return "BombingDoor";

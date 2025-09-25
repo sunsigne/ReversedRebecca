@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.door;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.animation.UnlockAnimationObject;
@@ -35,12 +36,18 @@ public class UnlockAction extends OpenPuzzleAction {
 		return new KeyToolPlayer();
 	}
 
+	@Override
+	public UpgradePlayer getUpgradePlayer() {
+		return null;
+	}
+
 	////////// PUZZLE ////////////
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListener actionOnWinning, GenericListener actionOnLosing) {
-		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning, actionOnLosing);
+		return new KeyPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
+				actionOnLosing);
 	}
 
 	@Override

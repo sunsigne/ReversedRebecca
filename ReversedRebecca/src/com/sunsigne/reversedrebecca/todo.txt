@@ -45,6 +45,12 @@
 
 	////////// EN COURS ////////////
 
+
+	à finir : 
+	- faire en sorte que le UpgradePlayer marche (lier la characteristique au réel fonctionnement de la porte à exploser
+	- relier le loot de la carte avec une modification du UpgradePlayer
+
+
 	à tester ! tout le code de Jules + la capacité d'exploser les portes
 
 	lvl003-y gameplay :

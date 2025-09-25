@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzler.chest;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.animation.OpenChestAnimationObject;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
@@ -26,10 +27,15 @@ public class OpenAction extends OpenPuzzleAction {
 		return "Open";
 	}
 
-	////////// TOOL ////////////
+	////////// TOOL & UPGRADE ////////////
 
 	@Override
 	public ToolPlayer getToolPlayer() {
+		return null;
+	}
+
+	@Override
+	public UpgradePlayer getUpgradePlayer() {
 		return null;
 	}
 

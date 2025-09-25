@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.BombToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.animation.ExplosionAnimationObject;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
@@ -27,11 +28,16 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 		return "RubbleExplode";
 	}
 
-	////////// TOOL ////////////
+	////////// TOOL & UPGRADE ////////////
 
 	@Override
 	public ToolPlayer getToolPlayer() {
 		return new BombToolPlayer();
+	}
+
+	@Override
+	public UpgradePlayer getUpgradePlayer() {
+		return null;
 	}
 
 	////////// PUZZLE ////////////
@@ -39,7 +45,8 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListener actionOnWinning, GenericListener actionOnLosing) {
-		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning, actionOnLosing);
+		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
+				actionOnLosing);
 	}
 
 	@Override

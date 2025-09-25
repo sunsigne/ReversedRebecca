@@ -11,6 +11,7 @@ Undefeated = invaincu
 
 Open = ouvrir
 DoorUnlock = ouvrir
+DoorExplode = exploser
 RubbleExplode = exploser
 ComputerHack = pirater
 HoleDig = creuser

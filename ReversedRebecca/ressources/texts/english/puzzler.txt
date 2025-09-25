@@ -11,6 +11,7 @@ Undefeated = undefeated
 
 Open = open
 DoorUnlock = unlock
+DoorExplode = explode
 RubbleExplode = explode
 ComputerHack = hack
 HoleDig = dig

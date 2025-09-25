@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzler.hole;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ShovelToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.animation.DigAnimationObject;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
@@ -38,11 +39,16 @@ public class DigAction extends OpenPuzzleAction {
 		return "HoleDig";
 	}
 
-	////////// TOOL ////////////
+	////////// TOOL & UPGRADE ////////////
 
 	@Override
 	public ToolPlayer getToolPlayer() {
 		return new ShovelToolPlayer();
+	}
+
+	@Override
+	public UpgradePlayer getUpgradePlayer() {
+		return null;
 	}
 
 	////////// PUZZLE ////////////
@@ -50,7 +56,8 @@ public class DigAction extends OpenPuzzleAction {
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListener actionOnWinning, GenericListener actionOnLosing) {
-		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning, actionOnLosing);
+		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
+				actionOnLosing);
 	}
 
 	@Override
@@ -116,7 +123,7 @@ public class DigAction extends OpenPuzzleAction {
 			listener.doAction();
 			return;
 		}
-		
+
 		// if no hole found, create one
 		PuzzlerObject hole = getOppositeNullObject(nullObject);
 		exit_handler.addObject(hole);

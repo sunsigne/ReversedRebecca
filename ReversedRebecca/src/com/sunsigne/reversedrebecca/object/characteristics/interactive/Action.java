@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 import java.awt.Color;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
@@ -54,6 +55,12 @@ public abstract class Action {
 		this.toolPlayer = toolPlayer;
 	}
 
+	private UpgradePlayer upgradePlayer;
+
+	public void setUpgradePlayer(UpgradePlayer upgradePlayer) {
+		this.upgradePlayer = upgradePlayer;
+	}
+
 	private GenericListener listener;
 
 	public void setListener(GenericListener listener) {
@@ -70,6 +77,10 @@ public abstract class Action {
 		if (getInteractive() instanceof Difficulty == false) {
 			return true;
 		}
+
+		// upgrade is required
+		if (upgradePlayer != null && upgradePlayer.getValue() == false)
+			return false;
 
 		// comparaison between the object's level and the tool's level
 		Difficulty difficultyObject = (Difficulty) getInteractive();

@@ -31,8 +31,6 @@ public abstract class UpgradePlayer {
 
 	////////// NAME ////////////
 
-	public abstract int getNum();
-
 	public abstract String getName();
 
 	////////// VALUE ////////////
@@ -52,7 +50,7 @@ public abstract class UpgradePlayer {
 			value = getDefaultValue();
 		}
 
-		setValue(Boolean.parseBoolean(value));
+		getUpgrade().value = Boolean.parseBoolean(value.toLowerCase());
 	}
 
 	public boolean getValue() {

@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzler;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
@@ -23,6 +24,7 @@ public abstract class OpenPuzzleAction extends Action {
 
 		setName(new Translatable().getTranslatedText(getName(), FilePath.PUZZLER));
 		setToolPlayer(getToolPlayer());
+		setUpgradePlayer(getUpgradePlayer());
 		setListener(() -> {
 			Puzzle puzzle = getPuzzle(puzzlerObject.getDevDifficulty(), puzzlerObject.getDifficulty(), getToolPlayer(),
 					actionOnWinning(puzzlerObject), actionOnLosing());
@@ -36,9 +38,11 @@ public abstract class OpenPuzzleAction extends Action {
 
 	public abstract String getName();
 
-	////////// TOOL ////////////
+	////////// TOOL & UPGRADE ////////////
 
 	public abstract ToolPlayer getToolPlayer();
+	
+	public abstract UpgradePlayer getUpgradePlayer();
 
 	////////// PUZZLE ////////////
 
