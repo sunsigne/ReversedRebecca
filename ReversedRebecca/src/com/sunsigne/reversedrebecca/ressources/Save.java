@@ -5,6 +5,8 @@ import java.util.TreeSet;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradeList;
+import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -151,9 +153,15 @@ public class Save {
 		karma.setValue(value);
 		karma.registerKarma();
 
+		// values
+		var upgradeList = UpgradeList.getList();
+		for (UpgradePlayer tempUpgrade : upgradeList.getList())
+			// update upgrade
+			task.write(tempUpgrade.getName(), char_file, String.valueOf(tempUpgrade.getValue()).toUpperCase());
+
 		// tools
-		var list = ToolList.getList();
-		for (ToolPlayer tempTool : list.getList()) {
+		var toolList = ToolList.getList();
+		for (ToolPlayer tempTool : toolList.getList()) {
 			// update the max lvl
 			task.write(tempTool.getName() + "MaxLvl", char_file, tempTool.getMaxDifficulty().getName().toUpperCase());
 			// update the start lvl

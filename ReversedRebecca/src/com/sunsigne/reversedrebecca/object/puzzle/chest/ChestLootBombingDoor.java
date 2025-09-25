@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.chest;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -84,7 +85,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	public String getFirstLine() {
 		if (firstLine == null) {
 			firstLine = new Translatable().getTranslatedText(tool.getName() + "Plural", FilePath.TOOL);
-			firstLine = firstLine.substring(0, 1).toUpperCase().concat(firstLine.substring(1));
+			firstLine = new FormattedString().capitalize(firstLine);
 			firstLine = firstLine.concat(new Translatable().getTranslatedText("BOMBINGDOOR1", FilePath.TECHTREE));
 		}
 		return firstLine;

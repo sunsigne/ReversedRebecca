@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import java.io.File;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.Characteristic;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
 import com.sunsigne.reversedrebecca.physic.Physic;
@@ -37,7 +37,7 @@ public class RessourceLoader {
 		new LayerDualizer().dualizeSameFloorLayers();
 		new ForceInit().loadAllClassesInPackage(HUD.class.getPackageName());
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
-		new ForceInit().loadAllClassesInPackage(ToolPlayer.class.getPackageName());
+		new ForceInit().loadAllClassesInPackage(Characteristic.class.getPackageName());
 
 		new Physic().loadRessources();
 		new Piranha().loadRessources();
