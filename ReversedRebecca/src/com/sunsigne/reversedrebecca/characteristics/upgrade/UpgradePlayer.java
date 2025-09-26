@@ -41,7 +41,7 @@ public abstract class UpgradePlayer {
 		return Boolean.toString(false);
 	}
 
-	private void loadValue() {
+	public void loadValue() {
 		String value = new FileTask().read(userData, getName(), file);
 
 		// if the file "characteristics" has no value for the tool, create one
@@ -52,7 +52,7 @@ public abstract class UpgradePlayer {
 
 		getUpgrade().value = Boolean.parseBoolean(value.toLowerCase());
 	}
-
+		
 	public boolean getValue() {
 		return getUpgrade().value;
 	}

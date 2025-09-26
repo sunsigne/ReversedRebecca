@@ -26,7 +26,7 @@ public class UpgradeList extends Characteristic {
 	@Override
 	public void reset() {
 		getList().getList().forEach(tempUpgrade -> {
-			tempUpgrade.setValue(false);
+			tempUpgrade.loadValue();
 		});
 	}
 

@@ -16,9 +16,8 @@ public class CharacteristicList {
 	////////// CHARACTERISTICS ////////////
 
 	public void reset() {
-		for (Characteristic tempCharacteristic : list.getList()) {
+		for (Characteristic tempCharacteristic : list.getList())
 			tempCharacteristic.reset();
-		}
 	}
 
 }

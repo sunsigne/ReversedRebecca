@@ -20,14 +20,15 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.KeyAnalyzer
 public abstract class Action {
 
 	public Action(Interactive interactive, String name, GenericListener listener, Key key, int keyEvent) {
-		this(interactive, name, null, listener, key, keyEvent);
+		this(interactive, name, null, null, listener, key, keyEvent);
 	}
 
-	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, GenericListener listener, Key key,
+	public Action(Interactive interactive, String name, ToolPlayer toolPlayer, UpgradePlayer upgradePlayer, GenericListener listener, Key key,
 			int keyEvent) {
 		this.interactive = interactive;
 		this.name = name;
 		this.toolPlayer = toolPlayer;
+		this.upgradePlayer = upgradePlayer;
 		this.listener = listener;
 		setTextColor(TEXT_COLOR.WHITE);
 		setKeyEvent(key, keyEvent);
@@ -78,16 +79,20 @@ public abstract class Action {
 			return true;
 		}
 
-		// upgrade is required
-		if (upgradePlayer != null && upgradePlayer.getValue() == false)
-			return false;
-
 		// comparaison between the object's level and the tool's level
 		Difficulty difficultyObject = (Difficulty) getInteractive();
 		boolean canUseTool = new DifficultyComparator().canUseTool(difficultyObject.getDifficulty(),
 				toolPlayer.getDifficulty());
 
-		return canUseTool;
+		// no upgrade is required
+		if (upgradePlayer == null)
+			return canUseTool;
+
+		if (upgradePlayer.getValue()) {
+			return canUseTool;
+		}
+
+		return false;
 	}
 
 	public void doAction() {

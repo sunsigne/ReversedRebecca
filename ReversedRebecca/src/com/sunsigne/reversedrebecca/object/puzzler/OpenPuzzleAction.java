@@ -20,7 +20,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 public abstract class OpenPuzzleAction extends Action {
 
 	public OpenPuzzleAction(PuzzlerObject puzzlerObject) {
-		super(puzzlerObject, null, null, null, null, 0);
+		super(puzzlerObject, null, null, null, null, null, 0);
 
 		setName(new Translatable().getTranslatedText(getName(), FilePath.PUZZLER));
 		setToolPlayer(getToolPlayer());
