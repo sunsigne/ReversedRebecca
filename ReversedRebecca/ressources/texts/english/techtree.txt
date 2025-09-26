@@ -5,3 +5,4 @@ REWARD2 = Choose two rewards
 
 TOOLSTARTLVL = You obtain
 TOOLMAXLVL = You can use
+BOMBINGDOOR = on

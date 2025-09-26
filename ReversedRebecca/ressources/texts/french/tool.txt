@@ -1,3 +1,7 @@
+///// DOOR /////
+
+DoorPlural = les portes
+
 ///// KEY /////
 
 KeyCyan = clef cyan

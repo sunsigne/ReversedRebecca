@@ -74,19 +74,25 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
 	private boolean widerUpgradeImg;
 	
+	public int[] cutsomizedDimensions() {
+		int[] dim = {0, 0, 0, 0, 0, 0, 0, 0}; 
+		return dim;
+	}
+
 	@Override
 	public void render(Graphics g) {
 		int size = Size.XL;
+		int[] dim = cutsomizedDimensions();
 		int[] tempRect = card.getRect();
 		int[] rect = new int[] { tempRect[0] + tempRect[2] / 2 - size / 2, tempRect[1] + Size.XS, size, size };
 
 		// tool
-		g.drawImage(getToolImage(), rect[0], rect[1], rect[2], rect[3], null);
+		g.drawImage(getToolImage(), dim[0] + rect[0], dim[1] + rect[1], dim[2] + rect[2], dim[3] + rect[3], null);
 
 		// upgrade
 		BufferedImage img = card.isPickedUp() ? getUpgradeGoldImage() : getUpgradeImage();
 		int widerImg = widerUpgradeImg ? rect[2] : 0;
-		g.drawImage(img, rect[0] - widerImg / 2, rect[1] + Size.L + Size.XS / 2, rect[2] + widerImg, rect[3], null);
+		g.drawImage(img, dim[4] + rect[0] - widerImg / 2, dim[5] + rect[1] + Size.L + Size.XS / 2, dim[6] + rect[2] + widerImg, dim[7] + rect[3], null);
 
 		drawText(g, font, rect);
 	}

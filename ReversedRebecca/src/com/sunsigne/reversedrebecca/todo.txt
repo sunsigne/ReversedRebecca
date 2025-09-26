@@ -45,12 +45,6 @@
 
 	////////// EN COURS ////////////
 
-
-	à finir : 
-	- faire en sorte que le UpgradePlayer marche (lier la characteristique au réel fonctionnement de la porte à exploser
-	- relier le loot de la carte avec une modification du UpgradePlayer
-
-
 	à tester ! tout le code de Jules + la capacité d'exploser les portes
 
 	lvl003-y gameplay :
@@ -63,6 +57,7 @@
 
 	à vérifier :
 	- getname a été changé dans : move (vérifier alicia), choice (vérifier le highlight), conditionnalrequest (vérifier le see)
+	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ?
 
 	à changer :
 	RR001 "je suis plutôt garçon

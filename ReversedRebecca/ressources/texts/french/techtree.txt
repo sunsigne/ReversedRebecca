@@ -5,5 +5,4 @@ REWARD2 = Choisissez deux récompenses
 
 TOOLSTARTLVL = Vous obtenez
 TOOLMAXLVL = Vous pouvez utiliser
-BOMBINGDOOR1 = peuvent
-BOMBINGDOOR2 = remplacer
+BOMBINGDOOR = sur

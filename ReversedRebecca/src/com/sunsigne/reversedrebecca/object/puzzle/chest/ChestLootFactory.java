@@ -32,7 +32,7 @@ public class ChestLootFactory {
 		}
 
 		if (lootData.toLowerCase().contains("bombing_door"))
-			return new ChestLootBombingDoor(card, getTool("bomb_"), getTool("key_"));
+			return new ChestLootBombingDoor(card, getTool("bomb_"));
 
 		stopApp(lootData);
 		return null;
