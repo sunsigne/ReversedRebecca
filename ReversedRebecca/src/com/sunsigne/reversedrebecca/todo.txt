@@ -45,7 +45,11 @@
 
 	////////// EN COURS ////////////
 
-	à tester ! tout le code de Jules + la capacité d'exploser les portes
+	jules :
+	- lui trouver une voix
+	- créer la musique
+	- créer une alternative pour les bombes vertes
+	- la voie du cuisinier et du plat
 
 	lvl003-y gameplay :
 	- mettre nancy dans la salle des opération derrière une porte orange, don't on obtient la clef qu'après avoir ouvert l'armurerie verte (et clef de YY en jaune). Ca récompensera le joueur qui a max la clé

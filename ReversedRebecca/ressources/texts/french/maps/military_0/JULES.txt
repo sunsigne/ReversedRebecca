@@ -1,5 +1,5 @@
 % FRESH_MEAT
-object = DOWN = sadistic = Qu'est-ce qu’on a là ? De la viande fraîche ?@Fait comme tous les autres, fuis.
+object = DOWN = sadistic = Qu'est-ce qu'on a là ? De la viande fraîche ?@Fait comme tous les autres, fuis.
 
 
 % LEAVING
@@ -23,15 +23,19 @@ object = DOWN = skeptical = Mais est-ce que tu crois seulement à ce que tu dis 
 
 % CHOICE_PRISONNER_NO
 object = DOWN = skeptical = Mouais… Je m'en doutais. Tu es comme les autres.
-object = DOWN = skeptical = Dégage avant que je te fasse mal.
+object = DOWN = skeptical = Dégage, avant que je te fasse mal.
 
 
 % CHOICE_PRISONNER_YES
-object = DOWN = neutral = Vraiment ? Vas-y alors, prouve-le.@Ouvre la porte, si t'es cap.
+object = DOWN = mad = Vraiment ? Vas-y alors, prouve-le.@Ouvre la porte, si t'es cap.
 
 
 % CHOICE_PRISONNER_I_CANT_DO_THAT
 object = DOWN = skeptical = Et pourquoi ?
+
+
+% CHOICE_PRISONNER_ACTUALLY_I_LL_FREE_YOU
+object = DOWN = skeptical = Mouais… Permets-moi d'en douter.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY
@@ -41,54 +45,75 @@ object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB
 object = DOWN = mad = Si tu es sincère, apporte-moi des bombes vertes.
-player = UP = worry = Impossible une fois de plus, je ne sais pas comment les manipuler.
+player = UP = worry = Ça non plus, je ne peux pas.@Je ne sais pas comment m'en servir.
 object = DOWN = skeptical = Ho ?
-object = DOWN = mad = Il suffit juste ne les secouer avant de s'en servir.
+object = DOWN = mad = Voilà l'astuce : il suffit juste de les secouer@avant de les allumer.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB_NEXT
-object = DOWN = skeptical = Bref, tu me trouveras ici, si tu en trouves.
+object = DOWN = skeptical = Bref, tu me trouveras ici, si tu veux m'aider.
 object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
 
 
 % LOST_DOOR
 object = DOWN = sadistic = Quelle nulle !
-object = DOWN = happy_var = Une seconde, je vais réessayer.
+player = UP = happy_var = Une seconde, je vais réessayer.
 
 
 % LOST_DOOR_AGAIN
 object = DOWN = sadistic = Encore raté.
-object = DOWN = happy_var = Ça vient, ça vient. Je dois juste me concentrer.
+player = UP = happy_var = Ça vient, ça vient. Je dois juste me concentrer.
 
 
 % LOST_DOOR_LAST
 object = DOWN = sadistic = T'es une loser.
-object = DOWN = laugh = Je plaide coupable.
+player = UP = laugh = Je plaide coupable.
 
 
-% HERES_GREEN_BOMBS
+% HERES_THE_GREEN_BOMBS
 object = DOWN = sadistic = Joli ! C'est le moment de vérité princesse.@Vas-tu vraiment me libérer ?
 
 
-% YOU_FREED_ME
+% YOU_FREED_ME_INTRO
 object = DOWN = sad = Tu… l'as… vraiment fait ?
+
+
+% YOU_FREED_ME_INTRO_VAR
+object = DOWN = sad = Tu… m'as… libéré ? Pourquoi ?
+
+
+% YOU_FREED_ME
 object = DOWN = sad = Tu n'as pas peur de moi ?
-player = UP = worry = Je te l'ai dit, je ne pense pas que tu sois réellement méchant.
+player = UP = worry = Je te l'ai dit, je ne pense pas que tu sois@réellement méchant.
 object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
 object = RIGHT = sad_var = Pourquoi je mérite d'être enfermé…
-object = DOWN = sad = J’imagine que… je devrais te… dire merci.
-object = DOWN = frustrated = Rah ! Ça m'énerve ! J'ai l'impression de t'en devoir une !@Et je déteste avoir des dettes.
+object = DOWN = sad = J'imagine que… je devrais te… dire merci.
+object = DOWN = frustrated = Rah ! Ça m'énerve ! J'ai l'impression de t'en@devoir une ! Et je déteste avoir des dettes.
 object = DOWN = sad_hidden = Ho regarde ! Une abeille !
 
 
+% FREED_TOO_EARLY
+object = DOWN = sad = Tu… m'as… libéré ? Pourquoi ?
+player = UP = worry = Je ne pense pas que tu sois réellement méchant…@Tu te donnes probablement un genre.
+object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
+object = RIGHT = sad_var = Pourquoi je mérite d'être enfermé…
+object = DOWN = skeptical = Bref ! On ne se connait pas, ne va pas@t'imaginer que je t'en dois une.
+object = DOWN = mad = Allez, salut.
+
+
+% FREED_TOO_EARLY_NEXT
+object = RIGHT = sad_var = Un dernier conseil : ne libère pas des inconnus@sans raison… Tu vas t'attirer des ennuis.
+object = LEFT = skeptical = On a échangé une seule phrase, ta réaction@n'est pas normale.
+
+
 % YOU_FREED_ME_NEXT
-object = DOWN = sadistic = Tu as vu ? Je l'ai tué. Tu peux être allergique sans le savoir.@Je t'ai sauvé ! Je ne te dois plus rien.
+object = DOWN = sadistic = Tu as vu ? Je l'ai tué. Tu peux être allergique sans@le savoir. Je t'ai sauvé ! Je ne te dois plus rien.
 object = DOWN = mad = Allez, salut.
 
 
 % WANNA_HANG_OUT
 object = LEFT = sad = Ho, heu… C'était chouette.
-object = RIGHT = sad_var = Ça te… dirait qu'on… se revoit ? Pour traîner, tout ça…
+object = RIGHT = sad_var = Ça te… dirait qu'on… se revoit ?@Pour traîner, tout ça…
 
 
 % WANNA_HANG_OUT_NO
@@ -99,6 +124,6 @@ object = RIGHT = sad_var = Adieu, princesse…
 % WANNA_HANG_OUT_YES
 object = RIGHT = sad_hidden = Ouais. Bien sûr. Moi non plus, j'ai pas env…
 object = RIGHT = skeptical = Attend… Vraiment ?
-object = RIGHT = mad = C'est sincère, ou t'as peur que je te blesse si tu refuses ?
-object = RIGHT = sadistic = Mais c'est trop tard, tu as dit oui. Je te@retrouve chez toi bientôt. Promis, je ne casserai rien.
+object = RIGHT = mad = C'est sincère, ou tu as peur de ma réaction si@tu dis non ?
+object = RIGHT = sadistic = Mais c'est trop tard, tu as dit oui. Je te retrouve@chez toi bientôt. Promis, je ne casserai rien.
 object = RIGHT = sad_var = Allez, salut princesse…

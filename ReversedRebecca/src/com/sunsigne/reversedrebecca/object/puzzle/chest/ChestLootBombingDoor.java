@@ -56,7 +56,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool");
-			tool_img = getSheetSubImage(sheet, 4, tool.getNum(), 16, 16);
+			tool_img = getSheetSubImage(sheet, 3, tool.getNum(), 16, 16);
 		}
 		return tool_img;
 	}
@@ -102,7 +102,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	@Override
 	public int[] cutsomizedDimensions() {
 		int u = 8;
-		int[] dim = { -12 * u, 0, u, u, -5 * u, -5 * u, 8 * u, 8 * u };
+		int[] dim = { -12 * u, 0, u, u, -7 * u, -5 * u, 12 * u, 8 * u };
 		return dim;
 	}
 
