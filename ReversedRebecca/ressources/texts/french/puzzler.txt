@@ -10,11 +10,10 @@ Undefeated = invaincu
 ///// ACTION /////
 
 Open = ouvrir
-DoorUnlock = ouvrir
-DoorExplode = exploser
-RubbleExplode = exploser
-ComputerHack = pirater
-HoleDig = creuser
+Unlock = ouvrir
+Explode = exploser
+Hack = pirater
+Dig = creuser
 GoDown = descendre
 GoUp = monter
 Confront = affronter

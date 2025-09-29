@@ -10,11 +10,11 @@ Undefeated = undefeated
 ///// ACTION /////
 
 Open = open
-DoorUnlock = unlock
-DoorExplode = explode
-RubbleExplode = explode
-ComputerHack = hack
-HoleDig = dig
+Unlock = unlock
+Explode = explode
+Explode = explode
+Hack = hack
+Dig = dig
 GoDown = go down
 GoUp = go up
 Confront = confront

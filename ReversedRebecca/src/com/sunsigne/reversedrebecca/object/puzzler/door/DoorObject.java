@@ -82,7 +82,7 @@ public class DoorObject extends PuzzlerObject {
 
 	@Override
 	protected void loadTripleAction() {
-		OpenPuzzleAction unlockAction = new UnlockAction(this);
+		OpenPuzzleAction unlockAction = new UnlockDoorAction(this);
 		OpenPuzzleAction explodeAction = new ExplodeDoorAction(this);
 
 		RequirementBubbleObject requirementUnlock = new RequirementBubbleObject(getX(), getY(),

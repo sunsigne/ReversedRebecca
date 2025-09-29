@@ -36,7 +36,7 @@ public class DigAction extends OpenPuzzleAction {
 
 	@Override
 	public String getName() {
-		return "HoleDig";
+		return "Dig";
 	}
 
 	////////// TOOL & UPGRADE ////////////

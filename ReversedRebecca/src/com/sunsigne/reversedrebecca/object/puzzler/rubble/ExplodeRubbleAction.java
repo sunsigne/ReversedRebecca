@@ -25,7 +25,7 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 
 	@Override
 	public String getName() {
-		return "RubbleExplode";
+		return "Explode";
 	}
 
 	////////// TOOL & UPGRADE ////////////

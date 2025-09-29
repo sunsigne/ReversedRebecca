@@ -1,45 +1,35 @@
-package com.sunsigne.reversedrebecca.object.puzzler.cowboy;
+package com.sunsigne.reversedrebecca.object.puzzler.chest;
 
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
-import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public class CowboyObject extends PuzzlerObject {
+public class FreeChestObject extends ChestObject {
 
-	public CowboyObject(DEV_LVL devDifficulty, int x, int y) {
-		super(devDifficulty, x, y);
-	}
-
-	public CowboyObject(LVL difficulty, int x, int y) {
-		super(difficulty, x, y);
+	public FreeChestObject(int num, int x, int y, boolean little) {
+		super(LVL.CYAN, num, x, y, little);
 	}
 
 	////////// NAME ////////////
 
 	@Override
 	public String getName() {
-		return "cowboy";
+		return "free" + " " + super.getName();
 	}
 
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
-	}
-
-	@Override
-	public int getSheetColCriterion() {
-		return 1;
+		return super.getSheetRowCriterion() - 1;
 	}
 
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "chest");
 			image = getSheetSubImage(sheet);
 		}
 		return image;
@@ -49,7 +39,8 @@ public class CowboyObject extends PuzzlerObject {
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 2 + getSheetRowCriterion(), getSheetWidth() + 2,
+			int col = isLittle() ? 1 : 0;
+			highlightImage = getSheetSubImage(sheet, 1 + col, 1 + getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;
@@ -57,7 +48,7 @@ public class CowboyObject extends PuzzlerObject {
 
 	////////// INTERACTION ////////////
 
-	protected TripleAction tripleAction;
+	private TripleAction tripleAction;
 
 	@Override
 	public TripleAction getTripleAction() {
@@ -66,9 +57,9 @@ public class CowboyObject extends PuzzlerObject {
 
 	@Override
 	protected void loadTripleAction() {
-		OpenPuzzleAction confrontAction = new ConfrontAction(this);
+		OpenPuzzleAction openAction = new OpenAction(this);
 
-		tripleAction = new TripleAction(null, confrontAction, null, null);
+		tripleAction = new TripleAction(null, openAction, null, null);
 	}
 
 }

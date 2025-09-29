@@ -29,7 +29,7 @@ public class ComputerObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
+		return 1;
 	}
 	
 	@Override
@@ -47,7 +47,7 @@ public class ComputerObject extends PuzzlerObject {
 	{
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 1 + getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1, 2 + getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

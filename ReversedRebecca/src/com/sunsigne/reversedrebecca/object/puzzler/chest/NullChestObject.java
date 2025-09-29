@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAct
 
 public class NullChestObject extends ChestObject {
 
-	public NullChestObject(int x, int y) {
-		super(LVL.NULL, 0, x, y);
+	public NullChestObject(int x, int y, boolean little) {
+		super(LVL.NULL, 0, x, y, little);
 	}
 
 	////////// INTERACTION ////////////

@@ -25,7 +25,7 @@ public class HackingAction extends OpenPuzzleAction {
 
 	@Override
 	public String getName() {
-		return "ComputerHack";
+		return "Hack";
 	}
 
 	////////// TOOL & UPGRADE ////////////

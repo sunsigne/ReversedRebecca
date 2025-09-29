@@ -10,12 +10,10 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public class ChestObject extends PuzzlerObject {
 
-	public ChestObject(int num, int x, int y) {
-		this(LVL.CYAN, num, x, y);
-	}
-
-	protected ChestObject(LVL lvl, int num, int x, int y) {
+	public ChestObject(LVL lvl, int num, int x, int y, boolean little) {
 		super(lvl, x, y);
+
+		this.little = little;
 
 		if (num < 0)
 			return;
@@ -24,6 +22,12 @@ public class ChestObject extends PuzzlerObject {
 			lootFile = ("maps/" + World.get().getMapName() + "/" + getName().toUpperCase() + "-0" + num + ".csv");
 	}
 
+	private boolean little;
+
+	public boolean isLittle() {
+		return little;
+	}
+	
 	////////// NAME ////////////
 
 	@Override
@@ -43,13 +47,13 @@ public class ChestObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 1;
+		return little ? 4 : 2;
 	}
 
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "chest");
 			image = getSheetSubImage(sheet);
 		}
 		return image;

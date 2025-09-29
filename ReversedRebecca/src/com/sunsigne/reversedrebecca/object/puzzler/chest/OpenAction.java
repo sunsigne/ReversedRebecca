@@ -50,7 +50,8 @@ public class OpenAction extends OpenPuzzleAction {
 
 	@Override
 	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
-		return new NullChestObject(x, y);
+		boolean little = ((ChestObject) puzzlerObject).isLittle();
+		return new NullChestObject(x, y, little);
 	}
 
 	@Override

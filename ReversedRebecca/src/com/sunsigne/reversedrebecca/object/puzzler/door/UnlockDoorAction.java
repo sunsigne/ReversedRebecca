@@ -16,9 +16,9 @@ import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 
-public class UnlockAction extends OpenPuzzleAction {
+public class UnlockDoorAction extends OpenPuzzleAction {
 
-	public UnlockAction(PuzzlerObject puzzlerObject) {
+	public UnlockDoorAction(PuzzlerObject puzzlerObject) {
 		super(puzzlerObject);
 	}
 
@@ -26,7 +26,7 @@ public class UnlockAction extends OpenPuzzleAction {
 
 	@Override
 	public String getName() {
-		return "DoorUnlock";
+		return "Unlock";
 	}
 
 	////////// TOOL ////////////
