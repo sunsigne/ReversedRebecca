@@ -3,14 +3,12 @@ package com.sunsigne.reversedrebecca.world;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.util.Random;
 
 import javax.swing.JOptionPane;
 
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
@@ -33,7 +31,6 @@ import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveList;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -286,17 +283,6 @@ public class World implements Updatable, RenderFree {
 		if (mapName.contains("workshop_")) {
 			String name = mapName.split("workshop_")[1];
 			new Textures().loadRessources("textures/workshop/" + name);
-		}
-
-		if (mapName.equals(FilePath.TEST)) {
-			boolean exist = false;
-			COLOR color = null;
-			do {
-				COLOR[] colors = COLOR.values();
-				color = colors[new Random().nextInt(colors.length)];
-				exist = new FileTask().doesExist(false, "maps/" + mapName.concat("/" + color.getName()));
-			} while (exist == false);
-			mapName = mapName.concat("/" + color.getName());
 		}
 
 		for (LAYER tempLayer : LAYER.values()) {
