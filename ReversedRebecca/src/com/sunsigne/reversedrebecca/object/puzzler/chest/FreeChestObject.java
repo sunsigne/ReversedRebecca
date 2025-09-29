@@ -12,13 +12,6 @@ public class FreeChestObject extends ChestObject {
 		super(LVL.CYAN, num, x, y, little);
 	}
 
-	////////// NAME ////////////
-
-	@Override
-	public String getName() {
-		return "free" + " " + super.getName();
-	}
-
 	////////// TEXTURE ////////////
 
 	@Override
@@ -40,7 +33,7 @@ public class FreeChestObject extends ChestObject {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
 			int col = isLittle() ? 1 : 0;
-			highlightImage = getSheetSubImage(sheet, 1 + col, 1 + getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1 + col, 2, getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

@@ -38,7 +38,7 @@ public class MappableChest implements MappableComplexe {
 		if (red == 0)
 			return new NullChestObject(x, y, little);
 
-		else if (blue % 2 == 0)
+		else if (blue % 2 != 0)
 			return new FreeChestObject(red, x, y, little);
 		else
 			return new ChestObject(difficulty, red, x, y, little);

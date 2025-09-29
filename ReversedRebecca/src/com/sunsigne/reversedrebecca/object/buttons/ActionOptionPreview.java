@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
@@ -61,7 +62,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	private PuzzlerObject puzzler;
 
 	private void loadPuzzler() {
-		puzzler = new ChestObject(-1, getX(), getY()) {
+		puzzler = new ChestObject(LVL.YELLOW, -1, getX(), getY(), false) {
 			@Override
 			public boolean getHighlightCondition() {
 				return ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;

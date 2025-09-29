@@ -13,12 +13,8 @@ public class UnlockChestAction extends UnlockDoorAction {
 
 	@Override
 	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
-		return new FreeChestObject(0, x, y, false) {
-
-			@Override
-			public boolean isLittle() {
-				return ((ChestObject) puzzlerObject).isLittle();
-			}
+		boolean little = ((ChestObject) puzzlerObject).isLittle();
+		return new FreeChestObject(0, x, y, little) {
 
 			public String getLootFile() {
 				return ((ChestObject) puzzlerObject).getLootFile();
