@@ -1,7 +1,7 @@
 
 KARMA=0
 
-MaxHp=3
+MaxHp=2
 
 
 KeyMaxLvl=CYAN
@@ -23,3 +23,5 @@ MicrochipCriticalChance=0%
 ShovelMaxLvl=CYAN
 ShovelStartLvl=NULL
 ShovelCriticalChance=0%
+
+BombingDoor=FALSE

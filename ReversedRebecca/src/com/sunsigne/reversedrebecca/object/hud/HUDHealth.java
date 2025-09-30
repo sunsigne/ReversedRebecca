@@ -52,7 +52,7 @@ public class HUDHealth extends GameObject implements HUD {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.HUD;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -63,6 +63,7 @@ public class HUDHealth extends GameObject implements HUD {
 	////////// TEXTURE ////////////
 
 	private BufferedImage empty_img;
+	private BufferedImage half_img;
 	private BufferedImage full_img;
 
 	@Override
@@ -74,10 +75,11 @@ public class HUDHealth extends GameObject implements HUD {
 	public int getSheetRowCriterion() {
 		return 1;
 	}
-	
+
 	private void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "heart");		
-		empty_img = getSheetSubImage(sheet, 2);
+		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "heart");
+		empty_img = getSheetSubImage(sheet, 3);
+		half_img = getSheetSubImage(sheet, 2);
 		full_img = getSheetSubImage(sheet, 1);
 	}
 
@@ -94,13 +96,17 @@ public class HUDHealth extends GameObject implements HUD {
 			return;
 
 		// drawing maxHp empty heart
-		for (int index = 0; index < player.getMaxHp(); index++) {
-			g.drawImage(empty_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(empty_img, getX(), getY(), getWidth(), getHeight(), null);
+		for (int index = 0; index < player.getMaxHp(); index = index + 2) {
+			g.drawImage(empty_img, getX() + index * getWidth() / 2, getY(), getWidth(), getHeight(), null);
 		}
 
 		// drawing hp full heart above
 		for (int index = 0; index < player.getHp(); index++) {
-			g.drawImage(full_img, getX() + index * getWidth(), getY(), getWidth(), getHeight(), null);
+			if (index % 2 == 0)
+				g.drawImage(half_img, getX() + index * getWidth() / 2, getY(), getWidth(), getHeight(), null);
+			else
+				g.drawImage(full_img, getX() + (getWidth() / 2) * (index - 1), getY(), getWidth(), getHeight(), null);
 		}
 	}
 

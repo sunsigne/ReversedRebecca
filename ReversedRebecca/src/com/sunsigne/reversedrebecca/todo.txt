@@ -45,6 +45,7 @@
 
 	////////// EN COURS ////////////
 
+	- vérifier que l'enregistrement d'un ajout de hp(pv) max s'effectue correctement
 	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
 
 	jules :
@@ -54,6 +55,7 @@
 	- la voie du cuisinier et du plat
 
 	lvl003-y gameplay :
+	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp)
 	- créer un coffre orange, dont on obtient la clef qu'après avoir ouvert l'armurerie verte (et clef de YY en jaune). Ca récompensera le joueur qui a max la clé : butin = clef rouge max ?
 	- le rideau à "fermer à clef" doit être celui en ligne 1, colonne 2
 	- laboratoire ET prisonnier enfermée avec porte verte, mais pas de clef verte dans le niveau :

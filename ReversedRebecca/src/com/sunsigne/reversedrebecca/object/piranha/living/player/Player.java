@@ -77,12 +77,16 @@ public class Player extends LivingObject {
 
 		// if the file "characteristics" has no value for the hp, create one
 		if (txtMaxHp.isEmpty()) {
-			txtMaxHp = "3";
+			txtMaxHp = "2";
 			createCharacteristic(System.getProperty("line.separator") + "MaxHp", txtMaxHp);
 		}
 
 		setMaxHp(Integer.parseInt(txtMaxHp));
 		setFullHp();
+	}
+	
+	public void registerHealth() {
+		new FileTask().write("MaxHp", file, String.valueOf(getMaxHp()));
 	}
 
 	////////// PATH FINDER ////////////
