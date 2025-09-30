@@ -7,5 +7,6 @@ ERROR1 = Erreur :
 ERROR2 = récompense invalide
 YOU_OBTAIN = Vous obtenez
 YOU_CAN_USE = Vous pouvez utiliser
-MAXHP = + 1PV MAX
+MAXHP = + 1 PV MAX
+BONUSHP = 3 PV TEMPORAIRES
 ON = sur

@@ -32,7 +32,7 @@ public class UserCanInputDie extends WorldControllers {
 			if (player == null || player.isRegisteredAsDead())
 				return;
 
-			player.removeHp(player.getMaxHp());
+			player.removeHp(player.getMaxHp() + player.getBonusHp());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_large");
 			LifeAndDeathLaw.kill(player);
 		}

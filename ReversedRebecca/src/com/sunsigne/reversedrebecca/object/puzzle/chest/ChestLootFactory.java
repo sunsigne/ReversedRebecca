@@ -55,6 +55,9 @@ public class ChestLootFactory {
 		if (lootData.toLowerCase().contains("max"))
 			return new ChestLootMaxHp(card);
 
+		if (lootData.toLowerCase().contains("bonus"))
+			return new ChestLootBonusHp(card);
+
 		return new ChestLootError(card, lootData);
 	}
 

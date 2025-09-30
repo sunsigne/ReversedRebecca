@@ -6,12 +6,13 @@ import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.BonusHealth;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
-public class Player extends LivingObject {
+public class Player extends LivingObject implements BonusHealth {
 
 	private String file = "characteristics.csv";
 	private boolean userData = true;
@@ -89,6 +90,20 @@ public class Player extends LivingObject {
 		new FileTask().write("MaxHp", file, String.valueOf(getMaxHp()));
 	}
 
+	////////// BONUS HP ////////////
+	
+	private int bonusHp;
+	
+	@Override
+	public int getBonusHp() {
+		return bonusHp;
+	}
+
+	@Override
+	public void setBonusHp(int bonusHp) {
+		this.bonusHp = bonusHp;
+	}
+	
 	////////// PATH FINDER ////////////
 
 	private boolean isPathNull() {

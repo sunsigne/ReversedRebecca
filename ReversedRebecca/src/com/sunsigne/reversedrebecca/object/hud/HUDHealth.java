@@ -65,6 +65,9 @@ public class HUDHealth extends GameObject implements HUD {
 	private BufferedImage empty_img;
 	private BufferedImage half_img;
 	private BufferedImage full_img;
+	
+	private BufferedImage bonus_half_img;
+	private BufferedImage bonus_full_img;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -81,6 +84,9 @@ public class HUDHealth extends GameObject implements HUD {
 		empty_img = getSheetSubImage(sheet, 3);
 		half_img = getSheetSubImage(sheet, 2);
 		full_img = getSheetSubImage(sheet, 1);
+		
+		bonus_half_img = getSheetSubImage(sheet, 2, 2, 16, 16);
+		bonus_full_img = getSheetSubImage(sheet, 1, 2, 16, 16);
 	}
 
 	////////// RENDER ////////////
@@ -96,17 +102,24 @@ public class HUDHealth extends GameObject implements HUD {
 			return;
 
 		// drawing maxHp empty heart
-		g.drawImage(empty_img, getX(), getY(), getWidth(), getHeight(), null);
 		for (int index = 0; index < player.getMaxHp(); index = index + 2) {
 			g.drawImage(empty_img, getX() + index * getWidth() / 2, getY(), getWidth(), getHeight(), null);
 		}
 
-		// drawing hp full heart above
+		// drawing hp hearts above
 		for (int index = 0; index < player.getHp(); index++) {
 			if (index % 2 == 0)
 				g.drawImage(half_img, getX() + index * getWidth() / 2, getY(), getWidth(), getHeight(), null);
 			else
 				g.drawImage(full_img, getX() + (getWidth() / 2) * (index - 1), getY(), getWidth(), getHeight(), null);
+		}
+		
+		// drawing bonus hp
+		for (int index = player.getMaxHp(); index < player.getMaxHp() + player.getBonusHp(); index++) {
+			if (index % 2 == 0)
+				g.drawImage(bonus_half_img, getX() + index * getWidth() / 2, getY(), getWidth(), getHeight(), null);
+			else
+				g.drawImage(bonus_full_img, getX() + (getWidth() / 2) * (index - 1), getY(), getWidth(), getHeight(), null);
 		}
 	}
 
