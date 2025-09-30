@@ -3,6 +3,8 @@ REWARD2ONLY = Récupérez deux récompenses
 REWARD1 = Choisissez une récompense
 REWARD2 = Choisissez deux récompenses
 
+ERROR1 = Erreur :
+ERROR2 = récompense invalide
 TOOLSTARTLVL = Vous obtenez
 TOOLMAXLVL = Vous pouvez utiliser
 MAXHP = + 1PV MAX

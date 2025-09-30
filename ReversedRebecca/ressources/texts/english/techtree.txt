@@ -3,6 +3,8 @@ REWARD2ONLY = Collect two rewards
 REWARD1 = Choose a reward
 REWARD2 = Choose two rewards
 
+ERROR1 = Error :
+ERROR2 = invalid reward
 TOOLSTARTLVL = You obtain
 TOOLMAXLVL = You can use
 MAXHP = + 1HP MAX

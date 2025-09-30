@@ -70,6 +70,7 @@
 	à changer :
 	RR001 "je suis plutôt garçon
 	LVL001 "tu es ma 1ère"
+	rebecca n'est vulnérable que chez elle et dans les workshop (retirer labo) + faire en sorte qu'elle se blesse dans le labo quand elle se prend l'éboulement + quand elle se prend les fils barbelés dans le commisariat
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)

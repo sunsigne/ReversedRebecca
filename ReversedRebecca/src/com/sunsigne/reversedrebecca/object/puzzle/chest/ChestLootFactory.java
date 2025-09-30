@@ -1,12 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.chest;
 
-import javax.swing.JOptionPane;
-
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
-import com.sunsigne.reversedrebecca.system.Conductor;
 
 public class ChestLootFactory {
 
@@ -28,7 +23,7 @@ public class ChestLootFactory {
 
 			// syntax error
 			else
-				stopApp(lootData);
+				return new ChestLootError(card, lootData);
 		}
 
 		// loot is hp
@@ -41,15 +36,7 @@ public class ChestLootFactory {
 		if (lootData.toLowerCase().contains("bombing_door"))
 			return new ChestLootBombingDoor(card, getTool("bomb_"));
 
-		stopApp(lootData);
-		return null;
-	}
-
-	private void stopApp(String lootData) {
-		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
-		JOptionPane.showMessageDialog(null,
-				"An error has occurred : " + lootData + " can't be resolved as a valid loot");
-		new Conductor().stopApp();
+		return new ChestLootError(card, lootData);
 	}
 
 	private ToolPlayer getTool(String lootData) {
