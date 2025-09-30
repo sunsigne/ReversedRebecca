@@ -10,7 +10,7 @@ import com.sunsigne.reversedrebecca.world.World;
 public class ChestLootError extends ChestLoot {
 
 	protected ChestLootError(ChestCard card, String lootData) {
-		super(card, true);
+		super(card);
 		
 		System.err.println("Problem encounter in following map : " + World.get().getMapName());
 		System.err.println("Invalid reward : " + lootData);
@@ -45,15 +45,25 @@ public class ChestLootError extends ChestLoot {
 	private String secondLine;
 
 	@Override
+	public int getSheetSize() {
+		return 32;
+	}
+	
+	@Override
 	public int getSheetColCriterion() {
-		return 1;
+		return 2;
 	}
 
+	@Override
+	public int getSheetRowCriterion() {
+		return 2;
+	}
+	
 	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
-			tool_img = getSheetSubImage(sheet, 1, 2, 32, 32);
+			tool_img = getSheetSubImage(sheet, 1);
 		}
 		return tool_img;
 	}
@@ -62,7 +72,7 @@ public class ChestLootError extends ChestLoot {
 	public BufferedImage getUpgradeImage() {
 		if (upgrade_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
-			upgrade_img = getSheetSubImage(sheet, 2, 2, 32, 32);
+			upgrade_img = getSheetSubImage(sheet);
 		}
 		return upgrade_img;
 	}
@@ -71,7 +81,7 @@ public class ChestLootError extends ChestLoot {
 	public BufferedImage getUpgradeGoldImage() {
 		if (upgrade_gold_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
-			upgrade_gold_img = getSheetSubImage(sheet, 2, 2, 32, 32);
+			upgrade_gold_img = getSheetSubImage(sheet);
 		}
 		return upgrade_gold_img;
 	}

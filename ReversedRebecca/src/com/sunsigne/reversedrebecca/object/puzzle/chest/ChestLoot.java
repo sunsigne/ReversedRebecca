@@ -18,14 +18,13 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
-	protected ChestLoot(ChestCard card, boolean widerUpgradeImg) {
+	protected ChestLoot(ChestCard card) {
 		super(card.getPuzzle(), false, card.getX(), card.getY(), card.getWidth(), card.getHeight());
 		this.card = card;
-		this.widerUpgradeImg = widerUpgradeImg;
 	}
 
 	public abstract boolean isValid();
-	
+
 	////////// CARD ////////////
 
 	private ChestCard card;
@@ -44,7 +43,7 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -54,6 +53,11 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 	}
 
 	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetColCriterion() {
+		return 1;
+	}
 
 	@Override
 	public int getSheetRowCriterion() {
@@ -72,10 +76,8 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
 	////////// RENDER ////////////
 
-	private boolean widerUpgradeImg;
-	
 	public int[] cutsomizedDimensions() {
-		int[] dim = {0, 0, 0, 0, 0, 0, 0, 0}; 
+		int[] dim = { 0, 0, 0, 0, 0, 0, 0, 0 };
 		return dim;
 	}
 
@@ -91,8 +93,8 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
 		// upgrade
 		BufferedImage img = card.isPickedUp() ? getUpgradeGoldImage() : getUpgradeImage();
-		int widerImg = widerUpgradeImg ? rect[2] : 0;
-		g.drawImage(img, dim[4] + rect[0] - widerImg / 2, dim[5] + rect[1] + Size.L + Size.XS / 2, dim[6] + rect[2] + widerImg, dim[7] + rect[3], null);
+		g.drawImage(img, dim[4] + rect[0] - rect[2] / 2, dim[5] + rect[1] + Size.L + Size.XS / 2,
+				dim[6] + rect[2] + rect[2], dim[7] + rect[3], null);
 
 		drawText(g, font, rect);
 	}

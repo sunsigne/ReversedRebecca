@@ -45,7 +45,6 @@
 
 	////////// EN COURS ////////////
 
-	- vérifier que l'enregistrement d'un ajout de hp(pv) max s'effectue correctement
 	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
 
 	jules :
@@ -65,7 +64,7 @@
 
 	à vérifier :
 	- getname a été changé dans : move (vérifier alicia), choice (vérifier le highlight), conditionnalrequest (vérifier le see)
-	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ?
+	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ? même question pour les maxhp
 
 	à changer :
 	RR001 "je suis plutôt garçon

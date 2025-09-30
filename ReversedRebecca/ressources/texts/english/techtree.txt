@@ -5,7 +5,7 @@ REWARD2 = Choose two rewards
 
 ERROR1 = Error :
 ERROR2 = invalid reward
-TOOLSTARTLVL = You obtain
-TOOLMAXLVL = You can use
+YOU_OBTAIN = You obtain
+YOU_CAN_USE = You can use
 MAXHP = + 1HP MAX
-BOMBINGDOOR = on
+ON = on

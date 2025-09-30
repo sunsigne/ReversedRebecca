@@ -5,39 +5,27 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 
 public class ChestLootFactory {
 
+	////////// PUZZLE ////////////
+
 	// shouldn't no be used directly, is called when a ChestCard is created
 	public ChestLoot createLoot(ChestCard card, String lootData) {
+		if (lootData == null)
+			return new ChestLootError(card, lootData);
 
 		ToolPlayer tool = getTool(lootData);
+		if (tool != null)
+			return getToolCard(card, lootData, tool);
 
-		// loot is a tool
-		if (tool != null) {
+		if (lootData.toLowerCase().contains("hp"))
+			return getHpCard(card, lootData);
 
-			// upgrading start lvl
-			if (lootData.toLowerCase().contains("start"))
-				return new ChestLootToolStartLvl(card, tool);
-
-			// upgrading max lvl
-			if (lootData.toLowerCase().contains("max"))
-				return new ChestLootToolMaxLvl(card, tool);
-
-			// syntax error
-			else
-				return new ChestLootError(card, lootData);
-		}
-
-		// loot is hp
-
-		// upgrading max hp
-		if (lootData.toLowerCase().contains("max"))
-			return new ChestLootMaxHp(card);
-
-		// loot is upgrade
-		if (lootData.toLowerCase().contains("bombing_door"))
-			return new ChestLootBombingDoor(card, getTool("bomb_"));
+		if (lootData.toLowerCase().contains("upgrade"))
+			return getUpgradeCard(card, lootData);
 
 		return new ChestLootError(card, lootData);
 	}
+
+	////////// TOOL ////////////
 
 	private ToolPlayer getTool(String lootData) {
 		if (lootData == null)
@@ -49,6 +37,34 @@ public class ChestLootFactory {
 				return tempTool;
 		}
 		return null;
+	}
+
+	private ChestLoot getToolCard(ChestCard card, String lootData, ToolPlayer tool) {
+		if (lootData.toLowerCase().contains("start"))
+			return new ChestLootToolStartLvl(card, tool);
+
+		if (lootData.toLowerCase().contains("max"))
+			return new ChestLootToolMaxLvl(card, tool);
+
+		return new ChestLootError(card, lootData);
+	}
+
+	////////// HEALTH ////////////
+
+	private ChestLoot getHpCard(ChestCard card, String lootData) {
+		if (lootData.toLowerCase().contains("max"))
+			return new ChestLootMaxHp(card);
+
+		return new ChestLootError(card, lootData);
+	}
+
+	////////// UPGRADE ////////////
+
+	private ChestLoot getUpgradeCard(ChestCard card, String lootData) {
+		if (lootData.toLowerCase().contains("bombing_door"))
+			return new ChestLootBombingDoor(card, getTool("bomb_"));
+
+		return new ChestLootError(card, lootData);
 	}
 
 }

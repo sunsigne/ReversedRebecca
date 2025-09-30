@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class ChestLootBombingDoor extends ChestLoot {
 
 	protected ChestLootBombingDoor(ChestCard card, ToolPlayer tool) {
-		super(card, true);
+		super(card);
 		this.tool = tool;
 	}
 
@@ -48,11 +48,6 @@ public class ChestLootBombingDoor extends ChestLoot {
 	private String secondLine;
 
 	@Override
-	public int getSheetColCriterion() {
-		return 1;
-	}
-
-	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool");
@@ -82,7 +77,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null)
-			firstLine = new Translatable().getTranslatedText("TOOLMAXLVL", FilePath.TECHTREE);
+			firstLine = new Translatable().getTranslatedText("YOU_CAN_USE", FilePath.TECHTREE);
 		return firstLine;
 	}
 
@@ -91,7 +86,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 		if (secondLine == null) {
 			secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural", FilePath.TOOL);
 			secondLine = secondLine
-					.concat(" " + new Translatable().getTranslatedText("BOMBINGDOOR", FilePath.TECHTREE) + " ");
+					.concat(" " + new Translatable().getTranslatedText("ON", FilePath.TECHTREE) + " ");
 			secondLine = secondLine.concat(new Translatable().getTranslatedText("Door" + "Plural", FilePath.TOOL));
 		}
 		return secondLine;
@@ -102,7 +97,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	@Override
 	public int[] cutsomizedDimensions() {
 		int u = 8;
-		int[] dim = { -12 * u, 0, u, u, -7 * u, -5 * u, 12 * u, 8 * u };
+		int[] dim = { -10 * u, 0, u, u, -5 * u, -4 * u, 8 * u, 8 * u };
 		return dim;
 	}
 

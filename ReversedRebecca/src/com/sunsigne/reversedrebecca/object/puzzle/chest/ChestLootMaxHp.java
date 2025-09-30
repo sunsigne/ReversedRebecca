@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class ChestLootMaxHp extends ChestLoot {
 
 	protected ChestLootMaxHp(ChestCard card) {
-		super(card, true);
+		super(card);
 	}
 
 	@Override
@@ -45,15 +45,10 @@ public class ChestLootMaxHp extends ChestLoot {
 	private String secondLine;
 
 	@Override
-	public int getSheetColCriterion() {
-		return 1;
-	}
-
-	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "heart");
-			tool_img = getSheetSubImage(sheet, 1, 1, 16, 16);
+			tool_img = getSheetSubImage(sheet);
 		}
 		return tool_img;
 	}
@@ -79,7 +74,7 @@ public class ChestLootMaxHp extends ChestLoot {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null)
-			firstLine = new Translatable().getTranslatedText("TOOLSTARTLVL", FilePath.TECHTREE);
+			firstLine = new Translatable().getTranslatedText("YOU_OBTAIN", FilePath.TECHTREE);
 		return firstLine;
 	}
 

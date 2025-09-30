@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 
 	protected ChestLootToolMaxLvl(ChestCard card, ToolPlayer tool) {
-		super(card, true);
+		super(card);
 		this.tool = tool;
 	}
 
@@ -95,7 +95,7 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null)
-			firstLine = new Translatable().getTranslatedText("TOOLMAXLVL", FilePath.TECHTREE);
+			firstLine = new Translatable().getTranslatedText("YOU_CAN_USE", FilePath.TECHTREE);
 		return firstLine;
 	}
 

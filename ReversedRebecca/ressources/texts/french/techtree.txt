@@ -5,7 +5,7 @@ REWARD2 = Choisissez deux récompenses
 
 ERROR1 = Erreur :
 ERROR2 = récompense invalide
-TOOLSTARTLVL = Vous obtenez
-TOOLMAXLVL = Vous pouvez utiliser
+YOU_OBTAIN = Vous obtenez
+YOU_CAN_USE = Vous pouvez utiliser
 MAXHP = + 1PV MAX
-BOMBINGDOOR = sur
+ON = sur

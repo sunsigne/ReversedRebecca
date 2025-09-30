@@ -14,7 +14,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 
 	protected ChestLootToolStartLvl(ChestCard card, ToolPlayer tool) {
-		super(card, false);
+		super(card);
 		this.tool = tool;
 	}
 
@@ -104,7 +104,7 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	@Override
 	public String getFirstLine() {
 		if (firstLine == null) {
-			String line = new Translatable().getTranslatedText("TOOLSTARTLVL", FilePath.TECHTREE);
+			String line = new Translatable().getTranslatedText("YOU_OBTAIN", FilePath.TECHTREE);
 			String determiner = new Translatable().getTranslatedText(tool.getName() + "Permanent" + "Determiner",
 					FilePath.TOOL);
 
@@ -122,4 +122,13 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 		return secondLine;
 	}
 
+	////////// RENDER ////////////
+
+	@Override
+	public int[] cutsomizedDimensions() {
+		int u = 8;
+		int[] dim = { 0, 0, 0, 0, 10 * u, 0, -20*u, 0 };
+		return dim;
+	}
+	
 }
