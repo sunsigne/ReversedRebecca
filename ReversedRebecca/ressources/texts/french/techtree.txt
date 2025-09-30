@@ -5,4 +5,5 @@ REWARD2 = Choisissez deux récompenses
 
 TOOLSTARTLVL = Vous obtenez
 TOOLMAXLVL = Vous pouvez utiliser
+MAXHP = + 1PV MAX
 BOMBINGDOOR = sur

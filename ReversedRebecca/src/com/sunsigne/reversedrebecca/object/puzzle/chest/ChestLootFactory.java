@@ -31,6 +31,13 @@ public class ChestLootFactory {
 				stopApp(lootData);
 		}
 
+		// loot is hp
+
+		// upgrading max hp
+		if (lootData.toLowerCase().contains("max"))
+			return new ChestLootMaxHp(card);
+
+		// loot is upgrade
 		if (lootData.toLowerCase().contains("bombing_door"))
 			return new ChestLootBombingDoor(card, getTool("bomb_"));
 

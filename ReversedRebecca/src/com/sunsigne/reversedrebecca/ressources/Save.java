@@ -7,9 +7,11 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradeList;
 import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.PriorSavedCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.SaveEraserList;
@@ -153,7 +155,12 @@ public class Save {
 		karma.setValue(value);
 		karma.registerKarma();
 
-		// values
+		// hp
+		Player player = new PlayerFinder().getPlayer();
+		if (player != null)
+			player.registerHealth();
+
+		// upgrades
 		var upgradeList = UpgradeList.getList();
 		for (UpgradePlayer tempUpgrade : upgradeList.getList())
 			// update upgrade
