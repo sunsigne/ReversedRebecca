@@ -54,6 +54,7 @@
 	- la voie du cuisinier et du plat
 
 	lvl003-y gameplay :
+	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange)
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp)
 	- créer un coffre orange, dont on obtient la clef qu'après avoir ouvert l'armurerie verte (et clef de YY en jaune). Ca récompensera le joueur qui a max la clé : butin = clef rouge max ?
 	- le rideau à "fermer à clef" doit être celui en ligne 1, colonne 2
