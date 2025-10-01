@@ -97,7 +97,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	@Override
 	public int[] cutsomizedDimensions() {
 		int u = 8;
-		int[] dim = { -10 * u, 0, u, u, -5 * u, -4 * u, 8 * u, 8 * u };
+		int[] dim = { -10 * u, 0, u, u, -7 * u, -3 * u, 9 * u, 4 * u };
 		return dim;
 	}
 

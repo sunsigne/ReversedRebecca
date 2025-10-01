@@ -50,8 +50,6 @@
 	jules :
 	- lui trouver une voix
 	- créer la musique
-	- créer une alternative pour les bombes vertes
-	- la voie du cuisinier et du plat
 
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange)

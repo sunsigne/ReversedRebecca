@@ -1,0 +1,2 @@
+% BOMBING_DOOR_ALREADY_KNOWN
+player = DOWN = laugh = Effectivement, je sais déjà faire ça.
