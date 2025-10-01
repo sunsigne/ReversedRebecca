@@ -52,9 +52,9 @@
 	- créer la musique
 
 	lvl003-y gameplay :
-	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange)
-	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp)
-	- créer un coffre orange, dont on obtient la clef qu'après avoir ouvert l'armurerie verte (et clef de YY en jaune). Ca récompensera le joueur qui a max la clé : butin = clef rouge max ?
+	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
+	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
+	- serrur YY en jaune, mais clef orange (Ca récompensera le joueur qui a max la clé)
 	- le rideau à "fermer à clef" doit être celui en ligne 1, colonne 2
 	- laboratoire ET prisonnier enfermée avec porte verte, mais pas de clef verte dans le niveau :
 		- lvl002 faire en sorte que la "clef" de jessy soit un passe partout (amélioration cyan permanante). Fonctionne car on ne le récupère que dans le cas où on n'a pas déjà de clef cyan, et est contrebalancé par l'enseignement de doug
@@ -75,7 +75,6 @@
 	
 	à faire :
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
-	le highlight de la bomb box
 
 	////////// MILITARY 0 ////////////
 
