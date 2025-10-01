@@ -1,0 +1,16 @@
+% HELLO
+nathan = player = smile = Nom d'un neutrino ! Qu'est-ze qu'on a là ? Une zivile !
+nathan = player = smile = Ton ezpèce est très intérezzente !@Puis-ze prendre un échzantillon pour étudier ton ADN ?
+player = nathan = no_sens_var = … Wut ?
+nathan = player = serious = Z'étais zérieux.
+nathan = player = smile = Mais z'en oublies les prézentation ! Ze suis Nathan.@Grand diplomé de l'académie ! Zé un doctorat qui le prouve !
+
+
+% HELLO_NEXT_POSITIF
+player = nathan = happy_var = (Il est bizarre …)
+
+% HELLO_NEXT_NEGATIF
+player = nathan = happy_var = (Il ferme jamais sa gueule ?)
+player = nathan = happy = Ô Grand Manitou, je pourrais avour une amre s'il te plaît ?
+nathan = player = serious = Elle va finir dans ta bouchze avec zette attitude.
+nathan = player = stupid = Dézolé mais non. Ze n'en ai peut-être pas l'air,@mais ze ne zuis pas un sczientifique fou.

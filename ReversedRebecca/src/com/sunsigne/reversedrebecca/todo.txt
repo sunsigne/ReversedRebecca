@@ -70,11 +70,15 @@
 	LVL001 "tu es ma 1ère"
 	rebecca n'est vulnérable que chez elle et dans les workshop (retirer labo) + faire en sorte qu'elle se blesse dans le labo quand elle se prend l'éboulement + quand elle se prend les fils barbelés dans le commisariat
 
+	bug :
+	- rebecca est "sous" l'idiot en axe Z (selon l'endroit où on la place sur le mappable ?). Il me semlbiat qu'être ko envoyait sur la couche "sol" ? ça me fait penser que dans le lvl test, rebecca disparait lorsqu'elle est mise ko, donc problème similaire
+
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
 	à faire :
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
+	faire en sorte que le runnuer court en pleurant si l'idiot est tué
 
 	////////// MILITARY 0 ////////////
 

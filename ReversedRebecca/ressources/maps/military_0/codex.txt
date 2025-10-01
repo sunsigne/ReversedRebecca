@@ -35,3 +35,7 @@ NPC-09 = Idiot
 NPC-10 = Shooter
 NPC-16 = Jessy
 OBJ-08 = Jules Detector
+
+///// ARMORY /////
+
+OBJ-09 = Nathan Detector
