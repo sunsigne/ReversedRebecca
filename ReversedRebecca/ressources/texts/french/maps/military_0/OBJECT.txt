@@ -1,2 +1,24 @@
 % BOMBING_DOOR_ALREADY_KNOWN
 player = DOWN = laugh = Effectivement, je sais déjà faire ça.
+
+
+% ONION_NOT_FOUND_UP
+player = object = surprised = Ho nion ! C'est vide !
+
+
+% ONION_NOT_FOUND_LEFT
+player = object = unhappy = Rien. J'aurais dû suivre l'odeur plutôt que@mon instinct.
+
+
+% ONION_NOT_FOUND_RIGHT
+player = object = unhappy_var = Pas d'oignon ici. Ils ont dû entendre que j'arrivais.
+
+
+% ONION_FOUND
+player = object = laugh = Top ! Trouvé !
+player = object = you_silly = Du premier coup, bien sûr… Tout le monde@est témoin…
+
+
+% ONION_FOUND_FIRST_TRY
+player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
+

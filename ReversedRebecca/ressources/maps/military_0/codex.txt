@@ -6,7 +6,6 @@ OBJ-02 = Plant Slightly Downer
 NPC-01 = Sarah
 NPC-03 = Dormitory
 NPC-04 = Trashman
-NPC-05 = Cook
 NPC-07 = Xavier Dupont
 NPC-11 = Jules
 NPC-12 = Slacker
@@ -19,13 +18,16 @@ NPC-17 = Nancy
 
 NPC-02 = Guard
 OBJ-05 = Guard Checker
+OBJ-07 = Bomb Box
 
 ///// REFECTORY /////
 
+NPC-05 = Amir
 OBJ-03 = Table Left
 OBJ-04 = Table Right
 OBJ-06 = Target
-OBJ-07 = Bomb Box
+OBJ-10 = Amir Detector
+OBJ-11 = Stock Furniture
 
 ///// TRAINING /////
 

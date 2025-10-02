@@ -14,3 +14,8 @@ LIE_DONT_HAVE_KEY = Key1 % (mentir) Je n'ai pas la clé
 YOURE_THERE_FOR_A_REASON = Key2 % Tu es là pour une raison
 ACTUALLY_I_LL_FREE_YOU = Key3 % En fait, je vais te libérer
 HERES_THE_GREEN_BOMBS = Key3 % voilà les bombes vertes
+
+
+///// REFECTORY /////
+
+SEARCH_ONION = Key3 % fouiller (oignons?)

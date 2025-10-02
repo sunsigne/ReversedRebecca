@@ -1,4 +1,10 @@
-cook = player = ??? = Tu tombes à pic. Tu pourrais me passer (objet) s'il te plaît ?
+% HELLO
+object = player = neutral = Tu tombes à pic ! S'il-te plaît, tu pourrais aller@me chercher des oignons ?
+object = player = neutral = Tu en trouveras dans le stock.
+
+
+
+% REQUEST
 cook = player = ??? = Parfait. Moi, c'est (nom). Ravi de te rencontrer.
 cook = player = ??? = Mais dis-moi, tu n'es pas d'ici… Qu'est-ce qui t'amène dans ce camp ?
 player = cook = worry = C'est une longue histoire… Mais pour résumer : je dois parler au chef.
