@@ -10,33 +10,29 @@ dormitory=2,1
 
 trashman=3,1
 
-////// COOK //////
-
-cook=4,1
-
 ////// SERGENT //////
 
-sergent=5,1
-sergent_yelling=5,2
+sergent=4,1
+sergent_yelling=4,2
 
 ////// XAVIER DUPONT //////
 
-xavier_dupont=6,1
+xavier_dupont=5,1
 
 ////// RUNNER //////
 
-runner=7,1
+runner=6,1
 
 ////// IDIOT //////
 
-idiot=8,1
+idiot=7,1
 
 ////// SHOOTER //////
 
-shooter=9,1
-shooter_shocked=9,2
-shooter_cry=9,3
+shooter=8,1
+shooter_shocked=8,2
+shooter_cry=8,3
 
 ////// SLACKER //////
 
-slacker=10,1
+slacker=9,1

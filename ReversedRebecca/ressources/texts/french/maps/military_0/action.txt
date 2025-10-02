@@ -18,4 +18,9 @@ HERES_THE_GREEN_BOMBS = Key3 % voilà les bombes vertes
 
 ///// REFECTORY /////
 
-SEARCH_ONION = Key3 % fouiller (oignons?)
+ONIONS = Key1 % oignons?
+SEARCH_ONIONS = Key3 % fouiller (oignons?)
+GIVE_THE_ONIONS = Key3 % donner les oignons
+MY_PLEASURE = avec plaisir
+MEH_NOT_FEELING_LIKE = Bof... Pas vraiment envie
+WHAT_DO_I_GAIN_FROM_IT = j'y gagne quelque chose ?

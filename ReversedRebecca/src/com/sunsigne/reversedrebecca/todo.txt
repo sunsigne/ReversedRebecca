@@ -45,11 +45,18 @@
 
 	////////// EN COURS ////////////
 
+	- trier les dossiers : 
+		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple
+		- transformer l'intégralité des .wav en .mp3
+
 	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
 
 	jules :
 	- lui trouver une voix
 	- créer la musique
+
+	cook :
+	- le faire grossir (utiliser les textures world des policiers)
 
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?

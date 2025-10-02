@@ -1,18 +1,25 @@
 % HELLO
-object = player = neutral = Tu tombes à pic ! S'il-te plaît, tu pourrais aller@me chercher des oignons ?
-object = player = neutral = Tu en trouveras dans le stock.
+object = player = happy = Tu tombes à pic ! S'il-te plaît, tu pourrais aller@me chercher des oignons ?
+object = player = happy = Tu en trouveras dans le stock.
+
+
+% SEARCHING_ONIONS
+object = player = happy = Il doit y en avoir dans la pièce d'à côté.@Vérifie les meubles et les étagères.
+
+
+% GIVE_THE_ONIONS
+object = player = happy = Parfait. Moi, c'est Amir. Ravi de te rencontrer.
+object = player = worry = Mais dis-moi, tu n'es pas d'ici… Qu'est-ce qui t'amène dans ce camp ?
+player = object = worry = C'est une longue histoire… Mais pour résumer : je dois parler au chef.
+object = player = happy = Double Y ? C'est un homme adorable. Et il a un de ces appétits !@Six demi-douzaine d'oeuf à chaque petit déjeuner !
+object = player = worry = Dis-moi chouquette, je suis désolé de te demander ça mais…@Tu crois que tu pourrais me rendre un service ?
+object = player = worry = J'ai ce repas que je dois livrer au prisonnier en isolement, mais je suis débordé en cuisine…
+object = player = happy = Il s'appelle Jules. Il n'est pas dangereux.@Tu crois que tu pourrais lui apporter ?
 
 
 
-% REQUEST
-cook = player = ??? = Parfait. Moi, c'est (nom). Ravi de te rencontrer.
-cook = player = ??? = Mais dis-moi, tu n'es pas d'ici… Qu'est-ce qui t'amène dans ce camp ?
-player = cook = worry = C'est une longue histoire… Mais pour résumer : je dois parler au chef.
-cook = player = ??? = Double Y ? C'est un homme adorable. Et il a un de ces appétits !@Six demi-douzaine d'oeuf à chaque petit déjeuner !
-cook = player = ??? = Dis-moi chouquette, je suis désolé de te demander ça mais…@Tu crois que tu pourrais me rendre un service ?
-cook = player = ??? = J'ai ce repas que je dois livrer au prisonnier en isolement, mais je suis debordé en cuisine. Tu crois que tu pourrais lui apporter ?
 
-
+% stuff
 [E] pas le temps / pas envie [R] avec plaisir [F] j'y gagne quelque chose ?
 cook = player = ??? = Merci ! Tiens, voilà.
 cook = player = ??? = Reviens me voir quand tu auras fini. J'aurais quelque chose pour toi.
