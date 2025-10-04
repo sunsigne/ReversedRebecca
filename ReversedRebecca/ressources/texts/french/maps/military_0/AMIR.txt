@@ -1,5 +1,5 @@
 % HELLO
-object = player = happy = Tu tombes à pic ! S'il-te plaît, tu pourrais aller@me chercher des oignons ?
+object = player = happy = Tu tombes à pic ! Tu pourrais aller me chercher@des oignons, s'il-te plaît ?
 object = player = happy = Tu en trouveras dans le stock.
 
 
@@ -8,31 +8,50 @@ object = player = happy = Il doit y en avoir dans la pièce d'à côté.@Vérifi
 
 
 % GIVE_THE_ONIONS
-object = player = happy = Parfait. Moi, c'est Amir. Ravi de te rencontrer.
-object = player = worry = Mais dis-moi, tu n'es pas d'ici… Qu'est-ce qui t'amène dans ce camp ?
-player = object = worry = C'est une longue histoire… Mais pour résumer : je dois parler au chef.
-object = player = happy = Double Y ? C'est un homme adorable. Et il a un de ces appétits !@Six demi-douzaine d'oeuf à chaque petit déjeuner !
-object = player = worry = Dis-moi chouquette, je suis désolé de te demander ça mais…@Tu crois que tu pourrais me rendre un service ?
-object = player = worry = J'ai ce repas que je dois livrer au prisonnier en isolement, mais je suis débordé en cuisine…
-object = player = happy = Il s'appelle Jules. Il n'est pas dangereux.@Tu crois que tu pourrais lui apporter ?
+object = player = happy = Juste à temps ! Merci. Au fait, moi, c'est Amir.@Ravi de faire ta connaissance.
+player = object = happy = Enchantée. Moi, c'est Rebecca.
+object = player = worry = Mais dis-moi, tu n'es pas d'ici…@Qu'est-ce qui t'amène dans ce camp ?
+player = object = worry = C'est une longue histoire… Mais pour résumer :@je dois parler au chef.
+object = player = happy = Double Y ? C'est un homme adorable. Et quel@appétit ! Six demi-douzaine d'oeuf tous les matins !
+object = player = worry = Dis-moi chouquette, je suis désolé mais…@Tu crois que tu peux me rendre un autre service ?
+object = player = worry = J'ai ce repas que je dois livrer au prisonnier@en isolement, mais je suis débordé en cuisine…
+object = player = happy = Son nom est Jules, et il n'est pas dangereux.@Tu pourrais lui apporter ? Tu serais une crème.
 
 
+% COOK_PRISONNER_REFUSING
+object = player = unhappy = Ho, Dommage… J'imagine que je demanderai à@Norbert alors.
+object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour les oignons.
 
 
-% stuff
-[E] pas le temps / pas envie [R] avec plaisir [F] j'y gagne quelque chose ?
-cook = player = ??? = Merci ! Tiens, voilà.
-cook = player = ??? = Reviens me voir quand tu auras fini. J'aurais quelque chose pour toi.
+% COOK_PRISONNER_BARGAIN
+object = player = worry = He bien… Je pensais te donner des cupcakes…
+object = player = happy = Alors ? Tu veux bien m'aider, chouquette ?
 
 
-[E] manger le repas [R] don't
+% COOK_PRISONNER_ACCEPTING
+object = player = happy = Merci ! Tiens, voilà.@Reviens me voir lorsque tu auras fini.
 
-cook = player = ??? = Chouquette ! (nom) a apprécié le repas ?
+
+% COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
+object = player = happy = Chouquette ! Jules a apprécié le repas ?
 player = cook = laugh = Oui, c'était délicieux !
 player = cook = silly_var = Enfin… C'est ce qu'il m'a dit, bien sûr…
 cook = player = ??? = Super ! Tu me sauves.
-cook = player = ??? = J'ai mis des petits choux à la crème de côté. Tiens, ils sont pour toi.
+cook = player = ??? = J'ai mis des petits cupcakes de côté. Tiens, ils sont pour toi.
+
+
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
+object = player = happy = Chouquette ! Jules a apprécié le repas ?
+player = cook = laugh = Oui, c'était délicieux !
+player = cook = silly_var = Enfin… C'est ce qu'il m'a dit, bien sûr…
+cook = player = ??? = Super ! Tu me sauves.
+cook = player = ??? = J'ai mis des petits cupcakes de côté. Tiens, ils sont pour toi.
+
+
+
 [E] merci ! Je mangerai plus tard [R] on partage ? [F] manger comme une sauvage
+
+
 
 (F)
 cook = player = ??? = Ho wow ! Quel appétit ! Pense à mâcher quand même…

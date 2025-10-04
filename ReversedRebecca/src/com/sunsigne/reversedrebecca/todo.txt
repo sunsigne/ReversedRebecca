@@ -46,8 +46,7 @@
 	////////// EN COURS ////////////
 
 	- trier les dossiers : 
-		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple
-		- transformer l'intégralité des .wav en .mp3
+		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
 	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
 
@@ -86,6 +85,7 @@
 	à faire :
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
 	faire en sorte que le runnuer court en pleurant si l'idiot est tué
+	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	////////// MILITARY 0 ////////////
 
