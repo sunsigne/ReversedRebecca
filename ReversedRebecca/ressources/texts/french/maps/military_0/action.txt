@@ -26,3 +26,4 @@ MEH_NOT_FEELING_LIKE = Key2 % Bof... Pas vraiment envie
 WHAT_DO_I_GAIN_FROM_IT = Key3 % j'y gagne quelque chose ?
 EAT_THE_LUNCHBOX = Key1 % manger le repas
 DON'T_EAT_THE_LUNCHBOX = Key2 % ne pas le faire
+I_DELIVERED_THE_MEAL = Key1 % J'ai livré le repas
