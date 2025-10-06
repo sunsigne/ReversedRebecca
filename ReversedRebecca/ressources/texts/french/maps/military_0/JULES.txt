@@ -55,6 +55,11 @@ object = DOWN = skeptical = Bref, tu me trouveras ici, si tu veux m'aider.
 object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
 
 
+% LUNCHBOX
+object = DOWN = sadistic = Cool ! Remercie Amir de ma part.
+object = DOWN = mad = J'espère qu'il n'a pas lésiné sur la sauce piquante.
+
+
 % LOST_DOOR
 object = DOWN = sadistic = Quelle nulle !
 player = UP = happy_var = Une seconde, je vais réessayer.
@@ -127,3 +132,13 @@ object = RIGHT = skeptical = Attend… Vraiment ?
 object = RIGHT = mad = C'est sincère, ou tu as peur de ma réaction si@tu dis non ?
 object = RIGHT = sadistic = Mais c'est trop tard, tu as dit oui. Je te retrouve@chez toi bientôt. Promis, je ne casserai rien.
 object = RIGHT = sad_var = Allez, salut princesse…
+
+
+% LUNCHBOX_FAILED
+player = DOWN = no_sens = … J'étais censé lui donner son repas à la base…
+player = DOWN = you_silly = Bon, j'imagine que je peux aussi bien le manger@et prétendre que je l'ai livré.
+
+
+% LUNCHBOX_FAILED_VAR
+player = DOWN = no_sens_var = … Une seconde… Le prisonnier, je l'ai libéré@et il est parti !
+player = DOWN = you_silly = Bon, j'imagine que je peux aussi bien manger@son repas et prétendre que je l'ai livré.

@@ -21,4 +21,3 @@ player = object = you_silly = Du premier coup, bien sûr… Tout le monde@est t�
 
 % ONION_FOUND_FIRST_TRY
 player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
-

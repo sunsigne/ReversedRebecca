@@ -33,11 +33,25 @@ object = player = happy = Merci ! Tiens, voilà.@Reviens me voir lorsque tu aura
 
 
 % COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
-object = player = happy = Chouquette ! Jules a apprécié le repas ?
+object = player = happy = Merci, Chouquette ! Jules a apprécié ?
 player = cook = laugh = Oui, c'était délicieux !
-player = cook = silly_var = Enfin… C'est ce qu'il m'a dit, bien sûr…
-cook = player = ??? = Super ! Tu me sauves.
-cook = player = ??? = J'ai mis des petits cupcakes de côté. Tiens, ils sont pour toi.
+player = cook = you_silly = Enfin… C'est ce qu'il m'a dit, bien sûr…
+object = player = happy = Super ! Tu me sauves.
+object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
+
+
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULES_UPSET
+object = player = happy = Merci, Chouquette ! Jules a apprécié ?
+player = cook = worry = Il ne veut plus me parler… Mais je lui a livré.
+object = player = worry = Il a son caractère…@En tout cas merci, tu me sauves.
+object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
+
+
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
+object = player = happy = Merci, Chouquette ! Jules a apprécié ?
+player = cook = laugh = Oui, il était ravi !
+object = player = happy = Super ! Tu me sauves.
+object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
@@ -48,7 +62,7 @@ cook = player = ??? = Super ! Tu me sauves.
 cook = player = ??? = J'ai mis des petits cupcakes de côté. Tiens, ils sont pour toi.
 
 
-
+% stuff
 [E] merci ! Je mangerai plus tard [R] on partage ? [F] manger comme une sauvage
 
 
