@@ -2,6 +2,7 @@
 
 happy=1,1
 worry=1,2
+blush=1,3
 
 ////// UNHAPPY //////
 

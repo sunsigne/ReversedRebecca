@@ -1,0 +1,39 @@
+
+% THANK
+layer = object = laugh = Ils sont délicieux !
+object = player = happy = Tant mieux ! Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
+
+
+% SAVAGE
+object = player = unhappy = Ho wow ! Quel appétit ! Pense à mâcher quand même…
+object = player = worry = … J'imagine que ça veut dire que tu aimes ma cuisine ?
+
+
+% MEH
+object = player = happy = Tant mieux s'ils t'ont remplis ! Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
+
+
+% GIMME_MORE
+object = player = unhappy = Heu… D'accord. Tiens, voilà.
+
+
+% GIMME_MORE_NEXT
+object = player = worry = Hey ! Doucement ! Tu as failli me mordre les doigts !
+object = player = unhappy = La vache ! Tu as déjà fini ?! C'est impressionnant.
+
+
+% THANK_THEY_WERE_DELICIOUS
+object = player = happy = Tant mieux ! Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
+
+
+% I_M_HUNGRY
+object = player = worry = Vraiment ? Tu ne sais pas t'arrêter, toi…
+
+
+% I_M_HUNGRY_NEXT
+object = player = worry = En voilà d'au… Déjà ?! C'est à peine si tu respires !
+
+
+% LAST
+object = player = worry = Je suis navré, chouquette. Il n'en reste plus un seul.@Tu as mangé tous les cupcakes du régiment.
+object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.

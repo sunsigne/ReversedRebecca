@@ -14,6 +14,7 @@ LIE_DONT_HAVE_KEY = Key1 % (mentir) Je n'ai pas la clé
 YOURE_THERE_FOR_A_REASON = Key2 % Tu es là pour une raison
 ACTUALLY_I_LL_FREE_YOU = Key3 % En fait, je vais te libérer
 HERES_THE_GREEN_BOMBS = Key3 % voilà les bombes vertes
+LUNCHBOX_DELIVERY = Key2 % livraison de repas !
 
 
 ///// REFECTORY /////
@@ -26,6 +27,14 @@ MEH_NOT_FEELING_LIKE = Key2 % Bof... Pas vraiment envie
 WHAT_DO_I_GAIN_FROM_IT = Key3 % j'y gagne quelque chose ?
 EAT_THE_LUNCHBOX = Key1 % manger le repas
 DON_T_EAT_THE_LUNCHBOX = Key2 % ne pas le faire
-LUNCHBOX_DELIVERY = Key2 % livraison de repas !
-I_VE_GOT_A_LUNCHBOX = Key2 % J'ai un repas
 I_DELIVERED_THE_MEAL = Key1 % J'ai livré le repas
+THANK_EAT = Key1 % merci (manger)
+WE_SHARE = Key2 % on partage ?
+EAT_LIKE_A_SAVAGE = Key3 % (manger comme une sauvage)
+MEH_I_WAS_JUST_HUNGRY = Key1 % Bof, j'avais juste faim
+MORE_GIMME_MORE = Key2 % Plus ! J'en veux plus !
+THANK_THEY_WERE_DELICIOUS = Key1 % Merci, c'était délicieux
+I_M_HUNGRY = Key2 % J'ai faim !
+CUPCAKES_GIVE = Key1 % donne
+CUPCAKES_ME = Key1 % m'en
+CUPCAKES_MORE = Key1 % plus !
