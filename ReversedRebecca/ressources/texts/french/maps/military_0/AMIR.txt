@@ -116,7 +116,7 @@ object = player = happy = Bon, il faut absolument que je m'y remette.@Merci enco
 player = cook = happy_var = Avec plaisir ! On se voit bientôt, Amir.
 
 
-% CUPCAKES_SHARINGPOST_DIALOGUE
+% CUPCAKES_SHARING_POST_DIALOGUE
 object = player = happy = Tu as besoin de quelque chose, chouquette ?
 player = cook = laugh = Non, c'est bon, merci.@Il est temps que je retourne à ma mission.
 
