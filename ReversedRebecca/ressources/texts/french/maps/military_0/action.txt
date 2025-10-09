@@ -3,6 +3,16 @@
 I_MUST_SEE_YY = Key1 % je dois voir YY
 MOVE_OUT = Key1 % pousse-toi !
 
+
+///// ARMORY /////
+
+WHAT_WAS_THE_RIDDLE = Key1 % c'était quoi l'énigme ?
+I_GET_IT = Key1 % j'ai compris
+LISTEN_AGAIN = Key2 % réécouter l'énigme
+HIT_HIM = Key3 % (le frapper)
+
+
+
 ///// TRAINING FIELD /////
 
 YOU_DONT_SHOOT = Key1 % tu ne tires pas ?

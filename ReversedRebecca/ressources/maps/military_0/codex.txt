@@ -9,7 +9,6 @@ NPC-04 = Trashman
 NPC-07 = Xavier Dupont
 NPC-12 = Slacker
 NPC-13 = Cleaner
-NPC-14 = Nathan
 NPC-15 = Cassidy
 NPC-17 = Nancy
 
@@ -41,4 +40,5 @@ OBJ-08 = Jules Detector
 
 ///// ARMORY /////
 
+NPC-14 = Nathan
 OBJ-09 = Nathan Detector

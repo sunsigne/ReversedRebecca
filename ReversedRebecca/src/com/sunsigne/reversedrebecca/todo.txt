@@ -83,6 +83,7 @@
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
 	à faire :
+	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
 	faire en sorte que le runnuer court en pleurant si l'idiot est tué
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
