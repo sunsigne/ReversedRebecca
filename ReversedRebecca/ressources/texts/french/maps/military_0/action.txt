@@ -46,5 +46,5 @@ MORE_GIMME_MORE = Key2 % Plus ! J'en veux plus !
 THANK_THEY_WERE_DELICIOUS = Key1 % Merci, c'était délicieux
 I_M_HUNGRY = Key2 % J'ai faim !
 CUPCAKES_GIVE = Key1 % donne
-CUPCAKES_ME = Key1 % m'en
-CUPCAKES_MORE = Key1 % plus !
+CUPCAKES_ME = Key2 % m'en
+CUPCAKES_MORE = Key3 % plus !

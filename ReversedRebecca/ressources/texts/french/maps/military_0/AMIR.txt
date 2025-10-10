@@ -55,18 +55,17 @@ object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils son
 
 
 % CUPCAKES_SHARING
-object = player = happy = Non, c'est très gentil, chouquette, mais je n'ai pas faim.
-object = player = happy = Mais merci. J'apprécie le geste.
-player = cook = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
+object = player = happy = Non, c'est très gentil, chouquette, mais@je n'ai pas faim. J'apprécie le geste.
+player = object = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
 object = player = worry = À ce point ?
-object = player = happy_var = Oui !
-object = player = happy = Bon, puisque tu insistes, alors d'accord. Donne-moi@une minute, je dois terminer quelque chose.
-player = cook = laugh = Très bien, je reviens plus tard où je reste ici ?
+player = object = happy_var = Oui !
+object = player = happy = Bon, puisque tu insistes, alors d'accord. Donne-@moi une minute, je dois terminer quelque chose.
+player = object = laugh = Très bien, est-ce que je reviens plus tard,@ou est-ce que je reste ici ?
 object = player = worry = C'est comme tu veux, chouquette…
 
 
 % CUPCAKES_SHARING_READY
-object = player = happy = Ok ! J'ai terminé, tu es sûre que tu veux manger tes cupcakes avec moi ?
+object = player = happy = Ok ! J'ai terminé, tu es sûre que tu veux partager@tes cupcakes avec moi ?
 
 
 % CUPCAKES_SHARING_READY_NO
@@ -75,50 +74,53 @@ object = player = happy = Bon, il faut absolument que je m'y remette.
 
 
 % CUPCAKES_SHARING_READY_YES
-player = cook = happy_var = Pourquoi pas ? C'est meilleur quand on partage avec un ami !
+player = object = happy_var = Pourquoi pas ? C'est meilleur quand on partage@avec un ami !
 object = player = unhappy = Un… ami ?
-object = player = happy = Oui… Ça sonne bien… Soyons amis !
+object = player = happy = Oui… Ça sonne bien… Soyons amis.
 object = player = happy = Parfait ! Suis-moi.
 
 
 % CUPCAKES_SHARING_READY_YES_NEXT
 object = player = happy = Alors comme ça, tu as besoin de parler à YY ?
-player = cook = worry = Oui. Pour résumer, je cherche quelqu'un qui m'a volé@quelque chose. Et YY saurait où je peux le trouver.
-object = player = unhappy = Un vol ? Ça n'est pas le genre de YY.@Il est un peu macho, mais c'est un homme droit.
-cobject = player = worry = Je suis sûr qu'il ne cautionne pas ce qu'à fait cette personne…@Il va t'aider, j'en suis certain.
-object = player = happy = Et toi alors ? Qu'est-ce que tu fais ici ?
-object = player = happy = Je cuisine, mais ça je crois que tu l'avais déjà compris.@Pour faire simple, j'aime apporter de la joie aux autres par la nourriture.
-object = player = happy = Après une longue journée, il n'y a rien de mieux que de trouver son bonheur dans une assiette !
-object = player = happy = Ho mon Dieu ! Il faut absolument que je t'ai chez moi pour que je te mange tout le temps.
+player = object = worry = Oui. Pour résumer, je cherche quelqu'un qui m'a@volé quelque chose. Et YY sait où je peux le trouver.
+object = player = unhappy = Un vol ? Ça ne ressemble pas à YY… Il est@un peu misogyne, mais c'est un homme droit.
+object = player = worry = Je suis sûr qu'il ne cautionne pas ce qu'à fait@cette personne… Il va t'aider, j'en suis certain.
+player = object = happy = Et toi, alors ? Qu'est-ce que tu fais ici ?
+object = player = happy = Je cuisine, mais tu l'avais déjà compris. Pour faire@simple, j'aime apporter de la joie par la nourriture.
+object = player = happy = Après une longue journée, il n'y a rien de mieux@que de trouver son bonheur dans une assiette.
+
+
+% CUPCAKES_SHARING_READY_YES_NEXT_NEXT
+player = object = laugh = Ho mon Dieu ! Il faut absolument que je t'ai@chez moi pour que je te mange tout le temps.
 
 
 % CUPCAKES_SHARING_OOPSY
-player = cook = embarassed = Je… voulais dire pour que je mange tout le temps. Que je mange ce que tu fais, quoi…
+player = object = blush = Je… voulais dire pour que JE MANGE tout@le temps. Que je te mange ce que tu fais, quoi…
 object = player = blush = Oui… J'avais compris… Bien sûr…
 
 
 % CUPCAKES_SHARING_OOPSY_NEXT
-object = player = blush = Alors ? Ils… sont bons ces cupcakes ?
-player = cook = embarassed = Oui, oui… Merci.
+object = player = blush = Heu… Ils… sont bons tes cupcakes ?
+player = object = blush = Oui, oui… Merci.
 
 
 % CUPCAKES_SHARING_OOPSY_NEXT_NEXT
-object = player = blush = Tu… en voudras d'autre ?
-player = cook = happy = Pour aujourd'hui, ça ira.
-player = cook = worry = Mais… J'aimerais envie d'en avoir tous les jours !
-object = player = happy = Tous les jours, je ne sais pas… Mais on peut commencer par demain.@Qu'est-ce que tu en dis ?
-player = cook = laugh = C'est un grand oui ! Viens chez moi ! Ma porte est ouverte pour tes pâtisseries !
-object = player = happy = Très bien. Faisons comme ça alors !
+object = player = worry = Tu… en voudras d'autre ?
+player = object = happy = Ça ira pour aujourd'hui.
+player = object = worry = Mais… J'ai envie d'en avoir tous les jours !
+object = player = happy = Tous les jours, je ne sais pas…@Mais on peut commencer par demain ?
+player = object = laugh = C'est un grand oui ! Voilà mon adresse !@Ma porte est ouverte pour tes pâtisseries !
+object = player = happy = Très bien. Faisons comme ça.
 
 
 % CUPCAKES_SHARING_OOPSY_LAST
 object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour ta gentillesse, chouquette.
-player = cook = happy_var = Avec plaisir ! On se voit bientôt, Amir.
+player = object = happy_var = Avec plaisir ! On se voit bientôt, Amir.
 
 
 % CUPCAKES_SHARING_POST_DIALOGUE
 object = player = happy = Tu as besoin de quelque chose, chouquette ?
-player = cook = laugh = Non, c'est bon, merci.@Il est temps que je retourne à ma mission.
+player = object = laugh = Non, c'est bon, merci.@Il est temps que je retourne à ma mission.
 
 
 
