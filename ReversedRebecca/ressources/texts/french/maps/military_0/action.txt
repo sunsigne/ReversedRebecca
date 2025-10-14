@@ -10,7 +10,7 @@ WHAT_WAS_THE_RIDDLE = Key1 % c'était quoi l'énigme ?
 I_GET_IT = Key1 % j'ai compris
 LISTEN_AGAIN = Key2 % réécouter l'énigme
 HIT_HIM = Key3 % (le frapper)
-
+YOU_RE_A_LOSER = Key1 % T'es un loser
 
 
 ///// TRAINING FIELD /////
