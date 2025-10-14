@@ -95,6 +95,9 @@ player = object = laugh = Ho mon Dieu ! Il faut absolument que je t'ai@chez moi 
 
 
 % CUPCAKES_SHARING_OOPSY
+object = player = unhappy = Que tu me manges tout le temps ?
+object = player = blush = …
+player = object = blush = Oh mon Dieu, j'ai dit ça ?
 player = object = blush = Je… voulais dire pour que JE MANGE tout@le temps. Que je te mange ce que tu fais, quoi…
 object = player = blush = Oui… J'avais compris… Bien sûr…
 
