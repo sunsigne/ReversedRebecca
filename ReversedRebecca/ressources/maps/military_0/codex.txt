@@ -12,6 +12,10 @@ NPC-13 = Cleaner
 NPC-15 = Cassidy
 NPC-17 = Nancy
 
+///// ROOMS /////
+
+OBJ-13 = Quest Chest
+
 ///// CENTER /////
 
 NPC-02 = Guard

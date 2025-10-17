@@ -14,7 +14,7 @@ player = object = happy_var = (Il est bizarre…)
 player = object = happy_var = Ok… (Il ferme jamais sa gueule ?)
 player = object = happy = Ô Grand Manitou, je pourrais avoir une arme@s'il te plaît ?
 object = player = serious = Elle va finir dans ta bouche avec cette attitude.
-object = player = stupid = Dézolé mais non. Ze n'en ai peut-être pas l'air,@mais ze ne zuis pas un sczientifique fou.
+object = player = stupid = Dézolé mais non. Z'en ai peut-être l'air, mais@ze ne zuis pas un sczientifique fou.
 object = player = smile = Ze ne te donnerai pas d'arme. Mais ze peux t'aider@autrement ! Quel est ton mal ?
 player = object = happy = Je dois parler au chef.
 object = player = smile = YY ? Z'est un cas fasczinant ! Un ADN incroyable !@Sûrement le zeul homme plus intellizent que moi !
