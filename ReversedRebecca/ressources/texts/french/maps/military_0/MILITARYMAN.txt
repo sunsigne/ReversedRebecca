@@ -1,2 +1,10 @@
 % YOU_DONT_SHOOT
 militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@de passer devant…
+
+
+% CLEANER_DO_YOU_HAVE_KEY
+object = player = happy = Je ne sais pas… Les autres bougres perdent@toujours un tas de trucs.
+object = player = happy = Et à chaque fois, je fais la même chose : je mets@tout aux ordures. Ils n'ont qu'à faire attention.
+player = object = wrong_with_you = Tu es en train de me dire que je vais devoir@fouiller les poubelles ?
+object = player = happy = Il semblerait.
+player = object = angry_var2 = Ça commence à bien faire ! Pointer une arme@sur le garde aurait été plus facile !

@@ -24,3 +24,23 @@ player = DOWN = you_silly = Bon, j'imagine qu'il l'a encore sur lui.
 player = DOWN = laugh = C'est marrant de lui marcher dessus !
 player = DOWN = worry = Bon. Plus sérieusement, il n'a pas de clé sur lui.@J'imagine qu'il l'a perdu.
 player = DOWN = you_silly = Par contre, il sent fort le savon. Mon instinct@me dit que je devrais vérifier les douches.
+
+
+% SHOWER_ONE
+player = LEFT = worry = Pas de clef ici…
+
+
+% SHOWER_TWO
+player = RIGHT = unhappy_var = Rien…
+
+
+% SHOWER_THREE
+player = LEFT = worry = C'est vide.
+
+
+% SHOWER_FOUR
+player = RIGHT = unhappy_var = … À part du savon, rien.
+
+
+% SHOWER_AFTER_ALL_FOUR
+player = DOWN = sad = Je devrais peut-être demander au responsable@du nettoyage de cette partie du camp ?

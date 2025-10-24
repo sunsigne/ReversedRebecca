@@ -2,6 +2,7 @@
 
 I_MUST_SEE_YY = Key1 % je dois voir YY
 MOVE_OUT = Key1 % pousse-toi !
+SEARCH_KEY = Key3 % fouiller (clé?)
 
 
 ///// ARMORY /////
