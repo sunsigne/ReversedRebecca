@@ -25,6 +25,10 @@ YOURE_THERE_FOR_A_REASON = Key2 % Tu es là pour une raison
 ACTUALLY_I_LL_FREE_YOU = Key3 % En fait, je vais te libérer
 HERES_THE_GREEN_BOMBS = Key3 % voilà les bombes vertes
 LUNCHBOX_DELIVERY = Key2 % livraison de repas !
+WHAT_ARE_YOU_DOING = Key1 % Tu fais quoi ?
+THATS_DANGEROUS = Key1 % c'est dangereux !
+STOP_MOVING = Key1 % arrête de bouger
+YELLOW_KEY = Key3 % clé ?
 
 
 ///// REFECTORY /////

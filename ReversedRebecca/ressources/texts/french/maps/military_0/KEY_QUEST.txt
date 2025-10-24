@@ -1,0 +1,26 @@
+% OPENED_CHEST
+player = object = surprised = Je viens de faire le lien !
+player = DOWN = excited = Le mot dans le coffre ! C'est le type qui court@devant les balles qui a ma clé !
+
+
+% CHEST_TALKED_TO_NATHAN
+player = object = surprised = Je viens de faire le lien !
+player = DOWN = excited = L'énigme du scientifique ! C'est ce type qui court@devant les balles qui a ma clé !
+
+
+% BUT_IDIOT_IS_DEAD
+player = DOWN = unhappy_var = Sauf que cet idiot s'est fait descendre…
+
+
+% TOOK_HIS_SECRET_TO_HIS_GRAVE
+player = DOWN = no_sens = Heu… C'est lui qui avait ma clé…
+
+
+% IDIOT_IS_DEAD_NEXT
+player = DOWN = you_silly = Bon, j'imagine qu'il l'a encore sur lui.
+
+
+% NO_KEY_ON_IDIOT
+player = DOWN = laugh = C'est marrant de lui marcher dessus !
+player = DOWN = worry = Bon. Plus sérieusement, il n'a pas de clé sur lui.@J'imagine qu'il l'a perdu.
+player = DOWN = you_silly = Par contre, il sent fort le savon.@Mon instinct me dit que je devrais vérifier les douches.
