@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.state;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
+import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
@@ -47,6 +48,15 @@ public class ConditionRequest extends ConditionalRequest {
 			condition = tempCondition;
 		}
 		feeling.setCondition(condition);
+
+		if (condition != CONDITION.KO)
+			return;
+
+		if (object instanceof Health == false)
+			return;
+
+		Health health = (Health) object;
+		health.setHp(0);
 	}
 
 	@Override

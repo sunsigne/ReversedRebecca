@@ -47,15 +47,8 @@
 
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
+
 	
-	
-	à tester
-	- fouillé le coffre de l'idiot PUIS parler à Nathan
-	- parler à Nathan PUIS fouiller le coffre
-	- l'un  ou l'autre, mais l'idiot est mort
-	- l'un  ou l'autre, mais l'idiot est mort et on ne veut plus lui parler
-	- on sait que l'idiot a la clef, mais il meurt sous nos yeux
-	- on sait que la clef est dans les douches, et l'idiot meurt sous nos yeux (ça ne devrait rien faire)
 
 	- trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
@@ -95,6 +88,7 @@
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
 	à faire :
+	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
 	faire en sorte que le runnuer court en pleurant si l'idiot est tué
