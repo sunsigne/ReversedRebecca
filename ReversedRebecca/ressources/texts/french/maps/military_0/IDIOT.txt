@@ -29,10 +29,3 @@ object = player = idiot = Non… Il va le dire à Jessy…
 player = object = Alors, dépêche-toi de te souvenir où tu as mis cette clé !
 object = player = idiot = Je sais que je l'avais ce matin.@Après une douche, je suis venue directement ici m'entraîner.
 player = object = wrong_with_you = (les douches, hein ?)
-
-
-% TOOK_HIS_SECRET_TO_HIS_GRAVE_VAR
-player = DOWN = unhappy_var = Sauf que cet idiot s'est fait descendre…
-
-
-% TOOK_HIS_SECRET_TO_HIS_GRAVE
