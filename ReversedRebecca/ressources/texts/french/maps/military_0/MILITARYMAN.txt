@@ -2,6 +2,34 @@
 militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@de passer devant…
 
 
+% CLEANER_WATCHA_DOING
+object = player = happy = Je nettoie les toilettes et les douches.@Tu veux m'aider ?
+player = object = pain = Beurk. Sans façon…
+player = object = unhappy_var = Sinon… Qu'est-ce que tu peux m'apprendre sur@Double Y ?
+object = player = happy = Il utilise une savonnette entière par jour !
+object = player = happy =  La surface totale couverte par ses muscles@doit faire au moins la taille de ce camp !
+player = object = worry = Et… Rien de plus utile ?@Comme… Comment le contacter ?
+object = player = happy = Il n'est pas prévu qu'il descende de@sa tour aujourd'hui.
+object = player = happy = Mais il nous voit d'ici. Je suis sûr qu'il est@en train de t'évaluer en ce moment même.
+player = object = no_sens = Il… m'évalue ? Genre, il est en train de me noter ?
+object = player = happy = Oui et non… Je pense qu'il cherche tes@points faibles. Au cas où il doivent t'affronter.
+player = object = no_sens_var = Pardon ?
+object = player = happy = Ça n'est qu'une éventualité. Dans tous les cas,@il ne va pas t'agresser. Au mieux, il te defiera.
+player = object = no_sens = (… Je n'arrive pas à savoir s'il est sérieux ou non.)
+
+
+% CLEANER_YY
+player = object = unhappy_var = Tu étais sérieux ? Il veut se battre contre moi ?
+object = player = happy = Qui sait ce qu'il a en tête ?@Il a toujours une longueur d'avance sur nous tous.
+object = player = happy = Ce qui est sûr, c'est qu'il aime les défis.
+object = player = happy = Tu as l'air intelligente, peut-être qu'il voudra@seulement t'affronter aux échecs ?
+player = object = no_sens_var = Pardon ?
+object = player = happy = Les échecs ! Ce jeu de plateau avec des pions.@Tu ne connais pas ?
+player = object = angry = Tu m'énerves. Bien sûr que je connais. Je n'arrive@juste pas à savoir si tu te moques de moi.
+object = player = happy = Qui sait… La suite te le dira.
+player = object = angry_var2 = (Il m'agace ! Je ne lui parlerai que si nécessaire.)
+
+
 % CLEANER_DO_YOU_HAVE_KEY
 object = player = happy = Je ne sais pas… Les autres bougres perdent@toujours un tas de trucs.
 object = player = happy = Et à chaque fois, je fais la même chose : je mets@tout aux ordures. Ils n'ont qu'à faire attention.
