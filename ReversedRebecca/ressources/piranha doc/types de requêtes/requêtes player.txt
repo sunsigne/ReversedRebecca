@@ -49,6 +49,20 @@ Attention ! L'Écriture Conditionnelle est impossible avec ce Type de Requête 
 
 
 
+////// GIVE_HP_PLAYER //////
+
+Le Type de Requête GIVE_HP_PLAYER permet d'ajouter ou de retirer des points de vie au joueur.
+
+Exemple :
+TIME -> 5 = GIVE_HP_PLAYER -> -2
+TIME -> 5 = GOTO -> GIVE_HP_PLAYER:-2
+
+Lorsque la Condition sera vérifiée, le joueur perdra 2 hp.
+
+Rappel : lors le joueur atteint 0 point de vie, il devient KO (voir « CONDITION » dans la partie « Piranha – Types de Requêtes : States »).
+
+
+
 ////// CENTER_PLAYER //////
 
 Le Type de Requête CENTER_PLAYE permet de recentrer le joueur sur la case sur laquelle il est le plus.
@@ -64,6 +78,7 @@ TIME -> 5 = GOTO -> CENTER_PLAYER:PROCESS
 Lorsque la Condition sera vérifiée, le joueur sera recentré sur la case sur laquelle il est le plus.
 
 Rappel : lors du lancement d'une cinématique (voir « CUTSCENE » dans la partie « Piranha – Types de Requêtes : Autres »), le joueur est automatiquement recentré.
+
 
 
 ////// SEND_PLAYER //////
