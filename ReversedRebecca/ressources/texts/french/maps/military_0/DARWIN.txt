@@ -11,7 +11,7 @@ militaryman = RIGHT = shooter_cry = Bou hou hou !
 
 
 % RUNNER
-militaryman = player = runner = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courir !
+militaryman = player = runner_cry = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courir !
 
 
 % JESSY

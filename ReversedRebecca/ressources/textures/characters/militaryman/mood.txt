@@ -22,6 +22,7 @@ xavier_dupont=5,1
 ////// RUNNER //////
 
 runner=6,1
+runner_cry=6,2
 
 ////// IDIOT //////
 

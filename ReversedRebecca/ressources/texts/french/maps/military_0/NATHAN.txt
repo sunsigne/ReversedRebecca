@@ -22,7 +22,7 @@ object = player = happy = Et quelle forze ! Il est plus prochze du surhomme@que 
 player = object = wrong_with_you = Tu me cherches ?
 player = object = wrong_with_you = Est-ce que je te dis à toi que ton visage est plus@proche de la raclette que ta mère d'une balaine ?
 player = object = angry = J'ai besoin d'une arme parce que le garde@ne veut pas me laisser passer.
-object = player = smile = Z'est tout le prinzipe d'un garde !@Mon frère prend zon travail trèz à coeur !
+object = player = smile = Z'est tout le prinzipe d'un garde ! Il z'azit de@mon frère ! Et il prend zon travail trèz à coeur !
 object = player = stupid = Mais ze vais quand même t'aider. Zi tu lui montres@une clé zaune, il reconnaitra ton droit de pazzer.
 player = object = wrong_with_you = Et je trouve ça où ?
 object = player = happy = Zi viens. Fouille nos chzambres. Voizi l'énigme qui@te donnera l'emplacement de ze que tu chzerches :

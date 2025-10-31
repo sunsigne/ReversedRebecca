@@ -49,8 +49,6 @@
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
-	
-
 	- trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
@@ -66,12 +64,8 @@
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
-	- serrur YY en jaune, mais clef orange (Ca récompensera le joueur qui a max la clé)
+	- serrure YY en jaune, mais clef orange (Ca récompensera le joueur qui a max la clé)
 	- le rideau à "fermer à clef" doit être celui en ligne 1, colonne 2
-	- laboratoire ET prisonnier enfermée avec porte verte, mais pas de clef verte dans le niveau :
-		- lvl002 faire en sorte que la "clef" de jessy soit un passe partout (amélioration cyan permanante). Fonctionne car on ne le récupère que dans le cas où on n'a pas déjà de clef cyan, et est contrebalancé par l'enseignement de doug
-		- soit on commence avec la clef verte (pas de clef verte dans le niveau)
-		- soit on récupère les bombes vertes, mais le prisonnier nous enseigne comment utiliser des bombes à la place de clefs
 
 	à vérifier :
 	- getname a été changé dans : move (vérifier alicia), choice (vérifier le highlight), conditionnalrequest (vérifier le see)
@@ -80,7 +74,7 @@
 	à changer :
 	RR001 "je suis plutôt garçon
 	LVL001 "tu es ma 1ère"
-	rebecca n'est vulnérable que chez elle et dans les workshop (retirer labo) + faire en sorte qu'elle se blesse dans le labo quand elle se prend l'éboulement + quand elle se prend les fils barbelés dans le commisariat
+	rebecca n'est invulnérable que chez elle et dans les workshop (retirer labo) + faire en sorte qu'elle se blesse dans le labo quand elle se prend l'éboulement + quand elle se prend les fils barbelés dans le commisariat
 
 	bug :
 	- rebecca est "sous" l'idiot en axe Z (selon l'endroit où on la place sur le mappable ?). Il me semlbiat qu'être ko envoyait sur la couche "sol" ? ça me fait penser que dans le lvl test, rebecca disparait lorsqu'elle est mise ko, donc problème similaire
@@ -92,7 +86,7 @@
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
-	faire en sorte que le runnuer court en pleurant si l'idiot est tué
+	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	////////// MILITARY 0 ////////////
