@@ -42,8 +42,8 @@ sarah = player = surprised = Erika! Don't you live together?
 player = object = laugh = Hah! No, we don't.
 player = object = happy = She often comes and she has@the keys, but she's just a friend.
 sarah = player = wink = And… Is there something between you?
-player = object = happy_var = No. I'm more into boys.
-player = object = happy = Speaking of which,@how are things going with Pierre?
+player = object = happy_var = No. She's like a sister to me.
+player = object = happy = Speaking of relationships,@how are things going with Pierre?
 sarah = player = awkward = Hey! None of your business…
 sarah = player = worry = Besides, shouldn't you be getting ready?
 player = object = laugh = You're right. I'm on it.

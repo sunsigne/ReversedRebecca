@@ -70,13 +70,6 @@
 	à vérifier :
 	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ? même question pour les maxhp
 
-	à changer :
-	RR001 "je suis plutôt garçon
-	LVL001 "tu es ma 1ère"
-
-	bug :
-	- rebecca est "sous" l'idiot en axe Z (selon l'endroit où on la place sur le mappable ?). Il me semlbiat qu'être ko envoyait sur la couche "sol" ? ça me fait penser que dans le lvl test, rebecca disparait lorsqu'elle est mise ko, donc problème similaire
-
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
