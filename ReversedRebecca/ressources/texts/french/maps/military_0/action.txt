@@ -5,6 +5,7 @@ MOVE_OUT = Key1 % pousse-toi !
 SEARCH_KEY = Key3 % fouiller (clé?)
 WATCHA_DOING = Key1 % tu fais quoi ?
 YY = Key1 % YY ?
+ARENT_YOU_GOING_OUT = Key1 % Tu ne sors pas ?
 
 
 ///// ARMORY /////

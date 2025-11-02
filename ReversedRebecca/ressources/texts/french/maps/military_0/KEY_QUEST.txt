@@ -44,3 +44,21 @@ player = RIGHT = unhappy_var = … À part du savon, rien.
 
 % SHOWER_AFTER_ALL_FOUR
 player = DOWN = sad = Je devrais peut-être demander au responsable@du nettoyage de cette partie du camp ?
+
+
+% TRASHMAN
+player = object = angry = Pousse-toi, je viens chercher une clé.
+object = player = trashman = Je suis chargé de surveiller les ordures.@Tu n'auras rien sans mon autorisation.
+player = object = angry_var = Fhvklmzejncfljkzehfk!!
+player = object = unhappy_var = … ?
+player = object = happy_var = Tu sais quoi ? Tu as raison.@Tu vas la chercher à ma place.
+
+
+% TRASHMAN_IN_TRASH
+player = UP = happy_var = Alors ? Elle est là-dedans ?
+militaryman = DOWN = trashman = … Oui… Elle est là… Tiens…
+player = UP = happy_var = Merci de ta diligence.
+
+
+% TRASHMAN_STAYING
+militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, et…@Méditer sur mes choix de vie…
