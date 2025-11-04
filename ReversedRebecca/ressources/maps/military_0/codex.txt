@@ -37,6 +37,7 @@ OBJ-06 = Target
 OBJ-10 = Amir Detector
 OBJ-11 = Stock Furniture
 OBJ-12 = Amir Second Detector
+OBJ-20 = Cold Room Door
 
 ///// TRAINING /////
 
