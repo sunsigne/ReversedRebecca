@@ -19,3 +19,15 @@ player = militaryman = wrong_with_you = … ?
 
 % BAD_MOVE_OUT_NEXT
 player = DOWN = angry_var2 = Je déteste l'admettre, mais je n'arriverai à rien@de cette manière.
+
+
+% BAD_I_HAVE_THE_KEY
+player = militaryman = happy_var = Alors ? C'est qui qui va fermer sa gueule@et qui va se pousser, maintenant ?
+
+
+% BAD_I_HAVE_THE_KEY_NEXT
+player = militaryman = laugh = Et puisqu'on y est, ouvre la porte pour moi.
+
+
+% BAD_POST_I_HAVE_THE_KEY
+player = militaryman = happy_var = C'est ça. Laisse passer la princesse.@Et ne respire pas trop fort, tu gaspilles mon air.

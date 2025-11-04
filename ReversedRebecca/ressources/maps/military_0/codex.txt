@@ -26,6 +26,7 @@ OBJ-13 = Quest Chest
 NPC-02 = Guard
 OBJ-05 = Guard Checker
 OBJ-07 = Bomb Box
+OBJ-19 = Big Trash
 
 ///// REFECTORY /////
 

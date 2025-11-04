@@ -46,12 +46,6 @@
 
 	////////// EN COURS ////////////
 
-	A FINIR ! trashman : Rajouter un bruit au moment où il entre dans la poubelle + highlight de la poubelle (+ TA par défaut ?)
-
-
-
-
-
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
@@ -80,6 +74,7 @@
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
 	à faire :
+	des interactions avec trashman
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
