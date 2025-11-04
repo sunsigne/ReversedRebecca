@@ -27,7 +27,9 @@ public enum LAYER {
 	UPPER_WORLD_CONTENT("upper_world_content", new Handler(true)),
 	UPPER_LIGHT("upper_light", new Handler(true)),
 	/////////////////////////////////////////
-	//UPPEST_GROUND("upest_ground", new Handler(true)),
+	UPPEST_GROUND("uppest_ground", new Handler(true)),
+	UPPEST_WORLD_CONTENT("uppest_world_content", new Handler(true)),
+	UPPEST_LIGHT("uppest_light", new Handler(true)),
 	
 	WORLD_TEXT("world_text", new Handler(true)),	
 	HUD("hud", new Handler(false)),

@@ -73,6 +73,11 @@
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 	
+	tour YY :
+	mettre ue "musique venteuse" lorsqu'on entre dedans
+	son, escalier, boite pelle, ect.
+	créer la chute libre
+	
 	à faire :
 	des interactions avec trashman
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)

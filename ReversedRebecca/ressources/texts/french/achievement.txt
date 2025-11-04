@@ -36,6 +36,8 @@ GoldenShowerTitle = Golden Shower
 GoldenShowerText = Se faire uriner dessus...
 TerminatedTitle = EXTERMINATION !
 TerminatedText = Mort definitive sur un terminator
+InvisibleWallTitle = Pas de mur invisible ?
+InvisibleWallText = Redécouvrir la gravité...
 
 ///// ORANGE /////
 
