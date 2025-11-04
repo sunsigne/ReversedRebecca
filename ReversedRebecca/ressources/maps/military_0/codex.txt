@@ -15,6 +15,7 @@ NPC-12 = Slacker
 NPC-13 = Cleaner
 NPC-15 = Cassidy
 NPC-17 = Nancy
+OBJ-18 = Big Trash
 
 ///// ROOMS /////
 
