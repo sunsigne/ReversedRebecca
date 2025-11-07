@@ -34,6 +34,8 @@ OBJ-24 = Stairs Second Floor to First Floor
 OBJ-25 = Stairs Second Floor to Third Floor
 OBJ-26 = Stairs Third Floor to Second Floor
 OBJ-27 = Shovel Box
+OBJ-28 = YY
+OBJ-29 = Gravity falls
 
 ///// REFECTORY /////
 

@@ -75,7 +75,6 @@
 	
 	tour YY :
 	mettre ue "musique venteuse" lorsqu'on entre dedans
-	son, escalier, boite pelle, ect.
 	créer la chute libre
 	
 	à faire :

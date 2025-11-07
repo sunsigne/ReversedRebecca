@@ -13,7 +13,6 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	public DoubleYBoss(int x, int y) {
 		super("double-y", x, y);
-		doubleYCondition = DOUBLE_Y_CONDITION.TIRED;
 	}
 
 	////////// SIZE ////////////
