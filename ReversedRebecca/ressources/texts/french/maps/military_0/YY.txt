@@ -1,0 +1,22 @@
+% NICE_VIEW
+double-y = player = intrigued = Jolie vue, tu ne trouves pas ?
+
+
+% NICE_VIEW_NEXT
+double-y = player = calm = Je sais pourquoi tu es là.@Oui, j'ai l'information que tu cherches :
+
+
+% NICE_VIEW_NEXT_NEXT
+double-y = player = calm = Je connais Vladimir.@Je sais ce qu'il t'a volé, et pourquoi.
+
+
+% SCENARIO_BAD
+double-y = player = calm = J'ai suivi ton parcours.
+double-y = player = calm = Tu es impatiente. Impulsive. Colérique.@Tu utilises la force pour obtenir ce que tu veux.
+double-y = player = intrigued = Tu n'es pas quelqu'un de bien.
+double-y = player = calm = Ou peut-être qu'au fond, je me cherches@juste une excuse pour ce qui va suivre…
+
+
+% SCENARIO_BAD_NEXT
+double-y = player = happy = Toi et moi, on va se battre.@Rendez-vous en bas.
+double-y = player = happy = Si tu gagnes, je te dirais tout ce que tu veux savoir.
