@@ -14,6 +14,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- "pause preventer" devrait s'intérompre/s'annuler en cas de mort du joueur
 		- cinémarique fusillade : pusique c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
 		- hackpuzzle : venir à bout des concurrentmodification
 		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
