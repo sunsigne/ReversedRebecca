@@ -26,7 +26,14 @@ OBJ-13 = Quest Chest
 NPC-02 = Guard
 OBJ-05 = Guard Checker
 OBJ-07 = Bomb Box
-OBJ-19 = Big Trash
+OBJ-19 = YY Door
+OBJ-21 = Stairs Ground to First Floor
+OBJ-22 = Stairs First Floor to Ground
+OBJ-23 = Stairs First Floor to Second Floor
+OBJ-24 = Stairs Second Floor to First Floor
+OBJ-25 = Stairs Second Floor to Third Floor
+OBJ-26 = Stairs Third Floor to Second Floor
+OBJ-27 = Shovel Box
 
 ///// REFECTORY /////
 

@@ -79,6 +79,7 @@
 	créer la chute libre
 	
 	à faire :
+	la porte derrière le guarde -> mettre une sécurité (actuellement, elle est jaune, et vu que c'est un objet Piranha, elle peut être ouverte par un TA sans la clé)
 	des interactions avec trashman
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
