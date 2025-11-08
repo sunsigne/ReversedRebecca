@@ -57,7 +57,7 @@ public class PlayerFinder {
 		int[] distance = getDistance(object, distanceInTiles);
 
 		if (distance == null)
-			return true;
+			return false;
 
 		return distance[0] > distance[1];
 	}
