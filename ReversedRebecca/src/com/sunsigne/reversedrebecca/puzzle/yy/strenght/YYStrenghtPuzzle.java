@@ -5,13 +5,15 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.yy.LauncherYYObject;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtLauncherObject;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
 public abstract class YYStrenghtPuzzle extends Puzzle {
@@ -37,13 +39,24 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	public abstract LauncherYYObject getLauncherYY();
+	public abstract int getSpeed();
 
-	protected void createLauncherYY(int speed) {
-		LauncherYYObject launcher = getLauncherYY();
-		launcher.setX(getCol(2));
-		launcher.setY(getRow(4));
-		// launcher.setSpeed(speed);
+	public abstract StrenghtPlayerObject getPlayer();
+
+	public abstract StrenghtLauncherObject getLauncher();
+
+	protected void createPlayer() {
+		StrenghtPlayerObject player = getPlayer();
+		player.setX(getCol(10));
+		player.setY(getRow(4) + Size.S);
+
+		LAYER.PUZZLE.addObject(player);
+	}
+
+	protected void createLauncher() {
+		StrenghtLauncherObject launcher = getLauncher();
+		launcher.setX(getCol(2) - Size.S);
+		launcher.setY(getRow(3) + Size.S);
 
 		LAYER.PUZZLE.addObject(launcher);
 	}

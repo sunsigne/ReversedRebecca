@@ -1,22 +1,18 @@
-package com.sunsigne.reversedrebecca.object.puzzle.yy;
+package com.sunsigne.reversedrebecca.object.puzzle.yy.strenght;
 
-import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.YY;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.physic.PhysicLaw;
-import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class LauncherYYObject extends PuzzleObject {
+public class StrenghtLauncherObject extends StrenghPuzzleObject {
 
-	public LauncherYYObject(Puzzle puzzle) {
-		super(puzzle, false, 0, 0, 2 * Size.XL, 2 * Size.XL);
+	public StrenghtLauncherObject(Puzzle puzzle, int puzzleSpeed) {
+		super(puzzle, puzzleSpeed, 0, 0, 3 * Size.L, 3 * Size.L);
 		loadLiving();
 		loadAnimations();
 	}
@@ -44,13 +40,6 @@ public class LauncherYYObject extends PuzzleObject {
 			living.setY(y);
 	}
 
-	////////// PHYSICS ////////////
-
-	@Override
-	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
-	}
-
 	////////// TICK ////////////
 
 	@Override
@@ -71,7 +60,8 @@ public class LauncherYYObject extends PuzzleObject {
 	private LivingAnimation throwingAnimation;
 
 	private void loadAnimations() {
-		throwingAnimation = new LivingAnimation(living, 50, true, 11, 12);
+		int animation_time = 25 * getPuzzleSpeed();
+		throwingAnimation = new LivingAnimation(living, animation_time, true, 11, 12);
 	}
 
 	////////// RENDER ////////////
@@ -80,13 +70,9 @@ public class LauncherYYObject extends PuzzleObject {
 		return throwingAnimation;
 	}
 
+	@Override
 	public BufferedImage getImage() {
 		return getAnimation().getImage();
-	}
-
-	@Override
-	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
 }
