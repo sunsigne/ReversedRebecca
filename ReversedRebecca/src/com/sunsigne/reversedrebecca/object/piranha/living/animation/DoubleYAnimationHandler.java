@@ -1,8 +1,13 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.animation;
 
+import com.sunsigne.reversedrebecca.object.piranha.living.YY;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYBoss;
 
 public class DoubleYAnimationHandler extends LivingAnimationHandler {
+
+	public DoubleYAnimationHandler(YY yy) {
+		super(yy);
+	}
 
 	public DoubleYAnimationHandler(DoubleYBoss doubleYBoss) {
 		super(doubleYBoss);
@@ -15,6 +20,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	private LivingAnimation walkingGoodAnimation;
 	private LivingAnimation pushUpAnimation;
 	private LivingAnimation pushUpOneHandAnimation;
+	private LivingAnimation throwingAnimation;
 
 	///// orientable & not animated /////
 
@@ -23,16 +29,17 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	///// not orientable & animated /////
 
 	private LivingAnimation tiredAnimation;
-	
+
 	@Override
 	protected void loadAnimations() {
 
 		walkingGoodAnimation = new LivingAnimation(living, 15, true, 2, 3);
 		pushUpAnimation = new LivingAnimation(living, 11, true, 4, 5);
 		pushUpOneHandAnimation = new LivingAnimation(living, 11, true, 6, 7);
+		throwingAnimation = new LivingAnimation(living, 11, true, 11, 12);
 
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
-		
+
 		tiredAnimation = new LivingAnimation(living, 30, false, 1, 2);
 
 	}
@@ -45,11 +52,13 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		case GOOD:
 			return getStandingWalkingAnimation(standingGoodAnimation, walkingGoodAnimation);
 		case TIRED:
-			return tiredAnimation; 
+			return tiredAnimation;
 		case PUSH_UP:
 			return pushUpAnimation;
 		case PUSH_UP_ONE_HAND:
-			return pushUpOneHandAnimation; 
+			return pushUpOneHandAnimation;
+		case THROWING:
+			return throwingAnimation;
 		}
 
 		return standingGoodAnimation;
