@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -26,7 +27,6 @@ public class CollisionLaw implements PhysicLaw {
 		CollisionDetector detectorObject = (CollisionDetector) object;
 		CollisionReactor lastCollidedObject = detectorObject.getLastCollidedObject();
 
-		
 		if (object instanceof Player == false) {
 
 			// still colliding last object
@@ -35,13 +35,13 @@ public class CollisionLaw implements PhysicLaw {
 				return;
 			}
 
-			// not moving
-			if (object instanceof Velocity) {
+			// not moving & not a puzzle
+			if (object instanceof Velocity && object.getHandler() != LAYER.PUZZLE.getHandler()) {
 				Velocity velocityObject = (Velocity) object;
 				if (velocityObject.isMotionless()) {
 					detectorObject.setLastCollidedObject(null);
 					return;
-				}					
+				}
 			}
 		}
 
@@ -62,7 +62,7 @@ public class CollisionLaw implements PhysicLaw {
 			if (objectAreColliding(detectorObject, reactorObject)) {
 				reactorObject.collidingReaction(detectorObject);
 				detectorObject.setLastCollidedObject(reactorObject);
-			}				
+			}
 		}
 	}
 

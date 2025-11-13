@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.object.puzzle.yy.strenght;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -9,7 +11,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class StrenghtProjectileObject extends StrenghPuzzleObject implements SheetableImage {
+public class StrenghtProjectileObject extends StrenghPuzzleObject implements SheetableImage, CollisionReactor {
 
 	public StrenghtProjectileObject(Puzzle puzzle, int puzzleSpeed, PROJECTILE_TYPE projectileType) {
 		super(puzzle, puzzleSpeed, 0, 0);
@@ -40,14 +42,6 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 		public int getNum() {
 			return num;
 		}
-
-	}
-
-	////////// PHYSICS ////////////
-
-	@Override
-	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// PROJECTILE ////////////
@@ -57,6 +51,13 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 		setVelX(speed * puzzleSpeed);
 		setVelY(-speed * puzzleSpeed);
 		accY = puzzleSpeed;
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
 	}
 
 	////////// TICK ////////////
@@ -98,6 +99,27 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 			image = getSheetSubImage(sheet);
 		}
 		return image;
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
+
+	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		if (detectorObject instanceof StrenghtPlayerObject == false)
+			return;
+
+		StrenghtPlayerObject player = (StrenghtPlayerObject) detectorObject;
+		collidingReaction(detectorObject, false, () -> player.colliding());
 	}
 
 }

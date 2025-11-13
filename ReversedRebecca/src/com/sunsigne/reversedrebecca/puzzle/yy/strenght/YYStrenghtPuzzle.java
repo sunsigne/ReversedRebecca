@@ -59,11 +59,8 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	protected void createPlayer() {
 		StrenghtPlayerObject player = getPlayer();
-		int row = getRow(4) + 3 * Size.XS;
-
 		player.setX(getCol(10));
-		player.setY(row);
-		player.setGroudY(row);
+		player.setY(getRow(4) + 3 * Size.XS);
 
 		LAYER.PUZZLE.addObject(player);
 	}

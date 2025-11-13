@@ -1,14 +1,23 @@
 package com.sunsigne.reversedrebecca.object.puzzle.yy.strenght;
 
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
@@ -17,7 +26,8 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class StrenghtPlayerObject extends StrenghPuzzleObject implements KeyboardEvent, MouseUserEvent, GamepadEvent {
+public class StrenghtPlayerObject extends StrenghPuzzleObject
+		implements KeyboardEvent, MouseObject, MouseUserEvent, GamepadEvent, CollisionDetector {
 
 	public StrenghtPlayerObject(Puzzle puzzle, int puzzleSpeed) {
 		super(puzzle, puzzleSpeed, 0, 0);
@@ -29,7 +39,9 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject implements Keyboar
 
 	@Override
 	public String toString() {
-		return "PUZZLE : " + "PLAYER";
+		String jumping = isJumping() ? "jumping" : "on the ground";
+
+		return "PUZZLE : " + "PLAYER : " + jumping;
 	}
 
 	////////// POSITION ////////////
@@ -48,34 +60,80 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject implements Keyboar
 			living.setY(y);
 	}
 
-	private int groundY;
-	private int jumpY = getPuzzle().getRow(2);
-
-	public void setGroudY(int groundY) {
-		this.groundY = groundY;
+	public void setGapY(int gapY) {
+		this.gapY = gapY;
 	}
 
+	private int jumpY = getPuzzle().getRow(2);
+
+	////////// SIZE ////////////
+
+	// smaller hitbox : the game is easier
+	@Override
+	public Rectangle getBounds(DIRECTION direction) {
+		int x = getX() + getWidth() / 4;
+		int y = getY() + getHeight() / 4;
+		int w = getWidth() / 2;
+		int h = getHeight() / 2;
+		return new Rectangle(x, y, w, h);
+	}
+	
 	////////// PLAYER ////////////
 
 	private boolean jumping;
-
+	private boolean shouldBlink;
+	
+	public boolean isJumping() {
+		return jumping;
+	}
+	
 	private void setJumping(boolean jumping) {
 		if (jumping == false)
-			setY(groundY);
+			setGapY(0);
 		else
-			setY(jumpY);
+			setGapY(-jumpY);
 
 		this.jumping = jumping;
+	}
+
+	public void colliding() {
+		if (recovering > 0)
+			return;
+
+		String path;
+
+		if (jumping) {
+			path = "loot_chest";
+		} else {
+			shouldBlink = true;
+			path = "hit_medium";
+		}
+
+		recovering = 10 * getPuzzleSpeed();
+		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PUZZLE_COLLISION;
 	}
 
 	////////// TICK ////////////
 
 	private int time;
-	private int JUMPING_TIME = 20 * getPuzzleSpeed();
+	private int recovering;
+	private int JUMPING_TIME = 18 * getPuzzleSpeed();
 
 	@Override
 	public void tick() {
 		getAnimation().run();
+
+		recovering--;
+		
+		if(recovering <= 0)
+			shouldBlink = false;
 
 		if (jumping == false)
 			return;
@@ -112,6 +170,16 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject implements Keyboar
 	@Override
 	public BufferedImage getImage() {
 		return getAnimation().getImage();
+	}
+
+	private int gapY;
+
+	@Override
+	public void render(Graphics g) {
+		if (recovering > 0 && recovering % 4 == 0 && shouldBlink)
+			return;
+
+		g.drawImage(getImage(), getX(), getY() + gapY, getWidth(), getHeight(), null);
 	}
 
 	////////// KEYBOARD ////////////
@@ -169,6 +237,20 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject implements Keyboar
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 
+	}
+
+	////////// COLLISION ////////////
+
+	private CollisionReactor lastCollidedObject;
+
+	@Override
+	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
+		this.lastCollidedObject = lastCollidedObject;
+	}
+
+	@Override
+	public CollisionReactor getLastCollidedObject() {
+		return lastCollidedObject;
 	}
 
 }
