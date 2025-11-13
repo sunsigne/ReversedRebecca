@@ -1,11 +1,10 @@
-package com.sunsigne.reversedrebecca.object.puzzle.disco;
+package com.sunsigne.reversedrebecca.object.puzzle;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject.CASE;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -17,10 +16,10 @@ import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
-public class DiscoTextObject extends PuzzleObject {
+public class PuzzleTextObject extends PuzzleObject {
 
-	public DiscoTextObject(Puzzle puzzle, int x, CASE caze) {
-		super(puzzle, false, x, 80);
+	public PuzzleTextObject(Puzzle puzzle, int x, int y, CASE caze) {
+		super(puzzle, false, x, y);
 		this.caze = caze;
 		setVelY(-2);
 	}
@@ -44,7 +43,7 @@ public class DiscoTextObject extends PuzzleObject {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE;
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int MAX_TIME = 20;
@@ -54,9 +53,9 @@ public class DiscoTextObject extends PuzzleObject {
 	public void tick() {
 		time++;
 
-		if(time == 8)
+		if (time == 8)
 			setVelY(0);
-		
+
 		if (time >= MAX_TIME)
 			LAYER.PUZZLE.getHandler().removeObject(this);
 	}
@@ -104,7 +103,8 @@ public class DiscoTextObject extends PuzzleObject {
 
 	@Override
 	public void render(Graphics g) {
-		new TextDecoration().drawOutlinesString(g, font, getText().toUpperCase(), getColor(), Color.BLACK, DIRECTION.NULL, getRect());
+		new TextDecoration().drawOutlinesString(g, font, getText().toUpperCase(), getColor(), Color.BLACK,
+				DIRECTION.NULL, getRect());
 	}
 
 }

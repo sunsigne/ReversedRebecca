@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -48,7 +49,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 	private DiscoPlayerArrowObject player_arrrow;
 	private boolean played;
 
-	protected enum CASE {
+	public enum CASE {
 		GOOD("good"), PERFECT("perfect"), FAIL("fail");
 
 		private String name;
@@ -65,7 +66,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 	private void play(CASE caze) {
 		played = true;
 		playSound(caze);
-		LAYER.PUZZLE.addObject(new DiscoTextObject(getPuzzle(), getX(), caze));
+		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX(), 80, caze));
 
 		if (caze == CASE.FAIL)
 			return;

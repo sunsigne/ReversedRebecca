@@ -13,11 +13,15 @@ import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject.CASE;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
@@ -101,18 +105,23 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 			return;
 
 		String path;
+		CASE caze;
 
 		if (jumping) {
 			path = "loot_chest";
+			caze = CASE.PERFECT;
 		} else {
 			shouldBlink = true;
 			path = "hit_medium";
+			caze = CASE.FAIL;
 		}
 
-		recovering = 10 * getPuzzleSpeed();
+		recovering = 15 * getPuzzleSpeed();
 		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
+		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX() + Size.S, getY() - Size.XL + gapY, caze));
+		
 	}
-
+	
 	////////// PHYSICS ////////////
 
 	@Override
