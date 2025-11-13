@@ -51,9 +51,9 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 	////////// PROJECTILE ////////////
 
 	public void throwing(int puzzleSpeed) {
-		int speed = 10;
-		setVelX(speed * puzzleSpeed);
-		setVelY(-speed * puzzleSpeed);
+		int speed = (int) (15 * Math.sqrt(puzzleSpeed));
+		setVelX(speed);
+		setVelY(-speed);
 		accY = puzzleSpeed;
 	}
 

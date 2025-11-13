@@ -91,8 +91,8 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	////////// TICK ////////////
 
 	private int time;
-	private int loop = 50 * getPuzzleSpeed();
-
+	private int loop = 108 / getPuzzleSpeed();
+	
 	@Override
 	public void tick() {
 		if (new PlayerFinder().getPlayer().isDead())
@@ -108,6 +108,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 			projectile = projectile_list.getList().get(0);
 			projectile_list.removeObject(projectile);
 			LAYER.PUZZLE.addObject(projectile);
+			StrenghtLauncherObject.throwing = false;
 		}
 
 		if (time == loop) {
@@ -115,6 +116,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 			projectile.throwing(getPuzzleSpeed());
 			projectile = null;
 			time = 0;
+			StrenghtLauncherObject.throwing = true;
 		}
 	}
 

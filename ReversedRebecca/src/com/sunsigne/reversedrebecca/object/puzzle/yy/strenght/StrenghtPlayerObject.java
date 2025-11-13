@@ -95,7 +95,7 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 	public boolean isJumping() {
 		return jumping;
 	}
-	
+
 	private void setJumping(boolean jumping) {
 		if (jumping == false)
 			setGapY(0);
@@ -121,7 +121,7 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 			player.setRecovering(false);
 		}
 
-		recovering = 15 * getPuzzleSpeed();
+		recovering = 50 / getPuzzleSpeed();
 		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
 		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX() + Size.S, getY() - Size.XL + gapY, caze));
 
@@ -142,7 +142,7 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 
 	private int time;
 	private int recovering;
-	private int JUMPING_TIME = 18 * getPuzzleSpeed();
+	private int JUMPING_TIME = 60 / getPuzzleSpeed();
 
 	@Override
 	public void tick() {

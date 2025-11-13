@@ -6,11 +6,11 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.YY;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class StrenghtLauncherObject extends StrenghPuzzleObject {
+public class StrenghtLauncherObject extends StrenghPuzzleObject implements TickFree {
 
 	public StrenghtLauncherObject(Puzzle puzzle, int puzzleSpeed) {
 		super(puzzle, puzzleSpeed, 0, 0, 3 * Size.L, 3 * Size.L);
@@ -41,16 +41,6 @@ public class StrenghtLauncherObject extends StrenghPuzzleObject {
 			living.setY(y);
 	}
 
-	////////// TICK ////////////
-
-	@Override
-	public void tick() {
-		if (new PlayerFinder().getPlayer().isDead())
-			return;
-
-		getAnimation().run();
-	}
-
 	////////// TEXTURE ////////////
 
 	private LivingObject living;
@@ -61,17 +51,23 @@ public class StrenghtLauncherObject extends StrenghPuzzleObject {
 		living.setBlockingPath(false);
 	}
 
-	private LivingAnimation throwingAnimation;
+	private LivingAnimation holdingAnimation;
+	private LivingAnimation thrownAnimation;
 
 	private void loadAnimations() {
-		int animation_time = 25 * getPuzzleSpeed();
-		throwingAnimation = new LivingAnimation(living, animation_time, true, 11, 12);
+		holdingAnimation = new LivingAnimation(living, -1, true, 11);
+		thrownAnimation = new LivingAnimation(living, -1, true, 12);
 	}
 
 	////////// RENDER ////////////
 
+	public static boolean throwing = true;
+
 	private LivingAnimation getAnimation() {
-		return throwingAnimation;
+		if (throwing)
+			return thrownAnimation;
+		else
+			return holdingAnimation;
 	}
 
 	@Override
