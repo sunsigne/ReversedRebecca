@@ -7,12 +7,16 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDHealth;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtLauncherObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -91,6 +95,9 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	@Override
 	public void tick() {
+		if (new PlayerFinder().getPlayer().isDead())
+			return;
+
 		time++;
 
 		if (projectile_list.getList().isEmpty() && projectile == null)
@@ -136,10 +143,22 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	private Font font = new FontTask().createNewFont("square_sans_serif_7.ttf", 95f);
 	private String text;
 
-	public String getText() {
+	private String getText() {
 		if (text == null)
 			text = new Translatable().getTranslatedText("YYStrenghtJump", FilePath.PUZZLE);
 		return text;
+	}
+
+	private HUD hud;
+
+	private HUD getHUDHealth() {
+		if (hud == null) {
+			for (HUD tempHUD : HUDList.getList().getList()) {
+				if (tempHUD instanceof HUDHealth)
+					hud = tempHUD;
+			}
+		}
+		return hud;
 	}
 
 	@Override
@@ -149,6 +168,18 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 		int[] rect = new int[] { Window.WIDHT / 2, Window.HEIGHT / 2, 0, 0 };
 		new TextDecoration().drawOutlinesString(g, font, getText(), DIRECTION.NULL, rect);
+
+		drawHealth(g);
+	}
+
+	private void drawHealth(Graphics g) {
+		int x = getHUDHealth().getX();
+		int y = getHUDHealth().getY();
+		getHUDHealth().setX(getCol(1));
+		getHUDHealth().setY(getRow(1));
+		getHUDHealth().render(g);
+		getHUDHealth().setX(x);
+		getHUDHealth().setY(y);
 	}
 
 }

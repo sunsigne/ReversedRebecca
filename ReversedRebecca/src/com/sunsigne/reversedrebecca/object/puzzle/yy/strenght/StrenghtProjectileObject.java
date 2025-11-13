@@ -4,12 +4,16 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class StrenghtProjectileObject extends StrenghPuzzleObject implements SheetableImage, CollisionReactor {
 
@@ -31,7 +35,7 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 	private PROJECTILE_TYPE projectileType;
 
 	public enum PROJECTILE_TYPE {
-		BARREL(1), SARAH(2), WALL(3), MILITARYMEN(4);
+		BARREL(1), SARAH(2), SARAH_CRY(3), WALL(4), MILITARYMEN(5);
 
 		PROJECTILE_TYPE(int num) {
 			this.num = num;
@@ -67,6 +71,12 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 
 	@Override
 	public void tick() {
+		if (new PlayerFinder().getPlayer().isDead()) {
+			makeSarahCry();
+			setMotionless();
+			return;
+		}
+
 		setVelY(getVelY() + accY);
 
 		if (getY() + getVelY() + accY >= ymax) {
@@ -99,6 +109,18 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 			image = getSheetSubImage(sheet);
 		}
 		return image;
+	}
+
+	private void makeSarahCry() {
+		if (projectileType != PROJECTILE_TYPE.SARAH)
+			return;
+
+		GenericListener listener = () -> {
+			projectileType = PROJECTILE_TYPE.SARAH_CRY;
+			image = null;
+		};
+
+		new GameTimer(2 * Game.SEC, true, listener);
 	}
 
 	////////// COLLISION ////////////

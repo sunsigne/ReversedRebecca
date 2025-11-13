@@ -6,6 +6,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.YY;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -44,6 +45,9 @@ public class StrenghtLauncherObject extends StrenghPuzzleObject {
 
 	@Override
 	public void tick() {
+		if (new PlayerFinder().getPlayer().isDead())
+			return;
+
 		getAnimation().run();
 	}
 

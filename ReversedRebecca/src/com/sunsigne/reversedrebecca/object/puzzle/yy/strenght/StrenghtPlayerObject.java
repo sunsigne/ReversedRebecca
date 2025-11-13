@@ -13,10 +13,14 @@ import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject.CASE;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.independant.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -81,12 +85,13 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 		int h = getHeight() / 2;
 		return new Rectangle(x, y, w, h);
 	}
-	
+
 	////////// PLAYER ////////////
 
 	private boolean jumping;
 	private boolean shouldBlink;
-	
+	private boolean isDead;
+
 	public boolean isJumping() {
 		return jumping;
 	}
@@ -101,27 +106,31 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 	}
 
 	public void colliding() {
-		if (recovering > 0)
+		if (recovering > 0 || isDead)
 			return;
 
-		String path;
-		CASE caze;
+		Player player = new PlayerFinder().getPlayer();
+		String path = "loot_chest";
+		CASE caze = new RandomGenerator().getBoolean() ? CASE.PERFECT : CASE.GOOD;
 
-		if (jumping) {
-			path = "loot_chest";
-			caze = CASE.PERFECT;
-		} else {
+		if (jumping == false) {
 			shouldBlink = true;
 			path = "hit_medium";
 			caze = CASE.FAIL;
+			player.removeHp();
+			player.setRecovering(false);
 		}
 
 		recovering = 15 * getPuzzleSpeed();
 		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
 		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX() + Size.S, getY() - Size.XL + gapY, caze));
-		
+
+		if (player.isDead()) {
+			LifeAndDeathLaw.kill(player);
+			isDead = true;
+		}
 	}
-	
+
 	////////// PHYSICS ////////////
 
 	@Override
@@ -140,8 +149,8 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 		getAnimation().run();
 
 		recovering--;
-		
-		if(recovering <= 0)
+
+		if (recovering <= 0)
 			shouldBlink = false;
 
 		if (jumping == false)
@@ -165,15 +174,20 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 	}
 
 	private LivingAnimation standingAnimation;
+	private LivingAnimation koAnimation;
 
 	private void loadAnimations() {
 		standingAnimation = new LivingAnimation(living, -1, true, 1);
+		koAnimation = new LivingAnimation(living, -1, false, 5);
 	}
 
 	////////// RENDER ////////////
 
 	private LivingAnimation getAnimation() {
-		return standingAnimation;
+		if (isDead == false)
+			return standingAnimation;
+		else
+			return koAnimation;
 	}
 
 	@Override
@@ -202,7 +216,8 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		setJumping(true);
+		if (isDead == false)
+			setJumping(true);
 	}
 
 	@Override
@@ -221,7 +236,8 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		setJumping(true);
+		if (isDead == false)
+			setJumping(true);
 	}
 
 	@Override
