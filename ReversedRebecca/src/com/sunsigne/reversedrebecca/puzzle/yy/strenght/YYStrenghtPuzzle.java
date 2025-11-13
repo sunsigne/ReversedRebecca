@@ -101,7 +101,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 		time++;
 
 		if (projectile_list.getList().isEmpty() && projectile == null)
-			return;
+			closePuzzle(true);
 
 		if (time == loop / 2) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "chest");

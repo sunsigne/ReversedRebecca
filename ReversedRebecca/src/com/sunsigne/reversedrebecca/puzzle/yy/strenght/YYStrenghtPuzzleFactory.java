@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.CyanDiscoPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.NormalYYStrenghtPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
@@ -35,12 +34,12 @@ public class YYStrenghtPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getOpeningSound() {
-		return "door_key";
+		return null;
 	}
 
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return null;
 	}
 
 }

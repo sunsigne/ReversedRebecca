@@ -35,7 +35,8 @@ public class StrenghtProjectileObject extends StrenghPuzzleObject implements She
 	private PROJECTILE_TYPE projectileType;
 
 	public enum PROJECTILE_TYPE {
-		BARREL(1), SARAH(2), SARAH_CRY(3), WALL(4), MILITARYMEN(5);
+		BARREL(1), SARAH(2), SARAH_CRY(3), WALL(4), MILITARYMEN(5), CHAIR(6), TRASH(7), OVEN(8), COUCH_LEFT(9),
+		COUCH_RIGHT(10), CACTUS(11), ROCK(12), U(13);
 
 		PROJECTILE_TYPE(int num) {
 			this.num = num;
