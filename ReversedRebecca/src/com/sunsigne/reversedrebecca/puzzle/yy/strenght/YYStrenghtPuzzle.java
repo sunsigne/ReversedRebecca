@@ -7,12 +7,17 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtLauncherObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
@@ -39,7 +44,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	public abstract int getSpeed();
+	public abstract int getPuzzleSpeed();
 
 	public abstract StrenghtPlayerObject getPlayer();
 
@@ -48,7 +53,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	protected void createPlayer() {
 		StrenghtPlayerObject player = getPlayer();
 		player.setX(getCol(10));
-		player.setY(getRow(4) + Size.S);
+		player.setY(getRow(4) + 3*Size.XS);
 
 		LAYER.PUZZLE.addObject(player);
 	}
@@ -56,9 +61,47 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	protected void createLauncher() {
 		StrenghtLauncherObject launcher = getLauncher();
 		launcher.setX(getCol(2) - Size.S);
-		launcher.setY(getRow(3) + Size.S);
+		launcher.setY(getRow(3) + 3*Size.XS);
 
 		LAYER.PUZZLE.addObject(launcher);
+	}
+
+	private GameList<StrenghtProjectileObject> projectile_list;
+
+	protected void addProjectile(StrenghtProjectileObject projectile) {
+		if (projectile_list == null)
+			projectile_list = new GameList<>(LISTTYPE.ARRAY);
+
+		projectile_list.addObject(projectile);
+	}
+
+	private StrenghtProjectileObject projectile;
+
+	////////// TICK ////////////
+
+	private int time;
+	private int loop = 50 * getPuzzleSpeed();
+
+	@Override
+	public void tick() {
+		time++;
+
+		if (projectile_list.getList().isEmpty() && projectile == null)
+			return;
+
+		if (time == loop / 2) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "chest");
+			projectile = projectile_list.getList().get(0);
+			projectile_list.removeObject(projectile);
+			LAYER.PUZZLE.addObject(projectile);
+		}
+
+		if (time == loop) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "jump");
+			projectile.throwing(getPuzzleSpeed());
+			projectile = null;
+			time = 0;
+		}
 	}
 
 	////////// TEXTURE ////////////
