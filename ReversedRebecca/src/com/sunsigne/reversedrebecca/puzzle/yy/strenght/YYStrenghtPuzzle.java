@@ -1,24 +1,31 @@
 package com.sunsigne.reversedrebecca.puzzle.yy.strenght;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtLauncherObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
 public abstract class YYStrenghtPuzzle extends Puzzle {
@@ -52,8 +59,11 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	protected void createPlayer() {
 		StrenghtPlayerObject player = getPlayer();
+		int row = getRow(4) + 3 * Size.XS;
+
 		player.setX(getCol(10));
-		player.setY(getRow(4) + 3*Size.XS);
+		player.setY(row);
+		player.setGroudY(row);
 
 		LAYER.PUZZLE.addObject(player);
 	}
@@ -61,7 +71,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	protected void createLauncher() {
 		StrenghtLauncherObject launcher = getLauncher();
 		launcher.setX(getCol(2) - Size.S);
-		launcher.setY(getRow(3) + 3*Size.XS);
+		launcher.setY(getRow(3) + 3 * Size.XS);
 
 		LAYER.PUZZLE.addObject(launcher);
 	}
@@ -126,10 +136,22 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	////////// RENDER ////////////
 
+	private Font font = new FontTask().createNewFont("square_sans_serif_7.ttf", 95f);
+	private String text;
+
+	public String getText() {
+		if (text == null)
+			text = new Translatable().getTranslatedText("YYStrenghtJump", FilePath.PUZZLE);
+		return text;
+	}
+
 	@Override
 	public void render(Graphics g) {
 		Color green = new Color(85, 100, 75, 240);
 		new TransluantLayer().drawPuzzle(g, green);
+
+		int[] rect = new int[] { Window.WIDHT / 2, Window.HEIGHT / 2, 0, 0 };
+		new TextDecoration().drawOutlinesString(g, font, getText(), DIRECTION.NULL, rect);
 	}
 
 }

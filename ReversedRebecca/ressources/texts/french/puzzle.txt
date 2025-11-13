@@ -4,6 +4,10 @@ DiscoFail = raté
 DiscoGood = bien
 DiscoPerfect = parfait
 
+///// YY /////
+
+YYStrenghtJump = sautez !
+
 ///// HACK /////
 
 ProcessorBack = retour
