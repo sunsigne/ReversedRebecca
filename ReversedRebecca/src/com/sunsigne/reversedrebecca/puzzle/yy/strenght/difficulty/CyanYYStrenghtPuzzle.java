@@ -4,9 +4,9 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject.PROJECTILE_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 
-public class EasyYYStrenghtPuzzle extends NormalYYStrenghtPuzzle {
+public class CyanYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 
-	public EasyYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public CyanYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}

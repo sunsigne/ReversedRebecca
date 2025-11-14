@@ -1,17 +1,12 @@
 package com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtLauncherObject;
-import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
-import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject.PROJECTILE_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
-import com.sunsigne.reversedrebecca.puzzle.yy.strenght.YYStrenghtPuzzle;
-import com.sunsigne.reversedrebecca.system.Size;
 
-public class NormalYYStrenghtPuzzle extends YYStrenghtPuzzle {
+public class RedYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 
-	public NormalYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public RedYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
@@ -20,17 +15,7 @@ public class NormalYYStrenghtPuzzle extends YYStrenghtPuzzle {
 
 	@Override
 	public int getPuzzleSpeed() {
-		return 2;
-	}
-
-	@Override
-	public StrenghtPlayerObject getPlayer() {
-		return new StrenghtPlayerObject(this, getPuzzleSpeed());
-	}
-
-	@Override
-	public StrenghtLauncherObject getLauncher() {
-		return new StrenghtLauncherObject(this, getPuzzleSpeed());
+		return 4;
 	}
 
 	@Override
@@ -53,13 +38,23 @@ public class NormalYYStrenghtPuzzle extends YYStrenghtPuzzle {
 		createProjectile(PROJECTILE_TYPE.OVEN);
 		createProjectile(PROJECTILE_TYPE.TRASH);
 		createProjectile(PROJECTILE_TYPE.CHAIR);
-	}
-
-	protected void createProjectile(PROJECTILE_TYPE projectileType) {
-		StrenghtProjectileObject projectile = new StrenghtProjectileObject(this, getPuzzleSpeed(), projectileType);
-		projectile.setX(getCol(2) + Size.XS / 2);
-		projectile.setY(getRow(2) - Size.XS);
-		addProjectile(projectile);
+		
+		createProjectile(PROJECTILE_TYPE.CACTUS);
+		createProjectile(PROJECTILE_TYPE.WALL);
+		createProjectile(PROJECTILE_TYPE.MILITARYMEN);
+		createProjectile(PROJECTILE_TYPE.BARREL);
+		createProjectile(PROJECTILE_TYPE.OVEN);
+		createProjectile(PROJECTILE_TYPE.TRASH);
+		createProjectile(PROJECTILE_TYPE.CHAIR);
+		createProjectile(PROJECTILE_TYPE.CACTUS);
+		createProjectile(PROJECTILE_TYPE.WALL);
+		createProjectile(PROJECTILE_TYPE.U);
+		createProjectile(PROJECTILE_TYPE.ROCK);
+		createProjectile(PROJECTILE_TYPE.U);
+		createProjectile(PROJECTILE_TYPE.ROCK);
+		createProjectile(PROJECTILE_TYPE.U);
+		createProjectile(PROJECTILE_TYPE.ROCK);
+		createProjectile(PROJECTILE_TYPE.U);
 	}
 
 }

@@ -6,8 +6,9 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.NormalYYStrenghtPuzzle;
-import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.CyanYYStrenghtPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.RedYYStrenghtPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.YellowYYStrenghtPuzzle;
 
 public class YYStrenghtPuzzleFactory implements PuzzleFactory {
 
@@ -16,18 +17,17 @@ public class YYStrenghtPuzzleFactory implements PuzzleFactory {
 	@Override
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListener actionOnWinning, GenericListener actionOnLosing) {
-
-		switch (DifficultyOption.getDifficulty()) {
-		case EASY:
-			return new NormalYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case NORMAL:
-			return new NormalYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case HARD:
-			return new NormalYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+		switch (difficulty) {
+		case CYAN:
+			return new CyanYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+		case YELLOW:
+			return new YellowYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+		case RED:
+			return new RedYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+		default:
+			autoWin(actionOnWinning);
+			return null;
 		}
-
-		// should not occurs
-		return null;
 	}
 
 	////////// SOUND ////////////

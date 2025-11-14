@@ -38,7 +38,7 @@ public abstract class PuzzlerObject extends GameObject
 		init();
 	}
 
-	private void init() {
+	protected void init() {
 		loadTripleAction();
 		createTextAction();
 	}
