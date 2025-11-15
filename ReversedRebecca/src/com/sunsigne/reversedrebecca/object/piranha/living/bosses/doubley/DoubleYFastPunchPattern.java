@@ -16,7 +16,7 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	}
 
 	public DoubleYFastPunchPattern(BossObject boss) {
-		this(boss, 8, 60);
+		this(boss, 8, 80);
 	}
 
 	////////// PATTERN ////////////
@@ -37,8 +37,11 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	}
 
 	public void reduceSpeed() {
-		double reducer = Math.pow((double) time, 0.01d);
+		double reducer = Math.pow((double) time, 0.06d);
 
+		if(reducer < 1d)
+			return;
+		
 		double velX = (double) getBoss().getVelX() / reducer;
 		double velY = (double) getBoss().getVelY() / reducer;
 
