@@ -21,6 +21,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	private LivingAnimation pushUpAnimation;
 	private LivingAnimation pushUpOneHandAnimation;
 	private LivingAnimation throwingAnimation;
+	private LivingAnimation punchingAnimation;
 
 	///// orientable & not animated /////
 
@@ -37,6 +38,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		pushUpAnimation = new LivingAnimation(living, 11, true, 4, 5);
 		pushUpOneHandAnimation = new LivingAnimation(living, 11, true, 6, 7);
 		throwingAnimation = new LivingAnimation(living, 11, true, 11, 12);
+		punchingAnimation = new LivingAnimation(living, 8, true, 8, 8, 8, 8, 9, 10, 9, 10, 12, 12, 12, 12, 12, 12,
+				12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
 
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
 
@@ -59,6 +62,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 			return pushUpOneHandAnimation;
 		case THROWING:
 			return throwingAnimation;
+		case PUNCHING:
+			return punchingAnimation;
 		}
 
 		return standingGoodAnimation;

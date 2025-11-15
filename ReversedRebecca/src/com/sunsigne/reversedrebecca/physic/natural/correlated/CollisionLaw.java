@@ -70,6 +70,9 @@ public class CollisionLaw implements PhysicLaw {
 		if (reactorObject == null)
 			return false;
 
+		if(detectorObject == reactorObject)
+			return false;
+		
 		if (detectorObject instanceof Player && WallPassMode.isActive())
 			return false;
 

@@ -73,11 +73,7 @@
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
-	
-	tour YY :
-	mettre ue "musique venteuse" lorsqu'on entre dedans
-	créer la chute libre
-	
+
 	à faire :
 	la porte derrière le guarde -> mettre une sécurité (actuellement, elle est jaune, et vu que c'est un objet Piranha, elle peut être ouverte par un TA sans la clé)
 	des interactions avec trashman

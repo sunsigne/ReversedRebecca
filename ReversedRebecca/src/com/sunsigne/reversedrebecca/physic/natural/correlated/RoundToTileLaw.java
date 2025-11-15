@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator;
 import com.sunsigne.reversedrebecca.object.characteristics.SpeedVariator.SPEEDNESS;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
@@ -32,6 +33,10 @@ public class RoundToTileLaw implements PhysicLaw {
 				return;
 		}
 
+		// if the object does not depend on the pathFinder to move
+		if (object instanceof PathSearcher && ((PathSearcher) object).mustFollowPath() == false)
+			return;
+		
 		// if the object is stunned
 		if (variator instanceof Stunnable) {
 			if (((Stunnable) variator).isStunned())

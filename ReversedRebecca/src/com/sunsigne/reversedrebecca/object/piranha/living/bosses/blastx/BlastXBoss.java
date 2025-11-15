@@ -32,6 +32,11 @@ public class BlastXBoss extends BossObject {
 		}
 	}
 
+	@Override
+	public boolean updateFacingPlayer() {
+		return true;
+	}
+	
 	////////// EVOLUTION ////////////
 
 	@Override

@@ -25,7 +25,14 @@ public abstract class BossObject extends LivingObject {
 		if (handler != null)
 			new GameTimer(delay, () -> handler.addObject(pattern));
 	}
-
+	
+	////////// PATH FINDER ////////////
+	
+	@Override
+	public boolean mustFollowPath() {
+		return false;
+	}
+	
 	////////// STATE ////////////
 
 	private boolean activated;
@@ -36,9 +43,11 @@ public abstract class BossObject extends LivingObject {
 
 	public void activate() {
 		setCondition(CONDITION.GOOD);
-		setWalkingInPlace(true);
+		setWalkingInPlace(updateFacingPlayer());
 		this.activated = true;
 	}
+
+	public abstract boolean updateFacingPlayer();
 
 	////////// EVOLUTION ////////////
 
@@ -87,10 +96,10 @@ public abstract class BossObject extends LivingObject {
 	////////// TICK ////////////
 
 	public void interrupt() {
-		if(patterns != null);
+		if (patterns != null)
 			patterns.getState().interrupt();
 	}
-	
+
 	@Override
 	public void tick() {
 		super.tick();
@@ -111,6 +120,9 @@ public abstract class BossObject extends LivingObject {
 	}
 
 	private void facingPlayer() {
+		if (updateFacingPlayer() == false)
+			return;
+
 		Player player = new PlayerFinder().getPlayer();
 		if (player == null)
 			return;
@@ -129,7 +141,7 @@ public abstract class BossObject extends LivingObject {
 			pattern = getRandomPattern();
 
 			if (index > 0) {
-				while (pattern.getClass() == pattern_array[index - 1].getClass())
+				while (pattern.getClass() == pattern_array[index - 1].getClass() && pattern_array.length > 1)
 					pattern = getRandomPattern();
 			}
 

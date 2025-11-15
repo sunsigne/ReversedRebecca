@@ -4,10 +4,13 @@ import com.sunsigne.reversedrebecca.object.piranha.living.animation.DoubleYAnima
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
+import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossRestPattern;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 
 public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
@@ -57,11 +60,24 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		}
 	}
 
+	@Override
+	public boolean updateFacingPlayer() {
+		return false;
+	}
+	
+	////////// PATH FINDER ////////////
+	
+	@Override
+	public boolean mustFollowPath() {
+		return false;
+	}
+	
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
 		animation.run();
+		super.tick();
 	}
 
 	////////// TEXTURE ////////////
@@ -76,6 +92,32 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	@Override
 	protected void start(BossPattern pattern, int delay) {
 
+		// first patterns
+		if (getEvolution() <= 1) {
+			super.start(pattern, delay);
+			return;
+		}
+
+		// game is set to easy
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.EASY) {
+			super.start(pattern, delay);
+			return;
+		}
+
+		// boss is resting
+		if (pattern instanceof BossRestPattern) {
+			super.start(pattern, delay);
+			return;
+		}
+
+		// no handler found
+		var handler = getHandler();
+		if (handler == null)
+			return;
+
+		BossPattern dual_pattern = getDifferentRandomPattern(pattern);
+		new GameTimer(delay, () -> handler.addObject(pattern));
+		new GameTimer(delay, () -> handler.addObject(dual_pattern));
 	}
 
 	////////// PATTERN ////////////
@@ -84,7 +126,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
 
-		// list.addObject(new BlastXBombFromSkyPattern(this));
+		list.addObject(new DoubleYFastPunchPattern(this));
 		// list.addObject(new BlastXThrowingBombPattern(this));
 		// list.addObject(new BlastXThrowingCurvedBombPattern(this));
 		// list.addObject(new BlastXThrowingBigBombPattern(this));
