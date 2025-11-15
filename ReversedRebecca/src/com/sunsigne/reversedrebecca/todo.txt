@@ -70,6 +70,7 @@
 
 	à vérifier :
 	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ? même question pour les maxhp
+	- l'obj-30 qui déssine la couche suppérieur du char semble ne pas marcher. Est-ce que ça ne viendrait pas du changement de couche par le mod débug ? Je pensais avoir réglé ce problème
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)

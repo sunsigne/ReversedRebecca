@@ -1,5 +1,6 @@
 ///// WORLD /////
 
+OBJ-30 = Arena Set-up
 OBJ-01 = Plant
 OBJ-02 = Plant Slightly Downer
 OBJ-14 = Up Left Shower
