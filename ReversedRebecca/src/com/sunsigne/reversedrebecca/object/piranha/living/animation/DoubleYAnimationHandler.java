@@ -39,7 +39,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		pushUpOneHandAnimation = new LivingAnimation(living, 11, true, 6, 7);
 		throwingAnimation = new LivingAnimation(living, 11, true, 11, 12);
 		punchingAnimation = new LivingAnimation(living, 10, true, 9, 10, 9, 10, 12, 12, 12, 12, 12, 12,
-				12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
+				12, 12, 12, 12);
 		
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
 

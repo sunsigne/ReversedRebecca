@@ -16,7 +16,7 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	}
 
 	public DoubleYFastPunchPattern(BossObject boss) {
-		this(boss, 8, 80);
+		this(boss, 8, 77);
 	}
 
 	////////// PATTERN ////////////
@@ -47,6 +47,9 @@ public class DoubleYFastPunchPattern extends BossPattern {
 
 		getBoss().setVelX((int) velX);
 		getBoss().setVelY((int) velY);
+		
+		if(getBoss().isMotionlessbyX() && getBoss().isMotionlessbyY())
+			getBoss().setPushingDirection(null);
 	}
 
 	////////// TICK ////////////

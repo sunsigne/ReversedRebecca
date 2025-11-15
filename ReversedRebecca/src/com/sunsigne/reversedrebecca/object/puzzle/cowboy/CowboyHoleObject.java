@@ -41,15 +41,6 @@ public class CowboyHoleObject extends PuzzleObject implements TickFree, Sheetabl
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
 
-	////////// VELOCICY ////////////
-
-	// collision detection is disabled when objects are motionless
-
-	@Override
-	public boolean isMotionless() {
-		return false;
-	}
-
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;

@@ -24,6 +24,7 @@ public abstract class BossObject extends LivingObject {
 		var handler = getHandler();
 		if (handler != null)
 			new GameTimer(delay, () -> handler.addObject(pattern));
+		setHurtWhenPushing(true);
 	}
 	
 	////////// PATH FINDER ////////////

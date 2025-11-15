@@ -64,14 +64,23 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	public boolean updateFacingPlayer() {
 		return false;
 	}
-	
+
+	////////// VELOCICY ////////////
+
+	// allow to bypass collision with all walls
+	@Override
+	public boolean isMotionless() {
+		return true;
+	}
+
 	////////// PATH FINDER ////////////
-	
+
+	// allow to bypass the "round to tile" law
 	@Override
 	public boolean mustFollowPath() {
 		return false;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
