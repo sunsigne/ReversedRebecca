@@ -1,6 +1,5 @@
 package com.sunsigne.reversedrebecca.object.other;
 
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class ScreenAnimation extends AnimatedDecorationObject {
@@ -36,7 +35,19 @@ public class ScreenAnimation extends AnimatedDecorationObject {
 
 		iterations--;
 		if (iterations <= 0)
-			LAYER.PUZZLE.getHandler().removeObject(this);
+			removeObject();
+	}
+
+	////////// TEXTURE ////////////
+
+	@Override
+	public int getSheetWidth() {
+		return Window.WIDHT;
+	}
+
+	@Override
+	public int getSheetHeight() {
+		return Window.HEIGHT;
 	}
 
 }
