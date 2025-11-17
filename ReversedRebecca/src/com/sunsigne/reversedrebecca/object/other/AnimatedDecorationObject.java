@@ -36,6 +36,10 @@ public class AnimatedDecorationObject extends DecorationObject {
 	private int animation_time;
 	private int time;
 
+	protected int getTime() {
+		return time;
+	}
+	
 	@Override
 	public void tick() {
 		runAnimation();

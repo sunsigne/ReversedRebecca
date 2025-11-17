@@ -89,6 +89,24 @@ Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 Note : si le programmeur Piranha précise des dimensions à afficher différentes des réelles dimensions des images constituant l'animation dans le fichier de référence, elles doivent alors avoir une largeur et une hauteur identique (le jeu ne pouvant pas à la fois "deviner" la largeur d'une seule image et leurs nombres, la largeur est définie par le jeu comme étant égale à la hauteur).
 
 
+////// CREATE_SCREEN_ANIMATION //////
+
+Le Type de Requête CREATE_SCREEN_ANIMATION permet de créer une animation au niveau de l'écran.
+
+Fichier de référence : « textures/other/screen/(cible).png ». 
+
+Note : les images constituant l'animation doivent toutes être rassemblées dans un seul fichier, en ligne de gauche à droite. Le jeu détectera automatiquement leur nombre.
+
+En plus des Cibles pour le fichier de référence et pour la durée, une troisième Cible permet d'établir combien de fois l'animation doit être jouée avant de disparaître.
+
+Exemple :
+! -> SPEEDLINES = CREATE_SPEEDLINES -> SPEEDLINES,5,10
+
+Lorsque la Condition sera vérifiée, sera créé un visuel animé :
+- nécessitant le fichier de référence dont le nom est « speedlines.png »,
+- où chaque image reste pendant 5 ticks (60 ticks = 1 seconde),
+- qui disparaîtra après avoir été joué 10 fois.
+
 
 ////// CREATE_SIMULATION //////
 
