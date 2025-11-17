@@ -53,12 +53,12 @@ public class ScreenAnimation extends AnimatedDecorationObject {
 
 	@Override
 	public int getSheetWidth() {
-		return Window.WIDHT;
+		return Window.WIDHT / 10;
 	}
 
 	@Override
 	public int getSheetHeight() {
-		return Window.HEIGHT;
+		return Window.HEIGHT / 10;
 	}
 
 	////////// RENDER ////////////
