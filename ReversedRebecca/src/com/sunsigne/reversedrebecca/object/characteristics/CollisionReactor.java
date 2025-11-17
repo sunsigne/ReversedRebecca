@@ -108,6 +108,11 @@ public interface CollisionReactor extends Position {
 
 		int velX = velocityObject.getVelX();
 		int velY = velocityObject.getVelY();
+		int speed = velocityObject.getSpeed();
+		
+		// besure the scan process only if the object is "pushed"
+		if(Math.abs(velX) <= speed && Math.abs(velY) <= speed)
+			return false;
 
 		boolean left = detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds());
 		boolean right = detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds());
