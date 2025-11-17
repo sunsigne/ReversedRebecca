@@ -30,7 +30,9 @@ public interface CollisionReactor extends Position {
 	}
 
 	default void collidingReaction(CollisionDetector detectorObject, boolean blockPass, GenericListener listener) {
-		
+		if (blockPass && multipleCollisionsCase(detectorObject, blockPass, listener))
+			return;
+
 		boolean actionDone = false;
 
 		TilePos tilePos = new TilePos();
@@ -89,6 +91,104 @@ public interface CollisionReactor extends Position {
 				listener.doAction();
 			}
 		}
+	}
+
+	private boolean multipleCollisionsCase(CollisionDetector detectorObject, boolean blockPass,
+			GenericListener listener) {
+
+		// you can't handle with accuracy multiple collisions without knowing from where
+		// the object is coming from
+		if (detectorObject instanceof Velocity == false)
+			return false;
+
+		Velocity velocityObject = (Velocity) detectorObject;
+
+		if (velocityObject.isMotionless())
+			return false;
+
+		int velX = velocityObject.getVelX();
+		int velY = velocityObject.getVelY();
+
+		boolean left = detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds());
+		boolean right = detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds());
+		boolean up = detectorObject.getBounds(DIRECTION.UP).intersects(getBounds());
+		boolean down = detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds());
+
+		if (left && right == false && up == false && down == false)
+			return false;
+		if (left == false && right && up == false && down == false)
+			return false;
+		if (left == false && right == false && up && down == false)
+			return false;
+		if (left == false && right == false && up == false && down)
+			return false;
+
+		boolean actionDone = false;
+
+		TilePos tilePos = new TilePos();
+
+		// going left = coming from right
+		if (Math.abs(velX) >= Math.abs(velY) && velX < 0) {
+			if (detectorObject instanceof Player)
+				detectorObject.setX(getBounds().x + getBounds().width);
+			else
+				detectorObject.setX(tilePos.getTilePos(getX() + getBounds().width, getSize()));
+
+			if (listener != null && !actionDone) {
+				actionDone = true;
+				listener.doAction();
+			}
+
+			return true;
+		}
+
+		// going right = coming from left
+		if (Math.abs(velX) >= Math.abs(velY) && velX > 0) {
+			if (detectorObject instanceof Player)
+				detectorObject.setX(getBounds().x - detectorObject.getWidth());
+			else
+				detectorObject.setX(tilePos.getTilePos(getX() - detectorObject.getWidth(), getSize()));
+
+			if (listener != null && !actionDone) {
+				actionDone = true;
+				listener.doAction();
+			}
+
+			return true;
+		}
+
+		// going up = coming from down
+		if (Math.abs(velX) < Math.abs(velY) && velY < 0) {
+			if (detectorObject instanceof Player)
+				detectorObject.setY(getBounds().y + getBounds().height);
+			else
+				detectorObject.setY(tilePos.getTilePos(getY() + getBounds().height, getSize()));
+
+			if (listener != null && !actionDone) {
+				actionDone = true;
+				listener.doAction();
+			}
+
+			return true;
+		}
+
+		// going down = coming from up
+		if (Math.abs(velX) < Math.abs(velY) && velY > 0) {
+			if (detectorObject instanceof Player)
+				detectorObject.setY(getBounds().y - detectorObject.getHeight());
+			else
+				detectorObject.setY(tilePos.getTilePos(getY() - detectorObject.getHeight(), getSize()));
+
+			if (listener != null && !actionDone) {
+				actionDone = true;
+				listener.doAction();
+			}
+
+			return true;
+		}
+
+		// unkown case
+		return false;
 	}
 
 }
