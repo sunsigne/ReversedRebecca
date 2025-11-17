@@ -1,12 +1,17 @@
 package com.sunsigne.reversedrebecca.object.other;
 
+import java.awt.AlphaComposite;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 import com.sunsigne.reversedrebecca.system.Window;
 
 public class ScreenAnimation extends AnimatedDecorationObject {
 
-	public ScreenAnimation(String name, int animation_time, int iterations) {
+	public ScreenAnimation(String name, int animation_time, int iterations, boolean transition) {
 		super(0, 0, Window.WIDHT, Window.HEIGHT, name, animation_time, true);
 		this.iterations = iterations;
+		this.transition = transition;
 	}
 
 	////////// NAME ////////////
@@ -34,8 +39,14 @@ public class ScreenAnimation extends AnimatedDecorationObject {
 			return;
 
 		iterations--;
-		if (iterations <= 0)
-			removeObject();
+
+		if (iterations <= 0) {
+			fading = true;
+			if (transition == false)
+				removeObject();
+			else if (alpha <= 0f)
+				removeObject();
+		}
 	}
 
 	////////// TEXTURE ////////////
@@ -48,6 +59,30 @@ public class ScreenAnimation extends AnimatedDecorationObject {
 	@Override
 	public int getSheetHeight() {
 		return Window.HEIGHT;
+	}
+
+	////////// RENDER ////////////
+
+	private boolean transition;
+	private boolean fading;
+	private float alpha;
+	private float ALPHA_GROWTH = 0.15f;
+
+	@Override
+	public void render(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+
+		if (transition) {
+			if (fading)
+				alpha = Math.max(alpha - ALPHA_GROWTH, 0);
+			else
+				alpha = Math.min(alpha + ALPHA_GROWTH, 1f);
+
+			g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
+		}
+
+		super.render(g);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 }

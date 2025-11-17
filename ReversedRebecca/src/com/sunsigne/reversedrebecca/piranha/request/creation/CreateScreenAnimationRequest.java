@@ -37,8 +37,9 @@ public class CreateScreenAnimationRequest implements Request {
 		String name = String.valueOf(target.split(",")[0]).toLowerCase();
 		int time = Integer.valueOf(target.split(",")[1]);
 		int iterations = Integer.valueOf(target.split(",")[2]);
+		boolean transition = Boolean.parseBoolean(target.split(",")[3]);
 
-		GameObject creation = new ScreenAnimation(name, time, iterations);
+		GameObject creation = new ScreenAnimation(name, time, iterations, transition);
 		LAYER.PUZZLE.addObject(creation);
 	}
 
