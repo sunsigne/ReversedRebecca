@@ -24,6 +24,7 @@ Le Type de Requête CAMERA permet de définir le comportement de la Caméra, ou 
 Les Cibles permettent de modifier le comportement de la Caméra sont les suivantes :
 PLAYER : ordonne à la Caméra de suivre le joueur. Au moment de son enclenchement, Celle-ci se "déplacera très rapidement" vers lui au lieu de se "téléporter" sur sa Position.
 FIX : ordonne à la Caméra de cesser de suivre le joueur et de rester "là où elle se trouve actuellement".
+ZOOM : ordonne à la Caméra d'effectuer un zoom pendant un court instant. La Caméra retourne rapidement à la normale.
 
 Exemple : 
 TIME -> 0 = CAMERA -> 0-0

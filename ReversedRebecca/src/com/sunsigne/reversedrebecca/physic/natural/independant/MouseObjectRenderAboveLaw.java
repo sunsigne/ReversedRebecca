@@ -30,7 +30,6 @@ public class MouseObjectRenderAboveLaw extends IndependantLaw {
 		if (object instanceof MouseObject)
 			if (((MouseObject) object).replaceMouse())
 				mouse = (MouseObject) object;
-
 	}
 
 	////////// RENDER ////////////

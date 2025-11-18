@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraMovingLaw;
+import com.sunsigne.reversedrebecca.physic.natural.independant.CameraZoomLaw;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
@@ -38,6 +39,12 @@ public class CameraRequest implements Request, CameraDependency {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+		if (target.equalsIgnoreCase("zoom")) {
+			PhysicLaw law = PhysicList.getList().getObject(new CameraZoomLaw());
+			((CameraZoomLaw) law).setActive(true);
+			return;
+		}
+
 		PhysicLaw law = PhysicList.getList().getObject(new CameraMovingLaw());
 		CameraMovingLaw camera = (CameraMovingLaw) law;
 

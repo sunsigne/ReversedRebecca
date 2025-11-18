@@ -6,6 +6,18 @@ import com.sunsigne.reversedrebecca.system.Window;
 
 public class Camera {
 
+	////////// ZOOM ////////////
+
+	private static float zoom;
+
+	public float getZoom() {
+		return zoom;
+	}
+
+	public void setZoom(float zoom) {
+		Camera.zoom = zoom;
+	}
+
 	////////// POSITION ////////////
 
 	private static float x, y;
@@ -31,10 +43,11 @@ public class Camera {
 		int py = position.getY();
 		int pw = position.getWidth();
 		int ph = position.getHeight();
-		
-		if(withRoom == false) {
+
+		if (withRoom == false) {
 			px = px + position.getWidth() / 2;
-			py = py + position.getHeight() / 2;;
+			py = py + position.getHeight() / 2;
+			;
 			pw = 0;
 			ph = 0;
 		}

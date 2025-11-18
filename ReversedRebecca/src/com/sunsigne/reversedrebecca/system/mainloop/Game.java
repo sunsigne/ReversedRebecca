@@ -16,6 +16,7 @@ import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.camera.Camera;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadAdapter;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadUpdate;
@@ -252,7 +253,8 @@ public class Game extends Canvas implements Runnable {
 		g.fillRect(0, 0, Window.WIDHT, Window.HEIGHT);
 
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.scale(Window.SCALE_X, Window.SCALE_Y);
+		float zoom = new Camera().getZoom();
+		g2d.scale(Window.SCALE_X * zoom, Window.SCALE_Y * zoom);
 
 		SuperHandler.render(g);
 

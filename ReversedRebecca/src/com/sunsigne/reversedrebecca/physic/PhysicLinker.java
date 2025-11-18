@@ -18,6 +18,7 @@ import com.sunsigne.reversedrebecca.physic.natural.correlated.PlayerBlockingAvoi
 import com.sunsigne.reversedrebecca.physic.natural.correlated.RoundToTileLaw;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.VelocityLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.BlinkingRecoveringLaw;
+import com.sunsigne.reversedrebecca.physic.natural.independant.CameraZoomLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.ExplosionBrightnessLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadePuzzleLaw;
@@ -49,6 +50,7 @@ public class PhysicLinker {
 	private static final PhysicLaw C_SHAKE = PhysicList.getList().getObject(new CameraShakingLaw());
 
 	private static final IndependantLaw I_BLINKING = new BlinkingRecoveringLaw().getIndependantLaw();
+	private static final IndependantLaw I_CAMERA_ZOOM = new CameraZoomLaw().getIndependantLaw();
 	private static final IndependantLaw I_EXPLOSION = new ExplosionBrightnessLaw().getIndependantLaw();
 	private static final IndependantLaw I_FADE_MENU = new FadeMenuLaw().getIndependantLaw();
 	private static final IndependantLaw I_FADE_PUZZLE = new FadePuzzleLaw().getIndependantLaw();
@@ -85,7 +87,7 @@ public class PhysicLinker {
 	public static final PhysicLaw[] PIRANHA = { C_COLLISION, C_SHAKE, I_HIGHLIGHT, I_INTERACT, I_WAITFOR, D_HITBOX };
 	public static final PhysicLaw[] PLAYER = { C_VELOCITY, C_GOAL, C_COLLISION, C_TILE, C_PATH, C_CAMERA, C_SHAKE, I_BLINKING,
 			I_FADE_PUZZLE, I_HIGHLIGHT, I_DEATH, I_LOADING, I_MOUSE, I_PLAYER, I_WAITFOR, D_SWIFT, D_HITBOX, D_WALLPASS };
-	public static final PhysicLaw[] WORLD = { C_SHAKE, I_BLINKING, I_EXPLOSION, I_FADE_MENU, I_LOADING, I_PSYCHO, I_INTERACT, I_LAYER,
+	public static final PhysicLaw[] WORLD = { C_SHAKE, I_BLINKING, I_CAMERA_ZOOM, I_EXPLOSION, I_FADE_MENU, I_LOADING, I_PSYCHO, I_INTERACT, I_LAYER,
 			D_MULTI, D_CRIT };
 	public static final PhysicLaw[] LIGHT = { C_SHAKE, I_EXPLOSION, I_LOADING };
 	
