@@ -17,7 +17,7 @@ import com.sunsigne.reversedrebecca.world.World;
 public class TransluantLayer implements CameraDependency {
 
 	public void drawGray(Graphics g, int width, int height) {
-		Color gray = new Color(64, 64, 64, 204);
+		Color gray = new Color(64, 64, 64, 160);
 		g.setColor(gray);
 		g.fillRect(0, 0, width, height);
 	}
