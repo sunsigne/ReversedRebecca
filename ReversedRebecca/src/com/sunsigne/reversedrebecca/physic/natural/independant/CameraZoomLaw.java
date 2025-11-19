@@ -23,9 +23,13 @@ public class CameraZoomLaw extends IndependantLaw {
 	private boolean zooming;
 
 	public void setActive(boolean active) {
+		if (this.active)
+			lens = MAX_ZOOM;
+		else
+			lens = 1f;
+
 		this.active = active;
 		this.zooming = active;
-		lens = 1f;
 	}
 
 	@Override
@@ -54,7 +58,7 @@ public class CameraZoomLaw extends IndependantLaw {
 
 	private float lens;
 	private float GROTHW = 0.15f;
-	private float MAX_ZOOM = 2f;
+	private float MAX_ZOOM = 3f;
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {

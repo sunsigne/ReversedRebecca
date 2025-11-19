@@ -254,7 +254,9 @@ public class Game extends Canvas implements Runnable {
 
 		Graphics2D g2d = (Graphics2D) g;
 		float zoom = new Camera().getZoom();
+		g2d.translate(Window.WIDHT / 2, Window.HEIGHT / 2);
 		g2d.scale(Window.SCALE_X * zoom, Window.SCALE_Y * zoom);
+		g2d.translate(-Window.WIDHT / 2, -Window.HEIGHT / 2);
 
 		SuperHandler.render(g);
 
