@@ -48,9 +48,6 @@
 
 	////////// EN COURS ////////////
 
-	yy :
-	problème : lorsqu'il pousse le joueur trop fort, il peut l'éjecter de la map
-
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
