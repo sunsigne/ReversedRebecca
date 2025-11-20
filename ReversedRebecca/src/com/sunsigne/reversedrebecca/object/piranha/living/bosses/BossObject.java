@@ -26,14 +26,14 @@ public abstract class BossObject extends LivingObject {
 			new GameTimer(delay, () -> handler.addObject(pattern));
 		setHurtWhenPushing(true);
 	}
-	
+
 	////////// PATH FINDER ////////////
-	
+
 	@Override
 	public boolean mustFollowPath() {
 		return false;
 	}
-	
+
 	////////// STATE ////////////
 
 	private boolean activated;
@@ -106,10 +106,12 @@ public abstract class BossObject extends LivingObject {
 		super.tick();
 
 		// activation
+		boolean firstAttack = false;
 		if (isActivated() == false) {
-			if (new PlayerFinder().isPlayerCloserThan(this, 5))
+			if (new PlayerFinder().isPlayerCloserThan(this, 6)) {
 				activate();
-			else
+				firstAttack = true;
+			} else
 				return;
 		}
 
@@ -117,7 +119,7 @@ public abstract class BossObject extends LivingObject {
 		facingPlayer();
 
 		if (patterns == null)
-			startRandomPatternCycle();
+			startRandomPatternCycle(firstAttack);
 	}
 
 	private void facingPlayer() {
@@ -134,7 +136,7 @@ public abstract class BossObject extends LivingObject {
 		}
 	}
 
-	protected void startRandomPatternCycle() {
+	protected void startRandomPatternCycle(boolean firstAttack) {
 		BossPattern[] pattern_array = new BossPattern[0];
 		BossPattern pattern = null;
 
@@ -153,7 +155,7 @@ public abstract class BossObject extends LivingObject {
 		pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, rest);
 
 		patterns = new Cycloid<>(pattern_array);
-		start(patterns.getState(), 60);
+		start(patterns.getState(), firstAttack ? 0 : 60);
 	}
 
 }

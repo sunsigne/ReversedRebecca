@@ -98,7 +98,7 @@ Fichier de référence : « textures/other/screen/(cible).png ».
 Note : les images constituant l'animation doivent toutes être rassemblées dans un seul fichier, en ligne de gauche à droite. Le jeu détectera automatiquement leur nombre.
 
 En plus des Cibles pour le fichier de référence et pour la durée, le Type de Requête CREATE_SCREEN_ANIMATION a besoin de deux Cibles supplémentaires :
-- le nombre d'itérations, qui explicite combien de fois l'animation doit être jouée avant de disparaître.
+- le nombre d'images constituant l'animation, jouées avant que celle-ci ne disparaisse. Si ce nombre est plus grand que le nombre d'images dans le fichier de référence, l'animation sera bouclée.
 - un boolean informant de si l'animation doit, ou non, apparaître et disparaître dans un fondu.
 
 Exemple :
@@ -107,7 +107,7 @@ Exemple :
 Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - nécessitant le fichier de référence dont le nom est « speedlines.png »,
 - où chaque image reste pendant 5 ticks (60 ticks = 1 seconde),
-- qui disparaîtra après avoir été joué 10 fois.
+- qui disparaîtra après que 10 images aient été jouée.
 - qui apparaîtra et disparaîtra dans un fondu.
 
 
