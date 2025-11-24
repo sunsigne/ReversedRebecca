@@ -29,9 +29,17 @@ public abstract class BossObject extends LivingObject {
 
 	////////// PATH FINDER ////////////
 
+	private boolean mustFollowPath;
+	
+
+	public void setMustFollowPath(boolean mustFollowPath) {
+		this.mustFollowPath = mustFollowPath;
+	}
+	
+	// allow to bypass the "round to tile" law
 	@Override
 	public boolean mustFollowPath() {
-		return false;
+		return mustFollowPath;
 	}
 
 	////////// STATE ////////////

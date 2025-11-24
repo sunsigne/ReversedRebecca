@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -189,6 +190,8 @@ public class PathFinder implements Position {
 	}
 
 	private boolean wallOnTheWay(int from, boolean horizontal) {
+		if (initial_searcher instanceof DoubleYFeeling)
+			return false;
 
 		Player player = null;
 		int range = horizontal ? tileX : tileY;

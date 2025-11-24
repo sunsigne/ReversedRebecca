@@ -1,13 +1,15 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley;
 
+import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher.PUSHING_DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling.DOUBLE_Y_CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class DoubleYTornadoPattern extends BossPattern {
@@ -17,7 +19,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 	}
 
 	public DoubleYTornadoPattern(BossObject boss) {
-		this(boss, 6, 4 * Game.SEC);
+		this(boss, 9, 4 * Game.SEC);
 	}
 
 	////////// PATTERN ////////////
@@ -30,22 +32,26 @@ public class DoubleYTornadoPattern extends BossPattern {
 
 	private void movingToCenter() {
 		getBoss().setMustFollowPath(true);
-		
-		PlayerClone clone = new PlayerFinder().getPlayerClone();
-		
-		//getBoss().setGoal(goal);
+		Position pos = new PlayerFinder().getPlayerClone();
+		int x = Size.M * pos.getX();
+		int y = Size.M * (pos.getY() - Size.M);
+		GoalObject goal = new GoalObject(x, y, true);
+		getBoss().setGoal(goal);
+
+		if (goal.getX() == getBoss().getX() && goal.getY() - Size.M / 2 == getBoss().getY())
+			getBoss().setFacing(DIRECTION.DOWN);
 	}
-	
+
 	private void movePlayerTowardTornado(Player player) {
 		int xPlayer = player.getX();
 		int yPlayer = player.getY();
 		int xBoss = getBoss().getX();
 		int yBoss = getBoss().getY();
-		
-		int speed = (int) Math.sqrt(time);
+
+		int speed = (int) Math.sqrt(time - getDelayBetweenTwoAttacks());
 		int xSpeed = xBoss > xPlayer ? speed : -speed;
 		int ySpeed = yBoss > yPlayer ? speed : -speed;
-		
+
 		player.setX(player.getX() + xSpeed);
 		player.setY(player.getY() + ySpeed);
 	}
@@ -59,6 +65,11 @@ public class DoubleYTornadoPattern extends BossPattern {
 	public void tick() {
 		super.tick();
 		time++;
+
+		if (time < getDelayBetweenTwoAttacks()) {
+			movingToCenter();
+			return;
+		}
 
 		if (attacking == false)
 			startingTornado();
