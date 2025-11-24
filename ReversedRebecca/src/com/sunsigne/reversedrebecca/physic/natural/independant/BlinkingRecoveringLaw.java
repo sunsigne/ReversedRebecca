@@ -57,6 +57,9 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 
 		Health health = (Health) object;
 
+		if (health.isDead() || health.isRegisteredAsDead())
+			shouldBlink = false;
+
 		if (!health.isRecovering())
 			return;
 
