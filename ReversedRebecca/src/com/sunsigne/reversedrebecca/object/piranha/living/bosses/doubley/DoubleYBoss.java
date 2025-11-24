@@ -84,7 +84,9 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	@Override
 	protected void start(BossPattern pattern, int delay) {
-
+		setPushingDirection(null);
+		setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
+		
 		// first patterns
 		if (getEvolution() <= 1) {
 			super.start(pattern, delay);
@@ -119,7 +121,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
 
-		//list.addObject(new DoubleYFastPunchPattern(this));
+		list.addObject(new DoubleYFastPunchPattern(this));
 		list.addObject(new DoubleYTornadoPattern(this));
 
 		return new RandomGenerator().getElementFromList(list);

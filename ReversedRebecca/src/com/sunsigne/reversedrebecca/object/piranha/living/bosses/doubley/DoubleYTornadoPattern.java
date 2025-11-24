@@ -19,7 +19,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 	}
 
 	public DoubleYTornadoPattern(BossObject boss) {
-		this(boss, 9, 4 * Game.SEC);
+		this(boss, 8, 3 * Game.SEC);
 	}
 
 	////////// PATTERN ////////////
@@ -89,7 +89,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 		attacking = true;
 		getBoss().setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
 		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
-		getBoss().setMustFollowPath(true);
+		getBoss().setMustFollowPath(false);
 	}
 
 }
