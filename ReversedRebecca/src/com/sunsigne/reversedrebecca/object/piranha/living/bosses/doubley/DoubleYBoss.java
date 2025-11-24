@@ -5,12 +5,12 @@ import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimat
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossRestPattern;
-import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.object.piranha.living.bosses.DoubleYRestPattern;
+import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.system.DifficultyOption;
-import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 
 public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
@@ -48,13 +48,8 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	@Override
 	public int get_num_of_patterns_before_resting() {
-		switch (DifficultyOption.getDifficulty()) {
-		case EASY:
-			return 1;
-		case NORMAL:
-			return 2;
-		case HARD:
-			return 3;
+		switch (getEvolution()) {
+		case 1:
 		default:
 			return 2;
 		}
@@ -86,15 +81,9 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	protected void start(BossPattern pattern, int delay) {
 		setPushingDirection(null);
 		setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
-		
+
 		// first patterns
 		if (getEvolution() <= 1) {
-			super.start(pattern, delay);
-			return;
-		}
-
-		// game is set to easy
-		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.EASY) {
 			super.start(pattern, delay);
 			return;
 		}
@@ -109,14 +98,11 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		var handler = getHandler();
 		if (handler == null)
 			return;
-
-		BossPattern dual_pattern = getDifferentRandomPattern(pattern);
-		new GameTimer(delay, () -> handler.addObject(pattern));
-		new GameTimer(delay, () -> handler.addObject(dual_pattern));
 	}
 
 	////////// PATTERN ////////////
 
+	// unused
 	@Override
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
@@ -125,6 +111,22 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		list.addObject(new DoubleYTornadoPattern(this));
 
 		return new RandomGenerator().getElementFromList(list);
+	}
+
+	@Override
+	protected void startRandomPatternCycle(boolean firstAttack) {
+		BossPattern[] pattern_array = new BossPattern[0];
+
+		BossPattern fastPunch = new DoubleYFastPunchPattern(this);
+		BossPattern tornado = new DoubleYTornadoPattern(this);
+		BossPattern rest = new DoubleYRestPattern(this);
+
+		if (getEvolution() < 1)
+			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
+					tornado, rest);
+
+		patterns = new Cycloid<>(pattern_array);
+		start(patterns.getState(), firstAttack ? 0 : 60);
 	}
 
 	////////// COLLISION ////////////

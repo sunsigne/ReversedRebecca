@@ -16,7 +16,7 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	}
 
 	public DoubleYFastPunchPattern(BossObject boss) {
-		this(boss, 8, 77);
+		this(boss, 6, 77);
 	}
 
 	////////// PATTERN ////////////
