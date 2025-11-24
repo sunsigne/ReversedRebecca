@@ -55,6 +55,7 @@ public class RedYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 		createProjectile(PROJECTILE_TYPE.U);
 		createProjectile(PROJECTILE_TYPE.ROCK);
 		createProjectile(PROJECTILE_TYPE.U);
+		createProjectile(PROJECTILE_TYPE.ROCK);
 	}
 
 }

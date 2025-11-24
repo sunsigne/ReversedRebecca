@@ -53,6 +53,7 @@ public class YellowYYStrenghtPuzzle extends YYStrenghtPuzzle {
 		createProjectile(PROJECTILE_TYPE.OVEN);
 		createProjectile(PROJECTILE_TYPE.TRASH);
 		createProjectile(PROJECTILE_TYPE.CHAIR);
+		createProjectile(PROJECTILE_TYPE.CACTUS);
 	}
 
 	protected void createProjectile(PROJECTILE_TYPE projectileType) {

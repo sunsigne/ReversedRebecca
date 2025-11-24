@@ -31,6 +31,7 @@ public class CyanYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 		createProjectile(PROJECTILE_TYPE.SARAH);
 		createProjectile(PROJECTILE_TYPE.WALL);
 		createProjectile(PROJECTILE_TYPE.CHAIR);
+		createProjectile(PROJECTILE_TYPE.ROCK);
 	}
 
 }

@@ -31,6 +31,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public abstract class YYStrenghtPuzzle extends Puzzle {
 
@@ -90,17 +91,19 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	////////// TICK ////////////
 
+	private int WIN_CONDIITON_TIME = 14 * Game.SEC;
 	private int time;
 	private int loop = 108 / getPuzzleSpeed();
-	
+
 	@Override
 	public void tick() {
 		if (new PlayerFinder().getPlayer().isDead())
 			return;
 
 		time++;
-
-		if (projectile_list.getList().isEmpty() && projectile == null)
+		
+		WIN_CONDIITON_TIME--;
+		if (WIN_CONDIITON_TIME <= 0)
 			closePuzzle(true);
 
 		if (time == loop / 2) {
