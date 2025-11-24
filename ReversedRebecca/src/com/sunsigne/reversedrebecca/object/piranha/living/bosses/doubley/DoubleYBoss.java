@@ -102,6 +102,11 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	////////// PATTERN ////////////
 
+	@Override
+	public int get_recovery_time_betweem_two_single_patterns() {
+		return 40;
+	}
+	
 	// unused
 	@Override
 	public BossPattern getRandomPattern() {

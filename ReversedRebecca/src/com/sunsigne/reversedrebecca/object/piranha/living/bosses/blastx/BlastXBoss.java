@@ -73,6 +73,11 @@ public class BlastXBoss extends BossObject {
 	////////// PATTERN ////////////
 
 	@Override
+	public int get_recovery_time_betweem_two_single_patterns() {
+		return 90;
+	}
+
+	@Override
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
 

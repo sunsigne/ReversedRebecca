@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleY
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class DoubleYTornadoPattern extends BossPattern {
 
@@ -19,7 +18,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 	}
 
 	public DoubleYTornadoPattern(BossObject boss) {
-		this(boss, 8, 3 * Game.SEC);
+		this(boss, 8, 110);
 	}
 
 	////////// PATTERN ////////////
@@ -48,7 +47,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 		int xBoss = getBoss().getX();
 		int yBoss = getBoss().getY();
 
-		int speed = (int) Math.sqrt(time - getDelayBetweenTwoAttacks());
+		int speed = (int) (0.8f * Math.sqrt(time - getDelayBetweenTwoAttacks()));
 		int xSpeed = xBoss > xPlayer ? speed : -speed;
 		int ySpeed = yBoss > yPlayer ? speed : -speed;
 
@@ -87,9 +86,14 @@ public class DoubleYTornadoPattern extends BossPattern {
 
 	private void startingTornado() {
 		attacking = true;
-		getBoss().setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
-		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
-		getBoss().setMustFollowPath(false);
+		DoubleYBoss boss = getBoss();
+
+		boss.setX(boss.getGoal().getX());
+		boss.setY(boss.getGoal().getY() - Size.M / 2);
+		boss.setFacing(DIRECTION.DOWN);
+		boss.setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
+		boss.setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
+		boss.setMustFollowPath(false);
 	}
 
 }

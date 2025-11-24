@@ -43,7 +43,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
 
-		tiredAnimation = new LivingAnimation(living, 30, false, 1, 2);
+		tiredAnimation = new LivingAnimation(living, 60, false, 1, 2);
 		tornadoAnimation = new LivingAnimation(living, 3, false, 15, 16);
 
 	}
