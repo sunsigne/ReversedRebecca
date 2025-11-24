@@ -135,11 +135,8 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	public BossPattern getRandomPattern() {
 		var list = new GameList<BossPattern>(LISTTYPE.ARRAY);
 
-		list.addObject(new DoubleYFastPunchPattern(this));
-		// list.addObject(new BlastXThrowingBombPattern(this));
-		// list.addObject(new BlastXThrowingCurvedBombPattern(this));
-		// list.addObject(new BlastXThrowingBigBombPattern(this));
-		// list.addObject(new BlastXThrowingGhostBombPattern(this));
+		// list.addObject(new DoubleYFastPunchPattern(this));
+		list.addObject(new DoubleYTornadoPattern(this));
 
 		return new RandomGenerator().getElementFromList(list);
 	}

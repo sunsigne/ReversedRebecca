@@ -30,6 +30,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	///// not orientable & animated /////
 
 	private LivingAnimation tiredAnimation;
+	private LivingAnimation tornadoAnimation;
 
 	@Override
 	protected void loadAnimations() {
@@ -38,12 +39,12 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		pushUpAnimation = new LivingAnimation(living, 11, true, 4, 5);
 		pushUpOneHandAnimation = new LivingAnimation(living, 11, true, 6, 7);
 		throwingAnimation = new LivingAnimation(living, 11, true, 11, 12);
-		punchingAnimation = new LivingAnimation(living, 10, true, 9, 10, 9, 10, 12, 12, 12, 12, 12, 12,
-				12, 12, 12, 12);
-		
+		punchingAnimation = new LivingAnimation(living, 10, true, 9, 10, 9, 10, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
+
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
 
 		tiredAnimation = new LivingAnimation(living, 30, false, 1, 2);
+		tornadoAnimation = new LivingAnimation(living, 3, false, 15, 16);
 
 	}
 
@@ -56,6 +57,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 			return getStandingWalkingAnimation(standingGoodAnimation, walkingGoodAnimation);
 		case TIRED:
 			return tiredAnimation;
+		case TORNADO:
+			return tornadoAnimation;
 		case PUSH_UP:
 			return pushUpAnimation;
 		case PUSH_UP_ONE_HAND:

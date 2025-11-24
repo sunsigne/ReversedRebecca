@@ -39,23 +39,22 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	public void reduceSpeed() {
 		double reducer = Math.pow((double) time, 0.06d);
 
-		if(reducer < 1d)
+		if (reducer < 1d)
 			return;
-		
+
 		double velX = (double) getBoss().getVelX() / reducer;
 		double velY = (double) getBoss().getVelY() / reducer;
 
 		getBoss().setVelX((int) velX);
 		getBoss().setVelY((int) velY);
-		
-		if(getBoss().isMotionlessbyX() && getBoss().isMotionlessbyY())
+
+		if (getBoss().isMotionlessbyX() && getBoss().isMotionlessbyY())
 			getBoss().setPushingDirection(null);
 	}
 
 	////////// TICK ////////////
 
 	private int time;
-	protected boolean attacking;
 
 	@Override
 	public void tick() {
@@ -75,7 +74,6 @@ public class DoubleYFastPunchPattern extends BossPattern {
 	}
 
 	protected void attack(Player player) {
-		attacking = true;
 
 		// boss facing player
 		SightFinder sightFinder = new SightFinder(getBoss(), player);
