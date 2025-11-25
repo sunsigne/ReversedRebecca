@@ -1,0 +1,5 @@
+///// WORKSHOP /////
+
+NPC-01 = Sarah
+OBJ-01 = Simulation Slabs
+OBJ-02 = Fake Walls

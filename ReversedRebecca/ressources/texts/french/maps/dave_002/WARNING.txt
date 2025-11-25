@@ -1,6 +1,16 @@
 % FIRST_TIME
-dave = DOWN = camera = Je vais la faire courte parce que le développeur@n'a pas encore eu le temps d'introduire la suite.
-dave = DOWN = camera = Rebecca et Sarah ont appris l'identité de l'individu.
-dave = DOWN = camera = Il s'appelle Vladimir, et il est venu voler@les plans d'un projet important.
-dave = DOWN = camera = Maintenant qu'elles ont réussi à sortir,@elles partent porter plainte à la police.
-dave = DOWN = camera = Au passage, Sarah te donne un nouvel objet. Mais@sache qu'en choisissant les bombes, ça sera plus dur.
+dave = DOWN = camera = J'espère que tu ne regrette pas ton choix.@Sache qu'avec les bombes, le prochain niveau est plus dur.
+dave = DOWN = camera = Enfin… Ça, c'est si tu acceptes la proposition de Sarah…
+
+
+% BRANCH
+dave = DOWN = camera = Rebecca, tu t'apprêtes à vivre ton premier embranchement.
+dave = DOWN = camera = Pour le dire simplement, la suite du scénario@dépendra entièrement de ton choix.
+dave = DOWN = camera = Un jeu a plusieurs fins. CE jeu, a plusieurs histoires.
+
+
+% N_TIMES
+dave = DOWN = camera = Déjà de retour ?
+dave = DOWN = camera = Rappel rapide : prendre les bombes, c'est rendre@le commissariat plus drôle, mais plus difficile.
+dave = DOWN = camera = Sarah va te proposer de voler des documents secret.@C'est un embranchement. Tu peux refuser.
+dave = DOWN = camera = La suite du scénario du jeu dépendra entièrement@de ton choix.

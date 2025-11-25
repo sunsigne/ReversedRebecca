@@ -1,0 +1,17 @@
+% SCENARIO_EXIT
+sarah = player = happy = Donc pour résumer, notre agresseur s'appelle Vladimir,@et il est venu voler nos plans sur le casque.
+player = object = laugh = Attend… LE casque ? Mais c'est très grave !
+sarah = player = happy = Plutôt, oui… C'est pour ça que notre prochain action, c'est d'aller porter plainte.
+player = object = happy = Tu crois que la police retrouvera notre voleur ?
+sarah = player = laugh = Ésperons-le. En attendant, la machine est prête !@Si tu peux t'avancer pour récupérer l'objet de ton choix…
+
+
+% DATING_MIKA
+sarah = player = happy = Il t'a embrassé ?!
+player = object = blush = Et sans me demander… C'était tellement sexy.
+sarah = player = happy = Ça n'est pas "sexy", Rebecca.@C'est clairement un signe avant-coureur de toxicité.
+player = object = blush = Tout de suite les grands mots… Tu n'exagères pas un peu.
+sarah = player = happy = Clairement pas, non.
+player = object = sad = … … …
+player = object = blush = … Ça m'a plu…
+sarah = player = happy = Tu es impossible… Mais bon, c'est ton problème.@Bref ! Passons. Si tu peux t'avancer pour récupérer l'objet de ton choix…
