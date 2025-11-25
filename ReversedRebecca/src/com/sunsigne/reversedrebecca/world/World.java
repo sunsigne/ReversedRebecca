@@ -195,10 +195,18 @@ public class World implements Updatable, RenderFree {
 		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
 	}
 
-	private void stopApp() {
+	private void stopApp(boolean workshop) {
 		new SoundTask().playSound(SOUNDTYPE.ERROR, "error");
-		JOptionPane.showMessageDialog(null,
-				"An error has occurred : map folder \"" + mapName + "\" incorrect format or missing");
+
+		String error_message = null;
+		if (workshop)
+			error_message = "An error has occurred : folder \"textures\\workshop\\" + mapName.split("workshop_")[1]
+					+ "\" missing";
+		else
+			error_message = "An error has occurred : map folder \"" + mapName + "\" incorrect format or missing";
+
+		System.err.println(error_message);
+		JOptionPane.showMessageDialog(null, error_message);
 		new Conductor().stopApp();
 	}
 
@@ -278,10 +286,12 @@ public class World implements Updatable, RenderFree {
 		String mapName = this.mapName;
 
 		if (new FileTask().doesExist(userdata, "maps/" + mapName) == false)
-			stopApp();
+			stopApp(false);
 
 		if (mapName.contains("workshop_")) {
 			String name = mapName.split("workshop_")[1];
+			if (new FileTask().doesExist(false, "textures/workshop/" + name) == false)
+				stopApp(true);
 			new Textures().loadRessources("textures/workshop/" + name);
 		}
 
