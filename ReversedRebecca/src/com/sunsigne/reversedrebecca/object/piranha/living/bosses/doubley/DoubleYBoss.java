@@ -106,7 +106,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 	public int get_recovery_time_betweem_two_single_patterns() {
 		return 40;
 	}
-	
+
 	// unused
 	@Override
 	public BossPattern getRandomPattern() {
@@ -129,6 +129,9 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		if (getEvolution() < 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
 					tornado, rest);
+
+		else
+			return;
 
 		patterns = new Cycloid<>(pattern_array);
 		start(patterns.getState(), firstAttack ? 0 : 60);

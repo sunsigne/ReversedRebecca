@@ -37,7 +37,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 		GoalObject goal = new GoalObject(x, y, true);
 		getBoss().setGoal(goal);
 
-		if (goal.getX() == getBoss().getX() && goal.getY() - Size.M / 2 == getBoss().getY())
+		if (goal.getX() - Size.M / 2 == getBoss().getX() && goal.getY() - Size.M / 2 == getBoss().getY())
 			getBoss().setFacing(DIRECTION.DOWN);
 	}
 
@@ -88,7 +88,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 		attacking = true;
 		DoubleYBoss boss = getBoss();
 
-		boss.setX(boss.getGoal().getX());
+		boss.setX(boss.getGoal().getX() - Size.M / 2);
 		boss.setY(boss.getGoal().getY() - Size.M / 2);
 		boss.setFacing(DIRECTION.DOWN);
 		boss.setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
