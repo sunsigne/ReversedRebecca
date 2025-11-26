@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class DeleteRequest implements IndexRequest {
@@ -35,6 +36,10 @@ public class DeleteRequest implements IndexRequest {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		GameObject gameOject = getGameObject(object, target);
+
+		// object may be a loot (smaller)
+		if (gameOject == null)
+			gameOject = getGameObject(object, target, Size.XS / 2);
 
 		String data = String.valueOf(target.split(":")[1]);
 		String subLayer = String.valueOf(data.split(",")[0]);
