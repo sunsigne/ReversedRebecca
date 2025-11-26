@@ -1,9 +1,9 @@
 % SCENARIO_EXIT
-sarah = player = happy = Donc pour résumer, notre agresseur s'appelle Vladimir,@et il est venu voler nos plans sur le casque.
-player = object = laugh = Attend… LE casque ? Mais c'est très grave !
-sarah = player = happy = Plutôt, oui… C'est pour ça que notre prochain action, c'est d'aller porter plainte.
-player = object = happy = Tu crois que la police retrouvera notre voleur ?
-sarah = player = laugh = Ésperons-le. En attendant, la machine est prête !@Si tu peux t'avancer pour récupérer l'objet de ton choix…
+sarah = player = worry = En clair, notre agresseur s'appelle Vladimir.@Il est venu voler nos plans sur le casque.
+player = object = surprised = LE casque ?@Mais c'est super grave !
+sarah = player = unhappy = Oui… C'est pour ça qu'on part porter plainte.@La police doit faire quelque chose.
+player = object = unhappy_var = Tu crois qu'elle le retrouvera ?
+sarah = player = worry = Espérons-le… Mais pour le moment, comme@d'habitude : je te laisse choisir ton gadget.
 
 
 % DATING_MIKA

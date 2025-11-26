@@ -1,3 +1,5 @@
+SUE = Key1 % porter plainte
+
 I_FINISHED = Key1 % j'ai fini
 GLANCE = Key1 % jeter un oeil
 FOOD = Key1 % nourriture ?

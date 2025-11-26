@@ -60,14 +60,10 @@
 	- lui trouver une voix
 	- créer la musique
 
-	cook :
-	- le faire grossir (utiliser les textures world des policiers)
-
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 	- serrure YY en jaune, mais clef orange (Ca récompensera le joueur qui a max la clé)
-	- le rideau à "fermer à clef" doit être celui en ligne 1, colonne 2
 
 	à vérifier :
 	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ? même question pour les maxhp
