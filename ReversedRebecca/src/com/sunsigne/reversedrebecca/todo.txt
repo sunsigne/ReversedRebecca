@@ -52,9 +52,6 @@
 	- dialogues pas tout à fait fini
 	- joueur DERRIERE les gravas (à corrigier)
 	- facing de sarah aux fraises
-	
-	BUG BUG !!! Pas de musique dans le laboratoire !!!! (cas où Sarah est arrivée après)
-
 
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
