@@ -9,7 +9,7 @@ dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plu
 
 
 % N_TIMES
-dave = DOWN = camera = Déjà de retour ?
-dave = DOWN = camera = Rappel rapide : prendre les bombes, c'est rendre@le commissariat plus drôle, mais plus difficile.
-dave = DOWN = camera = Sarah va te proposer de voler des documents secret.@C'est un embranchement. Tu peux refuser.
-dave = DOWN = camera = La suite du scénario du jeu dépendra entièrement@de ton choix.
+dave = DOWN = camera = De retour au commisariat, hein ?
+dave = DOWN = camera = Petit rappel : prendre les bombes cyans,@c'est le rendre plus drôle, mais plus difficile.
+dave = DOWN = camera = Sarah va te proposer de voler des documents.@C'est un embranchement. Tu peux refuser.
+dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plusieurs histoires.

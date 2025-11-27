@@ -7,21 +7,21 @@ sarah = player = worry = Espérons-le… Mais pour le moment, comme@d'habitude :
 
 
 % THIEF
-sarah = player = happy = Son nom complet est Vladimir Wolanski.@Il avait fait scandale il y a deux mois.
-sarah = player = worry = Apparemment, notre entreprise lui aurait volé@ses travaux. En tout cas, c'est ce qu'il croit.
-player = object = angry = Quoi ? Mais non !
-sarah = player = worry = Je n'ai pas les détails de l'affaire. Tout ce que@je sais, c'est que ces plans sont ultra-confidentiels.
+sarah = LEFT = happy = Son nom complet est Vladimir Wolanski.@Il avait fait scandale il y a deux mois.
+sarah = LEFT = worry = Apparemment, notre entreprise lui aurait volé@ses travaux. En tout cas, c'est ce qu'il croit.
+player = RIGHT = angry = Quoi ? Mais non !
+sarah = LEFT = worry = Je n'ai pas les détails de l'affaire. Tout ce que@je sais, c'est que ces plans sont ultra-confidentiels.
 
 
 % HELMET
-sarah = player = worry = Tu te moques de moi ? Tu sais parfaitement@ce que c'est.
-player = object = happy_var = Tu pourrais me le rappeler, s'il te plaît ?
-sarah = player = laugh = Très amusant. Tout le monde à NovaTech@sait ce qu'est ce casque, y compris toi.
+sarah = LEFT = worry = Tu te moques de moi ? Tu sais parfaitement@ce que c'est.
+player = RIGHT = happy_var = Tu pourrais me le rappeler, s'il te plaît ?
+sarah = LEFT = laugh = Très amusant. Tout le monde à NovaTech@sait ce qu'est ce casque, y compris toi.
 
 
 % ASK_FOR_ADVICE
-player = object = happy = D'après toi, je devrais prendre la bombe ou la clé ?
-sarah = player = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça attire l'attention.
+player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
+sarah = LEFT = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça attire l'attention.
 
 
 
