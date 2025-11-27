@@ -1,6 +1,4 @@
 SUE = Key1 % porter plainte
-
-I_FINISHED = Key1 % j'ai fini
-GLANCE = Key1 % jeter un oeil
-FOOD = Key1 % nourriture ?
-NICE_WEATHER_ISNT_IT = Key1 % ... il fait beau, non ?
+THIEF = Key1 % voleur ?
+HELMET = Key2 % casque ?
+ASK_FOR_ADVICE = Key1 % demander conseil (gadget)

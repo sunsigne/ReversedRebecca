@@ -48,7 +48,12 @@
 
 	////////// EN COURS ////////////
 
-	ws001 : dialogues pas fini
+	ws001 : 
+	- dialogues pas tout à fait fini
+	- joueur DERRIERE les gravas (à corrigier)
+	- facing de sarah aux fraises
+	
+	BUG BUG !!! Pas de musique dans le laboratoire !!!! (cas où Sarah est arrivée après)
 
 
 	à vérifier :
@@ -84,14 +89,14 @@
 	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
+	dave002 : mettre la musique de l'embranchement
+
 	////////// MILITARY 0 ////////////
 
 	créer un puzzle spécial pour quand on fait exploser une porte
 	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
-	intégrer les poses de YY
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	le sac pouvelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
-	créer un succès ou l'idiot se fait tirer dans la tête (on a retarder sa course juste ce qu'il faut) - sélection naturelle
+	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

@@ -1,12 +1,11 @@
 % FIRST_TIME
-dave = DOWN = camera = J'espère que tu ne regrette pas ton choix.@Sache qu'avec les bombes, le prochain niveau est plus dur.
-dave = DOWN = camera = Enfin… Ça, c'est si tu acceptes la proposition de Sarah…
+dave = DOWN = camera = Tu as fait ton choix ? En prenant les bombes@cyans, le commisariat est plus dur.
+dave = DOWN = camera = Mais ça, c'est à condition que tu acceptes@la prochaine proposition de Sarah…
 
 
 % BRANCH
-dave = DOWN = camera = Rebecca, tu t'apprêtes à vivre ton premier embranchement.
-dave = DOWN = camera = Pour le dire simplement, la suite du scénario@dépendra entièrement de ton choix.
-dave = DOWN = camera = Un jeu a plusieurs fins. CE jeu, a plusieurs histoires.
+dave = DOWN = camera = Rebecca, tu t'apprêtes à vivre ton premier@embranchement.
+dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plusieurs histoires.
 
 
 % N_TIMES

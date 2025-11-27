@@ -1,9 +1,31 @@
 % SCENARIO_EXIT
 sarah = player = worry = En clair, notre agresseur s'appelle Vladimir.@Il est venu voler nos plans sur le casque.
 player = object = surprised = LE casque ?@Mais c'est super grave !
-sarah = player = unhappy = Oui… C'est pour ça qu'on part porter plainte.@La police doit faire quelque chose.
-player = object = unhappy_var = Tu crois qu'elle le retrouvera ?
+sarah = player = unhappy = Oui… C'est pour ça qu'on doit porter plainte.
+player = object = unhappy_var = Tu crois que la police va nous aider ?
 sarah = player = worry = Espérons-le… Mais pour le moment, comme@d'habitude : je te laisse choisir ton gadget.
+
+
+% THIEF
+sarah = player = happy = Son nom complet est Vladimir Wolanski.@Il avait fait scandale il y a deux mois.
+sarah = player = worry = Apparemment, notre entreprise lui aurait volé@ses travaux. En tout cas, c'est ce qu'il croit.
+player = object = angry = Quoi ? Mais non !
+sarah = player = worry = Je n'ai pas les détails de l'affaire. Tout ce que@je sais, c'est que ces plans sont ultra-confidentiels.
+
+
+% HELMET
+sarah = player = worry = Tu te moques de moi ? Tu sais parfaitement@ce que c'est.
+player = object = happy_var = Tu pourrais me le rappeler, s'il te plaît ?
+sarah = player = laugh = Très amusant. Tout le monde à NovaTech@sait ce qu'est ce casque, y compris toi.
+
+
+% ASK_FOR_ADVICE
+player = object = happy = D'après toi, je devrais prendre la bombe ou la clé ?
+sarah = player = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça attire l'attention.
+
+
+
+
 
 
 % DATING_MIKA
