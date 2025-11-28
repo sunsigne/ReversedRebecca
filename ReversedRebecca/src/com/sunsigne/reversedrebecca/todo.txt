@@ -16,11 +16,10 @@
 	pas réglé :
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- "pause preventer" devrait s'intérompre/s'annuler en cas de mort du joueur
-		- cinémarique fusillade : pusique c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
-		- hackpuzzle : venir à bout des concurrentmodification
-		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
+		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
+		- hackpuzzle : venir à bout des concurrentmodification		
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
-		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu). Il est aussi présent dans la lucky run
+		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu). Il est aussi présent dans la lucky run, et dans le camp militaire ?
 		
 	vérifier si bien réglé :
 		- vérifier que le type de requete SaveTripleActionRequest ne fait pas sauter la couleur d'un texte
@@ -29,6 +28,9 @@
 	vérifier si réglé sur build low CPU :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
+		
+	connus mais tant pis :
+		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
 		
 	////////// TEMP ////////////
 
@@ -47,6 +49,12 @@
 	)
 
 	////////// EN COURS ////////////
+
+	william mourning :
+	- l'animation ne disparait pas
+	- le chapeau est posé trop rapidement
+	
+	
 
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
@@ -156,6 +164,7 @@
 	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
+	1h00 - mettre le bouton "bonus" sur l'écran titre même !
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
@@ -199,6 +208,7 @@
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
 
+	dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
 	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
@@ -252,7 +262,6 @@
 	à enregister :
 	- le type de scénario (sortie ou enquête)
 	- Saboter l'ordinateur de Bernard (Tim ?)
-	- Mika qui embrasse
 	- Delta a informé rebecca qu'elle faisait des casses avec son frère
 	- Jean qui se fait gronder par Sarah
 	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
@@ -282,7 +291,6 @@
 	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
 	Delta reaction du "Alicia" n'est pas fini
-	dessiner des éléments à l'exterieur (prendre des assets de niveaux futurs)
 
 	
 	////////// LVL002 ////////////
