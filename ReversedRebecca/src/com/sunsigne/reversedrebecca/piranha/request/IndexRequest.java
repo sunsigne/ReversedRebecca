@@ -78,6 +78,8 @@ public interface IndexRequest extends Request {
 			return new LayerDualizer().getLightFromContent(handler).getHandler();
 		}
 
+		System.err.println("Problem encounter with following object : " + object.toString());
+		System.err.println("following target is not recognized as a valid layer : " + value.toUpperCase());
 		return handler;
 	}
 
