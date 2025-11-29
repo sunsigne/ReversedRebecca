@@ -50,9 +50,10 @@
 
 	////////// EN COURS ////////////
 
-	william mourning :
-	- l'animation ne disparait pas
-	- le chapeau est posé trop rapidement
+	fusillade :
+	- les frame impact ne sont pas assez longues
+	- le chapeau de william lorsqu'il "mourn" devrait être penchée
+	- william devrait commencer à mourn plus tôt (essayer l'animation en 10 ticks, mais en doublant le dessin de mourn)
 	
 	
 
