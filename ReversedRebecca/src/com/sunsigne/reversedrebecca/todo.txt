@@ -1,6 +1,7 @@
 
 	////////// VERSION PUBLIQUE ////////////
 
+	(ne faire que lorsqu'une version va sortir)
 	configurer le clavier en querty par défaut sur les version anglophone
 	rajouter le ficher icon.png dans le dossier racine
 	supprimer les ressources non utilisées
@@ -50,13 +51,14 @@
 
 	////////// MILITARY ////////////
 
+	créer un dave003 por prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
+	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
+
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
 	- trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
-
-	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
 
 	jules :
 	- lui trouver une voix
@@ -65,17 +67,14 @@
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
-	- serrure YY en jaune, mais clef orange (Ca récompensera le joueur qui a max la clé)
 
 	à vérifier :
-	- le upgrade de la bombe sur les portes se sauvegarde t-il correctement à la fin d'une carte ? même question pour les maxhp
 	- l'obj-30 qui déssine la couche suppérieur du char semble ne pas marcher. Est-ce que ça ne viendrait pas du changement de couche par le mod débug ? Je pensais avoir réglé ce problème
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
 
 	à faire :
-	la porte derrière le guarde -> mettre une sécurité (actuellement, elle est jaune, et vu que c'est un objet Piranha, elle peut être ouverte par un TA sans la clé)
 	des interactions avec trashman
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
@@ -92,8 +91,8 @@
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	digpuzzle : faire clignoter l'outils lorsque récupéré	
-	DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
+	2h digpuzzle : faire clignoter l'outils lorsque récupéré	(avec un highlight)
+	1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
 
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
@@ -184,10 +183,11 @@
 
 	////////// MENU BONUS ////////////
 
-	niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
-	consulter les ressources non utilisées (son, textures, etc.)
-	activer tous les succès abandonnées
-	jouer avec le skin "rebecca_dark"
+	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
+	3h consulter les ressources non utilisées (son, textures, etc.)
+	1h activer tous les succès abandonnées
+	1h jouer avec le skin "rebecca_dark" + 3h création du skin + 2h implémentation complète
+	3h créer une galerie
 
 	////////// PERSONNAGES A FAIRE ////////////
 
