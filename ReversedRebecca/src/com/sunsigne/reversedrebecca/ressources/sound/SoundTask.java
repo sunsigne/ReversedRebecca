@@ -12,7 +12,6 @@ import javax.sound.sampled.LineUnavailableException;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.system.PausePreventer;
-import com.sunsigne.reversedrebecca.system.PausePreventer.PAUSE_STATE;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class SoundTask implements CameraDependency {
@@ -39,17 +38,11 @@ public class SoundTask implements CameraDependency {
 	////////// SOUND ////////////
 
 	public void playSoundIfCamera(Position position, String path) {
-		if (PausePreventer.state == PAUSE_STATE.MUSIC)
-			return;
-		
 		if (CAMERA.isObjectVisible(position, false))
 			play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
 	}
 
 	public void playSound(SOUNDTYPE soundType, String path) {
-		if (PausePreventer.state == PAUSE_STATE.MUSIC)
-			return;
-		
 		play(soundType, getVolume(soundType), path, false, false);
 	}
 
