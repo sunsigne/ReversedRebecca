@@ -14,7 +14,6 @@
 	////////// BUG ////////////
 
 	pas réglé :
-		- souvent un faux positif de bug piranha (regarder la console au moement du lancement du jeu pour comprendre)
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
 		- hackpuzzle : venir à bout des concurrentmodification		

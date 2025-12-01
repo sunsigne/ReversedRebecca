@@ -68,6 +68,9 @@ public interface IndexRequest extends Request {
 
 		Handler handler = object.getHandler();
 
+		if(value == null || value == "null")
+			return handler;
+
 		switch (value.toUpperCase()) {
 
 		case "GROUND":
@@ -80,6 +83,7 @@ public interface IndexRequest extends Request {
 
 		System.err.println("Problem encounter with following object : " + object.toString());
 		System.err.println("following target is not recognized as a valid layer : " + value.toUpperCase());
+
 		return handler;
 	}
 
