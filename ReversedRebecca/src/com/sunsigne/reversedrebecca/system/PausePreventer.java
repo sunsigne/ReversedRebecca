@@ -23,15 +23,24 @@ public class PausePreventer {
 	}
 
 	public void analyzeMusic(String musicName) {
-		if(musicName == null)
+		if (musicName == null)
 			return;
-		
+
 		Integer timer = map.get(musicName);
 		if (timer == null)
 			return;
 
+		removeDisabledPauseObject();
 		state = PAUSE_STATE.MUSIC;
-		new GameTimer(timer, true, () -> state = null);
+		PausePreventer.timer = new GameTimer(timer, true, () -> state = null);
+	}
+
+	private static GameTimer timer;
+
+	public void removeDisabledPauseObject() {
+		if (timer != null)
+			timer.destroy();
+		state = null;
 	}
 
 	////////// PAUSE STATE ////////////

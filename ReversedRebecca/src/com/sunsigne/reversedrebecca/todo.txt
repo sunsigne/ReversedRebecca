@@ -14,6 +14,7 @@
 	////////// BUG ////////////
 
 	pas réglé :
+		- souvent un faux positif de bug piranha (regarder la console au moement du lancement du jeu pour comprendre)
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- "pause preventer" devrait s'intérompre/s'annuler en cas de mort du joueur
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
@@ -50,12 +51,7 @@
 
 	////////// EN COURS ////////////
 
-	fusillade :
-	- les frame impact ne sont pas assez longues
-	- le chapeau de william lorsqu'il "mourn" devrait être penchée
-	- william devrait commencer à mourn plus tôt (essayer l'animation en 10 ticks, mais en doublant le dessin de mourn)
-	
-	
+	////////// MILITARY ////////////
 
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
@@ -91,8 +87,6 @@
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	dave002 : mettre la musique de l'embranchement
-
-	////////// MILITARY 0 ////////////
 
 	créer un puzzle spécial pour quand on fait exploser une porte
 	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
@@ -153,9 +147,6 @@
 	
 	////////// VIE & HP ////////////
 	
-	XhXX - créer un système de respawn & retirer la ligne qui rend immortel le joueur dans LiefeAndDeathLaw + coordonner avec le "Alicia_oops" du lvl001 -> faire en sorte que ce dialogue non passable soit le dernier écran que le joueur voit (arrêt sur image avec Game Over)
-	2h00 - Alicia qui tue en difficile DOIT être un game over
-	10h00 - le système de résurrection après KO doit être créé : créer un système de checkpoint avant les combats de boss (DieWhenNoHp -> kill() prévoir un restart)
 	5h00 - créer un moyen de recuppérer de la vie (j'avais pensé à un % de chance croissant par hp manquant du boss de tirer des coeurs à la place des bombes, mais ça ne serait valable que pendant les combats du coup. Ca peut être un choix définitif si la vie du joueur n'est pas constamment menacée, mais il faudrait probablement afficher les coeur tout le temps pendant la run psycopath, pour montrer que pour Rebecca tout est une question de vie ou de mort. Ca serait même l'ocassion de dessiner des coeurs plus lugubres ou menaçant)
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
 		
@@ -167,7 +158,7 @@
 	
 	1h00 - mettre le bouton "bonus" sur l'écran titre même !
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
-	3h00 - créer l'option (et l'ajouter) pour désactiver le tranblement de la caméra
+	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -296,6 +287,11 @@
 	
 	////////// LVL002 ////////////
 
+	fusillade :
+	- les frame impact ne sont pas assez longues
+	- le chapeau de william lorsqu'il "mourn" devrait être penchée
+	- william devrait commencer à mourn plus tôt (essayer l'animation en 10 ticks, mais en doublant le dessin de mourn)
+	
 	à faire + tard :
 	- finir la fusillade
 	- retirer le message qui dit que la fussillade 'nest pas finie
@@ -339,8 +335,6 @@
 	le boss continue de bombarder le jour même lorsqu'il quitte la zone (bombes par au-dessus)
 	empêcher le joueur de s'enfuir ? (éboulements jaunes ?)
 
-
-	
 	////////// SONS ////////////
 
 	///////// IDEE ////////////

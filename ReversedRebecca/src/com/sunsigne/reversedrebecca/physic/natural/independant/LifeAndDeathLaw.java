@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -56,6 +57,7 @@ public class LifeAndDeathLaw extends IndependantLaw {
 		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
 			new Save().resetProgression();
 
+		new PausePreventer().removeDisabledPauseObject();
 		World.get().freeze(true);
 		GameOverScreen menu = new GameOverScreen();
 		LAYER.MENU.addObject(menu);
