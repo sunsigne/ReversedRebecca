@@ -30,15 +30,18 @@ public class LightRendering implements Updatable, TickFree {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.LIGHT;
 	}
-	
+
 	////////// RENDER ////////////
 
 	private LAYER layer;
 
 	@Override
 	public void render(Graphics g) {
-
 		BufferedImage img = world.getImageMap(layer);
+
+		// prevent single black pixel
+		if (img.getWidth() == 1 && img.getHeight() == 1)
+			return;
 
 		int pixel = 16;
 		int ratio = Size.M / pixel;

@@ -16,11 +16,9 @@
 	pas réglé :
 		- souvent un faux positif de bug piranha (regarder la console au moement du lancement du jeu pour comprendre)
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
-		- "pause preventer" devrait s'intérompre/s'annuler en cas de mort du joueur
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
 		- hackpuzzle : venir à bout des concurrentmodification		
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
-		- dans la map test, il y a un pixel noir tout en haut à gauche (pas sur le fichier, mais présent dans le jeu). Il est aussi présent dans la lucky run, et dans le camp militaire ?
 		
 	vérifier si bien réglé :
 		- vérifier que le type de requete SaveTripleActionRequest ne fait pas sauter la couleur d'un texte
