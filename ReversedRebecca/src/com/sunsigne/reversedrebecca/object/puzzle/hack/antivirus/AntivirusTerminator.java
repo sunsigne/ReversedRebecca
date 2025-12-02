@@ -41,7 +41,7 @@ public class AntivirusTerminator extends AntivirusObject {
 	}
 
 	private void beamToGreen() {
-		beam_color = new Color(0, 255, 0, 120);
+		beam_color = new Color(0, 255, 0, 40);
 	}
 
 	private boolean virusJustArrived;
