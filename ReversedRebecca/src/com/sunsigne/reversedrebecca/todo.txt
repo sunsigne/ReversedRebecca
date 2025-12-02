@@ -70,7 +70,7 @@
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
 	à vérifier :
-	- l'obj-30 qui déssine la couche suppérieur du char semble ne pas marcher. Est-ce que ça ne viendrait pas du changement de couche par le mod débug ? Je pensais avoir réglé ce problème
+	- l'obj-30 qui déssine la couche suppérieur du char semble ne pas marcher. Est-ce que ça ne viendrait pas du changement de couche par le mod débug ? Je pensais avoir réglé ce problème / (écrit qq jours plus tard IRL, après avoir compris) le pb, c'est que oui, le changement de couche marche correctement avec le double du joueur, mais quand on arrive sur une couche où on a jamais été, le jeu n'a aucun moyen de savoir qu'il faudrait apparaitre "après" les objets. Le joueur est de base, vraisemblablement positionné comme dernier (premier) objet dans la liste
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)

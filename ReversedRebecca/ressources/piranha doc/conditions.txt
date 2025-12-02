@@ -156,6 +156,21 @@ Attention ! Contrairement aux autres Type de Conditions, GOAL n'a qu'une porté
 
 
 
+////// ENTERING //////
+
+Le Type de Condition ENTERING est vérifié à chaque fois que le joueur arrive dans une couche.
+
+Rappel : les différentes couches sont : downest, downer, down, Ø, up, upper et uppest.
+
+Note : pour cette Condition, la valeur « Ø » est acceptée.
+
+Exemple :
+ENTERING -> DOWN = "Requête"
+
+"Requête" sera effectué aussitôt à chaque fois que le joueur atteindra la couche DOWN.
+
+
+
 ////// GOTO //////
 
 GOTO n'est pas un Type de Condition, mais un Type de Requête. Il permet de créer des Conditions.

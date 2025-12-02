@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
+import com.sunsigne.reversedrebecca.piranha.condition.global.EnteringCondition;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -43,6 +44,12 @@ public class PlayerLayerChanger {
 		return img.getWidth() == 1;
 	}
 
+	private void validateEnteringCondition(LAYER layer) {
+		String value = layer.getName().replace("_world_content", "");
+		value = value.replace("world_content", "Ø");
+		new EnteringCondition().registerValue(value);
+	}
+
 	public void goes(LAYER ground_layer) {
 		Player player = new PlayerFinder().getPlayer();
 
@@ -54,6 +61,7 @@ public class PlayerLayerChanger {
 		if (layerDoesNotExist(ground_layer))
 			return;
 
+		validateEnteringCondition(content_layer);
 		player.getHandler().softRemoveObject(player);
 		sendPlayerToCorrectIndex(player, content_layer);
 		World.get().setLayer(ground_layer);
