@@ -148,10 +148,7 @@
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
 		
 	////////// FACILE ////////////
-			
-	Hack puzzle : 
-	- mieux introduire le rikikiteur
-	
+
 	1h00 - mettre le bouton "bonus" sur l'écran titre même !
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra

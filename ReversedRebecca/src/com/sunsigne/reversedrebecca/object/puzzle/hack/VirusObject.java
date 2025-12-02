@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
@@ -42,6 +43,8 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 
 	public void shrink() {
 		shrink = shrink + 4;
+		var animation = new VirusShrinkingAnimationObject(getPuzzle(), getX(), getY(), isCritical(), shrink);
+		LAYER.PUZZLE.addObject(animation);
 	}
 
 	public void cancelShrink() {
@@ -87,7 +90,7 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_HACK;
 	}
-	
+
 	////////// TICK ////////////
 
 	protected final int ymin = getPuzzle().getRow(1) - 4 * (Size.M / Size.XS);
@@ -183,13 +186,13 @@ public class VirusObject extends PuzzleObject implements SheetableImage, MouseSp
 
 	@Override
 	public void render(Graphics g) {
-		dragImage(g, getImage());
+		drawImage(g, getImage());
 
 		if (isDisguised())
-			dragImage(g, getDisguiseImage());
+			drawImage(g, getDisguiseImage());
 	}
 
-	protected void dragImage(Graphics g, BufferedImage image) {
+	protected void drawImage(Graphics g, BufferedImage image) {
 		int x = getX() + shrink;
 		int y = getY() + shrink;
 		int w = getWidth() - 2 * (shrink);

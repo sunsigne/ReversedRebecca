@@ -41,10 +41,11 @@ public class HarderHackPuzzle extends HackPuzzle {
 		addLocker(4, 6, windows);
 		addTerminator(windows);
 
+		addShrinker(peripherals);
+		
 		addTerminator(image);
 		addParalyzer(image);
 
-		addShrinker(music);
 		addTerminator(music);
 
 		addLocker(1, 2, system);

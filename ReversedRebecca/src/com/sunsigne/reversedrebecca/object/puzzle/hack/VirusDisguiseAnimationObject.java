@@ -17,6 +17,7 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 
 	////////// ANTIVIRUS ////////////
 
+	@Override
 	public boolean isDisguised() {
 		return true;
 	}
@@ -28,8 +29,8 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 
 	////////// TICK ////////////
 
-	private int growing;
-	private float alpha = 0.5f;
+	protected int growing;
+	protected float alpha = 0.5f;
 
 	@Override
 	public void tick() {
@@ -43,7 +44,7 @@ public class VirusDisguiseAnimationObject extends VirusObject {
 	////////// RENDER ////////////
 
 	@Override
-	protected void dragImage(Graphics g, BufferedImage image) {
+	protected void drawImage(Graphics g, BufferedImage image) {
 		int x = getX() - growing;
 		int y = getY() - growing;
 		int w = getWidth() + 2 * (growing);
