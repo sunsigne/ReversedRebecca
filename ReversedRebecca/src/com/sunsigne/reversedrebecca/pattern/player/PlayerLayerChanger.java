@@ -61,9 +61,9 @@ public class PlayerLayerChanger {
 		if (layerDoesNotExist(ground_layer))
 			return;
 
-		validateEnteringCondition(content_layer);
 		player.getHandler().softRemoveObject(player);
 		sendPlayerToCorrectIndex(player, content_layer);
+		validateEnteringCondition(content_layer);
 		World.get().setLayer(ground_layer);
 		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
 	}
