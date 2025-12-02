@@ -17,7 +17,6 @@
 	pas réglé :
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
-		- hackpuzzle : venir à bout des concurrentmodification		
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		
 	vérifier si bien réglé :
@@ -151,7 +150,6 @@
 	////////// FACILE ////////////
 			
 	Hack puzzle : 
-	- mieux introduire le teminator
 	- mieux introduire le rikikiteur
 	
 	1h00 - mettre le bouton "bonus" sur l'écran titre même !
