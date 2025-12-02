@@ -19,7 +19,6 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	public AntivirusTerminator(Puzzle puzzle) {
 		super(puzzle, new Translatable().getTranslatedText("Antivirus" + "Terminator", FilePath.PUZZLE));
-		loadImages();
 	}
 
 	////////// NAME ////////////
@@ -39,6 +38,10 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	private void beamToYellow() {
 		beam_color = new Color(255, 255, 0, 120);
+	}
+
+	private void beamToGreen() {
+		beam_color = new Color(0, 255, 0, 120);
 	}
 
 	private boolean virusJustArrived;
@@ -68,30 +71,28 @@ public class AntivirusTerminator extends AntivirusObject {
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage on_img;
-	private BufferedImage off_img;
-
-	private void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
-		on_img = getSheetSubImage(sheet, 5);
-		off_img = getSheetSubImage(sheet, 6);
+	@Override
+	public int getSheetColCriterion() {
+		return 5;
 	}
 
 	@Override
 	public BufferedImage getImage() {
-		if (getVirus().isDisguised())
-			return off_img;
-
-		else
-			return on_img;
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_processor");
+			image = getSheetSubImage(sheet);
+		}
+		return image;
 	}
 
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
-		if (getVirus().isDisguised() == false)
-			drawArc(g);
+		if (getVirus().isDisguised())
+			beamToGreen();
+
+		drawArc(g);
 
 		super.render(g);
 	}

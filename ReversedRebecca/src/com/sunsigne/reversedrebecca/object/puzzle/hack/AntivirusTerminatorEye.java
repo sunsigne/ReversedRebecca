@@ -13,6 +13,8 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 
 	public AntivirusTerminatorEye(Puzzle puzzle, AntivirusTerminator terminator, boolean left_eye) {
 		super(puzzle, null);
+		loadImages();
+		
 		this.terminator = terminator;
 		this.left_eye = left_eye;
 
@@ -71,10 +73,10 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 
 	@Override
 	public void tick() {
-		if (getComputer().getList().contains(terminator) == false || getVirus().isDisguised()) {
+		if (getComputer().getList().contains(terminator) == false) {
 			removeObject();
 			getComputer().removeObject(this);
-		}			
+		}
 
 		// eyeball sticks to mouse / virus
 
@@ -114,7 +116,7 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 	}
 
 	////////// TEXTURE ////////////
-	
+
 	@Override
 	public int getSheetColCriterion() {
 		return 3;
@@ -124,16 +126,25 @@ public class AntivirusTerminatorEye extends ProcessorObject implements MouseObje
 	public int getSheetRowCriterion() {
 		return 1;
 	}
-	
+
+	private BufferedImage redImage;
+	private BufferedImage greenImage;
+
+	private void loadImages() {
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_addon");
+		redImage = getSheetSubImage(sheet);
+		greenImage = getSheetSubImage(sheet, getSheetColCriterion() + 1);
+	}
+
 	@Override
 	public BufferedImage getImage() {
-		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "hack_addon");
-			image = getSheetSubImage(sheet);
-		}			
-		return image;
+		if (getVirus().isDisguised())
+			return greenImage;
+
+		else
+			return redImage;
 	}
-	
+
 	////////// RENDER ////////////
 
 	private boolean left_eye;
