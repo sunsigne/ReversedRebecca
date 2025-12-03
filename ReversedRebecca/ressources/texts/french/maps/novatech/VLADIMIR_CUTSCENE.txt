@@ -44,12 +44,3 @@ rebecca = LEFT = happy = Ça marche.
 sarah = RIGHT = happy_var = Ok. Dans ce cas, je pars nous trouver une sortie.
 sarah = RIGHT = wink = On fera un point à l'atelier, tout à l'heure.
 rebecca = LEFT = happy = Ça marche.
-
-
-% SARAH_SCENARIO_INQUIRY_UNFINISHED
-sarah = RIGHT = happy_var = "Ok. Dans ce cas, je pars nous trouver une sortie."
-sarah = RIGHT = wink = "On fera un point à l'atelier, tout à l'heure."
-rebecca = LEFT = happy = Ça marche.
-sarah = RIGHT = pervert = Une minute, ça, c'est ce que j'aurais dit si@le développeur avait fini de coder ton choix.
-sarah = RIGHT = wink = Je crois bien que tu vas devoir nous trouver@une sortie. Je pars interroger les témoins.
-rebecca = LEFT = no_sens = Heu… Ok.

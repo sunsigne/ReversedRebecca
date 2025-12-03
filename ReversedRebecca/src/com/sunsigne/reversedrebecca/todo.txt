@@ -47,7 +47,108 @@
 	)
 
 	////////// EN COURS ////////////
+	
+	////////// LVL001 ////////////
 
+	à traduire en anglais :
+	- (supprimer) VLADIMIR_CUTSCENE*SARAH_SCENARIO_INQUIRY_UNFINISHED
+	- WHERE_IS_ALICIA : JOSEPH / MARIE / DELTA_EPIPHANIE / DELTA_OPENED_SAS / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT
+	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
+	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_ELTA_REACTION / FREED_BY_DELTA_END
+
+	à faire : 
+		alicia ?
+			- vérifier les action de delta : cinématique de delta qui libère Alicia (vérifier si l'action "vol" reprend son cours + la désactivier correctement lorsque delta est en mode "suivi du joueur)
+			- mika qui va voir delta (si on fait ça, desactiver les actions "Alicia ?" & "Alicia !", car on se fiche clairement de son sort + vérifier que c'est la réaction sadique sur le SAS + Delta répond à Mika qu'elle va s'en charger
+			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
+			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
+			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+		alicia !
+			- s'il n'est pas témoin, rebecca ne sait pas que sarah l'a libéré, gérer la surprise de Mika et de Delta
+			- réaction de Mika qui va ouvrir si on l'enguele (+ romance)
+			- delta doit aller ouvrir le SAS comme avec "alicia ?"
+			- jean s'en fout comme de l'an 40
+			- Sarah, trouver une réaction
+			- Marie, trouver une réaction
+			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+		theft ?
+			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
+			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
+			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+
+
+	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement
+
+	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
+	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
+
+	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
+
+	XhX - variantes psychopath
+	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
+	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	
+	scénarion : inquery
+	- les TALK et TALK_VAR n'ont pas encore été remplacés
+	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
+	- s'assurer que Marie ET Mika soit romançable en INQUIRY, Mika lorsqu'on l'enguele, et Marie lorsqu'on lui parle d'Alicia
+	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
+	- Alicia + Dave : créer le TA du vol
+	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
+	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
+	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)	
+	post puzzle : 
+	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
+	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
+	- tout à faire
+	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
+	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
+
+	karma actions :
+	- dire "tu pues" (you_stink) à alicia
+	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
+	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
+	- narguer Alicia dans le SAS (inquery)
+	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
+	note :
+	en exit :
+	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
+	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
+	)
+	
+	à enregister :
+	- le type de scénario (sortie ou enquête)
+	- Saboter l'ordinateur de Bernard (Tim ?)
+	- Delta a informé rebecca qu'elle faisait des casses avec son frère
+	- Jean qui se fait gronder par Sarah
+	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
+	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
+	- Jean s'énerver et il ne s'excuse pas
+	- Jean golden shower
+	- Marie enfermée dans les toilettes
+	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
+	- Jopseh faire pleurer (+ éventuelles réactions des autres)
+	- Alicia knock knock (si pas libérer, il faut enregistrer l'oublie)
+	- à droite pas encore fait (à partir du bureau d'alicia inclus)
+	// inquery
+	- Mika qui défonce la porte (relation + avec Rebecca)
+	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
+	- Alicia se moquer de sa situation (+ karma négatif)
+	- Le meutre de Alicia (+ karma psycopath)
+	- (obj-50) le choix d'abandonner les gens sur place et de partir
+	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
+	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
+	- la romance (positive, négative ou même hypothétique) avec Marie
+	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
+	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
+	- sarah qui pousse rebecca (devant alicia)
+	
+	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
+	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
+	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
+	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
+	Delta reaction du "Alicia" n'est pas fini
+	
 	////////// MILITARY ////////////
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
@@ -204,77 +305,6 @@
 	////////// WS000 ////////////
 	
 	passage secret tj vide ...
-
-	////////// LVL001 ////////////
-
-	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
-	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean
-
-	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
-
-	XhX - variantes psychopath
-	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
-	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	
-	scénarion : inquery
-	- les TALK et TALK_VAR n'ont pas encore été remplacés
-	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
-	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery
-	- Alicia + Dave : créer le TA du vol
-	- Jean : modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
-	- Mika, Delta, Jean, Marie, Joseph, Dave : les TA d'enquête (Alicia ? + Alicia ! + Vol ?) doivent être créés / vérifier
-	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)	
-	post puzzle : 
-	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
-	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
-	- tout à faire
-	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
-	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
-
-	karma actions :
-	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
-	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
-	- narguer Alicia dans le SAS (inquery)
-	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
-	note :
-	en exit :
-	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
-	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
-	)
-	
-	à enregister :
-	- le type de scénario (sortie ou enquête)
-	- Saboter l'ordinateur de Bernard (Tim ?)
-	- Delta a informé rebecca qu'elle faisait des casses avec son frère
-	- Jean qui se fait gronder par Sarah
-	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
-	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
-	- Jean s'énerver et il ne s'excuse pas
-	- Jean golden shower
-	- Marie enfermée dans les toilettes
-	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
-	- Jopseh faire pleurer (+ éventuelles réactions des autres)
-	- Alicia knock knock (si pas libérer, il faut enregistrer l'oublie)
-	- à droite pas encore fait (à partir du bureau d'alicia inclus)
-	// inquery
-	- Mika qui défonce la porte (relation + avec Rebecca)
-	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
-	- Alicia se moquer de sa situation (+ karma négatif)
-	- Le meutre de Alicia (+ karma psycopath)
-	- (obj-50) le choix d'abandonner les gens sur place et de partir
-	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
-	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
-	- la romance (positive, négative ou même hypothétique) avec Marie
-	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
-	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
-	- sarah qui pousse rebecca (devant alicia)
-	
-	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
-	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
-	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
-	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
-	Delta reaction du "Alicia" n'est pas fini
-
 	
 	////////// LVL002 ////////////
 

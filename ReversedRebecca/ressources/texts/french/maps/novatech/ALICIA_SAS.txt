@@ -39,6 +39,25 @@ alicia = DOWN = happy_var = Ok, je te fais ça.
 player = UP = laugh = Top, merci.
 
 
+% TAKE_CARE
+alicia = DOWN = happy = Oui, bien sûr.
+
+
+% YOU_STINK
+alicia = DOWN = surprised_var = Hu…
+alicia = DOWN = surprised = Ha… Ha Ha !
+alicia = DOWN = happy = C'est gentil d'essayer de me remonter le moral@en me faisant rire.
+alicia = UP = appeased = Merci encore, les filles.
+
+
+% YOU_STINK_DELTA_REACTION
+delta = DOWN = worry = T'as pas ta langue dans ta poche, toi !
+
+
+% FREED_BY_DELTA_END
+delta = DOWN = wink = Bon, tu sais où me trouver si tu as besoin.
+
+
 % NO_THANKS
 alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
 player = UP = laugh = Oui.

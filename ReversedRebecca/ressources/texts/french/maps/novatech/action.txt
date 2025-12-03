@@ -7,6 +7,7 @@ INVASTIGATE_THE_INTRUDER = Key2 % enquêter sur l'intrus
 EXIT = Key1 % sortie ?
 EXIT_END = Key1 % sortie
 CHAT = Key1 % bavarder
+INQUIRE = Key1 % enquêter
 
 ///// DOWN DESKS /////
 
@@ -42,6 +43,8 @@ INDEED = Key2 % en effet
 
 ///// LEFT AREA /////
 
+TAKE_CARE = Key1 % prend soin de toi
+YOU_STINK = Key2 % tu pues
 INTRUDER = Key1 % intrus ?
 KNOCK = Key1 % toc toc ?
 ALICIA_HELP = Key3 % Alicia !

@@ -30,7 +30,7 @@ rebecca = object = laugh = C'est pas grave. C'est déjà très bien. Merci !
 
 % THEFT_NEXT
 object = player = surprised = VLADIMIR !
-object = player = happy = Il s'appelait Vladimir.
+object = player = happy = Il s'appelait Vladimir Wolanski.
 rebecca = object = excited = Top ! Merci !
 
 
