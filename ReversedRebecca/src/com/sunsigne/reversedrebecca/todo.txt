@@ -50,19 +50,24 @@
 	
 	////////// LVL001 ////////////
 
-	à traduire en anglais :
+	à vérifier + traduire en anglais :
 	- (supprimer) VLADIMIR_CUTSCENE*SARAH_SCENARIO_INQUIRY_UNFINISHED
-	- WHERE_IS_ALICIA : JOSEPH / MARIE / DELTA_EPIPHANIE / DELTA_OPENED_SAS / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT
+	- WHERE_IS_ALICIA : JOSEPH / MARIE / DELTA_EPIPHANIE / DELTA_OPENED_SAS / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT_VAR
 	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
-	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_ELTA_REACTION / FREED_BY_DELTA_END
+	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_MADE_FUN / YOURE_WELCOME / YOU_STINK_DELTA_REACTION / FREED_BY_DELTA_END
+	- MIKA_INQUIRY*NO_TIME
+	- DELTA*SUPER_BUSY_FREING_ALICIA
+	- actions
 
 	à faire : 
 		alicia ?
-			- vérifier les action de delta : cinématique de delta qui libère Alicia (vérifier si l'action "vol" reprend son cours + la désactivier correctement lorsque delta est en mode "suivi du joueur)
+			- (à vérifier) lorsque Mika va demander à Delta d'ouvrir la porte, il faudrait desactiver le (toc toc) du joueur afin de ne pas rentrer en conflit avec les actions de delta, mais seulement une fois que Delta est en visuel de la porte (le joueur doit pouvoir se moquer d'Alicia + s'il le fait, changer le remerciement d'Alicia vis-à-vis de Delta + ajouter un "listen conversation" entre alicia et delta (dans le cas où Delta la délivre seule)
+			- (à vérifier) les action de delta : cinématique de delta qui libère Alicia (vérifier si l'action "vol" reprend son cours + la désactivier correctement lorsque delta est en mode "suivi du joueur)
 			- mika qui va voir delta (si on fait ça, desactiver les actions "Alicia ?" & "Alicia !", car on se fiche clairement de son sort + vérifier que c'est la réaction sadique sur le SAS + Delta répond à Mika qu'elle va s'en charger
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 		alicia !
 			- s'il n'est pas témoin, rebecca ne sait pas que sarah l'a libéré, gérer la surprise de Mika et de Delta
 			- réaction de Mika qui va ouvrir si on l'enguele (+ romance)
@@ -105,6 +110,7 @@
 	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 
 	karma actions :
+	- se moquer de Alicia quand elle est enfermée
 	- dire "tu pues" (you_stink) à alicia
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)

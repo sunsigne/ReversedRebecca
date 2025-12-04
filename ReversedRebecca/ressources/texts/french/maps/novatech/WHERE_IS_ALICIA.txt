@@ -51,19 +51,19 @@ delta = DOWN = laugh = Et voilà le travail !
 
 % DELTA_OPENED_SAS_NEXT
 alicia = DOWN = cry_happy = Merci beaucoup les filles.
-delta = RIGHT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
+delta = LEFT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
 
 
-% DELTA_OPENED_SAS_NEXT
-alicia = DOWN = cry_happy = Merci beaucoup les filles.
-delta = RIGHT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
+% DELTA_OPENED_SAS_NEXT_VAR
+alicia = RIGHT = cry_happy = Merci beaucoup Delta.
+delta = LEFT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
 
 
 % MIKA_DELTA_CONVERSATION
 delta = DOWN = surprised = Quoi ? Blessée, tu dis ?
 mika = UP = serious = C'est possible.@Ça s'est passé dans son bureau.
 delta = DOWN = no_sens = Rho, c'est pas cool…
-delta = DOWN = worry = Enfin… Si ça se trouve, elle a rien.@Je viens avec toi.
+delta = DOWN = worry = Enfin… Si ça se trouve, elle a rien.@Je vais m'en occuper.
 
 
 % MIKA_ASKED_FOR_HELP

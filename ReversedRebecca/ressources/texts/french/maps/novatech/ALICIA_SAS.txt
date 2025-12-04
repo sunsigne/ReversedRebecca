@@ -50,12 +50,22 @@ alicia = DOWN = happy = C'est gentil d'essayer de me remonter le moral@en me fai
 alicia = UP = appeased = Merci encore, les filles.
 
 
+% YOURE_WELCOME
+alicia = player = happy = Ouais… Merci pour rien.
+
+
+% YOU_STINK_MADE_FUN
+alicia = player = angry_var = C'est quoi ton problème ?
+player = alicia = happy_var = J'énonce des faits, c'est tout.
+alicia = player = angry_var = Tu sais quoi, je suis trop fatiguée pour@entendre tes idioties.
+
+
 % YOU_STINK_DELTA_REACTION
-delta = DOWN = worry = T'as pas ta langue dans ta poche, toi !
+delta = player = worry = T'as pas ta langue dans ta poche, toi !
 
 
 % FREED_BY_DELTA_END
-delta = DOWN = wink = Bon, tu sais où me trouver si tu as besoin.
+delta = player = wink = Bon, tu sais où me trouver si tu as besoin.
 
 
 % NO_THANKS

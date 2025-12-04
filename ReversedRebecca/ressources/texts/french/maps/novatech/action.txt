@@ -44,6 +44,7 @@ INDEED = Key2 % en effet
 ///// LEFT AREA /////
 
 TAKE_CARE = Key1 % prend soin de toi
+YOURE_WELCOME = Key1 % de rien
 YOU_STINK = Key2 % tu pues
 INTRUDER = Key1 % intrus ?
 KNOCK = Key1 % toc toc ?
