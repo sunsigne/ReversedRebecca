@@ -50,13 +50,13 @@ delta = DOWN = laugh = Et voilà le travail !
 
 
 % DELTA_OPENED_SAS_NEXT
-alicia = DOWN = cry_happy = Merci beaucoup les filles.
-delta = LEFT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
+alicia = DOWN = cry_happy = Merci beaucoup, les filles !
+delta = LEFT = laugh = De rien ma belle !@On n'allait pas te laisser là-dedans.
 
 
 % DELTA_OPENED_SAS_NEXT_VAR
-alicia = RIGHT = cry_happy = Merci beaucoup Delta.
-delta = LEFT = laugh = De rien ma belle ! On n'allait pas te laisser là-dedans.
+alicia = RIGHT = cry_happy = Merci beaucoup, Delta !
+delta = LEFT = laugh = De rien ma belle !@On n'allait pas te laisser là-dedans.
 
 
 % MIKA_DELTA_CONVERSATION

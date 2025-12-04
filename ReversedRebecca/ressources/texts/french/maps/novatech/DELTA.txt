@@ -213,3 +213,19 @@ delta = UP = wink = Plus tôt, on pouvait discuter, mais là,c'est chaud…@Mais
 % SUPER_BUSY_FREING_ALICIA
 delta = UP = laugh = Désolé ma grande, là, je suis super occupée…
 delta = UP = wink = Reviens me voir dans mon bureau dans quelques instants.
+
+
+% RACING
+delta = RIGHT = laugh_var = Tu cherches à faire la course, ou quoi ?
+rebecca = object = laugh = Je voulais voir ce qu'il se passerait si@je te devançais.
+
+
+% MY_JOB_FOR_ME
+delta =  RIGHT = laugh = Tu fais mon travail à ma place ? Merci !
+rebecca = object = laugh = Je voulais voir ce qu'il se passerait si je me trouvais là au moement où tu reviendrais.
+
+
+% LIMITLESS
+delta =  RIGHT = worry = Et… Tu t'attendais à quoi ?
+rebecca = object = you_silly = Je ne sais pas trop… Je teste toutes les limites.
+delta = RIGHT = laugh = Comme tu veux, ma grande.@Je prendrai ma place dès que tu seras partie.

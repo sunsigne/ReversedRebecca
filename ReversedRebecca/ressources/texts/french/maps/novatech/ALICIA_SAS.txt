@@ -46,8 +46,8 @@ alicia = DOWN = happy = Oui, bien sûr.
 % YOU_STINK
 alicia = DOWN = surprised_var = Hu…
 alicia = DOWN = surprised = Ha… Ha Ha !
-alicia = DOWN = happy = C'est gentil d'essayer de me remonter le moral@en me faisant rire.
-alicia = UP = appeased = Merci encore, les filles.
+alicia = DOWN = happy = C'est gentil d'essayer de me remonter le moral,@en me faisant rire.
+alicia = DOWN = appeased = Merci encore, les filles.
 
 
 % YOURE_WELCOME

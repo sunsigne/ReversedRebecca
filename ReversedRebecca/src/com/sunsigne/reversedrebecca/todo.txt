@@ -56,18 +56,21 @@
 	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
 	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_MADE_FUN / YOURE_WELCOME / YOU_STINK_DELTA_REACTION / FREED_BY_DELTA_END
 	- MIKA_INQUIRY*NO_TIME
-	- DELTA*SUPER_BUSY_FREING_ALICIA
+	- DELTA : SUPER_BUSY_FREING_ALICIA / RACING / MY_JOB_FOR_ME / LIMITLESS
 	- actions
 
 	à faire : 
 		alicia ?
+		- (à vérifier) les action de delta : cinématique de delta qui libère Alicia (vérifier si l'action "vol" reprend son cours + la désactivier correctement lorsque delta est en mode "suivi du joueur
+		
+			- une fois que delta a libéré Alicia avec Rebecca, elle ne devrait pas retourner sur des dialogues ou elle dit "salut" lorsqu'on enquête auprès d'elle
 			- (à vérifier) lorsque Mika va demander à Delta d'ouvrir la porte, il faudrait desactiver le (toc toc) du joueur afin de ne pas rentrer en conflit avec les actions de delta, mais seulement une fois que Delta est en visuel de la porte (le joueur doit pouvoir se moquer d'Alicia + s'il le fait, changer le remerciement d'Alicia vis-à-vis de Delta + ajouter un "listen conversation" entre alicia et delta (dans le cas où Delta la délivre seule)
-			- (à vérifier) les action de delta : cinématique de delta qui libère Alicia (vérifier si l'action "vol" reprend son cours + la désactivier correctement lorsque delta est en mode "suivi du joueur)
 			- (à vérifier) la cohérence des actions "Alicia ?" & "Alicia !" vis-à-vis de tout le monde, y compris Mika (si on est suffisemment loin)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
+			- Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini + plus d'actualité ?)
 		alicia !
 			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie
 			- s'il n'est pas témoin, rebecca ne sait pas que sarah (ou delta) a libéré alicia, gérer la surprise (de Mika ? de Delta ? de Rebecca ?)
@@ -77,14 +80,17 @@
 			- Sarah, trouver une réaction
 			- Marie, trouver une réaction
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+			- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 		theft ?
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 
 
+	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement
+	faire le son "bip_boop"
 
 	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
 	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
@@ -106,7 +112,6 @@
 	- Marie et Jean sont bloqués dans la salle de pause (à cause du verrou sur sarah)	
 	post puzzle : 
 	- Alicia demande de l'aide. En inquery, faire la réaciton de tout le monde +
-	- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 	- tout à faire
 	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
@@ -154,8 +159,6 @@
 	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
 	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
-	Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini)
-	Delta reaction du "Alicia" n'est pas fini
 	
 	////////// MILITARY ////////////
 
