@@ -51,13 +51,13 @@ alicia = DOWN = appeased = Merci encore, les filles.
 
 
 % YOURE_WELCOME
-alicia = player = happy = Ouais… Merci pour rien.
+alicia = player = angry = Ouais… Merci pour rien.
 
 
 % YOU_STINK_MADE_FUN
 alicia = player = angry_var = C'est quoi ton problème ?
 player = alicia = happy_var = J'énonce des faits, c'est tout.
-alicia = player = angry_var = Tu sais quoi, je suis trop fatiguée pour@entendre tes idioties.
+alicia = player = unhappy = Tu sais quoi, je suis trop fatiguée pour rester@écouter tes idioties.
 
 
 % YOU_STINK_DELTA_REACTION

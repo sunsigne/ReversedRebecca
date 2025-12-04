@@ -206,13 +206,13 @@ delta = rebecca = happy = Alors, demande à ce bon vieux Joseph.@Je suis sûre q
 
 
 % SUPER_BUSY
-delta = UP = laugh = Désolé ma grande, là, je suis super occupée… J'ai@encore pris du retard en bavardant avec Sarah…
+delta = UP = laugh = Désolé ma grande ! Là, je suis super occupée… J'ai@encore pris du retard en bavardant avec Sarah…
 delta = UP = wink = Plus tôt, on pouvait discuter, mais là,c'est chaud…@Mais, on se capte une prochaine fois. D'accord ?
 
 
 % SUPER_BUSY_FREING_ALICIA
-delta = UP = laugh = Désolé ma grande, là, je suis super occupée…
-delta = UP = wink = Reviens me voir dans mon bureau dans quelques instants.
+delta = UP = laugh = Désolé ma grande ! Là, je suis super occupée…
+delta = UP = wink = Reviens me voir dans mon bureau dans@quelques instants.
 
 
 % RACING
@@ -222,7 +222,7 @@ rebecca = object = laugh = Je voulais voir ce qu'il se passerait si@je te devan�
 
 % MY_JOB_FOR_ME
 delta =  RIGHT = laugh = Tu fais mon travail à ma place ? Merci !
-rebecca = object = laugh = Je voulais voir ce qu'il se passerait si je me trouvais là au moement où tu reviendrais.
+rebecca = object = laugh = Je voulais voir ce qu'il se passerait si je me@trouvais là au moment où tu reviendrais.
 
 
 % LIMITLESS
