@@ -56,7 +56,6 @@
 
 	à faire : 
 		alicia ?
-			- si le joueur a énervé Mika, que Delta libère alicia, et qu'il est exactement en 26-39 lorsque ça arrive, Delta a des movuement bizarre au moement de la sortie de cinématique...
 			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
