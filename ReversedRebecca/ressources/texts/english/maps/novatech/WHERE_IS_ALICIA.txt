@@ -21,11 +21,30 @@ delta = rebecca = no_sens = Ugh, that's not cool…
 delta = rebecca = worry = Well… Let's hope she's fine.@I'm coming with you.
 
 
+% DELTA_EPIPHANIE
+delta = player = no_sens = This airlock is not supposed to be locked…
+delta = UP = laugh = Good thing you have me with you!
+
+
+% DELTA_OPENED_SAS
+delta = DOWN = laugh = And there you have it!
+
+
+% DELTA_OPENED_SAS_NEXT
+alicia = DOWN = cry_happy = Thank you, girls!
+delta = LEFT = laugh = You're welcome, sweetie!@We weren't going to leave you in there.
+
+
+% DELTA_OPENED_SAS_NEXT_VAR
+alicia = RIGHT = cry_happy = Thank you, Delta !
+delta = LEFT = laugh = You're welcome, sweetie!@We weren't going to leave you in there.
+
+
 % MIKA_DELTA_CONVERSATION
 delta = DOWN = surprised = What? Hurt?
 mika = UP = serious = Maybe. It happened in her office.
 delta = DOWN = no_sens = Ugh, that's not cool…
-delta = DOWN = worry = Well… Let's hope she's fine.@I'm coming with you.
+delta = DOWN = worry = Well… Let's hope she's fine. I'll handle this.
 
 
 % MIKA_ASKED_FOR_HELP

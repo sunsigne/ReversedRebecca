@@ -45,3 +45,7 @@ mika = player = angry = Get lost.
 
 % HURRY_UP_LAST_REBECCA
 player = DOWN = determined = It's so much fun to push them to their limits.
+
+
+% NO_TIME
+mika = player = serious = I don't have time for your nonsense.@I have rocks to clear.

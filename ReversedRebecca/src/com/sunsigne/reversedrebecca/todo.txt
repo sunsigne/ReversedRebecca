@@ -51,20 +51,16 @@
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
-	- (supprimer) VLADIMIR_CUTSCENE*SARAH_SCENARIO_INQUIRY_UNFINISHED
-	- WHERE_IS_ALICIA : JOSEPH / MARIE / DELTA_EPIPHANIE / DELTA_OPENED_SAS / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT / DELTA_OPENED_SAS_NEXT_VAR
 	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
-	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_MADE_FUN / YOURE_WELCOME / YOU_STINK_DELTA_REACTION / FREED_BY_DELTA_END
-	- MIKA_INQUIRY*NO_TIME
-	- DELTA : HAVE_YOU_DATA_POST_ALICIA / SUPER_BUSY (punctuation) / SUPER_BUSY_FREING_ALICIA / RACING / MY_JOB_FOR_ME / LIMITLESS
-	- actions
+	- WHERE_IS_ALICIA : JOSEPH / MARIE
 
 	à faire : 
 		alicia ?
+			- si le joueur a énervé Mika, que Delta libère alicia, et qu'il est exactement en 26-39 lorsque ça arrive, Delta a des movuement bizarre au moement de la sortie de cinématique...
+			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
-			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 		alicia !
 			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
 			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie

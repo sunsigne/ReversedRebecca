@@ -39,6 +39,35 @@ alicia = DOWN = happy_var = Okay, I'll get you that.
 player = UP = laugh = Sweet, thank you. 
 
 
+% TAKE_CARE
+alicia = DOWN = happy = Yeah, I will.
+
+
+% YOU_STINK
+alicia = DOWN = surprised_var = Uh…
+alicia = DOWN = surprised = Ha… Hah Hah !
+alicia = DOWN = happy = It's nice of you to try to cheer me up,@by making me laugh.
+alicia = DOWN = appeased = Thank you again, girls.
+
+
+% YOURE_WELCOME
+alicia = player = angry = Yeah… Thanks for nothing.
+
+
+% YOU_STINK_MADE_FUN
+alicia = player = angry_var = What's wrong with you?
+player = alicia = happy_var = I'm just stating facts, that's all.
+alicia = player = unhappy = You know what, I'm too tired to stay and@listen to your hogwash.
+
+
+% YOU_STINK_DELTA_REACTION
+delta = player = worry = You're kind of a blunt girl!
+
+
+% FREED_BY_DELTA_END
+delta = player = wink = Well, you know where to find me@if you need anything.
+
+
 % NO_THANKS
 alicia = DOWN = happy_var = Suit yourself. See you later.
 player = UP = laugh = Sure.

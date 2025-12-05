@@ -13,6 +13,19 @@ rebecca = object = happy_var = Ok. In this case, I need to find out what he took
 delta = rebecca = excited = Good luck, sis!
 
 
+% HAVE_YOU_DATA_POST_ALICIA
+rebecca = object = happy = With all that going on, I forgot to ask you… Do you@have any info ? I'm investigating on what happened.
+delta = rebecca = excited = Yes, I know everything.
+rebecca = object = surprised = Really?
+delta = rebecca = worry = No. But, I can guess the main points.
+delta = rebecca = happy = A dawg broke in here, stole something, and left.@Am I right?
+rebecca = object = laugh = Yes, kind of!
+rebecca = object = worry = Yet, we don't know if he stole something.
+delta = rebecca = wink = Trust my experience. Whoever it was,@he or she didn't leave empty-handed.
+rebecca = object = happy_var = Ok. In this case, I need to find out what he took.
+delta = rebecca = excited = Good luck, sis!
+
+
 % THEFT
 delta = rebecca = smile = No, I don't know what he took.@Otherwise, I would have told you.
 rebecca = object = happy_var = Just wanted to be sure.
@@ -208,5 +221,26 @@ delta = rebecca = happy = Then ask good old Joseph.@I'm sure he has the key.
 
 
 % SUPER_BUSY
-delta = UP = laugh = Sorry sis, I'm super busy right now…@I got behind again chatting with Sarah…
+delta = UP = laugh = Sorry sis! I'm super busy right now…@I got behind again chatting with Sarah…
 delta = UP = wink = Earlier, we could chat, but now it's tight…@But, let's catch up next time, okay?
+
+
+% SUPER_BUSY_FREING_ALICIA
+delta = UP = laugh = Sorry sis! I'm super busy right now…
+delta = UP = wink = Come back to see me in my office@in a few moments.
+
+
+% RACING
+delta = RIGHT = laugh_var = Are you trying to race me, or what?
+rebecca = object = laugh = I wanted to see what would happen if@I went before you.
+
+
+% MY_JOB_FOR_ME
+delta =  RIGHT = laugh = Doing my job for me? Thanks!
+rebecca = object = laugh = I wanted to see what would happen if@I happened to be there when you came back.
+
+
+% LIMITLESS
+delta =  RIGHT = worry = And… What did you expect?
+rebecca = object = you_silly = I'm not sure… I'm testing all the limits.
+delta = RIGHT = laugh = Whatever, sis'. I'll take my place as soon as@you're gone

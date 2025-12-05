@@ -7,6 +7,7 @@ INVASTIGATE_THE_INTRUDER = Key2 % invastigate the intruder
 EXIT = Key1 % exit?
 EXIT_END = Key1 % exit
 CHAT = Key1 % chat
+INQUIRE = Key1 % inquire
 
 ///// DOWN DESKS /////
 
@@ -33,6 +34,7 @@ WAS_IT_HIM_TODAY = Key1 % ... was it him today?
 KEEP_CHATTING = Key1 % keep chatting
 RECEPTION = Key1 % reception?
 ASK_DIRECTIONS = Key1 % ask for directions
+ASK_FOR_ADVICE = Key1 % ask for advice
 ONE_MORE_THING = Key1 % one more thing...
 
 ///// ALICIA ROOM /////
@@ -42,6 +44,9 @@ INDEED = Key2 % indeed
 
 ///// LEFT AREA /////
 
+TAKE_CARE = Key1 % take care
+YOURE_WELCOME = Key1 % you're welcome
+YOU_STINK = Key2 % you stink
 INTRUDER = Key1 % intruder?
 KNOCK = Key1 % knock knock?
 ALICIA_HELP = Key3 % Alicia!
