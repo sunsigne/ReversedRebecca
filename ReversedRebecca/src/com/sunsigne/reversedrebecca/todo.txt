@@ -56,13 +56,12 @@
 	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
 	- ALICIA_SAS : TAKE_CARE / YOU_STINK / YOU_STINK_MADE_FUN / YOURE_WELCOME / YOU_STINK_DELTA_REACTION / FREED_BY_DELTA_END
 	- MIKA_INQUIRY*NO_TIME
-	- DELTA : SUPER_BUSY (punctuation) / SUPER_BUSY_FREING_ALICIA / RACING / MY_JOB_FOR_ME / LIMITLESS
+	- DELTA : HAVE_YOU_DATA_POST_ALICIA / SUPER_BUSY (punctuation) / SUPER_BUSY_FREING_ALICIA / RACING / MY_JOB_FOR_ME / LIMITLESS
 	- actions
 
 	à faire : 
 		alicia ?
-			- une fois que delta a libéré Alicia avec Rebecca, elle ne devrait pas retourner sur des dialogues ou elle dit "salut" lorsqu'on enquête auprès d'elle (d'ailleurs, "demander son chemin" est une action étrange pour du INQUIRY)
-			- (à vérifier) la cohérence des actions "Alicia ?" & "Alicia !" vis-à-vis de tout le monde, y compris Mika (si on est suffisemment loin)
+			- (à vérifier) la cohérence des actions "Alicia ?" & "Alicia !" vis-à-vis de tout le monde, y compris Mika (si on est suffisemment loin ?)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
