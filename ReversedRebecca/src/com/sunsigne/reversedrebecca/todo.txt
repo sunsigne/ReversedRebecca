@@ -61,13 +61,12 @@
 
 	à faire : 
 		alicia ?
-			- (à vérifier) la cohérence des actions "Alicia ?" & "Alicia !" vis-à-vis de tout le monde, y compris Mika (si on est suffisemment loin ?)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
-			- Le joueur n'est pas surveillé dans le cas où Mika et Delta rentrent dans le bureau de Alicia (+ pas fini + plus d'actualité ?)
 		alicia !
+			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
 			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie
 			- s'il n'est pas témoin, rebecca ne sait pas que sarah (ou delta) a libéré alicia, gérer la surprise (de Mika ? de Delta ? de Rebecca ?)
 			- réaction de Mika qui va ouvrir si on l'enguele (+ romance)
@@ -95,6 +94,7 @@
 	XhX - variantes psychopath
 	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
+	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
 	
 	scénarion : inquery
 	- les TALK et TALK_VAR n'ont pas encore été remplacés
