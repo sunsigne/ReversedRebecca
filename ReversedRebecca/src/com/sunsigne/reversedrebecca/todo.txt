@@ -20,7 +20,6 @@
 		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		
 	vérifier si bien réglé :
-		- vérifier que le type de requete SaveTripleActionRequest ne fait pas sauter la couleur d'un texte
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
 	
 	vérifier si réglé sur build low CPU :
