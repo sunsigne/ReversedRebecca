@@ -3,6 +3,15 @@ alicia = DOWN = happy = Merci encore de m'avoir libérée.
 player = alicia = laugh = Je t'en prie, c'est normal.
 
 
+% NEUTRAL_VAR
+alicia = DOWN = unhappy = Navré, Rebecca. J'ai eu une matinée difficile,@et je ne me sens pas de bavarder…
+alicia = DOWN = happy = Ça n'est pas contre toi. Je dois juste me détendre.
+
+
+% SADISTIC
+alicia = DOWN = angry = Si tu crois que j'ai envie de te parler, tu rêves !
+
+
 % NEXT
 player = alicia = worry = Si ça ne te gêne pas d'en parler… Comment@t'es-tu retrouvée enfermée dans le SAS ?
 alicia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a vérouillé les portes.
@@ -28,6 +37,12 @@ alicia = DOWN = happy = De rien.
 alicia = DOWN = surprised_var = Mais… C'était à moi !
 player = alicia = excited = Et c'était délicieux !
 alicia = DOWN = unhappy = …
+
+
+% DRINK_WAS_MINE_SADISTIC
+alicia = DOWN = surprised_var = Mais… C'était à moi !
+player = alicia = excited = Et c'était délicieux !
+alicia = DOWN = angry_var = Mais quelle peste !@La prochaine fois, je mettrai du laxatif dedans !
 
 
 % DRINK_WAS_MINE_NEXT

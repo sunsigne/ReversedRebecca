@@ -54,7 +54,6 @@
 
 	à faire : 
 		alicia ?
-			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
@@ -73,9 +72,9 @@
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
-			
+		
+	bug : lorsqu'Alicia se TP sur le canapé, pour une raison obsucre elle se place en 12-29 au lieu de 	11-29, ce qui n'est pas cohérent avec la position qu'elle est censé avoir, en plus de créer un trou dans la hitbox du canapé
 	Marie : si on fait "Alicia ?", elle quitte le canapé après 2 secondes. Il faudrait s'assurer qu'elle ne le fasse : 1. Que si le joueur est suffisemment loin (il me semble avoir un code similaire sur Alicia ?) / 2. Qu'elle ne le fasse que lorsque la voie est libre dans les toilettes (pas de Jean ni de Sarah)
-
 
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
