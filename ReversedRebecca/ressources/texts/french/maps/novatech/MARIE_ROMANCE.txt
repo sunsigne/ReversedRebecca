@@ -8,16 +8,34 @@ object = player = laugh = Hey, Rebecca !
 
 % INVENTORY_INITIATIVE
 object = player = happy = Tu as besoin de quelque chose ?
-rebecca = object = happy_var = Non, merci.@Je visite, c'est tout.
+rebecca = object = happy_var = Non, merci. Je visite, c'est tout.
 object = player = laugh = Tu visites notre stock ? Tu peux le@dire si tu viens chercher des bombes.
+
+
+% INVENTORY_INITIATIVE_EXIT
 rebecca = object = happy_var = Non, non. Vraiment, je visite.
 object = player = you_silly = Si tu le dis… Je t'en donne@quand même une, au cas où.
+
+
+% INVENTORY_INITIATIVE_INQUIRY
+rebecca = object = happy_var = Non, non. Je mène surtout l'enquête,@donc je cherche un peu partout.
+object = player = you_silly = Si tu le dis…
 
 
 % INVENTORY_BOMB
 object = player = happy = Tu as besoin de quelque chose ?
 rebecca = object = excited = Des bombes !
 object = player = happy = Bien sûr, tiens.
+
+
+% INVENTORY_INQUIRY
+object = player = happy = Tu as besoin de quelque chose ?
+rebecca = object = laugh = Je mène l'enquête !@Donc, je cherche un peu partout.
+object = player = worry = Et… Tu as décidé d'investiguer notre stock ?
+rebecca = object = laugh = On ne sait jamais où les indices se cachent !
+object = player = you_silly = C'est d'une logique imparable…
+object = player = happy = Bonne chance dans ton enquête !
+rebecca = object = happy_var = Merci, tu es gentille.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS

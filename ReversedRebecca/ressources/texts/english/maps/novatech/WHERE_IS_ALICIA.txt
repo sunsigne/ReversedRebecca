@@ -14,6 +14,21 @@ sarah = rebecca = worry = Sorry. I don't know where she is.
 sarah = rebecca = worry = I don't know where she is either.
 
 
+% MARIE
+marie = player = happy = Did you look under her desk?
+player = object = unhappy = I'm being serious, Marie…@Her desk was attacked…
+marie = player = surprised = Wh… What? Attacked?
+marie = player = surprised_var = Is she okay?
+player = object = unhappy_var = That's exactly what I'm trying to find out.@Any idea where she might be?
+marie = player = surprised_var = Um… N… no, sorry.
+marie = player = surprised_var = … Give me a few minutes…@… I'm taking it hard.
+player = object = unhappy = I… didn't mean to worry you?
+marie = player = surprised_var = (… Huh?)
+marie = player = blush = (Rebecca is worried about me?@This is the best day of my life!)
+marie = player = blush_var2 = No worries, Rebecca. I'll be alright…@Find her, okay?
+player = object = laugh = Yes!
+
+
 % DELTA
 delta = rebecca = surprised = What? Hurt?
 rebecca = object = unhappy = It's a possibility. It happened in her office.

@@ -50,14 +50,13 @@
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
-	- (à vérifier en français. Si validé, à rajouter le nom de famille en anglais) MARIE*THEFT_NEXT
-	- WHERE_IS_ALICIA : JOSEPH / MARIE
+	- WHERE_IS_ALICIA : JOSEPH
 
 	à faire : 
 		alicia ?
 			- si Delta a libérée Alicia seule, changer les réactions sur le canapé (encore + vrai si le joueur s'est moquée d'elle)
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
-			- Marie est choqué, ce qui désactivé l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?) + romance
+			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 		alicia !
 			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
@@ -74,6 +73,8 @@
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+			
+	Marie : si on fait "Alicia ?", elle quitte le canapé après 2 secondes. Il faudrait s'assurer qu'elle ne le fasse : 1. Que si le joueur est suffisemment loin (il me semble avoir un code similaire sur Alicia ?) / 2. Qu'elle ne le fasse que lorsque la voie est libre dans les toilettes (pas de Jean ni de Sarah)
 
 
 	tous les indices des plantes
@@ -92,7 +93,7 @@
 	
 	scénarion : inquery
 	- les TALK et TALK_VAR n'ont pas encore été remplacés
-	- remplacer le 1er compteur par autre chose ("murs explosés" n'a pas de sens si on explose aucun mur, mais choisir un truc dur, voir impossible de faire 0 avec, pour que la speedrun 0% counter soit intéressante)
+	- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
 	- s'assurer que Marie ET Mika soit romançable en INQUIRY, Mika lorsqu'on l'enguele, et Marie lorsqu'on lui parle d'Alicia
 	- Jean : attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
 	- Alicia + Dave : créer le TA du vol

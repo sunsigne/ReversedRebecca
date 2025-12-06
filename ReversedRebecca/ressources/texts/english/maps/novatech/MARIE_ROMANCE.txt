@@ -10,14 +10,32 @@ object = player = laugh = Hey, Rebecca!
 object = player = happy = Do you need anything?
 rebecca = object = happy_var = No, thanks.@I'm just looking around.
 object = player = laugh = You're looking around our stock?@You can say it if you're looking for bombs.
+
+
+% INVENTORY_INITIATIVE_EXIT
 rebecca = object = happy_var = No, no. Really, I'm looking around.
 object = player = you_silly = If you say so… I'll still give you one, just in case.
+
+
+% INVENTORY_INITIATIVE_INQUIRY
+rebecca = object = happy_var = No, no. I'm mainly conducting the investigation,@so I'm looking everywhere.
+object = player = you_silly = If you say so…
 
 
 %INVENTORY_BOMB
 object = player = happy = Do you need anything?
 rebecca = object = excited = Bombs!
 object = player = happy = Of course, here you go.
+
+
+% INVENTORY_INQUIRY
+object = player = happy = Do you need anything?
+rebecca = object = laugh = I'm conducting the investigation !@Thus, I'm looking everywhere.
+object = player = worry = And… You decided to investigate our stock?
+rebecca = object = laugh = You never know where the clues are hiding!
+object = player = you_silly = I cannot argue that.
+object = player = happy = Good luck with your investigation!
+rebecca = object = happy_var = Thank you, you are sweet.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS
