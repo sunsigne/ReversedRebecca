@@ -50,13 +50,13 @@
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
-	- WHERE_IS_ALICIA : JOSEPH
+	(rien)
 
 	à faire : 
 		alicia ?
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
-			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
+			- il est possible de traumatiser Jospeh. Faire en sorte de rendre ça compatible avec les autres traumatismes + le faire pleurer sur le canapé
 		alicia !
 			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
 			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie
@@ -106,6 +106,7 @@
 	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 
 	karma actions :
+	- inquiéter volontairement joseph
 	- se moquer de Alicia quand elle est enfermée
 	- dire "tu pues" (you_stink) à alicia
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	

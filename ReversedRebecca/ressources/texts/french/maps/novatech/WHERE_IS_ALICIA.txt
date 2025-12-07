@@ -14,10 +14,6 @@ sarah = rebecca = worry = Désolé. Je ne sais pas où elle est.
 sarah = rebecca = worry = Je ne sais pas non plus où elle est.
 
 
-% JOSEPH
-player = DOWN = sad = Je risque d'inquiéter Joseph, si je lui parle de ça.
-
-
 % MARIE
 marie = player = happy = Tu as regardé sous son bureau ?
 player = object = unhappy = Je suis sérieuse, Marie…@Son bureau a été attaqué…

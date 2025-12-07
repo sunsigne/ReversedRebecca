@@ -7,7 +7,29 @@ object = player = happy_var = Ha ! Ces jeunes !
 
 
 % THEFT
-player = DOWN = sad = Je risque d'inquiéter Joseph, si je lui parle de ça.
+player = DOWN = sad = Si je parle de ça à Jospeh, je risque de l'inquiéter.
+
+
+% WHERE_IS_ALICIA
+player = DOWN = sad = Si je parle de ça à Jospeh, je risque de l'inquiéter.
+
+
+% DONT_WORRY_JOSPEH
+player = DOWN = happy_var = C'est plus sage.@Moins il en saura, mieux il se portera.
+
+
+% ALICIA_IN_DANGER
+player = object = surprised = JOSEPH !@Alicia est en danger !
+object = player = happy = Hein ? Quoi ? De quoi ?
+player = object = surprised = Elle est introuvable ! Son bureau a été attaqué@et elle a disparu !
+object = player = happy = Mon Dieu ! Mais c'est terrible…
+player = object = evil = Absoluement ! Elle est peut-être même morte…@Ou pire !
+object = player = happy = Holala… Pauvre Alicia…
+player = object = determined = Qui sait dans quel état on va la retrouver…@Peut-être même en plusieurs morceaux…
+object = player = happy = Ho… Non…
+player = object = evil = Ho, si ! La rumeur dit même qu'elle était enceinte@quand s'est arrivé !
+object = player = happy = Pauvre bébé…
+player = object = evil_var2 = Ouais, c'est affreux.
 
 
 % BOOK_HELLO
