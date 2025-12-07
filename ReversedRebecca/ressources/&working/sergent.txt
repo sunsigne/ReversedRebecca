@@ -1,0 +1,54 @@
+Un problème soldat ?
+En fait, je suis une civile.
+Une civile n'est rien de moins qu'une future soldat, soldat.
+
+(a fait le parcours)
+Je t'ai vu parcourir notre terrain d'entrainement. Tu as du potentiel.
+Merci ! Je fais un peu de sport pour me maintenir en forme.
+Le sport ne fait pas tout. Un soldat doit savoir manier une arme. En es-tu capable ?
+
+(n'a pas fait le parcours)
+C'est une logique étrange... Tout le monde n'est pas destiné à l'uniforme.
+Mais une recrue incroyable qui s'ignore peut se cacher n'importe où.
+Toi, par exemple : tu as l'air d'être du genre à utiliser ta tête. Tu serais un grand atout !
+Merci ! Disons que j'aime bien réfléchir.
+L'esprit ne fait pas tout. Un soldat doit savoir manier une arme. En es-tu capable ?
+
+
+
+(gentil)
+C'est peu conventionnel, mais... Je me débrouille bien avec une pelle...
+Montre-moi. [E] give him the shovel
+C'est que... Je n'en ai pas sur moi...
+En voilà une. Montre-moi. [E] give him the shovel
+(assomé)
+Heu...
+Quand il se réveillera, je lui dirai que ça porte bonheur.
+
+(méchant, sans accès à l'armurerie)
+Oui, et je travaille justement à m'en procurer une. Saurais-tu où je peux trouver une clé verte ?
+Affirmatif soldat. La clé verte se trouve dans l'armurerie.
+...
+C'est une blague ?
+Négatif, soldat. Si tu veux accéder à l'armurerie, tu vas devoir utiliser ta matière grise.
+(un pas en bas)
+Bon... J'imagine que je vais devoir explorer ce camp pour trouver une solution.
+
+(méchant, avec accès mais sans y être allé)
+Oui, et je travaille justement à m'en procurer une.
+Dans ce cas, bonne chance, soldat.
+
+(méchant)
+Oui, mais ce connard de scientifique ne veut pas m'en donner !
+...
+Le soldat Nathan est plus que capable lorsqu'il est question de jugement.
+Tu as de la chance de n'être qu'une future soldat. Je n'aurais jamais toléré un tel discours d'une recrue. Maintenant, disparait.
+[E] laisser tomber [R] l'insulter
+Et toi, tu as de la chance que ton nez ne marche pas. Parce qu'il est juste au-dessus de ta bouche.
+Vu comment tu pus de la gueule ! C'est au moins ton halène qui a fait tomber tes cheveux.
+(il prend doucement du recul, avant de foncer sur Rebecca pour lui faire manger le sol)
+- LA TERRE EST A TON GOUT ? PUISQUE TU ES DEJA AU SOL, FAIS-MOI 50 POMPES !
+[E] faire 1 pompe (ENCORE !) [R] Non ! (ne marche qu'une foi)
+JE NE T'AI PAS DEMANDE TON AVIS ! (il frappe Rebecca)
+(fondu au noir)
+Je ne veux plus jamais qu'on parle de ça.
