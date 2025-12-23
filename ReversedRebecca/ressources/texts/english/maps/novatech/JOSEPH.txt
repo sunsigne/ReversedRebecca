@@ -6,29 +6,52 @@ player = object = worry = Um… No, nothing.@Forget what I just said.
 object = player = happy_var = Hah! These kids!
 
 
-% THEFT
-player = DOWN = sad = If I talk about this with Joseph, I might worry him.
-
-
-% WHERE_IS_ALICIA
-player = DOWN = sad = If I talk about this with Joseph, I might worry him.
+% MIGHT_WORRYING_HIM
+player = DOWN = sad = (Hmm… Do I really want to talk to Joseph@about this? I might worry him.)
 
 
 % DONT_WORRY_JOSPEH
 player = DOWN = happy_var = That's wiser.@The less he knows, the better off he'll be.
 
 
+% THEFT
+player = object = surprised = JOSEPH!@We've been robbed!
+object = player = happy = Huh? What? The what?
+player = object = surprised = It's a disaster! A crime! An international scandal!
+object = player = happy = Is it really that bad?
+player = object = evil = ROBBED, Jospeh! Taking someone else's property!@This is very serious.
+object = player = happy = Oh dear…
+player = object = convinced = And what's next? Today, Novatech, and tomorrow,@our homes…
+object = player = happy = How dreadful…
+player = object = evil = …Then our wives, our children, our future… @They won't stop until they've taken everything!
+object = player = happy = Oh dear…
+player = object = evil_var2 = Yeah, that's terrible.
+
+
 % ALICIA_IN_DANGER
 player = object = surprised = JOSEPH !@Alicia is in danger !
-object = player = happy = Huh? What? Wait what?
-player = object = surprised = She's nowhere to be found! Her office was attacked@and she's disappeared!
-object = player = happy = My God! This is terrible…
+object = player = happy = Huh? What? The what?
+player = object = surprised = She's nowhere to be found! Her office was attacked!@She's disappeared!
+object = player = happy = My God! This is frightful…
 player = object = evil = Absolutely! She might even be dead… Or worse!
 object = player = happy = Oh dear… Poor Alicia…
 player = object = determined = Who knows what state they'll find her in…@Maybe even in pieces…
 object = player = happy = Oh… No…
 player = object = evil = Oh, yes! Rumor has it she was even pregnant@when this happened!
 object = player = happy = Poor baby…
+player = object = evil_var2 = Yeah, that's awful.
+
+
+% ALICIA_IS_DYING
+player = object = surprised = JOSEPH !@It's even worse than I thought!
+object = player = happy = What ? How so ?
+player = object = evil = Alicia! She's doomed!
+object = player = happy = Oh my God…
+player = object = determined = The security system has targeted her!@Her fate is sealed!
+object = player = happy = Oh dear…
+player = object = evil = But it surely won't stop there…@We're next, Joseph!
+player = object = surprised = We're ALL doomed!@Our own technology is going to kill us!
+object = player = happy = How dreadful…
 player = object = evil_var2 = Yeah, that's awful.
 
 

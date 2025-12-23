@@ -6,22 +6,32 @@ player = object = worry = Heu… Non, rien.@Oublie ce que je viens de dire.
 object = player = happy_var = Ha ! Ces jeunes !
 
 
-% THEFT
-player = DOWN = sad = Si je parle de ça à Jospeh, je risque de l'inquiéter.
-
-
-% WHERE_IS_ALICIA
-player = DOWN = sad = Si je parle de ça à Jospeh, je risque de l'inquiéter.
+% MIGHT_WORRYING_HIM
+player = DOWN = sad = (Hmm… Est-ce que je veux vraiment parler de ça@à Jospeh ? Je risque de l'inquiéter.)
 
 
 % DONT_WORRY_JOSPEH
 player = DOWN = happy_var = C'est plus sage.@Moins il en saura, mieux il se portera.
 
 
+% THEFT
+player = object = surprised = JOSEPH !@On nous a volé !
+object = player = happy = Hein ? Quoi ? De quoi ?
+player = object = surprised = C'est une catastrophe ! Un crime !@Un scandale international !
+object = player = happy = C'est si grave que ça ?
+player = object = evil = VOLÉ, Jospeh ! S'emparer de la propriété d'autrui !@C'est très sérieux.
+object = player = happy = Holala…
+player = object = convinced = Et puis, c'est quoi la prochaine étape ?@Aujourd'hui, Novatech, et demain, nos maisons…
+object = player = happy = Misère…
+player = object = evil = … Puis nos femmes, nos enfants, notre futur…@Ils ne s'arrêteront que lorsqu'ils auront tout pris !
+object = player = happy = Holala…
+player = object = evil_var2 = Ouais, c'est terrible.
+
+
 % ALICIA_IN_DANGER
 player = object = surprised = JOSEPH !@Alicia est en danger !
 object = player = happy = Hein ? Quoi ? De quoi ?
-player = object = surprised = Elle est introuvable ! Son bureau a été attaqué@et elle a disparu !
+player = object = surprised = Elle est introuvable ! Son bureau a été attaqué !@Elle a disparu !
 object = player = happy = Mon Dieu ! Mais c'est terrible…
 player = object = evil = Absoluement ! Elle est peut-être même morte…@Ou pire !
 object = player = happy = Holala… Pauvre Alicia…
@@ -29,6 +39,19 @@ player = object = determined = Qui sait dans quel état on va la retrouver…@Pe
 object = player = happy = Ho… Non…
 player = object = evil = Ho, si ! La rumeur dit même qu'elle était enceinte@quand s'est arrivé !
 object = player = happy = Pauvre bébé…
+player = object = evil_var2 = Ouais, c'est affreux.
+
+
+% ALICIA_IS_DYING
+player = object = surprised = JOSEPH !@C'est encore pire que ce que je croyais !
+object = player = happy = Quoi ? Comment ça ?
+player = object = evil = Alicia ! Elle est fichue !
+object = player = happy = Oh mon Dieu…
+player = object = determined = Le système de sécurité s'en est pris à elle !@Son sort est scellé !
+object = player = happy = Holala…
+player = object = evil = Mais il ne s'arrêtera surement pas là…@On est les prochains, Joseph !
+player = object = surprised = On est TOUS condamné !@Nos propres technologies vont nous tuer !
+object = player = happy = Quelle misère…
 player = object = evil_var2 = Ouais, c'est affreux.
 
 

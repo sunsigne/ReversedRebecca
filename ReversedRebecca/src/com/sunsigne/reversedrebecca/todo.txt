@@ -53,11 +53,23 @@
 	à vérifier + traduire en anglais :
 	(rien)
 
+	Sarah -> si plus de Jospeh, aller vers les bombes
+
+	identifier voleur SANS marie :
+	"
+	Bon, j'ai interrogé tout le monde, j'mais je n'ai pas appris qui nous a volé...
+	...
+	Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
+	(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
+	"
+	
+	- traumatisme de jospeh : 1. s'assurezr de la cohérence du doalige "Alicia is dying" lorsqu'on a pas fait "Alicia is in danger". Rebecca ne devrait pas dire que "c'est encore prie que ce que je croyais". 2. Faire pleurer jospeh dans le canapé
+
 	à faire : 
 		alicia ?
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
-			- il est possible de traumatiser Jospeh. Faire en sorte de rendre ça compatible avec les autres traumatismes + le faire pleurer sur le canapé
+			
 		alicia !
 			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
 			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie
@@ -146,6 +158,7 @@
 	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
 	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
 	- sarah qui pousse rebecca (devant alicia)
+	- traumatiser jospeh / se moquer d'alicia
 	
 	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
