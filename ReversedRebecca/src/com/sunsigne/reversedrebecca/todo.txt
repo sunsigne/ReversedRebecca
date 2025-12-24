@@ -53,8 +53,6 @@
 	à vérifier + traduire en anglais :
 	(rien)
 
-	Sarah -> si plus de Jospeh, aller vers les bombes
-
 	identifier voleur SANS marie :
 	"
 	Bon, j'ai interrogé tout le monde, j'mais je n'ai pas appris qui nous a volé...
@@ -63,7 +61,10 @@
 	(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 	"
 	
-	- traumatisme de jospeh : 1. s'assurezr de la cohérence du doalige "Alicia is dying" lorsqu'on a pas fait "Alicia is in danger". Rebecca ne devrait pas dire que "c'est encore prie que ce que je croyais". 2. Faire pleurer jospeh dans le canapé
+	- traumatisme de jospeh : 
+		(note) traumasier Jospeh APRES avoir dis à Alicia qu'on allait l'aider, n'annule pas le "Alicia !" pour les autres. C'est voulu
+		- Sarah -> si plus de Jospeh, aller vers les bombes
+
 
 	à faire : 
 		alicia ?
