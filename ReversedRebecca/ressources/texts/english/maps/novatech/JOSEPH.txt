@@ -55,6 +55,23 @@ object = player = happy = How dreadful…
 player = object = evil_var2 = Yeah, that's awful.
 
 
+% ALICIA_IS_DYING_VAR
+player = object = surprised = JOSEPH !@It's a disaster!
+object = player = happy = Huh? What? The what?
+player = object = evil = Alicia! She's doomed!
+object = player = happy = Oh my God…
+player = object = determined = The security system has targeted her!@Her fate is sealed!
+object = player = happy = Oh dear…
+player = object = determined = Who knows what state they'll find her in…@Maybe even in pieces…
+object = player = happy = Oh… No…
+player = object = evil = Oh, yes! Rumor has it she was even pregnant@when this happened!
+object = player = happy = Poor baby…
+player = object = evil = And the robots surely won't stop there…@We're next, Joseph!
+player = object = surprised = We're ALL doomed!@Our own technology is going to kill us!
+object = player = happy = How dreadful…
+player = object = evil_var2 = Yeah, that's awful.
+
+
 % BOOK_HELLO
 player = object = happy = Hello, Joseph.@Are you looking for a book?
 object = player = happy_var = Hah! Hello Rebecca.@No, I have already read them all.
