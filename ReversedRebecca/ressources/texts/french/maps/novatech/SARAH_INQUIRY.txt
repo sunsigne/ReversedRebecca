@@ -45,3 +45,7 @@ sarah = rebecca = worry = Bien sûr… Pourquoi tu dis ça ?
 rebecca = sarah = you_silly = Parce que la porte est loin.@Comment tu sais qu'elle est ouverte ?
 sarah = rebecca = wink = Je t'ai entendu faire quand @j'étais dans l'autre pièce.
 rebecca = sarah = laugh = Ha !
+
+
+% JOSEPH_CONVERSATION
+stuff

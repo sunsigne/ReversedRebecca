@@ -48,6 +48,12 @@
 
 	////////// EN COURS ////////////
 	
+	pathing de sarah avec Joseph inclus créé (dialogue exclus), non testé.
+	Suite : 
+		- créer dialogue et tester (normal + arrivée par le haut)
+		- faire cas stock
+		- faire cas SAS
+	
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
@@ -63,8 +69,6 @@
 	
 	- traumatisme de jospeh : 
 		(note) traumasier Jospeh APRES avoir dis à Alicia qu'on allait l'aider, n'annule pas le "Alicia !" pour les autres. C'est voulu
-		- Sarah -> si plus de Jospeh, aller vers les bombes
-
 
 	à faire : 
 		alicia ?
