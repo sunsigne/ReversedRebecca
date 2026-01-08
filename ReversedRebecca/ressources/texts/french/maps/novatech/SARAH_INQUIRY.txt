@@ -48,4 +48,6 @@ rebecca = sarah = laugh = Ha !
 
 
 % JOSEPH_CONVERSATION
-stuff
+sarah = jospeh = happy = Joseph, je peux avoir tes clés s'il te plaît ?
+joseph = sarah = happy = Bien sûr, Sarah. Les voici.
+sarah = jospeh = happy_var = Merci !

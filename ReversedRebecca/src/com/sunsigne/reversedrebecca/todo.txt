@@ -50,18 +50,18 @@
 	
 	pathing de sarah avec Joseph inclus créé (dialogue exclus), non testé.
 	Suite : 
-		- créer dialogue et tester (normal + arrivée par le haut)
+		- tester (normal + arrivée par le haut)
 		- faire cas stock
 		- faire cas SAS
 	
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
-	(rien)
+	- SARAH_INQUIRY*JOSEPH_CONVERSATION
 
 	identifier voleur SANS marie :
 	"
-	Bon, j'ai interrogé tout le monde, j'mais je n'ai pas appris qui nous a volé...
+	Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...
 	...
 	Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
 	(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
@@ -84,16 +84,13 @@
 			- jean s'en fout comme de l'an 40
 			- Sarah, trouver une réaction
 			- Marie, trouver une réaction
-			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 			- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 		theft ?
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
-			- voir s'il est possible d'essayer de traumatiser Jospeh ("je ne veux pas l'inquiéter... ou peut-être si qui ?" choice : en faire des caisses)
 		
 	bug : lorsqu'Alicia se TP sur le canapé, pour une raison obsucre elle se place en 12-29 au lieu de 	11-29, ce qui n'est pas cohérent avec la position qu'elle est censé avoir, en plus de créer un trou dans la hitbox du canapé
-	Marie : si on fait "Alicia ?", elle quitte le canapé après 2 secondes. Il faudrait s'assurer qu'elle ne le fasse : 1. Que si le joueur est suffisemment loin (il me semble avoir un code similaire sur Alicia ?) / 2. Qu'elle ne le fasse que lorsque la voie est libre dans les toilettes (pas de Jean ni de Sarah)
-
+	
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement
@@ -170,6 +167,8 @@
 	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 	
 	////////// MILITARY ////////////
+
+	changer nom -> jules en romeo. Vera en venera
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
 

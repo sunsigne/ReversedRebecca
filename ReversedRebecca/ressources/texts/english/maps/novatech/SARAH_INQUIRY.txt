@@ -45,3 +45,9 @@ sarah = rebecca = worry = Of course… Why do you say that?
 rebecca = sarah = you_silly = Because the door is far away.@How do you know it's open?
 sarah = rebecca = wink = I heard you when I was in the other room.
 rebecca = sarah = laugh = Hah!
+
+
+% JOSEPH_CONVERSATION
+sarah = jospeh = happy = Joseph, may I have your keys, please?
+joseph = sarah = happy = Of course, Sarah. Here they are.
+sarah = jospeh = happy_var = Thank you!
