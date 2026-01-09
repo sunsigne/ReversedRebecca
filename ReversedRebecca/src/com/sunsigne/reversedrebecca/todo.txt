@@ -48,11 +48,13 @@
 
 	////////// EN COURS ////////////
 	
-	pathing de sarah avec Joseph inclus créé (dialogue exclus), non testé.
+	pathing de sarah avec Joseph inclus créé, non testé.
 	Suite : 
 		- tester (normal + arrivée par le haut)
 		- faire cas stock
 		- faire cas SAS
+		
+	chemin par stock->entrée non testé + les trads
 	
 	////////// LVL001 ////////////
 
@@ -91,6 +93,7 @@
 		
 	bug : lorsqu'Alicia se TP sur le canapé, pour une raison obsucre elle se place en 12-29 au lieu de 	11-29, ce qui n'est pas cohérent avec la position qu'elle est censé avoir, en plus de créer un trou dans la hitbox du canapé
 	
+	sarah qui prend les bombes et va parler à Mika, DOIT vérifier que Mika est bien là (dans le cas où il est partie parler à Delta ou q'il défonce la porte)
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement

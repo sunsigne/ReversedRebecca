@@ -51,3 +51,26 @@ rebecca = sarah = laugh = Hah!
 sarah = jospeh = happy = Joseph, may I have your keys, please?
 joseph = sarah = happy = Of course, Sarah. Here they are.
 sarah = jospeh = happy_var = Thank you!
+
+
+% MIKA_BOMB_CONVERSATION
+sarah = mika = happy = …how many do you need?
+mika = sarah = serious_var = One well-placed charge will be more than enough.
+
+
+% MIKA_POST_BOMB_CONVERSATION
+sarah = mika = worry = What a day, huh?
+mika = sarah = serious = Tell me about it.
+
+
+% SARAH_NOTICE_REBECCA_IS_LEAVING
+sarah = rebecca = laugh = See? I found us a way out!
+
+
+% SARAH_NOTICE_REBECCA_IS_LEAVING_VAR
+sarah = rebecca = laugh = This time, the way is clear for good.
+
+
+% SARAH_NOTICE_REBECCA_IS_LEAVING_NEXT
+sarah = rebecca = laugh = Darn! I'll have to start all over again…
+rebecca = sarah = happy_var = Good luck! I'm going back to my investigation.
