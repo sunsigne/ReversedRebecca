@@ -55,7 +55,7 @@ sarah = jospeh = happy_var = Thank you!
 
 % MIKA_BOMB_CONVERSATION
 sarah = mika = happy = …how many do you need?
-mika = sarah = serious_var = One well-placed charge will be more than enough.
+mika = sarah = serious_var = One well-placed charge, will be more than enough.
 
 
 % MIKA_POST_BOMB_CONVERSATION
@@ -68,7 +68,7 @@ sarah = rebecca = laugh = See? I found us a way out!
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING_VAR
-sarah = rebecca = laugh = This time, the way is clear for good.
+sarah = rebecca = laugh = This time, the path is clear for good.
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING_NEXT

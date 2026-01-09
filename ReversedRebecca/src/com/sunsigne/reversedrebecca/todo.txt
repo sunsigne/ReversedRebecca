@@ -48,14 +48,8 @@
 
 	////////// EN COURS ////////////
 	
-	pathing de sarah avec Joseph inclus créé, non testé.
-	Suite : 
-		- tester (normal + arrivée par le haut)
-		- faire cas stock
-		- faire cas SAS
-		
-	chemin par stock->entrée non testé + les trads
-	
+	pathing de sarah avec Joseph inclus créé, non testé (la version SAS, normal + arrivée par le haut)
+
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
@@ -93,10 +87,10 @@
 		
 	bug : lorsqu'Alicia se TP sur le canapé, pour une raison obsucre elle se place en 12-29 au lieu de 	11-29, ce qui n'est pas cohérent avec la position qu'elle est censé avoir, en plus de créer un trou dans la hitbox du canapé
 	
-	sarah qui prend les bombes et va parler à Mika, DOIT vérifier que Mika est bien là (dans le cas où il est partie parler à Delta ou q'il défonce la porte)
+	mika ne bouge plus avec "Alicia ?" si Sarah passe par le stock (donc, si on fait pleurer joseph). Il faudra s'assurer de faire pareil avec le "Alicia !"
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
-	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement
+	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement, je crois me souvenir qu'elle va fouiller directement le bureau d'Alicia sans aller parler à Delta
 
 	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
 	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
