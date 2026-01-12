@@ -112,3 +112,9 @@ mika = UP = worry = Alicia… Tu vas bien ?
 alicia = DOWN = happy = Je suis enfermée, mais ça va.@Tu es venu m'aider ?
 mika = UP = serious_var = Je n'ai pas la clef, mais je vais me débrouiller.@Tu devrais t'éloigner de la porte.
 alicia = DOWN = surprised = ... Ha.
+
+
+% MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
+alicia = RIGHT = happy = Merci, Mika. J'apprécie.
+mika = LEFT = serious = De rien. Tu devrais remercier Rebecca,@c'est elle qui m'a prévenu de ta situation.
+alicia = RIGHT = happy = Je n'y manquerai pas.

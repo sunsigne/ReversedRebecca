@@ -49,11 +49,15 @@
 	////////// EN COURS ////////////
 	
 	pathing de sarah avec Joseph inclus créé, non testé (la version SAS, normal + arrivée par le haut)
+	non testé -> tout ce qui suit le défonçage de porte du SAS + pas encore comptabile avec le Sarah Jospeh Cry
 
 	////////// LVL001 ////////////
 
 	à vérifier + traduire en anglais :
 	- SARAH_INQUIRY*JOSEPH_CONVERSATION
+	- ALICIA_SAS*PICK_ME_UP
+	- MIKA_INQUIRY*THANK_FOR_YELLING
+	- WHERE_IS_ALICIA*MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
 
 	identifier voleur SANS marie :
 	"
@@ -69,7 +73,7 @@
 	à faire : 
 		alicia ?
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
-			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
+			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
 			
 		alicia !
 			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire

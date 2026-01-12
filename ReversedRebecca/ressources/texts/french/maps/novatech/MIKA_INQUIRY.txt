@@ -49,3 +49,8 @@ player = DOWN = determined = C'est tellement marrant de les pousser à bout.
 
 % NO_TIME
 mika = player = serious = Je n'ai pas le temps pour tes bêtises.@J'ai des rochers à dégager.
+
+
+% THANK_FOR_YELLING
+mika = player = serious = Rebecca, je voulais te dire… Merci encore de m'avoir secoué.
+player = mika = happy_var = De rien.
