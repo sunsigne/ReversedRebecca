@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.other.CameraShakeRequest;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class CreateFrameImpactRequest implements Request {
@@ -38,11 +39,16 @@ public class CreateFrameImpactRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		int time = Integer.valueOf(target.split(",")[0]);
 		String name = String.valueOf(target.split(",")[1]).toLowerCase();
-		
-		GameObject creation = new FrameImpact(name);
-		GenericListener listener = () -> LAYER.PUZZLE.addObject(creation);
-		new GameTimer(time, listener);
-		
-	}
+		String shake = String.valueOf(target.split(",")[2]);
 
+		GameObject creation = new FrameImpact(name);
+		Request request = new RequestList().getRequestFromType(new CameraShakeRequest().getType());
+
+		GenericListener listener = () -> {
+			LAYER.PUZZLE.addObject(creation);
+			request.doAction(object, shake);
+		};
+
+		new GameTimer(time, listener);
+	}
 }

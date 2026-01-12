@@ -47,6 +47,7 @@ STRONG (vaut 40 pixels)
 MEDIUM (vaut 18 pixels)
 LITTLE (vaut 10 pixels)
 TINY (vaut 3 pixels)
+NULL (vaut 0 pixel)
 
 Exemple : 
 TIME -> 0 = CAMERA_SHAKE -> MEDIUM
