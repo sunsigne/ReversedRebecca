@@ -169,6 +169,7 @@
 	
 	////////// MILITARY ////////////
 
+	le chemin speedrun rend le joueur invulnerable. Est-ce définitif ?
 	changer nom -> jules en romeo. Vera en venera
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
