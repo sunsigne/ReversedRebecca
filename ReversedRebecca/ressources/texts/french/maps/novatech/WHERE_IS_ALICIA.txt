@@ -6,6 +6,26 @@ jean = rebecca = urge_sad = Non, je ne l'ai pas vu.
 jean = rebecca = urge_sad = Je ne l'ai pas vu non plus.
 
 
+% JEAN_HELP
+jean = player = urge_happy = Ça n'est pas mon problème.
+player = jean = wrong_with_you = Pardon ? Tu ne vas pas m'aider à la sortir de là ?
+player = jean = wrong_with_you = Elle a su s'y enfermée. Elle saura s'en sortir.
+
+
+% JEAN_HELP_NEXT
+player = DOWN = angry_var2 = Mais quel connard !
+
+
+% JEAN_HELP_SARAH_REACTION
+sarah = jean = angry = Mais t'es un connard, en fait !
+jean = player = urge_sad = Pourquoi tu m'insultes ?
+sarah = jean = angry = Tu ne vois vraiment pas le problème dans ton comportement ?
+jean = player = urge_sad = … C'est toi qui est méchante avec moi.
+sarah = jean = angry = … ?
+sarah = rebecca = sad_var = Non mais j'y crois pas… C'est lui la victime, maintenant…
+sarah = rebecca = worry = Je viens avec toi Rebecca,@on ne peut pas laisser Alicia dans le pétrin.
+
+
 % SARAH
 sarah = rebecca = worry = Désolé. Je ne sais pas où elle est.
 
@@ -27,6 +47,12 @@ marie = player = surprised_var = (… Hein ?)
 marie = player = blush = (Rebecca s'inquiète de moi ?@C'est le plus beau jour de ma vie !)
 marie = player = blush_var2 = Pas de soucis, Rebecca.@Ça va aller… Trouve-la, d'accord ?
 player = object = laugh = Oui !
+
+
+% DELTA_HELP
+delta = player = surprised = Quoi ? Enfermée dans le SAS ?
+player = object = unhappy = Oui. Tu crois pouvoir la libérer ?
+delta = player = worry = Tu as bien fait de venir me voir, c'est comme si c'était fait !
 
 
 % DELTA
@@ -118,3 +144,8 @@ alicia = DOWN = surprised = ... Ha.
 alicia = RIGHT = happy = Merci, Mika. J'apprécie.
 mika = LEFT = serious = De rien. Tu devrais remercier Rebecca,@c'est elle qui m'a prévenu de ta situation.
 alicia = RIGHT = happy = Je n'y manquerai pas.
+
+
+% NOT_WILLING_TO_HELP_ANYMORE
+player = DOWN = you_silly = Tout bien réfléchis, je vais la laisser se débrouiller toute seule.
+player = DOWN = you_silly = C'est plus amusant quand les gens souffrent,@Jospeh qui pleure sur le canapé en est le parfait exemple.

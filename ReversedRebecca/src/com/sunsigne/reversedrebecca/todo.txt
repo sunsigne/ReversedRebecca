@@ -47,9 +47,16 @@
 	)
 
 	////////// EN COURS ////////////
-	
-	pathing de sarah avec Joseph inclus créé, non testé (la version SAS, normal + arrivée par le haut)
-	non testé -> tout ce qui suit le défonçage de porte du SAS + pas encore comptabile avec le Sarah Jospeh Cry
+		
+	non testé :
+		- pathing de sarah avec Joseph inclus créé, non testé (la version SAS, normal + arrivée par le haut)
+		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
+		- "Alicia !"
+			: avec Delta (+ s'assurer que les A3 des autres soient cohérants)
+			: tester Jean avec et sans Sarah
+			
+	à faire : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
+	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait pplus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
 
 	////////// LVL001 ////////////
 
@@ -58,6 +65,10 @@
 	- ALICIA_SAS*PICK_ME_UP
 	- MIKA_INQUIRY*THANK_FOR_YELLING
 	- WHERE_IS_ALICIA*MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
+	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE
+	- WHERE_IS_ALICIA*DELTA_HELP
+	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
+	- WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION
 
 	identifier voleur SANS marie :
 	"
@@ -66,9 +77,6 @@
 	Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
 	(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 	"
-	
-	- traumatisme de jospeh : 
-		(note) traumasier Jospeh APRES avoir dis à Alicia qu'on allait l'aider, n'annule pas le "Alicia !" pour les autres. C'est voulu
 
 	à faire : 
 		alicia ?
@@ -76,24 +84,19 @@
 			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
 			
 		alicia !
-			- créer les "Alicia !", dans le cas où le joueur en as quelque chose à faire
-			- créer / vérifier la demande aupèrs de Delta, Mika, Jean, Sarah, Jospeh, Marie
+			- créer / vérifier la demande aupèrs de : Sarah, Jospeh, Marie
 			- s'il n'est pas témoin, rebecca ne sait pas que sarah (ou delta) a libéré alicia, gérer la surprise (de Mika ? de Delta ? de Rebecca ?)
-			- réaction de Mika qui va ouvrir si on l'enguele (+ romance)
-			- delta doit aller ouvrir le SAS comme avec "alicia ?"
-			- jean s'en fout comme de l'an 40
+			- réaction de Mika qui va ouvrir si on l'enguele (romance)
 			- Sarah, trouver une réaction
 			- Marie, trouver une réaction
-			- Mika réagit possitivmenet à l'enguelage, gérer ce cas d'aide (càd annuler la demande d'aide des autres) + finir le défoncage de porte
 		theft ?
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 		
 	bug : lorsqu'Alicia se TP sur le canapé, pour une raison obsucre elle se place en 12-29 au lieu de 	11-29, ce qui n'est pas cohérent avec la position qu'elle est censé avoir, en plus de créer un trou dans la hitbox du canapé
 	
-	mika ne bouge plus avec "Alicia ?" si Sarah passe par le stock (donc, si on fait pleurer joseph). Il faudra s'assurer de faire pareil avec le "Alicia !"
 	tous les indices des plantes
-	ne pas oublier de gérer les pathings de Jean, Mika et Jospeh en Inquiry (+ Sarah évidemment)
+	ne pas oublier de gérer les pathings de Jean, Marie et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement, je crois me souvenir qu'elle va fouiller directement le bureau d'Alicia sans aller parler à Delta
 
 	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
@@ -136,6 +139,7 @@
 	)
 	
 	à enregister :
+	- Rebecca fachée contre Jean ou Mika avec un "Alicia !" non répondu (+ Sarah qui remarque de Jean est un connard à ce moement là)
 	- le type de scénario (sortie ou enquête)
 	- Saboter l'ordinateur de Bernard (Tim ?)
 	- Delta a informé rebecca qu'elle faisait des casses avec son frère
