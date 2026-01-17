@@ -73,6 +73,9 @@ public class CollisionLaw implements PhysicLaw {
 		if(detectorObject == reactorObject)
 			return false;
 		
+		if(reactorObject instanceof Updatable && ((Updatable) reactorObject).getHandler() == null)
+			return false;
+
 		if (detectorObject instanceof Player && WallPassMode.isActive())
 			return false;
 
