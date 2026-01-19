@@ -34,6 +34,12 @@ sarah = rebecca = worry = Désolé. Je ne sais pas où elle est.
 sarah = rebecca = worry = Je ne sais pas non plus où elle est.
 
 
+% SARAH_HELP
+sarah = player = surprised = Quoi ? Enfermée dans le SAS ?
+player = object = unhappy = Oui. Tu crois pouvoir m'aider à la libérer ?
+sarah = player = worry = Bien sûr, je viens avec toi.
+
+
 % MARIE
 marie = player = happy = Tu as regardé sous son bureau ?
 player = object = unhappy = Je suis sérieuse, Marie…@Son bureau a été attaqué…

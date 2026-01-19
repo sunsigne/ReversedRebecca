@@ -34,6 +34,11 @@ alicia = RIGHT = appeased = Merci.
 player = LEFT = happy_var = Je n'allais quand même pas te laisser là-dedans.
 
 
+% HUG_SARAH
+alicia = DOWN = appeased = Merci.
+sarah = UP = happy_var = Je n'allais quand même pas te laisser là-dedans.
+
+
 % PICK_ME_UP
 alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
 alicia = DOWN = happy = Tu veux quelque chose ?

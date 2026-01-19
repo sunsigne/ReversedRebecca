@@ -50,6 +50,7 @@
 		
 	non testé :
 		- pathing de sarah avec Joseph inclus créé, non testé (la version SAS, normal + arrivée par le haut)
+		- le calin de Sarah devant le sas (bien vérifier la distance avec le joueur)
 		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
 		- "Alicia !"
 			: avec Delta (+ s'assurer que les A3 des autres soient cohérants)
@@ -57,12 +58,24 @@
 			
 	à faire : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait pplus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
+	- Sarah: gérer le cas où elle arrive devant le SAS et que la porte est déjà ouverte
+	- Sarah : lors du calin, gérer la proximité du joueur (cinématqiue comme pour Delta)
+
+	dans le fichier de delta, ligne 44 il y a : WONPUZZLE -> 26-36 = GOTO -> PREVENT_DELTA_LOST_NEXT_DIALOGUE	Ce goto n'est relié à rien. Est-il obselète ou défaillant ?
+
+	(à vérifier la prochaine fois)	
+	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
+	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
+	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 
 	////////// LVL001 ////////////
 
+	(fun)
 	à vérifier + traduire en anglais :
 	- SARAH_INQUIRY*JOSEPH_CONVERSATION
 	- ALICIA_SAS*PICK_ME_UP
+	- ALICIA_SAS*PICK_ME_UP_SARAH
+	- ALICIA_SAS*HUG_SARAH
 	- MIKA_INQUIRY*THANK_FOR_YELLING
 	- WHERE_IS_ALICIA*MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE
@@ -70,6 +83,7 @@
 	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
 	- WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION
 
+	(bloquant)
 	identifier voleur SANS marie :
 	"
 	Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...
@@ -78,6 +92,7 @@
 	(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 	"
 
+	(bloquant)
 	à faire : 
 		alicia ?
 			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
@@ -93,20 +108,25 @@
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 
+	(plus tard)
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Marie et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement, je crois me souvenir qu'elle va fouiller directement le bureau d'Alicia sans aller parler à Delta
 
+	(bloquant)
 	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
 	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
 
+	(plus tard)
 	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
 
+	(fun)
 	XhX - variantes psychopath
 	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
 	
+	(à la fin)
 	scénarion : inquery
 	- les TALK et TALK_VAR n'ont pas encore été remplacés
 	- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
@@ -122,6 +142,7 @@
 	- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 	- une fois que marie a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 
+	(à la fin)
 	karma actions :
 	- inquiéter volontairement joseph
 	- se moquer de Alicia quand elle est enfermée
@@ -136,6 +157,7 @@
 	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
 	)
 	
+	(à la fin)
 	à enregister :
 	- Rebecca fachée contre Jean ou Mika avec un "Alicia !" non répondu (+ Sarah qui remarque de Jean est un connard à ce moement là)
 	- le type de scénario (sortie ou enquête)
@@ -164,10 +186,7 @@
 	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
 	- sarah qui pousse rebecca (devant alicia)
 	- traumatiser jospeh / se moquer d'alicia
-	
-	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
-	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
-	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
+
 	
 	////////// MILITARY ////////////
 
