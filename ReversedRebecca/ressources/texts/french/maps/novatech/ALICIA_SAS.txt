@@ -44,6 +44,14 @@ alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
 alicia = DOWN = happy = Tu veux quelque chose ?
 
 
+% PICK_ME_UP_SARAH
+alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alicia = DOWN = happy = Tu veux quelque chose ?
+sarah = UP = wink = Non merci, ça ira.
+alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
+sarah = UP = laugh = Oui.
+
+
 % ASK_DRINK
 alicia = DOWN = happy_var = Ok, je te fais ça.
 player = UP = laugh = Top, merci.
