@@ -47,12 +47,8 @@
 	)
 
 	////////// EN COURS ////////////
-		
-		
-	- Sarah: gérer le cas où elle arrive devant le SAS et que la porte est déjà ouverte
-	- Sarah : lors du calin, gérer la proximité du joueur : créer une hitbox pour empêcher le joueur de leurs marcher dessus (+ prendre en compte le "recul" provoqué par le calin)
+
 	ensuite : sarah doit ouvrir la seconde porte
-	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 
 	non testé :
 		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
@@ -61,7 +57,8 @@
 			: tester Jean avec et sans Sarah
 			
 	à faire : 
-	(traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
+	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
+	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait pplus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
 
 	dans le fichier de delta, ligne 44 il y a : WONPUZZLE -> 26-36 = GOTO -> PREVENT_DELTA_LOST_NEXT_DIALOGUE	Ce goto n'est relié à rien. Est-il obselète ou défaillant ?
@@ -117,6 +114,7 @@
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement, je crois me souvenir qu'elle va fouiller directement le bureau d'Alicia sans aller parler à Delta
 
 	(bloquant)
+	- Sarah: gérer le cas où elle arrive devant le SAS et que la porte est déjà ouverte
 	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
 	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
 
