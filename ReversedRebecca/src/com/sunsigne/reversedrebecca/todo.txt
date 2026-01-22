@@ -61,8 +61,6 @@
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait pplus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
 
-	dans le fichier de delta, ligne 44 il y a : WONPUZZLE -> 26-36 = GOTO -> PREVENT_DELTA_LOST_NEXT_DIALOGUE	Ce goto n'est relié à rien. Est-il obselète ou défaillant ?
-
 	(à vérifier la prochaine fois)	
 	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
 	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
