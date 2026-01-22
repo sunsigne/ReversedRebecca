@@ -74,3 +74,10 @@ sarah = rebecca = laugh = Cette fois, la voie est libre pour de bon.
 % SARAH_NOTICE_REBECCA_IS_LEAVING_NEXT
 sarah = rebecca = laugh = Zut ! Je vais devoir recommencer…
 rebecca = sarah = happy_var = Bonne chance ! Moi, je reprends mon enquête.
+
+
+% SARAH_NOTICE_REBECCA_NEAR_ENTRANCE
+sarah = rebecca = wink = Tu vérifies si je fais du bon travail ?
+rebecca = sarah = laugh = Non, j'essaie de voir si j'arrive à sortir.
+sarah = rebecca = worry = C'est un peu le but de ma mission…@Nous libérer le chemin.
+rebecca = sarah = you_silly = Ceux qui regardent ont compris ce que je voulais dire.

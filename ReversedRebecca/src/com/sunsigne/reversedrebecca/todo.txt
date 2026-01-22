@@ -48,9 +48,8 @@
 
 	////////// EN COURS ////////////
 
-	ensuite : sarah doit ouvrir la seconde porte
-
 	non testé :
+		- tout le chemin où Sarah passe par l'entre (ouverture des SAS, proximité du joueur, dialogue de fin)
 		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
 		- "Alicia !"
 			: avec Delta (+ s'assurer que les A3 des autres soient cohérants)
@@ -59,7 +58,7 @@
 	à faire : 
 	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
-	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait pplus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
+	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait plus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
 
 	(à vérifier la prochaine fois)	
 	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
@@ -80,6 +79,7 @@
 	- WHERE_IS_ALICIA*DELTA_HELP
 	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
 	- WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION
+	- SARAH_INQUIRY*SARAH_NOTICE_REBECCA_NEAR_ENTRANCE
 
 	(bloquant)
 	identifier voleur SANS marie :
