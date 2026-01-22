@@ -48,6 +48,9 @@
 
 	////////// EN COURS ////////////
 		
+	rr000 : la priorité de "take stock" est sur la serviette plutôt que sur la recherche de la clef
+	
+		
 	charge emotionnelle mentale :
 	je pense que : le rythme de la scène du Sas avec sarah est bon
 	je me demande si : la distance avec le joueur est bien gérée (collision eventuelle exclus, je parle du lancement du dialogue). Si ça n'est pas le cas, relire les lignes qui parlent de la distance sur la plante ET sur Alicia. En principe ça marche. Au mieux, c'est la dfistance qui est à corriger. Si ça ne marche pas, il y aura une erreur logique très clair à cet endroit.
