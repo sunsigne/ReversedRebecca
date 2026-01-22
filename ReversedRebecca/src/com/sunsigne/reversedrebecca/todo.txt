@@ -53,7 +53,6 @@
 	- Sarah : lors du calin, gérer la proximité du joueur : créer une hitbox pour empêcher le joueur de leurs marcher dessus (+ prendre en compte le "recul" provoqué par le calin)
 	ensuite : sarah doit ouvrir la seconde porte
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
-	rr000 : la priorité de "take stock" est sur la serviette plutôt que sur la recherche de la clef
 
 	non testé :
 		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
