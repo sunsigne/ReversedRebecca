@@ -23,17 +23,17 @@
 
 	vérifier si réglé sur build low CPU :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
-		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
+		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents)
 
 	////////// TEMP ////////////
 
+	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	dave : supprimer les images creepy de dave
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	lvl001 : redirection du end_lvl vers "dave_end"
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
-	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	Creepy pasta dave bonus (& achievement)
 	la classe DemoEndScreen :
 	(
@@ -231,6 +231,7 @@
 	2h digpuzzle : faire clignoter l'outils lorsque récupéré	(avec un highlight)
 	1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
 
+	2h mettre le bonus sur l'écran titre même
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
