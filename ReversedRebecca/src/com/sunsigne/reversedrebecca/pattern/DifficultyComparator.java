@@ -1,16 +1,19 @@
 package com.sunsigne.reversedrebecca.pattern;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.physic.debug.MultiToolMode;
 
 public class DifficultyComparator {
 
 	public boolean canUseTool(LVL puzzle_lvl, LVL tool_lvl) {
+		if (MultiToolMode.debugMode.getDebugMode().getState())
+			tool_lvl = LVL.RED;
 
 		switch (tool_lvl) {
 
 		case PURPLE:
 			if (puzzle_lvl == LVL.PURPLE)
-				return true;		
+				return true;
 		case RED:
 			if (puzzle_lvl == LVL.RED)
 				return true;
@@ -28,8 +31,8 @@ public class DifficultyComparator {
 				return true;
 		case NULL:
 			return puzzle_lvl == LVL.NULL;
-
 		}
+
 		return false;
 	}
 

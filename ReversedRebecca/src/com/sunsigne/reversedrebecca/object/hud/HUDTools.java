@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.debug.MultiToolMode;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -110,7 +111,10 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 	}
 	
 	private BufferedImage loadBatteryImage(LVL maxDifficulty, LVL difficulty) {
-		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "batteries");	
+		if(MultiToolMode.debugMode.getDebugMode().getState())
+			difficulty = maxDifficulty = LVL.RED;
+		
+		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "batteries");
 		BufferedImage image = getSheetSubImage(sheet, difficulty.ordinal(), maxDifficulty.ordinal(), getSheetWidth(), getSheetHeight());
 		return image;
 	}
@@ -123,7 +127,7 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		ImageTask task = new ImageTask();
 
 		for (ToolPlayer tempTool : list.getList()) {
-			if (tempTool.getDifficulty() == LVL.NULL)
+			if (tempTool.getDifficulty() == LVL.NULL && MultiToolMode.debugMode.getDebugMode().getState() == false)
 				continue;
 			
 			if(tempTool.getNum() <= 0)

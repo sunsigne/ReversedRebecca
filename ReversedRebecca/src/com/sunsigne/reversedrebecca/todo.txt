@@ -20,15 +20,11 @@
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
 		
 	vérifier si bien réglé :
-		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
-	
+
 	vérifier si réglé sur build low CPU :
 		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
 		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents) -> déplacer la caméra
-		
-	connus mais tant pis :
-		- 1h00 le multitool une fois utilisé corrompt le "VRAI" scrore des outils
-		
+
 	////////// TEMP ////////////
 
 	dave : supprimer les images creepy de dave

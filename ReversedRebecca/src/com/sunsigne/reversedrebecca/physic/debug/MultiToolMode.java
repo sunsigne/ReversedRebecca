@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
+import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolMaxLevelCondition;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -12,7 +14,7 @@ public class MultiToolMode extends DebugMode {
 
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new MultiToolMode();
+	public static final DebugMode debugMode = new MultiToolMode();
 
 	@Override
 	public DebugMode getDebugMode() {
@@ -46,15 +48,18 @@ public class MultiToolMode extends DebugMode {
 
 	private void setToolToDifficulty(ToolPlayer tool, LVL difficulty) {
 		if (difficulty != LVL.NULL)
-			tool.setMaxDifficulty(difficulty);
-		tool.setDifficulty(difficulty);
+			tool.setMaxDifficulty(tool.getMaxDifficulty());
+		tool.setDifficulty(tool.getDifficulty());
+		
+		new UnlockedToolMaxLevelCondition().registerValue(tool, difficulty);
+		new UnlockedToolCondition().registerValue(tool, difficulty);
 	}
 
 	private World world;
 
 	@Override
 	public void tick(Updatable object) {
-
+		
 		// doesn't update if desactivate
 		if (getState() == false)
 			return;
