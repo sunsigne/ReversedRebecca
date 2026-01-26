@@ -18,7 +18,6 @@
 		- hack puzzle - l'inverseur est censé inverser les controles SANS déplacer la souris à la position inverse sur l'écran
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
-		- 0h30 ws000 en fastworld mode, la porte après le coffre devient softlock (car le mur est supprimé avant d'être créé)
 		
 	vérifier si bien réglé :
 		- il est possible que les interactions ou le "freeze" d'un monde soit bugué lorsqu'on rentre dedans. Si c'est le cas, le pb viendra de la méthode freeze(bool, bool) de la classe World
@@ -48,22 +47,37 @@
 
 	////////// EN COURS ////////////
 
-	non testé :
+	à tester en live : 
 		- tout le chemin où Sarah passe par l'entre (ouverture des SAS, proximité du joueur, dialogue de fin)
-		- tout ce qui suit le défonçage de porte du SAS (+ les A3) + comptabile avec le Sarah Jospeh Cry ?
-		- "Alicia !"
-			: avec Delta (+ s'assurer que les A3 des autres soient cohérants)
-			: tester Jean avec et sans Sarah
+		- cohérences entre la libération par Mika, Delta et Sarah
+
+	Alicia ! :
+	- Mika -> Delta va libérer Alicia seule (vérifier les A3) + ajouter animation de défonssage de porte ? + la laisser "cassée (càd ne pas la faire réaparraitre)
+	- Sarah -> va libérer avec le joueur (tester avec Jean en témoin)
+	- Ajouter Maire, et Deva ?
+
+	Libération directe
+		Mika :
+			- à finir (tout ce qui suit le défonçage de porte du SAS (+ les A3) 
+				+ rendre ça comptabible avec le Sarah Jospeh Cry :
+					- dans le cas d'un Alicia ?
+					- dans le cas d'un Alicia !
+					- s'assurer que le verrou soit stable que Sarah soit déjà en chemin vers Mika ou non, par exemple, mais pas 100% bloquant (Mika doit pouvoir aller libérer Sarah) - je crois me souvenir que le verrou est sur Jospeph cry tout court, donc que dans l'autre cas de figure (càd quand Sarah part à l'entrée d'après SAS), il ne devrait déjà pas y avoir de pb
+			- Sait que Delta a libéré
+		Delta :
+			- à finir (Alicia! + vérifier les A3)
+		Sarah :
+			- peut libérer Alicia sans que ni Mika, ni Delta, ni Rebecca ne remarquent, donc gérer leurs surprises lorsqu'ils s'en rendent compte
+			- peut être témoin en directe de la libération d'Alicia par Mika, Detla ou Rebecca (avec Delta)
+			- doit pouvoir passer par le SAS sans encombre si Alicia a été libéré
 			
+
 	à faire : 
 	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait plus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
+	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
 
-	(à vérifier la prochaine fois)	
-	0h30 = ajouter un dialogue pour que sarah envoie rebecca voir delta ?
-	quand mika défonce la porte, ajouter l'animation de défonssage de porte (lorsqu'elle existera)
-	quand Mika défonce la porte, ne pas la faire réapparaître (déjà fait ?)
 
 	////////// LVL001 ////////////
 
@@ -93,31 +107,17 @@
 	(bloquant)
 	à faire : 
 		alicia ?
-			- s'assurer de faire en sorte que Delta voit/remarque si Sarah a déjà ouvert la porte du SAS pour Alicia
 			- Marie est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
-			
-		alicia !
-			- créer / vérifier la demande aupèrs de : Sarah, Marie, Dave
-			- s'il n'est pas témoin, rebecca ne sait pas que sarah (ou delta) a libéré alicia, gérer la surprise (de Mika ? de Delta ? de Rebecca ?)
-			- réaction de Mika qui va ouvrir si on l'enguele (romance)
-			- Sarah, trouver une réaction
-			- Marie, trouver une réaction
+
 		theft ?
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
-
+			- JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
+			
 	(plus tard)
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Marie et Jospeh en Inquiry (+ Sarah évidemment)
 	ps : je ne me souviens plus si, quand Sarah enguele Jean en exit, son pathing reprend normalement, je crois me souvenir qu'elle va fouiller directement le bureau d'Alicia sans aller parler à Delta
-
-	(bloquant)
-	- Sarah: gérer le cas où elle arrive devant le SAS et que la porte est déjà ouverte
-	JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
-	vérifier que l'animation de donnage de clefs auprès de Alicia (green) dans la tentative de softlock soit la même que celle de donnage à Sarah (cyan) en inquiry dans le bureau de jean (le son (bruit) dans le second cas n'est pas le bon)
-
-	(plus tard)
-	0h10 = à enregister : - le type de scénario (sortie ou enquête) ?
 
 	(fun)
 	XhX - variantes psychopath
@@ -158,6 +158,7 @@
 	
 	(à la fin)
 	à enregister :
+	- le type de scénario (sortie ou enquête) ?
 	- Rebecca fachée contre Jean ou Mika avec un "Alicia !" non répondu (+ Sarah qui remarque de Jean est un connard à ce moement là)
 	- le type de scénario (sortie ou enquête)
 	- Saboter l'ordinateur de Bernard (Tim ?)
@@ -327,7 +328,7 @@
 
 	////////// PERSONNAGES A FAIRE ////////////
 
-	characters to finish : gamma, stephan
+	characters to finish : gamma, stephan (dans son appart, créer le chat "méli")
 
 	////////// DAVE ////////////
 	
