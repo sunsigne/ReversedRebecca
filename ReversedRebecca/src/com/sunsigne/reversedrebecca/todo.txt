@@ -44,8 +44,6 @@
 	////////// EN COURS ////////////
 
 	fait, non testé
-		- tout le chemin où Sarah passe par l'entre (ouverture des SAS, proximité du joueur, dialogue de fin)
-		
 		delta AVEC rebecca :
 			rermarque qu'Alicia a été libéré
 			
@@ -101,7 +99,6 @@
 
 	(fun)
 	à vérifier + traduire en anglais :
-	- SARAH_INQUIRY*SARAH_NOTICE_REBECCA_NEAR_ENTRANCE
 	- MIKA_INQUIRY*THANK_FOR_YELLING
 	- WHERE_IS_ALICIA*MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
 	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
