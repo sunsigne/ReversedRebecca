@@ -29,9 +29,20 @@ alicia = RIGHT = appeased = Thank you.
 player = LEFT = happy_var = There's no way I would have left you in there.
 
 
+% HUG_SARAH
+alicia = DOWN = appeased = Thank you.
+sarah = UP = happy_var = You're welcome. I didn't know you were in there,@but I'm glad you're doing well.
+
+
 % PICK_ME_UP
 alicia = DOWN = happy = I need a pick-me-up.@I'm going to get myself some tea.
 alicia = DOWN = happy = Do you want something?
+
+
+% PICK_ME_UP_SARAH
+alicia = DOWN = happy = I need a pick-me-up.@I'm going to get myself some tea.
+alicia = DOWN = happy = Do you want something?
+sarah = UP = wink = No thanks, I'm good.
 
 
 % ASK_DRINK

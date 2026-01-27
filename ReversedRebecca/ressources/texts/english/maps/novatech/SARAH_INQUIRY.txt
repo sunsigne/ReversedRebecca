@@ -29,7 +29,7 @@ sarah = LEFT = laugh = And you? Have you seen any keys around here, by any chanc
 rebecca = RIGHT = happy = Don’t bother, I’ll get them for you.
 
 
-%REBECCA_GIVING_KEYS
+% REBECCA_GIVING_KEYS
 sarah = LEFT = wink = Thanks, that's great!
 
 

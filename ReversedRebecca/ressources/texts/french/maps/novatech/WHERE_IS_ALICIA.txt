@@ -58,7 +58,7 @@ player = object = laugh = Oui !
 % DELTA_HELP
 delta = player = surprised = Quoi ? Enfermée dans le SAS ?
 player = object = unhappy = Oui. Tu crois pouvoir la libérer ?
-delta = player = worry = Tu as bien fait de venir me voir, c'est comme si c'était fait !
+delta = player = worry = Tu as bien fait de venir me voir,@c'est comme si c'était fait !
 
 
 % DELTA
@@ -73,8 +73,8 @@ delta = player = no_sens = Ce SAS n'est pas supposé être verrouillé…
 delta = UP = laugh = Heureusement que tu m'as avec toi !
 
 
-% DELTA_EPIPHANIE
-delta = player = no_sens = C'est bien de ce SAS que tu parlais ?@Parce qu'il n'est pas vérouillé.
+% DELTA_EPIPHANIE_BUT_NO
+delta = player = no_sens = C'est bien de ce SAS que tu parlais ?@Parce qu'il n'est pas verrouillé.
 player = UP = no_sens_var = Uh?
 delta = player = laugh_var = J'imagine que quelqu'un d'autre s'en est occupé avant nous.
 

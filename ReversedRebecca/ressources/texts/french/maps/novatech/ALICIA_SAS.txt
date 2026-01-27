@@ -36,7 +36,7 @@ player = LEFT = happy_var = Je n'allais quand même pas te laisser là-dedans.
 
 % HUG_SARAH
 alicia = DOWN = appeased = Merci.
-sarah = UP = happy_var = Je n'allais quand même pas te laisser là-dedans.
+sarah = UP = happy_var = De rien. Je ne savais pas que tu étais là-dedans,@mais je suis contente que tu ailles bien.
 
 
 % PICK_ME_UP

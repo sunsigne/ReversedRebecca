@@ -29,6 +29,12 @@ marie = player = blush_var2 = No worries, Rebecca. I'll be alright…@Find her, 
 player = object = laugh = Yes!
 
 
+% DELTA_HELP
+delta = player = surprised = What? Locked in the SAS?
+player = object = unhappy = Yes. Do you think you can free her?
+delta = player = worry = It was the right thing to do to come and see me,@it's as good as done!
+
+
 % DELTA
 delta = rebecca = surprised = What? Hurt?
 rebecca = object = unhappy = It's a possibility. It happened in her office.
