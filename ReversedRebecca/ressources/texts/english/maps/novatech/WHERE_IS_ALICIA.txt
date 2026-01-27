@@ -47,6 +47,12 @@ delta = player = no_sens = This airlock is not supposed to be locked…
 delta = UP = laugh = Good thing you have me with you!
 
 
+% DELTA_EPIPHANIE_BUT_NO
+delta = player = no_sens = Is this the SAS we were talking about?@Because it's not locked.
+player = UP = no_sens_var = Huh?
+delta = player = laugh_var = I guess someone else freed Alicia before us.
+
+
 % DELTA_OPENED_SAS
 delta = DOWN = laugh = And there you have it!
 

@@ -43,12 +43,13 @@
 
 	////////// EN COURS ////////////
 
+
+	à tester : alicia? avec delta, mais sarah qui a déjà dévérouillé le SAS
+
 	fait, non testé
 		delta AVEC rebecca :
-			rermarque qu'Alicia a été libéré
 			
 		delta sans rebecca :
-			remarque qu'Alicia est libéré
 		
 		mika :
 		
@@ -56,6 +57,7 @@
 	pas encore fait :
 		delta AVEC rebecca :
 			ne remarque pas que Sarah est en train de libérer
+			en Alicia? Delta doit avoir un dialogue : quand on rentre dans le bureau d'Alicia, quand on rentre dans la salle de pause, quand on va voir Sarah à l'entrée ?
 			
 		delta sans rebecca :
 			ne remarque pas que Sarah est en train de libérer
@@ -103,7 +105,6 @@
 	- WHERE_IS_ALICIA*MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
 	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
 	- WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION	
-	- WHERE_IS_ALICIA*DELTA_EPIPHANIE_BUT_NO (ne marche pas encore, le scanner a été effacé par sarah ?)	
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique)
 
 
