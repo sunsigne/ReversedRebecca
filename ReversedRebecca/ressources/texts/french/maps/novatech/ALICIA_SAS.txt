@@ -80,6 +80,10 @@ alicia = player = unhappy = Tu sais quoi, je suis trop fatiguée pour rester@éc
 delta = player = worry = T'as pas ta langue dans ta poche, toi !
 
 
+% FOUND_BY_DELTA_IN_BREAK_ROOM
+delta = player = happy = On dirait qu'on l'a trouvé. Elle a l'air d'aller bien.
+
+
 % FREED_BY_DELTA_END
 delta = player = wink = Bon, tu sais où me trouver si tu as besoin.
 

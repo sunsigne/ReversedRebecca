@@ -75,6 +75,10 @@ alicia = player = unhappy = You know what, I'm too tired to stay and@listen to y
 delta = player = worry = You're kind of a blunt girl!
 
 
+% FOUND_BY_DELTA_IN_BREAK_ROOM
+delta = player = happy = It looks like we've found her.@She seems to be doing well.
+
+
 % FREED_BY_DELTA_END
 delta = player = wink = Well, you know where to find me@if you need anything.
 

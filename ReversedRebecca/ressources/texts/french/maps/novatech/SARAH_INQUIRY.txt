@@ -81,3 +81,8 @@ sarah = rebecca = wink = Tu vérifies si je fais du bon travail ?
 rebecca = sarah = laugh = Non, j'essaie de voir si j'arrive à sortir@d'une façon ou d'une autre.
 sarah = rebecca = worry = C'est un peu le but de ma mission…@Nous libérer le chemin.
 rebecca = sarah = you_silly = Ceux qui nous regardent en ce moment ont@compris ce que je voulais dire vraiment dire.
+
+
+% SARAH_NOTICE_REBECCA_NEAR_ENTRANCE_DELTA_REACTION
+delta = player = worry = Tu… fais référence à moi ?
+player = delta = surprised = Mon Dieu ! Mais en plus, tu réagis !@Ce jeu pense vraiment à tout !

@@ -81,3 +81,8 @@ Sarah = Rebecca = wink = Are you checking if I'm doing a good job?
 Rebecca = Sarah = laugh = No, I'm trying to see if I can get out somehow.
 Sarah = Rebecca = worry = That's kind of the point of my mission…@To clear the way for us.
 Rebecca = Sarah = you_silly = Those watching right now have understood@what I really meant.
+
+
+% SARAH_NOTICE_REBECCA_NEAR_ENTRANCE_DELTA_REACTION
+delta = player = worry = Are you… referring to me?
+player = delta = surprised = Dear me! And you're actually reacting!@This game really thought of everything!

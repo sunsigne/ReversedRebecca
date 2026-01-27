@@ -43,12 +43,14 @@
 
 	////////// EN COURS ////////////
 
-
-	à tester : alicia? avec delta, mais sarah qui a déjà dévérouillé le SAS
-
 	fait, non testé
 		delta AVEC rebecca :
-			
+			en Alicia? si Sarah l'a libéré
+				- voir Alicia en salle de pause : Bon ! On dirait qu'on l'a trouvé ! (fait, non testé)
+				- Marie dans le stock (gérer la romance) (fait, non testé + présence Alicia ET sans Alicia, pour voir si je n'ai pas tout cassé)
+				- Sarah, lorsque rebecca parle de "ceux qui nous regarde" : tu fais référence à moi ?" (fait, non testé)
+				+ vérifier trad : ALICIA_SAS*FOUND_BY_DELTA_IN_BREAK_ROOM & SARAH_INQUIRY*SARAH_NOTICE_REBECCA_NEAR_ENTRANCE_DELTA_REACTION
+					
 		delta sans rebecca :
 		
 		mika :
@@ -57,8 +59,7 @@
 	pas encore fait :
 		delta AVEC rebecca :
 			ne remarque pas que Sarah est en train de libérer
-			en Alicia? Delta doit avoir un dialogue : quand on rentre dans le bureau d'Alicia, quand on rentre dans la salle de pause, quand on va voir Sarah à l'entrée ?
-			
+				
 		delta sans rebecca :
 			ne remarque pas que Sarah est en train de libérer
 		
