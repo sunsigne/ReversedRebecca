@@ -45,11 +45,6 @@
 
 	fait, non testé
 		delta AVEC rebecca :
-			en Alicia? si Sarah l'a libéré
-				- voir Alicia en salle de pause : Bon ! On dirait qu'on l'a trouvé ! (fait, non testé)
-				- Marie dans le stock (gérer la romance) (fait, non testé + présence Alicia ET sans Alicia, pour voir si je n'ai pas tout cassé)
-				- Sarah, lorsque rebecca parle de "ceux qui nous regarde" : tu fais référence à moi ?" (fait, non testé)
-				+ vérifier trad : ALICIA_SAS*FOUND_BY_DELTA_IN_BREAK_ROOM & SARAH_INQUIRY*SARAH_NOTICE_REBECCA_NEAR_ENTRANCE_DELTA_REACTION
 					
 		delta sans rebecca :
 		
@@ -99,6 +94,8 @@
 
 
 	////////// LVL001 ////////////
+
+	que se passe-til si on voit Alicia enfermée, PUIS qu'on enquête aurtpès de Mika : est-ce qu'ils en déduise qu'Alicia a un pb ?
 
 	(fun)
 	à vérifier + traduire en anglais :
