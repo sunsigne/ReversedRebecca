@@ -73,6 +73,10 @@ delta = player = no_sens = Ce SAS n'est pas supposé être verrouillé…
 delta = UP = laugh = Heureusement que tu m'as avec toi !
 
 
+% DELTA_EPIPHANIE_SARAH_VAR
+delta = player = happy = On dirait que Sarah est déjà sur le coup.
+
+
 % DELTA_EPIPHANIE_BUT_NO
 delta = player = no_sens = C'est bien de ce SAS dont on parlait ?@Parce qu'il n'est pas verrouillé.
 player = UP = no_sens_var = Uh?

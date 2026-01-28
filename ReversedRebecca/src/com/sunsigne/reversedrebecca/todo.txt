@@ -44,20 +44,10 @@
 	////////// EN COURS ////////////
 
 	fait, non testé
-		delta AVEC rebecca :
-			à reprendre : npc-08 Sara, ligne 317, MEMORY:SARAH_IS_FREEING_ALICIA, et ligne 327 MEMORY:ALICIA_FREED_FROM_SAS
-		delta sans rebecca :
-		
 		mika :
 		
 	
 	pas encore fait :
-		delta AVEC rebecca :
-			ne remarque pas que Sarah est en train de libérer
-				
-		delta sans rebecca :
-			ne remarque pas que Sarah est en train de libérer
-		
 		mika :
 			ne remarque pas que Alicia est libéré
 			ne remarque pas que Sarah est en train de libérer
