@@ -45,7 +45,7 @@
 
 	fait, non testé
 		delta AVEC rebecca :
-					
+			à reprendre : npc-08 Sara, ligne 317, MEMORY:SARAH_IS_FREEING_ALICIA, et ligne 327 MEMORY:ALICIA_FREED_FROM_SAS
 		delta sans rebecca :
 		
 		mika :
