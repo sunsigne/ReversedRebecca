@@ -43,11 +43,12 @@
 
 	////////// EN COURS ////////////
 
+	à corriger : deux NPC peuvent se bloquer. Il faudrait qu'ils puissent se passer au travers lorsque ça va arriver (pathfinder)
+
 	pas encore fait :
 		mika :
 			alicia! avant sarah (l'après libération, après dialogue de Mika + "romance hétéro" remplacé par ""romance" hétéro" + le dialogue de Sarah dans le niveau d'après
-			alicia! pendant sarah
-			alicia! après sarah
+			alicia! après sarah -> ligne 120 -> stuff (le faire rentrer dans le SAS, regarder partout, et repartir)
 			
 		sarah : 
 			va libérer avec le joueur (réfléchir aux tenants et aboutissants vis à vis de Mika/Delta, et de Jean)
