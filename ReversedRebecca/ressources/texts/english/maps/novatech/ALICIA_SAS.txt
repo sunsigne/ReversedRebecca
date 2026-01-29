@@ -35,8 +35,8 @@ sarah = UP = happy_var = You're welcome. I didn't know you were in there,@but I'
 
 
 % PICK_ME_UP
-alicia = DOWN = happy = I need a pick-me-up.@I'm going to get myself some tea.
-alicia = DOWN = happy = Do you want something?
+alicia = player = happy = I need a pick-me-up.@I'm going to get myself some tea.
+alicia = player = happy = Do you want something?
 
 
 % PICK_ME_UP_SARAH
@@ -46,8 +46,8 @@ sarah = UP = wink = No thanks, I'm good.
 
 
 % ASK_DRINK
-alicia = DOWN = happy_var = Okay, I'll get you that.
-player = UP = laugh = Sweet, thank you. 
+alicia = player = happy_var = Okay, I'll get you that.
+player = alicia = laugh = Sweet, thank you. 
 
 
 % TAKE_CARE
@@ -84,8 +84,8 @@ delta = player = wink = Well, you know where to find me@if you need anything.
 
 
 % NO_THANKS
-alicia = DOWN = happy_var = Suit yourself. See you later.
-player = UP = laugh = Sure.
+alicia = player = happy_var = Suit yourself. See you later.
+player = alicia = laugh = Sure.
 
 
 % COLLAPSE_DISCOVERED_UP

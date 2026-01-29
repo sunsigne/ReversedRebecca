@@ -49,3 +49,15 @@ player = DOWN = determined = It's so much fun to push them to their limits.
 
 % NO_TIME
 mika = player = serious = I don't have time for your nonsense.@I have rocks to clear.
+
+
+% THANK_FOR_YELLING
+mika = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
+player = mika = happy_var = Whenever you want!
+mika = player = smirk = Whenever I want? Because I have@something else you can shake…
+player = mika = no_sens_var = … Pardon?
+mika = player = smirk = Do I need to draw you a picture?@I'm coming over tonight.
+player = mika = no_sens = Uh… No.
+mika = player = smirk = Yes.
+player = mika = no_sens_var = …
+player = mika = blush = (Actually, it's a little flattering.@I wonder if he'll really come.)

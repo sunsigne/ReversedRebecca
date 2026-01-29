@@ -52,5 +52,12 @@ mika = player = serious = Je n'ai pas le temps pour tes bêtises.@J'ai des roche
 
 
 % THANK_FOR_YELLING
-mika = player = serious = Rebecca, je voulais te dire… Merci encore de m'avoir secoué.
-player = mika = happy_var = De rien.
+mika = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
+player = mika = happy_var = Quand tu veux !
+mika = player = smirk = Quand je veux ? Parce que j'ai@autre chose que tu peux secouer…
+player = mika = no_sens_var = … Pardon ?
+mika = player = smirk = Tu veux un dessin ? Je viens chez toi ce soir.
+player = mika = no_sens = Heu… Non.
+mika = player = smirk = Si.
+player = mika = no_sens_var = …
+player = mika = blush = (En vrai, c'est un peu flatteur.@Je me demande s'il va vraiment venir.)

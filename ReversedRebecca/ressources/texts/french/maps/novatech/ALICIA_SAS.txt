@@ -40,8 +40,8 @@ sarah = UP = happy_var = De rien. Je ne savais pas que tu étais là-dedans,@mai
 
 
 % PICK_ME_UP
-alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
-alicia = DOWN = happy = Tu veux quelque chose ?
+alicia = player = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alicia = player = happy = Tu veux quelque chose ?
 
 
 % PICK_ME_UP_SARAH
@@ -51,8 +51,8 @@ sarah = UP = wink = Non merci, ça ira.
 
 
 % ASK_DRINK
-alicia = DOWN = happy_var = Ok, je te fais ça.
-player = UP = laugh = Top, merci.
+alicia = player = happy_var = Ok, je te fais ça.
+player = alicia = laugh = Top, merci.
 
 
 % TAKE_CARE
@@ -89,8 +89,8 @@ delta = player = wink = Bon, tu sais où me trouver si tu as besoin.
 
 
 % NO_THANKS
-alicia = DOWN = happy_var = Comme tu veux. Alors, à plus tard.
-player = UP = laugh = Oui.
+alicia = player = happy_var = Comme tu veux. Alors, à plus tard.
+player = alicia = laugh = Oui.
 
 
 % COLLAPSE_DISCOVERED_UP

@@ -13,3 +13,4 @@ angry_var=2,2
 ////// CHARACTER SPECIFIC //////
 
 worry=3,1
+smirk=3,2

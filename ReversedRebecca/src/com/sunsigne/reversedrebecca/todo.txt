@@ -43,22 +43,19 @@
 
 	////////// EN COURS ////////////
 
-	fait, non testé
-		mika :
-		
-	
 	pas encore fait :
 		mika :
-			ne remarque pas que Alicia est libéré
-			ne remarque pas que Sarah est en train de libérer
+			alicia! avant sarah (l'après libération, après dialogue de Mika + "romance hétéro" remplacé par ""romance" hétéro" + le dialogue de Sarah dans le niveau d'après
+			alicia! pendant sarah
+			alicia! après sarah
 			
 		sarah : 
 			va libérer avec le joueur (réfléchir aux tenants et aboutissants vis à vis de Mika/Delta, et de Jean)
 
 
 	Alicia ! :
-	- Mika -> Delta va libérer Alicia seule (vérifier les A3) + ajouter animation de défonssage de porte ? + la laisser "cassée (càd ne pas la faire réaparraitre)
-	- Ajouter Maire, et Deva ?
+	- Mika -> Delta va libérer Alicia seule (vérifier les A3) + défonssage de porte la laisser "cassée (càd ne pas la faire réaparraitre) ?
+	- Ajouter Marie, et Deva ?
 
 	Libération directe
 		Mika :
