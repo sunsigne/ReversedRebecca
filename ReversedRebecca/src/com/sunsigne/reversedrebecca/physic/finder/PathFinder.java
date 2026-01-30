@@ -7,10 +7,12 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.TilePos;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -236,7 +238,25 @@ public class PathFinder implements Position {
 				if (wall instanceof PlayerAvoider == false)
 					return true;
 
-				// searcher is the player and object is an npc that can be passed through
+				// searcher and object are two piranhas, blocking each other path
+				if (scanningTwoPiranhasBlockingEachOther && wall instanceof Player == false) {
+					if (initial_searcher instanceof PiranhaObject && wall instanceof PiranhaObject) {
+						PiranhaObject piranhaSearcher = (PiranhaObject) initial_searcher;
+						PiranhaObject piranhaWall = (PiranhaObject) wall;
+
+						boolean searcherBlocking = piranhaSearcher.isBlockingPath();
+						boolean wallBlocking = piranhaWall.isBlockingPath();
+
+						piranhaSearcher.setBlockingPath(false);
+						piranhaWall.setBlockingPath(false);
+						new GameTimer(Game.SEC, () -> {
+							piranhaSearcher.setBlockingPath(searcherBlocking);
+							piranhaWall.setBlockingPath(wallBlocking);
+						});
+					}
+				}
+
+				// searcher is the player, and object is an npc that can be passed through
 				PlayerAvoider avoider = (PlayerAvoider) wall;
 				if (avoider.getPlayerAvoiderType() != AVOIDERTYPE.THROUGH
 						|| initial_searcher instanceof Player == false)
@@ -267,26 +287,32 @@ public class PathFinder implements Position {
 		return new PlayerFinder().getPlayer().isBlockingPath();
 	}
 
+	private boolean scanningTwoPiranhasBlockingEachOther;
+
 	private DIRECTION findComplexePath() {
 
 		GameList<PathPointObject> valid_path_point_list = createValidPathPointList();
 
-		if (valid_path_point_list.getList().isEmpty())
-			return DIRECTION.NULL;
+		if (valid_path_point_list.getList().isEmpty() == false) {
+			boolean pathDoesExist = true;
 
-		boolean pathDoesExist = true;
+			while (pathDoesExist) {
 
-		while (pathDoesExist) {
+				DIRECTION tryPath = getPathFromSeacherToValidPoint(valid_path_point_list);
 
-			DIRECTION tryPath = getPathFromSeacherToValidPoint(valid_path_point_list);
+				if (tryPath != DIRECTION.NULL)
+					return tryPath;
 
-			if (tryPath != DIRECTION.NULL)
-				return tryPath;
-
-			pathDoesExist = expandingValidPoint(valid_path_point_list);
+				pathDoesExist = expandingValidPoint(valid_path_point_list);
+			}
 		}
 
 		// occurs when there is definitively no existing path between searcher and goal
+		if (scanningTwoPiranhasBlockingEachOther == false) {
+			scanningTwoPiranhasBlockingEachOther = true;
+			return findPath(true);
+		}
+
 		initial_searcher.disabledPathFinder(Game.SEC);
 		return DIRECTION.NULL;
 	}
