@@ -128,3 +128,14 @@ mika = UP = worry = Alicia… Are you okay?
 alicia = DOWN = happy = I'm locked up, but I'm fine.@Are you here to help me?
 mika = UP = serious_var = I don't have the key, but I'll manage.@You should step away from the door.
 alicia = DOWN = surprised = ... Oh.
+
+
+% MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
+alicia = RIGHT = happy = Thank you, Mika. I appreciate.
+mika = LEFT = serious = You're welcome. You should thank Rebecca,@she's the one who told me about your situation.
+alicia = RIGHT = happy = Sure, I will.
+
+
+% NOT_WILLING_TO_HELP_ANYMORE
+player = DOWN = you_silly = On second thought, I'll let her fend for herself.
+player = DOWN = you_silly = It's more entertaining when people are suffering,@Joseph crying on the couch proves that nicely.

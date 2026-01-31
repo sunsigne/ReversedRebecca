@@ -51,6 +51,15 @@ player = DOWN = determined = C'est tellement marrant de les pousser à bout.
 mika = player = serious = Je n'ai pas le temps pour tes bêtises.@J'ai des rochers à dégager.
 
 
+% ASKING_SARAH_ABOUT_ALICIA
+mika = DOWN = worry = Sarah, est-ce que tu as vu Alicia ?
+sarah = UP = laugh = Yup. Elle était bloquée dans le SAS,@mais c'est réglé.
+mika = DOWN = serious = Ha ! Très bien. Bon travail, d'ailleurs,@je vois que tu as trouvé une sortie.
+sarah = UP = happy = Et les décombres ? La voie est libre ?
+mika = DOWN = serious = Pas encore, mais j'y retourne, là.
+sarah = UP = happy_var = Bon courage.
+
+
 % THANK_FOR_YELLING
 mika = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
 player = mika = happy_var = Quand tu veux !

@@ -51,6 +51,15 @@ player = DOWN = determined = It's so much fun to push them to their limits.
 mika = player = serious = I don't have time for your nonsense.@I have rocks to clear.
 
 
+% ASKING_SARAH_ABOUT_ALICIA
+mika = sarah = worry = Sarah, have you seen Alicia?
+sarah = mika = laugh = Yup. She was stuck in the SAS, but it's sorted.
+mika = sarah = serious = Ha! Very good. Good work, by the way,@I see you found a way out.
+sarah = mika = happy = And the rubble? Is the way clear?
+mika = sarah = serious = Not yet, but I'm going back now.
+sarah = mika = happy = Good luck.
+
+
 % THANK_FOR_YELLING
 mika = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
 player = mika = happy_var = Whenever you want!
