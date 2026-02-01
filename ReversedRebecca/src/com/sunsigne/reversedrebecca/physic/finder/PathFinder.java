@@ -239,22 +239,8 @@ public class PathFinder implements Position {
 					return true;
 
 				// searcher and object are two piranhas, blocking each other path
-				if (scanningTwoPiranhasBlockingEachOther && wall instanceof Player == false) {
-					if (initial_searcher instanceof PiranhaObject && wall instanceof PiranhaObject) {
-						PiranhaObject piranhaSearcher = (PiranhaObject) initial_searcher;
-						PiranhaObject piranhaWall = (PiranhaObject) wall;
-
-						boolean searcherBlocking = piranhaSearcher.isBlockingPath();
-						boolean wallBlocking = piranhaWall.isBlockingPath();
-
-						piranhaSearcher.setBlockingPath(false);
-						piranhaWall.setBlockingPath(false);
-						new GameTimer(Game.SEC, () -> {
-							piranhaSearcher.setBlockingPath(searcherBlocking);
-							piranhaWall.setBlockingPath(wallBlocking);
-						});
-					}
-				}
+				if (scanningTwoPiranhasBlockingEachOther && wall instanceof Player == false)
+					twoPiranhaObjectBLockingEachOtherCase(initial_searcher, wall);
 
 				// searcher is the player, and object is an npc that can be passed through
 				PlayerAvoider avoider = (PlayerAvoider) wall;
@@ -268,6 +254,34 @@ public class PathFinder implements Position {
 			return isPlayerBlockingPath();
 		}
 		return false;
+	}
+
+	private void twoPiranhaObjectBLockingEachOtherCase(PathSearcher searcher, CollisionReactor wall) {
+		if (searcher instanceof PiranhaObject && wall instanceof PiranhaObject == false)
+			return;
+
+		PiranhaObject piranhaSearcher = (PiranhaObject) searcher;
+		PiranhaObject piranhaWall = (PiranhaObject) wall;
+
+		new GameTimer(5 * Game.SEC, () -> {
+			if (piranhaSearcher.isBlockedByAnotherPiranha() && piranhaWall.isBlockedByAnotherPiranha()) {
+				piranhaSearcher.setBlockedByAnotherPiranha(false);
+				piranhaWall.setBlockedByAnotherPiranha(false);
+
+				boolean searcherBlocking = piranhaSearcher.isBlockingPath();
+				boolean wallBlocking = piranhaWall.isBlockingPath();
+				piranhaSearcher.setBlockingPath(false);
+				piranhaWall.setBlockingPath(false);
+
+				new GameTimer(Game.SEC, () -> {
+					piranhaSearcher.setBlockingPath(searcherBlocking);
+					piranhaWall.setBlockingPath(wallBlocking);
+				});
+			}
+		});
+
+		piranhaSearcher.setBlockedByAnotherPiranha(true);
+		piranhaWall.setBlockedByAnotherPiranha(true);
 	}
 
 	private void removeSearcherAndGoalFromList(GameList<GameObject> object_list) {

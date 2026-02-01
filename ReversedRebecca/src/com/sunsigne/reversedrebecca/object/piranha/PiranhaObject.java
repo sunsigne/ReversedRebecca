@@ -233,7 +233,17 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public void disabledPathFinder() {
 		pathFinderDisabled = true;
 	}
+	
+	private boolean blockedByAnotherPiranha;
 
+	public boolean isBlockedByAnotherPiranha() {
+		return blockedByAnotherPiranha;
+	}
+
+	public void setBlockedByAnotherPiranha(boolean blockedByAnotherPiranha) {
+		this.blockedByAnotherPiranha = blockedByAnotherPiranha;
+	}
+	
 	////////// INTERACTIVE ////////////
 
 	private GameList<Highlightable> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);

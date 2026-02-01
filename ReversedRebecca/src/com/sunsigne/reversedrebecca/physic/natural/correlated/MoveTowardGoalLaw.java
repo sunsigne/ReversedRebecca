@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Stunnable;
+import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -23,7 +24,7 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 		// object is not supposed to move
 		if (searcher.mustFollowPath() == false)
 			return;
-		
+
 		// object does not have an objective
 		if (searcher.getPath() == null)
 			return;
@@ -37,6 +38,9 @@ public class MoveTowardGoalLaw implements PhysicLaw {
 
 		searcher.setMotionless();
 		followPath(searcher);
+
+		if (searcher.isMotionless() == false && searcher instanceof PiranhaObject)
+			((PiranhaObject) searcher).setBlockedByAnotherPiranha(false);
 	}
 
 	private void followPath(PathSearcher searcher) {
