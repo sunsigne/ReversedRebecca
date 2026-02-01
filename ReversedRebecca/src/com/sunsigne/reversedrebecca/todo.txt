@@ -43,14 +43,15 @@
 
 	////////// EN COURS ////////////
 
+	urgent:
+	- de gros pb de pathfinding depuis la maj des pnj (devrait ajouter une sécurité de type : seulement si l'obstacle est juste devant / ou : si à l'arrêt depuis 5 secondes)
+
 	vérifier IG la trad :
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
 
 	pas encore fait :
 		sarah : 
 			va libérer avec le joueur (réfléchir aux tenants et aboutissants vis à vis de Mika/Delta, et de Jean)
-			- sa réaction si arrive pendant Delta/Mika
-			- sa cohérence si elle arrive après
 			
 		rebecca après sarah : 
 			- alicia? -> s'arrurer qu'elle va bien
