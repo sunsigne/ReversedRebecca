@@ -44,16 +44,13 @@
 	////////// EN COURS ////////////
 
 	vérifier IG la trad :
-	- MIKA_INQUIRY*ASKING_SARAH_ABOUT_ALICIA
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
 
 	pas encore fait :
-		mika :
-			alicia! avant sarah (l'après libération, après dialogue de Mika + "romance hétéro" remplacé par ""romance" hétéro" + le dialogue de Sarah dans le niveau d'après
-			alicia! pendant sarah (déjà fait, mais ELLE ne s'adapte pas encore)
-			
 		sarah : 
 			va libérer avec le joueur (réfléchir aux tenants et aboutissants vis à vis de Mika/Delta, et de Jean)
+			- sa réaction si arrive pendant Delta/Mika
+			- sa cohérence si elle arrive après
 			
 		rebecca après sarah : 
 			- alicia? -> s'arrurer qu'elle va bien
@@ -66,18 +63,16 @@
 
 	Libération directe
 		Mika :
-			- à finir (tout ce qui suit le défonçage de porte du SAS (+ les A3) 
+			- à finir (tout ce qui suit le défonçage de porte du SAS , çad les A3) 
 				+ rendre ça comptabible avec le Sarah Jospeh Cry :
 					- dans le cas d'un Alicia ?
 					- dans le cas d'un Alicia !
-					- s'assurer que le verrou soit stable que Sarah soit déjà en chemin vers Mika ou non, par exemple, mais pas 100% bloquant (Mika doit pouvoir aller libérer Sarah) - je crois me souvenir que le verrou est sur Jospeph cry tout court, donc que dans l'autre cas de figure (càd quand Sarah part à l'entrée d'après SAS), il ne devrait déjà pas y avoir de pb
-			- Sait que Delta a libéré
+					- s'assurer que le verrou soit stable que Sarah soit déjà en chemin vers Mika ou non, par exemple, mais pas 100% bloquant (Mika doit pouvoir aller libérer Alicia) - je crois me souvenir que le verrou est sur Jospeph cry tout court, donc que dans l'autre cas de figure (càd quand Sarah part à l'entrée d'après SAS), il ne devrait déjà pas y avoir de pb
 		Delta :
 			- à finir (vérifier les A3 post-libération)
 		Sarah :
 			- peut libérer Alicia sans que ni Mika, ni Delta, ni Rebecca ne remarquent, donc gérer leurs surprises lorsqu'ils s'en rendent compte
 			- peut être témoin en directe de la libération d'Alicia par Mika, Detla ou Rebecca (avec Delta)
-			- doit pouvoir passer par le SAS sans encombre si Alicia a été libéré
 			
 
 	à faire : 
@@ -188,6 +183,9 @@
 	- sarah qui pousse rebecca (devant alicia)
 	- traumatiser jospeh / se moquer d'alicia
 
+	////////// WS001 ////////////
+
+	lvl001 - à vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
 	
 	////////// MILITARY ////////////
 

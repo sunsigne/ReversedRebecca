@@ -70,3 +70,12 @@ player = mika = no_sens = Uh… No.
 mika = player = smirk = Yes.
 player = mika = no_sens_var = …
 player = mika = blush = (Actually, it's a little flattering.@I wonder if he'll really come.)
+
+
+% DONT_COME
+mika = player = smirk = Oh, I definitively will…
+
+
+% DONT_COME_NEXT
+mika = player = smirk = Yeah, sure…
+mika = DOWN = serious = Well, if you don't mind, I have some rubble@to clear. We'll talk about it tonight.

@@ -70,3 +70,12 @@ player = mika = no_sens = Heu… Non.
 mika = player = smirk = Si.
 player = mika = no_sens_var = …
 player = mika = blush = (En vrai, c'est un peu flatteur.@Je me demande s'il va vraiment venir.)
+
+
+% DONT_COME
+mika = player = smirk = Tu dis non, mais ton coeur dit oui.
+
+
+% DONT_COME_NEXT
+mika = player = smirk = Ouais, ouais…
+mika = DOWN = serious = Bon, si tu le permets, j'ai des décombres@à dégager. On en reparle ce soir.

@@ -36,6 +36,8 @@ RECEPTION = Key1 % accueil ?
 ASK_DIRECTIONS = Key1 % demander son chemin
 ASK_FOR_ADVICE = Key1 % demander conseil
 ONE_MORE_THING = Key1 % une dernière chose...
+DONT_COME = Key1 % ne viens pas
+I_AM_BEING_SERIOUS = Key1 % je suis sérieuse
 
 ///// ALICIA ROOM /////
 

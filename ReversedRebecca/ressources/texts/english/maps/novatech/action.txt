@@ -36,6 +36,8 @@ RECEPTION = Key1 % reception?
 ASK_DIRECTIONS = Key1 % ask for directions
 ASK_FOR_ADVICE = Key1 % ask for advice
 ONE_MORE_THING = Key1 % one more thing...
+DONT_COME = Key1 % don't come
+I_AM_BEING_SERIOUS = Key1 % I'm being serious
 
 ///// ALICIA ROOM /////
 

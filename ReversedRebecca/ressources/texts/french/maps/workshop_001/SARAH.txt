@@ -10,6 +10,18 @@ sarah = player = worry = Tu es impossible… Mais bon, c'est ton problème…
 sarah = player = you_silly_var = Bon. Voilà un récapitulatif de ce que j'ai appris :
 
 
+% DATING_MIKA_VAR
+sarah = player = angry = Il s'est invité chez toi ?
+player = object = blush = C'est sexy !
+sarah = player = angry = Ça n'est pas "sexy", Rebecca.@C'est un signe avant-coureur de toxicité.
+player = object = no_sens = Tout de suite les grands mots…@Tu n'exagères pas un peu ?
+sarah = player = angry = Clairement pas, non.
+player = object = no_sens = … … …
+player = object = blush = … Ça me plaît…
+sarah = player = worry = Tu es impossible… Mais bon, c'est ton problème…
+sarah = player = you_silly_var = Bon. Voilà un récapitulatif de ce que j'ai appris :
+
+
 % SCENARIO_EXIT
 sarah = player = worry = En clair, notre agresseur s'appelle Vladimir.@Il est venu voler nos plans sur le casque.
 player = object = surprised = LE casque ?@Mais c'est super grave !
