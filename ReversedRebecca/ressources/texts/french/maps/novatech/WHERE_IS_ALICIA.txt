@@ -10,20 +10,7 @@ jean = rebecca = urge_sad = Je ne l'ai pas vu non plus.
 jean = player = urge_happy = Ça n'est pas mon problème.
 player = jean = wrong_with_you = Pardon ? Tu ne vas pas m'aider à la sortir de là ?
 player = jean = wrong_with_you = Elle a su s'y enfermée. Elle saura s'en sortir.
-
-
-% JEAN_HELP_NEXT
 player = DOWN = angry_var2 = Mais quel connard !
-
-
-% JEAN_HELP_SARAH_REACTION
-sarah = jean = angry = Mais t'es un connard, en fait !
-jean = player = urge_sad = Pourquoi tu m'insultes ?
-sarah = jean = angry = Tu ne vois vraiment pas le problème dans ton comportement ?
-jean = player = urge_sad = … C'est toi qui est méchante avec moi.
-sarah = jean = angry = … ?
-sarah = rebecca = sad_var = Non mais j'y crois pas… C'est lui la victime, maintenant…
-sarah = rebecca = worry = Je viens avec toi Rebecca,@on ne peut pas laisser Alicia dans le pétrin.
 
 
 % SARAH
@@ -38,6 +25,16 @@ sarah = rebecca = worry = Je ne sais pas non plus où elle est.
 sarah = player = surprised = Quoi ? Enfermée dans le SAS ?
 player = object = unhappy = Oui. Tu crois pouvoir m'aider à la libérer ?
 sarah = player = worry = Bien sûr, je viens avec toi.
+
+
+% SARAH_EPIPHANIE
+sarah = player = wink = Je viens de me souvenir que Joseph a la clé.@Tu peux retourner enquêter, je m'occupe d'elle.
+player = object = laugh = Très bien, merci.
+
+
+% SARAH_EPIPHANIE_ALREADY_KEY
+sarah = player = wink = Joseph m'a donné la clé un peu plus tôt.@Tu peux retourner enquêter, je m'occupe d'elle.
+player = object = laugh = Très bien, merci.
 
 
 % MARIE

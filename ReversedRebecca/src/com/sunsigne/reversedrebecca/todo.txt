@@ -43,10 +43,18 @@
 
 	////////// EN COURS ////////////
 
-	sarah -> ligne 324
+	sarah -> ligne 324 : en cours :
+	va demander les clef à jospeh, sauf si elle les a déjà
+	note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de 'laide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
+	+ gérer le cas où Sarah suit le joueur jusque dans la salle de pause !
+
+	bug : delta n'est pas retournée dans son labo après avoir libéré Alicia (Rebecca a été présente sur la fin) -> regarder le live à 30 minutes
 
 	vérifier IG la trad :
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
+	- WHERE_IS_ALICIA*SARAH_EPIPHANIE
+	- WHERE_IS_ALICIA*SARAH_EPIPHANIE_ALREADY_KEY
+	- SARAH_INQUIRY*JOSEPH_CRYING_CONVERSATION
 
 	pas encore fait :
 		sarah : 
@@ -76,7 +84,7 @@
 			
 
 	à faire : 
-	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
+	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, doit annuler le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait plus du tout pouvoir leurs parler. + le "WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION" sur le fichier de Jean devrait lancer la réaction de Sarah
 	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
@@ -88,8 +96,7 @@
 
 	(fun)
 	à vérifier + traduire en anglais :
-	- WHERE_IS_ALICIA*JEAN_HELP + NEXT
-	- WHERE_IS_ALICIA*JEAN_HELP_SARAH_REACTION
+	-
 
 	(bloquant)
 	à faire : 
@@ -307,6 +314,7 @@
 	les menu clignottent lorsqu'ils sont refresh, à corriger !
 	vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
 	6h00 - les custom "surname" devrait être dynamique
+	2h00 CollisionLaw - optimiser et faire en sorte que le "still colliding last object" ne s'applique pas pour les portes
 	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
 	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
