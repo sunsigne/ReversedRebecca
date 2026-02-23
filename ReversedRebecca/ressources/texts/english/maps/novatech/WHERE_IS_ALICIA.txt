@@ -14,6 +14,24 @@ sarah = rebecca = worry = Sorry. I don't know where she is.
 sarah = rebecca = worry = I don't know where she is either.
 
 
+% SARAH_HELP
+sarah = player = surprised = What? Locked in the SAS?
+player = object = unhappy = Yes. Do you think you can help me free her?
+sarah = player = worry = Of course, I'll come with you.
+
+
+% SARAH_EPIPHANIE
+sarah = player = wink = I just remembered that Joseph has the key. You@can go back to investigating, I'll take care of her.
+player = object = laugh = Sweet! Thank you.
+
+
+% SARAH_HELP_ALREADY_KEY
+sarah = player = surprised = What? Locked in the SAS?
+player = object = unhappy = Yes. Do you think you can help me free her?
+sarah = player = happy = Joseph just gave me the key. You can go@back to investigating, I'll take care of her.
+player = object = laugh = Sweet! Thank you.
+
+
 % MARIE
 marie = player = happy = Did you look under her desk?
 player = object = unhappy = I'm being serious, Marie…@Her desk was attacked…

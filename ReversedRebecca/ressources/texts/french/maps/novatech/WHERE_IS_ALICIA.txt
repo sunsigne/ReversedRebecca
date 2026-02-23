@@ -39,11 +39,6 @@ sarah = player = happy = Joseph vient de me donner la clé justement.@Tu peux re
 player = object = laugh = Très bien, merci.
 
 
-% SARAH_EPIPHANIE_ALREADY_KEY
-sarah = player = wink = Joseph m'a donné la clé un peu plus tôt.@Tu peux retourner enquêter, je m'occupe d'elle.
-player = object = laugh = Très bien, merci.
-
-
 % MARIE
 marie = player = happy = Tu as regardé sous son bureau ?
 player = object = unhappy = Je suis sérieuse, Marie…@Son bureau a été attaqué…
