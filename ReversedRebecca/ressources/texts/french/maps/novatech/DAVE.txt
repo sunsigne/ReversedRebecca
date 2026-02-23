@@ -1,3 +1,12 @@
+% ALICIA
+dave = player = calm = Je ne peux pas régler ce problème, Rebecca.@Demande à quelqu'un d'autre.
+dave = DOWN = calm = Ne te méprend pas. Je me soucie du sort d'Alicia.@C'est juste que ça n'est pas à moi d'interférer.
+
+
+% ALICIA_PLUS
+dave = player = calm = Je te l'ai déjà dit, Je ne peux pas t'aider.@Demande à quelqu'un d'autre.
+
+
 % CHOSEN_ONE
 player = object = happy = Bonjour Dave, tu regardes quoi ?
 dave = player = calm = Tiens, salut Rebecca.@Alors c'est toi qui as été choisie ?
