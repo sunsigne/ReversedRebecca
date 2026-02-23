@@ -46,7 +46,6 @@
 	sarah -> ligne 324 : en cours :
 	va demander les clef à jospeh, sauf si elle les a déjà
 	note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de 'laide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
-	+ gérer le cas où Sarah suit le joueur jusque dans la salle de pause !
 
 	vérifier IG la trad :
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
