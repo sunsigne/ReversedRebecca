@@ -6,6 +6,10 @@ player = object = worry = Heu… Non, rien.@Oublie ce que je viens de dire.
 object = player = happy_var = Ha ! Ces jeunes !
 
 
+% MIGHT_WORRYING_HIM_VAR
+player = DOWN = you_silly = Si je veux inquiéter Joseph avec cette histoire,@je devrais attendre que Sarah s'éloigne un peu.
+
+
 % MIGHT_WORRYING_HIM
 player = DOWN = sad = (Hmm… Est-ce que je veux vraiment parler de ça@à Jospeh ? Je risque de l'inquiéter.)
 
