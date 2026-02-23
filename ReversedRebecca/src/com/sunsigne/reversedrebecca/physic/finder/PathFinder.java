@@ -231,6 +231,10 @@ public class PathFinder implements Position {
 				continue; // player is a specific case;
 			}
 
+			// object is exactly on searcher position
+			if (tempObject.getX() == initial_searcher.getX() && tempObject.getY() == initial_searcher.getY())
+				continue;
+
 			CollisionReactor wall = (CollisionReactor) tempObject;
 
 			// object" is blocking path
