@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
@@ -31,6 +32,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		for (Updatable tempUpdatable : layer.getList()) {
 
 			if (tempUpdatable instanceof GameObject == false)
+				continue;
+			
+			if(tempUpdatable instanceof PathPointObject)
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
