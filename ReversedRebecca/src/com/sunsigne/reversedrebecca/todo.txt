@@ -44,7 +44,6 @@
 	////////// EN COURS ////////////
 
 	à faire la prochaine fois :
-	- utiliser le memory de sarah : REBECCA_ASKED_FOR_SARAH_HELP_WHILE_KNOWING_ALICIA_IS_LOCKED : il est enregistré lorsque rebecca demande de l'aide. Si sarah a déjà la clef, elle ira naturellement libérer alicia mais en SACHANT qu'elle est enfermée, l'action "écouter" implique donc un dialgogue différent que "je ne savais même pas que tu étais là-dedans"
 	- empecher Rebecca de traumatiser jospeh (Vol, Alicia ? ou Alicia!) lorsqu'il discute avec Sarah
 
 	note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de 'laide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
