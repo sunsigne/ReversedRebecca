@@ -54,6 +54,14 @@ marie = player = blush_var2 = Pas de soucis, Rebecca.@Ça va aller… Trouve-la,
 player = object = laugh = Oui !
 
 
+% MARIE_HELP
+marie = player = surprised_var = Quoi ? Enfermée dans le SAS ?
+player = object = unhappy = Oui. Tu crois pouvoir m'aider à la libérer ?
+marie = player = unhappy_var = Je suis sincèrement désolé, Rebecca.@Je n'ai aucune idée de comment l'ouvrir.
+marie = player = unhappy = Peut-être que Delta saura t'aider ?@Essaie d'aller la voir dans son bureau.
+player = object = happy_var = D'accord, merci.
+
+
 % DELTA_HELP
 delta = player = surprised = Quoi ? Enfermée dans le SAS ?
 player = object = unhappy = Oui. Tu crois pouvoir la libérer ?

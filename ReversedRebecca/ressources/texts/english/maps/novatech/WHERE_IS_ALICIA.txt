@@ -47,6 +47,14 @@ marie = player = blush_var2 = No worries, Rebecca. I'll be alright…@Find her, 
 player = object = laugh = Yes!
 
 
+% MARIE_HELP
+marie = player = surprised_var = What? Locked in the SAS?
+player = object = unhappy = Yes. Do you think you can help me free her?
+marie = player = unhappy_var = I'm so sorry, Rebecca.@I have no idea how to open it.
+marie = player = unhappy = Maybe Delta may help you?@Try going to see her in her office.
+player = object = happy_var = Alright, thanks.
+
+
 % DELTA_HELP
 delta = player = surprised = What? Locked in the SAS?
 player = object = unhappy = Yes. Do you think you can free her?
