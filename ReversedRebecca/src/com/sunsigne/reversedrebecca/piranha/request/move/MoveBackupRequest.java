@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class MoveBackupRequest implements Request {
 
@@ -66,13 +67,19 @@ public class MoveBackupRequest implements Request {
 
 		return new ConditionalListener() {
 
+			private int delay;
+
 			private ConditionalListener getListener() {
 				return this;
 			}
 
 			@Override
 			public boolean canDoAction() {
-				return object.getPath() == DIRECTION.NULL;
+				delay++;
+				if (delay >= Game.SEC)
+					delay = 0;
+
+				return delay == 0 && object.getPath() == DIRECTION.NULL;
 			}
 
 			@Override

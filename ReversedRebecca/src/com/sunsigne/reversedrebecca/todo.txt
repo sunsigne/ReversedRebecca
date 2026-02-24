@@ -44,7 +44,6 @@
 	////////// EN COURS ////////////
 
 	bug :
-	- on peut passer à travers jospeh sur le canapé
 	- alicia a bu son café, mais on peut toujorus interragire avec
 
 	Marie : si on attend vachement longtemps, il est techniquement possible d'informer Marie dans le stock que Alicia a un soucis (gérer ce cas de figure)
