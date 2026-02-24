@@ -170,5 +170,5 @@ alicia = RIGHT = happy = Je n'y manquerai pas.
 
 
 % NOT_WILLING_TO_HELP_ANYMORE
-player = DOWN = you_silly = Tout bien réfléchis, je vais la laisser se débrouiller toute seule.
-player = DOWN = you_silly = C'est plus amusant quand les gens souffrent,@Jospeh qui pleure sur le canapé en est le parfait exemple.
+player = DOWN = sad = Tout bien réfléchis, je vais la laisser se débrouiller@toute seule.
+player = DOWN = you_silly = C'est plus amusant quand les gens souffrent.@Comme Joseph, qui pleure sur le canapé.

@@ -163,5 +163,5 @@ alicia = RIGHT = happy = Sure, I will.
 
 
 % NOT_WILLING_TO_HELP_ANYMORE
-player = DOWN = you_silly = On second thought, I'll let her fend for herself.
+player = DOWN = sad = On second thought, I'll let her fend for herself.
 player = DOWN = you_silly = It's more entertaining when people are suffering,@Joseph crying on the couch proves that nicely.

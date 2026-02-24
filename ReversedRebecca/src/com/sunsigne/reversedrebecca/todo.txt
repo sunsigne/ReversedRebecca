@@ -45,38 +45,24 @@
 
 	Jean : quand il sort des toilettes, il n'a plus son TA inquiry (enquête + alicia) 
 
-	vérifier IG la trad :
-	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
-
 	pas encore fait :
 		rebecca après sarah : 
 			- alicia? -> s'arrurer qu'elle va bien
 			- alicia! -> voir que le SAS est vide
 
-	Libération directe
-		Mika :
-			- à finir (tout ce qui suit le défonçage de porte du SAS , çad les A3) 
-				+ rendre ça comptabible avec le Sarah Jospeh Cry :
-					- dans le cas d'un Alicia ?
-					- dans le cas d'un Alicia !
-					- s'assurer que le verrou soit stable que Sarah soit déjà en chemin vers Mika ou non, par exemple, mais pas 100% bloquant (Mika doit pouvoir aller libérer Alicia) - je crois me souvenir que le verrou est sur Jospeph cry tout court, donc que dans l'autre cas de figure (càd quand Sarah part à l'entrée d'après SAS), il ne devrait déjà pas y avoir de pb
-		Delta :
-			- à finir (vérifier les A3 post-libération)
 		Sarah :
 			- peut libérer Alicia sans que ni Mika, ni Delta, ni Rebecca ne remarquent, donc gérer leurs surprises lorsqu'ils s'en rendent compte
 			- peut être témoin en directe de la libération d'Alicia par Mika, Detla ou Rebecca (avec Delta)
-			
-
-	à faire : 
-	note : lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
-	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, doit annuler le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
-	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
-	(note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
-	(si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite)
-	
+		
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait plus du tout pouvoir leurs parler.
 	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
 
+	à faire : 
+	note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
+	note : lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
+	note : si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite
+	note : Alicia a le bon dialogue lorsqu'elle est sur le canapé
+	note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
 
 	////////// LVL001 ////////////
 
