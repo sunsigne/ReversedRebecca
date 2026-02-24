@@ -43,7 +43,7 @@
 
 	////////// EN COURS ////////////
 
-	Marie : si on attend vachement longtemps, il est techniquement possible d'informer Marie dans le stock que Alicia a un soucis (gérer ce cas de figure)
+	Jean : quand il sort des toilettes, il n'a plus son TA inquiry (enquête + alicia) 
 
 	vérifier IG la trad :
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
@@ -68,6 +68,7 @@
 			
 
 	à faire : 
+	note : lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
 	(note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, doit annuler le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée)
 	(note : Alicia a le bon dialogue lorsqu'elle est sur le canapé)
 	(note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
