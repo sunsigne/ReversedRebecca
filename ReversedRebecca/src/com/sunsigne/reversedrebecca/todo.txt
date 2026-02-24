@@ -43,20 +43,19 @@
 
 	////////// EN COURS ////////////
 
+	bug :
+	- on peut passer à travers jospeh sur le canapé
+	- alicia a bu son café, mais on peut toujorus interragire avec
+
+	Marie : si on attend vachement longtemps, il est techniquement possible d'informer Marie dans le stock que Alicia a un soucis (gérer ce cas de figure)
+
 	vérifier IG la trad :
 	- WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE (à utiliser en sadique sur tout le monde)
 
 	pas encore fait :
-		sarah : 
-			va libérer avec le joueur (réfléchir aux tenants et aboutissants vis à vis de Mika/Delta, et de Jean)
-			
 		rebecca après sarah : 
 			- alicia? -> s'arrurer qu'elle va bien
 			- alicia! -> voir que le SAS est vide
-
-
-	Alicia ! :
-	- Mika -> Delta va libérer Alicia seule (vérifier les A3)
 
 	Libération directe
 		Mika :
