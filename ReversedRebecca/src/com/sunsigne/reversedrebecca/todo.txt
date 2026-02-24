@@ -43,9 +43,6 @@
 
 	////////// EN COURS ////////////
 
-	bug :
-	- alicia a bu son café, mais on peut toujours interragire avec
-
 	Marie : si on attend vachement longtemps, il est techniquement possible d'informer Marie dans le stock que Alicia a un soucis (gérer ce cas de figure)
 
 	vérifier IG la trad :
