@@ -172,3 +172,11 @@ alicia = RIGHT = happy = Je n'y manquerai pas.
 % NOT_WILLING_TO_HELP_ANYMORE
 player = DOWN = sad = Tout bien réfléchis, je vais la laisser se débrouiller@toute seule.
 player = DOWN = you_silly = C'est plus amusant quand les gens souffrent.@Comme Joseph, qui pleure sur le canapé.
+
+
+% REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_IN_DANGER
+player = alicia = happy = On dirait que j'ai trouvé Alicia.@Elle a l'air d'aller bien.
+
+
+% REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_TRAPPED
+player = alicia = happy = On dirait qu'Alicia n'a plus besoin de moi@pour sortir du SAS.

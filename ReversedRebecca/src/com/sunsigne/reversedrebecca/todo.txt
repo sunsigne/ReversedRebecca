@@ -43,28 +43,13 @@
 
 	////////// EN COURS ////////////
 
-	Jean : quand il sort des toilettes, il n'a plus son TA inquiry (enquête + alicia) 
-
-	pas encore fait :
-		rebecca après sarah : 
-			- alicia? -> s'arrurer qu'elle va bien
-			- alicia! -> voir que le SAS est vide
-
-		Sarah :
-			- peut libérer Alicia sans que ni Mika, ni Delta, ni Rebecca ne remarquent, donc gérer leurs surprises lorsqu'ils s'en rendent compte
-			- peut être témoin en directe de la libération d'Alicia par Mika, Detla ou Rebecca (avec Delta)
-		
-	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia !", elle ne devrait plus du tout pouvoir leurs parler.
-	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
-
-	à faire : 
-	note : traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
-	note : lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
-	note : si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite
-	note : Alicia a le bon dialogue lorsqu'elle est sur le canapé
-	note : impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
+	- Jean : quand il sort des toilettes, il n'a plus son TA inquiry (enquête + alicia)
 
 	////////// LVL001 ////////////
+
+	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia!", elle ne devrait plus du tout pouvoir leurs parler.
+	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
+	 
 
 	que se passe-til si on voit Alicia enfermée, PUIS qu'on enquête aurtpès de Mika : est-ce qu'ils en déduise qu'Alicia a un pb ?
 
@@ -90,7 +75,15 @@
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 			- JEAN_URGE*HAVE_YOU_DATA_MET ne se lance pas, c'est JEAN_URGE*HAVE_YOU_DATA_HELLO qui est lu, même si on a posé des question sur le voleur (peut-être que j'avais seulement pris en compte les quesitons sur Alicia ?)
-			
+
+	
+	note :
+		- traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
+		- lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
+		- si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite
+		- Alicia a le bon dialogue lorsqu'elle est sur le canapé
+		- impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
+				
 	(plus tard)
 	tous les indices des plantes
 	ne pas oublier de gérer les pathings de Jean, Marie et Jospeh en Inquiry (+ Sarah évidemment)
@@ -104,6 +97,7 @@
 	
 	(à la fin)
 	scénarion : inquery
+	- sur Rebecca Sadique (le cas est déjà géré quand on le devient PENDANT le niveau, mais pas encore quand on ARRIVE dans le niveau AVEC un karma sadique), faire en sorte que Rebecca ne s'inquiète pas plus que ça du sort d'alicia, donc sur Mika ligne ~ 85, rajouter un memory conditionnel pour lancer le neutral_var plutôt que le neutral_next
 	- les TALK et TALK_VAR n'ont pas encore été remplacés
 	- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
 	- s'assurer que Marie ET Mika soit romançable en INQUIRY, Mika lorsqu'on l'enguele, et Marie lorsqu'on lui parle d'Alicia

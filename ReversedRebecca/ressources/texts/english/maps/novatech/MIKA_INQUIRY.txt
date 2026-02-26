@@ -24,10 +24,17 @@ mika = player = serious = I was coming out of the break room,@when I heard a bla
 mika = player = doubt = I didn't see the explosion,@but I recognize the sound.
 mika = player = serious = Right after, this guy "out of nowhere",@calmly walked out of Alicia's office!
 mika = player = serious = I ran after him. you know the rest.
+
+
+% NEUTRAL_NEXT
 rebecca = object = surprised = Wait! What if Alicia is hurt?!
 mika = player = surprised = ?!
 mika = player = serious = I hadn't thought about that…
 mika = player = serious = Go check on her.@I have to stay here to clear the way.
+
+
+% NEUTRAL_VAR
+rebecca = object = happy_var = Alright. Thank you for this information.
 
 
 % HURRY_UP
