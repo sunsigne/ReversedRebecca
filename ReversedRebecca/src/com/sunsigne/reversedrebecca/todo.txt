@@ -51,7 +51,7 @@
 		- en cours -> ligne 231	
 
 	Mika :
-		- s'assurer que Marie ET Mika soit romançable en INQUIRY, Mika lorsqu'on l'enguele, et Marie lorsqu'on lui parle d'Alicia (déjà fait ?)
+
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
 		- traduction du WS001
 	
@@ -79,6 +79,7 @@
 
 	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia!", elle ne devrait plus du tout pouvoir leurs parler.
 	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
+	- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 
 	(fun)
 	à vérifier + traduire en anglais :
