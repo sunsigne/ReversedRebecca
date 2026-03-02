@@ -1,0 +1,8 @@
+% JEAN_HELP_SARAH_REACTION
+sarah = jean = angry = Mais t'es un connard, en fait !
+jean = sarah = urge_sad = Pourquoi tu m'insultes ?
+sarah = jean = angry = Tu ne vois vraiment pas le problème dans@ton comportement ?
+jean = sarah = urge_sad = … C'est toi qui est méchante avec moi.
+sarah = jean = angry_var = … ?!
+sarah = jean = sad_var = Non mais j'y crois pas…@C'est lui la victime, maintenant…
+sarah = rebecca = worry = Je viens avec toi Rebecca, on ne peut pas@laisser Alicia dans le pétrin.

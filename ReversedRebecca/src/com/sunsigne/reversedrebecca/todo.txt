@@ -44,16 +44,27 @@
 	////////// EN COURS ////////////
 
 	Jean :
-		- quand il sort des toilettes, il n'a plus son TA inquiry (enquête + alicia) + finir son pathing
-		- attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lrosque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
-		- est bloqué dans la salle de pause (à cause du verrou sur sarah)
-		- modifier les 3 Actions (Alicia ? + Alicia ! + Vol ?) : le visage n'est pas le même avant et après les toilettes + vérifier l'interaction dans les toilettes
-		- en cours -> ligne 231	
+		- à tester :
+			- TA de Alicia? avant et après le poussage ET le passage sans pousser
+			- TA de Alicia! avant et après le poussage ET le passage sans pousser
+			- TA du Theft   avant et après le poussage ET le passage sans pousser
+			- TA du bavardage
+			- verifier que quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia!", elle ne devrait plus du tout pouvoir leurs parler.
+			- quand il sort des toilettes, il doit avoir son TA inquiry (enquête + alicia) + finir son pathing
+			-  vérifier l'interaction dans les toilettes (qui ne fait pas tout sauter)
+	
+			à tester, fr et eng :
+			- REBECCA_INQUIY*ANGRY_AGAINST_JEAN_OR_MIKA
+			- JEAN_POST_BATHROOM*WHERE_IS_ALICIA + THEFT + SHOCKED + SHOCKED_EXIT + SHOCKED_INQUIRY + INQUIRY
+				
+			- attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lorsque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
+			- est bloqué dans la salle de pause (à cause du verrou sur sarah)
 
 	Mika :
-
+		- quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
 		- traduction du WS001
+		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 	
 	Marie :
 		- en "alicia ?",est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
@@ -77,9 +88,8 @@
 		
 	////////// LVL001 ////////////
 
-	- quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia!", elle ne devrait plus du tout pouvoir leurs parler.
+
 	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
-	- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 
 	(fun)
 	à vérifier + traduire en anglais :

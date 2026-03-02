@@ -6,6 +6,13 @@ jean = rebecca = urge_sad = No, I haven't seen her.
 jean = rebecca = urge_sad = I haven't seen her either.
 
 
+% JEAN_HELP
+jean = player = unhappy = That's not my problem.
+player = jean = wrong_with_you = Excuse me? You're not going to help me@get her out of there?
+jean = player = happy = She managed to lock herself in.@She'll find a way out.
+player = DOWN = angry_var2 = What an ass!
+
+
 % SARAH
 sarah = rebecca = worry = Sorry. I don't know where she is.
 

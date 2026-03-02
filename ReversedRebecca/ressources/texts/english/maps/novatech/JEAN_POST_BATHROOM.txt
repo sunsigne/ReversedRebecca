@@ -1,3 +1,11 @@
+% JEAN
+jean = rebecca = unhappy = No, I haven't seen her.
+
+
+% THEFT
+jean = rebecca = unhappy = I don't know anything about this.
+
+
 % ASK_REBECCA_FOR_CHAIR
 object = player = unhappy = Rebecca, have you seen my chair?
 player = object = no_sens = Uh… No.
@@ -11,7 +19,15 @@ player = object = worry = ... Are you sure?
 jean = player = unhappy = Not really.@It's strange to be caught up in an attack.
 player = object = laugh = "An attack"? Really?@That's a bit of an exaggeration.
 jean = player = unhappy = I'm not afraid of words.
-player = object = worry = We can't "just declare" it as one. @Sarah is investigating, she'll let us know.
+
+
+% SHOCKED_EXIT
+player = object = worry = We can't "just declare" it as one.@Sarah is investigating, she'll let us know.
+jean = player = unhappy = Yeah… Whatever.
+
+
+% SHOCKED_INQUIRY
+player = object = worry = We can't "just declare" it as one.@I'm investigating, I'll see.
 jean = player = unhappy = Yeah… Whatever.
 
 
@@ -23,6 +39,13 @@ jean = player = unhappy = Then I'd go and encourage him, if I were you.
 player = object = no_sens = … That's it?
 jean = player = happy = Why not?
 player = object = laugh = Because that won't be enough, obviously!
+jean = player = unhappy = … Ha. Whatever…
+
+
+% INQUIRY
+player = object = happy = Hey, I'm looking for clues. @Where would you start?
+jean = player = unhappy = The terrorist has already escaped. @There's nothing left to look for.
+player = object = angry = Of course there is!@There are bound to be things I can learn!
 jean = player = unhappy = … Ha. Whatever…
 
 

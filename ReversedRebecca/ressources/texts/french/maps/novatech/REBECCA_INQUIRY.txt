@@ -4,3 +4,7 @@ rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir ce que@Vladimir est v
 
 % ONLY_THIEF_NAME
 rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir qui est venu nous@voler nos travaux de recherche sur le déblocage.
+
+
+% ANGRY_AGAINST_JEAN_OR_MIKA
+player = DOWN = angry_var2 = Je n'ai pas envie de lui parler.@Il m'a énervé avec son attitude.

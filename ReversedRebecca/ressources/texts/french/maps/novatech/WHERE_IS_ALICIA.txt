@@ -7,9 +7,9 @@ jean = rebecca = urge_sad = Je ne l'ai pas vu non plus.
 
 
 % JEAN_HELP
-jean = player = urge_happy = Ça n'est pas mon problème.
+jean = player = unhappy = Ça n'est pas mon problème.
 player = jean = wrong_with_you = Pardon ? Tu ne vas pas m'aider à la sortir de là ?
-jean = player = urge_happy = Elle a su s'y enfermée. Elle saura s'en sortir.
+jean = player = happy = Elle a su s'y enfermée. Elle saura s'en sortir.
 player = DOWN = angry_var2 = Mais quel connard !
 
 

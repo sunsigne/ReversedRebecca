@@ -1,3 +1,11 @@
+% WHERE_IS_ALICIA
+jean = rebecca = unhappy = Non, je ne l'ai pas vu.
+
+
+% THEFT
+jean = rebecca = unhappy = Je ne sais rien à ce sujet.
+
+
 % ASK_REBECCA_FOR_CHAIR
 object = player = unhappy = Rebecca, tu aurais vu ma chaise ?
 player = object = no_sens = Heu… Non.
@@ -11,7 +19,15 @@ player = object = worry = ... Tu es sûr ?
 jean = player = unhappy = Pas vraiment. Ça fait bizarre@de subir une attaque terroriste.
 player = object = laugh = "Terroriste" ? Carrément ?@Tu y vas un peu fort.
 jean = player = unhappy = Je n'ai pas peur des mots.
-player = object = worry = On ne peut pas "juste affirmer" que s'en est une.@Sarah mène l'enquête, elle nous le dira.
+
+
+% SHOCKED_EXIT
+player = object = worry = On ne peut pas "juste affirmer" que c'en est une.@Sarah mène l'enquête, elle nous le dira.
+jean = player = unhappy = Mouais… Si tu le dis.
+
+
+% SHOCKED_INQUIRY
+player = object = worry = On ne peut pas "juste affirmer" que c'en est une.@Je suis en train de mener l'enquête, je verrai bien.
 jean = player = unhappy = Mouais… Si tu le dis.
 
 
@@ -23,6 +39,13 @@ jean = player = unhappy = Alors à ta place, j'irais l'encourager.
 player = object = no_sens = … C'est tout ?
 jean = player = happy = Pourquoi pas ?
 player = object = laugh = Parce que ça ne suffira pas, voyons !
+jean = player = unhappy = … Ha. Si tu le dis…
+
+
+% INQUIRY
+player = object = happy = Dis, je cherche des indices.@Tu commencerais par où, toi ?
+jean = player = unhappy = Le terroriste s'est déjà enfui.@Il n'y a plus rien à chercher.
+player = object = angry = Bien sûr que si !@Il y a forcément des choses que je peux apprendre !
 jean = player = unhappy = … Ha. Si tu le dis…
 
 
