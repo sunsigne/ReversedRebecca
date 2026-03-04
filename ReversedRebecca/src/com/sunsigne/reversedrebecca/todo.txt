@@ -45,21 +45,16 @@
 
 	Jean :
 		- à tester :
-			- TA de Alicia? avant et après le poussage ET le passage sans pousser
-			- TA de Alicia! avant et après le poussage ET le passage sans pousser
 			- TA du Theft   avant et après le poussage ET le passage sans pousser
-			- TA du bavardage
-			- verifier que quand Rebecca s'enerve sur Mika ou sur Jean avec le "Alicia!", elle ne devrait plus du tout pouvoir leurs parler.
-			- quand il sort des toilettes, il doit avoir son TA inquiry (enquête + alicia) + finir son pathing
-			-  vérifier l'interaction dans les toilettes (qui ne fait pas tout sauter)
+			- finir son pathing -> est bloqué dans la salle de pause (à cause du verrou sur sarah)
+			- attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lorsque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
+			- à faire : ajouter un scanner : si on se rapproche trop de Jean alors qu'il est en train de faire pipi et qu'on a pas de raison de lui crier dessus, Rebecca ressort de la cabine en cinématique
+			- pour tout le passage où il récupère sa chaise : en EXIT, j'ai cru voir passer que j'utilisais un "SAVED_TRIPLE_ACTION:LOAD". Si ça se trouve je me trompe, mais à vérifier. Si oui, l'adapter pour INQUIRY ET vérifier si c'est bien l'effet que je veux faire dans EXIT
 	
 			à tester, fr et eng :
 			- REBECCA_INQUIY*ANGRY_AGAINST_JEAN_OR_MIKA
 			- JEAN_POST_BATHROOM*WHERE_IS_ALICIA + THEFT + SHOCKED + SHOCKED_EXIT + SHOCKED_INQUIRY + INQUIRY
-				
-			- attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lorsque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
-			- est bloqué dans la salle de pause (à cause du verrou sur sarah)
-
+		
 	Mika :
 		- quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
