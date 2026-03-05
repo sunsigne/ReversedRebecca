@@ -45,7 +45,7 @@ jean = player = unhappy = … Ha. Si tu le dis…
 % INQUIRY
 player = object = happy = Dis, je cherche des indices.@Tu commencerais par où, toi ?
 jean = player = unhappy = Le terroriste s'est déjà enfui.@Il n'y a plus rien à chercher.
-player = object = angry = Bien sûr que si !@Il y a forcément des choses que je peux apprendre !
+player = object = angry = Bien sûr que si ! Il y a forcément des choses@que je peux apprendre !
 jean = player = unhappy = … Ha. Si tu le dis…
 
 

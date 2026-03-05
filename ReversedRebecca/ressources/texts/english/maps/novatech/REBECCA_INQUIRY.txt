@@ -8,3 +8,7 @@ rebecca = DOWN = you_silly = Now, I just have to find out who came@to steal our 
 
 % ANGRY_AGAINST_JEAN_OR_MIKA
 player = DOWN = angry_var2 = I don't want to talk to him.@He pissed me off with with his attitude.
+
+
+% NOT_ENTERING_IN_JEAN_STALL
+player = DOWN = sad = These toilets are occupied.

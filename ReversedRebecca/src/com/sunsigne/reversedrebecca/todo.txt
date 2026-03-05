@@ -43,12 +43,6 @@
 
 	////////// EN COURS ////////////
 
-	Jean :
-		- à tester :	
-			à tester, fr et eng :
-			- REBECCA_INQUIY*ANGRY_AGAINST_JEAN_OR_MIKA + NOT_ENTERING_IN_JEAN_STALL
-			- JEAN_POST_BATHROOM*WHERE_IS_ALICIA + THEFT + SHOCKED + SHOCKED_EXIT + SHOCKED_INQUIRY + INQUIRY
-		
 	Mika :
 		- quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
@@ -56,7 +50,7 @@
 		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 	
 	Marie :
-		- en "alicia ?",est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
+		- en "alicia ?", est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
 		- une fois qu'elle a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 		- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 			identifier voleur SANS marie :
