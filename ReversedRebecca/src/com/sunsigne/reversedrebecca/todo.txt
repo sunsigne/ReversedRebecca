@@ -44,8 +44,7 @@
 	////////// EN COURS ////////////
 
 	Jean :
-		- à tester :
-	
+		- à tester :	
 			à tester, fr et eng :
 			- REBECCA_INQUIY*ANGRY_AGAINST_JEAN_OR_MIKA + NOT_ENTERING_IN_JEAN_STALL
 			- JEAN_POST_BATHROOM*WHERE_IS_ALICIA + THEFT + SHOCKED + SHOCKED_EXIT + SHOCKED_INQUIRY + INQUIRY
@@ -76,9 +75,6 @@
 			- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
 
 	////////// LVL001 ////////////
-
-
-	- bug : lorsque Sarah engueule Jean dans les toilettes, ajouter une vérification que le joueur est "ready" (des fois qu'il soit en pleine cinématique, par exemple en ayant libéré Alicia avec Delta
 
 	(fun)
 	à vérifier + traduire en anglais :
