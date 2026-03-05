@@ -45,8 +45,6 @@
 
 	Jean :
 		- à tester :
-			- finir son pathing -> est bloqué dans la salle de pause (à cause du verrou sur sarah)
-			- attention ! il y a un vérouillage sur Jean pour qu'il ne descende que lorsque la chaise à était prise par Sarah, ce qui pour l'instant peut très bien arriver dans le cadre du scénario inquery (par exemple, quand on a soit même déverouiller la porte grâce au cadeau de Sarah)
 			- pour tout le passage où il récupère sa chaise : en EXIT, j'ai cru voir passer que j'utilisais un "SAVED_TRIPLE_ACTION:LOAD". Si ça se trouve je me trompe, mais à vérifier. Si oui, l'adapter pour INQUIRY ET vérifier si c'est bien l'effet que je veux faire dans EXIT
 	
 			à tester, fr et eng :
