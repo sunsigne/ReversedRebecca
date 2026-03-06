@@ -41,3 +41,33 @@ dave = DOWN = disillusioned = Les mêmes réponses… Les mêmes lieux…@La mê
 dave = DOWN = calm = Parfois, j'aimerais pouvoir perdre la mémoire…@Mais c'est totalement impossible.
 dave = DOWN = calm = Je vais arrêter de venir ici, à cette heure et à@cet endroit. Je n'en vois vraiment pas l'intérêt.
 player = object = no_sens = Ok… Si tu le dis…
+
+
+% THEFT
+dave = player = calm = Naturellement, je sais précisément qui est derrière tout ça.
+player = dave = excited = Super ! C'est qui ?
+dave = player = smile = La petite souris.
+dave = player = camera = Plus sérieusement. J'aimerais pouvoir t'aider, mais@c'est à toi de découvrir ce que cache cette histoire.
+player = dave = angry = Tu te la joues mystérieux ?@J'ai besoin d'aide, pas d'une leçon de philosophie nulle.
+dave = player = disillusioned = Pardon. La prochaine fois que tu me demanderas,@je te dirais réellement qui c'est.
+
+
+% THEFT_NEXT
+dave = player = calm = Il y a visiblement un malentendu.
+dave = player = camera = Je voulais dire : dans la prochaine réalité,@quand tu me demanderas, je te dirais réellement qui c'est. 
+player = dave = unhappy_var = Je… hein… heu… quoi ?
+dave = player = intrigued = La prochaine réalité. Tu sais… quand le monde disparait et qu'il recommence.
+player = dave = no_sens_var = … Je crois que ce type est fou.
+
+
+% THEFT_PLUS
+dave = player = calm = La personne que tu cherches s'appelle Vladimir Wolanski.@Il est venu voler les plans du casque de déblocage.
+player = dave = no_sens_var = Tu es vachement bien renseigné…
+player = dave = surprised = Attend… LE casque ? Mais c'est super grave !
+dave = player = intringued = Assez, oui.
+dave = player = happy = Bonne chance, Rebecca.
+
+
+% THEFT_PLUS_PLUS
+dave = player = calm = Je suis navré, Rebecca. Je t'ai aidé la dernière fois,@mais ça n'est pas à moi de te de le faire.
+dave = player = happy = Demande à Marie, elle saura te renseigner.

@@ -43,8 +43,10 @@
 
 	////////// EN COURS ////////////
 
+	à implanter, traduire et tester : 
+		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
+
 		theft ?
-			- Dave : créer le TA du vol
 			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
 			- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
