@@ -1,3 +1,7 @@
+% THEFT
+alicia = player = happy = Sorry, I don't know anything about this.
+
+
 % NEUTRAL
 alicia = DOWN = happy = Thank you again, for freeing me.
 player = alicia = laugh = My pleasure, it's nothing.
