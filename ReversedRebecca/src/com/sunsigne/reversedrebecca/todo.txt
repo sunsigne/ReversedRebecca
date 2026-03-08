@@ -42,16 +42,49 @@
 	)
 
 	////////// EN COURS ////////////
+	
+	à vérifier :
+		- NOVATECH*EXPLODED_WALL_ONE
+		- NOVATECH*EXPLODED_WALL_TWO
+		- NOVATECH*EXPLODED_WALL_FOUR
+		- NOVATECH*EXPLODED_WALL_FIVE
+		- NOVATECH*EXPLODED_WALL_SIX
+		- NOVATECH*SABOTAGED_PC		
+		- NOVATECH*SCENARIO_INQUIRY
+		- NOVATECH*REBECCA_ABANDONNED_EVERYONE
+		
+		- MIKA*REFUSED_TO_HELP_ALICIA
+		- MIKA*ANGRY_ABOUT_ALICIA
+		- JEAN*GOLDEN_SHOWER
+		- JEAN*GENERAL_ASS_BEHAVIOR (poussage énervement + énervement naturel + "Alicia !")
+		- JEAN*GET_YELLED_AT_SARAH_FOR_PUSHING_SOMEONE
+		- JEAN*REBECCA_HELPED_HIM_WHEN_HE_PISSED_HIMSELF
+		- JOSEPH*TRAUMATIZED (exit & inquiry)
+		- PSYCHOPATH*ALICIA_KILLED
+		- DELTA*TOLD_REBECCA_HER_BROTHER_WAS_A_THIEF
+		- DELTA*TOLD_REBECCA_HER_BROTHER_WAS_A_THIEF_WHOS_NAME_IS_GREC_LETTER
+		
+		- MIKA*DIDNT_CONFESS
+		- MIKA*START_DATING (exit & inquiry)
+		- MIKA*KISSED_REBECCA_WITHOUT_CONSENT
+		- MIKA*TOLD_REBECCA_INAPROPRIATE_STUFF
+		- MARIE*DIDNT_CONFESS
+		- MARIE*START_DATING
+		- MARIE*GET_REJECTED		
+		- ALICIA*COLD_ABOUT_BOMBS (chemin des bombes ou avec Mika à l'entrée)
+		- ALICIA*ANGRY_ABOUT_MOCKED
 
-	à implanter, traduire et tester : 
-		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
+	bug en exit ? : quand alicia dit qu'on arrête avec les bombes, mais qu'on essaies quand même auprès de Mika et qu'on rate ?
 
-		theft ?
-			- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
-			- tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ?)
-			- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
+	à implanter :		
+		+ quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
+
+	theft ?
+		- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
+		- la sortie du TA theft : tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ? Dave ?)
 
 	Marie :
+		- lorsqu'elle parle à Jospeh sur le canapé, c'est un SAVED_TRIPLE_ACTION qui est utilisé, ce qui bousille les TA d'inquiry. Pareil dans le stock ?
 		- lorsqu'elle a renseigné le nom, devrait s'assurer d'annuler correctement les TA "theft" de tous les autres
 		- une fois qu'elle a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 		- en "alicia ?", est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
@@ -64,17 +97,30 @@
 			(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 			"
 
-	////////// LVL001 ////////////
+	toute la partie "découvrir l'objet du vol" :
+		- fouiller le bureau d'Alicia
+		- fichier REBECCA_INQUIRY
+		- lorsque le END_LVL sera terminé. S'assurer que la sauvegarde "UNSAVE_ALICIA_NOBODY_FREED_HER" ligne 3 sur Alicia, se lance effectivement dans le cas où le joueur a été très rapide pour finir, mais que Sarah a prévu de passer par le SAS (cf, si on a pas fait pleurer Joseph)
 
-	(fun)
-	à vérifier + traduire en anglais :
-	-
+	à implanter, traduire et tester : 
+		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
+
+	alicia - en inqurey ET en exit :
+		ALICIA*NOBODY_FREED_HER
+		ALICIA*FREED_BY_REBECCA
+		ALICIA*FREED_BY_DELTA
+		ALICIA*FREED_BY_MIKA
+		ALICIA*FREED_BY_SARAH
+		ALICIA*KNOCK_KNOCK_BY_REBECCA_BY_NEVER_CAME_BACK
 
 	Mika :
-		- quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
 		- traduction du WS001
 		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
+	
+	à faire une fois les dialogues TOUS finaux :
+		- tous les indices des plantes
+		- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
 	
 	note :
 		- traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
@@ -82,10 +128,7 @@
 		- si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite
 		- Alicia a le bon dialogue lorsqu'elle est sur le canapé
 		- impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
-				
-	(plus tard)
-	tous les indices des plantes
-
+	
 	(fun)
 	XhX - variantes psychopath
 	- en Sadique (le cas est déjà géré quand on le devient PENDANT le niveau, mais pas encore quand on ARRIVE dans le niveau AVEC un karma sadique), faire en sorte que Rebecca ne s'inquiète pas plus que ça du sort d'alicia, donc sur Mika ligne ~ 85, rajouter un memory conditionnel pour lancer le neutral_var plutôt que le neutral_next
@@ -94,12 +137,15 @@
 	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
 
 	karma :
+	- vérifier : le meutre de Alicia
+	- Alicia se moquer de sa situation (vérifié en inquiry si déjà appliqué)
 	- inquiéter volontairement joseph
 	- se moquer de Alicia quand elle est enfermée
 	- dire "tu pues" (you_stink) à alicia
 	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
 	- narguer Alicia dans le SAS (inquery)
+	- Jean qui est naturellement chiant quand on lui parle : karma anti-angelique - puisqu'il faut cliquer sur "s'énerver"
 	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
 	note :
 	en exit :
@@ -107,35 +153,10 @@
 	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
 	)
 	
-	(à la fin)
-	à enregister :
-	- le type de scénario (sortie ou enquête)
-	- Rebecca fachée contre Jean ou Mika avec un "Alicia !" non répondu
-	- Saboter l'ordinateur de Bernard (Tim ?)
-	- Delta a informé rebecca qu'elle faisait des casses avec son frère
-	- Jean qui se fait gronder par Sarah
-	- Jean qui est naturellement chiant quand on lui parle (+ karma anti-angelique - puisqu'il faut cliquer sur "s'énerver")
-	- Jean être gentille avec Jean quand il s'est pissé dessus (en abusant de tous les dialogues moins 1 + karma positif)
-	- Jean s'énerver et il ne s'excuse pas
-	- Jean golden shower
-	- Marie enfermée dans les toilettes
-	- Marie parle à sarah ? Des infos éventuelles entre les deux ?
-	- Jopseh faire pleurer (+ éventuelles réactions des autres)
-	- Alicia knock knock (si pas libérer, il faut enregistrer l'oublie)
-	- à droite pas encore fait (à partir du bureau d'alicia inclus)
-	// inquery
-	- Mika qui défonce la porte (relation + avec Rebecca)
-	- Rebecca qui pousse à bout Mika en allant pas voir Alicia (+ karma négatif)
-	- Alicia se moquer de sa situation (+ karma négatif)
-	- Le meutre de Alicia (+ karma psycopath)
-	- (obj-50) le choix d'abandonner les gens sur place et de partir
-	- alicia_reaction_exit_is_opened le fait que Alicia et Mika soit contrarié du comportement de Rebecca
-	- (npc-13) proposer ou non de l'aide pour ranger la salle d'Alicia
-	- la romance (positive, négative ou même hypothétique) avec Marie
-	- si rebecca va aux toilettes ou non ? si elle y est allé de la journée ?
-	- le fichier "REBECCA_INQUIRY.txt" n'est pas encore utilisé
-	- sarah qui pousse rebecca (devant alicia)
-	- traumatiser jospeh / se moquer d'alicia
+	à peut-être enregister :
+		- le type de scénario à passer en "long range" ? (pour des remarques ?) - NOVATECH*SCENARIO_INQUIRY
+		- sarah qui pousse rebecca (devant alicia)
+		- Marie enfermée dans les toilettes (quelles conséquences ?)
 
 	////////// WS001 ////////////
 

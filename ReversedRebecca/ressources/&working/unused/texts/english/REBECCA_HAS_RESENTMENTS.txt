@@ -1,0 +1,11 @@
+% GODLEN_SHOWER_HAPPENED
+player = DOWN = angry_var2 = No! There's no way I'm ever speaking@to that pig again!
+
+
+% JEAN_ASS_BEHAVIOR_HAPPENED
+player = DOWN = angry_var2 = I didn't like Jean's behavior last time.
+player = DOWN = sad = I'll only talk to him if I absolutely have to.
+
+
+% MIKA_ASS_BEHAVIOR_HAPPENED
+player = DOWN = angry_var2 = Mika left Alicia locked in the SAS!@I don't want to talk to him.
