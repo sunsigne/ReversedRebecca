@@ -43,38 +43,7 @@
 
 	////////// EN COURS ////////////
 	
-	à vérifier :
-		- NOVATECH*EXPLODED_WALL_ONE
-		- NOVATECH*EXPLODED_WALL_TWO
-		- NOVATECH*EXPLODED_WALL_FOUR
-		- NOVATECH*EXPLODED_WALL_FIVE
-		- NOVATECH*EXPLODED_WALL_SIX
-		- NOVATECH*SABOTAGED_PC		
-		- NOVATECH*SCENARIO_INQUIRY
-		- NOVATECH*REBECCA_ABANDONNED_EVERYONE
-		
-		- MIKA*REFUSED_TO_HELP_ALICIA
-		- MIKA*ANGRY_ABOUT_ALICIA
-		- JEAN*GOLDEN_SHOWER
-		- JEAN*GENERAL_ASS_BEHAVIOR (poussage énervement + énervement naturel + "Alicia !")
-		- JEAN*GET_YELLED_AT_SARAH_FOR_PUSHING_SOMEONE
-		- JEAN*REBECCA_HELPED_HIM_WHEN_HE_PISSED_HIMSELF
-		- JOSEPH*TRAUMATIZED (exit & inquiry)
-		- PSYCHOPATH*ALICIA_KILLED
-		- DELTA*TOLD_REBECCA_HER_BROTHER_WAS_A_THIEF
-		- DELTA*TOLD_REBECCA_HER_BROTHER_WAS_A_THIEF_WHOS_NAME_IS_GREC_LETTER
-		
-		- MIKA*DIDNT_CONFESS
-		- MIKA*START_DATING (exit & inquiry)
-		- MIKA*KISSED_REBECCA_WITHOUT_CONSENT
-		- MIKA*TOLD_REBECCA_INAPROPRIATE_STUFF
-		- MARIE*DIDNT_CONFESS
-		- MARIE*START_DATING
-		- MARIE*GET_REJECTED		
-		- ALICIA*COLD_ABOUT_BOMBS (chemin des bombes ou avec Mika à l'entrée)
-		- ALICIA*ANGRY_ABOUT_MOCKED
-
-	bug en exit ? : quand alicia dit qu'on arrête avec les bombes, mais qu'on essaies quand même auprès de Mika et qu'on rate ?
+	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 
 	à implanter :		
 		+ quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
@@ -112,6 +81,7 @@
 		ALICIA*FREED_BY_MIKA
 		ALICIA*FREED_BY_SARAH
 		ALICIA*KNOCK_KNOCK_BY_REBECCA_BY_NEVER_CAME_BACK
+		(quand c'est fait, retirer l'espace qui sépare ces lignes, des autres, dans le codex)
 
 	Mika :
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
@@ -135,6 +105,7 @@
 	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
+	- à vérifier : REGISTER = PSYCHOPATH*ALICIA_KILLED
 
 	karma :
 	- vérifier : le meutre de Alicia
