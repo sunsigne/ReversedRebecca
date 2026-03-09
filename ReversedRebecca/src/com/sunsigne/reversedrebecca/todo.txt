@@ -45,9 +45,6 @@
 	
 	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 
-	à implanter :		
-		+ quand Rebecca s'enerve sur Mika avec le "Alicia!", elle ne devrait plus du tout pouvoir lui (le dialogue est dans REBECCA_INQUIRY*ANGRY_AGAINST_JEAN_OR_MIKA)
-
 	theft ?
 		- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
 		- la sortie du TA theft : tout à faire (Jean ? Delta ? Mika ? Sarah ? Alicia ? Dave ?)
