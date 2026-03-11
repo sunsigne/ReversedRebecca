@@ -43,6 +43,7 @@ I_AM_BEING_SERIOUS = Key1 % I'm being serious
 
 WE_WILL_HELP_YOU = Key1 % we will help you
 INDEED = Key2 % indeed
+EXAMINE = Key1 % examine
 
 ///// LEFT AREA /////
 

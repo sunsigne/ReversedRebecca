@@ -30,7 +30,6 @@
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	dave : supprimer les images creepy de dave
 	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
-	lvl001 : redirection du end_lvl vers "dave_end"
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
@@ -43,6 +42,23 @@
 
 	////////// EN COURS ////////////
 	
+	- obj 25 à 29 (le dernier, c'est les feuilles) + REBECCA_INQUIRY
+	 à tester :
+	 	- en exit : la stabilité des TA du bureau d'Alicia
+	 	- examiner les feuille puis parler à marie
+	 	- parler à marie puis examiner les feuilles
+	 	- examiner les feuilles, puis découvrir qu'il y a un voleur (vérifier l'aspect jaune du "theft" de Marie
+	 à faire :
+		- tester et traduire le fichier REBECCA_INQUIRY
+		- lorsque le END_LVL sera terminé. S'assurer que la sauvegarde "UNSAVE_ALICIA_NOBODY_FREED_HER" ligne 3 sur Alicia, se lance effectivement dans le cas où le joueur a été très rapide pour finir, mais que Sarah a prévu de passer par le SAS (cf, si on a pas fait pleurer Joseph)
+		- si Rebecca découvrir les document volé avant de parler à Delta, son dialogue (à Delta) change légèrement
+		- stabiliser le comportement de "theft" de Marie" :
+			- ne doit pas pouvoir s'activier si elle est choquée par "alicia ?"
+			- doit pouvoir s'activer si on à discuter avec tout le monde sauf elle
+	
+	à implanter, traduire et tester : 
+		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
+		
 	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 
 	theft ?
@@ -63,13 +79,6 @@
 			(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 			"
 
-	toute la partie "découvrir l'objet du vol" :
-		- fouiller le bureau d'Alicia
-		- fichier REBECCA_INQUIRY
-		- lorsque le END_LVL sera terminé. S'assurer que la sauvegarde "UNSAVE_ALICIA_NOBODY_FREED_HER" ligne 3 sur Alicia, se lance effectivement dans le cas où le joueur a été très rapide pour finir, mais que Sarah a prévu de passer par le SAS (cf, si on a pas fait pleurer Joseph)
-
-	à implanter, traduire et tester : 
-		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
 
 	alicia - en inqurey ET en exit :
 		ALICIA*NOBODY_FREED_HER
@@ -99,6 +108,7 @@
 	(fun)
 	XhX - variantes psychopath
 	- en Sadique (le cas est déjà géré quand on le devient PENDANT le niveau, mais pas encore quand on ARRIVE dans le niveau AVEC un karma sadique), faire en sorte que Rebecca ne s'inquiète pas plus que ça du sort d'alicia, donc sur Mika ligne ~ 85, rajouter un memory conditionnel pour lancer le neutral_var plutôt que le neutral_next
+	- en sadique : OBJECT*ALICIA_ROOM_ANYTHING devrait avoir le même dialogue, mais avec l'expression "laugh" + REBECCA_INQUIRY*WATCHING_DOCUMENT devrait avoir l'expression "you_silly"
 	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
@@ -120,6 +130,8 @@
 	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
 	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
 	)
+	
+	////////// LVL001 ////////////
 	
 	à peut-être enregister :
 		- le type de scénario à passer en "long range" ? (pour des remarques ?) - NOVATECH*SCENARIO_INQUIRY
@@ -279,7 +291,6 @@
 	dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
 	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
-	Lvl001 -> Dave doit réagir au fait qu'on a fait pleurer Joseph (2 cas : sur la sauvegarde actuelle et après un reset -> Rebecca s'en souviendra ou non)
 
 	////////// RR000 ////////////
 

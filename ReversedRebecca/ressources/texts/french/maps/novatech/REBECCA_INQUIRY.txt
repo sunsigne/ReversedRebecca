@@ -1,9 +1,26 @@
-% ONLY_STOLEN_OBJECT
-rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir ce que@Vladimir est venu nous voler.
+% WATCHING_DOCUMENT
+rebecca = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
 
 
-% ONLY_THIEF_NAME
-rebecca = DOWN = you_silly = Je n'ai plus qu'à découvrir qui est venu nous@voler nos travaux de recherche sur le déblocage.
+% STOLEN_OBJECT_DISCOVERY
+rebecca = DOWN = surprised = Une seconde… Les documents sur le casque de déblocage@n'étaient pas par terre !
+
+
+% STOLEN_OBJECT_DISCOVERY_UNKOWNED_NAME
+rebecca = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ? 
+rebecca = OBJECT = unhappy = Si oui, c'est très grave… Entre de mauvaises mains,@ce projet peut devenir très dangereux…
+rebecca = DOWN = sad = Je dois en apprendre plus sur notre voleur.@Je devrait interroger les autres.
+
+
+% STOLEN_OBJECT_DISCOVERY_KOWNED_NAME
+rebecca = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ? 
+rebecca = OBJECT = unhappy = Si oui, c'est très grave… Entre de mauvaises mains,@ce projet peut devenir très dangereux…
+rebecca = DOWN = sad = Bon ben… Mission accomplie, j'imagine.
+
+
+% STOLEN_OBJECT_DISCOVERY_THEN_NAME
+rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur,@et ce qu'il est venu nous prendre.
+rebecca = DOWN = happy = Mission accomplie.
 
 
 % ANGRY_AGAINST_JEAN_OR_MIKA
