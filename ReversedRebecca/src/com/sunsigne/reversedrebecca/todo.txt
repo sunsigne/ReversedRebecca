@@ -42,17 +42,14 @@
 
 	////////// EN COURS ////////////
 	
-	- obj 25 à 29 (le dernier, c'est les feuilles) + REBECCA_INQUIRY
 	 à tester :
-	 	- REBECCA_INQUIRY*STOLEN_OBJECT_DISCOVERY_KOWNED_NAME (+ vérifier trad)
-	 	- examiner les feuille puis parler à marie
-	 	- parler à marie puis examiner les feuilles
-	 	- examiner les feuilles, puis découvrir qu'il y a un voleur (vérifier l'aspect jaune du "theft" de Marie
+	 	- vérifier si les 2 secondes des papiers sont coruptible par Alicia
 	 à faire :
 		- lorsque le END_LVL sera terminé. S'assurer que la sauvegarde "UNSAVE_ALICIA_NOBODY_FREED_HER" ligne 3 sur Alicia, se lance effectivement dans le cas où le joueur a été très rapide pour finir, mais que Sarah a prévu de passer par le SAS (cf, si on a pas fait pleurer Joseph)
 		- stabiliser le comportement de "theft" de Marie" :
 			- ne doit pas pouvoir s'activier si elle est choquée par "alicia ?"
 			- doit pouvoir s'activer si on à discuter avec tout le monde sauf elle
+			- doit désactiver le "theft" des autres (ce qui n'est bizarrement pas encore le cas)
 	
 	à implanter, traduire et tester : 
 		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
@@ -68,7 +65,6 @@
 		- lorsqu'elle a renseigné le nom, devrait s'assurer d'annuler correctement les TA "theft" de tous les autres
 		- une fois qu'elle a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
 		- en "alicia ?", est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
-		- deux dialogues et leur implémentation sont à retravailler : ONLY_STOLEN_OBJECT et ONLY_THIEF_NAME 
 			identifier voleur SANS marie :
 			"
 			Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...

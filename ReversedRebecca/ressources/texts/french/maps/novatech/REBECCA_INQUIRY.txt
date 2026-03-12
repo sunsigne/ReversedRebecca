@@ -12,21 +12,20 @@ rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instab
 rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
-% STOLEN_OBJECT_DISCOVERY_UNKOWNED_NAME
+% STOLEN_OBJECT_DISCOVERY_UNKNOWN_NAME
 rebecca = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ?
 rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
 rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
-% STOLEN_OBJECT_DISCOVERY_KOWNED_NAME
+% STOLEN_OBJECT_DISCOVERY_KNOWN_NAME
 rebecca = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ?
 rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
-rebecca = DOWN = sad = Bon ben… Mission accomplie, j'imagine.
 
 
-% STOLEN_OBJECT_DISCOVERY_THEN_NAME
-rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur,@et ce qu'il est venu nous prendre.
-rebecca = DOWN = happy = Mission accomplie.
+% STOLEN_OBJECT_DISCOVERY_AND_NAME
+rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur.@Je sais aussi ce qu'il est venu prendre.
+rebecca = DOWN = laugh = Donc, mission accomplie.
 
 
 % ANGRY_AGAINST_JEAN_OR_MIKA
