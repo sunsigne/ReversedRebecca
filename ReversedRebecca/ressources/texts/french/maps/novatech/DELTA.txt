@@ -7,10 +7,6 @@ rebecca = object = surprised = Vraiment ?
 delta = rebecca = worry = Non. Mais, je devine les grandes lignes.
 delta = rebecca = happy = Un type s'est introduit ici, il a volé un truc,@et il est parti. J'ai bon ?
 rebecca = object = laugh = À peu près, oui !
-rebecca = object = worry = Par contre, on ne sait pas@s'il a volé quelque chose.
-delta = rebecca = wink = Crois-en mon expérience. Qui que ça soit,@il ou elle n'est pas reparti les mains vides.
-rebecca = object = happy_var = Ok. Dans ce cas, je dois trouver ce qu'il a pris.
-delta = rebecca = excited = Bon courage, ma grande !
 
 
 % HAVE_YOU_DATA_POST_ALICIA
@@ -20,15 +16,34 @@ rebecca = object = surprised = Vraiment ?
 delta = rebecca = worry = Non. Mais, je devine les grandes lignes.
 delta = rebecca = happy = Un type s'est introduit ici, il a volé un truc,@et il est parti. J'ai bon ?
 rebecca = object = laugh = À peu près, oui !
+
+
+% HAVE_YOU_DATA_NEXT
 rebecca = object = worry = Par contre, on ne sait pas@s'il a volé quelque chose.
 delta = rebecca = wink = Crois-en mon expérience. Qui que ça soit,@il ou elle n'est pas reparti les mains vides.
 rebecca = object = happy_var = Ok. Dans ce cas, je dois trouver ce qu'il a pris.
 delta = rebecca = excited = Bon courage, ma grande !
 
 
+% HAVE_YOU_DATA_THEFT_VAR
+rebecca = object = worry = Tu saurais ce qu'il a pris d'ailleurs ?
+delta = rebecca = smile = Non, sinon je te l'aurais dit.
+rebecca = object = happy_var = D'accord, Merci quand même.
+
+
 % THEFT
 delta = rebecca = smile = Non, je ne sais pas ce qu'il a pris.@Sinon, je te l'aurais dit.
 rebecca = object = happy_var = C'était pour être sûre.
+
+
+% THEFT_VAR
+delta = rebecca = worry = Désolé ma grande, je ne sais pas ce qu'il a pris.
+
+
+% THEFT_VAR_POST_ALICIA
+rebecca = object = happy = Avec tout ça, j'ai oublié de te demander…@Un voleur s'est introduit ici. Tu sais ce qu'il a pris ?
+delta = rebecca = worry = Désolé ma grande, je n'en ai aucune idée.
+rebecca = object = happy_var = Merci quand même.
 
 
 % KEY_EXIT

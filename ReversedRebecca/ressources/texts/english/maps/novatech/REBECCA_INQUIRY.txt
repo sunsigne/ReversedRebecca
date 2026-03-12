@@ -1,9 +1,32 @@
-% ONLY_STOLEN_OBJECT
-rebecca = DOWN = you_silly = Now, I just have to find out what @Vladimir came to steal from us.
+% WATCHING_DOCUMENT
+rebecca = DOWN = unhappy = What a shambles… Alicia is going to take@forever to reorganize her work.
 
 
-% ONLY_THIEF_NAME
-rebecca = DOWN = you_silly = Now, I just have to find out who came@to steal our research on releasing.
+% STOLEN_OBJECT_DISCOVERY
+rebecca = DOWN = surprised = Wait! The documents on the helmet of releasing@are missing!
+
+
+% STOLEN_OBJECT_DISCOVERY_DIDNT_KNOW_THERE_WAS_A_THEFT
+rebecca = DOWN = no_sens = Did our intruder come to steal them?
+rebecca = object = unhappy = If so, that's very serious…@It's an unstable and dangerous project…
+rebecca = DOWN = happy = I need to learn more about our thief.@I'll question the others.
+
+
+% STOLEN_OBJECT_DISCOVERY_UNKOWNED_NAME
+rebecca = DOWN = no_sens = Is that what the intruder came looking for?
+rebecca = object = unhappy = If so, that's very serious…@It's an unstable and dangerous project…
+rebecca = DOWN = happy = I need to learn more about our thief.@I'll question the others.
+
+
+% STOLEN_OBJECT_DISCOVERY_KOWNED_NAME
+rebecca = DOWN = no_sens = Is that what Vladimir came looking for?
+rebecca = object = unhappy = If so, that's very serious…@It's an unstable and dangerous project…
+rebecca = DOWN = happy = I need to learn more about our thief.@I'll question the others.
+
+
+% STOLEN_OBJECT_DISCOVERY_THEN_NAME
+rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur,@et ce qu'il est venu nous prendre.
+rebecca = DOWN = happy = Mission accomplie.
 
 
 % ANGRY_AGAINST_JEAN_OR_MIKA

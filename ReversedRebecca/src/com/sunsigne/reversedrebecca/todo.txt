@@ -44,14 +44,12 @@
 	
 	- obj 25 à 29 (le dernier, c'est les feuilles) + REBECCA_INQUIRY
 	 à tester :
-	 	- en exit : la stabilité des TA du bureau d'Alicia
+	 	- REBECCA_INQUIRY*STOLEN_OBJECT_DISCOVERY_KOWNED_NAME (+ vérifier trad)
 	 	- examiner les feuille puis parler à marie
 	 	- parler à marie puis examiner les feuilles
 	 	- examiner les feuilles, puis découvrir qu'il y a un voleur (vérifier l'aspect jaune du "theft" de Marie
 	 à faire :
-		- tester et traduire le fichier REBECCA_INQUIRY
 		- lorsque le END_LVL sera terminé. S'assurer que la sauvegarde "UNSAVE_ALICIA_NOBODY_FREED_HER" ligne 3 sur Alicia, se lance effectivement dans le cas où le joueur a été très rapide pour finir, mais que Sarah a prévu de passer par le SAS (cf, si on a pas fait pleurer Joseph)
-		- si Rebecca découvrir les document volé avant de parler à Delta, son dialogue (à Delta) change légèrement
 		- stabiliser le comportement de "theft" de Marie" :
 			- ne doit pas pouvoir s'activier si elle est choquée par "alicia ?"
 			- doit pouvoir s'activer si on à discuter avec tout le monde sauf elle

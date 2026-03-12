@@ -3,18 +3,24 @@ rebecca = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réo
 
 
 % STOLEN_OBJECT_DISCOVERY
-rebecca = DOWN = surprised = Une seconde… Les documents sur le casque de déblocage@n'étaient pas par terre !
+rebecca = DOWN = surprised = Une seconde… Les documents sur le casque@de déblocage sont manquants !
+
+
+% STOLEN_OBJECT_DISCOVERY_DIDNT_KNOW_THERE_WAS_A_THEFT
+rebecca = DOWN = no_sens = Notre intrus serait venu les voler ?
+rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
+rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
 % STOLEN_OBJECT_DISCOVERY_UNKOWNED_NAME
-rebecca = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ? 
-rebecca = OBJECT = unhappy = Si oui, c'est très grave… Entre de mauvaises mains,@ce projet peut devenir très dangereux…
-rebecca = DOWN = sad = Je dois en apprendre plus sur notre voleur.@Je devrait interroger les autres.
+rebecca = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ?
+rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
+rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
 % STOLEN_OBJECT_DISCOVERY_KOWNED_NAME
-rebecca = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ? 
-rebecca = OBJECT = unhappy = Si oui, c'est très grave… Entre de mauvaises mains,@ce projet peut devenir très dangereux…
+rebecca = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ?
+rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
 rebecca = DOWN = sad = Bon ben… Mission accomplie, j'imagine.
 
 

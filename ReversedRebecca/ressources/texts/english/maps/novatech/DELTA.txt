@@ -7,10 +7,6 @@ rebecca = object = surprised = Really?
 delta = rebecca = worry = No. But, I can guess the main points.
 delta = rebecca = happy = A dawg broke in here, stole something, and left.@Am I right?
 rebecca = object = laugh = Yes, kind of!
-rebecca = object = worry = Yet, we don't know if he stole something.
-delta = rebecca = wink = Trust my experience. Whoever it was,@he or she didn't leave empty-handed.
-rebecca = object = happy_var = Ok. In this case, I need to find out what he took.
-delta = rebecca = excited = Good luck, sis!
 
 
 % HAVE_YOU_DATA_POST_ALICIA
@@ -20,15 +16,34 @@ rebecca = object = surprised = Really?
 delta = rebecca = worry = No. But, I can guess the main points.
 delta = rebecca = happy = A dawg broke in here, stole something, and left.@Am I right?
 rebecca = object = laugh = Yes, kind of!
+
+
+% HAVE_YOU_DATA_NEXT
 rebecca = object = worry = Yet, we don't know if he stole something.
 delta = rebecca = wink = Trust my experience. Whoever it was,@he or she didn't leave empty-handed.
 rebecca = object = happy_var = Ok. In this case, I need to find out what he took.
 delta = rebecca = excited = Good luck, sis!
 
 
+% HAVE_YOU_DATA_THEFT_VAR
+Rebecca = object = worry = Do you happen to know what he took, by the way?
+delta = Rebecca = smile = No, otherwise I would have told you.
+Rebecca = object = happy_var = Okay, thanks anyway.
+
+
 % THEFT
 delta = rebecca = smile = No, I don't know what he took.@Otherwise, I would have told you.
 rebecca = object = happy_var = Just wanted to be sure.
+
+
+% THEFT_VAR
+delta = rebecca = worry = Sorry sis, I don't know what he took.
+
+
+% THEFT_VAR_POST_ALICIA
+rebecca = object = happy = With all that going on, I forgot to ask you…@A thief broke in here. Do you know what he took?
+delta = rebecca = worry = Sorry sis, I have no idea.
+rebecca = object = happy_var = Thanks anyway.
 
 
 % KEY_EXIT
