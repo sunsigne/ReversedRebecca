@@ -41,17 +41,19 @@
 	)
 
 	////////// EN COURS ////////////
-			
-	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-	
-	 à tester :
-	 	- le dialgoue "theft" avant et pendant le stock
-	 	- tester la romance interrompue par "theft"
-	 	- vérifier si les 2 secondes des papiers sont coruptible par Alicia
 
+	à faire : 
+		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre (pour ne pas faire planter la sauvegarde sur alicia)
 	
 	à implanter, traduire et tester : 
 		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS + tester : TA theft null lorsque Marie a renseigné le voleur
+	
+	- tous les indices des plantes
+	
+	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
+	
+	 à tester :
+	 	- vérifier si les 2 secondes des papiers sont coruptible par Alicia
 
 	Marie :
 		- à faire avec les indices des plantes :
@@ -66,19 +68,6 @@
 				...
 				Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
 				(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
-				"
-
-	 à faire :
-	 	- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
-
-	alicia - en inqurey ET en exit :
-		ALICIA*NOBODY_FREED_HER
-		ALICIA*FREED_BY_REBECCA
-		ALICIA*FREED_BY_DELTA
-		ALICIA*FREED_BY_MIKA
-		ALICIA*FREED_BY_SARAH
-		ALICIA*KNOCK_KNOCK_BY_REBECCA_BY_NEVER_CAME_BACK
-		(quand c'est fait, retirer l'espace qui sépare ces lignes, des autres, dans le codex)
 
 	Mika :
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
@@ -86,7 +75,7 @@
 		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 	
 	à faire une fois les dialogues TOUS finaux :
-		- tous les indices des plantes
+	 	- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
 		- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
 	
 	note :
