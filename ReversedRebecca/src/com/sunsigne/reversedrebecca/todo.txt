@@ -41,35 +41,35 @@
 	)
 
 	////////// EN COURS ////////////
+			
+	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 	
 	 à tester :
-	 	- TA theft null de tout le monde lorsque Marie a renseigné le voleur
+	 	- le dialgoue "theft" avant et pendant le stock
+	 	- tester la romance interrompue par "theft"
 	 	- vérifier si les 2 secondes des papiers sont coruptible par Alicia
-	 à faire :
-		- stabiliser le comportement de "theft" de Marie" :
-				- ne doit pas pouvoir s'activier si elle est choquée par "alicia ?"
-				- doit pouvoir s'activer si on à discuter avec tout le monde sauf elle
+
 	
 	à implanter, traduire et tester : 
-		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS
-		
-	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-
-	theft ?
-		- adapter la réaction de Marie si elle est choquée par rapport à "Alicia ?"
+		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS + tester : TA theft null lorsque Marie a renseigné le voleur
 
 	Marie :
-		- lorsqu'elle parle à Jospeh sur le canapé, c'est un SAVED_TRIPLE_ACTION qui est utilisé, ce qui bousille les TA d'inquiry. Pareil dans le stock ?
-		- une fois qu'elle a renseigné le nom (theft), elle ne fait plus rien (car waitfor utilisé)
-		- en "alicia ?", est choqué et commence son routing du stock, après être passée aux toilettes, ce qui bloque l'action "theft ?" (vérifié qu'elle n'est pas activable si on ne parle à Delta qu'aprés, ou du moins pas durant la scène romantique). L'enquête a BESOIN de la réponse de cette option, vérifier comment la réactiver (après un certain temps ? après avoir libéré Alicia ?)
-			identifier voleur SANS marie :
-			"
-			Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...
-			...
-			Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
-			(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
-			"
+		- à faire avec les indices des plantes :
+			- si on demande aux plantes à propos du vol :
+				- si on a pas parlé à Marie : il faut interroger + de monde
+				- si on a déclanché le "Alicia ?" : Marie en sait surement +
+				+ s'assurer que le TA vol ne soit pas actif pendant la scène romatique (mais bien arpès si elle a été déclanchée)
+		
+				identifier voleur SANS marie :
+				"
+				Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...
+				...
+				Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
+				(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
+				"
 
+	 à faire :
+	 	- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
 
 	alicia - en inqurey ET en exit :
 		ALICIA*NOBODY_FREED_HER

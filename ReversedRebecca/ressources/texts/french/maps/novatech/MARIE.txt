@@ -24,11 +24,14 @@ object = player = worry = Je te dis juste ce qu'il disait.
 object = player = unhappy = Mais dans sa logique, il est possible qu'il ait@décidé de venir aujourd'hui les… "récupérer".
 rebecca = object = happy = C'est possible. Tu te souviens de son nom ?
 object = player = worry = Va... Vi... Hmmm…
+
+
+% THEFT_NEXT
 object = player = unhappy = Non. Désolé…
 rebecca = object = laugh = C'est pas grave. C'est déjà très bien. Merci !
 
 
-% THEFT_NEXT
+% THEFT_NEXT_NEXT
 object = player = surprised = VLADIMIR !
 object = player = happy = Son nom était Vladimir Wolanski.
 rebecca = object = excited = Top ! Merci !
