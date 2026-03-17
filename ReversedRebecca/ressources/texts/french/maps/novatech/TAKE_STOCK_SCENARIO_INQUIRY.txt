@@ -4,12 +4,6 @@ player = object = happy = Je mène l'enquête, donc je dois enquêter.
 player = object = happy_var = Interroger mes collègues, et chercher des indices@me semble un bon point de départ.
 
 
-
-
-
-
-
-
 % KNOWN_NAME
 player = object = asleep = Voyons voir…
 player = object = unhappy = Je connais le nom de l'intrus, mais pas ce@qu'il est venu voler.
@@ -34,11 +28,10 @@ player = object = unhappy = Je sais ce que l'intrus est venu voler, mais@je ne c
 player = object = you_silly = Mon instinct me dit que Marie pourra m'aider.@Derrière ses cheveux roses, elle a un esprit affuté.
 
 
-
-
-
-
-
+% KNOWN_OBJECT_MARIE_TOILET
+player = object = sad = Sauf que maintenant… Elle est en larmes,@et n'est plus vraiment en état de réfléchir…
+player = object = angry = Zut ! Je me suis bloquée.
+player = object = sad_var = Qui aurait cru que jouer avec les émotions des@gens auraient des conséquences sur moi ?
 
 
 % ALICIA
