@@ -1,0 +1,46 @@
+% NO_CLUE
+player = object = asleep = Let's see…
+player = object = happy = I'm leading the investigation, so@I have to investigate.
+player = object = happy_var = Questioning my colleagues, and looking for clues@seems like a good start.
+
+
+% KNOWN_NAME
+player = object = asleep = Let's see…
+player = object = unhappy = I know the intruder's name, but not what@he came to steal.
+player = object = happy = I need to examine my surroundings.@I must have missed something.
+
+
+% KNOWN_NAME_ALICIA_ROOM
+player = object = asleep = Let's see…
+player = object = unhappy = I know the intruder's name, but not what@he came to steal.
+player = UP = happy = I'm clearly in the right place to look for clues.
+
+
+% KNOWN_OBJECT
+player = object = asleep = Let's see…
+player = object = worry = I know what the intruder came to steal, but@I don't know his identity.
+player = object = happy = I'll ask my colleagues.@Someone surely knows something.
+
+
+% KNOWN_OBJECT_MARIE
+player = object = asleep = Let's see…
+player = object = unhappy = I know what the intruder came to steal, but@I don't know his identity.
+player = object = you_silly = My instinct tells me that Marie can help me.@Behind her pink hair, she has a sharp mind.
+
+
+% KNOWN_OBJECT_MARIE_TOILET
+player = object = sad = Except now… She's in tears, and not really@in a state to think straight…
+player = object = angry = Damn! I got myself into a bind.
+player = object = sad_var = Who would have thought that playing with people's@emotions would have consequences for me?
+
+
+% ALICIA
+player = object = asleep = Let's see…
+player = object = surprised = Alicia probably has a problem! I need to find out@what it is, or make sure she's okay.
+
+
+% ALICIA_HELP
+player = object = asleep = Let's see…
+player = object = unhappy = I need to find a way to free Alicia,@who's locked up.
+player = object = happy = Sarah, Delta or even Mika, could help me,@if I ask them.
+

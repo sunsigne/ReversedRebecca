@@ -43,14 +43,10 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- indices des plantes : 
-			- traduire en anglais
-		
 		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre
 		- à implanter, traduire et tester : Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS + tester : TA theft null lorsque Marie a renseigné le voleur
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 		- corriger les 2 secondes des papiers coruptibles par Alicia ou Sarah
-
 
 	Mika :
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
