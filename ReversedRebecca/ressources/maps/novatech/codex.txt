@@ -99,6 +99,7 @@ OBJ-21 = Speakable Alicia Door
 OBJ-22 = Alicia Rubbles
 OBJ-23 = Alicia Rubbles Up Checker
 OBJ-24 = Alicia Rubbles Down Checker
+OBJ-40 = Big Plant
 
 
 ///// ALICIA ROOM /////

@@ -1,0 +1,53 @@
+% NO_CLUE
+player = object = asleep = Voyons voir…
+player = object = happy = Je mène l'enquête, donc je dois enquêter.
+player = object = happy_var = Interroger mes collègues, et chercher des indices@me semble un bon point de départ.
+
+
+
+
+
+
+
+
+% KNOWN_NAME
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je connais le nom de l'intrus, mais pas ce@qu'il est venu voler.
+player = object = happy = Je dois examiner mon environnement.@Je suis sûrement passée à côté de quelque chose.
+
+
+% KNOWN_NAME_ALICIA_ROOM
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je connais le nom de l'intrus, mais pas ce@qu'il est venu voler.
+player = UP = happy = Je suis clairement au bon endroit pour chercher des indices.
+
+
+% KNOWN_OBJECT
+player = object = asleep = Voyons voir…
+player = object = worry = Je sais ce que l'intrus est venu voler, mais@je ne connais pas son identité.
+player = object = happy = Je vais interroger mes collègues.@Quelqu'un sait sûrement quelque chose.
+
+
+% KNOWN_OBJECT_MARIE
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je sais ce que l'intrus est venu voler, mais@je ne connais pas son identité.
+player = object = you_silly = Mon instinct me dit que Marie pourra m'aider.@Derrière ses cheveux roses, elle a un esprit affuté.
+
+
+
+
+
+
+
+
+
+% ALICIA
+player = object = asleep = Voyons voir…
+player = object = surprised = Alicia a sûrement un problème ! Je dois découvrir@ce que c'est, ou m'assurer qu'elle aille bien.
+
+
+% ALICIA_HELP
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = object = happy = Sarah, Delta ou même Mika, pourraient m'aider,@si je leur demande.
+

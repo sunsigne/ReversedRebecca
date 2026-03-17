@@ -43,31 +43,19 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre (pour ne pas faire planter la sauvegarde sur alicia)
-	
-	à implanter, traduire et tester : 
-		- Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS + tester : TA theft null lorsque Marie a renseigné le voleur
-	
-	- tous les indices des plantes
-	
-	le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-	
-	 à tester :
-	 	- vérifier si les 2 secondes des papiers sont coruptible par Alicia
-
-	Marie :
-		- à faire avec les indices des plantes :
-			- si on demande aux plantes à propos du vol :
-				- si on a pas parlé à Marie : il faut interroger + de monde
-				- si on a déclanché le "Alicia ?" : Marie en sait surement +
-				+ s'assurer que le TA vol ne soit pas actif pendant la scène romatique (mais bien arpès si elle a été déclanchée)
+		- indices des plantes : 
+			- obj-02 pas terminé, puis copier coller sur 25, 38, 39, 40 (1. prendre en compte le "Affecting" à ne placer qu'une seule fois, 2. prendre en comtpe le "TALK:TAKE_STOCK_SCENARIO_INQUIRY*KNOWN_NAME_ALICIA_ROOM")
+			- tester que le TAKE_STOCK_SCENARIO_INQUIRY*KNOWN_OBJECT_MARIE écroute bien (avant ET pendant) la conversation avec Jospeh
+			- setup et tester le "TALK:TAKE_STOCK_SCENARIO_INQUIRY*KNOWN_NAME_ALICIA_ROOM"
+			- traduire en anglais
+			- gérer le cas où elle est enfermée dans les toilettes : (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
 		
-				identifier voleur SANS marie :
-				"
-				Bon, j'ai interrogé tout le monde, mais je n'ai pas appris qui nous a volé...
-				...
-				Non ! Pas tout le monde ! Je n'ai pas demandé à Marie
-				(Je crois qu'elle est dans le stock avec les bombes) / (Elle ne sait pas que c'est moi qui l'ai piégé dans les toilettes)
+		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre
+		- à implanter, traduire et tester : Dave*THEFT + THEFT_NEXT + THEFT_PLUS + THEFT_PLUS_PLUS + tester : TA theft null lorsque Marie a renseigné le voleur
+		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
+		- corriger les 2 secondes des papiers coruptibles par Alicia ou Sarah
+		+ s'assurer que le TA vol ne soit pas actif pendant la scène romatique (mais bien arpès si elle a été déclanchée)
+
 
 	Mika :
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
