@@ -13,7 +13,7 @@ player = object = happy = Je dois examiner mon environnement.@Je suis sûrement 
 % KNOWN_NAME_ALICIA_ROOM
 player = object = asleep = Voyons voir…
 player = object = unhappy = Je connais le nom de l'intrus, mais pas ce@qu'il est venu voler.
-player = UP = happy = Je suis clairement au bon endroit pour chercher des indices.
+player = UP = happy = Je suis clairement au bon endroit pour chercher@des indices.
 
 
 % KNOWN_OBJECT

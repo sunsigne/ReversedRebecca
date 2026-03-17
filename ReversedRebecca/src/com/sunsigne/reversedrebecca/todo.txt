@@ -44,8 +44,6 @@
 
 	à faire : 
 		- indices des plantes : 
-			- obj-02 pas terminé, puis copier coller sur 25, 38, 39, 40 (1. prendre en compte le "Affecting" à ne placer qu'une seule fois, 2. prendre en comtpe le "TALK:TAKE_STOCK_SCENARIO_INQUIRY*KNOWN_NAME_ALICIA_ROOM")
-			- setup et tester le "TALK:TAKE_STOCK_SCENARIO_INQUIRY*KNOWN_NAME_ALICIA_ROOM"
 			- traduire en anglais
 		
 		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre
@@ -95,6 +93,8 @@
 	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
 	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
 	)
+	
+	- la musique du thème de Sarah existe en double dans les ressources du jeu... "sarah_theme" et "your_best_friend"
 	
 	////////// LVL001 ////////////
 	
