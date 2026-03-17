@@ -47,7 +47,9 @@ public class ColorActionRequest implements IndexRequest {
 		Interactive interactive = (Interactive) gameObject;
 		TEXT_COLOR textColor = getTextColor(color);
 		Action action = interactive.getTripleAction().getAction(Integer.parseInt(num) - 1);
-		action.setTextColor(textColor);
+		
+		if (action != null)
+			action.setTextColor(textColor);
 	}
 
 	private TEXT_COLOR getTextColor(String color) {

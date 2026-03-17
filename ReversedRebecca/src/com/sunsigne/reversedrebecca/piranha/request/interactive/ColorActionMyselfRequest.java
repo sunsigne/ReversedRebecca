@@ -47,7 +47,9 @@ public class ColorActionMyselfRequest implements Request {
 			return;
 
 		Action action = obj.getTripleAction().getAction(Integer.parseInt(num) - 1);
-		action.setTextColor(textColor);
+		
+		if (action != null)
+			action.setTextColor(textColor);
 	}
 
 	private TEXT_COLOR getTextColor(String color) {
