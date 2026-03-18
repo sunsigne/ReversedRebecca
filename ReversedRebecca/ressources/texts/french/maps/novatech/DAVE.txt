@@ -1,6 +1,6 @@
 % ALICIA
 dave = player = calm = Je ne peux pas régler ce problème, Rebecca.@Demande à quelqu'un d'autre.
-dave = DOWN = calm = Ne te méprend pas. Je me soucie du sort d'Alicia.@C'est juste que ça n'est pas à moi d'interférer.
+dave = player = calm = Ne te méprend pas. Je me soucie du sort d'Alicia.@C'est juste que ça n'est pas à moi d'interférer.
 
 
 % ALICIA_PLUS
@@ -44,30 +44,32 @@ player = object = no_sens = Ok… Si tu le dis…
 
 
 % THEFT
-dave = player = calm = Naturellement, je sais précisément qui est derrière tout ça.
+dave = player = calm = Oui, je sais précisément qui est derrière tout ça.
 player = dave = excited = Super ! C'est qui ?
-dave = player = smile = La petite souris.
-dave = player = camera = Plus sérieusement. J'aimerais pouvoir t'aider, mais@c'est à toi de découvrir ce que cache cette histoire.
-player = dave = angry = Tu te la joues mystérieux ?@J'ai besoin d'aide, pas d'une leçon de philosophie nulle.
+dave = player = smile = Le voleur.
+player = dave = surprised = Sans déconner !
+player = dave = wrong_with_you = T'es sérieux ?
+dave = player = camera = Désolé. J'aimerais pouvoir t'aider, mais@c'est à toi de découvrir cette histoire.
+player = dave = angry = J'ai besoin d'aide, Dave. Pas d'une blague nulle@et d'une leçon de philosophie qui l'est tout autant.
 dave = player = disillusioned = Pardon. La prochaine fois que tu me demanderas,@je te dirais réellement qui c'est.
 
 
 % THEFT_NEXT
 dave = player = calm = Il y a visiblement un malentendu.
-dave = player = camera = Je voulais dire : dans la prochaine réalité,@quand tu me demanderas, je te dirais réellement qui c'est. 
-player = dave = unhappy_var = Je… hein… heu… quoi ?
-dave = player = intrigued = La prochaine réalité. Tu sais… quand le monde disparait et qu'il recommence.
+dave = player = camera = Je voulais dire : dans la prochaine réalité, quand@tu me demanderas, je te dirais réellement qui c'est. 
+player = dave = no_sens = Je… hein… heu… quoi ?
+dave = player = intrigued = La prochaine réalité… Tu sais… quand le monde@recommence, comme s'il ne s'était rien passé.
 player = dave = no_sens_var = … Je crois que ce type est fou.
 
 
 % THEFT_PLUS
-dave = player = calm = La personne que tu cherches s'appelle Vladimir Wolanski.@Il est venu voler les plans du casque de déblocage.
-player = dave = no_sens_var = Tu es vachement bien renseigné…
-player = dave = surprised = Attend… LE casque ? Mais c'est super grave !
-dave = player = intringued = Assez, oui.
-dave = player = happy = Bonne chance, Rebecca.
+dave = player = calm = Le voleur est venu prendre les plans du casque@de déblocage dans le bureau d'Alicia.
+dave = player = calm = Il pense que nous lui avons volé ses travaux@en premier. Son nom est Vladimir Wolanski.
+player = dave = no_sens_var = … Tu es … étonnement bien renseigné !
+player = dave = surprised = Attend… LE casque ?@Mais c'est super grave !
+dave = player = calm = Assez, oui.@Bonne chance pour la suite, Rebecca.
 
 
-% THEFT_PLUS_PLUS
-dave = player = calm = Je suis navré, Rebecca. Je t'ai aidé la dernière fois,@mais ça n'est pas à moi de te de le faire.
-dave = player = happy = Demande à Marie, elle saura te renseigner.
+% THEFT_EXTRA_PLUS
+dave = player = calm = Je suis navré. Je t'ai aidé la dernière fois, en guise@d'excuses, mais c'est à toi de trouver la réponse.
+dave = DOWN = calm = Demande à Marie, elle saura te renseigner.
