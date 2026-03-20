@@ -6,6 +6,14 @@ rebecca = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réo
 rebecca = DOWN = surprised = Une seconde… Les documents sur le casque@de déblocage sont manquants !
 
 
+% WATCHED_DOCUMENT_DELAYER
+rebecca = DOWN = surprised = Une seconde ! Les documents par terre…@Je dois aller vérifier quelque chose.
+
+
+% STOLEN_OBJECT_DISCOVERY_DELAYER
+rebecca = DOWN = worry = C'est bien ce que je pensais, les documents sur@le casque de déblocage sont manquants…
+
+
 % STOLEN_OBJECT_DISCOVERY_DIDNT_KNOW_THERE_WAS_A_THEFT
 rebecca = DOWN = no_sens = Notre intrus serait venu les voler ?
 rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…

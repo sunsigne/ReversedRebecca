@@ -6,6 +6,14 @@ rebecca = DOWN = unhappy = What a shambles… Alicia is going to take@forever to
 rebecca = DOWN = surprised = Wait! The documents on the helmet of releasing@are missing!
 
 
+% WATCHED_DOCUMENT_DELAYER
+rebecca = DOWN = surprised = Wait! Those documents on the floor…@I need to check something.
+
+
+% STOLEN_OBJECT_DISCOVERY_DELAYER
+rebecca = DOWN = worry = That's what I thought, the documents on the@helmet of releasing are missing…
+
+
 % STOLEN_OBJECT_DISCOVERY_DIDNT_KNOW_THERE_WAS_A_THEFT
 rebecca = DOWN = no_sens = Did our intruder come to steal them?
 rebecca = object = unhappy = If so, that's very serious…@It's an unstable and dangerous project…
