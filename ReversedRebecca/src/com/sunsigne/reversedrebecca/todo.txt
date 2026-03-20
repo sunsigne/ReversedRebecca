@@ -42,9 +42,6 @@
 
 	////////// EN COURS ////////////
 
-	à traduire :
-		- toutes les interactions de Dave
-
 	à faire : 
 		- empêcher de finir le lvl (feuille par terre, dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour

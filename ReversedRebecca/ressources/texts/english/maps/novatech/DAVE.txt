@@ -41,3 +41,35 @@ dave = DOWN = disillusioned = The same responses… The same places…@The same 
 dave = DOWN = calm = Sometimes, I wish I could lose my memory…@But it’s totally impossible.
 dave = DOWN = calm =  I'm going to stop coming here, at this time and@in this place. I really don't see the point.
 player = object = no_sens = Ok… If you say so…
+
+
+% THEFT
+dave = player = calm = Yes, I know exactly who's behind all this.
+player = dave = excited = Great! Who is it?
+dave = player = smile = The thief.
+player = dave = surprised = No kidding!
+player = dave = wrong_with_you = Are you serious?
+dave = player = camera = Sorry. I wish I could help you, but it's up@to you to find out this story.
+player = dave = angry = I need help, Dave. Not a lame joke and an@equally lame philosophy lesson.
+dave = player = disillusioned = Sorry. Next time you ask me, I'll actually tell you@who it is.
+
+
+% THEFT_NEXT
+dave = player = calm = There's clearly been a misunderstanding.
+dave = player = camera = I meant: in the next reality, when you'll ask me,@I'll actually tell you who it is.
+player = dave = no_sens = I… huh… um… what?
+dave = player = intrigued = The next reality… You know… when the world@starts all over again, like nothing happened.
+player = dave = no_sens_var = … I think this guy is crazy.
+
+
+% THEFT_PLUS
+dave = player = calm = The thief came to Alicia's office to take@the helmet of releasing plans.
+dave = player = calm = He thinks we stole his work first.@His name is Vladimir Wolanski.
+player = dave = no_sens_var = … You're… surprisingly well-informed!
+player = dave = surprised = Wait… THE helmet? This is really bad!
+dave = player = calm = Pretty bad, yeah.@Good luck with the rest, Rebecca.
+
+
+% THEFT_EXTRA_PLUS
+dave = player = calm = I'm sorry. I helped you last time, as an apology,@but it's up to you to find the answer.
+dave = DOWN = calm = Ask Marie, she'll be able to tell you.
