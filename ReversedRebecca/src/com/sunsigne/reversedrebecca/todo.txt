@@ -43,9 +43,8 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- empêcher de finir le lvl (dave ou Marie) tant que Sarah ou Delta sont en train de nous suivre
+		- empêcher de finir le lvl (Marie dans le stock) tant que Delta est en train de nous suivre
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-		- corriger les 2 secondes des papiers coruptibles par Alicia ou Sarah
 
 	Mika :
 		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
