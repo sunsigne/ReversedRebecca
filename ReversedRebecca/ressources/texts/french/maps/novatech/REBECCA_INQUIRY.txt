@@ -36,6 +36,13 @@ rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur.@Je s
 rebecca = DOWN = laugh = Donc, mission accomplie.
 
 
+% BUT_DELTA_IS_FOLLOWING_PLAYER
+delta = player = no_sens = Et Alicia ?
+player = delta = surprised = Mon Dieu ! Mais tu as une réaction !@Ce jeu pense vraiment à tout !
+player = delta = happy = Ne t'en fais pas, je suis certaine qu'Alicia va bien.
+delta = player = worry = Ta foi t'honore. Je vais quand même aller vérifier.@À plus tard, ma grande.
+
+
 % ANGRY_AGAINST_JEAN_OR_MIKA
 player = DOWN = angry_var2 = Je n'ai pas envie de lui parler.@Il m'a énervé avec son attitude.
 

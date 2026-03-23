@@ -43,7 +43,6 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- empêcher de finir le lvl (Marie dans le stock) tant que Delta est en train de nous suivre
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
 
 	Mika :
