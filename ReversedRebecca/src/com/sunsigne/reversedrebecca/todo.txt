@@ -43,24 +43,17 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-
+		- mettre en place le counter 1
+		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour			
+		- la musique du thème de Sarah existe en double dans les ressources du jeu... "sarah_theme" et "your_best_friend"
+	
 	Mika :
-		- vérifier si "romance" hétéro s'affiche correctement + vérifier si correct lien de sauvegarde avec SARAH*DATING_MIKA_VAR (vérifier l'affichage IG)
-		- traduction du WS001
 		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 	
 	à faire une fois les dialogues TOUS finaux :
 	 	- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
 		- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
-	
-	note :
-		- traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
-		- lorsque Marie arrive dans le stock, son TA d'inquiry devient "regarder Marie", ce qui est une double sécurité (Alicia et Vol)
-		- si Marie est choquée par "Alicia ?", il n'est pas possible de lui demander "Alicia!" par la suite
-		- Alicia a le bon dialogue lorsqu'elle est sur le canapé
-		- impossible de faire sarah demader les clef à joseph quand il pleur, car implqiue de demander à Sarah de l'aide quand on a fait pleurer joseph (incohérent avec le fait que si rebecca est sadique et qu'elle ne souhaite plus libérer Alicia)
-	
+
 	(fun)
 	XhX - variantes psychopath
 	- en Sadique (le cas est déjà géré quand on le devient PENDANT le niveau, mais pas encore quand on ARRIVE dans le niveau AVEC un karma sadique), faire en sorte que Rebecca ne s'inquiète pas plus que ça du sort d'alicia, donc sur Mika ligne ~ 85, rajouter un memory conditionnel pour lancer le neutral_var plutôt que le neutral_next
@@ -72,11 +65,10 @@
 
 	karma :
 	- vérifier : le meutre de Alicia
-	- Alicia se moquer de sa situation (vérifié en inquiry si déjà appliqué)
+	- se moquer de Alicia quand elle est enfermée (vérifié en inquiry et exit)
 	- inquiéter volontairement joseph
-	- se moquer de Alicia quand elle est enfermée
 	- dire "tu pues" (you_stink) à alicia
-	- enerver Mika en allant pas voir Alicia (inquiry scenario)	
+	- enerver Mika en allant pas voir Alicia (inquiry)	
 	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
 	- narguer Alicia dans le SAS (inquery)
 	- Jean qui est naturellement chiant quand on lui parle : karma anti-angelique - puisqu'il faut cliquer sur "s'énerver"
@@ -86,17 +78,21 @@
 	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
 	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
 	)
-	
-	- la musique du thème de Sarah existe en double dans les ressources du jeu... "sarah_theme" et "your_best_friend"
-	
+
 	////////// LVL001 ////////////
 	
 	à peut-être enregister :
 		- le type de scénario à passer en "long range" ? (pour des remarques ?) - NOVATECH*SCENARIO_INQUIRY
 		- sarah qui pousse rebecca (devant alicia)
 		- Marie enfermée dans les toilettes (quelles conséquences ?)
+	
+	note :
+		- traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
 
 	////////// WS001 ////////////
+
+	- dialogue après un INQUIERY au lieu d'un exit
+	- traduction du WS001
 
 	////////// MILITARY ////////////
 
