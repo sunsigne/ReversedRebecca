@@ -43,16 +43,10 @@
 	////////// EN COURS ////////////
 
 	à faire : 
-		- mettre en place le counter 1
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour			
 		- la musique du thème de Sarah existe en double dans les ressources du jeu... "sarah_theme" et "your_best_friend"
-	
-	Mika :
-		- seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
-	
-	à faire une fois les dialogues TOUS finaux :
-	 	- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
-		- remplacer le 1er compteur par "personnes interrogées" (c'est bien parce que c'est impossible de faire 0)
+		- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
+		- Mika : seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 
 	(fun)
 	XhX - variantes psychopath

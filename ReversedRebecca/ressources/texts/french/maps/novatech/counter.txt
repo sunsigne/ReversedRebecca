@@ -1,4 +1,5 @@
 WALLS_EXPLODED = murs explosés
+PEOPLE_QUESTIONED = personnes interrogées
 DISCUSSIONS_LISTENED = discussions écoutées
 ROMANCE = romance
 STRAIGHT_ROMANCE = romance... hétéro
