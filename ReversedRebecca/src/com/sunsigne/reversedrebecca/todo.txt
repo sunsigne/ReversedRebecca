@@ -44,7 +44,6 @@
 
 	à faire : 
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour			
-		- la musique du thème de Sarah existe en double dans les ressources du jeu... "sarah_theme" et "your_best_friend"
 		- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
 		- Mika : seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 
@@ -90,7 +89,7 @@
 
 	////////// MILITARY ////////////
 
-	le chemin speedrun rend le joueur invulnerable. Est-ce définitif ?
+	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres
 	changer nom -> jules en romeo. Vera en venera
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
