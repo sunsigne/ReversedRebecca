@@ -44,3 +44,7 @@ rebecca = LEFT = happy = Sure.
 sarah = RIGHT = happy_var = Ok. In that case, I'm going to find us a way out.
 sarah = RIGHT = wink = Let's have a debrief at the workshop later.
 rebecca = LEFT = happy = Sure.
+
+
+% SCENARIO_PLANT_ADVICE
+rebecca = LEFT = happy_var = (And if I'm lost, I still can talk to a plant.)
