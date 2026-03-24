@@ -79,6 +79,15 @@ player = mika = no_sens_var = …
 player = mika = blush = (Actually, it's a little flattering.@I wonder if he'll really come.)
 
 
+% THANK_FOR_YELLING_GIRLFRIEND
+mika = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
+player = mika = worry = You're welcome, I guess…@I'm a little shaken up myself.
+mika = player = serious = Why ?
+player = mika = happy = I just agreed to go out with Marie.@Her declaration surprised me, but I'm happy.
+mika = player = worry = Ha. That's… A good thing, I guess?
+mika = player = serious = Well, if you don't mind, I have some rubble@to clear.
+
+
 % DONT_COME
 mika = player = smirk = Oh, I definitively will…
 

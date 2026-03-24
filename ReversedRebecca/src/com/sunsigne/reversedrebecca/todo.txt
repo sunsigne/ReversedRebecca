@@ -45,7 +45,6 @@
 	à faire : 
 		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour			
 		- peut-être : rajouter dialogue sarah : "laugh - et si tu es perdue, parle avec uen plante !"
-		- Mika : seulement en INQUIRY, il est possible de "date" à la fois Mika ET Marie. Est-ce un choix définitif ? Sinon, l'empêcher
 
 	(fun)
 	XhX - variantes psychopath

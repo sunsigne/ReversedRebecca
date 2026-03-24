@@ -112,7 +112,7 @@ delta = DOWN = worry = Enfin… Si ça se trouve, elle a rien.@Je vais m'en occu
 
 
 % MIKA_ASKED_FOR_HELP
-mika = player = surprised = Quoi ? Enfermée dans le sas ?
+mika = player = surprised = Quoi ? Enfermée dans le SAS ?
 player = mika = unhappy = Oui…
 mika = player = serious_var = Hmm…
 mika = player = serious = Je dois rester ici, pour dégager les décombres.@Tu devrais demander de l'aide à Sarah.
@@ -143,7 +143,7 @@ player = mika = worry = Ok, j'ai compris… Tant pis.
 
 
 % MIKA_ASKED_FOR_HELP_SCOLDING
-player = mika = angry = Dis-donc, Mika ! Ça t'arrive souvent de pas@aider les gens enfermés dans les sas ?
+player = mika = angry = Dis-donc, Mika ! Ça t'arrive souvent de pas@aider les gens enfermés dans les SAS ?
 mika = player = worry = Heu… Non.
 player = mika = wrong_with_you = Et donc ? Tu vas faire quoi pour Alicia ?
 mika = player = worry = Je vais aller l'aider ?

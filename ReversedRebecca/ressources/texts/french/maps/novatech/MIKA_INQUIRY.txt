@@ -79,6 +79,15 @@ player = mika = no_sens_var = …
 player = mika = blush = (En vrai, c'est un peu flatteur.@Je me demande s'il va vraiment venir.)
 
 
+% THANK_FOR_YELLING_GIRLFRIEND
+mika = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
+player = mika = worry = De rien, j'imagine…@Je suis moi-même un peu secouée.
+mika = player = serious = Pourquoi ?
+player = mika = happy = Je viens d'accepter de sortir avec Marie.@Sa déclaration m'a surprise, mais je suis contente.
+mika = player = worry = Ha. C'est… Une bonne chose, j'imagine ?
+mika = player = serious = Bon, si tu le permets, j'ai des décombres@à dégager.
+
+
 % DONT_COME
 mika = player = smirk = Tu dis non, mais ton coeur dit oui.
 

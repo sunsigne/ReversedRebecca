@@ -50,14 +50,14 @@ rebecca = alicia = laugh = Ha ha ha! I know, I said that to mess with you.
 alicia = player = appeased = You really got me there.
 
 
-%INVENTORY_BOMB_NEXT
+% INVENTORY_BOMB_NEXT
 rebecca = object = excited = That's cool, but I want some super bombs!@Do we have green bombs?
 object = player = worry = I don't think so…
 object = player = surprised = Ho! Wait! Actually, yes!@I found one in a box earlier.
 object = player = happy = Here it is.
 
 
-%INVENTORY_BOMB_LAST
+% INVENTORY_BOMB_LAST
 object = player = unhappy = You seem disappointed… Is something wrong?
 rebecca = object = unhappy = I forgot they're useless to me…@I don't know how to use them yet…
 object = player = worry = Oh…
@@ -66,16 +66,27 @@ object = player = worry = You'll learn soon…
 rebecca = object = happy_var = Thank you, you are sweet.
 
 
-%INVENTORY_NEXT
+% INVENTORY_NEXT
 object = player = happy = Do you need anything else?
 rebecca = object = happy_var = No, thanks.@I'm just looking around.
 
 
-%INVENTORY_LAST
+% INVENTORY_LAST
 object = player = worry = ... Are you… really sure you don't need anything?
 object = player = unhappy = Sorry for being pushy…@You're just acting wei…
 object = player = worry = Hm… It's just you give me the impression you're@waiting for something without daring to ask for it.
 rebecca = object = happy = No, no. I'm looking at you, that's all.
+
+
+% INVENTORY_LAST_BOYFRIEND
+object = player = worry = ... Are you… really sure you don't need anything?
+object = player = unhappy = Sorry for being pushy…@You're just acting wei…
+object = player = worry = Hm… It's just you give me the impression you're@waiting for something without daring to ask for it.
+rebecca = object = worry = Okay, I might be a little dazed…@I'm not sure, but I think I'm dating Mika.
+object = player = unhappy = Oh.
+object = player = cry_happy = I see…
+object = player = happy = In that case, I hope that... 
+object = player = cry = ... That you'll be happy…@Excuse me a second.
 
 
 % DISILLUSIONED
