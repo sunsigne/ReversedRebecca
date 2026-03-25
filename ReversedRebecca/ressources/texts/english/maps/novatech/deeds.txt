@@ -5,6 +5,9 @@ CONFORT_JEAN = 2 % confort Jean
 FREE_ALICIA = 3 % free Alicia
 FREE_AND_BEFRIEND_ALICIA = 4 % free and befriend Alicia
 
+TRY_FREEING_ALICIA = 2 % try freeing Alicia
+NOT_TO_WORRY_JOSEPH = 2 % not to worry Joseph
+
 ///// BAD /////
 
 STEAL_HER_DRINK = 1 % steal her drink
@@ -14,6 +17,9 @@ DESTROY_12_HOURS_OF_WORK = 4 % destroy 12 hours of work
 YELL_AT_AN_OLD_MAN = 5 % yell at an old man
 UNREASONABLE_DESTRUCTION = 6 % unreasonable destruction
 ABANDON_EVERYONE = 7 % abandon everyone
+
+MOCKING_ALICIA_S_FATE = 3 % mocking Alicia s fate
+TRAUMATIZE_AN_OLD_MAN = 5 % traumatize  an old man
 
 ///// PSYCHOPATH /////
 

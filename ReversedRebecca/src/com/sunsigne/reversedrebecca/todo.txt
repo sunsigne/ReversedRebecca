@@ -53,22 +53,7 @@
 	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
 	- à vérifier : REGISTER = PSYCHOPATH*ALICIA_KILLED
-
-	karma :
-	- vérifier : le meutre de Alicia
-	- se moquer de Alicia quand elle est enfermée (vérifié en inquiry et exit)
-	- inquiéter volontairement joseph
-	- dire "tu pues" (you_stink) à alicia
-	- enerver Mika en allant pas voir Alicia (inquiry)	
-	- mentir sans raison à Sarah sur l'emplacement de la clef (inquery)
-	- narguer Alicia dans le SAS (inquery)
-	- Jean qui est naturellement chiant quand on lui parle : karma anti-angelique - puisqu'il faut cliquer sur "s'énerver"
-	(faire en sorte que les prérequis sadique et angelique coincident en inquery :
-	note :
-	en exit :
-	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
-	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
-	)
+	- implanter le karma du meutre de Alicia
 
 	////////// LVL001 ////////////
 	
@@ -79,7 +64,14 @@
 	
 	note :
 		- traumatismer jospeh APRES avoir dis à Alicia qu'on allait l'aider, annule le "Alicia !" pour les autres avec le dialogue "WHERE_IS_ALICIA*NOT_WILLING_TO_HELP_ANYMORE". C'est voulu (empêche Mika et Delta de se retrouver à ouvrir le SAS alors que Sarah se dirige vers l'entrée
-
+	karma : 
+	en exit :
+	- l'angelic, c'est les 2 dernier + un des deux premier (de la fiche deeds.txt) (il est obligatoire de proposer un thé pour pouvoir crier sur Joseph)
+	- le sadique, c'est tous sauf les 2 premiers (ou alors libérer alicia, mais il faut voler son café + engueler Jean)
+	en inquery :
+	- l'angelic, c'est les 2 dernier + le 3ème
+	- sadique : la totale sans traumatiser Jospeh (avec les 12h), ou le traumatiser sans moquer alicia, mais avec la totale (sans les 12h).
+	
 	////////// WS001 ////////////
 
 	- dialogue après un INQUIERY au lieu d'un exit
