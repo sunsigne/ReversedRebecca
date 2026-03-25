@@ -42,9 +42,6 @@
 
 	////////// EN COURS ////////////
 
-	à faire : 
-		- le pathfinder des personnage fait un peu n'importe quoi depuis quelques mise à jour
-		
 	(fun)
 	XhX - variantes psychopath
 	- en Sadique (le cas est déjà géré quand on le devient PENDANT le niveau, mais pas encore quand on ARRIVE dans le niveau AVEC un karma sadique), faire en sorte que Rebecca ne s'inquiète pas plus que ça du sort d'alicia, donc sur Mika ligne ~ 85, rajouter un memory conditionnel pour lancer le neutral_var plutôt que le neutral_next

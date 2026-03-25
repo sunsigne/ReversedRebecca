@@ -237,14 +237,14 @@ public class PathFinder implements Position {
 
 			CollisionReactor wall = (CollisionReactor) tempObject;
 
-			// object" is blocking path
+			// object is blocking path
 			if (wall.isBlockingPath()) {
 				if (wall instanceof PlayerAvoider == false)
 					return true;
 
 				// searcher and object are two piranhas, blocking each other path
 				if (scanningTwoPiranhasBlockingEachOther && wall instanceof Player == false)
-					twoPiranhaObjectBLockingEachOtherCase(initial_searcher, wall);
+					twoPiranhaObjectBlockingEachOtherCase(initial_searcher, wall);
 
 				// searcher is the player, and object is an npc that can be passed through
 				PlayerAvoider avoider = (PlayerAvoider) wall;
@@ -260,8 +260,10 @@ public class PathFinder implements Position {
 		return false;
 	}
 
-	private void twoPiranhaObjectBLockingEachOtherCase(PathSearcher searcher, CollisionReactor wall) {
-		if (searcher instanceof PiranhaObject && wall instanceof PiranhaObject == false)
+	private void twoPiranhaObjectBlockingEachOtherCase(PathSearcher searcher, CollisionReactor wall) {
+		if (searcher instanceof PiranhaObject == false)
+			return;
+		if (wall instanceof PiranhaObject == false)
 			return;
 
 		PiranhaObject piranhaSearcher = (PiranhaObject) searcher;
@@ -311,18 +313,19 @@ public class PathFinder implements Position {
 
 		GameList<PathPointObject> valid_path_point_list = createValidPathPointList();
 
-		if (valid_path_point_list.getList().isEmpty() == false) {
-			boolean pathDoesExist = true;
+		if (valid_path_point_list.getList().isEmpty())
+			return DIRECTION.NULL;
 
-			while (pathDoesExist) {
+		boolean pathDoesExist = true;
 
-				DIRECTION tryPath = getPathFromSeacherToValidPoint(valid_path_point_list);
+		while (pathDoesExist) {
 
-				if (tryPath != DIRECTION.NULL)
-					return tryPath;
+			DIRECTION tryPath = getPathFromSeacherToValidPoint(valid_path_point_list);
 
-				pathDoesExist = expandingValidPoint(valid_path_point_list);
-			}
+			if (tryPath != DIRECTION.NULL)
+				return tryPath;
+
+			pathDoesExist = expandingValidPoint(valid_path_point_list);
 		}
 
 		// occurs when there is definitively no existing path between searcher and goal
