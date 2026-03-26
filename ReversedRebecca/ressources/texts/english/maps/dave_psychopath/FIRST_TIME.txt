@@ -1,0 +1,1 @@
+dave = DOWN = camera = This is not a path you want to take.@I advise you to give up now.

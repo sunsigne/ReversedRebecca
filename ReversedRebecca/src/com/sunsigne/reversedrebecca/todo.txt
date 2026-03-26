@@ -44,7 +44,6 @@
 
 	psychopath :
 	- ajouter et vérifier l'achievement
-	- vérifier les dave avant ET après
 	
 	////////// WS001 ////////////
 
