@@ -42,9 +42,6 @@
 
 	////////// EN COURS ////////////
 
-	psychopath :
-	- ajouter et vérifier l'achievement
-	
 	////////// WS001 ////////////
 
 	- dialogue après un INQUIERY au lieu d'un exit
