@@ -2,6 +2,10 @@
 rebecca = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
 
 
+% WATCHING_DOCUMENT_SADISTIC
+rebecca = DOWN = you_silly = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
+
+
 % STOLEN_OBJECT_DISCOVERY
 rebecca = DOWN = surprised = Une seconde… Les documents sur le casque@de déblocage sont manquants !
 

@@ -47,4 +47,4 @@ rebecca = LEFT = happy = Ça marche.
 
 
 % SCENARIO_PLANT_ADVICE
-rebecca = LEFT = happy_var = (Et si je suis perdue, je peux parler à une plante.)
+rebecca = DOWN = happy_var = (Et si je suis perdue, je peux parler à une plante.)

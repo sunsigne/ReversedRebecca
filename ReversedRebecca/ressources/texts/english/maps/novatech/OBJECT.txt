@@ -92,6 +92,10 @@ rebecca = DOWN = you_silly = I'd better avoid using the bathroom@whose door I sa
 rebecca = DOWN = unhappy = What a mess…
 
 
+% ALICIA_ROOM_ANYTHING_SADISTIC
+rebecca = DOWN = laugh = What a mess…
+
+
 % ALICIA_REACTION_ALICIA_ROOM_ANYTHING
 alicia = rebecca = unhappy = Yeah… It really hits hard to see my desk like this.
 
@@ -99,6 +103,10 @@ alicia = rebecca = unhappy = Yeah… It really hits hard to see my desk like thi
 % ALICIA_ROOM_PLANT
 rebecca = object = happy = Judging by the state of the room,@this plant is lucky to be unharmed!
 rebecca = object = happy_var = So much the better.
+
+
+% ALICIA_REACTION_ALICIA_ROOM_PLANT_SADISTIC
+alicia = rebecca = unhappy = …
 
 
 % ALICIA_REACTION_ALICIA_ROOM_PLANT

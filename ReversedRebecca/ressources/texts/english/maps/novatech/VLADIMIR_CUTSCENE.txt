@@ -47,4 +47,4 @@ rebecca = LEFT = happy = Sure.
 
 
 % SCENARIO_PLANT_ADVICE
-rebecca = LEFT = happy_var = (And if I'm lost, I still can talk to a plant.)
+rebecca = DOWN = happy_var = (And if I'm lost, I still can talk to a plant.)

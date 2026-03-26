@@ -2,6 +2,10 @@
 rebecca = DOWN = unhappy = What a shambles… Alicia is going to take@forever to reorganize her work.
 
 
+% WATCHING_DOCUMENT_SADISTIC
+rebecca = DOWN = you_silly = What a shambles… Alicia is going to take@forever to reorganize her work.
+
+
 % STOLEN_OBJECT_DISCOVERY
 rebecca = DOWN = surprised = Wait! The documents on the helmet of releasing@are missing!
 
