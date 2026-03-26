@@ -43,11 +43,8 @@
 	////////// EN COURS ////////////
 
 	psychopath :
-	- l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
-	- empêcher de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	- à vérifier : REGISTER = PSYCHOPATH*ALICIA_KILLED
-	- implanter le karma du meutre de Alicia
-	- faire le lien avec le niveau d'avant RR000
+	- vérifier que Dave est absent
+	- alicia est poussée trop loin
 	
 	////////// WS001 ////////////
 
@@ -75,8 +72,8 @@
 
 	////////// MILITARY ////////////
 
-	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres
-	changer nom -> jules en romeo. Vera en venera
+	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
+	changer nom -> jules en romeo. Vera en Venera
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
 
