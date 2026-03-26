@@ -43,8 +43,8 @@
 	////////// EN COURS ////////////
 
 	psychopath :
-	- vérifier que Dave est absent
-	- alicia est poussée trop loin
+	- ajouter et vérifier l'achievement
+	- vérifier les dave avant ET après
 	
 	////////// WS001 ////////////
 
