@@ -43,7 +43,7 @@
 	////////// EN COURS ////////////
 
 	psychopath :
-	-l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
+	- l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
 	- empêcher de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	- à vérifier : REGISTER = PSYCHOPATH*ALICIA_KILLED
 	- implanter le karma du meutre de Alicia

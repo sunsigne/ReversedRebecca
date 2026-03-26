@@ -47,7 +47,7 @@ REGISTER = PSYCHOPATH*ALICIA_KILLED
 
 ///// PRE-VLADIMIR SCENE /////
 
-NPC-01 = Rebecca Cinematic when Rebecca Arrive Before Sarah
+NPC-01 = Rebecca Cinematic when Rebecca Arrive Before Sarah (or Psychopath)
 NPC-02 = Sarah Cinematic when Rebecca Arrive Before Sarah
 NPC-03 = Rebecca Cinematic when Rebecca Arrive With Sarah
 NPC-04 = Sarah Cinematic when Rebecca Arrive With Sarah

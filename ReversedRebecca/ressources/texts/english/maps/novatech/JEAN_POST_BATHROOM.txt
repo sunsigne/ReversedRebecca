@@ -26,6 +26,12 @@ player = object = worry = We can't "just declare" it as one.@Sarah is investigat
 jean = player = unhappy = Yeah… Whatever.
 
 
+% SHOCKED_EXIT_VAR
+player = object = angry = This is not an attack. Nobody get hurt.
+player = object = you_silly = … (yet).
+jean = player = unhappy = Yeah… Whatever.
+
+
 % SHOCKED_INQUIRY
 player = object = worry = We can't "just declare" it as one.@I'm investigating, I'll see.
 jean = player = unhappy = Yeah… Whatever.

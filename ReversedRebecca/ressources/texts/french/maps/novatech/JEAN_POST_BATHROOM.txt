@@ -26,6 +26,11 @@ player = object = worry = On ne peut pas "juste affirmer" que c'en est une.@Sara
 jean = player = unhappy = Mouais… Si tu le dis.
 
 
+% SHOCKED_EXIT_VAR
+player = object = angry = Ça n'est pas une attaque terroriste.
+jean = player = unhappy = Mouais… Si tu le dis.
+
+
 % SHOCKED_INQUIRY
 player = object = worry = On ne peut pas "juste affirmer" que c'en est une.@Je suis en train de mener l'enquête, je verrai bien.
 jean = player = unhappy = Mouais… Si tu le dis.
