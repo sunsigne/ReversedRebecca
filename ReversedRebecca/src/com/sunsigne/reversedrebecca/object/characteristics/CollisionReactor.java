@@ -48,7 +48,6 @@ public interface CollisionReactor extends Position {
 				actionDone = true;
 				listener.doAction();
 			}
-
 		}
 
 		if (detectorObject.getBounds(DIRECTION.RIGHT).intersects(getBounds())) {
@@ -78,6 +77,7 @@ public interface CollisionReactor extends Position {
 				listener.doAction();
 			}
 		}
+		
 		if (detectorObject.getBounds(DIRECTION.DOWN).intersects(getBounds())) {
 			if (blockPass) {
 				if (detectorObject instanceof Player)
@@ -109,9 +109,9 @@ public interface CollisionReactor extends Position {
 		int velX = velocityObject.getVelX();
 		int velY = velocityObject.getVelY();
 		int speed = velocityObject.getSpeed();
-		
+
 		// besure the scan process only if the object is "pushed"
-		if(Math.abs(velX) <= speed && Math.abs(velY) <= speed)
+		if (Math.abs(velX) <= speed && Math.abs(velY) <= speed)
 			return false;
 
 		boolean left = detectorObject.getBounds(DIRECTION.LEFT).intersects(getBounds());

@@ -23,6 +23,8 @@ public interface Pusher extends Stunnable, CollisionReactor {
 
 	////////// PUSHER ////////////
 
+	static final int PUSHING_TIME = 10;
+
 	boolean hurtWhenPushing();
 
 	void setHurtWhenPushing(boolean hurtWhenPushing);
@@ -30,7 +32,7 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	default int getPushingTime() {
 		// thrice the basic time if world speed thrice faster
 		DebugMode fastMode = (DebugMode) PhysicList.getList().getObject(new FastWorldMode());
-		return fastMode.getState() ? 30 : 10;
+		return fastMode.getState() ? 3 * PUSHING_TIME : PUSHING_TIME;
 	}
 
 	PUSHING_DIRECTION getPushingDirection();
@@ -66,9 +68,9 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void pushPushable(Pushable pushable) {
-		if(pushable instanceof Player)
+		if (pushable instanceof Player)
 			new CameraShaker().shaking(SHAKE.MEDIUM);
-			
+
 		new SoundTask().playSoundIfCamera(this, "hit_medium");
 		pushable.setSpeedness(SPEEDNESS.SWIFT);
 

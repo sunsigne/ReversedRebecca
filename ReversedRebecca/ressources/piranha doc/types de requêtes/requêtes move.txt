@@ -124,3 +124,15 @@ TIME -> 0 = GOTO -> PUSH:UP, WAITING_BEFORE_STUFF
 
 Écrivez à la place :
 TIME -> 0 = GOTO -> WAITING_BEFORE_STUFF, PUSH:UP
+
+
+////// PUSH_TIMER //////
+
+Le Type de Requête PUSH_TIMER a exactement le même effet et est soumis aux mêmes règles que Type de Requête PUSH.
+
+La seule différence avec ce dernier est que PUSH_TIMER permet de déterminer avec précision combien de temps dure la poussée.
+
+Exemple :
+! -> PUSH_PLAYER_UP = PUSH_TIMER -> UP,60
+
+Lorsque la Condition sera vérifiée, l'objet sera poussé vers le haut pendant 60 ticks (1 seconde).
