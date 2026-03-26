@@ -42,13 +42,19 @@
 
 	////////// EN COURS ////////////
 
-	(fun)
-	XhX - variantes psychopath
-	0h30 - quand on est psychocpath, l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
-	0h30 - empêcher sur le scénario psychopath de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
-	variante sadique ? ajouter le fait que le Rebecca se moque du sort d'Alicia, sans pour autant avoir eu besoin de le montrer à Mika
+	psychopath :
+	-l'objet 50 et le dialogue player_leaving devraient s'adapter pour devenir le même qu'en sadique ?
+	- empêcher de prendre la porte verte du sas depuis l'aile droite (avec un texte qui dit "non, j'ai une idée qui implique de passer par la droite) - très important car ne pas le faier rentrerai en conflit (incohérence de dialogue) avec des textes qui impliquer d'exploser les murs à droite en étant en psycopath après avec discuter d'explosion avec Marie en présence d'Alicia
 	- à vérifier : REGISTER = PSYCHOPATH*ALICIA_KILLED
 	- implanter le karma du meutre de Alicia
+	- faire le lien avec le niveau d'avant RR000
+	
+	////////// WS001 ////////////
+
+	- dialogue après un INQUIERY au lieu d'un exit
+	- traduction du WS001
+	- gérer les cas de Angry et angry_really_hard (puisqui'il n'avait pas de cadeau avant)
+	- gérer le cas psychopathe (arrivée sans sarah)
 
 	////////// LVL001 ////////////
 	
@@ -66,12 +72,6 @@
 	en inquery :
 	- l'angelic, c'est les 2 dernier + le 3ème
 	- sadique : la totale sans traumatiser Jospeh (avec les 12h), ou le traumatiser sans moquer alicia, mais avec la totale (sans les 12h).
-	
-	////////// WS001 ////////////
-
-	- dialogue après un INQUIERY au lieu d'un exit
-	- traduction du WS001
-	- gérer les cas de Angry (pusqi'il n'avait pas de cadeau avant)
 
 	////////// MILITARY ////////////
 

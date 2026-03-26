@@ -46,7 +46,7 @@ public class PsychopathActionRenderingLaw extends IndependantLaw {
 			lastMusic = SoundTask.getMusicName();
 			new SoundTask().stopMusic(true);
 		} else {
-			if (lastMusic != null)
+			if (lastMusic != null && SoundTask.getMusicName() == null)
 				new SoundTask().playMusic(lastMusic, true, true);
 		}
 	}
@@ -88,7 +88,7 @@ public class PsychopathActionRenderingLaw extends IndependantLaw {
 		if (flag)
 			return;
 		flag = true;
-		
+
 		new TransluantLayer().drawPsycopath(g);
 	}
 
