@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class Piranha {
 
@@ -27,17 +26,12 @@ public class Piranha {
 
 		try {
 			for (LAYER tempLayer : LAYER.values()) {
-
-				var handler_list = new ListCloner().deepClone(tempLayer.getHandler());
-
-				for (Updatable tempUpdatable : handler_list.getList()) {
-
-					if (tempUpdatable instanceof PiranhaObject)
-						list.addObject((PiranhaObject) tempUpdatable);
-				}
+				var handler_list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
+				list.getList().addAll(handler_list.getList());
 			}
 		} catch (ConcurrentModificationException e) {
-			// unlikly to do infinite loop, as "concurrent modifier" will eventually stop modifying
+			// unlikly to do infinite loop, as "concurrent modifier" will eventually stop
+			// modifying
 			list = getAllPiranhaObjects();
 		}
 

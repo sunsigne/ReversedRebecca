@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class InterruptBossRequest implements Request {
 
@@ -35,15 +34,10 @@ public class InterruptBossRequest implements Request {
 	@Override
 	public void doAction(PiranhaObject object, String target) {
 		var handler = object.getHandler();
-		
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof BossObject == false)
-				continue;
 
-			BossObject tempBoss = (BossObject) tempUpdatable;
+		var list = new ListCloner().deepCloneByClass(handler, BossObject.class);
+		for (BossObject tempBoss : list.getList())
 			tempBoss.interrupt();
-		}
 	}
 
 }

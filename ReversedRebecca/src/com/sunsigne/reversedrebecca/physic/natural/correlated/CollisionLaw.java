@@ -49,15 +49,10 @@ public class CollisionLaw implements PhysicLaw {
 		if (layer == null)
 			return;
 
-		var list = new ListCloner().deepClone(layer);
-		for (Updatable tempObject : list.getList()) {
-			if (object == tempObject)
+		var list = new ListCloner().deepCloneByClass(layer, CollisionReactor.class);
+		for (CollisionReactor reactorObject : list.getList()) {
+			if (object == reactorObject)
 				continue;
-
-			if (tempObject instanceof CollisionReactor == false)
-				continue;
-
-			CollisionReactor reactorObject = (CollisionReactor) tempObject;
 
 			if (objectAreColliding(detectorObject, reactorObject)) {
 				reactorObject.collidingReaction(detectorObject);
@@ -70,10 +65,10 @@ public class CollisionLaw implements PhysicLaw {
 		if (reactorObject == null)
 			return false;
 
-		if(detectorObject == reactorObject)
+		if (detectorObject == reactorObject)
 			return false;
-		
-		if(reactorObject instanceof Updatable && ((Updatable) reactorObject).getHandler() == null)
+
+		if (reactorObject instanceof Updatable && ((Updatable) reactorObject).getHandler() == null)
 			return false;
 
 		if (detectorObject instanceof Player && WallPassMode.isActive())

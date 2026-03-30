@@ -4,14 +4,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.BulletBombObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.DuplicatingBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyTargetObject;
-import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -21,7 +16,6 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombKeyPuzzle extends Puzzle {
 
@@ -73,9 +67,9 @@ public abstract class BombKeyPuzzle extends Puzzle {
 		bombkey.setY(getCol(1));
 		LAYER.PUZZLE.addObject(bombkey);
 	}
-	
+
 	protected void createBombLocks() {
-		
+
 	}
 
 	////////// TICK ////////////
@@ -86,16 +80,11 @@ public abstract class BombKeyPuzzle extends Puzzle {
 		if (bomblock[0] == null)
 			return;
 
-		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
+		var list = new ListCloner().deepCloneByClass(LAYER.PUZZLE.getHandler(), BombObject.class);
 
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof BombObject == false)
-				continue;
-
-			BombObject bomb = (BombObject) tempUpdatable;
+		for (BombObject bomb : list.getList())
 			if (bomb.hasExploded() == false)
 				return;
-		}
 
 		// happens when all bombs has exploded
 		closePuzzle(true);

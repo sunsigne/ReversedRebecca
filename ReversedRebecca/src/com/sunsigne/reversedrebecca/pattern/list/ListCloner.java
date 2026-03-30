@@ -26,4 +26,40 @@ public class ListCloner {
 		return cloneList;
 	}
 
+	@SuppressWarnings("unchecked")
+	public <T, U> GameList<U> deepCloneByClass(GameList<T> gameList, Class<U> clazz) {
+		var cloneList = new GameList<U>(LISTTYPE.ARRAY);
+
+		try {
+			for (int index = 0; index < gameList.getList().size(); index++) {
+				T tempObject = gameList.getList().get(index);
+				if (clazz.isInstance(tempObject))
+					cloneList.addObject((U) tempObject);
+			}
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// last element can be desynchronized
+		}
+
+		return cloneList;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T, U> GameLimitedList<U> deepCloneByClass(GameLimitedList<T> gameList, Class<U> clazz) {
+		var cloneList = new GameLimitedList<U>(LISTTYPE.ARRAY);
+
+		try {
+			for (int index = 0; index < gameList.getList().size(); index++) {
+				T tempObject = gameList.getList().get(index);
+				if (clazz.isInstance(tempObject))
+					cloneList.addObject((U) tempObject);
+			}
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// last element can be desynchronized
+		}
+
+		return cloneList;
+	}
+
 }

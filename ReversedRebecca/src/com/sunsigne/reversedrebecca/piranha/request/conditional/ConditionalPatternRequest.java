@@ -4,7 +4,6 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class ConditionalPatternRequest extends ConditionalRequest {
 
@@ -31,12 +30,9 @@ public abstract class ConditionalPatternRequest extends ConditionalRequest {
 		String valueToCheck = String.valueOf(target.split("\\?")[0]);
 		Handler handler = object.getHandler();
 
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof PiranhaObject == false)
-				continue;
+		var list = new ListCloner().deepCloneByClass(handler, PiranhaObject.class);
+		for (PiranhaObject tempObject : list.getList()) {
 
-			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
 			String formated_valueToCheck = new FormattedString().getName(tempObject, valueToCheck, false);
 
 			if (getConditionToCheck(tempObject).equalsIgnoreCase(formated_valueToCheck))

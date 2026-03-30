@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.finder.NearestOfFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class TeleportRequest implements Request {
 
@@ -68,13 +67,10 @@ public class TeleportRequest implements Request {
 
 	private PiranhaObject getObject(PiranhaObject object, String target) {
 		var handler = object.getHandler();
-		
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof PiranhaObject == false)
-				continue;
 
-			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
+		var list = new ListCloner().deepCloneByClass(handler, PiranhaObject.class);
+		for (PiranhaObject tempObject : list.getList()) {
+
 			String formated_valueToCheck = new FormattedString().getName(object, target, false);
 
 			if (tempObject.getName().equalsIgnoreCase(formated_valueToCheck))
@@ -83,5 +79,5 @@ public class TeleportRequest implements Request {
 
 		return null;
 	}
-	
+
 }

@@ -19,7 +19,6 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class BombPuzzle extends Puzzle {
 
@@ -106,16 +105,11 @@ public abstract class BombPuzzle extends Puzzle {
 		if (bomb[0] == null)
 			return;
 
-		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
+		var list = new ListCloner().deepCloneByClass(LAYER.PUZZLE.getHandler(), BombObject.class);
 
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof BombObject == false)
-				continue;
-
-			BombObject bomb = (BombObject) tempUpdatable;
+		for (BombObject bomb : list.getList())
 			if (bomb.hasExploded() == false)
 				return;
-		}
 
 		// happens when all bombs has exploded
 		closePuzzle(true);

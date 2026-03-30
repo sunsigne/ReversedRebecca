@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class SelfTalkingCondition extends GlobalInstruction {
 
@@ -42,14 +41,12 @@ public class SelfTalkingCondition extends GlobalInstruction {
 			if (tempLayer.isMapLayer() == false)
 				return;
 
-			var list = new ListCloner().deepClone(tempLayer.getHandler());
+			var list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
 
-			for (Updatable tempUpdatable : list.getList()) {
-				if (tempUpdatable instanceof PiranhaObject) {
-					PiranhaObject tempPiranha = (PiranhaObject) tempUpdatable;
-					if (tempPiranha.getPiranhaFile().equalsIgnoreCase(piranhaFile))
-						getList().addObject((PiranhaObject) tempUpdatable);
-				}
+			for (PiranhaObject tempPiranha : list.getList()) {
+				if (tempPiranha.getPiranhaFile().equalsIgnoreCase(piranhaFile))
+					getList().addObject(tempPiranha);
+
 			}
 		}
 	}

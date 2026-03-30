@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public abstract class GlobalInstruction extends LocalInstruction {
 
@@ -44,12 +43,8 @@ public abstract class GlobalInstruction extends LocalInstruction {
 			if (tempLayer.isMapLayer() == false)
 				return;
 
-			var list = new ListCloner().deepClone(tempLayer.getHandler());
-
-			for (Updatable tempUpdatable : list.getList()) {
-				if (tempUpdatable instanceof PiranhaObject)
-					object_list.addObject((PiranhaObject) tempUpdatable);
-			}
+			var list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
+			object_list.getList().addAll(list.getList());
 		}
 	}
 

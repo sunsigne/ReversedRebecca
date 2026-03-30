@@ -144,13 +144,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		Request request = new FacingRequest();
 		var handler = object.getHandler();
 
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof LivingObject == false)
-				continue;
-
-			PiranhaObject tempObject = (LivingObject) tempUpdatable;
-
+		var list = new ListCloner().deepCloneByClass(handler, LivingObject.class);
+		for (LivingObject tempObject : list.getList()) {
 			if (tempObject.getName().equalsIgnoreCase(formated_living_name))
 				if (tempObject.isStunned() == false)
 					request.doAction(tempObject, formated_facing);

@@ -11,7 +11,6 @@ import com.sunsigne.reversedrebecca.physic.finder.SightFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class FacingRequest extends ConditionalRequest {
 
@@ -58,12 +57,9 @@ public class FacingRequest extends ConditionalRequest {
 		// if facing is a character
 		var handler = object.getHandler();
 
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof LivingObject == false)
-				continue;
+		var list = new ListCloner().deepCloneByClass(handler, LivingObject.class);
+		for (LivingObject tempLiving : list.getList()) {
 
-			LivingObject tempLiving = (LivingObject) tempUpdatable;
 			String formated_valueToCheck = new FormattedString().getName(object, target, false);
 
 			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {

@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChoosingRequest extends ConditionalRequest {
 
@@ -52,12 +51,12 @@ public class ChoosingRequest extends ConditionalRequest {
 
 	protected boolean isPlayerChoosing(PiranhaObject object) {
 		Handler handler = object.getHandler();
-		
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof ChoiceObject)
-				return true;
-		}
-		return false;
+
+		var list = new ListCloner().deepCloneByClass(handler, ChoiceObject.class);
+
+		if (list.getList().isEmpty())
+			return false;
+
+		return true;
 	}
 }

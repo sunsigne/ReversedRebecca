@@ -71,12 +71,10 @@ public class Cutscene implements Updatable, PhysicFree {
 	private void realStop() {
 		new PlayerFinder().setUserAllowedToControlPlayer(true);
 
-		var list = new ListCloner().deepClone(LAYER.HUD.getHandler());
+		var list = new ListCloner().deepCloneByClass(LAYER.HUD.getHandler(), Cutscene.class);
 
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof Cutscene)
-				LAYER.HUD.getHandler().removeObject(tempUpdatable);
-		}
+		for (Cutscene tempCustscene : list.getList())
+			LAYER.HUD.getHandler().removeObject(tempCustscene);
 	}
 
 	////////// RENDER ////////////

@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ChoiceObject extends InteractiveObject {
 
@@ -82,12 +81,8 @@ public class ChoiceObject extends InteractiveObject {
 
 		var handler = player.getHandler();
 
-		var list = new ListCloner().deepClone(handler);
-		for (Updatable tempUpdatable : list.getList()) {
-			if (tempUpdatable instanceof PiranhaObject == false)
-				continue;
-
-			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
+		var list = new ListCloner().deepCloneByClass(handler, PiranhaObject.class);
+		for (PiranhaObject tempObject : list.getList()) {
 			if (tempObject.getName().equalsIgnoreCase(highlight) == false)
 				continue;
 

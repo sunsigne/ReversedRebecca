@@ -115,16 +115,11 @@ public class World implements Updatable, RenderFree {
 
 			Handler handler = tempLayer.getHandler();
 			var list = new GameList<Updatable>(LISTTYPE.LINKED);
-			var clone = new ListCloner().deepClone(handler);
+			var clone = new ListCloner().deepCloneByClass(handler, LivingObject.class);
 
-			// search for LivingObject
-			for (Updatable tempUpdatable : clone.getList()) {
-				if (tempUpdatable instanceof LivingObject == false)
-					continue;
-
-				// add the LivingObject to a temp list
-				list.addObject(tempUpdatable);
-			}
+			// add the LivingObject to a temp list
+			for (LivingObject tempLiving : clone.getList())
+				list.addObject(tempLiving);
 
 			// besure the LivingObjects are at the end of the list
 			for (Updatable tempUpdatable : list.getList()) {
@@ -367,15 +362,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void closePuzzle() {
-		var list = new ListCloner().deepClone(LAYER.PUZZLE.getHandler());
+		var list = new ListCloner().deepCloneByClass(LAYER.PUZZLE.getHandler(), Puzzle.class);
 
-		for (Updatable tempObject : list.getList()) {
-			if (tempObject instanceof Puzzle == false)
-				continue;
-
-			Puzzle puzzleObject = (Puzzle) tempObject;
+		for (Puzzle puzzleObject : list.getList())
 			puzzleObject.closePuzzle(false);
-		}
 	}
 
 	private void resetLayers() {
