@@ -91,12 +91,12 @@ public class PathFinder implements Position {
 
 	@Override
 	public int getWidth() {
-		return 0;
+		return Size.M;
 	}
 
 	@Override
 	public int getHeight() {
-		return 0;
+		return Size.M;
 	}
 
 	////////// PATH FINDER ////////////
@@ -201,6 +201,9 @@ public class PathFinder implements Position {
 		if (range == 0)
 			return false;
 
+		//if (NavMeshScan(from, horizontal))
+		//	return true;
+
 		// get all objects along the searched axis
 		int pos = horizontal ? getY() : getX();
 		GameList<GameObject> object_list = Handler.getObjectsAtPos(handler, pos + from, horizontal, Size.M, false);
@@ -257,6 +260,33 @@ public class PathFinder implements Position {
 		if (player != null) {
 			return isPlayerBlockingPath();
 		}
+		return false;
+	}
+
+	private boolean NavMeshScan(int from, boolean horizontal) {
+		int factor = 0;
+		int gap = 0;
+
+		factor = tileX < 0 ? 1 : -1;
+		gap = horizontal ? from : 0;
+
+		// left and right
+		if (tileX < 0 || tileX > 0) {
+			for (int xx = 0; xx <= factor * (getX() - goal.getX()); xx = xx + getWidth())
+				if (handler.getWallAtPos(getX() - (factor * xx), getY() + gap) != null)
+					return true;
+		}
+
+		factor = tileY < 0 ? 1 : -1;
+		gap = !horizontal ? from : 0;
+
+		// up and down
+		if (tileY < 0 || tileY > 0) {
+			for (int yy = 0; yy <= factor * (getY() - goal.getY()); yy = yy + getHeight())
+				if (handler.getWallAtPos(getX() + gap, getY() - (factor * yy)) != null)
+					return true;
+		}
+
 		return false;
 	}
 
