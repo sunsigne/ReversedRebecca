@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class Wall extends GameObject implements TickFree, RenderFree, CollisionReactor {
+public class Wall extends GameObject implements NaveMesh, TickFree, RenderFree, CollisionReactor {
 
 	public Wall(int x, int y, int width, int height) {
 		super(x, y, Size.M * width, Size.M * height);

@@ -100,6 +100,13 @@ public abstract class PiranhaObject extends CustomHitboxObject
 		return result;
 	}
 
+	////////// NAVEMESH ////////////
+
+	@Override
+	public boolean isImmutable() {
+		return false;
+	}
+
 	////////// WAITFOR ////////////
 
 	private ConditionalListener waitfor;
@@ -233,7 +240,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public void disabledPathFinder() {
 		pathFinderDisabled = true;
 	}
-	
+
 	private boolean blockedByAnotherPiranha;
 
 	public boolean isBlockedByAnotherPiranha() {
@@ -243,7 +250,7 @@ public abstract class PiranhaObject extends CustomHitboxObject
 	public void setBlockedByAnotherPiranha(boolean blockedByAnotherPiranha) {
 		this.blockedByAnotherPiranha = blockedByAnotherPiranha;
 	}
-	
+
 	////////// INTERACTIVE ////////////
 
 	private GameList<Highlightable> spreadInteractivenessList = new GameList<>(LISTTYPE.ARRAY);

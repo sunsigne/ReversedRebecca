@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.GoalObject;
+import com.sunsigne.reversedrebecca.object.NaveMesh;
 import com.sunsigne.reversedrebecca.object.PathPointObject;
 import com.sunsigne.reversedrebecca.object.Wall;
 import com.sunsigne.reversedrebecca.object.characteristics.Position;
@@ -13,6 +15,7 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.physic.debug.FastWorldMode;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 
 public class Handler extends GameList<Updatable> implements CameraDependency {
@@ -25,6 +28,36 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// USEFULL ////////////
 
+	public HashMap<GoalObject, NaveMesh> navMesh = new HashMap<>();
+
+	public void addNavMesh(NaveMesh object) {
+		GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
+		navMesh.put(goal, object);
+
+		if (object instanceof Wall == false)
+			return;
+
+		int width = object.getWidth();
+		int height = object.getHeight();
+
+		for (int w = 0; w < width; w = w + Size.M) {
+			for (int h = 0; h < height; h = h + Size.M) {
+				goal = new GoalObject(object.getX() + w, object.getY() + h, true);
+				navMesh.put(goal, object);
+			}
+		}
+	}
+
+	public void removeNaveMesh(NaveMesh object) {
+		GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
+		navMesh.remove(goal);
+	}
+
+	public GameObject getWallAtPos(int x, int y) {
+		GoalObject goal = new GoalObject(x, y, true);
+		return (GameObject) navMesh.get(goal);
+	}
+
 	public static GameList<GameObject> getObjectsAtPos(Handler layer, int x, int y, int size, boolean playerExluded) {
 
 		GameList<GameObject> object_list = new GameList<GameObject>(LISTTYPE.LINKED);
@@ -33,8 +66,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 			if (tempUpdatable instanceof GameObject == false)
 				continue;
-			
-			if(tempUpdatable instanceof PathPointObject)
+
+			if (tempUpdatable instanceof PathPointObject)
 				continue;
 
 			GameObject tempObject = (GameObject) tempUpdatable;
@@ -174,6 +207,12 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		if (object != null)
 			object.destroyControls();
 
+		if (object instanceof NaveMesh) {
+			NaveMesh nav = (NaveMesh) object;
+			if (nav.isImmutable())
+				removeNaveMesh(nav);
+		}
+
 		if (forthwith) {
 			super.removeObject(object);
 			if (object != null)
@@ -192,6 +231,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 				map.remove(tempUpdatable);
 			}
 		}
+
+		navMesh.clear();
 		super.clear();
 		hideRendering = false;
 	}

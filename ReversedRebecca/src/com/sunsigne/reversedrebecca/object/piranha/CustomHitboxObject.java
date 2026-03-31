@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.piranha;
 import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.NaveMesh;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -11,7 +12,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class CustomHitboxObject extends GameObject implements TickFree, RenderFree, CollisionReactor {
+public class CustomHitboxObject extends GameObject implements NaveMesh, TickFree, RenderFree, CollisionReactor {
 
 	public CustomHitboxObject(int x, int y, int hitboxX, int hitboxY, int type) {
 		super(x, y);

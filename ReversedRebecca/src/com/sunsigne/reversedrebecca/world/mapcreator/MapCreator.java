@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.NaveMesh;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -77,6 +78,13 @@ public class MapCreator {
 				if (object instanceof Player)
 					layer.addObject(new PlayerClone((Player) object));
 				layer.addObject(object);
+
+				if (object instanceof NaveMesh) {
+					NaveMesh nav = (NaveMesh) object;
+					if (nav.isImmutable())
+						layer.getHandler().addNavMesh(nav);
+				}
+
 			}
 		}
 	}
