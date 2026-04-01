@@ -3,10 +3,8 @@ package com.sunsigne.reversedrebecca.piranha.condition.global;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class SelfTalkingCondition extends GlobalInstruction {
 
@@ -36,19 +34,8 @@ public class SelfTalkingCondition extends GlobalInstruction {
 	private String piranhaFile;
 
 	@Override
-	protected void loadAllPiranha() {
-		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer() == false)
-				return;
-
-			var list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
-
-			for (PiranhaObject tempPiranha : list.getList()) {
-				if (tempPiranha.getPiranhaFile().equalsIgnoreCase(piranhaFile))
-					getList().addObject(tempPiranha);
-
-			}
-		}
+	protected boolean excludeException(String condition, PiranhaObject object) {
+		return object.getPiranhaFile().equalsIgnoreCase(piranhaFile) == false;
 	}
 
 	////////// OPTIMIZATION ////////////
