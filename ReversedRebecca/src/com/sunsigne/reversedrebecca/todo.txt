@@ -43,7 +43,6 @@
 	////////// EN COURS ////////////
 
 	bug : 0h20 - lorsqu'on reset un niveau pendant que le menu est affiché, ça freeze jusquà ce qu'on clique de nouveau sur Esc
-	opti - ajuter une condition "if" qui enpêmche le rendu pour les couches inférieur
 	opti - s'occuper des collision
 	opti - s'occuper du piranha
 

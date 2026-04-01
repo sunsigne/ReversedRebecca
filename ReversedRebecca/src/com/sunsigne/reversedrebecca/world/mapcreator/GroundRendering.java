@@ -40,8 +40,8 @@ public class GroundRendering implements Updatable, TickFree, CameraDependency {
 
 	@Override
 	public void render(Graphics g) {
-		// if (world.getLayer(false) != layer)
-		// return;
+		if (world.getLayer(false) != layer && layer.getName().contains("down"))
+			return;
 
 		BufferedImage img = world.getImageMap(layer);
 
@@ -58,6 +58,7 @@ public class GroundRendering implements Updatable, TickFree, CameraDependency {
 		g.drawImage(optimized_img, 0, 0, width, height, null);
 	}
 
+	// weirdly, it causes lag to use this
 	@SuppressWarnings("unused")
 	private BufferedImage getOptimizedImage(BufferedImage img, int ratio) {
 		BufferedImage optimized_img = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_ARGB);
