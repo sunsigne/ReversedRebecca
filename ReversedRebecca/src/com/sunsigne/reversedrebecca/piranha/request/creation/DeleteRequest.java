@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -46,6 +47,9 @@ public class DeleteRequest implements IndexRequest {
 		Handler handler = getSubLayer(object, subLayer);
 
 		handler.removeObject(gameOject);
+
+		if (gameOject instanceof PiranhaObject)
+			GlobalInstruction.getPiranhaList().clear();
 	}
 
 }

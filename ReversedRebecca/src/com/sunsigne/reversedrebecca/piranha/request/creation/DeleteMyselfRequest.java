@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.request.creation;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -35,6 +36,8 @@ public class DeleteMyselfRequest implements Request {
 		Handler handler = object.getHandler();
 		if (handler != null)
 			handler.removeObject(object);
+		
+		GlobalInstruction.getPiranhaList().clear();
 	}
 
 }

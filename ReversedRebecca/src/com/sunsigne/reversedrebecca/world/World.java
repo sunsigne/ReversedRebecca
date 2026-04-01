@@ -25,6 +25,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.physic.natural.independant.UpdateLayersLaw;
 import com.sunsigne.reversedrebecca.piranha.Piranha;
+import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.condition.global.TimeCondition;
 import com.sunsigne.reversedrebecca.piranha.request.memory.CheckPointSet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.MemorySet;
@@ -375,6 +376,8 @@ public class World implements Updatable, RenderFree {
 
 			tempLayer.getHandler().clear();
 		}
+		
+		GlobalInstruction.getPiranhaList().clear();
 	}
 
 	////////// PHYSICS ////////////

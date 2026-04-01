@@ -1,9 +1,12 @@
 package com.sunsigne.reversedrebecca.piranha.condition;
 
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public abstract class GlobalInstruction extends LocalInstruction {
@@ -30,12 +33,52 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		}
 	}
 
+	protected void newcreateInstructionAnalyzerForAllObject(String condition) {
+		ConcurrentLinkedQueue<GenericListener> instructionEvent = null;
+
+		for (PiranhaObject tempObject : getPiranhaList().getList()) {
+			if (getExceptionsList().getList().contains(tempObject))
+				continue;
+
+			GenericListener instruction = () -> analyse(tempObject, condition);
+
+			if (instructionEvent == null)
+				instructionEvent = new ConcurrentLinkedQueue<>();
+
+			instructionEvent.add(instruction);
+		}
+
+		if (instructionEvent == null)
+			return;
+
+		GenericListener event;
+		while ((event = instructionEvent.poll()) != null)
+			event.doAction();
+	}
+
 	////////// MAP OR LIST ////////////
 
 	private GameList<PiranhaObject> object_list = new GameList<PiranhaObject>(LISTTYPE.LINKED);
 
+	private static GameList<PiranhaObject> piranha_list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
+
 	protected GameList<PiranhaObject> getList() {
 		return object_list;
+	}
+
+	public static GameList<PiranhaObject> getPiranhaList() {
+		if (piranha_list.getList().isEmpty() == false)
+			return piranha_list;
+
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer.isMapLayer() == false)
+				break;
+
+			var list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
+			piranha_list.getList().addAll(list.getList());
+		}
+
+		return piranha_list;
 	}
 
 	protected void loadAllPiranha() {
