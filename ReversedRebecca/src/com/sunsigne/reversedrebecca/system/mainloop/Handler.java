@@ -303,15 +303,8 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 		var list = new ListCloner().deepClone(this);
 		for (Updatable tempObject : list.getList()) {
 
-			// skip rendering if out of camera, except for walls
-			if (isCameraDependant()) {
-				if (tempObject instanceof Position && tempObject instanceof Wall == false) {
-					Position tempPosition = (Position) tempObject;
-
-					if (CAMERA.isObjectVisible(tempPosition, true) == false)
-						continue;
-				}
-			}
+			// if (skipRenderingIfOutOfScreen(tempObject))
+			// continue;
 
 			renderDependency(g, true);
 			tempObject.applyPhysics(g, 2);
@@ -319,6 +312,25 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 			tempObject.applyPhysics(g, 3);
 			renderDependency(g, false);
 		}
+	}
+
+	// weirdly, it causes lag to use this
+	@SuppressWarnings("unused")
+	private boolean skipRenderingIfOutOfScreen(Updatable object) {
+		if (isCameraDependant() == false)
+			return false;
+
+		if (object instanceof Wall)
+			return false;
+
+		if (object instanceof Position == false)
+			return false;
+
+		Position position = (Position) object;
+		if (CAMERA.isObjectVisible(position, true))
+			return false;
+
+		return true;
 	}
 
 }
