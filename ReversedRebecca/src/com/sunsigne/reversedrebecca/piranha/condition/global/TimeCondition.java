@@ -32,14 +32,8 @@ public class TimeCondition extends GlobalInstruction {
 	}
 
 	@Override
-	protected void createInstructionAnalyzerForAllObject(String condition) {
-		if (condition.equalsIgnoreCase(getConditionType() + "0")) {
-			for (PiranhaObject tempObject : getList().getList())
-				analyse(tempObject, condition);
-		}
-
-		else
-			super.createInstructionAnalyzerForAllObject(condition);
+	protected boolean excludeException(String condition) {
+		return condition.equalsIgnoreCase(getConditionType() + "0") == false;
 	}
 
 	////////// OPTIMIZATION ////////////
