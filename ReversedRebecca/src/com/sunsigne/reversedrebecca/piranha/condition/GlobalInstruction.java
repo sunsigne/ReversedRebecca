@@ -19,9 +19,9 @@ public abstract class GlobalInstruction extends LocalInstruction {
 
 	protected void analyse(String condition) {
 		newcreateInstructionAnalyzerForAllObject(condition);
-		
-		//loadAllPiranha();
-		//createInstructionAnalyzerForAllObject(condition);
+
+		// loadAllPiranha();
+		// createInstructionAnalyzerForAllObject(condition);
 	}
 
 	protected void createInstructionAnalyzerForAllObject(String condition) {
@@ -39,7 +39,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		ConcurrentLinkedQueue<GenericListener> instructionEvent = null;
 
 		for (PiranhaObject tempObject : getPiranhaList().getList()) {
-			if (excludeException(condition) && getExceptionsList().getList().contains(tempObject))
+			if (excludeException(condition, tempObject))
 				continue;
 
 			GenericListener instruction = () -> analyse(tempObject, condition);
@@ -58,10 +58,10 @@ public abstract class GlobalInstruction extends LocalInstruction {
 			event.doAction();
 	}
 
-	protected boolean excludeException(String condition) {
-		return true;
+	protected boolean excludeException(String condition, PiranhaObject object) {
+		return getExceptionsList().getList().contains(object);
 	}
-	
+
 	////////// MAP OR LIST ////////////
 
 	private GameList<PiranhaObject> object_list = new GameList<PiranhaObject>(LISTTYPE.LINKED);
