@@ -201,8 +201,9 @@ public class PathFinder implements Position {
 		if (range == 0)
 			return false;
 
-		//if (NavMeshScan(from, horizontal))
-		//	return true;
+		// way faster scan, checking walls
+		if (navMeshScan(from, horizontal))
+			return true;
 
 		// get all objects along the searched axis
 		int pos = horizontal ? getY() : getX();
@@ -263,27 +264,20 @@ public class PathFinder implements Position {
 		return false;
 	}
 
-	private boolean NavMeshScan(int from, boolean horizontal) {
+	private boolean navMeshScan(int from, boolean horizontal) {
 		int factor = 0;
-		int gap = 0;
 
-		factor = tileX < 0 ? 1 : -1;
-		gap = horizontal ? from : 0;
-
-		// left and right
-		if (tileX < 0 || tileX > 0) {
+		if (horizontal && (tileX < 0 || tileX > 0)) {
+			factor = tileX < 0 ? 1 : -1;
 			for (int xx = 0; xx <= factor * (getX() - goal.getX()); xx = xx + getWidth())
-				if (handler.getWallAtPos(getX() - (factor * xx), getY() + gap) != null)
+				if (handler.getWallAtPos(getX() - (factor * xx), getY() + from) != null)
 					return true;
 		}
 
-		factor = tileY < 0 ? 1 : -1;
-		gap = !horizontal ? from : 0;
-
-		// up and down
-		if (tileY < 0 || tileY > 0) {
+		if (!horizontal && (tileY < 0 || tileY > 0)) {
+			factor = tileY < 0 ? 1 : -1;
 			for (int yy = 0; yy <= factor * (getY() - goal.getY()); yy = yy + getHeight())
-				if (handler.getWallAtPos(getX() + gap, getY() - (factor * yy)) != null)
+				if (handler.getWallAtPos(getX() + from, getY() - (factor * yy)) != null)
 					return true;
 		}
 
