@@ -15,22 +15,21 @@ public abstract class LocalInstruction {
 		// if NPC has no PiranhaFile
 		if (new FileTask().doesExist(userData, object.getPiranhaFile()) == false)
 			return;
-
-		request = new FileTask().read(userData, condition.toUpperCase(), object.getPiranhaFile());
-
-		// if Statement has no correlated Action
-		if (request.isBlank())
-			return;
-
+		
 		processAction(condition);
 	}
 
 	private PiranhaObject object;
-	private String request;
 
 	private void processAction(String condition) {
-		String requestType = request.split("->")[0];
-		String target = request.split("->")[1];
+		var script = object.getScript();		
+		String raw_request = script.get(condition);
+		
+		if(raw_request == null || raw_request.isBlank())
+			return;
+			
+		String requestType = raw_request.split("->")[0];
+		String target = raw_request.split("->")[1];
 
 		Request request = new RequestList().getRequestFromType(requestType);
 

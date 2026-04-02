@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.piranha;
 
 import java.awt.event.KeyEvent;
+import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
@@ -140,13 +141,34 @@ public abstract class PiranhaObject extends CustomHitboxObject
 		return piranhaFile;
 	}
 
-	public void optimize() {
-		if (this instanceof Player)
-			return;
+	private HashMap<String, String> script = new HashMap<>();
 
+	public HashMap<String, String> getScript() {
+		return script;
+	}
+
+	public void optimize() {
 		String content = new Piranha().getContent(this);
 
 		if (content == null)
+			return;
+
+		for (String tempInstruction : content.split(System.getProperty("line.separator"))) {
+			if (tempInstruction.contains("=") == false) {
+				if (tempInstruction.contains("->")) {
+					System.err.println("Problem encounter with following object : " + toString());
+					System.err.println("unvalid Instruction : " + tempInstruction);
+				}
+				continue;
+			}
+
+			String tempCondition = tempInstruction.split("=")[0];
+			String tempRequest = tempInstruction.split("=")[1];
+
+			script.put(tempCondition, tempRequest);
+		}
+
+		if (this instanceof Player)
 			return;
 
 		if (content.contains("ACTION"))
