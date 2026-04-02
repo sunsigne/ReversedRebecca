@@ -15,7 +15,6 @@
 	////////// BUG ////////////
 
 	pas réglé :
-		- hack puzzle - l'inverseur est censé inverser les controles SANS déplacer la souris à la position inverse sur l'écran
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
 		
@@ -42,9 +41,9 @@
 
 	////////// EN COURS ////////////
 
+	bug :  l'inverseur est censé inverser les controles SANS déplacer la souris à la position inverse sur l'écran
 	bug : 0h20 - lorsqu'on reset un niveau pendant que le menu est affiché, ça freeze jusquà ce qu'on clique de nouveau sur Esc
-	opti - s'occuper des collision
-	opti - s'occuper du piranha
+	opti - s'occuper du piranha (la partie "lecture de fichier")
 
 	////////// WS001 ////////////
 

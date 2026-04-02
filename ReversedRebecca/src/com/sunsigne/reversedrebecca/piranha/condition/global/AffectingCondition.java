@@ -1,14 +1,10 @@
 package com.sunsigne.reversedrebecca.piranha.condition.global;
 
-import java.util.List;
-
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstructionList;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class AffectingCondition extends GlobalInstruction {
 
@@ -36,40 +32,23 @@ public class AffectingCondition extends GlobalInstruction {
 
 	public void registerValue(String name, String value) {
 		String condition = getConditionType() + value;
-		loadAllPiranha(name);
-		createInstructionAnalyzerForAllObject(condition);
+		PiranhaObject object = getPiranhaByName(name);
+		analyse(object, condition);
 	}
 
-	private void loadAllPiranha(String name) {
-		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer() == false)
-				return;
+	private PiranhaObject getPiranhaByName(String name) {
 
-			var list = tempLayer.getHandler().getList();
+		// look for exact match
+		for (PiranhaObject tempObject : getPiranhaList().getList())
+			if (tempObject.getName().equalsIgnoreCase(name))
+				return tempObject;
 
-			loadNominativePiranha(list, name, true);
+		// if not found, name close to
+		for (PiranhaObject tempObject : getPiranhaList().getList())
+			if (tempObject.getName().contains(name))
+				return tempObject;
 
-			if (list.isEmpty())
-				loadNominativePiranha(list, name, false);
-		}
-	}
-
-	private void loadNominativePiranha(List<Updatable> list, String name, boolean exactNameMatch) {
-		for (Updatable tempUpdatable : list) {
-
-			if (tempUpdatable instanceof PiranhaObject == false)
-				continue;
-
-			PiranhaObject tempObject = (PiranhaObject) tempUpdatable;
-
-			if (exactNameMatch) {
-				if (tempObject.getName().equalsIgnoreCase(name))
-					getList().addObject(tempObject);
-			} else {
-				if (tempObject.getName().contains(name))
-					getList().addObject(tempObject);
-			}
-		}
+		return null;
 	}
 
 	////////// OPTIMIZATION ////////////

@@ -18,24 +18,6 @@ public abstract class GlobalInstruction extends LocalInstruction {
 	public abstract String getConditionType();
 
 	protected void analyse(String condition) {
-		newcreateInstructionAnalyzerForAllObject(condition);
-
-		// loadAllPiranha();
-		// createInstructionAnalyzerForAllObject(condition);
-	}
-
-	protected void createInstructionAnalyzerForAllObject(String condition) {
-		for (PiranhaObject tempObject : getExceptionsList().getList()) {
-			if (object_list.getList().contains(tempObject))
-				object_list.removeObject(tempObject);
-		}
-
-		for (PiranhaObject tempObject : object_list.getList()) {
-			analyse(tempObject, condition);
-		}
-	}
-
-	protected void newcreateInstructionAnalyzerForAllObject(String condition) {
 		ConcurrentLinkedQueue<GenericListener> instructionEvent = null;
 
 		for (PiranhaObject tempObject : getPiranhaList().getList()) {
@@ -64,13 +46,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 
 	////////// MAP OR LIST ////////////
 
-	private GameList<PiranhaObject> object_list = new GameList<PiranhaObject>(LISTTYPE.LINKED);
-
 	private static GameList<PiranhaObject> piranha_list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
-
-	protected GameList<PiranhaObject> getList() {
-		return object_list;
-	}
 
 	public static GameList<PiranhaObject> getPiranhaList() {
 		if (piranha_list.getList().isEmpty() == false)
@@ -85,16 +61,6 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		}
 
 		return piranha_list;
-	}
-
-	protected void loadAllPiranha() {
-		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer() == false)
-				return;
-
-			var list = new ListCloner().deepCloneByClass(tempLayer.getHandler(), PiranhaObject.class);
-			object_list.getList().addAll(list.getList());
-		}
 	}
 
 	////////// OPTIMIZATION ////////////
