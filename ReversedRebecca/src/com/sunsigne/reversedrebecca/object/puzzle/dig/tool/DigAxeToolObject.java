@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig.tool;
 
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class DigAxeToolObject extends DigToolObject {

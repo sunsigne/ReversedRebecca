@@ -4,16 +4,19 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Blinking;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
-public abstract class DigToolObject extends BuriedObject {
+public abstract class DigToolObject extends BuriedObject implements Blinking {
 
 	public DigToolObject(Puzzle puzzle, int x_pos_in_menu, int y_pos_in_menu, int w, int h, boolean selectable) {
 		super(puzzle, selectable ? 2 * Size.L : w, selectable ? 2 * Size.L : h);
@@ -55,14 +58,61 @@ public abstract class DigToolObject extends BuriedObject {
 		return clazz + getName() + " : " + selectable + " : " + pos;
 	}
 
+	////////// BLINKING ////////////
+
+	private Cycloid<Boolean> blinking = new Cycloid<Boolean>(false, true);
+
+	@Override
+	public Cycloid<Boolean> getBlinking() {
+		return blinking;
+	}
+
+	private int time;
+
+	@Override
+	public int getBlinkingTime() {
+		return time;
+	}
+
+	@Override
+	public void setBlinkingTime(int time) {
+		this.time = time;
+	}
+
+	@Override
+	public int getTotalBlinkingTime() {
+		return 60;
+	}
+	
+	@Override
+	public int getHighlightSize() {
+		return (2* getWidth() / 3) / Size.XS;
+	}
+	
+	////////// TICK ////////////
+
+	@Override
+	public void tick() {
+		runBlinking();
+	}
+
 	////////// TEXTURE ////////////
+
+	protected BufferedImage blinking_image;
 
 	@Override
 	public int getSheetColCriterion() {
 		return getState().getSheetColCriterion();
 	}
-	
+
+	@Override
 	public BufferedImage getImage() {
+		if (blinking_image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_tool" + "_highlight");
+			blinking_image = getSheetSubImage(sheet, getSheetColCriterion(), 1, getState().getSheetWidth() + 2,
+					getState().getSheetHeight() + 2);
+		}
+
 		return getState().getImage();
 	}
 
@@ -70,10 +120,13 @@ public abstract class DigToolObject extends BuriedObject {
 
 	@Override
 	public void render(Graphics g) {
-		if (selectable)
-			g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		else
+		if (selectable == false) {
 			super.render(g);
+			return;
+		}
+
+		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		drawHighlight(g, blinking_image);
 	}
 
 	////////// MOUSE ////////////
@@ -122,6 +175,7 @@ public abstract class DigToolObject extends BuriedObject {
 		DigToolObject selectable = getPuzzle().getTool(getState(), x_pos_in_menu, y_pos_in_menu, true);
 		selectable.setX(x_pos_in_menu);
 		selectable.setY(y_pos_in_menu);
+		selectable.setBlinking();
 		getPuzzle().tool_list.addObject(selectable);
 		LAYER.PUZZLE.addObject(selectable);
 	}

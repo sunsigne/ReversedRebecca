@@ -41,6 +41,33 @@
 
 	////////// EN COURS ////////////
 
+	puzzle : 
+		cliquer = impact
+	
+		bomb : faire un trou d'impact de balle
+		dig : creuser doit créer un visuel "d'impact"
+
+	////////// EXPERIENCE UTILISATEUR ////////////
+
+	2h digpuzzle : faire clignoter l'outils lorsque récupéré (avec un highlight)
+	1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
+
+	2h mettre le bonus sur l'écran titre même
+	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
+	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
+
+	////////// GAMEPAD ////////////
+
+	le gameover screen ne prend pas en compte l'affichage correcte du curseur (gamepad inclus)
+	? pitch le son du gamepad pour les bouton et le dig puzzle ?
+	0h10 vérifier que le ControlScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
+	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
+	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
+	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
+	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
+	2h00 - rendre compatible le DiscoPuzzle
+	3h00 - dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
+
 	////////// WS001 ////////////
 
 	- dialogue après un INQUIERY au lieu d'un exit
@@ -107,35 +134,11 @@
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 
-	////////// EXPERIENCE UTILISATEUR ////////////
-
-	2h digpuzzle : faire clignoter l'outils lorsque récupéré	(avec un highlight)
-	1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
-
-	2h mettre le bonus sur l'écran titre même
-	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
-	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
-
 	////////// LINUX & MAC ////////////
 
 	tester les balises de dialogues "up", "username", etc.
 	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
-
-	////////// GAMEPAD ////////////
-
-	vérifié si réglé :
-	- le gamepad consommant toutes les ressources disponible jusqu'à crash du jeu ...
-
-	le gameover screen ne prend pas en compte l'affichage correcte du curseur (gamepad inclus)
-	? pitch le son du gamepad pour les bouton et le dig puzzle ?
-	0h10 vérifier que le ControlScreen marche toujours (depuis l'ajout du texte "ou" pour les flêches)
-	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
-	2h00 puzzle cadenas PAS intuitif : le dessin du cadenas = souris doit changer lorsqu'on est à la manette ?
-	2h00 - MenuIngameController - la souris / manette fait des trucs bizarre sur les submenus, quand on stress test la manette (puzzle, entrée dans le niveau test, etc), il est possible que la souris ait un affichage inversé (peut-être réglé depuis la correction du ConcurrentModification de la manette ?)
-	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
-	2h00 - rendre compatible le DiscoPuzzle
-	3h00 - dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
 
 	////////// BOSS ////////////
 
