@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzle.bomb;
+package com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bomb;
 
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.MouseSpammableGamepadObject;
@@ -10,12 +11,16 @@ import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.SpammableGamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
-public class PointerBombObject extends PuzzleObject implements SheetableImage, MouseSpammableGamepadObject {
+public class PointerBombObject extends PuzzleObject
+		implements SheetableImage, MouseUserEvent, MouseSpammableGamepadObject {
 
 	public PointerBombObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.S, Size.S);
@@ -82,6 +87,35 @@ public class PointerBombObject extends PuzzleObject implements SheetableImage, M
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX() - getWidth() / 2, getY() - getHeight() / 2, 2 * getWidth(), 2 * getHeight(),
 				null);
+	}
+	////////// MOUSE ////////////
+
+	private MouseController mouseController = new MouseController(this);
+
+	@Override
+	public MouseController getMouseController() {
+		return mouseController;
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if (isClickable())
+			createHole();
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
+	}
+
+	private void createHole() {
+		int[] pos = new MousePos().get();
+
+		int mouseX = pos[0] - getWidth();
+		int mouseY = pos[1] - getHeight();
+
+		HoleBombObject hole = new HoleBombObject(getPuzzle(), isCritical(), mouseX, mouseY);
+		LAYER.PUZZLE.getHandler().getList().add(1, hole);
 	}
 
 	////////// SPAMMABLE ////////////

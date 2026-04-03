@@ -44,7 +44,7 @@
 	puzzle : 
 		cliquer = impact
 	
-		bomb : faire un trou d'impact de balle
+		bomb : créer un impact au moment de la création du trou
 		dig : creuser doit créer un visuel "d'impact"
 
 	////////// EXPERIENCE UTILISATEUR ////////////

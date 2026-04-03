@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;

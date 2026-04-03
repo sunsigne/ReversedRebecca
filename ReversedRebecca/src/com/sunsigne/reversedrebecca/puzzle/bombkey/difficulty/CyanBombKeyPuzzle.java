@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.BombObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.MovingBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.MovingBombObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
