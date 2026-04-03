@@ -41,8 +41,6 @@
 
 	////////// EN COURS ////////////
 
-	bug :  l'inverseur est censé inverser les controles SANS déplacer la souris à la position inverse sur l'écran
-
 	////////// WS001 ////////////
 
 	- dialogue après un INQUIERY au lieu d'un exit
