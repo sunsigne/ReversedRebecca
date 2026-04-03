@@ -43,7 +43,6 @@
 
 	bug :  l'inverseur est censé inverser les controles SANS déplacer la souris à la position inverse sur l'écran
 	bug : 0h20 - lorsqu'on reset un niveau pendant que le menu est affiché, ça freeze jusquà ce qu'on clique de nouveau sur Esc
-	opti - faire en sorte qu'un niveua ne soit considéré comme "lancé" qu'à partir du moment où le pic de lag est passé
 
 	////////// WS001 ////////////
 

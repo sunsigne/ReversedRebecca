@@ -15,9 +15,11 @@ import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -88,9 +90,6 @@ public class World implements Updatable, RenderFree {
 		addHUD();
 		addControllers();
 		start();
-
-		LAYER.LOADING.getHandler().clear();
-
 	}
 
 	private void initParameters(String mapName) {
@@ -186,9 +185,15 @@ public class World implements Updatable, RenderFree {
 		boolean frozen = isFrozen();
 		freeze(true);
 		getLayer(false).addObject(this);
-		freeze(false, !frozen);
-		Game.getInstance().forceLoop();
-		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
+
+		GenericListener start = () -> {
+			freeze(false, !frozen);
+			Game.getInstance().forceLoop();
+			((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
+			LAYER.LOADING.getHandler().clear();
+		};
+
+		new GameTimer(Game.SEC / 2, true, start);
 	}
 
 	private void stopApp(boolean workshop) {
@@ -376,7 +381,7 @@ public class World implements Updatable, RenderFree {
 
 			tempLayer.getHandler().clear();
 		}
-		
+
 		GlobalInstruction.getPiranhaList().clear();
 	}
 
