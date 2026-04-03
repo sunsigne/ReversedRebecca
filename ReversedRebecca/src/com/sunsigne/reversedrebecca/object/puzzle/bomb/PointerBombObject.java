@@ -99,8 +99,11 @@ public class PointerBombObject extends PuzzleObject
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isClickable())
-			createHole();
+		if (isClickable() == false)
+			return;
+
+		createHole();
+		createParticules(3);
 	}
 
 	@Override
@@ -116,6 +119,18 @@ public class PointerBombObject extends PuzzleObject
 
 		HoleBombObject hole = new HoleBombObject(getPuzzle(), isCritical(), mouseX, mouseY);
 		LAYER.PUZZLE.getHandler().getList().add(1, hole);
+	}
+
+	private void createParticules(int num_of_particles) {
+		int[] pos = new MousePos().get();
+
+		int mouseX = pos[0] - getWidth();
+		int mouseY = pos[1] - getHeight();
+
+		for (int index = 0; index < num_of_particles; index++) {
+			ParticleBombObject particle = new ParticleBombObject(getPuzzle(), isCritical(), mouseX, mouseY);
+			LAYER.PUZZLE.getHandler().addObject(particle);
+		}
 	}
 
 	////////// SPAMMABLE ////////////

@@ -1,33 +1,37 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bomb;
 
+import java.awt.AlphaComposite;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class HoleBombObject extends PuzzleObject implements TickFree, SheetableImage {
+public class ParticleBombObject extends PuzzleObject implements SheetableImage {
 
-	public HoleBombObject(Puzzle puzzle, boolean critical, int x, int y) {
+	public ParticleBombObject(Puzzle puzzle, boolean critical, int x, int y) {
 		super(puzzle, critical, x, y);
+		
+		RandomGenerator rad = new RandomGenerator();		
+		setVelX((rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20));
+		setVelY((rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20));
 	}
 
 	////////// NAME ////////////
 
 	protected String getName() {
-		return "HOLE";
+		return "PARTICLE";
 	}
 
 	@Override
 	public String toString() {
-		String pos = getX() + "-" + getY();
-
-		return "PUZZLE : " + getName() + " : " + pos;
+		return "PUZZLE : " + getName();
 	}
 
 	////////// PHYSICS ////////////
@@ -35,6 +39,19 @@ public class HoleBombObject extends PuzzleObject implements TickFree, SheetableI
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_MOVER;
+	}
+
+	////////// TICK ////////////
+
+	private final int FADING_TIME = 10;
+	private int time;
+
+	@Override
+	public void tick() {
+		time++;
+
+		if (time >= FADING_TIME)
+			removeObject();
 	}
 
 	////////// TEXTURE ////////////
@@ -68,7 +85,10 @@ public class HoleBombObject extends PuzzleObject implements TickFree, SheetableI
 
 	@Override
 	public void render(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.6f));
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 }
