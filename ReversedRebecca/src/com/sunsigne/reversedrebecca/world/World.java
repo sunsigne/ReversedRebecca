@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import com.sunsigne.reversedrebecca.characteristics.CharacteristicList;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.piranha.SetupObject;
@@ -357,6 +358,7 @@ public class World implements Updatable, RenderFree {
 	public void destroy() {
 		freeze(true);
 		new Cutscene().stop(false);
+		closeMenu();
 		closePuzzle();
 		resetLayers();
 		instance = null;
@@ -365,6 +367,11 @@ public class World implements Updatable, RenderFree {
 		SaveEraserList.getList().clear();
 		Game.getInstance().forceLoop();
 		freeze(false);
+	}
+
+	private void closeMenu() {
+		if (MenuIngameController.getMenu() != null)
+			new MenuIngameController().unloadResumeScreen();
 	}
 
 	private void closePuzzle() {
