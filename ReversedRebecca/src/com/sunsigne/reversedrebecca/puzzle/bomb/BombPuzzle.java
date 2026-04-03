@@ -2,10 +2,12 @@ package com.sunsigne.reversedrebecca.puzzle.bomb;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.BulletBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.WallBombPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.DuplicatingBombObject;
@@ -19,6 +21,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class BombPuzzle extends Puzzle {
 
@@ -120,6 +123,22 @@ public abstract class BombPuzzle extends Puzzle {
 	@Override
 	public int getSheetColCriterion() {
 		return 2;
+	}
+
+	@Override
+	protected void createWallBorder() {
+
+		Handler handler = LAYER.PUZZLE.getHandler();
+		BufferedImage image = getWallTexture();
+
+		for (int col = 0; col < 14; col++) {
+			handler.addObject(new WallBombPuzzle(image, getCol(col), getRow(0)));
+			handler.addObject(new WallBombPuzzle(image, getCol(col), getRow(7)));
+		}
+		for (int row = 1; row < 7; row++) {
+			handler.addObject(new WallBombPuzzle(image, getCol(0), getRow(row)));
+			handler.addObject(new WallBombPuzzle(image, getCol(13), getRow(row)));
+		}
 	}
 
 	////////// RENDER ////////////

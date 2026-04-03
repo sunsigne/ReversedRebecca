@@ -120,7 +120,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 			handler.addObject(new WallPuzzle(image, getCol(col), getRow(0)));
 			handler.addObject(new WallPuzzle(image, getCol(col), getRow(7)));
 		}
-		for (int row = 0; row < 8; row++) {
+		for (int row = 1; row < 7; row++) {
 			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
 			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
 		}
