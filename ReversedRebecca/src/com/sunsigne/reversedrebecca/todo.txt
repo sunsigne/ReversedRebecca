@@ -55,8 +55,6 @@
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	bug GB :
-		- au lancement du jeu, pas de "chargement" ?
-		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
 		- GB n'a pas compris que le cadenas du jeu de la porte pouvait être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
 	
