@@ -153,6 +153,9 @@ public abstract class PiranhaObject extends CustomHitboxObject
 		if (content == null)
 			return;
 
+		if (script.isEmpty() == false)
+			return;
+
 		for (String tempInstruction : content.split(System.getProperty("line.separator"))) {
 			if (tempInstruction.contains("=") == false) {
 				if (tempInstruction.contains("->")) {
@@ -164,6 +167,11 @@ public abstract class PiranhaObject extends CustomHitboxObject
 
 			String tempCondition = tempInstruction.split("=")[0];
 			String tempRequest = tempInstruction.split("=")[1];
+
+			if (script.get(tempCondition) != null) {
+				System.err.println("Problem encounter with following object : " + toString());
+				System.err.println("duplicate condition : " + tempCondition);
+			}
 
 			script.put(tempCondition, tempRequest);
 		}

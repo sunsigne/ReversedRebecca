@@ -52,7 +52,6 @@
 		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
 		- GB n'a pas compris que le cadenas du jeu de la porte pouvé être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
 		- lvl001 la plante dans le couloir ne marchait pas en inquery (F ne faisait rien). La plante à l'entrée n'a carrement même pas d'interactive
-		- lvl001 exit : une fois que Sarah a fini de parler avec Delta, elle a laissé plusieurs chaises sur places les une sur les autres... C'est du au nouveau code Piranha ?
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ? Probablement responsable du proble de l'écran titre [E] se réveiller
 		- lvl003-Y devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
 		- lvl003-Y le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
