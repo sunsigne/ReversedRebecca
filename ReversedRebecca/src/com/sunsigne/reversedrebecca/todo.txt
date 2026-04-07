@@ -55,7 +55,6 @@
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	bug GB :
-		- GB n'a pas compris que le cadenas du jeu de la porte pouvait être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
 	
 	////////// EXPERIENCE UTILISATEUR ////////////

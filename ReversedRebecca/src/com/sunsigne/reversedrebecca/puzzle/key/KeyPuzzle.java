@@ -24,6 +24,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -69,6 +70,24 @@ public abstract class KeyPuzzle extends Puzzle {
 
 		LAYER.PUZZLE.addObject(key);
 	}
+	
+	////////// TICK ////////////
+
+	private float alpha = 0.65f;
+	private float alphaSpeed = 0.008f;
+	
+	@Override
+	public void tick() {
+		alpha = alpha + alphaSpeed;
+
+	    if (alpha >= 0.65f) {
+	        alpha = 0.65f;
+	        alphaSpeed = -alphaSpeed;
+	    } else if (alpha <= 0.0f) {
+	        alpha = 0.0f;
+	        alphaSpeed = -alphaSpeed;
+	    }
+	}
 
 	////////// TEXTURE ////////////
 
@@ -113,6 +132,9 @@ public abstract class KeyPuzzle extends Puzzle {
 			else {
 				handler.addObject(new WallPuzzle(img, radCol, radRow));
 				handler.addObject(new KillPuzzleObject(this, isCritical, radCol, radRow));
+
+				if (isTutorial())
+					new MousePos().setY(radRow + Size.L / 2);
 			}
 		}
 	}
@@ -158,12 +180,12 @@ public abstract class KeyPuzzle extends Puzzle {
 		int size = 150;
 
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
 		g2d.drawImage(image, getCol(4) + Size.XS, getRow(3) - Size.XS / 2, 5 * size, 2 * size, null);
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
-	private boolean isTutorial() {
+	protected boolean isTutorial() {
 		World world = World.get();
 
 		if (world == null)

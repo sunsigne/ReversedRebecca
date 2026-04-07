@@ -29,6 +29,9 @@ public class EasiestKeyPuzzle extends KeyPuzzle {
 	public void createPuzzle() {
 		createLock();
 		createKey();
+		
+		if(isTutorial())
+			createRandomWalls(1, false);
 	}
 
 }

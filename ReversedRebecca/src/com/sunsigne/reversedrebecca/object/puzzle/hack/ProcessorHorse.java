@@ -31,6 +31,7 @@ public class ProcessorHorse extends ProcessorEatable {
 	public String getName() {
 		return "image";
 	}
+	
 	////////// TICK ////////////
 
 	private float alpha = 0.55f;
