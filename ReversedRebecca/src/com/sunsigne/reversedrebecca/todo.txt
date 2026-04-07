@@ -43,8 +43,29 @@
 
 	puzzle : 
 		cliquer = impact
-
 		dig : creuser doit créer un visuel "d'impact"
+		
+
+	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
+	
+	bug GB :
+		- rr000 - depuis la refonte du piranha, Rebecca peut se réveiller pendant l'écran titre...
+		- rr000 - si on dit à Sarah "j'ai fait des crepes" alors qu'elle est en train de dormir, elle se bloque dans la table (softlock)
+		- ws001 - prendre l'amélioration "clef verte" ne lance pas le puzzle vert...
+		- lvl001 inquery : parler à sarah du vol? une fois qu'elle a trouvé la sortie : elle ne re-regarde pas en bas alors qu'elle devrait
+		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
+		- GB n'a pas compris que le cadenas du jeu de la porte pouvé être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
+		- lvl001 exit : impossible de crié sur Jean dans les toilette (et donc d'avoir la golden shower)
+		- lvl001 la plante dans le couloir ne marchait pas en inquery (F ne faisait rien). La plante à l'entrée n'a carrement même pas d'interactive
+		- lvl001 exit : GB a dit a Alicia qu'il arretait avec les bombes, mais n'a pas eu la possibilité de quand même les utiliser avec Mika. Bug ? Choix intentionnel ? Si c'est le cas, comment on s'en sert déjà ? Parce qu'il y a clairement un dialogue exprès pour ça.
+		- lvl001 exit : une fois que Sarah a fini de parler avec Delta, elle a laissé plusieurs chaises sur places les une sur les autres... C'est du au nouveau code Piranha ?
+		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ? Probablement responsable du proble de l'écran titre [E] se réveiller
+		- lvl003-Y devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
+		- lvl003-Y le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
+		- lvl003-Y le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
+		- lvl003-y Nathan, l'insulte "balaine" s'écrit avec un "e"
+		- lvl003-y plus on monte les étage de la tour, plus ça lag
+	
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

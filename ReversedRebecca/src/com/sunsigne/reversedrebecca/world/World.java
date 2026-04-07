@@ -348,7 +348,8 @@ public class World implements Updatable, RenderFree {
 				tempLayer.getHandler().setFreezeTicking(freeze);
 		}
 
-		new PlayerFinder().setPlayerCanInteract(playerCanInteract);
+		if (LAYER.MENU.getHandler().getList().isEmpty())
+			new PlayerFinder().setPlayerCanInteract(playerCanInteract);
 
 		boolean flag = false;
 		if (flag && freeze) // when active, remove fading menu if froze before completed
