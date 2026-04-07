@@ -44,30 +44,28 @@
 	puzzle : 
 		cliquer = impact
 		dig : creuser doit créer un visuel "d'impact"
+		2h déjà fait ? digpuzzle : faire clignoter l'outils lorsque récupéré (avec un highlight)
+		1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
 		
-
+	experience utilisateur : 
+	2h mettre le bonus sur l'écran titre même
+	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
+	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
+	
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	bug GB :
+		- au lancement du jeu, pas de "chargement" ?
 		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
-		- GB n'a pas compris que le cadenas du jeu de la porte pouvé être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
-		- lvl001 la plante dans le couloir ne marchait pas en inquery (F ne faisait rien). La plante à l'entrée n'a carrement même pas d'interactive
-		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ? Probablement responsable du proble de l'écran titre [E] se réveiller
+		- GB n'a pas compris que le cadenas du jeu de la porte pouvait être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
+		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
 		- lvl003-Y devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
 		- lvl003-Y le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
 		- lvl003-Y le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
 		- lvl003-y Nathan, l'insulte "balaine" s'écrit avec un "e"
 		- lvl003-y plus on monte les étage de la tour, plus ça lag
 	
-
 	////////// EXPERIENCE UTILISATEUR ////////////
-
-	2h digpuzzle : faire clignoter l'outils lorsque récupéré (avec un highlight)
-	1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
-
-	2h mettre le bonus sur l'écran titre même
-	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
-	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
 	////////// GAMEPAD ////////////
 
