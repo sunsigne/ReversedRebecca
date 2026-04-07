@@ -23,11 +23,11 @@ public abstract class LocalInstruction {
 
 	private void processAction(String condition) {
 		var script = object.getScript();		
-		String raw_request = script.get(condition);
+		String raw_request = script.get(condition.toUpperCase());
 		
 		if(raw_request == null || raw_request.isBlank())
 			return;
-			
+		
 		String requestType = raw_request.split("->")[0];
 		String target = raw_request.split("->")[1];
 

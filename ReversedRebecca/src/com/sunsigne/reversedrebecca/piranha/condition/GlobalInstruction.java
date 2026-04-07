@@ -21,7 +21,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 		ConcurrentLinkedQueue<GenericListener> instructionEvent = null;
 
 		for (PiranhaObject tempObject : getPiranhaList().getList()) {
-			if (excludeException(condition, tempObject))
+			if (isAnalysePrevented(condition, tempObject))
 				continue;
 
 			GenericListener instruction = () -> analyse(tempObject, condition);
@@ -40,7 +40,7 @@ public abstract class GlobalInstruction extends LocalInstruction {
 			event.doAction();
 	}
 
-	protected boolean excludeException(String condition, PiranhaObject object) {
+	protected boolean isAnalysePrevented(String condition, PiranhaObject object) {
 		return getExceptionsList().getList().contains(object);
 	}
 

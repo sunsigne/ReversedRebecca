@@ -34,7 +34,7 @@ public class SelfTalkingCondition extends GlobalInstruction {
 	private String piranhaFile;
 
 	@Override
-	protected boolean excludeException(String condition, PiranhaObject object) {
+	protected boolean isAnalysePrevented(String condition, PiranhaObject object) {
 		return object.getPiranhaFile().equalsIgnoreCase(piranhaFile) == false;
 	}
 

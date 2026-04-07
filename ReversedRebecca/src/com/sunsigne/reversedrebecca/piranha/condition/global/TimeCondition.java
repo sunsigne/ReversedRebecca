@@ -32,11 +32,11 @@ public class TimeCondition extends GlobalInstruction {
 	}
 
 	@Override
-	protected boolean excludeException(String condition, PiranhaObject object) {
+	protected boolean isAnalysePrevented(String condition, PiranhaObject object) {
 		if (condition.equalsIgnoreCase(getConditionType() + "0"))
 			return false;
 		else
-			return super.excludeException(condition, object);
+			return super.isAnalysePrevented(condition, object);
 	}
 
 	////////// OPTIMIZATION ////////////

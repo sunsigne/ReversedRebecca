@@ -49,9 +49,7 @@
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	bug GB :
-		- rr000 - depuis la refonte du piranha, Rebecca peut se réveiller pendant l'écran titre...
-		- rr000 - si on dit à Sarah "j'ai fait des crepes" alors qu'elle est en train de dormir, elle se bloque dans la table (softlock)
-		- ws001 - prendre l'amélioration "clef verte" ne lance pas le puzzle vert...
+	- ws001 : rebecca suit sarah de très prêt, est-ce bien normal ? (vérifier les anciennes versions)
 		- lvl001 inquery : parler à sarah du vol? une fois qu'elle a trouvé la sortie : elle ne re-regarde pas en bas alors qu'elle devrait
 		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
 		- GB n'a pas compris que le cadenas du jeu de la porte pouvé être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
