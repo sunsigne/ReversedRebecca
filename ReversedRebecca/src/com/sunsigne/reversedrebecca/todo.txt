@@ -59,11 +59,6 @@
 		- lvl001 inquery : GB est resté perdu longtemps. Il a fini par parlé à Delta, mais n'a pas pensé aux plantes
 		- GB n'a pas compris que le cadenas du jeu de la porte pouvait être déplacé en haut et en bas, ni que c'est la souris qui lui permettait de jouer
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
-		- lvl003-Y devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
-		- lvl003-Y le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
-		- lvl003-Y le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
-		- lvl003-y Nathan, l'insulte "balaine" s'écrit avec un "e"
-		- lvl003-y plus on monte les étage de la tour, plus ça lag
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -105,6 +100,13 @@
 
 	////////// MILITARY ////////////
 
+	bug
+		- devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
+		- le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
+		- le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
+		- Nathan, l'insulte "balaine" s'écrit avec un "e"
+		- plus on monte les étage de la tour, plus ça lag
+
 	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
 	changer nom -> jules en romeo. Vera en Venera
 
@@ -122,6 +124,7 @@
 	jules :
 	- lui trouver une voix
 	- créer la musique
+	- le renommer roméo
 
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
