@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.ParticleBombObject;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -20,6 +21,7 @@ import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -52,11 +54,26 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 	public void setExploded(boolean exploded) {
 		this.exploded = exploded;
 
-		if (exploded) {
-			new CameraShaker().shaking(SHAKE.LITTLE);
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
-			if (isCritical())
-				getPuzzle().closePuzzle(true);
+		if (exploded == false)
+			return;
+
+		new CameraShaker().shaking(SHAKE.LITTLE);
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
+
+		if (isCritical())
+			getPuzzle().closePuzzle(true);
+		else
+			createParticules(5);
+	}
+
+	private void createParticules(int num_of_particles) {
+		int x = getX() + Size.M / 4;
+		int y = getY() + Size.M / 2;
+		int size = 2 * Size.M;
+
+		for (int index = 0; index < num_of_particles; index++) {
+			ParticleBombObject particle = new ParticleBombObject(getPuzzle(), isCritical(), x, y, size, size);
+			LAYER.PUZZLE.getHandler().addObject(particle);
 		}
 	}
 
@@ -68,7 +85,6 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 
 	@Override
 	public String toString() {
-
 		String critical = isCritical() ? " CRITICAL" : "";
 		String count = getCount() + "/" + getMaxCount();
 		String pos = getRow(getX()) + "-" + getCol(getY());
@@ -132,7 +148,7 @@ public class BombObject extends PuzzleObject implements SheetableImage, MouseUse
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_MOVER;
 	}
-	
+
 	////////// TICK ////////////
 
 	private final int ANIMATION_TIME = 2;

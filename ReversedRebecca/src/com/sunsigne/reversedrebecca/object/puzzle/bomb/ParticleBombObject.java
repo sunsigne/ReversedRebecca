@@ -12,15 +12,21 @@ import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class ParticleBombObject extends PuzzleObject implements SheetableImage {
 
 	public ParticleBombObject(Puzzle puzzle, boolean critical, int x, int y) {
-		super(puzzle, critical, x, y);
-		
-		RandomGenerator rad = new RandomGenerator();		
-		setVelX((rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20));
-		setVelY((rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20));
+		this(puzzle, critical, x, y, Size.L, Size.L);
+	}
+
+	public ParticleBombObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
+		super(puzzle, critical, x, y, w, h);
+
+		RandomGenerator rad = new RandomGenerator();
+		float factor = (1.5f * w) / Size.L;
+		setVelX((int) (factor * (rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20)));
+		setVelY((int) (factor * (rad.getBoolean() ? 1 : -1) * rad.getIntBetween(5, 20)));
 	}
 
 	////////// NAME ////////////

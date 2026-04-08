@@ -40,7 +40,9 @@
 	)
 
 	////////// EN COURS ////////////
-
+	
+	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
+	
 	puzzle : 
 		cliquer = impact
 		dig : creuser doit créer un visuel "d'impact"
@@ -51,9 +53,7 @@
 	2h mettre le bonus sur l'écran titre même
 	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
-	
-	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-	
+
 	bug GB :
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
 	
