@@ -122,12 +122,17 @@ public abstract class DigToolObject extends BuriedObject implements Blinking {
 	public void render(Graphics g) {
 		if (selectable == false) {
 			super.render(g);
+			drawHighlight(g);
 			return;
 		}
 
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		drawHighlight(g, blinking_image, 0, 0, 0, 0);
 
+		drawHighlight(g, blinking_image, 0, 0, 0, 0); // blinking image
+		drawHighlight(g); // selecting image
+	}
+
+	protected void drawHighlight(Graphics g) {
 		if (isSelected() == false)
 			return;
 
