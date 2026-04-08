@@ -23,6 +23,10 @@ public class ToolObject extends LootObject implements Difficulty {
 		loadImages();
 	}
 
+	private boolean isNumberSettings() {
+		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER;
+	}
+
 	////////// NAME ////////////
 
 	@Override
@@ -68,8 +72,8 @@ public class ToolObject extends LootObject implements Difficulty {
 	private void loadImages() {
 		BufferedImage sheet = null;
 
-		String number = ActionOption.getDesign() == ACTION_DESIGN.NUMBER ? "_number" : "";
-		
+		String number = isNumberSettings() ? "_number" : "";
+
 		sheet = new ImageTask().loadImage("textures/tools/" + "tool" + number);
 		image = getSheetSubImage(sheet);
 
@@ -92,7 +96,9 @@ public class ToolObject extends LootObject implements Difficulty {
 
 	@Override
 	public String getTextWhenLooted() {
-		return new Translatable().getTranslatedText(toolPlayer.getName() + difficulty.getName(), FilePath.TOOL);
+		String color = isNumberSettings() ? "" : difficulty.getName();
+		String number = isNumberSettings() ? " " + difficulty.ordinal() : "";
+		return new Translatable().getTranslatedText(toolPlayer.getName() + color, FilePath.TOOL) + number;
 	}
 
 	@Override

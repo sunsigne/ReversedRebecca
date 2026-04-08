@@ -4,6 +4,7 @@ DoorPlural = les portes
 
 ///// KEY /////
 
+Key = clef
 KeyCyan = clef cyan
 KeyGreen = clef verte
 KeyYellow = clef jaune
@@ -29,6 +30,7 @@ KeyPluralPurple = les clefs violettes
 
 ///// BOMB /////
 
+Bomb = bombe
 BombCyan = bombe cyan
 BombGreen = bombe verte
 BombYellow = bombe jaune
@@ -54,6 +56,7 @@ BombPluralPurple = les bombes violettes
 
 ///// MICROCHIP /////
 
+Microchip = puce
 MicrochipCyan = puce cyan
 MicrochipGreen = puce verte
 MicrochipYellow = puce jaune
@@ -79,6 +82,7 @@ MicrochipPluralPurple = les puces violettes
 
 ///// SHOVEL /////
 
+Shovel = pelle
 ShovelCyan = pelle cyan
 ShovelGreen = pelle verte
 ShovelYellow = pelle jaune

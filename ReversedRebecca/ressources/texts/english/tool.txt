@@ -4,6 +4,7 @@ DoorPlural = doors
 
 ///// KEY /////
 
+Key = key
 KeyCyan = cyan key
 KeyGreen = green key
 KeyYellow = yellow key
@@ -29,6 +30,7 @@ KeyPluralPurple = the purple keys
 
 ///// BOMB /////
 
+Bomb = bomb
 BombCyan = cyan bomb
 BombGreen = green bomb
 BombYellow = yellow bomb
@@ -54,6 +56,7 @@ BombPluralPurple = the purple bombs
 
 ///// MICROCHIP /////
 
+Microchip = chip
 MicrochipCyan = cyan chip
 MicrochipGreen = green chip
 MicrochipYellow = yellow chip
@@ -79,6 +82,7 @@ MicrochipPluralPurple = the purple chips
 
 ///// SHOVEL /////
 
+Shovel = shovel
 ShovelCyan = cyan shovel
 ShovelGreen = green shovel
 ShovelYellow = yellow shovel
