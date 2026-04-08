@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public enum DIG_STATE implements SheetableImage, PhysicFree, TickFree, RenderFree {
-	DIG("shovel"), PICK("pickaxe"), CHOP("axe"), PUNCH("hand"), SLASH("sword"), CRITICAL("critical");
+	DIG("shovel"), PICK("pickaxe"), DIGPICK("digpick"), CHOP("axe"), PUNCH("hand"), SLASH("sword"), CRITICAL("critical");
 
 	private String tool;
 
@@ -31,14 +31,16 @@ public enum DIG_STATE implements SheetableImage, PhysicFree, TickFree, RenderFre
 			return 1;
 		case "shovel":
 			return 2;
-		case "pickaxe":
+		case "digpick":
 			return 3;
-		case "axe":
+		case "pickaxe":
 			return 4;
-		case "sword":
+		case "axe":
 			return 5;
-		case "critical":
+		case "sword":
 			return 6;
+		case "critical":
+			return 7;
 		}
 		return 0;
 	}

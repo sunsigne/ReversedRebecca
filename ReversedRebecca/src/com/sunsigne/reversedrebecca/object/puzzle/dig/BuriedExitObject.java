@@ -28,9 +28,11 @@ public class BuriedExitObject extends BuriedObject {
 
 	@Override
 	public boolean getHighlightCondition() {
-		return isSelected() && getPuzzle().getState() == DIG_STATE.DIG;
+		DIG_STATE state = getPuzzle().getState();
+		return isSelected() && (isCritical() || state == DIG_STATE.DIG || state == DIG_STATE.DIGPICK);
 	}
 
+	
 	////////// TEXTURE ////////////
 
 	@Override
@@ -72,7 +74,8 @@ public class BuriedExitObject extends BuriedObject {
 		if (isSelected() == false)
 			return;
 
-		if (getPuzzle().getState() != DIG_STATE.DIG && isCritical() == false) {
+		DIG_STATE game_state = getPuzzle().getState();
+		if (isCritical() == false && (game_state == DIG_STATE.DIG || game_state == DIG_STATE.DIGPICK) == false) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
 			return;
 		}

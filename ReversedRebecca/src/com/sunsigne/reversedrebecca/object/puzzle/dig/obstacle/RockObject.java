@@ -33,11 +33,25 @@ public class RockObject extends BuriedObstacleObject {
 		return "pick_fail";
 	}
 
+	@Override
+	protected boolean isUselessTool() {
+		DIG_STATE state = getPuzzle().getState();
+		return (isCritical() == false && (state == getState() || state == DIG_STATE.DIGPICK) == false);
+	}
+
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		DIG_STATE state = getPuzzle().getState();
+		return isSelected() && (isCritical() || state == getState() || state == DIG_STATE.DIGPICK);
+	}
+
 	////////// TEXTURE ////////////
-	
+
 	@Override
 	public int getSheetColCriterion() {
 		return 1;
 	}
-	
+
 }

@@ -20,6 +20,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigAxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigCriticalToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigHandToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigSwordToolObject;
@@ -97,6 +98,9 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 
 	public DigToolObject getTool(DIG_STATE dig_state, int x_pos_in_menu, int y_pos_in_menu, boolean selectable) {
 		switch (dig_state) {
+		case DIGPICK:
+			return new DigPickToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
+		
 		case PICK:
 			return new DigPickaxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 

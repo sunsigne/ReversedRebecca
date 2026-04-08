@@ -45,6 +45,7 @@
 	
 	puzzle : 
 		dig : creuser doit créer un visuel "d'impact"
+		dig : critique pas testé depuis les changemsznts ! manette nonplus
 		2h déjà fait ? digpuzzle : faire clignoter l'outils lorsque récupéré (avec un highlight)
 		1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
 		

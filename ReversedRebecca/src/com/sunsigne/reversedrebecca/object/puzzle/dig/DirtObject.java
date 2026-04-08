@@ -121,7 +121,8 @@ public class DirtObject extends DigPuzzleObject implements SheetableImage {
 
 		boolean final_punch = false;
 
-		if (getPuzzle().getState() == DIG_STATE.PUNCH) {
+		DIG_STATE state = getPuzzle().getState();
+		if (state == DIG_STATE.PUNCH) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 			if (punched)
 				final_punch = true;
@@ -129,14 +130,14 @@ public class DirtObject extends DigPuzzleObject implements SheetableImage {
 			image = null;
 		}
 
-		if (getPuzzle().getState() == DIG_STATE.DIG || isCritical() || final_punch) {
+		if (state == DIG_STATE.DIG || state == DIG_STATE.DIGPICK || isCritical() || final_punch) {
 			if (final_punch == false)
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 			LAYER.PUZZLE.getHandler().addObject(buriedObject);
 			deleting = true;
 		}
 
-		if (getPuzzle().getState() != DIG_STATE.PUNCH && getPuzzle().getState() != DIG_STATE.DIG)
+		if (state != DIG_STATE.PUNCH && state != DIG_STATE.DIG && state != DIG_STATE.DIGPICK)
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "dig_fail");
 
 	}

@@ -62,7 +62,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 
 	@Override
 	public boolean getHighlightCondition() {
-		return isSelected() && getPuzzle().getState() == getState();
+		return isSelected() && (getPuzzle().getState() == getState() || isCritical());
 	}
 
 	////////// TEXTURE ////////////
@@ -103,12 +103,16 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 
 	protected abstract String getFailSound();
 
+	protected boolean isUselessTool() {
+		return getPuzzle().getState() != getState() && isCritical() == false;
+	}
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)
 			return;
 
-		if (getPuzzle().getState() != getState() && isCritical() == false) {
+		if (isUselessTool()) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFailSound());
 			return;
 		}
