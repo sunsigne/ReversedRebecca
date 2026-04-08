@@ -4,12 +4,14 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
 
-public abstract class BuriedObject extends DigPuzzleObject implements SheetableImage {
+public abstract class BuriedObject extends DigPuzzleObject implements SheetableImage, Highlightable {
 
 	public BuriedObject(Puzzle puzzle, int w, int h) {
 		super(puzzle, false, 0, 0, w, h);
@@ -71,6 +73,12 @@ public abstract class BuriedObject extends DigPuzzleObject implements SheetableI
 		g.drawImage(getBackgroundImage(), getX(), getY(), getWidth(), getHeight(), null);
 	}
 
+	@Override
+	public void drawHighlight(Graphics g, BufferedImage image) {
+		int pix = 2 * getPuzzle().getSize() / Size.XS;
+		drawHighlight(g, image, pix, pix, -2 * pix, -2 * pix);
+	}
+	
 	////////// MOUSE ////////////
 
 	private MouseController mouseController = new MouseController(this);

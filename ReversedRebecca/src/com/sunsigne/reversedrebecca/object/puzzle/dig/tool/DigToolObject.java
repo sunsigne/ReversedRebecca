@@ -83,12 +83,12 @@ public abstract class DigToolObject extends BuriedObject implements Blinking {
 	public int getTotalBlinkingTime() {
 		return 60;
 	}
-	
+
 	@Override
 	public int getHighlightSize() {
-		return (2* getWidth() / 3) / Size.XS;
+		return (2 * getWidth() / 3) / Size.XS;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -126,7 +126,14 @@ public abstract class DigToolObject extends BuriedObject implements Blinking {
 		}
 
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		drawHighlight(g, blinking_image);
+		drawHighlight(g, blinking_image, 0, 0, 0, 0);
+
+		if (isSelected() == false)
+			return;
+
+		int pixel = getHighlightSize();
+		g.drawImage(blinking_image, getX() - pixel, getY() - pixel, getWidth() + 2 * pixel, getHeight() + 2 * pixel,
+				null);
 	}
 
 	////////// MOUSE ////////////

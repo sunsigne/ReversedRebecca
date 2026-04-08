@@ -44,7 +44,6 @@
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	puzzle : 
-		cliquer = impact
 		dig : creuser doit créer un visuel "d'impact"
 		2h déjà fait ? digpuzzle : faire clignoter l'outils lorsque récupéré (avec un highlight)
 		1h DigPuzzle -> afficher l'outil dont on a besoin en mode "requis" comme pour les puzzlers	
@@ -58,6 +57,8 @@
 		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
+
+	puzzle : cliquer = impact
 
 	////////// GAMEPAD ////////////
 

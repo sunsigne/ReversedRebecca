@@ -18,6 +18,13 @@ public class BuriedNullObject extends BuriedObject {
 		return "NULL";
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		return false;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override

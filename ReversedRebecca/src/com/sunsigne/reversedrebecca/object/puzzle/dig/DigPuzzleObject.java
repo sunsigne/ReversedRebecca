@@ -83,7 +83,7 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE;
 	}
-	
+
 	////////// RENDER ////////////
 
 	public void drawSelecting(Graphics g) {
@@ -100,8 +100,8 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 		} else if (mouseOver(mousePos.get(), getRect()) == false)
 			return;
 
-		g.drawRect(getX() + 1, getY() + 1, getWidth() - 2, getHeight() - 2);
-		g.drawRect(getX() + 2, getY() + 2, getWidth() - 4, getHeight() - 4);
+		for (int i = 1; i < (getPuzzle().getSize() / Size.S); i++)
+			g.drawRect(getX() + i, getY() + i, getWidth() - 2 * i, getHeight() - 2 * i);
 	}
 
 	////////// GAMEPAD ////////////

@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig;
 
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
@@ -23,6 +24,13 @@ public class BuriedExitObject extends BuriedObject {
 		return "EXIT";
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		return isSelected() && getPuzzle().getState() == DIG_STATE.DIG;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override
@@ -36,13 +44,23 @@ public class BuriedExitObject extends BuriedObject {
 	}
 
 	private BufferedImage image;
+	private BufferedImage highlight_image;
 
 	public BufferedImage getImage() {
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_digable");
 			image = getSheetSubImage(sheet);
+			highlight_image = getSheetSubImage(sheet, getSheetColCriterion(), 3, getSheetWidth(), getSheetHeight());
 		}
 		return image;
+	}
+
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		super.render(g);
+		drawHighlight(g, highlight_image);
 	}
 
 	////////// MOUSE ////////////

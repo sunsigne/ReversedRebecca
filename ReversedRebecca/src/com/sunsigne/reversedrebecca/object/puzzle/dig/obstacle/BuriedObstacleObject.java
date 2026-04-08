@@ -58,22 +58,32 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 		buriedObject.setY(y);
 	}
 
+	////////// HIGHLIGHT ////////////
+
+	@Override
+	public boolean getHighlightCondition() {
+		return isSelected() && getPuzzle().getState() == getState();
+	}
+
 	////////// TEXTURE ////////////
-	
+
+	private BufferedImage highlight_image;
+
 	@Override
 	public int getSheetSize() {
-		return 2*16;
+		return 2 * 16;
 	}
-	
+
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "dig_obstacle");
 			image = getSheetSubImage(sheet);
+			highlight_image = getSheetSubImage(sheet, getSheetColCriterion(), 2, getSheetWidth(), getSheetHeight());
 		}
 		return image;
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
@@ -82,6 +92,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 			return;
 
 		super.render(g);
+		drawHighlight(g, highlight_image);
 	}
 
 	////////// MOUSE ////////////
