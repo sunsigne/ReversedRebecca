@@ -41,6 +41,13 @@
 
 	////////// EN COURS ////////////
 	
+	daltonien :
+	- les outils et le menu ne s'adapte pas PENDANT un niveau si le paramétrage est changé
+	- changer les puzzlers
+	- changer les textes qui font références aux couleurs
+	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
+	- la bulle de prérequis des puzzles doit être vérifiée
+	
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
 	puzzle : 
@@ -48,7 +55,6 @@
 
 	experience utilisateur : 
 	2h mettre le bonus sur l'écran titre même
-	20h20 Daltonien / colorblind : le menu existe, pas son adaptabilité, ni son application
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
 	bug GB :

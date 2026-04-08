@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Blinking;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -28,6 +30,10 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		loadImages(null);
 	}
 
+	private boolean isNumberSettings() {
+		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER;
+	}
+	
 	////////// NAME ////////////
 
 	@Override
@@ -114,8 +120,10 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		if(MultiToolMode.debugMode.getDebugMode().getState())
 			difficulty = maxDifficulty = LVL.RED;
 		
-		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "batteries");
+		String number = isNumberSettings() ? "_number" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "batteries" + number);
 		BufferedImage image = getSheetSubImage(sheet, difficulty.ordinal(), maxDifficulty.ordinal(), getSheetWidth(), getSheetHeight());
+		
 		return image;
 	}
 	
@@ -134,8 +142,10 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 				continue;
 
 			BufferedImage sheet = null;
-			sheet = task.loadImage("textures/tools/" + "tool");
-			BufferedImage tool_image = getSheetSubImage(sheet, 1, tempTool.getNum(), 16, 16);			
+			String number = isNumberSettings() ? "_number" : "";
+			int col = isNumberSettings() ? 1 + tempTool.getDifficulty().ordinal() : 1;
+			sheet = task.loadImage("textures/tools/" + "tool" + number);
+			BufferedImage tool_image = getSheetSubImage(sheet, col, tempTool.getNum(), 16, 16);			
 			BufferedImage battery_image = loadBatteryImage(tempTool.getMaxDifficulty(), tempTool.getDifficulty());
 
 			images.addObject(tool_image);
@@ -148,7 +158,7 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 				continue;
 
 			setBlinking();
-			sheet = task.loadImage("textures/tools/" + "highlight");
+			sheet = task.loadImage("textures/tools/" + "highlight" + number);
 			blinking_tool_image = getSheetSubImage(sheet, 1, tempTool.getNum(), 18, 18);
 			map.put(tool_image, blinking_tool_image);
 		}

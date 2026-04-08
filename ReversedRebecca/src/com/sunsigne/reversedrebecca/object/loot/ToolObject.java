@@ -6,6 +6,8 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -66,10 +68,12 @@ public class ToolObject extends LootObject implements Difficulty {
 	private void loadImages() {
 		BufferedImage sheet = null;
 
-		sheet = new ImageTask().loadImage("textures/tools/" + "tool");
+		String number = ActionOption.getDesign() == ACTION_DESIGN.NUMBER ? "_number" : "";
+		
+		sheet = new ImageTask().loadImage("textures/tools/" + "tool" + number);
 		image = getSheetSubImage(sheet);
 
-		sheet = new ImageTask().loadImage("textures/tools/" + "highlight");
+		sheet = new ImageTask().loadImage("textures/tools/" + "highlight" + number);
 		blinking_image = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2, getSheetHeight() + 2);
 	}
 
