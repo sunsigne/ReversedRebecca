@@ -1,5 +1,10 @@
 % FIRST_TIME
-dave = DOWN = camera = Tu as fait ton choix ? En prenant les bombes@cyans, le commisariat est plus dur.
+dave = DOWN = camera = Tu as fait ton choix ? En prenant les bombes@cyans, le commissariat est plus dur.
+dave = DOWN = camera = Mais ça, c'est à condition que tu acceptes@la prochaine proposition de Sarah…
+
+
+% FIRST_TIME_NUMBER_SETTINGS
+dave = DOWN = camera = Tu as fait ton choix ? En prenant les bombes 1,@le commissariat est plus dur.
 dave = DOWN = camera = Mais ça, c'est à condition que tu acceptes@la prochaine proposition de Sarah…
 
 
@@ -8,8 +13,15 @@ dave = DOWN = camera = Rebecca, tu t'apprêtes à vivre ton premier@embranchemen
 dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plusieurs histoires.
 
 
+% N_TIMES_NUMBER_SETTINGS
+dave = DOWN = camera = De retour au commissariat, hein ?
+dave = DOWN = camera = Petit rappel : prendre les bombes 1, c'est@le rendre plus drôle, mais plus difficile.
+dave = DOWN = camera = Sarah va te proposer de voler des documents.@C'est un embranchement. Tu peux refuser.
+dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plusieurs histoires.
+
+
 % N_TIMES
-dave = DOWN = camera = De retour au commisariat, hein ?
+dave = DOWN = camera = De retour au commissariat, hein ?
 dave = DOWN = camera = Petit rappel : prendre les bombes cyans,@c'est le rendre plus drôle, mais plus difficile.
 dave = DOWN = camera = Sarah va te proposer de voler des documents.@C'est un embranchement. Tu peux refuser.
 dave = DOWN = camera = Un jeu classique peut avoir plusieurs fins.@Ce jeu, a plusieurs histoires.

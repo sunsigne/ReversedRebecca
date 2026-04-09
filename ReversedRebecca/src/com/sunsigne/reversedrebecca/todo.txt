@@ -42,9 +42,10 @@
 	////////// EN COURS ////////////
 	
 	daltonien :
+	- convertir les caisses
 	- les outils et le menu ne s'adapte pas PENDANT un niveau si le paramétrage est changé
 	- changer les puzzlers
-	- changer les textes qui font références aux couleurs
+	- changer les textes qui font références aux couleurs (military et police_station)
 	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
 	- la bulle de prérequis des puzzles doit être vérifiée
 	
@@ -65,6 +66,7 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	puzzle : cliquer = impact
+	daltonien : camp militaire non convertie (dialogues et caisses)
 
 	////////// GAMEPAD ////////////
 

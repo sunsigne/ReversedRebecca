@@ -269,3 +269,8 @@ player = object = happy_var = Thanks!
 player = DOWN = unhappy = Yikes… I just realized that I don't@know how to use the green keys yet.
 player = DOWN = you_silly = Too bad… I'm almost feeling "blue".
 
+
+% SAS_KEY_IS_USELESS_NUMBER_SETTINGS
+player = DOWN = unhappy = Yikes… I just realized that I don't@know how to use the key 2 yet.
+player = DOWN = you_silly = Should I say it's "two" bad ?
+

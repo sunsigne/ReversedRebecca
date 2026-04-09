@@ -269,3 +269,8 @@ player = object = happy_var = Merci !
 player = DOWN = unhappy = Zut… Je viens seulement de réaliser que je@ne sais pas encore me servir des clefs vertes.
 player = DOWN = you_silly = Tant pis… Il va falloir que je me débrouille "cyan".
 
+
+% SAS_KEY_IS_USELESS_NUMBER_SETTINGS
+player = DOWN = unhappy = Zut… Je viens seulement de réaliser que je@ne sais pas encore me servir des clefs 2.
+player = DOWN = you_silly_var = Tant pis… Il va falloir que je me débrouille sans.
+

@@ -1,12 +1,12 @@
-%INVENTORY_HELLO
+% INVENTORY_HELLO
 object = player = laugh = Oh! Hello there, Rebecca!
 
 
-%INVENTORY_INITIATIVE_HELLO
+% INVENTORY_INITIATIVE_HELLO
 object = player = laugh = Hey, Rebecca!
 
 
-%INVENTORY_INITIATIVE
+% INVENTORY_INITIATIVE
 object = player = happy = Do you need anything?
 rebecca = object = happy_var = No, thanks.@I'm just looking around.
 object = player = laugh = You're looking around our stock?@You can say it if you're looking for bombs.
@@ -22,7 +22,7 @@ rebecca = object = happy_var = No, no. I'm mainly conducting the investigation,@
 object = player = you_silly = If you say so…
 
 
-%INVENTORY_BOMB
+% INVENTORY_BOMB
 object = player = happy = Do you need anything?
 rebecca = object = excited = Bombs!
 object = player = happy = Of course, here you go.
@@ -52,6 +52,13 @@ alicia = player = appeased = You really got me there.
 
 % INVENTORY_BOMB_NEXT
 rebecca = object = excited = That's cool, but I want some super bombs!@Do we have green bombs?
+object = player = worry = I don't think so…
+object = player = surprised = Ho! Wait! Actually, yes!@I found one in a box earlier.
+object = player = happy = Here it is.
+
+
+% INVENTORY_BOMB_NEXT_NUMBER_SETTINGS
+rebecca = object = excited = That's cool, but I want some super bombs!@Do we have bombs 2?
 object = player = worry = I don't think so…
 object = player = surprised = Ho! Wait! Actually, yes!@I found one in a box earlier.
 object = player = happy = Here it is.

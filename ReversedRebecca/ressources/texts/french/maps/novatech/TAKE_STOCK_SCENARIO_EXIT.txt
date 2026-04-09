@@ -13,10 +13,22 @@ player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est 
 player = object = happy = Une clé verte ou des bombes cyan devrait m'aider.
 
 
+% ALICIA_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = object = happy = Une clé 2 ou des bombes 1 devrait m'aider.
+
+
 % ALICIA_CANT_HELP
 player = object = asleep = Voyons voir…
 player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes cyan.
 player = object = sad = À moins d'avoir une clé verte,@elle est définitivement bloquée.
+
+
+% ALICIA_CANT_HELP_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes 1.
+player = object = sad = À moins d'avoir une clé 2,@elle est définitivement bloquée.
 
 
 % NO_BOMB

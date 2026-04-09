@@ -55,6 +55,11 @@ player = DOWN = unhappy = She doesn't understand…
 player = RIGHT = sad = Continuing is the very only way since@I am genuinely unable to use a green key…
 
 
+% I_HAD_NO_CHOICE_NUMBER_SETTINGS
+player = DOWN = unhappy = She doesn't understand…
+player = RIGHT = sad = Continuing is the very only way since@I am genuinely unable to use a key 2…
+
+
 % I_STOP_BOMB_HAVING_KEY
 player = alicia = unhappy = You're right, I've caused enough damage…
 player = alicia = worry = We will find another way.
@@ -77,6 +82,15 @@ player = alicia = no_sens = Well… If you know how to use green keys…@Because
 alicia = player = happy_var = That's just keys, Rebecca.@I think I can manage.
 
 
+% I_STOP_BOMB_CANNOT_TAKE_KEY_NUMBER_SETTINGS
+player = alicia = unhappy = You're right, I've caused enough damage…
+player = alicia = worry = We will find another way.
+alicia = player = happy = I'm glad to hear that.
+player = alicia = happy_var = Besides, Eric dropped his keys while leaving.@We could use them.
+player = alicia = no_sens = Well… If you know how to use key 2…@Because I don't.
+alicia = player = happy_var = That's just keys, Rebecca.@I think I can manage.
+
+
 % ALICIA_GREEN_KEY_SOFTLOCK
 player = UP = no_sens_var = Uh…
 player = alicia = unhappy = Excuse me, Alicia,@I think we're officially trapped.
@@ -86,4 +100,16 @@ player = UP = unhappy = And I don't know how to use the green key I found.
 alicia = player = laugh = That's wonderful!
 player = alicia = no_sens = What?
 alicia = player = happy_var = You found a green key.@Here, give it to me, I know how to use it.
+player = alicia = laugh = Hah! Sure, take it
+
+
+% ALICIA_GREEN_KEY_SOFTLOCK_NUMBER_SETTINGS
+player = UP = no_sens_var = Uh…
+player = alicia = unhappy = Excuse me, Alicia,@I think we're officially trapped.
+alicia = player = surprised_var = Wait… Really?
+player = UP = worry = Yeah… I don't have a bomb 2 to clear the path.
+player = UP = unhappy = And I don't know how to use the key 2 I found.
+alicia = player = laugh = That's wonderful!
+player = alicia = no_sens = What?
+alicia = player = happy_var = You found a key 2.@Here, give it to me, I know how to use it.
 player = alicia = laugh = Hah! Sure, take it

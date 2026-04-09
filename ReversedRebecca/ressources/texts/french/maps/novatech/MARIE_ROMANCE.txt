@@ -57,6 +57,13 @@ object = player = surprised = Ho ! Attend ! Mais si !@J'en ai trouvé une dans u
 object = player = happy = Tiens, la voilà.
 
 
+% INVENTORY_BOMB_NEXT_NUMBER_SETTINGS
+rebecca = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes 2 ?
+object = player = worry = Je crois que non…
+object = player = surprised = Ho ! Attend ! Mais si !@J'en ai trouvé une dans un carton tout à l'heure.
+object = player = happy = Tiens, la voilà.
+
+
 % INVENTORY_BOMB_LAST
 object = player = unhappy = Tu as l'air déçue… Ça ne va pas ?
 rebecca = object = unhappy = J'avais oublié, mais elle ne me servent à rien…@Je ne sais pas encore m'en servir…
