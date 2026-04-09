@@ -43,8 +43,20 @@ object = DOWN = mad = Si tu es sincère, apporte-moi des bombes vertes.
 object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
 
 
+% CHOICE_PRISONNER_DONT_HAVE_KEY_NUMBER_SETTINGS
+object = DOWN = mad = Si tu es sincère, apporte-moi des bombes 2.
+object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
+
+
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB
 object = DOWN = mad = Si tu es sincère, apporte-moi des bombes vertes.
+player = UP = worry = Ça non plus, je ne peux pas.@Je ne sais pas comment m'en servir.
+object = DOWN = skeptical = Ho ?
+object = DOWN = mad = Voilà l'astuce : il suffit juste de les secouer@avant de les allumer.
+
+
+% CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB_NUMBER_SETTINGS
+object = DOWN = mad = Si tu es sincère, apporte-moi des bombes 2.
 player = UP = worry = Ça non plus, je ne peux pas.@Je ne sais pas comment m'en servir.
 object = DOWN = skeptical = Ho ?
 object = DOWN = mad = Voilà l'astuce : il suffit juste de les secouer@avant de les allumer.
