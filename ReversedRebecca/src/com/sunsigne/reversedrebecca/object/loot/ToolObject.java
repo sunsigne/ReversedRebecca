@@ -69,6 +69,10 @@ public class ToolObject extends LootObject implements Difficulty {
 		return toolPlayer.getNum();
 	}
 
+	public void refresh() {
+		loadImages();
+	}
+	
 	private void loadImages() {
 		BufferedImage sheet = null;
 

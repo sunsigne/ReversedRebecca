@@ -1,6 +1,14 @@
 package com.sunsigne.reversedrebecca.object.characteristics.interactive;
 
+import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
+import com.sunsigne.reversedrebecca.object.hud.HUDTools;
+import com.sunsigne.reversedrebecca.object.loot.ToolObject;
+import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class ActionOption {
 
@@ -36,7 +44,7 @@ public class ActionOption {
 		new FileTask().write(getHighlightValueToRead(), file, actionHighlight.getName());
 		highlight = null;
 	}
-	
+
 	private static ACTION_DESIGN design;
 
 	public static ACTION_DESIGN getDesign() {
@@ -63,6 +71,36 @@ public class ActionOption {
 	public void registerDesign(ACTION_DESIGN actionDesign) {
 		new FileTask().write(getDesignValueToRead(), file, actionDesign.getName());
 		design = null;
+		updateElements();
+	}
+
+	private void updateElements() {
+
+		// updating HUD
+		for (HUD tempGUI : HUDList.getList().getList()) {
+			if (tempGUI instanceof HUDTools)
+				((HUDTools) tempGUI).loadImages(null);
+		}
+
+		for (LAYER tempLayer : LAYER.values()) {
+			if (tempLayer.isMapLayer() == false)
+				break;
+
+			for (Updatable tempObject : tempLayer.getHandler().getList()) {
+
+				// updating tools
+				if (tempObject instanceof ToolObject)
+					((ToolObject) tempObject).refresh();
+
+				// updating puzzlers
+				if (tempObject instanceof PuzzlerObject)
+					((PuzzlerObject) tempObject).refresh();
+
+				// updating requirement bubble
+				if (tempObject instanceof RequirementBubbleObject)
+					((RequirementBubbleObject) tempObject).refresh();
+			}
+		}
 	}
 
 	////////// ACTION HIGHLIGHT ////////////
@@ -100,22 +138,22 @@ public class ActionOption {
 			return null;
 		}
 	}
-	
+
 	////////// ACTION DESIGN ////////////
-	
+
 	public enum ACTION_DESIGN {
 		COLOR("color"), NUMBER("number");
-	
+
 		ACTION_DESIGN(String name) {
 			this.name = name;
 		}
-	
+
 		private String name;
-	
+
 		public String getName() {
 			return name;
 		}
-	
+
 		public ACTION_DESIGN getPrevious() {
 			switch (name) {
 			case "color":
@@ -125,7 +163,7 @@ public class ActionOption {
 			}
 			return null;
 		}
-	
+
 		public ACTION_DESIGN getNext() {
 			switch (name) {
 			case "number":

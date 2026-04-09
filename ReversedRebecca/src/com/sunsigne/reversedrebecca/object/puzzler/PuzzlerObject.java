@@ -127,7 +127,7 @@ public abstract class PuzzlerObject extends GameObject
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLER;
 	}
-	
+
 	////////// TEXTURE ////////////
 
 	protected BufferedImage image;
@@ -138,6 +138,11 @@ public abstract class PuzzlerObject extends GameObject
 		return 1 + getDifficulty().ordinal();
 	}
 
+	public void refresh() {
+		image = null;
+		highlightImage = null;
+	}
+	
 	public abstract BufferedImage getImage();
 
 	public abstract BufferedImage getHighlightImage();
