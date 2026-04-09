@@ -229,3 +229,16 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si oui, effectuer l'action GO (qui est une autre balise GOTO).
 
 Note : dans notre exemple la 3ème Instruction forme une boucle avec la seconde. De cette façon, l'action GO s'effectuera lorsque le joueur sera « prêt » (puisque cette boucle-ci implique que la Condition soit vérifiée chaque seconde jusqu'à ce qu'elle soit validée).
+
+
+
+////// NUMBER_SETTINGS //////
+
+Le Type de Requête NUMBER_SETTINGS permet de vérifier si le réglage concernant les niveau est configuré sur « sans couleurs ».
+
+Exemple :
+TIME -> 100 = GOTO -> PARSE_NUMBER
+$ -> PARSE_NUMBER = NUMBER_SETTINGS -> TRUE ? DO_A / DO_B
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le réglage des niveau est-il défini sur « chiffre ? » ?
+- si oui, effectuer DO_A, si non, effectuer DO_B.
