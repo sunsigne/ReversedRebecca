@@ -60,9 +60,6 @@
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
-	bug GB :
-		- lvl002 : impossible de lancer le niveau. Du au nouveau code Piranha sur le TimeCondition ?
-	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	puzzle : cliquer = impact
