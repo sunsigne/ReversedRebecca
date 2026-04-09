@@ -57,7 +57,8 @@ public class ChestObject extends PuzzlerObject {
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "chest");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "chest" + number);
 			image = getSheetSubImage(sheet);
 		}
 		return image;
