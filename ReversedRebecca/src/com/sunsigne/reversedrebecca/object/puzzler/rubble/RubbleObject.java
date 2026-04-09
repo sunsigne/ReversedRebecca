@@ -68,7 +68,8 @@ public class RubbleObject extends PuzzlerObject {
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "rubble");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "rubble" + number);
 			image = getSheetSubImage(sheet);
 		}
 		return image;
