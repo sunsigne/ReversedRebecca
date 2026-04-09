@@ -21,6 +21,12 @@ player = object = happy = En échange de la pelle cyan, j'ai accès à l'intéri
 player = object = laugh = Je vole les documents, et je pars avec.
 
 
+% ARCHIVES_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = happy = En échange de la pelle 1, j'ai accès à l'intérieur@de la cellule ; donc aux archives.
+player = object = laugh = Je vole les documents, et je pars avec.
+
+
 % EXIT
 player = object = asleep = Voyons voir…
 player = object = you_silly = Je peux sortir grâce à ma pelle. Je dois@juste trouver l'endroit idéal pour creuser.

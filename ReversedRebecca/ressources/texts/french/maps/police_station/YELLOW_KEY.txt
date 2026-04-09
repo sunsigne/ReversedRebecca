@@ -50,8 +50,21 @@ player = doug = wrong_with_you = Minute… Elle marche comment cette clé jaune 
 doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
+% DOUG_YELLOW_KEY_EVIL_NUMBER_SETTINGS
+player = doug = wrong_with_you = Minute… Elle marche comment cette clé 3 ?
+doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+
+
 % DOUG_YELLOW_KEY_NEUTRAL
 player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
+doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
+player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
+doug = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
+doug = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+
+
+% DOUG_YELLOW_KEY_NEUTRAL_NUMBER_SETTINGS
+player = doug = worry = Heu… Je ne sais pas me servir d'une clé 3…
 doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
 player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
 doug = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
@@ -64,6 +77,14 @@ player = doug = laugh = D'accord, merci !
 
 % DOUG_YELLOW_KEY_GOOD
 player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
+doug = player = serious = Ça ne me surprend pas d'une gentille fille.
+player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
+doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.
+player = doug = sad = (Bon… Un autre détenu m'aidera surement…)
+
+
+% DOUG_YELLOW_KEY_GOOD_NUMBER_SETTINGS
+player = doug = worry = Heu… Je ne sais pas me servir d'une clé 3…
 doug = player = serious = Ça ne me surprend pas d'une gentille fille.
 player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
 doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.

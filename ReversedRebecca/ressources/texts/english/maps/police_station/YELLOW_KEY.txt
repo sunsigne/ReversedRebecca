@@ -50,8 +50,21 @@ player = doug = wrong_with_you = Wait… How does this yellow key work?
 doug = player = serious = Right, sorry. Here's the trick: if the key gets stuck,@twist the handle lightly.
 
 
+% DOUG_YELLOW_KEY_EVIL_NUMBER_SETTINGS
+player = doug = wrong_with_you = Wait… How does this key 3 work?
+doug = player = serious = Right, sorry. Here's the trick: if the key gets stuck,@twist the handle lightly.
+
+
 % DOUG_YELLOW_KEY_NEUTRAL
 player = doug = worry = Um… I don't know how to use a yellow key…
+doug = player = intrigued = … Why is that only half surprising me?
+player = doug = unhappy_var = Aren't you going to teach me?
+doug = player = serious = I could… Maybe it'll motivate you to unlock@the weapons room…
+doug = player = serious = Okay, fine. Here's the trick: if the key gets stuck,@twist the handle lightly.
+
+
+% DOUG_YELLOW_KEY_NEUTRAL_NUMBER_SETTINGS
+player = doug = worry = Um… I don't know how to use a key 3…
 doug = player = intrigued = … Why is that only half surprising me?
 player = doug = unhappy_var = Aren't you going to teach me?
 doug = player = serious = I could… Maybe it'll motivate you to unlock@the weapons room…
@@ -64,6 +77,14 @@ player = doug = laugh = Okay, thanks!
 
 % DOUG_YELLOW_KEY_GOOD
 player = doug = worry = Um… I don't know how to use a yellow key…
+doug = player = serious = That doesn't surprise me from a nice girl.
+player = doug = unhappy_var = Aren't you going to teach me?
+doug = player = serious = Do I look like a teacher? Figure it out.
+player = doug = sad = (Well… Another inmate will probably help me…)
+
+
+% DOUG_YELLOW_KEY_GOOD_NUMBER_SETTINGS
+player = doug = worry = Um… I don't know how to use key 3…
 doug = player = serious = That doesn't surprise me from a nice girl.
 player = doug = unhappy_var = Aren't you going to teach me?
 doug = player = serious = Do I look like a teacher? Figure it out.

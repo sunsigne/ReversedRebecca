@@ -15,6 +15,15 @@ doug = player = serious = Toi, tu as une tête à vouloir accéder aux@archives.
 doug = player = serious = En échange d'une pelle cyan, je te donnerai@la clef jaune qu'il te faut. Deal ?
 
 
+% MEET_NEXT_NUMBER_SETTINGS
+player = doug = wrong_with_you = Et alors ? De quoi je me mêle ?
+doug = player = serious = Tout doux +surname_doug, chui pas là pour te dénoncer.
+doug = player = serious = En fait, je me disais qu'on pouvait peut-être@s'aider mutuellement. Ça t'intéresse ?
+player = doug = unhappy_var = Développe ton idée ?
+doug = player = serious = Toi, tu as une tête à vouloir accéder aux@archives. Moi, je cherche à me barrer d'ici.
+doug = player = serious = En échange d'une pelle 1, je te donnerai@la clef 3 qu'il te faut. Deal ?
+
+
 % MEET_BOMB
 player = doug = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosive.
 doug = player = intrigued = Vraiment ?
@@ -27,9 +36,26 @@ doug = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peu
 doug = player = serious = Alors ? Deal ?
 
 
+% MEET_BOMB_NUMBER_SETTINGS
+player = doug = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosive.
+doug = player = intrigued = Vraiment ?
+doug = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant pêter ce mur.
+doug = player = serious = On va faire ça. Tu me trouves une pelle 1,@et je t'ouvre la porte de la cellule. Deal ?
+player = doug = no_sens_var = Une seconde…@Tu dis pouvoir déverouiller ta cellule ?!
+doug = player = intrigued = Et alors ?
+player = doug = unhappy_var = Alors, pourquoi tu as besoin d'une pelle ?@Tu peux déjà t'enfuir !
+doug = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peux sortir, mais pas aller très loin.
+doug = player = serious = Alors ? Deal ?
+
+
 % NO_DEAL_BOMB_NEXT
 player = doug = unhappy_var = Tu proposes quoi, déjà ?
 doug = player = intrigued = Une pelle cyan contre l'accès à notre cellule. Deal ?
+
+
+% NO_DEAL_BOMB_NEXT_NUMBER_SETTINGS
+player = doug = unhappy_var = Tu proposes quoi, déjà ?
+doug = player = intrigued = Une pelle 1 contre l'accès à notre cellule. Deal ?
 
 
 % BARGAIN_BOMB_DEAL
@@ -46,8 +72,25 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
+% YES_BOMB_DEAL_NUMBER_SETTINGS
+doug = player = serious = Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin de divertir le commissaire.
+doug = player = serious = Envoie-lui un email sur son téléphone@depuis l'ordinateur d'un autre policier.
+player = doug = happy_var = Merci.
+doug = player = serious = Bonne chance, +surname_doug.
+
+
 % YES_BOMB_DEAL_SPEEDRUN
 doug = player = serious = Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin de divertir le commissaire.
+player = doug = you_silly_var = Ouais… Ouais…@Je ne t'ai pas attendu pour me débrouiller…
+player = doug = happy = En fait, j'ai déjà ta pelle sur moi.
+doug = player = intrigued = Vraiment ? Pourquoi tu ne l'as pas dit ?
+player = doug = angry = Tu ne m'a pas demandé, que je sache !
+player = doug = you_silly_var = Bref, peu importe. Voilà ma part du contrat.
+doug = player = serious = Et voilà la mienne, admire l'artiste.
+
+
+% YES_BOMB_DEAL_SPEEDRUN_NUMBER_SETTINGS
+doug = player = serious = Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin de divertir le commissaire.
 player = doug = you_silly_var = Ouais… Ouais…@Je ne t'ai pas attendu pour me débrouiller…
 player = doug = happy = En fait, j'ai déjà ta pelle sur moi.
 doug = player = intrigued = Vraiment ? Pourquoi tu ne l'as pas dit ?
@@ -75,6 +118,11 @@ player = doug = unhappy_var = Tu proposes quoi, déjà ?
 doug = player = intrigued = Une pelle cyan contre une clef jaune. Deal ?
 
 
+% NO_DEAL_NEXT_NUMBER_SETTINGS
+player = doug = unhappy_var = Tu proposes quoi, déjà ?
+doug = player = intrigued = Une pelle 1 contre une clef 3. Deal ?
+
+
 % BARGAIN_DEAL
 doug = player = intrigued = Intéressant… Tu penses à quoi ?
 player = doug = happy_var = Augmente mon niveau de compétence@avec les clefs !
@@ -85,6 +133,13 @@ doug = player = serious = Bah, peu importe. Admire l'artiste.
 % YES_DEAL
 doug = player = serious = Ok. Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
 doug = player = serious = Il y a une clef verte dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
+player = doug = happy_var = Merci.
+doug = player = serious = Bonne chance, +surname_doug.
+
+
+% YES_DEAL_NUMBER_SETTINGS
+doug = player = serious = Ok. Petit tuyau : pour obtenir la cyan 1,@tu vas avoir besoin d'une clef 2.
+doug = player = serious = Il y a une clef 2 dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
@@ -118,6 +173,13 @@ player = doug = happy_var = Merci.
 doug = player = serious = Bonne chance, +surname_doug.
 
 
+% BARGAIN_DEAL_NEXT_NUMBER_SETTINGS
+doug = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin d'une clef 2.
+doug = player = serious = Il y a une clef 2 dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
+player = doug = happy_var = Merci.
+doug = player = serious = Bonne chance, +surname_doug.
+
+
 % PLANT
 player = doug = worry = Qu'est-ce que je dois faire, déjà ?
 doug = player = serious = J'ai une tête de panneau d'information ?@Va demander à une plante verte.
@@ -132,6 +194,13 @@ doug = player = serious = Doug.
 player = doug = happy_var = Voilà ta clé !
 doug = player = intrigued = Je ne t'ai pas demandé de clé verte…
 doug = player = serious = Je t'ai demandé une pelle cyan. Mais avec ta clé,@tu devrais facilement pouvoir aller la chercher.
+player = doug = happy_var = Au temps pour moi.
+
+
+% GIVE_THE_GREEN_KEY_NUMBER_SETTINGS
+player = doug = happy_var = Voilà ta clé !
+doug = player = intrigued = Je ne t'ai pas demandé de clé 2…
+doug = player = serious = Je t'ai demandé une pelle 1. Mais avec ta clé,@tu devrais facilement pouvoir aller la chercher.
 player = doug = happy_var = Au temps pour moi.
 
 

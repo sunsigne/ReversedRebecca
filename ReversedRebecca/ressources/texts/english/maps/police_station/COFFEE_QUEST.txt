@@ -72,10 +72,20 @@ policeman = player = butch = It's probably the chief who asked you anyway.@Bring
 policeman = player = butch = Thank you. As promised, here's the green key.
 
 
+% BUTCH_TRADE_NUMBER_SETTINGS
+policeman = player = butch = Thank you. As promised, here's the key 2.
+
+
 % BUTCH_SPAT
 policeman = player = butch = … … …
 policeman = player = butch_smirk = …
 policeman = player = butch = As promised, here's the green key.
+
+
+% BUTCH_SPAT_NUMBER_SETTINGS
+policeman = player = butch = … … …
+policeman = player = butch_smirk = …
+policeman = player = butch = As promised, here's the key 2.
 
 
 % BUTCH_TRADE_NEXT

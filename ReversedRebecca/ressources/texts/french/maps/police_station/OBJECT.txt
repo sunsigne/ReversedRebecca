@@ -28,7 +28,7 @@ player = LEFT = sad = Je me suis approchée trop près des barbelés.
 
 
 % MASTER_KEY
-player = object = excited = Quelle chance ! Ça n'est pas jsute des clés,@c'est un passe-partout !
+player = object = excited = Quelle chance ! Ça n'est pas juste des clés,@c'est un passe-partout !
 
 
 % STEAL_PLANT_EVIL
@@ -70,8 +70,18 @@ player = LEFT = no_sens = Heu… Je ne sais pas comment il s'appelle…
 player = LEFT = you_silly = Il faudra que je pense à lui demander son prénom.
 
 
+% SHOVEL_NUMBER_SETTINGS
+player = LEFT = laugh = Deux pelles 1 d'un coup ! Quelle chance !@Une pour moi, et une pour…
+player = LEFT = no_sens = Heu… Je ne sais pas comment il s'appelle…
+player = LEFT = you_silly = Il faudra que je pense à lui demander son prénom.
+
+
 % SHOVEL_DOUGLESS
 player = LEFT = laugh = Deux pelles cyan d'un coup ! Quelle chance !
+
+
+% SHOVEL_DOUGLESS_NUMBER_SETTINGS
+player = LEFT = laugh = Deux pelles 1 d'un coup ! Quelle chance !
 
 
 % CANT_USE_TOILET
@@ -117,6 +127,10 @@ player = DOWN = you_silly_var = Je devrais attendre que le commissaire soit@de r
 
 % EMAIL_WHILE_SHOVEL
 player = DOWN = sad = Je n'ai aucune raison de faire ça,@j'ai déjà récupérer la pelle cyan.
+
+
+% EMAIL_WHILE_SHOVEL_NUMBER_SETTINGS
+player = DOWN = sad = Je n'ai aucune raison de faire ça,@j'ai déjà récupérer la pelle 1.
 
 
 % TROPHY

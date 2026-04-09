@@ -23,6 +23,13 @@ player = object = sad_var = Pas de panique Rebecca… Réfléchis…
 player = object = angry = La première chose à faire, c'est de récupérer@la clé cyan sur le bureau de cette vilaine policière.
 
 
+% SARAH_DETENTION_KEY_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = surprised = Sarah a été enfermée !
+player = object = sad_var = Pas de panique Rebecca… Réfléchis…
+player = object = angry = La première chose à faire, c'est de récupérer@la clé 1 sur le bureau de cette vilaine policière.
+
+
 % SARAH_DETENTION
 player = object = asleep = Voyons voir…
 player = object = surprised = Sarah a été enfermée !
@@ -39,6 +46,11 @@ player = object = sad = Seul un criminel pourrait m'aider à l'heure actuelle.
 % GREEN_KEY
 player = object = asleep = Voyons voir…
 player = object = happy = Je dois demander la clef verte au policier@dans le bureau avec des barreaux.
+
+
+% GREEN_KEY_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = happy = Je dois demander la clef 2 au policier@dans le bureau avec des barreaux.
 
 
 % COFFEE
@@ -67,6 +79,12 @@ player = object = laugh = J'ai récupéré un donut ! Je n'ai plus qu'à@l'écha
 player = object = asleep = Voyons voir…
 player = object = convinced = Grâce à la clef verte, je récupère une pelle cyan.
 player = object = convinced = Grâce à la pelle cyan, je gagne la clef jaune@auprès du mystérieux détenu.
+
+
+% ARCHIVES_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = convinced = Grâce à la clef 2, je récupère une pelle 1.
+player = object = convinced = Grâce à la pelle 1, je gagne la clef 3@auprès du mystérieux détenu.
 
 
 % TEDDY_YELLOW_KEY

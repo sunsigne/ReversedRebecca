@@ -2,20 +2,30 @@
 player = object = asleep = Let's see…
 player = object = convinced = I have to go outside and blow up a wall@to find an entrance.
 
+
 % CRIMINAL
 player = object = asleep = Let's see…
 player = object = unhappy = I did draw attention with the explosion.@I can't be seen by a police officer.
 player = object = sad = Only a criminal could help me right now.
+
 
 % EMAIL_DESK
 player = object = asleep = Let's see…
 player = object = convinced = I have to distract the commissioner@with an email to his phone to access his office.
 player = object = happy_var = The police officer's computer in the bathroom@will do the trick!
 
+
 % ARCHIVES
 player = object = asleep = Let's see…
 player = object = happy = In exchange for the cyan shovel, I have access to@the inside of the cell; therefore, to the archives.
 player = object = laugh = I steal the documents and leave with them.
+
+
+% ARCHIVES_NUMBER_SETTINGS
+player = object = asleep = Let's see…
+player = object = happy = In exchange for the shovel 1, I have access to@the inside of the cell; therefore, to the archives.
+player = object = laugh = I steal the documents and leave with them.
+
 
 % EXIT
 player = object = asleep = Let's see…

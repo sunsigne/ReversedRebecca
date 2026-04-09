@@ -63,13 +63,23 @@ player = DOWN = unhappy = I won't fool anyone… I blew up a wall…@The police 
 
 
 % SHOVEL
-player = LEFT = laugh = Two cyan shovels at once! How lucky!@One for me, and one for…
+player = LEFT = laugh = Two cyan shovels at once! Lucky me!@One for me, and one for…
+player = LEFT = no_sens = Um… I don't know his first name…
+player = LEFT = you_silly = I'll have to remember to ask him.
+
+
+% SHOVEL_NUMBER_SETTINGS
+player = LEFT = laugh = Two shovels 1 at once! Lucky me!@One for me, and one for…
 player = LEFT = no_sens = Um… I don't know his first name…
 player = LEFT = you_silly = I'll have to remember to ask him.
 
 
 % SHOVEL_DOUGLESS
-player = LEFT = laugh = Two cyan shovels at once! How lucky!
+player = LEFT = laugh = Two cyan shovels at once! Lucky me!
+
+
+% SHOVEL_DOUGLESS_NUMBER_SETTINGS
+player = LEFT = laugh = Two shovels 1 at once! Lucky me!
 
 
 % CANT_USE_TOILET
@@ -115,6 +125,10 @@ player = DOWN = you_silly_var = I should wait until the commissioner is@back to 
 
 % EMAIL_WHILE_SHOVEL
 player = DOWN = sad = I have no reason to do this,@I already got the cyan shovel.
+
+
+% EMAIL_WHILE_SHOVEL_NUMBER_SETTINGS
+player = DOWN = sad = I have no reason to do this,@I already got the shovel 1.
 
 
 % TROPHY

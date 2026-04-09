@@ -15,6 +15,15 @@ doug = player = serious = You look like you want to access the archives.@I'm try
 doug = player = serious = In exchange for a cyan shovel,@I'll give you the yellow key you need. Deal?
 
 
+% MEET_NEXT_NUMBER_SETTINGS
+player = doug = wrong_with_you = So what? What's my business?
+doug = player = serious = Easy +surname_doug, 'not going to rat you out.
+doug = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
+player = doug = unhappy_var = Elaborate?
+doug = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
+doug = player = serious = In exchange for a shovel 1,@I'll give you the key 3 you need. Deal?
+
+
 % MEET_BOMB
 player = doug = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
 doug = player = intrigued = Really?
@@ -27,9 +36,26 @@ doug = player = intrigued = And where to? There are cops everywhere.@I can get o
 doug = player = serious = So? Deal?
 
 
+% MEET_BOMB_NUMBER_SETTINGS
+player = doug = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
+doug = player = intrigued = Really?
+doug = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
+doug = player = serious = Let's do that. You find me a shovel 1,@and I'll open the cell door for you. Deal?
+player = doug = no_sens_var = Wait… You're telling me you can unlock@your cell?!
+doug = player = intrigued = So what?
+player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
+doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+doug = player = serious = So? Deal?
+
+
 % NO_DEAL_BOMB_NEXT
 player = doug = unhappy_var = What are you offering, again?
 doug = player = intrigued = A cyan shovel in exchange for access to our cell.@Deal?
+
+
+% NO_DEAL_BOMB_NEXT_NUMBER_SETTINGS
+player = doug = unhappy_var = What are you offering, again?
+doug = player = intrigued = A shovel 1 in exchange for access to our cell.@Deal?
 
 
 % BARGAIN_BOMB_DEAL
@@ -46,8 +72,25 @@ player = doug = happy_var = Thank you.
 doug = player = serious = Good luck, +surname_doug.
 
 
+% YES_BOMB_DEAL_NUMBER_SETTINGS
+doug = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
+doug = player = serious = Send him an email to his phone from another@officer's computer.
+player = doug = happy_var = Thank you.
+doug = player = serious = Good luck, +surname_doug.
+
+
 % YES_BOMB_DEAL_SPEEDRUN
 doug = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
+player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
+player = doug = happy = Actually, I already have your shovel with me.
+doug = player = intrigued = Really? Why didn't you say so?
+player = doug = angry = You didn't ask me, as far as I know!
+player = doug = you_silly_var = Anyway… Here's my part of the deal. 
+doug = player = serious = And here's mine. Watch the move.
+
+
+% YES_BOMB_DEAL_SPEEDRUN_NUMBER_SETTINGS
+doug = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
 player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
 player = doug = happy = Actually, I already have your shovel with me.
 doug = player = intrigued = Really? Why didn't you say so?
@@ -75,6 +118,11 @@ player = doug = unhappy_var =  What are you offering, again?
 doug = player = intrigued = A cyan shovel for a yellow key. Deal?
 
 
+% NO_DEAL_NEXT_NUMBER_SETTINGS
+player = doug = unhappy_var =  What are you offering, again?
+doug = player = intrigued = A shovel 1 for a key 3. Deal?
+
+
 % BARGAIN_DEAL
 doug = player = intrigued = Interesting… What's in your mind?
 player = doug = happy_var = Increase my skill level with the keys!
@@ -85,6 +133,13 @@ doug = player = serious = Yeah, whatever. Watch the move.
 % YES_DEAL
 doug = player = serious = Ok. Quick tip: to get the cyan shovel,@you'll need a green key.
 doug = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
+player = doug = happy_var = Thanks.
+doug = player = serious = Good luck, +surname_doug.
+
+
+% YES_DEAL_NUMBER_SETTINGS
+doug = player = serious = Ok. Quick tip: to get the shovel 1,@you'll need a key 2.
+doug = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
 player = doug = happy_var = Thanks.
 doug = player = serious = Good luck, +surname_doug.
 
@@ -118,6 +173,13 @@ player = doug = happy_var = Thanks.
 doug = player = serious = Good luck, +surname_doug.
 
 
+% BARGAIN_DEAL_NEXT_NUMBER_SETTINGS
+doug = player = serious = By the way! Quick tip: to get the shovel 1,@you'll need a key 2.
+doug = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
+player = doug = happy_var = Thanks.
+doug = player = serious = Good luck, +surname_doug.
+
+
 % PLANT
 player = doug = worry = What should I do again?
 doug = player = serious = Do I look like an information sign?@Go ask a plant.
@@ -132,6 +194,13 @@ doug = player = serious = Doug.
 player = doug = happy_var = Here's your key!
 doug = player = intrigued = I didn't ask for a green key…
 doug = player = serious = I asked for a cyan shovel. But with your key,@you should be able to easily get it.
+player = doug = happy_var = My bad.
+
+
+% GIVE_THE_GREEN_KEY_NUMBER_SETTINGS
+player = doug = happy_var = Here's your key!
+doug = player = intrigued = I didn't ask for a key 2…
+doug = player = serious = I asked for a shovel 1. But with your key,@you should be able to easily get it.
 player = doug = happy_var = My bad.
 
 
