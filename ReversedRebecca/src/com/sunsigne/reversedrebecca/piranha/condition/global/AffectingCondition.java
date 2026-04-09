@@ -32,23 +32,28 @@ public class AffectingCondition extends GlobalInstruction {
 
 	public void registerValue(String name, String value) {
 		String condition = getConditionType() + value;
-		PiranhaObject object = getPiranhaByName(name);
-		analyse(object, condition);
+		GameList<PiranhaObject> list = getPiranhaByName(name);
+		for (PiranhaObject tempObject : list.getList())
+			analyse(tempObject, condition);
 	}
 
-	private PiranhaObject getPiranhaByName(String name) {
+	private GameList<PiranhaObject> getPiranhaByName(String name) {
+		var list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
 
 		// look for exact match
 		for (PiranhaObject tempObject : getPiranhaList().getList())
 			if (tempObject.getName().equalsIgnoreCase(name))
-				return tempObject;
+				list.addObject(tempObject);
+
+		if (list.getList().isEmpty() == false)
+			return list;
 
 		// if not found, name close to
 		for (PiranhaObject tempObject : getPiranhaList().getList())
 			if (tempObject.getName().contains(name))
-				return tempObject;
+				list.addObject(tempObject);
 
-		return null;
+		return list;
 	}
 
 	////////// OPTIMIZATION ////////////
