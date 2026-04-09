@@ -42,9 +42,9 @@
 	////////// EN COURS ////////////
 	
 	daltonien :
-	- ne pas oblier l'objet "decoration/door_215" à adapter
-	- le changement de mode "pendant niveau" ne peux pas fonctionner à cause des ACTIONS
-	- convertir les caisses
+	- convertir les actions en temps réel (commissariat)
+	- convertir les caisses en temps réel (novatech, commissariat ET miliraty)
+	- ne pas oublier l'objet "decoration/door_215" à adapter
 	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
 
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
