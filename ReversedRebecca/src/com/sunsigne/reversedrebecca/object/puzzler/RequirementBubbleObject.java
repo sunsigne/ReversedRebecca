@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -32,6 +34,10 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 	private ToolPlayer tool;
 	private LVL difficulty;
 
+	private boolean isNumberSettings() {
+		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER;
+	}
+
 	////////// NAME ////////////
 
 	@Override
@@ -49,7 +55,7 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.BUBBLE;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override
@@ -60,8 +66,8 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage tool_image;
-	private BufferedImage difficulty_image;
+	private BufferedImage tool_image, tool_image_num;
+	private BufferedImage difficulty_image, difficulty_image_num;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -78,25 +84,26 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 		return 128;
 	}
 
-	public void refresh() {
-		tool_image = null;
-		difficulty_image = null;
-	}
-	
 	public BufferedImage getToolImage() {
-		if (tool_image == null) {
-			BufferedImage sheet = tool_image = new ImageTask().loadImage("textures/tools/" + "tool");
+		if (tool_image == null || tool_image_num == null) {
+			BufferedImage sheet = null;
+			sheet = new ImageTask().loadImage("textures/tools/" + "tool");
 			tool_image = getSheetSubImage(sheet, 1, tool.getNum(), 16, 16);
+			sheet = new ImageTask().loadImage("textures/tools/" + "tool" + "_number");
+			tool_image_num = getSheetSubImage(sheet, 1 + difficulty.ordinal(), tool.getNum(), 16, 16);
 		}
-		return tool_image;
+		return isNumberSettings() ? tool_image_num : tool_image;
 	}
 
 	public BufferedImage getDifficultyImage() {
-		if (difficulty_image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "requirement");
+		if (difficulty_image == null || difficulty_image_num == null) {
+			BufferedImage sheet = null;
+			sheet = new ImageTask().loadImage("textures/hud/" + "requirement");
 			difficulty_image = getSheetSubImage(sheet);
+			sheet = new ImageTask().loadImage("textures/hud/" + "requirement" + "_number");
+			difficulty_image_num = getSheetSubImage(sheet);
 		}
-		return difficulty_image;
+		return isNumberSettings() ? difficulty_image_num : difficulty_image;
 	}
 
 	////////// RENDER ////////////
@@ -107,7 +114,7 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 	public boolean isVisible() {
 		return visible;
 	}
-	
+
 	// besure correct display without blinking or misplacement
 	public void setVisible(boolean visible) {
 		if (visible) {

@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.hud.HUDTools;
 import com.sunsigne.reversedrebecca.object.loot.ToolObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -95,10 +94,6 @@ public class ActionOption {
 				// updating puzzlers
 				if (tempObject instanceof PuzzlerObject)
 					((PuzzlerObject) tempObject).refresh();
-
-				// updating requirement bubble
-				if (tempObject instanceof RequirementBubbleObject)
-					((RequirementBubbleObject) tempObject).refresh();
 			}
 		}
 	}

@@ -46,7 +46,6 @@
 	- convertir les caisses
 	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
 	- changer les puzzlers + vérifier si s'adapte PENDANT un niveau si le paramétrage est changé (en principe oui)
-	- la bulle de prérequis pas fait + vérifier si s'adapte PENDANT un niveau si le paramétrage est changé (en principe oui)
 	
 	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	
