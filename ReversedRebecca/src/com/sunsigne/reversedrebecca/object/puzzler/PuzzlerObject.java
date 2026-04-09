@@ -9,7 +9,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -41,6 +43,10 @@ public abstract class PuzzlerObject extends GameObject
 	protected void init() {
 		loadTripleAction();
 		createTextAction();
+	}
+
+	protected boolean isNumberSettings() {
+		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER;
 	}
 
 	////////// NAME ////////////

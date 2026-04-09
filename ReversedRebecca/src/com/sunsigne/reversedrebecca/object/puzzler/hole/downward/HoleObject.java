@@ -70,7 +70,8 @@ public class HoleObject extends PuzzlerObject implements Facing {
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole" + number);
 			image = getSheetSubImage(sheet);
 		}
 		return image;
@@ -79,7 +80,8 @@ public class HoleObject extends PuzzlerObject implements Facing {
 	@Override
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole" + "_" + "highlight");
+			String number = isNumberSettings() && getDifficulty() != LVL.NULL ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "hole" + "_" + "highlight" + number);
 			highlightImage = getSheetSubImage(sheet, 1, getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}

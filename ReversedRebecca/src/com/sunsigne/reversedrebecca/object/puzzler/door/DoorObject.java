@@ -54,7 +54,8 @@ public class DoorObject extends PuzzlerObject {
 	public BufferedImage getImage()
 	{
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "door");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "door" + number);
 			image = getSheetSubImage(sheet);
 		}
 		return image;

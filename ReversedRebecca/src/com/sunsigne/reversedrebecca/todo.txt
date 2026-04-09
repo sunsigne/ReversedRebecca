@@ -42,6 +42,7 @@
 	////////// EN COURS ////////////
 	
 	daltonien :
+	- ne pas oblier l'objet "decoration/door_215" à adapter
 	- le changement de mode "pendant niveau" ne peux pas fonctionner à cause des ACTIONS
 	- convertir les caisses
 	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
