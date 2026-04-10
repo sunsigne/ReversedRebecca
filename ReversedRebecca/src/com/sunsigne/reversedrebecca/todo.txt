@@ -42,7 +42,6 @@
 	////////// EN COURS ////////////
 	
 	daltonien :
-	- convertir les actions en temps réel (commissariat)
 	- convertir les caisses en temps réel (novatech, commissariat ET miliraty)
 	- ne pas oublier l'objet "decoration/door_215" à adapter
 	- le menu ne s'adapte pas encore (logique, vu que le puzzler du coffre n'existe pas encore)
