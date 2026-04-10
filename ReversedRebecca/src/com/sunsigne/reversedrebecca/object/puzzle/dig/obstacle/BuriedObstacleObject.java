@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.ParticleDigAnimation;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -119,6 +120,7 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getSuccessSound());
 		LAYER.PUZZLE.getHandler().addObject(buriedObject);
+		ParticleDigAnimation.generate(getPuzzle(), getX(), getY(), getState());
 		deleting = true;
 
 	}

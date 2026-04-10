@@ -13,6 +13,8 @@
 	activer le updatescreen (Conductor)
 	
 	////////// BUG ////////////
+	
+	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 
 	pas réglé :
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
@@ -41,21 +43,13 @@
 
 	////////// EN COURS ////////////
 
-	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-	
-	puzzle : 
-		dig : creuser doit créer un visuel "d'impact"
+	////////// EXPERIENCE UTILISATEUR ////////////
 
-	experience utilisateur : 
+	note : puzzle : cliquer = impact
 	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.) ET! ne pas oublier que la plante HUD dans novatech fait du bruit (ce qui serait bizarre sans le highlight)
 	la plante HUD de novatech est-il bien un choix final ?
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
-
-	////////// EXPERIENCE UTILISATEUR ////////////
-
-	puzzle : cliquer = impact
-	daltonien : camp militaire non convertie (dialogues et caisses)
 
 	////////// GAMEPAD ////////////
 

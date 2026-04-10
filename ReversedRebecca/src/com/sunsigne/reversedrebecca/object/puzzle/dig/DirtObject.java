@@ -135,6 +135,9 @@ public class DirtObject extends DigPuzzleObject implements SheetableImage {
 				new SoundTask().playSound(SOUNDTYPE.SOUND, "dig");
 			LAYER.PUZZLE.getHandler().addObject(buriedObject);
 			deleting = true;
+
+			if (getBuriedObject() instanceof BuriedNullObject)
+				ParticleDigAnimation.generate(getPuzzle(), getX(), getY(), DIG_STATE.DIG);
 		}
 
 		if (state != DIG_STATE.PUNCH && state != DIG_STATE.DIG && state != DIG_STATE.DIGPICK)

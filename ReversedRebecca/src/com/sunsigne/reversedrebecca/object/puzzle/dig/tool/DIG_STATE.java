@@ -17,6 +17,10 @@ public enum DIG_STATE implements SheetableImage, PhysicFree, TickFree, RenderFre
 		this.tool = tool;
 	}
 
+	public String getName() {
+		return tool;
+	}
+	
 	////////// TEXTURE ////////////
 
 	@Override

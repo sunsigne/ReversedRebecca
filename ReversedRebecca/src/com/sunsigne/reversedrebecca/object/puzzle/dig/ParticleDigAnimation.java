@@ -1,16 +1,21 @@
 package com.sunsigne.reversedrebecca.object.puzzle.dig;
 
 import com.sunsigne.reversedrebecca.object.animation.DigAnimationObject;
+import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.Size;
 
 public class ParticleDigAnimation extends DigAnimationObject {
 
-	public static void generate(DigPuzzle puzzle, int x, int y) {
-		ParticleDigAnimation particles = new ParticleDigAnimation(puzzle, x, y);
+	public static void generate(DigPuzzle puzzle, int x, int y, DIG_STATE state) {
+		ParticleDigAnimation particles = new ParticleDigAnimation(puzzle, x, y) {
+			@Override
+			public String getName() {
+				return super.getName() + "_" + state.getName();
+			}
+		};
 
 		GenericListener listener = () -> {
 			if (LAYER.PUZZLE.getHandler().getList().isEmpty() == false)
@@ -20,24 +25,30 @@ public class ParticleDigAnimation extends DigAnimationObject {
 		new GameTimer(1, true, listener);
 	}
 
-	private ParticleDigAnimation(DigPuzzle puzzle, int x, int y) {
-		super(x + Size.XS / 8, y + Size.XS / 8);
+	protected ParticleDigAnimation(DigPuzzle puzzle, int x, int y) {
+		super(x + puzzle.getSize() / 8, y + puzzle.getSize() / 6);
 		this.puzzle = puzzle;
-
 	}
 
 	private DigPuzzle puzzle;
+
+	////////// NAME ////////////
+
+	@Override
+	public String getName() {
+		return "particles";
+	}
 
 	////////// SIZE ////////////
 
 	@Override
 	public int getWidth() {
-		return puzzle.getSize();
+		return 3 * puzzle.getSize() / 4;
 	}
 
 	@Override
 	public int getHeight() {
-		return puzzle.getSize();
+		return 3 * puzzle.getSize() / 4;
 	}
 
 	////////// TICK ////////////
