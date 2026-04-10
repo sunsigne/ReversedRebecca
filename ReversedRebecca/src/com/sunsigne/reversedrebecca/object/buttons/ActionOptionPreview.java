@@ -4,12 +4,14 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.KeyToolPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.chest.ChestObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -22,6 +24,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class ActionOptionPreview extends GameObject implements SheetableImage {
 
@@ -48,9 +51,16 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	////////// TICK ////////////
 
 	private Font font;
+	private int time, sec;
 
 	@Override
 	public void tick() {
+		time++;
+		if (time >= (4 * Game.SEC / 3)) {
+			time = 0;
+			sec++;
+		}
+
 		float size = 24f / (float) Math.sqrt(Window.SCALE_X);
 		font = new FontTask().createNewFont("square_sans_serif_7.ttf", size * TextsOption.getSize());
 		if (puzzler != null)
@@ -60,6 +70,7 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	////////// TEXTURE ////////////
 
 	private PuzzlerObject puzzler;
+	private RequirementBubbleObject requirementBubble;
 
 	private void loadPuzzler() {
 		puzzler = new ChestObject(LVL.YELLOW, -1, getX(), getY(), false) {
@@ -68,6 +79,16 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 				return ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;
 			};
 		};
+
+		requirementBubble = new RequirementBubbleObject(getX() - 150, getY() - 10, new KeyToolPlayer(),
+				puzzler.getDifficulty()) {
+			@Override
+			public boolean isVisible() {
+				return true;
+			}
+		};
+
+		requirementBubble.setVisible(true);
 	}
 
 	private BufferedImage rebecca_img;
@@ -102,7 +123,10 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 		g.drawImage(puzzler.getImage(), getX() + 100 - gap, getY(), getWidth(), getHeight(), null);
 		puzzler.drawHighlight(g, puzzler.getHighlightImage(), 100 - gap, 0, 0, 0);
 
-		drawTextAction(g, text, gap);
+		if (sec % 2 == 0)
+			drawTextAction(g, text, gap);
+		else
+			requirementBubble.render(g);
 	}
 
 	private void drawTextAction(Graphics g, String text, int gap) {

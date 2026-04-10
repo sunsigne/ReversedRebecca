@@ -139,7 +139,7 @@ public class RequirementBubbleObject extends GameObject implements SheetableImag
 		if (registeredX != getX() || registeredY != getY())
 			setVisible(false);
 
-		if (visible == false)
+		if (isVisible() == false)
 			return;
 
 		g.drawImage(getDifficultyImage(), getX(), getY(), getWidth(), getHeight(), null);
