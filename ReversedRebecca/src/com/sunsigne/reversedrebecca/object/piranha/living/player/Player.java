@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.characteristics.HealthPlayer;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
@@ -9,13 +10,9 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.BonusHealth;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
-import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
 public class Player extends LivingObject implements BonusHealth {
-
-	private String file = "characteristics.csv";
-	private boolean userData = true;
 
 	public Player(int x, int y) {
 		super("PLAYER", x, y);
@@ -24,7 +21,7 @@ public class Player extends LivingObject implements BonusHealth {
 		setUserAllowedToMovePlayer(true);
 		setCanInteract(true);
 
-		loadHealth();
+		new HealthPlayer(this).loadHealth();
 	}
 
 	////////// NAME ////////////
@@ -65,35 +62,10 @@ public class Player extends LivingObject implements BonusHealth {
 			setSpeedness(SPEEDNESS.PLAYER_SPEED);
 	}
 
-	////////// HP ////////////
-
-	private void createCharacteristic(String text, String value) {
-		String content = new FileTask().read(userData, file);
-		String new_content = text + "=" + value + System.getProperty("line.separator") + content;
-		new FileTask().write(file, new_content);
-	}
-
-	private void loadHealth() {
-		String txtMaxHp = new FileTask().read(userData, "MaxHp", file);
-
-		// if the file "characteristics" has no value for the hp, create one
-		if (txtMaxHp.isEmpty()) {
-			txtMaxHp = "2";
-			createCharacteristic(System.getProperty("line.separator") + "MaxHp", txtMaxHp);
-		}
-
-		setMaxHp(Integer.parseInt(txtMaxHp));
-		setFullHp();
-	}
-	
-	public void registerHealth() {
-		new FileTask().write("MaxHp", file, String.valueOf(getMaxHp()));
-	}
-
 	////////// BONUS HP ////////////
-	
+
 	private int bonusHp;
-	
+
 	@Override
 	public int getBonusHp() {
 		return bonusHp;
@@ -103,7 +75,7 @@ public class Player extends LivingObject implements BonusHealth {
 	public void setBonusHp(int bonusHp) {
 		this.bonusHp = bonusHp;
 	}
-	
+
 	////////// PATH FINDER ////////////
 
 	private boolean isPathNull() {
@@ -161,7 +133,7 @@ public class Player extends LivingObject implements BonusHealth {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PLAYER;
 	}
-	
+
 	////////// TICK ////////////
 
 	@Override

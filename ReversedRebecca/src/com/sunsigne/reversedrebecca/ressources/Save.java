@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.ressources;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.sunsigne.reversedrebecca.characteristics.HealthPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradeList;
@@ -158,7 +159,7 @@ public class Save {
 		// hp
 		Player player = new PlayerFinder().getPlayer();
 		if (player != null)
-			player.registerHealth();
+			new HealthPlayer(player).registerHealth();
 
 		// upgrades
 		var upgradeList = UpgradeList.getList();

@@ -1,5 +1,9 @@
-currentlvlmenu=rebeccas_room_000
-currentlvl=rebeccas_room_000
+NOVATECH*REBECCA_ARRIVE_WITH_SARAH
+REBECCAS_ROOM*BASKET_HALF_FULL
+REBECCAS_ROOM*CANDLE_ON
+REBECCAS_ROOM*FULL_DESK_TRASH
+currentlvl=novatech
+currentlvlmenu=rebeccas_room_001
 surname_doug=surname
 surname_custom1=surname
 surname_custom2=surname
