@@ -18,8 +18,10 @@ player = object = no_sens = Tout de suite les grands mots…@Tu n'exagères pas 
 sarah = player = angry = Clairement pas, non.
 player = object = no_sens = … … …
 player = object = blush = … Ça me plaît…
-sarah = player = worry = Tu es impossible… Mais bon, c'est ton problème…
-sarah = player = you_silly_var = Bon. Voilà un récapitulatif de ce que j'ai appris :
+sarah = player = you_silly_var = Tu es impossible… Mais bon, c'est ton problème…
+sarah = player = worry = Bon. Ceci mis à part, ce que tu m'as dit@sur le casque est très sérieux…
+player = object = unhappy_var = Assez, oui… Tu crois que la police va nous aider@une fois qu'on aura porté plainte ?
+sarah = player = happy = Espérons-le… Je te laisse choisir ton gadget.@On ira juste après.
 
 
 % SCENARIO_EXIT
@@ -28,6 +30,13 @@ player = object = surprised = LE casque ?@Mais c'est super grave !
 sarah = player = unhappy = Oui… C'est pour ça qu'on doit porter plainte.
 player = object = unhappy_var = Tu crois que la police va nous aider ?
 sarah = player = worry = Espérons-le… Mais pour le moment, comme@d'habitude : je te laisse choisir ton gadget.
+
+
+% SCENARIO_INQUIRY
+player = object = happy = Voilà. C'est à peu près ce qu'il s'est passé.
+sarah = player = surprised = Il a volé les plans DU casque ?@Mais c'est très grave !
+player = object = worry = Assez, oui… Tu crois que la police va nous aider@une fois qu'on aura porté plainte ?
+sarah = player = happy = Espérons-le… Mais pour le moment, comme@d'habitude : je te laisse choisir ton gadget.
 
 
 % THIEF
