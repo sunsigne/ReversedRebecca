@@ -26,23 +26,13 @@ public class CollisionLaw implements PhysicLaw {
 			return;
 
 		CollisionDetector detectorObject = (CollisionDetector) object;
-		CollisionReactor lastCollidedObject = detectorObject.getLastCollidedObject();
 
 		if (object instanceof Player == false) {
 
-			// still colliding last object
-			if (objectAreColliding(detectorObject, lastCollidedObject)) {
-				lastCollidedObject.collidingReaction(detectorObject);
-				return;
-			}
-
 			// not moving & not a puzzle
 			if (object instanceof Velocity && object.getHandler() != LAYER.PUZZLE.getHandler()) {
-				Velocity velocityObject = (Velocity) object;
-				if (velocityObject.isMotionless()) {
-					detectorObject.setLastCollidedObject(null);
+				if (((Velocity) object).isMotionless())
 					return;
-				}
 			}
 		}
 
@@ -65,10 +55,7 @@ public class CollisionLaw implements PhysicLaw {
 				continue;
 
 			if (objectAreColliding(detectorObject, reactorObject)) {
-				GenericListener collision = () -> {
-					reactorObject.collidingReaction(detectorObject);
-					detectorObject.setLastCollidedObject(reactorObject);
-				};
+				GenericListener collision = () -> reactorObject.collidingReaction(detectorObject);
 
 				if (collisionEvent == null)
 					collisionEvent = new ConcurrentLinkedQueue<>();

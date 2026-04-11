@@ -7,7 +7,6 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -95,20 +94,6 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
-	////////// COLLISION ////////////
-	
-	private CollisionReactor lastCollidedObject;
-	
-	@Override
-	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
-		this.lastCollidedObject = lastCollidedObject;
-	}
-	
-	@Override
-	public CollisionReactor getLastCollidedObject() {
-		return lastCollidedObject;
-	}
-	
 	@Override
 	public Rectangle getBounds(DIRECTION direction) {
 		switch (direction) {

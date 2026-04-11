@@ -7,7 +7,6 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.MouseObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
@@ -262,20 +261,6 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 
-	}
-
-	////////// COLLISION ////////////
-
-	private CollisionReactor lastCollidedObject;
-
-	@Override
-	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
-		this.lastCollidedObject = lastCollidedObject;
-	}
-
-	@Override
-	public CollisionReactor getLastCollidedObject() {
-		return lastCollidedObject;
 	}
 
 }

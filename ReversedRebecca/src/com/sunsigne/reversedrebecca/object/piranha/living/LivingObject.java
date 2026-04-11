@@ -4,14 +4,12 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.PathSearcher;
 import com.sunsigne.reversedrebecca.object.characteristics.Pushable;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Health;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -36,7 +34,7 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 		super.setName(name);
 		loadAnimationHandler(new LivingAnimationHandler(this));
 	}
-	
+
 	@Override
 	public void setTextureName(String name) {
 		super.setTextureName(name);
@@ -263,21 +261,6 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	@Override
 	public void setPushingDirection(PUSHING_DIRECTION pushingDirection) {
 		this.pushingDirection = pushingDirection;
-	}
-
-	////////// COLLISION ////////////
-
-	private CollisionReactor lastCollidedObject;
-
-	@Override
-	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
-		if (lastCollidedObject instanceof Player == false)
-			this.lastCollidedObject = lastCollidedObject;
-	}
-
-	@Override
-	public CollisionReactor getLastCollidedObject() {
-		return lastCollidedObject;
 	}
 
 	@Override

@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -73,20 +72,6 @@ public class CowboyHoleObject extends PuzzleObject implements TickFree, Sheetabl
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-	}
-
-	////////// COLLISION ////////////
-
-	private CollisionReactor lastCollidedObject;
-
-	@Override
-	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
-		this.lastCollidedObject = lastCollidedObject;
-	}
-
-	@Override
-	public CollisionReactor getLastCollidedObject() {
-		return lastCollidedObject;
 	}
 
 }

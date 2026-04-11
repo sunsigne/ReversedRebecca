@@ -5,7 +5,6 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
-import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -132,7 +131,7 @@ public class CowboyCursorObject extends PuzzleObject
 	}
 
 	private boolean hasFired;
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isInPauseMenu())
@@ -171,20 +170,6 @@ public class CowboyCursorObject extends PuzzleObject
 	public void buttonReleased(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.A)
 			mouseReleased(null);
-	}
-
-	////////// COLLISION ////////////
-
-	private CollisionReactor lastCollidedObject;
-
-	@Override
-	public void setLastCollidedObject(CollisionReactor lastCollidedObject) {
-		this.lastCollidedObject = lastCollidedObject;
-	}
-
-	@Override
-	public CollisionReactor getLastCollidedObject() {
-		return lastCollidedObject;
 	}
 
 }

@@ -30,10 +30,9 @@
 
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	dave : supprimer les images creepy de dave
-	rr000 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
+	lvl001 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
 	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement (message "coming soon") : ControllerManager -> activeGamepadDisplay()
-	ActionOptionPreview : le panneau "coming_soon" pour le mode daltonien
 	Creepy pasta dave bonus (& achievement)
 	la classe DemoEndScreen :
 	(
@@ -188,18 +187,16 @@
 	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
 	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
 
-	les menu clignottent lorsqu'ils sont refresh, à corriger !
-	vérifier sur 1000 partie, les code piranha qui ne sont jamais executés
-	6h00 - les custom "surname" devrait être dynamique
-	2h00 CollisionLaw - optimiser et faire en sorte que le "still colliding last object" ne s'applique pas pour les portes
-	10h00 - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	6h00 - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
-	2h30 - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
-	8h00 - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
-	1h00 / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
-	0h40 - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
-	1h00 - changer le système d'aléatorie pour du déterminisme ?
-	1h00 - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
+	1h les menu clignottent lorsqu'ils sont refresh, à corriger !
+	6h - les custom "surname" devrait être dynamique
+	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	6h - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
+	3h - la class Player contrôle actuellement le nb de pv dans le fichier characterisitcs, ce qui ne devrait pas
+	8h - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
+	1h / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
+	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
+	1h - changer le système d'aléatorie pour du déterminisme ?
+	1h - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
 
 	- penser à vérifier la cohérence globale du jeu avec les système de difficulté et de karma (facile, normal, difficile / sadique, psycopath, angelic), dans le sens : les dialogues dans les chapitres
 
@@ -208,7 +205,7 @@
 	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
 	3h consulter les ressources non utilisées (son, textures, etc.)
 	1h activer tous les succès abandonnées
-	1h jouer avec le skin "rebecca_dark" + 3h création du skin + 2h implémentation complète
+	1h jouer avec le skin "rebecca_dark" + 3h création du skin + 15h implémentation complète
 	3h créer une galerie
 
 	////////// PERSONNAGES A FAIRE ////////////
@@ -226,7 +223,6 @@
 	////////// RR000 ////////////
 
 	"regarder la TV tj pas fait", attention au dodo de sarah
-	réétablir les fins correctement (exemple : la fin psycopath est une fin temporaire avec Dave)
 	
 	////////// WS000 ////////////
 	
@@ -244,7 +240,7 @@
 	- retirer le message qui dit que la fussillade 'nest pas finie
 	- relier le fusil à pompe derrière Butch à la fusillade
 	- toute la variante "gunshot"
-	- l'embranchement onirique
+	- le "hall of destiny/fate"
 	- les variantes sadique et psycopathe
 	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
@@ -287,13 +283,8 @@
 	///////// IDEE ////////////
 
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
-
-	puzzle casse brique (pour l'ordi)
-	puzzle passer à travers les jet d'eau (qu'est-ce que j'ai voulu dire par là ... ?)
-	
-	lors d'un "embranchement", que les deux options apparaissent à gauche et à droite de Rebecca au lieu du même côté
-
-	Mécanique de gameplay : Marie trouve souvent des outils de meilleurs qualité dans les boites, et trouve des outils où il n'y en a pas
+	puzzle où on controle un frommage et on ne dois pas se faire manger par une sourie (pour l'ordi)
+	Marie : Mécanique de gameplay : trouve souvent des outils de meilleurs qualité dans les boites, et trouve des outils où il n'y en a pas
 
 	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
 	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"
@@ -305,28 +296,22 @@
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
-	un niveau dans un volcan
+	un niveau dans un volcan : 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
 	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) / dans les succès ? (puisqu'il faut les débloquer pour avoir le secret) -> le twist de la dernière input (sauvegarder, quitter, recharger)
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
-	un boss qui rentre dans une exoarmure avant de commencer le combat : en facile et en normal elle se casse, en difficile non 
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	Faire des boss et des Foes avec armes et/ou Puzzle
 	animation de tourbillon de vent de temps en temps ?
-	Comme les soul heart dans binding of isaac
 	nourriture pour regen (ou autre solution)
 	une action "défoncer la porte" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
-	choix de bonus : + 1 coeur max ou commencer chaque lvl avec + 2 soul heart
 	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
-	Un puzzle avec une souris (l'annimal) qui suit la souris (fromage) pour la manger. Si elle l'attrape c'est perdu, et il faut réussir à la faire manger suffisamment de fromages (fixe sur la carte) et éviter les chats (fixes) pour réussir
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
-	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
-	un mini jeu minimaliste d'une map d'un lvl !!!! Le but du joueur est de placer les élements sur une mini map afin qu'un petit personnage puisse faire le parcours sans être bloqué (créer un level design quoi, mais c'est le joueur qui le fait)
-	
+
 	///////// MUSEE DE L'HORREUR ////////////
 	
 	anges pleureurs
