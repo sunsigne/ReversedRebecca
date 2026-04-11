@@ -39,6 +39,12 @@ player = object = worry = Assez, oui… Tu crois que la police va nous aider@une
 sarah = player = happy = Espérons-le… Mais pour le moment, comme@d'habitude : je te laisse choisir ton gadget.
 
 
+% ANGRY_NOT_ANYMORE
+sarah = player = laugh = Enfin… TES gadgets. J'en avais déjà préparé un ce@matin, mais on s'est un peu disputées, alors…
+player = sarah = laugh = Merci, t'es vraiment la meilleure !
+sarah = player = wink = Ne l'oublie jamais.
+
+
 % THIEF
 sarah = LEFT = happy = Son nom complet est Vladimir Wolanski.@Il avait fait scandale il y a deux mois.
 sarah = LEFT = worry = Apparemment, notre entreprise lui aurait volé@ses travaux. En tout cas, c'est ce qu'il croit.

@@ -44,6 +44,11 @@
 
 	rr000 - faire clignotter une plante comme dans lvl001
 
+	ws001 :
+		- traduction du WS001
+		- simulation en angry (double gadget)
+		- gérer les cas de angry_really_hard et psychopathe (arrivées sans sarah ?)
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	note : puzzle : cliquer = impact
@@ -63,12 +68,6 @@
 	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	2h00 - rendre compatible le DiscoPuzzle
 	3h00 - dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
-
-	////////// WS001 ////////////
-
-	- traduction du WS001
-	- gérer les cas de Angry et angry_really_hard (puisqui'il n'avait pas de cadeau avant)
-	- gérer le cas psychopathe (arrivée sans sarah)
 
 	////////// LVL001 ////////////
 	
