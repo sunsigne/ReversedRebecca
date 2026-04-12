@@ -46,8 +46,11 @@
 
 	ws001 :
 		- traduction du WS001
-		- simulation en angry (double gadget)
-		- gérer les cas de angry_really_hard et psychopathe (arrivées sans sarah ?)
+
+	////////// WS001 ////////////
+
+	angry_var & psychopath : directement au commisariat ?
+	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

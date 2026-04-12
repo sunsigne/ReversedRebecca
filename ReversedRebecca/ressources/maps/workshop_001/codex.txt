@@ -9,4 +9,5 @@ ERASE = NOVATECH*SCENARIO_INQUIRY
 
 NPC-01 = Sarah
 OBJ-01 = Simulation Slabs
-OBJ-02 = Fake Walls
+OBJ-02 = Simulation Slabs Sarah Angry Not Anymore
+OBJ-03 = Fake Walls
