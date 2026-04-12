@@ -44,9 +44,6 @@
 
 	rr000 - faire clignotter une plante comme dans lvl001
 
-	ws001 :
-		- traduction du WS001
-
 	////////// WS001 ////////////
 
 	angry_var & psychopath : directement au commisariat ?

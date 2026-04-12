@@ -1,0 +1,9 @@
+SUE = Key1 % file a complaint
+THIEF = Key1 % thieft?
+HELMET = Key2 % helmet?
+ASK_FOR_ADVICE = Key1 % ask for advice (gadget)
+
+///// WS000 /////
+
+FOOD = Key1 % food ?
+NICE_WEATHER_ISNT_IT = Key1 % ... nice weather, isn't it?

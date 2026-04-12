@@ -1,0 +1,67 @@
+% MIKA_KISSED
+sarah = player = angry = Excuse me? He kissed you without asking?
+player = object = blush = That was so sexy!
+sarah = player = angry = That's not "sexy", Rebecca.@That's clearly a red flag.
+player = object = no_sens = Always with the big words…@Aren't you exaggerating a bit?
+sarah = player = angry = Definitely not.
+player = object = no_sens = … … …
+player = object = blush = … I liked it…
+sarah = player = worry = You're impossible… But hey, that's your problem…
+sarah = player = you_silly_var = Well. Here's a recap of what I've learned:
+
+
+% MIKA_PIG
+sarah = player = angry = Excuse me? He invited himself to your place?
+player = object = blush = That's sexy!
+sarah = player = angry = It's not "sexy", Rebecca.@That's clearly a red flag.
+player = object = no_sens = Always with the big words…@Aren't you exaggerating a bit?
+sarah = player = angry = Definitely not.
+player = object = no_sens = … … …
+player = object = blush = … I like it…
+sarah = player = you_silly_var = You're impossible… But hey, that's your problem…
+sarah = player = worry = Okay. That aside, what you said to me about@the helmet is very serious…
+player = object = unhappy_var = Quite serious, yes… Do you think the police will@help us once we file a complaint?
+sarah = player = happy = I hope so… I'll let you choose your gadget.@We'll go right after.
+
+
+% SCENARIO_EXIT
+sarah = player = worry = So, in summary: our attacker's name is Vladimir.@He came to steal our plans for the helmet.
+player = object = surprised = THE helmet? @But that's really serious!
+sarah = player = unhappy = Yes… That's why we have to file a complaint.
+player = object = unhappy_var = Do you think the police will help us?
+sarah = player = worry = I hope so… But for now, as usual:@I'll let you choose your gadget.
+
+
+% SCENARIO_INQUIRY
+player = object = happy = There you go. That's pretty much what happened.
+sarah = player = surprised = He stole the plans for THE helmet?@That's really serious!
+player = object = worry = Quite serious, yes… Do you think the police will@help us once we file a complaint?
+sarah = player = worry = I hope so… But for now, as usual:@I'll let you choose your gadget.
+
+
+% ANGRY_NOT_ANYMORE
+sarah = player = laugh = Well… your GADGETS. I'd already prepared one@this morning, but we had a bit of a fight, so…
+player = object = laugh = Thanks, you are the best!
+sarah = player = wink = Don't forget it.
+
+
+% THIEF
+sarah = LEFT = happy = His full name is Vladimir Wolanski.@He caused a scandal two months ago.
+sarah = LEFT = worry = Apparently, our company stole his work.@At least, that's what he thinks.
+player = RIGHT = angry = What? We didn't!
+sarah = LEFT = worry = I don't have the details of the case. All I know is@that these plans are super top secret.
+
+
+% HELMET
+sarah = LEFT = worry = Are you kidding me?@You know perfectly well what it is.
+player = RIGHT = happy_var = Could you remind me, please?
+sarah = LEFT = laugh = Very funny. Everyone at NovaTech@knows what this helmet is, including you.
+
+
+% ASK_FOR_ADVICE
+player = RIGHT = happy = In your opinion, should I take the bomb or the key?
+sarah = LEFT = laugh = It's up to you, Rebecca! Bombs are more direct,@but they attract attention.
+
+
+
+

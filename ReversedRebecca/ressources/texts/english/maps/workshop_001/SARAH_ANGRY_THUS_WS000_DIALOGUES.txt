@@ -1,0 +1,20 @@
+% RIGHT_BEFORE_CHEST
+player = RIGHT = excited = It's still amazing!
+sarah = LEFT = laugh = I agree.
+
+
+% RIGHT_BEFORE_CHEST_AGAIN
+player = RIGHT = worry =  I was wondering… Can you create@anything you want with this system?
+player = RIGHT = laugh = Like… food?
+sarah = LEFT = you_silly_var = No, I can't.
+sarah = LEFT = happy = It's more or less like an inkjet printer.@An image of food will remain ink.
+player = RIGHT = you_silly_var = Too bad.
+
+
+% RIGHT_BEFORE_CHEST_LAST
+sarah = LEFT = awkward = What are you doing?@You're not taking your gift…?
+player = RIGHT = laugh = I am! I'm just making the pleasure last.
+sarah = LEFT = wink = Hah! Is that so…
+sarah = LEFT = pervert = Let's make it last for hours.@You will take… a lot of pleasure.
+player = RIGHT = blush_var = Sarah!!!@You can't say things like this.
+sarah = LEFT = laugh = Haha! Sorry, but you should see your face.@Go get your gift.
