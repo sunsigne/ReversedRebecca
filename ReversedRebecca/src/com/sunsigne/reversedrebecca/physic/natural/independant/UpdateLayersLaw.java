@@ -48,11 +48,11 @@ public class UpdateLayersLaw extends IndependantLaw {
 		World world = World.get();
 		if (world == null)
 			return;
-		
+
 		updateLayerVisibilities(world);
 		registerNewLayer(world, world.getLayer(false));
 	}
-	
+
 	public void updateLayerVisibilities(World world) {
 		boolean hideRendering = false;
 
@@ -68,8 +68,8 @@ public class UpdateLayersLaw extends IndependantLaw {
 	}
 
 	private void registerNewLayer(World world, LAYER world_layer) {
-		layer.getHandler().removeObject(world);
 		layer = world_layer;
+		world.getLayer(false).getHandler().removeObject(world);
 		layer.addObject(world);
 	}
 
