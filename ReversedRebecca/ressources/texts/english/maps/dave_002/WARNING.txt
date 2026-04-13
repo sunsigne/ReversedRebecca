@@ -1,0 +1,27 @@
+% FIRST_TIME
+dave = DOWN = camera = Have you made your choice? Taking the cyan@bombs makes the police station harder.
+dave = DOWN = camera = But that's only if you accept Sarah's next offer…
+
+
+% FIRST_TIME_NUMBER_SETTINGS
+dave = DOWN = camera = Have you made your choice? Taking bomb 1@makes the police station harder.
+dave = DOWN = camera = But that's only if you accept Sarah's next offer…
+
+
+% BRANCH
+dave = DOWN = camera = Rebecca, you're about to experience your first@branch.
+dave = DOWN = camera = A classic game can have multiple endings.@This game has multiple stories.
+
+
+% N_TIMES_NUMBER_SETTINGS
+dave = DOWN = camera = Back at the police station, eh?
+Dave = DOWN = camera = Quick reminder: taking the 1 bombs makes@it more fun, but more difficult.
+Dave = DOWN = camera = Sarah will offer you the chance to steal documents.@It's a branching path. You can refuse.
+Dave = DOWN = camera = A classic game can have multiple endings.@This game has multiple stories.
+
+
+% N_TIMES
+Dave = DOWN = camera = Back at the police station, eh?
+Dave = DOWN = camera = Quick reminder: taking the cyan bombs makes@it more fun, but more difficult.
+Dave = DOWN = camera = Sarah will offer you the chance to steal documents.@It's a branching path. You can refuse.
+dave = DOWN = camera = A classic game can have multiple endings.@This game has multiple stories.
