@@ -23,7 +23,7 @@ public class FrameImpact extends DecorationObject {
 
 	////////// TICK ////////////
 
-	private final int FRAME_TIME = 5;
+	private final int FRAME_TIME = 8;
 	private int time = FRAME_TIME;
 
 	@Override
