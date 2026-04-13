@@ -43,11 +43,27 @@
 	////////// EN COURS ////////////
 
 	rr000 - faire clignotter une plante comme dans lvl001
+	
+	////////// LVL002 ////////////
+	
+	à faire + tard :
+	- finir la fusillade
+	- retirer le message qui dit que la fussillade 'nest pas finie
+	- relier le fusil à pompe derrière Butch à la fusillade
+	- toute la variante "gunshot"
+	- le "hall of destiny/fate"
+	- les variantes sadique et psycopathe
+	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
-	////////// WS001 ////////////
-
-	angry_var & psychopath : directement au commisariat ?
-	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
+	idées : 
+	- traduction : rattatac (café) a un accent français lorsque langue en anglais
+	
+	à sauvegarder :
+	- sarah enfermée
+	- costume de flic	
+	- plante volée
+	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
+	- doug rencontré
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -85,6 +101,11 @@
 	en inquery :
 	- l'angelic, c'est les 2 dernier + le 3ème
 	- sadique : la totale sans traumatiser Jospeh (avec les 12h), ou le traumatiser sans moquer alicia, mais avec la totale (sans les 12h).
+
+	////////// WS001 ////////////
+
+	angry_var & psychopath : directement au commisariat ?
+	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
 
 	////////// MILITARY ////////////
 
@@ -227,32 +248,6 @@
 	////////// WS000 ////////////
 	
 	passage secret tj vide ...
-	
-	////////// LVL002 ////////////
-
-	fusillade :
-	- les frame impact ne sont pas assez longues
-	- le chapeau de william lorsqu'il "mourn" devrait être penchée
-	- william devrait commencer à mourn plus tôt (essayer l'animation en 10 ticks, mais en doublant le dessin de mourn)
-	
-	à faire + tard :
-	- finir la fusillade
-	- retirer le message qui dit que la fussillade 'nest pas finie
-	- relier le fusil à pompe derrière Butch à la fusillade
-	- toute la variante "gunshot"
-	- le "hall of destiny/fate"
-	- les variantes sadique et psycopathe
-	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
-
-	idées : 
-	- traduction : rattatac (café) a un accent français lorsque langue en anglais
-	
-	à sauvegarder :
-	- sarah enfermée
-	- costume de flic	
-	- plante volée
-	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
-	- doug rencontré
 
 	////////// MOLE 0 ////////////
 	
