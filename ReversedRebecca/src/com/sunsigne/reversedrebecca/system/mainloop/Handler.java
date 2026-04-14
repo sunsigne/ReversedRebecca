@@ -28,7 +28,7 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 
 	////////// USEFULL ////////////
 
-	public HashMap<GoalObject, NaveMesh> navMesh = new HashMap<>();
+	private HashMap<GoalObject, NaveMesh> navMesh = new HashMap<>();
 
 	public void addNavMesh(NaveMesh object) {
 		GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
@@ -51,6 +51,19 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	public void removeNaveMesh(NaveMesh object) {
 		GoalObject goal = new GoalObject(object.getX(), object.getY(), true);
 		navMesh.remove(goal);
+
+		if (object instanceof Wall == false)
+			return;
+
+		int width = object.getWidth();
+		int height = object.getHeight();
+
+		for (int w = 0; w < width; w += Size.M) {
+			for (int h = 0; h < height; h += Size.M) {
+				goal = new GoalObject(object.getX() + w, object.getY() + h, true);
+				navMesh.remove(goal);
+			}
+		}
 	}
 
 	public GameObject getWallAtPos(int x, int y) {
