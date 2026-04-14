@@ -8,6 +8,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
+import com.sunsigne.reversedrebecca.system.PausePreventer.PAUSE_STATE;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class NullDoorObject extends DoorObject {
@@ -27,7 +29,7 @@ public class NullDoorObject extends DoorObject {
 	public void tick() {
 		if (tryClosing.getState()) {
 			if (isOpened)
-				if (LAYER.MENU.getHandler().getList().isEmpty())
+				if (LAYER.MENU.getHandler().getList().isEmpty() && PausePreventer.state != PAUSE_STATE.MUSIC)
 					new SoundTask().playSoundIfCamera(this, "door_close");
 			isOpened = false;
 		}
@@ -61,7 +63,7 @@ public class NullDoorObject extends DoorObject {
 	public void collidingReaction(CollisionDetector detectorObject) {
 		collidingReaction(detectorObject, false, () -> {
 			if (!isOpened)
-				if (LAYER.MENU.getHandler().getList().isEmpty())
+				if (LAYER.MENU.getHandler().getList().isEmpty() && PausePreventer.state != PAUSE_STATE.MUSIC)
 					new SoundTask().playSoundIfCamera(this, "door_open");
 			isOpened = true;
 			tryClosing.setState(0);
@@ -77,5 +79,5 @@ public class NullDoorObject extends DoorObject {
 		int h = getHeight() - 2 * pixel;
 		return new Rectangle(x, y, w, h);
 	}
-	
+
 }
