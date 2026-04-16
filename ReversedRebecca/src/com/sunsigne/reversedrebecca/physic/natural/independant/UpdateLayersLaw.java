@@ -68,8 +68,11 @@ public class UpdateLayersLaw extends IndependantLaw {
 	}
 
 	private void registerNewLayer(World world, LAYER world_layer) {
+		if (layer != null)
+			layer.getHandler().removeObject(world);
+		else
+			world.getLayer(false).getHandler().removeObject(world);
 		layer = world_layer;
-		world.getLayer(false).getHandler().removeObject(world);
 		layer.addObject(world);
 	}
 
