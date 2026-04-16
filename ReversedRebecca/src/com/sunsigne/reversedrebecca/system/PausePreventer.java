@@ -5,6 +5,7 @@ import java.util.HashMap;
 import com.sunsigne.reversedrebecca.object.DisabledPauseObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class PausePreventer {
@@ -32,7 +33,13 @@ public class PausePreventer {
 
 		removeDisabledPauseObject();
 		state = PAUSE_STATE.MUSIC;
-		PausePreventer.timer = new GameTimer(timer, true, () -> state = null);
+		VolumeMusic volume = new VolumeMusic();
+		volume.preventNoMusicDuringScenarioMusic();
+		
+		PausePreventer.timer = new GameTimer(timer, true, () -> {
+			state = null;
+			volume.refreshVolume();
+		});
 	}
 
 	private static GameTimer timer;

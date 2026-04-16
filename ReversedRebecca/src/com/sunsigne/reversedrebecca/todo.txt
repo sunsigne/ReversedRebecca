@@ -45,7 +45,6 @@
 	rr000 - faire clignotter une plante comme dans lvl001
 	lvl002 fusillade :
 		- faire un end_lvl
-		- gestion du volume (dans le cas où le joueur a mis à 0)
 	
 	////////// LVL002 ////////////
 	
@@ -58,9 +57,6 @@
 	- les variantes sadique et psycopathe
 	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
-	idées : 
-	- traduction : rattatac (café) a un accent français lorsque langue en anglais
-	
 	à sauvegarder :
 	- sarah enfermée
 	- costume de flic	
@@ -331,7 +327,8 @@
 	Joseph : (never use any abreviation : i'm -> i am / don't -> do not) yet -> nonetheless
 	Marie : by the way -> now i'm thinking / Zut -> Jeez
 	rajouter le jeu de mot "i have an egg on my face" -> "i have a whole omelet on my face"
-
+	Rattatac (café) a un accent français lorsque langue en anglais
+	
 	lvl002 : DOUG*MEET : poulet -> Bill
 	lvl002 : pour sortir de la chaise dans restroom, garder la même logique de traduction que dans rr000
 	lvl laboratory : trouver une sortie -> find an outing

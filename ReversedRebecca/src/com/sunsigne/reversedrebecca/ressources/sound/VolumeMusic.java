@@ -22,4 +22,9 @@ public class VolumeMusic implements Volume {
 		return "Music";
 	}
 
+	public void preventNoMusicDuringScenarioMusic() {
+		if (volume < 0.2f)
+			volume = 0.2f;
+	}
+
 }
