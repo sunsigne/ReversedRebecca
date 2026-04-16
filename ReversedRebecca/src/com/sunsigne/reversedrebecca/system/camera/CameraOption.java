@@ -16,6 +16,10 @@ public class CameraOption {
 			type = new CameraOption().getRegisteredType();
 		return type;
 	}
+	
+	public static void setType(CAMERA_TYPE type) {
+		CameraOption.type = type;
+	}
 
 	private CAMERA_TYPE getRegisteredType() {
 		String registeredType = new FileTask().read(userData, getValueToRead(), file);

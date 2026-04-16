@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.camera.CameraOption;
+import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
@@ -25,12 +27,14 @@ public class Cutscene implements Updatable, PhysicFree {
 
 	public void start() {
 		running = true;
+		CameraOption.setType(CAMERA_TYPE.DYNAMIC);
 		LAYER.HUD.addObject(this);
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
 		new PlayerFinder().roundToTilePlayer();
 	}
 
 	public void stop(boolean delay) {
+		CameraOption.setType(null);
 		Player player = new PlayerFinder().getPlayer();
 		if (player != null)
 			player.setMotionless();

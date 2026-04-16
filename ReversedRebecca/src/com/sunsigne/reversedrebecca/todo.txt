@@ -44,7 +44,6 @@
 
 	rr000 - faire clignotter une plante comme dans lvl001
 	lvl002 fusillade :
-		- camera statique ne marche pas
 		- faire un end_lvl
 		- gestion du volumen (dans le cas où le joueur a mis à 0)
 		- tenue policewoman à configurer
