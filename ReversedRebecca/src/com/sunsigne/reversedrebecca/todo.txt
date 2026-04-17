@@ -43,13 +43,14 @@
 	////////// EN COURS ////////////
 
 	rr000 - faire clignotter une plante comme dans lvl001
+	
 	lvl002 fusillade :
-		- faire un end_lvl
+		- vérifier end_lvl timing
+		- vérifier compteurs (2 et 15)
 	
 	////////// LVL002 ////////////
 	
 	à faire + tard :
-	- finir la fusillade
 	- retirer le message qui dit que la fussillade 'nest pas finie
 	- relier le fusil à pompe derrière Butch à la fusillade
 	- toute la variante "gunshot"
