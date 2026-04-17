@@ -18,8 +18,7 @@
 
 	pas réglé :
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
-		- cinémarique fusillade : puisque c'est le joueur qui est le flic qui descend Polaris, lorsqu'il se fait tuer par Doug, ça lance un game over XD
-		
+
 	vérifier si bien réglé :
 
 	vérifier si réglé sur build low CPU :
@@ -44,20 +43,8 @@
 
 	rr000 - faire clignotter une plante comme dans lvl001
 	
-	lvl002 fusillade :
-		- vérifier end_lvl timing
-		- vérifier compteurs (2 et 15)
-	
-	////////// LVL002 ////////////
-	
-	à faire + tard :
-	- retirer le message qui dit que la fussillade 'nest pas finie
 	- relier le fusil à pompe derrière Butch à la fusillade
-	- toute la variante "gunshot"
-	- le "hall of destiny/fate"
-	- les variantes sadique et psycopathe
-	- si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
-
+	
 	à sauvegarder :
 	- sarah enfermée
 	- costume de flic	
@@ -106,6 +93,11 @@
 
 	angry_var & psychopath : directement au commisariat ?
 	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
+	
+	////////// LVL002 ////////////
+
+	à faire - hall of destiny/fate
+	angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
 	////////// MILITARY ////////////
 
