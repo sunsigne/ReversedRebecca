@@ -13,24 +13,11 @@
 	activer le updatescreen (Conductor)
 	
 	////////// BUG ////////////
-	
-	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-
-	pas réglé :
-		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
-
-	vérifier si bien réglé :
-
-	vérifier si réglé sur build low CPU :
-		- un pb dans CreateSimulationRequest (tester avec lvl tutorial)
-		- (LoadingScreenEverywhereLaw) lors d'un écran de chargement, le jeu "clignotte" (surtout sur les PC lents)
 
 	////////// TEMP ////////////
 
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
 	dave : supprimer les images creepy de dave
-	lvl001 : redirection du end_lvl psycopathe vers map "dave_psychopathe"
-	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
 	manette actuellement (message "coming soon") : ControllerManager -> activeGamepadDisplay()
 	Creepy pasta dave bonus (& achievement)
 	la classe DemoEndScreen :
@@ -40,6 +27,8 @@
 	)
 
 	////////// EN COURS ////////////
+	
+	bug : novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 
 	rr000 - faire clignotter une plante comme dans lvl001
 	
@@ -51,12 +40,14 @@
 	- plante volée
 	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
 	- doug rencontré
+	
+	faire gamepad ?
+	faire Military ?
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	note : puzzle : cliquer = impact
 	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.) ET! ne pas oublier que la plante HUD dans novatech fait du bruit (ce qui serait bizarre sans le highlight)
-	la plante HUD de novatech est-il bien un choix final ?
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 
@@ -89,11 +80,15 @@
 	- l'angelic, c'est les 2 dernier + le 3ème
 	- sadique : la totale sans traumatiser Jospeh (avec les 12h), ou le traumatiser sans moquer alicia, mais avec la totale (sans les 12h).
 
+	////////// PSYCHO ////////////
+
+	à supprimer : map "dave_psychopathe", succès "NOTHING_NEXT"
+	LVL001 - "abandon_everyone" ne devrait pas envoyer le joueur vers WS001
+	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
+	WS001 - angry_var & psychopath : directement au commisariat à la palce ? chez elle ?
+
 	////////// WS001 ////////////
 
-	angry_var & psychopath : directement au commisariat ?
-	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
-	
 	////////// LVL002 ////////////
 
 	à faire - hall of destiny/fate
@@ -107,6 +102,7 @@
 		- le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
 		- Nathan, l'insulte "balaine" s'écrit avec un "e"
 		- plus on monte les étage de la tour, plus ça lag
+		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 
 	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
 	changer nom -> jules en romeo. Vera en Venera
