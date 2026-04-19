@@ -32,15 +32,10 @@
 
 	rr000 - faire clignotter une plante comme dans lvl001
 	
-	- relier le fusil à pompe derrière Butch à la fusillade
-	
-	à sauvegarder :
-	- sarah enfermée
-	- costume de flic	
-	- plante volée
-	- sarah abandonnée dans la cellule (possible en psychopathe aussi)
-	- doug rencontré
-	
+	lvl002 :
+	- après la 1ère demande de diversion, rebecca devient "folle" (en termes de collision) en se plaçant entre sarah et la chaise (sarah aussi si on lui parle en étant là)
+	- vérifier le "abandonner sarah" en termes de sauvegarges + déclanche un bug de color_exception et de "un dialogue a déjà été déclanché
+
 	faire gamepad ?
 	faire Military ?
 
@@ -92,6 +87,7 @@
 	////////// LVL002 ////////////
 
 	à faire - hall of destiny/fate
+	- relier le fusil à pompe derrière Butch à la fusillade
 	angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
 
 	////////// MILITARY ////////////
@@ -106,6 +102,8 @@
 
 	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
 	changer nom -> jules en romeo. Vera en Venera
+
+	le fusil dans la chambre au dessus de l'enigme doit être un poster (car incohérant avec le fait que Rebecca ne le prenne pas en "méchant")
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
 
