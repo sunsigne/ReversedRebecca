@@ -7,9 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.CyanBombPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.EasierBombPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.EasiestBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.GreenBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
@@ -17,6 +14,8 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.OrangeBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.RedBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.YellowBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.CyanBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasierBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasiestBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class BombKeyPuzzleFactory implements PuzzleFactory {
@@ -45,9 +44,9 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasiestBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case EASIER:
-			return new EasierBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasierBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDER:
 			return new HarderBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDEST:
@@ -62,9 +61,9 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasiestBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new EasierBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasierBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
 			return new CyanBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:

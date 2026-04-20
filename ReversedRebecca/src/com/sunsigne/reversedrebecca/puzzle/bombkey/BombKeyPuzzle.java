@@ -45,6 +45,8 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	////////// PUZZLE ////////////
 
 	private BombLockObject[] bomblock = new BombLockObject[getBombLockAmount()];
+	
+	public abstract BombKeyObject getBombKey(Puzzle puzzle, boolean critical);
 
 	public abstract BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y);
 
@@ -64,7 +66,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	protected void createBombKey() {
-		BombKeyObject bombkey = new BombKeyObject(this, isCritical, 0, 0);
+		BombKeyObject bombkey = getBombKey(this, isCritical);
 		bombkey.setX(getCol(5));
 		bombkey.setY(getCol(1) + Size.M);
 		LAYER.PUZZLE.addObject(bombkey);
