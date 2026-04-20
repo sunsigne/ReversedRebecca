@@ -20,7 +20,7 @@ player = object = happy = Je dois parler au chef.
 object = player = smile = YY ? Z'est un cas fasczinant ! Un ADN incroyable !@Sûrement le zeul homme plus intellizent que moi !
 object = player = happy = Et quelle forze ! Il est plus prochze du surhomme@que toi de la beauté. Une arme est inutile contre lui.
 player = object = wrong_with_you = Tu me cherches ?
-player = object = wrong_with_you = Est-ce que je te dis à toi que ton visage est plus@proche de la raclette que ta mère d'une balaine ?
+player = object = wrong_with_you = Est-ce que je te dis à toi que ton visage est plus@proche de la raclette que ta mère d'une baleine ?
 player = object = angry = J'ai besoin d'une arme parce que le garde@ne veut pas me laisser passer.
 object = player = smile = Z'est tout le prinzipe d'un garde ! Il z'azit de@mon frère ! Et il prend zon travail trèz à coeur !
 

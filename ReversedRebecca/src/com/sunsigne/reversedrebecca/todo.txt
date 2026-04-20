@@ -37,8 +37,6 @@
 	////////// MILITARY ////////////
 
 	bug
-		- le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
-		- Nathan, l'insulte "balaine" s'écrit avec un "e"
 		- plus on monte les étage de la tour, plus ça lag
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 
