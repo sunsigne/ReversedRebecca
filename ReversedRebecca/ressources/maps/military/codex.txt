@@ -12,6 +12,7 @@ OBJ-17 = Down Right Shower
 NPC-01 = Sarah
 NPC-03 = Dormitory
 NPC-04 = Trashman
+OBJ-38 = Trashman Checker
 NPC-07 = Xavier Dupont
 NPC-12 = Slacker
 NPC-13 = Cleaner

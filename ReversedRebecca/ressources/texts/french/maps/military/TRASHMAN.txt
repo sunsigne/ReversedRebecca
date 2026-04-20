@@ -1,0 +1,23 @@
+% YOU_SHALL_NOT_PASS
+object = player = trashman = Je suis chargé de surveiller les ordures.@Personne d'autre que moi n'y touchera.
+player = object = no_sens = Ok…@Parce que… Genre, c'est dangereux ?
+object = player = trashman = Je ne réponds pas non plus aux questions.
+player = object = no_sens_var = (… Il y a vraiment des tordus dans ce camp)
+
+
+% KEY_QUEST
+player = object = angry = Pousse-toi, je viens chercher une clé.
+object = player = trashman = Je suis chargé de surveiller les ordures.@Tu n'auras rien sans mon autorisation.
+player = object = angry_var = Fhvklmzejncfljkzehfk!!
+player = object = unhappy_var = … ?
+player = object = happy_var = Tu sais quoi ? Tu as raison.@Tu vas la chercher à ma place.
+
+
+% KEY_QUEST_TRASHMAN_IN_TRASH
+player = UP = happy_var = Alors ? Elle est là-dedans ?
+militaryman = DOWN = trashman = … Oui… Elle est là… Tiens…
+player = UP = happy_var = Merci de ta diligence.
+
+
+% KEY_QUEST_TRASHMAN_STAYING
+militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, et…@Méditer sur mes choix de vie…
