@@ -56,10 +56,10 @@ OBJ-32 = /hidden
 NPC-06 = Sergent
 NPC-08 = Runner
 NPC-09 = Idiot
-NPC-11 = Jules
+NPC-11 = Romeo
 NPC-10 = Shooter
 NPC-16 = Jessy
-OBJ-08 = Jules Detector
+OBJ-08 = Romeo Detector
 
 ///// ARMORY /////
 
