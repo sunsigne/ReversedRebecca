@@ -23,6 +23,10 @@ player = object = you_silly = Du premier coup, bien sûr… Tout le monde@est t�
 player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
 
 
+% COLD_ROOM
+player = DOWN = pain = Il fait froid, ici !
+
+
 % CHEST
 player = object = no_sens = Ce coffre… est vide ?
 player = object = no_sens = Tiens ? Il y a un mot au fond : je m'entraîne a@esquiver les balles au terrain d'entrainement.
