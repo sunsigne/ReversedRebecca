@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.puzzle.bombkey;
+package com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -24,12 +24,6 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 
 	public BombKeyObject(Puzzle puzzle, boolean critical, int x, int y) {
 		this(puzzle, critical, x, y, 3 * Size.XL, 3 * Size.XL);
-	}
-
-	private boolean exploded;
-
-	public boolean hasExploded() {
-		return exploded;
 	}
 
 	////////// NAME ////////////

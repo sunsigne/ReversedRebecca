@@ -5,8 +5,8 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
