@@ -73,9 +73,12 @@ public class World implements Updatable, RenderFree {
 
 	private boolean userdata = false;
 
+
 	public World(String mapName) {
-		if (LAYER.LOADING.getHandler().getList().isEmpty())
+		if (LAYER.LOADING.getHandler().getList().isEmpty()) {
 			LAYER.LOADING.addObject(new LoadingScreen());
+			loading = Game.SEC / 2;
+		}			
 
 		initParameters(mapName);
 		createMap();
@@ -182,6 +185,8 @@ public class World implements Updatable, RenderFree {
 		return levelStats;
 	}
 
+	private int loading;
+	
 	private void start() {
 		boolean frozen = isFrozen();
 		freeze(true);
@@ -194,7 +199,7 @@ public class World implements Updatable, RenderFree {
 			LAYER.LOADING.getHandler().clear();
 		};
 
-		new GameTimer(Game.SEC / 2, true, start);
+		new GameTimer(loading, true, start);
 	}
 
 	private void stopApp(boolean workshop) {
