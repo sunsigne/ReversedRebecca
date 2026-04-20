@@ -23,7 +23,7 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 	}
 
 	public BombKeyObject(Puzzle puzzle, boolean critical, int x, int y) {
-		this(puzzle, critical, x, y, 2 * Size.L, 2 * Size.L);
+		this(puzzle, critical, x, y, 4 * Size.XL, 4 * Size.XL);
 	}
 
 	private boolean exploded;
@@ -83,6 +83,9 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 			bomb_tick--;
 			animation.cycle();
 		}
+		
+		if(animation.cycleIsFinished())
+			getPuzzle().closePuzzle(false);
 	}
 
 	////////// TEXTURE ////////////
@@ -96,7 +99,7 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 1 + (isCritical() ? 1 : 0);
+		return 1;
 	}
 
 	@Override

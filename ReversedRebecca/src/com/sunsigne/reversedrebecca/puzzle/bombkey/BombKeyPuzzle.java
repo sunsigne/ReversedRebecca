@@ -64,7 +64,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	protected void createBombKey() {
 		BombKeyObject bombkey = new BombKeyObject(this, isCritical, 0, 0);
 		bombkey.setX(getCol(4) + Size.S);
-		bombkey.setY(getCol(1));
+		bombkey.setY(getCol(1) + Size.S / 2);
 		LAYER.PUZZLE.addObject(bombkey);
 	}
 
@@ -101,8 +101,8 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	@Override
 	public void render(Graphics g) {
-		Color red = new Color(50, 10, 10, 240);
-		new TransluantLayer().drawPuzzle(g, red);
+		Color green = new Color(15, 45, 10, 240);
+		new TransluantLayer().drawPuzzle(g, green);
 	}
 
 }

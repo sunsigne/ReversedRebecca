@@ -15,4 +15,8 @@ public class LimitedCycloid<T> extends Cycloid<T> {
 		state = objects[index];
 	}
 
+	public boolean cycleIsFinished() {
+		return index >= size;
+	}
+
 }
