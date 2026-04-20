@@ -26,3 +26,12 @@ player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
 % CHEST
 player = object = no_sens = Ce coffre… est vide ?
 player = object = no_sens = Tiens ? Il y a un mot au fond : je m'entraîne a@esquiver les balles au terrain d'entrainement.
+
+
+% SHOTGUN_GOOD
+player = DOWN = happy_var = Ça ira, je n'ai pas besoin de ça.
+player = DOWN = you_silly = (Si j'avais voulu faire le mal, j'aurais commencé@bien plus tôt.)
+
+
+% SHOTGUN_BAD
+player = DOWN = angry_var2 = Zut ! Ça n'est qu'une affiche de fusil !

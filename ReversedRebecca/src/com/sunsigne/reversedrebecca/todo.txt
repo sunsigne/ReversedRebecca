@@ -32,6 +32,7 @@
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 
 	rr000 - faire clignotter une plante comme dans lvl001
+	lvl002 - vérifier les voix des perso (surtout les filles)
 
 	////////// MILITARY ////////////
 
@@ -54,17 +55,16 @@
 	- trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
-	jules :
+	romeo :
 	- lui trouver une voix
 	- créer la musique
-	- le renommer roméo
 
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
 	à créer :
-	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
+	les voix de tous les niveaux personnages (nathan, jessy, nancy, romeo, les militarymen)
 
 	à faire :
 	des interactions avec trashman
