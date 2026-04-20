@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
@@ -67,7 +65,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	protected void createBombKey() {
 		BombKeyObject bombkey = new BombKeyObject(this, isCritical, 0, 0);
-		bombkey.setX(getCol(5) );
+		bombkey.setX(getCol(5));
 		bombkey.setY(getCol(1) + Size.M);
 		LAYER.PUZZLE.addObject(bombkey);
 	}
@@ -86,20 +84,19 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	@Override
 	public void tick() {
-		/*
-		// prevent puzzle to close before bomb creation
+		// prevent puzzle to close before lock creation
 		if (bomblock[0] == null)
 			return;
 
-		var list = new ListCloner().deepCloneByClass(LAYER.PUZZLE.getHandler(), BombObject.class);
+		var list = new ListCloner().deepCloneByClass(LAYER.PUZZLE.getHandler(), BombLockObject.class);
 
-		for (BombObject bomb : list.getList())
-			if (bomb.hasExploded() == false)
+		for (BombLockObject lock : list.getList())
+			if (lock.isOpened() == false)
 				return;
 
-		// happens when all bombs has exploded
+		// happens when all lock are opened
 		closePuzzle(true);
-		*/
+
 	}
 
 	////////// TEXTURE ////////////

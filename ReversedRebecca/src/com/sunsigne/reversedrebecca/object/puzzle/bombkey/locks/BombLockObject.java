@@ -8,20 +8,13 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.ParticleBombObject;
-import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
-import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
-import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
-import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
-import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -35,7 +28,6 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	protected BombLockObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
-		loadAnimation();
 		countless = true;
 		maxcount = 1;
 		count = maxcount;
@@ -45,36 +37,21 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 		this(puzzle, critical, x, y, Size.L, Size.L);
 	}
 
-	private boolean exploded;
+	private boolean opened;
 
-	public boolean hasExploded() {
-		return exploded;
+	public boolean isOpened() {
+		return opened;
 	}
 
-	public void setExploded(boolean exploded) {
-		this.exploded = exploded;
+	public void setOpened(boolean opened) {
+		this.opened = opened;
+		image = null;
 
-		if (exploded == false)
+		if (opened == false)
 			return;
 
-		new CameraShaker().shaking(SHAKE.LITTLE);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
-
-		if (isCritical())
-			getPuzzle().closePuzzle(true);
-		else
-			createParticules(5);
-	}
-
-	private void createParticules(int num_of_particles) {
-		int x = getX() + Size.M / 4;
-		int y = getY() + Size.M / 2;
-		int size = 2 * Size.M;
-
-		for (int index = 0; index < num_of_particles; index++) {
-			ParticleBombObject particle = new ParticleBombObject(getPuzzle(), isCritical(), x, y, size, size);
-			LAYER.PUZZLE.getHandler().addObject(particle);
-		}
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "door_key");
+		setVelY(-2);
 	}
 
 	////////// NAME ////////////
@@ -138,8 +115,7 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	public void removeCount() {
 		setCount(getCount() - 1);
-		new CameraShaker().shaking(SHAKE.TINY);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "keys");
 	}
 
 	////////// PHYSICS ////////////
@@ -151,33 +127,31 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	////////// TICK ////////////
 
-	private final int ANIMATION_TIME = 2;
+	private final int ANIMATION_TIME = 10;
 	private int time = ANIMATION_TIME;
 
 	@Override
 	public void tick() {
 
-		// explode
-		if (hasExploded())
+		// opening
+		if (isOpened())
 			runAnimation();
 
 		else {
 			if (count <= 0)
-				setExploded(true);
+				setOpened(true);
 		}
 	}
 
 	private void runAnimation() {
 		time--;
-		if (time < 0) {
-			time = ANIMATION_TIME;
-			animation.cycle();
-		}
+		if (time < 0)
+			removeObject();
 	}
 
 	////////// TEXTURE ////////////
 
-	private LimitedCycloid<BufferedImage> animation;
+	private BufferedImage image;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -186,31 +160,20 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 1;
+		return opened ? 2 : 1;
 	}
 
 	@Override
 	public int getSheetSize() {
-		return 64;
-	}
-
-	private void loadAnimation() {
-		String path = "textures/puzzle/";
-
-		BufferedImage sheet = new ImageTask().loadImage(path + "key");
-		BufferedImage key_img = getSheetSubImage(sheet, getSheetColCriterion(), getSheetRowCriterion(), 32, 32);
-		BufferedImage[] key_img_array = { key_img };
-
-		BufferedImage explosion_img = new ImageTask().loadImage(path + "bomb_explosion");
-		Animation explosion_animation = new Animation(explosion_img);
-
-		BufferedImage img[] = new ArrayCombiner<BufferedImage>().combine(BufferedImage.class, key_img_array,
-				explosion_animation.getImages());
-		animation = new LimitedCycloid<BufferedImage>(img);
+		return 32;
 	}
 
 	public BufferedImage getImage() {
-		return animation.getState();
+		if (image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "key");
+			image = getSheetSubImage(sheet);
+		}
+		return image;
 	}
 
 	////////// RENDER ////////////
@@ -255,7 +218,7 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (hasExploded())
+		if (isOpened())
 			return;
 
 		if (isSelected() == false)
