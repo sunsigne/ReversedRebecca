@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -23,7 +24,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 
-		LAYER.PUZZLE.addObject(new PointerBombObject(this, isCritical));
+		LAYER.PUZZLE.addObject(new PointerKeyObject(this, isCritical));
 	}
 
 	////////// NAME ////////////
