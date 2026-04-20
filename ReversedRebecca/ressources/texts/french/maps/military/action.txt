@@ -41,6 +41,7 @@ YELLOW_KEY = Key3 % clé ?
 ///// REFECTORY /////
 
 BRING_YY = Key1 % faire venir YY
+I_GOT_STUCK = Key2 % Je me suis bloquée
 ONIONS = Key1 % oignons?
 SEARCH_ONIONS = Key3 % fouiller (oignons?)
 GIVE_THE_ONIONS = Key3 % donner les oignons

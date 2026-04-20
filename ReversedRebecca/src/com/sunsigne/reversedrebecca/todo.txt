@@ -40,7 +40,7 @@
 		- plus on monte les étage de la tour, plus ça lag
 		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
 
-	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
+	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres
 	changer nom -> jules en romeo. Vera en Venera
 
 	le fusil dans la chambre au dessus de l'enigme doit être un poster (car incohérant avec le fait que Rebecca ne le prenne pas en "méchant")
