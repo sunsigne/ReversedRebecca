@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.MovingBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
@@ -16,8 +17,8 @@ public class CyanBombKeyPuzzle extends BombKeyPuzzle {
 	////////// PUZZLE ////////////
 
 	@Override
-	public BombObject getBombLock(Puzzle puzzle, boolean critical, int x, int y) {
-		return new MovingBombObject(puzzle, critical, x, y);
+	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y) {
+		return new BombLockObject(puzzle, critical, x, y);
 	}
 
 	@Override
@@ -28,6 +29,7 @@ public class CyanBombKeyPuzzle extends BombKeyPuzzle {
 	@Override
 	public void createPuzzle() {
 		createBombKey();
+		createBombLocks();
 	}
 
 }

@@ -21,6 +21,10 @@ public abstract class PointerPuzzleObject extends PuzzleObject
 	public PointerPuzzleObject(Puzzle puzzle, boolean critical) {
 		super(puzzle, critical, 0, 0, Size.S, Size.S);
 	}
+	
+	public PointerPuzzleObject(Puzzle puzzle, boolean critical, int w, int h) {
+		super(puzzle, critical, 0, 0, w, h);
+	}
 
 	////////// NAME ////////////
 

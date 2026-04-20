@@ -23,7 +23,7 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 	}
 
 	public BombKeyObject(Puzzle puzzle, boolean critical, int x, int y) {
-		this(puzzle, critical, x, y, 4 * Size.XL, 4 * Size.XL);
+		this(puzzle, critical, x, y, 3 * Size.XL, 3 * Size.XL);
 	}
 
 	private boolean exploded;

@@ -6,11 +6,12 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PointerPuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class PointerKeyObject extends PointerPuzzleObject {
 
 	public PointerKeyObject(Puzzle puzzle, boolean critical) {
-		super(puzzle, critical);
+		super(puzzle, critical, Size.M / 2, Size.M / 2);
 	}
 
 	////////// TEXTURE ////////////

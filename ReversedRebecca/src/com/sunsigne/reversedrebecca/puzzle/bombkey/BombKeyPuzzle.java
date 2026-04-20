@@ -5,9 +5,12 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.PointerBombObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BigBombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -43,9 +46,9 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	private BombObject[] bomblock = new BombObject[getBombLockAmount()];
+	private BombLockObject[] bomblock = new BombLockObject[getBombLockAmount()];
 
-	public abstract BombObject getBombLock(Puzzle puzzle, boolean critical, int x, int y);
+	public abstract BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y);
 
 	public abstract int getBombLockAmount(); // 3, 4 or 6
 
@@ -64,19 +67,26 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	protected void createBombKey() {
 		BombKeyObject bombkey = new BombKeyObject(this, isCritical, 0, 0);
-		bombkey.setX(getCol(4) + Size.S);
-		bombkey.setY(getCol(1) + Size.S / 2);
+		bombkey.setX(getCol(5) );
+		bombkey.setY(getCol(1) + Size.M);
 		LAYER.PUZZLE.addObject(bombkey);
 	}
 
 	protected void createBombLocks() {
+		for (int index = 0; index < getBombLockAmount(); index++) {
+			int radCol = Size.M + getCol(4 + new RandomGenerator().getIntBetween(1, 2));
+			int radRow = Size.S / 3 + getRow(2 + new RandomGenerator().getIntBetween(1, 2));
 
+			bomblock[index] = getBombLock(this, isCritical, radCol, radRow);
+			LAYER.PUZZLE.addObject(bomblock[index]);
+		}
 	}
 
 	////////// TICK ////////////
 
 	@Override
 	public void tick() {
+		/*
 		// prevent puzzle to close before bomb creation
 		if (bomblock[0] == null)
 			return;
@@ -89,6 +99,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 		// happens when all bombs has exploded
 		closePuzzle(true);
+		*/
 	}
 
 	////////// TEXTURE ////////////
