@@ -2,14 +2,13 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.ConcurrentModificationException;
 
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
-import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -43,33 +42,23 @@ public class CollisionLaw implements PhysicLaw {
 
 	private void processCollisionEvent(Handler layer, Updatable object, CollisionDetector detectorObject) {
 
-		ConcurrentLinkedQueue<GenericListener> collisionEvent = null;
+		try {
+			for (Updatable tempObject : layer.getList()) {
+				if (tempObject instanceof CollisionReactor == false)
+					continue;
 
-		for (Updatable tempObject : layer.getList()) {
-			if (tempObject instanceof CollisionReactor == false)
-				continue;
+				CollisionReactor reactorObject = (CollisionReactor) tempObject;
 
-			CollisionReactor reactorObject = (CollisionReactor) tempObject;
+				if (object == reactorObject)
+					continue;
 
-			if (object == reactorObject)
-				continue;
-
-			if (objectAreColliding(detectorObject, reactorObject)) {
-				GenericListener collision = () -> reactorObject.collidingReaction(detectorObject);
-
-				if (collisionEvent == null)
-					collisionEvent = new ConcurrentLinkedQueue<>();
-
-				collisionEvent.add(collision);
+				if (objectAreColliding(detectorObject, reactorObject))
+					reactorObject.collidingReaction(detectorObject);
 			}
+		} catch (ConcurrentModificationException e) {
+			// some objects may disappear. As the next tick repair the problem,
+			// this exception shouldn't not be a problem.
 		}
-
-		if (collisionEvent == null)
-			return;
-
-		GenericListener event;
-		while ((event = collisionEvent.poll()) != null)
-			event.doAction();
 	}
 
 	private boolean objectAreColliding(CollisionDetector detectorObject, CollisionReactor reactorObject) {

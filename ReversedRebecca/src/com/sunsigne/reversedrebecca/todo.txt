@@ -30,8 +30,7 @@
 	
 	bug : 
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-	lvl002 : après la 1ère demande de diversion, rebecca devient "folle" (en termes de collision) en se plaçant entre sarah et la chaise (sarah aussi si on lui parle en étant là)
-	
+
 	rr000 - faire clignotter une plante comme dans lvl001
 
 	////////// MILITARY ////////////
