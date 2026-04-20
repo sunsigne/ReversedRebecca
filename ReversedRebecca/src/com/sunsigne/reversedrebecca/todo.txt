@@ -77,7 +77,6 @@
 	dave002 : mettre la musique de l'embranchement
 
 	créer un puzzle spécial pour quand on fait exploser une porte
-	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur

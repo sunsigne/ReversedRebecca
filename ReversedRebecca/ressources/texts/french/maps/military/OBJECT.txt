@@ -27,6 +27,10 @@ player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
 player = DOWN = pain = Il fait froid, ici !
 
 
+% CURTAIN
+player = DOIWN = no_sens = Comment il a fait pour verrouiller son rideau ?
+
+
 % CHEST
 player = object = no_sens = Ce coffre… est vide ?
 player = object = no_sens = Tiens ? Il y a un mot au fond : je m'entraîne a@esquiver les balles au terrain d'entrainement.

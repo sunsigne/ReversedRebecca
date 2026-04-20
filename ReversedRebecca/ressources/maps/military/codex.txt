@@ -23,6 +23,9 @@ OBJ-18 = Big Trash
 
 OBJ-13 = Quest Chest
 OBJ-33 = Shotgun
+OBJ-35 = Opened Curtains
+OBJ-36 = Closed Curtains
+OBJ-37 = Cyan Curtain
 
 ///// CENTER /////
 
