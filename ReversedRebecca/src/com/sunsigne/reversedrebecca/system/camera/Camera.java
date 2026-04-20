@@ -74,7 +74,7 @@ public class Camera {
 				return false;
 
 		case RIGHT:
-			if (px > -x + (3 * Window.WIDHT / 4) && px < -x + Window.WIDHT)
+			if (px > -x + (5 * Window.WIDHT / 8) && px < -x + Window.WIDHT)
 				return true;
 			else
 				return false;

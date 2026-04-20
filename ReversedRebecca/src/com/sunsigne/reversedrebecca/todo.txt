@@ -33,8 +33,58 @@
 	lvl002 : après la 1ère demande de diversion, rebecca devient "folle" (en termes de collision) en se plaçant entre sarah et la chaise (sarah aussi si on lui parle en étant là)
 	
 	rr000 - faire clignotter une plante comme dans lvl001
-	
-	faire Military ?
+
+	////////// MILITARY ////////////
+
+	bug
+		- le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
+		- Nathan, l'insulte "balaine" s'écrit avec un "e"
+		- plus on monte les étage de la tour, plus ça lag
+		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
+
+	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
+	changer nom -> jules en romeo. Vera en Venera
+
+	le fusil dans la chambre au dessus de l'enigme doit être un poster (car incohérant avec le fait que Rebecca ne le prenne pas en "méchant")
+
+	puzzle Bombkey en cours (rien n'est fait, à part les classes)
+
+	créer un dave003 por prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
+	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
+
+	à vérifier :
+	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
+
+	- trier les dossiers : 
+		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
+
+	jules :
+	- lui trouver une voix
+	- créer la musique
+	- le renommer roméo
+
+	lvl003-y gameplay :
+	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
+	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
+
+	à créer :
+	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
+
+	à faire :
+	des interactions avec trashman
+	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
+	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
+	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
+	ajouter des dialogues par défauts avec le runner et le sergent
+	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
+
+	dave002 : mettre la musique de l'embranchement
+
+	créer un puzzle spécial pour quand on fait exploser une porte
+	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
+	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
+	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
+	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -86,61 +136,7 @@
 	à faire - hall of destiny/fate
 	- relier le fusil à pompe derrière Butch à la fusillade
 	angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
-
-	////////// MILITARY ////////////
-
-	bug
-		- devant le prisonnier, la plante donne l'impression qu'on ne peut pas passer du tout
-		- le prisonnier : en fonction des résolutiopn d'écran, le texte "(vérité) je n'ai pas la clé" dépasse de l'écran.
-		- le scanner devant Nathan ne disparait pas, ce qui softlock le jeu si on le frappe (nouveau code Piranha ou erruer grossière ?)
-		- Nathan, l'insulte "balaine" s'écrit avec un "e"
-		- plus on monte les étage de la tour, plus ça lag
-		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
-
-	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres + si le joueur s'y bloque par erreur, rajouter une action pour l'en sortir, du genre "[R] je me suis bloqué par erreur"
-	changer nom -> jules en romeo. Vera en Venera
-
-	le fusil dans la chambre au dessus de l'enigme doit être un poster (car incohérant avec le fait que Rebecca ne le prenne pas en "méchant")
-
-	puzzle Bombkey en cours (rien n'est fait, à part les classes)
-
-	créer un dave003 por prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
-	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
-
-	à vérifier :
-	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
-
-	- trier les dossiers : 
-		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
-
-	jules :
-	- lui trouver une voix
-	- créer la musique
-	- le renommer roméo
-
-	lvl003-y gameplay :
-	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
-	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
-
-	à créer :
-	les voix de tous les niveaux personnages (nathan, jessy, nancy, jules, les militarymen)
-
-	à faire :
-	des interactions avec trashman
-	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
-	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
-	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
-	ajouter des dialogues par défauts avec le runner et le sergent
-	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
-
-	dave002 : mettre la musique de l'embranchement
-
-	créer un puzzle spécial pour quand on fait exploser une porte
-	camp militaire : rideaux cyan, rebecca se fait la remarque : "comment il a fait pour fermer son rideau à clef"
-	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
-	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur
-
+	
 	////////// LINUX & MAC ////////////
 
 	tester les balises de dialogues "up", "username", etc.
