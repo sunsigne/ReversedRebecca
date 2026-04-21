@@ -34,7 +34,7 @@ public class EasierBombKeyPuzzle extends BombKeyPuzzle {
 	@Override
 	public void createPuzzle() {
 		createBombKey();
-		createBombLocks();
+		createBombLocks(getBombLockAmount());
 	}
 
 }

@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
-import com.sunsigne.reversedrebecca.object.puzzle.bomb.bombs.BombObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
@@ -18,6 +17,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class BombKeyPuzzle extends Puzzle {
 
@@ -45,39 +45,46 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	////////// PUZZLE ////////////
 
 	private BombLockObject[] bomblock = new BombLockObject[getBombLockAmount()];
-	
+
 	public abstract BombKeyObject getBombKey(Puzzle puzzle, boolean critical);
 
 	public abstract BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y);
 
 	public abstract int getBombLockAmount(); // 3, 4 or 6
 
-	private int getColGap() {
-		switch (getBombLockAmount()) {
-		case 3:
-			return Size.S;
-		case 4:
-			return 0;
-		case 6:
-			return -Size.L - Size.S / 4;
-		}
-
-		return 0;
-	}
+	private BombKeyObject bombKey;
 
 	protected void createBombKey() {
-		BombKeyObject bombkey = getBombKey(this, isCritical);
-		bombkey.setX(getCol(5));
-		bombkey.setY(getCol(1) + Size.M);
-		LAYER.PUZZLE.addObject(bombkey);
+		int x = bombKey == null ? getCol(5) : getCol(7);
+		if (bombKey != null)
+			bombKey.setX(getCol(3));
+
+		bombKey = getBombKey(this, isCritical);
+		bombKey.setX(x);
+		bombKey.setY(getCol(1) + Size.M);
+		LAYER.PUZZLE.addObject(bombKey);
 	}
 
-	protected void createBombLocks() {
-		for (int index = 0; index < getBombLockAmount(); index++) {
-			int radCol = Size.M + getCol(4 + new RandomGenerator().getIntBetween(1, 2));
-			int radRow = Size.S / 3 + getRow(2 + new RandomGenerator().getIntBetween(1, 2));
+	protected void createBombLocks(int num) {
+		int radCol = 0;
+		int radRow = 0;
 
-			bomblock[index] = getBombLock(this, isCritical, radCol, radRow);
+		BombLockObject tempBombLock = null;
+
+		for (int index = 0; index < num; index++) {
+
+			int infinite = 0;
+			do {
+				radCol = Size.XS + bombKey.getX() + getCol(new RandomGenerator().getIntBetween(1, 2) - 1);
+				radRow = Size.S / 3 + getRow(2 + new RandomGenerator().getIntBetween(1, 2));
+				tempBombLock = getBombLock(this, isCritical, radCol, radRow);
+				infinite++;
+
+				// verify is a lock is already present at this pos
+			} while (infinite < 100 && Handler.getObjectsAtPos(LAYER.PUZZLE.getHandler(), tempBombLock.getX(),
+					tempBombLock.getY(), tempBombLock.getSize(), true).getList().isEmpty() == false);
+
+			bomblock[index] = tempBombLock;
 			LAYER.PUZZLE.addObject(bomblock[index]);
 		}
 	}

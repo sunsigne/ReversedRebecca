@@ -49,7 +49,7 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 	////////// NAME ////////////
 
 	protected String getName() {
-		return "BOMB";
+		return "BOMBLOCK";
 	}
 
 	@Override
