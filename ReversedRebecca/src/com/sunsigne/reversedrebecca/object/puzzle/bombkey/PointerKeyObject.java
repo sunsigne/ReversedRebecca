@@ -6,6 +6,8 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.puzzle.PointerPuzzleObject;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class PointerKeyObject extends PointerPuzzleObject {
@@ -35,9 +37,8 @@ public class PointerKeyObject extends PointerPuzzleObject {
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		if (isClickable() == false)
-			return;
-
+		if (isClickable())
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "keys");
 	}
 
 	@Override

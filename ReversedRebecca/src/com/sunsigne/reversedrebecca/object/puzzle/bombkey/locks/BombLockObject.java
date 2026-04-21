@@ -1,18 +1,13 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -28,9 +23,6 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	protected BombLockObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
-		countless = true;
-		maxcount = 1;
-		count = maxcount;
 	}
 
 	public BombLockObject(Puzzle puzzle, boolean critical, int x, int y) {
@@ -63,59 +55,9 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 	@Override
 	public String toString() {
 		String critical = isCritical() ? " CRITICAL" : "";
-		String count = getCount() + "/" + getMaxCount();
 		String pos = getRow(getX()) + "-" + getCol(getY());
 
-		return "PUZZLE : " + getName() + critical + " : " + count + " : " + pos;
-	}
-
-	////////// MAX COUNT ////////////
-
-	private boolean countless;
-	private int maxcount;
-
-	public int getMaxCount() {
-		return maxcount;
-	}
-
-	public void setMaxCount(int maxcount) {
-		countless = false;
-
-		if (maxcount > 1 && isCritical() == false)
-			this.maxcount = maxcount;
-		else
-			this.maxcount = 1;
-
-		if (count > maxcount)
-			count = maxcount;
-	}
-
-	////////// COUNT ////////////
-
-	private int count;
-
-	public int getCount() {
-		return count;
-	}
-
-	public void setCount(int count) {
-		if (count <= 0)
-			this.count = 0;
-
-		else if (count > maxcount)
-			this.count = maxcount;
-
-		else
-			this.count = count;
-	}
-
-	public void addCount() {
-		setCount(getCount() + 1);
-	}
-
-	public void removeCount() {
-		setCount(getCount() - 1);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "keys");
+		return "PUZZLE : " + getName() + critical + " : " + pos;
 	}
 
 	////////// PHYSICS ////////////
@@ -132,21 +74,11 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	@Override
 	public void tick() {
-
-		// opening
-		if (isOpened())
-			runAnimation();
-
-		else {
-			if (count <= 0)
-				setOpened(true);
+		if (isOpened()) {
+			time--;
+			if (time < 0)
+				removeObject();
 		}
-	}
-
-	private void runAnimation() {
-		time--;
-		if (time < 0)
-			removeObject();
 	}
 
 	////////// TEXTURE ////////////
@@ -178,33 +110,9 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	////////// RENDER ////////////
 
-	private Font font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 100f);
-
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-
-		if (countless == false && count > 0 && isCritical() == false)
-			drawCount(font, g);
-	}
-
-	private void drawCount(Font font, Graphics g) {
-
-		int rect[] = new int[] { getX() - 5, getY() + 20, getWidth(), getHeight() };
-
-		if (count == 1)
-			rect = new int[] { getX() - 22, getY() + 20, getWidth(), getHeight() };
-
-		new TextDecoration().drawOutlinesString(g, font, String.valueOf(count), getTextColor(), Color.BLACK,
-				DIRECTION.NULL, rect);
-	}
-
-	protected Color getTextColor() {
-		if (count == maxcount)
-			// red
-			return new Color(180, 50, 50);
-		else
-			return Color.YELLOW;
 	}
 
 	////////// MOUSE ////////////
@@ -224,7 +132,7 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 		if (isSelected() == false)
 			return;
 
-		removeCount();
+		setOpened(true);
 	}
 
 	@Override
