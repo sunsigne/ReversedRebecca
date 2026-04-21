@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.characteristics.upgrade;
 
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class UpgradePlayer {
 
@@ -52,8 +53,11 @@ public abstract class UpgradePlayer {
 
 		getUpgrade().value = Boolean.parseBoolean(value.toLowerCase());
 	}
-		
+
 	public boolean getValue() {
+		if (World.get() != null && World.get().getMapName().equalsIgnoreCase("test"))
+			return true;
+
 		return getUpgrade().value;
 	}
 
