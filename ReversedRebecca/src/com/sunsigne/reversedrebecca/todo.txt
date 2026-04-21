@@ -28,6 +28,10 @@
 
 	////////// EN COURS ////////////
 	
+	bombkey puzzle :
+		- demander son avis à la commu pour les difficulté
+		- créer un critique
+	
 	bug : 
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 
