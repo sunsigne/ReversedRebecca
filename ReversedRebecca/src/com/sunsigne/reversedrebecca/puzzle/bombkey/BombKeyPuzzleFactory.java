@@ -7,7 +7,6 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.GreenBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.OrangeBombPuzzle;
@@ -16,6 +15,7 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.YellowBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.CyanBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasierBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasiestBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.GreenBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class BombKeyPuzzleFactory implements PuzzleFactory {
@@ -41,7 +41,8 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
 			return new EasiestBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
@@ -57,7 +58,8 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
@@ -67,7 +69,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new CyanBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new GreenBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new GreenBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
 			return new YellowBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
@@ -79,13 +81,14 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
 			return new CyanBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new GreenBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new GreenBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
 			return new YellowBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
@@ -101,7 +104,8 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
@@ -134,12 +138,12 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 	public String getVictorySound() {
 		return "explosion_large";
 	}
-	
+
 	////////// SHAKE ////////////
 
 	@Override
 	public SHAKE getVictoryShake() {
 		return SHAKE.MEDIUM;
 	}
-	
+
 }

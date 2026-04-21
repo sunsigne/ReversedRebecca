@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -66,21 +67,27 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	protected void createBombLocks(int num) {
-		int radCol = 0;
-		int radRow = 0;
+		BombLockObject tempBombLock = getBombLock(this, isCritical, 0, 0);
+		boolean little = tempBombLock instanceof LittleBombLockObject;
 
-		BombLockObject tempBombLock = null;
+		int col = 3 * Size.M / 8 + bombKey.getX();
+		int row = (7 * Size.M / 16 + bombKey.getY() + getRow(1) / 2) - (little ? 10 : 0);
 
 		for (int index = 0; index < num; index++) {
 
+			int radCol = 0;
+			int radRow = 0;
 			int infinite = 0;
+
 			do {
-				radCol = Size.XS + bombKey.getX() + getCol(new RandomGenerator().getIntBetween(1, 2) - 1);
-				radRow = Size.S / 3 + getRow(2 + new RandomGenerator().getIntBetween(1, 2));
+				radCol = col + (little ? 3 : 1) * getCol(new RandomGenerator().getIntBetween(0, little ? 2 : 1))
+						/ (little ? 4 : 1);
+				radRow = row + (little ? 3 : 1) * getRow(new RandomGenerator().getIntBetween(0, little ? 2 : 1))
+						/ (little ? 4 : 1);
 				tempBombLock = getBombLock(this, isCritical, radCol, radRow);
 				infinite++;
 
-				// verify is a lock is already present at this pos
+				// verify if a lock is already present at this pos
 			} while (infinite < 100 && Handler.getObjectsAtPos(LAYER.PUZZLE.getHandler(), tempBombLock.getX(),
 					tempBombLock.getY(), tempBombLock.getSize(), true).getList().isEmpty() == false);
 

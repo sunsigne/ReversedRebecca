@@ -9,4 +9,10 @@ public class SingleBombLockObject extends BombLockObject {
 		super(puzzle, critical, Size.M + Size.XS / 4 + puzzle.getCol(5), Size.S / 6 + puzzle.getRow(3), 2*Size.L, 2*Size.L);
 	}
 
+	////////// NAME ////////////
+
+	protected String getName() {
+		return "SINGLE BOMBLOCK";
+	}
+	
 }
