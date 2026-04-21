@@ -11,11 +11,11 @@ import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.OrangeBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.RedBombPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.YellowBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.CyanBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasierBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasiestBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.GreenBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.YellowBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class BombKeyPuzzleFactory implements PuzzleFactory {
@@ -71,7 +71,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case ORANGE:
 			return new GreenBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new YellowBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -90,7 +90,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case GREEN:
 			return new GreenBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new YellowBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
 			return new OrangeBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
@@ -109,7 +109,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
 			return new OrangeBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:

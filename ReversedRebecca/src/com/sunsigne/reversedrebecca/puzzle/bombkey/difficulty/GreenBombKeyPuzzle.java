@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
@@ -38,7 +39,7 @@ public class GreenBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public void createPuzzle() {
-		createBombKey();
+		createBombKey(DIRECTION.NULL);
 		createBombLocks(getBombLockAmount());
 	}
 

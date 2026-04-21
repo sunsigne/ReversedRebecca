@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
@@ -66,10 +67,12 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	private BombKeyObject bombKey;
 
-	protected void createBombKey() {
-		int x = bombKey == null ? getCol(5) : getCol(7);
-		if (bombKey != null)
-			bombKey.setX(getCol(3));
+	protected void createBombKey(DIRECTION direction) {
+		int x = getCol(5);
+		if (direction == DIRECTION.LEFT)
+			x = getCol(3) - getCol(1) / 2;
+		if (direction == DIRECTION.RIGHT)
+			x = getCol(7) + getCol(1) / 2;
 
 		bombKey = getBombKey(this, isCritical);
 		bombKey.setX(x);
