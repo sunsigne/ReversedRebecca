@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bombkey;
 
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
@@ -13,7 +14,11 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class PointerKeyObject extends PointerPuzzleObject {
 
 	public PointerKeyObject(Puzzle puzzle, boolean critical) {
-		super(puzzle, critical, Size.M / 2, Size.M / 2);
+		this(puzzle, critical, Size.M / 2, Size.M / 2);
+	}
+
+	public PointerKeyObject(Puzzle puzzle, boolean critical, int w, int h) {
+		super(puzzle, critical, w, h);
 	}
 
 	////////// TEXTURE ////////////
@@ -33,6 +38,14 @@ public class PointerKeyObject extends PointerPuzzleObject {
 		return image;
 	}
 
+	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		g.drawImage(getImage(), getX() + getWidth() / 8, getY() - getHeight() / 2, 2 * getWidth(), 2 * getHeight(),
+				null);
+	}
+	
 	////////// MOUSE ////////////
 
 	@Override

@@ -26,7 +26,18 @@ public abstract class BombKeyPuzzle extends Puzzle {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 
-		LAYER.PUZZLE.addObject(new PointerKeyObject(this, isCritical));
+		LAYER.PUZZLE.addObject(getKeyPointer());
+	}
+
+	private PointerKeyObject getKeyPointer() {
+		PointerKeyObject pointer = new PointerKeyObject(this, isCritical);
+
+		boolean little = getBombLock(this, isCritical, 0, 0) instanceof LittleBombLockObject;
+		if (little == false)
+			return pointer;
+
+		int size = pointer.getSize() * Size.M / Size.L;
+		return new PointerKeyObject(this, isCritical, size, size);
 	}
 
 	////////// NAME ////////////
