@@ -67,16 +67,25 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	private BombKeyObject bombKey;
 
 	protected void createBombKey(DIRECTION direction) {
-		int x = getCol(5);
-		if (direction == DIRECTION.LEFT)
-			x = getCol(3) - getCol(1) / 2;
-		if (direction == DIRECTION.RIGHT)
-			x = getCol(7) + getCol(1) / 2;
-
 		bombKey = getBombKey(this, isCritical);
-		bombKey.setX(x);
+		bombKey.setX(getCol(direction));
 		bombKey.setY(getCol(1) + Size.M);
 		LAYER.PUZZLE.addObject(bombKey);
+	}
+
+	private int getCol(DIRECTION direction) {
+		switch (direction) {
+		case LEFT:
+			return getCol(3) - getCol(1) / 2;
+		case RIGHT:
+			return getCol(7) + getCol(1) / 2;
+		case UP:
+			return getCol(2) - getCol(1) / 2;
+		case DOWN:
+			return getCol(8) + getCol(1) / 2;
+		default:
+			return getCol(5);
+		}
 	}
 
 	protected void createBombLocks(int num) {

@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.MovingBombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
-import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
@@ -31,20 +30,16 @@ public class HarderBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public int getBombLockAmount() {
-		return 9;
+		return 8;
 	}
 
 	@Override
 	public void createPuzzle() {
-		int up = (int) Math.ceil((float) getBombLockAmount() / 2f);
-		int down = (int) Math.floor((float) getBombLockAmount() / 2f);
-		boolean rad = new RandomGenerator().getBoolean();
-
 		createBombKey(DIRECTION.LEFT);
-		createBombLocks(rad ? up : down);
+		createBombLocks(getBombLockAmount() / 2);
 
 		createBombKey(DIRECTION.RIGHT);
-		createBombLocks(rad ? down : up);
+		createBombLocks(getBombLockAmount() / 2);
 	}
 
 }

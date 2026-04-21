@@ -31,19 +31,19 @@ public class HardestBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public int getBombLockAmount() {
-		return 10;
+		return 9;
 	}
 
 	@Override
 	public void createPuzzle() {
 		createBombKey(DIRECTION.UP);
-		createBombLocks(4);
+		createBombLocks(getBombLockAmount() / 3);
 
 		createBombKey(DIRECTION.NULL);
-		createBombLocks(5);
+		createBombLocks(getBombLockAmount() / 3);
 
 		createBombKey(DIRECTION.DOWN);
-		createBombLocks(4);
+		createBombLocks(getBombLockAmount() / 3);
 	}
 
 }
