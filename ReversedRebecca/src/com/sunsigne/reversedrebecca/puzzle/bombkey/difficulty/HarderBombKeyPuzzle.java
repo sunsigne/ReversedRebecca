@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.MovingBombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
-import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
@@ -25,21 +25,28 @@ public class HarderBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		return new LittleBombLockObject(puzzle, critical, bomb, x, y);
+		return new BombLockObject(puzzle, critical, bomb, x, y);
 	}
 
 	@Override
 	public int getBombLockAmount() {
-		return 8;
+		return 10;
 	}
 
 	@Override
 	public void createPuzzle() {
-		createBombKey(DIRECTION.LEFT);
-		createBombLocks(getBombLockAmount() / 2);
+		int rad = new RandomGenerator().getIntBetween(1, 3);
+		int up = (int) Math.ceil((float) getBombLockAmount() / 3f);
+		int down = (int) Math.floor((float) getBombLockAmount() / 3f);
 
-		createBombKey(DIRECTION.RIGHT);
-		createBombLocks(getBombLockAmount() / 2);
+		createBombKey(DIRECTION.UP);
+		createBombLocks(rad == 1 ? up : down);
+
+		createBombKey(DIRECTION.NULL);
+		createBombLocks(rad == 2 ? up : down);
+
+		createBombKey(DIRECTION.DOWN);
+		createBombLocks(rad == 3 ? up : down);
 	}
 
 }

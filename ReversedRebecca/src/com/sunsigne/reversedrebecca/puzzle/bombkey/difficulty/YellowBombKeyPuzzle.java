@@ -3,7 +3,9 @@ package com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.MovingBombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
@@ -18,26 +20,23 @@ public class YellowBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombKeyObject getBombKey(Puzzle puzzle, boolean critical) {
-		return new BombKeyObject(puzzle, critical, 0, 0);
+		return new MovingBombKeyObject(puzzle, critical, 0, 0);
 	}
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		return new BombLockObject(puzzle, critical, bomb, x, y);
+		return new LittleBombLockObject(puzzle, critical, bomb, x, y);
 	}
 
 	@Override
 	public int getBombLockAmount() {
-		return 6;
+		return 4;
 	}
 
 	@Override
 	public void createPuzzle() {
-		createBombKey(DIRECTION.LEFT);
-		createBombLocks(getBombLockAmount() / 2);
-
-		createBombKey(DIRECTION.RIGHT);
-		createBombLocks(getBombLockAmount() / 2);
+		createBombKey(DIRECTION.NULL);
+		createBombLocks(getBombLockAmount());
 	}
 
 }

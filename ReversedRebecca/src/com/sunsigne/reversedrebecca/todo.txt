@@ -98,6 +98,7 @@
 	6h00 faire en sorte que tous les boutons soit valides durant les puzzles ? (régler le cas du dig puzzle)
 	2h00 - rendre compatible le DiscoPuzzle
 	3h00 - dans la class TextDecoration, j'utilise un metrcis pour mesurer la taille du string. Voir s'il est possible d'utiliser ce système pour afficher les boutons dans un texte (ChatBox)
+	0h20 - BombPuzzle utiliser la manette plutôt que la souris permet d'aller dans les munitions négatives
 
 	////////// LVL001 ////////////
 	

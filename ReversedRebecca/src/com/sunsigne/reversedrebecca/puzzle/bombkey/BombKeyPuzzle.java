@@ -36,7 +36,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 		if (normalized.getClass() == BombLockObject.class)
 			return new PointerKeyObject(this, isCritical);
 
-		int size = new PointerKeyObject(this, isCritical).getSize() * normalized.getSize() / Size.L;
+		int size = (Size.M / 2) * normalized.getSize() / Size.L;
 		return new PointerKeyObject(this, isCritical, size, size);
 	}
 

@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.MovingBombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
@@ -24,12 +25,12 @@ public class RedBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		return new BombLockObject(puzzle, critical, bomb, x, y);
+		return new LittleBombLockObject(puzzle, critical, bomb, x, y);
 	}
 
 	@Override
 	public int getBombLockAmount() {
-		return 6;
+		return 8;
 	}
 
 	@Override
