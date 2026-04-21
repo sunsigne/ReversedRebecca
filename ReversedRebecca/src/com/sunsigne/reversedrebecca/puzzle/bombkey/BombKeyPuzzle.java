@@ -31,13 +31,12 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	private PointerKeyObject getKeyPointer() {
-		PointerKeyObject pointer = new PointerKeyObject(this, isCritical);
+		var normalized = getBombLock(this, isCritical, 0, 0);
 
-		boolean little = getBombLock(this, isCritical, 0, 0) instanceof LittleBombLockObject;
-		if (little == false)
-			return pointer;
+		if (normalized.getClass() == BombLockObject.class)
+			return new PointerKeyObject(this, isCritical);
 
-		int size = pointer.getSize() * Size.M / Size.L;
+		int size = new PointerKeyObject(this, isCritical).getSize() * normalized.getSize() / Size.L;
 		return new PointerKeyObject(this, isCritical, size, size);
 	}
 
