@@ -4,14 +4,15 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
 
-public class YellowBombKeyPuzzle extends BombKeyPuzzle {
+public class OrangeBombKeyPuzzle extends BombKeyPuzzle {
 
-	public YellowBombKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public OrangeBombKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -24,12 +25,12 @@ public class YellowBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y) {
-		return new BombLockObject(puzzle, critical, x, y);
+		return new LittleBombLockObject(puzzle, critical, x, y);
 	}
 
 	@Override
 	public int getBombLockAmount() {
-		return 7;
+		return 9;
 	}
 
 	@Override

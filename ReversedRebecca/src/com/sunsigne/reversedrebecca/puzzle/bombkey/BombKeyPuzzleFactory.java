@@ -9,12 +9,12 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.OrangeBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.RedBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.CyanBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasierBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasiestBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.GreenBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.OrangeBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.YellowBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
@@ -92,7 +92,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new YellowBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new OrangeBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new OrangeBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
 			return new RedBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
@@ -111,7 +111,7 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case CYAN:
 			return new YellowBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new OrangeBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new OrangeBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
 			return new RedBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
