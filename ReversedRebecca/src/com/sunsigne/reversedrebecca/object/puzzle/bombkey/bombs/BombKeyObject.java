@@ -58,7 +58,7 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TICK ////////////

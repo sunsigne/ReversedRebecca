@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -21,12 +22,13 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class BombLockObject extends PuzzleObject implements SheetableImage, MouseUserEvent, GamepadEvent {
 
-	protected BombLockObject(Puzzle puzzle, boolean critical, int x, int y, int w, int h) {
+	protected BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y, int w, int h) {
 		super(puzzle, critical, x, y, w, h);
+		this.bomb = bomb;
 	}
 
-	public BombLockObject(Puzzle puzzle, boolean critical, int x, int y) {
-		this(puzzle, critical, x, y, Size.L, Size.L);
+	public BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
+		this(puzzle, critical, bomb, x, y, Size.L, Size.L);
 	}
 
 	private boolean opened;
@@ -71,6 +73,7 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	private final int ANIMATION_TIME = 10;
 	private int time = ANIMATION_TIME;
+	private BombKeyObject bomb;
 
 	@Override
 	public void tick() {
@@ -78,7 +81,8 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 			time--;
 			if (time < 0)
 				removeObject();
-		}
+		} else if (bomb != null)
+			setVelY(bomb.getVelY());
 	}
 
 	////////// TEXTURE ////////////

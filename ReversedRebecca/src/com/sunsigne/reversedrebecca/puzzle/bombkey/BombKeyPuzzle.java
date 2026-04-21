@@ -31,7 +31,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	private PointerKeyObject getKeyPointer() {
-		var normalized = getBombLock(this, isCritical, 0, 0);
+		var normalized = getBombLock(this, isCritical, null, 0, 0);
 
 		if (normalized.getClass() == BombLockObject.class)
 			return new PointerKeyObject(this, isCritical);
@@ -60,7 +60,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	public abstract BombKeyObject getBombKey(Puzzle puzzle, boolean critical);
 
-	public abstract BombLockObject getBombLock(Puzzle puzzle, boolean critical, int x, int y);
+	public abstract BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y);
 
 	public abstract int getBombLockAmount(); // 3, 4 or 6
 
@@ -80,7 +80,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	protected void createBombLocks(int num) {
-		BombLockObject tempBombLock = getBombLock(this, isCritical, 0, 0);
+		BombLockObject tempBombLock = getBombLock(this, isCritical, null, 0, 0);
 		boolean little = tempBombLock instanceof LittleBombLockObject;
 
 		int col = 3 * Size.M / 8 + bombKey.getX();
@@ -97,7 +97,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 						/ (little ? 4 : 1);
 				radRow = row + (little ? 3 : 1) * getRow(new RandomGenerator().getIntBetween(0, little ? 2 : 1))
 						/ (little ? 4 : 1);
-				tempBombLock = getBombLock(this, isCritical, radCol, radRow);
+				tempBombLock = getBombLock(this, isCritical, bombKey, radCol, radRow);
 				infinite++;
 
 				// verify if a lock is already present at this pos
