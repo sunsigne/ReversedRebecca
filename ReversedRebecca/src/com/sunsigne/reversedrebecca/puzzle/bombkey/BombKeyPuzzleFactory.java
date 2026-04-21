@@ -7,12 +7,12 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HarderBombPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.bomb.difficulty.HardestBombPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.CyanBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasierBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.EasiestBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.GreenBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.HarderBombKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.HardestBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.OrangeBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.RedBombKeyPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.difficulty.YellowBombKeyPuzzle;
@@ -49,9 +49,9 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case EASIER:
 			return new EasierBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDER:
-			return new HarderBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HarderBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDEST:
-			return new HardestBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HardestBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
@@ -115,9 +115,9 @@ public class BombKeyPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new RedBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new HarderBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HarderBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new HardestBombPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HardestBombKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
