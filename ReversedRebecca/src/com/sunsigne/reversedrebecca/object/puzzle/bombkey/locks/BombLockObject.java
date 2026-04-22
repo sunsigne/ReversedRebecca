@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks;
 
+import java.awt.AlphaComposite;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
@@ -22,13 +24,15 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 
 public class BombLockObject extends PuzzleObject implements SheetableImage, MouseUserEvent, GamepadEvent {
 
-	protected BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y, int w, int h) {
+	protected BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, boolean fading, int x, int y, int w,
+			int h) {
 		super(puzzle, critical, x, y, w, h);
 		this.bomb = bomb;
+		this.fading = fading;
 	}
 
-	public BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		this(puzzle, critical, bomb, x, y, Size.L, Size.L);
+	public BombLockObject(Puzzle puzzle, boolean critical, BombKeyObject bomb, boolean fading, int x, int y) {
+		this(puzzle, critical, bomb, fading, x, y, Size.L, Size.L);
 	}
 
 	private boolean opened;
@@ -77,12 +81,35 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	@Override
 	public void tick() {
-		if (isOpened()) {
-			time--;
-			if (time < 0)
-				removeObject();
-		} else if (bomb != null)
-			setVelY(bomb.getVelY());
+		if (isOpened() == false) {
+			if (bomb != null)
+				setVelY(bomb.getVelY());
+
+			if (fading)
+				fading();
+			return;
+		}
+
+		alpha = 1;
+		time--;
+		if (time < 0)
+			removeObject();
+
+	}
+
+	private boolean fading;
+	private float alpha = 1f;
+	private float alphaSpeed = 0.010f;
+
+	public void fading() {
+		alpha = alpha + alphaSpeed;
+
+		if (alpha >= 1f) {
+			alpha = 1f;
+			alphaSpeed = -alphaSpeed;
+		} else if (alpha <= -0.15f) {
+			alphaSpeed = -alphaSpeed;
+		}
 	}
 
 	////////// TEXTURE ////////////
@@ -116,7 +143,12 @@ public class BombLockObject extends PuzzleObject implements SheetableImage, Mous
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		Graphics2D g2d = (Graphics2D) g;
+
+		if (fading)
+			g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0f, alpha)));
+		g2d.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 	////////// MOUSE ////////////

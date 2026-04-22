@@ -23,7 +23,7 @@ public class CyanBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		return new BombLockObject(puzzle, critical, bomb, x, y);
+		return new BombLockObject(puzzle, critical, bomb, false, x, y);
 	}
 
 	@Override
