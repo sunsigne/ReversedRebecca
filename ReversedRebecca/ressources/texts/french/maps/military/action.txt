@@ -42,6 +42,8 @@ YELLOW_KEY = Key3 % clé ?
 ///// REFECTORY /////
 
 DO_WE_KNOW_EACH_OTHER = Key1 % On se connait ?
+WE_REALLY_DONT_KNOW_EACH_OTHER = Key1 % On ne se connait vraiment pas ?
+JESSY = Key1 % Jessy ?
 BRING_YY = Key1 % faire venir YY
 I_GOT_STUCK = Key2 % Je me suis bloquée
 ONIONS = Key1 % oignons?

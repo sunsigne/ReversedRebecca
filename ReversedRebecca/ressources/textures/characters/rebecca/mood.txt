@@ -7,6 +7,7 @@ laugh=1,4
 worry=1,5
 you_silly_var=1,6
 you_silly=1,7
+fake_smile=1,8
 
 ////// UNHAPPY //////
 
