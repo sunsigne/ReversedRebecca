@@ -1,3 +1,9 @@
+///// SAVES /////
+
+// short range
+ERASE = CASSIDY*MET
+ERASE = CASSIDY*PRANKED
+
 ///// WORLD /////
 
 OBJ-30 = Arena Set-up

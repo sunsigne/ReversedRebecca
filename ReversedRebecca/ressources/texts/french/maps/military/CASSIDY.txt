@@ -1,18 +1,27 @@
 % HELLO
+cassidy = player = happy_var = Non, je ne crois pas… Enchantée.@Moi, c'est Cassidy. Policière et militaire.
+cassidy = player = happy_var = Ho ! Vous avez deux casquettes ? Impressionnant !
+cassidy = player = happy = Je ne suis pas la seule. Ma soeur aussi fait les deux.@Elle doit être au stand de tir en ce moment.
+
+
+% HELLO_PRANKED
 cassidy = player = surprised = Oh mais !
 cassidy = player = happy_var = Salut ! On s'est vu au commissariat ce matin.@Vous rentriez sans cesse dans mon bureau.
 
 
-% HELLO_VAR
+% HELLO_MET
 cassidy = player = surprised = Oh mais !
 cassidy = player = happy_var = Salut ! On s'est vu au commissariat ce matin.@Vous êtes rentrée dans mon bureau.
 
 
 % HELLO_NEXT
-rebecca = cassidy = excited = Exact ! Vous êtes donc policière et militaire ?
+rebecca = cassidy = excited = Exact ! Vous êtes donc policière ET militaire ?
 cassidy = player = happy_var = Oui ! J'ai une double formation, exactement comme ma soeur. 
 cassidy = player = happy = Moi, c'est Cassidy au fait, et ma soeur, Jessy.@Elle doit être au stand de tir en ce moment.
 rebecca = cassidy = happy_var = Entendu, merci !
+
+
+
 
 [E] jessy
 cassidy = player = happy = Qu'est-ce que tu veux savoir à son sujet ?

@@ -37,34 +37,27 @@
 
 	////////// MILITARY ////////////
 
-	bug
-		- plus on monte les étage de la tour, plus ça lag
-		- lors du lancement de la cinématique de YY, le dessin "décoration" utilisé est rebecca; ce qui est un problème pour la variante "gothique"
+	à tester : cassidy*met et cassidy*pranked
 
-	le chemin speedrun rend le joueur invulnerable. Devrait plutôt lui faire faire ouvrir les coffres
-
-	le fusil dans la chambre au dessus de l'enigme doit être un poster (car incohérant avec le fait que Rebecca ne le prenne pas en "méchant")
-
-	puzzle Bombkey en cours (rien n'est fait, à part les classes)
-
-	à vérifier :
-	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
-
-	- trier les dossiers : 
+	trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
-	romeo lui trouver une voix
+	bug :
+		- plus on monte les étage de la tour, plus ça lag
+
+	à vérifier :
+		- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
 	lvl003-y gameplay :
-	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
-	- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
+		- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
+		- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, romeo, les militarymen)
 
 	à faire :
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
-	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
+	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map
 	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
