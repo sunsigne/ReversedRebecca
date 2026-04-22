@@ -31,6 +31,7 @@
 	bug : 
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 
+	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	rr000 - faire clignotter une plante comme dans lvl001
 	lvl002 - vérifier les voix des perso (surtout les filles)
 
@@ -46,18 +47,13 @@
 
 	puzzle Bombkey en cours (rien n'est fait, à part les classes)
 
-	créer un dave003 por prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
-	- workshop d'avant -> amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop)
-
 	à vérifier :
 	- il est dit à Nathan que le garde ne veut pas nous laisser passer. Est-ce qu'il est possible d'aller voir Nathan AVANT le guarde ? Si oui, gérer ce cas de figure
 
 	- trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
-	romeo :
-	- lui trouver une voix
-	- créer la musique
+	romeo lui trouver une voix
 
 	lvl003-y gameplay :
 	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
@@ -69,13 +65,10 @@
 	à faire :
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. UItiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
-	créer le preview des gens sur la map (au moins au niveau du terrain d'entrainement)
+	créer le preview des gens sur la map
 	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
-	dave002 : mettre la musique de l'embranchement
-
-	créer un puzzle spécial pour quand on fait exploser une porte
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur
@@ -86,6 +79,17 @@
 	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.) ET! ne pas oublier que la plante HUD dans novatech fait du bruit (ce qui serait bizarre sans le highlight)
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
+	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
+	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
+	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
+	1h les menu clignottent lorsqu'ils sont refresh, à corriger !
+	6h - les custom "surname" devrait être dynamique
+	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	6h - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
+	1h / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
+	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
+	1h - changer le système d'aléatorie pour du déterminisme ?
+	1h - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
 
 	////////// GAMEPAD ////////////
 
@@ -123,15 +127,33 @@
 	LVL001 - "abandon_everyone" ne devrait pas envoyer le joueur vers WS001
 	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
 	WS001 - angry_var & psychopath : directement au commisariat à la palce ? chez elle ?
+	LVL002 - angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
+	
 
 	////////// WS001 ////////////
+
+	////////// DAVE002 ////////////
+
+	mettre la musique de l'embranchement
 
 	////////// LVL002 ////////////
 
 	à faire - hall of destiny/fate
 	- relier le fusil à pompe derrière Butch à la fusillade
-	angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
+
+	////////// WS002 ////////////
+
+	amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop) + vérifier l'amélioration en chemin speedrun
+
+	////////// DAVE003 ////////////
+
+	prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
+		
+	////////// LVL003 ////////////
 	
+	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
+	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
+
 	////////// LINUX & MAC ////////////
 
 	tester les balises de dialogues "up", "username", etc.
@@ -149,9 +171,8 @@
 
 	////////// CHEST ////////////
 
-	16h00 - des chestloot déchiré (pas fini), il en faut plusieurs pièces pour faire un loot complet !
-	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ? créer le système de loot PV temporaire en cas de maximum
-	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ...
+	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
+	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ... -> ajouter une erreur spécifique
 
 	////////// DESSIN ////////////
 	
@@ -159,48 +180,19 @@
 	12h00 - créer une animation "sick" pour quand on marche	 ?
 	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
 	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
-	1h30 - finir marie_date
+	1h30 - finir marie_date + rebecca_date + rebecca_gothique
 	
 	////////// VIE & HP ////////////
 	
 	5h00 - créer un moyen de recuppérer de la vie (j'avais pensé à un % de chance croissant par hp manquant du boss de tirer des coeurs à la place des bombes, mais ça ne serait valable que pendant les combats du coup. Ca peut être un choix définitif si la vie du joueur n'est pas constamment menacée, mais il faudrait probablement afficher les coeur tout le temps pendant la run psycopath, pour montrer que pour Rebecca tout est une question de vie ou de mort. Ca serait même l'ocassion de dessiner des coeurs plus lugubres ou menaçant)
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
-		
-	////////// FACILE ////////////
 
-	1h00 - mettre le bouton "bonus" sur l'écran titre même !
-	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
-	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
-	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
-	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
-	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
-	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle)
-	4h00 - faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
-	
-	////////// DIFFICILE ////////////
-	
-	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lore de Vladimir (facultatif) :
-	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
-	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
-
-	1h les menu clignottent lorsqu'ils sont refresh, à corriger !
-	6h - les custom "surname" devrait être dynamique
-	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	6h - ExplosionBrightnessLaw est pas terrible, réactiver à arranger	
-	8h - Foe est une class qui ne seriva pas, recycler le code (pour un npc piranha, ou un boss ?), d'ailleurs, la distance avec le joueur doit être prise en comtpe
-	1h / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
-	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
-	1h - changer le système d'aléatorie pour du déterminisme ?
-	1h - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
-
-	- penser à vérifier la cohérence globale du jeu avec les système de difficulté et de karma (facile, normal, difficile / sadique, psycopath, angelic), dans le sens : les dialogues dans les chapitres
-
-	////////// MENU BONUS ////////////
+	////////// BONUS ////////////
 
 	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
 	3h consulter les ressources non utilisées (son, textures, etc.)
 	1h activer tous les succès abandonnées
-	1h jouer avec le skin "rebecca_dark" + 3h création du skin + 15h implémentation complète
+	1h jouer avec le skin "rebecca_dark" + 15h implémentation complète
 	3h créer une galerie
 
 	////////// PERSONNAGES A FAIRE ////////////
@@ -217,14 +209,15 @@
 
 	////////// RR000 ////////////
 
-	"regarder la TV tj pas fait", attention au dodo de sarah
+	"regarder la TV tj pas fait", attention au dodo de sarah : faire comme Stardew Valley, ça lance un dialogue
 	
 	////////// WS000 ////////////
 	
 	passage secret tj vide ...
 
-	////////// MOLE 0 ////////////
+	////////// LVL003-X ////////////
 	
+	8h - Foe est une class qui ne seriva pas, recycler le code (pour une bombe), d'ailleurs, la distance avec le joueur doit être prise en comtpe
 	3h00 - rendre + évident le système de couches (petits tunnels avant les grands)
 	faire les highlights
 	boite en carton -> faire pop SUR le joueur comme dans RR000 (+ vérifier si soflock possible - car Out Of Range)	
@@ -249,6 +242,12 @@
 
 	////////// SONS ////////////
 
+	///////// APRES LA DEMO ////////////
+	
+	24h00 - créer des "cinématique d'enregistrement" sur la tv ? sur camille ? pour raconter le lore de Vladimir (facultatif) :
+	- une scène où il prépare l'attaque avec Double Y et Blast-X (qui lui fourni les bombes
+	- une scène où il se fait "virer" (destituer de son projet) par le vieux Walter
+
 	///////// IDEE ////////////
 
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
@@ -268,6 +267,7 @@
 	un niveau dans un volcan : 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un trou noir ! (c'est dans le titre du jeu après tout)
 	
+	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) / dans les succès ? (puisqu'il faut les débloquer pour avoir le secret) -> le twist de la dernière input (sauvegarder, quitter, recharger)
 	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
