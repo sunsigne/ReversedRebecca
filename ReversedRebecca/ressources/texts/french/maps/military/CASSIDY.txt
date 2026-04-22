@@ -38,26 +38,45 @@ player = DOWN = sad = (La belle affaire… Ça ou rien, c'est pareil…)
 object = player = happy = Je suis aussi policière.@On s'est peut-être croisée ailleurs ?
 player = object = no_sens_var = (Je ne devrais peut-être pas lui dire que je viens@de voler les documents d'un commissariat…)
 player = object = fake_smile = Heu… Incroyable !@Tu es donc policière ET militaire ?
-object = player = happy = Comme ma sœur Jessy, oui.@Elle doit être au stand de tir en ce moment.
+object = player = happy = Comme ma soeur Jessy, oui.@Elle doit être au stand de tir en ce moment.
 player = object = fake_smile = C'est noté.
 
 
 % JESSY
-object = player = happy = Qu'est-ce que tu veux savoir à son sujet ?
+object = player = happy = Qu'est-ce que tu veux savoir sur elle ?
 
 
-% stop
+% JESSY_AGAIN
+object = player = happy = Tu voulais dire autre chose à propos d'elle ?
 
 
+% JESSY_REPEAT
+object = player = happy_var = Tu te répètes.
+object = player = happy = Je reste disponible s'il te faut autre chose.
 
-[E] jessy
-object = player = happy = Qu'est-ce que tu veux savoir à son sujet ?
-[F] = I'm into her / Elle me plaît carrément
-object = player = surprised_var = Elle te plaît ?
-object = player = happy = Tu es assez son genre justement,@tu pourrais avoir tes chances avec elle.
-object = player = happy = Par contre, tu dois savoir qu'elle sortent déjà ensemble avec Nancy.
-object = player = happy = Elles sont plutôt ouvertes de ce côté-là, alors ça peut marcher.@Tu devrais voir ça avec elles.
 
-[E] = conseils
-object = player = ??? = Jessy a un caractère difficile : si tu es trop gentille,@tu vas l'ennuyer. Si tu joues un peu trop les fortes têtes, tu vas l'énerver.
-object = player = ??? = En dosant ce qu'il faut d'impertinence (sassy) et de soumission, tu la feras craquer.
+% JESSY_SHES_MEAN
+object = player = happy_var = Elle a son caractère, il est vrai.
+object = player = happy = Mais si tu ne la supportes vraiment pas,@rien ne t'oblige à lui parler.
+
+
+% JESSY_NOTHING_SPECIAL
+object = player = happy = Oh ! Ok.
+
+
+% JESSY_I_M_INTO_HER
+object = player = surprised = Vraiment ?
+object = player = happy_var = Maintenant que j'y pense, tu es plutôt son genre.@Tu pourrais avoir tes chances avec elle.
+object = player = happy = Par contre, tu dois savoir qu'elles sortent déjà@ensemble avec Nancy.
+object = player = happy_var = Elles sont plutôt ouvertes de ce côté-là, alors@ça peut marcher. Tu devrais voir ça avec elles.
+object = player = happy = Tu trouveras Nancy à l'infirmerie.
+
+
+% JESSY_TIPS
+object = player = happy = Ma soeur a un caractère contradictoire :@si tu es trop gentille, tu vas l'ennuyer.
+object = player = happy_var = Mais si tu te rebelles un peu trop, tu vas l'énerver@pour de bon, et elle ne pourra plus te voir.
+object = player = happy = En dosant juste ce qu'il faut d'impertinence@et de soumission, tu la feras craquer à coup sûr.
+
+
+% NANCY_TIPS
+object = player = happy_var = Elle est tout simplement adorable. Sois gentille,@patiente, sincère et à l'écoute, et tu lui plairas.
