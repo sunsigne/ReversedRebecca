@@ -1,13 +1,3 @@
-% HELLO
-nancy = player = happy = Name's Nancy (Moi, c'est nancy). Comment je peux t'aider ?
-rebecca = nancy = worry = Je ne sais pas encore…
-rebecca = nancy = happy_var2 = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
-nancy = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
-(rajouter une phrase ou deux)
-nancy = player = happy = Par contre, je ne peux pas te parler trop longtemps, ma copine va être jalouse.
-rebecca = nancy = surprised = Comment ça ? Tu n'as pas le droit de parler aux autres filles ?
-nancy = player = blush_side = Pas quand elles sont aussi jolies que toi…
-nancy = player = blush_side = Mais c'était sympa de faire connaissance.
 
 
 [E] ta copine est dure
