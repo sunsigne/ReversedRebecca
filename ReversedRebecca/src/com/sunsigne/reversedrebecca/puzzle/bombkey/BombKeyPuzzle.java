@@ -2,19 +2,24 @@ package com.sunsigne.reversedrebecca.puzzle.bombkey;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.PointerKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.BombKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.MovingBombKeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.bombs.UnlitBombKeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
+import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.SingleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
@@ -31,9 +36,10 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	}
 
 	private PointerKeyObject getKeyPointer() {
-		var normalized = getBombLock(this, isCritical, null, 0, 0);
+		var normalized = isCritical ? new SingleBombLockObject(this, true, null)
+				: getBombLock(this, isCritical, null, 0, 0);
 
-		if (normalized.getClass() == BombLockObject.class)
+		if (isCritical == false && normalized.getClass() == BombLockObject.class)
 			return new PointerKeyObject(this, isCritical);
 
 		int size = (Size.M / 2) * normalized.getSize() / Size.L;
@@ -68,6 +74,11 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	protected void createBombKey(DIRECTION direction) {
 		bombKey = getBombKey(this, isCritical);
+		boolean moving = bombKey.getClass() == MovingBombKeyObject.class;
+
+		if (isCritical)
+			bombKey = new UnlitBombKeyObject(this, isCritical, moving, 0, 0);
+
 		bombKey.setX(getCol(direction));
 		bombKey.setY(getCol(1) + Size.M);
 		LAYER.PUZZLE.addObject(bombKey);
@@ -90,7 +101,7 @@ public abstract class BombKeyPuzzle extends Puzzle {
 
 	protected void createBombLocks(int num) {
 		BombLockObject tempBombLock = getBombLock(this, isCritical, null, 0, 0);
-		boolean little = tempBombLock instanceof LittleBombLockObject;
+		boolean little = isCritical == false && tempBombLock instanceof LittleBombLockObject;
 
 		int col = 3 * Size.M / 8 + bombKey.getX();
 		int row = (7 * Size.M / 16 + bombKey.getY() + getRow(1) / 2) - (little ? 10 : 0);
@@ -102,6 +113,12 @@ public abstract class BombKeyPuzzle extends Puzzle {
 			int infinite = 0;
 
 			do {
+				if (isCritical) {
+					tempBombLock = new SingleBombLockObject(this, true, bombKey);
+					tempBombLock.setX(tempBombLock.getX() + bombKey.getX() - getCol(5));
+					break;
+				}
+
 				radCol = col + (little ? 3 : 1) * getCol(new RandomGenerator().getIntBetween(0, little ? 2 : 1))
 						/ (little ? 4 : 1);
 				radRow = row + (little ? 3 : 1) * getRow(new RandomGenerator().getIntBetween(0, little ? 2 : 1))
@@ -142,6 +159,14 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	@Override
 	public int getSheetColCriterion() {
 		return 1;
+	}
+
+	@Override
+	protected BufferedImage getWallTexture() {
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+		int row = isCritical ? 2 : 1;
+		return getSheetSubImage(sheet, getSheetColCriterion(), row, getSheetWidth(), getSheetHeight());
+
 	}
 
 	////////// RENDER ////////////

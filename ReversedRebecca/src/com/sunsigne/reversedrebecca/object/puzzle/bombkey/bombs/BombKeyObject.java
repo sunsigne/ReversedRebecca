@@ -68,18 +68,18 @@ public class BombKeyObject extends PuzzleObject implements SheetableImage {
 	@Override
 	public void tick() {
 		runAnimation();
+
+		if (animation.cycleIsFinished())
+			getPuzzle().closePuzzle(false);
 	}
 
-	private void runAnimation() {
+	protected void runAnimation() {
 		time--;
 		if (time < 0) {
-			time = TICKING_TIME;;
+			time = TICKING_TIME;
 			bomb_tick--;
 			animation.cycle();
 		}
-		
-		if(animation.cycleIsFinished())
-			getPuzzle().closePuzzle(false);
 	}
 
 	////////// TEXTURE ////////////

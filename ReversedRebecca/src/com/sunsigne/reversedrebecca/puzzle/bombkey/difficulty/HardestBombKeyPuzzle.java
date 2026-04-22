@@ -32,7 +32,7 @@ public class HardestBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public int getBombLockAmount() {
-		return 10;
+		return isCritical ? 3 : 10;
 	}
 
 	@Override

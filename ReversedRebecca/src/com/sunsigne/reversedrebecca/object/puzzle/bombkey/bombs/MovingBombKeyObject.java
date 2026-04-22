@@ -38,8 +38,10 @@ public class MovingBombKeyObject extends BombKeyObject {
 	@Override
 	public void tick() {
 		super.tick();
-
-		// goes up and down
+		goesUpAndDown();
+	}
+	
+	protected void goesUpAndDown() {
 		if (getY() > ymax)
 			setVelY(-speed);
 		if (getY() < ymin)

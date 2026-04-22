@@ -24,7 +24,7 @@ public class EasierBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public BombLockObject getBombLock(Puzzle puzzle, boolean critical, BombKeyObject bomb, int x, int y) {
-		return new SingleBombLockObject(puzzle, critical);
+		return new SingleBombLockObject(puzzle, critical, bomb);
 	}
 
 	@Override

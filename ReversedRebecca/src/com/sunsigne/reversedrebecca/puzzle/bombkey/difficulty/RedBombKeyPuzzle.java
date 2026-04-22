@@ -30,7 +30,7 @@ public class RedBombKeyPuzzle extends BombKeyPuzzle {
 
 	@Override
 	public int getBombLockAmount() {
-		return 8;
+		return isCritical ? 2 : 8;
 	}
 
 	@Override
