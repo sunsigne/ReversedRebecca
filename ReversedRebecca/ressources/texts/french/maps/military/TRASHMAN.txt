@@ -5,6 +5,10 @@ object = player = trashman = Je ne réponds pas non plus aux questions.
 player = object = no_sens_var = (… Il y a vraiment des tordus dans ce camp)
 
 
+% HE_STINKS
+player = DOWN = sad = (Je préfère m'abstenir… Il ne sent pas très bon.)
+
+
 % KEY_QUEST
 player = object = angry = Pousse-toi, je viens chercher une clé.
 object = player = trashman = Je suis chargé de surveiller les ordures.@Tu n'auras rien sans mon autorisation.

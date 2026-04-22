@@ -5,6 +5,7 @@ MOVE_OUT = Key1 % pousse-toi !
 SEARCH_KEY = Key3 % fouiller (clé?)
 WATCHA_DOING = Key1 % tu fais quoi ?
 YY = Key1 % YY ?
+TALK_VAR = Key1 % ... parler ?
 ARENT_YOU_GOING_OUT = Key1 % Tu ne sors pas ?
 I_HAVE_THE_KEY = Key1 % J'ai la clé
 NOT_SO_COCKY_ANYMORE = Key1 % On fait moins le malin
