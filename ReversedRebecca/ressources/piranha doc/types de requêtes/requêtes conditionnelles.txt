@@ -129,6 +129,19 @@ La seule différence avec ce dernier est que PLAYER_CLOSER_THAN vérifie si le j
 
 
 
+////// PLAYER_FULL_LIFE //////
+
+Le Type de Requête PLAYER_FULL_LIFE permet de savoir si le joueur a ou non tous ses points de vie.
+
+Exemple :
+TIME -> 100 = PLAYER_FULL_LIFE -> TURE ? GO_CRYING / GO_HIDING
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur a t-il tous ses points de vie ?
+- si oui, effectuer l'action GO_CRYING (qui est une balise GOTO).
+- si non, effectuer l'action GO_HIDING (qui est une autre balise GOTO).
+
+
+
 ////// SEE_PLAYER_AND_CLOSER_THAN //////
 
 Le Type de Requête SEE_PLAYER_AND_CLOSER_THAN permet de savoir si le joueur est à la fois présent dans le champ de vision de l'objet actuel, et plus proche de lui que le nombre de cases définies par la Cible.

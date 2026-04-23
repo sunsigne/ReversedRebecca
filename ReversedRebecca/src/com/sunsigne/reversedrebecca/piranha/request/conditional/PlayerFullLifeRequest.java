@@ -1,20 +1,20 @@
 package com.sunsigne.reversedrebecca.piranha.request.conditional;
 
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
-import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 
-public class NumberSettingsRequest extends ConditionalRequest {
+public class PlayerFullLifeRequest extends ConditionalRequest {
 
 	////////// REQUEST ////////////
 
-	public NumberSettingsRequest() {
+	public PlayerFullLifeRequest() {
 		new RequestList().addRequest(this, getType());
 	}
 
-	private static Request request = new NumberSettingsRequest();
+	private static Request request = new PlayerFullLifeRequest();
 
 	@Override
 	public Request getRequest() {
@@ -23,7 +23,7 @@ public class NumberSettingsRequest extends ConditionalRequest {
 
 	@Override
 	public String getType() {
-		return "NUMBER_SETTINGS";
+		return "PLAYER_FULL_LIFE";
 	}
 
 	@Override
@@ -38,7 +38,15 @@ public class NumberSettingsRequest extends ConditionalRequest {
 
 	@Override
 	protected String getConditionToCheck(PiranhaObject object) {
-		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER ? "true" : "false";
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return "true";
+
+		boolean invulnerable = player.isInvulnerable();
+		boolean full_life = player.isFullHp();
+		String value = String.valueOf(invulnerable || full_life);
+
+		return value;
 	}
 
 }
