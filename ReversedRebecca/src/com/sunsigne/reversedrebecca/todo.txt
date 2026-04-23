@@ -38,6 +38,9 @@
 
 	////////// MILITARY ////////////
 
+	Nancy :
+		- choisir un playerAvoider + faire comme pour delta quand le joueur est proche ?
+
 	bug rideau :
 		- on peut dévérouiller SANS la clef
 		- à partir du moment où on a dévérouiller, les autres rideaux ne "disparaissent" pas correctement
