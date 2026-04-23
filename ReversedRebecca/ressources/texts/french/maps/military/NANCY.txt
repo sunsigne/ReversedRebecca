@@ -31,7 +31,7 @@ object = player = blush = Mais c'était sympa de faire ta connaissance.
 
 
 % REFUSE_HEALING
-object = player = sad_side = Je suis désolée pour toi, mais tu m'as blessé…@Si ta vie n'est pas en danger, je ne t'aiderais pas.
+object = player = sad_side = Je suis désolée pour toi, mais tu m'as blessé…@Ta vie n'est pas en danger, je ne t'aiderais pas.
 
 
 % YOUT_GIRLFRIEND_IS_BEING_HARSH
@@ -42,8 +42,14 @@ object = player = blush = En plus, elle m'a dit hier qu'elle voulait essayer@des
 object = player = blush_side = Désolée, je m'avance… Tu n'as probablement@pas envie de… Oublie ce que je viens de dire.
 
 
+% WOW_CALM_DOWN
+object = player = playful = Pardon, je ne voulais pas te mettre mal à l'aise.
+object = player = excited = En tout cas, c'est avec plaisir que je te soignerai@si tu as besoin.
+
+
 % WHOS_YOUR_GIRLFRIEND
-todo
+object = player = happy = Elle s'appelle Jessy. Elle doit être au stand de tir@en ce moment.
+object = player = playful = Tu devrais aller lui parler, elle pourrait te plaire.
 
 
 % MAYBE_I_WANT
@@ -70,7 +76,7 @@ object = player = blush_sad = Quoi qu'il en soit, je n'aime pas tes mensonges…
 
 
 % APOLOGIZE
-object = player = sad_side = C'est gentil, j'apprécie.@Je n'ai quand même plus envie de te parler.
+object = player = sad_side = C'est gentil, j'apprécie.@Je ne souhaite quand même plus te parler.
 
 
 

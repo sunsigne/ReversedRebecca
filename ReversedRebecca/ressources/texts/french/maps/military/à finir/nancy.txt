@@ -1,20 +1,4 @@
 
-
-
-[E] = (mentir) Je lui ai parlé, elle est d'accord.
-nancy = player = embarassed_var = Menteuse, tu n'as pas quitté la pièce…
-[E] = (mentir) Je lui ai parlé avant de venir te voir
-nancy = player = Ha oui ? Elle s'appelle comment ?
-
-
-[E] Elisabeth ou Cassidy [R] Mathilde ou Jessy [F] Ok, j'ai menti.
-(E)
-nancy = player = blush_deceived = Ça n'est pas drôle…
-nancy = player = blush_deceived = Quoi qu'il en soit, je n'aime pas tes mensonges…@Ne me parle plus s'il te plaît.
-[E] = S'excuser
-nancy = player = C'est gentil, j'apprécie. Je suis désolée, mais@je n'ai quand même plus envie de te parler.
-
-(R)
 nancy = player = embarassed = Ho… Tu lui as vraiment parlé…
 nancy = player = embarassed = Donnes moi une seconde, je reviens.
 (elle devient rouge et se cache sous la table. Elle crie "Haaaaa !" puis revient très doucement)
