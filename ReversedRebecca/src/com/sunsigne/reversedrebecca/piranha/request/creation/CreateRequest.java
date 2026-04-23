@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -42,17 +44,26 @@ public class CreateRequest implements IndexRequest {
 
 		String pos = String.valueOf(target.split(":")[0]);
 		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
-		int x = onTheSpot ? object.getX() : Integer.parseInt(pos.split("-")[0]);
-		int y = onTheSpot ? object.getY() : Integer.parseInt(pos.split("-")[1]);
+		boolean onPlayer = pos.split("-")[0].equalsIgnoreCase("onplayer");
+		int x = onTheSpot || onPlayer ? object.getX() : Integer.parseInt(pos.split("-")[0]);
+		int y = onTheSpot || onPlayer ? object.getY() : Integer.parseInt(pos.split("-")[1]);
+
+		if (onPlayer) {
+			Player player = new PlayerFinder().getPlayer();
+			if (player != null) {
+				x = player.getX();
+				y = player.getY();
+			}
+		}
 
 		// determinate the index
 
 		Handler handler = object.getHandler();
-		int index = getIndex(handler, onTheSpot ? pos.split("-")[1] : pos.split("-")[2]);
+		int index = getIndex(handler, onTheSpot || onPlayer ? pos.split("-")[1] : pos.split("-")[2]);
 
 		// refine data
 
-		if (onTheSpot == false) {
+		if (onTheSpot == false && onPlayer == false) {
 			GoalObject goal = new GoalObject(x, y, false);
 			x = goal.getX();
 			y = goal.getY();
@@ -69,10 +80,10 @@ public class CreateRequest implements IndexRequest {
 			addObject(handler, index, creation);
 			Handler.updateHandlerMap(handler, creation);
 		}
-		
+
 		if (creation instanceof PiranhaObject)
 			GlobalInstruction.getPiranhaList().clear();
-			
+
 	}
 
 	private GameObject determinateCreation(String type, int x, int y) {

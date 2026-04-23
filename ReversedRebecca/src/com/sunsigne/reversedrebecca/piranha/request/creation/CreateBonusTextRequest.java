@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.piranha.request.creation;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.other.BonusTextReusable;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.IndexRequest;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -41,8 +43,17 @@ public class CreateBonusTextRequest implements IndexRequest {
 		// determinate the position
 		String pos = String.valueOf(target.split(",")[0]);
 		boolean onTheSpot = pos.split("-")[0].equalsIgnoreCase("onthespot");
-		int x = onTheSpot ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
-		int y = onTheSpot ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+		boolean onPlayer = pos.split("-")[0].equalsIgnoreCase("onplayer");
+		int x = onTheSpot || onPlayer ? (object.getX() / Size.M) : Integer.parseInt(pos.split("-")[0]);
+		int y = onTheSpot || onPlayer ? (object.getY() / Size.M) : Integer.parseInt(pos.split("-")[1]);
+
+		if (onPlayer) {
+			Player player = new PlayerFinder().getPlayer();
+			if (player != null) {
+				x = player.getX() / Size.M;
+				y = player.getY() / Size.M;
+			}
+		}
 
 		// refine position
 		GoalObject goal = new GoalObject(x, y, false);

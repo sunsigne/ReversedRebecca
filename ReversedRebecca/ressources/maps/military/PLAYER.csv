@@ -1,4 +1,8 @@
 TIME -> 0 = GOTO -> NAME:REBECCA, BLOCKING_SIGHT:TRUE
+
+
+//// STATE ////
+
 $ -> DISPLAY_NORMAL = DISPLAY -> 0, 0
 
 

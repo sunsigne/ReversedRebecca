@@ -19,6 +19,8 @@ TIME -> 0 = CREATE -> ONTHESPOT-FRONT:1-255-0
 
 Lorsque la Condition sera vérifiée, une porte bleue nulle (1-255-0) sera créée aux coordonnées X=10 Y=20 et sera placée devant les objets ayant la même Position.
 
+Également, en lieu et place du couple de coordonnées x-y, il est possible d'écrire le mot clef ONPLAYER; les coordonnées seront dans ce cas automatiquement celles du joueur.
+
 Attention ! Créer un objet au même endroit qu'un autre peut avoir des conséquences involontaires en termes de collisions ! Soyez certains de ce que vous faites.
 
 
@@ -154,6 +156,8 @@ TIME -> 0 = CREATE_BONUSTEXT -> 10-20,NORMAL,MON_TEXTE
 Lorsque la Condition sera vérifiée, sera créé aux coordonnées X=10 Y=20 un bonus texte d'importance normale et dont le contenu sera les mots trouvés dans les ressources correspondants aux termes « MON_TEXTE ».
 
 Note : puisqu'ils disparaissent tous seuls naturellement en moins d'une seconde, il n'existe aucun Type de Requête pour supprimer un bonus texte.
+
+Également, en lieu et place du couple de coordonnées x-y, il est possible d'écrire le mot clef ONPLAYER; les coordonnées seront dans ce cas automatiquement celles du joueur.
 
 
 
