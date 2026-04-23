@@ -7,6 +7,7 @@ ERROR1 = Error :
 ERROR2 = invalid reward
 YOU_OBTAIN = You obtain
 YOU_CAN_USE = You can use
+HP = HP
 MAXHP = + 1 HP MAX
 BONUSHP = 3 TEMPORARY HP
 ON = on
