@@ -13,6 +13,7 @@ NOT_SO_COCKY_ANYMORE = Key1 % On fait moins le malin
 
 ///// INFIRMARY /////
 
+NANCY_QUESTION = Key1 % Nancy ?
 YOUT_GIRLFRIEND_IS_BEING_HARSH = Key1 % ta copine est dure
 I_NEED_HEALING = Key3 % j'ai besoin de soins
 WHOS_YOUR_GIRLFRIEND = Key1 % C'est qui ta copine ?
