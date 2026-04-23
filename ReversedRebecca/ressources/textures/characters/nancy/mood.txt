@@ -15,4 +15,4 @@ blush=3,1
 blush_side=3,2
 blush_sad=3,3
 embarrased=3,4
-embarrased_amused=3,5
+embarrased_var=3,5

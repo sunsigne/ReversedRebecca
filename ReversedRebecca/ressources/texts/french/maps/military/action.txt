@@ -11,6 +11,22 @@ I_HAVE_THE_KEY = Key1 % J'ai la clé
 NOT_SO_COCKY_ANYMORE = Key1 % On fait moins le malin
 
 
+///// INFIRMARY /////
+
+YOUT_GIRLFRIEND_IS_BEING_HARSH = Key1 % ta copine est dure
+I_NEED_HEALING = Key3 % j'ai besoin de soins
+WHOS_YOUR_GIRLFRIEND = Key1 % C'est qui ta copine ?
+MAYBE_I_WANT = Key2 % Peut-être que j'ai envie ?
+LIE_I_TALKED_TO_HER_SHE_AGREED = Key1 % (mentir) elle est d'accord
+LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU = Key1 % (mentir) je lui avais déjà parlé
+ELISABETH = Key1 % Elisabeth
+MATILDA = Key2 % Mathilde
+CASSIDY = Key1 % Cassidy
+JESSY = Key2 % Jessy
+FINE_I_LIED = Key3 % Ok, j'ai menti
+APOLOGIZE = Key1 % s'excuser
+
+
 ///// ARMORY /////
 
 WHAT_WAS_THE_RIDDLE = Key1 % c'était quoi l'énigme ?
@@ -43,7 +59,7 @@ YELLOW_KEY = Key3 % clé ?
 
 DO_WE_KNOW_EACH_OTHER = Key1 % On se connait ?
 WE_REALLY_DONT_KNOW_EACH_OTHER = Key1 % On ne se connait vraiment pas ?
-JESSY = Key1 % Jessy ?
+JESSY_QUESTION = Key1 % Jessy ?
 SHES_MEAN = Key1 % Elle est méchante
 I_M_INTO_HER = Key2 % Elle me plaît carrément
 NOTHING_SPECIAL = Key3 % rien de spécial

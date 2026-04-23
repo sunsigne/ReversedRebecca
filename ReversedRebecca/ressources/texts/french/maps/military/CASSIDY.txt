@@ -74,7 +74,7 @@ object = player = happy = Tu trouveras Nancy à l'infirmerie.
 
 % JESSY_TIPS
 object = player = happy = Ma soeur a un caractère contradictoire :@si tu es trop gentille, tu vas l'ennuyer.
-object = player = happy_var = Mais si tu te rebelles un peu trop, tu vas l'énerver@pour de bon, et elle ne pourra plus te voir.
+object = player = happy_var = Mais si tu te rebelles un peu trop, tu vas l'énerver@pour de bon, et elle ne voudra plus te voir.
 object = player = happy = En dosant juste ce qu'il faut d'impertinence@et de soumission, tu la feras craquer à coup sûr.
 
 

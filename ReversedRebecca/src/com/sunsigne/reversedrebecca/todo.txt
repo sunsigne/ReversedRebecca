@@ -37,6 +37,10 @@
 
 	////////// MILITARY ////////////
 
+	bug rideau :
+		- on peut dévérouiller SANS la clef
+		- à partir du moment où on a dévérouiller, les autres rideaux ne "disparaissent" pas correctement
+
 	à tester : cassidy*met et cassidy*pranked
 
 	trier les dossiers : 
@@ -54,6 +58,8 @@
 
 	à créer :
 	les voix de tous les niveaux personnages (nathan, jessy, nancy, romeo, les militarymen)
+
+	note : nancy = nolan
 
 	à faire :
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
@@ -297,6 +303,7 @@
 	rajouter le jeu de mot "i have an egg on my face" -> "i have a whole omelet on my face"
 	Rattatac (café) a un accent français lorsque langue en anglais
 	cassidy : "impertinance" = "sassy" ?
+	nancy : maybe i want -> … Do you ? (Vraiment ?)
 	
 	lvl002 : DOUG*MEET : poulet -> Bill
 	lvl002 : pour sortir de la chaise dans restroom, garder la même logique de traduction que dans rr000

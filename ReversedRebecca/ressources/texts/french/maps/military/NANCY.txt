@@ -13,12 +13,64 @@ object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
 object = player = happy = En tout cas, je te souhaite la bienvenue au camp.@Si tu as besoin de soins, tu es au bon endroit.
 
 
+% HALF_LIFE
+todo
+
+
 % FULL_LIFE
 player = object = happy_var = Ça ira, je n'ai pas prévu de me blesser.
 player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
 object = player = excited = C'est mon rôle, oui !
+
+
+% CANT_TALK
 object = player = playful = Par contre, je suis désolée, mais je ne peux pas te@parler trop longtemps, ma copine va être jalouse.
 player = object = no_sens_var = Tu… n'as pas le droit de parler aux autres filles ?
 object = player = blush_side = Pas quand elles sont aussi jolies que toi…
 object = player = blush = Mais c'était sympa de faire ta connaissance.
+
+
+% REFUSE_HEALING
+object = player = sad_side = Je suis désolée pour toi, mais tu m'as blessé…@Si ta vie n'est pas en danger, je ne t'aiderais pas.
+
+
+% YOUT_GIRLFRIEND_IS_BEING_HARSH
+player = object = unhappy_var = Je trouve ça malsain que tu n'aies pas le droit@de parler à d'autres personnes.
+object = player = sad = Un peu de jalousie, c'est normal dans une@relation… Non ?
+object = player = blush_side = Et puis… Moi aussi, je serais jalouse si je la voyais@en train de parler à quelqu'un d'aussi jolie…
+object = player = blush = En plus, elle m'a dit hier qu'elle voulait essayer@des choses nouvelles, alors peut-être qu'à trois…
+object = player = blush_side = Désolée, je m'avance… Tu n'as probablement@pas envie de… Oublie ce que je viens de dire.
+
+
+% WHOS_YOUR_GIRLFRIEND
+todo
+
+
+% MAYBE_I_WANT
+object = player = embarrased = … Vraiment ?
+object = player = embarrased_var = Non… On ne devrait pas. Pas sans son accord…
+object = player = embarrased = Va lui parler, elle est au stand de tir…
+
+
+% LIE_I_TALKED_TO_HER_NOT_LEAVING
+object = player = embarrased = Menteuse, tu n'as pas quitté la pièce…
+
+
+% LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU
+object = player = embarrased_var = Ha oui ? Elle s'appelle comment ?
+
+
+% FINE_I_LIED
+object = player = blush_side = C'est noble de l'admettre, reviens me voir quand@tu lui auras parlé pour de bon…
+
+
+% OBVIOUS_LIE
+object = player = blush_sad = Ça n'est pas drôle…
+object = player = blush_sad = Quoi qu'il en soit, je n'aime pas tes mensonges…@Ne me parle plus s'il te plaît.
+
+
+% APOLOGIZE
+object = player = sad_side = C'est gentil, j'apprécie.@Je n'ai quand même plus envie de te parler.
+
+
 
