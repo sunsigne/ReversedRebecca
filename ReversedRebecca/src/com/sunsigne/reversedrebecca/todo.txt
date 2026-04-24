@@ -30,7 +30,6 @@
 
 	bug : 
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-	remplacer les "onthespot" sur le joueur par des "onplayer"
 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	rr000 - faire clignotter une plante comme dans lvl001
