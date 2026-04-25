@@ -38,8 +38,11 @@
 	////////// MILITARY ////////////
 
 	Nancy :
-		- choisir un playerAvoider + faire comme pour delta quand le joueur est proche ?
-
+		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
+		- si on reste neutre sur ses avances : dit qu'on devrait rencontrer Jessy
+		- si on la drague : dit qu'on doit aller parler à Jessy
+												
+	
 	à tester : cassidy*met et cassidy*pranked
 
 	trier les dossiers : 
@@ -68,8 +71,8 @@
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	le sac poubelle en plein milieu dans le local à poubelle doit pouvoir être "rentré dedans et le faire tomber qu'il se renverse par terre"
 	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur
+	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

@@ -13,17 +13,35 @@ object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
 object = player = happy = En tout cas, je te souhaite la bienvenue au camp.@Si tu as besoin de soins, tu es au bon endroit.
 
 
+% HELLO_HEALED
+object = player = happy = Tu as besoin d'autre chose que des soins ?
+player = object = worry = Je ne sais pas encore…
+player = object = happy_var = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
+object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+object = player = happy = En tout cas, je te souhaite la bienvenue au camp.@Moi, c'est Nancy, au fait.
+
+
+% HELLO_HEALED_NANCY
+object = player = happy = C'est bien moi.@Tu as besoin d'autre chose que des soins ?
+player = object = worry = Je ne sais pas encore…
+player = object = happy_var = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
+object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+object = player = happy = En tout cas, je te souhaite la bienvenue au camp.
+
+
 % HALF_LIFE
 player = object = laugh = Parfait ! C'est vrai que j'ai un petit coup de mou,@justement.
+player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
+object = player = excited = C'est mon rôle, oui !
 
 
 % FULL_LIFE
 player = object = happy_var = Ça ira, je n'ai pas prévu de me blesser.
+player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
+object = player = excited = C'est mon rôle, oui !
 
 
 % CANT_TALK
-player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
-object = player = excited = C'est mon rôle, oui !
 object = player = playful = Par contre, je suis désolée, mais je ne peux pas te@parler trop longtemps, ma copine va être jalouse.
 player = object = no_sens_var = Tu… n'as pas le droit de parler aux autres filles ?
 object = player = blush_side = Pas quand elles sont aussi jolies que toi…
@@ -60,6 +78,14 @@ object = player = embarrased = Va lui parler, elle est au stand de tir…
 
 % LIE_I_TALKED_TO_HER_NOT_LEAVING
 object = player = embarrased = Menteuse, tu n'as pas quitté la pièce…
+
+
+% LIE_I_TALKED_TO_HER_LEAVING_BARELY
+object = player = embarrased = Menteuse, tu as à peine quitté la pièce…
+
+
+% LIE_I_TALKED_TO_HER_LEAVING
+object = player = blush_side = Ha oui ?
 
 
 % LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU
