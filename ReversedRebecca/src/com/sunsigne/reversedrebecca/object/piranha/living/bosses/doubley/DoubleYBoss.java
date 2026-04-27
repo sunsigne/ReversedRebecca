@@ -18,6 +18,16 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		super("double-y", x, y);
 	}
 
+	////////// NAME ////////////
+
+	@Override
+	public String getTextureName() {
+		if (isSSJ2())
+			return super.getTextureName() + "_ssj2";
+
+		return super.getTextureName();
+	}
+
 	////////// SIZE ////////////
 
 	@Override
@@ -27,6 +37,9 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	@Override
 	public int getHeight() {
+		if (isSSJ2())
+			return 8 * getPixelSize();
+
 		return 6 * getPixelSize();
 	}
 
@@ -77,6 +90,10 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	////////// EVOLUTION ////////////
 
+	private boolean isSSJ2() {
+		return getEvolution() % 2 != 0;
+	}
+
 	@Override
 	protected void start(BossPattern pattern, int delay) {
 		setPushingDirection(null);
@@ -98,6 +115,13 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		var handler = getHandler();
 		if (handler == null)
 			return;
+	}
+
+	@Override
+	public void evolve() {
+		super.evolve();
+		loadAnimationHandler(new DoubleYAnimationHandler(this));
+		setDisplayXY(0, isSSJ2() ? -8 : 0);
 	}
 
 	////////// PATTERN ////////////
