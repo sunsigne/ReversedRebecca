@@ -94,6 +94,7 @@ public class DoubleYTornadoPattern extends BossPattern {
 		boss.setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
 		boss.setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
 		boss.setMustFollowPath(false);
+		boss.setMotionless();
 	}
 
 }
