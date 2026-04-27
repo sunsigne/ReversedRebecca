@@ -9,7 +9,7 @@ dreaming=1,3
 unhappy=2,1
 angry=2,2
 angry_var=2,3
-angry_var2=2,3
+angry_var2=2,4
 
 ////// SADISTIC //////
 

@@ -1,20 +1,5 @@
-[E] Tu les manipules
-jessy = player = angry = Et alors ? S'ils sont assez bêtes pour penser qu'ils ont une@chance avec moi, ils méritent de se prendre des coups…
-jessy = player = sadistic_smirk = Ils méritent que je les fasse tourner en bourrique !
 
 
-[E] C'est mal… [R] C'est amusant !
-jessy = player = ??? = Je ne t'ai pas vraiment demandé ton avis, la bleue ! D'ailleurs, j'ai envie d'un (objet). Apporte-moi ça.
-[E] Va le chercher toi-même ! [R] = Oui, Madame
-jessy = player = dreaming = Tu m'as probablement mal entendue…
-jessy = player = angry = J'ai dit : apporte-moi (objet) !
-jessy = UP = ??? = Pfff. T'es pas marrante. Allez, pousse-toi, j'ai une cible à trouer (a target to screw).
-jessy = player = doubt = Ah, tu y vas vraiment ? Très bien, je t'attends alors.
-[E] = Donner.
-jessy = player = C'est pas mal, mais ça manque de (sucre ?). Merci d'y retourner et d'arranger ça.
-[E] Se soummetre [R] Se rebiffer (ne change pas le dialogue suivant)
-jessy = player = sadistic = Nan, tu sais quoi ? J'ai changé d'avis, dis à Nancy d'y aller.
-(petite phase avec nancy) 
 jessy = player = Tu peux disposer Nancy, je dois parler à notre amie.
 jessy = player = sadistic = Bon, mademoiselle, tu es plutôt mon genre… J'ai assez envie d'utiliser mes menottes sur toi pour tout te dire.
 jessy = player = wink = Retrouve-moi dans quelques minutes derrière la chambre froide.

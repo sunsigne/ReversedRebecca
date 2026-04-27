@@ -40,6 +40,16 @@ YOU_RE_A_LOSER = Key1 % T'es un loser
 
 ///// TRAINING FIELD /////
 
+THATS_BAD = Key1 % C'est mal…
+THATS_FUN = Key2 % C'est amusant !
+GO_GET_IT_YOURSELF = Key1 % Va la chercher toi-même !
+IN_YOUR_DREAMS = Key1 % Dans tes rêves !
+YES_MAAM = Key2 % Oui, madame
+IGNORE = Key3 % (l'ignorer)
+BLOW_HER_FACE_OFF = Key1 % lui exploser la gueule
+HERES_THE_BOMBS = Key2 % Voilà les bombes
+SUBMIT = Key1 % (se soumettre)
+REBEL = Key2 % (se rebeller)
 YOU_DONT_SHOOT = Key1 % tu ne tires pas ?
 BOUH! = Key1 % BOUH !
 ACCIDENT = Key3 % accident

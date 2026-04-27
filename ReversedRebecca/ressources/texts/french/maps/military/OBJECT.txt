@@ -28,7 +28,7 @@ player = DOWN = pain = Il fait froid, ici !
 
 
 % CURTAIN
-player = DOIWN = no_sens = Comment il a fait pour verrouiller son rideau ?
+player = DOWN = no_sens = Comment il a fait pour verrouiller son rideau ?
 
 
 % CHEST
