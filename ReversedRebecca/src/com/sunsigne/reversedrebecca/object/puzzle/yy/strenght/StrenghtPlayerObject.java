@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimat
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject.CASE;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject.PROJECTILE_TYPE;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -104,20 +105,34 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 		this.jumping = jumping;
 	}
 
-	public void colliding() {
+	public void colliding(StrenghtProjectileObject projectileObject) {
 		if (recovering > 0 || isDead)
 			return;
 
+		PROJECTILE_TYPE projectileType = projectileObject.getProjectileType();
+		boolean heart = projectileType == PROJECTILE_TYPE.HEART || projectileType == PROJECTILE_TYPE.BONUS_HEART;
 		Player player = new PlayerFinder().getPlayer();
-		String path = "loot_chest";
+		String path = heart ? "button_back" : "loot_chest";
 		CASE caze = new RandomGenerator().getBoolean() ? CASE.PERFECT : CASE.GOOD;
+		caze = heart ? CASE.FAIL : caze;
 
 		if (jumping == false) {
-			shouldBlink = true;
-			path = "hit_medium";
-			caze = CASE.FAIL;
-			player.removeHp();
 			player.setRecovering(false);
+
+			if (heart == false) {
+				shouldBlink = true;
+				path = "hit_medium";
+				caze = CASE.FAIL;
+				player.removeHp();
+			}
+
+			path = "loot_chest";
+			caze = new RandomGenerator().getBoolean() ? CASE.PERFECT : CASE.GOOD;
+			if (projectileType == PROJECTILE_TYPE.HEART)
+				player.addHp(2);
+			if (projectileType == PROJECTILE_TYPE.BONUS_HEART)
+				player.addBonusHp(2);
+			projectileObject.removeObject();
 		}
 
 		recovering = 50 / getPuzzleSpeed();

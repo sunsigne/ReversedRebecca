@@ -70,7 +70,7 @@
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	le jeu strenght de force de YY devrait lancer des coeurs pour soigner le joueur
+	YY doit donner des coeurs au joueur (déjà fait dans le strenght puzzle)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 
 	////////// EXPERIENCE UTILISATEUR ////////////

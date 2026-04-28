@@ -29,23 +29,23 @@ public class RedYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 		createProjectile(PROJECTILE_TYPE.MILITARYMEN);
 		createProjectile(PROJECTILE_TYPE.CACTUS);
 		createProjectile(PROJECTILE_TYPE.SARAH);
-		createProjectile(PROJECTILE_TYPE.OVEN);
+		createProjectile(PROJECTILE_TYPE.HEART);
 		createProjectile(PROJECTILE_TYPE.WALL);
 		createProjectile(PROJECTILE_TYPE.COUCH_RIGHT);
 		createProjectile(PROJECTILE_TYPE.COUCH_LEFT);
 		createProjectile(PROJECTILE_TYPE.MILITARYMEN);
-		createProjectile(PROJECTILE_TYPE.BARREL);
+		createProjectile(PROJECTILE_TYPE.HEART);
 		createProjectile(PROJECTILE_TYPE.OVEN);
 		createProjectile(PROJECTILE_TYPE.TRASH);
-		createProjectile(PROJECTILE_TYPE.CHAIR);
-		
+		createProjectile(PROJECTILE_TYPE.CHAIR);		
 		createProjectile(PROJECTILE_TYPE.CACTUS);
+		
 		createProjectile(PROJECTILE_TYPE.WALL);
 		createProjectile(PROJECTILE_TYPE.MILITARYMEN);
 		createProjectile(PROJECTILE_TYPE.BARREL);
 		createProjectile(PROJECTILE_TYPE.OVEN);
 		createProjectile(PROJECTILE_TYPE.TRASH);
-		createProjectile(PROJECTILE_TYPE.CHAIR);
+		createProjectile(PROJECTILE_TYPE.BONUS_HEART);
 		createProjectile(PROJECTILE_TYPE.CACTUS);
 		createProjectile(PROJECTILE_TYPE.WALL);
 		createProjectile(PROJECTILE_TYPE.U);
