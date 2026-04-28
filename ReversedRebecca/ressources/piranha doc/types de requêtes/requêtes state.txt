@@ -167,6 +167,7 @@ Les différentes conditions existantes sont les suivantes :
 - CUP : le NPC tient un gobelet.
 - SICK : le NPC a l'air malade.
 - BATH : seule la tête du NPC est visible. Il a l'air de dormir et ne peut plus bouger (mais peut toujours interagir !)
+- THINK : le NPC pense et ne peut plus bouger (mais peut toujours interagir !)
 - BED : le NPC dort et ne peut plus bouger (mais peut toujours interagir !)
 - CRY : le NPC pleure et ne peut plus bouger (mais peut toujours interagir !)
 - RELAX : le NPC est allongé et ne peut plus bouger (mais peut toujours interagir !)
