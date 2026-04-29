@@ -45,8 +45,14 @@ public abstract class SuperAnimationObject extends GameObject implements Sheetab
 	public void tick() {
 		time--;
 
-		if (time <= 0)
+		if (time <= 0) {
+			actionOnDisappearing();
 			removeObject();
+		}			
+	}
+
+	protected  void actionOnDisappearing() {
+
 	}
 
 	////////// TEXTURE ////////////
