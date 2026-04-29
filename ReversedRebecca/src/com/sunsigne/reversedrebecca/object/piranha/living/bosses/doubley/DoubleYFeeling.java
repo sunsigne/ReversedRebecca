@@ -14,7 +14,7 @@ public interface DoubleYFeeling extends Feeling {
 
 	public enum DOUBLE_Y_CONDITION {
 		GOOD("good"), TIRED("tired"), PUSH_UP("push_up"), PUSH_UP_ONE_HAND("push_up_one_hand"), THROWING("throwing"),
-		PUNCHING("punching"), TORNADO("tornado");
+		PUNCHING("punching"), TORNADO("tornado"), UPPERCUT("uppercut");
 
 		private String name;
 

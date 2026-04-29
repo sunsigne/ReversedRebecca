@@ -67,13 +67,14 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 		getBoss().setY(player.getY());
 
 		// boss facing center
-		SightFinder sightFinder = new SightFinder(getBoss(), center);
+		GoalObject sight = new GoalObject(center.getX(), center.getY(), false);
+		SightFinder sightFinder = new SightFinder(getBoss(), sight);
 		DIRECTION facing = sightFinder.getDirectionOfGoalFromObserver();
 		getBoss().setFacing(facing);
 
 		// boss punching
 		getBoss().setPushingDirection(PUSHING_DIRECTION.FACING_OF_PUSHER);
-		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.THROWING);
+		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.UPPERCUT);
 
 		// uppercut player
 		uppercutPlayer(player);

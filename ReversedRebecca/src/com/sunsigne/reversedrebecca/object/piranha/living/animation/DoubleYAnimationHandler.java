@@ -22,6 +22,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	private LivingAnimation pushUpOneHandAnimation;
 	private LivingAnimation throwingAnimation;
 	private LivingAnimation punchingAnimation;
+	private LivingAnimation uppercutAnimation;
 
 	///// orientable & not animated /////
 
@@ -40,6 +41,7 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		pushUpOneHandAnimation = new LivingAnimation(living, 11, true, 6, 7);
 		throwingAnimation = new LivingAnimation(living, 11, true, 11, 12);
 		punchingAnimation = new LivingAnimation(living, 10, true, 9, 10, 9, 10, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
+		uppercutAnimation = new LivingAnimation(living, 41, true, 11, 12, 12, 12, 13, 13, 13, 13, 4, 5, 4, 5, 6, 7, 6, 7, 6, 7, 6, 7);
 
 		standingGoodAnimation = new LivingAnimation(living, -1, true, 1);
 
@@ -67,6 +69,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 			return throwingAnimation;
 		case PUNCHING:
 			return punchingAnimation;
+		case UPPERCUT:
+			return uppercutAnimation;
 		}
 
 		return standingGoodAnimation;

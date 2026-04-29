@@ -66,7 +66,7 @@ public class YYedAnimationObject extends AnimationObject {
 		setVelX(velX);
 		setVelY(velY);
 		if (new PlayerFinder().getPlayer() != null)
-			new PlayerFinder().getPlayer().removeHp(2);
+			new PlayerFinder().getPlayer().removeHp(1);
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 
 	}
