@@ -88,3 +88,8 @@ NPC-13 = Polaris
 NPC-14 = Doug
 OBJ-40 = Little Plant
 OBJ-41 = Armory Collapse Scanner
+
+///// HALL OF DESTINY /////
+
+NPC-15 = Dave
+NPC-16 = Destiny Camille

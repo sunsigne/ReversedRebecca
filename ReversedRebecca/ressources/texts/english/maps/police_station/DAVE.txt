@@ -1,0 +1,8 @@
+% HALL_OF_DESTINY
+dave = player = calm = I call this place the "Hall of Destiny."
+dave = player = calm = We're inside your head, Rebecca. This is where@the most important decisions are made.
+dave = player = intrigued = So? What are you going to do?
+
+
+% CLUE
+dave = player = calm = There are no wrong choices.@Not this time, anyway.

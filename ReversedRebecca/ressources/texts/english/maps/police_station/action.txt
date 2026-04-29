@@ -61,3 +61,8 @@ GIVE_THE_GREEN_KEY = Key3 % give the green key
 GIVE_THE_KEY_2 = Key3 % give the key 2
 YELLOW_KEY = Key3 % yellow key?
 KEY_3 = Key3 % key 3?
+
+///// HALL OF DESTINY /////
+
+THIS_PLACE = Key1 % this place?
+CLUE = Key1 % clue?

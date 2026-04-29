@@ -1,0 +1,8 @@
+% HALL_OF_DESTINY
+dave = player = calm = J'appelle cet endroit le "Hall du Destin".
+dave = player = calm = Nous sommes dans ta tête, Rebecca. C'est ici que@les décisions les plus importantes sont prises.
+dave = player = intrigued = Alors ? Que vas-tu faire ?
+
+
+% CLUE
+dave = player = calm = Il n'y a pas de mauvaise choix.@Pas cette fois, en tout cas.

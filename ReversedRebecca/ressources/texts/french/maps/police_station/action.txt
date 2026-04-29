@@ -61,3 +61,8 @@ GIVE_THE_GREEN_KEY = Key3 % donner la clé verte
 GIVE_THE_KEY_2 = Key3 % donner la clé 2
 YELLOW_KEY = Key3 % clé jaune ?
 KEY_3 = Key3 % clé 3 ?
+
+///// HALL OF DESTINY /////
+
+THIS_PLACE = Key1 % cet endroit ?
+CLUE = Key1 % indice ?
