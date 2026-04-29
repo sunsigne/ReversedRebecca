@@ -104,7 +104,7 @@ En plus des Cibles pour le fichier de référence et pour la durée, le Type de 
 - un boolean informant de si l'animation doit, ou non, apparaître et disparaître dans un fondu.
 
 Exemple :
-! -> SPEEDLINES = CREATE_SPEEDLINES -> SPEEDLINES,5,10,TRUE
+! -> SPEEDLINES = CREATE_SCREEN_ANIMATION -> SPEEDLINES,5,10,TRUE
 
 Lorsque la Condition sera vérifiée, sera créé un visuel animé :
 - nécessitant le fichier de référence dont le nom est « speedlines.png »,

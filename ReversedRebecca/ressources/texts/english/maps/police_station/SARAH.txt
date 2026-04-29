@@ -32,7 +32,7 @@ sarah = player = determined = I'm convinced we can find some information on@this
 sarah = player = worry = But… that means getting our hands dirty…
 player = sarah = surprised = Are you implying we should steal documents?@From the police?
 sarah = player = unhappy = Indeed, that could be an option…
-sarah = player = worry = We could also do nothing. Everyone goes home and@tomorrow we'll look for another way to investigate.
+sarah = player = worry = We could also do nothing. Everyone goes home and@we'll think about another way to investigate.
 sarah = player = wink = I'll defer to your judgment.@But no stress, neither option is bad.
 sarah = player = happy = Whatever you decide, there's no going back.@The future depends on your choice.
 
@@ -44,7 +44,7 @@ sarah = player = happy = Good! Give me a minute, I need to think of a plan.
 
 % SCENARIO_STEPHAN
 player = sarah = laugh = Okay! We'll do it! We'll steal the information!
-sarah = player = worry = Are you sure that's what you clicked on?
+sarah = player = worry = Are you sure that's what you chose?
 player = sarah = laugh = No, but the developer hasn't coded my choice yet,@so that's what we'll do!
 sarah = player = happy = Good! Give me a minute, I need to think of a plan.
 

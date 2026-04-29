@@ -1,8 +1,3 @@
-///// SCENARIO /////
-
-STEAL_INFORMATION = Key1 % voler des informations
-LOOK_FOR_ANOTHER_LEAD = Key2 % chercher une autre piste
-
 ///// RECEPTION /////
 
 DO_YOU_HAVE_A_PLAN = Key1 % tu as un plan ?
@@ -66,3 +61,5 @@ KEY_3 = Key3 % clé 3 ?
 
 THIS_PLACE = Key1 % cet endroit ?
 CLUE = Key1 % indice ?
+INFILTRATE_THE_POLICE_STATION = Key1 % infiltrer le commissariat
+LOOK_FOR_ANOTHER_LEAD = Key1 % chercher une autre piste
