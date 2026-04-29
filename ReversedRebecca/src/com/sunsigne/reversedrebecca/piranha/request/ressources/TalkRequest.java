@@ -1,11 +1,13 @@
 package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
+import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.actions.PiranhaObjectAction;
 import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogue;
 
 public class TalkRequest implements Request {
@@ -45,12 +47,14 @@ public class TalkRequest implements Request {
 	}
 
 	private boolean multipleDialoguesSnitching(PiranhaObject object) {
-		if (LAYER.PUZZLE.getHandler().getList().isEmpty())
-			return false;
-
-		System.err.println("Problem encounter with following object : " + object.toString());
-		System.err.println("A dialogue has been initiated while another dialogue was already running");
-		return true;
+		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+			if (tempUpdatable instanceof ChatBox) {
+				System.err.println("Problem encounter with following object : " + object.toString());
+				System.err.println("A dialogue has been initiated while another dialogue was already running");
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
