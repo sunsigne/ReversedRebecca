@@ -4,7 +4,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.animation.DoubleYAnima
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimationHandler;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
-import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossRestPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.DoubleYRestPattern;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
@@ -99,22 +98,12 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		setPushingDirection(null);
 		setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
 
-		// first patterns
-		if (getEvolution() <= 1) {
-			super.start(pattern, delay);
-			return;
-		}
-
-		// boss is resting
-		if (pattern instanceof BossRestPattern) {
-			super.start(pattern, delay);
-			return;
-		}
-
 		// no handler found
 		var handler = getHandler();
 		if (handler == null)
 			return;
+
+		super.start(pattern, delay);
 	}
 
 	@Override
@@ -150,7 +139,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern tornado = new DoubleYTornadoPattern(this);
 		BossPattern uppercut = new DoubleYSSJ2UppercutPattern(this);
 		BossPattern rest = new DoubleYRestPattern(this);
-		BossPattern poseOne = new DoubleYPosePattern(this, 3, 110, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
+		BossPattern poseOne = new DoubleYPosePattern(this, 4, 110, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
 		BossPattern poseTwo = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_2, -2, -2);
 		BossPattern poseThree = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_3, -2, 1);
 		BossPattern poseFour = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
@@ -161,6 +150,9 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		if (getEvolution() == 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, uppercut,
 					poseOne, poseTwo, poseThree, poseFour, rest);
+		if (getEvolution() == 2) {
+			// happening during poses on phase 1
+		}
 
 		patterns = new Cycloid<>(pattern_array);
 		start(patterns.getState(), firstAttack ? 0 : 60);
