@@ -2,14 +2,15 @@ package com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley;
 
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.animation.YYedAnimationObject;
-import com.sunsigne.reversedrebecca.object.animation.ZapAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Pusher.PUSHING_DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.YY;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling.DOUBLE_Y_CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feeling.CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.SightFinder;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -56,15 +57,13 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 	}
 
 	protected void attack(Player player) {
-		Handler.getHandler(player).addObject(new ZapAnimationObject(getBoss().getX(), getBoss().getY()));
 
 		int camX = Window.WIDHT / 2 - (int) new Camera().getX();
 		int camY = Window.HEIGHT / 2 - (int) new Camera().getY();
 		GoalObject center = new GoalObject(camX, camY, true);
 
 		// tp boss
-		getBoss().setX(player.getX());
-		getBoss().setY(player.getY());
+		tpBoss(player);
 
 		// boss facing center
 		GoalObject sight = new GoalObject(center.getX(), center.getY(), false);
@@ -82,12 +81,63 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 	}
 
+	private void tpBoss(Player player) {
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "dbz_tp");
+		Handler.getHandler(player).addObject(getAfterImage());
+		getBoss().setX(player.getX());
+		getBoss().setY(player.getY());
+	}
+
+	public YY getAfterImage() {
+		YY yy = new YY(getBoss().getX(), getBoss().getY()) {
+
+			////////// NAME ////////////
+
+			@Override
+			public String getTextureName() {
+				return super.getTextureName() + "_ssj2";
+			}
+
+			////////// SIZE ////////////
+
+			@Override
+			public int getHeight() {
+				return 8 * getPixelSize();
+			}
+
+			////////// DOUBLE Y CONDITION ////////////
+
+			@Override
+			public DOUBLE_Y_CONDITION getDoubleYCondition() {
+				return DOUBLE_Y_CONDITION.DBZ_TP;
+			}
+
+			////////// TICK ////////////
+
+			private final int ANIMATION_TIME = 16;
+			private int time = ANIMATION_TIME;
+
+			@Override
+			public void tick() {
+				animation.run();
+				time--;
+				if (time <= 0)
+					removeObject();
+			}
+
+		};
+
+		yy.setDisplayXY(0, -8);
+		return yy;
+	}
+
 	private void uppercutPlayer(Player player) {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");		
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 		player.setDisplayXY(2 * Window.WIDHT, 2 * Window.HEIGHT);
 		player.setCondition(CONDITION.KO_UPSIDEDOWN);
 		player.setStunned(true);
 		player.removeHp(1);
+		new GameTimer(80, () -> new SoundTask().playSound(SOUNDTYPE.SOUND, "whip"));
 	}
 
 }
