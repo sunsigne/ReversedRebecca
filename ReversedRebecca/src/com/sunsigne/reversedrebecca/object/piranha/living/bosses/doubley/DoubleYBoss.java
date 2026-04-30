@@ -150,14 +150,17 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern tornado = new DoubleYTornadoPattern(this);
 		BossPattern uppercut = new DoubleYSSJ2UppercutPattern(this);
 		BossPattern rest = new DoubleYRestPattern(this);
-		BossPattern poseOne = new DoubleYPoseOnePattern(this);
+		BossPattern poseOne = new DoubleYPosePattern(this, 3, 110, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
+		BossPattern poseTwo = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_2, -2, -2);
+		BossPattern poseThree = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_3, -2, 1);
+		BossPattern poseFour = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
 
 		if (getEvolution() == 0)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
 					tornado, rest);
 		if (getEvolution() == 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, uppercut,
-					poseOne, rest);
+					poseOne, poseTwo, poseThree, poseFour, rest);
 
 		patterns = new Cycloid<>(pattern_array);
 		start(patterns.getState(), firstAttack ? 0 : 60);

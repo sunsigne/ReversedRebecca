@@ -1,17 +1,11 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley;
 
-import com.sunsigne.reversedrebecca.object.GoalObject;
-import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.characteristics.Position;
-import com.sunsigne.reversedrebecca.object.characteristics.Pusher.PUSHING_DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling.DOUBLE_Y_CONDITION;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
-import com.sunsigne.reversedrebecca.system.Size;
 
-public class DoubleYTornadoPattern extends BossPattern {
+public class DoubleYTornadoPattern extends DoubleYMovePattern {
 
 	protected DoubleYTornadoPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		super(boss, pattern_time_in_sec, delay_between_two_attacks);
@@ -21,24 +15,31 @@ public class DoubleYTornadoPattern extends BossPattern {
 		this(boss, 8, 110);
 	}
 
-	////////// PATTERN ////////////
+	////////// TICK ////////////
 
-	public DoubleYBoss getBoss() {
-		return (DoubleYBoss) super.getBoss();
-	}
+	private int time;
+	private boolean attacking;
 
-	////////// MOUVEMENT ////////////
+	@Override
+	public void tick() {
+		super.tick();
+		time++;
 
-	private void movingToCenter() {
-		getBoss().setMustFollowPath(true);
-		Position pos = new PlayerFinder().getPlayerClone();
-		int x = Size.M * pos.getX();
-		int y = Size.M * (pos.getY() - Size.M);
-		GoalObject goal = new GoalObject(x, y, true);
-		getBoss().setGoal(goal);
+		if (time < getDelayBetweenTwoAttacks()) {
+			movingToGoal(-1, -1);
+			return;
+		}
 
-		if (goal.getX() - Size.M / 2 == getBoss().getX() && goal.getY() - Size.M / 2 == getBoss().getY())
-			getBoss().setFacing(DIRECTION.DOWN);
+		if (attacking == false) {
+			attacking = true;
+			startActing(DOUBLE_Y_CONDITION.TORNADO);
+		}
+
+		Player player = new PlayerFinder().getPlayer();
+		if (player == null)
+			return;
+
+		movePlayerTowardTornado(player);
 	}
 
 	private void movePlayerTowardTornado(Player player) {
@@ -53,48 +54,6 @@ public class DoubleYTornadoPattern extends BossPattern {
 
 		player.setX(player.getX() + xSpeed);
 		player.setY(player.getY() + ySpeed);
-	}
-
-	////////// TICK ////////////
-
-	private int time;
-	private boolean attacking;
-
-	@Override
-	public void tick() {
-		super.tick();
-		time++;
-
-		if (time < getDelayBetweenTwoAttacks()) {
-			movingToCenter();
-			return;
-		}
-
-		if (attacking == false)
-			startingTornado();
-
-		Player player = new PlayerFinder().getPlayer();
-		if (player == null)
-			return;
-
-		attack(player);
-	}
-
-	protected void attack(Player player) {
-		movePlayerTowardTornado(player);
-	}
-
-	private void startingTornado() {
-		attacking = true;
-		DoubleYBoss boss = getBoss();
-
-		boss.setX(boss.getGoal().getX() - Size.M / 2);
-		boss.setY(boss.getGoal().getY() - Size.M / 2);
-		boss.setFacing(DIRECTION.DOWN);
-		boss.setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
-		boss.setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
-		boss.setMustFollowPath(false);
-		boss.setMotionless();
 	}
 
 }

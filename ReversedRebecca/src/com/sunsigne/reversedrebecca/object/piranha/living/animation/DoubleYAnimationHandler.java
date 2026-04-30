@@ -34,6 +34,10 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 
 	private LivingAnimation tiredAnimation;
 	private LivingAnimation tornadoAnimation;
+	private LivingAnimation flexOneAnimation;
+	private LivingAnimation flexTwoAnimation;
+	private LivingAnimation flexThreeAnimation;
+	private LivingAnimation flexFourAnimation;
 
 	@Override
 	protected void loadAnimations() {
@@ -51,6 +55,11 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 
 		tiredAnimation = new LivingAnimation(living, 60, false, 1, 2);
 		tornadoAnimation = new LivingAnimation(living, 3, false, 15, 16);
+		flexOneAnimation = new LivingAnimation(living, 10, false, 3, 3, 3, 3, 3, 3, 3, 3, 4, 3, 4);
+		flexTwoAnimation = new LivingAnimation(living, 60, false, 5, 6);
+		flexThreeAnimation = new LivingAnimation(living, 60, false, 8, 12);
+		flexFourAnimation = new LivingAnimation(living, 5, false, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 9, 10,
+				9);
 
 	}
 
@@ -77,6 +86,14 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 			return uppercutAnimation;
 		case DBZ_TP:
 			return dbzTpAnimation;
+		case FLEX_1:
+			return flexOneAnimation;
+		case FLEX_2:
+			return flexTwoAnimation;
+		case FLEX_3:
+			return flexThreeAnimation;
+		case FLEX_4:
+			return flexFourAnimation;
 		}
 
 		return standingGoodAnimation;

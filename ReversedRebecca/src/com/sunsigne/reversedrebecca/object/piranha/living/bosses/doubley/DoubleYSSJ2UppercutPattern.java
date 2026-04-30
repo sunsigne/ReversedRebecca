@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.SightFinder;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Window;
@@ -32,7 +34,7 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 	}
 
 	public DoubleYSSJ2UppercutPattern(BossObject boss) {
-		this(boss, 24, 7 * Game.SEC);
+		this(boss, 25, 7 * Game.SEC);
 	}
 
 	////////// PATTERN ////////////
@@ -137,6 +139,7 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 	}
 
 	private void uppercutPlayer(Player player) {
+		new CameraShaker().shaking(SHAKE.MEDIUM);
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 		player.setDisplayXY(2 * Window.WIDHT, 2 * Window.HEIGHT);
 		player.setCondition(CONDITION.KO_UPSIDEDOWN);

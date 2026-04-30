@@ -5,6 +5,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.Feelin
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -67,6 +69,7 @@ public class YYedAnimationObject extends AnimationObject {
 		setVelY(velY);
 		if (new PlayerFinder().getPlayer() != null)
 			new PlayerFinder().getPlayer().removeHp(1);
+		new CameraShaker().shaking(SHAKE.MEDIUM);
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 
 	}
@@ -91,7 +94,7 @@ public class YYedAnimationObject extends AnimationObject {
 		player.setX(getX());
 		player.setY(getY());
 		player.setDisplayXY(0, 0);
-		new GameTimer(2 * Game.SEC, () -> {
+		new GameTimer(3 * Game.SEC, () -> {
 			player.setCondition(CONDITION.GOOD);
 			player.setStunned(false);
 		});
