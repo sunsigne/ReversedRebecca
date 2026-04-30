@@ -5,7 +5,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimat
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossRestPattern;
-import com.sunsigne.reversedrebecca.object.piranha.living.bosses.DoubleYInstantRestPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.DoubleYRestPattern;
 import com.sunsigne.reversedrebecca.pattern.ArrayCombiner;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
@@ -151,7 +150,6 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern tornado = new DoubleYTornadoPattern(this);
 		BossPattern uppercut = new DoubleYSSJ2UppercutPattern(this);
 		BossPattern rest = new DoubleYRestPattern(this);
-		BossPattern instantRest = new DoubleYInstantRestPattern(this);
 		BossPattern poseOne = new DoubleYPoseOnePattern(this);
 
 		if (getEvolution() == 0)
@@ -159,9 +157,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 					tornado, rest);
 		if (getEvolution() == 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, uppercut,
-					instantRest);
-		if (getEvolution() == 2)
-			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, poseOne, rest);
+					poseOne, rest);
 
 		patterns = new Cycloid<>(pattern_array);
 		start(patterns.getState(), firstAttack ? 0 : 60);

@@ -27,17 +27,24 @@ public class DoubleYPoseOnePattern extends BossPattern {
 
 	////////// MOUVEMENT ////////////
 
-	private void movingToPosePos(int xGap, int Ygap) {
+	private int x0, y0;
+
+	protected void movingToPosePos(int xGap, int yGap) {
+
+		// the devil itself decided it was the correct formula, for no reason
+		x0 = (((xGap % 3) + 3) % 3 - 1) * (Size.M / 2);
+		y0 = (((yGap % 3) + 3) % 3 - 1) * (Size.M / 2);
+
 		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
 
 		getBoss().setMustFollowPath(true);
 		Position pos = new PlayerFinder().getPlayerClone();
-		int x = Size.M * pos.getX() + (xGap * Size.M);
-		int y = Size.M * (pos.getY() - Size.M) + (xGap * Size.M);
+		int x = Size.M * (pos.getX() + xGap * Size.M);
+		int y = Size.M * (pos.getY() + (yGap * Size.M) - Size.M);
 		GoalObject goal = new GoalObject(x, y, true);
 		getBoss().setGoal(goal);
 
-		if (goal.getX() - Size.M / 2 == getBoss().getX() && goal.getY() - Size.M / 2 == getBoss().getY())
+		if (goal.getX() + x0 == getBoss().getX() && goal.getY() + y0 == getBoss().getY())
 			getBoss().setFacing(DIRECTION.DOWN);
 	}
 
@@ -50,8 +57,8 @@ public class DoubleYPoseOnePattern extends BossPattern {
 		super.tick();
 		time++;
 
-		if (time == getDelayBetweenTwoAttacks()) {
-			movingToPosePos(3, -2);
+		if (time >= getDelayBetweenTwoAttacks() && time <= 2 * getDelayBetweenTwoAttacks()) {
+			movingToPosePos(2, -2);
 			return;
 		}
 
@@ -62,7 +69,10 @@ public class DoubleYPoseOnePattern extends BossPattern {
 	private void takingPose() {
 		DoubleYBoss boss = getBoss();
 
+		boss.setX(boss.getGoal().getX() + x0);
+		boss.setY(boss.getGoal().getY() + y0);
 		boss.setFacing(DIRECTION.DOWN);
+		boss.setMustFollowPath(false);
 		boss.setMotionless();
 	}
 

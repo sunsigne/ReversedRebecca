@@ -24,6 +24,11 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 	protected DoubleYSSJ2UppercutPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		super(boss, pattern_time_in_sec, delay_between_two_attacks);
+		setActionWhenFinished(() -> {
+			getBoss().nextPattern();
+			getBoss().evolve();
+			getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.PUSH_UP);
+		});
 	}
 
 	public DoubleYSSJ2UppercutPattern(BossObject boss) {
