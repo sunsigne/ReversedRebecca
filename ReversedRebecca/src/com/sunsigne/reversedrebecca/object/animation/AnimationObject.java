@@ -22,7 +22,7 @@ public abstract class AnimationObject extends SuperAnimationObject {
 	public abstract FRAME_RATE getFrameRate();
 
 	protected enum FRAME_RATE {
-		SNAIL(20), NORMAL(4), FAST(3), SWIFT(2);
+		SNAIL(16), NORMAL(4), FAST(3), SWIFT(2);
 
 		FRAME_RATE(int value) {
 			this.value = value;

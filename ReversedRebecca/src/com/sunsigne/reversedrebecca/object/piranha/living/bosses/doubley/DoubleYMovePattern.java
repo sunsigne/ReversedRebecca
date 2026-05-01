@@ -53,9 +53,9 @@ public abstract class DoubleYMovePattern extends BossPattern {
 		boss.setY(boss.getGoal().getY() + y0);
 		boss.setFacing(DIRECTION.DOWN);
 		boss.setPushingDirection(PUSHING_DIRECTION.OPPOSITE_OF_PUSHABLE);
-		boss.setDoubleYCondition(doubleYCondition);
 		boss.setMustFollowPath(false);
 		boss.setMotionless();
+		boss.setDoubleYCondition(doubleYCondition);
 	}
 
 }

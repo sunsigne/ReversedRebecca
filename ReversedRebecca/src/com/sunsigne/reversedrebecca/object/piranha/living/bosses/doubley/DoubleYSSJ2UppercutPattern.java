@@ -34,7 +34,7 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 	}
 
 	public DoubleYSSJ2UppercutPattern(BossObject boss) {
-		this(boss, 25, 7 * Game.SEC);
+		this(boss, 26, 7 * Game.SEC);
 	}
 
 	////////// PATTERN ////////////

@@ -55,11 +55,12 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 
 		tiredAnimation = new LivingAnimation(living, 60, false, 1, 2);
 		tornadoAnimation = new LivingAnimation(living, 3, false, 15, 16);
-		flexOneAnimation = new LivingAnimation(living, 10, false, 3, 3, 3, 3, 3, 3, 3, 3, 4, 3, 4);
-		flexTwoAnimation = new LivingAnimation(living, 30, false, 5, 6);
-		flexThreeAnimation = new LivingAnimation(living, 30, false, 8, 12);
-		flexFourAnimation = new LivingAnimation(living, 5, false, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 9, 10,
-				9);
+		flexOneAnimation = new LivingAnimation(living, 10, false, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4,
+				3, 4, 3, 3, 3, 3, 4, 3, 4, 4, 3, 4, 3, 4);
+		flexTwoAnimation = new LivingAnimation(living, 160, false, 5, 6);
+		flexThreeAnimation = new LivingAnimation(living, 80, false, 8, 12);
+		flexFourAnimation = new LivingAnimation(living, 6, false, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+				10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 10, 9);
 
 	}
 

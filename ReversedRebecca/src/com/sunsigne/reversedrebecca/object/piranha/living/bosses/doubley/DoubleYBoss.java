@@ -139,10 +139,10 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern tornado = new DoubleYTornadoPattern(this);
 		BossPattern uppercut = new DoubleYSSJ2UppercutPattern(this);
 		BossPattern rest = new DoubleYRestPattern(this);
-		BossPattern poseOne = new DoubleYPosePattern(this, 4, 110, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
-		BossPattern poseTwo = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_2, -2, -2);
-		BossPattern poseThree = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_3, -2, 1);
-		BossPattern poseFour = new DoubleYPosePattern(this, 3, 60, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
+		BossPattern poseOne = new DoubleYPosePattern(this, 5, 100, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
+		BossPattern poseTwo = new DoubleYPosePattern(this, 3, 40, DOUBLE_Y_CONDITION.FLEX_2, -2, -2);
+		BossPattern poseThree = new DoubleYPosePattern(this, 3, 40, DOUBLE_Y_CONDITION.FLEX_3, -2, 1);
+		BossPattern poseFour = new DoubleYPosePattern(this, 4, 40, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
 
 		if (getEvolution() == 0)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
