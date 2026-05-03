@@ -12,6 +12,11 @@ public class DoubleYPosePattern extends DoubleYMovePattern {
 		this.doubleYCondition = doubleYCondition;
 		this.x0 = x0;
 		this.y0 = y0;
+		
+		setActionWhenFinished(() -> {
+			getBoss().nextPattern();
+			getBoss().setDoubleYCondition(doubleYCondition);
+		});
 	}
 
 	private DOUBLE_Y_CONDITION doubleYCondition;
