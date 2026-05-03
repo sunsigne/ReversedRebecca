@@ -38,6 +38,10 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 	private LivingAnimation flexTwoAnimation;
 	private LivingAnimation flexThreeAnimation;
 	private LivingAnimation flexFourAnimation;
+	
+	///// not orientable & not animated /////
+	
+	private LivingAnimation ballAnimation;
 
 	@Override
 	protected void loadAnimations() {
@@ -61,6 +65,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 		flexThreeAnimation = new LivingAnimation(living, 80, false, 8, 12);
 		flexFourAnimation = new LivingAnimation(living, 6, false, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
 				10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 10, 9);
+		
+		ballAnimation = new LivingAnimation(living, -1, false, 11);
 
 	}
 
@@ -95,6 +101,8 @@ public class DoubleYAnimationHandler extends LivingAnimationHandler {
 			return flexThreeAnimation;
 		case FLEX_4:
 			return flexFourAnimation;
+		case BALL:
+			return ballAnimation;
 		}
 
 		return standingGoodAnimation;
