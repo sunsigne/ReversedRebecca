@@ -3,7 +3,6 @@ package com.sunsigne.reversedrebecca.puzzle.yy.strenght;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
@@ -23,7 +22,6 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
-import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -101,7 +99,7 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 			return;
 
 		time++;
-		
+
 		WIN_CONDIITON_TIME--;
 		if (WIN_CONDIITON_TIME <= 0)
 			closePuzzle(true);
@@ -133,14 +131,6 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 	@Override
 	public int getSheetRowCriterion() {
 		return 3;
-	}
-
-	@Override
-	protected BufferedImage getWallTexture() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
-		return getSheetSubImage(sheet, getSheetColCriterion(), getSheetRowCriterion(), getSheetWidth(),
-				getSheetHeight());
-
 	}
 
 	////////// RENDER ////////////

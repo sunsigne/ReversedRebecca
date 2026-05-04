@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.CyanYYStrenghtPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.RedYYStrenghtPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty.YellowYYStrenghtPuzzle;
 
 public class YYIntelligencePuzzleFactory implements PuzzleFactory {
 
@@ -21,7 +20,7 @@ public class YYIntelligencePuzzleFactory implements PuzzleFactory {
 		case CYAN:
 			return new CyanYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new YellowYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowYYIntelligencePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
 			return new RedYYStrenghtPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		default:
