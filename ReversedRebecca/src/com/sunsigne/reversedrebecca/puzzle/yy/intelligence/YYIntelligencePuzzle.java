@@ -63,6 +63,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		chessBoard.setY(getRow(1));
 
 		LAYER.PUZZLE.addObject(chessBoard);
+		chessBoard.resetPieces();
 	}
 
 	////////// TICK ////////////
@@ -152,8 +153,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		Color white = new Color(150, 150, 150, 240);
 		new TransluantLayer().drawPuzzle(g, white);
 
-		g.drawImage(getPlayerImage(), getCol(10) + getCol(1) / 2, getRow(3), 2 * Size.L, 2 * Size.L,
-				null);
+		g.drawImage(getPlayerImage(), getCol(10) + getCol(1) / 2, getRow(3), 2 * Size.L, 2 * Size.L, null);
 	}
 
 }
