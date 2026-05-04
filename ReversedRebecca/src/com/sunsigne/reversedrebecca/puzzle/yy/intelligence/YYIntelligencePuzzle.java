@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
-import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObject;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence.IntelligenceLauncherObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -46,22 +46,26 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	public abstract StrenghtPlayerObject getPlayer();
+	public abstract IntelligenceLauncherObject getLauncher();
 
-	protected void createPlayer() {
-		/*
-		 * StrenghtPlayerObject player = getPlayer(); player.setX(getCol(10));
-		 * player.setY(getRow(4) + 3 * Size.XS);
-		 * 
-		 * LAYER.PUZZLE.addObject(player);
-		 */
+	protected void createLauncher() {
+		IntelligenceLauncherObject launcher = getLauncher();
+		launcher.setX(getCol(2) - Size.S);
+		launcher.setY(getRow(3) + 3 * Size.XS);
+
+		LAYER.PUZZLE.addObject(launcher);
 	}
 
 	////////// TICK ////////////
 
 	private int WIN_CONDIITON_TIME = 14 * Game.SEC;
 	private int time;
-	private int loop = 54;
+
+	public int getLoopTime() {
+		return 54;
+	}
+
+	private int loop = getLoopTime();
 
 	@Override
 	public void tick() {
