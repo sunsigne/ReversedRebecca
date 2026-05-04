@@ -2,10 +2,10 @@ package com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.pattern.list.GameList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -29,40 +29,11 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	////////// PIECES ////////////
 
-	private GameList<IntelligenceChessPieceObject> pieces = new GameList<>(LISTTYPE.ARRAY);
+	private Map<String, IntelligenceChessPieceObject> pieces = new HashMap<>();
 
-	private void createPiece(IntelligenceChessPieceObject piece) {
-		pieces.addObject(piece);
+	private void createPiece(String squares, IntelligenceChessPieceObject piece) {
+		pieces.put(squares, piece);
 		LAYER.PUZZLE.addObject(piece);
-	}
-
-	public void resetPieces() {
-		pieces.getList().forEach(piece -> piece.removeObject());
-		pieces.clear();
-
-		// white
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 1, true, CHESS_PIECE.ROOK));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 2, true, CHESS_PIECE.KNIGHT));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 3, true, CHESS_PIECE.BISHOP));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 4, true, CHESS_PIECE.QUEEN));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 5, true, CHESS_PIECE.KING));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 6, true, CHESS_PIECE.BISHOP));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 7, true, CHESS_PIECE.KNIGHT));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 1, 8, true, CHESS_PIECE.ROOK));
-		for (int index = 1; index <= 8; index++)
-			createPiece(new IntelligenceChessPieceObject(getPuzzle(), 2, index, true, CHESS_PIECE.PAWN));
-
-		// black
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 1, false, CHESS_PIECE.ROOK));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 2, false, CHESS_PIECE.KNIGHT));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 3, false, CHESS_PIECE.BISHOP));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 4, false, CHESS_PIECE.QUEEN));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 5, false, CHESS_PIECE.KING));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 6, false, CHESS_PIECE.BISHOP));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.KNIGHT));
-		createPiece(new IntelligenceChessPieceObject(getPuzzle(), 8, 8, false, CHESS_PIECE.ROOK));
-		for (int index = 1; index <= 8; index++)
-			createPiece(new IntelligenceChessPieceObject(getPuzzle(), 7, index, false, CHESS_PIECE.PAWN));
 	}
 
 	////////// PHYSICS ////////////
@@ -76,13 +47,17 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	@Override
 	public void setVelX(int velX) {
-		pieces.getList().forEach(piece -> piece.setVelX(velX));
+		for (IntelligenceChessPieceObject piece : pieces.values())
+			piece.setVelX(velX);
+
 		super.setVelX(velX);
 	}
 
 	@Override
 	public void setVelY(int velY) {
-		pieces.getList().forEach(piece -> piece.setVelY(velY));
+		for (IntelligenceChessPieceObject piece : pieces.values())
+			piece.setVelY(velY);
+
 		super.setVelY(velY);
 	}
 
@@ -101,6 +76,57 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	}
+
+	////////// ARRANGEMENTS ////////////
+
+	public void resetPieces() {
+		for (IntelligenceChessPieceObject piece : pieces.values())
+			LAYER.PUZZLE.getHandler().removeObject(piece);
+
+		pieces.clear();
+
+		// white
+		createPiece("a1", new IntelligenceChessPieceObject(getPuzzle(), 1, 1, true, CHESS_PIECE.ROOK));
+		createPiece("b1", new IntelligenceChessPieceObject(getPuzzle(), 1, 2, true, CHESS_PIECE.KNIGHT));
+		createPiece("c1", new IntelligenceChessPieceObject(getPuzzle(), 1, 3, true, CHESS_PIECE.BISHOP));
+		createPiece("d1", new IntelligenceChessPieceObject(getPuzzle(), 1, 4, true, CHESS_PIECE.QUEEN));
+		createPiece("e1", new IntelligenceChessPieceObject(getPuzzle(), 1, 5, true, CHESS_PIECE.KING));
+		createPiece("f1", new IntelligenceChessPieceObject(getPuzzle(), 1, 6, true, CHESS_PIECE.BISHOP));
+		createPiece("g1", new IntelligenceChessPieceObject(getPuzzle(), 1, 7, true, CHESS_PIECE.KNIGHT));
+		createPiece("h1", new IntelligenceChessPieceObject(getPuzzle(), 1, 8, true, CHESS_PIECE.ROOK));
+
+		createPiece("a2", new IntelligenceChessPieceObject(getPuzzle(), 2, 1, true, CHESS_PIECE.PAWN));
+		createPiece("b2", new IntelligenceChessPieceObject(getPuzzle(), 2, 2, true, CHESS_PIECE.PAWN));
+		createPiece("c2", new IntelligenceChessPieceObject(getPuzzle(), 2, 3, true, CHESS_PIECE.PAWN));
+		createPiece("d2", new IntelligenceChessPieceObject(getPuzzle(), 2, 4, true, CHESS_PIECE.PAWN));
+		createPiece("e2", new IntelligenceChessPieceObject(getPuzzle(), 2, 5, true, CHESS_PIECE.PAWN));
+		createPiece("f2", new IntelligenceChessPieceObject(getPuzzle(), 2, 6, true, CHESS_PIECE.PAWN));
+		createPiece("g2", new IntelligenceChessPieceObject(getPuzzle(), 2, 7, true, CHESS_PIECE.PAWN));
+		createPiece("h2", new IntelligenceChessPieceObject(getPuzzle(), 2, 8, true, CHESS_PIECE.PAWN));
+
+		// black
+		createPiece("a8", new IntelligenceChessPieceObject(getPuzzle(), 8, 1, false, CHESS_PIECE.ROOK));
+		createPiece("b8", new IntelligenceChessPieceObject(getPuzzle(), 8, 2, false, CHESS_PIECE.KNIGHT));
+		createPiece("c8", new IntelligenceChessPieceObject(getPuzzle(), 8, 3, false, CHESS_PIECE.BISHOP));
+		createPiece("d8", new IntelligenceChessPieceObject(getPuzzle(), 8, 4, false, CHESS_PIECE.QUEEN));
+		createPiece("e8", new IntelligenceChessPieceObject(getPuzzle(), 8, 5, false, CHESS_PIECE.KING));
+		createPiece("f8", new IntelligenceChessPieceObject(getPuzzle(), 8, 6, false, CHESS_PIECE.BISHOP));
+		createPiece("g8", new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.KNIGHT));
+
+		createPiece("a7", new IntelligenceChessPieceObject(getPuzzle(), 7, 1, false, CHESS_PIECE.PAWN));
+		createPiece("b7", new IntelligenceChessPieceObject(getPuzzle(), 7, 2, false, CHESS_PIECE.PAWN));
+		createPiece("c7", new IntelligenceChessPieceObject(getPuzzle(), 7, 3, false, CHESS_PIECE.PAWN));
+		createPiece("d7", new IntelligenceChessPieceObject(getPuzzle(), 7, 4, false, CHESS_PIECE.PAWN));
+		createPiece("e7", new IntelligenceChessPieceObject(getPuzzle(), 7, 5, false, CHESS_PIECE.PAWN));
+		createPiece("f7", new IntelligenceChessPieceObject(getPuzzle(), 7, 6, false, CHESS_PIECE.PAWN));
+		createPiece("g7", new IntelligenceChessPieceObject(getPuzzle(), 7, 7, false, CHESS_PIECE.PAWN));
+		createPiece("h7", new IntelligenceChessPieceObject(getPuzzle(), 7, 8, false, CHESS_PIECE.PAWN));
+	}
+
+	private void arrangement01() {
+		var pawn = pieces.get("e5");
+
 	}
 
 }

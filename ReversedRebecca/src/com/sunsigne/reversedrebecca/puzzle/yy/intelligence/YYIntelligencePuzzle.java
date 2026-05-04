@@ -88,11 +88,8 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		if (WIN_CONDIITON_TIME <= 0)
 			closePuzzle(false);
 
-		if (time == loop / 2) {
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "chest");
-		}
-
 		if (time == loop) {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 			time = 0;
 		}
 	}
