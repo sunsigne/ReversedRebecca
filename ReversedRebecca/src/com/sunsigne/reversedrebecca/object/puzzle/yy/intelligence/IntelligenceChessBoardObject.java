@@ -113,6 +113,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		createPiece("e8", new IntelligenceChessPieceObject(getPuzzle(), 8, 5, false, CHESS_PIECE.KING));
 		createPiece("f8", new IntelligenceChessPieceObject(getPuzzle(), 8, 6, false, CHESS_PIECE.BISHOP));
 		createPiece("g8", new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.KNIGHT));
+		createPiece("h8", new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.ROOK));
 
 		createPiece("a7", new IntelligenceChessPieceObject(getPuzzle(), 7, 1, false, CHESS_PIECE.PAWN));
 		createPiece("b7", new IntelligenceChessPieceObject(getPuzzle(), 7, 2, false, CHESS_PIECE.PAWN));
