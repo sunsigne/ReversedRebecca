@@ -9,9 +9,9 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.yy.strenght.YYStrenghtPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class YellowYYIntelligencePuzzle extends YYIntelligencePuzzle {
+public class AnyYYIntelligencePuzzle extends YYIntelligencePuzzle {
 
-	public YellowYYIntelligencePuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public AnyYYIntelligencePuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
