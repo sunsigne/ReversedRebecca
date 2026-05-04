@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
+import com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence.IntelligenceChessBoardObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence.IntelligenceLauncherObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -46,14 +47,22 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
-	public abstract IntelligenceLauncherObject getLauncher();
+	private IntelligenceChessBoardObject chessBoard;
 
 	protected void createLauncher() {
-		IntelligenceLauncherObject launcher = getLauncher();
+		IntelligenceLauncherObject launcher = new IntelligenceLauncherObject(this);
 		launcher.setX(getCol(2) - Size.S);
-		launcher.setY(getRow(3) + 3 * Size.XS);
+		launcher.setY(getRow(2) + Size.S);
 
 		LAYER.PUZZLE.addObject(launcher);
+	}
+
+	protected void createChessBoard() {
+		chessBoard = new IntelligenceChessBoardObject(this);
+		chessBoard.setX(getCol(4) + getCol(1) / 2);
+		chessBoard.setY(getRow(1));
+
+		LAYER.PUZZLE.addObject(chessBoard);
 	}
 
 	////////// TICK ////////////
@@ -76,7 +85,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 		WIN_CONDIITON_TIME--;
 		if (WIN_CONDIITON_TIME <= 0)
-			closePuzzle(true);
+			closePuzzle(false);
 
 		if (time == loop / 2) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "chest");
@@ -93,7 +102,6 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 	@Override
 	public int getSheetColCriterion() {
-		wallSwap = !wallSwap;
 		return wallSwap ? 2 : 3;
 	}
 
@@ -106,55 +114,22 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 	protected void createWallBorder() {
 		Handler handler = LAYER.PUZZLE.getHandler();
 
-		// must be called manually (i.e outside of a loop)
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(1), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(2), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(3), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(4), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(5), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(6), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(7), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(8), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(9), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(10), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(11), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(12), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(0)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(1)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(2)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(3)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(4)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(5)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(6)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(13), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(12), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(11), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(10), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(9), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(8), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(7), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(6), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(5), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(4), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(3), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(2), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(1), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(7)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(6)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(5)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(4)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(3)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(2)));
-		handler.addObject(new WallPuzzle(getWallTexture(), getCol(0), getRow(1)));
+		for (int col = 0; col < 14; col++)
+			createWall(handler, col, 0);
+
+		for (int row = 1; row < 7; row++)
+			createWall(handler, 13, row);
+
+		for (int col = 13; col > -1; col--)
+			createWall(handler, col, 7);
+
+		for (int row = 6; row > 0; row--)
+			createWall(handler, 0, row);
 	}
 
-	private BufferedImage chessImage;
-
-	private BufferedImage getChessImage() {
-		if (chessImage == null)
-			chessImage = new ImageTask().loadImage("textures/puzzle/" + "chess");
-		return chessImage;
+	private void createWall(Handler handler, int col, int row) {
+		wallSwap = !wallSwap;
+		handler.addObject(new WallPuzzle(getWallTexture(), getCol(col), getRow(row)));
 	}
 
 	private BufferedImage playerImage;
@@ -163,8 +138,8 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		if (playerImage == null) {
 			Player player = new PlayerFinder().getPlayer();
 			String name = player != null ? player.getTextureName() : "rebecca";
-			BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + name);
-			playerImage = getSheetSubImage(sheet, 1, 1, getSheetWidth(), getSheetHeight());
+			BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + name + "/world");
+			playerImage = getSheetSubImage(sheet, 1, 1, 16, 16);
 		}
 
 		return playerImage;
@@ -177,8 +152,8 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		Color white = new Color(150, 150, 150, 240);
 		new TransluantLayer().drawPuzzle(g, white);
 
-		g.drawImage(getChessImage(), getCol(4), getRow(1), 8 * Size.M, 8 * Size.M, null);
-		g.drawImage(getPlayerImage(), getCol(10), getRow(4) + 3 * Size.XS, 2 * Size.L, 2 * Size.L, null);
+		g.drawImage(getPlayerImage(), getCol(10) + getCol(1) / 2, getRow(3), 2 * Size.L, 2 * Size.L,
+				null);
 	}
 
 }

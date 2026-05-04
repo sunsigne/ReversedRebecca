@@ -58,9 +58,18 @@ public class IntelligenceLauncherObject extends PuzzleObject implements TickFree
 
 	////////// TEXTURE ////////////
 
+	private int previousCol;
+
 	@Override
 	public int getSheetColCriterion() {
-		return new RandomGenerator().getIntBetween(4, 12);
+		int radCol;
+
+		do
+			radCol = new RandomGenerator().getIntBetween(4, 12);
+		while (previousCol == radCol);
+
+		previousCol = radCol;
+		return radCol;
 	}
 
 	@Override
@@ -77,7 +86,7 @@ public class IntelligenceLauncherObject extends PuzzleObject implements TickFree
 
 	private BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + "double-y");
+			BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + "double-y" + "/world");
 			image = getSheetSubImage(sheet);
 		}
 
