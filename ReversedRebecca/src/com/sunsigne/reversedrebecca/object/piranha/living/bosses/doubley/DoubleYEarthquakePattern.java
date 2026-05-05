@@ -15,7 +15,7 @@ public class DoubleYEarthquakePattern extends BossPattern {
 	}
 
 	public DoubleYEarthquakePattern(BossObject boss) {
-		this(boss, 9, 120);
+		this(boss, 13, 120);
 	}
 
 	////////// PATTERN ////////////

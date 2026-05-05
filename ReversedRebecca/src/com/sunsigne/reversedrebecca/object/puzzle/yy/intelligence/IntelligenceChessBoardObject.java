@@ -279,7 +279,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 	}
 
 	private void throwingBoard() {
-		new CameraShaker().shaking(SHAKE.MEDIUM);
+		new CameraShaker().shaking(SHAKE.STRONG);
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 		setVelX(40);
 		

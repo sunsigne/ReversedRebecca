@@ -145,13 +145,14 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern poseFour = new DoubleYPosePattern(this, 4, 40, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
 		BossPattern uppercut = new DoubleUppercutPattern(this);
 		BossPattern earthquake = new DoubleYEarthquakePattern(this);
+		BossPattern deathTornado = new DoubleYTornadoPattern(this, 15, 145);
 
 		if (getEvolution() == 0)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
 					tornado, rest);
 		if (getEvolution() == 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, ssj2Uppercut,
-					poseOne, poseTwo, poseThree, poseFour, uppercut, earthquake);
+					poseOne, poseTwo, poseThree, poseFour, uppercut, earthquake, deathTornado);
 		if (getEvolution() == 2) {
 			// happening during poses on phase 1
 		}
