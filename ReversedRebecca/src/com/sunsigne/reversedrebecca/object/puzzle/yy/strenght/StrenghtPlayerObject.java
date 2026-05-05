@@ -126,13 +126,15 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 				player.removeHp();
 			}
 
-			path = "loot_chest";
-			caze = new RandomGenerator().getBoolean() ? CASE.PERFECT : CASE.GOOD;
-			if (projectileType == PROJECTILE_TYPE.HEART)
-				player.addHp(2);
-			if (projectileType == PROJECTILE_TYPE.BONUS_HEART)
-				player.addBonusHp(2);
-			projectileObject.removeObject();
+			else {
+				path = "loot_chest";
+				caze = new RandomGenerator().getBoolean() ? CASE.PERFECT : CASE.GOOD;
+				if (projectileType == PROJECTILE_TYPE.HEART)
+					player.addHp(2);
+				if (projectileType == PROJECTILE_TYPE.BONUS_HEART)
+					player.addBonusHp(2);
+				projectileObject.removeObject();
+			}
 		}
 
 		recovering = 50 / getPuzzleSpeed();

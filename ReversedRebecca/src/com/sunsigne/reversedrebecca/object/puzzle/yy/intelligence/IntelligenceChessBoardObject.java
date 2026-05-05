@@ -83,7 +83,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		}, () -> move02(), () -> {
 		}, () -> move03(), () -> {
 		}, () -> move04(), () -> move05(), () -> move06(), () -> move07(), () -> move08(), () -> move09(),
-				() -> move10(), () -> move11(), () -> move12(), () -> move13());
+				() -> move10(), () -> move11(), () -> move12());
 		return moves;
 	}
 
@@ -265,14 +265,17 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		pieces.get("c3").goes(3, 5, true);
 		pieces.get("f3").goes(4, 3, true);
 		pieces.get("h2").goes(2, 12, true);
+		
+		move13();
 	}
 
 	private void move13() {
 		var king = pieces.get("e1");
 		pieces.remove("e1");
 		pieces.put("e5", king);
-		new GameTimer(10, true, () -> king.goes(5, 5, true));
-		new GameTimer(40, true, () -> throwingBoard());
+		int time = 20;
+		new GameTimer(time + 10, true, () -> king.goes(5, 5, true));
+		new GameTimer(time + 40, true, () -> throwingBoard());
 	}
 
 	private void throwingBoard() {

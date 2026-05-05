@@ -26,6 +26,8 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 	protected DoubleYSSJ2UppercutPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		super(boss, pattern_time_in_sec, delay_between_two_attacks);
+		time = 5 * Game.SEC;
+
 		setActionWhenFinished(() -> {
 			getBoss().nextPattern();
 			getBoss().evolve();
@@ -45,7 +47,7 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 	////////// TICK ////////////
 
-	private int time = 5 * Game.SEC;
+	protected int time;
 
 	@Override
 	public void tick() {
@@ -102,14 +104,14 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 			@Override
 			public String getTextureName() {
-				return super.getTextureName() + "_ssj2";
+				return getBoss().getTextureName();
 			}
 
 			////////// SIZE ////////////
 
 			@Override
 			public int getHeight() {
-				return 8 * getPixelSize();
+				return getBoss().getHeight();
 			}
 
 			////////// DOUBLE Y CONDITION ////////////

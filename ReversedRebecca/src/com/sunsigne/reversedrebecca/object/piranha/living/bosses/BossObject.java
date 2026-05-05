@@ -89,11 +89,12 @@ public abstract class BossObject extends LivingObject {
 	public abstract int get_num_of_patterns_before_resting();
 
 	public abstract int get_recovery_time_betweem_two_single_patterns();
-	
+
 	public void nextPattern() {
 		if (patterns == null)
 			return;
 
+		setMotionless();
 		patterns.cycle();
 
 		// recovery time between two single patterns

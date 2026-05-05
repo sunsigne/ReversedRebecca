@@ -137,20 +137,21 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 		BossPattern fastPunch = new DoubleYFastPunchPattern(this);
 		BossPattern tornado = new DoubleYTornadoPattern(this);
-		BossPattern uppercut = new DoubleYSSJ2UppercutPattern(this);
+		BossPattern ssj2Uppercut = new DoubleYSSJ2UppercutPattern(this);
 		BossPattern rest = new DoubleYRestPattern(this);
 		BossPattern poseOne = new DoubleYPosePattern(this, 5, 100, DOUBLE_Y_CONDITION.FLEX_1, 2, -2);
 		BossPattern poseTwo = new DoubleYPosePattern(this, 3, 40, DOUBLE_Y_CONDITION.FLEX_2, -2, -2);
 		BossPattern poseThree = new DoubleYPosePattern(this, 3, 40, DOUBLE_Y_CONDITION.FLEX_3, -2, 1);
 		BossPattern poseFour = new DoubleYPosePattern(this, 4, 40, DOUBLE_Y_CONDITION.FLEX_4, 2, 1);
+		BossPattern uppercut = new DoubleUppercutPattern(this);
 		BossPattern earthquake = new DoubleYEarthquakePattern(this);
 
 		if (getEvolution() == 0)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
 					tornado, rest);
 		if (getEvolution() == 1)
-			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, uppercut,
-					poseOne, poseTwo, poseThree, poseFour, uppercut);
+			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, ssj2Uppercut,
+					poseOne, poseTwo, poseThree, poseFour, uppercut, earthquake);
 		if (getEvolution() == 2) {
 			// happening during poses on phase 1
 		}

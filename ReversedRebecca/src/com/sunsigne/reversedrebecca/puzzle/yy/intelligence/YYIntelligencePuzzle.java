@@ -66,7 +66,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 	////////// TICK ////////////
 
-	private int WIN_CONDIITON_TIME = (15 * Game.SEC) + Game.SEC / 2;
+	private int WIN_CONDIITON_TIME = 15 * Game.SEC;
 	private int time;
 
 	public int getLoopTime() {
