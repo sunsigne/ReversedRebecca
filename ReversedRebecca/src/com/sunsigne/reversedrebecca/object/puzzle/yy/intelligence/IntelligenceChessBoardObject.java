@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -18,6 +20,11 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	public IntelligenceChessBoardObject(Puzzle puzzle) {
 		super(puzzle, false, 0, 0, 8 * Size.M, 8 * Size.M);
+	}
+
+	public void play() {
+		moves.getState().doAction();
+		moves.cycle();
 	}
 
 	////////// NAME ////////////
@@ -80,6 +87,14 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	////////// ARRANGEMENTS ////////////
 
+	private Cycloid<GenericListener> moves = createMoves();
+
+	private Cycloid<GenericListener> createMoves() {
+		Cycloid<GenericListener> moves;
+		moves = new Cycloid<>(() -> move01(), () -> move02());
+		return moves;
+	}
+
 	public void resetPieces() {
 		for (IntelligenceChessPieceObject piece : pieces.values())
 			LAYER.PUZZLE.getHandler().removeObject(piece);
@@ -113,7 +128,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		createPiece("e8", new IntelligenceChessPieceObject(getPuzzle(), 8, 5, false, CHESS_PIECE.KING));
 		createPiece("f8", new IntelligenceChessPieceObject(getPuzzle(), 8, 6, false, CHESS_PIECE.BISHOP));
 		createPiece("g8", new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.KNIGHT));
-		createPiece("h8", new IntelligenceChessPieceObject(getPuzzle(), 8, 7, false, CHESS_PIECE.ROOK));
+		createPiece("h8", new IntelligenceChessPieceObject(getPuzzle(), 8, 8, false, CHESS_PIECE.ROOK));
 
 		createPiece("a7", new IntelligenceChessPieceObject(getPuzzle(), 7, 1, false, CHESS_PIECE.PAWN));
 		createPiece("b7", new IntelligenceChessPieceObject(getPuzzle(), 7, 2, false, CHESS_PIECE.PAWN));
@@ -125,9 +140,18 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		createPiece("h7", new IntelligenceChessPieceObject(getPuzzle(), 7, 8, false, CHESS_PIECE.PAWN));
 	}
 
-	private void arrangement01() {
-		var pawn = pieces.get("e5");
+	private void move01() {
+		var pawn = pieces.get("e2");
+		pieces.remove("e2");
+		pieces.put("e4", pawn);
+		pawn.goes(4, 5);
+	}
 
+	private void move02() {
+		var knight = pieces.get("g1");
+		pieces.remove("g1");
+		pieces.put("f3", knight);
+		knight.goes(3, 6);
 	}
 
 }

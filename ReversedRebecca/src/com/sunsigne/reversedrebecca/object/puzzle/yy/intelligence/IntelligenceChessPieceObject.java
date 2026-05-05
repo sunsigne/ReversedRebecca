@@ -18,6 +18,8 @@ public class IntelligenceChessPieceObject extends PuzzleObject implements Sheeta
 
 		this.white = white;
 		this.chess_piece = chess_piece;
+		this.goalX = getX();
+		this.goalY = getY();
 	}
 
 	private boolean white;
@@ -30,28 +32,33 @@ public class IntelligenceChessPieceObject extends PuzzleObject implements Sheeta
 		return "PUZZLE : " + "CHESS BOARD";
 	}
 
-	////////// USEFULL ////////////
-
-	protected int getCol(int col) {
-		return (col / Size.M);
-	}
-
-	protected int getRow(int row) {
-		return (row / Size.M);
-	}
-
 	////////// PHYSICS ////////////
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TICK ////////////
 
+	private int goalX, goalY;
+
+	public void goes(int col, int row) {
+		goalX = Size.M * (6 + col);
+		goalY = Size.S + row * Size.M;
+	}
+
 	@Override
 	public void tick() {
+		if (goalX != getX())
+			setVelX((goalX - getX()) / 10);
+		else
+			setVelX(0);
 
+		if (goalY != getY())
+			setVelY((goalY - getY()) / 10);
+		else
+			setVelY(0);
 	}
 
 	////////// TEXTURE ////////////

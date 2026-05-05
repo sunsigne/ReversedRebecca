@@ -90,6 +90,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 		if (time == loop) {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+			chessBoard.play();
 			time = 0;
 		}
 	}
