@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
@@ -48,24 +50,40 @@ public class IntelligenceChessPieceObject extends PuzzleObject
 	////////// TICK ////////////
 
 	private int goalX, goalY;
+	private boolean promotion;
 
 	public void goes(int col, int row) {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+		goes(col, row, false);
+	}
+
+	public void goes(int col, int row, boolean soundless) {
+		if (!soundless)
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+
 		goalX = Size.M * (6 + col);
 		goalY = Size.S + row * Size.M;
+
+		if (col == 8 && chess_piece == CHESS_PIECE.PAWN)
+			promotion = true;
 	}
 
 	@Override
 	public void tick() {
-		if (goalX != getX())
-			setVelX((goalX - getX()) / 10);
-		else
-			setVelX(0);
+		int velX = (goalX - getX()) / 10;
+		if (chess_piece == CHESS_PIECE.KING && white)
+			velX = (goalX - getX()) / 3;
 
+		if (goalX != getX())
+			setVelX(velX);
 		if (goalY != getY())
 			setVelY((goalY - getY()) / 10);
-		else
-			setVelY(0);
+
+		// promotion
+		if (getVelX() < 3 && promotion) {
+			promotion = false;
+			chess_piece = CHESS_PIECE.QUEEN;
+			image = null;
+		}
 	}
 
 	////////// TEXTURE ////////////
@@ -141,8 +159,21 @@ public class IntelligenceChessPieceObject extends PuzzleObject
 
 	@Override
 	public void collidingReaction(CollisionDetector detectorObject) {
-		if (white || chess_piece == CHESS_PIECE.KING)
+		if (white)
 			return;
+
+		if (chess_piece == CHESS_PIECE.KING) {
+			if (detectorObject instanceof IntelligenceChessPieceObject == false)
+				return;
+
+			IntelligenceChessPieceObject piece = (IntelligenceChessPieceObject) detectorObject;
+			if (piece.chess_piece == CHESS_PIECE.KING) {
+				new CameraShaker().shaking(SHAKE.MEDIUM);
+				goes(17, -6, true);
+			}
+
+			return;
+		}
 
 		removeObject();
 	}

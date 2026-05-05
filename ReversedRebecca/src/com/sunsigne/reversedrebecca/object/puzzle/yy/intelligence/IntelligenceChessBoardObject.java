@@ -6,10 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -95,7 +98,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		}, () -> move02(), () -> {
 		}, () -> move03(), () -> {
 		}, () -> move04(), () -> move05(), () -> move06(), () -> move07(), () -> move08(), () -> move09(),
-				() -> move10());
+				() -> move10(), () -> move11(), () -> move12(), () -> move13());
 		return moves;
 	}
 
@@ -168,7 +171,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 	private void move04() {
 		var knight = pieces.get("b1");
 		pieces.remove("b1");
-		pieces.put("c2", knight);
+		pieces.put("c3", knight);
 		knight.goes(3, 3);
 	}
 
@@ -199,42 +202,91 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 	}
 
 	private void move08() {
+		// rooks
 		pieces.get("a7").goes(7, 8);
 		pieces.get("h7").goes(7, 1);
 	}
 
 	private void move09() {
+		new CameraShaker().shaking(SHAKE.TINY);
+
 		var queen = pieces.get("d1");
 		pieces.remove("d1");
 		pieces.put("a8", queen);
-		queen.goes(8, 1);
+		queen.goes(8, 1, true);
 
-		var rook1 = pieces.get("a7");
-		pieces.remove("a7");
-		pieces.put("h4", rook1);
-		rook1.goes(4, 8);
-
-		var rook2 = pieces.get("h7");
-		pieces.remove("h7");
-		pieces.put("a4", rook2);
-		rook2.goes(4, 1);
+		// pieces
+		pieces.get("a7").goes(4, 8);
+		pieces.get("h7").goes(4, 1);
+		pieces.get("b5").goes(6, 3, true);
+		pieces.get("g5").goes(6, 6, true);
+		pieces.get("c3").goes(3, 2, true);
+		pieces.get("f3").goes(3, 7, true);
 	}
 
 	private void move10() {
+		new CameraShaker().shaking(SHAKE.TINY);
+
 		var queen = pieces.get("a8");
 		pieces.remove("a8");
 		pieces.put("h8", queen);
-		queen.goes(8, 8);
+		queen.goes(8, 8, true);
 
-		var rook1 = pieces.get("a4");
-		pieces.remove("a4");
-		pieces.put("c4", rook1);
-		rook1.goes(4, 3);
+		// pieces
+		pieces.get("a7").goes(5, 7);
+		pieces.get("h7").goes(5, 2);
+		pieces.get("b5").goes(6, 2, true);
+		pieces.get("g5").goes(6, 7, true);
+		pieces.get("c3").goes(3, 3, true);
+		pieces.get("f3").goes(3, 6, true);
+	}
 
-		var rook2 = pieces.get("h4");
-		pieces.remove("h4");
-		pieces.put("f4", rook2);
-		rook2.goes(4, 6);
+	private void move11() {
+		new CameraShaker().shaking(SHAKE.LITTLE);
+
+		var king = pieces.get("e8");
+		pieces.remove("e8");
+		pieces.put("e5", king);
+		king.goes(5, 5);
+
+		// pieces
+		pieces.get("a2").goes(8, 1);
+		pieces.get("b2").goes(8, 2);
+		pieces.get("c2").goes(8, 3, true);
+		pieces.get("d4").goes(8, 4, true);
+		pieces.get("e4").goes(8, 5, true);
+		pieces.get("f2").goes(8, 6, true);
+		pieces.get("g2").goes(8, 7, true);
+	}
+
+	private void move12() {
+		new CameraShaker().shaking(SHAKE.LITTLE);
+
+		// queens
+		pieces.get("a2").goes(6, 6);
+		pieces.get("b2").goes(6, 5);
+		pieces.get("c2").goes(4, 4);
+		pieces.get("d4").goes(4, 5, true);
+		pieces.get("e4").goes(5, 6, true);
+		pieces.get("f2").goes(4, 6, true);
+		pieces.get("g2").goes(5, 4, true);
+		pieces.get("h8").goes(6, 4, true);
+
+		// pieces
+		pieces.get("a7").goes(6, 3, true);
+		pieces.get("h7").goes(7, 5, true);
+		pieces.get("b5").goes(6, 7, true);
+		pieces.get("g5").goes(4, 7, true);
+		pieces.get("c3").goes(3, 5, true);
+		pieces.get("f3").goes(4, 3, true);
+		pieces.get("h2").goes(2, 12, true);
+	}
+
+	private void move13() {
+		var king = pieces.get("e1");
+		pieces.remove("e1");
+		pieces.put("e5", king);
+		new GameTimer(10, true, () -> king.goes(5, 5, true));
 	}
 
 }

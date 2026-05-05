@@ -16,8 +16,6 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -68,11 +66,11 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 
 	////////// TICK ////////////
 
-	private int WIN_CONDIITON_TIME = 14 * Game.SEC;
+	private int WIN_CONDIITON_TIME = (15 * Game.SEC) + Game.SEC / 2;
 	private int time;
 
 	public int getLoopTime() {
-		return 54;
+		return 53;
 	}
 
 	private int loop = getLoopTime();
@@ -89,7 +87,6 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 			closePuzzle(false);
 
 		if (time == loop) {
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 			chessBoard.play();
 			time = 0;
 		}
