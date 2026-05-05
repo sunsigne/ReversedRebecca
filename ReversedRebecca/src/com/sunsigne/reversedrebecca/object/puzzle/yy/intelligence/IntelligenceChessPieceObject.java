@@ -1,17 +1,23 @@
 package com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class IntelligenceChessPieceObject extends PuzzleObject implements SheetableImage {
+public class IntelligenceChessPieceObject extends PuzzleObject
+		implements SheetableImage, CollisionDetector, CollisionReactor {
 
 	public IntelligenceChessPieceObject(Puzzle puzzle, int col, int row, boolean white, CHESS_PIECE chess_piece) {
 		super(puzzle, false, Size.M * (6 + col), Size.S + row * Size.M, Size.M, Size.M);
@@ -36,7 +42,7 @@ public class IntelligenceChessPieceObject extends PuzzleObject implements Sheeta
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE_MOVER;
+		return PhysicLinker.PUZZLE_COLLISION;
 	}
 
 	////////// TICK ////////////
@@ -44,6 +50,7 @@ public class IntelligenceChessPieceObject extends PuzzleObject implements Sheeta
 	private int goalX, goalY;
 
 	public void goes(int col, int row) {
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 		goalX = Size.M * (6 + col);
 		goalY = Size.S + row * Size.M;
 	}
@@ -113,6 +120,31 @@ public class IntelligenceChessPieceObject extends PuzzleObject implements Sheeta
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public Rectangle getBounds() {
+		return CollisionDetector.super.getBounds();
+	}
+
+	@Override
+	public boolean isBlockingSight() {
+		return false;
+	}
+
+	@Override
+	public boolean isBlockingPath() {
+		return false;
+	}
+
+	@Override
+	public void collidingReaction(CollisionDetector detectorObject) {
+		if (white || chess_piece == CHESS_PIECE.KING)
+			return;
+
+		removeObject();
 	}
 
 }
