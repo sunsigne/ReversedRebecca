@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -16,6 +17,8 @@ import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
@@ -50,25 +53,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
-	}
-
-	////////// VELOCICY ////////////
-
-	@Override
-	public void setVelX(int velX) {
-		for (IntelligenceChessPieceObject piece : pieces.values())
-			piece.setVelX(velX);
-
-		super.setVelX(velX);
-	}
-
-	@Override
-	public void setVelY(int velY) {
-		for (IntelligenceChessPieceObject piece : pieces.values())
-			piece.setVelY(velY);
-
-		super.setVelY(velY);
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TEXTURE ////////////
@@ -287,6 +272,18 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		pieces.remove("e1");
 		pieces.put("e5", king);
 		new GameTimer(10, true, () -> king.goes(5, 5, true));
+		new GameTimer(40, true, () -> throwingBoard());
+	}
+
+	private void throwingBoard() {
+		new CameraShaker().shaking(SHAKE.MEDIUM);
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
+		setVelX(40);
+		
+		for(IntelligenceChessPieceObject piece : pieces.values()) {
+			int row = new RandomGenerator().getIntBetween(-10, 10);
+			piece.goes(15, row, true);
+		}
 	}
 
 }
