@@ -91,7 +91,11 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 
 	private Cycloid<GenericListener> createMoves() {
 		Cycloid<GenericListener> moves;
-		moves = new Cycloid<>(() -> move01(), () -> move02());
+		moves = new Cycloid<>(() -> move01(), () -> {
+		}, () -> move02(), () -> {
+		}, () -> move03(), () -> {
+		}, () -> move04(), () -> move05(), () -> move06(), () -> move07(), () -> move08(), () -> move09(),
+				() -> move10());
 		return moves;
 	}
 
@@ -152,6 +156,85 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		pieces.remove("g1");
 		pieces.put("f3", knight);
 		knight.goes(3, 6);
+	}
+
+	private void move03() {
+		var pawn = pieces.get("d2");
+		pieces.remove("d2");
+		pieces.put("d4", pawn);
+		pawn.goes(4, 4);
+	}
+
+	private void move04() {
+		var knight = pieces.get("b1");
+		pieces.remove("b1");
+		pieces.put("c2", knight);
+		knight.goes(3, 3);
+	}
+
+	private void move05() {
+		var bishop = pieces.get("f1");
+		pieces.remove("f1");
+		pieces.put("b5", bishop);
+		bishop.goes(5, 2);
+	}
+
+	private void move06() {
+		var bishop = pieces.get("c1");
+		pieces.remove("c1");
+		pieces.put("g5", bishop);
+		bishop.goes(5, 7);
+	}
+
+	private void move07() {
+		var rook1 = pieces.get("a1");
+		pieces.remove("a1");
+		pieces.put("a7", rook1);
+		rook1.goes(7, 1);
+
+		var rook2 = pieces.get("h1");
+		pieces.remove("h1");
+		pieces.put("h7", rook2);
+		rook2.goes(7, 8);
+	}
+
+	private void move08() {
+		pieces.get("a7").goes(7, 8);
+		pieces.get("h7").goes(7, 1);
+	}
+
+	private void move09() {
+		var queen = pieces.get("d1");
+		pieces.remove("d1");
+		pieces.put("a8", queen);
+		queen.goes(8, 1);
+
+		var rook1 = pieces.get("a7");
+		pieces.remove("a7");
+		pieces.put("h4", rook1);
+		rook1.goes(4, 8);
+
+		var rook2 = pieces.get("h7");
+		pieces.remove("h7");
+		pieces.put("a4", rook2);
+		rook2.goes(4, 1);
+	}
+
+	private void move10() {
+		var queen = pieces.get("a8");
+		pieces.remove("a8");
+		pieces.put("h8", queen);
+		queen.goes(8, 8);
+
+		var rook1 = pieces.get("a4");
+		pieces.remove("a4");
+		pieces.put("c4", rook1);
+		rook1.goes(4, 3);
+
+		var rook2 = pieces.get("h4");
+		pieces.remove("h4");
+		pieces.put("f4", rook2);
+		rook2.goes(4, 6);
 	}
 
 }
