@@ -12,7 +12,6 @@ public class DoubleYEarthquakePattern extends BossPattern {
 
 	protected DoubleYEarthquakePattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		super(boss, pattern_time_in_sec, delay_between_two_attacks);
-		this.y0 = getBoss().getY();
 	}
 
 	public DoubleYEarthquakePattern(BossObject boss) {
@@ -44,7 +43,14 @@ public class DoubleYEarthquakePattern extends BossPattern {
 		jump();
 	}
 
+	private boolean init;
+
 	private void jump() {
+		if (init == false) {
+			init = true;
+			y0 = getBoss().getY();
+		}
+
 		getBoss().setFacing(DIRECTION.DOWN);
 		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
 		getBoss().setVelY(-15);
