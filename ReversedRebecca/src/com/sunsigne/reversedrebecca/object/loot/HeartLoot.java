@@ -6,17 +6,22 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.physic.PhysicLaw;
+import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
 public class HeartLoot extends LootObject {
 
-	public HeartLoot(int x, int y) {
+	public HeartLoot(int x, int y, boolean bonus) {
 		super(x, y);
 
+		this.bonus = bonus;
 		loadImages();
 	}
+
+	private boolean bonus;
 
 	////////// NAME ////////////
 
@@ -26,6 +31,39 @@ public class HeartLoot extends LootObject {
 		var name = "HEART";
 		var goal = new GoalObject(getX(), getY(), true);
 		return clazz + " : " + name + " : " + goal.getX() + "-" + goal.getY();
+	}
+
+	////////// PHYSICS ////////////
+
+	@Override
+	public PhysicLaw[] getPhysicLinker() {
+		return PhysicLinker.PROJECTILE;
+	}
+
+	////////// TICK ////////////
+
+	private int y0;
+
+	public void bouncing() {
+		y0 = getY();
+		setVelY(-20);
+		setY(getY() + getVelY());
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+
+		if (y0 == 0)
+			return;
+
+		if (y0 > getY())
+			setVelY(getVelY() + 1);
+
+		else {
+			setVelY(0);
+			setY(y0);
+		}
 	}
 
 	////////// HIGHLIGHT ////////////
@@ -47,7 +85,7 @@ public class HeartLoot extends LootObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 1;
+		return bonus ? 2 : 1;
 	}
 
 	public void refresh() {
@@ -84,7 +122,10 @@ public class HeartLoot extends LootObject {
 		if (player == null)
 			return;
 
-		player.addHp(2);
+		if (bonus)
+			player.addBonusHp(2);
+		else
+			player.addHp(2);
 	}
 
 }
