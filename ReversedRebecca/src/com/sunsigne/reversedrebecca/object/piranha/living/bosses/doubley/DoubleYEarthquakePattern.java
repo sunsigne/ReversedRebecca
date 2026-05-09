@@ -1,12 +1,17 @@
 package com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.Position;
+import com.sunsigne.reversedrebecca.object.loot.HeartLoot;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.BossPattern;
 import com.sunsigne.reversedrebecca.object.piranha.living.bosses.doubley.DoubleYFeeling.DOUBLE_Y_CONDITION;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
+import com.sunsigne.reversedrebecca.system.Size;
 
 public class DoubleYEarthquakePattern extends BossPattern {
 
@@ -73,6 +78,39 @@ public class DoubleYEarthquakePattern extends BossPattern {
 			getBoss().setY(y0);
 			getBoss().setMotionless();
 			new GameTimer(30, () -> getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD));
+			createHeartLoot(3);
+		}
+	}
+
+	private void createHeartLoot(int number) {
+		Position pos = new PlayerFinder().getPlayerClone();
+		int x = pos.getX() + Size.M;
+		int y = pos.getY() + Size.M;
+
+		for (int index = 0; index < number; index++) {
+			int radX;
+			int radY;
+			boolean flag = false;
+
+			do {
+				radX = new RandomGenerator().getIntBetween(-9, 7);
+				radY = new RandomGenerator().getIntBetween(-5, 3);
+				flag = false;
+
+				// on top left wall
+				if (radX <= -5 && radY <= -5)
+					flag = true;
+				// on right down tank
+				if (radX >= 4 && radY >= 1)
+					flag = true;
+
+				radX = Size.M * radX;
+				radY = Size.M * radY;
+			} while (flag);
+
+			HeartLoot heart = new HeartLoot(x + radX, y + radY, index % 2 != 0);
+			heart.bouncing();
+			getBoss().getHandler().addObject(heart);
 		}
 	}
 
