@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
@@ -71,10 +73,10 @@ public class YYedAnimationObject extends AnimationObject {
 		flag = true;
 		setVelX(velX);
 		setVelY(velY);
-		
-		if(heartless == false)
-		createHeart(velX, velY);
-		
+
+		if (heartless == false)
+			createHeart(velX, velY);
+
 		if (new PlayerFinder().getPlayer() != null)
 			new PlayerFinder().getPlayer().removeHp(1);
 		new CameraShaker().shaking(SHAKE.MEDIUM);
@@ -105,7 +107,7 @@ public class YYedAnimationObject extends AnimationObject {
 	private void createHeart(int velX, int velY) {
 		GameTimer timer = new GameTimer(Game.SEC);
 
-		heart = new HeartLoot(getX(), getY(), false) {
+		heart = new HeartLoot(getX(), getY(), DifficultyOption.getDifficulty() == GAME_DIFFICULTY.EASY) {
 
 			@Override
 			public void collidingReaction(CollisionDetector detectorObject) {

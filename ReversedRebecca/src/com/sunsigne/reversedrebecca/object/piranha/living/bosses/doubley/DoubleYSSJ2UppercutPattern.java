@@ -17,6 +17,7 @@ import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.Camera;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
@@ -86,7 +87,21 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 		// uppercut player
 		uppercutPlayer(player);
-		Handler.getHandler(player).addObject(new YYedAnimationObject(player.getX(), player.getY(), center, getBoss().isSSJ2()));
+		Handler.getHandler(player)
+				.addObject(new YYedAnimationObject(player.getX(), player.getY(), center, isHearless()));
+	}
+
+	private boolean isHearless() {
+		switch (DifficultyOption.getDifficulty()) {
+		case EASY:
+			return false;
+		case NORMAL:
+			return getBoss().isSSJ2();
+		case HARD:
+			return true;
+		}
+
+		return getBoss().isSSJ2();
 	}
 
 	private void tpBoss(Player player) {

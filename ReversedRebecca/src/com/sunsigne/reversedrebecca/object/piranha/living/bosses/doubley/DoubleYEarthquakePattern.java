@@ -11,6 +11,7 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class DoubleYEarthquakePattern extends BossPattern {
@@ -108,10 +109,23 @@ public class DoubleYEarthquakePattern extends BossPattern {
 				radY = Size.M * radY;
 			} while (flag);
 
-			HeartLoot heart = new HeartLoot(x + radX, y + radY, index % 2 != 0);
+			HeartLoot heart = new HeartLoot(x + radX, y + radY, isBonusHeart(index));
 			heart.bouncing();
 			getBoss().getHandler().addObject(heart);
 		}
+	}
+
+	private boolean isBonusHeart(int index) {
+		switch (DifficultyOption.getDifficulty()) {
+		case EASY:
+			return true;
+		case NORMAL:
+			return index % 2 != 0;
+		case HARD:
+			return false;
+		}
+
+		return index % 2 != 0;
 	}
 
 }
