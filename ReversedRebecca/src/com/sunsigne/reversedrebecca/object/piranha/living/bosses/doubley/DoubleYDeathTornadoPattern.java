@@ -21,6 +21,11 @@ public class DoubleYDeathTornadoPattern extends DoubleYTornadoPattern {
 
 	protected DoubleYDeathTornadoPattern(BossObject boss, int pattern_time_in_sec, int delay_between_two_attacks) {
 		super(boss, pattern_time_in_sec, delay_between_two_attacks);
+		
+		setActionWhenFinished(() -> {
+			getBoss().nextPattern();
+			getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.TORNADO);
+		});
 	}
 
 	public DoubleYDeathTornadoPattern(BossObject boss) {

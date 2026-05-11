@@ -146,16 +146,19 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 		BossPattern uppercut = new DoubleUppercutPattern(this);
 		BossPattern earthquake = new DoubleYEarthquakePattern(this);
 		BossPattern deathTornado = new DoubleYDeathTornadoPattern(this);
+		BossPattern defeated = new DoubleYRestPattern(this, 0, 30);
 
 		if (getEvolution() == 0)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, fastPunch,
 					tornado, rest);
 		if (getEvolution() == 1)
 			pattern_array = new ArrayCombiner<BossPattern>().combine(BossPattern.class, pattern_array, ssj2Uppercut,
-					poseOne, poseTwo, poseThree, poseFour, uppercut, earthquake, deathTornado);
+					poseOne, poseTwo, poseThree, poseFour, uppercut, earthquake, deathTornado, defeated);
 		if (getEvolution() == 2) {
 			// happening during poses on phase 1
 		}
+		if (getEvolution() >= 3)
+			return;
 
 		patterns = new Cycloid<>(pattern_array);
 		start(patterns.getState(), firstAttack ? 0 : 60);

@@ -8,9 +8,13 @@ import com.sunsigne.reversedrebecca.piranha.condition.global.BossCondition;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class DoubleYRestPattern extends BossRestPattern {
-
+	
 	public DoubleYRestPattern(BossObject boss) {
-		super(boss, 4, -1);
+		this(boss, 4, 3);
+	}
+
+	public DoubleYRestPattern(BossObject boss, int pattern_time_in_sec, int time_before_reappearing_in_sec) {
+		super(boss, pattern_time_in_sec, -1);
 
 		GenericListener listener = getActionWhenFinished();
 		setActionWhenFinished(() -> {
@@ -26,7 +30,7 @@ public class DoubleYRestPattern extends BossRestPattern {
 				getBoss().setY(y);
 			};
 			
-			new GameTimer(3 * Game.SEC, tp);
+			new GameTimer(time_before_reappearing_in_sec * Game.SEC, tp);
 		});
 	}
 
