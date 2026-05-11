@@ -78,7 +78,7 @@ public class DoubleYEarthquakePattern extends BossPattern {
 			getBoss().setY(y0);
 			getBoss().setMotionless();
 			new GameTimer(30, () -> getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD));
-			createHeartLoot(3);
+			createHeartLoot(2);
 		}
 	}
 

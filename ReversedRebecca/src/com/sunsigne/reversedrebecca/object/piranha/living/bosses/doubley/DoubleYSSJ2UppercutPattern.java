@@ -86,8 +86,7 @@ public class DoubleYSSJ2UppercutPattern extends BossPattern {
 
 		// uppercut player
 		uppercutPlayer(player);
-		Handler.getHandler(player).addObject(new YYedAnimationObject(player.getX(), player.getY(), center));
-
+		Handler.getHandler(player).addObject(new YYedAnimationObject(player.getX(), player.getY(), center, getBoss().isSSJ2()));
 	}
 
 	private void tpBoss(Player player) {

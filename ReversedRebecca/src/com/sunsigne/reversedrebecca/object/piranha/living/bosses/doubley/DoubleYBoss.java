@@ -89,7 +89,7 @@ public class DoubleYBoss extends BossObject implements DoubleYFeeling {
 
 	////////// EVOLUTION ////////////
 
-	private boolean isSSJ2() {
+	public boolean isSSJ2() {
 		return getEvolution() % 2 != 0;
 	}
 

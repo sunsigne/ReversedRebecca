@@ -44,7 +44,7 @@ public class DoubleUppercutPattern extends DoubleYSSJ2UppercutPattern {
 
 		player.setCondition(CONDITION.KO_UPSIDEDOWN);
 		player.setStunned(true);
-		new GameTimer(3 * Game.SEC, () -> {
+		new GameTimer(4 * Game.SEC, () -> {
 			player.setCondition(CONDITION.GOOD);
 			player.setStunned(false);
 		});
