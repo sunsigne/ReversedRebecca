@@ -4,12 +4,12 @@ object = player = sadistic_smirk = Ils méritent que je les fasse tourner en bou
 
 
 % THATS_DANGEROUS
-object = player = angry = Et alors ? C'est ceux qui passent devant une arme@chargée qui méritaient de se prendre des balles…
+object = player = angry = Et alors ? Ceux qui passent devant une arme@chargée méritent de se prendre une balle…
 object = player = doubt = Et puis ça va, je fais attention. Ni toi ni l'autre idiot@ne finiront blessés. Je sais ce que je fais.
 
 
 % THATS_BAD_OR_FUN
-object = player = sadistic_happy = Je ne t'ai pas demandé ton avis.@D'ailleurs, j'ai envie d'une bombe. Apporte-moi ça.
+object = player = sadistic_happy = Je ne t'ai pas demandé ton avis, la bleue.@D'ailleurs, j'ai envie d'une bombe. Apporte-moi ça.
 
 
 % GO_GET_IT_YOURSELF
@@ -18,7 +18,7 @@ object = player = angry_var2 = J'ai dit : apporte-moi une bombe !
 
 
 % YES_MAAM
-object = player = doubt = Ah, tu y vas vraiment ? Très bien, je t'attends alors.
+object = player = doubt = Ah, tu y vas vraiment ?@Très bien, je t'attends alors.
 
 
 % IN_YOUR_DREAMS

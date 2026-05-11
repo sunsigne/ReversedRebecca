@@ -38,7 +38,7 @@ object = player = happy = Zi viens. Fouille nos chzambres. Voizi l'énigme qui@t
 
 
 % RIDDLE
-object = player = smile = Ze zuis à la 4ème ligne ce que la 2nd est à la 1ère.@Pareil pour la colonne.
+object = player = smile = Ze zuis à la 4ème ligne ce que la 1ère est à la 2nd.@Pareil pour la colonne.
 
 
 % HIT_ONE
