@@ -28,8 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	yy : sons lors du earthquake et de l'échec au roi
-
 	créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 
 	bug : 
@@ -38,6 +36,8 @@
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	rr000 - faire clignotter une plante comme dans lvl001
 	lvl002 - vérifier les voix des perso (surtout les filles)
+	
+	vrai musique de fin de niveau
 
 	////////// MILITARY ////////////
 
@@ -74,8 +74,9 @@
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-	YY doit donner des coeurs au joueur (déjà fait dans le strenght puzzle)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
+
+	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en vavant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

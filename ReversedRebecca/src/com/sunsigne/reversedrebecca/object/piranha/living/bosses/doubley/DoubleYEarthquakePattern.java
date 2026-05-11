@@ -11,6 +11,8 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
 
@@ -61,6 +63,7 @@ public class DoubleYEarthquakePattern extends BossPattern {
 		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
 		getBoss().setVelY(-15);
 		getBoss().setY(getBoss().getY() + getBoss().getVelY());
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "jump");
 	}
 
 	private void earthquake() {
@@ -79,6 +82,8 @@ public class DoubleYEarthquakePattern extends BossPattern {
 			getBoss().setY(y0);
 			getBoss().setMotionless();
 			new GameTimer(30, () -> getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD));
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 			createHeartLoot(2);
 		}
 	}

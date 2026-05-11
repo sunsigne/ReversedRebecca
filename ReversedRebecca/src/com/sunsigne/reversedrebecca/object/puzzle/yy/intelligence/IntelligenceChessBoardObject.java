@@ -265,7 +265,7 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		pieces.get("c3").goes(3, 5, true);
 		pieces.get("f3").goes(4, 3, true);
 		pieces.get("h2").goes(2, 12, true);
-		
+
 		move13();
 	}
 
@@ -274,16 +274,19 @@ public class IntelligenceChessBoardObject extends PuzzleObject implements TickFr
 		pieces.remove("e1");
 		pieces.put("e5", king);
 		int time = 20;
-		new GameTimer(time + 10, true, () -> king.goes(5, 5, true));
+		new GameTimer(time + 10, true, () -> {
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_small");
+			king.goes(5, 5, true);
+		});
+		new GameTimer(time + 35, true, () -> new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_large"));
 		new GameTimer(time + 40, true, () -> throwingBoard());
 	}
 
 	private void throwingBoard() {
 		new CameraShaker().shaking(SHAKE.STRONG);
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "hit_medium");
 		setVelX(40);
-		
-		for(IntelligenceChessPieceObject piece : pieces.values()) {
+
+		for (IntelligenceChessPieceObject piece : pieces.values()) {
 			int row = new RandomGenerator().getIntBetween(-10, 10);
 			piece.goes(15, row, true);
 		}
