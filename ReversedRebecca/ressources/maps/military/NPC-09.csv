@@ -16,6 +16,8 @@ $ -> HITBOX_RIGHT = HITBOX -> -10, 0, 16, 16
 $ -> HITBOX_UP = HITBOX -> -11, -6, 16, 16
 $ -> HITBOX_DOWN = HITBOX -> -11, 7, 16, 16
 
+! -> NANCY_IS_PLAYER = CONDITION -> KO ? NULL / TP:59-55, FAST:59-55
+
 
 //// START IA ////
 

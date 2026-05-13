@@ -27,6 +27,9 @@ CASSIDY = Key1 % Cassidy
 JESSY = Key2 % Jessy
 FINE_I_LIED = Key3 % Ok, j'ai menti
 APOLOGIZE = Key1 % s'excuser
+JESSY_WANTS_BOMBS = Key1 % Jessy veut des bombes
+AMUSING = Key1 % amusante
+ANNOYING = Key2 % énervante
 
 
 ///// ARMORY /////

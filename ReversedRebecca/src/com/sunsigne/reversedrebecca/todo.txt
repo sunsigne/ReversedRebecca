@@ -41,10 +41,15 @@
 
 	////////// MILITARY ////////////
 
+	Quand on devient Nancy :
+	- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
+	- changer les outils de l'HUD ET mettre des PV en moins (couer avec un petit bandage d'infirmière) + afficher à droite (pour que le joueur comprenne dessuite qu'il n'est pas Rebecca)
+
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
 		- si on reste neutre sur ses avances : dit qu'on devrait rencontrer Jessy
 		- si on la drague : dit qu'on doit aller parler à Jessy
+	si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujorus essayer de mentir à Nancy
 	
 	à tester : cassidy*met et cassidy*pranked
 

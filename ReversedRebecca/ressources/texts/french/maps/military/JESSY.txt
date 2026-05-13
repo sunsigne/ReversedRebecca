@@ -41,6 +41,10 @@ object = RIGHT = dreaming = Non, merci. Elles ne sont pas de la bonne couleur.@R
 object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis à Nancy d'y aller.
 
 
+% WHO_IS_NANCY
+object = RIGHT = doubt = Regarde dans l'infirmerie.
+
+
 % BYE_NANCY
 object = nancy = Tu peux disposer Nancy, je dois parler à notre amie.
 
