@@ -13,32 +13,34 @@ player = object = happy_var = Je te suis.
 
 
 % WHAT_DO_YOU_THINK_OF
-nancy = rebecca = happy = Alors ? Comment tu trouves Jessy ?
+nancy = rebecca = happy = Alors ? Comment tu trouves Jessy pour l'instant ?
 
 
 % JESSY_IS_AMUSING
-nancy = rebecca = excited = C'est vrai qu'elle est mignonne quand elle fait sa princesse.
-nancy = rebecca = playful = Regarde nous : on est là, toutes les deux,@à faire exactement ce qu'elle demande…
+nancy = rebecca = playful = N'est-ce pas ? Elle est trop mignonne quand@elle fait sa princesse.
 
 
 % JESSY_IS_ANNOYING
-nancy = rebecca = playful = Je vois ce que tu veux dire.@Pourtant, on est là, toutes les deux à faire ce qu'elle demande…
+nancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@toutes les deux à faire ce qu'elle demande…
 
 
 % JESSY_IS_SOMETHING_NEXT
-nancy = rebecca = excited = Elle a ce pouvoir étrange qui fait qu'on a envie de se faire bien voir, d'elle.
-nancy = rebecca = playful = Bon, c'est vrai que des fois, elle peut être égoïste…
-nancy = rebecca = sad_side = Voire, méchante…
+nancy = rebecca = excited = Elle a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir d'elle.
+nancy = rebecca = playful = Bon, c'est vrai que des fois,@elle est un peu égoïste…
 
 
 % JESSY_IS_SOMETHING_NEXT_NEXT
+nancy = rebecca = sad_side = Voire, méchante…
+
+
+% JESSY_IS_SOMETHING_NEXT_NEXT_NEXT
 nancy = rebecca = happy = Mais on ne s'ennuie jamais avec elle.
 
 
 % CENTER
-nancy = rebecca = happy = Au fait, tu ne t'ai pas présenté. Tu t'appelles comment ?
+nancy = rebecca = happy = Au fait, tu ne t'es pas présentée.@C'est quoi ton nom ?
 object = nancy = happy_var = Rebecca.
-nancy = rebecca = blush_side = Ok, je note. C'est logique qu'une jolie fille ait un joli prénom.
+nancy = rebecca = blush_side = Ok, je note. C'est logique qu'une aussi jolie fille@ait un aussi joli prénom.
 
 
 % HERE_WE_ARE
@@ -46,17 +48,17 @@ nancy = rebecca = happy = Nous y sommes. Voilà les bombes pour Jessy.
 
 
 % HERE_WE_ARE_YET
-object = nancy = worry = C'est celles que j'avais prise, mais elle les a refusé…
+object = nancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… elle les a refusées.
 
 
 % HERE_WE_ARE_YET_VAR
-object = nancy = worry = Ces bombes sont les même que les miennes. Pourtant, elle les a refusé…
+object = nancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… elle les a refusées.
 
 
 % HERE_WE_ARE_NEXT
-nancy = rebecca = happy = À mon avis, elle ne les a même pas regardé.@Les bombes sont une excuse, elle veut juste être servie.
-object = nancy = worry = Servie, comme… Dans un restaurant ?
+nancy = rebecca = happy = À mon avis, elle ne les a même pas regardé.@Les bombes sont une excuse, elle veut être servie.
+object = nancy = no_sens = Tu veux dire… Comme dans un restaurant ?
 nancy = rebecca = excited = Non ! Elle cherche notre attention.@Elle veut qu'on se plie en quatre pour elle.
 nancy = rebecca = playful = Elle cherche à se faire désirée, quoi.
-object = nancy = blush = Je pense qu'elle t'aime bien. Et… Je peux comprendre pourquoi.
-object = nancy = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.
+nancy = rebecca = blush = Je pense qu'elle t'aime bien. Et…@Je peux comprendre pourquoi.
+nancy = rebecca = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.

@@ -28,6 +28,7 @@
 
 	////////// EN COURS ////////////
 
+	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
 	créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 
 	bug : 
@@ -42,6 +43,7 @@
 	////////// MILITARY ////////////
 
 	Quand on devient Nancy :
+	- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
 	- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
 	- changer les outils de l'HUD ET mettre des PV en moins (couer avec un petit bandage d'infirmière) + afficher à droite (pour que le joueur comprenne dessuite qu'il n'est pas Rebecca)
 
