@@ -1,9 +1,13 @@
 package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.InventoryPlayer;
+import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class HUDRemoveRequest implements Request {
 
@@ -32,8 +36,22 @@ public class HUDRemoveRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
+		if (target.equalsIgnoreCase("nurse")) {
+			removeNurseHud();
+			return;
+		}
+
 		int index = Integer.parseInt(target);
 		new InventoryPlayer().removeItem(index - 1);
+	}
+
+	private void removeNurseHud() {
+		LAYER.HUD.getHandler().clear();
+
+		for (HUD tempHUD : HUDList.getList().getList()) {
+			LAYER.HUD.getHandler().getList().add(0, tempHUD);
+			Handler.updateHandlerMap(LAYER.HUD.getHandler(), tempHUD);
+		}
 	}
 
 }
