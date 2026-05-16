@@ -45,8 +45,8 @@
 	Quand on devient Nancy :
 	- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
 	- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
-	- changer les outils de l'HUD ET mettre des PV en moins (couer avec un petit bandage d'infirmière) + afficher à droite (pour que le joueur comprenne dessuite qu'il n'est pas Rebecca)
-
+	- changer les outils de l'HUD ET mettre des PV en moins
+	
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
 		- si on reste neutre sur ses avances : dit qu'on devrait rencontrer Jessy
