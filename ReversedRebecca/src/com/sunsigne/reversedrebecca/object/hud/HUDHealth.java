@@ -17,6 +17,7 @@ public class HUDHealth extends GameObject implements HUD {
 		super(0, 0, Size.M, Size.M);
 		HUDList.getList().addObject(this);
 		loadImages();
+		setVisible(true);
 	}
 
 	////////// NAME ////////////
@@ -44,6 +45,18 @@ public class HUDHealth extends GameObject implements HUD {
 	@Override
 	public HUD getHUD() {
 		return hud;
+	}
+
+	private boolean visible;
+	
+	@Override
+	public boolean isVisible() {
+		return visible;
+	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 
 	////////// PHYSICS ////////////
@@ -93,6 +106,9 @@ public class HUDHealth extends GameObject implements HUD {
 
 	@Override
 	public void render(Graphics g) {
+		if(isVisible() == false)
+			return;
+				
 		Player player = new PlayerFinder().getPlayer();
 
 		if (player == null)

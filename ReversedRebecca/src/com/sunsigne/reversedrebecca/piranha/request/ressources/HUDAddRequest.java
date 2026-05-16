@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.InventoryPlayer;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
+import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.hud.nurse.HUDNurseHealth;
 import com.sunsigne.reversedrebecca.object.hud.nurse.HUDNurseTool;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
@@ -47,12 +48,13 @@ public class HUDAddRequest implements Request {
 	}
 
 	private void createNurseHud() {
-		LAYER.HUD.getHandler().clear();
+		for (HUD tempHUD : HUDList.getList().getList())
+			tempHUD.setVisible(false);
 
 		HUD tools = new HUDNurseTool();
 		LAYER.HUD.getHandler().getList().add(0, tools);
 		Handler.updateHandlerMap(LAYER.HUD.getHandler(), tools);
-		
+
 		HUD health = new HUDNurseHealth();
 		LAYER.HUD.getHandler().getList().add(0, health);
 		Handler.updateHandlerMap(LAYER.HUD.getHandler(), health);

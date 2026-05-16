@@ -16,6 +16,7 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 	private HUDInventory() {
 		super(0, Size.M + 10, Size.M, Size.M);
 		HUDList.getList().addObject(this);
+		setVisible(true);
 	}
 
 	////////// NAME ////////////
@@ -33,6 +34,18 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 	@Override
 	public HUD getHUD() {
 		return hud;
+	}
+
+	private boolean visible;
+	
+	@Override
+	public boolean isVisible() {
+		return visible;
+	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 
 	////////// PHYSICS ////////////
@@ -84,6 +97,9 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 
 	@Override
 	public void render(Graphics g) {
+		if(isVisible() == false)
+			return;
+				
 		int size = InventoryPlayer.getSize();
 
 		for (int index = 0; index < size; index++) {

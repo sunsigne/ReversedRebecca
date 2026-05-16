@@ -23,6 +23,7 @@ public class HUDNurseTool extends GameObject implements TickFree, HUD {
 	public HUDNurseTool() {
 		super(Window.WIDHT - Size.M, Window.HEIGHT - Size.M - 10, Size.M, Size.M);
 		loadImages();
+		setVisible(true);
 	}
 
 	private boolean isNumberSettings() {
@@ -97,6 +98,18 @@ public class HUDNurseTool extends GameObject implements TickFree, HUD {
 		return hud;
 	}
 
+	private boolean visible;
+	
+	@Override
+	public boolean isVisible() {
+		return visible;
+	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		this.visible = visible;
+	}
+
 	////////// PHYSICS ////////////
 
 	@Override
@@ -154,6 +167,9 @@ public class HUDNurseTool extends GameObject implements TickFree, HUD {
 
 	@Override
 	public void render(Graphics g) {
+		if(isVisible() == false)
+			return;
+				
 		int size = images.getList().size();
 
 		for (int index = 0; index < size; index += 2) {

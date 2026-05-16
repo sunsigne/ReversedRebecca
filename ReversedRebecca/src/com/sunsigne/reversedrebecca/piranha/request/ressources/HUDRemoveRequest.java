@@ -4,10 +4,10 @@ import com.sunsigne.reversedrebecca.characteristics.tools.InventoryPlayer;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class HUDRemoveRequest implements Request {
 
@@ -46,11 +46,13 @@ public class HUDRemoveRequest implements Request {
 	}
 
 	private void removeNurseHud() {
-		LAYER.HUD.getHandler().clear();
+		var clone = new ListCloner().deepCloneByClass(LAYER.HUD.getHandler(), HUD.class);
 
-		for (HUD tempHUD : HUDList.getList().getList()) {
-			LAYER.HUD.getHandler().getList().add(0, tempHUD);
-			Handler.updateHandlerMap(LAYER.HUD.getHandler(), tempHUD);
+		for (HUD tempHUD : clone.getList()) {
+			if (HUDList.getList().containsObject(tempHUD))
+				tempHUD.setVisible(true);
+			else
+				tempHUD.removeObject();
 		}
 	}
 

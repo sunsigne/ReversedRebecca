@@ -16,6 +16,7 @@ public class HUDNurseHealth extends GameObject implements HUD {
 	public HUDNurseHealth() {
 		super(Window.WIDHT - Size.M, 0, Size.M, Size.M);
 		loadImages();
+		setVisible(true);
 	}
 
 	////////// NAME ////////////
@@ -43,6 +44,18 @@ public class HUDNurseHealth extends GameObject implements HUD {
 	@Override
 	public HUD getHUD() {
 		return hud;
+	}
+
+	private boolean visible;
+	
+	@Override
+	public boolean isVisible() {
+		return visible;
+	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 
 	////////// PHYSICS ////////////
@@ -86,7 +99,9 @@ public class HUDNurseHealth extends GameObject implements HUD {
 
 	@Override
 	public void render(Graphics g) {
-
+		if(isVisible() == false)
+			return;
+				
 		// drawing maxHp empty heart
 		for (int index = 0; index < getMaxHp(); index = index + 2) {
 			g.drawImage(empty_img, getX() - index * getWidth() / 2, getY(), getWidth(), getHeight(), null);

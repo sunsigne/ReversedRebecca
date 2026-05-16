@@ -28,6 +28,7 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 		super(0, Window.HEIGHT - Size.M - 10, Size.M, Size.M);
 		HUDList.getList().addObject(this);
 		loadImages(null);
+		setVisible(true);
 	}
 
 	private boolean isNumberSettings() {
@@ -60,6 +61,18 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 	@Override
 	public HUD getHUD() {
 		return hud;
+	}
+
+	private boolean visible;
+	
+	@Override
+	public boolean isVisible() {
+		return visible;
+	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		this.visible = visible;
 	}
 
 	////////// PHYSICS ////////////
@@ -168,6 +181,9 @@ public class HUDTools extends GameObject implements HUD, Blinking {
 
 	@Override
 	public void render(Graphics g) {
+		if(isVisible() == false)
+			return;
+		
 		int size = images.getList().size();
 
 		for (int index = 0; index < size; index += 2) {

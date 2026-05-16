@@ -8,5 +8,9 @@ public interface HUD extends SheetableImage, Position {
 	////////// HUD ////////////
 
 	HUD getHUD();
+	
+	boolean isVisible();
+	
+	void setVisible(boolean visible);
 
 }
