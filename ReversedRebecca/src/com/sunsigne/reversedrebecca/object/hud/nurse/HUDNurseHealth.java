@@ -30,7 +30,7 @@ public class HUDNurseHealth extends GameObject implements HUD {
 	////////// TOOL ////////////
 
 	private int getHp() {
-		return 4;
+		return 5;
 	}
 
 	private int getMaxHp() {
