@@ -14,6 +14,7 @@ OBJ-14 = Up Left Shower
 OBJ-15 = Up Right Shower
 OBJ-16 = Down Left Shower
 OBJ-17 = Down Right Shower
+OBJ-40 = Path Finding Helper (Artificial Wall)
 
 NPC-01 = Sarah
 NPC-03 = Dormitory

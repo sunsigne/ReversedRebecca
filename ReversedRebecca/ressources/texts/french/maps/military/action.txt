@@ -68,6 +68,7 @@ WHAT_ARE_YOU_DOING = Key1 % Tu fais quoi ?
 THATS_DANGEROUS = Key1 % c'est dangereux !
 STOP_MOVING = Key1 % arrête de bouger
 YELLOW_KEY = Key3 % clé ?
+SO = Key1 % alors ?
 
 
 ///// REFECTORY /////

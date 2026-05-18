@@ -33,6 +33,7 @@
 
 	bug : 
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
+	police_station : après le hall du destin, le design de rebecca passait SOUS les éboulements dans la salle des armes. Pb d'axe z ?
 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	rr000 - faire clignotter une plante comme dans lvl001
@@ -46,6 +47,9 @@
 	- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
 	- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
 	- changer les outils de l'HUD ET mettre des PV en moins
+	- on doit pouvoir soigner le joueur
+	- lorsque Nancy suit Jessy, elle a l'air un peu bourée sur la 1ère partie (à cause d'un slow:jessy)
+	- empêcher le joueur de rejoindre jessy et nancy dans l'armurerie
 	
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
