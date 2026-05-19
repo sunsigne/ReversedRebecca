@@ -28,10 +28,14 @@
 
 	////////// EN COURS ////////////
 
+	ws002 : amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop) + vérifier l'amélioration en chemin speedrun
+
+	police_station : "voler la clef cyan sur le bureau" n'exite plus
 	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
 	créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 
 	bug : 
+	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	police_station : après le hall du destin, le design de rebecca passait SOUS les éboulements dans la salle des armes. Pb d'axe z ?
 
@@ -47,7 +51,7 @@
 	- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
 	- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
 	- changer les outils de l'HUD ET mettre des PV en moins
-	- on doit pouvoir soigner le joueur
+	- on doit pouvoir soigner le joueur (avec Give_hp_player request)
 	- lorsque Nancy suit Jessy, elle a l'air un peu bourée sur la 1ère partie (à cause d'un slow:jessy)
 	- empêcher le joueur de rejoindre jessy et nancy dans l'armurerie
 	
@@ -158,8 +162,6 @@
 	- relier le fusil à pompe derrière Butch à la fusillade
 
 	////////// WS002 ////////////
-
-	amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop) + vérifier l'amélioration en chemin speedrun
 
 	////////// DAVE003 ////////////
 
