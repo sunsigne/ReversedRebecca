@@ -73,12 +73,11 @@ public class World implements Updatable, RenderFree {
 
 	private boolean userdata = false;
 
-
 	public World(String mapName) {
 		if (LAYER.LOADING.getHandler().getList().isEmpty()) {
 			LAYER.LOADING.addObject(new LoadingScreen());
 			loading = Game.SEC / 2;
-		}			
+		}
 
 		initParameters(mapName);
 		createMap();
@@ -186,7 +185,7 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private int loading;
-	
+
 	private void start() {
 		boolean frozen = isFrozen();
 		freeze(true);
@@ -366,6 +365,7 @@ public class World implements Updatable, RenderFree {
 		new Cutscene().stop(false);
 		closeMenu();
 		closePuzzle();
+		resetHud();
 		resetLayers();
 		instance = null;
 		MemorySet.getSet().clear();
@@ -378,6 +378,7 @@ public class World implements Updatable, RenderFree {
 	private void closeMenu() {
 		if (MenuIngameController.getMenu() != null)
 			new MenuIngameController().unloadResumeScreen();
+
 	}
 
 	private void closePuzzle() {
@@ -385,6 +386,13 @@ public class World implements Updatable, RenderFree {
 
 		for (Puzzle puzzleObject : list.getList())
 			puzzleObject.closePuzzle(false);
+	}
+
+	private void resetHud() {
+		LAYER.HUD.getHandler().clear();
+
+		for (HUD tempHUD : HUDList.getList().getList())
+			tempHUD.setVisible(true);
 	}
 
 	private void resetLayers() {

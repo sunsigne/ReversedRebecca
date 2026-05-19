@@ -51,16 +51,21 @@
 	Quand on devient Nancy :
 	à faire :
 		- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
-		- empêcher le joueur de rejoindre jessy et nancy dans l'armurerie
+		- essayer de demander une amre quand elles sont dans l'armurerie. Nancy répond en rien "c'est mort !"
 	à véfirier :
 		- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
-		- on doit pouvoir soigner le joueur (avec Give_hp_player request)
 		
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
 		- si on reste neutre sur ses avances : dit qu'on devrait rencontrer Jessy
 		- si on la drague : dit qu'on doit aller parler à Jessy
-	si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujorus essayer de mentir à Nancy
+	si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy
+	
+	Jessy : finir le "derrière chambre froide :
+	- tu m'a fait attendre
+	- tu écoute au porte
+	- tu t'es rebiffé quand je t'ai demandé des bombes
+	- tu essaies de séduire ma nancy ?
 	
 	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 
@@ -88,6 +93,7 @@
 	créer le preview des gens sur la map
 	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
+	faire en sorte que Xavier dupont serve à qq chose
 
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
