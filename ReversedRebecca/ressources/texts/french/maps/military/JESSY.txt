@@ -57,3 +57,7 @@ jessy_military = nancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre 
 
 % NANCY_NOT_NOW
 nancy = LEFT = happy = Hey ! C'est une conversation privée.
+
+
+% EAVESDROPPING
+jessy_military = LEFT = doubt = Je rêve ou tu écoutais aux portes ?

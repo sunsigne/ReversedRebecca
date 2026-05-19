@@ -57,7 +57,7 @@
 		- si on la drague : dit qu'on doit aller parler à Jessy
 	si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujorus essayer de mentir à Nancy
 	
-	à tester : cassidy*met et cassidy*pranked
+	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 
 	trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
@@ -87,7 +87,7 @@
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 
-	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en vavant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
+	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en avant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
