@@ -60,4 +60,5 @@ nancy = LEFT = happy = Hey ! C'est une conversation privée.
 
 
 % EAVESDROPPING
-jessy_military = LEFT = doubt = Je rêve ou tu écoutais aux portes ?
+jessy_military = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
+jessy_military = player = deep = Vilaine fille… Tu vas voir.
