@@ -16,6 +16,7 @@ NOT_SO_COCKY_ANYMORE = Key1 % On fait moins le malin
 NANCY_QUESTION = Key1 % Nancy ?
 YOUT_GIRLFRIEND_IS_BEING_HARSH = Key1 % ta copine est dure
 I_NEED_HEALING = Key3 % j'ai besoin de soins
+HEAL = Key3 % soigner
 WOW_CALM_DOWN = Key1 % wow, on se calme
 WHOS_YOUR_GIRLFRIEND = Key2 % C'est qui ta copine ?
 MAYBE_I_WANT = Key3 % Peut-être que j'ai envie...
