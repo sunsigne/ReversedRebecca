@@ -45,6 +45,12 @@ object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis 
 object = RIGHT = doubt = Regarde dans l'infirmerie.
 
 
+% POST_LIE
+object = player = doubt = Tu t'appelles Nancy ?
+player = object = unhappy = Elle ne veut pas y aller.
+object = player = angry_var2 = Pardon ?! Je réglerai ça avec elle plus tard.@Maintenant, dégage.
+
+
 % BYE_NANCY
 object = nancy = Tu peux disposer Nancy, je dois parler à notre amie.
 
@@ -57,6 +63,10 @@ jessy_military = nancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre 
 
 % NANCY_NOT_NOW
 nancy = LEFT = happy = Hey ! C'est une conversation privée.
+
+
+% REQUEST_A_FIREARM
+nancy = LEFT = excited = C'est mort !
 
 
 % EAVESDROPPING

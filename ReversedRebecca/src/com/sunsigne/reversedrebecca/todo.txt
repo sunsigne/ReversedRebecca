@@ -49,18 +49,9 @@
 
 	incorporer la musique "love that almost heals" et ses 2 variantes
 
-	Quand on devient Nancy :
-	à faire :
-		- ajouter des interactions avec les objets de l'infirmerie et l'ambulance
-		- essayer de demander une amre quand elles sont dans l'armurerie. Nancy répond en rien "c'est mort !"
-	à véfirier :
-		- ajouter un bruit et un bonus texte lorsqu'elle aramasse les bombes
-		
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
-		- si on reste neutre sur ses avances : dit qu'on devrait rencontrer Jessy
-		- si on la drague : dit qu'on doit aller parler à Jessy
-	si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy
+		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
 	
 	Jessy : finir le "derrière chambre froide :
 	- tu m'a fait attendre

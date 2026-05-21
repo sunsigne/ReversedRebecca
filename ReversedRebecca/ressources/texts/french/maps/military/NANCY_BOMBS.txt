@@ -62,3 +62,9 @@ nancy = rebecca = excited = Non ! Elle cherche notre attention.@Elle veut qu'on 
 nancy = rebecca = playful = Elle cherche à se faire désirée, quoi.
 nancy = rebecca = blush = Je pense qu'elle t'aime bien. Et…@Je peux comprendre pourquoi.
 nancy = rebecca = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.
+
+
+% POST_LIE
+nancy = player = sad = Je ne vois pas en quoi cela me concerne.
+player = nancy = unhappy_var = Elle veut que ça soit toi qui les lui donne.
+nancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.

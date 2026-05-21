@@ -49,7 +49,7 @@ object = player = blush = Mais c'était sympa de faire ta connaissance.
 
 
 % REFUSE_HEALING
-object = player = sad_side = Je suis désolée pour toi, mais tu m'as blessé…@Ta vie n'est pas en danger, je ne t'aiderais pas.
+object = player = sad_side = Tu m'as blessé… Je suis désolée pour toi, mais@je ne t'aiderais pas. Ta vie n'est pas en danger.
 
 
 % YOUT_GIRLFRIEND_IS_BEING_HARSH
