@@ -53,11 +53,9 @@
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
 		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
 	
-	Jessy : finir le "derrière chambre froide :
-	- tu m'a fait attendre
-	- tu écoute au porte
-	- tu t'es rebiffé quand je t'ai demandé des bombes
-	- tu essaies de séduire ma nancy ?
+	Jessy :
+	à tester :
+		- le timing de l'attente derrière la "cold room"
 	+ finir le dialogue "not now"
 	
 	

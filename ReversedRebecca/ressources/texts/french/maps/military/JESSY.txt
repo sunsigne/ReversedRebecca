@@ -74,9 +74,24 @@ object = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
 object = LEFT = deep = Vilaine fille… Tu vas voir.
 
 
-% HARD_SEDUCING
-object = player = deep = Alors comme ça, tu es une gentille fille bien sage@qui fait tout ce qu'on lui demande…
-object = player = deep_provocative = Tu n'aimes pas les punitions ? Parce que j'ai bien@envie de t'expliquer un truc ou deux, là tout de suite.
+% HARD_SEDUCING_EAVESDROPPING
+object = player = deep = Alors comme ça, on écoute aux portes ?
+
+
+% HARD_SEDUCING_BOMBS
+object = player = deep = Alors comme ça, tu me fais répéter quand je te@demande quelque chose ?
+
+
+% HARD_SEDUCING_WAITING
+object = player = deep = Alors comme ça, on me fait attendre ?
+
+
+% HARD_SEDUCING_NEUTRAL
+object = player = deep = Alors comme ça, on traîne avec ma Nancy ?
+
+
+% HARD_SEDUCING_NEXT
+object = player = deep_provocative = Tu aimes les punitions ? Parce que j'ai bien envie@de t'expliquer un truc ou deux, là tout de suite.
 object = player = deep = Mais je vais rester sage moi aussi, en tout cas@pour le moment.
 object = player = deep_provocative = J'ai parlé à Nancy, on a décidé de passer@toutes les deux chez toi, ce soir.
 object = player = aroused = Alors à bientôt, ma chose.
