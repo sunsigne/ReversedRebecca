@@ -60,5 +60,21 @@ nancy = LEFT = happy = Hey ! C'est une conversation privée.
 
 
 % EAVESDROPPING
-jessy_military = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
-jessy_military = player = deep = Vilaine fille… Tu vas voir.
+object = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
+object = LEFT = deep = Vilaine fille… Tu vas voir.
+
+
+% HARD_SEDUCING
+object = player = deep = Alors comme ça, tu es une gentille fille bien sage@qui fait tout ce qu'on lui demande…
+object = player = deep_provocative = Tu n'aimes pas les punitions ? Parce que j'ai bien@envie de t'expliquer un truc ou deux, là tout de suite.
+object = player = deep = Mais je vais rester sage moi aussi, en tout cas@pour le moment.
+object = player = deep_provocative = J'ai parlé à Nancy, on a décidé de passer@toutes les deux chez toi, ce soir.
+object = player = aroused = Alors à bientôt, ma chose.
+
+
+% REBECCA_IS_HAVING_A_BLAST
+player = DOWN = blush_var = Wow !
+
+
+% NOT_WOW
+object = player = deep = Alors comme ça, tu es une gentille fille bien sage@qui fait tout ce qu'on lui demande…
