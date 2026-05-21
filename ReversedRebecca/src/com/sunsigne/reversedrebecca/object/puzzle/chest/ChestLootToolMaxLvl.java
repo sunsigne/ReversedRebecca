@@ -4,6 +4,10 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
+import com.sunsigne.reversedrebecca.object.loot.ToolObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -33,6 +37,16 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public void pickUp() {
 		tool.setMaxDifficulty(getDifficulty());
+
+		if (new DifficultyComparator().isPositiveUpgade(tool.getStartDifficulty(), tool.getMaxDifficulty()) == false)
+			return;
+
+		Player player = new PlayerFinder().getPlayer();
+		int x = player == null ? 0 : player.getX();
+		int y = player == null ? 0 : player.getY();
+
+		ToolObject object = new ToolObject(tool, tool.getStartDifficulty(), x, y);
+		object.pickup(false);
 	}
 
 	////////// TOOL////////////

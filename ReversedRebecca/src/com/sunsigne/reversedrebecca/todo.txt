@@ -28,6 +28,8 @@
 
 	////////// EN COURS ////////////
 
+	est-ce que le mode daltonier s'adapte aux loots ? Si oui, ça n'est en tout cas pas le cas de la bomb_door
+
 	ws002 : amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop) + vérifier l'amélioration en chemin speedrun
 
 	police_station : "voler la clef cyan sur le bureau" n'exite plus
@@ -182,8 +184,7 @@
 	////////// CHEST ////////////
 
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
-	2h00 - attention ! il est possible dans les loots de demander de commencer avec un outils de lvl > au niveau max qu'on doit avoir, ce qui n'a pas vraiment de sens ... -> ajouter une erreur spécifique
-
+	
 	////////// DESSIN ////////////
 	
 	(pas à faire, mais à ne pas oublier cette règle) lvl001 - la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli).
