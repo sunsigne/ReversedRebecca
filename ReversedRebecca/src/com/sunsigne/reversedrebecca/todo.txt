@@ -30,7 +30,7 @@
 
 	est-ce que le mode daltonier s'adapte aux loots ? Si oui, ça n'est en tout cas pas le cas de la bomb_door
 
-	ws002 : amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert (dans le cas où on a "juste" la clef max à jaune après 2 workshop) + vérifier l'amélioration en chemin speedrun
+	ws002 : amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert
 
 	police_station : "voler la clef cyan sur le bureau" n'exite plus
 	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
