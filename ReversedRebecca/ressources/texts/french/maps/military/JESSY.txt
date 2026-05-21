@@ -101,5 +101,5 @@ object = player = aroused = Alors à bientôt, ma chose.
 player = DOWN = blush_var = Wow !
 
 
-% NOT_WOW
-object = player = deep = Alors comme ça, tu es une gentille fille bien sage@qui fait tout ce qu'on lui demande…
+% NOT_NOW
+object = RIGHT = wink = Pas maintenant. J'ai une cible à trouer.

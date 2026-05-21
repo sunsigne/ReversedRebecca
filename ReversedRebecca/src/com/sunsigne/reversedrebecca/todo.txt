@@ -47,18 +47,11 @@
 
 	////////// MILITARY ////////////
 
-	incorporer la musique "love that almost heals" et ses 2 variantes
-
 	Nancy :
 		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
 		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
-	
-	Jessy :
-	à tester :
-		- le timing de l'attente derrière la "cold room"
-	+ finir le dialogue "not now"
-	
-	
+		+ penser à ajouter la musique
+
 	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 
 	trier les dossiers : 
