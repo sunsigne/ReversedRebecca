@@ -77,7 +77,14 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	public int getSheetColCriterion() {
 		return getDifficulty().ordinal() - 1;
 	}
-
+	
+	@Override
+	public void refresh() {
+		upgrade_img = null;
+		firstLine = null;
+		secondLine = null;
+	}
+	
 	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
@@ -90,8 +97,9 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	@Override
 	public BufferedImage getUpgradeImage() {
 		if (upgrade_img == null) {
+			int row = isNumberSettings() ? 2 : 1;
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "battery");
-			upgrade_img = getSheetSubImage(sheet, getSheetColCriterion(), 1, 64, 32);
+			upgrade_img = getSheetSubImage(sheet, getSheetColCriterion(), row, 64, 32);
 			getUpgradeGoldImage(); // ensure to load the same difficulty image
 		}
 		return upgrade_img;
@@ -101,7 +109,7 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	public BufferedImage getUpgradeGoldImage() {
 		if (upgrade_gold_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "battery");
-			upgrade_gold_img = getSheetSubImage(sheet, getSheetColCriterion(), 2, 64, 32);
+			upgrade_gold_img = getSheetSubImage(sheet, getSheetColCriterion(), 3, 64, 32);
 		}
 		return upgrade_gold_img;
 	}
@@ -115,10 +123,21 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public String getSecondLine() {
-		if (secondLine == null)
-			secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural" + getDifficulty().getName(),
-					FilePath.TOOL);
+		if (secondLine != null)
+			return secondLine;
+
+		secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural" + getDifficulty().getName(),
+				FilePath.TOOL);
+
+		if (isNumberSettings() == false)
+			return secondLine;
+
+		String number = " " + getDifficulty().ordinal();
+		secondLine = secondLine.replace(" " + getDifficulty().getName() + "s", "");
+		secondLine = secondLine.replace(" " + getDifficulty().getName(), "");
+		secondLine = secondLine.concat(number);
+
 		return secondLine;
 	}
-
+	
 }

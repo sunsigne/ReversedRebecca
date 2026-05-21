@@ -8,6 +8,8 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -25,6 +27,10 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 
 	public abstract boolean isValid();
 
+	protected boolean isNumberSettings() {
+		return ActionOption.getDesign() == ACTION_DESIGN.NUMBER;
+	}
+	
 	////////// CARD ////////////
 
 	private ChestCard card;
@@ -63,7 +69,9 @@ public abstract class ChestLoot extends PuzzleObject implements SheetableImage {
 	public int getSheetRowCriterion() {
 		return 1;
 	}
-
+	
+	public abstract void refresh();
+	
 	public abstract BufferedImage getToolImage();
 
 	public abstract BufferedImage getUpgradeImage();

@@ -45,6 +45,11 @@ public class ChestLootMaxHp extends ChestLoot {
 	private String secondLine;
 
 	@Override
+	public void refresh() {
+
+	}
+
+	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/hud/" + "heart");

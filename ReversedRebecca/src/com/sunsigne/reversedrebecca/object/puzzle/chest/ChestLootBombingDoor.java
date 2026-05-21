@@ -48,9 +48,16 @@ public class ChestLootBombingDoor extends ChestLoot {
 	private String secondLine;
 
 	@Override
+	public void refresh() {
+		tool_img = null;
+		upgrade_img = null;
+	}
+		
+	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool" + number);
 			tool_img = getSheetSubImage(sheet, 3, tool.getNum(), 16, 16);
 		}
 		return tool_img;
@@ -59,8 +66,9 @@ public class ChestLootBombingDoor extends ChestLoot {
 	@Override
 	public BufferedImage getUpgradeImage() {
 		if (upgrade_img == null) {
+			int row = isNumberSettings() ? 2 : 1;
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "upgrade");
-			upgrade_img = getSheetSubImage(sheet, 1, 1, 64, 32);
+			upgrade_img = getSheetSubImage(sheet, 1, row, 64, 32);
 		}
 		return upgrade_img;
 	}
@@ -69,7 +77,7 @@ public class ChestLootBombingDoor extends ChestLoot {
 	public BufferedImage getUpgradeGoldImage() {
 		if (upgrade_gold_img == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "upgrade");
-			upgrade_gold_img = getSheetSubImage(sheet, 1, 2, 64, 32);
+			upgrade_gold_img = getSheetSubImage(sheet, 1, 3, 64, 32);
 		}
 		return upgrade_gold_img;
 	}

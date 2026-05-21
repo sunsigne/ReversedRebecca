@@ -51,14 +51,19 @@ public class ChestLootError extends ChestLoot {
 	
 	@Override
 	public int getSheetColCriterion() {
-		return 2;
+		return 3;
 	}
 
 	@Override
 	public int getSheetRowCriterion() {
 		return 2;
 	}
-	
+
+	@Override
+	public void refresh() {
+
+	}
+
 	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {

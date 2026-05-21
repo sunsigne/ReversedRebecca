@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.hud.HUDTools;
 import com.sunsigne.reversedrebecca.object.loot.ToolObject;
+import com.sunsigne.reversedrebecca.object.puzzle.chest.ChestLoot;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -82,8 +83,8 @@ public class ActionOption {
 		}
 
 		for (LAYER tempLayer : LAYER.values()) {
-			if (tempLayer.isMapLayer() == false)
-				break;
+			if (tempLayer.isMapLayer() == false && tempLayer != LAYER.PUZZLE)
+				continue;
 
 			for (Updatable tempObject : tempLayer.getHandler().getList()) {
 
@@ -94,6 +95,10 @@ public class ActionOption {
 				// updating puzzlers
 				if (tempObject instanceof PuzzlerObject)
 					((PuzzlerObject) tempObject).refresh();
+				
+				// updating loots
+				if(tempObject instanceof ChestLoot)
+					((ChestLoot) tempObject).refresh();
 			}
 		}
 	}

@@ -28,8 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	est-ce que le mode daltonier s'adapte aux loots ? Si oui, ça n'est en tout cas pas le cas de la bomb_door
-
 	ws002 : amélioration des bombs max (pour autoriser le vert) OU de la clef de base jusqu'à vert
 
 	police_station : "voler la clef cyan sur le bureau" n'exite plus

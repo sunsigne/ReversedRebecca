@@ -75,9 +75,18 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	}
 
 	@Override
+	public void refresh() {
+		tool_img = null;
+		upgrade_img = null;
+		upgrade_gold_img = null;
+		secondLine = null;
+	}
+
+	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/tools/" + "tool" + number);
 			tool_img = getSheetSubImage(sheet, getSheetColCriterion(), tool.getNum(), 16, 16);
 		}
 		return tool_img;
@@ -86,8 +95,10 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	@Override
 	public BufferedImage getUpgradeImage() {
 		if (upgrade_img == null) {
+			int col = isNumberSettings() ? 6 : getSheetColCriterion() - 1;
+			int row = isNumberSettings() ? 2 : 1;
 			BufferedImage sheet = new ImageTask().loadImage("textures/techtree/" + "infinity");
-			upgrade_img = getSheetSubImage(sheet, getSheetColCriterion() - 1, 1, 32, 32);
+			upgrade_img = getSheetSubImage(sheet, col, row, 32, 32);
 		}
 		return upgrade_img;
 	}
@@ -116,9 +127,23 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 
 	@Override
 	public String getSecondLine() {
-		if (secondLine == null)
-			secondLine = new Translatable().getTranslatedText(tool.getName() + "Permanent" + getDifficulty().getName(),
-					FilePath.TOOL);
+		if (secondLine != null)
+			return secondLine;
+
+		secondLine = new Translatable().getTranslatedText(tool.getName() + "Permanent" + getDifficulty().getName(),
+				FilePath.TOOL);
+
+		if (isNumberSettings() == false)
+			return secondLine;
+
+		String number = " " + getDifficulty().ordinal();
+		String toolColor = new Translatable().getTranslatedText(tool.getName() + getDifficulty().getName(),
+				FilePath.TOOL);
+		String toolName = new Translatable().getTranslatedText(tool.getName(),
+				FilePath.TOOL);
+		
+		secondLine = secondLine.replace(toolColor, toolName + number);
+
 		return secondLine;
 	}
 
@@ -127,8 +152,8 @@ public class ChestLootToolStartLvl extends ChestLoot implements Difficulty {
 	@Override
 	public int[] cutsomizedDimensions() {
 		int u = 8;
-		int[] dim = { 0, 0, 0, 0, 10 * u, 0, -20*u, 0 };
+		int[] dim = { 0, 0, 0, 0, 10 * u, 0, -20 * u, 0 };
 		return dim;
 	}
-	
+
 }
