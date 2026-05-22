@@ -86,10 +86,16 @@ object = player = embarrased = Menteuse, tu as à peine quitté la pièce…
 
 % LIE_I_TALKED_TO_HER_LEAVING
 object = player = blush_side = Ha oui ?
+nancy = player = embarassed = Donnes moi une seconde, je reviens.
 
 
 % LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU
 object = player = embarrased_var = Ha oui ? Elle s'appelle comment ?
+
+
+% LIE_I_TALKED_TO_HER_GUESSING
+nancy = player = embarassed = Ho… Tu lui as vraiment parlé…
+nancy = player = embarassed = Donnes moi une seconde, je reviens.
 
 
 % FINE_I_LIED
@@ -103,6 +109,22 @@ object = player = blush_sad = Quoi qu'il en soit, je n'aime pas tes mensonges…
 
 % APOLOGIZE
 object = player = sad_side = C'est gentil, j'apprécie.@Je ne souhaite quand même plus te parler.
+
+
+% CREDIBLE_LIE
+player = RIGHT = unhappy = Est-ce que ça va ?
+
+
+% CREDIBLE_LIE_NEXT
+nancy = player = blush_side = Oui… Pardon… Merci…
+nancy = player = blush = Ok… Euh… Très bien… Alors…
+nancy = player = blush_side = J'imagine qu'on peut s'embrasser ?
+
+
+% POST_KISSING
+nancy = player = embarassed = Désolée… C'était très bien, trop bien…
+nancy = player = Je… vais dire à Jessy qu'on passera chez toi ce soir.@Je sais qu'elle fouillera les fichiers de la police pour trouver ton adresse.
+nancy = player = embarassed_var = Tu peux me laisser ici, je finirai par sortir… ou pas…
 
 
 
