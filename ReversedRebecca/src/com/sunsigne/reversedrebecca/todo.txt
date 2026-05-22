@@ -45,10 +45,12 @@
 
 	////////// MILITARY ////////////
 
+	mettre musique sur Patreon
+
 	Nancy :
-		- réaction positive quand on lui ment en : devinant le nom / partant et revenant 
+		- ajouter le refus du bisou
 		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
-		+ penser à ajouter la musique
+		- faire le lien du bisou avec l'après jessy
 
 	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 
@@ -71,6 +73,7 @@
 	note : nancy = nolan
 
 	à faire :
+	créer la hitbox du tabouret en plein milieu (et vérifier que rebecca ne soit pas bloquée dedans quand on controle nancy)
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map

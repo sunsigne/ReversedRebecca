@@ -246,7 +246,7 @@ public class ChatContent implements Updatable {
 		g.setColor(Color.white);
 		g.setFont(font);
 
-		int x0 = x + 90;
+		int x0 = x + 80;
 
 		String text0 = stop[0] ? sentence[0] : currentText[0];
 		String text1 = stop[1] ? sentence[1] : currentText[1];
