@@ -51,7 +51,8 @@ public class GroundRendering implements Updatable, TickFree, CameraDependency {
 		int height = img.getHeight() * ratio;
 
 		// draw gray lawer UNDER current ground (for up layers)
-		new TransluantLayer().drawGray(g, width, height);
+		if (layer.getName().contains("destiny") == false)
+			new TransluantLayer().drawGray(g, width, height);
 
 		// BufferedImage optimized_img = getOptimizedImage(img, ratio);
 		BufferedImage optimized_img = img;

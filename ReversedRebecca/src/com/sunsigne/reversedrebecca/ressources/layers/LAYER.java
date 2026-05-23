@@ -33,7 +33,7 @@ public enum LAYER {
 	UPPEST_WORLD_CONTENT("uppest_world_content", new Handler(true)),
 	UPPEST_LIGHT("uppest_light", new Handler(true)),
 	/////////////////////////////////////////
-	//DESTINY_BACKGROUND("destiny_background", new Handler(false)),
+	DESTINY_BACKGROUND("destiny_background", new Handler(false)),
 	DESTINY_GROUND("destiny_ground", new Handler(true)),
 	DESTINY_WORLD_CONTENT("destiny_world_content", new Handler(true)),
 	DESTINY_LIGHT("destiny_light", new Handler(true)),

@@ -57,7 +57,7 @@ public class LayerDualizer {
 
 		for (LAYER tempLayer : LAYER.values()) {
 			if (!tempLayer.getHandler().isCameraDependant())
-				break;
+				continue;
 
 			if (tempLayer.getName().contains("light"))
 				continue;

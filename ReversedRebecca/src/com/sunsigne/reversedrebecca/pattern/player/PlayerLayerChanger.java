@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.pattern.player;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.other.DestinyBackgroundObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
@@ -66,6 +67,14 @@ public class PlayerLayerChanger {
 		validateEnteringCondition(content_layer);
 		World.get().setLayer(ground_layer);
 		((UpdateLayersLaw) new UpdateLayersLaw().getIndependantLaw()).forceUdpate();
+		updateHallOfDestiny(ground_layer);
+	}
+
+	private void updateHallOfDestiny(LAYER ground_layer) {
+		if (ground_layer == LAYER.DESTINY_GROUND)
+			LAYER.DESTINY_BACKGROUND.addObject(new DestinyBackgroundObject());
+		else
+			LAYER.DESTINY_BACKGROUND.getHandler().clear();
 	}
 
 	private void sendPlayerToCorrectIndex(Player player, LAYER layer) {
