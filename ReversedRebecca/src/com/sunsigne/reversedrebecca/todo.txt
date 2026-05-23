@@ -28,18 +28,22 @@
 
 	////////// EN COURS ////////////
 
-	police_station : "voler la clef cyan sur le bureau" n'exite plus
-	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
-	créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
+	police_station : 
+	- "voler la clef cyan sur le bureau" n'exite plus
+	- meuble devnat les pelles : vérifier qu'il est bien impraticable avec scenario key + vérifier qu'on ne se retrouve pas dans une autre salle en descendant par là
+	- créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
+	- les ombres
+	- les voix des perso (surtout les filles)
+	- finir le sol de hall of destiny/fate
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
 	police_station : après le hall du destin, le design de rebecca passait SOUS les éboulements dans la salle des armes. Pb d'axe z ?
-
+	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
+	
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 	rr000 - faire clignotter une plante comme dans lvl001
-	lvl002 - vérifier les voix des perso (surtout les filles)
 	
 	vrai musique de fin de niveau
 
@@ -85,6 +89,7 @@
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 
 	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en avant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
+	- les ombres
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -103,6 +108,7 @@
 	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 	1h - changer le système d'aléatorie pour du déterminisme ?
 	1h - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
+	4h - le "hall of destiny" devrait avoir un background fix
 
 	////////// GAMEPAD ////////////
 
@@ -151,7 +157,6 @@
 
 	////////// LVL002 ////////////
 
-	à faire - hall of destiny/fate
 	- relier le fusil à pompe derrière Butch à la fusillade
 
 	////////// WS002 ////////////

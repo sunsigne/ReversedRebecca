@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerLayerChanger;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class SendPlayerRequest implements Request {
 
@@ -34,8 +35,13 @@ public class SendPlayerRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 		if (target.equalsIgnoreCase("up"))
 			new PlayerLayerChanger().goesUp();
-		else if (target.equalsIgnoreCase("down"))
+		if (target.equalsIgnoreCase("down"))
 			new PlayerLayerChanger().goesDown();
+
+		if (target.equalsIgnoreCase("destiny"))
+			new PlayerLayerChanger().goes(LAYER.DESTINY_GROUND);
+		if (target.equalsIgnoreCase("world"))
+			new PlayerLayerChanger().goes(LAYER.GROUND);
 	}
 
 }

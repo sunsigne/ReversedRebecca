@@ -88,6 +88,8 @@ Le Type de Requête SEND_PLAYER permet d'envoyer le joueur dans une autre couche
 La Cible détermine la couche d'arrivée :
 - UP : celle directement au-dessus du joueur.
 - DOWN : celle directement en dessous du joueur.
+- WORLD : la couche « Ø »
+- DESTINY : la couche « destiny » (couche spéciale)
 
 Exemple :
 TIME -> 0 = SEND_PLAYER -> UP
