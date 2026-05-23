@@ -47,7 +47,6 @@ public class Camera {
 		if (withRoom == false) {
 			px = px + position.getWidth() / 2;
 			py = py + position.getHeight() / 2;
-			;
 			pw = 0;
 			ph = 0;
 		}

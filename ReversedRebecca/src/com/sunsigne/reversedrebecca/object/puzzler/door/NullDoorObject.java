@@ -30,7 +30,7 @@ public class NullDoorObject extends DoorObject {
 		if (tryClosing.getState()) {
 			if (isOpened)
 				if (LAYER.MENU.getHandler().getList().isEmpty() && PausePreventer.state != PAUSE_STATE.MUSIC)
-					new SoundTask().playSoundIfCamera(this, "door_close");
+					new SoundTask().playSoundIfCamera(this, "door_close", true);
 			isOpened = false;
 		}
 
@@ -64,7 +64,7 @@ public class NullDoorObject extends DoorObject {
 		collidingReaction(detectorObject, false, () -> {
 			if (!isOpened)
 				if (LAYER.MENU.getHandler().getList().isEmpty() && PausePreventer.state != PAUSE_STATE.MUSIC)
-					new SoundTask().playSoundIfCamera(this, "door_open");
+					new SoundTask().playSoundIfCamera(this, "door_open", true);
 			isOpened = true;
 			tryClosing.setState(0);
 		});

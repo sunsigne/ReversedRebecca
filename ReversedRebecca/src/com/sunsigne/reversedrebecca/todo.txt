@@ -30,10 +30,13 @@
 
 	police_station : 
 	- "voler la clef cyan sur le bureau" n'exite plus
-	- meuble devnat les pelles : vérifier qu'il est bien impraticable avec scenario key + vérifier qu'on ne se retrouve pas dans une autre salle en descendant par là
 	- créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 	- les ombres
 	- les voix des perso (surtout les filles)
+	- le policier dans les toilettes ne tir sur le joueur que s'il le voit "SEE" + on peut lui parler du café...
+	soucis lors d'un changement de couche :
+	- éboulement fusllade : on devient derrière...
+	- porte psycho : s'éloigner ne reset pas le psycho (sauf si on se retrouve devant un autre interractif object) + retourner à l'écran titre non plus
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
