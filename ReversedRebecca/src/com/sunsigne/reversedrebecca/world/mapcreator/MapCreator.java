@@ -5,10 +5,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.NaveMesh;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
-import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.world.World;
@@ -74,9 +72,6 @@ public class MapCreator {
 				int y0 = yy * Size.M / STEP;
 
 				GameObject object = determinateCreation(red, green, blue, x0, y0);
-
-				if (object instanceof Player)
-					layer.addObject(new PlayerClone((Player) object));
 				layer.addObject(object);
 
 				if (object instanceof NaveMesh) {
@@ -84,7 +79,6 @@ public class MapCreator {
 					if (nav.isImmutable())
 						layer.getHandler().addNavMesh(nav);
 				}
-
 			}
 		}
 	}

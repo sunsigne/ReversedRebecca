@@ -21,6 +21,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -126,8 +127,12 @@ public class World implements Updatable, RenderFree {
 
 			// besure the LivingObjects are at the end of the list
 			for (Updatable tempUpdatable : list.getList()) {
+				if (tempUpdatable instanceof Player)
+					handler.addObject(new PlayerClone((Player) tempUpdatable));
+
 				handler.softRemoveObject(tempUpdatable);
 				handler.addObject(tempUpdatable);
+
 			}
 		}
 	}
