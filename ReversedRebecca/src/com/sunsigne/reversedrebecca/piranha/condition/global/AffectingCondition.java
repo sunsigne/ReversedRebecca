@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.piranha.condition.global;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.piranha.condition.GlobalInstruction;
@@ -48,9 +49,9 @@ public class AffectingCondition extends GlobalInstruction {
 		if (list.getList().isEmpty() == false)
 			return list;
 
-		// if not found, name close to
+		// if not found, name close to (only for living)
 		for (PiranhaObject tempObject : getPiranhaList().getList())
-			if (tempObject.getName().contains(name))
+			if (tempObject.getName().contains(name) && tempObject instanceof LivingObject)
 				list.addObject(tempObject);
 
 		return list;

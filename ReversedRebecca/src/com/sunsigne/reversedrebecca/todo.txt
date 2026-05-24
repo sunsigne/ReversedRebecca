@@ -29,7 +29,6 @@
 	////////// EN COURS ////////////
 
 	police_station : 
-	- "voler la clef cyan sur le bureau" n'exite plus
 	- créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 	- les ombres
 	- les voix des perso (surtout les filles)
