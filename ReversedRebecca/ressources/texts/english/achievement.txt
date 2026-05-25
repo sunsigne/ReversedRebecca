@@ -30,6 +30,8 @@ DarwinAwardText = Deadly accident at shooting field
 
 BrokenHeartTitle = Heartbroken
 BrokenHeartText = Refuse to go out with Marie
+InYourHeadTitle = Hall of Destiny
+InYourHeadText = Entering your own mind
 ThatWasAnAccidentTitle = That was an accident...
 ThatWasAnAccidentText = Die because of a couch
 GoldenShowerTitle = Golden Shower

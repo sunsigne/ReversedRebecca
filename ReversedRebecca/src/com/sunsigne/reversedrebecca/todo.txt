@@ -29,8 +29,8 @@
 	////////// EN COURS ////////////
 
 	police_station : 
-	- créer un achievement pour la 1ère fois où on entre dans le hall du destin : arriver au premier embranchement
 	- les voix des perso (surtout les filles)
+	- les ombres passent devant le hall du destin (l'animation d'arrivée + probablement la même chose pour la fusillade romantic danse)
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
