@@ -149,10 +149,10 @@ public class SoundTask implements CameraDependency {
 		play(SOUNDTYPE.MUSIC, VolumeMusic.getVolume(), path, transition, loop);
 	}
 
-	public void changeMusicVol(double newvolume) {
+	public void changeMusicVol(double newvolume, boolean delay) {
 		if (MusicTransition.currentClip != null)
 			MusicTransition.currentClip.getMicrosecondLength();
-		setVol(newvolume, MusicTransition.currentClip, true);
+		setVol(newvolume, MusicTransition.currentClip, delay);
 	}
 
 	public void stopMusic(boolean transition) {

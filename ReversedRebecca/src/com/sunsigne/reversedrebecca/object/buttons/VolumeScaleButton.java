@@ -60,7 +60,7 @@ public class VolumeScaleButton extends GameObject implements MouseUserEvent {
 	private void refreshVolume() {
 		double newVolume = getScale(getX() - xmin);
 		volume.registerVolume(newVolume);
-		new SoundTask().changeMusicVol(VolumeMusic.getVolume());
+		new SoundTask().changeMusicVol(VolumeMusic.getVolume(), true);
 	}
 
 	private ButtonEvent request;

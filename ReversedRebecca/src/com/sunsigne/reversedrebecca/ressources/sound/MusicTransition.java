@@ -53,8 +53,8 @@ public class MusicTransition implements Updatable, PhysicFree, RenderFree {
 		fadeVolume();
 		growVolume();
 
-		new SoundTask().setVol(fadingVolume, fadingClip, true);
-		new SoundTask().changeMusicVol(growingVolume);
+		new SoundTask().setVol(fadingVolume, fadingClip, transition);
+		new SoundTask().changeMusicVol(growingVolume, transition);
 
 		destroyWhenDone();
 	}
@@ -64,6 +64,9 @@ public class MusicTransition implements Updatable, PhysicFree, RenderFree {
 	private boolean stop;
 
 	private void destroyWhenDone() {
+		if(transition == false)
+			destroy();
+		
 		if (fadingVolume == 0)
 			stop = true;
 

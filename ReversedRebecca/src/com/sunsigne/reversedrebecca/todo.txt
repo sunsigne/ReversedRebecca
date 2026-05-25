@@ -29,7 +29,6 @@
 	////////// EN COURS ////////////
 
 	police_station : 
-	- dv002 mettre la musique
 	- les voix des perso (surtout les filles)
 
 	bug : 
@@ -41,6 +40,8 @@
 	rr000 - faire clignotter une plante comme dans lvl001
 	
 	vrai musique de fin de niveau
+	
+	vérifier partout où est utilisé "music_without_transition" que le rythme fonctionne (car j'ai corrigé le décalage sur le début des musiques)
 
 	////////// MILITARY ////////////
 
