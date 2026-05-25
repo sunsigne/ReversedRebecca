@@ -29,8 +29,8 @@
 	////////// EN COURS ////////////
 
 	police_station : 
+	- dv002 mettre la musique
 	- les voix des perso (surtout les filles)
-	- les ombres passent devant le hall du destin (l'animation d'arrivée + probablement la même chose pour la fusillade romantic danse)
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
