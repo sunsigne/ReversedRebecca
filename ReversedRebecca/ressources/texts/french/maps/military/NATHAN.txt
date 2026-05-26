@@ -2,7 +2,7 @@
 object = player = smile = Nom d'un neutrino ! Qu'est-ze qu'on a là ?@Une zivile !
 object = player = smile = Ton ezpèce est très intérezzente ! Puis-ze@prendre un échzantillon pour étudier ton ADN ?
 player = object = no_sens_var = … Wut ?
-object = player = serious = J'étais sérieux.
+object = player = serious = nathan_dead_serious_voice = J'étais sérieux.
 object = player = smile = Mais z'en oublies les prézentation ! Ze suis Nathan.@Grand diplômé de l'académie ! Zé un doctorat !
 
 
@@ -13,7 +13,7 @@ player = object = happy_var = (Il est bizarre…)
 % HELLO_NEXT_NEGATIF
 player = object = happy_var = Ok… (Il ferme jamais sa gueule ?)
 player = object = happy = Ô Grand Manitou, je pourrais avoir une arme@s'il te plaît ?
-object = player = serious = Elle va finir dans ta bouche avec cette attitude.
+object = player = serious = nathan_dead_serious_voice = Elle va finir dans ta bouche avec cette attitude.
 object = player = stupid = Dézolé mais non. Z'en ai peut-être l'air, mais@ze ne zuis pas un sczientifique fou.
 object = player = smile = Ze ne te donnerai pas d'arme. Mais ze peux t'aider@autrement ! Quel est ton mal ?
 player = object = happy = Je dois parler au chef.
