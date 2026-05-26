@@ -28,7 +28,7 @@ public class ChatContent implements Updatable {
 
 	private boolean userData = false;
 
-	public ChatContent(String living_name, String mood, String text) {
+	public ChatContent(String living_name, String mood, String text, String voice) {
 		this.living_name = living_name;
 		this.mood = mood;
 
@@ -38,6 +38,11 @@ public class ChatContent implements Updatable {
 
 		this.currentText[0] = "";
 		this.currentText[1] = "";
+
+		if (voice == null)
+			this.voice = living_name.contains("_") ? living_name.split("_")[0] : living_name;
+		else
+			this.voice = voice;
 
 		lettersAttributionFromSentences();
 		pausetime = 10; // offset the loading delay
@@ -157,6 +162,7 @@ public class ChatContent implements Updatable {
 
 	private static int firstDialogue = 11;
 	private boolean talkingSoundPause;
+	private String voice;
 
 	private void playTalkingSound() {
 		// talking sound played once every two ticks
@@ -170,7 +176,6 @@ public class ChatContent implements Updatable {
 		if (firstDialogue > 0 && firstDialogue % 5 != 0)
 			return;
 
-		String voice = living_name.contains("_") ? living_name.split("_")[0] : living_name;
 		new SoundTask().playSound(SOUNDTYPE.VOICE, voice);
 		talkingSoundPause = true;
 	}

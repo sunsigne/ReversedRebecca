@@ -125,8 +125,14 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 			return;
 		}
 
-		if (line.split("=").length != 4)
-			stopApp();
+		boolean voice_variant = false;
+
+		if (line.split("=").length != 4) {
+			if (line.split("=").length == 5)
+				voice_variant = true;
+			else
+				stopApp();
+		}
 
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
@@ -136,9 +142,11 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
 		String text = line.contains("=") ? line.split("=")[3] : line;
+		text = voice_variant ? line.split("=")[4] : text;
 		text = text.replace("\"0/0\"", "%");
+		String voice = voice_variant ? line.split("=")[3] : null;
 
-		content = new ChatContent(formated_living_name, mood, text);
+		content = new ChatContent(formated_living_name, mood, text, voice);
 		LAYER.PUZZLE.addObject(content);
 
 		Request request = new FacingRequest();
