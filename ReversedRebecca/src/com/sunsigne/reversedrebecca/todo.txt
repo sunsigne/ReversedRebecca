@@ -45,10 +45,6 @@
 	vérifier si les light sont cohérentes/agréables (nottamment avec Roméo, de Jessy, avec YY fight, et près des 4 grandes portes)
 
 	mettre musique sur Patreon
-	
-	voix :
-	- relier la voix du sergent
-	- le code pour jouer le "nathan dead serious voice"
 
 	Nancy :
 		- ajouter le refus du bisou
