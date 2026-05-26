@@ -40,7 +40,7 @@ public class SoundTask implements CameraDependency {
 	public void playSoundIfCamera(Position position, String path) {
 		playSoundIfCamera(position, path, false);
 	}
-	
+
 	public void playSoundIfCamera(Position position, String path, boolean withroom) {
 		if (CAMERA.isObjectVisible(position, withroom))
 			play(SOUNDTYPE.SOUND, getVolume(SOUNDTYPE.SOUND), path, false, false);
@@ -71,12 +71,16 @@ public class SoundTask implements CameraDependency {
 				Clip musicClip = AudioSystem.getClip();
 				musicClip.open(clip);
 
+				if (transition == false)
+					setVol(volume, MusicTransition.currentClip, false);
+
 				if (loop)
 					musicClip.loop(Clip.LOOP_CONTINUOUSLY);
 				else
 					musicClip.start();
 
-				setVol(0, musicClip, false);
+				if (transition)
+					setVol(0, musicClip, false);
 
 				new MusicTransition(musicClip, transition);
 			}

@@ -38,17 +38,12 @@
 	
 	vrai musique de fin de niveau
 	
-	vérifier partout où est utilisé "music_without_transition" que le rythme fonctionne (car j'ai corrigé le décalage sur le début des musiques)
-
 	////////// MILITARY ////////////
-
-	vérifier si les light sont cohérentes/agréables (nottamment avec Roméo, de Jessy, avec YY fight, et près des 4 grandes portes)
 
 	mettre musique sur Patreon
 
 	Nancy :
-		- ajouter le refus du bisou
-		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
+		- ajouter le refus du bisou + le "je vois quelqu'un"
 
 	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 
