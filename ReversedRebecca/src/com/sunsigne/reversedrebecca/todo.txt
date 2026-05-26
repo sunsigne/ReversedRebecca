@@ -66,9 +66,6 @@
 		- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 		- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
-	à créer :
-	les voix de tous les niveaux personnages (nathan, jessy, nancy, romeo, les militarymen)
-
 	note : nancy = nolan
 
 	à faire :
@@ -84,7 +81,6 @@
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 
 	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en avant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
-	- les ombres
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
