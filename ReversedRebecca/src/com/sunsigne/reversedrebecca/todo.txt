@@ -34,8 +34,7 @@
 	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
 	
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
-	rr000 - faire clignotter une plante comme dans lvl001
-	
+
 	vrai musique de fin de niveau
 	
 	////////// MILITARY ////////////
@@ -79,7 +78,7 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	note : puzzle : cliquer = impact
-	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.) ET! ne pas oublier que la plante HUD dans novatech fait du bruit (ce qui serait bizarre sans le highlight)
+	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.)
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
