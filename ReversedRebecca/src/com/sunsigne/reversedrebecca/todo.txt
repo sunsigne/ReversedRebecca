@@ -49,7 +49,6 @@
 	Nancy :
 		- ajouter le refus du bisou
 		- si on a parlé à Jessy mais qu'on est pas intéressé, on peut toujours essayer de mentir à Nancy ?
-		- faire le lien du bisou avec l'après jessy
 
 	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
 

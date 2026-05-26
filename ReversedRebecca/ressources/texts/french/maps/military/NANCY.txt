@@ -98,6 +98,12 @@ nancy = player = embarrased = Ho… Tu lui as vraiment parlé…
 nancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
 
 
+% POST_JESSY
+nancy = player = blush = Rebonjour… J'imagine que si tu reviens…@C'est que tu es intéressée ?
+nancy = player = blush_side = Je pense que tu l'as compris, mais on a très envie@de te faire une place dans notre couple avec Jessy.
+nancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
+
+
 % FINE_I_LIED
 object = player = blush_side = C'est noble de l'admettre, reviens me voir quand@tu lui auras parlé pour de bon…
 
@@ -119,6 +125,10 @@ player = RIGHT = unhappy_var = Est-ce que ça va ?
 nancy = player = blush_side = Oui… Pardon… Merci…
 nancy = player = blush = Ok… Euh… Très bien… Alors…
 nancy = player = blush_side = J'imagine qu'on peut… s'embrasser ?
+
+
+% POST_ARMORY
+nancy = player = blush_side = Je dois retourner à l'infirmerie. On se retrouve@là-bas ?
 
 
 % POST_KISS
