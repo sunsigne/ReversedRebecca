@@ -31,6 +31,10 @@ APOLOGIZE = Key1 % s'excuser
 JESSY_WANTS_BOMBS = Key1 % Jessy veut des bombes
 AMUSING = Key1 % amusante
 ANNOYING = Key2 % énervante
+NO_BECAUSE = Key2 % non, parce que...
+THATS_TOO_FAST = Key1 % c'est trop rapide
+IM_NOT_INTERESTED = Key2 % je ne suis pas intéressée
+IM_SEEING_SOMEMONE = Key3 % je vois quelqu'un
 
 
 ///// ARMORY /////

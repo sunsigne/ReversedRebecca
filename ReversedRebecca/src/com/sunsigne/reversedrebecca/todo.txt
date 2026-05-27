@@ -42,9 +42,18 @@
 	mettre musique sur Patreon
 
 	Nancy :
-		- ajouter le refus du bisou + le "je vois quelqu'un"
+		- à tester :
+			- ça va trop vite (avant ET après Jessy)
+			- je vois quelqu'un
+			- pas intéressée + conséquence dialogue après (prise de bombe + retours à l'infiermerie)
+		- à faire :
 
-	à tester : vérifier le lien de sauvegarde : cassidy*met et cassidy*pranked
+
+	sauvegarde à tester : v
+	- cassidy*met
+	- cassidy*pranked
+	- MIKA*START_DATING
+	- MARIE*START_DATING
 
 	trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
@@ -59,7 +68,9 @@
 		- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 		- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
-	note : nancy = nolan
+	note : 
+	nancy = nolan
+	il est possible de ne montrer son intérêt qu'à Nancy (mensonge) ou qu'à Jessy (en repoussant Nancy lors du bisou)
 
 	à faire :
 	créer la hitbox du tabouret en plein milieu (et vérifier que rebecca ne soit pas bloquée dedans quand on controle nancy)
