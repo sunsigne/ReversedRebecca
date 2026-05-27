@@ -43,17 +43,14 @@
 
 	Nancy :
 		- à tester :
-			- ça va trop vite (avant ET après Jessy)
-			- je vois quelqu'un
-			- pas intéressée + conséquence dialogue après (prise de bombe + retours à l'infiermerie)
+			- je vois quelqu'un (à tester avec sauvegarde Mika)
 		- à faire :
+			- kiss : le deuxième choice successif (quand on refuse) n'active pas le highlight
 
 
 	sauvegarde à tester : v
 	- cassidy*met
 	- cassidy*pranked
-	- MIKA*START_DATING
-	- MARIE*START_DATING
 
 	trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)

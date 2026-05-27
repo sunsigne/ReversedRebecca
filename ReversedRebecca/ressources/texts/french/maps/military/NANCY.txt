@@ -99,8 +99,8 @@ nancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
 
 
 % POST_JESSY
-nancy = player = blush = Rebonjour… J'imagine que si tu reviens…@C'est que tu es intéressée ?
-nancy = player = blush_side = Je pense que tu l'as compris, mais on a très envie@de te faire une place dans notre couple avec Jessy.
+nancy = player = blush = Hey ! J'imagine que si tu reviens…@C'est que tu es intéressée ?
+nancy = player = blush_side = Je pense que tu l'as compris, mais on va te faire@une place dans notre relation avec Jessy.
 nancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
 
 
@@ -141,30 +141,23 @@ nancy = player = embarrased = On passera ce soir, chez toi avec Jessy. Elle foui
 nancy = player = embarrased = Tu peux me laisser ici, je finirai par sortir…@Ou peut-être pas…
 
 
-% NO_THATS_TOO_FAST_YET_TOO_LATE
+% NO_THATS_TOO_FAST_POST_JESSY
 nancy = player = playful = Si tu trouves ça trop rapide,@attends de voir ce qu'on a prévu ce soir…
 nancy = player = blush = Pardon, je t'entends. On va y aller doucement.
 nancy = player = blush_side = Enfin… On va quand même venir…
-nancy = player = happy  = Bon ! En attendant, si tu as besoin de soins, je suis là.
+nancy = player = happy  = Bon ! En attendant, si tu as besoin de soins,@je suis là.
 
 
 % NO_THATS_TOO_FAST
-nancy = player = blush = Pardon, je t'entends. On va y aller doucement.
-nancy = player = happy = Je parlerai à Jessy. On viendra chez toi ce soir.
-player = nancy = unhappy = Ça n'est pas vraiment ce que j'appelle "y aller doucement".
-nancy = player = excited = Certes ! Surtout que Jessy est intense !
+nancy = player = blush = Pardon, je comprends. On va y aller doucement.
+nancy = player = happy = Je parlerai à Jessy. On viendra chez toi, ce soir.
+player = nancy = unhappy_var = Ça n'est pas vraiment ce que j'appelle "y aller@doucement"…
+nancy = player = excited = C'est vrai ! Surtout que Jessy est intense !
 nancy = player = playful = Disons que moi, j'irai doucement…
 nancy = player = blush = Alors à ce soir, Rebecca.@Et si tu as besoin de soins, je suis là.
 
 
-% NO_SEEING_SOMEMONE
+% NO_NOT_INTERESTED_OR_SOMEONE
 nancy = player = surprised = Eh bien… C'est inattendu…
-nancy = player = happy = C'est appréciable de voir que tu prends en compte@les sentiments des autres.
-nancy = player = playful = Pour ma part… J'imagine que j'ai mal interprété les signaux…
-nancy = player = excited = C'était en tout cas un vrai plaisir de te rencontrer, Rebecca.@Et si tu as besoin de soins, je suis là.
-
-
-% NO_NOT_INTERESTED
-nancy = player = surprised = Ah ? Vraiment ? C'est… inattendu…
-nancy = player = playful = J'imagine que j'ai mal interprété les signaux…@Pardon si je t'ai mise mal à l'aise.
-nancy = player = excited = C'était en tout cas un vrai plaisir de te rencontrer, Rebecca.@Et si tu as besoin de soins, je suis là.
+nancy = player = playful = J'imagine que j'ai mal interprété les signaux…
+nancy = player = excited = C'était en tout cas un vrai plaisir de te rencontrer,@Rebecca. Si tu as besoin de soins, je suis là.
