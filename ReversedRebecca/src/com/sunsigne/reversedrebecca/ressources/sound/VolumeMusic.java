@@ -9,6 +9,7 @@ public class VolumeMusic implements Volume {
 	public static double getVolume() {
 		if (volume < 0)
 			volume = new VolumeMusic().loadVolume();
+
 		return volume;
 	}
 
