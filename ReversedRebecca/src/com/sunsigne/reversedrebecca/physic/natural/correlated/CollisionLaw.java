@@ -4,11 +4,13 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.ConcurrentModificationException;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -24,26 +26,37 @@ public class CollisionLaw implements PhysicLaw {
 		if (object instanceof CollisionDetector == false)
 			return;
 
+		Handler layer = object.getHandler();
+		if (layer == null)
+			return;
+
 		CollisionDetector detectorObject = (CollisionDetector) object;
 
 		if (object instanceof Player == false) {
 
 			// not moving & not a puzzle
 			if (object instanceof Velocity && object.getHandler() != LAYER.PUZZLE.getHandler()) {
-				if (((Velocity) object).isMotionless())
+				if (((Velocity) object).isMotionless()) {
+					processCollisionOnTheSpot(layer, object, detectorObject);
 					return;
+				}
 			}
 		}
 
-		Handler layer = object.getHandler();
-		if (layer != null)
-			processCollisionEvent(layer, object, detectorObject);
+		processCollisionEvent(layer, object, detectorObject);
 	}
 
-	private void processCollisionEvent(Handler layer, Updatable object, CollisionDetector detectorObject) {
+	private void processCollisionOnTheSpot(Handler layer, Updatable object, CollisionDetector detectorObject) {
+		GameList<GameObject> list = Handler.getObjectsAtPos(layer, detectorObject.getX(), detectorObject.getY(), detectorObject.getSize(),
+				true);
+		
+		processCollisionEvent(list, object, detectorObject);
+	}
+
+	private <T> void processCollisionEvent(GameList<T> list, Updatable object, CollisionDetector detectorObject) {
 
 		try {
-			for (Updatable tempObject : layer.getList()) {
+			for (T tempObject : list.getList()) {
 				if (tempObject instanceof CollisionReactor == false)
 					continue;
 
