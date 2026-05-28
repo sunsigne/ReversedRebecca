@@ -1,6 +1,7 @@
 Language=french
 Camera=dynamic
-Texts=large
+Shake=on
+Texts=medium
 Difficulty=normal
 
 /////ACTION/////

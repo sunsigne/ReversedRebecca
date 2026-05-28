@@ -28,6 +28,10 @@
 
 	////////// EN COURS ////////////
 
+	options : 
+		- vibration : à relier à la camera et à la manette
+		- inventory : trouver meilleur nom en frnaçais (qui ne dépasse pas) + créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
+
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
@@ -78,7 +82,6 @@
 	note : puzzle : cliquer = impact
 	1h les succès devraient avancer page page entière plutot que par demi-page
 	2h mettre le bonus sur l'écran titre même
-	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	1h les menu clignottent lorsqu'ils sont refresh, à corriger !
 	6h - les custom "surname" devrait être dynamique
@@ -298,8 +301,6 @@
 	(hidden=true) débloquer le niveau test sur l'écran titre
 	
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
-
-	en facile : mettre les objets qu'on récupère dans l'inventaire HUD ? (exemple : lvl002 - le donut)
 
 	Psycopathe :
 	Combat normal contre blast-X

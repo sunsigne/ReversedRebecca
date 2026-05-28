@@ -14,6 +14,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption.INVENTORY_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
@@ -21,6 +23,8 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.ShakeOption;
+import com.sunsigne.reversedrebecca.system.ShakeOption.SHAKE_TYPE;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
@@ -42,7 +46,7 @@ public class GeneralScreen extends SubMenuScreen {
 
 	@Override
 	public String getName() {
-		return "general_xl";
+		return "general_xxl";
 	}
 
 	////////// SUB MENU ////////////
@@ -58,6 +62,12 @@ public class GeneralScreen extends SubMenuScreen {
 	private TitleScreenText cameraType;
 	private TitleScreenText[] cameraDetail;
 
+	private TitleScreenText shake;
+	private TitleScreenText shakeType;
+	
+	private TitleScreenText inventory;
+	private TitleScreenText inventoryType;
+	
 	private TitleScreenText action;
 	private TitleScreenText actionHighlight;
 	private TitleScreenText actionDesign;
@@ -68,7 +78,7 @@ public class GeneralScreen extends SubMenuScreen {
 
 	private void loadText() {
 		String text = null;
-		int x = 325 + 416;
+		int x = 325 + 416 - 269;
 		int y = 323;
 
 		// camera
@@ -94,7 +104,27 @@ public class GeneralScreen extends SubMenuScreen {
 		cameraDetail[1] = new TitleScreenText(text, x - gap, y + 219);
 		cameraDetail[1].setFontSize(18f);
 		LAYER.MENU.addObject(cameraDetail[1]);
-
+		
+		// shake
+		shake = new TitleScreenText(translate("Shake"), x - 3*gap, y);
+		LAYER.MENU.addObject(shake);
+		
+		// on / off
+		typeName = ShakeOption.getType().getName();
+		text = translate("Shake" + typeName);
+		shakeType = new TitleScreenTextSelectable(translate("Shake" + typeName), x - 3*gap, y + 104);
+		LAYER.MENU.addObject(shakeType);
+		
+		// inventory
+		inventory = new TitleScreenText(translate("Inventory"), x - 3*gap, y + 208);
+		LAYER.MENU.addObject(inventory);
+		
+		// immersive / visible
+		typeName = InventoryOption.getType().getName();
+		text = translate("Inventory" + typeName);
+		inventoryType = new TitleScreenTextSelectable(translate("Inventory" + typeName), x - 3*gap, y + 312);
+		LAYER.MENU.addObject(inventoryType);
+				
 		// action
 		action = new TitleScreenText(translate("Action"), x + gap, y);
 		LAYER.MENU.addObject(action);
@@ -142,7 +172,7 @@ public class GeneralScreen extends SubMenuScreen {
 	private ButtonObject resetButton;
 		
 	private void createArrowButton(String text, DIRECTION direction, int x, int y, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text, 710 + x, 439 + y, 60, 60, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 710 - 269  + x, 439 + y, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
@@ -153,6 +183,10 @@ public class GeneralScreen extends SubMenuScreen {
 
 		onPress = () -> choosePreviousCameraType();
 		createArrowButton("<", direction, 0 - gap, 0, onPress);
+		onPress = () -> choosePreviousShakeType();
+		createArrowButton("<", direction, 0 - 3*gap, 0, onPress);
+		onPress = () -> choosePreviousInventoryType();
+		createArrowButton("<", direction, 0 - 3*gap, 208, onPress);
 
 		onPress = () -> choosePreviousActionHighlight();
 		createArrowButton("<", direction, 0 + gap, 0, onPress);
@@ -167,6 +201,10 @@ public class GeneralScreen extends SubMenuScreen {
 
 		onPress = () -> chooseNextCameraType();
 		createArrowButton(">", direction, 420 - gap, 0, onPress);
+		onPress = () -> chooseNextShakeType();
+		createArrowButton(">", direction, 420 - 3*gap, 0, onPress);
+		onPress = () -> chooseNextInventoryType();
+		createArrowButton(">", direction, 420 - 3*gap, 208, onPress);
 
 		onPress = () -> chooseNextActionHighlight();
 		createArrowButton(">", direction, 420 + gap, 0, onPress);
@@ -180,7 +218,7 @@ public class GeneralScreen extends SubMenuScreen {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 		
 		GenericListener onPress = () -> createConfirmButton();
-		resetButton = new TitleScreenButton(translate("Reset"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
+		resetButton = new TitleScreenButton(translate("Reset"), 741 - 269 - gap, 371 + 312, 415, 80, onPress, null) {
 			
 			@Override
 			public String getSound() {
@@ -196,7 +234,7 @@ public class GeneralScreen extends SubMenuScreen {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 		
 		GenericListener onPress = () -> new ResetScreen();
-		resetButton = new TitleScreenButton(translate("Confirm"), 741 - gap, 371 + 312, 415, 80, onPress, null) {
+		resetButton = new TitleScreenButton(translate("Confirm"), 741 - 269 - gap, 371 + 312, 415, 80, onPress, null) {
 			
 			@Override
 			public String getSound() {
@@ -219,6 +257,30 @@ public class GeneralScreen extends SubMenuScreen {
 	private void chooseNextCameraType() {
 		CAMERA_TYPE camera_type = CameraOption.getType().getNext();
 		new CameraOption().registerType(camera_type);
+		refresh();
+	}
+	
+	private void choosePreviousShakeType() {
+		SHAKE_TYPE shake_type = ShakeOption.getType().getPrevious();
+		new ShakeOption().registerType(shake_type);
+		refresh();
+	}
+
+	private void chooseNextShakeType() {
+		SHAKE_TYPE shake_type = ShakeOption.getType().getNext();
+		new ShakeOption().registerType(shake_type);
+		refresh();
+	}
+	
+	private void choosePreviousInventoryType() {
+		INVENTORY_TYPE inventory_type = InventoryOption.getType().getPrevious();
+		new InventoryOption().registerType(inventory_type);
+		refresh();
+	}
+
+	private void chooseNextInventoryType() {
+		INVENTORY_TYPE inventory_type = InventoryOption.getType().getNext();
+		new InventoryOption().registerType(inventory_type);
 		refresh();
 	}
 
@@ -262,7 +324,12 @@ public class GeneralScreen extends SubMenuScreen {
 		String typeName = CameraOption.getType().getName();
 		cameraType.setText(translate("Camera" + typeName));
 		cameraDetail[1].setText(translate(typeName + "Detail"));
-
+		
+		typeName = ShakeOption.getType().getName();
+		shakeType.setText(translate("Shake" + typeName));
+		typeName = InventoryOption.getType().getName();
+		inventoryType.setText(translate("Inventory" + typeName));
+		
 		String highlightName = ActionOption.getHighlight().getName();
 		actionHighlight.setText(translate("Action" + highlightName));
 		String designName = ActionOption.getDesign().getName();
@@ -297,11 +364,11 @@ public class GeneralScreen extends SubMenuScreen {
 
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
-	public static final PresetMousePos ACTION_HIGHLIGHT = new PresetMousePos(925 + gap, 460);
-	public static final PresetMousePos ACTION_DESIGN = new PresetMousePos(925 + gap, 570);
-	public static final PresetMousePos ACTION_SIZE = new PresetMousePos(925 + gap, 670);
-	public static final PresetMousePos CAMERA = new PresetMousePos(925 - gap, 460);
-	public static final PresetMousePos RESET = new PresetMousePos(925 - gap, 720);
+	public static final PresetMousePos ACTION_HIGHLIGHT = new PresetMousePos(925 - 269 + gap, 460);
+	public static final PresetMousePos ACTION_DESIGN = new PresetMousePos(925 - 269 + gap, 570);
+	public static final PresetMousePos ACTION_SIZE = new PresetMousePos(925 - 269 + gap, 670);
+	public static final PresetMousePos CAMERA = new PresetMousePos(925 - 269 - gap, 460);
+	public static final PresetMousePos RESET = new PresetMousePos(925 - 269 - gap, 720);
 
 	////////// GAMEPAD ////////////
 

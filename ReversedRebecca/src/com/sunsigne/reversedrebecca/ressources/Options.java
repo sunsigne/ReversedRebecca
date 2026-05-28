@@ -27,6 +27,8 @@ public class Options {
 
 		line.addObject("Language=french");
 		line.addObject("Camera=dynamic");
+		line.addObject("Shake=on");
+		line.addObject("Inventory=immersive");
 		line.addObject("Texts=medium");
 		line.addObject("Difficulty=normal");
 		line.getList().add("");
