@@ -48,7 +48,7 @@ public class TalkRequest implements Request {
 
 	private boolean multipleDialoguesSnitching(PiranhaObject object) {
 		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
-			if (tempUpdatable instanceof ChatBox) {
+			if (tempUpdatable instanceof ChatBox && ((ChatBox) tempUpdatable).isClosing() == false) {
 				System.err.println("Problem encounter with following object : " + object.toString());
 				System.err.println("A dialogue has been initiated while another dialogue was already running");
 				return true;

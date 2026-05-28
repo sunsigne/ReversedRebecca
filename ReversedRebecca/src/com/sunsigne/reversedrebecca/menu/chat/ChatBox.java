@@ -172,17 +172,24 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	////////// CLOSE ////////////
 
 	private String value;
+	private boolean closing;
 
+	public boolean isClosing() {
+		return closing;
+	}
+	
 	public void closeChat() {
 		World world = World.get();
 		if (world != null)
 			world.freeze(false);
 
+		closing = true;
 		boolean playerCanInteract = Cutscene.isRunning() == false;
 		new PlayerFinder().setPlayerCanInteract(playerCanInteract);
-		LAYER.PUZZLE.getHandler().clear();
+		LAYER.PUZZLE.getHandler().removeObject(content);
 		new SelfTalkingCondition().registerValue(object, value);
 		new TalkedCondition().registerValue(value);
+		LAYER.PUZZLE.getHandler().removeObject(this);
 	}
 
 	////////// KEYBOARD ////////////

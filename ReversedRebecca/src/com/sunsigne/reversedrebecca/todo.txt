@@ -41,10 +41,6 @@
 
 	mettre musique sur Patreon
 
-	sauvegarde à tester :
-	- cassidy*met
-	- cassidy*pranked
-
 	trier les dossiers : 
 		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
 
@@ -81,7 +77,6 @@
 	note : puzzle : cliquer = impact
 	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.)
 	2h mettre le bonus sur l'écran titre même
-	3h00 - créer un script pour enchainer les dialogues de façon fluide (exactement comme j'avais fait pour les TA : faire que la boite chatbox reste affichée un peu pour transitionner correctement avec la suivante)
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
