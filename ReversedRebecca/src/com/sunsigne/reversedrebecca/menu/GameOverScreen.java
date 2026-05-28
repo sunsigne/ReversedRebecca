@@ -182,7 +182,8 @@ public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		resetLvl();
+		if (ButtonEvent.isActionButton(e))
+			resetLvl();
 	}
 
 	@Override

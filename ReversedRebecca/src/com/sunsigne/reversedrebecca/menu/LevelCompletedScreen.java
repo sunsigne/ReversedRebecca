@@ -391,7 +391,8 @@ public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		loadNextLvl();
+		if (ButtonEvent.isActionButton(e))
+			loadNextLvl();
 	}
 
 	@Override
