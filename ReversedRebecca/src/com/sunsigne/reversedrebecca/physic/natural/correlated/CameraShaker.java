@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.system.ShakeOption;
 import com.sunsigne.reversedrebecca.system.ShakeOption.SHAKE_TYPE;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadUpdate;
 
 public class CameraShaker {
 
@@ -46,6 +47,7 @@ public class CameraShaker {
 		if (ShakeOption.getType() == SHAKE_TYPE.OFF)
 			return;
 
+		GamepadUpdate.doVibration(shift);
 		PhysicLaw law = PhysicList.getList().getObject(new CameraShakingLaw());
 		((CameraShakingLaw) law).shift = shift;
 	}

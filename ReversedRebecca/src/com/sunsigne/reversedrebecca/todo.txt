@@ -30,7 +30,6 @@
 
 	options : 
 		- generalScreen (et IG) : faire les presetMouse pour le gamepad
-		- vibration : à relier à la manette
 		- inventory : créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
 
 	bug : 

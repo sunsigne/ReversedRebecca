@@ -16,7 +16,7 @@ public class GamepadUpdate implements Runnable {
 
 	private ControllerEnvironment env;
 	private Class<? extends ControllerEnvironment> clazz;
-	private ControllerManager jamepad = new ControllerManager();
+	private static ControllerManager jamepad = new ControllerManager();
 
 	public GamepadUpdate() {
 		env = ControllerEnvironment.getDefaultEnvironment();
@@ -63,12 +63,12 @@ public class GamepadUpdate implements Runnable {
 		jamepad.update();
 
 		if (jamepad.getNumControllers() != requiredUpdate)
-			updateControlles();
+			updateControllers();
 
 		requiredUpdate = jamepad.getNumControllers();
 	}
 
-	private void updateControlles() {
+	private void updateControllers() {
 		if (activedMemoryLeakPrevention)
 			return;
 
@@ -103,6 +103,26 @@ public class GamepadUpdate implements Runnable {
 	private void updateMemoryLeakPreventer() {
 		activedMemoryLeakPrevention = true;
 		new GameTimer(1, true, () -> activedMemoryLeakPrevention = false);
+	}
+
+	////////// VIBRATION ////////////
+
+	public static void doVibration(int shift) {
+		Controller gamepad = GamepadManager.currentControllers;
+		if (gamepad == null)
+			return;
+
+		jamepad.doVibration(0, getIntensity(shift), getIntensity(shift), 5 * shift);
+	}
+
+	private static float getIntensity(float shift) {
+		float intensity = (float) Math.pow(shift / 40, 2);
+		if (intensity < 0)
+			intensity = 0;
+		if (intensity > 1)
+			intensity = 1f;
+
+		return intensity;
 	}
 
 }
