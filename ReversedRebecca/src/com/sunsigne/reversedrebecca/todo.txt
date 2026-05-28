@@ -75,6 +75,7 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	note : puzzle : cliquer = impact
+	1h les succès devraient avancer page page entière plutot que par demi-page
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets

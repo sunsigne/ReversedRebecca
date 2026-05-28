@@ -45,7 +45,7 @@ public class DebugModeObject extends GameObject implements TickFree, SheetableIm
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.MENU;
 	}
-	
+
 	////////// HIGHLIGHT ////////////
 
 	@Override
@@ -81,8 +81,8 @@ public class DebugModeObject extends GameObject implements TickFree, SheetableIm
 		image = getSheetSubImage(sheet);
 
 		sheet = new ImageTask().loadImage("textures/hud/" + name + "_" + "highlight");
-		highlightImage = getSheetSubImage(sheet, getSheetColCriterion(), getSheetRowCriterion(),
-				getSheetWidth() + 4, getSheetHeight() + 4);
+		highlightImage = getSheetSubImage(sheet, getSheetColCriterion(), getSheetRowCriterion(), getSheetWidth() + 4,
+				getSheetHeight() + 4);
 	}
 
 	////////// RENDER ////////////
@@ -91,6 +91,16 @@ public class DebugModeObject extends GameObject implements TickFree, SheetableIm
 	public void render(Graphics g) {
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
 		drawHighlight(g, highlightImage);
+	}
+
+	@Override
+	public void drawHighlight(Graphics g, BufferedImage image) {
+		if (getHighlightCondition() == false)
+			return;
+		
+		int[] pos = getPos();
+		int pixel = getHighlightSize();
+		g.drawImage(image, pos[0] - pixel, pos[1] - pixel, getWidth() + 2 * pixel, +getHeight() + 2 * pixel, null);
 	}
 
 	////////// MOUSE ////////////
