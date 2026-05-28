@@ -161,7 +161,7 @@ public class BulletBombObject extends PuzzleObject implements SheetableImage, Mo
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-
+		mouseReleased(null);
 	}
 
 }
