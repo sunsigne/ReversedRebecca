@@ -24,6 +24,7 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 
 	private boolean fading;
 	private boolean brightning;
+	private float factor = 0.10f;
 
 	public void setFading(boolean fading) {
 		this.fading = fading;
@@ -45,13 +46,13 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 			return;
 
 		if (brightning) {
-			alpha = alpha - 0.15f;
+			alpha = alpha - 2 * factor;
 			if (alpha < 0f)
 				setFading(true);
 		}
 
 		if (fading)
-			alpha = alpha + 0.015f;
+			alpha = alpha + (0.1f * factor);
 
 		if (alpha > 1f)
 			setFading(false);
@@ -66,8 +67,12 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 		if (object instanceof LightRendering == false)
 			return;
 
-		// Graphics2D g2d = (Graphics2D) g;
-		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0, alpha)));
+		LightRendering light = (LightRendering) object;
+		if (light.isDownLayer() == false)
+			return;
+
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, Math.max(0, alpha)));
 	}
 
 	@Override
@@ -75,8 +80,8 @@ public class ExplosionBrightnessLaw extends IndependantLaw {
 		if (object instanceof LightRendering == false)
 			return;
 
-		// Graphics2D g2d = (Graphics2D) g;
-		// g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
 }

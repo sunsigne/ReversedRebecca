@@ -24,6 +24,10 @@ public class LightRendering implements Updatable, TickFree {
 		return world;
 	}
 
+	public boolean isDownLayer() {
+		return layer.getName().contains("down");
+	}
+	
 	////////// PHYSICS ////////////
 
 	@Override

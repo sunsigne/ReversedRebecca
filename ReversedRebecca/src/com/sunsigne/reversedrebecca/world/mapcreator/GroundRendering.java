@@ -27,6 +27,10 @@ public class GroundRendering implements Updatable, TickFree, CameraDependency {
 		return world;
 	}
 
+	public boolean isDownLayer() {
+		return layer.getName().contains("down");
+	}
+	
 	////////// PHYSICS ////////////
 
 	@Override
