@@ -97,7 +97,7 @@ public class PhysicLinker {
 	public static final PhysicLaw[] COLLISIONNER = { I_LOADING, C_COLLISION, C_SHAKE, D_HITBOX };
 	public static final PhysicLaw[] HUD = { I_HUD, I_LOADING };
 	public static final PhysicLaw[] MOVER = { C_VELOCITY, C_SHAKE, I_LOADING };
-	public static final PhysicLaw[] MENU = { I_FADE_MENU, I_LOADING, D_HITBOX };
+	public static final PhysicLaw[] MENU = { C_SHAKE, I_FADE_MENU, I_LOADING, D_HITBOX };
 	public static final PhysicLaw[] PROJECTILE = { C_VELOCITY, C_COLLISION, C_SHAKE, D_HITBOX };
 	public static final PhysicLaw[] PUZZLE = { C_SHAKE, I_FADE_PUZZLE, I_MOUSE, D_HITBOX };
 	public static final PhysicLaw[] PUZZLE_HACK = { C_SHAKE, I_FADE_PUZZLE, I_MOUSE, I_HACK, D_HITBOX };

@@ -29,7 +29,7 @@
 	////////// EN COURS ////////////
 
 	options : 
-		- vibration : à relier à la camera et à la manette
+		- vibration : à relier à la manette + bug : dans le menu EN JEU (donc pas sur l'écran titre), comme le jeu est en pause, la caméra ne tremble pas... Elle ne le fait qu'une fois qu'on est de nouveau en jeu
 		- inventory : trouver meilleur nom en frnaçais (qui ne dépasse pas) + créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
 
 	bug : 

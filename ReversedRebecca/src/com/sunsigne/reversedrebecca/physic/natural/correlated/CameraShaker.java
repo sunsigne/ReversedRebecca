@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.physic.natural.correlated;
 
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicList;
+import com.sunsigne.reversedrebecca.system.ShakeOption;
+import com.sunsigne.reversedrebecca.system.ShakeOption.SHAKE_TYPE;
 
 public class CameraShaker {
 
@@ -41,6 +43,9 @@ public class CameraShaker {
 	}
 
 	public void shaking(int shift) {
+		if (ShakeOption.getType() == SHAKE_TYPE.OFF)
+			return;
+
 		PhysicLaw law = PhysicList.getList().getObject(new CameraShakingLaw());
 		((CameraShakingLaw) law).shift = shift;
 	}

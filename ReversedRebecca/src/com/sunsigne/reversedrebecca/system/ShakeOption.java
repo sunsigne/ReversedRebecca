@@ -1,6 +1,9 @@
 package com.sunsigne.reversedrebecca.system;
 
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 
 public class ShakeOption {
 
@@ -16,7 +19,7 @@ public class ShakeOption {
 			type = new ShakeOption().getRegisteredType();
 		return type;
 	}
-	
+
 	public static void setType(SHAKE_TYPE type) {
 		ShakeOption.type = type;
 	}
@@ -39,6 +42,14 @@ public class ShakeOption {
 	public void registerType(SHAKE_TYPE shakeType) {
 		new FileTask().write(getValueToRead(), file, shakeType.getName());
 		type = null;
+	}
+
+	public void forceShake() {
+		if (getType() == SHAKE_TYPE.OFF)
+			return;
+
+		new CameraShaker().shaking(5);
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 	}
 
 	////////// SHAKE TYPE ////////////

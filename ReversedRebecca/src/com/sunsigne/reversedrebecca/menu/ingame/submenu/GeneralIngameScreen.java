@@ -266,12 +266,14 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 	private void choosePreviousShakeType() {
 		SHAKE_TYPE shake_type = ShakeOption.getType().getPrevious();
 		new ShakeOption().registerType(shake_type);
+		new ShakeOption().forceShake();
 		refresh();
 	}
 
 	private void chooseNextShakeType() {
 		SHAKE_TYPE shake_type = ShakeOption.getType().getNext();
 		new ShakeOption().registerType(shake_type);
+		new ShakeOption().forceShake();
 		refresh();
 	}
 	
