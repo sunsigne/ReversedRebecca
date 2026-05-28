@@ -63,10 +63,11 @@ public class ControllerManager {
 	private static boolean flag;
 
 	private static void activeGamepadDisplay() {
+		flag = true;
 		if (!flag)
 			displayGamepadWarning();
-		flag = true;
-
+		// flag = true;
+		
 		Game.getInstance().setCursor(CURSOR_TYPE.NULL.getCursor());
 		resetMousePresetings();
 	}

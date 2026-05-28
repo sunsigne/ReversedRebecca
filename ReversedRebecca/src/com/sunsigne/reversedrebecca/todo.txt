@@ -92,7 +92,6 @@
 
 	////////// GAMEPAD ////////////
 
-	lvl003-y vérifier si combat contre YY faisable (adapter puzzle force)
 	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
 
 	////////// LVL001 ////////////
