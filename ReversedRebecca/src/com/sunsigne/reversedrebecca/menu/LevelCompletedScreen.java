@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeSound;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
@@ -34,6 +35,7 @@ import com.sunsigne.reversedrebecca.world.lvlstats.YOUARE;
 public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent {
 
 	public LevelCompletedScreen(String nextLvl) {
+		PausePreventer.state = null;
 		this.nextLvl = nextLvl;
 
 		loadImages();

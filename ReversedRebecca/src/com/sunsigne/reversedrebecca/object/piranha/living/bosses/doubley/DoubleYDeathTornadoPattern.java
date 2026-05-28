@@ -85,7 +85,7 @@ public class DoubleYDeathTornadoPattern extends DoubleYTornadoPattern {
 
 	private class PoseObject extends GameObject implements SheetableImage {
 
-		public PoseObject(int x, int y, int w, int h) {
+		private PoseObject(int x, int y, int w, int h) {
 			super(x, y, w, h);
 		}
 

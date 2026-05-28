@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.PathFinder;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
+import com.sunsigne.reversedrebecca.system.PausePreventer.PAUSE_STATE;
 
 public abstract class BossObject extends LivingObject {
 
@@ -52,6 +54,7 @@ public abstract class BossObject extends LivingObject {
 	public void activate() {
 		setCondition(CONDITION.GOOD);
 		setWalkingInPlace(updateFacingPlayer());
+		PausePreventer.state = PAUSE_STATE.WIMP;
 		this.activated = true;
 	}
 

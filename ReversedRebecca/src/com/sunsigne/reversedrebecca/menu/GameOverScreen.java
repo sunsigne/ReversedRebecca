@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
@@ -31,6 +32,7 @@ import com.sunsigne.reversedrebecca.world.World;
 public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 
 	public GameOverScreen() {
+		PausePreventer.state = null;
 		new SoundTask().playMusic("3_words_and_a_smile", true, true);
 
 		loadImages();
