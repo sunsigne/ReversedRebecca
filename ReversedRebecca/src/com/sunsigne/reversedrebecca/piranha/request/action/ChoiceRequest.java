@@ -37,7 +37,6 @@ public class ChoiceRequest implements Request {
 	public void doAction(PiranhaObject object, String target) {
 
 		// if there is no player, there is no choice (ofc)
-
 		Player player = new PlayerFinder().getPlayer();
 		if (player == null)
 			return;

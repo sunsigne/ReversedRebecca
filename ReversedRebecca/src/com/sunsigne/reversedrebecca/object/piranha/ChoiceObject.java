@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.finder.InFrontOfFinder;
@@ -28,7 +29,7 @@ public class ChoiceObject extends InteractiveObject {
 		else
 			registerHighlight(highlight);
 
-		imitateHighlight(true);
+		new GameTimer(1, () -> imitateHighlight(true));
 	}
 
 	////////// INTERACTIVE ////////////

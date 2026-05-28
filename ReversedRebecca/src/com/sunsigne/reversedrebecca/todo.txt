@@ -41,14 +41,7 @@
 
 	mettre musique sur Patreon
 
-	Nancy :
-		- à tester :
-			- je vois quelqu'un (à tester avec sauvegarde Mika)
-		- à faire :
-			- kiss : le deuxième choice successif (quand on refuse) n'active pas le highlight
-
-
-	sauvegarde à tester : v
+	sauvegarde à tester :
 	- cassidy*met
 	- cassidy*pranked
 
