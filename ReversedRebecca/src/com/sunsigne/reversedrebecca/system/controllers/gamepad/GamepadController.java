@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system.controllers.gamepad;
 
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
@@ -34,13 +35,17 @@ public class GamepadController implements GamepadAdapter {
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		ControllerManager.getInstance().setUsingGamepad(true);
-		gamepadEvent.buttonPressed(e);
+
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			gamepadEvent.buttonPressed(e);
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 		ControllerManager.getInstance().setUsingGamepad(true);
-		gamepadEvent.buttonReleased(e);
+
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			gamepadEvent.buttonReleased(e);
 	}
 
 }
