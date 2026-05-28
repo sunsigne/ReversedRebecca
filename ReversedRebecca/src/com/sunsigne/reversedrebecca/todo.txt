@@ -29,8 +29,9 @@
 	////////// EN COURS ////////////
 
 	options : 
+		- generalScreen (et IG) : faire les presetMouse pour le gamepad
 		- vibration : à relier à la manette
-		- inventory : trouver meilleur nom en frnaçais (qui ne dépasse pas) + créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
+		- inventory : créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
