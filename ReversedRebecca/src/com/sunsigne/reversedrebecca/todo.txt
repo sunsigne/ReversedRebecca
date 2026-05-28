@@ -90,10 +90,6 @@
 	1h - étudier le système de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
 	4h - le "hall of destiny" devrait avoir un background fix
 
-	////////// GAMEPAD ////////////
-
-	3h00 avec des manettes Xbox, un ConcurrentModificationException a lieu dans la classe GamepadManager au moment ou un bouton est préssé pour ouvrir le menu, ce qui peut causer une double requête (ouvrir + refermer le nouvel élément)
-
 	////////// LVL001 ////////////
 	
 	à peut-être enregister :
