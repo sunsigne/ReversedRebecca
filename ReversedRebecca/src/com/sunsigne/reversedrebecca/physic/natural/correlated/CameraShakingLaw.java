@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.menu.chat.ChatBox;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -38,6 +39,8 @@ public class CameraShakingLaw implements PhysicLaw {
 		if (object instanceof Puzzle)
 			return true;
 		if (object instanceof ChatBox)
+			return true;
+		if (object instanceof MenuIngameScreen)
 			return true;
 
 		return false;
