@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -28,6 +30,9 @@ public class BuriedExitObject extends BuriedObject {
 
 	@Override
 	public boolean getHighlightCondition() {
+		if(ActionOption.getHighlight() == ACTION_HIGHLIGHT.NEUTRAL)
+			return false;
+		
 		DIG_STATE state = getPuzzle().getState();
 		return isSelected() && (isCritical() || state == DIG_STATE.DIG || state == DIG_STATE.DIGPICK);
 	}

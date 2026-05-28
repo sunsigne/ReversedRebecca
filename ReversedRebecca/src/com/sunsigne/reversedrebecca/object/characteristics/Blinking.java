@@ -1,17 +1,19 @@
 package com.sunsigne.reversedrebecca.object.characteristics;
 
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.world.World;
 
 public interface Blinking extends Highlightable {
 
 	////////// HIGHLIGHT ////////////
-	
+
 	@Override
 	default boolean getHighlightCondition() {
-		return isBlinking();
+		return isBlinking() && ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;
 	}
-	
+
 	////////// BLINKING ////////////
 
 	default int getTotalBlinkingTime() {

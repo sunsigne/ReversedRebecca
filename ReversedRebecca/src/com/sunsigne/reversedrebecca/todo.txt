@@ -75,7 +75,6 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	note : puzzle : cliquer = impact
-	en retirer dans les menu le détourage jaune, il faudrait le retirer partout (dans le dig puzzle,dans le menu, etc.)
 	2h mettre le bonus sur l'écran titre même
 	3h00 - créer l'option (et l'ajouter) pour désactiver le tremblement de la caméra
 	1h00 - préciser dans les mappable les pastilles de boss & des hostiles objets

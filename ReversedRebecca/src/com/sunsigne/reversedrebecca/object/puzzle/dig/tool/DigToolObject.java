@@ -5,6 +5,8 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Blinking;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
@@ -133,6 +135,9 @@ public abstract class DigToolObject extends BuriedObject implements Blinking {
 	}
 
 	protected void drawHighlight(Graphics g) {
+		if(ActionOption.getHighlight() == ACTION_HIGHLIGHT.NEUTRAL)
+			return;
+		
 		if (isSelected() == false)
 			return;
 

@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedNullObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.BuriedObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.ParticleDigAnimation;
@@ -63,7 +65,10 @@ public abstract class BuriedObstacleObject extends BuriedObject {
 
 	@Override
 	public boolean getHighlightCondition() {
-		return isSelected() && (getPuzzle().getState() == getState() || isCritical());
+		boolean fittingTool = getPuzzle().getState() == getState() || isCritical();
+		boolean playerOption = ActionOption.getHighlight() == ACTION_HIGHLIGHT.BRIGHT;
+
+		return isSelected() && fittingTool && playerOption;
 	}
 
 	////////// TEXTURE ////////////

@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.object.characteristics;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Interactive;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -34,6 +36,9 @@ public interface Highlightable extends Velocity {
 
 	default void drawHighlight(Graphics g, BufferedImage image, int x, int y, int width, int height) {
 		if (getHighlightCondition() == false)
+			return;
+
+		if (ActionOption.getHighlight() == ACTION_HIGHLIGHT.NEUTRAL)
 			return;
 
 		int[] pos = getPos();
