@@ -155,7 +155,7 @@ public class BulletBombObject extends PuzzleObject implements SheetableImage, Mo
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (ButtonEvent.isActionButton(e))
 			mousePressed(null);
 	}
 

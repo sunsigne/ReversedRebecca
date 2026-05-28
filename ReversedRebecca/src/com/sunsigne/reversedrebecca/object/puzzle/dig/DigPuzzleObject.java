@@ -115,13 +115,13 @@ public abstract class DigPuzzleObject extends PuzzleObject implements TickFree, 
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (e.getKey() == ButtonEvent.A || e.getKey() == ButtonEvent.X || e.getKey() == ButtonEvent.Y)
 			mousePressed(null);
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (e.getKey() == ButtonEvent.A || e.getKey() == ButtonEvent.X || e.getKey() == ButtonEvent.Y)
 			mouseReleased(null);
 	}
 

@@ -100,7 +100,7 @@ public class WallBombPuzzle extends WallPuzzle implements MouseUserEvent, Gamepa
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (ButtonEvent.isActionButton(e))
 			mousePressed(null);
 	}
 

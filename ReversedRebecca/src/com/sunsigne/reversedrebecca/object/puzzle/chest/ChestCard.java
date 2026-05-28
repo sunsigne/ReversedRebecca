@@ -234,7 +234,7 @@ public class ChestCard extends PuzzleObject implements SheetableImage, MouseUser
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (ButtonEvent.isActionButton(e))
 			mousePressed(null);
 	}
 

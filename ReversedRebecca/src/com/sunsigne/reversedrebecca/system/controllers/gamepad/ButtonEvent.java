@@ -29,6 +29,19 @@ public class ButtonEvent {
 	public static final int NULL_X = 14;
 	public static final int NULL_Y = 15;
 
+	public static boolean isActionButton(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.A)
+			return true;
+		if (e.getKey() == ButtonEvent.B)
+			return true;
+		if (e.getKey() == ButtonEvent.X)
+			return true;
+		if (e.getKey() == ButtonEvent.Y)
+			return true;
+		
+		return false;
+	}
+	
 	////////// MAP OR LIST ////////////
 
 	private static HashMap<Identifier, ButtonEvent> button = new HashMap<>();

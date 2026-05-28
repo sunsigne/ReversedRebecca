@@ -162,14 +162,13 @@ public class CowboyCursorObject extends PuzzleObject
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
+		if (ButtonEvent.isActionButton(e))
 			mousePressed(null);
 	}
 
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-		if (e.getKey() == ButtonEvent.A)
-			mouseReleased(null);
+
 	}
 
 }
