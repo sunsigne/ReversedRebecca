@@ -74,8 +74,9 @@ public class Handler extends GameList<Updatable> implements CameraDependency {
 	public static GameList<GameObject> getObjectsAtPos(Handler layer, int x, int y, int size, boolean playerExluded) {
 
 		GameList<GameObject> object_list = new GameList<GameObject>(LISTTYPE.LINKED);
+		var clone = new ListCloner().deepClone(layer);
 
-		for (Updatable tempUpdatable : layer.getList()) {
+		for (Updatable tempUpdatable : clone.getList()) {
 
 			if (tempUpdatable instanceof GameObject == false)
 				continue;
