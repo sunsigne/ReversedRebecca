@@ -362,8 +362,11 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		if (ControllerManager.getInstance().isUsingGamepad())
-			g.drawImage(get_gamepad_instruction_image(), 890, 313, 120, 120, null);
+		if (ControllerManager.getInstance().isUsingGamepad() == false)
+			return;
+
+		g.drawImage(get_gamepad_instruction_image(), 890 + gap, 313 + y_gap, 120, 120, null);
+		g.drawImage(get_gamepad_instruction_image(), 890 - gap, 313 + y_gap, 120, 120, null);
 	}
 
 	////////// PRESET MOUSE POS ////////////
@@ -403,7 +406,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		else if (getPreset() == INVENTORY)
 			inventoryPressed(e);
 		else if (getPreset() == RESET)
-			resetPressed(e);			
+			resetPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 
@@ -492,7 +495,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(RESET);
 	}
-	
+
 	private void shakePressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
@@ -513,7 +516,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(INVENTORY);
 	}
-	
+
 	private void inventoryPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();

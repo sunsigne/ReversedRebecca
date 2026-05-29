@@ -358,8 +358,11 @@ public class GeneralScreen extends SubMenuScreen {
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		if (ControllerManager.getInstance().isUsingGamepad())
-			g.drawImage(get_gamepad_instruction_image(), 890, 313, 120, 120, null);
+		if (ControllerManager.getInstance().isUsingGamepad() == false)
+				return;
+	
+		g.drawImage(get_gamepad_instruction_image(), 890 + gap, 313, 120, 120, null);
+		g.drawImage(get_gamepad_instruction_image(), 890 - gap, 313, 120, 120, null);
 	}
 
 	////////// PRESET MOUSE POS ////////////
