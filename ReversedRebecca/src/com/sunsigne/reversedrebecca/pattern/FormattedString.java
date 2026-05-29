@@ -105,7 +105,7 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("+surname_custom3", surname.getCustom3());
 		
 		formatted_value = formatted_value.replace("+user", Infos.USERNAME);
-		formatted_value = formatted_value.replace("+day", Infos.DAYOFTHEWEEK);
+		formatted_value = formatted_value.replace("+day", new Infos().DAYOFTHEWEEK);
 
 		return formatted_value;
 	}

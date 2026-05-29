@@ -17,7 +17,7 @@ public class Infos {
 	////////// GAME ////////////
 
 	public static final String NAME = "Reversed Rebecca";
-	public static final String VERSION = "v.0.7.11.12";
+	public static final String VERSION = "v.0.7.11.13";
 	// public static final boolean IS_DEV_VERSION =
 	// System.getProperty("java.class.path").contains("\\git\\");
 	public static boolean IS_DEV_VERSION = true;
@@ -26,7 +26,7 @@ public class Infos {
 	////////// USEFUL ////////////
 
 	public static final String USERNAME = new FormattedString().capitalize(getUserName());
-	public static final String DAYOFTHEWEEK = getDayOfTheWeek();
+	public final String DAYOFTHEWEEK = getDayOfTheWeek();
 
 	private static String getUserName() {
 		String path;
