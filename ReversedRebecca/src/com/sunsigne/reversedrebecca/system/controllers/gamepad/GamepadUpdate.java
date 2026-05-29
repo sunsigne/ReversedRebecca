@@ -116,7 +116,7 @@ public class GamepadUpdate implements Runnable {
 	}
 
 	private static float getIntensity(float shift) {
-		float intensity = (float) Math.pow(shift / 40, 2);
+		float intensity = shift <= 5 ? shift / 40 : (float) Math.pow(shift / 40, 2);
 		if (intensity < 0)
 			intensity = 0;
 		if (intensity > 1)
