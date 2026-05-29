@@ -24,13 +24,15 @@ public class MenuIngameController {
 	}
 
 	private static Cursor cursor;
+	private static boolean gamepadWhenMenuOpened;
 
 	public void loadResumeScreen() {
 		hardFreeze(true);
-
+		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 		menu = new ResumeScreen();
 
+		gamepadWhenMenuOpened = ControllerManager.getInstance().isUsingGamepad();
 		cursor = Game.getInstance().getCursor();
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 	}
@@ -41,10 +43,13 @@ public class MenuIngameController {
 		LAYER.MENU.getHandler().clear();
 		menu = null;
 
-		if (ControllerManager.getInstance().isUsingGamepad() == false)
-			new GameCursor().setPreviousCursor();
-		else
+		if(gamepadWhenMenuOpened != ControllerManager.getInstance().isUsingGamepad())
+			return;
+		
+		if (ControllerManager.getInstance().isUsingGamepad())
 			Game.getInstance().setCursor(cursor);
+		else
+			new GameCursor().setPreviousCursor();			
 	}
 
 	public void hardFreeze(boolean freeze) {
