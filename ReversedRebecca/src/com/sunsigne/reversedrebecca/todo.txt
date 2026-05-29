@@ -30,7 +30,6 @@
 
 	bug : 
 	lvl002
-			- parler au cowbow le duplique et dégage le moine
 			- retourner la table (cellule du milieu) a affiché un message d'erreur
 			
 

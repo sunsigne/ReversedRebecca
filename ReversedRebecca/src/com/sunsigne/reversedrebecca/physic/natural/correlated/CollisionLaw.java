@@ -10,7 +10,9 @@ import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.object.puzzler.door.NullDoorObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.debug.WallPassMode;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -50,7 +52,8 @@ public class CollisionLaw implements PhysicLaw {
 		GameList<GameObject> list = Handler.getObjectsAtPos(layer, detectorObject.getX(), detectorObject.getY(), detectorObject.getSize(),
 				true);
 		
-		processCollisionEvent(list, object, detectorObject);
+		var clone = new ListCloner().deepCloneByClass(list, NullDoorObject.class);
+		processCollisionEvent(clone, object, detectorObject);
 	}
 
 	private <T> void processCollisionEvent(GameList<T> list, Updatable object, CollisionDetector detectorObject) {
