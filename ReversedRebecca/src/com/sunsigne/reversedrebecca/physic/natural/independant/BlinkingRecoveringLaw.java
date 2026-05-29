@@ -43,6 +43,10 @@ public class BlinkingRecoveringLaw extends IndependantLaw {
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
+		World world = World.get();
+		if(world != null && world.isFrozen())
+			return;
+		
 		setObjectVisible(g, object, true);
 	}
 

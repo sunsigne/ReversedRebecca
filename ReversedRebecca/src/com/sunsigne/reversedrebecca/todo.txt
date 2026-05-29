@@ -28,6 +28,19 @@
 
 	////////// EN COURS ////////////
 
+	bug : 
+	lvl002
+			- parler au cowbow le duplique et dégage le moine
+			- retourner la table (cellule du milieu) a affiché un message d'erreur
+			
+
+	invantaire : 
+	lvl002 	- récupération de documents (speedrun aussi)
+			- donut
+			- café
+	lvl003	- oignons
+			- repas
+
 	options : 
 		- inventory : créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
 
