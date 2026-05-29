@@ -9,6 +9,10 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenTextSelectable;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
+import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption.INVENTORY_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -83,8 +87,8 @@ public class DifficultyScreen extends SubMenuScreen {
 		int y = 503;
 
 		// GenericListener onPress = () -> new TutorialScreen(startWorld);
-		GenericListener onPress = startWorld;
-		
+		GenericListener onPress = () -> startWorldDepedingOnDifficulty(startWorld);
+
 		ButtonObject button = new TitleScreenButton(translate("PlayButton"), x, y + 259, 415, 80, onPress, null) {
 
 			@Override
@@ -115,6 +119,19 @@ public class DifficultyScreen extends SubMenuScreen {
 	}
 
 	////////// BUTTON ACTION ////////////
+
+	private void startWorldDepedingOnDifficulty(GenericListener startWorld) {
+		GenericListener startEasyWorld = () -> {
+			new ActionOption().registerDesign(ACTION_DESIGN.NUMBER);
+			new InventoryOption().registerType(INVENTORY_TYPE.VISIBLE);
+			startWorld.doAction();
+		};
+
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.EASY)
+			startEasyWorld.doAction();
+		else
+			startWorld.doAction();
+	}
 
 	private void choosePreviousGameDifficulty() {
 		GAME_DIFFICULTY game_difficulty = DifficultyOption.getDifficulty().getPrevious();
