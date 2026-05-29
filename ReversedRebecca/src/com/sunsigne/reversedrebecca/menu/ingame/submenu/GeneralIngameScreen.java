@@ -66,10 +66,10 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 
 	private TitleScreenText shake;
 	private TitleScreenText shakeType;
-	
+
 	private TitleScreenText inventory;
 	private TitleScreenText inventoryType;
-	
+
 	private TitleScreenText action;
 	private TitleScreenText actionHighlight;
 	private TitleScreenText actionDesign;
@@ -108,25 +108,25 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		LAYER.MENU.addObject(cameraDetail[1]);
 
 		// shake
-		shake = new TitleScreenText(translate("Shake"), x - 3*gap, y);
+		shake = new TitleScreenText(translate("Shake"), x - 3 * gap, y);
 		LAYER.MENU.addObject(shake);
-		
+
 		// on / off
 		typeName = ShakeOption.getType().getName();
 		text = translate("Shake" + typeName);
-		shakeType = new TitleScreenTextSelectable(translate("Shake" + typeName), x - 3*gap, y + 104);
+		shakeType = new TitleScreenTextSelectable(translate("Shake" + typeName), x - 3 * gap, y + 104);
 		LAYER.MENU.addObject(shakeType);
-		
+
 		// inventory
-		inventory = new TitleScreenText(translate("Inventory"), x - 3*gap, y + 208);
+		inventory = new TitleScreenText(translate("Inventory"), x - 3 * gap, y + 208);
 		LAYER.MENU.addObject(inventory);
-		
+
 		// immersive / visible
 		typeName = InventoryOption.getType().getName();
 		text = translate("Inventory" + typeName);
-		inventoryType = new TitleScreenTextSelectable(translate("Inventory" + typeName), x - 3*gap, y + 312);
-		LAYER.MENU.addObject(inventoryType);		
-		
+		inventoryType = new TitleScreenTextSelectable(translate("Inventory" + typeName), x - 3 * gap, y + 312);
+		LAYER.MENU.addObject(inventoryType);
+
 		// action
 		action = new TitleScreenText(translate("Action"), x + gap, y);
 		LAYER.MENU.addObject(action);
@@ -186,10 +186,10 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		onPress = () -> choosePreviousCameraType();
 		createArrowButton("<", direction, 0 - gap, 0, onPress);
 		onPress = () -> choosePreviousShakeType();
-		createArrowButton("<", direction, 0 - 3*gap, 0, onPress);
+		createArrowButton("<", direction, 0 - 3 * gap, 0, onPress);
 		onPress = () -> choosePreviousInventoryType();
-		createArrowButton("<", direction, 0 - 3*gap, 208, onPress);
-		
+		createArrowButton("<", direction, 0 - 3 * gap, 208, onPress);
+
 		onPress = () -> choosePreviousActionHighlight();
 		createArrowButton("<", direction, 0 + gap, 0, onPress);
 		onPress = () -> choosePreviousActionDesign();
@@ -204,9 +204,9 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		onPress = () -> chooseNextCameraType();
 		createArrowButton(">", direction, 420 - gap, 0, onPress);
 		onPress = () -> chooseNextShakeType();
-		createArrowButton(">", direction, 420 - 3*gap, 0, onPress);
+		createArrowButton(">", direction, 420 - 3 * gap, 0, onPress);
 		onPress = () -> chooseNextInventoryType();
-		createArrowButton(">", direction, 420 - 3*gap, 208, onPress);
+		createArrowButton(">", direction, 420 - 3 * gap, 208, onPress);
 
 		onPress = () -> chooseNextActionHighlight();
 		createArrowButton(">", direction, 420 + gap, 0, onPress);
@@ -220,7 +220,8 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 
 		GenericListener onPress = () -> createConfirmButton();
-		resetButton = new TitleScreenButton(translate("Reset"), 741 - 269 - gap, 371 + 312 + y_gap, 415, 80, onPress, null) {
+		resetButton = new TitleScreenButton(translate("Reset"), 741 - 269 - gap, 371 + 312 + y_gap, 415, 80, onPress,
+				null) {
 
 			@Override
 			public String getSound() {
@@ -262,7 +263,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		new CameraOption().registerType(camera_type);
 		refresh();
 	}
-	
+
 	private void choosePreviousShakeType() {
 		SHAKE_TYPE shake_type = ShakeOption.getType().getPrevious();
 		new ShakeOption().registerType(shake_type);
@@ -276,7 +277,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		new ShakeOption().forceShake();
 		refresh();
 	}
-	
+
 	private void choosePreviousInventoryType() {
 		INVENTORY_TYPE inventory_type = InventoryOption.getType().getPrevious();
 		new InventoryOption().registerType(inventory_type);
@@ -288,7 +289,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		new InventoryOption().registerType(inventory_type);
 		refresh();
 	}
-	
+
 	private void choosePreviousActionHighlight() {
 		ACTION_HIGHLIGHT action_highlight = ActionOption.getHighlight().getPrevious();
 		new ActionOption().registerHighlight(action_highlight);
@@ -329,12 +330,12 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		String typeName = CameraOption.getType().getName();
 		cameraType.setText(translate("Camera" + typeName));
 		cameraDetail[1].setText(translate(typeName + "Detail"));
-		
+
 		typeName = ShakeOption.getType().getName();
 		shakeType.setText(translate("Shake" + typeName));
 		typeName = InventoryOption.getType().getName();
 		inventoryType.setText(translate("Inventory" + typeName));
-		
+
 		String highlightName = ActionOption.getHighlight().getName();
 		actionHighlight.setText(translate("Action" + highlightName));
 		String designName = ActionOption.getDesign().getName();
@@ -374,8 +375,8 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 	public static final PresetMousePos ACTION_SIZE = new PresetMousePos(925 - 269 + gap, 670 + y_gap);
 	public static final PresetMousePos CAMERA = new PresetMousePos(925 - 269 - gap, 460 + y_gap);
 	public static final PresetMousePos RESET = new PresetMousePos(925 - 269 - gap, 720 + y_gap);
-
-	////////// GAMEPAD ////////////
+	public static final PresetMousePos SHAKE = new PresetMousePos(925 - 269 - 3 * gap, 460 + y_gap);
+	public static final PresetMousePos INVENTORY = new PresetMousePos(925 - 269 - 3 * gap, 670 + y_gap);
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {
@@ -397,8 +398,12 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 			actionSizePressed(e);
 		else if (getPreset() == CAMERA)
 			cameraPressed(e);
+		else if (getPreset() == SHAKE)
+			shakePressed(e);
+		else if (getPreset() == INVENTORY)
+			inventoryPressed(e);
 		else if (getPreset() == RESET)
-			resetPressed(e);
+			resetPressed(e);			
 		else if (getPreset() == BACK)
 			backPressed(e);
 
@@ -481,11 +486,53 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen {
 		}
 
 		else if (e.getKey() == ButtonEvent.UP) {
-			setPreset(ACTION_HIGHLIGHT);
+			setPreset(SHAKE);
 		}
 
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(RESET);
+	}
+	
+	private void shakePressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousShakeType();
+		}
+
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextShakeType();
+		}
+
+		else if (e.getKey() == ButtonEvent.UP) {
+			setPreset(ACTION_HIGHLIGHT);
+		}
+
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(INVENTORY);
+	}
+	
+	private void inventoryPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			choosePreviousInventoryType();
+		}
+
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
+			new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
+			chooseNextInventoryType();
+		}
+
+		else if (e.getKey() == ButtonEvent.UP) {
+			setPreset(SHAKE);
+		}
+
+		else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(BACK);
 	}
 
 	private void resetPressed(ButtonEvent e) {
