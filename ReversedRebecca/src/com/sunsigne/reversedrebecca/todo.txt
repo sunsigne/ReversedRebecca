@@ -28,11 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	bug : 
-	lvl002
-			- retourner la table (cellule du milieu) a affiché un message d'erreur
-			
-
 	invantaire : 
 	lvl002 	- récupération de documents (speedrun aussi)
 			- donut
@@ -41,7 +36,7 @@
 			- repas
 
 	options : 
-		- inventory : créer un petit visuel sympa en dessous + relier + trouver un moyen de dire qu'il vaut mieux l'activer en facile
+		- inventory : créer un petit visuel sympa en dessous
 
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...

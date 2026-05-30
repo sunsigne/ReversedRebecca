@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.InventoryPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Blinking;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption.INVENTORY_TYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
@@ -19,6 +20,16 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 		super(0, Size.M + 10, Size.M, Size.M);
 		HUDList.getList().addObject(this);
 		setVisible(true);
+	}
+
+	private boolean genericClue;
+
+	public boolean isGenericClue() {
+		return genericClue;
+	}
+
+	public void setGenericClue(boolean genericClue) {
+		this.genericClue = genericClue;
 	}
 
 	////////// NAME ////////////
@@ -42,7 +53,7 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 
 	@Override
 	public boolean isVisible() {
-		return visible;
+		return visible && (InventoryOption.getType() == INVENTORY_TYPE.VISIBLE || isGenericClue());
 	}
 
 	@Override
@@ -106,6 +117,8 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 
 		for (int index = 0; index < size; index++) {
 			try {
+				if (index > 0 && isGenericClue() && InventoryOption.getType() != INVENTORY_TYPE.VISIBLE)
+					break;
 
 				BufferedImage image = InventoryPlayer.get(index);
 
@@ -117,7 +130,7 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 				g.drawImage(image, getX() + index * getWidth(), getY() - yoffset, getWidth(), getHeight(), null);
 
 				// blinking
-				if (InventoryPlayer.getHighlight() != null)
+				if (InventoryPlayer.getHighlight() != null && index == size - 1)
 					drawHighlight(g, InventoryPlayer.getHighlight(), index * getWidth(), -yoffset, 0, 0);
 
 			} catch (IndexOutOfBoundsException e) {

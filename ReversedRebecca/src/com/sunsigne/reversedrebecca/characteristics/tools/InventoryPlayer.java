@@ -5,8 +5,12 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDInventory;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption;
+import com.sunsigne.reversedrebecca.object.hud.InventoryOption.INVENTORY_TYPE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -61,9 +65,18 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 		InventoryList.list.addObject(image);
 
 		for (HUD tempHUD : HUDList.getList().getList()) {
-			if (tempHUD instanceof HUDInventory)
-				((HUDInventory) tempHUD).setBlinking();
+			if (tempHUD instanceof HUDInventory == false)
+				continue;
+
+			HUDInventory tempInventory = (HUDInventory) tempHUD;
+			tempInventory.setBlinking();
+
+			if (col == 1)
+				tempInventory.setGenericClue(true);
 		}
+
+		if (col != 1 && InventoryOption.getType() == INVENTORY_TYPE.VISIBLE)
+			new SoundTask().playSound(SOUNDTYPE.SOUND, "loot_spawn");
 	}
 
 }
