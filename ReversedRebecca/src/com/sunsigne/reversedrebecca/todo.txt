@@ -28,10 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	invantaire : 
-	lvl003	- oignons
-			- repas
-
 	options : 
 		- inventory : créer un petit visuel sympa en dessous
 
@@ -61,6 +57,7 @@
 	lvl003-y gameplay :
 		- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 		- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
+
 
 	note : 
 	nancy = nolan
