@@ -32,8 +32,8 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 	}
 
 	public void removeItem(int index) {
-		if (getSize() > index)
-			InventoryList.list.getList().remove(index);
+		int obj = getSize() > index ? index : getSize() - 1;
+		InventoryList.list.getList().remove(obj);
 	}
 
 	public void reset() {

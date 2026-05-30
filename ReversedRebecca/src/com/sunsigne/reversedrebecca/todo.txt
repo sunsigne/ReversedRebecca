@@ -28,10 +28,10 @@
 
 	////////// EN COURS ////////////
 
+	bug mineur : lvl002 - rebecca a dit deux fois qu'il s'agissait d'un passe partout
+
 	invantaire : 
 	lvl002 	- récupération de documents (speedrun aussi)
-			- donut
-			- café
 	lvl003	- oignons
 			- repas
 
