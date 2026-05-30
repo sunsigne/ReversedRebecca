@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, RenderFree {
 
@@ -76,7 +77,8 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 		}
 
 		if (col != 1 && InventoryOption.getType() == INVENTORY_TYPE.VISIBLE)
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "loot_spawn");
+			if (World.get() != null && World.get().getTime() >= 1)
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "loot_spawn");
 	}
 
 }

@@ -6,6 +6,8 @@ import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.hud.nurse.HUDNurseHealth;
 import com.sunsigne.reversedrebecca.object.hud.nurse.HUDNurseTool;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -44,7 +46,12 @@ public class HUDAddRequest implements Request {
 		}
 
 		int col = Integer.parseInt(target);
-		new InventoryPlayer().addItem(col);
+		GenericListener generic = () -> new InventoryPlayer().addItem(col);
+
+		if (LAYER.LOADING.getHandler().getList().isEmpty())
+			generic.doAction();
+		else
+			waitforHUD(object, generic);
 	}
 
 	private void createNurseHud() {
@@ -58,6 +65,24 @@ public class HUDAddRequest implements Request {
 		HUD health = new HUDNurseHealth();
 		LAYER.HUD.getHandler().getList().add(0, health);
 		Handler.updateHandlerMap(LAYER.HUD.getHandler(), health);
+	}
+
+	private void waitforHUD(PiranhaObject object, GenericListener generic) {
+
+		ConditionalListener listener = new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				return LAYER.LOADING.getHandler().getList().isEmpty();
+			}
+
+			@Override
+			public GenericListener getAction() {
+				return generic;
+			}
+		};
+
+		object.setWaitfor(listener);
 	}
 
 }
