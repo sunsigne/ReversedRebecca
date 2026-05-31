@@ -27,7 +27,7 @@ public abstract class MenuIngameScreen extends SuperMenuScreen {
 		if (image == null) {
 			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
 			xl = getName().contains("_xl");
-			xxl = xl = getName().contains("_xxl");
+			xxl = getName().contains("_xxl");
 		}
 		return image;
 	}
@@ -41,9 +41,9 @@ public abstract class MenuIngameScreen extends SuperMenuScreen {
 	public void render(Graphics g) {
 		new TransluantLayer().drawGray(g, Window.WIDHT, Window.HEIGHT);
 		int x = xxl ? 20 : 289;
-		int y = xl ? 226 : 305;
+		int y = xl || xxl ? 226 : 305;
 		int width = xxl ? 1880 : 1324;
-		int height = xl ? 600 : 474;
+		int height = xl || xxl ? 600 : 474;
 		g.drawImage(getImage(), x, y, width, height, null);
 
 	}

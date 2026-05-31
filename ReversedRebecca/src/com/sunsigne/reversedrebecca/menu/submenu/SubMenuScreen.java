@@ -78,7 +78,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 		if (image == null) {
 			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
 			xl = getName().contains("_xl");
-			xxl = xl = getName().contains("_xxl");
+			xxl = getName().contains("_xxl");
 		}
 		return image;
 	}
@@ -92,9 +92,9 @@ public abstract class SubMenuScreen extends MenuScreen {
 	public void render(Graphics g) {
 		super.render(g);
 		int x = xxl ? 20 : 289;
-		int y = xl ? 286 : 465;
+		int y = xl || xxl ? 286 : 465;
 		int width = xxl ? 1880 : 1324;
-		int height = xl ? 600 : 474;
+		int height = xl || xxl ? 600 : 474;
 		g.drawImage(getImage(), x, y, width, height, null);
 	}
 
