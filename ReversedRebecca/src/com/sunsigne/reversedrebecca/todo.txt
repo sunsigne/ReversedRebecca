@@ -31,20 +31,19 @@
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-	la requete choice pose problème entre name et texture name, sans correction, ça risque de poser pb avec le skin gothique de rebecca dans le future
-			
+
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
 	
 	////////// MILITARY ////////////
+	
+	la requete choice pose problème entre name et texture name. Exemple : controler Nancy, ça marche, mais pas le sergent
+	succès : essayer d'être plus malin que le jeu - j'ai dit : 200 pompes !
 
 	sergent :
-		- gentil avec et sans pelle
-		- les pompes dans les 4 directions
-		
-	succès : essayer d'être plus malin que le jeu - j'ai dit : 100 pompes !
+		- gentil avec et sans pelle		
 
 	mettre musique sur Patreon
 

@@ -83,7 +83,7 @@ player = object = convinced = Vu comment tu pus de la gueule ! C'est au moins@to
 
 
 % IS_PISSED_OFF
-object = player = sergent_yelling = LA TERRE EST A TON GOUT ? PUISQUE TU ES@DÉJÀ AU SOL, FAIS-MOI 20 POMPES !
+object = player = sergent_yelling = LA TERRE EST A TON GOUT ? PUISQUE TU ES@DÉJÀ AU SOL, FAIS-MOI 200 POMPES !
 
 
 % REFUSE_PUSHUP
@@ -91,11 +91,15 @@ object = player = sergent_yelling = JE NE T'AI PAS DEMANDÉ TON AVIS !
 
 
 % PUSHUP_AGAIN
-object = player = sergent_yelling = ENCORE !
+militaryman = player = sergent_yelling = ENCORE !
+
+
+% PUSHUP_ESCAPE
+militaryman = player = sergent_yelling = TU T'ES CRU DANS UN JEU VIDÉO ?@ALLEZ, SOLDAT !
 
 
 % PUSHUP_DONE
-object = player = sergent_yelling = Bien ! Maintenant, disparait !
+militaryman = player = sergent_yelling = Bien ! Maintenant, disparait !
 
 
 % PUSHUP_DONE_NEXT
