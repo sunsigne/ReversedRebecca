@@ -20,6 +20,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption;
 import com.sunsigne.reversedrebecca.ressources.font.TextsOption.TEXTS_SIZE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -31,7 +32,7 @@ import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
-public class GeneralScreen extends SubMenuScreen {
+public class GeneralScreen extends SubMenuScreen implements SheetableImage {
 
 	public GeneralScreen() {
 		super(ACTION_HIGHLIGHT);
@@ -344,6 +345,21 @@ public class GeneralScreen extends SubMenuScreen {
 
 	////////// TEXTURE ////////////
 
+	@Override
+	public int getSheetColCriterion() {
+		return 2;
+	}
+
+	@Override
+	public int getSheetRowCriterion() {
+		return 1;
+	}
+
+	@Override
+	public int getSheetWidth() {
+		return 3 * 16;
+	}
+
 	private BufferedImage gamepad_instruction_image;
 
 	protected BufferedImage get_gamepad_instruction_image() {
@@ -353,14 +369,29 @@ public class GeneralScreen extends SubMenuScreen {
 		return gamepad_instruction_image;
 	}
 
+	private BufferedImage inventory_image;
+
+	protected BufferedImage get_inventory_image() {
+		if (inventory_image == null) {
+			BufferedImage sheet = new ImageTask().loadImage("textures/hud/inventory");
+			inventory_image = getSheetSubImage(sheet);
+		}
+
+		return inventory_image;
+	}
+
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
+		
+		if(InventoryOption.getType() == INVENTORY_TYPE.VISIBLE)
+			g.drawImage(get_inventory_image(), 890 - gap + 158, 725, 3*128, 128, null);
+			
 		if (ControllerManager.getInstance().isUsingGamepad() == false)
-				return;
-	
+			return;
+
 		g.drawImage(get_gamepad_instruction_image(), 890 + gap, 313, 120, 120, null);
 		g.drawImage(get_gamepad_instruction_image(), 890 - gap, 313, 120, 120, null);
 	}
@@ -404,7 +435,7 @@ public class GeneralScreen extends SubMenuScreen {
 		else if (getPreset() == INVENTORY)
 			inventoryPressed(e);
 		else if (getPreset() == RESET)
-			resetPressed(e);			
+			resetPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 
@@ -493,7 +524,7 @@ public class GeneralScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(RESET);
 	}
-	
+
 	private void shakePressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
@@ -514,7 +545,7 @@ public class GeneralScreen extends SubMenuScreen {
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(INVENTORY);
 	}
-	
+
 	private void inventoryPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT) {
 			var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();

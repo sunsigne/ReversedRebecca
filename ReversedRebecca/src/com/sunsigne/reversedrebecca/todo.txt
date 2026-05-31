@@ -28,9 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	options : 
-		- inventory : créer un petit visuel sympa en dessous
-
 	bug : 
 	debug mode : finir une map avec le crit% mode, sauvegarde la caractéristique...
 	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
