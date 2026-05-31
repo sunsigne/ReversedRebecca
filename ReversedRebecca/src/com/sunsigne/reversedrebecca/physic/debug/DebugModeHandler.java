@@ -18,7 +18,7 @@ public class DebugModeHandler implements KeyboardEvent {
 	public DebugModeHandler() {
 		debugKeyEvent[0] = KeyEvent.VK_CONTROL;
 		debugKeyEvent[1] = KeyEvent.VK_SHIFT;
-		debugKeyEvent[2] = KeyEvent.VK_F1;
+		debugKeyEvent[2] = KeyEvent.VK_A;
 	}
 
 	////////// USEFUL ////////////

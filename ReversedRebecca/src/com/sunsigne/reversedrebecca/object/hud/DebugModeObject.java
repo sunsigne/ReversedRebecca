@@ -22,7 +22,7 @@ public class DebugModeObject extends GameObject implements TickFree, SheetableIm
 	public DebugModeObject(DebugMode debugMode) {
 		super(Window.WIDHT - Size.L, Window.HEIGHT - Size.L, Size.L, Size.L);
 		this.debugMode = debugMode;
-		setY(getY() - (debugMode.getIndex()) * getHeight());
+		setY(getY() - (debugMode.getNum() - 1) * getHeight());
 		loadImages();
 	}
 
