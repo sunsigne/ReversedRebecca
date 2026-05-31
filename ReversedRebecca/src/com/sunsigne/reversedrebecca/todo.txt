@@ -41,9 +41,6 @@
 	
 	la requete choice pose problème entre name et texture name. Exemple : controler Nancy, ça marche, mais pas le sergent
 
-	sergent :
-		- gentil avec et sans pelle		
-
 	mettre musique sur Patreon
 
 	trier les dossiers : 

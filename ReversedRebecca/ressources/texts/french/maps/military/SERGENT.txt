@@ -19,7 +19,7 @@ object = player = sergent = L'esprit ne fait pas tout. Un soldat doit savoir@man
 
 
 % NICE
-player = object = laugh = C'est peu conventionnel, mais… Je me débrouille bien avec une pelle…
+player = object = laugh = C'est peu conventionnel, mais…@Je me débrouille bien avec une pelle !
 object = player = sergent = Montre-moi.
 
 
@@ -29,8 +29,8 @@ object = player = sergent = En voilà une. Montre-moi.
 
 
 % KNOCKED_OUT
-player = object = no_sens = Heu…
-player = DOWN = you_silly = Quand il se réveillera, je lui dirai que ça porte bonheur.
+player = object = laugh = C'est lui qui a demandé !
+player = DOWN = you_silly = Quand il se réveillera, je lui dirai que ça@porte bonheur.
 
 
 % MEAN_NO_ARMORY
