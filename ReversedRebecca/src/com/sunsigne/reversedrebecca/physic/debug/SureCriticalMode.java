@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.physic.debug;
 
 import java.awt.Graphics;
 
-import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
@@ -11,7 +10,7 @@ public class SureCriticalMode extends DebugMode {
 
 	////////// DEBUG MODE ////////////
 
-	private static DebugMode debugMode = new SureCriticalMode();
+	public static final DebugMode debugMode = new SureCriticalMode();
 
 	@Override
 	public DebugMode getDebugMode() {
@@ -40,9 +39,13 @@ public class SureCriticalMode extends DebugMode {
 			return;
 
 		world = null;
-		ToolList.getList().getList().forEach(tempTool -> setToolToCriticalChance(tempTool, 0));
+		// ToolList.getList().getList().forEach(tempTool ->
+		// setToolToCriticalChance(tempTool, 0));
 	}
 
+	// this method corrupted the player's save
+	@Deprecated
+	@SuppressWarnings("unused")
 	private void setToolToCriticalChance(ToolPlayer tool, int chance) {
 		tool.setCriticalChance(chance);
 	}
@@ -66,7 +69,8 @@ public class SureCriticalMode extends DebugMode {
 				return;
 
 		world = World.get();
-		ToolList.getList().getList().forEach(tempTool -> setToolToCriticalChance(tempTool, 100));
+		// ToolList.getList().getList().forEach(tempTool ->
+		// setToolToCriticalChance(tempTool, 100));
 	}
 
 	////////// RENDER ////////////

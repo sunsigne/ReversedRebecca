@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.debug.SureCriticalMode;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
@@ -64,10 +65,12 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	protected boolean isCritical;
 
 	private void loadToolData(ToolPlayer toolPlayer) {
-
 		isCritical = false;
 		if (toolPlayer != null)
 			isCritical = new RandomGenerator().getBoolean(toolPlayer.getCriticalChance());
+
+		if (SureCriticalMode.debugMode.getDebugMode().getState())
+			isCritical = true;
 	}
 
 	////////// OPEN ////////////
