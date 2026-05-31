@@ -41,14 +41,10 @@
 	////////// MILITARY ////////////
 
 	sergent :
-		- avec et sans parcours
 		- gentil avec et sans pelle
-		- méchant sans armurerie
-		- méchant avec armurerie dévérouillée -par soi-même ou par Jessy)
-		- méchant avec nathaan rencontré
 		- les pompes dans les 4 directions
 		
-	succès : essayer d'être plus malin que le jeu - j'ai dit : 20 pompes !
+	succès : essayer d'être plus malin que le jeu - j'ai dit : 100 pompes !
 
 	mettre musique sur Patreon
 

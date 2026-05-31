@@ -137,7 +137,8 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		String living_name = line.contains("=") ? line.split("=")[0] : "error";
 		String facing = line.contains("=") ? line.split("=")[1] : "down";
 		// authorize words like "player" or "object"
-		String formated_living_name = new FormattedString().getName(object, living_name, true);
+		String formated_living_name_texture = new FormattedString().getName(object, living_name, true);
+		String formated_living_name = new FormattedString().getName(object, living_name, false);
 		String formated_facing = new FormattedString().getName(object, facing, false);
 
 		String mood = line.contains("=") ? line.split("=")[2] : "neutral";
@@ -146,7 +147,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		text = text.replace("\"0/0\"", "%");
 		String voice = voice_variant ? line.split("=")[3] : null;
 
-		content = new ChatContent(formated_living_name, mood, text, voice);
+		content = new ChatContent(formated_living_name_texture, mood, text, voice);
 		LAYER.PUZZLE.addObject(content);
 
 		Request request = new FacingRequest();

@@ -91,6 +91,8 @@ public class LivingAnimationHandler {
 			return getStandingWalkingAnimation(standingCupAnimation, walkingCupAnimation);
 		case SICK:
 			return getStandingWalkingAnimation(standingSickAnimation, walkingSickAnimation);
+		case KO_UPSIDEDOWN_NOT_STUNNED:
+			return koUpsidedownAnimation;
 		case BATH:
 			return bathAnimation;
 		case THINK:
