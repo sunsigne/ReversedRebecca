@@ -49,6 +49,12 @@ REQUEST_A_FIREARM = Key3 % exiger une arme
 
 ///// TRAINING FIELD /////
 
+GIVE_HIM_THE_SHOVEL = Key2 % lui montrer la pelle
+A_WEAPON = Key1 % une arme ?
+LET_GO = Key1 % laisser tomber
+INSULT_HIM = Key2 % l'insulter
+DO_ONE_PUSHUP = Key1 % faire 1 pompe
+REFUSE = Key2 % refuser
 THATS_BAD = Key1 % C'est mal…
 THATS_FUN = Key2 % C'est amusant !
 GO_GET_IT_YOURSELF = Key1 % Va la chercher toi-même !

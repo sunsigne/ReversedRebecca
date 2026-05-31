@@ -1,0 +1,97 @@
+% HELLO
+object = player = sergent = Un problème, soldat ?
+player = object = unhappy_var = Je suis une civile…
+object = player = sergent = Une civile n'est rien de moins qu'une future soldat,@soldat.
+
+
+% TRAINED
+object = player = sergent = Je t'ai vu parcourir notre terrain d'entrainement. Tu as du potentiel.
+player = object = happy_var = Merci ! Je fais un peu de sport pour me maintenir en forme.
+object = player = sergent = Le sport ne fait pas tout. Un soldat doit savoir manier une arme. En es-tu capable ?
+
+
+% NOT_TRAINED
+player = object = worry = C'est une logique étrange… Tout le monde n'est@pas destiné à l'uniforme.
+object = player = sergent = Mais une recrue incroyable qui s'ignore peut se cacher n'importe où.
+object = player = sergent = Toi, par exemple : tu as l'air d'être du genre à utiliser ta tête. Tu serais un grand atout !
+player = object = you_silly = Disons que j'aime bien réfléchir.
+object = player = sergent = L'esprit ne fait pas tout. Un soldat doit savoir manier une arme. En es-tu capable ?
+
+
+% NICE
+player = object = laugh = C'est peu conventionnel, mais… Je me débrouille bien avec une pelle…
+object = player = sergent = Montre-moi.
+
+
+% NO_SHOVEL
+player = object = worry = C'est que… Je n'en ai pas sur moi…
+object = player = sergent = En voilà une. Montre-moi.
+
+
+% KNOCKED_OUT
+player = object = no_sens = Heu…
+player = DOWN = you_silly = Quand il se réveillera, je lui dirai que ça porte bonheur.
+
+
+% MEAN_NO_ARMORY
+player = object = convinced = Oui, et je travaille justement à m'en procurer une. Saurais-tu où je peux trouver une clé verte ?
+object = player = sergent = Affirmatif soldat. La clé verte se trouve dans l'armurerie.
+player = object = no_sens_var = ...
+player = object = wrong_with_you = C'est une blague ?
+object = player = sergent = Négatif, soldat. Si tu veux accéder à l'armurerie, tu vas devoir utiliser ta matière grise.
+
+
+% MEAN_NO_ARMORY_NEXT
+player = DOWN = sad = (Bon… J'imagine que je vais devoir explorer ce camp pour trouver une solution.)
+
+
+% MEAN_ARMORY_UNLOCKED
+player = object = happy_var = Oui, et je travaille justement à m'en procurer une.
+object = player = sergent = Dans ce cas, bonne chance, soldat.
+
+
+% A_WEAPON
+player = DOWN = sad = (Tant que je ne serais pas rentrée dans l'armurerie, le sergent ne m'apprendra rien.)
+
+
+% MEAN_NATHAN
+player = object = angry = Oui, mais ce connard de scientifique ne veut pas m'en donner !
+
+
+% MEAN_NATHAN_VAR
+player = object = angry = J'ai ouvert l'armurerie, mais ce connard de scientifique ne veut pas m'en donner !
+
+
+% MEAN_NATHAN_NEXT
+object = player = sergent = ...
+object = player = sergent_angry = Le soldat Nathan est plus que capable lorsqu'il est question de jugement.
+object = player = sergent_angry = Tu as de la chance de n'être qu'une future soldat. Je n'aurais jamais toléré un tel discours d'une recrue. Maintenant, disparait.
+
+
+% LET_GO
+player = object = angry_var2 = (C'est quoi leurs problèmes à tout ces gens dans ce camp ?)
+
+
+% INSULT_HIM
+player = object = angry = Et toi, tu as de la chance que ton nez ne marche pas. Parce qu'il est juste au-dessus de ta bouche.
+player = object = convinced = Vu comment tu pus de la gueule ! C'est au moins ton halène qui a fait tomber tes cheveux.
+
+
+% IS_PISSED_OFF
+object = player = sergent_angry = LA TERRE EST A TON GOUT ? PUISQUE TU ES DEJA AU SOL, FAIS-MOI 20 POMPES !
+
+
+% REFUSE_PUSHUP
+object = player = sergent_angry = JE NE T'AI PAS DEMANDE TON AVIS !
+
+
+% PUSHUP_AGAIN
+object = player = sergent_angry = ENCONRE !
+
+
+% PUSHUP_DONE
+object = player = sergent_angry = Bien ! Maintenant, disparait !
+
+
+% PUSHUP_DONE_NEXT
+player = DOWN = angry_var2 = Je ne veux plus jamais qu'on parle de ça.

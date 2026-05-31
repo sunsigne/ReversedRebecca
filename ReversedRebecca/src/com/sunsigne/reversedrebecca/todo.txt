@@ -40,6 +40,16 @@
 	
 	////////// MILITARY ////////////
 
+	sergent :
+		- avec et sans parcours
+		- gentil avec et sans pelle
+		- méchant sans armurerie
+		- méchant avec armurerie dévérouillée -par soi-même ou par Jessy)
+		- méchant avec nathaan rencontré
+		- les pompes dans les 4 directions
+		
+	succès : essayer d'être plus malin que le jeu - j'ai dit : 20 pompes !
+
 	mettre musique sur Patreon
 
 	trier les dossiers : 
@@ -55,17 +65,12 @@
 		- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
 		- quand on a récupéré les PV max, on a besoin d'aller à l'infirmerie (car on se retrouve pas full hp) : indice [R] des plantes
 
-
-	note : 
-	nancy = nolan
-	il est possible de ne montrer son intérêt qu'à Nancy (mensonge) ou qu'à Jessy (en repoussant Nancy lors du bisou)
-
 	à faire :
+	ajouter des dialogues par défauts avec le runner
 	créer la hitbox du tabouret en plein milieu (et vérifier que rebecca ne soit pas bloquée dedans quand on controle nancy)
 	faire une suite de dialogue pour Nathan (il n'y a pas de raison de ne plus pouvoir lui parler)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map
-	ajouter des dialogues par défauts avec le runner et le sergent
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
 	faire en sorte que Xavier dupont serve à qq chose
 
@@ -74,9 +79,12 @@
 
 	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en avant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
 
+	note : 
+	nancy = nolan
+	il est possible de ne montrer son intérêt qu'à Nancy (mensonge) ou qu'à Jessy (en repoussant Nancy lors du bisou)
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
-	note : puzzle : cliquer = impact
 	1h les succès devraient avancer page page entière plutot que par demi-page
 	2h mettre le bonus sur l'écran titre même
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -88,6 +96,8 @@
 	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
 	1h - changer le système d'aléatorie pour du déterminisme ?
 	1h - étudier le système de % de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
+
+	note : puzzle : cliquer = impact
 
 	////////// LVL001 ////////////
 	
