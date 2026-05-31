@@ -52,6 +52,8 @@ SignOfStoppingTitle = Sign of stopping
 SignOfStoppingText = relaunch the game 5 times
 ComingForYouTitle = I'm coming for you
 ComingForYouText = 	
+ISaid200PushUpsTitle = I Said: 200 Push-Ups!
+ISaid200Text = Trying to outsmart the game
 
 ///// PURPLE /////
 
