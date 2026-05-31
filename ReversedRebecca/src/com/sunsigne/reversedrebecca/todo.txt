@@ -38,8 +38,6 @@
 	vrai musique de fin de niveau
 	
 	////////// MILITARY ////////////
-	
-	la requete choice pose problème entre name et texture name. Exemple : controler Nancy, ça marche, mais pas le sergent
 
 	mettre musique sur Patreon
 
