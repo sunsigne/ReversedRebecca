@@ -20,8 +20,8 @@ import com.sunsigne.reversedrebecca.system.Window;
 
 public class AchievementObject extends GameObject {
 
-	public AchievementObject(Achievement achievement) {
-		this(achievement, Window.WIDHT / 2 - 13 * Size.XS, -Size.L);
+	public AchievementObject(Achievement achievement, boolean reversed) {
+		this(achievement, Window.WIDHT / 2 - 13 * Size.XS, reversed ? Window.HEIGHT : -Size.L);
 	}
 
 	public AchievementObject(Achievement achievement, int x, int y) {
@@ -81,6 +81,7 @@ public class AchievementObject extends GameObject {
 	private final int MAX_TIME = 400;
 	private final int DELAY = 30;
 	private final int SPEED = 5;
+	private int factor = getY() > Window.HEIGHT / 2 ? -1 : 1; 
 
 	@Override
 	public void tick() {
@@ -91,7 +92,7 @@ public class AchievementObject extends GameObject {
 
 		// goes up
 		if (time > MAX_TIME - DELAY)
-			setVelY(SPEED);
+			setVelY(factor * SPEED);
 
 		// stop
 		if (time == MAX_TIME - DELAY)
@@ -99,7 +100,7 @@ public class AchievementObject extends GameObject {
 
 		// goes down
 		if (time < DELAY)
-			setVelY(-SPEED);
+			setVelY(- factor * SPEED);
 
 		// destroy
 		if (time == 1)

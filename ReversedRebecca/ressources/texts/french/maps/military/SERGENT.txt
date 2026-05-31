@@ -94,10 +94,6 @@ object = player = sergent_yelling = JE NE T'AI PAS DEMANDÉ TON AVIS !
 militaryman = player = sergent_yelling = ENCORE !
 
 
-% PUSHUP_ESCAPE
-militaryman = player = sergent_yelling = TU T'ES CRU DANS UN JEU VIDÉO ?@ALLEZ, SOLDAT !
-
-
 % PUSHUP_DONE
 militaryman = player = sergent_yelling = Bien ! Maintenant, disparait !
 

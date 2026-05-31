@@ -3,10 +3,12 @@ package com.sunsigne.reversedrebecca.world.controllers;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.PausePreventer;
+import com.sunsigne.reversedrebecca.system.PausePreventer.PAUSE_STATE;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 
 public class UserCanInputMenu extends WorldControllers {
@@ -31,6 +33,8 @@ public class UserCanInputMenu extends WorldControllers {
 			return;
 
 		if (PausePreventer.state != null) {
+			if (PausePreventer.state == PAUSE_STATE.PUSHUPS)
+				new AchievementTask().unlockAchievement("ISaid200Pushups", true);
 			new PausePreventer().createDisabledPauseObject();
 			return;
 		}

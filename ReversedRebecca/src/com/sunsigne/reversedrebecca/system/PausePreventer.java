@@ -53,7 +53,7 @@ public class PausePreventer {
 	////////// PAUSE STATE ////////////
 
 	public enum PAUSE_STATE {
-		MUSIC("DisabledPauseMusic"), WIMP("DisabledPauseWimp");
+		MUSIC("DisabledPauseMusic"), WIMP("DisabledPauseWimp"), PUSHUPS("DisabledPausePushUps");
 
 		private String valueToRead;
 

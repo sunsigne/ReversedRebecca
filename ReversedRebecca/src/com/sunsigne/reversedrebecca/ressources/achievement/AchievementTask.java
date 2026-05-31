@@ -24,6 +24,10 @@ public class AchievementTask {
 	}
 
 	public void unlockAchievement(String name) {
+		unlockAchievement(name, false);
+	}
+	
+	public void unlockAchievement(String name, boolean reversed) {
 		var list = AchievementList.getList();
 		list.getList().forEach(tempAchievement -> {
 			if (tempAchievement.getName().equalsIgnoreCase(name)) {
@@ -35,7 +39,7 @@ public class AchievementTask {
 				System.out.println("ACHIEVEMENT : " + tempAchievement.getName().toUpperCase());
 
 				// do the "popup" effect
-				AchievementObject object = new AchievementObject(tempAchievement);
+				AchievementObject object = new AchievementObject(tempAchievement, reversed);
 				LAYER.DEBUG.addObject(object);
 				object.popup();
 				return;

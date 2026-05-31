@@ -6,6 +6,7 @@ ProgressSaved = Progress saved
 DisabledPause = PAUSE TEMPORARILY DISABLED
 DisabledPauseMusic = Reason : Music too cool
 DisabledPauseWimp = Reason : the player is trying not to get its ass kicked by pausing
+DisabledPausePushUps = Do your push-ups! And if you press Alt+F4, we delete your save!
 
 ///// GAME OVER /////
 

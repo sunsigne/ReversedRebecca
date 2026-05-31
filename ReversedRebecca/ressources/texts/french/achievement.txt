@@ -53,7 +53,7 @@ SignOfStoppingText = relancer le jeu 5 fois
 ComingForYouTitle = Je vais venir te chercher
 ComingForYouText = 	
 ISaid200PushUpsTitle = J'ai dit : 200 pompes !
-ISaid200Text = Essayer d'etre plus malin que le jeu
+ISaid200PushUpsText = Jouer au plus malin avec le jeu
 
 ///// PURPLE /////
 
