@@ -2,42 +2,38 @@
 
 guard=1,1
 
-////// DORMITORY //////
-
-dormitory=2,1
-
 ////// TRASHMAN //////
 
-trashman=3,1
+trashman=2,1
 
 ////// SERGENT //////
 
-sergent=4,1
-sergent_yelling=4,2
+sergent=3,1
+sergent_yelling=3,2
 
 ////// VENERA DUPONT //////
 
-venera_happy=5,1
-venera_unhappy=5,2
-venera_blush=5,3
-venera_deep_blush=5,4
-venera_you_know_very_well_whats_happening=5,5
+venera_happy=4,1
+venera_unhappy=4,2
+venera_blush=4,3
+venera_deep_blush=4,4
+venera_you_know_very_well_whats_happening=4,5
 
 ////// RUNNER //////
 
-runner=6,1
-runner_cry=6,2
+runner=5,1
+runner_cry=5,2
 
 ////// IDIOT //////
 
-idiot=7,1
+idiot=6,1
 
 ////// SHOOTER //////
 
-shooter=8,1
-shooter_shocked=8,2
-shooter_cry=8,3
+shooter=7,1
+shooter_shocked=7,2
+shooter_cry=7,3
 
 ////// SLACKER //////
 
-slacker=9,1
+slacker=8,1

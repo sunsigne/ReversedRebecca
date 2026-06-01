@@ -1,0 +1,7 @@
+////// SLACKER //////
+
+slacker=1,1
+
+////// DORMITORY //////
+
+dormitory=2,1
