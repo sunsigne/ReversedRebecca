@@ -9,6 +9,16 @@ TALK_VAR = Key1 % ... parler ?
 ARENT_YOU_GOING_OUT = Key1 % Tu ne sors pas ?
 I_HAVE_THE_KEY = Key1 % J'ai la clé
 NOT_SO_COCKY_ANYMORE = Key1 % On fait moins le malin
+TELL_HER_ABOUT_THE_STATION = Key3 % lui parler du commissariat
+IT_WENT_WELL = Key1 % ça s'est bien passé
+I_NEARLY_DIED = Key2 % j'ai failli mourir !
+POLICE_WERE_IDIOTS = Key3 % les policiers étaient idiots
+TELL_HER_ABOUT_THE_HELMET_THEFT = Key3 % lui parler du vol du casque
+TELL_HER_ABOUT_ALICIA_LOCKED_UP = Key3 % lui parler d'Alicia enfermée
+I_ATE_WAY_TOO_MANY_COOKIES = Key1 % j'ai mangé trop de cookies
+I_DIDNT_HAVE_BREAKFAST = Key1 % je n'ai pas pris de p'tit déj
+I_HAVE_A_BALANCED_DIET = Key1 % j'ai une alimentation équilibrée
+I_HAVE_A_KILLER_ROBOT_AT_HOME = Key3 % j'ai un robot tueur chez moi
 
 
 ///// INFIRMARY /////
