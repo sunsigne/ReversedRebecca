@@ -38,8 +38,6 @@
 	
 	////////// MILITARY ////////////
 
-	vérifier douches quete + vérifier si la console affiche à chaque fois une erreur
-
 	mettre musique sur Patreon
 
 	trier les dossiers : 
