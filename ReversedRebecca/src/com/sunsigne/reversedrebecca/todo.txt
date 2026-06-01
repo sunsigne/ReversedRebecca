@@ -38,6 +38,8 @@
 	
 	////////// MILITARY ////////////
 
+	faire en sorte que Xavier dupont serve à qq chose
+
 	mettre musique sur Patreon
 
 	trier les dossiers : 
@@ -60,7 +62,6 @@
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	créer le preview des gens sur la map
 	uniformiser les choix (exemple : RR000 - lorsqu'on salue sarah, c'est elle qui est highlight, alors que dans LVL003-y lorsqu'on parle au prisonnier, c'est Rebecca qui l'est)
-	faire en sorte que Xavier dupont serve à qq chose
 
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)

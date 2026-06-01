@@ -15,9 +15,13 @@ trashman=3,1
 sergent=4,1
 sergent_yelling=4,2
 
-////// XAVIER DUPONT //////
+////// VENERA DUPONT //////
 
-xavier_dupont=5,1
+venera_happy=5,1
+venera_unhappy=5,2
+venera_blush=5,3
+venera_deep_blush=5,4
+venera_you_know_very_well_whats_happening=5,5
 
 ////// RUNNER //////
 
