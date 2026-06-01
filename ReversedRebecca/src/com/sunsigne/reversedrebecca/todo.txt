@@ -60,6 +60,11 @@
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
+	
+	à faire à la fin : 
+	- variante gentil
+	- cinématique d'intro
+	- indices des plantes
 
 	un des 3 compteurs dout être "victoire contre un chef" ou qq chose du genre, il faut mettre en avant le fait que le joueur a ENFIN gagné (en plus, c'est impossible de faire 0 alors c'est parfait)
 

@@ -40,7 +40,7 @@ object = player = dupont_deep_blush = Mais, parle-moi encore de toi, et de dange
 % TOO_MANY_COOKIES
 object = player = dupont_blush = Ch'est…
 object = player = dupont_unhappy = Heu… banal.
-player = object = convinced = Excès de sucre, c'est un sujet sérieux !
+player = object = convinced = L'excès de sucre, c'est un sujet sérieux !
 object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
