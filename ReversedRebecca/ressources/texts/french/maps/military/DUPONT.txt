@@ -1,13 +1,13 @@
 % HELLO
 object = player = venera_happy = Chalut. Comment che peux t'aider ?
-player = object = happy = Je dois parler à YY. Tu saurais comment entrer dans sa tour ?
-object = player = venera_unhappy = La tour du chef ? Che ne penche pas que tu aies le droit.@Mais peut-être que che peux t'aider à cha plache ?
-player = object = worry = Ça m'étonnerait, mais merci.
-object = player = venera_happy = Comme tu veux… Chi tu changes d'avis, je chui là.
+player = object = happy = Je dois parler à Double-Y.@Tu saurais comment entrer dans sa tour ?
+object = player = venera_unhappy = La tour du chef ? Ch'est interdit chans clé.@Mais, peut-être que che peux t'aider à cha plache ?
+player = object = worry = Ça m'étonnerait… Mais, merci.
+object = player = venera_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
 
 
 % ABOUT_THE_STATION
-object = player = venera_unhappy = Tu as volé des documents confidenchiels ? Mais ch'est très grave…
+object = player = venera_unhappy = Tu as volé des documents confidenchiels ?@Mais ch'est très grave…
 object = player = venera_blush = Ch'est dangereux, même…
 
 
@@ -21,44 +21,44 @@ object = player = venera_blush = Tu m'étonnes…@Ch'était un chacré risque !
 
 
 % STATION_POLICE_WERE_IDIOTS
-object = player = venera_unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu chavais qu'elles étaient militaires ET polichières ?
+object = player = venera_unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu@chavais qu'elles étaient militaires ET polichières ?
 object = player = venera_happy = En tout cas, ch'était quand même un chacré risque !
 
 
 % ABOUT_THE_HELMET_THEFT
-object = player = venera_unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi che dois connaitre les checrets de ton travail…
+object = player = venera_unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi@che dois connaitre les checrets de ton travail…
 object = player = venera_blush = Continue…
 
 
 % ABOUT_ALICIA_LOCKED_UP
-object = player = venera_deep_blush = Holala… Elle a du avoir tellement peur… Tu vis une vie dangereuse… Ch'est tellement exchitant…
-player = object = unhappy_var = Tu es militaire, non ? Ta vie n'est pas dangereusement excitante ?
-object = player = venera_unhappy = Pas chouvant… Nous ne chommes pas en guerre… Le plus dangereux, cha cherait de trébucher chur un pneu…
-object = player = venera_deep_blush = Mais, parle-moi encore de toi ! Quelles aventures as-tu encore vécues ?
+object = player = venera_deep_blush = Holala… Elle a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
+player = object = unhappy_var = Tu es militaire… Ta vie n'est pas dangereuse ?
+object = player = venera_unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
+object = player = venera_deep_blush = Mais, parle-moi encore de toi, et de dangers !
 
 
 % TOO_MANY_COOKIES
 object = player = venera_blush = Ch'est…
 object = player = venera_unhappy = Heu… banal.
-player = object = wrong_with_you = Excès de sucre, c'est un sujet sérieux !
-object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose de plus… imprechionnant.
+player = object = convinced = Excès de sucre, c'est un sujet sérieux !
+object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % NO_BREAKFAST
 object = player = venera_blush = Ch'est…
 object = player = venera_unhappy = Heu… banal.
-player = object = wrong_with_you = L'hypoglycémie, c'est un sujet sérieux !
-object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose de plus… imprechionnant.
+player = object = convinced = L'hypoglycémie, c'est un sujet sérieux !
+object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % BALANCED_DIET
 object = player = venera_blush = Ch'est…
 object = player = venera_unhappy = Heu… banal.
-player = object = wrong_with_you = Hey! C'est dangereux pour le moral de ne jamais se faire plaisir !
-object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose de plus… imprechionnant.
+player = object = worry = Hé! C'est dangereux pour le moral de ne jamais@se faire plaisir…
+object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % KILLER_ROBOT
-object = player = venera_you_know_very_well_whats_happeningHo oui ! Encore !
-object = player = venera_blush = Pardon… Ch'est exchtremmement gênant… Je viens dire…
-object = player = venera_deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser… J'ai urgemment besoin d'une douche…
+object = player = venera_you_know_very_well_whats_happening = Ho oui ! Encore !
+object = player = venera_blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
+object = player = venera_deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
