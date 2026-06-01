@@ -62,3 +62,8 @@ object = player = venera_unhappy = Bien chûr, oui… Chimaginais juchte quelque
 object = player = venera_you_know_very_well_whats_happening = Ho oui ! Encore !
 object = player = venera_blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
 object = player = venera_deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
+
+
+% SHOWER
+object = player = venera_blush = Tu veux venir avec moi, ou quoi ?
+object = player = venera_deep_blush = Désolé, mais ce qu'il va se passer ici est très…@privé.

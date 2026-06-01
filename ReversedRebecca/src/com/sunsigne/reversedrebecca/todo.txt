@@ -38,7 +38,7 @@
 	
 	////////// MILITARY ////////////
 
-	ajouter une coquinerie à la porte avec Venera
+	vérifier douches quete + vérifier si la console affiche à chaque fois une erreur
 
 	mettre musique sur Patreon
 
