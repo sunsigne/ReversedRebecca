@@ -19,6 +19,7 @@ I_ATE_WAY_TOO_MANY_COOKIES = Key1 % j'ai mangé trop de cookies
 I_DIDNT_HAVE_BREAKFAST = Key1 % je n'ai pas pris de p'tit déj
 I_HAVE_A_BALANCED_DIET = Key1 % j'ai une alimentation équilibrée
 I_HAVE_A_KILLER_ROBOT_AT_HOME = Key3 % j'ai un robot tueur chez moi
+A_WEAPON = Key1 % une arme ?
 
 
 ///// INFIRMARY /////
@@ -60,7 +61,6 @@ REQUEST_A_FIREARM = Key3 % exiger une arme
 ///// TRAINING FIELD /////
 
 GIVE_HIM_THE_SHOVEL = Key2 % lui montrer la pelle
-A_WEAPON = Key1 % une arme ?
 LET_GO = Key1 % laisser tomber
 INSULT_HIM = Key2 % l'insulter
 DO_ONE_PUSHUP = Key1 % faire 1 pompe

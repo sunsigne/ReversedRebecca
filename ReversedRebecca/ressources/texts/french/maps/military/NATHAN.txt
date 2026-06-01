@@ -55,3 +55,7 @@ object = player = unhappy = Arrête ! Z'est méchant ! Ze vais le dire à mon fr
 
 % HIT_FOUR
 object = player = unhappy = Ligne 3 colonne 3 ! La chzambre zous le fuzil !@Ze ne peux pas être plus clair !
+
+
+% A_WEAPON
+object = player = serious = nathan_dead_serious_voice = C'est mon corps qui est une arme. Tu vas vite@le comprendre si tu continues d'insister.
