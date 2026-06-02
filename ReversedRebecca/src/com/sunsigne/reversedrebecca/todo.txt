@@ -55,7 +55,6 @@
 
 	à faire :
 	ajouter des dialogues par défauts avec le runner
-	créer la hitbox du tabouret en plein milieu (et vérifier que rebecca ne soit pas bloquée dedans quand on controle nancy)
 	entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
 	on doit pouvoir jouer au billard avec Cassidy (Puzzle)
