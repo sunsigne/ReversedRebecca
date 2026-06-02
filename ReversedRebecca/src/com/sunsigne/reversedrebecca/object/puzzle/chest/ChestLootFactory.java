@@ -46,6 +46,9 @@ public class ChestLootFactory {
 		if (lootData.toLowerCase().contains("max"))
 			return new ChestLootToolMaxLvl(card, tool);
 
+		if (lootData.toLowerCase().contains("crit"))
+			return new ChestLootCritTool(card, tool);
+
 		return new ChestLootError(card, lootData);
 	}
 

@@ -4,24 +4,24 @@ KARMA=0
 MaxHp=2
 
 
+KeyMaxLvl=CYAN
+KeyStartLvl=NULL
+KeyCriticalChance=10%
+
 BombMaxLvl=CYAN
 BombStartLvl=NULL
-BombCriticalChance=0%
+BombCriticalChance=10%
 
 BombingDoor=FALSE
 
 CowboyMaxLvl=RED
 CowboyStartLvl=RED
-CowboyCriticalChance=0%
-
-KeyMaxLvl=CYAN
-KeyStartLvl=NULL
-KeyCriticalChance=0%
+CowboyCriticalChance=10%
 
 MicrochipMaxLvl=CYAN
 MicrochipStartLvl=NULL
-MicrochipCriticalChance=0%
+MicrochipCriticalChance=10%
 
 ShovelMaxLvl=CYAN
 ShovelStartLvl=NULL
-ShovelCriticalChance=0%
+ShovelCriticalChance=10%
