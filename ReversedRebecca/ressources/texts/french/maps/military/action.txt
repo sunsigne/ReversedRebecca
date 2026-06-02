@@ -60,6 +60,7 @@ REQUEST_A_FIREARM = Key3 % exiger une arme
 
 ///// TRAINING FIELD /////
 
+EXERCICE = Key2 % faire de l'exercice
 GIVE_HIM_THE_SHOVEL = Key2 % lui montrer la pelle
 LET_GO = Key1 % laisser tomber
 INSULT_HIM = Key2 % l'insulter
