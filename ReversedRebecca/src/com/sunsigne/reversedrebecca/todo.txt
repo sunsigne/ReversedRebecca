@@ -38,6 +38,8 @@
 	
 	////////// MILITARY ////////////
 	
+	dans le coffre : 30% de chance de crit ?
+	
 	bug :
 		- plus on monte les étage de la tour, plus ça lag
 
@@ -48,7 +50,7 @@
 	mettre musique sur Patreon
 
 	à faire :
-	- mettre un tunnel trou cyan dans l'une des cellules d'isolement ? (vu qu'on ne peut avoir la pelle qu'avec le coffre orange) : récompenser = 30% de chance de crit ?
+
 	- ajouter des dialogues par défauts avec le runner
 	- entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle)
