@@ -38,8 +38,6 @@
 	
 	////////// MILITARY ////////////
 
-	faire qu'il est possible pour rebecca de faire le parcours d'entrainement (petite animation)
-
 	mettre musique sur Patreon
 
 	trier les dossiers : 

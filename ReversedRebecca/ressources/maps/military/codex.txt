@@ -74,6 +74,7 @@ NPC-11 = Romeo
 NPC-10 = Shooter
 NPC-16 = Jessy
 OBJ-08 = Romeo Detector
+OBJ-41 = Training Course
 
 ///// ARMORY /////
 
