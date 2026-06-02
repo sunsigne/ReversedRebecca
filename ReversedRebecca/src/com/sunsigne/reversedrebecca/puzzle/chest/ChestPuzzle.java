@@ -149,6 +149,20 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 		LAYER.PUZZLE.addObject(chestCard[num]);
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		ChestPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// OPEN ////////////
 
 	@Override

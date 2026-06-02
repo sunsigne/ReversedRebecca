@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
-import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -64,13 +63,33 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	protected boolean isCritical;
 
+	protected abstract int getStaticNoCritCount();
+
+	protected abstract void setStaticNoCritCount(int noCritCount);
+
 	private void loadToolData(ToolPlayer toolPlayer) {
 		isCritical = false;
-		if (toolPlayer != null)
-			isCritical = new RandomGenerator().getBoolean(toolPlayer.getCriticalChance());
 
-		if (SureCriticalMode.debugMode.getDebugMode().getState())
+		if (SureCriticalMode.debugMode.getDebugMode().getState()) {
 			isCritical = true;
+			return;
+		}
+
+		if (toolPlayer == null)
+			return;
+
+		if (toolPlayer.getCriticalChance() >= 100) {
+			isCritical = true;
+			return;
+		}
+
+		int critCount = 100 / toolPlayer.getCriticalChance();
+
+		if (1 + getStaticNoCritCount() < critCount)
+			return;
+
+		isCritical = true;
+		setStaticNoCritCount(0);
 	}
 
 	////////// OPEN ////////////
@@ -144,6 +163,8 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		new PlayerFinder().roundToTilePlayer();
 
 		if (isPuzzleWon) {
+			if (isCritical == false)
+				setStaticNoCritCount(getStaticNoCritCount() + 1);
 			new CameraShaker().shaking(getFactory().getVictoryShake());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			actionOnWinning.doAction();

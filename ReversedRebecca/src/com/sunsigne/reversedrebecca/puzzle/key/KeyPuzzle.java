@@ -71,6 +71,20 @@ public abstract class KeyPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(key);
 	}
 	
+	////////// TOOL ////////////
+	
+	private static int noCritCount;
+	
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		KeyPuzzle.noCritCount = noCritCount;
+	}
+	
 	////////// TICK ////////////
 
 	private float alpha = 0.65f;

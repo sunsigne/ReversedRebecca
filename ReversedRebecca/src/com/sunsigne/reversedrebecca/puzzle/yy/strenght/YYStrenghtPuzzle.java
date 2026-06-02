@@ -87,6 +87,20 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 
 	private StrenghtProjectileObject projectile;
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		YYStrenghtPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TICK ////////////
 
 	private int WIN_CONDIITON_TIME = 14 * Game.SEC;

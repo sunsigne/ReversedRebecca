@@ -80,6 +80,20 @@ public abstract class HackPuzzle extends Puzzle {
 		return computer;
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		HackPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override

@@ -43,9 +43,9 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePreseting {
@@ -100,7 +100,7 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 		switch (dig_state) {
 		case DIGPICK:
 			return new DigPickToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
-		
+
 		case PICK:
 			return new DigPickaxeToolObject(this, x_pos_in_menu, y_pos_in_menu, getSize(), getSize(), selectable);
 
@@ -307,13 +307,27 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 		return exit_list.getList().isEmpty() == false;
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		DigPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetColCriterion() {
 		return 4;
 	}
-		
+
 	////////// RENDER ////////////
 
 	@Override

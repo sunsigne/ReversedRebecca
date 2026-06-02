@@ -98,6 +98,20 @@ public abstract class CowboyPuzzle extends Puzzle {
 		this.winning = winning;
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		CowboyPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TICK ////////////
 
 	private int time = 150;

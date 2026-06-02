@@ -25,7 +25,7 @@ public abstract class DiscoPuzzle extends Puzzle {
 	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);
-		
+
 		new SoundTask().playMusic("dance_floor", false, true);
 	}
 
@@ -99,13 +99,27 @@ public abstract class DiscoPuzzle extends Puzzle {
 			tempArrow.setVelY(-speed);
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		DiscoPuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetColCriterion() {
 		return 5;
 	}
-		
+
 	////////// RENDER ////////////
 
 	@Override

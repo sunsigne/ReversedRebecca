@@ -64,6 +64,20 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 		chessBoard.resetPieces();
 	}
 
+	////////// TOOL ////////////
+
+	private static int noCritCount;
+
+	@Override
+	protected int getStaticNoCritCount() {
+		return noCritCount;
+	}
+
+	@Override
+	protected void setStaticNoCritCount(int noCritCount) {
+		YYIntelligencePuzzle.noCritCount = noCritCount;
+	}
+
 	////////// TICK ////////////
 
 	private int WIN_CONDIITON_TIME = 15 * Game.SEC;
