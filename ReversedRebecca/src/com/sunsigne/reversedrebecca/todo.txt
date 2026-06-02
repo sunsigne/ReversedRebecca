@@ -37,9 +37,7 @@
 	vrai musique de fin de niveau
 	
 	////////// MILITARY ////////////
-	
-	dans le coffre : 30% de chance de crit ?
-	
+
 	bug :
 		- plus on monte les étage de la tour, plus ça lag
 
