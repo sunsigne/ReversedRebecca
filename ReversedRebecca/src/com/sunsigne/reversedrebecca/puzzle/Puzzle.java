@@ -83,7 +83,11 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 			return;
 		}
 
-		int critCount = 100 / toolPlayer.getCriticalChance();
+		int critCount = 100;
+		if (toolPlayer.getCriticalChance() > 0)
+			critCount = 100 / toolPlayer.getCriticalChance();
+		else
+			return;
 
 		if (1 + getStaticNoCritCount() < critCount)
 			return;

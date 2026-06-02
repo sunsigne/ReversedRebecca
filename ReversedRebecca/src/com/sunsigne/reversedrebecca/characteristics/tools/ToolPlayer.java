@@ -36,7 +36,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		String maxLine = tool + "MaxLvl=" + getDefaultMaxDifficulty();
 		String startLine = tool + "StartLvl=" + getDefaultStartDifficulty();
-		String criticalLine = tool + "CriticalChance=" + "0%";
+		String criticalLine = tool + "CriticalChance=" + "10%";
 
 		String new_content = content + br + br + maxLine + br + startLine + br + criticalLine;
 		new FileTask().write(file, new_content);
@@ -45,7 +45,7 @@ public abstract class ToolPlayer implements Difficulty {
 	////////// NAME ////////////
 
 	public abstract int getNum();
-	
+
 	public abstract String getName();
 
 	////////// DIFFICULTY ////////////
@@ -57,7 +57,7 @@ public abstract class ToolPlayer implements Difficulty {
 	protected String getDefaultMaxDifficulty() {
 		return LVL.CYAN.getName().toUpperCase();
 	}
-	
+
 	public LVL getMaxDifficulty() {
 		return getTool().max_difficulty;
 	}
@@ -74,7 +74,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		new UnlockedToolMaxLevelCondition().registerValue(this, getMaxDifficulty());
 	}
-	
+
 	private void loadMaxDifficulty() {
 		if (getMaxDifficulty() != LVL.NULL)
 			return;
@@ -98,7 +98,7 @@ public abstract class ToolPlayer implements Difficulty {
 	protected String getDefaultStartDifficulty() {
 		return LVL.NULL.getName().toUpperCase();
 	}
-	
+
 	public LVL getStartDifficulty() {
 		return getTool().start_difficulty;
 	}
@@ -142,7 +142,7 @@ public abstract class ToolPlayer implements Difficulty {
 	@Override
 	public void setDifficulty(LVL difficulty) {
 		boolean blinking = getTool().difficulty == LVL.NULL;
-		
+
 		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty))
 			getTool().difficulty = getMaxDifficulty();
 		else
@@ -172,7 +172,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// CRITICAL ////////////
 
-	private int criticalChance = -1;
+	private int criticalChance = 10;
 
 	public int getCriticalChance() {
 		return getTool().criticalChance;
@@ -183,7 +183,7 @@ public abstract class ToolPlayer implements Difficulty {
 	}
 
 	private void loadCriticalChance() {
-		if (getCriticalChance() != -1)
+		if (getCriticalChance() != 10)
 			return;
 
 		String txtCriticalChance = new FileTask().read(userData, getName() + "CriticalChance", file);
@@ -191,7 +191,7 @@ public abstract class ToolPlayer implements Difficulty {
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtCriticalChance.isEmpty()) {
 			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
-			txtCriticalChance = "0%";
+			txtCriticalChance = "10%";
 		}
 
 		getTool().criticalChance = Integer.valueOf(txtCriticalChance.replace("%", ""));
