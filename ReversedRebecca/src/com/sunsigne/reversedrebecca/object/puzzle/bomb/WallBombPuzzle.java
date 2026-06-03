@@ -37,20 +37,23 @@ public class WallBombPuzzle extends WallPuzzle implements MouseUserEvent, Gamepa
 		if (exploded == false)
 			return;
 
-			new CameraShaker().shaking(SHAKE.LITTLE);
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
-			
-			int gap = Size.XS / 2;
-			LAYER.PUZZLE.addObject(new ExplosionAnimationObject(getX() + gap, getY() + gap, false));
-			freeShoot();
+		new CameraShaker().shaking(SHAKE.LITTLE);
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
+
+		int gap = Size.XS / 2;
+		LAYER.PUZZLE.addObject(new ExplosionAnimationObject(getX() + gap, getY() + gap, false));
+		freeShoot();
 	}
 
-	private void freeShoot() {		
-		for(Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
-			if(tempUpdatable instanceof BulletBombObject == false)
+	private void freeShoot() {
+		for (Updatable tempUpdatable : LAYER.PUZZLE.getHandler().getList()) {
+			if (tempUpdatable instanceof BulletBombObject == false)
 				continue;
 
 			BulletBombObject bullet = (BulletBombObject) tempUpdatable;
+			if (bullet.isCritical())
+				return;
+
 			bullet.setCount(bullet.getCount() + 1);
 			return;
 		}
