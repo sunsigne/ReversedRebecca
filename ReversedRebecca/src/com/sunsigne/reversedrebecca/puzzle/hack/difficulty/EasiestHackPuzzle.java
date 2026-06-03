@@ -5,12 +5,14 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class EasiestHackPuzzle extends HackPuzzle {
 
-	public EasiestHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public EasiestHackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -23,7 +25,7 @@ public class EasiestHackPuzzle extends HackPuzzle {
 
 		// desktop content
 		ProcessorCPU[] cpu = createCPU();
-		
+
 		// root content
 		createDesktop(cpu);
 	}

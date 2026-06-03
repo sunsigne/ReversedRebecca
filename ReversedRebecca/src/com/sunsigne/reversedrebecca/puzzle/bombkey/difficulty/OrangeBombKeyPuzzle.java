@@ -7,12 +7,14 @@ import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.BombLockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.bombkey.locks.LittleBombLockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bombkey.BombKeyPuzzle;
 
 public class OrangeBombKeyPuzzle extends BombKeyPuzzle {
 
-	public OrangeBombKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public OrangeBombKeyPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 

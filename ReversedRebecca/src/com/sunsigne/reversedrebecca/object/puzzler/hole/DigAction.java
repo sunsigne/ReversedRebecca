@@ -18,6 +18,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.hole.upward.HoleUpwardObject;
 import com.sunsigne.reversedrebecca.object.puzzler.hole.upward.NullHoleUpwardObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzleFactory;
@@ -55,7 +56,7 @@ public class DigAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning, GenericListener actionOnLosing) {
+			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		return new DigPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
 				actionOnLosing);
 	}
@@ -80,14 +81,14 @@ public class DigAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
-		return new DigAnimationObject(x, y);
+	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y, boolean isCritical) {
+		return new DigAnimationObject(x, y, isCritical);
 	}
 
 	@Override
-	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
+	protected GenericListenerBoolean actionOnWinning(PuzzlerObject puzzlerObject) {
 
-		GenericListener actionOnWinning = () -> {
+		GenericListenerBoolean actionOnWinning = (isCritical) -> {
 			PuzzlerObject nullObject = getNullObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			Handler handler = puzzlerObject.getHandler();
 
@@ -96,7 +97,7 @@ public class DigAction extends OpenPuzzleAction {
 			triggerExit(handler, puzzlerObject, nullObject);
 
 			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
-					puzzlerObject.getY());
+					puzzlerObject.getY(), isCritical);
 			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);
@@ -119,8 +120,8 @@ public class DigAction extends OpenPuzzleAction {
 			HoleObject hole = (HoleObject) tempObject;
 			Action action = hole.getTripleAction().getAction(0);
 			DigAction digAction = (DigAction) action;
-			GenericListener listener = digAction.actionOnWinning(hole);
-			listener.doAction();
+			GenericListenerBoolean listener = digAction.actionOnWinning(hole);
+			listener.doAction(false);
 			return;
 		}
 

@@ -41,7 +41,7 @@ public class WallBombPuzzle extends WallPuzzle implements MouseUserEvent, Gamepa
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_medium");
 			
 			int gap = Size.XS / 2;
-			LAYER.PUZZLE.addObject(new ExplosionAnimationObject(getX() + gap, getY() + gap));
+			LAYER.PUZZLE.addObject(new ExplosionAnimationObject(getX() + gap, getY() + gap, false));
 			freeShoot();
 	}
 

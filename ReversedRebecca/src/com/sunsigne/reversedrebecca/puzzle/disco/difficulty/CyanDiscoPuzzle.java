@@ -4,13 +4,15 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.disco.DiscoPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class CyanDiscoPuzzle extends DiscoPuzzle {
 
-	public CyanDiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public CyanDiscoPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -39,8 +41,8 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	private int getY(int num) {
 		int start = 18;
 		int gap = 7;
-		int puzzle = - Size.XS; // only because Puzzle start the music
-		
+		int puzzle = -Size.XS; // only because Puzzle start the music
+
 		return getRow(start + num) + num * gap + puzzle;
 	}
 

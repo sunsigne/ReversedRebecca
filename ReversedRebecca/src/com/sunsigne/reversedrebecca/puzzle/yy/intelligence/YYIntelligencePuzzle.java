@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence.IntelligenceChessBoardObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.intelligence.IntelligenceLauncherObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -23,7 +24,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class YYIntelligencePuzzle extends Puzzle {
 
-	public YYIntelligencePuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public YYIntelligencePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);

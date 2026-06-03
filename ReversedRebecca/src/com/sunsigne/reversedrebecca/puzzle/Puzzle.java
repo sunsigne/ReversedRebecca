@@ -5,11 +5,13 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.physic.debug.SureCriticalMode;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -28,7 +30,7 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
-	public Puzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public Puzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		loadToolData(toolPlayer);
 		this.actionOnWinning = actionOnWinning;
 		this.actionOnLosing = actionOnLosing;
@@ -154,7 +156,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	////////// CLOSE ////////////
 
-	private GenericListener actionOnWinning;
+	private GenericListenerBoolean actionOnWinning;
 	private GenericListener actionOnLosing;
 
 	public void closePuzzle(boolean isPuzzleWon) {
@@ -169,9 +171,11 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		if (isPuzzleWon) {
 			if (isCritical == false)
 				setStaticNoCritCount(getStaticNoCritCount() + 1);
+			else
+				new CameraShaker().shaking(SHAKE.LITTLE);
 			new CameraShaker().shaking(getFactory().getVictoryShake());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
-			actionOnWinning.doAction();
+			actionOnWinning.doAction(isCritical);
 		} else {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
 			actionOnLosing.doAction();

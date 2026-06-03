@@ -8,13 +8,13 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
 public abstract class AnimationObject extends SuperAnimationObject {
 
-	public AnimationObject(int x, int y) {
-		this(x, y, 0, 0);
+	public AnimationObject(int x, int y, boolean isCritical) {
+		this(x, y, 0, 0, isCritical);
 	}
 
-	public AnimationObject(int x, int y, int w, int h) {
+	public AnimationObject(int x, int y, int w, int h, boolean isCritical) {
 		super(x, y, w, h);
-		loadAnimations();
+		loadAnimations(isCritical);
 	}
 
 	////////// TICK ////////////
@@ -47,8 +47,9 @@ public abstract class AnimationObject extends SuperAnimationObject {
 
 	private LimitedCycloid<BufferedImage> animation;
 
-	private void loadAnimations() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + getName());
+	private void loadAnimations(boolean isCritical) {
+		String critical = isCritical ? "critical/" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + critical + getName());
 		Animation images = new Animation(sheet);
 		animation = new LimitedCycloid<BufferedImage>(images.getImages());
 	}

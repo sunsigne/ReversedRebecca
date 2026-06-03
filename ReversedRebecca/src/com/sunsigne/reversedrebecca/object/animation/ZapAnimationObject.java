@@ -4,8 +4,8 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class ZapAnimationObject extends AnimationObject {
 
-	public ZapAnimationObject(int x, int y) {
-		super(x - Size.XS / 4, y - Size.M / 4, Size.XS / 2, Size.XS / 2);
+	public ZapAnimationObject(int x, int y, boolean isCritical) {
+		super(x - Size.XS / 4, y - Size.M / 4, Size.XS / 2, Size.XS / 2, isCritical);
 	}
 
 	////////// NAME ////////////

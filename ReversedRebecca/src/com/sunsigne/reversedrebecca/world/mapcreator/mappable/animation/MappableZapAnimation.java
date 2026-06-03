@@ -22,7 +22,7 @@ public class MappableZapAnimation implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new ZapAnimationObject(x, y);
+		return new ZapAnimationObject(x, y, false);
 	}
 
 	@Override

@@ -5,11 +5,13 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class YellowHackPuzzle extends HackPuzzle {
 
-	public YellowHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public YellowHackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -42,7 +44,7 @@ public class YellowHackPuzzle extends HackPuzzle {
 
 		addLocker(1, 2, image);
 		addReverser(windows, image);
-		
+
 		addLocker(1, 2, music);
 
 		addReverser(system);

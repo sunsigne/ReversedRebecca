@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.bomb.BombPuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
@@ -44,7 +45,7 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning, GenericListener actionOnLosing) {
+			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		return new BombPuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
 				actionOnLosing);
 	}
@@ -55,8 +56,8 @@ public class ExplodeRubbleAction extends OpenPuzzleAction {
 	}
 
 	@Override
-	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y) {
-		return new ExplosionAnimationObject(x, y);
+	public SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y, boolean isCritical) {
+		return new ExplosionAnimationObject(x, y, isCritical);
 	}
 
 	////////// KEYBOARD ////////////

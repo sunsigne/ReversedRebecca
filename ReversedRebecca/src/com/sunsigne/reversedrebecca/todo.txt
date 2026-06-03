@@ -73,9 +73,6 @@
 	6h - les custom "surname" devrait être dynamique
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 
-	1h / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
-	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
-
 	note : puzzle : cliquer = impact
 
 	////////// LVL001 ////////////

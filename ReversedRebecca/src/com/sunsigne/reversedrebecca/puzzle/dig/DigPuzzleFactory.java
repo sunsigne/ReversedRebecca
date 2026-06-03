@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.dig.difficulty.CyanDigPuzzle;
@@ -23,7 +24,7 @@ public class DigPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning, GenericListener actionOnLosing) {
+			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		if (devDifficulty != null)
 			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning, actionOnLosing);
 
@@ -40,7 +41,8 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
 			return new EasiestDigPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
@@ -56,7 +58,8 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
@@ -78,7 +81,8 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
@@ -100,7 +104,8 @@ public class DigPuzzleFactory implements PuzzleFactory {
 		return null;
 	}
 
-	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
@@ -123,12 +128,12 @@ public class DigPuzzleFactory implements PuzzleFactory {
 	}
 
 	////////// SOUND ////////////
-	
+
 	@Override
 	public String getOpeningSound() {
 		return "dig_fail";
 	}
-	
+
 	@Override
 	public String getVictorySound() {
 		return "dig_long";

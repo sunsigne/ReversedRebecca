@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectile
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -33,7 +34,8 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public abstract class YYStrenghtPuzzle extends Puzzle {
 
-	public YYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public YYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);
 	}

@@ -12,6 +12,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoPlayerArrowObject;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
@@ -22,7 +23,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
 public abstract class DiscoPuzzle extends Puzzle {
 
-	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public DiscoPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);
 

@@ -20,7 +20,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 public class YYedAnimationObject extends AnimationObject {
 
 	public YYedAnimationObject(int x, int y, GoalObject target, boolean heartless) {
-		super(x, y, Size.M - Size.XL / 2, Size.M - Size.XL / 2);
+		super(x, y, Size.M - Size.XL / 2, Size.M - Size.XL / 2, false);
 		GoalObject thiz = new GoalObject(x, y, true);
 		int sign = target.getX() - thiz.getX() < 0 ? -1 : 1;
 		this.velX = sign * 48;

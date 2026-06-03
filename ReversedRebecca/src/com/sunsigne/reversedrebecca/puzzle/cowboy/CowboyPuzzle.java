@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.cowboy.CowboyTargetObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.living.CowboyBadGuyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cowboy.living.CowboyRebeccaObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
@@ -20,7 +21,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_T
 
 public abstract class CowboyPuzzle extends Puzzle {
 
-	public CowboyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public CowboyPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);

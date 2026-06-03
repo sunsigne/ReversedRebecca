@@ -4,13 +4,15 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class HardestDigPuzzle extends DigPuzzle {
 
-	public HardestDigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public HardestDigPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -23,7 +25,7 @@ public class HardestDigPuzzle extends DigPuzzle {
 	public PresetMousePos getDefaultPreset() {
 		return L_LEFTMAX_UPMAX;
 	}
-	
+
 	////////// PUZZLE ////////////
 
 	@Override
@@ -31,7 +33,7 @@ public class HardestDigPuzzle extends DigPuzzle {
 		createDirtGrid();
 		createObstacles();
 		createTools();
-		
+
 		createExit();
 		createExit();
 		if (new RandomGenerator().getBoolean())
@@ -72,7 +74,7 @@ public class HardestDigPuzzle extends DigPuzzle {
 			setState(DIG_STATE.CRITICAL);
 			return;
 		}
-		
+
 		createTool(1, 2, DIG_STATE.PUNCH);
 		createBuriedShovel(1, 2);
 		setState(DIG_STATE.PUNCH);

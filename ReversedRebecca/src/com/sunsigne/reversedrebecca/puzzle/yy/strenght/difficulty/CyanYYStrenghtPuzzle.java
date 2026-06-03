@@ -3,10 +3,11 @@ package com.sunsigne.reversedrebecca.puzzle.yy.strenght.difficulty;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject.PROJECTILE_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 
 public class CyanYYStrenghtPuzzle extends YellowYYStrenghtPuzzle {
 
-	public CyanYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public CyanYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}

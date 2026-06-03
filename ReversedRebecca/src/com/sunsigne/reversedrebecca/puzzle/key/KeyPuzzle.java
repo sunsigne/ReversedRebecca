@@ -15,6 +15,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
@@ -30,7 +31,7 @@ import com.sunsigne.reversedrebecca.world.World;
 
 public abstract class KeyPuzzle extends Puzzle {
 
-	public KeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public KeyPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 	}

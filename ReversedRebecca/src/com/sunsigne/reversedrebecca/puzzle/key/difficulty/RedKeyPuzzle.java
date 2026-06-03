@@ -6,11 +6,12 @@ import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
 import com.sunsigne.reversedrebecca.object.puzzle.key.lock.UpsideDownLockObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.key.KeyPuzzle;
 
 public class RedKeyPuzzle extends KeyPuzzle {
 
-	public RedKeyPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public RedKeyPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 

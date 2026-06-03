@@ -6,12 +6,14 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorDesktop;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class EasierHackPuzzle extends HackPuzzle {
 
-	public EasierHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public EasierHackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -41,5 +43,5 @@ public class EasierHackPuzzle extends HackPuzzle {
 		getComputer().addObject(desktop);
 		LAYER.PUZZLE.addObject(desktop);
 	}
-	
+
 }

@@ -22,7 +22,7 @@ public class MappableUnlockAnimation implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new UnlockAnimationObject(x, y);
+		return new UnlockAnimationObject(x, y, false);
 	}
 
 	@Override

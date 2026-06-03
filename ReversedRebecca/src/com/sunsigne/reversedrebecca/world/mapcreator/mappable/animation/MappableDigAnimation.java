@@ -22,7 +22,7 @@ public class MappableDigAnimation implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new DigAnimationObject(x, y);
+		return new DigAnimationObject(x, y, false);
 	}
 
 	@Override

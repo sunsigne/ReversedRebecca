@@ -5,7 +5,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class OpenChestAnimationObject extends AnimationObject {
 
 	public OpenChestAnimationObject(int x, int y) {
-		super(x, y);
+		super(x, y, false);
 		setY(getY() - Size.XS);
 	}
 

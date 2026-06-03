@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.piranha.condition.global.LostPuzzleCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.WonPuzzleCondition;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -47,15 +48,15 @@ public abstract class OpenPuzzleAction extends Action {
 	////////// PUZZLE ////////////
 
 	public abstract Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
-			GenericListener actionOnWinning, GenericListener actionOnLosing);
+			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing);
 
 	public abstract PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y);
 
-	public abstract SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y);
+	public abstract SuperAnimationObject getAnimationObject(PuzzlerObject puzzlerObject, int x, int y, boolean isCritical);
 
-	protected GenericListener actionOnWinning(PuzzlerObject puzzlerObject) {
+	protected GenericListenerBoolean actionOnWinning(PuzzlerObject puzzlerObject) {
 
-		GenericListener actionOnWinning = () -> {
+		GenericListenerBoolean actionOnWinning = (isCritical) -> {
 			PuzzlerObject nullObject = getNullObject(puzzlerObject, puzzlerObject.getX(), puzzlerObject.getY());
 			Handler handler = puzzlerObject.getHandler();
 
@@ -67,7 +68,7 @@ public abstract class OpenPuzzleAction extends Action {
 			}
 
 			SuperAnimationObject animation = getAnimationObject(puzzlerObject, puzzlerObject.getX(),
-					puzzlerObject.getY());
+					puzzlerObject.getY(), isCritical);
 			LAYER.WORLD_TEXT.addObject(animation);
 
 			new WonPuzzleCondition().registerValue(puzzlerObject);

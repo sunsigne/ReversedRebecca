@@ -7,9 +7,9 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class UnlockAnimationObject extends SuperAnimationObject {
 
-	public UnlockAnimationObject(int x, int y) {
+	public UnlockAnimationObject(int x, int y, boolean isCritical) {
 		super(x, y);
-		loadImages();
+		loadImages(isCritical);
 		setY(getY() - Size.XS);
 		setVelY(-3);
 	}
@@ -51,8 +51,9 @@ public class UnlockAnimationObject extends SuperAnimationObject {
 	protected BufferedImage lockedImage;
 	protected BufferedImage unlockedImage;
 
-	protected void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + getName());
+	protected void loadImages(boolean isCritical) {
+		String critical = isCritical ? "critical/" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + critical + getName());
 
 		lockedImage = getSheetSubImage(sheet, 1);
 		unlockedImage = getSheetSubImage(sheet, 2);

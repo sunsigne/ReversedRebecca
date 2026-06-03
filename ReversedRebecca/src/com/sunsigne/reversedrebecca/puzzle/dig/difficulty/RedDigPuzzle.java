@@ -4,13 +4,14 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class RedDigPuzzle extends DigPuzzle {
 
-	public RedDigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public RedDigPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -23,14 +24,14 @@ public class RedDigPuzzle extends DigPuzzle {
 	public PresetMousePos getDefaultPreset() {
 		return L_LEFTMAX_UPMAX;
 	}
-	
+
 	////////// PUZZLE ////////////
 
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
 		createObstacles();
-		createTools();		
+		createTools();
 		createExit();
 	}
 
@@ -67,7 +68,7 @@ public class RedDigPuzzle extends DigPuzzle {
 			setState(DIG_STATE.CRITICAL);
 			return;
 		}
-		
+
 		createTool(1, 2, DIG_STATE.PUNCH);
 		createBuriedShovel(1, 2);
 		setState(DIG_STATE.PUNCH);

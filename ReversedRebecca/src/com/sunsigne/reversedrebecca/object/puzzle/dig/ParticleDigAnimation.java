@@ -26,7 +26,7 @@ public class ParticleDigAnimation extends DigAnimationObject {
 	}
 
 	protected ParticleDigAnimation(DigPuzzle puzzle, int x, int y) {
-		super(x + puzzle.getSize() / 8, y + puzzle.getSize() / 6);
+		super(x + puzzle.getSize() / 8, y + puzzle.getSize() / 6, false);
 		this.puzzle = puzzle;
 	}
 

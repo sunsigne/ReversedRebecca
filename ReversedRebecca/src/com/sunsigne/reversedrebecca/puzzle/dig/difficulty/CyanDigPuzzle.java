@@ -3,13 +3,15 @@ package com.sunsigne.reversedrebecca.puzzle.dig.difficulty;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DIG_STATE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.dig.DigPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class CyanDigPuzzle extends DigPuzzle {
 
-	public CyanDigPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public CyanDigPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -22,14 +24,14 @@ public class CyanDigPuzzle extends DigPuzzle {
 	public PresetMousePos getDefaultPreset() {
 		return M_LEFT_UP;
 	}
-	
+
 	////////// PUZZLE ////////////
 
 	@Override
 	public void createPuzzle() {
 		createDirtGrid();
 		createObstacles();
-		createTools();		
+		createTools();
 		createExit();
 	}
 
@@ -46,7 +48,7 @@ public class CyanDigPuzzle extends DigPuzzle {
 		createDirt(9, 5);
 		createDirt(11, 5);
 	}
-	
+
 	private void createObstacles() {
 		createRock(2);
 	}
@@ -57,9 +59,9 @@ public class CyanDigPuzzle extends DigPuzzle {
 			setState(DIG_STATE.CRITICAL);
 			return;
 		}
-		
+
 		createTool(2, 3, DIG_STATE.DIGPICK);
 		setState(DIG_STATE.DIGPICK);
 	}
-	
+
 }

@@ -6,12 +6,13 @@ import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtPlayerObje
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject;
 import com.sunsigne.reversedrebecca.object.puzzle.yy.strenght.StrenghtProjectileObject.PROJECTILE_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.yy.strenght.YYStrenghtPuzzle;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class YellowYYStrenghtPuzzle extends YYStrenghtPuzzle {
 
-	public YellowYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning,
+	public YellowYYStrenghtPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}

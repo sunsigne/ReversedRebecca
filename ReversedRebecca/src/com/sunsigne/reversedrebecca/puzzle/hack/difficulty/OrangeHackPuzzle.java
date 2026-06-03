@@ -5,11 +5,13 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class OrangeHackPuzzle extends HackPuzzle {
 
-	public OrangeHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public OrangeHackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -25,7 +27,7 @@ public class OrangeHackPuzzle extends HackPuzzle {
 
 		// system content
 		ProcessorFolder windows = createFolder(translate("FolderWindows"), cpu);
-		
+
 		// desktop content
 		ProcessorFolder system = createSystem(windows, peripherals);
 		ProcessorEatable[] mp3 = createMP3Files();
@@ -42,12 +44,12 @@ public class OrangeHackPuzzle extends HackPuzzle {
 
 		addTerminator(image);
 		addReverser(windows, image);
-		
+
 		addLocker(1, 3, music);
 		addParalyzer(music, peripherals);
-		
+
 		addParalyzer(system);
-		addLocker(1, 2, system);		
+		addLocker(1, 2, system);
 	}
 
 }

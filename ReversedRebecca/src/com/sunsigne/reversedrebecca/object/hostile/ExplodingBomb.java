@@ -76,7 +76,7 @@ public abstract class ExplodingBomb extends GameObject implements CollisionReact
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_small");
 		handler.removeObject(this);
-		handler.addObject(new ExplosionAnimationObject(getX(), getY()));
+		handler.addObject(new ExplosionAnimationObject(getX(), getY(), false));
 	}
 
 	////////// TEXTURE ////////////

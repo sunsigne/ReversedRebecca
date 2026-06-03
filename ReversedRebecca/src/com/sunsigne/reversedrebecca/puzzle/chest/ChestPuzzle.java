@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.chest.ChestCard;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -35,7 +36,7 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 
 	private boolean userData = false;
 
-	public ChestPuzzle(String lootFile, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public ChestPuzzle(String lootFile, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(null, actionOnWinning, actionOnLosing);
 
 		this.lootFile = lootFile;

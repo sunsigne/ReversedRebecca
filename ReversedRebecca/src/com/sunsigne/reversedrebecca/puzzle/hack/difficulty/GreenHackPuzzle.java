@@ -5,11 +5,13 @@ import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorCPU;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorEatable;
 import com.sunsigne.reversedrebecca.object.puzzle.hack.ProcessorFolder;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.hack.HackPuzzle;
 
 public class GreenHackPuzzle extends HackPuzzle {
 
-	public GreenHackPuzzle(ToolPlayer toolPlayer, GenericListener actionOnWinning, GenericListener actionOnLosing) {
+	public GreenHackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
 
@@ -36,9 +38,9 @@ public class GreenHackPuzzle extends HackPuzzle {
 
 		// antivirus
 		addLocker(2, 3, windows);
-		
+
 		addLocker(1, 2, music);
-		
+
 		addReverser(system);
 		addLocker(system);
 	}

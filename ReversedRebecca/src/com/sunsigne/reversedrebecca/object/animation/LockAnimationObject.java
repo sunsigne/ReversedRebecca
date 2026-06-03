@@ -8,7 +8,7 @@ import com.sunsigne.reversedrebecca.system.Size;
 public class LockAnimationObject extends UnlockAnimationObject {
 
 	public LockAnimationObject(int x, int y) {
-		super(x, y);
+		super(x, y, false);
 		setY(getY() - Size.XS - Size.XL / 8);
 		setVelY(5);
 	}
@@ -23,7 +23,7 @@ public class LockAnimationObject extends UnlockAnimationObject {
 	////////// TEXTURE ////////////
 
 	@Override
-	protected void loadImages() {
+	protected void loadImages(boolean isCritical) {
 		BufferedImage sheet = new ImageTask().loadImage("textures/animation/" + super.getName());
 
 		lockedImage = getSheetSubImage(sheet, 1);

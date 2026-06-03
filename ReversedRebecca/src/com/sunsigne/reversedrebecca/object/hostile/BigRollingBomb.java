@@ -45,7 +45,7 @@ public class BigRollingBomb extends RollingBomb implements CollisionReactor {
 		
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "explosion_large");
 		handler.removeObject(this);
-		handler.addObject(new ExplosionAnimationObject(getX(), getY(), Size.XL, Size.XL));
+		handler.addObject(new ExplosionAnimationObject(getX(), getY(), Size.XL, Size.XL, false));
 
 		createSubBombs(handler);
 	}

@@ -22,7 +22,7 @@ public class MappableExplosionAnimation implements Mappable {
 
 	@Override
 	public GameObject createObject(int x, int y) {
-		return new ExplosionAnimationObject(x, y);
+		return new ExplosionAnimationObject(x, y, false);
 	}
 
 	@Override
