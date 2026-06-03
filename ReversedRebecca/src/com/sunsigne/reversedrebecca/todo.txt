@@ -48,9 +48,7 @@
 	mettre musique sur Patreon
 
 	à faire :
-
-	- ajouter des dialogues par défauts avec le runner
-	- entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
+	- cohérence Jessy avec darwin
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 	
 	à faire à la fin : 
@@ -58,6 +56,7 @@
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- indices des plantes (inclus, l'astuce d'aller à l'infiermirie pour se soigner)
+	- entre le garde et l'armurerie, guider le joueur pour la récupération de la clef verte (càd, lui dire qu'il faut le faire. Utiliser le cactus entre le garde et l'armurerie, car le joueur pense que c'est une plante verte)
 	- checkpoints
 	- les 3 compteurs (dont "victoire contre un chef" = met l'accent sur la victoire et impossible de faire 0)
 
@@ -76,7 +75,6 @@
 
 	1h / puzzle - ? créer une animation critique de résolution de puzzle ? (sur tout l'écran / sur la couche puzzle, pas une petite animation de type "animation" sur la couche world)
 	1h - créer une animation spéciale pour les puzzles critiques (la petite animation sur world, celle de base mais en jaune par exemple ?)
-	1h - étudier le système de % de critique : le key puzzle est un bon exemple : pourquoi s'embêter à résoudre le puzzle quand on peut spam l'échec jusqu'à obtenir un critique ? En plus, je n'aime pas l'aléatoire
 
 	note : puzzle : cliquer = impact
 
