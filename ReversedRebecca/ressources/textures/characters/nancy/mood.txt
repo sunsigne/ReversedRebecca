@@ -9,6 +9,11 @@ surprised = 1,4
 
 sad=2,1
 sad_side=2,2
+cry=2,3
+cry_side=2,4
+cry_closed=2,5
+cry_smile=2,6
+cry_smile_var=2,7
 
 ////// BLUSH //////
 

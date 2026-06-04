@@ -1,3 +1,17 @@
+% NANCY
+nancy = DOWN = cry_side = Oh ! Tu es là…@Je suis désolé que tu me voies comme ça…
+nancy = DOWN = cry_closed = J'aimerais que tu me laisses seule, s'il te plaît…
+
+
+% NANCY_CRYING
+nancy = DOWN = cry_closed = Pardon… C'est juste que… Darwin est décédé.@La nouvelle a du mal à passer…
+nancy = DOWN = cry_side = On ne se connaissait pas plus que ça, pourtant…
+nancy = DOWN = cry_closed = Je suis médecin parce que, je veux aider les gens@qui en ont besoin.
+nancy = DOWN = cry = Mais la mort, c'est définitif… Je ne peux pas l'aider.
+nancy = DOWN = cry_smile = Merci d'être venue me voir.@Tu peux me laisser, ça va aller. Vraiment.
+nancy = DOWN = cry_smile_var = Peut-être à un de ces jours, Rebecca.@Dans une autre vie.
+
+
 % WHAT_DID_I_DO
 militaryman = RIGHT = shooter_shocked = Ho mon Dieu ! Qu'est-ce que j'ai fait !
 
@@ -20,11 +34,11 @@ jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un 
 
 
 % JESSY_NEXT
-jessy_military = DOWN = deep = Tu permets ? Je suis en train de prendre mon pied, là.
+jessy_military = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
 
 
 % JESSY_BOMBS
-jessy_military = player = doubt = Hein ? ho, Oublie ça.@Je n'ai plus envie de jouer avec toi.
+jessy_military = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
 
 
 % SERGENT
