@@ -92,4 +92,4 @@ OBJ-41 = Armory Collapse Scanner
 ///// HALL OF DESTINY /////
 
 NPC-15 = Dave
-NPC-16 = Destiny Camille
+NPC-16 = Camille

@@ -68,12 +68,12 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 	public int getSheetWidth() {
 		return living.getWidth() / 6;
 	}
-	
+
 	@Override
 	public int getSheetHeight() {
 		return living.getHeight() / 6;
 	}
-	
+
 	@Override
 	public int getSheetColCriterion() {
 		return -1;
@@ -107,7 +107,8 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 
 		do {
 			animation[index] = getSheetSubImage(loadImage(), col[index], row, getSheetWidth(), getSheetHeight());
-			highlight = getSheetSubImage(loadHighlightImage(), col[index], row, getSheetWidth() + 2, getSheetHeight() + 2);
+			highlight = getSheetSubImage(loadHighlightImage(), col[index], row, getSheetWidth() + 2,
+					getSheetHeight() + 2);
 			map.put(animation[index], highlight);
 			index++;
 		} while (index < col.length);
@@ -118,11 +119,20 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 	private BufferedImage living_img;
 	protected BufferedImage highlight_image;
 
+	private String getFormattedLivingName() {
+		if (living.getTextureName().contains("_") == false)
+			return living.getTextureName();
+
+		String[] names = living.getTextureName().split("_");
+
+		return names[0] + "/" + names[1];
+	}
+
 	private BufferedImage loadImage() {
 		if (living_img != null)
 			return living_img;
 
-		String path = "textures/characters/" + living.getTextureName() + "/" + "world";
+		String path = "textures/characters/" + getFormattedLivingName() + "/" + "world";
 		living_img = new ImageTask().loadImage(path, true);
 
 		// load error character instead of missing texture
@@ -136,7 +146,7 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 		if (highlight_image != null)
 			return highlight_image;
 
-		String path = "textures/characters/" + living.getTextureName() + "/" + "highlight";
+		String path = "textures/characters/" + getFormattedLivingName() + "/" + "highlight";
 		highlight_image = new ImageTask().loadImage(path, true);
 
 		// load error character instead of missing texture
@@ -145,7 +155,7 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 
 		return highlight_image;
 	}
-	
+
 	////////// RENDER ////////////
 
 	public BufferedImage getImage() {

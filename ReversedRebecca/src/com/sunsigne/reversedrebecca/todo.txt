@@ -38,15 +38,23 @@
 	
 	////////// MILITARY ////////////
 
+	bug :
+		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+
 	à faire en gentil :
 	- tout
 	- indices des plantes
 
-	bug :
-		- plus on monte les étage de la tour, plus ça lag
-
 	trier les dossiers : 
-		- trier les personnages et leur gender_swap (rebecca devrait être un seul dossier par exemple)
+		+ double-y(\ssj2)\highlight inexistant, et génère un rapport d'erreur
+		- amiranda -> Amir = Miranda
+		- julomeo -> Roméo  = Juliette
+		- dupont -> Xavier = Venera
+		- jamessy -> Jessy = James
+		- Doug = ?
+		- Nancy = Nolan
+		- Marie = ?
+		- Mika = Michelle ? (trouver + joli)
 
 	mettre musique sur Patreon
 

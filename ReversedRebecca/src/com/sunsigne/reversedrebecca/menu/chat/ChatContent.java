@@ -29,7 +29,7 @@ public class ChatContent implements Updatable {
 	private boolean userData = false;
 
 	public ChatContent(String living_name, String mood, String text, String voice) {
-		this.living_name = living_name;
+		this.living_name = getFormattedLivingName(living_name);
 		this.mood = mood;
 
 		// WARNING ! you should NOT use more than one "@" by line
@@ -46,6 +46,14 @@ public class ChatContent implements Updatable {
 
 		lettersAttributionFromSentences();
 		pausetime = 10; // offset the loading delay
+	}
+
+	private String getFormattedLivingName(String living_name) {
+		if (living_name.contains("_") == false)
+			return living_name;
+
+		String[] names = living_name.split("_");
+		return names[0] + "/" + names[1];
 	}
 
 	////////// TEXT ////////////
@@ -209,11 +217,12 @@ public class ChatContent implements Updatable {
 	}
 
 	private void loadImage() {
-		String path = "textures/characters/" + living_name + "/";
-		BufferedImage sheet = new ImageTask().loadImage(path + "dialogue", true);
+		String name = living_name.contains("/") ? living_name.split("/")[0] : living_name;
+		String path = "textures/characters/";
+		BufferedImage sheet = new ImageTask().loadImage(path + living_name + "/" + "dialogue", true);
 
 		if (living_name.equalsIgnoreCase("error") == false)
-			image = getSheetSubImage(sheet, path + "mood.txt");
+			image = getSheetSubImage(sheet, path + name + "/" +  "mood.txt");
 
 		// load error character instead of missing texture
 		if (image == null) {
