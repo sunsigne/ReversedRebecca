@@ -65,6 +65,10 @@ object = player = playful = Pardon, je ne voulais pas te mettre mal à l'aise.
 object = player = excited = En tout cas, c'est avec plaisir que je te soignerai@si tu as besoin.
 
 
+% SHOOTING_RANGE
+player = object = fake_smile = (Le stand de tir… Oui… Il n'y a aucun problème là-bas…)
+
+
 % WHOS_YOUR_GIRLFRIEND
 object = player = happy = Elle s'appelle Jessy. Elle doit être au stand de tir@en ce moment.
 object = player = playful = Tu devrais aller lui parler, elle pourrait te plaire.

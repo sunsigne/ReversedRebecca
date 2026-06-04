@@ -19,6 +19,14 @@ jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
 jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
 
 
+% JESSY_NEXT
+jessy_military = DOWN = deep = Tu permets ? Je suis en train de prendre mon pied, là.
+
+
+% JESSY_BOMBS
+jessy_military = player = doubt = Hein ? ho, Oublie ça.@Je n'ai plus envie de jouer avec toi.
+
+
 % SERGENT
 militaryman = UP = sergent_yelling = C'est une faute inqualifiable, soldat ! Vous serez@traduit en cour martiale ! Le trou vous attend !
 

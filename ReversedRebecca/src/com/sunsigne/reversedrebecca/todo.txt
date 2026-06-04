@@ -38,6 +38,17 @@
 	
 	////////// MILITARY ////////////
 
+	à tester :
+	- jessy ta avec darwin
+	- jessy ta avec darwin alors qu'on voulait lui donner les bombes
+	- nancy qui dit d'aller parler à jessy
+	- jessy ne darwin plus une fois en chemin vers l'armurerie
+	- darwin lancé alors que nancy arrive
+	- darwin lancé alors que nancy est sur place
+	à faire : 
+	- le dialogue de nancy lorsqu'elle part pleurer
+
+
 	bug :
 		- plus on monte les étage de la tour, plus ça lag
 
@@ -48,7 +59,6 @@
 	mettre musique sur Patreon
 
 	à faire :
-	- cohérence Jessy avec darwin
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle)
 	
 	à faire à la fin : 

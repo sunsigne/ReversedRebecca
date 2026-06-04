@@ -51,10 +51,6 @@ player = object = unhappy = Elle ne veut pas y aller.
 object = player = angry_var2 = Pardon ?! Je réglerai ça avec elle plus tard.@Maintenant, dégage.
 
 
-% BYE_NANCY
-object = nancy = Tu peux disposer Nancy, je dois parler à notre amie.
-
-
 % RENDEZ_VOUS
 jessy_military = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J'ai assez envie d'utiliser mes menottes sur toi.
 jessy_military = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
