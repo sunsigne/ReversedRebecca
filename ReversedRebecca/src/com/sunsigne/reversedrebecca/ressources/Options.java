@@ -32,6 +32,10 @@ public class Options {
 		line.addObject("Texts=medium");
 		line.addObject("Difficulty=normal");
 		line.getList().add("");
+		line.addObject("/////BONUS/////");
+		line.getList().add("");
+		line.addObject("Living=default");
+		line.getList().add("");
 		line.addObject("/////ACTION/////");
 		line.getList().add("");
 		line.getList().add("Highlight=bright");
