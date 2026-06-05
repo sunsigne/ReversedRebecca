@@ -34,7 +34,7 @@ public class Options {
 		line.getList().add("");
 		line.addObject("/////BONUS/////");
 		line.getList().add("");
-		line.addObject("Living=default");
+		line.addObject("PreferredAttraction=default");
 		line.getList().add("");
 		line.addObject("/////ACTION/////");
 		line.getList().add("");
