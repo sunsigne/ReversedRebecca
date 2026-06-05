@@ -46,7 +46,6 @@
 	- indices des plantes
 
 	trier les dossiers : 
-		+ double-y(\ssj2)\highlight inexistant, et génère un rapport d'erreur
 		- amiranda -> Amir = Miranda
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
