@@ -46,7 +46,7 @@
 	- indices des plantes
 
 	trier les dossiers : 
-		- amiranda -> Amir = Miranda
+		- amiranda -> Amir = Miranda (fait mais pas la voix)
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
 		- jamessy -> Jessy = James
