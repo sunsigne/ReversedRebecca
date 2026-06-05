@@ -50,10 +50,10 @@
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
 		- jamessy -> Jessy = James
-		- Doug = ?
-		- Nancy = Nolan
-		- Marie = ?
-		- Mika = Michelle ? (trouver + joli)
+		- dougly -> Dolly (Dolores) = Doug (Douglas)
+		- nolancy -> Nancy = Nolan
+		- marichel = Michel = Marie
+		- miaka -> Mika = Mia
 
 	mettre musique sur Patreon
 

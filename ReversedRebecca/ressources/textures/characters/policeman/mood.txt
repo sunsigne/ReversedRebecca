@@ -3,9 +3,9 @@
 butch=1,1
 butch_smirk=1,2
 
-////// JAMES //////
+////// ARCHER //////
 
-james=2,1
+archer=2,1
 
 ////// MIAOUSS //////
 

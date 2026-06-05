@@ -21,7 +21,7 @@ OBJ-42 = Table Hole
 ///// RECEPTION /////
 
 NPC-01 = Sarah
-NPC-02 = Policeman (Up) : James
+NPC-02 = Policeman (Up) : Archer
 NPC-03 = Policeman (Left) : Miaouss
 NPC-04 = Policewoman (Down) : Cassidy
 NPC-05 = Policewoman (Right) : Jessy

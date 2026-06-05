@@ -15,8 +15,8 @@ policeman = player = miaouss = La blague a assez durée.
 policeman = player = miaouss = Vous êtes en état d'arrestation.
 
 
-% PLAYER_SPOTTED_JAMES_WITHIN_DESK
-policeman = player = james = Cordialement, dehors.
+% PLAYER_SPOTTED_ARCHER_WITHIN_DESK
+policeman = player = archer = Cordialement, dehors.
 
 
 % PLAYER_SPOTTED_MIAOUSS_DISGUISED
@@ -38,9 +38,9 @@ policeman = player = miaouss = Ton premier jour commence très mal !@Je vais en 
 policeman = player = miaouss = Celle-là, tu l'auras pas volé.
 
 
-% PLAYER_SPOTTED_JAMES_WITHIN_DESK_DISGUISED
-policeman = player = james = C'est une blague ?
-policeman = player = james = Désolé, mais elle est très mauvaise. Je vais@devoir vous arrêter pour port illégal d'uniforme.
+% PLAYER_SPOTTED_ARCHER_WITHIN_DESK_DISGUISED
+policeman = player = archer = C'est une blague ?
+policeman = player = archer = Désolé, mais elle est très mauvaise. Je vais@devoir vous arrêter pour port illégal d'uniforme.
 player = policewoman = sad = (J'ai déconné, là…)
 
 

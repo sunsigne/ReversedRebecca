@@ -1,15 +1,15 @@
 % INTRODUCTION
-policeman = DOWN = james = So, to summarize your story:
-policeman = DOWN = james = A folk named Vladimir Wolanski came today,@to the address indicated, and broke the door…
+policeman = DOWN = archer = So, to summarize your story:
+policeman = DOWN = archer = A folk named Vladimir Wolanski came today,@to the address indicated, and broke the door…
 sarah = UP = angry = … exploded the door!
-policeman = DOWN = james = Yes… yes… broke down the door with carnival@boom-booms and left, taking some papers…
+policeman = DOWN = archer = Yes… yes… broke down the door with carnival@boom-booms and left, taking some papers…
 sarah = UP = angry_var = … confidential plans for a government project!
-policeman = DOWN = james = Yeah… Sure… Taking your world-saving doodles.
-policeman = DOWN = james = So… That's all?
+policeman = DOWN = archer = Yeah… Sure… Taking your world-saving doodles.
+policeman = DOWN = archer = So… That's all?
 sarah = UP = angry = What do you mean "so, that's all"?@It's very serious!
-policeman = DOWN = james = I've registered your complaint. @Do you want me to print it?
+policeman = DOWN = archer = I've registered your complaint. @Do you want me to print it?
 sarah = UP = angry_var = BUT IT'S VERY SERIOUS!
-policeman = DOWN = james = … So… Shall I print it bigger?
+policeman = DOWN = archer = … So… Shall I print it bigger?
 sarah = UP = pikachu_face = …
 sarah = player = angry = Come on, Rebecca. Let's go.
 

@@ -15,8 +15,8 @@ policeman = player = miaouss = This joke has gone on long enough.
 policeman = player = miaouss = You are under arrest.
 
 
-% PLAYER_SPOTTED_JAMES_WITHIN_DESK
-policeman = player = james = Politely, out.
+% PLAYER_SPOTTED_ARCHER_WITHIN_DESK
+policeman = player = archer = Politely, out.
 
 
 % PLAYER_SPOTTED_MIAOUSS_DISGUISED
@@ -38,9 +38,9 @@ policeman = player = miaouss = Your first day is off to a very bad start! @I'll 
 policeman = player = miaouss = You deserved that one.
 
 
-% PLAYER_SPOTTED_JAMES_WITHIN_DESK_DISGUISED
-policeman = player = james = Is this a joke?
-policeman = player = james = Sorry, but this is a very bad one. I'll have@to arrest you for illegally wearing an uniform.
+% PLAYER_SPOTTED_ARCHER_WITHIN_DESK_DISGUISED
+policeman = player = archer = Is this a joke?
+policeman = player = archer = Sorry, but this is a very bad one. I'll have@to arrest you for illegally wearing an uniform.
 player = policewoman = sad = (I messed up hard…)
 
 
