@@ -38,6 +38,8 @@
 	
 	////////// MILITARY ////////////
 
+	- amiranda -> Amir = Miranda (finir l'adaptation dynamique en fonction des réglages du menu)
+
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 
@@ -46,7 +48,7 @@
 	- indices des plantes
 
 	trier les dossiers : 
-		- amiranda -> Amir = Miranda (fait mais pas la voix)
+
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
 		- jamessy -> Jessy = James

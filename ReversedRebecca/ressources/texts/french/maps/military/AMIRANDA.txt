@@ -12,7 +12,7 @@ object = player = happy = Juste à temps ! Merci. Au fait, moi, c'est Amir.@Ravi
 player = object = happy = Enchantée. Moi, c'est Rebecca.
 object = player = worry = Mais dis-moi, tu n'es pas d'ici…@Qu'est-ce qui t'amène dans ce camp ?
 player = object = worry = C'est une longue histoire… Mais pour résumer :@je dois parler au chef.
-object = player = happy = Double Y ? C'est un homme adorable. Et quel@appétit ! Six demi-douzaine d'oeuf tous les matins !
+object = player = happy = Double Y ? C'est un homme adorable. Et quel@appétit ! Six demi-douzaine d'oeufs tous les matins !
 object = player = worry = Dis-moi chouquette, je suis désolé mais…@Tu crois que tu peux me rendre un autre service ?
 object = player = worry = J'ai ce repas que je dois livrer au prisonnier@en isolement, mais je suis débordé en cuisine…
 object = player = happy = Son nom est Roméo, et il n'est pas dangereux.@Tu pourrais lui apporter ? Tu serais une crème.

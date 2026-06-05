@@ -40,7 +40,7 @@ public class ChatContent implements Updatable {
 		this.currentText[1] = "";
 
 		if (voice == null)
-			this.voice = living_name.contains("_") ? living_name.split("_")[0] : living_name;
+			this.voice = getFormattedVoice(living_name);
 		else
 			this.voice = voice;
 
@@ -54,6 +54,17 @@ public class ChatContent implements Updatable {
 
 		String[] names = living_name.split("_");
 		return names[0] + "/" + names[1];
+	}
+
+	private String getFormattedVoice(String living_name) {
+		if (living_name.contains("_") == false)
+			return living_name;
+
+		String[] names = living_name.split("_");
+		if (new FileTask().doesExist(false, "audio/voice/" + names[0] + ".wav"))
+			return names[0];
+
+		return names[1];
 	}
 
 	////////// TEXT ////////////
@@ -222,7 +233,7 @@ public class ChatContent implements Updatable {
 		BufferedImage sheet = new ImageTask().loadImage(path + living_name + "/" + "dialogue", true);
 
 		if (living_name.equalsIgnoreCase("error") == false)
-			image = getSheetSubImage(sheet, path + name + "/" +  "mood.txt");
+			image = getSheetSubImage(sheet, path + name + "/" + "mood.txt");
 
 		// load error character instead of missing texture
 		if (image == null) {
