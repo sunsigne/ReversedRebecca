@@ -33,7 +33,7 @@ public class LivingOption {
 	}
 
 	private static String getValueToRead() {
-		return "Living";
+		return "PreferredAttraction";
 	}
 
 	public void registerType(LIVING_TYPE livingType) {

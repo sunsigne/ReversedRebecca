@@ -255,3 +255,18 @@ $ -> PARSE_NUMBER = NUMBER_SETTINGS -> TRUE ? DO_A / DO_B
 
 Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le réglage des niveau est-il défini sur « chiffre ? » ?
 - si oui, effectuer DO_A, si non, effectuer DO_B.
+
+
+
+////// PREFFERED_ATTRACTION //////
+
+Le Type de Requête PREFFERED_ATTRACTION permet de vérifier si le réglage concernant la préférence sexuelle du joueur est le même que celui en Cible (DEFAULT, MALE ou FEMALE).
+
+Exemple :
+TIME -> 0 = GOTO -> NAME:AMIR, TEXTURE
+$ -> TEXTURE = PREFFERED_ATTRACTION -> FEMALE ? TEXTURE_NAME:MIRANDA / TEXTURE_NAME:AMIR
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le réglage de la préférence sexuelle du joueur est-il réglé sur « FEMALE » ?
+- si oui, le personnage sera Miranda. Si non, il sera Amir.
+
+Note : le choix « si non » englobe le choix « par défaut ».

@@ -25,7 +25,6 @@ public abstract class ConditionalRequest implements Request {
 	}
 
 	protected void doConditionalAction(PiranhaObject object, String target) {
-
 		boolean isMet = analyseCondition(object, target);
 		String action = defineAction(isMet, target);
 		gotoAction(object, action);
