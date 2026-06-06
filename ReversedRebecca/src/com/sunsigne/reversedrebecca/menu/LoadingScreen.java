@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.PhysicFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
@@ -45,7 +47,7 @@ public class LoadingScreen implements Updatable, PhysicFree, TickFree {
 		g.setColor(Color.WHITE);
 		g.drawString(text.toUpperCase() + "...", 30, Window.HEIGHT - 40);
 
-		if (saving)
+		if (saving && DifficultyOption.getDifficulty() != GAME_DIFFICULTY.HARD)
 			drawProgressSaved(g);
 	}
 

@@ -28,7 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	1h00 - faire en sorte que quitter un niveau en hard provoque la mort. 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau

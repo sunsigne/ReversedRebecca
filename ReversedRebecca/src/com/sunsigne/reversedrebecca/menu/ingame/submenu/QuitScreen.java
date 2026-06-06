@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
@@ -107,6 +108,9 @@ public class QuitScreen extends MenuIngameScreen {
 
 	private void loadTitleScreen() {
 		LAYER.LOADING.addObject(new LoadingScreen());
+		
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
+			new Save().resetProgression();
 
 		new MenuIngameController().unloadResumeScreen();
 		World.get().destroy();

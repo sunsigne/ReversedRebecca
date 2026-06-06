@@ -10,10 +10,12 @@ import com.sunsigne.reversedrebecca.piranha.Piranha;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Options;
+import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.achievement.Achievements;
 import com.sunsigne.reversedrebecca.ressources.images.Textures;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.camera.Camera;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -46,6 +48,9 @@ public class RessourceLoader {
 		new Textures().loadRessources();
 		new Achievements().loadRessources();
 		new PausePreventer().loadRessources();
+		
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
+			new Save().resetProgression();
 	}
 
 }
