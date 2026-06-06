@@ -28,9 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	bug : 
-	novatech : sarah et alicia se sont bloquée à cause d'une porte (Pathfinding pb, je pensais l'avoir réglé mais non)
-
 	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 

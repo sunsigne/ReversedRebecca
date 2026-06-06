@@ -337,8 +337,13 @@ public class PathFinder implements Position {
 
 		GameList<PathPointObject> valid_path_point_list = createValidPathPointList();
 
-		if (valid_path_point_list.getList().isEmpty())
+		if (valid_path_point_list.getList().isEmpty()) {
+			if (scanningTwoPiranhasBlockingEachOther == false) {
+				scanningTwoPiranhasBlockingEachOther = true;
+				return findPath(true);
+			}
 			return DIRECTION.NULL;
+		}
 
 		boolean pathDoesExist = true;
 
