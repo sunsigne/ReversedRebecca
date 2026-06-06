@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
@@ -14,7 +16,10 @@ public class ResumeScreen extends MenuIngameScreen {
 
 	public ResumeScreen() {
 		super(RESUME);
-		loadText();
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
+			loadHardText();
+		else
+			loadDefaultText();
 
 		createResumeButton();
 		createOptionsButton();
@@ -30,11 +35,11 @@ public class ResumeScreen extends MenuIngameScreen {
 
 	////////// TEXT ////////////
 
-	private void loadText() {
-		String text = null;
-		TitleScreenText quitText;
+	private void loadDefaultText() {
 		int x = 325 + 416;
 		int y = 473;
+		String text = null;
+		TitleScreenText quitText;
 
 		text = translate("Resume" + "Detail" + "1");
 		quitText = new TitleScreenText(text, x, y + 245);
@@ -43,6 +48,28 @@ public class ResumeScreen extends MenuIngameScreen {
 
 		text = translate("Resume" + "Detail" + "2");
 		quitText = new TitleScreenText(text, x, y + 280);
+		quitText.setFontSize(18f);
+		LAYER.MENU.addObject(quitText);
+	}
+
+	private void loadHardText() {
+		int x = 325 + 416;
+		int y = 473;
+		String text = null;
+		TitleScreenText quitText;
+
+		text = translate("WarningHard");
+		quitText = new TitleScreenText(text, x, y + 265);
+		quitText.setFontSize(28f);
+		LAYER.MENU.addObject(quitText);
+
+		text = translate("WarningHard" + "Detail" + "1");
+		quitText = new TitleScreenText(text, x, y + 320);
+		quitText.setFontSize(18f);
+		LAYER.MENU.addObject(quitText);
+
+		text = translate("WarningHard" + "Detail" + "2");
+		quitText = new TitleScreenText(text, x, y + 355);
 		quitText.setFontSize(18f);
 		LAYER.MENU.addObject(quitText);
 	}

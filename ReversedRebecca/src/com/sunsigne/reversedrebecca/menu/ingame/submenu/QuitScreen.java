@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
+import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.world.World;
@@ -18,6 +20,8 @@ public class QuitScreen extends MenuIngameScreen {
 	public QuitScreen() {
 		super(QUIT);
 		loadText();
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
+			loadHardText();
 
 		createQuitButton();
 		createBackButton();
@@ -49,13 +53,36 @@ public class QuitScreen extends MenuIngameScreen {
 		LAYER.MENU.addObject(quitText);
 	}
 
+	private void loadHardText() {
+		int x = 325 + 416;
+		int y = 473;
+		String text = null;
+		TitleScreenText quitText;
+
+		text = translate("WarningHard");
+		quitText = new TitleScreenText(text, x, y + 265);
+		quitText.setFontSize(34f);
+		LAYER.MENU.addObject(quitText);
+
+		text = translate("WarningHard" + "Detail" + "1");
+		quitText = new TitleScreenText(text, x, y + 325);
+		quitText.setFontSize(24f);
+		LAYER.MENU.addObject(quitText);
+
+		text = translate("WarningHard" + "Detail" + "2");
+		quitText = new TitleScreenText(text, x, y + 365);
+		quitText.setFontSize(24f);
+		LAYER.MENU.addObject(quitText);
+	}
+
 	////////// BUTTONS ////////////
 
 	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress) {
 		this.createOptionScreenButton(text, preset, x, y, onPress, "button");
 	}
 
-	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress, String sound) {
+	private void createOptionScreenButton(String text, PresetMousePos preset, int x, int y, GenericListener onPress,
+			String sound) {
 		ButtonObject button = new TitleScreenButton(text, 325 + x, 343 + y, 415, 80, onPress, null) {
 			public String getSound() {
 				return sound;
@@ -89,37 +116,37 @@ public class QuitScreen extends MenuIngameScreen {
 	}
 
 	////////// PRESET MOUSE POS ////////////
-	
+
 	public static final PresetMousePos QUIT = new PresetMousePos(945, 430);
 	public static final PresetMousePos BACK = new PresetMousePos(945, 535);
-	
+
 	////////// GAMEPAD ////////////
-	
+
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		if (pressingButton())
 			return;
-	
+
 		if (isPresetNull())
 			setPreset(QUIT);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
-		
+
 		else if (getPreset() == QUIT)
 			quitPressed(e);
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
-	
+
 	private void quitPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BACK);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(QUIT).mousePressed(null);
 	}
-	
+
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
 			setPreset(QUIT);

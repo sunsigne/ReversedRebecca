@@ -74,8 +74,9 @@ public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 	private String click_text;
 
 	private void loadText() {
-		gameover_text = format(new Translatable().getTranslatedText("GameOver", FilePath.MENU));
-		click_text = format(new Translatable().getTranslatedText("LevelClickToContinue", FilePath.MENU));
+		String clickTo = DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD ? "GameOverClickToQuit" : "LevelClickToContinue";	
+		gameover_text = format(new Translatable().getTranslatedText("GameOver", FilePath.MENU));		
+		click_text = format(new Translatable().getTranslatedText(clickTo, FilePath.MENU));
 	}
 
 	////////// TEXTURE ////////////

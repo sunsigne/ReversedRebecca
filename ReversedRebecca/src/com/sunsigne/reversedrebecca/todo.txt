@@ -28,7 +28,7 @@
 
 	////////// EN COURS ////////////
 
-	2h00 - faire en sorte (et prévenir !) que quitter un niveau (ou tout type de Alt+F4) sans être full life en hard provoque la mort. L'idée est d'empêcher le "bug exploit" de recharger quand on a pas tous ses PV (+ le mettre en place)
+	1h00 - faire en sorte que quitter un niveau en hard provoque la mort. 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau

@@ -11,6 +11,7 @@ DisabledPausePushUps = Fait tes pompes ! Et si tu Alt+F4, on supprime ta sauvega
 ///// GAME OVER /////
 
 GameOver = Game Over
+GameOverClickToQuit = Cliquez pour quitter
 
 ///// LEVEL STATS /////
 
@@ -34,6 +35,9 @@ ResumeDetail1 = Le jeu sauvegarde
 ResumeDetail2 = a chaque fin de niveau
 QuitDetail1 = Voulez-vous vraiment
 QuitDetail2 = quitter le jeu ?
+WarningHard = ATTENTION
+WarningHardDetail1 = Vous etes en difficile
+WarningHardDetail2 = le jeu ne sauvegarde pas
 
 ///// MAIN /////
 
@@ -50,11 +54,11 @@ SupportButton = Soutenir
 DifficultyEasy = facile
 DifficultyNormal = normal
 DifficultyHard = difficile
-EasyDetail1 = double XP
-EasyDetail2 = puzzle plus faciles
+EasyDetail1 = puzzle plus faciles
+EasyDetail2 = double XP
 NormalDetail1 = l'experience du jeu
 NormalDetail2 = original
-HardDetail1 = puzzle plus durs
+HardDetail1 = puzzle plus difficiles
 HardDetail2 = une seule vie
 
 ///// TUTORIAL /////

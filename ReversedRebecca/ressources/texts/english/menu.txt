@@ -10,7 +10,8 @@ DisabledPausePushUps = Do your push-ups! And if you press Alt+F4, we delete your
 
 ///// GAME OVER /////
 
-GameOver = You lose
+GameOver = Game Over
+GameOverClickToQuit = Click to quit
 
 ///// LEVEL STATS /////
 
@@ -34,6 +35,9 @@ ResumeDetail1 = The gave saves at
 ResumeDetail2 = the end of each level
 QuitDetail1 = do you really want
 QuitDetail2 = to quit the game?
+WarningHard = WARNING
+WarningHardDetail1 = You are in hard mode
+WarningHardDetail2 = the game does not save
 
 ///// MAIN /////
 
@@ -50,8 +54,8 @@ SupportButton = Support
 DifficultyEasy = easy
 DifficultyNormal = normal
 DifficultyHard = hard
-EasyDetail1 = double XP
-EasyDetail2 = easier puzzle
+EasyDetail1 = easier puzzle
+EasyDetail2 = double XP
 NormalDetail1 = the original game
 NormalDetail2 = experience
 HardDetail1 = harder puzzle
