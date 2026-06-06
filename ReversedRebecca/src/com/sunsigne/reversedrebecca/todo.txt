@@ -38,8 +38,6 @@
 	
 	////////// MILITARY ////////////
 
-	- amiranda -> Amir = Miranda (finir l'adaptation dynamique en fonction des réglages du menu)
-
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 
