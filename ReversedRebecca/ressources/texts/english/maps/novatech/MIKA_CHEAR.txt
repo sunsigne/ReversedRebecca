@@ -1,71 +1,71 @@
 % FIRST
 rebecca = object = excited = Come on Mika! You are the best!
-miaka = DOWN = angry = These rocks better watch out!
+mika = DOWN = angry = These rocks better watch out!
 
 
 % AGAIN
 rebecca = object = determined = Come on Mika! I believe in you!
-miaka = DOWN = angry = It's heavy… But it helps me!
+mika = DOWN = angry = It's heavy… But it helps me!
 
 
 % AGAIN_AGAIN
 rebecca = object = laugh = You're so strong, Mika!
-miaka = DOWN = angry_var = Yeah! I'm the best! 
+mika = DOWN = angry_var = Yeah! I'm the best! 
 
 
 % AGAIN_AGAIN_AGAIN
 rebecca = object = happy = Come on! You…
 rebecca = object = worry = Uh…
 rebecca = object = happy = Come on!
-miaka = DOWN = angry_var = I'm almost done!
+mika = DOWN = angry_var = I'm almost done!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mika! You are the best!
-miaka = DOWN = doubt = Didn't you already say that?
+mika = DOWN = doubt = Didn't you already say that?
 rebecca = object = worry = Hey… I'm doing my best…
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mika! You can do it!
-miaka = DOWN = angry_var = I feel it coming!
+mika = DOWN = angry_var = I feel it coming!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = laugh = Mika! Mika! Mika!
-miaka = DOWN = angry_var = I'M PUMPED UP!
+mika = DOWN = angry_var = I'M PUMPED UP!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mika! You're almost done!
-miaka = DOWN = angry = YEAH!
+mika = DOWN = angry = YEAH!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = evil = Come on! You're slacking off.
-miaka = DOWN = angry_var = MUUUUUUSCLES!
+mika = DOWN = angry_var = MUUUUUUSCLES!
 
 
 % LAST
 rebecca = object = laugh = MIKA! MIKA! MIKA!
-miaka = DOWN = angry = RHAAAAAA!
+mika = DOWN = angry = RHAAAAAA!
 
 
 % LAST_NEXT
-miaka = DOWN = angry_var = WHO'S THE BOSS?
+mika = DOWN = angry_var = WHO'S THE BOSS?
 
 
 % LAST_NEXT_POST_KISS_LEFT
-miaka = LEFT = surprised = Uh… Sorry… I got carried away…
-miaka = LEFT = worry = Excuse me…
+mika = LEFT = surprised = Uh… Sorry… I got carried away…
+mika = LEFT = worry = Excuse me…
 rebecca = RIGHT = blush = ... It's okay…
-miaka = LEFT = serious = Well… Uh… The path is clear.@I’ll go tell the others.
+mika = LEFT = serious = Well… Uh… The path is clear.@I’ll go tell the others.
 rebecca = RIGHT = blush = Yeah.
 
 
 % LAST_NEXT_POST_KISS_RIGHT
-miaka = RIGHT = surprised = Uh… Sorry… I got carried away…
-miaka = RIGHT = worry = Excuse me…
+mika = RIGHT = surprised = Uh… Sorry… I got carried away…
+mika = RIGHT = worry = Excuse me…
 rebecca = LEFT = blush = ... It's okay…
-miaka = RIGHT = serious = Well… Uh… The path is clear.@I’ll go tell the others.
+mika = RIGHT = serious = Well… Uh… The path is clear.@I’ll go tell the others.
 rebecca = LEFT = blush = Yeah.

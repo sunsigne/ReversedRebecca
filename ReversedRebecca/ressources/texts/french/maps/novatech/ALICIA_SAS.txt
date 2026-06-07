@@ -24,7 +24,7 @@ rebecca = up = dreaming = Oui, oui, je vais t'aider.@Je vais juste prendre mon t
 alicia = down = cry_var = Pourquoi il fallait que je tombe sur toi…
 
 
-% MIAKA_TOLD_ME
+% MIKA_TOLD_ME
 alicia = player = happy = Mika m'a dit que c'est grâce à toi si je suis libre,@alors Merci.
 player = alicia = laugh = Je t'en prie !
 

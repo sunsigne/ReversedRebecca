@@ -1,34 +1,34 @@
-% MIAKA_STOP_HIM
-miaka = DOWN = angry_var = ARRÊTEZ-LE !
+% MIKA_STOP_HIM
+mika = DOWN = angry_var = ARRÊTEZ-LE !
 
 
-% MIAKA_DAMN_IT
-miaka = DOWN = angry = Et merde…
+% MIKA_DAMN_IT
+mika = DOWN = angry = Et merde…
 
 
-% MIAKA_WHAT_HAPPENED
+% MIKA_WHAT_HAPPENED
 rebecca = DOWN = no_sens = Qu'est-ce qu'il s'est passé ?
-miaka = UP = angry_var = Ce mec… Il a fait exploser le mur@pour rentrer dans le laboratoire !
-miaka = DOWN = angry_var = Quel taré...@Et maintenant, on peut même plus sortir.
+mika = UP = angry_var = Ce mec… Il a fait exploser le mur@pour rentrer dans le laboratoire !
+mika = DOWN = angry_var = Quel taré...@Et maintenant, on peut même plus sortir.
 
 
-% MIAKA_WHAT_HAPPENED_PRE_NEXT
+% MIKA_WHAT_HAPPENED_PRE_NEXT
 sarah = DOWN = surprised = Qu'est-ce qu'il est venu faire ici ?
-miaka = UP = serious = Je suis comme vous les filles…@J'en sais pas plus…
+mika = UP = serious = Je suis comme vous les filles…@J'en sais pas plus…
 
 
-% MIAKA_WHAT_HAPPENED_NEXT
+% MIKA_WHAT_HAPPENED_NEXT
 sarah = DOWN = determined = Alors, on va enquêter !
 sarah = RIGHT = happy = Rebecca, à toi de choisir.@Qu'est-ce que tu préfères faire ?
 
 
-% MIAKA_WHAT_HAPPENED_NEXT_ANGRY
+% MIKA_WHAT_HAPPENED_NEXT_ANGRY
 sarah = DOWN = determined = Alors, on va enquêter !
 sarah = RIGHT = worry = Rebecca, oublions notre petit différent, d'accord ?@Il va falloir qu'on règle cette situation.
 sarah = RIGHT = happy = Qu'est-ce que tu préfères faire ?
 
 
-% MIAKA_WHAT_HAPPENED_SADISTIC
+% MIKA_WHAT_HAPPENED_SADISTIC
 rebecca = DOWN = laugh = En effet. Quel excité !
 rebecca = DOWN = worry = Ne t'en fais pas, Mika. Je vais me trouver une sortie.
 rebecca = DOWN = you_silly = Enfin… "Nous" trouver une sortie, bien sûr…

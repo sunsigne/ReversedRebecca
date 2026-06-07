@@ -1,0 +1,15 @@
+% SOON_NEXT_VAR
+rebecca = object = worry = Hey Mia! Can we talk now?
+mika = player = serious = Yes, I'm good. What were you saying?
+
+
+% THANK_FOR_YELLING
+mika = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
+player = mika = happy_var = Whenever you want!
+mika = player = smirk = Whenever I want? Because I have@something else you can shake…
+player = mika = no_sens_var = … Pardon?
+mika = player = smirk = Do I need to draw you a picture?@I'm coming over tonight.
+player = mika = no_sens = Uh… No.
+mika = player = smirk = Yes.
+player = mika = no_sens_var = …
+player = mika = blush = (Actually, it's a little flattering.@I wonder if she'll really come.)

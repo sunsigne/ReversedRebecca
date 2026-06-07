@@ -1,4 +1,4 @@
-% MIAKA_KISSED
+% MIKA_KISSED
 sarah = player = angry = Pardon ? Il t'a embrassé sans te demander ?
 player = object = blush = C'était tellement sexy !
 sarah = player = angry = Ça n'est pas "sexy", Rebecca.@C'est un signe avant-coureur de toxicité.
@@ -10,7 +10,7 @@ sarah = player = worry = Tu es impossible… Mais bon, c'est ton problème…
 sarah = player = you_silly_var = Bon. Voilà un récapitulatif de ce que j'ai appris :
 
 
-% MIAKA_PIG
+% MIKA_PIG
 sarah = player = angry = Pardon ? Il s'est invité chez toi ?
 player = object = blush = C'est sexy !
 sarah = player = angry = Ça n'est pas "sexy", Rebecca.@C'est un signe avant-coureur de toxicité.

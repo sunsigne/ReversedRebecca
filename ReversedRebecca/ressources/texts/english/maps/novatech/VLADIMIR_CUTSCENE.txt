@@ -1,34 +1,34 @@
-% MIAKA_STOP_HIM
-miaka = DOWN = angry_var = STOP HIM!
+% MIKA_STOP_HIM
+mika = DOWN = angry_var = STOP HIM!
 
 
-% MIAKA_DAMN_IT
-miaka = DOWN = angry = Shit…
+% MIKA_DAMN_IT
+mika = DOWN = angry = Shit…
 
 
-% MIAKA_WHAT_HAPPENED
+% MIKA_WHAT_HAPPENED
 rebecca = DOWN = no_sens = What happened?
-miaka = UP = angry_var = That guy… He blew up the wall to get into the lab!
-miaka = DOWN = angry_var = What a freak...@And now we can't even go out.
+mika = UP = angry_var = That guy… He blew up the wall to get into the lab!
+mika = DOWN = angry_var = What a freak...@And now we can't even go out.
 
 
-% MIAKA_WHAT_HAPPENED_PRE_NEXT
+% MIKA_WHAT_HAPPENED_PRE_NEXT
 sarah = DOWN = surprised = What was he doing here?
-miaka = UP = serious = I'm just like you girls… I don’t know…
+mika = UP = serious = I'm just like you girls… I don’t know…
 
 
-% MIAKA_WHAT_HAPPENED_NEXT
+% MIKA_WHAT_HAPPENED_NEXT
 sarah = DOWN = determined = Then, let's investigate!
 sarah = RIGHT = happy = Rebecca, it's up to you to choose.@What do you prefer to do?
 
 
-% MIAKA_WHAT_HAPPENED_NEXT_ANGRY
+% MIKA_WHAT_HAPPENED_NEXT_ANGRY
 sarah = DOWN = determined = Then, let's investigate!
 sarah = RIGHT = worry = Rebecca, let's forget our little disagreement, okay? @We need to sort this situation out.
 sarah = RIGHT = happy = What do you prefer to do?
 
 
-% MIAKA_WHAT_HAPPENED_SADISTIC
+% MIKA_WHAT_HAPPENED_SADISTIC
 rebecca = DOWN = laugh = Indeed. What an agitator!
 rebecca = DOWN = worry = Don't worry, Mika. I'm going to find me an outing.
 rebecca = DOWN = you_silly = I mean… Find "us" an outing, of course…
