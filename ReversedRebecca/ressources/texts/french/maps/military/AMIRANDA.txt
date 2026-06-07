@@ -18,17 +18,6 @@ object = player = worry = J'ai ce repas que je dois livrer au prisonnier@en isol
 object = player = happy = Son nom est Roméo, et il n'est pas dangereux.@Tu pourrais lui apporter ? Tu serais une crème.
 
 
-% GIVE_THE_ONIONS_FEMALE
-object = player = happy = Juste à temps ! Merci. Au fait, moi, c'est Miranda.@Ravie de faire ta connaissance.
-player = object = happy = Enchantée. Moi, c'est Rebecca.
-object = player = worry = Mais dis-moi, tu n'es pas d'ici…@Qu'est-ce qui t'amène dans ce camp ?
-player = object = worry = C'est une longue histoire… Mais pour résumer :@je dois parler au chef.
-object = player = happy = Double Y ? C'est un homme adorable. Et quel@appétit ! Six demi-douzaines d'oeufs par jour !
-object = player = worry = Dis-moi chouquette, je suis désolée mais…@Tu crois que tu peux me rendre un autre service ?
-object = player = worry = J'ai ce repas que je dois livrer à la prisonnière@en isolement, mais je suis débordée en cuisine…
-object = player = happy = Son nom est Juliette, et elle n'est pas dangereuse.@Tu pourrais lui apporter ? Tu serais une crème.
-
-
 % COOK_PRISONNER_REFUSING
 object = player = unhappy = Ho, Dommage… J'imagine que je demanderai à@Norbert alors.
 object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour les oignons.
@@ -51,25 +40,10 @@ object = player = happy = Super ! Tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
-% COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX_FEMALE
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
-player = object = laugh = Oui, c'était délicieux !
-player = object = you_silly = Enfin… C'est ce qu'elle m'a dit, bien sûr…
-object = player = happy = Super ! Tu me sauves.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
-
-
-% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_ROMEO_UPSET
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULOMEO_UPSET
 object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
 player = object = worry = Il ne veut plus me parler… Mais je lui a livré.
 object = player = worry = Il a son caractère…@En tout cas merci, tu me sauves.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
-
-
-% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULIETTE_UPSET
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
-player = object = worry = Elle ne veut plus me parler… Mais je lui a livré.
-object = player = worry = Elle a son caractère…@En tout cas merci, tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
@@ -80,21 +54,9 @@ object = player = happy = Super ! Tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
-% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_FEMALE
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
-player = object = laugh = Oui, elle était ravie !
-object = player = happy = Super ! Tu me sauves.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
-
-
 % CUPCAKES_SHARING
 object = player = happy = Non, c'est très gentil, chouquette, mais@je n'ai pas faim. J'apprécie le geste.
 player = object = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
-
-
-% CUPCAKES_SHARING_FEMALE
-object = player = happy = Non, c'est très gentil, chouquette, mais@je n'ai pas faim. J'apprécie le geste.
-player = object = worry = Tu es sûre ? Ça me ferait vraiment plaisir.
 
 
 % CUPCAKES_SHARING_NEXT
@@ -121,28 +83,11 @@ object = player = happy = Oui… Ça sonne bien… Soyons amis.
 object = player = happy = Parfait ! Suis-moi.
 
 
-% CUPCAKES_SHARING_READY_YES_FEMALE
-player = object = happy_var = Pourquoi pas ? C'est meilleur quand on partage@avec une amie !
-object = player = unhappy = Une… amie ?
-object = player = happy = Oui… Ça sonne bien… Soyons amies.
-object = player = happy = Parfait ! Suis-moi.
-
-
 % CUPCAKES_SHARING_READY_YES_NEXT
 object = player = happy = Alors comme ça, tu as besoin de parler à YY ?
 player = object = worry = Oui. Pour résumer, je cherche quelqu'un qui m'a@volé quelque chose. Et YY sait où je peux le trouver.
 object = player = unhappy = Un vol ? Ça ne ressemble pas à YY… Il est@un peu misogyne, mais c'est un homme droit.
 object = player = worry = Je suis sûr qu'il ne cautionne pas ce qu'à fait@cette personne… Il va t'aider, j'en suis certain.
-player = object = happy = Et toi, alors ? Qu'est-ce que tu fais ici ?
-object = player = happy = Je cuisine, mais tu l'avais déjà compris. Pour faire@simple, j'aime apporter de la joie par la nourriture.
-object = player = happy = Après une longue journée, il n'y a rien de mieux@que de trouver son bonheur dans une assiette.
-
-
-% CUPCAKES_SHARING_READY_YES_NEXT_FEMALE
-object = player = happy = Alors comme ça, tu as besoin de parler à YY ?
-player = object = worry = Oui. Pour résumer, je cherche quelqu'un qui m'a@volé quelque chose. Et YY sait où je peux le trouver.
-object = player = unhappy = Un vol ? Ça ne ressemble pas à YY… Il est@un peu misogyne, mais c'est un homme droit.
-object = player = worry = Je suis sûre qu'il ne cautionne pas ce qu'à fait@cette personne… Il va t'aider, j'en suis certaine.
 player = object = happy = Et toi, alors ? Qu'est-ce que tu fais ici ?
 object = player = happy = Je cuisine, mais tu l'avais déjà compris. Pour faire@simple, j'aime apporter de la joie par la nourriture.
 object = player = happy = Après une longue journée, il n'y a rien de mieux@que de trouver son bonheur dans une assiette.
@@ -177,11 +122,6 @@ object = player = happy = Très bien. Faisons comme ça.
 % CUPCAKES_SHARING_OOPSY_LAST
 object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour ta gentillesse, chouquette.
 player = object = happy_var = Avec plaisir ! On se voit bientôt, Amir.
-
-
-% CUPCAKES_SHARING_OOPSY_LAST_FEMALE
-object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour ta gentillesse, chouquette.
-player = object = happy_var = Avec plaisir ! On se voit bientôt, Miranda.
 
 
 % CUPCAKES_SHARING_POST_DIALOGUE

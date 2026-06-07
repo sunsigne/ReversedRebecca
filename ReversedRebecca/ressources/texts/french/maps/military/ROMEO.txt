@@ -72,11 +72,6 @@ object = DOWN = sadistic = Cool ! Remercie Amir de ma part.
 object = DOWN = mad = J'espère qu'il n'a pas lésiné sur la sauce piquante.
 
 
-% LUNCHBOX_FEMALE
-object = DOWN = sadistic = Cool ! Remercie Miranda de ma part.
-object = DOWN = mad = J'espère qu'elle n'a pas lésiné sur la sauce piquante.
-
-
 % LOST_DOOR
 object = DOWN = sadistic = Quelle nulle !
 player = UP = happy_var = Une seconde, je vais réessayer.
