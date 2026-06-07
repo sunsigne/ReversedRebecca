@@ -168,11 +168,12 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new PlayerFinder().roundToTilePlayer();
 
+		if (isCritical == false)
+			setStaticNoCritCount(getStaticNoCritCount() + 1);
+		else
+			new CameraShaker().shaking(SHAKE.LITTLE);
+
 		if (isPuzzleWon) {
-			if (isCritical == false)
-				setStaticNoCritCount(getStaticNoCritCount() + 1);
-			else
-				new CameraShaker().shaking(SHAKE.LITTLE);
 			new CameraShaker().shaking(getFactory().getVictoryShake());
 			new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getVictorySound());
 			actionOnWinning.doAction(isCritical);
