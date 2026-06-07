@@ -1,13 +1,13 @@
-% MIKA_CONVERSATION
-sarah = mika = happy = What exactly happened?
-mika = sarah = serious = I was coming out of the break room,@when I heard a blast.
-mika = sarah = doubt = I didn't see the explosion,@but I recognize the sound.
-mika = sarah = serious = Right after, this guy "out of nowhere",@calmly walked out of Alicia's office!
-mika = sarah = serious = I ran after him. you know the rest.
-sarah = mika = fine = I see.@I think we're victims of an industrial theft.
-sarah = mika = happy = Or… a lightly more intense version.@Did you see if he was holding anything?
-mika = sarah = serious = No. I didn’t think to check.
-sarah = mika = happy = Ok. Thanks for the info!
+% MIAKA_CONVERSATION
+sarah = miaka = happy = What exactly happened?
+miaka = sarah = serious = I was coming out of the break room,@when I heard a blast.
+miaka = sarah = doubt = I didn't see the explosion,@but I recognize the sound.
+miaka = sarah = serious = Right after, this guy "out of nowhere",@calmly walked out of Alicia's office!
+miaka = sarah = serious = I ran after him. you know the rest.
+sarah = miaka = fine = I see.@I think we're victims of an industrial theft.
+sarah = miaka = happy = Or… a lightly more intense version.@Did you see if he was holding anything?
+miaka = sarah = serious = No. I didn’t think to check.
+sarah = miaka = happy = Ok. Thanks for the info!
 
 
 % DELTA_EXIT_CONVERSATION

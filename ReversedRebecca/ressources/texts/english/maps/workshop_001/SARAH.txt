@@ -1,4 +1,4 @@
-% MIKA_KISSED
+% MIAKA_KISSED
 sarah = player = angry = Excuse me? He kissed you without asking?
 player = object = blush = That was so sexy!
 sarah = player = angry = That's not "sexy", Rebecca.@That's clearly a red flag.
@@ -10,7 +10,7 @@ sarah = player = worry = You're impossible… But hey, that's your problem…
 sarah = player = you_silly_var = Well. Here's a recap of what I've learned:
 
 
-% MIKA_PIG
+% MIAKA_PIG
 sarah = player = angry = Excuse me? He invited himself to your place?
 player = object = blush = That's sexy!
 sarah = player = angry = It's not "sexy", Rebecca.@That's clearly a red flag.

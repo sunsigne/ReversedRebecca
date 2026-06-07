@@ -53,14 +53,14 @@ joseph = sarah = happy = Of course, Sarah. Here they are.
 sarah = jospeh = happy_var = Thank you!
 
 
-% MIKA_BOMB_CONVERSATION
-sarah = mika = happy = …how many do you need?
-mika = sarah = serious_var = One well-placed charge, will be more than enough.
+% MIAKA_BOMB_CONVERSATION
+sarah = miaka = happy = …how many do you need?
+miaka = sarah = serious_var = One well-placed charge, will be more than enough.
 
 
-% MIKA_POST_BOMB_CONVERSATION
-sarah = mika = worry = What a day, huh?
-mika = sarah = serious = Tell me about it.
+% MIAKA_POST_BOMB_CONVERSATION
+sarah = miaka = worry = What a day, huh?
+miaka = sarah = serious = Tell me about it.
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING

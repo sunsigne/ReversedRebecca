@@ -28,18 +28,23 @@
 
 	////////// EN COURS ////////////
 
+	- miaka -> Mika = Mia (en cours)
+
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
 	
 	trier les dossiers : 
+		lvl003:
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
+		- nolancy -> Nancy = Nolan
+		lvl002:
 		- jamessy -> Jessy = James
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
-		- nolancy -> Nancy = Nolan
+		lvl001:
 		- marichel = Michel = Marie
-		- miaka -> Mika = Mia
+
 	
 	////////// MILITARY ////////////
 

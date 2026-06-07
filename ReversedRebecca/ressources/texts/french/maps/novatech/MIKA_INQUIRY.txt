@@ -1,36 +1,36 @@
 % THEFT
-mika = player = doubt = Ça me fait une belle jambe…
-rebecca = mika = worry = Mais… Tu ne sais rien à ce sujet ?
-mika = player = serious = Non.
+miaka = player = doubt = Ça me fait une belle jambe…
+rebecca = miaka = worry = Mais… Tu ne sais rien à ce sujet ?
+miaka = player = serious = Non.
 
 
 % SOON
 rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
-mika = player = serious = Donne-moi cinq secondes…@Je rassemble mes idées.
+miaka = player = serious = Donne-moi cinq secondes…@Je rassemble mes idées.
 
 
 % SOON_NEXT
-mika = player = serious = Ok, c'est bon. Tu disais ?
+miaka = player = serious = Ok, c'est bon. Tu disais ?
 
 
 % SOON_NEXT_VAR
 rebecca = object = worry = Hey Mika ! On peut discuter, maintenant ?
-mika = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
+miaka = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
 
 
 % NEUTRAL
 rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
-mika = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
-mika = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
-mika = player = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alicia !
-mika = player = serious = Je lui ai couru après. La suite, tu la connais.
+miaka = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
+miaka = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
+miaka = player = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alicia !
+miaka = player = serious = Je lui ai couru après. La suite, tu la connais.
 
 
 % NEUTRAL_NEXT
 rebecca = object = surprised = Attend ! Mais si ça se trouve, Alicia est blessée !
-mika = player = surprised = ?!
-mika = player = serious = Je n'y avais pas pensé…
-mika = player = serious = Va voir comment elle va.@Je dois rester pour ici dégager le chemin.
+miaka = player = surprised = ?!
+miaka = player = serious = Je n'y avais pas pensé…
+miaka = player = serious = Va voir comment elle va.@Je dois rester pour ici dégager le chemin.
 
 
 % NEUTRAL_VAR
@@ -38,16 +38,16 @@ rebecca = object = happy_var = Très bien. Merci pour ces informations.
 
 
 % HURRY_UP
-mika = player = angry_var = Rebecca ! Tu fous quoi ?@Va voir si Alicia va bien ! 
+miaka = player = angry_var = Rebecca ! Tu fous quoi ?@Va voir si Alicia va bien ! 
 
 
 % HURRY_UP_AGAIN
-mika = player = doubt = C'est par là…
+miaka = player = doubt = C'est par là…
 
 
 % HURRY_UP_LAST
-mika = player = angry_var = Bon ! Ça suffit ! C'est quoi ton problème ?@T'en a rien à foutre des gens ?
-mika = player = angry = Casse-toi.
+miaka = player = angry_var = Bon ! Ça suffit ! C'est quoi ton problème ?@T'en a rien à foutre des gens ?
+miaka = player = angry = Casse-toi.
 
 
 % HURRY_UP_LAST_REBECCA
@@ -55,43 +55,43 @@ player = DOWN = determined = C'est tellement marrant de les pousser à bout.
 
 
 % NO_TIME
-mika = player = serious = Je n'ai pas le temps pour tes bêtises.@J'ai des rochers à dégager.
+miaka = player = serious = Je n'ai pas le temps pour tes bêtises.@J'ai des rochers à dégager.
 
 
 % ASKING_SARAH_ABOUT_ALICIA
-mika = DOWN = worry = Sarah, est-ce que tu as vu Alicia ?
+miaka = DOWN = worry = Sarah, est-ce que tu as vu Alicia ?
 sarah = UP = laugh = Yup. Elle était bloquée dans le SAS,@mais c'est réglé.
-mika = DOWN = serious = Ha ! Très bien. Bon travail, d'ailleurs,@je vois que tu as trouvé une sortie.
+miaka = DOWN = serious = Ha ! Très bien. Bon travail, d'ailleurs,@je vois que tu as trouvé une sortie.
 sarah = UP = happy = Et les décombres ? La voie est libre ?
-mika = DOWN = serious = Pas encore, mais j'y retourne, là.
+miaka = DOWN = serious = Pas encore, mais j'y retourne, là.
 sarah = UP = happy_var = Bon courage.
 
 
 % THANK_FOR_YELLING
-mika = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
-player = mika = happy_var = Quand tu veux !
-mika = player = smirk = Quand je veux ? Parce que j'ai@autre chose que tu peux secouer…
-player = mika = no_sens_var = … Pardon ?
-mika = player = smirk = Tu veux un dessin ? Je viens chez toi ce soir.
-player = mika = no_sens = Heu… Non.
-mika = player = smirk = Si.
-player = mika = no_sens_var = …
-player = mika = blush = (En vrai, c'est un peu flatteur.@Je me demande s'il va vraiment venir.)
+miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
+player = miaka = happy_var = Quand tu veux !
+miaka = player = smirk = Quand je veux ? Parce que j'ai@autre chose que tu peux secouer…
+player = miaka = no_sens_var = … Pardon ?
+miaka = player = smirk = Tu veux un dessin ? Je viens chez toi ce soir.
+player = miaka = no_sens = Heu… Non.
+miaka = player = smirk = Si.
+player = miaka = no_sens_var = …
+player = miaka = blush = (En vrai, c'est un peu flatteur.@Je me demande s'il va vraiment venir.)
 
 
 % THANK_FOR_YELLING_GIRLFRIEND
-mika = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
-player = mika = worry = De rien, j'imagine…@Je suis moi-même un peu secouée.
-mika = player = serious = Pourquoi ?
-player = mika = happy = Je viens d'accepter de sortir avec Marie.@Sa déclaration m'a surprise, mais je suis contente.
-mika = player = worry = Ha. C'est… Une bonne chose, j'imagine ?
-mika = player = serious = Bon, si tu le permets, j'ai des décombres@à dégager.
+miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secoué.
+player = miaka = worry = De rien, j'imagine…@Je suis moi-même un peu secouée.
+miaka = player = serious = Pourquoi ?
+player = miaka = happy = Je viens d'accepter de sortir avec Marie.@Sa déclaration m'a surprise, mais je suis contente.
+miaka = player = worry = Ha. C'est… Une bonne chose, j'imagine ?
+miaka = player = serious = Bon, si tu le permets, j'ai des décombres@à dégager.
 
 
 % DONT_COME
-mika = player = smirk = Tu dis non, mais ton coeur dit oui.
+miaka = player = smirk = Tu dis non, mais ton coeur dit oui.
 
 
 % DONT_COME_NEXT
-mika = player = smirk = Ouais, ouais…
-mika = DOWN = serious = Bon, si tu le permets, j'ai des décombres@à dégager. On en reparle ce soir.
+miaka = player = smirk = Ouais, ouais…
+miaka = DOWN = serious = Bon, si tu le permets, j'ai des décombres@à dégager. On en reparle ce soir.
