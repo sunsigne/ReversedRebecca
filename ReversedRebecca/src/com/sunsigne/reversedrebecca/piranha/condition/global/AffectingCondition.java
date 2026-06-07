@@ -38,7 +38,7 @@ public class AffectingCondition extends GlobalInstruction {
 			analyse(tempObject, condition);
 	}
 
-	private GameList<PiranhaObject> getPiranhaByName(String name) {
+	public GameList<PiranhaObject> getPiranhaByName(String name) {
 		var list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
 
 		// look for exact match

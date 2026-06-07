@@ -1,0 +1,9 @@
+% INVENTORY_LAST_BUT
+object = player = worry = ... Tu … es sûre qu'il ne te faut vraiment rien ?
+object = player = unhappy = Désolé d'être insistante…@C'est juste que tu te comportes biza…
+object = player = worry = Hm… C'est juste que tu me donnes l'impression que@tu attends quelque chose sans oser le demander.
+rebecca = object = worry = Ok, je suis peut-être un peu hébétée… Je ne suis@pas sûre, mais je crois que je sors avec Mia.
+object = player = unhappy = Ho.
+object = player = cry_happy = Je vois…
+object = player = happy = Dans ce cas, j'espère que...
+object = player = cry = ... Que tu seras heureuse…@Excuse-moi une seconde.

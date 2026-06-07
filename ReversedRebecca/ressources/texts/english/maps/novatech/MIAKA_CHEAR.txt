@@ -8,7 +8,7 @@ rebecca = object = determined = Come on Mika! I believe in you!
 miaka = DOWN = angry = It's heavy… But it helps me!
 
 
-%AGAIN_AGAIN
+% AGAIN_AGAIN
 rebecca = object = laugh = You're so strong, Mika!
 miaka = DOWN = angry_var = Yeah! I'm the best! 
 
@@ -46,12 +46,12 @@ rebecca = object = evil = Come on! You're slacking off.
 miaka = DOWN = angry_var = MUUUUUUSCLES!
 
 
-%LAST
+% LAST
 rebecca = object = laugh = MIKA! MIKA! MIKA!
 miaka = DOWN = angry = RHAAAAAA!
 
 
-%LAST_NEXT
+% LAST_NEXT
 miaka = DOWN = angry_var = WHO'S THE BOSS?
 
 

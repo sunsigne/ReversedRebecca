@@ -28,7 +28,7 @@
 
 	////////// EN COURS ////////////
 
-	- miaka -> Mika = Mia (en cours)
+	- miaka -> Mika = Mia (ne manque plus que le design et la voix)
 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 

@@ -85,7 +85,7 @@ object = player = worry = Hm… It's just you give me the impression you're@wait
 rebecca = object = happy = No, no. I'm looking at you, that's all.
 
 
-% INVENTORY_LAST_BOYFRIEND
+% INVENTORY_LAST_BUT
 object = player = worry = ... Are you… really sure you don't need anything?
 object = player = unhappy = Sorry for being pushy…@You're just acting wei…
 object = player = worry = Hm… It's just you give me the impression you're@waiting for something without daring to ask for it.

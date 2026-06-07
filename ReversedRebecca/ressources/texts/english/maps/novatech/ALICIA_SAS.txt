@@ -24,6 +24,11 @@ rebecca = up = dreaming = Yeah, yeah, I'll help you.@I will just take my time.
 alicia = down = cry_var = Of all people, it had to be you…
 
 
+% MIAKA_TOLD_ME
+alicia = player = happy = Mika told me it's thanks to you that I'm free,@so thank you.
+player = alicia = laugh = You're welcome!
+
+
 % HUG
 alicia = RIGHT = appeased = Thank you.
 player = LEFT = happy_var = There's no way I would have left you in there.

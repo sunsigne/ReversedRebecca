@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.piranha.condition.global.AffectingCondition;
 import com.sunsigne.reversedrebecca.ressources.Surname;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
@@ -31,6 +32,18 @@ public class FormattedString {
 		case "object":
 			return textureName ? object.getTextureName() : object.getName();
 		}
+
+		if (textureName) {
+			var list = new AffectingCondition().getPiranhaByName(name);
+			if (list.getList().isEmpty())
+				return lower_name;
+
+			for (PiranhaObject tempPiranha : list.getList()) {
+				if (tempPiranha.getTextureName().toLowerCase().contains(lower_name))
+					return tempPiranha.getTextureName();
+			}
+		}
+
 		return lower_name;
 	}
 
@@ -97,13 +110,13 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("+action1", getKeyText(ActionOneKey.getKey()));
 		formatted_value = formatted_value.replace("+action2", getKeyText(ActionTwoKey.getKey()));
 		formatted_value = formatted_value.replace("+action3", getKeyText(ActionThreeKey.getKey()));
-		
+
 		Surname surname = new Surname();
 		formatted_value = formatted_value.replace("+surname_doug", surname.getDoug());
 		formatted_value = formatted_value.replace("+surname_custom1", surname.getCustom1());
 		formatted_value = formatted_value.replace("+surname_custom2", surname.getCustom2());
 		formatted_value = formatted_value.replace("+surname_custom3", surname.getCustom3());
-		
+
 		formatted_value = formatted_value.replace("+user", Infos.USERNAME);
 		formatted_value = formatted_value.replace("+day", new Infos().DAYOFTHEWEEK);
 
