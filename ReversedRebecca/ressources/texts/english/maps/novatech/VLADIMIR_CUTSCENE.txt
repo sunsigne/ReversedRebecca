@@ -1,20 +1,20 @@
 % MIKA_STOP_HIM
-mika = DOWN = angry_var = STOP HIM!
+miaka = DOWN = angry_var = STOP HIM!
 
 
 % MIKA_DAMN_IT
-mika = DOWN = angry = Shit…
+miaka = DOWN = angry = Shit…
 
 
 % MIKA_WHAT_HAPPENED
 rebecca = DOWN = no_sens = What happened?
-mika = UP = angry_var = That guy… He blew up the wall to get into the lab!
-mika = DOWN = angry_var = What a freak...@And now we can't even go out.
+miaka = UP = angry_var = That guy… He blew up the wall to get into the lab!
+miaka = DOWN = angry_var = What a freak...@And now we can't even go out.
 
 
 % MIKA_WHAT_HAPPENED_PRE_NEXT
 sarah = DOWN = surprised = What was he doing here?
-mika = UP = serious = I'm just like you girls… I don’t know…
+miaka = UP = serious = I'm just like you girls… I don’t know…
 
 
 % MIKA_WHAT_HAPPENED_NEXT

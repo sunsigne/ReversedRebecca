@@ -1,39 +1,39 @@
 % FIRST
 rebecca = object = excited = Come on Mia! You are the best!
-mika = DOWN = angry = These rocks better watch out!
+miaka = DOWN = angry = These rocks better watch out!
 
 
 % AGAIN
 rebecca = object = determined = Come on Mia! I believe in you!
-mika = DOWN = angry = It's heavy… But it helps me!
+miaka = DOWN = angry = It's heavy… But it helps me!
 
 
 % AGAIN_AGAIN
 rebecca = object = laugh = You're so strong, Mia!
-mika = DOWN = angry_var = Yeah! I'm the best! 
+miaka = DOWN = angry_var = Yeah! I'm the best! 
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mia! You are the best!
-mika = DOWN = doubt = Didn't you already say that?
+miaka = DOWN = doubt = Didn't you already say that?
 rebecca = object = worry = Hey… I'm doing my best…
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mia! You can do it!
-mika = DOWN = angry_var = I feel it coming!
+miaka = DOWN = angry_var = I feel it coming!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = laugh = Mia! Mia! Mia!
-mika = DOWN = angry_var = I'M PUMPED UP!
+miaka = DOWN = angry_var = I'M PUMPED UP!
 
 
 % AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN_AGAIN
 rebecca = object = excited = Come on Mia! You're almost done!
-mika = DOWN = angry = YEAH!
+miaka = DOWN = angry = YEAH!
 
 
 % LAST
 rebecca = object = laugh = MIA! MIA! MIA!
-mika = DOWN = angry = RHAAAAAA!
+miaka = DOWN = angry = RHAAAAAA!

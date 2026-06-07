@@ -54,13 +54,13 @@ sarah = jospeh = happy_var = Merci !
 
 
 % MIKA_BOMB_CONVERSATION
-sarah = mika = happy = … combien il t'en faut ?
-mika = sarah = serious_var = Une seule charge bien placée, suffira amplement.
+sarah = miaka = happy = … combien il t'en faut ?
+miaka = sarah = serious_var = Une seule charge bien placée, suffira amplement.
 
 
 % MIKA_POST_BOMB_CONVERSATION
-sarah = mika = worry = Quelle journée, hein ?
-mika = sarah = serious = C'est clair.
+sarah = miaka = worry = Quelle journée, hein ?
+miaka = sarah = serious = C'est clair.
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING
