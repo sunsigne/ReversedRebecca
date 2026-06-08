@@ -28,14 +28,14 @@
 
 	////////// EN COURS ////////////
 
-	- miaka -> Mika = Mia (ne manque plus que le design et la voix)
-
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
 	
 	trier les dossiers : 
 		lvl003:
+		- amiranda -> annuler les changements des fichiers piranha
+		- miaka -> Mika = Mia (ne manque plus que le design et la voix)
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
 		- nolancy -> Nancy = Nolan
@@ -44,6 +44,7 @@
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
 		- marichel = Michel = Marie
+		- alexia -> Alexis = Alicia
 
 	
 	////////// MILITARY ////////////
