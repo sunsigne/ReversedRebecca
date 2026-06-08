@@ -12,6 +12,10 @@ object = player = doubt = Et puis ça va, je fais attention. Ni toi ni l'autre i
 object = player = sadistic_happy = Je ne t'ai pas demandé ton avis, la bleue.@D'ailleurs, j'ai envie d'une bombe. Apporte-moi ça.
 
 
+% NEED_HELP
+object = player = sadistic_happy = Puisque tu demande, j'ai envie d'une bombe.@Apporte-moi ça.
+
+
 % GO_GET_IT_YOURSELF
 object = player = dreaming = Tu m'as probablement mal entendue…
 object = player = angry_var2 = J'ai dit : apporte-moi une bombe !

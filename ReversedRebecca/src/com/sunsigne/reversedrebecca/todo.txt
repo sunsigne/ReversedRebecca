@@ -49,12 +49,30 @@
 	
 	////////// MILITARY ////////////
 
+	à tester :
+	- message du garde
+	- aide trashman
+	- aide sergent
+	- aide runner
+	- aide janitor
+
+	à faire :
+	- aide trashamn (suite : les déchets)
+	- aide nathan
+	- aide dormeur
+	- aide infimière
+	- relier aide cuisinier et prisonnier
+	- aide xavier
+	- aide idiot
+	
+	- voir comment aider les témoins après darwin event
+	- indices des plantes
+
+	
+
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 
-	à faire en gentil :
-	- tout
-	- indices des plantes
 
 	mettre musique sur Patreon
 
@@ -67,6 +85,8 @@
 	- checkpoints
 	- les 3 compteurs (dont "victoire contre un chef" = met l'accent sur la victoire et impossible de faire 0)
 	- traduction en anglais
+
+	créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes
 
 	note : 
 	nancy = nolan

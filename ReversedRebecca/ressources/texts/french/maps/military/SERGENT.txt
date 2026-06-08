@@ -4,6 +4,12 @@ player = object = unhappy_var = Je suis une civile…
 object = player = sergent = Une civile n'est rien de moins qu'une future soldat,@soldat.
 
 
+% NEED_HELP
+object = player = sergent = Non. Repos, soldat.
+player = object = unhappy_var = Je suis une civile…
+object = player = sergent = Une civile n'est rien de moins qu'une future soldat,@soldat.
+
+
 % TRAINED
 object = player = sergent = Je t'ai vu parcourir notre terrain d'entrainement.@Tu as du potentiel.
 player = object = happy_var = Merci ! Je fais ce qu'il faut pour être en forme.

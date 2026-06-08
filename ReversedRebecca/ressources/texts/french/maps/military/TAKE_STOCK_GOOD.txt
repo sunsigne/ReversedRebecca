@@ -1,0 +1,58 @@
+% GOOD
+player = object = asleep = Voyons voir…
+
+
+% ROMEO_NO_INFO
+player = object = unhappy_var = Je n'ai pas aidé le prisonnier en isolement.@Je suis curieuse de connaître sa demande.
+
+
+% AMIR_NO_INFO
+player = object = you_silly_var = Je n'ai pas dépanné le cuisinier. J'y gagnerai peut-être de la nourriture ?
+
+
+% RUNNER_NO_INFO
+player = object = unhappy_var = Je n'ai pas conseillé le coureur.@J'espère qu'il ne me demandera pas de faire du sport.
+
+
+% IDIOT_NO_INFO
+player = object = happy = Je n'ai pas soutenu l'idiot qui court devant les balles.@Qu'est-ce qu'il cherche à faire ?
+
+
+% SHOOTER_NO_INFO
+player = object = doubt = Je n'ai pas guidé le militaire sur le stand de tir qui hésite à tirer.@Il a peur de quelque chose ?
+
+
+% SERGENT_NO_INFO
+player = object = sad = Je n'ai pas épaulé le sergent. J'espère qu'il ne m'en demandera pas trop.
+
+
+% JESSY_NO_INFO
+player = object = happy = Je n'ai pas coaché la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
+
+
+% NANCY_NO_INFO
+player = object = happy_var = Je n'ai pas accompagné l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
+
+
+% NATHAN_NO_INFO
+player = object = surprised = Je n'ai pas stimulé le scientifique.@Attends… Comment je sais qu'il existe ? Je ne l'ai jamais vu !
+
+
+% CASSIDY_NO_INFO
+player = object = happy = Je n'ai pas assisté la fille devant le billard.@Elle voudra peut-être faire une partie ?
+
+
+% DUPONT_NO_INFO
+player = object = happy = Je n'ai pas orienté le militaire à côté des barbelés sur le camp d'entraînement.
+
+
+% TRASHMAN_NO_INFO
+player = object = you_silly_var = Je n'ai pas encore encadré le taré qui traîne dans les ordures.
+
+
+% JANITOR_NO_INFO
+player = object = happy = Je n'ai pas éclairé le concierge.@Il me faut un peu penser à Joseph à mon travail.
+
+
+% SLACKER_NO_INFO
+player = object = laugh = Je n'ai pas aiguillé le dormeur.@Je doute d'être utile, mais je dois quand même vérifier.

@@ -25,3 +25,7 @@ player = UP = happy_var = Merci de ta diligence.
 
 % KEY_QUEST_TRASHMAN_STAYING
 militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, et…@Méditer sur mes choix de vie…
+
+
+% NEED_HELP
+object = player = trashman = Il y a des déchets un peu partout dans le camp.@Ramènes-en trois et tu auras mes faveurs.
