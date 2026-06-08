@@ -27,13 +27,17 @@ player = object = you_silly_var = Je n'ai pas dépanné le cuisinier.@Je dois lu
 player = object = unhappy_var = Je n'ai pas conseillé le coureur.@J'espère qu'il ne me demandera pas de faire du sport.
 
 
-
-
-
-
-
 % IDIOT_NO_INFO
 player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Qu'est-ce qu'il cherche à faire ?
+
+
+% IDIOT_MUSCLE_TONIC
+player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Je dois lui donner le fortifiant musculaire du scientifique.
+
+
+
+
+
 
 
 % SHOOTER_NO_INFO

@@ -51,29 +51,27 @@
 
 	à tester :
 	- message du garde
-	- aide cuisinier et prisonnier (+ indices)
-	
-	- aide trashman
-	- aide sergent
+	- aide cuisinier et prisonnier
 	- aide runner
-	- aide janitor
+	- aide idiot (seulement plantes)
+	- aide sergent (dialogue ok mais pas relier aux plantes ni au garde)	
+	- aide trashman (dialogue ok mais pas relier aux plantes ni au garde)	
+	- aide janitor (dialogue ok mais pas relier aux plantes ni au garde)
 
 	à faire :
 	- le garde se pousse une fois tt le monde aidé
-	- aider les témoins ARPES darwin event
-	
-	- aide trashamn (suite : les déchets)
-	- aide nathan
-	- aide dormeur
-	- aide infimière
-
-	- aide xavier
 	- aide idiot
-	
-
+	- aide shooter
+	- aide sergent
+	- aide jessy
+	- aide nancy
+	- aide nathan
+	- aide cassidy
+	- aide dupont
+	- aide trashman
+	- aide janitor
+	- aide slaker
 	- indices des plantes
-
-	
 
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
