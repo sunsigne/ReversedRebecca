@@ -51,21 +51,26 @@
 
 	à tester :
 	- message du garde
+	- aide cuisinier et prisonnier (+ indices)
+	
 	- aide trashman
 	- aide sergent
 	- aide runner
 	- aide janitor
 
 	à faire :
+	- le garde se pousse une fois tt le monde aidé
+	- aider les témoins ARPES darwin event
+	
 	- aide trashamn (suite : les déchets)
 	- aide nathan
 	- aide dormeur
 	- aide infimière
-	- relier aide cuisinier et prisonnier
+
 	- aide xavier
 	- aide idiot
 	
-	- voir comment aider les témoins après darwin event
+
 	- indices des plantes
 
 	
