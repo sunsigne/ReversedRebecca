@@ -1,4 +1,10 @@
 % RUNNER
+player = militaryman = laugh = BESOIN D'AIDE ?
+militaryman = DOWN = slacker = Zzzz
+player = DOWN = you_silly_var = C'est bien ce que je pensais.
+
+
+% RUNNER
 militaryman = player = runner = Je n'ai pas le temps de m'arrêter pour parler !@Le sergent m'a donné l'ordre de courir.
 
 

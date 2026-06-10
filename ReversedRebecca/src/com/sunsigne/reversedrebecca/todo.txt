@@ -62,22 +62,21 @@
 	- aide sergent
 	- aide trashman
 	- aide dupont
+	- aide cassidy
+	- aide janitor
+	- aide slaker
 	- la chaussette douche
+	- la chaussette trashman
 	- mettre à jour la HUD pillule, chausettes
 
 
 	à faire :
-	- placer la chaussette trashman
-	- placer les chausettes (une dans les douche, une avec trashman)
 	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- aide jessy
 	- aide nancy
-	- aide cassidy
-	- aide janitor
 	- aide slaker (retirer l'obligation sur le guarde ?)
-	- indices des plantes
 
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)

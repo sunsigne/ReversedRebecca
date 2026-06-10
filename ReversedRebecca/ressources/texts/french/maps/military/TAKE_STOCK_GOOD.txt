@@ -62,23 +62,26 @@ player = object = happy_var = Je n'ai pas accompagné l'infirmière.@Je suis cur
 
 
 
+
+
 % NATHAN_NO_INFO
 player = object = surprised = Je n'ai pas stimulé le scientifique.@Attends… Comment je sais qu'il existe ? Je ne l'ai jamais vu !
 
+
 % NATHAN_ZOCKZ
-player = object = pain = Je n'ai pas stimulé le scientifique.@Je suis censé lui apporter les chaussettes salles de YY.
+player = object = pain = Je n'ai pas stimulé le scientifique.@Je suis censée lui apporter les chaussettes sales de YY.
+
 
 % NATHAN_ONE_ZOCK
-player = object = pain = Je n'ai pas stimulé le scientifique.@Il cherche les deux chaussettes salles de YY. J'en ai trouvé une.
+player = object = pain = Je n'ai pas stimulé le scientifique.@Il cherche les deux chaussettes sales de YY. J'en ai trouvé une.
+
 
 % NATHAN_NO_PILL
 player = object = pain = Je n'ai pas stimulé le scientifique.@Je dois lui ramener une pilule de l'infirmerie.
 
 
-
-
 % CASSIDY_NO_INFO
-player = object = happy = Je n'ai pas assisté la fille devant le billard.@Elle voudra peut-être faire une partie ?
+player = object = laugh = Je n'ai pas assisté la fille devant le billard.@Elle voudra peut-être faire une partie ?
 
 
 % DUPONT_NO_INFO
@@ -95,6 +98,10 @@ player = object = you_silly_var = Je dois amener trois déchets à l'ordurier, m
 
 % JANITOR_NO_INFO
 player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait un peu penser à Joseph à mon travail.
+
+
+% JANITOR_CHITCHAT
+player = object = happy = Je n'ai pas éclairé le concierge.@Il veut me parler un peu.
 
 
 % SLACKER_NO_INFO

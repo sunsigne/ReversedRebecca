@@ -1,3 +1,7 @@
+% HELLO_NEED_HELP
+object = player = happy_var = Tout va bien pour moi, merci.
+
+
 % HELLO_PRANKED
 object = player = surprised = Oh mais !
 object = player = happy_var = Hey ! On s'est vu au commissariat ce matin.@Tu rentrais sans cesse dans mon bureau.
