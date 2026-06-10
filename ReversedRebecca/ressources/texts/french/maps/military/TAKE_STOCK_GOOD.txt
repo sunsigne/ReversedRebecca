@@ -35,17 +35,20 @@ player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles
 player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Je dois lui donner le fortifiant musculaire du scientifique.
 
 
-
-
-
-
-
 % SHOOTER_NO_INFO
 player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Il a peur de quelque chose ?
+
+% SHOOTER_IDIOT
+player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Je dois faire en sorte d'empêcher l'idiot de passer devant lui.
 
 
 % SERGENT_NO_INFO
 player = object = sad = Je n'ai pas épaulé le sergent. J'espère qu'il ne m'en demandera pas trop.
+
+
+
+
+
 
 
 % JESSY_NO_INFO
@@ -56,8 +59,21 @@ player = object = happy = Je n'ai pas coaché la militaire qui tire dans le mill
 player = object = happy_var = Je n'ai pas accompagné l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
 
 
+
+
 % NATHAN_NO_INFO
 player = object = surprised = Je n'ai pas stimulé le scientifique.@Attends… Comment je sais qu'il existe ? Je ne l'ai jamais vu !
+
+% NATHAN_ZOCKZ
+player = object = pain = Je n'ai pas stimulé le scientifique.@Je suis censé lui apporter les chaussettes salles de YY.
+
+% NATHAN_ONE_ZOCK
+player = object = pain = Je n'ai pas stimulé le scientifique.@Il cherche les deux chaussettes salles de YY. J'en ai trouvé une.
+
+% NATHAN_NO_PILL
+player = object = pain = Je n'ai pas stimulé le scientifique.@Je dois lui ramener une pilule de l'infirmerie.
+
+
 
 
 % CASSIDY_NO_INFO
@@ -77,4 +93,4 @@ player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait un peu 
 
 
 % SLACKER_NO_INFO
-player = object = laugh = Je n'ai pas aiguillé le dormeur.@Je doute d'être utile, mais je dois quand même vérifier.
+player = object = laugh = Je n'ai pas aiguillé le dormeur.@Je doute d'être utile, mais je peux quand même vérifier.

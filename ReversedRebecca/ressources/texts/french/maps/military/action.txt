@@ -58,6 +58,10 @@ LISTEN_AGAIN = Key2 % réécouter l'énigme
 HIT_HIM = Key3 % (le frapper)
 YOU_RE_A_LOSER = Key1 % t'es un loser
 REQUEST_A_FIREARM = Key3 % exiger une arme
+WHAT_DO_YOU_WANT_AGAIN = Key1 % tu veux quoi, déjà ?
+ARE_MY_SOCKS_OKAY = Key2 % mes chaussettes, ça ira ?
+HERE_ARE_THE_SOCKS = Key2 % voilà les chaussettes
+HERE_IS_THE_PILL = Key2 % voilà la pillule
 
 
 ///// TRAINING FIELD /////

@@ -10,6 +10,14 @@ player = DOWN = happy = (Je vais prendre ça pour un non.)
 militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@de passer devant…
 
 
+% YOU_DONT_SHOOT_NEED_HELP
+player = object = happy_var = Ok, je m'en occupes.
+
+
+% YOU_DO_SHOOT_NEED_HELP
+militaryman = player = shooter = Non merci. Tout va bien.
+
+
 % CLEANER_NEED_HELP
 object = player = happy = Tu peux m'aider à nettoyer les toilettes et les douches ?
 player = object = pain = Beurk. Sans façon…

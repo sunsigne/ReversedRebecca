@@ -57,20 +57,23 @@
 	- aide sergent (dialogue ok mais pas relier aux plantes ni au garde)	
 	- aide trashman (dialogue ok mais pas relier aux plantes ni au garde)	
 	- aide janitor (dialogue ok mais pas relier aux plantes ni au garde)
+	- aider l'idiot et le scientifique (vérifier tous les embranchements de dialogue)
+	- aider le shooter (si on aide le sicentifique avant, on peut lui parler)
+	- aide sergent
+
 
 	à faire :
+	- placer les chausettes (une dans les douche, une avec trashman)
+	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé
-	- aide idiot
-	- aide shooter
-	- aide sergent
+	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- aide jessy
 	- aide nancy
-	- aide nathan
 	- aide cassidy
 	- aide dupont
 	- aide trashman
 	- aide janitor
-	- aide slaker
+	- aide slaker (retirer l'obligation sur le guarde ?)
 	- indices des plantes
 
 	bug :
@@ -298,6 +301,7 @@
 	lvl002 : pour sortir de la chaise dans restroom, garder la même logique de traduction que dans rr000
 	lvl002 : concierge = janitor
 	lvl laboratory : trouver une sortie -> find an outing
+	lvl003 : L'habit fait le moine = Clothes make the man.
 	lvl_mole :
 	mushroom : rebecca = laught = "ho, I get it ! It's the mush "room" !
 	mole_0 se baigner : même. pas. en. rêve -> there. is. no. way
