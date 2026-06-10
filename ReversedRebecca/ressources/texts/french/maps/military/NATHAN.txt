@@ -102,32 +102,16 @@ object = player = unhappy = Zeune naïve… Les zauzettes vont par deux, zivile.
 
 % HERE_ARE_THE_SOCKS
 object = player = smile = Parfait ! Ze vais en exztraire le prinzipe actif.@As-tu une pilule vierze zur toi pour le contenir ?
-
-
-% HERE_ARE_THE_SOCKS_NO_PILL
 player = object = no_sens = Tu… ne m'a pas demandé d'en trouver une…
 object = player = smile = Ze ne t'ai pas nonplus demandé de rezpirer.@Il y a des chzoze qu'on fait parce qu'elles zont évidentes.
 object = LEFT = happy = Ze zuis zûr que Nanzy t'aidera à en trouver une.@Va la voir à l'infirmerie.
-
-
-% HERE_ARE_THE_SOCKS_WITH_PILL
-object = player = happy_var = La voilà.
-
-
-% HERE_ARE_THE_SOCKS_NO_PILL
-player = object = no_sens = Tu… ne m'a pas demandé d'en trouver une…
-object = player = smile = Ze ne t'ai pas nonplus demandé de rezpirer.@Il y a des chzoze qu'on fait parce qu'elles zont évidentes.
-object = LEFT = happy = Ze zuis zûr que Nanzy t'aidera à en trouver une.@Va la voir à l'infirmerie.
-
-
-% HERE_IS_THE_PILL
-object = LEFT = smile = Exzcellent ! Mon fortifiant muzculaire sera prêt dans une zeconde !
+object = LEFT = smile = Tu zais quoi ? Tant pis. Ze vais utilizer une des mienne.@Mon fortifiant muzculaire sera prêt dans une zeconde !
 object = player = happy = Et voilà ! Ze me zuis zurpazzer zette fois ! Il ne me manque plus…
 object = player = serious = nathan_dead_serious_voice = … Qu'un cobaye.
 object = player = happy = Ze t'invite à rezter izi. Ze revient dans une zeconde.
 
 
-% HERE_IS_THE_PILL_FINAL
+% HERE_WERE_THE_PILL
 object = player = smile = Il zemblerait qu'il y ait encore quelque azustements@mineurs à faire zur la rezette.
 object = player = smile = Quoi qu'il en zoit, ton aide était prézieuse, zivile.@Merzi encore pour le coup de main.
 object = player = happy_var = De rien. J'ai pu aider plein de monde d'un coup, avec ça.

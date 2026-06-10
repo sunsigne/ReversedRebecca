@@ -28,6 +28,9 @@
 
 	////////// EN COURS ////////////
 
+	créer un système d'affichage de message d'erreur en cas de pb de doublon dans le code piranha pour le JOUEUR (pour une raison obscure, ça ne marche pas pour ce piranha là)
+	créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes
+
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
@@ -63,24 +66,22 @@
 	- aide trashman
 	- aide dupont
 	- aide cassidy
+	- aide nancy
 	- aide janitor
 	- aide slaker
 	- la chaussette douche
 	- la chaussette trashman
+	- aide jessy
 	- mettre à jour la HUD pillule, chausettes
-
 
 	à faire :
 	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
-	- aide jessy
-	- aide nancy
 	- aide slaker (retirer l'obligation sur le guarde ?)
 
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
-
 
 	mettre musique sur Patreon
 
@@ -91,14 +92,13 @@
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- checkpoints
-	- les 3 compteurs (dont "victoire contre un chef" = met l'accent sur la victoire et impossible de faire 0)
+	- les 3 compteurs :
+		- victoire contre un chef -> met l'accent sur la victoire et impossible de faire 0
+		- personnes aidées / personnes insultées
 	- traduction en anglais
 
-	créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes
-
 	note : 
-	nancy = nolan
-	il est possible de ne montrer son intérêt qu'à Nancy (mensonge) ou qu'à Jessy (en repoussant Nancy lors du bisou)
+	il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

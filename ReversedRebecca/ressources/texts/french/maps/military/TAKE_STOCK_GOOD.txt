@@ -47,21 +47,16 @@ player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir q
 player = object = sad = Je n'ai pas épaulé le sergent. J'espère qu'il ne m'en demandera pas trop.
 
 
-
-
-
-
-
 % JESSY_NO_INFO
 player = object = happy = Je n'ai pas coaché la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
 
 
+% JESSY_BOMBS
+player = object = sad = Je n'ai pas coaché la militaire qui tire dans le mille.@Elle veut des bombes, mais je ne sais pas si j'ai envie de l'aider.
+
+
 % NANCY_NO_INFO
 player = object = happy_var = Je n'ai pas accompagné l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
-
-
-
-
 
 
 % NATHAN_NO_INFO
@@ -74,10 +69,6 @@ player = object = pain = Je n'ai pas stimulé le scientifique.@Je suis censée l
 
 % NATHAN_ONE_ZOCK
 player = object = pain = Je n'ai pas stimulé le scientifique.@Il cherche les deux chaussettes sales de YY. J'en ai trouvé une.
-
-
-% NATHAN_NO_PILL
-player = object = pain = Je n'ai pas stimulé le scientifique.@Je dois lui ramener une pilule de l'infirmerie.
 
 
 % CASSIDY_NO_INFO

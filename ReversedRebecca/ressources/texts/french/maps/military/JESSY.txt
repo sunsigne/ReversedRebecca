@@ -1,8 +1,3 @@
-% YOURE_MANIPULATING_THEM
-object = player = angry = Et alors ? S'ils sont assez bêtes pour penser qu'ils ont une@chance avec moi, ils méritent de se prendre des coups…
-object = player = sadistic_smirk = Ils méritent que je les fasse tourner en bourrique !
-
-
 % THATS_DANGEROUS
 object = player = angry = Et alors ? Ceux qui passent devant une arme@chargée méritent de se prendre une balle…
 object = player = doubt = Et puis ça va, je fais attention. Ni toi ni l'autre idiot@ne finiront blessés. Je sais ce que je fais.

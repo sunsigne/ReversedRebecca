@@ -1,3 +1,8 @@
+% NEED_HELP
+object = player = happy = Moi, c'est bon. Mais, je te retourne la question.@Il te faut quelque chose ?
+object = player = excited = Pardon, je ne me suis pas présenté. Moi, c'est Nancy.@Si tu as besoin de soins, tu es au bon endroit.
+
+
 % HELLO
 object = player = happy = Salut, moi c'est Nancy. Comment je peux t'aider ?
 
