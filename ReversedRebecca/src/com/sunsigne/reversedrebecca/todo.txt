@@ -75,10 +75,12 @@
 	- mettre à jour la HUD pillule, chausettes
 
 	à faire :
+	- sur le guarde : passer de 13 aides à 10 requises (et le dire)
 	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- aide slaker (retirer l'obligation sur le guarde ?)
+	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie
 
 	bug :
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
