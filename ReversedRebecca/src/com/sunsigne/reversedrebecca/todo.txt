@@ -60,6 +60,8 @@
 	- aider l'idiot et le scientifique (vérifier tous les embranchements de dialogue)
 	- aider le shooter (si on aide le sicentifique avant, on peut lui parler)
 	- aide sergent
+	- aide trashman
+	- aide dupont
 	- la chaussette douche
 	- mettre à jour la HUD pillule, chausettes
 
@@ -73,8 +75,6 @@
 	- aide jessy
 	- aide nancy
 	- aide cassidy
-	- aide dupont
-	- aide trashman
 	- aide janitor
 	- aide slaker (retirer l'obligation sur le guarde ?)
 	- indices des plantes

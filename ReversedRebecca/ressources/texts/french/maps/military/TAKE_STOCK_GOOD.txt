@@ -89,6 +89,10 @@ player = object = happy = Je n'ai pas orienté le militaire à côté des barbel
 player = object = you_silly_var = Je n'ai pas encadré le taré qui traîne dans les ordures.
 
 
+% TRASHMAN_TRASHES
+player = object = you_silly_var = Je dois amener trois déchets à l'ordurier, mais je@trouve ça où ? Le camp est nickel à part la décharge…
+
+
 % JANITOR_NO_INFO
 player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait un peu penser à Joseph à mon travail.
 

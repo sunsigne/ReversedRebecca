@@ -28,4 +28,23 @@ militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, e
 
 
 % NEED_HELP
-object = player = trashman = Il y a des déchets un peu partout dans le camp.@Ramènes-en trois et tu auras mes faveurs.
+object = player = trashman = Je suis chargé de surveiller les ordures.@Personne d'autre que moi n'y touchera.
+player = object = no_sens = Ça n'était pas ma question…@Je t'ai demandé comment je pouvais t'aider.
+object = player = trashman = Tu peux m'aider à entretenir cette décharge :@ramène-moi trois déchets et je renverrai l'ascesseur.
+
+
+% NEED_HELP_REALIZATION
+player = object = wrong_with_you = Je t'en ficherais moi des déchets !@Le camp est nickel… Je trouve ça où à part dans la décharge ?
+player = object = surprised = Oh!
+player = object = laugh = La voilà la solution ! Je trouve ça dans la décharge !
+
+
+% NEED_HELP_FINAL
+object = player = trashman = Parfait. Un marché est un marché. Voilà ta part.
+player = object = no_sens = Ça n'était pas ma question…@Je t'ai demandé comment je pouvais t'aider.
+object = player = trashman = Tu peux m'aider à entretenir cette décharge :@ramène-moi trois déchets et je renverrai l'ascesseur.
+
+
+% NEED_HELP_FINAL_NEXT
+player = object = fake_smile = Génial. Une chaussette sale. Merci.
+
