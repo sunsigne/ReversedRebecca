@@ -22,6 +22,7 @@ I_DIDNT_HAVE_BREAKFAST = Key1 % je n'ai pas pris de p'tit déj
 I_HAVE_A_BALANCED_DIET = Key1 % j'ai une alimentation équilibrée
 I_HAVE_A_KILLER_ROBOT_AT_HOME = Key3 % j'ai un robot tueur chez moi
 A_WEAPON = Key1 % une arme ?
+PICK_UP_THE_DIRTY_SOCK = Key2 % ramasser la chaussette sale
 
 
 ///// INFIRMARY /////

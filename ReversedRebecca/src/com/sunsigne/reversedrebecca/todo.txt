@@ -60,9 +60,12 @@
 	- aider l'idiot et le scientifique (vérifier tous les embranchements de dialogue)
 	- aider le shooter (si on aide le sicentifique avant, on peut lui parler)
 	- aide sergent
+	- la chaussette douche
+	- mettre à jour la HUD pillule, chausettes
 
 
 	à faire :
+	- placer la chaussette trashman
 	- placer les chausettes (une dans les douche, une avec trashman)
 	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé

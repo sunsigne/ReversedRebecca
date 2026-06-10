@@ -47,3 +47,19 @@ player = DOWN = angry_var2 = Zut ! Ça n'est qu'une affiche de fusil !
 
 % HELPED_EVERYONE
 player = DOWN = laugh = Cette fois, ça y est ! J'ai aidé tout le monde dans le camp !@Je n'ai plus qu'à retourner voir le garde pour qu'il me laisse passer.
+
+
+% PICK_UP_DIRTY_SOCK_EXPECTED
+player = DOWN = pain = Beurk !
+
+
+% PICK_UP_DIRTY_SOCK
+player = DOWN = pain = Beurk ! Pas sans une bonne raison !
+
+
+% PICK_UP_DIRTY_SOCK_NEXT
+player = DOWN = pain = Ramasse-les toi-même !
+
+
+% PICK_UP_DIRTY_SOCK_NEXT_NEXT
+player = DOWN = sad = Bon… Puisque tu insistes…

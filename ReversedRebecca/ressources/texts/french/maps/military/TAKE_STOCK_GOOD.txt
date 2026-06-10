@@ -38,6 +38,7 @@ player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles
 % SHOOTER_NO_INFO
 player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Il a peur de quelque chose ?
 
+
 % SHOOTER_IDIOT
 player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Je dois faire en sorte d'empêcher l'idiot de passer devant lui.
 
