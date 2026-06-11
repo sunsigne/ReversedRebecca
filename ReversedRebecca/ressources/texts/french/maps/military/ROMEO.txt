@@ -27,7 +27,7 @@ object = DOWN = skeptical = Dégage, avant que je te fasse mal.
 
 
 % PRISONNER_NO_HELP
-player = DOWN = sad = (Je ne suis pas certaine que je puisse l'aider. On va dire que ça compte.)
+player = DOWN = sad = (Je ne suis pas certaine que je doive l'aider…@On va dire que ça compte.)
 
 
 % CHOICE_PRISONNER_YES

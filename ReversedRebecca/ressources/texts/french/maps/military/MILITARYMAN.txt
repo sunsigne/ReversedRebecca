@@ -17,7 +17,7 @@ militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@
 
 
 % YOU_DONT_SHOOT_NEED_HELP
-player = object = happy_var = Ok, je m'en occupes.
+player = object = happy_var = Ok, je m'en occupe.
 
 
 % YOU_DO_SHOOT_NEED_HELP

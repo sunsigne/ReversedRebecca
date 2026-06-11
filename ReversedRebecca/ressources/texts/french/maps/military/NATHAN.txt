@@ -13,8 +13,8 @@ object = player = serious = nathan_dead_serious_voice = Elle va finir dans ta bo
 object = player = stupid = Dézolé mais non. Z'en ai peut-être l'air, mais@ze ne zuis pas un sczientifique fou.
 object = player = smile = Ze ne te donnerai pas d'arme. Mais ze peux t'aider@autrement ! Quel est ton mal ?
 player = object = happy = Je dois parler au chef.
-object = player = smile = YY ? Z'est un cas fasczinant ! Un ADN incroyable !@Sûrement le zeul homme plus intellizent que moi !
-object = player = happy = Et quelle forze ! Il est plus prochze du surhomme@que toi de la beauté. Une arme est inutile contre lui.
+object = player = smile = YY ? Z'est un cas fasczinant ! Un ADN incroyable !@Zûrement le zeul homme plus intellizent que moi !
+object = player = happy = Et quelle forze ! Il est plus prochze du zurhomme@que toi de la beauté. Une arme est inutile contre lui.
 player = object = wrong_with_you = Tu me cherches ?
 player = object = wrong_with_you = Est-ce que je te dis à toi que ton visage est plus@proche de la raclette que ta mère d'une baleine ?
 player = object = angry = J'ai besoin d'une arme parce que le garde@ne veut pas me laisser passer.
@@ -58,22 +58,23 @@ object = player = serious = nathan_dead_serious_voice = C'est mon corps qui est 
 
 
 % HELLO_NEXT_POSITIF
-player = object = happy_var = (Il est bizarre…)
-player = object = happy = Moi c'est Rebecca. Est-ce que je peux t'aider d'une façon ou d'une autre autre ?
-object = player = smile = Et bien oui. Ze zuis à deux doigts de terminer@ma nouvelle inventzion : un fortifiant muzculaire !
+player = object = happy_var = (Il est bizarre, mais un peu drôle…)
+player = object = happy = Moi c'est Rebecca. Est-ce que je peux t'aider@d'une façon, ou d'une autre ?
+object = player = stupid = Et bien oui. Ze zuis à deux doigts de terminer@ma nouvelle inventzion : un fortifiant muzculaire !
 
 
 % HELLO_NEXT_POSITIF_TALKED_TO_IDIOT
-player = object = happy_var = (Il est bizarre…)
-player = object = happy = Moi c'est Rebecca. Est-ce que tu pourrais me fabriquer un fortifiant musculaire ?
-object = player = smile = Mais quelle hazard incroyable ! Z'est zuztement@ze que z'ezzais de créer en ze moment-même !
+player = object = happy_var = (Il est bizarre, mais un peu drôle…)
+player = object = happy = Moi c'est Rebecca. Est-ce que tu pourrais me@fabriquer un fortifiant musculaire, s'il-te-plaît ?
+object = player = stupid = Quelle coïnzidenze incroyable ! Z'est zuztement@ze que z'ezzais de créer en ze moment-même !
 
 
 % HELLO_NEXT_POSITIF_NEXT
-object = player = smile = Vois-tu, YY est un cas fasczinant ! Un ADN incroyable !@Sûrement le zeul homme plus intellizent que moi !
-object = player = happy = Mais surtout, quelle forze ! Il est à la limite du surhomme@Zes zubztrats fibreux pédaux feront parfaitement l'affaire.
+object = player = smile = YY est un cas fasczinant ! Un ADN incroyable !@Zûrement le zeul homme plus intellizent que moi !
+object = player = stupid = Mais zurtout, quelle forze ! Z'est un zurhomme !@J'ezzais de créer une rezette pour l'imiter.
+object = player = happy = Zes zubztrats fibreux pédaux feront parfaitement@l'affaire. Apporte-moi za.
 player = object = no_sens_var = Pardon… Tu veux quoi ?
-object = player = unhappy = He bien… Les réacteurs microbiens biplantaires du chzef…@Pour ma rezette du fortifiant muzculaire…
+object = player = unhappy = He bien… Les réacteurs microbiens biplantaires du@chzef… Pour ma rezette du fortifiant muzculaire…
 
 
 % HELLO_NEXT_POSITIF_FINAL
@@ -82,36 +83,35 @@ player = object = fake_smile = Ok, c'est… pas du tout bizarre, et tout à fait
 
 % HELLO_NEXT_POSITIF_FINAL_WITH_ZOCKZ
 player = object = fake_smile = Ok, c'est pas du tout bizarre, et tout à fait normal.
-player = object = laugh = Tu as de la chance ! Il se trouve que j'ai précisément ça sur moi !
-object = player = unhappy = Ok, z'est… pas du tout bizarre, et tout à fait normal.
+player = object = laugh = Tu as de la chance !@Il se trouve que j'ai précisément ça sur moi !
+object = player = unhappy = Ok, z'est…@Pas du tout bizarre, et tout à fait normal…
 
 
 % WHAT_DO_YOU_WANT_AGAIN
-object = player = serious = nathan_dead_serious_voice = Les chaussettes sales du chef. Maintenant.
-object = player = smile = Chzerchze un peu. Ze zuis zûr que tu les trouveras@quelque part dans ze camp. Elles ne sont probablement pas ensemble.
+object = player = serious = nathan_dead_serious_voice = Les chaussettes sales du chef.
 
 
 % ARE_MY_SOCKS_OKAY
-object = player = smile = Z'est tentant, mais non. Ze chzerche à créer des muszcles@Pas des zambes bien trop longues avec un vizage dizgrazieux.
-player = object = angry_var2 = C'est quoi son problème ? Je vais lui mettre dans@la bouche, ses chaussettes !
+object = player = smile = Z'est tentant, mais non. Ze chzerche à créer des@muszcles. Pas un vizage dizgrazieux.
+player = object = angry_var2 = C'est quoi son problème ? Je vais les lui mettre@dans la bouche, ses chaussettes !
 
 
 % HERE_ARE_THE_SOCKS_FAIL
-object = player = unhappy = Zeune naïve… Les zauzettes vont par deux, zivile.@Tu n'en a qu'une zeule. Va chzerchzer l'autre.
+object = player = stupid = Zeune naïve… Les zauzettes vont par deux, zivile.@Tu n'en a qu'une zeule. Va chzerchzer l'autre.
 
 
 % HERE_ARE_THE_SOCKS
-object = player = smile = Parfait ! Ze vais en exztraire le prinzipe actif.@As-tu une pilule vierze zur toi pour le contenir ?
+object = player = stupid = Parfait ! Ze vais en exztraire le prinzipe actif.@As-tu une pilule vierze zur toi, pour le contenir ?
 player = object = no_sens = Tu… ne m'a pas demandé d'en trouver une…
-object = player = smile = Ze ne t'ai pas nonplus demandé de rezpirer.@Il y a des chzoze qu'on fait parce qu'elles zont évidentes.
-object = LEFT = happy = Ze zuis zûr que Nanzy t'aidera à en trouver une.@Va la voir à l'infirmerie.
-object = LEFT = smile = Tu zais quoi ? Tant pis. Ze vais utilizer une des mienne.@Mon fortifiant muzculaire sera prêt dans une zeconde !
-object = player = happy = Et voilà ! Ze me zuis zurpazzer zette fois ! Il ne me manque plus…
-object = player = serious = nathan_dead_serious_voice = … Qu'un cobaye.
+object = player = smile = Ze ne t'ai pas nonplus demandé de rezpirer. Il y a@des chzoze qu'on fait parce qu'elles zont évidentes.
+object = LEFT = stupid = Ze zuis zûr que Nanzy t'aidera à en trouver une.@Va la voir à l'infirmerie.
+object = player = smile = Tu zais quoi ? Ze vais utilizer une des mienne.@Mon fortifiant muzculaire est prêt de toute fazon.
+object = player = happy = Et voilà ! Ze me zuis zurpazzer zette fois !@Il ne me manque plus…
+object = player = serious = nathan_dead_serious_voice = … qu'un cobaye.
 object = player = happy = Ze t'invite à rezter izi. Ze revient dans une zeconde.
 
 
 % HERE_WERE_THE_PILL
-object = player = smile = Il zemblerait qu'il y ait encore quelque azustements@mineurs à faire zur la rezette.
+object = player = smile = Il zemblerait qu'il y ait encore quelque azuztements@mineurs, à faire zur la rezette.
 object = player = smile = Quoi qu'il en zoit, ton aide était prézieuse, zivile.@Merzi encore pour le coup de main.
-object = player = happy_var = De rien. J'ai pu aider plein de monde d'un coup, avec ça.
+player = object = happy_var = De rien. J'ai pu aider plein de monde d'un seul coup !

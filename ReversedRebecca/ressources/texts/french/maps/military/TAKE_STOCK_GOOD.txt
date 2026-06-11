@@ -13,7 +13,7 @@ player = object = happy = Je n'ai pas aidé le prisonnier en isolement.@Je suis 
 
 
 % ROMEO_FREEING
-player = object = unhappy_var = Je n'ai pas aidé le prisonnier en isolement.@Je suis censé le libérer, mais je ne sais pas si c'est une bonne idée…
+player = object = unhappy_var = Je n'ai pas aidé le prisonnier en isolement.@Est-ce je dois vraiment le libérer ?
 
 
 % AMIR_NO_INFO
@@ -21,7 +21,7 @@ player = object = laugh = Je n'ai pas dépanné le cuisinier.@J'y gagnerai peut-
 
 
 % AMIR_OIGNON
-player = object = you_silly_var = Je n'ai pas dépanné le cuisinier.@Je dois lui donner les oignons qui sont dans le stock.
+player = object = happy_var = Je n'ai pas dépanné le cuisinier. Je dois lui donner@les oignons qui sont dans le stock.
 
 
 % RUNNER_NO_INFO
@@ -33,7 +33,7 @@ player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles
 
 
 % IDIOT_MUSCLE_TONIC
-player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Je dois lui donner le fortifiant musculaire du scientifique.
+player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Je dois lui donner le fortifiant du scientifique.
 
 
 % SHOOTER_NO_INFO
@@ -41,7 +41,7 @@ player = object = no_sens = Je n'ai pas soutenu le militaire sur le stand de tir
 
 
 % SHOOTER_IDIOT
-player = object = no_sens = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer.@Je dois faire en sorte d'empêcher l'idiot de passer devant lui.
+player = object = worry = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer. En aidant l'idiot, ça devrait aller.
 
 
 % SERGENT_NO_INFO
@@ -53,7 +53,7 @@ player = object = happy = Je n'ai pas secondé la militaire qui tire dans le mil
 
 
 % JESSY_BOMBS
-player = object = sad = Je n'ai pas secondé la militaire qui tire dans le mille.@Elle veut des bombes, mais je ne sais pas si j'ai envie de l'aider.
+player = object = sad = Je n'ai pas secondé la militaire qui tire dans le mille.@Est-ce que je veux vraiment lui donner ses bombes ?
 
 
 % NANCY_NO_INFO
@@ -65,11 +65,11 @@ player = object = surprised = Je n'ai pas stimulé le scientifique. Attends…@C
 
 
 % NATHAN_ZOCKZ
-player = object = pain = Je n'ai pas stimulé le scientifique.@Je suis censée lui apporter les chaussettes sales de YY.
+player = object = unhappy_var = Je n'ai pas stimulé le scientifique. Je suis censée@lui apporter les chaussettes sales de YY.
 
 
 % NATHAN_ONE_ZOCK
-player = object = pain = Je n'ai pas stimulé le scientifique.@Il cherche les deux chaussettes sales de YY. J'en ai trouvé une.
+player = object = unhappy_var = Je n'ai pas stimulé le scientifique. Il cherche les@deux chaussettes sales de YY. J'en ai trouvé une.
 
 
 % CASSIDY_NO_INFO
