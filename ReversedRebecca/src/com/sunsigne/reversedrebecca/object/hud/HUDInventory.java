@@ -2,6 +2,8 @@ package com.sunsigne.reversedrebecca.object.hud;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.InventoryPlayer;
 import com.sunsigne.reversedrebecca.object.GameObject;
@@ -36,7 +38,7 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 
 	@Override
 	public String toString() {
-		String items = InventoryPlayer.getSize() + " ITEM(S)";
+		String items = InventoryPlayer.size() + " ITEM(S)";
 		return "HUD INVENTORY : " + items;
 	}
 
@@ -113,29 +115,29 @@ public class HUDInventory extends GameObject implements HUD, Blinking {
 		if (isVisible() == false)
 			return;
 
-		int size = InventoryPlayer.getSize();
+		int index = 0;
 
-		for (int index = 0; index < size; index++) {
-			try {
-				if (index > 0 && isGenericClue() && InventoryOption.getType() != INVENTORY_TYPE.VISIBLE)
-					break;
+		Iterator<Entry<Integer, BufferedImage>> it = InventoryPlayer.getInventoryMap().entrySet().iterator();
+		while (it.hasNext()) {
+			Entry<Integer, BufferedImage> entry = it.next();
 
-				BufferedImage image = InventoryPlayer.get(index);
+			if (index > 0 && isGenericClue() && InventoryOption.getType() != INVENTORY_TYPE.VISIBLE)
+				break;
 
-				// if no hp HUD
-				Player player = new PlayerFinder().getPlayer();
-				int yoffset = player != null && player.isInvulnerable() ? getY() : 0;
+			BufferedImage image = entry.getValue();
 
-				// item
-				g.drawImage(image, getX() + index * getWidth(), getY() - yoffset, getWidth(), getHeight(), null);
+			// if no hp HUD
+			Player player = new PlayerFinder().getPlayer();
+			int yoffset = player != null && player.isInvulnerable() ? getY() : 0;
 
-				// blinking
-				if (InventoryPlayer.getHighlight() != null && index == size - 1)
-					drawHighlight(g, InventoryPlayer.getHighlight(), index * getWidth(), -yoffset, 0, 0);
+			// item
+			g.drawImage(image, getX() + index * getWidth(), getY() - yoffset, getWidth(), getHeight(), null);
 
-			} catch (IndexOutOfBoundsException e) {
-				// can occurs when MultiToolMode is used
-			}
+			// blinking
+			if (InventoryPlayer.getHighlight() != null && index == InventoryPlayer.size() - 1)
+				drawHighlight(g, InventoryPlayer.getHighlight(), index * getWidth(), -yoffset, 0, 0);
+
+			index++;
 		}
 	}
 

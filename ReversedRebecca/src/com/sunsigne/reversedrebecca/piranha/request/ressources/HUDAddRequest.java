@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -45,7 +46,8 @@ public class HUDAddRequest implements Request {
 			return;
 		}
 
-		int col = Integer.parseInt(target);
+		String raw_col = new FileTask().read(false, target, "/textures/hud/inventory.txt");
+		int col = Integer.parseInt(raw_col);
 		GenericListener generic = () -> new InventoryPlayer().addItem(col);
 
 		if (LAYER.LOADING.getHandler().getList().isEmpty())

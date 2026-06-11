@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 
 public class HUDRemoveRequest implements Request {
@@ -41,8 +42,9 @@ public class HUDRemoveRequest implements Request {
 			return;
 		}
 
-		int index = Integer.parseInt(target);
-		new InventoryPlayer().removeItem(index - 1);
+		String raw_col = new FileTask().read(false, target, "/textures/hud/inventory.txt");
+		int col = Integer.parseInt(raw_col);
+		new InventoryPlayer().removeItem(col);
 	}
 
 	private void removeNurseHud() {

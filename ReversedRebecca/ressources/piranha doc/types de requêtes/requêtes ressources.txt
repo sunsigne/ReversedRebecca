@@ -105,10 +105,10 @@ Le Type de Requête HUD_ADD permet d'ajouter une image dans la HUD, sous les poi
 Fichiers de référence : « ressources/texture/hud/inventory » et « ressources/texture/hud/inventory_highlight ».
 
 Exemple :
-WONPUZZLE -> 10-20 = HUD_ADD -> 1
-WONPUZZLE -> 10-20 = GOTO -> HUD_ADD:1
+WONPUZZLE -> 10-20 = HUD_ADD -> PLANT
+WONPUZZLE -> 10-20 = GOTO -> HUD_ADD:PLANT
 
-Lorsque la Condition sera vérifiée, sera ajouté à la HUD l'image située en première colonne du fichier de référence.
+Lorsque la Condition sera vérifiée, sera ajouté à la HUD l'image de référence « PLANT » dans les fichiers de référence.
 
 Note : l'image est automatiquement retirée lorsque la carte prend fin.
 
@@ -119,10 +119,10 @@ Note : l'image est automatiquement retirée lorsque la carte prend fin.
 Le Type de Requête HUD_REMOVE permet de retirer une image de la HUD qui a été ajouté par le Type de Requête HUD_ADD.
 
 Exemple :
-WONPUZZLE -> 10-20 = HUD_REMOVE -> 1
-WONPUZZLE -> 10-20 = GOTO -> HUD_REMOVE:1
+WONPUZZLE -> 10-20 = HUD_REMOVE -> PLANT
+WONPUZZLE -> 10-20 = GOTO -> HUD_REMOVE:PLANT
 
-Lorsque la Condition sera vérifiée, sera retiré de la HUD la première image qui a été ajouté par le Type de Requête HUD_ADD.
+Lorsque la Condition sera vérifiée, sera retiré de la HUD l'image de référence « PLANT » dans les fichiers de référence.
 
 
 

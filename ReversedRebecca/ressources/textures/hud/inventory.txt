@@ -1,0 +1,15 @@
+////// CLUE //////
+
+clue=1
+
+////// POLICE STATION //////
+
+plant=2
+results=3
+donut=4
+coffee=5
+
+////// MILITARY //////
+
+onion=6
+lunchbox=7

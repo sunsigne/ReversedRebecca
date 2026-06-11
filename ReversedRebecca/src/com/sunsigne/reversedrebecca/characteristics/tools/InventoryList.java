@@ -1,16 +1,15 @@
 package com.sunsigne.reversedrebecca.characteristics.tools;
 
 import java.awt.image.BufferedImage;
+import java.util.LinkedHashMap;
 
 import com.sunsigne.reversedrebecca.characteristics.Characteristic;
-import com.sunsigne.reversedrebecca.pattern.list.GameList;
-import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
 public class InventoryList extends Characteristic {
 
 	////////// MAP OR LIST ////////////
 
-	protected static GameList<BufferedImage> list = new GameList<>(LISTTYPE.ARRAY);
+	protected static LinkedHashMap<Integer, BufferedImage> map = new LinkedHashMap<>();
 
 	////////// CHARACTERISTICS ////////////
 
@@ -23,7 +22,7 @@ public class InventoryList extends Characteristic {
 
 	@Override
 	public void reset() {
-		list.clear();
+		map.clear();
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.characteristics.tools;
 
 import java.awt.image.BufferedImage;
+import java.util.LinkedHashMap;
 
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDInventory;
@@ -20,21 +21,20 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 
 	////////// MAP OR LIST ////////////
 
-	public static int getSize() {
-		return InventoryList.list.getList().size();
+	public static LinkedHashMap<Integer, BufferedImage> getInventoryMap() {
+		return InventoryList.map;
 	}
 
-	public static BufferedImage get(int index) {
-		return InventoryList.list.getList().get(index);
+	public static int size() {
+		return InventoryList.map.size();
 	}
 
 	public static BufferedImage getHighlight() {
 		return image_highlight;
 	}
 
-	public void removeItem(int index) {
-		int obj = getSize() > index ? index : getSize() - 1;
-		InventoryList.list.getList().remove(obj);
+	public void removeItem(int col) {
+		InventoryList.map.remove(col);
 	}
 
 	public void reset() {
@@ -63,7 +63,7 @@ public class InventoryPlayer implements SheetableImage, PhysicFree, TickFree, Re
 		image_highlight = getSheetSubImage(sheet, col, getSheetRowCriterion(), getSheetWidth() + 2,
 				getSheetHeight() + 2);
 
-		InventoryList.list.addObject(image);
+		InventoryList.map.put(col, image);
 
 		for (HUD tempHUD : HUDList.getList().getList()) {
 			if (tempHUD instanceof HUDInventory == false)
