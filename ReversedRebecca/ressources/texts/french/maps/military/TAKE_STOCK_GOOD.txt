@@ -1,10 +1,11 @@
 % GOOD
 player = object = asleep = Voyons voir…
+player = object = happy_var = Je dois aider dix militaires.@Ils sont quatorze, si on ne compte pas le garde.
 
 
 % HELPED_EVERYONE
 player = object = asleep = Voyons voir…
-player = object = determined = J'ai aidé tout le monde. Je peux accéder à la tour de Double-Y.@Rendons-lui une petite visite.
+player = object = determined = J'ai aidé suffisamment de monde. Je peux accéder à la tour de Double-Y.@Rendons-lui une petite visite.
 
 
 % ROMEO_NO_INFO
@@ -16,7 +17,7 @@ player = object = unhappy_var = Je n'ai pas aidé le prisonnier en isolement.@Je
 
 
 % AMIR_NO_INFO
-player = object = you_silly_var = Je n'ai pas dépanné le cuisinier.@J'y gagnerai peut-être de la nourriture ?
+player = object = laugh = Je n'ai pas dépanné le cuisinier.@J'y gagnerai peut-être de la nourriture ?
 
 
 % AMIR_OIGNON
@@ -24,7 +25,7 @@ player = object = you_silly_var = Je n'ai pas dépanné le cuisinier.@Je dois lu
 
 
 % RUNNER_NO_INFO
-player = object = unhappy_var = Je n'ai pas conseillé le coureur.@J'espère qu'il ne me demandera pas de faire du sport.
+player = object = unhappy_var = Je n'ai pas conseillé le coureur. J'espère@qu'il ne me demandera pas de faire du sport.
 
 
 % IDIOT_NO_INFO
@@ -36,31 +37,31 @@ player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles
 
 
 % SHOOTER_NO_INFO
-player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Il a peur de quelque chose ?
+player = object = no_sens = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer. Il a peur de quelque chose ?
 
 
 % SHOOTER_IDIOT
-player = object = doubt = Je n'ai pas soutenu le militaire sur le stand de tir qui hésite à tirer.@Je dois faire en sorte d'empêcher l'idiot de passer devant lui.
+player = object = no_sens = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer.@Je dois faire en sorte d'empêcher l'idiot de passer devant lui.
 
 
 % SERGENT_NO_INFO
-player = object = sad = Je n'ai pas épaulé le sergent. J'espère qu'il ne m'en demandera pas trop.
+player = object = worry = Je n'ai pas épaulé le sergent.@J'espère qu'il ne m'en demandera pas trop.
 
 
 % JESSY_NO_INFO
-player = object = happy = Je n'ai pas coaché la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
+player = object = happy = Je n'ai pas secondé la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
 
 
 % JESSY_BOMBS
-player = object = sad = Je n'ai pas coaché la militaire qui tire dans le mille.@Elle veut des bombes, mais je ne sais pas si j'ai envie de l'aider.
+player = object = sad = Je n'ai pas secondé la militaire qui tire dans le mille.@Elle veut des bombes, mais je ne sais pas si j'ai envie de l'aider.
 
 
 % NANCY_NO_INFO
-player = object = happy_var = Je n'ai pas accompagné l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
+player = object = excited = Je n'ai pas rencontré l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
 
 
 % NATHAN_NO_INFO
-player = object = surprised = Je n'ai pas stimulé le scientifique.@Attends… Comment je sais qu'il existe ? Je ne l'ai jamais vu !
+player = object = surprised = Je n'ai pas stimulé le scientifique. Attends…@Comment je sais qu'il existe ? Je ne l'ai jamais vu !
 
 
 % NATHAN_ZOCKZ
@@ -76,11 +77,11 @@ player = object = laugh = Je n'ai pas assisté la fille devant le billard.@Elle 
 
 
 % DUPONT_NO_INFO
-player = object = happy = Je n'ai pas orienté le militaire à côté des barbelés sur le camp d'entraînement.
+player = object = worry = Je n'ai pas orienté le militaire à côté des barbelés@sur le camp d'entraînement.
 
 
 % TRASHMAN_NO_INFO
-player = object = you_silly_var = Je n'ai pas encadré le taré qui traîne dans les ordures.
+player = object = you_silly_var = Je n'ai pas encadré le taré qui traîne dans les@ordures.
 
 
 % TRASHMAN_TRASHES
@@ -88,7 +89,7 @@ player = object = you_silly_var = Je dois amener trois déchets à l'ordurier, m
 
 
 % JANITOR_NO_INFO
-player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait un peu penser à Joseph à mon travail.
+player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait penser à Joseph.
 
 
 % JANITOR_CHITCHAT
@@ -96,4 +97,4 @@ player = object = happy = Je n'ai pas éclairé le concierge.@Il veut me parler 
 
 
 % SLACKER_NO_INFO
-player = object = laugh = Je n'ai pas aiguillé le dormeur.@Je doute d'être utile, mais je peux quand même vérifier.
+player = object = laugh = Je n'ai pas aiguillé le dormeur. Je doute d'être utile,@mais je peux quand même vérifier.

@@ -56,13 +56,7 @@
 		- highight de la chaussette orange qui passe au dessus du joueur
 
 	à tester :
-	- plante xavier
-	- plante runner
-	- plante cassidy
-	- plante janitor
-	- plante sergent
-	- plante slacker
-	- plante trashman
+	- plante trashman (ne marche pas parce qu'on récupère la chaussette, mais on est pas censé savoir que le scientifique les cherches!)
 	
 	- message du garde
 	- aide cuisinier et prisonnier
