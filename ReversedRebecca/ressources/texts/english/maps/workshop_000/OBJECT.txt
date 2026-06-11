@@ -1,5 +1,5 @@
 % BLACKBOARD
-player = object = unhappy = Eww ! Maths…
+player = object = unhappy = Yuck ! Maths…
 
 
 % BOOKSHELF

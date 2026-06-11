@@ -1,5 +1,5 @@
 % PEE_PUDDLE
-player = object = sad = Eww.
+player = object = sad = Yuck.
 
 
 % PLANTS

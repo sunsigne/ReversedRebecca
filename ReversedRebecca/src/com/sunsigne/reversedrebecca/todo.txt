@@ -58,8 +58,6 @@
 
 	à faire :
 	- meilleur cinématique d'empoisonnement de l'idiot
-	- HUD chaussettes
-	- HUD déchets
 	- sur le guarde : passer de 14 aides à 10 requises
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
@@ -272,7 +270,7 @@
 	4h00 - la traduction en anglais n'est pas fini !
 	
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
-	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Eww / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet!
+	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Yuck / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet!
 	Sarah : Ben mince -> Darn... / Ha bon ? - Ha ce point -> Really ? / Du Rebecca tout craché -> this is so Rebecca
 	Delta : ma grande (pour rebecca) -> sis / type, gars, mec -> a dawg, pal
 	Joseph : (never use any abreviation : i'm -> i am / don't -> do not) yet -> nonetheless

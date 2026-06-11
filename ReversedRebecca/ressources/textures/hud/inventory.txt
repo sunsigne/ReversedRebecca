@@ -13,3 +13,6 @@ coffee=5
 
 onion=6
 lunchbox=7
+orange_sock=8
+green_sock=9
+trash=10
