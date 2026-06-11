@@ -85,7 +85,7 @@ player = object = you_silly_var = Je n'ai pas encadré le taré qui traîne dans
 
 
 % TRASHMAN_TRASHES
-player = object = you_silly_var = Je dois amener trois déchets à l'ordurier, mais je@trouve ça où ? Le camp est nickel à part la décharge…
+player = object = no_sens = Je dois amener trois déchets à l'ordurier,@mais je trouve ça où à part dans la décharge ?
 
 
 % JANITOR_NO_INFO

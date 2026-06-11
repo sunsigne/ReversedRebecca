@@ -52,12 +52,7 @@
 	
 	////////// MILITARY ////////////
 
-	bug :
-		- highight de la chaussette orange qui passe au dessus du joueur
-
 	à tester :
-	- plante trashman (ne marche pas parce qu'on récupère la chaussette, mais on est pas censé savoir que le scientifique les cherches!)
-	
 	- message du garde
 	- aide cuisinier et prisonnier
 	- aide idiot
@@ -66,15 +61,15 @@
 	- aide janitor (dialogue ok mais pas relier aux plantes ni au garde)
 	- aider l'idiot et le scientifique (vérifier tous les embranchements de dialogue)
 	- aider le shooter (si on aide le sicentifique avant, on peut lui parler)
-	- aide nancy (chaussette trashamn ?)
-	- la chaussette douche
+	- aide nancy
+	- aide nathan (+ les chaussettes)
 	- aide jessy
 	- mettre à jour la HUD pillule, chausettes
 
 	à faire :
 	- HUD chaussettes
 	- HUD déchets
-	- sur le guarde : passer de 13 aides à 10 requises (et le dire)
+	- sur le guarde : passer de 14 aides à 10 requises
 	- placer les 2 moitiées de pillules (dans l'infirmerie)
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)

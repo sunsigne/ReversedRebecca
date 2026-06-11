@@ -50,7 +50,7 @@ player = DOWN = laugh = Cette fois, ça y est ! J'ai aidé tout le monde dans le
 
 
 % PICK_UP_DIRTY_SOCK_EXPECTED
-player = DOWN = pain = Beurk !
+player = object = pain = Beurk !
 
 
 % PICK_UP_DIRTY_SOCK
@@ -58,8 +58,8 @@ player = DOWN = pain = Beurk ! Pas sans une bonne raison !
 
 
 % PICK_UP_DIRTY_SOCK_NEXT
-player = DOWN = pain = Ramasse-les toi-même !
+player = DOWN = angry_var2 = Ramasse-les toi-même !
 
 
 % PICK_UP_DIRTY_SOCK_NEXT_NEXT
-player = DOWN = sad = Bon… Puisque tu insistes…
+player = object = asleep = Bon… Puisque tu insistes…
