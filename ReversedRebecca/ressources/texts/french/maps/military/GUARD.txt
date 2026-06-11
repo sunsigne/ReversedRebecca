@@ -35,18 +35,15 @@ player = militaryman = happy_var = C'est ça. Laisse passer la princesse.@Et ne 
 
 % GOOD_I_MUST_SEE_YY
 militaryman = player = guard = On ne passe pas.
-player = militaryman = worry = Aller ! Il y a bien quelque chose que je@peux faire pour te convaincre de me laisser passer.
-militaryman = player = guard = Si tu viens en aide à mes frères d'armes, le chef@ne verra aucune objection à ce que je te laisse passer.
-player = militaryman = unhappy_var = Donc, je dois juste aider les autres ?
-militaryman = player = guard = Oui. Je te conseille de commencer par mon cousin.@Il fait des tours de piste sur le terrain d'entraînement.
-player = DOWN = you_silly = (Le camp d'entraînement, hein ?)
+player = militaryman = worry = Il n'y a pas quelque chose que je peux faire@pour te convaincre de me laisser passer ?
+militaryman = player = guard = Aide 10 de mes frères d'armes, et le chef ne verra@aucune objection à ce que je t'ouvre le passage.
 
 
 % GOOD_MAY_I_PASS_NOT_STARTED
-militaryman = player = guard = Tu n'as pas fini d'aider mes collègue.@En fait, tu n'as même pas commencé.
+militaryman = player = guard = Tu n'as pas fini d'aider mes collègues.@En fait, tu n'as même pas commencé.
 player = militaryman = laugh = C'était pour voir si tu suivais.
 
 
 % GOOD_MAY_I_PASS_NOT_DONE
-militaryman = player = guard = Tu n'as pas fini d'aider mes collègue.
+militaryman = player = guard = Tu n'as pas fini d'aider mes collègues.
 player = militaryman = laugh = C'était pour voir si tu suivais.

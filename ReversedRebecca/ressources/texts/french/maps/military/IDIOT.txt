@@ -33,8 +33,8 @@ player = object = unhappy_var = (les douches, hein ?)
 
 
 % NEED_HELP
-object = player = idiot = J'essaie d'impressionner Jessy, mais je n'ai pas l'impression qu'elle me remarque.
-object = player = idiot = Tu peux demander au savant fou de me fabriquer une pilule magique qui rend plus rapide ?
-player = object = unhappy_var = Et tu n'y vas pas toi même, parceque… ?
-object = player = idiot = Parce qu'il parle bizarrement…@Je ne comprends jamais rien avec lui.
-player = object = you_silly_var = L'habit fait le moine, on dirait.
+object = player = idiot = J'essaie d'impressionner Jessy, mais je n'ai@pas l'impression qu'elle me remarque.
+object = player = idiot = Tu peux demander au savant fou de me fabriquer@une pilule magique, qui rend plus rapide ?
+player = object = happy = Et tu n'y vas pas toi même, parce que… ?
+object = player = idiot = Parce qu'il parle bizarrement…@Je ne comprends rien quand il ouvre la bouche.
+player = object = you_silly = L'habit fait le moine, on dirait.

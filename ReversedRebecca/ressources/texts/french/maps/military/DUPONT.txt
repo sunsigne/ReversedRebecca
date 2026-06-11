@@ -1,6 +1,6 @@
 % NEED_HELP
-object = player = dupont_unhappy = Cha ira. Mais, chais inattendu comme demande…@Cha n'est pas toi qui a bechoin de mon aide, plutôt ?
-player = object = happy = Je doute que tu puisse m'aider directement. Sauf si tu@connais un moyen d'entrer dans la tour de Double-Y ?
+object = player = dupont_happy = Cha ira. Mais, chais inattendu…@Cha n'est pas toi qui a bechoin de mon aide ?
+player = object = happy_var = Je doute que tu puisse m'aider. Sauf si tu connais@un moyen d'entrer dans la tour de Double-Y ?
 object = player = dupont_unhappy = La tour du chef ? Ch'est interdit chans chon accord.@Mais, peut-être que che peux t'aider à cha plache ?
 player = object = worry = Ça m'étonnerait… Mais, merci.
 object = player = dupont_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.

@@ -1,7 +1,7 @@
-% RUNNER
+% SLACKER
 player = militaryman = laugh = BESOIN D'AIDE ?
-militaryman = DOWN = slacker = Zzzz
-player = DOWN = you_silly_var = C'est bien ce que je pensais.
+militaryman = DOWN = slacker = Zzzz…
+player = DOWN = you_silly = C'est bien ce que je pensais. Mais j'ai essayé,@donc ça compte.
 
 
 % RUNNER
@@ -9,7 +9,7 @@ militaryman = player = runner = Je n'ai pas le temps de m'arrêter pour parler !
 
 
 % RUNNER_HELPED
-player = DOWN = happy = (Je vais prendre ça pour un non.)
+player = DOWN = happy = Ok, un de moins à aider.
 
 
 % YOU_DONT_SHOOT
@@ -25,25 +25,26 @@ militaryman = player = shooter = Non merci. Tout va bien.
 
 
 % CLEANER_NEED_HELP
-object = player = happy = Tu peux m'aider à nettoyer les toilettes et les douches ?
+object = player = happy = Tu peux m'aider à nettoyer les toilettes, ou les@douches ?
 player = object = pain = Beurk. Sans façon…
-object = player = happy = Aucun problème, je comprends.@Tu préfère écouter un peu un vieil homme à la place ?
+object = player = happy = Je te taquinais. Que dirais-tu d'écouter un vieil@homme parler un peu ? Ça devrait aller, non ?
 player = object = laugh = Ça, c'est dans mes cordes !
-object = player = happy = Faisons-ça. Reviens me voir dans une minute ou deux.@J'aurais trouvé de quoi j'ai envie de parler.
+object = player = happy = Faisons-ça. Reviens me voir dans une minute.@J'aurais trouvé un sujet intéressant.
 
 
 % CLEANER_NEED_HELPED
-object = player = happy = J'ai réfléchis. Mon instinct me dit que tu essaies d'attirer@l'attention de Double-Y. Me trompe-je ?
+object = player = happy = J'ai réfléchis. Mon instinct me dit que tu essaies@d'attirer l'attention de Double-Y. Me trompe-je ?
 player = object = laugh = C'est exact. Mais, Pourquoi cette question ?
-object = player = happy = J'ai pensé que je pourrais te mettre en garde contre lui.@Tu savais qu'il utilise une savonnette entière par jour ?
+object = player = happy = J'ai pensé que je pourrais te mettre en garde.@Tu sais qu'il utilise une savonnette entière par jour ?
 object = player = happy = La surface totale couverte par ses muscles@doit faire au moins la taille de ce camp !
 player = object = no_sens = Heu… Ok… Pourquoi cette information ?
 object = player = happy = Parce qu'il nous voit d'ici. Je suis sûr qu'il est@en train de t'évaluer en ce moment même.
+player = object = no_sens = Il… m'évalue ? Genre, il est en train de me noter ?
 object = player = happy = Oui et non… Je pense qu'il cherche tes@points faibles. Au cas où il doive t'affronter.
 player = object = no_sens_var = Pardon ?
 object = player = happy = Ça n'est qu'une éventualité. Dans tous les cas,@il ne va pas t'agresser. Au mieux, il te défiera.
 player = object = no_sens = (… Je n'arrive pas à savoir s'il est sérieux ou non.)
-player = object = happy = (Mais bon. J'ai fait sa volonté. Je peux passer au militaire suivant.)
+player = object = happy = (Mais bon. J'ai fait sa volonté. Je peux passer à@quelqu'un d'autre.)
 
 
 % CLEANER_WATCHA_DOING
@@ -78,7 +79,7 @@ player = object = angry_var2 = (Il m'agace ! Je ne lui parlerai que si nécessai
 
 
 % CLEANER_YY_GOOD
-player = object = no_sens_var = (Il est trop bizarre ce type… Je préfère ne plus lui parler)
+player = object = no_sens_var = (Il est trop bizarre ce type… Je préfère ne lui@parler que si nécessaire.)
 
 
 % CLEANER_DO_YOU_HAVE_KEY
