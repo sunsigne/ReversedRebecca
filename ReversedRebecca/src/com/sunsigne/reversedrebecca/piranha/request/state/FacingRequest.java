@@ -2,7 +2,6 @@ package com.sunsigne.reversedrebecca.piranha.request.state;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
-import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider.AVOIDERTYPE;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
@@ -54,16 +53,16 @@ public class FacingRequest extends ConditionalRequest {
 			}
 		}
 
-		// if facing is a character
+		// if facing is an object
 		var handler = object.getHandler();
 
-		var list = new ListCloner().deepCloneByClass(handler, LivingObject.class);
-		for (LivingObject tempLiving : list.getList()) {
+		var list = new ListCloner().deepCloneByClass(handler, PiranhaObject.class);
+		for (PiranhaObject tempPiranha : list.getList()) {
 
 			String formated_valueToCheck = new FormattedString().getName(object, target, false);
 
-			if (tempLiving.getName().equalsIgnoreCase(formated_valueToCheck)) {
-				SightFinder sightFinder = new SightFinder(object, tempLiving);
+			if (tempPiranha.getName().equalsIgnoreCase(formated_valueToCheck)) {
+				SightFinder sightFinder = new SightFinder(object, tempPiranha);
 				DIRECTION facing = sightFinder.getDirectionOfGoalFromObserver();
 				if (facing != DIRECTION.NULL) {
 					paralyseObject(object);
