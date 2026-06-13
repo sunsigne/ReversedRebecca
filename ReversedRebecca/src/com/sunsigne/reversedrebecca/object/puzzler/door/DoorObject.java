@@ -31,7 +31,7 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	////////// TEXTURE ////////////
-	
+
 	@Override
 	public int getSheetRowCriterion() {
 		switch (color) {
@@ -51,8 +51,7 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	@Override
-	public BufferedImage getImage()
-	{
+	public BufferedImage getImage() {
 		if (image == null) {
 			String number = isNumberSettings() ? "_number" : "";
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "door" + number);
@@ -62,16 +61,14 @@ public class DoorObject extends PuzzlerObject {
 	}
 
 	@Override
-	public BufferedImage getHighlightImage()
-	{
+	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 1, getSheetWidth() + 2,
-					getSheetHeight() + 2);
+			highlightImage = getSheetSubImage(sheet, 1, 1, getSheetWidth() + 2, getSheetHeight() + 2);
 		}
 		return highlightImage;
 	}
-		
+
 	////////// INTERACTION ////////////
 
 	private TripleAction tripleAction;

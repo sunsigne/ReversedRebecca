@@ -47,6 +47,13 @@ public class NullDoorObject extends DoorObject {
 		super.render(g);
 	}
 
+	////////// INTERACTION ////////////
+
+	@Override
+	protected void loadTripleAction() {
+
+	}
+
 	////////// COLLISION ////////////
 
 	@Override
