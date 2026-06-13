@@ -16,6 +16,7 @@ OBJ-16 = Down Left Shower
 OBJ-17 = Down Right Shower
 OBJ-40 = Path Finding Helper (Artificial Wall)
 OBJ-42 = Cactus
+OJB-44 = Help Counter
 
 NPC-01 = Sarah
 NPC-03 = Dormitory

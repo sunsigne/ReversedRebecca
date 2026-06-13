@@ -28,8 +28,13 @@
 
 	////////// EN COURS ////////////
 
-	créer un système d'affichage de message d'erreur en cas de pb de doublon dans le code piranha pour le JOUEUR (pour une raison obscure, ça ne marche pas pour ce piranha là)
-	créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes
+	bug ?
+		? vérifier que les critiques se sauvegarge effectivement (un changement manuelle des characteristiques n'a pas marché)
+		- l'exploding door ne s'active plus une fois le coffre ouvert
+		- dans le cas de "objet" dans les dialogue, faire en sorte de prioriser l'objet qui a lancé le dialogue (exemple de la plante au niveau du billard, quand on est au-dessus)
+		-  plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+		- créer un système d'affichage de message d'erreur en cas de pb de doublon dans le code piranha pour le JOUEUR (pour une raison obscure, ça ne marche pas pour ce piranha là)
+		- créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes
 
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
@@ -37,8 +42,8 @@
 	
 	trier les dossiers : 
 		lvl003:
+		- miaka -> Mika = Mia (la voix + tester)
 		- amiranda -> annuler les changements des fichiers piranha
-		- miaka -> Mika = Mia (la voix)
 		- julomeo -> Roméo  = Juliette
 		- dupont -> Xavier = Venera
 		- nolancy -> Nancy = Nolan
@@ -48,36 +53,32 @@
 		lvl001:
 		- marichel = Michel = Marie
 		- alexia -> Alexis = Alicia
-
 	
 	////////// MILITARY ////////////
 
-	bug : dans le cas de "objet" dans les dialogue, fire en sorte de prioriser l'objet qui a lancé le dialogue
-
+	en cours : 
+	- créer un succès "perfectionniste : aider les 14 militaires"
+	- les 3 compteurs :
+		- personnes insultées / personnes aidées (sur l'objet 44, mais ne monte actuellement que jusqu'à 10)
+		- victoire contre un chef -> met l'accent sur la victoire et impossible de faire 0
+	
 	à tester :
 
 	à faire :
 	- meilleur cinématique d'empoisonnement de l'idiot
-	- sur le guarde : passer de 14 aides à 10 requises
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
-	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie
-
-	bug :
-		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie	
+	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
 
 	mettre musique sur Patreon
 
-	à faire :
-	- on doit pouvoir jouer au billard avec Cassidy (Puzzle)
-	
+	bug :
+
 	à faire à la fin : 
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- checkpoints
-	- les 3 compteurs :
-		- victoire contre un chef -> met l'accent sur la victoire et impossible de faire 0
-		- personnes aidées / personnes insultées
 	- traduction en anglais
 
 	note : 

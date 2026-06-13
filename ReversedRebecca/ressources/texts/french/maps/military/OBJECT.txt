@@ -45,8 +45,8 @@ player = DOWN = you_silly = (Si j'avais voulu faire le mal, j'aurais commencé@b
 player = DOWN = angry_var2 = Zut ! Ça n'est qu'une affiche de fusil !
 
 
-% HELPED_EVERYONE
-player = DOWN = laugh = Cette fois, ça y est ! J'ai aidé tout le monde dans le camp !@Je n'ai plus qu'à retourner voir le garde pour qu'il me laisse passer.
+% HELPED_ENOUGH_PEOPLE
+player = DOWN = laugh = Ça y est ! J'ai aidé suffisamment de monde. Je n'ai@plus qu'à demander au garde de me laisse passer.
 
 
 % PICK_UP_DIRTY_SOCK_EXPECTED
