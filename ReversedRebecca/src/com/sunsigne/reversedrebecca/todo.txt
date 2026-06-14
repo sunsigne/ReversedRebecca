@@ -30,7 +30,6 @@
 
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
-		- dans le cas de "objet" dans les dialogue, faire en sorte de prioriser l'objet qui a lancé le dialogue (exemple de la plante au niveau du billard, quand on est au-dessus)
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 		- créer un système d'affichage de message d'erreur en cas de pb de doublon dans le code piranha pour le JOUEUR (pour une raison obscure, ça ne marche pas pour ce piranha là)
 		- créer un petit code dynamique qui, au lancement du jeu, detecte intelligemment (avec l'utilisation des balises de dialogue) si des traductions sont manquantes

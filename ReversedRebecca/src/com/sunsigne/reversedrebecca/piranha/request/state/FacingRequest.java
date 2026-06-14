@@ -1,5 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.state;
 
+import java.util.Collections;
+import java.util.HashMap;
+
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.characteristics.PlayerAvoider;
@@ -57,20 +60,27 @@ public class FacingRequest extends ConditionalRequest {
 		var handler = object.getHandler();
 
 		var list = new ListCloner().deepCloneByClass(handler, PiranhaObject.class);
+		HashMap<Float, PiranhaObject> map = new HashMap<>();
+
 		for (PiranhaObject tempPiranha : list.getList()) {
-
 			String formated_valueToCheck = new FormattedString().getName(object, target, false);
+			if (tempPiranha.getName().equalsIgnoreCase(formated_valueToCheck) == false)
+				continue;
 
-			if (tempPiranha.getName().equalsIgnoreCase(formated_valueToCheck)) {
-				SightFinder sightFinder = new SightFinder(object, tempPiranha);
-				DIRECTION facing = sightFinder.getDirectionOfGoalFromObserver();
-				if (facing != DIRECTION.NULL) {
-					paralyseObject(object);
-					object.setFacing(facing);
-				}
-				return;
-			}
+			float diffX = object.getX() - (tempPiranha.getX());
+			float diffY = object.getY() - (tempPiranha.getY());
+			float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+			map.put(distance, tempPiranha);
 		}
+
+		PiranhaObject closet = map.get(Collections.min(map.keySet()));
+		SightFinder sightFinder = new SightFinder(object, closet);
+		DIRECTION facing = sightFinder.getDirectionOfGoalFromObserver();
+		if (facing != DIRECTION.NULL) {
+			paralyseObject(object);
+			object.setFacing(facing);
+		}
+		return;
 	}
 
 	private void paralyseObject(PiranhaObject object) {
