@@ -7,4 +7,11 @@ public class NullCowboyObject extends CowboyObject {
 		setDisabled(true);
 	}
 
+	////////// INTERACTION ////////////
+
+	@Override
+	protected void loadTripleAction() {
+
+	}
+	
 }

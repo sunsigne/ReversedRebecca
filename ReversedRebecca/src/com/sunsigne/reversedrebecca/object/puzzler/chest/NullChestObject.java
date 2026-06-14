@@ -15,4 +15,9 @@ public class NullChestObject extends ChestObject {
 		return null;
 	}
 
+	@Override
+	protected void loadTripleAction() {
+
+	}
+
 }

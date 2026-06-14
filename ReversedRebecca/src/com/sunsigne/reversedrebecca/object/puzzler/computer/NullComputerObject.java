@@ -7,4 +7,11 @@ public class NullComputerObject extends ComputerObject {
 		setDisabled(true);
 	}
 
+	////////// INTERACTION ////////////
+
+	@Override
+	protected void loadTripleAction() {
+
+	}
+	
 }
