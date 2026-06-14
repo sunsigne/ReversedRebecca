@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.achievement.Achievements;
 import com.sunsigne.reversedrebecca.ressources.images.Textures;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
+import com.sunsigne.reversedrebecca.ressources.lang.TranslationAnalyzer;
 import com.sunsigne.reversedrebecca.ressources.layers.LayerDualizer;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
 import com.sunsigne.reversedrebecca.system.camera.Camera;
@@ -37,7 +38,8 @@ public class RessourceLoader {
 	}
 
 	protected void loadRessources() {
-
+		
+		new TranslationAnalyzer().loadRessources();
 		new LayerDualizer().dualizeSameFloorLayers();
 		new ForceInit().loadAllClassesInPackage(HUD.class.getPackageName());
 		new ForceInit().loadAllClassesInPackage(Mappable.class.getPackageName());
@@ -48,7 +50,7 @@ public class RessourceLoader {
 		new Textures().loadRessources();
 		new Achievements().loadRessources();
 		new PausePreventer().loadRessources();
-		
+
 		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
 			new Save().resetProgression();
 	}
