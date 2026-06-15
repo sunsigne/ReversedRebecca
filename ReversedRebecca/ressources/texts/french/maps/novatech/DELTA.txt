@@ -105,6 +105,7 @@ rebecca = object = happy = Bon, j'y vais.
 delta = rebecca = excited = Au plaisir ma grande.
 
 
+
 % JUST_CHECKING
 rebecca = object = worry = Juste pour être sûre… C'est pas ton frère@qui a fait le coup aujourd'hui, si ?
 delta = rebecca = laugh_var = Ha ha ha ha !
@@ -138,6 +139,7 @@ delta = rebecca = happy_var = Mais j'en garde un bon souvenir. Et si@c'était à
 rebecca = object = laugh = Oui, c'est l'impression que tu donnes.
 rebecca = object = happy = Bon, j'y vais.
 delta = rebecca = excited = Au plaisir ma grande.
+
 
 
 % FIRSTNAME

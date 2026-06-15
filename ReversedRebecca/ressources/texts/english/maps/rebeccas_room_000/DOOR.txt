@@ -16,8 +16,6 @@ player = DOWN = unhappy = I don't know what to do…@I need to look at a plant t
 player = DOWN = worry = Luckily, any will do.
 
 
-
-
 % JUST_A_MOMENT
 player = UP = laugh = Just a second, I'm looking for my keys!
 sarah = DOWN = laugh = This is so Rebecca!@Ok, I'm waiting.

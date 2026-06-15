@@ -149,7 +149,6 @@ object = player = cry_var = (My life is over…)
 
 
 % WILL_YOU
-
 object = player = cry_var2 = Rebecca! Wait!
 
 

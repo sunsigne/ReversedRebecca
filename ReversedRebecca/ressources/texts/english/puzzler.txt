@@ -12,7 +12,6 @@ Undefeated = undefeated
 Open = open
 Unlock = unlock
 Explode = explode
-Explode = explode
 Hack = hack
 Dig = dig
 GoDown = go down

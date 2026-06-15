@@ -30,6 +30,7 @@ sarah = DOWN = laugh = Si tu y arrives.
 player = UP = laugh = Voilà voilà, j'ouvre la porte !
 sarah = DOWN = laugh = Si tu y arrives.
 
+
 % RIGHT_HAND
 player = object = happy = C'est amusant… Je viens juste de@réaliser que j'ai beau être gauchère…
 player = DOWN = you_silly = J'utilise toujours ma main droite pour@ouvrir les portes.

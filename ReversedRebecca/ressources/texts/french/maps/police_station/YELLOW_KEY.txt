@@ -109,4 +109,3 @@ teddy = player = happy = On fait comme ça.
 player = teddy = no_sens = Heu…
 player = teddy = laugh = Merci beaucoup !
 teddy = player = happy = De rien.
-

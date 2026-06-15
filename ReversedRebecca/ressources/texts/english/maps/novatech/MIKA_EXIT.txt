@@ -13,6 +13,10 @@ miaka = object = surprised = Wait?! But you've already lit the fuse!
 rebecca = object = laugh = I said: move aside!
 
 
+% MIKA_BOMB_FAIL
+rebecca = object = worry = How clumsy! Okay, I'll try again.
+
+
 % ALICIA_REACTION_MIKA_BOMB
 alicia = player = surprised = Well, when she's looking for an exit,@she really doesn't mess around!
 

@@ -61,8 +61,3 @@ sarah = LEFT = laugh = Très amusant. Tout le monde à NovaTech@sait ce qu'est c
 % ASK_FOR_ADVICE
 player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
 sarah = LEFT = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça attire l'attention.
-
-
-
-
-

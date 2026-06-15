@@ -70,7 +70,7 @@ player = object = worry = I think you like "words" a bit too much. You@have to k
 jean = player = unhappy = Yeah… Whatever…
 
 
-%GET_ANGRY
+% GET_ANGRY
 player = object = angry = Do you plan to end all our conversations with:@"yeah, whatever"?
 jean = player = unhappy = No. Earlier I finished with:@"Ha. Whatever".
 player = DOWN = angry_var2 = Hold me back, I'm going to smack him…

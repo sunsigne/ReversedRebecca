@@ -27,6 +27,7 @@ player = object = laugh = Ha ! Je pensais bien les trouver@dans une poches de v�
 player = object = no_sens = Mes clés ?! Mais qu'est-ce qu'elles font là…
 player = object = laugh = Ça me revient ! Je suis rentrée avec des@courses et j'ai tout balancé dans le frigo.
 
+
 % TOILET
 player = object = despair = J'y crois pas… Elles sont dedans… Elles ont dû@tomber de ma poche la dernière fois que j'ai…
 player = object = angry_var2 = Interdiction d'en parler. À qui que ce soit.

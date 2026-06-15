@@ -29,19 +29,19 @@ public class TranslationAnalyzer {
 
 	private void checkTranslations() throws IOException {
 		String defaultLang = Language.getInstance().getLang();
-		Map<String, Long> frenchFiles = getTxtFilesLineCount(Path.of(path, "/" + defaultLang));
+		Map<String, Long> defaultFiles = getTxtFilesLineCount(Path.of(path, "/" + defaultLang));
 
 		for (String lang : loadLangList(defaultLang)) {
 			Map<String, Long> translatedFiles = getTxtFilesLineCount(Path.of(path, "/" + lang));
 
-			for (var entry : frenchFiles.entrySet()) {
+			for (var entry : defaultFiles.entrySet()) {
 				String file = entry.getKey();
-				long frenchLines = entry.getValue();
+				long defaultLines = entry.getValue();
 				Long translatedLines = translatedFiles.get(file);
 
-				if (translatedLines != null && translatedLines != frenchLines) {
-					System.err.println("Translation error with following language : " + lang);
-					System.err.printf("Missing lines : %s (%d instead of %d)%n", file, frenchLines, translatedLines);
+				if (translatedLines != null && translatedLines != defaultLines) {
+					System.err.println("Translation inconsistency with following language : " + lang);
+					System.err.printf("Missing lines : %s (%d instead of %d)%n", file, defaultLines, translatedLines);
 					System.err.println();
 				}
 			}

@@ -61,7 +61,3 @@ sarah = LEFT = laugh = Very funny. Everyone at NovaTech@knows what this helmet i
 % ASK_FOR_ADVICE
 player = RIGHT = happy = In your opinion, should I take the bomb or the key?
 sarah = LEFT = laugh = It's up to you, Rebecca! Bombs are more direct,@but they attract attention.
-
-
-
-

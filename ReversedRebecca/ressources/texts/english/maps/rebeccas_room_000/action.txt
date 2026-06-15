@@ -68,7 +68,6 @@ MAKE_SOME = Key1 % I'll make you some
 WERE_TASTY = Key2 % they were tasty
 WE_SHARE = Key1 % let's share
 YES_I_KNOW = Key2 % yes, it does
-I_AM_READY_TOWEL = Key3 % I am ready
 I_AM_READY = Key3 % I am ready
 WAKE = Key1 % wake up
 SOAK_SARAH = Key2 % soak Sarah

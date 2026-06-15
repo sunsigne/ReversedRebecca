@@ -1,8 +1,10 @@
 % LEAVING
 player = DOWN = sad = I told Sarah we were going to steal some@information… I have no reason to leave.
 
+
 % LEAVING_GOOD
 player = DOWN = angry_var2 = There's no way I'm abandoning Sarah!
+
 
 % LEAVING_BAD
 player = DOWN = you_silly = It's tempting to abandon Sarah to her fate,@but I still have to steal some information.
