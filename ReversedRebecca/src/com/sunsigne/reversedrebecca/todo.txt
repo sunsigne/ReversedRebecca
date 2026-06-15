@@ -59,7 +59,7 @@
  	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
-		- 6 coeurs bonus n'est pas suffisant, un 7ème suffit ?
+		- 6 coeurs bonus n'est pas suffisant : rajouter 3 hp bonus, puis 6, puis sur tout le chemin (qq part, ça insulte un peu le joueur)
 
 	à tester :
 		- affichage des compteurs
@@ -82,6 +82,7 @@
 	bug :
 	- si nancy est sur le chemin, l'idiot est incapable de revenir (ça ou parcequ'on a créé puis détruit un mur ?)
 	- arriver vers Nathan avec déjà les chaussettes lance bien la cinématique, mais n'annule pas le TA des chausettes derrière
+	- passer par le spécial shortcut Y en ayant un repas dans son inventaire, softlock le jeu
 
 	à faire à la fin : 
 	- cinématique d'intro
