@@ -73,6 +73,9 @@ public class FacingRequest extends ConditionalRequest {
 			map.put(distance, tempPiranha);
 		}
 
+		if (map.isEmpty())
+			return;
+
 		PiranhaObject closet = map.get(Collections.min(map.keySet()));
 		SightFinder sightFinder = new SightFinder(object, closet);
 		DIRECTION facing = sightFinder.getDirectionOfGoalFromObserver();
