@@ -28,9 +28,10 @@ public class TranslationAnalyzer {
 	}
 
 	private void checkTranslations() throws IOException {
-		Map<String, Long> frenchFiles = getTxtFilesLineCount(Path.of(path, "/french"));
+		String defaultLang = Language.getInstance().getLang();
+		Map<String, Long> frenchFiles = getTxtFilesLineCount(Path.of(path, "/" + defaultLang));
 
-		for (String lang : loadLangList()) {
+		for (String lang : loadLangList(defaultLang)) {
 			Map<String, Long> translatedFiles = getTxtFilesLineCount(Path.of(path, "/" + lang));
 
 			for (var entry : frenchFiles.entrySet()) {
@@ -38,13 +39,7 @@ public class TranslationAnalyzer {
 				long frenchLines = entry.getValue();
 				Long translatedLines = translatedFiles.get(file);
 
-				if (translatedLines == null) {
-					System.err.println("Translation error with following language : " + lang);
-					System.err.println("Missing file : " + file + System.getProperty("line.separator"));
-					continue;
-				}
-
-				if (translatedLines != frenchLines) {
+				if (translatedLines != null && translatedLines != frenchLines) {
 					System.err.println("Translation error with following language : " + lang);
 					System.err.printf("Missing lines : %s (%d instead of %d)%n", file, frenchLines, translatedLines);
 					System.err.println();
@@ -53,13 +48,13 @@ public class TranslationAnalyzer {
 		}
 	}
 
-	private ArrayList<String> loadLangList() {
+	private ArrayList<String> loadLangList(String defaultLang) {
 		File file = new File(path);
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
 		var lang_list = new ArrayList<String>();
 
 		file_list.forEach(tempfile -> {
-			if (tempfile.contains(".") == false && tempfile.contains("french") == false) // check if folder or file
+			if (tempfile.contains(".") == false && tempfile.contains(defaultLang) == false) // check if folder or file
 				if (lang_list.contains(tempfile) == false)
 					lang_list.add(tempfile);
 		});
@@ -75,7 +70,7 @@ public class TranslationAnalyzer {
 			@Override
 			public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
 				String dirName = dir.getFileName() != null ? dir.getFileName().toString() : "";
-				
+
 				// excluding "male" and "female" translations
 				for (LIVING_TYPE tempLiving : LIVING_TYPE.values())
 					if (tempLiving.getName().equalsIgnoreCase(dirName))
