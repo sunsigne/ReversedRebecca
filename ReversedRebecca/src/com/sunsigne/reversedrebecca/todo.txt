@@ -37,11 +37,14 @@
 
 	vrai musique de fin de niveau
 	
-	trier les dossiers : 
-		lvl003:
+	gendew_swap :
+	à terminer : 
 		- miaka -> Mika = Mia (la voix + tester)
-		- amiranda -> annuler les changements des fichiers piranha
-		- julomeo -> Roméo  = Juliette
+		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
+	
+	à faire :
+		lvl003:
+		- amiranda -> annuler les changements des fichiers piranha		
 		- dupont -> Xavier = Venera
 		- nolancy -> Nancy = Nolan
 		lvl002:
