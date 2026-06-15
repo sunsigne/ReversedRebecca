@@ -1,0 +1,5 @@
+PEOPLE_HELPED = personnes aidées
+PEOPLE_INSULTED = personnes insultées
+CHEST_LOOTED = coffres fouillés
+SHOVEL_HITS = coups de pelle
+HEADSHOT = balle dans la tête

@@ -55,15 +55,15 @@
 		- alexia -> Alexis = Alicia
 	
 	////////// MILITARY ////////////
+ 	
+ 	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
 	- créer un succès "perfectionniste : aider les 14 militaires"
-	- les 3 compteurs :
-		- personnes insultées
-		- victoire contre un chef -> met l'accent sur la victoire et impossible de faire 0
+	- relier les compteurs 1 méchant, 2 et 3
 	
 	à tester :
-	- compteur personnes aidées jusqu'à 14 (+ renommer)
+		- affichage des compteurs
 
 	à faire :
 	- meilleur cinématique d'empoisonnement de l'idiot
@@ -75,12 +75,26 @@
 	mettre musique sur Patreon
 
 	bug :
+	- si nancy est sur le chemin, l'idiot est incapable de revenir (ça ou parcequ'on a créé puis détruit un mur ?)
+	- arriver vers Nathan avec déjà les chaussettes lance bien la cinématique, mais n'annule pas le TA des chausettes derrière
 
 	à faire à la fin : 
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- checkpoints
 	- traduction en anglais
+ 	
+ 	checkpoint :
+ 	- skip_intro / yy_met
+ 	- les infos de compteurs + les outils + les points à sauvegarder + le contenu des coffres
+ 	- sur l'objet 14, le checkpoint vérfié est actuellement "skip intro", alors qu'il devrait être un truc du genre "yy_met"
+ 	
+	à sauvegarder :
+	- date Amir ?
+	- date Romeo ?
+	- date Nancy ?
+	- date Jessy ?
+	- inventaire (chaussettes, oignons, poubelles) ?
 
 	note : 
 	il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
