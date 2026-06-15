@@ -1,5 +1,5 @@
 PEOPLE_HELPED = personnes aidées
 PEOPLE_BULLIED = personnes malmenées
-CHEST_LOOTED = coffres fouillés
+CHESTS_UNLOCKED = coffres déverrouillés
 SHOVEL_HITS = coups de pelle
 HEADSHOT = balle dans la tête

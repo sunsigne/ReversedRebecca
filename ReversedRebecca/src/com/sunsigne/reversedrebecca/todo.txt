@@ -64,8 +64,7 @@
 
 	à faire :
 	- checkpoint
-		- relier les compteurs 2 (coffre)
-		- skip_intro : les infos de compteurs + pas la peine de faire les outils + le contenu des coffres + les éléments de sauvegarde
+		- skip_intro : le contenu des coffres (sauvegarde des characteristiques avant reset) + les éléments de sauvegarde
 	
 	- meilleur cinématique d'empoisonnement de l'idiot
 	- le garde se pousse une fois tt le monde aidé
