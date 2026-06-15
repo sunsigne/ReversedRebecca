@@ -79,7 +79,6 @@
 	mettre musique sur Patreon
 
 	bug :
-	- le highlight d'amir n'est pas bon
 	- si nancy est sur le chemin, l'idiot est incapable de revenir (ça ou parcequ'on a créé puis détruit un mur ?)
 	- arriver vers Nathan avec déjà les chaussettes lance bien la cinématique, mais n'annule pas le TA des chausettes derrière
 
