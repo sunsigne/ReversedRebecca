@@ -59,18 +59,23 @@
  	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
-	- créer un succès "perfectionniste : aider les 14 militaires"
-	- relier les compteurs 1 méchant, 2 et 3
-	
+		- 6 coeurs bonus n'est pas suffisant, un 7ème suffit ?
+
 	à tester :
 		- affichage des compteurs
 
 	à faire :
+	- checkpoint
+		- relier les compteurs 1 méchant (personnes insultées), 2 (coffre) et 3 (coup de pelle / balle dans la tête)
+		- skip_intro : méchant  + les coffres + les infos de compteurs + les outils (pas la peine) + le contenu des coffres + les points à sauvegarder
+	
 	- meilleur cinématique d'empoisonnement de l'idiot
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
+	- créer un succès "perfectionniste : aider les 14 militaires"	
+	- dialogue différent en gentil de YY
 
 	mettre musique sur Patreon
 
@@ -81,13 +86,7 @@
 	à faire à la fin : 
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
-	- checkpoints
 	- traduction en anglais
- 	
- 	checkpoint :
- 	- skip_intro / yy_met
- 	- les infos de compteurs + les outils + les points à sauvegarder + le contenu des coffres
- 	- sur l'objet 14, le checkpoint vérfié est actuellement "skip intro", alors qu'il devrait être un truc du genre "yy_met"
  	
 	à sauvegarder :
 	- date Amir ?
