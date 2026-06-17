@@ -71,7 +71,7 @@
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
-	- créer un succès "perfectionniste : aider les 14 militaires"	
+	- créer un succès "perfectionniste : aider les 14 militaires"
 	- dialogue différent en gentil de YY
 	- faire un copier coller de l'obj-02 à l'obj-01
 	- obj-21 : 6 coeurs bonus n'est pas suffisant : rajouter 3 hp bonus, puis 6, puis sur tout le chemin (qq part, ça insulte un peu le joueur)
@@ -79,9 +79,8 @@
 	mettre musique sur Patreon
 
 	bug :
-	- si nancy est sur le chemin, l'idiot est incapable de revenir (ça ou parcequ'on a créé puis détruit un mur ?)
-	- arriver vers Nathan avec déjà les chaussettes lance bien la cinématique, mais n'annule pas le TA des chausettes derrière
-
+	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
+	
 	à faire à la fin : 
 	- cinématique d'intro
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?

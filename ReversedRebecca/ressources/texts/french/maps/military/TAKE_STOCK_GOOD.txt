@@ -5,7 +5,7 @@ player = object = happy_var = Je dois aider dix militaires.@Ils sont quatorze, s
 
 % HELPED_ENOUGH_PEOPLE
 player = object = asleep = Voyons voir…
-player = object = determined = J'ai aidé suffisamment de monde. Je peux accéder à la tour de Double-Y.@Rendons-lui une petite visite.
+player = object = determined = J'ai aidé suffisamment de monde. Je peux accéder@à la tour de Double-Y. Rendons-lui une petite visite.
 
 
 % ROMEO_NO_INFO
