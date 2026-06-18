@@ -35,6 +35,7 @@ import com.sunsigne.reversedrebecca.piranha.request.memory.data.CheckPointSet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.MemorySet;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.data.SavedCharacteristicsMap;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.Save;
@@ -97,8 +98,10 @@ public class World implements Updatable, RenderFree {
 	}
 
 	private void initParameters(String mapName) {
-		if (get() != null && mapName.equalsIgnoreCase(get().mapName) == false)
+		if (get() != null && mapName.equalsIgnoreCase(get().mapName) == false) {
 			CheckPointSet.getSet().clear();
+			SavedCharacteristicsMap.getMap().clear();
+		}
 
 		updateInstance();
 		this.mapName = mapName;

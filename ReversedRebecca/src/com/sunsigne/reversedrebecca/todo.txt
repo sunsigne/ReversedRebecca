@@ -64,9 +64,6 @@
 	à tester :
 
 	à faire :
-	- checkpoint
-		- skip_intro : le contenu des coffres (sauvegarde des characteristiques avant reset)
-	
 	- meilleur cinématique d'empoisonnement de l'idiot
 	- le garde se pousse une fois tt le monde aidé
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
