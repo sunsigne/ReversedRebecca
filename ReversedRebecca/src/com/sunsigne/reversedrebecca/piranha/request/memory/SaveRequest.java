@@ -3,6 +3,8 @@ package com.sunsigne.reversedrebecca.piranha.request.memory;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveEraserList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveList;
 import com.sunsigne.reversedrebecca.ressources.Save;
 
 public class SaveRequest implements Request {

@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.piranha.request.memory;
+package com.sunsigne.reversedrebecca.piranha.request.memory.data;
 
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 
-public class SaveEraserList {
+public class SaveList {
 
 	////////// MAP OR LIST ////////////
 

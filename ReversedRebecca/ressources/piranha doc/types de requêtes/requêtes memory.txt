@@ -80,6 +80,26 @@ Note : Dans 99 % des cas, cette information vous sera inutile, mais sachez qu'�
 Rappel : afin de lire une donnée enregistrée, il faut la mettre en Valeur dans un Type de Condition SAVED (voir « SAVED » dans la partie « Piranha – Conditions »).
 
 
+////// SAVED_CHARACTERISTICS //////
+
+Le Type de Requête SAVED_CHARACTERISTICS permet d'enregistrer ou de remplacer les caractéristiques actuelles du joueur.
+
+La Cible unitaire de ce Type de Requête défini l'opération à effectuer :
+SAVE : enregistrer les caractéristiques actuelles du joueur.
+LOAD : remplacer les caractéristiques actuelles du joueur par les caractéristiques enregistrées.
+RESET : effacer les caractéristiques enregistrées.
+
+Note : les caractéristiques sont les PV du joueur, ses outils actuels, les améliorations qu'il a sélectionnées pendant une carte, etc.
+
+À l'instar du Type de Requête CHECKPOINT, son rôle est essentiellement de s'assurer, dans le cas où le joueur viendrait à mourir, de ne pas recommencer une carte du début.
+
+TIME -> 0 = CHECHKPOINT -> FAST_START ? SAVED_CHARACTERISTICS:LOAD / SAVED_CHARACTERISTICS:SAVE
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le joueur avait-il atteint le "checkpoint « fast start »" ?
+- si non, on sauvegarde les caractéristiques du joueur.
+- si oui, on recherche les caractéristiques qui étaient enregistrées.
+
+
 ////// SURNAME //////
 
 Le Type de Requête SURNAME permet d'enregistrer un "mot" dans la sauvegarde du jeu, qui peut être réutiliser dans les dialogues.
@@ -93,5 +113,4 @@ La première Cible de ce Type de Requête permet de déterminer le fichier de r�
 Exemple :
 $ -> SAVE_SUNAME = SURNAME -> DOUG, POLICE
 
-Lors d'un dialogue, les caractères "+surname_doug" seront remplacés par la valeur trouvée correspondante à « police » dans le fichier « doug.txt » (en français, ce mot est "fliquette"). 
-
+Lors d'un dialogue, les caractères "+surname_doug" seront remplacés par la valeur trouvée correspondante à « police » dans le fichier « doug.txt » (en français, ce mot est "fliquette").

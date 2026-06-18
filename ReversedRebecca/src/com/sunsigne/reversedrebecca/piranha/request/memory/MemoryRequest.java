@@ -4,6 +4,7 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.piranha.request.conditional.ConditionalRequest;
+import com.sunsigne.reversedrebecca.piranha.request.memory.data.MemorySet;
 import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.PausePreventer.PAUSE_STATE;
 

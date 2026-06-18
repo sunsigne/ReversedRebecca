@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.piranha.request.memory;
+package com.sunsigne.reversedrebecca.piranha.request.memory.data;
 
 import java.util.HashSet;
 
