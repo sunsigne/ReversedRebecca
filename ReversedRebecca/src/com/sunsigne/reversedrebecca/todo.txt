@@ -59,17 +59,9 @@
  	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
-	- relier les saves aux checkpoints	
 	- mettre musique sur Patreon
 		
 	à tester :
-	REGISTER = AMIR*START_DATING
-	REGISTER = ROMEO*START_DATING
-	REGISTER = NANCY*GET_LIED_TO
-	REGISTER = NANCY*KISSED
-	REGISTER = NANCY*GET_REJECTED
-	REGISTER = JESSY*KISSED
-	REGISTER = JESSY*GET_GHOSTED
 
 	à faire :
 	- checkpoint
@@ -86,6 +78,7 @@
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
+	- on peut ramasser la clé cyan en étant nancy
 	
 	à faire à la fin : 
 	- cinématique d'intro
