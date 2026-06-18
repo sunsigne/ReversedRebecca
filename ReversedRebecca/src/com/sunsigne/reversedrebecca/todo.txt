@@ -59,8 +59,17 @@
  	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
+	- relier les saves aux checkpoints	
+	- mettre musique sur Patreon
 		
 	à tester :
+	REGISTER = AMIR*START_DATING
+	REGISTER = ROMEO*START_DATING
+	REGISTER = NANCY*GET_LIED_TO
+	REGISTER = NANCY*KISSED
+	REGISTER = NANCY*GET_REJECTED
+	REGISTER = JESSY*KISSED
+	REGISTER = JESSY*GET_GHOSTED
 
 	à faire :
 	- checkpoint
@@ -75,8 +84,6 @@
 	- faire un copier coller de l'obj-02 à l'obj-01
 	- obj-21 : 6 coeurs bonus n'est pas suffisant : rajouter 3 hp bonus, puis 6, puis sur tout le chemin (qq part, ça insulte un peu le joueur)
 
-	mettre musique sur Patreon
-
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
 	
@@ -85,13 +92,7 @@
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- traduction en anglais
 	- remplasser le système de karma de l'écran de fin de niveau
- 	
-	à sauvegarder + checkpoint :
-	- date Amir ?
-	- date Romeo ?
-	- date Nancy ?
-	- date Jessy ?
-	- inventaire (chaussettes, oignons, poubelles) ?
+
 
 	note : 
 	il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
