@@ -40,6 +40,10 @@ object = RIGHT = dreaming = Non, merci. Elles ne sont pas de la bonne couleur.@R
 object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis à Nancy d'y aller.
 
 
+% NANCY_IS_INDISPOSED
+object = RIGHT = doubt = J'ai raté la partie où c'est mon problème.
+
+
 % WHO_IS_NANCY
 object = RIGHT = doubt = Regarde dans l'infirmerie.
 

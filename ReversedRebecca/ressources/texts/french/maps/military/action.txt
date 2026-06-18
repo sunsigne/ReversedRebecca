@@ -84,6 +84,7 @@ BLOW_HER_FACE_OFF = Key1 % lui exploser la gueule
 HERES_THE_BOMBS = Key2 % Voilà les bombes
 SUBMIT = Key1 % (se soumettre)
 REBEL = Key2 % (se rebeller)
+NANCY_IS_INDISPOSED = Key1 % Nancy est... indisposée
 YOU_DONT_SHOOT = Key1 % tu ne tires pas ?
 BOUH! = Key1 % BOUH !
 ACCIDENT = Key3 % accident
