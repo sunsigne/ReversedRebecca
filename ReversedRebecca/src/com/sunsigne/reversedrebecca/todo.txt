@@ -59,8 +59,7 @@
  	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	en cours : 
-	- mettre musique sur Patreon
-		
+
 	à tester :
 
 	à faire :
@@ -69,7 +68,8 @@
 	- aider le shooter (animation de tir sur la cible quand on l'a aidé)
 	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
-	- dialogue différent en gentil de YY
+	- remplacer la pelle du dernier étage par autre chose
+	- ajouter voix YY
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
@@ -80,7 +80,6 @@
 	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
 	- traduction en anglais
 	- remplasser le système de karma de l'écran de fin de niveau
-
 
 	note : 
 	il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)

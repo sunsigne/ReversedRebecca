@@ -17,6 +17,13 @@ double-y = player = intrigued = Tu n'es pas quelqu'un de bien.
 double-y = player = calm = Ou peut-être qu'au fond, je me cherches@juste une excuse pour ce qui va suivre…
 
 
-% SCENARIO_BAD_NEXT
+% SCENARIO_GOOD
+double-y = player = calm = J'ai suivi ton parcours.
+double-y = player = calm = Tu es patiente. Réfléchie. Compréhensive. Tu@utilises ton coeur et ta tête, pour arriver à tes fins.
+double-y = player = calm = Tu es quelqu'un de bien.
+double-y = player = intrigued = Mais le coeur et le cerveau, ça ne fait que deux.@Es-tu capable d'utiliser tes six cents muscles ?
+
+
+% SCENARIO_NEXT
 double-y = player = happy = Toi et moi, on va se battre.@Rendez-vous en bas.
 double-y = player = happy = Si tu gagnes, je te dirais tout ce que tu veux savoir.
