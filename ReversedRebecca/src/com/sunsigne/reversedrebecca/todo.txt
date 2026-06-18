@@ -70,7 +70,6 @@
 	- créer réaction de Nancy si elle voit le corps de l'idiot devant l'armurerie	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
 	- dialogue différent en gentil de YY
-	- faire un copier coller de l'obj-02 à l'obj-01
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
