@@ -39,6 +39,10 @@ rebecca = object = laugh = MIA ! MIA ! MIA !
 miaka = DOWN = angry = RHAAAAA !
 
 
+% LAST_NEXT
+miaka = DOWN = angry_var = C'EST QUI LA BOSS ?
+
+
 % LAST_NEXT_POST_KISS_LEFT
 miaka = LEFT = surprised = Heu… Pardon… Je me suis laissée emporter…
 miaka = LEFT = worry = Désolée…

@@ -38,7 +38,6 @@
 	
 	gendew_swap :
 	à terminer : 
-		- miaka -> Mika = Mia (la voix + tester)
 		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
 	
 	à faire :
@@ -246,6 +245,10 @@
 	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
 	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
+
+	///////// GENDER SWAP ////////////
+
+	Miaka = Mia / Mika
 
 	///////// MUSEE DE L'HORREUR ////////////
 	
