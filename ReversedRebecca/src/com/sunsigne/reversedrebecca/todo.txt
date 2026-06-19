@@ -31,8 +31,7 @@
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
-		- créer un système d'affichage de message d'erreur en cas de pb de doublon dans le code piranha pour le JOUEUR (pour une raison obscure, ça ne marche pas pour ce piranha là)
-	
+			
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
