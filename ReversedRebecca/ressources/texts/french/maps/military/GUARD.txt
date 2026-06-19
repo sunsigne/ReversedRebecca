@@ -1,4 +1,5 @@
 % BAD_I_MUST_SEE_YY
+player = militaryman = happy_var = Je dois voir YY.
 militaryman = player = guard = On ne passe pas.
 player = militaryman = angry = Moi, c'est pas "on".@Moi, c'est "Rebecca", et je passe.
 militaryman = player = guard = J'ai dit "non".
@@ -34,9 +35,15 @@ player = militaryman = happy_var = C'est ça. Laisse passer la princesse.@Et ne 
 
 
 % GOOD_I_MUST_SEE_YY
+player = militaryman = happy_var = Je dois voir YY.
 militaryman = player = guard = On ne passe pas.
 player = militaryman = worry = Il n'y a pas quelque chose que je peux faire@pour te convaincre de me laisser passer ?
 militaryman = player = guard = Aide 10 de mes frères d'armes, et le chef ne verra@aucune objection à ce que je t'ouvre le passage.
+player = militaryman = no_sens = …
+
+
+% GOOD_I_MUST_SEE_YY_NEXT
+player = DOWN = laugh = Ça fait un peu jeu vidéo, mais je sais ce que@je dois faire pour passer.
 
 
 % GOOD_MAY_I_PASS_NOT_STARTED

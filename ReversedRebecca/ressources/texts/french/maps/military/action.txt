@@ -1,7 +1,6 @@
 ///// WORLD /////
 
 NEED_HELP = Key3 % besoin d'aide ?
-I_MUST_SEE_YY = Key1 % je dois voir YY
 MAY_I_PASS = Key1 % je peux passer ?
 MOVE_OUT = Key1 % pousse-toi !
 SEARCH_KEY = Key3 % fouiller (clé?)

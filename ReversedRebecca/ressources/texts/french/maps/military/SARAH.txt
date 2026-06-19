@@ -1,0 +1,9 @@
+% MISSION
+player = object = unhappy_var = Tu es certaine qu'on a le droit d'être ici ?
+object = player = happy = Seulement toi. L'autorisation spéciale qu'on a eu@n'est valable que pour une seule personne.
+object = player = happy_var = Une chance que Novatech ait les faveurs du gou-@vernement, depuis qu'on a la charge du casque.
+
+
+% MISSION_NEXT
+object = UP = happy_var = Bien ! Les quartiers du chef Y sont juste devant.
+object = player = happy_var = De mon côté, je vais travailler jusque tard à l'atelier.@Alors bonne chance, et à demain matin.
