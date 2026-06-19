@@ -62,6 +62,7 @@
 
 	à faire :
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
+	- trier les objets piranha
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
