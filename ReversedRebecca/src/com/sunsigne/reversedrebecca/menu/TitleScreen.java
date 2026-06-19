@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.object.buttons.AchievementButton;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.CrashButton;
 import com.sunsigne.reversedrebecca.object.buttons.FlagLangageButton;
+import com.sunsigne.reversedrebecca.object.buttons.LockedTitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.SteamButton;
 import com.sunsigne.reversedrebecca.object.buttons.SupportButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
@@ -23,6 +24,8 @@ import com.sunsigne.reversedrebecca.physic.PhysicList;
 import com.sunsigne.reversedrebecca.physic.natural.independant.FadeMenuLaw;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
+import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementList;
 import com.sunsigne.reversedrebecca.ressources.lang.Language;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -43,6 +46,7 @@ public class TitleScreen extends MenuScreen {
 
 		createPlayButton();
 		createOptionsButton();
+		createBonusButton();
 		createQuitButton();
 
 		createFlagLanguageButton();
@@ -58,14 +62,23 @@ public class TitleScreen extends MenuScreen {
 
 	private void createTitleScreenButton(String text, PresetMousePos preset, boolean validate_sound, int x,
 			GenericListener onPress) {
-		String sound = validate_sound ? "button_validate" : "button";
-		ButtonObject button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null) {
+		createLockedTitleScreenButton(text, preset, validate_sound, x, onPress, false);
+	}
 
-			@Override
-			public String getSound() {
-				return sound;
-			}
-		};
+	private void createLockedTitleScreenButton(String text, PresetMousePos preset, boolean validate_sound, int x,
+			GenericListener onPress, boolean locked) {
+		String sound = validate_sound ? "button_validate" : "button";
+		ButtonObject button;
+		if (locked)
+			button = new LockedTitleScreenButton(text, x, 970, 415, 80, 0, 10, onPress, null);
+		else
+			button = new TitleScreenButton(text, x, 940, 420, 140, onPress, null) {
+
+				@Override
+				public String getSound() {
+					return sound;
+				}
+			};
 
 		((TitleScreenButton) button).setFontSize(45f);
 		LAYER.MENU.addObject(button);
@@ -74,17 +87,37 @@ public class TitleScreen extends MenuScreen {
 
 	private void createPlayButton() {
 		GenericListener onPress = () -> playRequest();
-		createTitleScreenButton(translate("PlayButton"), PLAY, true, 140, onPress);
+		createTitleScreenButton(translate("PlayButton"), PLAY, true, 40, onPress);
 	}
 
 	private void createOptionsButton() {
 		GenericListener onPress = () -> new OptionsScreen(OptionsScreen.GENERAL);
-		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 740, onPress);
+		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 515, onPress);
+	}
+
+	private boolean bonusUnlocked;
+
+	private void createBonusButton() {
+		GenericListener onPress = () -> new World("dave_bonus");
+
+		Achievement achievement = null;
+		for (Achievement tempAchievement : AchievementList.getList().getList()) {
+			if (tempAchievement.getName().equalsIgnoreCase("bonus") == false)
+				continue;
+			achievement = tempAchievement;
+			break;
+		}
+
+		bonusUnlocked = false;
+		if (achievement != null)
+			bonusUnlocked = achievement.isUnlocked();
+
+		createLockedTitleScreenButton(translate("BonusButton"), BONUS, false, 975, onPress, bonusUnlocked == false);
 	}
 
 	private void createQuitButton() {
 		GenericListener onPress = () -> new Conductor().stopApp();
-		createTitleScreenButton(translate("QuitButton"), QUIT, true, 1340, onPress);
+		createTitleScreenButton(translate("QuitButton"), QUIT, true, 1440, onPress);
 	}
 
 	private void createFlagLanguageButton() {
@@ -118,18 +151,17 @@ public class TitleScreen extends MenuScreen {
 		ButtonObject button = new SupportButton(onPress, null);
 		LAYER.MENU.addObject(button);
 	}
-	
+
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
+		ButtonObject hidden_button;
 		
-		/*
-		// placed exactly on the "hot water tap" in the kitchen
-		ButtonObject hidden_button = new TitleScreenButton("", 102, 247, 16, 16, onPress, null);
-		*/
-				
-		//placed exactly on the "power button" of the washing machine in the bathroom
-		ButtonObject hidden_button = new TitleScreenButton("", 108, 594, 16, 16, onPress, null);
-		
+		// placed exactly on the "hot water tap" in the kitchen ButtonObject
+		// hidden_button = new TitleScreenButton("", 102, 247, 16, 16, onPress, null);
+
+		// placed exactly on the "power button" of the washing machine in the bathroom
+		hidden_button = new TitleScreenButton("", 108, 594, 16, 16, onPress, null);
+
 		LAYER.MENU.addObject(hidden_button);
 	}
 
@@ -182,7 +214,7 @@ public class TitleScreen extends MenuScreen {
 
 		new WebTask().openHtml(crash_link);
 	}
-	
+
 	private void supportRequest() {
 		new WebTask().openHtml(WebTask.PATREON_LINK);
 	}
@@ -196,11 +228,19 @@ public class TitleScreen extends MenuScreen {
 
 	////////// PRESET MOUSE POS ////////////
 
-	public static final PresetMousePos PLAY = new PresetMousePos(325, 1000);
-	public static final PresetMousePos OPTION = new PresetMousePos(925, 1000);
-	public static final PresetMousePos QUIT = new PresetMousePos(1525, 1000);
+	public static final PresetMousePos PLAY = new PresetMousePos(225, 1000);
+	public static final PresetMousePos OPTION = new PresetMousePos(700, 1000);
+	public static final PresetMousePos BONUS = new PresetMousePos(1200, 1000);
+	public static final PresetMousePos QUIT = new PresetMousePos(1625, 1000);
 	public static final PresetMousePos FLAG = new PresetMousePos(1820, 30);
 	public static final PresetMousePos ACHIEVEMENT = new PresetMousePos(1820, 170);
+
+	public void setPreset(boolean condition, PresetMousePos presetIfTrue, PresetMousePos presetIfFalse) {
+		if (bonusUnlocked)
+			this.setPreset(presetIfTrue, true);
+		else
+			this.setPreset(presetIfFalse, true);
+	}
 
 	////////// GAMEPAD ////////////
 
@@ -215,6 +255,8 @@ public class TitleScreen extends MenuScreen {
 			playPressed(e);
 		else if (getPreset() == OPTION)
 			optionPressed(e);
+		else if (getPreset() == BONUS)
+			bonusPressed(e);
 		else if (getPreset() == QUIT)
 			quitPressed(e);
 		else if (getPreset() == ACHIEVEMENT)
@@ -235,18 +277,35 @@ public class TitleScreen extends MenuScreen {
 	private void optionPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(PLAY);
-		else if (e.getKey() == ButtonEvent.RIGHT)
-			setPreset(QUIT);
-		else if (e.getKey() == ButtonEvent.UP)
+		else if (e.getKey() == ButtonEvent.RIGHT) {
+			if (bonusUnlocked)
+				setPreset(BONUS);
+			else
+				setPreset(QUIT);
+		} else if (e.getKey() == ButtonEvent.UP)
 			setPreset(FLAG);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(OPTION).mousePressed(null);
 	}
 
-	private void quitPressed(ButtonEvent e) {
+	private void bonusPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.LEFT)
 			setPreset(OPTION);
 		else if (e.getKey() == ButtonEvent.RIGHT)
+			setPreset(QUIT);
+		else if (e.getKey() == ButtonEvent.UP)
+			setPreset(FLAG);
+		else if (e.getKey() == ButtonEvent.A)
+			buttons.get(BONUS).mousePressed(null);
+	}
+
+	private void quitPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.LEFT) {
+			if (bonusUnlocked)
+				setPreset(BONUS);
+			else
+				setPreset(OPTION);
+		} else if (e.getKey() == ButtonEvent.RIGHT)
 			setPreset(ACHIEVEMENT);
 		else if (e.getKey() == ButtonEvent.UP)
 			setPreset(FLAG);

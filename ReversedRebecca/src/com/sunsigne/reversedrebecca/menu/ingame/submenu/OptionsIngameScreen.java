@@ -22,7 +22,7 @@ public class OptionsIngameScreen extends MenuIngameSubMenuScreen {
 
 	@Override
 	public String getName() {
-		return "resume";
+		return "options";
 	}
 
 	////////// SUB MENU ////////////

@@ -30,7 +30,7 @@ public class ResumeScreen extends MenuIngameScreen {
 
 	@Override
 	public String getName() {
-		return "resume";
+		return "options";
 	}
 
 	////////// TEXT ////////////

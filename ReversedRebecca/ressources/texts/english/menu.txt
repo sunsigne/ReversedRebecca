@@ -43,6 +43,7 @@ WarningHardDetail2 = the game does not save
 
 PlayButton = play
 OptionsButton = options
+BonusButton = bonus
 QuitButton = quit
 BackButton = back
 Achievement = achievements
@@ -130,7 +131,3 @@ VolumeVoice = voice
 UpdateText = Game update available
 UpdateButton = Click here
 UpdateInfo = New level : military camp
-
-///// BONUS /////
-
-BonusButton = bonus
