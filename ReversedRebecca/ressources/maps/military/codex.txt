@@ -86,6 +86,7 @@ NPC-10 = Shooter
 NPC-16 = Jessy
 OBJ-08 = Julomeo Detector
 OBJ-41 = Training Course
+OBJ-45 = Target shooter
 
 ///// ARMORY /////
 
