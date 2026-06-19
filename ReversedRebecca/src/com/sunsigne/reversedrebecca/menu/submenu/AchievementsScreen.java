@@ -159,12 +159,14 @@ public class AchievementsScreen extends SubMenuScreen {
 
 	////////// BUTTON ACTION ////////////
 
+	private int step = 10;
+	
 	private void showNextAchievements() {
-		new AchievementsScreen(BACK, listStart + 5);
+		new AchievementsScreen(BACK, listStart + step);
 	}
 
 	private void showPreviousAchievements() {
-		new AchievementsScreen(BACK, listStart - 5);
+		new AchievementsScreen(BACK, listStart - step);
 	}
 
 	private void unlockClickHereAchievement() {
