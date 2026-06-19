@@ -64,10 +64,8 @@
 
 	à faire :
 	- meilleur cinématique d'empoisonnement de l'idiot
-	- le garde se pousse une fois tt le monde aidé
 	- adapter réaction courreur et Nancy par rapport à l'idiot tué par nathan 
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
-	- remplacer la pelle du dernier étage par autre chose
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)

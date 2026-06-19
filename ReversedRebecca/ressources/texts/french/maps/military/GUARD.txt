@@ -47,3 +47,7 @@ player = militaryman = laugh = C'était pour voir si tu suivais.
 % GOOD_MAY_I_PASS_NOT_DONE
 militaryman = player = guard = Tu n'as pas fini d'aider mes collègues.
 player = militaryman = laugh = C'était pour voir si tu suivais.
+
+
+% GOOD_I_HELPED_ENOUGH_PEOPLE
+militaryman = player = guard = Parfait ! Comme promis, voilà l'accès à la tour.@Bonne chance avec YY.
