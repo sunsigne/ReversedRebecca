@@ -64,15 +64,14 @@
 
 	à faire :
 	- meilleur cinématique d'empoisonnement de l'idiot
-	- adapter réaction courreur et Nancy par rapport à l'idiot tué par nathan 
+	- Nancy doit réagir à l'idiot mort devant l'infirmerie
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
 
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
 	
 	à faire à la fin : 
-	- cinématique d'intro
-	- en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. Est-ce que le garde l'as effectivement dit pendant l'intro ?
+	- cinématique d'intro : en méchant, Rebecca dit à Nathan que le garde ne veut pas la laisser passer. S'assurer que ça soit vrai
 	- traduction en anglais
 	- remplasser le système de karma de l'écran de fin de niveau
 
