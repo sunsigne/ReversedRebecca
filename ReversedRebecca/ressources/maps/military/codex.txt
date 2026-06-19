@@ -38,6 +38,7 @@ NPC-15 = Cassidy
 NPC-17 = Nancy
 OBJ-39 = Bomb Path Helper
 OBJ-18 = Big Trash
+OBJ-46 = Outside Walls
 
 ///// ROOMS /////
 
