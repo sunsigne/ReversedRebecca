@@ -70,7 +70,6 @@
 	bug :
 	- parfois, si nancy est sur le chemin, l'idiot est incapable de revenir (trouver un moyen de reproduire le bug. Sinon, créer un anti-softlock sur Nathan en gentil)
 	- on peut ramasser la clé cyan en étant nancy
-	- si YY est bloqué par le char au moement du tremblement de terre, il ne fait pas spawn de coeurs (la solution : retirer le check de collisions à ce moement là)
 	
 	à faire à la fin : 
 	- cinématique d'intro

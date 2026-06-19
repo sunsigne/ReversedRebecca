@@ -52,6 +52,7 @@ public class DoubleYEarthquakePattern extends BossPattern {
 	}
 
 	private boolean init;
+	private GameTimer maxValue;
 
 	private void jump() {
 		if (init == false) {
@@ -59,6 +60,7 @@ public class DoubleYEarthquakePattern extends BossPattern {
 			y0 = getBoss().getY();
 		}
 
+		maxValue = new GameTimer(35);
 		getBoss().setFacing(DIRECTION.DOWN);
 		getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.GOOD);
 		getBoss().setVelY(-15);
@@ -69,15 +71,16 @@ public class DoubleYEarthquakePattern extends BossPattern {
 	private void earthquake() {
 
 		// up then down
-		if (y0 > getBoss().getY()) {
+		if (y0 > getBoss().getY() && (maxValue != null && maxValue.isReady() == false)) {
 			getBoss().setVelY(getBoss().getVelY() + 1);
 			getBoss().setDoubleYCondition(DOUBLE_Y_CONDITION.BALL);
 			flag = true;
 			return;
 		}
 
-		if (flag && y0 < getBoss().getY()) {
+		if ((flag && y0 < getBoss().getY()) || (maxValue != null && maxValue.isReady())) {
 			flag = false;
+			maxValue = null;
 			new CameraShaker().shaking(SHAKE.STRONG);
 			getBoss().setY(y0);
 			getBoss().setMotionless();
