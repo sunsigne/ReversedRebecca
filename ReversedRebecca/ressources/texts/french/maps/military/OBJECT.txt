@@ -63,3 +63,12 @@ player = DOWN = angry_var2 = Ramasse-les toi-même !
 
 % PICK_UP_DIRTY_SOCK_NEXT_NEXT
 player = object = asleep = Bon… Puisque tu insistes…
+
+
+% IDIOT_KILLED_BY_PILLS
+player = DOWN = no_sens = Ok…
+player = DOWN = laugh = Je vais arranger ça.
+
+
+% IDIOT_KILLED_BY_PILLS_NEXT
+player = DOWN = laugh = Voilà ! Problème réglé !
