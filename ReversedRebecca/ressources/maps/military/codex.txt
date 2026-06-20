@@ -15,44 +15,28 @@ REGISTER = JESSY*GET_GHOSTED
 
 ///// WORLD /////
 
-OBJ-30 = Arena Set-up
-OBJ-31 = Arena OOB Preventer
+NPC-01 = Sarah
+NPC-02 = Trashman
+NPC-03 = Cleaner
 OBJ-01 = Plant
 OBJ-02 = Plant Slightly Downer
+OBJ-38 = Trashes
+OBJ-18 = Big Trash
 OBJ-14 = Up Left Shower
 OBJ-15 = Up Right Shower
 OBJ-16 = Down Left Shower
 OBJ-17 = Down Right Shower
-OBJ-40 = Path Finding Helper (Artificial Wall)
 OBJ-42 = Cactus
+OBJ-40 = Path Finding Helper (Artificial Wall)
 OJB-44 = Help Counter
-
-NPC-01 = Sarah
-NPC-03 = Dormitory
-NPC-04 = Trashman
-OBJ-38 = Trashes
-NPC-07 = Dupont
-NPC-12 = Slacker
-NPC-13 = Cleaner
-NPC-15 = Cassidy
-NPC-17 = Nancy
-OBJ-39 = Bomb Path Helper
-OBJ-18 = Big Trash
 OBJ-46 = Outside Walls
-
-///// ROOMS /////
-
-OBJ-13 = Quest Chest
-OBJ-33 = Shotgun
-OBJ-35 = Opened Curtains
-OBJ-36 = Closed Curtains
-OBJ-37 = Cyan Curtain
+OBJ-30 = Arena Set-up
+OBJ-31 = Arena OOB Preventer
 
 ///// CENTER /////
 
-NPC-02 = Guard
+NPC-04 = Guard
 OBJ-05 = Guard Checker
-OBJ-07 = Bomb Box
 OBJ-19 = YY Door
 OBJ-21 = Stairs Ground to First Floor
 OBJ-22 = Stairs First Floor to Ground
@@ -64,32 +48,49 @@ OBJ-27 = Shovel Box
 OBJ-28 = YY
 OBJ-29 = Gravity falls
 
-///// REFECTORY /////
+///// ROOMS /////
 
-NPC-05 = Amiranda
-OBJ-03 = Table Left
-OBJ-04 = Table Right
-OBJ-06 = Target
-OBJ-10 = Amiranda Detector
-OBJ-11 = Stock Furniture
-OBJ-12 = Amiranda Second Detector
-OBJ-20 = Cold Room Door
-OBJ-34 = Cold Room Scanner
-OBJ-32 = /hidden
+NPC-05 = Slacker
+OBJ-33 = Shotgun
+OBJ-13 = Quest Chest
+OBJ-35 = Opened Curtains
+OBJ-36 = Closed Curtains
+OBJ-37 = Cyan Curtain
 
-///// TRAINING /////
+///// INFIRMARY /////
 
-NPC-06 = Sergent
-NPC-08 = Runner
-NPC-09 = Idiot
-NPC-11 = Julomeo
-NPC-10 = Shooter
-NPC-16 = Jessy
-OBJ-08 = Julomeo Detector
-OBJ-41 = Training Course
-OBJ-45 = Target shooter
+NPC-06 = Nancy
+OBJ-39 = Bomb Path Helper
 
 ///// ARMORY /////
 
-NPC-14 = Nathan
+NPC-07 = Nathan
 OBJ-09 = Nathan Detector
+
+///// TRAINING /////
+
+NPC-08 = Runner
+NPC-09 = Idiot
+NPC-10 = Dupont
+NPC-11 = Sergent
+NPC-12 = Shooter
+NPC-13 = Jessy
+NPC-14 = Julomeo
+OBJ-08 = Julomeo Detector
+OBJ-07 = Bomb Box
+OBJ-41 = Training Course
+OBJ-06 = Target
+OBJ-45 = Target shooter
+
+///// REFECTORY /////
+
+NPC-15 = Cassidy
+NPC-16 = Amiranda
+OBJ-10 = Amiranda Detector
+OBJ-12 = Amiranda Second Detector
+OBJ-03 = Table Left
+OBJ-04 = Table Right
+OBJ-11 = Stock Furniture
+OBJ-20 = Cold Room Door
+OBJ-34 = Cold Room Scanner
+OBJ-32 = /hidden
