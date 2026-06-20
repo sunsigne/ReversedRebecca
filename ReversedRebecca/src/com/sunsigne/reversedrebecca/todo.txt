@@ -39,14 +39,15 @@
 	gendew_swap :
 	à terminer : 
 		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
+		- nolancy -> Nancy = Nolan (seulement les actions ont été faites)
+		- jamessy -> Jessy = James (seulement les actions lvl003-y ont été faites)
 	
 	à faire :
+		les compteurs du lvl001	
 		lvl003:
 		- amiranda -> annuler les changements des fichiers piranha		
-		- dupont -> Xavier = Venera
-		- nolancy -> Nancy = Nolan
-		lvl002:
-		- jamessy -> Jessy = James
+		- dupont -> Xavier = Venera		
+		lvl002:		
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
 		- marichel = Michel = Marie
