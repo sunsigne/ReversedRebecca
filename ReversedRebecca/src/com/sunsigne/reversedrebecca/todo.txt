@@ -27,8 +27,6 @@
 	)
 
 	////////// EN COURS ////////////
-	
-	1h mettre le bonus sur l'écran titre même (manette + prévenir qu'il faut finir le jeu)
 
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
@@ -56,14 +54,11 @@
 	
 	////////// MILITARY ////////////
  	
- 	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
-
 	en cours : 
 
 	à tester :
 
 	à faire :
-	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
 	- trier les objets piranha
 
 	bug :
@@ -73,9 +68,6 @@
 	- traduction en anglais
 	- remplasser le système de karma de l'écran de fin de niveau
 
-	note : 
-	il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
-
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -84,6 +76,15 @@
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 
 	note : puzzle : cliquer = impact
+
+
+	////////// RR000 ////////////
+
+	"regarder la TV tj pas fait", attention au dodo de sarah : faire comme Stardew Valley, ça lance un dialogue
+	
+	////////// WS000 ////////////
+	
+	passage secret tj vide ...
 
 	////////// LVL001 ////////////
 	
@@ -114,10 +115,17 @@
 
 	- relier le fusil à pompe derrière Butch à la fusillade
 
+	////////// WS002 ////////////
+
+ 	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
+
 	////////// DAVE003 ////////////
 
-	prévenir que dans le prochain niveau, seule la variante "méchant" est dispo pour le moment
-		
+	////////// LVL003-Y ////////////
+ 	
+	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
+	note : il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
+
 	////////// LVL003 ////////////
 	
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
@@ -170,14 +178,6 @@
 	dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
 	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
-
-	////////// RR000 ////////////
-
-	"regarder la TV tj pas fait", attention au dodo de sarah : faire comme Stardew Valley, ça lance un dialogue
-	
-	////////// WS000 ////////////
-	
-	passage secret tj vide ...
 
 	////////// LVL003-X ////////////
 

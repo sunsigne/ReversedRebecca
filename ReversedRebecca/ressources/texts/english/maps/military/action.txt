@@ -1,0 +1,135 @@
+///// WORLD /////
+
+NEED_HELP = Key3 % need help?
+MAY_I_PASS = Key1 % may I pass?
+MOVE_OUT = Key1 % move out!
+SEARCH_KEY = Key3 % search (key?)
+WHAT_ARE_YOU_DOING = Key1 % What are you doing?
+YY = Key1 % YY ?
+TALK_VAR = Key1 % ... talk ?
+ARENT_YOU_GOING_OUT = Key1 % Aren't you going out?
+I_HAVE_THE_KEY = Key1 % I have the key
+NOT_SO_COCKY_ANYMORE = Key1 % Not so cocky anymore
+I_HELPED_10_PEOPLE = Key1 % I helped 10 people
+TELL_HIM_ABOUT_THE_STATION = Key3 % tell him about the station
+IT_WENT_WELL = Key1 % it went well
+I_NEARLY_DIED = Key2 % i nearly die!
+POLICE_WERE_IDIOTS = Key3 % police were idiots
+TELL_HIM_ABOUT_THE_HELMET_THEFT = Key3 % tell him about the helmet theft
+TELL_HIM_ABOUT_ALICIA_LOCKED_UP = Key3 % tell him about Alicia locked up
+I_ATE_WAY_TOO_MANY_COOKIES = Key1 % I ate too many cookies
+I_DIDNT_HAVE_BREAKFAST = Key1 % I didn't have breakfast
+I_HAVE_A_BALANCED_DIET = Key1 % I have a balanced diet
+I_HAVE_A_KILLER_ROBOT_AT_HOME = Key3 % I have a killer robot at home
+A_WEAPON = Key1 % a firearm ?
+PICK_UP_THE_DIRTY_SOCK = Key2 % pick up the dirty sock
+TAKE_THREE_TRASHES = Key2 % take 3 trashes
+HERE_ARE_THE_THREE_TRASHES = Key2 % here are the 3 trashes
+
+
+///// INFIRMARY /////
+
+NANCY_QUESTION = Key1 % Nancy?
+YOUT_GIRLFRIEND_IS_BEING_HARSH = Key1 % your girlfriend is being harsh
+I_NEED_HEALING = Key3 % I need healing
+HEAL = Key3 % heal
+WOW_CALM_DOWN = Key1 % wow, calm down
+WHOS_YOUR_GIRLFRIEND = Key2 % who's your girlfriend?
+MAYBE_I_WANT = Key3 % Maybe I want...
+LIE_I_TALKED_TO_HER_SHE_AGREED = Key1 % (lie) she agreed
+LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU = Key1 % (lie) I had already talked to her
+ELISABETH = Key1 % Elisabeth
+MATILDA = Key2 % Matilda
+CASSIDY = Key1 % Cassidy
+JESSY = Key2 % Jessy
+FINE_I_LIED = Key3 % Fine, I lied
+APOLOGIZE = Key1 % apologize
+JESSY_WANTS_BOMBS = Key1 % Jessy wants bombs
+AMUSING = Key1 % amusing
+ANNOYING = Key2 % annoying
+NO_BECAUSE = Key2 % no, because...
+THATS_TOO_FAST = Key1 % that's too fast
+IM_NOT_INTERESTED = Key2 % I'm not interested
+IM_SEEING_SOMEMONE = Key3 % I'm seeing someone
+
+
+///// ARMORY /////
+
+WHAT_WAS_THE_RIDDLE = Key1 % what was the riddle?
+I_GET_IT = Key1 % I get it
+LISTEN_AGAIN = Key2 % listen again
+HIT_HIM = Key3 % (hit him)
+YOU_RE_A_LOSER = Key1 % you're a loser
+REQUEST_A_FIREARM = Key3 % request a firearm
+WHAT_DO_YOU_WANT_AGAIN = Key1 % what do you want, again?
+ARE_MY_SOCKS_OKAY = Key2 % are my socks okay?
+HERE_ARE_THE_SOCKS = Key2 % here are the socks
+
+
+///// TRAINING FIELD /////
+
+EXERCICE = Key2 % exercice
+GIVE_HIM_THE_SHOVEL = Key2 % give him the shovel
+LET_GO = Key1 % let go
+INSULT_HIM = Key2 % insult him
+DO_ONE_PUSHUP = Key1 % do 1 pushup
+REFUSE = Key2 % refuse
+THATS_BAD = Key1 % That's bad…
+THATS_FUN = Key2 % That's fun !
+GO_GET_IT_YOURSELF = Key1 % Go get it yourself!
+IN_YOUR_DREAMS = Key1 % In your dreams!
+YES_MAAM = Key2 % Yes, maam
+IGNORE = Key3 % (ignore)
+BLOW_HER_FACE_OFF = Key1 % blow her face off
+HERES_THE_BOMBS = Key2 % here are the bombs
+SUBMIT = Key1 % (submit)
+REBEL = Key2 % (rebel)
+NANCY_IS_INDISPOSED = Key1 % Nancy is... indisposed
+YOU_DONT_SHOOT = Key1 % you don't shoot?
+BOUH! = Key1 % BOUH!
+ACCIDENT = Key3 % accident
+I_CANT_DO_THAT = Key1 % I... can't do that.
+TRUTH_DONT_HAVE_KEY = Key1 % (truth) I don't have the key
+LIE_DONT_HAVE_KEY = Key1 % (lie) I don't have the key
+YOURE_THERE_FOR_A_REASON = Key2 % You're there for a reason
+ACTUALLY_I_LL_FREE_YOU = Key3 % Actually, I'll free you
+HERES_THE_GREEN_BOMBS = Key3 % here are the green bombs
+HERES_THE_BOMBS_2 = Key3 % here are the bombs 2
+LUNCHBOX_DELIVERY = Key2 % lunchbox delivery!
+THATS_DANGEROUS = Key1 % that dangerous!
+STOP_MOVING = Key1 % stop moving
+YELLOW_KEY = Key3 % key?
+SO = Key1 % so?
+
+
+///// REFECTORY /////
+
+DO_WE_KNOW_EACH_OTHER = Key1 % Do we know each other ?
+WE_REALLY_DONT_KNOW_EACH_OTHER = Key1 % We really don't know each other ?
+JESSY_QUESTION = Key1 % Jessy ?
+SHES_MEAN = Key1 % She's mean
+I_M_INTO_HER = Key2 % I'm into her
+NOTHING_SPECIAL = Key3 % nothing special
+TIPS_WITH_JESSY = Key2 % tips with Jessy?
+TIPS_WITH_NANCY = Key3 % tips with Nancy?
+BRING_YY = Key1 % bring YY
+I_GOT_STUCK = Key2 % I got stuck
+ONIONS = Key1 % onions?
+SEARCH_ONIONS = Key3 % search (onions?)
+GIVE_THE_ONIONS = Key3 % give the onions
+MY_PLEASURE = Key1 % my pleasure
+MEH_NOT_FEELING_LIKE = Key2 % Meh... Not feeling like
+WHAT_DO_I_GAIN_FROM_IT = Key3 % what do I gain from it?
+EAT_THE_LUNCHBOX = Key1 % eat the lunchbox
+DON_T_EAT_THE_LUNCHBOX = Key2 % do not
+I_DELIVERED_THE_MEAL = Key1 % I delivered the meal
+THANK_EAT = Key1 % thank (eat)
+WE_SHARE = Key2 % we share?
+EAT_LIKE_A_SAVAGE = Key3 % (eat like a savage)
+MEH_I_WAS_JUST_HUNGRY = Key1 % Meh, I was just hungry
+MORE_GIMME_MORE = Key2 % More ! Gimme more!
+THANK_THEY_WERE_DELICIOUS = Key1 % Thank, that was delicious
+I_M_HUNGRY = Key2 % I'm hungry!
+CUPCAKES_GIVE = Key1 % give
+CUPCAKES_ME = Key2 % me
+CUPCAKES_MORE = Key3 % more!
