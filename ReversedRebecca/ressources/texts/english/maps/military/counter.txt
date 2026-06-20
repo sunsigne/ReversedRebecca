@@ -1,0 +1,5 @@
+PEOPLE_HELPED = people helped
+PEOPLE_BULLIED = people bullied
+CHESTS_UNLOCKED = chests unlocked
+SHOVEL_HITS = shovel hits
+HEADSHOT = headshot

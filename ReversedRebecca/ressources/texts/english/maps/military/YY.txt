@@ -1,0 +1,29 @@
+% NICE_VIEW
+double-y = player = intrigued = Nice view, don't you think?
+
+
+% NICE_VIEW_NEXT
+double-y = player = calm = I know why you're here.@Yes, I have the information you're looking for:
+
+
+% NICE_VIEW_NEXT_NEXT
+double-y = player = calm = I know Vladimir.@I know what he stole from you, and why.
+
+
+% SCENARIO_BAD
+double-y = player = calm = I've followed your journey.
+double-y = player = calm = You're impatient. Impulsive. Quick-tempered.@You use force to get what you want.
+double-y = player = intrigued = You're not a good person.
+double-y = player = calm = Or maybe, deep down, I'm just looking for@an excuse for what's coming next…
+
+
+% SCENARIO_GOOD
+double-y = player = calm = I've followed your journey.
+double-y = player = calm = You're patient. Thoughtful. Understanding. You use@your heart and your head to achieve your goals.
+double-y = player = calm = You're a good person.
+double-y = player = intrigued = But heart and brain make only two. Are you@capable of using your six hundred muscles?
+
+
+% SCENARIO_NEXT
+double-y = player = happy = You and I are going to fight.@Meet me downstairs.
+double-y = player = happy = If you win, I'll tell you everything you want to know.
