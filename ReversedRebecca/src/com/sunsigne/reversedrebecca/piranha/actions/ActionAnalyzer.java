@@ -5,6 +5,8 @@ import java.lang.reflect.InvocationTargetException;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.Action;
 import com.sunsigne.reversedrebecca.object.piranha.ChoiceObject;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.gotoo.AffectingRequest;
@@ -61,7 +63,14 @@ public class ActionAnalyzer {
 	}
 
 	private String getTranslatedText(String valueToRead, String filePath) {
-		String text = new Translatable().getStrictTranslatedText(valueToRead, filePath);
+		String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : "/" + LivingOption.getType().getName();
+		String typePath = filePath.substring(0, filePath.length() - FilePath.ACTION.length() - 1)
+				.concat(type + "/" + FilePath.ACTION);
+
+		String text = new Translatable().getStrictTranslatedText(valueToRead, typePath);
+
+		if (text.isEmpty())
+			text = new Translatable().getStrictTranslatedText(valueToRead, filePath);
 
 		if (text.isEmpty())
 			text = new Translatable().getStrictTranslatedText(valueToRead, FilePath.ACTION);
