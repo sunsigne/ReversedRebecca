@@ -35,7 +35,7 @@ public class PausePreventer {
 		state = PAUSE_STATE.MUSIC;
 		VolumeMusic volume = new VolumeMusic();
 		volume.preventNoMusicDuringScenarioMusic();
-		
+
 		PausePreventer.timer = new GameTimer(timer, true, () -> {
 			state = null;
 			volume.refreshVolume();
@@ -45,8 +45,10 @@ public class PausePreventer {
 	private static GameTimer timer;
 
 	public void removeDisabledPauseObject() {
-		if (timer != null)
+		if (timer != null) {
+			new VolumeMusic().refreshVolume();
 			timer.destroy();
+		}
 		state = null;
 	}
 

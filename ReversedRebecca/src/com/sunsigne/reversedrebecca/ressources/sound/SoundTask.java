@@ -71,8 +71,10 @@ public class SoundTask implements CameraDependency {
 				Clip musicClip = AudioSystem.getClip();
 				musicClip.open(clip);
 
-				if (transition == false)
+				if (transition == false) {
+					volume = VolumeMusic.getVolume();
 					setVol(volume, musicClip, false);
+				}
 
 				if (loop)
 					musicClip.loop(Clip.LOOP_CONTINUOUSLY);
