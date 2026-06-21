@@ -1,0 +1,60 @@
+% THANK
+player = object = laugh = Ils sont délicieux !
+player = object = laugh = That was delicious!
+object = player = happy = Tant mieux ! Bon, il faut absolument que je m'y@remette. Merci encore pour le coup de main.
+object = player = happy = Great! Well, I absolutely have to get back to it. Thanks again for the help.
+
+
+% THANK_THEY_WERE_DELICIOUS
+object = player = happy = Tant mieux ! Bon, il faut absolument que je m'y@remette. Merci encore pour le coup de main.
+object = player = happy = Great! Well, I absolutely have to get back to it. Thanks again for the help
+
+
+% SAVAGE
+object = player = unhappy = Ho wow ! Quel appétit !@Pense à mâcher quand même…
+object = player = unhappy = Wow! What an appetite! Remember to chew though…
+object = player = worry = … J'imagine que ça veut dire que@tu aimes ma cuisine ?
+object = player = worry = … I guess that means you like my cooking?
+
+
+% MEH
+object = player = happy = Tant mieux s'ils t'ont remplis ! Bon, il faut que@je m'y remette. Merci encore pour le coup de main.
+object = player = happy = Good thing they filled you up! Well, I have to get back to it. Thanks again for the help.
+
+
+% GIMME_MORE
+object = player = unhappy = Heu… D'accord. Tiens, voilà.
+object = player = unhappy = Um… Okay. Here you go.
+
+
+% GIMME_MORE_NEXT
+object = player = worry = Hey ! Doucement ! Tu as failli me mordre les doigts !
+object = player = worry = Hey! Easy! You almost bit my fingers!
+object = player = unhappy = La vache ! Tu as déjà fini ?! C'est impressionnant.
+object = player = unhappy = Wow! You're already finished?! That's impressive.
+
+
+% I_M_HUNGRY
+object = player = worry = Vraiment ? Tu ne sais pas t'arrêter, toi…
+object = player = worry = Really? You don't know when to stop...
+
+
+% I_M_HUNGRY_NEXT
+object = player = worry = En voilà d'au… Déjà ?! C'est à peine si tu respires !
+object = player = worry = There are so many... Already?! You're barely breathing!
+object = player = worry = Tu veux une pelle à la place de ta cuillère ?
+object = player = worry = Do you want a shovel instead of your spoon?
+
+
+% LAST
+object = player = worry = Je suis navré, chouquette. Il n'en reste plus un seul.@Tu as mangé tous les cupcakes du régiment.
+object = player = worry = I'm sorry, sweetie. There's not a single one left. @You ate all the cupcakes in the army.
+object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
+object = player = happy = Well, I absolutely have to get back to it. @Thanks again for the help.
+
+
+% LAST_FEMALE
+object = player = worry = Je suis navrée, chouquette. Il n'en reste plus un@seul. Tu as mangé tous les cupcakes du régiment.
+object = player = worry = I'm so sorry, sweetie. There's not a single one left. You ate all the cupcakes in the army.
+object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
+object = player = happy = Well, I absolutely have to get back to it. Thanks again for the help.

@@ -76,7 +76,7 @@ SUBMIT = Key1 % (submit)
 REBEL = Key2 % (rebel)
 NANCY_IS_INDISPOSED = Key1 % Nancy is... indisposed
 YOU_DONT_SHOOT = Key1 % you don't shoot?
-BOUH! = Key1 % BOUH!
+BOUH! = Key1 % BOO!
 ACCIDENT = Key3 % accident
 
 TELL_HIM_ABOUT_THE_STATION = Key3 % tell him about the station

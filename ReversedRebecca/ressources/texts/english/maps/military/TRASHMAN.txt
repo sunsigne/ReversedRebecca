@@ -1,48 +1,70 @@
 % YOU_SHALL_NOT_PASS
 object = player = trashman = Je suis chargé de surveiller les ordures.@Personne d'autre que moi n'y touchera.
+object = player = trashman = I'm in charge of guarding the trash.@No one but me touches it.
 player = object = no_sens = Ok…@Parce que… Genre, c'est dangereux ?
+player = object = no_sens = Okay... @Because... Like, is it dangerous?
 object = player = trashman = Je ne réponds pas non plus aux questions.
+object = player = trashman = I don't answer questions, either.
 player = object = no_sens_var = (… Il y a vraiment des tordus dans ce camp)
+player = object = no_sens_var = (... There are some real weirdos in this camp)
 
 
 % HE_STINKS
 player = DOWN = sad = (Je préfère m'abstenir… Il ne sent pas très bon.)
+player = DOWN = sad = (I'd rather not... He doesn't smell very good.)
 
 
 % KEY_QUEST
 player = object = angry = Pousse-toi, je viens chercher une clé.
+player = object = angry = Move aside, I'm here to get a key.
 object = player = trashman = Je suis chargé de surveiller les ordures.@Tu n'auras rien sans mon autorisation.
+object = player = trashman = I'm in charge of guarding the trash.@You won't get anything without my permission.
+player = object = angry_var = Fhvklmzejncfljkzehfk!!
 player = object = angry_var = Fhvklmzejncfljkzehfk!!
 player = object = unhappy_var = … ?
+player = object = unhappy_var = …?
 player = object = happy_var = Tu sais quoi ? Tu as raison.@Tu vas la chercher à ma place.
+player = object = happy_var = You know what? You're right.@You're going to get it for me.
+
 
 
 % KEY_QUEST_TRASHMAN_IN_TRASH
 player = UP = happy_var = Alors ? Elle est là-dedans ?
+player = UP = happy_var = So? Is it in there?
 militaryman = DOWN = trashman = … Oui… Elle est là… Tiens…
+militaryman = DOWN = trashman = ... Yes... It's in there... Here...
 player = UP = happy_var = Merci de ta diligence.
+layer = UP = happy_var = Thanks for your diligence.
 
 
 % KEY_QUEST_TRASHMAN_STAYING
 militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, et…@Méditer sur mes choix de vie…
+militaryman = DOWN = trashman = No... I think I'll stay here a while, and...@Reflect on my life choices...
 
 
 % NEED_HELP
 object = player = trashman = Je suis chargé de surveiller les ordures.@Personne d'autre que moi n'y touchera.
+object = player = trashman = I'm in charge of guarding the trash.@No one but me touches it.
 player = object = no_sens = Ça n'était pas ma question…@Je t'ai demandé comment je pouvais t'aider.
+player = object = no_sens = That wasn't my question... @I asked how I could help you.
 object = player = trashman = Tu peux m'aider à entretenir cette décharge :@ramène-moi 3 déchets et je renverrai l'ascesseur.
+object = player = trashman = You can help me maintain this dump:@bring me 3 pieces of trash and I'll send the elevator back down.
 
 
 % NEED_HELP_REALIZATION
 player = object = angry = Je t'en ficherais moi, trouve trois déchets !@Le camp est nickel à part la décharge !
+player = object = angry = Yeah, right—find three pieces of trash! @The camp is spotless, except for the dump!
 player = object = surprised = Oh !
+player = object = surprised = Oh!
 player = object = laugh = La voilà la solution ! Je lui ramène des déchets@que je prends dans la décharge !
+player = object = laugh = That’s the solution! I’ll bring him some trash @from the dump!
 
 
 % NEED_HELP_FINAL
 object = player = trashman = Parfait. Un marché est un marché. Voilà ta part.
+object = player = trashman = Perfect. A deal's a deal. Here's your share.
 
 
 % NEED_HELP_FINAL_NEXT
 player = object = fake_smile = Génial. Une chaussette sale. Merci.
-
+player = object = fake_smile = Great. A dirty sock. Thanks.

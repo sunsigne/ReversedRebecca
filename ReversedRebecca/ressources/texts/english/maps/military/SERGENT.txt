@@ -1,0 +1,160 @@
+% HELLO
+object = player = sergent = Un problème, soldat ?
+object = player = sergent = Got a problem, soldier?
+player = object = unhappy_var = Je suis une civile…
+player = object = unhappy_var = I'm a civilian...
+object = player = sergent = Une civile n'est rien de moins qu'une future soldat,@soldat.
+object = player = sergent = A civilian is nothing less than a future soldier, @soldier.
+
+
+% NEED_HELP
+object = player = sergent = Non. Repos, soldat.
+object = player = sergent = No. At ease, soldier.
+player = object = unhappy_var = Je suis une civile…
+player = object = unhappy_var = I'm a civilian...
+object = player = sergent = Une civile n'est rien de moins qu'une future soldat,@soldat.
+object = player = sergent = A civilian is nothing less than a future soldier, @soldier.
+
+
+% TRAINED
+object = player = sergent = Je t'ai vu parcourir notre terrain d'entrainement.@Tu as du potentiel.
+object = player = sergent = I saw you going through our training course. @You've got potential.
+player = object = happy_var = Merci ! Je fais ce qu'il faut pour être en forme.
+player = object = happy_var = Thanks! I do what it takes to stay in shape.
+object = player = sergent = Le sport ne fait pas tout. Un soldat doit savoir@manier une arme. En es-tu capable ?
+object = player = sergent = Physical fitness isn't everything. A soldier needs to know @how to handle a weapon. Can you do that?
+
+
+% NOT_TRAINED
+player = object = worry = C'est une logique étrange… Tout le monde n'est@pas destiné à l'uniforme.
+player = object = worry = That's a strange way of thinking... Not everyone is @cut out for the uniform.
+object = player = sergent = Mais une recrue incroyable, qui s'ignore, peut se@cacher n'importe où.
+object = player = sergent = But an incredible recruit—one who doesn't even know it yet—could be @hiding anywhere.
+object = player = sergent = Toi, par exemple : tu as l'air d'être du genre à@utiliser ta tête. Tu serais un grand atout !
+object = player = sergent = TYou, for example: you look like the type who @uses their head. You'd be a huge asset!
+player = object = you_silly = Disons que, j'aime bien réfléchir.
+player = object = you_silly = Let's just say I like to think things through.
+object = player = sergent = L'esprit ne fait pas tout. Un soldat doit savoir@manier une arme. En es-tu capable ?
+object = player = sergent = Brains aren't everything. A soldier needs to know @how to handle a weapon. Can you do that?
+
+
+% NICE
+player = object = laugh = C'est peu conventionnel, mais…@Je me débrouille bien avec une pelle !
+player = object = laugh = It's unconventional, but... @I'm pretty handy with a shovel!
+object = player = sergent = Montre-moi.
+object = player = sergent = Show me.
+
+
+% NO_SHOVEL
+player = object = worry = C'est que… Je n'en ai pas sur moi…
+player = object = worry = The thing is... I don't have one on me...
+object = player = sergent = En voilà une. Montre-moi.
+object = player = sergent = Here's one. Show me.
+
+
+% KNOCKED_OUT
+player = object = laugh = C'est lui qui a demandé !
+player = object = laugh = He's the one who asked for it!
+player = DOWN = you_silly = Quand il se réveillera, je lui dirai que ça@porte bonheur.
+player = DOWN = you_silly = When he wakes up, I'll tell him it brings good luck.
+
+
+% MEAN_NO_ARMORY
+player = object = convinced = Je travaille justement à m'en procurer une.@Saurais-tu où je peux trouver une clé verte ?
+player = object = convinced = I'm actually working on getting one.@Do you happen to know where I can find a green key?
+object = player = sergent = Affirmatif, soldat. La clé verte est dans l'armurerie.
+bject = player = sergent = Affirmative, soldier. The green key is in the armory.
+
+
+% MEAN_NO_ARMORY_NUMBERS
+player = object = convinced = Je travaille justement à m'en procurer une.@Saurais-tu où je peux trouver une clé 2 ?
+layer = object = convinced = I'm actually working on getting one.@Do you happen to know where I can find Key 2?
+object = player = sergent = Affirmatif, soldat. La clé 2 est dans l'armurerie.
+object = player = sergent = Affirmative, soldier. Key 2 is in the armory.
+
+
+% MEAN_NO_ARMORY_NEXT
+player = object = no_sens_var = ...
+player = object = no_sens_var = ...
+player = object = wrong_with_you = C'est une blague ?
+player = object = wrong_with_you = Is this a joke?
+object = player = sergent = Négatif, soldat. Si tu veux accéder à l'armurerie,@tu as besoin de la clé qui est dans l'armurerie.
+object = player = sergent = Negative, soldier. If you want to access the armory,@you need the key that's inside the armory.
+player = DOWN = sad = (Bon… J'imagine que je vais devoir explorer@ce camp pour trouver une autre solution.)
+player = DOWN = sad = (Well... I guess I'll have to explore@this camp to find another solution.)
+
+
+% MEAN_ARMORY_UNLOCKED
+player = object = happy_var = Je travaille justement à m'en procurer une.
+player = object = happy_var = I'm actually working on getting one.
+object = player = sergent = Dans ce cas, bonne chance, soldat.
+object = player = sergent = In that case, good luck, soldier.
+
+
+% A_WEAPON
+player = DOWN = sad = (Tant que je ne serais pas rentrée dans l'armurerie,@le sergent ne m'apprendra rien.)
+player = DOWN = sad = (Until I get into the armory,@the sergeant won't teach me anything.)
+
+
+% MEAN_NATHAN
+player = object = angry = I'm working on it, but that four-eyed moron@won't give me one!
+
+
+% MEAN_NATHAN_VAR
+player = object = angry = I opened the armory, but that four-eyed@moron won't give me one!
+
+
+% MEAN_NATHAN
+player = object = angry = J'y travaille, mais cet andouille de binoclare ne@veut pas m'en donner !
+player = object = angry = I'm working on it, but that four-eyed moron@won't give me one!
+
+
+% MEAN_NATHAN_VAR
+player = object = angry = J'ai ouvert l'armurerie, mais cet andouille de@binoclare ne veut pas m'en donner !
+player = object = angry = I opened the armory, but that four-eyed@moron won't give me one!
+
+
+% MEAN_NATHAN_NEXT
+object = player = sergent = ...
+object = player = sergent = ...
+object = player = sergent_yelling = Le soldat Nathan est plus que capable lorsqu'il@est question de jugement.
+object = player = sergent_yelling = Private Nathan is more than capable when it@comes to judgment.
+object = player = sergent_yelling = Tu as de la chance de n'être qu'une future soldat.@Je n'aurais jamais toléré de tels mots d'une recrue.
+object = player = sergent_yelling = You're lucky you're only a soldier-in-training.@I never would have tolerated such words from a recruit.
+
+
+% LET_GO
+player = object = angry_var2 = (C'est quoi leurs problèmes dans ce camp ?)
+player = object = angry_var2 = (What is their problem at this camp?)
+
+
+% INSULT_HIM
+player = object = angry = Et toi, tu as de la chance que ton nez ne marche@pas. Parce qu'il est juste au-dessus de ta bouche.
+player = object = angry = You're lucky your nose doesn't work. Because it's right above your mouth.
+player = object = convinced = Vu comment tu pus de la gueule ! C'est au moins@ton haleine qui a fait tomber tes cheveux.
+player = object = convinced = The way your breath stinks! It must have been your breath that made your hair fall out.
+
+
+% IS_PISSED_OFF
+object = player = sergent_yelling = LA TERRE EST A TON GOUT ? PUISQUE TU ES@DÉJÀ AU SOL, FAIS-MOI 200 POMPES !
+object = player = sergent_yelling = Do you like the taste of the dirt? Since you're already on the ground, give me 200 push-ups!
+
+
+% REFUSE_PUSHUP
+object = player = sergent_yelling = JE NE T'AI PAS DEMANDÉ TON AVIS !
+object = player = sergent_yelling = I didn't ask for your opinion!
+
+
+% PUSHUP_AGAIN
+militaryman = player = sergent_yelling = ENCORE !
+militaryman = player = sergent_yelling = Again!
+
+
+% PUSHUP_DONE
+militaryman = player = sergent_yelling = Bien ! Maintenant, disparait !
+militaryman = player = sergent_yelling = Good! Now get lost!
+
+
+% PUSHUP_DONE_NEXT
+player = DOWN = angry_var2 = Je ne veux plus jamais qu'on parle de ça.
+player = DOWN = angry_var2 = I never want this spoken of again.

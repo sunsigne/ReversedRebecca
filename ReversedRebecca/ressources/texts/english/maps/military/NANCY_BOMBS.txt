@@ -1,0 +1,116 @@
+% JESSY_WANTS_BOMBS_NEVER_MET
+object = player = excited = Alors comme ça, tu as fait la connaissance de ma@copine ? Enchantée, au fait. Moi, c'est Nancy.
+object = player = excited = So, you've met my @girlfriend? Nice to meet you, by the way. I'm Nancy.
+player = object = happy = J'ai cru comprendre, oui.
+player = object = happy = I thought so, yes.
+object = player = playful = Évidemment, je suis bête… Jessy t'a dit mon nom.
+object = player = playful = Of course, I'm silly… Jessy told you my name.
+object = player = excited = Bon, ne la faisons pas attendre.@Tu m'accompagnes ?
+object = player = excited = Well, let's not keep her waiting. @Will you come with me?
+player = object = happy = Je te suis.
+player = object = happy = I'll follow you.
+
+
+% JESSY_WANTS_BOMBS
+object = player = playful = Ho ? Très bien. J'imagine qu'on peut lui apporter ça.@Tu m'accompagnes ?
+object = player = playful = Oh? Very well. I suppose we can bring her this. @Will you come with me?
+player = object = happy_var = Je te suis.
+player = object = happy_var = I'll follow you.
+
+
+
+% WHAT_DO_YOU_THINK_OF
+nancy = rebecca = happy = Alors ? Comment tu trouves Jessy pour l'instant ?
+nancy = rebecca = happy = So? What do you think of Jessy so far?
+
+
+% JESSY_IS_AMUSING
+nancy = rebecca = playful = N'est-ce pas ? Elle est trop mignonne quand@elle fait sa princesse.
+nancy = rebecca = playful = Isn't she? She's so cute when she's playing princess.
+
+
+% JESSY_IS_ANNOYING
+nancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@toutes les deux à faire ce qu'elle demande…
+nancy = rebecca = playful = I see what you mean. Yet here we are, both of us doing what she asks…
+
+
+% JESSY_IS_SOMETHING_NEXT
+nancy = rebecca = excited = Elle a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir d'elle.
+nancy = rebecca = excited = She has this strange power that makes you want to be liked by her.
+nancy = rebecca = playful = Bon, c'est vrai que des fois,@elle est un peu égoïste…
+nancy = rebecca = playful = Well, it's true that sometimes she's a little selfish…
+
+
+% JESSY_IS_SOMETHING_NEXT_NEXT
+nancy = rebecca = sad_side = Voire, méchante…
+nancy = rebecca = sad_side = Even, mean…
+
+
+% JESSY_IS_SOMETHING_NEXT_NEXT_NEXT
+nancy = rebecca = happy = Mais on ne s'ennuie jamais avec elle.
+nancy = rebecca = happy = But you're never bored with her.
+
+
+% CENTER
+nancy = rebecca = happy = Au fait, tu ne t'es pas présentée.@C'est quoi ton nom ?
+nancy = rebecca = happy = By the way, you haven't introduced yourself. What's your name?
+object = nancy = happy_var = Rebecca.
+object = nancy = happy_var = Rebecca.
+nancy = rebecca = blush_side = Ok, je note. C'est logique qu'une aussi jolie fille@ait un aussi joli prénom.
+nancy = rebecca = blush_side = Okay, noted. It makes sense that such a pretty girl would have such a pretty name.
+
+
+% HERE_WE_ARE
+nancy = rebecca = happy = Nous y sommes. Voilà les bombes pour Jessy.
+nancy = rebecca = happy = Here we are. Here are the bombs for Jessy.
+
+
+% HERE_WE_ARE_YET
+object = nancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… elle les a refusées.
+object = nancy = unhappy = They won't do. These are the bombs I had chosen. And… she refused them.
+
+
+% HERE_WE_ARE_YET_VAR
+object = nancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… elle les a refusées.
+object = nancy = unhappy = They won't do. These bombs are the same as mine. And… she refused them.
+
+
+
+
+
+
+
+
+
+
+
+% HERE_WE_ARE_NEXT
+nancy = rebecca = happy = À mon avis, elle ne les a même pas regardé.@Les bombes sont une excuse, elle veut être servie.
+nancy = rebecca = happy = In my opinion, she didn't even look at them. @The bombshells are an excuse, she wants to be waited on.
+object = nancy = no_sens = Tu veux dire… Comme dans un restaurant ?
+object = nancy = no_sens = You mean… Like in a restaurant?
+nancy = rebecca = excited = Non ! Elle cherche notre attention.@Elle veut qu'on se plie en quatre pour elle.
+nancy = rebecca = excited = No! She's looking for our attention. @She wants us to bend over backwards for her.
+nancy = rebecca = playful = Elle cherche à se faire désirée, quoi.
+nancy = rebecca = playful = She's trying to make herself desirable, that's all.
+nancy = rebecca = blush = Je pense qu'elle t'aime bien. Et…@Je peux comprendre pourquoi.
+nancy = rebecca = blush = I think she likes you. And… @I can understand why.
+
+
+% HERE_WE_ARE_NEXT_NEXT
+nancy = rebecca = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.
+nancy = rebecca = blush_side = Well, if that's what I think, I'll talk to you later.
+
+
+% HERE_WE_ARE_NEXT_NEXT_VAR
+nancy = rebecca = blush_side = Bon, peut-être à plus tard.
+nancy = rebecca = blush_side = Well, maybe see you later.
+
+
+% POST_LIE
+nancy = player = sad = Je ne vois pas en quoi cela me concerne.
+nancy = player = sad = I don't see how this concerns me.
+player = nancy = unhappy_var = Elle veut que ça soit toi qui les lui donne.
+player = nancy = unhappy_var = She wants you to give them to her.
+nancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.
+nancy = player = sad_side = I have no reason to believe you. @Don't bother me anymore.

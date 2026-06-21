@@ -1,0 +1,86 @@
+% BAD_I_MUST_SEE_YY
+player = militaryman = happy_var = Je dois voir YY.
+player = militaryman = I have to see YY.
+militaryman = player = guard = On ne passe pas.
+militaryman = player = No way
+player = militaryman = angry = Moi, c'est pas "on".@Moi, c'est "Rebecca", et je passe.
+player = militaryman = For me, it's not "we." @For me, it's "Rebecca," and I'm going through.
+militaryman = player = guard = J'ai dit "non".
+militaryman = player = I said "no."
+player = militaryman = angry_var = Dégage, en fait !
+player = militaryman = Get out of here!
+militaryman = player = guard = Et tu comptes m'y forcer comment ?
+militaryman = player = And how do you plan to force me?
+player = militaryman = wrong_with_you = … ?
+player = militaryman = wrong_with_you = …?
+
+
+% BAD_IDEA
+player = DOWN = angry_var2 = Il m'énerve ! Mais au moins, il m'a donné une idée.
+player = DOWN = angry_var2 = He's annoying me! But at least he gave me an idea.
+player = DOWN = convinced = Je vais aller chercher une arme dans l'armurerie.@Il n'aura pas d'autre choix que de me laisser passer.
+player = DOWN = convinced = I'm going to get a weapon from the armory.@He'll have no choice but to let me through.
+
+
+% BAD_MOVE_OUT
+militaryman = player = guard = Ou sinon quoi ?
+militaryman = player = guard = Or what?
+player = militaryman = wrong_with_you = … ?
+player = militaryman = wrong_with_you = …?
+
+
+% BAD_MOVE_OUT_NEXT
+player = DOWN = angry_var2 = Je déteste l'admettre, mais je n'arriverai à rien@de cette manière.
+player = DOWN = angry_var2 = I hate to admit it, but I'm not going to get anywhere this way
+
+
+% BAD_I_HAVE_THE_KEY
+player = militaryman = happy_var = Alors ? C'est qui qui va fermer sa gueule@et qui va se pousser, maintenant ?
+player = militaryman = happy_var = So? Who's going to shut their mouth and move aside now?
+
+
+% BAD_I_HAVE_THE_KEY_NEXT
+player = militaryman = laugh = Et puisqu'on y est, ouvre la porte pour moi.
+player = militaryman = laugh = And while we're at it, open the door for me.
+
+
+% BAD_POST_I_HAVE_THE_KEY
+player = militaryman = happy_var = C'est ça. Laisse passer la princesse.@Et ne respire pas trop fort, tu gaspilles mon air.
+player = militaryman = happy_var = That's right. Let the princess through. And don't breathe too hard, you're wasting my air.
+
+
+% GOOD_I_MUST_SEE_YY
+player = militaryman = happy_var = Je dois voir YY.
+player = militaryman = happy_var = I need to see YY.
+militaryman = player = guard = On ne passe pas.
+militaryman = player = guard = No way
+player = militaryman = worry = Il n'y a pas quelque chose que je peux faire@pour te convaincre de me laisser passer ?
+player = militaryman = worry = Isn't there anything I can do to convince you to let me through?
+militaryman = player = guard = Aide 10 de mes frères d'armes, et le chef ne verra@aucune objection à ce que je t'ouvre le passage.
+militaryman = player = guard = Help 10 of my brothers in arms, and the leader won't object to me opening the way for you.
+player = militaryman = no_sens = …
+player = militaryman = no_sens = …
+
+
+% GOOD_I_MUST_SEE_YY_NEXT
+player = DOWN = laugh = Ça fait un peu jeu vidéo, mais je sais ce que@je dois faire pour passer.
+player = DOWN = laugh = It's a bit like a video game, but I know what I need to do to get through.
+
+
+% GOOD_MAY_I_PASS_NOT_STARTED
+militaryman = player = guard = Tu n'as pas fini d'aider mes collègues.@En fait, tu n'as même pas commencé.
+militaryman = player = guard = You haven't finished helping my colleagues.@Actually, you haven't even started.
+player = militaryman = laugh = C'était pour voir si tu suivais.
+player = militaryman = laugh = That was to see if you were paying attention.
+
+
+% GOOD_MAY_I_PASS_NOT_DONE
+militaryman = player = guard = Tu n'as pas fini d'aider mes collègues.
+militaryman = player = guard = You're not done helping my colleagues yet.
+player = militaryman = laugh = C'était pour voir si tu suivais.
+player = militaryman = laugh = That was to see if you were paying attention.
+
+
+% GOOD_I_HELPED_ENOUGH_PEOPLE
+militaryman = player = guard = Parfait ! Comme promis, voilà l'accès à la tour.@Bonne chance avec YY.
+militaryman = player = guard = Perfect! As promised, here's the access to the tower. Good luck with YY.

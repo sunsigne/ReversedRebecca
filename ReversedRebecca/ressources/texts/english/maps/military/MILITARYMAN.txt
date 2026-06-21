@@ -1,0 +1,143 @@
+% SLACKER
+player = militaryman = laugh = BESOIN D'AIDE ?
+player = militaryman = laugh = NEED HELP?
+militaryman = DOWN = slacker = Zzzz…
+militaryman = DOWN = slacker = Zzzz…
+player = DOWN = you_silly = C'est bien ce que je pensais. Mais j'ai essayé,@donc ça compte.
+player = DOWN = you_silly = That's what I thought. But I tried, so it counts.
+
+
+% RUNNER
+militaryman = player = runner = Je n'ai pas le temps de m'arrêter pour parler !@Le sergent m'a donné l'ordre de courir.
+militaryman = player = runner = I don't have time to stop and talk!@The sergeant ordered me to run.
+
+
+% RUNNER_HELPED
+player = DOWN = happy = Ok, un de moins à aider.
+player = DOWN = happy = Okay, one less to help.
+
+
+% YOU_DONT_SHOOT
+militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@de passer devant…
+militaryman = player = shooter = I'm afraid to hit the idiot who keeps walking past…
+
+
+% YOU_DONT_SHOOT_NEED_HELP
+player = object = happy_var = Ok, je m'en occupe.
+player = object = happy_var = Okay, I'll take care of it.
+
+
+% YOU_DO_SHOOT_NEED_HELP
+militaryman = player = shooter = Non merci. Tout va bien.
+militaryman = player = shooter = No thanks. Everything's fine.
+
+
+% CLEANER_NEED_HELP
+object = player = happy = Tu peux m'aider à nettoyer les toilettes, ou les@douches ?
+object = player = happy = Can you help me clean the toilets, or the @showers?
+player = object = pain = Beurk. Sans façon…
+player = object = pain = Ugh. No thanks…
+object = player = happy = Je te taquinais. Que dirais-tu d'écouter un vieil@homme parler un peu ? Ça devrait aller, non ?
+object = player = happy = I was just teasing you. How about listening to an old man talk for a bit? That should do it, right?
+player = object = laugh = Ça, c'est dans mes cordes !
+player = object = laugh = That's right up my alley!
+object = player = happy = Faisons-ça. Reviens me voir dans une minute.@J'aurais trouvé un sujet intéressant.
+object = player = happy = Let's do that. Come back and see me in a minute. @I'll have found an interesting topic.
+
+
+% CLEANER_NEED_HELPED
+object = player = happy = J'ai réfléchis. Mon instinct me dit que tu essaies@d'attirer l'attention de Double-Y. Me trompe-je ?
+object = player = happy = I've been thinking. My gut tells me you're trying to @get Double-Y's attention. Am I wrong?
+player = object = laugh = C'est exact. Mais, Pourquoi cette question ?
+player = object = laugh = That's right. But, why the question?
+object = player = happy = J'ai pensé que je pourrais te mettre en garde.@Tu sais qu'il utilise une savonnette entière par jour ?
+object = player = happy = I thought I could give you a heads-up. @You know he uses a whole bar of soap a day?
+object = player = happy = La surface totale couverte par ses muscles@doit faire au moins la taille de ce camp !
+object = player = happy = The total surface area covered by his muscles must be at least the size of this camp!
+player = object = no_sens = Heu… Ok… Pourquoi cette information ?
+player = object = no_sens = Uh… Okay… Why this information?
+object = player = happy = Parce qu'il nous voit d'ici. Je suis sûr qu'il est@en train de t'évaluer en ce moment même.
+object = player = happy = Because he can see us from here. I'm sure he's evaluating you right now.
+player = object = no_sens = Il… m'évalue ? Genre, il est en train de me noter ?
+player = object = no_sens = He… is evaluating me? Like, he's rating me?
+object = player = happy = Oui et non… Je pense qu'il cherche tes@points faibles. Au cas où il doive t'affronter.
+object = player = happy = Yes and no… I think he's looking for your weaknesses. In case he has to fight you.
+player = object = no_sens_var = Pardon ?
+player = object = no_sens_var = Excuse me?
+object = player = happy = Ça n'est qu'une éventualité. Dans tous les cas,@il ne va pas t'agresser. Au mieux, il te défiera.
+object = player = happy = That's just a possibility. In any case, he's not going to attack you. At best, he'll challenge you.
+player = object = no_sens = (… Je n'arrive pas à savoir s'il est sérieux ou non.)
+player = object = no_sens = (… I can't tell if he's serious or not.)
+player = object = happy = (Mais bon. J'ai fait sa volonté. Je peux passer à@quelqu'un d'autre.)
+player = object = happy = (Oh well. I did what he wanted. I can move on to someone else.)
+
+
+% CLEANER_WATCHA_DOING
+object = player = happy = Je nettoie les toilettes et les douches.@Tu veux m'aider ?
+object = player = happy = I'm cleaning the toilets and showers. @Want to help?
+player = object = pain = Beurk. Sans façon…
+player = object = pain = Ugh. No thanks…
+player = object = unhappy_var = Sinon… Que peux-tu m'apprendre sur Double Y ?
+player = object = unhappy_var = So… What can you tell me about Double Y?
+object = player = happy = Il utilise une savonnette entière par jour !
+object = player = happy = He uses a whole bar of soap a day!
+object = player = happy =  La surface totale couverte par ses muscles@doit faire au moins la taille de ce camp !
+object = player = happy = The total surface area covered by his muscles @must be at least the size of this camp!
+player = object = worry = Et… Rien de plus utile ?@Comme… Comment le contacter ?
+player = object = worry = And… Nothing more useful? @Like… How do I contact him?
+object = player = happy = Il n'est pas prévu qu'il descende de@sa tour aujourd'hui.
+object = player = happy = He's not scheduled to come down from @his tower today.
+object = player = happy = Mais il nous voit d'ici. Je suis sûr qu'il est@en train de t'évaluer en ce moment même.
+object = player = happy = But he can see us from here. I'm sure he's @evaluating you right now.
+player = object = no_sens = Il… m'évalue ? Genre, il est en train de me noter ?
+player = object = no_sens = He… evaluates me? Like, he's grading me?
+object = player = happy = Oui et non… Je pense qu'il cherche tes@points faibles. Au cas où il doive t'affronter.
+object = player = happy = Yes and no… I think he's looking for your weaknesses. In case he has to fight you.
+player = object = no_sens_var = Pardon ?
+object = player = happy = Excuse me?
+object = player = happy = Ça n'est qu'une éventualité. Dans tous les cas,@il ne va pas t'agresser. Au mieux, il te défiera.
+object = player = happy = That's just a possibility. In any case, he's not going to attack you. At best, he'll challenge you.
+player = object = no_sens = (… Je n'arrive pas à savoir s'il est sérieux ou non.)
+player = object = no_sens = (… I can't tell if he's serious or not.)
+
+
+% CLEANER_YY
+player = object = unhappy_var = Tu étais sérieux ? Il veut se battre contre moi ?
+player = object = unhappy_var = Were you serious? He wants to fight me?
+object = player = happy = Qui sait ce qu'il a en tête ?@Il a toujours une longueur d'avance sur nous tous.
+object = player = happy = Who knows what he's thinking? He's always one step ahead of all of us.
+object = player = happy = Ce qui est sûr, c'est qu'il aime les défis.
+object = player = happy = What's certain is that he likes challenges.
+object = player = happy = Tu as l'air intelligente, peut-être qu'il voudra@seulement t'affronter aux échecs ?
+object = player = happy = You seem intelligent, maybe he'll just want to challenge you to a game of chess?
+player = object = no_sens_var = Pardon ?
+player = object = no_sens_var = Pardon?
+object = player = happy = Les échecs ! Ce jeu de plateau avec des pions.@Tu ne connais pas ?
+object = player = happy = Chess! That board game with pieces. @You don't know it?
+player = object = angry = Tu m'énerves. Bien sûr que je connais. Je n'arrive@juste pas à savoir si tu te moques de moi.
+player = object = angry = You're annoying me. Of course I know it. I just can't tell if you're making fun of me.
+object = player = happy = Qui sait… La suite te le dira.
+object = player = happy = Who knows… Time will tell.
+
+
+% CLEANER_YY_BAD
+player = object = angry_var2 = (Il m'agace ! Je ne lui parlerai que si nécessaire.)
+player = object = angry_var2 = (He's annoying me! I'll only talk to him if necessary.)
+
+
+% CLEANER_YY_GOOD
+player = object = no_sens_var = (Il est trop bizarre ce type… Je préfère ne lui@parler que si nécessaire.)
+yer = object = no_sens_var = (That guy's too weird… I prefer to only talk to him if necessary.)
+
+
+% CLEANER_DO_YOU_HAVE_KEY
+object = player = happy = Je ne sais pas… Les autres bougres perdent@toujours un tas de trucs.
+object = player = happy = I don't know… The other guys always lose a ton of stuff.
+object = player = happy = Et à chaque fois, je fais la même chose : je mets@tout aux ordures. Ils n'ont qu'à faire attention.
+object = player = happy = And every time, I do the same thing: I throw everything in the trash. They just have to be careful.
+player = object = wrong_with_you = Tu es en train de me dire que je vais devoir@fouiller les poubelles ?
+player = object = wrong_with_you = Are you telling me I'm going to have to rummage through the trash?
+object = player = happy = Il semblerait.
+object = player = happy = It would seem so.
+player = object = angry_var2 = Ça commence à bien faire ! Pointer une arme@sur le garde aurait été plus facile !
+player = object = angry_var2 = That's enough! Pointing a gun at the guard would have been easier!

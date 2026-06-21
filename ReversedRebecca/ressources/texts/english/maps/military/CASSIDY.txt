@@ -1,0 +1,126 @@
+% HELLO_NEED_HELP
+object = player = happy_var = Tout va bien pour moi, merci.
+object = player = happy_var = I'm doing great, thanks.
+
+
+% HELLO_PRANKED
+object = player = surprised = Oh mais !
+object = player = surprised = Oh, hey!
+object = player = happy_var = Hey ! On s'est vu au commissariat ce matin.@Tu rentrais sans cesse dans mon bureau.
+object = player = happy_var = Hey! We saw each other at the station this morning.@You kept walking into my office.
+
+
+% HELLO_MET
+object = player = surprised = Oh mais !
+object = player = surprised = Oh, hey!
+object = player = happy_var = Hey ! On s'est vu au commissariat ce matin.@Tu es rentrée dans mon bureau.
+object = player = happy_var = Hey! We saw each other at the station this morning.@You walked into my office.
+
+
+% HELLO_MET_NEXT
+player = object = excited = Exact ! Vous êtes donc policière ET militaire ?
+player = object = excited = Right! So you're a police officer AND in the military?
+object = player = happy_var = Oui ! J'ai une double formation, exactement@comme ma soeur. 
+object = player = happy_var = Yes! I have dual training, just@like my sister.
+object = player = happy = Moi, c'est Cassidy au fait, et ma soeur, Jessy.@Elle doit être au stand de tir en ce moment.
+object = player = happy = I'm Cassidy, by the way, and my sister is Jessy.@She's probably at the shooting range right now.
+object = player = happy_var = Mais j'en oublie l'essentiel !@Qu'est-ce qui t'amène dans notre camp ?
+object = player = happy_var = But I'm forgetting the main thing!@What brings you to our camp?
+
+
+% HELLO
+object = player = happy = Il ne me semble pas…@Enchantée. Moi, c'est Cassidy.
+object = player = happy = I don't think so...@Nice to meet you. I'm Cassidy.
+player = object = happy_var = Rebecca !
+player = object = happy_var = Rebecca!
+object = player = happy = Qu'est-ce qui t'amène dans notre camp, Rebecca ?
+object = player = happy = What brings you to our camp, Rebecca?
+
+
+% HELLO_NEXT
+player = object = convinced = Je dois rencontrer Double Y !
+player = object = convinced = I need to meet Double Y!
+object = player = happy_var = Bien sûr ! Qui ne veut pas le rencontrer !@Nous même, on ne le voit pas souvent…
+object = player = happy_var = Of course! Who wouldn't want to meet him!@Even we don't see him very often...
+player = object = worry = C'est tout un périple, en effet… Mais, j'y travaille.
+player = object = worry = It's quite a journey, indeed... But I'm working on it.
+object = player = happy_var = Alors, bonne chance dans ta quête, mademoiselle !
+object = player = happy_var = Well, good luck with your quest, miss!
+object = player = happy = Si tu as besoin d'aide, je ne pense pas t'être utile.@Mais je vais t'envoyer plein d'ondes positives.
+object = player = happy = If you need help, I don't think I'd be much use.@But I'll send you lots of positive vibes.
+player = object = happy_var = Merci !
+player = object = happy_var = Thanks!
+
+
+% HELLO_BAD
+player = DOWN = sad = (La belle affaire… Ça ou rien, c'est pareil…)
+player = DOWN = sad = (Big deal… It’s all the same—that or nothing…)
+
+
+% WE_REALLY_DONT_KNOW_EACH_OTHER
+object = player = happy = Je suis aussi policière.@On s'est peut-être croisée ailleurs ?
+object = player = happy = I'm a police officer too.@Maybe we've crossed paths somewhere else?
+player = object = no_sens_var = (Je ne devrais peut-être pas lui dire que je viens@de voler les documents d'un commissariat…)
+player = object = no_sens_var = (Maybe I shouldn't tell her I just@stole documents from a police station...)
+player = object = fake_smile = Heu… Incroyable !@Tu es donc policière ET militaire ?
+player = object = fake_smile = Huh... Amazing!@So you're a police officer AND in the military?
+object = player = happy = Comme ma soeur Jessy, oui.@Elle doit être au stand de tir en ce moment.
+object = player = happy = Like my sister Jessy, yeah.@She's probably at the shooting range right now.
+player = object = fake_smile = C'est noté.
+player = object = fake_smile = Got it.
+
+
+% JESSY
+object = player = happy = Qu'est-ce que tu veux savoir sur elle ?
+object = player = happy = What do you want to know about her?
+
+
+% JESSY_AGAIN
+object = player = happy = Tu voulais dire autre chose à propos d'elle ?
+object = player = happy = Was there something else you wanted to say about her?
+
+
+% JESSY_REPEAT
+object = player = happy_var = Tu te répètes.
+object = player = happy_var = You're repeating yourself.
+object = player = happy = Je reste disponible s'il te faut autre chose.
+object = player = happy = I'm here if you need anything else.
+
+
+% JESSY_SHES_MEAN
+object = player = happy_var = Elle a son caractère, il est vrai.
+object = player = happy_var = She's got a bit of a temper, it's true.
+object = player = happy = Mais si tu ne la supportes vraiment pas,@rien ne t'oblige à lui parler.
+object = player = happy = But if you really can't stand her,@you don't have to talk to her.
+
+
+% JESSY_NOTHING_SPECIAL
+object = player = happy = Oh ! Ok.
+object = player = happy = Oh! Okay.
+
+
+% JESSY_I_M_INTO_HER
+object = player = surprised = Vraiment ?
+object = player = surprised = Really?
+object = player = happy_var = Maintenant que j'y pense, tu es plutôt son genre.@Tu pourrais avoir tes chances avec elle.
+object = player = happy_var = Now that I think about it, you're pretty much her type.@You might stand a chance with her.
+object = player = happy = Par contre, tu dois savoir qu'elles sortent déjà@ensemble avec Nancy.
+object = player = happy = Though, you should know she's already@dating Nancy.
+object = player = happy_var = Elles sont plutôt ouvertes de ce côté-là, alors@ça peut marcher. Tu devrais voir ça avec elles.
+object = player = happy_var = They're pretty open-minded about that sort of thing, so@it might work out. You should talk to them about it.
+object = player = happy = Tu trouveras Nancy à l'infirmerie.
+object = player = happy = You can find Nancy in the infirmary.
+
+
+% JESSY_TIPS
+object = player = happy = Ma soeur a un caractère contradictoire :@si tu es trop gentille, tu vas l'ennuyer.
+object = player = happy = My sister has a contradictory nature: if you're too nice, you'll bore her.
+object = player = happy_var = Mais si tu te rebelles un peu trop, tu vas l'énerver@pour de bon, et elle ne voudra plus te voir.
+object = player = happy_var = But if you rebel a bit too much, you'll really tick her off, and she won't want to see you anymore.
+object = player = happy = En dosant juste ce qu'il faut d'impertinence@et de soumission, tu la feras craquer à coup sûr.
+object = player = happy = By striking just the right balance between sass and submission, you're sure to win her over.
+
+
+% NANCY_TIPS
+object = player = happy_var = Elle est tout simplement adorable. Sois gentille,@patiente, sincère et à l'écoute, et tu lui plairas.
+object = player = happy_var = She is simply adorable. Be kind, patient, sincere, and a good listener, and she'll like you.

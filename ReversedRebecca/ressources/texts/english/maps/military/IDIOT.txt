@@ -1,0 +1,58 @@
+% WHAT_ARE_YOU_DOING
+object = player = idiot = J'essaie d'impressionner une fille.@Je suis sûr que Jessy va finir par me remarquer.
+object = player = idiot = I'm trying to impress a girl.@I'm sure Jessy will eventually notice me.
+
+
+% THATS_DANGEROUS
+object = player = idiot = C'est justement pour ça que je le fais.@Tu as cru que j'étais bête, ou quoi ?
+object = player = idiot = That's exactly why I'm doing it.@You think I'm stupid, or what?
+object = player = idiot = Comment tu veux que je l'impressionne sinon ?
+object = player = idiot = How else am I supposed to impress her?
+
+
+% STOP_MOVING
+object = player = idiot = Peux pas ! Il faut que j'impressionne Jessy.
+object = player = idiot = Can't! I have to impress Jessy.
+
+
+% STOP_MOVING_NEXT_BAD
+player = DOWN = angry_var2 = J'en ai marre de le courir après !@Je ne veux plus lui parler.
+player = DOWN = angry_var2 = I'm tired of chasing after him!@I don't want to talk to him anymore.
+
+
+% DO_YOU_HAVE_KEY_BAD_VAR
+player = DOWN = wrong_with_you = Sauf que je ne veux plus lui parler.@Il doit y avoir un autre moyen de l'obtenir de lui…
+player = DOWN = wrong_with_you = Except I don't want to talk to him anymore.@There must be another way to get it from him…
+
+
+% DO_YOU_HAVE_KEY_BAD
+player = DOWN = angry_var2 = Non. Je ne veux plus lui parler. Il doit y avoir@un autre moyen.
+player = DOWN = angry_var2 = No. I don't want to talk to him anymore. There must be another way.
+
+
+% DO_YOU_HAVE_KEY
+object = player = idiot = Navré. Je l'ai perdu.
+object = player = idiot = Sorry. I lost it.
+player = object = wrong_with_you = Tu l'as quoi ? Mais quel irresponsable !@Tu veux que je le dises à ton sergent ?
+player = object = wrong_with_you = What's wrong with you? You irresponsible jerk! Do you want me to tell your sergeant?
+object = player = idiot = Non… Il va le dire à Jessy…
+object = player = idiot = No… He'll tell Jessy…
+object = player = idiot = Tout ce que je sais que je l'avais ce matin.@Je suis venue directement ici, après ma douche.
+object = player = idiot = All I know is I had it this morning. I came straight here after my shower.
+object = player = idiot = S'il te plaît, ne dit rien à ma Jessy…
+object = player = idiot = Please don't tell my Jessy...
+player = object = unhappy_var = (les douches, hein ?)
+player = object = unhappy_var = (the showers, huh?)
+
+
+% NEED_HELP
+object = player = idiot = J'essaie d'impressionner Jessy, mais je n'ai@pas l'impression qu'elle me remarque.
+object = player = idiot = I'm trying to impress Jessy, but I don't feel like she's even noticing me.
+object = player = idiot = Tu peux demander au savant fou de me fabriquer@une pilule magique, qui rend plus rapide ?
+object = player = idiot = Can you ask the mad scientist to make me a magic pill that makes me faster?
+player = object = happy = Et tu n'y vas pas toi même, parce que… ?
+player = object = happy = And you're not going yourself, because...?
+object = player = idiot = Parce qu'il parle bizarrement…@Je ne comprends rien quand il ouvre la bouche.
+object = player = idiot = Because he talks weirdly... I can't understand a word he says.
+player = object = you_silly = L'habit fait le moine, on dirait.
+player = object = you_silly = Clothes make the man, it seems.

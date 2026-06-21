@@ -1,0 +1,62 @@
+% CACTUS
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = sad = Je n'aime pas les cacti… Il me faudrait un autre@type de plante pour réfléchir.
+player = object = sad = I don't like cacti… I need a different@type of plant to think.
+player = object = you_silly = Non, je t'assure qu'au pluriel, on dit cacti.@C'est toi qui te trompes.
+player = object = you_silly = No, I assure you the plural is "cacti."@You're the one who's wrong.
+
+
+% HEAL
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = no_sens_var = Une seconde… J'ai mal, en fait !
+player = object = no_sens_var = Hold on a second… I'm actually hurt!
+player = object = worry = Un petit tour à l'infirmerie devrait arranger ça.
+player = object = worry = A quick trip to the infirmary should fix that
+
+
+% KEY_IN_POSSESSION
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = determined = J'ai la clé pour accéder à la tour de Double-Y.@Rendons-lui une petite visite.
+player = object = determined = I have the key to Double-Y's tower.@Let's go pay him a visit..
+
+
+% KEY_IN_TRASH
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = angry_var2 = Le concierge a jeté ma clé aux ordures !@C'est dégoutant !
+player = object = angry_var2 = The janitor threw my key in the trash!@That's disgusting!
+
+
+% KEY_IN_SHOWER
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = convinced = Si j'ai bien suivi, je devrais trouver ma clé au@niveau des douches.
+player = object = convinced = If I've got this right, I should find my key@by the showers.
+
+
+% KEY_ON_IDIOT
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = convinced = C'est le militaire qui court sur le stand de tir,@qui a la clé que je cherche.
+player = object = convinced = It's the soldier running at the shooting range@who has the key I'm looking for
+
+
+% ENIGMA
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = unhappy = L'énigme du scientifique était bizarre…
+player = object = unhappy = The scientist's riddle was weird…
+player = object = unhappy_var = Je crois comprendre que je dois fouiller dans@les chambres ?
+player = object = unhappy_var = I gather I need to search the@dorm rooms?
+
+
+% NO_ARMORY
+player = object = asleep = Voyons voir…
+player = object = asleep = Let's see…
+player = object = angry_var2 = Ce fichu garde ne veut pas me laisser passer !
+player = object = angry_var2 = That damned guard won't let me through!
+player = object = wrong_with_you = Peut-être en le menaçant avec une arme ? D'une@façon ou d'une autre, je dois pénétrer l'armurerie.
+player = object = wrong_with_you = Maybe if I threaten him with a weapon? One way@or another, I have to get into the armory.

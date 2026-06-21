@@ -1,0 +1,96 @@
+% BOMBING_DOOR_ALREADY_KNOWN
+player = DOWN = laugh = Effectivement, je sais déjà faire ça.
+player = DOWN = laugh = Yeah, I already know how to do that.
+
+
+% ONION_NOT_FOUND_UP
+player = object = surprised = Ho nion ! C'est vide !
+player = object = surprised = Oh nion! It's empty!
+
+
+% ONION_NOT_FOUND_LEFT
+player = object = unhappy = Rien. J'aurais dû suivre l'odeur plutôt que@mon instinct.
+player = object = unhappy = Nothing. I should have followed the smell instead of my instinct.
+
+
+% ONION_NOT_FOUND_RIGHT
+player = object = unhappy_var = Pas d'oignon ici. Ils ont dû entendre que j'arrivais.
+player = object = unhappy_var = No onions here. They must have heard I was coming.
+
+
+% ONION_FOUND
+player = object = laugh = Top ! Trouvé !
+player = object = laugh = Great! Found it!
+player = object = you_silly = Du premier coup, bien sûr… Tout le monde@est témoin…
+player = object = you_silly = First try, of course… Everyone's a witness…
+
+
+% ONION_FOUND_FIRST_TRY
+player = object = laugh = Top ! Trouvé ! Et du premier coup en plus !
+player = object = laugh = Great! Found it! And first try too!
+
+
+% COLD_ROOM
+player = DOWN = pain = Il fait froid, ici !
+player = DOWN = pain = It's cold in here!
+
+
+% CURTAIN
+player = DOWN = no_sens = Comment il a fait pour verrouiller son rideau ?
+player = DOWN = no_sens = How did he lock his curtain?
+
+
+% CHEST
+player = object = no_sens = Ce coffre… est vide ?
+player = object = no_sens = This chest... is empty?
+player = object = no_sens = Tiens ? Il y a un mot au fond : je m'entraîne a@esquiver les balles au terrain d'entrainement.
+player = object = no_sens = Hey? There's a note at the bottom: I'm practicing dodging bullets at the training range.
+
+
+% SHOTGUN_GOOD
+player = DOWN = happy_var = Ça ira, je n'ai pas besoin de ça.
+player = DOWN = happy_var = That's fine, I don't need that.
+player = DOWN = you_silly = (Si j'avais voulu faire le mal, j'aurais commencé@bien plus tôt.)
+player = DOWN = you_silly = (If I'd wanted to do bad things, I would have started much sooner.)
+
+
+% SHOTGUN_BAD
+player = DOWN = angry_var2 = Zut ! Ça n'est qu'une affiche de fusil !
+player = DOWN = angry_var2 = Damn! It's just a gun poster!
+
+
+% HELPED_ENOUGH_PEOPLE
+player = DOWN = laugh = Ça y est ! J'ai aidé suffisamment de monde. Je n'ai@plus qu'à demander au garde de me laisse passer.
+player = DOWN = laugh = That's it! I've helped enough people. Now I just have to ask the guard to let me through.
+
+
+% PICK_UP_DIRTY_SOCK_EXPECTED
+player = object = pain = Beurk !
+player = object = pain = Yuck!
+
+
+% PICK_UP_DIRTY_SOCK
+player = DOWN = pain = Beurk ! Pas sans une bonne raison !
+player = DOWN = pain = Yuck! Not without a good reason!
+
+
+% PICK_UP_DIRTY_SOCK_NEXT
+player = DOWN = angry_var2 = Ramasse-les toi-même !
+player = DOWN = angry_var2 = Pick them up yourself!
+
+
+% PICK_UP_DIRTY_SOCK_NEXT_NEXT
+player = object = asleep = Bon… Puisque tu insistes…
+player = object = asleep = Fine… Since you insist…
+
+
+% IDIOT_KILLED_BY_PILLS
+player = DOWN = no_sens = Ok…
+player = DOWN = no_sens = Okay…
+player = DOWN = laugh = Je vais arranger ça.
+player = DOWN = laugh = I'll take care of it.
+
+
+% IDIOT_KILLED_BY_PILLS_NEXT
+player = DOWN = laugh = Voilà ! Problème réglé !
+player = DOWN = laugh = There! Problem solved!

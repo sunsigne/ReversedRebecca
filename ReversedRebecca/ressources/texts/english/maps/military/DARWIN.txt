@@ -1,0 +1,92 @@
+% NANCY
+nancy = DOWN = cry_side = Oh ! Tu es là…@Je suis désolé que tu me voies comme ça…
+nancy = DOWN = cry_side = Oh! You're here... @I'm sorry you have to see me like this...
+nancy = DOWN = cry_closed = J'aimerais que tu me laisses seule, s'il te plaît…
+nancy = DOWN = cry_closed = I'd like to be left alone, please...
+
+
+% NANCY_CRYING
+nancy = DOWN = cry_closed = Pardon… C'est juste que… Darwin est décédé.@La nouvelle a du mal à passer…
+nancy = DOWN = cry_closed = Sorry... It's just that... Darwin passed away. @It's hard to come to terms with the news...
+nancy = DOWN = cry_side = On ne se connaissait pas plus que ça, pourtant…
+nancy = DOWN = cry_side = We didn't know each other that well, though...
+nancy = DOWN = cry_closed = Je suis médecin parce que, je veux aider les gens@qui en ont besoin.
+nancy = DOWN = cry_closed = I became a doctor because I want to help people @who need it.
+nancy = DOWN = cry = Mais la mort, c'est définitif… Je ne peux pas l'aider.
+nancy = DOWN = cry = But death is final... I can't help him.
+nancy = DOWN = cry_smile = Merci d'être venue me voir.@Tu peux me laisser, ça va aller. Vraiment.
+nancy = DOWN = cry_smile = Thanks for coming to see me. @You can leave me now; I'll be okay. Really.
+nancy = DOWN = cry_smile_var = Peut-être à un de ces jours, Rebecca.@Dans une autre vie.
+nancy = DOWN = cry_smile_var = Maybe see you someday, Rebecca. @In another life.
+
+
+% WHAT_DID_I_DO
+militaryman = RIGHT = shooter_shocked = Ho mon Dieu ! Qu'est-ce que j'ai fait !
+militaryman = RIGHT = shooter_shocked = Oh my God! What have I done!
+
+
+% SHOOTER
+militaryman = RIGHT = shooter_cry = Relève-toi mon pote…@On en a vu d'autres, pas vrai ?
+militaryman = RIGHT = shooter_cry = Get back up, buddy... @We've been through worse, right?
+
+
+% SHOOTER_NEXT
+militaryman = RIGHT = shooter_cry = Bou hou hou !
+militaryman = RIGHT = shooter_cry = Boo-hoo-hoo!
+
+
+% RUNNER
+militaryman = player = runner_cry = Je n'ai pas reçu l'ordre du sergent d'arrêter@de courir !
+militaryman = player = runner_cry = I never got the order from the sergeant to stop @running!
+
+
+% JESSY
+jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
+jessy_military = DOWN = deep = Awesome! Something fun is finally happening.
+jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
+jessy_military = DOWN = deep_provocative = Besides, this way, he'll finally get some sense @knocked into his head...
+
+
+% JESSY_NEXT
+jessy_military = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
+jessy_military = DOWN = deep = Don't bother me.@I'm having a blast right now.
+
+
+% JESSY_BOMBS
+jessy_military = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
+jessy_military = player = doubt = Huh? Oh, forget it. I found something@much more interesting than playing with you.
+
+
+% SERGENT
+militaryman = UP = sergent_yelling = C'est une faute inqualifiable, soldat ! Vous serez@traduit en cour martiale ! Le trou vous attend !
+militaryman = UP = sergent_yelling = That is an inexcusable offense, soldier! You will be@court-martialed! The brig awaits you!
+
+
+% SERGENT_NEXT
+militaryman = UP = sergent_yelling = Tirer sur un allié ? Vous avez de la chance si vous@n'allez qu'en prison ! Je vous aurai fait exécuter !
+militaryman = UP = sergent_yelling = Shooting an ally? You'll be lucky if you@only go to prison! I'd have you executed!
+
+
+% SERGENT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Déshonneur sur toi ! Déshonneur sur ta famille !@Déshonneur sur ta vache !
+militaryman = UP = sergent_yelling = Dishonor on you! Dishonor on your family!@Dishonor on your cow!
+
+
+% SERGENT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Même les raclures de chiottes sont plus utiles que@vous ! On peut les jeter pour faire de l'engrais !
+militaryman = UP = sergent_yelling = Even toilet scum is more useful than@you! At least that can be used for fertilizer!
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Vous êtes une catastrophe ambulante ! Un danger@public ! Même votre ombre a peur de vous !
+militaryman = UP = sergent_yelling = You're a walking disaster! A public@menace! Even your shadow is afraid of you!
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = Si la discipline était une balle, vous l’auriez déjà@tirée dans votre pied ! Vous puez !
+militaryman = UP = sergent_yelling = If discipline were a bullet, you'd have already@shot yourself in the foot! You stink!
+
+
+% SERGENT_NEXT_NEXT_NEXT_NEXT_NEXT_NEXT
+militaryman = UP = sergent_yelling = On devrait vous exposer comme exemple :@"Voilà ce qu’il ne faut jamais devenir !"
+militaryman = UP = sergent_yelling = We ought to put you on display as an example:@ "This is what you should never become!"
