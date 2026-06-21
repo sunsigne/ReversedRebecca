@@ -23,16 +23,16 @@ OBJ-02 = Plant Slightly Downer
 OBJ-03 = Trashes
 OBJ-04 = Big Trash
 OBJ-05 = Up Left Shower
-OBJ-15 = Up Right Shower
+OBJ-06 = Up Right Shower
 OBJ-07 = Down Left Shower
 OBJ-08 = Down Right Shower
 OBJ-09 = Socks
-OBJ-80 = Cactus
+OBJ-10 = Cactus
 OBJ-11 = Path Finding Helper (Artificial Wall)
 OBJ-12 = Help Counter
-OBJ-46 = Outside Walls
+OBJ-13 = Outside Walls
 OBJ-14 = Arena Set-up
-OBJ-31 = Arena OOB Preventer
+OBJ-15 = Arena OOB Preventer
 
 ///// CENTER /////
 
@@ -40,28 +40,28 @@ NPC-04 = Guard
 OBJ-16 = Guard Checker
 OBJ-17 = YY Door
 OBJ-18 = Stairs Ground to First Floor
-OBJ-22 = Stairs First Floor to Ground
+OBJ-19 = Stairs First Floor to Ground
 OBJ-20 = Stairs First Floor to Second Floor
 OBJ-21 = Stairs Second Floor to First Floor
-OBJ-25 = Stairs Second Floor to Third Floor
+OBJ-22 = Stairs Second Floor to Third Floor
 OBJ-23 = Stairs Third Floor to Second Floor
 OBJ-24 = Shovel Box
-OBJ-28 = YY
+OBJ-25 = YY
 OBJ-26 = Gravity falls
 
 ///// ROOMS /////
 
 NPC-05 = Slacker
 OBJ-27 = Shotgun
-OBJ-13 = Quest Chest
+OBJ-28 = Quest Chest
 OBJ-29 = Opened Curtains
 OBJ-30 = Closed Curtains
-OBJ-37 = Cyan Curtain
+OBJ-31 = Cyan Curtain
 
 ///// INFIRMARY /////
 
 NPC-06 = Nancy
-OBJ-39 = Bomb Path Helper
+OBJ-32 = Bomb Path Helper
 
 ///// ARMORY /////
 
@@ -80,18 +80,18 @@ NPC-14 = Julomeo
 OBJ-34 = Julomeo Detector
 OBJ-35 = Bomb Box
 OBJ-36 = Training Course
-OBJ-06 = Target
+OBJ-37 = Target
 OBJ-38 = Target shooter
 
 ///// REFECTORY /////
 
 NPC-15 = Cassidy
 NPC-16 = Amiranda
-OBJ-10 = Amiranda Detector
+OBJ-39 = Amiranda Detector
 OBJ-40 = Amiranda Second Detector
 OBJ-41 = Table Left
 OBJ-42 = Table Right
 OBJ-43 = Stock Furniture
 OBJ-44 = Cold Room Door
 OBJ-45 = Cold Room Scanner
-OBJ-32 = /hidden
+OBJ-46 = /hidden
