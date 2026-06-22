@@ -41,7 +41,7 @@
 	
 	lors d'un gender swap, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting inclus)
+		- adaptation piranha (affecting, facing, choice, see)
 		- voix
 		- fichier .gpf
 		- actions & dialogues (facing inclus)
@@ -52,7 +52,7 @@
 	
 	jessy lvl003 :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting inclus)
+		- adaptation piranha (affecting, facing, choice, see)
 		- voix
 		- fichier .gpf
 		- fichier visuel, évidemment
@@ -60,13 +60,9 @@
 		- tester
 		
 	roméo =
-		- dialogues (facing inclus)
+		- dialogues
 		- voix
 		- tester
-	
-	nancy :
-		- player swap
-		- tester		
 
 	à faire :
 		lvl002:
@@ -74,9 +70,16 @@
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
 		- counter & karma
-		- miika - manque les counter et karma
+		- miaka - manque les counter et karma
 		- marichel = Michel = Marie
 		- alexia -> Alexis = Alicia (attention ! on en parle dans le lvl003-y)
+	
+	faits :
+		- mika
+		- amir
+		- romeo
+		- dupont
+		- nancy
 	
 	////////// MILITARY ////////////
  	
@@ -281,7 +284,7 @@
 
 	lors d'un changement, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting inclus)
+		- adaptation piranha (affecting, facing, choice, see, tp & move)
 		- voix
 		- fichier .gpf
 		- actions & dialogues (facing inclus)

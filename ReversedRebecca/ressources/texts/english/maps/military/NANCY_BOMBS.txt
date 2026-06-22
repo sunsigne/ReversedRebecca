@@ -20,88 +20,88 @@ player = object = happy_var = I'll follow you.
 
 
 % WHAT_DO_YOU_THINK_OF
-nolancy = rebecca = happy = Alors ? Comment tu trouves Jessy pour l'instant ?
-nolancy = rebecca = happy = So? What do you think of Jessy so far?
+nolancy_nancy = rebecca = happy = Alors ? Comment tu trouves Jessy pour l'instant ?
+nolancy_nancy = rebecca = happy = So? What do you think of Jessy so far?
 
 
 % JESSY_IS_AMUSING
-nolancy = rebecca = playful = N'est-ce pas ? Elle est trop mignonne quand@elle fait sa princesse.
-nolancy = rebecca = playful = Isn't she? She's so cute when she's playing princess.
+nolancy_nancy = rebecca = playful = N'est-ce pas ? Elle est trop mignonne quand@elle fait sa princesse.
+nolancy_nancy = rebecca = playful = Isn't she? She's so cute when she's playing princess.
 
 
 % JESSY_IS_ANNOYING
-nolancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@toutes les deux à faire ce qu'elle demande…
-nolancy = rebecca = playful = I see what you mean. Yet here we are, both of us doing what she asks…
+nolancy_nancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@toutes les deux à faire ce qu'elle demande…
+nolancy_nancy = rebecca = playful = I see what you mean. Yet here we are, both of us doing what she asks…
 
 
 % JESSY_IS_SOMETHING_NEXT
-nolancy = rebecca = excited = Elle a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir d'elle.
-nolancy = rebecca = excited = She has this strange power that makes you want to be liked by her.
-nolancy = rebecca = playful = Bon, c'est vrai que des fois,@elle est un peu égoïste…
-nolancy = rebecca = playful = Well, it's true that sometimes she's a little selfish…
+nolancy_nancy = rebecca = excited = Elle a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir d'elle.
+nolancy_nancy = rebecca = excited = She has this strange power that makes you want to be liked by her.
+nolancy_nancy = rebecca = playful = Bon, c'est vrai que des fois,@elle est un peu égoïste…
+nolancy_nancy = rebecca = playful = Well, it's true that sometimes she's a little selfish…
 
 
 % JESSY_IS_SOMETHING_NEXT_NEXT
-nolancy = rebecca = sad_side = Voire, méchante…
-nolancy = rebecca = sad_side = Even, mean…
+nolancy_nancy = rebecca = sad_side = Voire, méchante…
+nolancy_nancy = rebecca = sad_side = Even, mean…
 
 
 % JESSY_IS_SOMETHING_NEXT_NEXT_NEXT
-nolancy = rebecca = happy = Mais on ne s'ennuie jamais avec elle.
-nolancy = rebecca = happy = But you're never bored with her.
+nolancy_nancy = rebecca = happy = Mais on ne s'ennuie jamais avec elle.
+nolancy_nancy = rebecca = happy = But you're never bored with her.
 
 
 % CENTER
-nolancy = rebecca = happy = Au fait, tu ne t'es pas présentée.@C'est quoi ton nom ?
-nolancy = rebecca = happy = By the way, you haven't introduced yourself. What's your name?
-object = nolancy = happy_var = Rebecca.
-object = nolancy = happy_var = Rebecca.
-nolancy = rebecca = blush_side = Ok, je note. C'est logique qu'une aussi jolie fille@ait un aussi joli prénom.
-nolancy = rebecca = blush_side = Okay, noted. It makes sense that such a pretty girl would have such a pretty name.
+nolancy_nancy = rebecca = happy = Au fait, tu ne t'es pas présentée.@C'est quoi ton nom ?
+nolancy_nancy = rebecca = happy = By the way, you haven't introduced yourself. What's your name?
+object = nolancy_nancy = happy_var = Rebecca.
+object = nolancy_nancy = happy_var = Rebecca.
+nolancy_nancy = rebecca = blush_side = Ok, je note. C'est logique qu'une aussi jolie fille@ait un aussi joli prénom.
+nolancy_nancy = rebecca = blush_side = Okay, noted. It makes sense that such a pretty girl would have such a pretty name.
 
 
 % HERE_WE_ARE
-nolancy = rebecca = happy = Nous y sommes. Voilà les bombes pour Jessy.
-nolancy = rebecca = happy = Here we are. Here are the bombs for Jessy.
+nolancy_nancy = rebecca = happy = Nous y sommes. Voilà les bombes pour Jessy.
+nolancy_nancy = rebecca = happy = Here we are. Here are the bombs for Jessy.
 
 
 % HERE_WE_ARE_YET
-object = nolancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… elle les a refusées.
-object = nolancy = unhappy = They won't do. These are the bombs I had chosen. And… she refused them.
+object = nolancy_nancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… elle les a refusées.
+object = nolancy_nancy = unhappy = They won't do. These are the bombs I had chosen. And… she refused them.
 
 
 % HERE_WE_ARE_YET_VAR
-object = nolancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… elle les a refusées.
-object = nolancy = unhappy = They won't do. These bombs are the same as mine. And… she refused them.
+object = nolancy_nancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… elle les a refusées.
+object = nolancy_nancy = unhappy = They won't do. These bombs are the same as mine. And… she refused them.
 
 
 % HERE_WE_ARE_NEXT
-nolancy = rebecca = happy = À mon avis, elle ne les a même pas regardé.@Les bombes sont une excuse, elle veut être servie.
-nolancy = rebecca = happy = In my opinion, she didn't even look at them. @The bombshells are an excuse, she wants to be waited on.
-object = nolancy = no_sens = Tu veux dire… Comme dans un restaurant ?
-object = nolancy = no_sens = You mean… Like in a restaurant?
-nolancy = rebecca = excited = Non ! Elle cherche notre attention.@Elle veut qu'on se plie en quatre pour elle.
-nolancy = rebecca = excited = No! She's looking for our attention. @She wants us to bend over backwards for her.
-nolancy = rebecca = playful = Elle cherche à se faire désirer, quoi.
-nolancy = rebecca = playful = She's trying to make herself desirable, that's all.
-nolancy = rebecca = blush = Je pense qu'elle t'aime bien. Et…@Je peux comprendre pourquoi.
-nolancy = rebecca = blush = I think she likes you. And… @I can understand why.
+nolancy_nancy = rebecca = happy = À mon avis, elle ne les a même pas regardé.@Les bombes sont une excuse, elle veut être servie.
+nolancy_nancy = rebecca = happy = In my opinion, she didn't even look at them. @The bombshells are an excuse, she wants to be waited on.
+object = nolancy_nancy = no_sens = Tu veux dire… Comme dans un restaurant ?
+object = nolancy_nancy = no_sens = You mean… Like in a restaurant?
+nolancy_nancy = rebecca = excited = Non ! Elle cherche notre attention.@Elle veut qu'on se plie en quatre pour elle.
+nolancy_nancy = rebecca = excited = No! She's looking for our attention. @She wants us to bend over backwards for her.
+nolancy_nancy = rebecca = playful = Elle cherche à se faire désirer, quoi.
+nolancy_nancy = rebecca = playful = She's trying to make herself desirable, that's all.
+nolancy_nancy = rebecca = blush = Je pense qu'elle t'aime bien. Et…@Je peux comprendre pourquoi.
+nolancy_nancy = rebecca = blush = I think she likes you. And… @I can understand why.
 
 
 % HERE_WE_ARE_NEXT_NEXT
-nolancy = rebecca = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.
-nolancy = rebecca = blush_side = Well, if that's what I think, I'll talk to you later.
+nolancy_nancy = rebecca = blush_side = Bon, si c'est ce que je crois, je te dis à plus tard.
+nolancy_nancy = rebecca = blush_side = Well, if that's what I think, I'll talk to you later.
 
 
 % HERE_WE_ARE_NEXT_NEXT_VAR
-nolancy = rebecca = blush_side = Bon, peut-être à plus tard.
-nolancy = rebecca = blush_side = Well, maybe see you later.
+nolancy_nancy = rebecca = blush_side = Bon, peut-être à plus tard.
+nolancy_nancy = rebecca = blush_side = Well, maybe see you later.
 
 
 % POST_LIE
-nolancy = player = sad = Je ne vois pas en quoi cela me concerne.
-nolancy = player = sad = I don't see how this concerns me.
-player = nolancy = unhappy_var = Elle veut que ça soit toi qui les lui donne.
-player = nolancy = unhappy_var = She wants you to give them to her.
-nolancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.
-nolancy = player = sad_side = I have no reason to believe you. @Don't bother me anymore.
+nolancy_nancy = player = sad = Je ne vois pas en quoi cela me concerne.
+nolancy_nancy = player = sad = I don't see how this concerns me.
+player = nolancy_nancy = unhappy_var = Elle veut que ça soit toi qui les lui donne.
+player = nolancy_nancy = unhappy_var = She wants you to give them to her.
+nolancy_nancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.
+nolancy_nancy = player = sad_side = I have no reason to believe you. @Don't bother me anymore.

@@ -39,20 +39,36 @@ public class AffectingCondition extends GlobalInstruction {
 	}
 
 	public GameList<PiranhaObject> getPiranhaByName(String name) {
+		return getPiranhaByName(name, false);
+	}
+
+	public GameList<PiranhaObject> getPiranhaByTextureName(String name) {
+		return getPiranhaByName(name, true);
+	}
+
+	private GameList<PiranhaObject> getPiranhaByName(String name, boolean textureName) {
 		var list = new GameList<PiranhaObject>(LISTTYPE.ARRAY);
 
 		// look for exact match
-		for (PiranhaObject tempObject : getPiranhaList().getList())
-			if (tempObject.getName().equalsIgnoreCase(name))
+		for (PiranhaObject tempObject : getPiranhaList().getList()) {
+			if (textureName) {
+				if (tempObject.getTextureName().equalsIgnoreCase(name))
+					list.addObject(tempObject);
+			} else if (tempObject.getName().equalsIgnoreCase(name))
 				list.addObject(tempObject);
+		}
 
 		if (list.getList().isEmpty() == false)
 			return list;
 
 		// if not found, name close to (only for living)
-		for (PiranhaObject tempObject : getPiranhaList().getList())
-			if (tempObject.getName().contains(name) && tempObject instanceof LivingObject)
+		for (PiranhaObject tempObject : getPiranhaList().getList()) {
+			if (textureName) {
+				if (tempObject.getTextureName().contains(name) && tempObject instanceof LivingObject)
+					list.addObject(tempObject);
+			} else if (tempObject.getName().contains(name) && tempObject instanceof LivingObject)
 				list.addObject(tempObject);
+		}
 
 		return list;
 	}
