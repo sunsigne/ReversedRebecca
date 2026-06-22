@@ -41,20 +41,20 @@ militaryman = player = runner_cry = I never got the order from the sergeant to s
 
 
 % JESSY
-jessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
-jessy_military = DOWN = deep = Awesome! Something fun is finally happening.
-jessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
-jessy_military = DOWN = deep_provocative = Besides, this way, he'll finally get some sense @knocked into his head...
+jamessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
+jamessy_military = DOWN = deep = Awesome! Something fun is finally happening.
+jamessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
+jamessy_military = DOWN = deep_provocative = Besides, this way, he'll finally get some sense @knocked into his head...
 
 
 % JESSY_NEXT
-jessy_military = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
-jessy_military = DOWN = deep = Don't bother me.@I'm having a blast right now.
+jamessy_military = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
+jamessy_military = DOWN = deep = Don't bother me.@I'm having a blast right now.
 
 
 % JESSY_BOMBS
-jessy_military = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
-jessy_military = player = doubt = Huh? Oh, forget it. I found something@much more interesting than playing with you.
+jamessy_military = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
+jamessy_military = player = doubt = Huh? Oh, forget it. I found something@much more interesting than playing with you.
 
 
 % SERGENT

@@ -56,45 +56,45 @@ player = DOWN = laugh = Come on. I'll stop bothering her.@I have a mission to pu
 
 
 % PLAYER_SPOTTED_JESSY_BEHIND_DOOR
-jessy = player = angry_var = I can't believe it! Where do you think you are?!
-player = jessy = laugh = Sorry! I got lost.
-jessy = player = angry_var = You are under arrest.@You have the right to remain silent.
-jessy = player = angry_var = Anything you say can and will be used@against you in court.
-jessy = player = angry_var = You have the right to an attorney. If you@don't have one, one will be assigned to you.
-player = jessy = sad = (I messed up hard…)
+jamessy = player = angry_var = I can't believe it! Where do you think you are?!
+player = jamessy = laugh = Sorry! I got lost.
+jamessy = player = angry_var = You are under arrest.@You have the right to remain silent.
+jamessy = player = angry_var = Anything you say can and will be used@against you in court.
+jamessy = player = angry_var = You have the right to an attorney. If you@don't have one, one will be assigned to you.
+player = jamessy = sad = (I messed up hard…)
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK
-jessy = player = unhappy = What are you doing?
-player = jessy = laugh = Nothing at all.
-jessy = player = unhappy = Then back up, please.
+jamessy = player = unhappy = What are you doing?
+player = jamessy = laugh = Nothing at all.
+jamessy = player = unhappy = Then back up, please.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_NEXT
-jessy = player = angry_var = Ma'am, back up.
-player = jessy = angry = Come on, calm down. I'll back up.
+jamessy = player = angry_var = Ma'am, back up.
+player = jamessy = angry = Come on, calm down. I'll back up.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_FINAL
-jessy = player = angry_var = That's enough. You are under arrest.@You have the right to remain silent.
-jessy = player = angry_var = Anything you say can and will be used@against you in a court of law.
-jessy = player = angry_var = You have the right to a lawyer. If you@don't have one, one will be assigned to you.
-player = jessy = sad = (I messed up hard…)
+jamessy = player = angry_var = That's enough. You are under arrest.@You have the right to remain silent.
+jamessy = player = angry_var = Anything you say can and will be used@against you in a court of law.
+jamessy = player = angry_var = You have the right to a lawyer. If you@don't have one, one will be assigned to you.
+player = jamessy = sad = (I messed up hard…)
 
 
 % JESSY_YELLING_AT_SARAH
-jessy = DOWN = angry_var = In the name of the law, I order you to stop!
+jamessy = DOWN = angry_var = In the name of the law, I order you to stop!
 sarah = UP = laugh = Sorry, miss, it was an accident.
 sarah = UP = sad = (Rebecca… What are you doing watching us…@Hurry up…)
 
 
 % JESSY_YELLING_AT_PLAYER
-jessy = player = angry_var = What are you doing?
-player = jessy = laugh = Me? Nothing at all.
-jessy = player = happy = Oh, okay, sorry.
+jamessy = player = angry_var = What are you doing?
+player = jamessy = laugh = Me? Nothing at all.
+jamessy = player = happy = Oh, okay, sorry.
 
 
 % JESSY_YELLING_STRONGLY_AT_PLAYER
-jessy = player = angry_var = I can't believe it! Where do you think you are?!
-player = jessy = laugh = Sorry! I got lost.
-jessy = player = angry_var = This area is off-limits!@Stand back, or I'll have to arrest you.
+jamessy = player = angry_var = I can't believe it! Where do you think you are?!
+player = jamessy = laugh = Sorry! I got lost.
+jamessy = player = angry_var = This area is off-limits!@Stand back, or I'll have to arrest you.

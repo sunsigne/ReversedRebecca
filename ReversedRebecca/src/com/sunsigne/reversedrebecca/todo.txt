@@ -41,27 +41,26 @@
 	
 	lors d'un gender swap, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha
+		- adaptation piranha (affecting inclus)
 		- voix
 		- fichier .gpf
-		- actions & dialogues
+		- actions & dialogues (facing inclus)
 		- counter & karma
 		- fichier visuel, évidemment
 		- les animations
 		- tester
 	
-	jessy :
+	jessy lvl003 :
 		- fichiers visuels dans $working
-		- adaptation piranha
+		- adaptation piranha (affecting inclus)
 		- voix
-		- dialogues (seulement les balises "jessy_miltary = player = etc") !!! peut entrer en conflit avec la variante "military"
 		- fichier .gpf
 		- fichier visuel, évidemment
 		- les animations
 		- tester
 		
 	roméo =
-		- textes
+		- dialogues (facing inclus)
 		- voix
 		- tester
 	
@@ -282,10 +281,10 @@
 
 	lors d'un changement, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha
+		- adaptation piranha (affecting inclus)
 		- voix
 		- fichier .gpf
-		- actions & dialogues
+		- actions & dialogues (facing inclus)
 		- counter & karma
 		- fichier visuel, évidemment
 		- les animations

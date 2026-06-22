@@ -56,45 +56,45 @@ player = DOWN = laugh = Aller. Je vais arrêter de l'embêter.@J'ai une mission 
 
 
 % PLAYER_SPOTTED_JESSY_BEHIND_DOOR
-jessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
-player = jessy = laugh = Pardon ! Je me suis perdue.
-jessy = player = angry_var = Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
-jessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
-jessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
-player = jessy = sad = (J'ai déconné, là…)
+jamessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
+player = jamessy = laugh = Pardon ! Je me suis perdue.
+jamessy = player = angry_var = Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+jamessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+jamessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+player = jamessy = sad = (J'ai déconné, là…)
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK
-jessy = player = unhappy = Qu'est-ce que vous faites ?
-player = jessy = laugh = Rien du tout.
-jessy = player = unhappy = Alors reculez, s'il vous plaît.
+jamessy = player = unhappy = Qu'est-ce que vous faites ?
+player = jamessy = laugh = Rien du tout.
+jamessy = player = unhappy = Alors reculez, s'il vous plaît.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_NEXT
-jessy = player = angry_var = Madame, reculez.
-player = jessy = angry = Ça va, calmez-vous. Je vais reculer.
+jamessy = player = angry_var = Madame, reculez.
+player = jamessy = angry = Ça va, calmez-vous. Je vais reculer.
 
 
 % PLAYER_SPOTTED_JESSY_CLOSE_TO_DESK_FINAL
-jessy = player = angry_var = Ça suffit. Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
-jessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
-jessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
-player = jessy = sad = (J'ai déconné, là…)
+jamessy = player = angry_var = Ça suffit. Vous êtes en état d'arrestation.@Vous avec le droit de garder le silence.
+jamessy = player = angry_var = Tout ce que vous direz pourra et sera retenu@contre vous devant un tribunal.
+jamessy = player = angry_var = Vous avez le droit à un avocat. Si vous n'en avez@pas, un avocat vous sera commis d'office.
+player = jamessy = sad = (J'ai déconné, là…)
 
 
 % JESSY_YELLING_AT_SARAH
-jessy = DOWN = angry_var = Au nom de la loi, je vous somme d'arrêter !
+jamessy = DOWN = angry_var = Au nom de la loi, je vous somme d'arrêter !
 sarah = UP = laugh = Désolé madame, c'était un accident.
 sarah = UP = sad = (Rebecca… Qu'est-ce que tu fiches@à nous regarder… Dépêche-toi…)
 
 
 % JESSY_YELLING_AT_PLAYER
-jessy = player = angry_var = Qu'est-ce que vous faites, vous ?
-player = jessy = laugh = Moi ? Rien du tout.
-jessy = player = happy = Ha ok, pardon.
+jamessy = player = angry_var = Qu'est-ce que vous faites, vous ?
+player = jamessy = laugh = Moi ? Rien du tout.
+jamessy = player = happy = Ha ok, pardon.
 
 
 % JESSY_YELLING_STRONGLY_AT_PLAYER
-jessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
-player = jessy = laugh = Pardon ! Je me suis perdue.
-jessy = player = angry_var = Cette zone est interdite au pulic !@Reculez, ou je vais devoir vous arrêter.
+jamessy = player = angry_var = Non mais dis-donc ! Vous vous croyez où, vous ?!
+player = jamessy = laugh = Pardon ! Je me suis perdue.
+jamessy = player = angry_var = Cette zone est interdite au pulic !@Reculez, ou je vais devoir vous arrêter.
