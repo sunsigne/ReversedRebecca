@@ -1,0 +1,5 @@
+///// TRAINING FIELD /////
+
+TELL_HIM_ABOUT_THE_STATION = Key3 % tell her about the station
+TELL_HIM_ABOUT_THE_HELMET_THEFT = Key3 % tell her about the helmet theft
+TELL_HIM_ABOUT_ALICIA_LOCKED_UP = Key3 % tell her about Alicia locked up
