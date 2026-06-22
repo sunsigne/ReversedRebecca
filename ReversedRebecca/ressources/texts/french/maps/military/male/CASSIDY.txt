@@ -1,0 +1,44 @@
+% HELLO_MET_NEXT
+player = object = excited = Exact ! Vous êtes donc policière ET militaire ?
+object = player = happy_var = Oui ! J'ai une double formation, exactement@comme mon frère. 
+object = player = happy = Moi, c'est Cassidy au fait, et mon frère, James.@Il doit être au stand de tir en ce moment.
+object = player = happy_var = Mais j'en oublie l'essentiel !@Qu'est-ce qui t'amène dans notre camp ?
+
+
+% WE_REALLY_DONT_KNOW_EACH_OTHER
+object = player = happy = Je suis aussi policière.@On s'est peut-être croisée ailleurs ?
+player = object = no_sens_var = (Je ne devrais peut-être pas lui dire que je viens@de voler les documents d'un commissariat…)
+player = object = fake_smile = Heu… Incroyable !@Tu es donc policière ET militaire ?
+object = player = happy = Comme mon frère James, oui.@Il doit être au stand de tir en ce moment.
+player = object = fake_smile = C'est noté.
+
+
+% JESSY
+object = player = happy = Qu'est-ce que tu veux savoir sur lui ?
+
+
+% JESSY_AGAIN
+object = player = happy = Tu voulais dire autre chose à propos de lui ?
+
+
+% JESSY_SHES_MEAN
+object = player = happy_var = Il a son caractère, il est vrai.
+object = player = happy = Mais si tu ne le supportes vraiment pas,@rien ne t'oblige à lui parler.
+
+
+% JESSY_I_M_INTO_HER
+object = player = surprised = Vraiment ?
+object = player = happy_var = Maintenant que j'y pense, tu es plutôt son genre.@Tu pourrais avoir tes chances avec lui.
+object = player = happy = Par contre, tu dois savoir qu'ils sortent déjà@ensemble avec Nolan.
+object = player = happy_var = Ils sont plutôt ouverts de ce côté-là, alors@ça peut marcher. Tu devrais voir ça avec eux.
+object = player = happy = Tu trouveras Nolan à l'infirmerie.
+
+
+% JESSY_TIPS
+object = player = happy = Mon frère a un caractère contradictoire :@si tu es trop gentille, tu vas l'ennuyer.
+object = player = happy_var = Mais si tu te rebelles un peu trop, tu vas l'énerver@pour de bon, et il ne voudra plus te voir.
+object = player = happy = En dosant juste ce qu'il faut d'impertinence@et de soumission, tu le feras craquer à coup sûr.
+
+
+% NANCY_TIPS
+object = player = happy_var = Il est tout simplement adorable. Sois gentille,@patiente, sincère et à l'écoute, et tu lui plairas.

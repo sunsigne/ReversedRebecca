@@ -1,0 +1,18 @@
+% ROMEO_NO_INFO
+player = object = happy = Je n'ai pas aidé la prisonnière en isolement.@Je suis curieuse de connaître sa demande.
+
+
+% ROMEO_FREEING
+player = object = unhappy_var = Je n'ai pas aidé la prisonnière en isolement.@Est-ce je dois vraiment la libérer ?
+
+
+% AMIR_NO_INFO
+player = object = laugh = Je n'ai pas dépanné la cuisinière.@J'y gagnerai peut-être de la nourriture ?
+
+
+% AMIR_OIGNON
+player = object = happy_var = Je n'ai pas dépanné la cuisinière. Je dois lui donner@les oignons qui sont dans le stock.
+
+
+% DUPONT_NO_INFO
+player = object = worry = Je n'ai pas orienté la militaire à côté des barbelés@sur le camp d'entraînement.

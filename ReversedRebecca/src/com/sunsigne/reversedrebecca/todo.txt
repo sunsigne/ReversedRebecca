@@ -39,6 +39,30 @@
 	vrai musique de fin de niveau
 		
 	
+	lors d'un gender swap, penser à :
+		- fichiers visuels dans $working
+		- adaptation piranha
+		- voix
+		- fichier .gpf
+		- actions & dialogues
+		- counter & karma
+		- fichier visuel, évidemment
+		- les animations
+		- tester
+	
+	jessy :
+		- fichiers visuels dans $working
+		- adaptation piranha
+		- voix
+		- fichier .gpf
+		- fichier visuel, évidemment
+		- les animations
+		- tester
+	
+	nancy :
+		- les animations
+		- tester		
+	
 	à terminer : 
 		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
 		- nolancy -> Nancy = Nolan (seulement les actions ont été faites)
@@ -47,11 +71,13 @@
 	à faire :
 		les compteurs du lvl001	
 		lvl003:		
-		lvl002:		
+		lvl002:
+		- jessy
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
+		- miika - manque les counter et karma
 		- marichel = Michel = Marie
-		- alexia -> Alexis = Alicia
+		- alexia -> Alexis = Alicia (attention ! on en parle dans le lvl003-y)
 	
 	////////// MILITARY ////////////
  	
@@ -254,11 +280,29 @@
 
 	///////// GENDER SWAP ////////////
 
+	lors d'un changement, penser à :
+		- fichiers visuels dans $working
+		- adaptation piranha
+		- voix
+		- fichier .gpf
+		- actions & dialogues
+		- counter & karma
+		- fichier visuel, évidemment
+		- les animations
+		- tester
+
 	lvl001 :
 		- Miaka = Mia / Mika
+		- Marichel = Marie / Michel
+		- Alexia = Alicia / Alexis
+	lvl002:
+		- Dougly = Doug / Dolly
+		- Jamessy = Jessy / James
 	lvl003-Y :
 		- Dupont = Xavier / Venera		
-		- Amiranda = Miranda / Amir
+		- Amiranda = Amir / Miranda
+		- Nolancy = Nancy / Nolan
+		- Julomeo = Roméo / Juliette
 
 	///////// MUSEE DE L'HORREUR ////////////
 	
