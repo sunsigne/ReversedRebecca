@@ -28,6 +28,14 @@
 
 	////////// EN COURS ////////////
 
+	en cours :
+	- dupont -> Xavier = Venera		
+		dupont , manque :
+			- les dialogues
+			- le fichier Venera.GPF
+			- une voix
+			- l'implanter en piranha
+
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
@@ -35,8 +43,8 @@
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	vrai musique de fin de niveau
+		
 	
-	gendew_swap :
 	à terminer : 
 		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
 		- nolancy -> Nancy = Nolan (seulement les actions ont été faites)
@@ -44,9 +52,7 @@
 	
 	à faire :
 		les compteurs du lvl001	
-		lvl003:
-		- amiranda -> annuler les changements des fichiers piranha		
-		- dupont -> Xavier = Venera		
+		lvl003:		
 		lvl002:		
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
@@ -254,7 +260,10 @@
 
 	///////// GENDER SWAP ////////////
 
-	Miaka = Mia / Mika
+	lvl001 :
+		- Miaka = Mia / Mika
+	lvl003-Y :
+		- Amiranda = Miranda / Amir
 
 	///////// MUSEE DE L'HORREUR ////////////
 	

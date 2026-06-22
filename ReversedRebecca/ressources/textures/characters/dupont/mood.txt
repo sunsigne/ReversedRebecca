@@ -1,0 +1,7 @@
+////// CHARACTER SPECIFIC //////
+
+happy=1,1
+unhappy=1,2
+blush=1,3
+deep_blush=1,4
+you_know_very_well_whats_happening=1,5

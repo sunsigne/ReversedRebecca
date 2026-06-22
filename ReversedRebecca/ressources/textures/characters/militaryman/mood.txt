@@ -11,29 +11,21 @@ trashman=2,1
 sergent=3,1
 sergent_yelling=3,2
 
-////// XAVIER DUPONT //////
-
-dupont_happy=4,1
-dupont_unhappy=4,2
-dupont_blush=4,3
-dupont_deep_blush=4,4
-dupont_you_know_very_well_whats_happening=4,5
-
 ////// RUNNER //////
 
-runner=5,1
-runner_cry=5,2
+runner=4,1
+runner_cry=4,2
 
 ////// IDIOT //////
 
-idiot=6,1
+idiot=5,1
 
 ////// SHOOTER //////
 
-shooter=7,1
-shooter_shocked=7,2
-shooter_cry=7,3
+shooter=6,1
+shooter_shocked=6,2
+shooter_cry=6,3
 
 ////// SLACKER //////
 
-slacker=8,1
+slacker=7,1

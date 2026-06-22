@@ -1,117 +1,117 @@
 % NEED_HELP
-object = player = dupont_happy = Cha ira. Mais, chais inattendu…@Cha n'est pas toi qui a bechoin de mon aide ?
-object = player = dupont_happy = That's fine. But, that's unexpected... Aren't you the one who needs my help?
+object = player = happy = Cha ira. Mais, chais inattendu…@Cha n'est pas toi qui a bechoin de mon aide ?
+object = player = happy = That's fine. But, that's unexpected... Aren't you the one who needs my help?
 player = object = happy_var = Je doute que tu puisse m'aider. Sauf si tu connais@un moyen d'entrer dans la tour de Double-Y ?
 player = object = happy_var = I doubt you can help me. Unless you know a way to get into Double-Y's tower?
-object = player = dupont_unhappy = La tour du chef ? Ch'est interdit chans chon accord.@Mais, peut-être que che peux t'aider à cha plache ?
-object = player = dupont_unhappy = The boss's tower? That's forbidden without his permission. But maybe I can help you instead?
+object = player = unhappy = La tour du chef ? Ch'est interdit chans chon accord.@Mais, peut-être que che peux t'aider à cha plache ?
+object = player = unhappy = The boss's tower? That's forbidden without his permission. But maybe I can help you instead?
 player = object = worry = Ça m'étonnerait… Mais, merci.
 player = object = worry = I doubt it... But thanks.
-object = player = dupont_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
-object = player = dupont_happy = Suit yourself... If you change your mind, I'm here.
+object = player = happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
+object = player = happy = Suit yourself... If you change your mind, I'm here.
 
 
 % HELLO
-object = player = dupont_happy = Chalut. Comment che peux t'aider ?
-object = player = dupont_happy = Hi there. How can I help you?
+object = player = happy = Chalut. Comment che peux t'aider ?
+object = player = happy = Hi there. How can I help you?
 player = object = happy = Je dois parler à Double-Y.@Tu saurais comment entrer dans sa tour ?
 player = object = happy = I need to speak to Double-Y. Do you know how to get into his tower?
-object = player = dupont_unhappy = La tour du chef ? Ch'est interdit chans clé.@Mais, peut-être que che peux t'aider à cha plache ?
-object = player = dupont_unhappy = The boss's tower? That's forbidden without a key. But maybe I can help you instead?
+object = player = unhappy = La tour du chef ? Ch'est interdit chans clé.@Mais, peut-être que che peux t'aider à cha plache ?
+object = player = unhappy = The boss's tower? That's forbidden without a key. But maybe I can help you instead?
 player = object = worry = Ça m'étonnerait… Mais, merci.
 player = object = worry = I doubt it... But thanks.
-object = player = dupont_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
-object = player = dupont_happy = Suit yourself... If you change your mind, I'm here.
+object = player = happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
+object = player = happy = Suit yourself... If you change your mind, I'm here.
 
 
 % ABOUT_THE_STATION
-object = player = dupont_unhappy = Tu as volé des documents confidenchiels ?@Mais ch'est très grave…
-object = player = dupont_unhappy = You stole confidential documents? That's very serious...
-object = player = dupont_blush = Ch'est dangereux, même…
-object = player = dupont_blush = It's dangerous, even...
+object = player = unhappy = Tu as volé des documents confidenchiels ?@Mais ch'est très grave…
+object = player = unhappy = You stole confidential documents? That's very serious...
+object = player = blush = Ch'est dangereux, même…
+object = player = blush = It's dangerous, even...
 
 
 % STATION_IT_WENT_WELL
-object = player = dupont_unhappy = Ho, ok…
-object = player = dupont_unhappy = Oh, okay...
-object = player = dupont_happy = Ch'était quand même un chacré risque !
-object = player = dupont_happy = That was quite a risk, though!
+object = player = unhappy = Ho, ok…
+object = player = unhappy = Oh, okay...
+object = player = happy = Ch'était quand même un chacré risque !
+object = player = happy = That was quite a risk, though!
 
 
 % STATION_I_NEARLY_DIED
-object = player = dupont_blush = Tu m'étonnes…@Ch'était un chacré risque !
-object = player = dupont_blush = I bet... That was quite a risk!
+object = player = blush = Tu m'étonnes…@Ch'était un chacré risque !
+object = player = blush = I bet... That was quite a risk!
 
 
 % STATION_POLICE_WERE_IDIOTS
-object = player = dupont_unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu@chavais qu'elles étaient militaires ET polichières ?
-object = player = dupont_unhappy = That’s not very nice to Jechy and Cachidy. Did you know they were both military AND police officers?
-object = player = dupont_happy = En tout cas, ch'était quand même un chacré risque !
-object = player = dupont_happy = In any case, it was still a huge risk!
+object = player = unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu@chavais qu'elles étaient militaires ET polichières ?
+object = player = unhappy = That’s not very nice to Jechy and Cachidy. Did you know they were both military AND police officers?
+object = player = happy = En tout cas, ch'était quand même un chacré risque !
+object = player = happy = In any case, it was still a huge risk!
 
 
 % ABOUT_THE_HELMET_THEFT
-object = player = dupont_unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi@che dois connaitre les checrets de ton travail…
-object = player = dupont_unhappy = Isn't that confidential? I don't know if I should be privy to your work secrets...
-object = player = dupont_blush = Continue…
-object = player = dupont_blush = Go on...
+object = player = unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi@che dois connaitre les checrets de ton travail…
+object = player = unhappy = Isn't that confidential? I don't know if I should be privy to your work secrets...
+object = player = blush = Continue…
+object = player = blush = Go on...
 
 
 % ABOUT_ALICIA_LOCKED_UP
-object = player = dupont_deep_blush = Holala… Elle a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
-object = player = dupont_deep_blush = Oh my... She must have been so scared! You have such a dangerously exciting life!
+object = player = deep_blush = Holala… Elle a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
+object = player = deep_blush = Oh my... She must have been so scared! You have such a dangerously exciting life!
 player = object = unhappy_var = Tu es militaire… Ta vie n'est pas dangereuse ?
 player = object = unhappy_var = You're in the military... Isn't your life dangerous?
-object = player = dupont_unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
-object = player = dupont_unhappy = Not really... We aren't at war... At most, I might trip over a tire...
-object = player = dupont_deep_blush = Mais, parle-moi encore de toi, et de dangers !
-object = player = dupont_deep_blush = But tell me more about yourself—and the dangers!
+object = player = unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
+object = player = unhappy = Not really... We aren't at war... At most, I might trip over a tire...
+object = player = deep_blush = Mais, parle-moi encore de toi, et de dangers !
+object = player = deep_blush = But tell me more about yourself—and the dangers!
 
 
 % TOO_MANY_COOKIES
-object = player = dupont_blush = Ch'est…
-object = player = dupont_blush = It's...
-object = player = dupont_unhappy = Heu… banal.
-object = player = dupont_unhappy = Er... mundane.
+object = player = blush = Ch'est…
+object = player = blush = It's...
+object = player = unhappy = Heu… banal.
+object = player = unhappy = Er... mundane.
 player = object = convinced = L'excès de sucre, c'est un sujet sérieux !
 player = object = convinced = Too much sugar is a serious matter!
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
-object = player = dupont_unhappy = Well, sure... I just imagined something more impressive.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Well, sure... I just imagined something more impressive.
 
 
 % NO_BREAKFAST
-object = player = dupont_blush = Ch'est…
-object = player = dupont_blush = It's...
-object = player = dupont_unhappy = Heu… banal.
-object = player = dupont_unhappy = Er... mundane.
+object = player = blush = Ch'est…
+object = player = blush = It's...
+object = player = unhappy = Heu… banal.
+object = player = unhappy = Er... mundane.
 player = object = convinced = L'hypoglycémie, c'est un sujet sérieux !
 player = object = convinced = Low blood sugar is a serious matter!
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
-object = player = dupont_unhappy = Well, sure... I just imagined something more impressive.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Well, sure... I just imagined something more impressive.
 
 
 % BALANCED_DIET
-object = player = dupont_blush = Ch'est…
-object = player = dupont_blush = It's...
-object = player = dupont_unhappy = Heu… banal.
-object = player = dupont_unhappy = Er... mundane.
+object = player = blush = Ch'est…
+object = player = blush = It's...
+object = player = unhappy = Heu… banal.
+object = player = unhappy = Er... mundane.
 player = object = worry = Hé! C'est dangereux pour le moral de ne jamais@se faire plaisir…
 player = object = worry = Hey! It's bad for morale to never treat yourself...
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
-object = player = dupont_unhappy = Well, sure... I just imagined something more impressive.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Well, sure... I just imagined something more impressive.
 
 
 % KILLER_ROBOT
-object = player = dupont_you_know_very_well_whats_happening = Ho oui ! Encore !
-object = player = dupont_you_know_very_well_whats_happening = Oh yes! More!
-object = player = dupont_blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
-object = player = dupont_blush = Sorry… This is extremely awkward…@I just…
-object = player = dupont_deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
-object = player = dupont_deep_blush = Anyway! If you’d please excuse me…@I urgently need a shower…
+object = player = you_know_very_well_whats_happening = Ho oui ! Encore !
+object = player = you_know_very_well_whats_happening = Oh yes! More!
+object = player = blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
+object = player = blush = Sorry… This is extremely awkward…@I just…
+object = player = deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
+object = player = deep_blush = Anyway! If you’d please excuse me…@I urgently need a shower…
 
 
 % SHOWER
-object = player = dupont_blush = Tu veux venir avec moi, ou quoi ?
-object = player = dupont_blush = Do you want to come with me, or what?
-object = player = dupont_deep_blush = Désolé, mais ce qu'il va se passer ici est très…@privé.
-object = player = dupont_deep_blush = Sorry, but what’s about to happen here is very…@private.
+object = player = blush = Tu veux venir avec moi, ou quoi ?
+object = player = blush = Do you want to come with me, or what?
+object = player = deep_blush = Désolé, mais ce qu'il va se passer ici est très…@privé.
+object = player = deep_blush = Sorry, but what’s about to happen here is very…@private.

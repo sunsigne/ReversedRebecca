@@ -1,77 +1,77 @@
 % NEED_HELP
-object = player = dupont_happy = Cha ira. Mais, chais inattendu…@Cha n'est pas toi qui a bechoin de mon aide ?
+object = player = happy = Cha ira. Mais, chais inattendu…@Cha n'est pas toi qui a bechoin de mon aide ?
 player = object = happy_var = Je doute que tu puisse m'aider. Sauf si tu connais@un moyen d'entrer dans la tour de Double-Y ?
-object = player = dupont_unhappy = La tour du chef ? Ch'est interdit chans chon accord.@Mais, peut-être que che peux t'aider à cha plache ?
+object = player = unhappy = La tour du chef ? Ch'est interdit chans chon accord.@Mais, peut-être que che peux t'aider à cha plache ?
 player = object = worry = Ça m'étonnerait… Mais, merci.
-object = player = dupont_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
+object = player = happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
 
 
 % HELLO
-object = player = dupont_happy = Chalut. Comment che peux t'aider ?
+object = player = happy = Chalut. Comment che peux t'aider ?
 player = object = happy = Je dois parler à Double-Y.@Tu saurais comment entrer dans sa tour ?
-object = player = dupont_unhappy = La tour du chef ? Ch'est interdit chans clé.@Mais, peut-être que che peux t'aider à cha plache ?
+object = player = unhappy = La tour du chef ? Ch'est interdit chans clé.@Mais, peut-être que che peux t'aider à cha plache ?
 player = object = worry = Ça m'étonnerait… Mais, merci.
-object = player = dupont_happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
+object = player = happy = Comme tu veux… Chi tu changes d'avis,@che chui là.
 
 
 % ABOUT_THE_STATION
-object = player = dupont_unhappy = Tu as volé des documents confidenchiels ?@Mais ch'est très grave…
-object = player = dupont_blush = Ch'est dangereux, même…
+object = player = unhappy = Tu as volé des documents confidenchiels ?@Mais ch'est très grave…
+object = player = blush = Ch'est dangereux, même…
 
 
 % STATION_IT_WENT_WELL
-object = player = dupont_unhappy = Ho, ok…
-object = player = dupont_happy = Ch'était quand même un chacré risque !
+object = player = unhappy = Ho, ok…
+object = player = happy = Ch'était quand même un chacré risque !
 
 
 % STATION_I_NEARLY_DIED
-object = player = dupont_blush = Tu m'étonnes…@Ch'était un chacré risque !
+object = player = blush = Tu m'étonnes…@Ch'était un chacré risque !
 
 
 % STATION_POLICE_WERE_IDIOTS
-object = player = dupont_unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu@chavais qu'elles étaient militaires ET polichières ?
-object = player = dupont_happy = En tout cas, ch'était quand même un chacré risque !
+object = player = unhappy = Cha n'est pas très gentil pour Jechy et Cachidy. Tu@chavais qu'elles étaient militaires ET polichières ?
+object = player = happy = En tout cas, ch'était quand même un chacré risque !
 
 
 % ABOUT_THE_HELMET_THEFT
-object = player = dupont_unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi@che dois connaitre les checrets de ton travail…
-object = player = dupont_blush = Continue…
+object = player = unhappy = Cha n'est pas confidenchiel ? Che ne chais pas chi@che dois connaitre les checrets de ton travail…
+object = player = blush = Continue…
 
 
 % ABOUT_ALICIA_LOCKED_UP
-object = player = dupont_deep_blush = Holala… Elle a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
+object = player = deep_blush = Holala… Elle a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
 player = object = unhappy_var = Tu es militaire… Ta vie n'est pas dangereuse ?
-object = player = dupont_unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
-object = player = dupont_deep_blush = Mais, parle-moi encore de toi, et de dangers !
+object = player = unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
+object = player = deep_blush = Mais, parle-moi encore de toi, et de dangers !
 
 
 % TOO_MANY_COOKIES
-object = player = dupont_blush = Ch'est…
-object = player = dupont_unhappy = Heu… banal.
+object = player = blush = Ch'est…
+object = player = unhappy = Heu… banal.
 player = object = convinced = L'excès de sucre, c'est un sujet sérieux !
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % NO_BREAKFAST
-object = player = dupont_blush = Ch'est…
-object = player = dupont_unhappy = Heu… banal.
+object = player = blush = Ch'est…
+object = player = unhappy = Heu… banal.
 player = object = convinced = L'hypoglycémie, c'est un sujet sérieux !
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % BALANCED_DIET
-object = player = dupont_blush = Ch'est…
-object = player = dupont_unhappy = Heu… banal.
+object = player = blush = Ch'est…
+object = player = unhappy = Heu… banal.
 player = object = worry = Hé! C'est dangereux pour le moral de ne jamais@se faire plaisir…
-object = player = dupont_unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
+object = player = unhappy = Bien chûr, oui… Chimaginais juchte quelque chose@de plus imprechionnant.
 
 
 % KILLER_ROBOT
-object = player = dupont_you_know_very_well_whats_happening = Ho oui ! Encore !
-object = player = dupont_blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
-object = player = dupont_deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
+object = player = you_know_very_well_whats_happening = Ho oui ! Encore !
+object = player = blush = Pardon… Ch'est exchtremmement gênant…@Je viens de…
+object = player = deep_blush = Enfin bref ! Chi tu veux bien m'exchcuser…@J'ai urgemment besoin d'une douche…
 
 
 % SHOWER
-object = player = dupont_blush = Tu veux venir avec moi, ou quoi ?
-object = player = dupont_deep_blush = Désolé, mais ce qu'il va se passer ici est très…@privé.
+object = player = blush = Tu veux venir avec moi, ou quoi ?
+object = player = deep_blush = Désolé, mais ce qu'il va se passer ici est très…@privé.
