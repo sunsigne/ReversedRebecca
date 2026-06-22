@@ -7,51 +7,51 @@ player = object = happy = Je te suis.
 
 
 % WHAT_DO_YOU_THINK_OF
-nancy = rebecca = happy = Alors ? Comment tu trouves James pour l'instant ?
+nolancy = rebecca = happy = Alors ? Comment tu trouves James pour l'instant ?
 
 
 % JESSY_IS_AMUSING
-nancy = rebecca = playful = N'est-ce pas ? Elle est trop mignon quand@il fait sa princesse.
+nolancy = rebecca = playful = N'est-ce pas ? Elle est trop mignon quand@il fait sa princesse.
 
 
 % JESSY_IS_ANNOYING
-nancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@tous les deux à faire ce qu'il demande…
+nolancy = rebecca = playful = Je vois ce que tu veux dire. Pourtant, on est là,@tous les deux à faire ce qu'il demande…
 
 
 % JESSY_IS_SOMETHING_NEXT
-nancy = rebecca = excited = Il a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir de lui.
-nancy = rebecca = playful = Bon, c'est vrai que des fois,@il est un peu égoïste…
+nolancy = rebecca = excited = Il a ce pouvoir étrange, qui fait qu'on a envie@de se faire bien voir de lui.
+nolancy = rebecca = playful = Bon, c'est vrai que des fois,@il est un peu égoïste…
 
 
 % JESSY_IS_SOMETHING_NEXT_NEXT
-nancy = rebecca = sad_side = Voire, méchant…
+nolancy = rebecca = sad_side = Voire, méchant…
 
 
 % JESSY_IS_SOMETHING_NEXT_NEXT_NEXT
-nancy = rebecca = happy = Mais on ne s'ennuie jamais avec lui.
+nolancy = rebecca = happy = Mais on ne s'ennuie jamais avec lui.
 
 
 % HERE_WE_ARE
-nancy = rebecca = happy = Nous y sommes. Voilà les bombes pour James.
+nolancy = rebecca = happy = Nous y sommes. Voilà les bombes pour James.
 
 
 % HERE_WE_ARE_YET
-object = nancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… il les a refusées.
+object = nolancy = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais@prises. Et… il les a refusées.
 
 
 % HERE_WE_ARE_YET_VAR
-object = nancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… il les a refusées.
+object = nolancy = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… il les a refusées.
 
 
 % HERE_WE_ARE_NEXT
-nancy = rebecca = happy = À mon avis, il ne les a même pas regardé.@Les bombes sont une excuse, il veut être servie.
-object = nancy = no_sens = Tu veux dire… Comme dans un restaurant ?
-nancy = rebecca = excited = Non ! Il cherche notre attention.@Il veut qu'on se plie en quatre pour lui.
-nancy = rebecca = playful = Il cherche à se faire désirée, quoi.
-nancy = rebecca = blush = Je pense qu'il t'aime bien. Et…@Je peux comprendre pourquoi.
+nolancy = rebecca = happy = À mon avis, il ne les a même pas regardé.@Les bombes sont une excuse, il veut être servie.
+object = nolancy = no_sens = Tu veux dire… Comme dans un restaurant ?
+nolancy = rebecca = excited = Non ! Il cherche notre attention.@Il veut qu'on se plie en quatre pour lui.
+nolancy = rebecca = playful = Il cherche à se faire désirée, quoi.
+nolancy = rebecca = blush = Je pense qu'il t'aime bien. Et…@Je peux comprendre pourquoi.
 
 
 % POST_LIE
-nancy = player = sad = Je ne vois pas en quoi cela me concerne.
-player = nancy = unhappy_var = Il veut que ça soit toi qui les lui donne.
-nancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.
+nolancy = player = sad = Je ne vois pas en quoi cela me concerne.
+player = nolancy = unhappy_var = Il veut que ça soit toi qui les lui donne.
+nolancy = player = sad_side = Je n'ai aucune raison de te croire.@Ne me dérange plus.

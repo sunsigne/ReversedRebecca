@@ -54,21 +54,21 @@ object = player = embarrased_var = Ha oui ? Il s'appelle comment ?
 
 
 % POST_JESSY
-nancy = player = blush = Hey ! J'imagine que si tu reviens…@C'est que tu es intéressée ?
-nancy = player = blush_side = Je pense que tu l'as compris, mais on va te faire@une place dans notre relation avec James.
-nancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
+nolancy = player = blush = Hey ! J'imagine que si tu reviens…@C'est que tu es intéressée ?
+nolancy = player = blush_side = Je pense que tu l'as compris, mais on va te faire@une place dans notre relation avec James.
+nolancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
 
 
 % POST_KISS
-nancy = player = embarrased = Désolé… C'était très bien, trop bien…
-nancy = player = embarrased = On passera ce soir, chez toi avec James. Il fouillera@les fichiers de la police pour trouver ton adresse.
-nancy = player = embarrased = Tu peux me laisser ici, je finirai par sortir…@Ou peut-être pas…
+nolancy = player = embarrased = Désolé… C'était très bien, trop bien…
+nolancy = player = embarrased = On passera ce soir, chez toi avec James. Il fouillera@les fichiers de la police pour trouver ton adresse.
+nolancy = player = embarrased = Tu peux me laisser ici, je finirai par sortir…@Ou peut-être pas…
 
 
 % NO_THATS_TOO_FAST
-nancy = player = blush = Pardon, je comprends. On va y aller doucement.
-nancy = player = happy = Je parlerai à James. On viendra chez toi, ce soir.
-player = nancy = unhappy_var = Ça n'est pas vraiment ce que j'appelle "y aller@doucement"…
-nancy = player = excited = C'est vrai ! Surtout que James est intense !
-nancy = player = playful = Disons que moi, j'irai doucement…
-nancy = player = blush = Alors à ce soir, Rebecca.@Et si tu as besoin de soins, je suis là.
+nolancy = player = blush = Pardon, je comprends. On va y aller doucement.
+nolancy = player = happy = Je parlerai à James. On viendra chez toi, ce soir.
+player = nolancy = unhappy_var = Ça n'est pas vraiment ce que j'appelle "y aller@doucement"…
+nolancy = player = excited = C'est vrai ! Surtout que James est intense !
+nolancy = player = playful = Disons que moi, j'irai doucement…
+nolancy = player = blush = Alors à ce soir, Rebecca.@Et si tu as besoin de soins, je suis là.

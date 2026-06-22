@@ -62,19 +62,6 @@ object = RIGHT = doubt = Regarde dans l'infirmerie.
 bject = RIGHT = doubt = Look in the infirmary.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 % POST_LIE
 object = player = doubt = Tu t'appelles Nancy ?
 object = player = doubt = Is your name Nancy?
@@ -89,18 +76,18 @@ jessy_military = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J
 jessy_military = player = deep = Well, miss, you're more my type…@I'm quite tempted to use my handcuffs on you.
 jessy_military = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
 jessy_military = player = wink = Meet me in a few minutes behind @the cold room.
-jessy_military = nancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
-jessy_military = nancy = sadistic_smirk = Come with me, Nancy.@We need to clear some things up.
+jessy_military = nolancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
+jessy_military = nolancy = sadistic_smirk = Come with me, Nancy.@We need to clear some things up.
 
 
 % NANCY_NOT_NOW
-nancy = LEFT = happy = Hey ! C'est une conversation privée.
-nancy = LEFT = happy = Hey! This is a private conversation.
+nolancy = LEFT = happy = Hey ! C'est une conversation privée.
+nolancy = LEFT = happy = Hey! This is a private conversation.
 
 
 % REQUEST_A_FIREARM
-nancy = LEFT = excited = C'est mort !
-nancy = LEFT = excited = No way!
+nolancy = LEFT = excited = C'est mort !
+nolancy = LEFT = excited = No way!
 
 
 % EAVESDROPPING

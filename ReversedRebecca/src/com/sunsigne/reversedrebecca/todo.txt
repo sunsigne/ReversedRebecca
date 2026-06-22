@@ -54,27 +54,27 @@
 		- fichiers visuels dans $working
 		- adaptation piranha
 		- voix
+		- dialogues (seulement les balises "jessy_miltary = player = etc") !!! peut entrer en conflit avec la variante "military"
 		- fichier .gpf
 		- fichier visuel, évidemment
 		- les animations
 		- tester
+		
+	roméo =
+		- textes
+		- voix
+		- tester
 	
 	nancy :
-		- les animations
+		- player swap
 		- tester		
-	
-	à terminer : 
-		- julomeo -> Roméo  = Juliette (textes + voix + tester dialogues)
-		- nolancy -> Nancy = Nolan (seulement les actions ont été faites)
-		- jamessy -> Jessy = James (seulement les actions lvl003-y ont été faites)
-	
+
 	à faire :
-		les compteurs du lvl001	
-		lvl003:		
 		lvl002:
 		- jessy
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
+		- counter & karma
 		- miika - manque les counter et karma
 		- marichel = Michel = Marie
 		- alexia -> Alexis = Alicia (attention ! on en parle dans le lvl003-y)
@@ -301,8 +301,9 @@
 	lvl003-Y :
 		- Dupont = Xavier / Venera		
 		- Amiranda = Amir / Miranda
-		- Nolancy = Nancy / Nolan
 		- Julomeo = Roméo / Juliette
+		- Nolancy = Nancy / Nolan
+		- (Jamessy)
 
 	///////// MUSEE DE L'HORREUR ////////////
 	
