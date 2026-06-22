@@ -29,16 +29,16 @@ militaryman = player = runner_cry = Je n'ai pas reçu l'ordre du sergent d'arrê
 
 
 % JESSY
-jamessy_military = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
-jamessy_military = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
+jamessy = DOWN = deep = Chouette ! Il se passe enfin un truc marrant.
+jamessy = DOWN = deep_provocative = Et puis, comme ça, il aura enfin un peu de plomb@dans la cervelle…
 
 
 % JESSY_NEXT
-jamessy_military = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
+jamessy = DOWN = deep = Ne me dérange pas.@Je suis en train de prendre mon pied, là.
 
 
 % JESSY_BOMBS
-jamessy_military = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
+jamessy = player = doubt = Hein ? Ho, Oublie ça. J'ai trouvé bien plus@intéressant que de jouer avec toi.
 
 
 % SERGENT

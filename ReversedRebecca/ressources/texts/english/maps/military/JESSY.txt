@@ -72,12 +72,12 @@ object = player = angry_var2 = Excuse me?! I'll sort this out with her later. @N
 
 
 % RENDEZ_VOUS
-jamessy_military = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J'ai assez envie d'utiliser mes menottes sur toi.
-jamessy_military = player = deep = Well, miss, you're more my type…@I'm quite tempted to use my handcuffs on you.
-jamessy_military = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
-jamessy_military = player = wink = Meet me in a few minutes behind @the cold room.
-jamessy_military = nolancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
-jamessy_military = nolancy = sadistic_smirk = Come with me, Nancy.@We need to clear some things up.
+jamessy = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J'ai assez envie d'utiliser mes menottes sur toi.
+jamessy = player = deep = Well, miss, you're more my type…@I'm quite tempted to use my handcuffs on you.
+jamessy = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
+jamessy = player = wink = Meet me in a few minutes behind @the cold room.
+jamessy = nolancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
+jamessy = nolancy = sadistic_smirk = Come with me, Nancy.@We need to clear some things up.
 
 
 % NANCY_NOT_NOW

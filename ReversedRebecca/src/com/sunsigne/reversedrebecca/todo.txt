@@ -41,23 +41,27 @@
 	
 	lors d'un gender swap, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see)
+		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix
 		- fichier .gpf
-		- actions & dialogues (facing inclus)
-		- counter & karma
+		- dialogues (facing inclus)
+		- counter, deeds, bonus txt & actions
 		- fichier visuel, évidemment
 		- les animations
 		- tester
 	
-	jessy lvl003 :
+	jessy :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see)
 		- voix
 		- fichier .gpf
-		- fichier visuel, évidemment
-		- les animations
-		- tester
+		- fichier visuel (dialogues + policier plus mince)
+	
+		lvl002 :
+			- dialogues (facing inclus)
+			- tester
+		lvl003 :
+			- les animations (il n'y a que l'étranglement)
+			- tester
 		
 	roméo =
 		- dialogues
@@ -284,11 +288,11 @@
 
 	lors d'un changement, penser à :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see, tp & move)
+		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix
 		- fichier .gpf
-		- actions & dialogues (facing inclus)
-		- counter & karma
+		- dialogues (facing inclus)
+		- counter, deeds, bonus txt & actions
 		- fichier visuel, évidemment
 		- les animations
 		- tester

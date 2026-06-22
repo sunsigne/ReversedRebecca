@@ -125,7 +125,7 @@ public class LivingAnimation implements SheetableImage, PhysicFree {
 
 		String[] names = living.getTextureName().split("_");
 
-		return names[0] + "/" + names[1];
+		return names[0] + "/" + living.getTextureName().replace(names[0] + "_", "");
 	}
 
 	private BufferedImage loadImage() {

@@ -53,7 +53,7 @@ public class ChatContent implements Updatable {
 			return living_name;
 
 		String[] names = living_name.split("_");
-		return names[0] + "/" + names[1];
+		return names[0] + "/" + living_name.replace(names[0] + "_", "");
 	}
 
 	private String getFormattedVoice(String living_name) {
