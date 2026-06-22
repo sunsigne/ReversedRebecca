@@ -54,7 +54,7 @@
 	
 	jessy :
 		- fichiers visuels dans $working
-		- voix
+		- voix (à vérifier avec un visuel)
 		- fichier .gpf
 		- fichier visuel (dialogues + policier plus mince)
 	
