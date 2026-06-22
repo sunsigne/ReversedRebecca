@@ -28,8 +28,6 @@
 
 	////////// EN COURS ////////////
 
-	à créer !!!! Un gender swap appelé "opposite" afin de faire de meilleurs tests
-
 	en cours :
 
 	bug ?
@@ -53,13 +51,9 @@
 		- tester
 	
 	jessy :
-		- fichiers visuels dans $working
-		- voix (à vérifier avec un visuel)
-		- fichier .gpf
 		- fichier visuel (dialogues + policier plus mince)
 	
 		lvl002 :
-			- dialogues (facing inclus)
 			- tester
 		lvl003 :
 			- les animations (il n'y a que l'étranglement)
