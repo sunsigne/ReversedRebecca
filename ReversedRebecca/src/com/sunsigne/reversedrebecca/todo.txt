@@ -29,12 +29,6 @@
 	////////// EN COURS ////////////
 
 	en cours :
-	- dupont -> Xavier = Venera		
-		dupont , manque :
-			- les dialogues
-			- le fichier Venera.GPF
-			- une voix
-			- l'implanter en piranha
 
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
@@ -263,6 +257,7 @@
 	lvl001 :
 		- Miaka = Mia / Mika
 	lvl003-Y :
+		- Dupont = Xavier / Venera		
 		- Amiranda = Miranda / Amir
 
 	///////// MUSEE DE L'HORREUR ////////////
