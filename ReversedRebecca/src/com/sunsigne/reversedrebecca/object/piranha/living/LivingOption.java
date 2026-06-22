@@ -44,7 +44,7 @@ public class LivingOption {
 	////////// LIVING TYPE ////////////
 
 	public enum LIVING_TYPE {
-		DEFAULT("default"), MALE("male"), FEMALE("female");
+		DEFAULT("default"), MALE("male"), FEMALE("female"), OPPOSITE("opposite");
 
 		LIVING_TYPE(String name) {
 			this.name = name;
@@ -65,7 +65,7 @@ public class LivingOption {
 			case "female":
 				return LIVING_TYPE.MALE;
 			}
-			return null;
+			return LIVING_TYPE.DEFAULT;
 		}
 
 		public LIVING_TYPE getNext() {
@@ -77,7 +77,7 @@ public class LivingOption {
 			case "female":
 				return LIVING_TYPE.DEFAULT;
 			}
-			return null;
+			return LIVING_TYPE.DEFAULT;
 		}
 	}
 

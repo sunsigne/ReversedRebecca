@@ -1,0 +1,25 @@
+% SOON_NEXT_VAR
+rebecca = object = worry = Hey Mia ! On peut discuter, maintenant ?
+miaka = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
+
+
+% THANK_FOR_YELLING
+miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secouée.
+player = miaka = happy_var = Quand tu veux !
+miaka = player = smirk = Quand je veux ? Parce que j'ai@autre chose que tu peux secouer…
+player = miaka = no_sens_var = … Pardon ?
+miaka = player = smirk = Tu veux un dessin ? Je viens chez toi ce soir.
+player = miaka = no_sens = Heu… Non.
+miaka = player = smirk = Si.
+player = miaka = no_sens_var = …
+player = miaka = blush = (En vrai, c'est un peu flatteur.@Je me demande si elle va vraiment venir.)
+
+
+% THANK_FOR_YELLING_GIRLFRIEND
+miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secouée.
+player = miaka = worry = De rien, j'imagine…@Je suis moi-même un peu secouée.
+miaka = player = serious = Pourquoi ?
+player = miaka = happy = Je viens d'accepter de sortir avec Marie.@Sa déclaration m'a surprise, mais je suis contente.
+miaka = player = worry = Ha. C'est… Une bonne chose, j'imagine ?
+miaka = player = serious = Bon, si tu le permets, j'ai des décombres@à dégager.
+
