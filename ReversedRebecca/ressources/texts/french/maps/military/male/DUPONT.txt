@@ -1,0 +1,3 @@
+% STATION_POLICE_WERE_IDIOTS
+object = player = unhappy = Cha n'est pas très gentil pour Jamche et Cachidy. Tu@chavais qu'ils étaient militaires ET polichiers ?
+object = player = happy = En tout cas, ch'était quand même un chacré risque !

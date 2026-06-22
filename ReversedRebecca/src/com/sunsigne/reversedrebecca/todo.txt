@@ -28,6 +28,8 @@
 
 	////////// EN COURS ////////////
 
+	à créer !!!! Un gender swap appelé "opposite" afin de faire de meilleurs tests
+
 	en cours :
 
 	bug ?
@@ -70,7 +72,6 @@
 
 	à faire :
 		lvl002:
-		- jessy
 		- dougly -> Dolly (Dolores) = Doug (Douglas)
 		lvl001:
 		- counter & karma
