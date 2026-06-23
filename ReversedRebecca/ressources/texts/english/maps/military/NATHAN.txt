@@ -1,125 +1,103 @@
 % HELLO
-object = player = smile = Nom d'un neutrino ! Qu'est-ze qu'on a là ?@Une zivile !
-object = player = smile = Good heavens! What's this? @A civil!
-object = player = smile = Ton ezpèce est très intérezzente ! Puis-ze@prendre un échzantillon pour étudier ton ADN ?
-object = player = smile = Your species is very interesting! May I @take a sample to study your DNA?
-player = object = no_sens_var = … Wut ?
-player = object = no_sens_var = … Wut ?
-object = player = serious = nathan_dead_serious_voice = J'étais sérieux.
+object = player = smile = Holy neutrino! What'z thiz? A zivilian!
+object = player = smile = Your zpecies iz very interezting! May I@take a zample to ztudy your DNA?
+player = object = no_sens_var = … Wut?
 object = player = serious = nathan_dead_serious_voice = I was serious.
-object = player = smile = Mais z'en oublies les prézentation ! Ze suis Nathan.@Grand diplômé de l'académie ! Zé un doctorat !
-object = player = smile = But you're forgetting the introductions! I'm Nathan. @Graduate of the academy! I have a doctorate!
+object = player = smile = But I'm forgetting the introductionz! I am Nathan.@Graduate of the academy! I have a doctorate!
 
 
 % HELLO_NEXT_NEGATIF
-player = object = happy_var = Ok… (Il ferme jamais sa gueule ?)
 player = object = happy_var = Okay… (Does he ever shut his mouth?)
-player = object = happy = Ô Grand Manitou, je pourrais avoir une arme@s'il te plaît ?
-player = object = happy = Oh Great Manitou, could I have a weapon @please?
-object = player = serious = nathan_dead_serious_voice = Elle va finir dans ta bouche avec cette attitude.
-object = player = serious = nathan_dead_serious_voice = It's going to end up in your mouth with that attitude.
-object = player = stupid = Dézolé mais non. Z'en ai peut-être l'air, mais@ze ne zuis pas un sczientifique fou.
-object = player = stupid = Sorry, but no. I may look like it, but I'm not a mad scientist.
-object = player = smile = Ze ne te donnerai pas d'arme. Mais ze peux t'aider@autrement ! Quel est ton mal ?
-object = player = smile = I won't give you a weapon. But I can help you in other ways! What's wrong ?
-player = object = happy = Je dois parler au chef.
+player = object = happy = O mighty Big Cheese, may I have a weapon?
+object = player = serious = nathan_dead_serious_voice = It's going to end up in your mouth with that@attitude.
+object = player = stupid = Zorry, but no. I may look like it, but I'm not a@mad sczientizt.
+object = player = smile = I won't give you any weapon. But I can help you@in other wayz! What'z wrong ?
 player = object = happy = I need to speak to the chief.
-object = player = smile = YY ? Z'est un cas fasczinant ! Un ADN incroyable !@Zûrement le zeul homme plus intellizent que moi !
-object = player = smile = YY? He's a fascinating case! Incredible DNA! Surely the only man smarter than me!
-object = player = happy = Et quelle forze ! Il est plus prochze du zurhomme@que toi de la beauté. Une arme est inutile contre lui.
-object = player = happy = And what strength! He's closer to being a superman than you are to beauty. A weapon is useless against him.
-player = object = wrong_with_you = Tu me cherches ?
+object = player = smile = YY? He'z a fasczinating caze! Incredible DNA!@Zurely the only man zmarter than me!
+object = player = happy = And hiz ztrength! He'z clozer to zuperman than@you are to beauty. A weapon iz uzelezz againzt him.
 player = object = wrong_with_you = Are you looking for trouble?
-player = object = wrong_with_you = Est-ce que je te dis à toi que ton visage est plus@proche de la raclette que ta mère d'une baleine ?
-player = object = wrong_with_you = Do I tell you that your face is closer to a raclette grill than your mother is to a whale?
-player = object = angry = J'ai besoin d'une arme parce que le garde@ne veut pas me laisser passer.
-player = object = angry = I need a weapon because the guard won't let me through.
-object = player = smile = Z'est tout le prinzipe d'un garde ! Il z'azit de@mon frère ! Et il prend zon travail trèz à coeur !
-object = player = smile = That's the whole point of a guard! He's like a brother to me! And he takes his job very seriously!
+player = object = wrong_with_you = Do I tell you that your face is closer to a cheese@grill than your mother is to a whale?
+player = object = angry = I need a weapon because the guard won't let me@through.
+object = player = smile = That'z the whole point of a guard! He'z my full@brother! And he takez hiz job very zeriouzly!
 
 
 % HELLO_NEXT_NEGATIF_NEXT
-object = player = stupid = Mais ze vais quand même t'aider. Zi tu lui montres@une clé zaune, il reconnaitra ton droit de pazzer.
-object = player = stupid = But I'll still help you. If you show him a key, he'll recognize your right to pass.
-player = object = wrong_with_you = Et je trouve ça où ?
+object = player = stupid = But I'll ztill help you. If you zhow him a yellow key,@he'll recognize your right to pazz.
 player = object = wrong_with_you = And where do I find that?
-object = player = happy = Zi viens. Fouille nos chzambres. Voizi l'énigme qui@te donnera l'emplacement de ze que tu chzerches :
-object = player = happy = Come on. Search our rooms. Here's the riddle that will give you the location of what you're looking for:
+object = player = happy = Zearch our roomz. Here'z the riddle that will give@you the location of what you're looking for:
 
 
 % HELLO_NEXT_NEGATIF_NEXT_NUMBER_SETTINGS
-object = player = stupid = Mais ze vais quand même t'aider. Zi tu lui montres@une clé 3, il reconnaitra ton droit de pazzer.
-object = player = stupid = But I'll still help you. If you show him a key 3, he'll recognize your right to pass.
-player = object = wrong_with_you = Et je trouve ça où ?
+object = player = stupid = But I'll ztill help you. If you zhow him a yellow key 3,@he'll recognize your right to pazz.
 player = object = wrong_with_you = And where do I find that?
-object = player = happy = Zi viens. Fouille nos chzambres. Voizi l'énigme qui@te donnera l'emplacement de ze que tu chzerches :
-object = player = happy = Come on. Search our rooms. Here's the riddle that will give you the location of what you're looking for:
+object = player = happy = That'z my point. Zearch our roomz. Here'z the riddle@that will give you the location of what you're looking for:
 
 
 % RIDDLE
-object = player = smile = Ze zuis à la 4ème ligne ce que la 1ère est à la 2nd.@Pareil pour la colonne.
-object = player = smile = I'm on the 4th line as the 1st is to the 2nd. Same for the column.
+object = player = smile = I am to the 4th row what the 1zt iz to the 2nd.@The zame appliez to the column.
 
 
 % HIT_ONE
-object = player = unhappy = Aïe! Ok, ze zimplifies : ze zuis une ligne impraire@mais ze ne zuis pas la 1ère. Pareil pour la colonne.
-object = player = unhappy = Ouch! Okay, I'm simplifying: I'm on an odd line, but I'm not the first. Same for the column.
+object = player = unhappy = Ouch! Okay, I'm zimplifying: I'm an odd line, but@I'm not the firzt. The zame appliez to the column.
 
 
 % HIT_TWO
-object = player = unhappy = Ok ok ! Ze suis en 3ème ligne et 3ème colonne.@Zatizfaite ?
-object = player = unhappy = Okay, okay! I'm on the 3rd line and 3rd column. @Are you done?
+object = player = unhappy = Okay, okay! I'm on the 3rd line and 3rd column.@Happy now?
 
 
 % HIT_THREE
-object = player = unhappy = Arrête ! Z'est méchant ! Ze vais le dire à mon frère…
-object = player = unhappy = Stop! That's mean! I'm going to tell my brother…
+object = player = unhappy = Stop! That'z mean! I'll tell my brother…
 
 
 % HIT_FOUR
-object = player = unhappy = Ligne 3 colonne 3 ! La chzambre zous le fuzil !@Ze ne peux pas être plus clair !
-object = player = unhappy = Line 3, column 3! The room with the gun! @I can't be any clearer!
+object = player = unhappy = Line 3, column 3! The room under the shotgun!@I can't be any clearer!
 
 
 % A_WEAPON
-object = player = serious = nathan_dead_serious_voice = C'est mon corps qui est une arme. Tu vas vite@le comprendre si tu continues d'insister.
-object = player = serious = nathan_dead_serious_voice = My body is a weapon. You'll quickly understand if you keep insisting.
+object = player = serious = nathan_dead_serious_voice = My body is the weapon. You'll quickly understand@if you keep insisting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % HELLO_NEXT_POSITIF
-player = object = happy_var = (Il est bizarre, mais un peu drôle…)
 player = object = happy_var = (He's weird, but kind of funny…)
-player = object = happy = Moi c'est Rebecca. Est-ce que je peux t'aider@d'une façon, ou d'une autre ?
 player = object = happy = My name is Rebecca. Is there anything I can do to help you?
-object = player = stupid = Et bien oui. Ze zuis à deux doigts de terminer@ma nouvelle inventzion : un fortifiant muzculaire !
-object = player = stupid = Well, yes. I'm about to finish my new invention: a muscle tonic!
+object = player = stupid = Well, yez. I'm about to finish my new invention: a muscle tonic!
 
 
 % HELLO_NEXT_POSITIF_TALKED_TO_IDIOT
-player = object = happy_var = (Il est bizarre, mais un peu drôle…)
 player = object = happy_var = (He's weird, but kind of funny…)
-player = object = happy = Moi c'est Rebecca. Est-ce que tu pourrais me@fabriquer un fortifiant musculaire, s'il-te-plaît ?
 player = object = happy = My name is Rebecca. Could you make me a muscle tonic, please?
-object = player = stupid = Quelle coïnzidenze incroyable ! Z'est zuztement@ze que z'ezzais de créer en ze moment-même !
-object = player = stupid = What an incredible coincidence! I was just trying to create it right now!
+object = player = stupid = What an incredible coinzidenze! I waz just@trying to create it right now!
 
 
 % HELLO_NEXT_POSITIF_NEXT
-object = player = smile = YY est un cas fasczinant ! Un ADN incroyable !@Zûrement le zeul homme plus intellizent que moi !
-object = player = smile = YY is a fascinating case! Incredible DNA! Surely the only man more intelligent than me!
-object = player = stupid = Mais zurtout, quelle forze ! Z'est un zurhomme !@J'ezzais de créer une rezette pour l'imiter.
-object = player = stupid = But above all, what strength! He's a superman! I'm trying to create a recipe to imitate him.
+object = player = smile = YY iz a fasczinating caze! Incredible DNA!@Zurely the only man zmarter than me!
+object = player = stupid = But above all, what ztrength! He'z a zuperman! I'm trying to create a rezipe to imitate him.
 object = player = happy = Zes zubztrats fibreux pédaux feront parfaitement@l'affaire. Apporte-moi za.
-object = player = happy = Those fibrous pedal zubztrats will do the job perfectly. Bring me some.
-player = object = no_sens_var = Pardon… Tu veux quoi ?
-player = object = no_sens_var = Sorry… What do you want?
-object = player = unhappy = He bien… Les réacteurs microbiens biplantaires du@chzef… Pour ma rezette du fortifiant muzculaire…
-object = player = unhappy = Well… The biplantar microbial reactors of @chzef… For my muscle-strengthening recipe…
+object = player = happy = Hiz fibrouz peduncular zubztratez will do the job@perfectly. Bring me those.
+player = object = no_sens_var = Excuse me… What do you want?
+object = player = unhappy = Well… The bizole microbial reactorz of the chief…@For my muzcle-ztrengthening rezipe…
 
 
 % HELLO_NEXT_POSITIF_FINAL
 player = object = fake_smile = Ok, c'est… pas du tout bizarre, et tout à fait normal.@Je vais voir si je te trouve ça.
-player = object = fake_smile = Okay, that's… not weird at all, and perfectly normal. @I'll see if I can find it for you.
+player = object = fake_smile = Okay, that's… not weird at all, and perfectly normal.@I'll see if I can find it for you.
 
 
 % HELLO_NEXT_POSITIF_FINAL_WITH_ZOCKZ
@@ -134,16 +112,6 @@ object = player = unhappy = Okay, that's… @Not weird at all, and perfectly nor
 % WHAT_DO_YOU_WANT_AGAIN
 object = player = serious = nathan_dead_serious_voice = Les chaussettes sales du chef.
 object = player = serious = nathan_dead_serious_voice = The boss's dirty socks.
-
-
-
-
-
-
-
-
-
-
 
 
 % ARE_MY_SOCKS_OKAY
