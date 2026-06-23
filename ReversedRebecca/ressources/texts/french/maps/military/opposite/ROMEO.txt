@@ -1,3 +1,42 @@
+% STAYING_OR_COMING_BACK
+object = DOWN = sadistic = Je pourrais te faire du mal… Bouh !
+player = UP = happy = Je ne pense pas que tu sois réellement méchante…@Tu te donnes probablement un genre.
+object = DOWN = mad = Oh… Un jugement. Que c'est surprenant…
+object = DOWN = skeptical = Mais est-ce que tu crois seulement à ce que tu dis ?
+
+
 % LUNCHBOX
 object = DOWN = sadistic = Cool ! Remercie Miranda de ma part.
 object = DOWN = mad = J'espère qu'elle n'a pas lésiné sur la sauce piquante.
+
+
+% YOU_FREED_ME
+object = DOWN = sad = Tu n'as pas peur de moi ?
+player = UP = worry = Je te l'ai dit, je ne pense pas que tu sois@réellement méchante.
+
+
+% YOU_FREED_ME_MUSIC
+object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
+object = RIGHT = sad_var = Pourquoi je mérite d'être enfermée…
+object = DOWN = sad = J'imagine que… je devrais te… dire merci.
+object = DOWN = frustrated = Rah ! Ça m'énerve ! J'ai l'impression de t'en@devoir une ! Et je déteste avoir des dettes.
+object = DOWN = sad_hidden = Ho regarde ! Une abeille !
+
+
+% FREED_TOO_EARLY
+object = DOWN = sad = Tu… m'as… libéré ? Pourquoi ?
+player = UP = worry = Je ne pense pas que tu sois réellement méchante…@Tu te donnes probablement un genre.
+object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
+object = RIGHT = sad_var = Pourquoi je mérite d'être enfermée…
+object = DOWN = skeptical = Bref ! On ne se connait pas, ne va pas@t'imaginer que je t'en dois une.
+object = DOWN = mad = Allez, salut.
+
+
+% WANNA_HANG_OUT_NO
+object = RIGHT = sad_hidden = Ouais. Bien sûr. Moi non plus, j'ai pas envie.@J'essayais juste d'être polie, bien sûr.
+object = RIGHT = sad_var = Adieu, princesse…
+
+
+% LUNCHBOX_FAILED_VAR
+player = DOWN = no_sens_var = … Une seconde… La prisonnière, je l'ai libéré@et elle est partie !
+player = DOWN = you_silly = Bon, j'imagine que je peux aussi bien manger@son repas et prétendre que je l'ai livré.
