@@ -2,7 +2,7 @@
 player = militaryman = happy_var = Je dois voir YY.
 player = militaryman = I have to see YY.
 militaryman = player = guard = On ne passe pas.
-militaryman = player = No way
+militaryman = player = You shall not pass.
 player = militaryman = angry = Moi, c'est pas "on".@Moi, c'est "Rebecca", et je passe.
 player = militaryman = For me, it's not "we." @For me, it's "Rebecca," and I'm going through.
 militaryman = player = guard = J'ai dit "non".
@@ -53,7 +53,7 @@ player = militaryman = happy_var = That's right. Let the princess through. And d
 player = militaryman = happy_var = Je dois voir YY.
 player = militaryman = happy_var = I need to see YY.
 militaryman = player = guard = On ne passe pas.
-militaryman = player = guard = No way
+militaryman = player = guard = You shall not pass.
 player = militaryman = worry = Il n'y a pas quelque chose que je peux faire@pour te convaincre de me laisser passer ?
 player = militaryman = worry = Isn't there anything I can do to convince you to let me through?
 militaryman = player = guard = Aide 10 de mes frères d'armes, et le chef ne verra@aucune objection à ce que je t'ouvre le passage.

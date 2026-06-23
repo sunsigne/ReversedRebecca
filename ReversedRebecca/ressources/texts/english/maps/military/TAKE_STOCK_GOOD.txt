@@ -5,7 +5,7 @@ player = object = happy_var = I need to help ten soldiers. There are fourteen@of
 
 % HELPED_ENOUGH_PEOPLE
 player = object = asleep = Let's see…
-player = object = determined = I've helped enough people. I can access YY's tower.@Let's pay him a visit.
+player = object = determined = I've helped enough people.@I can access YY's tower. Let's pay him a visit.
 
 
 % ROMEO_NO_INFO

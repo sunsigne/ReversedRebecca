@@ -1,0 +1,2 @@
+% PRISONNER_NO_HELP
+player = DOWN = sad = (I'm not sure I should help her… Let's just say@it counts.)

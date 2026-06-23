@@ -1,14 +1,9 @@
 % MISSION
-player = object = unhappy_var = Tu es certaine qu'on a le droit d'être ici ?
 player = object = unhappy_var = Are you sure we're allowed to be here?
-object = player = happy = Seulement toi. L'autorisation spéciale qu'on a eu@n'est valable que pour une seule personne.
-object = player = happy = Just you. The special authorization we got@is only valid for one person.
-object = player = happy_var = Une chance que Novatech ait les faveurs du gou-@vernement, depuis qu'on a la charge du casque.
-object = player = happy_var = It's a good thing Novatech is in the government's@good graces, ever since we took charge of the headset.
+object = player = happy = Just you. The special authorization we got is@only valid for one person.
+object = player = happy_var = It's a good thing Novatech has the government's@favor, since we’ve been in charge of the helmet.
 
 
 % MISSION_NEXT
-object = UP = happy_var = Bien ! Les quartiers du chef Y sont juste devant.
-object = UP = happy_var = Right! Chief Y's quarters are just up ahead.
-object = player = happy_var = De mon côté, je vais travailler jusque tard à l'atelier.@Alors bonne chance, et à demain matin.
+object = UP = happy_var = Well! Chief Y's quarters are just up ahead.
 object = player = happy_var = As for me, I'll be working late at the workshop.@So good luck, and see you tomorrow morning.

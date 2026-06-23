@@ -1,44 +1,42 @@
 % FRESH_MEAT
-object = DOWN = sadistic = Qu'est-ce qu'on a là ? De la viande fraîche ?@Fait comme tous les autres, fuis.
 object = DOWN = sadistic = What do we have here? Fresh meat?@Do like all the others: run away.
 
 
 % LEAVING
-object = DOWN = sad_hidden = C'est bien ce que je pensais… Tous les mêmes.
-object = DOWN = sad_hidden = Just as I thought... They're all the same.
+object = DOWN = sad_hidden = Just as I thought… They're all the same.
 
 
 % STAYING
-object = DOWN = skeptical = Tu restes ?
 object = DOWN = skeptical = You're staying?
 
 
 % COMING_BACK
-object = DOWN = skeptical = Tu es revenue ?
 object = DOWN = skeptical = You came back?
 
 
 % STAYING_OR_COMING_BACK
-object = DOWN = sadistic = Je pourrais te faire du mal… Bouh !
-object = DOWN = sadistic = I could hurt you... Boo!
-player = UP = happy = Je ne pense pas que tu sois réellement méchant…@Tu te donnes probablement un genre.
-player = UP = happy = I don't think you're actually mean...@You're probably just putting on an act.
-object = DOWN = mad = Oh… Un jugement. Que c'est surprenant…
-object = DOWN = mad = Oh... A judgment. How surprising...
-object = DOWN = skeptical = Mais est-ce que tu crois seulement à ce que tu dis ?
+object = DOWN = sadistic = I could hurt you… Boo!
+player = UP = happy = I don't think you're actually mean…@You're probably just putting on an act.
+object = DOWN = mad = Oh… A judgment. How surprising…
 object = DOWN = skeptical = But do you even believe what you're saying?
 
 
 % CHOICE_PRISONNER_NO
-object = DOWN = skeptical = Mouais… Je m'en doutais. Tu es comme les autres.
-object = DOWN = skeptical = Yeah... I figured. You're just like the others.
-object = DOWN = skeptical = Dégage, avant que je te fasse mal.
+object = DOWN = skeptical = Yeah… I figured. You're just like the others.
 object = DOWN = skeptical = Get lost, before I hurt you.
 
 
 % PRISONNER_NO_HELP
-player = DOWN = sad = (Je ne suis pas certaine que je doive l'aider…@On va dire que ça compte.)
-player = DOWN = sad = (I'm not sure I should help him...@Let's just say it counts.)
+player = DOWN = sad = (I'm not sure I should help him… Let's just say@it counts.)
+
+
+
+
+
+
+
+
+
 
 
 % CHOICE_PRISONNER_YES

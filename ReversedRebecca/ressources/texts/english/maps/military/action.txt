@@ -59,7 +59,7 @@ HERE_ARE_THE_SOCKS = Key2 % here are the socks
 
 EXERCICE = Key2 % exercice
 GIVE_HIM_THE_SHOVEL = Key2 % give him the shovel
-A_WEAPON = Key1 % a firearm ?
+A_WEAPON = Key1 % a weapon?
 LET_GO = Key1 % let go
 INSULT_HIM = Key2 % insult him
 DO_ONE_PUSHUP = Key1 % do 1 pushup

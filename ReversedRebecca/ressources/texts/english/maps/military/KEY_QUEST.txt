@@ -53,7 +53,7 @@ player = LEFT = worry = It's empty.
 
 % SHOWER_FOUR
 player = RIGHT = unhappy_var = … À part du savon, rien.
-player = RIGHT = unhappy_var = … Apart from soap, nothing.
+player = RIGHT = unhappy_var = … Nothing but soap.
 
 
 % SHOWER_AFTER_ALL_FOUR
