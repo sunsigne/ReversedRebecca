@@ -49,16 +49,7 @@
 		- fichier visuel, évidemment
 		- les animations
 		- tester
-	
-	jessy :
-		- fichier visuel (dialogues + policier plus mince)
-	
-		lvl002 :
-			- tester
-		lvl003 :
-			- les animations (il n'y a que l'étranglement)
-			- tester
-		
+
 	roméo =
 		- dialogues
 		- voix
@@ -79,6 +70,7 @@
 		- romeo
 		- dupont
 		- nancy
+		- jessy
 	
 	////////// MILITARY ////////////
  	

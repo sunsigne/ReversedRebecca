@@ -1,7 +1,7 @@
 % PLAN_KEY
 sarah = player = happy_var = Ça y est ! J'ai une idée.
 player = sarah = excited = Ha oui ?
-sarah = player = happy = Tu vois le policir à l'accueil ? Je vais le distraire.@Toi, tu vas passer par la porte derrière lui.
+sarah = player = happy = Tu vois le policier à l'accueil ? Je vais le distraire.@Toi, tu vas passer par la porte derrière lui.
 sarah = player = laugh = Une fois de l'autre côté, tu cherches des@informations sur Vladimir, puis tu ressors avec !
 player = sarah = worry = Ok, mais … je cherche quoi, exactement ?
 sarah = player = laugh = Si on est logique, tu trouveras forcement@quelque chose dans les archives.
