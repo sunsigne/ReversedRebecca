@@ -1,0 +1,9 @@
+% HERE_ARE_THE_SOCKS
+object = player = stupid = Perfect! I'm going to extract the active ingredient.@Do you have a pill on you, to contain it?
+player = object = no_sens = You… didn't ask me to find one…
+object = player = smile = I didn't azk you to breathe either. There are zome@thingz we do because they're obviouz.
+object = LEFT = stupid = I'm sure Nolan will help you find one.@Go see him in the infirmary.
+object = player = smile = You know what? I'll use one of mine.@My muzcle tonic is ready anyway.
+object = player = happy = There! I've been amazing thiz time!@All I need now iz…
+object = player = serious = nathan_dead_serious_voice = …a guinea pig.
+object = player = happy = I invite you to ztay here. I'll be back in a zecond.
