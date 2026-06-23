@@ -1,6 +1,6 @@
 % INTRODUCTION
 policeman = DOWN = archer = Donc, pour résumer votre histoire :
-policeman = DOWN = archer = Un certain Vladimir Wolanski est venu@ce jour, à l'adresse indiqué, et a cassé la porte…
+policeman = DOWN = archer = Un certain Vladimir Wolanski est venu@ce jour, à l'adresse indiquée, et a cassé la porte…
 sarah = UP = angry = … a fait EXPLOSER la porte !
 policeman = DOWN = archer = Oui… oui… a cassé la porte avec des boum-boum@de kermesse et est parti en emportant des feuilles…
 sarah = UP = angry_var = … les plans confidentiels d'un projet@gouvernemental !
@@ -15,7 +15,7 @@ sarah = player = angry = Viens Rebecca. On s'en va.
 
 
 % WHAT_NOW
-player = sarah = no_sens = Et maitenant ?
+player = sarah = no_sens = Et maintenant ?
 sarah = player = angry = Suis-moi.
 
 

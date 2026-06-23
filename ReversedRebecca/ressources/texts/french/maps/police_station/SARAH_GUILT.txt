@@ -18,14 +18,14 @@ sarah = player = unhappy = Ce que je dis, c'est qu'il y avait peut-être@un autr
 
 
 % GUILT_TRIP_NEXT
-sarah = player = cry = Je suis désolé, Rebecca…@Pardon de t'avoir entrainé là-dedans…
+sarah = player = cry = Je suis désolée, Rebecca…@Pardon de t'avoir entrainé là-dedans…
 player = sarah = worry = Hey… C'était ma décision de te suivre.@Tu n'as pas à te reprocher mes choix.
 player = sarah = excited = Et puis regarde, j'ai la classe en uniforme !
 sarah = player = cry_var = Pfff, t'es bête.
 
 
 % GUILT_TRIP_NEXT_VAR
-sarah = player = cry = Je suis désolé, Rebecca…@Pardon de t'avoir entrainé là-dedans…
+sarah = player = cry = Je suis désolée, Rebecca…@Pardon de t'avoir entrainé là-dedans…
 player = sarah = worry = Hey… C'était ma décision de te suivre.@Tu n'as pas à te reprocher mes choix.
 player = sarah = excited = Et puis, faire exploser des murs, c'est amusant !
 sarah = player = cry_var = Pfff, t'es bête.

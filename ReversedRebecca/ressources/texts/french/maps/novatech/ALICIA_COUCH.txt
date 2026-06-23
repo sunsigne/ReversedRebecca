@@ -1,5 +1,5 @@
 % THEFT
-alicia = player = happy = Désolé, je ne sais rien à ce sujet.
+alicia = player = happy = Désolée, je ne sais rien à ce sujet.
 
 
 % NEUTRAL

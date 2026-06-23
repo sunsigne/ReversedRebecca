@@ -14,7 +14,7 @@ player = DOWN = angry_var2 = Mais quel connard !
 
 
 % SARAH
-sarah = rebecca = worry = Désolé. Je ne sais pas où elle est.
+sarah = rebecca = worry = Désolée. Je ne sais pas où elle est.
 
 
 % SARAH_VAR
@@ -45,7 +45,7 @@ player = object = unhappy = Je suis sérieuse, Marie…@Son bureau a été attaq
 marie = player = surprised = Qu… Quoi ? Attaqué ?
 marie = player = surprised_var = Est-ce qu'elle va bien ?
 player = object = unhappy_var = C'est justement ce que j'essaie de savoir.@Une idée d'où elle peut être ?
-marie = player = surprised_var = Heu… N… non désolé.
+marie = player = surprised_var = Heu… N… non désolée.
 marie = player = surprised_var = … Donne-moi quelques minutes…@… J'accuse le coup.
 player = object = unhappy = Je… ne voulais pas t'inquiéter ?
 marie = player = surprised_var = (… Hein ?)
@@ -57,7 +57,7 @@ player = object = laugh = Oui !
 % MARIE_HELP
 marie = player = surprised_var = Quoi ? Enfermée dans le SAS ?
 player = object = unhappy = Oui. Tu crois pouvoir m'aider à la libérer ?
-marie = player = unhappy_var = Je suis sincèrement désolé, Rebecca.@Je n'ai aucune idée de comment l'ouvrir.
+marie = player = unhappy_var = Je suis sincèrement désolée, Rebecca.@Je n'ai aucune idée de comment l'ouvrir.
 marie = player = unhappy = Peut-être que Delta saura t'aider ?@Essaie d'aller la voir dans son bureau.
 player = object = happy_var = D'accord, merci.
 
@@ -136,7 +136,7 @@ player = miaka = worry = C'est parce que je ne m'y suis pas bien prise.@Attend, 
 player = miaka = you_silly_var = Hum… Hum…
 player = miaka = cry_var = Aide-moi !
 player = miaka = laugh = Ho mon Dieu ! Je l'ai trop bien faite !
-player = miaka = happy = Plus sérieusement, tu vas m'aider maitenant ?
+player = miaka = happy = Plus sérieusement, tu vas m'aider maintenant ?
 miaka = player = serious_var = J'applaudis l'effort, mais c'est toujours non.
 miaka = player = serious = Je dois dégager la sortie.@Demande à quelqu'un d'autre.
 player = miaka = worry = Ok, j'ai compris… Tant pis.

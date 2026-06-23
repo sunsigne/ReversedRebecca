@@ -14,6 +14,20 @@
 	
 	////////// BUG ////////////
 
+	RR000 - pb pathfinding lessive depuis le panier
+	LVL002 - succès commotion+ impossible (game over avant)
+	LVL003
+		- cacti avec Nancy
+		- Nancy traverse le mur de la bombe
+		- bonus texte de Nancy incohérent (pour le joueur il est écrit "bombes vertes", mais pour Nancy il est écrit "bombe cyan") + dialogue incohérent de Rebecca qui dit que c'est les même bombes. Elle devrait dire que ces bombes ne sont pas très différente des siennes
+		- on peut manger le repas juste après la cutscene de Jessy (ce qui est plutot étrange)
+		- TA d'origine de Nancy relancé sans le vouloir, soit après qu'on ai aidé 10 personnes, soit, plus probablement, une fois qu'on a parlé à Cassidy
+		- les escalier de la tour sont trop approximatifs (Venom a galéré à descendre)
+		- "ça y est, j'ai aidé 10 personnes" s'affiche à chaque personne aidée au delà de 10. En plus, ça s'affiche aux mauvais moment (cuisinier, prisonnier, etc)
+				- bug si nathan OU l'idiot OU le shooter est le 10ème aidé ? (presque sûr pour Nathan. Essayer les autres)
+				- bug si cuisinère aidé en 10ème. D'une manière générale, s'assurer qu'avoir aidé 10 personne se valide APRES les dialogues
+				
+
 	////////// TEMP ////////////
 
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
@@ -85,8 +99,6 @@
 		Pour Amir, idée de traduction de "chouquette" -> "honey" ?
 
 	bug :
-	- bug si nathan OU l'idiot OU le shooter est le 10ème aidé ? (presque sûr pour Nathan. Essayer les autres)
-	- bug si cuisinère aidé en 10ème. D'une manière générale, s'assurer qu'avoir aidé 10 personne se valide APRES les dialogues
 
 	à faire à la fin : 
 	- remplasser le système de karma de l'écran de fin de niveau

@@ -1,4 +1,4 @@
 % JESSY_YELLING_AT_SARAH
 jamessy = DOWN = angry_var = Au nom de la loi, je vous somme d'arrêter !
-sarah = UP = laugh = Désolé monsieur, c'était un accident.
+sarah = UP = laugh = Désolée monsieur, c'était un accident.
 sarah = UP = sad = (Rebecca… Qu'est-ce que tu fiches@à nous regarder… Dépêche-toi…)

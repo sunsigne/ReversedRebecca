@@ -1,0 +1,3 @@
+% SHOWER
+object = player = blush = Tu veux venir avec moi, ou quoi ?
+object = player = deep_blush = Désolée, mais ce qu'il va se passer ici est très…@privé.

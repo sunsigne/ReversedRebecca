@@ -4,7 +4,7 @@ policeman = player = miaouss = Sortez d'ici.
 
 
 % PLAYER_SPOTTED_MIAOUSS_IN_CORRIDOR
-policeman = player = miaouss = … Madame, vous n'avez rien à faire ici.@Veuillez circulez.
+policeman = player = miaouss = … Madame, vous n'avez rien à faire ici.@Veuillez circuler.
 
 
 % PLAYER_SPOTTED_MIAOUSS_SECOND_INTRUSION
