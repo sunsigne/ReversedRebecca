@@ -33,8 +33,7 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		if (World.get() == null)
 			drawRebeccasRoom();
 
-		if (title_img == null)
-			drawTitle();
+		getImage();
 	}
 
 	private void drawRebeccasRoom() {
@@ -42,8 +41,11 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		new PlayerFinder().setUserAllowedToControlPlayer(false);
 	}
 
-	private void drawTitle() {
-		title_img = new ImageTask().loadImage("textures/menu/" + "title");
+	@Override
+	protected BufferedImage getImage() {
+		if (title_img == null)
+			title_img = new ImageTask().loadImage("textures/menu/" + "title");
+		return title_img;
 	}
 
 	////////// RENDER ////////////

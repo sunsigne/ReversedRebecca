@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.menu;
 
+import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -23,6 +24,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 public abstract class SuperMenuScreen implements Updatable, TickFree, GamepadEvent, MousePreseting {
 
 	public SuperMenuScreen(PresetMousePos defaultPreset) {
+		getImage();
 		LAYER.MENU.getHandler().clear();
 		LAYER.MENU.addObject(this);
 		loadGamepadSetup(defaultPreset);
@@ -40,7 +42,11 @@ public abstract class SuperMenuScreen implements Updatable, TickFree, GamepadEve
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.MENU;
 	}
-	
+
+	////////// TEXTURE ////////////
+
+	protected abstract BufferedImage getImage();
+
 	////////// PRESET MOUSE POS ////////////
 
 	protected HashMap<PresetMousePos, ButtonObject> buttons = new HashMap<>();

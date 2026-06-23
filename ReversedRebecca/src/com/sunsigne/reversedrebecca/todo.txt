@@ -94,11 +94,9 @@
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
-	1h les menu clignottent lorsqu'ils sont refresh, à corriger !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 
 	note : puzzle : cliquer = impact
-
 
 	////////// RR000 ////////////
 

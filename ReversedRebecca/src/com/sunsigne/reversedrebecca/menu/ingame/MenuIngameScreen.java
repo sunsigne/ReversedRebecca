@@ -23,6 +23,7 @@ public abstract class MenuIngameScreen extends SuperMenuScreen {
 
 	private BufferedImage image;
 
+	@Override
 	protected BufferedImage getImage() {
 		if (image == null) {
 			image = new ImageTask().loadImage("textures/menu/" + getName(), true);

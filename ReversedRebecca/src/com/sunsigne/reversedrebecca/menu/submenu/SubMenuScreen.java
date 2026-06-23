@@ -74,6 +74,7 @@ public abstract class SubMenuScreen extends MenuScreen {
 
 	private BufferedImage image;
 
+	@Override
 	protected BufferedImage getImage() {
 		if (image == null) {
 			image = new ImageTask().loadImage("textures/menu/" + getName(), true);
