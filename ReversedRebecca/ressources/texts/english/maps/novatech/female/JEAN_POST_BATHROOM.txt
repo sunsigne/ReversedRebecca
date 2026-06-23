@@ -2,7 +2,7 @@
 player = object = happy = Hey, I'm looking for an outing.@Where would you go?
 jean = player = unhappy = Isn't Mia clearing the entrance?
 player = object = worry = Yes, but I want to help in my own way.
-jean = player = unhappy = Then I'd go and encourage him, if I were you.
+jean = player = unhappy = Then I'd go and encourage her, if I were you.
 player = object = no_sens = … That's it?
 jean = player = happy = Why not?
 player = object = laugh = Because that won't be enough, obviously!

@@ -1,127 +1,100 @@
 % GOOD
-player = object = asleep = Voyons voir…
 player = object = asleep = Let's see…
-player = object = happy_var = Je dois aider dix militaires.@Ils sont quatorze, si on ne compte pas le garde.
-player = object = happy_var = I need to help ten soldiers.@There are fourteen of them, not counting the guard.
+player = object = happy_var = I need to help ten soldiers. There are fourteen@of them, not counting the guard.
 
 
 % HELPED_ENOUGH_PEOPLE
-player = object = asleep = Voyons voir…
 player = object = asleep = Let's see…
-player = object = determined = J'ai aidé suffisamment de monde. Je peux accéder@à la tour de Double-Y. Rendons-lui une petite visite.
-player = object = determined = I've helped enough people. I can access@Double-Y's tower. Let's pay him a visit.
+player = object = determined = I've helped enough people. I can access YY's tower.@Let's pay him a visit.
 
 
 % ROMEO_NO_INFO
-player = object = happy = Je n'ai pas aidé le prisonnier en isolement.@Je suis curieuse de connaître sa demande.
-player = object = happy = I haven't helped the prisoner in solitary confinement.@I'm curious to know what he wants.
+player = object = happy = I didn't help the prisoner in solitary confinement.@I'm curious to know what he wants.
 
 
 % ROMEO_FREEING
-player = object = unhappy_var = Je n'ai pas aidé le prisonnier en isolement.@Est-ce je dois vraiment le libérer ?
-player = object = unhappy_var = I haven't helped the prisoner in solitary confinement.@Do I really have to free him?
+player = object = unhappy_var = I didn't help the prisoner in solitary confinement.@Do I really have to free him?
 
 
 % AMIR_NO_INFO
-player = object = laugh = Je n'ai pas dépanné le cuisinier.@J'y gagnerai peut-être de la nourriture ?
-player = object = laugh = I haven't helped the cook out.@Maybe I'll get some food out of it?
+player = object = laugh = I haven't lent the cook a hand.@Maybe I'll get some food out of it?
 
 
 % AMIR_OIGNON
-player = object = happy_var = Je n'ai pas dépanné le cuisinier. Je dois lui donner@les oignons qui sont dans le stock.
-player = object = happy_var = I haven't helped the cook out. I need to give him@the onions from the stock.
+player = object = happy_var = I haven't lent the cook a hand.@I need to give him the onions from the stock.
 
 
 % RUNNER_NO_INFO
-player = object = unhappy_var = Je n'ai pas conseillé le coureur. J'espère@qu'il ne me demandera pas de faire du sport.
-player = object = unhappy_var = II haven't given the runner any advice. I hope@he doesn't ask me to exercise.
+player = object = unhappy_var = I haven't given the runner any advice.@I hope he won't ask me to exercise.
 
 
 % IDIOT_NO_INFO
-player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Qu'est-ce qu'il cherche à faire ?
-player = object = happy = I haven't guided the idiot who runs in front of the bullets.@What is he trying to do?
+player = object = happy = I haven't guided the idiot who runs in front of@the bullets. What is he trying to do?
 
 
 % IDIOT_MUSCLE_TONIC
-player = object = happy = Je n'ai pas guidé l'idiot qui court devant les balles.@Je dois lui donner le fortifiant du scientifique.
-player = object = happy = I haven't guided the idiot who runs in front of the bullets.@I need to give him the scientist's tonic.
+player = object = happy = I haven't guided the idiot who runs in front of the@bullets. I need to give him the scientist's tonic.
 
 
 % SHOOTER_NO_INFO
-player = object = no_sens = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer. Il a peur de quelque chose ?
-player = object = no_sens = I haven't supported the soldier at the shooting range@who is hesitating to fire. Is he afraid of something?
+player = object = no_sens = I haven't supported the soldier who is hesitating@to fire. Is he afraid of something?
 
 
 % SHOOTER_IDIOT
-player = object = worry = Je n'ai pas soutenu le militaire sur le stand de tir@qui hésite à tirer. En aidant l'idiot, ça devrait aller.
-player = object = worry = I didn't back up the soldier at the shooting range@who was hesitating to fire. Helping the idiot out should be fine.
+player = object = worry = I didn't supported the soldier who is hesitating@to fire. Helping the idiot out, should do the trick.
 
 
 % SERGENT_NO_INFO
-player = object = worry = Je n'ai pas épaulé le sergent.@J'espère qu'il ne m'en demandera pas trop.
 player = object = worry = I didn't back up the sergeant.@I hope he doesn't ask too much of me.
 
 
 % JESSY_NO_INFO
-player = object = happy = Je n'ai pas secondé la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
-player = object = happy = I didn't help the sharpshooting soldier.@I don't know what she wants.
+player = object = happy = I didn't served the sharpshooting soldier.@I don't know what she wants.
 
 
 % JESSY_BOMBS
-player = object = sad = Je n'ai pas secondé la militaire qui tire dans le mille.@Est-ce que je veux vraiment lui donner ses bombes ?
-player = object = sad = I didn't help the sharpshooting soldier.@Do I really want to give her the bombs?
+player = object = sad = I didn't served the sharpshooting soldier.@Do I really want to give her the bombs?
 
 
 % NANCY_NO_INFO
-player = object = excited = Je n'ai pas rencontré l'infirmière.@Je suis curieuse de ce qu'elle pourrait vouloir.
 player = object = excited = I haven't met the nurse.@I'm curious about what she might want.
 
 
 % NATHAN_NO_INFO
-player = object = surprised = Je n'ai pas stimulé le scientifique. Attends…@Comment je sais qu'il existe ? Je ne l'ai jamais vu !
-player = object = surprised = I haven't engaged with the scientist. Wait...@How do I know he exists? I've never seen him!
+player = object = surprised = I haven't engaged with the scientist. Wait…@How do I know he exists? I've never seen him!
 
 
 % NATHAN_ZOCKZ
-player = object = unhappy_var = Je n'ai pas stimulé le scientifique. Je suis censée@lui apporter les chaussettes sales de YY.
-player = object = unhappy_var = I haven't engaged with the scientist. I'm supposed to@bring him YY's dirty socks.
+player = object = unhappy_var = I haven't stimulated the scientist.@I'm supposed to bring him YY's dirty socks.
 
 
 % NATHAN_ONE_ZOCK
-player = object = unhappy_var = Je n'ai pas stimulé le scientifique. Il cherche les@deux chaussettes sales de YY. J'en ai trouvé une.
-player = object = unhappy_var = I haven't engaged with the scientist. He's looking for@YY's two dirty socks. I found one.
+player = object = unhappy_var = I haven't stimulated with the scientist. He's@looking for YY's two dirty socks. I found one.
 
 
 % CASSIDY_NO_INFO
-player = object = laugh = Je n'ai pas assisté la fille devant le billard.@Elle voudra peut-être faire une partie ?
-player = object = laugh = I didn't help the girl by the pool table.@Maybe she wants to play a game?
+player = object = laugh = I didn't assist the girl by the pool table.@Maybe she wants to play a game?
 
 
 % DUPONT_NO_INFO
-player = object = worry = Je n'ai pas orienté le militaire à côté des barbelés@sur le camp d'entraînement.
-player = object = worry = I didn't direct the soldier near the barbed wire@to the training camp.
+player = object = worry = I didn't direct the soldier near the barbed wire@toward the training field.
 
 
 % TRASHMAN_NO_INFO
-player = object = you_silly_var = Je n'ai pas encadré le taré qui traîne dans les@ordures.
-layer = object = you_silly_var = I didn't look after the nutcase hanging around the@trash.
+player = object = you_silly_var = I didn't look after the nutcase hanging around@the trash.
 
 
 % TRASHMAN_TRASHES
-player = object = no_sens = Je dois amener trois déchets à l'ordurier,@mais je trouve ça où à part dans la décharge ?
-player = object = no_sens = I need to bring three pieces of trash to the trash guy,@but where can I find them besides the dump?
+player = object = no_sens = I need to bring 3 pieces of trash to the trash guy,@but where can I find them besides the dump?
 
 
 % JANITOR_NO_INFO
-player = object = happy = Je n'ai pas éclairé le concierge.@Il me fait penser à Joseph.
-layer = object = happy = I didn't enlighten the janitor.@He reminds me of Joseph.
+player = object = happy = I didn't enlighten the janitor.@He reminds me of Joseph.
 
 
 % JANITOR_CHITCHAT
-player = object = happy = Je n'ai pas éclairé le concierge.@Il veut me parler un peu.
 player = object = happy = I haven't enlightened the janitor.@He wants to have a quick word with me.
 
 
 % SLACKER_NO_INFO
-player = object = laugh = Je n'ai pas aiguillé le dormeur. Je doute d'être utile,@mais je peux quand même vérifier.
-player = object = laugh = I haven't steered the slacker in the right direction. I doubt I'll be of any use,@but I can check anyway.
+player = object = laugh = I haven't steered the slacker in the right direction.@I doubt I'll be of any use, but I still can check.

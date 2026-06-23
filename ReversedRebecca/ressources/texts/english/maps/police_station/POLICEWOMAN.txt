@@ -52,7 +52,7 @@ player = DOWN = happy = No thanks, thank you.
 
 
 % PLAYER_SPOTTED_CASSIDY_WITHIN_DESK_FINAL
-player = DOWN = laugh = Come on. I'll stop bothering her.@I have a mission to pursue.
+player = DOWN = laugh = Enough. I'll stop bothering her.@I have a mission to pursue.
 
 
 % PLAYER_SPOTTED_JESSY_BEHIND_DOOR

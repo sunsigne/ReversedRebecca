@@ -87,7 +87,9 @@
 	à tester :
 
 	à faire :
-		- traduction en anglais
+		traduction en anglais :
+		amir / cassidy / cupcakes / darwin / dupont / guard / idiot / jessy / key_quest / military / nancy / nancy_bombs / nathan / object / romeo / sarah / sergent / take_stock_bad
+		
 		cassidy : "impertinance" = "sassy" ?
 		nancy : maybe i want -> … Do you ? (Vraiment ?) / Ok… Euh… Très bien… (Very well…) Alors…
 		jessy = "une cible à trouer" -> "a target to screw"

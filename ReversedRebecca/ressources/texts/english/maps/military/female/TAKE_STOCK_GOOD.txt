@@ -1,0 +1,22 @@
+% ROMEO_NO_INFO
+player = object = happy = I didn't help the prisoner in solitary confinement.@I'm curious to know what she wants.
+
+
+% ROMEO_FREEING
+player = object = unhappy_var = I didn't help the prisoner in solitary confinement.@Do I really have to free her?
+
+
+% AMIR_OIGNON
+player = object = happy_var = I haven't lent the cook a hand.@I need to give her the onions from the stock.
+
+
+% JESSY_NO_INFO
+player = object = happy = I didn't served the sharpshooting soldier.@I don't know what he wants.
+
+
+% JESSY_BOMBS
+player = object = sad = I didn't served the sharpshooting soldier.@Do I really want to give him the bombs?
+
+
+% NANCY_NO_INFO
+player = object = excited = I haven't met the nurse.@I'm curious about what he might want.

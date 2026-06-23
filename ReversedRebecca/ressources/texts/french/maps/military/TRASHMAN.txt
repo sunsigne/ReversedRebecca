@@ -30,7 +30,8 @@ militaryman = DOWN = trashman = Non… Je crois que je vais un peu rester ici, e
 % NEED_HELP
 object = player = trashman = Je suis chargé de surveiller les ordures.@Personne d'autre que moi n'y touchera.
 player = object = no_sens = Ça n'était pas ma question…@Je t'ai demandé comment je pouvais t'aider.
-object = player = trashman = Tu peux m'aider à entretenir cette décharge :@ramène-moi 3 déchets et je renverrai l'ascesseur.
+object = player = trashman = Tu peux m'aider à entretenir cette décharge :@ramène-moi 3 déchets et je renverrai l'ascenseur.
+
 
 
 % NEED_HELP_REALIZATION
