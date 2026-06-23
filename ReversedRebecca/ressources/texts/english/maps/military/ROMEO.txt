@@ -30,225 +30,138 @@ object = DOWN = skeptical = Get lost, before I hurt you.
 player = DOWN = sad = (I'm not sure I should help him… Let's just say@it counts.)
 
 
-
-
-
-
-
-
-
-
-
 % CHOICE_PRISONNER_YES
-object = DOWN = mad = Vraiment ? Vas-y alors, prouve-le.@Ouvre la porte, si t'es cap.
-object = DOWN = mad = Really? Go ahead then, prove it.@Open the door, if you dare.
+object = DOWN = mad = You do? Go ahead then, prove it.@Open the door, if you dare.
 
 
 % CHOICE_PRISONNER_I_CANT_DO_THAT
-object = DOWN = skeptical = Et pourquoi ?
 object = DOWN = skeptical = And why not?
 
 
 % CHOICE_PRISONNER_ACTUALLY_I_LL_FREE_YOU
-object = DOWN = skeptical = Mouais… Permets-moi d'en douter.
-object = DOWN = skeptical = Yeah... I'll believe that when I see it.
+object = DOWN = skeptical = Yeah… I'll believe that when I see it.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY
-object = DOWN = mad = Si tu es sincère, apporte-moi des bombes vertes.
 object = DOWN = mad = If you're sincere, bring me some green bombs.
-object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
-object = DOWN = sad = Otherwise, never mind. Thanks for keeping me company.
+object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NUMBER_SETTINGS
-object = DOWN = mad = Si tu es sincère, apporte-moi des bombes 2.
-object = DOWN = mad = If you're serious, bring me some Bomb 2s.
-object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
-object = DOWN = sad = If not, oh well. Thanks for keeping me company.
+object = DOWN = mad = If you're sincere, bring me some bombs 2.
+object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB
-object = DOWN = mad = Si tu es sincère, apporte-moi des bombes vertes.
-object = DOWN = mad = If you're serious, bring me some green bombs.
-player = UP = worry = Ça non plus, je ne peux pas.@Je ne sais pas comment m'en servir.
+object = DOWN = mad = If you're sincere, bring me some green bombs.
 player = UP = worry = I can't do that either.@I don't know how to use them.
-object = DOWN = skeptical = Ho ?
 object = DOWN = skeptical = Oh?
-object = DOWN = mad = Voilà l'astuce : il suffit juste de les secouer@avant de les allumer.
 object = DOWN = mad = Here's the trick: you just have to shake them@before lighting them.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB_NUMBER_SETTINGS
-object = DOWN = mad = Si tu es sincère, apporte-moi des bombes 2.
-object = DOWN = mad = If you're serious, bring me some Bomb 2s.
-player = UP = worry = Ça non plus, je ne peux pas.@Je ne sais pas comment m'en servir.
+object = DOWN = mad = If you're sincere, bring me some bombs 2.
 player = UP = worry = I can't do that either.@I don't know how to use them.
-object = DOWN = skeptical = Ho ?
 object = DOWN = skeptical = Oh?
-object = DOWN = mad = Voilà l'astuce : il suffit juste de les secouer@avant de les allumer.
 object = DOWN = mad = Here's the trick: you just have to shake them@before lighting them.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB_NEXT
-object = DOWN = skeptical = Bref, tu me trouveras ici, si tu veux m'aider.
-object = DOWN = skeptical = Anyway, you'll find me here if you want to help
-object = DOWN = sad = Sinon, tant pis. Merci de m'avoir tenu compagnie.
-object = DOWN = sad = If not, oh well. Thanks for keeping me company.
-
-
-
-
-
-
-
-
-
-
-
-
-
+object = DOWN = skeptical = Anyway, you'll find me here if you want to help.
+object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
 
 
 % LUNCHBOX
-object = DOWN = sadistic = Cool ! Remercie Amir de ma part.
 object = DOWN = sadistic = Cool! Thank Amir for me.
-object = DOWN = mad = J'espère qu'il n'a pas lésiné sur la sauce piquante.
 object = DOWN = mad = I hope he didn't skimp on the hot sauce.
 
 
 % LOST_DOOR
-object = DOWN = sadistic = Quelle nulle !
 object = DOWN = sadistic = What a dud!
-player = UP = happy_var = Une seconde, je vais réessayer.
 player = UP = happy_var = Hang on, I'll try again.
 
 
 % LOST_DOOR_AGAIN
-object = DOWN = sadistic = Encore raté.
 object = DOWN = sadistic = Missed again.
-player = UP = happy_var = Ça vient, ça vient. Je dois juste me concentrer.
 player = UP = happy_var = I'm getting there. I just need to focus.
 
 
 % LOST_DOOR_LAST
-object = DOWN = sadistic = T'es une loser.
 object = DOWN = sadistic = You're a loser.
-player = UP = laugh = Je plaide coupable.
 player = UP = laugh = Guilty as charged.
 
 
 % HERES_THE_GREEN_BOMBS
-object = DOWN = sadistic = Joli ! C'est le moment de vérité princesse.@Vas-tu vraiment me libérer ?
 object = DOWN = sadistic = Nice! Moment of truth, Princess.@Are you really going to set me free?
 
 
 % YOU_FREED_ME_INTRO
-object = DOWN = sad = Tu… l'as… vraiment fait ?
 object = DOWN = sad = You… actually… did it?
 
 
+
+
+
+
 % YOU_FREED_ME_INTRO_VAR
-object = DOWN = sad = Tu… m'as… libéré ? Pourquoi ?
 object = DOWN = sad = You… set me… free? Why?
 
 
 % YOU_FREED_ME
-object = DOWN = sad = Tu n'as pas peur de moi ?
 object = DOWN = sad = Aren't you afraid of me?
-player = UP = worry = Je te l'ai dit, je ne pense pas que tu sois@réellement méchant.
-player = UP = worry = Like I said, I don't think you're@actually evil.
+player = UP = worry = Like I said, I don't think you're evil.
 
 
 % YOU_FREED_ME_MUSIC
-object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
 object = DOWN = angry = You have no idea! You don't know what I've done!@Why they locked me up…
-object = RIGHT = sad_var = Pourquoi je mérite d'être enfermé…
 object = RIGHT = sad_var = Why I deserve to be locked up…
-object = DOWN = sad = J'imagine que… je devrais te… dire merci.
 object = DOWN = sad = I guess… I should… say thank you.
-object = DOWN = frustrated = Rah ! Ça m'énerve ! J'ai l'impression de t'en@devoir une ! Et je déteste avoir des dettes.
-object = DOWN = frustrated = Ugh! It drives me crazy! I feel like I@owe you one! And I hate owing people.
-object = DOWN = sad_hidden = Ho regarde ! Une abeille !
+object = DOWN = frustrated = Ugh! It drives me crazy! I feel like@I owe you one! And I hate owing people.
 object = DOWN = sad_hidden = Oh look! A bee!
 
 
 % FREED_TOO_EARLY
-object = DOWN = sad = Tu… m'as… libéré ? Pourquoi ?
 object = DOWN = sad = You… set me… free? Why?
-player = UP = worry = Je ne pense pas que tu sois réellement méchant…@Tu te donnes probablement un genre.
 player = UP = worry = I don't think you're actually mean…@You're probably just putting on an act.
-object = DOWN = angry = Tu n'en sais rien ! Tu ne sais pas ce que j'ai fait !@Pourquoi ils m'ont enfermé…
-object = DOWN = angry = You have no idea! You don't know what I did!@Why they locked me up…
-object = RIGHT = sad_var = Pourquoi je mérite d'être enfermé…
+object = DOWN = angry = You have no idea! You don't know what I've done!@Why they locked me up…
 object = RIGHT = sad_var = Why I deserve to be locked up…
-object = DOWN = skeptical = Bref ! On ne se connait pas, ne va pas@t'imaginer que je t'en dois une.
-object = DOWN = skeptical = Anyway! We don't know each other; don't go@thinking I owe you one
-object = DOWN = mad = Allez, salut.
-object = DOWN = mad = Alright, see ya.
-
-
-
-
-
-
-
-
-
-
-
+object = DOWN = skeptical = Anyway! We don't know each other, don't go@thinking I owe you one.
+object = DOWN = mad = Alright, bye.
 
 
 % FREED_TOO_EARLY_NEXT
-object = RIGHT = sad_var = Un dernier conseil : ne libère pas des inconnus@sans raison… Tu vas t'attirer des ennuis.
-object = RIGHT = sad_var = One last piece of advice: don't free strangers for no reason... You're going to get into trouble.
-object = LEFT = skeptical = On a échangé une seule phrase, ta réaction@n'est pas normale.
-object = LEFT = skeptical = We exchanged just one sentence; your reaction isn't normal.
+object = RIGHT = sad_var = One last piece of advice: don't free strangers@for no reason… You're going to get into trouble.
+object = LEFT = skeptical = We exchanged, like, one sentence.@Your reaction is not normal.
 
 
 % YOU_FREED_ME_NEXT
-object = DOWN = sadistic = Tu as vu ? Je l'ai tué. Tu peux être allergique sans@le savoir. Je t'ai sauvé ! Je ne te dois plus rien.
-object = DOWN = sadistic = Did you see that? I killed him. You can be allergic without knowing it. I saved you! I don't owe you anything anymore.
-object = DOWN = mad = Allez, salut.
-object = DOWN = mad = Anyway, bye.
+object = DOWN = sadistic = Did you see that? I killed it. You may be allergic@without knowing it. I saved you! I owe you nothing.
+object = DOWN = mad = Anyway, see ya.
 
 
 % WANNA_HANG_OUT
-object = LEFT = sad = Ho, heu… C'était chouette.
-object = LEFT = sad = Oh, um... That was nice.
-object = RIGHT = sad_var = Ça te… dirait qu'on… se revoit ?@Pour traîner, tout ça…
-object = RIGHT = sad_var = Would you... like to... see each other again? Just to hang out, and all that...
+object = LEFT = sad = Oh, um… That was nice.
+object = RIGHT = sad_var = Would you… like to… see each other again?@Just to hang out, and stuff…
 
 
 % WANNA_HANG_OUT_NO
-object = RIGHT = sad_hidden = Ouais. Bien sûr. Moi non plus, j'ai pas envie.@J'essayais juste d'être poli, bien sûr.
-object = RIGHT = sad_hidden = Yeah. Sure. I don't want to either. I was just trying to be polite, of course.
-object = RIGHT = sad_var = Adieu, princesse…
-object = RIGHT = sad_var = Goodbye, princess...
+object = RIGHT = sad_hidden = Yeah. Sure. I don't want to either.@I was just trying to be polite, of course.
+object = RIGHT = sad_var = Goodbye, princess…
 
 
 % WANNA_HANG_OUT_YES
-object = RIGHT = sad_hidden = Ouais. Bien sûr. Moi non plus, j'ai pas env…
-object = RIGHT = sad_hidden = Yeah. Sure. I don't want to eith...
-object = RIGHT = skeptical = Attend… Vraiment ?
-object = RIGHT = skeptical = Wait... Really?
-object = RIGHT = mad = C'est sincère, ou tu as peur de ma réaction si@tu dis non ?
-object = RIGHT = mad = Are you being sincere, or are you afraid of my reaction if you say no?
-object = RIGHT = sadistic = Mais c'est trop tard, tu as dit oui. Je te retrouve@chez toi bientôt. Promis, je ne casserai rien.
-object = RIGHT = sadistic = But it's too late; you said yes. I'll see you at your place soon. I promise I won't break anything.
-object = RIGHT = sad_var = Allez, salut princesse…
-object = RIGHT = sad_var = Anyway, bye princess...
+object = RIGHT = sad_hidden = Yeah. Sure. I don't want to eith…
+object = RIGHT = skeptical = Wait… For real?
+object = RIGHT = mad = Are you being sincere, or are you afraid of@my reaction if you say no?
+object = RIGHT = sadistic = But it's too late, you said yes. I'll see you at your@place soon. I promise I won't break anything.
+object = RIGHT = sad_var = Anyway, bye princess…
 
 
 % LUNCHBOX_FAILED
-player = DOWN = no_sens = … J'étais censé lui donner son repas à la base…
-player = DOWN = no_sens = ... I was supposed to give him his meal, originally...
-player = DOWN = you_silly = Bon, j'imagine que je peux aussi bien le manger@et prétendre que je l'ai livré.
-player = DOWN = you_silly = Well, I guess I might as well eat it and pretend I delivered it.
+player = DOWN = no_sens = … Wasn't I supposed to give him his meal?
+player = DOWN = you_silly = Well, I guess I might as well eat it and pretend@I delivered it.
 
 
 % LUNCHBOX_FAILED_VAR
-player = DOWN = no_sens_var = … Une seconde… Le prisonnier, je l'ai libéré@et il est parti !
-player = DOWN = no_sens_var = … Wait a second… I freed the prisoner—and he left!
-player = DOWN = you_silly = Bon, j'imagine que je peux aussi bien manger@son repas et prétendre que je l'ai livré.
-player = DOWN = you_silly = Well, I guess I might as well eat his meal and pretend I delivered it.
+player = DOWN = no_sens_var = Wait a second… I freed the prisoner and he left!
+player = DOWN = you_silly = Well, I guess I might as well eat his meal and@pretend I delivered it.

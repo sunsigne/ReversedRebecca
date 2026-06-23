@@ -1,2 +1,17 @@
 % PRISONNER_NO_HELP
 player = DOWN = sad = (I'm not sure I should help her… Let's just say@it counts.)
+
+
+% LUNCHBOX
+object = DOWN = sadistic = Cool! Thank Miranda for me.
+object = DOWN = mad = I hope she didn't skimp on the hot sauce.
+
+
+% LUNCHBOX_FAILED
+player = DOWN = no_sens = … Wasn't I supposed to give her her meal?
+player = DOWN = you_silly = Well, I guess I might as well eat it and pretend@I delivered it.
+
+
+% LUNCHBOX_FAILED_VAR
+player = DOWN = no_sens_var = Wait a second… I freed the prisoner and she left!
+player = DOWN = you_silly = Well, I guess I might as well eat her meal and@pretend I delivered it.
