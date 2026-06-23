@@ -99,10 +99,6 @@ object = DOWN = sadistic = Nice! Moment of truth, Princess.@Are you really going
 object = DOWN = sad = You… actually… did it?
 
 
-
-
-
-
 % YOU_FREED_ME_INTRO_VAR
 object = DOWN = sad = You… set me… free? Why?
 

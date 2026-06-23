@@ -1,31 +1,22 @@
 % JESSY_WANTS_BOMBS_NEVER_MET
-object = player = excited = Alors comme ça, tu as fait la connaissance de ma@copine ? Enchantée, au fait. Moi, c'est Nancy.
-object = player = excited = So, you've met my @girlfriend? Nice to meet you, by the way. I'm Nancy.
-player = object = happy = J'ai cru comprendre, oui.
+object = player = excited = So, you've met my girlfriend? Nice to meet you,@by the way. I'm Nancy.
 player = object = happy = I thought so, yes.
-object = player = playful = Évidemment, je suis bête… Jessy t'a dit mon nom.
 object = player = playful = Of course, I'm silly… Jessy told you my name.
-object = player = excited = Bon, ne la faisons pas attendre.@Tu m'accompagnes ?
 object = player = excited = Well, let's not keep her waiting. @Will you come with me?
-player = object = happy = Je te suis.
 player = object = happy = I'll follow you.
 
 
 % JESSY_WANTS_BOMBS
-object = player = playful = Ho ? Très bien. J'imagine qu'on peut lui apporter ça.@Tu m'accompagnes ?
-object = player = playful = Oh? Very well. I suppose we can bring her this. @Will you come with me?
-player = object = happy_var = Je te suis.
+object = player = playful = Oh? Very well. I suppose we can bring her this.@Will you come with me?
 player = object = happy_var = I'll follow you.
 
 
 
 % WHAT_DO_YOU_THINK_OF
-nolancy_nancy = rebecca = happy = Alors ? Comment tu trouves Jessy pour l'instant ?
 nolancy_nancy = rebecca = happy = So? What do you think of Jessy so far?
 
 
 % JESSY_IS_AMUSING
-nolancy_nancy = rebecca = playful = N'est-ce pas ? Elle est trop mignonne quand@elle fait sa princesse.
 nolancy_nancy = rebecca = playful = Isn't she? She's so cute when she's playing princess.
 
 
