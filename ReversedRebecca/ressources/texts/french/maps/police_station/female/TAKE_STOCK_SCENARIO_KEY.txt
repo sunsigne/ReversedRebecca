@@ -1,0 +1,15 @@
+% ARCHIVES
+player = object = asleep = Voyons voir…
+player = object = convinced = Grâce à la clef verte, je récupère une pelle cyan.
+player = object = convinced = Grâce à la pelle cyan, je gagne la clef jaune@auprès de mystérieuse détenue.
+
+
+% ARCHIVES_NUMBER_SETTINGS
+player = object = asleep = Voyons voir…
+player = object = convinced = Grâce à la clef 2, je récupère une pelle 1.
+player = object = convinced = Grâce à la pelle 1, je gagne la clef 3@auprès de mystérieuse détenue.
+
+
+% TEDDY_YELLOW_KEY
+player = object = asleep = Voyons voir…
+player = object = sad = Puisque cette criminelle ne veut pas m'aider à accéder@aux archives, je vais devoir demander à un autre…
