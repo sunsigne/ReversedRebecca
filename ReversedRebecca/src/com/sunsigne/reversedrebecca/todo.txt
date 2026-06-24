@@ -87,6 +87,7 @@
 		Pour Amir, idée de traduction de "chouquette" -> "honey" ?
 
 	bug :
+		- ajouter une phrase TA pour dire à l'idiot d'arrêter de passer devant les balles, lorsque le shooter l'a demandé
 		- bonus texte de Nancy incohérent (pour le joueur il est écrit "bombes vertes", mais pour Nancy il est écrit "bombe cyan") + dialogue incohérent de Rebecca qui dit que c'est les même bombes. Elle devrait dire que ces bombes ne sont pas très différente des siennes
 		- on peut manger le repas juste après la cutscene de Jessy (ce qui est plutot étrange)
 		- TA d'origine de Nancy relancé sans le vouloir, soit après qu'on ai aidé 10 personnes, soit, plus probablement, une fois qu'on a parlé à Cassidy
