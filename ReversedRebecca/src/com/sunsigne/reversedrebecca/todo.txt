@@ -26,7 +26,6 @@
 	
 	////////// BUG ////////////
 
-	LVL002 - succès commotion+ impossible (game over avant)
 	LVL003
 		- cacti avec Nancy
 		- Nancy traverse le mur de la bombe
