@@ -38,13 +38,7 @@
 
 	trier les animations & décorations dans des dossiers (et pouvoir piocher dedans automatiquement) + les charger aux lancement d'une map (de la même façon que les textures sont chargées au lancement du jeu)
 	vrai musique de fin de niveau
-	
-	lvl002 - dougly : doug / dolly :
-		- voix
-		- deeds (à faire)
-		- les animations
-		- tester
-		
+			
 	lvl001 - marichel : marie / michel :
 		- fichiers visuels dans $working
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
@@ -68,7 +62,10 @@
 		- tester
 
 	lvl001 - mika : mika / mia
-		- counter & karma
+		- counter & deeds
+		
+	lvl002 - dougly : doug / dolly :
+		- voix & deeds
 	
 	////////// MILITARY ////////////
  	
