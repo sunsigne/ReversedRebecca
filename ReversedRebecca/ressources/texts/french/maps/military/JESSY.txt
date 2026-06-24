@@ -36,6 +36,10 @@ player = DOWN = angry_var2 = Franchement, l'envie y est !
 object = RIGHT = dreaming = Non, merci. Elles ne sont pas de la bonne couleur.@Retournes-y et arrange-moi ça.
 
 
+% HERES_THE_BOMBS_NUMBER
+object = RIGHT = dreaming = Non, merci. Elles n'ont pas le bon numéro.@Retournes-y et arrange-moi ça.
+
+
 % BOMB_NANCY
 object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis à Nancy d'y aller.
 

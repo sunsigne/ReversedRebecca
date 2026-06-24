@@ -1,0 +1,25 @@
+% BOMB_NANCY
+object = player = sadistic_happy = Nah, you know what? I've changed my mind.@Tell Nolan to go.
+
+
+% POST_LIE
+object = player = doubt = Is your name Nolan?
+player = object = unhappy = He doesn't want to go.
+object = player = angry_var2 = Excuse me?! I'll sort this out with him later.@Now, get lost.
+
+
+% RENDEZ_VOUS
+jamessy = player = deep = Well, miss, you're pretty much my type…@I'm quite tempted to use my handcuffs on you.
+jamessy = player = wink = Meet me in a few minutes behind the cold room.
+jamessy = nolancy = sadistic_smirk = Come with me, Nolan.@We need to clear some things up.
+
+
+% HARD_SEDUCING_NEUTRAL
+object = player = deep = Well, well… So, you hang out with my Nolan?
+
+
+% HARD_SEDUCING_NEXT
+object = player = deep_provocative = Do you like punishments? Because I really want@to explain a thing or two to you, as we speak.
+object = player = deep = But I'm going to behave myself too,@at least for now.
+object = player = deep_provocative = I talked to Nolan, we decided to both come over@to your place, tonight.
+object = player = aroused = So see you soon, my little possession.

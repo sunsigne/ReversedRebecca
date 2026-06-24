@@ -1,138 +1,108 @@
 % THATS_DANGEROUS
-object = player = angry = Et alors ? Ceux qui passent devant une arme@chargée méritent de se prendre une balle…
-object = player = angry = So what? Anyone who walks past a loaded gun deserves to get shot…
-object = player = doubt = Et puis ça va, je fais attention. Ni toi ni l'autre idiot@ne finiront blessés. Je sais ce que je fais.
-object = player = doubt = It's fine, I'm careful. Neither you nor that other idiot will end up hurt. I know what I'm doing.
+object = player = angry = So what? Anyone who walks past a loaded gun@deserves to get shot…
+object = player = doubt = Anyway, it's fine. I'm careful. Neither you nor that@other idiot will end up hurt. I know what I'm doing.
 
 
 % THATS_BAD_OR_FUN
-object = player = sadistic_happy = Je ne t'ai pas demandé ton avis, la bleue.@D'ailleurs, j'ai envie d'une bombe. Apporte-moi ça.
-object = player = sadistic_happy = I didn't ask for your opinion, Blue. @Besides, I want a bomb. Bring it to me.
+object = player = sadistic_happy = I didn't ask for your opinion, rookie.@Besides, I want a bomb. Bring it to me.
 
 
 % NEED_HELP
-object = player = sadistic_happy = Puisque tu demande, j'ai envie d'une bombe.@Apporte-moi ça.
-object = player = sadistic_happy = Since you asked, I want a bomb. @Bring it to me.
+object = player = sadistic_happy = Since you asked, I want a bomb. Bring it to me.
 
 
 % GO_GET_IT_YOURSELF
-object = player = dreaming = Tu m'as probablement mal entendue…
 object = player = dreaming = You probably misheard me…
-object = player = angry_var2 = J'ai dit : apporte-moi une bombe !
 object = player = angry_var2 = I said: bring me a bomb!
 
 
 % YES_MAAM
-object = player = doubt = Ah, tu y vas vraiment ?@Très bien, je t'attends alors.
-object = player = doubt = Oh, you're really going? @Fine, I'll wait for you then.
+object = player = doubt = Oh, you're really going?@Good, I'll wait for you then.
 
 
 % IN_YOUR_DREAMS
-object = RIGHT = angry = Pfff. T'es pas marrante. Allez, dégage.@J'ai une cible à trouer.
-object = RIGHT = angry = Pfft. You're no fun. Go away. @I have a target to shoot
+object = RIGHT = angry = Pfft. You're no fun. Go away.@I have a target to punch holes in.
 
 
 % APOLOGIZE
-object = RIGHT = dreaming = Qu'entends-je ? Qu'ouïe-je ? Peut-être qu'une@bombe m'aiderait à me déboucher les oreilles.
-object = RIGHT = dreaming = What do I hear? What do I hear? Maybe a @bomb would help unblock my ears.
+object = RIGHT = dreaming = What is this that reaches my ears? Maybe a@bomb would help unclog them out.
 
 
 % BLOW_HER_FACE_OFF
-player = DOWN = angry_var2 = Franchement, l'envie y est !
-player = DOWN = angry_var2 = Honestly, I'm tempted
+player = DOWN = angry_var2 = Honestly, I'm tempted!
 
 
 % HERES_THE_BOMBS
-object = RIGHT = dreaming = Non, merci. Elles ne sont pas de la bonne couleur.@Retournes-y et arrange-moi ça.
-object = RIGHT = dreaming = No, thank you. They're not the right color. @Go back and fix them for me.
+object = RIGHT = dreaming = No, thanks. They're not the right color.@Go back and sort it out for me.
+
+
+% HERES_THE_BOMBS_NUMBER
+object = RIGHT = dreaming = No, thanks. They don't have the right number.@Go back and sort it out for me.
 
 
 % BOMB_NANCY
-object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis à Nancy d'y aller.
-object = player = sadistic_happy = Nah, you know what? I've changed my mind. @Tell Nancy to go.
+object = player = sadistic_happy = Nah, you know what? I've changed my mind.@Tell Nancy to go.
 
 
 % NANCY_IS_INDISPOSED
-object = RIGHT = doubt = J'ai raté la partie où c'est mon problème.
-object = RIGHT = doubt = I missed the part where this is my problem.
+object = RIGHT = doubt = I missed the part where that's my problem.
 
 
 % WHO_IS_NANCY
-object = RIGHT = doubt = Regarde dans l'infirmerie.
 bject = RIGHT = doubt = Look in the infirmary.
 
 
 % POST_LIE
-object = player = doubt = Tu t'appelles Nancy ?
 object = player = doubt = Is your name Nancy?
-player = object = unhappy = Elle ne veut pas y aller.
-layer = object = unhappy = She doesn't want to go.
-object = player = angry_var2 = Pardon ?! Je réglerai ça avec elle plus tard.@Maintenant, dégage.
-object = player = angry_var2 = Excuse me?! I'll sort this out with her later. @Now get out.
+player = object = unhappy = She doesn't want to go.
+object = player = angry_var2 = Excuse me?! I'll sort this out with her later.@Now, get lost.
 
 
 % RENDEZ_VOUS
-jamessy = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J'ai assez envie d'utiliser mes menottes sur toi.
-jamessy = player = deep = Well, miss, you're more my type…@I'm quite tempted to use my handcuffs on you.
-jamessy = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
-jamessy = player = wink = Meet me in a few minutes behind @the cold room.
-jamessy = nolancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
+jamessy = player = deep = Well, miss, you're pretty much my type…@I'm quite tempted to use my handcuffs on you.
+jamessy = player = wink = Meet me in a few minutes behind the cold room.
 jamessy = nolancy = sadistic_smirk = Come with me, Nancy.@We need to clear some things up.
 
 
 % NANCY_NOT_NOW
-nolancy = LEFT = happy = Hey ! C'est une conversation privée.
 nolancy = LEFT = happy = Hey! This is a private conversation.
 
 
 % REQUEST_A_FIREARM
-nolancy = LEFT = excited = C'est mort !
 nolancy = LEFT = excited = No way!
 
 
 % EAVESDROPPING
-object = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
-object = LEFT = doubt = Am I dreaming, or are you eavesdropping?
-object = LEFT = deep = Vilaine fille… Tu vas voir.
+object = LEFT = doubt = Are you seriously eavesdropping?
 object = LEFT = deep = Naughty girl… You'll see.
 
 
 % HARD_SEDUCING_EAVESDROPPING
-object = player = deep = Alors comme ça, on écoute aux portes ?
-object = player = deep = Well, well... so, you're eavesdropping?
+object = player = deep = Well, well… So, you're eavesdropping?
 
 
 % HARD_SEDUCING_BOMBS
-object = player = deep = Alors comme ça, tu me fais répéter quand je te@demande quelque chose ?
-object = player = deep = Well, well... so, you make me repeat myself when I ask you something?
+object = player = deep = Well, well… So, you make me repeat myself@when I ask you something?
 
 
 % HARD_SEDUCING_WAITING
-object = player = deep = Alors comme ça, on me fait attendre ?
-object = player = deep = Well, well... so, you make me wait?
+object = player = deep = Well, well… So, you make me wait?
 
 
 % HARD_SEDUCING_NEUTRAL
-object = player = deep = Alors comme ça, on traîne avec ma Nancy ?
-object = player = deep = Well, well... so, you hang out with my Nancy?
+object = player = deep = Well, well… So, you hang out with my Nancy?
 
 
 % HARD_SEDUCING_NEXT
-object = player = deep_provocative = Tu aimes les punitions ? Parce que j'ai bien envie@de t'expliquer un truc ou deux, là tout de suite.
-object = player = deep_provocative = Do you like punishments? Because I really want to explain a thing or two to you right now.
-object = player = deep = Mais je vais rester sage moi aussi, en tout cas@pour le moment.
-object = player = deep = But I'm going to behave myself too, at least for now.
-object = player = deep_provocative = J'ai parlé à Nancy, on a décidé de passer@toutes les deux chez toi, ce soir.
-object = player = deep_provocative = I talked to Nancy, we decided to both come over to your place tonight.
-object = player = aroused = Alors à bientôt, ma chose.
-object = player = aroused = So see you soon, my dear.
+object = player = deep_provocative = Do you like punishments? Because I really want@to explain a thing or two to you, as we speak.
+object = player = deep = But I'm going to behave myself too,@at least for now.
+object = player = deep_provocative = I talked to Nancy, we decided to both come over@to your place, tonight.
+object = player = aroused = So see you soon, my little possession.
 
 
 % REBECCA_IS_HAVING_A_BLAST
-player = DOWN = blush_var = Wow !
 player = DOWN = blush_var = Wow!
 
 
 % NOT_NOW
-object = RIGHT = wink = Pas maintenant. J'ai une cible à trouer.
-object = RIGHT = wink = Not now. I have a target to blast.
+object = RIGHT = wink = Not now. I have a target to punch holes in.
