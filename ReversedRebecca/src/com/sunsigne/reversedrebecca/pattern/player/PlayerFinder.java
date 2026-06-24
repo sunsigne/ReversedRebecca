@@ -13,7 +13,7 @@ public class PlayerFinder {
 	public Player getPlayer() {
 		return PlayerFinderLaw.getPlayer();
 	}
-	
+
 	public PlayerClone getPlayerClone() {
 		return PlayerFinderLaw.getPlayerClone();
 	}
@@ -23,13 +23,13 @@ public class PlayerFinder {
 
 		if (player == null)
 			return;
-		
+
 		int x = getTilePos(player.getX());
 		int y = getTilePos(player.getY());
 		player.setX(x);
 		player.setY(y);
 	}
-	
+
 	////////// CONTROL ////////////
 
 	public void setPlayerCanInteract(boolean canInteract) {
@@ -49,7 +49,9 @@ public class PlayerFinder {
 
 		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
 		player.setCanInteract(isUserAllowedToMovePlayer);
-		player.setGoal(null);
+
+		if (isUserAllowedToMovePlayer)
+			player.setGoal(null);
 	}
 
 	////////// DISTANCE ////////////
