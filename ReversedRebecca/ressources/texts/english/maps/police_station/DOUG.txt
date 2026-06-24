@@ -8,7 +8,7 @@ dougly = player = intrigued = 'zup, girl ? Wandering undercover?
 
 % MEET_NEXT
 player = dougly = wrong_with_you = So what? What's my business?
-dougly = player = serious = Easy +surname_doug, 'not going to rat you out.
+dougly = player = serious = Easy +surname_dougly, 'not going to rat you out.
 dougly = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
 player = dougly = unhappy_var = Elaborate?
 dougly = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
@@ -17,7 +17,7 @@ dougly = player = serious = In exchange for a cyan shovel,@I'll give you the yel
 
 % MEET_NEXT_NUMBER_SETTINGS
 player = dougly = wrong_with_you = So what? What's my business?
-dougly = player = serious = Easy +surname_doug, 'not going to rat you out.
+dougly = player = serious = Easy +surname_dougly, 'not going to rat you out.
 dougly = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
 player = dougly = unhappy_var = Elaborate?
 dougly = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
@@ -69,14 +69,14 @@ dougly = player = serious = Yeah, whatever. Just watch me doing it@when I'll unl
 dougly = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
 dougly = player = serious = Send him an email to his phone from another@officer's computer.
 player = dougly = happy_var = Thank you.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % YES_BOMB_DEAL_NUMBER_SETTINGS
 dougly = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
 dougly = player = serious = Send him an email to his phone from another@officer's computer.
 player = dougly = happy_var = Thank you.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % YES_BOMB_DEAL_SPEEDRUN
@@ -106,11 +106,11 @@ dougly = player = serious = And here's the access. Watch the move.
 
 % GIVE_A_SHOVEL_BOMB_VAR
 player = dougly = happy_var = Here's your shovel, Doug!
-dougly = player = serious = And here's the access. Watch the move, +surname_doug.
+dougly = player = serious = And here's the access. Watch the move, +surname_dougly.
 
 
 % NO_DEAL
-dougly = player = serious = As you wish. If you change your mind,@let me know, +surname_doug.
+dougly = player = serious = As you wish. If you change your mind,@let me know, +surname_dougly.
 
 
 % NO_DEAL_NEXT
@@ -134,14 +134,14 @@ dougly = player = serious = Yeah, whatever. Watch the move.
 dougly = player = serious = Ok. Quick tip: to get the cyan shovel,@you'll need a green key.
 dougly = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
 player = dougly = happy_var = Thanks.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % YES_DEAL_NUMBER_SETTINGS
 dougly = player = serious = Ok. Quick tip: to get the shovel 1,@you'll need a key 2.
 dougly = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
 player = dougly = happy_var = Thanks.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % YES_DEAL_GREEN_KEY
@@ -170,14 +170,14 @@ dougly = player = serious = I just unlocked the door to let you in, in case@it's
 dougly = player = serious = By the way! Quick tip: to get the cyan shovel,@you'll need a green key.
 dougly = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
 player = dougly = happy_var = Thanks.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % BARGAIN_DEAL_NEXT_NUMBER_SETTINGS
 dougly = player = serious = By the way! Quick tip: to get the shovel 1,@you'll need a key 2.
 dougly = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
 player = dougly = happy_var = Thanks.
-dougly = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Good luck, +surname_dougly.
 
 
 % PLANT
@@ -212,5 +212,5 @@ player = dougly = excited = Great! I'll finally be able to access@the archive ro
 
 % GIVE_A_SHOVEL_VAR
 player = dougly = happy_var = Here's your shovel, Doug!
-dougly = player = serious = And here's your key, +surname_doug.
+dougly = player = serious = And here's your key, +surname_dougly.
 player = dougly = excited = Great! I'll finally be able to access@the archive room.

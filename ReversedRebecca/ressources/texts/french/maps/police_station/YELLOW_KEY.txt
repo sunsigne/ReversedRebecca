@@ -7,7 +7,7 @@ dougly = player = serious = Passer en force, c'est plus rapide que de creuser@un
 
 
 % DOUG_GIVE_A_SHOVEL_NEXT
-player = dougly = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
+player = dougly = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverrouille aussi la salle des armes.
 dougly = player = intrigued = Vraiment ?
 player = dougly = happy_var = Vraiment.
 dougly = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
@@ -15,12 +15,12 @@ dougly = player = serious = Passer en force, c'est plus rapide que de creuser@un
 
 % DOUG_GIVE_A_SHOVEL_GOOD
 player = dougly = angry = Ça va pas la tête ? Tuer, c'est mal.@Je ne me rapprocherai même pas de cette salle !
-dougly = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre, +surname_doug.
+dougly = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre, +surname_dougly.
 
 
 % DOUG_GIVE_A_SHOVEL_EVIL
 player = dougly = evil_var = Quelle bonne idée ! Je vais faire ça !
-dougly = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende, +surname_doug.
+dougly = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende, +surname_dougly.
 
 
 % DOUG_GIVE_A_SHOVEL_NEUTRAL
@@ -29,7 +29,7 @@ dougly = player = serious = Ha ? Tu y penses sérieusement ?
 player = dougly = worry = On verra, d'accord ?
 player = dougly = happy =  Je sais que je ne suis pas un ange, mais@ce que tu me demandes est vraiment extrême.
 player = dougly = unhappy = Et si je franchis ce pas, je pense que@je vais me perdre moi-même…
-dougly = player = serious = Ne te bile pas +surname_doug, je ne pensais pas@"réellement" que tu le ferais de toute façon.
+dougly = player = serious = Ne te bile pas +surname_dougly, je ne pensais pas@"réellement" que tu le ferais de toute façon.
 player = dougly = unhappy_var = C'est juste… que c'est curieux que j'hésite…
 player = dougly = sad = (C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.)
 dougly = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la voie du crime.
@@ -59,7 +59,7 @@ dougly = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,
 player = dougly = worry = Heu… Je ne sais pas me servir d'une clé jaune…
 dougly = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
 player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
-dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
+dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverrouiller la salle des armes…
 dougly = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
@@ -67,7 +67,7 @@ dougly = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@
 player = dougly = worry = Heu… Je ne sais pas me servir d'une clé 3…
 dougly = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
 player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
-dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
+dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverrouiller la salle des armes…
 dougly = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 

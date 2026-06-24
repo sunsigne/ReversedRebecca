@@ -112,7 +112,7 @@ public class FormattedString {
 		formatted_value = formatted_value.replace("+action3", getKeyText(ActionThreeKey.getKey()));
 
 		Surname surname = new Surname();
-		formatted_value = formatted_value.replace("+surname_doug", surname.getDoug());
+		formatted_value = formatted_value.replace("+surname_dougly", surname.getDougly());
 		formatted_value = formatted_value.replace("+surname_custom1", surname.getCustom1());
 		formatted_value = formatted_value.replace("+surname_custom2", surname.getCustom2());
 		formatted_value = formatted_value.replace("+surname_custom3", surname.getCustom3());

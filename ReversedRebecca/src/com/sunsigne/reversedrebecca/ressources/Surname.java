@@ -9,7 +9,7 @@ public class Surname {
 
 	////////// SURNAME ////////////
 
-	private static String doug;
+	private static String dougly;
 	private static String custom1;
 	private static String custom2;
 	private static String custom3;
@@ -20,24 +20,24 @@ public class Surname {
 	}
 
 	private void refreshSurname() {
-		doug = null;
+		dougly = null;
 		custom1 = null;
 		custom2 = null;
 		custom3 = null;
 	}
 
-	public String getDoug() {
-		if (doug != null)
-			return doug;
+	public String getDougly() {
+		if (dougly != null)
+			return dougly;
 
 		if (new FileTask().doesExist(userData, file) == false)
 			new Save().getLevel(false);
 
-		String value = new FileTask().read(userData, "surname_doug", file);
-		String path = "surname/" + "doug.txt";
-		doug = new Translatable().getTranslatedText(value, path);
+		String value = new FileTask().read(userData, "surname_dougly", file);
+		String path = "surname/" + "dougly.txt";
+		dougly = new Translatable().getTranslatedText(value, path);
 
-		return doug;
+		return dougly;
 	}
 
 	public String getCustom1() {

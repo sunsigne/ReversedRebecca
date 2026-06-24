@@ -15,12 +15,12 @@ dougly = player = serious = Pushing through is faster than digging a tunnel.@Wou
 
 % DOUG_GIVE_A_SHOVEL_GOOD
 player = dougly = angry = Are you out of your mind? Killing is wrong.@I won't even go near that room!
-dougly = player = serious = I figured as much, you're a nice girl. Too bad,@we could have gotten along great, +surname_doug.
+dougly = player = serious = I figured as much, you're a nice girl. Too bad,@we could have gotten along great, +surname_dougly.
 
 
 % DOUG_GIVE_A_SHOVEL_EVIL
 player = dougly = evil_var = What a great idea! I'll do that!
-dougly = player = serious = Cool. I thought you were a nice girl, but@there's a way we could get along, +surname_doug.
+dougly = player = serious = Cool. I thought you were a nice girl, but@there's a way we could get along, +surname_dougly.
 
 
 % DOUG_GIVE_A_SHOVEL_NEUTRAL
@@ -29,7 +29,7 @@ dougly = player = serious = Ah? Are you seriously thinking about it?
 player = dougly = worry = We'll see, okay?
 player = dougly = happy = I know I'm no angel, but what you're asking me@is really extreme.
 player = dougly = unhappy = And if I take that step, I think I'll lose myself…
-dougly = player = serious = Don't worry +surname_doug, I didn't "really" think@you'd do it anyway.
+dougly = player = serious = Don't worry +surname_dougly, I didn't "really" think@you'd do it anyway.
 player = dougly = unhappy_var = It's just… It's strange that I'm hesitant…
 player = dougly = sad = (It's almost as if I haven't been nice enough or@mean enough to have a real opinion.)
 dougly = player = serious = I see what you mean. I was like you once, then@I went down the criminal path.

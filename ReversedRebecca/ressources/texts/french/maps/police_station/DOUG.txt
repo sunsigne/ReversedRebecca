@@ -8,7 +8,7 @@ dougly = player = intrigued = Ben alors gamine, on se la joue infiltration ?
 
 % MEET_NEXT
 player = dougly = wrong_with_you = Et alors ? De quoi je me mêle ?
-dougly = player = serious = Tout doux +surname_doug, chui pas là pour te dénoncer.
+dougly = player = serious = Tout doux +surname_dougly, chui pas là pour te dénoncer.
 dougly = player = serious = En fait, je me disais qu'on pouvait peut-être@s'aider mutuellement. Ça t'intéresse ?
 player = dougly = unhappy_var = Développe ton idée ?
 dougly = player = serious = Toi, tu as une tête à vouloir accéder aux@archives. Moi, je cherche à me barrer d'ici.
@@ -17,7 +17,7 @@ dougly = player = serious = En échange d'une pelle cyan, je te donnerai@la clef
 
 % MEET_NEXT_NUMBER_SETTINGS
 player = dougly = wrong_with_you = Et alors ? De quoi je me mêle ?
-dougly = player = serious = Tout doux +surname_doug, chui pas là pour te dénoncer.
+dougly = player = serious = Tout doux +surname_dougly, chui pas là pour te dénoncer.
 dougly = player = serious = En fait, je me disais qu'on pouvait peut-être@s'aider mutuellement. Ça t'intéresse ?
 player = dougly = unhappy_var = Développe ton idée ?
 dougly = player = serious = Toi, tu as une tête à vouloir accéder aux@archives. Moi, je cherche à me barrer d'ici.
@@ -27,9 +27,9 @@ dougly = player = serious = En échange d'une pelle 1, je te donnerai@la clef 3 
 % MEET_BOMB
 player = dougly = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosive.
 dougly = player = intrigued = Vraiment ?
-dougly = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant pêter ce mur.
+dougly = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant péter ce mur.
 dougly = player = serious = On va faire ça. Tu me trouves une pelle cyan,@et je t'ouvre la porte de la cellule. Deal ?
-player = dougly = no_sens_var = Une seconde…@Tu dis pouvoir déverouiller ta cellule ?!
+player = dougly = no_sens_var = Une seconde…@Tu dis pouvoir déverrouiller ta cellule ?!
 dougly = player = intrigued = Et alors ?
 player = dougly = unhappy_var = Alors, pourquoi tu as besoin d'une pelle ?@Tu peux déjà t'enfuir !
 dougly = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peux sortir, mais pas aller très loin.
@@ -39,9 +39,9 @@ dougly = player = serious = Alors ? Deal ?
 % MEET_BOMB_NUMBER_SETTINGS
 player = dougly = happy_var = Non merci. Les clés ça n'est pas vraiment@mon truc. Je suis plutôt explosive.
 dougly = player = intrigued = Vraiment ?
-dougly = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant pêter ce mur.
+dougly = UP = serious = Maintenant que j'y pense, tu dois aussi pouvoir@accéder aux archives en faisant péter ce mur.
 dougly = player = serious = On va faire ça. Tu me trouves une pelle 1,@et je t'ouvre la porte de la cellule. Deal ?
-player = dougly = no_sens_var = Une seconde…@Tu dis pouvoir déverouiller ta cellule ?!
+player = dougly = no_sens_var = Une seconde…@Tu dis pouvoir déverrouiller ta cellule ?!
 dougly = player = intrigued = Et alors ?
 player = dougly = unhappy_var = Alors, pourquoi tu as besoin d'une pelle ?@Tu peux déjà t'enfuir !
 dougly = player = intrigued = Et pour aller où ? Il y a des flics partout.@Je peux sortir, mais pas aller très loin.
@@ -62,21 +62,21 @@ dougly = player = intrigued = Une pelle 1 contre l'accès à notre cellule. Deal
 dougly = player = intrigued = Intéressant… Tu penses à quoi ?
 player = dougly = happy_var = Augmente mon niveau de compétence@avec les clefs !
 dougly = player = intrigued = Augmenter ton quoi ?
-dougly = player = serious = Bah, peu importe. Tu n'auras qu'à me regarder@faire quand je déverouillerai la porte.
+dougly = player = serious = Bah, peu importe. Tu n'auras qu'à me regarder@faire quand je déverrouillerai la porte.
 
 
 % YES_BOMB_DEAL
 dougly = player = serious = Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin de divertir le commissaire.
 dougly = player = serious = Envoie-lui un email sur son téléphone@depuis l'ordinateur d'un autre policier.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % YES_BOMB_DEAL_NUMBER_SETTINGS
 dougly = player = serious = Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin de divertir le commissaire.
 dougly = player = serious = Envoie-lui un email sur son téléphone@depuis l'ordinateur d'un autre policier.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % YES_BOMB_DEAL_SPEEDRUN
@@ -106,11 +106,11 @@ dougly = player = serious = Et voilà l'accès. Admire l'artiste.
 
 % GIVE_A_SHOVEL_BOMB_VAR
 player = dougly = happy_var = Voilà ta pelle, Doug !
-dougly = player = serious = Et voilà l'accès. Admire l'artiste, +surname_doug.
+dougly = player = serious = Et voilà l'accès. Admire l'artiste, +surname_dougly.
 
 
 % NO_DEAL
-dougly = player = serious = Comme tu veux. Si tu changes d'avis,@fait moi signe, +surname_doug.
+dougly = player = serious = Comme tu veux. Si tu changes d'avis,@fait moi signe, +surname_dougly.
 
 
 % NO_DEAL_NEXT
@@ -134,14 +134,14 @@ dougly = player = serious = Bah, peu importe. Admire l'artiste.
 dougly = player = serious = Ok. Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
 dougly = player = serious = Il y a une clef verte dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % YES_DEAL_NUMBER_SETTINGS
 dougly = player = serious = Ok. Petit tuyau : pour obtenir la cyan 1,@tu vas avoir besoin d'une clef 2.
 dougly = player = serious = Il y a une clef 2 dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % YES_DEAL_GREEN_KEY
@@ -170,14 +170,14 @@ dougly = player = serious = J'ai juste déverrouillé la porte pour te@laisser r
 dougly = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
 dougly = player = serious = Il y a une clef verte dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % BARGAIN_DEAL_NEXT_NUMBER_SETTINGS
 dougly = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin d'une clef 2.
 dougly = player = serious = Il y a une clef 2 dans le bureau avec la porte@grise, derrière-toi. Parle au flic qui s'y trouve.
 player = dougly = happy_var = Merci.
-dougly = player = serious = Bonne chance, +surname_doug.
+dougly = player = serious = Bonne chance, +surname_dougly.
 
 
 % PLANT
@@ -212,5 +212,5 @@ player = dougly = excited = Super ! Je vais enfin pouvoir accéder@à la salle d
 
 % GIVE_A_SHOVEL_VAR
 player = dougly = happy_var = Voilà ta pelle, Doug !
-dougly = player = serious = Et voilà ta clé, +surname_doug.
+dougly = player = serious = Et voilà ta clé, +surname_dougly.
 player = dougly = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.

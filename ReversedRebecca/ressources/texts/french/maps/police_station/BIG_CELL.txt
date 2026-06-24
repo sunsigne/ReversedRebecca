@@ -115,11 +115,11 @@ player = teddy = convinced = Excellent ! Je n'y aurais jamais pensé toute seule
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK
-player = william = you_silly = Zut ! J'avais oublié, mais je suis sensée@viser le cowboy.
+player = william = you_silly = Zut ! J'avais oublié, mais je suis censée@viser le cowboy.
 
 
 % DONUT_WILLIAM_FAIL_POST_TRICK_VAR
-player = william = you_silly = Quelle tête de linotte…@Je suis sensée viser le cowboy.
+player = william = you_silly = Quelle tête de linotte…@Je suis censée viser le cowboy.
 
 
 % DONUT_WILLIAM_SUCCESS
