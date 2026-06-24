@@ -1,61 +1,46 @@
 % NATHAN_OPENED_CHEST
-player = object = surprised = Je viens de faire le lien !
 player = object = surprised = I just made the connection!
-player = DOWN = excited = Le mot dans le coffre ! C'est ce gars qui@court devant les balles qui a ma clé !
-player = DOWN = excited = The word in the chest! That guy running from the bullets has my key!
+player = DOWN = excited = The note in the chest! That the guy running@before the bullets, who has my key!
 
 
 % CHEST_TALKED_TO_NATHAN
-player = object = surprised = Je viens de faire le lien !
 player = object = surprised = I just made the connection!
-player = DOWN = excited = L'énigme du scientifique ! C'est ce gars qui@court devant les balles qui a ma clé !
-player = DOWN = excited = The scientist's riddle! That guy running from the bullets has my key!
+player = DOWN = excited = The scientist's riddle! That the guy running@before the bullets, who has my key!
 
 
 % BUT_IDIOT_IS_DEAD
-player = DOWN = unhappy_var = Sauf que cet idiot s'est fait descendre…
 player = DOWN = unhappy_var = Except that idiot got shot…
 
 
 % TOOK_HIS_SECRET_TO_HIS_GRAVE
-player = DOWN = no_sens = Heu… C'est lui qui avait ma clé…
 player = DOWN = no_sens = Uh… He was the one who had my key…
 
 
 % IDIOT_IS_DEAD_NEXT
-player = DOWN = you_silly = Bon, j'imagine qu'il l'a encore sur lui.
 player = DOWN = you_silly = Well, I guess he still has it on him.
 
 
 % NO_KEY_ON_IDIOT
-player = DOWN = laugh = C'est marrant de lui marcher dessus !
 player = DOWN = laugh = It's funny to step on him!
-player = DOWN = worry = Bon. Plus sérieusement, il n'a pas de clé sur lui.@J'imagine qu'il l'a perdu.
-player = DOWN = worry = Okay. More seriously, he doesn't have a key on him. I guess he lost it
-player = DOWN = you_silly = Par contre, il sent fort le savon. Mon instinct@me dit que je devrais vérifier les douches.
-player = DOWN = you_silly = On the other hand, he smells strongly of soap. My gut tells me I should check the showers.
+player = DOWN = worry = Okay. More seriously, he doesn't have a key@on him. I guess he lost it.
+player = DOWN = you_silly = On the other hand, he smells strongly of soap.@My instinct tells me I should check the showers.
 
 
 % SHOWER_ONE
-player = LEFT = worry = Pas de clef ici…
 player = LEFT = worry = No key here…
 
 
 % SHOWER_TWO
-player = RIGHT = unhappy_var = Rien…
 player = RIGHT = unhappy_var = Nothing…
 
 
 % SHOWER_THREE
-player = LEFT = worry = C'est vide.
 player = LEFT = worry = It's empty.
 
 
 % SHOWER_FOUR
-player = RIGHT = unhappy_var = … À part du savon, rien.
 player = RIGHT = unhappy_var = … Nothing but soap.
 
 
 % SHOWER_AFTER_ALL_FOUR
-player = DOWN = sad = Je devrais peut-être demander au responsable@du nettoyage de cette partie du camp ?
-player = DOWN = sad = Maybe I should ask the person in charge of cleaning this part of the camp?
+player = DOWN = sad = Maybe I should ask the person in charge of@cleaning this part of the camp?

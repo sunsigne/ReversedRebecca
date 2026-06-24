@@ -78,7 +78,7 @@
 
 	à faire :
 		traduction en anglais :
-		amir / cassidy / cupcakes / darwin / dupont / guard / idiot / jessy / key_quest / military
+		amir / cassidy / cupcakes / darwin / dupont / guard / idiot / jessy
 		
 		cassidy : "impertinance" = "sassy" ?
 		jessy = "une cible à trouer" -> "a target to screw"
