@@ -42,7 +42,6 @@
 	lvl002 - dougly : doug / dolly :
 		- voix
 		- counter, deeds, bonus txt & actions
-		- fichier visuel (dialogue fait, reste world & highlight)
 		- les animations
 		- tester
 		
