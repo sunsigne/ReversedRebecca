@@ -49,6 +49,7 @@ public class PlayerFinder {
 
 		player.setUserAllowedToMovePlayer(isUserAllowedToMovePlayer);
 		player.setCanInteract(isUserAllowedToMovePlayer);
+		player.setGoal(null);
 	}
 
 	////////// DISTANCE ////////////
