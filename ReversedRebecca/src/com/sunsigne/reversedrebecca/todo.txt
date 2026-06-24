@@ -32,10 +32,11 @@
 
 	bug ?
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
-		- plus on monte les étage de la tour, plus ça lag ( à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 			
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
+	trier les animations & décorations dans des dossiers (et pouvoir piocher dedans automatiquement) + les charger aux lancement d'une map (de la même façon que les textures sont chargées au lancement du jeu)
 	vrai musique de fin de niveau
 	
 	lvl002 - dougly : doug / dolly :
