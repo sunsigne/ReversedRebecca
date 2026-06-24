@@ -1,39 +1,39 @@
 % DOUG_GIVE_A_SHOVEL_BOMB_NEXT
-player = doug = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.
-player = doug = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que votre cellule est à côté de la salle des armes.
-doug = player = intrigued = Vraiment ?
-player = doug = happy_var = Vraiment.
-doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu nous donnerais l'accès aux guns ?
+player = dougly = excited = Super ! Je vais enfin pouvoir accéder@à la salle des archives.
+player = dougly = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que votre cellule est à côté de la salle des armes.
+dougly = player = intrigued = Vraiment ?
+player = dougly = happy_var = Vraiment.
+dougly = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu nous donnerais l'accès aux guns ?
 
 
 % DOUG_GIVE_A_SHOVEL_NEXT
-player = doug = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
-doug = player = intrigued = Vraiment ?
-player = doug = happy_var = Vraiment.
-doug = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
+player = dougly = happy = Au fait, je n'ai pas pu m'empêcher de remarquer@que cette clé déverouille aussi la salle des armes.
+dougly = player = intrigued = Vraiment ?
+player = dougly = happy_var = Vraiment.
+dougly = player = serious = Passer en force, c'est plus rapide que de creuser@un tunnel. Tu irais nous chercher des guns ?
 
 
 % DOUG_GIVE_A_SHOVEL_GOOD
-player = doug = angry = Ça va pas la tête ? Tuer, c'est mal.@Je ne me rapprocherai même pas de cette salle !
-doug = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre, +surname_doug.
+player = dougly = angry = Ça va pas la tête ? Tuer, c'est mal.@Je ne me rapprocherai même pas de cette salle !
+dougly = player = serious = Je m'en doutais, tu es une gentille fille.@Dommage, on aura pu bien s'entendre, +surname_doug.
 
 
 % DOUG_GIVE_A_SHOVEL_EVIL
-player = doug = evil_var = Quelle bonne idée ! Je vais faire ça !
-doug = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende, +surname_doug.
+player = dougly = evil_var = Quelle bonne idée ! Je vais faire ça !
+dougly = player = serious = Cool. Je te prenais pour une gentille fille,@mais il y a moyen qu'on s'entende, +surname_doug.
 
 
 % DOUG_GIVE_A_SHOVEL_NEUTRAL
-player = doug = unhappy = Heu… Non ? Peut-être ?
-doug = player = serious = Ha ? Tu y penses sérieusement ?
-player = doug = worry = On verra, d'accord ?
-player = doug = happy =  Je sais que je ne suis pas un ange, mais@ce que tu me demandes est vraiment extrême.
-player = doug = unhappy = Et si je franchis ce pas, je pense que@je vais me perdre moi-même…
-doug = player = serious = Ne te bile pas +surname_doug, je ne pensais pas@"réellement" que tu le ferais de toute façon.
-player = doug = unhappy_var = C'est juste… que c'est curieux que j'hésite…
-player = doug = sad = (C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.)
-doug = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la voie du crime.
-player = doug = worry = Comme j'ai dit, on verra.
+player = dougly = unhappy = Heu… Non ? Peut-être ?
+dougly = player = serious = Ha ? Tu y penses sérieusement ?
+player = dougly = worry = On verra, d'accord ?
+player = dougly = happy =  Je sais que je ne suis pas un ange, mais@ce que tu me demandes est vraiment extrême.
+player = dougly = unhappy = Et si je franchis ce pas, je pense que@je vais me perdre moi-même…
+dougly = player = serious = Ne te bile pas +surname_doug, je ne pensais pas@"réellement" que tu le ferais de toute façon.
+player = dougly = unhappy_var = C'est juste… que c'est curieux que j'hésite…
+player = dougly = sad = (C'est presque comme si je n'avais été ni assez@gentille, ni assez méchante pour avoir un réel avis.)
+dougly = player = serious = Je vois ce que tu veux dire. J'étais comme toi@à une époque, puis, j'ai choisi la voie du crime.
+player = dougly = worry = Comme j'ai dit, on verra.
 
 
 % ARMORY_NEUTRAL
@@ -46,49 +46,49 @@ player = DOWN = death = Je sens qu'on va s'amuser.
 
 
 % DOUG_YELLOW_KEY_EVIL
-player = doug = wrong_with_you = Minute… Elle marche comment cette clé jaune ?
-doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+player = dougly = wrong_with_you = Minute… Elle marche comment cette clé jaune ?
+dougly = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
 % DOUG_YELLOW_KEY_EVIL_NUMBER_SETTINGS
-player = doug = wrong_with_you = Minute… Elle marche comment cette clé 3 ?
-doug = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+player = dougly = wrong_with_you = Minute… Elle marche comment cette clé 3 ?
+dougly = player = serious = Ha oui, pardon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
 % DOUG_YELLOW_KEY_NEUTRAL
-player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
-doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
-player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
-doug = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
-doug = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+player = dougly = worry = Heu… Je ne sais pas me servir d'une clé jaune…
+dougly = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
+player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
+dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
+dougly = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
 % DOUG_YELLOW_KEY_NEUTRAL_NUMBER_SETTINGS
-player = doug = worry = Heu… Je ne sais pas me servir d'une clé 3…
-doug = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
-player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
-doug = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
-doug = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
+player = dougly = worry = Heu… Je ne sais pas me servir d'une clé 3…
+dougly = player = intrigued = … Pourquoi ça ne me surprend qu'à moitié ?
+player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
+dougly = player = serious = Je pourrais… Ça te motivera peut-être@à déverouiller la salle des armes…
+dougly = player = serious = Ok, c'est bon. Voilà l'astuce : si la clé coince,@joue légèrement avec la poignée.
 
 
 % DOUG_YELLOW_KEY_NEUTRAL_NEXT
-player = doug = laugh = D'accord, merci !
+player = dougly = laugh = D'accord, merci !
 
 
 % DOUG_YELLOW_KEY_GOOD
-player = doug = worry = Heu… Je ne sais pas me servir d'une clé jaune…
-doug = player = serious = Ça ne me surprend pas d'une gentille fille.
-player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
-doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.
-player = doug = sad = (Bon… Un autre détenu m'aidera surement…)
+player = dougly = worry = Heu… Je ne sais pas me servir d'une clé jaune…
+dougly = player = serious = Ça ne me surprend pas d'une gentille fille.
+player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
+dougly = player = serious = J'ai une tête de professeur ? Débrouille-toi.
+player = dougly = sad = (Bon… Un autre détenu m'aidera surement…)
 
 
 % DOUG_YELLOW_KEY_GOOD_NUMBER_SETTINGS
-player = doug = worry = Heu… Je ne sais pas me servir d'une clé 3…
-doug = player = serious = Ça ne me surprend pas d'une gentille fille.
-player = doug = unhappy_var = Tu ne vas pas m'apprendre ?
-doug = player = serious = J'ai une tête de professeur ? Débrouille-toi.
-player = doug = sad = (Bon… Un autre détenu m'aidera surement…)
+player = dougly = worry = Heu… Je ne sais pas me servir d'une clé 3…
+dougly = player = serious = Ça ne me surprend pas d'une gentille fille.
+player = dougly = unhappy_var = Tu ne vas pas m'apprendre ?
+dougly = player = serious = J'ai une tête de professeur ? Débrouille-toi.
+player = dougly = sad = (Bon… Un autre détenu m'aidera surement…)
 
 
 % WILLIAM_YELLOW_KEY

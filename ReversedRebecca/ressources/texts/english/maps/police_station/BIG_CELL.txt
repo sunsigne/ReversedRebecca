@@ -30,9 +30,9 @@ player = william = happy = I'll think about it.
 
 
 % DONUT_DOUG
-doug = player = serious = I'm dead sure William will have this.
-player = doug = worry = And William is …?
-doug = player = serious = The cowboy's hat guy, over there.
+dougly = player = serious = I'm dead sure William will have this.
+player = dougly = worry = And William is …?
+dougly = player = serious = The cowboy's hat guy, over there.
 
 
 % DONUT_POLARIS

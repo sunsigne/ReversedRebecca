@@ -30,9 +30,9 @@ player = william = happy = Je vais y réfléchir.
 
 
 % DONUT_DOUG
-doug = player = serious = Je suis presque sûr que William doit avoir ça.
-player = doug = worry = Et William, c'est … ?
-doug = player = serious = Le type avec un chapeau de cowboy, là-bas.
+dougly = player = serious = Je suis presque sûr que William doit avoir ça.
+player = dougly = worry = Et William, c'est … ?
+dougly = player = serious = Le type avec un chapeau de cowboy, là-bas.
 
 
 % DONUT_POLARIS

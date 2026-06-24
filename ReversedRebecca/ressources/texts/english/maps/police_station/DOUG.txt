@@ -1,216 +1,216 @@
 % MEET
-doug = player = intrigued = 'zup, girl ? Dressing up as a cop?
+dougly = player = intrigued = 'zup, girl ? Dressing up as a cop?
 
 
 % MEET_VAR
-doug = player = intrigued = 'zup, girl ? Wandering undercover?
+dougly = player = intrigued = 'zup, girl ? Wandering undercover?
 
 
 % MEET_NEXT
-player = doug = wrong_with_you = So what? What's my business?
-doug = player = serious = Easy +surname_doug, 'not going to rat you out.
-doug = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
-player = doug = unhappy_var = Elaborate?
-doug = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
-doug = player = serious = In exchange for a cyan shovel,@I'll give you the yellow key you need. Deal?
+player = dougly = wrong_with_you = So what? What's my business?
+dougly = player = serious = Easy +surname_doug, 'not going to rat you out.
+dougly = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
+player = dougly = unhappy_var = Elaborate?
+dougly = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
+dougly = player = serious = In exchange for a cyan shovel,@I'll give you the yellow key you need. Deal?
 
 
 % MEET_NEXT_NUMBER_SETTINGS
-player = doug = wrong_with_you = So what? What's my business?
-doug = player = serious = Easy +surname_doug, 'not going to rat you out.
-doug = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
-player = doug = unhappy_var = Elaborate?
-doug = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
-doug = player = serious = In exchange for a shovel 1,@I'll give you the key 3 you need. Deal?
+player = dougly = wrong_with_you = So what? What's my business?
+dougly = player = serious = Easy +surname_doug, 'not going to rat you out.
+dougly = player = serious = Actually, I was thinking maybe we could help@each other. Interested?
+player = dougly = unhappy_var = Elaborate?
+dougly = player = serious = You look like you want to access the archives.@I'm trying to get out of here.
+dougly = player = serious = In exchange for a shovel 1,@I'll give you the key 3 you need. Deal?
 
 
 % MEET_BOMB
-player = doug = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
-doug = player = intrigued = Really?
-doug = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
-doug = player = serious = Let's do that. You find me a cyan shovel,@and I'll open the cell door for you. Deal?
-player = doug = no_sens_var = Wait… You're telling me you can unlock@your cell?!
-doug = player = intrigued = So what?
-player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
-doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
-doug = player = serious = So? Deal?
+player = dougly = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
+dougly = player = intrigued = Really?
+dougly = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
+dougly = player = serious = Let's do that. You find me a cyan shovel,@and I'll open the cell door for you. Deal?
+player = dougly = no_sens_var = Wait… You're telling me you can unlock@your cell?!
+dougly = player = intrigued = So what?
+player = dougly = unhappy_var = So, why do you need a shovel?@You can already run away!
+dougly = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+dougly = player = serious = So? Deal?
 
 
 % MEET_BOMB_NUMBER_SETTINGS
-player = doug = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
-doug = player = intrigued = Really?
-doug = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
-doug = player = serious = Let's do that. You find me a shovel 1,@and I'll open the cell door for you. Deal?
-player = doug = no_sens_var = Wait… You're telling me you can unlock@your cell?!
-doug = player = intrigued = So what?
-player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
-doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
-doug = player = serious = So? Deal?
+player = dougly = happy_var = No thanks. Keys aren't really my thing.@I'm pretty explosive.
+dougly = player = intrigued = Really?
+dougly = UP = serious = Now that I'm thinking, you should also be able@to access the archives by blowing up this wall.
+dougly = player = serious = Let's do that. You find me a shovel 1,@and I'll open the cell door for you. Deal?
+player = dougly = no_sens_var = Wait… You're telling me you can unlock@your cell?!
+dougly = player = intrigued = So what?
+player = dougly = unhappy_var = So, why do you need a shovel?@You can already run away!
+dougly = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+dougly = player = serious = So? Deal?
 
 
 % NO_DEAL_BOMB_NEXT
-player = doug = unhappy_var = What are you offering, again?
-doug = player = intrigued = A cyan shovel in exchange for access to our cell.@Deal?
+player = dougly = unhappy_var = What are you offering, again?
+dougly = player = intrigued = A cyan shovel in exchange for access to our cell.@Deal?
 
 
 % NO_DEAL_BOMB_NEXT_NUMBER_SETTINGS
-player = doug = unhappy_var = What are you offering, again?
-doug = player = intrigued = A shovel 1 in exchange for access to our cell.@Deal?
+player = dougly = unhappy_var = What are you offering, again?
+dougly = player = intrigued = A shovel 1 in exchange for access to our cell.@Deal?
 
 
 % BARGAIN_BOMB_DEAL
-doug = player = intrigued = Interesting… What's in your mind?
-player = doug = happy_var = Increase my skill level with the keys!
-doug = player = intrigued = Increase your what?
-doug = player = serious = Yeah, whatever. Just watch me doing it@when I'll unlock the door.
+dougly = player = intrigued = Interesting… What's in your mind?
+player = dougly = happy_var = Increase my skill level with the keys!
+dougly = player = intrigued = Increase your what?
+dougly = player = serious = Yeah, whatever. Just watch me doing it@when I'll unlock the door.
 
 
 % YES_BOMB_DEAL
-doug = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
-doug = player = serious = Send him an email to his phone from another@officer's computer.
-player = doug = happy_var = Thank you.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
+dougly = player = serious = Send him an email to his phone from another@officer's computer.
+player = dougly = happy_var = Thank you.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % YES_BOMB_DEAL_NUMBER_SETTINGS
-doug = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
-doug = player = serious = Send him an email to his phone from another@officer's computer.
-player = doug = happy_var = Thank you.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
+dougly = player = serious = Send him an email to his phone from another@officer's computer.
+player = dougly = happy_var = Thank you.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % YES_BOMB_DEAL_SPEEDRUN
-doug = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
-player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
-player = doug = happy = Actually, I already have your shovel with me.
-doug = player = intrigued = Really? Why didn't you say so?
-player = doug = angry = You didn't ask me, as far as I know!
-player = doug = you_silly_var = Anyway… Here's my part of the deal. 
-doug = player = serious = And here's mine. Watch the move.
+dougly = player = serious = Quick tip: to get the cyan shovel,@you'll have to distract the commissioner.
+player = dougly = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
+player = dougly = happy = Actually, I already have your shovel with me.
+dougly = player = intrigued = Really? Why didn't you say so?
+player = dougly = angry = You didn't ask me, as far as I know!
+player = dougly = you_silly_var = Anyway… Here's my part of the deal. 
+dougly = player = serious = And here's mine. Watch the move.
 
 
 % YES_BOMB_DEAL_SPEEDRUN_NUMBER_SETTINGS
-doug = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
-player = doug = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
-player = doug = happy = Actually, I already have your shovel with me.
-doug = player = intrigued = Really? Why didn't you say so?
-player = doug = angry = You didn't ask me, as far as I know!
-player = doug = you_silly_var = Anyway… Here's my part of the deal. 
-doug = player = serious = And here's mine. Watch the move.
+dougly = player = serious = Quick tip: to get the shovel 1,@you'll have to distract the commissioner.
+player = dougly = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
+player = dougly = happy = Actually, I already have your shovel with me.
+dougly = player = intrigued = Really? Why didn't you say so?
+player = dougly = angry = You didn't ask me, as far as I know!
+player = dougly = you_silly_var = Anyway… Here's my part of the deal. 
+dougly = player = serious = And here's mine. Watch the move.
 
 
 % GIVE_A_SHOVEL_BOMB
-player = doug = happy_var = Here's your shovel!
-doug = player = serious = And here's the access. Watch the move.
+player = dougly = happy_var = Here's your shovel!
+dougly = player = serious = And here's the access. Watch the move.
 
 
 % GIVE_A_SHOVEL_BOMB_VAR
-player = doug = happy_var = Here's your shovel, Doug!
-doug = player = serious = And here's the access. Watch the move, +surname_doug.
+player = dougly = happy_var = Here's your shovel, Doug!
+dougly = player = serious = And here's the access. Watch the move, +surname_doug.
 
 
 % NO_DEAL
-doug = player = serious = As you wish. If you change your mind,@let me know, +surname_doug.
+dougly = player = serious = As you wish. If you change your mind,@let me know, +surname_doug.
 
 
 % NO_DEAL_NEXT
-player = doug = unhappy_var =  What are you offering, again?
-doug = player = intrigued = A cyan shovel for a yellow key. Deal?
+player = dougly = unhappy_var =  What are you offering, again?
+dougly = player = intrigued = A cyan shovel for a yellow key. Deal?
 
 
 % NO_DEAL_NEXT_NUMBER_SETTINGS
-player = doug = unhappy_var =  What are you offering, again?
-doug = player = intrigued = A shovel 1 for a key 3. Deal?
+player = dougly = unhappy_var =  What are you offering, again?
+dougly = player = intrigued = A shovel 1 for a key 3. Deal?
 
 
 % BARGAIN_DEAL
-doug = player = intrigued = Interesting… What's in your mind?
-player = doug = happy_var = Increase my skill level with the keys!
-doug = player = intrigued = Increase your what?
-doug = player = serious = Yeah, whatever. Watch the move.
+dougly = player = intrigued = Interesting… What's in your mind?
+player = dougly = happy_var = Increase my skill level with the keys!
+dougly = player = intrigued = Increase your what?
+dougly = player = serious = Yeah, whatever. Watch the move.
 
 
 % YES_DEAL
-doug = player = serious = Ok. Quick tip: to get the cyan shovel,@you'll need a green key.
-doug = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
-player = doug = happy_var = Thanks.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Ok. Quick tip: to get the cyan shovel,@you'll need a green key.
+dougly = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
+player = dougly = happy_var = Thanks.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % YES_DEAL_NUMBER_SETTINGS
-doug = player = serious = Ok. Quick tip: to get the shovel 1,@you'll need a key 2.
-doug = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
-player = doug = happy_var = Thanks.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = Ok. Quick tip: to get the shovel 1,@you'll need a key 2.
+dougly = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
+player = dougly = happy_var = Thanks.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % YES_DEAL_GREEN_KEY
-player = doug = unhappy = Now I'm thinking, this key won't be any use…@ I don't know how to use it.
-doug = player = intrigued = Really?
-doug = player = serious = I'll show you the trick. Watch the move.
+player = dougly = unhappy = Now I'm thinking, this key won't be any use…@ I don't know how to use it.
+dougly = player = intrigued = Really?
+dougly = player = serious = I'll show you the trick. Watch the move.
 
 
 % CUTSCENE_UNLOCK_SCENE
-player = doug = convinced = Okay! I get the idea!
+player = dougly = convinced = Okay! I get the idea!
 
 
 % WAIT_A_MINUTE
-player = doug = surprised = Wait! I'm thinking!
+player = dougly = surprised = Wait! I'm thinking!
 
 
 % UNLOCK_CELL
-player = doug = no_sens_var = You unlocked your cell?!
-doug = player = intrigued = So what?
-player = doug = unhappy_var = So, why do you need a shovel?@You can already run away!
-doug = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
-doug = player = serious = I just unlocked the door to let you in, in case@it's useful.
+player = dougly = no_sens_var = You unlocked your cell?!
+dougly = player = intrigued = So what?
+player = dougly = unhappy_var = So, why do you need a shovel?@You can already run away!
+dougly = player = intrigued = And where to? There are cops everywhere.@I can get out, but not go very far.
+dougly = player = serious = I just unlocked the door to let you in, in case@it's useful.
 
 
 % BARGAIN_DEAL_NEXT
-doug = player = serious = By the way! Quick tip: to get the cyan shovel,@you'll need a green key.
-doug = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
-player = doug = happy_var = Thanks.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = By the way! Quick tip: to get the cyan shovel,@you'll need a green key.
+dougly = player = serious = There's a green key in the office with the gray@door, behind you. Talk to the cop there.
+player = dougly = happy_var = Thanks.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % BARGAIN_DEAL_NEXT_NUMBER_SETTINGS
-doug = player = serious = By the way! Quick tip: to get the shovel 1,@you'll need a key 2.
-doug = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
-player = doug = happy_var = Thanks.
-doug = player = serious = Good luck, +surname_doug.
+dougly = player = serious = By the way! Quick tip: to get the shovel 1,@you'll need a key 2.
+dougly = player = serious = There's a key 2 in the office with the gray@door, behind you. Talk to the cop there.
+player = dougly = happy_var = Thanks.
+dougly = player = serious = Good luck, +surname_doug.
 
 
 % PLANT
-player = doug = worry = What should I do again?
-doug = player = serious = Do I look like an information sign?@Go ask a plant.
-player = doug = sad =(That's not very nice… But it's true@that they help me think.)
+player = dougly = worry = What should I do again?
+dougly = player = serious = Do I look like an information sign?@Go ask a plant.
+player = dougly = sad =(That's not very nice… But it's true@that they help me think.)
 
 
 % NAME
-doug = player = serious = Doug.
+dougly = player = serious = Doug.
 
 
 % GIVE_THE_GREEN_KEY
-player = doug = happy_var = Here's your key!
-doug = player = intrigued = I didn't ask for a green key…
-doug = player = serious = I asked for a cyan shovel. But with your key,@you should be able to easily get it.
-player = doug = happy_var = My bad.
+player = dougly = happy_var = Here's your key!
+dougly = player = intrigued = I didn't ask for a green key…
+dougly = player = serious = I asked for a cyan shovel. But with your key,@you should be able to easily get it.
+player = dougly = happy_var = My bad.
 
 
 % GIVE_THE_GREEN_KEY_NUMBER_SETTINGS
-player = doug = happy_var = Here's your key!
-doug = player = intrigued = I didn't ask for a key 2…
-doug = player = serious = I asked for a shovel 1. But with your key,@you should be able to easily get it.
-player = doug = happy_var = My bad.
+player = dougly = happy_var = Here's your key!
+dougly = player = intrigued = I didn't ask for a key 2…
+dougly = player = serious = I asked for a shovel 1. But with your key,@you should be able to easily get it.
+player = dougly = happy_var = My bad.
 
 
 % GIVE_A_SHOVEL
-player = doug = happy_var = Here's your shovel!
-doug = player = serious = And here's your key.
-player = doug = excited = Great! I'll finally be able to access@the archive room.
+player = dougly = happy_var = Here's your shovel!
+dougly = player = serious = And here's your key.
+player = dougly = excited = Great! I'll finally be able to access@the archive room.
 
 
 % GIVE_A_SHOVEL_VAR
-player = doug = happy_var = Here's your shovel, Doug!
-doug = player = serious = And here's your key, +surname_doug.
-player = doug = excited = Great! I'll finally be able to access@the archive room.
+player = dougly = happy_var = Here's your shovel, Doug!
+dougly = player = serious = And here's your key, +surname_doug.
+player = dougly = excited = Great! I'll finally be able to access@the archive room.
