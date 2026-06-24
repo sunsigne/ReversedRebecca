@@ -46,7 +46,7 @@ object = nolancy_nolan = unhappy = Ça n'ira pas. Ce sont ces bombes que j'avais
 
 
 % HERE_WE_ARE_YET_VAR
-object = nolancy_nolan = unhappy = Ça n'ira pas. Ces bombes sont les mêmes que les@miennes. Et… il les a refusées.
+object = nolancy_nolan = unhappy = Ça n'ira pas. Ces bombes sont à peine différentes@des miennes. Et… elle les a refusées.
 
 
 % HERE_WE_ARE_NEXT
