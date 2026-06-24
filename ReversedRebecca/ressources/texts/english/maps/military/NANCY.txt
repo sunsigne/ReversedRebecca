@@ -1,250 +1,172 @@
 % NEED_HELP
-object = player = happy = Je te retourne la question, demoiselle.@Il te faut quelque chose ?
-object = player = happy = I'm asking you the same question, miss. @Do you need anything?
-object = player = excited = Je ne me suis pas présentée. Moi, c'est Nancy.@Si tu as besoin de soins, tu es au bon endroit.
-object = player = excited = I haven't introduced myself. I'm Nancy. @If you need any medical attention, you've come to the right place.
+object = player = happy = I'm asking you the same question, miss.@Do you need anything?
+object = player = excited = I haven't introduced myself. I'm Nancy.@If you need any medical attention, you've come to the right place.
 
 
 % HELLO
-object = player = happy = Salut, moi c'est Nancy. Comment je peux t'aider ?
 object = player = happy = Hi, I'm Nancy. How can I help you?
 
 
 % HELLO_NANCY
-object = player = happy = C'est bien moi. Comment je peux t'aider ?
 object = player = happy = That's me. How can I help you?
 
 
 % HELLO_NEXT
-player = object = worry = Je ne sais pas encore…
 player = object = worry = I don't know yet…
-player = object = happy_var = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
-player = object = happy_var = Actually, I'm just having fun talking to everyone I meet to see what they have to say
-object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+player = object = happy_var = Actually, I'm just having fun talking to everyone@I meet, to see what they have to say.
 object = player = excited = You… You what? Are you serious? That's so cute!
-object = player = happy = En tout cas, je te souhaite la bienvenue au camp.@Si tu as besoin de soins, tu es au bon endroit.
-object = player = happy = Anyway, welcome to camp. @If you need any medical attention, you've come to the right place.
+object = player = happy = Anyway, welcome to camp. If you need any@medical attention, you've come to the right place.
 
 
 % HELLO_HEALED
-object = player = happy = Tu as besoin d'autre chose que des soins ?
 object = player = happy = Do you need anything else besides medical care?
-player = object = worry = Je ne sais pas encore…
 player = object = worry = I don't know yet…
-player = object = happy_var = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
-player = object = happy_var = Actually, I'm just having fun talking to everyone I meet to see what they have to say
-object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+player = object = happy_var = Actually, I'm just having fun talking to everyone@I meet, to see what they have to say.
 object = player = excited = You… You what? Are you serious? That's so cute!
-object = player = happy = En tout cas, je te souhaite la bienvenue au camp.@Moi, c'est Nancy, au fait.
-object = player = happy = Anyway, welcome to camp. I'm Nancy, by the way.
+object = player = happy = Anyway, welcome to camp.@I'm Nancy, by the way.
 
 
 % HELLO_HEALED_NANCY
-object = player = happy = C'est bien moi.@Tu as besoin d'autre chose que des soins ?
-object = player = happy = That's me. Do you need anything else besides medical care?
-player = object = worry = Je ne sais pas encore…
+object = player = happy = That's me. Do you need anything else@besides medical care?
 player = object = worry = I don't know yet…
-player = object = happy_var = En fait, je m'amuse à parler avec tous les gens@que je croise pour voir ce qu'ils ont à dire.
-player = object = happy_var = Actually, I'm just having fun talking to everyone I meet to see what they have to say.
-object = player = excited = Tu… Tu quoi ? T'es sérieuse ? C'est trop mignon !
+player = object = happy_var = Actually, I'm just having fun talking to everyone@I meet, to see what they have to say.
 object = player = excited = You… You what? Are you serious? That's so cute!
-object = player = happy = En tout cas, je te souhaite la bienvenue au camp.
 object = player = happy = Anyway, welcome to camp.
 
 
 % HALF_LIFE
-player = object = laugh = Parfait ! C'est vrai que j'ai un petit coup de mou,@justement.
-player = object = laugh = Perfect! It's true, I'm feeling a bit down.
-player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
-player = object = no_sens = Wait... You're running the WHOLE infirmary all by yourself?
-object = player = excited = C'est mon rôle, oui !
+player = object = laugh = Perfect! I'm feeling a bit down.
+player = object = no_sens = Wait… You're running the WHOLE infirmary@all by yourself?
 object = player = excited = That's my job, yes!
 
 
 % FULL_LIFE
-player = object = happy_var = Ça ira, je n'ai pas prévu de me blesser.
 player = object = happy_var = I'll be fine, I don't plan on getting hurt.
-player = object = no_sens = Attends… Tu t'occupes toute seule de TOUTE@l'infirmerie ?
-player = object = no_sens = Wait... You're running the WHOLE infirmary all by yourself?
-object = player = excited = C'est mon rôle, oui !
+player = object = no_sens = Wait… You're running the WHOLE infirmary@all by yourself?
 object = player = excited = That's my job, yes!
 
 
 % CANT_TALK
-object = player = playful = Par contre, je suis désolée, mais je ne peux pas te@parler trop longtemps, ma copine va être jalouse.
-object = player = playful = On the other hand, I'm sorry, but I can't talk to you for too long, my girlfriend will get jealous.
-player = object = no_sens_var = Tu… n'as pas le droit de parler aux autres filles ?
-player = object = no_sens_var = You... aren't allowed to talk to other girls?
-object = player = blush_side = Pas quand elles sont aussi jolies que toi…
-object = player = blush_side = Not when they're as pretty as you...
-object = player = blush = Mais c'était sympa de faire ta connaissance.
+object = player = playful = I'm sorry, though, but I can't talk to you for@too long, my girlfriend will get jealous.
+player = object = no_sens_var = You… aren't allowed to talk to other girls?
+object = player = blush_side = Not when they're as pretty as you…
 object = player = blush = But it was nice meeting you.
 
 
 % REFUSE_HEALING
-object = player = sad_side = Tu m'as blessé… Je suis désolée pour toi, mais@je ne t'aiderais pas. Ta vie n'est pas en danger.
-object = player = sad_side = You hurt me... I'm sorry for you, but @I won't help you. Your life isn't in danger.
+object = player = sad_side = You hurt me… I'm sorry for you, but@I won't help you. Your life isn't in danger.
 
 
 % YOUT_GIRLFRIEND_IS_BEING_HARSH
-player = object = unhappy_var = Je trouve ça malsain que tu n'aies pas le droit@de parler à d'autres personnes.
-player = object = unhappy_var = I think it's unhealthy that you're not allowed @to talk to other people.
-object = player = sad = Un peu de jalousie, c'est normal dans une@relation… Non ?
-object = player = sad = A little jealousy is normal in a @relationship... Isn't it?
-object = player = blush_side = Et puis… Moi aussi, je serais jalouse si je la voyais@en train de parler à quelqu'un d'aussi jolie…
-object = player = blush_side = Besides… I'd be jealous too if I saw her talking to someone so pretty…
-object = player = blush = En plus, elle m'a dit hier qu'elle voulait essayer@des choses nouvelles, alors peut-être qu'à trois…
-object = player = blush = Yet, she told me yesterday she wanted to try new things, so maybe with three of us…
-object = player = blush_side = Désolée, je m'avance… Tu n'as probablement@pas envie de… Oublie ce que je viens de dire.
-object = player = blush_side = Sorry, I'm getting ahead of myself… You probably don't want to… Forget what I just said.
+player = object = unhappy_var = I think it's unhealthy that you're not allowed@to talk to other people.
+object = player = sad = A little jealousy is normal in a relationship…@Isn't it?
+object = player = blush_side = Besides… I'd be jealous too if I saw her talking@to someone that pretty…
+object = player = blush = In addition, she told me yesterday she wanted to@try new things, so maybe with three of us…
+object = player = blush_side = Sorry, I'm getting ahead of myself… You probably@don't want to… Forget what I just said.
 
 
 % WOW_CALM_DOWN
-object = player = playful = Pardon, je ne voulais pas te mettre mal à l'aise.
-object = player = playful = Sorry, I didn't mean to make you uncomfortable
-object = player = excited = En tout cas, c'est avec plaisir que je te soignerai@si tu as besoin.
-object = player = excited = Anyway, I'd be happy to take care of you if you need it.
+object = player = playful = Sorry, I didn't mean to make you uncomfortable.
+object = player = excited = Anyway, I'd be happy to take care of you, if@you need it.
 
 
 % SHOOTING_RANGE
-player = object = fake_smile = (Le stand de tir ? Oui… Il n'y a aucun problème@là-bas…)
-player = object = fake_smile = (The shooting range? Yes… There's no problem there…)
+player = object = fake_smile = (The shooting range? Sure… There's no problem@over there…)
 
 
 % WHOS_YOUR_GIRLFRIEND
-object = player = happy = Elle s'appelle Jessy. Elle doit être au stand de tir@en ce moment.
-object = player = happy = Her name is Jessy. She must be at the shooting range right now.
-object = player = playful = Tu devrais aller lui parler, elle pourrait te plaire.
+object = player = happy = Her name is Jessy. She must be at the shooting@range right now.
 object = player = playful = You should go talk to her, you might like her.
 
 
 % MAYBE_I_WANT
-object = player = embarrased = … Vraiment ?
-object = player = embarrased = … Really?
-object = player = embarrased_var = Non… On ne devrait pas. Pas sans son accord…
+object = player = embarrased = … You do?
 object = player = embarrased_var = No… We shouldn't. Not without her consent…
-object = player = embarrased = Va lui parler, elle est au stand de tir…
 object = player = embarrased = Go talk to her, she's at the shooting range…
 
 
 % LIE_I_TALKED_TO_HER_NOT_LEAVING
-object = player = embarrased = Menteuse, tu n'as pas quitté la pièce…
 object = player = embarrased = Liar, you haven't left the room…
 
 
 % LIE_I_TALKED_TO_HER_LEAVING_BARELY
-object = player = embarrased = Menteuse, tu as à peine quitté la pièce…
 object = player = embarrased = Liar, you've barely left the room…
 
 
 % LIE_I_TALKED_TO_HER_LEAVING
-object = player = blush_side = Ha oui ?
-object = player = blush_side = Oh yeah?
-nolancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
+object = player = blush_side = Yeah?
 nolancy = player = embarrased = Uh… Give me a second, I'll be right back…
 
 
 % LIE_I_TALKED_TO_HER_BEFORE_COMING_TO_SEE_YOU
-object = player = embarrased_var = Ha oui ? Elle s'appelle comment ?
-object = player = embarrased_var = Oh yeah? What's her name?
+object = player = embarrased_var = Yeah? What's her name?
 
 
 % LIE_I_TALKED_TO_HER_GUESSING
-nolancy = player = embarrased = Ho… Tu lui as vraiment parlé…
-nolancy = player = embarrased = Wow… You really talked to her…
-nolancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
+nolancy = player = embarrased = Oh… You did talked to her…
 nolancy = player = embarrased = Uh… Give me a second, I'll be right back…
 
 
 % POST_JESSY
-nolancy = player = blush = Hey ! J'imagine que si tu reviens…@C'est que tu es intéressée ?
 nolancy = player = blush = Hey! I figure if you come back…@It means you're interested?
-nolancy = player = blush_side = Je pense que tu l'as compris, mais on va te faire@une place dans notre relation avec Jessy.
-nolancy = player = blush_side = I think you get it, but we're going to make@a place for you in our relationship with Jessy.
-nolancy = player = embarrased = Euh… Donne-moi une seconde, je reviens…
+nolancy = player = blush_side = I think you get it, but we're going to make@a room for you in our relationship, with Jessy.
 nolancy = player = embarrased = Uh… Give me a second, I'll be right back…
 
 
 % FINE_I_LIED
-object = player = blush_side = C'est noble de l'admettre, reviens me voir quand@tu lui auras parlé pour de bon…
-object = player = blush_side = It's noble of you to admit it, come back to see me when you've really talked to her…
+object = player = blush_side = It's noble of you to admit it, come back and see@me when you've really talked to her…
 
 
 % OBVIOUS_LIE
-object = player = blush_sad = Ça n'est pas drôle…
 object = player = blush_sad = That's not funny…
-object = player = blush_sad = Quoi qu'il en soit, je n'aime pas tes mensonges…@Ne me parle plus s'il te plaît.
-object = player = blush_sad = Anyway, I don't like your lies… Please don't talk to me anymore.
+object = player = blush_sad = Anyway, I don't like your lies…@Please don't talk to me anymore.
 
 
 % APOLOGIZE
-object = player = sad_side = C'est gentil, j'apprécie.@Je ne souhaite quand même plus te parler.
-object = player = sad_side = That's kind, I appreciate it. I still don't want to talk to you anymore.
+object = player = sad_side = That's kind, I appreciate it.@I still don't want to talk to you anymore.
 
 
 % CREDIBLE_LIE
-player = RIGHT = unhappy_var = Est-ce que ça va ?
 player = RIGHT = unhappy_var = Are you okay?
 
 
 % CREDIBLE_LIE_NEXT
-nolancy = player = blush_side = Oui… Pardon… Merci…
 nolancy = player = blush_side = Yes… Sorry… Thank you…
-nolancy = player = blush = Ok… Euh… Très bien… Alors…
 nolancy = player = blush = Okay… Um… Very well… So…
-nolancy = player = blush_side = J'imagine qu'on peut… s'embrasser ?
 nolancy = player = blush_side = I suppose we can… kiss?
 
 
 % POST_ARMORY
-nolancy = player = blush_side = Je dois retourner à l'infirmerie. On se retrouve@là-bas ?
-nolancy = player = blush_side = I have to go back to the infirmary. Shall we meet there?
+nolancy = player = blush_side = I have to go back to the infirmary.@Shall we meet there?
 
 
 % POST_ARMORY_VAR
-nolancy = player = excited = Tiens, salut !
 nolancy = player = excited = Hey, hi!
 
 
 % POST_KISS
-nolancy = player = embarrased = Désolée… C'était très bien, trop bien…
 nolancy = player = embarrased = Sorry… It was great, too great…
-nolancy = player = embarrased = On passera ce soir, chez toi avec Jessy. Elle fouille-@ra les fichiers de la police pour trouver ton adresse.
-nolancy = player = embarrased = We'll come over tonight, to your place with Jessy. She'll search the police files to find your address.
-nolancy = player = embarrased = Tu peux me laisser ici, je finirai par sortir…@Ou peut-être pas…
-nolancy = player = embarrased = You can leave me here, I'll eventually go out… Or maybe not…
+nolancy = player = embarrased = We'll come over tonight, to your place with Jessy.@She'll search the police files to find your address.
+nolancy = player = embarrased = You can leave me here, I'll eventually go out…@Or maybe not…
 
 
 % NO_THATS_TOO_FAST_POST_JESSY
-nolancy = player = playful = Si tu trouves ça trop rapide,@attends de voir ce qu'on a prévu ce soir…
-nolancy = player = playful = If you think that's too fast, wait and see what we have planned for tonight…
-nolancy = player = blush = Pardon, je t'entends. On va y aller doucement.
+nolancy = player = playful = If you think that's too fast, wait and see@what we have planned for tonight…
 nolancy = player = blush = Sorry, I can hear you. We'll take it slow.
-nolancy = player = blush_side = Enfin… On va quand même venir…
 nolancy = player = blush_side = Well… We'll still come…
-nolancy = player = happy  = Bon ! En attendant, si tu as besoin de soins,@je suis là.
-nolancy = player = happy  = Okay! In the meantime, if you need anything, I'm here.
+nolancy = player = happy  = Anyway! In the meantime, if you need care,@I'm here.
 
 
 % NO_THATS_TOO_FAST
-nolancy = player = blush = Pardon, je comprends. On va y aller doucement.
 nolancy = player = blush = Sorry, I understand. We'll take it slow.
-nolancy = player = happy = Je parlerai à Jessy. On viendra chez toi, ce soir.
-nolancy = player = happy = I'll talk to Jessy. We'll come over to your place tonight.
-player = nolancy = unhappy_var = Ça n'est pas vraiment ce que j'appelle "y aller@doucement"…
-player = nolancy = unhappy_var = That's not exactly what I call "taking it slow"...
-nolancy = player = excited = C'est vrai ! Surtout que Jessy est intense !
+nolancy = player = happy = I'll talk to Jessy.@We'll come over to your place tonight.
+player = nolancy = unhappy_var = That's not exactly what I call "taking it slow"…
 nolancy = player = excited = That's true! Especially since Jessy is intense!
-nolancy = player = playful = Disons que moi, j'irai doucement…
-nolancy = player = playful = Let's just say I, will take it slow...
-nolancy = player = blush = Alors à ce soir, Rebecca.@Et si tu as besoin de soins, je suis là.
-nolancy = player = blush = So, see you tonight, Rebecca. And if you need any pampering, I'm here.
+nolancy = player = playful = Let's just say, I, will take it slow…
+nolancy = player = blush = So, see you tonight, Rebecca.@And if you need care, I'm here.
 
 
 % NO_NOT_INTERESTED_OR_SOMEONE
-nolancy = player = surprised = Eh bien… C'est inattendu…
-nolancy = player = surprised = Well... That's unexpected...
-nolancy = player = playful = J'imagine que j'ai mal interprété les signaux…
-nolancy = player = playful = I guess I misinterpreted the signals...
-nolancy = player = excited = C'était en tout cas un vrai plaisir de te rencontrer,@Rebecca. Si tu as besoin de soins, je suis là.
-nolancy = player = excited = It was a real pleasure meeting you, Rebecca. If you need any pampering, I'm here.
+nolancy = player = surprised = Well… That's unexpected…
+nolancy = player = playful = I guess I misinterpreted the signals…
+nolancy = player = excited = Anyway, it was a real pleasure meeting you,@Rebecca. If you need any care, I'm here.

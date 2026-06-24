@@ -24,7 +24,7 @@ AwkwardText = Being denied a hug
 AirheadTitle = Airhead
 AirheadText = Leave without stealing the files
 DarwinAwardTitle = Darwin Award
-DarwinAwardText = Deadly accident at shooting field
+DarwinAwardText = Deadly accident at shooting range
 AllAccountedForTitle = All accounted for
 AllAccountedForText = Help all 14 soldiers
 
