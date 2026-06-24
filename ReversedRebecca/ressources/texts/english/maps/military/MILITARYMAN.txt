@@ -1,48 +1,46 @@
 % SLACKER
-player = militaryman = laugh = BESOIN D'AIDE ?
 player = militaryman = laugh = NEED HELP?
 militaryman = DOWN = slacker = Zzzz…
-militaryman = DOWN = slacker = Zzzz…
-player = DOWN = you_silly = C'est bien ce que je pensais. Mais j'ai essayé,@donc ça compte.
 player = DOWN = you_silly = That's what I thought. But I tried, so it counts.
 
 
 % RUNNER
-militaryman = player = runner = Je n'ai pas le temps de m'arrêter pour parler !@Le sergent m'a donné l'ordre de courir.
 militaryman = player = runner = I don't have time to stop and talk!@The sergeant ordered me to run.
 
 
 % RUNNER_HELPED
-player = DOWN = happy = Ok, un de moins à aider.
 player = DOWN = happy = Okay, one less to help.
 
 
 % YOU_DONT_SHOOT
-militaryman = player = shooter = J'ai peur de toucher l'idiot qui n'arrête pas@de passer devant…
-militaryman = player = shooter = I'm afraid to hit the idiot who keeps walking past…
+militaryman = player = shooter = I'm afraid to hit the idiot who keeps running past…
 
 
 % YOU_DONT_SHOOT_NEED_HELP
-player = object = happy_var = Ok, je m'en occupe.
 player = object = happy_var = Okay, I'll take care of it.
 
 
 % YOU_DO_SHOOT_NEED_HELP
-militaryman = player = shooter = Non merci. Tout va bien.
 militaryman = player = shooter = No thanks. Everything's fine.
 
 
 % CLEANER_NEED_HELP
-object = player = happy = Tu peux m'aider à nettoyer les toilettes, ou les@douches ?
-object = player = happy = Can you help me clean the toilets, or the @showers?
-player = object = pain = Beurk. Sans façon…
+object = player = happy = Can you help me clean the toilets, or the@showers?
 player = object = pain = Ugh. No thanks…
-object = player = happy = Je te taquinais. Que dirais-tu d'écouter un vieil@homme parler un peu ? Ça devrait aller, non ?
-object = player = happy = I was just teasing you. How about listening to an old man talk for a bit? That should do it, right?
-player = object = laugh = Ça, c'est dans mes cordes !
+object = player = happy = I was just teasing you. How about listening to an@old folk talk for a bit? That should do it, right?
 player = object = laugh = That's right up my alley!
-object = player = happy = Faisons-ça. Reviens me voir dans une minute.@J'aurais trouvé un sujet intéressant.
-object = player = happy = Let's do that. Come back and see me in a minute. @I'll have found an interesting topic.
+object = player = happy = Let's do that. Come back and see me in a minute.@I'll have found an interesting topic.
+
+
+
+
+
+
+
+
+
+
+
 
 
 % CLEANER_NEED_HELPED
