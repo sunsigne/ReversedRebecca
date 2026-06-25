@@ -63,9 +63,8 @@ public class CounterRequest implements Request {
 		String file = "counter" + ".txt";
 		path = path.concat(file);
 
-		String living_type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? ""
-				: "/" + LivingOption.getType().getName();
-		String typePath = path.substring(0, path.length() - file.length() - 1).concat(living_type + "/" + file);
+		String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : "/" + LivingOption.getType().getName();
+		String typePath = path.substring(0, path.length() - file.length() - 1).concat(type + "/" + file);
 		String name = new Translatable().getStrictTranslatedText(value, typePath);
 		if (name.isEmpty())
 			name = new Translatable().getTranslatedText(value, path);

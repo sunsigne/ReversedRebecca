@@ -16,6 +16,8 @@ FruitTitle = Cyber-Vegetarien
 FruitText = Manger un fruit virtuel
 FirstKillTitle = Crepe a la viande
 FirstKillText = Eliminer Alicia
+FirstKillTextMale = Eliminer Alexis
+FirstKillTextOpposite = Eliminer Alexis
 
 ///// GREEN /////
 
@@ -32,6 +34,8 @@ AllAccountedForText = Aider les 14 militaires
 
 BrokenHeartTitle = Coeur Brise
 BrokenHeartText = Refuser de sortir avec Marie
+BrokenHeartTextMale = Refuser de sortir avec Michel
+BrokenHeartTextOpposite = Refuser de sortir avec Michel
 InYourHeadTitle = Hall du Destin
 InYourHeadText = Entrer dans ta propre tete
 ThatWasAnAccidentTitle = C'etait un accident...

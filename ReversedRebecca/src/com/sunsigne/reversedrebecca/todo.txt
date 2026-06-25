@@ -46,7 +46,6 @@
 		- fichier .gpf
 		- dialogues (facing inclus)
 		- actions
-		- succès
 		- fichier visuel, évidemment
 		- les animations
 		- tester
@@ -59,10 +58,11 @@
 		- dialogues (facing inclus)
 		- actions
 		- fichier visuel, évidemment
+		- visuel succès
 		- succès
 		- les animations
 		- tester
-		- succès
+
 
 	////////// MILITARY ////////////
 

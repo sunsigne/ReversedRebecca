@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -47,17 +49,29 @@ public class AchievementObject extends GameObject {
 	private String text;
 
 	public String getTitle() {
-		if (title == null)
-			title = new Translatable().getTranslatedText(achievement.getName() + "title", FilePath.ACHIEVEMENT);
+		if (title == null) {
+			String value = achievement.getName() + "title";
+			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
+			title = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
+			if (title.isEmpty())
+				title = new Translatable().getTranslatedText(achievement.getName() + "title", FilePath.ACHIEVEMENT);
+		}
+
 		return title;
 	}
 
 	public String getText() {
 		if (text == null) {
-			if (achievement.isHidden() && achievement.isUnlocked() == false)
+			if (achievement.isHidden() && achievement.isUnlocked() == false) {
 				text = "???";
-			else
-				text = new Translatable().getTranslatedText(achievement.getName() + "text", FilePath.ACHIEVEMENT);
+				return text;
+			}
+
+			String value = achievement.getName() + "text";
+			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
+			text = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
+			if (text.isEmpty())
+				text = new Translatable().getTranslatedText(value, FilePath.ACHIEVEMENT);
 		}
 
 		return text;
@@ -69,7 +83,7 @@ public class AchievementObject extends GameObject {
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.MOVER;
 	}
-	
+
 	////////// TICK ////////////
 
 	public void popup() {
@@ -81,7 +95,7 @@ public class AchievementObject extends GameObject {
 	private final int MAX_TIME = 400;
 	private final int DELAY = 30;
 	private final int SPEED = 5;
-	private int factor = getY() > Window.HEIGHT / 2 ? -1 : 1; 
+	private int factor = getY() > Window.HEIGHT / 2 ? -1 : 1;
 
 	@Override
 	public void tick() {
@@ -100,7 +114,7 @@ public class AchievementObject extends GameObject {
 
 		// goes down
 		if (time < DELAY)
-			setVelY(- factor * SPEED);
+			setVelY(-factor * SPEED);
 
 		// destroy
 		if (time == 1)

@@ -16,6 +16,8 @@ FruitTitle = Cyber-Vegetarian
 FruitText = Eat a virtual fruit
 FirstKillTitle = Meat pancake
 FirstKillText = Eliminate Alicia
+FirstKillTextMale = Eliminate Alexis
+FirstKillTextOpposite = Eliminate Alexis
 
 ///// GREEN /////
 
@@ -32,6 +34,8 @@ AllAccountedForText = Help all 14 soldiers
 
 BrokenHeartTitle = Heartbroken
 BrokenHeartText = Refuse to go out with Marie
+BrokenHeartTextMale = Refuse to go out with Michel
+BrokenHeartTextOpposite = Refuse to go out with Michel
 InYourHeadTitle = Hall of Destiny
 InYourHeadText = Entering your own mind
 ThatWasAnAccidentTitle = That was an accident...
