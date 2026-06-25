@@ -1,0 +1,3 @@
+% STATION_POLICE_WERE_IDIOTS
+object = player = unhappy = That's not very nice to James and Cassidy. Did you@know they were both military AND police officers?
+object = player = happy = Anyway, that was quite a risk!
