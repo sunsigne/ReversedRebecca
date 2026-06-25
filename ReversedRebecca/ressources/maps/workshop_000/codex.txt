@@ -1,6 +1,7 @@
 ///// DESK /////
 
 NPC-01 = Sarah
+
 OBJ-01 = Bookshelf Up Part
 OBJ-02 = Bookshelf
 OBJ-03 = Down Desk

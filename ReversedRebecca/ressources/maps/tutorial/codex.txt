@@ -1,4 +1,5 @@
 NPC-01 = Dave
+
 OBJ-01 = Simulation Slabs
 OBJ-02 = Trash
 OBJ-03 = Chair

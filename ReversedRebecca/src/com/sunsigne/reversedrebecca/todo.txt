@@ -41,7 +41,6 @@
 			
 	lvl001 - marichel : marie / michel :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (contenu)
@@ -51,7 +50,6 @@
 		
 	lvl001 - alexia : alicia / alexis :
 		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (contenu)
@@ -59,7 +57,6 @@
 		- visuel succès
 		- les animations
 		- tester
-
 
 	////////// MILITARY ////////////
 

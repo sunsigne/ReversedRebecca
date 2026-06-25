@@ -18,6 +18,7 @@ REGISTER = JESSY*GET_GHOSTED
 NPC-01 = Sarah
 NPC-02 = Trashman
 NPC-03 = Cleaner
+
 OBJ-01 = Plant
 OBJ-02 = Plant Slightly Downer
 OBJ-03 = Trashes
@@ -37,6 +38,7 @@ OBJ-15 = Arena OOB Preventer
 ///// CENTER /////
 
 NPC-04 = Guard
+
 OBJ-16 = Guard Checker
 OBJ-17 = YY Door
 OBJ-18 = Stairs Ground to First Floor
@@ -52,6 +54,7 @@ OBJ-26 = Gravity falls
 ///// ROOMS /////
 
 NPC-05 = Slacker
+
 OBJ-27 = Shotgun
 OBJ-28 = Quest Chest
 OBJ-29 = Opened Curtains
@@ -61,11 +64,13 @@ OBJ-31 = Cyan Curtain
 ///// INFIRMARY /////
 
 NPC-06 = Nancy
+
 OBJ-32 = Bomb Path Helper
 
 ///// ARMORY /////
 
 NPC-07 = Nathan
+
 OBJ-33 = Nathan Detector
 
 ///// TRAINING /////
@@ -77,6 +82,7 @@ NPC-11 = Sergent
 NPC-12 = Shooter
 NPC-13 = Jessy
 NPC-14 = Julomeo
+
 OBJ-34 = Julomeo Detector
 OBJ-35 = Bomb Box
 OBJ-36 = Training Course
@@ -87,6 +93,7 @@ OBJ-38 = Target shooter
 
 NPC-15 = Cassidy
 NPC-16 = Amiranda
+
 OBJ-39 = Amiranda Detector
 OBJ-40 = Amiranda Second Detector
 OBJ-41 = Table Left

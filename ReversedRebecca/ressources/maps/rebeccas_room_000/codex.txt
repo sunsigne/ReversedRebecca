@@ -69,6 +69,7 @@ OBJ-14 = Sink
 ///// DESK /////
 
 NPC-01 = Camille
+
 OBJ-15 = Big Furniture
 OBJ-16 = Trash
 OBJ-17 = Desk
@@ -102,6 +103,7 @@ OBJ-48 = Cookie Counter
 ///// ENTRANCE /////
 
 NPC-02 = Sarah
+
 OBJ-41 = Special Exit Door
 OBJ-42 = /hidden
 OBJ-43 = /hidden

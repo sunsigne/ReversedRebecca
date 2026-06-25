@@ -25,6 +25,7 @@ NPC-02 = Policeman (Up) : Archer
 NPC-03 = Policeman (Left) : Miaouss
 NPC-04 = Policewoman (Down) : Cassidy
 NPC-05 = Policewoman (Right) : Jessy
+
 OBJ-01 = Chair
 OBJ-02 = Water Dispenser
 OBJ-03 = Toilet
@@ -49,6 +50,7 @@ OBJ-17 = Coffee Machine
 ///// PRE-CHIEF & CHIEF /////
 
 NPC-06 = Policegrade : Giovanni
+
 OBJ-18 = Door Diversion Checker
 OBJ-19 = Coat Rack Up
 OBJ-20 = Coat Rack Down
@@ -86,6 +88,7 @@ NPC-11 = CCC1
 (NPC-12 = CCC2)
 NPC-13 = Polaris
 NPC-14 = Doug
+
 OBJ-40 = Little Plant
 OBJ-41 = Armory Collapse Scanner
 
