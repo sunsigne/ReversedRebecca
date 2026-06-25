@@ -10,7 +10,7 @@ object = player = happy = Son nom est Juliette, et elle n'est pas dangereuse.@Tu
 
 
 % COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
+object = player = happy = Merci, chouquette ! Juliette a apprécié ?
 player = object = laugh = Oui, c'était délicieux !
 player = object = you_silly = Enfin… C'est ce qu'elle m'a dit, bien sûr…
 object = player = happy = Super ! Tu me sauves.
@@ -18,14 +18,14 @@ object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils son
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULOMEO_UPSET
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
+object = player = happy = Merci, chouquette ! Juliette a apprécié ?
 player = object = worry = Elle ne veut plus me parler… Mais je lui a livré.
 object = player = worry = Elle a son caractère…@En tout cas merci, tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Juliette a apprécié ?
+object = player = happy = Merci, chouquette ! Juliette a apprécié ?
 player = object = laugh = Oui, elle était ravie !
 object = player = happy = Super ! Tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.

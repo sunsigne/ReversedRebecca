@@ -1,197 +1,126 @@
 % HELLO
-object = player = happy = Tu tombes à pic ! Tu pourrais aller me chercher@des oignons, s'il-te plaît ?
-object = player = happy = You're just in time! Could you go get me some onions, please?
-object = player = happy = Tu en trouveras dans le stock.
+object = player = happy = You've come at just the right time!@Could you go get me some onions, please?
 object = player = happy = You'll find some in the pantry.
 
 
 % SEARCHING_ONIONS
-object = player = happy = Il doit y en avoir dans la pièce d'à côté.@Vérifie les meubles et les étagères.
 object = player = happy = There should be some in the next room.@Check the cabinets and shelves.
 
 
 % GIVE_THE_ONIONS
-object = player = happy = Juste à temps ! Merci. Au fait, moi, c'est Amir.@Ravi de faire ta connaissance.
 object = player = happy = Just in time! Thanks. By the way, I'm Amir.@Nice to meet you.
-player = object = happy = Enchantée. Moi, c'est Rebecca.
 player = object = happy = Nice to meet you too. I'm Rebecca.
-object = player = worry = Mais dis-moi, tu n'es pas d'ici…@Qu'est-ce qui t'amène dans ce camp ?
-object = player = worry = But tell me, you're not from around here...@What brings you to this camp?
-player = object = worry = C'est une longue histoire… Mais pour résumer :@je dois parler au chef.
-player = object = worry = It's a long story... But to sum it up:@I need to speak to the boss.
-object = player = happy = Double Y ? C'est un homme adorable. Et quel@appétit ! Six demi-douzaines d'oeufs par jour !
+object = player = worry = Tell me, you're not from around here…@What brings you to this camp?
+player = object = worry = It's a long story… But to sum it up:@I need to speak to the boss.
 object = player = happy = Double Y? He's a lovely man. And what an@appetite! Six half-dozens of eggs a day!
-object = player = worry = Dis-moi chouquette, je suis désolé mais…@Tu crois que tu peux me rendre un autre service ?
-object = player = worry = Say, sweetie, I'm sorry but...@Do you think you could do me another favor?
-object = player = worry = J'ai ce repas que je dois livrer au prisonnier@en isolement, mais je suis débordé en cuisine…
-object = player = worry = I have this meal to deliver to the prisoner@in solitary, but I'm swamped in the kitchen...
-object = player = happy = Son nom est Roméo, et il n'est pas dangereux.@Tu pourrais lui apporter ? Tu serais une crème.
+object = player = worry = Say, honey, I'm sorry but…@Do you think you could do me another favor?
+object = player = worry = I have this meal to deliver to the prisoner@in solitary, but I'm swamped in the kitchen…
 object = player = happy = His name is Romeo, and he's not dangerous.@Could you take it to him? You'd be a lifesaver.
 
 
 % COOK_PRISONNER_REFUSING
-object = player = unhappy = Ho, Dommage… J'imagine que je demanderai à@Norbert alors.
-object = player = unhappy = Oh, that's a shame... I guess I'll ask@Norbert then.
-object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour les oignons.
+object = player = unhappy = Oh, too bad… I guess I'll ask Norbert then.
 object = player = happy = Well, I really need to get back to work.@Thanks again for the onions.
 
 
 % COOK_PRISONNER_BARGAIN
-object = player = worry = He bien… Je pensais te donner des cupcakes…
-object = player = worry = Well... I was thinking of giving you some cupcakes...
-object = player = happy = Alors ? Tu veux bien m'aider, chouquette ?
-object = player = happy = So? Will you help me out, sweetie?
+object = player = worry = Well… I was thinking of giving you some@cupcakes…
+object = player = happy = So? Will you help me out, honey?
 
 
 % COOK_PRISONNER_ACCEPTING
-object = player = happy = Merci ! Tiens, voilà.@Reviens me voir lorsque tu auras fini.
 object = player = happy = Thanks! Here you go.@Come back and see me when you're finished.
 
 
 % COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
-object = player = happy = Thanks, Chouquette! Did Roméo enjoy it?
-player = object = laugh = Oui, c'était délicieux !
+object = player = happy = Thanks, honey! Did Romeo enjoy it?
 player = object = laugh = Yes, it was delicious!
-player = object = you_silly = Enfin… C'est ce qu'il m'a dit, bien sûr…
-player = object = you_silly = Well... That's what he told me, of course...
-object = player = happy = Super ! Tu me sauves.
+player = object = you_silly = Well… That's what he told me, of course…
 object = player = happy = Great! You're a lifesaver.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 object = player = happy = I set aside some little cupcakes.@Here, they're for you.
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULOMEO_UPSET
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
-object = player = happy = Thanks, Chouquette! Did Roméo enjoy it?
-player = object = worry = Il ne veut plus me parler… Mais je lui a livré.
-player = object = worry = He won't speak to me anymore... But I did deliver it to him.
-object = player = worry = Il a son caractère…@En tout cas merci, tu me sauves.
-object = player = worry = He can be difficult...@Anyway, thanks—you're a lifesaver.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
+object = player = happy = Thanks, honey! Did Romeo enjoy it?
+player = object = worry = He won't speak to me anymore…@But I did the delivery.
+object = player = worry = He can be difficult…@Thanks anyway, you're a lifesaver.
 object = player = happy = I set aside some little cupcakes.@Here, they're for you.
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
-object = player = happy = Thanks, Chouquette! Did Roméo enjoy it?
-player = object = laugh = Oui, il était ravi !
+object = player = happy = Thanks, honey! Did Romeo enjoy it?
 player = object = laugh = Yes, he was delighted!
-object = player = happy = Super ! Tu me sauves.
 object = player = happy = Great! You're a lifesaver.
-object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 object = player = happy = I set aside some little cupcakes.@Here, they're for you.
 
 
 % CUPCAKES_SHARING
-object = player = happy = Non, c'est très gentil, chouquette, mais@je n'ai pas faim. J'apprécie le geste.
-object = player = happy = No, that's very kind of you, Chouquette, but@I'm not hungry. I appreciate the gesture.
-player = object = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
+object = player = happy = No, that's very kind of you, honey, but I'm not@hungry. I appreciate the gesture.
 player = object = worry = Are you sure? It would really make me happy.
-
-
-% CUPCAKES_SHARING_NEXT
-object = player = worry = À ce point ?
 object = player = worry = That much?
-player = object = happy_var = Oui !
 player = object = happy_var = Yes!
-object = player = happy = Bon, puisque tu insistes, alors d'accord. Donne-@moi une minute, je dois terminer quelque chose.
-object = player = happy = Well, since you insist... alright. Give@me a minute; I need to finish something.
-player = object = laugh = Très bien, est-ce que je reviens plus tard,@ou est-ce que je reste ici ?
-player = object = laugh = Alright, should I come back later, or stay here?
-object = player = worry = C'est comme tu veux, chouquette…
-object = player = worry = It's up to you, Cupcake…
+object = player = happy = Well, since you insist, alright. Give me a minute,@I need to finish something.
+player = object = laugh = Sure, should I come back later, or stay here?
+object = player = worry = It's up to you, honey…
 
 
 % CUPCAKES_SHARING_READY
-object = player = happy = Ok ! J'ai terminé, tu es sûre que tu veux partager@tes cupcakes avec moi ?
-object = player = happy = Okay! I'm done. Are you sure you want to share your cupcakes with me?
+object = player = happy = Okay! I'm done. Are you sure you want to share@your cupcakes with me?
 
 
 % CUPCAKES_SHARING_READY_NO
-object = player = happy = Ok, pas de soucis. Ils sont pour toi de toute façon.@Merci encore pour ton aide, chouquette.
-object = player = happy = Okay, no worries. They're for you anyway. Thanks again for your help, Cupcake.
-object = player = happy = Bon, il faut absolument que je m'y remette.
+object = player = happy = Okay, no worries. They're for you anyway.@Thanks again for your help, honey.
 object = player = happy = Well, I really need to get back to work.
 
 
 % CUPCAKES_SHARING_READY_YES
-player = object = happy_var = Pourquoi pas ? C'est meilleur quand on partage@avec un ami !
-player = object = happy_var = Why not? It tastes better when you share with a friend!
-object = player = unhappy = Un… ami ?
+player = object = happy_var = Why not? It tastes better when you share with@a friend!
 object = player = unhappy = A… friend?
-object = player = happy = Oui… Ça sonne bien… Soyons amis.
 object = player = happy = Yes… That sounds nice… Let's be friends.
-object = player = happy = Parfait ! Suis-moi.
 object = player = happy = Perfect! Follow me.
 
 
 % CUPCAKES_SHARING_READY_YES_NEXT
-object = player = happy = Alors comme ça, tu as besoin de parler à YY ?
 object = player = happy = So, you need to talk to YY?
-player = object = worry = Oui. Pour résumer, je cherche quelqu'un qui m'a@volé quelque chose. Et YY sait où je peux le trouver.
-player = object = worry = Yes. Basically, I'm looking for someone who stole something from me. And YY knows where I can find them.
-object = player = unhappy = Un vol ? Ça ne ressemble pas à YY… Il est@un peu misogyne, mais c'est un homme droit.
-object = player = unhappy = A theft? That doesn't sound like YY... He's a bit of a misogynist, but he's an upright man.
-object = player = worry = Je suis sûr qu'il ne cautionne pas ce qu'à fait@cette personne… Il va t'aider, j'en suis certain.
-object = player = worry = I'm sure he doesn't condone what that person did... He'll help you, I'm certain of it.
-player = object = happy = Et toi, alors ? Qu'est-ce que tu fais ici ?
+player = object = worry = Yes. I'm looking for someone who stole something@from me. And YY knows where I can find him.
+object = player = unhappy = A theft? That doesn't sound like YY… He's a bit@of a misogynist, but he's an upright man.
+object = player = worry = I'm sure he doesn't condone what that person@did… He'll help you, I'm sure of it.
 player = object = happy = What about you, then? What are you doing here?
-object = player = happy = Je cuisine, mais tu l'avais déjà compris. Pour faire@simple, j'aime apporter de la joie par la nourriture.
-object = player = happy = I bake—though you'd already figured that out. Simply put, I love bringing joy through food.
-object = player = happy = Après une longue journée, il n'y a rien de mieux@que de trouver son bonheur dans une assiette.
-object = player = happy = After a long day, there's nothing better than finding happiness on a plate.
+object = player = happy = I cook, though you'd already figured that out.@Simply put, I love bringing joy through food.
+object = player = happy = After a long day, there's nothing better than@finding happiness on a plate.
 
 
 % CUPCAKES_SHARING_READY_YES_NEXT_NEXT
-player = object = laugh = Ho mon Dieu ! Il faut absolument que je t'ai@chez moi pour que je te mange tout le temps.
-player = object = laugh = Oh my God! I absolutely need to have you at my place so I can eat you all the time.
+player = object = laugh = Oh my God! I absolutely need to have you at@my place so I can eat you all the time.
 
 
 % CUPCAKES_SHARING_OOPSY
-object = player = unhappy = Que tu me manges tout le temps ?
-object = player = unhappy = Eat me all the time?
+object = player = unhappy = So you can eat me all the time?
 object = player = blush = …
-object = player = blush = …
-player = object = blush = Oh mon Dieu, j'ai dit ça ?
-player = object = blush = Oh my God, did I say that?
-player = object = blush = Je… voulais dire pour que JE MANGE tout@le temps. Que je te mange ce que tu fais, quoi…
-player = object = blush = I... meant so that *I* could eat all the time. Eat what you make, I mean...
-object = player = blush = Oui… J'avais compris… Bien sûr…
-object = player = blush = Right... I understood... Of course...
+player = object = blush = Dear me, did I say that?
+player = object = blush = I… meant so that I could EAT ALL THE TIME.@Eat what you make, I mean…
+object = player = blush = Yeah… I understood… Of course…
 
 
 % CUPCAKES_SHARING_OOPSY_NEXT
-object = player = blush = Heu… Ils… sont bons tes cupcakes ?
-object = player = blush = Um... Are... are your cupcakes good?
-player = object = blush = Oui, oui… Merci.
-player = object = blush = Yes, yes... Thanks.
+object = player = blush = Um… Are… your cupcakes good?
+player = object = blush = Yeah, yeah… Thanks.
 
 
 % CUPCAKES_SHARING_OOPSY_NEXT_NEXT
-object = player = worry = Tu… en voudras d'autres ?
-object = player = worry = Do you... want some more?
-player = object = happy = Ça ira pour aujourd'hui.
+object = player = worry = Do you… want some more?
 player = object = happy = That's enough for today.
-player = object = worry = Mais… J'ai envie d'en avoir tous les jours !
-player = object = worry = But... I want to have them every day!
-object = player = happy = Tous les jours, je ne sais pas…@Mais on peut commencer par demain ?
-object = player = happy = Every day? I don't know about that... But how about we start with tomorrow?
-player = object = laugh = C'est un grand oui ! Voilà mon adresse !@Ma porte est ouverte pour tes pâtisseries !
-player = object = laugh = That's a big yes! Here's my address! My door is open for your pastries!
-object = player = happy = Très bien. Faisons comme ça.
+player = object = worry = But… I want to have them every day!
+object = player = happy = Every day? I can't make such promises…@But how about we start with tomorrow?
+player = object = laugh = That's a big yes! Here's my address!@My door is open for your pastries!
 object = player = happy = Very well. Let's do that.
 
 
 % CUPCAKES_SHARING_OOPSY_LAST
-object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour ta gentillesse, chouquette.
-object = player = happy = Right, I really need to get back to it. Thanks again for your kindness, cupcake.
-player = object = happy_var = Avec plaisir ! On se voit bientôt, Amir.
+object = player = happy = Right, I really need to get back to work.@Thanks again for your kindness, honey.
 player = object = happy_var = My pleasure! See you soon, Amir.
 
 
 % CUPCAKES_SHARING_POST_DIALOGUE
-object = player = happy = Tu as besoin de quelque chose, chouquette ?
-object = player = happy = Do you need anything, cupcake?
-player = object = laugh = Non, c'est bon, merci.@Il est temps que je retourne à ma mission.
-player = object = laugh = No, I'm all set, thanks. It's time for me to get back to my mission.
+object = player = happy = Do you need anything, honey?
+player = object = laugh = Nah, I'm all good, thanks.@It's time for me to get back to my mission.

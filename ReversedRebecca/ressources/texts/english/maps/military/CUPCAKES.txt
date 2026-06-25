@@ -1,8 +1,6 @@
 % THANK
-player = object = laugh = Ils sont délicieux !
 player = object = laugh = That was delicious!
-object = player = happy = Tant mieux ! Bon, il faut absolument que je m'y@remette. Merci encore pour le coup de main.
-object = player = happy = Great! Well, I absolutely have to get back to it. Thanks again for the help.
+object = player = happy = Great! Well, I absolutely have to get back to work.@Thanks again for the help.
 
 
 % THANK_THEY_WERE_DELICIOUS

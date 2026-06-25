@@ -1,0 +1,36 @@
+% GIVE_THE_ONIONS
+object = player = happy = Just in time! Thanks. By the way, I'm Miranda.@Nice to meet you.
+player = object = happy = Nice to meet you too. I'm Rebecca.
+object = player = worry = Tell me, you're not from around here…@What brings you to this camp?
+player = object = worry = It's a long story… But to sum it up:@I need to speak to the boss.
+object = player = happy = Double Y? He's a lovely man. And what an@appetite! Six half-dozens of eggs a day!
+object = player = worry = Say, honey, I'm sorry but…@Do you think you could do me another favor?
+object = player = worry = I have this meal to deliver to the prisoner@in solitary, but I'm swamped in the kitchen…
+object = player = happy = Her name is Juliet, and she's not dangerous.@Could you take it to her? You'd be a lifesaver.
+
+
+% COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
+object = player = happy = Thanks, honey! Did Juliet enjoy it?
+player = object = laugh = Yes, it was delicious!
+player = object = you_silly = Well… That's what she told me, of course…
+object = player = happy = Great! You're a lifesaver.
+object = player = happy = I set aside some little cupcakes.@Here, they're for you.
+
+
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULOMEO_UPSET
+object = player = happy = Thanks, honey! Did Juliet enjoy it?
+player = object = worry = She won't speak to me anymore…@But I did the delivery.
+object = player = worry = She can be difficult…@Thanks anyway, you're a lifesaver.
+object = player = happy = I set aside some little cupcakes.@Here, they're for you.
+
+
+% COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
+object = player = happy = Thanks, honey! Did Juliet enjoy it?
+player = object = laugh = Yes, she was delighted!
+object = player = happy = Great! You're a lifesaver.
+object = player = happy = I set aside some little cupcakes.@Here, they're for you.
+
+
+% CUPCAKES_SHARING_OOPSY_LAST
+object = player = happy = Right, I really need to get back to work.@Thanks again for your kindness, honey.
+player = object = happy_var = My pleasure! See you soon, Miranda.

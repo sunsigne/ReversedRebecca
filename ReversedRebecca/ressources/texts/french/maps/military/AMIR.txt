@@ -33,7 +33,7 @@ object = player = happy = Merci ! Tiens, voilà.@Reviens me voir lorsque tu aura
 
 
 % COOK_PRISONNER_COMING_BACK_ATE_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
+object = player = happy = Merci, chouquette ! Roméo a apprécié ?
 player = object = laugh = Oui, c'était délicieux !
 player = object = you_silly = Enfin… C'est ce qu'il m'a dit, bien sûr…
 object = player = happy = Super ! Tu me sauves.
@@ -41,14 +41,14 @@ object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils son
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX_JULOMEO_UPSET
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
+object = player = happy = Merci, chouquette ! Roméo a apprécié ?
 player = object = worry = Il ne veut plus me parler… Mais je lui a livré.
 object = player = worry = Il a son caractère…@En tout cas merci, tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
 
 
 % COOK_PRISONNER_COMING_BACK_DIDNT_EAT_THE_LUNCHBOX
-object = player = happy = Merci, Chouquette ! Roméo a apprécié ?
+object = player = happy = Merci, chouquette ! Roméo a apprécié ?
 player = object = laugh = Oui, il était ravi !
 object = player = happy = Super ! Tu me sauves.
 object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils sont pour toi.
@@ -57,9 +57,6 @@ object = player = happy = J'ai mis des petits cupcakes de côté.@Tiens, ils son
 % CUPCAKES_SHARING
 object = player = happy = Non, c'est très gentil, chouquette, mais@je n'ai pas faim. J'apprécie le geste.
 player = object = worry = Tu es sûr ? Ça me ferait vraiment plaisir.
-
-
-% CUPCAKES_SHARING_NEXT
 object = player = worry = À ce point ?
 player = object = happy_var = Oui !
 object = player = happy = Bon, puisque tu insistes, alors d'accord. Donne-@moi une minute, je dois terminer quelque chose.
@@ -127,6 +124,3 @@ player = object = happy_var = Avec plaisir ! On se voit bientôt, Amir.
 % CUPCAKES_SHARING_POST_DIALOGUE
 object = player = happy = Tu as besoin de quelque chose, chouquette ?
 player = object = laugh = Non, c'est bon, merci.@Il est temps que je retourne à ma mission.
-
-
-
