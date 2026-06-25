@@ -68,18 +68,6 @@
 		- voix & deeds
 	
 	////////// MILITARY ////////////
- 	
-	en cours : 
-		
-	à tester :
-
-	à faire :
-		traduction en anglais :
-		cassidy
-		
-		cassidy : "impertinance" = "sassy" ?
-		Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
-		Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Yuck / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet!
 
 	bug :
 		- arranger l'interaction avec le parcours d'entrainement

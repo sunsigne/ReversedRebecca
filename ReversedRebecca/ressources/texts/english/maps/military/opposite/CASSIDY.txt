@@ -1,0 +1,13 @@
+% HELLO_MET_NEXT
+player = object = excited = Right! So you're a police officer AND in the@military?
+object = player = happy_var = Yes! I have dual training, just like my brother.
+object = player = happy = I'm Cassidy, by the way, and my brother is James.@He's probably at the shooting range right now.
+object = player = happy_var = But I'm forgetting the main thing!@What brings you to our camp?
+
+
+% WE_REALLY_DONT_KNOW_EACH_OTHER
+object = player = happy = I'm a police officer too.@Maybe we've crossed paths somewhere else?
+player = object = no_sens_var = (I probably shouldn't tell her I just stole@documents from a police station…)
+player = object = fake_smile = Huh… Amazing!@So you're a police officer AND in the military?
+object = player = happy = Like my brother James, yeah.@He's probably at the shooting range right now.
+player = object = fake_smile = Got it.

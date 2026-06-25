@@ -1,0 +1,44 @@
+% HELLO_MET_NEXT
+player = object = excited = Right! So you're a police officer AND in the@military?
+object = player = happy_var = Yes! I have dual training, just like my brother.
+object = player = happy = I'm Cassidy, by the way, and my brother is James.@He's probably at the shooting range right now.
+object = player = happy_var = But I'm forgetting the main thing!@What brings you to our camp?
+
+
+% WE_REALLY_DONT_KNOW_EACH_OTHER
+object = player = happy = I'm a police officer too.@Maybe we've crossed paths somewhere else?
+player = object = no_sens_var = (I probably shouldn't tell her I just stole@documents from a police station…)
+player = object = fake_smile = Huh… Amazing!@So you're a police officer AND in the military?
+object = player = happy = Like my brother James, yeah.@He's probably at the shooting range right now.
+player = object = fake_smile = Got it.
+
+
+% JESSY
+object = player = happy = What do you want to know about him?
+
+
+% JESSY_AGAIN
+object = player = happy = Was there something else you wanted to say@about him?
+
+
+% JESSY_SHES_MEAN
+object = player = happy_var = It's true he's got a bit of a temper.
+object = player = happy = But if you really can't stand him, you don't have@to talk to him.
+
+
+% JESSY_I_M_INTO_HER
+object = player = surprised = Really?
+object = player = happy_var = Now that I think about it, you're pretty much@his type. You might got a chance with him.
+object = player = happy = Though, you should know he's already dating@Nolan.
+object = player = happy_var = They're pretty open-minded about that sort of thing,@so it might work out. You should talk to them.
+object = player = happy = You can find Nolan in the infirmary.
+
+
+% JESSY_TIPS
+object = player = happy = My brother has a contradictory nature:@if you're too nice, you'll bore him.
+object = player = happy_var = But if you rebel a bit too much, you'll really tick@him off, and he won't want to see you anymore.
+object = player = happy = By striking just the right balance between sass@and submission, you're sure to win him over.
+
+
+% NANCY_TIPS
+object = player = happy_var = He is simply adorable. Be kind, patient, sincere,@and a good listener, and he'll like you.
