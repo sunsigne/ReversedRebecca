@@ -1,84 +1,84 @@
 % LOCKED_EXIT
-alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+alexia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
 rebecca = up = surprised = Alicia ? Ne bouge pas !@Je vais te sortir de là !
-alicia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
+alexia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
 rebecca = up = unhappy = Pardon, ce n'est pas ce que je voulais dire…
-alicia = down = cry_happy = T'en fait pas, j'ai compris.
-alicia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
+alexia = down = cry_happy = T'en fait pas, j'ai compris.
+alexia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
 
 
 % LOCKED_INQUIRY
-alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+alexia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
 rebecca = up = surprised = Alicia ? Ne bouge pas !@Je vais chercher de l'aide !
-alicia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
+alexia = down = cry_happy = Je ne risque pas de bouger, Rebecca.
 rebecca = up = unhappy = Pardon, ce n'est pas ce que je voulais dire…
-alicia = down = cry_happy = T'en fait pas, j'ai compris.
-alicia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
+alexia = down = cry_happy = T'en fait pas, j'ai compris.
+alexia = down = cry_laugh = Je suis contente que tu m'aies trouvé.@Je vais attendre.
 
 
 % LOCKED_SADISTIC
-alicia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
+alexia = down = cry_var2 = Oui ! Je suis là ! Je suis enfermée !
 rebecca = up = laugh = Ha ha ha ha ! C'est encore mieux@que ce que j'imaginais. 
-alicia = down = cry = C'est pas drôle Rebecca…@Aide-moi à sortir.
+alexia = down = cry = C'est pas drôle Rebecca…@Aide-moi à sortir.
 rebecca = up = dreaming = Oui, oui, je vais t'aider.@Je vais juste prendre mon temps.
-alicia = down = cry_var = Pourquoi il fallait que je tombe sur toi…
+alexia = down = cry_var = Pourquoi il fallait que je tombe sur toi…
 
 
 % MIKA_TOLD_ME
-alicia = player = happy = Mika m'a dit que c'est grâce à toi si je suis libre,@alors Merci.
-player = alicia = laugh = Je t'en prie !
+alexia = player = happy = Mika m'a dit que c'est grâce à toi si je suis libre,@alors Merci.
+player = alexia = laugh = Je t'en prie !
 
 
 % HUG
-alicia = RIGHT = appeased = Merci.
+alexia = RIGHT = appeased = Merci.
 player = LEFT = happy_var = Je n'allais quand même pas te laisser là-dedans.
 
 
 % HUG_SARAH
-alicia = DOWN = appeased = Merci.
+alexia = DOWN = appeased = Merci.
 sarah = UP = happy_var = De rien. Je ne savais pas que tu étais là-dedans,@mais je suis contente que tu ailles bien.
 
 
 % HUG_SARAH_VAR
-alicia = DOWN = appeased = Merci.
+alexia = DOWN = appeased = Merci.
 sarah = UP = happy_var = De rien.@Je n'allais quand même pas te laisser là-dedans.
 
 
 % PICK_ME_UP
-alicia = player = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
-alicia = player = happy = Tu veux quelque chose ?
+alexia = player = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alexia = player = happy = Tu veux quelque chose ?
 
 
 % PICK_ME_UP_SARAH
-alicia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
-alicia = DOWN = happy = Tu veux quelque chose ?
+alexia = DOWN = happy = J'ai besoin d'un remontant.@Je vais me chercher un thé.
+alexia = DOWN = happy = Tu veux quelque chose ?
 sarah = UP = wink = Non merci, ça ira.
 
 
 % ASK_DRINK
-alicia = player = happy_var = Ok, je te fais ça.
-player = alicia = laugh = Top, merci.
+alexia = player = happy_var = Ok, je te fais ça.
+player = alexia = laugh = Top, merci.
 
 
 % TAKE_CARE
-alicia = DOWN = happy = Oui, bien sûr.
+alexia = DOWN = happy = Oui, bien sûr.
 
 
 % YOU_STINK
-alicia = DOWN = surprised_var = Hu…
-alicia = DOWN = surprised = Ha… Ha Ha !
-alicia = DOWN = happy = C'est gentil d'essayer de me remonter le moral,@en me faisant rire.
-alicia = DOWN = appeased = Merci encore, les filles.
+alexia = DOWN = surprised_var = Hu…
+alexia = DOWN = surprised = Ha… Ha Ha !
+alexia = DOWN = happy = C'est gentil d'essayer de me remonter le moral,@en me faisant rire.
+alexia = DOWN = appeased = Merci encore, les filles.
 
 
 % YOURE_WELCOME
-alicia = player = angry = Ouais… Merci pour rien.
+alexia = player = angry = Ouais… Merci pour rien.
 
 
 % YOU_STINK_MADE_FUN
-alicia = player = angry_var = C'est quoi ton problème ?
-player = alicia = happy_var = J'énonce des faits, c'est tout.
-alicia = player = unhappy = Tu sais quoi, je suis trop fatiguée pour rester@écouter tes idioties.
+alexia = player = angry_var = C'est quoi ton problème ?
+player = alexia = happy_var = J'énonce des faits, c'est tout.
+alexia = player = unhappy = Tu sais quoi, je suis trop fatiguée pour rester@écouter tes idioties.
 
 
 % YOU_STINK_DELTA_REACTION
@@ -94,8 +94,8 @@ delta = player = wink = Bon, tu sais où me trouver si tu as besoin.
 
 
 % NO_THANKS
-alicia = player = happy_var = Comme tu veux. Alors, à plus tard.
-player = alicia = laugh = Oui.
+alexia = player = happy_var = Comme tu veux. Alors, à plus tard.
+player = alexia = laugh = Oui.
 
 
 % COLLAPSE_DISCOVERED_UP
@@ -116,16 +116,16 @@ rebecca = DOWN = you_silly = Bah… Ça n'est pas comme si@je ne pouvais pas fai
 
 
 % ALICIA_COLLAPSE_THERE
-alicia = player = happy = Du coup, c'est par où la sortie ?
+alexia = player = happy = Du coup, c'est par où la sortie ?
 player = DOWN = no_sens = En fait, c'était pas là, mais ça s'est effondré.
-alicia = DOWN = surprised = Ha.
-player = alicia = worry = Mais ne t'en fait pas, je vais@nous en trouver une autre.
-alicia = player = happy = Ok, je te suis.
+alexia = DOWN = surprised = Ha.
+player = alexia = worry = Mais ne t'en fait pas, je vais@nous en trouver une autre.
+alexia = player = happy = Ok, je te suis.
 
 
 % ALICIA_COLLAPSE_DESK
 player = DOWN = no_sens = Bon… Heu… C'était la sortie.
-alicia = DOWN = surprised = Ha.
+alexia = DOWN = surprised = Ha.
 
 
 % SARAH_COLLAPSE_FREAKS_OUT
@@ -135,9 +135,9 @@ sarah = UP = worry = OK.
 
 
 % ALICIA_COLLAPSE_DESK_NEXT
-player = alicia = worry = Ne t'en fait pas, je vais@nous en trouver une autre.
-alicia = player = happy = Je te suis.
+player = alexia = worry = Ne t'en fait pas, je vais@nous en trouver une autre.
+alexia = player = happy = Je te suis.
 
 
 % COLLAPSE_EVIL_IDEA
-player = alicia = determined = (Cet éboulement me donne une idée…)
+player = alexia = determined = (Cet éboulement me donne une idée…)

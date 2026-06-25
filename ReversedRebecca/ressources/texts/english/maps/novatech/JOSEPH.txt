@@ -113,8 +113,8 @@ player = object = happy_var = Noted.
 
 
 % ALICIA_REACTION_JOSEPH_FORGET
-player = alicia = happy = And you?@Do you remember what Joseph asked me?
-alicia = player = surprised = Not at all!
+player = alexia = happy = And you?@Do you remember what Joseph asked me?
+alexia = player = surprised = Not at all!
 
 
 % REMEMBER

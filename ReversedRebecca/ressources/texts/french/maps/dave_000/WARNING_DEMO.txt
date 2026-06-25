@@ -9,7 +9,7 @@ dave = DOWN = camera = Est-ce que tu avais remarqué ?
 dave = DOWN = camera = Les clefs dans l'appartement de Rebecca sont@toujours au 3ème endroit où tu les cherches.
 
 % WHAT
-alicia = DOWN = surprised_var = Qu'est-ce que je fais là, moi ?
+alexia_alicia = DOWN = surprised_var = Qu'est-ce que je fais là, moi ?
 
 % BOLTS
 dave = DOWN = camera = Fait amusant :

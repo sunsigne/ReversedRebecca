@@ -1,9 +1,9 @@
 % ALICIA_DISCOVER_HER_ROOM
-alicia = RIGHT = surprised_var = What a mess! It's going to take@me forever to clean everything up…
+alexia = RIGHT = surprised_var = What a mess! It's going to take@me forever to clean everything up…
 
 
 % ALICIA_DISCOVER_HER_ROOM_HELP
-alicia = rebecca = happy = Thank you. That's nice.
+alexia = rebecca = happy = Thank you. That's nice.
 
 
 % TAKING_KEY_TO_PREVENT_SOFTLOCK

@@ -40,25 +40,25 @@ player = object = laugh = Très bien, merci.
 
 
 % MARIE
-marie = player = happy = Tu as regardé sous son bureau ?
+marichel = player = happy = Tu as regardé sous son bureau ?
 player = object = unhappy = Je suis sérieuse, Marie…@Son bureau a été attaqué…
-marie = player = surprised = Qu… Quoi ? Attaqué ?
-marie = player = surprised_var = Est-ce qu'elle va bien ?
+marichel = player = surprised = Qu… Quoi ? Attaqué ?
+marichel = player = surprised_var = Est-ce qu'elle va bien ?
 player = object = unhappy_var = C'est justement ce que j'essaie de savoir.@Une idée d'où elle peut être ?
-marie = player = surprised_var = Heu… N… non désolée.
-marie = player = surprised_var = … Donne-moi quelques minutes…@… J'accuse le coup.
+marichel = player = surprised_var = Heu… N… non désolée.
+marichel = player = surprised_var = … Donne-moi quelques minutes…@… J'accuse le coup.
 player = object = unhappy = Je… ne voulais pas t'inquiéter ?
-marie = player = surprised_var = (… Hein ?)
-marie = player = blush = (Rebecca s'inquiète de moi ?@C'est le plus beau jour de ma vie !)
-marie = player = blush_var2 = Pas de soucis, Rebecca.@Ça va aller… Trouve-la, d'accord ?
+marichel = player = surprised_var = (… Hein ?)
+marichel = player = blush = (Rebecca s'inquiète de moi ?@C'est le plus beau jour de ma vie !)
+marichel = player = blush_var2 = Pas de soucis, Rebecca.@Ça va aller… Trouve-la, d'accord ?
 player = object = laugh = Oui !
 
 
 % MARIE_HELP
-marie = player = surprised_var = Quoi ? Enfermée dans le SAS ?
+marichel = player = surprised_var = Quoi ? Enfermée dans le SAS ?
 player = object = unhappy = Oui. Tu crois pouvoir m'aider à la libérer ?
-marie = player = unhappy_var = Je suis sincèrement désolée, Rebecca.@Je n'ai aucune idée de comment l'ouvrir.
-marie = player = unhappy = Peut-être que Delta saura t'aider ?@Essaie d'aller la voir dans son bureau.
+marichel = player = unhappy_var = Je suis sincèrement désolée, Rebecca.@Je n'ai aucune idée de comment l'ouvrir.
+marichel = player = unhappy = Peut-être que Delta saura t'aider ?@Essaie d'aller la voir dans son bureau.
 player = object = happy_var = D'accord, merci.
 
 
@@ -95,12 +95,12 @@ delta = DOWN = laugh = Et voilà le travail !
 
 
 % DELTA_OPENED_SAS_NEXT
-alicia = DOWN = cry_happy = Merci beaucoup, les filles !
+alexia = DOWN = cry_happy = Merci beaucoup, les filles !
 delta = LEFT = laugh = De rien ma belle !@On n'allait pas te laisser là-dedans.
 
 
 % DELTA_OPENED_SAS_NEXT_VAR
-alicia = RIGHT = cry_happy = Merci beaucoup, Delta !
+alexia = RIGHT = cry_happy = Merci beaucoup, Delta !
 delta = LEFT = laugh = De rien ma belle !@On n'allait pas te laisser là-dedans.
 
 
@@ -158,15 +158,15 @@ miaka = DOWN = serious = Il faut croire que si.
 
 % MIKA_ALICIA_TALKING_ABOUT_BREAKING_DOWN_DOOR
 miaka = UP = worry = Alicia… Tu vas bien ?
-alicia = DOWN = happy = Je suis enfermée, mais ça va.@Tu es venu m'aider ?
+alexia = DOWN = happy = Je suis enfermée, mais ça va.@Tu es venu m'aider ?
 miaka = UP = serious_var = Je n'ai pas la clef, mais je vais me débrouiller.@Tu devrais t'éloigner de la porte.
-alicia = DOWN = surprised = ... Ha.
+alexia = DOWN = surprised = ... Ha.
 
 
 % MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
-alicia = RIGHT = happy = Merci, Mika. J'apprécie.
+alexia = RIGHT = happy = Merci, Mika. J'apprécie.
 miaka = LEFT = serious = De rien. Tu devrais remercier Rebecca,@c'est elle qui m'a prévenu de ta situation.
-alicia = RIGHT = happy = Je n'y manquerai pas.
+alexia = RIGHT = happy = Je n'y manquerai pas.
 
 
 % NOT_WILLING_TO_HELP_ANYMORE
@@ -175,8 +175,8 @@ player = DOWN = you_silly = C'est plus amusant quand les gens souffrent.@Comme J
 
 
 % REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_IN_DANGER
-player = alicia = happy = On dirait que j'ai trouvé Alicia.@Elle a l'air d'aller bien.
+player = alexia = happy = On dirait que j'ai trouvé Alicia.@Elle a l'air d'aller bien.
 
 
 % REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_TRAPPED
-player = alicia = happy = On dirait qu'Alicia n'a plus besoin de moi@pour sortir du SAS.
+player = alexia = happy = On dirait qu'Alicia n'a plus besoin de moi@pour sortir du SAS.

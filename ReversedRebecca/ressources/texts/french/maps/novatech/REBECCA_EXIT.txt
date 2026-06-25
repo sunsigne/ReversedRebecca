@@ -1,9 +1,9 @@
 % ALICIA_DISCOVER_HER_ROOM
-alicia = RIGHT = surprised_var = Quel bazar ! Je vais mettre@une éternité à tout ranger…
+alexia = RIGHT = surprised_var = Quel bazar ! Je vais mettre@une éternité à tout ranger…
 
 
 % ALICIA_DISCOVER_HER_ROOM_HELP
-alicia = rebecca = happy = Merci. C'est gentil.
+alexia = rebecca = happy = Merci. C'est gentil.
 
 
 % TAKING_KEY_TO_PREVENT_SOFTLOCK

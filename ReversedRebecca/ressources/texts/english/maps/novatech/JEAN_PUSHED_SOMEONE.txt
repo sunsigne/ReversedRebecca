@@ -48,12 +48,12 @@ player = DOWN = angry_var2 = (And he doesn't even apologize!@I don't want to tal
 
 
 % ALICIA_REACTION_JEAN_SCOLDING
-alicia = player = unhappy = I wish you had done that without me around…@It was awkward…
-player = alicia = wrong_with_you = Sorry, but he made me so mad!
-alicia = player = happy = I wouldn't have liked to be pushed either.
-alicia = player = unhappy = It's just… It's always a little embarrassing@to be right next to an argument.
-player = alicia = worry = Yes, I understand. Excuse me, @I'll be more careful next time.
-alicia = player = happy = Thank you.
+alexia = player = unhappy = I wish you had done that without me around…@It was awkward…
+player = alexia = wrong_with_you = Sorry, but he made me so mad!
+alexia = player = happy = I wouldn't have liked to be pushed either.
+alexia = player = unhappy = It's just… It's always a little embarrassing@to be right next to an argument.
+player = alexia = worry = Yes, I understand. Excuse me, @I'll be more careful next time.
+alexia = player = happy = Thank you.
 
 
 % JEAN_SCOLDING_BATHROOM

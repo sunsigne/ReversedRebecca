@@ -1,84 +1,84 @@
 % LOCKED_EXIT
-alicia = down = cry_var2 = Yes! I'm here! I'm locked in!
+alexia = down = cry_var2 = Yes! I'm here! I'm locked in!
 rebecca = up = surprised = Alicia? Stay put! I'll get you out of there!
-alicia = down = cry_happy = Staying put is the whole problem, Rebecca.
+alexia = down = cry_happy = Staying put is the whole problem, Rebecca.
 rebecca = up = unhappy = Sorry, that's not what I meant…
-alicia = down = cry_happy = Don't worry, I understood.
-alicia = down = cry_laugh = I'm glad you found me. I'll wait.
+alexia = down = cry_happy = Don't worry, I understood.
+alexia = down = cry_laugh = I'm glad you found me. I'll wait.
 
 
 % LOCKED_INQUIRY
-alicia = down = cry_var2 = Yes! I'm here! I'm locked in!
+alexia = down = cry_var2 = Yes! I'm here! I'm locked in!
 rebecca = up = surprised = Alicia? Stay put! I'll get some help!
-alicia = down = cry_happy = Staying put is the whole problem, Rebecca.
+alexia = down = cry_happy = Staying put is the whole problem, Rebecca.
 rebecca = up = unhappy = Sorry, that's not what I meant…
-alicia = down = cry_happy = Don't worry, I understood.
-alicia = down = cry_laugh = I'm glad you found me. I'll wait.
+alexia = down = cry_happy = Don't worry, I understood.
+alexia = down = cry_laugh = I'm glad you found me. I'll wait.
 
 
 % LOCKED_SADISTIC
-alicia = down = cry_var2 = Yes! I'm here! I'm locked in!
+alexia = down = cry_var2 = Yes! I'm here! I'm locked in!
 rebecca = up = laugh = Ha ha ha ha! That's even better than I imagined!
-alicia = down = cry = This isn't funny, Rebecca…@Help me out.
+alexia = down = cry = This isn't funny, Rebecca…@Help me out.
 rebecca = up = dreaming = Yeah, yeah, I'll help you.@I will just take my time.
-alicia = down = cry_var = Of all people, it had to be you…
+alexia = down = cry_var = Of all people, it had to be you…
 
 
 % MIKA_TOLD_ME
-alicia = player = happy = Mika told me it's thanks to you that I'm free,@so thank you.
-player = alicia = laugh = You're welcome!
+alexia = player = happy = Mika told me it's thanks to you that I'm free,@so thank you.
+player = alexia = laugh = You're welcome!
 
 
 % HUG
-alicia = RIGHT = appeased = Thank you.
+alexia = RIGHT = appeased = Thank you.
 player = LEFT = happy_var = There's no way I would have left you in there.
 
 
 % HUG_SARAH
-alicia = DOWN = appeased = Thank you.
+alexia = DOWN = appeased = Thank you.
 sarah = UP = happy_var = You're welcome. I didn't know you were in there,@but I'm glad you're doing well.
 
 
 % HUG_SARAH_VAR
-alicia = DOWN = appeased = Thank you.
+alexia = DOWN = appeased = Thank you.
 sarah = UP = happy_var = You're welcome.@There's no way I would have left you in there.
 
 
 % PICK_ME_UP
-alicia = player = happy = I need a pick-me-up.@I'm going to get myself some tea.
-alicia = player = happy = Do you want something?
+alexia = player = happy = I need a pick-me-up.@I'm going to get myself some tea.
+alexia = player = happy = Do you want something?
 
 
 % PICK_ME_UP_SARAH
-alicia = DOWN = happy = I need a pick-me-up.@I'm going to get myself some tea.
-alicia = DOWN = happy = Do you want something?
+alexia = DOWN = happy = I need a pick-me-up.@I'm going to get myself some tea.
+alexia = DOWN = happy = Do you want something?
 sarah = UP = wink = No thanks, I'm good.
 
 
 % ASK_DRINK
-alicia = player = happy_var = Okay, I'll get you that.
-player = alicia = laugh = Sweet, thank you. 
+alexia = player = happy_var = Okay, I'll get you that.
+player = alexia = laugh = Sweet, thank you. 
 
 
 % TAKE_CARE
-alicia = DOWN = happy = Yeah, I will.
+alexia = DOWN = happy = Yeah, I will.
 
 
 % YOU_STINK
-alicia = DOWN = surprised_var = Uh…
-alicia = DOWN = surprised = Ha… Hah Hah !
-alicia = DOWN = happy = It's nice of you to try to cheer me up,@by making me laugh.
-alicia = DOWN = appeased = Thank you again, girls.
+alexia = DOWN = surprised_var = Uh…
+alexia = DOWN = surprised = Ha… Hah Hah !
+alexia = DOWN = happy = It's nice of you to try to cheer me up,@by making me laugh.
+alexia = DOWN = appeased = Thank you again, girls.
 
 
 % YOURE_WELCOME
-alicia = player = angry = Yeah… Thanks for nothing.
+alexia = player = angry = Yeah… Thanks for nothing.
 
 
 % YOU_STINK_MADE_FUN
-alicia = player = angry_var = What's wrong with you?
-player = alicia = happy_var = I'm just stating facts, that's all.
-alicia = player = unhappy = You know what, I'm too tired to stay and@listen to your hogwash.
+alexia = player = angry_var = What's wrong with you?
+player = alexia = happy_var = I'm just stating facts, that's all.
+alexia = player = unhappy = You know what, I'm too tired to stay and@listen to your hogwash.
 
 
 % YOU_STINK_DELTA_REACTION
@@ -94,8 +94,8 @@ delta = player = wink = Well, you know where to find me@if you need anything.
 
 
 % NO_THANKS
-alicia = player = happy_var = Suit yourself. See you later.
-player = alicia = laugh = Sure.
+alexia = player = happy_var = Suit yourself. See you later.
+player = alexia = laugh = Sure.
 
 
 % COLLAPSE_DISCOVERED_UP
@@ -116,16 +116,16 @@ rebecca = DOWN = you_silly = Well… It's not like I can't go around.
 
 
 % ALICIA_COLLAPSE_THERE
-alicia = player = happy = So, which way is the exit.
+alexia = player = happy = So, which way is the exit.
 player = DOWN = no_sens = Actually, it was over there, but it collapsed.
-alicia = DOWN = surprised = Ha.
-player = alicia = worry = But don't worry, I'll find us another way.
-alicia = player = happy = Okay, I'm following you.
+alexia = DOWN = surprised = Ha.
+player = alexia = worry = But don't worry, I'll find us another way.
+alexia = player = happy = Okay, I'm following you.
 
 
 % ALICIA_COLLAPSE_DESK
 player = DOWN = no_sens = Well… Uh… That was the exit.
-alicia = DOWN = surprised = Ha.
+alexia = DOWN = surprised = Ha.
 
 
 % SARAH_COLLAPSE_FREAKS_OUT
@@ -135,9 +135,9 @@ sarah = UP = worry = ALRIGHT.
 
 
 % ALICIA_COLLAPSE_DESK_NEXT
-player = alicia = worry = Don't worry, I'll find us another way.
-alicia = player = happy = I'm following you.
+player = alexia = worry = Don't worry, I'll find us another way.
+alexia = player = happy = I'm following you.
 
 
 % COLLAPSE_EVIL_IDEA
-player = alicia = determined = (This collapse is giving me an idea…)
+player = alexia = determined = (This collapse is giving me an idea…)

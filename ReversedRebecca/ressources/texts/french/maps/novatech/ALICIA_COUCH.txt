@@ -1,26 +1,26 @@
 % THEFT
-alicia = player = happy = Désolée, je ne sais rien à ce sujet.
+alexia = player = happy = Désolée, je ne sais rien à ce sujet.
 
 
 % NEUTRAL
-alicia = DOWN = happy = Merci encore de m'avoir libérée.
-player = alicia = laugh = Je t'en prie, c'est normal.
+alexia = DOWN = happy = Merci encore de m'avoir libérée.
+player = alexia = laugh = Je t'en prie, c'est normal.
 
 
 % NEUTRAL_VAR
-alicia = DOWN = unhappy = Navré, Rebecca. J'ai eu une matinée difficile,@et je ne me sens pas de bavarder…
-alicia = DOWN = happy = Ça n'est pas contre toi. Je dois juste me détendre.
+alexia = DOWN = unhappy = Navré, Rebecca. J'ai eu une matinée difficile,@et je ne me sens pas de bavarder…
+alexia = DOWN = happy = Ça n'est pas contre toi. Je dois juste me détendre.
 
 
 % SADISTIC
-alicia = DOWN = angry = Si tu crois que j'ai envie de te parler, tu rêves !
+alexia = DOWN = angry = Si tu crois que j'ai envie de te parler, tu rêves !
 
 
 % NEXT
-player = alicia = worry = Si ça ne te gêne pas d'en parler… Comment@t'es-tu retrouvée enfermée dans le SAS ?
-alicia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a vérouillé les portes.
-alicia = DOWN = unhappy = Et… Ben…@J'étais simplement dedans quand c'est arrivé.
-player = alicia = you_silly_var = Je vois.
+player = alexia = worry = Si ça ne te gêne pas d'en parler… Comment@t'es-tu retrouvée enfermée dans le SAS ?
+alexia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a vérouillé les portes.
+alexia = DOWN = unhappy = Et… Ben…@J'étais simplement dedans quand c'est arrivé.
+player = alexia = you_silly_var = Je vois.
 
 
 % LAST
@@ -28,33 +28,33 @@ player = DOWN = you_silly = Je devrais la laisser tranquille. Elle a sûrement@b
 
 
 % DRINK_THANK
-player = alicia = happy_var = Merci pour le café !
-alicia = DOWN = happy = De rien.
+player = alexia = happy_var = Merci pour le café !
+alexia = DOWN = happy = De rien.
 
 
 % DRINK_THANK_VAR
-player = alicia = happy_var = Merci pour le thé !
-alicia = DOWN = happy = De rien.
+player = alexia = happy_var = Merci pour le thé !
+alexia = DOWN = happy = De rien.
 
 
 % DRINK_WAS_MINE
-alicia = DOWN = surprised_var = Mais… C'était à moi !
-player = alicia = excited = Et c'était délicieux !
-alicia = DOWN = unhappy = …
+alexia = DOWN = surprised_var = Mais… C'était à moi !
+player = alexia = excited = Et c'était délicieux !
+alexia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_SADISTIC
-alicia = DOWN = surprised_var = Mais… C'était à moi !
-player = alicia = excited = Et c'était délicieux !
-alicia = DOWN = angry_var = Mais quelle peste !@La prochaine fois, je mettrai du laxatif dedans !
+alexia = DOWN = surprised_var = Mais… C'était à moi !
+player = alexia = excited = Et c'était délicieux !
+alexia = DOWN = angry_var = Mais quelle peste !@La prochaine fois, je mettrai du laxatif dedans !
 
 
 % DRINK_WAS_MINE_NEXT
-alicia = DOWN = unhappy = …
+alexia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_APOLOGIZE
-player = alicia = worry = Pardon… C'était pour te faire une blague.@Vraiment.
-alicia = DOWN = unhappy = …
-alicia = DOWN = happy = … J'avoue que je ne m'y attendais pas.
-alicia = DOWN = happy_var = Oui, c'était amusant.
+player = alexia = worry = Pardon… C'était pour te faire une blague.@Vraiment.
+alexia = DOWN = unhappy = …
+alexia = DOWN = happy = … J'avoue que je ne m'y attendais pas.
+alexia = DOWN = happy_var = Oui, c'était amusant.

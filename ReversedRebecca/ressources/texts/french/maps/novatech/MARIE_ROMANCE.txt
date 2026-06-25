@@ -39,15 +39,15 @@ rebecca = object = happy_var = Merci, tu es gentille.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS
-alicia = player = unhappy = Heu… Rebecca… On est d'accord que@tu ne vas pas tout faire sauter, pas vrai ?
-rebecca = alicia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
-alicia = player = happy = C'était juste pour être sûre.
+alexia = player = unhappy = Heu… Rebecca… On est d'accord que@tu ne vas pas tout faire sauter, pas vrai ?
+rebecca = alexia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
+alexia = player = happy = C'était juste pour être sûre.
 
 
 % ALICIA_WORRIER_ABOUT_BOMBS
-alicia = player = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
-rebecca = alicia = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
-alicia = player = appeased = Tu m'as bien fait marcher.
+alexia = player = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
+rebecca = alexia = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
+alexia = player = appeased = Tu m'as bien fait marcher.
 
 
 % INVENTORY_BOMB_NEXT
@@ -97,8 +97,8 @@ object = player = cry = ... Que tu seras heureuse…@Excuse-moi une seconde.
 
 
 % DISILLUSIONED
-marie = RIGHT = unhappy = (Zut, je commençais à croire que…)
-marie = RIGHT = worry = (Bah… Une autre fois)
+marichel = RIGHT = unhappy = (Zut, je commençais à croire que…)
+marichel = RIGHT = worry = (Bah… Une autre fois)
 
 
 % EMBARASSED
@@ -117,7 +117,7 @@ object = player = blush_var = (Est-ce que c'est vraiment@en train d'arriver ?)
 
 
 % DISILLUSIONED_NEXT
-marie = RIGHT = cry_var = (Je me faisais juste des idées…)
+marichel = RIGHT = cry_var = (Je me faisais juste des idées…)
 
 
 % EMBARASSED_NEXT_NEXT_NEXT

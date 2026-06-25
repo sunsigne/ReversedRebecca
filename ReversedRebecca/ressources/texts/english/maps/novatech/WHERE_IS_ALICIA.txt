@@ -40,25 +40,25 @@ player = object = laugh = Sweet! Thank you.
 
 
 % MARIE
-marie = player = happy = Did you look under her desk?
+marichel = player = happy = Did you look under her desk?
 player = object = unhappy = I'm being serious, Marie…@Her desk was attacked…
-marie = player = surprised = Wh… What? Attacked?
-marie = player = surprised_var = Is she okay?
+marichel = player = surprised = Wh… What? Attacked?
+marichel = player = surprised_var = Is she okay?
 player = object = unhappy_var = That's exactly what I'm trying to find out.@Any idea where she might be?
-marie = player = surprised_var = Um… N… no, sorry.
-marie = player = surprised_var = … Give me a few minutes…@… I'm taking it hard.
+marichel = player = surprised_var = Um… N… no, sorry.
+marichel = player = surprised_var = … Give me a few minutes…@… I'm taking it hard.
 player = object = unhappy = I… didn't mean to worry you?
-marie = player = surprised_var = (… Huh?)
-marie = player = blush = (Rebecca is worried about me?@This is the best day of my life!)
-marie = player = blush_var2 = No worries, Rebecca. I'll be alright…@Find her, okay?
+marichel = player = surprised_var = (… Huh?)
+marichel = player = blush = (Rebecca is worried about me?@This is the best day of my life!)
+marichel = player = blush_var2 = No worries, Rebecca. I'll be alright…@Find her, okay?
 player = object = laugh = Yes!
 
 
 % MARIE_HELP
-marie = player = surprised_var = What? Locked in the SAS?
+marichel = player = surprised_var = What? Locked in the SAS?
 player = object = unhappy = Yes. Do you think you can help me free her?
-marie = player = unhappy_var = I'm so sorry, Rebecca.@I have no idea how to open it.
-marie = player = unhappy = Maybe Delta may help you?@Try going to see her in her office.
+marichel = player = unhappy_var = I'm so sorry, Rebecca.@I have no idea how to open it.
+marichel = player = unhappy = Maybe Delta may help you?@Try going to see her in her office.
 player = object = happy_var = Alright, thanks.
 
 
@@ -95,12 +95,12 @@ delta = DOWN = laugh = And there you have it!
 
 
 % DELTA_OPENED_SAS_NEXT
-alicia = DOWN = cry_happy = Thank you, girls!
+alexia = DOWN = cry_happy = Thank you, girls!
 delta = LEFT = laugh = You're welcome, sweetie!@We weren't going to leave you in there.
 
 
 % DELTA_OPENED_SAS_NEXT_VAR
-alicia = RIGHT = cry_happy = Thank you, Delta !
+alexia = RIGHT = cry_happy = Thank you, Delta !
 delta = LEFT = laugh = You're welcome, sweetie!@We weren't going to leave you in there.
 
 
@@ -158,15 +158,15 @@ miaka = DOWN = serious = It seems it did.
 
 % MIKA_ALICIA_TALKING_ABOUT_BREAKING_DOWN_DOOR
 miaka = UP = worry = Alicia… Are you okay?
-alicia = DOWN = happy = I'm locked up, but I'm fine.@Are you here to help me?
+alexia = DOWN = happy = I'm locked up, but I'm fine.@Are you here to help me?
 miaka = UP = serious_var = I don't have the key, but I'll manage.@You should step away from the door.
-alicia = DOWN = surprised = ... Oh.
+alexia = DOWN = surprised = ... Oh.
 
 
 % MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
-alicia = RIGHT = happy = Thank you, Mika. I appreciate.
+alexia = RIGHT = happy = Thank you, Mika. I appreciate.
 miaka = LEFT = serious = You're welcome. You should thank Rebecca,@she's the one who told me about your situation.
-alicia = RIGHT = happy = Sure, I will.
+alexia = RIGHT = happy = Sure, I will.
 
 
 % NOT_WILLING_TO_HELP_ANYMORE
@@ -175,8 +175,8 @@ player = DOWN = you_silly = It's more entertaining when people are suffering,@Jo
 
 
 % REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_IN_DANGER
-player = alicia = happy = Looks like I found Alicia. She seems to be okay.
+player = alexia = happy = Looks like I found Alicia. She seems to be okay.
 
 
 % REBECCA_FOUND_ALICIA_WHILE_SHE_THOUGHT_SHE_WAS_TRAPPED
-player = alicia = happy = Looks like Alicia doesn't need me@anymore to get out of the SAS.
+player = alexia = happy = Looks like Alicia doesn't need me@anymore to get out of the SAS.

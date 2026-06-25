@@ -1,26 +1,26 @@
 % THEFT
-alicia = player = happy = Sorry, I don't know anything about this.
+alexia = player = happy = Sorry, I don't know anything about this.
 
 
 % NEUTRAL
-alicia = DOWN = happy = Thank you again, for freeing me.
-player = alicia = laugh = My pleasure, it's nothing.
+alexia = DOWN = happy = Thank you again, for freeing me.
+player = alexia = laugh = My pleasure, it's nothing.
 
 
 % NEUTRAL_VAR
-alicia = DOWN = unhappy = Sorry, Rebecca. I had a rough morning,@and I don't feel like chatting…
-alicia = DOWN = happy = It's nothing personal. I just need to relax.
+alexia = DOWN = unhappy = Sorry, Rebecca. I had a rough morning,@and I don't feel like chatting…
+alexia = DOWN = happy = It's nothing personal. I just need to relax.
 
 
 % SADISTIC
-alicia = DOWN = angry = If you think I want to talk to you, you're dreaming!
+alexia = DOWN = angry = If you think I want to talk to you, you're dreaming!
 
 
 % NEXT
-player = alicia = worry = If you don't mind me asking…@How did you end up locked in the SAS?
-alicia = DOWN = happy = All thanks to our security system.@When the explosion occured, it locked the doors.
-alicia = DOWN = unhappy = And… well…@I was just in there when it happened.
-player = alicia = you_silly_var = I see.
+player = alexia = worry = If you don't mind me asking…@How did you end up locked in the SAS?
+alexia = DOWN = happy = All thanks to our security system.@When the explosion occured, it locked the doors.
+alexia = DOWN = unhappy = And… well…@I was just in there when it happened.
+player = alexia = you_silly_var = I see.
 
 
 % LAST
@@ -28,33 +28,33 @@ player = DOWN = you_silly = I should leave her alone. She probably needs@some re
 
 
 % DRINK_THANK
-player = alicia = happy_var = Thanks for the coffee!
-alicia = DOWN = happy = You're welcome.
+player = alexia = happy_var = Thanks for the coffee!
+alexia = DOWN = happy = You're welcome.
 
 
 % DRINK_THANK_VAR
-player = alicia = happy_var = Thanks for the tea!
-alicia = DOWN = happy = You're welcome.
+player = alexia = happy_var = Thanks for the tea!
+alexia = DOWN = happy = You're welcome.
 
 
 % DRINK_WAS_MINE
-alicia = DOWN = surprised_var = But… This was mine!
-player = alicia = excited = And this was delicious!
-alicia = DOWN = unhappy = …
+alexia = DOWN = surprised_var = But… This was mine!
+player = alexia = excited = And this was delicious!
+alexia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_SADISTIC
-alicia = DOWN = surprised_var = But… This was mine!
-player = alicia = excited = And this was delicious!
-alicia = DOWN = angry_var = What a bitch! Next time, I'll put a laxative in it!
+alexia = DOWN = surprised_var = But… This was mine!
+player = alexia = excited = And this was delicious!
+alexia = DOWN = angry_var = What a bitch! Next time, I'll put a laxative in it!
 
 
 % DRINK_WAS_MINE_NEXT
-alicia = DOWN = unhappy = …
+alexia = DOWN = unhappy = …
 
 
 % DRINK_WAS_MINE_APOLOGIZE
-player = alicia = worry = Excuse me… It was to play a joke on you. Really.
-alicia = DOWN = unhappy = …
-alicia = DOWN = happy = … I have to admit I didn't expect that.
-alicia = DOWN = happy_var = Yes, that was funny.
+player = alexia = worry = Excuse me… It was to play a joke on you. Really.
+alexia = DOWN = unhappy = …
+alexia = DOWN = happy = … I have to admit I didn't expect that.
+alexia = DOWN = happy_var = Yes, that was funny.

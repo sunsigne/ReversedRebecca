@@ -1,4 +1,4 @@
 % MIKA_ALICIA_TALKING_ABOUT_BROKEN_DOOR
-alicia = RIGHT = happy = Thank you, Mia. I appreciate.
+alexia = RIGHT = happy = Thank you, Mia. I appreciate.
 miaka = LEFT = serious = You're welcome. You should thank Rebecca,@she's the one who told me about your situation.
-alicia = RIGHT = happy = Sure, I will.
+alexia = RIGHT = happy = Sure, I will.

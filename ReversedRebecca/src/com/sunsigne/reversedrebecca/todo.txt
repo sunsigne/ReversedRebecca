@@ -44,7 +44,7 @@
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix (vérifier)
 		- fichier .gpf
-		- dialogues (facing inclus)
+		- dialogues (contenu)
 		- fichier visuel, évidemment
 		- les animations
 		- tester
@@ -54,10 +54,9 @@
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix (vérifier)
 		- fichier .gpf
-		- dialogues (facing inclus)
+		- dialogues (contenu)
 		- fichier visuel, évidemment
 		- visuel succès
-		- succès
 		- les animations
 		- tester
 
@@ -259,7 +258,7 @@
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- voix
 		- fichier .gpf
-		- dialogues (facing inclus)
+		- dialogues (nom ET contenu)
 		- counter, deeds, bonus txt & actions
 		- succès
 		- fichier visuel, évidemment

@@ -32,11 +32,11 @@ rebecca = down = you_silly = Oops…
 
 
 % ALICIA_REACTION_COMPUTER_TURN_OFF_WITHOUT_SAVING
-alicia = player = surprised_var = Why did you do that?
+alexia = player = surprised_var = Why did you do that?
 rebecca = RIGHT = surprised = Oh no! I, um…
-rebecca = alicia = you_silly = … didn’t mean to.
-alicia = player = unhappy = Ugh… That’s not cool…@I feel bad for Tim…
-rebecca = alicia = you_silly = Yeah… Me too.
+rebecca = alexia = you_silly = … didn’t mean to.
+alexia = player = unhappy = Ugh… That’s not cool…@I feel bad for Tim…
+rebecca = alexia = you_silly = Yeah… Me too.
 
 
 % COMPUTER_BEFORE_CYAN_KEY
@@ -75,13 +75,13 @@ rebecca = object = you_silly = What a clumsy move…@I broke the lock…
 
 % ALICIA_REACTION_TOILET_DOOR_SABOTAGE
 rebecca = UP = surprised = Ho! A three-headed monkey!
-alicia = UP = surprised_var = What?
+alexia = UP = surprised_var = What?
 
 
 % ALICIA_REACTION_TOILET_DOOR_SABOTAGE_NEXT
-rebecca = alicia = laugh = Sorry, it was just a fly.
-alicia = player = unhappy = Seriously?
-alicia = player = appeased = Pfff…
+rebecca = alexia = laugh = Sorry, it was just a fly.
+alexia = player = unhappy = Seriously?
+alexia = player = appeased = Pfff…
 
 
 % TOILET_BUT_SABOTAGED
@@ -97,7 +97,7 @@ rebecca = DOWN = laugh = What a mess…
 
 
 % ALICIA_REACTION_ALICIA_ROOM_ANYTHING
-alicia = rebecca = unhappy = Yeah… It really hits hard to see my desk like this.
+alexia = rebecca = unhappy = Yeah… It really hits hard to see my desk like this.
 
 
 % ALICIA_ROOM_PLANT
@@ -106,9 +106,9 @@ rebecca = object = happy_var = So much the better.
 
 
 % ALICIA_REACTION_ALICIA_ROOM_PLANT_SADISTIC
-alicia = rebecca = unhappy = …
+alexia = rebecca = unhappy = …
 
 
 % ALICIA_REACTION_ALICIA_ROOM_PLANT
-rebecca = alicia = unhappy = I mean…
-alicia = rebecca = happy = Don’t worry, I get it.
+rebecca = alexia = unhappy = I mean…
+alexia = rebecca = happy = Don’t worry, I get it.

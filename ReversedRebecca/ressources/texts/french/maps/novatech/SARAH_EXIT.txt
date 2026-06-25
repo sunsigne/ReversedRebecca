@@ -61,8 +61,8 @@ rebecca = sarah = laugh = Ok, je ne t'embête pas plus.
 
 
 % ALICIA_REACTION_SARAH_SEARCH_ALICIA_DESK
-alicia = sarah = unhappy = Ça fait mal de voir mon bureau dans cet état…
-alicia = sarah = happy = Tu me tiendras au courant de ce@que tu apprends ici, d'accord ?
+alexia = sarah = unhappy = Ça fait mal de voir mon bureau dans cet état…
+alexia = sarah = happy = Tu me tiendras au courant de ce@que tu apprends ici, d'accord ?
 sarah = rebecca = happy_var = Oui, bien sûr.
 
 

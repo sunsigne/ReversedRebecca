@@ -59,13 +59,13 @@ object = player = happy = Then it's perfect.
 
 
 % ALICIA_REACTION_BOMB
-alicia = marie = angry = No, it's not perfect!@We're not going to blow everything up!
-marie = down = worry = It's just to clear up the entrance door…@Rebecca will be careful.
-alicia = marie = unhappy = Hmm... Rebecca, what do you think?
-rebecca = alicia = laugh = (I probably shouldn't tell her@that I find the idea exciting.)
-rebecca = alicia = happy = I have no problem with that.
-alicia = marie = unhappy = Well… Maybe you two are right after all…
-alicia = rebecca = happy = I agree if you want to blow up the entrance.
+alexia = marichel = angry = No, it's not perfect!@We're not going to blow everything up!
+marichel = down = worry = It's just to clear up the entrance door…@Rebecca will be careful.
+alexia = marichel = unhappy = Hmm... Rebecca, what do you think?
+rebecca = alexia = laugh = (I probably shouldn't tell her@that I find the idea exciting.)
+rebecca = alexia = happy = I have no problem with that.
+alexia = marichel = unhappy = Well… Maybe you two are right after all…
+alexia = rebecca = happy = I agree if you want to blow up the entrance.
 
 
 % INTRUDER
@@ -85,7 +85,7 @@ rebecca = object = laugh = That makes sense!
 
 
 % ALICIA_REACTION_INTRUDER_SARAH_PISSED
-alicia = player = surprised = Totally!
+alexia = player = surprised = Totally!
 
 
 % INTRUDER_SARAH_PISSED_VAR
@@ -106,18 +106,18 @@ rebecca = object = laugh = No worries!
 
 % JOSEPH_TALK
 joseph = RIGHT = happy = … and that is why coffee is called "coffee".
-marie = LEFT = laugh = What a story! You learn something new every day.
-marie = player = happy = And you Rebecca, did you know that in Arabic,@the word "coffee" was synonymous with joy?
+marichel = LEFT = laugh = What a story! You learn something new every day.
+marichel = player = happy = And you Rebecca, did you know that in Arabic,@the word "coffee" was synonymous with joy?
 joseph = RIGHT = doubt = That is not what I said…
-marie = LEFT = unhappy = Oh… Did I misunderstand?
+marichel = LEFT = unhappy = Oh… Did I misunderstand?
 joseph = RIGHT = happy_var = That was almost that anyway.@You just took a shortcut.
-marie = LEFT = happy = And where does the word "tea" come from?
+marichel = LEFT = happy = And where does the word "tea" come from?
 rebecca = DOWN = you_silly = I think they'll be at it for a while.@I better keep going.
 
 
 % SARAH_DELTA
 sarah = LEFT = happy = … That's exactly what I’m trying to find out.
-marie = UP = unhappy = Shoo… I thought you would know more.
+marichel = UP = unhappy = Shoo… I thought you would know more.
 sarah = LEFT = laugh = Not yet, but I will tell you what I learn. By the way,@I should really get back to my investigation.
 delta = RIGHT = wink = Yes, we're investigating really hard here.@We were talking about lunch.
 sarah = LEFT = laugh = No, I meant "really" get back to my investigation.

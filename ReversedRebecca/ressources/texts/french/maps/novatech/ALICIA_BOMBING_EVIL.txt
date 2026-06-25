@@ -1,25 +1,25 @@
 % BOMBING_OWN_DESK
-alicia = player = surprised = Ben dis donc ! Quand tu cherches une sortie,@tu ne fais pas semblant !
-player = alicia = evil = Oui, on va passer par là.
+alexia = player = surprised = Ben dis donc ! Quand tu cherches une sortie,@tu ne fais pas semblant !
+player = alexia = evil = Oui, on va passer par là.
 
 
 % BOMBING_OWN_DESK_AGAIN
-alicia = UP = unhappy = Ça ne me plait vraiment pas que@tu exploses nos murs…
+alexia = UP = unhappy = Ça ne me plait vraiment pas que@tu exploses nos murs…
 player = DOWN = evil_var = D'accord. J'arrête.
 
 
 % PISSED_OFF
-alicia = player = angry = Rebecca ! Tu avais dit que tu arrêtais !
+alexia = player = angry = Rebecca ! Tu avais dit que tu arrêtais !
 
 
 % PISSED_OFF_NEXT
-player = alicia = happy = Je n'ai rien fait.
+player = alexia = happy = Je n'ai rien fait.
 
 
 % PISSED_OFF_NEXT_NEXT
-alicia = DOWN = angry = Et ça, c'est quoi ? Hein ?@C'est pas un gros trou, peut-être ?
+alexia = DOWN = angry = Et ça, c'est quoi ? Hein ?@C'est pas un gros trou, peut-être ?
 rebecca = DOWN = happy = C'était comme ça quand je suis arrivée.
-alicia = UP = angry_var = Et en plus, tu te fous de moi !
+alexia = UP = angry_var = Et en plus, tu te fous de moi !
 
 
 % I_AM_ADORABLE
@@ -32,4 +32,4 @@ rebecca = DOWN = excited = C'est d'ailleurs pour ça que@je vais t'aider à rebo
 
 % I_WILL_HELP_YOU_DEFINITIVELY
 rebecca = DOWN = death = … Définitivement.
-alicia = UP = surprised_var = Quoi ?!
+alexia = UP = surprised_var = Quoi ?!

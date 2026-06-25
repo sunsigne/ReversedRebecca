@@ -39,15 +39,15 @@ rebecca = object = happy_var = Thank you, you are sweet.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS
-alicia = player = unhappy = Uh… Rebecca… You don't plan@to blow everything up, right?
-rebecca = alicia = laugh = No, just enough to get us out.
-alicia = player = happy = Just making sure.
+alexia = player = unhappy = Uh… Rebecca… You don't plan@to blow everything up, right?
+rebecca = alexia = laugh = No, just enough to get us out.
+alexia = player = happy = Just making sure.
 
 
 % ALICIA_WORRIER_ABOUT_BOMBS
-alicia = player = angry = Rebecca! You said you were done with bombs!
-rebecca = alicia = laugh = Ha ha ha! I know, I said that to mess with you.
-alicia = player = appeased = You really got me there.
+alexia = player = angry = Rebecca! You said you were done with bombs!
+rebecca = alexia = laugh = Ha ha ha! I know, I said that to mess with you.
+alexia = player = appeased = You really got me there.
 
 
 % INVENTORY_BOMB_NEXT
@@ -97,8 +97,8 @@ object = player = cry = ... That you'll be happy…@Excuse me a second.
 
 
 % DISILLUSIONED
-marie = RIGHT = unhappy = (Jeez, I was starting to think that…)
-marie = RIGHT = worry = (Well… Maybe another time)
+marichel = RIGHT = unhappy = (Jeez, I was starting to think that…)
+marichel = RIGHT = worry = (Well… Maybe another time)
 
 
 % EMBARASSED
@@ -117,7 +117,7 @@ object = player = blush_var = (Is this really happening?)
 
 
 % DISILLUSIONED_NEXT
-marie = RIGHT = cry_var = (I was just getting ideas…)
+marichel = RIGHT = cry_var = (I was just getting ideas…)
 
 
 % EMBARASSED_NEXT_NEXT_NEXT

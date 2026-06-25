@@ -56,7 +56,7 @@ jean = player = unhappy = … Ha. Si tu le dis…
 
 
 % ALICIA_REACTION_JEAN_EXIT
-alicia = player = happy_var = On n'a rien à perdre à essayer.
+alexia = player = happy_var = On n'a rien à perdre à essayer.
 
 
 % WORK
