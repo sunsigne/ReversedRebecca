@@ -1,0 +1,10 @@
+///// GOOD /////
+
+FREE_ALICIA = 3 % libérer Alexis
+FREE_AND_BEFRIEND_ALICIA = 4 % libérer Alexis et sympathiser
+
+TRY_FREEING_ALICIA = 2 % essayer de libérer Alexis
+
+///// BAD /////
+
+MOCKING_ALICIA_S_FATE = 3 % se moquer du sort d Alexis

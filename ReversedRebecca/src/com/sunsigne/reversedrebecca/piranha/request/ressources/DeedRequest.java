@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -44,8 +46,18 @@ public class DeedRequest implements Request {
 
 		Deed deed = World.get().getLevelStats().getDeed();
 		String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
-		path = path.concat("deeds" + ".txt");
-		String lvl_deed = new Translatable().getTranslatedText(target_deed, path);
+		String file = "deeds" + ".txt";
+		path = path.concat(file);
+
+		// get the translation
+
+		String living_type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? ""
+				: "/" + LivingOption.getType().getName();
+		String typePath = path.substring(0, path.length() - file.length() - 1).concat(living_type + "/" + file);
+
+		String lvl_deed = new Translatable().getStrictTranslatedText(target_deed, typePath);
+		if (lvl_deed.isEmpty())
+			lvl_deed = new Translatable().getTranslatedText(target_deed, path);
 
 		// analyse the deed
 

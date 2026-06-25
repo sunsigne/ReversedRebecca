@@ -1,0 +1,12 @@
+///// GOOD /////
+
+FREE_ALICIA = 3 % free Alexis
+FREE_AND_BEFRIEND_ALICIA = 4 % free and befriend Alexis
+
+TRY_FREEING_ALICIA = 2 % try freeing Alexis
+
+///// BAD /////
+
+STEAL_HER_DRINK = 1 % steal his drink
+
+MOCKING_ALICIA_S_FATE = 3 % mocking Alexis s fate

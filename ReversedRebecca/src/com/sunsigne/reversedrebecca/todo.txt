@@ -45,7 +45,8 @@
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
-		- counter, deeds, bonus txt & actions
+		- counter, bonus txt & actions
+		- succès
 		- fichier visuel, évidemment
 		- les animations
 		- tester
@@ -56,14 +57,16 @@
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
-		- counter, deeds, bonus txt & actions
+		- counter, bonus txt & actions
 		- fichier visuel, évidemment
+		- succès
 		- les animations
 		- tester
+		- succès
 
 	lvl001 - mika : mika / mia
-		- counter & deeds
-
+		- counter
+	
 	////////// MILITARY ////////////
 
 	bug :
@@ -263,6 +266,7 @@
 		- fichier .gpf
 		- dialogues (facing inclus)
 		- counter, deeds, bonus txt & actions
+		- succès
 		- fichier visuel, évidemment
 		- les animations
 		- tester
