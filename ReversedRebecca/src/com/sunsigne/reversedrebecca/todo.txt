@@ -47,6 +47,7 @@
 		- fichier visuel, évidemment
 		- les animations
 		- tester
+		! - on parle de "pink hair" dans les dialogues ! Doit être cohérent si gender swapped!
 		
 	lvl001 - alexia : alicia / alexis :
 		- fichiers visuels dans $working
@@ -57,6 +58,13 @@
 		- visuel succès
 		- les animations
 		- tester
+		
+	les dialgoues sont tous à faire, sauf anglais
+	
+	
+	!! Dave dit "Alexia" ! faire réagir rebecca :
+	- c'est alexis, pas Alexia
+	- I know what i said
 
 	////////// MILITARY ////////////
 

@@ -1,8 +1,3 @@
-% SOON_NEXT_VAR
-rebecca = object = worry = Hey Mia! Can we talk now?
-miaka = player = serious = Yes, I'm good. What were you saying?
-
-
 % NEUTRAL
 rebecca = object = happy = What exactly happened?
 miaka = player = serious = I was coming out of the break room,@when I heard a blast.
@@ -31,18 +26,6 @@ miaka = sarah = serious = Not yet, but I'm going back now.
 sarah = miaka = happy = Good luck.
 
 
-% THANK_FOR_YELLING
-miaka = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
-player = miaka = happy_var = Whenever you want!
-miaka = player = smirk = Whenever I want? Because I have@something else you can shake…
-player = miaka = no_sens_var = … Pardon?
-miaka = player = smirk = Do I need to draw you a picture?@I'm coming over tonight.
-player = miaka = no_sens = Uh… No.
-miaka = player = smirk = Yes.
-player = miaka = no_sens_var = …
-player = miaka = blush = (Actually, it's a little flattering.@I wonder if she'll really come.)
-
-
 % THANK_FOR_YELLING_GIRLFRIEND
 miaka = player = serious = Rebecca, I wanted to tell you…@Thanks again for shaking me up.
 player = miaka = worry = You're welcome, I guess…@I'm a little shaken up myself.
@@ -50,6 +33,3 @@ miaka = player = serious = Why ?
 player = miaka = happy = I just agreed to go out with Michel.@His declaration surprised me, but I'm happy.
 miaka = player = worry = Ha. That's… A good thing, I guess?
 miaka = player = serious = Well, if you don't mind, I have some rubble@to clear.
-
-
-

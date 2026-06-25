@@ -1,3 +1,7 @@
+% WHERE_IS_ALICIA
+jean = rebecca = unhappy = No, I haven't seen him.
+
+
 % EXIT
 player = object = happy = Hey, I'm looking for an outing.@Where would you go?
 jean = player = unhappy = Isn't Mia clearing the entrance?

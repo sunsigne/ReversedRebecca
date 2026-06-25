@@ -18,4 +18,4 @@ player = object = surprised = Alexis probably has a problem! I need to find out@
 % ALICIA_HELP
 player = object = asleep = Let's see…
 player = object = unhappy = I need to find a way to free Alexis,@who's locked up.
-player = object = happy = Sarah, Delta or even Mia, could help me,@if I ask them.
+player = object = happy = Sarah, Delta or even Mika, could help me,@if I ask them.

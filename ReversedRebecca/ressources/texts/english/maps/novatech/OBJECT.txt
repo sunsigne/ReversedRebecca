@@ -81,7 +81,7 @@ alexia = UP = surprised_var = What?
 % ALICIA_REACTION_TOILET_DOOR_SABOTAGE_NEXT
 rebecca = alexia = laugh = Sorry, it was just a fly.
 alexia = player = unhappy = Seriously?
-alexia = player = appeased = Pfff…
+alexia = player = appeased = Pfft…
 
 
 % TOILET_BUT_SABOTAGED

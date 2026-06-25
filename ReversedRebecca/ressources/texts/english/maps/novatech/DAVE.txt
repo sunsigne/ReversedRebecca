@@ -1,6 +1,6 @@
 % ALICIA
 dave = player = calm = I can't solve this problem, Rebecca.@Ask someone else.
-dave = DOWN = calm = Don't misunderstand me. I care about Alicia.@It's just not my place to interfere.
+dave = DOWN = calm = Don't misunderstand me. I care about Alexia.@It's just not my place to interfere.
 
 
 % ALICIA_PLUS

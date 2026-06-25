@@ -1,0 +1,4 @@
+%SPONTANEOUS_NEXT
+player = alexia = angry = No way! You're not going@to start annoying me too!
+alexia = player = angry = Oh really? I'm annoying you? Do you want me to@remind you who's dealing with your paperwork?
+player = alexia = angry_var2 = Is he looking for trouble, or what?@Because he's going to find it!

@@ -16,11 +16,6 @@ alexia = down = cry_happy = Don't worry, I understood.
 alexia = down = cry_laugh = I'm glad you found me. I'll wait.
 
 
-% MIKA_TOLD_ME
-alexia = player = happy = Mia told me it's thanks to you that I'm free,@so thank you.
-player = alexia = laugh = You're welcome!
-
-
 % PICK_ME_UP
 alexia = player = happy = I need a pick-me-up.@I'm going to get myself some coffee.
 alexia = player = happy = Do you want something?
