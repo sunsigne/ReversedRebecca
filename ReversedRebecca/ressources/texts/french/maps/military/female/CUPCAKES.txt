@@ -1,0 +1,3 @@
+% LAST
+object = player = worry = Je suis navrée, chouquette. Il n'en reste plus un@seul. Tu as mangé tous les cupcakes du régiment.
+object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.

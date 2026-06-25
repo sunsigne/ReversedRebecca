@@ -75,13 +75,11 @@
 
 	à faire :
 		traduction en anglais :
-		cassidy / cupcakes / darwin
+		cassidy / darwin
 		
 		cassidy : "impertinance" = "sassy" ?
-		jessy = "une cible à trouer" -> "a target to screw"
 		Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
 		Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Yuck / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet!
-		Pour Amir, idée de traduction de "chouquette" -> "honey" ?
 
 	bug :
 		- arranger l'interaction avec le parcours d'entrainement

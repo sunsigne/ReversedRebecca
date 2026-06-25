@@ -37,8 +37,3 @@ object = player = worry = Tu veux une pelle à la place de ta cuillère ?
 % LAST
 object = player = worry = Je suis navré, chouquette. Il n'en reste plus un seul.@Tu as mangé tous les cupcakes du régiment.
 object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
-
-
-% LAST_FEMALE
-object = player = worry = Je suis navrée, chouquette. Il n'en reste plus un@seul. Tu as mangé tous les cupcakes du régiment.
-object = player = happy = Bon, il faut absolument que je m'y remette.@Merci encore pour le coup de main.
