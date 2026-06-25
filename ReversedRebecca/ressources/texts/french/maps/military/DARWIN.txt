@@ -67,4 +67,3 @@ militaryman = UP = sergent_yelling = Si la discipline était une balle, vous l�
 
 % SERGENT_NEXT_NEXT_NEXT_NEXT_NEXT_NEXT
 militaryman = UP = sergent_yelling = On devrait vous exposer comme exemple :@"Voilà ce qu’il ne faut jamais devenir !"
-
