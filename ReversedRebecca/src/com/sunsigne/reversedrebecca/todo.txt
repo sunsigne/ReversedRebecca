@@ -42,7 +42,7 @@
 	lvl001 - marichel : marie / michel :
 		- fichiers visuels dans $working
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
-		- voix
+		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
 		- counter, deeds, bonus txt & actions
@@ -53,7 +53,7 @@
 	lvl001 - alexia : alicia / alexis :
 		- fichiers visuels dans $working
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
-		- voix
+		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
 		- counter, deeds, bonus txt & actions
@@ -63,10 +63,7 @@
 
 	lvl001 - mika : mika / mia
 		- counter & deeds
-		
-	lvl002 - dougly : doug / dolly :
-		- voix & deeds
-	
+
 	////////// MILITARY ////////////
 
 	bug :
