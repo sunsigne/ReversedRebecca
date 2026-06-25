@@ -20,6 +20,7 @@ JESSY_WANTS_BOMBS = Key1 % James wants bombs
 YES_MAAM = Key2 % Yes, mister
 BLOW_HER_FACE_OFF = Key1 % blow his face off
 NANCY_IS_INDISPOSED = Key1 % Nolan is... indisposed
+TELL_HIM_ABOUT_ALICIA_LOCKED_UP = Key3 % tell him about Alexis locked up
 
 ///// REFECTORY /////
 

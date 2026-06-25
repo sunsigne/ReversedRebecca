@@ -45,7 +45,6 @@
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
-		- actions
 		- fichier visuel, évidemment
 		- les animations
 		- tester
@@ -56,7 +55,6 @@
 		- voix (vérifier)
 		- fichier .gpf
 		- dialogues (facing inclus)
-		- actions
 		- fichier visuel, évidemment
 		- visuel succès
 		- succès

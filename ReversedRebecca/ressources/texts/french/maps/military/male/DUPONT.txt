@@ -1,3 +1,10 @@
 % STATION_POLICE_WERE_IDIOTS
 object = player = unhappy = Cha n'est pas très gentil pour Jamche et Cachidy. Tu@chavais qu'ils étaient militaires ET polichiers ?
 object = player = happy = En tout cas, ch'était quand même un chacré risque !
+
+
+% ABOUT_ALICIA_LOCKED_UP
+object = player = deep_blush = Holala… Il a du avoir tellement peur ! Tu as@une vie tellement dangereusement exchitante !
+player = object = unhappy_var = Tu es militaire… Ta vie n'est pas dangereuse ?
+object = player = unhappy = Pas chouvant… Nous ne chommes pas en guerre…@Au mieux, che richque de trébucher chur un pneu…
+object = player = deep_blush = Mais, parle-moi encore de toi, et de dangers !

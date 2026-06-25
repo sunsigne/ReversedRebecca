@@ -20,6 +20,7 @@ ANNOYING = Key2 % énervant
 
 YES_MAAM = Key2 % Oui, monsieur
 NANCY_IS_INDISPOSED = Key1 % Nolan est... indisposée
+TELL_HIM_ABOUT_ALICIA_LOCKED_UP = Key3 % lui parler d'Alexis enfermé
 
 ///// REFECTORY /////
 
