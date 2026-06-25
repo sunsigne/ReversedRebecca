@@ -1,0 +1,4 @@
+% SPONTANEOUS_NEXT
+player = alexia = angry = Ha non ! Tu ne vas pas commencer@à me saouler toi aussi !
+alexia = player = angry = Ha bon ? Je te saoule ? Tu veux que@je te rappelle qui se tape ta paperasse ?
+player = alexia = angry_var2 = Il me cherche, ou quoi ?@Parce qu'il va me trouver !

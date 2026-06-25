@@ -1,0 +1,54 @@
+% BOMBING_OWN_DESK_AGAIN
+alexia = UP = unhappy = Ça ne me plait vraiment pas que@tu exploses nos murs…
+player = DOWN = wrong_with_you = Tu as une autre solution, peut-être ?
+player = DOWN = worry = Pardon, c'était un peu violent.@C'est le seul chemin, Alexis.
+
+
+% NO_I_CONTINUE
+player = alexia = worry = Alexis… Je casses juste quelques vieux murs.@On les reconstruira.
+player = alexia = laugh = Et puis, c'est facile d'avancer !@C'est tout droit !
+alexia = rebecca = unhappy = Ça sera sans moi, Rebecca.
+
+
+% NOT_THAT_BAD
+player = DOWN = unhappy = Je ne le comprends pas…@Ça n'est quand même pas si grave…
+player = DOWN = sad = Je ne blesse personne après tout…
+
+
+% NO_I_CONTINUE_NO_KEY
+player = alexia = unhappy = Tu ne comprends pas, Alexis…@C'est le seul chemin. On n'a pas le choix…
+alexia = rebecca = unhappy = On a toujours le choix, Rebecca.
+
+
+% I_HAD_NO_CHOICE
+player = DOWN = unhappy = Il ne comprend pas…
+player = RIGHT = sad = Continuer, c'est réellement le seul chemin puisque@je suis incapable de me servir d'une clef verte…
+
+
+% I_HAD_NO_CHOICE_NUMBER_SETTINGS
+player = DOWN = unhappy = Il ne comprend pas…
+player = RIGHT = sad = Continuer, c'est réellement le seul chemin puisque@je suis incapable de me servir d'une clef 2…
+
+
+% ALICIA_GREEN_KEY_SOFTLOCK
+player = alexia = no_sens_var = Heu…
+player = alexia = unhappy = Je suis désolée Alexis, je crois@qu'on est officiellement bloqués.
+alexia = player = surprised_var = Non… Vraiment ?
+player = UP = worry = Oui… Je n'ai pas de bombe@verte pour dégager la voie.
+player = UP = unhappy = Et je ne sais pas me servir de@la clé verte que j'ai trouvée.
+alexia = player = laugh = Ha ! C'est parfait !
+player = alexia = no_sens = Pardon ?
+alexia = player = happy_var = Tu as trouvé une clé verte.@Donnes-la moi, je sais m'en servir.
+player = alexia = laugh = Ha ! Ok, tiens.
+
+
+% ALICIA_GREEN_KEY_SOFTLOCK_NUMBER_SETTINGS
+player = alexia = no_sens_var = Heu…
+player = alexia = unhappy = Je suis désolée Alexis, je crois@qu'on est officiellement bloquées.
+alexia = player = surprised_var = Non… Vraiment ?
+player = UP = worry = Oui… Je n'ai pas de bombe 2@pour dégager la voie.
+player = UP = unhappy = Et je ne sais pas me servir de la clé 2@que j'ai trouvée.
+alexia = player = laugh = Ha ! C'est parfait !
+player = alexia = no_sens = Pardon ?
+alexia = player = happy_var = Tu as trouvé une clé 2.@Donnes-la moi, je sais m'en servir.
+player = alexia = laugh = Ha ! Ok, tiens.

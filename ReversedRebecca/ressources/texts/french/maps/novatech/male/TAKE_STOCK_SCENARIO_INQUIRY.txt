@@ -1,0 +1,10 @@
+% ALICIA
+player = object = asleep = Voyons voir…
+player = object = surprised = Alexis a sûrement un problème ! Je dois découvrir@ce que c'est, ou m'assurer qu'il aille bien.
+
+
+% ALICIA_HELP
+player = object = asleep = Voyons voir…
+player = object = unhappy = Je dois trouver un moyen de libérer@Alexis qui est enfermé.
+player = object = happy = Sarah, Delta ou même Mika, pourraient m'aider,@si je leur demande.
+

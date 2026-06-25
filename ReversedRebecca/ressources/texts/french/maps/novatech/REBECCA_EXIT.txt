@@ -12,7 +12,7 @@ player = DOWN = you_silly = Juste au cas où…
 
 % RECEPTION_IS_OPENED
 rebecca = DOWN = laugh = Parfait ! Maintenant, on pourra sortir !
-rebecca = DOWN = happy = On n'a plus qu'à dévérouiller la porte@du SAS au bout du couloir.
+rebecca = DOWN = happy = On n'a plus qu'à déverouiller la porte@du SAS au bout du couloir.
 
 
 % SAS_FULLY_UNLOCKED

@@ -93,7 +93,7 @@ alexia = player = happy_var = C'est des clés Rebecca.@Je pense pouvoir me débr
 
 % ALICIA_GREEN_KEY_SOFTLOCK
 player = alexia = no_sens_var = Heu…
-player = alexia = unhappy = Je suis désolée Alicia, je crois@qu'on est officiellement bloquée.
+player = alexia = unhappy = Je suis désolée Alicia, je crois@qu'on est officiellement bloquées.
 alexia = player = surprised_var = Non… Vraiment ?
 player = UP = worry = Oui… Je n'ai pas de bombe@verte pour dégager la voie.
 player = UP = unhappy = Et je ne sais pas me servir de@la clé verte que j'ai trouvée.
@@ -105,7 +105,7 @@ player = alexia = laugh = Ha ! Ok, tiens.
 
 % ALICIA_GREEN_KEY_SOFTLOCK_NUMBER_SETTINGS
 player = alexia = no_sens_var = Heu…
-player = alexia = unhappy = Je suis désolée Alicia, je crois@qu'on est officiellement bloquée.
+player = alexia = unhappy = Je suis désolée Alicia, je crois@qu'on est officiellement bloquées.
 alexia = player = surprised_var = Non… Vraiment ?
 player = UP = worry = Oui… Je n'ai pas de bombe 2@pour dégager la voie.
 player = UP = unhappy = Et je ne sais pas me servir de la clé 2@que j'ai trouvée.

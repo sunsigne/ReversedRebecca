@@ -1,6 +1,6 @@
 % ALICIA
 dave = player = calm = Je ne peux pas régler ce problème, Rebecca.@Demande à quelqu'un d'autre.
-dave = player = calm = Ne te méprend pas. Je me soucie du sort d'Alicia.@C'est juste que ça n'est pas à moi d'interférer.
+dave = player = calm = Ne te méprend pas. Je me soucie du sort d'Alexia.@C'est juste que ça n'est pas à moi d'interférer.
 
 
 % ALICIA_PLUS

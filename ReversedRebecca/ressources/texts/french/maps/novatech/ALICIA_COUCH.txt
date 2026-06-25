@@ -8,7 +8,7 @@ player = alexia = laugh = Je t'en prie, c'est normal.
 
 
 % NEUTRAL_VAR
-alexia = DOWN = unhappy = Navré, Rebecca. J'ai eu une matinée difficile,@et je ne me sens pas de bavarder…
+alexia = DOWN = unhappy = Navrée, Rebecca. J'ai eu une matinée difficile,@et je ne me sens pas de bavarder…
 alexia = DOWN = happy = Ça n'est pas contre toi. Je dois juste me détendre.
 
 
@@ -18,7 +18,7 @@ alexia = DOWN = angry = Si tu crois que j'ai envie de te parler, tu rêves !
 
 % NEXT
 player = alexia = worry = Si ça ne te gêne pas d'en parler… Comment@t'es-tu retrouvée enfermée dans le SAS ?
-alexia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a vérouillé les portes.
+alexia = DOWN = happy = C'est à cause de notre système de sécurité.@Quand il y a eu l'explosion, il a verrouillé les portes.
 alexia = DOWN = unhappy = Et… Ben…@J'étais simplement dedans quand c'est arrivé.
 player = alexia = you_silly_var = Je vois.
 

@@ -1,0 +1,10 @@
+% MIKA_CONVERSATION
+sarah = miaka = happy = Que s'est-il passé, exactement ?
+miaka = sarah = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
+miaka = sarah = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
+miaka = sarah = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alexis !
+miaka = sarah = serious = Je lui ai couru après. La suite, tu la connais.
+sarah = miaka = fine = Je vois.@Je pense qu'on est victime d'un vol industriel.
+sarah = miaka = happy =  Enfin… Une version un peu musclé, quoi.@Tu as vu s'il tenait quelque chose ?
+miaka = sarah = serious = Non. Je n'ai pas pensé à regarder.
+sarah = miaka = happy =  Ok. Merci pour les infos !

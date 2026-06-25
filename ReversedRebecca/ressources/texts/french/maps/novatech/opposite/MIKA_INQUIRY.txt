@@ -3,6 +3,34 @@ rebecca = object = worry = Hey Mia ! On peut discuter, maintenant ?
 miaka = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
 
 
+% NEUTRAL
+rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
+miaka = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
+miaka = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
+miaka = player = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alexis !
+miaka = player = serious = Je lui ai couru après. La suite, tu la connais.
+
+
+% NEUTRAL_NEXT
+rebecca = object = surprised = Attend ! Mais si ça se trouve, Alexis est blessé !
+miaka = player = surprised = ?!
+miaka = player = serious = Je n'y avais pas pensé…
+miaka = player = serious = Va voir comment il va.@Je dois rester pour ici dégager le chemin.
+
+
+% HURRY_UP
+miaka = player = angry_var = Rebecca ! Tu fous quoi ?@Va voir si Alexis va bien ! 
+
+
+% ASKING_SARAH_ABOUT_ALICIA
+miaka = DOWN = worry = Sarah, est-ce que tu as vu Alexis ?
+sarah = UP = laugh = Yup. Il était bloqué dans le SAS,@mais c'est réglé.
+miaka = DOWN = serious = Ha ! Très bien. Bon travail, d'ailleurs,@je vois que tu as trouvé une sortie.
+sarah = UP = happy = Et les décombres ? La voie est libre ?
+miaka = DOWN = serious = Pas encore, mais j'y retourne, là.
+sarah = UP = happy_var = Bon courage.
+
+
 % THANK_FOR_YELLING
 miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secouée.
 player = miaka = happy_var = Quand tu veux !
@@ -19,7 +47,7 @@ player = miaka = blush = (En vrai, c'est un peu flatteur.@Je me demande si elle 
 miaka = player = serious = Rebecca, je voulais te dire…@Merci encore de m'avoir secouée.
 player = miaka = worry = De rien, j'imagine…@Je suis moi-même un peu secouée.
 miaka = player = serious = Pourquoi ?
-player = miaka = happy = Je viens d'accepter de sortir avec Marie.@Sa déclaration m'a surprise, mais je suis contente.
+player = miaka = happy = Je viens d'accepter de sortir avec Michel.@Sa déclaration m'a surprise, mais je suis contente.
 miaka = player = worry = Ha. C'est… Une bonne chose, j'imagine ?
 miaka = player = serious = Bon, si tu le permets, j'ai des décombres@à dégager.
 

@@ -24,11 +24,6 @@ rebecca = up = dreaming = Oui, oui, je vais t'aider.@Je vais juste prendre mon t
 alexia = down = cry_var = Pourquoi il fallait que je tombe sur toi…
 
 
-% MIKA_TOLD_ME
-alexia = player = happy = Mia m'a dit que c'est grâce à toi si je suis libre,@alors Merci.
-player = alexia = laugh = Je t'en prie !
-
-
 % PICK_ME_UP
 alexia = player = happy = J'ai besoin d'un remontant.@Je vais me chercher un café.
 alexia = player = happy = Tu veux quelque chose ?

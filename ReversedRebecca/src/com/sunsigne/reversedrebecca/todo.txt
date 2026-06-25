@@ -43,7 +43,6 @@
 		- fichiers visuels dans $working
 		- voix (vérifier)
 		- fichier .gpf
-		- dialogues (contenu)
 		- fichier visuel, évidemment
 		- les animations
 		- tester
@@ -53,18 +52,14 @@
 		- fichiers visuels dans $working
 		- voix (vérifier)
 		- fichier .gpf
-		- dialogues (contenu)
 		- fichier visuel, évidemment
 		- visuel succès
 		- les animations
 		- tester
-		
-	les dialgoues sont tous à faire, sauf anglais
-	
 	
 	!! Dave dit "Alexia" ! faire réagir rebecca :
 	- c'est alexis, pas Alexia
-	- I know what i said
+	- I know what i said. Ce que tu affirme dépend de tes réglages. Ce que j'ai dit est tout le temps vrai.
 
 	////////// MILITARY ////////////
 
