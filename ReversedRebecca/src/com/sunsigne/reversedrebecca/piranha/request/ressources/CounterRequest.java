@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.ressources;
 
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -58,8 +60,16 @@ public class CounterRequest implements Request {
 
 	private void createAction(PiranhaObject object, int number, String value) {
 		String path = object.getPiranhaFile().substring(0, object.getPiranhaFile().length() - 10);
-		path = path.concat("counter" + ".txt");
-		String name = new Translatable().getTranslatedText(value, path);
+		String file = "counter" + ".txt";
+		path = path.concat(file);
+
+		String living_type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? ""
+				: "/" + LivingOption.getType().getName();
+		String typePath = path.substring(0, path.length() - file.length() - 1).concat(living_type + "/" + file);
+		String name = new Translatable().getStrictTranslatedText(value, typePath);
+		if (name.isEmpty())
+			name = new Translatable().getTranslatedText(value, path);
+
 		World.get().getLevelStats().getCounter(number).setName(name);
 	}
 
@@ -72,5 +82,5 @@ public class CounterRequest implements Request {
 		Integer count = Integer.parseInt(value);
 		World.get().getLevelStats().getCounter(number).removeCount(count);
 	}
-	
+
 }
