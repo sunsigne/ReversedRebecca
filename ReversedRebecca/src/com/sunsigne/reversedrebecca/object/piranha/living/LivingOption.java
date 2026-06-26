@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.piranha.living;
 
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class LivingOption {
@@ -14,6 +15,10 @@ public class LivingOption {
 	public static LIVING_TYPE getType() {
 		if (type == null)
 			type = new LivingOption().getRegisteredType();
+
+		if (type == LIVING_TYPE.RANDOM)
+			type = new RandomGenerator().getBoolean() ? LIVING_TYPE.MALE : LIVING_TYPE.FEMALE;
+
 		return type;
 	}
 
@@ -44,7 +49,7 @@ public class LivingOption {
 	////////// LIVING TYPE ////////////
 
 	public enum LIVING_TYPE {
-		DEFAULT("default"), MALE("male"), FEMALE("female");
+		DEFAULT("default"), MALE("male"), FEMALE("female"), RANDOM("random");
 
 		LIVING_TYPE(String name) {
 			this.name = name;
