@@ -40,9 +40,7 @@
 	vrai musique de fin de niveau
 			
 	lvl001 - marichel : marie / michel :
-		- fichiers visuels dans $working
 		- voix (vérifier)
-		- fichier .gpf
 		- fichier visuel, évidemment
 		- les animations
 		- tester
