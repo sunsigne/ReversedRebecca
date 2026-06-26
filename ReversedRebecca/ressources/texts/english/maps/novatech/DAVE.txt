@@ -1,6 +1,8 @@
 % ALICIA
 dave = player = calm = I can't solve this problem, Rebecca.@Ask someone else.
 dave = DOWN = calm = Don't misunderstand me. I care about Alexia.@It's just not my place to interfere.
+player = object = unhappy_var = It's Alicia… Not Alexia.
+dave = player = calm = What you're claiming depends on certain settings.@What I said is true all the time.
 
 
 % ALICIA_PLUS

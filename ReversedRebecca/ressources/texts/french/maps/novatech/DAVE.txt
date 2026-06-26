@@ -1,6 +1,8 @@
 % ALICIA
 dave = player = calm = Je ne peux pas régler ce problème, Rebecca.@Demande à quelqu'un d'autre.
-dave = player = calm = Ne te méprend pas. Je me soucie du sort d'Alexia.@C'est juste que ça n'est pas à moi d'interférer.
+dave = DOWN = calm = Ne te méprend pas. Je me soucie du sort d'Alexia.@C'est juste que ça n'est pas à moi d'interférer.
+player = object = unhappy_var = C'est Alicia… Pas Alexia.
+dave = player = calm = Ce que tu affirmes dépend de certains réglages.@Ce que j'ai dit est tout le temps vrai.
 
 
 % ALICIA_PLUS
