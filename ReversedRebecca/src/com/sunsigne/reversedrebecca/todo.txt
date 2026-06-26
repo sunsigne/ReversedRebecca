@@ -41,7 +41,7 @@
 			
 	lvl001 - marichel : marie / michel :
 		- voix (vérifier)
-		- fichier visuel, évidemment
+		- fichier visuel (seulement dialogues)
 		- les animations
 		- tester
 		! - on parle de "pink hair" dans les dialogues ! Doit être cohérent si gender swapped!
