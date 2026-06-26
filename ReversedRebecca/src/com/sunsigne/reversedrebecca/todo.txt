@@ -40,10 +40,8 @@
 	vrai musique de fin de niveau
 
 	lvl001 - alexia : alicia / alexis :
-		- fichiers visuels dans $working
 		- voix (vérifier)
-		- fichier .gpf
-		- fichier visuel, évidemment
+		- fichier visuel (world & highlight)
 		- visuel succès
 		- les animations
 		- tester
