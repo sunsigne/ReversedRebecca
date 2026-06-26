@@ -1,2 +1,0 @@
-STRAIGHT_ROMANCE = romance... lesbienne
-LESBIAN_ROMANCE = romance hétéro

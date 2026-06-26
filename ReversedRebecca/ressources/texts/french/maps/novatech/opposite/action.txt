@@ -1,6 +1,0 @@
-///// LEFT AREA /////
-
-ALICIA_HELP = Key3 % Alexis !
-LOCKED_UP = Key1 % enfermé ?
-WATCH_MARIE = Key1 % regarder Michel
-KEEP_WATCHING_MARIE = Key1 % continuer à regarder Michel

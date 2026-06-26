@@ -1,4 +1,0 @@
-% JESSY_YELLING_AT_SARAH
-jamessy = DOWN = angry_var = In the name of the law, I order you to stop!
-sarah = UP = laugh = Sorry, mister, it was an accident.
-sarah = UP = sad = (Rebecca… What are you doing watching us…@Hurry up…)

@@ -1,5 +1,0 @@
-% REBECCA_HELP_FOR_KEYS_ALICIA
-sarah = LEFT = laugh = Hey, there you are!
-rebecca = RIGHT = happy = Yes, I'm looking for Alexis. Have you seen him?
-sarah = LEFT = worry = No, sorry.
-sarah = LEFT = laugh = And you? Have you seen any keys around here, by any chance?

@@ -1,9 +1,0 @@
-% HERE_ARE_THE_SOCKS
-object = player = stupid = Parfait ! Ze vais en exztraire le prinzipe actif.@As-tu une pilule vierze zur toi, pour le contenir ?
-player = object = no_sens = Tu… ne m'a pas demandé d'en trouver une…
-object = player = smile = Ze ne t'ai pas nonplus demandé de rezpirer. Il y a@des chzoze qu'on fait parce qu'elles zont évidentes.
-object = LEFT = stupid = Ze zuis zûr que Nolan t'aidera à en trouver une.@Va la voir à l'infirmerie.
-object = player = smile = Tu zais quoi ? Ze vais utilizer une des mienne.@Mon fortifiant muzculaire est prêt de toute fazon.
-object = player = happy = Et voilà ! Ze me zuis zurpazzer zette fois !@Il ne me manque plus…
-object = player = serious = nathan_dead_serious_voice = … qu'un cobaye.
-object = player = happy = Ze t'invite à rezter izi. Ze revient dans une zeconde.

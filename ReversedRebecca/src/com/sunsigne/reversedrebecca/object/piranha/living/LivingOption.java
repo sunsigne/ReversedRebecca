@@ -44,7 +44,7 @@ public class LivingOption {
 	////////// LIVING TYPE ////////////
 
 	public enum LIVING_TYPE {
-		DEFAULT("default"), MALE("male"), FEMALE("female"), OPPOSITE("opposite");
+		DEFAULT("default"), MALE("male"), FEMALE("female");
 
 		LIVING_TYPE(String name) {
 			this.name = name;
