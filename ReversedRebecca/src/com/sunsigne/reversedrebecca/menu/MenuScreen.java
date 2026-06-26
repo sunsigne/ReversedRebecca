@@ -9,6 +9,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.Save;
@@ -81,7 +83,17 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		var font = new Font("arial", 1, 30);
 		int[] rect = new int[] { 940, 460, 0, 0 };
 
-		new TextDecoration().drawOutlinesString(g, font, Infos.VERSION, DIRECTION.NULL, rect);
+		String gender = "";
+		LIVING_TYPE type = LivingOption.getType();
+
+		if (LivingOption.wasRandom) {
+			if (type == LIVING_TYPE.MALE)
+				gender = " ♂";
+			if (type == LIVING_TYPE.FEMALE)
+				gender = " ♀";
+		}
+
+		new TextDecoration().drawOutlinesString(g, font, Infos.VERSION + gender, DIRECTION.NULL, rect);
 	}
 
 }

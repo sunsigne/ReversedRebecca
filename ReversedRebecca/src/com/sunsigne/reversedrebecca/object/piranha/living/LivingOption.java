@@ -11,13 +11,16 @@ public class LivingOption {
 	private boolean userData = true;
 
 	private static LIVING_TYPE type;
+	public static boolean wasRandom;
 
 	public static LIVING_TYPE getType() {
 		if (type == null)
 			type = new LivingOption().getRegisteredType();
 
-		if (type == LIVING_TYPE.RANDOM)
+		if (type == LIVING_TYPE.RANDOM) {
+			wasRandom = true;
 			type = new RandomGenerator().getBoolean() ? LIVING_TYPE.MALE : LIVING_TYPE.FEMALE;
+		}			
 
 		return type;
 	}
