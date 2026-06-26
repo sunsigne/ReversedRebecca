@@ -65,7 +65,6 @@
 
 	bug :
 		- arranger l'interaction avec le parcours d'entrainement
-		- on peut manger le repas juste après la cutscene de Jessy (ce qui est plutot étrange)
 		- TA d'origine de Nancy relancé sans le vouloir, soit après qu'on ai aidé 10 personnes, soit, plus probablement, une fois qu'on a parlé à Cassidy
 		- les escalier de la tour sont trop approximatifs (Venom a galéré à descendre)
 		- "ça y est, j'ai aidé 10 personnes" s'affiche à chaque personne aidée au delà de 10. En plus, ça s'affiche aux mauvais moment (cuisinier, prisonnier, etc)
