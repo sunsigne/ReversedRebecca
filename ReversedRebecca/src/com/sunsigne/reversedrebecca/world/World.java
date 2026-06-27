@@ -82,6 +82,7 @@ public class World implements Updatable, RenderFree {
 		}
 
 		initParameters(mapName);
+		loadTextures();
 		createMap();
 		updateLayer();
 
@@ -113,6 +114,16 @@ public class World implements Updatable, RenderFree {
 		new MapCreator().loadAllLayers(this);
 		new Piranha().optimize();
 		updateLivingAbove();
+	}
+
+	private void loadTextures() {
+		String decoration = "textures/other/decoration/" + mapName;
+		String animation = "textures/other/animation/" + mapName;
+
+		if (new FileTask().doesExist(false, decoration))
+			new Textures().loadRessources(decoration);
+		if (new FileTask().doesExist(false, animation))
+			new Textures().loadRessources(animation);
 	}
 
 	private void updateLivingAbove() {

@@ -9,6 +9,7 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class AnimatedDecorationObject extends DecorationObject {
 
@@ -39,7 +40,7 @@ public class AnimatedDecorationObject extends DecorationObject {
 	protected int getTime() {
 		return time;
 	}
-	
+
 	@Override
 	public void tick() {
 		runAnimation();
@@ -67,7 +68,11 @@ public class AnimatedDecorationObject extends DecorationObject {
 	}
 
 	private void loadAnimation(boolean cycle) {
-		BufferedImage sheet = new ImageTask().loadImage(getPath() + getName());
+		String mapName = World.get() != null ? World.get().getMapName() + "/" : "";
+		BufferedImage sheet = new ImageTask().loadImage(getPath() + mapName + getName(), true);
+		if (sheet == null)
+			sheet = new ImageTask().loadImage(getPath() + getName());
+
 		Animation animationImages = new Animation(sheet, getSheetWidth(), getSheetHeight());
 
 		BufferedImage firstImage = getSheetSubImage(sheet, 1);

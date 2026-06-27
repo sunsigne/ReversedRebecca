@@ -46,6 +46,8 @@ Le Type de Requête CREATE_DECORATION permet de créer un visuel à partir d'un 
 
 Fichier de référence : « textures/other/decoration/(cible).png ».
 
+Note : il est possible de ranger l'image à sélectionner dans un sous-dossier, au niveau du fichier de référence, pourvu que sous-dossier porte exactement le nom de la carte en cours.
+
 Exemple :
 TIME -> 0 = CREATE_DECORATION -> 10-20-BACK:WORLD,1,2,CHAIR,6-8,1-2
 
@@ -68,7 +70,9 @@ Note : si le programmeur Piranha peut préciser les dimensions de l'objet à af
 
 Le Type de Requête CREATE_ANIMATION est une variante de CREATE_DECORATION : elle permet de créer un visuel ayant une animation.
 
-Fichier de référence : « textures/other/animation/(cible).png ». 
+Fichier de référence : « textures/other/animation/(cible).png ».
+
+Note : il est possible de ranger l'image à sélectionner dans un sous-dossier, au niveau du fichier de référence, pourvu que sous-dossier porte exactement le nom de la carte en cours.
 
 Note : les images constituant l'animation doivent toutes être rassemblées dans un seul fichier, en ligne de gauche à droite. Le jeu détectera automatiquement leur nombre.
 

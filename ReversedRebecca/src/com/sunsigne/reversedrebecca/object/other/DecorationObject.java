@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
+import com.sunsigne.reversedrebecca.world.World;
 
 public class DecorationObject extends GameObject implements TickFree, SheetableImage {
 
@@ -85,7 +86,10 @@ public class DecorationObject extends GameObject implements TickFree, SheetableI
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage(getPath() + getName());
+			String mapName = World.get() != null ? World.get().getMapName() + "/" : "";
+			BufferedImage sheet = new ImageTask().loadImage(getPath() + mapName + getName(), true);
+			if (sheet == null)
+				sheet = new ImageTask().loadImage(getPath() + getName());
 			image = getSheetSubImage(sheet);
 		}
 		return image;
