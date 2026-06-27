@@ -48,6 +48,10 @@ player = object = worry = Je n'ai pas soutenu le militaire sur le stand de tir@q
 player = object = worry = Je n'ai pas épaulé le sergent.@J'espère qu'il ne m'en demandera pas trop.
 
 
+% SERGENT_SHOVEL
+player = object = no_sens_var = Je n'ai pas épaulé le sergent.@Il m'a demandé de lui mettre un coup de pelle…
+
+
 % JESSY_NO_INFO
 player = object = happy = Je n'ai pas secondé la militaire qui tire dans le mille.@Je ne sais pas ce qu'elle veut.
 

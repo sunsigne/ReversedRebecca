@@ -48,6 +48,10 @@ player = object = worry = I didn't supported the soldier who is hesitating@to fi
 player = object = worry = I didn't back up the sergeant.@I hope he doesn't ask too much of me.
 
 
+% SERGENT_SHOVEL
+player = object = no_sens_var = I didn't back up the sergeant.@He asked me to shovel him…
+
+
 % JESSY_NO_INFO
 player = object = happy = I didn't served the sharpshooting soldier.@I don't know what she wants.
 
