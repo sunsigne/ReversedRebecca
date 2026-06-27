@@ -40,7 +40,6 @@
 	vrai musique de fin de niveau
 
 	lvl001 - alexia : alicia / alexis :
-		- voix (vérifier)
 		- visuel succès
 		- les animations
 		- tester
