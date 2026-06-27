@@ -26,8 +26,7 @@
 	
 	////////// BUG ////////////
 	
-	bug :
-		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
+	bug :		
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 		
 	////////// EN COURS ////////////
@@ -36,7 +35,7 @@
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	12h - créer une "jauge de critique" physique et visuel qui se remplit lorsqu'on réussi ou on échoue des puzzle. Le relier au système de critique existant
+	12h - créer une "jauge de critique" physique et visuel qui se remplit lorsqu'on réussi ou on échoue des puzzle. Le relier au système de critique existant + vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 
 	note : puzzle : cliquer = impact
 
