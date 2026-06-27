@@ -1,0 +1,14 @@
+///// GOOD /////
+
+HELP_EVERYONE = 6 % help everyone
+FREE_ROMEO = 3 % free Romeo
+MEAL_DELIVERY = 2 % meal delivery
+
+///// BAD /////
+
+STEAL_A_MEAL = 4 % steal a meal
+LIE_TO_HIT_ON = 2 % lie to hit on
+LIE_AND_MANIPULATE = 11 % lie and manipulate
+
+BOO = 9 % Boo
+BRUTE_FORCE_A_RIDDLE = 5 % brute-force a riddle

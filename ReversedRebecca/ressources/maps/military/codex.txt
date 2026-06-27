@@ -81,9 +81,9 @@ NPC-10 = Dupont
 NPC-11 = Sergent
 NPC-12 = Shooter
 NPC-13 = Jessy
-NPC-14 = Julomeo
+NPC-14 = Romeo
 
-OBJ-34 = Julomeo Detector
+OBJ-34 = Romeo Detector
 OBJ-35 = Bomb Box
 OBJ-36 = Training Course
 OBJ-37 = Target
@@ -92,10 +92,10 @@ OBJ-38 = Target shooter
 ///// REFECTORY /////
 
 NPC-15 = Cassidy
-NPC-16 = Amiranda
+NPC-16 = Amir
 
-OBJ-39 = Amiranda Detector
-OBJ-40 = Amiranda Second Detector
+OBJ-39 = Amir Detector
+OBJ-40 = Amir Second Detector
 OBJ-41 = Table Left
 OBJ-42 = Table Right
 OBJ-43 = Stock Furniture

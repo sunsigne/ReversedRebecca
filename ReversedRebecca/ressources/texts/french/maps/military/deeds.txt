@@ -1,0 +1,14 @@
+///// GOOD /////
+
+HELP_EVERYONE = 6 % aider tout le monde
+FREE_ROMEO = 3 % libérer Roméo
+MEAL_DELIVERY = 2 % livraison de repas
+
+///// BAD /////
+
+STEAL_A_MEAL = 4 % voler un repas
+LIE_TO_HIT_ON = 2 % mentir pour draguer
+LIE_AND_MANIPULATE = 11 % mentir et manipuler
+
+BOO = 9 % Bouh
+BRUTE_FORCE_A_RIDDLE = 5 % brutaliser une enigme
