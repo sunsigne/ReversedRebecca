@@ -32,12 +32,11 @@
 		
 	////////// EN COURS ////////////
 
-	vrai musique de fin de niveau
-
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
+	12h - créer une "jauge de critique" physique et visuel qui se remplit lorsqu'on réussi ou on échoue des puzzle. Le relier au système de critique existant
 
 	note : puzzle : cliquer = impact
 

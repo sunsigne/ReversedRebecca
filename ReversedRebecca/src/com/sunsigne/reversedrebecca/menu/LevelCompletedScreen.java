@@ -41,18 +41,10 @@ public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent
 		this.nextLvl = nextLvl;
 
 		loadImages();
-		loadMusic();
-
 		loadStats();
 		loadFont();
 		loadText();
 		createContinueButton();
-	}
-
-	private void loadMusic() {
-		boolean isPsycopath = World.get().getLevelStats().getYouAre() == YOUARE.PSYCHOPATH;
-		String name = isPsycopath ? "absolute_evilness" : "victory_screen";
-		new SoundTask().playMusic(name, false, false);
 	}
 
 	////////// USEFUL ////////////
