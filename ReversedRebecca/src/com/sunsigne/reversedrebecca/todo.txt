@@ -41,7 +41,6 @@
 
 	lvl001 - alexia : alicia / alexis :
 		- voix (vérifier)
-		- fichier visuel (world & highlight)
 		- visuel succès
 		- les animations
 		- tester
