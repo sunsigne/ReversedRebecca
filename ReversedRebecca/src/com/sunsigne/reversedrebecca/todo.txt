@@ -39,11 +39,6 @@
 	trier les animations & décorations dans des dossiers (et pouvoir piocher dedans automatiquement) + les charger aux lancement d'une map (de la même façon que les textures sont chargées au lancement du jeu)
 	vrai musique de fin de niveau
 
-	lvl001 - alexia : alicia / alexis :
-		- visuel succès
-		- les animations
-		- tester
-
 	////////// MILITARY ////////////
 
 	bug :
