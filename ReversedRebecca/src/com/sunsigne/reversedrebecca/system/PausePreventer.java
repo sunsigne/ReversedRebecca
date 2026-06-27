@@ -47,6 +47,7 @@ public class PausePreventer {
 	public void removeDisabledPauseObject() {
 		if (timer != null) {
 			new VolumeMusic().refreshVolume();
+			VolumeMusic.getVolume();
 			timer.destroy();
 		}
 		state = null;

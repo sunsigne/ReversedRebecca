@@ -28,18 +28,18 @@
 
 	////////// EN COURS ////////////
 
-	en cours :
+	////////// MILITARY ////////////
 
-	bug ?
+	bug :
 		? vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+		- les deeds ne se reset pas lorsqu'on reset le lvl
 			
 	2h00 - devrait utiliser "texture name" pour le joueur à CHAQUE FOIS (serviette et police)
 
 	trier les animations & décorations dans des dossiers (et pouvoir piocher dedans automatiquement) + les charger aux lancement d'une map (de la même façon que les textures sont chargées au lancement du jeu)
 	vrai musique de fin de niveau
 
-	////////// MILITARY ////////////
 
 	à faire à la fin : 
 	- ajouter les actions de karma
@@ -98,6 +98,10 @@
  	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
 	note : il est possible de ne montrer son intérêt qu'à Nancy (mensonge ou en n'allant pas la voir) ou qu'à Jessy (en repoussant Nancy lors du bisou)
+
+	karma : 
+	- l'angelic, aider tout le monde &, soit libérer roméo, soit lui livrer un repas
+	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
 
 	////////// LVL003 ////////////
 	
