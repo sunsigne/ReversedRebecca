@@ -1,0 +1,27 @@
+% SECRET_FILES
+sarah = player = happy_var = Alors ? Ces documents secrets ? Des infos ?
+player = object = happy = Sur Vladimir directement, presque rien. Mais@apparemment, quelqu'un le connait. Un certain…
+
+
+% DOUBLE-Y
+sarah = player = laugh = Double quoi ?! C'est quoi ce nom ?@C'est genre… ses chromosomes ?
+player = object = laugh = Peut-être… Dans le dossier,@il est surnommé "l'homme ultime" !
+player = object = happy = Quoi qu'il en soit, YY connait Vladimir.@Il serait le chef du camp militaire Hydra.
+sarah = player = wink = Parfait ! On sait où aller dans ce cas !@Mais avant, le gadget !
+player = object = laugh = Mais avant, le gadget !
+
+
+% DOUBLE-Y_QUESTION
+player = object = happy = Tu crois que c'est son vrai prénom ?
+sarah = player = laugh = Si oui, à tous les coups, ses parents s'appellent@Yves et Ysabelle.
+player = object = surprised = Isabelle commence par un "I" !
+
+
+
+
+
+
+
+% ISABELLE
+player = object = happy_var = C'est un joli prénom. J'appellerai peut-être ma fille comme ça.
+sarah = player = laugh = Et tu aurais des enfants avec qui ?

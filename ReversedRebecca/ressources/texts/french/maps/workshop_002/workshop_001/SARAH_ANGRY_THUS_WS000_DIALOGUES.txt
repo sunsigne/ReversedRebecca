@@ -1,0 +1,20 @@
+% RIGHT_BEFORE_CHEST
+player = RIGHT = excited = C'est toujours aussi impressionnant !
+sarah = LEFT = laugh = Je suis assez d'accord.
+
+
+% RIGHT_BEFORE_CHEST_AGAIN
+player = RIGHT = worry = Je me demandais… Tu peux créer@tout ce que tu veux avec ce système ?
+player = RIGHT = laugh = Par exemple… de la nourriture ?
+sarah = LEFT = you_silly_var = Non, je ne peux pas.
+sarah = LEFT = happy = C'est un peu comme une imprimante.@Une image de nourriture restera de l'encre.
+player = RIGHT = you_silly_var = Dommage.
+
+
+% RIGHT_BEFORE_CHEST_LAST
+sarah = LEFT = awkward = Tu me fais quoi ?@Tu ne va pas chercher ton cadeau… ?
+player = RIGHT = laugh = Si, si ! Je fais juste durer le plaisir.
+sarah = LEFT = wink = Ha ! Dans ce cas…
+sarah = LEFT = pervert = Faisons durer ça des heures.@Tu y prendras… beaucoup de plaisir.
+player = RIGHT = blush_var = Sarah !!!@Ça va pas de dire des choses comme ça ?
+sarah = LEFT = laugh = Ha ha ! Pardon, mais tu verrais ta tête.@Allez, va chercher ton cadeau.

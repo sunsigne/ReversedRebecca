@@ -1,0 +1,13 @@
+///// SAVES /////
+
+// short range
+ERASE = SARAH*ANGRY_ABOUT_PRIVACY
+ERASE = SARAH*ANGRY_ABOUT_WATER_JOKE
+ERASE = NOVATECH*SCENARIO_INQUIRY
+
+///// WORKSHOP /////
+
+NPC-01 = Sarah
+
+OBJ-01 = Simulation Slabs
+OBJ-02 = Fake Walls
