@@ -42,4 +42,13 @@ player = object = worry = D'habitude, je ne peux pas te parler pendant la@résol
 sarah = player = laugh = Je n'ai jamais fait attention à ça !@Je crois que tu te poses trop de question.
 
 
-% CONTRADICTION
+% GREEN_KEY
+player = object = no_sens = Elle est où ma clé verte ?
+sarah = player = laugh = Si tu prends un outil permanent sans savoir t'en@servir, tu restes limitée à l'outil d'en dessous.
+sarah = player = wink = Mais ne t'en fais pas. Aussitôt que tu apprendras,@à l'utiliser, elle sera disponible. Allez, on y va.
+
+
+% GREEN_KEY_NUMBER
+player = object = no_sens = Elle est où ma clé 2 ?
+sarah = player = laugh = Si tu prends un outil permanent sans savoir t'en@servir, tu restes limitée à l'outil d'en dessous.
+sarah = player = wink = Mais ne t'en fais pas. Aussitôt que tu apprendras,@à l'utiliser, elle sera disponible. Allez, on y va.
