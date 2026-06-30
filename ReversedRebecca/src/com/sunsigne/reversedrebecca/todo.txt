@@ -34,10 +34,13 @@
  	dolly : "tout doux, erreur de fichier non trouvé"
 
 	////////// WS002 ////////////
-
- 	à sauvegarder : ANTAGONIST*DOUBLE-Y
+	
  	TA double-y à finir
-	TA final de Sarah, bien sûr
+
+	////////// DAVE003 ////////////
+
+
+ 	à utiliser : ANTAGONIST*DOUBLE-Y
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -83,8 +86,6 @@
 	////////// LVL002 ////////////
 
 	- relier le fusil à pompe derrière Butch à la fusillade
-
-	////////// DAVE003 ////////////
 
 	////////// LVL003-Y ////////////
  	

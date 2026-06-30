@@ -4,4 +4,5 @@ I_M_STUCK = Key1 % Je suis bloquée
 IS_EVERYTHING_NORMAL = Key1 % tout est normal ?
 GREEN_KEY = Key1 % clé verte ?
 GREEN_KEY_NUMBER = Key1 % clé 2 ?
+I_FINISHED = Key1 % j'ai fini
 
