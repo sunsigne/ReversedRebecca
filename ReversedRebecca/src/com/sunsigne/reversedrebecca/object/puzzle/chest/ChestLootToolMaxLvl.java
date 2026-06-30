@@ -77,14 +77,14 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 	public int getSheetColCriterion() {
 		return getDifficulty().ordinal() - 1;
 	}
-	
+
 	@Override
 	public void refresh() {
 		upgrade_img = null;
 		firstLine = null;
 		secondLine = null;
 	}
-	
+
 	@Override
 	public BufferedImage getToolImage() {
 		if (tool_img == null) {
@@ -133,11 +133,10 @@ public class ChestLootToolMaxLvl extends ChestLoot implements Difficulty {
 			return secondLine;
 
 		String number = " " + getDifficulty().ordinal();
-		secondLine = secondLine.replace(" " + getDifficulty().getName() + "s", "");
-		secondLine = secondLine.replace(" " + getDifficulty().getName(), "");
+		secondLine = new Translatable().getTranslatedText(tool.getName() + "Plural", FilePath.TOOL);
 		secondLine = secondLine.concat(number);
 
 		return secondLine;
 	}
-	
+
 }

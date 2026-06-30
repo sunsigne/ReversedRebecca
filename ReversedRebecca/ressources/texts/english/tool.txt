@@ -46,7 +46,7 @@ BombPermanentOrange = permanent orange bomb
 BombPermanentRed = permanent red bomb
 BombPermanentPurple = permanent purple bomb
 
-BombPlural = bombs
+BombPlural = the bombs
 BombPluralCyan = the cyan bombs
 BombPluralGreen = the green bombs
 BombPluralYellow = the yellow bombs
