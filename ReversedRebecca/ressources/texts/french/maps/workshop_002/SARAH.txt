@@ -11,15 +11,14 @@ sarah = player = wink = Parfait ! On sait où aller dans ce cas !@Mais avant, le
 player = object = laugh = Mais avant, le gadget !
 
 
+
+
+
+
 % DOUBLE-Y_QUESTION
 player = object = happy = Tu crois que c'est son vrai prénom ?
 sarah = player = laugh = Si oui, à tous les coups, ses parents s'appellent@Yves et Ysabelle.
 player = object = surprised = Isabelle commence par un "I" !
-
-
-
-
-
 
 
 % ISABELLE
@@ -37,3 +36,9 @@ sarah = player = wink = Ne t'en fais pas, j'ai ce qu'il te faut. Devine@ce que j
 player = object = excited = Un passe-partout !
 sarah = player = awkward = Comment tu le sais ?
 player = object = you_silly = Disons que c'est loin d'être la première fois que@tu lui voles…
+
+
+% IS_IT_NORMAL
+sarah = player = awkward = Qu'est-ce que tu veux dire ?
+player = object = worry = D'habitude, je ne peux pas te parler pendant la@résolution des puzzle… Seulement avant, ou après.
+sarah = player = laugh = Je n'ai jamais fait attention à ça !@Je crois que tu te poses trop de question.
