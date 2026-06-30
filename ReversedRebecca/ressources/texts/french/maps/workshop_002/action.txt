@@ -1,2 +1,3 @@
 DOUBLE-Y = Key1 % Double-Y
 DOUBLE-Y_QUESTION = Key1 % Double-Y ?
+I_M_STUCK = Key1 % Je suis bloquée

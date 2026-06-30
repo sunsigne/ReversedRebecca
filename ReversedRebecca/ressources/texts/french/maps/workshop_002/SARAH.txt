@@ -25,3 +25,15 @@ player = object = surprised = Isabelle commence par un "I" !
 % ISABELLE
 player = object = happy_var = C'est un joli prénom. J'appellerai peut-être ma fille comme ça.
 sarah = player = laugh = Et tu aurais des enfants avec qui ?
+
+
+
+
+
+% I_M_STUCK
+sarah = player = surprised = Vraiment ? Avec un puzzle aussi simple ?
+player = object = you_silly = Il faut croire qu'essayer d'être la plus rapide à@quelques désavantages.
+sarah = player = wink = Ne t'en fais pas, j'ai ce qu'il te faut. Devine@ce que j'ai récupéré sur la policière de l'accueil.
+player = object = excited = Un passe-partout !
+sarah = player = awkward = Comment tu le sais ?
+player = object = you_silly = Disons que c'est loin d'être la première fois que@tu lui voles…

@@ -1,0 +1,7 @@
+% I_M_STUCK
+sarah = player = surprised = Vraiment ? Avec un puzzle aussi simple ?
+player = object = you_silly = Il faut croire qu'essayer d'être la plus rapide à@quelques désavantages.
+sarah = player = wink = Ne t'en fais pas, j'ai ce qu'il te faut. Devine@ce que j'ai récupéré sur le policier de l'accueil.
+player = object = excited = Un passe-partout !
+sarah = player = awkward = Comment tu le sais ?
+player = object = you_silly = Disons que c'est loin d'être la première fois que@tu lui voles…

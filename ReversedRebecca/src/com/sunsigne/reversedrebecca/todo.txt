@@ -36,7 +36,7 @@
 	////////// WS002 ////////////
 
  	à sauvegarder : ANTAGONIST*DOUBLE-Y
- 	faire le cas où sarah remarque qu'on a ni la bombe cyan, ni la clé cyan
+ 	TA double-y à finir
  	TA sur sarah entre pickup et premier coffre : "c'est normal ?" -> "qu'est ce que tu veux dire ?" -> "je ne sais pas... d'habitude je ne plus te parler tant que je n'ai pas résolu les puzzle" -> ";) - correction : tu n'a jamais essayé
 	TA de sarah si on a pris la clé verte de départ, sans avoir la capacité de l'utiliser (ça fait aussi disparaitre la simulation)
 	TA final de Sarah, bien sûr
