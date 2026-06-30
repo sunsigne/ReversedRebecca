@@ -34,11 +34,6 @@
  	dolly : "tout doux, erreur de fichier non trouvé"
  	faire english ws002 et dv003
 
-	////////// DAVE003 ////////////
-
-	faire le lvl avec le dialogue
- 	à utiliser : ANTAGONIST*DOUBLE-Y
-
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !

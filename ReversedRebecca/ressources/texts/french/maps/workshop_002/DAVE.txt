@@ -1,3 +1,0 @@
-dave = DOWN = camera = À Novatech, tu as choisi le scénario.
-dave = DOWN = camera = Dans le commissariat, c'était ta possession ou non d'une bombe qui a fait la différence.
-dave = DOWN = camera = Cette fois, c'est ton karma. Es-tu gentille, ou es-tu méchante ?
