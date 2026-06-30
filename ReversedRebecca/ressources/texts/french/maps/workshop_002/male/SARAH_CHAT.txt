@@ -1,0 +1,8 @@
+% MARIE
+player = object = excited = Michel ! Je ne t'ai pas dit ?
+sarah = player = surprised = Quoi ?! Si, tu m'as dit. Mais, Rebecca…@Protège-toi ! C'est clairement précipité !
+player = object = worry = Hey… Ce n'est pas prévu, ne t'en fais pas.
+player = object = laugh = C'est juste que ta question m'a rappelé qu'on@sortait ensemble. Mais je parlais juste d'un prénom.
+sarah = player = you_silly_var = Tu m'as fait peur…
+sarah = player = wink = Je compte sur toi demain, pour me raconter ton@rendez-vous dans les détails, bien sûr.
+player = object = happy_var = Évidemment !

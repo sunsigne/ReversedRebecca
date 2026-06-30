@@ -1,0 +1,6 @@
+% MIKA
+player = object = happy_var = Peut-être Mia ?
+sarah = player = worry = Ce… n'est pas un peu précipité de parler@d'enfants ?
+player = object = laugh = Si ! C'est juste que ta question m'a rappelé qu'on@sortait ensemble. Mais je parlais juste d'un prénom.
+sarah = player = you_silly_var = Ok… Ne te précipite pas, quand même…
+sarah = player = happy = Allez, va choisir ton gadget.

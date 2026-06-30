@@ -9,38 +9,41 @@ player = object = happy_var = C'est un joli prénom.@J'appellerai ma fille comme
 sarah = player = happy = Fille, que tu auras avec ... ?
 
 
-
-
-
-
-
-
-
-
-
-
 % MARIE
 player = object = excited = Marie ! Je ne t'ai pas dit ?
-sarah = player = worry = Si, tu m'as dit.@Mais… Ce n'est pas un peu précipité de parler d'enfants ?
-player = object = laugh = Si ! C'est juste que ta question m'a rappelé@qu'on sortait ensemble. Mais je te parlais juste d'un prénom.
-sarah = player = wink = Je compte sur toi demain pour me raconter comment@ça s'est passé ce soir, bien sûr.
+sarah = player = worry = Si, tu m'as dit. Mais…@Ce n'est pas un peu précipité de parler d'enfants ?
+player = object = laugh = Si ! C'est juste que ta question m'a rappelé qu'on@sortait ensemble. Mais je parlais juste d'un prénom.
+sarah = player = wink = Ok. Je compte sur toi demain, pour me raconter@ton rendez-vous dans les détails, bien sûr.
 player = object = happy_var = Évidemment !
 
 
 % MIKA
+player = object = happy_var = Peut-être Mika ?
+sarah = player = surprised = Quoi ?! Mais, Rebecca… Protège-toi !@C'est clairement précipité !
+player = object = worry = Hey… Ce n'est pas prévu, ne t'en fais pas.
+player = object = laugh = C'est juste que ta question m'a rappelé qu'on@sortait ensemble. Mais je parlais juste d'un prénom.
+sarah = player = you_silly_var = Tu m'as fait peur…
+sarah = player = happy = Allez, va choisir ton gadget.
 
 
 % DUNNO_YET
-
-
-
+player = object = happy = Je ne sais pas. Peut-être que je rencontrerai@quelqu'un dans le camp ?
+sarah = player = determined = Ben alors ? Tu en pinces pour l'uniforme ?@Tu m'avais caché ça, coquine !
+player = object = worry = Ça n'est spécifiquement mon truc…
+sarah = player = wink = Alors, c'est quoi ton truc ?
+player = object = blush = Sarah, c'est très privé…
+sarah = player = pervert = Allez… Crache le morceau !@C'est quoi qui t'excite ?
+player = object = blush = Je ne dirais rien. Mes lèvres sont scellées.
+sarah = player = pervert = Celles du haut, ou celles du bas ?
+player = object = blush_var = Sarah !!!@Ça va pas de dire des choses comme ça ?
+sarah = player = laugh = Ha ha ! Pardon, mais tu verrais ta tête.@Allez, va chercher ton cadeau.
 
 
 % ASK_FOR_ADVICE
 player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
-sarah = LEFT = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça pourrait être utile là où on va.
+sarah = LEFT = laugh = Je penses que là où on va, des bombes pourraient@être plus utiles. Mais c'est toi qui voit, Rebecca ! 
 
 
 % ASK_FOR_ADVICE_AGAIN
 player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
-sarah = LEFT = laugh = Tu vas me demander ça à chaque fois ? Choisi ce que tu veux, Rebecca.
+sarah = LEFT = laugh = Tu vas me demander ça à chaque fois ?@Choisi ce que tu veux, Rebecca.
