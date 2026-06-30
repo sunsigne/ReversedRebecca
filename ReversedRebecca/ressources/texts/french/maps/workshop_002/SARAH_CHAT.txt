@@ -1,0 +1,46 @@
+% DOUBLE-Y_QUESTION
+player = object = happy = Tu crois que c'est son vrai prénom ?
+sarah = player = laugh = Si oui, à tous les coups, ses parents s'appellent@Yves et Ysabelle.
+player = object = surprised = Isabelle commence par un "I" !
+
+
+% ISABELLE
+player = object = happy_var = C'est un joli prénom.@J'appellerai ma fille comme ça.
+sarah = player = happy = Fille, que tu auras avec ... ?
+
+
+
+
+
+
+
+
+
+
+
+
+% MARIE
+player = object = excited = Marie ! Je ne t'ai pas dit ?
+sarah = player = worry = Si, tu m'as dit.@Mais… Ce n'est pas un peu précipité de parler d'enfants ?
+player = object = laugh = Si ! C'est juste que ta question m'a rappelé@qu'on sortait ensemble. Mais je te parlais juste d'un prénom.
+sarah = player = wink = Je compte sur toi demain pour me raconter comment@ça s'est passé ce soir, bien sûr.
+player = object = happy_var = Évidemment !
+
+
+% MIKA
+
+
+% DUNNO_YET
+
+
+
+
+
+% ASK_FOR_ADVICE
+player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
+sarah = LEFT = laugh = C'est comme tu veux, Rebecca ! Les bombes,@c'est plus direct, mais ça pourrait être utile là où on va.
+
+
+% ASK_FOR_ADVICE_AGAIN
+player = RIGHT = happy = D'après toi, je devrais prendre la bombe ou la clé ?
+sarah = LEFT = laugh = Tu vas me demander ça à chaque fois ? Choisi ce que tu veux, Rebecca.

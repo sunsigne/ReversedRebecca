@@ -1,5 +1,8 @@
 ///// SAVES /////
 
+// short range
+ERASE = WORKSHOP*ASKED_FOR_ADVICE
+
 // long term consequences
 REGISTER = ANTAGONIST*DOUBLE-Y
 

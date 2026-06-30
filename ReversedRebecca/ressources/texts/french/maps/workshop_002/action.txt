@@ -1,5 +1,7 @@
 DOUBLE-Y = Key1 % Double-Y
 DOUBLE-Y_QUESTION = Key1 % Double-Y ?
+ISABELLE = Key1 % Isabelle ?
+ASK_FOR_ADVICE = Key1 % demander conseil (gadget)
 I_M_STUCK = Key1 % Je suis bloquée
 IS_EVERYTHING_NORMAL = Key1 % tout est normal ?
 GREEN_KEY = Key1 % clé verte ?

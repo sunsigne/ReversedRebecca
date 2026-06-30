@@ -32,14 +32,16 @@
 	////////// EN COURS ////////////
 
  	dolly : "tout doux, erreur de fichier non trouvé"
+ 	faire english ws002 et dv003
 
 	////////// WS002 ////////////
 	
  	TA double-y à finir
+ 	à finir et tester : Marie, Mika, dunno ET le conseil "again"
 
 	////////// DAVE003 ////////////
 
-
+	faire le lvl avec le dialogue
  	à utiliser : ANTAGONIST*DOUBLE-Y
 
 	////////// EXPERIENCE UTILISATEUR ////////////
