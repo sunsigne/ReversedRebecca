@@ -31,6 +31,9 @@
 		
 	////////// EN COURS ////////////
 
+ 	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
+ 	dolly : "tout doux, erreur de fichier non trouvé"
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -77,8 +80,6 @@
 	- relier le fusil à pompe derrière Butch à la fusillade
 
 	////////// WS002 ////////////
-
- 	à sauvegarder dans le ws d'avant : ANTAGONIST*DOUBLE-Y
 
 	////////// DAVE003 ////////////
 
