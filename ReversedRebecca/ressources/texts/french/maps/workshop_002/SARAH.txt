@@ -31,14 +31,15 @@ sarah = player = laugh = Et tu aurais des enfants avec qui ?
 
 % I_M_STUCK
 sarah = player = surprised = Vraiment ? Avec un puzzle aussi simple ?
-player = object = you_silly = Il faut croire qu'essayer d'être la plus rapide à@quelques désavantages.
+player = object = no_sens = J'avoue…
 sarah = player = wink = Ne t'en fais pas, j'ai ce qu'il te faut. Devine@ce que j'ai récupéré sur la policière de l'accueil.
-player = object = excited = Un passe-partout !
-sarah = player = awkward = Comment tu le sais ?
-player = object = you_silly = Disons que c'est loin d'être la première fois que@tu lui voles…
+sarah = player = happy = Un passe-partout ! Tiens, il est pour toi.
 
 
 % IS_IT_NORMAL
 sarah = player = awkward = Qu'est-ce que tu veux dire ?
 player = object = worry = D'habitude, je ne peux pas te parler pendant la@résolution des puzzle… Seulement avant, ou après.
 sarah = player = laugh = Je n'ai jamais fait attention à ça !@Je crois que tu te poses trop de question.
+
+
+% CONTRADICTION
