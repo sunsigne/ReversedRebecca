@@ -1,9 +1,0 @@
-SUE = Key1 % porter plainte
-THIEF = Key1 % voleur ?
-HELMET = Key2 % casque ?
-ASK_FOR_ADVICE = Key1 % demander conseil (gadget)
-
-///// WS000 /////
-
-FOOD = Key1 % nourriture ?
-NICE_WEATHER_ISNT_IT = Key1 % ... il fait beau, non ?
