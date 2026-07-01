@@ -55,6 +55,8 @@ public class RubbleObject extends PuzzlerObject {
 			return 4;
 		case BROWN_SUGAR:
 			return 5;
+		case PURPLE:
+			return 6;
 		default:
 			return 1;
 		}

@@ -33,6 +33,11 @@
 
 	faire les RR002,3 etc.
 
+	////////// LVL003 ////////////
+	
+	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
+	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle) + gamepad
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -87,11 +92,6 @@
 	karma : 
 	- l'angelic, aider tout le monde &, soit libérer roméo, soit lui livrer un repas
 	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
-
-	////////// LVL003 ////////////
-	
-	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
-	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle) + gamepad
 
 	////////// LINUX & MAC ////////////
 

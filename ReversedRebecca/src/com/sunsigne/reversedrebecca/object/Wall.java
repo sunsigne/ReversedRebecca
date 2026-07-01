@@ -26,7 +26,8 @@ public class Wall extends GameObject implements NaveMesh, TickFree, RenderFree, 
 	////////// COLOR ////////////
 
 	public enum COLOR {
-		BLUE("blue"), GREEN("green"), WHITE("white"), BROWN("brown"), BROWN_SUGAR("brown_sugar"), GRAY("gray");
+		BLUE("blue"), GREEN("green"), WHITE("white"), BROWN("brown"), BROWN_SUGAR("brown_sugar"), GRAY("gray"),
+		PURPLE("purple");
 
 		private String name;
 
