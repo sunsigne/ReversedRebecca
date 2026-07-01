@@ -31,6 +31,8 @@
 		
 	////////// EN COURS ////////////
 
+	faire les RR002,3 etc.
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -75,6 +77,7 @@
 	////////// LVL002 ////////////
 
 	- relier le fusil à pompe derrière Butch à la fusillade
+	- le "partir sans sarah" doit avoir des conséquences
 
 	////////// LVL003-Y ////////////
  	
@@ -112,9 +115,6 @@
 	////////// DESSIN ////////////
 	
 	(pas à faire, mais à ne pas oublier cette règle) lvl001 - la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli).
-	12h00 - créer une animation "sick" pour quand on marche	 ?
-	8h00 - faire une animation spéciales d'animation ? et de résolution pour les puzzle critique !
-	1h00 (par map) - il faut créer le design des couches de light et de sous sol des maps !
 	1h30 - finir marie_date + rebecca_date + rebecca_gothique
 	1h - en psychopath, faire des coeur menaçant ou lugubre
 
@@ -123,7 +123,7 @@
 	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
 	3h consulter les ressources non utilisées (son, textures, etc.)
 	1h activer tous les succès abandonnées
-	1h jouer avec le skin "rebecca_dark" + 15h implémentation complète
+	1h jouer avec le skin "rebecca_dark" + 5h implémentation complète
 	3h créer une galerie
 
 	////////// PERSONNAGES A FAIRE ////////////
