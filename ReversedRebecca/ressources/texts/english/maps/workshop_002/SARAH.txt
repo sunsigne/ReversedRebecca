@@ -1,0 +1,36 @@
+% SECRET_FILES
+sarah = player = happy_var = So? What about those secret documents?@Any info?
+player = object = happy = Almost nothing on Vladimir himself. But@apparently, someone knows him. A certain…
+
+
+% DOUBLE-Y
+sarah = player = laugh = Double what?! What kind of name is that?@Is it, like… his chromosomes?
+player = object = laugh = Maybe… In the file, he's nicknamed@"the ultimate man"!
+player = object = happy = Anyway, YY knows Vladimir. He's supposedly@the leader of the Hydra military camp.
+sarah = player = wink = Perfect! We know where to go, then!@But first, the gadget!
+player = object = laugh = But first, the gadget!
+
+
+% I_M_STUCK
+sarah = player = surprised = For real? With such an easy puzzle?
+player = object = no_sens = I gotta admit…
+sarah = player = wink = Don't worry, I've got just the thing. Guess what@I swiped from the policewoman at the front desk.
+sarah = player = happy = A master key! Here, it's yours.
+
+
+% IS_IT_NORMAL
+sarah = player = awkward = What do you mean?
+player = object = worry = Usually, I can't talk to you while solving puzzles…@Only before or after.
+sarah = player = laugh = I never really noticed that!@I think you're overthinking.
+
+
+% GREEN_KEY
+player = object = no_sens = Where's my green key?
+sarah = player = laugh = If you pick up a permanent tool without knowing@how to use it, you're stuck with the tool below it.
+sarah = player = wink = But don't worry. As soon as you learn how to@use it, it'll be available. Okay, let's go.
+
+
+% GREEN_KEY_NUMBER
+player = object = no_sens = Where is my key 2?
+sarah = player = laugh = If you pick up a permanent tool without knowing@how to use it, you're stuck with the tool below it.
+sarah = player = wink = But don't worry. As soon as you learn how to@use it, it'll be available. Okay, let's go.

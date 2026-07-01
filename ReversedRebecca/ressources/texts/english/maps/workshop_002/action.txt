@@ -1,0 +1,10 @@
+DOUBLE-Y = Key1 % Double-Y
+DOUBLE-Y_QUESTION = Key1 % Double-Y?
+ISABELLE = Key1 % Isabelle?
+ASK_FOR_ADVICE = Key1 % ask for advice (gadget)
+I_M_STUCK = Key1 % I'm stuck
+IS_EVERYTHING_NORMAL = Key1 % is everything normal ?
+GREEN_KEY = Key1 % green key?
+GREEN_KEY_NUMBER = Key1 % key 2?
+I_FINISHED = Key1 % I finished
+

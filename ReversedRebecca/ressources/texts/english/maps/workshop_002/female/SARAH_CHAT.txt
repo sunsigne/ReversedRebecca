@@ -1,0 +1,6 @@
+% MIKA
+player = object = happy_var = Maybe Mia?
+sarah = player = worry = Isn't it… a bit rushed to talk about kids?
+player = object = laugh = Yeah! It's just that your question reminded me@we're dating. But I was only talking about a name.
+sarah = player = you_silly_var = Okay… Don't rush things, though…
+sarah = player = happy = Go pick out your gadget.

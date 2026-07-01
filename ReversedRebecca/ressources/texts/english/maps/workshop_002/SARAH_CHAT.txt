@@ -1,0 +1,49 @@
+% DOUBLE-Y_QUESTION
+player = object = happy = Do you think that's his real first name?
+sarah = player = laugh = If so, I bet his parents are named@Yves and Ysabelle.
+player = object = surprised = Isabelle starts with an "I"!
+
+
+% ISABELLE
+player = object = happy_var = It's a pretty name.@I'll name my daughter that.
+sarah = player = happy = A daughter... with whom?
+
+
+% MARIE
+player = object = excited = Marie! Didn't I tell you?
+sarah = player = worry = You did. But…@Isn't it a bit rushed to talk about kids?
+player = object = laugh = Yeah! It's just that your question reminded me@we're dating. But I was only talking about a name.
+sarah = player = wink = Okay. I'm counting on you tomorrow, to tell me@all the details about your date, of course.
+player = object = happy_var = Obviously!
+
+
+% MIKA
+player = object = happy_var = Maybe Mika?
+sarah = player = surprised = What?! But, Rebecca… Be safe!@That's clearly rushing things!
+player = object = worry = Hey… That's not on the agenda, don't worry.
+player = object = laugh = It's just that your question reminded me that@we're dating. But I was only talking about a name.
+sarah = player = you_silly_var = You scared me…
+sarah = player = happy = Go pick out your gadget.
+
+
+% DUNNO_YET
+player = object = happy = I don't know. Maybe I'll meet someone at the camp?
+sarah = player = determined = Oh really? Do you have a thing for uniforms?@You kept that a secret, you little minx!
+player = object = worry = That's not specifically my thing…
+sarah = player = wink = So, what is your thing?
+player = object = blush = Sarah, that's very private…
+sarah = player = pervert = Come on… Spill the beans!@What turns you on?
+player = object = blush = I'm not saying a word. My lips are sealed.
+sarah = player = pervert = The ones up top, or the ones down below?
+player = RIGHT = blush_var = Sarah!!!@You can't say things like this.
+sarah = LEFT = laugh = Haha! Sorry, but you should see your face.@Go get your gift.
+
+
+% ASK_FOR_ADVICE
+player = RIGHT = happy = In your opinion, should I take the bomb or the key?
+sarah = LEFT = laugh = I think where we're going, bombs might be@more useful. But it's up to you, Rebecca!
+
+
+% ASK_FOR_ADVICE_AGAIN
+player = RIGHT = happy = In your opinion, should I take the bomb or the key?
+sarah = LEFT = laugh = Are you going to ask me that every time?@Choose whatever you want, Rebecca.

@@ -32,7 +32,6 @@
 	////////// EN COURS ////////////
 
  	dolly : "tout doux, erreur de fichier non trouvé"
- 	faire english ws002 et dv003
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
