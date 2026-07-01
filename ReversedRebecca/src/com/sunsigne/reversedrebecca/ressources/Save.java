@@ -47,7 +47,7 @@ public class Save {
 
 		line.addObject("currentlvlmenu=" + FilePath.LVL000);
 		line.addObject("currentlvl=" + FilePath.LVL000);
-		line.addObject("surname_doug=" + surname);
+		line.addObject("surname_dougly=" + surname);
 		line.addObject("surname_custom1=" + surname);
 		line.addObject("surname_custom2=" + surname);
 		line.addObject("surname_custom3=" + surname);

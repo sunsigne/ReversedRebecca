@@ -31,8 +31,6 @@
 		
 	////////// EN COURS ////////////
 
- 	dolly : "tout doux, erreur de fichier non trouvé"
-
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
