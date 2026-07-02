@@ -1,0 +1,3 @@
+////// CHARACTER SPECIFIC //////
+
+happy=1,1

@@ -128,7 +128,7 @@
 
 	////////// PERSONNAGES A FAIRE ////////////
 
-	characters to finish : gamma, stephan (dans son appart, créer le chat "méli")
+	characters to finish : stephan (dans son appart, créer le chat "méli")
 
 	////////// DAVE ////////////
 	
