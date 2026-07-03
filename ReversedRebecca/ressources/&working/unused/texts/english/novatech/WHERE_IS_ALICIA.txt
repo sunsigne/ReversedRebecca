@@ -1,8 +1,0 @@
-% JEAN_HELP_SARAH_REACTION
-sarah = jean = angry = You're a jerk, actually!
-jean = sarah = urge_sad = Why are you insulting me?
-sarah = jean = angry = Don't you see the problem with your behavior?
-jean = sarah = urge_sad = … You're the one being mean to me.
-sarah = jean = angry_var = …?!
-sarah = jean = sad_var = I can't believe it… He's the victim now…
-sarah = rebecca = worry = I'm coming with you, Rebecca.@We can't leave Alicia in this mess.

@@ -12,12 +12,10 @@ import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.natural.independant.SingleInteractivityLaw;
-import com.sunsigne.reversedrebecca.piranha.actions.action.TalkAction;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
-import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogue;
 
 public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent {
 
@@ -211,8 +209,6 @@ public interface Interactive extends Highlightable, KeyboardEvent, GamepadEvent 
 				continue;
 
 			if (key == tempAction.getKeyEvent() || button == tempAction.getButtonEvent()) {
-				if (tempAction instanceof TalkAction)
-					UserCanInputRestartDialogue.lastChat = tempAction;
 				tempAction.doAction();
 				return;
 			}

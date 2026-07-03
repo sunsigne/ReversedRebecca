@@ -200,7 +200,8 @@ public class Game extends Canvas implements Runnable {
 
 	@SuppressWarnings("unused")
 	private void displayMemoryUsage() {
-		if (Infos.IS_DEV_VERSION == false)
+		boolean flag = true;
+		if (flag)
 			return;
 
 		final long BYTE_TO_MB_CONVERSION_VALUE = 1024 * 1024;

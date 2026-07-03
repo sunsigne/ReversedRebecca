@@ -17,10 +17,9 @@ public class Infos {
 	////////// GAME ////////////
 
 	public static final String NAME = "Reversed Rebecca";
-	public static final String VERSION = "v.0.8.0.10";
+	public static final String VERSION = "v.0.8.0.10p";
 	// public static final boolean IS_DEV_VERSION =
 	// System.getProperty("java.class.path").contains("\\git\\");
-	public static boolean IS_DEV_VERSION = true;
 	public static final ImageIcon ICON = new ImageIcon("icon.png");
 
 	////////// USEFUL ////////////

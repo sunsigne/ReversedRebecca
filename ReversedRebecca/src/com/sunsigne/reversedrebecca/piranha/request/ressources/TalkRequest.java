@@ -8,7 +8,6 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
-import com.sunsigne.reversedrebecca.world.controllers.UserCanInputRestartDialogue;
 
 public class TalkRequest implements Request {
 
@@ -42,7 +41,6 @@ public class TalkRequest implements Request {
 
 		PiranhaObjectAction action = new TalkAction();
 		action.setListener(action.getListener(object, target));
-		UserCanInputRestartDialogue.lastChat = action;
 		action.doAction();
 	}
 

@@ -1,9 +1,0 @@
-NPC-01 = Donovan (Barman)
-NPC-02 = Brandis
-NPC-03 = Akara
-NPC-04 = Bouncer
-NPC-05 = Delta
-NPC-06 = Gamma
-NPC-07 = Shooter (militaryman)
-NPC-08 = Dummy Down
-NPC-09 = Dummy Up

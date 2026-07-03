@@ -130,4 +130,4 @@ VolumeVoice = voice
 
 UpdateText = Game update available
 UpdateButton = Click here
-UpdateInfo = New level : military camp
+UpdateInfo = New level : nightclub

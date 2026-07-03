@@ -1,17 +1,4 @@
 
-	////////// VERSION PUBLIQUE ////////////
-
-	(ne faire que lorsqu'une version va sortir)
-	configurer le clavier en querty par défaut sur les version anglophone
-	rajouter le ficher icon.png dans le dossier racine
-	supprimer les ressources non utilisées
-	retirer la ligne "dev_loading" dans le fichier set-up de la map warning
-	reset la sauvegarde, les succès, les options (audio) & la mémoire de dave
-	s'assurer que le built soit considéré comme "non dev", mais régler manuellement l'envoie des "crash repport" + rediriger les ressources au bon endroit
-	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
-	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
-	activer le updatescreen (Conductor)
-
 	////////// TEMP ////////////
 
 	OptionsScreen : débloque le menu bonus après avoir fini la démo
