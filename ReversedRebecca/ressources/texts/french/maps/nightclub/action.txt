@@ -1,0 +1,8 @@
+///// BAR GOBLIN /////
+
+HOW_DO_YOU_KNOW_MY_NAME = Key1 %  comment connais-tu mon nom ?
+WHERE_IS_HE = Key2 % où est-il ?
+WHY_NOT = Key1 % pourquoi pas
+THREATENS_HIM = Key2 % (le menacer)
+FINE_I_WILL = Key1 % Ok, je vais suivre les règles
+LEAVE = Key2 % (partir)

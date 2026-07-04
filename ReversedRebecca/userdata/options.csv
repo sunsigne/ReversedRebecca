@@ -1,8 +1,8 @@
 Language=french
 Camera=dynamic
 Shake=on
-Inventory=immersive
-Texts=medium
+Inventory=visible
+Texts=large
 Difficulty=normal
 
 /////BONUS/////
