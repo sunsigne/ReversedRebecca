@@ -60,6 +60,8 @@ ComingForYouTitle = I'm coming for you
 ComingForYouText = 	
 ISaid200PushUpsTitle = I Said: 200 Push-Ups!
 ISaid200PushUpsText = Trying to outsmart the game
+AkaraPissedTitle = Two seconds from death
+AkaraPissedText = Yes, she would have killed you
 
 ///// PURPLE /////
 

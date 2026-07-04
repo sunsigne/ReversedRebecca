@@ -33,4 +33,4 @@ object = DOWN = happy = Tout doux, Akara. Je m'en occupe.
 
 % YOU_CAN_LEAVE
 object = player = happy = Tu devrais sortir plus souvent, si tu crois que c'est@la première fois qu'un barman reçoit des menaces.
-object = player = happy = Je t'ai dit comment les choses marchait ici.@Soit tu te plis aux règles, soit tu es libre de partir.
+object = player = happy = Je t'ai dit comment les choses marchaient ici.@Soit tu te plies aux règles, soit tu es libre de partir.

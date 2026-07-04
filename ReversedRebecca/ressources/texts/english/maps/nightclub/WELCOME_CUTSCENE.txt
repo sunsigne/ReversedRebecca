@@ -1,0 +1,36 @@
+% AKARA
+object = player = happy = Good evening. Welcome to the Purple String Club.
+
+
+% DONOVAN
+player = object = happy = Hello. I'm looking for a certain Stephan.@Do you know him?
+object = player = happy = Of course, Rebecca. I know Stephan.@Everyone here does.
+
+
+% HOW_DO_YOU_KNOW_MY_NAME
+object = player = happy = Excuse me. I haven't introduced myself.@My name is Donovan; I'm an information broker.
+object = player = happy = It's my job to stay in the loop. For instance,@I know where the man you're looking for is.
+
+
+% WHERE_IS_STEPHAN
+object = player = happy = Stephan is the "King of the Night".@You can't speak to him with your current rank.
+object = player = happy = You'll have to climb the ranks first.@Right now, you're just a "bar goblin".
+player = object = no_sens = For real? Like, seriously?
+object = player = happy = It's a themed bar. Every night, the same rules@apply to everyone.
+object = player = happy = So? Are you going to play along?
+
+
+% WHY_NOT
+
+
+% THREATENS_HIM
+player = object = angry = Listen to me, you booze-peddler: you will tell me@where Stephan is, right now! Or else…
+
+
+% THREATENS_HIM_NEXT
+object = DOWN = happy = Easy, Akara. I'll handle this.
+
+
+% YOU_CAN_LEAVE
+object = player = happy = You should get out more if you think this is the@first time a bartender's been threatened.
+object = player = happy = I told you how things work here. Either you play@by the rules, or you're free to leave.

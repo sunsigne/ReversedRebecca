@@ -63,7 +63,6 @@ ISaid200PushUpsText = Jouer au plus malin avec le jeu
 AkaraPissedTitle = A 2 secondes de la mort
 AkaraPissedText = Oui, elle allait te tuer
 
-
 ///// PURPLE /////
 
 NothingNextTitle = Bien joue ! Mais...

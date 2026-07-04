@@ -1,0 +1,8 @@
+///// BAR GOBLIN /////
+
+HOW_DO_YOU_KNOW_MY_NAME = Key1 %  how do you know my name?
+WHERE_IS_HE = Key2 % where is he?
+WHY_NOT = Key1 % why not
+THREATENS_HIM = Key2 % (threatens him)
+FINE_I_LL_FOLLOW_THE_RULES = Key1 % fine, i'll follow the rules
+LEAVE = Key2 % (leave)
