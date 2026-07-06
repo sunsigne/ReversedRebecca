@@ -1,0 +1,26 @@
+% WHO_IS_AT_THE_ENTRANCE
+object = player = unhappy = It's not very polite to talk about someone@who can speak for themselves.
+object = player = happy = That said, I'd prefer you didn't disturb her…@Her name is Akara, she's an intern.
+object = player = wink = You don't need to know anything else about her.
+
+
+% WHAT_S_MY_GRADE_GOBELIN
+object = player = happy = You're currently a "bar goblin". So you're@restricted to the entrance and the bar area.
+object = player = wink = By helping two other goblins, you'll become a@"neon squire" and gain access to the next area.
+
+
+% TALK_TO_STEPHAN
+object = player = wink = Stephan is "King of the Night".@Only people of the same rank, can meet him.
+
+
+% WHO_SHOULD_I_HELP_GOBELIN
+object = player = snooty = Let me think…
+object = player = happy = There's Brandis, right next to you. There's that@soldier near the entrance, but I don't know his name.
+object = player = wink = Or, there's me. You can help me directly.@Technically, I'm a goblin too.
+
+
+% AKARA_DOESN_T_WANT_HELP
+object = player = unhappy = Why all these questions about her?
+player = object = happy_var = I'm just curious, that's all.@Who she is, and stuff…
+object = player = happy = Everyone's entitled to their secrets, and we'll@keep ours. But if you really must know…
+object = player = wink = You could always try searching for her name@and "Purple String Club" online. Who knows?

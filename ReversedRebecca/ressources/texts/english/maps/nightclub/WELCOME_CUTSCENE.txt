@@ -4,7 +4,7 @@ object = player = happy = Good evening. Welcome to the Purple String Club.
 
 % DONOVAN
 player = object = happy = Hello. I'm looking for a certain Stephan.@Do you know him?
-object = player = happy = Of course, Rebecca. I know Stephan.@Everyone here does.
+object = player = happy = Of course, Rebecca. I know Stephan.@Almost everyone here does.
 
 
 % HOW_DO_YOU_KNOW_MY_NAME
@@ -21,6 +21,9 @@ object = player = snooty = So? Are you going to play along?
 
 
 % WHY_NOT
+object = player = wink = Perfect! So, here are the rules: you are currently@a "bar goblin". You are restricted to this room.
+object = player = happy = To move on, you must help at least two people@of the same rank as you.
+object = player = wink = If you have any questions, I'm right here.
 
 
 % THREATENS_HIM

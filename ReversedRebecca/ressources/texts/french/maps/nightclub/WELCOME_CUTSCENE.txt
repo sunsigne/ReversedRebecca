@@ -4,7 +4,7 @@ object = player = happy = Bonsoir. Bienvenue au Purple String Club.
 
 % DONOVAN
 player = object = happy = Bonsoir. Je cherche un certain Stephan.@Vous le connaissez ?
-object = player = happy = Tu peux me tutoyer, Rebecca. Oui, je connais@Stephan. Tout le monde ici le connait.
+object = player = happy = Tu peux me tutoyer, Rebecca. Oui, je connais@Stephan. Presque tout le monde ici le connait.
 
 
 % HOW_DO_YOU_KNOW_MY_NAME
@@ -21,6 +21,9 @@ object = player = snooty = Alors ? Tu vas jouer avec nous ?
 
 
 % WHY_NOT
+object = player = wink = Parfait ! Alors voilà les règles : tu es actuellement@"gobelin de bar". Tu es limitée à cette salle.
+object = player = happy = Pour passer à côté, tu dois aider au moins deux@personnes du même grade que toi.
+object = player = wink = Si tu as des questions, je suis juste là.
 
 
 % THREATENS_HIM

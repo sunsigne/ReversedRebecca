@@ -1,0 +1,26 @@
+% WHO_IS_AT_THE_ENTRANCE
+object = player = unhappy = Ce n'est pas très poli de parler de quelqu'un@qui peut répondre pour lui-même.
+object = player = happy = Ceci dit, je préfère que tu ne la déranges pas…@Elle s'appelle Akara, c'est une stagiaire.
+object = player = wink = Tu n'as rien besoin de savoir d'autre à son sujet.
+
+
+% WHAT_S_MY_GRADE_GOBELIN
+object = player = happy = Tu es actuellement "gobelin de bar". Tu es donc@limitée à l'entrée, et au bar.
+object = player = wink = En aidant deux autres gobelins, tu deviendras@"écuyer des néons", et auras le droit d'aller à côté.
+
+
+% TALK_TO_STEPHAN
+object = player = wink = Stephan est "Roi de la Soirée". Seules les@personnes du même rang, peuvent le rencontrer.
+
+
+% WHO_SHOULD_I_HELP_GOBELIN
+object = player = snooty = Voyons voir…
+object = player = happy = Il y a Brandis, à côté de toi. Il y a ce militaire,@vers l'entrée, dont je ne connais pas le nom…
+object = player = wink = Sinon, il y a moi. Tu peux m'aider directement.@Techniquement, je suis aussi un gobelin.
+
+
+% AKARA_DOESN_T_WANT_HELP
+object = player = unhappy = Pourquoi toutes ces questions à son sujet ?
+player = object = happy_var = Je suis curieuse, c'est tout.@Qui est-elle, tout ça…
+object = player = happy = Chacun a droit à ses secrets, et nous garderons@les nôtres. Mais si tu veux absolument savoir…
+object = player = wink = Tu peux toujours essayer de chercher son nom@et "Purple String Club" sur internet. Qui sait ?
