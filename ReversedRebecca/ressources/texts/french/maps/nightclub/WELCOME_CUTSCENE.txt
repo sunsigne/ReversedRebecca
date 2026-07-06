@@ -9,15 +9,15 @@ object = player = happy = Tu peux me tutoyer, Rebecca. Oui, je connais@Stephan. 
 
 % HOW_DO_YOU_KNOW_MY_NAME
 object = player = happy = Excuse-moi. Je ne me suis pas présenté.@Je m'appelle Donovan, négociant en informations.
-object = player = happy = C'est mon métier d'être au courant des choses.@Je sais notamment où est l'homme que tu cherches.
+object = player = wink = C'est mon métier d'être au courant des choses.@Je sais notamment où est l'homme que tu cherches.
 
 
 % WHERE_IS_STEPHAN
-object = player = happy = Stephan est le "Roi de la Soirée".@Tu ne peux pas lui parler avec ton rang actuel.
-object = player = happy = Tu vas d'abord devoir gravir les échelons.@Pour l'instant, tu n'es qu'un "gobelin de bar".
+object = player = snooty = Stephan est le "Roi de la Soirée".@Tu ne peux pas lui parler avec ton rang actuel.
+object = player = wink = Tu vas d'abord devoir gravir les échelons.@Pour l'instant, tu n'es qu'un "gobelin de bar".
 player = object = no_sens = Pour de vrai ? Genre, sérieusement ?
 object = player = happy = C'est un bar à thème. Chaque soir c'est les mêmes@règles pour tout le monde.
-object = player = happy = Alors ? Tu vas jouer avec nous ?
+object = player = snooty = Alors ? Tu vas jouer avec nous ?
 
 
 % WHY_NOT
@@ -28,9 +28,9 @@ player = object = angry = Écoute-moi bien le rince-verre : tu vas me dire@où e
 
 
 % THREATENS_HIM_NEXT
-object = DOWN = happy = Tout doux, Akara. Je m'en occupe.
+object = DOWN = wink = Tout doux, Akara. Je m'en occupe.
 
 
 % YOU_CAN_LEAVE
-object = player = happy = Tu devrais sortir plus souvent, si tu crois que c'est@la première fois qu'un barman reçoit des menaces.
-object = player = happy = Je t'ai dit comment les choses marchaient ici.@Soit tu te plies aux règles, soit tu es libre de partir.
+object = player = unhappy = Tu devrais sortir plus souvent, si tu crois que c'est@la première fois qu'un barman reçoit des menaces.
+object = player = snooty = Je t'ai dit comment les choses marchaient ici.@Soit tu te plies aux règles, soit tu es libre de partir.
