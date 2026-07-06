@@ -25,6 +25,13 @@ public class ChatContentMindblow extends ChatContent {
 		task.playSound(SOUNDTYPE.SOUND, "mindblow");
 	}
 
+	////////// TEXT ////////////
+
+	@Override
+	public boolean isFulldisplayed() {
+		return super.isFulldisplayed() && time > 60;
+	}
+
 	////////// TICK ////////////
 
 	private int time;
