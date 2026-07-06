@@ -25,6 +25,7 @@ idiot=5,1
 shooter=6,1
 shooter_shocked=6,2
 shooter_cry=6,3
+shooter_mindblown=6,4
 
 ////// SLACKER //////
 
