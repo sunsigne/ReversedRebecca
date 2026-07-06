@@ -35,6 +35,7 @@
 
 	////////// LVL003 ////////////
 	
+	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer
 	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
 	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle) + gamepad
 
