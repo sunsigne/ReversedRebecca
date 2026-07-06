@@ -147,7 +147,10 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		text = text.replace("\"0/0\"", "%");
 		String voice = voice_variant ? line.split("=")[3] : null;
 
-		content = new ChatContent(formated_living_name_texture, mood, text, voice);
+		if (mood.toLowerCase().contains("mindblown"))
+			content = new ChatContentMindblow(formated_living_name_texture, mood, text, voice);
+		else
+			content = new ChatContent(formated_living_name_texture, mood, text, voice);
 		LAYER.PUZZLE.addObject(content);
 
 		Request request = new FacingRequest();
@@ -178,7 +181,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	public boolean isClosing() {
 		return closing;
 	}
-	
+
 	public void closeChat() {
 		World world = World.get();
 		if (world != null)
