@@ -1,0 +1,33 @@
+% NEED_HELP
+object = player = wink = Why not? I'm trying to practice sliding the glass@across the counter, down the bar.
+object = player = happy = Stand a bit further back; I'm going to try to@gauge the distance right.
+
+
+% SECOND_TRY
+object = RIGHT = happy = Darn… Hang on, I'll try again.
+
+
+% THIRD_TRY
+object = RIGHT = happy = I'm sure the third time's the charm. Don't move.
+
+
+% SUCCESS
+object = player = happy = Perfect!
+
+
+% CONGRATS
+object = player = wink = Thanks! And thanks for the help.
+
+
+% THROW_THE_GLASS_BACK
+object = player = snooty = Hey! Getting a bit carried away with the game?@Okay, my turn.
+
+
+% THROW_THE_GLASS_BACK_NEXT
+object = player = unhappy = Oops…
+object = player = happy = I still need to practice@Thanks for the help, anyway.
+
+
+% THROW_THE_GLASS_MUCH_TOO_HARD
+object = player = unhappy = That wasn't very nice…
+object = player = unhappy = I'll still count that, as a helping hand…@But don't break my glassware again.

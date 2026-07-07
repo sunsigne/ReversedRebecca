@@ -1,3 +1,9 @@
+///// WORLD /////
+
+WHO_SHOULD_I_HELP = Key3 % who should I help?
+NEED_HELP = Key3 % need help?
+WHAT_S_WRONG = Key1 % what's wrong?
+
 ///// BAR GOBLIN /////
 
 HOW_DO_YOU_KNOW_MY_NAME = Key1 %  how do you know my name?
@@ -10,5 +16,7 @@ WHO_IS_AT_THE_ENTRANCE = Key1 % who is at the entrance?
 AKARA_DOESN_T_WANT_HELP = Key1 % Akara doesn't want help?
 WHAT_S_MY_GRADE = Key2 % what's my grade?
 TALK_TO_STEPHAN = Key2 % talk to Stephan?
-WHO_SHOULD_I_HELP = Key3 % who should I help?
-NEED_HELP = Key3 % need help?
+CONGRATS = Key1 % Bravo!
+THROW_THE_GLASS_BACK = Key2 % (throw the glass back)
+NORMALLY = Key1 % (normally)
+MUCH_TOO_HARD = Key2 % (much too hard)

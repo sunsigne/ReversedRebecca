@@ -1,3 +1,9 @@
+///// WORLD /////
+
+WHO_SHOULD_I_HELP = Key3 % qui dois-je aider ?
+NEED_HELP = Key3 % besoin d'aide ?
+WHAT_S_WRONG = Key1 % un soucis ?
+
 ///// BAR GOBLIN /////
 
 HOW_DO_YOU_KNOW_MY_NAME = Key1 %  comment connais-tu mon nom ?
@@ -7,8 +13,10 @@ THREATENS_HIM = Key2 % (le menacer)
 FINE_I_LL_FOLLOW_THE_RULES = Key1 % Ok, je vais suivre les règles
 LEAVE = Key2 % (partir)
 WHO_IS_AT_THE_ENTRANCE = Key1 % c'est qui à l'entrée ?
+AKARA_DOESN_T_WANT_HELP = Key1 % Akara ne veut pas d'aide ?
 WHAT_S_MY_GRADE = Key2 % c'est quoi mon grade ?
 TALK_TO_STEPHAN = Key2 % parler à Stephan ?
-WHO_SHOULD_I_HELP = Key3 % qui dois-je aider ?
-AKARA_DOESN_T_WANT_HELP = Key3 % Akara ne veut pas d'aide ?
-NEED_HELP = Key3 % besoin d'aide ?
+CONGRATS = Key1 % Bravo !
+THROW_THE_GLASS_BACK = Key2 % (renvoyer le verre)
+NORMALLY = Key1 % (normalement)
+MUCH_TOO_HARD = Key2 % (beaucoup trop fort)

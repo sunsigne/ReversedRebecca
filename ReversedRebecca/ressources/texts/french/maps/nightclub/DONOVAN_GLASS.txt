@@ -1,0 +1,33 @@
+% NEED_HELP
+object = player = wink = Pourquoi pas. J'essaie de pratiquer mon lancer@de verre sur le comptoir, à travers le bar.
+object = player = happy = Place-toi un peu plus loin, je vais essayer de@bien jauger la distance.
+
+
+% SECOND_TRY
+object = RIGHT = happy = Zut… Attend, je vais réessayer.
+
+
+% THIRD_TRY
+object = RIGHT = happy = Je suis sûr que la troisième sera la bonne.@Ne bouge pas.
+
+
+% SUCCESS
+object = player = happy = Parfait !
+
+
+% CONGRATS
+object = player = wink = Merci ! Et merci pour le coup de main.
+
+
+% THROW_THE_GLASS_BACK
+object = player = snooty = Hey ! Tu te laisses emporter par le jeu ?@Ok, mon tour.
+
+
+% THROW_THE_GLASS_BACK_NEXT
+object = player = unhappy = Oups…
+object = player = happy = Je dois encore m'entrainer.@Merci pour le coup de main, en tout cas.
+
+
+% THROW_THE_GLASS_MUCH_TOO_HARD
+object = player = unhappy = Ce n'est pas très gentil…
+object = player = unhappy = Je vais quand même compter ça comme un coup@de main… Mais ne casse plus ma vaisselle.

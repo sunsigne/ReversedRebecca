@@ -1,3 +1,7 @@
+% AKARA
+object = player = happy = No thanks. I am not participating in this game.
+
+
 % MILITARY
 object = player = shooter_cry = I'm a murderer…
 object = player = shooter_cry = I killed a friend by accident…@He was running across the shooting range…
