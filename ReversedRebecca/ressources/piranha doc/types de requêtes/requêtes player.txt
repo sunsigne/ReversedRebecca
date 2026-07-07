@@ -63,6 +63,36 @@ Rappel : lors le joueur atteint 0 point de vie, il devient KO (voir « CONDITI
 
 
 
+////// GIVE_DRUNK_PLAYER //////
+
+Le Type de Requête GIVE_DRUNK_PLAYER permet d'ajouter ou de retirer des points de « drunk ».
+
+Exemple :
+TIME -> 5 = GIVE_DRUNK_PLAYER -> -2
+TIME -> 5 = GOTO -> GIVE_DRUNK_PLAYER:-2
+
+Lorsque la Condition sera vérifiée, le joueur perdra 2 drunk.
+
+Note : les points de « drunk » ajoutent des effets déformants sur l'écran du jeu. À 10 points, c'est le Game Over.
+
+
+
+////// RESET_DRUNK_PLAYER //////
+
+Le Type de Requête RESET_DRUNK_PLAYER permet de remettre les points de « drunk » à 0.
+
+Note : ce Type de Requête est l'un des rares dont la Cible n'est toute simplement pas lue ! Elle doit tout de même être écrite afin de respecter la syntaxe attendue. Par souci de clarté, il est conseillé d'écrire quelque chose de cohérent, comme : TRUE, PROCESS ou START.
+
+Exemple :
+TIME -> 5 = RESET_DRUNK_PLAYER -> PROCESS
+TIME -> 5 = GOTO -> RESET_DRUNK_PLAYER :PROCESS
+
+Lorsque la Condition sera vérifiée, les points de « drunk » passeront à 0.
+
+Note : les points de « drunk » ajoutent des effets déformants sur l'écran du jeu. À 10 points, c'est le Game Over.
+
+
+
 ////// CENTER_PLAYER //////
 
 Le Type de Requête CENTER_PLAYE permet de recentrer le joueur sur la case sur laquelle il est le plus.
