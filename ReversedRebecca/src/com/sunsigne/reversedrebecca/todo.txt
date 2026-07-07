@@ -39,7 +39,6 @@
 	
 	drinking contest :
 		 - faire les expressions faciales de Brandis
-		 - créer les filtres visuels de drunk + le game over à 10
 	
 	enregister l'aide pour : donovan, military, brandis	
 	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer
