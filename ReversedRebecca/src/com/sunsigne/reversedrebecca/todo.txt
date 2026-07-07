@@ -11,6 +11,7 @@
 	réactiver dans Conductor (dossier system) la variable "isUpdatableVersion" dans "startGame()"
 	patchnote des changements (pas dans le jeu, sur itch.io & discord (+2h00 reddit ?)
 	activer le updatescreen (Conductor)
+	dans le lvl001 - relier les fins (abandonner sarah et psycho) aux corrects embranchements
 
 	////////// TEMP ////////////
 
@@ -32,8 +33,22 @@
 	////////// EN COURS ////////////
 
 	faire les RR002,3 etc.
+	
+	bug :
+		- zzz de jessy pendant la fusillade
+		- william puzzle encore présent pendant la fusillade
+		- jessy a soflock venon en s'ejectant trop loin (elle n'allait plus vers sarah)
+		- musique fusillade intérompu parce qu'on s'est rapproché de la cellule de sarah
 
 	////////// LVL003 ////////////
+	
+	drinking contest :
+		 - faire highligt
+		 - faire l'action de boire
+		 - faire les expressions faciales de Brandis
+		 - faire la musique
+		 - créer le code du saoul
+		 - 
 	
 	enregister l'aide pour : donovan, military
 	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer
@@ -62,6 +77,10 @@
 
 	////////// LVL001 ////////////
 	
+	à faire :
+	 - séparer la fin où on abadonne sarah
+	 - séparer la fin psychopathe
+	 
 	à peut-être enregister :
 		- le type de scénario à passer en "long range" ? (pour des remarques ?) - NOVATECH*SCENARIO_INQUIRY
 		- sarah qui pousse rebecca (devant alicia)
