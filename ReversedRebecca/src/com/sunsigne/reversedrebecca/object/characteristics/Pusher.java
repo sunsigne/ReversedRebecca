@@ -68,8 +68,13 @@ public interface Pusher extends Stunnable, CollisionReactor {
 	}
 
 	private void pushPushable(Pushable pushable) {
-		if (pushable instanceof Player)
+		if (pushable instanceof Player) {
+			Player player = (Player) pushable;
 			new CameraShaker().shaking(SHAKE.MEDIUM);
+			boolean blockingPath = player.isBlockingPath();
+			player.setBlockingPath(false);
+			new GameTimer(10, () -> player.setBlockingPath(blockingPath));
+		}
 
 		new SoundTask().playSoundIfCamera(this, "hit_medium");
 		pushable.setSpeedness(SPEEDNESS.SWIFT);

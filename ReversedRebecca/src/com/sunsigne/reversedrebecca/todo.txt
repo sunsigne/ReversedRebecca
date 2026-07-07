@@ -33,12 +33,6 @@
 	////////// EN COURS ////////////
 
 	faire les RR002,3 etc.
-	
-	bug :
-		- zzz de jessy pendant la fusillade
-		- william puzzle encore présent pendant la fusillade
-		- jessy a soflock venon en s'ejectant trop loin (elle n'allait plus vers sarah)
-		- musique fusillade intérompu parce qu'on s'est rapproché de la cellule de sarah
 
 	////////// LVL003 ////////////
 	
