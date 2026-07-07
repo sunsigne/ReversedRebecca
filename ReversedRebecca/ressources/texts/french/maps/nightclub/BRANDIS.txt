@@ -1,0 +1,16 @@
+% NEED_HELP
+object = player = unhappy = C'est pas de refus ! J'aimerais battre mon record@de beuverie. Mais seul, c'est pas amusant.
+object = player = unhappy = Qu'en dis-tu ? Un p'tit concours de boisson ?
+
+
+% NO
+object = player = unhappy = Comme tu veux.@Si tu changes d'avis, fais-moi signe.
+
+
+% YES
+object = player = happy = Excellent ! Hey Donovan ! Sors les pintes !@On va se marrer.
+
+
+% AT_LEAST_FIVE_DRINKS
+object = player = happy = Bien joué gamine ! Quelle descente !
+object = player = happy = Tiens, voilà une pilule pour retarder les effets@de l'alcool. Merci encore pour le défi.

@@ -20,3 +20,4 @@ CONGRATS = Key1 % Bravo !
 THROW_THE_GLASS_BACK = Key2 % (renvoyer le verre)
 NORMALLY = Key1 % (normalement)
 MUCH_TOO_HARD = Key2 % (beaucoup trop fort)
+I_VE_CHANGED_MY_MIND = Key1 % j'ai changé d'avis

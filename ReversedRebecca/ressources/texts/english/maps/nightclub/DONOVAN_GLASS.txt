@@ -29,5 +29,5 @@ object = player = happy = I still need to practice@Thanks for the help, anyway.
 
 
 % THROW_THE_GLASS_MUCH_TOO_HARD
-object = player = unhappy = That wasn't very nice…
+object = player = unhappy = You did that on purpose. That wasn't very nice…
 object = player = unhappy = I'll still count that, as a helping hand…@But don't break my glassware again.

@@ -7,3 +7,5 @@ NPC-06 = Gamma
 NPC-07 = Shooter (militaryman)
 NPC-08 = Dummy Down
 NPC-09 = Dummy Up
+
+OBJ-01 = Drinking Glasses Competition
