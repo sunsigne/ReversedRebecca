@@ -20,3 +20,55 @@ object = DOWN = serious = Tu n'as pas le bon grade. Réessaies plus tard.
 
 % BLOCKED_FIVE_TIMES
 object = DOWN = serious = On peut faire ça toute la soirée, s'il le faut.
+
+
+% NEED_HELP
+object = player = happy = Pourquoi pas ! Tu vas voir, on va s'amuser.
+object = player = happy = Il y a toujours des gobelins qui essaient de gruger.@Tout ce que tu as à faire, c'est de les empêcher de passer.
+
+
+% REBECCA_IS_BOUNCER_ONCE
+player = DOWN = happy_var = On ne passe pas.
+
+
+% REBECCA_IS_BOUNCER_TWICE
+player = DOWN = determined = Les gobelins, ça restent à gauche.
+
+
+% REBECCA_IS_BOUNCER_THRICE
+player = DOWN = determined = C'est réservé à l'élite, péon.
+
+
+% REBECCA_IS_BOUNCER_FOUR_TIMES
+player = DOWN = dreaming = Toujours pas, le pauvre.
+
+
+% REBECCA_IS_BOUNCER_FIVE_TIMES
+player = DOWN = determined = Raté. Rentre chez ta mère.
+
+
+% REBECCA_IS_BOUNCER_FINAL
+player = bouncer = laugh = J'étais comment ?
+object = player = happy = Parfaite. C'était très drôle ! Merci pour le coup de main.
+
+
+% REBECCA_FAILED_ONCE
+object = player = serious = Tu l'as raté !
+object = player = happy = Attend, on va réessayer.
+
+
+% REBECCA_FAILED_TWICE
+object = player = happy = Miss ! Il est juste devant toi ! Réagis !
+
+
+% REBECCA_FAILED_THRICE
+object = player = happy = Il va à deux à l'heure ! Comment tu fais pour le rater !
+
+
+% REBECCA_FAILED_FOUR_TIMES
+object = player = happy = Quand tu fais caca, tu rates aussi les toilettes ?
+
+
+% REBECCA_FAILED_FINAL
+player = bouncer = laugh = J'étais comment ?
+object = player = happy = Une catastrophe ! Mais j'ai bien rigolé ! Merci pour le coup de main.
