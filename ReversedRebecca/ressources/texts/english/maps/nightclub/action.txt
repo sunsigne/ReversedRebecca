@@ -7,6 +7,8 @@ CLUB = Key1 % club?
 LET_ME_BUY_YOU_A_DRINK = Key1 % let me buy you a drink
 ARE_YOU_BUYING_ME_A_DRINK = Key1 % are you buying me a drink?
 CHAT = Key1 % chat
+OK = Key1 % ok
+WHY = Key2 % why?
 
 ///// BAR GOBLIN /////
 
@@ -17,6 +19,7 @@ THREATENS_HIM = Key2 % (threatens him)
 FINE_I_LL_FOLLOW_THE_RULES = Key1 % fine, i'll follow the rules
 LEAVE = Key2 % (leave)
 WHO_IS_AT_THE_ENTRANCE = Key1 % who is at the entrance?
+WHO_IS_AKARA = Key1 % who is Akara?
 AKARA_DOESN_T_WANT_HELP = Key1 % Akara doesn't want help?
 WHAT_S_MY_GRADE = Key2 % what's my grade?
 TALK_TO_STEPHAN = Key2 % talk to Stephan?

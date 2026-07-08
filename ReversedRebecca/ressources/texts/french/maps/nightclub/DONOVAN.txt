@@ -4,6 +4,10 @@ object = player = happy = Ceci dit, je préfère que tu ne la déranges pas…@E
 object = player = wink = Tu n'as rien besoin de savoir d'autre à son sujet.
 
 
+% WHO_IS_AKARA
+object = player = wink = C'est une stagiaire.@Tu n'as rien besoin de savoir d'autre à son sujet.
+
+
 % WHAT_S_MY_GRADE_GOBELIN
 object = player = happy = Tu es actuellement "gobelin de bar". Tu es donc@limitée à l'entrée, et au bar.
 object = player = wink = En aidant deux autres gobelins, tu deviendras@"écuyer des néons", et auras le droit d'aller à côté.

@@ -2,6 +2,17 @@
 object = player = happy = Non merci. Je ne participe pas à ce jeu.
 
 
+% AKARA_DONT_BOTHER
+donovan = DOWN = snooty = Je préfèrerais que tu ne déranges pas Akara,@s'il te plaît.
+
+
+% AKARA_DONT_BOTHER_WHY
+donovan = DOWN = unhappy = Eh bien, heu…
+object = player = happy = Ça peut sembler étrange, mais j'écoute mieux@lorsqu'on ne s'adresse pas directement à moi.
+object = player = happy = C'est ainsi que je comprends le monde, et@j'aimerais continuer à observer un peu.
+donovan = DOWN = wink = Tu l'as entendu d'elle-même, ha ha…@Elle a envie de rester tranquille.
+
+
 % MILITARY
 object = player = shooter_cry = Je suis un assassin…
 object = player = shooter_cry = J'ai tué un ami par accident…@Il courrait sur le stand de tir…

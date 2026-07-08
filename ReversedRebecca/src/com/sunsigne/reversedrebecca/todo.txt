@@ -38,7 +38,7 @@
 	////////// LVL003 ////////////
 
 	neutral conv :
-		- akara
+		- videur
 		
 	squire :
 		- videur

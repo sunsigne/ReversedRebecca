@@ -4,6 +4,10 @@ object = player = happy = That said, I'd prefer you didn't disturb her…@Her na
 object = player = wink = You don't need to know anything else about her.
 
 
+% WHO_IS_AKARA
+object = player = wink = She's an intern.@You don't need to know anything else about her.
+
+
 % WHAT_S_MY_GRADE_GOBELIN
 object = player = happy = You're currently a "bar goblin". So you're@restricted to the entrance and the bar area.
 object = player = wink = By helping two other goblins, you'll become a@"neon squire" and gain access to the next area.
