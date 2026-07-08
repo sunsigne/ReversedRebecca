@@ -1,0 +1,22 @@
+% NEED_HELP
+object = DOWN = serious = Sorry, but I'm a "neon squire".@I don't listen to filthy goblins.
+
+
+% BLOCKED_ONCE
+object = DOWN = serious = This area is off-limits to goblins.
+
+
+% BLOCKED_TWICE
+object = DOWN = serious = I saw you.
+
+
+% BLOCKED_THRICE
+object = DOWN = serious = Missed again, miss.
+
+
+% BLOCKED_FOUR_TIMES
+object = DOWN = serious = You don't have the right rank. Try again later.
+
+
+% BLOCKED_FIVE_TIMES
+object = DOWN = serious = We can keep this up all night, if need be.

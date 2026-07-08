@@ -9,3 +9,5 @@ NPC-08 = Dummy Down
 NPC-09 = Dummy Up
 
 OBJ-01 = Drinking Glasses Competition
+OBJ-02 = Bouncer Barrier
+OBJ-03 = Bouncer Barrier Helper

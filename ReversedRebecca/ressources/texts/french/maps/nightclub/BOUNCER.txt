@@ -1,0 +1,22 @@
+% NEED_HELP
+object = DOWN = serious = Désolé, mais je suis "écuyer des néons".@Je n'écoute pas les gobelins crasseux.
+
+
+% BLOCKED_ONCE
+object = DOWN = serious = Cette zone est interdite aux gobelins.
+
+
+% BLOCKED_TWICE
+object = DOWN = serious = Je t'ai vu.
+
+
+% BLOCKED_THRICE
+object = DOWN = serious = Encore raté, miss.
+
+
+% BLOCKED_FOUR_TIMES
+object = DOWN = serious = Tu n'as pas le bon grade. Réessaies plus tard.
+
+
+% BLOCKED_FIVE_TIMES
+object = DOWN = serious = On peut faire ça toute la soirée, s'il le faut.
