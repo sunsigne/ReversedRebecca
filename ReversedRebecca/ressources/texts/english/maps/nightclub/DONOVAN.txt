@@ -24,3 +24,23 @@ object = player = unhappy = Why all these questions about her?
 player = object = happy_var = I'm just curious, that's all.@Who she is, and stuff…
 object = player = happy = Everyone's entitled to their secrets, and we'll@keep ours. But if you really must know…
 object = player = wink = You could always try searching for her name@and "Purple String Club" online. Who knows?
+
+
+% I_HELPED_1_GOBELIN
+object = player = snooty = That's right, but that's not enough.@You need to help two goblins to become a squire.
+
+
+% I_HELPED_2_GOBELINS
+object = player = snooty = Well done.@I officially proclaim you a "neon squire"!
+object = player = happy = You now officially have access to the very next@room, but not to the dance floor yet.
+object = player = wink = For that, you first need to help two squires, then@you'll become "prince of the dancefloor".
+
+
+% WHAT_S_MY_GRADE_SQUIRE
+object = player = happy = You are currently a "neon squire." Thus, you have@access to the whole club, except the dance floor.
+object = player = wink = Help two other squires, and you'll become@"prince of the dancefloor"; or rather, "princess".
+
+
+% WHO_SHOULD_I_HELP_SQUIRE
+object = player = snooty = Let's see…
+object = player = happy = There's that guy in the suit, behind you. And@probably a dude or two around the dance floor…

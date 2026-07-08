@@ -21,3 +21,5 @@ THROW_THE_GLASS_BACK = Key2 % (renvoyer le verre)
 NORMALLY = Key1 % (normalement)
 MUCH_TOO_HARD = Key2 % (beaucoup trop fort)
 I_VE_CHANGED_MY_MIND = Key1 % j'ai changé d'avis
+I_HELPED_1_GOBELIN = Key3 % j'ai aidé 1 gobelin
+I_HELPED_2_GOBELINS = Key3 % j'ai aidé 2 gobelins

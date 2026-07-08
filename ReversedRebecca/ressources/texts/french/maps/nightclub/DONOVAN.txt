@@ -24,3 +24,23 @@ object = player = unhappy = Pourquoi toutes ces questions à son sujet ?
 player = object = happy_var = Je suis curieuse, c'est tout.@Qui est-elle, tout ça…
 object = player = happy = Chacun a droit à ses secrets, et nous garderons@les nôtres. Mais si tu veux absolument savoir…
 object = player = wink = Tu peux toujours essayer de chercher son nom@et "Purple String Club" sur internet. Qui sait ?
+
+
+% I_HELPED_1_GOBELIN
+object = player = snooty = C'est exact, mais ça n'est pas suffisant. Tu@dois aider deux gobelins pour devenir écuyer.
+
+
+% I_HELPED_2_GOBELINS
+object = player = snooty = Bien joué. Je te proclame officiellement@"écuyer des néons" !
+object = player = happy = Tu as maintenant officiellement accès à la salle@d'à côté, mais pas encore à la piste de dance.
+object = player = wink = Pour ça, il faut d'abords aider deux écuyers,@tu deviendras alors "prince du dancefloor".
+
+
+% WHAT_S_MY_GRADE_SQUIRE
+object = player = happy = Tu es actuellement "écuyer des néons". Tu as@donc accès à la totalité du club, sauf à la piste.
+object = player = wink = Aide deux autres écuyers, et tu deviendras alors@"prince du dancefloor"; ou plutôt "princesse".
+
+
+% WHO_SHOULD_I_HELP_SQUIRE
+object = player = snooty = Voyons voir…
+object = player = happy = Il y a ce type en costume, derrière toi. Et surement@un ou deux gus autours de la piste de dance…
