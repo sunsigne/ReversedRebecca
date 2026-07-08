@@ -22,9 +22,9 @@ object = DOWN = serious = Tu n'as pas le bon grade. Réessaies plus tard.
 object = DOWN = serious = On peut faire ça toute la soirée, s'il le faut.
 
 
-% NEED_HELP
+% NEED_HELP_SQUIRE
 object = player = happy = Pourquoi pas ! Tu vas voir, on va s'amuser.
-object = player = happy = Il y a toujours des gobelins qui essaient de gruger.@Tout ce que tu as à faire, c'est de les empêcher de passer.
+object = player = happy = Il y a toujours un gobelin qui essaie de passer.@Tout ce que tu as à faire, c'est de le bloquer.
 
 
 % REBECCA_IS_BOUNCER_ONCE
@@ -44,7 +44,7 @@ player = DOWN = dreaming = Toujours pas, le pauvre.
 
 
 % REBECCA_IS_BOUNCER_FIVE_TIMES
-player = DOWN = determined = Raté. Rentre chez ta mère.
+player = DOWN = determined = Allez ! Rentre chez ta mère.
 
 
 % REBECCA_IS_BOUNCER_FINAL

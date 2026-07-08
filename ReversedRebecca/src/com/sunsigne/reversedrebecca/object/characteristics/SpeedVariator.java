@@ -12,7 +12,7 @@ public interface SpeedVariator extends Velocity {
 	default int getSpeed() {
 		switch (getSpeedness()) {
 		case SNAIL:
-			return getSize() / 48;
+			return getSize() / 64;
 		case SLOW:
 			return getSize() / 32;
 		case NORMAL:
