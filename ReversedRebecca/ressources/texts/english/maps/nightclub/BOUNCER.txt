@@ -20,3 +20,67 @@ object = DOWN = serious = You don't have the right rank. Try again later.
 
 % BLOCKED_FIVE_TIMES
 object = DOWN = serious = We can keep this up all night, if need be.
+
+
+% NEED_HELP_SQUIRE
+object = player = happy = Why not! You'll see, we're going to have fun.
+object = player = happy = There's always a goblin trying to get through.@All you have to do is block him.
+
+
+% REBECCA_IS_BOUNCER_ONCE
+player = DOWN = happy_var = You're not getting in.
+
+
+% REBECCA_IS_BOUNCER_TWICE
+player = DOWN = determined = Goblins stay on the left.
+
+
+% REBECCA_IS_BOUNCER_THRICE
+player = DOWN = determined = This area is for the elite, peon.
+
+
+% REBECCA_IS_BOUNCER_FOUR_TIMES
+player = DOWN = dreaming = Still no, beggar.
+
+
+% REBECCA_IS_BOUNCER_FIVE_TIMES
+player = DOWN = determined = Come on! Go back to your mommy.
+
+
+% REBECCA_FAILED_ONCE
+bouncer = LEFT = serious = You missed, miss!
+bouncer = DOWN = happy = Hang on, let's try again.
+
+
+% REBECCA_FAILED_TWICE
+bouncer = LEFT = happy = Miss! He's right in front of you! React!
+
+
+% REBECCA_FAILED_THRICE
+bouncer = LEFT = happy = He's moving at a snail's pace!@How do you manage to miss him?
+
+
+% REBECCA_FAILED_FOUR_TIMES
+bouncer = LEFT = happy = Do you miss the toilet when you go, too?
+
+
+% REBECCA_IS_BOUNCER_FINAL
+player = DOWN = laugh = How did I do?
+object = LEFT = happy = Perfect. That was really funny!@Thanks for the help.
+
+
+% REBECCA_IS_HALF_BAD
+player = DOWN = laugh = How did I do?
+object = LEFT = happy = Not great. But I had a good laugh!@Thanks for the help.
+
+
+% REBECCA_FAILED_FINAL
+player = DOWN = laugh = How did I do?
+object = LEFT = happy = A disaster! But I had a good laugh!@Thanks for the help.
+
+
+% SMALL_TALK
+object = player = serious = Sorry, miss, but I prefer to stay focused@on my mission: no goblin is getting past me!
+player = object = happy = I understand. You take your role as a bouncer@seriously.
+object = player = happy = Bouncer? Ha ha ha! I'm a customer, just like you.@I just really get into the spirit of this club.
+object = DOWN = serious = Anyway, I'm going back to "work".@Or rather, to the game.

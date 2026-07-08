@@ -37,13 +37,7 @@
 
 	////////// LVL003 ////////////
 
-	neutral conv :
-		- videur
-		
 	squire :
-		- videur (une catastrophe = a disaster)
-			- à finir :
-				- trad en anglais
 		- tous ceux de la salle d'à côté
 		- faire les murs de la piste de dance
 

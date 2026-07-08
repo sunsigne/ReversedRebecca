@@ -5,6 +5,7 @@ object = player = happy = No thanks. I am not participating in this game.
 % AKARA_DONT_BOTHER
 donovan = DOWN = snooty = I'd prefer if you didn't bother Akara, please.
 
+
 % AKARA_DONT_BOTHER_WHY
 donovan = DOWN = unhappy = Well, um…
 object = player = happy = It might seem odd, but I listen better when I'm@not being addressed directly.

@@ -77,3 +77,10 @@ object = LEFT = happy = Pas terrible. Mais j'ai bien rigolé !@Merci pour le cou
 % REBECCA_FAILED_FINAL
 player = DOWN = laugh = J'étais comment ?
 object = LEFT = happy = Une catastrophe ! Mais j'ai bien rigolé !@Merci pour le coup de main.
+
+
+% SMALL_TALK
+object = player = serious = Désolé, miss, mais je préfère rester concentré@sur ma mission : aucun gobelin ne passera !
+player = object = happy = Je comprends. Tu prends à coeur ton rôle@de videur.
+object = player = happy = Videur ? Ha ha ha ! Je suis un client, comme toi.@Je me prends juste beaucoup au jeu de ce club.
+object = DOWN = serious = Allez, je retourne au "travail". Ou plutôt, au jeu.
