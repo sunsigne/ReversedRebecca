@@ -1,0 +1,16 @@
+% NEED_HELP
+object = player = happy = Don't mind if I accept! I'd love to beat my drinking@record. But it's no fun doing it alone.
+object = player = happy_var = What do you say? A little drinking contest?
+
+
+% NO
+object = player = doubt = Suit yourself.@If you change your mind, let me know.
+
+
+% YES
+object = player = happy = Excellent! Hey Donovan! Bring out the pints!@We're gonna have a blast.
+
+
+% AT_LEAST_FIVE_DRINKS
+brandis = player = happy = Well done, kid! You can really put it away!
+brandis = player = happy_var = Here, have a pill to delay the effects of the@alcohol. Thanks again for the challenge.

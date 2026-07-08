@@ -36,10 +36,7 @@
 	faire les RR002,3 etc.
 
 	////////// LVL003 ////////////
-	
-	drinking contest :
-		 - faire les expressions faciales de Brandis
-	
+
 	enregister l'aide pour : donovan, military, brandis	
 	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer
 	
