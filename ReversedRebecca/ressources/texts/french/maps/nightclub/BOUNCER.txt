@@ -47,28 +47,33 @@ player = DOWN = dreaming = Toujours pas, le pauvre.
 player = DOWN = determined = Allez ! Rentre chez ta mère.
 
 
-% REBECCA_IS_BOUNCER_FINAL
-player = bouncer = laugh = J'étais comment ?
-object = player = happy = Parfaite. C'était très drôle ! Merci pour le coup de main.
-
-
 % REBECCA_FAILED_ONCE
-object = player = serious = Tu l'as raté !
-object = player = happy = Attend, on va réessayer.
+bouncer = LEFT = serious = Tu l'as raté !
+bouncer = DOWN = happy = Attend, on va réessayer.
 
 
 % REBECCA_FAILED_TWICE
-object = player = happy = Miss ! Il est juste devant toi ! Réagis !
+bouncer = LEFT = happy = Miss ! Il est juste devant toi ! Réagis !
 
 
 % REBECCA_FAILED_THRICE
-object = player = happy = Il va à deux à l'heure ! Comment tu fais pour le rater !
+bouncer = LEFT = happy = Il va à deux à l'heure !@Comment tu fais pour le rater !
 
 
 % REBECCA_FAILED_FOUR_TIMES
-object = player = happy = Quand tu fais caca, tu rates aussi les toilettes ?
+bouncer = LEFT = happy = Quand tu vas aux toilettes, tu rates aussi ou quoi ?
+
+
+% REBECCA_IS_BOUNCER_FINAL
+player = DOWN = laugh = J'étais comment ?
+object = LEFT = happy = Parfaite. C'était très drôle !@Merci pour le coup de main.
+
+
+% REBECCA_IS_HALF_BAD
+player = DOWN = laugh = J'étais comment ?
+object = LEFT = happy = Pas terrible. Mais j'ai bien rigolé !@Merci pour le coup de main.
 
 
 % REBECCA_FAILED_FINAL
-player = bouncer = laugh = J'étais comment ?
-object = player = happy = Une catastrophe ! Mais j'ai bien rigolé ! Merci pour le coup de main.
+player = DOWN = laugh = J'étais comment ?
+object = LEFT = happy = Une catastrophe ! Mais j'ai bien rigolé !@Merci pour le coup de main.

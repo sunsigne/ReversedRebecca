@@ -43,11 +43,11 @@
 	squire :
 		- videur (une catastrophe = a disaster)
 			- à finir :
-				- la fin de la quête
 				- trad en anglais
-				- échouer aux poussages
 		- tous ceux de la salle d'à côté
 		- faire les murs de la piste de dance
+
+	prince des néons : enregistrer l'aide du videur
 
 	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer + dummy 03
 	

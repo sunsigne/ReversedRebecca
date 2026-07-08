@@ -30,3 +30,8 @@ MUCH_TOO_HARD = Key2 % (much too hard)
 I_VE_CHANGED_MY_MIND = Key1 % i've changed my mind
 I_HELPED_1_GOBELIN = Key3 % i helped 1 gobelin
 I_HELPED_2_GOBELINS = Key3 % i helped 2 gobelins
+
+
+///// NEON SQUIRE /////
+
+YOU_SHALL_NOT_PASS = Key2 % you shall not pass!
