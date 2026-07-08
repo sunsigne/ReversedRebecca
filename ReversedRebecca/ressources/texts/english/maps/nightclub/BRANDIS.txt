@@ -14,3 +14,48 @@ object = player = happy = Excellent! Hey Donovan! Bring out the pints!@We're gon
 % AT_LEAST_FIVE_DRINKS
 brandis = player = happy = Well done, kid! You can really put it away!
 brandis = player = happy_var = Here, have a pill to delay the effects of the@alcohol. Thanks again for the challenge.
+
+
+% LET_ME_BUY_YOU_A_DRINK
+object = player = happy_var = Ha ha ha! That's a good one!@Give me a minute, I'm sobering up a bit.
+
+
+% SMALL_TALK
+object = player = doubt = So? Do you like the vibe here, kid?
+player = object = worry = I'm not used to places like this.
+player = object = happy = But I have to admit, this whole "rank" thing@is pretty original and fun.
+object = player = happy = Thanks! That was my idea, so I'll take that@as a compliment.
+
+
+% SMALL_TALK_PRINCE
+object = player = happy_var = "Dancefloor princess", huh?@You'll be Queen in no time.
+
+
+% SMALL_TALK_SQUIRE
+object = player = happy_var = "Neon squire", huh? You'll be Queen in no time.
+
+
+% SMALL_TALK_NEXT
+player = object = laugh = You have to admit, you climb the ranks really fast!
+object = player = happy = Makes sense, can you imagine if we denied people@access to the dance floor all night? The club'd fold.
+object = player = happy_var = Plus, we turn back into goblins the very next day.@If it were a slow process, it'd be hell…
+player = object = happy_var = I get the idea.
+
+
+% LET_ME_BUY_YOU_A_DRINK_AFTER_SMALL_TALK_AND_CONTEST
+object = player = happy = After our little contest, I think I'll stick to water@for now. But thanks!
+
+
+% LET_ME_BUY_YOU_A_DRINK_AFTER_SMALL_TALK
+object = player = happy = No need for that, kid. Donovan and I go way back.
+object = player = happy_var = If I want a drink, all I have to do is ask him.
+
+
+% ARE_YOU_BUYING_ME_A_DRINK
+object = player = doubt = Wow! No! Sorry, kid, but…@My heart is already taken.
+object = player = happy = But it was nice meeting you. @Have a pleasant evening, kid.
+
+
+% TRY_CHATTING
+object = player = serious = In all honesty, I prefer to be alone.
+object = player = happy = No offense, of course. It was nice.

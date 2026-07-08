@@ -14,3 +14,48 @@ object = player = happy = Excellent ! Hey Donovan ! Sors les pintes !@On va se m
 % AT_LEAST_FIVE_DRINKS
 brandis = player = happy = Bien joué gamine ! Quelle descente !
 brandis = player = happy_var = Tiens, voilà une pilule pour retarder les effets@de l'alcool. Merci encore pour le défi.
+
+
+% LET_ME_BUY_YOU_A_DRINK
+object = player = happy_var = Ha ha ha ! Tu as le sens de l'humour !@Donne-moi une minute, je décuve un peu.
+
+
+% SMALL_TALK
+object = player = doubt = Alors ? L'ambiance te plaît, gamine ?
+player = object = worry = Je n'ai pas l'habitude de ce genre d'endroit.
+player = object = happy = Mais je dois reconnaître que cette histoire de@rangs, c'est plutôt original et amusant.
+object = player = happy = Merci ! C'était mon idée, alors je prends ça comme@un compliment.
+
+
+% SMALL_TALK_PRINCE
+object = player = happy_var = "Princesse du dancefloor", hein ?@Tu vas devenir Reine en un rien de temps.
+
+
+% SMALL_TALK_SQUIRE
+object = player = happy_var = "Écuyer des néons", hein ?@Tu vas devenir Reine en un rien de temps.
+
+
+% SMALL_TALK_NEXT
+player = object = laugh = Il faut dire qu'on grimpe les échelons très vite !
+object = player = happy = Normal, t'imagines si on refusait l'accès à la piste@de dance toute la soirée ? Le club coulerait !
+object = player = happy_var = En plus, on redevinent des gobelins dès le@lendemain. Si c'était lent, ça serait un enfer…
+player = object = happy_var = Je vois l'idée.
+
+
+% LET_ME_BUY_YOU_A_DRINK_AFTER_SMALL_TALK_AND_CONTEST
+object = player = happy = Après notre petit concours, je crois que je vais@m'en tenir à de l'eau pour l'instant. Mais merci !
+
+
+% LET_ME_BUY_YOU_A_DRINK_AFTER_SMALL_TALK
+object = player = happy = C'est pas nécessaire, gamine.@Donovan et moi, c'est à la vie à la mort.
+object = player = happy_var = Si je veux un verre, il suffit que je lui demande.
+
+
+% ARE_YOU_BUYING_ME_A_DRINK
+object = player = doubt = Wow ! Non ! Désolé p'tite mais…@Mon coeur est déjà pris.
+object = player = happy = Mais c'était sympa de te connaître.@Passe une agréable soirée, gamine.
+
+
+% TRY_CHATTING
+object = player = serious = Très sincèrement, je préfère rester seul.
+object = player = happy = Sans offense, bien sûr. C'était sympa.

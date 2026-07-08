@@ -3,6 +3,10 @@
 WHO_SHOULD_I_HELP = Key3 % who should I help?
 NEED_HELP = Key3 % need help?
 WHAT_S_WRONG = Key1 % what's wrong?
+CLUB = Key1 % club?
+LET_ME_BUY_YOU_A_DRINK = Key1 % let me buy you a drink
+ARE_YOU_BUYING_ME_A_DRINK = Key1 % are you buying me a drink?
+CHAT = Key1 % chat
 
 ///// BAR GOBLIN /////
 
