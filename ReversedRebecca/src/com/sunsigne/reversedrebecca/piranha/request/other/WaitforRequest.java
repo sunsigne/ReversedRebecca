@@ -91,6 +91,7 @@ public class WaitforRequest implements Request {
 		case "PLAYER_FACING":
 			return getPlayerFacingListener(generic, condition);
 
+		case "SNAIL":
 		case "SLOW":
 		case "MOVE":
 		case "FAST":

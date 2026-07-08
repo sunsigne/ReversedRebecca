@@ -11,6 +11,8 @@ public interface SpeedVariator extends Velocity {
 	@Override
 	default int getSpeed() {
 		switch (getSpeedness()) {
+		case SNAIL:
+			return getSize() / 48;
 		case SLOW:
 			return getSize() / 32;
 		case NORMAL:
@@ -30,7 +32,7 @@ public interface SpeedVariator extends Velocity {
 	// it looks random, but each speed must be a multiple of Size.M
 	// not to corrupt pathfinding (except for player outside cutscene)
 	public enum SPEEDNESS {
-		SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player"), SWIFT("swift");
+		SNAIL("snail"), SLOW("slow"), NORMAL("move"), FAST("fast"), PLAYER_SPEED("move_player"), SWIFT("swift");
 
 		private String name;
 
