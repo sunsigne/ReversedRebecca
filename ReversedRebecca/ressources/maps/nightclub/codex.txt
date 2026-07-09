@@ -12,3 +12,7 @@ NPC-10 = Dummy Outside
 OBJ-01 = Drinking Glasses Competition
 OBJ-02 = Bouncer Barrier
 OBJ-03 = Bouncer Barrier Helper
+OBJ-04 = Speaker Up Left
+OBJ-05 = Speaker Up Right
+OBJ-06 = Speaker Down Right
+OBJ-07 = Speaker Down Left
