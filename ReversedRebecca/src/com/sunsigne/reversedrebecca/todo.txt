@@ -38,8 +38,9 @@
 	////////// LVL003 ////////////
 
 	squire :
-		- tous ceux de la salle d'à côté
-		- faire les murs de la piste de dance
+		- les enceintes : enreigstrer une symétrie
+		- satisfait si tout éteint
+		- craquage psychologique si assymétrique
 
 	prince des néons : enregistrer l'aide du videur
 
