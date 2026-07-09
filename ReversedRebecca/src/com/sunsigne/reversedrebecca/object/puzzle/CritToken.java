@@ -1,12 +1,16 @@
 package com.sunsigne.reversedrebecca.object.puzzle;
 
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -65,9 +69,14 @@ public class CritToken extends GameObject implements TickFree, SheetableImage {
 
 	////////// RENDER ////////////
 
+	private Font font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 30f);
+
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+
+		int rect[] = new int[] { getX(), getY(), getWidth(), getHeight() };
+		new TextDecoration().drawOutlinesString(g, font, criticalChance + "%", DIRECTION.NULL, rect);
 	}
 
 }

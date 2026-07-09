@@ -73,7 +73,6 @@ public class TextDecoration {
 	///// outlines /////
 
 	public void drawOutlinesString(Graphics g, Font font, String text, DIRECTION facing, int[] rect) {
-
 		drawOutlinesString(g, font, text, Color.WHITE, Color.BLACK, facing, rect);
 	}
 

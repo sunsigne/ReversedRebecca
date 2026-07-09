@@ -33,6 +33,8 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	public Puzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		loadToolData(toolPlayer);
+		criticalChance = calculingCriticalChances(toolPlayer);
+		
 		this.actionOnWinning = actionOnWinning;
 		this.actionOnLosing = actionOnLosing;
 
@@ -69,7 +71,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	protected abstract int getStaticNoCritCount();
 
 	protected abstract void setStaticNoCritCount(int noCritCount);
-	
+
 	public abstract boolean hasCritToken();
 
 	private void loadToolData(ToolPlayer toolPlayer) {
@@ -163,15 +165,29 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		}
 	}
 
+	private int criticalChance;
+
+	private int calculingCriticalChances(ToolPlayer toolPlayer) {
+		if (SureCriticalMode.debugMode.getDebugMode().getState())
+			return 100;
+		if (isCritical)
+			return 100;
+		if (toolPlayer == null)
+			return 0;
+		if (toolPlayer.getCriticalChance() >= 100)
+			return 100;
+
+		return (1 + getStaticNoCritCount()) * toolPlayer.getCriticalChance();
+	}
+
 	private void createCriticalToken() {
-		if(hasCritToken() == false)
+		if (hasCritToken() == false)
 			return;
-		
-		int criticalChance = getStaticNoCritCount();
+
 		CritToken token = new CritToken(this, criticalChance);
 		LAYER.PUZZLE.addObject(token);
 	}
-	
+
 	////////// CLOSE ////////////
 
 	private GenericListenerBoolean actionOnWinning;
