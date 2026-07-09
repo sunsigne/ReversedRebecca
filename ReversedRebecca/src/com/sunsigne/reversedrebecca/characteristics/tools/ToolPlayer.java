@@ -36,7 +36,7 @@ public abstract class ToolPlayer implements Difficulty {
 
 		String maxLine = tool + "MaxLvl=" + getDefaultMaxDifficulty();
 		String startLine = tool + "StartLvl=" + getDefaultStartDifficulty();
-		String criticalLine = tool + "CriticalChance=" + "10%";
+		String criticalLine = tool + "CriticalChance=" + getDefaultCriticalChance() + "%";
 
 		String new_content = content + br + br + maxLine + br + startLine + br + criticalLine;
 		new FileTask().write(file, new_content);
@@ -172,8 +172,12 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// CRITICAL ////////////
 
-	private int criticalChance = 10;
+	private int criticalChance = getDefaultCriticalChance();
 
+	protected int getDefaultCriticalChance() {
+		return 15;
+	}
+	
 	public int getCriticalChance() {
 		return getTool().criticalChance;
 	}
@@ -183,7 +187,7 @@ public abstract class ToolPlayer implements Difficulty {
 	}
 
 	private void loadCriticalChance() {
-		if (getCriticalChance() != 10)
+		if (getCriticalChance() != getDefaultCriticalChance())
 			return;
 
 		String txtCriticalChance = new FileTask().read(userData, getName() + "CriticalChance", file);
@@ -191,7 +195,7 @@ public abstract class ToolPlayer implements Difficulty {
 		// if the file "characteristics" has no value for the tool, create one
 		if (txtCriticalChance.isEmpty()) {
 			registerDefaultCharacteristic(new FormattedString().capitalize(getName()));
-			txtCriticalChance = "10%";
+			txtCriticalChance = getDefaultCriticalChance() + "%";
 		}
 
 		getTool().criticalChance = Integer.valueOf(txtCriticalChance.replace("%", ""));

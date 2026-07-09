@@ -37,17 +37,15 @@ public class ChestLootCritTool extends ChestLoot implements Difficulty {
 
 	private int getNextCriticalChance() {
 		switch (getCriticalChance()) {
-		case 10:
+		case 15:
 			return 25;
 		case 25:
-			return 33;
-		case 33:
 			return 50;
 		case 50:
 			return 100;
 		}
 
-		return 10;
+		return 15;
 	}
 
 	////////// TOOL////////////
@@ -81,14 +79,12 @@ public class ChestLootCritTool extends ChestLoot implements Difficulty {
 	@Override
 	public int getSheetColCriterion() {
 		switch (getCriticalChance()) {
-		case 10:
+		case 15:
 			return 1;
 		case 25:
 			return 2;
-		case 33:
-			return 3;
 		case 50:
-			return 4;
+			return 3;
 		}
 
 		return 1;
