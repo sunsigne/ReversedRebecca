@@ -1,0 +1,17 @@
+% AUTISM
+object = RIGHT = unhappy = J'ai l'impression que sur les quatre enceintes,@il y en a que trois qui marchent, et une non.
+object = RIGHT = unhappy = Mon autisme ne supporte pas cet état…@Tu crois pouvoir changer ça ?
+player = object = you_silly = Piètre choix de mots…
+
+
+% AUTISM_OFF
+object = player = unhappy = Eh bien, heu… Merci… J'imaginais autre chose,@mais quelque part, je me sens quand même mieux.
+
+
+% AUTISM_ON
+object = player = cry = C'est encore pire qu'avant… Les enceintes ne sont@plus synchronisées…
+object = player = unhappy = … Merci…
+
+
+% AUTISM_ON_NEXT
+player = object = no_sens = Quel fragile… Ça ne doit pas être facile tous les jours.
