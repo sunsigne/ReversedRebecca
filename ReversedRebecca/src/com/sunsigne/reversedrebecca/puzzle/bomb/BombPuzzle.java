@@ -114,7 +114,12 @@ public abstract class BombPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		BombPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return true;
+	}
+	
 	////////// TICK ////////////
 
 	@Override
@@ -148,7 +153,7 @@ public abstract class BombPuzzle extends Puzzle {
 
 		for (int col = 0; col < 14; col++) {
 			handler.addObject(new WallBombPuzzle(image, getCol(col), getRow(0)));
-			handler.addObject(new WallBombPuzzle(image, getCol(col), getRow(7)));
+			handler.addObject(new WallBombPuzzle(col != 13 ? image : getWallTexture(true), getCol(col), getRow(7)));
 		}
 		for (int row = 1; row < 7; row++) {
 			handler.addObject(new WallBombPuzzle(image, getCol(0), getRow(row)));

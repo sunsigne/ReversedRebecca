@@ -78,7 +78,12 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		YYIntelligencePuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return false;
+	}
+	
 	////////// TICK ////////////
 
 	private int WIN_CONDIITON_TIME = 15 * Game.SEC;

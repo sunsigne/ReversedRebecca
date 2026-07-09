@@ -112,7 +112,12 @@ public abstract class CowboyPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		CowboyPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return false;
+	}
+	
 	////////// TICK ////////////
 
 	private int time = 150;

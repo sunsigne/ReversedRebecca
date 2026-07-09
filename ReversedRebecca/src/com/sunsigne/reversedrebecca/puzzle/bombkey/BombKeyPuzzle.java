@@ -150,7 +150,12 @@ public abstract class BombKeyPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		BombKeyPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return true;
+	}
+	
 	////////// TICK ////////////
 
 	@Override

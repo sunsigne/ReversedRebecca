@@ -30,7 +30,7 @@ public class TransluantLayer implements CameraDependency {
 
 	public void drawPuzzle(Graphics g, Color color) {
 		g.setColor(color);
-		g.fillRect(Size.L, Size.L, Window.WIDHT - 2 * Size.L, Window.HEIGHT - 2 * Size.L);
+		g.fillRect(2 * Size.M, Size.XL, 12 * Size.L, 6 * Size.L);
 	}
 
 	@Override

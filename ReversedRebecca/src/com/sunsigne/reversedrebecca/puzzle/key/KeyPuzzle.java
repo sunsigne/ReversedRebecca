@@ -86,6 +86,11 @@ public abstract class KeyPuzzle extends Puzzle {
 		KeyPuzzle.noCritCount = noCritCount;
 	}
 	
+	@Override
+	public boolean hasCritToken() {
+		return true;
+	}
+	
 	////////// TICK ////////////
 
 	private float alpha = 0.65f;

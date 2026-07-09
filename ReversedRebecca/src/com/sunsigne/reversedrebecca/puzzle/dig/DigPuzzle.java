@@ -321,7 +321,12 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 	protected void setStaticNoCritCount(int noCritCount) {
 		DigPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return true;
+	}
+	
 	////////// TEXTURE ////////////
 
 	@Override

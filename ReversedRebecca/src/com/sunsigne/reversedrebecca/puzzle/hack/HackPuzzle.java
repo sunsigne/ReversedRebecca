@@ -94,7 +94,12 @@ public abstract class HackPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		HackPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return true;
+	}
+	
 	////////// TEXTURE ////////////
 
 	@Override
@@ -115,13 +120,13 @@ public abstract class HackPuzzle extends Puzzle {
 		Handler handler = LAYER.PUZZLE.getHandler();
 		BufferedImage img = null;
 
-		for (int col = 0; col < 13; col++) {
+		for (int col = 0; col < 14; col++) {
 			img = getWallTexture();
 			handler.addObject(new WallPuzzle(img, getCol(col), getRow(0)));
 			img = getWallTexture();
-			handler.addObject(new WallPuzzle(img, getCol(col), getRow(7)));
+			handler.addObject(new WallPuzzle(col != 13 ? img : getWallTexture(true), getCol(col), getRow(7)));
 		}
-		for (int row = 0; row < 8; row++) {
+		for (int row = 1; row < 7; row++) {
 			img = getWallTexture();
 			handler.addObject(new WallPuzzle(img, getCol(0), getRow(row)));
 			img = getWallTexture();

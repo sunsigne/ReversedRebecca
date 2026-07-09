@@ -113,7 +113,12 @@ public abstract class DiscoPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		DiscoPuzzle.noCritCount = noCritCount;
 	}
-
+	
+	@Override
+	public boolean hasCritToken() {
+		return false;
+	}
+	
 	////////// TEXTURE ////////////
 
 	@Override

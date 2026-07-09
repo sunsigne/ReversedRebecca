@@ -68,6 +68,8 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	protected abstract int getStaticNoCritCount();
 
 	protected abstract void setStaticNoCritCount(int noCritCount);
+	
+	public abstract boolean hasCritToken();
 
 	private void loadToolData(ToolPlayer toolPlayer) {
 		isCritical = false;
@@ -135,7 +137,12 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 	}
 
 	protected BufferedImage getWallTexture() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+		return getWallTexture(false);
+	}
+
+	protected BufferedImage getWallTexture(boolean critToken) {
+		String crit = critToken && hasCritToken() ? "_crit" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall" + crit);
 		return getSheetSubImage(sheet);
 	}
 
@@ -146,7 +153,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 		for (int col = 0; col < 14; col++) {
 			handler.addObject(new WallPuzzle(image, getCol(col), getRow(0)));
-			handler.addObject(new WallPuzzle(image, getCol(col), getRow(7)));
+			handler.addObject(new WallPuzzle(col != 13 ? image : getWallTexture(true), getCol(col), getRow(7)));
 		}
 		for (int row = 1; row < 7; row++) {
 			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));

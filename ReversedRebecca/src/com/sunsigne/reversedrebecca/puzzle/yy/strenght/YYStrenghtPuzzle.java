@@ -103,6 +103,11 @@ public abstract class YYStrenghtPuzzle extends Puzzle {
 		YYStrenghtPuzzle.noCritCount = noCritCount;
 	}
 
+	@Override
+	public boolean hasCritToken() {
+		return false;
+	}
+	
 	////////// TICK ////////////
 
 	private int WIN_CONDIITON_TIME = 14 * Game.SEC;
