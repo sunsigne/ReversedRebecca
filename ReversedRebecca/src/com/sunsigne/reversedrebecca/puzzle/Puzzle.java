@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.puzzle;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.puzzle.CritToken;
 import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
@@ -112,6 +113,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		Handler.updateHandlerMap(LAYER.PUZZLE.getHandler(), this);
 
 		createWallBorder();
+		createCriticalToken();
 		createPuzzle();
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, getFactory().getOpeningSound());
@@ -161,6 +163,15 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		}
 	}
 
+	private void createCriticalToken() {
+		if(hasCritToken() == false)
+			return;
+		
+		int criticalChance = getStaticNoCritCount();
+		CritToken token = new CritToken(this, criticalChance);
+		LAYER.PUZZLE.addObject(token);
+	}
+	
 	////////// CLOSE ////////////
 
 	private GenericListenerBoolean actionOnWinning;
@@ -188,7 +199,6 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 			new SoundTask().playSound(SOUNDTYPE.SOUND, "fail");
 			actionOnLosing.doAction();
 		}
-
 	}
 
 }
