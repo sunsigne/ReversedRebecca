@@ -71,11 +71,11 @@ public abstract class KeyPuzzle extends Puzzle {
 
 		LAYER.PUZZLE.addObject(key);
 	}
-	
+
 	////////// TOOL ////////////
-	
+
 	private static int noCritCount;
-	
+
 	@Override
 	protected int getStaticNoCritCount() {
 		return noCritCount;
@@ -85,28 +85,28 @@ public abstract class KeyPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		KeyPuzzle.noCritCount = noCritCount;
 	}
-	
+
 	@Override
 	public boolean hasCritToken() {
-		return true;
+		return isTutorial() == false;
 	}
-	
+
 	////////// TICK ////////////
 
 	private float alpha = 0.65f;
 	private float alphaSpeed = 0.008f;
-	
+
 	@Override
 	public void tick() {
 		alpha = alpha + alphaSpeed;
 
-	    if (alpha >= 0.65f) {
-	        alpha = 0.65f;
-	        alphaSpeed = -alphaSpeed;
-	    } else if (alpha <= 0.0f) {
-	        alpha = 0.0f;
-	        alphaSpeed = -alphaSpeed;
-	    }
+		if (alpha >= 0.65f) {
+			alpha = 0.65f;
+			alphaSpeed = -alphaSpeed;
+		} else if (alpha <= 0.0f) {
+			alpha = 0.0f;
+			alphaSpeed = -alphaSpeed;
+		}
 	}
 
 	////////// TEXTURE ////////////
@@ -117,11 +117,11 @@ public abstract class KeyPuzzle extends Puzzle {
 	}
 
 	@Override
-	protected BufferedImage getWallTexture() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall");
+	protected BufferedImage getWallTexture(boolean critToken) {
+		String crit = critToken && hasCritToken() ? "_crit" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall" + crit);
 		int row = isCritical ? 2 : 1;
 		return getSheetSubImage(sheet, getSheetColCriterion(), row, getSheetWidth(), getSheetHeight());
-
 	}
 
 	protected void createRandomWalls(int numOfWalls, boolean moving) {
