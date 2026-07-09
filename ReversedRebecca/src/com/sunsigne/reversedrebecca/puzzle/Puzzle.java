@@ -32,9 +32,12 @@ import com.sunsigne.reversedrebecca.world.World;
 public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	public Puzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
-		loadToolData(toolPlayer);
 		criticalChance = calculingCriticalChances(toolPlayer);
-		
+		if (criticalChance >= 99) {
+			isCritical = true;
+			setStaticNoCritCount(0);
+		}
+
 		this.actionOnWinning = actionOnWinning;
 		this.actionOnLosing = actionOnLosing;
 
@@ -74,33 +77,32 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	public abstract boolean hasCritToken();
 
-	private void loadToolData(ToolPlayer toolPlayer) {
-		isCritical = false;
+	private int criticalChance;
 
-		if (SureCriticalMode.debugMode.getDebugMode().getState()) {
-			isCritical = true;
-			return;
-		}
-
+	private int calculingCriticalChances(ToolPlayer toolPlayer) {
+		if (SureCriticalMode.debugMode.getDebugMode().getState())
+			return 100;
+		if (isCritical)
+			return 100;
 		if (toolPlayer == null)
+			return 0;
+		if (toolPlayer.getCriticalChance() >= 100)
+			return 100;
+
+		return (1 + getStaticNoCritCount()) * toolPlayer.getCriticalChance();
+	}
+
+	private void createCriticalToken() {
+		if (hasCritToken() == false)
 			return;
 
-		if (toolPlayer.getCriticalChance() >= 100) {
-			isCritical = true;
-			return;
-		}
+		if (criticalChance >= 99)
+			criticalChance = 100;
+		if (criticalChance < 0)
+			criticalChance = 0;
 
-		int critCount = 100;
-		if (toolPlayer.getCriticalChance() > 0)
-			critCount = 100 / toolPlayer.getCriticalChance();
-		else
-			return;
-
-		if (1 + getStaticNoCritCount() < critCount)
-			return;
-
-		isCritical = true;
-		setStaticNoCritCount(0);
+		CritToken token = new CritToken(this, criticalChance);
+		LAYER.PUZZLE.addObject(token);
 	}
 
 	////////// OPEN ////////////
@@ -163,29 +165,6 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
 			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
 		}
-	}
-
-	private int criticalChance;
-
-	private int calculingCriticalChances(ToolPlayer toolPlayer) {
-		if (SureCriticalMode.debugMode.getDebugMode().getState())
-			return 100;
-		if (isCritical)
-			return 100;
-		if (toolPlayer == null)
-			return 0;
-		if (toolPlayer.getCriticalChance() >= 100)
-			return 100;
-
-		return (1 + getStaticNoCritCount()) * toolPlayer.getCriticalChance();
-	}
-
-	private void createCriticalToken() {
-		if (hasCritToken() == false)
-			return;
-
-		CritToken token = new CritToken(this, criticalChance);
-		LAYER.PUZZLE.addObject(token);
 	}
 
 	////////// CLOSE ////////////
