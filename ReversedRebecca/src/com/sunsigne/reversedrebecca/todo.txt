@@ -38,20 +38,31 @@
 	////////// LVL003 ////////////
 
 	squire :
-		- les enceintes : enreigstrer une symétrie
-		- satisfait si tout éteint
-		- craquage psychologique si assymétrique
+		- trouver une voix pour dummy 2
+		- on peut encore activer les allumer/éteindre les enceintres après la quete (je n'ai pas enlevé la possibilité parce que je ne sais pas si ça sera comptabile ou non avec l'autre quête des enceintes)
+		- ça serait marrant (donc indispensable) que lorsque toutes les enceintes sont éteinte, il n'y ait plus de musique
 
-	prince des néons : enregistrer l'aide du videur
+	aide à enregistrer :
+		- videur
+		- autist
 
-	lorsque le mur invisible sur la porte d'entrée sera placé, ne pas oublier de permettre au militaire d'y passer + dummy 03
-	
-	créer la possibilité de partir du bar après avoir menacé Donovan
-	
-	0h30 - DiscordPuzzle : introduire le code qui passe les flammes de rouges à blues
-	XhXX - finir DiscoPuzzleFactory et les lvl de difficulté (ça dépendra du niveau qui solicite ce puzzle) + gamepad
+	mur invisible de la porte d'entrée, laisser passer :
+		- le militaire
+		- le dummy du videur
+		- l'autiste
+		
+		
+	à faire à la fin :
+		- cinématique d'intro
+		- quitter le bar après avoir menacé Donovan
+		
+	disco puzzle :
+		- 0h30 : introduire le code qui passe les flammes de rouges à blues
+		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
+		- gamepad (les 4 boutons)
 
 	karma :
+		+ aider tt le monde
 		- menacer donovan
 		- renvoyer le verre trop fort
 		
