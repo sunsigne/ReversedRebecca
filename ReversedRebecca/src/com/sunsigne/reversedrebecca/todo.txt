@@ -38,20 +38,28 @@
 	////////// LVL003 ////////////
 
 	squire :
-		- trouver une voix pour dummy 2
-		- on peut encore activer les allumer/éteindre les enceintres après la quete (je n'ai pas enlevé la possibilité parce que je ne sais pas si ça sera comptabile ou non avec l'autre quête des enceintes)
-		- ça serait marrant (donc indispensable) que lorsque toutes les enceintes sont éteinte, il n'y ait plus de musique
-
-	aide à enregistrer :
-		- videur
-		- autist
+		2ème dummy (quete des shadock)
+	
+		autist :
+			- on peut encore activer les allumer/éteindre les enceintres après la quete (je n'ai pas enlevé la possibilité parce que je ne sais pas si ça sera comptabile ou non avec l'autre quête des enceintes)
+			- ça serait marrant (donc indispensable) que lorsque toutes les enceintes sont éteinte, il n'y ait plus de musique
+			- après avoir parlé à l'autist, on peut lui REparler si on retouche les enceintes
+			- traduction anglais
+	
+		aide à enregistrer :
+			- videur
+			- autist
 
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
 		- l'autiste
 		
-		
+	faire la suite :
+		- prince des néons : delta, gamma, donovan, etc
+		- passage secret et fil rouge
+		- stephan, etc
+	
 	à faire à la fin :
 		- cinématique d'intro
 		- quitter le bar après avoir menacé Donovan

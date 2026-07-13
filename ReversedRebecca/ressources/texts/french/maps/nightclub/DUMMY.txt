@@ -5,7 +5,7 @@ player = object = you_silly = Piètre choix de mots…
 
 
 % AUTISM_OFF
-object = player = side_happy = Eh bien, heu… Merci… J'imaginais autre chose,@mais quelque part, je me sens quand même mieux.
+object = player = side_happy = Merci, c'est parfait comme ça.@Même si ça n'est pas ce que je voulais dire.
 
 
 % AUTISM_ON
