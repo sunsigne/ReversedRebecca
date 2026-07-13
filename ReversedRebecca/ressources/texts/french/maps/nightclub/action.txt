@@ -38,4 +38,4 @@ YOU_SHALL_NOT_PASS = Key2 % vous ne passerez pas !
 TURN_ON = Key2 % allumer
 TURN_OFF = Key2 % éteindre
 IT_S_DONE = Key1 % c'est fait !
-
+LIE_IT_S_DONE = Key1 % (mentir) j'ai entendu le message

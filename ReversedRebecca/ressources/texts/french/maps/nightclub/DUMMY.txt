@@ -1,11 +1,11 @@
 % AUTISM
-object = RIGHT = side_unhappy = J'ai l'impression que sur les quatre enceintes,@il y en a que trois qui marchent, et une non.
-object = RIGHT = side_unhappy = Tu crois pouvoir changer ça ?@Mon autisme ne supporte pas cet état…
+object = RIGHT = crazy_unhappy = J'ai l'impression que sur les quatre enceintes,@il y en a que trois qui marchent, et une non.
+object = RIGHT = crazy_unhappy = Tu crois pouvoir changer ça ?@Mon autisme ne supporte pas cet état…
 player = object = you_silly = Piètre choix de mots…
 
 
 % AUTISM_OFF
-object = player = side_happy = Merci, c'est parfait comme ça.@Même si ça n'est pas ce que je voulais dire.
+object = player = crazy_happy = Merci, c'est parfait comme ça.@Même si ça n'est pas ce que je voulais dire.
 
 
 % AUTISM_ON
@@ -13,5 +13,21 @@ object = RIGHT = cry = Les enceintes ne sont pas synchronisées…@C'est encore 
 object = RIGHT = cry = Merci… J'imagine…
 
 
-% AUTISM_ON_NEXT
-player = object = you_silly = Ça ne doit pas être facile tous les jours.
+% PARANOID
+object = player = crazy_unhappy = Je suis peut-être parano, mais j'ai l'impression@que les enceintes délivrent un message secret…
+object = player = crazy_happy = Tu écouterais chacune d'elle pour me dire ce@que c'est ?
+player = DOWN = sad = (Je veux bien essayer, mais je pense qu'il délire@complètement…)
+
+
+% PARANOID_NEXT
+player = object = happy_var = Je suis formelle, le message est : Ga Bu Zo Meu.
+object = player = crazy_happy = Incroyable ! Alors j'avais raison…@Il y a un message secret…
+object = player = crazy_unhappy = Merci pour le coup de main…@Je dois fuir, ils ne m'auront pas vivant…
+
+
+% HELPED_ONE
+player = DOWN = you_silly = La vache ! Ça ne doit pas être facile tous les jours,@d'être à sa place…
+
+
+% HELPED_TWO
+player = DOWN = no_sens = C'est la réunion des tarés anonymes ce soir, ou quoi ?

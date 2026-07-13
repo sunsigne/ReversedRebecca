@@ -1,10 +1,10 @@
-////// HAPPY OR NOT //////
+////// NORMAL //////
 
 happy=1,1
 cry=1,2
 
 
-////// SIDE //////
+////// CRAZY //////
 
-side_happy=2,1
-side_unhappy=2,2
+crazy_happy=2,1
+crazy_unhappy=2,2
