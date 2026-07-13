@@ -41,8 +41,6 @@
 		2ème dummy (quete des shadock)
 	
 		autist :
-			- on peut encore activer les allumer/éteindre les enceintres après la quete (je n'ai pas enlevé la possibilité parce que je ne sais pas si ça sera comptabile ou non avec l'autre quête des enceintes)
-			- après avoir parlé à l'autist, on peut lui REparler si on retouche les enceintes
 			- relier les HELPED_ONE et HELPED_TWO dialogues sur les dummies
 			- traduction anglais + parano
 	
@@ -57,7 +55,8 @@
 		- l'autiste et le parano
 		
 	faire la suite :
-		- prince des néons : delta, gamma, donovan, etc
+		- donovan : "je sais que c'est accidentel, mais ne fais pas fuir tous mes clients stp..."
+		- prince des néons : delta, gamma, etc
 		- passage secret et fil rouge
 		- les dialogues de l'autiste et du parano s'ils sont encore là
 		- stephan, etc

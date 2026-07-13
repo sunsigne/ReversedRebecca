@@ -5,7 +5,7 @@ player = object = you_silly = Piètre choix de mots…
 
 
 % AUTISM_OFF
-object = player = crazy_happy = Merci, c'est parfait comme ça.@Même si ça n'est pas ce que je voulais dire.
+object = RIGHT = cry = Ça n'est pas ce que je voulais dire… Pourquoi@je n'arrive jamais à me faire comprendre…
 
 
 % AUTISM_ON
