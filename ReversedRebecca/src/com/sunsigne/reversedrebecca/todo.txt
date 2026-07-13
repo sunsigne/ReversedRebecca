@@ -38,10 +38,7 @@
 	////////// LVL003 ////////////
 
 	squire :
-		2ème dummy (quete des shadock)
-	
 		autist :
-			- relier les HELPED_ONE et HELPED_TWO dialogues sur les dummies
 			- traduction anglais + parano
 	
 		aide à enregistrer :
@@ -55,7 +52,7 @@
 		- l'autiste et le parano
 		
 	faire la suite :
-		- donovan : "je sais que c'est accidentel, mais ne fais pas fuir tous mes clients stp..."
+		- donovan : "je sais que c'est accidentel, mais ne fais pas fuir tous mes clients stp..." : c'est eux... c'est des grands malade ! Tu mets un truc dans tes coktails ou bien ?
 		- prince des néons : delta, gamma, etc
 		- passage secret et fil rouge
 		- les dialogues de l'autiste et du parano s'ils sont encore là

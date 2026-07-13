@@ -30,4 +30,4 @@ player = DOWN = you_silly = La vache ! Ça ne doit pas être facile tous les jou
 
 
 % HELPED_TWO
-player = DOWN = no_sens = C'est la réunion des tarés anonymes ce soir, ou quoi ?
+player = DOWN = no_sens = C'est la réunion des tarés anonymes ce soir,@ou quoi ?
