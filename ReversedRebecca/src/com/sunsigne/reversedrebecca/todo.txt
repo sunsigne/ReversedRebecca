@@ -38,9 +38,6 @@
 	////////// LVL003 ////////////
 
 	squire :
-		autist :
-			- traduction anglais + parano
-	
 		aide à enregistrer :
 			- videur
 			- autist

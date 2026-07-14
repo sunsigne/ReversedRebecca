@@ -35,3 +35,6 @@ I_HELPED_2_GOBELINS = Key3 % i helped 2 gobelins
 ///// NEON SQUIRE /////
 
 YOU_SHALL_NOT_PASS = Key2 % you shall not pass!
+TURN_ON = Key2 % turn on
+TURN_OFF = Key2 % turn off
+LIE_IT_S_DONE = Key1 % (lie) I heard the message
