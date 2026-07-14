@@ -28,7 +28,7 @@ object = player = happy = Merci ! C'était mon idée, alors je prends ça comme@
 
 
 % SMALL_TALK_PRINCE
-object = player = happy_var = "Princesse du dancefloor", hein ?@Tu vas devenir Reine en un rien de temps.
+object = player = happy_var = "Princesse de la piste", hein ?@Tu vas devenir Reine en un rien de temps.
 
 
 % SMALL_TALK_SQUIRE

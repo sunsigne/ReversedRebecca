@@ -37,16 +37,19 @@
 
 	////////// LVL003 ////////////
 
+	à sauvegarder et récupérer :
+		- delta*taled_about_her_brother
+
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
 		- l'autiste et le parano
 		
-	faire la suite :
-		- donovan : "je sais que c'est accidentel, mais ne fais pas fuir tous mes clients stp..." : c'est eux... c'est des grands malade ! Tu mets un truc dans tes coktails ou bien ?
-		- prince des néons : delta, gamma, etc
+	prince des néons :
+		- donovan
+		- delta et gamma
+		- brandis, l'autiste, le parano et le videur
 		- passage secret et fil rouge
-		- les dialogues de l'autiste et du parano s'ils sont encore là
 		- stephan, etc
 	
 	à faire à la fin :

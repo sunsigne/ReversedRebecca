@@ -37,12 +37,12 @@ object = player = snooty = C'est exact, mais ça n'est pas suffisant. Tu@dois ai
 % I_HELPED_2_GOBELINS
 object = player = snooty = Bien joué. Je te proclame officiellement@"écuyer des néons" !
 object = player = happy = Tu as maintenant officiellement accès à la salle@d'à côté, mais pas encore à la piste de dance.
-object = player = wink = Pour ça, il faut d'abords aider deux écuyers,@tu deviendras alors "prince du dancefloor".
+object = player = wink = Pour ça, il faut d'abords aider deux écuyers,@tu deviendras alors "prince de la piste".
 
 
 % WHAT_S_MY_GRADE_SQUIRE
 object = player = happy = Tu es actuellement "écuyer des néons". Tu as@donc accès à la totalité du club, sauf à la piste.
-object = player = wink = Aide deux autres écuyers, et tu deviendras alors@"prince du dancefloor"; ou plutôt "princesse".
+object = player = wink = Aide deux autres écuyers, et tu deviendras alors@"prince de la piste"; ou plutôt "princesse".
 
 
 % WHO_SHOULD_I_HELP_SQUIRE
@@ -56,3 +56,45 @@ object = player = snooty = C'est exact, mais ça n'est pas suffisant.@Tu dois ai
 
 % I_HELPED_1_SQUIRE_VAR
 object = player = snooty = Comme tout à l'heure, c'est deux aides pour@monter en grade.
+
+
+
+
+
+
+
+
+
+
+
+% I_HELPED_2_SQUIRES
+object = player = snooty = Bien joué. Je te proclame officiellement@"princesse de la piste" !
+object = player = happy = À part dans l'arrière-boutique, tu es libre d'aller@où tu le souhaites.
+object = player = wink = Et cette fois, tu n'as besoin d'aider qu'une seule@personne de ton rang pour évoluer.
+
+
+% I_HELPED_2_SQUIRES_VAR
+object = player = unhappy = Je dirais plutôt que tu as fait fuir deux clients…
+player = object = wrong_with_you = C'est eux, c'est des grands malades !@Tu mets un truc dans tes cocktails, ou bien ?
+object = player = unhappy = Mes cocktails sont toujours parfaits.@Ma muse ne rate jamais un verre.
+object = player = snooty = Mais soit. On va dire que tu n'as pas eu de chance@avec ces deux-là. Te voilà officiellement "prince".
+object = player = happy = À part dans l'arrière-boutique, tu es libre d'aller@où tu le souhaites.
+object = player = wink = Et cette fois, tu n'as besoin d'aider qu'une seule@personne de ton rang pour évoluer.
+
+
+
+
+
+
+
+% WHAT_S_MY_GRADE_PRINCE
+object = player = happy = Tu es actuellement "princesse de la piste" :@tu peux aller où tu veux.
+object = player = wink = Aide une autre princesse, et tu deviendras officiellement "Reine de la soirée".
+
+
+% WHO_SHOULD_I_HELP_PRINCE
+object = player = wink = Ça n'est pas évident ? Ton amie est sur la piste@en ce moment même. Va la voir.
+
+
+% WHO_SHOULD_I_HELP_PRINCE_GAMMA
+object = player = wink = Ça n'est pas évident ? Ton amie et son frère sont sur la piste en ce moment même. Va les voir.
