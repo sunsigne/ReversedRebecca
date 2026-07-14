@@ -48,3 +48,11 @@ object = player = wink = Help two other squires, and you'll become@"prince of th
 % WHO_SHOULD_I_HELP_SQUIRE
 object = player = snooty = Let's see…
 object = player = happy = There's that guy in the suit, behind you. And@probably a dude or two around the dance floor…
+
+
+% I_HELPED_1_SQUIRE
+object = player = snooty = That's right, but that's not enough. You need@to help two squires to become a prince.
+
+
+% I_HELPED_1_SQUIRE_VAR
+object = player = snooty = Just like before, it takes two assists to rank up.

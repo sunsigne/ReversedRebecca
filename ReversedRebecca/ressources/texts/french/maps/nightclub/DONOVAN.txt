@@ -48,3 +48,11 @@ object = player = wink = Aide deux autres écuyers, et tu deviendras alors@"prin
 % WHO_SHOULD_I_HELP_SQUIRE
 object = player = snooty = Voyons voir…
 object = player = happy = Il y a ce type en costume, derrière toi. Et surement@un ou deux gus autours de la piste de dance…
+
+
+% I_HELPED_1_SQUIRE
+object = player = snooty = C'est exact, mais ça n'est pas suffisant.@Tu dois aider deux écuyers pour devenir prince.
+
+
+% I_HELPED_1_SQUIRE_VAR
+object = player = snooty = Comme tout à l'heure, c'est deux aides pour@monter en grade.

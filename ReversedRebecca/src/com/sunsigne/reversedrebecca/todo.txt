@@ -37,12 +37,6 @@
 
 	////////// LVL003 ////////////
 
-	squire :
-		aide à enregistrer :
-			- videur
-			- autist
-			- parano
-
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
