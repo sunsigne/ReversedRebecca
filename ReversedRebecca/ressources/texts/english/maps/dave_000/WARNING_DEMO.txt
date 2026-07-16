@@ -1,5 +1,5 @@
 % FIRST_TIME
-dave = DOWN = camera = By the way! In this game, your choices@really matter.
+dave = DOWN = camera = Just so you know! In this game, your choices@really matter.
 
 % SECOND_TIME
 dave = DOWN = camera = Hello again.
