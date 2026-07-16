@@ -166,6 +166,7 @@ Les différentes conditions existantes sont les suivantes :
 - GLASS : le NPC tient un verre d'eau.
 - CUP : le NPC tient un gobelet.
 - SICK : le NPC a l'air malade.
+- WALKING : le NPC a l'air de marcher sur place (à défaut de savoir danser).
 - KO_UPSIDEDOWN_NOT_STUNNED : le NPC est face contre terre. Il peut encore se déplacer (à utiliser avec précautions)
 - BATH : seule la tête du NPC est visible. Il a l'air de dormir et ne peut plus bouger (mais peut toujours interagir !)
 - THINK : le NPC pense et ne peut plus bouger (mais peut toujours interagir !)

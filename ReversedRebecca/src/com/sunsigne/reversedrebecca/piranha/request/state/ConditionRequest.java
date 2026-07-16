@@ -41,6 +41,12 @@ public class ConditionRequest extends ConditionalRequest {
 		Feeling feeling = (Feeling) object;
 		CONDITION condition = CONDITION.GOOD;
 
+		if (target.equalsIgnoreCase("walking")) {
+			feeling.setCondition(condition);
+			feeling.setWalkingInPlace(true);
+			return;
+		}
+
 		for (CONDITION tempCondition : CONDITION.values()) {
 			if (tempCondition.getName().equalsIgnoreCase(target) == false)
 				continue;
@@ -48,6 +54,7 @@ public class ConditionRequest extends ConditionalRequest {
 			condition = tempCondition;
 		}
 		feeling.setCondition(condition);
+		feeling.setWalkingInPlace(false);
 
 		if (condition != CONDITION.KO)
 			return;

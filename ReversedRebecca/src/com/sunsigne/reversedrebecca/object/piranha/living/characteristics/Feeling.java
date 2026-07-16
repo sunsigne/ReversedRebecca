@@ -36,6 +36,10 @@ public interface Feeling extends Stunnable {
 
 	public void setCondition(CONDITION condition);
 
+	public boolean isWalkingInPlace();
+
+	public void setWalkingInPlace(boolean walkingInPlace);
+
 	////////// CONDITION ////////////
 
 	public enum CONDITION {

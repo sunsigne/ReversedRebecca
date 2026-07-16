@@ -103,10 +103,12 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 
 	private boolean walkingInPlace;
 
+	@Override
 	public boolean isWalkingInPlace() {
 		return walkingInPlace;
 	}
 
+	@Override
 	public void setWalkingInPlace(boolean walkingInPlace) {
 		this.walkingInPlace = walkingInPlace;
 	}
