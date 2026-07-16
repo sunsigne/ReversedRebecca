@@ -37,20 +37,19 @@
 
 	////////// LVL003 ////////////
 
-	à sauvegarder et récupérer :
-		- delta*taled_about_her_brother
-
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
 		- l'autiste et le parano
 		
 	prince des néons :
-		- donovan
 		- delta et gamma
 		- brandis, l'autiste, le parano et le videur
 		- passage secret et fil rouge
 		- stephan, etc
+		
+	king of the night :
+		- donovan
 	
 	à faire à la fin :
 		- cinématique d'intro

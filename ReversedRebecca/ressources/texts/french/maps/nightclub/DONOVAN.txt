@@ -58,15 +58,6 @@ object = player = snooty = C'est exact, mais ça n'est pas suffisant.@Tu dois ai
 object = player = snooty = Comme tout à l'heure, c'est deux aides pour@monter en grade.
 
 
-
-
-
-
-
-
-
-
-
 % I_HELPED_2_SQUIRES
 object = player = snooty = Bien joué. Je te proclame officiellement@"princesse de la piste" !
 object = player = happy = À part dans l'arrière-boutique, tu es libre d'aller@où tu le souhaites.
@@ -82,19 +73,14 @@ object = player = happy = À part dans l'arrière-boutique, tu es libre d'aller@
 object = player = wink = Et cette fois, tu n'as besoin d'aider qu'une seule@personne de ton rang pour évoluer.
 
 
-
-
-
-
-
 % WHAT_S_MY_GRADE_PRINCE
 object = player = happy = Tu es actuellement "princesse de la piste" :@tu peux aller où tu veux.
-object = player = wink = Aide une autre princesse, et tu deviendras officiellement "Reine de la soirée".
+object = player = wink = Aide une autre princesse, et tu deviendras officiellement "Reine de la Soirée".
 
 
 % WHO_SHOULD_I_HELP_PRINCE
-object = player = wink = Ça n'est pas évident ? Ton amie est sur la piste@en ce moment même. Va la voir.
+object = player = wink = Ça n'est pas évident ? Ton amie est sur la piste@en ce moment même ! Va la voir !
 
 
 % WHO_SHOULD_I_HELP_PRINCE_GAMMA
-object = player = wink = Ça n'est pas évident ? Ton amie et son frère sont sur la piste en ce moment même. Va les voir.
+object = player = wink = Ça n'est pas évident ? Ton amie et son frère sont@sur la piste en ce moment même ! Va les voir !

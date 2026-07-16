@@ -37,12 +37,12 @@ object = player = snooty = That's right, but that's not enough.@You need to help
 % I_HELPED_2_GOBELINS
 object = player = snooty = Well done.@I officially proclaim you a "neon squire"!
 object = player = happy = You now officially have access to the very next@room, but not to the dance floor yet.
-object = player = wink = For that, you first need to help two squires, then@you'll become "prince of the dancefloor".
+object = player = wink = For that, you first need to help two squires, then@you'll become "dancefloor prince".
 
 
 % WHAT_S_MY_GRADE_SQUIRE
 object = player = happy = You are currently a "neon squire." Thus, you have@access to the whole club, except the dance floor.
-object = player = wink = Help two other squires, and you'll become@"prince of the dancefloor"; or rather, "princess".
+object = player = wink = Help two other squires, and you'll become@"dancefloor prince"; or rather, "princess".
 
 
 % WHO_SHOULD_I_HELP_SQUIRE
@@ -56,3 +56,31 @@ object = player = snooty = That's right, but that's not enough. You need@to help
 
 % I_HELPED_1_SQUIRE_VAR
 object = player = snooty = Just like before, it takes two assists to rank up.
+
+
+% I_HELPED_2_SQUIRES
+object = player = snooty = Well done.@I hereby proclaim you "dancefloor princess"!
+object = player = happy = Except for the back room, you are free to go@wherever you like.
+object = player = wink = And this time, you only need to help one person@of your rank to advance.
+
+
+% I_HELPED_2_SQUIRES_VAR
+object = player = unhappy = I'd say you scared off two customers instead…
+player = object = wrong_with_you = They're the ones who are totally nuts! Are you@putting something in your cocktails, or what?
+object = player = unhappy = My cocktails are always perfect.@My muse never gets a drink wrong.
+object = player = snooty = But fine. Let's just say you were unlucky with@those two. You are now officially a "prince".
+object = player = happy = Except for the back room, you are free to go@wherever you like.
+object = player = wink = And this time, you only need to help one person@of your rank to advance.
+
+
+% WHAT_S_MY_GRADE_PRINCE
+object = player = happy = You are currently "dancefloor princess":@you can go wherever you want.
+object = player = wink = Help another princess, and you will officially@become "Queen of the Night".
+
+
+% WHO_SHOULD_I_HELP_PRINCE
+object = player = wink = Isn't it obvious? Your friend is on the dance floor@right now! Go see her!
+
+
+% WHO_SHOULD_I_HELP_PRINCE_GAMMA
+object = player = wink = Isn't it obvious? Your friend and her brother are@on the dance floor right now! Go see them!
