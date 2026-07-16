@@ -35,15 +35,13 @@
 	ajouter sur patreon la musique sivane : road to alcoholism
 	faire les RR002,3 etc.
 
-	unlocker les logs pour avoir le détail complet des erreurs plutot que "... 9 more"
-
 	////////// LVL003 ////////////
 
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
 		- l'autiste et le parano
-		
+
 	prince des néons :
 		- delta et gamma
 		- brandis, l'autiste, le parano et le videur
