@@ -29,7 +29,7 @@ public abstract class LocalInstruction {
 			return;
 		
 		String requestType = raw_request.split("->")[0];
-		String target = raw_request.split("->")[1];
+		String target = raw_request.replace(requestType + "->","");
 
 		Request request = new RequestList().getRequestFromType(requestType);
 
