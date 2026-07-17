@@ -84,3 +84,26 @@ object = player = wink = Ça n'est pas évident ? Ton amie est sur la piste@en c
 
 % WHO_SHOULD_I_HELP_PRINCE_GAMMA
 object = player = wink = Ça n'est pas évident ? Ton amie et son frère sont@sur la piste en ce moment même ! Va les voir !
+
+
+% DENOUNCE
+object = player = unhappy = Ça n'est pas joli de rapporter… Le frère de ton amie, qui plus est…
+object = player = happy = Il ne fait de mal à personne, et je suis déjà au courant…
+object = player = happy = Ne prend pas cette histoire de rangs trop au sérieux.@On est là pour s'amuser, c'est juste un jeu.
+
+
+% I_HELPED_1_PRINCE
+object = player = snooty = J'ai cru voir, oui… Mais c'était un peu trop facile, tu ne trouves pas ?
+object = player = happy = Je te propose un petit jeu de rythme rapide sur la piste, pour compenser. Deal ?
+
+
+% I_HELPED_1_PRINCE_OK
+object = player = wink = Très bien ! Je te laisse te placer sur la piste.
+
+
+% I_HELPED_1_PRINCE_THAT_S_UNFAIR
+object = player = snooty = Tu n'as pas tort… D'un autre côté, Stephan se montrera certainement si tu l'impressionnes… Alors ?
+
+
+% I_HELPED_1_PRINCE_NO_MEANS_NO
+object = player = unhappy = Comme tu veux. Alors, te voilà officiellement "Reine (rabat-joie) de la Soirée". Félicitations.

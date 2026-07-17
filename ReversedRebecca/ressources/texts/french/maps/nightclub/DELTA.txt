@@ -1,0 +1,39 @@
+% HELLO
+object = player = happy = Salut ma grande, tu passes une bonne soirée pour l'instant ?
+player = object = happy_var = Pas mal ! Je suis à deux doigts de devenir Reine.
+object = player = laugh = Je devine, puisque tu es sur la piste avec moi.
+
+
+% GAMMA
+object = player = happy = Je crois que vous ne vous êtes jamais rencontré@avec mon frère. Rebecca, voici Gamma.
+player = object = happy_var = Alors c'est lui !@Vous vous êtes retrouvé de vue finalement ?
+
+
+% GAMMA_VAR
+object = player = happy = Je crois que vous ne vous êtes jamais rencontré@avec mon frère. Rebecca, voici Gamma.
+player = object = happy_var = Oui, le barman m'a prévenu.@Vous vous êtes retrouvé de vue finalement ?
+
+
+% GAMMA_NEXT
+object = player = happy = J'ai beaucoup parlé de lui à Sarah ce matin,@ et ça m'a donné envie de le revoir.
+object = player = happy = Alors je lui ai donné rendez-vous ici, et nous voici !
+
+
+% GAMMA_NEXT_VAR
+object = player = happy = C'est grâce à toi ! Parler de lui ce matin@avec toi m'a donné envie de le revoir. 
+object = player = happy = Alors je lui ai donné rendez-vous ici, et nous voici !
+
+
+% HELP
+object = player = happy = Mais à part ça, tu as besoin de mon aide ?
+player = object = worry = Je te retourne la question. Je dois devenir "Reine de la Soirée" pour parler à un certain Stephan.
+object = player = unhappy = Jamais entendu parler…
+object = player = wink = Mais pas de problème, tu m'aides en étant mon amie.@Va dire au barman qu'on est cool.
+
+
+% CHAT
+object = player = happy = Un soucis, ma grande ?
+player = object = happy_var = Non. J'ai envie de te parler, c'est tout.
+object = player = laugh = C'est adorable ! Mais la piste n'est pas l'endroit idéal pour ça !
+object = player = wink = On se parlera plus tard, ma belle.@Ou au taf' demain, si on ne se voit pas avant.
+player = object = happy_var = Got it.

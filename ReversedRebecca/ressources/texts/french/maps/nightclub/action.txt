@@ -43,3 +43,8 @@ I_HELPED_2_SQUIRES = Key3 % j'ai aidé 2 écuyers
 
 
 ///// DANCEFLOOR PRINCE /////
+
+HI_DELTA = Key1 % salut, Delta !
+OK = Key1 % ok
+THAT_S_UNFAIR = Key2 % c'est pas juste !
+NO_MEANS_NO = Key2 % non, c'est non

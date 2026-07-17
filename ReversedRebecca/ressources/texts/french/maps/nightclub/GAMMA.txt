@@ -1,0 +1,17 @@
+% HELP
+object = player = happy = Ne le dis à personne, mais j'ai triché pour être ici. Je ne suis qu'un gobelin.
+object = player = happy = Si tu m'aides, tu ne seras pas promue, et je me ferai prendre.
+
+
+% HOW_DID_YOU_GET_HERE
+object = player = happy = Quoi ? Tu veux savoir comment je suis arrivé sur la piste avec mon grade de gobelin ?
+object = player = happy = Il y a bien une astuce, oui… Mais je ne sais pas si j'ai envie de te la révéler…
+
+
+% DOUBT
+object = player = doubt = Tu ne me crois pas ? Ok voilà comment on fait : 
+object = player = happy = Un écuyer ne peut pas aller sur la piste, mais un gobelin, oui. Tu dois juste passer le "videur".
+
+
+% HOW_DO_I_PASS_THE_BOUNCER
+object = player = happy = Mais c'est qu'elle est curieuse ! Tu ne veux pas découvrir par toi-même ?
