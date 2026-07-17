@@ -5,8 +5,8 @@ NPC-04 = Bouncer
 NPC-05 = Delta
 NPC-06 = Gamma
 NPC-07 = Shooter (militaryman)
-NPC-08 = Dummy Down
-NPC-09 = Dummy Up
+NPC-08 = Dummy Paranoid (up)
+NPC-09 = Dummy Autism (down)
 NPC-10 = Dummy Outside
 
 OBJ-01 = Drinking Glasses Competition

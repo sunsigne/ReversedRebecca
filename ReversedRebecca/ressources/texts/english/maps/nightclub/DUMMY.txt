@@ -13,6 +13,11 @@ object = RIGHT = cry = The speakers aren't synchronized…@It's even worse than 
 object = RIGHT = cry = Thanks… I guess…
 
 
+% AUTISM_BUT_PRINCE
+object = RIGHT = crazy_unhappy = I'd rather not speak to you… We aren't of the@same rank, and that bothers me…
+player = object = no_sens = Ok…
+
+
 % PARANOID
 object = player = crazy_unhappy = I might be paranoid, but I feel like the speakers@are broadcasting a secret message…
 object = player = crazy_happy = Would you listen to each one and tell me@what it is?
@@ -23,6 +28,15 @@ player = DOWN = sad = (I'm willing to try, but I think he's completely@losing it
 player = object = happy_var = I'm certain: the message is "Ga Bu Zo Meu".
 object = player = crazy_happy = Incredible! So I was right…@There is a secret message…
 object = player = crazy_unhappy = Thanks for the help…@I have to run; they won't take me alive…
+
+
+% PARANOID_BUT_PRINCE
+object = player = crazy_unhappy = I'm sure you're carrying a microphone…@We're all being bugged…
+object = player = crazy_happy = You'll never take me alive!
+
+
+% PARANOID_BUT_PRINCE_NEXT
+player = LEFT = no_sens = Ok…
 
 
 % HELPED_ONE

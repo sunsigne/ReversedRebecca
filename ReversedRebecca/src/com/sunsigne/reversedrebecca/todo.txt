@@ -37,6 +37,11 @@
 
 	////////// LVL003 ////////////
 
+	à implanter, tester ET à traduire
+	- delta
+	- gamma
+	- donovan (denounce)
+
 	mur invisible de la porte d'entrée, laisser passer :
 		- le militaire
 		- le dummy du videur
@@ -67,6 +72,9 @@
 		
 	à sauvegarder :
 		- alcool bu
+
+	compteurs :
+	 	- personnes aidées (comme pour camp militaire)
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

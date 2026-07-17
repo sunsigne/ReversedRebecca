@@ -13,6 +13,11 @@ object = RIGHT = cry = Les enceintes ne sont pas synchronisées…@C'est encore 
 object = RIGHT = cry = Merci… J'imagine…
 
 
+% AUTISM_BUT_PRINCE
+object = RIGHT = crazy_unhappy = Je préfère ne pas te parler… Nous n'avons pas@le même rang, et ça me dérange…
+player = object = no_sens = Ok…
+
+
 % PARANOID
 object = player = crazy_unhappy = Je suis peut-être parano, mais j'ai l'impression@que les enceintes délivrent un message secret…
 object = player = crazy_happy = Tu écouterais chacune d'elle pour me dire ce@que c'est ?
@@ -23,6 +28,15 @@ player = DOWN = sad = (Je veux bien essayer, mais je pense qu'il délire@complè
 player = object = happy_var = Je suis formelle, le message est : Ga Bu Zo Meu.
 object = player = crazy_happy = Incroyable ! Alors j'avais raison…@Il y a un message secret…
 object = player = crazy_unhappy = Merci pour le coup de main…@Je dois fuir, ils ne m'auront pas vivant…
+
+
+% PARANOID_BUT_PRINCE
+object = player = crazy_unhappy = Je suis sûr que tu as un micro sur toi…@Nous sommes tous sur écoute…
+object = player = crazy_happy = Vous ne m'aurez jamais vivant !
+
+
+% PARANOID_BUT_PRINCE_NEXT
+player = LEFT = no_sens = Ok…
 
 
 % HELPED_ONE
