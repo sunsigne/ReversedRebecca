@@ -1,3 +1,4 @@
 ////// CHARACTER SPECIFIC //////
 
 happy=1,1
+snooty=1,2

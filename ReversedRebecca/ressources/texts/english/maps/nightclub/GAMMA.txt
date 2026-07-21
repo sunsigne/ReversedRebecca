@@ -1,0 +1,28 @@
+% HELP
+object = player = happy = Don't tell anyone, but I cheated to get in here.@I'm just a goblin.
+object = player = snooty = If you help me, you won't get promoted, and@I'll get caught.
+
+
+% HOW_DID_YOU_GET_HERE
+object = player = happy = What? You want to know how I made it onto@the dance floor with my goblin rank?
+object = player = snooty = There is a trick, yes.@But I don't know if I feel like sharing it with you…
+
+
+% DOUBT
+object = player = happy = Don't believe me? Okay, here's how it works:@a squire can't get onto the dance floor.
+object = player = snooty = But a goblin, can.@You just have to get past the bouncer.
+
+
+% HOW_DO_I_PASS_THE_BOUNCER
+object = player = snooty = Aren't you the curious one!@Don't you want to find out for yourself?
+
+
+% HOW_DO_I_PASS_THE_BOUNCER_AGAIN
+object = player = snooty = Okay, fine… Here's the trick: pester the bouncer@exactly twice, then go look at the red string.
+object = player = happy = You'll then have three seconds to perform@the specific action that lets you get through.
+object = player = snooty = But it's up to you to figure out what that is.
+
+
+% HOW_DO_I_PASS_THE_BOUNCER_LAST
+object = player = happy = I'd be awfully specific if this were all just a lie,@wouldn't I?
+object = player = snooty = But I'm not telling you anything else, sweetheart!@I feel like dancing now!

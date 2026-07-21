@@ -44,9 +44,9 @@ I_HELPED_2_SQUIRES = Key3 % j'ai aidé 2 écuyers
 
 ///// DANCEFLOOR PRINCE /////
 
-GOBELIN = Key1 % Gobelin ?
+GOBELIN = Key1 % gobelin ?
 DOUBT = Key1 % douter
-HOW_DID_YOU_GET_HERE = Key1 % Comment passer le videur ?
+HOW_DID_YOU_GET_HERE = Key1 % comment passer le videur ?
 EXPOSE_THE_FAKE_PRINCE = Key1 % dénoncer le faux prince
 HI_DELTA = Key1 % salut, Delta !
 OK = Key1 % ok

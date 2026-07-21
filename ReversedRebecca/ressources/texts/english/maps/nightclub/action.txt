@@ -44,9 +44,9 @@ I_HELPED_2_SQUIRES = Key3 % i helped 2 squires
 
 ///// DANCEFLOOR PRINCE /////
 
-GOBELIN = Key1 % Gobelin?
+GOBELIN = Key1 % gobelin?
 DOUBT = Key1 % doubt
-HOW_DID_YOU_GET_HERE = Key1 % How did you get here?
+HOW_DID_YOU_GET_HERE = Key1 % how did you get here?
 EXPOSE_THE_FAKE_PRINCE = Key1 % expose the fake prince
 HI_DELTA = Key1 % hi, Delta!
 OK = Key1 % ok
