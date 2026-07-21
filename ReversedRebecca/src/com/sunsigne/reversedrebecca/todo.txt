@@ -48,8 +48,7 @@
 		- l'autiste et le parano
 
 	prince des néons :
-		- delta et gamma
-		- brandis, l'autiste, le parano et le videur
+		- delta et gamma (voix pour gamma)
 		- passage secret et fil rouge
 		- stephan, etc
 		- donovan : ok / c'est pas juste ! ..(quand il insiste) : ok / non, c'est non
@@ -70,6 +69,7 @@
 		+ aider tt le monde
 		- menacer donovan
 		- renvoyer le verre trop fort
+		- dénoncer gamma
 		
 	à sauvegarder :
 		- alcool bu

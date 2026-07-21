@@ -37,3 +37,13 @@ player = object = happy_var = Non. J'ai envie de te parler, c'est tout.
 object = player = laugh = C'est adorable ! Mais la piste n'est pas l'endroit idéal pour ça !
 object = player = wink = On se parlera plus tard, ma belle.@Ou au taf' demain, si on ne se voit pas avant.
 player = object = happy_var = Got it.
+
+
+% BEING_GOBELIN
+object = player = happy = Joli tour de passe-passe, ma grande !@Tu n'as pas peur de te faire prendre ?
+player = object = happy_var = Pour l'instant, on ne m'a rien dit.
+player = object = worry = Après, je pensais que trouver un secret pour m'incruster de ce côté me serait plus utile…
+object = player = wink = Peut-être qu'il y a un secret dans le secret. Qui sait ? Pourquoi es-tu là, ce soir ?
+player = object = convinced = Je dois rencontrer Stephan.
+object = player = happy = Alors, il y a peut-être un moyen d'accomplir ton objectif rapidement, en étant ici…
+object = player = wink = Je te laisse chercher. La princesse que je suis a très envie de danser !

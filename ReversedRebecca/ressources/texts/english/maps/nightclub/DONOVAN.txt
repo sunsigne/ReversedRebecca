@@ -84,3 +84,9 @@ object = player = wink = Isn't it obvious? Your friend is on the dance floor@rig
 
 % WHO_SHOULD_I_HELP_PRINCE_GAMMA
 object = player = wink = Isn't it obvious? Your friend and her brother are@on the dance floor right now! Go see them!
+
+
+% EXPOSE_THE_FAKE_PRINCE
+object = player = unhappy = Tattling isn't nice…@Your friend's brother, no less…
+object = player = happy = He isn't hurting anyone, and I already know@about him.
+object = player = wink = We're here to have fun. Don't take this whole@ranking business too seriously.

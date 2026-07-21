@@ -1,17 +1,41 @@
 % HELP
-object = player = happy = Ne le dis à personne, mais j'ai triché pour être ici. Je ne suis qu'un gobelin.
-object = player = happy = Si tu m'aides, tu ne seras pas promue, et je me ferai prendre.
+object = player = happy = Ne le dis à personne, mais j'ai triché pour être ici.@Je ne suis qu'un gobelin.
+object = player = happy = Si tu m'aides, tu ne seras pas promue,@et je me ferai prendre.
 
 
 % HOW_DID_YOU_GET_HERE
-object = player = happy = Quoi ? Tu veux savoir comment je suis arrivé sur la piste avec mon grade de gobelin ?
-object = player = happy = Il y a bien une astuce, oui… Mais je ne sais pas si j'ai envie de te la révéler…
+object = player = happy = Quoi ? Tu veux savoir comment je suis arrivé sur@la piste avec mon grade de gobelin ?
+object = player = happy = Il y a bien une astuce, oui.@Mais je ne sais pas si j'ai envie de te la révéler…
 
 
 % DOUBT
-object = player = doubt = Tu ne me crois pas ? Ok voilà comment on fait : 
-object = player = happy = Un écuyer ne peut pas aller sur la piste, mais un gobelin, oui. Tu dois juste passer le "videur".
+object = player = doubt = Tu ne me crois pas ? Ok voilà comment on fait :@un écuyer ne peut pas aller sur la piste.
+object = player = happy = Mais un gobelin, oui.@Tu dois juste passer le videur.
 
 
 % HOW_DO_I_PASS_THE_BOUNCER
-object = player = happy = Mais c'est qu'elle est curieuse ! Tu ne veux pas découvrir par toi-même ?
+object = player = happy = Mais c'est qu'elle est curieuse !@Tu ne veux pas découvrir par toi-même ?
+
+
+% HOW_DO_I_PASS_THE_BOUNCER_AGAIN
+object = player = happy = Ok, ok… Voilà l'astuce : embête-le exactement@deux fois, puis va regarder le fil rouge.
+object = player = happy = Tu auras alors trois secondes pour effectuer@l'action précise qui te permettra de passer.
+object = player = happy = Mais c'est à toi de trouver quoi.
+
+
+% HOW_DO_I_PASS_THE_BOUNCER_LAST
+object = player = happy = Je serais étrangement précis, si tout ça n'était@qu'un mensonge, tu ne crois pas ?
+object = player = happy = Mais je ne te dirais rien de plus, ma belle !@J'ai envie de danser, là !
+
+
+
+
+
+
+
+% BEING_GOBELIN
+object = player = happy = Classe ! Un autre gobelin sur la piste !@Bien joué pour avoir trouvé l'astuce pour passer d'ailleurs.
+
+
+% BEING_GOBELIN_NEXT
+object = player = happy = Désolé ma belle, mais j'ai envie de danser, là !

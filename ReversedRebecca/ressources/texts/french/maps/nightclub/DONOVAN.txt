@@ -86,10 +86,17 @@ object = player = wink = Ça n'est pas évident ? Ton amie est sur la piste@en c
 object = player = wink = Ça n'est pas évident ? Ton amie et son frère sont@sur la piste en ce moment même ! Va les voir !
 
 
-% DENOUNCE
-object = player = unhappy = Ça n'est pas joli de rapporter… Le frère de ton amie, qui plus est…
-object = player = happy = Il ne fait de mal à personne, et je suis déjà au courant…
-object = player = happy = Ne prend pas cette histoire de rangs trop au sérieux.@On est là pour s'amuser, c'est juste un jeu.
+% EXPOSE_THE_FAKE_PRINCE
+object = player = unhappy = Ça n'est pas joli de rapporter…@Le frère de ton amie, qui plus est…
+object = player = happy = Il ne fait de mal à personne, et je suis déjà au@courant.
+object = player = wink = On est là pour s'amuser. Ne prend pas cette@histoire de rangs trop au sérieux.
+
+
+
+
+
+
+
 
 
 % I_HELPED_1_PRINCE
