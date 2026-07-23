@@ -28,13 +28,8 @@ object = player = happy = Je serais étrangement précis, si tout ça n'était@q
 object = player = snooty = Mais je ne te dirais rien de plus, ma belle !@J'ai envie de danser, là !
 
 
-
-
-
-
-
 % BEING_GOBELIN
-object = player = happy = Classe ! Un autre gobelin sur la piste !@Bien joué pour avoir trouvé l'astuce pour passer d'ailleurs.
+object = player = happy = Classe ! Un autre gobelin sur la piste !@Bien joué pour avoir trouvé l'astuce pour passer !
 
 
 % BEING_GOBELIN_NEXT

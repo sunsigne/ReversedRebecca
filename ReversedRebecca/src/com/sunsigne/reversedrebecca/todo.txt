@@ -45,8 +45,7 @@
 		- donovan : ok / c'est pas juste ! ..(quand il insiste) : ok / non, c'est non
 	
 	passage secret :
-		- gamma (implanter + tester + trad)
-		- delta (implanter + tester + trad)
+		- delta (trad)
 		- le 2nd secret
 		
 	king of the night :

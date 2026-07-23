@@ -26,3 +26,11 @@ object = player = snooty = But it's up to you to figure out what that is.
 % HOW_DO_I_PASS_THE_BOUNCER_LAST
 object = player = happy = I'd be awfully specific if this were all just a lie,@wouldn't I?
 object = player = snooty = But I'm not telling you anything else, sweetheart!@I feel like dancing now!
+
+
+% BEING_GOBELIN
+object = player = happy = Awesome! Another goblin on the dance floor!@Nice job figuring out the trick to get in!
+
+
+% BEING_GOBELIN_NEXT
+object = player = happy = Sorry, sweetheart, but I feel like dancing right now!
