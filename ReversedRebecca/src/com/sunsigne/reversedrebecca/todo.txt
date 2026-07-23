@@ -38,7 +38,6 @@
 	////////// LVL003 ////////////
 
 	prince des néons :
-		- douter sur X
 		- donovan (aides de la princesse)
 		- delta (implanter + tester + trad)
 		- stephan, etc

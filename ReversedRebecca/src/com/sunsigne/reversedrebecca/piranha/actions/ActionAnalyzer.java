@@ -16,6 +16,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionXKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 import com.sunsigne.reversedrebecca.world.World;
 
@@ -145,6 +146,8 @@ public class ActionAnalyzer {
 			return new ActionTwoKey();
 		case "Key3":
 			return new ActionThreeKey();
+		case "KeyX":
+			return new ActionXKey();
 		}
 		return new ActionOneKey();
 	}
@@ -157,6 +160,8 @@ public class ActionAnalyzer {
 			return ActionTwoKey.getKey();
 		case "Key3":
 			return ActionThreeKey.getKey();
+		case "KeyX":
+			return ActionXKey.getKey();
 		}
 		return ActionOneKey.getKey();
 	}
