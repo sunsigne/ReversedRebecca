@@ -1,4 +1,4 @@
-Language=english
+Language=french
 Camera=dynamic
 Shake=on
 Inventory=visible
@@ -24,6 +24,7 @@ Dialogue=SPACE:32
 Action1=E:69
 Action2=R:82
 Action3=F:70
+ActionX=X:88
 
 /////VOLUME/////
 
