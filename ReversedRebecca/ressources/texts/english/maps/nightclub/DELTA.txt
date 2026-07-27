@@ -1,0 +1,50 @@
+% HELLO
+object = player = laugh = Hey sis! Having a good night?
+player = object = excited = You bet! I'm on the verge of becoming Queen!
+object = player = wink = I figured, since you're on the dance floor with me.
+
+
+% GAMMA
+object = player = happy = I don't think you and my brother have ever met.@Rebecca, meet Gamma.
+gamma = LEFT = happy = Yo!
+player = object = happy_var = So that's him!@You two finally got back in touch?
+
+
+% GAMMA_VAR
+object = player = happy = I don't think you and my brother have ever met.@Rebecca, meet Gamma.
+gamma = LEFT = happy = Yo!
+player = object = happy_var = Yeah, the bartender gave me the heads-up.@You two finally got back in touch?
+
+
+% GAMMA_NEXT
+object = player = excited = I talked a lot about him to Sarah, this morning,@and it made me want to see him again.
+object = player = laugh_var = So, I asked him to meet me here, and here we are!
+
+
+% GAMMA_NEXT_VAR
+object = player = excited = It's all thanks to you! Talking about him with you,@this morning, made me want to see him again.
+object = player = laugh_var = So, I asked him to meet me here, and here we are!
+
+
+% HELP
+object = player = smile = Come to think of it… Do you need my help?
+player = object = happy_var = I should ask you the same thing: I'm supposed to@help you, to move up in rank; to talk to Stephan.
+object = player = no_sens = Never heard of him…
+object = player = wink = But no worries, you're already helping me just by@being my friend. Go tell the bartender we're cool.
+
+
+% CHAT
+object = player = happy = Something wrong?
+player = object = happy_var = I just wanted to talk to you, that's all.
+object = player = laugh = That's sweet! But the dance floor isn't the ideal@place for that!
+object = player = wink = We'll talk later, sweetie. Or at the lab, tomorrow,@if we don't see each other before then.
+
+
+% BEING_GOBELIN
+object = player = smile = Nice sleight of hand, sis!@Aren't you afraid of getting caught?
+player = object = happy_var = So far, no one's said a word to me.
+player = object = worry = Still, I thought finding a secret to sneak my way@in here, would be more useful…
+object = player = excited = Maybe there's a secret within the secret.@Who knows? Why are you here, tonight?
+player = object = convinced = I need to meet Stephan.
+object = player = smile = Then, there must be a way to achieve your goal@quickly, while being here.
+object = player = wink = Anyway, I'll leave you to it. A princess like me is@dying to dance!
