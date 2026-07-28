@@ -75,7 +75,7 @@ object = player = wink = Et cette fois, tu n'as besoin d'aider qu'une seule@pers
 
 % WHAT_S_MY_GRADE_PRINCE
 object = player = happy = Tu es actuellement "princesse de la piste" :@tu peux aller où tu veux.
-object = player = wink = Aide une autre princesse, et tu deviendras officiellement "Reine de la Soirée".
+object = player = wink = Aide une autre princesse, et tu deviendras@officiellement "Reine de la Soirée".
 
 
 % WHO_SHOULD_I_HELP_PRINCE
@@ -92,16 +92,9 @@ object = player = happy = Il ne fait de mal à personne, et je suis déjà au@co
 object = player = wink = On est là pour s'amuser. Ne prend pas cette@histoire de rangs trop au sérieux.
 
 
-
-
-
-
-
-
-
 % I_HELPED_1_PRINCE
-object = player = snooty = J'ai cru voir, oui… Mais c'était un peu trop facile, tu ne trouves pas ?
-object = player = happy = Je te propose un petit jeu de rythme rapide sur la piste, pour compenser. Deal ?
+object = player = snooty = J'ai cru voir, oui… Mais c'était trop facile…@Tu ne penses pas ?
+object = player = happy = Je te propose un rapide petit jeu de rythme@sur la piste de dance, pour compenser. Deal ?
 
 
 % I_HELPED_1_PRINCE_OK
@@ -109,8 +102,12 @@ object = player = wink = Très bien ! Je te laisse te placer sur la piste.
 
 
 % I_HELPED_1_PRINCE_THAT_S_UNFAIR
-object = player = snooty = Tu n'as pas tort… D'un autre côté, Stephan se montrera certainement si tu l'impressionnes… Alors ?
+object = player = snooty = Tu n'as pas tort… Mais Stephan se montrera@certainement si tu l'impressionnes ! Alors ?
 
 
 % I_HELPED_1_PRINCE_NO_MEANS_NO
-object = player = unhappy = Comme tu veux. Alors, te voilà officiellement "Reine (rabat-joie) de la Soirée". Félicitations.
+object = player = unhappy = Comme tu veux. Alors, te voilà officiellement@"Reine (rabat-joie) de la Soirée". Félicitations.
+
+
+% WHERE_SHOULD_I_GO
+object = player = snooty = Sur la piste de dance, je viens de te le dire.

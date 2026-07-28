@@ -90,3 +90,24 @@ object = player = wink = Isn't it obvious? Your friend and her brother are@on th
 object = player = unhappy = Tattling isn't nice…@Your friend's brother, no less…
 object = player = happy = He isn't hurting anyone, and I already know@about him.
 object = player = wink = We're here to have fun. Don't take this whole@ranking business too seriously.
+
+
+% I_HELPED_1_PRINCE
+object = player = snooty = I saw that, yes… But it was too easy…@Don't you think?
+object = player = happy = How about a quick little rhythm game on the@dance floor, to make up for it? Deal?
+
+
+% I_HELPED_1_PRINCE_OK
+object = player = wink = Alright! I'll let you get into position, then.
+
+
+% I_HELPED_1_PRINCE_THAT_S_UNFAIR
+object = player = snooty = You've got a point… But Stephan will surely@show up if you impress him! So?
+
+
+% I_HELPED_1_PRINCE_NO_MEANS_NO
+object = player = unhappy = Suit yourself. So, you are now officially "(party@pooper) Queen of the Night". Congratulations.
+
+
+% WHERE_SHOULD_I_GO
+object = player = snooty = On the dance floor, I just told you.
