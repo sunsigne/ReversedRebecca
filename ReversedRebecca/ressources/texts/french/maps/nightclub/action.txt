@@ -9,6 +9,7 @@ ARE_YOU_BUYING_ME_A_DRINK = Key1 % tu m'offres un verre ?
 CHAT = Key1 % bavarder
 OK = Key1 % ok
 WHY = Key2 % pourquoi ?
+BRING_STEPHAN = Key1 % faire venir Stephan
 
 ///// BAR GOBLIN /////
 

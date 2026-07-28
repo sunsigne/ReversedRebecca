@@ -36,11 +36,9 @@
 	faire les RR002,3 etc.
 
 	////////// LVL003 ////////////
-	
-	passage secret :
-		- le 2nd secret
-		
+
 	king of the night :
+		- delta & gamma -> faire sortir de la piste quand stephan arrive
 		- stephan (dialogue et visuel)
 		- donovan : (après ta préstation ? hors de question que tu partes sans faire mieux ! Tu es la reine !) / (non, non, non. Tu ne vas pas t'en tirer sans dancer, tu es la reine !)
 	

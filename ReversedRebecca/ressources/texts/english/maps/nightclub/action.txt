@@ -9,6 +9,7 @@ ARE_YOU_BUYING_ME_A_DRINK = Key1 % are you buying me a drink?
 CHAT = Key1 % chat
 OK = Key1 % ok
 WHY = Key2 % why?
+BRING_STEPHAN = Key1 % bring Stephan
 
 ///// BAR GOBLIN /////
 
