@@ -94,7 +94,7 @@ object = player = wink = On est là pour s'amuser. Ne prend pas cette@histoire d
 
 % I_HELPED_1_PRINCE
 object = player = snooty = J'ai cru voir, oui… Mais c'était trop facile…@Tu ne penses pas ?
-object = player = happy = Je te propose un rapide petit jeu de rythme@sur la piste de dance, pour compenser. Deal ?
+object = player = happy = Je te propose un rapide petit jeu pour compenser.@Tu nous montres ce que tu vaux sur la piste ?
 
 
 % I_HELPED_1_PRINCE_OK
@@ -111,3 +111,8 @@ object = player = unhappy = Comme tu veux. Alors, te voilà officiellement@"Rein
 
 % WHERE_SHOULD_I_GO
 object = player = snooty = Sur la piste de dance, je viens de te le dire.
+
+
+% AFTER_DANCE
+donovan = player = unhappy = Eh bien… C'était très expérimental…
+donovan = player = happy = Quoi qu'il en soit, félicitations !@Te voilà officiellement "Reine de la Soirée".

@@ -36,18 +36,13 @@
 	faire les RR002,3 etc.
 
 	////////// LVL003 ////////////
-
-	prince des néons :
-		- jeu de rythme (créer la sortie)
-		- lien avec le grade "Reine"
 	
 	passage secret :
 		- le 2nd secret
 		
 	king of the night :
-		- donovan (TA à mettre à jour)
-		- stephan, etc
-		- donovan : (après ta préstation ? or de question que tu t'en tire sans un rappel !) / (non, non, non. Tu ne vas pas t'en tirer sans dancer de la soirée)
+		- stephan (dialogue et visuel)
+		- donovan : (après ta préstation ? hors de question que tu partes sans faire mieux ! Tu es la reine !) / (non, non, non. Tu ne vas pas t'en tirer sans dancer, tu es la reine !)
 	
 	à faire à la fin :
 		- cinématique d'intro
@@ -57,6 +52,7 @@
 		- le militaire
 		- le dummy du videur
 		- l'autiste et le parano
+		- stephan
 		
 	disco puzzle :
 		- 0h30 : introduire le code qui passe les flammes de rouges à blues

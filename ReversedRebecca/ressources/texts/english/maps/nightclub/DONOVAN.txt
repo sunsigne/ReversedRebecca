@@ -94,7 +94,7 @@ object = player = wink = We're here to have fun. Don't take this whole@ranking b
 
 % I_HELPED_1_PRINCE
 object = player = snooty = I saw that, yes… But it was too easy…@Don't you think?
-object = player = happy = How about a quick little rhythm game on the@dance floor, to make up for it? Deal?
+object = player = happy = How about a quick little game to make up for it?@Show us what you're made of on the track?
 
 
 % I_HELPED_1_PRINCE_OK
@@ -111,3 +111,8 @@ object = player = unhappy = Suit yourself. So, you are now officially "(party@po
 
 % WHERE_SHOULD_I_GO
 object = player = snooty = On the dance floor, I just told you.
+
+
+% AFTER_DANCE
+donovan = player = unhappy = Well… It was very experimental…
+donovan = player = happy = Anyway, congratulations!@You are now officially "Queen of the Night".

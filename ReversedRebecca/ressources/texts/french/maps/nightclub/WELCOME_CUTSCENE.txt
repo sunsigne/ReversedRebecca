@@ -1,5 +1,5 @@
 % AKARA
-object = player = happy = Bonsoir. Bienvenue au Purple String Club.
+akara = LEFT = happy = Bonsoir. Bienvenue au Purple String Club.
 
 
 % DONOVAN
