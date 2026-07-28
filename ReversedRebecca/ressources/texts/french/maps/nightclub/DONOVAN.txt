@@ -98,7 +98,7 @@ object = player = happy = Je te propose un rapide petit jeu de rythme@sur la pis
 
 
 % I_HELPED_1_PRINCE_OK
-object = player = wink = Très bien ! Je te laisse te placer sur la piste.
+object = player = wink = Très bien ! Je te laisse te mettre en place.
 
 
 % I_HELPED_1_PRINCE_THAT_S_UNFAIR

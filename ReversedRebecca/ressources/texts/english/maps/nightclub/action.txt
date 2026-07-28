@@ -54,3 +54,7 @@ OK = Key1 % ok
 THAT_S_UNFAIR = Key2 % that's unfair!
 NO_MEANS_NO = Key2 % no, means no
 WHERE_SHOULD_I_GO = Key1 % where should i go?
+LEFT = LEFT % left
+RIGHT = RIGHT % right
+UP = UP % up
+DOWN = DOWN % down

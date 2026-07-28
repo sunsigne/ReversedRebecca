@@ -17,3 +17,4 @@ OBJ-05 = Speaker Up Right
 OBJ-06 = Speaker Down Right
 OBJ-07 = Speaker Down Left
 OBJ-08 = Red String
+OBJ-09 = Dance Floor

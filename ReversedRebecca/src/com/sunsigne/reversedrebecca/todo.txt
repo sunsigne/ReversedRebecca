@@ -38,7 +38,7 @@
 	////////// LVL003 ////////////
 
 	prince des néons :
-		- jeu de rythme
+		- jeu de rythme (créer la sortie)
 		- lien avec le grade "Reine"
 	
 	passage secret :

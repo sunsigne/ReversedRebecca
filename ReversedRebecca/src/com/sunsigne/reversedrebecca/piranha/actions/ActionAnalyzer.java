@@ -17,7 +17,11 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKe
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionTwoKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionXKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
+import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class ActionAnalyzer {
@@ -148,6 +152,14 @@ public class ActionAnalyzer {
 			return new ActionThreeKey();
 		case "KeyX":
 			return new ActionXKey();
+		case "LEFT":
+			return new LeftKey();
+		case "RIGHT":
+			return new RightKey();
+		case "UP":
+			return new UpKey();
+		case "DOWN":
+			return new DownKey();
 		}
 		return new ActionOneKey();
 	}
@@ -162,6 +174,14 @@ public class ActionAnalyzer {
 			return ActionThreeKey.getKey();
 		case "KeyX":
 			return ActionXKey.getKey();
+		case "LEFT":
+			return LeftKey.getKey();
+		case "RIGHT":
+			return RightKey.getKey();
+		case "UP":
+			return UpKey.getKey();
+		case "DOWN":
+			return DownKey.getKey();
 		}
 		return ActionOneKey.getKey();
 	}
