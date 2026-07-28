@@ -37,6 +37,8 @@
 
 	////////// LVL003 ////////////
 
+	mettre les 2 musics sur Patreon
+
 	king of the night :
 		- delta & gamma -> faire sortir de la piste quand stephan arrive
 		- stephan (visuel world + vérifier voix)
