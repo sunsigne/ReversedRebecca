@@ -59,3 +59,8 @@ LEFT = LEFT % gauche
 RIGHT = RIGHT % droite
 UP = UP % haut
 DOWN = DOWN % bas
+
+
+///// NIGHT KING /////
+
+WHAT_GOOD_OLD_TIME = Key3 % en souvenir ?

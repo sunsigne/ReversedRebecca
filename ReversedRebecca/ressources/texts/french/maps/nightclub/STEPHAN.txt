@@ -1,0 +1,36 @@
+% NOSTALGIC_HELLO
+object = player = fake_happy = Bonsoir, ma Reine… Alors, on y est ?@C'est l'heure de notre dernière danse ?
+player = object = no_sens = Non… Heu… Quoi ? … Es-tu… Stephan ?
+object = player = happy = (Bien sûr… Elle ne me connaît pas encore…)@Oui, c'est bien moi. Tu me cherchais, je crois ?
+player = object = convinced = Oui ! Il parait que tu peux m'aider à retrouver@quelqu'un, qui m'a volé quelque chose.
+object = player = fake_happy = Je serais allé chercher la lune pour toi… Tu viens@danser ? En souvenir du bon vieux temps ?
+
+
+% WHAT_GOOD_OLD_TIME
+object = player = fake_happy = Pardon… C'est difficile de se dire que ce soir,@on ne se connait pas encore…
+object = player = happy = Oublie. Je reformule :@Tu viens danser, tout court ?
+
+
+% REFUSE_TO_DANCE
+object = player = unhappy = C'est fâcheux…@Pourquoi ?
+player = object = unhappy_var = Je n'ai tout simplement pas envie.@On ne se connaît pas.
+object = player = happy = Je comprends. Je ne te forcerai jamais à faire@quelque chose que tu ne veux pas, Becky.
+
+
+% REFUSE_TO_DANCE_NO_DANCE
+donovan = RIGHT = snooty = Moi, si ! En piste, madame Rabat-Joie !@Tu ne t'en tireras pas sans danser de la soirée.
+player = LEFT = angry = Mais zut ! Tu ne peux quand même pas m'y forcer !
+donovan = RIGHT = snooty = Eh ben si ! Ce bar est magique.@Si je dis que tu dois danser, alors tu danseras.
+player = DOWN = asleep = (C'est un malade ! Mais au fond, qu'est-ce que@j'ai à perdre…)
+
+
+% REFUSE_TO_DANCE_ROPY_DANCE
+donovan = RIGHT = snooty = Moi, si ! Ta performance de tout à l'heure était@médiocre… En piste, madame ! Arrange-ça !
+player = LEFT = angry = Mais zut ! Tu ne peux quand même pas m'y forcer !
+donovan = RIGHT = snooty = Eh ben si ! Ce bar est magique.@Si je dis que tu dois danser, alors tu danseras.
+player = DOWN = asleep = (C'est un malade ! Mais au fond, qu'est-ce que@j'ai à perdre…)
+
+
+% ACCEPT_TO_DANCE
+player = object = determined = Ok ! Mais pas de valse.@Un battle ! Et tu vas perde !
+object = player = determined = N'en sois pas si sûr ! J'ai des années@d'entrainement ! Mettons le feu à la salle !

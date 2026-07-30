@@ -40,11 +40,11 @@
 	mettre les 2 musics sur Patreon
 
 	king of the night :
-		- delta & gamma -> faire sortir de la piste quand stephan arrive
-		- stephan (visuel world + vérifier voix)
-		- donovan : (après ta préstation ? hors de question que tu partes sans faire mieux ! Tu es la reine !) / (non, non, non. Tu ne vas pas t'en tirer sans dancer, tu es la reine !)
-	
+		- traduction de Stephan
+		- le battle de danse
+		
 	à faire à la fin :
+		- les boutons Left/Right/Up/down d'actions de la manette lors de la danse nulle
 		- cinématique d'intro
 		- quitter le bar après avoir menacé Donovan
 	
