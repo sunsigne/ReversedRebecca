@@ -37,7 +37,10 @@
 
 	////////// LVL003 ////////////
 
-	mettre les 2 musics sur Patreon
+	mettre les 2(3?) musics sur Patreon :
+	- road to alcolism
+	- forever and ever and ever and ever
+	- 'til the end of the night ? (déjà fait ?)
 
 	king of the night :
 		- traduction de Stephan
@@ -58,6 +61,7 @@
 		- 0h30 : introduire le code qui passe les flammes de rouges à blues
 		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 		- gamepad (les 4 boutons)
+		- changer les bords (les murs) pour des flêches/boutons de gamepad, pour les utiliser en phase 3
 
 	karma :
 		+ aider tt le monde
