@@ -6,6 +6,7 @@ RubbleBlocked = bloqué
 ComputerProtected = protégé
 HoleLoose = terre molle
 Undefeated = invaincu
+Unfunky = ennuyeuse
 
 ///// ACTION /////
 
@@ -17,3 +18,4 @@ Dig = creuser
 GoDown = descendre
 GoUp = monter
 Confront = affronter
+Dance = danser

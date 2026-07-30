@@ -41,7 +41,6 @@
 
 	king of the night :
 		- traduction de Stephan
-		- le battle de danse
 		
 	à faire à la fin :
 		- les boutons Left/Right/Up/down d'actions de la manette lors de la danse nulle
@@ -55,6 +54,7 @@
 		- stephan
 		
 	disco puzzle :
+		- changer le nom de la musique
 		- 0h30 : introduire le code qui passe les flammes de rouges à blues
 		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 		- gamepad (les 4 boutons)

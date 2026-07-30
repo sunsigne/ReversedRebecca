@@ -123,12 +123,12 @@ public class DiscoPuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getOpeningSound() {
-		return "door_key";
+		return "match_stick";
 	}
 
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return "loot_chest";
 	}
 
 }
