@@ -27,7 +27,7 @@ public abstract class DiscoPuzzle extends Puzzle {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 		new GameCursor().setCursor(null);
 
-		new SoundTask().playMusic("dance_floor", false, true);
+		new SoundTask().playMusic("'til_the_end_of_the_night", false, true);
 	}
 
 	////////// NAME ////////////
@@ -46,6 +46,8 @@ public abstract class DiscoPuzzle extends Puzzle {
 
 	////////// PUZZLE ////////////
 
+	public abstract int getTimer();
+	
 	public abstract DiscoDancerObject getDiscoDancer();
 
 	protected void createDiscoDancer(int delayBeforeLitinTicks) {
@@ -113,12 +115,23 @@ public abstract class DiscoPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		DiscoPuzzle.noCritCount = noCritCount;
 	}
-	
+
 	@Override
 	public boolean hasCritToken() {
 		return false;
 	}
-	
+
+	////////// TICK ////////////
+
+	private int time;
+
+	@Override
+	public void tick() {
+		time++;
+		if (time >= getTimer())
+			closePuzzle(true);
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override

@@ -6,7 +6,6 @@ import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.disco.DiscoPuzzle;
-import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public class CyanDiscoPuzzle extends DiscoPuzzle {
@@ -17,6 +16,11 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	}
 
 	////////// PUZZLE ////////////
+
+	@Override
+	public int getTimer() {
+		return 11;
+	}
 
 	@Override
 	public DiscoDancerObject getDiscoDancer() {
@@ -41,7 +45,7 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	private int getY(int num) {
 		int start = 18;
 		int gap = 7;
-		int puzzle = -Size.XS; // only because Puzzle start the music
+		int puzzle = 40; // only because Puzzle start the music
 
 		return getRow(start + num) + num * gap + puzzle;
 	}
