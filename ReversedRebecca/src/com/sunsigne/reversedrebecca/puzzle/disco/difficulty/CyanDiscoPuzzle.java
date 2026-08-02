@@ -19,7 +19,7 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 
 	@Override
 	public int getTimer() {
-		return 11;
+		return 11 * Game.SEC;
 	}
 
 	@Override
