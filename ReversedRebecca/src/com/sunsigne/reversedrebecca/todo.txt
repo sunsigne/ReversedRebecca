@@ -55,7 +55,9 @@
 		- stephan
 		
 	disco puzzle :
-		- changer le nom de la musique
+		- faire les lien dans PulzzeFactory
+		- créer la flêche qui ne se joue pas (rouge)
+		- relier le DiscoDanceur à des actions de dances sur ladtite flêche
 		- 0h30 : introduire le code qui passe les flammes de rouges à blues
 		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 		- gamepad (les 4 boutons)

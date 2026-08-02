@@ -24,12 +24,19 @@ import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 
-	public DiscoDancerObject(Puzzle puzzle, String name) {
+	public DiscoDancerObject(Puzzle puzzle, String name, boolean autoplay) {
 		super(puzzle, false, 0, 0, 2 * Size.XL, 2 * Size.XL);
 		this.name = name;
+		this.autoplay = autoplay;
 
 		loadLiving();
 		loadAnimations();
+	}
+
+	private boolean autoplay;
+
+	public boolean isAutoplay() {
+		return autoplay;
 	}
 
 	////////// NAME ////////////
@@ -128,6 +135,9 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		if (isAutoplay())
+			return;
+
 		int key = e.getKeyCode();
 
 		if (key == LeftKey.getKey() || key == KeyEvent.VK_LEFT)

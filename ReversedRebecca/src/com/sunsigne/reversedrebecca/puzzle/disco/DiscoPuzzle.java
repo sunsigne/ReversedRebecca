@@ -47,20 +47,22 @@ public abstract class DiscoPuzzle extends Puzzle {
 	////////// PUZZLE ////////////
 
 	public abstract int getTimer();
-	
+
 	public abstract DiscoDancerObject getDiscoDancer();
 
-	protected void createDiscoDancer(int delayBeforeLitinTicks) {
+	protected void createDiscoDancer(DIRECTION position, int delayBeforeLitinTicks) {
 		DiscoDancerObject dancer = getDiscoDancer();
-		dancer.setX(getCol(2));
+		int col = position == DIRECTION.LEFT ? 0 : 7;
+		int gap = position == DIRECTION.LEFT ? 0 : Size.S;
+		dancer.setX(getCol(col + 2) + gap);
 		dancer.setY(getRow(4));
 		dancer.lit(delayBeforeLitinTicks);
 
 		LAYER.PUZZLE.addObject(dancer);
 	}
 
-	protected void createDiscoBall() {
-		LAYER.PUZZLE.addObject(new DiscoBallObject(this));
+	protected void createDiscoBall(DIRECTION position) {
+		LAYER.PUZZLE.addObject(new DiscoBallObject(this, position));
 	}
 
 	private DiscoPlayerArrowObject[] player_arrows;
@@ -69,18 +71,20 @@ public abstract class DiscoPuzzle extends Puzzle {
 		return player_arrows[facing.getNum()];
 	}
 
-	protected void createPlayerArrows() {
+	protected void createPlayerArrows(DIRECTION position) {
 		DIRECTION facing;
 		player_arrows = new DiscoPlayerArrowObject[4];
-
+		int col = position == DIRECTION.LEFT ? 1 : 7;
+		int gap = position == DIRECTION.LEFT ? Size.S : 0;
+		
 		facing = DIRECTION.LEFT;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(7) + Size.XS + Size.XS);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col) + gap + Size.XS + Size.XS);
 		facing = DIRECTION.RIGHT;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(10) + Size.XS + Size.L);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 3) + gap + Size.XS + Size.L);
 		facing = DIRECTION.UP;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(8) + Size.XS + Size.S);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 1) + gap + Size.XS + Size.S);
 		facing = DIRECTION.DOWN;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(9) + Size.XS + Size.M);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 2) + gap + Size.XS + Size.M);
 
 		LAYER.PUZZLE.addObject(player_arrows[0]);
 		LAYER.PUZZLE.addObject(player_arrows[1]);

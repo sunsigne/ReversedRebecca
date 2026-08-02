@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.disco;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
@@ -14,9 +15,10 @@ import com.sunsigne.reversedrebecca.system.Window;
 
 public class DiscoBallObject extends PuzzleObject {
 
-	public DiscoBallObject(Puzzle puzzle) {
+	public DiscoBallObject(Puzzle puzzle, DIRECTION position) {
 		super(puzzle, false, 0, 0, Window.WIDHT, Window.HEIGHT);
 		loadAnimations();
+		this.position = position;
 	}
 
 	////////// NAME ////////////
@@ -70,9 +72,13 @@ public class DiscoBallObject extends PuzzleObject {
 
 	////////// RENDER ////////////
 
+	DIRECTION position;
+
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		int x = position == DIRECTION.LEFT ? getX() : getX() + getWidth();
+		int w = position == DIRECTION.LEFT ? getWidth() : -getWidth();
+		g.drawImage(getImage(), x, getY(), w, getHeight(), null);
 	}
 
 }

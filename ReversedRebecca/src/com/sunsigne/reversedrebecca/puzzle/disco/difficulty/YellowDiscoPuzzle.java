@@ -8,9 +8,9 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.disco.DiscoPuzzle;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
-public class CyanDiscoPuzzle extends DiscoPuzzle {
+public class YellowDiscoPuzzle extends DiscoPuzzle {
 
-	public CyanDiscoPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+	public YellowDiscoPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
@@ -24,14 +24,14 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 
 	@Override
 	public DiscoDancerObject getDiscoDancer() {
-		return new DiscoDancerObject(this, "rebecca", false);
+		return new DiscoDancerObject(this, "stephan", true);
 	}
 
 	@Override
 	public void createPuzzle() {
-		createPlayerArrows(DIRECTION.RIGHT);
-		createDiscoBall(DIRECTION.LEFT);
-		createDiscoDancer(DIRECTION.LEFT, 18 * Game.SEC - 10);
+		createPlayerArrows(DIRECTION.LEFT);
+		createDiscoBall(DIRECTION.RIGHT);
+		createDiscoDancer(DIRECTION.RIGHT, 18 * Game.SEC - 10);
 
 		createPhase1();
 		createPhase2();
