@@ -32,6 +32,10 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 	}
 
 	private DIRECTION facing;
+	
+	public DIRECTION getFacing() {
+		return facing;
+	}
 
 	////////// NAME ////////////
 
@@ -63,7 +67,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 		}
 	}
 
-	private void play(CASE caze) {
+	protected void play(CASE caze) {
 		played = true;
 		playSound(caze);
 		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX(), 80, caze));
@@ -152,9 +156,9 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	////////// COLLISION ////////////
 
-	private boolean onUp;
-	private boolean onDown;
-	private boolean validPos;
+	protected boolean onUp;
+	protected boolean onDown;
+	protected boolean validPos;
 
 	@Override
 	public boolean isBlockingSight() {

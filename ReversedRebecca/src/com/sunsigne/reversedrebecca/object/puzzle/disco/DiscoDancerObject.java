@@ -68,6 +68,19 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 			living.setY(y);
 	}
 
+	////////// FACING ////////////
+
+	public DIRECTION getFacing() {
+		if (living != null)
+			return living.getFacing();
+		return DIRECTION.NULL;
+	}
+
+	public void setFacing(DIRECTION facing) {
+		if (living != null)
+			living.setFacing(facing);
+	}
+
 	////////// LIT ////////////
 
 	public void lit(int delayInTicks) {

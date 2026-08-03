@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoAutoArrowObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoBallObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoPlayerArrowObject;
@@ -50,8 +51,10 @@ public abstract class DiscoPuzzle extends Puzzle {
 
 	public abstract DiscoDancerObject getDiscoDancer();
 
+	private DiscoDancerObject dancer;
+
 	protected void createDiscoDancer(DIRECTION position, int delayBeforeLitinTicks) {
-		DiscoDancerObject dancer = getDiscoDancer();
+		dancer = getDiscoDancer();
 		int col = position == DIRECTION.LEFT ? 0 : 7;
 		int gap = position == DIRECTION.LEFT ? 0 : Size.S;
 		dancer.setX(getCol(col + 2) + gap);
@@ -59,6 +62,11 @@ public abstract class DiscoPuzzle extends Puzzle {
 		dancer.lit(delayBeforeLitinTicks);
 
 		LAYER.PUZZLE.addObject(dancer);
+	}
+
+	public void updateDiscoDancerFacing(DIRECTION facing) {
+		if (dancer != null && dancer.isAutoplay())
+			dancer.setFacing(facing);
 	}
 
 	protected void createDiscoBall(DIRECTION position) {
@@ -76,15 +84,19 @@ public abstract class DiscoPuzzle extends Puzzle {
 		player_arrows = new DiscoPlayerArrowObject[4];
 		int col = position == DIRECTION.LEFT ? 1 : 7;
 		int gap = position == DIRECTION.LEFT ? Size.S : 0;
-		
+
 		facing = DIRECTION.LEFT;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col) + gap + Size.XS + Size.XS);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing,
+				getCol(col) + gap + Size.XS + Size.XS);
 		facing = DIRECTION.RIGHT;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 3) + gap + Size.XS + Size.L);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing,
+				getCol(col + 3) + gap + Size.XS + Size.L);
 		facing = DIRECTION.UP;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 1) + gap + Size.XS + Size.S);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing,
+				getCol(col + 1) + gap + Size.XS + Size.S);
 		facing = DIRECTION.DOWN;
-		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing, getCol(col + 2) + gap + Size.XS + Size.M);
+		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing,
+				getCol(col + 2) + gap + Size.XS + Size.M);
 
 		LAYER.PUZZLE.addObject(player_arrows[0]);
 		LAYER.PUZZLE.addObject(player_arrows[1]);
@@ -95,10 +107,21 @@ public abstract class DiscoPuzzle extends Puzzle {
 	private GameList<DiscoArrowObject> arrow_list = new GameList<>(LISTTYPE.ARRAY);
 
 	protected void createArrow(DIRECTION facing, int y) {
+		createArrow(facing, y, false);
+	}
+
+	protected void createArrow(DIRECTION facing, int y, boolean autoplay) {
 		int x = getPlayerArrow(facing).getX();
-		DiscoArrowObject arrow = new DiscoArrowObject(this, facing, x, y);
+		DiscoArrowObject arrow = getArrow(this, facing, x, y, autoplay);
 		arrow_list.addObject(arrow);
 		LAYER.PUZZLE.addObject(arrow);
+	}
+
+	private DiscoArrowObject getArrow(Puzzle puzzle, DIRECTION facing, int x, int y, boolean autoplay) {
+		if (autoplay)
+			return new DiscoAutoArrowObject(puzzle, facing, x, y);
+		else
+			return new DiscoArrowObject(puzzle, facing, x, y);
 	}
 
 	public void setArrowSpeed(int speed) {

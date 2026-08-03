@@ -51,14 +51,14 @@ public class YellowDiscoPuzzle extends DiscoPuzzle {
 	}
 
 	private void createPhase1() {
-		createArrow(DIRECTION.LEFT, getY(0));
-		createArrow(DIRECTION.LEFT, getY(2));
-		createArrow(DIRECTION.RIGHT, getY(4));
-		createArrow(DIRECTION.RIGHT, getY(6));
-		createArrow(DIRECTION.DOWN, getY(8));
-		createArrow(DIRECTION.DOWN, getY(10));
-		createArrow(DIRECTION.UP, getY(12));
-		createArrow(DIRECTION.UP, getY(14));
+		createArrow(DIRECTION.LEFT, getY(0), true);
+		createArrow(DIRECTION.LEFT, getY(2), true);
+		createArrow(DIRECTION.RIGHT, getY(4), true);
+		createArrow(DIRECTION.RIGHT, getY(6), true);
+		createArrow(DIRECTION.DOWN, getY(8), true);
+		createArrow(DIRECTION.DOWN, getY(10), true);
+		createArrow(DIRECTION.UP, getY(12), true);
+		createArrow(DIRECTION.UP, getY(14), true);
 	}
 
 	private void createPhase2() {
