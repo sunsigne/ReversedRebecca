@@ -46,7 +46,7 @@ public class DiscoAutoArrowObject extends DiscoArrowObject {
 		if (time < DELAY)
 			return;
 
-		if (new RandomGenerator().getBoolean())
+		if (new RandomGenerator().getBoolean(85))
 			play(CASE.PERFECT);
 		else
 			play(CASE.GOOD);

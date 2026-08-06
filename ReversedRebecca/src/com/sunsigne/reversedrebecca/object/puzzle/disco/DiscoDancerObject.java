@@ -92,8 +92,15 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 
 	////////// LIT ////////////
 
+	private DiscoFireObject fire;
+	
 	public void lit(int delayInTicks) {
-		DiscoFireObject fire = new DiscoFireObject(getPuzzle(), this, delayInTicks);
+		if(fire != null) {
+			fire.lit(delayInTicks);
+			return;
+		}
+		
+		fire = new DiscoFireObject(getPuzzle(), this, delayInTicks);
 
 		// adding right after the puzzle itself
 		LAYER.PUZZLE.getHandler().getList().add(1, fire);

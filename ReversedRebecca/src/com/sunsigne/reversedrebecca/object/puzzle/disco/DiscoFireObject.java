@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -18,7 +19,7 @@ public class DiscoFireObject extends PuzzleObject {
 		super(puzzle, false, 0, 0, 4 * Size.XL, 4 * Size.XL);
 		this.discoDancer = discoDancer;
 		this.delay = delayInTicks;
-		loadAnimations();
+		loadAnimations("red");
 	}
 
 	////////// NAME ////////////
@@ -45,6 +46,21 @@ public class DiscoFireObject extends PuzzleObject {
 	@Override
 	public int getY() {
 		return discoDancer.getY() - discoDancer.getHeight();
+	}
+
+	////////// LIT ////////////
+
+	private boolean blue;
+
+	public void lit(int delayInTicks) {
+		new GameTimer(delayInTicks, true, () -> {
+			if (blue)
+				loadAnimations("white");
+			else {
+				loadAnimations("blue");
+				blue = true;
+			}
+		});
 	}
 
 	////////// PHYSICS ////////////
@@ -74,8 +90,8 @@ public class DiscoFireObject extends PuzzleObject {
 
 	private Cycloid<BufferedImage> animation;
 
-	private void loadAnimations() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_fire");
+	private void loadAnimations(String color) {
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_fire_" + color);
 		Animation images = new Animation(sheet);
 		animation = new Cycloid<BufferedImage>(images.getImages());
 	}

@@ -19,6 +19,9 @@ public class DiscoBallObject extends PuzzleObject implements DiscoSwitchableSide
 		super(puzzle, false, 0, 0, Window.WIDHT, Window.HEIGHT);
 		loadAnimations();
 		this.position = position;
+		
+		if (position == DIRECTION.RIGHT)
+			setX(getX() + getWidth() / 2);
 	}
 
 	////////// NAME ////////////
@@ -36,7 +39,7 @@ public class DiscoBallObject extends PuzzleObject implements DiscoSwitchableSide
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TICK ////////////
@@ -72,11 +75,11 @@ public class DiscoBallObject extends PuzzleObject implements DiscoSwitchableSide
 
 	////////// RENDER ////////////
 
-	DIRECTION position;
+	private DIRECTION position;
 
 	@Override
 	public void render(Graphics g) {
-		int x = position == DIRECTION.LEFT ? getX() : getX() + getWidth();
+		int x = position == DIRECTION.LEFT ? getX() : getX() + getWidth() / 2;
 		int w = position == DIRECTION.LEFT ? getWidth() : -getWidth();
 		g.drawImage(getImage(), x, getY(), w, getHeight(), null);
 	}

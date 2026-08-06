@@ -80,18 +80,32 @@ public abstract class DiscoPuzzle extends Puzzle {
 			secondDancer.lit(delayBeforeLitinTicks);
 	}
 
-	public void switchSide(boolean everything, int delayBeforeSwitchSideinTicks) {
-		new GameTimer(delayBeforeSwitchSideinTicks, true, () -> switchSide(everything));
+	public void switchSide(int element, int delayBeforeSwitchSideinTicks) {
+		new GameTimer(delayBeforeSwitchSideinTicks, true, () -> switchSide(element));
 	}
 
-	private void switchSide(boolean everything) {
-		dancer.switchSide();
-		if (secondDancer != null)
-			secondDancer.switchSide();
+	private void switchSide(int element) {
+		if (element == 1 || element == 3) {
+			dancer.switchSide();
+			if (secondDancer != null)
+				secondDancer.switchSide();
+		}
+
+		if (element == 2 || element == 3) {
+			ball.switchSide();
+			if (secondBall != null)
+				secondBall.switchSide();
+		}
 	}
+
+	private DiscoBallObject ball;
+	private DiscoBallObject secondBall;
 
 	protected void createDiscoBall(DIRECTION position) {
-		LAYER.PUZZLE.addObject(new DiscoBallObject(this, position));
+		if (ball != null)
+			secondBall = ball;
+		ball = new DiscoBallObject(this, position);
+		LAYER.PUZZLE.addObject(ball);
 	}
 
 	private DiscoPlayerArrowObject[] player_arrows;
