@@ -14,8 +14,9 @@ import com.sunsigne.reversedrebecca.system.Size;
 
 public class DiscoFireObject extends PuzzleObject {
 
-	public DiscoFireObject(Puzzle puzzle, int delayInTicks) {
+	public DiscoFireObject(Puzzle puzzle, DiscoDancerObject discoDancer, int delayInTicks) {
 		super(puzzle, false, 0, 0, 4 * Size.XL, 4 * Size.XL);
+		this.discoDancer = discoDancer;
 		this.delay = delayInTicks;
 		loadAnimations();
 	}
@@ -29,6 +30,21 @@ public class DiscoFireObject extends PuzzleObject {
 	@Override
 	public String toString() {
 		return "PUZZLE : " + getName();
+	}
+
+	////////// POSITION ////////////
+
+	private DiscoDancerObject discoDancer;
+
+	@Override
+	public int getX() {
+		return discoDancer.getX() - discoDancer.getWidth() / 2;
+
+	}
+
+	@Override
+	public int getY() {
+		return discoDancer.getY() - discoDancer.getHeight();
 	}
 
 	////////// PHYSICS ////////////

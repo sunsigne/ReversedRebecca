@@ -31,10 +31,11 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 	public void createPuzzle() {
 		createPlayerArrows(DIRECTION.RIGHT);
 		createDiscoBall(DIRECTION.LEFT);
-		createDiscoDancer(DIRECTION.LEFT, 18 * Game.SEC - 10);
-
+		createDiscoDancer(DIRECTION.LEFT);
+		
 		createPhase1();
 		createPhase2();
+		litDiscoDancer(18 * Game.SEC - 10);
 		createPhase3();
 		createPhase4();
 		createPhase5();

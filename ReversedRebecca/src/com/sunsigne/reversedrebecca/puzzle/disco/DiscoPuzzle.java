@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoAutoArrowObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoBallObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoPlayerArrowObject;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -53,14 +54,16 @@ public abstract class DiscoPuzzle extends Puzzle {
 	public abstract DiscoDancerObject getDiscoDancer();
 
 	private DiscoDancerObject dancer;
+	private DiscoDancerObject secondDancer;
 
-	protected void createDiscoDancer(DIRECTION position, int delayBeforeLitinTicks) {
+	protected void createDiscoDancer(DIRECTION position) {
+		if (dancer != null)
+			secondDancer = dancer;
 		dancer = getDiscoDancer();
 		int col = position == DIRECTION.LEFT ? 0 : 7;
 		int gap = position == DIRECTION.LEFT ? 0 : Size.S;
 		dancer.setX(getCol(col + 2) + gap);
 		dancer.setY(getRow(4));
-		dancer.lit(delayBeforeLitinTicks);
 
 		LAYER.PUZZLE.addObject(dancer);
 	}
@@ -68,6 +71,23 @@ public abstract class DiscoPuzzle extends Puzzle {
 	public void updateDiscoDancerFacing(DIRECTION facing) {
 		if (dancer != null && dancer.isAutoplay())
 			dancer.setFacing(facing);
+	}
+
+	public void litDiscoDancer(int delayBeforeLitinTicks) {
+		if (dancer != null)
+			dancer.lit(delayBeforeLitinTicks);
+		if (secondDancer != null)
+			secondDancer.lit(delayBeforeLitinTicks);
+	}
+
+	public void switchSide(boolean everything, int delayBeforeSwitchSideinTicks) {
+		new GameTimer(delayBeforeSwitchSideinTicks, true, () -> switchSide(everything));
+	}
+
+	private void switchSide(boolean everything) {
+		dancer.switchSide();
+		if (secondDancer != null)
+			secondDancer.switchSide();
 	}
 
 	protected void createDiscoBall(DIRECTION position) {
@@ -83,8 +103,21 @@ public abstract class DiscoPuzzle extends Puzzle {
 	protected void createPlayerArrows(DIRECTION position) {
 		DIRECTION facing;
 		player_arrows = new DiscoPlayerArrowObject[4];
-		int col = position == DIRECTION.LEFT ? 1 : 7;
-		int gap = position == DIRECTION.LEFT ? Size.S : 0;
+
+		int col = 4;
+		int gap = 0;
+
+		switch (position) {
+		case LEFT:
+			col = 1;
+			gap = Size.S;
+			break;
+		case RIGHT:
+			col = 7;
+			break;
+		default:
+			break;
+		}
 
 		facing = DIRECTION.LEFT;
 		player_arrows[facing.getNum()] = new DiscoPlayerArrowObject(this, facing,

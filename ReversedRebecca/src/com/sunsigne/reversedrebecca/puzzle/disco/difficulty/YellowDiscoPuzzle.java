@@ -31,7 +31,7 @@ public class YellowDiscoPuzzle extends DiscoPuzzle {
 	public void createPuzzle() {
 		createPlayerArrows(DIRECTION.LEFT);
 		createDiscoBall(DIRECTION.RIGHT);
-		createDiscoDancer(DIRECTION.RIGHT, 18 * Game.SEC - 10);
+		createDiscoDancer(DIRECTION.RIGHT);
 
 		createPhase1();
 		createPhase2();

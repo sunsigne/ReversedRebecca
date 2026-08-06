@@ -23,7 +23,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
+public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSide, KeyboardEvent {
 
 	public DiscoDancerObject(Puzzle puzzle, String name, boolean autoplay) {
 		super(puzzle, false, 0, 0, 2 * Size.XL, 2 * Size.XL);
@@ -93,9 +93,7 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 	////////// LIT ////////////
 
 	public void lit(int delayInTicks) {
-		DiscoFireObject fire = new DiscoFireObject(getPuzzle(), delayInTicks);
-		fire.setX(getX() - getWidth() / 2);
-		fire.setY(getY() - getHeight());
+		DiscoFireObject fire = new DiscoFireObject(getPuzzle(), this, delayInTicks);
 
 		// adding right after the puzzle itself
 		LAYER.PUZZLE.getHandler().getList().add(1, fire);
@@ -106,7 +104,7 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TICK ////////////

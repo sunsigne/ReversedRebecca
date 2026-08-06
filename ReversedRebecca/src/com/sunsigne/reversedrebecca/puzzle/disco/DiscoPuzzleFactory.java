@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.CyanDiscoPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.RedDiscoPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.YellowDiscoPuzzle;
 
 public class DiscoPuzzleFactory implements PuzzleFactory {
@@ -23,7 +24,7 @@ public class DiscoPuzzleFactory implements PuzzleFactory {
 		case YELLOW:
 			return new YellowDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new YellowDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new RedDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		default:
 			autoWin(actionOnWinning);
 			return null;

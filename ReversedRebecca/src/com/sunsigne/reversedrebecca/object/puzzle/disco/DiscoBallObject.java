@@ -13,7 +13,7 @@ import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Window;
 
-public class DiscoBallObject extends PuzzleObject {
+public class DiscoBallObject extends PuzzleObject implements DiscoSwitchableSide {
 
 	public DiscoBallObject(Puzzle puzzle, DIRECTION position) {
 		super(puzzle, false, 0, 0, Window.WIDHT, Window.HEIGHT);
