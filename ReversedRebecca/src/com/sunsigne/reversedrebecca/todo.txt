@@ -61,6 +61,7 @@
 		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 		- gamepad (les 4 boutons)
 		- changer les bords (les murs) pour des flêches/boutons de gamepad, pour les utiliser en phase 3
+		- mettre la musique disco dans le "pause preventer"
 
 	karma :
 		+ aider tt le monde

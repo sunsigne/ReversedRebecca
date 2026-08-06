@@ -19,7 +19,7 @@ public class YellowDiscoPuzzle extends DiscoPuzzle {
 
 	@Override
 	public int getTimer() {
-		return 30 * Game.SEC;
+		return (int) (18.2f * (float) Game.SEC);
 	}
 
 	@Override
@@ -43,78 +43,80 @@ public class YellowDiscoPuzzle extends DiscoPuzzle {
 	}
 
 	private int getY(int num) {
-		int start = 18;
+		int start = 3;
 		int gap = 7;
-		int puzzle = 40; // only because Puzzle start the music
+		int puzzle = 120; // only because Puzzle start the music
 
 		return getRow(start + num) + num * gap + puzzle;
 	}
 
 	private void createPhase1() {
-		createArrow(DIRECTION.LEFT, getY(0), true);
-		createArrow(DIRECTION.LEFT, getY(2), true);
-		createArrow(DIRECTION.RIGHT, getY(4), true);
-		createArrow(DIRECTION.RIGHT, getY(6), true);
-		createArrow(DIRECTION.DOWN, getY(8), true);
-		createArrow(DIRECTION.DOWN, getY(10), true);
+		createArrow(DIRECTION.UP, getY(0), true);
+		createArrow(DIRECTION.DOWN, getY(2), true);
+		createArrow(DIRECTION.UP, getY(4), true);
+		createArrow(DIRECTION.DOWN, getY(6), true);
+		createArrow(DIRECTION.LEFT, getY(8), true);
+		createArrow(DIRECTION.RIGHT, getY(9), true);
+		createArrow(DIRECTION.LEFT, getY(10), true);
+		createArrow(DIRECTION.RIGHT, getY(11), true);
 		createArrow(DIRECTION.UP, getY(12), true);
-		createArrow(DIRECTION.UP, getY(14), true);
+		createArrow(DIRECTION.DOWN, getY(13), true);
+		createArrow(DIRECTION.LEFT, getY(14), true);
+		createArrow(DIRECTION.RIGHT, getY(15), true);
 	}
 
 	private void createPhase2() {
-		createArrow(DIRECTION.LEFT, getY(16));
-		createArrow(DIRECTION.LEFT, getY(17));
-		createArrow(DIRECTION.LEFT, getY(18));
-		createArrow(DIRECTION.LEFT, getY(19));
-		createArrow(DIRECTION.RIGHT, getY(20));
-		createArrow(DIRECTION.RIGHT, getY(21));
-		createArrow(DIRECTION.RIGHT, getY(22));
-		createArrow(DIRECTION.RIGHT, getY(23));
-		createArrow(DIRECTION.UP, getY(24));
-		createArrow(DIRECTION.UP, getY(25));
-		createArrow(DIRECTION.DOWN, getY(26));
-		createArrow(DIRECTION.DOWN, getY(27));
-		createArrow(DIRECTION.LEFT, getY(28));
-		createArrow(DIRECTION.RIGHT, getY(29));
-		createArrow(DIRECTION.LEFT, getY(30));
-		createArrow(DIRECTION.RIGHT, getY(31));
+		createArrow(DIRECTION.UP, getY(16), true);
+		createArrow(DIRECTION.DOWN, getY(17), true);
+		createArrow(DIRECTION.RIGHT, getY(18), true);
+		createArrow(DIRECTION.LEFT, getY(19), true);
+		createArrow(DIRECTION.DOWN, getY(20), true);
+		createArrow(DIRECTION.DOWN, getY(21), true);
+		createArrow(DIRECTION.RIGHT, getY(22), true);
+		createArrow(DIRECTION.LEFT, getY(23), true);
+		
+		
 	}
 
 	private void createPhase3() {
-		createArrow(DIRECTION.LEFT, getY(32));
-		createArrow(DIRECTION.LEFT, getY(34));
-		createArrow(DIRECTION.RIGHT, getY(36));
-		createArrow(DIRECTION.RIGHT, getY(38));
-		createArrow(DIRECTION.UP, getY(40));
-		createArrow(DIRECTION.DOWN, getY(42));
-		createArrow(DIRECTION.LEFT, getY(44));
-		createArrow(DIRECTION.RIGHT, getY(45));
-		createArrow(DIRECTION.LEFT, getY(46));
-		createArrow(DIRECTION.RIGHT, getY(47));
+		createArrow(DIRECTION.UP, getY(24), true);
+		createArrow(DIRECTION.DOWN, getY(24), true);
+		createArrow(DIRECTION.UP, getY(25), true);
+		createArrow(DIRECTION.DOWN, getY(25), true);
+		createArrow(DIRECTION.LEFT, getY(26), true);
+		createArrow(DIRECTION.RIGHT, getY(26), true);
+		createArrow(DIRECTION.LEFT, getY(27), true);
+		createArrow(DIRECTION.RIGHT, getY(27), true);
+		createArrow(DIRECTION.UP, getY(28), true);
+		createArrow(DIRECTION.DOWN, getY(28), true);
+		createArrow(DIRECTION.LEFT, getY(29), true);
+		createArrow(DIRECTION.RIGHT, getY(29), true);
 	}
 
 	private void createPhase4() {
-		createArrow(DIRECTION.LEFT, getY(48));
-		createArrow(DIRECTION.LEFT, getY(49));
-		createArrow(DIRECTION.RIGHT, getY(50));
-		createArrow(DIRECTION.RIGHT, getY(51));
-		createArrow(DIRECTION.UP, getY(52));
-		createArrow(DIRECTION.UP, getY(53));
-		createArrow(DIRECTION.UP, getY(54));
-		createArrow(DIRECTION.UP, getY(55));
-		createArrow(DIRECTION.DOWN, getY(56));
-		createArrow(DIRECTION.DOWN, getY(57));
-		createArrow(DIRECTION.DOWN, getY(58));
-		createArrow(DIRECTION.DOWN, getY(59));
-		createArrow(DIRECTION.LEFT, getY(60));
-		createArrow(DIRECTION.LEFT, getY(61));
-		createArrow(DIRECTION.RIGHT, getY(62));
-		createArrow(DIRECTION.RIGHT, getY(63));
+		createArrow(DIRECTION.LEFT, getY(30), true);
+		createArrow(DIRECTION.UP, getY(31), true);
+		createArrow(DIRECTION.RIGHT, getY(32), true);
+		createArrow(DIRECTION.DOWN, getY(33), true);
+		createArrow(DIRECTION.LEFT, getY(34), true);
+		createArrow(DIRECTION.UP, getY(35), true);
+		createArrow(DIRECTION.RIGHT, getY(36), true);
+		createArrow(DIRECTION.DOWN, getY(37), true);
+		createArrow(DIRECTION.LEFT, getY(38), true);
+		createArrow(DIRECTION.DOWN, getY(39), true);
+		createArrow(DIRECTION.LEFT, getY(40), true);
+		createArrow(DIRECTION.DOWN, getY(41), true);
+		createArrow(DIRECTION.RIGHT, getY(42), true);
+		createArrow(DIRECTION.DOWN, getY(43), true);
+		createArrow(DIRECTION.RIGHT, getY(44), true);
+		createArrow(DIRECTION.DOWN, getY(45), true);
 	}
 
 	private void createPhase5() {
-		createArrow(DIRECTION.UP, getY(64));
-		createArrow(DIRECTION.DOWN, getY(64));
+		createArrow(DIRECTION.LEFT, getY(46), true);
+		createArrow(DIRECTION.UP, getY(46), true);
+		createArrow(DIRECTION.RIGHT, getY(46), true);
+		createArrow(DIRECTION.DOWN, getY(46), true);
 	}
 
 }
