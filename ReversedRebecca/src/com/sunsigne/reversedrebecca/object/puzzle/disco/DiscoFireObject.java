@@ -50,17 +50,8 @@ public class DiscoFireObject extends PuzzleObject {
 
 	////////// LIT ////////////
 
-	private boolean blue;
-
 	public void lit(int delayInTicks) {
-		new GameTimer(delayInTicks, true, () -> {
-			if (blue)
-				loadAnimations("white");
-			else {
-				loadAnimations("blue");
-				blue = true;
-			}
-		});
+		new GameTimer(delayInTicks, true, () -> loadAnimations("blue"));
 	}
 
 	////////// PHYSICS ////////////

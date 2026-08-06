@@ -24,6 +24,10 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	}
 
 	private DIRECTION facing;
+	
+	public DIRECTION getFacing() {
+		return facing;
+	}
 
 	////////// NAME ////////////
 

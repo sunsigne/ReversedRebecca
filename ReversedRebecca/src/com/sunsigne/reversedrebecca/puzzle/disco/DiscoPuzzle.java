@@ -2,15 +2,19 @@ package com.sunsigne.reversedrebecca.puzzle.disco;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzle.WallPuzzle;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowObject;
+import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoArrowWallObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoAutoArrowObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoBallObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoPlayerArrowObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
+import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -23,6 +27,7 @@ import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
+import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
 public abstract class DiscoPuzzle extends Puzzle {
 
@@ -187,6 +192,12 @@ public abstract class DiscoPuzzle extends Puzzle {
 		for (DiscoArrowObject tempArrow : arrow_list.getList())
 			tempArrow.setVelY(-speed);
 	}
+	
+	protected void activateArrowWall() {
+		var arrow = new RandomGenerator().getElementFromList(arrow_wall_list);
+		arrow_wall_list.removeObject(arrow);
+		arrow.activate(player_arrows);
+	}
 
 	////////// TOOL ////////////
 
@@ -223,6 +234,48 @@ public abstract class DiscoPuzzle extends Puzzle {
 	@Override
 	public int getSheetColCriterion() {
 		return 5;
+	}
+
+	private DIRECTION getRandomFacing() {
+		var rad = new RandomGenerator();
+
+		if (rad.getBoolean())
+			return rad.getBoolean() ? DIRECTION.LEFT : DIRECTION.RIGHT;
+		else
+			return rad.getBoolean() ? DIRECTION.UP : DIRECTION.DOWN;
+	}
+
+	private GameList<DiscoArrowWallObject> arrow_wall_list = new GameList<>(LISTTYPE.ARRAY);
+
+	@Override
+	protected void createWallBorder() {
+
+		Handler handler = LAYER.PUZZLE.getHandler();
+		BufferedImage image = getWallTexture();
+		DiscoArrowWallObject arrow;
+
+		for (int col = 0; col < 14; col++) {
+			handler.addObject(new WallPuzzle(image, getCol(col), getRow(0)));
+			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(col), getRow(0));
+			handler.addObject(arrow);
+			arrow_wall_list.addObject(arrow);
+
+			handler.addObject(new WallPuzzle(col != 13 ? image : getWallTexture(true), getCol(col), getRow(7)));
+			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(col), getRow(7));
+			handler.addObject(arrow);
+			arrow_wall_list.addObject(arrow);
+
+		}
+		for (int row = 1; row < 7; row++) {
+			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
+			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(0), getRow(row));
+			handler.addObject(arrow);
+			arrow_wall_list.addObject(arrow);
+			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
+			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(13), getRow(row));
+			handler.addObject(arrow);
+			arrow_wall_list.addObject(arrow);
+		}
 	}
 
 	////////// RENDER ////////////

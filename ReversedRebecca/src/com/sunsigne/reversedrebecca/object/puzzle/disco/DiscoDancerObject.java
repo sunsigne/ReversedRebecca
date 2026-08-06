@@ -97,6 +97,7 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 	public void lit(int delayInTicks) {
 		if(fire != null) {
 			fire.lit(delayInTicks);
+			fire = null;
 			return;
 		}
 		

@@ -44,9 +44,12 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		
 		createPlayerArrows(DIRECTION.UP);
 		
-		createPhase1(0);
+		//createPhase1(0);
 		createPhase1(65);
 		createPhase1(155);
+		createPhase2(225);
+		createPhase2(257);
+		createPhase3(289);
 		
 		// phase 1
 		setArrowSpeed(6);
@@ -58,22 +61,23 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		new GameTimer(38 * Game.SEC, true, () -> setArrowSpeed(18));
 		
 		// phase 2
-		new GameTimer(49 * Game.SEC, true, () -> setArrowSpeed(6));
-
-		
-		
-		
-		
+		new GameTimer((int) (48.5f * (float) Game.SEC), true, () -> setArrowSpeed(6));
 		switchSide(dancer, 8 * time);
 		switchSide(balls, 11 * time);
-		// litDiscoDancer 11
+		new GameTimer(11 * time, true, () -> litDiscoDancer(0));
 		switchSide(everything, 12 * time);
 
+		// phase 3
+		switchSide(dancer, 15 * time);
+		switchSide(balls, 16 * time);
+		switchSide(everything, 17 * time);
+		new GameTimer(17 * time, true, () -> litDiscoDancer(0));
+		switchSide(everything, 18 * time);
+		
 		createDiscoBall(DIRECTION.LEFT);
 		createDiscoBall(DIRECTION.RIGHT);
 		createDiscoDancer(DIRECTION.LEFT);
-		createDiscoDancer(DIRECTION.RIGHT);
-		new GameTimer(11 * time, true, () -> litDiscoDancer(11 * time));
+		createDiscoDancer(DIRECTION.RIGHT);		
 	}
 
 	private int getY(int num) {
@@ -133,6 +137,49 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		createArrow(DIRECTION.RIGHT, getY(delay + 52));
 		createArrow(DIRECTION.DOWN, getY(delay + 54), true);
 		createArrow(DIRECTION.DOWN, getY(delay + 56));
+	}
+	
+	private void createPhase2(int delay) {
+		createArrow(DIRECTION.LEFT, getY(delay + 0));
+		createArrow(DIRECTION.UP, getY(delay + 2), true);
+		createArrow(DIRECTION.RIGHT, getY(delay + 4));
+		createArrow(DIRECTION.DOWN, getY(delay + 6), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 8));
+		createArrow(DIRECTION.RIGHT, getY(delay + 10), true);
+		createArrow(DIRECTION.UP, getY(delay + 12));
+		createArrow(DIRECTION.DOWN, getY(delay + 14), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 16));
+		createArrow(DIRECTION.RIGHT, getY(delay + 16), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 17));
+		createArrow(DIRECTION.RIGHT, getY(delay + 17), true);
+		createArrow(DIRECTION.UP, getY(delay + 18));
+		createArrow(DIRECTION.LEFT, getY(delay + 18), true);
+		createArrow(DIRECTION.DOWN, getY(delay + 19));
+		createArrow(DIRECTION.UP, getY(delay + 19), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 20));
+		createArrow(DIRECTION.DOWN, getY(delay + 20), true);
+		createArrow(DIRECTION.RIGHT, getY(delay + 21));
+		createArrow(DIRECTION.LEFT, getY(delay + 21), true);
+		createArrow(DIRECTION.UP, getY(delay + 22));
+		createArrow(DIRECTION.RIGHT, getY(delay + 22), true);
+		createArrow(DIRECTION.DOWN, getY(delay + 23));
+		createArrow(DIRECTION.UP, getY(delay + 23), true);
+		createArrow(DIRECTION.UP, getY(delay + 24));
+		createArrow(DIRECTION.DOWN, getY(delay + 24), true);
+		createArrow(DIRECTION.UP, getY(delay + 25));
+		createArrow(DIRECTION.RIGHT, getY(delay + 25), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 26));
+		createArrow(DIRECTION.RIGHT, getY(delay + 26), true);
+		createArrow(DIRECTION.DOWN, getY(delay + 27));
+		createArrow(DIRECTION.RIGHT, getY(delay + 27), true);
+		createArrow(DIRECTION.LEFT, getY(delay + 28));
+		createArrow(DIRECTION.UP, getY(delay + 29), true);
+		createArrow(DIRECTION.RIGHT, getY(delay + 30));
+		createArrow(DIRECTION.DOWN, getY(delay + 31), true);
+	}
+	
+	private void createPhase3(int delay) {
+		
 	}
 	
 }

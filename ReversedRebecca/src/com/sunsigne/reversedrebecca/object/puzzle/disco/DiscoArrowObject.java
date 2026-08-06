@@ -122,7 +122,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	////////// TEXTURE ////////////
 
-	private BufferedImage image;
+	protected BufferedImage image;
 
 	@Override
 	public int getSheetSize() {
