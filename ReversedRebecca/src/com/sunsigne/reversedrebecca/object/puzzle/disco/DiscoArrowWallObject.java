@@ -39,8 +39,8 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 		float diffY = getY() - player.getY();
 		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2)) / 6;
 
-		setVelX(2 * Math.round((-1 / distance) * diffX));
-		setVelY(2 * Math.round((-1 / distance) * diffY));
+		setVelX(1 * Math.round((-1 / distance) * diffX));
+		setVelY(1 * Math.round((-1 / distance) * diffY));
 	}
 
 	////////// TEXTURE ////////////

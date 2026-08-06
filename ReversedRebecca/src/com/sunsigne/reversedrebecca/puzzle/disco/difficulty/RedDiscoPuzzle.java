@@ -37,29 +37,29 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 	@Override
 	public void createPuzzle() {
 		int time = 6 * Game.SEC;
-		
+
 		int dancer = 1;
 		int balls = 2;
 		int everything = 3;
-		
+
 		createPlayerArrows(DIRECTION.UP);
-		
-		//createPhase1(0);
+
+		createPhase1(0);
 		createPhase1(65);
 		createPhase1(155);
 		createPhase2(225);
 		createPhase2(257);
 		createPhase3(289);
-		
+
 		// phase 1
 		setArrowSpeed(6);
-		switchSide(dancer, 2*time);
-		switchSide(balls, 4*time);
+		switchSide(dancer, 2 * time);
+		switchSide(balls, 4 * time);
 		new GameTimer((int) (24.2f * (float) Game.SEC), true, () -> setArrowSpeed(12));
-		new GameTimer(6*time, true, () -> litDiscoDancer(0));
-		switchSide(everything, 6*time);
+		new GameTimer(6 * time, true, () -> litDiscoDancer(0));
+		switchSide(everything, 6 * time);
 		new GameTimer(38 * Game.SEC, true, () -> setArrowSpeed(18));
-		
+
 		// phase 2
 		new GameTimer((int) (48.5f * (float) Game.SEC), true, () -> setArrowSpeed(6));
 		switchSide(dancer, 8 * time);
@@ -68,16 +68,18 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		switchSide(everything, 12 * time);
 
 		// phase 3
+		new GameTimer(12 * time, true, () -> setArrowWallDelay(90));
+
 		switchSide(dancer, 15 * time);
 		switchSide(balls, 16 * time);
 		switchSide(everything, 17 * time);
 		new GameTimer(17 * time, true, () -> litDiscoDancer(0));
 		switchSide(everything, 18 * time);
-		
+
 		createDiscoBall(DIRECTION.LEFT);
 		createDiscoBall(DIRECTION.RIGHT);
 		createDiscoDancer(DIRECTION.LEFT);
-		createDiscoDancer(DIRECTION.RIGHT);		
+		createDiscoDancer(DIRECTION.RIGHT);
 	}
 
 	private int getY(int num) {
@@ -87,7 +89,6 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 
 		return getRow(start + num) + num * gap + puzzle;
 	}
-
 
 	private void createPhase1(int delay) {
 		createArrow(DIRECTION.LEFT, getY(delay + 0));
@@ -138,7 +139,7 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		createArrow(DIRECTION.DOWN, getY(delay + 54), true);
 		createArrow(DIRECTION.DOWN, getY(delay + 56));
 	}
-	
+
 	private void createPhase2(int delay) {
 		createArrow(DIRECTION.LEFT, getY(delay + 0));
 		createArrow(DIRECTION.UP, getY(delay + 2), true);
@@ -177,9 +178,9 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		createArrow(DIRECTION.RIGHT, getY(delay + 30));
 		createArrow(DIRECTION.DOWN, getY(delay + 31), true);
 	}
-	
+
 	private void createPhase3(int delay) {
-		
+
 	}
-	
+
 }

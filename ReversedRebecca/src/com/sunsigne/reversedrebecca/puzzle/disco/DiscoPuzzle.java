@@ -192,8 +192,11 @@ public abstract class DiscoPuzzle extends Puzzle {
 		for (DiscoArrowObject tempArrow : arrow_list.getList())
 			tempArrow.setVelY(-speed);
 	}
-	
-	protected void activateArrowWall() {
+
+	protected void activateRadArrowWall() {
+		if (arrow_wall_list.getList().isEmpty())
+			return;
+
 		var arrow = new RandomGenerator().getElementFromList(arrow_wall_list);
 		arrow_wall_list.removeObject(arrow);
 		arrow.activate(player_arrows);
@@ -221,12 +224,20 @@ public abstract class DiscoPuzzle extends Puzzle {
 	////////// TICK ////////////
 
 	private int time;
+	private int arrow_wall_delay;
+
+	protected void setArrowWallDelay(int arrow_wall_delay) {
+		this.arrow_wall_delay = arrow_wall_delay;
+	}
 
 	@Override
 	public void tick() {
 		time++;
 		if (time >= getTimer())
 			closePuzzle(true);
+
+		if (arrow_wall_delay != 0 && time % arrow_wall_delay == 0)
+			activateRadArrowWall();
 	}
 
 	////////// TEXTURE ////////////
