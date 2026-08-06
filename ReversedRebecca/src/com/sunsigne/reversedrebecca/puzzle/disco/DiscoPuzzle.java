@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 
@@ -118,6 +119,17 @@ public abstract class DiscoPuzzle extends Puzzle {
 	}
 
 	private DiscoArrowObject getArrow(Puzzle puzzle, DIRECTION facing, int x, int y, boolean autoplay) {
+		switch (DifficultyOption.getDifficulty()) {
+		case EASY:
+			autoplay = true;
+			break;
+		case NORMAL:
+			break;
+		case HARD:
+			autoplay = false;
+			break;
+		}
+
 		if (autoplay)
 			return new DiscoAutoArrowObject(puzzle, facing, x, y);
 		else

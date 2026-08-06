@@ -9,7 +9,6 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.CyanDiscoPuzzle;
 import com.sunsigne.reversedrebecca.puzzle.disco.difficulty.YellowDiscoPuzzle;
-import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class DiscoPuzzleFactory implements PuzzleFactory {
 
@@ -18,106 +17,17 @@ public class DiscoPuzzleFactory implements PuzzleFactory {
 	@Override
 	public Puzzle createPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
-		if (devDifficulty != null)
-			return createDevPuzzle(devDifficulty, toolPlayer, actionOnWinning, actionOnLosing);
-
-		switch (DifficultyOption.getDifficulty()) {
-		case EASY:
-			return createEasyPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
-		case NORMAL:
-			return createNormalPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
-		case HARD:
-			return createHardPuzzle(difficulty, toolPlayer, actionOnWinning, actionOnLosing);
-		}
-
-		// should not occurs
-		return null;
-	}
-
-	private Puzzle createDevPuzzle(DEV_LVL devDifficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
-			GenericListener actionOnLosing) {
-		switch (devDifficulty) {
-		case EASIEST:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case EASIER:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case HARDER:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case HARDEST:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		}
-
-		// should not occurs
-		return null;
-	}
-
-	private Puzzle createEasyPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
-			GenericListener actionOnLosing) {
 		switch (difficulty) {
-		case NULL:
 		case CYAN:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case GREEN:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case YELLOW:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case ORANGE:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case RED:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case PURPLE:
-			autoWin(actionOnWinning);
-			return null;
-		}
-
-		// should not occurs
-		return null;
-	}
-
-	public Puzzle createNormalPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
-			GenericListener actionOnLosing) {
-		switch (difficulty) {
-		case NULL:
-		case CYAN:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case GREEN:
 			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
 			return new YellowDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case ORANGE:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case PURPLE:
+			return new YellowDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+		default:
 			autoWin(actionOnWinning);
 			return null;
 		}
-
-		// should not occurs
-		return null;
-	}
-
-	public Puzzle createHardPuzzle(LVL difficulty, ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
-			GenericListener actionOnLosing) {
-		switch (difficulty) {
-		case NULL:
-		case CYAN:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case GREEN:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case YELLOW:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case ORANGE:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case RED:
-			return new CyanDiscoPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
-		case PURPLE:
-			autoWin(actionOnWinning);
-			return null;
-		}
-
-		// should not occurs
-		return null;
 	}
 
 	////////// SOUND ////////////

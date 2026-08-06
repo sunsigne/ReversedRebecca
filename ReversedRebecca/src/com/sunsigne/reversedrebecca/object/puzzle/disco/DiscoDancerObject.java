@@ -13,6 +13,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
@@ -36,6 +37,14 @@ public class DiscoDancerObject extends PuzzleObject implements KeyboardEvent {
 	private boolean autoplay;
 
 	public boolean isAutoplay() {
+		switch (DifficultyOption.getDifficulty()) {
+		case EASY:
+			return true;
+		case NORMAL:
+			return autoplay;
+		case HARD:
+			return false;
+		}
 		return autoplay;
 	}
 

@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.system;
 
 import java.io.File;
 
+import com.sunsigne.reversedrebecca.Infos;
 import com.sunsigne.reversedrebecca.characteristics.Characteristic;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.pattern.ForceInit;
@@ -51,7 +52,7 @@ public class RessourceLoader {
 		new Achievements().loadRessources();
 		new PausePreventer().loadRessources();
 
-		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD)
+		if (DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD && Infos.IS_DEV_VERSION == false)
 			new Save().resetProgression();
 	}
 
