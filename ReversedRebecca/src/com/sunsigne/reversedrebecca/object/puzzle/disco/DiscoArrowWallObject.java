@@ -9,6 +9,7 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 
 	public DiscoArrowWallObject(Puzzle puzzle, DIRECTION facing, int x, int y) {
 		super(puzzle, facing, x, y);
+		speed = 1;
 	}
 
 	////////// NAME ////////////
@@ -33,14 +34,20 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 			if (getFacing() == temp_player_arrows.getFacing())
 				movingToPlayerArrow(temp_player_arrows);
 	}
+	
+	private int speed;
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 
 	public void movingToPlayerArrow(DiscoPlayerArrowObject player) {
 		float diffX = getX() - player.getX();
 		float diffY = getY() - player.getY();
 		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2)) / 6;
 
-		setVelX(1 * Math.round((-1 / distance) * diffX));
-		setVelY(1 * Math.round((-1 / distance) * diffY));
+		setVelX(speed * Math.round((-1 / distance) * diffX));
+		setVelY(speed * Math.round((-1 / distance) * diffY));
 	}
 
 	////////// TEXTURE ////////////

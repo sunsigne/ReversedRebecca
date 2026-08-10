@@ -193,6 +193,16 @@ public abstract class DiscoPuzzle extends Puzzle {
 			tempArrow.setVelY(-speed);
 	}
 
+	public void setArrowSpeed(int speed, boolean arrow_wall) {
+		if (arrow_wall == false) {
+			setArrowSpeed(speed);
+			return;
+		}
+
+		for (DiscoArrowWallObject tempArrow : arrow_wall_list.getList())
+			tempArrow.setSpeed(speed);
+	}
+
 	protected void activateRadArrowWall() {
 		if (arrow_wall_list.getList().isEmpty())
 			return;
