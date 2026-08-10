@@ -98,6 +98,8 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 		g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
 	}
 
+	////////// COLLISION ////////////
+	
 	@Override
 	public Rectangle getBounds(DIRECTION direction) {
 		switch (direction) {

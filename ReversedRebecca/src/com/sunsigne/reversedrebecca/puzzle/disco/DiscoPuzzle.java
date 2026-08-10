@@ -277,22 +277,29 @@ public abstract class DiscoPuzzle extends Puzzle {
 
 		for (int col = 0; col < 14; col++) {
 			handler.addObject(new WallPuzzle(image, getCol(col), getRow(0)));
+			handler.addObject(new WallPuzzle(col != 13 ? image : getWallTexture(true), getCol(col), getRow(7)));
+
+		}
+		for (int row = 1; row < 7; row++) {
+			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
+			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
+		}
+
+		for (int col = 0; col < 14; col++) {
 			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(col), getRow(0));
 			handler.addObject(arrow);
 			arrow_wall_list.addObject(arrow);
 
-			handler.addObject(new WallPuzzle(col != 13 ? image : getWallTexture(true), getCol(col), getRow(7)));
 			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(col), getRow(7));
 			handler.addObject(arrow);
 			arrow_wall_list.addObject(arrow);
 
 		}
 		for (int row = 1; row < 7; row++) {
-			handler.addObject(new WallPuzzle(image, getCol(0), getRow(row)));
 			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(0), getRow(row));
 			handler.addObject(arrow);
 			arrow_wall_list.addObject(arrow);
-			handler.addObject(new WallPuzzle(image, getCol(13), getRow(row)));
+
 			arrow = new DiscoArrowWallObject(this, getRandomFacing(), getCol(13), getRow(row));
 			handler.addObject(arrow);
 			arrow_wall_list.addObject(arrow);

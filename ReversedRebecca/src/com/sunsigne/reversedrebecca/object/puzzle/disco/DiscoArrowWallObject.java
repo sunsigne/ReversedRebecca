@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzle.disco;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -10,6 +11,8 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 	public DiscoArrowWallObject(Puzzle puzzle, DIRECTION facing, int x, int y) {
 		super(puzzle, facing, x, y);
 		speed = 1;
+		this.x = getX();
+		this.y = getY();
 	}
 
 	////////// NAME ////////////
@@ -34,20 +37,41 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 			if (getFacing() == temp_player_arrows.getFacing())
 				movingToPlayerArrow(temp_player_arrows);
 	}
-	
+
 	private int speed;
-	
+
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
 
 	public void movingToPlayerArrow(DiscoPlayerArrowObject player) {
-		float diffX = getX() - player.getX();
-		float diffY = getY() - player.getY();
+		float diffX = player.getX() - getX();
+		float diffY = player.getY() - getY();
 		float distance = (float) Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2)) / 6;
+		velX = speed * diffX / distance;
+		velY = speed * diffY / distance;
+	}
 
-		setVelX(speed * Math.round((-1 / distance) * diffX));
-		setVelY(speed * Math.round((-1 / distance) * diffY));
+	////////// PLAY ////////////
+
+	@Override
+	protected void play(CASE caze) {
+		if (caze == CASE.GOOD)
+			caze = CASE.PERFECT;
+
+		super.play(caze);
+	}
+
+	////////// TICK ////////////
+
+	private float x, y;
+	private float velX, velY;
+
+	@Override
+	public void tick() {
+		x = x + velX;
+		y = y + velY;
+		super.tick();
 	}
 
 	////////// TEXTURE ////////////
@@ -61,7 +85,18 @@ public class DiscoArrowWallObject extends DiscoArrowObject {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getImage(), (int) x, (int) y, getWidth(), getHeight(), null);
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public Rectangle getBounds() {
+		int x = (int) this.x;
+		int y = (int) this.y;
+		int w = getWidth();
+		int h = getHeight();
+		return new Rectangle(x, y, w, h);
 	}
 
 }

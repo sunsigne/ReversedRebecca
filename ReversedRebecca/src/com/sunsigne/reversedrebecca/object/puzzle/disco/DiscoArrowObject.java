@@ -7,8 +7,8 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionReactor;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
@@ -32,7 +32,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 	}
 
 	private DIRECTION facing;
-	
+
 	public DIRECTION getFacing() {
 		return facing;
 	}
@@ -50,7 +50,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	////////// PLAY ////////////
 
-	private DiscoPlayerArrowObject player_arrrow;
+	private DiscoPlayerArrowObject player_arrow;
 	private boolean played;
 
 	public enum CASE {
@@ -76,7 +76,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 			return;
 
 		removeObject();
-		player_arrrow.blink();
+		player_arrow.blink();
 	}
 
 	private void playSound(CASE caze) {
@@ -96,14 +96,14 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, path);
 	}
-	
+
 	////////// PHYSICS ////////////
-	
+
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.PUZZLE_COLLISION;
 	}
-	
+
 	////////// TICK ////////////
 
 	private boolean flag;
@@ -175,6 +175,10 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 		if (detectorObject instanceof DiscoPlayerArrowObject == false)
 			return;
 
+		DiscoPlayerArrowObject player_arrow = (DiscoPlayerArrowObject) detectorObject;
+		if (player_arrow.getFacing() != getFacing())
+			return;
+
 		if (detectorObject.getBounds(DIRECTION.UP).intersects(getBounds()))
 			onUp = true;
 		else
@@ -187,7 +191,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 		if (detectorObject.getBounds(DIRECTION.NULL).intersects(getBounds())) {
 			validPos = true;
-			player_arrrow = (DiscoPlayerArrowObject) detectorObject;
+			this.player_arrow = (DiscoPlayerArrowObject) detectorObject;
 		} else
 			validPos = false;
 	}
