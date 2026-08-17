@@ -33,6 +33,7 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 		createDiscoBall(DIRECTION.LEFT);
 		createDiscoDancer(DIRECTION.LEFT);
 		
+		setPlayerArrowEnlargedHitboxes(true);
 		createPhase1();
 		createPhase2();
 		litDiscoDancer(18 * Game.SEC - 10);

@@ -157,6 +157,11 @@ public abstract class DiscoPuzzle extends Puzzle {
 		LAYER.PUZZLE.addObject(player_arrows[3]);
 	}
 
+	protected void setPlayerArrowEnlargedHitboxes(boolean enlargedHitbox) {
+		for (DiscoPlayerArrowObject tempArrow : player_arrows)
+			tempArrow.setEnlargedHitbox(enlargedHitbox);
+	}
+
 	private GameList<DiscoArrowObject> arrow_list = new GameList<>(LISTTYPE.ARRAY);
 
 	protected void createArrow(DIRECTION facing, int y) {
@@ -173,7 +178,7 @@ public abstract class DiscoPuzzle extends Puzzle {
 	private DiscoArrowObject getArrow(Puzzle puzzle, DIRECTION facing, int x, int y, boolean autoplay) {
 		switch (DifficultyOption.getDifficulty()) {
 		case EASY:
-			autoplay = true;
+			autoplay = new RandomGenerator().getBoolean() ? true : autoplay;
 			break;
 		case NORMAL:
 			break;

@@ -163,7 +163,7 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (isAutoplay())
+		if (isAutoplay() && name.contains("rebecca") == false)
 			return;
 
 		int key = e.getKeyCode();

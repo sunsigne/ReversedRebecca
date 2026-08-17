@@ -99,7 +99,13 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	}
 
 	////////// COLLISION ////////////
-	
+
+	private boolean enlargedHitbox;
+
+	public void setEnlargedHitbox(boolean enlargedHitbox) {
+		this.enlargedHitbox = enlargedHitbox;
+	}
+
 	@Override
 	public Rectangle getBounds(DIRECTION direction) {
 		switch (direction) {
@@ -108,7 +114,10 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 		case DOWN:
 			return getBoundsDown();
 		default:
-			return new Rectangle(getX(), 16 + getY() + getHeight() / 2 - 5, getWidth(), 10);
+			int y = 16 + getY() + getHeight() / 2;
+			y = enlargedHitbox ? y - 50 : y - 5;
+			int h = enlargedHitbox ? 100 : 10;
+			return new Rectangle(getX(), y, getWidth(), h);
 		}
 	}
 

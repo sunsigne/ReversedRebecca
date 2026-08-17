@@ -48,9 +48,8 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		createPhase2(20 + 411);
 		createPhase2(20 + 443);
 		createPhase2(20 + 475);
-		createFinishingMove(20 + 507);		
 		setArrowSpeed(0);
-		
+
 		new GameTimer(15, true, () -> createPuzzleWithDelay());
 	}
 
@@ -79,7 +78,10 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 
 		// phase 3
 		new GameTimer(75 * Game.SEC, true, () -> setArrowWallDelay(90));
-		new GameTimer(13 * time, true, () -> setArrowSpeed(12));
+		new GameTimer(13 * time, true, () -> {
+			setArrowSpeed(12);
+			setPlayerArrowEnlargedHitboxes(true);
+		});
 		switchSide(dancer, 15 * time);
 		switchSide(balls, 16 * time);
 		new GameTimer(16 * time, true, () -> {
@@ -192,14 +194,6 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 		createArrow(DIRECTION.UP, getY(delay + 29), true);
 		createArrow(DIRECTION.RIGHT, getY(delay + 30));
 		createArrow(DIRECTION.DOWN, getY(delay + 31), true);
-	}
-	
-	private void createFinishingMove(int delay) {
-		createArrow(DIRECTION.DOWN, getY(20 + 0));
-		createArrow(DIRECTION.DOWN, getY(20 + 2), true);
-		createArrow(DIRECTION.DOWN, getY(20 + 4));
-		createArrow(DIRECTION.DOWN, getY(20 + 6), true);
-		createArrow(DIRECTION.DOWN, getY(20 + 8));
 	}
 
 }
