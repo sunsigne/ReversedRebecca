@@ -37,6 +37,16 @@
 
 	////////// LVL003 ////////////
 
+	peut-être déjà noté, mais je balance juste des idées en vrac avant d'aller chier, puis travailler :
+	- ajouter la variente manette (aussi bien les mecaniques, que le visuel)
+	- gender swap stephan
+	- la musique doit etre un "pause_preventer"
+	
+	après la dance :
+	- vérifier que le changement de musique n'est pas choquant (passer de "'til the end of the night" à "forever and ever...")
+	- essayer de TP les personnages hors du club ? il faudrait que la transition ne soit pas violente. Une elispe serait top
+	
+
 	mettre la musique sur Patreon :
 	- 'til the end of the night
 
