@@ -1,0 +1,28 @@
+% THAT_WAS_FIRE
+player = object = laugh = That was lit!
+object = player = determined = With you, always. And I definitely won!
+object = player = happy = But didn't you just say you were looking for a@certain Vladimir? Mind telling me why?
+player = object = unhappy = He stole the blueprints for a secret and dangerous@technology… We have to get them back.
+object = player = unhappy = How unfortunate, indeed… You say it's called the@"helmet of releasing"? What does it release?
+
+
+% TELL_HIM_EVERYTHING
+player = object = happy = It's very theoretical, but the idea is that it would@activate the dormant parts of the human brain.
+player = object = happy_var = As for the concrete effects, they would logically@vary from person to person.
+object = player = fake_happy = In plain English?
+player = object = laugh = It gives you a superpower.
+object = player = surprised = So that's where it came from!@I always wondered how you…
+object = player = determined = Er… Nevermind. You can count on me, Becky!@I know exactly where to look.
+
+
+% NOT_TELL_HIM
+player = object = worry =It's confidential. I can't reveal that information.
+object = player = happy = No problem. You've always had your secrets,@that's just how things are between us.
+object = player = determined = Either way, you can count on me, Becky!@I know exactly where to look.
+
+
+% TRACK
+player = object = excited = Really?
+object = player = happy = I work for the government myself.@I'll look into this whole thing.
+object = player = fake_happy = Well, have a good evening, my Queen. I'll contact@you tomorrow morning. It was a pleasure.
+player = object = happy_var = The pleasure was mine.

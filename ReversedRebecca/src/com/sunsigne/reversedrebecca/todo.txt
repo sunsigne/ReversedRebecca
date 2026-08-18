@@ -32,30 +32,30 @@
 		
 	////////// EN COURS ////////////
 
-	ajouter sur patreon la musique sivane : road to alcoholism
 	faire les RR002,3 etc.
 
 	////////// LVL003 ////////////
-
-	peut-être déjà noté, mais je balance juste des idées en vrac avant d'aller chier, puis travailler :
-	- ajouter la variente manette (aussi bien les mecaniques, que le visuel)
-	- gender swap stephan
-	- la musique doit etre un "pause_preventer"
-	- faire la traduction anglais des 2 fichiers stephan
-	
-	après la dance :
-	- vérifier que le changement de musique n'est pas choquant (passer de "'til the end of the night" à "forever and ever...")
-	- essayer de TP les personnages hors du club ? il faudrait que la transition ne soit pas violente. Une elispe serait top
-	
-
-	mettre la musique sur Patreon :
-	- 'til the end of the night
-
-	king of the night :
-		- traduction de Stephan
 		
-	à faire à la fin :
-		- les boutons Left/Right/Up/down d'actions de la manette lors de la danse nulle
+	gender swap stephan, penser à :
+		- fichiers visuels dans $working
+		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
+		- voix
+		- fichier .gpf
+		- dialogues (nom ET contenu)
+		- counter, deeds, bonus txt & actions
+		- succès
+		- fichier visuel, évidemment
+		- les animations
+		- tester
+		
+	mettre la musique sur Patreon :
+		- 'til the end of the night
+		- ajouter Mélichat à la page (en cours)
+
+	à faire :
+		- gender swap stephan
+
+	à faire à la fin :	
 		- cinématique d'intro
 		- quitter le bar après avoir menacé Donovan
 	
@@ -66,10 +66,7 @@
 		- stephan
 		
 	disco puzzle :
-		- créer les danses jaunes & rouges (cf. Stephan seul & Duo)
 		- faire les lien dans PulzzeFactory
-		- 0h30 : introduire le code qui passe les flammes de rouges à blues
-		- lvls de difficulté (ça dépendra du niveau qui solicite ce puzzle)
 		- gamepad (les 4 boutons)
 		- changer les bords (les murs) pour des flêches/boutons de gamepad, pour les utiliser en phase 3
 		- mettre la musique disco dans le "pause preventer"
@@ -180,8 +177,6 @@
 
 	////////// PERSONNAGES A FAIRE ////////////
 
-	characters to finish : stephan (dans son appart, créer le chat "méli")
-
 	////////// DAVE ////////////
 	
 	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
@@ -229,6 +224,7 @@
 	un lieu habité doit avoir : à boire, à manger, un lit, des WC, une douche
 	puzzle où on controle un frommage et on ne dois pas se faire manger par une sourie (pour l'ordi)
 	Marie : Mécanique de gameplay : trouve souvent des outils de meilleurs qualité dans les boites, et trouve des outils où il n'y en a pas
+	Dans l'appartement de Stephan, créer le chat "méli"
 
 	pour la fin de la démo steam, voilà les twists qui peuvent arriver :
 	- camille se réveille, va dans la chambre de Rebecca et dit "processure de destruction activé !"

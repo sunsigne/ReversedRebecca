@@ -1,0 +1,36 @@
+% NOSTALGIC_HELLO
+object = player = fake_happy = Good evening, my Queen… So, here we are?@Is it time for our last dance?
+player = object = no_sens = No… Um… What? … Are you… Stephan?
+object = player = happy = (Of course… She doesn't know me yet…)@Yes, it's me. You were looking for me, I take it?
+player = object = convinced = Yes! I hear you can help me find someone@who stole something from me.
+object = player = fake_happy = I would have fetched the moon for you…@Will you come dance? For the sake of old times?
+
+
+% WHAT_GOOD_OLD_TIME
+object = player = fake_happy = Sorry… It's hard to wrap my head around the fact@that tonight, we don't know each other yet…
+object = player = happy = Forget it. Let me rephrase:@Will you come dance, period?
+
+
+% REFUSE_TO_DANCE
+object = player = unhappy = How unfortunate… Why?
+player = object = unhappy_var = I just don't feel like it.@We don't know each other.
+object = player = happy = I understand. I'd never force you to do@something you don't want to do, Becky.
+
+
+% REFUSE_TO_DANCE_NO_DANCE
+donovan = RIGHT = snooty = I would! Hit the floor, miss Killjoy! You aren't@getting through the night without dancing.
+player = LEFT = angry = Oh, come on! You can't possibly force me!
+donovan = RIGHT = snooty = Sure I can! This bar is magic.@If I say you have to dance, then you dance.
+player = DOWN = asleep = (He's insane! But then, what do I have to lose…)
+
+
+% REFUSE_TO_DANCE_ROPY_DANCE
+donovan = RIGHT = snooty = I would! Your performance earlier was… mediocre.@Hit the floor, madam! Fix it!
+player = LEFT = angry = Oh, come on! You can't possibly force me!
+donovan = RIGHT = snooty = Sure I can! This bar is magic.@If I say you have to dance, then you dance.
+player = DOWN = asleep = (He's insane! But then, what do I have to lose…)
+
+
+% ACCEPT_TO_DANCE
+player = object = determined = Fine! But no waltz.@A dance-off! And you're going to lose!
+object = player = determined = Don't be so sure! I've got years of training!@Let's set the place on fire!

@@ -59,3 +59,10 @@ LEFT = LEFT % left
 RIGHT = RIGHT % right
 UP = UP % up
 DOWN = DOWN % down
+
+
+///// NIGHT KING /////
+
+WHAT_GOOD_OLD_TIME = Key3 % old time?
+TELL_HIM_EVERYTHING = Key1 % tell him everything
+NOT_TELL_HIM = Key2 % not tell him

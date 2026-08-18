@@ -40,7 +40,7 @@ sarah = player = worry = I hope so… But for now, as usual:@I'll let you choose
 
 
 % ANGRY_NOT_ANYMORE
-sarah = player = laugh = Well… your GADGETS. I'd already prepared one@this morning, but we had a bit of a fight, so…
+sarah = player = laugh = Well… your gadgetS. I'd already prepared one@this morning, but we had a bit of a fight, so…
 player = object = laugh = Thanks, you are the best!
 sarah = player = wink = Don't forget it.
 
