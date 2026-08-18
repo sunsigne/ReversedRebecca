@@ -1,0 +1,28 @@
+% THAT_WAS_FIRE
+player = object = laugh = C'était le feu !
+object = player = determined = Avec toi, toujours. Et j'ai clairement gagné !
+object = player = happy = Mais, tu disais à l'instant que tu cherchais un@certain Vladimir ? Je peux savoir pourquoi ?
+player = object = unhappy = Il m'a volé les plans d'une technologie secrète,@et dangereuse… Nous devons les récupérer.
+object = player = unhappy = C'est fâcheux, en effet… Tu dis que ça s'appelle@le "casque de déblocage" ? Ça débloque quoi ?
+
+
+% TELL_HIM_EVERYTHING
+player = object = happy = C'est très théorique, mais dans l'idée, ça permettrait@d'activer les parties dormantes du cerveau humain.
+player = object = happy_var = Quant aux effets concrets, ça devrait logiquement@être propre à chaque individu.
+object = player = fake_happy = En clair ?
+player = object = laugh = Ça donne un super-pouvoir.
+object = player = surprised = Alors ça venait de là !@Je me suis toujours demandé comment tu…
+object = player = determined = Heu… Peu importe. Compte sur moi, Becky !@Je sais exactement où chercher.
+
+
+% NOT_TELL_HIM
+player = object = worry = C'est confidentiel. Je ne peux pas te dévoiler@cette information.
+object = player = happy = Aucun problème. Tu as toujours eu tes secrets,@ç'a toujours été comme ça entre nous.
+object = player = determined = Dans tous les cas, tu peux compter sur moi,@Becky ! Je sais exactement où chercher.
+
+
+% TRACK
+player = object = excited = Vraiment ?
+object = player = happy = Je travaille moi-même pour le gouvernement.@Je vais enquêter sur toute cette histoire.
+object = player = fake_happy = Bon, passe une bonne soirée, ma Reine.@Je te contacterai demain matin. C'était un plaisir.
+player = object = happy_var = Plaisir partagé.

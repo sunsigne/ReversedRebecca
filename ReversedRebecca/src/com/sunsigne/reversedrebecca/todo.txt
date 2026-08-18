@@ -41,6 +41,7 @@
 	- ajouter la variente manette (aussi bien les mecaniques, que le visuel)
 	- gender swap stephan
 	- la musique doit etre un "pause_preventer"
+	- faire la traduction anglais des 2 fichiers stephan
 	
 	après la dance :
 	- vérifier que le changement de musique n'est pas choquant (passer de "'til the end of the night" à "forever and ever...")

@@ -64,3 +64,5 @@ DOWN = DOWN % bas
 ///// NIGHT KING /////
 
 WHAT_GOOD_OLD_TIME = Key3 % en souvenir ?
+TELL_HIM_EVERYTHING = Key1 % tout lui dire
+NOT_TELL_HIM = Key2 % ne pas lui dire
