@@ -37,7 +37,7 @@ Le Type de Requête CHECKPOINT est à mi-chemin entre les Types de Requêtes MEM
 
 Son rôle est essentiellement de s'assurer, dans le cas où le joueur viendrait à mourir, de ne pas recommencer une carte du début.
 
-Dans la mesure où le Type de Requête SAVE a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les SAVE ne durent que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
+Dans la mesure où le Type de Requête CHECKPOINT a pour but de savoir si un événement a eu lieu ou non, il n'existe aucun Type de Requête pour les effacer. Pas d'inquiétude ! Les SAVE ne durent que le temps d'une carte et ne sont pas transportés sur les cartes suivantes.
 
 Exemple de situation :
 TIME -> 60 = GOTO -> JEAN_PEE_ITS_PANTS, CHECKPOINT:TOO_LATE, JEAN_IS_HIDING
