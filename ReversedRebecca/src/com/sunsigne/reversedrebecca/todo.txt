@@ -57,13 +57,7 @@
 
 	à faire à la fin :	
 		- quitter le bar après avoir menacé Donovan
-	
-	mur invisible de la porte d'entrée, laisser passer :
-		- le militaire
-		- le dummy du videur
-		- l'autiste et le parano
-		- stephan
-		
+
 	disco puzzle :
 		- faire les lien dans PulzzeFactory
 		- gamepad (les 4 boutons)
