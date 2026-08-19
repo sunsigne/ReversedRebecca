@@ -37,22 +37,16 @@
 	////////// LVL003 ////////////
 		
 	gender swap stephan, penser à :
-		- fichiers visuels dans $working
-		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
-		- voix
-		- fichier .gpf
-		- dialogues (nom ET contenu)
-		- counter, deeds, bonus txt & actions
-		- succès
-		- fichier visuel, évidemment
-		- les animations
-		- tester
+		- counter
+		- deeds
 		
-	mettre la musique sur Patreon :
-		- 'til the end of the night
-
-	à faire :
-		- gender swap stephan
+		- diso_danceur
+		- bonus txt 
+		- actions 
+		- voix (à voir)
+		- dialogues (contenu : adaptation du genre)
+		- adaptation piranha (fait, à tester)
+		- fichier visuel (fait, à tester)
 
 	à faire à la fin :	
 		- quitter le bar après avoir menacé Donovan
@@ -260,6 +254,8 @@
 	lvl002:
 		- Dougly = Doug (Douglas) / Dolly (Dolores)
 		- Jamessy = Jessy / James
+	lvl003:
+		- Stephabrina = Stephan / Sabrina
 	lvl003-Y :
 		- Dupont = Xavier / Venera		
 		- Amiranda = Amir / Miranda
