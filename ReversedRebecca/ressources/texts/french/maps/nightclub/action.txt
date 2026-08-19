@@ -10,6 +10,8 @@ CHAT = Key1 % bavarder
 OK = Key1 % ok
 WHY = Key2 % pourquoi ?
 BRING_STEPHAN = Key1 % faire venir Stephan
+BEFORE_THE_DANCE = Key1 % avant la danse
+AFTER_THE_DANCE = Key2 % après la danse
 
 ///// BAR GOBLIN /////
 

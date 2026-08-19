@@ -1,7 +1,13 @@
-DELTA*TOLD_REBECCA_ABOUT_HER_BROTHER
-currentlvlmenu=rebeccas_room_001
+ALICIA*REBECCA_KNOWS_SHE_WAS_TRAPPED
+JEAN*GET_YELLED_AT_SARAH_FOR_PUSHING_SOMEONE
+DELTA*TOLD_SARAH_ABOUT_HER_BROTHER
+MARIE*DIDNT_CONFESS
+MIKA*DIDNT_CONFESS
+REBECCAS_ROOM*BASKET_HALF_FULL
+REBECCAS_ROOM*FULL_DESK_TRASH
 currentlvl=nightclub
-surname_dougly=surname
+currentlvlmenu=rebeccas_room_001
 surname_custom1=surname
 surname_custom2=surname
 surname_custom3=surname
+surname_dougly=surname

@@ -1,0 +1,3 @@
+GLASSES_EMPTIED = glasses emptied
+SECRET_REVEALED = secret revealed
+GAMMA_PRESENT = gamma present
