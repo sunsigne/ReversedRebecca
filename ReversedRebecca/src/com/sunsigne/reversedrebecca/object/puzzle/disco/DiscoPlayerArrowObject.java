@@ -14,6 +14,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 
 public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableImage, CollisionDetector {
 
@@ -81,7 +82,8 @@ public class DiscoPlayerArrowObject extends PuzzleObject implements SheetableIma
 	}
 
 	private void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");
+		String gamepad = ControllerManager.getInstance().isUsingGamepad() ? "_gamepad" : "";
+		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow" + gamepad);
 		image = getSheetSubImage(sheet, getSheetColCriterion(), 2, getSheetWidth(), getSheetHeight());
 		image_full = getSheetSubImage(sheet, getSheetColCriterion(), 3, getSheetWidth(), getSheetHeight());
 	}

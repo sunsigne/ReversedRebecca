@@ -20,12 +20,15 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
@@ -90,6 +93,9 @@ public abstract class DiscoPuzzle extends Puzzle {
 	}
 
 	private void switchSide(int element) {
+		if (ControllerManager.getInstance().isUsingGamepad())
+			new CameraShaker().shaking(SHAKE.LITTLE);
+		
 		if (element == 1 || element == 3) {
 			dancer.switchSide();
 			if (secondDancer != null)

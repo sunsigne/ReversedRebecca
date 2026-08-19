@@ -25,7 +25,7 @@ public class DiscoAutoArrowObject extends DiscoArrowObject {
 	protected void play(CASE caze) {
 		DiscoPuzzle puzzle = (DiscoPuzzle) getPuzzle();
 		puzzle.updateDiscoDancerFacing(getFacing());
-		super.play(caze);
+		super.play(caze, true);
 	}
 
 	////////// TICK ////////////

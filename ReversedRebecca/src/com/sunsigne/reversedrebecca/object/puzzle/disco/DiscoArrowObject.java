@@ -11,12 +11,18 @@ import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleTextObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
@@ -24,7 +30,8 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.LeftKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 
-public class DiscoArrowObject extends PuzzleObject implements SheetableImage, CollisionReactor, KeyboardEvent {
+public class DiscoArrowObject extends PuzzleObject
+		implements SheetableImage, CollisionReactor, KeyboardEvent, GamepadEvent {
 
 	public DiscoArrowObject(Puzzle puzzle, DIRECTION facing, int x, int y) {
 		super(puzzle, false, x, y);
@@ -68,6 +75,10 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 	}
 
 	protected void play(CASE caze) {
+		play(caze, false);
+	}
+
+	protected void play(CASE caze, boolean autoplay) {
 		played = true;
 		playSound(caze);
 		LAYER.PUZZLE.addObject(new PuzzleTextObject(getPuzzle(), getX(), 80, caze));
@@ -77,6 +88,9 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 		removeObject();
 		player_arrow.blink();
+
+		if (autoplay == false && ControllerManager.getInstance().isUsingGamepad())
+			new CameraShaker().shaking(SHAKE.TINY);
 	}
 
 	private void playSound(CASE caze) {
@@ -141,7 +155,8 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow");
+			String gamepad = ControllerManager.getInstance().isUsingGamepad() ? "_gamepad" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "disco_arrow" + gamepad);
 			image = getSheetSubImage(sheet);
 		}
 		return image;
@@ -205,9 +220,7 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 		return keyboardController;
 	}
 
-	private boolean isValidKey(KeyEvent e) {
-		int key = e.getKeyCode();
-
+	private boolean isValidKey(int key) {
 		switch (facing) {
 		case LEFT:
 			return key == LeftKey.getKey() || key == KeyEvent.VK_LEFT;
@@ -224,13 +237,17 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		keyPressed(e.getKeyCode());
+	}
+
+	public void keyPressed(int key) {
 		if (played)
 			return;
 
 		if (validPos == false)
 			return;
 
-		if (isValidKey(e) == false)
+		if (isValidKey(key) == false)
 			return;
 
 		if (onUp && onDown)
@@ -241,6 +258,32 @@ public class DiscoArrowObject extends PuzzleObject implements SheetableImage, Co
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.X)
+			keyPressed(KeyEvent.VK_LEFT);
+		if (e.getKey() == ButtonEvent.B)
+			keyPressed(KeyEvent.VK_RIGHT);
+		if (e.getKey() == ButtonEvent.Y)
+			keyPressed(KeyEvent.VK_UP);
+		if (e.getKey() == ButtonEvent.A)
+			keyPressed(KeyEvent.VK_DOWN);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
 
 	}
 

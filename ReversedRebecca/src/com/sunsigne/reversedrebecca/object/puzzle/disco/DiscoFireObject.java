@@ -8,10 +8,13 @@ import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
+import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 
 public class DiscoFireObject extends PuzzleObject {
 
@@ -51,7 +54,11 @@ public class DiscoFireObject extends PuzzleObject {
 	////////// LIT ////////////
 
 	public void lit(int delayInTicks) {
-		new GameTimer(delayInTicks, true, () -> loadAnimations("blue"));
+		new GameTimer(delayInTicks, true, () -> {
+			loadAnimations("blue");
+			if (ControllerManager.getInstance().isUsingGamepad())
+				new CameraShaker().shaking(SHAKE.MEDIUM);
+		});
 	}
 
 	////////// PHYSICS ////////////
@@ -75,6 +82,9 @@ public class DiscoFireObject extends PuzzleObject {
 			time = ANIMATION_TIME;
 			animation.cycle();
 		}
+
+		if (delay == 0 && ControllerManager.getInstance().isUsingGamepad())
+			new CameraShaker().shaking(SHAKE.MEDIUM);
 	}
 
 	////////// TEXTURE ////////////
