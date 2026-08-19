@@ -16,6 +16,7 @@ public class PausePreventer {
 	public void loadRessources() {
 		map.put("dave_theme_gunshot", Game.SEC * (60 + 31));
 		map.put("c_est_moi_qui_domine", Game.SEC * (120 + 46));
+		map.put("'til_the_end_of_the_night", Game.SEC * (180 + 6));
 	}
 
 	public void createDisabledPauseObject() {
