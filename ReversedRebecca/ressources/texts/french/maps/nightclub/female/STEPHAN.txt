@@ -1,0 +1,6 @@
+% NOSTALGIC_HELLO
+object = player = fake_happy = Bonsoir, ma Reine… Alors, on y est ?@C'est l'heure de notre dernière danse ?
+player = object = no_sens = Non… Heu… Quoi ? … Es-tu… Sabrina ?
+object = player = happy = (Bien sûr… Elle ne me connaît pas encore…)@Oui, c'est bien moi. Tu me cherchais, je crois ?
+player = object = convinced = Oui ! Il parait que tu peux m'aider à retrouver@quelqu'un, qui m'a volé quelque chose.
+object = player = fake_happy = Je serais allée chercher la lune pour toi… Tu viens@danser ? En souvenir du bon vieux temps ?

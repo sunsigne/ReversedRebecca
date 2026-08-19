@@ -1,0 +1,20 @@
+% DONOVAN
+player = object = happy = Bonsoir. Je cherche une certaine Sabrina.@Vous la connaissez ?
+object = player = happy = Tu peux me tutoyer, Rebecca. Oui, je connais@Sabrina. Presque tout le monde ici la connait.
+
+
+% HOW_DO_YOU_KNOW_MY_NAME
+object = player = happy = Excuse-moi. Je ne me suis pas présenté.@Je m'appelle Donovan, négociant en informations.
+object = player = wink = C'est mon métier d'être au courant des choses.@Je sais notamment où est la femme que tu cherches.
+
+
+% WHERE_IS_STEPHAN
+object = player = snooty = Sabrina est la "Reine de la Soirée".@Tu ne peux pas lui parler avec ton rang actuel.
+object = player = wink = Tu vas d'abord devoir gravir les échelons.@Pour l'instant, tu n'es qu'un "gobelin de bar".
+player = object = no_sens = Pour de vrai ? Genre, sérieusement ?
+object = player = happy = C'est un bar à thème. Chaque soir c'est les mêmes@règles pour tout le monde.
+object = player = snooty = Alors ? Tu vas jouer avec nous ?
+
+
+% THREATENS_HIM
+player = object = angry = Écoute-moi bien le rince-verre : tu vas me dire@où est Sabrina, maintenant ! Ou sinon…

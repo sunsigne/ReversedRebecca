@@ -24,7 +24,7 @@ public class YellowDiscoPuzzle extends DiscoPuzzle {
 
 	@Override
 	public DiscoDancerObject getDiscoDancer() {
-		return new DiscoDancerObject(this, "stephan", true);
+		return new DiscoDancerObject(this, "stephabrina", true);
 	}
 
 	@Override

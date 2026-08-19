@@ -1,0 +1,20 @@
+% DONOVAN
+player = object = happy = Hello. I'm looking for a certain Sabrina.@Do you know her?
+object = player = happy = Of course, Rebecca. I know Sabrina.@Almost everyone here does.
+
+
+% HOW_DO_YOU_KNOW_MY_NAME
+object = player = happy = Excuse me. I haven't introduced myself.@My name is Donovan; I'm an information broker.
+object = player = wink = It's my job to stay in the loop. For instance,@I know where the woman you're looking for is.
+
+
+% WHERE_IS_STEPHAN
+object = player = snooty = Sabrina is the "Queen of the Night".@You can't speak to her with your current rank.
+object = player = wink = You'll have to climb the ranks first.@Right now, you're just a "bar goblin".
+player = object = no_sens = For real? Like, seriously?
+object = player = happy = It's a themed bar. Every night, the same rules@apply to everyone.
+object = player = snooty = So? Are you going to play along?
+
+
+% THREATENS_HIM
+player = object = angry = Listen to me, you booze-peddler: you will tell me@where Sabrina is, right now! Or else…

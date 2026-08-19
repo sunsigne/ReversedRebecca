@@ -1,0 +1,6 @@
+% TALK_TO_STEPHAN
+object = player = wink = Sabrina is "Queen of the Night".@Only people of the same rank, can meet her.
+
+
+% I_HELPED_1_PRINCE_THAT_S_UNFAIR
+object = player = snooty = You've got a point… But Sabrina will surely@show up if you impress her! So?

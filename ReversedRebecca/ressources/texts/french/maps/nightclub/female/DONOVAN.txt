@@ -1,0 +1,6 @@
+% TALK_TO_STEPHAN
+object = player = wink = Sabrina est "Reine de la Soirée". Seules les@personnes du même rang, peuvent la rencontrer.
+
+
+% I_HELPED_1_PRINCE_THAT_S_UNFAIR
+object = player = snooty = Tu n'as pas tort… Mais Sabrina se montrera@certainement si tu l'impressionnes ! Alors ?

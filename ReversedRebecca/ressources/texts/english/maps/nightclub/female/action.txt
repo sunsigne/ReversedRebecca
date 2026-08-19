@@ -1,0 +1,13 @@
+///// WORLD /////
+
+BRING_STEPHAN = Key1 % bring Sabrina
+
+///// BAR GOBLIN /////
+
+WHERE_IS_HE = Key2 % where is she?
+TALK_TO_STEPHAN = Key2 % talk to Sabrina?
+
+///// NIGHT KING /////
+
+TELL_HIM_EVERYTHING = Key1 % tell her everything
+NOT_TELL_HIM = Key2 % not tell her

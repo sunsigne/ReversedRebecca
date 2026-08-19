@@ -28,7 +28,7 @@ public class RedDiscoPuzzle extends DiscoPuzzle {
 	@Override
 	public DiscoDancerObject getDiscoDancer() {
 		if (secondDancer)
-			return new DiscoDancerObject(this, "stephan", true);
+			return new DiscoDancerObject(this, "stephabrina", true);
 
 		secondDancer = true;
 		return new DiscoDancerObject(this, "rebecca", false);

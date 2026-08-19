@@ -1,0 +1,8 @@
+///// WORLD /////
+
+BRING_STEPHAN = Key1 % faire venir Sabrina
+
+///// BAR GOBLIN /////
+
+WHERE_IS_HE = Key2 % où est-elle ?
+TALK_TO_STEPHAN = Key2 % parler à Sabrina ?

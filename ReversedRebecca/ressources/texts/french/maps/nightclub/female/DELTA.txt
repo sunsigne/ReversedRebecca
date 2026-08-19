@@ -1,0 +1,15 @@
+% HELP
+object = player = smile = J'y pense… Tu as besoin de mon aide ?
+player = object = happy_var = Je te retourne la question : je suis censé t'aider,@pour monter en grade ; pour parler à Sabrina.
+object = player = no_sens = Jamais entendu parler…
+object = player = wink = Mais pas de problème, tu m'aides déjà en étant@mon amie. Va dire au barman qu'on est cool.
+
+
+% BEING_GOBELIN
+object = player = smile = Joli tour de passe-passe, ma grande !@Tu n'as pas peur de te faire prendre ?
+player = object = happy_var = Pour l'instant, personne ne m'a rien dit.
+player = object = worry = Après, je pensais que trouver un secret pour@m'incruster de ce côté me serait plus utile…
+object = player = excited = Peut-être qu'il y a un secret dans le secret.@Qui sait ? Pourquoi es-tu là, ce soir ?
+player = object = convinced = Je dois rencontrer Sabrina.
+object = player = smile = Alors, il doit y avoir un moyen d'accomplir@ton objectif rapidement, en étant ici.
+object = player = wink = Bon, je te laisse. La princesse que je suis a@très envie de danser !

@@ -1,0 +1,7 @@
+% TELL_HIM_EVERYTHING
+player = object = happy = C'est très théorique, mais dans l'idée, ça permettrait@d'activer les parties dormantes du cerveau humain.
+player = object = happy_var = Quant aux effets concrets, ça devrait logiquement@être propre à chaque individu.
+object = player = fake_happy = En clair ?
+player = object = laugh = Ça donne un super-pouvoir.
+object = player = surprised = Alors ça venait de là !@Je me suis toujours demandée comment tu…
+object = player = determined = Heu… Peu importe. Compte sur moi, Becky !@Je sais exactement où chercher.

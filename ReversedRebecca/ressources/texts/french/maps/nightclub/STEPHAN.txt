@@ -33,4 +33,4 @@ player = DOWN = asleep = (C'est un malade ! Mais au fond, qu'est-ce que@j'ai à 
 
 % ACCEPT_TO_DANCE
 player = object = determined = Ok ! Mais pas de valse.@Un battle ! Et tu vas perde !
-object = player = determined = N'en sois pas si sûr ! J'ai des années@d'entrainement ! Mettons le feu à la salle !
+object = player = determined = N'en sois pas si sûre ! J'ai des années@d'entrainement ! Mettons le feu à la salle !

@@ -1,0 +1,15 @@
+% HELP
+object = player = smile = Come to think of it… Do you need my help?
+player = object = happy_var = I should ask you the same thing: I'm supposed to@help you, to move up in rank; to talk to Sabrina.
+object = player = no_sens = Never heard of her…
+object = player = wink = But no worries, you're already helping me just by@being my friend. Go tell the bartender we're cool.
+
+
+% BEING_GOBELIN
+object = player = smile = Nice sleight of hand, sis!@Aren't you afraid of getting caught?
+player = object = happy_var = So far, no one's said a word to me.
+player = object = worry = Still, I thought finding a secret to sneak my way@in here, would be more useful…
+object = player = excited = Maybe there's a secret within the secret.@Who knows? Why are you here, tonight?
+player = object = convinced = I need to meet Sabrina.
+object = player = smile = Then, there must be a way to achieve your goal@quickly, while being here.
+object = player = wink = Anyway, I'll leave you to it. A princess like me is@dying to dance!

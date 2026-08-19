@@ -1,0 +1,6 @@
+% NOSTALGIC_HELLO
+object = player = fake_happy = Good evening, my Queen… So, here we are?@Is it time for our last dance?
+player = object = no_sens = No… Um… What? … Are you… Sabrina?
+object = player = happy = (Of course… She doesn't know me yet…)@Yes, it's me. You were looking for me, I take it?
+player = object = convinced = Yes! I hear you can help me find someone@who stole something from me.
+object = player = fake_happy = I would have fetched the moon for you…@Will you come dance? For the sake of old times?

@@ -6,6 +6,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
+import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
@@ -129,6 +131,12 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 	private void loadLiving() {
 		living = new NPC(name, 0, 0);
 		living.setBlockingPath(false);
+		
+		if(name.contains("rebecca"))
+			return;
+		
+		String gender = LivingOption.getType() == LIVING_TYPE.FEMALE ? "sabrina" : "stephan";
+		living.setTextureName(name + "_" + gender);
 	}
 
 	private LivingAnimation dancingAnimation;
