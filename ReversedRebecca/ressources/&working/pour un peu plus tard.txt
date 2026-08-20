@@ -1,0 +1,35 @@
+LVL002
+
+Voler des documents à des policiers, ça me semble être un plan extrême. Je suis certaine qu'on peut trouver une autre piste.
+Tu as sans doute raison... / C'est juste que ce stupide policier m'a mis hors de moi ! Il ne prend pas son travail au sérieux ! / J'ai besoin de fabriquer quelque chose pour me rafraichir les idées... Tu viens avec moi à l'atelier ?
+(oui / non)
+Déjà un nouveau gadget ? Evidemment que je suis partante !
+
+
+DV003
+
+Je ne pense pas que tu ais remarqué, mais sur l'écran titre, tu peux voir l'appartement de Rebecca en temps réel. Même quand elle n'est pas chez elle.
+
+
+WS003
+
+Ca peut prendre un certain temps... Je n'étais pas prête à ce qu'on revienne ici aussi vite.
+Pas de soucis, je vais attendre.
+Je suis vraiment désolé, Rebecca... Il y a pas mal de bugs dans la simulation. À mon avis, je vais y passer la soirée...
+Oh... Donc... Pas de gadget ?
+Malheureusement, ça va être compliqué
+(D'accord, je comprends / S'il te plaît :) )
+(awkward) Je ne peux rien te refuser quand tu fais ces yeux là... / (wink) D'accord, donne-moi une seconde, je vais te sortir un petit quelque chose.
+Merci ! Merci ! Merci !
+Allez, file ;) On se voit demain pour commencer notre enquête.
+
+
+RR003
+Hello chaton, ça s'est bien passé au travail, aujourd'hui ?
+Salut, Rika ! Une journée de dingue ! Tu n'es pas prête à ce que je te raconte.
+Je vois... Tu crois que ça peut attendre ? Je t'attendais pour activer Camille.
+C'est pas vrai ! Elle est prête ?
+À 100% ! Prête pour un bon dans le futur ? / Pour la première fois au monde, un androïde avec des neurones d'humains va prendre vie.
+Bonjour... Mères ?
+Bienvenue au monde, Camillle / Je m'appelle Erika, et je suis ta créatrice. Mais tu peux m'appeler "maman" si tu préfères.
+Et moi, c'est Rebecca. Je suis sa meilleur amie, et on est actullement chez moi.

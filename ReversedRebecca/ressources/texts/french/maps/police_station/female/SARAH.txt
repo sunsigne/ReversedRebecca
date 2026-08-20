@@ -1,0 +1,5 @@
+% SCENARIO_STEPHAN_NO_MIKA
+player = sarah = happy = Je vais plutôt rentrer chez moi.@Mon petit doigt me dit que Mia va venir.
+sarah = player = unhappy = Hmm…
+sarah = player = happy = Bon, on se voit demain pour commencer notre@enquête.
+player = sarah = excited = Évidemment !

@@ -43,10 +43,33 @@ sarah = player = happy = Bien ! Donne-moi une petite minute,@j'ai besoin de réf
 
 
 % SCENARIO_STEPHAN
-player = sarah = laugh = Ok ! On va le faire ! On va voler les informations !
-sarah = player = worry = Tu es sûre que c'est ça que tu as choisi ?
-player = sarah = laugh = Non, mais le développeur n'a pas encore codé@mon choix, donc c'est ce qu'on va faire !
-sarah = player = happy = Bien ! Donne-moi une petite minute,@j'ai besoin de réfléchir à un plan.
+player = sarah = worry = Voler des documents à la police, c'est un peu@extrême… Il doit y avoir une autre piste.
+sarah = player = unhappy = Tu as sûrement raison, mais…
+sarah = player = angry_var = Ce stupide policier m'a mise hors de moi !@Il ne prend pas du tout son travail au sérieux !
+sarah = player = determined = Je vais me défouler en fabriquant quelque chose.@Tu viens avec moi à l'atelier ?
+
+
+% SCENARIO_STEPHAN_YES
+player = sarah = laugh = Déjà un nouveau gadget ? Évidemment que@je suis partante ! Allons-y !
+
+
+% SCENARIO_STEPHAN_NO
+player = sarah = happy_var = Je vais rentrer chez moi.@C'était déjà une journée intense !
+sarah = player = happy = Très bien. Dans ce cas, on se voit demain pour@commencer notre enquête.
+player = sarah = excited = Évidemment !
+
+
+% SCENARIO_STEPHAN_NO_MARIE
+player = sarah = happy = Je vais plutôt rentrer chez moi. Je dois me@préparer pour mon rendez-vous de ce soir.
+sarah = player = laugh = Ho ! C'est vrai ! Dans ce cas, on se voit demain@pour commencer notre enquête.
+player = sarah = excited = Évidemment !
+
+
+% SCENARIO_STEPHAN_NO_MIKA
+player = sarah = happy = Je vais plutôt rentrer chez moi.@Mon petit doigt me dit que Mika va venir.
+sarah = player = unhappy = Hmm…
+sarah = player = happy = Bon, on se voit demain pour commencer notre@enquête.
+player = sarah = excited = Évidemment !
 
 
 % PLAN_NOT_YET

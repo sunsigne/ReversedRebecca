@@ -43,10 +43,33 @@ sarah = player = happy = Good! Give me a minute, I need to think of a plan.
 
 
 % SCENARIO_STEPHAN
-player = sarah = laugh = Okay! We'll do it! We'll steal the information!
-sarah = player = worry = Are you sure that's what you chose?
-player = sarah = laugh = No, but the developer hasn't coded my choice yet,@so that's what we'll do!
-sarah = player = happy = Good! Give me a minute, I need to think of a plan.
+player = sarah = worry = Stealing documents from the police is a bit…@extreme… There must be another lead.
+sarah = player = unhappy = You're probably right, but…
+sarah = player = angry_var = That stupid police officer made me furious!@He doesn't take his job seriously at all!
+sarah = player = determined = I'm going to blow off some steam by creating@something. Want to come to the workshop?
+
+
+% SCENARIO_STEPHAN_YES
+player = sarah = laugh = Another new gadget already?@Of course I'm up for it! Let's go!
+
+
+% SCENARIO_STEPHAN_NO
+player = sarah = happy_var = I'm going to head home.@It's already been an intense day!
+sarah = player = happy = Alright. In that case, I'll see you tomorrow to@start our investigation.
+player = sarah = excited = Obviously!
+
+
+% SCENARIO_STEPHAN_NO_MARIE
+player = sarah = happy = I think I'll head home instead.@I need to get ready for my date tonight.
+sarah = player = laugh = Oh! That's right! In that case, I'll see you@tomorrow to start our investigation.
+player = sarah = excited = Obviously!
+
+
+% SCENARIO_STEPHAN_NO_MIKA
+player = sarah = happy = I think I'll head home instead.@I have a feeling Mika is going to show up.
+sarah = player = unhappy = Hmm…
+sarah = player = happy = Well, I'll see you tomorrow to start our@investigation.
+player = sarah = excited = Obviously!
 
 
 % PLAN_NOT_YET

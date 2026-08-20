@@ -1,0 +1,5 @@
+% SCENARIO_STEPHAN_NO_MIKA
+player = sarah = happy = I think I'll head home instead.@I have a feeling Mia is going to show up.
+sarah = player = unhappy = Hmm…
+sarah = player = happy = Well, I'll see you tomorrow to start our@investigation.
+player = sarah = excited = Obviously!
