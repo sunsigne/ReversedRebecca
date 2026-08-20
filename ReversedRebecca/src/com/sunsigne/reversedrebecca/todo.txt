@@ -31,9 +31,7 @@
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 		
 	////////// EN COURS ////////////
-	
-	préparer le "preview" de la carte lvl003
-	
+
 	faire les RR002,3 etc.
 	faire les liens entre les niveaux (commisariot -> ws suivant -> maison -> discothèque -> maison)
 
