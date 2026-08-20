@@ -31,24 +31,12 @@
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 		
 	////////// EN COURS ////////////
-
+	
+	préparer le "preview" de la carte lvl003
+	
 	faire les RR002,3 etc.
+	faire les liens entre les niveaux (commisariot -> ws suivant -> maison -> discothèque -> maison)
 
-	////////// LVL003 ////////////
-	
-	préparer le "preview" de la carte
-	
-	à faire à la fin :	
-		- quitter le bar après avoir menacé Donovan
-
-	à sauvegarder :
-		- alcool bu
-		- stephan est au courant de ce que fait le casque
-
-	karma :
-	- l'angelic, aider 2 personnes en plus, sans rien faire de mal
-	- le sadique, deux actions négative, autre que la delation
-	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
@@ -99,6 +87,15 @@
 	- relier le fusil à pompe derrière Butch à la fusillade
 	- le "partir sans sarah" doit avoir des conséquences
 
+	////////// LVL003 ////////////
+
+	à faire :	
+		- quitter le bar après avoir menacé Donovan
+
+	karma :
+	- l'angelic, aider 2 personnes en plus, sans rien faire de mal
+	- le sadique, deux actions négative, autre que la delation
+	
 	////////// LVL003-Y ////////////
  	
 	- on doit pouvoir jouer au billard avec Cassidy (Puzzle) ?
