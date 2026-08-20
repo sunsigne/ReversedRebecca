@@ -1,0 +1,11 @@
+///// GOOD /////
+
+HELP_AN_ADDITIONNAL_PERSON = 3 % help an additional person
+HELP_EVERYONE = 5 % help everyone
+
+///// BAD /////
+
+THREATEN_A_BARTENDER = 5 % threaten a bartender
+SMASH_DISHES = 3 % dish smasher
+SNITCH_ON_GAMMA = 2 % snitch on Gamma
+TORMENT_AN_AUTISTIC_PERSON = 4 % torment an autistic person
