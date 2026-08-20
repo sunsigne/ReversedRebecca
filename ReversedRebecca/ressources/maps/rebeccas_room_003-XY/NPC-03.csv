@@ -1,0 +1,7 @@
+TIME -> 0 = GOTO -> NAME:REBECCA
+
+
+//// START IA ////
+
+TIME -> 3 = SLOW -> 15-8
+GOAL -> 15-8 = GOTO -> FACING:UP

@@ -1,0 +1,3 @@
+NPC-01 = Camille
+NPC-02 = Erika
+NPC-03 = Rebecca

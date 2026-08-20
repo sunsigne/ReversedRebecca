@@ -9,6 +9,11 @@ dave = DOWN = camera = Je ne pense pas que tu aies remarqué@le secret qu'il y a
 dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Même quand elle n'est pas chez elle.
 
 
+% TITLE_SCREEN_INDEED
+dave = DOWN = camera_happy = Tu as vu ? Je ne t'avais pas menti.@Il a Erika, chez toi, en ce moment même.
+dave = DOWN = camera_happy = Bon retour chez Rebecca.@J'aime beaucoup la scène qui va suivre.
+
+
 % TITLE_SCREEN_AGAIN
 dave = DOWN = camera = C'est le moment où je suis sensé te révéler@le secret qu'il y a sur l'écran titre :
 dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Même quand elle n'est pas chez elle.

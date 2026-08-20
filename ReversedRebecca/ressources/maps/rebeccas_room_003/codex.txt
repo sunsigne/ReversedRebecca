@@ -1,2 +1,2 @@
 NPC-01 = Camille
-NPC-02 = Sarah
+NPC-02 = Erika

@@ -32,14 +32,16 @@
 		
 	////////// EN COURS ////////////
 
-	vérifier les corrects liens entre lvl002 et ws003/rr003/dv003/lvl003-Y
+	résumé : 
+	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
+	- rr003-XY (commence une fois le commissariat exploré) est l'alternative quand on est PAS rentré chez soit
 
-	dans dv002, le end_lvl doit donner sur rr003 (erika déjà arrivée)
-
-	faire les RR002,3 etc.
-	faire les liens entre les niveaux (commisariot -> ws suivant -> maison -> discothèque -> maison)
-
-	faire liens entre lvl002 et ws003 + entre dv003 et rr003
+	rr002 - si Erika voit les pancakes sur la table, elle s'assoie pour les manger (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
+	rr002 et 003 + XY - faire les preview
+	dans le rr003-xy, faire l'animation d'éveil, puis faire partir rebecca
+	rr003 - rendre le niveau jouable
+	
+	faire liens entre lvl002 et ws003 + entre ws003 et dv003
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 

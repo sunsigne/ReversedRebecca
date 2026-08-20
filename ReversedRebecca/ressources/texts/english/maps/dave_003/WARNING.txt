@@ -9,6 +9,11 @@ dave = DOWN = camera = I don't think you've noticed the secret@on the title scre
 dave = DOWN = camera = You can see Rebecca's apartment in real time.@Even when she isn't home.
 
 
+% TITLE_SCREEN_INDEED
+dave = DOWN = camera_happy = See? I wasn't lying.@Erika is at your place right now.
+dave = DOWN = camera_happy = Welcome back to Rebecca's room.@I really like the scene that's coming up.
+
+
 % TITLE_SCREEN_AGAIN
 dave = DOWN = camera = This is the moment I'm supposed to reveal@the secret on the title screen:
 dave = DOWN = camera = You can see Rebecca's apartment in real time.@Even when she isn't home.
