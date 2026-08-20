@@ -2,3 +2,13 @@
 dave = DOWN = camera = At ​​Novatech, you chose the scenario yourself.
 dave = DOWN = camera = At ​​the police station, whether or not you were@carrying a bomb made the difference.
 dave = DOWN = camera = This time, your karma will be the deciding factor.@Are you good, or are you bad?
+
+
+% TITLE_SCREEN
+dave = DOWN = camera = I don't think you've noticed the secret@on the title screen:
+dave = DOWN = camera = You can see Rebecca's apartment in real time.@Even when she isn't home.
+
+
+% TITLE_SCREEN_AGAIN
+dave = DOWN = camera = This is the moment I'm supposed to reveal@the secret on the title screen:
+dave = DOWN = camera = You can see Rebecca's apartment in real time.@Even when she isn't home.

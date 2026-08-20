@@ -2,3 +2,15 @@
 dave = DOWN = camera = À Novatech, tu as choisi directement le scénario.
 dave = DOWN = camera = Dans le commissariat, c'était ta possession@ou non d'une bombe qui a fait la différence.
 dave = DOWN = camera = Cette fois, c'est ton karma qui sera déterminant.@Es-tu gentille, ou es-tu méchante ?
+
+
+% TITLE_SCREEN
+dave = DOWN = camera = Je ne pense pas que tu aies remarqué@le secret qu'il y a sur l'écran titre :
+dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Même quand elle n'est pas chez elle.
+
+
+% TITLE_SCREEN_AGAIN
+dave = DOWN = camera = C'est le moment où je suis sensé te révéler@le secret qu'il y a sur l'écran titre :
+dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Même quand elle n'est pas chez elle.
+
+

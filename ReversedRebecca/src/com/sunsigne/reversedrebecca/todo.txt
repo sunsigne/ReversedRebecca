@@ -32,10 +32,12 @@
 		
 	////////// EN COURS ////////////
 
+	vérifier les corrects liens entre lvl002 et ws003/rr003/dv003/lvl003-Y
+
 	faire les RR002,3 etc.
 	faire les liens entre les niveaux (commisariot -> ws suivant -> maison -> discothèque -> maison)
 
-	vérifier le correct lien entre lvl002 et ws003 OU rr003
+	faire liens entre lvl002 et ws003 + entre dv003 et rr003
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
