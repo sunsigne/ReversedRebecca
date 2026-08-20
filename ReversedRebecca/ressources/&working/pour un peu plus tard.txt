@@ -1,14 +1,3 @@
-LVL002
-
-Voler des documents à des policiers, ça me semble être un plan extrême. Je suis certaine qu'on peut trouver une autre piste.
-Tu as sans doute raison... / C'est juste que ce stupide policier m'a mis hors de moi ! Il ne prend pas son travail au sérieux ! / J'ai besoin de fabriquer quelque chose pour me rafraichir les idées... Tu viens avec moi à l'atelier ?
-(oui / non)
-Déjà un nouveau gadget ? Evidemment que je suis partante !
-
-
-DV003
-
-Je ne pense pas que tu ais remarqué, mais sur l'écran titre, tu peux voir l'appartement de Rebecca en temps réel. Même quand elle n'est pas chez elle.
 
 
 WS003

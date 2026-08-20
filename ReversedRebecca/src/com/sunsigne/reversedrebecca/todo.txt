@@ -34,6 +34,8 @@
 
 	vérifier les corrects liens entre lvl002 et ws003/rr003/dv003/lvl003-Y
 
+	dans dv002, le end_lvl doit donner sur rr003 (erika déjà arrivée)
+
 	faire les RR002,3 etc.
 	faire les liens entre les niveaux (commisariot -> ws suivant -> maison -> discothèque -> maison)
 

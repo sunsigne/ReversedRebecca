@@ -12,5 +12,3 @@ dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Mê
 % TITLE_SCREEN_AGAIN
 dave = DOWN = camera = C'est le moment où je suis sensé te révéler@le secret qu'il y a sur l'écran titre :
 dave = DOWN = camera = Tu peux voir l'appartement de Rebecca en temps@réel. Même quand elle n'est pas chez elle.
-
-
