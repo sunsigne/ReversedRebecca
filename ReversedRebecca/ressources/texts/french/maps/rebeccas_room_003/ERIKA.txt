@@ -1,0 +1,15 @@
+% HELLO
+player = RIGHT = laugh = Salut, Rika !
+erika = RIGHT = happy = Hello chaton, ça s'est bien passé au travail ?
+player = RIGHT = excited = Une journée de dingue ! Tu n'es pas prête à ce que je te raconte.
+erika = RIGHT = happy = Tu crois que ça peut attendre ? Je t'attendais pour activer Camille.
+player = RIGHT = surprised = C'est pas vrai ! Elle est prête ?
+erika = RIGHT = happy = À 100% ! Prête pour un bon dans le futur ?
+erika = RIGHT = happy = Pour la première fois au monde, un androïde avec des neurones d'humains va prendre vie.
+
+
+% AWAKENING
+camille = DOWN = happy = Bonjour... Mères ?
+erika = RIGHT = happy_var = Bienvenue au monde, Camillle. Je m'appelle Erika, et je suis ta créatrice. Mais tu peux m'appeler 
+erika = RIGHT = happy = Mais, si tu es plus l'aise en m'appelant "maman", tu as ma permission.
+player = RIGHT = laugh = Et moi, c'est Rebecca. La meilleure amie de ta mère, et on est actuellement chez moi.

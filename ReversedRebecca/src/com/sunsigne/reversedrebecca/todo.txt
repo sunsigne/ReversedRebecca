@@ -32,6 +32,8 @@
 		
 	////////// EN COURS ////////////
 
+	faire un choix sur les invulénabilité et s'y tenir (par exemple, seulement chez rebecca ?)
+
 	résumé : 
 	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
 	- rr003-XY (commence une fois le commissariat exploré) est l'alternative quand on est PAS rentré chez soit
