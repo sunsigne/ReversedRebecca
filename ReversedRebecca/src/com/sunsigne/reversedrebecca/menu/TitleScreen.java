@@ -155,7 +155,7 @@ public class TitleScreen extends MenuScreen {
 	private void createTestMapButton() {
 		GenericListener onPress = () -> loadTestMap();
 		ButtonObject hidden_button;
-		
+
 		// placed exactly on the "hot water tap" in the kitchen ButtonObject
 		// hidden_button = new TitleScreenButton("", 102, 247, 16, 16, onPress, null);
 
@@ -201,7 +201,10 @@ public class TitleScreen extends MenuScreen {
 		// user can control player
 		Player player = new PlayerFinder().getPlayer();
 		int time = player.getCondition() == CONDITION.BED ? 4 : 0; // if in bed, must awake first
-		GenericListener listener = () -> new PlayerFinder().setUserAllowedToControlPlayer(true);
+		GenericListener listener = () -> {
+			if (Cutscene.isRunning() == false)
+				new PlayerFinder().setUserAllowedToControlPlayer(true);
+		};
 		new GameTimer(time * Game.SEC, listener);
 	}
 

@@ -51,9 +51,6 @@ public class MenuRequest extends ConditionalRequest {
 	}
 
 	private boolean isMenuOpen() {
-		if (LAYER.LOADING.getHandler().getList().isEmpty() == false)
-			return true;
-
 		if (LAYER.MENU.getHandler().getList().isEmpty() == false && isMenuFading() == false)
 			return true;
 
