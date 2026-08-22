@@ -1,11 +1,24 @@
 % HELLO
 player = RIGHT = laugh = Salut, Rika !
 erika = RIGHT = happy = Hello chaton, ça s'est bien passé au travail ?
-player = RIGHT = excited = Une journée de dingue ! Tu n'es pas prête à ce que je te raconte.
-erika = RIGHT = happy = Tu crois que ça peut attendre ? Je t'attendais pour activer Camille.
-player = RIGHT = surprised = C'est pas vrai ! Elle est prête ?
-erika = RIGHT = happy = À 100% ! Prête pour un bon dans le futur ?
-erika = RIGHT = happy = Pour la première fois au monde, un androïde avec des neurones d'humains va prendre vie.
+player = RIGHT = excited = Une journée de dingue ! Tu n'es pas prête à ce@que je te raconte.
+erika = RIGHT = happy = Tu penses pouvoir tenir ?@Je t'attendais pour activer Camille.
+
+
+% HELLO_NEXT
+player = DOWN = surprised = C'est pas vrai ! Elle est prête ?
+
+
+% HELLO_NEXT_NEXT
+player = UP = surprised = Pour de vrai ? Tu es sûre ?
+erika = RIGHT = happy = À 100"0/0" !
+erika = RIGHT = happy = Pour la première fois au monde, une androïde@avec des neurones humains va prendre vie.
+erika = RIGHT = happy = Enfin, quand je dis 100"0/0" prête…@Il reste encore quelques réglages, et…
+player = UP = surprised = Ne me fait pas languir ! Tu n'entends pas la@musique ? C'est maintenant qu'il faut appuyer !
+erika = RIGHT = happy = D'accords, d'accords…@Prête pour un bon dans le futur ?
+
+
+
 
 
 % AWAKENING
