@@ -80,7 +80,7 @@ Lorsque la Condition sera vérifiée, l'objet à 30 % de chances de "regarder" �
 
 ////// MENU //////
 
-Le Type de Requête MENU permet de savoir si le jeu est actuellement sur un écran de chargement ou sur un menu (par exemple, l'écran titre).
+Le Type de Requête MENU permet de savoir si le jeu est actuellement sur un un menu (par exemple, l'écran titre).
 
 Exemple :
 TIME -> 0 = MENU -> TRUE ? NULL / CREATE_BONUSTEXT_ZZZ
