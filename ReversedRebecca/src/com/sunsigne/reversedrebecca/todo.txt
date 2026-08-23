@@ -32,16 +32,17 @@
 		
 	////////// EN COURS ////////////
 
-	faire un choix sur les invulénabilité et s'y tenir (par exemple, seulement chez rebecca ?)
+	bug : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
+	à faire : 
+		- rr001 bougie = a fondu après un certain temps (calculer en fonction de l'aniamtion de Sarah qui pleure)
+		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
+		- rr002 et 003 + XY - faire les preview
+		- rr003 - à terminer
+		- rr003-xy, faire l'animation d'éveil de Camille, puis faire partir rebecca
 
 	résumé : 
 	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
 	- rr003-XY (commence une fois le commissariat exploré) est l'alternative quand on est PAS rentré chez soit
-
-	rr002 - si Erika voit les pancakes sur la table, elle s'assoie pour les manger (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
-	rr002 et 003 + XY - faire les preview
-	dans le rr003-xy, faire l'animation d'éveil, puis faire partir rebecca
-	rr003 - rendre le niveau jouable
 	
 	faire liens entre lvl002 et ws003 + entre ws003 et dv003
 
