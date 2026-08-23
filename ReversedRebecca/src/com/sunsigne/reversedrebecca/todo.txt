@@ -34,11 +34,13 @@
 
 	bug : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
 	à faire : 
-		- rr001 bougie = a fondu après un certain temps (calculer en fonction de l'aniamtion de Sarah qui pleure)
 		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
-		- rr002 et 003 + XY - faire les preview
+		- rr003 + XY - faire les preview
 		- rr003 - à terminer
 		- rr003-xy, faire l'animation d'éveil de Camille, puis faire partir rebecca
+
+	idée :
+		rr003 du psychopathe, sarah envoye un appel à laide sur l'ordi
 
 	résumé : 
 	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
