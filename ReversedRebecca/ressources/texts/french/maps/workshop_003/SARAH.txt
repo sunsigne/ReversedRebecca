@@ -1,0 +1,19 @@
+% WAIT_HERE
+sarah = player = happy = Ça pourrait prendre un certain temps…@Je n'avais pas prévu qu'on revienne ici aussi vite.
+player = sarah = laugh = Pas de soucis, je vais attendre.
+
+
+% NOT_READY
+sarah = player = unhappy = Je suis désolée, Rebecca… Il y a pas mal de bugs@dans la simulation. Je risque d'y passer la soirée…
+player = sarah = no_sens = Oh… Donc… Pas de gadget ?
+sarah = player = worry = Malheureusement, ça va être compliqué.
+
+
+% PRETTY_PLEASE
+sarah = player = awkward = Je ne peux rien te refuser quand tu fais ces@yeux là…
+sarah = player = happy_var = D'accord, donne-moi une seconde,@je vais te sortir un petit quelque chose.
+
+
+% THANK_YOU
+player = sarah = laugh = Merci ! Merci ! Merci !
+sarah = player = wink = Allez, file. On se voit demain,@pour commencer notre enquête.

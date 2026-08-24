@@ -39,13 +39,13 @@
 		- la suite de psychopathe depuis le commisariat
 		- la suite de sadique en labo (pas de sarah...)
 		- la suite de sadique du commisariat (pas de sarah...)
-		- la suite discothèque :	rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
+		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
 	
 	bug : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
 	à faire : 
 		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
 		- rr003 + XY - faire les preview
-		- rr003 - à terminer
+		- rr003 - à terminer (+ trad)
 		- rr003-xy, faire l'animation d'éveil de Camille, puis faire partir rebecca
 
 	idée :
@@ -80,6 +80,7 @@
 	1h - vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 	LifeAndDeathLaw -> changer le niveau de l'écran titre de la sauvegarde lors d'une mort en HARD pour une image avec la tombe de Rebecca
 	succès : (hidden=true) débloquer le niveau test sur l'écran titre
+	réorganiser le dossier "$working"
 
 	note : puzzle : cliquer = impact
 
