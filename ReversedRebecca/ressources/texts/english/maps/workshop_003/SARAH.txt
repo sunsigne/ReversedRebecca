@@ -17,3 +17,8 @@ sarah = player = happy_var = Alright, give me a second,@I'll dig something up fo
 % THANK_YOU
 player = sarah = laugh = Thank you! Thank you! Thank you!
 sarah = player = wink = Go on, off you go.@See you tomorrow to start our investigation.
+
+
+% FINE_I_UNDERSTAND
+sarah = player = wink = Alright. See you tomorrow, to start@our investigation.
+player = sarah = happy_var = Obviously!

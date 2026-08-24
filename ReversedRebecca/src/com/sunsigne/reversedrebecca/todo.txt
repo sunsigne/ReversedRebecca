@@ -32,9 +32,12 @@
 		
 	////////// EN COURS ////////////
 
+	à mettre en jaune :
+	- vérifier 1 par 1 chaque action dans chaque niveau
+	
 	ws003 :
 	 - lien avec niveau d'avant et d'après
-	 - choix "d'accord, je comprends"
+	 - mettre en jaune les 2 actions finales
 
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant
