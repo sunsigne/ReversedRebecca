@@ -32,6 +32,15 @@
 		
 	////////// EN COURS ////////////
 
+	niveaux à faire :
+		- épilogue nancy et jessy / mika / réstaurant
+		- ws003 (+ lien avant, avec lvl002, et lien après, avec dv003)
+		- la suite de psychopathe depuis l'appartemment
+		- la suite de psychopathe depuis le commisariat
+		- la suite de sadique en labo (pas de sarah...)
+		- la suite de sadique du commisariat (pas de sarah...)
+		- la suite discothèque :	rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
+	
 	bug : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
 	à faire : 
 		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
@@ -45,16 +54,40 @@
 	résumé : 
 	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
 	- rr003-XY (commence une fois le commissariat exploré) est l'alternative quand on est PAS rentré chez soit
-	
-	faire liens entre lvl002 et ws003 + entre ws003 et dv003
 
+	dave :
+	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
+	- dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
+	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
+	
+	bonus :
+	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
+	3h consulter les ressources non utilisées (son, textures, etc.)
+	1h activer tous les succès abandonnées
+	1h jouer avec le skin "rebecca_dark" + 5h implémentation complète
+	3h créer une galerie
+	
+	dessin : 
+	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique
+	- 1h - en psychopath, faire des coeur menaçant ou lugubre
+	
+	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
+	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	1h - vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
+	LifeAndDeathLaw -> changer le niveau de l'écran titre de la sauvegarde lors d'une mort en HARD pour une image avec la tombe de Rebecca
+	succès : (hidden=true) débloquer le niveau test sur l'écran titre
 
 	note : puzzle : cliquer = impact
+
+	////////// LINUX & MAC ////////////
+
+	tester les balises de dialogues "up", "username", etc.
+	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
+	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 
 	////////// RR000 ////////////
 
@@ -116,12 +149,6 @@
 	- l'angelic, aider tout le monde &, soit libérer roméo, soit lui livrer un repas
 	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
 
-	////////// LINUX & MAC ////////////
-
-	tester les balises de dialogues "up", "username", etc.
-	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
-	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
-
 	////////// BOSS ////////////
 
 	60h à vérifier le boss et tout ce qui est lié à lui
@@ -130,34 +157,6 @@
 	5h00 - InterruptBossRequest n'est probablement pas compatbile avec les "double patterns simulés". A corriger
 	2h00 - augmenter la difficulté du boss Blast X pour difficile (2 patterns de bass, 3 patterns en même temps après 2 loop)
 	5h00 - créer d'autres patterns de boss pour blast-x
-
-	////////// CHEST ////////////
-
-	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
-	
-	////////// DESSIN ////////////
-	
-	(pas à faire, mais à ne pas oublier cette règle) lvl001 - la chaise rouge dans l'entrepot est + sombre que les autres (c'est plus joli).
-	1h30 - finir marie_date + rebecca_date + rebecca_gothique
-	1h - en psychopath, faire des coeur menaçant ou lugubre
-
-	////////// BONUS ////////////
-
-	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
-	3h consulter les ressources non utilisées (son, textures, etc.)
-	1h activer tous les succès abandonnées
-	1h jouer avec le skin "rebecca_dark" + 5h implémentation complète
-	3h créer une galerie
-
-	////////// PERSONNAGES A FAIRE ////////////
-
-	////////// DAVE ////////////
-	
-	sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
-
-	dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
-	2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
-	Lvl001 -> Dave réagi tristement au au fait que le joueur lui demande continuellement ce qu'il regarde
 
 	////////// LVL003-X ////////////
 
@@ -205,8 +204,8 @@
 	- dave arrive et dit à Rebecca qu'il est temps d'avoir une conversation avec Florian (le nom de l'utilisateur)
 	- Le double de Rebecca arrive et lui dit qu'elle a besoin d'elle
 
-	un passage dont la mécanique s'inspire du jeu mobile "alien invasion idle rpg", par exemple lors de la reconstruction du laboiratoire où il faut gérer la quantité d'ouvrier, les répartir, gérer les ressoruces, etc.
-	rebecca bourée -> contrôles inversées + s'embrasse elle-même
+	un passage dont la mécanique s'inspire du jeu mobile "alien invasion idle rpg", par exemple lors de la reconstruction du laboratoire où il faut gérer la quantité d'ouvrier, les répartir, gérer les ressoruces, etc.
+
 	transporter de la nitro
 	un niveau sous l'eau
 	un niveau dans l'espace
@@ -214,19 +213,16 @@
 	un trou noir ! (c'est dans le titre du jeu après tout), avec rebecca qui dit à son apparition "how infortunate." -> (en français "c'est facheux...")
 	
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
-	plus tard dans le jeu, mettre l'enphazse sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
+	plus tard dans le jeu, mettre l'enphase sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) / dans les succès ? (puisqu'il faut les débloquer pour avoir le secret) -> le twist de la dernière input (sauvegarder, quitter, recharger)
-	quand le joueur meurt en difficile, faire un bouton "reset", si le user quitte le jeu, l'appart de rebecca est délabré et s'il clique sur play, il est dans un cimetière avec la tombe de Rebecca (avec un bouton recommencer)
 	mettre une banque avec l'option "braquer la banque"
 	Des puzzle à lvl inversé ! Ne peut les prendre QUE si le lvl de la clef ne DEPASSE PAS tel level
 	Faire des boss et des Foes avec armes et/ou Puzzle
-	animation de tourbillon de vent de temps en temps ?
 	nourriture pour regen (ou autre solution)
 	une action "défoncer la porte" pour passer et perdre 2 pv (sur un autre perso ? dans une exo armrure ?)
 	un mini jeu (PAS PUZZLE !) où on doit switch des boutons sur ON (mais il faut suivre du regard les cables pour savoir s'ils le sont ou pas)
 	Faire des copier coller dans le puzzle de l'ordi, ou se cloner ?
-	un pouvoir qui consiste à dépasser de 1 un des outils (le premier qu'on dépasse par exemple)
-
+	
 	///////// GENDER SWAP ////////////
 
 	lors d'un changement, penser à :
@@ -298,18 +294,16 @@
 	
 	Fin secrète : finir le jeu en difficile
 	Avoir la fin : neutre (cyan) / gentil (vert) / méchant (jaune) / exemplaire (orange) / sadique (rouge) / psyopathe (violet) 
-	(hidden=true) débloquer le niveau test sur l'écran titre
-	
+
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
 
 	Psycopathe :
 	Combat normal contre blast-X
-	Conbatr difficile contre double Y & Blast-X en même temps (qui a miuraculeusement survécu la fois dernière)
+	Combat difficile contre double Y & Blast-X en même temps (qui a miuraculeusement survécu la fois dernière)
 	Oneshot du robot prétenduement super fort que double Y désactive à chaque fois, sauf en difficile
 	Dave passe le jeu en difficile le temps de son combat, qui est epic (musique type mégalovania) il envoie des rayons lazer, vers le passé pour se battre avec d'autres version de lui-même, etc.
-	Combat normal avec musique au piano un peu mélancolique, avecv Sarah
+	Combat normal avec musique au piano un peu mélancolique, avec Sarah
 	Rebecca débloque son pouvoir de télékinésie (via des genre de vagues d'energie violettes) et relache le musée de l'horreur sur le monde pour devenir reine
-	LifeAndDeathLaw -> changer le niveau de l'écran titre de la sauvegarde lors d'une mort en HARD pour une image avec la tombe de Rebecca
-	
+
 	"You are" ne se sauvegarde pas encore
 	
