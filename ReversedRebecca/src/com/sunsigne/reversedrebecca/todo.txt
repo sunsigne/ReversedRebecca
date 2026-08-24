@@ -35,7 +35,6 @@
 	ws003 :
 	 - lien avec niveau d'avant et d'après
 	 - choix "d'accord, je comprends"
-	 - traductions
 
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant

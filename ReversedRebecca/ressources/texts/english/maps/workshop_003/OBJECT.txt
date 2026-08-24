@@ -1,0 +1,30 @@
+% BLACKBOARD
+player = object = sad = It says: E(r,t) : Acos(k.r−ωt+ϕ)@That's clearly going to change my life…
+
+
+% BOOKSHELF
+player = object = happy_var = "A Brief History of Time", "Cosmos",@"The First Three Minutes"…
+player = object = happy = "Sarah, you have good taste!" …
+player = object = you_silly = … is something no one on Earth would ever say.
+
+
+% DESK
+player = RIGHT = no_sens = Now that I think about it…@Why does Sarah need two desks?
+
+
+% PAPERS
+player = object = happy = "… These simulation tiles make it possible@to create and deconstruct copies of objects…
+player = object = happy = "… made of carbon and plastic. These copies@inherit the properties of the original object."
+player = object = laugh = What an incredible invention, Sarah!@You thoroughly deserve your doctorate!
+
+
+% PAPERS_RESEARCHES
+player = object = you_silly = No, thanks. Maybe another time.
+
+
+% POSTER
+player = object = worry = It's hard to follow a board full of sticky notes…@By definition, they're random ideas put together.
+
+
+% SARAH_NOTE
+player = object = you_silly = It's just a draft…

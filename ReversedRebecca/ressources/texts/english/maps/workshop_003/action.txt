@@ -1,0 +1,3 @@
+FINE_I_UNDERSTAND = Key1 % fine, I understand
+PRETTY_PLEASE = Key2 % pretty please?
+READ_MORE = Key1 % read more
