@@ -32,6 +32,11 @@
 		
 	////////// EN COURS ////////////
 
+	ws003 :
+	 - lien avec niveau d'avant et d'après
+	 - choix "d'accord, je comprends"
+	 - traductions
+
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant
 		- ws003 (+ lien avant, avec lvl002, et lien après, avec dv003)

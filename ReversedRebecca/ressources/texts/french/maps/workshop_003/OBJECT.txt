@@ -1,0 +1,30 @@
+% BLACKBOARD
+player = object = sad = Il est écrit : E(r,t) : Acos(k.r−ωt+ϕ)@Ça va clairement changer ma vie…
+
+
+% BOOKSHELF
+player = object = happy_var = "Une brève histoire du temps", "Cosmos",@"Les Trois Premières Minutes de l'Univers"…
+player = object = happy = "Sarah, tu as bon goût !" …
+player = object = you_silly = … ne dira jamais personne sur Terre.
+
+
+% DESK
+player = RIGHT = no_sens = Maintenant que j'y pense…@Pourquoi Sarah a besoin de deux bureaux ?
+
+
+% PAPERS
+player = object = happy = "… Ces dalles de simulation permettent ainsi@de créer et de déconstruire des copies d'objets…
+player = object = happy = "… constituées de carbone et de plastique. Ces@copies héritent des propriétés de l'objet d'origine."
+player = object = laugh = Quelle invention incroyable, Sarah !@Tu mérites amplement ton doctorat !
+
+
+% PAPERS_RESEARCHES
+player = object = you_silly = Non, merci. Peut-être une autre fois.
+
+
+% POSTER
+player = object = worry = C'est difficile de suivre un tableau de post-it…@Par définition, c'est des idées placées en vrac.
+
+
+% SARAH_NOTE
+player = object = you_silly = C'est juste une feuille de brouillon…

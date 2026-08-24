@@ -1,0 +1,17 @@
+///// DESK /////
+
+NPC-01 = Sarah
+
+OBJ-01 = Bookshelf Up Part
+OBJ-02 = Bookshelf
+OBJ-03 = Down Desk
+OBJ-04 = Poster
+OBJ-05 = Papers
+OBJ-06 = Blackboard
+OBJ-07 = Chair
+OBJ-08 = Computer
+OBJ-09 = Sarah Note
+
+///// SIMULATION /////
+
+OBJ-10 = Simulation Slabs
