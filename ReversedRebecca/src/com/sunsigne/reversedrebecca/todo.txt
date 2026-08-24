@@ -32,35 +32,29 @@
 		
 	////////// EN COURS ////////////
 
-	à mettre en jaune :
-	- vérifier 1 par 1 chaque action dans chaque niveau
-	
-	ws003 :
-	 - lien avec niveau d'avant et d'après
-	 - mettre en jaune les 2 actions finales
-
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant
-		- ws003 (+ lien avant, avec lvl002, et lien après, avec dv003)
 		- la suite de psychopathe depuis l'appartemment
 		- la suite de psychopathe depuis le commisariat
 		- la suite de sadique en labo (pas de sarah...)
 		- la suite de sadique du commisariat (pas de sarah...)
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
 	
-	bug : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
+	bug : 
+		- rr000 : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
 	à faire : 
+		- rr002 du psychopathe, sarah envoye un appel à laide sur l'ordi ?
 		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
-		- rr003 + XY - faire les preview
-		- rr003 - à terminer (+ trad)
+		- rr003-XY (n'arrive qu'après le commisariat)
+		- rr003-XY - faire les preview
 		- rr003-xy, faire l'animation d'éveil de Camille, puis faire partir rebecca
-
-	idée :
-		rr003 du psychopathe, sarah envoye un appel à laide sur l'ordi
-
-	résumé : 
-	- rr003 (commence au tout début du commisariat) et un niveau jouable (puisq'uon peut rentrer chez soit)
-	- rr003-XY (commence une fois le commissariat exploré) est l'alternative quand on est PAS rentré chez soit
+	
+	rr003 (arrive pendant + si refus de commisariat) :
+		- rythme scène d'intro (musique)
+		- animation éveil camille
+		- animation et dilogues post-réveil (arrivée de la lettre et sortie de rebecca)
+		- traductions
+		- preview
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
