@@ -106,7 +106,8 @@ public class WaitforRequest implements Request {
 
 		return new ConditionalListener() {
 
-			GameTimer timer = new GameTimer(time * Game.SEC);
+			int sec = time > 0 ? time * Game.SEC : 2;
+			GameTimer timer = new GameTimer(sec);
 
 			@Override
 			public boolean canDoAction() {

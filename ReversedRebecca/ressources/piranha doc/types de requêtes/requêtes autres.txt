@@ -189,7 +189,7 @@ Le Type de Requête WAITFOR est à la fois le plus utile et le plus compliqué �
 L'écriture d'un WAITFOR, même si elle est différente, ressemble à l'Écriture Conditionnelle (voir la partie « Piranha – Écriture Conditionnelle ») : il pose une "condition" à vérifier, suivi d'une ou de plusieurs Cibles séparées par des virgules – à la manière de GOTO (voir « GOTO » dans la partie « Piranha – Type de Requêtes : Goto ») – et à exécuter lorsqu'elle (la condition) est vérifiée.
 
 Les différentes conditions qu'il est possible de vérifier sont les suivants :
-- TIMER:X (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque X secondes se sont écoulées.
+- TIMER:X (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque X secondes se sont écoulées. Note : il est possible de renseigner le temps "0" pour que le jeu lance la Requête après exactement 2 ticks.
 - FACING:DIRECTION (remplacer "DIRECTION" par "LEFT", "RIGHT", "UP" ou "DOWN") : n'exécuter la Requête que lorsque l'objet appelant cette Instruction "regarde" dans la direction choisie (voir « FACING » dans la partie « Piranha – Type de Requêtes : States »).
 - PLAYER_FUTHER_THAN:X (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque le joueur est plus loin que X cases.
 - PLAYER_CLOSER_THAN:X : (remplacer "X" par un nombre) : n'exécuter la Requête que lorsque le joueur est plus près que X cases.
