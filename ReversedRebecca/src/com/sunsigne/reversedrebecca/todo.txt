@@ -32,6 +32,13 @@
 		
 	////////// EN COURS ////////////
 
+	military_after :
+		- faire lien avec niveau d'avant
+		- faire preview
+		- mettre bon niveau de gris pour underground
+		- faire les lumières couchés de soleil
+		- dialgoues
+
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même

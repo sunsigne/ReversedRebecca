@@ -1,0 +1,104 @@
+///// SAVES /////
+
+// short range
+ERASE = CASSIDY*MET
+ERASE = CASSIDY*PRANKED
+
+// long term consequences
+REGISTER = AMIR*START_DATING
+REGISTER = ROMEO*START_DATING
+REGISTER = NANCY*GET_LIED_TO
+REGISTER = NANCY*KISSED
+REGISTER = NANCY*GET_REJECTED
+REGISTER = JESSY*KISSED
+REGISTER = JESSY*GET_GHOSTED
+
+///// WORLD /////
+
+NPC-01 = Sarah
+NPC-02 = Trashman
+NPC-03 = Cleaner
+
+OBJ-01 = Plant
+OBJ-02 = Plant Slightly Downer
+OBJ-03 = Trashes
+OBJ-04 = Big Trash
+OBJ-05 = Up Left Shower
+OBJ-06 = Up Right Shower
+OBJ-07 = Down Left Shower
+OBJ-08 = Down Right Shower
+OBJ-09 = Socks
+OBJ-10 = Cactus
+OBJ-11 = Path Finding Helper (Artificial Wall)
+OBJ-12 = Help Counter
+OBJ-13 = Outside Walls
+OBJ-14 = Arena Set-up
+OBJ-15 = Arena OOB Preventer
+
+///// CENTER /////
+
+NPC-04 = Guard
+
+OBJ-16 = Guard Checker
+OBJ-17 = YY Door
+OBJ-18 = Stairs Ground to First Floor
+OBJ-19 = Stairs First Floor to Ground
+OBJ-20 = Stairs First Floor to Second Floor
+OBJ-21 = Stairs Second Floor to First Floor
+OBJ-22 = Stairs Second Floor to Third Floor
+OBJ-23 = Stairs Third Floor to Second Floor
+OBJ-24 = Shovel Box
+OBJ-25 = YY
+OBJ-26 = Gravity falls
+
+///// ROOMS /////
+
+NPC-05 = Slacker
+
+OBJ-27 = Shotgun
+OBJ-28 = Quest Chest
+OBJ-29 = Opened Curtains
+OBJ-30 = Closed Curtains
+OBJ-31 = Cyan Curtain
+
+///// INFIRMARY /////
+
+NPC-06 = Nancy
+
+OBJ-32 = Bomb Path Helper
+
+///// ARMORY /////
+
+NPC-07 = Nathan
+
+OBJ-33 = Nathan Detector
+
+///// TRAINING /////
+
+NPC-08 = Runner
+NPC-09 = Idiot
+NPC-10 = Dupont
+NPC-11 = Sergent
+NPC-12 = Shooter
+NPC-13 = Jessy
+NPC-14 = Romeo
+
+OBJ-34 = Romeo Detector
+OBJ-35 = Bomb Box
+OBJ-36 = Training Course
+OBJ-37 = Target
+OBJ-38 = Target shooter
+
+///// REFECTORY /////
+
+NPC-15 = Cassidy
+NPC-16 = Amir
+
+OBJ-39 = Amir Detector
+OBJ-40 = Amir Second Detector
+OBJ-41 = Table Left
+OBJ-42 = Table Right
+OBJ-43 = Stock Furniture
+OBJ-44 = Cold Room Door
+OBJ-45 = Cold Room Scanner
+OBJ-46 = /hidden

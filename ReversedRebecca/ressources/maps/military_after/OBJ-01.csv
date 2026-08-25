@@ -1,0 +1,10 @@
+TIME -> 0 = GOTO -> CREATE_YY
+
+
+//// STATE ////
+
+$ -> CREATE_YY = CREATE_DECORATION -> 13-4-FRONT:WORLD,2,2,YY,11-12,1-1
+
+
+//// CUTSCENE ////
+

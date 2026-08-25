@@ -38,7 +38,7 @@ object = player = smile = Ze zuis à la 4ème ligne ce que la 1ère est à la 2n
 
 
 % HIT_ONE
-object = player = unhappy = Aïe! Ok, ze zimplifies : ze zuis une ligne impraire@mais ze ne zuis pas la 1ère. Pareil pour la colonne.
+object = player = unhappy = Aïe! Ok, ze zimplifies : ze zuis une ligne impaire@mais ze ne zuis pas la 1ère. Pareil pour la colonne.
 
 
 % HIT_TWO
