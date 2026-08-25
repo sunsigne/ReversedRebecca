@@ -35,8 +35,6 @@
 	military_after :
 		- faire lien avec niveau d'avant
 		- faire preview
-		- mettre bon niveau de gris pour underground
-		- faire les lumières couchés de soleil
 		- dialgoues
 
 	niveaux à faire :
