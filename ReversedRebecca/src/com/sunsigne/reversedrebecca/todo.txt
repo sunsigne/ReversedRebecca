@@ -33,9 +33,15 @@
 	////////// EN COURS ////////////
 
 	military_after :
-		- faire lien avec niveau d'avant
-		- faire preview
-		- dialgoues
+		- dialgoues :
+		- Bien joué, petite. Tu as prouvé ta valeur.@Tu es capable sur le plan physique. 
+		- Je vais te dire ce que je sais : Vladimir est un ami, et Novatech lui a indirectement causé du tort.
+		- Je ne cautionne pas ses agissements, mais je les comprends. Cependant, je ne peux directement trahir un ami...
+		- Prend cette cassette. Tu y apprendra ce que tu dois savoir.@Bien sûr, elle est cryptée...
+		- C'est ma façon à moi de réparer le tord qu'il t'a causé, tout en lui restant fidèle.
+		- Tu veux y voir clair ? Décode-la. Tu es maligne, ça ne devrait pas te prendre plus de quelques jours.
+		- Et... La prochaine fois qu'on se verra, je serai là, pour te barrer la route. Pour protéger mon ami.
+		- À bientôt, gamine... Sois prête pour notre prochaine fois.
 
 	niveaux à faire :
 		- épilogue nancy et jessy / mika / réstaurant
