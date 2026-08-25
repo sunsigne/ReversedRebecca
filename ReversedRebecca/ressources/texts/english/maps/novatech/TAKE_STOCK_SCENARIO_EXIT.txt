@@ -1,64 +1,64 @@
 % FIRST_DOOR
-player = object = asleep = Let's see…
-player = object = happy = I have to unlock the door at the end of the hallway.
+player = keep = asleep = Let's see…
+player = keep = happy = I have to unlock the door at the end of the hallway.
 
 
 % FIRST_DOOR_NO_KEY
-player = object = laugh = I'm sure I'll find the key by searching around.
+player = keep = laugh = I'm sure I'll find the key by searching around.
 
 
 % ALICIA
-player = object = asleep = Let's see…
-player = object = unhappy = I need to find a way to free Alicia,@who's locked up.
-player = object = happy = A green key or some cyan bombs should help.
+player = keep = asleep = Let's see…
+player = keep = unhappy = I need to find a way to free Alicia,@who's locked up.
+player = keep = happy = A green key or some cyan bombs should help.
 
 
 % ALICIA_NUMBER_SETTINGS
-player = object = asleep = Let's see…
-player = object = unhappy = I need to find a way to free Alicia,@who's locked up.
-player = object = happy = A key 2 or some bombs 1 should help.
+player = keep = asleep = Let's see…
+player = keep = unhappy = I need to find a way to free Alicia,@who's locked up.
+player = keep = happy = A key 2 or some bombs 1 should help.
 
 
 % ALICIA_CANT_HELP
-player = object = asleep = Let's see…
-player = object = unhappy = I missed my chance to free Alicia@with cyan bombs.
-player = object = sad = Unless I have a green key,@she's permanently locked.
+player = keep = asleep = Let's see…
+player = keep = unhappy = I missed my chance to free Alicia@with cyan bombs.
+player = keep = sad = Unless I have a green key,@she's permanently locked.
 
 
 % ALICIA_CANT_HELP_NUMBER_SETTINGS
-player = object = asleep = Let's see…
-player = object = unhappy = I missed my chance to free Alicia with bombs 1.
-player = object = sad = Unless I have a key 2, she's permanently locked.
+player = keep = asleep = Let's see…
+player = keep = unhappy = I missed my chance to free Alicia with bombs 1.
+player = keep = sad = Unless I have a key 2, she's permanently locked.
 
 
 % NO_BOMB
-player = object = asleep = Let's see…
-player = object = happy = I need to find a way to get us out.
-player = object = happy_var = I should start by retrieving some bombs.
+player = keep = asleep = Let's see…
+player = keep = happy = I need to find a way to get us out.
+player = keep = happy_var = I should start by retrieving some bombs.
 
 
 % HAS_BOMB
-player = object = asleep = Let's see…
-player = object = happy = I need to find a way to get us out.
-player = object = happy_var = I can go back to the entrance and use bombs.
+player = keep = asleep = Let's see…
+player = keep = happy = I need to find a way to get us out.
+player = keep = happy_var = I can go back to the entrance and use bombs.
 
 
 % TRAPPED
-player = object = asleep = Let's see…
-player = object = unhappy = I'm trapped. I have to find a way out.
+player = keep = asleep = Let's see…
+player = keep = unhappy = I'm trapped. I have to find a way out.
 
 
 % TRAPPED_WITH_ALICIA
-player = object = asleep = Let's see…
-player = object = unhappy = Alicia and me are trapped.@We have to find a way out.
+player = keep = asleep = Let's see…
+player = keep = unhappy = Alicia and me are trapped.@We have to find a way out.
 
 
 % GREEN_KEY
-player = object = asleep = Let's see…
-player = object = happy = I need to find a way to get us out.
-player = object = happy_var = The green key will prove very useful!
+player = keep = asleep = Let's see…
+player = keep = happy = I need to find a way to get us out.
+player = keep = happy_var = The green key will prove very useful!
 
 
 % EXPLOSIONS
-player = object = asleep = Let's see…
-player = object = laugh = How funny it is to blow everything up!
+player = keep = asleep = Let's see…
+player = keep = laugh = How funny it is to blow everything up!

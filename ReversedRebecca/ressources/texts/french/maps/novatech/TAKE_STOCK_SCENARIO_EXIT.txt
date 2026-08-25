@@ -1,64 +1,64 @@
 % FIRST_DOOR
-player = object = asleep = Voyons voir…
-player = object = happy = Je dois déverrouiller la porte au bout du couloir.
+player = keep = asleep = Voyons voir…
+player = keep = happy = Je dois déverrouiller la porte au bout du couloir.
 
 
 % FIRST_DOOR_NO_KEY
-player = object = laugh = Je suis sûre que je vais trouver la clé@en fouillant un peu partout.
+player = keep = laugh = Je suis sûre que je vais trouver la clé@en fouillant un peu partout.
 
 
 % ALICIA
-player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
-player = object = happy = Une clé verte ou des bombes cyan devrait m'aider.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = keep = happy = Une clé verte ou des bombes cyan devrait m'aider.
 
 
 % ALICIA_NUMBER_SETTINGS
-player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
-player = object = happy = Une clé 2 ou des bombes 1 devrait m'aider.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = keep = happy = Une clé 2 ou des bombes 1 devrait m'aider.
 
 
 % ALICIA_CANT_HELP
-player = object = asleep = Voyons voir…
-player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes cyan.
-player = object = sad = À moins d'avoir une clé verte,@elle est définitivement bloquée.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes cyan.
+player = keep = sad = À moins d'avoir une clé verte,@elle est définitivement bloquée.
 
 
 % ALICIA_CANT_HELP_NUMBER_SETTINGS
-player = object = asleep = Voyons voir…
-player = object = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes 1.
-player = object = sad = À moins d'avoir une clé 2,@elle est définitivement bloquée.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = J'ai laissé passer ma chance de libérer@Alicia avec des bombes 1.
+player = keep = sad = À moins d'avoir une clé 2,@elle est définitivement bloquée.
 
 
 % NO_BOMB
-player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = Je devrais commencer par récupérer des bombes.
+player = keep = asleep = Voyons voir…
+player = keep = happy = Je dois trouver un moyen de nous faire sortir.
+player = keep = happy_var = Je devrais commencer par récupérer des bombes.
 
 
 % HAS_BOMB
-player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = Je peux retourner à l'entrée et utiliser des bombes.
+player = keep = asleep = Voyons voir…
+player = keep = happy = Je dois trouver un moyen de nous faire sortir.
+player = keep = happy_var = Je peux retourner à l'entrée et utiliser des bombes.
 
 
 % TRAPPED
-player = object = asleep = Voyons voir…
-player = object = unhappy = Je suis piégée. Je dois trouver un moyen de sortir.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = Je suis piégée. Je dois trouver un moyen de sortir.
 
 
 % TRAPPED_WITH_ALICIA
-player = object = asleep = Voyons voir…
-player = object = unhappy = Alicia et moi sommes piégées.@Nous devons trouver un moyen de sortir.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = Alicia et moi sommes piégées.@Nous devons trouver un moyen de sortir.
 
 
 % GREEN_KEY
-player = object = asleep = Voyons voir…
-player = object = happy = Je dois trouver un moyen de nous faire sortir.
-player = object = happy_var = La clé verte va se montrer très pratique !
+player = keep = asleep = Voyons voir…
+player = keep = happy = Je dois trouver un moyen de nous faire sortir.
+player = keep = happy_var = La clé verte va se montrer très pratique !
 
 
 % EXPLOSIONS
-player = object = asleep = Voyons voir…
-player = object = laugh = Qu'est-ce que c'est amusant de@tout faire exploser !
+player = keep = asleep = Voyons voir…
+player = keep = laugh = Qu'est-ce que c'est amusant de@tout faire exploser !

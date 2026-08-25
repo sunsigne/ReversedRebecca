@@ -1,5 +1,5 @@
 % ALICIA_HELP
-player = object = asleep = Voyons voir…
-player = object = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
-player = object = happy = Sarah, Delta ou même Mia, pourraient m'aider,@si je leur demande.
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = Je dois trouver un moyen de libérer@Alicia qui est enfermée.
+player = keep = happy = Sarah, Delta ou même Mia, pourraient m'aider,@si je leur demande.
 

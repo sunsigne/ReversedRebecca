@@ -46,6 +46,8 @@ public class FacingRequest extends ConditionalRequest {
 
 	@Override
 	public void doClassicAction(PiranhaObject object, String target) {
+		if (target.equalsIgnoreCase("keep"))
+			return;
 
 		// if facing is a clear direction (ex : UP, LEFT, etc.)
 		for (DIRECTION tempFacing : DIRECTION.values()) {
