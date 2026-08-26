@@ -55,7 +55,7 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
-		- animation éveil camille
+		- bruitage éveil camille
 		- animation et dilogues post-réveil (arrivée de la lettre et sortie de rebecca)
 		- traductions
 		- preview
