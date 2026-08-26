@@ -33,6 +33,7 @@
 	////////// EN COURS ////////////
 
 	niveaux à faire :
+		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
 	
@@ -54,7 +55,6 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
-		- rythme scène d'intro (musique)
 		- animation éveil camille
 		- animation et dilogues post-réveil (arrivée de la lettre et sortie de rebecca)
 		- traductions
