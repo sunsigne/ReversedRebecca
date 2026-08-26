@@ -1,0 +1,16 @@
+% WELL_DONE
+double-y = player = calm = Bien joué, petite. Tu as prouvé ta valeur.@Je vais te dire ce que je sais :
+double-y = player = calm = Vladimir est un ami, et Novatech, lui a@indirectement causé du tort.
+double-y = player = calm = Quelque part, je le comprends…@Même si je n'excuse pas ses agissements.
+
+
+% HOWEVER
+double-y = player = intrigued = Cependant, je ne peux trahir un ami…
+double-y = player = calm = Prend cette cassette. Tu y apprendras ce que@tu dois savoir. Bien sûr, je l'ai crypté.
+double-y = player = calm = C'est ma façon à moi de réparer le tort@qu'il t'a causé, tout en lui restant fidèle.
+double-y = player = calm = Tu veux le retrouver ? Décode-la. Tu es maligne,@ça ne devrait te prendre qu'un jour ou deux.
+
+
+% SEE_YOU
+double-y = player = happy = La prochaine fois qu'on se verra, je serai là.@Pour te barrer la route. Pour protéger mon ami.
+double-y = player = happy = À bientôt, petite…@Sois prête pour notre prochaine fois.

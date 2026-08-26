@@ -1,0 +1,16 @@
+% WELL_DONE
+double-y = player = calm = Well done, kid. You've proven your worth.@I'll tell you what I know:
+double-y = player = calm = Vladimir is a friend, and Novatech,@indirectly caused him harm.
+double-y = player = calm = On some level, I understand him…@Even if I don't condone his actions.
+
+
+% HOWEVER
+double-y = player = intrigued = Still, I can't betray a friend…
+double-y = player = calm = Take this tape. You'll learn what you need@to know. Of course, I've encrypted it.
+double-y = player = calm = It's my way of making amends for the harm@he caused you, while staying loyal to him.
+double-y = player = calm = Want to find him? Decode it. You're smart,@it shouldn't take you more than a day or two.
+
+
+% SEE_YOU
+double-y = player = happy = Next time we meet, I'll be there.@To stand in your way. To protect my friend.
+double-y = player = happy = See you soon, kid…@Be prepared for our next encounter.
