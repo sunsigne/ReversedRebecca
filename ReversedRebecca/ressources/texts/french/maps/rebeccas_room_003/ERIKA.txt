@@ -18,11 +18,10 @@ player = UP = surprised = Ne me fait pas languir ! Tu n'entends pas la@musique ?
 erika = RIGHT = happy = D'accords, d'accords…@Prête pour un bon dans le futur ?
 
 
-
-
-
 % AWAKENING
 camille = DOWN = happy = Bonjour... Mères ?
-erika = RIGHT = happy_var = Bienvenue au monde, Camillle. Je m'appelle Erika, et je suis ta créatrice. Mais tu peux m'appeler 
-erika = RIGHT = happy = Mais, si tu es plus l'aise en m'appelant "maman", tu as ma permission.
+
+
+% AWAKENING_NEXT
+erika = RIGHT = happy = Bienvenue au monde, Camillle. Je m'appelle Erika. C'est moi ta créatrice. Mais tu peux m'appeler "maman" si tu préfères.
 player = RIGHT = laugh = Et moi, c'est Rebecca. La meilleure amie de ta mère, et on est actuellement chez moi.
