@@ -55,9 +55,10 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
-		- animation et dilogues post-réveil (arrivée de la lettre et sortie de rebecca)
+		- arrivée de la lettre et sortie de rebecca
 		- traductions
 		- preview
+		- ajout d'expressions pour Erika et Camille
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
