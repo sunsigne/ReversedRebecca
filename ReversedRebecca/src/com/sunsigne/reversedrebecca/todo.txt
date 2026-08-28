@@ -55,6 +55,7 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
+		- pour l'animation, ajouter des flashs lumineux AVANT l'awakening (pour être raccord avec le son d'éclairs)
 		- arrivée de la lettre et sortie de rebecca
 		- traductions
 		- preview

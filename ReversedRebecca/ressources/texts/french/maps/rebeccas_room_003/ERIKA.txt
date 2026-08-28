@@ -30,3 +30,29 @@ erika = RIGHT = happy = Je suis ta créatrice ; donc, ta mère.@Mais, tu peux m'
 % AWAKENING_NEXT_NEXT
 player = UP = laugh = Et moi, c'est Rebecca. Sa meilleure amie,@et on est actuellement chez moi.
 camille = DOWN = happy = Ravie de faire vos connaissances.@Je suis impatiente d'apprendre à vous connaître.
+
+
+% LETTER
+player = RIGHT = no_sens = C'est vraiment bizarre…@C'est une lettre, mais c'est mon écriture…
+erika = LEFT = happy = Comment ça ?
+camille = LEFT = happy = Je peux l'analyser, si tu le souhaites.
+player = RIGHT = no_sens = Ok, oui…
+
+
+% CAMILLE_READING
+camille = DOWN = happy = Il n'y a aucun doute, c'est bien une lettre.
+player = UP = fake_smile = Wow… Merci…@J'avais vraiment besoin de toi pour savoir ça…
+camille = DOWN = happy = Ça dit "Si tu veux retrouver Vladimir,@va voir Stephan au Purple String club, dans 10 minutes."
+player = UP = fake_smile = C'est vrai que je ne sais pas lire… Merci.@J'imaginais quelque chose de plus utile, comme…
+player = UP = camille = Oui, c'est bien ton écriture, Rebecca.
+erika = DOWN = happy = Une minute… C'est qui Vladimir ?@C'est quoi cette histoire ?
+player = UP = worry = C'est une longue histoire… Mais pour la faire courte,@je dois absolument le retrouver.
+camille = DOWN = happy = Dans ce cas, tu dois prendre cette lettre au sérieux.@rieux, rieux, rieux, rieux…
+
+
+% CAMILLE_CRASHED
+erika = RIGHT = happy = Ho non ! Elle a dû surchauffée !@Trop de nouvelles données d'un seul coup…
+player = UP = worry = Elle n'est pas censée avoir des neurones humains ?
+erika = DOWN = happy = Seulement en partie. Une partie de son cerveau est aussi électronique…
+erika = RIGHT = happy = Bon, on dirait que j'ai à faire. Et apparemment, toi aussi…@Je te dis à plus tard.
+player = UP = worry = Oui, bien sûr.
