@@ -19,12 +19,12 @@ erika = RIGHT = happy = D'accords, d'accords…@Prête pour un bon dans le futur
 
 
 % AWAKENING
-camille = DOWN = happy = Bonjour... Mères ?
+camille = DOWN = happy = Bonjour... mères ?
 
 
 % AWAKENING_NEXT
 erika = RIGHT = happy = Bienvenue au monde, Camillle.@Je m'appelle Erika.
-erika = RIGHT = happy = Je suis ta créatrice ; donc, ta mère.@Mais, tu peux m'appeler Rika.
+erika = RIGHT = happy = Je suis ton unique créatrice, donc ta seule "mère".@Mais, tu peux m'appeler Rika.
 
 
 % AWAKENING_NEXT_NEXT
@@ -34,25 +34,29 @@ camille = DOWN = happy = Ravie de faire vos connaissances.@Je suis impatiente d'
 
 % LETTER
 player = RIGHT = no_sens = C'est vraiment bizarre…@C'est une lettre, mais c'est mon écriture…
-erika = LEFT = happy = Comment ça ?
-camille = LEFT = happy = Je peux l'analyser, si tu le souhaites.
+erika = LEFT = happy = Quoi ?
+camille = LEFT = happy = Je peux l'analyser, si tu le souhaites.@De cette façon, nous serons fixées.
 player = RIGHT = no_sens = Ok, oui…
 
 
 % CAMILLE_READING
 camille = DOWN = happy = Il n'y a aucun doute, c'est bien une lettre.
-player = UP = fake_smile = Wow… Merci…@J'avais vraiment besoin de toi pour savoir ça…
-camille = DOWN = happy = Ça dit "Si tu veux retrouver Vladimir,@va voir Stephan au Purple String club, dans 10 minutes."
-player = UP = fake_smile = C'est vrai que je ne sais pas lire… Merci.@J'imaginais quelque chose de plus utile, comme…
-player = UP = camille = Oui, c'est bien ton écriture, Rebecca.
+player = UP = fake_smile = Wow… Merci…@Qu'est-ce qu'on ferait sans toi…
+camille = DOWN = happy = Ça dit : "si tu veux retrouver Vladimir, va voir@Stephan au Purple String club, dans 10 minutes".
+player = UP = fake_smile = Je ne sais pas lire, en effet…@Une info plus utile ? Comme…
+player = UP = camille = camille = Oui, c'est bien ton écriture, Rebecca.
 erika = DOWN = happy = Une minute… C'est qui Vladimir ?@C'est quoi cette histoire ?
-player = UP = worry = C'est une longue histoire… Mais pour la faire courte,@je dois absolument le retrouver.
-camille = DOWN = happy = Dans ce cas, tu dois prendre cette lettre au sérieux.@rieux, rieux, rieux, rieux…
+player = UP = worry = C'est ce que je voulais te raconter en arrivant…@Pour faire court, je dois absolument le retrouver.
+camille = DOWN = happy = Dans ce cas, tu dois prendre cette lettre au@sérieux… rieux, rieux, rieux, rieux…
 
 
 % CAMILLE_CRASHED
-erika = RIGHT = happy = Ho non ! Elle a dû surchauffée !@Trop de nouvelles données d'un seul coup…
-player = UP = worry = Elle n'est pas censée avoir des neurones humains ?
-erika = DOWN = happy = Seulement en partie. Une partie de son cerveau est aussi électronique…
-erika = RIGHT = happy = Bon, on dirait que j'ai à faire. Et apparemment, toi aussi…@Je te dis à plus tard.
-player = UP = worry = Oui, bien sûr.
+erika = RIGHT = happy = Ho non ! Elle a planté !@Trop de nouvelles données d'un coup…
+player = UP = worry = Elle n'est pas censée être en partie humaine ?
+erika = DOWN = happy = Seulement en partie. Et, d'une certaine façon,@les humains aussi peuvent avoir des bugs.
+erika = RIGHT = happy = Un état de choc, un malaise vagal…@Pour elle, c'est juste un petit peu différent.
+
+
+% CAMILLE_CRASHED_NEXT
+erika = RIGHT = happy = Bon, on dirait que j'ai à faire. Et apparemment,@toi aussi ?
+player = UP = convinced = Absolument ! Trouvé Stephan, dans la@discothèque de la ville.
