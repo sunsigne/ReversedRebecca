@@ -1,0 +1,14 @@
+% CAMILLE_READING
+camille = DOWN = happy = There's no doubt about it, it's definitely a letter.
+player = UP = fake_smile = Wow… Thanks…@What would we do without you…
+camille = DOWN = happy_var = It says: "if you want to find Vladimir, go see @Sabrina at the Purple String Club in 10 minutes".
+player = UP = fake_smile = I can read…@Anything more useful? Like…
+player = UP = camille = camille = Yes, it really is your handwriting, Rebecca.
+erika = DOWN = unhappy = Wait a minute… Who is Vladimir?@What is this all about?
+player = UP = happy = That's what I wanted to tell you when I got here.@Long story short, I absolutely have to find him.
+camille = DOWN = happy = In that case, you need to take this letter@seriously… iously, iously, iously, iously…
+
+
+% CAMILLE_CRASHED_NEXT
+erika = RIGHT = happy = Well, looks like I've got work to do.@And apparently, so do you?
+player = UP = convinced = Absolutely! Found Sabrina at the local club.

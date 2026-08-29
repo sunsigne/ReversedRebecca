@@ -1,0 +1,63 @@
+% HELLO
+player = RIGHT = laugh = Hi, Rika!
+erika = RIGHT = happy = Hello, kitty. How was work?
+player = RIGHT = excited = It was a crazy day! You won't believe what@I have to tell you.
+erika = RIGHT = happy_var = Think you can hold it?@I was waiting for you to activate Camille.
+
+
+% HELLO_NEXT
+player = DOWN = surprised =  No way! Is she ready?
+
+
+% HELLO_NEXT_NEXT
+player = UP = surprised = For real? Are you sure?
+erika = RIGHT = happy_var = 100"0/0"!
+erika = RIGHT = happy = For the first time in the world, an android@with human neurons is about to come to life.
+erika = RIGHT = unhappy = Well, when I say 100"0/0" ready… @There are still a few tweaks left, and…
+player = UP = surprised = Don't keep me in suspense! Can't you hear the@music? Now's the time to press the button!
+erika = RIGHT = happy = Alright, alright…@Ready to leap into the future?
+erika = RIGHT = happy_var = 3, 2, 1, and…
+
+
+% AWAKENING
+camille = DOWN = happy = Hello... mothers?
+
+
+% AWAKENING_NEXT
+erika = RIGHT = happy_var = Welcome to the world, Camille.@My name is Erika.
+erika = RIGHT = happy = I am your sole creator, so your only "mother".@But you can call me Rika.
+
+
+% AWAKENING_NEXT_NEXT
+player = UP = laugh = And I'm Rebecca. Her best friend,@and we're currently at my place.
+camille = DOWN = happy_var = Pleased to meet you both.@I look forward to getting to know you.
+
+
+% LETTER
+player = RIGHT = no_sens = It's really curious…@It's a letter, but it's in my handwriting…
+erika = LEFT = unhappy = Huh?
+camille = LEFT = happy = I can analyze it, if you like.@That way, we'll know for sure.
+player = RIGHT = no_sens = Okay, yeah…
+
+
+% CAMILLE_READING
+camille = DOWN = happy = There's no doubt about it, it's definitely a letter.
+player = UP = fake_smile = Wow… Thanks…@What would we do without you…
+camille = DOWN = happy_var = It says: "if you want to find Vladimir, go see @Stephan at the Purple String Club in 10 minutes".
+player = UP = fake_smile = I can read…@Anything more useful? Like…
+player = UP = camille = camille = Yes, it really is your handwriting, Rebecca.
+erika = DOWN = unhappy = Wait a minute… Who is Vladimir?@What is this all about?
+player = UP = happy = That's what I wanted to tell you when I got here.@Long story short, I absolutely have to find him.
+camille = DOWN = happy = In that case, you need to take this letter@seriously… iously, iously, iously, iously…
+
+
+% CAMILLE_CRASHED
+erika = RIGHT = unhappy = Oh no! She crashed!@Too much new data all at once…
+player = UP = worry = Isn't she supposed to be part human?
+erika = DOWN = happy_var = Only partly. And, in a way, humans can have@glitches too.
+erika = RIGHT = happy = A shock, a vasovagal episode…@For her, it's just a little bit different.
+
+
+% CAMILLE_CRASHED_NEXT
+erika = RIGHT = happy = Well, looks like I've got work to do.@And apparently, so do you?
+player = UP = convinced = Absolutely! Found Stephan at the local club.
