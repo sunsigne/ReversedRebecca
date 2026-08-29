@@ -58,7 +58,6 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
-		- ajout d'expressions pour Erika et Camille
 		- female : remplacver Stehpan par Sabrina
 		- traductions
 

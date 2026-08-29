@@ -16,6 +16,7 @@ erika = RIGHT = happy = Pour la première fois au monde, une androïde@avec des 
 erika = RIGHT = unhappy = Enfin, quand je dis 100"0/0" prête…@Il reste encore quelques réglages, et…
 player = UP = surprised = Ne me fait pas languir ! Tu n'entends pas la@musique ? C'est maintenant qu'il faut appuyer !
 erika = RIGHT = happy = D'accords, d'accords…@Prête pour un bon dans le futur ?
+erika = RIGHT = happy_var = 3, 2, 1, et…
 
 
 % AWAKENING
@@ -29,7 +30,7 @@ erika = RIGHT = happy = Je suis ton unique créatrice, donc ta seule "mère".@Ma
 
 % AWAKENING_NEXT_NEXT
 player = UP = laugh = Et moi, c'est Rebecca. Sa meilleure amie,@et on est actuellement chez moi.
-camille = DOWN = happy = Ravie de faire vos connaissances.@Je suis impatiente d'apprendre à vous connaître.
+camille = DOWN = happy_var = Ravie de faire vos connaissances.@Je suis impatiente d'apprendre à vous connaître.
 
 
 % LETTER
@@ -42,19 +43,19 @@ player = RIGHT = no_sens = Ok, oui…
 % CAMILLE_READING
 camille = DOWN = happy = Il n'y a aucun doute, c'est bien une lettre.
 player = UP = fake_smile = Wow… Merci…@Qu'est-ce qu'on ferait sans toi…
-camille = DOWN = happy = Ça dit : "si tu veux retrouver Vladimir, va voir@Stephan au Purple String club, dans 10 minutes".
+camille = DOWN = happy_var = Ça dit : "si tu veux retrouver Vladimir, va voir@Stephan au Purple String club, dans 10 minutes".
 player = UP = fake_smile = Je sais lire, oui…@Une info plus utile ? Comme…
 player = UP = camille = camille = Oui, c'est bien ton écriture, Rebecca.
 erika = DOWN = unhappy = Une minute… C'est qui Vladimir ?@C'est quoi cette histoire ?
-player = UP = worry = C'est ce que je voulais te raconter en arrivant…@Pour faire court, je dois absolument le retrouver.
+player = UP = happy = C'est ce que je voulais te raconter en arrivant.@Pour faire court, je dois absolument le retrouver.
 camille = DOWN = happy = Dans ce cas, tu dois prendre cette lettre au@sérieux… rieux, rieux, rieux, rieux…
 
 
 % CAMILLE_CRASHED
 erika = RIGHT = unhappy = Ho non ! Elle a planté !@Trop de nouvelles données d'un coup…
 player = UP = worry = Elle n'est pas censée être en partie humaine ?
-erika = DOWN = happy = Seulement en partie. Et, d'une certaine façon,@les humains aussi peuvent avoir des bugs.
-erika = RIGHT = happy_var = Un état de choc, un malaise vagal…@Pour elle, c'est juste un petit peu différent.
+erika = DOWN = happy_var = Seulement en partie. Et, d'une certaine façon,@les humains aussi peuvent avoir des bugs.
+erika = RIGHT = happy = Un état de choc, un malaise vagal…@Pour elle, c'est juste un petit peu différent.
 
 
 % CAMILLE_CRASHED_NEXT

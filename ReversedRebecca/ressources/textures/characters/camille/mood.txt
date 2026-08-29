@@ -1,4 +1,8 @@
-////// CHARACTER SPECIFIC //////
+////// HAPPY //////
 
 happy=1,1
-asleep=1,2
+happy_var=1,2
+
+////// CHARACTER SPECIFIC //////
+
+asleep=2,1
