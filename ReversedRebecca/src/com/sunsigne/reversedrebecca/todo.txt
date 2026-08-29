@@ -55,11 +55,8 @@
 		- la suite de psychopathe depuis le commisariat
 	
 	rr003 (arrive pendant + si refus de commisariat) :
-		- améliorer la fin du niveau (introduction de la discothèque un peu brutale, rebecca devrait marcher + longtemps ?)
-		- pour l'animation, ajouter des flashs lumineux AVANT l'awakening (pour être raccord avec le son d'éclairs)
-		- traductions
-		- preview
 		- ajout d'expressions pour Erika et Camille
+		- traductions
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
