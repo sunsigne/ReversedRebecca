@@ -39,12 +39,15 @@
 	
 	bug : 
 		- rr000 : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
-	à faire : 
-		- rr002 du psychopathe, sarah envoye un appel à laide sur l'ordi ?
-		- rr002 : erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
-		- rr003-XY (n'arrive qu'après le commisariat)
-		- rr003-XY - faire les preview
-		- rr003-xy, faire l'animation d'éveil de Camille, puis faire partir rebecca
+	
+	rr002 : 
+		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
+		- erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
+	
+	rr003-xy :
+		(n'arrive qu'après le commisariat)
+		- faire les preview
+		- faire l'animation d'éveil de Camille, puis faire partir rebecca
 	
 	sadique :
 		- la suite de sadique en labo (pas de sarah...)
@@ -56,6 +59,7 @@
 	
 	rr003 (arrive pendant + si refus de commisariat) :
 		- ajout d'expressions pour Erika et Camille
+		- female : remplacver Stehpan par Sabrina
 		- traductions
 
 	dave :
