@@ -35,6 +35,17 @@
 	rr005-drunk :
 		- créer des interactions d'objets drôles :
 			- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
+			- vomir dans les toilettes ou faire pipi (dégeulasse la baignorire)
+			- vomir dans la baignoire, ça finit où ?
+			- dormir sur le canapé = dormir sur le plan de travail
+
+			- frigo vide
+			à finir : 
+				- obj-02 - (cutscene + vomis sur le canapé + réduit l'aclcool item) vomir dans l'évier (en fait, c'est sur le canapé)
+				- se faire à manger = allumer la TV !!
+				- plante dans la cuisine
+				- la bibliothèque devrait être sans hitbox (plus naturel)
+			
 		- créer dialogue d'arriver
 		- créer possibilité de dormir un peu où on veut (sauvegarder l'info)
 		- retirer hp hud
@@ -46,6 +57,8 @@
 		- mettre à jour preview
 		- traduction
 		- idée : quand elle parle de Mika, elle dit Mia avant de se reprendre. Pareil Pour Marie/Michel
+		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mut invisible sur la porte pour empe^cher Rebecca de se perdre)
+		- vérifier (et le cas échéchant, corriger) que l'inversion des controle quand on est bourré, fonctionne pour la manette
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)

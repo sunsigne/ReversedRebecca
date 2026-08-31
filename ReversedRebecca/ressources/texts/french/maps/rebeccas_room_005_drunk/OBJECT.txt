@@ -1,0 +1,7 @@
+% TRY_DRINKING_COUCH
+player = RIGHT = drunk = C'est curieux… Ce robinet ne donne pas d'eau.
+
+
+% TRY_EATING_COUCH
+player = RIGHT = drunk = Mes mains sont moites, ou quoi ?@Je n'arrive pas à ouvrir mon frigo !
+player = DOWN = drunk = Bon, tant pis. Je n'avais pas faim de toute façon.

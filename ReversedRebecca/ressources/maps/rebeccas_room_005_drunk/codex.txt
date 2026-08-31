@@ -1,1 +1,7 @@
 NPC-01 = Camille
+OBJ-01 = Scanner
+
+///// KITCHEN /////
+
+OBJ-02 = Sink (Couch)
+OBJ-03 = Hotplates (TV)

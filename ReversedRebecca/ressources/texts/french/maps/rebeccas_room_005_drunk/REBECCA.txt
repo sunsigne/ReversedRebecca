@@ -1,3 +1,7 @@
 % DRUNK
 player = DOWN = drunk = Holala… La pillule qui retarde les effets de l'alcool@ne fait clairement plus effet…
 player = DOWN = drunk = Je vais essayer d'aller me coucher.
+
+
+% WRONG_DIRECTION
+player = keep = drunk = Oula… Il faut que je me concentre pour marcher…
