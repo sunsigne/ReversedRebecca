@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 
 import java.awt.event.KeyEvent;
 
+import com.sunsigne.reversedrebecca.characteristics.drunk.DrunkTask;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
@@ -65,6 +66,10 @@ public class UserKeyMovePlayer {
 	private int[] directionKeyEvent = new int[4];
 	private boolean[] directionKeyPressed = new boolean[4];
 
+	private boolean reversedControls() {
+		return DrunkTask.getDrunk() >= 6;
+	}
+
 	public void refreshDirectionKeys() {
 		setDirectionKeyEvent(DIRECTION.LEFT, LeftKey.getKey());
 		setDirectionKeyEvent(DIRECTION.RIGHT, RightKey.getKey());
@@ -80,17 +85,35 @@ public class UserKeyMovePlayer {
 		if (player == null)
 			return;
 
-		if (key == directionKeyEvent[DIRECTION.LEFT.getNum()] || key == KeyEvent.VK_LEFT || button == ButtonEvent.LEFT)
-			directionKeyPressed[DIRECTION.LEFT.getNum()] = pressed;
+		if (key == directionKeyEvent[DIRECTION.LEFT.getNum()] || key == KeyEvent.VK_LEFT
+				|| button == ButtonEvent.LEFT) {
+			if (reversedControls())
+				directionKeyPressed[DIRECTION.RIGHT.getNum()] = pressed;
+			else
+				directionKeyPressed[DIRECTION.LEFT.getNum()] = pressed;
+		}
 
-		if (key == directionKeyEvent[DIRECTION.RIGHT.getNum()] || key == KeyEvent.VK_RIGHT || button == ButtonEvent.RIGHT)
-			directionKeyPressed[DIRECTION.RIGHT.getNum()] = pressed;
+		if (key == directionKeyEvent[DIRECTION.RIGHT.getNum()] || key == KeyEvent.VK_RIGHT
+				|| button == ButtonEvent.RIGHT) {
+			if (reversedControls())
+				directionKeyPressed[DIRECTION.LEFT.getNum()] = pressed;
+			else
+				directionKeyPressed[DIRECTION.RIGHT.getNum()] = pressed;
+		}
 
-		if (key == directionKeyEvent[DIRECTION.UP.getNum()] || key == KeyEvent.VK_UP || button == ButtonEvent.UP)
-			directionKeyPressed[DIRECTION.UP.getNum()] = pressed;
+		if (key == directionKeyEvent[DIRECTION.UP.getNum()] || key == KeyEvent.VK_UP || button == ButtonEvent.UP) {
+			if (reversedControls())
+				directionKeyPressed[DIRECTION.DOWN.getNum()] = pressed;
+			else
+				directionKeyPressed[DIRECTION.UP.getNum()] = pressed;
+		}
 
-		if (key == directionKeyEvent[DIRECTION.DOWN.getNum()] || key == KeyEvent.VK_DOWN || button == ButtonEvent.DOWN)
-			directionKeyPressed[DIRECTION.DOWN.getNum()] = pressed;
+		if (key == directionKeyEvent[DIRECTION.DOWN.getNum()] || key == KeyEvent.VK_DOWN || button == ButtonEvent.DOWN) {
+			if (reversedControls())
+				directionKeyPressed[DIRECTION.UP.getNum()] = pressed;
+			else
+				directionKeyPressed[DIRECTION.DOWN.getNum()] = pressed;
+		}
 
 		if (button == ButtonEvent.NULL_X) {
 			directionKeyPressed[DIRECTION.LEFT.getNum()] = false;

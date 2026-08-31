@@ -32,6 +32,13 @@
 		
 	////////// EN COURS ////////////
 
+	rr005-drunk :
+		- créer des interactions d'objets drôles
+		- créer dialogue d'arriver
+		- créer possibilité de dormir un peu où on veut (sauvegarder l'info)
+		- retirer hp hud
+		- créer le panier de v^étements
+
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
