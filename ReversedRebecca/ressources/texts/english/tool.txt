@@ -1,6 +1,7 @@
-///// DOOR /////
+///// OTHER /////
 
 DoorPlural = doors
+Alcohol = alcohol
 
 ///// KEY /////
 

@@ -25,3 +25,7 @@ MicrochipCriticalChance=15%
 ShovelMaxLvl=CYAN
 ShovelStartLvl=NULL
 ShovelCriticalChance=15%
+
+AlcoholMaxLvl=YELLOW
+AlcoholStartLvl=NULL
+AlcoholCriticalChance=15%

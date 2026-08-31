@@ -1,6 +1,7 @@
 ///// DOOR /////
 
 DoorPlural = les portes
+Alcohol = alcool
 
 ///// KEY /////
 
