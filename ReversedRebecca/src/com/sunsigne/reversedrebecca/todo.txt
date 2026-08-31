@@ -33,11 +33,19 @@
 	////////// EN COURS ////////////
 
 	rr005-drunk :
-		- créer des interactions d'objets drôles
+		- créer des interactions d'objets drôles :
+			- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
 		- créer dialogue d'arriver
 		- créer possibilité de dormir un peu où on veut (sauvegarder l'info)
 		- retirer hp hud
 		- créer le panier de v^étements
+		- créer le rdv bis avec Marie
+		- Mika s'invite
+		- créer double de Rebecca
+		- créer musique
+		- mettre à jour preview
+		- traduction
+		- idée : quand elle parle de Mika, elle dit Mia avant de se reprendre. Pareil Pour Marie/Michel
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)

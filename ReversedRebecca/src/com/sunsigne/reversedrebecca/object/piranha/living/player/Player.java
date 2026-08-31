@@ -3,6 +3,7 @@ package com.sunsigne.reversedrebecca.object.piranha.living.player;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.characteristics.HealthPlayer;
+import com.sunsigne.reversedrebecca.characteristics.drunk.DrunkTask;
 import com.sunsigne.reversedrebecca.menu.Cutscene;
 import com.sunsigne.reversedrebecca.object.GoalObject;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
@@ -58,8 +59,10 @@ public class Player extends LivingObject implements BonusHealth {
 	}
 
 	private void updateSpeed() {
+		SPEEDNESS speedness = DrunkTask.getDrunk() >= 4 ? SPEEDNESS.SLOW : SPEEDNESS.PLAYER_SPEED;
+
 		if (isPathNull())
-			setSpeedness(SPEEDNESS.PLAYER_SPEED);
+			setSpeedness(speedness);
 	}
 
 	////////// BONUS HP ////////////
