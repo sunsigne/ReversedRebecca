@@ -141,9 +141,13 @@ public abstract class ToolPlayer implements Difficulty {
 
 	@Override
 	public void setDifficulty(LVL difficulty) {
+		setDifficulty(difficulty, false);
+	}
+	
+	public void setDifficulty(LVL difficulty, boolean forbiddenUpgradeAllowed) {
 		boolean blinking = getTool().difficulty == LVL.NULL;
 
-		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty))
+		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty) && forbiddenUpgradeAllowed == false)
 			getTool().difficulty = getMaxDifficulty();
 		else
 			getTool().difficulty = difficulty;

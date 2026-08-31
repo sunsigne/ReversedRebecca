@@ -36,4 +36,11 @@ public class AlcoholToolPlayer extends ToolPlayer {
 		return LVL.YELLOW.getName().toUpperCase();
 	}
 
+	///// current /////
+
+	@Override
+	public void setDifficulty(LVL difficulty) {
+		setDifficulty(difficulty, true);
+	}
+
 }

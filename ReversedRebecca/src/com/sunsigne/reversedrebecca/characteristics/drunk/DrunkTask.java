@@ -1,5 +1,8 @@
 package com.sunsigne.reversedrebecca.characteristics.drunk;
 
+import com.sunsigne.reversedrebecca.characteristics.tools.AlcoholToolPlayer;
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
@@ -15,6 +18,7 @@ public class DrunkTask {
 
 	public void setDrunk(int drunk) {
 		DrunkTask.drunk = drunk;
+		updateTool();
 		updateDeath();
 	}
 
@@ -34,6 +38,17 @@ public class DrunkTask {
 	public void removeDrunk(int amount) {
 		setDrunk(getDrunk() - amount);
 		updateDeath();
+	}
+
+	private void updateTool() {
+		ToolPlayer toolPlayer = new AlcoholToolPlayer();
+
+		LVL difficulty = LVL.NULL;
+		for (LVL tempDifficulty : LVL.values())
+			if (getDrunk() >= tempDifficulty.ordinal() + 1 && tempDifficulty != LVL.PURPLE)
+				difficulty = tempDifficulty;
+
+		toolPlayer.setDifficulty(difficulty);
 	}
 
 	public void updateDeath() {
