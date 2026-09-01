@@ -1,4 +1,3 @@
-NPC-01 = Camille
 NPC-02 = Scanner
 
 ///// KITCHEN /////
@@ -11,3 +10,13 @@ OBJ-04 = Plant
 ///// LIVING ROOM /////
 
 OBJ-05 = Table and Chairs
+OBJ-06 = TV (Hotplates)
+OBJ-07 = Vertical Couch
+OBJ-08 = Horizontal Couch
+
+///// DESK /////
+
+NPC-01 = Camille
+
+OBJ-XX = Desk
+OBJ-XX = Plant

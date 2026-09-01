@@ -5,3 +5,9 @@ PUKE_IN_THE_SINK = Key2 % vomir dans l'évier
 WATCH_TV = Key1 % regarder la TV
 TURN_OFF = Key1 % éteindre
 EAT_SOMETHING = Key1 % manger quelque chose
+
+
+///// LIVING ROOM /////
+
+COOK_SOMETHING = Key1 % cuisiner quelque chose
+SLEEP = Key1 % dormir

@@ -9,3 +9,12 @@ player = DOWN = drunk = Bon, tant pis. Je n'avais pas faim de toute façon.
 
 % SIT
 player = DOWN = drunk = Tout bien réfléchis, je préfère mon lit.
+
+
+% CAMILLE
+player = camille = drunk = Tu dors ?@Je vais suivre ton exemple…
+
+
+% TRY_COOKING_TV
+player = UP = drunk = Je… heu… Quoi ?@J'ai du mal à comprendre où je suis vraiment…
+player = DOWN = drunk = Est-ce que mes canapés sont vraiment ici ?
