@@ -37,7 +37,7 @@ public class GiveDrunkPlayer implements Request {
 		if (drunk > 0)
 			new DrunkTask().addDrunk(drunk);
 		if (drunk < 0)
-			new DrunkTask().removeDrunk(drunk);
+			new DrunkTask().removeDrunk(-drunk);
 	}
 
 }
