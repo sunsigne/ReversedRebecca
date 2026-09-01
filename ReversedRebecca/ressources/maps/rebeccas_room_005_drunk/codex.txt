@@ -7,3 +7,7 @@ OBJ-01 = Hotplates (TV)
 OBJ-02 = Sink (Couch)
 OBJ-03 = Fridge (Couch)
 OBJ-04 = Plant
+
+///// LIVING ROOM /////
+
+OBJ-05 = Table and Chairs
