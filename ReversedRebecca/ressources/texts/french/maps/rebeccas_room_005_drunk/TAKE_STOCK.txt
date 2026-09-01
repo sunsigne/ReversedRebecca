@@ -1,0 +1,3 @@
+% SLEEP
+player = object = drunk_asleep = Voyons voir…
+player = object = drunk = Je dois aller me coucher…@J'ai clairement bu trop d'alcool.

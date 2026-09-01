@@ -49,3 +49,5 @@ death=5,6
 ////// IMITATION //////
 
 camille=6,1
+drunk_asleep=6,2
+drunk=6,3

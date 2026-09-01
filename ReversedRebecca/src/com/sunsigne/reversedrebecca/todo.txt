@@ -39,10 +39,7 @@
 			- vomir dans la baignoire, ça finit où ?
 			- dormir sur le canapé = dormir sur le plan de travail
 
-			- frigo vide
 			à finir : 
-				- se faire à manger = allumer la TV !!
-				- plante dans la cuisine
 				- la bibliothèque devrait être sans hitbox (plus naturel)
 			
 		- créer dialogue d'arriver
