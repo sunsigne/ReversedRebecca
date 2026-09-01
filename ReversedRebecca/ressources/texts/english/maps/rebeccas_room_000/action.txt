@@ -33,6 +33,7 @@ PHILOSOPHIZE = Key1 % philosophize
 RELAX = Key1 % relax
 FACE_REALITY = Key1 % face reality
 WATCH_TV = Key1 % watch TV
+TURN_OFF = Key1 % turn off
 EXIT = Key1 % get up
 TALK_ABOUT_BOOKS = Key1 % talk about books
 WATCH_SARAH = Key1 % watch Sarah

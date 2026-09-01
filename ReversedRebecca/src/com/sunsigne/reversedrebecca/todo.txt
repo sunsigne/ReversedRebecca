@@ -122,10 +122,6 @@
 	tester bouton Steam "app ou navigateur" (+ windows lorsque non installé)
 	WebTask, rendre comptatible la fonction "openSteam" avec les différents système d'exploitation (s'inspirer de l'envoronnement JInput pour récupérer le chemin ?)
 
-	////////// RR000 ////////////
-
-	"regarder la TV tj pas fait", attention au dodo de sarah : faire comme Stardew Valley, ça lance un dialogue
-	
 	////////// WS000 ////////////
 	
 	passage secret tj vide ...

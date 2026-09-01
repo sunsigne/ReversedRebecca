@@ -24,3 +24,7 @@ player = object = laugh = Cette plante est déjà dans l'eau,@elle n'a pas besoi
 
 % PLANT_KITCHEN_UNWATERABLE
 player = object = happy_var = Mes herbes aromatiques n'ont pas besoin@que je les arrose, il fait souvent humide ici.
+
+
+% WATCH_TV
+player = DOWN = sad = J'ai perdu la télécommande…@Je dois me déplacer, si je veux l'allumer.
