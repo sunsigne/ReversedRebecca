@@ -1,4 +1,4 @@
-PUKE_IN_THE_SINK = Key1 % vomir dans l'évier
-DRINK_TO_STAY_HYDRATED = Key2 % boire pour s'hydrater
+STAY_HYDRATED = Key1 % s'hydrater
+PUKE_IN_THE_SINK = Key2 % vomir dans l'évier
 WATCH_TV = Key1 % regarder la TV
 EAT_SOMETHING = Key1 % manger quelque chose
