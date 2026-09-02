@@ -18,3 +18,19 @@ player = camille = drunk = Tu dors ?@Je vais suivre ton exemple…
 % TRY_COOKING_TV
 player = UP = drunk = Je… heu… Quoi ?@J'ai du mal à comprendre où je suis vraiment…
 player = DOWN = drunk = Est-ce que mes canapés sont vraiment ici ?
+
+
+% CANDLE
+player = keep = drunk = Non… Avec la quantité d'alcool qui sort par@mon haleine, je risquerai de prendre feu.
+
+
+% BOOK
+player = keep = drunk = Ce livre n'est pas censé être bleu… ?
+
+
+% BOOK_NEXT
+player = keep = drunk = Il est bleu. Je n'ai rien dit.
+
+
+% PLAY
+player = keep = drunk = Demain, plutôt… Non ?

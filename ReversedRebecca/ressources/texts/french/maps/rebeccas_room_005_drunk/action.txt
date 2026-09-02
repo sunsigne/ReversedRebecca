@@ -6,8 +6,13 @@ WATCH_TV = Key1 % regarder la TV
 TURN_OFF = Key1 % éteindre
 EAT_SOMETHING = Key1 % manger quelque chose
 
-
 ///// LIVING ROOM /////
 
 COOK_SOMETHING = Key1 % cuisiner quelque chose
 SLEEP = Key1 % dormir
+
+///// DESK /////
+
+CANDLE_LIGHT = Key2 % allumer la bougie
+CANDLE_EXTINGUISH = Key2 % éteindre la bougie
+PLAY = Key1 % jouer

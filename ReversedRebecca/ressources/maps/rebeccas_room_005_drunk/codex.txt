@@ -17,6 +17,6 @@ OBJ-08 = Horizontal Couch
 ///// DESK /////
 
 NPC-01 = Camille
-
-OBJ-XX = Desk
-OBJ-XX = Plant
+OBJ-09 = Candle
+OBJ-10 = Book
+OBJ-11 = Desk
