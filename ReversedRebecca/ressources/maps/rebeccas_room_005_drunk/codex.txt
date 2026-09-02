@@ -14,9 +14,16 @@ OBJ-06 = TV (Hotplates)
 OBJ-07 = Vertical Couch
 OBJ-08 = Horizontal Couch
 
-///// DESK /////
+///// DESK & TOILET /////
 
 NPC-01 = Camille
 OBJ-09 = Candle
 OBJ-10 = Book
 OBJ-11 = Desk
+OBJ-12 = Sink
+OBJ-13 = Toilet
+
+///// BEDROOM /////
+
+OBJ-14 = Plant
+OBJ-15 = Bed

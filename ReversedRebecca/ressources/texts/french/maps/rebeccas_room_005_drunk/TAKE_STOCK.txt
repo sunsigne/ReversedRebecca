@@ -1,3 +1,8 @@
 % SLEEP
 player = keep = drunk_asleep = Voyons voir…
 player = keep = drunk = Je dois aller me coucher…@J'ai clairement bu trop d'alcool.
+
+
+% SLEEP_NEXT_BED
+player = keep = drunk_asleep = Voyons voir…
+player = RIGHT = drunk = Mon lit est juste à côté.@Bonne nuit.

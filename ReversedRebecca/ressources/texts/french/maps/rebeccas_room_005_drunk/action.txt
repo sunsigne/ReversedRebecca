@@ -16,3 +16,8 @@ SLEEP = Key1 % dormir
 CANDLE_LIGHT = Key2 % allumer la bougie
 CANDLE_EXTINGUISH = Key2 % éteindre la bougie
 PLAY = Key1 % jouer
+
+///// TOILET /////
+
+PUKE = Key1 % vomir
+SHIT = Key2 % chier
