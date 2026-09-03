@@ -16,3 +16,7 @@ SLEEP = Key1 % sleep
 CANDLE_LIGHT = Key2 % light the candle
 PLAY = Key1 % play
 SHIT = Key2 % shit
+
+///// ENTRANCE /////
+
+WHOS_THERE = Key2 % who's there?

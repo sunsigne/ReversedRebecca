@@ -16,3 +16,7 @@ SLEEP = Key1 % dormir
 CANDLE_LIGHT = Key2 % allumer la bougie
 PLAY = Key1 % jouer
 SHIT = Key2 % chier
+
+///// ENTRANCE /////
+
+WHOS_THERE = Key2 % c'est qui ?

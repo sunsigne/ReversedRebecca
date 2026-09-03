@@ -42,18 +42,22 @@
 				- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
 				- chier  dans les toilettes (dégeulasse la baignorire)
 				- dormir sur le canapé
+				- on a ouvert ou non à Mika
 	
-		- Mika s'invite
+		- Mika s'invite + musique dérengeante
 		- créer musique
-		- idée : quand elle parle de Mika, elle dit Mia avant de se reprendre. Pareil Pour Marie/Michel
+		- pour le double : l'enlever en cas de cutscene ?
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
-		- vérifier (et le cas échéchant, corriger) que l'inversion des controle quand on est bourré, fonctionne pour la manette
 		- traduction
+		- faire le end_lvl et les counter
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
+	
+	
+	
 	
 	bug : 
 		- rr000 : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca

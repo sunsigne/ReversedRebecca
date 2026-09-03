@@ -1,5 +1,3 @@
-NPC-02 = Scanner
-
 ///// KITCHEN /////
 
 OBJ-01 = Hotplates (TV)
@@ -17,6 +15,7 @@ OBJ-08 = Horizontal Couch
 ///// DESK & TOILET /////
 
 NPC-01 = Camille
+
 OBJ-09 = Candle
 OBJ-10 = Book
 OBJ-11 = Desk
@@ -27,3 +26,7 @@ OBJ-13 = Toilet
 
 OBJ-14 = Plant
 OBJ-15 = Bed
+
+///// ENTRANCE /////
+
+NPC-02 = Mika

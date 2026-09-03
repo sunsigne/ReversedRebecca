@@ -1,0 +1,31 @@
+% WHOS_THERE
+player = UP = drunk = C'est qui ?
+miaka_mia = DOWN = serious = C'est Mia.
+player = UP = drunk = Mia ?@Je ne connais pas de Mia…
+object = DOWN = serious = J'ai pas dit Mia, j'ai dit Mika.@Je peux entrer ?
+player = UP = drunk = Mika ?@Ha oui, bien sûr…
+
+
+% HITTING_ON
+object = DOWN = smirk = Bonsoir ma belle, j'ai attendu ce moment@toute la journée…
+player = UP = drunk = Tu parles de quoi ?
+object = DOWN = surprised = … Tu es bourrée ?
+
+
+% HITTING_ON_NEXT
+object = DOWN = smirk = Ça va être encore plus facile…@Viens par-là.
+
+
+% WANDERING_HANDS
+player = UP = drunk = Hey! Mais qu'est-ce que tu fais !
+
+
+% WANDERING_HANDS_NEXT
+object = DOWN = smirk = Joue pas les farouches, je sais que tu aimes ça…
+player = UP = drunk = Non…
+
+
+% WHAT_I_AM_WRITTING_IS_DISGUSTING_ME
+object = DOWN = smirk = C'est ça… Laisse toi faire…
+player = UP = drunk = Arrête, s'il te plaît.
+object = DOWN = smirk = Tu dis non, mais j'entends oui…
