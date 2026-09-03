@@ -1,10 +1,10 @@
 
-KARMA=0
+KARMA=4
 
 MaxHp=2
 
 
-KeyMaxLvl=CYAN
+KeyMaxLvl=YELLOW
 KeyStartLvl=NULL
 KeyCriticalChance=15%
 
