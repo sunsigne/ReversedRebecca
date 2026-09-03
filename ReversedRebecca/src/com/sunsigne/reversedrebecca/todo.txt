@@ -47,10 +47,10 @@
 		- Mika s'invite
 		- créer double de Rebecca
 		- créer musique
-		- traduction
 		- idée : quand elle parle de Mika, elle dit Mia avant de se reprendre. Pareil Pour Marie/Michel
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
 		- vérifier (et le cas échéchant, corriger) que l'inversion des controle quand on est bourré, fonctionne pour la manette
+		- traduction
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)

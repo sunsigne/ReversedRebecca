@@ -1,0 +1,36 @@
+% TRY_DRINKING_COUCH
+player = RIGHT = drunk = How curious… This tap isn't running.
+
+
+% TRY_EATING_COUCH
+player = RIGHT = drunk = Are my hands sweaty or something?@I can't get the fridge open!
+player = DOWN = drunk = Oh well, never mind. I wasn't hungry anyway.
+
+
+% SIT
+player = DOWN = drunk = Come to think of it, I'd rather be in bed.
+
+
+% CAMILLE
+player = camille = drunk = Are you asleep?@I think I'll follow your lead…
+
+
+% TRY_COOKING_TV
+player = UP = drunk = I… uh… What? I'm having trouble figuring out@where I actually am…
+player = DOWN = drunk = Are my sofas really here?
+
+
+% CANDLE
+player = keep = drunk = No… With the amount of alcohol on my breath,@I might catch fire.
+
+
+% BOOK
+player = keep = drunk = Isn't this book supposed to be blue…?
+
+
+% BOOK_NEXT
+player = keep = drunk = It is blue. Never mind.
+
+
+% PLAY
+player = keep = drunk = Maybe tomorrow… Yeah?
