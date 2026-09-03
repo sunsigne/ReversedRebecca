@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 
 import com.sunsigne.reversedrebecca.characteristics.drunk.DrunkLevel;
 import com.sunsigne.reversedrebecca.characteristics.drunk.DrunkTask;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
@@ -31,9 +32,9 @@ public class DrunkPrismLaw extends IndependantLaw implements CameraDependency {
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {
 		int drunk = DrunkTask.getDrunk();
-		if (drunk <= 0)
+		if (drunk <= 0 || object instanceof Player)
 			return;
-		
+
 		Graphics2D g2d = (Graphics2D) g;
 		new DrunkLevel().beforeObjectRender(g2d, drunk);
 	}
@@ -43,9 +44,22 @@ public class DrunkPrismLaw extends IndependantLaw implements CameraDependency {
 		int drunk = DrunkTask.getDrunk();
 		if (drunk <= 0)
 			return;
-		
+
 		Graphics2D g2d = (Graphics2D) g;
-		new DrunkLevel().afterObjectRender(g2d, drunk);
+
+		if (object instanceof Player == false) {
+			new DrunkLevel().afterObjectRender(g2d, drunk);
+			return;
+		}
+
+		Player player = (Player) object;
+		if (drunk < 5 || player.isMotionless())
+			return;
+
+		int pixel = 16;
+		player.setDisplayXY(+8 * pixel, 0 * pixel);
+		player.render(g2d);
+		player.resetLastDisplayXY();
 	}
 
 }

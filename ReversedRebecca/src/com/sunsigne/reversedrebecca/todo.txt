@@ -43,9 +43,7 @@
 				- chier  dans les toilettes (dégeulasse la baignorire)
 				- dormir sur le canapé
 	
-		- créer le rdv bis avec Marie
 		- Mika s'invite
-		- créer double de Rebecca
 		- créer musique
 		- idée : quand elle parle de Mika, elle dit Mia avant de se reprendre. Pareil Pour Marie/Michel
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
@@ -167,6 +165,12 @@
 	karma : 
 	- l'angelic, aider tout le monde &, soit libérer roméo, soit lui livrer un repas
 	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
+
+	////////// RR005_DRUNK ////////////
+
+	Rebecca a completement oublié son rendez-vous avec Marie. Elle se ramène le lendemain matin. Un choix capital est lancé :
+		- rebecca a-t-elle honoré son rendez-vous en remontant le temps ?
+		- ou est-ce qu'elle lui a posé un lapin ?
 
 	////////// BOSS ////////////
 

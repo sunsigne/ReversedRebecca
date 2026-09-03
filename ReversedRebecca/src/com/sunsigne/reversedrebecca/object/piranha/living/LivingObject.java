@@ -225,12 +225,20 @@ public abstract class LivingObject extends PiranhaObject implements Health, Push
 	////////// RENDER ////////////
 
 	private int displayedX, displayedY;
-
+	private int lastDisplayedX, lastDisplayedY;
+	
+	public void resetLastDisplayXY() {
+		displayedX = lastDisplayedX;
+		displayedY = lastDisplayedY;
+	}
+	
 	public void setDisplayXY(int x, int y) {
 		int pixel = 16;
 		int ratio = Size.M / pixel;
-		this.displayedX = x * ratio;
-		this.displayedY = y * ratio;
+		lastDisplayedX = displayedX;
+		lastDisplayedY = displayedY;
+		displayedX = x * ratio;
+		displayedY = y * ratio;
 	}
 
 	@Override
