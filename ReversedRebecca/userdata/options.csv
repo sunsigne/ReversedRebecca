@@ -1,4 +1,4 @@
-Language=french
+Language=english
 Camera=dynamic
 Shake=on
 Inventory=visible
@@ -28,7 +28,7 @@ ActionX=X:88
 
 /////VOLUME/////
 
-Main=0.2
+Main=1.0
 Music=1.0
 Sound=1.0
 Voice=1.0

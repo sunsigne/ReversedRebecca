@@ -1,0 +1,7 @@
+% DRUNK
+player = DOWN = drunk = Whoa… That pill that delays the effects of alcohol@clearly isn't working anymore… 
+player = DOWN = drunk = I'm going to try yo go to bed.
+
+
+% WRONG_DIRECTION
+player = keep = drunk = Wow… I need to concentrate to walk…

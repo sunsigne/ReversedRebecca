@@ -1,0 +1,18 @@
+///// KITCHEN /////
+
+STAY_HYDRATED = Key1 % stay hydrated
+PUKE_IN_THE_SINK = Key2 % puke in the sink
+WATCH_TV = Key1 % watch TV
+TURN_OFF = Key1 % turn off
+EAT_SOMETHING = Key1 % eat something
+
+///// LIVING ROOM /////
+
+COOK_SOMETHING = Key1 % cook something
+SLEEP = Key1 % sleep
+
+///// DESK & TOILET /////
+
+CANDLE_LIGHT = Key2 % light the candle
+PLAY = Key1 % play
+SHIT = Key2 % shit

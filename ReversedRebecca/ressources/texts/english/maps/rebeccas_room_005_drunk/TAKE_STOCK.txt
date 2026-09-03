@@ -1,0 +1,8 @@
+% SLEEP
+player = keep = drunk_asleep = Let's see…
+player = keep = drunk = I need to go to bed…@I've clearly had too much to drink.
+
+
+% SLEEP_NEXT_BED
+player = keep = drunk_asleep = Let's see…
+player = RIGHT = drunk = My bed is right there.@Good night.

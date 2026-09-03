@@ -7,8 +7,8 @@ POLICE_STATION*UNIFORM_TAKEN
 REBECCAS_ROOM*BASKET_HALF_FULL
 REBECCAS_ROOM*FULL_DESK_TRASH
 SARAH*HAS_BEEN_JAILED
-currentlvl=workshop_002
-currentlvlmenu=rebeccas_room_003-xy
+currentlvl=rebeccas_room_005_drunk
+currentlvlmenu=rebeccas_room_005_drunk
 surname_custom1=surname
 surname_custom2=surname
 surname_custom3=surname
