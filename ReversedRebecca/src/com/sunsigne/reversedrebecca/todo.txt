@@ -37,7 +37,6 @@
 			à finir : 
 				- dormir sur le canapé
 				- dormir dans le lit
-				- dessin : vomir en étant policière
 			à sauvegarder :
 				- à vomis dans l'évier (canapé)
 				- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
