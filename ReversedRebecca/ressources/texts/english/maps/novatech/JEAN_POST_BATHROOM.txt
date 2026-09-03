@@ -9,7 +9,7 @@ jean = rebecca = unhappy = I don't know anything about this.
 % ASK_REBECCA_FOR_CHAIR
 object = player = unhappy = Rebecca, have you seen my chair?
 player = object = no_sens = Uh… No.
-object = player = unhappy = Ok, nevermind.
+object = player = unhappy = Ok, never mind.
 
 
 % SHOCKED

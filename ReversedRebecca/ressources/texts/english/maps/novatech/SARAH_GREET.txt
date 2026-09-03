@@ -48,7 +48,7 @@ sarah = RIGHT = wink = So, I stopped by this morning because…@I have something
 
 % IGNORED_DOOR_DIDN'T_WANT_TO_OPEN
 sarah = RIGHT = sad = ... That's the whole point of a door…
-sarah = RIGHT = you_silly_var = Okay, nevermind. I have something for you.
+sarah = RIGHT = you_silly_var = Okay, never mind. I have something for you.
 
 
 % THANK

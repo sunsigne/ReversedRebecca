@@ -12,7 +12,7 @@ player = object = happy_var = As for the concrete effects, they would logically@
 object = player = fake_happy = In plain English?
 player = object = laugh = It gives you a superpower.
 object = player = surprised = So that's where it came from!@I always wondered how you…
-object = player = determined = Er… Nevermind. You can count on me, Becky!@I know exactly where to look.
+object = player = determined = Er… Never mind. You can count on me, Becky!@I know exactly where to look.
 
 
 % NOT_TELL_HIM

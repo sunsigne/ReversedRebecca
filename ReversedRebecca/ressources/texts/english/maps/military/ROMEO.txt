@@ -44,12 +44,12 @@ object = DOWN = skeptical = Yeah… I'll believe that when I see it.
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY
 object = DOWN = mad = If you're sincere, bring me some green bombs.
-object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
+object = DOWN = sad = Otherwise, never mind.@Thanks for keeping me company.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NUMBER_SETTINGS
 object = DOWN = mad = If you're sincere, bring me some bombs 2.
-object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
+object = DOWN = sad = Otherwise, never mind.@Thanks for keeping me company.
 
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB
@@ -68,7 +68,7 @@ object = DOWN = mad = Here's the trick: you just have to shake them@before light
 
 % CHOICE_PRISONNER_DONT_HAVE_KEY_NO_BOMB_NEXT
 object = DOWN = skeptical = Anyway, you'll find me here if you want to help.
-object = DOWN = sad = Otherwise, nevermind.@Thanks for keeping me company.
+object = DOWN = sad = Otherwise, never mind.@Thanks for keeping me company.
 
 
 % LUNCHBOX
