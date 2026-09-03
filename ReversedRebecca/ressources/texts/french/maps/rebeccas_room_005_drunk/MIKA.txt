@@ -13,7 +13,7 @@ object = DOWN = surprised = … Tu es bourrée ?
 
 
 % HITTING_ON_NEXT
-object = DOWN = smirk = Ça va être encore plus facile…@Viens par-là.
+object = DOWN = smirk = Ça va être encore plus facile…@Viens par là.
 
 
 % WANDERING_HANDS
@@ -26,6 +26,16 @@ player = UP = drunk = Non…
 
 
 % WHAT_I_AM_WRITTING_IS_DISGUSTING_ME
-object = DOWN = smirk = C'est ça… Laisse toi faire…
+object = DOWN = smirk = C'est ça… Laisse-toi faire…
 player = UP = drunk = Arrête, s'il te plaît.
 object = DOWN = smirk = Tu dis non, mais j'entends oui…
+
+
+% SERIOUSLY_IF_YOU_FIND_THIS_EVEN_THE_SLIGHTEST_BIT_AROUSING_GO_GET_HELP
+player = UP = drunk = Je ne veux pas, laisse-moi tranquille…
+object = DOWN = smirk = Mais si, tu vas adorer.
+
+
+% I_MEANT_IT_IT_IS_JUST_INCREDYBLY_DISTURBING
+player = UP = drunk = S'il te plaît, j'ai dit non.
+object = DOWN = smirk = J'adore quand tu joues les difficiles…

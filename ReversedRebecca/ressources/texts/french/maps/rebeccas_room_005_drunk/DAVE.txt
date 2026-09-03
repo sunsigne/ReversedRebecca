@@ -1,0 +1,17 @@
+% DAVE_THE_GOAT
+dave = DOWN = camera = Rebecca est en sécurité.@J'ai annulé l'arrivée de Mika.
+dave = DOWN = camera = J'ai aussi désintégré ce fils de pute.
+dave = player = camera = Mais dans la vraie vie, quelqu'un ne viendra pas@toujours sauver la situation…
+dave = DOWN = camera = Ce genre de choses arrivent, malheureusement.
+dave = DOWN = camera = Parfois de personnes dont on pensait n'avoir@aucune raison de se méfier…
+dave = player = camera = Bref. Ce jeu est cruel avec sa protagoniste.@Mais ça, je ne permettrais pas que ça arrive…
+dave = DOWN = camera = Jamais.
+dave = DOWN = camera = Retour à la réalité.@Sans l'autre porc.
+
+
+% DAVE_THE_GOAT_AGAIN
+dave = DOWN = camera = Rebecca est en sécurité.@J'ai annulé l'arrivée de Mika.
+dave = DOWN = camera = J'ai aussi désintégré ce fils de pute.
+dave = player = camera = Je ne laisserai pas ça, arriver.
+dave = DOWN = camera = Jamais.
+dave = DOWN = camera = Retour à la réalité.@Sans l'autre porc.

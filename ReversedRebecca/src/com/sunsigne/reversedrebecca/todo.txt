@@ -44,9 +44,9 @@
 				- dormir sur le canapé
 				- on a ouvert ou non à Mika
 	
-		- Mika s'invite + musique dérengeante
+		- Mika s'invite + musique dérengeante + Mia (dans le dialogue de Dave aussi) + Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
+		- finir preview dave
 		- créer musique
-		- pour le double : l'enlever en cas de cutscene ?
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
 		- traduction
 		- faire le end_lvl et les counter
@@ -175,6 +175,8 @@
 	Rebecca a completement oublié son rendez-vous avec Marie. Elle se ramène le lendemain matin. Un choix capital est lancé :
 		- rebecca a-t-elle honoré son rendez-vous en remontant le temps ?
 		- ou est-ce qu'elle lui a posé un lapin ?
+		
+	Dans le cas où Dave ne sauve pas Rebecca de Mika, Camille se réveille et lui met une balle dans la tête (bien fait! Connard!)
 
 	////////// BOSS ////////////
 
