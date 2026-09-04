@@ -46,7 +46,6 @@
 	
 		- Mika s'invite + musique dérengeante + Mia (dans le dialogue de Dave aussi) + Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
 		- finir preview dave
-		- créer musique
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
 		- traduction
 		- faire le end_lvl et les counter
