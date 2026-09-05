@@ -44,8 +44,12 @@
 				- dormir sur le canapé
 				- on a ouvert ou non à Mika
 	
-		- Mika s'invite + musique dérengeante + Mia (dans le dialogue de Dave aussi) + Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
-		- finir preview dave
+		- Mika : 
+			- Mia (dans le dialogue de Dave aussi)
+			- Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
+			- Dave doit se souvenir de ce dialogue
+			- finir preview dave
+			- finir le retour à la réalité
 		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
 		- traduction
 		- faire le end_lvl et les counter
