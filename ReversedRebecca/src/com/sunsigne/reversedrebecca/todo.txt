@@ -45,7 +45,6 @@
 				- on a ouvert ou non à Mika
 	
 		- Mika : 
-			- Mia (dans le dialogue de Dave aussi)
 			- Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
 			- Dave doit se souvenir de ce dialogue
 			- finir preview dave
@@ -284,6 +283,8 @@
 		- Julomeo = Roméo / Juliette
 		- Nolancy = Nancy / Nolan
 		- (Jamessy)
+	lvl005_drunk :
+		- (Miaka)
 
 	///////// MUSEE DE L'HORREUR ////////////
 	

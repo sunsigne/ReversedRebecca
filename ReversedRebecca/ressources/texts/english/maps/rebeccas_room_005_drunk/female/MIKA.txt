@@ -1,0 +1,6 @@
+% WHOS_THERE
+player = UP = drunk = Who is it?
+miaka_mika = DOWN = serious = It's Mika.
+player = UP = drunk = Mika ?@I don't know any Mika…
+object = DOWN = serious = I didn't say Mika, I said Mika.@Can I come in?
+player = UP = drunk = Mia? Oh right, of course…
