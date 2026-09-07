@@ -36,10 +36,7 @@
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
-		
-	bug : 
-		- rr000 : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
-	
+
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 		- erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
