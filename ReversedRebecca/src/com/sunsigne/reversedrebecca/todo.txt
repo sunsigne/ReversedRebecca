@@ -30,7 +30,11 @@
 	bug :		
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
 		
+	changer le lien "signaler un bug" pour le discord
+		
 	////////// EN COURS ////////////
+
+	attention !! rr002 pancakes sauvegarde pas encore fini !
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
@@ -39,8 +43,7 @@
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
-		- erika : une seule assiette = je mange en pensant que c'est pour moi. 2 assiette = je mets au frigo (elle pourrait même remercier rebecca pour ça ! en pensant qu'elle les a fait pour elle)
-	
+
 	rr003-xy :
 		(n'arrive qu'après le commisariat)
 		- faire les preview
