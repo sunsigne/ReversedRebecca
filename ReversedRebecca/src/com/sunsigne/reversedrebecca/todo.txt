@@ -34,7 +34,11 @@
 		
 	////////// EN COURS ////////////
 
-	attention !! rr002 pancakes sauvegarde pas encore fini !
+	rr003 :
+		- erika doit informer rebecca d'où sont les pancakes
+
+
+
 
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
