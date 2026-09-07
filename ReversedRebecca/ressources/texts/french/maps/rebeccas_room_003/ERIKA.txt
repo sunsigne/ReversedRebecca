@@ -5,12 +5,33 @@ player = RIGHT = excited = Une journée de dingue ! Tu n'es pas prête à ce@que
 erika = RIGHT = happy_var = Tu penses pouvoir tenir ?@Je t'attendais pour activer Camille.
 
 
+% HELLO_PANCAKES_EATEN
+player = RIGHT = laugh = Salut, Rika !
+erika = RIGHT = happy = Hello chaton, merci pour les crêpes.
+player = RIGHT = no_sens = … Les crêpes ?
+erika = RIGHT = unhappy = Tu avais laissé des crêpes sur la table…@Elles étaient pour moi, non ?
+player = RIGHT = laugh = Ha ! Pas de soucis !
+erika = RIGHT = happy_var = Mais tu arrives à point nommé,@je t'attendais pour activer Camille.
+
+
+% HELLO_PANCAKES_IN_FRIDGE
+player = RIGHT = laugh = Salut, Rika !
+erika = RIGHT = happy = Hello chaton, si tu cherches les crêpes que tu@avais laissées sur la table, elles sont au frigo.
+player = RIGHT = worry = D'accord, merci. Je devais les manger avec Sarah,@mais on s'est disputé et ça m'a coupé l'appétit…
+erika = RIGHT = unhappy = Oh… Vous êtes brouillées ?
+player = RIGHT = laugh = Non, c'est bon. C'est arrangé. Par contre, il faut@que je te raconte ce qu'il s'est passé au travail !
+erika = RIGHT = happy_var = Tu penses pouvoir tenir ?@Je t'attendais pour activer Camille.
+
+
 % HELLO_NEXT
-player = DOWN = surprised = C'est pas vrai ! Elle est prête ?
+player = camille = surprised = C'est pas vrai ! Elle est prête ?
 
 
 % HELLO_NEXT_NEXT
-player = UP = surprised = Pour de vrai ? Tu es sûre ?
+player = camille = surprised = Pour de vrai ? Tu es sûre ?
+
+
+% HELLO_LAST
 erika = RIGHT = happy_var = À 100"0/0" !
 erika = RIGHT = happy = Pour la première fois au monde, une androïde@avec des neurones humains va prendre vie.
 erika = RIGHT = unhappy = Enfin, quand je dis 100"0/0" prête…@Il reste encore quelques réglages, et…

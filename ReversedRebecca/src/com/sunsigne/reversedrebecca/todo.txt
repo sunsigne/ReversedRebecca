@@ -34,12 +34,6 @@
 		
 	////////// EN COURS ////////////
 
-	rr003 :
-		- erika doit informer rebecca d'où sont les pancakes
-
-
-
-
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
@@ -78,6 +72,9 @@
 	- 1h - en psychopath, faire des coeur menaçant ou lugubre
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
+	
+	rr003 :
+		sadique incohérence : en rr000, si on pousse Sarah à bout et qu'on ne se réconcilie pas, et qu'on part en laissant 2 assiettes de crêpes, rebecca ne devrait pas dire à Erika que les choses se sont arrangées avec Sarah
 	
 	////////// RR0005_DRUNK ////////////
 
