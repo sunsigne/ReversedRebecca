@@ -34,8 +34,16 @@
 		
 	////////// EN COURS ////////////
 
+
+	rr004 : erika retire les verres d'eau à l'entrée : 
+		- note (valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
+		- à implanter et tester !
+		- sauvegarder dans rr005_drunk ET normal :
+			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_ONE
+			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_TWO
+			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_THREE
+
 	niveaux à faire :
-		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
 
@@ -44,13 +52,15 @@
 
 	rr003-xy :
 		(n'arrive qu'après le commisariat)
+		- retiré les crêpes de la table si elles ont été laissées
 		- faire les preview
 		- faire l'animation d'éveil de Camille, puis faire partir rebecca
 	
 	sadique :
 		- la suite de sadique en labo (pas de sarah...)
 		- la suite de sadique du commisariat (pas de sarah...)
-		
+		- rr003, attention : en rr000, si  on part en laissant 2 assiettes de crêpes, rebecca ne devrait pas dire à Erika que les choses se sont arrangées avec Sarah
+			
 	psycho :
 		- la suite de psychopathe depuis l'appartemment
 		- la suite de psychopathe depuis le commisariat
@@ -73,9 +83,7 @@
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
 	
-	rr003 :
-		sadique incohérence : en rr000, si on pousse Sarah à bout et qu'on ne se réconcilie pas, et qu'on part en laissant 2 assiettes de crêpes, rebecca ne devrait pas dire à Erika que les choses se sont arrangées avec Sarah
-	
+
 	////////// RR0005_DRUNK ////////////
 
 	- interactions avec les objets :
