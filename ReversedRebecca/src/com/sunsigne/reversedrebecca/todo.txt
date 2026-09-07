@@ -34,24 +34,17 @@
 		
 	////////// EN COURS ////////////
 
+		- épilogue nancy et jessy / mika / réstaurant (rr005)
+		- la suite discothèque mais pas bourrée (rr005)
 
-	rr004 : erika retire les verres d'eau à l'entrée : 
-		- note (valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
-		- à implanter et tester !
-		- sauvegarder dans rr005_drunk ET normal :
-			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_ONE
-			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_TWO
-			ERASE = REBECCAS_ROOM*ENTRANCE_WATER_THREE
-
-	niveaux à faire :
-		- épilogue nancy et jessy / mika / réstaurant
-		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
+	lvl003	
+		- quitter le bar après avoir menacé Donovan
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
 	rr003-xy :
-		(n'arrive qu'après le commisariat)
+		(note : n'arrive qu'après le commisariat)
 		- retiré les crêpes de la table si elles ont été laissées
 		- faire les preview
 		- faire l'animation d'éveil de Camille, puis faire partir rebecca
@@ -83,7 +76,6 @@
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
 	
-
 	////////// RR0005_DRUNK ////////////
 
 	- interactions avec les objets :
@@ -161,9 +153,6 @@
 	- le "partir sans sarah" doit avoir des conséquences
 
 	////////// LVL003 ////////////
-
-	à faire :	
-		- quitter le bar après avoir menacé Donovan
 
 	karma :
 	- l'angelic, aider 2 personnes en plus, sans rien faire de mal
@@ -249,6 +238,7 @@
 	un niveau dans un volcan : 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un trou noir ! (c'est dans le titre du jeu après tout), avec rebecca qui dit à son apparition "how infortunate." -> (en français "c'est facheux...")
 	
+	quand rebecca remonte le temps et se croise elle-même dans le niveau bourré, elle s'embrasse elle-même
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	plus tard dans le jeu, mettre l'enphase sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)
 	le code de fou furieux dans le livret de tunic, faire pareil avec l'écran titre du jeu ? (puisqu'il change après chaque niveau) / dans les succès ? (puisqu'il faut les débloquer pour avoir le secret) -> le twist de la dernière input (sauvegarder, quitter, recharger)
