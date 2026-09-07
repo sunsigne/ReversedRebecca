@@ -32,35 +32,11 @@
 		
 	////////// EN COURS ////////////
 
-	rr005-drunk :
-		- interactions avec les objets :
-			à finir : 
-				- dormir sur le canapé
-				- dormir dans le lit
-			à sauvegarder :
-				- à vomis dans l'évier (canapé)
-				- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
-				- chier  dans les toilettes (dégeulasse la baignorire)
-				- dormir sur le canapé
-				- on a ouvert ou non à Mika
-	
-		- Mika : 
-			- Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
-			- Dave doit se souvenir de ce dialogue
-			- finir preview dave
-			- finir le retour à la réalité
-		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
-		- traduction
-		- faire le end_lvl et les counter
-
 	niveaux à faire :
 		- rr004 (couché de soleil, départ d'erika + camille range l'appartement - valable aussi bien durant le couché de soleil avec YY que pendant la discothèque)
 		- épilogue nancy et jessy / mika / réstaurant
 		- la suite discothèque : rebecca bourée -> contrôles inversées (devrait dépendre du niveau d'alcool) + s'embrasse elle-même
-	
-	
-	
-	
+		
 	bug : 
 		- rr000 : si on fait 2 assiettes de crêpes, puis qu'on se dispute avec Sarah, il y a un softlock dès qu'on essaies de manger l'assiette de Rebecca
 	
@@ -98,6 +74,27 @@
 	- 1h - en psychopath, faire des coeur menaçant ou lugubre
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
+	
+	////////// RR0005_DRUNK ////////////
+
+	- interactions avec les objets :
+		à finir : 
+			- dormir sur le canapé
+			- dormir dans le lit
+		à sauvegarder :
+			- à vomis dans l'évier (canapé)
+			- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
+			- chier  dans les toilettes (dégeulasse la baignorire)
+			- dormir sur le canapé
+			- on a ouvert ou non à Mika
+	
+		- Mika : 
+			- Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
+			- Dave doit se souvenir de ce dialogue
+			- finir le retour à la réalité
+		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
+		- traduction
+		- faire le end_lvl et les counter
 	
 	////////// EXPERIENCE UTILISATEUR ////////////
 
