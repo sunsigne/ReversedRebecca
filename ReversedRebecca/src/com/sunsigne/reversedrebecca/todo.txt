@@ -43,12 +43,6 @@
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
-	rr003-xy :
-		(note : n'arrive qu'après le commisariat)
-		- retiré les crêpes de la table si elles ont été laissées
-		- faire les preview
-		- faire l'animation d'éveil de Camille, puis faire partir rebecca
-	
 	sadique :
 		- la suite de sadique en labo (pas de sarah...)
 		- la suite de sadique du commisariat (pas de sarah...)
