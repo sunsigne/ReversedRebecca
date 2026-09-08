@@ -37,3 +37,19 @@ object = DOWN = wink = Easy, Akara. I'll handle this.
 % YOU_CAN_LEAVE
 object = player = unhappy = You should get out more if you think this is the@first time a bartender's been threatened.
 object = player = snooty = I told you how things work here. Either you play@by the rules, or you're free to leave.
+
+
+% CHOICE_LEAVE
+player = object = wrong_with_you = You're right, I don't have to accept your rules.@Have a good evening.
+object = player = wink = Suit yourself. Good evening.
+
+
+% DEAD_END
+erika = RIGHT = happy = So, what about that mysterious letter?@That Stephan guy? Your investigation?
+player = RIGHT = no_sens_var = I… Um… I…
+player = RIGHT = angry = That bartender is a pain in the ass!
+erika = RIGHT = unhappy = Okay… So… You're giving up on everything?
+player = RIGHT = angry = …
+player = RIGHT = sad_var = …
+player = RIGHT = worry = You're right. I'll just have to deal with it.
+erika = RIGHT = happy = Alright. Good luck!

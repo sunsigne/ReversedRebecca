@@ -44,11 +44,6 @@ player = object = wrong_with_you = Tu as raison, je n'ai pas à accepter tes rè
 object = player = wink = Comme tu veux. Bonne soirée.
 
 
-% CHOICE_LEAVE
-player = object = wrong_with_you = Tu as raison, je n'ai pas à accepter tes règles.@Bonne soirée.
-object = player = wink = Comme tu veux. Bonne soirée.
-
-
 % DEAD_END
 erika = RIGHT = happy = Alors, cette mystérieuse lettre ?@Ce Stephan ? Ton enquête ?
 player = RIGHT = no_sens_var = Je… Heu… Je…
@@ -57,4 +52,4 @@ erika = RIGHT = unhappy = Ok… Donc… Tu abandonnes tout ?
 player = RIGHT = angry = …
 player = RIGHT = sad_var = …
 player = RIGHT = worry = Tu as raison. Je vais m'en accommoder.
-erika = RIGHT = happy = D'accord. Bonne courage !
+erika = RIGHT = happy = D'accord. Bon courage !

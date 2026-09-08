@@ -18,3 +18,14 @@ object = player = snooty = So? Are you going to play along?
 
 % THREATENS_HIM
 player = object = angry = Listen to me, you booze-peddler: you will tell me@where Sabrina is, right now! Or else…
+
+
+% DEAD_END
+erika = RIGHT = happy = So, what about that mysterious letter?@That Sabrina gal? Your investigation?
+player = RIGHT = no_sens_var = I… Um… I…
+player = RIGHT = angry = That bartender is a pain in the ass!
+erika = RIGHT = unhappy = Okay… So… You're giving up on everything?
+player = RIGHT = angry = …
+player = RIGHT = sad_var = …
+player = RIGHT = worry = You're right. I'll just have to deal with it.
+erika = RIGHT = happy = Alright. Good luck!

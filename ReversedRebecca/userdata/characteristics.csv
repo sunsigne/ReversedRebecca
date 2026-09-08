@@ -8,8 +8,8 @@ KeyMaxLvl=CYAN
 KeyStartLvl=CYAN
 KeyCriticalChance=15%
 
-BombMaxLvl=GREEN
-BombStartLvl=NULL
+BombMaxLvl=CYAN
+BombStartLvl=CYAN
 BombCriticalChance=15%
 
 BombingDoor=FALSE
