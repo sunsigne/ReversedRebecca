@@ -37,3 +37,24 @@ object = DOWN = wink = Tout doux, Akara. Je m'en occupe.
 % YOU_CAN_LEAVE
 object = player = unhappy = Tu devrais sortir plus souvent, si tu crois que c'est@la première fois qu'un barman reçoit des menaces.
 object = player = snooty = Je t'ai dit comment les choses marchaient ici.@Soit tu te plies aux règles, soit tu es libre de partir.
+
+
+% CHOICE_LEAVE
+player = object = wrong_with_you = Tu as raison, je n'ai pas à accepter tes règles.@Bonne soirée.
+object = player = wink = Comme tu veux. Bonne soirée.
+
+
+% CHOICE_LEAVE
+player = object = wrong_with_you = Tu as raison, je n'ai pas à accepter tes règles.@Bonne soirée.
+object = player = wink = Comme tu veux. Bonne soirée.
+
+
+% DEAD_END
+erika = RIGHT = happy = Alors, cette mystérieuse lettre ?@Ce Stephan ? Ton enquête ?
+player = RIGHT = no_sens_var = Je… Heu… Je…
+player = RIGHT = angry = Le barman est casse-couille !
+erika = RIGHT = unhappy = Ok… Donc… Tu abandonnes tout ?
+player = RIGHT = angry = …
+player = RIGHT = sad_var = …
+player = RIGHT = worry = Tu as raison. Je vais m'en accommoder.
+erika = RIGHT = happy = D'accord. Bonne courage !

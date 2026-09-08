@@ -38,7 +38,9 @@
 		- la suite discothèque mais pas bourrée (rr005)
 
 	lvl003	
-		- quitter le bar après avoir menacé Donovan
+		- quitter le bar après avoir menacé Donovan :
+			- traduction
+			- placer les objets aux bon endroits dans l'appartemnet
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?

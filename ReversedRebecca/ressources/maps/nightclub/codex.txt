@@ -33,3 +33,9 @@ OBJ-06 = Speaker Down Right
 OBJ-07 = Speaker Down Left
 OBJ-08 = Red String
 OBJ-09 = Dance Floor
+
+
+///// REBECCAS ROOM /////
+
+NPC-12 = Erika
+NPC-13 = Camille
