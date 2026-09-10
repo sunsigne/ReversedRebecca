@@ -34,6 +34,10 @@
 		
 	////////// EN COURS ////////////
 
+	rr005 (disco pas bourré) :
+		- utiliser le même code que rr003 pour le début de niveau (cutscene)
+		- faire codex
+
 		- épilogue nancy et jessy / mika / réstaurant (rr005)
 		- la suite discothèque mais pas bourrée (rr005)
 
