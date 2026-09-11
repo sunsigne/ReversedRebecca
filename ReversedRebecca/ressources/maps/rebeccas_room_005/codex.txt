@@ -27,7 +27,7 @@ OBJ-05 = Plant
 
 OBJ-06 = Dual Sink
 OBJ-07 = Bath
-
+OBJ-08 = Bath Leaver
 
 
 
@@ -38,9 +38,6 @@ OBJ-07 = Bath
 	
 ///// BATHROOM /////
 
-OBJ-06 = Dual Sink
-OBJ-07 = Bath
-OBJ-08 = Bath Leaver
 OBJ-09 = Ground Clothes
 OBJ-10 = Basket
 OBJ-11 = Washing Machine
