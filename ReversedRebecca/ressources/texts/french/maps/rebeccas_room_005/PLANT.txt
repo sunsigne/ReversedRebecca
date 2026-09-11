@@ -1,0 +1,22 @@
+% GREET
+player = object = happy_var = Bonsoir Vera, je t'ai manqué ?
+
+
+% WATER_MORNING
+player = object = you_silly = J'ai déjà fait ça, ce matin.@Une fois par jour, c'est suffisant.
+
+
+% WATER_WATERLESS
+player = object = you_silly_var = J'ai oublié de prendre de l'eau…
+
+
+% FIRST_WATER
+player = object = laugh = Et une bonne chose de faite !
+
+
+% N_WATER
+player = object = sad_var = Après réflexion, ça serait trop d'eau.
+
+
+% WATCH
+player = object = happy = C'est tellement apaisant, les plantes.

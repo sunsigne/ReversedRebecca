@@ -14,6 +14,7 @@ REGISTER = REBECCA*ATE_BREAKFAST
 OBJ-01 = Bed
 OBJ-02 = Candle
 OBJ-03 = Book & Dresser
+OBJ-04 = Plant
 
 
 
@@ -24,7 +25,6 @@ OBJ-03 = Book & Dresser
 
 
 
-OBJ-05 = Plant
 	
 ///// BATHROOM /////
 
