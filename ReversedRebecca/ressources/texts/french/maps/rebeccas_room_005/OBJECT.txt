@@ -1,0 +1,14 @@
+% CANDLE
+player = object = happy_var = J'adore les bougies parfumées,@ça m'aide à m'endormir.
+
+
+% CANDLE_EMPTY
+player = object = worry = Cette bougie est vide…@Je vais la remplacer par une autre.
+
+
+% BOOK
+player = object = happy = "Aux confins de l'univers, était une fin.@Un endroit duquel personne ne revient jamais…
+player = object = no_sens_var = … Mais, est-il possible d'aller encore plus loin ?@S'aventurez au-delà du possible ?
+player = object = surprised = … Un espace plus loin que l'infini ?@Plus loin que la notion même de "plus loin" ?
+player = object = excited = … Cet endroit existe.@C'est l'espace fini : Final Space !"
+player = object = you_silly = Vous pouvez y aller les yeux fermés !@Je suis une très grande fan.

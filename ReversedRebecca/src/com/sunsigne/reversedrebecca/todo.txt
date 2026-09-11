@@ -35,11 +35,23 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
+		- bougie sauvegarder à tester :
+			- allumer (doit fondre)
+			- éteinte
+			- été fondue et :
+				- na pas été remplacée
+				- a été remplacé :
+					- mais c'est tout
+					- a été allumé ensuite (doit fondre)
+					- a été allumée puis éteinte
+					- a été allumée puis éteinte puis rallumé
+					
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire codex
-
 		- épilogue nancy et jessy / mika / réstaurant (rr005)
 		- la suite discothèque mais pas bourrée (rr005)
+		- lit pas fini
+		- liens à faires
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
