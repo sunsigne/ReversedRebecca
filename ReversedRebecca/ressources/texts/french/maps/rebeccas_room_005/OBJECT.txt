@@ -12,3 +12,15 @@ player = object = no_sens_var = … Mais, est-il possible d'aller encore plus lo
 player = object = surprised = … Un espace plus loin que l'infini ?@Plus loin que la notion même de "plus loin" ?
 player = object = excited = … Cet endroit existe.@C'est l'espace fini : Final Space !"
 player = object = you_silly = Vous pouvez y aller les yeux fermés !@Je suis une très grande fan.
+
+
+% BATH_EMPTY_WASHLESS
+player = object = no_sens = Pourquoi j'ai fais ça ?
+
+
+% BATH_EMPTY_WASHLESS_TWICE
+player = object = no_sens_var = Quel gaspillage d'eau…@C'est quoi mon problème, au juste ?
+
+
+% BATH_WASH_OLD_WATER
+player = object = pain = Cette eau est restée là toute la journée.@Elle est froide !

@@ -34,6 +34,12 @@
 		
 	////////// EN COURS ////////////
 
+	rr005 :
+		- salle de bain en cours :
+			- le panier à veteêmt + les vêtements
+			- la lessive
+			- le 2ème verre sur le dual sink
+
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire codex
@@ -72,7 +78,11 @@
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
 	
-	////////// RR0005_DRUNK ////////////
+	////////// RR005 ////////////
+	
+	sauvegarde : il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait êut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
+	
+	////////// RR005_DRUNK ////////////
 
 	- interactions avec les objets :
 		à finir : 
