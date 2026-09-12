@@ -38,7 +38,6 @@
 		- salle de bain en cours :
 			- le panier à veteêmt + les vêtements
 			- la lessive
-			- le 2ème verre sur le dual sink
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
