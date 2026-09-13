@@ -35,9 +35,13 @@
 	////////// EN COURS ////////////
 
 	rr005 :
+		- la plante enregistre qu'elle a soif, mais pas dans le niveau du matin. Je devrais linéariser ça.
 		- salle de bain en cours :
-			- le panier à veteêmt + les vêtements
+			- le panier à vetement + les vêtements
 			- la lessive
+			bug :
+				- impossible de s'habiller quand on a passé la panière de vide à mis-pleine (ça essaye de lancer le dialogue, donc ça crash)
+				- passer la panière de pleine à vide ne s'est pas sauvegardé (elle était mi-pleine après avoir dormi), mais seulement durant le lvl rr005 (càd que la sauvegarde du rr000 fonctionne)
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)

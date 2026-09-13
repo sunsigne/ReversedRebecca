@@ -3,6 +3,7 @@
 GO_TO_BED = Key2 % se coucher
 CANDLE_LIGHT = Key2 % allumer la bougie
 CANDLE_EXTINGUISH = Key2 % éteindre la bougie
+DRESS = Key2 % s'habiller
 
 ///// BATHROOM /////
 
@@ -10,22 +11,20 @@ FILL = Key2 % remplir
 WASH = Key1 % se laver
 LEAVE = Key1 % sortir
 CLEAN_HAIR = Key2 % nettoyer les cheveux
-
-
-
-
-
-
-///// BEDROOM /////
-
-DRESS = Key2 % s'habiller
-
-///// BATHROOM /////
-
-CLEAN_HAIR = Key2 % nettoyer les cheveux
 CLEAN_CLOTHES = Key2 % ranger les vetements
 DO_LAUNDRY = Key2 % faire la lessive
 DO_LAUNDRY_SHORT = Key2 % lessive
+
+
+
+
+
+
+
+
+
+
+
 
 ///// DESK /////
 
