@@ -1,7 +1,9 @@
 package com.sunsigne.reversedrebecca.ressources;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Pattern;
 
 import com.sunsigne.reversedrebecca.characteristics.HealthPlayer;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
@@ -212,19 +214,30 @@ public class Save {
 	public void eraseSave() {
 
 		// if nothing to erase
-		var list = SaveEraserList.getList();
-		if (list.getList().isEmpty())
-			return;
+	    var list = SaveEraserList.getList();
+	    if (list.getList().isEmpty())
+	        return;
 
-		String data = new FileTask().read(userData, file);
+	    String lineSeparator = System.lineSeparator();
+	    String data = new FileTask().read(userData, file);
 
 		// removing targeted data
-		for (String tempString : list.getList()) {
-			data = data.replace(System.getProperty("line.separator") + tempString, "");
-		}
+	    Set<String> toErase = new HashSet<>(list.getList());
+	    StringBuilder result = new StringBuilder();
+
+	    for (String line : data.split(Pattern.quote(lineSeparator), -1)) {
+
+	        if (toErase.contains(line))
+	            continue;
+
+	        if (result.length() > 0)
+	            result.append(lineSeparator);
+
+	        result.append(line);
+	    }
 
 		// registering the result
-		new FileTask().write(file, data);
+	    new FileTask().write(file, result.toString());
 	}
 
 }
