@@ -34,9 +34,11 @@
 		
 	////////// EN COURS ////////////
 
+	rr-générique :
+		- mettre à jour le texte Final Space
+
 	rr005 :
 		- la plante enregistre qu'elle a soif, mais pas dans le niveau du matin. Je devrais linéariser ça.
-		- salle de bain en cours - faire 3ème, 4ème et 5ème verre sur l'évier
 		- pas encore pssible de s'habiller quand on a passé la panière de vide à mi-pleine (ça essaye de lancer le dialogue, donc ça crash)
 		- tout ce qui n'est pas la chmabre ou la salle de bain
 
@@ -77,6 +79,9 @@
 	- 1h - en psychopath, faire des coeur menaçant ou lugubre
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
+	
+	rr000 - rr005 (+ générique) :
+		- trouve rune utilité à la bibliothèque
 	
 	////////// RR005 ////////////
 	
