@@ -33,3 +33,19 @@ APOLOGIZE = Key1 % apologize
 SAY_NOTHING = Key2 % say nothing
 YES = Key1 % yes
 NO = Key2 % no
+
+///// REBECCAS ROOM /////
+
+// bedroom
+CANDLE_LIGHT = Key2 % light the candle
+CANDLE_EXTINGUISH = Key2 % blow out the candle
+DRESS = Key2 % get dressed
+
+// bathroom
+FILL = Key2 % fill
+WASH = Key1 % take a bath
+LEAVE = Key1 % get out
+CLEAN_HAIR = Key2 % clean the hair
+CLEAN_CLOTHES = Key2 % pick up clothes
+DO_LAUNDRY = Key2 % do the laundry
+DO_LAUNDRY_SHORT = Key2 % laundry

@@ -14,11 +14,12 @@ REGISTER = REBECCAS_ROOM*WATERED_PLANT
 
 ///// NULL /////
 
-OBJ-02
+
 
 ///// BEDROOM /////
 
 OBJ-01 = Bed
+OBJ-02 = Nightstand
 OBJ-03 = Candle
 OBJ-04 = Book & Dresser
 OBJ-05 = Plant

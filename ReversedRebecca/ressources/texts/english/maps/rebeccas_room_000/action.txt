@@ -2,19 +2,9 @@
 
 WAKE_UP = Key1 % wake up
 SEARCH_KEY = Key3 % search (key?)
-CANDLE_LIGHT = Key2 % light the candle
-CANDLE_EXTINGUISH = Key2 % blow out the candle
-DRESS = Key2 % get dressed
 
 ///// BATHROOM /////
 
-FILL = Key2 % fill
-WASH = Key1 % take a bath
-LEAVE = Key1 % get out
-CLEAN_HAIR = Key2 % clean the hair
-CLEAN_CLOTHES = Key2 % pick up clothes
-DO_LAUNDRY = Key2 % do the laundry
-DO_LAUNDRY_SHORT = Key2 % laundry
 SEARCH_KEY_SHORT = Key3 % search
 
 ///// DESK /////
