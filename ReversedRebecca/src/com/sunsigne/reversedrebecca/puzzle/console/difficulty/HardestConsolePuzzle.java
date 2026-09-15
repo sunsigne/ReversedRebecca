@@ -1,0 +1,35 @@
+package com.sunsigne.reversedrebecca.puzzle.console.difficulty;
+
+import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.puzzle.key.key.KeyObject;
+import com.sunsigne.reversedrebecca.object.puzzle.key.lock.LockObject;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
+
+public class HardestConsolePuzzle extends CyanConsolePuzzle {
+
+	public HardestConsolePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+			GenericListener actionOnLosing) {
+		super(toolPlayer, actionOnWinning, actionOnLosing);
+	}
+
+	////////// PUZZLE ////////////
+
+	@Override
+	public LockObject getLock() {
+		return new LockObject(this, isCritical);
+	}
+
+	@Override
+	public KeyObject getKey() {
+		return new KeyObject(this, isCritical);
+	}
+
+	@Override
+	public void createPuzzle() {
+		createLock();
+		createKey();
+		createRandomWalls(6, true);
+	}
+
+}

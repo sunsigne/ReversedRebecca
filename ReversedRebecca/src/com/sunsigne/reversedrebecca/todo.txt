@@ -34,6 +34,11 @@
 		
 	////////// EN COURS ////////////
 
+	Console : 
+		- texter animation de victoire (sur PlayAction, dans le puzzler)
+		- choixir un bruit de victoire & défaite
+
+
 	rr005 :
 		- tout ce qui n'est pas la chmabre ou la salle de bain
 
