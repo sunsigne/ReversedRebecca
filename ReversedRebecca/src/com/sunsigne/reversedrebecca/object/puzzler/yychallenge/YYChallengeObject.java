@@ -62,7 +62,7 @@ public class YYChallengeObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 3;
+		return 4;
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class YYChallengeObject extends PuzzlerObject {
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 5, getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1, getSheetRowCriterion() + 2, getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

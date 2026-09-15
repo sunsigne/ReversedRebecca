@@ -28,7 +28,7 @@ public class CowboyObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
+		return 3;
 	}
 
 	@Override

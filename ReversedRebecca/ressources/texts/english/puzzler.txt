@@ -7,6 +7,7 @@ ComputerProtected = protected
 HoleLoose = soft soil
 Undefeated = undefeated
 Unfunky = unfunky
+ConsoleOff = off
 
 ///// ACTION /////
 
@@ -19,3 +20,4 @@ GoDown = go down
 GoUp = go up
 Confront = confront
 Dance = dance
+Play = play
