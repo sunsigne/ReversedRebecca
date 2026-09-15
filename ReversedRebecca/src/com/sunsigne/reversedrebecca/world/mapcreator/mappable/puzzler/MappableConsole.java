@@ -5,8 +5,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
-import com.sunsigne.reversedrebecca.object.puzzler.computer.ComputerObject;
-import com.sunsigne.reversedrebecca.object.puzzler.computer.NullComputerObject;
+import com.sunsigne.reversedrebecca.object.puzzler.console.ConsoleObject;
+import com.sunsigne.reversedrebecca.object.puzzler.console.NullConsoleObject;
 import com.sunsigne.reversedrebecca.world.mapcreator.MapCreator;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.Mappable;
 
@@ -30,13 +30,13 @@ public class MappableConsole implements MappablePuzzler {
 			boolean horizontal, int x, int y) {
 
 		if (devDifficulty == null && difficulty == LVL.NULL)
-			return new NullComputerObject(x, y);
+			return new NullConsoleObject(x, y);
 
 		else if (devDifficulty != null)
-			return new ComputerObject(devDifficulty, x, y);
+			return new ConsoleObject(devDifficulty, x, y);
 
 		else
-			return new ComputerObject(difficulty, x, y);
+			return new ConsoleObject(difficulty, x, y);
 	}
 
 	@Override
