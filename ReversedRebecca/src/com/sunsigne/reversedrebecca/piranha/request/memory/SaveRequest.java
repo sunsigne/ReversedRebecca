@@ -44,31 +44,24 @@ public class SaveRequest implements Request {
 		switch (saveType) {
 
 		case "REGISTER":
-			System.out.println("AVANT REGISTER ADDING [" + data + "] : " + SaveList.getList().getList());
 			SaveList.getList().addObject(data);
 			System.out.println("REGISTER : " + data);
-			System.out.println("APRES REGISTER ADDING [" + data + "] : " + SaveList.getList().getList());
 			break;
 
 		case "CANCEL_REGISTER":
-			System.out.println("AVANT REGISTER REMOVE [" + data + "] : " + SaveList.getList().getList());
 			SaveList.getList().removeObject(data);
 			System.out.println("CANCEL_REGISTER : " + data);
-			System.out.println("APRES REGISTER REMOVE [" + data + "] : " + SaveList.getList().getList());
 			break;
 
 		case "ERASE":
-			System.out.println("AVANT ERASE ADDING [" + data + "] : " + SaveEraserList.getList().getList());
 			SaveEraserList.getList().addObject(data);
 			System.out.println("ERASE : " + data);
-			System.out.println("APRES ERASE ADDING [" + data + "] : " + SaveEraserList.getList().getList());			
+
 			break;
 
 		case "CANCEL_ERASE":
-			System.out.println("AVANT ERASE REMOVE [" + data + "] : " + SaveEraserList.getList().getList());
 			SaveEraserList.getList().removeObject(data);
 			System.out.println("CANCEL_ERASE : " + data);
-			System.out.println("APRES ERASE REMOVE [" + data + "] : " + SaveEraserList.getList().getList());
 			break;
 
 		case "DAVE":

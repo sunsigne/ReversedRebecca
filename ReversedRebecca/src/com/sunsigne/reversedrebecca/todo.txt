@@ -38,8 +38,10 @@
 		- mettre à jour le texte Final Space
 
 	rr005 :
-		- la plante enregistre qu'elle a soif, mais pas dans le niveau du matin. Je devrais linéariser ça.
-		- pas encore pssible de s'habiller quand on a passé la panière de vide à mi-pleine (ça essaye de lancer le dialogue, donc ça crash)
+		- la plante :
+			- cycles corrects, mais pas le TA ni Highlight de quand elle est morte
+			- dialogues devraient s'adapter en fonction de son état
+		- pas encore possible de s'habiller quand on a passé la panière de vide à mi-pleine (ça essaye de lancer le dialogue, donc ça crash)
 		- tout ce qui n'est pas la chmabre ou la salle de bain
 
 	rr005 (disco pas bourré) :
