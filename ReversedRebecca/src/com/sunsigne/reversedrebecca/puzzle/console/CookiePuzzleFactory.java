@@ -7,18 +7,18 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.CyanKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasierKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.EasiestKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.GreenKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HarderKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.HardestKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.OrangeKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.RedKeyPuzzle;
-import com.sunsigne.reversedrebecca.puzzle.key.difficulty.YellowKeyPuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.CyanCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.EasierCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.EasiestCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.GreenCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.HarderCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.HardestCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.OrangeCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.RedCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.console.difficulty.YellowCookiePuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
-public class ConsolePuzzleFactory implements PuzzleFactory {
+public class CookiePuzzleFactory implements PuzzleFactory {
 
 	////////// PUZZLE ////////////
 
@@ -45,13 +45,13 @@ public class ConsolePuzzleFactory implements PuzzleFactory {
 			GenericListener actionOnLosing) {
 		switch (devDifficulty) {
 		case EASIEST:
-			return new EasiestKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasiestCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case EASIER:
-			return new EasierKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasierCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDER:
-			return new HarderKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HarderCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case HARDEST:
-			return new HardestKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HardestCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		}
 
 		// should not occurs
@@ -63,15 +63,15 @@ public class ConsolePuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new EasiestKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasiestCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new EasierKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new EasierCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new CyanKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new CyanCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new GreenKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new GreenCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new YellowKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -86,15 +86,15 @@ public class ConsolePuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new CyanKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new CyanCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new GreenKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new GreenCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new YellowKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new OrangeKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new OrangeCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new RedKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new RedCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;
@@ -109,15 +109,15 @@ public class ConsolePuzzleFactory implements PuzzleFactory {
 		switch (difficulty) {
 		case NULL:
 		case CYAN:
-			return new YellowKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new YellowCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case GREEN:
-			return new OrangeKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new OrangeCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case YELLOW:
-			return new RedKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new RedCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case ORANGE:
-			return new HarderKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HarderCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case RED:
-			return new HardestKeyPuzzle(toolPlayer, actionOnWinning, actionOnLosing);
+			return new HardestCookiePuzzle(toolPlayer, actionOnWinning, actionOnLosing);
 		case PURPLE:
 			autoWin(actionOnWinning);
 			return null;

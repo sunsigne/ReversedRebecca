@@ -11,7 +11,7 @@ import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.ConsolePuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.console.CookiePuzzleFactory;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionOneKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.Key;
 
@@ -45,7 +45,7 @@ public class PlayAction extends OpenPuzzleAction {
 	@Override
 	public Puzzle getPuzzle(DEV_LVL devDifficulty, LVL difficulty, ToolPlayer toolPlayer,
 			GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
-		return new ConsolePuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
+		return new CookiePuzzleFactory().createPuzzle(devDifficulty, difficulty, toolPlayer, actionOnWinning,
 				actionOnLosing);
 	}
 

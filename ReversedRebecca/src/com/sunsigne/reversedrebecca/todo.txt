@@ -36,7 +36,12 @@
 
 	Console : 
 		- texter animation de victoire (sur PlayAction, dans le puzzler)
-		- choixir un bruit de victoire & défaite
+		- choixir un bruit de victoire & défaite : idée - le bruit non utilisé du virus qui mange ?
+		- replacer le joueur au bon endroit dans le niveau test
+		
+	CookieCursor !
+		- des cursor
+		- des papies
 
 
 	rr005 :

@@ -13,6 +13,7 @@ public class HarderKeyPuzzle extends CyanKeyPuzzle {
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
+	
 	////////// PUZZLE ////////////
 
 	@Override
