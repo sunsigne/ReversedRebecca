@@ -35,9 +35,6 @@
 	////////// EN COURS ////////////
 
 	rr005 :
-		- la plante :
-			- cycles corrects, mais pas le TA ni Highlight de quand elle est morte
-			- dialogues devraient s'adapter en fonction de son état
 		- tout ce qui n'est pas la chmabre ou la salle de bain
 
 	rr005 (disco pas bourré) :
@@ -48,6 +45,8 @@
 		- la suite discothèque mais pas bourrée (rr005)
 		- lit pas fini
 		- liens à faires
+		- quand on essaies d'aller se coucher ou de manger :
+			- rebecca realisé qu'elle a rdv avec marie. Elle doit s'habiller en conséquence et partir
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
