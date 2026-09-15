@@ -34,19 +34,16 @@
 		
 	////////// EN COURS ////////////
 
-	rr-générique :
-		- mettre à jour le texte Final Space
-
 	rr005 :
 		- la plante :
 			- cycles corrects, mais pas le TA ni Highlight de quand elle est morte
 			- dialogues devraient s'adapter en fonction de son état
-		- pas encore possible de s'habiller quand on a passé la panière de vide à mi-pleine (ça essaye de lancer le dialogue, donc ça crash)
 		- tout ce qui n'est pas la chmabre ou la salle de bain
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire codex
+		- mettre la plante volée dans la cuisine
 		- épilogue nancy et jessy / mika / réstaurant (rr005)
 		- la suite discothèque mais pas bourrée (rr005)
 		- lit pas fini
@@ -85,9 +82,10 @@
 	rr000 - rr005 (+ générique) :
 		- trouve rune utilité à la bibliothèque
 	
-	////////// RR005 ////////////
+	////////// RRXXX générique ////////////
 	
-	sauvegarde : il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait êut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
+	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
+	- mettre à jour le texte Final Space
 	
 	////////// RR005_DRUNK ////////////
 

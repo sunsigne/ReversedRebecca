@@ -14,6 +14,11 @@ player = object = excited = … Cet endroit existe.@C'est l'espace fini : Final 
 player = object = you_silly = Vous pouvez y aller les yeux fermés !@Je suis une très grande fan.
 
 
+% DRESSER_CLOTHLESS
+player = object = unhappy = Je n'ai plus rien à me mettre…
+player = object = you_silly_var = Pas le choix, il va falloir faire la lessive.
+
+
 % BATH_EMPTY_WASHLESS
 player = object = no_sens = Pourquoi j'ai fais ça ?
 
