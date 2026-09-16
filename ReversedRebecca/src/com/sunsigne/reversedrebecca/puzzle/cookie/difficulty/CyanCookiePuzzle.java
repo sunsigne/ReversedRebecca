@@ -1,13 +1,13 @@
-package com.sunsigne.reversedrebecca.puzzle.console.difficulty;
+package com.sunsigne.reversedrebecca.puzzle.cookie.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
-import com.sunsigne.reversedrebecca.puzzle.console.CookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
 
-public class OrangeCookiePuzzle extends CookiePuzzle {
+public class CyanCookiePuzzle extends CookiePuzzle {
 
-	public OrangeCookiePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
+	public CyanCookiePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning,
 			GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 	}
@@ -16,7 +16,7 @@ public class OrangeCookiePuzzle extends CookiePuzzle {
 
 	@Override
 	public void createPuzzle() {
-
+		createCookie();
 	}
 
 }

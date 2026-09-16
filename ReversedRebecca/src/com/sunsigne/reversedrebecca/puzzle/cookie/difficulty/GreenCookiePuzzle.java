@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.puzzle.console.difficulty;
+package com.sunsigne.reversedrebecca.puzzle.cookie.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
-import com.sunsigne.reversedrebecca.puzzle.console.CookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
 
 public class GreenCookiePuzzle extends CookiePuzzle {
 

@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.puzzle.console;
+package com.sunsigne.reversedrebecca.puzzle.cookie;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
@@ -7,15 +7,15 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.CyanCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.EasierCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.EasiestCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.GreenCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.HarderCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.HardestCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.OrangeCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.RedCookiePuzzle;
-import com.sunsigne.reversedrebecca.puzzle.console.difficulty.YellowCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.CyanCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.EasierCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.EasiestCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.GreenCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.HarderCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.HardestCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.OrangeCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.RedCookiePuzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.difficulty.YellowCookiePuzzle;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 
 public class CookiePuzzleFactory implements PuzzleFactory {

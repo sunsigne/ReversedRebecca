@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.puzzle.console;
+package com.sunsigne.reversedrebecca.puzzle.cookie;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cookie.CookieObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cookie.CookieTitleObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
@@ -15,14 +16,12 @@ import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.Window;
 
 public abstract class CookiePuzzle extends Puzzle {
 
 	public CookiePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
-		
+
 		new SoundTask().playMusic("cookie_cursor", false, true);
 	}
 
@@ -45,7 +44,7 @@ public abstract class CookiePuzzle extends Puzzle {
 	protected void createCookie() {
 		int x = getCol(5) + 16;
 		int y = getRow(2) + 32;
-		
+
 		PuzzleObject cookie = new CookieObject(this, isCritical, x, y);
 		LAYER.PUZZLE.addObject(cookie);
 	}
@@ -67,6 +66,14 @@ public abstract class CookiePuzzle extends Puzzle {
 	@Override
 	public boolean hasCritToken() {
 		return false;
+	}
+
+	////////// OPEN ////////////
+
+	public void openPuzzle() {
+		super.openPuzzle();
+		PuzzleObject title = new CookieTitleObject(this);
+		LAYER.PUZZLE.addObject(title);
 	}
 
 	////////// TICK ////////////
@@ -97,10 +104,6 @@ public abstract class CookiePuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color cyan = new Color(95, 155, 170, 240);
 		new TransluantLayer().drawPuzzle(g, cyan);
-		
-		int w = 1100;
-		int h = 200;
-		g.drawImage(getImage(), (Window.WIDHT - w) / 2, 200, w, h, null);
 	}
 
 }
