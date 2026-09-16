@@ -59,10 +59,40 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 	////////// UPGRADE ////////////
 
+	private CookieUpgradeObject cursorUpgrade;
 	private boolean unlockCursor;
-	private boolean unlockGrandpa;
 	private final int CURSOR = 10;
-	private final int GRANDPA = 20;
+
+	public CookieUpgradeObject getCursorUpgrade() {
+		return cursorUpgrade;
+	}
+
+	private CookieUpgradeObject grandpaUpgrade;
+	private boolean unlockGrandpa;
+	private final int GRANDPA = 5;
+
+	public CookieUpgradeObject getGrandpaUpgrade() {
+		return grandpaUpgrade;
+	}
+
+	private void unlockingUpgrade() {
+		if (unlockCursor == false && getCount() >= CURSOR) {
+			setVelX(-10);
+			setVelY(1);
+			unlockCursor = true;
+			cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(1));
+			LAYER.PUZZLE.addObject(cursorUpgrade);
+		}
+
+		if (cursorUpgrade == null)
+			return;
+
+		if (unlockGrandpa == false && getCursorUpgrade().getCount() >= GRANDPA) {
+			unlockGrandpa = true;
+			grandpaUpgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(2));
+			LAYER.PUZZLE.addObject(grandpaUpgrade);
+		}
+	}
 
 	////////// TICK ////////////
 
@@ -81,24 +111,6 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 		if (count >= maxCount || maxCount <= 0)
 			getPuzzle().closePuzzle(true);
-	}
-
-	private void unlockingUpgrade() {
-		CookieUpgradeObject upgrade;
-
-		if (unlockCursor == false && count >= CURSOR) {
-			setVelX(-10);
-			setVelY(1);
-			unlockCursor = true;
-			upgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(1));
-			LAYER.PUZZLE.addObject(upgrade);
-		}
-
-		if (unlockGrandpa == false && count >= GRANDPA) {
-			unlockGrandpa = true;
-			upgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(3));
-			LAYER.PUZZLE.addObject(upgrade);
-		}
 	}
 
 	////////// RENDER ////////////

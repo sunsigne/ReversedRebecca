@@ -42,9 +42,9 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 		case COOKIE:
 			return ((CookiePuzzle) getPuzzle()).getCounter();
 		case CURSOR:
-			return this;
+			return ((CookiePuzzle) getPuzzle()).getCounter().getCursorUpgrade();
 		case GRANDPA:
-			return null;
+			return ((CookiePuzzle) getPuzzle()).getCounter().getGrandpaUpgrade();
 		}
 
 		return null;
@@ -134,7 +134,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public int getSheetColCriterion() {
 		return 1;
 	}
-	
+
 	@Override
 	public int getSheetRowCriterion() {
 		return 4;

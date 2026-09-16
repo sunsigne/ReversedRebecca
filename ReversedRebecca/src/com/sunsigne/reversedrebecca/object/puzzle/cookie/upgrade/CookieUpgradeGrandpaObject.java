@@ -32,7 +32,7 @@ public class CookieUpgradeGrandpaObject extends CookieUpgradeObject {
 
 	@Override
 	public int getCost() {
-		return 5;
+		return 10;
 	}
 
 }
