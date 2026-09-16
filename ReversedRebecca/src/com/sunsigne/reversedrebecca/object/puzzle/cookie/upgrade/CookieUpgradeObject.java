@@ -134,6 +134,11 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public int getSheetColCriterion() {
 		return 1;
 	}
+	
+	@Override
+	public int getSheetRowCriterion() {
+		return 4;
+	}
 
 	@Override
 	public int getSheetWidth() {
@@ -178,7 +183,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	}
 
 	private void drawName(Graphics g) {
-		String text = "cursor";
+		String text = getType().getName();
 		int rect[] = new int[] { getX() + 160, getY() - 20, getWidth(), getHeight() };
 		new TextDecoration().drawOutlinesString(g, text_font, text, DIRECTION.LEFT, rect);
 	}

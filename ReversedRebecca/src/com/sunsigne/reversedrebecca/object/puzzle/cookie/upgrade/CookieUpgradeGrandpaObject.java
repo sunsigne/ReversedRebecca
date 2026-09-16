@@ -2,9 +2,9 @@ package com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
-public class CookieUpgradeCursorObject extends CookieUpgradeObject {
+public class CookieUpgradeGrandpaObject extends CookieUpgradeObject {
 
-	public CookieUpgradeCursorObject(Puzzle puzzle, int x, int y) {
+	public CookieUpgradeGrandpaObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, x, y);
 	}
 
@@ -12,12 +12,12 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 
 	@Override
 	public COOKIE_UPGRADE getType() {
-		return COOKIE_UPGRADE.CURSOR;
+		return COOKIE_UPGRADE.GRANDPA;
 	}
 
 	@Override
 	public COOKIE_UPGRADE getAmountType() {
-		return COOKIE_UPGRADE.COOKIE;
+		return COOKIE_UPGRADE.CURSOR;
 	}
 	
 	@Override
@@ -27,12 +27,12 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 
 	@Override
 	public COOKIE_UPGRADE getCostType() {
-		return COOKIE_UPGRADE.COOKIE;
+		return COOKIE_UPGRADE.CURSOR;
 	}
 
 	@Override
 	public int getCost() {
-		return 10;
+		return 5;
 	}
 
 }

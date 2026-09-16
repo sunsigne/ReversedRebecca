@@ -131,12 +131,12 @@ public class CookiePuzzleFactory implements PuzzleFactory {
 
 	@Override
 	public String getOpeningSound() {
-		return "door_key";
+		return "virus_bite";
 	}
 
 	@Override
 	public String getVictorySound() {
-		return "door_unlock";
+		return "loot_chest";
 	}
 
 }

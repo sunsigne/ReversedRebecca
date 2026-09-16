@@ -35,12 +35,12 @@
 	////////// EN COURS ////////////
 
 	Cookie : 
-		- texter animation de victoire (sur PlayAction, dans le puzzler)
-		- choixir un bruit de victoire & défaite : idée - le bruit non utilisé du virus qui mange ?
+		- tester animation de victoire (sur PlayAction, dans le puzzler)
 		- replacer le joueur au bon endroit dans le niveau test
-		- s'éassurer de récupérer les droits pou le cookie
+		- s'éassurer de récupérer les droits pour le cookie
 		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor + équilibrer le shrink pour que ça arrive plutot facilement
 		- gamepad adaptation
+		- autres type d'upgrade pas encore fonctionnelles
 		
 	CookieCursor !
 		- des cursor
@@ -49,6 +49,7 @@
 
 	rr005 :
 		- tout ce qui n'est pas la chmabre ou la salle de bain
+		- relier le cookie cusro à l'ordi (ofc)
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
