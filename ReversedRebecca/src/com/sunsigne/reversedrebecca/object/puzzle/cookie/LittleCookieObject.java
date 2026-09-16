@@ -29,7 +29,8 @@ public class LittleCookieObject extends PuzzleObject implements SheetableImage {
 
 	@Override
 	public String toString() {
-		return "PUZZLE : " + getName();
+		String pos = getX() + "-" + getY();		
+		return "PUZZLE : " + getName() + " : " + pos;
 	}
 
 	////////// PHYSICS ////////////

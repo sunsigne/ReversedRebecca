@@ -40,6 +40,7 @@
 		- replacer le joueur au bon endroit dans le niveau test
 		- s'éassurer de récupérer les droits pou le cookie
 		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor
+		- gamepad adaptation
 		
 	CookieCursor !
 		- des cursor
