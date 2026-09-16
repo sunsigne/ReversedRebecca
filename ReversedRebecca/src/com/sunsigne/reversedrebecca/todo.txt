@@ -34,10 +34,11 @@
 		
 	////////// EN COURS ////////////
 
-	Console : 
+	Cookie : 
 		- texter animation de victoire (sur PlayAction, dans le puzzler)
 		- choixir un bruit de victoire & défaite : idée - le bruit non utilisé du virus qui mange ?
 		- replacer le joueur au bon endroit dans le niveau test
+		- s'éassurer de récupérer les droits pou le cookie
 		
 	CookieCursor !
 		- des cursor
