@@ -15,7 +15,7 @@ import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
-public class CookieCounterObject extends PuzzleObject {
+public class CookieCounterObject extends PuzzleObject implements CookieCounting {
 
 	public CookieCounterObject(Puzzle puzzle, int maxCount, int x, int y) {
 		super(puzzle, false, x, y, 3 * Size.XL, 3 * Size.XL);
@@ -45,10 +45,12 @@ public class CookieCounterObject extends PuzzleObject {
 	private int maxCount;
 	private float count;
 
+	@Override
 	public float getCount() {
 		return count;
 	}
 
+	@Override
 	public void addToCount(float amount) {
 		count = count + amount;
 	}
@@ -68,11 +70,11 @@ public class CookieCounterObject extends PuzzleObject {
 		time++;
 		unlockingUpgrade();
 
-		if(getX() < XMIN) {
+		if (getX() < XMIN) {
 			setX(XMIN);
 			setMotionless();
 		}
-		
+
 		if (count >= maxCount || maxCount <= 0)
 			getPuzzle().closePuzzle(true);
 	}
@@ -82,7 +84,8 @@ public class CookieCounterObject extends PuzzleObject {
 			setVelX(-10);
 			setVelY(1);
 			unlockCursor = true;
-			CookieUpgradeCursorObject cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(1));
+			CookieUpgradeCursorObject cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8),
+					getPuzzle().getRow(1));
 			LAYER.PUZZLE.addObject(cursorUpgrade);
 		}
 	}

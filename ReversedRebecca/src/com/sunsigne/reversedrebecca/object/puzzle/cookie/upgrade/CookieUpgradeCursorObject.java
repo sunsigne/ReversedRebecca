@@ -16,6 +16,11 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 	}
 
 	@Override
+	public COOKIE_UPGRADE getAmountType() {
+		return COOKIE_UPGRADE.COOKIE;
+	}
+	
+	@Override
 	public int getAmountBySecond() {
 		return 1;
 	}

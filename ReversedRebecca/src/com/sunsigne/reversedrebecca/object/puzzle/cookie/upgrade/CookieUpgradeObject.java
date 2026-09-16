@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cookie.CookieCounterObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cookie.CookieCounting;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -29,7 +29,7 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
 public abstract class CookieUpgradeObject extends PuzzleObject
-		implements SheetableImage, Highlightable, MouseUserEvent, GamepadEvent {
+		implements CookieCounting, SheetableImage, Highlightable, MouseUserEvent, GamepadEvent {
 
 	public CookieUpgradeObject(Puzzle puzzle, int x, int y) {
 		super(puzzle, false, x, y, 4 * Size.L, Size.L);
@@ -37,8 +37,17 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	////////// USEFULL ////////////
 
-	protected CookieCounterObject getCounter() {
-		return ((CookiePuzzle) getPuzzle()).getCounter();
+	protected CookieCounting getCounter(COOKIE_UPGRADE upgrade) {
+		switch (upgrade) {
+		case COOKIE:
+			return ((CookiePuzzle) getPuzzle()).getCounter();
+		case CURSOR:
+			return this;
+		case GRANDPA:
+			return null;
+		}
+
+		return null;
 	}
 
 	////////// NAME ////////////
@@ -66,6 +75,8 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	public abstract COOKIE_UPGRADE getType();
 
+	public abstract COOKIE_UPGRADE getAmountType();
+
 	public abstract int getAmountBySecond();
 
 	public abstract COOKIE_UPGRADE getCostType();
@@ -73,7 +84,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public abstract int getCost();
 
 	protected boolean canBuy() {
-		return getCounter().getCount() >= getCost();
+		return getCounter(getCostType()).getCount() >= getCost();
 	}
 
 	private float getAmountByTick() {
@@ -82,13 +93,15 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	////////// COUNT ////////////
 
-	private int count;
+	private float count;
 
-	public int getCount() {
+	@Override
+	public float getCount() {
 		return count;
 	}
 
-	public void addToCount(int amount) {
+	@Override
+	public void addToCount(float amount) {
 		count = count + amount;
 	}
 
@@ -96,7 +109,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	@Override
 	public void tick() {
-		getCounter().addToCount(getCount() * getAmountByTick());
+		getCounter(getAmountType()).addToCount(getCount() * getAmountByTick());
 	}
 
 	////////// HIGHLIGHT ////////////
@@ -152,6 +165,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		g.drawImage(getType().getImage(), getX(), getY(), Size.L, Size.L, null);
 		drawHighlight(g, highlight);
 		drawName(g);
 		drawCost(g);
@@ -159,6 +173,8 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 		if (canBuy() == false)
 			g.drawImage(expensive_image, getX(), getY(), getWidth(), getHeight(), null);
+
+		drawAmountBySecond(g);
 	}
 
 	private void drawName(Graphics g) {
@@ -168,6 +184,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	}
 
 	private void drawCost(Graphics g) {
+		g.drawImage(getCostType().getImage(), getX() + 178, getY() + 72, Size.XS, Size.XS, null);
 		int rect[] = new int[] { getX() + 220, getY() + 25, getWidth(), getHeight() };
 		new TextDecoration().drawOutlinesString(g, cost_font, String.valueOf(getCost()), getCostColor(), Color.BLACK,
 				DIRECTION.LEFT, rect);
@@ -183,7 +200,14 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	private void drawCount(Graphics g) {
 		int rect[] = new int[] { getX() - 25, getY() - 5, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, count_font, String.valueOf(count), DIRECTION.RIGHT, rect);
+		new TextDecoration().drawOutlinesString(g, count_font, String.valueOf((int) getCount()), DIRECTION.RIGHT, rect);
+	}
+
+	private void drawAmountBySecond(Graphics g) {
+		int rect[] = new int[] { getX() + getWidth() / 2 + 40, getY() + 2, getWidth(), getHeight() };
+		new TextDecoration().drawOutlinesString(g, cost_font, String.valueOf(getAmountBySecond()), DIRECTION.NULL,
+				rect);
+		g.drawImage(getAmountType().getImage(), getX() + getWidth() + 70, getY() + 50, Size.XS, Size.XS, null);
 	}
 
 	////////// MOUSE ////////////
@@ -206,7 +230,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 			return;
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
-		getCounter().addToCount(-getCost());
+		getCounter(getCostType()).addToCount(-getCost());
 		addToCount(1);
 	}
 
