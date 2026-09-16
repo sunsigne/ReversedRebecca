@@ -1,17 +1,28 @@
 package com.sunsigne.reversedrebecca.object.puzzle.cookie;
 
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseController;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
-public class CookieObject extends PuzzleObject implements SheetableImage {
+public class CookieObject extends PuzzleObject implements SheetableImage, Highlightable, MouseUserEvent, GamepadEvent {
 
 	public CookieObject(Puzzle puzzle, boolean critical, int x, int y) {
 		super(puzzle, critical, x, y, 3 * Size.XL, 3 * Size.XL);
@@ -37,18 +48,36 @@ public class CookieObject extends PuzzleObject implements SheetableImage {
 
 	////////// TICK ////////////
 
+	private int shrink;
+	private boolean ready;
+	private int time;
+
 	@Override
 	public void tick() {
-		runAnimation();
+		time++;
+		if (time == Game.SEC * 5)
+			ready = true;
+
+		if(shrink > 0)
+			shrink--;
 	}
 
-	protected void runAnimation() {
+	////////// HIGHLIGHT ////////////
 
+	@Override
+	public boolean getHighlightCondition() {
+		return isSelected();
+	}
+
+	@Override
+	public int getHighlightSize() {
+		return 0;
 	}
 
 	////////// TEXTURE ////////////
 
 	private BufferedImage image;
+	private BufferedImage highlight;
 
 	@Override
 	public int getSheetColCriterion() {
@@ -69,6 +98,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage {
 		if (image == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie");
 			image = getSheetSubImage(sheet);
+			highlight = getSheetSubImage(sheet, 2);
 		}
 		return image;
 	}
@@ -77,7 +107,62 @@ public class CookieObject extends PuzzleObject implements SheetableImage {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
+		int x = getX() + shrink;
+		int y = getY() + shrink;
+		int w = getWidth() - 2 * (shrink);
+		int h = getHeight() - 2 * (shrink);
+		
+		g.drawImage(getImage(), x, y, w, h, null);
+		drawHighlight(g, highlight, shrink, shrink, - 2 * shrink, - 2 * shrink);
+	}
+
+	////////// MOUSE ////////////
+
+	private MouseController mouseController = new MouseController(this);
+
+	@Override
+	public MouseController getMouseController() {
+		return mouseController;
+	}
+
+	@Override
+	public boolean isSelected() {
+		return MouseUserEvent.super.isSelected() && ready;
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if (isSelected() == false)
+			return;
+
+		shrink = shrink + 9;
+		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+		LAYER.PUZZLE.addObject(new LittleCookieObject(getPuzzle()));
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
+	}
+
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (ButtonEvent.isActionButton(e))
+			mousePressed(null);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
 	}
 
 }

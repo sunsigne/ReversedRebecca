@@ -39,6 +39,7 @@
 		- choixir un bruit de victoire & défaite : idée - le bruit non utilisé du virus qui mange ?
 		- replacer le joueur au bon endroit dans le niveau test
 		- s'éassurer de récupérer les droits pou le cookie
+		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor
 		
 	CookieCursor !
 		- des cursor
@@ -82,6 +83,7 @@
 	1h activer tous les succès abandonnées
 	1h jouer avec le skin "rebecca_dark" + 5h implémentation complète
 	3h créer une galerie
+	- mode endless de Cookie Cursor
 	
 	dessin : 
 	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique
