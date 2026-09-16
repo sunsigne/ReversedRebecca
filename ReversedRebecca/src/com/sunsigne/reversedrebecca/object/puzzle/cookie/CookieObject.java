@@ -43,7 +43,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
 	////////// TICK ////////////
@@ -54,12 +54,23 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 	@Override
 	public void tick() {
+		updatePos();
+
 		time++;
 		if (time == ((CookiePuzzle) getPuzzle()).getDelayBeforeReady())
 			ready = true;
 
 		if (shrink > 0)
 			shrink--;
+	}
+
+	private void updatePos() {
+		var counter = ((CookiePuzzle) getPuzzle()).getCounter();
+		if (counter == null)
+			return;
+
+		setVelX(counter.getVelX());
+		setVelY(counter.getVelY());
 	}
 
 	////////// HIGHLIGHT ////////////

@@ -5,12 +5,14 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeCursorObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class CookieCounterObject extends PuzzleObject {
@@ -35,32 +37,54 @@ public class CookieCounterObject extends PuzzleObject {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.PUZZLE;
+		return PhysicLinker.PUZZLE_MOVER;
 	}
 
-	////////// MAX COUNT ////////////
+	////////// COUNT ////////////
 
 	private int maxCount;
-	private int count;
+	private float count;
 
-	public int geCount() {
+	public float getCount() {
 		return count;
 	}
 
-	public void addToCount(int amount) {
+	public void addToCount(float amount) {
 		count = count + amount;
 	}
+
+	////////// UPGRADE ////////////
+
+	private boolean unlockCursor;
+	private final int CURSOR = 10;
 
 	////////// TICK ////////////
 
 	private int time;
+	private final int XMIN = getPuzzle().getCol(2) + 16;
 
 	@Override
 	public void tick() {
 		time++;
+		unlockingUpgrade();
 
+		if(getX() < XMIN) {
+			setX(XMIN);
+			setMotionless();
+		}
+		
 		if (count >= maxCount || maxCount <= 0)
 			getPuzzle().closePuzzle(true);
+	}
+
+	private void unlockingUpgrade() {
+		if (unlockCursor == false && count >= CURSOR) {
+			setVelX(-10);
+			setVelY(1);
+			unlockCursor = true;
+			CookieUpgradeCursorObject cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(1));
+			LAYER.PUZZLE.addObject(cursorUpgrade);
+		}
 	}
 
 	////////// RENDER ////////////
@@ -72,9 +96,10 @@ public class CookieCounterObject extends PuzzleObject {
 		if (time < ((CookiePuzzle) getPuzzle()).getDelayBeforeReady())
 			return;
 
-		String text = String.valueOf(count) + " / " + String.valueOf(maxCount);
 		int rect[] = new int[] { getX() - 5, getY() + 20, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, font, text, DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, String.valueOf((int) count), DIRECTION.LEFT, rect);
+		new TextDecoration().drawOutlinesString(g, font, "/", DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, String.valueOf(maxCount), DIRECTION.RIGHT, rect);
 	}
 
 }
