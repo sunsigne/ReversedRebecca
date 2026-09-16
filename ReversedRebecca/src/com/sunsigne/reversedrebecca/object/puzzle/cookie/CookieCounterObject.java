@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeCursorObject;
+import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeFactoryObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeGrandpaObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -75,6 +76,14 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 		return grandpaUpgrade;
 	}
 
+	private CookieUpgradeObject factoryUpgrade;
+	private boolean unlockFactory;
+	private final int FACTORY = 200;
+
+	public CookieUpgradeObject getFactoryUpgrade() {
+		return factoryUpgrade;
+	}
+
 	private void unlockingUpgrade() {
 		if (unlockCursor == false && getCount() >= CURSOR) {
 			setVelX(-10);
@@ -91,6 +100,15 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 			unlockGrandpa = true;
 			grandpaUpgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(2));
 			LAYER.PUZZLE.addObject(grandpaUpgrade);
+		}
+
+		if (grandpaUpgrade == null)
+			return;
+
+		if (unlockFactory == false && getCount() >= FACTORY) {
+			unlockFactory = true;
+			factoryUpgrade = new CookieUpgradeFactoryObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(3));
+			LAYER.PUZZLE.addObject(factoryUpgrade);
 		}
 	}
 

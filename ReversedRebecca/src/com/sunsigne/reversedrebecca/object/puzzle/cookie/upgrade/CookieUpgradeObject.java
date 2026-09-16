@@ -45,6 +45,8 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 			return ((CookiePuzzle) getPuzzle()).getCounter().getCursorUpgrade();
 		case GRANDPA:
 			return ((CookiePuzzle) getPuzzle()).getCounter().getGrandpaUpgrade();
+		case FACTORY:
+			return ((CookiePuzzle) getPuzzle()).getCounter().getGrandpaUpgrade();
 		}
 
 		return null;
@@ -172,14 +174,20 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 		g.drawImage(getType().getImage(), getX(), getY(), Size.L, Size.L, null);
 		drawHighlight(g, highlight);
+		drawCount(g);
 		drawName(g);
 		drawCost(g);
-		drawCount(g);
 
 		if (canBuy() == false)
 			g.drawImage(expensive_image, getX(), getY(), getWidth(), getHeight(), null);
 
 		drawAmountBySecond(g);
+	}
+
+	private void drawCount(Graphics g) {
+		int rect[] = new int[] { getX() - 25, getY() - 5, getWidth(), getHeight() };
+		new TextDecoration().drawOutlinesString(g, count_font, String.valueOf((int) getCount()), Color.GRAY,
+				Color.BLACK, DIRECTION.RIGHT, rect);
 	}
 
 	private void drawName(Graphics g) {
@@ -201,11 +209,6 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 			return new Color(180, 50, 50);
 		else
 			return Color.WHITE;
-	}
-
-	private void drawCount(Graphics g) {
-		int rect[] = new int[] { getX() - 25, getY() - 5, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, count_font, String.valueOf((int) getCount()), DIRECTION.RIGHT, rect);
 	}
 
 	private void drawAmountBySecond(Graphics g) {
