@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, RenderFree {
-	COOKIE("cookie"), CURSOR("cursor"), GRANDPA("grandpa"), FACTORY("factory");
+	COOKIE("cookie"), CURSOR("cursor"), GRANDPA("grandpa"), FACTORY("factory"), STOCK("stock"), ANTI_G("anti_g");
 
 	private String upgrade;
 
@@ -36,13 +36,15 @@ public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, Rend
 	public int getSheetColCriterion() {
 		switch (upgrade) {
 		case "cookie":
-			return 1;
 		case "cursor":
 			return 1;
 		case "grandpa":
+		case "anti_g":
 			return 2;
 		case "factory":
 			return 3;
+		case "stock":
+			return 4;
 		}
 		return 0;
 	}
@@ -52,8 +54,15 @@ public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, Rend
 		switch (upgrade) {
 		case "cookie":
 			return 1;
+		case "cursor":
+		case "grandpa":
+		case "factory":
+		case "stock":
+			return 5;
+		case "anti_g":
+			return 6;
 		}
-		return 5;
+		return 0;
 	}
 
 	private BufferedImage image;

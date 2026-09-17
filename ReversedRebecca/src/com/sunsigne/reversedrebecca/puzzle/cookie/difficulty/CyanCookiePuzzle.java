@@ -1,6 +1,7 @@
 package com.sunsigne.reversedrebecca.puzzle.cookie.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
+import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.COOKIE_UPGRADE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
@@ -18,6 +19,9 @@ public class CyanCookiePuzzle extends CookiePuzzle {
 	public void createPuzzle() {
 		createCookie();
 		createCounter(200);
+		
+		createUpgrade(COOKIE_UPGRADE.CURSOR, COOKIE_UPGRADE.COOKIE, 10, false);
+		createUpgrade(COOKIE_UPGRADE.GRANDPA, COOKIE_UPGRADE.CURSOR, 5, false);
 	}
 
 }

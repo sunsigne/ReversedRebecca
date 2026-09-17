@@ -5,17 +5,12 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeCursorObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeFactoryObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeGrandpaObject;
-import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeObject;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Size;
 
 public class CookieCounterObject extends PuzzleObject implements CookieCounting {
@@ -58,65 +53,6 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 		count = count + amount;
 	}
 
-	////////// UPGRADE ////////////
-
-	private CookieUpgradeObject cursorUpgrade;
-	private boolean unlockCursor;
-	private final int CURSOR = 10;
-
-	public CookieUpgradeObject getCursorUpgrade() {
-		return cursorUpgrade;
-	}
-
-	private CookieUpgradeObject grandpaUpgrade;
-	private boolean unlockGrandpa;
-	private final int GRANDPA = 5;
-
-	public CookieUpgradeObject getGrandpaUpgrade() {
-		return grandpaUpgrade;
-	}
-
-	private CookieUpgradeObject factoryUpgrade;
-	private boolean unlockFactory;
-	private final int FACTORY = 200;
-
-	public CookieUpgradeObject getFactoryUpgrade() {
-		return factoryUpgrade;
-	}
-
-	private void unlockingUpgrade() {
-		int gap = 8;
-
-		if (unlockCursor == false && getCount() >= CURSOR) {
-			setVelX(-10);
-			setVelY(1);
-			unlockCursor = true;
-			cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8),
-					getPuzzle().getRow(1) + gap);
-			LAYER.PUZZLE.addObject(cursorUpgrade);
-		}
-
-		if (cursorUpgrade == null)
-			return;
-
-		if (unlockGrandpa == false && getCursorUpgrade().getCount() >= GRANDPA) {
-			unlockGrandpa = true;
-			grandpaUpgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8),
-					getPuzzle().getRow(2) + 2 * gap);
-			LAYER.PUZZLE.addObject(grandpaUpgrade);
-		}
-
-		if (grandpaUpgrade == null)
-			return;
-
-		if (unlockFactory == false && getCount() >= FACTORY) {
-			unlockFactory = true;
-			factoryUpgrade = new CookieUpgradeFactoryObject(getPuzzle(), getPuzzle().getCol(8),
-					getPuzzle().getRow(3) + 3 * gap);
-			LAYER.PUZZLE.addObject(factoryUpgrade);
-		}
-	}
-
 	////////// TICK ////////////
 
 	private int time;
@@ -125,7 +61,6 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 	@Override
 	public void tick() {
 		time++;
-		unlockingUpgrade();
 
 		if (getX() < XMIN) {
 			setX(XMIN);
@@ -145,7 +80,8 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 		if (time < ((CookiePuzzle) getPuzzle()).getDelayBeforeReady())
 			return;
 
-		int rect[] = new int[] { getX() - 5, getY() + 20, getWidth(), getHeight() };
+		int w = maxCount >= 1000000 ? 100 : 0;
+		int rect[] = new int[] { getX() - 5 - w / 2, getY() + 20, getWidth() + w, getHeight() };
 		new TextDecoration().drawOutlinesString(g, font, String.valueOf((int) count), DIRECTION.LEFT, rect);
 		new TextDecoration().drawOutlinesString(g, font, "/", DIRECTION.NULL, rect);
 		new TextDecoration().drawOutlinesString(g, font, String.valueOf(maxCount), DIRECTION.RIGHT, rect);

@@ -1,6 +1,8 @@
 package com.sunsigne.reversedrebecca.object.puzzle.cookie;
 
-public interface CookieCounting {
+import com.sunsigne.reversedrebecca.object.characteristics.Velocity;
+
+public interface CookieCounting extends Velocity {
 
 	float getCount();
 

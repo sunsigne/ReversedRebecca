@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.Highlightable;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.object.puzzle.cookie.CookieCounting;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -31,39 +32,25 @@ import com.sunsigne.reversedrebecca.system.mainloop.Game;
 public abstract class CookieUpgradeObject extends PuzzleObject
 		implements CookieCounting, SheetableImage, Highlightable, MouseUserEvent, GamepadEvent {
 
-	public CookieUpgradeObject(Puzzle puzzle, int x, int y) {
+	public CookieUpgradeObject(Puzzle puzzle, int x, int y, COOKIE_UPGRADE unlockingType, int unlockingAt,
+			boolean nerfed) {
 		super(puzzle, false, x, y, 4 * Size.L, Size.L);
+		this.unlockingType = unlockingType;
+		this.unlockingAt = unlockingAt;
+		this.nerfed = nerfed;
+
 	}
 
 	////////// USEFULL ////////////
 
 	protected CookieCounting getCounter(COOKIE_UPGRADE upgrade) {
-		switch (upgrade) {
-		case COOKIE:
-			return ((CookiePuzzle) getPuzzle()).getCounter();
-		case CURSOR:
-			return ((CookiePuzzle) getPuzzle()).getCounter().getCursorUpgrade();
-		case GRANDPA:
-			return ((CookiePuzzle) getPuzzle()).getCounter().getGrandpaUpgrade();
-		case FACTORY:
-			return ((CookiePuzzle) getPuzzle()).getCounter().getGrandpaUpgrade();
-		}
-
-		return null;
+		return ((CookiePuzzle) getPuzzle()).getUpgrade(upgrade);
 	}
 
 	////////// NAME ////////////
 
 	protected String getName() {
 		return "COOKIE UPGRADE";
-	}
-
-	@Override
-	public String toString() {
-		String count = "COUNT = " + getCount();
-		String amount = "AMOUNT BY SECOND = " + getAmountBySecond();
-		String cost = "COST = " + getCost();
-		return "PUZZLE : " + getName() + " : " + count + " : " + amount + " : " + cost;
 	}
 
 	////////// PHYSICS ////////////
@@ -75,6 +62,8 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	////////// UPGRADE ////////////
 
+	protected boolean nerfed;
+
 	public abstract COOKIE_UPGRADE getType();
 
 	public abstract COOKIE_UPGRADE getAmountType();
@@ -84,20 +73,22 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public abstract COOKIE_UPGRADE getCostType();
 
 	public abstract int getInitialCost();
-	
+
 	private float purchased;
-		
+
 	public int getCost() {
 		return (int) ((float) (getInitialCost() * Math.pow(1.1, purchased)));
 	}
 
 	protected boolean canBuy() {
-		return getCounter(getCostType()).getCount() >= getCost();
+		return unlocked && getCounter(getCostType()).getCount() >= getCost();
 	}
 
 	private float getAmountByTick() {
 		return ((float) getAmountBySecond()) / ((float) Game.SEC);
 	}
+
+	public abstract GenericListener getUnlockingAction();
 
 	////////// COUNT ////////////
 
@@ -115,9 +106,23 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	////////// TICK ////////////
 
+	private COOKIE_UPGRADE unlockingType;
+	private int unlockingAt;
+	private boolean unlocked;
+
 	@Override
 	public void tick() {
 		getCounter(getAmountType()).addToCount(getCount() * getAmountByTick());
+
+		if (unlocked)
+			return;
+
+		if (getCounter(unlockingType).getCount() >= unlockingAt) {
+			unlocked = true;
+			GenericListener unlockingAction = getUnlockingAction();
+			if (unlockingAction != null)
+				unlockingAction.doAction();
+		}
 	}
 
 	////////// HIGHLIGHT ////////////
@@ -177,6 +182,9 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	@Override
 	public void render(Graphics g) {
+		if (unlocked == false)
+			return;
+
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 		g.drawImage(getType().getImage(), getX(), getY(), Size.L, Size.L, null);
 		drawHighlight(g, highlight);

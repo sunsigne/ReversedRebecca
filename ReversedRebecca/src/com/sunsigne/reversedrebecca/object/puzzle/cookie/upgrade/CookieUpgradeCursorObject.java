@@ -1,11 +1,13 @@
 package com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade;
 
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 
 public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 
-	public CookieUpgradeCursorObject(Puzzle puzzle, int x, int y) {
-		super(puzzle, x, y);
+	public CookieUpgradeCursorObject(Puzzle puzzle, int x, int y, COOKIE_UPGRADE unlockingType, int unlockingAt,
+			boolean nerfed) {
+		super(puzzle, x, y, unlockingType, unlockingAt, nerfed);
 	}
 
 	////////// UPGRADE ////////////
@@ -19,10 +21,10 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 	public COOKIE_UPGRADE getAmountType() {
 		return COOKIE_UPGRADE.COOKIE;
 	}
-	
+
 	@Override
 	public int getAmountBySecond() {
-		return 1;
+		return nerfed ? 0 : 1;
 	}
 
 	@Override
@@ -35,4 +37,13 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 		return 10;
 	}
 
+	@Override
+	public GenericListener getUnlockingAction() {
+		GenericListener unlockingAction = () -> {
+			getCounter(COOKIE_UPGRADE.COOKIE).setVelX(-10);
+			getCounter(COOKIE_UPGRADE.COOKIE).setVelY(1);
+		};
+
+		return unlockingAction;
+	}
 }
