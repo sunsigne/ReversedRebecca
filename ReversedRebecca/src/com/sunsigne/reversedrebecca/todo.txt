@@ -40,14 +40,9 @@
 		- s'éassurer de récupérer les droits pour le cookie
 		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor + équilibrer le shrink pour que ça arrive plutot facilement
 		- gamepad adaptation
-		
-	CookieCursor !
-		- des cursor
-		- des papies
-
 
 	rr005 :
-		- tout ce qui n'est pas la chmabre ou la salle de bain
+		- tout ce qui n'est pas la chambre ou la salle de bain
 		- relier le cookie cusro à l'ordi (ofc)
 
 	rr005 (disco pas bourré) :

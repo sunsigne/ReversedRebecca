@@ -17,22 +17,22 @@ public class CookieUpgradeFactoryObject extends CookieUpgradeObject {
 
 	@Override
 	public COOKIE_UPGRADE getAmountType() {
-		return COOKIE_UPGRADE.GRANDPA;
+		return COOKIE_UPGRADE.CURSOR;
 	}
 	
 	@Override
 	public int getAmountBySecond() {
-		return 5;
+		return 1;
 	}
 
 	@Override
 	public COOKIE_UPGRADE getCostType() {
-		return COOKIE_UPGRADE.COOKIE;
+		return COOKIE_UPGRADE.GRANDPA;
 	}
 
 	@Override
-	public int getCost() {
-		return 1000;
+	public int getInitialCost() {
+		return 5;
 	}
 
 }

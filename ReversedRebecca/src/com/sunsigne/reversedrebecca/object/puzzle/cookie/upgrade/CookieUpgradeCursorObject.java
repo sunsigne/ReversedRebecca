@@ -31,7 +31,7 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 	}
 
 	@Override
-	public int getCost() {
+	public int getInitialCost() {
 		return 10;
 	}
 

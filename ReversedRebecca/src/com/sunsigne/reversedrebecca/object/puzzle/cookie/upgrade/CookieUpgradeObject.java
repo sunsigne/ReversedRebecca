@@ -83,7 +83,13 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	public abstract COOKIE_UPGRADE getCostType();
 
-	public abstract int getCost();
+	public abstract int getInitialCost();
+	
+	private float purchased;
+		
+	public int getCost() {
+		return (int) ((float) (getInitialCost() * Math.pow(1.1, purchased)));
+	}
 
 	protected boolean canBuy() {
 		return getCounter(getCostType()).getCount() >= getCost();
@@ -240,6 +246,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
 		getCounter(getCostType()).addToCount(-getCost());
 		addToCount(1);
+		purchased++;
 	}
 
 	@Override

@@ -17,12 +17,12 @@ public class CookieUpgradeGrandpaObject extends CookieUpgradeObject {
 
 	@Override
 	public COOKIE_UPGRADE getAmountType() {
-		return COOKIE_UPGRADE.CURSOR;
+		return COOKIE_UPGRADE.COOKIE;
 	}
 	
 	@Override
 	public int getAmountBySecond() {
-		return 1;
+		return 3;
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class CookieUpgradeGrandpaObject extends CookieUpgradeObject {
 	}
 
 	@Override
-	public int getCost() {
+	public int getInitialCost() {
 		return 5;
 	}
 

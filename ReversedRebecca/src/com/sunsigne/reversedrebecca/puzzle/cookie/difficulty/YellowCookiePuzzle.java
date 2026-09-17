@@ -16,7 +16,8 @@ public class YellowCookiePuzzle extends CookiePuzzle {
 
 	@Override
 	public void createPuzzle() {
-
+		createCookie();
+		createCounter(5000);
 	}
 
 }

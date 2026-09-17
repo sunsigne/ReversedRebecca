@@ -85,11 +85,14 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 	}
 
 	private void unlockingUpgrade() {
+		int gap = 8;
+
 		if (unlockCursor == false && getCount() >= CURSOR) {
 			setVelX(-10);
 			setVelY(1);
 			unlockCursor = true;
-			cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(1));
+			cursorUpgrade = new CookieUpgradeCursorObject(getPuzzle(), getPuzzle().getCol(8),
+					getPuzzle().getRow(1) + gap);
 			LAYER.PUZZLE.addObject(cursorUpgrade);
 		}
 
@@ -98,7 +101,8 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 		if (unlockGrandpa == false && getCursorUpgrade().getCount() >= GRANDPA) {
 			unlockGrandpa = true;
-			grandpaUpgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(2));
+			grandpaUpgrade = new CookieUpgradeGrandpaObject(getPuzzle(), getPuzzle().getCol(8),
+					getPuzzle().getRow(2) + 2 * gap);
 			LAYER.PUZZLE.addObject(grandpaUpgrade);
 		}
 
@@ -107,7 +111,8 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 		if (unlockFactory == false && getCount() >= FACTORY) {
 			unlockFactory = true;
-			factoryUpgrade = new CookieUpgradeFactoryObject(getPuzzle(), getPuzzle().getCol(8), getPuzzle().getRow(3));
+			factoryUpgrade = new CookieUpgradeFactoryObject(getPuzzle(), getPuzzle().getCol(8),
+					getPuzzle().getRow(3) + 3 * gap);
 			LAYER.PUZZLE.addObject(factoryUpgrade);
 		}
 	}
