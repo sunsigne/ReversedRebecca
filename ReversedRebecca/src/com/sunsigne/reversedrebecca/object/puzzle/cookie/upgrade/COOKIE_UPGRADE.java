@@ -9,7 +9,7 @@ import com.sunsigne.reversedrebecca.system.mainloop.RenderFree;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, RenderFree {
-	COOKIE("cookie"), CURSOR("cursor"), GRANDPA("grandpa"), FACTORY("factory"), STOCK("stock"), ANTI_G("anti_g");
+	COOKIE("Cookie"), CURSOR("Cursor"), GRANDPA("Grandpa"), FACTORY("Factory"), STOCK("Stock"), ANTI_G("Anti_g");
 
 	private String upgrade;
 
@@ -26,41 +26,31 @@ public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, Rend
 	@Override
 	public int getSheetSize() {
 		switch (upgrade) {
-		case "cookie":
+		case "Cookie":
 			return 3 * 16;
 		}
 		return 2 * 16;
 	}
 
 	@Override
-	public int getSheetColCriterion() {
-		switch (upgrade) {
-		case "cookie":
-		case "cursor":
-			return 1;
-		case "grandpa":
-		case "anti_g":
-			return 2;
-		case "factory":
-			return 3;
-		case "stock":
-			return 4;
-		}
-		return 0;
+	public int getSheetRowCriterion() {
+		return 1;
 	}
 
 	@Override
-	public int getSheetRowCriterion() {
+	public int getSheetColCriterion() {
 		switch (upgrade) {
-		case "cookie":
+		case "Cookie":
+		case "Cursor":
 			return 1;
-		case "cursor":
-		case "grandpa":
-		case "factory":
-		case "stock":
+		case "Grandpa":
+			return 2;
+		case "Factory":
+			return 3;
+		case "Stock":
+			return 4;
+		case "Anti_g":
 			return 5;
-		case "anti_g":
-			return 6;
 		}
 		return 0;
 	}
@@ -69,7 +59,8 @@ public enum COOKIE_UPGRADE implements SheetableImage, PhysicFree, TickFree, Rend
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie");
+			String upgrade = getName().contains("Cookie") ? "" : "_upgrade";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie" + upgrade);
 			image = getSheetSubImage(sheet);
 		}
 		return image;

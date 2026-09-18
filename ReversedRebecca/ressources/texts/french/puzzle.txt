@@ -8,6 +8,14 @@ DiscoPerfect = parfait
 
 YYStrenghtJump = sautez !
 
+///// COOKIE /////
+
+CookieCursor = clic
+CookieGrandpa = papy
+CookieFactory = usine
+CookieStock = bourse
+CookieAnti_g = anti-p
+
 ///// HACK /////
 
 ProcessorBack = retour

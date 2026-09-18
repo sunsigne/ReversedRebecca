@@ -16,9 +16,11 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -51,6 +53,19 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	protected String getName() {
 		return "COOKIE UPGRADE";
+	}
+
+	////////// TEXT ////////////
+
+	private Font text_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 45f);
+	private Font cost_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 30f);
+	private Font count_font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 60f);
+	private String text;
+
+	private String getText() {
+		if (text == null)
+			text = new Translatable().getTranslatedText("Cookie" + getType().getName(), FilePath.PUZZLE);
+		return text;
 	}
 
 	////////// PHYSICS ////////////
@@ -150,7 +165,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 4;
+		return 2;
 	}
 
 	@Override
@@ -165,20 +180,15 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie_upgrade");
 			image = getSheetSubImage(sheet);
-			expensive_image = getSheetSubImage(sheet, 1, 3, getSheetWidth(), getSheetHeight());
-			sheet = new ImageTask().loadImage("textures/puzzle/" + "cookie_highlight");
-			highlight = getSheetSubImage(sheet, 1, 1, getSheetWidth() + 4, getSheetHeight() + 4);
+			expensive_image = getSheetSubImage(sheet, 2, 2, getSheetWidth(), getSheetHeight());
+			highlight = getSheetSubImage(sheet, 1, 3, getSheetWidth() + 4, getSheetHeight() + 4);
 		}
 		return image;
 	}
 
 	////////// RENDER ////////////
-
-	private Font text_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 45f);
-	private Font cost_font = new FontTask().createNewFont("square_sans_serif_7.ttf", 30f);
-	private Font count_font = new FontTask().createNewFont("DigitalNumbers-Regular.ttf", 60f);
 
 	@Override
 	public void render(Graphics g) {
@@ -186,7 +196,7 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 			return;
 
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
-		g.drawImage(getType().getImage(), getX(), getY(), Size.L, Size.L, null);
+		drawType(g);
 		drawHighlight(g, highlight);
 		drawCount(g);
 		drawName(g);
@@ -198,6 +208,10 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 		drawAmountBySecond(g);
 	}
 
+	protected void drawType(Graphics g) {
+		g.drawImage(getType().getImage(), getX(), getY(), Size.L, Size.L, null);
+	}
+
 	private void drawCount(Graphics g) {
 		int rect[] = new int[] { getX() - 25, getY() - 5, getWidth(), getHeight() };
 		new TextDecoration().drawOutlinesString(g, count_font, String.valueOf((int) getCount()), Color.GRAY,
@@ -205,9 +219,8 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	}
 
 	private void drawName(Graphics g) {
-		String text = getType().getName();
 		int rect[] = new int[] { getX() + 160, getY() - 20, getWidth(), getHeight() };
-		new TextDecoration().drawOutlinesString(g, text_font, text, DIRECTION.LEFT, rect);
+		new TextDecoration().drawOutlinesString(g, text_font, getText(), DIRECTION.LEFT, rect);
 	}
 
 	private void drawCost(Graphics g) {

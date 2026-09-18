@@ -37,13 +37,12 @@
 	Cookie : 
 		- tester animation de victoire (sur PlayAction, dans le puzzler)
 		- replacer le joueur au bon endroit dans le niveau test
-		- s'éassurer de récupérer les droits pour le cookie
 		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor + équilibrer le shrink pour que ça arrive plutot facilement
 		- gamepad adaptation
-		- aller chercher les traductions des noms des upgrades
 		- renverser l'image du stock market quand il est nerf
 		- créer les niveau de difficultés avant cyan
 		- ranger un peu mieux les images dans COOKIE_UPGRADE
+		- finaliser le puzzler (design)
 		- en +1 ou +2, le cursor rapporte 0 (débrouille toi popur faire des vieux XD)
 
 	rr005 :
