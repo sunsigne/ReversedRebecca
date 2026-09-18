@@ -10,6 +10,7 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
+import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -48,6 +49,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 	////////// TICK ////////////
 
+	private final int SHRINK_FACTOR = 9;
 	private int shrink;
 	private boolean ready;
 	private int time;
@@ -125,6 +127,13 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 		g.drawImage(getImage(), x, y, w, h, null);
 		drawHighlight(g, highlight, shrink, shrink, -2 * shrink, -2 * shrink);
+		
+		reversedCookieAchievement();
+	}
+
+	private void reversedCookieAchievement() {
+		if(getSize() - 2 * (shrink) < - 2 * Size.L)
+			new AchievementTask().unlockAchievement("reversedcookie");
 	}
 
 	////////// MOUSE ////////////
@@ -146,7 +155,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 		if (isSelected() == false)
 			return;
 
-		shrink = shrink + 9;
+		shrink = shrink + SHRINK_FACTOR;
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 		LAYER.PUZZLE.addObject(new LittleCookieObject(getPuzzle()));
 		addToCounter(1);

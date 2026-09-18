@@ -37,7 +37,6 @@
 	Cookie : 
 		- tester animation de victoire (sur PlayAction, dans le puzzler)
 		- replacer le joueur au bon endroit dans le niveau test
-		- créer succès : reversed rebeccookie : retourner le cookie dans Cookie Cursor + équilibrer le shrink pour que ça arrive plutot facilement
 		- gamepad adaptation
 		- finaliser le puzzler (design)
 

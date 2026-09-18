@@ -18,6 +18,8 @@ FirstKillTitle = Crepe a la viande
 FirstKillText = Eliminer Alicia
 FirstKillTextMale = Eliminer Alexis
 FirstKillTextOpposite = Eliminer Alexis
+ReversedCookieTitle = Reversed Cookie
+ReversedCookieText = Retourner le Cookie Cursor
 
 ///// GREEN /////
 

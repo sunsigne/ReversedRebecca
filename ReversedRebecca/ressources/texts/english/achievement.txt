@@ -18,6 +18,8 @@ FirstKillTitle = Meat pancake
 FirstKillText = Eliminate Alicia
 FirstKillTextMale = Eliminate Alexis
 FirstKillTextOpposite = Eliminate Alexis
+ReversedCookieTitle = Reversed Cookie
+ReversedCookieText = Flip the Cookie in Cookie Cursor
 
 ///// GREEN /////
 
