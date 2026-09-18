@@ -16,7 +16,8 @@ public class EasiestCookiePuzzle extends CookiePuzzle {
 
 	@Override
 	public void createPuzzle() {
-
+		createCookie();
+		createCounter(20);
 	}
 
 }
