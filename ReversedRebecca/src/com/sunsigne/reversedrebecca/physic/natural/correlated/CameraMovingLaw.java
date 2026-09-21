@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.pattern.player.PlayerClone;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.camera.Camera;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption;
 import com.sunsigne.reversedrebecca.system.camera.CameraOption.CAMERA_TYPE;
@@ -94,7 +95,9 @@ public class CameraMovingLaw implements PhysicLaw, CameraDependency {
 
 	// prevent camera to protrude from the borders' map
 	public float getBorderedTarget(float target, boolean horizontal, boolean staticCamera) {
-
+		if(new Camera().getZoom() != 1f)
+			return target;
+		
 		// border left or up
 		if (target >= 0)
 			return staticCamera ? 0 : 26;

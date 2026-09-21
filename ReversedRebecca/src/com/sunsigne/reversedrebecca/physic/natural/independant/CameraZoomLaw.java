@@ -57,8 +57,8 @@ public class CameraZoomLaw extends IndependantLaw {
 	////////// RENDER ////////////
 
 	private float lens;
-	private float GROTHW = 0.15f;
-	private float MAX_ZOOM = 3f;
+	private float GROTHW = 0.14f;
+	private float MAX_ZOOM = 2.8f;
 
 	@Override
 	public void beforeObjectRender(Graphics g, Updatable object) {

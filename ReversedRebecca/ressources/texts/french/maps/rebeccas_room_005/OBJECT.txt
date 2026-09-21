@@ -33,3 +33,7 @@ player = object = pain = Cette eau est là depuis trop longtemps.@Elle est froid
 
 % WATCH_TV
 player = DOWN = sad = J'ai perdu la télécommande…@Je dois me déplacer, si je veux l'allumer.
+
+
+% BOOKSHELF
+player = DOWN = happy_var = Aucun doute, c'est bien une bibliothèque.

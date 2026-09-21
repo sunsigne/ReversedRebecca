@@ -36,6 +36,7 @@
 
 	rr005 :
 		- tout ce qui n'est pas la chambre ou la salle de bain
+		- (bibliothèque à finir)
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
@@ -86,6 +87,7 @@
 	
 	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
 	- mettre à jour le texte Final Space
+	- mettre à jour Camille
 	
 	////////// RR005_DRUNK ////////////
 
