@@ -30,13 +30,13 @@ public class MappableConsole implements MappablePuzzler {
 			boolean horizontal, int x, int y) {
 
 		if (devDifficulty == null && difficulty == LVL.NULL)
-			return new NullConsoleObject(x, y);
+			return new NullConsoleObject(facing, x, y);
 
 		else if (devDifficulty != null)
-			return new ConsoleObject(devDifficulty, x, y);
+			return new ConsoleObject(devDifficulty, facing, x, y);
 
 		else
-			return new ConsoleObject(difficulty, x, y);
+			return new ConsoleObject(difficulty, facing, x, y);
 	}
 
 	@Override

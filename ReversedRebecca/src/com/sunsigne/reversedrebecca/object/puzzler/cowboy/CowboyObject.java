@@ -28,7 +28,7 @@ public class CowboyObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 3;
+		return 2;
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class CowboyObject extends PuzzlerObject {
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 2 + getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, 1, 3 + getSheetRowCriterion(), getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

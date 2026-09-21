@@ -2,19 +2,22 @@ package com.sunsigne.reversedrebecca.object.puzzler.console;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 
-public class ConsoleObject extends PuzzlerObject {
+public class ConsoleObject extends PuzzlerObject implements Facing {
 
-	public ConsoleObject(DEV_LVL devDifficulty, int x, int y) {
+	public ConsoleObject(DEV_LVL devDifficulty, DIRECTION facing, int x, int y) {
 		super(devDifficulty, x, y);
+		this.facing = facing;
 	}
 
-	public ConsoleObject(LVL difficulty, int x, int y) {
+	public ConsoleObject(LVL difficulty, DIRECTION facing, int x, int y) {
 		super(difficulty, x, y);
+		this.facing = facing;
 	}
 
 	////////// NAME ////////////
@@ -24,17 +27,29 @@ public class ConsoleObject extends PuzzlerObject {
 		return "console";
 	}
 
+	////////// FACING ////////////
+
+	private DIRECTION facing;
+
+	public DIRECTION getFacing() {
+		return facing;
+	}
+
+	public void setFacing(DIRECTION facing) {
+		this.facing = facing;
+	}
+
 	////////// TEXTURE ////////////
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 2;
+		return 1 + (getFacing() == DIRECTION.UP ? 0 : 1);
 	}
 
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler");
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "console");
 			image = getSheetSubImage(sheet);
 		}
 		return image;
@@ -44,7 +59,7 @@ public class ConsoleObject extends PuzzlerObject {
 	public BufferedImage getHighlightImage() {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
-			highlightImage = getSheetSubImage(sheet, 1, 2 + getSheetRowCriterion(), getSheetWidth() + 2,
+			highlightImage = getSheetSubImage(sheet, getSheetRowCriterion(), 4, getSheetWidth() + 2,
 					getSheetHeight() + 2);
 		}
 		return highlightImage;

@@ -33,7 +33,7 @@ public class DanceFloorObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		return 3;
+		return 2;
 	}
 
 	@Override

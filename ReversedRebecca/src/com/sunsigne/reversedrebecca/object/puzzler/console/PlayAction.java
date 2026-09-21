@@ -5,6 +5,7 @@ import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.animation.OpenChestAnimationObject;
 import com.sunsigne.reversedrebecca.object.animation.SuperAnimationObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
@@ -51,7 +52,8 @@ public class PlayAction extends OpenPuzzleAction {
 
 	@Override
 	public PuzzlerObject getNullObject(PuzzlerObject puzzlerObject, int x, int y) {
-		return new NullConsoleObject(x, y);
+		DIRECTION facing = ((ConsoleObject) puzzlerObject).getFacing();
+		return new NullConsoleObject(facing, x, y);
 	}
 
 	@Override
