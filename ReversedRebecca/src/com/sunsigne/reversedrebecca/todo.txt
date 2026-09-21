@@ -37,8 +37,6 @@
 	Cookie : 
 		- replacer le joueur au bon endroit dans le niveau test
 		- gamepad adaptation
-		puzzler :
-			- finir le mode daltonien
 
 	rr005 :
 		- tout ce qui n'est pas la chambre ou la salle de bain

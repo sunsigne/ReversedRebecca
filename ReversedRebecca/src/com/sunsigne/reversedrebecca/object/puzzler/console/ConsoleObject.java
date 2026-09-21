@@ -62,7 +62,8 @@ public class ConsoleObject extends PuzzlerObject implements Facing {
 	@Override
 	public BufferedImage getImage() {
 		if (image == null) {
-			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "console");
+			String number = isNumberSettings() ? "_number" : "";
+			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "console" + number);
 			image = getSheetSubImage(sheet);
 		}
 		return image;
