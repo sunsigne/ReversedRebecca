@@ -226,8 +226,12 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 			setPreset(getDefaultPreset());
 
 		if (getPreset() == COOKIE) {
-			if (e.getKey() == ButtonEvent.RIGHT && getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
-				setPreset(CURSOR);
+			if (e.getKey() == ButtonEvent.RIGHT) {
+				if (getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+					setPreset(FACTORY);
+				else if (getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
+					setPreset(CURSOR);
+			}
 		}
 
 		else if (getPreset() == CURSOR) {

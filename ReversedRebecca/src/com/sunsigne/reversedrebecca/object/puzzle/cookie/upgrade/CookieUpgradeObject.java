@@ -24,6 +24,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
@@ -106,14 +107,14 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public abstract GenericListener getUnlockingAction();
 
 	////////// COUNT ////////////
-	
+
 	private boolean unlocked;
 
 	@Override
 	public boolean isUnlocked() {
 		return unlocked;
 	}
-	
+
 	private float count;
 
 	@Override
@@ -150,7 +151,10 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	@Override
 	public boolean getHighlightCondition() {
-		return isSelected();
+		if (ControllerManager.getInstance().isUsingGamepad())
+			return isSelected();
+		else
+			return isSelected() && canBuy();
 	}
 
 	@Override
@@ -261,13 +265,11 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	}
 
 	@Override
-	public boolean isSelected() {
-		return MouseUserEvent.super.isSelected() && canBuy();
-	}
-
-	@Override
 	public void mousePressed(MouseEvent e) {
 		if (isSelected() == false)
+			return;
+
+		if (canBuy() == false)
 			return;
 
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button_validate");
