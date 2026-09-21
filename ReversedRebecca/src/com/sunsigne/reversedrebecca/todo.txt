@@ -39,9 +39,6 @@
 		- gamepad adaptation
 		puzzler :
 			- finir le mode daltonien
-			- implanter dans rr005
-					- relier le cookie cusro à l'ordi (ofc) + gérer la sauvegarde pour que ça soit dans rr-generic ?
- 			
 
 	rr005 :
 		- tout ce qui n'est pas la chambre ou la salle de bain
