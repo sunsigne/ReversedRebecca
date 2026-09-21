@@ -28,4 +28,8 @@ player = object = no_sens_var = Quel gaspillage d'eau…@C'est quoi mon problèm
 
 
 % BATH_WASH_OLD_WATER
-player = object = pain = Cette eau est restée là toute la journée.@Elle est froide !
+player = object = pain = Cette eau est là depuis trop longtemps.@Elle est froide !
+
+
+% WATCH_TV
+player = DOWN = sad = J'ai perdu la télécommande…@Je dois me déplacer, si je veux l'allumer.

@@ -39,7 +39,7 @@
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
-		- faire codex
+		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
 		- épilogue nancy et jessy / mika / réstaurant (rr005)
 		- la suite discothèque mais pas bourrée (rr005)

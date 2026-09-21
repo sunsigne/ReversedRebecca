@@ -50,13 +50,6 @@ OBJ-11 = Washing Machine
 OBJ-12 = Toilet
 OBJ-14 = Sink
 
-
-
-
-
-
-
-
 ///// DESK /////
 
 NPC-01 = Camille
@@ -66,13 +59,20 @@ OBJ-16 = Trash
 OBJ-17 = Desk & Computer
 OBJ-18 = Plant
 
-
 ///// LIVING ROOM /////
 
 OBJ-20 = Vertical Couch
 OBJ-21 = Couch Leaver
 OBJ-22 = Horizontal Couch
 OBJ-24 = TV
+
+
+
+
+
+
+///// LIVING ROOM /////
+
 OBJ-25 = Bookshelf
 OBJ-26 = Table
 OBJ-27 = Chair Toward Up
