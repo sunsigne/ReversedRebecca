@@ -106,7 +106,14 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 	public abstract GenericListener getUnlockingAction();
 
 	////////// COUNT ////////////
+	
+	private boolean unlocked;
 
+	@Override
+	public boolean isUnlocked() {
+		return unlocked;
+	}
+	
 	private float count;
 
 	@Override
@@ -123,7 +130,6 @@ public abstract class CookieUpgradeObject extends PuzzleObject
 
 	private COOKIE_UPGRADE unlockingType;
 	private int unlockingAt;
-	private boolean unlocked;
 
 	@Override
 	public void tick() {

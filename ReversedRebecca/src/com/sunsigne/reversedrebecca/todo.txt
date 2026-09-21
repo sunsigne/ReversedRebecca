@@ -36,7 +36,9 @@
 
 	Cookie : 
 		- replacer le joueur au bon endroit dans le niveau test
-		- gamepad adaptation
+		- gamepad adaptation :
+			- le preset "aller à droite" depuis le cookie doit envoyer vers la factory
+			- esc puis repuzzle ne renvoit pas au preset par défaut
 
 	rr005 :
 		- tout ce qui n'est pas la chambre ou la salle de bain

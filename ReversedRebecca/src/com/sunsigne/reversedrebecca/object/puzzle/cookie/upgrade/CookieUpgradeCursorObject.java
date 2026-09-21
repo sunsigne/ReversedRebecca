@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade;
 
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
+import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
 
 public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 
@@ -42,6 +43,7 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 		GenericListener unlockingAction = () -> {
 			getCounter(COOKIE_UPGRADE.COOKIE).setVelX(-10);
 			getCounter(COOKIE_UPGRADE.COOKIE).setVelY(1);
+			((CookiePuzzle) getPuzzle()).setPreset(CookiePuzzle.COOKIE, false);
 		};
 
 		return unlockingAction;

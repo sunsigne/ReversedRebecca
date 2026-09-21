@@ -40,6 +40,11 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 	////////// COUNT ////////////
 
+	@Override
+	public boolean isUnlocked() {
+		return time >= ((CookiePuzzle) getPuzzle()).getDelayBeforeReady();
+	}
+
 	private int maxCount;
 	private float count;
 
@@ -77,7 +82,7 @@ public class CookieCounterObject extends PuzzleObject implements CookieCounting 
 
 	@Override
 	public void render(Graphics g) {
-		if (time < ((CookiePuzzle) getPuzzle()).getDelayBeforeReady())
+		if (isUnlocked() == false)
 			return;
 
 		int w = maxCount >= 1000000 ? 100 : 0;

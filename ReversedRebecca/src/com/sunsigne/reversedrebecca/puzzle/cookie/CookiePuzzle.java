@@ -20,14 +20,16 @@ import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeSt
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
-import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleGamepad;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
-public abstract class CookiePuzzle extends Puzzle {
+public abstract class CookiePuzzle extends PuzzleGamepad {
 
 	public CookiePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
@@ -101,28 +103,33 @@ public abstract class CookiePuzzle extends Puzzle {
 		return null;
 	}
 
-	public void createUpgrade(COOKIE_UPGRADE type, COOKIE_UPGRADE unlockingType, int unlockingAt, boolean nerfed) {
-		int gap = 21;
+	private static int gap = 21;
 
+	public void createUpgrade(COOKIE_UPGRADE type, COOKIE_UPGRADE unlockingType, int unlockingAt, boolean nerfed) {
 		switch (type) {
 		case CURSOR:
-			cursorUpgrade = new CookieUpgradeCursorObject(this, getCol(8), getRow(1) + 1 * gap, unlockingType, unlockingAt, nerfed);
+			cursorUpgrade = new CookieUpgradeCursorObject(this, getCol(8), getRow(1) + 1 * gap, unlockingType,
+					unlockingAt, nerfed);
 			LAYER.PUZZLE.addObject(cursorUpgrade);
 			break;
 		case GRANDPA:
-			grandpaUpgrade = new CookieUpgradeGrandpaObject(this, getCol(8), getRow(2) + 2 * gap, unlockingType, unlockingAt, nerfed);
+			grandpaUpgrade = new CookieUpgradeGrandpaObject(this, getCol(8), getRow(2) + 2 * gap, unlockingType,
+					unlockingAt, nerfed);
 			LAYER.PUZZLE.addObject(grandpaUpgrade);
 			break;
 		case FACTORY:
-			factoryUpgrade = new CookieUpgradeFactoryObject(this, getCol(8), getRow(3) + 3 * gap, unlockingType, unlockingAt, nerfed);
+			factoryUpgrade = new CookieUpgradeFactoryObject(this, getCol(8), getRow(3) + 3 * gap, unlockingType,
+					unlockingAt, nerfed);
 			LAYER.PUZZLE.addObject(factoryUpgrade);
 			break;
 		case STOCK:
-			stockUpgrade = new CookieUpgradeStockObject(this, getCol(8), getRow(4) + 4 * gap, unlockingType, unlockingAt, nerfed);
+			stockUpgrade = new CookieUpgradeStockObject(this, getCol(8), getRow(4) + 4 * gap, unlockingType,
+					unlockingAt, nerfed);
 			LAYER.PUZZLE.addObject(stockUpgrade);
 			break;
 		case ANTI_G:
-			antiGUpgrade = new CookieUpgradeAntiGObject(this, getCol(8), getRow(5) + 5 * gap, unlockingType, unlockingAt, nerfed);
+			antiGUpgrade = new CookieUpgradeAntiGObject(this, getCol(8), getRow(5) + 5 * gap, unlockingType,
+					unlockingAt, nerfed);
 			LAYER.PUZZLE.addObject(antiGUpgrade);
 			break;
 		default:
@@ -185,6 +192,89 @@ public abstract class CookiePuzzle extends Puzzle {
 	public void render(Graphics g) {
 		Color cyan = new Color(95, 155, 170, 240);
 		new TransluantLayer().drawPuzzle(g, cyan);
+	}
+
+	////////// PRESET MOUSE POS ////////////
+
+	public static final PresetMousePos CENTER_COOKIE = new PresetMousePos(getCol(7f), getRow(4f));
+	public static final PresetMousePos COOKIE = new PresetMousePos(getCol(4f), getRow(4.5f));
+	public static final PresetMousePos CURSOR = new PresetMousePos(getCol(10f), getRow(1.5f) + 1 * gap);
+	public static final PresetMousePos GRANDPA = new PresetMousePos(getCol(10f), getRow(2.5f) + 2 * gap);
+	public static final PresetMousePos FACTORY = new PresetMousePos(getCol(10f), getRow(3.5f) + 3 * gap);
+	public static final PresetMousePos STOCK = new PresetMousePos(getCol(10f), getRow(4.5f) + 4 * gap);
+	public static final PresetMousePos ANTI_G = new PresetMousePos(getCol(10f), getRow(5.5f) + 5 * gap);
+
+	@Override
+	public PresetMousePos getDefaultPreset() {
+		CookieCounting upgrade = getUpgrade(COOKIE_UPGRADE.CURSOR);
+		if (upgrade == null)
+			return CENTER_COOKIE;
+		if (upgrade.isUnlocked() == false)
+			return CENTER_COOKIE;
+
+		return COOKIE;
+	}
+
+	////////// GAMEPAD ////////////
+
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (pressingButton())
+			return;
+
+		if (isPresetNull())
+			setPreset(getDefaultPreset());
+
+		if (getPreset() == COOKIE) {
+			if (e.getKey() == ButtonEvent.RIGHT && getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
+				setPreset(CURSOR);
+		}
+
+		else if (getPreset() == CURSOR) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(COOKIE);
+			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.GRANDPA).isUnlocked())
+				setPreset(GRANDPA);
+		}
+
+		else if (getPreset() == GRANDPA) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(COOKIE);
+			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
+				setPreset(CURSOR);
+			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+				setPreset(FACTORY);
+		}
+
+		else if (getPreset() == FACTORY) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(COOKIE);
+			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.GRANDPA).isUnlocked())
+				setPreset(GRANDPA);
+			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.STOCK).isUnlocked())
+				setPreset(STOCK);
+		}
+
+		else if (getPreset() == STOCK) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(COOKIE);
+			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+				setPreset(FACTORY);
+			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.ANTI_G).isUnlocked())
+				setPreset(ANTI_G);
+		}
+
+		else if (getPreset() == ANTI_G) {
+			if (e.getKey() == ButtonEvent.LEFT)
+				setPreset(COOKIE);
+			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.STOCK).isUnlocked())
+				setPreset(STOCK);
+		}
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
 	}
 
 }

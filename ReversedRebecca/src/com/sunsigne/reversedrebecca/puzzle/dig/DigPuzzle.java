@@ -25,48 +25,33 @@ import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigPickaxeToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigShovelToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigSwordToolObject;
 import com.sunsigne.reversedrebecca.object.puzzle.dig.tool.DigToolObject;
-import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
-import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleGamepad;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
-import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.ActionThreeKey;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
-import com.sunsigne.reversedrebecca.system.controllers.mouse.MousePreseting;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePreseting {
+public abstract class DigPuzzle extends PuzzleGamepad {
 
 	public DigPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
 
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 		LAYER.PUZZLE.addObject(new DigMouseObject(this, getSize() / 2, getSize() / 2));
-		loadGamepadSetup();
-	}
-
-	////////// USEFULL ////////////
-
-	public static int getCol(float col) {
-		return (int) (2 * Size.XS + col * Size.L);
-	}
-
-	public static int getRow(float row) {
-		return (int) (Size.XS + row * Size.L);
 	}
 
 	////////// NAME ////////////
@@ -321,12 +306,12 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 	protected void setStaticNoCritCount(int noCritCount) {
 		DigPuzzle.noCritCount = noCritCount;
 	}
-	
+
 	@Override
 	public boolean hasCritToken() {
 		return true;
 	}
-	
+
 	////////// TEXTURE ////////////
 
 	@Override
@@ -386,50 +371,7 @@ public abstract class DigPuzzle extends Puzzle implements GamepadEvent, MousePre
 	public static final PresetMousePos L_RIGHTMAX_DOWNMAX = new PresetMousePos(getCol(11.5f + L_GAP),
 			getRow(5.5f + L_GAP));
 
-	private PresetMousePos preset;
-
-	@Override
-	public PresetMousePos getPreset() {
-		return preset;
-	}
-
-	@Override
-	public void setPreset(PresetMousePos preset) {
-		this.setPreset(preset, true);
-	}
-
-	public void setPreset(PresetMousePos preset, boolean sound) {
-		this.preset = preset;
-		preset.moveMouse();
-
-		if (isPresetNull() == false && sound)
-			new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
-	}
-
-	protected void loadGamepadSetup() {
-		if (ControllerManager.getInstance().isUsingGamepad())
-			setPreset(getDefaultPreset(), false);
-	}
-
 	////////// GAMEPAD ////////////
-
-	private GamepadController gamepadController = new GamepadController(this);
-
-	@Override
-	public GamepadController getGamepadController() {
-		return gamepadController;
-	}
-
-	private boolean pressingButton;
-
-	protected boolean pressingButton() {
-		if (pressingButton)
-			return true;
-
-		pressingButton = true;
-		new GameTimer(3, true, () -> pressingButton = false);
-		return false;
-	}
 
 	@Override
 	public void buttonPressed(ButtonEvent e) {

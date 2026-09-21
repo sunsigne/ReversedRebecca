@@ -147,7 +147,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 	@Override
 	public boolean isSelected() {
-		return MouseUserEvent.super.isSelected() && ready;
+		return MouseUserEvent.super.isSelected() && isMotionless() && ready;
 	}
 
 	@Override
