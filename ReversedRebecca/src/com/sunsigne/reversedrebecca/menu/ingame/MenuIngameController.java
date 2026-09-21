@@ -4,6 +4,7 @@ import java.awt.Cursor;
 
 import com.sunsigne.reversedrebecca.menu.ingame.submenu.ResumeScreen;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
+import com.sunsigne.reversedrebecca.puzzle.PuzzleGamepad;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
@@ -11,6 +12,7 @@ import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.GameCursor.CURSOR_TYPE;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
 public class MenuIngameController {
@@ -28,7 +30,7 @@ public class MenuIngameController {
 
 	public void loadResumeScreen() {
 		hardFreeze(true);
-		
+
 		new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 		menu = new ResumeScreen();
 
@@ -43,13 +45,25 @@ public class MenuIngameController {
 		LAYER.MENU.getHandler().clear();
 		menu = null;
 
-		if(gamepadWhenMenuOpened != ControllerManager.getInstance().isUsingGamepad())
+		if (gamepadWhenMenuOpened != ControllerManager.getInstance().isUsingGamepad())
 			return;
-		
-		if (ControllerManager.getInstance().isUsingGamepad())
+
+		if (ControllerManager.getInstance().isUsingGamepad()) {
 			Game.getInstance().setCursor(cursor);
-		else
-			new GameCursor().setPreviousCursor();			
+			replaceToPreset();
+		} else
+			new GameCursor().setPreviousCursor();
+	}
+
+	private void replaceToPreset() {
+		var handler = LAYER.PUZZLE.getHandler().getList();
+		for (Updatable updatable : handler) {
+			if (updatable instanceof PuzzleGamepad == false)
+				continue;
+
+			PuzzleGamepad puzzle = (PuzzleGamepad) updatable;
+			puzzle.setPreset(puzzle.getDefaultPreset(), false);
+		}
 	}
 
 	public void hardFreeze(boolean freeze) {
