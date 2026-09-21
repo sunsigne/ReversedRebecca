@@ -13,4 +13,4 @@ player = DOWN = you_silly = Enfin, si je veux VRAIMENT appeler ça une victoire@
 
 
 % HARD
-player = DOWN = you_silly = Mais pas de succès. Ça serait pénible pour@les speedrunners 100 "0/0", tu ne crois pas ?
+player = DOWN = you_silly = Mais pas de succès. Ça serait pénible pour@les speedrunners 100"0/0", tu ne crois pas ?
