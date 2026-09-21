@@ -1,5 +1,7 @@
 package com.sunsigne.reversedrebecca.object.puzzler.console;
 
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing;
@@ -27,6 +29,12 @@ public class ConsoleObject extends PuzzlerObject implements Facing {
 		return "console";
 	}
 
+	////////// SIZE ////////////
+
+	@Override
+	public int getHeight() {
+		return getFacing() == DIRECTION.UP ? 2 * super.getHeight() : super.getHeight();
+	}
 	////////// FACING ////////////
 
 	private DIRECTION facing;
@@ -42,8 +50,13 @@ public class ConsoleObject extends PuzzlerObject implements Facing {
 	////////// TEXTURE ////////////
 
 	@Override
+	public int getSheetHeight() {
+		return getFacing() == DIRECTION.UP ? 2 * super.getSheetHeight() : super.getSheetHeight();
+	}
+
+	@Override
 	public int getSheetRowCriterion() {
-		return 1 + (getFacing() == DIRECTION.UP ? 0 : 1);
+		return 1 + (getFacing() == DIRECTION.UP ? 1 : 0);
 	}
 
 	@Override
@@ -60,7 +73,7 @@ public class ConsoleObject extends PuzzlerObject implements Facing {
 		if (highlightImage == null) {
 			BufferedImage sheet = new ImageTask().loadImage("textures/puzzler/" + "puzzler" + "_" + "highlight");
 			highlightImage = getSheetSubImage(sheet, getSheetRowCriterion(), 4, getSheetWidth() + 2,
-					getSheetHeight() + 2);
+					super.getSheetHeight() + 2);
 		}
 		return highlightImage;
 	}
@@ -77,8 +90,36 @@ public class ConsoleObject extends PuzzlerObject implements Facing {
 	@Override
 	protected void loadTripleAction() {
 		OpenPuzzleAction playAction = new PlayAction(this);
-
 		tripleAction = new TripleAction(null, playAction, null, null);
+	}
+
+	////////// RENDER ////////////
+
+	private int gap = 18;
+
+	@Override
+	public void drawHighlight(Graphics g, BufferedImage image) {
+		if (getFacing() != DIRECTION.UP) {
+			super.drawHighlight(g, image);
+			return;
+		}
+
+		int h = -98;
+		drawHighlight(g, image, 0, -h - gap - 2, 0, h);
+	}
+
+	////////// COLLISION ////////////
+
+	@Override
+	public Rectangle getBounds() {
+		if (getFacing() != DIRECTION.UP)
+			return super.getBounds();
+
+		int x = getX();
+		int y = getY() + super.getHeight() - gap;
+		int w = getWidth();
+		int h = super.getHeight();
+		return new Rectangle(x, y, w, h);
 	}
 
 }

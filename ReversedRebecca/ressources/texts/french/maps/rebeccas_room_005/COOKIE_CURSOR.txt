@@ -1,0 +1,4 @@
+% CYAN
+player = DOWN = laugh = C'était trop bien ! Elle est où la suite ?
+player = DOWN = happy var = ...
+player = DOWN = angry = Rho ! Fichu Free to Play !@Je dois attendre demain pour pouvoir jouer au niveau 2.

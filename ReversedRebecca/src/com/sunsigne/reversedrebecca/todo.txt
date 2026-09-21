@@ -35,24 +35,16 @@
 	////////// EN COURS ////////////
 
 	Cookie : 
-		- tester animation de victoire (sur PlayAction, dans le puzzler)
 		- replacer le joueur au bon endroit dans le niveau test
 		- gamepad adaptation
 		puzzler :
 			- finir le mode daltonien
-			- vérifier facing + hightlight
-			- implanter dans rr005 (+ vérifier facing + hightlight)
-			- retirer la texture de l'ordi (2ème ligne) dans puzzler
-			
+			- implanter dans rr005
+					- relier le cookie cusro à l'ordi (ofc) + gérer la sauvegarde pour que ça soit dans rr-generic ?
+ 			
 
 	rr005 :
 		- tout ce qui n'est pas la chambre ou la salle de bain
-		- relier le cookie cusro à l'ordi (ofc) + gérer la sauvegarde pour que ça soit dans rr-generic ?
-		- cookie dialgoue - 
-				- laught - j'ai fini le niveau 1 ! Elle est où la suite
-				- happy var ...
-				...
-				- Rho! Fichu Free to Play ! Je dois attendre demain pour pouvoir faire la suite.
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
