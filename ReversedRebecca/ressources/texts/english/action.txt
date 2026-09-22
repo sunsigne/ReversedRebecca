@@ -53,3 +53,15 @@ DO_LAUNDRY_SHORT = Key2 % laundry
 
 // living room
 STARE = Key1 % stare
+RELAX = Key1 % relax
+FACE_REALITY = Key1 % face reality
+WATCH_TV = Key1 % watch TV
+TURN_OFF = Key1 % turn off
+
+// kitchen
+DO_PANCAKES = Key2 % make pancakes
+EAT_COOKIE = Key1 % eat a cookie
+DRINK_JUICE = Key2 % drink a juice
+DO_PASTA = Key2 % do pasta
+EAT_CHIPS = Key1 % eat chips
+DRINK_SODA = Key2 % drink soda

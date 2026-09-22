@@ -88,6 +88,7 @@
 	- mettre à jour le texte Final Space
 	- mettre à jour Camille
 	- mettre à jour les indices des plantes
+	- préciser si c'est memory:morning (pour frigo et gazinière)
 	
 	////////// RR005_DRUNK ////////////
 

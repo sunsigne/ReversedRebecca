@@ -53,3 +53,15 @@ DO_LAUNDRY_SHORT = Key2 % lessive
 
 // living room
 STARE = Key1 % regarder intensément
+RELAX = Key1 % se détendre
+FACE_REALITY = Key1 % affronter la réalité
+WATCH_TV = Key1 % regarder la TV
+TURN_OFF = Key1 % éteindre
+
+// kitchen
+DO_PANCAKES = Key2 % faire des crepes
+EAT_COOKIE = Key1 % manger un cookie
+DRINK_JUICE = Key2 % boire du jus
+DO_PASTA = Key2 % faire des pates
+EAT_CHIPS = Key1 % manger des chips
+DRINK_SODA = Key2 % boire du soda

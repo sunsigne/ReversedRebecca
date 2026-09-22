@@ -9,7 +9,6 @@ SEARCH_KEY_SHORT = Key3 % fouiller
 
 ///// DESK /////
 
-PLAY = Key1 % jouer
 PLAY_ANYWAY = Key1 % jouer quand meme
 JUST_ONE_GAME = Key1 % juste une partie...
 I_AM_WEAK = Key1 % je suis faible...
@@ -20,10 +19,6 @@ PHILOSOPHIZE = Key1 % philosopher
 
 ///// LIVING ROOM /////
 
-RELAX = Key1 % se détendre
-FACE_REALITY = Key1 % affronter la réalité
-WATCH_TV = Key1 % regarder la TV
-TURN_OFF = Key1 % éteindre
 
 TALK_ABOUT_BOOKS = Key1 % parler des livres
 WATCH_SARAH = Key1 % regarder Sarah
@@ -32,9 +27,6 @@ OFFER_A_BLANKET = Key1 % proposer une couverture
 
 ///// KITCHEN /////
 
-DO_PANCAKES = Key2 % faire des crepes
-EAT_COOKIE = Key1 % manger un cookie
-DRINK_JUICE = Key2 % boire du jus
 OFFER_A_JUICE = Key3 % proposer un jus
 ALL_FOR_ME = Key1 % tout pour moi !
 SHARE = Key2 % partager

@@ -26,7 +26,7 @@ REGISTER = REBECCAS_ROOM*PLANT_DEAD
 
 ///// NULL /////
 
-OBJ-13 / OBJ-19 / OBJ-23 / OBJ-44
+OBJ-13 / OBJ-19 / OBJ-23 / OBJ-41 to OBJ-46
 
 ///// BEDROOM /////
 
@@ -74,6 +74,8 @@ OBJ-25 = Bookshelf
 ///// LIVING ROOM /////
 
 
+
+
 OBJ-26 = Table
 OBJ-27 = Chair Toward Up
 OBJ-28 = Chair Toward Down
@@ -95,6 +97,4 @@ OBJ-48 = Cookie Counter
 
 NPC-02 = Sarah
 
-OBJ-41 = Special Exit Door
-OBJ-45 = Sarah Toilet Path Checker
 OBJ-47 = Glasses of water
