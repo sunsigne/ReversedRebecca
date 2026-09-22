@@ -62,6 +62,6 @@ TURN_OFF = Key1 % éteindre
 DO_PANCAKES = Key2 % faire des crepes
 EAT_COOKIE = Key1 % manger un cookie
 DRINK_JUICE = Key2 % boire du jus
-DO_PASTA = Key2 % faire des pates
+DO_OMELET = Key2 % faire une omelette
 EAT_CHIPS = Key1 % manger des chips
 DRINK_SODA = Key2 % boire du soda

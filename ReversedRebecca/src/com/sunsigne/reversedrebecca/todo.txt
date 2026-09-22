@@ -35,10 +35,11 @@
 	////////// EN COURS ////////////
 
 	rr005 :
-		- crêpe à transformer en pâtes
 		- verres à l'entrée
+		- la plante volée !
 
 	rr005 (disco pas bourré) :
+		- sauvegarde de "OMELET_ON_TABLE" possiblement pas utilisé. A surveiller pour les niveaux futurs
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
