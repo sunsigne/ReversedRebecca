@@ -87,6 +87,7 @@
 	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
 	- mettre à jour le texte Final Space
 	- mettre à jour Camille
+	- mettre à jour les indices des plantes
 	
 	////////// RR005_DRUNK ////////////
 
