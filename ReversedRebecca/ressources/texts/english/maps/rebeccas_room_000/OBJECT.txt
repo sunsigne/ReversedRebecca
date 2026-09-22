@@ -28,3 +28,7 @@ player = object = happy_var = My aromatic herbs don't need watering,@it's often 
 
 % WATCH_TV
 player = DOWN = sad = I've lost the remote…@I have to get close, if I want to turn it on.
+
+
+% BOOKSHELF
+player = DOWN = happy_var = There is no doubt: it is indeed a library.

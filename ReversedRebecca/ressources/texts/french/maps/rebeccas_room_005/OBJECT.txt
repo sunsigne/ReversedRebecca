@@ -37,3 +37,7 @@ player = DOWN = sad = J'ai perdu la télécommande…@Je dois me déplacer, si j
 
 % BOOKSHELF
 player = DOWN = happy_var = Aucun doute, c'est bien une bibliothèque.
+
+
+% BOOKSHELF_AGAIN
+player = DOWN = happy_var = Aucun doute, c'est toujours une bibliothèque.

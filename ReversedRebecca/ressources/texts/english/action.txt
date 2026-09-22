@@ -50,3 +50,6 @@ CLEAN_HAIR = Key2 % clean the hair
 CLEAN_CLOTHES = Key2 % pick up clothes
 DO_LAUNDRY = Key2 % do the laundry
 DO_LAUNDRY_SHORT = Key2 % laundry
+
+// living room
+STARE = Key1 % stare

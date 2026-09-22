@@ -50,3 +50,6 @@ CLEAN_HAIR = Key2 % nettoyer les cheveux
 CLEAN_CLOTHES = Key2 % ranger les vetements
 DO_LAUNDRY = Key2 % faire la lessive
 DO_LAUNDRY_SHORT = Key2 % lessive
+
+// living room
+STARE = Key1 % regarder intensément
