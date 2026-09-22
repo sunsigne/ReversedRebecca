@@ -35,7 +35,8 @@
 	////////// EN COURS ////////////
 
 	rr005 :
-		- tout ce qui n'est pas la chambre ou la salle de bain
+		- crêpe à transformer en pâtes
+		- verres à l'entrée
 
 	rr005 (disco pas bourré) :
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
@@ -89,6 +90,7 @@
 	- mettre à jour Camille
 	- mettre à jour les indices des plantes
 	- préciser si c'est memory:morning (pour frigo et gazinière)
+	- counter à mettre à jour (le premier est tj le nombre de cookie / de chips mangé(e)s
 	
 	////////// RR005_DRUNK ////////////
 

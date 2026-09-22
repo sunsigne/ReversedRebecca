@@ -1,0 +1,10 @@
+% HAPPY_ABOUT
+player = object = you_silly = C'était clairement une bonne idée.
+
+
+% COLD
+player = object = worry = C'est meilleur quand c'est chaud,@mais ça sera bon quand même.
+
+
+% FINISHED_EATING
+player = object = happy_var = Si bonnes que j'en ai mangé l'assiette !
