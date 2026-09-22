@@ -65,3 +65,4 @@ DRINK_JUICE = Key2 % drink a juice
 DO_OMELET = Key2 % make an omelet
 EAT_CHIPS = Key1 % eat chips
 DRINK_SODA = Key2 % drink soda
+WASTE = Key2 % waste

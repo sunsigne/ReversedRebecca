@@ -34,10 +34,8 @@
 		
 	////////// EN COURS ////////////
 
-	rr005 :
-		- la plante volée !
-
 	rr005 (disco pas bourré) :
+		- la plante volée
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
