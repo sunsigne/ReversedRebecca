@@ -35,11 +35,9 @@
 	////////// EN COURS ////////////
 
 	rr005 :
-		- verres à l'entrée
 		- la plante volée !
 
 	rr005 (disco pas bourré) :
-		- sauvegarde de "OMELET_ON_TABLE" possiblement pas utilisé. A surveiller pour les niveaux futurs
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
@@ -87,6 +85,7 @@
 	////////// RRXXX générique ////////////
 	
 	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
+	- sauvegarde de "OMELET_ON_TABLE" possiblement pas utilisé. A surveiller pour les niveaux futurs
 	- mettre à jour le texte Final Space
 	- mettre à jour Camille
 	- mettre à jour les indices des plantes
