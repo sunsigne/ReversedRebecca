@@ -66,13 +66,13 @@ public class PixelArtScreen extends SubMenuScreen {
 	protected int listStart;
 
 	private int getListEnd() {
-		return listStart + Math.min(10, UnlockableList.getPixelArtList().getList().size() - listStart);
+		return listStart + Math.min(8, UnlockableList.getPixelArtList().getList().size() - listStart);
 	}
 
 	private void loadPixelArt() {
 		var list = UnlockableList.getPixelArtList();
 		boolean newCol = false;
-		int y = 160;
+		int y = 165;
 
 		for (int index = listStart; index < getListEnd(); index++) {
 			int x = newCol ? Size.XS + Window.WIDHT / 2 : Size.L;
@@ -80,10 +80,11 @@ public class PixelArtScreen extends SubMenuScreen {
 			PixelArtObject pixelArt_object = new PixelArtObject(list.getList().get(index), x, y);
 			LAYER.MENU.addObject(pixelArt_object);
 
-			y = y + 188;
+			int extraSpacing = (index - listStart - 1) % 4 == 0 ? 32 : 0;
+			y = y + 188 + extraSpacing;
 
 			if (y > 900) {
-				y = 160;
+				y = 165;
 				newCol = true;
 			}
 		}

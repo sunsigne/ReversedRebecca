@@ -1,2 +1,2 @@
-macabreDance = Doug et Rebecca dans leur danse macabre.
+macabreDance = Doug et Rebecca ~
 macabreDanceNext = Un tango etait initialement prevu@pour cette scene, mais du a la@complexite de cette danse, c'est@une valse qui a ete retenue.
