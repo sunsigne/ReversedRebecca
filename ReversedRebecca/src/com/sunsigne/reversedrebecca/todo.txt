@@ -35,17 +35,26 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
-		- la plante volée
+		- PNJ intervenant :
+			- les deux lesbiennes :
+				- débarquent
+			- mika :
+				- débarque à l'improviste au bout de X secondes
+			- marie (rdv à l'extérieur) :
+				- quand on essaies d'aller se coucher ou de manger :
+				- rebecca realisé qu'elle a rdv avec marie. Elle doit s'habiller en conséquence et partir
+	
 		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
-		- épilogue nancy et jessy / mika / réstaurant (rr005)
 		- la suite discothèque mais pas bourrée (rr005)
 		- lit pas fini
 		- liens à faires
-		- quand on essaies d'aller se coucher ou de manger :
-			- rebecca realisé qu'elle a rdv avec marie. Elle doit s'habiller en conséquence et partir
-
+	
+		- cutscene d'intro à faire à la fin :
+			- rentre chez elle
+			- dépose la plante volée
+			
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
@@ -64,22 +73,23 @@
 	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	
 	bonus :
-	1h niveaux desactivé (debug room + tuto room) + possibilité de refaire le niveau de gestion (réparation du labo)
-	3h consulter les ressources non utilisées (son, textures, etc.)
-	1h activer tous les succès abandonnées
-	1h jouer avec le skin "rebecca_dark" + 5h implémentation complète
-	3h créer une galerie
-	- mode endless de Cookie Cursor
+	- BD
+	- illustrations
+	- pixel art
+	- crédit
+	- réglagles :
+		- activation skin dark rebecca
+		- préférence sexuelle
+	-(tout est actuellement temporairement relié au menu "general")
+
+
 	
 	dessin : 
 	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique
 	- 1h - en psychopath, faire des coeur menaçant ou lugubre
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
-	
-	rr000 - rr005 (+ générique) :
-		- trouve rune utilité à la bibliothèque
-	
+
 	////////// RRXXX générique ////////////
 	
 	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
@@ -119,7 +129,7 @@
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	1h - vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 	LifeAndDeathLaw -> changer le niveau de l'écran titre de la sauvegarde lors d'une mort en HARD pour une image avec la tombe de Rebecca
-	succès : (hidden=true) débloquer le niveau test sur l'écran titre
+	succès : (hidden=true) débloquer le niveau test sur l'écran titre + mettres à jours les succès
 	réorganiser le dossier "$working"
 
 	note : puzzle : cliquer = impact

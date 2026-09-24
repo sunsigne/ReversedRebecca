@@ -51,9 +51,6 @@ InvisibleWallText = Redecouvrir la gravite...
 
 ///// ORANGE /////
 
-BonusTitle = Acces : menu BONUS
-BonusText = finir la demo
-
 ///// RED /////
 
 SignOfStoppingTitle = Signe pour t'arreter

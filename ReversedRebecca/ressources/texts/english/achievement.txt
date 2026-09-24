@@ -51,9 +51,6 @@ InvisibleWallText = What a gravity fall!
 
 ///// ORANGE /////
 
-BonusTitle = Unlocked : BONUS menu
-BonusText = finish the demo
-
 ///// RED /////
 
 SignOfStoppingTitle = Sign of stopping

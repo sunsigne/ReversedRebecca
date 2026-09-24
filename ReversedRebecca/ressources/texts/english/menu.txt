@@ -126,6 +126,14 @@ VolumeMusic = music
 VolumeSound = sound
 VolumeVoice = voice
 
+///// BONUS /////
+
+PixelButton = pixel art
+DrawingsButton = drawings
+BDButton = BD
+SettingsButton = settings
+CreditsButton = credits
+
 ///// UPDATE /////
 
 UpdateText = Game update available
