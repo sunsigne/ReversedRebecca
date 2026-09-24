@@ -6,8 +6,6 @@ import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
-import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -44,33 +42,21 @@ public class PixelArtObject extends GameObject implements TickFree {
 
 	////////// TEXT ////////////
 
-	private String title;
 	private String text;
 
-	public String getTitle() {
-		if (title == null) {
-			String value = pixelArt.getName() + "title";
-			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
-			title = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
-			if (title.isEmpty())
-				title = new Translatable().getTranslatedText(pixelArt.getName() + "title", FilePath.ACHIEVEMENT);
-		}
-
-		return title;
-	}
-
 	public String getText() {
+		if (pixelArt.hasText() == false)
+			text = "";
+
 		if (text == null) {
-			if (pixelArt.isHidden() && pixelArt.isUnlocked() == false) {
+			if (pixelArt.isUnlocked() == false) {
 				text = "???";
 				return text;
 			}
 
-			String value = pixelArt.getName() + "text";
-			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
-			text = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
+			text = new Translatable().getStrictTranslatedText(pixelArt.getName(), FilePath.PIXEL_ART);
 			if (text.isEmpty())
-				text = new Translatable().getTranslatedText(value, FilePath.ACHIEVEMENT);
+				text = new Translatable().getTranslatedText(pixelArt.getName(), FilePath.PIXEL_ART);
 		}
 
 		return text;
@@ -90,17 +76,40 @@ public class PixelArtObject extends GameObject implements TickFree {
 	@Override
 	public void render(Graphics g) {
 		var image = unlocked ? pixelArt.getImage() : pixelArt.getImageLocked();
-		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
-		drawText(g);
+		int pixel = Size.XS / 4;
+		int w = image.getWidth() * pixel;
+		int h = image.getHeight() * pixel;
+
+		if (pixelArt.getFacing() == DIRECTION.LEFT) {
+			g.drawImage(image, getX(), getY(), w, h, null);
+			drawText(g, w, h);
+		}
+
+		if (pixelArt.getFacing() == DIRECTION.RIGHT) {
+			g.drawImage(image, getX() + getWidth() - w, getY(), w, h, null);
+			drawText(g, 0, h);
+		}
 	}
 
-	private void drawText(Graphics g) {
-		Color text_color = Color.WHITE;
-		Color shadow_color = Color.BLACK;
-		int height = unlocked ? getHeight() / 5 : 0;
-		int[] rect = new int[] { getX() + Size.XL + 2, getY() + height, getWidth(), getHeight() };
+	private void drawText(Graphics g, int w, int h) {
+		if (getText().contains("@") == false) {
+			drawLine(g, text, w, h);
+			return;
+		}
 
-		new TextDecoration().drawShadowedString(g, fontText, getText(), text_color, shadow_color, DIRECTION.LEFT, rect);
+		String[] content = getText().split("@");
+		for (int index = 0; index < content.length; index++) {
+			drawLine(g, content[index], w, h + 60 * index);
+		}
+
+	}
+
+	private void drawLine(Graphics g, String text, int w, int h) {
+		int height = unlocked ? getHeight() / 5 : 0;
+		int[] rect = new int[] { getX() + w, getY(), getWidth() - w, h + height };
+
+		new TextDecoration().drawShadowedString(g, fontText, text, Color.WHITE, Color.BLACK,
+				DIRECTION.NULL, rect);
 	}
 
 }

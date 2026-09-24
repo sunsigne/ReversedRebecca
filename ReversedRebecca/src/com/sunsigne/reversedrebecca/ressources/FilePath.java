@@ -16,6 +16,7 @@ public class FilePath {
 	public static final String ACHIEVEMENT = "achievement.txt";
 	public static final String ACTION = "action.txt";
 	public static final String BONUS_TEXT = "bonus_text.txt";
+	public static final String PIXEL_ART = "pixelart.txt";
 	public static final String MENU = "menu.txt";
 	public static final String KEY = "key.txt";
 	public static final String PUZZLE = "puzzle.txt";

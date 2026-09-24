@@ -2,16 +2,18 @@ package com.sunsigne.reversedrebecca.ressources.menu.pixelart;
 
 import java.awt.image.BufferedImage;
 
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 
 public class PixelArt {
 
 	public static String file = "pixelarts.csv";
 
-	public PixelArt(String name, int location, boolean hidden, BufferedImage image, BufferedImage image_locked) {
+	public PixelArt(String name, int location, DIRECTION facing, boolean hasText, BufferedImage image, BufferedImage image_locked) {
 		this.name = name;
 		this.location = location;
-		this.hidden = hidden;
+		this.facing = facing;
+		this.hasText = hasText;
 		this.image = image;
 		this.image_locked = image_locked;
 	}
@@ -22,12 +24,18 @@ public class PixelArt {
 		return location;
 	}
 
-	private boolean hidden;
+	private DIRECTION facing;
 
-	public boolean isHidden() {
-		return hidden;
+	public DIRECTION getFacing() {
+		return facing;
 	}
 
+	private boolean hasText;
+
+	public boolean hasText() {
+		return hasText;
+	}
+	
 	public boolean isUnlocked() {
 		return Boolean.parseBoolean(new FileTask().read(true, name, file));
 	}

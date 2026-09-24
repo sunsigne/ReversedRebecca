@@ -34,6 +34,14 @@
 		
 	////////// EN COURS ////////////
 
+	- pixel art :
+		- créer la requete piranha
+		- vérifier que tous les pixel art sont bien dévérouillés par défaut
+		- faire en sorte que plusieurs pixel art peuvent se chevaucher ! (même localisation)
+		- mettre à jour la notice de création d'un pixel art
+
+
+
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :
 			- les deux lesbiennes :
@@ -75,7 +83,6 @@
 	bonus :
 	- BD
 	- illustrations
-	- pixel art
 	- crédit
 	- réglagles :
 		- activation skin dark rebecca

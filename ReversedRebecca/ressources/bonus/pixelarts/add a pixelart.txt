@@ -1,0 +1,15 @@
+To add a new pixel art, proceed as follows :
+1 - copy the folder of an existing pixel art
+2 - paste it in this very folder (the game will automatically detect it)
+3 - rename that folder into a unique name (important for later)
+4 - change files within that folder as desired (your image, your parameters*, etc.)
+5 - for every folder of "ressources/texts", open its "pixelart.txt" file (only if "text" is set to "true")
+6 - write the text of your pixel art as it should be displayed in each language (the word in the very left part is the exact word used when naming the folder)
+
+Congrats ! Your pixel art is now in the bonus of the game ! 
+If you want to create an optional unlocking condition, you have to do it in Piranha (see PIXELART at "ressources/piranha doc/type de requêtes/requêtes ressources.txt").
+
+*"facing" determines where the image should be placed in relation to the text
+*"location" determines where the pixel art is placed in the menu. Small numbers first, big numbers last.
+*"text" determines if the image has a text (true), or if it is only an image (false).
+*"unlocked" determines if the pixel art is unlocked by default, or if it has an additional unlocking condition.

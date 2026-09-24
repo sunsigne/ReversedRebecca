@@ -80,7 +80,7 @@ public class PixelArtScreen extends SubMenuScreen {
 			PixelArtObject pixelArt_object = new PixelArtObject(list.getList().get(index), x, y);
 			LAYER.MENU.addObject(pixelArt_object);
 
-			y = y + 155;
+			y = y + 188;
 
 			if (y > 900) {
 				y = 160;
