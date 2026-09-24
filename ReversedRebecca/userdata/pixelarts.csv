@@ -1,3 +1,9 @@
 
-macabreDance=false
-macabreDanceNext=false
+macabreDance=true
+macabreDanceNext=true
+inthetoilet=true
+terminated=true
+bonus=true
+blank=true
+bug=true
+bugBanner=true

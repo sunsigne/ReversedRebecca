@@ -26,11 +26,11 @@ public class PixelArtObject extends GameObject implements TickFree {
 	public PixelArtObject(PixelArt pixelArt, int x, int y) {
 		super(x, y, 5 * Size.XL, Size.L);
 		this.pixelArt = pixelArt;
-		this.unlocked = pixelArt.isUnlocked();
+		this.locked = pixelArt.isLocked();
 	}
 
 	private PixelArt pixelArt;
-	private boolean unlocked;
+	private boolean locked;
 
 	////////// NAME ////////////
 
@@ -45,19 +45,27 @@ public class PixelArtObject extends GameObject implements TickFree {
 	private String text;
 
 	public String getText() {
-		if (pixelArt.hasText() == false)
+		if (pixelArt.hasText(false) == false)
 			text = "";
 
-		if (text == null) {
-			if (pixelArt.isUnlocked() == false) {
-				text = "???";
-				return text;
-			}
+		if (text != null)
+			return text;
 
+		if (pixelArt.isLocked() == false) {
 			text = new Translatable().getStrictTranslatedText(pixelArt.getName(), FilePath.PIXEL_ART);
 			if (text.isEmpty())
 				text = new Translatable().getTranslatedText(pixelArt.getName(), FilePath.PIXEL_ART);
+			return text;
 		}
+
+		if (pixelArt.hasText(true) == false) {
+			text = "";
+			return text;
+		}
+
+		text = new Translatable().getStrictTranslatedText(pixelArt.getName() + "Locked", FilePath.PIXEL_ART);
+		if (text.isEmpty())
+			text = new Translatable().getTranslatedText(pixelArt.getName() + "Locked", FilePath.PIXEL_ART);
 
 		return text;
 	}
@@ -75,10 +83,9 @@ public class PixelArtObject extends GameObject implements TickFree {
 
 	@Override
 	public void render(Graphics g) {
-		var image = unlocked ? pixelArt.getImage() : pixelArt.getImageLocked();
-		int pixel = Size.XS / 4;
-		int w = image.getWidth() * pixel;
-		int h = image.getHeight() * pixel;
+		var image = locked ? pixelArt.getImageLocked() : pixelArt.getImage();
+		int w = image.getWidth();
+		int h = image.getHeight();
 
 		if (pixelArt.getFacing() == DIRECTION.LEFT) {
 			g.drawImage(image, getX(), getY(), w, h, null);
@@ -105,11 +112,10 @@ public class PixelArtObject extends GameObject implements TickFree {
 	}
 
 	private void drawLine(Graphics g, String text, int w, int h) {
-		int height = unlocked ? getHeight() / 5 : 0;
+		int height = locked ? 0 : getHeight() / 5;
 		int[] rect = new int[] { getX() + w, getY(), getWidth() - w, h + height };
 
-		new TextDecoration().drawShadowedString(g, fontText, text, Color.WHITE, Color.BLACK,
-				DIRECTION.NULL, rect);
+		new TextDecoration().drawShadowedString(g, fontText, text, Color.WHITE, Color.BLACK, DIRECTION.NULL, rect);
 	}
 
 }
