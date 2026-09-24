@@ -1,0 +1,51 @@
+% CANDLE
+player = object = happy_var = I love scented candles,@it helps me fall asleep.
+
+
+% CANDLE_EMPTY
+player = object = worry = This candle is empty…@I'll replace it with another one.
+
+
+% BOOK
+player = object = happy = "At the edge of the universe, there was an end.@A place from which no one ever returns…
+player = object = no_sens_var = … But, is it possible to go even further?@To venture beyond the possible?
+player = object = surprised = … A space beyond infinity?@Beyond the very notion of "further"?
+player = object = excited = … That place exists. It is Final Space!"
+player = object = you_silly = You can't go wrong with this one!@I'm a huge fan.
+
+
+% DRESSER_CLOTHLESS
+player = object = unhappy = I have nothing left to wear…
+player = object = you_silly_var = No choice, I'll have to do the laundry.
+
+
+% BATH_EMPTY_WASHLESS
+player = object = no_sens = Why did I do that?
+
+
+% BATH_EMPTY_WASHLESS_TWICE
+player = object = no_sens_var = What a waste of water…@What is wrong with me?
+
+
+% BATH_WASH_OLD_WATER
+player = object = pain = This water has been sitting here for too long.@It's cold!
+
+
+% PLANT_DESK_UNWATERABLE
+player = object = laugh = This plant is already in water,@it doesn't need me to water it.
+
+
+% PLANT_KITCHEN_UNWATERABLE
+player = object = happy_var = My aromatic herbs don't need watering,@it's often humid here.
+
+
+% WATCH_TV
+player = DOWN = sad = I've lost the remote…@I have to get close, if I want to turn it on.
+
+
+% BOOKSHELF
+player = DOWN = happy_var = There is no doubt: it is indeed a library.
+
+
+% BOOKSHELF_AGAIN
+player = DOWN = happy_var = There is no doubt: it is still a library.

@@ -1,0 +1,43 @@
+% GREET
+player = object = happy_var = Good evening Vera. Did you miss me?
+
+
+% WATER_WATERLESS
+player = object = you_silly_var = I forgot to take water…
+
+
+% FIRST_WATER
+player = object = laugh = A good thing done!
+
+
+% N_WATER
+player = object = sad_var = "Too much water, kill the flower."
+
+
+% WATCH
+player = object = happy = Plants are so… soothing.
+
+
+% WATCH_UNHEALTHY
+player = object = worry = Vera doesn't look well. Maybe I should adjust@its watering schedule?
+
+
+% WATCH_VERY_UNHEALTHY
+player = object = unhappy = Vera doesn't look well at all… I need to@change the way I take care of her.
+
+
+% WATCH_NOT_ENOUGH_WATER
+player = object = pain = I killed my plant!@I forgot to water her too often…
+
+
+% WATER_NOT_ENOUGH_WATER
+player = object = unhappy = I hope this will be enough…@But I think it's too late for her…
+
+
+% WATCH_TOO_MUCH_WATER
+player = object = pain = I killed my plant!@I watered her way too much…
+player = object = unhappy = I hope stopping the watering will be enough…@But I think it's too late for her…
+
+
+% WATCH_DEAD
+player = object = unhappy = Poor Vera…@I should have taken better care of it…

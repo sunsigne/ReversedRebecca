@@ -26,7 +26,7 @@ public class CookieUpgradeCursorObject extends CookieUpgradeObject {
 
 	@Override
 	public int getAmountBySecond() {
-		return nerfed ? 0 : 1;
+		return nerfed ? 1000 : 1000;
 	}
 
 	@Override

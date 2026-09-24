@@ -1,0 +1,3 @@
+///// BEDROOM /////
+
+GO_TO_BED = Key2 % go to bed

@@ -1,0 +1,16 @@
+% CYAN
+player = DOWN = laugh = That was awesome! Where's the rest?
+player = DOWN = happy_var = ...
+player = DOWN = angry = Ugh! Stupid free-to-play!@I have to wait until tomorrow to play level 2.
+
+
+% RED
+player = DOWN = excited = YEAH! I beat the last level!
+
+
+% NOT_HARD
+player = DOWN = you_silly = Well, if I REALLY want to call it a total victory,@I'd have to do it on "hard" mode. 
+
+
+% HARD
+player = DOWN = you_silly = But no achievement for that. That would be a pain@for the 100"0/0" speedrun category, don't you think?

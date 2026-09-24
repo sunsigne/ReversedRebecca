@@ -1,0 +1,2 @@
+COOKIES_EATEN = cookies eaten
+CHIPS_EATEN = chips eaten
