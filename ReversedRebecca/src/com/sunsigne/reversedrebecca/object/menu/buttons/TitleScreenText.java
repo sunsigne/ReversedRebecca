@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.buttons;
+package com.sunsigne.reversedrebecca.object.menu.buttons;
 
 public class TitleScreenText extends TitleScreenButton {
 

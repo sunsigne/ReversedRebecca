@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.ressources.achievement;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
 
-import com.sunsigne.reversedrebecca.object.AchievementObject;
+import com.sunsigne.reversedrebecca.object.menu.AchievementObject;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

@@ -4,9 +4,9 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
-import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;

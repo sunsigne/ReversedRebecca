@@ -1,5 +1,6 @@
-package com.sunsigne.reversedrebecca.object.buttons;
+package com.sunsigne.reversedrebecca.object.menu.buttons;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -8,15 +9,13 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
-import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
-import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 
-public class CrashButton extends TitleScreenButton {
+public class SteamButton extends TitleScreenButton {
 
-	public CrashButton(GenericListener onPress, GenericListener onRelease) {
-		super(new Translatable().getTranslatedText("CrashButton", FilePath.MENU), 6, 3, 385, 90, onPress, onRelease);
+	public SteamButton(GenericListener onPress, GenericListener onRelease) {
+		super("", 6, 103, 385, 90, onPress, onRelease);
 		rectsize = RECTSIZE.NORMAL;
 	}
 
@@ -38,7 +37,7 @@ public class CrashButton extends TitleScreenButton {
 
 	public BufferedImage getImage() {
 		if (image == null)
-			image = new ImageTask().loadImage("textures/menu/" + "crash");
+			image = new ImageTask().loadImage("textures/menu/" + "steam");
 		return image;
 	}
 
@@ -50,14 +49,15 @@ public class CrashButton extends TitleScreenButton {
 	public void render(Graphics g) {
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 		int[] rect = new int[4];
+		Color color = new Color(18, 57, 96);
 
 		if (isSelected()) {
 			new RectDecoration().drawRoundRect(g, getRect(), rectsize);
-			rect = new int[] { getX() + 26, getY() - 3, getWidth(), getHeight() };
+			rect = new int[] { getX() + 24, getY() - 3, getWidth(), getHeight() };
 		} else
-			rect = new int[] { getX() + 26, getY(), getWidth(), getHeight() };
+			rect = new int[] { getX() + 24, getY(), getWidth(), getHeight() };
 
-		new TextDecoration().drawOutlinesString(g, font, getText(), DIRECTION.NULL, rect);
+		new TextDecoration().drawOutlinesString(g, font, "WISHLIST STEAM", Color.WHITE, color, DIRECTION.NULL, rect);
 	}
 
 }

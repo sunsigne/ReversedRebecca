@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
-import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.menu.buttons.VolumeScaleButton;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMain;
 import com.sunsigne.reversedrebecca.ressources.sound.VolumeMusic;

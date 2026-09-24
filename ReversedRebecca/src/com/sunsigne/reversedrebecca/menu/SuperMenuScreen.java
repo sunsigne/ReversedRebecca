@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.menu;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;

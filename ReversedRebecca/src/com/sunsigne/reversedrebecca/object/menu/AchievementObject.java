@@ -1,9 +1,10 @@
-package com.sunsigne.reversedrebecca.object;
+package com.sunsigne.reversedrebecca.object.menu;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
+import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;

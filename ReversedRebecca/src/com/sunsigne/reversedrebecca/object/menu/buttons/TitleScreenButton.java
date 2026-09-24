@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.object.buttons;
+package com.sunsigne.reversedrebecca.object.menu.buttons;
 
 import java.awt.Color;
 import java.awt.Font;

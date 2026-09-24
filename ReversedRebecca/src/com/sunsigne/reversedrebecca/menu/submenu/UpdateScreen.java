@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;

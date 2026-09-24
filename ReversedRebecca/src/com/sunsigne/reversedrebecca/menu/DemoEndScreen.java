@@ -5,7 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;

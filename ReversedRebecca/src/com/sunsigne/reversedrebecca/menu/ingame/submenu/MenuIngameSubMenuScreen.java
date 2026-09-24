@@ -4,10 +4,10 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
-import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
-import com.sunsigne.reversedrebecca.object.buttons.LockedTitleScreenButton;
-import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.menu.buttons.LockedTitleScreenButton;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
