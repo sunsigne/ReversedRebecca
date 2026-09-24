@@ -1,10 +1,11 @@
-package com.sunsigne.reversedrebecca.menu.ingame.submenu;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu.general;
 
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.MenuIngameSubMenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.EnterKeyButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;

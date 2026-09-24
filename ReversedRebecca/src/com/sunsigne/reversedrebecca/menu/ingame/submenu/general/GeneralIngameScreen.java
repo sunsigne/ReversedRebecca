@@ -1,10 +1,11 @@
-package com.sunsigne.reversedrebecca.menu.ingame.submenu;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu.general;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.MenuIngameSubMenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ActionOptionPreview;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
@@ -363,7 +364,7 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen implements Shee
 	public int getSheetWidth() {
 		return 3 * 16;
 	}
-	
+
 	private BufferedImage gamepad_instruction_image;
 
 	protected BufferedImage get_gamepad_instruction_image() {
@@ -383,16 +384,16 @@ public class GeneralIngameScreen extends MenuIngameSubMenuScreen implements Shee
 
 		return inventory_image;
 	}
-	
+
 	////////// RENDER ////////////
 
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-				
-		if(InventoryOption.getType() == INVENTORY_TYPE.VISIBLE)
-			g.drawImage(get_inventory_image(), 890 - gap + 158, 725 + y_gap, 3*128, 128, null);
-				
+
+		if (InventoryOption.getType() == INVENTORY_TYPE.VISIBLE)
+			g.drawImage(get_inventory_image(), 890 - gap + 158, 725 + y_gap, 3 * 128, 128, null);
+
 		if (ControllerManager.getInstance().isUsingGamepad() == false)
 			return;
 

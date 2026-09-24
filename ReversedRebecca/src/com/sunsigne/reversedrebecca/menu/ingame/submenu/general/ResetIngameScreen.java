@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu.ingame.submenu;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu.general;
 
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;

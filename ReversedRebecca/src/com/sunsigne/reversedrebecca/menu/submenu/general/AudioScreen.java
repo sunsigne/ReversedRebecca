@@ -1,8 +1,9 @@
-package com.sunsigne.reversedrebecca.menu.submenu;
+package com.sunsigne.reversedrebecca.menu.submenu.general;
 
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
