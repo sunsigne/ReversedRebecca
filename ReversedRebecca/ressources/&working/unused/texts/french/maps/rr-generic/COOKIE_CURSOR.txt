@@ -1,0 +1,16 @@
+% CYAN
+player = DOWN = laugh = C'était trop bien ! Elle est où la suite ?
+player = DOWN = happy_var = ...
+player = DOWN = angry = Rho ! Fichu Free to Play !@Je dois attendre demain pour jouer au niveau 2.
+
+
+% RED
+player = DOWN = excited = OUAIS ! J'ai gagné le dernier niveau !
+
+
+% NOT_HARD
+player = DOWN = you_silly = Enfin, si je veux VRAIMENT appeler ça une victoire@totale, il faudrait que je fasse ça en "difficile". 
+
+
+% HARD
+player = DOWN = you_silly = Mais pas de succès. Ça serait pénible pour@les speedrunners 100"0/0", tu ne crois pas ?

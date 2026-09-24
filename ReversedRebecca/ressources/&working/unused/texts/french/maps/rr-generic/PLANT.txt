@@ -1,0 +1,43 @@
+% GREET
+player = object = happy_var = Bonsoir Vera, je t'ai manqué ?
+
+
+% WATER_WATERLESS
+player = object = you_silly_var = J'ai oublié de prendre de l'eau…
+
+
+% FIRST_WATER
+player = object = laugh = Et une bonne chose de faite !
+
+
+% N_WATER
+player = object = sad_var = Après réflexion, ça serait trop d'eau.
+
+
+% WATCH
+player = object = happy = C'est tellement apaisant, les plantes.
+
+
+% WATCH_UNHEALTHY
+player = object = worry = Vera n'a pas l'air bien. Je devrais peut-être@changer sa fréquence d'arrosage ?
+
+
+% WATCH_VERY_UNHEALTHY
+player = object = unhappy = Vera n'a pas l'air bien du tout… Je dois@changer ma façon de m'occuper d'elle.
+
+
+% WATCH_NOT_ENOUGH_WATER
+player = object = pain = J'ai tué ma plante !@J'ai oublié trop souvent de l'arroser…
+
+
+% WATER_NOT_ENOUGH_WATER
+player = object = unhappy = J'espère que ça suffira…@Mais je pense que c'est trop tard pour elle…
+
+
+% WATCH_TOO_MUCH_WATER
+player = object = pain = J'ai tué ma plante !@Je l'ai beaucoup trop arrosée…
+player = object = unhappy = J'espère que de ne plus l'arroser suffira…@Mais je pense que c'est trop tard pour elle…
+
+
+% WATCH_DEAD
+player = object = unhappy = Pauvre Vera…@J'aurais dû prendre mieux soin d'elle…
