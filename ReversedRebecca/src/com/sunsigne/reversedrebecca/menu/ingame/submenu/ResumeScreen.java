@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.menu.ingame.submenu;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
-import com.sunsigne.reversedrebecca.menu.ingame.submenu.general.OptionsIngameScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.options.OptionsIngameScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;

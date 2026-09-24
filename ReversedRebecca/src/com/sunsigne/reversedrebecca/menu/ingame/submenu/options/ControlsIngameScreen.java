@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu.ingame.submenu.general;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu.options;
 
 import java.awt.Font;
 import java.awt.Graphics;

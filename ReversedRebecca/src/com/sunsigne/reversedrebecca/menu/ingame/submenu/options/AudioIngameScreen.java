@@ -1,9 +1,9 @@
-package com.sunsigne.reversedrebecca.menu.submenu.general;
+package com.sunsigne.reversedrebecca.menu.ingame.submenu.options;
 
 import java.util.HashMap;
 
-import com.sunsigne.reversedrebecca.menu.MenuScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.MenuIngameSubMenuScreen;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.buttons.VolumeScaleButton;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -15,9 +15,9 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
-public class AudioScreen extends SubMenuScreen {
+public class AudioIngameScreen extends MenuIngameSubMenuScreen {
 
-	public AudioScreen() {
+	public AudioIngameScreen() {
 		super(MAIN);
 		loadText();
 		createScaleButtons();
@@ -39,8 +39,8 @@ public class AudioScreen extends SubMenuScreen {
 	////////// SUB MENU ////////////
 
 	@Override
-	protected MenuScreen getPreviousMenu() {
-		return new OptionsScreen(BACK);
+	protected MenuIngameScreen getPreviousMenu() {
+		return new OptionsIngameScreen(BACK);
 	}
 
 	////////// TEXT ////////////
@@ -53,7 +53,7 @@ public class AudioScreen extends SubMenuScreen {
 	private void loadText() {
 
 		int x = 325 + 90;
-		int y = 503;
+		int y = 503 + y_gap;
 
 		createVolumes(x, y);
 		createVolumePct(x + 790, y);
@@ -94,19 +94,19 @@ public class AudioScreen extends SubMenuScreen {
 	private void createScaleButtons() {
 		VolumeScaleButton button = null;
 
-		button = new VolumeScaleButton(514, new VolumeMain());
+		button = new VolumeScaleButton(514 + y_gap, new VolumeMain());
 		scale_buttons.put(MAIN, button);
 		add(button);
 
-		button = new VolumeScaleButton(618, new VolumeMusic());
+		button = new VolumeScaleButton(618 + y_gap, new VolumeMusic());
 		scale_buttons.put(MUSIC, button);
 		add(button);
 
-		button = new VolumeScaleButton(722, new VolumeSound());
+		button = new VolumeScaleButton(722 + y_gap, new VolumeSound());
 		scale_buttons.put(SOUND, button);
 		add(button);
 
-		button = new VolumeScaleButton(826, new VolumeVoice());
+		button = new VolumeScaleButton(826 + y_gap, new VolumeVoice());
 		scale_buttons.put(VOICE, button);
 		add(button);
 	}
@@ -138,10 +138,10 @@ public class AudioScreen extends SubMenuScreen {
 
 	protected HashMap<PresetMousePos, VolumeScaleButton> scale_buttons = new HashMap<>();
 
-	public static final PresetMousePos MAIN = new PresetMousePos(1090, 540);
-	public static final PresetMousePos MUSIC = new PresetMousePos(1090, 640);
-	public static final PresetMousePos SOUND = new PresetMousePos(1090, 740);
-	public static final PresetMousePos VOICE = new PresetMousePos(1090, 840);
+	public static final PresetMousePos MAIN = new PresetMousePos(1090, 540 + y_gap);
+	public static final PresetMousePos MUSIC = new PresetMousePos(1090, 640 + y_gap);
+	public static final PresetMousePos SOUND = new PresetMousePos(1090, 740 + y_gap);
+	public static final PresetMousePos VOICE = new PresetMousePos(1090, 840 + y_gap);
 
 	////////// GAMEPAD ////////////
 
@@ -156,7 +156,7 @@ public class AudioScreen extends SubMenuScreen {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
-		
+
 		else if (getPreset() == MAIN)
 			mainPressed(e);
 		else if (getPreset() == MUSIC)
@@ -168,12 +168,12 @@ public class AudioScreen extends SubMenuScreen {
 		else if (getPreset() == BACK)
 			backPressed(e);
 	}
-	
+
 	@Override
 	public void buttonReleased(ButtonEvent e) {
-		if(e.getKey() != ButtonEvent.NULL_X)
+		if (e.getKey() != ButtonEvent.NULL_X)
 			return;
-		
+
 		scale_buttons.get(MAIN).updateRequest(e);
 		scale_buttons.get(MUSIC).updateRequest(e);
 		scale_buttons.get(SOUND).updateRequest(e);

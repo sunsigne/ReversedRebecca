@@ -2,7 +2,7 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.general.GeneralScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.options.GeneralScreen;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -15,7 +15,7 @@ public class BonusScreen extends SubMenuScreen {
 	public BonusScreen(PresetMousePos defaultPreset) {
 		super(defaultPreset);
 
-		createPixelButton();
+		createPixelArtButton();
 		createDrawingsButton();
 		createBDButton();
 		createSettingsButton();
@@ -44,9 +44,9 @@ public class BonusScreen extends SubMenuScreen {
 		buttons.put(preset, button);
 	}
 
-	private void createPixelButton() {
+	private void createPixelArtButton() {
 		GenericListener onPress = () -> new GeneralScreen();
-		createBonusScreenButton(translate("PixelButton"), PIXEL, 206, 51, onPress);
+		createBonusScreenButton(translate("PixelArtButton"), PIXEL_ART, 206, 51, onPress);
 	}
 
 	private void createDrawingsButton() {
@@ -71,7 +71,7 @@ public class BonusScreen extends SubMenuScreen {
 
 	////////// PRESET MOUSE POS ////////////
 
-	public static final PresetMousePos PIXEL = new PresetMousePos(735, 590);
+	public static final PresetMousePos PIXEL_ART = new PresetMousePos(735, 590);
 	public static final PresetMousePos DRAWINGS = new PresetMousePos(1155, 590);
 	public static final PresetMousePos BD = new PresetMousePos(735, 700);
 	public static final PresetMousePos SETTINGS = new PresetMousePos(1155, 700);
@@ -85,14 +85,14 @@ public class BonusScreen extends SubMenuScreen {
 			return;
 
 		if (isPresetNull())
-			setPreset(PIXEL);
+			setPreset(PIXEL_ART);
 		else if (e.getKey() == ButtonEvent.B) {
 			setPreset(BACK, false);
 			buttons.get(BACK).mousePressed(null);
 		}
 
-		else if (getPreset() == PIXEL)
-			pixelPressed(e);
+		else if (getPreset() == PIXEL_ART)
+			pixelArtPressed(e);
 		else if (getPreset() == DRAWINGS)
 			drawingsPressed(e);
 		else if (getPreset() == BD)
@@ -105,27 +105,27 @@ public class BonusScreen extends SubMenuScreen {
 			backPressed(e);
 	}
 
-	private void pixelPressed(ButtonEvent e) {
+	private void pixelArtPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(BD);
 		else if (e.getKey() == ButtonEvent.RIGHT)
 			setPreset(DRAWINGS);
 		else if (e.getKey() == ButtonEvent.A)
-			buttons.get(PIXEL).mousePressed(null);
+			buttons.get(PIXEL_ART).mousePressed(null);
 	}
 
 	private void drawingsPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(SETTINGS);
 		else if (e.getKey() == ButtonEvent.LEFT)
-			setPreset(PIXEL);
+			setPreset(PIXEL_ART);
 		else if (e.getKey() == ButtonEvent.A)
 			buttons.get(DRAWINGS).mousePressed(null);
 	}
 
 	private void BDPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP)
-			setPreset(PIXEL);
+			setPreset(PIXEL_ART);
 		else if (e.getKey() == ButtonEvent.DOWN)
 			setPreset(CREDIT);
 		else if (e.getKey() == ButtonEvent.RIGHT)

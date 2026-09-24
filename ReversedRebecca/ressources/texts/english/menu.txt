@@ -128,7 +128,7 @@ VolumeVoice = voice
 
 ///// BONUS /////
 
-PixelButton = pixel art
+PixelArtButton = pixel art
 DrawingsButton = drawings
 BDButton = BD
 SettingsButton = settings

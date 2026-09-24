@@ -1,4 +1,4 @@
-package com.sunsigne.reversedrebecca.menu.submenu.general;
+package com.sunsigne.reversedrebecca.menu.submenu.options;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;

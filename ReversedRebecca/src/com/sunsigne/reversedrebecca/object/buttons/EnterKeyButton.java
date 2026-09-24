@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.object.buttons;
 
 import java.awt.event.KeyEvent;
 
-import com.sunsigne.reversedrebecca.menu.ingame.submenu.general.ControlsIngameScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.general.ControlsScreen;
+import com.sunsigne.reversedrebecca.menu.ingame.submenu.options.ControlsIngameScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.options.ControlsScreen;
 import com.sunsigne.reversedrebecca.pattern.list.GameLimitedList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;

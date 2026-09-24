@@ -4,7 +4,7 @@ import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.submenu.BonusScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.achievement.AchievementsScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.general.OptionsScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.options.OptionsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.play.DifficultyScreen;
 import com.sunsigne.reversedrebecca.object.buttons.AchievementButton;
 import com.sunsigne.reversedrebecca.object.buttons.ButtonObject;
@@ -95,7 +95,7 @@ public class TitleScreen extends MenuScreen {
 	}
 
 	private void createBonusButton() {
-		GenericListener onPress = () -> new BonusScreen(BonusScreen.PIXEL);
+		GenericListener onPress = () -> new BonusScreen(BonusScreen.PIXEL_ART);
 		createTitleScreenButton(translate("BonusButton"), BONUS, false, 975, onPress);
 	}
 
