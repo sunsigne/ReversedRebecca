@@ -2,8 +2,8 @@ package com.sunsigne.reversedrebecca.object.puzzle.hack;
 
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 
 public abstract class ProcessorEatable extends ProcessorObject {
 
@@ -19,7 +19,7 @@ public abstract class ProcessorEatable extends ProcessorObject {
 		getComputer().removeObject(this);
 
 		if (isFruitFile())
-			new AchievementTask().unlockAchievement("fruit");
+			new AchievementTask().unlock("fruit");
 	}
 
 	@Override

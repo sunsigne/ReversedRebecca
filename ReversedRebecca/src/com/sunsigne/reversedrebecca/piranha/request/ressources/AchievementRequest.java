@@ -3,7 +3,7 @@ package com.sunsigne.reversedrebecca.piranha.request.ressources;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 
 public class AchievementRequest implements Request {
 
@@ -32,7 +32,7 @@ public class AchievementRequest implements Request {
 
 	@Override
 	public void doAction(PiranhaObject object, String target) {
-		new AchievementTask().unlockAchievement(target);
+		new AchievementTask().unlock(target);
 	}
 
 }

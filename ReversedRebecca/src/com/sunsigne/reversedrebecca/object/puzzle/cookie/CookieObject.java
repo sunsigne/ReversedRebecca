@@ -10,10 +10,10 @@ import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.cookie.CookiePuzzle;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -133,7 +133,7 @@ public class CookieObject extends PuzzleObject implements SheetableImage, Highli
 
 	private void reversedCookieAchievement() {
 		if(getSize() - 2 * (shrink) < - 2 * Size.L)
-			new AchievementTask().unlockAchievement("reversedcookie");
+			new AchievementTask().unlock("reversedcookie");
 	}
 
 	////////// MOUSE ////////////

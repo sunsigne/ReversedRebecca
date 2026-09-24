@@ -11,9 +11,9 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.MouseUserEvent;
@@ -97,7 +97,7 @@ public class ResetAchievementsScreen extends AchievementsScreen {
 	////////// BUTTON ACTION ////////////
 
 	private void resetAchievements() {
-		new AchievementTask().resetAchievements();
+		new AchievementTask().reset();
 		new AchievementsScreen();
 	}
 

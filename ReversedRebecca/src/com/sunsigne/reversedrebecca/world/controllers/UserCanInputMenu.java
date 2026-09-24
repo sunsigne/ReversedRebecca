@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.world.controllers;
 import java.awt.event.KeyEvent;
 
 import com.sunsigne.reversedrebecca.menu.ingame.MenuIngameController;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.PausePreventer;

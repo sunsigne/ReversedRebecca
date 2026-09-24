@@ -14,34 +14,32 @@ import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
-import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.menu.achievement.Achievement;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
-import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.ressources.menu.pixelart.PixelArt;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
-public class AchievementObject extends GameObject {
+public class PixelArtObject extends GameObject implements TickFree {
 
-	public AchievementObject(Achievement achievement, boolean reversed) {
-		this(achievement, Window.WIDHT / 2 - 13 * Size.XS, reversed ? Window.HEIGHT : -Size.L);
+	public PixelArtObject(PixelArt pixelArt) {
+		this(pixelArt, Window.WIDHT / 2 - 13 * Size.XS, -Size.L);
 	}
 
-	public AchievementObject(Achievement achievement, int x, int y) {
+	public PixelArtObject(PixelArt pixelArt, int x, int y) {
 		super(x, y, 5 * Size.XL, Size.L);
-		this.achievement = achievement;
-		this.unlocked = achievement.isUnlocked();
+		this.pixelArt = pixelArt;
+		this.unlocked = pixelArt.isUnlocked();
 	}
 
-	private Achievement achievement;
+	private PixelArt pixelArt;
 	private boolean unlocked;
 
 	////////// NAME ////////////
 
 	@Override
 	public String toString() {
-		var clazz = "ACHIEVEMENT";
-		return clazz + " " + achievement.getName().toUpperCase() + " : " + getX() + "-" + getY();
+		var clazz = "PIXEL ART";
+		return clazz + " " + pixelArt.getName().toUpperCase() + " : " + getX() + "-" + getY();
 	}
 
 	////////// TEXT ////////////
@@ -51,11 +49,11 @@ public class AchievementObject extends GameObject {
 
 	public String getTitle() {
 		if (title == null) {
-			String value = achievement.getName() + "title";
+			String value = pixelArt.getName() + "title";
 			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
 			title = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
 			if (title.isEmpty())
-				title = new Translatable().getTranslatedText(achievement.getName() + "title", FilePath.ACHIEVEMENT);
+				title = new Translatable().getTranslatedText(pixelArt.getName() + "title", FilePath.ACHIEVEMENT);
 		}
 
 		return title;
@@ -63,12 +61,12 @@ public class AchievementObject extends GameObject {
 
 	public String getText() {
 		if (text == null) {
-			if (achievement.isHidden() && achievement.isUnlocked() == false) {
+			if (pixelArt.isHidden() && pixelArt.isUnlocked() == false) {
 				text = "???";
 				return text;
 			}
 
-			String value = achievement.getName() + "text";
+			String value = pixelArt.getName() + "text";
 			String type = LivingOption.getType() == LIVING_TYPE.DEFAULT ? "" : LivingOption.getType().getName();
 			text = new Translatable().getStrictTranslatedText(value + type, FilePath.ACHIEVEMENT);
 			if (text.isEmpty())
@@ -82,69 +80,18 @@ public class AchievementObject extends GameObject {
 
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
-		return PhysicLinker.MOVER;
-	}
-
-	////////// TICK ////////////
-
-	public void popup() {
-		new SoundTask().playSound(SOUNDTYPE.SOUND, "achievement");
-		time = MAX_TIME;
-	}
-
-	private int time;
-	private final int MAX_TIME = 400;
-	private final int DELAY = 30;
-	private final int SPEED = 5;
-	private int factor = getY() > Window.HEIGHT / 2 ? -1 : 1;
-
-	@Override
-	public void tick() {
-		if (time == 0)
-			return;
-
-		time--;
-
-		// goes up
-		if (time > MAX_TIME - DELAY)
-			setVelY(factor * SPEED);
-
-		// stop
-		if (time == MAX_TIME - DELAY)
-			setMotionless();
-
-		// goes down
-		if (time < DELAY)
-			setVelY(-factor * SPEED);
-
-		// destroy
-		if (time == 1)
-			LAYER.DEBUG.getHandler().removeObject(this);
+		return PhysicLinker.MENU;
 	}
 
 	////////// TEXTURE ////////////
 
-	private final Font fontTitle = new FontTask().createNewFont("dogicabold.ttf", 25f);
 	private final Font fontText = new FontTask().createNewFont("dogicabold.ttf", 18f);
 
 	@Override
 	public void render(Graphics g) {
-		var image = unlocked ? achievement.getImage() : achievement.getImageLocked();
+		var image = unlocked ? pixelArt.getImage() : pixelArt.getImageLocked();
 		g.drawImage(image, getX(), getY(), getWidth(), getHeight(), null);
-
-		if (unlocked)
-			drawTitle(g);
-
 		drawText(g);
-	}
-
-	private void drawTitle(Graphics g) {
-		Color text_color = new Color(255, 204, 0);
-		Color shadow_color = new Color(255, 163, 0, 80);
-		int[] rect = new int[] { getX() + Size.XL, getY() - getHeight() / 5, getWidth(), getHeight() };
-
-		new TextDecoration().drawShadowedString(g, fontTitle, getTitle(), text_color, shadow_color, DIRECTION.LEFT,
-				rect);
 	}
 
 	private void drawText(Graphics g) {

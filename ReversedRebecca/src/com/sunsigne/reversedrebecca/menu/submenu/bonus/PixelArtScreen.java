@@ -7,15 +7,14 @@ import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.BonusScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
-import com.sunsigne.reversedrebecca.object.menu.AchievementObject;
+import com.sunsigne.reversedrebecca.object.menu.PixelArtObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
-import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementList;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -62,29 +61,24 @@ public class PixelArtScreen extends SubMenuScreen {
 		LAYER.MENU.addObject(pixelArt);
 	}
 
-	////////// ACHIEVEMENTS ////////////
+	////////// PIXEL ART ////////////
 
 	protected int listStart;
 
 	private int getListEnd() {
-		return listStart + Math.min(10, AchievementList.getList().getList().size() - listStart);
+		return listStart + Math.min(10, UnlockableList.getPixelArtList().getList().size() - listStart);
 	}
 
 	private void loadPixelArt() {
-		/*
-		var list = AchievementList.getList();
+		var list = UnlockableList.getPixelArtList();
 		boolean newCol = false;
 		int y = 160;
 
 		for (int index = listStart; index < getListEnd(); index++) {
 			int x = newCol ? Size.XS + Window.WIDHT / 2 : Size.L;
 
-			Achievement achievement = list.getList().get(index);
-			AchievementObject achievement_object = new AchievementObject(list.getList().get(index), x, y);
-			LAYER.MENU.addObject(achievement_object);
-
-			if (achievement.getName().equalsIgnoreCase("clickHere") && achievement.isUnlocked() == false)
-				createClickHereButton(achievement_object);
+			PixelArtObject pixelArt_object = new PixelArtObject(list.getList().get(index), x, y);
+			LAYER.MENU.addObject(pixelArt_object);
 
 			y = y + 155;
 
@@ -92,7 +86,7 @@ public class PixelArtScreen extends SubMenuScreen {
 				y = 160;
 				newCol = true;
 			}
-		}*/
+		}
 	}
 
 	////////// BUTTONS ////////////
@@ -112,15 +106,15 @@ public class PixelArtScreen extends SubMenuScreen {
 		if (listStart == 0)
 			return;
 
-		GenericListener onPress = () -> showPreviousAchievements();
+		GenericListener onPress = () -> showPreviousPixelArts();
 		createArrowButton("<", direction, -210, onPress);
 	}
 
 	private void createRightArrowButton(DIRECTION direction) {
-		if (getListEnd() >= AchievementList.getList().getList().size())
+		if (getListEnd() >= UnlockableList.getPixelArtList().getList().size())
 			return;
 
-		GenericListener onPress = () -> showNextAchievements();
+		GenericListener onPress = () -> showNextPixelArts();
 		createArrowButton(">", direction, 210 + 75, onPress);
 	}
 
@@ -128,11 +122,11 @@ public class PixelArtScreen extends SubMenuScreen {
 
 	private int step = 10;
 
-	private void showNextAchievements() {
+	private void showNextPixelArts() {
 		new PixelArtScreen(BACK, listStart + step);
 	}
 
-	private void showPreviousAchievements() {
+	private void showPreviousPixelArts() {
 		new PixelArtScreen(BACK, listStart - step);
 	}
 
@@ -170,15 +164,15 @@ public class PixelArtScreen extends SubMenuScreen {
 			if (listStart != 0) {
 				var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-				showPreviousAchievements();
+				showPreviousPixelArts();
 			}
 		}
 
 		else if (e.getKey() == ButtonEvent.RIGHT) {
-			if (getListEnd() < AchievementList.getList().getList().size()) {
+			if (getListEnd() < UnlockableList.getPixelArtList().getList().size()) {
 				var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
-				showNextAchievements();
+				showNextPixelArts();
 			}
 		}
 

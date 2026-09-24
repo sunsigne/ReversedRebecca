@@ -13,10 +13,10 @@ import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
-import com.sunsigne.reversedrebecca.ressources.achievement.Achievement;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementList;
-import com.sunsigne.reversedrebecca.ressources.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.Achievement;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -69,11 +69,11 @@ public class AchievementsScreen extends SubMenuScreen {
 	protected int listStart;
 
 	private int getListEnd() {
-		return listStart + Math.min(10, AchievementList.getList().getList().size() - listStart);
+		return listStart + Math.min(10, UnlockableList.getAchievementList().getList().size() - listStart);
 	}
 
 	private void loadAchievements() {
-		var list = AchievementList.getList();
+		var list = UnlockableList.getAchievementList();
 		boolean newCol = false;
 		int y = 160;
 
@@ -134,7 +134,7 @@ public class AchievementsScreen extends SubMenuScreen {
 	}
 
 	private void createRightArrowButton(DIRECTION direction) {
-		if (getListEnd() >= AchievementList.getList().getList().size())
+		if (getListEnd() >= UnlockableList.getAchievementList().getList().size())
 			return;
 
 		GenericListener onPress = () -> showNextAchievements();
@@ -161,7 +161,7 @@ public class AchievementsScreen extends SubMenuScreen {
 	////////// BUTTON ACTION ////////////
 
 	private int step = 10;
-	
+
 	private void showNextAchievements() {
 		new AchievementsScreen(BACK, listStart + step);
 	}
@@ -171,7 +171,7 @@ public class AchievementsScreen extends SubMenuScreen {
 	}
 
 	private void unlockClickHereAchievement() {
-		new AchievementTask().unlockAchievement("ClickHere");
+		new AchievementTask().unlock("ClickHere");
 		new AchievementsScreen(BACK, listStart);
 	}
 
@@ -230,7 +230,7 @@ public class AchievementsScreen extends SubMenuScreen {
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.UP && CLICK_HERE != null)
 			setPreset(CLICK_HERE);
-		
+
 		else if (e.getKey() == ButtonEvent.LEFT) {
 			if (listStart != 0) {
 				var sound = arrow_buttons.get(DIRECTION.LEFT).getSound();
@@ -240,7 +240,7 @@ public class AchievementsScreen extends SubMenuScreen {
 		}
 
 		else if (e.getKey() == ButtonEvent.RIGHT) {
-			if (getListEnd() < AchievementList.getList().getList().size()) {
+			if (getListEnd() < UnlockableList.getAchievementList().getList().size()) {
 				var sound = arrow_buttons.get(DIRECTION.RIGHT).getSound();
 				new SoundTask().playSound(SOUNDTYPE.SOUND, sound);
 				showNextAchievements();
