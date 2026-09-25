@@ -36,9 +36,7 @@
 
 	- pixel art :
 		- créer la requete piranha
-		- vérifier que tous les pixel art sont bien dévérouillés par défaut
-		- faire en sorte que plusieurs pixel art peuvent se chevaucher ! (même localisation)
-		- mettre à jour la notice de création d'un pixel art
+		- traduction en anglais
 
 
 

@@ -1,3 +1,10 @@
+titleText = PREMIER DESIGN DU TITRE@@Les doubles fleches fonctionnent bien,@mais le cote "neon futuriste" ne convenait@pas du tout avec l'atmosphere du jeu.
+desk = @@@Le bureau de Rebecca,@s'il avait ete sur le cote.
+deskLocked = (Jouer sur l'ordinateur)
+clothes = @@Le mur pour tenir la serviette@ete trop loin de la baignoire,@elle a donc ete suprimee.
+clothesLocked = (Prendre une douche)
+william = William lacant ses grenades@@Il a ete retirer pour mettre@davantage l'action en avant.
+williamLocked = @@(Declenchez la fusillade)
 macabreDance = Doug et Rebecca ~
 macabreDanceNext = Un tango etait initialement prevu@pour cette scene. Mais du a la@difficulte d'animer cette danse,@c'est une valse qui a ete retenue.
 macabreDanceNextLocked = @@(Declenchez la fusillade)

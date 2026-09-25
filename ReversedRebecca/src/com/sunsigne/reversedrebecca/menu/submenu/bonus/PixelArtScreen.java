@@ -121,7 +121,7 @@ public class PixelArtScreen extends SubMenuScreen {
 
 	////////// BUTTON ACTION ////////////
 
-	private int step = 10;
+	private int step = 8;
 
 	private void showNextPixelArts() {
 		new PixelArtScreen(BACK, listStart + step);
