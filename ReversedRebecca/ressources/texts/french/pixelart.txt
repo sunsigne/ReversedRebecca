@@ -1,7 +1,9 @@
 macabreDance = Doug et Rebecca ~
 macabreDanceNext = Un tango etait initialement prevu@pour cette scene. Mais du a la@difficulte d'animer cette danse,@c'est une valse qui a ete retenue.
-macabreDanceNextLocked = @@Declenchez la fusillade
-inthetoilet = SUCCES ABANDONNES : TOILETTES@@Les clefs sont toujours au 3eme@endroit ou on les cherche.@Ce qui inclue...
-bonus = @Ce menu bonus devait se@deverrouiller par un succes,@une fois le jeu termine.
+macabreDanceNextLocked = @@(Declenchez la fusillade)
+bug = Ancienne apparence du bouton bug
+inthetoilet = SUCCES ABANDONNES :@@Les clefs sont toujours au 3eme@endroit ou on les cherche.@Ce qui inclue...
+bonus = Ce menu bonus entier devait se@deverrouiller par un succes, une@fois le jeu termine. Au final,@il est partiellement accessible.
+bonusLocked = @@(Terminez le jeu)
 terminated = TERMINATED@@Les mini-jeu devaient@retirer des PV en cas@d'echec.@@On pouvait donc mourir@definitivement en@difficile a cause d'un@antivirus Terminator.
-bug = Tentatives de design pour le bouton
+terminatedLocked = @@@@@(Piratez un ordinateur)

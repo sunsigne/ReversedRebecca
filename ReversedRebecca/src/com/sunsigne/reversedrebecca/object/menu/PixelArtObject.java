@@ -66,7 +66,8 @@ public class PixelArtObject extends GameObject implements TickFree {
 		text = new Translatable().getStrictTranslatedText(pixelArt.getName() + "Locked", FilePath.PIXEL_ART);
 		if (text.isEmpty())
 			text = new Translatable().getTranslatedText(pixelArt.getName() + "Locked", FilePath.PIXEL_ART);
-
+		color = Color.DARK_GRAY;
+			
 		return text;
 	}
 
@@ -80,7 +81,8 @@ public class PixelArtObject extends GameObject implements TickFree {
 	////////// TEXTURE ////////////
 
 	private final Font fontText = new FontTask().createNewFont("dogicabold.ttf", 18f);
-
+	private Color color = Color.WHITE;
+	
 	@Override
 	public void render(Graphics g) {
 		var image = locked ? pixelArt.getImageLocked() : pixelArt.getImage();
@@ -115,7 +117,7 @@ public class PixelArtObject extends GameObject implements TickFree {
 		int height = locked ? 0 : getHeight() / 5;
 		int[] rect = new int[] { getX() + w, getY(), getWidth() - w, h + height };
 
-		new TextDecoration().drawShadowedString(g, fontText, text, Color.WHITE, Color.BLACK, DIRECTION.NULL, rect);
+		new TextDecoration().drawShadowedString(g, fontText, text, color, Color.BLACK, DIRECTION.NULL, rect);
 	}
 
 }
