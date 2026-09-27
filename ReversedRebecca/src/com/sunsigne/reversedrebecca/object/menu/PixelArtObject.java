@@ -99,6 +99,11 @@ public class PixelArtObject extends GameObject implements TickFree {
 			drawText(g, -w, h);
 		}
 		
+		else if (pixelArt.getFacing() == DIRECTION.UP) {
+			g.drawImage(image, getX() + getWidth() - w, getY() - h/2, w, h, null);
+			drawText(g, -w, h);
+		}
+		
 		else {
 			g.drawImage(image, getX() + (getWidth() - w) / 2, getY(), w, h, null);
 			drawText(g, 0, h);

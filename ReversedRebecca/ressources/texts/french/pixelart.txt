@@ -9,6 +9,7 @@ paralyzer = Afin de montrer l'activation du@paralyseur, il passait au depart@du 
 terminasleep = @Le terminator desactive devait@avoir les yeux fermes. Le modele@a evolue pour etre plus clair.
 terminasleepLocked = @@(Piratez un ordinateur)
 rebeccaHairs = @Evolution de la coiffure@de Rebecca
+furnitures = @Des meubles jamais utilises
 luckyrunText = LUCKY RUN@@Ce concept est ne comme une blague du@developpeur pour se defouler : faire mourir@ses personnages dans des jeux mortels.
 luckydeaths = @Desintegration,@Foudroiement,@Glaciation, etc.
 macabreDance = Doug et Rebecca ~
