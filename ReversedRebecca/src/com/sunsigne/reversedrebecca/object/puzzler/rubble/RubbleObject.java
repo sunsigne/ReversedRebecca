@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.object.puzzler.rubble;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.TripleAction;
+import com.sunsigne.reversedrebecca.object.puzzler.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.OpenPuzzleAction;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
@@ -44,22 +44,9 @@ public class RubbleObject extends PuzzlerObject {
 
 	@Override
 	public int getSheetRowCriterion() {
-		switch (color) {
-		case BLUE:
-			return 1;
-		case GREEN:
-			return 2;
-		case WHITE:
-			return 3;
-		case BROWN:
-			return 4;
-		case BROWN_SUGAR:
-			return 5;
-		case PURPLE:
-			return 6;
-		default:
-			return 1;
-		}
+		int num = color.getNum();
+		int row = num >= 6 ? num - 1 : num;
+		return row;
 	}
 
 	@Override

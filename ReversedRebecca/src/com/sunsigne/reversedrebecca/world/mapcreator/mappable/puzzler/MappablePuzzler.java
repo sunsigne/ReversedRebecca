@@ -1,9 +1,9 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler;
 
 import com.sunsigne.reversedrebecca.object.GameObject;
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzler.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.world.mapcreator.mappable.MappableComplexe;
@@ -49,7 +49,10 @@ public interface MappablePuzzler extends MappableComplexe {
 		COLOR tempColor = null;
 
 		while (color == null) {
-			tempColor = nextColor(tempColor);
+			if (tempColor == null)
+				tempColor = COLOR.BLUE;
+			else
+				tempColor = tempColor.getNext();
 
 			if (250 <= green && green <= 255)
 				color = tempColor;
@@ -73,31 +76,6 @@ public interface MappablePuzzler extends MappableComplexe {
 			return DIRECTION.DOWN;
 
 		return DIRECTION.NULL;
-	}
-
-	public default COLOR nextColor(COLOR tempColor) {
-		if (tempColor == null)
-			return COLOR.BLUE;
-
-		switch (tempColor) {
-		case BLUE:
-			return COLOR.GREEN;
-		case GREEN:
-			return COLOR.WHITE;
-		case WHITE:
-			return COLOR.BROWN;
-		case BROWN:
-			return COLOR.BROWN_SUGAR;
-		case BROWN_SUGAR:
-			return COLOR.GRAY;
-		case GRAY:
-			return COLOR.PURPLE;
-		case PURPLE:
-			return COLOR.BLUE;
-		}
-
-		// should never occurs
-		return null;
 	}
 
 	@Override

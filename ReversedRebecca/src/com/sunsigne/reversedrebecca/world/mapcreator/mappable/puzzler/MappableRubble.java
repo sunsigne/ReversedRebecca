@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler;
 
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzler.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.rubble.RubbleObject;
@@ -37,11 +37,11 @@ public class MappableRubble implements MappablePuzzler {
 		else
 			return new RubbleObject(difficulty, color, horizontal, x, y);
 	}
-	
+
 	public static int getRed() {
 		return mappable.getRedCode();
 	}
-	
+
 	@Override
 	public int[] rgbCode() {
 		// green = 255 to X

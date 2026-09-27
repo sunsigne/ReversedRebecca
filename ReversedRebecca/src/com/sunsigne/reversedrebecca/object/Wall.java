@@ -23,23 +23,6 @@ public class Wall extends GameObject implements NaveMesh, TickFree, RenderFree, 
 		return clazz + " : " + goal.getX() + "-" + goal.getY();
 	}
 
-	////////// COLOR ////////////
-
-	public enum COLOR {
-		BLUE("blue"), GREEN("green"), WHITE("white"), BROWN("brown"), BROWN_SUGAR("brown_sugar"), GRAY("gray"),
-		PURPLE("purple");
-
-		private String name;
-
-		COLOR(String name) {
-			this.name = name;
-		}
-
-		public String getName() {
-			return name;
-		}
-	}
-
 	////////// PHYSICS ////////////
 
 	@Override

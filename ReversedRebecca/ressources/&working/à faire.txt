@@ -1,0 +1,3 @@
+créer la couleur "rouge" pour les murs et puzzlers
+placer le rooftop du militaire dans el bon dossier
+déplacer le dialogue non utilisé de novatech

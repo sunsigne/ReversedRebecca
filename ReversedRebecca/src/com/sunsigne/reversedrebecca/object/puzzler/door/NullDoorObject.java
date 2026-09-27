@@ -3,8 +3,8 @@ package com.sunsigne.reversedrebecca.object.puzzler.door;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.CollisionDetector;
+import com.sunsigne.reversedrebecca.object.puzzler.COLOR;
 import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;

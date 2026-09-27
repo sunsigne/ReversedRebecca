@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.world.mapcreator.mappable.puzzler;
 
-import com.sunsigne.reversedrebecca.object.Wall.COLOR;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.puzzler.COLOR;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject.DEV_LVL;
 import com.sunsigne.reversedrebecca.object.puzzler.yychallenge.YYChallengeObject;
@@ -30,12 +30,11 @@ public class MappableYYChallenge implements MappablePuzzler {
 			boolean horizontal, int x, int y) {
 
 		CHALLENGE_TYPE type = getType(facing);
-		return new YYChallengeObject(difficulty, type, x, y);		
+		return new YYChallengeObject(difficulty, type, x, y);
 	}
 
 	private CHALLENGE_TYPE getType(DIRECTION facing) {
-		
-		
+
 		switch (facing) {
 		case LEFT:
 		case RIGHT:
