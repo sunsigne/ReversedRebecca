@@ -1,3 +1,9 @@
+% HELLO
+object = player = happy = Bonsoir, je m'appelle Sabrina.@On m'a dit que tu me cherchais ?
+player = object = convinced = Oui ! Il parait que tu peux m'aider à retrouver@quelqu'un, qui m'a volé quelque chose.
+object = player = determined = Ça dépend… Tu sais danser ?
+
+
 % NOSTALGIC_HELLO
 object = player = fake_happy = Bonsoir, ma Reine… Alors, on y est ?@C'est l'heure de notre dernière danse ?
 player = object = no_sens = Non… Heu… Quoi ? … Es-tu… Sabrina ?

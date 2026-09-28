@@ -1,3 +1,18 @@
+% HELLO
+object = player = happy = Good evening, my name is Stephan.@I heard you were looking for me?
+player = object = convinced = Yes! I hear you can help me find someone@who stole something from me.
+object = player = determined = That depends… Do you know how to dance?
+
+
+% I_KNOW_DANCING
+player = object = determined = Looking for a dance-off?@Fine! But no waltzes. And you're going to lose!
+object = player = determined = Don't be so sure! I've got years of training!@Let's set the place on fire!
+
+
+% I_CANT_DANCE
+object = player = determined = Then you're going to learn! And don't worry,@we're not doing a waltz!
+
+
 % NOSTALGIC_HELLO
 object = player = fake_happy = Good evening, my Queen… So, here we are?@Is it time for our last dance?
 player = object = no_sens = No… Um… What? … Are you… Stephan?

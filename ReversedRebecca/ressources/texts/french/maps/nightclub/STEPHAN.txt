@@ -1,3 +1,18 @@
+% HELLO
+object = player = happy = Bonsoir, je m'appelle Stephan.@On m'a dit que tu me cherchais ?
+player = object = convinced = Oui ! Il parait que tu peux m'aider à retrouver@quelqu'un, qui m'a volé quelque chose.
+object = player = determined = Ça dépend… Tu sais danser ?
+
+
+% I_KNOW_DANCING
+player = object = determined = Tu cherches un battle ?@Ok ! Mais pas de valse. Et tu vas perde !
+object = player = determined = N'en sois pas si sûre ! J'ai des années@d'entrainement ! Mettons le feu à la salle !
+
+
+% I_CANT_DANCE
+object = player = determined = Alors, tu vas apprendre ! Et ne t'en fait pas,@ça n'est pas une valse au menu !
+
+
 % NOSTALGIC_HELLO
 object = player = fake_happy = Bonsoir, ma Reine… Alors, on y est ?@C'est l'heure de notre dernière danse ?
 player = object = no_sens = Non… Heu… Quoi ? … Es-tu… Stephan ?

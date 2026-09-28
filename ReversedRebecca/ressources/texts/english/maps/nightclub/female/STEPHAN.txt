@@ -1,3 +1,9 @@
+% HELLO
+object = player = happy = Good evening, my name is Sabrina.@I heard you were looking for me?
+player = object = convinced = Yes! I hear you can help me find someone@who stole something from me.
+object = player = determined = That depends… Do you know how to dance?
+
+
 % NOSTALGIC_HELLO
 object = player = fake_happy = Good evening, my Queen… So, here we are?@Is it time for our last dance?
 player = object = no_sens = No… Um… What? … Are you… Sabrina?

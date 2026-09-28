@@ -7,11 +7,14 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.physic.natural.independant.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
+import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveList;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.Save;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.world.World;
+import com.sunsigne.reversedrebecca.world.lvlstats.Counter;
+import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
 
 public class EndLevelRequest implements Request {
 
@@ -70,6 +73,7 @@ public class EndLevelRequest implements Request {
 		switch (endType) {
 
 		case "NORMAL":
+			updateForeverAndEver();
 			LAYER.MENU.addObject(new LevelCompletedScreen(lvl));
 			break;
 
@@ -95,6 +99,20 @@ public class EndLevelRequest implements Request {
 
 		// load next level
 		new World(lvl);
+	}
+
+	private void updateForeverAndEver() {
+		LevelStats stats = World.get().getLevelStats();
+		Counter counter1 = stats.getCounter(1);
+		Counter counter2 = stats.getCounter(2);
+		Counter counter3 = stats.getCounter(3);
+		
+		if(counter1.getCount() == 0 && counter2.getCount() == 0 && counter3.getCount() == 0) 
+			return;
+		
+		String datum = "FOREVER_AND_EVER*IMPOSSIBLE";
+		SaveList.getList().addObject(datum);
+		new Save().registerSave();
 	}
 
 }

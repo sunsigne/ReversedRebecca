@@ -4,8 +4,8 @@ KARMA=0
 MaxHp=2
 
 
-KeyMaxLvl=CYAN
-KeyStartLvl=NULL
+KeyMaxLvl=GREEN
+KeyStartLvl=CYAN
 KeyCriticalChance=15%
 
 BombMaxLvl=CYAN
