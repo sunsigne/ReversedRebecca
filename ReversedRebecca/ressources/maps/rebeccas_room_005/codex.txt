@@ -90,6 +90,6 @@ OBJ-48 = Cookie Counter
 
 ///// ENTRANCE /////
 
-NPC-02 = Sarah
+NPC-02 = Rebecca from Futur
 
 OBJ-47 = Glasses of water

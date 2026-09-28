@@ -90,6 +90,4 @@ OBJ-48 = Cookie Counter
 
 ///// ENTRANCE /////
 
-NPC-02 = Sarah
-
 OBJ-47 = Glasses of water

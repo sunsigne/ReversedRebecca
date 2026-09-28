@@ -49,6 +49,8 @@
 		- lit pas fini
 		- liens à faires
 		- indices des plantes
+		
+	- faire le niveau de fin de démo avec la musique du jeu
 	
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
