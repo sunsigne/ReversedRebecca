@@ -35,7 +35,7 @@
 	////////// EN COURS ////////////
 
 	- pixel art :
-		- créer la requete piranha
+		- créer la requete piranha ?
 		- traduction en anglais
 
 
