@@ -34,6 +34,11 @@
 		
 	////////// EN COURS ////////////
 
+	- demo :
+		- traduction anglais
+		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
+		- doit lancer la musique du menu
+
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :
 			- les deux lesbiennes :
@@ -84,6 +89,7 @@
 	- pixel art :
 		- créer la requete piranha ?
 		- traduction en anglais
+		- vérifier manette
 	
 	dessin : 
 	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique

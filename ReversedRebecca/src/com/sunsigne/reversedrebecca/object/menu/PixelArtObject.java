@@ -78,7 +78,7 @@ public class PixelArtObject extends GameObject implements TickFree {
 		return PhysicLinker.MENU;
 	}
 
-	////////// TEXTURE ////////////
+	////////// RENDER ////////////
 
 	private final Font fontText = new FontTask().createNewFont("dogicabold.ttf", 18f);
 	private Color color = Color.WHITE;
