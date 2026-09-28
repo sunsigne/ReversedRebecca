@@ -44,17 +44,12 @@
 				- quand on essaies d'aller se coucher ou de manger :
 				- rebecca realisé qu'elle a rdv avec marie. Elle doit s'habiller en conséquence et partir
 	
-		- utiliser le même code que rr003 pour le début de niveau (cutscene)
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
-		- la suite discothèque mais pas bourrée (rr005)
 		- lit pas fini
 		- liens à faires
+		- indices des plantes
 	
-		- cutscene d'intro à faire à la fin :
-			- rentre chez elle
-			- dépose la plante volée
-			
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
@@ -71,6 +66,9 @@
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
 	- dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
 	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
+	
+	nightclub :
+	- changer le compteur 2 (secret révélé)
 	
 	bonus :
 	- BD

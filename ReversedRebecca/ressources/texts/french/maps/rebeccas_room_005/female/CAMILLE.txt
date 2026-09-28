@@ -1,0 +1,4 @@
+% STEPHAN
+player = object = laugh = Sabrina m'aidera à trouver Vladimir, demain !
+object = DOWN = asleep = …
+player = object = worry = Tu dors encore, hein ?
