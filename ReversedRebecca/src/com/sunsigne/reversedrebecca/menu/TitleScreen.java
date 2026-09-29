@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.menu;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolList;
 import com.sunsigne.reversedrebecca.menu.submenu.BonusScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.DemoScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.LanguageScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.achievement.AchievementsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.options.OptionsScreen;
@@ -91,6 +92,7 @@ public class TitleScreen extends MenuScreen {
 
 	private void createOptionsButton() {
 		GenericListener onPress = () -> new OptionsScreen(OptionsScreen.GENERAL);
+		onPress = () -> new DemoScreen();
 		createTitleScreenButton(translate("OptionsButton"), OPTION, false, 515, onPress);
 	}
 

@@ -1,5 +1,0 @@
-sarah = sequestree : non
-camille = reveillee : non
-alicia = liberee : oui
-alicia = tuee : non
-marie = sort avec : oui

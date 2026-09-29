@@ -12,24 +12,19 @@ import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.system.Size;
-import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 
 public class DemoObject extends GameObject implements TickFree {
 
-	public DemoObject(String name) {
-		this(name, Window.WIDHT / 2 - 13 * Size.XS, -Size.L);
-	}
-
-	public DemoObject(String name, int x, int y) {
+	public DemoObject(String name, int x, int y, String... pamareters) {
 		super(x, y, 2 * Size.XL, Size.L);
 		this.name = name;
+		loadText(pamareters);
 	}
-
-	private String name;
 
 	////////// NAME ////////////
 
@@ -41,16 +36,43 @@ public class DemoObject extends GameObject implements TickFree {
 
 	////////// TEXT ////////////
 
-	private String text;
+	private String translate(String text) {
+		return new Translatable().getTranslatedText("Demo" + text, FilePath.MENU);
+	}
 
-	public String getText() {
-		if (text != null)
-			return text;
+	private String file = "save.csv";
+	private boolean userData = true;
 
-		text = new Translatable().getStrictTranslatedText(name, FilePath.DEMO);
-		if (text.isEmpty())
-			text = new Translatable().getTranslatedText(name, FilePath.DEMO);
-		return text;
+	public String getData(String parameter) {
+		String yes = translate("yes");
+		String no = translate("no");
+
+		if (parameter.contentEquals("yes"))
+			return yes;
+		if (parameter.contentEquals("no"))
+			return no;
+
+		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
+
+		for (String tempDatum : data) {
+			if (tempDatum.equalsIgnoreCase(parameter))
+				return yes;
+		}
+
+		return no;
+	}
+
+	private String line1;
+	private String line2;
+	private String line3;
+
+	private void loadText(String[] pamareters) {
+		if (pamareters.length > 0)
+			line1 = translate(pamareters[0]) + " : " + getData(pamareters[1]);
+		if (pamareters.length > 2)
+			line2 = translate(pamareters[2]) + " : " + getData(pamareters[3]);
+		if (pamareters.length > 4)
+			line3 = translate(pamareters[4]) + " : " + getData(pamareters[5]);
 	}
 
 	////////// PHYSICS ////////////
@@ -62,6 +84,7 @@ public class DemoObject extends GameObject implements TickFree {
 
 	////////// TEXTURE ////////////
 
+	private String name;
 	private BufferedImage image;
 
 	public BufferedImage getImage() {
@@ -82,11 +105,33 @@ public class DemoObject extends GameObject implements TickFree {
 	@Override
 	public void render(Graphics g) {
 		int w = Size.L;
-		g.drawImage(getImage(), getX(), getY(), w, Size.L, null);
 
+		if (name.contentEquals("double-y"))
+			w = 3 * w / 2;
+		else
+			g.drawImage(getImage(), getX(), getY(), w, Size.L, null);
+
+		
+		int gap = 80;
+
+		if (line3 != null)
+			drawLine(g, line3, w, 2 * gap);
+		else
+			gap = 120;
+
+		if (line2 != null)
+			drawLine(g, line2, w, gap);
+		else
+			gap = 160;
+
+		if (line1 != null)
+			drawLine(g, line1, w, gap - 80);
+	}
+
+	private void drawLine(Graphics g, String text, int w, int h) {
 		int height = getHeight() / 5;
-		int[] rect = new int[] { getX() + w, getY(), getWidth() - w, height };
-		new TextDecoration().drawShadowedString(g, fontText, getText(), color, Color.BLACK, DIRECTION.NULL, rect);
+		int[] rect = new int[] { getX() + Size.XS + w, getY() + 10, getWidth() - w, h + height };
+		new TextDecoration().drawShadowedString(g, fontText, text, color, Color.BLACK, DIRECTION.LEFT, rect);
 	}
 
 }

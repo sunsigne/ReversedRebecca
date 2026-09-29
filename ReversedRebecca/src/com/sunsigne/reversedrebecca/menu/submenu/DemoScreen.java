@@ -58,22 +58,22 @@ public class DemoScreen extends SubMenuScreen {
 		
 		String alexia = male ? "alexia_alexis" : "alexia_alicia";
 		String nolancy = male ? "nolancy_nolan" : "nolancy_nancy";
-		String stephabrina = female ? "stephabrina_sabrina" : "stephabrina_stephan";
+		String marichel = male ? "marichel_michel" : "marichel_marie";
 		String dougly = female ? "dougly_dolly" : "dougly_doug";
 		
-		loadDemo("sarah", 0, 0);
-		loadDemo("camille", 1, 0);
-		loadDemo("delta", 2, 0);
-		loadDemo(alexia, 0, 1);
-		loadDemo("erika", 1, 1);
-		loadDemo(dougly, 2, 1);
-		loadDemo("nathan", 0, 2);
-		loadDemo(nolancy, 1, 2);
-		loadDemo(stephabrina, 2, 2);
+		loadDemo("sarah", 0, 0, "Sequester", "PSYCHOPATH*SARAH_SEQUESTRATION");
+		loadDemo("camille", 1, 0, "Awaken", "STEPHAN*MET", "AboutToKillYou", "ANTAGONIST*DOUBLE-Y");
+		loadDemo("delta", 2, 0, "Princess", "STEPHAN*MET");
+		loadDemo(alexia, 0, 1, "Abandoned", "ALICIA*NOBODY_FREED_HER", "Killed", "PSYCHOPATH*ALICIA_KILLED");
+		loadDemo(marichel, 1, 1, "Dated", "MARIE*START_DATING");
+		loadDemo(dougly, 2, 1, "Met", "DOUG*MET", "Dated", "PSYCHOPATH*SHOOTOUT", "HelpedToKill", "PSYCHOPATH*SHOOTOUT");
+		loadDemo("nathan", 0, 2, "Met", "ANTAGONIST*DOUBLE-Y", "BeatenUp", "NATHAN*BEATEN_UP", "HelpedToKill", "NATHAN*POISONED_HIS_COLLEAGUE");
+		loadDemo(nolancy, 1, 2, "Met", "ANTAGONIST*DOUBLE-Y", "Dated", "NANCY*KISSED");
+		loadDemo("double-y", 2, 2, "Strong", "yes", "Smart", "yes", "GoodLooking", "yes");
 	}
 
-	private void loadDemo(String name, int col, int row) {
-		DemoObject demo_object = new DemoObject(name, Size.L - 10 + col * 6 * Size.M, 421 + row * 185);
+	private void loadDemo(String name, int col, int row, String...parameters) {
+		DemoObject demo_object = new DemoObject(name, Size.L - 10 + col * 6 * Size.M, 421 + row * 185, parameters);
 		LAYER.MENU.addObject(demo_object);
 	}
 

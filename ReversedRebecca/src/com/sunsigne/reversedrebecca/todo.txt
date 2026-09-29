@@ -38,6 +38,8 @@
 		- traduction anglais
 		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
 		- doit lancer la musique du menu
+		- à tester : male et femelle
+		- attetnion : DemoScreen : la donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :

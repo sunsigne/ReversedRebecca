@@ -128,12 +128,35 @@ VolumeVoice = voix
 
 ///// BONUS /////
 
-Demo = merci d'avoir joue
 PixelArtButton = pixel art
 DrawingsButton = dessins
 BDButton = BD
 SettingsButton = reglages
 CreditsButton = credits
+
+///// DEMO /////
+
+Demo = merci d'avoir joue
+DemoFullGame = C'est la fin de cette demo. On se retrouve pour le jeu complet ?
+DemoEnd = Fin obtenue
+DemoKillergRobot = 1/3 : Robot tueur...
+DemoTwoRebeccas = 2/3 : Deux Rebeccas ?!
+DemoYouWontStop = 3/3 : Tu ne t'arreteras pas la, n'est-ce pas ?
+DemoYes = oui
+DemoNo = non
+DemoSequester = sequestre
+DemoAwaken = reveille
+DemoMet = rencontre
+DemoAbandoned = abandonne
+DemoPrincess = princesse
+DemoBeatenUp = tabasse
+DemoDated = sort avec
+DemoKilled = tue
+DemoAboutToKillYou = va te tuer
+DemoHelpedToKill = aide a tuer
+DemoStrong = beau
+DemoSmart = fort
+DemoGoodLooking = intelligent
 
 ///// UPDATE /////
 
