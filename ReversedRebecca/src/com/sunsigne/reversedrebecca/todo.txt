@@ -35,24 +35,20 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
-		- le second ending du lit à mettre sur Camille (regarder npc02 pour retrouver les paramettres : affecting : START_EPILOGUE + memory : STEPHAN_MET
+		- le second ending du lit à mettre sur Camille
 	
 		- PNJ intervenant :
 			- les deux lesbiennes
 			- mika
+			- cas où on trompe marie avec l'un des 3 militaire ?
 
-		- faire Camille (peut varier d'un scénario à l'autre)
+		- faire TA Camille (varie d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
 		- liens à faires
 		- marie : terminer et relier la tenue "date" de rebecca (actuellement, c'est la tenue "towel" qui s'active)
 		- indices des plantes :
 			- après une bonne journée de travail, je n'ai plus qu'à aller dormir
-		
-	rr005 (bourré) :
-		- terminer le lit
-		- teminer l'intervention de dave
-		- enregistrer que la plante ne boit pas
-	
+
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
@@ -94,19 +90,14 @@
 	- 1h - en psychopath, faire des coeur menaçant ou lugubre
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
-
-	////////// RRXXX générique ////////////
-	
-	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
-	- sauvegarde de "OMELET_ON_TABLE" possiblement pas utilisé. A surveiller pour les niveaux futurs
-	- mettre à jour le texte Final Space
-	- mettre à jour Camille
-	- mettre à jour les indices des plantes
-	- préciser si c'est memory:morning (pour frigo et gazinière)
-	- counter à mettre à jour (le premier est tj le nombre de cookie / de chips mangé(e)s
 	
 	////////// RR005_DRUNK ////////////
-
+		
+	rr005 (bourré) :
+		- terminer le lit
+		- teminer l'intervention de dave
+		- enregistrer que la plante ne boit pas
+	
 	- interactions avec les objets :
 		à finir : 
 			- dormir sur le canapé
@@ -138,6 +129,16 @@
 	réorganiser le dossier "$working"
 
 	note : puzzle : cliquer = impact
+	
+	////////// RRXXX générique ////////////
+	
+	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
+	- sauvegarde de "OMELET_ON_TABLE" possiblement pas utilisé. A surveiller pour les niveaux futurs
+	- mettre à jour le texte Final Space
+	- mettre à jour Camille
+	- mettre à jour les indices des plantes
+	- préciser si c'est memory:morning (pour frigo et gazinière)
+	- counter à mettre à jour (le premier est tj le nombre de cookie / de chips mangé(e)s
 
 	////////// LINUX & MAC ////////////
 

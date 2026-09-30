@@ -2,3 +2,11 @@
 player = object = laugh = Stephan m'aidera à trouver Vladimir, demain !
 object = DOWN = asleep = …
 player = object = worry = Tu dors encore, hein ?
+
+
+% NOW_YOU_DIE
+object = player = killer = DESTRUCTION D'ÊTRE HUMAIN : ACTIVÉE
+
+
+% NOW_YOU_DIE_FAIL
+object = player = killer = … Elle n'est pas là ?
