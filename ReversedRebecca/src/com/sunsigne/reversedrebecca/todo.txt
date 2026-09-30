@@ -34,13 +34,6 @@
 		
 	////////// EN COURS ////////////
 
-	- demo :
-		- vérifier manette
-		- traduction anglais
-		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
-		- à tester : male et femelle
-		- attetnion : DemoScreen : la donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
-
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :
 			- les deux lesbiennes :
@@ -88,10 +81,13 @@
 		- préférence sexuelle
 	-(tout est actuellement temporairement relié au menu "general")
 
+	- demo :
+		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
+		- attention : DemoScreen : la donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
+
 	- pixel art :
 		- créer la requete piranha ?
 		- traduction en anglais
-		- vérifier manette
 	
 	dessin : 
 	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique

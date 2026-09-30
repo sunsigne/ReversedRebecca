@@ -25,10 +25,10 @@ import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 public class DemoScreen extends SubMenuScreen {
 
 	public DemoScreen() {
-		this(BACK, 0);
+		this(NULL);
 	}
 
-	protected DemoScreen(PresetMousePos defaultPreset, int listStart) {
+	protected DemoScreen(PresetMousePos defaultPreset) {
 		super(defaultPreset);
 		loadMusic();
 		loadText();
@@ -67,9 +67,9 @@ public class DemoScreen extends SubMenuScreen {
 		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 
 		for (String tempDatum : data) {
-			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
-				return 1;
 			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
+				return 1;
+			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
 				return 2;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
 				return 3;

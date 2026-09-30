@@ -134,6 +134,31 @@ BDButton = BD
 SettingsButton = settings
 CreditsButton = credits
 
+///// DEMO /////
+
+Demo = thanks for playing
+DemoFullGame = That's the end of the demo. See you in the full game?
+DemoEnd = ENDING REACHED
+DemoError = ERROR - CONTACT THE DEV
+DemoKillergRobot = KILLER ROBOT! (1/3)
+DemoTwoRebeccas = TWO REBECCAS? (2/3)
+DemoPsychopath = SERIAL KILLER (3/3)
+DemoYes = yes
+DemoNo = no
+DemoSequester = held captive
+DemoAwaken = awaken
+DemoMet = met
+DemoAbandoned = abandoned
+DemoPrincess = princess
+DemoBeatenUp = beaten up
+DemoDated = dating
+DemoKilled = killed
+DemoAboutToKillYou = will kill you
+DemoHelpedToKill = helped to kill
+DemoStrong = strong
+DemoSmart = smart
+DemoGoodLooking = handsome
+
 ///// UPDATE /////
 
 UpdateText = Game update available
