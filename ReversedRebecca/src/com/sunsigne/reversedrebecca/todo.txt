@@ -34,21 +34,17 @@
 		
 	////////// EN COURS ////////////
 
-	rr005 :
-		marie : 
-			- terminer commode + epilogue
-
 	rr005 (disco pas bourré) :
+		- le second ending du lit à mettre sur Camille (regarder npc02 pour retrouver les paramettres : affecting : START_EPILOGUE + memory : STEPHAN_MET
+	
 		- PNJ intervenant :
-			- les deux lesbiennes :
-				- débarquent
-			- mika :
-				- débarque à l'improviste au bout de X secondes
+			- les deux lesbiennes
+			- mika
 
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
-		- lit pas fini
 		- liens à faires
+		- marie : terminer et relier la tenue "date" de rebecca (actuellement, c'est la tenue "towel" qui s'active)
 		- indices des plantes :
 			- après une bonne journée de travail, je n'ai plus qu'à aller dormir
 		
@@ -75,7 +71,7 @@
 	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	
 	nightclub :
-	- changer le compteur 2 (secret révélé)
+	- changer le compteur 2 (secret révélé en enceintes touchées)
 	
 	bonus :
 	- BD
@@ -86,8 +82,7 @@
 		- préférence sexuelle
 	-(tout est actuellement temporairement relié au menu "general")
 
-	- demo :
-		- attention : DemoScreen : la donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
+	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
 	- pixel art :
 		- créer la requete piranha ? (proablement du java finallement)

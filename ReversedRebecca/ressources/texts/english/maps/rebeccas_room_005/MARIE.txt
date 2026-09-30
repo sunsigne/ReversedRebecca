@@ -29,3 +29,11 @@ player = DOWN = unhappy = No, I might completely ruin my appetite.@It's already 
 
 % GO_TO_THE_DATE
 player = DOWN = worry = Not in this outfit… A quick trip to my room@should fix that.
+
+
+% HERE_I_AM
+player = keep = laugh = Marie, here I am!
+
+
+% REBECCA2
+object = DOWN = convinced = Perfect, my double has just left.

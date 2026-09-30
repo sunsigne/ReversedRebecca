@@ -1,2 +1,6 @@
 % REALIZATION
 player = object = surprised = Wait a second! I have a date at the restaurant@with Michel!
+
+
+% HERE_I_AM
+player = keep = laugh = Michel, here I am!

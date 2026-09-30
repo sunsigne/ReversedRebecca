@@ -1,2 +1,6 @@
 % REALIZATION
 player = object = surprised = Une seconde ! Mais j'ai rendez-vous au restaurant@avec Michel !
+
+
+% HERE_I_AM
+player = keep = laugh = Michel, me voilà !
