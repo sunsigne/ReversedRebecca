@@ -34,16 +34,19 @@
 		
 	////////// EN COURS ////////////
 
+	rr005 :
+		marie : 
+			- (si ça se rajoute) female into male & traduction anglais 
+			- indice des plantes
+			- ne partira pas sans se faire belle (si on essaie de cliquer sur la porte, elle prévient que c'estr aurpès de son dressing qu'il faut aller)
+
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :
 			- les deux lesbiennes :
 				- débarquent
 			- mika :
 				- débarque à l'improviste au bout de X secondes
-			- marie (rdv à l'extérieur) :
-				- quand on essaies d'aller se coucher ou de manger :
-				- rebecca realisé qu'elle a rdv avec marie. Elle doit s'habiller en conséquence et partir
-	
+
 		- faire Camille (peut varier d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
 		- lit pas fini

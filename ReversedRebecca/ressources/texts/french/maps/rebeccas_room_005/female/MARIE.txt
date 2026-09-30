@@ -1,0 +1,2 @@
+% REALIZATION
+player = object = surprised = Une seconde ! Mais j'ai rendez-vous au restaurant@avec Michel !

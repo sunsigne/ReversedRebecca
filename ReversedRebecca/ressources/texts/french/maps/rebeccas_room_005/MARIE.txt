@@ -1,0 +1,29 @@
+% REALIZATION
+player = object = surprised = Une seconde ! Mais j'ai rendez-vous au restaurant@avec Marie !
+
+
+% GOOD_CONDITION
+player = DOWN = laugh = Je dois finir de me préparer, et partir.
+
+
+% TOO_MANY_CHIPS
+player = DOWN = unhappy_var = Je n'aurais peut-être pas dû manger autant de@chips… Enfin, ça va, j'ai encore de la place.
+
+
+% ALMOST_EATEN
+player = DOWN = fake_smile = Quelle chance que je n'ai pas mangé l'omelette@que je me suis préparée. Je n'ai plus qu'à la ranger.
+
+
+% ALREADY_EATEN
+player = DOWN = surprised = Mais c'est la catastrophe !@Je viens juste de dîner !
+player = DOWN = worry = Bon. J'imagine que je peux quand même y aller…@On partagera un dessert.
+
+
+% SPOIL_APPETITE
+player = DOWN = unhappy_var = Non, je risque de me couper l'appétit.
+
+
+% SPOIL_LEFT_APPETITE
+player = DOWN = unhappy = Non, je risque de définitivement me couper@l'appétit. Déjà qu'il est un peu compromis…
+
+

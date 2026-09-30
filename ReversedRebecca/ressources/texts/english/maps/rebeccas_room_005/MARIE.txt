@@ -1,0 +1,27 @@
+% REALIZATION
+player = object = surprised = Wait a second! I have a date at the restaurant@with Marie!
+
+
+% GOOD_CONDITION
+player = DOWN = laugh = I need to finish getting ready and head out.
+
+
+% TOO_MANY_CHIPS
+player = DOWN = unhappy_var = Maybe I shouldn't have eaten so many chips…@Oh well, it's fine; I've still got room.
+
+
+% ALMOST_EATEN
+player = DOWN = fake_smile = Lucky I didn't eat the omelet I made for myself.@I'll just put it away.
+
+
+% ALREADY_EATEN
+player = DOWN = surprised = This is a disaster! I just had dinner!
+player = DOWN = worry = Well. I guess I can still go…@We'll share a dessert.
+
+
+% SPOIL_APPETITE
+player = DOWN = unhappy_var = No, I might spoil my appetite.
+
+
+% SPOIL_LEFT_APPETITE
+player = DOWN = unhappy = No, I might completely ruin my appetite.@It's already a bit compromised as it is…

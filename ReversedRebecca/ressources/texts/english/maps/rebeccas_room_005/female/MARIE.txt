@@ -1,0 +1,2 @@
+% REALIZATION
+player = object = surprised = Wait a second! I have a date at the restaurant@with Michel!
