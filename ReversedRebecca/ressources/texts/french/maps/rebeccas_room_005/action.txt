@@ -6,6 +6,7 @@ GO_TO_BED = Key2 % se coucher
 ///// LIVING_ROOM /////
 
 MISSION_ACCOMPLISHED = Key1 % mission accomplie !
+TAPE = Key1 % cassette
 PUT_AWAY = Key2 % ranger
 
 

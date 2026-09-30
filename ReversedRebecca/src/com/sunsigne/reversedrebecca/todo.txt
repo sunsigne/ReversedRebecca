@@ -35,19 +35,13 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
-		- le second ending du lit à mettre sur Camille
-	
 		- PNJ intervenant :
 			- les deux lesbiennes
 			- mika
 			- cas où on trompe marie avec l'un des 3 militaire ?
-
-		- faire TA Camille (varie d'un scénario à l'autre)
 		- mettre la plante volée dans la cuisine
-		- liens à faires
 		- marie : terminer et relier la tenue "date" de rebecca (actuellement, c'est la tenue "towel" qui s'active)
-		- indices des plantes :
-			- après une bonne journée de travail, je n'ai plus qu'à aller dormir
+		- indices des plantes (Marie et Dormir déjà fait, reste-t-il vraiment quelque chose ?)
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?

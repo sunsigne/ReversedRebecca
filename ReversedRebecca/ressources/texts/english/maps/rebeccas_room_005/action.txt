@@ -6,6 +6,7 @@ GO_TO_BED = Key2 % go to bed
 ///// LIVING_ROOM /////
 
 MISSION_ACCOMPLISHED = Key1 % mission accomplised!
+TAPE = Key1 % tape
 PUT_AWAY = Key2 % put away
 
 

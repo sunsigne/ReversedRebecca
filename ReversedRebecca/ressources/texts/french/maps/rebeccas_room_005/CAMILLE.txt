@@ -4,6 +4,12 @@ object = DOWN = asleep = …
 player = object = worry = Tu dors encore, hein ?
 
 
+% TAPE
+player = object = laugh = Bonsoir Camille.@Tu saurais décoder une cassette cryptée ?
+object = DOWN = asleep = …
+player = object = you_silly = Ça valait le coup de tenter.
+
+
 % NOW_YOU_DIE
 object = player = killer = DESTRUCTION D'ÊTRE HUMAIN : ACTIVÉE
 

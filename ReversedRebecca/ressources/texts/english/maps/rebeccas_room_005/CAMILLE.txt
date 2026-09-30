@@ -4,6 +4,12 @@ object = DOWN = asleep = …
 player = object = worry = Still asleep, uh?
 
 
+% TAPE
+player = object = laugh = Good evening, Camille. Would you know to@decode an encrypted tape?
+object = DOWN = asleep = …
+player = object = you_silly = It was worth a try.
+
+
 % NOW_YOU_DIE
 object = player = killer = HUMAN DESTRUCTION: ACTIVATED
 
