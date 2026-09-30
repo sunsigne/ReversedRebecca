@@ -1,0 +1,3 @@
+% MARIE
+player = keep = asleep = Voyons voir…
+player = keep = excited = J'ai rendez-vous avec Michel. Je dois me@préparer et partir.

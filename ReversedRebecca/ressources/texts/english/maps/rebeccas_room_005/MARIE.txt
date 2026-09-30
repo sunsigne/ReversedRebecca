@@ -25,3 +25,7 @@ player = DOWN = unhappy_var = No, I might spoil my appetite.
 
 % SPOIL_LEFT_APPETITE
 player = DOWN = unhappy = No, I might completely ruin my appetite.@It's already a bit compromised as it is…
+
+
+% GO_TO_THE_DATE
+player = DOWN = worry = Not in this outfit… A quick trip to my room@should fix that.

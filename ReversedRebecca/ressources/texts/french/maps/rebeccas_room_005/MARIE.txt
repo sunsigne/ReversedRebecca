@@ -27,3 +27,5 @@ player = DOWN = unhappy_var = Non, je risque de me couper l'appétit.
 player = DOWN = unhappy = Non, je risque de définitivement me couper@l'appétit. Déjà qu'il est un peu compromis…
 
 
+% GO_TO_THE_DATE
+player = DOWN = worry = Pas dans cette tenue… Un petit tour dans@ma chambre devrait arranger ça.

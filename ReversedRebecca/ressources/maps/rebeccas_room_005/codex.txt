@@ -31,7 +31,7 @@ REGISTER = REBECCAS_ROOM*PLANT_STOLEN_WASTED
 
 ///// NULL /////
 
-OBJ-13 / OBJ-19 / OBJ-23 / OBJ-41 to OBJ-46
+OBJ-13 / OBJ-19 / OBJ-23 / OBJ-42 to OBJ-46
 
 ///// BEDROOM /////
 
@@ -92,4 +92,5 @@ OBJ-48 = Cookie Counter
 
 NPC-02 = Rebecca from Futur
 
+OBJ-41 = Special Exit Door
 OBJ-47 = Glasses of water

@@ -7,3 +7,8 @@ GO_TO_BED = Key2 % go to bed
 
 MISSION_ACCOMPLISHED = Key1 % mission accomplised!
 PUT_AWAY = Key2 % put away
+
+
+///// DATE /////
+
+GO_TO_THE_DATE = Key3 % go to the date

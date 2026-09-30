@@ -36,9 +36,7 @@
 
 	rr005 :
 		marie : 
-			- (si ça se rajoute) female into male & traduction anglais 
-			- indice des plantes
-			- ne partira pas sans se faire belle (si on essaie de cliquer sur la porte, elle prévient que c'estr aurpès de son dressing qu'il faut aller)
+			- terminer commode + epilogue
 
 	rr005 (disco pas bourré) :
 		- PNJ intervenant :
@@ -53,10 +51,7 @@
 		- liens à faires
 		- indices des plantes :
 			- après une bonne journée de travail, je n'ai plus qu'à aller dormir
-			- j'ai rendez-vous avec Marie. Je dois me préparer et partir
 		
-	- faire le niveau de fin de démo avec la musique du jeu
-	
 	rr005 (bourré) :
 		- terminer le lit
 		- teminer l'intervention de dave

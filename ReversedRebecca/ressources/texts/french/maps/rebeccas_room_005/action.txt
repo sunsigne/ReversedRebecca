@@ -7,3 +7,8 @@ GO_TO_BED = Key2 % se coucher
 
 MISSION_ACCOMPLISHED = Key1 % mission accomplie !
 PUT_AWAY = Key2 % ranger
+
+
+///// DATE /////
+
+GO_TO_THE_DATE = Key3 % aller au rendez-vous

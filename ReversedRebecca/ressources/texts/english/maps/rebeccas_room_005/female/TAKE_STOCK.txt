@@ -1,0 +1,3 @@
+% MARIE
+player = keep = asleep = Let's see…
+player = keep = excited = I have a date with Michel. I need to get ready@and leave.
