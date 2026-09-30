@@ -35,6 +35,7 @@
 	////////// EN COURS ////////////
 
 	- demo :
+		- vérifier manette
 		- traduction anglais
 		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
 		- à tester : male et femelle

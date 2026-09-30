@@ -1,8 +1,8 @@
 package com.sunsigne.reversedrebecca.piranha.request.other;
 
-import com.sunsigne.reversedrebecca.menu.DemoEndScreen;
 import com.sunsigne.reversedrebecca.menu.LevelCompletedScreen;
 import com.sunsigne.reversedrebecca.menu.LoadingScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.DemoScreen;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.physic.natural.independant.LifeAndDeathLaw;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
@@ -84,7 +84,7 @@ public class EndLevelRequest implements Request {
 
 		case "END_GAME":
 			World.get().destroy();
-			LAYER.MENU.addObject(new DemoEndScreen());
+			LAYER.MENU.addObject(new DemoScreen());
 			LAYER.LOADING.getHandler().clear();
 			break;
 		}
@@ -106,10 +106,10 @@ public class EndLevelRequest implements Request {
 		Counter counter1 = stats.getCounter(1);
 		Counter counter2 = stats.getCounter(2);
 		Counter counter3 = stats.getCounter(3);
-		
-		if(counter1.getCount() == 0 && counter2.getCount() == 0 && counter3.getCount() == 0) 
+
+		if (counter1.getCount() == 0 && counter2.getCount() == 0 && counter3.getCount() == 0)
 			return;
-		
+
 		String datum = "FOREVER_AND_EVER*IMPOSSIBLE";
 		SaveList.getList().addObject(datum);
 		new Save().registerSave();
