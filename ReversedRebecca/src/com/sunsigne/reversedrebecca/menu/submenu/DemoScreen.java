@@ -1,15 +1,22 @@
 package com.sunsigne.reversedrebecca.menu.submenu;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.DemoObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenText;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.FileTask;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Size;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
@@ -23,10 +30,15 @@ public class DemoScreen extends SubMenuScreen {
 
 	protected DemoScreen(PresetMousePos defaultPreset, int listStart) {
 		super(defaultPreset);
+		loadMusic();
 		loadText();
 		loadDemos();
 
 		customBackButton();
+	}
+
+	private void loadMusic() {
+		new SoundTask().playMusic("3_joys_and_the_truth", false, false);
 	}
 
 	////////// NAME ////////////
@@ -45,9 +57,45 @@ public class DemoScreen extends SubMenuScreen {
 
 	////////// TEXT ////////////
 
+	private Font[] fontText = new Font[2];
+	private String[] text = new String[2];
+
+	private int getEnding() {
+		String file = "save.csv";
+		boolean userData = true;
+
+		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
+
+		for (String tempDatum : data) {
+			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
+				return 1;
+			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
+				return 2;
+			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
+				return 3;
+		}
+
+		return 0;
+	}
+
 	private void loadText() {
 		TitleScreenText demo = new TitleScreenText(translate("demo"), Window.WIDHT / 2 - 208, 22);
 		LAYER.MENU.addObject(demo);
+
+		fontText[0] = new FontTask().createNewFont("dogicabold.ttf", 25f);
+		fontText[1] = new FontTask().createNewFont("dogicabold.ttf", 40f);
+		text[0] = translate("Demo" + "FullGame");
+
+		int end = getEnding();
+
+		if (end == 1)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "KillergRobot");
+		else if (end == 2)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "TwoRebeccas");
+		else if (end == 3)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Psychopath");
+		else
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Error");
 	}
 
 	////////// DEMOS ////////////
@@ -55,24 +103,26 @@ public class DemoScreen extends SubMenuScreen {
 	private void loadDemos() {
 		boolean female = LivingOption.getType() == LIVING_TYPE.FEMALE;
 		boolean male = LivingOption.getType() == LIVING_TYPE.MALE;
-		
+
 		String alexia = male ? "alexia_alexis" : "alexia_alicia";
 		String nolancy = male ? "nolancy_nolan" : "nolancy_nancy";
 		String marichel = male ? "marichel_michel" : "marichel_marie";
 		String dougly = female ? "dougly_dolly" : "dougly_doug";
-		
+
 		loadDemo("sarah", 0, 0, "Sequester", "PSYCHOPATH*SARAH_SEQUESTRATION");
 		loadDemo("camille", 1, 0, "Awaken", "STEPHAN*MET", "AboutToKillYou", "ANTAGONIST*DOUBLE-Y");
 		loadDemo("delta", 2, 0, "Princess", "STEPHAN*MET");
 		loadDemo(alexia, 0, 1, "Abandoned", "ALICIA*NOBODY_FREED_HER", "Killed", "PSYCHOPATH*ALICIA_KILLED");
 		loadDemo(marichel, 1, 1, "Dated", "MARIE*START_DATING");
-		loadDemo(dougly, 2, 1, "Met", "DOUG*MET", "Dated", "PSYCHOPATH*SHOOTOUT", "HelpedToKill", "PSYCHOPATH*SHOOTOUT");
-		loadDemo("nathan", 0, 2, "Met", "ANTAGONIST*DOUBLE-Y", "BeatenUp", "NATHAN*BEATEN_UP", "HelpedToKill", "NATHAN*POISONED_HIS_COLLEAGUE");
+		loadDemo(dougly, 2, 1, "Met", "DOUG*MET", "Dated", "PSYCHOPATH*SHOOTOUT", "HelpedToKill",
+				"PSYCHOPATH*SHOOTOUT");
+		loadDemo("nathan", 0, 2, "Met", "ANTAGONIST*DOUBLE-Y", "BeatenUp", "NATHAN*BEATEN_UP", "HelpedToKill",
+				"NATHAN*POISONED_HIS_COLLEAGUE");
 		loadDemo(nolancy, 1, 2, "Met", "ANTAGONIST*DOUBLE-Y", "Dated", "NANCY*KISSED");
 		loadDemo("double-y", 2, 2, "Strong", "yes", "Smart", "yes", "GoodLooking", "yes");
 	}
 
-	private void loadDemo(String name, int col, int row, String...parameters) {
+	private void loadDemo(String name, int col, int row, String... parameters) {
 		DemoObject demo_object = new DemoObject(name, Size.L - 10 + col * 6 * Size.M, 421 + row * 185, parameters);
 		LAYER.MENU.addObject(demo_object);
 	}
@@ -93,6 +143,13 @@ public class DemoScreen extends SubMenuScreen {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), 0, 0, Window.WIDHT, Window.HEIGHT, null);
+
+		int[] rect = new int[] { Window.WIDHT / 2, 102, 0, 200 };
+		new TextDecoration().drawShadowedString(g, fontText[0], text[0], Color.WHITE, Color.BLACK, DIRECTION.NULL,
+				rect);
+		rect = new int[] { Window.WIDHT / 2, 202, 0, 200 };
+		new TextDecoration().drawShadowedString(g, fontText[1], text[1], Color.WHITE, Color.BLACK, DIRECTION.NULL,
+				rect);
 	}
 
 	////////// GAMEPAD ////////////
