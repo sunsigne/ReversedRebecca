@@ -57,8 +57,31 @@ public class DemoScreen extends SubMenuScreen {
 
 	////////// TEXT ////////////
 
-	private Font[] fontText = new Font[2];
-	private String[] text = new String[2];
+	private Font[] fontText;
+	private String[] text;
+
+	private void loadText() {
+		TitleScreenText demo = new TitleScreenText(translate("demo"), Window.WIDHT / 2 - 208, 22);
+		LAYER.MENU.addObject(demo);
+
+		fontText = new Font[2];
+		text = new String[2];
+
+		fontText[0] = new FontTask().createNewFont("dogicabold.ttf", 25f);
+		fontText[1] = new FontTask().createNewFont("dogicabold.ttf", 40f);
+		text[0] = translate("Demo" + "FullGame");
+
+		int end = getEnding();
+
+		if (end == 1)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "KillergRobot");
+		else if (end == 2)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "TwoRebeccas");
+		else if (end == 3)
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Psychopath");
+		else
+			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Error");
+	}
 
 	private int getEnding() {
 		String file = "save.csv";
@@ -76,26 +99,6 @@ public class DemoScreen extends SubMenuScreen {
 		}
 
 		return 0;
-	}
-
-	private void loadText() {
-		TitleScreenText demo = new TitleScreenText(translate("demo"), Window.WIDHT / 2 - 208, 22);
-		LAYER.MENU.addObject(demo);
-
-		fontText[0] = new FontTask().createNewFont("dogicabold.ttf", 25f);
-		fontText[1] = new FontTask().createNewFont("dogicabold.ttf", 40f);
-		text[0] = translate("Demo" + "FullGame");
-
-		int end = getEnding();
-
-		if (end == 1)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "KillergRobot");
-		else if (end == 2)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "TwoRebeccas");
-		else if (end == 3)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Psychopath");
-		else
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Error");
 	}
 
 	////////// DEMOS ////////////
@@ -143,6 +146,9 @@ public class DemoScreen extends SubMenuScreen {
 	@Override
 	public void render(Graphics g) {
 		g.drawImage(getImage(), 0, 0, Window.WIDHT, Window.HEIGHT, null);
+
+		if (fontText == null || text == null)
+			return;
 
 		int[] rect = new int[] { Window.WIDHT / 2, 102, 0, 200 };
 		new TextDecoration().drawShadowedString(g, fontText[0], text[0], Color.WHITE, Color.BLACK, DIRECTION.NULL,

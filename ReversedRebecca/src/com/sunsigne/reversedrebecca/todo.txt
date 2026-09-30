@@ -82,11 +82,11 @@
 	-(tout est actuellement temporairement relié au menu "general")
 
 	- demo :
-		- menu : lien à faire avec niveau d'avant, écran titre & reset de sauvegarde
 		- attention : DemoScreen : la donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
 	- pixel art :
-		- créer la requete piranha ?
+		- créer la requete piranha ? (proablement du java finallement)
+		- mettre à jour dossier de création (qui dit qu'il faut faire du piranha)
 		- traduction en anglais
 	
 	dessin : 

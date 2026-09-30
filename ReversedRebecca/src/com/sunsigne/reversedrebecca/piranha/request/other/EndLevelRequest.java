@@ -86,6 +86,7 @@ public class EndLevelRequest implements Request {
 			World.get().destroy();
 			LAYER.MENU.addObject(new DemoScreen());
 			LAYER.LOADING.getHandler().clear();
+			new Save().resetProgression();
 			break;
 		}
 	}
