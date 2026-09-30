@@ -143,6 +143,7 @@ DemoError = ERREUR - CONTACTEZ LE DEV
 DemoKillergRobot = ROBOT TUEUR ! (1/3)
 DemoTwoRebeccas = DEUX REBECCAS ? (2/3)
 DemoPsychopath = TUEUR EN SERIE (3/3)
+DemoForeverAndEver = POUR TOUJOURS (4/3)
 DemoYes = oui
 DemoNo = non
 DemoSequester = sequestre

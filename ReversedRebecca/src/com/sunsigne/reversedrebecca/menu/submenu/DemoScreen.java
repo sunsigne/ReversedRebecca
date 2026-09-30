@@ -72,15 +72,18 @@ public class DemoScreen extends SubMenuScreen {
 		text[0] = translate("Demo" + "FullGame");
 
 		int end = getEnding();
+		text[1] = translate("Demo" + "End").concat(" : ");
 
 		if (end == 1)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "KillergRobot");
+			text[1] = text[1].concat(translate("Demo" + "KillergRobot"));
 		else if (end == 2)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "TwoRebeccas");
+			text[1] = text[1].concat(translate("Demo" + "TwoRebeccas"));
 		else if (end == 3)
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Psychopath");
+			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
+		else if (end == 4)
+			text[1] = text[1].concat(translate("Demo" + "ForeverAndEver"));
 		else
-			text[1] = translate("Demo" + "End") + " : " + translate("Demo" + "Error");
+			text[1] = text[1].concat(translate("Demo" + "Error"));
 	}
 
 	private int getEnding() {
@@ -88,6 +91,14 @@ public class DemoScreen extends SubMenuScreen {
 		boolean userData = true;
 
 		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
+
+		boolean foreverImpsossible = false;
+
+		for (String tempDatum : data)
+			if (tempDatum.equalsIgnoreCase("FOREVER_AND_EVER*IMPOSSIBLE"))
+				foreverImpsossible = true;
+		if (foreverImpsossible == false)
+			return 4;
 
 		for (String tempDatum : data) {
 			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
