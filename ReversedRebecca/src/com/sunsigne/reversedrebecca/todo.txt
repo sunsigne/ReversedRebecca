@@ -48,9 +48,16 @@
 		- mettre la plante volée dans la cuisine
 		- lit pas fini
 		- liens à faires
-		- indices des plantes
+		- indices des plantes :
+			- après une bonne journée de travail, je n'ai plus qu'à aller dormir
+			- j'ai rendez-vous avec Marie. Je dois me préparer et partir
 		
 	- faire le niveau de fin de démo avec la musique du jeu
+	
+	rr005 (bourré) :
+		- terminer le lit
+		- teminer l'intervention de dave
+		- enregistrer que la plante ne boit pas
 	
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
