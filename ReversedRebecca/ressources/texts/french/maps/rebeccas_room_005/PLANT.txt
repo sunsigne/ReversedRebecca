@@ -1,3 +1,7 @@
+% PLACING_STOLEN
+player = keep = laugh = J'avais dit que tu finirais dans ma cuisine.
+
+
 % GREET
 player = object = happy_var = Bonsoir Vera, je t'ai manqué ?
 
