@@ -147,7 +147,6 @@ DemoForeverAndEver = POUR TOUJOURS (4/3)
 DemoYes = oui
 DemoNo = non
 DemoSequester = sequestre
-DemoAwaken = reveille
 DemoMet = rencontre
 DemoAbandoned = abandonne
 DemoPrincess = princesse

@@ -147,7 +147,6 @@ DemoForeverAndEver = FOREVER AND EVER (4/3)
 DemoYes = yes
 DemoNo = no
 DemoSequester = held captive
-DemoAwaken = awaken
 DemoMet = met
 DemoAbandoned = abandoned
 DemoPrincess = princess

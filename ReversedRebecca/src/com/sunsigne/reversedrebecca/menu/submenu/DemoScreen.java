@@ -124,7 +124,7 @@ public class DemoScreen extends SubMenuScreen {
 		String dougly = female ? "dougly_dolly" : "dougly_doug";
 
 		loadDemo("sarah", 0, 0, "Sequester", "PSYCHOPATH*SARAH_SEQUESTRATION");
-		loadDemo("camille", 1, 0, "Awaken", "STEPHAN*MET", "AboutToKillYou", "ANTAGONIST*DOUBLE-Y");
+		loadDemo("camille", 1, 0, "AboutToKillYou", "ANTAGONIST*DOUBLE-Y");
 		loadDemo("delta", 2, 0, "Princess", "STEPHAN*MET");
 		loadDemo(alexia, 0, 1, "Abandoned", "ALICIA*NOBODY_FREED_HER", "Killed", "PSYCHOPATH*ALICIA_KILLED");
 		loadDemo(marichel, 1, 1, "Dated", "MARIE*START_DATING");
