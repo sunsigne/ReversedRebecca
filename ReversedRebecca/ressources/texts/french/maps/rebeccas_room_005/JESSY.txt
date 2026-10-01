@@ -8,111 +8,37 @@ object = player = angry_var = C'est la police ! Ouvrez, ou en entre !
 object = player = angry = En fait, on va rentrer quand même !
 
 
+% PROVOCATION
+object = player = sadistic_happy = Alors comme ça on décide de s'immiscer dans@un couple ? 
 
 
+% PROVOCATION_NEXT
+object = player = deep = Ça n'est pas très réglementaire, c'est même…@totalement interdit… 
+object = player = deep_provocative = Tu mérites une punition… Je vais te montrer@comment je me sers réellement de mes menottes…
 
 
-
-% THATS_BAD_OR_FUN
-object = player = sadistic_happy = Je ne t'ai pas demandé ton avis, la bleue.@D'ailleurs, j'ai envie d'une bombe. Apporte-moi ça.
-
-
-% NEED_HELP
-object = player = sadistic_happy = Puisque tu demande, j'ai envie d'une bombe.@Apporte-moi ça.
+% FAKE_ARRESTATION
+object = player = deep_provocative = Tu as le droit de garder le silence. Tout objet@que je possède pourra être utilisé contre toi.
 
 
-% GO_GET_IT_YOURSELF
-object = player = dreaming = Tu m'as probablement mal entendue…
-object = player = angry_var2 = J'ai dit : apporte-moi une bombe !
-
-
-% YES_MAAM
-object = player = doubt = Ah, tu y vas vraiment ?@Très bien, je t'attends alors.
-
-
-% IN_YOUR_DREAMS
-object = RIGHT = angry = Pfff. T'es pas marrante. Allez, dégage.@J'ai une cible à trouer.
-
-
-% APOLOGIZE
-object = RIGHT = dreaming = Qu'entends-je ? Qu'ouïe-je ? Peut-être qu'une@bombe m'aiderait à me déboucher les oreilles.
-
-
-% BLOW_HER_FACE_OFF
-player = DOWN = angry_var2 = Franchement, l'envie y est !
-
-
-% HERES_THE_BOMBS
-object = RIGHT = dreaming = Non, merci. Elles ne sont pas de la bonne couleur.@Retournes-y et arrange-moi ça.
-
-
-% HERES_THE_BOMBS_NUMBER
-object = RIGHT = dreaming = Non, merci. Elles n'ont pas le bon numéro.@Retournes-y et arrange-moi ça.
-
-
-% BOMB_NANCY
-object = player = sadistic_happy = Nan, tu sais quoi ? J'ai changé d'avis.@Dis à Nancy d'y aller.
-
-
-% NANCY_IS_INDISPOSED
-object = RIGHT = doubt = J'ai raté la partie où c'est mon problème.
-
-
-% WHO_IS_NANCY
-object = RIGHT = doubt = Regarde dans l'infirmerie.
-
-
-% POST_LIE
-object = player = doubt = Tu t'appelles Nancy ?
-player = object = unhappy = Elle ne veut pas y aller.
-object = player = angry_var2 = Pardon ?! Je réglerai ça avec elle plus tard.@Maintenant, dégage.
-
-
-% RENDEZ_VOUS
-jamessy = player = deep = Bon, mademoiselle, tu es plutôt mon genre…@J'ai assez envie d'utiliser mes menottes sur toi.
-jamessy = player = wink = Retrouve-moi dans quelques minutes derrière@la chambre froide.
-jamessy = nolancy = sadistic_smirk = Viens avec moi, Nancy.@On doit mettre certaines choses au clair.
-
-
-% NANCY_NOT_NOW
-nolancy = LEFT = happy = Hey ! C'est une conversation privée.
-
-
-% REQUEST_A_FIREARM
-nolancy = LEFT = excited = C'est mort !
-
-
-% EAVESDROPPING
-object = LEFT = doubt = Je rêve, ou tu écoutes aux portes ?
-object = LEFT = deep = Vilaine fille… Tu vas voir.
-
-
-% HARD_SEDUCING_EAVESDROPPING
-object = player = deep = Alors comme ça, on écoute aux portes ?
-
-
-% HARD_SEDUCING_BOMBS
-object = player = deep = Alors comme ça, tu me fais répéter quand je te@demande quelque chose ?
-
-
-% HARD_SEDUCING_WAITING
-object = player = deep = Alors comme ça, on me fait attendre ?
-
-
-% HARD_SEDUCING_NEUTRAL
-object = player = deep = Alors comme ça, on traîne avec ma Nancy ?
-
-
-% HARD_SEDUCING_NEXT
-object = player = deep_provocative = Tu aimes les punitions ? Parce que j'ai bien envie@de t'expliquer un truc ou deux, là tout de suite.
-object = player = deep = Mais je vais rester sage moi aussi, en tout cas@pour le moment.
-object = player = deep_provocative = J'ai parlé à Nancy, on a décidé de passer@toutes les deux chez toi, ce soir.
-object = player = aroused = Alors à bientôt, ma chose.
-
-
-% REBECCA_IS_HAVING_A_BLAST
-player = DOWN = blush_var = Wow !
-
-
-% NOT_NOW
-object = RIGHT = wink = Pas maintenant. J'ai une cible à trouer.
+% OTHER
+(cas du mensonge)
+jessy = player = angry_var = Police ! Ouvrez, ou j'enfonce la porte !
+jessy = player = angry = Alors comme ça on drague ma copine sans ma permission ?!
+rebecca = jessy = angry = Nancy n'a pas besoin de ta permission, elle fait ce qu'elle veut, c'est une adulte ! 
+jessy = player = angry_var2 = Une adulte qui m'appartient, personne ne la touche à part moi !
+nancy = player = ??? = Si je peux me permettr- (dialogue interrompu par le moteur du jeu)
+jessy = player = ??? = Tu ne te permets rien du tout.
+jessy = player = ??? = Quant à toi…
+(plaquée contre un mur)	
+jessy = player = aroused = Tu mérites une punition… Je vais te montrer comment je me sers réellement de mes menottes...
+[E] la repousser [R] l'embrasser. 
+(version où on la repousse)
+rebecca = jessy = angry = Tu t'es cru où ? Sors de chez moi !
+nancy = player = Jessy, je pense qu'on devr- (parole coupée)
+jessy = player = ??? = La ferme ! Tu veux te taper cette garce dans mon dos ? Vas-y sale trainée !
+(part en la poussant)
+nancy = player = sad = Rebecca, je suis désolée pour tout ça (ou Jessy). 
+nancy = player = sad_side = Aussi, tu n'aurais pas dû me mentir…
+nancy = player = cry = Et maintenant, Jessy m'a… Jessy est…
+[E] Ça va aller… [R] Sucks to be you… (Ca craint d'être toi…)
