@@ -22,4 +22,4 @@ object = player = deep = Alors comme ça, on traîne avec mon Nolan ?
 object = player = deep_provocative = Tu aimes les punitions ? Parce que j'ai bien envie@de t'expliquer un truc ou deux, là tout de suite.
 object = player = deep = Mais je vais rester sage moi aussi, en tout cas@pour le moment.
 object = player = deep_provocative = J'ai parlé à Nolan, on a décidé de passer@tous les deux chez toi, ce soir.
-object = player = aroused = Alors à bientôt, ma chose.
+object = player = deep_provocative_var = Alors à bientôt, ma chose.

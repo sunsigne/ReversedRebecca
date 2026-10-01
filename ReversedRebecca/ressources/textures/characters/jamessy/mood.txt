@@ -21,5 +21,5 @@ doubt=3,3
 
 deep=4,1
 deep_provocative=4,2
-deep_provocative_var=4,2
-aroused=4,3
+deep_provocative_var=4,3
+aroused=4,4

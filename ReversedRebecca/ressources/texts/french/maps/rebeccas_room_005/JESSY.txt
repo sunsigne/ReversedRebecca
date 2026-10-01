@@ -1,11 +1,11 @@
 % POLICE
 object = player = deep = C'est la police. Ouvrez, ou on entre…
-object = player = deep_provocative = Je rigole. On va rentrer quand même.
+object = player = deep_provocative = Je rigole. On va rentrer de toute façon.
 
 
 % POLICE_MAD
 object = player = angry_var = C'est la police ! Ouvrez, ou en entre !
-object = player = angry = En fait, on va rentrer quand même !
+object = player = angry = En fait, on va rentrer de toute façon !
 
 
 % PROVOCATION
@@ -19,6 +19,14 @@ object = player = deep_provocative = Tu mérites une punition… Je vais te mont
 
 % FAKE_ARRESTATION
 object = player = deep_provocative = Tu as le droit de garder le silence. Tout objet@que je possède pourra être utilisé contre toi.
+object = player = aroused = Nancy sera ton avocate.@Elle s'assurera que je ne fasses pas trop de …
+object = player = deep_provocative = … bavures policières.
+
+
+% PROVOCATION_BED
+object = up = deep_provocative_var = Alors ?@Tu fais moins la maligne qu'au commissariat ?
+object = up = deep = Tu crois peut-être que c'est autorisé de passer@devant moi, en étant aussi canon ?
+object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais bien m'amuser avec toi…
 
 
 % OTHER
