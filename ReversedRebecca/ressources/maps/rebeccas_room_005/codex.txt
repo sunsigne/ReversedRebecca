@@ -91,6 +91,8 @@ OBJ-48 = Cookie Counter
 ///// ENTRANCE /////
 
 NPC-02 = Rebecca from Futur
+NPC-03 = Jessy
+NPC-04 = Nancy
 
 OBJ-41 = Special Exit Door
 OBJ-47 = Glasses of water

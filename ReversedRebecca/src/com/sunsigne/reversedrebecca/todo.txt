@@ -29,6 +29,7 @@
 	
 	bug :		
 		- plus on monte les étage de la tour, plus ça lag (à tester avec les 2 modif sur groundrendering et handler sur un ordinateur lent)
+		- dans mliliraty_after, on lance la musique de YY, ce qui lance le pause preventer pendant 2 minutes
 		
 	changer le lien "signaler un bug" pour le discord
 		
