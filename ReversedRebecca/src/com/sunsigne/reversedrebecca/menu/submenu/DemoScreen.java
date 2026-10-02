@@ -74,16 +74,25 @@ public class DemoScreen extends SubMenuScreen {
 		int end = getEnding();
 		text[1] = translate("Demo" + "End").concat(" : ");
 
-		if (end == 1)
+		switch (end) {
+		case 1:
 			text[1] = text[1].concat(translate("Demo" + "KillergRobot"));
-		else if (end == 2)
+			break;
+		case 2:
 			text[1] = text[1].concat(translate("Demo" + "TwoRebeccas"));
-		else if (end == 3)
+			break;
+		case 3:
+			text[1] = text[1].concat(translate("Demo" + "ItsHeatingUp"));
+			break;
+		case 4:
 			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
-		else if (end == 4)
+			break;
+		case 5:
 			text[1] = text[1].concat(translate("Demo" + "ForeverAndEver"));
-		else
+			break;
+		default:
 			text[1] = text[1].concat(translate("Demo" + "Error"));
+		}
 	}
 
 	private int getEnding() {
@@ -93,21 +102,34 @@ public class DemoScreen extends SubMenuScreen {
 		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 
 		boolean foreverImpsossible = false;
-
-		for (String tempDatum : data)
-			if (tempDatum.equalsIgnoreCase("FOREVER_AND_EVER*IMPOSSIBLE"))
-				foreverImpsossible = true;
-		if (foreverImpsossible == false)
-			return 4;
+		boolean psychopath = false;
+		boolean hot = false;
+		boolean doublee = false;
+		boolean killer = false;
 
 		for (String tempDatum : data) {
-			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
-				return 1;
-			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
-				return 2;
+			if (tempDatum.equalsIgnoreCase("FOREVER_AND_EVER*IMPOSSIBLE"))
+				foreverImpsossible = true;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
-				return 3;
+				psychopath = true;
+			if (tempDatum.equalsIgnoreCase("JESSY*FUCKED_REBECCA"))
+				hot = true;
+			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
+				doublee = true;
+			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
+				killer = true;
 		}
+
+		if (foreverImpsossible == false)
+			return 5;
+		if (psychopath)
+			return 4;
+		if (hot)
+			return 3;
+		if (doublee)
+			return 2;
+		if (killer)
+			return 1;
 
 		return 0;
 	}
@@ -132,7 +154,8 @@ public class DemoScreen extends SubMenuScreen {
 				"PSYCHOPATH*SHOOTOUT");
 		loadDemo("nathan", 0, 2, "Met", "ANTAGONIST*DOUBLE-Y", "BeatenUp", "NATHAN*BEATEN_UP", "HelpedToKill",
 				"NATHAN*POISONED_HIS_COLLEAGUE");
-		loadDemo(nolancy, 1, 2, "Met", "ANTAGONIST*DOUBLE-Y", "Dated", "NANCY*KISSED");
+		loadDemo(nolancy, 1, 2, "Met", "ANTAGONIST*DOUBLE-Y", "Dated", "NANCY*KISSED", "SleptWith",
+				"JESSY*FUCKED_REBECCA");
 		loadDemo("double-y", 2, 2, "Strong", "yes", "Smart", "yes", "GoodLooking", "yes");
 	}
 

@@ -37,9 +37,14 @@
 
 	rr005 (disco pas bourré) :
 		- mika
-		- les deux lesbiennes (faire le cas où on est en serviette)
 		- cas où on trompe marie avec les lesbiennes ? Ca change des dialgoues de MARIE ? Des plantes ?
 		- marie : terminer la tenue "date"
+		- les deux lesbiennes :
+			- gérer le cas où on Jessy est contrariée (snobbé ou Nancy mentie)
+			- gérer le cas "serviette"
+			- créer la possibilité de refuser alors qu'on était pour
+			- adapter les diaglogues à la version "male"
+			- traduction anglais
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?

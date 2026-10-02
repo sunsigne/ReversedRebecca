@@ -25,8 +25,8 @@ object = player = deep_provocative = … bavures policières.
 
 % PROVOCATION_BED
 object = up = deep_provocative_var = Alors ?@Tu fais moins la maligne qu'au commissariat ?
-object = up = deep = Tu crois peut-être que c'est autorisé de passer@devant moi, en étant aussi canon ?
-object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais bien m'amuser avec toi…
+object = up = deep = Tu crois peut-être que c'est autorisé de passer@devant moi en étant aussi canon ?
+object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais m'assurer que ça dure des heures…
 
 
 % OTHER
