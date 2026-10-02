@@ -10,6 +10,8 @@ TAPE = Key1 % tape
 PUT_AWAY = Key2 % put away
 
 
-///// DATE /////
+///// EXTRA /////
 
 GO_TO_THE_DATE = Key3 % go to the date
+FOLLOW_HER = Key1 % follow her
+PUSH_HER_AWAY = Key2 % push her away

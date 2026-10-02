@@ -53,6 +53,7 @@ public class LivingAnimationHandler {
 	///// not orientable & not animated /////
 
 	private LivingAnimation bathAnimation;
+	private LivingAnimation invisibleAnimation;
 	private LivingAnimation thinkAnimation;
 	private LivingAnimation koAnimation;
 	private LivingAnimation koUpsidedownAnimation;
@@ -74,6 +75,7 @@ public class LivingAnimationHandler {
 		cryAnimation = new LivingAnimation(living, 50, false, 3, 4);
 
 		bathAnimation = new LivingAnimation(living, -1, false, 7);
+		invisibleAnimation = new LivingAnimation(living, -1, false, 12);
 		thinkAnimation = new LivingAnimation(living, -1, false, 8);
 		koAnimation = new LivingAnimation(living, -1, false, 5);
 		koUpsidedownAnimation = new LivingAnimation(living, -1, false, 6);
@@ -95,6 +97,8 @@ public class LivingAnimationHandler {
 			return koUpsidedownAnimation;
 		case BATH:
 			return bathAnimation;
+		case INVISIBLE:
+			return invisibleAnimation;
 		case THINK:
 			return thinkAnimation;
 		case BED:

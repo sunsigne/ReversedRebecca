@@ -42,7 +42,7 @@
 		- les deux lesbiennes :
 			- gérer le cas où on Jessy est contrariée (snobbé ou Nancy mentie)
 			- gérer le cas "serviette"
-			- créer la possibilité de refuser alors qu'on était pour
+			- gérer le cas de refus
 			- adapter les diaglogues à la version "male"
 			- traduction anglais
 
