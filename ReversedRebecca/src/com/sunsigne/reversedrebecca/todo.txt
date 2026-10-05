@@ -36,15 +36,12 @@
 	////////// EN COURS ////////////
 
 	patreon :
-		musique : bourré + cookie
+		musique : bourré + cookie + love that... - spicy
 		dessin
 	
 	jessy & nancy :
 		- cas serviette (multpiple possibilités)
-		- bug si on est collé à la porte au moment où ça toc
-		- cas où elle arrive énervée et qu'on la suit : rythme à corriger (ça évolue bien trop vite)
 		- quand on la repousse, devrait être poussée
-		- créer musique un peu sexy
 	
 	rr005 (disco pas bourré) :
 		- mika

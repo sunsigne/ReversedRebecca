@@ -1,0 +1,5 @@
+% YOU_KNOW_WHATS_COMING
+object = player = blush_side = Eh bien… Ce n'est pas l'issue que j'imaginais…@Mais je ne vais pas me plaindre que ça s'arrange…
+object = player = blush = Tu as bien compris ce que tu venais d'accepter…@N'est-ce pas ?
+player = object = fake_smile = J'en ai une vague idée.@Je suis consentante.
+object = player = embarrased = C'était pour être sûre.
