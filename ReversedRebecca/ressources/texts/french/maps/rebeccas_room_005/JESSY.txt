@@ -12,6 +12,12 @@ object = player = angry = En fait, on va rentrer de toute façon !
 object = player = angry = Alors comme ça, on drague ma copine,@mais pas moi ?
 
 
+% SCOLDING_TOWEL
+object = player = angry = Alors comme ça, on dr…
+object = player = doubt = Je rêve, ou tu es en serviette ?
+object = player = dreaming = Bon, peu importe…
+
+
 % I_FORGOT_YOU
 object = player = angry = Comment ça, tu m'as oublié ?@Je ne suis pas quelqu'un qu'on oublie !
 object = player = angry_var2 = Comment oses-tu juste "m'oublier" ?!@Je vais te… Je vais…
@@ -23,7 +29,7 @@ object = player = angry_var2 = Tu crois que je vais te laisser me dire ça,@sans
 
 
 % SCOLDING_VAR
-object = player = angry = Alors comme ça on, drague ma copine@sans ma permission ?!
+object = player = angry = Alors comme ça, on drague ma copine@sans ma permission ?!
 player = object = angry = Nancy n'a pas besoin de ta "permission",@elle fait ce qu'elle veut, c'est une adulte ! 
 object = player = angry_var2 = Une adulte qui m'appartient, personne ne la@touche à part moi !
 nolancy = DOWN = sad_side = Si je peux me permettr-<INTERRUPT>
@@ -33,6 +39,12 @@ object = player = angry_var2 = Quant à toi… Je vais te…@Je vais…
 
 % SCOLDING_NEXT
 object = player = deep_provocative = Tu mérites une punition… Je vais te montrer@comment je me sers réellement de mes menottes…
+
+
+% PROVOCATION_TOWEL
+object = player = sadistic_happy = Alors comme ça, on dé…
+object = player = doubt = Je rêve, ou tu es en serviette ?
+object = player = deep = Tu t'es préparée à notre arrivée ?@Bon, je disais…
 
 
 % PROVOCATION
