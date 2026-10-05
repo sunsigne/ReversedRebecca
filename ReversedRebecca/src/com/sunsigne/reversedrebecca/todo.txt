@@ -35,14 +35,22 @@
 		
 	////////// EN COURS ////////////
 
+	patreon :
+		musique : bourré + cookie
+		dessin
+	
+	jessy & nancy :
+		- cas serviette (multpiple possibilités)
+		- bug si on est collé à la porte au moment où ça toc
+		- cas où elle arrive énervée et qu'on la suit : rythme à corriger (ça évolue bien trop vite)
+		- quand on la repousse, devrait être poussée
+		- créer musique un peu sexy
+	
 	rr005 (disco pas bourré) :
 		- mika
 		- cas où on trompe marie avec les lesbiennes ? Ca change des dialgoues de MARIE ? Des plantes ?
 		- marie : terminer la tenue "date"
 		- les deux lesbiennes :
-			- gérer le cas où on Jessy est contrariée (snobbé ou Nancy mentie)
-			- gérer le cas "serviette"
-			- gérer le cas de refus
 			- adapter les diaglogues à la version "male"
 			- traduction anglais
 

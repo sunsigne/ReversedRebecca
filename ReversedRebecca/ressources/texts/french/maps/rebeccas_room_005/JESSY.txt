@@ -8,8 +8,35 @@ object = player = angry_var = C'est la police ! Ouvrez, ou en entre !
 object = player = angry = En fait, on va rentrer de toute façon !
 
 
+% SCOLDING
+object = player = angry = Alors comme ça, on drague ma copine,@mais pas moi ?
+
+
+% I_FORGOT_YOU
+object = player = angry = Comment ça, tu m'as oublié ?@Je ne suis pas quelqu'un qu'on oublie !
+object = player = angry_var2 = Comment oses-tu juste "m'oublier" ?!@Je vais te… Je vais…
+
+
+% I_M_NOT_INTO_YOU
+object = player = angry = Comment ça, je ne te plais pas ?@Je suis très plaisante !
+object = player = angry_var2 = Tu crois que je vais te laisser me dire ça,@sans réagir ? Je vais te… Je vais…
+
+
+% SCOLDING_VAR
+object = player = angry = Alors comme ça on, drague ma copine@sans ma permission ?!
+player = object = angry = Nancy n'a pas besoin de ta "permission",@elle fait ce qu'elle veut, c'est une adulte ! 
+object = player = angry_var2 = Une adulte qui m'appartient, personne ne la@touche à part moi !
+nolancy = DOWN = sad_side = Si je peux me permettr-<INTERRUPT>
+object = LEFT = angry_var = Tu ne te permets rien du tout.@Tu fermes ta gueule.
+object = player = angry_var2 = Quant à toi… Je vais te…@Je vais…
+
+
+% SCOLDING_NEXT
+object = player = deep_provocative = Tu mérites une punition… Je vais te montrer@comment je me sers réellement de mes menottes…
+
+
 % PROVOCATION
-object = player = sadistic_happy = Alors comme ça on décide de s'immiscer dans@un couple ? 
+object = player = sadistic_happy = Alors comme ça, on décide de s'immiscer dans@un couple ? 
 
 
 % PROVOCATION_NEXT
@@ -17,9 +44,22 @@ object = player = deep = Ça n'est pas très réglementaire, c'est même…@tota
 object = player = deep_provocative = Tu mérites une punition… Je vais te montrer@comment je me sers réellement de mes menottes…
 
 
+% NO_CONSENT
+object = player = doubt = Tu joues les dures ?
+object = player = sadistic_smirk = Ce n'est pas la peine.@Suis-moi, et tu ne le regretteras pas…
+
+
+% NO_CONSENT_MAD
+object = player = angry = Ça ne m'amuse pas.@Arrête, ou tu vas le regretter.
+
+
+% NO_CONSENT_MAD_NEXT
+object = player = angry_var2 = Ça suffit maintenant. Tu me suis.
+
+
 % FAKE_ARRESTATION
 object = player = deep_provocative = Tu as le droit de garder le silence. Tout objet@que je possède pourra être utilisé contre toi.
-object = player = aroused = Nancy sera ton avocate.@Elle s'assurera que je ne fasses pas trop de …
+object = player = aroused = Nancy sera ton avocate.@Elle s'assurera que je ne fasse pas trop de …
 object = player = deep_provocative = … bavures policières.
 
 
@@ -29,19 +69,13 @@ object = up = deep = Tu crois peut-être que c'est autorisé de passer@devant mo
 object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais m'assurer que ça dure des heures…
 
 
-% OTHER
-(cas du mensonge)
-jessy = player = angry_var = Police ! Ouvrez, ou j'enfonce la porte !
-jessy = player = angry = Alors comme ça on drague ma copine sans ma permission ?!
-rebecca = jessy = angry = Nancy n'a pas besoin de ta permission, elle fait ce qu'elle veut, c'est une adulte ! 
-jessy = player = angry_var2 = Une adulte qui m'appartient, personne ne la touche à part moi !
-nancy = player = ??? = Si je peux me permettr- (dialogue interrompu par le moteur du jeu)
-jessy = player = ??? = Tu ne te permets rien du tout.
-jessy = player = ??? = Quant à toi…
-(plaquée contre un mur)	
-jessy = player = aroused = Tu mérites une punition… Je vais te montrer comment je me sers réellement de mes menottes...
-[E] la repousser [R] l'embrasser. 
-(version où on la repousse)
+% PROVOCATION_BED_MAD
+object = up = deep_provocative_var = Alors ?@Tu fais moins la maligne maintenant ?
+object = up = deep = Tu croyais pouvoir te moquer de moi et t'en tirer@impunément ? Je vais te punir…
+object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais m'assurer que ça dure des heures…
+
+
+% GET_OUT
 rebecca = jessy = angry = Tu t'es cru où ? Sors de chez moi !
 nancy = player = Jessy, je pense qu'on devr- (parole coupée)
 jessy = player = ??? = La ferme ! Tu veux te taper cette garce dans mon dos ? Vas-y sale trainée !

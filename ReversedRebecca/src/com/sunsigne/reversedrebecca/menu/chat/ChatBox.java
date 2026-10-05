@@ -12,6 +12,8 @@ import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingObject;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
+import com.sunsigne.reversedrebecca.pattern.listener.ConditionalListener;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -31,12 +33,12 @@ import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DialogueKey;
+import com.sunsigne.reversedrebecca.system.mainloop.Game;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
-import com.sunsigne.reversedrebecca.system.mainloop.TickFree;
 import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 import com.sunsigne.reversedrebecca.world.World;
 
-public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent {
+public class ChatBox implements Updatable, KeyboardEvent, GamepadEvent {
 
 	public ChatBox(PiranhaObject object, String target, String dialogue, String tag) {
 		this.object = object;
@@ -51,6 +53,27 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 	@Override
 	public PhysicLaw[] getPhysicLinker() {
 		return PhysicLinker.SHAKER;
+	}
+
+	////////// TICK ////////////
+
+	private ConditionalListener listener;
+	private int time;
+
+	@Override
+	public void tick() {
+		if (listener == null)
+			return;
+
+		if (listener.canDoAction() == false)
+			return;
+
+		time++;
+		if (time < 12)
+			return;
+
+		listener.doAction();
+		listener = null;
 	}
 
 	////////// TEXTURE ////////////
@@ -113,8 +136,34 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		return line.split(System.getProperty("line.separator"));
 	}
 
-	private void goToNextLine() {
+	private String InterruptionFilter(String text) {
+		String i = "<INTERRUPT>";
 
+		if (text.contains(i) == false)
+			return text;
+
+		text = text.replace(i, "");
+		listener = new ConditionalListener() {
+
+			@Override
+			public boolean canDoAction() {
+				return content.isFulldisplayed();
+			}
+
+			@Override
+			public GenericListener getAction() {
+				return () -> {
+					count++;
+					goToNextLine();
+				};
+			}
+		};
+
+		return text;
+	}
+
+	private void goToNextLine() {
+		listener = null;
 		LAYER.PUZZLE.getHandler().removeObject(content);
 
 		String line = all_lines[count - 1];
@@ -145,6 +194,7 @@ public class ChatBox implements Updatable, TickFree, KeyboardEvent, GamepadEvent
 		String text = line.contains("=") ? line.split("=")[3] : line;
 		text = voice_variant ? line.split("=")[4] : text;
 		text = text.replace("\"0/0\"", "%");
+		text = InterruptionFilter(text);
 		String voice = voice_variant ? line.split("=")[3] : null;
 
 		if (mood.toLowerCase().contains("mindblown"))

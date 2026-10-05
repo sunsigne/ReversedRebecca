@@ -15,3 +15,5 @@ PUT_AWAY = Key2 % ranger
 GO_TO_THE_DATE = Key3 % aller au rendez-vous
 FOLLOW_HER = Key1 % la suivre
 PUSH_HER_AWAY = Key2 % la repousser
+I_FORGOT_YOU = Key1 % je t'ai oublié
+I_M_NOT_INTO_YOU = Key2 % tu ne me plais pas

@@ -15,3 +15,5 @@ PUT_AWAY = Key2 % put away
 GO_TO_THE_DATE = Key3 % go to the date
 FOLLOW_HER = Key1 % follow her
 PUSH_HER_AWAY = Key2 % push her away
+I_FORGOT_YOU = Key1 % i forgot you
+I_M_NOT_INTO_YOU = Key2 % i'm not into you
