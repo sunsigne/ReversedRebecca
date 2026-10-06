@@ -17,3 +17,5 @@ FOLLOW_HER = Key1 % la suivre
 PUSH_HER_AWAY = Key2 % la repousser
 I_FORGOT_YOU = Key1 % je t'ai oublié
 I_M_NOT_INTO_YOU = Key2 % tu ne me plais pas
+IT_S_GONNA_BE_OKAY = Key1 % Ça va aller…
+SUCKS_TO_BE_YOU = Key2 % Tu crains, genre, fort !

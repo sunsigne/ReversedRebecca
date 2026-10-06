@@ -85,14 +85,3 @@ object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais m'assurer qu
 object = up = deep_provocative_var = Alors ?@Tu fais moins la maligne maintenant ?
 object = up = deep = Tu croyais pouvoir te moquer de moi et t'en tirer@impunément ? Je vais te punir…
 object = up = aroused = Tu vas voir c'que tu vas prendre…@Je vais m'assurer que ça dure des heures…
-
-
-% GET_OUT
-rebecca = jessy = angry = Tu t'es cru où ? Sors de chez moi !
-nancy = player = Jessy, je pense qu'on devr- (parole coupée)
-jessy = player = ??? = La ferme ! Tu veux te taper cette garce dans mon dos ? Vas-y sale trainée !
-(part en la poussant)
-nancy = player = sad = Rebecca, je suis désolée pour tout ça (ou Jessy). 
-nancy = player = sad_side = Aussi, tu n'aurais pas dû me mentir…
-nancy = player = cry = Et maintenant, Jessy m'a… Jessy est…
-[E] Ça va aller… [R] Sucks to be you… (Ca craint d'être toi…)

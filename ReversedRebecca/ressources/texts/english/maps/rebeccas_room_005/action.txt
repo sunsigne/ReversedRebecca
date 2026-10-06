@@ -17,3 +17,5 @@ FOLLOW_HER = Key1 % follow her
 PUSH_HER_AWAY = Key2 % push her away
 I_FORGOT_YOU = Key1 % i forgot you
 I_M_NOT_INTO_YOU = Key2 % i'm not into you
+IT_S_GONNA_BE_OKAY = Key1 % It's gonna be okay…
+SUCKS_TO_BE_YOU = Key2 % Sucks to be you!

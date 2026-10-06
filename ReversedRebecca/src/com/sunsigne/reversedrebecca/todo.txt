@@ -38,18 +38,17 @@
 	patreon :
 		musique : bourré + cookie + love that... - spicy
 		dessin
-	
-	jessy & nancy :
-		- quand on la repousse, devrait être poussée + suite
-	
+
 	rr005 (disco pas bourré) :
 		- mika
-		- cas où on trompe marie avec les lesbiennes ? Ca change des dialgoues de MARIE ? Des plantes ?
 		- marie : terminer la tenue "date"
 		- les deux lesbiennes :
+			- finir la partie où on est adorable + (ne pas oublier la variante Marie dans ce cas là)
 			- adapter les diaglogues à la version "male" (dialogues NANCY & JESSY + tester les actions)
 			- traduction anglais
 
+	lvl001 - quand il y a l'éffondrement, sarah devrait dire "ça va les gars ?" plutot que "les filles"
+	
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 

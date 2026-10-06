@@ -19,6 +19,10 @@ player = DOWN = surprised = Mais c'est la catastrophe !@Je viens juste de dîner
 player = DOWN = worry = Bon. J'imagine que je peux quand même y aller…@On partagera un dessert.
 
 
+% CHEATING
+player = DOWN = fake_smile = Et c'est… probablement mieux, si elle ne sait jamais@pour Jessy et Nancy… De toute façon, c'est fini.
+
+
 % SPOIL_APPETITE
 player = DOWN = unhappy_var = Non, je risque de me couper l'appétit.
 

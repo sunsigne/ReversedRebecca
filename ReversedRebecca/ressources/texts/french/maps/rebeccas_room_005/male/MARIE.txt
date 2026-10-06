@@ -2,5 +2,9 @@
 player = object = surprised = Une seconde ! Mais j'ai rendez-vous au restaurant@avec Michel !
 
 
+% CHEATING
+player = DOWN = fake_smile = Et c'est… probablement mieux, s'il ne sait jamais@pour James et Nolan… De toute façon, c'est fini.
+
+
 % HERE_I_AM
 player = keep = laugh = Michel, me voilà !
