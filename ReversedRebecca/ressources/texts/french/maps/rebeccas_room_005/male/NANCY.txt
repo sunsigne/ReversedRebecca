@@ -2,46 +2,37 @@
 object = player = blush_side = Eh bien… Ce n'est pas l'issue que j'imaginais…@Mais je ne vais pas me plaindre que ça s'arrange…
 object = player = blush = Tu as bien compris ce que tu venais d'accepter…@N'est-ce pas ?
 player = object = fake_smile = J'en ai une vague idée.@Je suis consentante.
-object = player = embarrased = C'était pour être sûre.
-
-
-% GET_OUT
-player = UP = angry = Tu t'es cru où ? Sors de chez moi !
+object = player = embarrased = C'était pour être sûr.
 
 
 % GET_OUT_NEXT
-nolancy = jamessy = sad = Jessy, je…<INTERRUPT>
+nolancy = jamessy = sad = James, je…<INTERRUPT>
 jamessy = LEFT = angry_var2 = La ferme ! Tu veux te taper cette garce@dans mon dos ? Vas-y, sale trainée !
 
 
 % GET_LIED_TO
-object = player = sad = Rebecca, je suis désolée pour tout ça…
+object = player = sad = Rebecca, je suis désolé pour tout ça…
 object = player = sad_side = En même temps, tu as une part de responsabilité…@Tu m'as menti pour m'embrasser…
 object = player = sad = Je ne cherche pas à te mettre la faute dessus…@C'est juste que…
 
 
 % SORRY_FOR_JESSY
-object = player = sad = Rebecca, je suis désolée pour tout ça…
-object = player = sad_side = Jessy a un tempérament très fort,@et elle ne vit pas bien le rejet…
+object = player = sad = Rebecca, je suis désolé pour tout ça…
+object = player = sad_side = James a un tempérament très fort,@et il ne vit pas bien le rejet…
 object = player = sad = Ça n'est pas une excuse, je sais…@Et tu n'as rien fait de mal, bien sûr. C'est juste…
 
 
 % SORRY_FOR_JESSY_NEXT
-object = player = sad_side = Je suis perdue…
-object = player = cry_side = Et maintenant, Jessy est… Jessy m'a…
+object = player = sad_side = Je suis perdu…
+object = player = cry_side = Et maintenant, James est… James m'a…
 
 
 % SUCKS_TO_BE_YOU
-object = player = cry_side = Je sais… Je suis une grosse nulle…
-object = player = cry_closed = Je vais aller la retrouver, et m'excuser…@J'espère qu'elle me pardonnera.
+object = player = cry_side = Je sais… Je suis un gros nul…
+object = player = cry_closed = Je vais aller le retrouver, et m'excuser…@J'espère qu'il me pardonnera.
 object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
 object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
 
 
 % THAT_WAS_HARSH
-player = DOWN = sad = Ces deux filles sont vraiment bizarres…@C'est probablement mieux comme ça.
-
-
-% IT_S_GONNA_BE_OKAY
-object = player = cry_smile = Merci, tu es gentille.
-player = object = worry = De rien, vraiment… C'était dire ça ou une atrocité@
+player = DOWN = sad = Ces deux types sont vraiment bizarres…@C'est probablement mieux comme ça.

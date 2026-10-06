@@ -1,0 +1,22 @@
+% SCOLDING
+object = player = angry = Alors comme ça, on drague mon copain,@mais pas moi ?
+
+
+% I_M_NOT_INTO_YOU
+object = player = angry = Comment ça, je ne te plais pas ?@Je suis très plaisant !
+object = player = angry_var2 = Tu crois que je vais te laisser me dire ça,@sans réagir ? Je vais te… Je vais…
+
+
+% SCOLDING_VAR
+object = player = angry = Alors comme ça, on drague mon copain@sans ma permission ?!
+player = object = angry = Nolan n'a pas besoin de ta "permission",@il fait ce qu'elle veut, c'est un adulte ! 
+object = player = angry_var2 = Un adulte qui m'appartient, personne ne le@touche à part moi !
+nolancy = DOWN = sad_side = Si je peux me permettr-<INTERRUPT>
+object = LEFT = angry_var = Tu ne te permets rien du tout.@Tu fermes ta gueule.
+object = player = angry_var2 = Quant à toi… Je vais te…@Je vais…
+
+
+% FAKE_ARRESTATION
+object = player = deep_provocative = Tu as le droit de garder le silence. Tout objet@que je possède pourra être utilisé contre toi.
+object = player = aroused = Nolan sera ton avocat.@Il s'assurera que je ne fasse pas trop de …
+object = player = deep_provocative = … bavures policières.

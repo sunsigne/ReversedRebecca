@@ -42,10 +42,8 @@
 	rr005 (disco pas bourré) :
 		- mika
 		- marie : terminer la tenue "date"
-		- les deux lesbiennes :
-			- finir la partie où on est adorable + (ne pas oublier la variante Marie dans ce cas là)
-			- adapter les diaglogues à la version "male" (dialogues NANCY & JESSY + tester les actions)
-			- traduction anglais
+		- nancy : finir la partie où on est adorable avec elle + ne pas oublier la variante Marie + la variente serviette (+ male & anglais)
+		lesbiennes - traduction anglais JESSY et NANCY (+ anglais male)
 
 	lvl001 - quand il y a l'éffondrement, sarah devrait dire "ça va les gars ?" plutot que "les filles"
 	
