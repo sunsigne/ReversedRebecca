@@ -1,0 +1,8 @@
+% WOULD_BE_THE_REACTION_OF_SARAH_WHEN_ASKING_JEAN_FOR_HELP_WITH_ALICIA_BUT_YOU_CANT_BOTH_KNOW_SHE_NEEDS_HELP_AND_HAVE_SARAH_AND_JEAN_TALKING_EXCEPT_IN_THE_BATHROOM_WHICH_DOESNT_COUNT
+sarah = jean = angry = You're a jerk, actually!
+jean = sarah = urge_sad = Why are you insulting me?
+sarah = jean = angry = Don't you see the problem with your behavior?
+jean = sarah = urge_sad = … You're the one being mean to me.
+sarah = jean = angry_var = …?!
+sarah = jean = sad_var = I can't believe it… He's the victim now…
+sarah = rebecca = worry = I'm coming with you, Rebecca.@We can't leave Alicia in this mess.
