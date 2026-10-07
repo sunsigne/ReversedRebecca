@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import com.sunsigne.reversedrebecca.object.GameObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.system.Size;
@@ -86,7 +87,11 @@ public class DecorationObject extends GameObject implements TickFree, SheetableI
 
 	public BufferedImage getImage() {
 		if (image == null) {
+			String rebeccasRoom = FilePath.LVL000.replace("_000", "");
 			String mapName = World.get() != null ? World.get().getMapName() + "/" : "";
+			if (mapName.contains(rebeccasRoom))
+				mapName = rebeccasRoom + "/";
+
 			BufferedImage sheet = new ImageTask().loadImage(getPath() + mapName + getName(), true);
 			if (sheet == null)
 				sheet = new ImageTask().loadImage(getPath() + getName());

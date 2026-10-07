@@ -89,6 +89,11 @@
 	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
 	
+	retirer le panneau "coming soon" ?
+	
+	retravailler l'intro de dave lorsqu'on lance le jeu (dave 000 ?) :
+		- lorsqu'on lance le jeu pour la 1ère fois, Dave doit prévenir que le jeu sauvegarde tout seul
+	
 	////////// RR005_DRUNK ////////////
 		
 	rr005 (bourré) :

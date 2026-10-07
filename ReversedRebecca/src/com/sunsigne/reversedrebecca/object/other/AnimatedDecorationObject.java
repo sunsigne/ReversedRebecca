@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.pattern.cycloid.Cycloid;
 import com.sunsigne.reversedrebecca.pattern.cycloid.LimitedCycloid;
 import com.sunsigne.reversedrebecca.pattern.list.GameList;
 import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.Animation;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.world.World;
@@ -68,7 +69,11 @@ public class AnimatedDecorationObject extends DecorationObject {
 	}
 
 	private void loadAnimation(boolean cycle) {
+		String rebeccasRoom = FilePath.LVL000.replace("_000", "");
 		String mapName = World.get() != null ? World.get().getMapName() + "/" : "";
+		if (mapName.contains(rebeccasRoom))
+			mapName = rebeccasRoom + "/";
+
 		BufferedImage sheet = new ImageTask().loadImage(getPath() + mapName + getName(), true);
 		if (sheet == null)
 			sheet = new ImageTask().loadImage(getPath() + getName());
