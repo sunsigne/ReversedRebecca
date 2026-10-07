@@ -92,9 +92,25 @@ Exemple :
 WONPUZZLE -> 10-20 = ACHIEVEMENT -> FIRST_PUZZLE
 WONPUZZLE -> 10-20 = GOTO -> ACHIEVEMENT:FIRST_PUZZLE
 
-Lorsque la Condition sera vérifiée, dont le dossier s'appelle « FIRST_PUZZLE » sera déverrouillé.
+Lorsque la Condition sera vérifiée, le succès dont le dossier s'appelle « FIRST_PUZZLE » sera déverrouillé.
 
 Note : les succès custom créé par l'utilisateur / le joueur ne seront pas liés au système de succès des plate-formes de distribution du jeu (Steam), mais seulement à celui déjà intégré au jeu.
+
+
+
+////// PIXEL_ART //////
+
+Le Type de Requête PIXEL_ART permet de déverrouiller un pixel art, dans le menu « Bonus ».
+
+Fichier de référence (qui est en fait un dossier) : « ressources/bonus/pixelarts/(cible) ».
+
+Lorsqu'un pixel art est déverrouillé : rien ne se passe visuellement pour le joueur. En revanche, son illustration complète sera désormais accessible dans le menu « Pixel Art » (accès via le menu principal du jeu)
+
+Exemple :
+WONPUZZLE -> 10-20 = PIXEL_ART -> FRUITS
+WONPUZZLE -> 10-20 = GOTO -> PIXEL_ART:FRUITS
+
+Lorsque la Condition sera vérifiée, le pixel art dont le dossier s'appelle «FRUITS » sera déverrouillé.
 
 
 

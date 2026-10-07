@@ -17,6 +17,8 @@ import com.sunsigne.reversedrebecca.pattern.RandomGenerator;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.ressources.PixelArtRequest;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -178,6 +180,10 @@ public abstract class KeyPuzzle extends Puzzle {
 
 	@Override
 	public void closePuzzle(boolean isPuzzleWon) {
+		Request pixel = new PixelArtRequest();
+		if (isPuzzleWon)
+			pixel.doAction(null, "door");
+
 		super.closePuzzle(isPuzzleWon);
 
 		if (isPuzzleWon && mouseDisplayed == false)

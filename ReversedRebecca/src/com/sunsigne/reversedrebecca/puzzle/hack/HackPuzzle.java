@@ -34,6 +34,8 @@ import com.sunsigne.reversedrebecca.pattern.list.ListCloner;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.ressources.PixelArtRequest;
 import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
@@ -48,6 +50,7 @@ public abstract class HackPuzzle extends Puzzle {
 
 	public HackPuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
+
 		new GameCursor().setCursor(CURSOR_TYPE.POINTER);
 	}
 
@@ -94,12 +97,12 @@ public abstract class HackPuzzle extends Puzzle {
 	protected void setStaticNoCritCount(int noCritCount) {
 		HackPuzzle.noCritCount = noCritCount;
 	}
-	
+
 	@Override
 	public boolean hasCritToken() {
 		return true;
 	}
-	
+
 	////////// TEXTURE ////////////
 
 	@Override
@@ -396,6 +399,14 @@ public abstract class HackPuzzle extends Puzzle {
 	////////// CLOSE ////////////
 
 	public void closePuzzle(boolean isPuzzleWon) {
+		Request pixel = new PixelArtRequest();
+
+		if (isPuzzleWon) {
+			pixel.doAction(null, "paralyzer");
+			pixel.doAction(null, "terminasleep");
+			pixel.doAction(null, "terminated");
+		}
+
 		// some Processors has controls "bypass" above Handler, they need this
 		getComputer().getList().forEach(tempUpdatable -> tempUpdatable.destroyControls());
 		getComputer().clear();

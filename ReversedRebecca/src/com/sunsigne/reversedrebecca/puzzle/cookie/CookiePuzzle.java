@@ -20,6 +20,8 @@ import com.sunsigne.reversedrebecca.object.puzzle.cookie.upgrade.CookieUpgradeSt
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.ressources.PixelArtRequest;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleFactory;
 import com.sunsigne.reversedrebecca.puzzle.PuzzleGamepad;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -33,6 +35,8 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 
 	public CookiePuzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
 		super(toolPlayer, actionOnWinning, actionOnLosing);
+		Request pixel = new PixelArtRequest();
+		pixel.doAction(null, "desk");
 
 		new SoundTask().playMusic("cookie_cursor", false, true);
 	}

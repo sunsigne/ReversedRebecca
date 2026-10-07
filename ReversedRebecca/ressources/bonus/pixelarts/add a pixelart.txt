@@ -8,7 +8,7 @@ OPTIONAL :
 6 - write the text of your pixel art as it should be displayed in each language (the word in the very left part is the exact word used when naming the folder)
 
 Congrats ! Your pixel art is now in the bonus of the game ! 
-If you want to create an optional unlocking condition, you have to do it in Piranha (see PIXELART at "ressources/piranha doc/type de requêtes/requêtes ressources.txt").
+If you want to create an optional unlocking condition, you have to do it in Piranha (see PIXEL_ART at "ressources/piranha doc/type de requêtes/requêtes ressources.txt").
 
 *"facing" determines where the image should be placed in relation to the text
 *"location" determines where the pixel art is placed in the menu. First two digits for the page, last digit for the placement.

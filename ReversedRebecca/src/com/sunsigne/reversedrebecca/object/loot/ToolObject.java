@@ -9,6 +9,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_DESIGN;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
+import com.sunsigne.reversedrebecca.piranha.request.ressources.PixelArtRequest;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
@@ -72,7 +74,7 @@ public class ToolObject extends LootObject implements Difficulty {
 	public void refresh() {
 		loadImages();
 	}
-	
+
 	private void loadImages() {
 		BufferedImage sheet = null;
 
@@ -109,6 +111,11 @@ public class ToolObject extends LootObject implements Difficulty {
 	public void actionWhenLooted() {
 		if (new DifficultyComparator().isPositiveUpgade(toolPlayer.getDifficulty(), getDifficulty()))
 			toolPlayer.setDifficulty(getDifficulty());
+
+		if (toolPlayer.getName().equalsIgnoreCase("bomb")) {
+			Request pixel = new PixelArtRequest();
+			pixel.doAction(null, "tools");
+		}
 	}
 
 }
