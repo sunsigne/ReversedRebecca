@@ -65,7 +65,7 @@
 	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 	
 	nightclub :
-	- changer le compteur 2 (secret révélé en enceintes touchées)
+	- changer le compteur 2 (secret révélé en enceintes touchées - j'ai envie de faire le paradoxe qui déchire l'univers, mais les 2 dialogues sont valides, alors il sera placé ailleurs)
 	
 	bonus :
 	- BD
