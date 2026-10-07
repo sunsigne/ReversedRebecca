@@ -81,7 +81,6 @@
 	- pixel art :
 		- créer la requete piranha ? (proablement du java finallement)
 		- mettre à jour dossier de création (qui dit qu'il faut faire du piranha)
-		- traduction en anglais
 	
 	dessin : 
 	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique
