@@ -69,7 +69,18 @@
 	
 	bonus :
 	- BD
-	- illustrations
+	- illustrations :
+		- ajouter les illu manquantes
+		- ajouter un "son" lorsqu'on survole une illu (celui des bouttons sera parfait)
+		- ajouter le dessin de chat qui dit qu'il faut survoller un dessin pour le voir (relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon)
+		- manette et preset
+		- ajouter les flèches pour scroll en bas & en haut (nouveaux dessins)
+		- faire traduction en anglais
+		- faire vérouillage :
+			- requete piranha
+			- texts de dévérouillage
+			- code de visuel vérouillé
+
 	- réglagles :
 		- activation skin dark rebecca
 		- préférence sexuelle

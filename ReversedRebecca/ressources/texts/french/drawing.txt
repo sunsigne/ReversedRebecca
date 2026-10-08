@@ -1,0 +1,9 @@
+head_sock = chaussette
+head_sock_color = couleur
+lockpicking = crochetage
+sadistic_nerd = geek sadique
+alicia_hug = calin
+dave_chair = dave chaise
+el_coffee = el cafe
+el_donut = el donut
+armed_duo = duo arme

@@ -75,11 +75,11 @@ public abstract class MenuScreen extends SuperMenuScreen {
 		g2d.fillRect(0, Window.HEIGHT / 2, Window.WIDHT, Window.HEIGHT / 2);
 	}
 
-	private void drawTitle(Graphics g) {
+	protected void drawTitle(Graphics g) {
 		g.drawImage(title_img, 525, 80, 856, 380, null);
 	}
 
-	private void drawVersion(Graphics g) {
+	protected void drawVersion(Graphics g) {
 		var font = new Font("arial", 1, 30);
 		int[] rect = new int[] { 940, 460, 0, 0 };
 
