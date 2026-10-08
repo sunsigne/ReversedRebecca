@@ -2,6 +2,7 @@ package com.sunsigne.reversedrebecca.menu.submenu;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.TitleScreen;
+import com.sunsigne.reversedrebecca.menu.submenu.bonus.CreditsScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.bonus.PixelArtScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.options.GeneralScreen;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
@@ -66,7 +67,7 @@ public class BonusScreen extends SubMenuScreen {
 	}
 
 	private void createCreditsButton() {
-		GenericListener onPress = () -> new GeneralScreen();
+		GenericListener onPress = () -> new CreditsScreen();
 		createBonusScreenButton(translate("CreditsButton"), CREDIT, 416, 259, onPress);
 	}
 

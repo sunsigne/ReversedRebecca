@@ -87,7 +87,6 @@ public class DifficultyScreen extends SubMenuScreen {
 		int x = 325 + 416;
 		int y = 503;
 
-		// GenericListener onPress = () -> new TutorialScreen(startWorld);
 		GenericListener onPress = () -> startWorldDepedingOnDifficulty(startWorld);
 
 		ButtonObject button = new TitleScreenButton(translate("PlayButton"), x, y + 259, 415, 80, onPress, null) {

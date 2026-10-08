@@ -130,7 +130,7 @@ VolumeVoice = voice
 
 PixelArtButton = pixel art
 DrawingsButton = drawings
-BDButton = BD
+BDButton = comics
 SettingsButton = settings
 CreditsButton = credits
 

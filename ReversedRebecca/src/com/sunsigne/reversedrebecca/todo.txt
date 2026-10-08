@@ -70,7 +70,6 @@
 	bonus :
 	- BD
 	- illustrations
-	- crédit
 	- réglagles :
 		- activation skin dark rebecca
 		- préférence sexuelle
