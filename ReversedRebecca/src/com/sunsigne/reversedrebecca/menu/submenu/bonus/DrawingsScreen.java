@@ -50,7 +50,7 @@ public class DrawingsScreen extends SubMenuScreen {
 	}
 
 	private void createSadisticButton() {
-		createDrawingsButton("head_sock", SADISTIC_NERD);
+		/*createDrawingsButton("head_sock", SADISTIC_NERD);
 		createDrawingsButton("head_sock_color", SADISTIC_NERD);
 		createDrawingsButton("lockpicking", SADISTIC_NERD);
 		createDrawingsButton("sadistic_nerd", SADISTIC_NERD);
@@ -59,6 +59,16 @@ public class DrawingsScreen extends SubMenuScreen {
 		createDrawingsButton("el_coffee", SADISTIC_NERD, 60, -55);
 		createDrawingsButton("el_donut", SADISTIC_NERD, 60, -55);
 		createDrawingsButton("armed_duo", SADISTIC_NERD, -15, 40);
+		*/
+		createDrawingsButton("jojo_cop", SADISTIC_NERD, 40, -40);
+		createDrawingsButton("jojo_cop_color", SADISTIC_NERD, 40, -40);
+		createDrawingsButton("touchy_girls", SADISTIC_NERD, 60, -55);
+		createDrawingsButton("yy_pose", SADISTIC_NERD);
+		createDrawingsButton("checkmate", SADISTIC_NERD, 30, -55);		
+		createDrawingsButton("android", SADISTIC_NERD, 60, -55);
+		createDrawingsButton("android_color", SADISTIC_NERD, 60, -55);		
+		createDrawingsButton("cocktail", SADISTIC_NERD, -40, 20);
+		createDrawingsButton("hangover", SADISTIC_NERD);
 	}
 
 	////////// BUTTON ACTION ////////////

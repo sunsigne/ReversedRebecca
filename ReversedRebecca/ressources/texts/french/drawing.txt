@@ -7,3 +7,13 @@ dave_chair = dave chaise
 el_coffee = el cafe
 el_donut = el donut
 armed_duo = duo arme
+
+jojo_cop = flic jojo
+jojo_cop_color = couleur
+touchy_girls = lesbiennes
+yy_pose = yy pose
+checkmate = echec
+android = android
+android_color = couleur
+cocktail = cocktail
+hangover = descendu
