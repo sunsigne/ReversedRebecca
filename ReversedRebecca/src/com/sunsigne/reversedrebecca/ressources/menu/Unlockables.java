@@ -7,26 +7,29 @@ import java.util.Arrays;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
 import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
+import com.sunsigne.reversedrebecca.ressources.menu.drawing.DrawingTask;
 import com.sunsigne.reversedrebecca.ressources.menu.pixelart.PixelArtTask;
 
 public class Unlockables {
 
 	private String achievements = "achievements";
+	private String drawings = "drawings";
 	private String pixelarts = "pixelarts";
 
 	public void loadRessources() {
-		load(achievements, new AchievementTask());
-		load(pixelarts, new PixelArtTask());
+		load(achievements, new AchievementTask(), true);
+		load(drawings, new DrawingTask(), false);
+		load(pixelarts, new PixelArtTask(), true);
 	}
 
-	public void load(String unlockable, UnlockableTask task) {
+	public void load(String unlockable, UnlockableTask task, boolean folderBased) {
 		String bonus = unlockable.contentEquals(achievements) ? "" : "bonus/";
 
 		File file = new File(FilePath.RESSOURCES_PATH + bonus + unlockable);
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
 
 		file_list.forEach(tempfile -> {
-			if (tempfile.contains(".") == false) // check if folder or file
+			if (tempfile.contains(".") == !folderBased) // check if folder or file
 			{
 				updateUserData(tempfile, unlockable);
 				task.create(tempfile);
@@ -41,8 +44,9 @@ public class Unlockables {
 		if (value.isEmpty() == false)
 			return;
 
+		String formatted_name = name.replace(".png", "");	
 		String content = new FileTask().read(true, file);
-		String new_content = content + System.getProperty("line.separator") + name + "=false";
+		String new_content = content + System.getProperty("line.separator") + formatted_name + "=false";
 		new FileTask().write(file, new_content);
 	}
 

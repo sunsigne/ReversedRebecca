@@ -72,6 +72,7 @@
 	- illustrations :
 		- ajouter un "son" lorsqu'on survole une illu (celui des bouttons sera parfait)
 		- ajouter le dessin de chat qui dit qu'il faut survoller un dessin pour le voir (relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon)
+		- ce même dessin de chat peut prévenir des prérequis pour dévérouiller un dessin
 		- manette et preset
 		- ajouter les flèches pour scroll en bas & en haut (nouveaux dessins)
 		- faire traduction en anglais
@@ -98,6 +99,10 @@
 	
 	retravailler l'intro de dave lorsqu'on lance le jeu (dave 000 ?) :
 		- lorsqu'on lance le jeu pour la 1ère fois, Dave doit prévenir que le jeu sauvegarde tout seul
+	
+	succès : 
+		- avoir dévérouillé tous les pixel art de la démo
+		- avoir dévérouillé tous les dessins de la démo	
 	
 	////////// RR005_DRUNK ////////////
 		
