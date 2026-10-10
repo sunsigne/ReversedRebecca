@@ -31,6 +31,7 @@ public class Unlockables {
 		file_list.forEach(tempfile -> {
 			if (tempfile.contains(".") == !folderBased) // check if folder or file
 			{
+				tempfile = tempfile.replace(".png", "");
 				updateUserData(tempfile, unlockable);
 				task.create(tempfile);
 			}

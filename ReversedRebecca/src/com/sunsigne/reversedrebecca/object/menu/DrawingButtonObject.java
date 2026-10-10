@@ -1,5 +1,6 @@
 package com.sunsigne.reversedrebecca.object.menu;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -8,11 +9,14 @@ import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
+import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
+import com.sunsigne.reversedrebecca.ressources.menu.drawing.Drawing;
 
 public class DrawingButtonObject extends TitleScreenButton {
 
 	public DrawingButtonObject(String text, int x, int y, int x0, int y0) {
 		super(new Translatable().getTranslatedText(text, FilePath.DRAWING).toUpperCase(), x, y, 415, 73, null, null);
+		this.drawing = UnlockableList.getDrawingMap().get(text);
 		this.name = text;
 		this.x0 = x0;
 		this.y0 = y0;
@@ -21,8 +25,15 @@ public class DrawingButtonObject extends TitleScreenButton {
 	public DrawingButtonObject(String text, int x, int y) {
 		this(text, x, y, 0, 0);
 	}
-	
+
+	////////// DRAWING ////////////
+
 	private String name;
+	private Drawing drawing;
+
+	public boolean isLocked() {
+		return drawing != null && drawing.isLocked();
+	}
 
 	////////// TEXTURE ////////////
 
@@ -34,15 +45,34 @@ public class DrawingButtonObject extends TitleScreenButton {
 		return image;
 	}
 
+	@Override
+	public Color getTextColor() {
+		if (isLocked())
+			return new Color(102, 102, 102);
+		else
+			return super.getTextColor();
+	}
+
+	@Override
+	public Color getShadowColor() {
+		if (isLocked())
+			return new Color(63, 63, 63, 180);
+		else
+			return super.getShadowColor();
+	}
+
 	////////// RENDER ////////////
 
 	private int x0, y0;
-	
+
 	@Override
 	public void render(Graphics g) {
 		super.render(g);
-		
+
 		if (isSelected() == false)
+			return;
+
+		if (isLocked())
 			return;
 
 		var img = getImage();

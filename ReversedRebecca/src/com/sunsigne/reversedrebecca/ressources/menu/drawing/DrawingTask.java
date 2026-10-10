@@ -10,28 +10,27 @@ public class DrawingTask implements UnlockableTask {
 	@Override
 	public void create(String name) {
 		Drawing drawing = new Drawing(name);
-		var list = UnlockableList.getDrawingList();
-		list.addObject(drawing);
+		var map = UnlockableList.getDrawingMap();
+		map.put(name, drawing);
 	}
 
 	@Override
 	public void unlock(String name) {
-		var list = UnlockableList.getDrawingList();
-		list.getList().forEach(tempDrawing -> {
-			if (tempDrawing.getName().equalsIgnoreCase(name)) {
-				if (tempDrawing.isLocked() == false)
-					return;
+		var map = UnlockableList.getDrawingMap();
+		Drawing drawing = map.get(name);
 
-				tempDrawing.unlocked();
-				System.out.println("DRAWING : " + tempDrawing.getName().toUpperCase());
-			}
-		});
+		if (drawing.isLocked() == false)
+			return;
+
+		drawing.unlocked();
+		System.out.println("DRAWING : " + drawing.getName().toUpperCase());
+
 	}
 
 	@Override
 	public void reset() {
 		new FileTask().write(Drawing.file, "");
-		UnlockableList.getDrawingList().clear();
+		UnlockableList.getDrawingMap().clear();
 		new Unlockables().loadRessources();
 	}
 
