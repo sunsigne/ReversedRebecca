@@ -74,7 +74,6 @@
 		- ajouter le dessin de chat qui dit qu'il faut survoller un dessin pour le voir (relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon)
 		- ce même dessin de chat peut prévenir des prérequis pour dévérouiller un dessin
 		- manette et preset
-		- ajouter les flèches pour scroll en bas & en haut (nouveaux dessins)
 		- faire traduction en anglais
 		- faire vérouillage :
 			- requete piranha

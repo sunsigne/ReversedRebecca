@@ -1,22 +1,35 @@
 package com.sunsigne.reversedrebecca.menu.submenu.bonus;
 
 import java.awt.Graphics;
+import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.BonusScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
+import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.DrawingButtonObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
+import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
+import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
 public class DrawingsScreen extends SubMenuScreen {
 
 	public DrawingsScreen() {
-		super(BACK);
+		this(BACK, 0);
+	}
 
-		createSadisticButton();
+	public DrawingsScreen(PresetMousePos defaultPreset, int listStart) {
+		super(defaultPreset);
+		this.listStart = listStart;
+
+		createDrawings();
+		createUpArrowButton(DIRECTION.UP);
+		createDownArrowButton(DIRECTION.DOWN);
 	}
 
 	////////// NAME ////////////
@@ -33,6 +46,40 @@ public class DrawingsScreen extends SubMenuScreen {
 		return new BonusScreen(SADISTIC_NERD);
 	}
 
+	////////// DRAWINGS ////////////
+
+	protected int listStart;
+
+	private int getListEnd() {
+		return 10;
+	}
+
+	private void createDrawings() {
+		if (listStart == 0) {
+			createDrawingsButton("head_sock", SADISTIC_NERD);
+			createDrawingsButton("head_sock_color", SADISTIC_NERD);
+			createDrawingsButton("lockpicking", SADISTIC_NERD);
+			createDrawingsButton("sadistic_nerd", SADISTIC_NERD);
+			createDrawingsButton("alicia_hug", SADISTIC_NERD);
+			createDrawingsButton("dave_chair", SADISTIC_NERD, -15, 50);
+			createDrawingsButton("el_coffee", SADISTIC_NERD, 60, -55);
+			createDrawingsButton("el_donut", SADISTIC_NERD, 60, -55);
+			createDrawingsButton("armed_duo", SADISTIC_NERD, -15, 40);
+		}
+
+		if (listStart == step) {
+			createDrawingsButton("jojo_cop", SADISTIC_NERD, 40, -40);
+			createDrawingsButton("jojo_cop_color", SADISTIC_NERD, 40, -40);
+			createDrawingsButton("touchy_girls", SADISTIC_NERD, 60, -55);
+			createDrawingsButton("yy_pose", SADISTIC_NERD);
+			createDrawingsButton("checkmate", SADISTIC_NERD, 30, -55);
+			createDrawingsButton("android", SADISTIC_NERD, 60, -55);
+			createDrawingsButton("android_color", SADISTIC_NERD, 60, -55);
+			createDrawingsButton("cocktail", SADISTIC_NERD, -40, 20);
+			createDrawingsButton("hangover", SADISTIC_NERD);
+		}
+	}
+
 	////////// BUTTONS ////////////
 
 	private int row;
@@ -40,7 +87,7 @@ public class DrawingsScreen extends SubMenuScreen {
 	private void createDrawingsButton(String text, PresetMousePos preset) {
 		createDrawingsButton(text, preset, 0, 0);
 	}
-	
+
 	private void createDrawingsButton(String text, PresetMousePos preset, int x0, int y0) {
 		row++;
 
@@ -49,29 +96,41 @@ public class DrawingsScreen extends SubMenuScreen {
 		buttons.put(preset, button);
 	}
 
-	private void createSadisticButton() {
-		/*createDrawingsButton("head_sock", SADISTIC_NERD);
-		createDrawingsButton("head_sock_color", SADISTIC_NERD);
-		createDrawingsButton("lockpicking", SADISTIC_NERD);
-		createDrawingsButton("sadistic_nerd", SADISTIC_NERD);
-		createDrawingsButton("alicia_hug", SADISTIC_NERD);
-		createDrawingsButton("dave_chair", SADISTIC_NERD, -15, 50);
-		createDrawingsButton("el_coffee", SADISTIC_NERD, 60, -55);
-		createDrawingsButton("el_donut", SADISTIC_NERD, 60, -55);
-		createDrawingsButton("armed_duo", SADISTIC_NERD, -15, 40);
-		*/
-		createDrawingsButton("jojo_cop", SADISTIC_NERD, 40, -40);
-		createDrawingsButton("jojo_cop_color", SADISTIC_NERD, 40, -40);
-		createDrawingsButton("touchy_girls", SADISTIC_NERD, 60, -55);
-		createDrawingsButton("yy_pose", SADISTIC_NERD);
-		createDrawingsButton("checkmate", SADISTIC_NERD, 30, -55);		
-		createDrawingsButton("android", SADISTIC_NERD, 60, -55);
-		createDrawingsButton("android_color", SADISTIC_NERD, 60, -55);		
-		createDrawingsButton("cocktail", SADISTIC_NERD, -40, 20);
-		createDrawingsButton("hangover", SADISTIC_NERD);
+	private void createArrowButton(String text, DIRECTION direction, int y, GenericListener onPress) {
+		ButtonObject button = new TitleScreenButton(text,  430, 500 + y, 60, 60, onPress, null);
+		((TitleScreenButton) button).setFontSize(40f);
+		arrow_buttons.put(direction, button);
+		LAYER.MENU.addObject(button);
+	}
+
+	private void createUpArrowButton(DIRECTION direction) {
+		if (listStart == 0)
+			return;
+
+		GenericListener onPress = () -> showPreviousDrawings();
+		createArrowButton("†", direction, -355, onPress);
+	}
+
+	private void createDownArrowButton(DIRECTION direction) {
+		if (listStart >= getListEnd())
+			return;
+
+		GenericListener onPress = () -> showNextDrawings();
+		// this charactere got modified to looks like a down arrow
+		createArrowButton("‡", direction, 350, onPress);
 	}
 
 	////////// BUTTON ACTION ////////////
+
+	private int step = 10;
+
+	private void showNextDrawings() {
+		new DrawingsScreen(BACK, listStart + step);
+	}
+
+	private void showPreviousDrawings() {
+		new DrawingsScreen(BACK, listStart - step);
+	}
 
 	////////// RENDER ////////////
 
@@ -86,6 +145,8 @@ public class DrawingsScreen extends SubMenuScreen {
 	}
 
 	////////// PRESET MOUSE POS ////////////
+
+	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
 	public static final PresetMousePos SADISTIC_NERD = new PresetMousePos(945, 590);
 

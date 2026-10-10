@@ -96,10 +96,10 @@ public abstract class SubMenuScreen extends MenuScreen {
 		super.render(g);
 		int x = xxl || xll ? 20 : 289;
 		int y = xl || xxl ? 286 : 465;
-		y = xll ? 150 : y;
+		y = xll ? 140 : y;
 		int width = xxl ? 1880 : 1324;
 		int height = xl || xxl ? 600 : 474;
-		height = xll ? 774 : height;
+		height = xll ? 794 : height;
 		g.drawImage(getImage(), x, y, width, height, null);
 	}
 
