@@ -70,8 +70,6 @@
 	bonus :
 	- BD
 	- illustrations :
-		- ajouter le dessin de chat : relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon
-		- manette et preset
 		- faire traduction en anglais
 		- faire vérouillage :
 			- requete piranha + ajout des requis de chacun

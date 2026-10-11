@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.pattern.render.RectDecoration.RECTSIZE;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
 import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -19,6 +20,8 @@ public class DrawingButtonObject extends TitleScreenButton {
 
 	public DrawingButtonObject(String text, int x, int y, int x0, int y0) {
 		super(new Translatable().getTranslatedText(text, FilePath.DRAWING).toUpperCase(), x, y, 415, 73, null, null);
+		rectsize = RECTSIZE.CUSTOM_DRAWING_BUTTON;
+		
 		this.drawing = UnlockableList.getDrawingMap().get(text);
 		this.name = text;
 		this.x0 = x0;

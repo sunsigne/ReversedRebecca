@@ -24,6 +24,7 @@ import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
+import com.sunsigne.reversedrebecca.system.controllers.ControllerManager;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
@@ -54,7 +55,7 @@ public class DrawingsScreen extends SubMenuScreen {
 
 	@Override
 	protected MenuScreen getPreviousMenu() {
-		return new BonusScreen(SADISTIC_NERD);
+		return new BonusScreen(BACK);
 	}
 
 	////////// DRAWINGS ////////////
@@ -80,27 +81,27 @@ public class DrawingsScreen extends SubMenuScreen {
 		list = new GameList<>(LISTTYPE.ARRAY);
 
 		if (listStart == 0) {
-			createDrawingsButton("head_sock", SADISTIC_NERD);
-			createDrawingsButton("head_sock_color", SADISTIC_NERD);
-			createDrawingsButton("lockpicking", SADISTIC_NERD);
-			createDrawingsButton("sadistic_nerd", SADISTIC_NERD);
-			createDrawingsButton("alicia_hug", SADISTIC_NERD);
-			createDrawingsButton("dave_chair", SADISTIC_NERD, -15, 50);
-			createDrawingsButton("el_coffee", SADISTIC_NERD, 60, -55);
-			createDrawingsButton("el_donut", SADISTIC_NERD, 60, -55);
-			createDrawingsButton("armed_duo", SADISTIC_NERD, -15, 40);
+			createDrawingsButton("head_sock", ROW_1);
+			createDrawingsButton("head_sock_color", ROW_2);
+			createDrawingsButton("lockpicking", ROW_3);
+			createDrawingsButton("sadistic_nerd", ROW_4);
+			createDrawingsButton("alicia_hug", ROW_5);
+			createDrawingsButton("dave_chair", ROW_6, -15, 50);
+			createDrawingsButton("el_coffee", ROW_7, 60, -55);
+			createDrawingsButton("el_donut", ROW_8, 60, -55);
+			createDrawingsButton("armed_duo", ROW_9, -15, 40);
 		}
 
 		if (listStart == step) {
-			createDrawingsButton("jojo_cop", SADISTIC_NERD, 40, -40);
-			createDrawingsButton("jojo_cop_color", SADISTIC_NERD, 40, -40);
-			createDrawingsButton("touchy_girls", SADISTIC_NERD, 60, -55);
-			createDrawingsButton("yy_pose", SADISTIC_NERD);
-			createDrawingsButton("checkmate", SADISTIC_NERD, 30, -55);
-			createDrawingsButton("android", SADISTIC_NERD, 60, -55);
-			createDrawingsButton("android_color", SADISTIC_NERD, 60, -55);
-			createDrawingsButton("cocktail", SADISTIC_NERD, -40, 20);
-			createDrawingsButton("hangover", SADISTIC_NERD);
+			createDrawingsButton("jojo_cop", ROW_1, 40, -40);
+			createDrawingsButton("jojo_cop_color", ROW_2, 40, -40);
+			createDrawingsButton("touchy_girls", ROW_3, 60, -55);
+			createDrawingsButton("yy_pose", ROW_4);
+			createDrawingsButton("checkmate", ROW_5, 30, -55);
+			createDrawingsButton("android", ROW_6, 60, -55);
+			createDrawingsButton("android_color", ROW_7, 60, -55);
+			createDrawingsButton("cocktail", ROW_8, -40, 20);
+			createDrawingsButton("hangover", ROW_9);
 		}
 	}
 
@@ -150,11 +151,11 @@ public class DrawingsScreen extends SubMenuScreen {
 	private int step = 10;
 
 	private void showNextDrawings() {
-		new DrawingsScreen(BACK, listStart + step);
+		new DrawingsScreen(ROW_1, listStart + step);
 	}
 
 	private void showPreviousDrawings() {
-		new DrawingsScreen(BACK, listStart - step);
+		new DrawingsScreen(ROW_9, listStart - step);
 	}
 
 	////////// TICK ////////////
@@ -172,7 +173,9 @@ public class DrawingsScreen extends SubMenuScreen {
 
 			if (tempButton != lastSelectedButton) {
 				lastSelectedButton = tempButton;
-				new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+
+				if (ControllerManager.getInstance().isUsingGamepad() == false)
+					new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
 			}
 
 			return;
@@ -242,7 +245,16 @@ public class DrawingsScreen extends SubMenuScreen {
 
 	private HashMap<DIRECTION, ButtonObject> arrow_buttons = new HashMap<>();
 
-	public static final PresetMousePos SADISTIC_NERD = new PresetMousePos(945, 590);
+	private static final int PRESET_GAP = 72;
+	public static final PresetMousePos ROW_1 = new PresetMousePos(450, 250);
+	public static final PresetMousePos ROW_2 = new PresetMousePos(450, 250 + PRESET_GAP);
+	public static final PresetMousePos ROW_3 = new PresetMousePos(450, 250 + 2 * PRESET_GAP);
+	public static final PresetMousePos ROW_4 = new PresetMousePos(450, 250 + 3 * PRESET_GAP);
+	public static final PresetMousePos ROW_5 = new PresetMousePos(450, 250 + 4 * PRESET_GAP);
+	public static final PresetMousePos ROW_6 = new PresetMousePos(450, 250 + 5 * PRESET_GAP);
+	public static final PresetMousePos ROW_7 = new PresetMousePos(450, 250 + 6 * PRESET_GAP);
+	public static final PresetMousePos ROW_8 = new PresetMousePos(450, 250 + 7 * PRESET_GAP);
+	public static final PresetMousePos ROW_9 = new PresetMousePos(450, 250 + 8 * PRESET_GAP);
 
 	////////// GAMEPAD ////////////
 
@@ -258,13 +270,81 @@ public class DrawingsScreen extends SubMenuScreen {
 			buttons.get(BACK).mousePressed(null);
 		}
 
-		else if (getPreset() == BACK)
+		else if (getPreset() == ROW_1) {
+			firstRowPressed(e);
+		} else if (getPreset() == ROW_2) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_1);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_3);
+		} else if (getPreset() == ROW_3) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_2);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_4);
+		} else if (getPreset() == ROW_4) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_3);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_5);
+		} else if (getPreset() == ROW_5) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_4);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_6);
+		} else if (getPreset() == ROW_6) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_5);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_7);
+		} else if (getPreset() == ROW_7) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_6);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_8);
+		} else if (getPreset() == ROW_8) {
+			if (e.getKey() == ButtonEvent.UP)
+				setPreset(ROW_7);
+			if (e.getKey() == ButtonEvent.DOWN)
+				setPreset(ROW_9);
+		} else if (getPreset() == ROW_9) {
+			lastRowPressed(e);
+		} else if (getPreset() == BACK)
 			backPressed(e);
+	}
+
+	private void firstRowPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP) {
+			if (listStart > 0) {
+				showPreviousDrawings();
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
+			}
+		} else if (e.getKey() == ButtonEvent.DOWN)
+			setPreset(ROW_2);
+	}
+
+	private void lastRowPressed(ButtonEvent e) {
+		if (e.getKey() == ButtonEvent.UP)
+			setPreset(ROW_8);
+		else if (e.getKey() == ButtonEvent.DOWN) {
+			if (listStart >= getListEnd())
+				setPreset(BACK);
+			else {
+				showNextDrawings();
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "gamepad");
+			}
+		}
 	}
 
 	private void backPressed(ButtonEvent e) {
 		if (e.getKey() == ButtonEvent.A)
 			buttons.get(BACK).mousePressed(null);
+		else if (e.getKey() == ButtonEvent.UP) {
+			if (listStart == 0)
+				setPreset(ROW_1);
+			else
+				setPreset(ROW_9);
+		}
 	}
 
 }

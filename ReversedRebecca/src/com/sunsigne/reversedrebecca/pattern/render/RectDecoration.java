@@ -10,7 +10,7 @@ public class RectDecoration {
 	private Color color = new Color(255, 232, 170);
 
 	public enum RECTSIZE {
-		X_SMALL, SMALL, NORMAL, LARGE, CUSTOM_BACK_BUTTON, CUSTOM_RESET_BUTTON, CUSTOM_TUTORIAL_BUTTON;
+		X_SMALL, SMALL, NORMAL, LARGE, CUSTOM_BACK_BUTTON, CUSTOM_RESET_BUTTON, CUSTOM_DRAWING_BUTTON
 	}
 
 	private int[] getRect(int[] rect, RECTSIZE rectType) {
@@ -50,9 +50,9 @@ public class RectDecoration {
 			arc = 10;
 			rect = new int[] { rect[0] + gap + 24, rect[1] + gap / 2 + 14, rect[2] - 3*gap + 2, rect[3] - gap - 20, arc };
 			break;
-		case CUSTOM_TUTORIAL_BUTTON:
-			gap = rect[2] / 8;
-			arc = 18;
+		case CUSTOM_DRAWING_BUTTON:
+			gap = - rect[2] / 16;
+			arc = 10;
 			rect = new int[] { rect[0] + gap, rect[1] + 9, rect[2] - 2 * gap + 2, rect[3] - 13, arc};
 		default:
 			rect = new int[] { rect[0], rect[1], rect[2], rect[3], arc };
