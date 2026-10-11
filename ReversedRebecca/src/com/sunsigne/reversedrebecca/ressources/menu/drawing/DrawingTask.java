@@ -32,6 +32,7 @@ public class DrawingTask implements UnlockableTask {
 		new FileTask().write(Drawing.file, "");
 		UnlockableList.getDrawingMap().clear();
 		new Unlockables().loadRessources();
+		unlock("dave_chair");
 	}
 
 }

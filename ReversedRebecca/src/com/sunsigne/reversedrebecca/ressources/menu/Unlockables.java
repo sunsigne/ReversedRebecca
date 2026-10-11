@@ -19,7 +19,8 @@ public class Unlockables {
 	public void loadRessources() {
 		load(achievements, new AchievementTask(), true);
 		load(drawings, new DrawingTask(), false);
-		load(pixelarts, new PixelArtTask(), true);
+		load(pixelarts, new PixelArtTask(), true);		
+		new DrawingTask().unlock("dave_chair");
 	}
 
 	public void load(String unlockable, UnlockableTask task, boolean folderBased) {

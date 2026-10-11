@@ -70,14 +70,11 @@
 	bonus :
 	- BD
 	- illustrations :
-		- ajouter un "son" lorsqu'on survole une illu (celui des bouttons sera parfait)
-		- ajouter le dessin de chat qui dit qu'il faut survoller un dessin pour le voir (relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon)
-		- ce même dessin de chat peut prévenir des prérequis pour dévérouiller un dessin
+		- ajouter le dessin de chat : relier à la manette quand on est sur "quitter" ? Il devrait être là de base de totue façon
 		- manette et preset
 		- faire traduction en anglais
 		- faire vérouillage :
-			- requete piranha
-			- texts de dévérouillage (centrer "parler à Dave" en page 1 + finir page 2)
+			- requete piranha + ajout des requis de chacun
 
 	- réglagles :
 		- activation skin dark rebecca
