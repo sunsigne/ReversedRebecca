@@ -77,8 +77,7 @@
 		- faire traduction en anglais
 		- faire vérouillage :
 			- requete piranha
-			- texts de dévérouillage
-			- code de visuel vérouillé
+			- texts de dévérouillage (centrer "parler à Dave" en page 1 + finir page 2)
 
 	- réglagles :
 		- activation skin dark rebecca

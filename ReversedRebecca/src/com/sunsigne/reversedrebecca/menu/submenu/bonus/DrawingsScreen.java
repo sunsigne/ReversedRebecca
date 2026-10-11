@@ -1,6 +1,9 @@
 package com.sunsigne.reversedrebecca.menu.submenu.bonus;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
@@ -10,10 +13,17 @@ import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.DrawingButtonObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.pattern.list.GameList;
+import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
+import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
+import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
+import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
-import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
-import com.sunsigne.reversedrebecca.system.Window;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
+import com.sunsigne.reversedrebecca.ressources.sound.SoundTask.SOUNDTYPE;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.mouse.PresetMousePos;
 
@@ -27,6 +37,7 @@ public class DrawingsScreen extends SubMenuScreen {
 		super(defaultPreset);
 		this.listStart = listStart;
 
+		loadText();
 		createDrawings();
 		createUpArrowButton(DIRECTION.UP);
 		createDownArrowButton(DIRECTION.DOWN);
@@ -48,13 +59,26 @@ public class DrawingsScreen extends SubMenuScreen {
 
 	////////// DRAWINGS ////////////
 
+	private GameList<DrawingButtonObject> list;
 	protected int listStart;
 
 	private int getListEnd() {
 		return 10;
 	}
 
+	////////// TEXT ////////////
+
+	private Font font;
+	private String text;
+
+	private void loadText() {
+		font = new FontTask().createNewFont("startedbyamouse.ttf", 85f);
+		text = new Translatable().getTranslatedText("meli", FilePath.DRAWING);
+	}
+
 	private void createDrawings() {
+		list = new GameList<>(LISTTYPE.ARRAY);
+
 		if (listStart == 0) {
 			createDrawingsButton("head_sock", SADISTIC_NERD);
 			createDrawingsButton("head_sock_color", SADISTIC_NERD);
@@ -91,13 +115,14 @@ public class DrawingsScreen extends SubMenuScreen {
 	private void createDrawingsButton(String text, PresetMousePos preset, int x0, int y0) {
 		row++;
 
-		ButtonObject button = new DrawingButtonObject(text, 250, 136 + row * 72, x0, y0);
+		DrawingButtonObject button = new DrawingButtonObject(text, 250, 136 + row * 72, x0, y0);
 		LAYER.MENU.addObject(button);
 		buttons.put(preset, button);
+		list.addObject(button);
 	}
 
 	private void createArrowButton(String text, DIRECTION direction, int y, GenericListener onPress) {
-		ButtonObject button = new TitleScreenButton(text,  430, 500 + y, 60, 60, onPress, null);
+		ButtonObject button = new TitleScreenButton(text, 430, 500 + y, 60, 60, onPress, null);
 		((TitleScreenButton) button).setFontSize(40f);
 		arrow_buttons.put(direction, button);
 		LAYER.MENU.addObject(button);
@@ -132,7 +157,76 @@ public class DrawingsScreen extends SubMenuScreen {
 		new DrawingsScreen(BACK, listStart - step);
 	}
 
+	////////// TICK ////////////
+
+	private boolean thereIsTheCat;
+	private DrawingButtonObject lastSelectedButton;
+
+	@Override
+	public void tick() {
+		for (var tempButton : list.getList()) {
+			if (tempButton.isSelected() == false)
+				continue;
+
+			thereIsTheCat = tempButton.isLocked();
+
+			if (tempButton != lastSelectedButton) {
+				lastSelectedButton = tempButton;
+				new SoundTask().playSound(SOUNDTYPE.SOUND, "button");
+			}
+
+			return;
+		}
+
+		thereIsTheCat = true;
+		lastSelectedButton = null;
+	}
+
+	////////// TEXTURE ////////////
+
+	private BufferedImage catImage;
+
+	private BufferedImage getCatImage() {
+		if (catImage == null)
+			catImage = new ImageTask().loadImage("bonus/drawings/" + "melichat");
+		return catImage;
+	}
+
 	////////// RENDER ////////////
+
+	@Override
+	public void render(Graphics g) {
+		super.render(g);
+
+		var img = getCatImage();
+
+		if (thereIsTheCat == false)
+			return;
+
+		int w = img.getWidth();
+		int h = img.getHeight();
+		g.drawImage(img, 820, 170, w, h, null);
+
+		if (lastSelectedButton == null)
+			drawText(g);
+	}
+
+	private void drawText(Graphics g) {
+		if (text.contains("@") == false) {
+			drawLine(g, text, 0);
+			return;
+		}
+
+		String[] content = text.split("@");
+		for (int index = 0; index < content.length; index++) {
+			drawLine(g, content[index], 120 * index);
+		}
+	}
+
+	private void drawLine(Graphics g, String text, int h) {
+		int[] rect = new int[] { 735, 290, 800, h };
+		new TextDecoration().drawCenteredString(g, font, text, Color.BLACK, DIRECTION.NULL, rect);
+	}
 
 	@Override
 	protected void drawTitle(Graphics g) {

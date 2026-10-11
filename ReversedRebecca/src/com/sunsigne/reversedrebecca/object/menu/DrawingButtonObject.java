@@ -1,12 +1,15 @@
 package com.sunsigne.reversedrebecca.object.menu;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.menu.buttons.TitleScreenButton;
+import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
 import com.sunsigne.reversedrebecca.ressources.FilePath;
+import com.sunsigne.reversedrebecca.ressources.font.FontTask;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.lang.Translatable;
 import com.sunsigne.reversedrebecca.ressources.menu.UnlockableList;
@@ -24,6 +27,19 @@ public class DrawingButtonObject extends TitleScreenButton {
 
 	public DrawingButtonObject(String text, int x, int y) {
 		this(text, x, y, 0, 0);
+	}
+
+	////////// TEXT ////////////
+
+	private Font font;
+	private String text;
+
+	private String getLockedText() {
+		if (text == null) {
+			font = new FontTask().createNewFont("startedbyamouse.ttf", 85f);
+			text = new Translatable().getTranslatedText(name + "_text", FilePath.DRAWING);
+		}
+		return text;
 	}
 
 	////////// DRAWING ////////////
@@ -72,8 +88,10 @@ public class DrawingButtonObject extends TitleScreenButton {
 		if (isSelected() == false)
 			return;
 
-		if (isLocked())
+		if (isLocked()) {
+			drawText(g);
 			return;
+		}
 
 		var img = getImage();
 		float factor = 3f / 7f;
@@ -84,6 +102,23 @@ public class DrawingButtonObject extends TitleScreenButton {
 		int yGap = horizontal ? 120 : 0;
 
 		g.drawImage(img, x0 + 900 + xGap, y0 + 150 + yGap, w, h, null);
+	}
+
+	private void drawText(Graphics g) {
+		if (getLockedText().contains("@") == false) {
+			drawLine(g, getLockedText(), 0);
+			return;
+		}
+
+		String[] content = getLockedText().split("@");
+		for (int index = 0; index < content.length; index++) {
+			drawLine(g, content[index], 120 * index);
+		}
+	}
+
+	private void drawLine(Graphics g, String text, int h) {
+		int[] rect = new int[] { 735, 290, 800, h };
+		new TextDecoration().drawCenteredString(g, font, text, Color.BLACK, DIRECTION.NULL, rect);
 	}
 
 	////////// MOUSE ////////////

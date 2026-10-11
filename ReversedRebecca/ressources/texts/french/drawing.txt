@@ -1,3 +1,7 @@
+meli = Je m'appelle Méli.@@Si tu cherche à savoir@comment déverrouiller un@dessin, je suis le chat@qu'il te faut !
+
+///// PAGE ONE /////
+
 head_sock = chaussette
 head_sock_color = couleur
 lockpicking = crochetage
@@ -7,6 +11,18 @@ dave_chair = dave chaise
 el_coffee = el cafe
 el_donut = el donut
 armed_duo = duo arme
+
+head_sock_text = @@Sortir du lit, tout@simplement.
+head_sock_color_text = @@Pareil. C'est le même dessin,@mais en couleur.
+lockpicking_text = @@Déverrouiller la porte@d'entrée.
+sadistic_nerd_text = @@Obtenir un karma "méchant"@à la fin d'un niveau.
+alicia_hug_text = @@Libérer Alicia,@et lui faire un calin.
+dave_chair_text = @@Parler à Dave.
+el_coffee_text = @@Donner un café@au policier.
+el_donut_text = @@Pareil. C'est une variante@du dessin d'avant.
+armed_duo_text = @@Déclencher la fusillade@dans le commissariat.
+
+///// PAGE TWO /////
 
 jojo_cop = flic jojo
 jojo_cop_color = couleur
