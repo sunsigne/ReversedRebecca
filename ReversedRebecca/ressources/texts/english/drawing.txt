@@ -1,0 +1,45 @@
+meli = My name is Méli.@@If you want to know@how to unlock a drawing,@I'm the cat you need!
+
+///// PAGE ONE /////
+
+head_sock = head sock
+head_sock_color = color
+lockpicking = lockpicking
+sadistic_nerd = sadistic gal
+alicia_hug = hug
+dave_chair = dave chair
+el_coffee = el coffee
+el_donut = el donut
+armed_duo = armed duo
+
+head_sock_text = @@Get out of bed, simple@as that.
+head_sock_color_text = @@Same thing. It's the same@drawing, but in color.
+lockpicking_text = @@Unlock the front door.@Rebecca's one, of course.
+sadistic_nerd_text = @@Get "mean" karma@at the end of a level.
+alicia_hug_text = @@Free Alicia,@and give her a hug.
+dave_chair_text = @@Error: this text shouldn't@be visible. Please@contact the developer.
+el_coffee_text = @@Give a coffee@to the police officer.
+el_donut_text = @@Give a donut@to the police officer.
+armed_duo_text = @@Trigger the shootout@in the police station.
+
+///// PAGE TWO /////
+
+jojo_cop = jojo cop
+jojo_cop_color = color
+touchy_girls = lesbians
+yy_pose = yy pose
+checkmate = checkmate
+android = android
+android_color = color
+cocktail = cocktail
+hangover = hangover
+
+jojo_cop_text = @@Dress up as a policewoman.@So classy!
+jojo_cop_color_text = @@Same thing. It's the same@drawing, but in color.
+touchy_girls_text = @@Host the gay couple@at your place.
+yy_pose_text = @@Meet Double-Y@at the top of his tower.
+checkmate_text = @@Lose a game of chess@to Double-Y.
+android_text = @@Wake Camille up@with Erika's help.
+android_color_text = @@Same thing. It's the same@drawing, but in color.
+cocktail_text = @@Go to the Purple String@Club.
+hangover_text = @@Same thing. Even though it's@a different drawing.

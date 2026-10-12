@@ -69,8 +69,6 @@
 	
 	bonus :
 	- BD
-	- illustrations :
-		- faire traduction en anglais
 
 	- réglagles :
 		- activation skin dark rebecca
