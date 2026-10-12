@@ -110,8 +110,22 @@ Exemple :
 WONPUZZLE -> 10-20 = PIXEL_ART -> FRUITS
 WONPUZZLE -> 10-20 = GOTO -> PIXEL_ART:FRUITS
 
-Lorsque la Condition sera vérifiée, le pixel art dont le dossier s'appelle «FRUITS » sera déverrouillé.
+Lorsque la Condition sera vérifiée, le pixel art dont le dossier s'appelle « FRUITS » sera déverrouillé.
 
+
+////// DRAWING //////
+
+Le Type de Requête DRAWING permet de déverrouiller une illustration, dans le menu « Bonus ».
+
+Fichier de référence : « ressources/bonus/drawings/(cible) ».
+
+Lorsqu'une illustration est déverrouillée : rien ne se passe visuellement pour le joueur. En revanche, son visuel sera désormais accessible dans le menu « DESSINS » (accès via le menu principal du jeu)
+
+Exemple :
+WONPUZZLE -> 10-20 = DRAWING -> COCKTAIL
+WONPUZZLE -> 10-20 = GOTO -> DRAWING:COCKTAIL
+
+Lorsque la Condition sera vérifiée, l'illustration qui s'appelle « COCKTAIL » sera déverrouillée.
 
 
 ////// HUD_ADD //////

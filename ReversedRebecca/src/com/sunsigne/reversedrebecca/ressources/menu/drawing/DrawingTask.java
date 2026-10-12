@@ -17,7 +17,7 @@ public class DrawingTask implements UnlockableTask {
 	@Override
 	public void unlock(String name) {
 		var map = UnlockableList.getDrawingMap();
-		Drawing drawing = map.get(name);
+		Drawing drawing = map.get(name.toLowerCase());
 
 		if (drawing.isLocked() == false)
 			return;

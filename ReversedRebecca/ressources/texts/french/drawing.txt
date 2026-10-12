@@ -19,7 +19,7 @@ sadistic_nerd_text = @@Obtenir un karma "méchant"@à la fin d'un niveau.
 alicia_hug_text = @@Libérer Alicia,@et lui faire un calin.
 dave_chair_text = @@Erreur : ce texte ne@devrait pas être visible.@Merci de contacter@le développeur.
 el_coffee_text = @@Donner un café@au policier.
-el_donut_text = @@Pareil. C'est une variante@du dessin d'avant.
+el_donut_text = @@Donner un donut@au policier.
 armed_duo_text = @@Déclencher la fusillade@dans le commissariat.
 
 ///// PAGE TWO /////

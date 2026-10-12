@@ -1,6 +1,6 @@
 
 airhead=false
-akaraPissed=false
+akaraPissed=true
 allAccountedFor=false
 ambivalence=false
 awkward=false
@@ -13,8 +13,8 @@ darwinAward=false
 eternalSleep=false
 firstKill=false
 goldenshower=false
-invisibleWall=false
-inyourhead=false
+invisibleWall=true
+inyourhead=true
 isaid200pushups=false
 nothingNext=false
 reversedcookie=false

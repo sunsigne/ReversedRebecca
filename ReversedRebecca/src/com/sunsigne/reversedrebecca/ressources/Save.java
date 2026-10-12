@@ -17,8 +17,10 @@ import com.sunsigne.reversedrebecca.pattern.list.LISTTYPE;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.condition.global.PriorSavedCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.SavedCondition;
+import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveList;
+import com.sunsigne.reversedrebecca.piranha.request.ressources.DrawingRequest;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.Karma;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
@@ -184,6 +186,8 @@ public class Save {
 	}
 
 	private int getKarmaValueBasedOnYouAre(LevelStats stats) {
+		Request drawing = new DrawingRequest();
+		
 		switch (stats.getYouAre()) {
 		case ANGELIC:
 			return 2;
@@ -192,8 +196,10 @@ public class Save {
 		case NEUTRAL:
 			return 0;
 		case MEAN:
+			drawing.doAction(null, "sadistic_nerd");
 			return -1;
 		case SADISTIC:
+			drawing.doAction(null, "sadistic_nerd");
 			return -2;
 		case PSYCHOPATH:
 			return -999;
@@ -214,30 +220,30 @@ public class Save {
 	public void eraseSave() {
 
 		// if nothing to erase
-	    var list = SaveEraserList.getList();
-	    if (list.getList().isEmpty())
-	        return;
+		var list = SaveEraserList.getList();
+		if (list.getList().isEmpty())
+			return;
 
-	    String lineSeparator = System.lineSeparator();
-	    String data = new FileTask().read(userData, file);
+		String lineSeparator = System.lineSeparator();
+		String data = new FileTask().read(userData, file);
 
 		// removing targeted data
-	    Set<String> toErase = new HashSet<>(list.getList());
-	    StringBuilder result = new StringBuilder();
+		Set<String> toErase = new HashSet<>(list.getList());
+		StringBuilder result = new StringBuilder();
 
-	    for (String line : data.split(Pattern.quote(lineSeparator), -1)) {
+		for (String line : data.split(Pattern.quote(lineSeparator), -1)) {
 
-	        if (toErase.contains(line))
-	            continue;
+			if (toErase.contains(line))
+				continue;
 
-	        if (result.length() > 0)
-	            result.append(lineSeparator);
+			if (result.length() > 0)
+				result.append(lineSeparator);
 
-	        result.append(line);
-	    }
+			result.append(line);
+		}
 
 		// registering the result
-	    new FileTask().write(file, result.toString());
+		new FileTask().write(file, result.toString());
 	}
 
 }

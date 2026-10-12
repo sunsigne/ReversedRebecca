@@ -71,8 +71,6 @@
 	- BD
 	- illustrations :
 		- faire traduction en anglais
-		- faire vérouillage :
-			- requete piranha + ajout des requis de chacun
 
 	- réglagles :
 		- activation skin dark rebecca
