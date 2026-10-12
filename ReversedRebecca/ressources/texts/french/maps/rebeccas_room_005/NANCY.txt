@@ -44,4 +44,76 @@ player = DOWN = sad = Ces deux filles sont vraiment bizarres…@C'est probableme
 
 % IT_S_GONNA_BE_OKAY
 object = player = cry_smile = Merci, tu es gentille.
-player = object = worry = De rien, vraiment… C'était dire ça ou une atrocité@
+object = player = cry = Je suis désolée d'être aussi nulle…
+object = player = cry = On t'a causé assez de problème comme ça…@Je vais te laisser tranquille.
+
+
+% GOOD_NIGHT
+object = player = cry_side = Merci. Je vais aller retrouver Jessy, et m'excuser…@J'espère qu'elle me pardonnera.
+object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
+object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
+
+
+% COULD_HAVE_STAYED
+player = DOWN = sad = Dommage qu'elle soit partie… Elle serait peut-être@restée si j'avais choisi d'autres options de dialogue.
+player = DOWN = you_silly = Tant pis. Ça n'est pas comme si je pouvais revenir@à l'écran titre et réessayer les choses différemment.
+
+
+% WHAT_DO_YOU_MEAN
+object = player = sad = Comment ça ?
+
+
+% STAY_A_LITTLE_BIT
+object = player = sad_side = C'est gentil… Mais je devrais vraiment y aller.@Si j'ai de la chance, je peux rattraper Jessy…
+
+
+% STAY_FOR_THE_NIGHT
+object = player = sad_side = Mais… Jessy ne serait pas d'accord…
+
+
+% I_UNDERSTAND
+object = player = cry_smile = Merci quand même.@J'apprécie ta proposition.
+object = player = cry_side = Je vais aller retrouver la retrouver, et m'excuser…@J'espère qu'elle me pardonnera.
+object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
+object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
+
+
+% SCREW_HER
+object = player = excited = C'est ce qui était prévu, mais tu as refusé de le faire…
+
+
+% SCREW_HER_NEXT
+object = player = playful = Tu as compris ? En rapport avec le double sens de…@Pardon. Si j'explique la blague, elle n'est plus drôle.
+
+
+% WHAT_NOW
+object = player = happy = Eh bien, j'imagine que je vais retourner auprès de Jessy.@Merci d'avoir été là.
+object = player = sad = Adieu, Rebecca. Je pense qu'on ne se reverra pas.@C'est plus simple comme ça.
+object = player = sad_side = Oui… C'est surement mieux comme ça…
+
+
+% I_LOVE_YOUR_LAUGH
+object = player = blush_side = Merci, je… l'aime beaucoup aussi…
+object = player = blush_sad = C'est un peu bizarre de dire ça de soi-même, non ?@Je dois avoir l'air d'une idiote…
+
+
+% NO_THAT_CUTE
+object = player = blush_side = Merci…
+
+
+% A_LITTLE_YES
+object = player = blush_side = Je devine, oui…
+
+
+% WHAT_NOW_FROM_NANCY
+object = player = blush = Bon… Et maintenant ?
+player = object = happy_var = Maintenant, tu vas dormir ici.@Je n'ai qu'un seul lit, mais on va se débrouiller.
+object = player = blush_sad = Tu… es certaine que ça ne te dérange pas ?
+player = object = happy_var = Absolument ! Après toutes ces émotions, tu as besoin de repos.
+object = player = blush = Merci.
+object = player = happy = Je prends le canapé, alors ?
+
+
+% REBECCA_ALMOST_REMEBERS_SHE_HAS_A_DATE_WITH_MARIE
+player = object = no_sens = Une seconde, je n'avais pas quelque chose de prévu, ce soir… ?
+player = object = no_sens = Bah, si j'ai oublié, c'est que ça ne devait pas être important.
