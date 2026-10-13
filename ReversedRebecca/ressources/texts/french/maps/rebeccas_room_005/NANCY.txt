@@ -127,6 +127,9 @@ object = player = playful = Bon, eh bien… Bonne nuit, alors.
 player = object = happy = Bonne nuit, Nancy.
 
 
-% REBECCA_ALMOST_REMEBERS_SHE_HAS_A_DATE_WITH_MARIE
-player = object = no_sens = Une seconde, je n'avais pas quelque chose de prévu, ce soir… ?
-player = object = no_sens = Bah, si j'ai oublié, c'est que ça ne devait pas être important.
+% KISS_TOWEL
+object = RIGHT = embarrased = Pardon… C'est difficile de garder mon calme…@Avec ta tenue…
+player = object = blush = Mon dieu, mais c'est vrai que je suis toujours@à moitié nue ! Je vais arranger ça.
+object = player = embarrased = NON !
+object = player = embarrased = Je veux dire…@On pourrait en… profiter…
+player = object = blush = On pourrait, oui…

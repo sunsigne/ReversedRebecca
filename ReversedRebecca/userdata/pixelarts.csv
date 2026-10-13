@@ -2,7 +2,7 @@
 bonus=false
 bug=true
 bugBanner=true
-clothes=false
+clothes=true
 desk=true
 door=true
 freezing=true

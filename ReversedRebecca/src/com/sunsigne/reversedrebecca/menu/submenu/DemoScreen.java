@@ -112,7 +112,7 @@ public class DemoScreen extends SubMenuScreen {
 				foreverImpsossible = true;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
 				psychopath = true;
-			if (tempDatum.equalsIgnoreCase("JESSY*FUCKED_REBECCA"))
+			if (tempDatum.equalsIgnoreCase("NANCY*SLEPT_WITH_REBECCA"))
 				hot = true;
 			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
 				doublee = true;
@@ -155,7 +155,7 @@ public class DemoScreen extends SubMenuScreen {
 		loadDemo("nathan", 0, 2, "Met", "ANTAGONIST*DOUBLE-Y", "BeatenUp", "NATHAN*BEATEN_UP", "HelpedToKill",
 				"NATHAN*POISONED_HIS_COLLEAGUE");
 		loadDemo(nolancy, 1, 2, "Met", "ANTAGONIST*DOUBLE-Y", "Dated", "NANCY*KISSED", "SleptWith",
-				"JESSY*FUCKED_REBECCA");
+				"NANCY*SLEPT_WITH_REBECCA");
 		loadDemo("double-y", 2, 2, "Strong", "yes", "Smart", "yes", "GoodLooking", "yes");
 	}
 

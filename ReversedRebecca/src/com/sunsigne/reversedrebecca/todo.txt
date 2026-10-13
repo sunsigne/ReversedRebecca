@@ -36,7 +36,6 @@
 	////////// EN COURS ////////////
 	
 	- nancy : 
-		- la variente serviette (+ male)
 		- traduction anglais JESSY ET NANCY (+ anglais male)
 		
 	rr005 (disco pas bourré) :
@@ -208,7 +207,7 @@
 	- Marie : on peut sortir aller à son rdv, comme on peut l'oublier dans certains cas (voir Jessy et Nancy)
 	- Stephan : Comptabile avec Marie, mais pas la route Forever and Ever qui nécessite d'avoir 0 date
 	- Jessys et Nancy : possibilité de coucher avec les deux. Rebecca oublie complètement marie, sauf si elles sont toutes les deux repoussées. A noter également que leurs arrivée annulent celles de Mika et de Romeo.
-	- Nancy : possibilité de sortir avec seuelemnt elle. Mêmes conséquences que les deux filles, vis-à-vis des autres personnages : ie. Marie est complètement oubliée.
+	- Nancy : possibilité de sortir avec seuelemnt elle. Mêmes conséquences que les deux filles, vis-à-vis des autres personnages : ie. Marie est complètement oubliée. On peut coucher avec seulement elle, si on repousse Jessy et qu'on est en serviette.
 	- Roméo : jamais vu du joueur, mais présent dans les parages. Comprend qu'il n'est pas spécial si Rebecca sort pour aller voir Marie, ou que les deux filles débarquent. Empêchera Mika de venir faire du mal à Rebecca.
 	- Mika : incompatible avec Marie. Se dégonflera si les deux filles débarquent. Ne viendra pas si Roméo l'en empêche. Stephan à déterminer ?
 	- Camille : si Rebecca est sortie, s'en rend compte une fois devant le lit. Si Nancy dans le lit, ne s'en rend pas compte avant le fondu en noir
