@@ -17,6 +17,9 @@ import com.sunsigne.reversedrebecca.puzzle.Puzzle;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
 import com.sunsigne.reversedrebecca.system.Size;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
+import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardController;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.KeyboardEvent;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.DownKey;
@@ -25,7 +28,7 @@ import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.RightKey;
 import com.sunsigne.reversedrebecca.system.controllers.keyboard.keys.UpKey;
 import com.sunsigne.reversedrebecca.system.mainloop.Handler;
 
-public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSide, KeyboardEvent {
+public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSide, KeyboardEvent, GamepadEvent {
 
 	public DiscoDancerObject(Puzzle puzzle, String name, boolean autoplay) {
 		super(puzzle, false, 0, 0, 2 * Size.XL, 2 * Size.XL);
@@ -191,4 +194,36 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 
 	}
 
+	////////// GAMEPAD ////////////
+
+	private GamepadController gamepadController = new GamepadController(this);
+
+	@Override
+	public GamepadController getGamepadController() {
+		return gamepadController;
+	}
+
+	
+	////////// GAMEPAD ////////////
+	
+	@Override
+	public void buttonPressed(ButtonEvent e) {
+		if (isAutoplay() && name.contains("rebecca") == false)
+			return;
+		
+		if (e.getKey() == ButtonEvent.X)
+			living.setFacing(DIRECTION.LEFT);
+		if (e.getKey() == ButtonEvent.B)
+			living.setFacing(DIRECTION.RIGHT);
+		if (e.getKey() == ButtonEvent.Y)
+			living.setFacing(DIRECTION.UP);
+		if (e.getKey() == ButtonEvent.A)
+			living.setFacing(DIRECTION.DOWN);
+	}
+
+	@Override
+	public void buttonReleased(ButtonEvent e) {
+
+	}	
+	
 }
