@@ -73,23 +73,23 @@ object = player = sad_side = Mais… Jessy ne serait pas d'accord…
 
 % I_UNDERSTAND
 object = player = cry_smile = Merci quand même.@J'apprécie ta proposition.
-object = player = cry_side = Je vais aller retrouver la retrouver, et m'excuser…@J'espère qu'elle me pardonnera.
+object = player = cry_side = Je vais aller la retrouver, et m'excuser…@J'espère qu'elle me pardonnera.
 object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
 object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
 
 
 % SCREW_HER
-object = player = excited = C'est ce qui était prévu, mais tu as refusé de le faire…
+object = player = excited = C'est ce qui était prévu, mais tu as refusé@de participer…
 
 
 % SCREW_HER_NEXT
-object = player = playful = Tu as compris ? En rapport avec le double sens de…@Pardon. Si j'explique la blague, elle n'est plus drôle.
+object = player = playful = Tu as compris ? À cause du double sens de…@Pardon, une blague expliquée n'est plus drôle…
 
 
 % WHAT_NOW
-object = player = happy = Eh bien, j'imagine que je vais retourner auprès de Jessy.@Merci d'avoir été là.
+object = player = happy = Eh bien, j'imagine que je vais retourner auprès@de Jessy. Merci d'avoir été là pour moi.
 object = player = sad = Adieu, Rebecca. Je pense qu'on ne se reverra pas.@C'est plus simple comme ça.
-object = player = sad_side = Oui… C'est surement mieux comme ça…
+object = player = sad_side = Oui… C'est mieux…
 
 
 % I_LOVE_YOUR_LAUGH

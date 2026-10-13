@@ -2,3 +2,4 @@
 
 FOLLOW_HER = Key1 % le suivre
 PUSH_HER_AWAY = Key2 % le repousser
+SCREW_HER = Key2 % qu'il aille se faire mettre

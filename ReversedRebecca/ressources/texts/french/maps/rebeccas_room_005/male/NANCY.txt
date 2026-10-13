@@ -36,3 +36,46 @@ object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
 
 % THAT_WAS_HARSH
 player = DOWN = sad = Ces deux types sont vraiment bizarres…@C'est probablement mieux comme ça.
+
+
+% IT_S_GONNA_BE_OKAY
+object = player = cry_smile = Merci, tu es gentille.
+object = player = cry = Je suis désolé d'être aussi nul…
+object = player = cry = On t'a causé assez de problème comme ça…@Je vais te laisser tranquille.
+
+
+% GOOD_NIGHT
+object = player = cry_side = Merci. Je vais aller retrouver James, et m'excuser…@J'espère qu'il me pardonnera.
+object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
+object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
+
+
+% COULD_HAVE_STAYED
+player = DOWN = sad = Dommage qu'il soit parti… Il serait peut-être resté@si j'avais choisi d'autres options de dialogue.
+player = DOWN = you_silly = Tant pis. Ça n'est pas comme si je pouvais revenir@à l'écran titre et réessayer les choses différemment.
+
+
+% STAY_A_LITTLE_BIT
+object = player = sad_side = C'est gentil… Mais je devrais vraiment y aller.@Si j'ai de la chance, je peux rattraper James…
+
+
+% STAY_FOR_THE_NIGHT
+object = player = sad_side = Mais… James ne serait pas d'accord…
+
+
+% I_UNDERSTAND
+object = player = cry_smile = Merci quand même.@J'apprécie ta proposition.
+object = player = cry_side = Je vais aller le retrouver, et m'excuser…@J'espère qu'il me pardonnera.
+object = player = cry_smile = Adieu, Rebecca.@Je pense qu'on ne se reverra pas.
+object = player = cry_smile_var = Ou… Peut-être dans une autre vie…
+
+
+% WHAT_NOW
+object = player = happy = Eh bien, j'imagine que je vais retourner auprès@de James. Merci d'avoir été là pour moi.
+object = player = sad = Adieu, Rebecca. Je pense qu'on ne se reverra pas.@C'est plus simple comme ça.
+object = player = sad_side = Oui… C'est mieux…
+
+
+% I_LOVE_YOUR_LAUGH
+object = player = blush_side = Merci, je… l'aime beaucoup aussi…
+object = player = blush_sad = C'est un peu bizarre de dire ça de soi-même, non ?@Je dois avoir l'air d'un idiot…
