@@ -30,4 +30,3 @@ WHAT_NOW = Key2 % ... Et maintenant ?
 NO_THAT_CUTE = Key1 % non, c'est mignon
 A_LITTLE_YES = Key2 % un peu, oui
 I_TAKE_THE_COUCH = Key2 % je prends le canapé
-THINK = Key3 % (réfléchir)

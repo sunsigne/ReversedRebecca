@@ -109,9 +109,18 @@ object = player = blush_side = Je devine, oui…
 object = player = blush = Bon… Et maintenant ?
 player = object = happy_var = Maintenant, tu vas dormir ici.@Je n'ai qu'un seul lit, mais on va se débrouiller.
 object = player = blush_sad = Tu… es certaine que ça ne te dérange pas ?
-player = object = happy_var = Absolument ! Après toutes ces émotions, tu as besoin de repos.
+player = object = happy_var = Absolument ! Après toutes ces émotions,@tu as besoin de repos.
 object = player = blush = Merci.
 object = player = happy = Je prends le canapé, alors ?
+
+
+% WILL_GO_COUCH
+object = player = happy = Très bien. Bonne nuit, Rebecca.
+player = object = happy = Bonne nuit, Nancy.
+
+
+
+
 
 
 % REBECCA_ALMOST_REMEBERS_SHE_HAS_A_DATE_WITH_MARIE

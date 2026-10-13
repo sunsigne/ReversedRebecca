@@ -1,26 +1,24 @@
 
-KARMA=0
-
 MaxHp=2
 
+KARMA=0
 
-KeyMaxLvl=CYAN
-KeyStartLvl=NULL
-KeyCriticalChance=15%
-
-BombMaxLvl=CYAN
-BombStartLvl=NULL
-BombCriticalChance=15%
-
-BombingDoor=FALSE
 
 AlcoholMaxLvl=YELLOW
 AlcoholStartLvl=NULL
 AlcoholCriticalChance=15%
 
+BombMaxLvl=CYAN
+BombStartLvl=NULL
+BombCriticalChance=15%
+
 CowboyMaxLvl=RED
 CowboyStartLvl=RED
 CowboyCriticalChance=15%
+
+KeyMaxLvl=CYAN
+KeyStartLvl=NULL
+KeyCriticalChance=15%
 
 MicrochipMaxLvl=CYAN
 MicrochipStartLvl=NULL
@@ -29,3 +27,5 @@ MicrochipCriticalChance=15%
 ShovelMaxLvl=CYAN
 ShovelStartLvl=NULL
 ShovelCriticalChance=15%
+
+BombingDoor=FALSE
