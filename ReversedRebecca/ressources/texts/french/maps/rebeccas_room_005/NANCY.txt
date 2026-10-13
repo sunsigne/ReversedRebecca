@@ -119,8 +119,12 @@ object = player = happy = Très bien. Bonne nuit, Rebecca.
 player = object = happy = Bonne nuit, Nancy.
 
 
-
-
+% WILL_GO_BED
+object = player = sad = Tu es sûre ?@Tu ne préfères pas dormir dans ton lit ?
+player = object = worry = Je préfère m'assurer que tu dormes bien.
+object = player = sad_side = D'accord… Ça me met un peu mal à l'aise,@mais c'est gentil de ta part.
+object = player = playful = Bon, eh bien… Bonne nuit, alors.
+player = object = happy = Bonne nuit, Nancy.
 
 
 % REBECCA_ALMOST_REMEBERS_SHE_HAS_A_DATE_WITH_MARIE

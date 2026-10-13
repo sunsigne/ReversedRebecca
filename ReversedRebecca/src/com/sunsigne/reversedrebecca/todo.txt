@@ -36,9 +36,7 @@
 	////////// EN COURS ////////////
 	
 	- nancy : 
-		- finir Rebecca prend le canapé (+ male)
 		- la variente serviette (+ male)
-		- variante Marie
 		- traduction anglais JESSY ET NANCY (+ anglais male)
 		
 	rr005 (disco pas bourré) :
@@ -135,7 +133,7 @@
 	réorganiser le dossier "$working"
 
 	note : puzzle : cliquer = impact
-	
+
 	////////// RRXXX générique ////////////
 	
 	sauvegarde : rr005 - il y a un dialogue spécifique si on gaspille de l'eau 2 fois. Rebecca devrait peut-être enregistrer cette information pour si le joueur recommence sur plusieurs jours ?
@@ -205,6 +203,16 @@
 	- l'angelic, aider tout le monde &, soit libérer roméo, soit lui livrer un repas
 	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
 
+	////////// RR005 ////////////
+	
+	- Marie : on peut sortir aller à son rdv, comme on peut l'oublier dans certains cas (voir Jessy et Nancy)
+	- Stephan : Comptabile avec Marie, mais pas la route Forever and Ever qui nécessite d'avoir 0 date
+	- Jessys et Nancy : possibilité de coucher avec les deux. Rebecca oublie complètement marie, sauf si elles sont toutes les deux repoussées. A noter également que leurs arrivée annulent celles de Mika et de Romeo.
+	- Nancy : possibilité de sortir avec seuelemnt elle. Mêmes conséquences que les deux filles, vis-à-vis des autres personnages : ie. Marie est complètement oubliée.
+	- Roméo : jamais vu du joueur, mais présent dans les parages. Comprend qu'il n'est pas spécial si Rebecca sort pour aller voir Marie, ou que les deux filles débarquent. Empêchera Mika de venir faire du mal à Rebecca.
+	- Mika : incompatible avec Marie. Se dégonflera si les deux filles débarquent. Ne viendra pas si Roméo l'en empêche. Stephan à déterminer ?
+	- Camille : si Rebecca est sortie, s'en rend compte une fois devant le lit. Si Nancy dans le lit, ne s'en rend pas compte avant le fondu en noir
+	
 	////////// RR005_DRUNK ////////////
 
 	Rebecca a completement oublié son rendez-vous avec Marie. Elle se ramène le lendemain matin. Un choix capital est lancé :

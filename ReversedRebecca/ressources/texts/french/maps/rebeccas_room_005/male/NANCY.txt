@@ -84,3 +84,11 @@ object = player = blush_sad = C'est un peu bizarre de dire ça de soi-même, non
 % WILL_GO_COUCH
 object = player = happy = Très bien. Bonne nuit, Rebecca.
 player = object = happy = Bonne nuit, Nolan.
+
+
+% WILL_GO_BED
+object = player = sad = Tu es sûre ?@Tu ne préfères pas dormir dans ton lit ?
+player = object = worry = Je préfère m'assurer que tu dormes bien.
+object = player = sad_side = D'accord… Ça me met un peu mal à l'aise,@mais c'est gentil de ta part.
+object = player = playful = Bon, eh bien… Bonne nuit, alors.
+player = object = happy = Bonne nuit, Nolan.

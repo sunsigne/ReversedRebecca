@@ -11,8 +11,8 @@ player = object = you_silly = Ça valait le coup de tenter.
 
 
 % NOW_YOU_DIE
-object = player = killer = DESTRUCTION D'ÊTRE HUMAIN : ACTIVÉE
+object = UP = killer = DESTRUCTION D'ÊTRE HUMAIN : ACTIVÉE
 
 
 % NOW_YOU_DIE_FAIL
-object = player = killer = … Elle n'est pas là ?
+object = UP = killer = … Elle n'est pas là ?
