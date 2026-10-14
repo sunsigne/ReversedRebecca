@@ -129,7 +129,7 @@ alexia = DOWN = surprised = Ha.
 
 
 % SARAH_COLLAPSE_FREAKS_OUT
-sarah = UP = worry_var = ÇA VA LES FILLES ?
+sarah = UP = worry_var = ÇA VA LES GARS ?
 rebecca = DOWN = excited = OUI, ON VA BIEN !
 sarah = UP = worry = OK.
 

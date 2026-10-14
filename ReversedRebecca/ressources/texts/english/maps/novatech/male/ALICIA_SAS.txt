@@ -29,9 +29,3 @@ sarah = UP = wink = No thanks, I'm good.
 
 % FOUND_BY_DELTA_IN_BREAK_ROOM
 delta = player = happy = It looks like we've found him.@He seems to be doing well.
-
-
-% SARAH_COLLAPSE_FREAKS_OUT
-sarah = UP = worry_var = HEY! GUYS! ARE YOU OK?
-rebecca = DOWN = excited = WE ARE FINE!
-sarah = UP = worry = ALRIGHT.

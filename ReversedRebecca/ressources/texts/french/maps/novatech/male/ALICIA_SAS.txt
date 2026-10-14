@@ -43,9 +43,3 @@ alexia = player = unhappy = Tu sais quoi, je suis trop fatigué pour rester@éco
 
 % FOUND_BY_DELTA_IN_BREAK_ROOM
 delta = player = happy = On dirait qu'on l'a trouvé. Il a l'air d'aller bien.
-
-
-% SARAH_COLLAPSE_FREAKS_OUT
-sarah = UP = worry_var = ÇA VA LES GARS ?
-rebecca = DOWN = excited = OUI, ON VA BIEN !
-sarah = UP = worry = OK.
