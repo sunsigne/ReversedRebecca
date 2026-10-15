@@ -12,6 +12,7 @@ PUT_AWAY = Key2 % ranger
 
 ///// EXTRA /////
 
+WHOS_THERE = Key2 % c'est qui ?
 GO_TO_THE_DATE = Key3 % aller au rendez-vous
 FOLLOW_HER = Key1 % la suivre
 PUSH_HER_AWAY = Key2 % la repousser

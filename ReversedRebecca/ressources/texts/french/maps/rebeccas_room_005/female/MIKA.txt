@@ -1,0 +1,9 @@
+% WHOS_THERE
+player = UP = happy_var = C'est qui ?
+object = DOWN = serious = C'est Mia.
+player = UP = excited = Mia ? Je t'en pris, entre !
+
+
+% I_MEANT_IT_IT_IS_JUST_INCREDYBLY_DISTURBING
+player = UP = cry_var = Mia, arrête !
+object = DOWN = smirk = J'adore quand tu joues les difficiles…

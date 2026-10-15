@@ -12,6 +12,7 @@ PUT_AWAY = Key2 % put away
 
 ///// EXTRA /////
 
+WHOS_THERE = Key2 % who's there?
 GO_TO_THE_DATE = Key3 % go to the date
 FOLLOW_HER = Key1 % follow her
 PUSH_HER_AWAY = Key2 % push her away

@@ -1,0 +1,35 @@
+% WHOS_THERE
+player = UP = happy_var = C'est qui ?
+object = DOWN = serious = C'est Mika.
+player = UP = excited = Mika ? Je t'en pris, entre !
+
+
+% HITTING_ON
+object = DOWN = smirk = Bonsoir ma belle, j'ai attendu ce moment@toute la journée…
+player = UP = worry = Tu parles de quoi ?
+object = DOWN = smirk = De ça.
+
+
+% WANDERING_HANDS
+player = UP = unhappy = Hey! Mais qu'est-ce que tu fais !
+
+
+% WANDERING_HANDS_NEXT
+object = DOWN = smirk = Joue pas les farouches, je sais que tu aimes ça…
+player = UP = unhappy = Non…
+object = DOWN = smirk = Mais si…
+
+
+% WHAT_I_AM_WRITTING_IS_DISGUSTING_ME
+player = UP = unhappy = Arrête, s'il te plaît.
+object = DOWN = smirk = Tu dis non, mais j'entends oui…
+
+
+% SERIOUSLY_IF_YOU_FIND_THIS_EVEN_THE_SLIGHTEST_BIT_AROUSING_GO_GET_HELP
+player = UP = cry_var = Je ne veux pas, laisse-moi tranquille…@Tu me fais mal !
+object = DOWN = smirk = Mais si, tu vas adorer.
+
+
+% I_MEANT_IT_IT_IS_JUST_INCREDYBLY_DISTURBING
+player = UP = cry_var = Mika, arrête !
+object = DOWN = smirk = J'adore quand tu joues les difficiles…
