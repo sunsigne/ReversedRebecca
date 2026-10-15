@@ -1,0 +1,70 @@
+% GET_OUT_NEXT
+nolancy = jamessy = sad = James, I…<INTERRUPT>
+jamessy = LEFT = angry_var2 = Shut up! You want to screw that bitch behind@my back? Go right ahead, you dirty slut!
+
+
+% SORRY_FOR_JESSY
+object = player = sad = Rebecca, I'm sorry about all this…
+object = player = sad_side = Jams has a very fiery temper, and he doesn't@handle rejection well…
+object = player = sad = That's no excuse, I know… And you didn't@do anything wrong, of course. It's just…
+
+
+% SORRY_FOR_JESSY_NEXT
+object = player = sad_side = I'm lost…
+object = player = cry_side = And now, James is… James has…
+
+
+% SUCKS_TO_BE_YOU
+object = player = cry_side = I know… I'm such a loser…
+object = player = cry_closed = I'll go find him and apologize…@I hope he forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% THAT_WAS_HARSH
+player = DOWN = sad = Those two guys are really weird…@It's probably for the best.
+
+
+% GOOD_NIGHT
+object = player = cry_side = Thanks. I'll go find James and apologize…@I hope he forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% COULD_HAVE_STAYED
+player = DOWN = sad = It's a shame he left… He might have stayed@if I'd chosen different dialogue options.
+player = DOWN = you_silly = Oh well. That's not like I can go back to@the title screen and try things differently.
+
+
+% STAY_A_LITTLE_BIT
+object = player = sad_side = That's kind… But I really should go.@If I'm lucky, I can catch up with James…
+
+
+% STAY_FOR_THE_NIGHT
+object = player = sad_side = But… James wouldn't agree to that…
+
+
+% I_UNDERSTAND
+object = player = cry_smile = Thanks anyway. I appreciate the offer.
+object = player = cry_side = I'll go find him and apologize…@I hope he forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% WHAT_NOW
+object = player = happy = Well, I guess I'll go back to James.@Thanks for being there for me.
+object = player = sad = Farewell, Rebecca. I don't think we'll see each@other again. It's simpler that way.
+object = player = sad_side = Yeah… It's better…
+
+
+% WILL_GO_COUCH
+object = player = happy = Alright. Good night, Rebecca.
+player = object = happy = Good night, Nolan.
+
+
+% WILL_GO_BED
+object = player = sad = Are you sure?@Wouldn't you rather sleep in your own bed?
+player = object = worry = I'd rather make sure you sleep well.
+object = player = sad_side = Okay… It makes me a bit uncomfortable,@but it's kind of you.
+object = player = playful = Well, then… Good night.
+player = object = happy = Good night, Nolan.

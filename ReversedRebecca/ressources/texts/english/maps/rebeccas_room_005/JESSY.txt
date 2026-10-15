@@ -1,0 +1,87 @@
+% POLICE
+object = player = deep = This is the police. Open up, or we're coming in…
+object = player = deep_provocative = Just kidding. We're coming in anyway.
+
+
+% POLICE_MAD
+object = player = angry_var = This is the police! Open up, or we're coming in!
+object = player = angry = Actually, we're coming in anyway!
+
+
+% SCOLDING
+object = player = angry = So, you're hitting on my girlfriend, but not me?
+
+
+% SCOLDING_TOWEL
+object = player = angry = So, you're hitt…
+object = player = doubt = Am I dreaming, or are you wearing a towel?
+object = player = dreaming = Well, never mind…
+
+
+% I_FORGOT_YOU
+object = player = angry = What do you mean, you forgot me?@I'm not someone you just forget!
+object = player = angry_var2 = How dare you just "forget" me?!@I'm going to… I'm going to…
+
+
+% I_M_NOT_INTO_YOU
+object = player = angry = What do you mean, you're not into me?@Have you considered having better taste?
+object = player = angry_var2 = You think I'm going to let you say that to me@without reacting? I'm going to… I'm going to…
+
+
+% SCOLDING_VAR
+object = player = angry = So, you're hitting on my girlfriend without@my permission?!
+player = object = angry = Nancy doesn't need your "permission",@she does what she wants, she's an adult!
+object = player = angry_var2 = An adult who belongs to me, nobody@touches her but me!
+nolancy = DOWN = sad_side = If I may-<INTERRUPT>
+object = LEFT = angry_var = You don't get to say a damn thing.@Shut your mouth.
+object = player = angry_var2 = As for you… I'm going to…@I'm going to…
+
+
+% SCOLDING_NEXT
+object = player = deep_provocative = You deserve a punishment… I'm going to show@you, how I really use my handcuffs…
+
+
+% PROVOCATION_TOWEL
+object = player = sadistic_happy = So, you've dec…
+object = player = doubt = Am I dreaming, or are you wearing a towel?
+object = player = deep = Did you get ready for our arrival?@Anyway, as I was saying…
+
+
+% PROVOCATION
+object = player = sadistic_happy = So, you've decided to meddle in a couple's@business?
+
+
+% PROVOCATION_NEXT
+object = player = deep = That's not exactly by the book, in fact, it's…@strictly forbidden…
+object = player = deep_provocative = You deserve a punishment… I'm going to show@you, how I really use my handcuffs…
+
+
+% NO_CONSENT
+object = player = doubt = Playing the tough girl?
+object = player = sadistic_smirk = No need for that.@Follow me, and you won't regret it…
+
+
+% NO_CONSENT_MAD
+object = player = angry = I'm not amused.@Stop it, or you'll regret it.
+
+
+% NO_CONSENT_MAD_NEXT
+object = player = angry_var2 = That's enough now. You're coming with me.
+
+
+% FAKE_ARRESTATION
+object = player = deep_provocative = You have the right to remain silent. Anything@I own can and will be used against you.
+object = player = aroused = Nancy will be your lawyer.@She'll make sure I don't commit too many…
+object = player = deep_provocative = … ​​acts of police misconduct.
+
+
+% PROVOCATION_BED
+object = up = deep_provocative_var = Well? Not acting so smart now compared@to the station, are you?
+object = up = deep = Do you think it's allowed to walk past me,@looking that hot?
+object = up = aroused = You're in for it now…@I'm going to make sure this lasts for hours…
+
+
+% PROVOCATION_BED_MAD
+object = up = deep_provocative_var = Well?@Not acting so smart now? 
+object = up = deep = You thought you could mock me and get away@with it? I'll punish you…
+object = up = aroused = You're in for it now…@I'm going to make sure this lasts for hours…

@@ -2,3 +2,4 @@
 
 FOLLOW_HER = Key1 % follow him
 PUSH_HER_AWAY = Key2 % push him away
+SCREW_HER = Key2 % screw him

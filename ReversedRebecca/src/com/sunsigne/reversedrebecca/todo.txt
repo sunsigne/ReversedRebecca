@@ -34,10 +34,7 @@
 	changer le lien "signaler un bug" pour le discord
 		
 	////////// EN COURS ////////////
-	
-	- nancy : 
-		- traduction anglais JESSY ET NANCY (+ anglais male)
-		
+
 	rr005 (disco pas bourré) :
 		- mika
 		- marie : terminer la tenue "date"
@@ -46,8 +43,6 @@
 		musique : bourré + cookie + love that... - spicy
 		dessin
 
-	lvl001 - quand il y a l'éffondrement, sarah devrait dire "ça va les gars ?" plutot que "les filles"
-	
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 

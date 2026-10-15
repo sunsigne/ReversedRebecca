@@ -1,0 +1,17 @@
+% SCOLDING
+object = player = angry = So, you're hitting on my boyfriend, but not me?
+
+
+% SCOLDING_VAR
+object = player = angry = So, you're hitting on my boyfriend without@my permission?!
+player = object = angry = Nolan doesn't need your "permission",@he does what he wants, he's an adult!
+object = player = angry_var2 = An adult who belongs to me, nobody@touches him but me!
+nolancy = DOWN = sad_side = If I may-<INTERRUPT>
+object = LEFT = angry_var = You don't get to say a damn thing.@Shut your mouth.
+object = player = angry_var2 = As for you… I'm going to…@I'm going to…
+
+
+% FAKE_ARRESTATION
+object = player = deep_provocative = You have the right to remain silent. Anything@I own can and will be used against you.
+object = player = aroused = Nolan will be your lawyer.@He'll make sure I don't commit too many…
+object = player = deep_provocative = … ​​acts of police misconduct.

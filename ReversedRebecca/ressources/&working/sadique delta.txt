@@ -1,0 +1,31 @@
+laugh = Yo ma grande ! Tu as quitté le travail tôt, aujourd'hui !
+you_silly = Tu sais comment je suis… Quand on commence à faire sauter les verrous à la dynamite, je perds un peu ma concentration.
+laught = Je comprends, oui.@C'est pour ça que je viens te voir, d'ailleurs.
+wink = Joseph nous a mis toutes les deux sur le coups.@Nous devons officiellement déposer plainte au nom de Novatech. Tu viens ?
+Quoi, maintenant ?
+Oui, maintenant. Il est à peine 14h. 
+Mais tranquille, on fait ça vite fait, puis on partira trainer en boite. Partante ?
+Pourquoi pas. Mon petit doigt me dit que je vais trouver un moyen de m'amuser.
+Erika, je sors. Tu reste là, ce soir ?
+
+
+% INTRODUCTION
+policeman = DOWN = archer = Donc, pour résumer votre histoire :
+policeman = DOWN = archer = Un certain Vladimir Wolanski est venu@ce jour, à l'adresse indiquée, et a cassé la porte…
+sarah = UP = angry = Absolument.
+policeman = DOWN = archer = … il est ensuite est parti en emportant des feuilles…
+sarah = UP = angry_var = Oui, m'sieur.
+policeman = DOWN = archer = Voilà. Votre plainte est enregistrée. Vous voulez que je l'imprime ?
+sarah = UP = angry_var = Ca ne sera pas nécessaire. Merci bien.
+
+
+spketical = Ce n'est pas le travail qui l'étouffe, lui… Enfin, la plainte est enregistrée.
+Mais maintenant qu'on est là… Ca ne te dirait pas de jouer les espionnes ?
+Comment ça ?
+Je suis sûre qu'on peut trouver des informations intéressantes dans leurs archives. Tu n'as pas envie qu'on aille voir.
+Ca n'est pas illégal ?
+Seulement si on se fait prendre.@Alors ? Ca te chauffe ?
+
+(si oui, elle donne une pelle à rebecca)
+
+

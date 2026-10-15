@@ -1,0 +1,135 @@
+% YOU_KNOW_WHATS_COMING
+object = player = blush_side = Well… This isn't the outcome I imagined… But@I'm not complaining that things worked out…
+object = player = blush = You fully understood what you just agreed to…@Right?
+player = object = fake_smile = I have a vague idea. I'm willing.
+object = player = embarrased = Just wanted to be sure.
+
+
+% GET_OUT
+player = UP = angry = Who do you think you are? Get out of my place!
+
+
+% GET_OUT_NEXT
+nolancy = jamessy = sad = Jessy, I…<INTERRUPT>
+jamessy = LEFT = angry_var2 = Shut up! You want to screw that bitch behind@my back? Go right ahead, you dirty slut!
+
+
+% GET_LIED_TO
+object = player = sad = Rebecca, I'm sorry about all this…
+object = player = sad_side = Mind you, you bear some responsibility…@You lied to me just to kiss me…
+object = player = sad = I'm not trying to pin the blame on you…@It's just that…
+
+
+% SORRY_FOR_JESSY
+object = player = sad = Rebecca, I'm sorry about all this…
+object = player = sad_side = Jessy has a very fiery temper, and she doesn't@handle rejection well…
+object = player = sad = That's no excuse, I know… And you didn't@do anything wrong, of course. It's just…
+
+
+% SORRY_FOR_JESSY_NEXT
+object = player = sad_side = I'm lost…
+object = player = cry_side = And now, Jessy is… Jessy has…
+
+
+% SUCKS_TO_BE_YOU
+object = player = cry_side = I know… I'm such a loser…
+object = player = cry_closed = I'll go find her and apologize…@I hope she forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% THAT_WAS_HARSH
+player = DOWN = sad = Those two girls are really weird…@It's probably for the best.
+
+
+% IT_S_GONNA_BE_OKAY
+object = player = cry_smile = Thanks, you're kind.
+object = player = cry = I'm sorry for being such a mess…
+object = player = cry = We've caused you enough trouble as it is…@I'll leave you alone now.
+
+
+% GOOD_NIGHT
+object = player = cry_side = Thanks. I'll go find Jessy and apologize…@I hope she forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% COULD_HAVE_STAYED
+player = DOWN = sad = It's a shame she left… She might have stayed@if I'd chosen different dialogue options.
+player = DOWN = you_silly = Oh well. That's not like I can go back to@the title screen and try things differently.
+
+
+% WHAT_DO_YOU_MEAN
+object = player = sad = What do you mean?
+
+
+% STAY_A_LITTLE_BIT
+object = player = sad_side = That's kind… But I really should go.@If I'm lucky, I can catch up with Jessy…
+
+
+% STAY_FOR_THE_NIGHT
+object = player = sad_side = But… Jessy wouldn't agree to that…
+
+
+% I_UNDERSTAND
+object = player = cry_smile = Thanks anyway. I appreciate the offer.
+object = player = cry_side = I'll go find her and apologize…@I hope she forgives me.
+object = player = cry_smile = Farewell, Rebecca.@I don't think we'll see each other again.
+object = player = cry_smile_var = Or… Maybe in another life…
+
+
+% SCREW_HER
+object = player = excited = That was the plan, but you refused to take part…
+
+
+% SCREW_HER_NEXT
+object = player = playful = Did you get it? Because of the double meaning@of… Sorry, a joke explained isn't funny anymore…
+
+
+% WHAT_NOW
+object = player = happy = Well, I guess I'll go back to Jessy.@Thanks for being there for me.
+object = player = sad = Farewell, Rebecca. I don't think we'll see each@other again. It's simpler that way.
+object = player = sad_side = Yeah… It's better…
+
+
+% I_LOVE_YOUR_LAUGH
+object = player = blush_side = Thanks, I… I like it a lot too…
+object = player = blush_sad = It's a bit weird to say that about yourself, isn't it?@I must look like an idiot…
+
+
+% NO_THAT_CUTE
+object = player = blush_side = Thanks…
+
+
+% A_LITTLE_YES
+object = player = blush_side = I guess so, yeah…
+
+
+% WHAT_NOW_FROM_NANCY
+object = player = blush = Well… What now?
+player = object = happy_var = Now, you're going to sleep here.@I only have one bed, but we'll make it work.
+object = player = blush_sad = Are… you sure you don't mind?
+player = object = happy_var = Absolutely! After all the drama, you need@some rest.
+object = player = blush = Thanks.
+object = player = happy = I'll take the couch, then?
+
+
+% WILL_GO_COUCH
+object = player = happy = Alright. Good night, Rebecca.
+player = object = happy = Good night, Nancy.
+
+
+% WILL_GO_BED
+object = player = sad = Are you sure?@Wouldn't you rather sleep in your own bed?
+player = object = worry = I'd rather make sure you sleep well.
+object = player = sad_side = Okay… It makes me a bit uncomfortable,@but it's kind of you.
+object = player = playful = Well, then… Good night.
+player = object = happy = Good night, Nancy.
+
+
+% KISS_TOWEL
+object = RIGHT = embarrased = Sorry… It's hard to keep my cool…@With that outfit of yours…
+player = object = blush = My goodness, it's true I'm still half-naked!@I'll go fix that.
+object = player = embarrased = NO!
+object = player = embarrased = I mean…@We could… take advantage of it…
+player = object = blush = We could, yes…
