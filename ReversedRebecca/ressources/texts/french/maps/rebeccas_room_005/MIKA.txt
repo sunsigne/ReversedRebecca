@@ -11,7 +11,7 @@ object = DOWN = smirk = De ça.
 
 
 % WANDERING_HANDS
-player = UP = unhappy = Hey! Mais qu'est-ce que tu fais !
+player = UP = unhappy = Hey ! Mais qu'est-ce que tu fais !
 
 
 % WANDERING_HANDS_NEXT

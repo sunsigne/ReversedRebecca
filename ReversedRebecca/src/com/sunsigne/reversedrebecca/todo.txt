@@ -36,16 +36,8 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
-		- tester les différentes possibilité avec romeo (sauvegarde) :
-			- seul
-			- voit les flles arriver
-			- voit mika arriver
-			- voit les filles ET mika arrivé
-	
 		- mika :
-			- annuler le TA du lit le temps du toc toc
-			- si elle tient un verre d'eau au moement ou Mika lui saute dessus, le faire tomber ? au moins le boire avant s'il faut
-			- penser aux animation serviette
+			- annuler le TA du lit le temps du toc toc (+ vérifier que si on y va prématurémment, ça enregistre bien "MIKA*GET_GHOSTED)
 			- traduction en anglais (mika)
 			- enregistrer la mémoire de dave : il a déjà donner le dialogue une fois
 			- retour à la réalité à terminer
@@ -110,7 +102,7 @@
 		
 	rr005 (bourré) :
 		- terminer le lit
-		- teminer l'intervention de dave + enregistrement des données DAVE*KILLED_MIKA et MIKA*KILLED comme dans rr005
+		- teminer l'intervention de dave + enregistrement des données DAVE*KILLED_MIKA et MIKA*KILLED comme dans rr005 + texter ofc
 		- enregistrer que la plante ne boit pas
 	
 	- interactions avec les objets :

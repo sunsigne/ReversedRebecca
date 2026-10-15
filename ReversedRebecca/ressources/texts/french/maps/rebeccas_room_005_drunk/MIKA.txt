@@ -17,7 +17,7 @@ object = DOWN = smirk = Ça va être encore plus facile…@Viens par là.
 
 
 % WANDERING_HANDS
-player = UP = drunk = Hey! Mais qu'est-ce que tu fais !
+player = UP = drunk = Hey ! Mais qu'est-ce que tu fais !
 
 
 % WANDERING_HANDS_NEXT
