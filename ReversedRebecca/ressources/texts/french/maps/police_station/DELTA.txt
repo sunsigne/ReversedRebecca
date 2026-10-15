@@ -1,0 +1,17 @@
+% INTRODUCTION
+policeman = DOWN = archer = Donc, pour résumer votre histoire :
+policeman = DOWN = archer = Un certain Vladimir Wolanski est venu@ce jour, à l'adresse indiquée, et a cassé la porte…
+object = UP = happy = Absolument.
+policeman = DOWN = archer = … il est ensuite est parti en emportant des feuilles…
+object = UP = happy_var = Oui, m'sieur.
+policeman = DOWN = archer = Voilà. Votre plainte est enregistrée.@Vous voulez que je l'imprime ?
+object = UP = happy = Ca ne sera pas nécessaire. Merci.
+
+
+% INTRODUCTION_NEXT
+delta = player = worry = Ce n'est pas le travail qui l'étouffe, lui…@Enfin, la plainte est enregistrée.
+delta = player = wink = Mais maintenant qu'on est là… Ça ne te dirait pas@de jouer les espionnes ?
+player = delta = no_sens = Comment ça ?
+delta = player = happy_var = Je suis sûre qu'on peut trouver des informations@dans leurs archives. Tu veux qu'on aille voir ?
+player = delta = surprised = Mais c'est illégal !
+delta = player = laugh = Seulement si on se fait prendre, ma grande.@Alors ? Ça te chauffe ?
