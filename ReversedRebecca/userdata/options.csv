@@ -1,4 +1,4 @@
-Language=french
+Language=english
 Camera=dynamic
 Shake=on
 Inventory=visible
@@ -7,7 +7,7 @@ Difficulty=normal
 
 /////BONUS/////
 
-PreferredAttraction=female
+PreferredAttraction=default
 
 /////ACTION/////
 

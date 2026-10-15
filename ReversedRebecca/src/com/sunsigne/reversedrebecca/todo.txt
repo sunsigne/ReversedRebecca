@@ -38,18 +38,15 @@
 	rr005 (disco pas bourré) :
 		- mika :
 			- annuler le TA du lit le temps du toc toc (+ vérifier que si on y va prématurémment, ça enregistre bien "MIKA*GET_GHOSTED)
-			- traduction en anglais (mika)
 			- enregistrer la mémoire de dave : il a déjà donner le dialogue une fois
 			- retour à la réalité à terminer
-			- tester que la porte réaparaisse dans le cas où on :
-				- ouvre pas à mika
-				- est revenu à la réalité
+			- tester que la porte réaparaisse dans le cas où on on est revenu à la réalité
 				
 		- marie : terminer la tenue "date"
 
 
 	patreon :
-		musique : bourré + cookie + love that... - spicy
+		musique : bourré + cookie + love that... spicy
 		dessin
 
 	rr002 : 

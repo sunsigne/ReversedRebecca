@@ -1,0 +1,18 @@
+% DAVE_THE_GOAT
+dave = DOWN = camera = Rebecca is safe.@I canceled Mia's arrival.
+dave = DOWN = camera = I also disintegrated that bitch.
+dave = player = camera = But in real life, someone doesn't@always come to save the day…
+dave = DOWN = camera = Things like that happen, unfortunately.
+dave = DOWN = camera = Sometimes involving people we thought we had@no reason to distrust…
+dave = DOWN = camera = And… I am deeply sorry if this stirred up@painful memories for you.
+dave = player = camera = Anyway. This game is cruel to its protagonist.@But I wouldn't let that happen…
+dave = DOWN = camera = Never.
+dave = DOWN = camera = Back to reality.@Without that other pig.
+
+
+% DAVE_THE_GOAT_AGAIN
+dave = DOWN = camera = Rebecca is safe.@I canceled Mia's arrival.
+dave = DOWN = camera = I also disintegrated that bitch.
+dave = player = camera = I won't let that happen.
+dave = DOWN = camera = Never.
+dave = DOWN = camera = Back to reality.@Without that other pig.

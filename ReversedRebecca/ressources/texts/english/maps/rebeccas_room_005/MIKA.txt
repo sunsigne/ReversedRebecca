@@ -1,0 +1,35 @@
+% WHOS_THERE
+player = UP = happy_var = Who is it?
+object = DOWN = serious = It's Mika.
+player = UP = excited = Mika? Please, come in!
+
+
+% HITTING_ON
+object = DOWN = smirk = Good evening, beautiful; I've been waiting@for this moment all day…
+player = UP = worry = What are you talking about?
+object = DOWN = smirk = This.
+
+
+% WANDERING_HANDS
+player = UP = unhappy = Hey! What are you doing?
+
+
+% WANDERING_HANDS_NEXT
+object = DOWN = smirk = Don't play hard to get; I know you like it…
+player = UP = unhappy = No…
+object = DOWN = smirk = Yes…
+
+
+% WHAT_I_AM_WRITTING_IS_DISGUSTING_ME
+player = UP = unhappy = Stop, please.
+object = DOWN = smirk = You say no, but I hear yes…
+
+
+% SERIOUSLY_IF_YOU_FIND_THIS_EVEN_THE_SLIGHTEST_BIT_AROUSING_GO_GET_HELP
+player = UP = cry_var = I don't want to, leave me alone…@You're hurting me!
+object = DOWN = smirk = Oh, but you're going to love it.
+
+
+% I_MEANT_IT_IT_IS_JUST_INCREDYBLY_DISTURBING
+player = UP = cry_var = Mika, stop!
+object = DOWN = smirk = I love it when you play all fierce…
