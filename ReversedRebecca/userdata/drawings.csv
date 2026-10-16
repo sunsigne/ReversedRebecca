@@ -1,14 +1,14 @@
 
 alicia_hug=false
-android=false
-android_color=false
+android=true
+android_color=true
 armed_duo=false
 checkmate=false
-cocktail=false
+cocktail=true
 dave_chair=true
 el_coffee=false
 el_donut=false
-hangover=false
+hangover=true
 head_sock=true
 head_sock_color=true
 infos.txt=false

@@ -36,18 +36,36 @@
 	////////// EN COURS ////////////
 
 	rr005 (disco pas bourré) :
-		- mika :
-			- annuler le TA du lit le temps du toc toc (+ vérifier que si on y va prématurémment, ça enregistre bien "MIKA*GET_GHOSTED)
-			- enregistrer la mémoire de dave : il a déjà donner le dialogue une fois
-			- retour à la réalité à terminer
-			- tester que la porte réaparaisse dans le cas où on on est revenu à la réalité
-				
 		- marie : terminer la tenue "date"
+
+
+
+	rr005-drunk :
+			- terminer le lit
+			- enregistrer que la plante ne boit pas
+		
+		- interactions avec les objets :
+			à finir : 
+				- dormir sur le canapé
+				- dormir dans le lit
+			à sauvegarder :
+				- à vomis dans l'évier (canapé)
+				- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
+				- chier  dans les toilettes (dégeulasse la baignorire)
+				- dormir sur le canapé
+				- on a ouvert ou non à Mika
+	
+			- mika - back to réality & ghoster : - création de la porte initiale
+			- à la fin (replacer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
+			- faire le end_lvl (et counter ?)
 
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
 		dessin
+
+	bug :
+		- cookie cursur : cyan puzzle impossible à la manette. Bug sur les autres aussi ?
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
@@ -94,33 +112,7 @@
 	succès : 
 		- avoir dévérouillé tous les pixel art de la démo
 		- avoir dévérouillé tous les dessins de la démo	
-	
-	////////// RR005_DRUNK ////////////
-		
-	rr005 (bourré) :
-		- terminer le lit
-		- teminer l'intervention de dave + enregistrement des données DAVE*KILLED_MIKA et MIKA*KILLED comme dans rr005 + texter ofc
-		- enregistrer que la plante ne boit pas
-	
-	- interactions avec les objets :
-		à finir : 
-			- dormir sur le canapé
-			- dormir dans le lit
-		à sauvegarder :
-			- à vomis dans l'évier (canapé)
-			- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
-			- chier  dans les toilettes (dégeulasse la baignorire)
-			- dormir sur le canapé
-			- on a ouvert ou non à Mika
-	
-		- Mika : 
-			- Dave doit enreistrer le niveau de bourré pour remettre le même (il suffit de vérifier si Rebecca a vomi)
-			- Dave doit se souvenir de ce dialogue
-			- finir le retour à la réalité
-		- à la fin (retablir la cutscene d'intro + placer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
-		- traduction
-		- faire le end_lvl et les counter
-	
+
 	////////// EXPERIENCE UTILISATEUR ////////////
 
 	console et computer pas encore daltonien

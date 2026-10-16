@@ -1,3 +1,10 @@
+///// SAVES /////
+
+// long term consequences
+REGISTER = DAVE*KILLED_MIKA
+REGISTER = MIKA*GET_GHOSTED
+REGISTER = MIKA*KILLED
+
 ///// KITCHEN /////
 
 OBJ-01 = Hotplates (TV)
