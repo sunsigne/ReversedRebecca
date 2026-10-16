@@ -42,7 +42,8 @@
 		- dormir sur le canapé (obj-07 et obj-08)
 		- dormir dans le lit (obj-15)
 		- faire le end_lvl (et counter ?)
-
+		- ending : le futur dépend de toi !
+		(joueur à palcer en 14-0)
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
