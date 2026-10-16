@@ -38,26 +38,10 @@
 	rr005 (disco pas bourré) :
 		- marie : terminer la tenue "date"
 
-
-
 	rr005-drunk :
-			- terminer le lit
-			- enregistrer que la plante ne boit pas
-		
-		- interactions avec les objets :
-			à finir : 
-				- dormir sur le canapé
-				- dormir dans le lit
-			à sauvegarder :
-				- à vomis dans l'évier (canapé)
-				- boire de l'eau pour s'hydrater (paramètre à sauvegarder, pour le niveau de gueule de bois ?)
-				- chier  dans les toilettes (dégeulasse la baignorire)
-				- dormir sur le canapé
-				- on a ouvert ou non à Mika
-	
-			- mika - back to réality & ghoster : - création de la porte initiale
-			- à la fin (replacer le joueur en 14-0 + créer un mur invisible sur la porte pour empe^cher Rebecca de se perdre)
-			- faire le end_lvl (et counter ?)
+		- dormir sur le canapé (obj-07 et obj-08)
+		- dormir dans le lit (obj-15)
+		- faire le end_lvl (et counter ?)
 
 
 	patreon :
@@ -212,6 +196,8 @@
 		- ou est-ce qu'elle lui a posé un lapin ?
 		
 	Dans le cas où Dave ne sauve pas Rebecca de Mika, Camille se réveille et lui met une balle dans la tête (bien fait! Connard!)
+
+	Le lendemain, le niveau d'alcool doit être visible à 1 (bière)
 
 	////////// BOSS ////////////
 
