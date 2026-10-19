@@ -79,15 +79,18 @@ public class DemoScreen extends SubMenuScreen {
 			text[1] = text[1].concat(translate("Demo" + "KillergRobot"));
 			break;
 		case 2:
-			text[1] = text[1].concat(translate("Demo" + "TwoRebeccas"));
-			break;
-		case 3:
 			text[1] = text[1].concat(translate("Demo" + "ItsHeatingUp"));
 			break;
+		case 3:
+			text[1] = text[1].concat(translate("Demo" + "TwoRebeccas"));
+			break;
 		case 4:
-			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
+			text[1] = text[1].concat(translate("Demo" + "DestinyDream"));
 			break;
 		case 5:
+			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
+			break;
+		case 6:
 			text[1] = text[1].concat(translate("Demo" + "ForeverAndEver"));
 			break;
 		default:
@@ -103,8 +106,9 @@ public class DemoScreen extends SubMenuScreen {
 
 		boolean foreverImpsossible = false;
 		boolean psychopath = false;
-		boolean hot = false;
+		boolean dream = false;
 		boolean doublee = false;
+		boolean hot = false;
 		boolean killer = false;
 
 		for (String tempDatum : data) {
@@ -112,21 +116,25 @@ public class DemoScreen extends SubMenuScreen {
 				foreverImpsossible = true;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
 				psychopath = true;
-			if (tempDatum.equalsIgnoreCase("NANCY*SLEPT_WITH_REBECCA"))
-				hot = true;
+			if (tempDatum.equalsIgnoreCase("REBECCA*HAS_BEEN_DRUNK"))
+				dream = true;
 			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
 				doublee = true;
+			if (tempDatum.equalsIgnoreCase("NANCY*SLEPT_WITH_REBECCA"))
+				hot = true;
 			if (tempDatum.equalsIgnoreCase("ANTAGONIST*DOUBLE-Y"))
 				killer = true;
 		}
 
 		if (foreverImpsossible == false)
-			return 5;
+			return 6;
 		if (psychopath)
+			return 5;
+		if (dream)
 			return 4;
-		if (hot)
-			return 3;
 		if (doublee)
+			return 3;
+		if (hot)
 			return 2;
 		if (killer)
 			return 1;

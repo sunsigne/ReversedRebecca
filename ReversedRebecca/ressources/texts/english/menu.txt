@@ -62,13 +62,6 @@ NormalDetail2 = experience
 HardDetail1 = harder puzzle
 HardDetail2 = only one life
 
-///// TUTORIAL /////
-
-TutorialDetail1 = Do you need a tutorial
-TutorialDetail2 = to learn how to play?
-YesButton = Yes
-NoButton = No
-
 ///// GENERAL /////
 
 GeneralButton = general
@@ -140,11 +133,12 @@ Demo = thanks for playing
 DemoFullGame = That's the end of the demo. See you in the full game?
 DemoEnd = ENDING REACHED
 DemoError = ERROR - CONTACT THE DEV
-DemoKillergRobot = KILLER ROBOT! (1/4)
-DemoTwoRebeccas = TWO REBECCAS? (2/4)
-DemoItsHeatingUp = ITS HEATING UP (3/4)
-DemoPsychopath = SERIAL KILLER (4/4)
-DemoForeverAndEver = FOREVER AND EVER (5/4)
+DemoKillergRobot = KILLER ROBOT! (1/5)
+DemoItsHeatingUp = ITS HEATING UP (2/5)
+DemoTwoRebeccas = TWO REBECCAS? (3/5)
+DemoDestinyDream = DESTINY DREAM (4/5)
+DemoPsychopath = SERIAL KILLER (5/5)
+DemoForeverAndEver = FOREVER AND EVER (6/5)
 DemoYes = yes
 DemoNo = no
 DemoSequester = held captive

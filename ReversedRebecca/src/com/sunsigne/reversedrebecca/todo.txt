@@ -40,17 +40,8 @@
 
 	rr005-drunk :
 		- hall of destiny :
-			- le premier camera_without_transition:player devrait être converti en camera:player PUIS camera_without_transition:player une fois qu'elle est centrée (pour allier souplesse d'animation et placement idéal)
-			- le fichier d'image de transition n'est pas terminé (faire les mur ET! le background)
-			- les visuels de camille et rebecca qui dorment est à faire correctement également (bien timer l'animation)
-			- faire le retour à la réalité ?
-			- faire également les cas où on est dans le canapé
-			
+			- faire également les cas où on est dans le canapé			
 		- dormir sur le canapé (obj-07 et obj-08)
-		- dormir dans le lit (obj-15)
-		- faire le end_lvl (et counter ?)
-		- ending : le futur dépend de toi !
-		(joueur à palcer en 14-0)
 
 	patreon :
 		musique : bourré + cookie + love that... spicy

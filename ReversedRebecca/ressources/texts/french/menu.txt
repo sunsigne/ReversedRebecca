@@ -62,13 +62,6 @@ NormalDetail2 = original
 HardDetail1 = puzzle plus difficiles
 HardDetail2 = une seule vie
 
-///// TUTORIAL /////
-
-TutorialDetail1 = As-tu besoin d'un tutoriel
-TutorialDetail2 = pour apprendre à jouer ?
-YesButton = Oui
-NoButton = Non
-
 ///// GENERAL /////
 
 GeneralButton = general
@@ -140,11 +133,12 @@ Demo = merci d'avoir joue
 DemoFullGame = C'est la fin de la demo. On se retrouve pour le jeu complet ?
 DemoEnd = FIN OBTENUE
 DemoError = ERREUR - CONTACTEZ LE DEV
-DemoKillergRobot = ROBOT TUEUR ! (1/4)
-DemoTwoRebeccas = DEUX REBECCAS ? (2/4)
-DemoItsHeatingUp = CA CHAUFFE (3/4)
-DemoPsychopath = TUEUR EN SERIE (4/4)
-DemoForeverAndEver = POUR TOUJOURS (5/4)
+DemoKillergRobot = ROBOT TUEUR ! (1/5)
+DemoItsHeatingUp = CA CHAUFFE (2/5)
+DemoTwoRebeccas = DEUX REBECCAS ? (3/5)
+DemoDestinyDream = REVE DE DESTIN (4/5)
+DemoPsychopath = TUEUR EN SERIE (5/5)
+DemoForeverAndEver = POUR TOUJOURS (6/5)
 DemoYes = oui
 DemoNo = non
 DemoSequester = sequestre
