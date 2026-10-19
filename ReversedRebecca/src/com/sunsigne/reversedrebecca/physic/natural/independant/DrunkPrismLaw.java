@@ -37,7 +37,7 @@ public class DrunkPrismLaw extends IndependantLaw implements CameraDependency {
 			return;
 
 		Graphics2D g2d = (Graphics2D) g;
-		new DrunkLevel().beforeObjectRender(g2d, drunk);
+		new DrunkLevel().beforeObjectRender(g2d, drunk, object);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class DrunkPrismLaw extends IndependantLaw implements CameraDependency {
 		Graphics2D g2d = (Graphics2D) g;
 
 		if (object instanceof Player == false) {
-			new DrunkLevel().afterObjectRender(g2d, drunk);
+			new DrunkLevel().afterObjectRender(g2d, drunk, object);
 			return;
 		}
 

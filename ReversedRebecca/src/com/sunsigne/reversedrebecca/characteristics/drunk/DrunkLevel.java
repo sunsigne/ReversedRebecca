@@ -7,6 +7,7 @@ import com.sunsigne.reversedrebecca.characteristics.Characteristic;
 import com.sunsigne.reversedrebecca.pattern.render.TransluantLayer;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.camera.CameraDependency;
+import com.sunsigne.reversedrebecca.system.mainloop.Updatable;
 
 public class DrunkLevel extends Characteristic implements CameraDependency {
 
@@ -26,7 +27,14 @@ public class DrunkLevel extends Characteristic implements CameraDependency {
 
 	////////// RENDER ////////////
 
-	public void beforeObjectRender(Graphics2D g2d, int drunk) {
+	public void beforeObjectRender(Graphics2D g2d, int drunk, Updatable updatable) {
+		if (updatable == null)
+			return;
+
+		var handler = updatable.getHandler();
+		if (handler == null)
+			return;
+
 		int x = -(int) CAMERA.getX();
 		int y = -(int) CAMERA.getY();
 
@@ -34,7 +42,7 @@ public class DrunkLevel extends Characteristic implements CameraDependency {
 		g2d.setColor(color);
 		g2d.fillRect(x, y, Window.WIDHT, Window.HEIGHT);
 
-		if (drunk >= 4)
+		if (drunk >= 4 && handler.isCameraDependant())
 			g2d.rotate(Math.toRadians(drunk - 3.5f), x + Window.WIDHT / 2, y + Window.HEIGHT / 2);
 
 		if (drunk >= 6) {
@@ -47,11 +55,18 @@ public class DrunkLevel extends Characteristic implements CameraDependency {
 			new TransluantLayer().drawPsycopath(g2d);
 	}
 
-	public void afterObjectRender(Graphics2D g2d, int drunk) {
+	public void afterObjectRender(Graphics2D g2d, int drunk, Updatable updatable) {
+		if (updatable == null)
+			return;
+
+		var handler = updatable.getHandler();
+		if (handler == null)
+			return;
+
 		int x = -(int) CAMERA.getX();
 		int y = -(int) CAMERA.getY();
 
-		if (drunk >= 4)
+		if (drunk >= 4 && handler.isCameraDependant())
 			g2d.rotate(Math.toRadians(3.5f - drunk), x + Window.WIDHT / 2, y + Window.HEIGHT / 2);
 	}
 
