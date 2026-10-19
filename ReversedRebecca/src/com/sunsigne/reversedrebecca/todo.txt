@@ -38,11 +38,6 @@
 	rr005 (disco pas bourré) :
 		- marie : terminer la tenue "date"
 
-	rr005-drunk :
-		- hall of destiny :
-			- faire également les cas où on est dans le canapé			
-		- dormir sur le canapé (obj-07 et obj-08)
-
 	patreon :
 		musique : bourré + cookie + love that... spicy
 		dessin
