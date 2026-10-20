@@ -35,8 +35,7 @@
 		
 	////////// EN COURS ////////////
 
-	rr005 (disco pas bourré) :
-		- marie : terminer la tenue "date"
+	- marie : terminer la tenue "date" (dialogue)
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
