@@ -35,6 +35,13 @@
 		
 	////////// EN COURS ////////////
 
+	dessin : 
+	- rebecca date : vérifier
+	- rebecca gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
+	- rebecca police gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
+	- rebecca towel gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
+
+	
 	- marie : terminer la tenue "date" (dialogue)
 
 	patreon :
@@ -69,10 +76,6 @@
 
 	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
-	dessin : 
-	- 1h30 - finir marie_date + rebecca_date + rebecca_gothique
-	- 1h - en psychopath, faire des coeur menaçant ou lugubre
-	
 	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
 	
 	retirer le panneau "coming soon" ?
