@@ -141,6 +141,13 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 		}
 	}
 
+	public boolean isUpgradeUnlocked(COOKIE_UPGRADE type) {
+		CookieCounting upgrade = getUpgrade(type);
+		if (upgrade == null)
+			return false;
+		return upgrade.isUnlocked();
+	}
+
 	////////// TOOL ////////////
 
 	private static int noCritCount;
@@ -210,13 +217,9 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 
 	@Override
 	public PresetMousePos getDefaultPreset() {
-		CookieCounting upgrade = getUpgrade(COOKIE_UPGRADE.CURSOR);
-		if (upgrade == null)
-			return CENTER_COOKIE;
-		if (upgrade.isUnlocked() == false)
-			return CENTER_COOKIE;
-
-		return COOKIE;
+		if(isUpgradeUnlocked(COOKIE_UPGRADE.CURSOR))
+			return COOKIE;
+		return CENTER_COOKIE;
 	}
 
 	////////// GAMEPAD ////////////
@@ -231,9 +234,9 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 
 		if (getPreset() == COOKIE) {
 			if (e.getKey() == ButtonEvent.RIGHT) {
-				if (getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+				if (isUpgradeUnlocked(COOKIE_UPGRADE.FACTORY))
 					setPreset(FACTORY);
-				else if (getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
+				else if (isUpgradeUnlocked(COOKIE_UPGRADE.CURSOR))
 					setPreset(CURSOR);
 			}
 		}
@@ -241,41 +244,41 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 		else if (getPreset() == CURSOR) {
 			if (e.getKey() == ButtonEvent.LEFT)
 				setPreset(COOKIE);
-			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.GRANDPA).isUnlocked())
+			if (e.getKey() == ButtonEvent.DOWN && isUpgradeUnlocked(COOKIE_UPGRADE.GRANDPA))
 				setPreset(GRANDPA);
 		}
 
 		else if (getPreset() == GRANDPA) {
 			if (e.getKey() == ButtonEvent.LEFT)
 				setPreset(COOKIE);
-			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.CURSOR).isUnlocked())
+			if (e.getKey() == ButtonEvent.UP && isUpgradeUnlocked(COOKIE_UPGRADE.CURSOR))
 				setPreset(CURSOR);
-			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+			if (e.getKey() == ButtonEvent.DOWN && isUpgradeUnlocked(COOKIE_UPGRADE.FACTORY))
 				setPreset(FACTORY);
 		}
 
 		else if (getPreset() == FACTORY) {
 			if (e.getKey() == ButtonEvent.LEFT)
 				setPreset(COOKIE);
-			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.GRANDPA).isUnlocked())
+			if (e.getKey() == ButtonEvent.UP && isUpgradeUnlocked(COOKIE_UPGRADE.GRANDPA))
 				setPreset(GRANDPA);
-			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.STOCK).isUnlocked())
+			if (e.getKey() == ButtonEvent.DOWN && isUpgradeUnlocked(COOKIE_UPGRADE.STOCK))
 				setPreset(STOCK);
 		}
 
 		else if (getPreset() == STOCK) {
 			if (e.getKey() == ButtonEvent.LEFT)
 				setPreset(COOKIE);
-			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.FACTORY).isUnlocked())
+			if (e.getKey() == ButtonEvent.UP && isUpgradeUnlocked(COOKIE_UPGRADE.FACTORY))
 				setPreset(FACTORY);
-			if (e.getKey() == ButtonEvent.DOWN && getUpgrade(COOKIE_UPGRADE.ANTI_G).isUnlocked())
+			if (e.getKey() == ButtonEvent.DOWN && isUpgradeUnlocked(COOKIE_UPGRADE.ANTI_G))
 				setPreset(ANTI_G);
 		}
 
 		else if (getPreset() == ANTI_G) {
 			if (e.getKey() == ButtonEvent.LEFT)
 				setPreset(COOKIE);
-			if (e.getKey() == ButtonEvent.UP && getUpgrade(COOKIE_UPGRADE.STOCK).isUnlocked())
+			if (e.getKey() == ButtonEvent.UP && isUpgradeUnlocked(COOKIE_UPGRADE.STOCK))
 				setPreset(STOCK);
 		}
 	}

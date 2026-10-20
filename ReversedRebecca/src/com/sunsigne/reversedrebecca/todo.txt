@@ -42,9 +42,6 @@
 		musique : bourré + cookie + love that... spicy
 		dessin
 
-	bug :
-		- cookie cursur : cyan puzzle impossible à la manette. Bug sur les autres aussi ?
-
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
