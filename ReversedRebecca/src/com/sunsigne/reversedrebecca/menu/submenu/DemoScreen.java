@@ -104,7 +104,7 @@ public class DemoScreen extends SubMenuScreen {
 
 		String[] data = new FileTask().read(userData, file).split(System.getProperty("line.separator"));
 
-		boolean foreverImpsossible = false;
+		boolean forever = false;
 		boolean psychopath = false;
 		boolean dream = false;
 		boolean doublee = false;
@@ -112,8 +112,8 @@ public class DemoScreen extends SubMenuScreen {
 		boolean killer = false;
 
 		for (String tempDatum : data) {
-			if (tempDatum.equalsIgnoreCase("FOREVER_AND_EVER*IMPOSSIBLE"))
-				foreverImpsossible = true;
+			if (tempDatum.equalsIgnoreCase("FOREVER_AND_EVER*AND_EVER"))
+				forever = true;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
 				psychopath = true;
 			if (tempDatum.equalsIgnoreCase("REBECCA*HAS_BEEN_DRUNK"))
@@ -126,7 +126,7 @@ public class DemoScreen extends SubMenuScreen {
 				killer = true;
 		}
 
-		if (foreverImpsossible == false)
+		if (forever)
 			return 6;
 		if (psychopath)
 			return 5;
