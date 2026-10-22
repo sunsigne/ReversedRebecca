@@ -34,8 +34,8 @@ sarah = player = angry = Dégage de mon chemin.
 
 
 % REBECCA_AMUSED_ABOUT
-rebecca = DOWN = you_silly = C'était marrant.
+player = DOWN = you_silly = C'était marrant.
 
 
 % REBECCA_ANGRY_ABOUT
-rebecca = DOWN = angry_var2 = J'aurais dû lui faire un croche-pied,@pour lui apprendre à me pousser…
+player = DOWN = angry_var2 = J'aurais dû lui faire un croche-pied,@pour lui apprendre à me pousser…

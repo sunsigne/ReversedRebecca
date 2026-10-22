@@ -8,57 +8,57 @@ object = player = laugh = Hey, Rebecca !
 
 % INVENTORY_INITIATIVE
 object = player = happy = Tu as besoin de quelque chose ?
-rebecca = object = happy_var = Non, merci. Je visite, c'est tout.
+player = object = happy_var = Non, merci. Je visite, c'est tout.
 object = player = laugh = Tu visites notre stock ? Tu peux le@dire si tu viens chercher des bombes.
 
 
 % INVENTORY_INITIATIVE_EXIT
-rebecca = object = happy_var = Non, non. Vraiment, je visite.
+player = object = happy_var = Non, non. Vraiment, je visite.
 object = player = you_silly = Si tu le dis… Je t'en donne@quand même une, au cas où.
 
 
 % INVENTORY_INITIATIVE_INQUIRY
-rebecca = object = happy_var = Non, non. Je mène surtout l'enquête,@donc je cherche un peu partout.
+player = object = happy_var = Non, non. Je mène surtout l'enquête,@donc je cherche un peu partout.
 object = player = you_silly = Si tu le dis…
 
 
 % INVENTORY_BOMB
 object = player = happy = Tu as besoin de quelque chose ?
-rebecca = object = excited = Des bombes !
+player = object = excited = Des bombes !
 object = player = happy = Bien sûr, tiens.
 
 
 % INVENTORY_INQUIRY
 object = player = happy = Tu as besoin de quelque chose ?
-rebecca = object = laugh = Je mène l'enquête !@Donc, je cherche un peu partout.
+player = object = laugh = Je mène l'enquête !@Donc, je cherche un peu partout.
 object = player = worry = Et… Tu as décidé d'investiguer notre stock ?
-rebecca = object = laugh = On ne sait jamais où les indices se cachent !
+player = object = laugh = On ne sait jamais où les indices se cachent !
 object = player = you_silly = C'est d'une logique imparable…
 object = player = happy = Bonne chance dans ton enquête !
-rebecca = object = happy_var = Merci, tu es gentille.
+player = object = happy_var = Merci, tu es gentille.
 
 
 % ALICIA_WORRY_ABOUT_BOMBS
 alexia = player = unhappy = Heu… Rebecca… On est d'accord que@tu ne vas pas tout faire sauter, pas vrai ?
-rebecca = alexia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
+player = alexia = laugh = Non, juste ce qu'il faut pour qu'on puisse sortir.
 alexia = player = happy = C'était juste pour être sûre.
 
 
 % ALICIA_WORRIER_ABOUT_BOMBS
 alexia = player = angry = Rebecca ! Tu avais dit que@tu arrêtais avec les bombes !
-rebecca = alexia = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
+player = alexia = laugh = Ha ha ha ! Je sais, j'ai dit ça pour t'embêter.
 alexia = player = appeased = Tu m'as bien fait marcher.
 
 
 % INVENTORY_BOMB_NEXT
-rebecca = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes vertes ?
+player = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes vertes ?
 object = player = worry = Je crois que non…
 object = player = surprised = Ho ! Attend ! Mais si !@J'en ai trouvé une dans un carton tout à l'heure.
 object = player = happy = Tiens, la voilà.
 
 
 % INVENTORY_BOMB_NEXT_NUMBER_SETTINGS
-rebecca = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes 2 ?
+player = object = excited = C'est pas mal, mais je veux des super bombes !@On a des bombes 2 ?
 object = player = worry = Je crois que non…
 object = player = surprised = Ho ! Attend ! Mais si !@J'en ai trouvé une dans un carton tout à l'heure.
 object = player = happy = Tiens, la voilà.
@@ -66,30 +66,30 @@ object = player = happy = Tiens, la voilà.
 
 % INVENTORY_BOMB_LAST
 object = player = unhappy = Tu as l'air déçue… Ça ne va pas ?
-rebecca = object = unhappy = J'avais oublié, mais elle ne me servent à rien…@Je ne sais pas encore m'en servir…
+player = object = unhappy = J'avais oublié, mais elle ne me servent à rien…@Je ne sais pas encore m'en servir…
 object = player = worry = Ha…
 object = player = unhappy = Heu…
 object = player = worry = Tu apprendras bientôt…
-rebecca = object = happy_var = Merci, tu es gentille.
+player = object = happy_var = Merci, tu es gentille.
 
 
 % INVENTORY_NEXT
 object = player = happy = Il te faut autre chose ?
-rebecca = object = happy_var = Non, merci.@Je visite, c'est tout.
+player = object = happy_var = Non, merci.@Je visite, c'est tout.
 
 
 % INVENTORY_LAST
 object = player = worry = ... Tu … es sûre qu'il ne te faut vraiment rien ?
 object = player = unhappy = Désolée d'être insistante…@C'est juste que tu te comportes biza…
 object = player = worry = Hm… C'est juste que tu me donnes l'impression que@tu attends quelque chose sans oser le demander.
-rebecca = object = happy = Non, non. Je te regarde, c'est tout.
+player = object = happy = Non, non. Je te regarde, c'est tout.
 
 
 % INVENTORY_LAST_BUT
 object = player = worry = ... Tu … es sûre qu'il ne te faut vraiment rien ?
 object = player = unhappy = Désolée d'être insistante…@C'est juste que tu te comportes biza…
 object = player = worry = Hm… C'est juste que tu me donnes l'impression que@tu attends quelque chose sans oser le demander.
-rebecca = object = worry = Ok, je suis peut-être un peu hébétée… Je ne suis@pas sûre, mais je crois que je sors avec Mika.
+player = object = worry = Ok, je suis peut-être un peu hébétée… Je ne suis@pas sûre, mais je crois que je sors avec Mika.
 object = player = unhappy = Ho.
 object = player = cry_happy = Je vois…
 object = player = happy = Dans ce cas, j'espère que...

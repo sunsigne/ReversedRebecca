@@ -1,5 +1,5 @@
 % NEUTRAL
-rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
+player = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
 miaka = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
 miaka = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
 miaka = player = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alexis !
@@ -7,7 +7,7 @@ miaka = player = serious = Je lui ai couru après. La suite, tu la connais.
 
 
 % NEUTRAL_NEXT
-rebecca = object = surprised = Attend ! Mais si ça se trouve, Alexis est blessé !
+player = object = surprised = Attend ! Mais si ça se trouve, Alexis est blessé !
 miaka = player = surprised = ?!
 miaka = player = serious = Je n'y avais pas pensé…
 miaka = player = serious = Va voir comment il va.@Je dois rester pour ici dégager le chemin.

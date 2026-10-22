@@ -4,7 +4,7 @@ sarah = jean = angry = Mais il est pas bien, lui !
 
 % SARAH_JEAN_SCOLDING_FROM_FAR
 sarah = UP = angry_var = NON MAIS ÇA VA PAS BIEN DE@POUSSER LES GENS, COMME ÇA !
-rebecca = DOWN = unhappy = Holala… Sarah est vraiment fachée…
+player = DOWN = unhappy = Holala… Sarah est vraiment fachée…
 
 
 % SARAH_JEAN_SCOLDING_VAR
@@ -80,7 +80,7 @@ player = DOWN = angry_var2 = Non mais je rêve !
 
 
 % TOILET_PISSED_ON
-rebecca = DOWN = angry_var2 = Ha non ! Avec ce dégoutant de Jean, je n'ai plus@envie d'entendre parler d'aller aux toilettes !
+player = DOWN = angry_var2 = Ha non ! Avec ce dégoutant de Jean, je n'ai plus@envie d'entendre parler d'aller aux toilettes !
 
 
 % REBECCA_WONT_EXIT_BATHROOM

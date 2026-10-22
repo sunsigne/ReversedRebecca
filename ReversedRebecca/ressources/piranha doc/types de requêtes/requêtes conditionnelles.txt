@@ -270,3 +270,16 @@ Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifi�
 - si oui, le personnage sera Miranda. Si non, il sera Amir.
 
 Note : le choix « si non » englobe le choix « par défaut ».
+
+
+
+////// REBECCA_DESIGN //////
+
+Le Type de Requête REBECCA_DESIGN permet de vérifier si le réglage concernant l'apparence par défaut du joueur est le même que celui en Cible (DEFAULT ou GOTHIC).
+
+Exemple :
+TIME -> 0 = GOTO -> NAME:REBECCA, TEXTURE
+$ -> TEXTURE = REBECCA_DESIGN -> GOTHIC ? TEXTURE_NAME:REBECCA_GOTHIC / TEXTURE_NAME: REBECCA
+
+Lorsque la Condition sera vérifiée, une nouvelle condition doit être vérifiée : le réglage de la l'apparence par défaut du joueur est-il réglé sur « GOTHIC » ?
+- si oui, le joueur aura une apparence gothique. Si non, elle sera classique.

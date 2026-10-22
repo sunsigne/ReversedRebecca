@@ -1,5 +1,5 @@
 % SOON_NEXT_VAR
-rebecca = object = worry = Hey Mia ! On peut discuter, maintenant ?
+player = object = worry = Hey Mia ! On peut discuter, maintenant ?
 miaka = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
 
 

@@ -1,11 +1,11 @@
 % THEFT
 miaka = player = doubt = Ça me fait une belle jambe…
-rebecca = miaka = worry = Mais… Tu ne sais rien à ce sujet ?
+player = miaka = worry = Mais… Tu ne sais rien à ce sujet ?
 miaka = player = serious = Non.
 
 
 % SOON
-rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
+player = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
 miaka = player = serious = Donne-moi cinq secondes…@Je rassemble mes idées.
 
 
@@ -14,12 +14,12 @@ miaka = player = serious = Ok, c'est bon. Tu disais ?
 
 
 % SOON_NEXT_VAR
-rebecca = object = worry = Hey Mika ! On peut discuter, maintenant ?
+player = object = worry = Hey Mika ! On peut discuter, maintenant ?
 miaka = player = serious = Oui, c'est bon. Qu'est-ce que tu disais ?
 
 
 % NEUTRAL
-rebecca = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
+player = object = happy = Qu'est-ce qu'il s'est passé, exactement ?
 miaka = player = serious = Je sortais de la salle de pause,@quand j'ai entendu une détonation.
 miaka = player = doubt = Je n'ai pas vu l'explosion,@mais j'en reconnais le bruit.
 miaka = player = serious = Juste après, ce mec "venu de nulle part",@sort tranquillement du bureau d'Alicia !
@@ -27,14 +27,14 @@ miaka = player = serious = Je lui ai couru après. La suite, tu la connais.
 
 
 % NEUTRAL_NEXT
-rebecca = object = surprised = Attend ! Mais si ça se trouve, Alicia est blessée !
+player = object = surprised = Attend ! Mais si ça se trouve, Alicia est blessée !
 miaka = player = surprised = ?!
 miaka = player = serious = Je n'y avais pas pensé…
 miaka = player = serious = Va voir comment elle va.@Je dois rester pour ici dégager le chemin.
 
 
 % NEUTRAL_VAR
-rebecca = object = happy_var = Très bien. Merci pour ces informations.
+player = object = happy_var = Très bien. Merci pour ces informations.
 
 
 % HURRY_UP

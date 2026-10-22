@@ -15,11 +15,11 @@ player = DOWN = sad = Je n'ai pas encore volé les informations…@J'y suis pres
 
 
 % PLAYER_LEAVING
-rebecca = object = no_sens = Je ne vais quand meme pas m'en aller,@comme ça… Si ?
+player = object = no_sens = Je ne vais quand meme pas m'en aller,@comme ça… Si ?
 
 
 % PLAYER_LEAVING_NEXT
-rebecca = object = you_silly = Ho, et puis après tout… Elle se débrouillera.
+player = object = you_silly = Ho, et puis après tout… Elle se débrouillera.
 
 
 % BARBED_WIRE

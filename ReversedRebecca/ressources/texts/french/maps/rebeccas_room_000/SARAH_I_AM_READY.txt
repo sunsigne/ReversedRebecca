@@ -51,7 +51,7 @@ sarah = player = wink = Ne l'oublie jamais.
 % STILL_WATER
 sarah = player = happy = Au fait !
 sarah = LEFT = worry = Pourquoi tu as mis un verre d'eau ici ?
-rebecca = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
+player = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
 sarah = player = awkward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
 player = sarah = laugh = Exactement !
 sarah = player = worry = Mais du coup, pourquoi@il est encore là ?
@@ -79,7 +79,7 @@ player = DOWN = blush = Zut ! Je suis toujours en serviette.
 % WATER
 sarah = player = happy = Au fait !
 sarah = LEFT = worry = Pourquoi tu avais mis un verre d'eau ici@tout à l'heure ?
-rebecca = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
+player = object = worry = Il fallait bien le poser quelque part@pour ouvrir la porte…
 sarah = player = awkward = Donc… Tu l'as mis par terre parce que…@La table était trop loin ?
 player = sarah = laugh = Exactement !
 sarah = player = you_silly_var = Rebecca… Tu es fatigante…

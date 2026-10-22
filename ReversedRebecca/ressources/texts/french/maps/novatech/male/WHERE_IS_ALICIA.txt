@@ -6,11 +6,11 @@ player = DOWN = angry_var2 = Mais quel connard !
 
 
 % SARAH
-sarah = rebecca = worry = Désolée. Je ne sais pas où il est.
+sarah = player = worry = Désolée. Je ne sais pas où il est.
 
 
 % SARAH_VAR
-sarah = rebecca = worry = Je ne sais pas non plus où il est.
+sarah = player = worry = Je ne sais pas non plus où il est.
 
 
 % SARAH_HELP

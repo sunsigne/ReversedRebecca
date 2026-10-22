@@ -1,20 +1,20 @@
 % NEUTRAL
-rebecca = object = worry = C'est un sacré éboulement… Il@y a moyen de s'en débarrasser ?
+player = object = worry = C'est un sacré éboulement… Il@y a moyen de s'en débarrasser ?
 miaka = player = serious = L'huile de coude.
-rebecca = object = sad = Je passe.
-rebecca = object = sad = Je vais voir s'il existe une autre solution.
+player = object = sad = Je passe.
+player = object = sad = Je vais voir s'il existe une autre solution.
 miaka = player = serious = Comme tu veux, moi j'y vais à l'ancienne.
 
 
 % MIKA_BOMB
-rebecca = object = laugh = Allez ! Hop ! On se décale !
+player = object = laugh = Allez ! Hop ! On se décale !
 miaka = object = doubt = Hein ? Des bombes ?
 miaka = object = surprised = Attend ?! Mais tu as déjà allumé la mèche !
-rebecca = object = laugh = J'ai dit : on se décale !
+player = object = laugh = J'ai dit : on se décale !
 
 
 % MIKA_BOMB_FAIL
-rebecca = object = worry = Quelle maladroite ! Allez, je recommence.
+player = object = worry = Quelle maladroite ! Allez, je recommence.
 
 
 % ALICIA_REACTION_MIKA_BOMB
@@ -30,7 +30,7 @@ alexia = DOWN = angry = Tu te fous de moi ?
 miaka = alexia = doubt = C'est quoi le problème ? Elle a dégagé l'entrée…
 alexia = miaka = angry_var = Le problème, c'est qu'elle a fait exploser@la moitié de notre laboratoire.
 miaka = DOWN = surprised = Sérieusement ?
-rebecca = UP = no_sens = Je nous cherchais juste une sortie…
+player = UP = no_sens = Je nous cherchais juste une sortie…
 miaka = DOWN = serious = Si c'était pour tout casser au passage,@c'était pas la peine.
 alexia = DOWN = angry_var = Exactement !
-rebecca = UP = sad = …
+player = UP = sad = …

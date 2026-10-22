@@ -37,7 +37,7 @@ alexia = player = unhappy = Tu exploses notre laboratoire…@Et tu fais peur à 
 % NO_I_CONTINUE
 player = alexia = worry = Alicia… Je casses juste quelques vieux murs.@On les reconstruira.
 player = alexia = laugh = Et puis, c'est facile d'avancer !@C'est tout droit !
-alexia = rebecca = unhappy = Ça sera sans moi, Rebecca.
+alexia = player = unhappy = Ça sera sans moi, Rebecca.
 
 
 % NOT_THAT_BAD
@@ -47,7 +47,7 @@ player = DOWN = sad = Je ne blesse personne après tout…
 
 % NO_I_CONTINUE_NO_KEY
 player = alexia = unhappy = Tu ne comprends pas, Alicia…@C'est le seul chemin. On n'a pas le choix…
-alexia = rebecca = unhappy = On a toujours le choix, Rebecca.
+alexia = player = unhappy = On a toujours le choix, Rebecca.
 
 
 % I_HAD_NO_CHOICE

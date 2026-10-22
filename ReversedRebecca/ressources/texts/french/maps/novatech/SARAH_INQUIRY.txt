@@ -1,5 +1,5 @@
 % THEFT
-sarah = rebecca = awkward = Tu sais bien que j'étais avec toi quand ça s'est@passé… Tu devrais demander aux autres.
+sarah = player = awkward = Tu sais bien que j'étais avec toi quand ça s'est@passé… Tu devrais demander aux autres.
 
 
 % DELTA_KEY_CONVERSATION
@@ -20,13 +20,13 @@ sarah = LEFT = laugh = Tiens, tu es là ? Tu aurais vu des clefs ici,@par hasard
 
 % REBECCA_HELP_FOR_KEYS_ALICIA
 sarah = LEFT = laugh = Tiens, tu es là ?
-rebecca = RIGHT = happy = Oui, je cherche Alicia. Tu l'aurais vu ?
+player = RIGHT = happy = Oui, je cherche Alicia. Tu l'aurais vu ?
 sarah = LEFT = worry = Non, désolée.
 sarah = LEFT = laugh = Et toi ? Tu aurais vu des clefs ici,@par hasard ?
 
 
 % REBECCA_WAIT_HERE_FOR_KEYS
-rebecca = RIGHT = happy = Ne bouge pas, je te les donne.
+player = RIGHT = happy = Ne bouge pas, je te les donne.
 
 
 % REBECCA_GIVING_KEYS
@@ -39,12 +39,12 @@ sarah = LEFT = wink = Bon, c'est pas grave.@Merci quand même.
 
 
 % REBECCA_OPENED_CYAN_DOOR
-sarah = rebecca = happy_var = Je vois que tu t'es servie de mon cadeau.
-rebecca = sarah = laugh = Tu as remarqué ?
-sarah = rebecca = worry = Bien sûr… Pourquoi tu dis ça ?
-rebecca = sarah = you_silly = Parce que la porte est loin.@Comment tu sais qu'elle est ouverte ?
-sarah = rebecca = wink = Je t'ai entendu faire quand @j'étais dans l'autre pièce.
-rebecca = sarah = laugh = Ha !
+sarah = player = happy_var = Je vois que tu t'es servie de mon cadeau.
+player = sarah = laugh = Tu as remarqué ?
+sarah = player = worry = Bien sûr… Pourquoi tu dis ça ?
+player = sarah = you_silly = Parce que la porte est loin.@Comment tu sais qu'elle est ouverte ?
+sarah = player = wink = Je t'ai entendu faire quand @j'étais dans l'autre pièce.
+player = sarah = laugh = Ha !
 
 
 % JOSEPH_CONVERSATION
@@ -64,23 +64,23 @@ miaka = sarah = serious = C'est clair.
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING
-sarah = rebecca = laugh = Tu as vu ? Je nous ai trouvé une sortie !
+sarah = player = laugh = Tu as vu ? Je nous ai trouvé une sortie !
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING_VAR
-sarah = rebecca = laugh = Cette fois, la voie est libre pour de bon.
+sarah = player = laugh = Cette fois, la voie est libre pour de bon.
 
 
 % SARAH_NOTICE_REBECCA_IS_LEAVING_NEXT
-sarah = rebecca = laugh = Zut ! Je vais devoir recommencer…
-rebecca = sarah = happy_var = Bonne chance ! Moi, je reprends mon enquête.
+sarah = player = laugh = Zut ! Je vais devoir recommencer…
+player = sarah = happy_var = Bonne chance ! Moi, je reprends mon enquête.
 
 
 % SARAH_NOTICE_REBECCA_NEAR_ENTRANCE
-sarah = rebecca = wink = Tu vérifies si je fais du bon travail ?
-rebecca = sarah = laugh = Non, j'essaie de voir si j'arrive à sortir@d'une façon ou d'une autre.
-sarah = rebecca = worry = C'est un peu le but de ma mission…@Nous libérer le chemin.
-rebecca = sarah = you_silly = Ceux qui nous regardent en ce moment ont@compris ce que je voulais dire vraiment dire.
+sarah = player = wink = Tu vérifies si je fais du bon travail ?
+player = sarah = laugh = Non, j'essaie de voir si j'arrive à sortir@d'une façon ou d'une autre.
+sarah = player = worry = C'est un peu le but de ma mission…@Nous libérer le chemin.
+player = sarah = you_silly = Ceux qui nous regardent en ce moment ont@compris ce que je voulais dire vraiment dire.
 
 
 % SARAH_NOTICE_REBECCA_NEAR_ENTRANCE_DELTA_REACTION

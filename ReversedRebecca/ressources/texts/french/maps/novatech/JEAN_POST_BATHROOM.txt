@@ -1,9 +1,9 @@
 % WHERE_IS_ALICIA
-jean = rebecca = unhappy = Non, je ne l'ai pas vu.
+jean = player = unhappy = Non, je ne l'ai pas vu.
 
 
 % THEFT
-jean = rebecca = unhappy = Je ne sais rien à ce sujet.
+jean = player = unhappy = Je ne sais rien à ce sujet.
 
 
 % ASK_REBECCA_FOR_CHAIR

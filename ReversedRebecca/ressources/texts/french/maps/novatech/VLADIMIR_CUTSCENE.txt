@@ -7,7 +7,7 @@ miaka = DOWN = angry = Et merde…
 
 
 % MIKA_WHAT_HAPPENED
-rebecca = DOWN = no_sens = Qu'est-ce qu'il s'est passé ?
+player = DOWN = no_sens = Qu'est-ce qu'il s'est passé ?
 miaka = UP = angry_var = Ce mec… Il a fait exploser le mur@pour rentrer dans le laboratoire !
 miaka = DOWN = angry_var = Quel taré...@Et maintenant, on peut même plus sortir.
 
@@ -29,22 +29,22 @@ sarah = RIGHT = happy = Qu'est-ce que tu préfères faire ?
 
 
 % MIKA_WHAT_HAPPENED_SADISTIC
-rebecca = DOWN = laugh = En effet. Quel excité !
-rebecca = DOWN = worry = Ne t'en fais pas, Mika. Je vais me trouver une sortie.
-rebecca = DOWN = you_silly = Enfin… "Nous" trouver une sortie, bien sûr…
+player = DOWN = laugh = En effet. Quel excité !
+player = DOWN = worry = Ne t'en fais pas, Mika. Je vais me trouver une sortie.
+player = DOWN = you_silly = Enfin… "Nous" trouver une sortie, bien sûr…
 
 
 % SARAH_SCENARIO_EXIT
 sarah = RIGHT = happy_var = Ok. Dans ce cas, je pars interroger les témoins.
 sarah = RIGHT = wink = On fera un point à l'atelier, tout à l'heure.
-rebecca = LEFT = happy = Ça marche.
+player = LEFT = happy = Ça marche.
 
 
 % SARAH_SCENARIO_INQUIRY
 sarah = RIGHT = happy_var = Ok. Dans ce cas, je pars nous trouver une sortie.
 sarah = RIGHT = wink = On fera un point à l'atelier, tout à l'heure.
-rebecca = LEFT = happy = Ça marche.
+player = LEFT = happy = Ça marche.
 
 
 % SCENARIO_PLANT_ADVICE
-rebecca = DOWN = happy_var = (Et si je suis perdue, je peux parler à une plante.)
+player = DOWN = happy_var = (Et si je suis perdue, je peux parler à une plante.)

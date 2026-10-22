@@ -1,9 +1,9 @@
 % WATCHING_DOCUMENT
-rebecca = DOWN = unhappy = Quel bazar… Alexis va mettre une éternité@à réorganiser ses travaux.
+player = DOWN = unhappy = Quel bazar… Alexis va mettre une éternité@à réorganiser ses travaux.
 
 
 % WATCHING_DOCUMENT_SADISTIC
-rebecca = DOWN = you_silly = Quel bazar… Alexis va mettre une éternité@à réorganiser ses travaux.
+player = DOWN = you_silly = Quel bazar… Alexis va mettre une éternité@à réorganiser ses travaux.
 
 
 % BUT_DELTA_IS_FOLLOWING_PLAYER

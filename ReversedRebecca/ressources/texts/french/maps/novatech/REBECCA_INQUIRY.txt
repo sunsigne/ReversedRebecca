@@ -1,43 +1,43 @@
 % WATCHING_DOCUMENT
-rebecca = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
+player = DOWN = unhappy = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
 
 
 % WATCHING_DOCUMENT_SADISTIC
-rebecca = DOWN = you_silly = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
+player = DOWN = you_silly = Quel bazar… Alicia va mettre une éternité@à réorganiser ses travaux.
 
 
 % STOLEN_OBJECT_DISCOVERY
-rebecca = DOWN = surprised = Une seconde… Les documents sur le casque@de déblocage sont manquants !
+player = DOWN = surprised = Une seconde… Les documents sur le casque@de déblocage sont manquants !
 
 
 % WATCHED_DOCUMENT_DELAYER
-rebecca = DOWN = surprised = Une seconde ! Les documents par terre…@Je dois aller vérifier quelque chose.
+player = DOWN = surprised = Une seconde ! Les documents par terre…@Je dois aller vérifier quelque chose.
 
 
 % STOLEN_OBJECT_DISCOVERY_DELAYER
-rebecca = DOWN = worry = C'est bien ce que je pensais, les documents sur@le casque de déblocage sont manquants…
+player = DOWN = worry = C'est bien ce que je pensais, les documents sur@le casque de déblocage sont manquants…
 
 
 % STOLEN_OBJECT_DISCOVERY_DIDNT_KNOW_THERE_WAS_A_THEFT
-rebecca = DOWN = no_sens = Notre intrus serait venu les voler ?
-rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
-rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
+player = DOWN = no_sens = Notre intrus serait venu les voler ?
+player = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
+player = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
 % STOLEN_OBJECT_DISCOVERY_UNKNOWN_NAME
-rebecca = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ?
-rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
-rebecca = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
+player = DOWN = no_sens = C'est ce que l'intrus serait venu chercher ?
+player = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
+player = DOWN = happy = Je dois en apprendre plus sur notre voleur.@Je vais interroger les autres.
 
 
 % STOLEN_OBJECT_DISCOVERY_KNOWN_NAME
-rebecca = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ?
-rebecca = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
+player = DOWN = no_sens = C'est ce que Vladimir serait venu chercher ?
+player = OBJECT = unhappy = Si oui, c'est très grave…@C'est un projet instable et dangereux…
 
 
 % STOLEN_OBJECT_DISCOVERY_AND_NAME
-rebecca = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur.@Je sais aussi ce qu'il est venu prendre.
-rebecca = DOWN = laugh = Donc, mission accomplie.
+player = DOWN = convinced = Bien ! Je connais maintenant le nom du voleur.@Je sais aussi ce qu'il est venu prendre.
+player = DOWN = laugh = Donc, mission accomplie.
 
 
 % BUT_DELTA_IS_FOLLOWING_PLAYER

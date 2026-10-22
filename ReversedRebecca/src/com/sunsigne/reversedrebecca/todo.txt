@@ -39,8 +39,6 @@
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- voix
-		- fichier .gpf
-		- dialogues (nom ET contenu)
 		- counter, deeds, bonus txt & actions
 		- succès
 		- fichier visuel, évidemment

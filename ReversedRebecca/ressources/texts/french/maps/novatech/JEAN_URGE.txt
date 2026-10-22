@@ -31,7 +31,7 @@ player = object = happy = D'accord. Merci.
 
 
 % THEFT
-jean = rebecca = urge_sad = Je ne sais rien à ce sujet.
+jean = player = urge_sad = Je ne sais rien à ce sujet.
 
 
 % FIRST

@@ -1,13 +1,14 @@
 Language=french
 Camera=dynamic
 Shake=on
-Inventory=visible
-Texts=large
+Inventory=immersive
+Texts=medium
 Difficulty=normal
 
 /////BONUS/////
 
 PreferredAttraction=default
+RebeccaDesign=default
 
 /////ACTION/////
 
@@ -24,7 +25,6 @@ Dialogue=SPACE:32
 Action1=E:69
 Action2=R:82
 Action3=F:70
-ActionX=X:88
 
 /////VOLUME/////
 

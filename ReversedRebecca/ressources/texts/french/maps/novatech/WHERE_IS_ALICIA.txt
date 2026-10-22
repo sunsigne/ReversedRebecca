@@ -1,9 +1,9 @@
 % JEAN
-jean = rebecca = urge_sad = Non, je ne l'ai pas vu.
+jean = player = urge_sad = Non, je ne l'ai pas vu.
 
 
 % JEAN_VAR
-jean = rebecca = urge_sad = Je ne l'ai pas vu non plus.
+jean = player = urge_sad = Je ne l'ai pas vu non plus.
 
 
 % JEAN_HELP
@@ -14,11 +14,11 @@ player = DOWN = angry_var2 = Mais quel connard !
 
 
 % SARAH
-sarah = rebecca = worry = Désolée. Je ne sais pas où elle est.
+sarah = player = worry = Désolée. Je ne sais pas où elle est.
 
 
 % SARAH_VAR
-sarah = rebecca = worry = Je ne sais pas non plus où elle est.
+sarah = player = worry = Je ne sais pas non plus où elle est.
 
 
 % SARAH_HELP
