@@ -36,27 +36,23 @@
 	////////// EN COURS ////////////
 
 	pour le passage gothic, penser à :
-		- toutes les map à adapter sauf rr000 à rr004 inclus
-		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
+		- niveaux :
+			à tester :
+				- rr001, 002, 003, 003-xy, 004
+			à faire :
+				- novatech, police_station, military, miltary_after, nightclub, rr0005_drunk, ws000, 001, 002 et 003
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
-		- voix
-		- counter, deeds, bonus txt & actions
 		- succès
-		- fichier visuel, évidemment
-		- toutes les décorations et animations
+		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
 		- tester
-
-	dessin : 
-	- rebecca gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
-	- rebecca police gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
-	- rebecca towel gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
-
-	
-	- marie : terminer la tenue "date" (dialogue)
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
 		dessin
+		rebecca gothique
+
+	rr005 :
+		- si mika débarque et que Rebecca est en serviette, il doit avoir un dialogue spécifique
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
@@ -104,7 +100,7 @@
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
 	1h - vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
-	LifeAndDeathLaw -> changer le niveau de l'écran titre de la sauvegarde lors d'une mort en HARD pour une image avec la tombe de Rebecca
+	LifeAndDeathLaw -> changer l'écran de game over en HARD pour remplacer le calin de Rebecca sarah par sarah qui pleure devant une pierre tombale
 	succès : (hidden=true) débloquer le niveau test sur l'écran titre + mettres à jours les succès
 	réorganiser le dossier "$working"
 
