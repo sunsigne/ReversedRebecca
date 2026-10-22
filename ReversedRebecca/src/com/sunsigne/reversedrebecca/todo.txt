@@ -36,7 +36,6 @@
 	////////// EN COURS ////////////
 
 	dessin : 
-	- rebecca date : vérifier
 	- rebecca gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
 	- rebecca police gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
 	- rebecca towel gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
@@ -273,6 +272,7 @@
 	lors d'un changement, penser à :
 		- fichiers visuels dans $working
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
+		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- voix
 		- fichier .gpf
 		- dialogues (nom ET contenu)
