@@ -34,6 +34,18 @@
 	changer le lien "signaler un bug" pour le discord
 		
 	////////// EN COURS ////////////
+	
+	pour le passage gothic, penser à :
+		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
+		- les highlight éventuels (pas ceux du perso, ceux du lvl)
+		- voix
+		- fichier .gpf
+		- dialogues (nom ET contenu)
+		- counter, deeds, bonus txt & actions
+		- succès
+		- fichier visuel, évidemment
+		- les animations
+		- tester
 
 	dessin : 
 	- rebecca gothique : pixel art + vérifier dialogue + implanter parfaitement (cinématique)
@@ -270,7 +282,6 @@
 	///////// GENDER SWAP ////////////
 
 	lors d'un changement, penser à :
-		- fichiers visuels dans $working
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- voix

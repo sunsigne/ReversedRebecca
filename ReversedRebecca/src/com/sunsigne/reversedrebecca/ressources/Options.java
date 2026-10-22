@@ -35,6 +35,7 @@ public class Options {
 		line.addObject("/////BONUS/////");
 		line.getList().add("");
 		line.addObject("PreferredAttraction=default");
+		line.addObject("RebeccaDesign=default");
 		line.getList().add("");
 		line.addObject("/////ACTION/////");
 		line.getList().add("");
