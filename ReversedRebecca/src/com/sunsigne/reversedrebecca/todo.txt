@@ -34,15 +34,16 @@
 	changer le lien "signaler un bug" pour le discord
 		
 	////////// EN COURS ////////////
-	
+
 	pour le passage gothic, penser à :
+		- toutes les map à adapter sauf rr000 à rr004 inclus
 		- adaptation piranha (affecting, facing, choice, see, tp, move, etc. D'une manière générale, tous les ":" et les "-> ")
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- voix
 		- counter, deeds, bonus txt & actions
 		- succès
 		- fichier visuel, évidemment
-		- les animations
+		- toutes les décorations et animations
 		- tester
 
 	dessin : 
