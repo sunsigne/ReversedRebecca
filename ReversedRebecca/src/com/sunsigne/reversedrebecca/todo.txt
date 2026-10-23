@@ -37,14 +37,16 @@
 
 	pour le passage gothic, penser à :
 		- niveaux :
+			à finir :
+				- nightclub (rebecca assise + rebecca gogo danseur)	
+				- novatech (tenue de base des NPC, alicia hugs)
 			à tester :
-				- rr001, 002, 003, 003-xy, 004
+
 			à faire :
-				- novatech, police_station, military, miltary_after, nightclub, rr0005_drunk, ws000, 001, 002 et 003
+				- police_station, military, miltary_after, rr0005_drunk, ws000, 001, 002 et 003
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- succès
 		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
-		- tester
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
@@ -176,6 +178,8 @@
 	- le sadique, 3 actions répréhensible, ou 2 mais incluant la manipulation
 
 	////////// RR005 ////////////
+	
+	à sauvegarder : les vêtements par terre (peut arriver avec les lesbiennes)
 	
 	- Marie : on peut sortir aller à son rdv, comme on peut l'oublier dans certains cas (voir Jessy et Nancy)
 	- Stephan : Comptabile avec Marie, mais pas la route Forever and Ever qui nécessite d'avoir 0 date
