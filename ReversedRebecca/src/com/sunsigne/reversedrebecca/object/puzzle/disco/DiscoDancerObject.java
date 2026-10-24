@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -35,6 +37,7 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 		this.name = name;
 		this.autoplay = autoplay;
 
+		updateName();
 		loadLiving();
 		loadAnimations();
 	}
@@ -59,6 +62,17 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 
 	protected String getName() {
 		return name;
+	}
+
+	private void updateName() {
+		if (name.contains("rebecca") == false)
+			return;
+
+		var design = RebeccaDesign.getType();
+		if (design == DESIGN_TYPE.DEFAULT)
+			return;
+
+		name = name.concat("_" + design.getName());
 	}
 
 	@Override
@@ -98,14 +112,14 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 	////////// LIT ////////////
 
 	private DiscoFireObject fire;
-	
+
 	public void lit(int delayInTicks) {
-		if(fire != null) {
+		if (fire != null) {
 			fire.lit(delayInTicks);
 			fire = null;
 			return;
 		}
-		
+
 		fire = new DiscoFireObject(getPuzzle(), this, delayInTicks);
 
 		// adding right after the puzzle itself
@@ -134,10 +148,10 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 	private void loadLiving() {
 		living = new NPC(name, 0, 0);
 		living.setBlockingPath(false);
-		
-		if(name.contains("rebecca"))
+
+		if (name.contains("rebecca"))
 			return;
-		
+
 		String gender = LivingOption.getType() == LIVING_TYPE.FEMALE ? "sabrina" : "stephan";
 		living.setTextureName(name + "_" + gender);
 	}
@@ -203,14 +217,13 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 		return gamepadController;
 	}
 
-	
 	////////// GAMEPAD ////////////
-	
+
 	@Override
 	public void buttonPressed(ButtonEvent e) {
 		if (isAutoplay() && name.contains("rebecca") == false)
 			return;
-		
+
 		if (e.getKey() == ButtonEvent.X)
 			living.setFacing(DIRECTION.LEFT);
 		if (e.getKey() == ButtonEvent.B)
@@ -224,6 +237,6 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 	@Override
 	public void buttonReleased(ButtonEvent e) {
 
-	}	
-	
+	}
+
 }
