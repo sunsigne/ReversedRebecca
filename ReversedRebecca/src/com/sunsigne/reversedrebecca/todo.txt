@@ -39,22 +39,21 @@
 		- niveaux :
 			à finir :
 				- nightclub (rebecca assise + rebecca gogo danseur)	
-				- novatech (tenue de base des NPC, alicia hugs)
 			à tester :
 
 			à faire :
+				- dans les menu et les succès :
+					- general
+					- karma
+					- game over
 				- police_station, military, miltary_after, rr0005_drunk, ws000, 001, 002 et 003
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
-		- succès
 		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
 
 	patreon :
 		musique : bourré + cookie + love that... spicy
 		dessin
 		rebecca gothique
-
-	rr005 :
-		- si mika débarque et que Rebecca est en serviette, il doit avoir un dialogue spécifique
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
