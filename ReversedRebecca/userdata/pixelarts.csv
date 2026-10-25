@@ -1,5 +1,5 @@
 
-bonus=false
+bonus=true
 bug=true
 bugBanner=true
 clothes=true
@@ -10,7 +10,7 @@ fruits=true
 furnitures=true
 hd=true
 hdCamille=true
-hdMilitary=false
+hdMilitary=true
 inthetoilet=true
 luckydeaths=true
 luckyMoredeaths=true

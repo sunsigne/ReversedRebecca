@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
@@ -53,6 +55,10 @@ public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent
 		return new FormattedString().getNoSpecialCharacter(text).toUpperCase();
 	}
 
+	private boolean isGothicSettings() {
+		return RebeccaDesign.getType() == DESIGN_TYPE.GOTHIC;
+	}
+	
 	////////// DATA ////////////
 
 	private Counter counter1;
@@ -157,9 +163,10 @@ public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent
 
 	private void loadImages() {
 		String path = "textures/menu/";
-
+		String gothic = isGothicSettings() ? "_gothic" : "";
+		
 		karma_image = new ImageTask().loadImage(path + "karma");
-		karma_cursor = new ImageTask().loadImage(path + "karma_cursor");
+		karma_cursor = new ImageTask().loadImage(path + "karma_cursor" + gothic);
 	}
 
 	////////// RENDER ////////////
@@ -288,7 +295,8 @@ public class LevelCompletedScreen implements Updatable, PhysicFree, GamepadEvent
 		if (karma_pos == karma_gap)
 			isYouAreReady = true;
 
-		g.drawImage(karma_cursor, karma_pos + 2 + (Window.WIDHT - Size.M) / 2, 580, Size.M, Size.M, null);
+		int gap = isGothicSettings() ? 4 : 0;
+		g.drawImage(karma_cursor, karma_pos + 2 + (Window.WIDHT - Size.M) / 2, 580 + gap, Size.M, Size.M, null);
 	}
 
 	private boolean flag1;

@@ -10,6 +10,8 @@ import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption;
 import com.sunsigne.reversedrebecca.object.characteristics.interactive.ActionOption.ACTION_HIGHLIGHT;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.object.puzzler.PuzzlerObject;
 import com.sunsigne.reversedrebecca.object.puzzler.RequirementBubbleObject;
 import com.sunsigne.reversedrebecca.object.puzzler.chest.ChestObject;
@@ -104,7 +106,9 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	}
 
 	private void loadImages() {
-		BufferedImage sheet = new ImageTask().loadImage("textures/characters/rebecca/" + "world");
+		boolean isGothicSettings = RebeccaDesign.getType() == DESIGN_TYPE.GOTHIC;
+		String name = isGothicSettings ? "rebecca/gothic" : "rebecca";
+		BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + name + "/world");
 		rebecca_img = getSheetSubImage(sheet, 1, 2, 16, 16);
 	}
 

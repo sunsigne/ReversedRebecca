@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.render.TextDecoration;
@@ -19,8 +21,8 @@ import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
 import com.sunsigne.reversedrebecca.ressources.sound.SoundTask;
 import com.sunsigne.reversedrebecca.system.Conductor;
 import com.sunsigne.reversedrebecca.system.DifficultyOption;
-import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.DifficultyOption.GAME_DIFFICULTY;
+import com.sunsigne.reversedrebecca.system.PausePreventer;
 import com.sunsigne.reversedrebecca.system.Window;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.ButtonEvent;
 import com.sunsigne.reversedrebecca.system.controllers.gamepad.GamepadController;
@@ -74,8 +76,9 @@ public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 	private String click_text;
 
 	private void loadText() {
-		String clickTo = DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD ? "GameOverClickToQuit" : "LevelClickToContinue";	
-		gameover_text = format(new Translatable().getTranslatedText("GameOver", FilePath.MENU));		
+		String clickTo = DifficultyOption.getDifficulty() == GAME_DIFFICULTY.HARD ? "GameOverClickToQuit"
+				: "LevelClickToContinue";
+		gameover_text = format(new Translatable().getTranslatedText("GameOver", FilePath.MENU));
 		click_text = format(new Translatable().getTranslatedText(clickTo, FilePath.MENU));
 	}
 
@@ -86,7 +89,9 @@ public class GameOverScreen implements Updatable, PhysicFree, GamepadEvent {
 	private void loadImages() {
 		String path = "textures/menu/";
 
-		image = new ImageTask().loadImage(path + "game_over");
+		boolean isGothicSettings = RebeccaDesign.getType() == DESIGN_TYPE.GOTHIC;
+		String gothic = isGothicSettings ? "_gothic" : "";
+		image = new ImageTask().loadImage(path + "game_over" + gothic);
 	}
 
 	////////// RENDER ////////////

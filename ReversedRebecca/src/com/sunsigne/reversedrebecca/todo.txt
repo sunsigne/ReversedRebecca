@@ -42,10 +42,6 @@
 			à tester :
 
 			à faire :
-				- dans les menu et les succès :
-					- general
-					- karma
-					- game over
 				- police_station, military, miltary_after
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
@@ -104,7 +100,8 @@
 	LifeAndDeathLaw -> changer l'écran de game over en HARD pour remplacer le calin de Rebecca sarah par sarah qui pleure devant une pierre tombale
 	succès : (hidden=true) débloquer le niveau test sur l'écran titre + mettres à jours les succès
 	réorganiser le dossier "$working"
-
+	mettre à jour les succès (réorganiser, supprimer ceux en trop, etc.) + vérifier si pssobielde mettre succès sur démo
+	
 	note : puzzle : cliquer = impact
 
 	////////// RRXXX générique ////////////
