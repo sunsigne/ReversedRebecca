@@ -38,9 +38,14 @@
 	pour le passage gothic, penser à :
 		- niveaux :
 			à finir :
-
+				military :
+					- puzzle force ET intelligence
+					- Uppercut					
 			à tester :
-
+				military : 
+					- nolancy devenant joueur (en entier) + bisou (4 possibilités)
+					- jamessy wall (4 possibilités)
+					
 			à faire :
 				- police_station, military, miltary_after
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
