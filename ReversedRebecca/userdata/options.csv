@@ -2,13 +2,13 @@ Language=french
 Camera=dynamic
 Shake=on
 Inventory=immersive
-Texts=medium
+Texts=large
 Difficulty=normal
 
 /////BONUS/////
 
 PreferredAttraction=default
-RebeccaDesign=default
+RebeccaDesign=gothic
 
 /////ACTION/////
 
@@ -29,6 +29,6 @@ Action3=F:70
 /////VOLUME/////
 
 Main=1.0
-Music=0.0
+Music=1.0
 Sound=1.0
 Voice=1.0
