@@ -46,7 +46,7 @@
 					- general
 					- karma
 					- game over
-				- police_station, military, miltary_after, rr0005_drunk
+				- police_station, military, miltary_after
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
 
