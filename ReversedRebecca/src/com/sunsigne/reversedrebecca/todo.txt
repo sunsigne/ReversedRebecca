@@ -35,22 +35,6 @@
 		
 	////////// EN COURS ////////////
 
-	pour le passage gothic, penser à :
-		- niveaux :
-			à finir :
-				- valses (4) - implémentation faite, manque les pixel art
-			à tester :
-				- hall of destiny (2)
-				- ko by policeman speedrun (4)
-				- lorsque assise sur le tabouret / le canapé, est-ce qu'elle est bien centrée en gothique classique ?
-				- TA canapé (4)
-				- cowboy puzzle (4)
-				- sarah hug outise cell (4)
-				- sarah hug in cell (free no document (not first time), ou free avec document) - (4)
-				- déguisement
-				- toute la danse macabre (4)
-				- valses (4)
-
 	patreon :
 		musique : bourré + cookie + love that... spicy
 		dessin

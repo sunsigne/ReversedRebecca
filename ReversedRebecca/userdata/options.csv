@@ -1,14 +1,14 @@
 Language=french
 Camera=dynamic
 Shake=on
-Inventory=immersive
+Inventory=visible
 Texts=large
 Difficulty=normal
 
 /////BONUS/////
 
 PreferredAttraction=default
-RebeccaDesign=gothic
+RebeccaDesign=default
 
 /////ACTION/////
 
