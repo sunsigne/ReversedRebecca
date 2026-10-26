@@ -58,6 +58,9 @@ public class CowboyRebeccaObject extends CowboyLivingObject {
 
 		if (player.getTextureName().contains("rebecca_police"))
 			row = 4;
+		
+		if (player.getTextureName().contains("rebecca_gothic_police"))
+			row = 5;
 
 		return row;
 	}
