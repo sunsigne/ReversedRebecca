@@ -39,7 +39,6 @@
 		- niveaux :
 			à finir :
 				- police_station
-				- miltary_after
 			à tester :
 				
 
