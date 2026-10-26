@@ -184,7 +184,9 @@ public class StrenghtPlayerObject extends StrenghPuzzleObject
 	private LivingObject living;
 
 	private void loadLiving() {
-		living = new NPC("rebecca", 0, 0);
+		Player player = new PlayerFinder().getPlayer();
+		String name = player != null ? player.getTextureName().replace("_", "/") : "rebecca";
+		living = new NPC(name, 0, 0);
 		living.setFacing(DIRECTION.LEFT);
 		living.setBlockingPath(false);
 	}

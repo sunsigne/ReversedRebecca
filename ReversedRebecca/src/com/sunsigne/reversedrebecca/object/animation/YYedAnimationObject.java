@@ -38,7 +38,10 @@ public class YYedAnimationObject extends AnimationObject {
 
 	@Override
 	public String getName() {
-		return "yyed";
+		Player player = new PlayerFinder().getPlayer();
+		String name = player != null ? player.getTextureName() : "";
+		name = name.contains("_") ? "_" + name.split("_")[1] : "";
+		return "yyed" + name;
 	}
 
 	////////// TICK ////////////

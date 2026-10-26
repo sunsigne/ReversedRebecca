@@ -10,8 +10,6 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption;
 import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TYPE;
 import com.sunsigne.reversedrebecca.object.piranha.living.NPC;
 import com.sunsigne.reversedrebecca.object.piranha.living.animation.LivingAnimation;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
-import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.object.puzzle.PuzzleObject;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
@@ -37,7 +35,6 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 		this.name = name;
 		this.autoplay = autoplay;
 
-		updateName();
 		loadLiving();
 		loadAnimations();
 	}
@@ -62,17 +59,6 @@ public class DiscoDancerObject extends PuzzleObject implements DiscoSwitchableSi
 
 	protected String getName() {
 		return name;
-	}
-
-	private void updateName() {
-		if (name.contains("rebecca") == false)
-			return;
-
-		var design = RebeccaDesign.getType();
-		if (design == DESIGN_TYPE.DEFAULT)
-			return;
-
-		name = name.concat("_" + design.getName());
 	}
 
 	@Override

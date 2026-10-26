@@ -153,7 +153,7 @@ public abstract class YYIntelligencePuzzle extends Puzzle {
 	private BufferedImage getPlayerImage() {
 		if (playerImage == null) {
 			Player player = new PlayerFinder().getPlayer();
-			String name = player != null ? player.getTextureName() : "rebecca";
+			String name = player != null ? player.getTextureName().replace("_", "/") : "rebecca";
 			BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + name + "/world");
 			playerImage = getSheetSubImage(sheet, 1, 1, 16, 16);
 		}

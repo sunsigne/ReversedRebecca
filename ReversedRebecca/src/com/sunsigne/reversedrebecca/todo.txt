@@ -38,16 +38,11 @@
 	pour le passage gothic, penser à :
 		- niveaux :
 			à finir :
-				military :
-					- puzzle force ET intelligence
-					- Uppercut					
+				- police_station
+				- miltary_after
 			à tester :
-				military : 
-					- nolancy devenant joueur (en entier) + bisou (4 possibilités)
-					- jamessy wall (4 possibilités)
-					
-			à faire :
-				- police_station, military, miltary_after
+				
+
 		- les highlight éventuels (pas ceux du perso, ceux du lvl)
 		- toutes les décorations et animations (bien les vérifier pour être sûr de n'en avoir oublié aucune)
 
@@ -58,6 +53,9 @@
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
+
+	critique :
+		- passer au système de sac de bille (ne pas oublier la tutodoor et ts les puzzles exclus)
 
 	sadique :
 		- la suite de sadique en labo (pas de sarah...)

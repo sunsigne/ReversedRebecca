@@ -2,9 +2,11 @@ package com.sunsigne.reversedrebecca.puzzle.disco.difficulty;
 
 import com.sunsigne.reversedrebecca.characteristics.tools.ToolPlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
+import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
 import com.sunsigne.reversedrebecca.object.puzzle.disco.DiscoDancerObject;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
+import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.puzzle.disco.DiscoPuzzle;
 import com.sunsigne.reversedrebecca.system.mainloop.Game;
 
@@ -24,7 +26,9 @@ public class CyanDiscoPuzzle extends DiscoPuzzle {
 
 	@Override
 	public DiscoDancerObject getDiscoDancer() {
-		return new DiscoDancerObject(this, "rebecca", false);
+		Player player = new PlayerFinder().getPlayer();
+		String name = player != null ? player.getTextureName().replace("_", "/") : "rebecca";		
+		return new DiscoDancerObject(this, name, false);
 	}
 
 	@Override
