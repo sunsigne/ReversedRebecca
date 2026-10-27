@@ -152,18 +152,6 @@ public class ChestPuzzle extends Puzzle implements GamepadEvent, MousePreseting 
 
 	////////// TOOL ////////////
 
-	private static int noCritCount;
-
-	@Override
-	protected int getStaticNoCritCount() {
-		return noCritCount;
-	}
-
-	@Override
-	protected void setStaticNoCritCount(int noCritCount) {
-		ChestPuzzle.noCritCount = noCritCount;
-	}
-	
 	@Override
 	public boolean hasCritToken() {
 		return false;

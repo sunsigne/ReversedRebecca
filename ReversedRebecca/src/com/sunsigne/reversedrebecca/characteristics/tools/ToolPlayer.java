@@ -1,11 +1,16 @@
 package com.sunsigne.reversedrebecca.characteristics.tools;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty;
 import com.sunsigne.reversedrebecca.object.hud.HUD;
 import com.sunsigne.reversedrebecca.object.hud.HUDList;
 import com.sunsigne.reversedrebecca.object.hud.HUDTools;
 import com.sunsigne.reversedrebecca.pattern.DifficultyComparator;
 import com.sunsigne.reversedrebecca.pattern.FormattedString;
+import com.sunsigne.reversedrebecca.physic.debug.SureCriticalMode;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolCondition;
 import com.sunsigne.reversedrebecca.piranha.condition.global.UnlockedToolMaxLevelCondition;
 import com.sunsigne.reversedrebecca.ressources.FileTask;
@@ -143,11 +148,12 @@ public abstract class ToolPlayer implements Difficulty {
 	public void setDifficulty(LVL difficulty) {
 		setDifficulty(difficulty, false);
 	}
-	
+
 	public void setDifficulty(LVL difficulty, boolean forbiddenUpgradeAllowed) {
 		boolean blinking = getTool().difficulty == LVL.NULL;
 
-		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty) && forbiddenUpgradeAllowed == false)
+		if (new DifficultyComparator().isForbiddenUpgrade(getMaxDifficulty(), difficulty)
+				&& forbiddenUpgradeAllowed == false)
 			getTool().difficulty = getMaxDifficulty();
 		else
 			getTool().difficulty = difficulty;
@@ -176,18 +182,21 @@ public abstract class ToolPlayer implements Difficulty {
 
 	////////// CRITICAL ////////////
 
+	///// current /////
+
 	private int criticalChance = getDefaultCriticalChance();
 
 	protected int getDefaultCriticalChance() {
-		return 15;
+		return 10;
 	}
-	
+
 	public int getCriticalChance() {
 		return getTool().criticalChance;
 	}
 
 	public void setCriticalChance(int chance) {
 		getTool().criticalChance = chance;
+		getTool().roulette = null;
 	}
 
 	private void loadCriticalChance() {
@@ -203,6 +212,37 @@ public abstract class ToolPlayer implements Difficulty {
 		}
 
 		getTool().criticalChance = Integer.valueOf(txtCriticalChance.replace("%", ""));
+	}
+
+	///// roulette /////
+
+	private List<Boolean> roulette;
+
+	public boolean criticalRoulette() {
+		if (SureCriticalMode.debugMode.getDebugMode().getState())
+			return true;
+		
+		var list = getTool().roulette;
+
+		if (list == null || list.isEmpty())
+			refillRoulette();
+		list = getTool().roulette;
+
+		int rad = new Random().nextInt(list.size());
+		boolean critical = list.get(rad);
+		list.remove(rad);
+
+		return critical;
+	}
+
+	private void refillRoulette() {
+		getTool().roulette = new ArrayList<>();
+		int num = getCriticalChance() / 10;
+
+		for (int i = 0; i < num; i++)
+			getTool().roulette.add(true);
+		for (int i = getTool().roulette.size(); i < 10; i++)
+			getTool().roulette.add(false);
 	}
 
 }

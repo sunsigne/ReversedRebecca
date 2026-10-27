@@ -36,15 +36,12 @@
 	////////// EN COURS ////////////
 
 	patreon :
-		musique : bourré + cookie + love that... spicy
+		musique : bourré + cookie
 		dessin
 		rebecca gothique
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
-
-	critique :
-		- passer au système de sac de bille (ne pas oublier la tutodoor et ts les puzzles exclus)
 
 	sadique :
 		- la suite de sadique en labo (pas de sarah...)
@@ -78,6 +75,9 @@
 	retravailler l'intro de dave lorsqu'on lance le jeu (dave 000 ?) :
 		- lorsqu'on lance le jeu pour la 1ère fois, Dave doit prévenir que le jeu sauvegarde tout seul
 	
+	bug : 
+		- military_after : le pause preventeur reste actif après le niveau (peut-être seulement si on a tenté de mettre sur pause avant de changer de map ? ou tout court ? faut tester, j'ai un peu la flemme de faire ça mtn)
+	
 	succès : 
 		- avoir dévérouillé tous les pixel art de la démo
 		- avoir dévérouillé tous les dessins de la démo	
@@ -88,7 +88,6 @@
 	mettre à jour les metadata des musiques (woman of steel par exemple, n'a pas le bon titre)
 	3h00 - mettre à jour le mappable pour les boss et les hostille, nottamment la bombe qui tombe !
 	10h - faire en sorte que les crash_report s'efface lorsqu'ils y en a trop et/ou qu'ils sont trop vieux
-	1h - vérifier que les critiques se sauvegarge effectivement (un changement manuel des characteristiques n'a pas marché)
 	LifeAndDeathLaw -> changer l'écran de game over en HARD pour remplacer le calin de Rebecca sarah par sarah qui pleure devant une pierre tombale
 	succès : (hidden=true) débloquer le niveau test sur l'écran titre + mettres à jours les succès
 	réorganiser le dossier "$working"

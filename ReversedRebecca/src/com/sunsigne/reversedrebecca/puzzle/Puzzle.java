@@ -10,7 +10,6 @@ import com.sunsigne.reversedrebecca.pattern.listener.GenericListenerBoolean;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.physic.PhysicLaw;
 import com.sunsigne.reversedrebecca.physic.PhysicLinker;
-import com.sunsigne.reversedrebecca.physic.debug.SureCriticalMode;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker;
 import com.sunsigne.reversedrebecca.physic.natural.correlated.CameraShaker.SHAKE;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
@@ -32,12 +31,11 @@ import com.sunsigne.reversedrebecca.world.World;
 public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	public Puzzle(ToolPlayer toolPlayer, GenericListenerBoolean actionOnWinning, GenericListener actionOnLosing) {
-		criticalChance = calculingCriticalChances(toolPlayer);
-		if (criticalChance >= 99) {
-			isCritical = true;
-			setStaticNoCritCount(0);
-		}
+		if (toolPlayer != null)
+			isCritical = toolPlayer.criticalRoulette();
 
+		calculateCriticalChance(toolPlayer);
+		
 		this.actionOnWinning = actionOnWinning;
 		this.actionOnLosing = actionOnLosing;
 
@@ -71,37 +69,24 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 
 	protected boolean isCritical;
 
-	protected abstract int getStaticNoCritCount();
-
-	protected abstract void setStaticNoCritCount(int noCritCount);
-
 	public abstract boolean hasCritToken();
 
-	private int criticalChance;
+	private int crititalChance;
 
-	private int calculingCriticalChances(ToolPlayer toolPlayer) {
-		if (SureCriticalMode.debugMode.getDebugMode().getState())
-			return 100;
-		if (isCritical)
-			return 100;
-		if (toolPlayer == null)
-			return 0;
-		if (toolPlayer.getCriticalChance() >= 100)
-			return 100;
-
-		return (1 + getStaticNoCritCount()) * toolPlayer.getCriticalChance();
+	private void calculateCriticalChance(ToolPlayer toolPlayer) {
+		if(toolPlayer == null) {
+			crititalChance = -1;
+			return;
+		}			
+		
+		crititalChance = toolPlayer.getCriticalChance();
 	}
 
 	private void createCriticalToken() {
 		if (hasCritToken() == false)
 			return;
 
-		if (criticalChance >= 99)
-			criticalChance = 100;
-		if (criticalChance < 0)
-			criticalChance = 0;
-
-		CritToken token = new CritToken(this, criticalChance);
+		CritToken token = new CritToken(this, crititalChance);
 		LAYER.PUZZLE.addObject(token);
 	}
 
@@ -181,9 +166,7 @@ public abstract class Puzzle implements Updatable, TickFree, SheetableImage {
 		new GameCursor().setCursor(CURSOR_TYPE.NORMAL);
 		new PlayerFinder().roundToTilePlayer();
 
-		if (isCritical == false)
-			setStaticNoCritCount(getStaticNoCritCount() + 1);
-		else
+		if (isCritical)
 			new CameraShaker().shaking(SHAKE.LITTLE);
 
 		if (isPuzzleWon) {

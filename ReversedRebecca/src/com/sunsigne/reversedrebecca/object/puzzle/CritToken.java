@@ -73,6 +73,9 @@ public class CritToken extends GameObject implements TickFree, SheetableImage {
 
 	@Override
 	public void render(Graphics g) {
+		if(criticalChance < 0)
+			return;
+		
 		g.drawImage(getImage(), getX(), getY(), getWidth(), getHeight(), null);
 
 		int rect[] = new int[] { getX(), getY(), getWidth(), getHeight() };

@@ -43,4 +43,11 @@ public class CowboyToolPlayer extends ToolPlayer {
 		return LVL.RED.getName().toUpperCase();
 	}
 
+	////////// CRITICAL ////////////
+
+	@Override
+	protected int getDefaultCriticalChance() {
+		return 0;
+	}
+
 }

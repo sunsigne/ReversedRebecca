@@ -103,18 +103,6 @@ public abstract class BombPuzzle extends Puzzle {
 
 	////////// TOOL ////////////
 
-	private static int noCritCount;
-
-	@Override
-	protected int getStaticNoCritCount() {
-		return noCritCount;
-	}
-
-	@Override
-	protected void setStaticNoCritCount(int noCritCount) {
-		BombPuzzle.noCritCount = noCritCount;
-	}
-	
 	@Override
 	public boolean hasCritToken() {
 		return true;

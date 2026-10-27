@@ -86,18 +86,6 @@ public abstract class HackPuzzle extends Puzzle {
 
 	////////// TOOL ////////////
 
-	private static int noCritCount;
-
-	@Override
-	protected int getStaticNoCritCount() {
-		return noCritCount;
-	}
-
-	@Override
-	protected void setStaticNoCritCount(int noCritCount) {
-		HackPuzzle.noCritCount = noCritCount;
-	}
-
 	@Override
 	public boolean hasCritToken() {
 		return true;

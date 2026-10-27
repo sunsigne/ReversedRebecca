@@ -150,18 +150,6 @@ public abstract class CookiePuzzle extends PuzzleGamepad {
 
 	////////// TOOL ////////////
 
-	private static int noCritCount;
-
-	@Override
-	protected int getStaticNoCritCount() {
-		return noCritCount;
-	}
-
-	@Override
-	protected void setStaticNoCritCount(int noCritCount) {
-		CookiePuzzle.noCritCount = noCritCount;
-	}
-
 	@Override
 	public boolean hasCritToken() {
 		return false;

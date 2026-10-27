@@ -59,6 +59,9 @@ public abstract class KeyPuzzle extends Puzzle {
 	public abstract KeyObject getKey();
 
 	protected void createLock() {
+		if (isTutorial())
+			isCritical = false;
+
 		PuzzleObject lock = getLock();
 		lock.setX(getCol(1));
 		lock.setY(getRow(4));
@@ -75,18 +78,6 @@ public abstract class KeyPuzzle extends Puzzle {
 	}
 
 	////////// TOOL ////////////
-
-	private static int noCritCount;
-
-	@Override
-	protected int getStaticNoCritCount() {
-		return noCritCount;
-	}
-
-	@Override
-	protected void setStaticNoCritCount(int noCritCount) {
-		KeyPuzzle.noCritCount = noCritCount;
-	}
 
 	@Override
 	public boolean hasCritToken() {
@@ -122,7 +113,7 @@ public abstract class KeyPuzzle extends Puzzle {
 	protected BufferedImage getWallTexture(boolean critToken) {
 		String crit = critToken && hasCritToken() ? "_crit" : "";
 		BufferedImage sheet = new ImageTask().loadImage("textures/puzzle/" + "wall" + crit);
-		int row = isCritical ? 2 : 1;
+		int row = isCritical && hasCritToken() ? 2 : 1;
 		return getSheetSubImage(sheet, getSheetColCriterion(), row, getSheetWidth(), getSheetHeight());
 	}
 
@@ -149,11 +140,11 @@ public abstract class KeyPuzzle extends Puzzle {
 			} while (radRow == safeRow);
 
 			if (moving)
-				handler.addObject(new MovingWallPuzzleObject(this, isCritical, img, radCol, radRow));
+				handler.addObject(new MovingWallPuzzleObject(this, isCritical && hasCritToken(), img, radCol, radRow));
 
 			else {
 				handler.addObject(new WallPuzzle(img, radCol, radRow));
-				handler.addObject(new KillPuzzleObject(this, isCritical, radCol, radRow));
+				handler.addObject(new KillPuzzleObject(this, isCritical && hasCritToken(), radCol, radRow));
 
 				if (isTutorial())
 					new MousePos().setY(radRow + Size.L / 2);
@@ -172,7 +163,7 @@ public abstract class KeyPuzzle extends Puzzle {
 	private void createDeathWall() {
 		for (int row = 1; row <= 6; row++) {
 			// Almost invisible in VisibleHitboxMode because added before Walls
-			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, isCritical, getCol(0), getRow(row)));
+			LAYER.PUZZLE.addObject(new KillPuzzleObject(this, isCritical && hasCritToken(), getCol(0), getRow(row)));
 		}
 	}
 
