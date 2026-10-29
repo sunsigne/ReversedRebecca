@@ -127,6 +127,19 @@ BDButton = BD
 SettingsButton = reglages
 CreditsButton = credits
 
+///// SETTINGS /////
+
+RebeccaDefault = classique
+RebeccaGothic = gothique
+Preference = preference
+PreferenceDefault = aucune
+PreferenceMale = homme
+PreferenceFemale = femme
+HardReset = hard reset
+HardResetDetail1 = dessins, pixel art, BD
+HardResetDetail2 = sauvegarde et succes
+HardResetDetail3 = Dave n'oublie jamais
+
 ///// DEMO /////
 
 Demo = merci d'avoir joue

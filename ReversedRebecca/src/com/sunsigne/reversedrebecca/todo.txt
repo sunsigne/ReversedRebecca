@@ -35,6 +35,13 @@
 		
 	////////// EN COURS ////////////
 
+	bonus réglagles :
+		- creer le hard reset screen (mettre à cet endroit le "dave n'oublie jamais"). Faire quitter le jeu ?
+		- comptaibilité écran titre :
+			- reecca gothique
+			- préférence sexuelle
+		- prérequis de dévérouillage ?
+
 	patreon :
 		musique : bourré + cookie
 		dessin
@@ -59,12 +66,6 @@
 
 	bonus :
 	- BD
-
-	- réglagles :
-		- activation skin dark rebecca
-		- préférence sexuelle
-		- hard reset (succès, pixel art, illu, dave, sauvegarge, etc. Attention, l'opération quitte le jeu une fois terminée)
-	-(tout est actuellement temporairement relié au menu "general")
 
 	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 

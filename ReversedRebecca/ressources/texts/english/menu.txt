@@ -127,6 +127,19 @@ BDButton = comics
 SettingsButton = settings
 CreditsButton = credits
 
+///// SETTINGS /////
+
+RebeccaDefault = classic
+RebeccaGothic = gothic
+Preference = preference
+PreferenceDefault = none
+PreferenceMale = man
+PreferenceFemale = woman
+HardReset = hard reset
+HardResetDetail1 = save, achievements, comics
+HardResetDetail2 = drawing and pixel art
+HardResetDetail3 = Dave never forget
+
 ///// DEMO /////
 
 Demo = thanks for playing

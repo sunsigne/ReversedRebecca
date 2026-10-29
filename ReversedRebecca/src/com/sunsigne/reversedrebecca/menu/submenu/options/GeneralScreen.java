@@ -365,7 +365,7 @@ public class GeneralScreen extends SubMenuScreen implements SheetableImage {
 
 	protected BufferedImage get_gamepad_instruction_image() {
 		if (gamepad_instruction_image == null)
-			gamepad_instruction_image = new ImageTask().loadImage("textures/menu/" + getName() + "_gamepad_instruction",
+			gamepad_instruction_image = new ImageTask().loadImage("textures/menu/" + "gamepad_nav",
 					true);
 		return gamepad_instruction_image;
 	}

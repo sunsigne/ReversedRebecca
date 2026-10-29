@@ -106,8 +106,9 @@ public class ActionOptionPreview extends GameObject implements SheetableImage {
 	}
 
 	private void loadImages() {
-		boolean isGothicSettings = RebeccaDesign.getType() == DESIGN_TYPE.GOTHIC;
-		String name = isGothicSettings ? "rebecca/gothic" : "rebecca";
+		DESIGN_TYPE design = RebeccaDesign.getType();
+		String name = "rebecca";
+		name = design == DESIGN_TYPE.GOTHIC ? name.concat("/gothic") : name.concat("");
 		BufferedImage sheet = new ImageTask().loadImage("textures/characters/" + name + "/world");
 		rebecca_img = getSheetSubImage(sheet, 1, 2, 16, 16);
 	}
