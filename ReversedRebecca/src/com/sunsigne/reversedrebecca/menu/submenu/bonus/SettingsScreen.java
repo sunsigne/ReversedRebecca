@@ -92,19 +92,13 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 
 		// save, achievements, comics ...
 		text = translate("HardResetDetail" + "1");
-		resetDetail = new TitleScreenText(text, x - gap, y + 210 + 79);
+		resetDetail = new TitleScreenText(text, x - gap, y + 362 + 79);
 		resetDetail.setFontSize(18f);
 		LAYER.MENU.addObject(resetDetail);
 
 		// ... drawing and pixel art ...
 		text = translate("HardResetDetail" + "2");
-		resetDetail = new TitleScreenText(text, x - gap, y + 210 + 113);
-		resetDetail.setFontSize(18f);
-		LAYER.MENU.addObject(resetDetail);
-
-		// ... Dave never forget
-		text = translate("HardResetDetail" + "3");
-		resetDetail = new TitleScreenText(text, x - gap, y + 314 + 113);
+		resetDetail = new TitleScreenText(text, x - gap, y + 362 + 113);
 		resetDetail.setFontSize(18f);
 		LAYER.MENU.addObject(resetDetail);
 
@@ -143,7 +137,7 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 
 		GenericListener onPress = () -> createConfirmButton();
-		resetButton = new TitleScreenButton(translate("HardReset"), 741 - 269 - gap, 323 + 208, 415, 80, onPress,
+		resetButton = new TitleScreenButton(translate("HardReset"), 741 - 269 - gap, 371 + 312, 415, 80, onPress,
 				null) {
 
 			@Override
@@ -160,7 +154,7 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 
 		GenericListener onPress = () -> new ResetScreen();
-		resetButton = new TitleScreenButton(translate("Confirm"), 741 - 269 - gap, 323 + 208, 415, 80, onPress, null) {
+		resetButton = new TitleScreenButton(translate("Confirm"), 741 - 269 - gap, 371 + 312, 415, 80, onPress, null) {
 
 			@Override
 			public String getSound() {
@@ -256,7 +250,7 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 
 	public static final PresetMousePos REBECCA_DESIGN = new PresetMousePos(925 - 269 + gap, 460);
 	public static final PresetMousePos PREFERENCE_TYPE = new PresetMousePos(925 - 269 + gap, 570);
-	public static final PresetMousePos HARD_RESET = new PresetMousePos(925 - 269 - gap, 570);
+	public static final PresetMousePos HARD_RESET = new PresetMousePos(925 - 269 - gap, 720);
 
 	////////// GAMEPAD ////////////
 
