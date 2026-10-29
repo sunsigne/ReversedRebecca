@@ -37,10 +37,6 @@
 
 	bonus réglagles :
 		- creer le hard reset screen (mettre à cet endroit le "dave n'oublie jamais"). Faire quitter le jeu ?
-		- comptaibilité écran titre :
-			- reecca gothique
-			- préférence sexuelle
-		- prérequis de dévérouillage ?
 
 	patreon :
 		musique : bourré + cookie

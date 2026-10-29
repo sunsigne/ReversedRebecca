@@ -19,6 +19,7 @@ import com.sunsigne.reversedrebecca.object.piranha.living.LivingOption.LIVING_TY
 import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.RebeccaDesign.DESIGN_TYPE;
 import com.sunsigne.reversedrebecca.pattern.listener.GenericListener;
+import com.sunsigne.reversedrebecca.piranha.condition.global.GothicCondition;
 import com.sunsigne.reversedrebecca.ressources.images.ImageTask;
 import com.sunsigne.reversedrebecca.ressources.images.SheetableImage;
 import com.sunsigne.reversedrebecca.ressources.layers.LAYER;
@@ -198,12 +199,16 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 	}
 
 	private void refresh() {
-		String designTypeName = RebeccaDesign.getType().getName();
+		DESIGN_TYPE designType = RebeccaDesign.getType();
+		String designTypeName = designType.getName();
 		rebeccaType.setText(translate("rebecca" + designTypeName));
 		String livingTypeName = LivingOption.getType().getName();
 		preferenceType.setText(translate("preference" + livingTypeName));
-		
-		preferencePreview.refresh();		
+
+		String value = designType == DESIGN_TYPE.GOTHIC ? "on" : "off";
+		new GothicCondition().registerValue(value);
+		preferencePreview.refresh();
+
 		createResetButton();
 	}
 

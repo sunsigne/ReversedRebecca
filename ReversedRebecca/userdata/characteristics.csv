@@ -5,10 +5,10 @@ MaxHp=2
 
 
 KeyMaxLvl=CYAN
-KeyStartLvl=NULL
+KeyStartLvl=CYAN
 KeyCriticalChance=10%
 
-BombMaxLvl=CYAN
+BombMaxLvl=GREEN
 BombStartLvl=NULL
 BombCriticalChance=10%
 
