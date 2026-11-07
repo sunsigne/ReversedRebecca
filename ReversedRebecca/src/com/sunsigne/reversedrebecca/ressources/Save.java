@@ -21,6 +21,9 @@ import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveEraserList;
 import com.sunsigne.reversedrebecca.piranha.request.memory.data.SaveList;
 import com.sunsigne.reversedrebecca.piranha.request.ressources.DrawingRequest;
+import com.sunsigne.reversedrebecca.ressources.menu.achievement.AchievementTask;
+import com.sunsigne.reversedrebecca.ressources.menu.drawing.DrawingTask;
+import com.sunsigne.reversedrebecca.ressources.menu.pixelart.PixelArtTask;
 import com.sunsigne.reversedrebecca.world.World;
 import com.sunsigne.reversedrebecca.world.lvlstats.Karma;
 import com.sunsigne.reversedrebecca.world.lvlstats.LevelStats;
@@ -214,6 +217,14 @@ public class Save {
 		new FileTask().write(char_file, "");
 		new FileTask().write(file, "");
 		createSaveFile();
+	}
+	
+	public void hardResetProgression() {
+		new Save().resetProgression();
+		new DrawingTask().reset();
+		new AchievementTask().reset();
+		// new ComicsTask().reset();
+		new PixelArtTask().reset();
 	}
 
 	// the name is alarming but it just erase some specific intended data

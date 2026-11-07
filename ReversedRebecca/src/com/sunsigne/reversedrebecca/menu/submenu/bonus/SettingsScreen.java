@@ -7,7 +7,6 @@ import java.util.HashMap;
 import com.sunsigne.reversedrebecca.menu.MenuScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.BonusScreen;
 import com.sunsigne.reversedrebecca.menu.submenu.SubMenuScreen;
-import com.sunsigne.reversedrebecca.menu.submenu.options.ResetScreen;
 import com.sunsigne.reversedrebecca.object.characteristics.Facing.DIRECTION;
 import com.sunsigne.reversedrebecca.object.menu.buttons.ButtonObject;
 import com.sunsigne.reversedrebecca.object.menu.buttons.PreferencePreview;
@@ -153,7 +152,7 @@ public class SettingsScreen extends SubMenuScreen implements SheetableImage {
 	private void createConfirmButton() {
 		LAYER.MENU.getHandler().removeObject(resetButton);
 
-		GenericListener onPress = () -> new ResetScreen();
+		GenericListener onPress = () -> new HardResetScreen();
 		resetButton = new TitleScreenButton(translate("Confirm"), 741 - 269 - gap, 371 + 312, 415, 80, onPress, null) {
 
 			@Override

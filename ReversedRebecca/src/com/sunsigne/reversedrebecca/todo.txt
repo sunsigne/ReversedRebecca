@@ -35,9 +35,6 @@
 		
 	////////// EN COURS ////////////
 
-	bonus réglagles :
-		- creer le hard reset screen (mettre à cet endroit le "dave n'oublie jamais"). Faire quitter le jeu ?
-
 	patreon :
 		musique : bourré + cookie
 		dessin
@@ -61,7 +58,7 @@
 	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
 
 	bonus :
-	- BD
+	- BD (+ relier au hard reset)
 
 	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
