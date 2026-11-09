@@ -1,0 +1,4 @@
+NPC-01 = Camille
+NPC-02 = Erika
+NPC-03 = Sarah
+NPC-04 = Delta

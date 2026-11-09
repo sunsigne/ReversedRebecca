@@ -37,7 +37,7 @@ player = DOWN = you_silly = I always use my right hand to open doors.
 
 
 % IS_OPEN
-player = UP = laugh = It's open!
+player = UP = laugh = Come in!
 
 
 % TOO_LATE_FAKE_OPEN

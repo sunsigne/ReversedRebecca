@@ -1,0 +1,7 @@
+% BEFORE_ERIKA
+player = DOWN = happy_var = Sécher le travail, il n'y a que ça de vrai !
+player = DOWN = excited = Bien ! Maintenant, un bon livre, ou d'un jeu vidéo ?
+
+
+% COME_IN
+player = UP = laugh = C'est ouvert !

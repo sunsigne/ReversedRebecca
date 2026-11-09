@@ -35,10 +35,23 @@
 		
 	////////// EN COURS ////////////
 
+	rr002_home :
+		- succès si on abandonne sarah en sadique : changer de meilleure amie comme de chaussette
+		- tester gothique
+		- anglais
+			- finir erika :
+				- en rr003 (si on décide de rentrer chez soit), rebecca est DEJA au courant pour camille)
+				- en rr004 (débarasse les crêpes en plus des verres)
+			- finir sarah :
+				- que se passe-t-il si on l'abandonne au commisairat ? aussi bien pour la 1ère que la 2nd fois ?
+			- variante delta :
+			 	- en rr002
+			 	- en lvl002 - on peut imaginer que Delta propose à Rebecca d'aller en boite, elle peut évoquer son frère.
+			 	- rr003 -  Il faudrait qu'elle gravisse les échelons ? A trouver.
+
 	patreon :
-		musique : bourré + cookie
-		dessin
-		rebecca gothique
+		musique : bourré, erika
+		prochain dessin en décembre
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?

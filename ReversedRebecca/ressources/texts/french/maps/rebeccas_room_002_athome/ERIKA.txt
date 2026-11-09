@@ -1,0 +1,32 @@
+% HELLO
+player = object = laugh = Rika ! C'est bon de te voir !
+object = player = happy = Hello chaton, tu n'es pas au travail aujourd'hui ?
+player = object = you_silly = Disons que j'ai décidé de prendre ma journée suite@à la transformation de nos bureaux en open space.
+object = player = happy_var = Ha ? Tu penses pouvoir attendre pour me raconter ?@Je comptais activer Camille, aujourd'hui.
+
+
+% CAMILLE
+player = camille = surprised = C'est pas vrai ! Elle est prête ?
+
+
+% CAMILLE_NEXT
+object = player = unhappy = Pas tout à fait. Il reste encore…@Attend, je te montre.
+
+
+% WORKING
+object = RIGHT = happy = Tu vois ce système ? Il permet d'enregistrer les@réponses aux questions qu'elle se pose.
+object = RIGHT = happy_var = Mais il n'est pas encore compatible avec@l'enregistrement de nouveaux souvenirs.
+player = DOWN = no_sens = Je ne comprends pas… Je croyais qu'elle avait@des neurones humain…
+object = RIGHT = happy = Elle n'est ni machine, ni vraiment humaines…@Vois ça comme…
+
+
+% KNOCK_SARAH
+object = RIGHT = happy_var = C'est qui ? Sarah ?
+player = LEFT = happy = Il n'y a qu'un seul moyen de le savoir.
+
+
+% KNOCK_NOT_SARAH
+object = RIGHT = happy_var = C'est qui ? Sarah ?
+player = LEFT = sad = Il y a peu de chance que ça soit elle…
+object = RIGHT = unhappy = Oh… Vous êtes brouillées ?
+player = LEFT = wrong_with_you = En tout cas, si c'est elle,@j'espère qu'elle est venue s'excuser.
