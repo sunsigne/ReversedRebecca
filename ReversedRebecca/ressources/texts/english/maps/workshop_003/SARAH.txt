@@ -21,4 +21,4 @@ sarah = player = wink = Go on, off you go.@See you tomorrow to start our investi
 
 % FINE_I_UNDERSTAND
 sarah = player = wink = Alright. See you tomorrow, to start@our investigation.
-player = sarah = happy_var = Obviously!
+player = sarah = happy_var = You bet!

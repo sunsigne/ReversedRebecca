@@ -72,6 +72,12 @@ sarah = player = happy = Bon, on se voit demain pour commencer notre@enquête.
 player = sarah = excited = Évidemment !
 
 
+% SCENARIO_STEPHAN_ERIKA
+player = sarah = happy = Je vais plutôt rentrer chez moi.@Je veux voir comment se débrouille Erika.
+sarah = player = happy = Très bien. Dans ce cas, on se voit demain pour@commencer notre enquête.
+player = sarah = excited = Évidemment !
+
+
 % PLAN_NOT_YET
 sarah = player = you_silly_var = Mais quelle impatiente…
 sarah = player = wink = Donne-moi juste un peu d'espace.@Dans quelques secondes, j'aurai une idée.

@@ -5,4 +5,4 @@ player = object = worry = Hey… That's not on the agenda, don't worry.
 player = object = laugh = It's just that your question reminded me that@we're dating. But I was only talking about a name.
 sarah = player = you_silly_var = You scared me…
 sarah = player = wink = I'm counting on you tomorrow, to tell me all@the details about your date, of course.
-player = object = happy_var = Obviously!
+player = object = happy_var = You bet!

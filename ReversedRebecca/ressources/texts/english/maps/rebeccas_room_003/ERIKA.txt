@@ -1,3 +1,8 @@
+% ALREADY_SAW
+player = RIGHT = laugh = Hey, Rika!@So, how are things going with Camille?
+erika = RIGHT = happy_var = You've come along at just the right moment.@I was actually waiting for you to activate her
+
+
 % HELLO
 player = RIGHT = laugh = Hi, Rika!
 erika = RIGHT = happy = Hello, kitty. How was work?

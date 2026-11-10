@@ -39,9 +39,6 @@
 		- succès si on abandonne sarah en sadique : changer de meilleure amie comme de chaussette
 		- tester gothique
 		- anglais
-			- finir erika :
-				- en rr003 (si on décide de rentrer chez soit), rebecca est DEJA au courant pour camille)
-				- en rr004 (débarasse les crêpes en plus des verres)
 			- finir sarah :
 				- que se passe-t-il si on l'abandonne au commisairat ? aussi bien pour la 1ère que la 2nd fois ?
 			- variante delta :
@@ -64,6 +61,7 @@
 	psycho :
 		- la suite de psychopathe depuis l'appartemment
 		- la suite de psychopathe depuis le commisariat
+		- vérifier la présence de pancage dans la poubelle pour les niveaux complexes : rr002_home ? rr003 (après home ET sans home), etc.
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
@@ -150,6 +148,10 @@
 	note : en "sarah angry really hard" ou "abadonner tt le monde", Rebecca ne va pas au commissariat (elle s'en fiche). Elle rentre chez elle directement ?
 	WS001 - angry_var & psychopath : directement au commisariat à la palce ? chez elle ?
 	LVL002 - angry_var & psychopath : tout + si le joueur essaie de partir, rebecca affirme qu'elle a dit à Sarah qu'elles allaient s'infilter (qu'elle l'est dit ou non, vérifier le psycho)
+
+	////////// RR002_athome ////////////
+
+	note : ne pas oublier qu'il est possible de laisser des panckaes sur la table ! Dans le cas du rr003_xy, penser à les afficher avec "REBECCAS_ROOM*STILL_PANCAKES_ON_TABLE"
 
 	////////// LVL002 ////////////
 
@@ -317,7 +319,7 @@
 	////////// TRADUCTION ////////////
 
 	Générique : Heu... -> Uh... / Bon, he bien ... -> Oh Well / Ho -> Oh / Ha (amusé) -> Hah / Aïe -> Ouch / synonyme de "ok" ou "okay" -> "alright"
-	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Yuck / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> obviously / Top! -> Sweet! / Rho ! -> Ugh!
+	Rebecca : (à retenir, vocabulaire riche car intelligente. Façon "précieuse" de s'exprimer dans le sens adorable fille, pas Karen) Heu... -> Um... / Ben mince -> Dear me... / Zut -> Yikes / tant mieux -> So much the better. / bizarre -> odd, curious / je t'en pris -> my pleasure  / Beurk -> Yuck / Aucun problème -> Sure. / Dommage -> Too bad / Pardon -> excuse me / Bien sûr, voyons -> "obviously" OU "you bet" en fonction du contexte / Top! -> Sweet! / Rho ! -> Ugh!
 	Sarah : Ben mince -> Darn... / Ha bon ? - Ha ce point -> Really ? / Du Rebecca tout craché -> this is so Rebecca
 	Delta : ma grande (pour rebecca) -> sis / type, gars, mec -> a dawg, pal
 	Joseph : (never use any abreviation : i'm -> i am / don't -> do not) yet -> nonetheless

@@ -1,3 +1,8 @@
+% ALREADY_SAW
+player = RIGHT = laugh = Hey, Rika !@Alors ? Ça avance avec Camille ?
+erika = RIGHT = happy_var = Tu trombe à point nommé.@Je t'attendais pour l'activer, justement.
+
+
 % HELLO
 player = RIGHT = laugh = Salut, Rika !
 erika = RIGHT = happy = Hello chaton, ça s'est bien passé au travail ?

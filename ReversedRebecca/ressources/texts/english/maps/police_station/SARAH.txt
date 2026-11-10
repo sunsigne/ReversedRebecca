@@ -56,20 +56,26 @@ player = sarah = laugh = Another new gadget already?@Of course I'm up for it! Le
 % SCENARIO_STEPHAN_NO
 player = sarah = happy_var = I'm going to head home.@It's already been an intense day!
 sarah = player = happy = Alright. In that case, I'll see you tomorrow to@start our investigation.
-player = sarah = excited = Obviously!
+player = sarah = excited = You bet!
 
 
 % SCENARIO_STEPHAN_NO_MARIE
 player = sarah = happy = I think I'll head home instead.@I need to get ready for my date tonight.
 sarah = player = laugh = Oh! That's right! In that case, I'll see you@tomorrow to start our investigation.
-player = sarah = excited = Obviously!
+player = sarah = excited = You bet!
 
 
 % SCENARIO_STEPHAN_NO_MIKA
 player = sarah = happy = I think I'll head home instead.@I have a feeling Mika is going to show up.
 sarah = player = unhappy = Hmm…
 sarah = player = happy = Well, I'll see you tomorrow to start our@investigation.
-player = sarah = excited = Obviously!
+player = sarah = excited = You bet!
+
+
+% SCENARIO_STEPHAN_ERIKA
+player = sarah = happy = I think I'll head home instead.@I want to see how Erika is getting on.
+sarah = player = happy = Alright. In that case, I'll see you tomorrow to@start our investigation.
+player = sarah = excited = You bet!
 
 
 % PLAN_NOT_YET
