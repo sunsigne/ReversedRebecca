@@ -37,10 +37,11 @@
 
 	rr002_home :
 		- succès si on abandonne sarah en sadique : changer de meilleure amie comme de chaussette
+		- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 		- tester gothique
 		- anglais
 			- finir sarah :
-				- que se passe-t-il si on l'abandonne au commisairat ? aussi bien pour la 1ère que la 2nd fois ?
+				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
 			- variante delta :
 			 	- en rr002
 			 	- en lvl002 - on peut imaginer que Delta propose à Rebecca d'aller en boite, elle peut évoquer son frère.

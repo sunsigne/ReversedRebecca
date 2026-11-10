@@ -73,7 +73,15 @@ camille = DOWN = happy_var = It says: "if you want to find Vladimir, go see @Ste
 player = UP = fake_smile = I can read…@Anything more useful? Like…
 player = UP = camille = camille = Yes, it really is your handwriting, Rebecca.
 erika = DOWN = unhappy = Wait a minute… Who is Vladimir?@What is this all about?
+
+
+% CAMILLE_READING_NEXT
 player = UP = happy = That's what I wanted to tell you when I got here.@Long story short, I absolutely have to find him.
+camille = DOWN = happy = In that case, you need to take this letter@seriously… iously, iously, iously, iously…
+
+
+% CAMILLE_READING_NEXT_VAR
+player = UP = happy = A weirdo we're investigating with Sarah.@Long story short, I absolutely have to find him.
 camille = DOWN = happy = In that case, you need to take this letter@seriously… iously, iously, iously, iously…
 
 
