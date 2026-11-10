@@ -63,3 +63,4 @@ THIS_PLACE = Key1 % cet endroit ?
 CLUE = Key1 % indice ?
 INFILTRATE_THE_POLICE_STATION = Key1 % infiltrer le commissariat
 LOOK_FOR_ANOTHER_LEAD = Key1 % chercher une autre piste
+GO_TO_THE_NIGHTCLUB = Key1 % aller en boite de nuit

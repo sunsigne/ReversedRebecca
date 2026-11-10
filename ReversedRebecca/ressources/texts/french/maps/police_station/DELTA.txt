@@ -5,13 +5,38 @@ object = UP = happy = Absolument.
 policeman = DOWN = archer = … il est ensuite est parti en emportant des feuilles…
 object = UP = happy_var = Oui, m'sieur.
 policeman = DOWN = archer = Voilà. Votre plainte est enregistrée.@Vous voulez que je l'imprime ?
-object = UP = happy = Ca ne sera pas nécessaire. Merci.
+object = UP = happy = Ça ne sera pas nécessaire. Bonne journée.
 
 
 % INTRODUCTION_NEXT
 delta = player = worry = Ce n'est pas le travail qui l'étouffe, lui…@Enfin, la plainte est enregistrée.
-delta = player = wink = Mais maintenant qu'on est là… Ça ne te dirait pas@de jouer les espionnes ?
+delta = player = happy = Maintenant, suis-moi. Faut que je te parle d'un truc.
+
+
+% BRANCHING
+delta = player = happy = Je sais qu'on était censé aller en boite toutes les deux, mais…
+delta = player = wink = Maintenant qu'on est là… Ça ne te dirait pas@de jouer les espionnes ?
 player = delta = no_sens = Comment ça ?
 delta = player = happy_var = Je suis sûre qu'on peut trouver des informations@dans leurs archives. Tu veux qu'on aille voir ?
 player = delta = surprised = Mais c'est illégal !
 delta = player = laugh = Seulement si on se fait prendre, ma grande.@Alors ? Ça te chauffe ?
+
+
+% SCENARIO_STEPHAN
+player = delta = happy = Voler des documents à la police, c'est risqué.@Allons danser, plutôt !
+delta = player = laugh_var = Ok, je comprends ta peur de finir au trou !@L'autre plan m'allait aussi, de toute façon.
+
+
+% SCENARIO_CAMILLE
+player = delta = laugh = Ok ! On va le faire ! On va voler les informations !
+delta = player = laugh_var = Chouette ! On va s'amuser !@Attention à ne pas se faire prendre.
+delta = player = wink = Voilà ton gadget de totally spies, ma grande.@J'ai chipé ça, ça te sera surement utile. 
+
+
+% SCENARIO_CAMILLE_NEXT
+player = delta = worry = Merci, mais tu n'en a pas besoin, toi ?
+delta = player = happy_var = Ne t'inquiète pas pour moi. J'ai gardé le meilleur jouet, bien sûr.
+delta = player = excited = On fait la course ? La première qui accède à la salle des archives ?
+player = delta = surprised = Attends ? Une course ? Mais, je…
+delta = player = excited = Go !<INTERRUPT>
+

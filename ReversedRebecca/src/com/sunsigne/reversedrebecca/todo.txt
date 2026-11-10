@@ -36,14 +36,20 @@
 	////////// EN COURS ////////////
 
 	rr002_home :
-		- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 		- tester gothique
 		- anglais
 			- finir sarah :
-				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
+				- succès : avec des amies comme ça... : abadonner sarah en garde à vue
+				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 			- variante delta :
-			 	- en lvl002 - on peut imaginer que Delta propose à Rebecca d'aller en boite, elle peut évoquer son frère.
-			 	- rr003 -  Il faudrait qu'elle gravisse les échelons ? A trouver.
+			 	- en lvl002 :
+			 		- vérifier orthographe texte d'intro
+			 		- finir le hall du destin (créer l'objet 46 + relier -> il est déjà dans le codex) + tests version normal
+			 		- speedrun : impossible, à moins de récupérer une clef DANS le niveau (il est actuellement impsosible d'en avoir une en arrivant, ce qui est positif)
+			 		- pelle : faire donner à rebecca cet outils
+			 		- en cas d'acceptation, delta ira faire pêter le mur à gauche
+			 		- checkpoint : relier correctement + en rajouter si nécessaire
+					 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	patreon :
 		musique : bourré, erika
@@ -345,6 +351,7 @@
 	////////// FAIRE A LA FIN DU DEVELOPPEMENT ////////////
 
 	Psycopathe :
+	explication de Rebecca quand elle pose la question du boostrap à propos de la boite : ok, c'est moi qui t'es prévenu, et j'y suis allée parce que je me suis moi-même prévenu. Mais en premier lieu, si j'ai été capable de savoir que je rencontrerai Stephan à cette boite, c'est parcequ'il existe une réalité où j'y suis allée, sans me prévenir. C'est cette Rebecca d'origine qui a prévenu toutes les Rebecca futur. / Une autre Rebecca ? Une autre réalité ? C'es tà dire / Ok, tu connais l'effet papillon ? Qu'est-ce qu'il se serait passée si tu t'étais disputé avec Sarah le jour où Vladimir a attaqué Novatech ? Seriez-vous allée au commisariat ? / Probablement pas ensemble, non... / Exactement ! Une chose en entrainant une autre, tu aurais fini par aller en boite avec Delta. down = Tu peux vérifier par toi-même si tu ne me crois pas. / ... I beg your pardon ? / Je ne te parlais pas à toi. Mais enfin bref, voilà comment ça marche. 
 	Combat normal contre blast-X
 	Combat difficile contre double Y & Blast-X en même temps (qui a miuraculeusement survécu la fois dernière)
 	Oneshot du robot prétenduement super fort que double Y désactive à chaque fois, sauf en difficile

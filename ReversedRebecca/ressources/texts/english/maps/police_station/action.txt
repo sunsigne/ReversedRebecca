@@ -63,3 +63,4 @@ THIS_PLACE = Key1 % this place?
 CLUE = Key1 % clue?
 INFILTRATE_THE_POLICE_STATION = Key1 % infiltrate the police station
 LOOK_FOR_ANOTHER_LEAD = Key1 % look for another lead
+GO_TO_THE_NIGHTCLUB = Key1 % go to the nightclub

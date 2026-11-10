@@ -97,3 +97,6 @@ OBJ-41 = Armory Collapse Scanner
 
 NPC-15 = Dave
 NPC-16 = Camille
+OBJ-43 = Infiltrate the police station
+OBJ-44 = Look for another lead
+OBJ-45 = Go to the nightclub
