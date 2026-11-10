@@ -36,14 +36,12 @@
 	////////// EN COURS ////////////
 
 	rr002_home :
-		- succès si on abandonne sarah en sadique : changer de meilleure amie comme de chaussette
 		- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 		- tester gothique
 		- anglais
 			- finir sarah :
 				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
 			- variante delta :
-			 	- en rr002
 			 	- en lvl002 - on peut imaginer que Delta propose à Rebecca d'aller en boite, elle peut évoquer son frère.
 			 	- rr003 -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
@@ -54,15 +52,10 @@
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
 
-	sadique :
-		- la suite de sadique en labo (pas de sarah...)
-		- la suite de sadique du commisariat (pas de sarah...)
-		- rr003, attention : en rr000, si  on part en laissant 2 assiettes de crêpes, rebecca ne devrait pas dire à Erika que les choses se sont arrangées avec Sarah
-			
 	psycho :
 		- la suite de psychopathe depuis l'appartemment
 		- la suite de psychopathe depuis le commisariat
-		- vérifier la présence de pancage dans la poubelle pour les niveaux complexes : rr002_home ? rr003 (après home ET sans home), etc.
+		- vérifier la présence de pancake dans la poubelle pour les niveaux complexes : rr002_home ? rr003 (après home ET sans home), etc.
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
