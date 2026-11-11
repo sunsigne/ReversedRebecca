@@ -5,14 +5,14 @@ erika = RIGHT = happy_var = You've come along at just the right moment.@I was ac
 
 % HELLO
 player = RIGHT = laugh = Hi, Rika!
-erika = RIGHT = happy = Hello, kitty. How was work?
+erika = RIGHT = happy = Hello kitty. How was work?
 player = RIGHT = excited = It was a crazy day! You won't believe what@I have to tell you.
 erika = RIGHT = happy_var = Think you can hold it?@I was waiting for you to activate Camille.
 
 
 % HELLO_PANCAKES_EATEN
 player = RIGHT = laugh = Hi, Rika!
-erika = RIGHT = happy = Hello, kitty. Thanks for the pancakes.
+erika = RIGHT = happy = Hello kitty. Thanks for the pancakes.
 player = RIGHT = no_sens = … The pancakes?
 erika = RIGHT = unhappy = You left some pancakes on the table…@They were for me, right?
 player = RIGHT = laugh = Ha! No worries!
@@ -21,7 +21,7 @@ erika = RIGHT = happy_var = But your timing is perfect,@I was waiting for you to
 
 % HELLO_PANCAKES_IN_FRIDGE
 player = RIGHT = laugh = Hi, Rika!
-erika = RIGHT = happy = Hello, kitty, if you're looking for the pancakes@you left on the table, they're in the fridge.
+erika = RIGHT = happy = Hello kitty, if you're looking for the pancakes@you left on the table, they're in the fridge.
 player = RIGHT = worry = Okay, thanks. I was supposed to eat them with@Sarah, but we had a fight and it killed my appetite…
 erika = RIGHT = unhappy = Oh… Are you two on the outs?
 player = RIGHT = laugh = No, it's fine. We patched things up.@But I have to tell you what happened at work!

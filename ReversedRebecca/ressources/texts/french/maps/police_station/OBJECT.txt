@@ -14,6 +14,10 @@ player = DOWN = you_silly = C'est tentant d'abandonner Sarah à son sort,@mais j
 player = DOWN = sad = Je n'ai pas encore volé les informations…@J'y suis presque ! Je ne vais pas abandonner.
 
 
+% LEAVING_DELTA
+player = DOWN = evil_var2 = Et laisser Delta gagner ? Pas question !
+
+
 % PLAYER_LEAVING
 player = object = no_sens = Je ne vais quand meme pas m'en aller,@comme ça… Si ?
 

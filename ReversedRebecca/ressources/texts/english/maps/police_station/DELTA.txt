@@ -1,0 +1,45 @@
+% INTRODUCTION
+policeman = DOWN = archer = So, to summarize your story:
+policeman = DOWN = archer = A folk named Vladimir Wolanski came today,@to the address indicated, and broke the door…
+object = UP = happy = Exactly.
+policeman = DOWN = archer = …and then he left, taking some papers with him…
+object = UP = happy_var = Yes, sir.
+policeman = DOWN = archer = I've registered your complaint. @Do you want me to print it?
+object = UP = happy = That won't be necessary. Have a good day.
+
+
+% INTRODUCTION_NEXT
+delta = player = worry = He's certainly not overworked, is he?@Anyway… At least, the complaint is filed.
+delta = player = wink = Now, follow me. I've got an idea.
+
+
+% BRANCHING
+delta = player = happy = I know we were supposed to go to a club@together, but…
+delta = player = happy_var = Since we're already here… How about we@play the part of spies?
+player = delta = no_sens = Excuse me?
+delta = player = happy_var = I'm sure we could find some information@in their archives. Wanna go take a look?
+player = delta = surprised = But that's illegal!
+delta = player = laugh = Only if we get caught.@So? Up for it?
+
+
+% SCENARIO_STEPHAN
+player = delta = happy = Stealing documents from the police is risky.@Let's go dancing, instead!
+delta = player = laugh_var = Fair enough, I get that you don’t want to end up@in the slammer! Dancing sounds good to me, too!
+
+
+% SCENARIO_CAMILLE
+player = delta = laugh = Alright! Let's do it!@We'll steal some documents!
+delta = player = laugh_var = Awesome! This is going to be fun!@Just try not to get caught, okay?
+delta = player = wink = Here's your Totally Spies gadget.@It'll probably come in handy.
+
+
+% SCENARIO_CAMILLE_NEXT
+player = delta = no_sens = Thanks, but… won't you need it?
+delta = player = smile = Don't you worry about me.@I kept the best toys for myself, obviously.
+delta = player = wink = Did you ever wonder who put those bombs@in the office supply closet?
+delta = player = excited = Want to race?@First one to the archives room wins!
+player = delta = surprised = Wait ? A race? But, I…<INTERRUPT>
+
+
+% SCENARIO_CAMILLE_FINAL
+delta = player = excited = Go!<INTERRUPT>

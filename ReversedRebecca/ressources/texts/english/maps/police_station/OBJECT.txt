@@ -14,6 +14,10 @@ player = DOWN = you_silly = It's tempting to abandon Sarah to her fate,@but I st
 player = DOWN = sad = I haven't stolen the information yet…@I'm almost there! I won't give up that close.
 
 
+% LEAVING_DELTA
+player = DOWN = evil_var2 = And let Delta win? No way!
+
+
 % PLAYER_LEAVING
 rebecca = object = no_sens = I'm not going to just leave like that… Am I?
 

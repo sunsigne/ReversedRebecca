@@ -29,14 +29,17 @@ delta = player = laugh_var = Ok, je comprends ta peur de finir au trou !@Aller d
 
 % SCENARIO_CAMILLE
 player = delta = laugh = Ok ! On va le faire ! On va voler des documents !
-delta = player = laugh_var = Chouette ! On va s'amuser !@Ne te fais pas prendre, hein ?
-delta = player = wink = Voilà ton gadget de totally spies.@Ça te sera surement utile. 
+delta = player = laugh_var = Chouette ! On va s'amuser !@Ne te fais arrêter, hein ?
+delta = player = wink = Voilà ton gadget de Totally Spies.@Ça te sera surement utile. 
 
 
 % SCENARIO_CAMILLE_NEXT
-player = delta = worry = Merci, mais tu n'en a pas besoin, toi ?
-delta = player = happy_var = Ne t'inquiète pas pour moi. J'ai gardé le meilleur jouet, bien sûr.
-delta = player = excited = On fait la course ? La première qui accède à la salle des archives ?
-player = delta = surprised = Attends ? Une course ? Mais, je…
-delta = player = excited = Go !<INTERRUPT>
+player = delta = no_sens = Merci, mais… Tu ne vas pas en avoir besoin ?
+delta = player = smile = Ne t'inquiète pas pour moi.@J'ai gardé les meilleurs jouets, bien sûr.
+delta = player = wink = Tu ne t'es jamais demandée qui avait mis des@bombes dans le stock, au bureau ?
+delta = player = excited = On fait la course ? La première qui accède à@la salle des archives ?
+player = delta = surprised = Attends ? Une course ? Mais, je…<INTERRUPT>
 
+
+% SCENARIO_CAMILLE_FINAL
+delta = player = excited = Go !<INTERRUPT>

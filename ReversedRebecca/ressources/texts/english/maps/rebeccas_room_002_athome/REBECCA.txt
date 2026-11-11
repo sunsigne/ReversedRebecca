@@ -1,0 +1,7 @@
+% BEFORE_ERIKA
+player = DOWN = happy_var = Skipping work, there's nothing like it!
+player = DOWN = excited = Well! Now, should I go for a good book,@or a video game?
+
+
+% COME_IN
+player = UP = laugh = Come in!

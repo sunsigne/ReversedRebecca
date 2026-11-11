@@ -6,6 +6,6 @@ object = player = happy_var = Nous sommes chargées d'aller déposer plainte@au 
 player = object = worry = Non ? J'ai fini ma journée…
 object = player = awkward = Qu'est-ce que tu racontes ? Il est à peine midi…
 player = object = surprised = Ah bon ? Si tôt ?
-player = object = you_silly = Bon ben dans ce cas… Je suis sûre que je@trouverais un moyen de m'amuser. Je te suis.
+player = object = you_silly = Bon ben dans ce cas… Je suis sûre que je@trouverai un moyen de m'amuser. Je te suis.
 object = player = wink = Mais avant, tu sais où on va.
 player = object = laugh = Comme d'habitude, oui ! Merci !

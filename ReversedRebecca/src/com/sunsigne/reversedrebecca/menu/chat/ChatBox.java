@@ -152,8 +152,7 @@ public class ChatBox implements Updatable, KeyboardEvent, GamepadEvent {
 			@Override
 			public GenericListener getAction() {
 				return () -> {
-					count++;
-					goToNextLine();
+					inputPressed();
 				};
 			}
 		};

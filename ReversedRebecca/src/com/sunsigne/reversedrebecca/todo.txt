@@ -39,20 +39,14 @@
 		musique : bourré, erika
 		prochain dessin en décembre
 
-	rr002_home :
-		- tester gothique
-		- anglais
-			- finir sarah :
-				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
-			- variante delta :
-			 	- en lvl002 (WIP) :
-			 		- vérifier orthographe texte d'intro
-			 		- terminer le donnage de pelle
-			 		- speedrun : impossible, à moins de récupérer une clef DANS le niveau (il est actuellement impsosible d'en avoir une en arrivant, ce qui est positif)
-			 		- pelle : faire donner à rebecca cet outils
-			 		- en cas d'acceptation, delta ira faire pêter le mur à gauche
-			 		- checkpoint : relier correctement + en rajouter si nécessaire
-					 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
+	lvl002 :
+		- finir sarah :
+			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
+		- variante delta :
+	 		- note : speedrun impossible, sauf si on récupère une clef (il faut donc barrer la route ?)
+	 		- indices des plantes, bien sûr
+	 		- checkpoint : relier correctement + en rajouter si nécessaire
+			 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?

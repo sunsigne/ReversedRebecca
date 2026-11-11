@@ -1,0 +1,8 @@
+object = player = smile = Hey, sis'! You left work early!
+player = object = you_silly = You know me… When you're blowing locks off@with dynamite, it's kind of hard to stay focused.
+object = player = laugh = I get that, yeah. Actually, that's exactly@why I'm here to see you.
+object = player = wink = Joseph put both of us on the case.@We need to go file a complaint. You coming?
+player = object = unhappy_var = What, right now?
+object = player = worry = Yeah, right now. It's still early…@Were you trying to ditch work?
+object = player = happy_var = Don't sweat, it we'll knock this out quickly, then@we can head off to a club. You in?
+player = object = you_silly = Why not? My gut tells me I'll find a way@to have some fun…

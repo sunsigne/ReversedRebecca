@@ -1,0 +1,11 @@
+object = player = happy = Hey. I figured I'd find you at home.@Looks like you managed to find a way out?
+player = object = you_silly = Yeah, but it closed up behind me…@Otherwise, I would've come to let you know.
+object = player = worry = Yeah, I assumed something like that happened…@I know you didn't just abandon us.
+object = player = happy = Anyway! I'm stopping by because Joseph has@officially put us on the case.
+object = player = happy_var = We've been tasked with filing a formal complaint@at the police station. Want to come along?
+player = object = worry = No? I'm done for the day…
+object = player = awkward = What are you talking about? It's barely noon…
+player = object = surprised = Oh, really? Only that?
+player = object = you_silly = Well, in that case… I'm sure I'll find a way to@have some fun. I'm coming with you.
+object = player = wink = But first, you know where we're headed.
+player = object = laugh = Same as always, yeah! Thanks!

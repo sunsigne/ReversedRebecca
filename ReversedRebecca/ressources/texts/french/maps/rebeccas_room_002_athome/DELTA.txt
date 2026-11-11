@@ -1,7 +1,7 @@
 object = player = smile = Yo ma grande ! Tu as quitté le travail tôt !
 player = object = you_silly = Tu me connais… Quand on fait sauter des verrous@à la dynamite, je perds un peu ma concentration.
 object = player = laugh = Je comprends, oui.@C'est pour ça que je viens te voir, d'ailleurs.
-object = player = wink = Joseph nous a mis toutes les deux sur le coups.@Nous devons aller déposer plainte. Tu viens ?
+object = player = wink = Joseph nous a mis toutes les deux sur le coup.@Nous devons aller déposer plainte. Tu viens ?
 player = object = unhappy_var = Quoi, maintenant ?
 object = player = worry = Oui, maintenant. Il est encore tôt…@Tu voulais esquiver le travail ?
 object = player = happy_var = Mais tranquille, on fait ça vite fait, puis on partira@trainer en boite. Partante ?
