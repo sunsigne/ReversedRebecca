@@ -12,6 +12,8 @@ import com.sunsigne.reversedrebecca.ressources.menu.Unlockables;
 
 public class PixelArtTask implements UnlockableTask {
 
+	public final String PIXELARTS = "pixelarts";
+
 	@Override
 	public void create(String name) {
 		String path = "bonus/pixelarts/" + name + "/";
@@ -57,7 +59,7 @@ public class PixelArtTask implements UnlockableTask {
 	public void reset() {
 		new FileTask().write(PixelArt.file, "");
 		UnlockableList.getPixelArtList().clear();
-		new Unlockables().loadRessources();
+		new Unlockables().load(PIXELARTS, new PixelArtTask(), true);
 	}
 
 }

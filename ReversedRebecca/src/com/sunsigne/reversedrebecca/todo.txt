@@ -34,6 +34,10 @@
 	changer le lien "signaler un bug" pour le discord
 		
 	////////// EN COURS ////////////
+	
+	patreon :
+		musique : bourré, erika
+		prochain dessin en décembre
 
 	rr002_home :
 		- tester gothique
@@ -42,7 +46,7 @@
 				- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 			- variante delta :
-			 	- en lvl002 :
+			 	- en lvl002 (WIP) :
 			 		- vérifier orthographe texte d'intro
 			 		- finir le hall du destin (créer l'objet 46 + relier -> il est déjà dans le codex) + tests version normal
 			 		- speedrun : impossible, à moins de récupérer une clef DANS le niveau (il est actuellement impsosible d'en avoir une en arrivant, ce qui est positif)
@@ -50,10 +54,6 @@
 			 		- en cas d'acceptation, delta ira faire pêter le mur à gauche
 			 		- checkpoint : relier correctement + en rajouter si nécessaire
 					 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
-
-	patreon :
-		musique : bourré, erika
-		prochain dessin en décembre
 
 	rr002 : 
 		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
@@ -66,15 +66,15 @@
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
 	- dans les dave lvl, il pourrait éventuellement courrir lorsque le joueur fait une speedrun
-	- 2h00 dave - RR000 -> lorsque le joueur cherche la clef pour la 2nd fois, le prévenir qu'elle est toujours au 3ème emplacement où il ira chercher ?	
+		nom :
+			- dessin (dave chaise)
+			- hard reset (dave n'oublie jamais)
 
 	bonus :
 	- BD (+ relier au hard reset)
 
 	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
-	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?
-	
 	retirer le panneau "coming soon" ?
 	
 	retravailler l'intro de dave lorsqu'on lance le jeu (dave 000 ?) :
@@ -86,6 +86,8 @@
 	succès : 
 		- avoir dévérouillé tous les pixel art de la démo
 		- avoir dévérouillé tous les dessins de la démo	
+
+	faire les "expérience utilisateur"
 
 	////////// EXPERIENCE UTILISATEUR ////////////
 
@@ -262,6 +264,8 @@
 	un niveau dans un volcan : 	un niveau dans un volcan ! où les passages s'effondre et tout, mais le chemin est jamais 2 fois le même d'une sauvegarde sur l'autre (beaucoup d'aléatoire)
 	un trou noir ! (c'est dans le titre du jeu après tout), avec rebecca qui dit à son apparition "how infortunate." -> (en français "c'est facheux...")
 	
+	
+	6h00 - ChestLootFactory : élaborer le system pour avoir des récompenses précises ?	
 	quand rebecca remonte le temps et se croise elle-même dans le niveau bourré, elle s'embrasse elle-même
 	faire un choix définitif sur les tapis de souris des ordinateurs, et la précense des ordi dans les lvl précédents (puzzler ?) - peut-être : changer les "consoles de SAS" comme puzzler OFFICIEL pour le mini jeu de hack ?
 	plus tard dans le jeu, mettre l'enphase sur le fait qu'on peut suivre qqun dans les toilettes (pour donner l'idée de le faire dans le lvl rr000)

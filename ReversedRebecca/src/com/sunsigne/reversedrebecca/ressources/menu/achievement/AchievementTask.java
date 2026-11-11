@@ -13,6 +13,8 @@ import com.sunsigne.reversedrebecca.ressources.menu.Unlockables;
 
 public class AchievementTask implements UnlockableTask {
 
+	public String ACHIEVEMENTS = "achievements";
+
 	@Override
 	public void create(String name) {
 		String path = "achievements/" + name + "/";
@@ -57,7 +59,7 @@ public class AchievementTask implements UnlockableTask {
 	public void reset() {
 		new FileTask().write(Achievement.file, "");
 		UnlockableList.getAchievementList().clear();
-		new Unlockables().loadRessources();
+		new Unlockables().load(ACHIEVEMENTS, new AchievementTask(), true);
 	}
 
 }

@@ -7,6 +7,8 @@ import com.sunsigne.reversedrebecca.ressources.menu.Unlockables;
 
 public class DrawingTask implements UnlockableTask {
 
+	public final String DRAWINGS = "drawings";
+
 	@Override
 	public void create(String name) {
 		Drawing drawing = new Drawing(name);
@@ -31,7 +33,7 @@ public class DrawingTask implements UnlockableTask {
 	public void reset() {
 		new FileTask().write(Drawing.file, "");
 		UnlockableList.getDrawingMap().clear();
-		new Unlockables().loadRessources();
+		new Unlockables().load(DRAWINGS, new DrawingTask(), false);
 		unlock("dave_chair");
 	}
 

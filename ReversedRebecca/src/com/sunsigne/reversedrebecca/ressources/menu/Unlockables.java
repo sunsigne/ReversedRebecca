@@ -12,19 +12,20 @@ import com.sunsigne.reversedrebecca.ressources.menu.pixelart.PixelArtTask;
 
 public class Unlockables {
 
-	private String achievements = "achievements";
-	private String drawings = "drawings";
-	private String pixelarts = "pixelarts";
-
 	public void loadRessources() {
-		load(achievements, new AchievementTask(), true);
-		load(drawings, new DrawingTask(), false);
-		load(pixelarts, new PixelArtTask(), true);		
+		AchievementTask achievement = new AchievementTask();
+		load(achievement.ACHIEVEMENTS, achievement, true);
+
+		DrawingTask drawing = new DrawingTask();
+		load(drawing.DRAWINGS, drawing, false);
+
+		PixelArtTask pixel = new PixelArtTask();
+		load(pixel.PIXELARTS, pixel, true);
 		new DrawingTask().unlock("dave_chair");
 	}
 
 	public void load(String unlockable, UnlockableTask task, boolean folderBased) {
-		String bonus = unlockable.contentEquals(achievements) ? "" : "bonus/";
+		String bonus = unlockable.contentEquals(new AchievementTask().ACHIEVEMENTS) ? "" : "bonus/";
 
 		File file = new File(FilePath.RESSOURCES_PATH + bonus + unlockable);
 		var file_list = new ArrayList<String>(Arrays.asList(file.list()));
@@ -46,7 +47,7 @@ public class Unlockables {
 		if (value.isEmpty() == false)
 			return;
 
-		String formatted_name = name.replace(".png", "");	
+		String formatted_name = name.replace(".png", "");
 		String content = new FileTask().read(true, file);
 		String new_content = content + System.getProperty("line.separator") + formatted_name + "=false";
 		new FileTask().write(file, new_content);
