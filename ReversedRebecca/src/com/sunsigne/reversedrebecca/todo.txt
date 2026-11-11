@@ -43,7 +43,6 @@
 		- tester gothique
 		- anglais
 			- finir sarah :
-				- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 				- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 			- variante delta :
 			 	- en lvl002 (WIP) :
@@ -86,6 +85,7 @@
 	succès : 
 		- avoir dévérouillé tous les pixel art de la démo
 		- avoir dévérouillé tous les dessins de la démo	
+		- succès : avec des amies comme ça... : abadonner sarah en garde à vue
 
 	faire les "expérience utilisateur"
 
