@@ -47,7 +47,7 @@
 			- variante delta :
 			 	- en lvl002 (WIP) :
 			 		- vérifier orthographe texte d'intro
-			 		- finir le hall du destin (créer l'objet 46 + relier -> il est déjà dans le codex) + tests version normal
+			 		- terminer le donnage de pelle
 			 		- speedrun : impossible, à moins de récupérer une clef DANS le niveau (il est actuellement impsosible d'en avoir une en arrivant, ce qui est positif)
 			 		- pelle : faire donner à rebecca cet outils
 			 		- en cas d'acceptation, delta ira faire pêter le mur à gauche

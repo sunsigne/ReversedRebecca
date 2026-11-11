@@ -9,28 +9,28 @@ object = UP = happy = Ça ne sera pas nécessaire. Bonne journée.
 
 
 % INTRODUCTION_NEXT
-delta = player = worry = Ce n'est pas le travail qui l'étouffe, lui…@Enfin, la plainte est enregistrée.
-delta = player = happy = Maintenant, suis-moi. Faut que je te parle d'un truc.
+delta = player = worry = Ce n'est pas le travail qui l'étouffe, lui…@Enfin… Au moins, la plainte est enregistrée.
+delta = player = wink = Maintenant, suis-moi. J'ai une idée.
 
 
 % BRANCHING
-delta = player = happy = Je sais qu'on était censé aller en boite toutes les deux, mais…
-delta = player = wink = Maintenant qu'on est là… Ça ne te dirait pas@de jouer les espionnes ?
-player = delta = no_sens = Comment ça ?
+delta = player = happy = Je sais qu'on était censé aller en boite@toutes les deux, mais…
+delta = player = happy_var = Maintenant qu'on est là… Ça ne te dirait pas@de jouer les espionnes ?
+player = delta = no_sens = Pardon ?
 delta = player = happy_var = Je suis sûre qu'on peut trouver des informations@dans leurs archives. Tu veux qu'on aille voir ?
 player = delta = surprised = Mais c'est illégal !
-delta = player = laugh = Seulement si on se fait prendre, ma grande.@Alors ? Ça te chauffe ?
+delta = player = laugh = Seulement si on se fait prendre.@Alors ? Ça te chauffe ?
 
 
 % SCENARIO_STEPHAN
 player = delta = happy = Voler des documents à la police, c'est risqué.@Allons danser, plutôt !
-delta = player = laugh_var = Ok, je comprends ta peur de finir au trou !@L'autre plan m'allait aussi, de toute façon.
+delta = player = laugh_var = Ok, je comprends ta peur de finir au trou !@Aller danser, ça me va aussi ! Ben, go !
 
 
 % SCENARIO_CAMILLE
-player = delta = laugh = Ok ! On va le faire ! On va voler les informations !
-delta = player = laugh_var = Chouette ! On va s'amuser !@Attention à ne pas se faire prendre.
-delta = player = wink = Voilà ton gadget de totally spies, ma grande.@J'ai chipé ça, ça te sera surement utile. 
+player = delta = laugh = Ok ! On va le faire ! On va voler des documents !
+delta = player = laugh_var = Chouette ! On va s'amuser !@Ne te fais pas prendre, hein ?
+delta = player = wink = Voilà ton gadget de totally spies.@Ça te sera surement utile. 
 
 
 % SCENARIO_CAMILLE_NEXT
