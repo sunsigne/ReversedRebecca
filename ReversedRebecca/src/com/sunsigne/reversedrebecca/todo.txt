@@ -43,9 +43,8 @@
 		- finir sarah :
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
-	 		- note : speedrun impossible, sauf si on récupère une clef (il faut donc barrer la route ?)
 	 		- indices des plantes, bien sûr
-	 		- checkpoint : relier correctement + en rajouter si nécessaire
+	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante
 			 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	rr002 : 
