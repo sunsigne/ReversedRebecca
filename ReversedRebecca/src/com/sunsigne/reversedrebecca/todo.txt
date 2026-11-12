@@ -45,6 +45,7 @@
 		- variante delta :
 	 		- indices des plantes, bien sûr
 	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante
+	 			- joueur temporairement déplacé pour le fast-start
 			 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	rr002 : 
