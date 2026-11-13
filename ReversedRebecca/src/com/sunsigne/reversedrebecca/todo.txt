@@ -47,9 +47,9 @@
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
 			à faire :
-				- bien vérifier doug (les mutliples cas de figure de scénario, et de karma)
 				- coup de pelle flics, en sortant de l'aération (autoirsé seulement dans ce scénario)
 				- path de delta
+				- régler le flic "j'aimerais une clé verte"
 				- arriver aux archives (seul ou grace à teddy) + fin
 				- aller à l'armurerie (coup de pelle si nécesaire)
 				- fusillade (delta comptabile + cadavres de pelles)

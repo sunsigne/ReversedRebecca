@@ -1,5 +1,5 @@
 
-KARMA=2
+KARMA=0
 
 MaxHp=2
 
@@ -27,5 +27,5 @@ MicrochipStartLvl=NULL
 MicrochipCriticalChance=10%
 
 ShovelMaxLvl=CYAN
-ShovelStartLvl=NULL
+ShovelStartLvl=CYAN
 ShovelCriticalChance=10%

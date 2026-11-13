@@ -180,6 +180,26 @@ player = dougly = happy_var = Thanks.
 dougly = player = serious = Good luck, +surname_dougly.
 
 
+% BARGAIN_DEAL_NEXT_DELTA
+dougly = player = serious = By the way! Quick tip: to get the cyan shovel,@you'll need a green key.
+player = dougly = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
+player = dougly = happy = Actually, I already have your shovel with me.
+dougly = player = intrigued = Really? Why didn't you say so?
+player = dougly = happy_var = You don't show your hand in poker.@Unless your opponent has already paid.
+dougly = player = serious = I see… You're a clever one…@You and I could get along.
+dougly = player = serious = Anyway, here's my end of the deal:@a brand-new yellow key.
+
+
+% BARGAIN_DEAL_NEXT_DELTA_NUMBER
+dougly = player = serious = By the way! Quick tip: to get the shovel 1,@you'll need a key 2.
+player = dougly = you_silly_var = Yeah… Yeah…@I didn't wait for you to figure it out…
+player = dougly = happy = Actually, I already have your shovel with me.
+dougly = player = intrigued = Really? Why didn't you say so?
+player = dougly = happy_var = You don't show your hand in poker.@Unless your opponent has already paid.
+dougly = player = serious = I see… You're a clever one…@You and I could get along.
+dougly = player = serious = Anyway, here's my end of the deal:@a brand-new key 3.
+
+
 % PLANT
 player = dougly = worry = What should I do again?
 dougly = player = serious = Do I look like an information sign?@Go ask a plant.
