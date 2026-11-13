@@ -44,6 +44,7 @@ COMMIT_MURDER = Key3 % commit murder
 
 ///// BIG JAIL /////
 
+BARGAIN_ONE = Key1 % bargain
 LATER = Key2 % later
 BARGAIN = Key3 % bargain
 OPENED_CELL = Key1 % opened cell?!

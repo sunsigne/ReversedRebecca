@@ -39,11 +39,27 @@
 		musique : bourré, erika
 		prochain dessin en décembre
 
+	lvl001 - incohérence :
+		- si on dévérouille le chemin pour tt le monde alors qu'on était en sarah angry_rely hard, ça envoie vers WS002 (note : le karma est de 2)
+
 	lvl002 :
 		- finir sarah :
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
-	 		- indices des plantes, bien sûr
+			à faire :
+				- bien vérifier doug (les mutliples cas de figure de scénario, et de karma)
+				- coup de pelle flics, en sortant de l'aération (autoirsé seulement dans ce scénario)
+				- path de delta
+				- arriver aux archives (seul ou grace à teddy) + fin
+				- aller à l'armurerie (coup de pelle si nécesaire)
+				- fusillade (delta comptabile + cadavres de pelles)
+	 		- indices des plantes, bien sûr :
+	 			- suivre delta
+	 			- parler aux détenus (infos général ?)
+	 			- j'ai la clé, mais je ne sais pas m'en servir
+	 			- j'ai la clé, je n'ai plus qu'à aller aux archives
+	 		- deeds (assomer policier)
+	 		- chekpoint : (validage de la pelle cyan définitive ! on peut soit utiliser "SAVED_CHARACTERISTICS:LOAD / SAVED_CHARACTERISTICS:SAVE", soit réouvrir le coffre avec la pelle dedans
 	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante
 	 			- joueur temporairement déplacé pour le fast-start
 			 	- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.

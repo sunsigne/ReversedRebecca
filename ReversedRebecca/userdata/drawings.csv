@@ -1,8 +1,8 @@
 
-alicia_hug=false
+alicia_hug=true
 android=false
 android_color=false
-armed_duo=false
+armed_duo=true
 checkmate=false
 cocktail=true
 dave_chair=true
@@ -18,4 +18,4 @@ lockpicking=true
 melichat=false
 sadistic_nerd=true
 touchy_girls=false
-yy_pose=false
+yy_pose=true

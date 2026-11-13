@@ -180,6 +180,26 @@ player = dougly = happy_var = Merci.
 dougly = player = serious = Bonne chance, +surname_dougly.
 
 
+% BARGAIN_DEAL_NEXT_DELTA
+dougly = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle cyan,@tu vas avoir besoin d'une clef verte.
+player = dougly = you_silly_var = Ouais… Ouais…@Je ne t'ai pas attendu pour me débrouiller…
+player = dougly = happy = En fait, j'ai déjà ta pelle sur moi.
+dougly = player = intrigued = Vraiment ? Pourquoi tu ne l'as pas dit ?
+player = dougly = happy_var = On ne révèle pas sa main au poker.@Sauf si ton adversaire a déjà payé.
+dougly = player = serious = Je vois… T'es une petite futé…@On pourrait s'entendre, toi et moi.
+dougly = player = serious = Bref, voilà ma part du contrat :@une clé jaune flambant neuve.
+
+
+% BARGAIN_DEAL_NEXT_DELTA_NUMBER
+dougly = player = serious = Au fait ! Petit tuyau : pour obtenir la pelle 1,@tu vas avoir besoin d'une clef 2.
+player = dougly = you_silly_var = Ouais… Ouais…@Je ne t'ai pas attendu pour me débrouiller…
+player = dougly = happy = En fait, j'ai déjà ta pelle sur moi.
+dougly = player = intrigued = Vraiment ? Pourquoi tu ne l'as pas dit ?
+player = dougly = happy_var = On ne révèle pas sa main au poker.@Sauf si ton adversaire a déjà payé.
+dougly = player = serious = Je vois… T'es une petite futé…@On pourrait s'entendre, toi et moi.
+dougly = player = serious = Bref, voilà ma part du contrat :@une clé 3 flambant neuve.
+
+
 % PLANT
 player = dougly = worry = Qu'est-ce que je dois faire, déjà ?
 dougly = player = serious = J'ai une tête de panneau d'information ?@Va demander à une plante verte.
