@@ -17,6 +17,7 @@ REGISTER = POLICE_STATION*INFILTRATED
 ///// DOWN /////
 
 OBJ-42 = Table Hole
+OBJ-46 = Collaspe
 
 ///// RECEPTION /////
 

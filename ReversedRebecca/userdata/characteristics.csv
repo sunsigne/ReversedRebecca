@@ -27,5 +27,5 @@ MicrochipStartLvl=NULL
 MicrochipCriticalChance=10%
 
 ShovelMaxLvl=CYAN
-ShovelStartLvl=CYAN
+ShovelStartLvl=NULL
 ShovelCriticalChance=10%
