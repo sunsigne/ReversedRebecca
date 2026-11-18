@@ -94,7 +94,20 @@ public interface Pusher extends Stunnable, CollisionReactor {
 			return;
 
 		Health health = (Health) pushable;
+
+		if (pushable instanceof Player && health.getHp() - 1 <= 0) {
+			delayedPlayerDeath((Player) pushable);
+			return;
+		}
+
 		health.removeHp();
+	}
+
+	private void delayedPlayerDeath(Player player) {
+		player.setMotionless();
+		new GameTimer(4, () -> {
+			player.removeHp();
+		});
 	}
 
 	private DIRECTION getDirection(Pusher pusher, Pushable pushable) {
