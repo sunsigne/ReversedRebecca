@@ -43,3 +43,18 @@ player = delta = surprised = Attends ? Une course ? Mais, je…<INTERRUPT>
 
 % SCENARIO_CAMILLE_FINAL
 delta = player = excited = Go !<INTERRUPT>
+
+
+% BUTCH
+delta = UP = smile = Contrôle des normes surprise !@Puis-je accéder à vos archives, s'il-vous-plait ?
+policeman = DOWN = butch = Un contrôle surprise ?@On ne m'a pas parlé de ça…
+delta = UP = happy_var = C'est que je fais bien mon travail.@Les clés des archives, s'il-vous-plait ?
+policeman = DOWN = butch = Je ne les ai pas. Mais le chef doit les avoir.
+delta = UP = no_sens = Le chef ?
+delta = UP = smile = Très bien. Merci !
+
+
+% KO_CHIEF
+delta = player = worry = Tu as vu le chef ? C'est toi qui a fait ça ?
+player = delta = fake_smile = Non, c'est pas moi… Il s'est fait ça tout seul.
+delta = player = laugh = Ok. Je m'en tiendrai à cette version.
