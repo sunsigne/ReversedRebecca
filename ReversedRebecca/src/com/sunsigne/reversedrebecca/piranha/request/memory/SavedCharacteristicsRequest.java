@@ -8,6 +8,7 @@ import com.sunsigne.reversedrebecca.characteristics.upgrade.UpgradePlayer;
 import com.sunsigne.reversedrebecca.object.characteristics.Difficulty.LVL;
 import com.sunsigne.reversedrebecca.object.piranha.PiranhaObject;
 import com.sunsigne.reversedrebecca.object.piranha.living.player.Player;
+import com.sunsigne.reversedrebecca.pattern.GameTimer;
 import com.sunsigne.reversedrebecca.pattern.player.PlayerFinder;
 import com.sunsigne.reversedrebecca.piranha.request.Request;
 import com.sunsigne.reversedrebecca.piranha.request.RequestList;
@@ -49,7 +50,7 @@ public class SavedCharacteristicsRequest implements Request {
 			saveCharacteristics(player);
 			break;
 		case "LOAD":
-			loadCharacteristics(player);
+			new GameTimer(1, true, () -> loadCharacteristics(player));
 			break;
 		case "RESET":
 			SavedCharacteristicsMap.getMap().clear();

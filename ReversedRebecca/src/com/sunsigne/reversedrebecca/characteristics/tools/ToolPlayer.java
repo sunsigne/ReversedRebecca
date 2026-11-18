@@ -21,6 +21,9 @@ public abstract class ToolPlayer implements Difficulty {
 	private boolean userData = true;
 
 	public ToolPlayer() {
+		if (getTool() != null)
+	        return;
+		
 		ToolList.getList().addObject(this);
 		loadMaxDifficulty();
 		loadStartDifficulty();
