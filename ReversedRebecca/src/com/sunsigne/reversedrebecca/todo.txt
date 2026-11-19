@@ -47,10 +47,14 @@
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
 			à faire :
-				- path de delta :
-					- pas encore fait si le chef na pas été assomé.
- 				- changer dialogue de butch
-				- arriver aux archives (seul ou grace à teddy) + fin
+				- à vérifier :
+					- comportement de delta si la porte butch est déjà dévérouiller
+					- finir le coup de pelle
+				- archiver :
+					- relier le "arriver après delta" à la fin
+					- faire le "arriver avant delta" + désactiver rechercher des document
+					- rendre compatible le waitfor du "j'ai vu le chef assomé part terre
+					- cas particulier teddy ?
 				- aller à l'armurerie
 				- fusillade :
 					- delta compatible
