@@ -50,7 +50,7 @@ public class SavedCharacteristicsRequest implements Request {
 			saveCharacteristics(player);
 			break;
 		case "LOAD":
-			new GameTimer(1, true, () -> loadCharacteristics(player));
+			new GameTimer(5, true, () -> loadCharacteristics(player));
 			break;
 		case "RESET":
 			SavedCharacteristicsMap.getMap().clear();
