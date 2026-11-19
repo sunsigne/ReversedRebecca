@@ -47,11 +47,9 @@
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
 			à faire :
-				- coup de pelle flics, en sortant de l'aération (autoirsé seulement dans ce scénario)
-				- que faire avec la porte derrière jessy si on la contourne en ayant la clé ?
 				- path de delta :
 					- pas encore fait si le chef na pas été assomé.
-				- régler le dialogue actuel de rebecca avec le flic : "j'aimerais une clé verte"
+ 				- changer dialogue de butch
 				- arriver aux archives (seul ou grace à teddy) + fin
 				- aller à l'armurerie
 				- fusillade :
@@ -63,7 +61,7 @@
 	 			- parler aux détenus (infos général ?)
 	 			- j'ai la clé, mais je ne sais pas m'en servir
 	 			- j'ai la clé, je n'ai plus qu'à aller aux archives
- 			- changer dialogue de butch
+
 	 		- deeds (assomer policier)
 	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante
 			- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.

@@ -54,7 +54,19 @@ delta = UP = no_sens = Le chef ?
 delta = UP = smile = Très bien. Merci !
 
 
+% KO_CHIEF_IN_DESK
+delta = player = worry = C'est toi qui a fait ça ?
+player = delta = fake_smile = Non, c'est pas moi… Il s'est fait ça tout seul.
+delta = player = laugh = Ok. Je m'en tiendrai à cette version.
+
+
 % KO_CHIEF
 delta = player = worry = Tu as vu le chef ? C'est toi qui a fait ça ?
 player = delta = fake_smile = Non, c'est pas moi… Il s'est fait ça tout seul.
 delta = player = laugh = Ok. Je m'en tiendrai à cette version.
+
+
+% KO_CHIEF_STAYING
+delta = UP = worry = Tu comptes lui marcher dessus comme ça@encore longtemps ?
+player = DOWN = laugh  = Je voulais voir si ça allait te faire réagir.
+delta = UP = wink = Évidemment que je réagis. Maintenant, décale-toi.@J'ai besoin de ses clés pour gagner notre course.
