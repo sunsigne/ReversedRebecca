@@ -203,6 +203,8 @@ public class ChatBox implements Updatable, KeyboardEvent, GamepadEvent {
 
 		Request request = new FacingRequest();
 		var handler = object.getHandler();
+		if (World.get().getLayer(false).getHandler() == handler)
+			handler = World.get().getLayer(true).getHandler();
 
 		var list = new ListCloner().deepCloneByClass(handler, LivingObject.class);
 		for (LivingObject tempObject : list.getList()) {
