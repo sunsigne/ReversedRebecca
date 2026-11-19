@@ -48,13 +48,14 @@
 		- variante delta :
 			à faire :
 				- coup de pelle flics, en sortant de l'aération (autoirsé seulement dans ce scénario)
+				- que faire avec la porte derrière jessy si on la contourne en ayant la clé ?
 				- path de delta :
 					- pas encore fait si le chef na pas été assomé.
 				- régler le dialogue actuel de rebecca avec le flic : "j'aimerais une clé verte"
 				- arriver aux archives (seul ou grace à teddy) + fin
 				- aller à l'armurerie
 				- fusillade :
-					- delta comptabile
+					- delta compatible
 					- cadavres de pelle
 					- delta est chez butch au moment où on le tue ?
 	 		- indices des plantes, bien sûr :

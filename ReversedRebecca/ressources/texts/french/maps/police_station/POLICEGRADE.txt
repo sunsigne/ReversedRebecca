@@ -6,6 +6,11 @@ policegrade = DOWN = giovanni = Hey !
 policegrade = player = giovanni = Ceci est une zone interdite au public.@Je vais devoir vous demander de partir.
 
 
+% SHOVEL_REACTION
+player = DOWN = fake_smile = Bon… Voilà qui règle la question.
+player = DOWN = you_silly = Je vais éviter de recommencer. Rouler des pelles@sans prévenir, ça risquerait d'attirer l'attention.
+
+
 % PLAYER_SUSPECTED
 policegrade = DOWN = giovanni = C'est pour quoi ?
 player = UP = unhappy_var = Heu…
