@@ -6,6 +6,11 @@ policegrade = DOWN = giovanni = Hey!
 policegrade = player = giovanni = This is a restricted area. @I'll have to ask you to leave.
 
 
+% SHOVEL_REACTION
+player = DOWN = fake_smile = Well… That settles that.
+player = DOWN = you_silly = I'll try not to do that again. Turns out, surprise@shovel kisses aren't exactly socially acceptable.
+
+
 % PLAYER_SUSPECTED
 policegrade = DOWN = giovanni = What's this for?
 player = UP = unhappy_var = Uh…

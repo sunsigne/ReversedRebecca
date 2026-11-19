@@ -83,7 +83,7 @@ delta = player = laugh = Ok. Je m'en tiendrai à cette version.
 delta = player = laugh = Ben alors, l'escargot ? On se fait devancer par@une Lucidly ?
 player = delta = no_sens = Une quoi ?
 delta = player = no_sens = Une Lucidly… C'est mon nom de famille.@Tu ne le connaissais pas ?
-delta = player = wink = Bref, tu as perdue ! Alors: tu as un gage : pas le@droit de boire de l'eau pendant une semaine.
+delta = player = wink = Bref, tu as perdu ! Alors, tu as un gage : pas le@droit de boire de l'eau pendant une semaine.
 player = delta = unhappy_var = … Tu … veux que je meurs ?
 delta = player = smile = Je n'ai pas fini : interdiction de boire de l'eau.@Tu n'as le droit qu'à du jus de tomate !
 player = delta = no_sens_var = Pardon ?
@@ -93,7 +93,7 @@ delta = up = smile = Bon, qu'est-ce qu'ils ont dans ces dossiers…
 
 % ARCHIVE
 delta = up = surprised = Wow ! Il y a un gros X sur ce dossier !@C'est forcément important ! On le prend !
-player = delta = worry = Mais c'est pas comme ça que ça marche…
+player = delta = worry = Mais, c'est pas comme ça que ça marche…
 delta = up = laugh_var = Mais si ! X ! C'est secret ! On prend !
 delta = player = excited = Regarde ! Ça dit que Blast-X connaît Vladimir !@On doit aller voir cette personne !
 player = delta = happy = Et… Il vit où ton monsieur ?

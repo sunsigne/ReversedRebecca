@@ -43,3 +43,59 @@ player = delta = surprised = Wait ? A race? But, I…<INTERRUPT>
 
 % SCENARIO_CAMILLE_FINAL
 delta = player = excited = Go!<INTERRUPT>
+
+
+% BUTCH
+delta = UP = smile = Surprise standards inspection!@May I access your archives, please?
+policeman = DOWN = butch = A surprise inspection?@I wasn't told anything about that…
+delta = UP = happy_var = That's because I'm very good at my job.@The keys to the archives, please?
+policeman = DOWN = butch = I don't have them. But the chief should.
+delta = UP = no_sens = The chief?
+delta = UP = smile = Very well. Thanks!
+
+
+% KO_CHIEF_IN_DESK
+delta = player = worry = Did you do this?
+player = delta = fake_smile = No, it wasn't me… He did it to himself.
+delta = player = laugh = Alright. I'll stick with that version.
+
+
+% KO_CHIEF
+delta = player = worry = Did you see the chief? Did you do this?
+player = delta = fake_smile = No, it wasn't me… He did it to himself.
+delta = player = laugh = Alright. I'll stick with that version.
+
+
+% KO_CHIEF_STAYING
+delta = UP = worry = Are you planning on standing on him like@that for much longer?
+player = DOWN = laugh = I just wanted to see if you'd react.
+delta = UP = wink = Of course I do! Now, move aside.@I need his keys to win our race.
+
+
+% KO_CHIEF_REAL_TIME
+player = RIGHT = fake_smile = Well… that settles that.
+delta = player = worry = Indeed… what a dramatic entrance!
+player = delta = fake_smile = It wasn't me! He did it to himself.
+delta = player = laugh = Alright. I'll stick with that version.
+
+
+% WON
+delta = player = laugh = What's the matter, slowpoke?@Getting beaten by a Lucidly?
+player = delta = no_sens = A what?
+delta = player = no_sens = A Lucidly… That's my last name.@Didn't you know?
+delta = player = wink = Anyway, you lost! So, here's your forfeit: you're@not allowed to drink any water for a week.
+player = delta = unhappy_var = … Do you… want me to die?
+delta = player = smile = I'm not finished: no water allowed. You're only@permitted to drink tomato juice!
+player = delta = no_sens_var = Say what?
+delta = player = worry = Relax, I'm just kidding. Easy. Drink whatever@you want. I was messing around.
+delta = up = smile = Alright, let's see what's in these files…
+
+
+% ARCHIVE
+delta = UP = surprised = Wow! There's a big 'X' on this file!@It's bound to be important! Let's take it!
+player = delta = worry = But… that's not how it works…
+delta = UP = laugh_var = Sure it is! An 'X'!@That means it's top secret! We're taking it!
+delta = player = excited = Look! It says here that Blast-X knows Vladimir!@We've got to go see this person!
+player = delta = happy = And… where does this guy live?
+delta = player = happy_var = I don't want to spoil the surprise, but@you're going to love it.
+delta = player = wink = Well. Let's get out of here before we get caught.

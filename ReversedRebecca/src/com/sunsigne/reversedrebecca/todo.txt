@@ -47,6 +47,11 @@
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
 		- variante delta :
 			à faire :
+				- deux bugs de facing :
+					- quand on assome le policer avec la pelle, on ne regarde pas dans la bonne direction (arrive après une expression "...")
+					- quand on rentre dans delta alors qu'elle parle à Butch (avec son Stop), elle ne regarde pas butch pendant son dialogue
+						- ces deux problème sont probablement un seul problème à regler
+			
 				- à vérifier :
 					- comportement de delta si la porte butch est déjà dévérouiller
 					- finir le coup de pelle
