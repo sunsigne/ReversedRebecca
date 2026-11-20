@@ -91,6 +91,28 @@ dougly = player = serious = Do I look like a teacher? Figure it out.
 player = dougly = sad = (Well… Another inmate will probably help me…)
 
 
+% DOUG_YELLOW_KEY_GOOD_DELTA
+player = dougly = worry = Um… I don't know how to use a yellow key…
+dougly = player = serious = That doesn't surprise me from a nice girl.
+player = dougly = unhappy_var = Aren't you going to teach me?
+dougly = player = serious = Do I look like a teacher? Figure it out.
+player = dougly = wrong_with_you = How about a shovel slap, does that motivate you?
+dougly = player = intrigued = Oh? Well, showing some teeth, are we?
+dougly = player = serious = Fine. But not because your threat scared me.@I just thought it was cool.
+dougly = player = serious = If the key gets stuck, twist the handle lightly.
+
+
+% DOUG_YELLOW_KEY_GOOD_NUMBER_SETTINGS_DELTA
+player = dougly = worry = Um… I don't know how to use key 3…
+dougly = player = serious = That doesn't surprise me from a nice girl.
+player = dougly = unhappy_var = Aren't you going to teach me?
+dougly = player = serious = Do I look like a teacher? Figure it out.
+player = dougly = wrong_with_you = How about a shovel slap, does that motivate you?
+dougly = player = intrigued = Oh? Well, showing some teeth, are we?
+dougly = player = serious = Fine. But not because your threat scared me.@I just thought it was cool.
+dougly = player = serious = If the key gets stuck, twist the handle lightly.
+
+
 % WILLIAM_YELLOW_KEY
 william = DOWN = serious = Sorry, friend. A cowboy never reveal his tricks.
 

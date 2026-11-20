@@ -79,6 +79,15 @@ player = delta = fake_smile = C'est pas moi !@Il s'est fait ça tout seul.
 delta = player = laugh = Ok. Je m'en tiendrai à cette version.
 
 
+% LOST
+player = LEFT = happy = Bon, on dirait que j'ai gagné la course.@Delta ne devrait pas tarder.
+
+
+% LOST_NEXT
+delta = player = smile = Bien joué ma grande, on dirait que j'ai un peu@perdu la main.
+delta = UP = happy_var = J'espère que tu m'as attendu avant de regarder@les dossiers croustillants.
+
+
 % WON
 delta = player = laugh = Ben alors, l'escargot ? On se fait devancer par@une Lucidly ?
 player = delta = no_sens = Une quoi ?
@@ -88,13 +97,13 @@ player = delta = unhappy_var = … Tu … veux que je meurs ?
 delta = player = smile = Je n'ai pas fini : interdiction de boire de l'eau.@Tu n'as le droit qu'à du jus de tomate !
 player = delta = no_sens_var = Pardon ?
 delta = player = worry = Ça va, je rigole. Détends-toi.@Bois ce que tu veux. C'était pour rire.
-delta = up = smile = Bon, qu'est-ce qu'ils ont dans ces dossiers…
+delta = UP = smile = Bon, qu'est-ce qu'ils ont dans ces dossiers…
 
 
 % ARCHIVE
-delta = up = surprised = Wow ! Il y a un gros X sur ce dossier !@C'est forcément important ! On le prend !
+delta = UP = surprised = Wow ! Il y a un gros X sur ce dossier !@C'est forcément important ! On le prend !
 player = delta = worry = Mais, c'est pas comme ça que ça marche…
-delta = up = laugh_var = Mais si ! X ! C'est secret ! On prend !
+delta = UP = laugh_var = Mais si ! X ! C'est secret ! On prend !
 delta = player = excited = Regarde ! Ça dit que Blast-X connaît Vladimir !@On doit aller voir cette personne !
 player = delta = happy = Et… Il vit où ton monsieur ?
 delta = player = happy_var = Je ne veux pas te gâcher la surprise,@mais tu vas adorer.

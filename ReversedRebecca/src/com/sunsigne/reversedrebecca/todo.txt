@@ -48,13 +48,10 @@
 		- variante delta :
 			à faire :
 				- à vérifier :
-					- comportement de delta si la porte butch est déjà dévérouiller
 					- finir le coup de pelle
 				- archives :
-					- relier le "arriver après delta" à la fin
-					- faire le "arriver avant delta" + désactiver rechercher des document
-					- rendre compatible le waitfor du "j'ai vu le chef assomé part terre
-					- cas particulier teddy ?
+					- changer la musique lors des archives ?
+					- relier "la fin des archives" à la fin de la démo
 				- aller à l'armurerie
 				- fusillade :
 					- delta compatible

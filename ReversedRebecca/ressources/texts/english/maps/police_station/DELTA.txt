@@ -79,6 +79,15 @@ player = delta = fake_smile = It wasn't me! He did it to himself.
 delta = player = laugh = Alright. I'll stick with that version.
 
 
+% LOST
+player = LEFT = happy = Well, looks like I won the race. Delta should@be here any minute.
+
+
+% LOST_NEXT
+delta = player = smile = Nice work sis', seems like I've lost my touch@a little bit.
+delta = UP = happy_var = I hope you waited for me before taking a look@at those juicy files.
+
+
 % WON
 delta = player = laugh = What's the matter, slowpoke?@Getting beaten by a Lucidly?
 player = delta = no_sens = A what?
@@ -88,7 +97,7 @@ player = delta = unhappy_var = … Do you… want me to die?
 delta = player = smile = I'm not finished: no water allowed. You're only@permitted to drink tomato juice!
 player = delta = no_sens_var = Say what?
 delta = player = worry = Relax, I'm just kidding. Easy. Drink whatever@you want. I was messing around.
-delta = up = smile = Alright, let's see what's in these files…
+delta = UP = smile = Alright, let's see what's in these files…
 
 
 % ARCHIVE
