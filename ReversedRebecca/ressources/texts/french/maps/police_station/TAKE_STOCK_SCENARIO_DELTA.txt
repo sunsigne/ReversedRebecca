@@ -1,0 +1,32 @@
+% SHOVEL
+player = keep = asleep = Voyons voir…
+player = keep = happy = Delta m'a donné une pelle. L'endroit idéal pour@creuser doit être quelque part à l'extérieur.
+
+
+% INSIDE
+player = keep = asleep = Voyons voir…
+player = keep = unhappy_var = Je ne suis pas trop à l'aise avec les forces de@l'ordre…
+player = keep = happy = Je vais demander de l'aide auprès des détenus.
+
+
+% LOST
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = J'ai été trop lente…@Delta a probablement déjà atteint les archives.
+player = keep = you_silly = Je pourrais la rejoindre… Ou…
+
+
+% LOST_GOOD
+player = keep = asleep = Voyons voir…
+player = keep = unhappy = J'ai été trop lente…@Delta a probablement déjà atteint les archives.
+player = keep = unhappy_var = Je n'ai plus qu'à la rejoindre.
+
+
+% KEY
+player = keep = asleep = Voyons voir…
+player = keep = laugh = J'ai la clé ! Je peux déverrouiller dans les archives@et clamer ma victoire auprès de Delta !
+player = keep = you_silly = À moins que… Je l'utilise autrement…
+
+
+% KEY_GOOD
+player = keep = asleep = Voyons voir…
+player = keep = excited = J'ai la clé ! Je peux déverrouiller dans les archives@et clamer ma victoire auprès de Delta !

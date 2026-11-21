@@ -57,11 +57,6 @@
 					- delta compatible
 					- cadavres de pelle
 					- delta est chez butch au moment où on le tue ?
-	 		- indices des plantes, bien sûr :
-	 			- suivre delta
-	 			- parler aux détenus (infos général ?)
-	 			- j'ai la clé, mais je ne sais pas m'en servir
-	 			- j'ai la clé, je n'ai plus qu'à aller aux archives
 
 	 		- deeds (assomer policier)
 	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante

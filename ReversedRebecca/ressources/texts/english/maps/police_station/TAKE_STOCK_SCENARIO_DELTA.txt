@@ -1,0 +1,32 @@
+% SHOVEL
+player = keep = asleep = Let's see…
+player = keep = happy = Delta gave me a shovel. The perfect spot to@dig must be somewhere outside.
+
+
+% INSIDE
+player = keep = asleep = Let's see…
+player = keep = unhappy_var = I'm not exactly comfortable around law@enforcement…
+player = keep = happy = I'll ask the inmates for help.
+
+
+% LOST
+player = keep = asleep = Let's see…
+player = keep = unhappy = I was too slow…@Delta has probably already reached the archives.
+player = keep = you_silly = I could catch up with her… Or…
+
+
+% LOST_GOOD
+player = keep = asleep = Let's see…
+player = keep = unhappy = I was too slow…@Delta has probably already reached the archives.
+player = keep = unhappy_var = I suppose I'll just have to join her.
+
+
+% KEY
+player = keep = asleep = Let's see…
+player = keep = laugh = I've got the key! I can unlock the archives@and claim my victory over Delta!
+player = keep = you_silly = Unless… I use it for something else…
+
+
+% KEY_GOOD
+player = keep = asleep = Let's see…
+player = keep = excited = I've got the key! I can unlock the archives@and claim my victory over Delta!
