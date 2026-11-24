@@ -59,7 +59,6 @@
 					- delta est chez butch au moment où on le tue ?
 
 	 		- deeds (assomer policier)
-	 		- checkpoint : en rajouter si nécessaire + ne pas oublier l'indice initial de plante
 			- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	rr002 : 
@@ -67,8 +66,9 @@
 
 	psycho :
 		- la suite de psychopathe depuis l'appartemment
+		- finir d'adapter pleinement le commisariat
 		- la suite de psychopathe depuis le commisariat
-		- vérifier la présence de pancake dans la poubelle pour les niveaux complexes : rr002_home ? rr003 (après home ET sans home), etc.
+		- vérifier la présence de pancake dans la poubelle pour les niveaux rr : rr002_home ? rr003 (après home ET sans home), etc.
 
 	dave :
 	- sauvegarder la mémoire de dave dans un dossier à part (qui ne se désinstalle pas lorsqu'on désinstalle le jeu) ? (même pb avec succès "the end ?" - psychopathe)
