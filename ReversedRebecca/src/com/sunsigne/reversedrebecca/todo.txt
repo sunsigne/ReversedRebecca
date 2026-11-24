@@ -44,7 +44,9 @@
 
 	lvl002 :
 		- finir sarah :
-			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?				
+			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
+			- comment se passe la fusillade si sarah été enfermée ?
+
 		- variante delta :
 			à faire :
 				- à vérifier :
@@ -54,9 +56,8 @@
 					- relier "la fin des archives" à la fin de la démo
 				- aller à l'armurerie
 				- fusillade :
-					- delta compatible
-					- cadavres de pelle
-					- delta est chez butch au moment où on le tue ?
+					- compter : - cadavres de pelle + butch + delta
+					- delta n'était pas encore dans les archives
 
 	 		- deeds (assomer policier)
 			- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
