@@ -33,6 +33,12 @@ delta = player = laugh_var = Awesome! This is going to be fun!@Just try not to g
 delta = player = wink = Here's your Totally Spies gadget.@It'll probably come in handy.
 
 
+% SCENARIO_PSYCHOPATH
+player = delta = you_silly = Of course I'm in!@It's not really a choice at this point, is it?
+delta = player = laugh_var = Awesome! This is going to be fun!@Just try not to get caught, okay?
+delta = player = wink = Here's your Totally Spies gadget.@It'll probably come in handy.
+
+
 % SCENARIO_CAMILLE_NEXT
 player = delta = no_sens = Thanks, but… won't you need it?
 delta = player = smile = Don't you worry about me.@I kept the best toys for myself, obviously.

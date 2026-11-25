@@ -59,8 +59,8 @@
 		- rr002 : sarah envoye un appel à laide sur l'ordi ?
 		- commisariat :
 			delta :
-				- refus du choix d'embranchement
-				- impossible d'aller voir Delta ou de gagner la course
+				- rendre impossible d'aller voir Delta ou de gagner la course
+				- indice des plantes
 			sarah : 
 				- comment se passe la fusillade si sarah était enfermée ?
 		- rr de fin :

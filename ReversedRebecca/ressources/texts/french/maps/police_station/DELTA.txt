@@ -30,6 +30,12 @@ delta = player = laugh_var = Ok, je comprends ta peur de finir au trou !@Aller d
 % SCENARIO_CAMILLE
 player = delta = laugh = Ok ! On va le faire ! On va voler des documents !
 delta = player = laugh_var = Chouette ! On va s'amuser !@Ne te fais arrêter, hein ?
+delta = player = wink = Voilà ton gadget de Totally Spies.@Ça te sera surement utile.
+
+
+% SCENARIO_PSYCHOPATH
+player = delta = you_silly = Évidemment que je suis partante !@Ça n'est pas vraiment un choix à ce stade.
+delta = player = laugh_var = Chouette ! On va s'amuser !@Ne te fais arrêter, hein ?
 delta = player = wink = Voilà ton gadget de Totally Spies.@Ça te sera surement utile. 
 
 
