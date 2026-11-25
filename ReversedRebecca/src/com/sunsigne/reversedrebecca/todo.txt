@@ -46,7 +46,6 @@
 	lvl002 :
 		- finir sarah :
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
-
 		- variante delta :
 			- finir le coup de pelle
 	 		- deeds (assomer policier)
@@ -56,11 +55,8 @@
 
 	psycho :
 		- laboratoire : vérifier + relier corectement au reste (que se passe t-il entre ça et le commissariat ?)
-		- rr002 : sarah envoye un appel à laide sur l'ordi ?
+		- rr002 : sarah envoye un appel à l'aide sur l'ordi ?
 		- commisariat :
-			delta :
-				- rendre impossible d'aller voir Delta ou de gagner la course
-				- indice des plantes
 			sarah : 
 				- comment se passe la fusillade si sarah était enfermée ?
 		- rr de fin :

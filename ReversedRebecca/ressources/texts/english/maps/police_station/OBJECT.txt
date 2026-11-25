@@ -152,3 +152,12 @@ player = DOWN = you_silly = If I had wanted to be wicked,@I would have started m
 
 % COMMIT_MURDER_DELTA
 player = DOWN = evil_var2 = Not right now.@I have to wait for Delta to stop wandering all over the place.
+
+
+% PSYCHOPATH_ARCHIVES
+player = RIGHT = happy_var = There, I've won.
+
+
+% PSYCHOPATH_ARCHIVES_NEXT
+player = DOWN = determined = Pfft… As if I even cared about this stupid race…
+player = DOWN = evil_var = I'll show her the kind of games I like to play.
