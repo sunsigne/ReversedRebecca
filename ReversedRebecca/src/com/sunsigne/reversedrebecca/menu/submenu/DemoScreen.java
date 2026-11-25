@@ -88,9 +88,12 @@ public class DemoScreen extends SubMenuScreen {
 			text[1] = text[1].concat(translate("Demo" + "DestinyDream"));
 			break;
 		case 5:
-			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
+			text[1] = text[1].concat(translate("Demo" + "NewBestFriend"));
 			break;
 		case 6:
+			text[1] = text[1].concat(translate("Demo" + "Psychopath"));
+			break;
+		case 7:
 			text[1] = text[1].concat(translate("Demo" + "ForeverAndEver"));
 			break;
 		default:
@@ -106,6 +109,7 @@ public class DemoScreen extends SubMenuScreen {
 
 		boolean forever = false;
 		boolean psychopath = false;
+		boolean bestie = false;
 		boolean dream = false;
 		boolean doublee = false;
 		boolean hot = false;
@@ -116,6 +120,8 @@ public class DemoScreen extends SubMenuScreen {
 				forever = true;
 			if (tempDatum.equalsIgnoreCase("PSYCHOPATH*SHOOTOUT"))
 				psychopath = true;
+			if (tempDatum.equalsIgnoreCase("POLICE_STATION*DELTA"))
+				bestie = true;
 			if (tempDatum.equalsIgnoreCase("REBECCA*HAS_BEEN_DRUNK"))
 				dream = true;
 			if (tempDatum.equalsIgnoreCase("STEPHAN*MET"))
@@ -127,8 +133,10 @@ public class DemoScreen extends SubMenuScreen {
 		}
 
 		if (forever)
-			return 6;
+			return 7;
 		if (psychopath)
+			return 6;
+		if (bestie)
 			return 5;
 		if (dream)
 			return 4;
@@ -155,7 +163,7 @@ public class DemoScreen extends SubMenuScreen {
 
 		loadDemo("sarah", 0, 0, "Sequester", "PSYCHOPATH*SARAH_SEQUESTRATION");
 		loadDemo("camille", 1, 0, "AboutToKillYou", "ANTAGONIST*DOUBLE-Y");
-		loadDemo("delta", 2, 0, "Princess", "STEPHAN*MET");
+		loadDemo("delta", 2, 0, "Princess", "STEPHAN*MET", "Killed", "PSYCHOPATH*DELTA_KILLED");
 		loadDemo(alexia, 0, 1, "Abandoned", "ALICIA*NOBODY_FREED_HER", "Killed", "PSYCHOPATH*ALICIA_KILLED");
 		loadDemo(marichel, 1, 1, "Dated", "MARIE*START_DATING");
 		loadDemo(dougly, 2, 1, "Met", "DOUG*MET", "Dated", "PSYCHOPATH*SHOOTOUT", "HelpedToKill",

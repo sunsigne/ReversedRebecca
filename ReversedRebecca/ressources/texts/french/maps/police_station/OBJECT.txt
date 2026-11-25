@@ -143,3 +143,12 @@ player = DOWN = surprised = C'est impressionnant !@Toutes ces médailles et ces 
 
 % WAKE_UP_JESSY
 player = DOWN = no_sens = Après réflexion, ça sonne comme@une grosse idée de merde.
+
+
+% COMMIT_MURDER_GOOD
+player = keep = laugh = Très amusant ! Comme si c'était mon genre !
+player = DOWN = you_silly = Si j'avais voulu être méchante,@j'aurais commencé bien plus tôt.
+
+
+% COMMIT_MURDER_DELTA
+player = DOWN = evil_var2 = Pas tout de suite. Je dois attendre que Delta@arrête de se promener partout.

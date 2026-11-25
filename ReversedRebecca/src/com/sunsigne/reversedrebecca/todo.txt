@@ -41,34 +41,31 @@
 
 	lvl001 - incohérence :
 		- si on dévérouille le chemin pour tt le monde alors qu'on était en sarah angry_rely hard, ça envoie vers WS002 (note : le karma est de 2)
+		- on devrait avoir la possibilité d'envoyer chier sarah si on s'est brouillé avec, histoire d'augmenter les changes d'avoir la fin "new bestie"
 
 	lvl002 :
 		- finir sarah :
 			- si on abandonne Sarah au commisariat, on retourne forcement chez soi. Quel est la suite, puisqu'on a les documents ?
-			- comment se passe la fusillade si sarah été enfermée ?
 
 		- variante delta :
-			à faire :
-				- à vérifier :
-					- finir le coup de pelle
-				- archives :
-					- changer la musique lors des archives ?
-					- relier "la fin des archives" à la fin de la démo
-				- aller à l'armurerie
-				- fusillade :
-					- compter : - cadavres de pelle + butch + delta
-					- delta n'était pas encore dans les archives
-
+			- finir le coup de pelle
 	 		- deeds (assomer policier)
-			- nightclub -  Il faudrait qu'elle gravisse les échelons ? A trouver.
-
-	rr002 : 
-		- psychopathe, sarah envoye un appel à laide sur l'ordi ?
+	 		
+	nightclub variante delta :
+	 	- Il faudrait qu'elle gravisse les échelons ? A trouver.
 
 	psycho :
-		- la suite de psychopathe depuis l'appartemment
-		- finir d'adapter pleinement le commisariat
-		- la suite de psychopathe depuis le commisariat
+		- laboratoire : vérifier + relier corectement au reste (que se passe t-il entre ça et le commissariat ?)
+		- rr002 : sarah envoye un appel à laide sur l'ordi ?
+		- commisariat :
+			delta :
+				- refus du choix d'embranchement
+				- impossible d'aller voir Delta ou de gagner la course
+			sarah : 
+				- comment se passe la fusillade si sarah était enfermée ?
+		- rr de fin :
+			- version sarah
+			- version delta
 		- vérifier la présence de pancake dans la poubelle pour les niveaux rr : rr002_home ? rr003 (après home ET sans home), etc.
 
 	dave :
@@ -80,8 +77,6 @@
 
 	bonus :
 	- BD (+ relier au hard reset)
-
-	- DemoScreen : attention ! La donnée de fusillade a été nommée "PSYCHOPATH*SHOOTOUT" (avant que la donnée de la fusillade ne soit réellement enregistrée dans la station de police)
 
 	retirer le panneau "coming soon" ?
 	
@@ -95,6 +90,8 @@
 		- avoir dévérouillé tous les pixel art de la démo
 		- avoir dévérouillé tous les dessins de la démo	
 		- succès : avec des amies comme ça... : abadonner sarah en garde à vue
+
+	fins : trouver un moyen de tuyauter le joueur sur le moyen d'obtenir les différentes fins (succés ? pas convaincu que c'est une bonne idée d'utiliser ce système. Peut-être Dave ?)
 
 	faire les "expérience utilisateur"
 

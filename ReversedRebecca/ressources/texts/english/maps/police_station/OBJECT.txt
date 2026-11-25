@@ -143,3 +143,12 @@ player = DOWN = surprised = So impressive!@All these medals and trophies.
 
 % WAKE_UP_JESSY
 player = DOWN = no_sens = On second thought, that idea smells like fat shit.
+
+
+% COMMIT_MURDER_GOOD
+player = keep = laugh = Very funny! As if that were my sort of thing!
+player = DOWN = you_silly = If I had wanted to be wicked,@I would have started much sooner.
+
+
+% COMMIT_MURDER_DELTA
+player = DOWN = evil_var2 = Not right now.@I have to wait for Delta to stop wandering all over the place.
